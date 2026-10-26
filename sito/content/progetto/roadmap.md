@@ -288,7 +288,7 @@ Ogni gruppo ha il suo ticket.
 | 3 | **ICT e anagrafi** | PA Digitale 2026, IndicePA, catalogo cloud ACN | Specifiche dell'ICT, e servono all'attribuzione | [#13](https://github.com/mxmap-it/analisi-spesa-ict/issues/13) |
 | 4 | **BDAP** | Bilancio dello Stato, gestione delle spese, bilanci degli enti | Spesa di competenza e cassa; oggi in manutenzione | [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25) |
 | 5 | **Finanziamenti** | OpenCUP, OpenCoesione, ItaliaDomani/ReGiS, ponte CUP-CIG di openpnrr | Marcano la fonte di finanziamento dei contratti, PNRR incluso | [#26](https://github.com/mxmap-it/analisi-spesa-ict/issues/26) |
-| 6 | **Altre fonti di spesa di DataCivicLab** | OpenCivitas, Registro Aiuti di Stato, INPS, AIFA; da verificare DAIT e NoiPA | Spesa pubblica diretta, fuori dall'ICT | [#14](https://github.com/mxmap-it/analisi-spesa-ict/issues/14) |
+| — | ~~Altre fonti di spesa di DataCivicLab~~ | Tolte il 26/10/2026: aiuti di Stato, previdenza, farmaci, finanza locale, stipendi, fabbisogni standard non riguardano l'ICT | — | [#14](https://github.com/mxmap-it/analisi-spesa-ict/issues/14), chiuso |
 | 7 | **Europa** | TED, EU Financial Transparency System | Gare sopra soglia e fondi UE diretti | [#27](https://github.com/mxmap-it/analisi-spesa-ict/issues/27) |
 | 8 | **Attribuzione** | GLEIF | Fornitore → gruppo → giurisdizione | [#28](https://github.com/mxmap-it/analisi-spesa-ict/issues/28) |
 | 9 | **Contesto** | CPT, ISTAT, Eurostat COFOG | Denominatori e confronti, non misura | [#29](https://github.com/mxmap-it/analisi-spesa-ict/issues/29) |

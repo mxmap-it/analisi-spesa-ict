@@ -8,14 +8,18 @@ date: 2026-10-26
 
 ## La regola
 
-> Entrano nel perimetro **solo le fonti che riguardano, direttamente o indirettamente, la spesa
-> pubblica.** Tutto il resto resta fuori, per quanto sia buon dato aperto.
+> Entrano nel perimetro **solo le fonti che servono all'obiettivo finale: misurare la spesa ICT
+> della PA, e in particolare quella in cloud, per giurisdizione.** Le fonti di spesa pubblica che non
+> riguardano l'ICT restano fuori, per quanto siano buon dato aperto.
+
+*Regola ristretta il 26 ottobre 2026 su indicazione di Fabio: la prima versione ammetteva tutta la
+spesa pubblica, anche non ICT.*
 
 Tre livelli:
 
 | Livello | Significato | Esempi |
 |---|---|---|
-| **diretta** | Misura denaro pubblico che esce: impegni, pagamenti, aggiudicazioni, ordini, aiuti, stipendi | ANAC, Consip, SIOPE, BDAP, INPS |
+| **diretta** | Misura denaro pubblico speso **anche** in ICT, e permette di isolarlo: aggiudicazioni, ordini, pagamenti per voce | ANAC, Consip, SIOPE, BDAP, PA Digitale 2026 |
 | **indiretta** | Non misura la spesa, ma serve a **leggerla o ad attribuirla**: anagrafiche dei soggetti, classificazioni, denominatori di confronto | IndicePA, ISTAT per i conti della PA, catalogo cloud ACN, anagrafiche d'impresa |
 | **fuori** | Qualunque altro dato aperto | ambiente, mobilità, elezioni, giustizia, sanità non finanziaria, cultura |
 
@@ -47,13 +51,6 @@ prima di essere adottate.
 | `consip_open_data` | Acquisti centralizzati, ordini MePA e convenzioni. **Già nostra** |
 | `openbdap` | Bilancio dello Stato, gestione delle spese, bilanci degli enti |
 | `opencoesione` | Costo, impegni e pagamenti dei progetti di coesione |
-| `opencivitas` | Spesa storica e fabbisogni standard dei comuni |
-| `mimit_rna` | Registro Nazionale Aiuti di Stato: aiuti erogati alle imprese |
-| `inps` | Spesa previdenziale e prestazioni |
-| `aifa` | Spesa farmaceutica |
-| `dait` *(da verificare)* | Finanza locale, certificati di bilancio dei comuni |
-| `noipa_sparql` *(da verificare)* | Stipendi del personale pubblico. **Nessun dataset in uso da loro**: potrebbe essere un giacimento intatto sulla spesa per il personale |
-| `ministero_salute` *(da verificare)* | Da distinguere: la spesa sanitaria entra, l'epidemiologia no |
 
 ### Indiretta — entrano solo per quello che servono
 
@@ -73,7 +70,12 @@ prima di essere adottate.
 `ispra_linked_data`, `lavoro_opendata`, `mim_opendata`, `ministero_interno`,
 `ministero_turismo_opendata`, `mur_ustat`, `openga` *(sigla non chiarita)*, `terna_opendata`.
 
-Sono ventidue fonti su trentasei: **più della metà del loro perimetro è fuori dal nostro**. È la
+E, tolte il 26 ottobre 2026 perché spesa pubblica non ICT: `mimit_rna` (aiuti di Stato), `inps`
+(previdenza), `aifa` (farmaci), `dait` (finanza locale), `noipa_sparql` (stipendi), `opencivitas`
+(fabbisogni standard),
+`ministero_salute`.
+
+Sono ventinove fonti su trentasei: **più di tre quarti del loro perimetro è fuori dal nostro**. È la
 misura di quanto serviva scrivere questa regola.
 
 ## Il nostro perimetro oggi

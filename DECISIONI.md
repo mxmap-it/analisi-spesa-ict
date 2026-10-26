@@ -15,6 +15,7 @@ vecchia.
 | 2026-10-26 | L'analisi della spesa deve essere un **processo ripetibile**: anni passati, anno in corso, anni futuri | Fabio | Va aggiornata, non rifatta |
 | 2026-10-26 | Sei obiettivi in quest'ordine: mirror · disponibilità e integrità · stato per ente nel tempo · rendiconti con evidenze · strumenti · **spesa ICT, per ultima** | Fabio | Non si misura la spesa su dati di cui non si conoscono i buchi |
 | 2026-10-26 | Nel mirror entrano **solo fonti che riguardano, direttamente o indirettamente, la spesa pubblica** | Fabio | Estendere DataCivicLab non significa ereditarne il perimetro |
+| 2026-10-26 | **Regola ristretta**: entrano solo le fonti che servono all'obiettivo finale, la spesa ICT e cloud per giurisdizione. Escono aiuti di Stato, INPS, AIFA, DAIT, NoiPA, Ministero della Salute e OpenCivitas | Fabio | Sostituisce la regola precedente: la spesa pubblica non ICT non serve all'obiettivo |
 | 2026-10-26 | **Prima ANAC, fino in fondo.** Poi la roadmap con tutti gli altri dataset mappati | Fabio | Concentrazione; ANAC è la spina dorsale |
 
 ## Mirror
