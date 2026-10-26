@@ -87,7 +87,7 @@ Esito: una riga di storico al giorno per risorsa. Mai sovrascritta.
 Scarica, calcola lo `sha256`, e **se l'hash è nuovo conserva una nuova versione**. Se è identico,
 non riscarica e registra solo che era identico. Nessuna sovrascrittura, mai.
 
-Budget di spazio misurato: **~18 GB** per i CSV di ANAC, **~25-30 GB** con tutto il resto, crescita
+Budget di spazio misurato sul campo: **~3,2 GB** per le 111 risorse disponibili del registry, crescita
 di **~2 GB l'anno**. Sul VPS attuale ci sono 246 GB liberi.
 
 **Fuori dal mirror per ora:** l'OCDS bulk di ANAC, oltre 100 GB per lo storico, canale fermo da

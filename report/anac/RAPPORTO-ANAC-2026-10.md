@@ -28,11 +28,14 @@ funziona.
 2. **I file storici spariscono, e la regola non è scritta da nessuna parte.** I delta di gennaio,
    febbraio e marzo 2026 non sono più scaricabili. Il file annuale del 2026 non esiste: chi non ha
    scaricato ogni mese ha perso quei mesi, e potrà recuperarli solo quando uscirà l'annuale.
+   **Ci sono buchi anche dentro la finestra disponibile**: di `smartcig` mancano giugno e luglio
+   2026, mentre i mesi prima e dopo ci sono.
 3. **I file "completi" sono istantanee di gennaio.** `aggiudicazioni` e `aggiudicatari` hanno data di
    ultima modifica 15 e 23 gennaio 2026: lo stato corrente si ricostruisce solo applicando i delta.
 4. **L'accesso automatico è ostacolato.** Il portale blocca gli indirizzi IP dei servizi cloud e gli
    user-agent che non sembrano browser, anche sui dati aperti. L'API REST OCDS documentata risponde
-   404; l'API CKAN che funziona non è documentata.
+   404; l'API CKAN che funziona non è documentata. Nessuna risorsa espone `ETag`, e **la dimensione
+   dichiarata nel catalogo è quella del file scompattato**, circa 4,5 volte quella servita.
 5. **Campi codificati che accettano testo libero.** Nel dataset `cup`, **1.951.844 righe** — il 27% —
    hanno come CUP la stringa `ND`: dichiarano un collegamento fra CIG e CUP per dire che il CUP non
    c'è.
@@ -45,7 +48,7 @@ funziona.
 8. **Nessun campo per gli operatori esteri.** Gli identificativi fiscali stranieri finiscono nel campo
    `codice_fiscale` in formati eterogenei, senza indicazione del paese.
 
-In fondo al rapporto, [dieci richieste](#richieste) concrete.
+In fondo al rapporto, [dodici richieste](#richieste) concrete.
 
 ---
 
@@ -59,6 +62,7 @@ In fondo al rapporto, [dieci richieste](#richieste) concrete.
   con i rispettivi caratteri di controllo.
 - **Script:** [`tools/anac_integrita.py`](../../tools/anac_integrita.py). Rilanciato sugli stessi file,
   produce gli stessi numeri.
+- **Sonda di disponibilità:** 125 risorse interrogate il 26 ottobre 2026 con [`tools/sonda.py`](../../tools/sonda.py); esiti e intestazioni HTTP in `stato/sonda/2026-10-26.jsonl`.
 - **Riscontro indipendente:** gli `sha256` di `aggiudicazioni_csv.zip` e `aggiudicatari_csv.zip`
   coincidono con quelli registrati a settembre, in modo indipendente, dal progetto
   [DoveVannoINostriSoldi](https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi). Due misure
@@ -80,7 +84,11 @@ In fondo al rapporto, [dieci richieste](#richieste) concrete.
 | D6 | **Blocco di IP cloud e user-agent** | Le richieste da servizi cloud e con user-agent non-browser ricevono una pagina HTML al posto del file | Gli strumenti automatici devono girare su macchine dedicate o simulare un browser |
 | D7 | **API REST OCDS dichiarata ma non funzionante** | Tutti gli endpoint su `api.anticorruzione.it/opendata/ocds/api/v1/…` → 404; `swagger.json` non è JSON valido | Chi segue la documentazione ufficiale non ottiene nulla |
 | D8 | **API CKAN funzionante ma non documentata** | `…/opendata/api/3/action/package_show?id=cig` → 200 | È il modo migliore di accedere ai dati, e nessuno sa che c'è |
-| D9 | **`ETag` assente** | Nessuna risorsa espone l'intestazione `ETag` | Per verificare se un file è cambiato bisogna riscaricarlo |
+| D9 | **`ETag` assente su tutte le risorse** | Verificato su 95 risorse ANAC sondate: nessuna lo espone. Consip, SIOPE e il Dipartimento per la Trasformazione Digitale lo espongono | Per sapere se un file è cambiato bisogna riscaricarlo per intero |
+| D10 | **Buchi nella pubblicazione dei delta, dentro la finestra disponibile** | `smartcig` 2026-06 e 2026-07 → 404 sia in CSV sia in JSON, mentre 04, 05, 08, 09 e 10 sono presenti. Il catalogo CKAN non li elenca affatto | Due mesi di affidamenti sotto soglia non sono mai stati pubblicati, o sono stati rimossi. Non sono recuperabili dal file annuale, che per il 2026 non esiste |
+| D11 | **Il 2026 dell'OCDS contiene solo marzo** | `bulk/2026/01.json` e `02.json` → 404, `03.json` → 200, da `04` a `10` → 404 | Non è una pubblicazione interrotta a marzo: è un unico mese pubblicato in tutto l'anno |
+| D12 | **La distribuzione JSON di `smartcig` si è interrotta** | `20260801`, `20260901` e `20261001-smartcig_json.zip` → 404, mentre i corrispondenti `_csv.zip` → 200 | Chi consuma il formato JSON si ferma a maggio 2026, senza alcun avviso |
+| D13 | **La dimensione dichiarata nel catalogo non è quella del file servito** | Per `cig_csv_2025_01.zip` CKAN dichiara 91.942.157 byte, il server ne serve 20.798.988. Per `20261001-cig_csv.zip` dichiara 482.505.250 byte contro 107.879.691 serviti, e 482.505.250 è **esattamente** la dimensione del CSV contenuto in quello zip | Il campo `size` descrive il contenuto scompattato invece della distribuzione. Chi pianifica lo spazio o verifica un download sbaglia di circa 4,5 volte |
 
 ---
 
@@ -188,6 +196,10 @@ In ordine di impatto per chi riusa i dati.
    e indicare per le centrali di committenza il codice fiscale degli enti aderenti.
 9. **Aggiungere paese e tipo di identificativo** per gli operatori economici esteri.
 10. **Correggere le chiavi duplicate e i riferimenti orfani** fra `aggiudicazioni` e `aggiudicatari`.
+11. **Pubblicare i mesi mancanti** di `smartcig`, giugno e luglio 2026, e ripristinare la
+    distribuzione JSON, interrotta da agosto 2026.
+12. **Correggere il campo `size`** del catalogo, perché descriva la distribuzione scaricabile e non il
+    file scompattato.
 
 Siamo disponibili a fornire gli elenchi completi dei record interessati da ciascun controllo e a
 ripetere la rilevazione dopo eventuali correzioni.

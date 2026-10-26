@@ -65,7 +65,7 @@ Tutto il lavoro gira sul **server di mxmap.it** (`mxmap.it@51.158.36.151`, 8 cor
   browser. Chi ci riesce usa runner non-cloud oppure un proxy: lo documentano sia DataCivicLab
   sia Radar-Appalti. Un workflow GitHub Actions normale non scarica nulla.
 - **I file sono grandi**: un singolo delta mensile dei CIG pesa ~110-120 MB compressi, il dataset
-  `cup` 196 MB, i mensili OCDS superano i 3 GB. L'elaborazione va fatta in streaming e su disco.
+  `cup` 83 MB, i mensili OCDS superano i 3 GB. L'elaborazione va fatta in streaming e su disco.
 - **I job sono lunghi e vanno ripresi**: il portatile si disconnette, il server no.
 
 Ogni job è idempotente e ripartibile, lo stato sta in [`docs/STATE.md`](docs/STATE.md).
