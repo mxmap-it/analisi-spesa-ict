@@ -43,7 +43,7 @@ ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tail -2 log/mirror-anac.lo
 
 ## Prossimo passo
 
-1. Lasciar finire il mirror ANAC, poi **riverificare il rapporto su tutte le risorse** (#31) e
+1. **Chiudere ANAC**, macro-obiettivo del setup: criteri nella [roadmap](sito/content/progetto/roadmap.md#8quater-quando-anac-è-finito). Ogni problema con prova, controvalidazione indipendente, azione correttiva e metrica di non ricorrenza (#32, #33); poi documento, presentazione e sito (#34-#36). Prima: lasciar finire il mirror e **riverificare il rapporto su tutte le risorse** (#31) e
    misurare la deduplicazione dell'OCDS (#10).
 2. Poi i dataset nell'ordine della [roadmap](sito/content/progetto/roadmap.md#8ter-i-dataset-in-ordine-prima-anac-poi-gli-altri):
    **Consip per primo**, perché cancella oltre i tre anni.

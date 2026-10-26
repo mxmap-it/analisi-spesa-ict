@@ -256,6 +256,25 @@ sia un `rsync` e non un progetto:
 - il manifest contiene tutto ciò che serve a ricostruire l'archivio altrove, o a verificarlo;
 - il nome di dominio da cui il mirror è servito è una configurazione, non una costante.
 
+## 8quater. Quando ANAC è finito
+
+ANAC è il macro-obiettivo del setup. È chiuso quando sono chiusi tutti questi ticket:
+
+| Ticket | Cosa |
+|---|---|
+| [#9](https://github.com/mxmap-it/analisi-spesa-ict/issues/9) | Mirror completo: tutti i dataset, tutti i formati, OCDS incluso |
+| [#10](https://github.com/mxmap-it/analisi-spesa-ict/issues/10) | Deduplicazione dell'OCDS misurata |
+| [#31](https://github.com/mxmap-it/analisi-spesa-ict/issues/31) | Rapporto riverificato su tutte le risorse |
+| [#32](https://github.com/mxmap-it/analisi-spesa-ict/issues/32) | Ogni problema con prova, azione correttiva e metrica di non ricorrenza |
+| [#33](https://github.com/mxmap-it/analisi-spesa-ict/issues/33) | Ogni problema **controvalidato per una via indipendente**: ciò che non regge esce |
+| [#15](https://github.com/mxmap-it/analisi-spesa-ict/issues/15) | Sonda giornaliera, che esegue le metriche di non ricorrenza |
+| [#18](https://github.com/mxmap-it/analisi-spesa-ict/issues/18) · [#16](https://github.com/mxmap-it/analisi-spesa-ict/issues/16) | Registro dei problemi e dashboard |
+| [#34](https://github.com/mxmap-it/analisi-spesa-ict/issues/34) · [#35](https://github.com/mxmap-it/analisi-spesa-ict/issues/35) · [#36](https://github.com/mxmap-it/analisi-spesa-ict/issues/36) | Documento, presentazione e sito per la comunicazione ad ANAC |
+
+**La regola che vale per ogni problema comunicato:** un problema è pronto solo se ha la prova
+riproducibile, la conferma per una seconda via indipendente, un'azione correttiva concreta e una
+metrica che dimostri nel tempo che non si ripresenta. Senza tutte e quattro, resta interno.
+
 ## 8ter. I dataset, in ordine: prima ANAC, poi gli altri
 
 Decisione di Fabio del 26 ottobre 2026: **ANAC fino in fondo**, poi tutti gli altri dataset mappati.

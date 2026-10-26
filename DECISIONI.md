@@ -53,6 +53,14 @@ vecchia.
 | 2026-10-26 | Prima tornata di problemi da presentare **ad ANAC**, a stretto giro, attraverso contatti di Fabio | Fabio | — |
 | 2026-09-23 | Il seme del registro delle giurisdizioni è il package di **aborruso**; proporgli di esternalizzare la lista in un file dati mantenuto da noi | Claude, da confermare con Fabio | Non partire da zero né in concorrenza |
 
+## Comunicazione ad ANAC
+
+| Data | Decisione | Chi | Perché |
+|---|---|---|---|
+| 2026-10-26 | A chiusura di ANAC: **sito aggiornato, un documento e una presentazione** per comunicare i problemi specifici | Fabio | — |
+| 2026-10-26 | **Ogni problema ha un'azione correttiva e una metrica di non ricorrenza**: come risolverlo, e il controllo che dimostra che non si ripresenta | Fabio | Un problema senza soluzione proposta è una lamentela |
+| 2026-10-26 | **Ogni affermazione è validata e controvalidata** per una via indipendente prima di uscire | Fabio | Evitare figuracce davanti all'autorità |
+
 ## Sito
 
 | Data | Decisione | Chi | Perché |
