@@ -1,7 +1,24 @@
-# Tetto giornaliero di token per il lavoro di Claude sul server.
-# Lo decide Fabio. Finche e' null, il wrapper non avvia compiti automatici.
-token_giornalieri: null
+# Tetto di sforzo del progetto, deciso da Fabio il 2026-10-26:
+# "non più del 20% del totale dei token a disposizione, diviso per 7 giorni".
+#
+# Il piano Max espone i limiti in PERCENTUALE del limite settimanale dell'account,
+# non in token assoluti. Il tetto è quindi espresso nella stessa unità.
 
-# Il lavoro a script (scarichi, sonde, DuckDB) non consuma token e non e' soggetto al tetto.
-# Cortesia verso i portali: una richiesta al secondo per autorita'.
+quota_settimanale_progetto: 0.20    # 20% del limite settimanale dell'account
+giorni: 7
+quota_giornaliera: 0.0286           # = 0.20 / 7: 2,86% del limite settimanale al giorno
+
+# Il limite settimanale è condiviso con tutti gli altri progetti dell'account:
+# il 20% è la parte di questo progetto, non un obiettivo da raggiungere.
+#
+# Conta tutto il lavoro di Claude sul progetto: le sessioni interattive con Fabio
+# e i compiti automatici sul server. Il lavoro a script (scarichi, sonde, DuckDB)
+# non consuma token e non è soggetto al tetto.
+#
+# Taratura: per far rispettare il tetto ai compiti automatici serve sapere quanti
+# token valgono l'1% del limite settimanale. Si misura confrontando il contatore
+# del piano prima e dopo un compito di consumo noto (vedi ticket #20).
+token_per_punto_percentuale: null   # da tarare; finché è null non partono compiti automatici
+
+# Cortesia verso i portali: una richiesta al secondo per autorità.
 pausa_tra_richieste_s: 1.0

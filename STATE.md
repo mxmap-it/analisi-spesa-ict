@@ -51,7 +51,7 @@ ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tail -2 log/mirror-anac.lo
 ## Bloccanti, che dipendono da Fabio
 
 - ~~**Board di progetto**~~ creata: https://github.com/orgs/mxmap-it/projects/1
-- **Tetto di token al giorno**: `config/budget.yaml` ha `token_giornalieri: null` (#20).
+- **Tetto**: 20% del limite settimanale su 7 giorni, 2,86% al giorno (`config/budget.yaml`). Da tarare la conversione in token prima di avviare compiti automatici (#20).
 
 ## Vincoli da ricordare
 

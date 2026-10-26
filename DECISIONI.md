@@ -40,7 +40,8 @@ vecchia.
 | 2026-10-26 | **Riusare il più possibile e scrivere meno codice possibile**; estendere DataCivicLab, ma prima costruire il nostro | Fabio | Il codice non scritto non va mantenuto |
 | 2026-09-23 | **Qualunque licenza libera va bene**, si mescola tutto; fuori solo il non libero e i repo senza licenza | Fabio | Rilasciamo tutto |
 | 2026-09-23 | Il backend di Biase **non si riusa** | Claude, condiviso | Licenza non commerciale; classificatore che si addestra sulle proprie predizioni |
-| 2026-10-26 | **Tetto di sforzo in token al giorno**, non in tempo. Valore da fissare | Fabio | — |
+| 2026-10-26 | **Tetto di sforzo in token al giorno**, non in tempo | Fabio | — |
+| 2026-10-26 | Il tetto è **il 20% del limite settimanale dell'account, diviso per 7 giorni**: 2,86% al giorno. Conta il lavoro interattivo e quello automatico | Fabio | Il limite è condiviso con gli altri progetti |
 | 2026-10-26 | Ogni lavoro è **legato a un ticket**; board di progetto nell'organizzazione | Fabio | — |
 
 ## Rapporti esterni
@@ -69,7 +70,7 @@ vecchia.
 
 ## Decisioni aperte, che spettano a Fabio
 
-1. Il **valore del tetto di token** al giorno (#20).
+1. ~~Valore del tetto~~: 20% del settimanale su 7 giorni. Resta da tarare quanti token vale un punto percentuale (#20).
 2. ~~Permesso per la board~~: fatto, board su https://github.com/orgs/mxmap-it/projects/1
 3. Da dove servire il **mirror pubblico** (#17).
 4. Quando contattare **DataCivicLab** (#21) e **aborruso** (#22).
