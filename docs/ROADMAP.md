@@ -252,6 +252,15 @@ sia un `rsync` e non un progetto:
 - il manifest contiene tutto ciò che serve a ricostruire l'archivio altrove, o a verificarlo;
 - il nome di dominio da cui il mirror è servito è una configurazione, non una costante.
 
+## 8bis. Il perimetro delle fonti
+
+Entrano **solo le fonti che riguardano, direttamente o indirettamente, la spesa pubblica**.
+Criterio, tre livelli di relazione e classificazione delle 36 fonti di DataCivicLab —
+ventidue delle quali restano fuori — in [PERIMETRO-FONTI.md](PERIMETRO-FONTI.md).
+
+Vale anche quando contribuiremo a monte: a `source-observatory` portiamo il livello per risorsa
+**sulle sole fonti di spesa**, lasciando a loro le altre.
+
 ## 9. Fuori perimetro, per non riaprire la discussione
 
 Deciso e motivato nel [README](../README.md): l'OCDS come fonte primaria, l'API REST di ANAC, SIOPE
