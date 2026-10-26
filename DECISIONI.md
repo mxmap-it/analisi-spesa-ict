@@ -52,6 +52,7 @@ vecchia.
 | 2026-10-26 | **AppaltIntel è commerciale: nessuna condivisione di metodo o lavorazioni.** Il loro documento interno resta riservato | Fabio | — |
 | 2026-10-26 | Prima tornata di problemi da presentare **ad ANAC**, a stretto giro, attraverso contatti di Fabio | Fabio | — |
 | 2026-09-23 | Il seme del registro delle giurisdizioni è il package di **aborruso**; proporgli di esternalizzare la lista in un file dati mantenuto da noi | Claude, da confermare con Fabio | Non partire da zero né in concorrenza |
+| 2026-10-26 | **Cruscotto Italia di AgID: per ora lo lasciamo da parte.** Alla fine del percorso lo approfondiamo, ne raccogliamo ogni lezione appresa e lo usiamo per controvalidare i nostri risultati. Non è la base dell'analisi: niente fornitori, solo comuni, solo 12 mesi, dati aggregati | Fabio | Utile per controvalidare, non per misurare la giurisdizione |
 
 ## Comunicazione ad ANAC
 
