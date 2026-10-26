@@ -58,9 +58,7 @@ prima di essere adottate.
 |---|---|
 | `agid` | Catalogo nazionale dei dati aperti, Piano Triennale, spesa ICT |
 | `istat_sdmx` | Conti delle amministrazioni pubbliche e COFOG: denominatori e confronti europei |
-| `mef_irpef` | Base imponibile per rapportare la spesa al territorio. Sono entrate, non spesa |
 | `unioncamere` *(da verificare)* | Anagrafiche d'impresa, per riconoscere i fornitori |
-| `pagopa` *(da verificare)* | Pagamenti **verso** la PA: utile come controparte, non è spesa |
 | `mit_opendata` *(da verificare)* | Opere pubbliche, se e quando serviranno |
 
 ### Fuori — non le prendiamo
@@ -72,10 +70,10 @@ prima di essere adottate.
 
 E, tolte il 26 ottobre 2026 perché spesa pubblica non ICT: `mimit_rna` (aiuti di Stato), `inps`
 (previdenza), `aifa` (farmaci), `dait` (finanza locale), `noipa_sparql` (stipendi), `opencivitas`
-(fabbisogni standard),
+(fabbisogni standard), `mef_irpef` (redditi dichiarati), `pagopa` (pagamenti verso la PA),
 `ministero_salute`.
 
-Sono ventinove fonti su trentasei: **più di tre quarti del loro perimetro è fuori dal nostro**. È la
+Sono trentuno fonti su trentasei: **più di tre quarti del loro perimetro è fuori dal nostro**. È la
 misura di quanto serviva scrivere questa regola.
 
 ## Il nostro perimetro oggi
@@ -97,10 +95,10 @@ per l'attribuzione di giurisdizione, **CPT** e **ISTAT** come contesto.
 
 ## Casi limite già decisi
 
-- **Le entrate non sono spesa.** IRPEF dichiarato, accise, pagamenti verso la PA via pagoPA:
-  entrano solo come denominatore, e sempre marcati come tali.
-- **La sanità va divisa.** Il conto economico del Servizio Sanitario Nazionale è spesa; i dati
-  epidemiologici no.
+- **Le entrate non entrano.** IRPEF dichiarato, accise, pagamenti verso la PA via pagoPA restano
+  fuori: non servono a misurare la spesa ICT (decisione del 26 ottobre 2026).
+- **La sanità entra solo per il suo ICT.** La spesa ICT di ASL e aziende ospedaliere si legge già
+  in ANAC, Consip e SIOPE; i conti sanitari in generale restano fuori.
 - **Le anagrafiche entrano se identificano chi spende o chi incassa.** IndicePA sì, l'anagrafe
   delle scuole no, a meno che non serva a un'attribuzione specifica.
 - **Un dato ICT non finanziario entra se serve all'attribuzione.** Il catalogo dei servizi cloud

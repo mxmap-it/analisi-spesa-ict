@@ -89,3 +89,6 @@ vecchia.
 3. Da dove servire il **mirror pubblico** (#17).
 4. Quando contattare **DataCivicLab** (#21) e **aborruso** (#22).
 5. L'**invio del rapporto ad ANAC** e a chi (#19).
+
+- 2026-10-26 — Fabio — Tolte dal perimetro mef_irpef e pagopa: sono entrate, non spesa ICT.
+- 2026-10-26 — Fabio — Regole di progetto per persone e agenti AI in AGENTS.md (CLAUDE.md rimanda lì), per permettere ad altri di unirsi con i propri agenti.
