@@ -35,13 +35,18 @@ UA_BROWSER = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like G
 H = {"User-Agent": UA_BROWSER, "Accept": "*/*"}
 
 s = requests.Session()
+ERRORI: dict[str, str] = {}
 
 
 def head(url: str) -> requests.Response | None:
+    """Stato e intestazioni con un GET in streaming: alcuni host non gestiscono bene HEAD."""
     time.sleep(0.5)  # cortesia: il mirror sta già interrogando lo stesso server
     try:
-        return s.head(url, headers=H, timeout=60, allow_redirects=True)
-    except requests.RequestException:
+        r = s.get(url, headers=H, timeout=60, allow_redirects=True, stream=True)
+        r.close()
+        return r
+    except requests.RequestException as e:
+        ERRORI[url] = type(e).__name__
         return None
 
 
@@ -83,15 +88,16 @@ def i2_api_rest() -> dict:
     """Gli endpoint documentati rispondono e lo swagger è JSON valido."""
     stati = {}
     for ep in ("version", "releases", "awards"):
-        r = head(f"https://api.anticorruzione.it/opendata/ocds/api/v1/1.0.0/{ep}")
-        stati[ep] = r.status_code if r else None
+        u = f"https://api.anticorruzione.it/opendata/ocds/api/v1/1.0.0/{ep}"
+        r = head(u)
+        stati[ep] = r.status_code if r else f"errore: {ERRORI.get(u)}"
     try:
         sw = s.get(f"{PORTALE}/ocds/api/spec/swagger.json", headers=H, timeout=60)
         json.loads(sw.text)
         swagger_ok = True
     except (requests.RequestException, ValueError):
         swagger_ok = False
-    ok = swagger_ok and all(v and v < 400 for v in stati.values())
+    ok = swagger_ok and all(isinstance(v, int) and v < 400 for v in stati.values())
     return esito("I2", ok, "endpoint dell'API REST OCDS raggiungibili e swagger valido",
                  {"endpoint": stati, "swagger_json_valido": swagger_ok})
 
@@ -194,9 +200,11 @@ def i7_dimensioni() -> dict:
 
 
 def i8_elencate_inesistenti() -> dict:
-    """Ogni risorsa elencata nei dataset delta esiste."""
+    """Ogni risorsa elencata nel catalogo esiste: delta, annuali smartcig e OCDS."""
     rotte = []
-    for ds in ("cig", "smartcig", "aggiudicazioni", "aggiudicatari"):
+    oggi = date.today()
+    elenco = ["cig", "smartcig", "aggiudicazioni", "aggiudicatari", f"smartcig-{oggi.year - 1}"] + [f"ocds-appalti-ordinari-{y}" for y in (oggi.year - 1, oggi.year)]
+    for ds in elenco:
         for r in (ckan("package_show", id=ds) or {}).get("resources", []):
             h = head(r.get("url", ""))
             if h is not None and h.status_code == 404:
