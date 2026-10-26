@@ -152,15 +152,22 @@ Dichiarata sul portale, con Swagger UI raggiungibile. Ma tutti gli endpoint su
 `api.anticorruzione.it` rispondono **404** attraverso il gateway, e il file `swagger.json` **non è
 JSON valido**. → Usiamo l'**API CKAN**, che funziona benissimo e non è documentata da nessuna parte.
 
-### SIOPE attraverso BDAP — scartato
+### SIOPE attraverso BDAP — da verificare, e specchiato comunque
 
-AgID documenta nel proprio ETL perché l'ha abbandonato: BDAP **genera i dump a richiesta** con un
-tetto di 400 secondi lato server e 503 ricorrenti, i `resource_id` sono cablati per regione e anno,
-e soprattutto **il 2025 era troncato a marzo per 1.717 comuni** fra Lombardia e Friuli e assente
-per 84 comuni di Trento.
+**Quello che sappiamo è di seconda mano.** AgID, nel commento al proprio modulo `siope.py` di
+Cruscotto Italia, scrive di aver abbandonato BDAP perché **genera i dump a richiesta** con un tetto
+di 400 secondi lato server e 503 ricorrenti, i `resource_id` sono cablati per regione e anno, e
+**il 2025 era troncato a marzo per 1.717 comuni** fra Lombardia e Friuli e assente per 84 comuni di
+Trento. **Non l'abbiamo verificato noi.**
 
-→ **Usiamo il bulk nazionale di `siope.it`**, che ha tutti i dodici mesi ed espone `Last-Modified`
-e `Accept-Ranges`, quindi la cache si può invalidare correttamente.
+E al 26 ottobre 2026 non si può verificare: il catalogo open data di BDAP è in **manutenzione
+straordinaria**, e lo comunica rispondendo **HTTP 200** con una pagina HTML invece che con un
+errore — chi lo interroga in automatico crede che vada tutto bene.
+
+→ **Usiamo come via principale il bulk nazionale di `siope.it`**, che espone `Last-Modified` e
+`Accept-Ranges`. Ma **specchiamo anche la via BDAP** appena torna disponibile, e confrontiamo le due
+comune per comune e mese per mese: è esattamente il tipo di difformità fra vie di accesso allo
+stesso dato che il progetto deve misurare, non presumere.
 
 ### I 23 portali regionali di e-procurement — fuori perimetro
 

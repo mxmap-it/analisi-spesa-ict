@@ -186,15 +186,15 @@ risorse:
     dataset: ocds
     url: https://dati.anticorruzione.it/opendata/download/dataset/ocds/filesystem/bulk/{AAAA}/{MM}.json
     modello: annuale-mensile
-    da: 2026
+    da: 2018
     a: 2026
     cadenza: mensile
-    specchia: false
+    specchia: true
     partizione: mensile
     ict: true
     nota: >-
-      Non specchiato: oltre 100 GB per lo storico, canale fermo a marzo 2026 e
-      ridondante rispetto ai tabellari. Sondato per rilevare se riparte.
+      Specchiato per intero su richiesta di Fabio: 99 file 2018-2026. I mesi
+      duplicati collassano in un unico blob, e la deduplicazione lo misura.
 
   - autorita: anac
     dataset: api-ckan

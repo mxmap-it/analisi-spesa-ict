@@ -1,4 +1,4 @@
 ---
-title: "Documenti di progetto"
+title: "Metodo"
 ---
-Roadmap, perimetro delle fonti e attese verso le autorità. Sono i documenti che governano il lavoro, aggiornati man mano.
+Come lavoriamo: la roadmap, quali fonti entrano, cosa chiediamo alle autorità e quali strumenti riusiamo.

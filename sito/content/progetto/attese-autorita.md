@@ -121,9 +121,10 @@ agganciabile ad ANAC.
 
 | Attesa | Stato |
 |---|---|
-| Download diretto e ripetibile | **`smentito`** — i dump sono generati a richiesta, con tetto di 400 secondi e 503 ricorrenti |
-| Annualità complete | **`smentito`** — il 2025 di SIOPE via BDAP era troncato a marzo per 1.717 comuni e assente per 84 comuni di Trento |
-| `Last-Modified` utilizzabile per la cache | **`smentito`** — è il motivo per cui AgID ha abbandonato questa via |
+| Disponibilità del catalogo open data | **`smentito`** — al 2026-10-26 in "manutenzione straordinaria", segnalata con **HTTP 200** e una pagina HTML invece che con un errore |
+| Download diretto e ripetibile | `atteso` — **AgID riferisce** dump generati a richiesta, tetto di 400 secondi e 503 ricorrenti. Non verificato da noi |
+| Annualità complete | `atteso` — **AgID riferisce** il 2025 di SIOPE troncato a marzo per 1.717 comuni e assente per 84 comuni di Trento. Da verificare confrontando con il bulk di `siope.it` |
+| `Last-Modified` utilizzabile per la cache | `atteso` — riferito da AgID, non verificato |
 | Licenza | `confermato` — CC BY |
 
 **Contatti:** **nessuna email di assistenza BDAP pubblicata e verificabile.** È in sé una voce del
