@@ -5,6 +5,7 @@
 # non in token assoluti. Il tetto è quindi espresso nella stessa unità.
 
 quota_settimanale_progetto: 0.20    # 20% del limite settimanale dell'account
+in_vigore_da: "completamento di ANAC"   # durante il setup non si applica
 giorni: 7
 quota_giornaliera: 0.0286           # = 0.20 / 7: 2,86% del limite settimanale al giorno
 

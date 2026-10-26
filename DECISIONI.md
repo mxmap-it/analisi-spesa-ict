@@ -42,6 +42,7 @@ vecchia.
 | 2026-09-23 | Il backend di Biase **non si riusa** | Claude, condiviso | Licenza non commerciale; classificatore che si addestra sulle proprie predizioni |
 | 2026-10-26 | **Tetto di sforzo in token al giorno**, non in tempo | Fabio | — |
 | 2026-10-26 | Il tetto è **il 20% del limite settimanale dell'account, diviso per 7 giorni**: 2,86% al giorno. Conta il lavoro interattivo e quello automatico | Fabio | Il limite è condiviso con gli altri progetti |
+| 2026-10-26 | **Il tetto vale a regime, non durante il setup**: fino al completamento di ANAC, che è il macro-obiettivo, si lavora senza tetto | Fabio | Oggi si costruisce |
 | 2026-10-26 | Ogni lavoro è **legato a un ticket**; board di progetto nell'organizzazione | Fabio | — |
 
 ## Rapporti esterni
