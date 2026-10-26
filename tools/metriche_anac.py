@@ -81,7 +81,7 @@ def i1_ocds_mensile(oggi: date) -> dict:
                 if (h := head(f"{DL}/ocds/filesystem/bulk/{a}/{b:02d}.json")) is None or h.status_code != 200]
     ok = oggi.day <= 2 or (r is not None and r.status_code == 200)
     return esito("I1", ok, "file OCDS del mese precedente pubblicato dopo il giorno 2",
-                 {"url": url, "http": r.status_code if r else None, "mesi_mancanti_anno_corrente": mancanti})
+                 {"url": url, "http": r.status_code if r is not None else None, "mesi_mancanti_anno_corrente": mancanti})
 
 
 def i2_api_rest() -> dict:
@@ -90,7 +90,7 @@ def i2_api_rest() -> dict:
     for ep in ("version", "releases", "awards"):
         u = f"https://api.anticorruzione.it/opendata/ocds/api/v1/1.0.0/{ep}"
         r = head(u)
-        stati[ep] = r.status_code if r else f"errore: {ERRORI.get(u)}"
+        stati[ep] = r.status_code if r is not None else f"errore: {ERRORI.get(u)}"
     try:
         sw = s.get(f"{PORTALE}/ocds/api/spec/swagger.json", headers=H, timeout=60)
         json.loads(sw.text)
@@ -133,7 +133,7 @@ def i4_mesi_duplicati(oggi: date) -> dict:
     for y, m in mesi_fino_a(oggi, (oggi.year - 2, 1)):
         url = f"{DL}/ocds/filesystem/bulk/{y}/{m:02d}.json"
         r = head(url)
-        if not r or r.status_code != 200 or "Content-Length" not in r.headers:
+        if r is None or r.status_code != 200 or "Content-Length" not in r.headers:
             continue
         n = int(r.headers["Content-Length"])
         # firma: dimensione + un blocco a metà file, che salta l'intestazione con l'uri
