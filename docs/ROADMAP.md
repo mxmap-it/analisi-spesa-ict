@@ -156,9 +156,10 @@ Due regole che restano, perché il tetto da solo non le garantisce:
 - **Nessuna fonte vale il tetto di un giorno.** Se una fonte richiede scraping fragile,
   autenticazione, captcha o reverse engineering, si marca `non-specchiabile` con il motivo e si passa
   oltre.
-- **Recupero retroattivo solo dove è gratis.** Ciò che è sparito dalla fonte si cerca una volta
-  nella Wayback Machine, che ha catturato 1.660 URL di ANAC; ciò che non c'è si registra come
-  perduto.
+- **Nessun recupero retroattivo.** Ciò che è già sparito dalla fonte si registra come perduto e si
+  usa come prova nel registro dei problemi. Non si inseguono archivi di terzi: i file sono grandi,
+  la copertura è casuale e il tempo speso non porta avanti l'analisi. Da qui in poi non sparisce
+  più nulla, perché l'archivio parte adesso.
 
 ### Definizione di "fatto"
 
