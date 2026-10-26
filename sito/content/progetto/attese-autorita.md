@@ -86,7 +86,7 @@ Pubblicità a Valore Legale.
 | File annuale dell'anno in corso | **`smentito`** — `cig-2026` non esiste |
 | Conservazione dei delta dichiarata | **`smentito`** — non documentata e non deducibile: sei delta a settembre, sette a ottobre, gennaio-marzo spariti |
 | API documentata | **`smentito`** — la CKAN funziona e non è documentata, la REST OCDS è documentata e risponde 404 con swagger non valido |
-| Accesso senza discriminazioni | **`smentito`** — WAF su IP cloud e user-agent |
+| Accesso senza discriminazioni | **`smentito`** — respinge gli user-agent non-browser con una pagina HTML servita come 200 (verificato). Il blocco degli IP cloud è riferito da DataCivicLab e Radar-Appalti, non verificato da noi |
 | Licenza dichiarata | `confermato` — CC BY-SA 4.0, CC BY 4.0 sull'OCDS |
 
 **Contatti:** PEC `protocollo@pec.anticorruzione.it`; Contact Center 06 62289571 e

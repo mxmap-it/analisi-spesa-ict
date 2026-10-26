@@ -1,64 +1,68 @@
-# STATE — stato del lavoro
+# STATE — punto di ripresa
 
-Punto di ripresa per chiunque (umano o Claude) riprenda il progetto. Da aggiornare a ogni
-avanzamento, prima di chiudere la sessione.
+Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-10-26
+**Ultimo aggiornamento:** 2026-10-26 sera
 
-**Sito:** https://analisi-spesa-ict.mxmap.it/ — sorgenti Hugo in `sito/`, build in `docs/` (`hugo --source sito --minify --cleanDestinationDir`).
+## Dove sta cosa
 
-## Dove si lavora
+| Cosa | Dove |
+|---|---|
+| Repository | `mxmap-it/analisi-spesa-ict`, pubblico |
+| Sito | https://analisi-spesa-ict.mxmap.it/ — sorgenti Hugo in `sito/`, build in `docs/`: `hugo --source sito --minify --cleanDestinationDir` |
+| Server | `mxmap.it@51.158.36.151`, cartella `~/analisi-spesa-ict` (clone del repo, push con la deploy key `~/.ssh/id_ed25519_spesaict`, alias `github-spesaict`) |
+| Archivio | `~/analisi-spesa-ict/archivio/` sul server, fuori da git: `blobs/` per contenuto, `mirror/` con i percorsi originali, `manifest.jsonl` |
+| Clone locale | `C:\Users\admin\Claude\analisi-spesa-ict` |
+| Decisioni | [DECISIONI.md](DECISIONI.md) |
+| Analisi tecnica | [sito/content/progetto/analisi-tecnica.md](sito/content/progetto/analisi-tecnica.md) |
+| Ticket | https://github.com/mxmap-it/analisi-spesa-ict/issues |
 
-- **Server:** `mxmap.it@51.158.36.151` (sd-172212, 8 core, 31 GB RAM, ~246 GB liberi).
-- **Repo:** `mxmap-it/analisi-spesa-ict`, oggi **privato**.
-- **Clone locale:** `C:\Users\admin\Claude\analisi-spesa-ict` (solo per redazione e push).
-- **Clone sul server:** *da fare* — vedi "Bloccanti".
+## In esecuzione sul server
+
+- **Mirror completo di ANAC** (`tools/mirror_anac.py`, ticket #9): 1.797 risorse, tutti i formati,
+  OCDS bulk incluso. Alle 18 del 26/10 era a 719 risorse e 13,1 GB. Si ferma da solo sotto i 40 GB
+  liberi.
+- **Guardiano** in cron ogni 15 minuti (`tools/guardiano.sh`): riavvia il mirror se muore e non ha
+  finito.
+
+Controllare con:
+
+```
+ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tail -2 log/mirror-anac.log && .venv/bin/python tools/stato_mirror.py | head -9'
+```
 
 ## Fatto
 
-- [x] Analisi delle fonti e degli strumenti, con le strade scartate e il perché → `README.md`.
-- [x] Verifica dello stato delle fonti dal server (2026-10-26).
-- [x] Repository creato.
-- [x] Primo scarico ANAC nel mirror (5 risorse, sha256 nel manifest) e prima analisi di integrità → https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10/.
-- [x] Tetto di sforzo ridefinito in token al giorno → `config/budget.yaml` (valore da decidere).
+- Analisi di fonti e strumenti, con le strade scartate → analisi tecnica.
+- Roadmap, perimetro delle fonti, attese verso le autorità, registro delle decisioni.
+- Censimento ANAC completo: 70 dataset, 1.801 risorse, 128,9 GB reali.
+- **Rapporto ANAC pubblicato** e versionato (1.1): https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10/
+- Registry delle risorse e sonda; prima sonda su 125 risorse.
+- Sito con il tema di osservatorio.mxmap.it.
+- 31 ticket, i completati chiusi.
 
-## Da fare, in ordine
+## Prossimo passo
 
-1. **Stadio archivio** (`tools/archivia.py`): fetch con user-agent da browser, sha256, manifest
-   append-only, scarico mensile di ciò che scade — delta ANAC e annualità Consip. **È il primo
-   perché è l'unico con una scadenza imposta da altri.**
-2. **Monitor qualità**: disponibilità, freschezza, continuità, persistenza, contenuto,
-   agganciabilità. Pagelle per produttore.
-3. **Perimetro ICT**: lista CPV motivata, con i test.
-4. **Registro fornitore → gruppo → giurisdizione**: seme da `internal/giurisdizione` di
-   `anac-pl-pp-cli`, arricchimento GLEIF, curatela per valore.
-5. **Pubblicazione**: `kpi.json` + dashboard sul sito dell'Osservatorio.
+1. Lasciar finire il mirror ANAC, poi **riverificare il rapporto su tutte le risorse** (#31) e
+   misurare la deduplicazione dell'OCDS (#10).
+2. Poi i dataset nell'ordine della [roadmap](sito/content/progetto/roadmap.md#8ter-i-dataset-in-ordine-prima-anac-poi-gli-altri):
+   **Consip per primo**, perché cancella oltre i tre anni.
 
-## Bloccanti
+## Bloccanti, che dipendono da Fabio
 
-- **Il server non può ancora fare `git push`.** La sua chiave `~/.ssh/id_ed25519` è una deploy key
-  limitata al repo `selective-copy-trader`; non ha `gh` né credenziali per questo repository.
-  Serve una delle due cose, a scelta di Fabio:
-  - aggiungere la chiave pubblica del server come **deploy key con accesso in scrittura** su
-    `mxmap-it/analisi-spesa-ict`;
-  - oppure rendere il repository **pubblico**, così il server può almeno clonare in lettura, e
-    tenere il push dal portatile.
+- **Board di progetto**: serve il permesso `project` per `gh`. Comando da eseguire sul portatile:
+  `gh auth refresh -h github.com -s project`. Poi la creo e ci collego i 31 ticket.
+- **Tetto di token al giorno**: `config/budget.yaml` ha `token_giornalieri: null` (#20).
 
-## Ambiente sul server
+## Vincoli da ricordare
 
-Presenti: `python3` 3.12.3, `pip` 24.0, `git`, `jq`, `curl`, `claude` CLI 2.1.170 (autenticata).
-Presenti come pacchetti Python: `PyYAML`, `requests`.
-
-Da installare quando si parte: `duckdb`, `frictionless`. Assenti e da valutare: `go` (serve solo
-per compilare le CLI di aborruso dai sorgenti; in alternativa si usano i binari delle release).
-
-## Vincoli da non dimenticare
-
-- **ANAC blocca gli IP cloud** e gli user-agent non-browser: il fetch gira solo da qui.
-- **I delta ANAC spariscono** e la regola non è documentata: a settembre erano sei, a ottobre
-  sette, e gennaio-marzo 2026 rispondono già 404.
-- **Consip cancella oltre i tre anni**: il 2023 non è più scaricabile.
-- **Il file annuale `cig-2026` non esiste ancora**: tutto il 2026 vive nei delta.
-- Importi SIOPE **in centesimi** e **mensili puri, non cumulati**.
-- Il join con le anagrafiche SIOPE va fatto **per codice fiscale**: la codifica provincia-comune
-  non è ISTAT per la Sardegna.
+- **ANAC respinge gli user-agent non-browser** rispondendo 200 con una pagina HTML: `archivia.py`
+  lo riconosce e non lo salva come file. Il blocco degli IP cloud è riferito da altri, non verificato.
+- **Il catalogo dichiara dimensioni 4,1 volte quelle vere**: per lo spazio contano gli `HEAD`.
+- **I delta ANAC spariscono** senza regola; il file annuale dell'anno in corso non esiste.
+- **Consip cancella oltre i tre anni**: il 2023 è già perso.
+- **BDAP** in manutenzione straordinaria, segnalata con HTTP 200.
+- Importi **SIOPE** in centesimi e mensili puri; join per codice fiscale.
+- Sul server **non usare `/tmp`** per file di lavoro: è condiviso con altri progetti. E un `pkill -f`
+  con un pattern presente nel proprio comando uccide la propria sessione: usare `tools/avvia.sh`.
+- Distinguere sempre **verificato da noi** e **riferito da altri**.

@@ -15,6 +15,6 @@ description: "Banca Dati Nazionale dei Contratti Pubblici: 70 dataset, 1.801 ris
 | Mesi mancanti di `smartcig` (giugno e luglio 2026) | aperto |
 | Dimensioni dichiarate dal catalogo 4,1 volte quelle servite | aperto |
 | `ND` al posto del CUP in 1.951.844 righe | aperto |
-| Blocco degli IP cloud e degli user-agent sui dati aperti | aperto |
+| Rifiuto degli user-agent non-browser sui dati aperti, con risposta 200 e pagina HTML | aperto |
 
 La misura nel tempo parte con le sonde mensili: questa tabella mostrerà quando e se ciascun problema viene risolto.

@@ -227,13 +227,13 @@ Le voci già pronte all'apertura del registro, tutte verificate:
 | API REST OCDS dichiarata ma tutti gli endpoint in 404, `swagger.json` non valido | ANAC |
 | Retention dei delta non documentata né deducibile; gennaio-marzo 2026 spariti | ANAC |
 | File annuale dell'anno in corso assente: tutto il 2026 vive nei delta | ANAC |
-| WAF che blocca IP cloud e user-agent non-browser sui dati aperti | ANAC |
+| Rifiuto degli user-agent non-browser con pagina HTML servita come 200 | ANAC |
 | API CKAN funzionante ma non documentata | ANAC |
 | Finestra mobile di tre anni senza politica pubblicata: il 2023 è sparito | Consip |
 | Dataset su ordini e convenzioni aggregati senza CIG né CF della PA | Consip |
 | Dump generati a richiesta, 503 ricorrenti, annualità troncate | MEF-RGS (BDAP) |
 | `soldipubblici.gov.it` dismesso senza reindirizzamento ai dati | AgID |
-| Bandi ed esiti congelati al 31 dicembre 2023 | MIT |
+| Bandi ed esiti congelati al 31 dicembre 2023 (riferito, da verificare) | MIT |
 | Censimento del patrimonio ICT raccolto per ente e non pubblicato | AgID / DTD |
 | API OpenCUP documentata come pubblica ma risponde 401 | DIPE |
 
@@ -255,6 +255,28 @@ sia un `rsync` e non un progetto:
 - nessun percorso assoluto nel codice: una variabile d'ambiente per la radice;
 - il manifest contiene tutto ciò che serve a ricostruire l'archivio altrove, o a verificarlo;
 - il nome di dominio da cui il mirror è servito è una configurazione, non una costante.
+
+## 8ter. I dataset, in ordine: prima ANAC, poi gli altri
+
+Decisione di Fabio del 26 ottobre 2026: **ANAC fino in fondo**, poi tutti gli altri dataset mappati.
+Ogni gruppo ha il suo ticket.
+
+| # | Gruppo | Cosa entra | Perché in questa posizione | Ticket |
+|---|---|---|---|---|
+| **0** | **ANAC** | Tutti i 70 dataset, 1.797 risorse, CSV, JSON e TTL, **OCDS bulk 2018-2026 incluso** | È la spina dorsale degli appalti; in corso | [#9](https://github.com/mxmap-it/analisi-spesa-ict/issues/9), [#10](https://github.com/mxmap-it/analisi-spesa-ict/issues/10), [#31](https://github.com/mxmap-it/analisi-spesa-ict/issues/31) |
+| 1 | **Consip** | 16 dataset; `gare-asp` e `bandi-e-gare` con CIG; ordini MePA e convenzioni | **Cancella oltre i tre anni**: ogni mese perso è irrecuperabile. E il canale centralizzato è dove passa molta spesa ICT | [#11](https://github.com/mxmap-it/analisi-spesa-ict/issues/11) |
+| 2 | **SIOPE** | Bulk di `siope.it`, tutti gli anni; più la via BDAP, da confrontare | È l'unica misura di **cassa**, ente per ente | [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30) |
+| 3 | **ICT e anagrafi** | PA Digitale 2026, IndicePA, catalogo cloud ACN | Specifiche dell'ICT, e servono all'attribuzione | [#13](https://github.com/mxmap-it/analisi-spesa-ict/issues/13) |
+| 4 | **BDAP** | Bilancio dello Stato, gestione delle spese, bilanci degli enti | Spesa di competenza e cassa; oggi in manutenzione | [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25) |
+| 5 | **Finanziamenti** | OpenCUP, OpenCoesione, ItaliaDomani/ReGiS, ponte CUP-CIG di openpnrr | Marcano la fonte di finanziamento dei contratti, PNRR incluso | [#26](https://github.com/mxmap-it/analisi-spesa-ict/issues/26) |
+| 6 | **Altre fonti di spesa di DataCivicLab** | OpenCivitas, Registro Aiuti di Stato, INPS, AIFA; da verificare DAIT e NoiPA | Spesa pubblica diretta, fuori dall'ICT | [#14](https://github.com/mxmap-it/analisi-spesa-ict/issues/14) |
+| 7 | **Europa** | TED, EU Financial Transparency System | Gare sopra soglia e fondi UE diretti | [#27](https://github.com/mxmap-it/analisi-spesa-ict/issues/27) |
+| 8 | **Attribuzione** | GLEIF | Fornitore → gruppo → giurisdizione | [#28](https://github.com/mxmap-it/analisi-spesa-ict/issues/28) |
+| 9 | **Contesto** | CPT, ISTAT, Eurostat COFOG | Denominatori e confronti, non misura | [#29](https://github.com/mxmap-it/analisi-spesa-ict/issues/29) |
+
+**Fuori**, deciso: i ventitré portali regionali, gli XML della Legge 190 per ente, la Wayback
+Machine, i documenti di gara in massa. I documenti di gara rientreranno solo a campione, per
+l'obiettivo finale.
 
 ## 8bis. Il perimetro delle fonti
 
