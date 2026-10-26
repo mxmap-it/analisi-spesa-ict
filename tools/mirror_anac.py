@@ -22,15 +22,23 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from archivia import archivia, scrivi_manifest  # noqa: E402
+from archivia import ROOT, archivia, scrivi_manifest  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
+
+# Su questa macchina gira anche la produzione di mxmap.it: non le mangiamo il disco.
+LIBERI_MINIMI_GB = 40.0
+
+
+def liberi_gb() -> float:
+    return shutil.disk_usage(ROOT if ROOT.exists() else BASE).free / 1e9
 
 
 def priorita(r: dict) -> tuple:
@@ -56,10 +64,16 @@ def main() -> int:
     tot = sum(r.get("dim_reale") or 0 for r in da_fare)
     print(f"{len(da_fare)} risorse, {tot/1e9:.2f} GB dichiarati dal server\n", flush=True)
 
+    print(f"spazio libero: {liberi_gb():.1f} GB (soglia di sicurezza {LIBERI_MINIMI_GB} GB)\n", flush=True)
+
     sess = requests.Session()
     scaricati = 0
     conteggi = {"nuovo": 0, "invariato": 0, "errore": 0, "assente": 0}
     for i, r in enumerate(da_fare, 1):
+        if liberi_gb() < LIBERI_MINIMI_GB:
+            print(f"\nFERMO: spazio libero sotto {LIBERI_MINIMI_GB} GB. "
+                  f"Liberare spazio o spostare l'archivio, poi rilanciare.", flush=True)
+            break
         rec = archivia(sess, r["url"])
         rec["dataset"] = r.get("dataset")
         rec["formato"] = r.get("formato")
