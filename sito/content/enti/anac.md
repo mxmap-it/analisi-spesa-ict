@@ -5,6 +5,10 @@ description: "Banca Dati Nazionale dei Contratti Pubblici: 70 dataset, 1.801 ris
 ---
 **Dati:** Banca Dati Nazionale dei Contratti Pubblici su `dati.anticorruzione.it` — 70 dataset, 1.801 risorse in CSV, JSON e TTL, licenza CC BY-SA 4.0 (CC BY 4.0 per l'OCDS).
 
+**I problemi sono noti anche ad AgID**, che li ha documentati pubblicamente nel codice di
+[Cruscotto Italia](https://github.com/AgID/cruscotto-italia/blob/main/scripts/anac_archivio_mensile.sh)
+il 18-19 ottobre 2026 e per questo ha smesso di usare l'OCDS di ANAC.
+
 **Ultimo rendiconto:** [Disponibilità e integrità dei dati aperti ANAC](/rendiconti/anac-2026-10/), 26 ottobre 2026.
 
 | Problema principale | Stato |

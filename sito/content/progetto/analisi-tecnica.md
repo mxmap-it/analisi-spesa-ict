@@ -185,7 +185,7 @@ di giurisdizione.
 
 ### Un aggregatore generalista della spesa pubblica — già fatto, due volte
 
-- **Cruscotto Italia** (AgID, AGPL-3.0): 31 moduli di ingestione in `etl/sources/`, mirror in DuckDB e Parquet, endpoint MCP,
+- **Cruscotto Italia** (AgID, AGPL-3.0, [servizio](https://cruscotto-italia.dati.gov.it/) con schede per 7.894 comuni ed endpoint MCP): 31 moduli di ingestione in `etl/sources/`, mirror in DuckDB e Parquet, endpoint MCP,
   aggiornamento giornaliero.
 - **DataCivicLab** (~40 repo, MIT): contratto RAW → CLEAN → MART, Parquet su bucket pubblico,
   `metadata.json` e `validation.json` per l'audit trail.
@@ -267,7 +267,7 @@ riservati) e le licenze **non libere** (Elastic License, clausole non commercial
 | Radar disponibilità fonti | `dataciviclab/source-observatory` | MIT | Monitora già 36 cataloghi, ANAC e Consip inclusi. Ci appoggiamo e contribuiamo le fonti mancanti |
 | Pubblicità a Valore Legale, vocabolario CPV, validazione CIG | `aborruso/anac-pl-pp-cli` | Apache-2.0 | L'unico strumento che abbiamo trovato su quella fonte. Porta anche i 9.454 codici CPV, la validazione del CIG con cifra di controllo, uno store SQLite e un server MCP |
 | Catalogo BDAP, IndicePA | `aborruso/openbdap-pp-cli`, `openipa` | Apache-2.0 | Per la scoperta; l'ingestione resta nel toolkit |
-| Ingestione SIOPE e PNRR | `AgID/cruscotto-italia`, `etl/sources/` | AGPL-3.0 | Moduli già scritti sulle stesse fonti: `siope.py`, `pnrr_progetti.py`, `bdap.py`, `anac.py`. Valgono soprattutto per **le trappole già pagate da altri** |
+| Ingestione SIOPE e PNRR | `AgID/cruscotto-italia`, `etl/sources/` | AGPL-3.0 | Moduli già scritti sulle stesse fonti: `siope.py`, `pnrr_progetti.py`, `bdap.py`, `anac.py`. Valgono soprattutto per **le trappole già pagate da altri**. Dal 18/10/2026 `anac.py` legge i tabellari BDNCP e non più l'OCDS, da un archivio locale alimentato ogni giorno da `scripts/anac_archivio_mensile.sh`: AgID ha incontrato gli stessi problemi nostri, e li ha documentati nel codice |
 | Qualità del contenuto tabellare | `frictionless-py` | MIT | Schema, tipi, valori nulli, unicità |
 | Validazione metadati DCAT | `ISAITB/shacl-validator` | EUPL-1.2 | Servizio Docker self-hostabile, shapes da `SEMICeu/DCAT-AP` |
 | Anagrafiche e LEI | GLEIF golden copy | CC0 | Bulk giornaliero |

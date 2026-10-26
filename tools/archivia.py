@@ -130,6 +130,21 @@ def archivia(sess: requests.Session, url: str) -> dict:
                        dimensione=n, secondi=round(time.monotonic() - t0, 2))
             return rec
 
+        # Uno zip è valido solo se ha la firma PK e supera il test di integrità
+        # (pratica ripresa da scripts/anac_archivio_mensile.sh di Cruscotto Italia).
+        if url.lower().endswith(".zip"):
+            import zipfile
+            try:
+                with zipfile.ZipFile(part) as zf:
+                    rotto = zf.testzip()
+            except zipfile.BadZipFile:
+                rotto = "non è uno zip"
+            if rotto:
+                part.unlink(missing_ok=True)
+                rec.update(esito="errore", errore=f"zip non valido: {rotto}",
+                           dimensione=n, secondi=round(time.monotonic() - t0, 2))
+                return rec
+
         blob = percorso_blob(digest)
         if blob.exists():
             part.unlink()
