@@ -1,0 +1,322 @@
+# Registry delle risorse da monitorare e specchiare.
+#
+# L'unità è la RISORSA (un file scaricabile o un endpoint), non la fonte: è la
+# differenza rispetto a source-observatory di DataCivicLab, che monitora 36
+# cataloghi. Formato compatibile con il loro sources_registry.yaml, così da
+# poterlo contribuire a monte.
+#
+# Campi:
+#   autorita        chi produce il dato (chiave per le pagelle e i report)
+#   dataset         raggruppamento logico
+#   url             risorsa da sondare e specchiare
+#   cadenza         attesa: giornaliera | mensile | annuale | continua | nessuna | ignota
+#   specchia        true  = scarica e conserva
+#                   false = sonda soltanto (con il motivo in `nota`)
+#   partizione      come il dataset è diviso nel tempo: serve all'analisi di continuità
+#   vie_alternative lo stesso dato per altra strada: serve al confronto fra vie di accesso
+#   ict             true se è nel perimetro della nostra analisi di spesa ICT
+
+versione: 1
+
+autorita:
+  anac:
+    nome: Autorità Nazionale Anticorruzione
+    portale: https://dati.anticorruzione.it/opendata
+    licenza: CC BY-SA 4.0
+    nota_accesso: >-
+      Il WAF blocca gli IP cloud e gli user-agent non-browser. L'API CKAN
+      funziona ma non è documentata.
+  consip:
+    nome: Consip S.p.A.
+    portale: https://dati.consip.it
+    licenza: CC BY 4.0
+    nota_accesso: Finestra mobile di tre anni, senza politica dichiarata.
+  rgs:
+    nome: MEF — Ragioneria Generale dello Stato
+    portale: https://www.siope.it
+    licenza: CC BY 4.0
+  agid_dtd:
+    nome: AgID e Dipartimento per la Trasformazione Digitale
+    portale: https://padigitale2026.gov.it/open-data
+    licenza: CC BY 4.0
+  indicepa:
+    nome: AgID — Indice della Pubblica Amministrazione
+    portale: https://indicepa.gov.it/ipa-dati
+    licenza: CC BY 4.0
+  acn:
+    nome: Agenzia per la Cybersicurezza Nazionale
+    portale: https://catalogocloud.acn.gov.it/opendata
+    licenza: IODL 2.0
+
+risorse:
+
+  # ---------------------------------------------------------------- ANAC: full
+  - autorita: anac
+    dataset: stazioni-appaltanti
+    url: https://dati.anticorruzione.it/opendata/download/dataset/stazioni-appaltanti/filesystem/stazioni-appaltanti_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: Anagrafe delle stazioni appaltanti, con codice AUSA.
+
+  - autorita: anac
+    dataset: cup
+    url: https://dati.anticorruzione.it/opendata/download/dataset/cup/filesystem/cup_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: Ponte CIG-CUP. Il 27% delle righe ha ND al posto del CUP.
+
+  - autorita: anac
+    dataset: aggiudicazioni
+    url: https://dati.anticorruzione.it/opendata/download/dataset/aggiudicazioni/filesystem/aggiudicazioni_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+    nota: Il file full è fermo al 15/01/2026; lo stato corrente richiede i delta.
+
+  - autorita: anac
+    dataset: aggiudicatari
+    url: https://dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+    nota: Il file full è fermo al 23/01/2026.
+
+  - autorita: anac
+    dataset: partecipanti
+    url: https://dati.anticorruzione.it/opendata/download/dataset/partecipanti/filesystem/partecipanti_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: false
+    nota: Chi ha presentato offerta. Fuori perimetro ICT, utile al contesto.
+
+  - autorita: anac
+    dataset: quadro-economico
+    url: https://dati.anticorruzione.it/opendata/download/dataset/quadro-economico/filesystem/quadro-economico_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+    nota: Con stati-avanzamento è l'unico proxy pubblico del liquidato.
+
+  - autorita: anac
+    dataset: stati-avanzamento
+    url: https://dati.anticorruzione.it/opendata/download/dataset/stati-avanzamento/filesystem/stati-avanzamento_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+    nota: Proxy del liquidato. Nessuno degli altri progetti lo usa.
+
+  - autorita: anac
+    dataset: subappalti
+    url: https://dati.anticorruzione.it/opendata/download/dataset/subappalti/filesystem/subappalti_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+
+  - autorita: anac
+    dataset: fonti-finanziamento
+    url: https://dati.anticorruzione.it/opendata/download/dataset/fonti-finanziamento/filesystem/fonti-finanziamento_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+
+  - autorita: anac
+    dataset: avvio-contratto
+    url: https://dati.anticorruzione.it/opendata/download/dataset/avvio-contratto/filesystem/avvio-contratto_csv.zip
+    cadenza: mensile
+    specchia: true
+    partizione: full+delta
+    ict: true
+
+  # ------------------------------------------------- ANAC: delta mensili (CIG)
+  # Spariscono: gennaio-marzo 2026 rispondono già 404. Il file annuale 2026 non
+  # esiste. Sono le risorse più urgenti da archiviare.
+  - autorita: anac
+    dataset: cig-delta
+    url: https://dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/{AAAAMM}01-cig_csv.zip
+    modello: mensile
+    da: 2026-04
+    cadenza: mensile
+    specchia: true
+    partizione: mensile
+    ict: true
+    vie_alternative:
+      - https://web.archive.org/web/2026/https://dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/{AAAAMM}01-cig_csv.zip
+    nota: >-
+      Anagrafica dell'appalto, 61 colonne, con cod_cpv: è la risorsa centrale
+      per il perimetro ICT.
+
+  - autorita: anac
+    dataset: smartcig-delta
+    url: https://dati.anticorruzione.it/opendata/download/dataset/smartcig/filesystem/{AAAAMM}01-smartcig_csv.zip
+    modello: mensile
+    da: 2026-04
+    cadenza: mensile
+    specchia: true
+    partizione: mensile
+    ict: true
+    nota: "Affidamenti semplificati sotto soglia: gran parte della spesa ICT corrente."
+
+  # ------------------------------------------------------ ANAC: annuali storici
+  - autorita: anac
+    dataset: cig-annuale
+    url: https://dati.anticorruzione.it/opendata/download/dataset/cig-{AAAA}/filesystem/cig_csv_{AAAA}_{MM}.zip
+    modello: annuale-mensile
+    da: 2020
+    a: 2025
+    cadenza: annuale
+    specchia: true
+    partizione: mensile
+    ict: true
+    nota: Dodici file per anno. cig-2026 non esiste ancora.
+
+  # --------------------------------------------------------- ANAC: solo sondato
+  - autorita: anac
+    dataset: ocds
+    url: https://dati.anticorruzione.it/opendata/download/dataset/ocds/filesystem/bulk/{AAAA}/{MM}.json
+    modello: annuale-mensile
+    da: 2026
+    a: 2026
+    cadenza: mensile
+    specchia: false
+    partizione: mensile
+    ict: true
+    nota: >-
+      Non specchiato: oltre 100 GB per lo storico, canale fermo a marzo 2026 e
+      ridondante rispetto ai tabellari. Sondato per rilevare se riparte.
+
+  - autorita: anac
+    dataset: api-ckan
+    url: https://dati.anticorruzione.it/opendata/api/3/action/package_list
+    cadenza: continua
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: Funziona ma non è documentata. Specchiata per rilevare dataset nuovi o rimossi.
+
+  - autorita: anac
+    dataset: api-rest-ocds
+    url: https://api.anticorruzione.it/opendata/ocds/api/v1/1.0.0/version
+    cadenza: nessuna
+    specchia: false
+    partizione: nessuna
+    ict: false
+    nota: >-
+      Documentata sul portale, tutti gli endpoint rispondono 404. Sondata per
+      documentare che resta non funzionante.
+
+  # ------------------------------------------------------------------- Consip
+  - autorita: consip
+    dataset: ordini-mepa
+    url: https://dati.consip.it/download/dataset/ordini-mepa-{AAAA}.csv
+    modello: annuale
+    da: 2024
+    a: 2026
+    cadenza: mensile
+    specchia: true
+    partizione: annuale
+    ict: true
+    vie_alternative:
+      - https://dati.consip.it/api/3/action/package_show?id=dataset-ordini-diretti-di-acquisto-sul-mepa
+    nota: Il 2023 è già sparito. Aggregato annuale, senza CIG.
+
+  - autorita: consip
+    dataset: ordini-convenzione
+    url: https://dati.consip.it/download/dataset/ordini-convenzione-{AAAA}.csv
+    modello: annuale
+    da: 2024
+    a: 2026
+    cadenza: mensile
+    specchia: true
+    partizione: annuale
+    ict: true
+
+  - autorita: consip
+    dataset: gare-asp
+    url: https://dati.consip.it/download/dataset/gareasp{AAAA}.csv
+    modello: annuale
+    da: 2024
+    a: 2026
+    cadenza: mensile
+    specchia: true
+    partizione: annuale
+    ict: true
+    nota: >-
+      Record-level e con Identificativo_lotto = CIG: l'unico dataset Consip
+      agganciabile ad ANAC.
+
+  - autorita: consip
+    dataset: api-ckan
+    url: https://dati.consip.it/api/3/action/package_list
+    cadenza: continua
+    specchia: true
+    partizione: nessuna
+    ict: false
+
+  # --------------------------------------------------------------------- SIOPE
+  - autorita: rgs
+    dataset: siope-uscite
+    url: https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.{AAAA}.zip
+    modello: annuale
+    da: 2024
+    a: 2026
+    cadenza: mensile
+    specchia: true
+    partizione: annuale
+    ict: true
+    vie_alternative:
+      - https://bdap-opendata.rgs.mef.gov.it/catalog
+    nota: >-
+      Pagamenti di cassa per codice gestionale. Importi in centesimi e mensili
+      puri, non cumulati. Via da preferire a BDAP, che tronca le annualità.
+
+  - autorita: rgs
+    dataset: siope-anagrafiche
+    url: https://www.siope.it/documenti/siope2/open/last/SIOPE_ANAGRAFICHE.zip
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: Serve a tradurre i codici gestionali e ad agganciare gli enti per CF.
+
+  # ------------------------------------------------------------ ICT e anagrafi
+  - autorita: agid_dtd
+    dataset: padigitale2026
+    url: https://api.github.com/repos/teamdigitale/padigitale2026-opendata/commits?per_page=1
+    cadenza: giornaliera
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Finanziamenti ICT-PNRR per ente. Sonda sull'ultimo commit: il dato vero
+      si prende dal repository.
+
+  - autorita: indicepa
+    dataset: api-ckan
+    url: https://indicepa.gov.it/ipa-dati/api/3/action/package_list
+    cadenza: giornaliera
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: 28 dataset, fra cui i responsabili della transizione al digitale.
+
+  - autorita: acn
+    dataset: catalogo-cloud
+    url: https://catalogocloud.acn.gov.it/opendata
+    cadenza: continua
+    specchia: false
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Risponde 403 alle richieste non-browser. Sondato per documentare
+      l'ostacolo; da riprovare quando cambia.
