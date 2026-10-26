@@ -1,0 +1,1038 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "OCDS REST Api",
+    "description" : "A simple REST Api for OCDS data generation",
+    "contact": {
+      "name": "ANAC",
+      "url": "https://dati.anticorruzione.it"
+    },
+    "version" : "1.0.0"
+  },
+  "host" : "api.anticorruzione.it",
+  "basePath" : "/opendata/ocds/api/v1/1.0.0",
+  "schemes" : [ "https" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/awards" : {
+      "get" : {
+        "description" : "Return all the available awards given the search criteria",
+        "parameters" : [ {
+          "name" : "beginDate",
+          "in" : "query",
+          "description" : "the begin date of the search window (format 'YYYY-MM-DD')",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "pattern" : '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$',
+          "example" : "2020-01-01",
+          "default" : "2020-01-01"
+        }, {
+          "name" : "endDate",
+          "in" : "query",
+          "description" : "the end date of the search window (format 'YYYY-MM-DD')",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "pattern" : '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$',
+          "example" : "2020-03-31",
+          "default" : "2020-03-31"
+        }, {
+          "name" : "bottomAmount",
+          "in" : "query",
+          "description" : "the minimun amount of the returned awards",
+          "required" : false,
+          "type" : "string",
+          "example" : "100000",
+          "default" : "100000"
+        }, {
+          "name" : "topAmount",
+          "in" : "query",
+          "description" : "the maximum amount of the returned awards",
+          "required" : false,
+          "type" : "string",
+          "example" : "200000",
+          "default" : "200000"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Awards" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/version" : {
+      "get" : {
+        "description" : "The version of this API",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "General" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/releases/award/{id}" : {
+      "get" : {
+        "description" : "Returns all the releases available for a given award ID",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "The ID of the award to obtain releases for",
+          "required" : true,
+          "type" : "string",
+          "example" : "1774785",
+          "default" : "1774785"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Releases" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSRelease"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/tender/ids" : {
+      "get" : {
+        "description" : "Returns the available tender IDs according to the provided filter criteria (filterField: tenderStartDate; filterArgs: START_DATE, END_DATE; tenderStatus: OPEN|CLOSED).Notice that a tendere is considered OPEN when it has no end date, or the end date is after the current date (that is the date of the service call execution).",
+        "parameters" : [ {
+          "name" : "filterField",
+          "in" : "query",
+          "description" : "The field to filter tenders count by",
+          "required" : false,
+          "type" : "string",
+          "example" : "tenderStartDate",
+          "enum" : [ "tenderStartDate" ],
+          "default" : "tenderStartDate"
+        }, {
+          "name" : "filterArgs",
+          "in" : "query",
+          "description" : "The arguments of the filter",
+          "required" : false,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "example" : "2020-02-01,2020-02-28",
+          "default" : "2020-02-01,2020-02-28"
+        }, {
+          "name" : "tenderStatus",
+          "in" : "query",
+          "description" : "The status of the tender to be counted",
+          "required" : false,
+          "type" : "string",
+          "example" : "OPEN",
+          "enum" : [ "OPEN", "CLOSED" ],
+          "default" : "OPEN"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "the max number of tender identifiers returned by the service",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "description" : "The number of identifierd to start returing identifiers from",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Tenders" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSTenderId"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/releases/tender/{id}" : {
+      "get" : {
+        "description" : "REST route to obtain all the releases available for a given tender ID",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "The ID of the tender to obtain releases for",
+          "required" : true,
+          "type" : "string",
+          "example" : "7701655",
+          "default" : "7701655"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Releases" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSRelease"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/keys" : {
+      "get" : {
+        "description" : "Runs datasource statistic queries",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "General" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSStats"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/releases/ocids" : {
+      "get" : {
+        "description" : "REST route to obtain all the OCID available in the data source",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "The max number of OCIDs returned by the service",
+          "required" : false,
+          "type" : "string",
+          "format" : "integer",
+          "example" : "10",
+          "default" : "10"
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "description" : "Starts return OCIDs from the OCID numbered 'offset' (not implemented yet: the parameter can be passed but it is not taken into account if the current implementation)",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "sortField",
+          "in" : "query",
+          "description" : "The field to sort OCID by (not implemented yet: the parameter can be passed but it is not taken into account if the current implementation)",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "sortMode",
+          "in" : "query",
+          "description" : "Sort mode value (not implemented yet: the parameter can be passed but it is not taken into account if the current implementation)",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Releases" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCID"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/tender/id/count" : {
+      "get" : {
+        "description" : "Returns the number of all available tenders according to the provided filter criteria (filterField: tenderStartDate, filterArgs: START_DATE END_DATE; tenderStatus = OPEN|CLOSED).Notice that a tendere is considered OPEN when it has no end date, or the end date is after the current date (that is the date of the service call execution)",
+        "parameters" : [ {
+          "name" : "filterField",
+          "in" : "query",
+          "description" : "The field to filter tenders count by",
+          "required" : false,
+          "type" : "string",
+          "example" : "tenderStartDate",
+          "enum" : [ "tenderStartDate" ],
+          "default" : "tenderStartDate"
+        }, {
+          "name" : "filterArgs",
+          "in" : "query",
+          "description" : "The arguments of the filter",
+          "required" : false,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "example" : "2020-02-01,2020-02-28",
+          "default" : "2020-02-01,2020-02-28"
+        }, {
+          "name" : "tenderStatus",
+          "in" : "query",
+          "description" : "The status of the tender to be counted",
+          "required" : false,
+          "type" : "string",
+          "example" : "OPEN",
+          "enum" : [ "OPEN", "CLOSED" ],
+          "default" : "OPEN"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Tenders" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/stats" : {
+      "get" : {
+        "description" : "Runs datasource statistic queries",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "General" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSStats"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/tender/id/count/active" : {
+      "get" : {
+        "description" : "REST route to obtain the number of available active (that is, the tender is still open) tender IDs",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Tenders" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/releases" : {
+      "get" : {
+        "description" : "REST route to obtain all the releases",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "The max number of releases returned by the service",
+          "required" : false,
+          "type" : "string",
+          "format" : "integer",
+          "example" : "10",
+          "default" : "10"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Releases" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSRelease"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/awards/count" : {
+      "get" : {
+        "description" : "Return the count of all available awards given the search criteria",
+        "parameters" : [ {
+          "name" : "beginDate",
+          "in" : "query",
+          "description" : "the begin date of the search window (format 'YYYY-MM-DD')",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "pattern" : '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$',
+          "example" : "2020-01-01",
+          "default" : "2020-01-01"
+        }, {
+          "name" : "endDate",
+          "in" : "query",
+          "description" : "the end date of the search window (format 'YYYY-MM-DD')",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "pattern" : '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$',
+          "example" : "2020-03-31",
+          "default" : "2020-03-31"
+        }, {
+          "name" : "bottomAmount",
+          "in" : "query",
+          "description" : "the minimun amount of the returned awards",
+          "required" : false,
+          "type" : "string",
+          "example" : "100000",
+          "default" : "100000"
+        }, {
+          "name" : "topAmount",
+          "in" : "query",
+          "description" : "the maximum amount of the returned awards",
+          "required" : false,
+          "type" : "string",
+          "example" : "200000",
+          "default" : "200000"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Awards" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/awards/tender/{id}" : {
+      "get" : {
+        "description" : "Return all the available awards for the tender with the specified ID",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "The ID of the tender to return awards for",
+          "required" : true,
+          "type" : "string",
+          "example" : "7701655",
+          "default" : "7701655"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Awards" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/tender/id/count/all" : {
+      "get" : {
+        "description" : "REST route to obtain the number of all available tenders",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Tenders" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/test/connection" : {
+      "get" : {
+        "description" : "Tests the connection to the data source",
+        "parameters" : [ ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "General" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    },
+    "/releases/{ocid}" : {
+      "get" : {
+        "description" : "REST route to obtain all the releases available for a given OCID",
+        "parameters" : [ {
+          "name" : "ocid",
+          "in" : "path",
+          "description" : "The OCID identifier to obtain releases for",
+          "required" : true,
+          "type" : "string",
+          "example" : "ocds-hu01ve-7701655",
+          "default" : "ocds-hu01ve-7701655"
+        } ],
+        "produces" : [ "application/json" ],
+        "tags" : [ "Releases" ],
+        "responses" : {
+          "200" : {
+            "description" : "Standard value returned by the route when the operation succeed",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSRelease"
+              }
+            }
+          },
+          "510" : {
+            "description" : "This method is currently not implemented"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "com.obdasystems.ocds.model.OCID" : {
+      "title" : "com.obdasystems.ocds.model.OCID",
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSStats" : {
+      "title" : "com.obdasystems.ocds.model.OCDSStats",
+      "type" : "object",
+      "properties" : {
+        "cigsNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "releasesNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "lotsNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "tendersNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "activeCigsNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "centriCostoNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "stazioniAppaltantiNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSPublisher" : {
+      "title" : "com.obdasystems.ocds.model.OCDSPublisher",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "description" : "The representation of the publisher of an OCDS release"
+    },
+    "com.obdasystems.ocds.model.OCDSAddress" : {
+      "title" : "com.obdasystems.ocds.model.OCDSAddress",
+      "type" : "object",
+      "properties" : {
+        "streetAddress" : {
+          "type" : "string"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "locality" : {
+          "type" : "string"
+        },
+        "countryName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSRoot" : {
+      "title" : "com.obdasystems.ocds.model.OCDSRoot",
+      "type" : "object",
+      "properties" : {
+        "publisher" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSPublisher"
+        },
+        "publishedDate" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "releases" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSRelease"
+          },
+          "description" : "The list of releases contained in this representation"
+        }
+      },
+      "description" : "The root object of an OCDS repredentation"
+    },
+    "com.obdasystems.ocds.model.OCDSLot" : {
+      "title" : "com.obdasystems.ocds.model.OCDSLot",
+      "type" : "object",
+      "properties" : {
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "value" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSValue"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSAward" : {
+      "title" : "com.obdasystems.ocds.model.OCDSAward",
+      "type" : "object",
+      "properties" : {
+        "date" : {
+          "type" : "string"
+        },
+        "suppliers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSAwardSupplier"
+          }
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "value" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSValue"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSItems"
+          }
+        },
+        "relatedLots" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSClassification" : {
+      "title" : "com.obdasystems.ocds.model.OCDSClassification",
+      "type" : "object",
+      "properties" : {
+        "scheme" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSTender" : {
+      "title" : "com.obdasystems.ocds.model.OCDSTender",
+      "type" : "object",
+      "properties" : {
+        "lots" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSLot"
+          }
+        },
+        "procurementMethod" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "mainProcurementCategory" : {
+          "type" : "string"
+        },
+        "value" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSValue"
+        },
+        "procurementMethodDetails" : {
+          "type" : "string"
+        },
+        "tenderPeriod" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSPeriod"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSItems"
+          }
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSAwardId" : {
+      "title" : "com.obdasystems.ocds.model.OCDSAwardId",
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSBuyer" : {
+      "title" : "com.obdasystems.ocds.model.OCDSBuyer",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSIdentifier" : {
+      "title" : "com.obdasystems.ocds.model.OCDSIdentifier",
+      "type" : "object",
+      "properties" : {
+        "legalName" : {
+          "type" : "string"
+        },
+        "scheme" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSMilestone" : {
+      "title" : "com.obdasystems.ocds.model.OCDSMilestone",
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string"
+        },
+        "dateMet" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSLotId" : {
+      "title" : "com.obdasystems.ocds.model.OCDSLotId",
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSRelease" : {
+      "title" : "com.obdasystems.ocds.model.OCDSRelease",
+      "type" : "object",
+      "properties" : {
+        "tender" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSTender"
+        },
+        "date" : {
+          "type" : "string"
+        },
+        "initiationType" : {
+          "type" : "string"
+        },
+        "awards" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSAward"
+          }
+        },
+        "parties" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSParty"
+          }
+        },
+        "language" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "tag" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ocid" : {
+          "type" : "string"
+        },
+        "contracts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSContract"
+          }
+        },
+        "buyer" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSBuyer"
+        }
+      },
+      "description" : "The representation of an OCDS release"
+    },
+    "com.obdasystems.ocds.model.OCDSTenderId" : {
+      "title" : "com.obdasystems.ocds.model.OCDSTenderId",
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSAwardSupplier" : {
+      "title" : "com.obdasystems.ocds.model.OCDSAwardSupplier",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSPeriod" : {
+      "title" : "com.obdasystems.ocds.model.OCDSPeriod",
+      "type" : "object",
+      "properties" : {
+        "endDate" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSUnit" : {
+      "title" : "com.obdasystems.ocds.model.OCDSUnit",
+      "type" : "object",
+      "properties" : {
+        "value" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSValue"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSAmendment" : {
+      "title" : "com.obdasystems.ocds.model.OCDSAmendment",
+      "type" : "object",
+      "properties" : {
+        "date" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "rationale" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSValue" : {
+      "title" : "com.obdasystems.ocds.model.OCDSValue",
+      "type" : "object",
+      "properties" : {
+        "amount" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSItems" : {
+      "title" : "com.obdasystems.ocds.model.OCDSItems",
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSUnit"
+        },
+        "relatedLot" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "classification" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSClassification"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSParty" : {
+      "title" : "com.obdasystems.ocds.model.OCDSParty",
+      "type" : "object",
+      "properties" : {
+        "identifier" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSIdentifier"
+        },
+        "address" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSAddress"
+        },
+        "roles" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "additionalIdentifiers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSIdentifier"
+          }
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "com.obdasystems.ocds.model.OCDSContract" : {
+      "title" : "com.obdasystems.ocds.model.OCDSContract",
+      "type" : "object",
+      "properties" : {
+        "awardID" : {
+          "type" : "string"
+        },
+        "period" : {
+          "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSPeriod"
+        },
+        "amendments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSAmendment"
+          }
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "dateSigned" : {
+          "type" : "string"
+        },
+        "milestones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSMilestone"
+          }
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/com.obdasystems.ocds.model.OCDSItems"
+          }
+        }
+      }
+    }
+  },
+  "tags" : [ {
+    "name" : "Releases"
+  }, {
+    "name" : "Tenders"
+  }, {
+    "name" : "Awards"
+  }, {
+    "name" : "General"
+  } ]
+}

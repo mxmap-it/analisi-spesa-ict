@@ -1,0 +1,597 @@
+<style>
+[class^="icon-"],
+[class*=" icon-"] {
+background-image: none !important;
+}
+
+#content {
+margin-left: auto !important;
+_background: #f9f9fb !important;
+_background-image: none !important;
+}
+
+
+[role=main],
+.main {
+background: #f9f9fb !important;
+background-image: none !important;
+}
+
+@media (min-width: 979px) body {
+padding-top: 130px;
+}
+
+body {
+padding-top: 0;
+margin: 0;
+padding: 0;
+font-family: 'Titillium Web', helvetica, Arial, sans-serif !important;
+font-size: 14px;
+line-height: 20px;
+color: #333;
+background-image: none !important;
+}
+
+.span3 {
+width: 220px !important;
+}
+
+p {
+margin: 0 0 20px;
+}
+
+/*********************************************************************/
+.wrapper {
+background-image: none !important;
+}
+/*********************************************************************/
+
+/*style collapse */
+.DATASET {
+display: block;
+margin: 0px 0px 0px 0px;
+vertical-align: top;
+height: auto !important;
+}
+
+.DSTABLE {
+display: inline;
+height: auto;
+margin: 0;
+}
+
+.my_HIDE {
+display: none ;
+}
+
+.my_SHOW:target+.my_HIDE {
+display: inline;
+}
+
+.my_SHOW:target {
+display: none;
+}
+
+.my_SHOW:target~.DSTABLE {
+display: none;
+}
+
+/*style the (+) and (-) */
+.my_HIDE,
+.my_SHOW {
+width: 20px;
+height: 20px;
+border-radius: 10px;
+font-size: 12px !important;
+color: #fff;
+_text-shadow: 0 1px 0 #666;
+text-align: center;
+text-decoration: none;
+_box-shadow: 1px 1px 2px #000;
+background: #0278be;
+opacity: .95;
+margin-right: 10px;
+float: left;
+margin-bottom: 20px;
+}
+
+.my_HIDE:hover,
+.my_SHOW:hover {
+color: #eee;
+text-shadow: 0 0 1px #666;
+text-decoration: none;
+box-shadow: 0 0 4px #222 inset;
+opacity: 1;
+margin-bottom: 20px;
+}
+
+.DSTABLE p {
+height: auto;
+margin: 0;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+line-height: unset !important;
+}
+
+</style>
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="it" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="it" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="it" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="it"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/opendata/fanstatic/css/:version:2020-01-20T19:02:07/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/font-awesome/css/font-awesome.min.css" />
+<!--[if ie 7]><link rel="stylesheet" type="text/css" href="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="/opendata/fanstatic/ckanext-harvest/:version:2020-01-20T19:02:15/styles/harvest.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.6.8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informazioni - Public Procurement - Italy</title>
+
+    
+    <link rel="shortcut icon" href="/base/images/ckan.ico" />
+    
+  
+   
+      
+    
+   <link rel="stylesheet" href="/css/multilang.css" type="text/css">
+
+  
+
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="https://dati.anticorruzione.it/opendata/" data-locale-root="https://dati.anticorruzione.it/opendata/" >
+
+    
+    <div class="hide"><a href="#content">Salta al contenuto</a></div>
+  
+
+  
+    <!DOCTYPE html><html ng-app="opendata" style="" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg smil svgclippaths ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-1779c6df-238b-420d-9bbb-6fd69cfb2319@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-5ab4a49c-bc25-419d-a0fe-84bad91f3ffe@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-47427e10-b964-48bd-97b5-71c88494c32c@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-9ede857a-dcb3-446c-8553-75846cbb9dae@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-4a0df4eb-1cfb-46ae-97d4-998721f8bdd1@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-008ddaf1-4c24-4cde-bda1-87dda599d360@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-aac2f355-b13a-4e87-a476-6d74b78594ad@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-31b9a188-e650-404a-9246-d1233d2cb1b5@mhtml.blink" />
+
+    <!--base href="https://dati.anticorruzione.it/opendata/" target="_self"-->
+    <title>ANAC: Portale dei dati aperti dell’Autorità Nazionale Anticorruzione</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://dati.anticorruzione.it/img/favicon.ico">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9618615-8"></script>
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">Stai utilizzando una versione di browser <strong>obsoleta</strong>. Per favore <a href="http://browsehappy.com/">aggiornala</a> per poter utilizzare il servizio.</p>
+        <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="js/es5-shim/es5-shim.js"></script>
+        <script src="js/json3/lib/json3.min.js"></script>
+        <![endif]-->
+
+    <!-- Bootstrap -->
+    <link href="/opendata/bootstrap.min.css" rel="stylesheet">
+    <link href="/opendata/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/opendata/ng-grid.css" rel="stylesheet">
+
+
+    <!-- app css -->
+    <link href="/opendata/loading-bar.css" rel="stylesheet">
+    <link href="/opendata/chips.css" rel="stylesheet">
+    <link href="/opendata/styles.css" rel="stylesheet" media="screen">
+    <link href="https://dati.anticorruzione.it/css/header-footer.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <!--link href="/opendata/fontawesome.css" rel="stylesheet"-->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <!-- ui-grid css -->
+    <link href="/opendata/ui-grid.css" rel="stylesheet">
+
+    <!-- vendor js -->
+
+<style>
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: none !important;
+}
+
+#content {
+    margin-left: auto !important;
+    _background: #f9f9fb !important;
+    _background-image: none !important;
+}
+
+
+[role=main],
+.main{
+   background: #f9f9fb !important;
+   background-image: none !important;
+}
+
+@media (min-width: 979px)
+body {
+    padding-top: 130px;
+}
+
+body {
+    padding-top: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    background-image: none !important;
+}
+
+.span3 {
+    width: 220px !important;
+}
+
+.module-content .pagination {
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: 0px !important;
+}
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus{
+    text-decoration: underline !important;
+	background: #ffffff !important;
+}
+
+.logo-anac {
+    width: 35% !important;
+    height: auto !important;
+}
+</style>
+
+<script>
+function changeActiveMenu(){
+  var url = window.location.toString();
+  if(url.includes("/dataset")){
+    document.getElementById('dataset-menu').className = "active";
+    document.getElementById('developer-menu').className = "";
+  }else if(url.includes("/developer")){
+    document.getElementById('developer-menu').className = "active";
+    document.getElementById('deataset-menu').className = "";
+  }else if (url === 'https://dati.anticorruzione.it/opendata' || url === 'https://dati.anticorruzione.it/opendata/'){
+    document.getElementById('dataset-menu').className = "active";
+    document.getElementById('developer-menu').className = "";
+  }
+}
+</script>
+
+</head>
+
+<body onload="changeActiveMenu()">
+    <div class="bg-blue app-title">
+        <div class="container">
+            <div class="row">
+                <div class="span">
+                    <p><a href="https://dati.anticorruzione.it/#/home" target="_blank">Portale dei dati aperti dell’Autorità Nazionale Anticorruzione</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar container ng-scope" ng-controller="NavController">
+        <div class="navbar-inner anac">
+            <div class="logo-anac"><a href="https://dati.anticorruzione.it/index.html" title="vai alla homepage"><img src="https://www.anticorruzione.it/o/anac-theme/images/anac.png"></a></div>
+        </div>
+        <div class="navbar-inner anac">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <!-- <a class="brand" href="#/home">Catalogo open data</a> -->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li ng-class="{active: matchesRoute('home')}">
+                            <a href="https://dati.anticorruzione.it/#/home">Home</a>
+                        </li>
+                        <li ng-class="{active: matchesRoute('rpct')}">
+                            <a href="https://dati.anticorruzione.it/#/rpct">RPCT</a>
+                        </li>
+						<!--
+                        <li ng-class="{active: matchesRoute('inhouse')}">
+                            <a href="https://dati.anticorruzione.it/#/inhouse">In-House</a>
+                        </li>
+						-->
+                        <li ng-class="{active: matchesRoute('l190')}">
+                            <a href="https://dati.anticorruzione.it/#/l190">L.190/2012 </a>
+                        </li>
+                        <li ng-class="{active: matchesRoute('aca')}">
+                            <a href="https://dati.anticorruzione.it/#/aca">Albo Arbitri</a>
+                        </li>
+
+
+            
+                                          
+					 
+							<li id="dataset-menu">
+                                                                <a href="https://dati.anticorruzione.it/opendata">Dataset</a>
+                                                        </li>
+                                                        
+                                                      
+                                        
+
+
+                        <li ng-class="active">
+                            <a href="https://dati.anticorruzione.it/superset/dashboard/appalti/">Analytics</a>
+                        </li>
+                        <li ng-class="{active: matchesRoute('regpiacert')}">
+                            <a href="https://dati.anticorruzione.it/#/regpiacert">Registro Piattaforme Certificate</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+  
+    <div role="main">
+      <div id="content" class="container">
+        
+          
+            <div class="flash-messages">
+              
+                
+              
+            </div>
+          
+
+          
+            <div class="toolbar">
+              
+                
+                  <ol class="breadcrumb">
+                    
+<li class="home"><a href="/opendata/"><i class="icon-home"></i><span> Home</span></a></li>
+                    
+<li class="active"><a href="#">Dati Anac - OCDS</a></li>
+
+                  </ol>
+                
+              
+            </div>
+          
+
+          <div class="row wrapper">
+
+            
+            
+            
+
+            
+<div class="span12 col1">
+	<header>
+	<div style="display: inline-block; text-align: right; width: 100%">
+       IT - <a href="/opendata/ocds_en"> EN </a> &nbsp;
+    </div>
+	<br/>
+	<div>
+		<table>
+			<tbody>
+				<tr><td width="40%" valign="bottom"><img src="en_horizontal_cef_logo_2.png" alt="CEF logo"/></td><td width="10%" valign="bottom"><img src="Logo-eNEIDE.png" alt="eNEIDE logo"/></td><td valign="bottom"><h4 class="page-heading"><font color="#0000">eNEIDE project (action n.2018-IT-IA-0170).</font></h4></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<br/>
+	<h2 class="page-heading">Dataset BDNCP in Open Contracting Data Standard (OCDS)</h2>
+	<p class="module-content empty"><font size="+1">
+		Il portale OCDS presenta le informazioni essenziali sugli appalti pubblici italiani contenute nel Database nazionale degli appalti pubblici nel formato Open Contracting Data Standard (OCDS): questo formato consente di collegare, confrontare e confrontare facilmente i dati degli appalti pubblici italiani con altri dataset OCDS in circolazione il mondo.<br/>
+		Questo portale ha ricevuto una sovvenzione dal programma di finanziamento dell'UE della Connecting Europe Facility (CEF) - progetto eNEIDE (azione n.2018-IT-IA-0170).<br/>
+		Lo schema di licenza è CC-BY 4.0, consigliato dal Digital Transition Team nazionale e da AgID ed è possibile utilizzare, riutilizzare e ridistribuire i dati a qualsiasi soggetto interessato.
+	</font></p>
+	
+	<h2 class="page-heading">Utilizzo dei dati</h2>
+	<p class="module-content empty"><font size="+1">
+	Esistono molti casi d'uso per i dati OCDS, come la promozione del rapporto qualità-prezzo, dell'efficienza, dell'equità, dell'integrità o dell'efficacia negli appalti pubblici.<br/>
+	In particolare, questo portale è mirato al coinvolgimento di giornalisti di dati e organizzazioni della società civile nel monitoraggio degli appalti pubblici e nella prevenzione della corruzione, ma soprattutto per promuovere la sostenibilità sociale, ambientale e sociale negli appalti pubblici.	
+	</font></p>
+	<h2 class="page-heading">Dettagli di pubblicazione</h2>
+	<p class="module-content empty"><font size="+1">
+		I dati vengono aggiornati con periodicità mensile, il secondo giorno del mese – Qui potete trovare uno <a target="_blank" href="https://dati.anticorruzione.it/opendata/ocds/api/ui">swagger delle API</a> esposte.<br/>
+		Di seguito una breve descrizione dei dataset pubblicati:
+	</font></p>
+	</header>
+<!-- INIZIO DATASET -->
+
+	<div class="DATASET">	
+		<h3 class="page-heading">
+			<br/>
+			<a href="dataset?q=ocds-&sort=title_string+asc">ocds-appalti-ordinari</a>
+		</h3>
+		<a href="#my_SHOW1" class="my_SHOW" id="my_SHOW1"><i class="fas fa-minus"></i></a>
+		<a href="#my_HIDE1" class="my_HIDE" id="my_HIDE1"><i class="fas fa-plus"></i></a>
+		<p><b>Description</b>: These datasets report the Public Procurement contracts with value above 40k€, represented according to the OCDS standard, divided by year based on the date of publication of the notice. The table below contains the correspondences between the fields in the  JSON schema of the OCDS releases and the CSV opendata fields.</p>
+		<div class="DSTABLE">
+			<table class="table table-striped table-bordered table-condensed">
+				<thead>
+					<tr><th>path OCDS</th><th>descrizione</th><th>campi corrispondenti negli OD</th><th>esempio valori possibili</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>ocid</td><td>bando CIG / numero_gara</td><td>codice univoco per OCDS della procedura di appalto</td><td>ocds-hu01ve-7701655</td></tr>
+					<tr><td>tag</td><td></td><td>fase della procedura di appalto</td><td>tender | awards | contracts</td></tr>
+					<tr><td>buyer/id</td><td>bando CIG / cf_amministrazione_appaltante</td><td></td><td>06485540485</td></tr>
+					<tr><td>buyer/name</td><td>bando CIG / denominazione_amministrazione_appaltante</td><td></td><td>ESTAR</td></tr>
+					<tr><td>id</td><td></td><td>codice univoco release OCDS</td><td>ocds-hu01ve-7701655-01</td></tr>
+					<tr><td>language</td><td></td><td>lingua di riferimento</td><td>IT</td></tr>
+					<tr><td>parties/0/id</td><td> cf_amministrazione_appaltante | id_centro_costo</td><td>codice univoco soggetto coinvolto nella procedura di appalto (ad esempio: stazione appaltante, centro di costo)</td><td>06485540485</td></tr>
+					<tr><td>parties/0/name</td><td>denominazione_amministrazione_appaltante | denominazione_centro_costo</td><td>nome del soggetto coinvolto nella procedura di appalto</td><td>ESTAR</td></tr>
+					<tr><td>parties/0/roles</td><td></td><td>ruolo del soggetto coinvolto nella procedura di appalto</td><td>buyer | payer | supplier</td></tr>
+					<tr><td>parties/0/identifier/id</td><td>cf_amministrazione_appaltante | id_centro_costo</td><td>identificativo del soggetto</td><td>06485540485</td></tr>
+					<tr><td>parties/0/identifier/legalName</td><td>denominazione_amministrazione_appaltante | denominazione_centro_costo</td><td>nome ufficiale del soggetto</td><td>ESTAR</td></tr>
+					<tr><td>parties/0/identifier/scheme</td><td></td><td>schema di riferimento dell'identificativo del soggetto</td><td> IT-CF | identifier</td></tr>
+					<tr><td>parties/0/additionalIdentifiers/0/id</td><td>codice_ausa</td><td>schema aggiuntivo: codice</td><td>0000400383</td></tr>
+					<tr><td>parties/0/additionalIdentifiers/0/legalName</td><td></td><td>schema aggiuntivo: nome ufficiale</td><td></td></tr>
+					<tr><td>parties/0/additionalIdentifiers/0/scheme</td><td></td><td>schema aggiuntivo: riferimento</td><td>AUSA</td></tr>
+					<tr><td>parties/0/address/countryName</td><td></td><td>nome nazione</td><td>ITALIA</td></tr>
+					<tr><td>parties/0/address/locality</td><td>stazione appaltante / citta_nome | centro di costo / citta_nome</td><td>località</td><td>FIRENZE</td></tr>
+					<tr><td>parties/0/address/postalCode</td><td>stazione appaltante / cap | centro di costo / cap</td><td>codice postale</td><td>50135</td></tr>
+					<tr><td>parties/0/address/streetAddress</td><td>stazione appaltante / indirizzo_odonimo | centro di costo / indirizzo</td><td>indirizzo (completo)</td><td>VIA DI SAN SALVI 12</td></tr>
+					<tr><td>tender/id</td><td>bando CIG / numero gara</td><td>identificativo gara di appalto</td><td>7701655</td></tr>
+					<tr><td>tender/description</td><td>bando CIG / oggetto gara</td><td>oggetto gara di appalto</td><td>CAMICI ANTIBLASTICI EMASCHERINE CHIRURGICHE SERVIZI OSPEDALIERI - EMERGENZA CORONA VIRUS</td></tr>
+					<tr><td>tender/procurementMethodDetails</td><td>aggiudicazioni / criterio_aggiudicazione</td><td>criterio di aggiudicazione</td><td>COD:27 ; TITLE:AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE</td></tr>
+					<tr><td>tender/mainProcurementCategory</td><td>bando CIG / oggetto_principale_contratto</td><td>oggetto principale dell'appalto</td><td></td></tr>
+					<tr><td>tender/value/amount</td><td>bando CIG / importo_complessivo_gara</td><td>importo complessivo della gara</td><td>149900</td></tr>
+					<tr><td>tender/value/currency</td><td></td><td>valuta</td><td>EUR</td></tr>
+					<tr><td>tender/tenderPeriod/startDate</td><td>bando CIG / data_pubblicazione</td><td>data di pubblicazione della gara di appalto</td><td>2020-02-26T12:00:00Z</td></tr>
+					<tr><td>tender/tenderPeriod/endDate</td><td>bando CIG / data_scadenza_offerta</td><td>data di scadenza della gara di appalto</td><td></td></tr>
+					<tr><td>tender/items/0/id</td><td>bando CIG / CIG</td><td>codice lotto</td><td>822799329F</td></tr>
+					<tr><td>tender/items/0/description</td><td>bando CIG / oggetto_lotto</td><td>descrizione lotto</td><td></td></tr>
+					<tr><td>tender/items/0/classification/id</td><td>bando CIG / cod_cpv</td><td>codice classificazione CPV</td><td>33190000-8</td></tr>
+					<tr><td>tender/items/0/classification/description</td><td>bando CIG / descrizione_cpv</td><td>descrizione classificazione CPV</td><td>DISPOSITIVI E PRODOTTI MEDICI VARI</td></tr>
+					<tr><td>tender/items/0/classification/scheme</td><td></td><td>schema CPV</td><td>CPV</td></tr>
+					<tr><td>tender/items/0/classification/uri</td><td></td><td>URI CPV</td><td>https://simap.ted.europa.eu/web/simap/cpv</td></tr>
+					<tr><td>tender/items/0/relatedLot</td><td>bando CIG / CIG</td><td>lotto corrispondente (estensione)</td><td>822799329F</td></tr>
+					<tr><td>tender/items/0/unit/value/amount</td><td>bando CIG / importo_lotto</td><td>importo lotto</td><td>149900</td></tr>
+					<tr><td>tender/items/0/unit/value/currency</td><td></td><td>valuta lotto</td><td>EUR</td></tr>
+					<tr><td>lots/0/id</td><td>bando CIG / CIG</td><td></td><td>822799329F</td></tr>
+					<tr><td>lots/0/description</td><td>bando CIG / oggetto_lotto</td><td></td><td></td></tr>
+					<tr><td>lots/0/status</td><td>bando CIG / stato</td><td></td><td></td></tr>
+					<tr><td>lots/0/value/amount</td><td>bando CIG / importo_lotto</td><td>importo lotto</td><td>149900</td></tr>
+					<tr><td>lots/0/value/currency</td><td></td><td>valuta lotto</td><td>EUR</td></tr>
+					<tr><td>awards/0/id</td><td>aggiudicazione / id_aggiudicazione</td><td></td><td>1774785</td></tr>
+					<tr><td>awards/0/date</td><td>aggiudicazione / data_aggiudicazione_definitiva</td><td></td><td></td></tr>
+					<tr><td>awards/0/relatedLot</td><td>cig</td><td></td><td>822799329F</td></tr>
+					<tr><td>awards/0/status</td><td>aggiudicazione / esito</td><td></td><td>active</td></tr>
+					<tr><td>awards/0/value/amount</td><td>aggiudicazione / importo_aggiudicazione</td><td>importo aggiudicazione</td><td>149900</td></tr>
+					<tr><td>awards/0/value/currency</td><td></td><td>valuta aggiudicazione</td><td>EUR</td></tr>
+					<tr><td>awards/0/items/0/id</td><td>bando CIG / CIG</td><td>codice lotto</td><td></td></tr>
+					<tr><td>awards/0/items/0/description</td><td>bando CIG / oggetto_lotto</td><td>descrizione lotto</td><td></td></tr>
+					<tr><td>awards/0/items/0/classification/id</td><td>bando CIG / cod_cpv</td><td>codice classificazione CPV</td><td></td></tr>
+					<tr><td>awards/0/items/0/classification/description</td><td>bando CIG / descrizione_cpv</td><td>descrizione classificazione CPV</td><td></td></tr>
+					<tr><td>awards/0/items/0/classification/scheme</td><td></td><td>schema CPV</td><td>CPV</td></tr>
+					<tr><td>awards/0/items/0/classification/uri</td><td></td><td>URI CPV</td><td>https://simap.ted.europa.eu/web/simap/cpv</td></tr>
+					<tr><td>awards/0/items/0/relatedLot</td><td>bando CIG / CIG</td><td>lotto corrispondente (estensione)</td><td>822799329F</td></tr>
+					<tr><td>awards/0/items/0/unit/value/amount</td><td>bando CIG / importo_lotto</td><td>importo lotto</td><td>149900</td></tr>
+					<tr><td>awards/0/items/0/unit/value/currency</td><td></td><td>valuta lotto</td><td>EUR</td></tr>
+					<tr><td>awards/0/suppliers/0/id</td><td>aggiudicatari / codice_fiscale</td><td>Codice Fiscale Aggiudicatario</td><td>00615530672</td></tr>
+					<tr><td>awards/0/suppliers/0/name</td><td>aggiudicatari / denominazione</td><td>Denominazione dell'Aggiudicatario</td><td>SERVIZI OSPEDALIERI SPA</td></tr>
+					<tr><td>contracts/0/id</td><td>avvio contratto / id_aggiudicazione</td><td>Identificativo del contratto</td><td></td></tr>
+					<tr><td>contracts/0/awardID</td><td>avvio contratto / id_aggiudicazione</td><td>Identificativo dell'aggiudicazione</td><td>1774785</td></tr>
+					<tr><td>contracts/0/period/startDate</td><td>avvio contratto / data_esecutivita_contratto</td><td>Data esecutività contratto</td><td></td></tr>
+					<tr><td>contracts/0/period/endDate</td><td>avvio contratto / data_termine_contrattuale</td><td>Data di termine contratto</td><td></td></tr>
+					<tr><td>contracts/0/dateSigned</td><td>avvio contratto / data_stipula_contratto</td><td>Data di stipula del contratto</td><td></td></tr>
+					<tr><td>contracts/0/items/0/id</td><td>bando CIG / CIG</td><td>codice lotto</td><td>1774785</td></tr>
+					<tr><td>contracts/0/items/0/description</td><td>bando CIG / oggetto_lotto</td><td>descrizione lotto</td><td></td></tr>
+					<tr><td>contracts/0/items/0/classification/id</td><td>bando CIG / cod_cpv</td><td>codice classificazione CPV</td><td></td></tr>
+					<tr><td>contracts/0/items/0/classification/description</td><td>bando CIG / descrizione_cpv</td><td>descrizione classificazione CPV</td><td></td></tr>
+					<tr><td>contracts/0/items/0/classification/scheme</td><td></td><td>schema CPV</td><td>CPV</td></tr>
+					<tr><td>contracts/0/items/0/classification/uri</td><td></td><td>URI CPV</td><td>https:/simap.ted.europa.eu/web/simap/cpv</td></tr>
+					<tr><td>contracts/0/items/0/relatedLot</td><td>bando CIG / CIG</td><td>lotto corrispondente (estensione)</td><td></td></tr>
+					<tr><td>contracts/0/items/0/unit/value/amount</td><td>bando CIG / importo_lotto</td><td>importo lotto</td><td>149900</td></tr>
+					<tr><td>contracts/0/items/0/unit/value/currency</td><td></td><td>valuta lotto</td><td>EUR</td></tr>
+					<tr><td>contracts/0/implementation/milestones/0/id</td><td></td><td></td><td>1753150-1</td></tr>
+					<tr><td>contracts/0/implementation/milestones/0/title</td><td>stati di avanzamento / denominazione_sal</td><td>Denominazione dello stato di avanzamento</td><td>STATO DI AVANZAMENTO N 1</td></tr>
+					<tr><td>contracts/0/implementation/milestones/0/type</td><td></td><td>tipologia di SAL</td><td>delivery</td></tr>
+					<tr><td>contracts/0/implementation/milestones/0/dateMet</td><td>stati di avanzamento / data_emissione_sal</td><td>Data di emissione del SAL</td><td>2020-10-31T12:00:00Z</td></tr>
+					<tr><td>contracts/0/implementation/milestones/0/code</td><td>stati di avanzamento / progressivo_sal</td><td>Numero progressivo di SAL</td><td>1</td></tr>
+					<tr><td>contracts/0/amendments/0/id</td><td>varianti / id_variante</td><td>Identificativo unico della variante</td><td>239456</td></tr>
+					<tr><td>contracts/0/amendments/0/rationale</td><td>varianti / motivo_variante</td><td>Descrizione del motivo della variante</td><td>PROROGA TECNICA</td></tr>
+					<tr><td>contracts/0/amendments/0/date</td><td>varianti / data_approvazione_variante</td><td>Data di approvazione della variante</td><td>2020-12-22T12:00:00Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</div>
+
+<!-- FINE DATASET -->
+
+
+            
+              <aside class="secondary span3">
+                
+                
+              </aside>
+            
+          </div>
+        
+      </div>
+    </div>
+  
+    <footer class="it-footer">
+        <div class="it-footer-main">
+            <div class="container">
+                <section class="footer-secondary">
+                    <div class="row">
+                        <div class="span6">
+                            <h4 class="text-uppercase"><a href="https://dati.anticorruzione.it/#" title="Vai alla pagina:Contatti">Contatti</a>
+                            </h4>
+                            <a href="mailto:protocollo@pec.anticorruzione.it"><em class="far fa-envelope mr-1" aria-hidden="true"></em>protocollo@pec.anticorruzione.it</a>
+                            <p><em class="fas fa-phone-volume mr-1" aria-hidden="true"></em> Contact Center +39 06 62289571</p>
+                        </div>
+                        <div class="span6">
+                            <h4 class="text-uppercase"><a href="https://dati.anticorruzione.it/#" title="Vai alla pagina:Quicklinks">Quicklinks</a>
+                            </h4>
+                            <div class="link-list-wrapper">
+                                <ul class="footer-list link-list">
+                                    <li><a class="list-item" href="http://www.anticorruzione.it/" title="Vai alla pagina: Portale istituzionale">Portale istituzionale</a></li>
+                                    <li><a class="list-item" href="https://servizi.anticorruzione.it/" title="Vai alla pagina: Portale servizi">Portale servizi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="it-footer-small-prints">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <h2 class="sr-only">Sezione Link Utili</h2>
+                        <div>
+                            <ul class="it-list">
+                                <li class="list-inline-item"><a class="list-item" href="https://www.anticorruzione.it/note-legali" title="Note legali"><span>Note legali</span></a></li>
+                                <li class="list-inline-item"><a class="list-item" href="https://www.anticorruzione.it/copyright" title="Copyright"><span>Copyright</span></a></li>
+                                <li class="list-inline-item"><a class="list-item" href="https://www.anticorruzione.it/privacy-cookies" title="Privacy-Cookies"><span>Privacy-Cookies</span></a></li>
+								
+                                <li class="list-inline-item"><a class="list-item" href="https://www.anticorruzione.it/accessibilit%C3%A0" title="Accessibilità"><span>Accessibilit&agrave;</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<body>
+<!-- SCRIPT GOOGLE ANALYTICS-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'UA-9618615-8');
+</script>
+</html>
+  
+    
+    
+    
+  
+    
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/jquery.min.js"></script>
+<script type="text/javascript" src="/opendata/fanstatic/vendor/:version:2020-01-20T19:02:07/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/opendata/fanstatic/base/:version:2020-01-20T19:02:07/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script></body>
+</html>

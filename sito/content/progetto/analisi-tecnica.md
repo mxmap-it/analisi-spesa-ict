@@ -14,7 +14,7 @@ esplicitamente, con la fonte.
 ## Dove gira e perché
 
 Tutto il lavoro gira sul **server di mxmap.it** (`mxmap.it@51.158.36.151`, 8 core, 31 GB di RAM,
-~246 GB liberi), non su runner cloud e non sul portatile. Tre motivi:
+con spazio libero controllato a ogni scarico), non su runner cloud e non sul portatile. Tre motivi:
 
 - **ANAC respinge gli user-agent che non sembrano browser**: verificato, risponde 200 con una pagina
   HTML al posto del file. DataCivicLab e Radar-Appalti riferiscono anche un blocco degli IP dei
@@ -38,8 +38,8 @@ verifica vengono da documentazione di terzi e vanno ricontrollate prima dell'uso
 | **ANAC — dataset tabellari BDNCP** | Base d'asta (`cig`), aggiudicazioni, aggiudicatari, partecipanti, subappalti, quadro economico, stati di avanzamento | CIG | CC BY-SA 4.0 | **La spina dorsale.** Aggiornati al 2026-10-05. API CKAN funzionante ma **non documentata**: richiede user-agent da browser |
 | **ANAC — `cup`** | Ponte CIG ↔ CUP | CIG, CUP | CC BY-SA 4.0 | 7.103.635 CIG distinti, ma solo 5.149.498 (72,5%) con un CUP valido: 1.951.844 righe hanno `ND` al posto del CUP. Join uno-a-molti |
 | **ANAC — `stazioni-appaltanti`** | Anagrafe delle SA, con codice AUSA | CF, AUSA | CC BY-SA 4.0 | Aggiornato al 2026-10-13 |
-| **ANAC — smartCIG** | Affidamenti semplificati sotto soglia | CIG semplificato | CC BY-SA 4.0 | Serve: è dove vive gran parte della spesa ICT corrente |
-| **ANAC — OCDS bulk** | Stesso contenuto in Open Contracting Data Standard | ocid, CIG | CC BY 4.0 | **Fermo a marzo 2026**: i mesi da aprile a settembre rispondono 404. Vedi §3 |
+| **ANAC — smartCIG** | Affidamenti semplificati sotto soglia | CIG semplificato | CC BY-SA 4.0 | Affidamenti sotto soglia: probabile peso rilevante nella spesa ICT corrente, da misurare |
+| **ANAC — OCDS bulk** | Stesso contenuto in Open Contracting Data Standard | ocid, CIG | **Incongruente**: il catalogo dichiara CC BY 4.0, il file dichiara CC BY-SA 4.0 | Del 2026 c'è solo marzo; nel 2024-2025 mesi diversi servono lo stesso file. Vedi sotto |
 | **ANAC — Pubblicità a Valore Legale** | Avvisi che fanno fede per legge dal 2024 | CIG | — | La fonte più tempestiva. Categoria merceologica in testo libero, non CPV |
 | **Consip** `dati.consip.it` | 16 dataset. Utili: `gare-asp` e `bandi-e-gare` (**record-level, con CIG**); ordini MePA e convenzioni (aggregati annuali) | CIG dove c'è, CF PA, codice IPA | CC BY 4.0 | **Finestra mobile**: in linea 2024-2026, il 2023 risponde 404 |
 | **TED — API v3 eForms** | Bandi e aggiudicazioni sopra soglia UE | numero avviso, CPV, CF ente | riuso UE | API anonima senza chiave. **Il CIG non è un campo standard eForms** |
@@ -74,14 +74,18 @@ verifica vengono da documentazione di terzi e vanno ricontrollate prima dell'uso
 Divisioni di riferimento: **48** software e sistemi, **72** servizi IT, **30** macchine per ufficio
 e computer, **32** apparecchiature TLC, **64** servizi di telecomunicazione.
 
-Tre avvertenze misurate su dati reali, che rendono il perimetro una scelta da documentare e non una
-lista da copiare:
+Tre avvertenze, che rendono il perimetro una scelta da documentare e non una lista da copiare.
+Le prime due sono misurate sul delta CIG di ANAC di ottobre 2026:
 
-1. **La divisione 30 non è hardware ICT.** I codici più frequenti sono buoni pasto e cancelleria.
-   Senza una lista bianca, "divisione 30 = hardware" è falso.
-2. **I server stanno nella 48** (CPV 48820000): un prodotto hardware classificato come software.
+1. **La divisione 30 contiene anche acquisti non ICT.** I codici più frequenti sono ICT — computer
+   portatili (1.775 CIG) e apparecchiature informatiche (1.759) — ma terzo e quarto sono **buoni
+   pasto** (1.297) e **cancelleria** (984). Serve una lista bianca dei codici, non la divisione
+   intera.
+2. **I server stanno nella divisione 48**: il codice `48820000` è "SERVER" (327 CIG), dentro la
+   divisione dei pacchetti software.
 3. **Le licenze non hanno un CPV proprio.** Licenza perpetua, canone SaaS e sviluppo su misura
-   ricadono indistintamente sotto 48 e 72.
+   ricadono sotto 48 e 72 senza distinzione. Questa è una caratteristica del vocabolario CPV, non
+   una misura.
 
 ## Le strade che non abbiamo seguito
 
@@ -90,10 +94,18 @@ dopo deve sapere cosa è già stato provato e scartato.
 
 ### Il canale OCDS di ANAC — scartato come fonte primaria
 
-È il formato più bello e lo standard internazionale, ma **è fermo a marzo 2026**: verificato oggi,
-i file di aprile, maggio, giugno, luglio, agosto e settembre 2026 rispondono tutti 404, mentre i
-dataset tabellari sono aggiornati al 5 ottobre. Non è un episodio: AppaltIntel ha documentato che
-**per trenta mesi fra il 2020 e il 2026 il canale OCDS non ha mai pubblicato il file del mese**, e
+È il formato più bello e lo standard internazionale, ma **non è affidabile**, per tre motivi
+verificati il 26 ottobre 2026:
+
+- **del 2026 c'è solo marzo**: gennaio, febbraio e da aprile in poi rispondono 404, mentre i
+  dataset tabellari sono aggiornati al 5 ottobre;
+- **nel 2024-2025 mesi diversi servono lo stesso file**, con il solo campo `uri` riscritto: dei 23
+  mesi disponibili i contenuti distinti sono al massimo 11 (dettaglio nel
+  [rapporto ANAC](/rendiconti/anac-2026-10/));
+- **la licenza è incongruente**: il catalogo dichiara CC BY 4.0, il file CC BY-SA 4.0.
+
+Non è un episodio isolato: AppaltIntel ha documentato pubblicamente che
+**per trenta mesi fra il 2020 e il 2026 il canale OCDS non ha reso disponibile il file del mese** (affermazione loro, coerente con i mesi duplicati che abbiamo misurato), e
 ha dovuto ritirare pubblicamente un'analisi in cui aveva attribuito al mercato un calo del 2023
 che era invece un buco della fonte.
 
@@ -106,7 +118,7 @@ mercato oppure la fonte, e le due cose si distinguono solo guardando quali mesi 
 
 Dichiarata sul portale, con Swagger UI raggiungibile. Ma tutti gli endpoint su
 `api.anticorruzione.it` rispondono **404** attraverso il gateway, e il file `swagger.json` **non è
-JSON valido**. → Usiamo l'**API CKAN**, che funziona benissimo e non è documentata da nessuna parte.
+JSON valido**. → Usiamo l'**API CKAN**, che funziona e che sul portale ANAC non abbiamo trovato documentata.
 
 ### SIOPE attraverso BDAP — da verificare, e specchiato comunque
 
@@ -134,21 +146,22 @@ dei contratti è quindi già in ANAC: i portali danno **tempestività e document
 diversi.
 
 → Integrarne ventitré costerebbe mesi di manutenzione di scraper per un guadagno che non cambia la
-risposta sulla sovranità. Restano fuori, con un'unica eccezione a campione (sotto).
+risposta sulla sovranità. Restano fuori; i documenti di gara, che solo i portali hanno, si useranno a campione (sotto).
 
 ### I documenti di gara in massa — impossibile, misurato
 
-Per sapere *quale prodotto* è stato comprato servirebbero capitolato e disciplinare. La verifica è
-netta: sul perimetro ANAC la reperibilità del documento è **circa zero** — il bulk non contiene
-allegati e non espone un URL per CIG — e sui portali regionali i documenti coprono lo **0,2%**
-delle procedure aggiudicate, concentrati di fatto su un solo portale (SATER, Emilia-Romagna).
+Per sapere *quale prodotto* è stato comprato servirebbero capitolato e disciplinare. Nei dati ANAC
+non ci sono: il file OCDS di marzo 2026, letto per intero, **non contiene alcun campo `documents`**,
+e i dataset tabellari non hanno un collegamento ai documenti di gara. I documenti stanno sulle
+piattaforme di e-procurement delle stazioni appaltanti, e quanto siano reperibili non l'abbiamo
+ancora misurato.
 
-→ I documenti si useranno **solo come campione** su SATER, per validare le altre misure. Non come
-statistica.
+→ I documenti si useranno **solo come campione**, nella fase finale, per validare le altre misure.
+Non come statistica.
 
 ### Il CUP come chiave dell'analisi — declassato a etichetta
 
-Il ponte ufficiale CIG ↔ CUP esiste, è il dataset `cup` di ANAC, e **nessuno dei progetti mappati
+Il ponte ufficiale CIG ↔ CUP esiste, è il dataset `cup` di ANAC, e **nessuno dei progetti che abbiamo esaminato
 lo usa**. Va però letto con attenzione: alla rilevazione del 26 ottobre 2026 contiene 7.103.635 CIG
 distinti, ma **1.951.844 righe hanno come CUP la stringa `ND`**. I CIG con almeno un CUP valido
 sono 5.149.498, il 72,5%: chi conta le righe sovrastima i collegamenti di un quarto.
@@ -165,19 +178,19 @@ PNRR" per una minoranza dei casi, e a saltare verso OpenCoesione, ReGiS e OpenCU
 
 ### Gli XML della Legge 190 pubblicati da ogni ente — fuori perimetro
 
-Sono l'unica fonte veramente alternativa ad ANAC, ed è su quella che Atoka PA (SpazioDati, gruppo
+Sono la principale fonte alternativa ad ANAC fra quelle che abbiamo trovato, ed è su quella che Atoka PA (SpazioDati, gruppo
 Cerved) ha costruito un prodotto commerciale dal 2016. Significa inseguire migliaia di siti di enti
 con formati e qualità disomogenei. → Fuori: costo altissimo, e nulla che cambi la classificazione
 di giurisdizione.
 
 ### Un aggregatore generalista della spesa pubblica — già fatto, due volte
 
-- **Cruscotto Italia** (AgID, AGPL-3.0): ~24 fonti, mirror in DuckDB e Parquet, endpoint MCP,
+- **Cruscotto Italia** (AgID, AGPL-3.0): 31 moduli di ingestione in `etl/sources/`, mirror in DuckDB e Parquet, endpoint MCP,
   aggiornamento giornaliero.
 - **DataCivicLab** (~40 repo, MIT): contratto RAW → CLEAN → MART, Parquet su bucket pubblico,
   `metadata.json` e `validation.json` per l'audit trail.
 
-→ Non ne serve un terzo. Noi facciamo l'**unico pezzo che non c'è**: l'attribuzione di giurisdizione.
+→ Non ne serve un terzo. Noi facciamo il **pezzo che non abbiamo trovato da nessun altro**: l'attribuzione di giurisdizione.
 
 ### La normalizzazione di tutto in un unico schema — scartata per principio
 
@@ -192,7 +205,9 @@ contratto → pagamento non si chiude con i dati pubblici, e va detto invece di 
 
 ### L'attribuzione esaustiva della capogruppo — ridimensionata dai numeri
 
-Misurato su GLEIF, che è l'unica fonte aperta e in CC0: circa 259.000 entità italiane censite, ma
+Stima da una ricerca del settembre 2026 su GLEIF, basata su un **campione di 800 relazioni**, da
+ripetere sul file completo quando GLEIF entrerà nel mirror. GLEIF è l'unica fonte aperta, in CC0,
+sulle relazioni di controllo: circa 259.000 entità italiane censite, ma
 solo **~6.800 con capogruppo diretta** e **~7.150 con capogruppo ultima**, di cui l'82,9% con
 capogruppo a sua volta italiana. Restano **~1.200 imprese italiane con controllante estero
 verificabile**: lo **0,03%** delle imprese italiane. Oltre sei milioni di record sono "reporting
@@ -250,7 +265,7 @@ riservati) e le licenze **non libere** (Elastic License, clausole non commercial
 |---|---|---|---|
 | Motore di pipeline | `dataciviclab/toolkit` | MIT | Come libreria: `dataset.yml` più SQL, RAW → CLEAN → MART su DuckDB, Parquet in output, `metadata.json` e `validation.json` a ogni run. Plugin già pronti per HTTP, CKAN, SDMX, SPARQL |
 | Radar disponibilità fonti | `dataciviclab/source-observatory` | MIT | Monitora già 36 cataloghi, ANAC e Consip inclusi. Ci appoggiamo e contribuiamo le fonti mancanti |
-| Pubblicità a Valore Legale, vocabolario CPV, validazione CIG | `aborruso/anac-pl-pp-cli` | Apache-2.0 | Unico strumento al mondo su quella fonte. Porta anche i 9.454 codici CPV, la validazione del CIG con cifra di controllo, uno store SQLite e un server MCP |
+| Pubblicità a Valore Legale, vocabolario CPV, validazione CIG | `aborruso/anac-pl-pp-cli` | Apache-2.0 | L'unico strumento che abbiamo trovato su quella fonte. Porta anche i 9.454 codici CPV, la validazione del CIG con cifra di controllo, uno store SQLite e un server MCP |
 | Catalogo BDAP, IndicePA | `aborruso/openbdap-pp-cli`, `openipa` | Apache-2.0 | Per la scoperta; l'ingestione resta nel toolkit |
 | Ingestione SIOPE e PNRR | `AgID/cruscotto-italia`, `etl/sources/` | AGPL-3.0 | Moduli già scritti sulle stesse fonti: `siope.py`, `pnrr_progetti.py`, `bdap.py`, `anac.py`. Valgono soprattutto per **le trappole già pagate da altri** |
 | Qualità del contenuto tabellare | `frictionless-py` | MIT | Schema, tipi, valori nulli, unicità |
@@ -272,7 +287,7 @@ portata in un file dati che manteniamo noi e che la sua CLI può consumare dall'
 
 ## Cosa costruiamo noi
 
-1. **L'archivio delle risorse deperibili.** Nessuno lo fa, e ogni mese si perde qualcosa.
+1. **L'archivio delle risorse deperibili.** Fra i progetti esaminati nessuno lo fa, e ogni mese si perde qualcosa.
 2. **Il livello di qualità dei dati che manca al radar.** `source-observatory` misura la salute
    della *fonte*; mancano continuità temporale, persistenza, qualità del contenuto, agganciabilità
    e le **pagelle per produttore**, che sono l'artefatto di advocacy.
