@@ -22,6 +22,7 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - **Mirror completo di ANAC** (`tools/mirror_anac.py`, ticket #9): 1.797 risorse, tutti i formati,
   OCDS bulk incluso. Alle 18 del 26/10 era a 719 risorse e 13,1 GB. Si ferma da solo sotto i 40 GB
   liberi.
+- **Sonda** ogni giorno alle 06:10 e **metriche di non ricorrenza ANAC** (I1-I9) alle 06:40, esiti in `stato/sonda/` e `stato/metriche/`. Al 26/10: 7 violate su 9; I6 rispettata solo perché l'archivio è nato oggi.
 - **Guardiano** in cron ogni 15 minuti (`tools/guardiano.sh`): riavvia il mirror se muore e non ha
   finito.
 
