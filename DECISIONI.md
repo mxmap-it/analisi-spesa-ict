@@ -70,7 +70,7 @@ vecchia.
 ## Decisioni aperte, che spettano a Fabio
 
 1. Il **valore del tetto di token** al giorno (#20).
-2. Il **permesso per la board**: va eseguito `gh auth refresh -h github.com -s project`.
+2. ~~Permesso per la board~~: fatto, board su https://github.com/orgs/mxmap-it/projects/1
 3. Da dove servire il **mirror pubblico** (#17).
 4. Quando contattare **DataCivicLab** (#21) e **aborruso** (#22).
 5. L'**invio del rapporto ad ANAC** e a chi (#19).

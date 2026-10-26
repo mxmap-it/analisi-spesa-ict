@@ -44,7 +44,7 @@ Il dettaglio è nella [roadmap](https://analisi-spesa-ict.mxmap.it/progetto/road
 | **Decisioni prese**, con data e motivo | [DECISIONI.md](DECISIONI.md) |
 | **Stato del lavoro** e punto di ripresa | [STATE.md](STATE.md) |
 | Roadmap, perimetro delle fonti, attese verso le autorità | [sito/content/progetto/](sito/content/progetto/) |
-| Ticket e avanzamento | [Issues](https://github.com/mxmap-it/analisi-spesa-ict/issues) |
+| Ticket e avanzamento | [Board](https://github.com/orgs/mxmap-it/projects/1) · [Issues](https://github.com/mxmap-it/analisi-spesa-ict/issues) |
 | Strumenti | [tools/](tools/) |
 
 Il lavoro gira sul server di mxmap.it: ANAC respinge gli user-agent non-browser, i file sono
