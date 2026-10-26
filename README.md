@@ -12,6 +12,34 @@ dei server — e stessa classificazione a quattro categorie: `it`, `eu_non_it`, 
 La domanda non è *quanto* spende la PA in digitale, ma **verso quale giurisdizione va l'euro
 speso**.
 
+## Obiettivo
+
+**L'obiettivo finale è misurare la spesa ICT della Pubblica Amministrazione italiana per
+giurisdizione del fornitore**, e pubblicare quella misura in modo verificabile: quanta parte va a
+soggetti sotto ordinamento italiano, quanta a soggetti europei, quanta a soggetti extra-europei —
+quelli esposti, per esempio, al CLOUD Act statunitense.
+
+Serve a dare a decisori, amministrazioni, giornalisti e cittadini un numero che oggi non esiste, con
+i suoi limiti dichiarati. È lo stesso lavoro che mxmap.it fa sulla posta elettronica degli enti,
+applicato al denaro.
+
+Per arrivarci il progetto attraversa quattro fasi, ciascuna abilitante per la successiva e nessuna
+fine a sé stessa:
+
+1. **Mettere a disposizione i dati, e misurare quanto sono disponibili.** Un mirror dei dati grezzi
+   di spesa e appalti, sempre aggiornato e fruibile da chiunque, con una dashboard pubblica che
+   mostra dove mancano e un report periodico a ciascuna autorità che li produce. È un risultato
+   intermedio, con un tetto di sforzo: esiste perché l'analisi abbia una base completa, e perché i
+   problemi trovati vengano corretti alla fonte invece di essere aggirati ogni volta.
+2. **Misurarne la qualità.** Errori, incongruenze fra fonti, dati mancanti, collegamenti che non si
+   chiudono — registrati una volta, pubblicati e segnalati.
+3. **Definire il perimetro e attribuire la giurisdizione.** Quali acquisti sono ICT, e di quale
+   giurisdizione è ciascun fornitore e il suo gruppo.
+4. **Analizzare e interpretare.** La spesa ICT per giurisdizione, con il pavimento misurato e la
+   dichiarazione esplicita di ciò che il dato pubblico non consente di sapere.
+
+Il dettaglio di fasi, tetti di sforzo e criteri di chiusura è nella [roadmap](docs/ROADMAP.md).
+
 ---
 
 ## Indice
@@ -52,7 +80,7 @@ verifica vengono da documentazione di terzi e vanno ricontrollate prima dell'uso
 | Fonte | Cosa misura | Chiavi | Licenza | Stato verificato |
 |---|---|---|---|---|
 | **ANAC — dataset tabellari BDNCP** | Base d'asta (`cig`), aggiudicazioni, aggiudicatari, partecipanti, subappalti, quadro economico, stati di avanzamento | CIG | CC BY-SA 4.0 | **La spina dorsale.** Aggiornati al 2026-10-05. API CKAN funzionante ma **non documentata**: richiede user-agent da browser |
-| **ANAC — `cup`** | Ponte CIG ↔ CUP | CIG, CUP | CC BY-SA 4.0 | 7.167.369 righe, 7.045.847 CIG distinti; join uno-a-molti (0,6% dei CIG ha più di un CUP) |
+| **ANAC — `cup`** | Ponte CIG ↔ CUP | CIG, CUP | CC BY-SA 4.0 | 7.103.635 CIG distinti, ma solo 5.149.498 (72,5%) con un CUP valido: 1.951.844 righe hanno `ND` al posto del CUP. Join uno-a-molti |
 | **ANAC — `stazioni-appaltanti`** | Anagrafe delle SA, con codice AUSA | CF, AUSA | CC BY-SA 4.0 | Aggiornato al 2026-10-13 |
 | **ANAC — smartCIG** | Affidamenti semplificati sotto soglia | CIG semplificato | CC BY-SA 4.0 | Serve: è dove vive gran parte della spesa ICT corrente |
 | **ANAC — OCDS bulk** | Stesso contenuto in Open Contracting Data Standard | ocid, CIG | CC BY 4.0 | **Fermo a marzo 2026**: i mesi da aprile a settembre rispondono 404. Vedi §3 |
@@ -158,12 +186,17 @@ statistica.
 ### Il CUP come chiave dell'analisi — declassato a etichetta
 
 Il ponte ufficiale CIG ↔ CUP esiste, è il dataset `cup` di ANAC, e **nessuno dei progetti mappati
-lo usa**: 7.167.369 righe, 7.045.847 CIG distinti. Ma misurato sul perimetro ICT copre solo il
-**20,2% dei CIG** e il **18,9% del valore** — 30,8% sopra il milione, 19,4% sotto i 40.000 euro.
+lo usa**. Va però letto con attenzione: alla rilevazione del 26 ottobre 2026 contiene 7.103.635 CIG
+distinti, ma **1.951.844 righe hanno come CUP la stringa `ND`**. I CIG con almeno un CUP valido
+sono 5.149.498, il 72,5%: chi conta le righe sovrastima i collegamenti di un quarto.
 
-Non è un difetto dei dati: il CUP identifica un **progetto di investimento pubblico**, e licenze,
+Sul perimetro ICT, misurato sul delta di ottobre 2026, **i CIG con CUP valido sono il 13,7%**
+(3.360 su 24.580). Una misura precedente su un campione diverso, i mesi 2024-2026 di un altro
+progetto, dava il 20,2% contando la sola presenza nel file: in entrambi i casi una minoranza.
+
+La bassa copertura non è un difetto dei dati — il `ND` invece sì, ed è nel [rapporto ANAC](report/anac/RAPPORTO-ANAC-2026-10.md): il CUP identifica un **progetto di investimento pubblico**, e licenze,
 canoni, manutenzione e connettività non lo sono. Il CUP serve a dire "questo contratto nasce dal
-PNRR" per un quinto dei casi, e a saltare verso OpenCoesione, ReGiS e OpenCUP.
+PNRR" per una minoranza dei casi, e a saltare verso OpenCoesione, ReGiS e OpenCUP.
 
 → La chiave dell'analisi resta il **CIG**.
 

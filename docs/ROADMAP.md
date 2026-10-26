@@ -20,8 +20,8 @@ problema.
    report indirizzato all'autorità che produce il dato. Un buco segnalato una volta e poi
    dimenticato non migliora niente.
 4. **È un byproduct, e ha un tetto di sforzo.** Lo strumento serve a mettere tutti i dataset a
-   disposizione dell'analisi. Non diventa il progetto. I tetti sono scritti fase per fase e sono
-   vincolanti.
+   disposizione dell'analisi. Non diventa il progetto. Il tetto è un numero massimo di **token al
+   giorno**, applicato automaticamente al lavoro di Claude sul server (vedi la fase 1).
 5. **Portabilità per costruzione.** I dati stanno su questo VPS adesso e si sposteranno. Quindi:
    nessun percorso assoluto nel codice, un manifest autosufficiente che descrive l'archivio, e un
    layout trasferibile con un `rsync` senza riscaricare nulla.
@@ -138,14 +138,27 @@ sparite, interruzioni di cadenza, e le richieste aperte della fase 0. Pubblicato
 Cadenza: **trimestrale** per i report ordinari, **immediata** per le regressioni gravi — un dataset
 che sparisce o una cadenza che si interrompe.
 
-### Tetto di sforzo della fase 1
+### Tetto di sforzo: token al giorno
 
-- **Massimo dieci giornate di lavoro complessive.**
-- **Mezza giornata per fonte, non più.** Se una fonte richiede scraping fragile, autenticazione,
-  captcha o reverse engineering, si marca `non-specchiabile` con il motivo e si passa oltre. Il
-  tetto per fonte è il meccanismo che impedisce a questa fase di diventare il progetto.
-- **Nessuna ricostruzione retroattiva** oltre ciò che è scaricabile oggi: quello che è già sparito
-  si registra come perduto, non si inseguono archivi di terzi.
+Il tetto non è sul tempo ma sul **consumo di token al giorno** del lavoro svolto da Claude.
+
+- Il valore sta in `config/budget.yaml` (`token_giornalieri`), ed è deciso da Fabio.
+- Il lavoro **a script** — scarichi, sonde, controlli in DuckDB — non consuma token e non è
+  soggetto al tetto: ha solo i limiti di cortesia verso i portali, una richiesta al secondo.
+- Il lavoro **di Claude sul server** passa da un wrapper che invoca `claude -p --output-format
+  json`, legge il consumo dal campo `usage`, lo registra in `stato/budget/<data>.jsonl` e **non
+  avvia un nuovo compito se il totale del giorno ha raggiunto il tetto**. Il compito resta in coda
+  e riparte il giorno dopo, perché ogni compito è ripartibile per costruzione.
+- Il lavoro interattivo con Fabio si conta a parte, con la stessa contabilità giornaliera.
+
+Due regole che restano, perché il tetto da solo non le garantisce:
+
+- **Nessuna fonte vale il tetto di un giorno.** Se una fonte richiede scraping fragile,
+  autenticazione, captcha o reverse engineering, si marca `non-specchiabile` con il motivo e si passa
+  oltre.
+- **Recupero retroattivo solo dove è gratis.** Ciò che è sparito dalla fonte si cerca una volta
+  nella Wayback Machine, che ha catturato 1.660 URL di ANAC; ciò che non c'è si registra come
+  perduto.
 
 ### Definizione di "fatto"
 

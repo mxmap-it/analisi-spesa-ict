@@ -1,0 +1,7 @@
+# Tetto giornaliero di token per il lavoro di Claude sul server.
+# Lo decide Fabio. Finche e' null, il wrapper non avvia compiti automatici.
+token_giornalieri: null
+
+# Il lavoro a script (scarichi, sonde, DuckDB) non consuma token e non e' soggetto al tetto.
+# Cortesia verso i portali: una richiesta al secondo per autorita'.
+pausa_tra_richieste_s: 1.0

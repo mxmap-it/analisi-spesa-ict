@@ -17,6 +17,8 @@ avanzamento, prima di chiudere la sessione.
 - [x] Analisi delle fonti e degli strumenti, con le strade scartate e il perché → `README.md`.
 - [x] Verifica dello stato delle fonti dal server (2026-10-26).
 - [x] Repository creato.
+- [x] Primo scarico ANAC nel mirror (5 risorse, sha256 nel manifest) e prima analisi di integrità → `report/anac/RAPPORTO-ANAC-2026-10.md`.
+- [x] Tetto di sforzo ridefinito in token al giorno → `config/budget.yaml` (valore da decidere).
 
 ## Da fare, in ordine
 
