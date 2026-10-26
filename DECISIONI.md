@@ -29,6 +29,8 @@ vecchia.
 | 2026-10-26 | Dati **sul VPS di mxmap.it per ora**, forse una macchina dedicata in seguito. Layout trasferibile con un `rsync` | Fabio | — |
 | 2026-10-26 | SIOPE: via principale il bulk di `siope.it`; **anche la via BDAP va specchiata e confrontata** | Claude, su domanda di Fabio | Il difetto di BDAP è riferito da AgID, non verificato da noi |
 
+| 2026-10-26 | **La giurisdizione si attribuisce al prodotto, non al fornitore.** Due lenti separate: prodotto (dalla descrizione della gara) e fornitore (chi incassa). La rete dei rivenditori è un tema a sé | Fabio, su indicazione di Pietro Biase | Misurato su marzo 2026: le gare che nominano Microsoft 365, Azure, AWS e Google sono vinte dal produttore fra lo 0% e il 5% delle volte |
+
 ## Lavoro e strumenti
 
 | Data | Decisione | Chi | Perché |

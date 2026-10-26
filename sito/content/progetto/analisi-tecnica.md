@@ -321,6 +321,37 @@ Quattro regole che valgono per ogni stadio:
 - **Provenienza obbligatoria.** Ogni numero pubblicato risale alla risorsa, all'hash e alla data di
   acquisizione da cui viene.
 
+## Il prodotto, non il fornitore
+
+**La giurisdizione si attribuisce al prodotto acquistato, non a chi lo vende.** I servizi cloud
+delle big tech arrivano alla PA quasi sempre attraverso rivenditori e integratori italiani: chi
+firma il contratto e incassa non è chi controlla la tecnologia. Il prodotto, invece, è spesso
+scritto nella descrizione della gara. L'osservazione è di Pietro Biase, e i dati la confermano.
+
+Misura sul file OCDS di ANAC di marzo 2026, con i fornitori presi dai dataset `aggiudicatari` di
+aprile-agosto 2026, uniti per CIG:
+
+| Prodotto nominato nella descrizione | Gare | Aggiudicazioni | Vinte dal produttore | Fornitori distinti | Primo fornitore |
+|---|---|---|---|---|---|
+| Microsoft 365 / Office 365 | 89 | 115 | 1% | 66 | TIM |
+| Microsoft Azure | 15 | 20 | 5% | 13 | TIM |
+| Amazon Web Services | 9 | 10 | 0% | 6 | Fastweb |
+| Google Workspace / Cloud | 32 | 41 | 2% | 17 | TIM |
+
+**Cautele.** Un solo mese; ricerca per parole chiave, che conta anche le menzioni in negativo
+("migrazione da Office 365"); da ripetere su tutto il mirror e da controvalidare. Script:
+`lavoro/marchi_fornitori2.py` sul server.
+
+Conseguenze per l'obiettivo finale:
+
+- **due lenti, tenute separate**: la *lente prodotto* (di chi è la tecnologia, dalla descrizione)
+  misura la dipendenza; la *lente fornitore* (chi incassa) misura dove resta il valore economico.
+  La differenza fra le due è il fenomeno da raccontare;
+- **la rete dei rivenditori è un tema a sé**: chi rivende quali prodotti esteri, e in quale
+  quantità;
+- il riconoscimento dei prodotti nelle descrizioni diventa il lavoro centrale, più del registro dei
+  fornitori.
+
 ## Cosa si potrà dire, e cosa no
 
 Il dato pubblico **non consente** di affermare "il X% della tecnologia della PA italiana è estera".
