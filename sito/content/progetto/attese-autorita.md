@@ -1,14 +1,18 @@
-# Cosa le autorità dovrebbero garantire
+---
+title: "Cosa le autorità dovrebbero garantire"
+date: 2026-10-26
+---
+
 
 **Stato:** prima stesura · **Ultimo aggiornamento:** 2026-10-26
 
 Questo documento dichiara, per ogni autorità, **cosa ci aspettiamo** in termini di disponibilità dei
 dati, **cosa abbiamo verificato**, e **cosa chiediamo**. È la fase 0 della
-[roadmap](ROADMAP.md): nasce come ipotesi e viene confermato o smentito dal mirror, non da
+[roadmap](../roadmap/): nasce come ipotesi e viene confermato o smentito dal mirror, non da
 un'opinione.
 
 Ogni attesa porta uno stato: `atteso` (non ancora misurato), `confermato`, `smentito` (e in questo
-caso genera una voce nel [registro dei problemi](REGISTRO-PROBLEMI.md)).
+caso genera una voce nel [registro dei problemi](../roadmap/#6-il-registro-dei-problemi)).
 
 ---
 

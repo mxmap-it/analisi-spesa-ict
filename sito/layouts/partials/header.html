@@ -1,0 +1,135 @@
+{{ $spritesURL := (printf "%s" ("vendor/bootstrap-italia/svg/sprites.svg" | relURL)) }}
+<header class="it-header-wrapper" data-bs-target="#header-nav1">
+  <div class="it-header-slim-wrapper">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-slim-wrapper-content">
+            <div></div>
+            <div class="it-header-slim-right-zone">
+              {{ if .Translations }}
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">{{ i18n "langSwitcher" }}: </span>
+                  <span>{{ .Language.Lang | upper }}</span>
+                  <svg class="icon d-none d-lg-block"><use href="{{ $spritesURL }}#it-expand"></use></svg>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          {{ range .Translations }}
+                          <li><a class="dropdown-item list-item" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}"><span>{{ .Language.Lang | upper }} — {{ .Language.Label }}</span></a></li>
+                          {{ end }}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="it-header-center-wrapper">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-center-content-wrapper">
+            <div class="it-brand-wrapper d-flex align-items-center" style="gap:.6rem;">
+              <a href="{{ "/" | relURL }}">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 68 68" style="width:3rem;height:3rem;">
+                  <circle cx="34" cy="40" r="5" fill="#FFFFFF"/>
+                  <path d="M21 40 A13 13 0 0 0 47 40" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round"/>
+                  <path d="M13 40 A21 21 0 0 0 55 40" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" opacity="0.7"/>
+                  <path d="M5 40 A29 29 0 0 0 63 40" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" opacity="0.45"/>
+                  <rect x="20" y="52" width="9" height="3" fill="#5CB88A"/><rect x="29.5" y="52" width="9" height="3" fill="#FFFFFF"/><rect x="39" y="52" width="9" height="3" fill="#FF6B74"/>
+                </svg>
+                <div class="it-brand-text">
+                  <div class="it-brand-title">{{ i18n "brandTitle" }}</div>
+                  <div class="it-brand-tagline d-none d-md-block">{{ i18n "brandTagline" }}</div>
+                </div>
+              </a>
+              <span class="beta-wrap" tabindex="0" role="button" aria-expanded="false" aria-label="{{ i18n "betaAria" }}">
+                <span class="beta-badge">BETA</span>
+                <span class="beta-tip" role="tooltip">
+                  <span class="arr"></span>
+                  {{ i18n "betaTip" | safeHTML }}
+                </span>
+              </span>
+            </div>
+            <div class="it-right-zone">
+              <div class="d-flex align-items-center" style="gap:1rem;">
+                <a class="text-white text-decoration-none d-inline-flex align-items-center" href="{{ site.Params.mxmapURL }}" target="_blank" rel="noopener" title="{{ i18n "mxmapLinkTitle" }}">
+                  <svg class="icon icon-sm icon-white me-1" aria-hidden="true"><use href="{{ $spritesURL }}#it-external-link"></use></svg>
+                  <span class="d-none d-sm-inline">MxMap.it</span>
+                </a>
+                <a class="text-white text-decoration-none d-inline-flex align-items-center" href="https://github.com/mxmap-it/analisi-spesa-ict" target="_blank" rel="noopener" title="{{ i18n "githubLinkTitle" }}">
+                  <svg class="icon icon-sm icon-white me-1" aria-hidden="true"><use href="{{ $spritesURL }}#it-github"></use></svg>
+                  <span class="d-none d-sm-inline">GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="it-header-navbar-wrapper">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+            <button class="custom-navbar-toggler" type="button" aria-controls="header-nav1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#header-nav1">
+              <svg class="icon bg-override"><use href="{{ $spritesURL }}#it-burger"></use></svg>
+            </button>
+            <div class="navbar-collapsable" id="header-nav1" tabindex="-1">
+              <div class="overlay" style="display:none"></div>
+              <div class="close-div">
+                <button class="btn close-menu" type="button">
+                  <span class="visually-hidden">Nascondi la navigazione</span>
+                  <svg class="icon"><use href="{{ $spritesURL }}#it-close-big"></use></svg>
+                </button>
+              </div>
+              <div class="menu-wrapper">
+                <ul class="navbar-nav">
+                  {{ range site.Menus.main }}
+                  {{ if .HasChildren }}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span>{{ .Name }}</span>
+                      <svg class="icon icon-xs"><use href="{{ $spritesURL }}#it-expand"></use></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          {{ range .Children }}
+                          <li><a class="list-item{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL | relURL }}"><span>{{ .Name }}</span></a></li>
+                          {{ end }}
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  {{ else }}
+                  <li class="nav-item">
+                    <a class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+                      <span>{{ .Name }}</span>
+                    </a>
+                  </li>
+                  {{ end }}
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

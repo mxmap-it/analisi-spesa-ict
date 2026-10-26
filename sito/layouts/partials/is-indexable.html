@@ -1,0 +1,13 @@
+{{- /*
+  Unica fonte di verità per «questa pagina va indicizzata?».
+
+  Usata da head.html (meta robots e hreflang), da _default/sitemap.xml e da
+  sitemapindex.xml. Finché la regola era scritta due volte, meta robots e
+  sitemap hanno divergato: le home delle lingue UE portavano noindex ma
+  finivano in sitemap, e Search Console le segnalava come escluse.
+
+  Indicizzabile = pagina in italiano o in inglese, senza `noindex: true`.
+  Le altre lingue UE hanno solo la home tradotta: restano raggiungibili dal
+  selettore di lingua, ma fuori dall'indice.
+*/ -}}
+{{- return (and (not .Params.noindex) (in (slice "it" "en") .Language.Lang)) -}}

@@ -1,0 +1,24 @@
+{{- /*
+  Restituisce l'URL di un percorso interno tenendo conto di quali lingue hanno
+  davvero i contenuti.
+
+  Italiano e inglese hanno il sito completo: lì si usa il prefisso di lingua.
+  Le altre lingue UE hanno SOLO la home tradotta, quindi un relLangURL
+  produrrebbe link come /de/psn/ o /bg/roadmap/, che non esistono e rispondono
+  404; per quelle si rimanda alla lingua predefinita, che è raggiungibile.
+
+  Unica fonte di verità: usata da footer.html e da index.html, perché le due
+  non possano divergere.
+
+  Nota: un solo `return` in coda. Hugo non accetta `return` dentro il ramo
+  `else` di un condizionale.
+
+  Uso:  {{ partial "url-lingua.html" "psn/" }}
+*/ -}}
+{{- $u := "" -}}
+{{- if in (slice "it" "en") site.Language.Lang -}}
+  {{- $u = . | relLangURL -}}
+{{- else -}}
+  {{- $u = . | relURL -}}
+{{- end -}}
+{{- return $u -}}

@@ -1,4 +1,8 @@
-# Quali fonti entrano nel perimetro
+---
+title: "Perimetro delle fonti"
+date: 2026-10-26
+---
+
 
 **Ultimo aggiornamento:** 2026-10-26
 

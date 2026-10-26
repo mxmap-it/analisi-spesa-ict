@@ -1,0 +1,33 @@
+{{- /* Translate data-driven Italian labels (clusters, providers, sovereignty) to EN.
+       Usage: {{ partial "tlabel.html" (dict "s" .cluster "en" $isEN) }}
+       Unknown/proper-name labels (Google Workspace, AWS, ...) pass through unchanged. */ -}}
+{{- $s := .s -}}
+{{- if .en -}}
+{{- $m := dict
+  "Istruzione" "Education"
+  "Enti territoriali" "Local & regional authorities"
+  "Ordini professionali e Camere" "Professional bodies & Chambers"
+  "Consorzi e Unioni di enti locali" "Consortia & unions of local bodies"
+  "Gestori di pubblici servizi" "Public service operators"
+  "Stazioni Appaltanti" "Contracting authorities"
+  "Welfare e politiche sociali" "Welfare & social policy"
+  "Ambiente e Territorio" "Environment & Territory"
+  "Sanità" "Healthcare"
+  "Previdenza e Assistenza Sociale" "Social security & assistance"
+  "Agenzie regionali" "Regional agencies"
+  "Ricerca" "Research"
+  "PA Centrale" "Central government"
+  "Cultura" "Culture"
+  "Trasporti e Porti" "Transport & Ports"
+  "Provider Italiano" "Italian provider"
+  "Infrastruttura autonoma" "Self-hosted infrastructure"
+  "Cloud Italiano" "Italian cloud"
+  "Sconosciuto" "Unknown"
+  "Extra-UE (CLOUD Act)" "Non-EU (CLOUD Act)"
+  "Italiano" "Italian"
+  "UE (non italiano)" "EU (non-Italian)"
+-}}
+{{- index $m $s | default $s -}}
+{{- else -}}
+{{- $s -}}
+{{- end -}}

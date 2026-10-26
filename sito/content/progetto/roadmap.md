@@ -1,4 +1,8 @@
-# Roadmap
+---
+title: "Roadmap"
+date: 2026-10-26
+---
+
 
 **Stato:** proposta · **Ultimo aggiornamento:** 2026-10-26
 
@@ -256,14 +260,14 @@ sia un `rsync` e non un progetto:
 
 Entrano **solo le fonti che riguardano, direttamente o indirettamente, la spesa pubblica**.
 Criterio, tre livelli di relazione e classificazione delle 36 fonti di DataCivicLab —
-ventidue delle quali restano fuori — in [PERIMETRO-FONTI.md](PERIMETRO-FONTI.md).
+ventidue delle quali restano fuori — in [PERIMETRO-FONTI.md](../perimetro-fonti/).
 
 Vale anche quando contribuiremo a monte: a `source-observatory` portiamo il livello per risorsa
 **sulle sole fonti di spesa**, lasciando a loro le altre.
 
 ## 9. Fuori perimetro, per non riaprire la discussione
 
-Deciso e motivato nel [README](../README.md): l'OCDS come fonte primaria, l'API REST di ANAC, SIOPE
+Deciso e motivato nel [README](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/README.md): l'OCDS come fonte primaria, l'API REST di ANAC, SIOPE
 via BDAP, i ventitré portali regionali, i documenti di gara in massa, il CUP come chiave, gli XML
 della Legge 190, un aggregatore generalista della spesa pubblica, la normalizzazione di tutto in un
 unico schema, l'attribuzione esaustiva della capogruppo, i classificatori autoalimentati e

@@ -38,7 +38,7 @@ fine a sé stessa:
 4. **Analizzare e interpretare.** La spesa ICT per giurisdizione, con il pavimento misurato e la
    dichiarazione esplicita di ciò che il dato pubblico non consente di sapere.
 
-Il dettaglio di fasi, tetti di sforzo e criteri di chiusura è nella [roadmap](docs/ROADMAP.md).
+Il dettaglio di fasi, tetti di sforzo e criteri di chiusura è nella [roadmap](https://analisi-spesa-ict.mxmap.it/progetto/roadmap/).
 
 ---
 
@@ -68,7 +68,7 @@ Tutto il lavoro gira sul **server di mxmap.it** (`mxmap.it@51.158.36.151`, 8 cor
   `cup` 83 MB, i mensili OCDS superano i 3 GB. L'elaborazione va fatta in streaming e su disco.
 - **I job sono lunghi e vanno ripresi**: il portatile si disconnette, il server no.
 
-Ogni job è idempotente e ripartibile, lo stato sta in [`docs/STATE.md`](docs/STATE.md).
+Ogni job è idempotente e ripartibile, lo stato sta in [`STATE.md`](STATE.md).
 
 ## 2. I dataset disponibili
 
@@ -194,7 +194,7 @@ Sul perimetro ICT, misurato sul delta di ottobre 2026, **i CIG con CUP valido so
 (3.360 su 24.580). Una misura precedente su un campione diverso, i mesi 2024-2026 di un altro
 progetto, dava il 20,2% contando la sola presenza nel file: in entrambi i casi una minoranza.
 
-La bassa copertura non è un difetto dei dati — il `ND` invece sì, ed è nel [rapporto ANAC](report/anac/RAPPORTO-ANAC-2026-10.md): il CUP identifica un **progetto di investimento pubblico**, e licenze,
+La bassa copertura non è un difetto dei dati — il `ND` invece sì, ed è nel [rapporto ANAC](https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10/): il CUP identifica un **progetto di investimento pubblico**, e licenze,
 canoni, manutenzione e connettività non lo sono. Il CUP serve a dire "questo contratto nasce dal
 PNRR" per una minoranza dei casi, e a saltare verso OpenCoesione, ReGiS e OpenCUP.
 
@@ -339,7 +339,7 @@ Quattro regole che valgono per ogni stadio:
   acquisizione, nuovo file, nuovo hash, nuova riga di manifest.
 - **Idempotenza.** Rilanciare un job non duplica e non rompe: ciò che è già acquisito si salta.
 - **Ripartibilità.** Ogni job scrive il proprio avanzamento su file e riprende da dove si era
-  interrotto; lo stato complessivo sta in [`docs/STATE.md`](docs/STATE.md).
+  interrotto; lo stato complessivo sta in [`STATE.md`](STATE.md).
 - **Provenienza obbligatoria.** Ogni numero pubblicato risale alla risorsa, all'hash e alla data di
   acquisizione da cui viene.
 
@@ -367,5 +367,5 @@ posizione più solida di una percentuale finta-precisa.
 
 ## 9. Stato
 
-Vedi [`docs/STATE.md`](docs/STATE.md). Al 2026-10-26: repository appena creato, analisi delle fonti
+Vedi [`STATE.md`](STATE.md). Al 2026-10-26: repository appena creato, analisi delle fonti
 e degli strumenti conclusa, pipeline da costruire a partire dallo stadio di archiviazione.

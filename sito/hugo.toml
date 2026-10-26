@@ -1,0 +1,54 @@
+baseURL = 'https://analisi-spesa-ict.mxmap.it/'
+languageCode = 'it'
+defaultContentLanguage = 'it'
+title = 'Analisi della spesa ICT della PA'
+disableKinds = ['taxonomy', 'term']
+# Il sito è servito da GitHub Pages dalla cartella docs/ del branch main.
+publishDir = '../docs'
+
+[params]
+  description = 'Quanta parte della spesa pubblica italiana in cloud e infrastrutture digitali va a fornitori italiani, europei o extra-europei. E prima ancora: in che stato sono i dati pubblici che servono a misurarlo.'
+  author = 'Osservatorio Nazionale Sovranità Digitale'
+  mxmapURL = 'https://mxmap.it/'
+  repo = 'https://github.com/mxmap-it/analisi-spesa-ict'
+  keywords = ['spesa ICT PA', 'spesa cloud pubblica amministrazione', 'sovranità digitale', 'dati aperti ANAC', 'qualità dei dati aperti', 'CLOUD Act', 'Osservatorio Nazionale Sovranità Digitale', 'mxmap']
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[[menus.main]]
+  name = 'Obiettivi'
+  url = '/'
+  weight = 1
+[[menus.main]]
+  name = 'Mirror'
+  url = '/mirror/'
+  weight = 2
+[[menus.main]]
+  name = 'Disponibilità e integrità'
+  url = '/disponibilita/'
+  weight = 3
+[[menus.main]]
+  name = 'Enti'
+  url = '/enti/'
+  weight = 4
+[[menus.main]]
+  name = 'Rendiconti'
+  url = '/rendiconti/'
+  weight = 5
+[[menus.main]]
+  name = 'Strumenti'
+  url = '/strumenti/'
+  weight = 6
+[[menus.main]]
+  name = 'Spesa ICT'
+  url = '/spesa-ict/'
+  weight = 7
+[[menus.main]]
+  name = 'Roadmap'
+  url = '/progetto/roadmap/'
+  weight = 8

@@ -5,6 +5,8 @@ avanzamento, prima di chiudere la sessione.
 
 **Ultimo aggiornamento:** 2026-10-26
 
+**Sito:** https://analisi-spesa-ict.mxmap.it/ — sorgenti Hugo in `sito/`, build in `docs/` (`hugo --source sito --minify --cleanDestinationDir`).
+
 ## Dove si lavora
 
 - **Server:** `mxmap.it@51.158.36.151` (sd-172212, 8 core, 31 GB RAM, ~246 GB liberi).
@@ -17,7 +19,7 @@ avanzamento, prima di chiudere la sessione.
 - [x] Analisi delle fonti e degli strumenti, con le strade scartate e il perché → `README.md`.
 - [x] Verifica dello stato delle fonti dal server (2026-10-26).
 - [x] Repository creato.
-- [x] Primo scarico ANAC nel mirror (5 risorse, sha256 nel manifest) e prima analisi di integrità → `report/anac/RAPPORTO-ANAC-2026-10.md`.
+- [x] Primo scarico ANAC nel mirror (5 risorse, sha256 nel manifest) e prima analisi di integrità → https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10/.
 - [x] Tetto di sforzo ridefinito in token al giorno → `config/budget.yaml` (valore da decidere).
 
 ## Da fare, in ordine

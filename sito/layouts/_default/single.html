@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="container-xxl section-spacing-lg">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <article>
+        <div class="category-top mb-3">
+          <span class="category">{{ .Section | humanize }}</span>
+          <span class="data">{{ partial "date-it.html" .Date }}</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+
+        {{ with .Params.pdf }}
+        <div class="my-4">
+          <a href="{{ . | relURL }}" class="btn btn-primary" download>
+            <svg class="icon icon-white icon-sm me-1"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-download"></use></svg>
+            {{ i18n "downloadPdf" }}
+          </a>
+        </div>
+        {{ end }}
+
+        <div class="article-content">
+          {{ .Content }}
+        </div>
+
+        {{ with .Params.pdf }}
+        <div class="my-4 py-4 border-top">
+          <a href="{{ . | relURL }}" class="btn btn-primary" download>
+            <svg class="icon icon-white icon-sm me-1"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-download"></use></svg>
+            {{ i18n "downloadPdf" }}
+          </a>
+        </div>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}
