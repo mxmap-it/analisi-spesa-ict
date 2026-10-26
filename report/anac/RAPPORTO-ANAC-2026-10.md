@@ -23,7 +23,7 @@ funziona.
 
 **I problemi, in ordine di impatto per chi riusa i dati:**
 
-1. **Il canale OCDS è fermo a marzo 2026.** Da aprile a settembre i file mensili rispondono 404, senza
+1. **Il canale OCDS è inservibile.** Non solo è fermo a marzo 2026: **mesi diversi servono lo stesso file**, con il solo indirizzo riscritto. Dei 23 mesi che rispondono 200 i contenuti distinti sono al massimo 11, e sei mesi consecutivi condividono un unico file da 3,18 GB. Chi ne ricava una serie storica conta più volte gli stessi dati. I file mancanti rispondono 404 senza
    alcun avviso sul portale.
 2. **I file storici spariscono, e la regola non è scritta da nessuna parte.** I delta di gennaio,
    febbraio e marzo 2026 non sono più scaricabili. Il file annuale del 2026 non esiste: chi non ha
@@ -48,7 +48,7 @@ funziona.
 8. **Nessun campo per gli operatori esteri.** Gli identificativi fiscali stranieri finiscono nel campo
    `codice_fiscale` in formati eterogenei, senza indicazione del paese.
 
-In fondo al rapporto, [dodici richieste](#richieste) concrete.
+In fondo al rapporto, [dodici richieste](#richieste) concrete, e una tabella che documenta i mesi duplicati.
 
 ---
 
@@ -86,11 +86,48 @@ In fondo al rapporto, [dodici richieste](#richieste) concrete.
 | D8 | **API CKAN funzionante ma non documentata** | `…/opendata/api/3/action/package_show?id=cig` → 200 | È il modo migliore di accedere ai dati, e nessuno sa che c'è |
 | D9 | **`ETag` assente su tutte le risorse** | Verificato su 95 risorse ANAC sondate: nessuna lo espone. Consip, SIOPE e il Dipartimento per la Trasformazione Digitale lo espongono | Per sapere se un file è cambiato bisogna riscaricarlo per intero |
 | D10 | **Buchi nella pubblicazione dei delta, dentro la finestra disponibile** | `smartcig` 2026-06 e 2026-07 → 404 sia in CSV sia in JSON, mentre 04, 05, 08, 09 e 10 sono presenti. Il catalogo CKAN non li elenca affatto | Due mesi di affidamenti sotto soglia non sono mai stati pubblicati, o sono stati rimossi. Non sono recuperabili dal file annuale, che per il 2026 non esiste |
-| D11 | **Il 2026 dell'OCDS contiene solo marzo** | `bulk/2026/01.json` e `02.json` → 404, `03.json` → 200, da `04` a `10` → 404 | Non è una pubblicazione interrotta a marzo: è un unico mese pubblicato in tutto l'anno |
+| D11 | **Il 2026 dell'OCDS contiene solo marzo, e marzo contiene solo marzo** | `bulk/2026/01.json` e `02.json` → 404, `03.json` → 200, da `04` a `10` → 404. Il file di marzo, letto integralmente, contiene 127.401 release datate 2026-03 e 1.139 datate 2026-04: **nessuna di gennaio o febbraio** | Un unico mese pubblicato in tutto l'anno, e i due mesi mancanti non sono recuperabili da quello presente |
+| **D14** | **Mesi diversi dell'OCDS servono lo stesso file, con il solo `uri` riscritto** | Vedi la tabella al §4: i gruppi di mesi hanno `Content-Length` identico al byte e blocchi di 64 KB identici a offset di 1, 2 e 3 GB. Fra `2025/01.json` e `2025/04.json` l'unica differenza nei primi 1.200 byte è il campo `uri`, che riecheggia il percorso richiesto | **È il problema più grave del canale OCDS.** Dei 23 mesi che rispondono 200, i contenuti distinti sono al massimo 11. Chi costruisce una serie storica mese per mese conta più volte gli stessi dati senza accorgersene |
+| D15 | **Release senza data utilizzabile** | Nel file di marzo 2026, 19.829 release su 148.369 (13,4%) non hanno un campo `date` interpretabile | Non sono collocabili nel tempo |
+| D16 | **Date di aggiudicazione impossibili** | Nello stesso file, 105 aggiudicazioni su 116.871 hanno data successiva a ottobre 2026, fra cui **`2205-12`** e **`2926-03`** | Stesso difetto già visto nei tabellari: nessun controllo di plausibilità sulle date |
 | D12 | **La distribuzione JSON di `smartcig` si è interrotta** | `20260801`, `20260901` e `20261001-smartcig_json.zip` → 404, mentre i corrispondenti `_csv.zip` → 200 | Chi consuma il formato JSON si ferma a maggio 2026, senza alcun avviso |
 | D13 | **La dimensione dichiarata nel catalogo non è quella del file servito** | Per `cig_csv_2025_01.zip` CKAN dichiara 91.942.157 byte, il server ne serve 20.798.988. Per `20261001-cig_csv.zip` dichiara 482.505.250 byte contro 107.879.691 serviti, e 482.505.250 è **esattamente** la dimensione del CSV contenuto in quello zip | Il campo `size` descrive il contenuto scompattato invece della distribuzione. Chi pianifica lo spazio o verifica un download sbaglia di circa 4,5 volte |
 
 ---
+
+### 4. I mesi duplicati del canale OCDS
+
+Tutti i mesi che rispondono 200, con la dimensione servita e il gruppo di appartenenza. I mesi
+nello stesso gruppo **servono lo stesso contenuto**: dimensione identica al byte e blocchi
+identici a offset di 1, 2 e 3 GB, con il solo `uri` riscritto.
+
+| Gruppo | Mesi che servono lo stesso file | Byte |
+|---|---|---|
+| A | `2024/01`, `2024/02` | 669 MB |
+| B | `2024/03` | 636 MB |
+| C | `2024/04` | 1.511 MB |
+| D | `2024/05`, `2024/06`, `2024/07` | 1.516 MB |
+| E | `2024/08` | 1.132 MB |
+| F | `2024/09` | 1.485 MB |
+| G | `2024/10` | 1.881 MB |
+| **H** | **`2024/11`, `2024/12`, `2025/01`, `2025/02`, `2025/03`, `2025/04`** | **3.183.014.151** |
+| **I** | **`2025/05`, `2025/06`, `2025/07`, `2025/08`, `2025/09`** | **3.156.244.395** |
+| L | `2025/10`, `2025/11` | 5.003 MB |
+| M | `2026/03` | 748.374.251 |
+
+Mancano del tutto: `2025/12` e tutti i mesi del 2026 tranne marzo.
+
+Verificati direttamente: A, D, H (su tre coppie), I e L. I gruppi B, C, E, F, G e M hanno
+dimensione unica e sono quindi file distinti.
+
+Tutti i file dei gruppi da A a M portano `publishedDate` 8 o 9 aprile 2026: sono stati rigenerati
+in un'unica sessione, a ritroso nel tempo, nell'arco di circa un giorno.
+
+Questo spiega un episodio pubblico: la piattaforma commerciale AppaltIntel ha **ritirato
+un'analisi** in cui attribuiva al mercato un calo dei bandi del 2023, scoprendo poi che il calo
+veniva dalla fonte. La loro documentazione tecnica parla di mesi per cui «all'indirizzo del mese
+mancante rispondeva il file di un altro mese». Quanto sopra è la verifica di quel fenomeno, a
+livello di byte.
 
 ## 3. Integrità
 
@@ -180,7 +217,7 @@ ricostruibile solo per euristica.
 
 In ordine di impatto per chi riusa i dati.
 
-1. **Ripristinare la pubblicazione OCDS**, o dichiararne pubblicamente la sospensione con una data di
+1. **Correggere il canale OCDS**: far sì che ogni mese contenga il proprio mese, ripubblicare i mesi mancanti, e nel frattempo dichiarare sul portale che la distribuzione non è affidabile. In alternativa dichiararla sospesa con una data di
    ripresa.
 2. **Non rimuovere i delta storici**, oppure pubblicare un archivio permanente, e **dichiarare la
    politica di conservazione**.
