@@ -352,6 +352,25 @@ Conseguenze per l'obiettivo finale:
 - il riconoscimento dei prodotti nelle descrizioni diventa il lavoro centrale, più del registro dei
   fornitori.
 
+## Un sottoinsieme prioritario: i fondi PNRR per il cloud
+
+Fra tutta la spesa ICT, la parte più leggibile è quella del PNRR destinata esplicitamente al cloud,
+perché è tracciata per CUP. La domanda: **quanta parte di quei fondi è andata a prodotti delle big
+tech statunitensi?**
+
+La catena dei dati, verificata il 26 ottobre 2026:
+
+| Passo | Fonte | Esito |
+|---|---|---|
+| Progetti finanziati | PA Digitale 2026, Misura 1.2 "Abilitazione e facilitazione migrazione al cloud" | 22.162 candidature, **1,34 miliardi**: Comuni 996 milioni, ASL 196, altri enti 91, scuole 61 |
+| Dal progetto ai contratti | ANAC, dataset `cup`, solo CUP validi | **11.566 CUP su 22.162 (52,2%)** portano ad almeno un contratto, per 17.973 CIG |
+| Dai contratti al prodotto | Descrizione dell'oggetto, lente prodotto | da fare ([#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40)) |
+| Dai contratti al rivenditore | Dataset `aggiudicatari`, lente fornitore | da fare ([#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41)) |
+
+Il ticket è [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43). Controvalidazioni
+previste: il campo `FLAG_PNRR_PNC` dei contratti ANAC e il ponte CUP-CIG di openpnrr. Da capire:
+perché quasi metà dei CUP non porta ad alcun contratto.
+
 ## Cosa si potrà dire, e cosa no
 
 Il dato pubblico **non consente** di affermare "il X% della tecnologia della PA italiana è estera".

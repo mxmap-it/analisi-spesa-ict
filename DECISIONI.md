@@ -30,6 +30,7 @@ vecchia.
 | 2026-10-26 | SIOPE: via principale il bulk di `siope.it`; **anche la via BDAP va specchiata e confrontata** | Claude, su domanda di Fabio | Il difetto di BDAP è riferito da AgID, non verificato da noi |
 
 | 2026-10-26 | **La giurisdizione si attribuisce al prodotto, non al fornitore.** Due lenti separate: prodotto (dalla descrizione della gara) e fornitore (chi incassa). La rete dei rivenditori è un tema a sé | Fabio, su indicazione di Pietro Biase | Misurato su marzo 2026: le gare che nominano Microsoft 365, Azure, AWS e Google sono vinte dal produttore fra lo 0% e il 5% delle volte |
+| 2026-10-26 | **Sottoinsieme prioritario: i fondi PNRR per il cloud** (Misura 1.2 e collegate): quanta parte è andata a prodotti delle big tech statunitensi | Fabio | Denaro pubblico destinato esplicitamente al cloud, e tracciabile per CUP |
 
 ## Lavoro e strumenti
 
