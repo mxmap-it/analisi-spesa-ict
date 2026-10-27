@@ -9,12 +9,12 @@ cp report/anac/problemi.yaml sito/data/anac_problemi.yaml   # unica fonte per we
 hugo --source sito --minify --cleanDestinationDir
 if [ "${1:-}" = "pdf" ]; then
   CHROME=${CHROME:-$(command -v chromium || command -v google-chrome || command -v chrome || echo "/c/Program Files/Google/Chrome/Application/chrome.exe")}
-  PAGINA="$(pwd)/docs/rendiconti/anac-2026-10-problemi/index.html"
-  command -v cygpath >/dev/null && PAGINA=$(cygpath -m "$PAGINA")
+  # dalla pagina pubblicata: via file:// i fogli di stile con percorsi assoluti non si caricano
+  URL=${URL:-https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/}
   OUT="$(pwd)/sito/static/pdf/anac-problemi-e-rimedi-2026-10.pdf"
   PROFILO=$(mktemp -d)
   command -v cygpath >/dev/null && OUT=$(cygpath -m "$OUT") && PROFILO=$(cygpath -m "$PROFILO")
-  "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir="$PROFILO" --print-to-pdf="$OUT" "file:///${PAGINA#/}" 2>/dev/null
+  "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir="$PROFILO" --print-to-pdf="$OUT" "$URL" 2>/dev/null
   hugo --source sito --minify --cleanDestinationDir   # ricostruisce per pubblicare anche il PDF
   echo "PDF: $OUT"
 fi

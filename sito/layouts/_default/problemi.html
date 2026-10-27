@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- /* Documento per ANAC generato dal registro dei problemi (report/anac/problemi.yaml, copiato in data/ da tools/costruisci_sito.sh). Una sola fonte per web, PDF e presentazione. */ -}}
 {{ $repo := site.Params.repo }}
-{{ $tutti := site.Data.anac_problemi }}
+{{ $tutti := hugo.Data.anac_problemi }}
 {{ $ordine := dict "alta" 1 "media" 2 "bassa" 3 "da_valutare" 4 }}
 {{ $etichetta := dict "alta" "Alta" "media" "Media" "bassa" "Bassa" "da_valutare" "Da valutare" }}
 {{ $pronti := slice }}{{ $verifica := slice }}
