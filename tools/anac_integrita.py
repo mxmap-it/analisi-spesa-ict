@@ -152,7 +152,7 @@ def leggi_completo(con, nome: str, csvs: list[Path]) -> None:
         CREATE OR REPLACE TABLE {nome} AS
         SELECT * EXCLUDE (filename) FROM read_csv([{elenco}], delim=';', quote='"', header=true,
                                all_varchar=true, encoding='utf-8',
-                               union_by_name=true, filename=true,
+                               filename=true,
                                ignore_errors=true, store_rejects=true,
                                rejects_scan='rifiuti_scan', rejects_table='rifiuti_righe')
         QUALIFY row_number() OVER (PARTITION BY cig ORDER BY
