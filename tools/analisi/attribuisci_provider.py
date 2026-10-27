@@ -23,9 +23,9 @@ RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)
 LOTTO_N = {str(l.get("lotto")): l for l in LOTTI.values() if l.get("lotto")}
 RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b", re.I)
 # "servizi applicativi in ottica cloud" (AQ Consip) è sviluppo applicativo, non servizio cloud
-RX_NON_CLOUD = re.compile(r"ins+otticas+cloud|clouds+natives+development", re.I)
+RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development", re.I)
 # AQ non ancora richiamati da nessun attuativo: massimale presunto
-RX_AQ = re.compile(r"accordos+quadro|convenzione", re.I)
+RX_AQ = re.compile(r"\baccordo\s+quadro\b|\bconvenzione\b", re.I)
 
 def marchio(testo):
     for m in MARCHI:
