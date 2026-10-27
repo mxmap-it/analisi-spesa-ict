@@ -52,6 +52,7 @@ elenca i 349 file usati, con URL, dimensione e sha256.
 | [`tools/verifiche/ocds_mesi_duplicati.py`](tools/verifiche/ocds_mesi_duplicati.py) | Mesi OCDS che servono lo stesso file (P01) |
 | [`tools/verifiche/verifica_38_42.py`](tools/verifiche/verifica_38_42.py) | OCDS rispetto ai dati tabellari: copertura, fornitore, date (P03-P05) |
 | [`tools/verifiche/cig_accordo_quadro.py`](tools/verifiche/cig_accordo_quadro.py) | Collegamento fra contratti attuativi e accordi quadro (P15) |
+| [`tools/verifiche/seconde_vie.py`](tools/verifiche/seconde_vie.py) | Conferme indipendenti, con codice diverso e su un altro mese (P03-P05, P11, P14, P16) |
 | [`tools/anac_integrita.py`](tools/anac_integrita.py) `--completo` | Controlli di integrità su CIG, aggiudicazioni, aggiudicatari, CUP, stazioni appaltanti (§3, P14, P16, P17) |
 
 L'elenco completo dei problemi, con prova, controvalidazione, azione correttiva e metrica, è in

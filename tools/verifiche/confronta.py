@@ -13,6 +13,7 @@ PUBBLICATI = {
     "verifica_38_42.json": "report/anac/verifica-38-42-2026-10-27.json",
     "verifica_cig_accordo_quadro.json": "report/anac/verifica-cig-accordo-quadro-2026-10-27.json",
     "integrita-completo.json": "report/anac/integrita-completo-2026-10-27.json",
+    "seconde_vie.json": "report/anac/seconde-vie-2026-10-27.json",
 }
 IGNORA = {"generato", "esempi", "nota"}  # data di esecuzione ed esempi illustrativi non sono numeri del rendiconto
 
