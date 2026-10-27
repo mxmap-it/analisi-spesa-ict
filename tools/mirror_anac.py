@@ -52,6 +52,8 @@ def main() -> int:
     ap.add_argument("--elenco", type=Path, default=BASE / "config" / "anac-risorse.jsonl")
     ap.add_argument("--formati", nargs="*")
     ap.add_argument("--max-gb", type=float)
+    ap.add_argument("--dataset", nargs="*",
+                    help="solo i dataset il cui nome corrisponde a uno di questi modelli (es. 'ocds-*' 'cig-20*' cig)")
     a = ap.parse_args()
 
     righe = [json.loads(l) for l in a.elenco.read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -59,6 +61,9 @@ def main() -> int:
     if a.formati:
         f = {x.upper() for x in a.formati}
         da_fare = [r for r in da_fare if r.get("formato") in f]
+    if a.dataset:
+        from fnmatch import fnmatch
+        da_fare = [r for r in da_fare if any(fnmatch(r.get("dataset", ""), m) for m in a.dataset)]
     da_fare.sort(key=priorita)
 
     tot = sum(r.get("dim_reale") or 0 for r in da_fare)
