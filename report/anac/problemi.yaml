@@ -233,6 +233,39 @@
   pronto_per_anac: false
   manca: "validazione su campione, norma, controvalidazione"
 
+
+- id: P16
+  titolo: "Aggiornamenti mensili 2026 con righe non conformi al formato CSV (escape \\\" invece di \"\")"
+  rif: [CD-CSV]
+  gravita: media
+  prova:
+    script: "tools/anac_integrita.py --completo"
+    esito: report/anac/integrita-completo-2026-10-27.json
+    sintesi: "158 righe con \\\" nei delta 2026 (nessuna nei file annuali 2007-2025); 55 illeggibili per un lettore CSV conforme (duckdb in modalità rigorosa)"
+    verificato_il: 2026-10-27
+  controvalidazione: "Da fare: lettura con un secondo parser rigoroso (Python csv strict, o csvlint)"
+  azione_correttiva: "Esportare i CSV secondo RFC 4180 (virgolette raddoppiate), come nei file annuali"
+  metrica: "Righe rifiutate da un lettore CSV rigoroso in ogni nuovo file = 0"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via; metrica nella sonda"
+
+- id: P17
+  titolo: "Codici fiscali segnaposto delle stazioni appaltanti (es. CFAVCP-0001C57)"
+  rif: [CD-04]
+  gravita: bassa
+  prova:
+    script: "tools/anac_integrita.py --completo"
+    esito: report/anac/integrita-completo-2026-10-27.json
+    sintesi: "902 stazioni appaltanti su 39.486 (2,28%) con codice fiscale non valido, fra cui segnaposto CFAVCP-…"
+    verificato_il: 2026-10-27
+  controvalidazione: "Da fare: confronto con il dataset stazioni-appaltanti e con IndicePA"
+  azione_correttiva: "Documentare la convenzione dei segnaposto o sostituirli con il codice fiscale reale"
+  metrica: "Numero di stazioni appaltanti con codice fiscale non valido"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via; documentazione della convenzione"
+
 # Da aggiungere dopo la riesecuzione sul mirror completo (#31): controlli di integrità §3 (SA, AG, AT, CU, CD),
 # uno per voce con lo stesso schema.
 
