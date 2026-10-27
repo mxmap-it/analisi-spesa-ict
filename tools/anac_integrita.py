@@ -151,8 +151,10 @@ def leggi_completo(con, nome: str, csvs: list[Path]) -> None:
     con.execute(f"""
         CREATE OR REPLACE TABLE {nome} AS
         SELECT * EXCLUDE (filename) FROM read_csv([{elenco}], delim=';', quote='"', header=true,
-                               all_varchar=true, ignore_errors=false, encoding='utf-8',
-                               union_by_name=true, filename=true)
+                               all_varchar=true, encoding='utf-8',
+                               union_by_name=true, filename=true,
+                               ignore_errors=true, store_rejects=true,
+                               rejects_scan='rifiuti_scan', rejects_table='rifiuti_righe')
         QUALIFY row_number() OVER (PARTITION BY cig ORDER BY
             CASE WHEN regexp_matches(filename, '/[0-9]{{8}}-') THEN '2' || filename ELSE '1' || filename END DESC) = 1
     """)
@@ -223,6 +225,13 @@ def main() -> int:
             csvs = estrai_tutti(CIG_COMPLETO, "cig_completo")
             leggi_completo(con, nome, csvs)
             presenti[nome] = q1(con, f"SELECT count(*) FROM {nome}")
+            rif = q1(con, "SELECT count(*) FROM rifiuti_righe")
+            controllo(ris, nome, "CD-CSV", "righe non conformi al CSV standard (RFC 4180), scartate dal lettore rigoroso",
+                      rif, presenti[nome] + rif,
+                      esempi(con, """SELECT s.file_path, e.line, e.error_type, left(e.csv_line, 160)
+                                    FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id) ORDER BY 1, 2""", 10),
+                      nota="per file: " + json.dumps(dict(con.execute("""SELECT regexp_extract(s.file_path, '[^/]+$'), count(*)
+                           FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id) GROUP BY 1 ORDER BY 1""").fetchall())))
             continue
         csv = estrai(nome)
         if csv:
