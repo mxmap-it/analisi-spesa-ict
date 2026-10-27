@@ -112,11 +112,26 @@ def cf_valido(s: str | None) -> tuple[bool, str]:
 
 
 # --------------------------------------------------------------------------
+# --completo: il CIG su tutti i file annuali 2007-2025 più gli aggiornamenti mensili 2026
+CIG_COMPLETO = ["cig-20*/filesystem/cig_csv_*.zip", "cig/filesystem/*-cig_csv.zip"]
+
+
+def estrai_tutti(pattern: list[str], nome: str) -> list[Path]:
+    out = []
+    for pat in pattern:
+        for z in sorted(MIRROR.glob(pat)):
+            out.append(_estrai_zip(z, LAVORO / nome))
+    return out
+
+
 def estrai(nome: str) -> Path | None:
     z = MIRROR / DATASET[nome]
     if not z.exists():
         return None
-    dest = LAVORO / nome
+    return _estrai_zip(z, LAVORO / nome)
+
+
+def _estrai_zip(z: Path, dest: Path) -> Path:
     dest.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(z) as zf:
         membro = next(i for i in zf.infolist() if i.filename.lower().endswith(".csv"))
@@ -127,6 +142,20 @@ def estrai(nome: str) -> Path | None:
             if estratto != out:
                 os.replace(estratto, out)
     return out
+
+
+def leggi_completo(con, nome: str, csvs: list[Path]) -> None:
+    """Unione di più file con le stesse colonne; per ogni CIG resta la versione più recente
+    (gli aggiornamenti mensili, il cui nome inizia con la data, prevalgono sui file annuali)."""
+    elenco = ", ".join(f"'{c.as_posix()}'" for c in csvs)
+    con.execute(f"""
+        CREATE OR REPLACE TABLE {nome} AS
+        SELECT * EXCLUDE (filename) FROM read_csv([{elenco}], delim=';', quote='"', header=true,
+                               all_varchar=true, ignore_errors=false, encoding='utf-8',
+                               union_by_name=true, filename=true)
+        QUALIFY row_number() OVER (PARTITION BY cig ORDER BY
+            CASE WHEN regexp_matches(filename, '/[0-9]{{8}}-') THEN '2' || filename ELSE '1' || filename END DESC) = 1
+    """)
 
 
 def leggi(con, nome: str, csv: Path) -> None:
@@ -171,6 +200,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--oggi", default=date.today().isoformat())
     ap.add_argument("--out", type=Path, default=BASE / "report" / "anac" / "integrita.json")
+    ap.add_argument("--completo", action="store_true",
+                    help="CIG su tutti gli anni 2007-2025 più gli aggiornamenti 2026, non sul solo delta di ottobre")
     a = ap.parse_args()
     oggi = a.oggi
     con = duckdb.connect()
@@ -178,6 +209,11 @@ def main() -> int:
     presenti = {}
 
     for nome in DATASET:
+        if nome == "cig_delta" and a.completo:
+            csvs = estrai_tutti(CIG_COMPLETO, "cig_completo")
+            leggi_completo(con, nome, csvs)
+            presenti[nome] = q1(con, f"SELECT count(*) FROM {nome}")
+            continue
         csv = estrai(nome)
         if csv:
             leggi(con, nome, csv)
