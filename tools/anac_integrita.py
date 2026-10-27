@@ -204,7 +204,17 @@ def main() -> int:
                     help="CIG su tutti gli anni 2007-2025 più gli aggiornamenti 2026, non sul solo delta di ottobre")
     a = ap.parse_args()
     oggi = a.oggi
-    con = duckdb.connect()
+    # server condiviso: database su disco, memoria e thread limitati (il caricamento di tutti i CIG
+    # dal 2007 in memoria ha esaurito la RAM il 27/10/2026)
+    LAVORO.mkdir(parents=True, exist_ok=True)
+    db = LAVORO / "integrita.duckdb"
+    if db.exists():
+        db.unlink()
+    con = duckdb.connect(str(db))
+    con.execute(f"SET memory_limit='{os.environ.get('DUCKDB_MEMORIA', '6GB')}'")
+    con.execute(f"SET threads={os.environ.get('DUCKDB_THREAD', '4')}")
+    con.execute(f"SET temp_directory='{(LAVORO / 'duckdb_tmp').as_posix()}'")
+    con.execute("SET preserve_insertion_order=false")
     ris: list = []
     presenti = {}
 
