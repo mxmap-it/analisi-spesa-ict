@@ -91,12 +91,11 @@
     esito: "stato/metriche/ (I2); report/anac/prove-2026-10-26/api_ui.html, swagger.json"
     sintesi: "Endpoint version, releases, awards su api.anticorruzione.it/opendata/ocds/api/v1 → 404; swagger.json non è JSON valido"
     verificato_il: 2026-10-26
-  controvalidazione: "Da fare: verifica da una seconda rete (non il nostro server)"
+  controvalidazione: "Riprodotto il 27/10/2026 da una seconda rete (rete domestica, IP diverso dal server): version, releases e awards → 404"
   azione_correttiva: "Ripristinare l'API o rimuoverla dalla pagina; pubblicare uno swagger.json valido"
   metrica: "I2"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via"
+  pronto_per_anac: true
 
 - id: P07
   titolo: "Licenza dell'OCDS: CC BY 4.0 nel catalogo e nella pagina, CC BY-SA 4.0 nel file"
@@ -135,12 +134,11 @@
     script: tools/metriche_anac.py
     esito: "stato/metriche/ (I5)"
     verificato_il: 2026-10-26
-  controvalidazione: "Da fare: seconda via (catalogo CKAN package_show e HEAD da altra rete)"
+  controvalidazione: "Riprodotto il 27/10/2026 da una seconda rete: smartcig 20260601 e 20260701 → 404 in CSV e JSON; 20260801 → 200 in CSV, 404 in JSON"
   azione_correttiva: "Pubblicare giugno e luglio 2026; riprendere la distribuzione JSON o dichiararne la cessazione"
   metrica: "I5: continuità di ogni serie mensile dichiarata"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via"
+  pronto_per_anac: true
 
 - id: P10
   titolo: "Il catalogo elenca risorse inesistenti"
@@ -197,12 +195,11 @@
     script: tools/sonda.py
     esito: report/anac/sonda-2026-10-26.jsonl
     verificato_il: 2026-10-26
-  controvalidazione: "Da fare: verifica da seconda rete"
+  controvalidazione: "Riprodotto il 27/10/2026 da una seconda rete: nessun header ETag su delta CIG, OCDS 2026/03, cup_csv.zip"
   azione_correttiva: "Esporre ETag (e mantenere Last-Modified) per permettere download condizionali"
   metrica: "Quota di risorse con ETag (sonda)"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via; metrica nella sonda"
+  pronto_per_anac: true
 
 - id: P14
   titolo: "CUP 'ND' al posto del codice in 1.951.844 righe"
