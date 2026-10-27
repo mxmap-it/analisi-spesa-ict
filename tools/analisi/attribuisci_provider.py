@@ -18,12 +18,15 @@ for ini in yaml.safe_load(open("config/lotti_cloud.yaml", encoding="utf-8")):
         LOTTI[l["cig"]] = dict(l, iniziativa=ini["iniziativa"])
 GIUR = {m["provider"]: m["giurisdizione"] for m in MARCHI}
 # via 2: "IaaS e PaaS 2" / "2746" + "lotto N" nel testo
-RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*2|cloud\s+iaas\s+e\s+paas", re.I)
+# solo riferimenti espliciti alla seconda edizione: "Public Cloud IaaS e PaaS" (ID 2213) ha lotti diversi
+RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*(2|ed\.?\s*2|edizione\s*2)", re.I)
 RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)
 LOTTO_N = {str(l.get("lotto")): l for l in LOTTI.values() if l.get("lotto")}
 RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b", re.I)
 # "servizi applicativi in ottica cloud" (AQ Consip) è sviluppo applicativo, non servizio cloud
-RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development", re.I)
+RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development|cloud\s+enabling|servizi\s+applicativi\s+cloud", re.I)
+# servizi professionali su una piattaforma (sviluppo, manutenzione evolutiva): il prodotto è giusto ma non è spesa in abbonamento cloud
+RX_SERVIZI = re.compile(r"sviluppo|manutenzione\s+(evolutiva|correttiva)|ams|implementazion|digitalizzazione\s+e\s+implementazione|conduzione\s+sistemistica|consulenz", re.I)
 # AQ non ancora richiamati da nessun attuativo: massimale presunto
 RX_AQ = re.compile(r"\baccordo\s+quadro\b|\bconvenzione\b", re.I)
 
@@ -81,6 +84,7 @@ def main(anni):
                     via, prov, serv = "2-lotto-nel-testo", LOTTO_N[mm.group(1)]["provider"], "cloud"
                 elif (m := marchio(testo)):
                     via, prov, serv = "3-marchio", m["provider"], m["servizio"]
+                    if serv == "cloud" and RX_SERVIZI.search(testo): serv = "servizi-professionali"
                 else:
                     nomi = agg.get(r["cig"], set())
                     for m in MARCHI:
