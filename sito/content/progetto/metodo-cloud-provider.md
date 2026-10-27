@@ -55,14 +55,33 @@ documentazione del fornitore); altrimenti resta "hosting non noto".
 
 ## Come si verifica
 
-1. **Campione di riferimento:** 1.000-2.000 contratti estratti per strato (via, classe,
-   importo), classificati a mano; almeno il 20% da due persone, con accordo misurato (kappa di
-   Cohen).
+1. **Due campioni distinti.** Un **campione di sviluppo**, letto per correggere le regole, e un
+   **campione di misura**, estratto dopo le correzioni con un altro seme ed escludendo i
+   contratti già visti: la precisione si misura solo su quest'ultimo, altrimenti si misurerebbe
+   sulle stesse righe usate per tarare le regole. Entrambi stratificati per via, servizio e
+   fascia di importo, con seme fisso; sono in
+   [`report/metodo/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/metodo).
+   Il campione di misura si classifica a mano; almeno il 20% da due persone, con accordo
+   misurato (kappa di Cohen).
 2. **Precisione e richiamo per via e per classe**, pubblicati insieme ai risultati.
 3. **Totali con intervallo di confidenza**, corretti per gli errori misurati sul campione.
 4. **Riproducibilità:** ogni via è uno script in `tools/`, eseguibile da un clone pulito
    ([#47](https://github.com/mxmap-it/analisi-spesa-ict/issues/47)); le tabelle curate a mano
    (lotti, marchi, capogruppo) stanno in `config/` con la fonte di ogni riga.
+
+## Errori trovati nel campione di sviluppo, e come sono corretti
+
+Le prime 190 righe del campione di sviluppo (27 ottobre 2026) hanno mostrato sei tipi di
+errore. Ognuno è corretto nelle regole, con la revisione annotata in `config/`.
+
+| Errore | Esempio | Correzione |
+|---|---|---|
+| Sigle omonime | "PSN" come fondi del Piano sanitario o di un programma operativo, non Polo Strategico | Esclusioni sul contesto ("fondi PSN", "PO PSN", "progetto PSN 2023") |
+| Accordi quadro con lotti diversi | "Public Cloud IaaS e PaaS" lotto 1 (ID 2213) scambiato per il lotto 1 AWS della seconda edizione (ID 2746) | La via 2 accetta solo riferimenti espliciti alla seconda edizione |
+| Servizi sulla piattaforma | Sviluppo e manutenzione su Salesforce o ServiceNow da parte di integratori | Prodotto attribuito, ma servizio "servizi professionali", non abbonamento cloud |
+| Consulenza chiamata cloud | "Cloud enabling", "servizi applicativi in ottica cloud" | Esclusi dal cloud |
+| Marchi in altri contesti | Router Aruba Silver Peak, connettività MPLS Retelit, VMware dentro un acquisto di server | Esclusioni per marchio |
+| Marchi mancanti | Crediti Oracle PaaS e IaaS, SAP RISE e SuccessFactors (prodotto UE) | Aggiunti al dizionario |
 
 ## Due lenti, per essere confrontabili
 
