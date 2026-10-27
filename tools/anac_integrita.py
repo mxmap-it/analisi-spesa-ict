@@ -229,9 +229,9 @@ def main() -> int:
             controllo(ris, nome, "CD-CSV", "righe non conformi al CSV standard (RFC 4180), scartate dal lettore rigoroso",
                       rif, presenti[nome] + rif,
                       esempi(con, """SELECT s.file_path, e.line, e.error_type, left(e.csv_line, 160)
-                                    FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id) ORDER BY 1, 2""", 10),
+                                    FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id, file_id) ORDER BY 1, 2""", 10),
                       nota="per file: " + json.dumps(dict(con.execute("""SELECT regexp_extract(s.file_path, '[^/]+$'), count(*)
-                           FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id) GROUP BY 1 ORDER BY 1""").fetchall())))
+                           FROM rifiuti_righe e JOIN rifiuti_scan s USING (scan_id, file_id) GROUP BY 1 ORDER BY 1""").fetchall())))
             continue
         csv = estrai(nome)
         if csv:
