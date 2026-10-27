@@ -1,0 +1,30 @@
+# Lotti di accordi quadro e convenzioni che identificano il cloud provider (via 2 del metodo).
+# Un contratto attuativo il cui cig_accordo_quadro è uno di questi CIG eredita il provider del lotto.
+# Ogni riga: fonte che la conferma. Aggiungere qui, mai nel codice.
+# Pagina di metodo: sito/content/progetto/metodo-cloud-provider.md
+
+- iniziativa: "Consip AQ ID 2746 Cloud IaaS e PaaS 2"
+  lotti:
+    - cig: B6A19F425E
+      lotto: "1"
+      provider: AWS
+      aggiudicatario: Fastweb
+      fonte: "oggetto dei CIG derivati in BDNCP (es. 'ACQUISTO CREDITI AWS'); determina ARERA 76/DAGR/2026"
+    - cig: B6A19F5331
+      lotto: "2"
+      provider: Google Cloud
+      fonte: "oggetto dei CIG derivati in BDNCP ('ADESIONE AQ CONSIP LOTTO 2_SERVIZI IAAS E PAAS GOOGLE')"
+    - cig: B6A19F6404
+      lotto: "3"
+      provider: Microsoft Azure
+      fonte: "oggetto del CIG ('SERVIZI IAAS E PAAS MICROSOFT') e dei derivati ('CREDITI AZURE')"
+    - cig: B6A19F74D7
+      provider: Oracle Cloud
+      fonte: "oggetto del CIG ('SERVIZI IAAS E PAAS ORACLE')"
+    - cig: B6A19F85AA
+      provider: IBM Cloud
+      fonte: "oggetto del CIG ('SERVIZI IAAS E PAAS IBM')"
+    - cig: B6A19F967D
+      provider: Aruba
+      fonte: "oggetto del CIG ('SERVIZI IAAS E PAAS ARUBA')"
+  da_verificare: "numero di lotto di Oracle, IBM e Aruba; aggiudicatari dei lotti 2-6 (dataset aggiudicatari)"

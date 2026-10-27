@@ -94,3 +94,4 @@ vecchia.
 - 2026-10-26 — Fabio — Regole di progetto per persone e agenti AI in AGENTS.md (CLAUDE.md rimanda lì), per permettere ad altri di unirsi con i propri agenti.
 - 2026-10-27 — Fabio — La pipeline di verifica dev'essere ripetibile da zero da ANAC o tecnici terzi, come sotto-consegna documentata (#47); è criterio di chiusura di ANAC.
 - 2026-10-27 — Fabio — Documento e presentazione per ANAC contengono una sezione «Come riprodurre tutto» con pochi comandi copiabili (#34, #35, #47).
+- 2026-10-27 — Fabio — Il cloud provider si rileva con più processamenti differenziati (lotto di convenzione, lotto nel testo, marchio, PSN, fornitore-provider, modello linguistico, indeterminato), ciascuno documentato come metodo; ogni contratto porta la via di attribuzione (#48, #50).

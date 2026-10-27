@@ -46,6 +46,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Registro delle risorse: `config/risorse.yaml` (formato compatibile con source-observatory).
 - Licenze: va bene qualunque licenza libera; tutto viene rilasciato.
 - **Ripetibilità da zero:** ogni numero pubblicato dev'essere prodotto da una verifica in `tools/verifiche/` eseguibile da un clone pulito con un solo comando, dal vivo o dallo snapshot (sha256). Niente risultati da script lasciati in `lavoro/` (#47).
+- **Attribuzione del cloud provider:** si usano le vie documentate in `sito/content/progetto/metodo-cloud-provider.md`; ogni contratto registra la via che lo ha attribuito; le tabelle curate a mano (lotti, marchi, capogruppo) stanno in `config/` con la fonte di ogni riga. Una via nuova si documenta lì prima di usarla.
 
 ## 6. Sito
 
