@@ -72,7 +72,7 @@ def main(anni):
         conta = collections.Counter(); somma = collections.Counter()
         with open(f"lavoro/attribuzione/{anno}.csv", "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f)
-            w.writerow(["cig", "cig_accordo_quadro", "e_padre", "cod_cpv", "importo_lotto", "stazione_appaltante", "aggiudicatari", "testo", "via", "provider", "giurisdizione", "servizio"])
+            w.writerow(["cig", "cig_accordo_quadro", "e_padre", "cod_cpv", "importo_lotto", "stazione_appaltante", "aggiudicatari", "testo", "via", "provider", "giurisdizione", "servizio", "cpv_ict"])
             for r in righe:
                 testo = (r["oggetto_lotto"] or "") + " | " + (r["oggetto_gara"] or "")
                 aq = r["cig_accordo_quadro"]
@@ -97,8 +97,8 @@ def main(anni):
                 padre = r["cig"] in padri or (not aq and bool(RX_AQ.search(testo)) and r.get("tipo_scelta_contraente", "").upper().startswith("PROCEDURA"))
                 try: imp = float(r["importo_lotto"] or 0)
                 except ValueError: imp = 0.0
-                w.writerow([r["cig"], aq, int(padre), r["cod_cpv"], imp, r["denominazione_amministrazione_appaltante"], " ; ".join(sorted(agg.get(r["cig"], []))), testo[:500], via, prov, GIUR.get(prov, ""), serv])
-                k = (via, prov, serv)
+                w.writerow([r["cig"], aq, int(padre), r["cod_cpv"], imp, r["denominazione_amministrazione_appaltante"], " ; ".join(sorted(agg.get(r["cig"], []))), testo[:500], via, prov, GIUR.get(prov, ""), serv, int(ict)])
+                k = (via, prov, serv if ict else serv + "-fuori-cpv-ict")
                 conta[k] += 1
                 if not padre: somma[k] += imp
         riepilogo[anno] = [{"via": v, "provider": p, "servizio": s, "giurisdizione": GIUR.get(p, ""), "cig": n, "importo_esclusi_padri": round(somma[(v, p, s)])} for (v, p, s), n in sorted(conta.items())]
