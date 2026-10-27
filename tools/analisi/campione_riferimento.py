@@ -3,7 +3,9 @@ Strati: via x servizio x fascia di importo; seed fisso. Esce un CSV da annotare 
 Uso: python tools/analisi/campione_riferimento.py 1000 -> lavoro/attribuzione/campione-riferimento.csv"""
 import csv, random, sys, collections, glob
 N = int(sys.argv[1]) if len(sys.argv) > 1 else 1000
-random.seed(20261027)
+SEED = int(sys.argv[2]) if len(sys.argv) > 2 else 20261027
+NOME = sys.argv[3] if len(sys.argv) > 3 else "campione-riferimento"
+random.seed(SEED)
 strati = collections.defaultdict(list)
 for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
     if "campione" in f: continue
@@ -23,7 +25,7 @@ for s, rs in sorted(strati.items()):
     scelti += random.sample(rs, min(quota, len(rs)))
 random.shuffle(scelti)
 campi = ["cig", "cod_cpv", "importo_lotto", "stazione_appaltante", "aggiudicatari", "testo", "via", "provider", "servizio"]
-with open("lavoro/attribuzione/campione-riferimento.csv", "w", newline="", encoding="utf-8") as f:
+with open("lavoro/attribuzione/" + NOME + ".csv", "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     w.writerow(campi + ["e_cloud (s/n)", "provider_corretto", "giurisdizione_corretta", "annotatore", "note"])
     for r in scelti:
