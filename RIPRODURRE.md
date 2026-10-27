@@ -9,8 +9,9 @@ può rifare da zero, su una macchina qualunque, con questi comandi.
 - **Disco:** circa 77 GB per i file ANAC che le verifiche leggono (dimensione misurata sullo snapshot), più circa 20 GB di lavoro.
 - **Memoria:** 8 GB bastano: le verifiche limitano duckdb a 6 GB (`DUCKDB_MEMORIA` per cambiarlo).
 - **Tempo:** il download richiede alcune ore; le verifiche circa un'ora e mezza.
-- **Rete:** il server di ANAC risponde ai programmi solo se si presentano con lo user-agent di un
-  browser (è uno dei problemi del rendiconto, P12). Gli script lo fanno già.
+- **Rete:** il server di ANAC dà metadati sbagliati alle richieste `HEAD` dei programmi che non si
+  presentano come browser (problema P12); gli script usano lo user-agent di un browser più l'indirizzo
+  del progetto.
 
 ## In sei comandi
 

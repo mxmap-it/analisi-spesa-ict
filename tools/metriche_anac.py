@@ -216,14 +216,18 @@ def i9_user_agent() -> dict:
     """Con un user-agent non da browser il server serve il file o un errore esplicito."""
     url = f"{DL}/stazioni-appaltanti/filesystem/stazioni-appaltanti_csv.zip"
     esiti = {}
+    # HEAD e GET separati: il 27/10/2026 il difetto riguardava solo HEAD (GET serviva il file)
     for ua in ("python-requests/2.32", "curl/8.5"):
-        try:
-            r = s.head(url, headers={"User-Agent": ua}, timeout=60, allow_redirects=True)
-            esiti[ua] = {"http": r.status_code, "tipo": r.headers.get("Content-Type")}
-        except requests.RequestException:
-            esiti[ua] = {"http": None, "tipo": None}
-    falsi_ok = [ua for ua, e in esiti.items() if e["http"] == 200 and "html" in (e["tipo"] or "")]
-    return esito("I9", not falsi_ok, "nessuna pagina HTML servita come 200 al posto del file", esiti)
+        for metodo in ("HEAD", "GET"):
+            try:
+                r = s.request(metodo, url, headers={"User-Agent": ua, "Range": "bytes=0-99"} if metodo == "GET"
+                              else {"User-Agent": ua}, timeout=60, allow_redirects=True, stream=True)
+                esiti[f"{metodo} {ua}"] = {"http": r.status_code, "tipo": r.headers.get("Content-Type")}
+                r.close()
+            except requests.RequestException:
+                esiti[f"{metodo} {ua}"] = {"http": None, "tipo": None}
+    falsi_ok = [k for k, e in esiti.items() if e["http"] in (200, 206) and "html" in (e["tipo"] or "")]
+    return esito("I9", not falsi_ok, "nessuna risposta 200 text/html al posto del file o dei suoi metadati, per HEAD e GET", esiti)
 
 
 def main() -> int:

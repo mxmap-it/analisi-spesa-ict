@@ -174,18 +174,20 @@
   manca: "confronto scritto Content-Length / byte scaricati"
 
 - id: P12
-  titolo: "Risposta 200 con pagina HTML agli user-agent non-browser"
+  titolo: "HEAD dei programmi non-browser: risposta 200 text/html invece dei metadati del file"
   rif: [D6, I9]
   gravita: media
   prova:
     script: tools/metriche_anac.py
     esito: "stato/metriche/ (I9)"
-    verificato_il: 2026-10-26
-  controvalidazione: "AgID, scripts/anac_archivio_mensile.sh: «il firewall risponde 200 con una pagina di blocco»"
-  azione_correttiva: "Servire i file a qualunque user-agent, o rispondere con un codice di errore esplicito (403/429)"
-  metrica: "I9"
+    sintesi: "HEAD con user-agent python-requests o curl → 200 text/html; con user-agent da browser → 200 application/zip; GET → il file con qualunque user-agent"
+    verificato_il: 2026-10-27
+  controvalidazione: "Riprodotto il 27/10/2026 da due reti diverse (datacenter 51.158.36.151 e rete domestica). AgID, scripts/anac_archivio_mensile.sh: «il firewall risponde 200 con una pagina di blocco» (contesto della loro osservazione non specificato)"
+  azione_correttiva: "Rispondere a HEAD con gli stessi metadati del GET per qualunque user-agent, o con un codice di errore esplicito (403/429)"
+  metrica: "I9: HEAD e GET con più user-agent, stesso Content-Type"
   stato: aperto
   pronto_per_anac: true
+  storia: "Fino alla versione 1.5 del rendiconto scritto come 'pagina HTML al posto del file': per il GET non c'erano prove archiviate e il 27/10 non si riproduce; corretto nella 1.6"
 
 - id: P13
   titolo: "Nessun ETag sulle risorse"

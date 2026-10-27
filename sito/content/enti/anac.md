@@ -19,6 +19,6 @@ il 18-19 ottobre 2026 e per questo ha smesso di usare l'OCDS di ANAC.
 | Mesi mancanti di `smartcig` (giugno e luglio 2026) | aperto |
 | Dimensioni dichiarate dal catalogo 4,1 volte quelle servite | aperto |
 | `ND` al posto del CUP in 1.951.844 righe | aperto |
-| Rifiuto degli user-agent non-browser sui dati aperti, con risposta 200 e pagina HTML | aperto |
+| Metadati sbagliati (200 `text/html`) alle richieste `HEAD` dei programmi non-browser | aperto |
 
 La misura nel tempo parte con le sonde mensili: questa tabella mostrerà quando e se ciascun problema viene risolto.
