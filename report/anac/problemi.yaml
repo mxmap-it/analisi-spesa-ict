@@ -37,21 +37,20 @@
   pronto_per_anac: true
 
 - id: P03
-  titolo: "OCDS: il fornitore aggiudicatario manca nell'80% degli award, ma ANAC lo possiede"
-  conseguenza: "Con lo standard internazionale non si sa chi ha vinto quattro appalti su cinque: niente analisi di concentrazione dei fornitori né di conflitti di interesse."
+  titolo: "OCDS 2026: il fornitore aggiudicatario manca nell'80% degli award, contro il 99% degli anni precedenti"
+  conseguenza: "Con lo standard internazionale non si sa chi ha vinto quattro appalti su cinque del 2026: niente analisi di concentrazione dei fornitori né di conflitti di interesse, proprio sull'anno in corso."
   rif: ["§3.5"]
   gravita: alta
   prova:
     script: tools/verifiche/verifica_38_42.py
     esito: report/anac/verifica-38-42-2026-10-27.json
-    sintesi: "Award OCDS marzo 2026 con fornitore: 20,4% (21.927/107.318); per l'83.059 su 85.391 senza fornitore (97,3%) i tabellari aggiudicatari lo riportano"
+    sintesi: "Marzo 2026 (unico mese 2026 pubblicato): award con fornitore 20,4% (21.927/107.318), e per il 97,3% degli altri i tabellari ANAC hanno l'aggiudicatario. Negli anni precedenti il fornitore c'è: 99,9% (2019/03), 99,6% (2022/06), 98,9% (2024/10, campioni di 28-40 mila release). È una regressione della generazione 2026"
     verificato_il: 2026-10-27
-  controvalidazione: "Coerente con il rapporto «circa 1/5» riportato da AgID; seconda via indipendente da fare: conteggio su un altro mese OCDS (es. 2025/10)"
-  azione_correttiva: "Esportare nell'OCDS awards.suppliers e parties con ruolo supplier a partire dai dati già presenti in BDNCP"
+  controvalidazione: "Seconda via indipendente (tools/verifiche/seconde_vie.py, codice e mese diversi): ottobre 2024 → 99,2% di award con fornitore su 108.437, quindi il difetto è proprio del 2026. Coerente con il rapporto «circa 1/5» riportato da AgID"
+  azione_correttiva: "Ripristinare nella generazione dell'OCDS l'esportazione di awards.suppliers e parties con ruolo supplier, come negli anni precedenti, e rigenerare il 2026"
   metrica: "Quota di award OCDS con fornitore, per mese (nuova metrica I10, da aggiungere alla sonda)"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via su un altro mese; metrica I10 nella sonda"
+  pronto_per_anac: true
 
 - id: P04
   titolo: "OCDS: date delle release in formato non conforme in tutte le release"
@@ -61,14 +60,13 @@
   prova:
     script: tools/verifiche/verifica_38_42.py
     esito: report/anac/verifica-38-42-2026-10-27.json
-    sintesi: "128.540 release con date nella forma '2026-03-13 17:30:20.636T12:00:00Z', 19.829 (13,4%) vuote; nessuna in RFC 3339"
+    sintesi: "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Il difetto è comparso fra il 2021 e il 2023"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: validazione con lo strumento ufficiale OCP (lib-cove-ocds / OCDS Data Review Tool) su un estratto"
+  controvalidazione: "Seconda via indipendente (parser di date standard di Python, mese diverso): ottobre 2024, 0 date valide su 117.271 release"
   azione_correttiva: "Emettere date ISO 8601 / RFC 3339 come richiesto dallo schema OCDS 1.1; valorizzare sempre release.date"
   metrica: "Quota di release con date valida secondo lo schema = 100% (nuova metrica I11)"
   stato: aperto
-  pronto_per_anac: false
-  manca: "controvalidazione con lo strumento OCP; metrica I11 nella sonda"
+  pronto_per_anac: true
 
 - id: P05
   titolo: "OCDS: copertura parziale delle aggiudicazioni rispetto ai tabellari"
@@ -78,14 +76,13 @@
   prova:
     script: tools/verifiche/verifica_38_42.py
     esito: report/anac/verifica-38-42-2026-10-27.json
-    sintesi: "Aggiudicazioni definitive di marzo 2026 nei tabellari: 99.949; nell'OCDS: 67.282 (67%)"
+    sintesi: "Aggiudicazioni definitive del mese presenti anche nell'OCDS: 67% a marzo 2026 (67.282/99.949), 77,7% a ottobre 2024 (80.863/104.087)"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: stesso confronto su un mese del 2025"
+  controvalidazione: "Seconda via indipendente su un mese diverso (ottobre 2024, tools/verifiche/seconde_vie.py): copertura 77,7%; il difetto c'è in entrambi i periodi"
   azione_correttiva: "Includere nell'OCDS tutte le aggiudicazioni della BDNCP, o documentare il criterio di esclusione"
   metrica: "Rapporto mensile OCDS/tabellari per data di aggiudicazione"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via su un altro mese"
+  pronto_per_anac: true
 
 - id: P06
   titolo: "API REST OCDS dichiarata ma non funzionante"
@@ -175,12 +172,11 @@
     esito: config/anac-risorse.jsonl
     sintesi: "524,78 GB dichiarati contro 128,92 GB serviti su 1.797 risorse; il campo size descrive il file scompattato"
     verificato_il: 2026-10-26
-  controvalidazione: "Seconda via: Content-Length confrontato con la dimensione dei file effettivamente scaricati nel mirror (da fare in forma scritta)"
+  controvalidazione: "Seconda via: per 1.650 risorse il Content-Length coincide al byte con i byte effettivamente archiviati (48,70 GB); la dimensione dichiarata dal catalogo è molto più alta. Sull'insieme delle 1.797 risorse: 524,78 GB dichiarati contro 128,92 GB serviti"
   azione_correttiva: "Valorizzare size con la dimensione della distribuzione servita"
   metrica: "I7"
   stato: aperto
-  pronto_per_anac: false
-  manca: "confronto scritto Content-Length / byte scaricati"
+  pronto_per_anac: true
 
 - id: P12
   titolo: "HEAD dei programmi non-browser: risposta 200 text/html invece dei metadati del file"
@@ -223,12 +219,11 @@
     script: tools/anac_integrita.py
     esito: report/anac/integrita-2026-10-26.json (in ripetizione sul mirror completo)
     verificato_il: 2026-10-26
-  controvalidazione: "Da fare: conteggio indipendente con altro strumento (es. anac-pl-pp-cli)"
+  controvalidazione: "Seconda via indipendente (modulo csv di Python, tools/verifiche/seconde_vie.py): 1.951.844 righe con CUP 'ND' su 7.228.216, stesso numero"
   azione_correttiva: "Lasciare vuoto il campo quando il CUP non c'è, e documentare la convenzione"
   metrica: "Numero di righe con CUP = 'ND'"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via"
+  pronto_per_anac: true
 
 - id: P15
   titolo: "Contratti attuativi senza collegamento all'accordo quadro o convenzione"
@@ -256,14 +251,13 @@
   prova:
     script: "tools/anac_integrita.py --completo"
     esito: report/anac/integrita-completo-2026-10-27.json
-    sintesi: "158 righe con \\\" nei delta 2026 (nessuna nei file annuali 2007-2025); 55 illeggibili per un lettore CSV conforme (duckdb in modalità rigorosa)"
+    sintesi: "158 righe con \\\" nei delta 2026, nessuna nei file annuali 2007-2025; duckdb in modalità rigorosa ne scarta 55, il lettore csv di Python in modalità strict ne rifiuta 156"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: lettura con un secondo parser rigoroso (Python csv strict, o csvlint)"
+  controvalidazione: "Seconda via indipendente: lettore csv di Python in modalità strict (tools/verifiche/seconde_vie.py), che rifiuta 156 delle 158 righe con escape"
   azione_correttiva: "Esportare i CSV secondo RFC 4180 (virgolette raddoppiate), come nei file annuali"
   metrica: "Righe rifiutate da un lettore CSV rigoroso in ogni nuovo file = 0"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via; metrica nella sonda"
+  pronto_per_anac: true
 
 - id: P17
   titolo: "Codici fiscali segnaposto delle stazioni appaltanti (es. CFAVCP-0001C57)"
