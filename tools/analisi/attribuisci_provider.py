@@ -1,7 +1,7 @@
 """Attribuzione del cloud provider ai contratti ANAC (metodo: sito/content/progetto/metodo-cloud-provider.md).
 Vie implementate: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider, 7 indeterminato.
 Le vie 4 (PSN voce per voce) e 6 (modello linguistico) non sono ancora implementate: il PSN è solo marcato come canale.
-Uso: python tools/analisi/attribuisci_provider.py 2024 2025  -> lavoro/attribuzione/<anno>.csv e riepilogo.json"""
+Uso: python tools/analisi/attribuisci_provider.py 2024 2025 delta  -> lavoro/attribuzione/<anno>.csv e riepilogo.json"""
 import csv, glob, io, json, os, re, sys, zipfile, collections
 import yaml
 
@@ -30,6 +30,15 @@ def marchio(testo):
     return None
 
 def righe_cig(anno):
+    if anno == "delta":  # aggiornamenti mensili ANAC (es. 2026, non ancora nei file annuali): ultima versione di ogni CIG
+        ultimo = {}
+        for z in sorted(glob.glob(D + "cig/filesystem/*-cig_csv.zip")):
+            zf = zipfile.ZipFile(z)
+            m = next(i for i in zf.namelist() if i.endswith(".csv"))
+            for r in csv.DictReader(io.TextIOWrapper(zf.open(m), encoding="utf-8-sig", errors="replace"), delimiter=";"):
+                ultimo[r["cig"]] = r
+        yield from ultimo.values()
+        return
     for z in sorted(glob.glob(D + f"cig-{anno}/filesystem/cig_csv_*.zip")):
         zf = zipfile.ZipFile(z)
         yield from csv.DictReader(io.TextIOWrapper(zf.open(zf.namelist()[0]), encoding="utf-8-sig", errors="replace"), delimiter=";")
@@ -46,10 +55,13 @@ def aggiudicatari():
 def main(anni):
     os.makedirs("lavoro/attribuzione", exist_ok=True)
     agg = aggiudicatari()
+    # un CIG è padre (massimale, non spesa) se un qualunque contratto, di qualunque anno, lo indica come accordo quadro
+    padri = set()
+    for a in [p[-4:] for p in glob.glob(D + "cig-20*")] + ["delta"]:
+        padri |= {r["cig_accordo_quadro"] for r in righe_cig(a) if r["cig_accordo_quadro"]}
     riepilogo = {}
     for anno in anni:
         righe = list(righe_cig(anno))
-        padri = {r["cig_accordo_quadro"] for r in righe if r["cig_accordo_quadro"]}
         conta = collections.Counter(); somma = collections.Counter()
         with open(f"lavoro/attribuzione/{anno}.csv", "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f)
