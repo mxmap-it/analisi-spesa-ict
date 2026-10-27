@@ -4,6 +4,18 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-10-26 sera
 
+## Aggiornamento 27/10/2026 (sera)
+
+- **Mirror ANAC completo** (#9 chiuso): 1.793 risorse servite tutte archiviate; 4 rispondono 404 da ANAC.
+- **Rendiconto ANAC 1.5**: mesi OCDS duplicati provati byte per byte (24 mesi in 8 gruppi su 96); OCDS vs tabellari (§3.5); controlli CIG su tutto il mirror (12.079.473 CIG); nuovo reperto CD-CSV.
+- **Registro problemi** `report/anac/problemi.yaml`: 17 schede, 6 pronte per ANAC (P01 P02 P07 P08 P10 P12); le altre hanno il campo `manca` (quasi sempre la seconda via).
+- **Contatti ANAC**: li ha Fabio, non cercarli (#51 chiuso).
+- **Metodo cloud provider (#48)**: `tools/analisi/attribuisci_provider.py` (vie 1,2,3,5,7), dizionari in `config/`; campione di sviluppo e campione di misura in `report/metodo/`; prima misura v2 (non cieca): precisione provider 94,6%, provider+servizio 86,6%. Prossimo: regole v3 (sviluppo/sandbox, PSN omonimi, GCP clinico, SAP, in-house pubblico e telco IT), nuovo campione, annotazione umana cieca.
+- **#50** `cig_accordo_quadro` vuoto nel 20% (2025) delle adesioni dichiarate: in validazione.
+- **Server condiviso**: duckdb con memory_limit 6 GB e nice (il 27/10 un job ha reso il server irraggiungibile).
+
+Prossimi passi ANAC: seconde vie per le 11 schede non pronte (#33), controlli su smartcig, poi documento, presentazione e sito (#34-#36) con la sezione «Come riprodurre tutto» (#47).
+
 ## Dove sta cosa
 
 | Cosa | Dove |
