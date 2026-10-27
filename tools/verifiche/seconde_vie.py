@@ -27,7 +27,7 @@ def p11_dimensioni():
     for riga in (ROOT / "manifest.jsonl").read_text(encoding="utf-8").splitlines():
         d = json.loads(riga)
         if d.get("sha256"):
-            archiviati[d["url"]] = d.get("byte")
+            archiviati[d["url"]] = d.get("dimensione")
     dich = serv = arch = n = 0
     for riga in (BASE / "config" / "anac-risorse.jsonl").read_text(encoding="utf-8").splitlines():
         r = json.loads(riga)
