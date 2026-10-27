@@ -3,7 +3,6 @@ title: "I dati aperti di ANAC: problemi e rimedi"
 subtitle: "Sintesi e schede tecniche per la correzione · rilevazione di ottobre 2026"
 date: 2026-10-27
 layout: problemi
-pdf: "/pdf/anac-problemi-e-rimedi-2026-10.pdf"
 description: "I problemi dei dati aperti della Banca Dati Nazionale dei Contratti Pubblici, ciascuno con prova riproducibile, conferma indipendente, rimedio atteso da ANAC e metrica di non ricorrenza."
 ---
 **Osservatorio Nazionale Sovranità Digitale** · progetto
