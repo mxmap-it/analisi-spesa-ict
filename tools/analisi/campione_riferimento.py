@@ -7,10 +7,15 @@ SEED = int(sys.argv[2]) if len(sys.argv) > 2 else 20261027
 NOME = sys.argv[3] if len(sys.argv) > 3 else "campione-riferimento"
 random.seed(SEED)
 strati = collections.defaultdict(list)
+# il campione di misura esclude i contratti già visti nel campione di sviluppo
+import os
+visti = set()
+if NOME != "campione-riferimento" and os.path.exists("lavoro/attribuzione/campione-riferimento.csv"):
+    visti = {r["cig"] for r in csv.DictReader(open("lavoro/attribuzione/campione-riferimento.csv", encoding="utf-8"))}
 for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
     if "campione" in f: continue
     for r in csv.DictReader(open(f, encoding="utf-8")):
-        if r["e_padre"] == "1": continue
+        if r["e_padre"] == "1" or r["cig"] in visti: continue
         imp = float(r["importo_lotto"] or 0)
         fascia = "<40k" if imp < 40000 else "<215k" if imp < 215000 else "<1M" if imp < 1e6 else ">=1M"
         via = r["via"]
