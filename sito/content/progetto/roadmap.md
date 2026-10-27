@@ -270,6 +270,7 @@ ANAC è il macro-obiettivo del setup. È chiuso quando sono chiusi tutti questi 
 | [#15](https://github.com/mxmap-it/analisi-spesa-ict/issues/15) | Sonda giornaliera, che esegue le metriche di non ricorrenza |
 | [#18](https://github.com/mxmap-it/analisi-spesa-ict/issues/18) · [#16](https://github.com/mxmap-it/analisi-spesa-ict/issues/16) | Registro dei problemi e dashboard |
 | [#34](https://github.com/mxmap-it/analisi-spesa-ict/issues/34) · [#35](https://github.com/mxmap-it/analisi-spesa-ict/issues/35) · [#36](https://github.com/mxmap-it/analisi-spesa-ict/issues/36) | Documento, presentazione e sito per la comunicazione ad ANAC |
+| [#47](https://github.com/mxmap-it/analisi-spesa-ict/issues/47) | **Pipeline di verifica ripetibile da zero**, documentata: ANAC o tecnici terzi rifanno ogni verifica e ottengono gli stessi numeri |
 
 **La regola che vale per ogni problema comunicato:** un problema è pronto solo se ha la prova
 riproducibile, la conferma per una seconda via indipendente, un'azione correttiva concreta e una

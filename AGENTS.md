@@ -45,6 +45,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Python nella `.venv` del server (requests, ijson, DuckDB). Su Windows: I/O sempre in UTF-8.
 - Registro delle risorse: `config/risorse.yaml` (formato compatibile con source-observatory).
 - Licenze: va bene qualunque licenza libera; tutto viene rilasciato.
+- **Ripetibilità da zero:** ogni numero pubblicato dev'essere prodotto da una verifica in `tools/verifiche/` eseguibile da un clone pulito con un solo comando, dal vivo o dallo snapshot (sha256). Niente risultati da script lasciati in `lavoro/` (#47).
 
 ## 6. Sito
 
