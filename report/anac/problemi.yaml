@@ -1,0 +1,247 @@
+# Registro dei problemi ANAC (#18) e schede per problema (#32).
+# Una voce per problema, comunicabile solo se ha: prova riproducibile, controvalidazione per seconda via,
+# azione correttiva, metrica di non ricorrenza (regola in sito/content/progetto/roadmap.md §8quater).
+# stato: aperto | risolto | ritirato. pronto_per_anac: true solo se tutti e quattro i requisiti ci sono.
+# Riferimenti al rendiconto: D = §2, I = §5, §3/§4 = integrità e mesi duplicati.
+
+- id: P01
+  titolo: "Mesi OCDS diversi servono lo stesso file, con il solo campo uri riscritto"
+  rif: [D14, I4]
+  gravita: alta
+  prova:
+    script: tools/verifiche/ocds_mesi_duplicati.py
+    esito: report/anac/verifica-ocds-mesi-duplicati-2026-10-27.json
+    sintesi: "96 mesi serviti, 80 contenuti distinti; 24 mesi in 8 gruppi differiscono di 1-3 byte (cifre del mese nel campo uri)"
+    verificato_il: 2026-10-27
+  controvalidazione: "AgID, Cruscotto Italia etl/sources/anac.py commit 2bc27d9: «i 12 file OCDS usati erano 4 file distinti»"
+  azione_correttiva: "Rigenerare i mesi duplicati dal loro contenuto reale; aggiungere al processo di generazione un controllo che rifiuti un mese identico a un altro"
+  metrica: "I4: nessuna coppia di mesi con stessa dimensione e stessi blocchi interni (sonda giornaliera)"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P02
+  titolo: "OCDS fermo a marzo 2026; del 2026 è pubblicato solo marzo"
+  rif: [D1, D11, I1]
+  gravita: alta
+  prova:
+    script: tools/metriche_anac.py
+    esito: stato/metriche/ (I1, giornaliero); report/anac/ocds-2026-03-periodo.json
+    sintesi: "2025/12, 2026/01, 2026/02 e da 2026/04 in poi rispondono 404; il file di marzo contiene solo release di marzo (e 1.139 di aprile)"
+    verificato_il: 2026-10-27
+  controvalidazione: "AgID, Cruscotto Italia etl/sources/anac.py commit 2bc27d9: «ANAC non rigenera l'OCDS da aprile 2026»"
+  azione_correttiva: "Pubblicare i mesi mancanti, oppure dichiarare sulla pagina OCDS la sospensione con la data di ripresa"
+  metrica: "I1: esiste il file del mese precedente dopo il giorno 2 di ogni mese"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P03
+  titolo: "OCDS: il fornitore aggiudicatario manca nell'80% degli award, ma ANAC lo possiede"
+  rif: ["§3.5"]
+  gravita: alta
+  prova:
+    script: tools/verifiche/verifica_38_42.py
+    esito: report/anac/verifica-38-42-2026-10-27.json
+    sintesi: "Award OCDS marzo 2026 con fornitore: 20,4% (21.927/107.318); per l'83.059 su 85.391 senza fornitore (97,3%) i tabellari aggiudicatari lo riportano"
+    verificato_il: 2026-10-27
+  controvalidazione: "Coerente con il rapporto «circa 1/5» riportato da AgID; seconda via indipendente da fare: conteggio su un altro mese OCDS (es. 2025/10)"
+  azione_correttiva: "Esportare nell'OCDS awards.suppliers e parties con ruolo supplier a partire dai dati già presenti in BDNCP"
+  metrica: "Quota di award OCDS con fornitore, per mese (nuova metrica I10, da aggiungere alla sonda)"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via su un altro mese; metrica I10 nella sonda"
+
+- id: P04
+  titolo: "OCDS: date delle release in formato non conforme in tutte le release"
+  rif: ["§3.5", D15]
+  gravita: media
+  prova:
+    script: tools/verifiche/verifica_38_42.py
+    esito: report/anac/verifica-38-42-2026-10-27.json
+    sintesi: "128.540 release con date nella forma '2026-03-13 17:30:20.636T12:00:00Z', 19.829 (13,4%) vuote; nessuna in RFC 3339"
+    verificato_il: 2026-10-27
+  controvalidazione: "Da fare: validazione con lo strumento ufficiale OCP (lib-cove-ocds / OCDS Data Review Tool) su un estratto"
+  azione_correttiva: "Emettere date ISO 8601 / RFC 3339 come richiesto dallo schema OCDS 1.1; valorizzare sempre release.date"
+  metrica: "Quota di release con date valida secondo lo schema = 100% (nuova metrica I11)"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "controvalidazione con lo strumento OCP; metrica I11 nella sonda"
+
+- id: P05
+  titolo: "OCDS: copertura parziale delle aggiudicazioni rispetto ai tabellari"
+  rif: ["§3.5"]
+  gravita: media
+  prova:
+    script: tools/verifiche/verifica_38_42.py
+    esito: report/anac/verifica-38-42-2026-10-27.json
+    sintesi: "Aggiudicazioni definitive di marzo 2026 nei tabellari: 99.949; nell'OCDS: 67.282 (67%)"
+    verificato_il: 2026-10-27
+  controvalidazione: "Da fare: stesso confronto su un mese del 2025"
+  azione_correttiva: "Includere nell'OCDS tutte le aggiudicazioni della BDNCP, o documentare il criterio di esclusione"
+  metrica: "Rapporto mensile OCDS/tabellari per data di aggiudicazione"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via su un altro mese"
+
+- id: P06
+  titolo: "API REST OCDS dichiarata ma non funzionante"
+  rif: [D7, I2]
+  gravita: media
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I2); report/anac/prove-2026-10-26/api_ui.html, swagger.json"
+    sintesi: "Endpoint version, releases, awards su api.anticorruzione.it/opendata/ocds/api/v1 → 404; swagger.json non è JSON valido"
+    verificato_il: 2026-10-26
+  controvalidazione: "Da fare: verifica da una seconda rete (non il nostro server)"
+  azione_correttiva: "Ripristinare l'API o rimuoverla dalla pagina; pubblicare uno swagger.json valido"
+  metrica: "I2"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via"
+
+- id: P07
+  titolo: "Licenza dell'OCDS: CC BY 4.0 nel catalogo e nella pagina, CC BY-SA 4.0 nel file"
+  rif: [I3]
+  gravita: bassa
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I3); report/anac/prove-2026-10-26/"
+    verificato_il: 2026-10-26
+  controvalidazione: "Lettura diretta dei tre documenti archiviati con hash (prova documentale, non serve seconda via)"
+  azione_correttiva: "Allineare la licenza di catalogo, pagina e file"
+  metrica: "I3"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P08
+  titolo: "Aggiornamenti mensili (delta) rimossi senza regola dichiarata; gennaio-marzo 2026 persi"
+  rif: [D2, D3, D4, I6]
+  gravita: alta
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I5, I6); archivio/manifest.jsonl"
+    sintesi: "20260101-, 20260201-, 20260301-cig_csv.zip → 404; nessun file annuale 2026; a settembre 6 delta in linea, a ottobre 7"
+    verificato_il: 2026-10-26
+  controvalidazione: "AgID, scripts/anac_archivio_mensile.sh: «finestra mobile di ~7 mesi … il file più vecchio sparisce e non si recupera più»"
+  azione_correttiva: "Conservare i delta fino al full successivo, o pubblicare il full dell'anno in corso; dichiarare la politica di conservazione"
+  metrica: "I6: nessun delta presente nel nostro archivio sparisce dal server prima del full successivo"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P09
+  titolo: "Mesi mancanti di smartcig (giugno e luglio 2026) e distribuzione JSON interrotta"
+  rif: [D10, D12, I5]
+  gravita: media
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I5)"
+    verificato_il: 2026-10-26
+  controvalidazione: "Da fare: seconda via (catalogo CKAN package_show e HEAD da altra rete)"
+  azione_correttiva: "Pubblicare giugno e luglio 2026; riprendere la distribuzione JSON o dichiararne la cessazione"
+  metrica: "I5: continuità di ogni serie mensile dichiarata"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via"
+
+- id: P10
+  titolo: "Il catalogo elenca risorse inesistenti"
+  rif: [D17, I8]
+  gravita: media
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I8)"
+    sintesi: "4 risorse elencate rispondono 404 il 27/10/2026: OCDS 2025/12, 2026/01, 2026/02 e smartcig-2025_csv_logCsv.csv"
+    verificato_il: 2026-10-27
+  controvalidazione: "AgID, scripts/anac_archivio_mensile.sh: «202304-202603 in 404 anche se elencati nel log»"
+  azione_correttiva: "Togliere dal catalogo le risorse inesistenti, o pubblicarle"
+  metrica: "I8"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P11
+  titolo: "Dimensioni dichiarate dal catalogo 4,1 volte quelle servite"
+  rif: [D13, D18, I7]
+  gravita: bassa
+  prova:
+    script: tools/censisci_anac.py
+    esito: config/anac-risorse.jsonl
+    sintesi: "524,78 GB dichiarati contro 128,92 GB serviti su 1.797 risorse; il campo size descrive il file scompattato"
+    verificato_il: 2026-10-26
+  controvalidazione: "Seconda via: Content-Length confrontato con la dimensione dei file effettivamente scaricati nel mirror (da fare in forma scritta)"
+  azione_correttiva: "Valorizzare size con la dimensione della distribuzione servita"
+  metrica: "I7"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "confronto scritto Content-Length / byte scaricati"
+
+- id: P12
+  titolo: "Risposta 200 con pagina HTML agli user-agent non-browser"
+  rif: [D6, I9]
+  gravita: media
+  prova:
+    script: tools/metriche_anac.py
+    esito: "stato/metriche/ (I9)"
+    verificato_il: 2026-10-26
+  controvalidazione: "AgID, scripts/anac_archivio_mensile.sh: «il firewall risponde 200 con una pagina di blocco»"
+  azione_correttiva: "Servire i file a qualunque user-agent, o rispondere con un codice di errore esplicito (403/429)"
+  metrica: "I9"
+  stato: aperto
+  pronto_per_anac: true
+
+- id: P13
+  titolo: "Nessun ETag sulle risorse"
+  rif: [D9]
+  gravita: bassa
+  prova:
+    script: tools/sonda.py
+    esito: report/anac/sonda-2026-10-26.jsonl
+    verificato_il: 2026-10-26
+  controvalidazione: "Da fare: verifica da seconda rete"
+  azione_correttiva: "Esporre ETag (e mantenere Last-Modified) per permettere download condizionali"
+  metrica: "Quota di risorse con ETag (sonda)"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via; metrica nella sonda"
+
+- id: P14
+  titolo: "CUP 'ND' al posto del codice in 1.951.844 righe"
+  rif: ["§3"]
+  gravita: media
+  prova:
+    script: tools/anac_integrita.py
+    esito: report/anac/integrita-2026-10-26.json (in ripetizione sul mirror completo)
+    verificato_il: 2026-10-26
+  controvalidazione: "Da fare: conteggio indipendente con altro strumento (es. anac-pl-pp-cli)"
+  azione_correttiva: "Lasciare vuoto il campo quando il CUP non c'è, e documentare la convenzione"
+  metrica: "Numero di righe con CUP = 'ND'"
+  stato: aperto
+  pronto_per_anac: false
+  manca: "seconda via"
+
+- id: P15
+  titolo: "Contratti attuativi senza collegamento all'accordo quadro o convenzione"
+  rif: ["#50"]
+  gravita: da_valutare
+  prova:
+    script: tools/verifiche/cig_accordo_quadro.py
+    esito: report/anac/verifica-cig-accordo-quadro-2026-10-27.json
+    sintesi: "Fra i CIG che nel testo dichiarano un'adesione, cig_accordo_quadro vuoto: 20% nel 2025, 56% nel 2017; 11.568 CIG padre puntati non esistono"
+    verificato_il: 2026-10-27
+  controvalidazione: "Da fare: campione verificato a mano; obbligo normativo e ANAC del campo da documentare"
+  azione_correttiva: "Da definire dopo la verifica dell'obbligo: controllo di compilazione in fase di richiesta del CIG derivato"
+  metrica: "Quota di CIG derivati con cig_accordo_quadro valorizzato e esistente"
+  stato: in_verifica
+  pronto_per_anac: false
+  manca: "validazione su campione, norma, controvalidazione"
+
+# Da aggiungere dopo la riesecuzione sul mirror completo (#31): controlli di integrità §3 (SA, AG, AT, CU, CD),
+# uno per voce con lo stesso schema.
+
+destinatari:
+  nota: "Per l'obiettivo di stabilire punti di contatto: per ogni area, l'ufficio ANAC competente. Da individuare da fonti pubbliche (organigramma, pagina open data, RTD) prima di ogni comunicazione, che resta soggetta all'approvazione di Fabio."
+  aree:
+    - area: "Open data e portale dati.anticorruzione.it (P02, P06-P13)"
+      ufficio: da_individuare
+    - area: "Banca Dati Nazionale dei Contratti Pubblici, qualità dei dati inseriti dalle stazioni appaltanti (P14, P15)"
+      ufficio: da_individuare
+    - area: "Responsabile per la transizione al digitale"
+      ufficio: da_individuare
