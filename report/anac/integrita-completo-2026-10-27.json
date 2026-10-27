@@ -1,0 +1,828 @@
+{
+ "generato": "2026-10-27",
+ "righe": {
+  "stazioni_appaltanti": 48040,
+  "aggiudicazioni": 4862077,
+  "aggiudicatari": 5437334,
+  "cup": 7228216,
+  "cig_delta": 12079473
+ },
+ "controlli": [
+  {
+   "dataset": "cig_delta",
+   "id": "CD-CSV",
+   "controllo": "righe non conformi al CSV standard (RFC 4180), scartate dal lettore rigoroso",
+   "anomalie": 55,
+   "su": 12079528,
+   "pct": 0.0,
+   "esempi": [
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     7006,
+     "UNQUOTED VALUE",
+     "\"B89E292EE0\";\"A027ACB9D5\";\"708_2025 “Suture chirurgiche 3\\\\\\\" Lotto 9 J&J\";\"FORNITURA DI SUTURE CHIRURGICHE LOTTO 9 J&J\";\"8227.08\";\"1\";\"FORNITURA DI SUTURE CHIR"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     7021,
+     "UNQUOTED VALUE",
+     "\"B2ED07B99D\";\"967727217D\";\"2° CONVENZIONE \\\\\\\"GAS NATURALE 15 BIS\\\\\\\" LOTTO 9 CALABRIA E SICILIA\";\"FORNITURA DI GAS NATURALE PER SCUOLA COMUNALE DELL'INFANZIA F"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     12073,
+     "UNQUOTED VALUE",
+     "\"BC2D9EE086\";\"9268682659\";\"organizzazione e allestimento cerimonia “Ad Maiora 2026\\\\\\\" \";\"SERVIZIO DI ORGANIZZAZIONE E ALLESTIMENTO DELLA CERIMONIA AD MAIORA 20"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     12318,
+     "UNQUOTED VALUE",
+     "\"BCF764B1B7\";;\"PPP CENTRO SPORTIVO \\\\\\\"BATTISTA RE\\\\\\\"\";\"PPP CENTRO SPORTIVO BATTISTA RE\";\"8572705.16\";\"1\";\"PPP CENTRO SPORTIVO BATTISTA RE\";\"8572705.16\";\"LAVOR"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     13530,
+     "UNQUOTED VALUE",
+     "\"B933CAAA0F\";;\"Lotto 1 - Ricostruzione \\\\\\\"Ponte delle Galline\\\\\\\"\";\"LAVORI DI RICOSTRUZIONE PONTE DELLE GALLINE SUL TORRENTE OROLO IN LOCALITÀ CHENDERLE A MALO"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     13799,
+     "UNQUOTED VALUE",
+     "\"BCA69096CD\";;\"SISTEMA GESTIONE INTESTINALE TIPOLOGIA \\\\\\\"PERISTEEN\\\\\\\"\";\"PROCEDURA NEGOZIATA AI SENSI DELL'ART 76 COMMA 2 LETTERA B) D.LGS 36/2023 PER L'AFFIDA"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     17147,
+     "UNQUOTED VALUE",
+     "\"B80C1D6953\";;\"GESTIONE DI ELISUPERFICIE ”TIRANO\\\\\\\" ANNI 2025,2026,2027 E 2028\";\"AFFIDAMENTO DEL SERVIZIO DI GESTIONE DI ELISUPERFICIE DENOMINATA TIRANO COME D"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     22387,
+     "UNQUOTED VALUE",
+     "\"B89DFBC7C5\";\"A027B09CFE\";\"708_2025 “Suture chirurgiche 3\\\\\\\" Lotto 13 J&J\";\"FORNITURA DI SUTURE CHIRURGICHE LOTTO 13 J&J\";\"7675.8\";\"1\";\"FORNITURA DI SUTURE CHI"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     24992,
+     "UNQUOTED VALUE",
+     "\"BCA684BA01\";;\"SISTEMA PER LA GESTIONE INTESTINALE TIPOLOGIA \\\\\\\"NAVINA\\\\\\\"\";\"PROCEDURA NEGOZIATA AI SENSI DELL'ART 76 COMMA 2 LETTERA B) D.LGS 36/2023 PER L'AF"
+    ],
+    [
+     "/home/mxmap.it/analisi-spesa-ict/lavoro/cig_completo/20260401-cig_csv.csv",
+     29931,
+     "UNQUOTED VALUE",
+     "\"B20EE398A2\";;\"Manutenzione ed assistenza \\\\\\\"SchoolWeb\\\\\\\" 2025-2031_Lonato\";\"AFFIDAMENTO DEL SERVIZIO DI MANUTENZIONE ED ASSISTENZA DEL SOFTWARE APPLICATIVO S"
+    ]
+   ],
+   "nota": "per file: {\"20260401-cig_csv.csv\": 55, \"20260501-cig_csv.csv\": 55, \"20260601-cig_csv.csv\": 55, \"20260801-cig_csv.csv\": 55, \"20260901-cig_csv.csv\": 55, \"20261001-cig_csv.csv\": 55}"
+  },
+  {
+   "dataset": "stazioni_appaltanti",
+   "id": "SA-01",
+   "controllo": "codice fiscale ripetuto su più righe",
+   "anomalie": 0,
+   "su": 48040,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "stazioni_appaltanti",
+   "id": "SA-02",
+   "controllo": "codice fiscale non valido (cifra di controllo o formato)",
+   "anomalie": 1285,
+   "su": 48040,
+   "pct": 2.675,
+   "esempi": [
+    "CFAVCP-000049A",
+    "CFAVCP-0001DFF",
+    "CFAVCP-0000DE8",
+    "CFAVCP-0000FE4",
+    "CFAVCP-0001603"
+   ],
+   "nota": "motivi: {'lunghezza 14': 1282, 'lunghezza 7': 1, 'lunghezza 9': 1, 'lunghezza 10': 1}; conteggio su valori distinti"
+  },
+  {
+   "dataset": "stazioni_appaltanti",
+   "id": "SA-03",
+   "controllo": "partita IVA segnaposto 00000000000",
+   "anomalie": 24818,
+   "su": 48040,
+   "pct": 51.661,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "stazioni_appaltanti",
+   "id": "SA-04",
+   "controllo": "codice AUSA mancante",
+   "anomalie": 0,
+   "su": 48040,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "stazioni_appaltanti",
+   "id": "SA-05",
+   "controllo": "data di fine convenzionale 2099 (valore sentinella)",
+   "anomalie": 48040,
+   "su": 48040,
+   "pct": 100.0,
+   "esempi": [],
+   "nota": "non è un errore in sé, ma va documentato come convenzione"
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-01",
+   "controllo": "coppia (cig, id_aggiudicazione) ripetuta",
+   "anomalie": 6874,
+   "su": 4862077,
+   "pct": 0.141,
+   "esempi": [
+    [
+     "87586212B3",
+     "1975918",
+     10
+    ],
+    [
+     "30032529F1",
+     "313962",
+     9
+    ],
+    [
+     "7321471CFD",
+     "1397909",
+     9
+    ],
+    [
+     "7321464738",
+     "1379487",
+     9
+    ],
+    [
+     "7321411B7A",
+     "1377778",
+     9
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-02",
+   "controllo": "CIG non valido secondo l'algoritmo ANAC",
+   "anomalie": 17,
+   "su": 4849388,
+   "pct": 0.0,
+   "esempi": [
+    "9999999952",
+    "8300000000",
+    "7955857400",
+    "9326831868",
+    "8374949484"
+   ],
+   "nota": "motivi: {'cifra di controllo': 15, 'progressivo nullo': 2}; conteggio su CIG distinti"
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-03a",
+   "controllo": "data_aggiudicazione_definitiva: data non interpretabile",
+   "anomalie": 0,
+   "su": 4862077,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-03b",
+   "controllo": "data_aggiudicazione_definitiva: data anteriore al 2000",
+   "anomalie": 1138,
+   "su": 4862077,
+   "pct": 0.023,
+   "esempi": [
+    [
+     "B24FED2319",
+     "0001-01-01"
+    ],
+    [
+     "B005282811",
+     "0001-01-01"
+    ],
+    [
+     "B0E1776A33",
+     "0001-01-01"
+    ],
+    [
+     "B03541F2F2",
+     "0001-01-01"
+    ],
+    [
+     "B23EB1AB54",
+     "0001-01-01"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-03c",
+   "controllo": "data_aggiudicazione_definitiva: data nel futuro rispetto al 2026-10-27",
+   "anomalie": 766,
+   "su": 4862077,
+   "pct": 0.016,
+   "esempi": [
+    [
+     "B6C5F1C833",
+     "9999-09-09"
+    ],
+    [
+     "B84022C6DB",
+     "9202-08-15"
+    ],
+    [
+     "B44507E77B",
+     "9202-06-16"
+    ],
+    [
+     "B9A2CB4C4F",
+     "8202-12-16"
+    ],
+    [
+     "B22AF8B319",
+     "8202-06-19"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-03d",
+   "controllo": "data_aggiudicazione_definitiva: mancante",
+   "anomalie": 42479,
+   "su": 4862077,
+   "pct": 0.874,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-04a",
+   "controllo": "data_comunicazione_esito: data non interpretabile",
+   "anomalie": 0,
+   "su": 4862077,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-04b",
+   "controllo": "data_comunicazione_esito: data anteriore al 2000",
+   "anomalie": 336,
+   "su": 4862077,
+   "pct": 0.007,
+   "esempi": [
+    [
+     "B048F837B2",
+     "0001-01-01"
+    ],
+    [
+     "B0BA3E8A53",
+     "0001-01-01"
+    ],
+    [
+     "B0E1776A33",
+     "0001-01-01"
+    ],
+    [
+     "B06282B38E",
+     "0001-01-01"
+    ],
+    [
+     "B0D9A611A5",
+     "0001-01-01"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-04c",
+   "controllo": "data_comunicazione_esito: data nel futuro rispetto al 2026-10-27",
+   "anomalie": 163,
+   "su": 4862077,
+   "pct": 0.003,
+   "esempi": [
+    [
+     "B2B25F8D9C",
+     "7600-05-19"
+    ],
+    [
+     "B23A8F8841",
+     "6202-10-31"
+    ],
+    [
+     "B1D883C8C0",
+     "6202-02-06"
+    ],
+    [
+     "B0A51326F9",
+     "5024-03-05"
+    ],
+    [
+     "B2AE7179F3",
+     "4862-06-22"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-04d",
+   "controllo": "data_comunicazione_esito: mancante",
+   "anomalie": 6880,
+   "su": 4862077,
+   "pct": 0.142,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-05",
+   "controllo": "esito comunicato prima dell'aggiudicazione definitiva",
+   "anomalie": 225914,
+   "su": 4862077,
+   "pct": 4.646,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-06",
+   "controllo": "importo non numerico",
+   "anomalie": 0,
+   "su": 4862077,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-07",
+   "controllo": "importo di aggiudicazione negativo",
+   "anomalie": 368,
+   "su": 4862077,
+   "pct": 0.008,
+   "esempi": [
+    [
+     "B12C59C881",
+     "-14805000"
+    ],
+    [
+     "B81F8C93CE",
+     "-7111532.66"
+    ],
+    [
+     "B0C827D889",
+     "-4814260.0"
+    ],
+    [
+     "B2677FF474",
+     "-1043371.53"
+    ],
+    [
+     "B214106CF2",
+     "-352208.94"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-08",
+   "controllo": "importo di aggiudicazione pari a zero",
+   "anomalie": 19067,
+   "su": 4862077,
+   "pct": 0.392,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-09",
+   "controllo": "importo di aggiudicazione pari o superiore a un miliardo",
+   "anomalie": 298,
+   "su": 4862077,
+   "pct": 0.006,
+   "esempi": [
+    [
+     "0360961270",
+     "78000000000"
+    ],
+    [
+     "9363731B42",
+     "34511040040"
+    ],
+    [
+     "6586223328",
+     "33631153870"
+    ],
+    [
+     "9917529BD3",
+     "23021702352"
+    ],
+    [
+     "B77825C53E",
+     "17367530034.85"
+    ]
+   ],
+   "nota": "non necessariamente errori: da verificare uno per uno"
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-10",
+   "controllo": "ribasso fuori dall'intervallo 0-100",
+   "anomalie": 16123,
+   "su": 4862077,
+   "pct": 0.332,
+   "esempi": [
+    [
+     "6264109A44",
+     "990.0"
+    ],
+    [
+     "5331126857",
+     "961.0"
+    ],
+    [
+     "8129520421",
+     "713.0"
+    ],
+    [
+     "8233309585",
+     "703.0"
+    ],
+    [
+     "8597105B78",
+     "674.1"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-11",
+   "controllo": "più offerte ammesse che imprese offerenti",
+   "anomalie": 12012,
+   "su": 4862077,
+   "pct": 0.247,
+   "esempi": [
+    [
+     "B1347BCA6F",
+     "7",
+     "1"
+    ],
+    [
+     "B2C0C044D6",
+     "2",
+     "1"
+    ],
+    [
+     "B6AA15C002",
+     "2",
+     "1"
+    ],
+    [
+     "B44639043D",
+     "192",
+     "1"
+    ],
+    [
+     "B3EACD6FB5",
+     "9",
+     "1"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-12",
+   "controllo": "esito 'vincitore non ancora selezionato' ma con data e importo di aggiudicazione",
+   "anomalie": 153,
+   "su": 4862077,
+   "pct": 0.003,
+   "esempi": [
+    [
+     "B523118A90",
+     "NON È ANCORA STATO SELEZIONATO UN VINCITORE MA LA GARA È ANCORA IN CORSO.",
+     "2025-01-28",
+     "30409.08"
+    ],
+    [
+     "B75FB555A2",
+     "NON È ANCORA STATO SELEZIONATO UN VINCITORE MA LA GARA È ANCORA IN CORSO.",
+     "2025-07-01",
+     "33300.0"
+    ],
+    [
+     "B6BCCEC4F1",
+     "NON È ANCORA STATO SELEZIONATO UN VINCITORE MA LA GARA È ANCORA IN CORSO.",
+     "2025-05-21",
+     "30217.6"
+    ],
+    [
+     "B5B589421F",
+     "NON È ANCORA STATO SELEZIONATO UN VINCITORE MA LA GARA È ANCORA IN CORSO.",
+     "2025-05-30",
+     "205000.0"
+    ],
+    [
+     "B43EB049C1",
+     "NON È ANCORA STATO SELEZIONATO UN VINCITORE MA LA GARA È ANCORA IN CORSO.",
+     "2024-11-20",
+     "4547.09"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicazioni",
+   "id": "AG-13",
+   "controllo": "criterio di aggiudicazione con due criteri alternativi nella stessa etichetta",
+   "anomalie": 566697,
+   "su": 4862077,
+   "pct": 11.655,
+   "esempi": [
+    [
+     "OFFERTA ECONOMICAMENTE PIÙ VANTAGGIOSA: CRITERIO DEL MINOR PREZZO",
+     566694
+    ],
+    [
+     "Offerta economicamente più vantaggiosa: criterio del minor prezzo",
+     3
+    ]
+   ],
+   "nota": "se l'etichetta è una voce di codelist, il problema è nella codelist e non nei record"
+  },
+  {
+   "dataset": "aggiudicatari",
+   "id": "AT-01",
+   "controllo": "codice fiscale dell'aggiudicatario non valido",
+   "anomalie": 44214,
+   "su": 527723,
+   "pct": 8.378,
+   "esempi": [
+    "FR21383703873",
+    "IT09633981007",
+    "27-1186540",
+    "37768",
+    "04485610238"
+   ],
+   "nota": "motivi: {'lunghezza 13': 3551, 'lunghezza 10': 9636, 'lunghezza 5': 193, 'cifra di controllo (11 cifre)': 5667, 'lunghezza 15': 1772, 'lunghezza 12': 5342, 'carattere di controllo (16)': 2648, 'lunghezza 14': 1733, 'lunghezza 9': 4047, 'lunghezza 11': 4340, 'lunghezza 8': 1253, 'lunghezza 19': 273, 'lunghezza 18': 817, 'lunghezza 17': 487, 'lunghezza 6': 527, 'lunghezza 7': 539, 'lunghezza 28': 149, 'lunghezza 36': 40, 'lunghezza 23': 145, 'lunghezza 4': 107, 'lunghezza 27': 26, 'lunghezza 20': 215, 'lunghezza 38': 12, 'lunghezza 3': 89, 'lunghezza 41': 13, 'lunghezza 46': 3, 'lunghezza 42': 13, 'lunghezza 22': 50, 'lunghezza 26': 18, 'lunghezza 34': 16, 'lunghezza 31': 15, 'lunghezza 29': 21, 'lunghezza 30': 81, 'lunghezza 54': 3, 'lunghezza 51': 5, 'lunghezza 25': 36, 'lunghezza 50': 4, 'lunghezza 47': 4, 'lunghezza 49': 2, 'lunghezza 21': 55, 'lunghezza 32': 7, 'lunghezza 2': 47, 'lunghezza 76': 1, 'lunghezza 24': 49, 'lunghezza 61': 2, 'lunghezza 35': 22, 'lunghezza 89': 2, 'lunghezza 1': 12, 'segnaposto 00000000000': 1, 'lunghezza 630': 1, 'lunghezza 79': 1, 'lunghezza 43': 6, 'lunghezza 70': 2, 'lunghezza 325': 1, 'lunghezza 33': 17, 'lunghezza 93': 1, 'lunghezza 59': 4, 'lunghezza 103': 1, 'lunghezza 37': 9, 'lunghezza 40': 15, 'lunghezza 57': 5, 'lunghezza 63': 1, 'lunghezza 39': 9, 'lunghezza 48': 6, 'lunghezza 67': 2, 'vuoto': 1, 'lunghezza 45': 3, 'lunghezza 95': 1, 'lunghezza 113': 1, 'lunghezza 88': 1, 'lunghezza 74': 1, 'lunghezza 56': 2, 'lunghezza 177': 1, 'lunghezza 44': 5, 'lunghezza 91': 1, 'lunghezza 62': 1, 'lunghezza 116': 1, 'lunghezza 55': 1, 'lunghezza 172': 1, 'lunghezza 262': 1, 'lunghezza 84': 1, 'lunghezza 128': 1, 'lunghezza 71': 1, 'lunghezza 133': 1, 'lunghezza 152': 1, 'lunghezza 60': 2, 'lunghezza 68': 1, 'lunghezza 106': 1, 'lunghezza 52': 1, 'lunghezza 131': 1, 'lunghezza 148': 1, 'lunghezza 72': 1, 'lunghezza 94': 1, 'lunghezza 77': 1, 'lunghezza 188': 1, 'lunghezza 160': 1, 'lunghezza 75': 1, 'lunghezza 115': 1, 'lunghezza 83': 1, 'lunghezza 124': 1}; conteggio su valori distinti"
+  },
+  {
+   "dataset": "aggiudicatari",
+   "id": "AT-02",
+   "controllo": "denominazione dell'aggiudicatario mancante",
+   "anomalie": 9067,
+   "su": 5437334,
+   "pct": 0.167,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "aggiudicatari",
+   "id": "AT-03",
+   "controllo": "CIG non valido secondo l'algoritmo ANAC",
+   "anomalie": 16,
+   "su": 4818810,
+   "pct": 0.0,
+   "esempi": [
+    "8300000000",
+    "7955857400",
+    "9999999952",
+    "9326831868",
+    "8374949484"
+   ],
+   "nota": "motivi: {'cifra di controllo': 14, 'progressivo nullo': 2}; conteggio su CIG distinti"
+  },
+  {
+   "dataset": "aggiudicatari",
+   "id": "AT-04",
+   "controllo": "aggiudicatario che rimanda a un'aggiudicazione inesistente",
+   "anomalie": 3424,
+   "su": 4822171,
+   "pct": 0.071,
+   "esempi": [],
+   "nota": "confronto fra i file full dello stesso rilascio"
+  },
+  {
+   "dataset": "aggiudicatari",
+   "id": "AT-05",
+   "controllo": "aggiudicazione con importo positivo ma senza alcun aggiudicatario",
+   "anomalie": 10812,
+   "su": 4809518,
+   "pct": 0.225,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "cup",
+   "id": "CU-01",
+   "controllo": "CIG non valido secondo l'algoritmo ANAC",
+   "anomalie": 13,
+   "su": 7103635,
+   "pct": 0.0,
+   "esempi": [
+    "7955857400",
+    "9999999952",
+    "70000006BC",
+    "8541969498",
+    "9041408500"
+   ],
+   "nota": "motivi: {'cifra di controllo': 9, 'progressivo nullo': 2, 'primo carattere': 2}; conteggio su CIG distinti"
+  },
+  {
+   "dataset": "cup",
+   "id": "CU-02",
+   "controllo": "CUP con formato diverso da 15 caratteri alfanumerici",
+   "anomalie": 1955119,
+   "su": 7228216,
+   "pct": 27.048,
+   "esempi": [
+    [
+     "B12A806E3C",
+     "ND"
+    ],
+    [
+     "B12E7A705C",
+     "ND"
+    ],
+    [
+     "B247FC6B6F",
+     "ND"
+    ],
+    [
+     "B0D63EB058",
+     "ND"
+    ],
+    [
+     "B0D076FE46",
+     "ND"
+    ]
+   ],
+   "nota": null
+  },
+  {
+   "dataset": "cup",
+   "id": "CU-03",
+   "controllo": "coppia (CIG, CUP) ripetuta",
+   "anomalie": 0,
+   "su": 7228216,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-01",
+   "controllo": "CIG non valido secondo l'algoritmo ANAC",
+   "anomalie": 51,
+   "su": 12079473,
+   "pct": 0.0,
+   "esempi": [
+    "1000000A18",
+    "7955857400",
+    "8240000000",
+    "9999999952",
+    "8300000000"
+   ],
+   "nota": "motivi: {'progressivo nullo': 8, 'cifra di controllo': 39, 'primo carattere': 4}; conteggio su CIG distinti"
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-02",
+   "controllo": "codice CPV mancante, malformato o tutto zeri",
+   "anomalie": 0,
+   "su": 12079473,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-03",
+   "controllo": "importo del lotto nullo o negativo",
+   "anomalie": 28178,
+   "su": 12079473,
+   "pct": 0.233,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-04",
+   "controllo": "codice fiscale della stazione appaltante non valido",
+   "anomalie": 902,
+   "su": 39486,
+   "pct": 2.284,
+   "esempi": [
+    "CFAVCP-0001C57",
+    "CFAVCP-000049A",
+    "CFAVCP-0001025",
+    "CFAVCP-0000E06",
+    "CFAVCP-00010F8"
+   ],
+   "nota": "motivi: {'lunghezza 14': 856, 'lunghezza 10': 12, 'cifra di controllo (11 cifre)': 17, 'lunghezza 12': 13, 'lunghezza 7': 1, 'carattere di controllo (16)': 1, 'vuoto': 1, 'lunghezza 13': 1}; conteggio su valori distinti"
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-05",
+   "controllo": "data di pubblicazione nel futuro rispetto al 2026-10-27",
+   "anomalie": 0,
+   "su": 12079473,
+   "pct": 0.0,
+   "esempi": [],
+   "nota": null
+  },
+  {
+   "dataset": "cig_delta",
+   "id": "CD-00",
+   "controllo": "colonne del file",
+   "anomalie": 0,
+   "su": 61,
+   "esempi": [
+    [
+     "cig",
+     "cig_accordo_quadro",
+     "numero_gara",
+     "oggetto_gara",
+     "importo_complessivo_gara",
+     "n_lotti_componenti",
+     "oggetto_lotto",
+     "importo_lotto",
+     "oggetto_principale_contratto",
+     "stato",
+     "settore",
+     "luogo_istat",
+     "provincia",
+     "data_pubblicazione",
+     "data_scadenza_offerta",
+     "cod_tipo_scelta_contraente",
+     "tipo_scelta_contraente",
+     "cod_modalita_realizzazione",
+     "modalita_realizzazione",
+     "codice_ausa",
+     "cf_amministrazione_appaltante",
+     "denominazione_amministrazione_appaltante",
+     "sezione_regionale",
+     "id_centro_costo",
+     "denominazione_centro_costo",
+     "anno_pubblicazione",
+     "mese_pubblicazione",
+     "cod_cpv",
+     "descrizione_cpv",
+     "flag_prevalente",
+     "COD_MOTIVO_CANCELLAZIONE",
+     "MOTIVO_CANCELLAZIONE",
+     "DATA_CANCELLAZIONE",
+     "DATA_ULTIMO_PERFEZIONAMENTO",
+     "COD_MODALITA_INDIZIONE_SPECIALI",
+     "MODALITA_INDIZIONE_SPECIALI",
+     "COD_MODALITA_INDIZIONE_SERVIZI",
+     "MODALITA_INDIZIONE_SERVIZI",
+     "DURATA_PREVISTA",
+     "COD_STRUMENTO_SVOLGIMENTO",
+     "STRUMENTO_SVOLGIMENTO",
+     "FLAG_URGENZA",
+     "COD_MOTIVO_URGENZA",
+     "MOTIVO_URGENZA",
+     "FLAG_DELEGA",
+     "FUNZIONI_DELEGATE",
+     "CF_SA_DELEGANTE",
+     "DENOMINAZIONE_SA_DELEGANTE",
+     "CF_SA_DELEGATA",
+     "DENOMINAZIONE_SA_DELEGATA",
+     "IMPORTO_SICUREZZA",
+     "TIPO_APPALTO_RISERVATO",
+     "CUI_PROGRAMMA",
+     "FLAG_PREV_RIPETIZIONI",
+     "COD_IPOTESI_COLLEGAMENTO",
+     "IPOTESI_COLLEGAMENTO",
+     "CIG_COLLEGAMENTO",
+     "COD_ESITO",
+     "ESITO",
+     "DATA_COMUNICAZIONE_ESITO",
+     "FLAG_PNRR_PNC"
+    ]
+   ],
+   "nota": null
+  }
+ ]
+}
