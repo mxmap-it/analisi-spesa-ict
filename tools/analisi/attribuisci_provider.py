@@ -22,6 +22,10 @@ RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*2|cloud\s+iaas\s+e\s+paas
 RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)
 LOTTO_N = {str(l.get("lotto")): l for l in LOTTI.values() if l.get("lotto")}
 RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b", re.I)
+# "servizi applicativi in ottica cloud" (AQ Consip) è sviluppo applicativo, non servizio cloud
+RX_NON_CLOUD = re.compile(r"ins+otticas+cloud|clouds+natives+development", re.I)
+# AQ non ancora richiamati da nessun attuativo: massimale presunto
+RX_AQ = re.compile(r"accordos+quadro|convenzione", re.I)
 
 def marchio(testo):
     for m in MARCHI:
@@ -84,9 +88,9 @@ def main(anni):
                             via, prov, serv = "5-fornitore", m["provider"], m["servizio"]; break
                 if not via:
                     if not ict: continue
-                    via = "7-indeterminato-cloud" if RX_CLOUD.search(testo) else "0-ict-non-cloud"
+                    via = "7-indeterminato-cloud" if RX_CLOUD.search(testo) and not RX_NON_CLOUD.search(testo) else "0-ict-non-cloud"
                 prov = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}.get(prov, prov)
-                padre = r["cig"] in padri
+                padre = r["cig"] in padri or (not aq and bool(RX_AQ.search(testo)) and r.get("tipo_scelta_contraente", "").upper().startswith("PROCEDURA"))
                 try: imp = float(r["importo_lotto"] or 0)
                 except ValueError: imp = 0.0
                 w.writerow([r["cig"], aq, int(padre), r["cod_cpv"], imp, r["denominazione_amministrazione_appaltante"], " ; ".join(sorted(agg.get(r["cig"], []))), testo[:500], via, prov, GIUR.get(prov, ""), serv])
