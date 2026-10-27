@@ -36,6 +36,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - File di lavoro in `lavoro/`, **mai in `/tmp`** (server condiviso con altri progetti).
 - Non usare `pkill -f` con pattern che colpiscono la tua sessione; usa `tools/avvia.sh` e pattern `[t]ools/...`.
 - Guardia disco: il mirror si ferma sotto 40 GB liberi.
+- **Il server è condiviso con altri progetti** (carico alto, 31 GB di RAM): i job pesanti girano con `nice`, duckdb su disco con `memory_limit` (6 GB) e pochi thread. Il 27/10/2026 un caricamento di tutti i CIG in memoria ha reso il server irraggiungibile.
 - Cron sul server: guardiano ogni 15 minuti, sonda 06:10, metriche 06:40. Esiti in `stato/` (giornalieri, mai sovrascritti).
 - Ogni job dev'essere ripartibile e idempotente; il progresso si scrive su file, non solo nel contesto dell'agente.
 
