@@ -1,0 +1,20 @@
+{{ $p := .p }}{{ $repo := .repo }}
+<section class="scheda" id="{{ $p.id | lower }}">
+  <h3>{{ $p.id }} · {{ $p.titolo }} <span class="grav grav-{{ $p.gravita }}">{{ index .etichetta $p.gravita }}</span></h3>
+  {{ with $p.rif }}<p class="small text-muted">Riferimenti nell'analisi completa: {{ delimit . ", " }}</p>{{ end }}
+  <dl>
+    <dt>Conseguenza</dt><dd>{{ $p.conseguenza }}</dd>
+    {{ with $p.prova.sintesi }}<dt>Cosa abbiamo misurato</dt><dd>{{ . }} <span class="text-muted">(verificato il {{ $p.prova.verificato_il }})</span></dd>{{ end }}
+    <dt>Come rifarlo</dt>
+    <dd>
+      {{ $script := $p.prova.script }}{{ $file := index (split $script " ") 0 }}
+      Script <a href="{{ $repo }}/blob/main/{{ $file }}"><code>{{ $script }}</code></a>{{ with $p.prova.esito }}; esito pubblicato in <code>{{ . }}</code>{{ end }}.
+      Istruzioni complete per rifare tutto da zero in <a href="{{ $repo }}/blob/main/RIPRODURRE.md">RIPRODURRE.md</a>.
+    </dd>
+    <dt>Conferma indipendente</dt><dd>{{ $p.controvalidazione }}</dd>
+    <dt>Rimedio atteso da ANAC</dt><dd>{{ $p.azione_correttiva }}</dd>
+    <dt>Come verificheremo che non si ripresenti</dt><dd>{{ $p.metrica }}</dd>
+    {{ with $p.manca }}<dt>Cosa manca alla scheda</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with $p.storia }}<dt>Correzioni</dt><dd>{{ . }}</dd>{{ end }}
+  </dl>
+</section>

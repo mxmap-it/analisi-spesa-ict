@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{- /* Documento per ANAC generato dal registro dei problemi (report/anac/problemi.yaml, copiato in data/ da tools/costruisci_sito.sh). Una sola fonte per web, PDF e presentazione. */ -}}
+{{ $repo := site.Params.repo }}
+{{ $tutti := site.Data.anac_problemi }}
+{{ $ordine := dict "alta" 1 "media" 2 "bassa" 3 "da_valutare" 4 }}
+{{ $etichetta := dict "alta" "Alta" "media" "Media" "bassa" "Bassa" "da_valutare" "Da valutare" }}
+{{ $pronti := slice }}{{ $verifica := slice }}
+{{ range $tutti }}{{ $p := merge . (dict "ord" (index $ordine .gravita)) }}{{ if .pronto_per_anac }}{{ $pronti = $pronti | append $p }}{{ else }}{{ $verifica = $verifica | append $p }}{{ end }}{{ end }}
+{{ $pronti = sort $pronti "ord" }}{{ $verifica = sort $verifica "ord" }}
+<style>
+  .scheda { border-top: 1px solid #d9dadb; padding-top: 1.5rem; margin-top: 2.5rem; }
+  .scheda dt { font-weight: 600; margin-top: .9rem; }
+  .scheda dd { margin-left: 0; }
+  .grav { display: inline-block; padding: .1rem .55rem; border-radius: .25rem; font-size: .8rem; font-weight: 600; color: #fff; vertical-align: middle; }
+  .grav-alta { background: #a61919; } .grav-media { background: #a66300; } .grav-bassa { background: #5c6f82; } .grav-da_valutare { background: #5c6f82; }
+  table.sintesi td, table.sintesi th { vertical-align: top; font-size: .92rem; }
+  @media print {
+    header, footer, .it-header-wrapper, .it-footer, nav, .no-print { display: none !important; }
+    .col-lg-9 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+    .scheda { break-before: page; border-top: 0; margin-top: 0; }
+    a { color: #000; text-decoration: none; }
+    body { font-size: 10.5pt; }
+    @page { size: A4; margin: 18mm 16mm; }
+  }
+</style>
+<div class="container-xxl section-spacing-lg">
+  <div class="row justify-content-center">
+    <div class="col-lg-9">
+      <article>
+        <div class="category-top mb-3">
+          <span class="category">Rendiconti</span>
+          <span class="data">{{ partial "date-it.html" .Date }}</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+        {{ with .Params.pdf }}<p class="no-print"><a href="{{ . | relURL }}" class="btn btn-primary" download>Scarica il PDF</a></p>{{ end }}
+
+        <div class="article-content">{{ .Content }}</div>
+
+        <h2 id="sintesi-dei-problemi">Sintesi dei problemi</h2>
+        <p>{{ len $pronti }} problemi sono pronti per essere comunicati: ciascuno ha la prova riproducibile,
+        la conferma per una seconda via indipendente, un'azione correttiva e una metrica che ne misura la
+        non ricorrenza. Altri {{ len $verifica }} sono in verifica e compaiono in fondo, separati.</p>
+        <div class="table-responsive">
+        <table class="table sintesi">
+          <thead><tr><th>#</th><th>Problema</th><th>Gravità</th><th>Conseguenza</th><th>Rimedio atteso da ANAC</th></tr></thead>
+          <tbody>
+          {{ range $pronti }}
+            <tr><td><a href="#{{ .id | lower }}">{{ .id }}</a></td><td>{{ .titolo }}</td>
+              <td><span class="grav grav-{{ .gravita }}">{{ index $etichetta .gravita }}</span></td>
+              <td>{{ .conseguenza }}</td><td>{{ .azione_correttiva }}</td></tr>
+          {{ end }}
+          </tbody>
+        </table>
+        </div>
+
+        <h2 id="schede">Le schede, problema per problema</h2>
+        <p>Ogni scheda è scritta per il gruppo tecnico che deve correggere il problema: cosa abbiamo
+        misurato, come rifarlo, come lo abbiamo confermato, cosa chiediamo, e come verificheremo che
+        il problema non si ripresenti.</p>
+        {{ range $pronti }}{{ partial "scheda-problema.html" (dict "p" . "repo" $repo "etichetta" $etichetta) }}{{ end }}
+
+        {{ with $verifica }}
+        <h2 id="in-verifica" class="scheda">Problemi in verifica</h2>
+        <p>Questi problemi sono misurati ma non ancora confermati per una seconda via, o manca un
+        elemento della scheda. Non fanno parte della comunicazione finché non sono completi.</p>
+        {{ range . }}{{ partial "scheda-problema.html" (dict "p" . "repo" $repo "etichetta" $etichetta) }}{{ end }}
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}
