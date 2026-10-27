@@ -1,0 +1,104 @@
+# Dizionario dei marchi per la via 3 (marchio nella descrizione) e la via 5 (il fornitore è il provider).
+# provider: nome canonico; giurisdizione: IT | UE | EXTRA-UE (sede della capogruppo del produttore);
+# regex: espressioni sul testo (case-insensitive); escludi: falsi positivi noti;
+# fornitori: pattern sulla denominazione dell'aggiudicatario che appartiene al gruppo del provider (via 5).
+# Metodo: sito/content/progetto/metodo-cloud-provider.md
+
+- provider: Microsoft
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['microsoft\s*365', 'office\s*365', '\bo365\b', '\bm365\b', '\bazure\b', 'exchange\s+online', 'sharepoint\s+online', 'dynamics\s*365', 'microsoft\s+teams']
+  fornitori: ['^microsoft\b']
+- provider: Amazon Web Services
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['\baws\b', 'amazon\s+web\s+services']
+  fornitori: ['^amazon\s+web\s+services', '^aws\b']
+- provider: Google
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['google\s+workspace', '\bg\s*suite\b', 'google\s+cloud', '\bgcp\b', 'google\s+for\s+education']
+  fornitori: ['^google\b']
+- provider: Oracle
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['oracle\s+cloud', '\boci\b', 'cloud\s*@\s*customer']
+  fornitori: []
+- provider: IBM
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['ibm\s+cloud']
+  fornitori: []
+- provider: Salesforce
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['salesforce']
+  fornitori: ['^salesforce']
+- provider: ServiceNow
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['servicenow']
+  fornitori: []
+- provider: Zoom
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['\bzoom\s+(pro|business|meetings?|workplace|licen)']
+  fornitori: []
+- provider: Cisco Webex
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['webex']
+  fornitori: []
+- provider: Adobe
+  giurisdizione: EXTRA-UE
+  servizio: cloud
+  regex: ['adobe\s+creative\s+cloud', 'adobe\s+acrobat', 'adobe\s+sign', 'document\s+cloud']
+  fornitori: []
+- provider: Aruba
+  giurisdizione: IT
+  servizio: cloud
+  regex: ['\baruba\b']
+  escludi: ['aruba\s+pec', 'pec\s+aruba', 'firma\s+digitale', 'aruba\s+networks', '\bswitch\b', 'access\s+point']
+  fornitori: ['^aruba\s+s\.?p\.?a']
+- provider: Seeweb
+  giurisdizione: IT
+  servizio: cloud
+  regex: ['seeweb']
+  fornitori: ['^seeweb']
+- provider: WIIT
+  giurisdizione: IT
+  servizio: cloud
+  regex: ['\bwiit\b']
+  fornitori: ['^wiit']
+- provider: Retelit
+  giurisdizione: IT
+  servizio: cloud
+  regex: ['retelit']
+  fornitori: ['^retelit']
+- provider: OVHcloud
+  giurisdizione: UE
+  servizio: cloud
+  regex: ['\bovh']
+  fornitori: ['^ovh']
+- provider: Polo Strategico Nazionale
+  giurisdizione: IT
+  servizio: psn
+  nota: "Via 4: il PSN eroga anche tecnologie di hyperscaler USA; la giurisdizione del prodotto va decisa voce per voce. Qui si marca solo il canale."
+  regex: ['polo\s+strategico\s+nazionale', '\bpsn\b']
+  fornitori: ['^polo\s+strategico\s+nazionale']
+# Licenze on-prem di produttori extra-UE: non sono cloud, si marcano a parte (servizio: licenza)
+- provider: Microsoft
+  giurisdizione: EXTRA-UE
+  servizio: licenza
+  regex: ['licenz\w*\s+(\w+\s+){0,2}microsoft', 'windows\s+server', 'sql\s+server', '\bcal\b.{0,20}microsoft']
+  fornitori: []
+- provider: VMware
+  giurisdizione: EXTRA-UE
+  servizio: licenza
+  regex: ['vmware']
+  fornitori: []
+- provider: Oracle
+  giurisdizione: EXTRA-UE
+  servizio: licenza
+  regex: ['oracle\s+database', 'licenz\w*\s+(\w+\s+){0,2}oracle']
+  fornitori: []
