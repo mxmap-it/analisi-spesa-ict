@@ -1,0 +1,233 @@
+{
+ "fonti": {
+  "pa_digitale_2026": [
+   "archivio/mirror/raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_finanziate_11.csv",
+   "archivio/mirror/raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_finanziate_12.csv"
+  ],
+  "anac_cup": "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cup/filesystem/cup_csv.zip"
+ },
+ "misure": {
+  "1.1": {
+   "candidature_finanziate": 206,
+   "importo_finanziato": 91071746,
+   "cup_con_almeno_un_cig": 164,
+   "copertura_collegamento_pct": 79.6,
+   "cig_collegati": 70,
+   "cig_nel_perimetro_attribuito": 61,
+   "cig_fuori_perimetro": 9,
+   "importo_contratti_nel_perimetro": 270307530,
+   "importo_con_provider_attribuito_pct": 96.7,
+   "esclusi": {
+    "importi_da_verificare": 107928602
+   },
+   "per_giurisdizione_provider_tipo": [
+    {
+     "giurisdizione": "IT",
+     "provider": "Polo Strategico Nazionale",
+     "servizio": "psn",
+     "cig": 49,
+     "importo": 204338491
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Polo Strategico Nazionale",
+     "servizio": "servizi-professionali",
+     "cig": 9,
+     "importo": 57002093
+    },
+    {
+     "giurisdizione": "-",
+     "provider": "nessun provider (0-ict-non-cloud)",
+     "servizio": "-",
+     "cig": 3,
+     "importo": 8966946
+    }
+   ]
+  },
+  "1.2": {
+   "candidature_finanziate": 20855,
+   "importo_finanziato": 1263393329,
+   "cup_con_almeno_un_cig": 11566,
+   "copertura_collegamento_pct": 55.5,
+   "cig_collegati": 17973,
+   "cig_nel_perimetro_attribuito": 12504,
+   "cig_fuori_perimetro": 5469,
+   "importo_contratti_nel_perimetro": 818897475,
+   "importo_con_provider_attribuito_pct": 51.6,
+   "esclusi": {
+    "importi_da_verificare": 20000000,
+    "padri": 1139000
+   },
+   "per_giurisdizione_provider_tipo": [
+    {
+     "giurisdizione": "IT",
+     "provider": "Polo Strategico Nazionale",
+     "servizio": "psn",
+     "cig": 97,
+     "importo": 316212877
+    },
+    {
+     "giurisdizione": "-",
+     "provider": "nessun provider (7-indeterminato-cloud)",
+     "servizio": "-",
+     "cig": 10626,
+     "importo": 289928490
+    },
+    {
+     "giurisdizione": "-",
+     "provider": "nessun provider (0-ict-non-cloud)",
+     "servizio": "-",
+     "cig": 1547,
+     "importo": 106769172
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Polo Strategico Nazionale",
+     "servizio": "servizi-professionali",
+     "cig": 29,
+     "importo": 72988917
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "In-house pubblico",
+     "servizio": "in-house",
+     "cig": 108,
+     "importo": 12512293
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Microsoft",
+     "servizio": "cloud",
+     "cig": 32,
+     "importo": 7127448
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "TIM",
+     "servizio": "servizi-professionali",
+     "cig": 5,
+     "importo": 5677075
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Microsoft",
+     "servizio": "licenza",
+     "cig": 12,
+     "importo": 2829624
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Oracle",
+     "servizio": "cloud",
+     "cig": 1,
+     "importo": 2159540
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Fastweb",
+     "servizio": "servizi-professionali",
+     "cig": 3,
+     "importo": 974727
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Amazon Web Services",
+     "servizio": "cloud",
+     "cig": 3,
+     "importo": 387000
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Google",
+     "servizio": "servizi-professionali",
+     "cig": 3,
+     "importo": 277530
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Salesforce",
+     "servizio": "cloud",
+     "cig": 1,
+     "importo": 214000
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "TIM",
+     "servizio": "cloud",
+     "cig": 6,
+     "importo": 200622
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "VMware",
+     "servizio": "software-infrastruttura",
+     "cig": 4,
+     "importo": 189301
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Google",
+     "servizio": "cloud",
+     "cig": 7,
+     "importo": 144360
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Oracle",
+     "servizio": "servizi-professionali",
+     "cig": 1,
+     "importo": 76400
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Amazon Web Services",
+     "servizio": "servizi-professionali",
+     "cig": 2,
+     "importo": 67300
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Oracle",
+     "servizio": "licenza",
+     "cig": 1,
+     "importo": 65830
+    },
+    {
+     "giurisdizione": "EXTRA-UE",
+     "provider": "Microsoft",
+     "servizio": "servizi-professionali",
+     "cig": 6,
+     "importo": 56917
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Aruba",
+     "servizio": "servizi-professionali",
+     "cig": 3,
+     "importo": 27100
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Retelit",
+     "servizio": "cloud",
+     "cig": 1,
+     "importo": 5000
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Retelit",
+     "servizio": "servizi-professionali",
+     "cig": 1,
+     "importo": 4500
+    },
+    {
+     "giurisdizione": "IT",
+     "provider": "Aruba",
+     "servizio": "cloud",
+     "cig": 5,
+     "importo": 1453
+    }
+   ]
+  }
+ }
+}
