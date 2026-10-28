@@ -32,7 +32,7 @@ def main():
             presenti = c.marchi_presenti(r["testo"])
             if "Polo Strategico Nazionale" in presenti and BIGTECH & set(presenti):
                 psn_bigtech.append({"cig": r["cig"], "importo": imp, "bigtech": sorted(BIGTECH & set(presenti)), "aggiudicatari": r["aggiudicatari"], "testo": r["testo"][:300]})
-            canale = r.get("canale") or c.canale(r["provider"], [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()])
+            canale = c.canale(r["provider"], [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()])
             totali[(r["provider"], canale)] += imp
             if canale != "rivenditore": continue
             for nome in [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]:

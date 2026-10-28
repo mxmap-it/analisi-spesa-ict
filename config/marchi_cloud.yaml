@@ -13,7 +13,9 @@
   - (cloud|sottoscrizion).{0,60}s/?4\s*hana
   - sap\s+(btp|business\s+technology\s+platform)
   - \bsap\s+ariba\b
-  fornitori: []
+  fornitori:
+  - ^s\s*a\s*p\s+italia
+  - ^sap\s+(se|italia)\b
 - provider: SAP
   giurisdizione: UE
   servizio: licenza
@@ -98,7 +100,8 @@
   servizio: cloud
   regex:
   - servicenow
-  fornitori: []
+  fornitori:
+  - ^servicenow
 - provider: Zoom
   giurisdizione: EXTRA-UE
   servizio: cloud
