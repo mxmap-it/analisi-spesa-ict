@@ -76,7 +76,8 @@ class Classificatore:
                        if any(r.search(testo) for r in m["rx"]) and not any(e.search(testo) for e in m["ex"])})
 
     def _servizio(self, serv, testo, provider=""):
-        if serv in ("cloud", "psn", "") and RX_TELEFONIA.search(testo) and not RX_ALTRO_CLOUD.search(testo)                 and (provider in MARCHI_COMUNICAZIONE or provider not in self.piattaforme):
+        if serv in ("cloud", "psn", "") and RX_TELEFONIA.search(testo) and not RX_ALTRO_CLOUD.search(testo) \
+                and (provider in MARCHI_COMUNICAZIONE or provider not in self.piattaforme):
             return "telefonia"
         if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
             return "servizi-professionali"
