@@ -81,6 +81,11 @@ vecchia.
 |---|---|---|---|
 | 2026-10-26 | **Separare sempre ciò che abbiamo verificato noi da ciò che riportiamo da altri** | Claude, dopo l'errore su BDAP | Avevo scritto come fatto un difetto di BDAP riferito da AgID, e un blocco degli IP cloud riferito da DataCivicLab |
 | 2026-10-26 | Un conteggio anomalo non è sempre un errore: si classifica come **errore, incongruenza, convenzione o assenza di schema** | Claude | I codici `CFAVCP-…` e le partite IVA estere sembravano errori e non lo erano |
+| 2026-10-28 | **Prima la misura cloud** (big tech USA, provider UE, provider italiani su datacenter propri) con la mappa dei rivenditori, PSN compreso; **in-house e datacenter propri dopo**, come punto aperto (#52) | Fabio | Chiudere bene una misura prima di aprirne un'altra |
+| 2026-10-28 | Classificatore **robusto, riusabile e testabile**: funzione pura (`tools/analisi/classifica.py`), tabelle in `config/`, ogni errore trovato diventa un caso in `tests/casi_classifica.yaml` che non si toglie | Fabio, implementato da Claude | Rendere le regole verificabili da terzi e portabili ad altri strumenti |
+| 2026-10-28 | Il metodo pubblicato dichiara **difficoltà, vie di analisi, verifica umana alla cieca a campione e raccomandazioni** per semplificare il monitoraggio | Fabio | Il metodo è parte del risultato |
+| 2026-10-28 | Le righe lette per scrivere una versione delle regole diventano **campione di sviluppo**; ogni misura si fa su un campione nuovo che esclude tutti quelli già visti, con copia cieca per gli annotatori | Claude | Non misurare la precisione sulle righe usate per tararla |
+| 2026-10-28 | **Codice nostro al minimo:** a fine lavoro il metodo si propone come miglioramento degli strumenti esistenti (anac-pl-pp-cli di aborruso, #22), almeno per la parte ben gestita e manutenibile | Fabio | Ridurre la manutenzione e ampliare la capacità di analisi di terzi |
 
 ## Decisioni aperte, che spettano a Fabio
 
