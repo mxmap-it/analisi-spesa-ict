@@ -21,11 +21,14 @@ def main():
     agg = collections.defaultdict(lambda: {"contratti": 0, "importo": 0.0, "provider": collections.Counter(), "nomi": set()})
     psn_bigtech = []
     totali = collections.Counter()
+    da_verificare = collections.Counter()
     for f in sorted(glob.glob("lavoro/attribuzione/[0-9]*.csv") + []):
         if "campione" in os.path.basename(f): continue
         for r in csv.DictReader(open(f, encoding="utf-8")):
             if r["e_padre"] == "1" or not r["provider"] or r["servizio"] in ("servizi-professionali", "in-house", "software-infrastruttura"): continue
             imp = float(r["importo_lotto"] or 0)
+            if r.get("importo_da_verificare"):  # probabile massimale di convenzione: contato a parte (attribuisci_provider.py)
+                da_verificare[r["provider"]] += imp; continue
             presenti = c.marchi_presenti(r["testo"])
             if "Polo Strategico Nazionale" in presenti and BIGTECH & set(presenti):
                 psn_bigtech.append({"cig": r["cig"], "importo": imp, "bigtech": sorted(BIGTECH & set(presenti)), "aggiudicatari": r["aggiudicatari"], "testo": r["testo"][:300]})
@@ -45,8 +48,9 @@ def main():
             bt = sum(v for p, v in a["provider"].items() if p in BIGTECH)
             w.writerow([k, a["contratti"], round(a["importo"]), round(bt / a["importo"], 3) if a["importo"] else "",
                         " ; ".join(f"{p}={round(v)}" for p, v in a["provider"].most_common()), " | ".join(sorted(a["nomi"])[:5])])
-    sintesi = {"generato": oggi, "regole": "v3", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ esclusi), anni di pubblicazione 2024, 2025, 2026; per ogni CIG l’ultima versione pubblicata",
+    sintesi = {"generato": oggi, "regole": "v3", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ e importi da verificare esclusi), anni di pubblicazione 2024, 2025, 2026; per ogni CIG l’ultima versione pubblicata",
                "per_provider_e_canale": [{"provider": p, "canale": ch, "importo": round(v)} for (p, ch), v in sorted(totali.items(), key=lambda x: -x[1])],
+               "esclusi_importi_da_verificare": {p: round(v) for p, v in da_verificare.most_common()},
                "rivenditori": len(righe),
                "primi_20": [{"rivenditore": k, "contratti": a["contratti"], "importo": round(a["importo"]), "provider": dict(a["provider"].most_common(5))} for k, a in righe[:20]],
                "psn_con_bigtech": {"contratti": len(psn_bigtech), "importo": round(sum(x["importo"] for x in psn_bigtech)), "esempi": psn_bigtech[:15]}}
