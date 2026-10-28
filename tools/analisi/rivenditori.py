@@ -48,7 +48,7 @@ def main():
             bt = sum(v for p, v in a["provider"].items() if p in BIGTECH)
             w.writerow([k, a["contratti"], round(a["importo"]), round(bt / a["importo"], 3) if a["importo"] else "",
                         " ; ".join(f"{p}={round(v)}" for p, v in a["provider"].most_common()), " | ".join(sorted(a["nomi"])[:5])])
-    sintesi = {"generato": oggi, "regole": "v3", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ e importi da verificare esclusi), anni di pubblicazione 2024, 2025, 2026; per ogni CIG l’ultima versione pubblicata",
+    sintesi = {"generato": oggi, "regole": "v3", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ e importi da verificare esclusi), anni di pubblicazione 2022-2026; per ogni CIG l’ultima versione pubblicata",
                "per_provider_e_canale": [{"provider": p, "canale": ch, "importo": round(v)} for (p, ch), v in sorted(totali.items(), key=lambda x: -x[1])],
                "esclusi_importi_da_verificare": {p: round(v) for p, v in da_verificare.most_common()},
                "rivenditori": len(righe),

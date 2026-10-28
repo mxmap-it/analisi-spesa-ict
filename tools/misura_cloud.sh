@@ -3,7 +3,7 @@
 # Prerequisito: i file ANAC scaricati e verificati con tools/verifica_anac.sh ambiente | scarica | snapshot
 #
 #   tools/misura_cloud.sh test          casi di riferimento del classificatore (tests/casi_classifica.yaml)
-#   tools/misura_cloud.sh attribuisci   attribuisce provider, giurisdizione, tipo e canale a ogni contratto ICT 2024, 2025, 2026
+#   tools/misura_cloud.sh attribuisci   attribuisce provider, giurisdizione, tipo e canale a ogni contratto ICT 2022-2026 (dal primo avviso PNRR cloud)
 #   tools/misura_cloud.sh rivenditori   mappa dei rivenditori dei prodotti cloud, PSN compreso
 #   tools/misura_cloud.sh campione      ri-estrae il campione di misura (seme fisso: stesso campione se i dati sono gli stessi)
 #   tools/misura_cloud.sh misura A.csv [B.csv]   precisione e accordo sulle annotazioni alla cieca
@@ -17,7 +17,7 @@ ESITI=esiti/$OGGI/cloud
 mkdir -p "$ESITI"
 
 test_()       { "$PY" tests/test_classifica.py; }
-attribuisci() { nice -n 10 "$PY" tools/analisi/attribuisci_provider.py 2024 2025 2026 >/dev/null && cp lavoro/attribuzione/riepilogo.json "$ESITI/attribuzione-riepilogo.json"; echo "esito: $ESITI/attribuzione-riepilogo.json"; }
+attribuisci() { nice -n 10 "$PY" tools/analisi/attribuisci_provider.py 2022 2023 2024 2025 2026 >/dev/null && cp lavoro/attribuzione/riepilogo.json "$ESITI/attribuzione-riepilogo.json"; echo "esito: $ESITI/attribuzione-riepilogo.json"; }
 rivenditori() { nice -n 10 "$PY" tools/analisi/rivenditori.py >/dev/null && cp lavoro/attribuzione/rivenditori.json "$ESITI/rivenditori.json"; echo "esito: $ESITI/rivenditori.json"; }
 campione()    { "$PY" tools/analisi/campione_riferimento.py 700 20261028 campione-misura-v3 && cp lavoro/attribuzione/campione-misura-v3*.csv "$ESITI/"; }
 misura()      { "$PY" tools/analisi/misura_campione.py report/metodo/campione-misura-v3.csv "$@" | tee "$ESITI/misura.json"; }

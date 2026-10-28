@@ -66,7 +66,7 @@ usa gli stessi file ANAC: prima `ambiente`, `scarica` e `snapshot` qui sopra (i 
 
 ```bash
 tools/misura_cloud.sh test          # casi di riferimento del classificatore: devono passare tutti
-tools/misura_cloud.sh attribuisci   # provider, giurisdizione, tipo e canale per ogni contratto ICT 2024, 2025, 2026 (~30 min)
+tools/misura_cloud.sh attribuisci   # provider, giurisdizione, tipo e canale per ogni contratto ICT 2022-2026 (dal primo avviso PNRR cloud) (~30 min)
 tools/misura_cloud.sh rivenditori   # mappa dei rivenditori, PSN compreso
 tools/misura_cloud.sh campione      # ri-estrae il campione di misura: stesso seme, stesso campione
 tools/misura_cloud.sh confronta     # ogni numero confrontato con report/metodo/*-v3.json
