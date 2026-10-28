@@ -24,6 +24,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Mai presentare come fatto ciò che dice un terzo (AgID, DataCivicLab, ecc.) senza averlo riprodotto.
 - Ogni problema comunicato a un ente ha: evidenza riproducibile (con sha256), **azione correttiva** e **metrica** che misura che non si ripresenti (metriche I1–I9 in `tools/metriche_anac.py`).
 - Citare che AgID conosce e ha reso pubblici i problemi ANAC.
+- **Ogni richiesta o raccomandazione** che emerge dal lavoro (ad ANAC, Consip, PSN, Sogei, DTD, ACN…) per rendere questa analisi più facile e manutenibile si annota subito in `report/metodo/richieste-e-raccomandazioni.yaml`, con evidenza, stato (verificato / da verificare / proposta) e riferimenti.
 - Niente toni assoluti ("unico al mondo", "morto"): numeri, date, fonti.
 - Materiali riservati non si pubblicano: il PDF Proteggimi è una bozza interna (nessuna sua cifra in pubblico). Ad AppaltIntel (commerciale) non si comunica nulla.
 - Rispetta robots.txt; non aggirare WAF, Cloudflare o CAPTCHA. Per ANAC serve uno User-Agent da browser (più l'URL del progetto): è documentato come problema, non è un aggiramento.

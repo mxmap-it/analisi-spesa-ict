@@ -85,6 +85,7 @@ vecchia.
 | 2026-10-28 | Classificatore **robusto, riusabile e testabile**: funzione pura (`tools/analisi/classifica.py`), tabelle in `config/`, ogni errore trovato diventa un caso in `tests/casi_classifica.yaml` che non si toglie | Fabio, implementato da Claude | Rendere le regole verificabili da terzi e portabili ad altri strumenti |
 | 2026-10-28 | Il metodo pubblicato dichiara **difficoltà, vie di analisi, verifica umana alla cieca a campione e raccomandazioni** per semplificare il monitoraggio | Fabio | Il metodo è parte del risultato |
 | 2026-10-28 | Le righe lette per scrivere una versione delle regole diventano **campione di sviluppo**; ogni misura si fa su un campione nuovo che esclude tutti quelli già visti, con copia cieca per gli annotatori | Claude | Non misurare la precisione sulle righe usate per tararla |
+| 2026-10-28 | **Registro unico delle richieste e raccomandazioni** (ANAC, Consip, PSN, Sogei, DTD, ACN) in `report/metodo/richieste-e-raccomandazioni.yaml`, aggiornato man mano | Fabio | Rendere l'analisi più facile e manutenibile e dare capacità di monitoraggio al DTD e ai progetti indipendenti |
 | 2026-10-28 | **Codice nostro al minimo:** a fine lavoro il metodo si propone come miglioramento degli strumenti esistenti (anac-pl-pp-cli di aborruso, #22), almeno per la parte ben gestita e manutenibile | Fabio | Ridurre la manutenzione e ampliare la capacità di analisi di terzi |
 
 ## Decisioni aperte, che spettano a Fabio

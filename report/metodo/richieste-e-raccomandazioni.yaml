@@ -1,0 +1,111 @@
+# Registro delle richieste e raccomandazioni per rendere misurabile la spesa cloud della PA.
+# Obiettivo: rendere questa analisi più facile, gestibile e manutenibile, e dare capacità di monitoraggio
+# al Dipartimento per la trasformazione digitale (DTD) oltre che ai progetti indipendenti.
+# Regola (AGENTS.md §3): ogni richiesta o raccomandazione che emerge dal lavoro si annota QUI, subito.
+# tipo: difetto (il dato è sbagliato o manca rispetto a ciò che è dovuto) | miglioramento (proposta di policy o di dato nuovo)
+# stato: verificato (misurato da noi, con prova) | da_verificare | proposta
+# Nessuna richiesta si invia senza l'approvazione di Fabio (decisione-fabio); i difetti verificati vanno anche
+# nel registro dei problemi ANAC (report/anac/problemi.yaml) con prova, rimedio e metrica.
+- id: R01
+  destinatario: ANAC
+  tipo: difetto
+  stato: verificato
+  titolo: Il collegamento contratto attuativo → accordo quadro (cig_accordo_quadro) non è compilato
+  evidenza: "Fra i contratti che nel testo dichiarano un'adesione, campo vuoto nel 20% nel 2025 (56% nel 2017); 11.568 CIG padre orfani"
+  prova: tools/verifiche/cig_accordo_quadro.py, report/anac/verifica-cig-accordo-quadro-2026-10-27.json
+  richiesta: Controllo bloccante all'acquisizione del CIG di un contratto attuativo; bonifica dello storico
+  perche_serve: Senza il collegamento il provider di un lotto Consip (es. AQ Cloud IaaS e PaaS 2) non si eredita, e il massimale non si separa dalla spesa
+  rif: [P15, "#50", "#54"]
+- id: R02
+  destinatario: ANAC
+  tipo: da classificare
+  stato: verificato
+  titolo: STRUMENTO_SVOLGIMENTO quasi sempre vuoto
+  evidenza: "CPV 48/72: vuoto nel 97,7% nel 2024 (48.922 su 50.061) e nel 99,6% nel 2025 (85.527 su 85.905)"
+  prova: misura del 28/10/2026 sui file cig-2024 e cig-2025 (da trasformare in verifica in tools/verifiche/)
+  richiesta: Un campo affidabile che dica se il contratto è accordo quadro, attuativo o autonomo
+  perche_serve: Separare i massimali (non spesa) dalla spesa; oggi lo deduciamo dal testo e dai collegamenti
+  nota: Prima di comunicarlo, escludere che sia un campo sostituito con il passaggio a BDNCP/eForms
+  rif: ["#54"]
+- id: R03
+  destinatario: ANAC
+  tipo: difetto
+  stato: verificato
+  titolo: Gli aggiornamenti mensili (delta) contengono CIG di tutti gli anni senza indicare cosa è cambiato
+  evidenza: "Il delta contiene CIG pubblicati dal 2007 al 2026; nessun campo dice se la riga è nuova o modificata, né quando"
+  prova: misura del 28/10/2026 (distribuzione di anno_pubblicazione nei delta)
+  richiesta: Documentare la semantica del delta; per ogni riga data e tipo di modifica
+  perche_serve: Chi somma annuali e delta conta due volte (lo abbiamo fatto noi, corretto il 28/10/2026)
+  rif: [P08, "#54"]
+- id: R04
+  destinatario: ANAC
+  tipo: difetto
+  stato: verificato
+  titolo: anno_pubblicazione con valori non validi
+  evidenza: "Nei delta 12 righe con anno '02', '04', '06'…"
+  richiesta: Validazione di formato del campo
+  rif: ["#54"]
+- id: R05
+  destinatario: ANAC
+  tipo: miglioramento
+  stato: proposta
+  titolo: Prodotto o servizio cloud come campo strutturato
+  richiesta: Per i contratti con CPV ICT, il codice del servizio nel catalogo ACN dei servizi cloud qualificati (o almeno il nome del prodotto in un campo dedicato)
+  perche_serve: Oggi il prodotto si ricava solo dal testo libero, con regole fragili (sigle omonime, alias, contratti misti)
+  rif: ["#54", "#48"]
+- id: R06
+  destinatario: ANAC
+  tipo: miglioramento
+  stato: proposta
+  titolo: Importi separati per abbonamento, licenze e servizi professionali
+  richiesta: Quando un lotto mescola sottoscrizioni, licenze e servizi, ripartire l'importo per componente
+  perche_serve: La dipendenza da un provider si misura sull'abbonamento, non sulla consulenza intorno
+  rif: ["#54"]
+- id: R07
+  destinatario: Consip
+  tipo: miglioramento
+  stato: proposta
+  titolo: Tabella aperta lotto → prodotto e provider per accordi quadro e convenzioni ICT
+  richiesta: Pubblicare in formato aperto, per ogni iniziativa ICT, i CIG dei lotti con prodotto, provider e aggiudicatario (es. AQ 2746 Cloud IaaS e PaaS 2: un lotto per provider)
+  perche_serve: Oggi la ricostruiamo a mano dai documenti di gara (config/lotti_cloud.yaml); con la tabella la via 1 copre tutte le adesioni
+  rif: ["#54", "#11"]
+- id: R08
+  destinatario: Consip
+  tipo: miglioramento
+  stato: proposta
+  titolo: Ordinativi delle convenzioni ICT in dati aperti con il prodotto
+  richiesta: Dati aperti degli ordinativi (chi ha comprato quale prodotto, quanto) per le convenzioni di licenze e cloud (es. Microsoft Enterprise Agreement, Licenze software multibrand)
+  perche_serve: Le adesioni a convenzioni Microsoft o multibrand passano da rivenditori (TIM): il prodotto per ordine è noto a Consip, non nei dati ANAC
+  rif: ["#11"]
+- id: R09
+  destinatario: PSN, Difesa Servizi, DTD
+  tipo: miglioramento
+  stato: proposta
+  titolo: Adesioni al PSN voce per voce, con la tecnologia sottostante
+  richiesta: Per ogni contratto di utenza, le voci del piano dei fabbisogni con il servizio di catalogo e la tecnologia (cloud privato nazionale, "secure public cloud" o "hybrid" su hyperscaler, con quale provider)
+  perche_serve: Il PSN è un canale, non un prodotto; senza le voci non si sa quanta spesa PSN va a tecnologia extra-UE (via 4 del metodo)
+  rif: ["#45", "#48"]
+- id: R10
+  destinatario: DTD
+  tipo: miglioramento
+  stato: proposta
+  titolo: Dati aperti PNRR Misure 1.1 e 1.2 per ente con il fornitore e il servizio
+  richiesta: Per ogni finanziamento PA digitale 2026 (migrazione al cloud), il servizio acquistato, il fornitore e il CIG
+  perche_serve: Collegare i fondi PNRR cloud ai contratti e ai provider senza dedurre dal testo
+  rif: ["#43", "#26"]
+- id: R11
+  destinatario: ACN
+  tipo: miglioramento
+  stato: proposta
+  titolo: Catalogo dei servizi cloud qualificati con identificativo stabile e infrastruttura sottostante
+  richiesta: Un identificativo stabile per servizio, il soggetto che lo eroga e l'infrastruttura (IaaS) su cui gira, in formato aperto
+  perche_serve: Il SaaS di produttori italiani spesso gira su hyperscaler; serve per la dimensione "dove gira" e come chiave per R05
+  rif: ["#13", "#48"]
+- id: R12
+  destinatario: Sogei, PagoPA, in-house regionali
+  tipo: miglioramento
+  stato: proposta
+  titolo: Spesa per infrastruttura e cloud degli in-house verso i propri fornitori
+  richiesta: Pubblicare gli acquisti cloud e di infrastruttura fatti per conto delle amministrazioni servite, collegati agli enti beneficiari
+  perche_serve: Una quota della spesa cloud della PA passa dagli in-house e non si vede dal lato dell'ente (punto aperto #52)
+  rif: ["#52"]
