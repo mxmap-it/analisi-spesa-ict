@@ -131,3 +131,14 @@
   perche_serve: "Pochi contratti di questo tipo valgono più di tutto il resto della spesa cloud: senza correzione i totali sono inutilizzabili"
   nota: Per ogni caso va verificato l'importo reale (documenti di gara, ordinativo Consip) prima di comunicarlo
   rif: ["#54", "#48"]
+- id: R15
+  destinatario: DTD, ANAC
+  tipo: da classificare
+  stato: verificato
+  titolo: Metà dei CUP finanziati dalla Misura 1.2 non ha un contratto collegato nei dati ANAC
+  evidenza: "20.855 finanziamenti 1.2 (1.263 milioni); solo 11.566 CUP (55,5%) hanno almeno un CIG nel dataset ANAC cup; Misura 1.1 79,6%"
+  prova: tools/analisi/pnrr_cloud.py, report/metodo/pnrr-cloud-v3.json
+  richiesta: "Rendere obbligatorio e controllato il CUP nel CIG dei contratti finanziati PNRR; pubblicare, per ogni progetto PA Digitale 2026, i CIG dei contratti"
+  perche_serve: Senza il collegamento non si sa a quali fornitori e prodotti vanno i fondi PNRR cloud
+  nota: "Da capire prima di comunicarlo: CUP non indicato nel CIG, acquisti fuori BDNCP, progetti non ancora a contratto"
+  rif: ["#43", "#54"]

@@ -121,4 +121,30 @@ Livello del risultato: **misurato** (prodotto da uno script su dati archiviati c
   - Dataset ANAC `cup` (CIG-CUP).
 - **Conseguenza.** I finanziamenti partono dal 2022, quindi la misura è stata estesa al 2022-2026.
 - **Commit.** `9dfb52a`, `8121f6e`, `7269a52`.
-- **Risultato.** *(in calcolo)*
+- **Risultato.** Vedi sotto.
+
+### Risultato del passo 8 (28/10/2026, commit `b2dfcca`)
+
+- **Misura 1.2.** 20.855 finanziamenti, per 1.263 milioni.
+  - Il 55,5% dei CUP ha almeno un CIG.
+  - 17.973 contratti sono collegati; 12.504 rientrano nel perimetro e valgono 818,9 milioni.
+  - Il provider è attribuito al 51,6% dell'importo, soprattutto PSN (316 milioni).
+  - 10.626 contratti cloud, per 290 milioni, non hanno provider.
+  - *Misurato.*
+- **Misura 1.1.** 206 finanziamenti; il 79,6% dei CUP è collegato; il 96,7% dell'importo è
+  attribuito, quasi tutto al PSN.
+- **Conseguenze.**
+  - La quota non attribuita della 1.2 è una stima indipendente del cloud che sfugge alle vie
+    1-5.
+  - La copertura del collegamento è diventata la richiesta R15.
+
+## 9. Pubblicazione v3 e riproduzione (28/10/2026)
+
+- **Fatto.** File pubblicati in `report/metodo/*-v3.*`, con gli sha256 delle fonti in
+  `fonti-v3.sha256`.
+- **Controllo.** `tools/misura_cloud.sh confronta` ha confrontato i numeri riprodotti con quelli
+  pubblicati: 1.449 uguali, 0 diversi.
+- **Rendiconto pubblico.** `/rendiconti/cloud-metodo-2026-10/`.
+- **Correzione collegata.** SAP Italia e ServiceNow risultavano rivenditori di sé stessi
+  (mancavano le denominazioni societarie). Corretto prima della pubblicazione, commit `b2dfcca`
+  e precedenti.
