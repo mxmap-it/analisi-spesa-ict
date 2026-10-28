@@ -33,7 +33,7 @@ RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscripti
 # v3.1 (29/10/2026, indicazione di Fabio): telefonia VoIP e centralino in cloud (UCaaS) hanno un tipo a sé, "telefonia".
 # Vale solo se la telefonia è l'oggetto: con il provider da via 5 (telco, hosting) o ignoto (via 7), o con un marchio di sola
 # comunicazione (Webex). Se c'è un'altra piattaforma (Microsoft 365, Salesforce) o altro cloud (IaaS, data center, backup) vince quella.
-RX_TELEFONIA = re.compile(r"voip|voice\s+over\s+ip|centralin|\bpbx\b|\bucaas\b|unified\s+communication|comunicazione\s+unificata|sip\s+trunk|telefonia\s+(ip|cloud|virtuale)", re.I)
+RX_TELEFONIA = re.compile(r"voip|voice\s+over\s+ip|centralin|pbx\b|\bucaas\b|unified\s+communication|comunicazione\s+unificata|sip\s+trunk|telefonia\s+(ip|cloud|virtuale)", re.I)
 # centralino ospitato dal fornitore: è cloud anche se il testo non dice "cloud"
 RX_TELEFONIA_CLOUD = re.compile(r"centralin\w*\s+(telefonic\w+\s+)?(virtual|in\s+cloud|cloud|hosted|ospitat)|virtual\s*(ip\s*)?pbx|(cloud|hosted)\s*pbx|pbx\s+(virtual|hosted|in\s+cloud)|\bucaas\b|voip\s+in\s+cloud", re.I)
 RX_ALTRO_CLOUD = re.compile(r"\b(iaas|paas|saas)\b|data\s*cent|server\s+virtual|macchine\s+virtual|backup|storage|cloud\s+computing|hosting\s+(web|sito|siti)", re.I)
