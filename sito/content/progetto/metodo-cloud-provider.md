@@ -1,87 +1,163 @@
 ---
 title: "Come si riconosce il cloud provider in un contratto"
-date: 2026-10-27
-description: "Le vie, distinte e documentate, con cui attribuiamo un contratto pubblico al cloud provider il cui prodotto viene comprato. Bozza di metodo, in validazione."
+date: 2026-10-28
+description: "Il metodo con cui attribuiamo un contratto pubblico al cloud provider il cui prodotto viene comprato: difficoltà, vie di analisi, verifica umana a campione, errori misurati, raccomandazioni per semplificare il monitoraggio."
 weight: 15
 ---
-**Stato: bozza in validazione** ([#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)).
-I numeri citati vengono dal pilota sul 2025 e sono ordini di grandezza finché la precisione
-non è misurata su un campione verificato a mano.
+**Stato: bozza in validazione, regole v3 del 28 ottobre 2026**
+([#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). Le precisioni citate sono
+misure intermedie: quella definitiva si fa su un campione nuovo, annotato alla cieca da persone.
 
-## Il principio
+## Cosa misuriamo
+
+Quanto spende la PA italiana in servizi cloud, e verso chi: **big tech statunitensi, provider
+europei, provider italiani su datacenter propri**. Per ciascun contratto vogliamo sapere:
+
+- **provider del prodotto** e sua **giurisdizione** (IT, UE, EXTRA-UE);
+- **tipo di spesa**: abbonamento cloud, licenza software, servizi professionali sulla
+  piattaforma, adesione al PSN;
+- **canale**: comprato direttamente dal provider o tramite un **rivenditore**.
 
 Si attribuisce la giurisdizione al **prodotto** comprato, non a chi lo vende. Microsoft 365
-venduto da un rivenditore italiano resta Microsoft; AWS comprato tramite Fastweb resta AWS.
+venduto da TIM resta Microsoft; AWS comprato tramite Fastweb resta AWS. Il rivenditore si
+registra a parte, perché dice dove resta il valore economico.
 
-Nei dati ANAC il prodotto non è un campo: sta scritto nella descrizione, oppure si ricava dal
-lotto della convenzione a cui il contratto aderisce, oppure non si ricava affatto. Per questo il
-provider si riconosce con **più processamenti differenziati**. Ognuno ha un input, una regola,
-un livello di confidenza e una verifica. Ogni contratto registra **quale via** lo ha attribuito,
-così che ogni numero pubblicato si possa scomporre per via e ricontrollare.
+Gli acquisti **in-house** (Lepida, Cineca, CSI Piemonte e simili) e quelli per **datacenter
+propri** sono fuori da questa misura: sono riconosciuti e marcati, ma trattati come punto
+aperto dopo la chiusura della misura cloud
+([#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)).
 
-## Le vie, in ordine di applicazione
+## Perché è difficile
 
-La prima via che dà un risultato vince; le successive servono per ciò che resta.
+Nei dati ANAC il prodotto **non è un campo**. Abbiamo misurato queste difficoltà:
 
-| Via | Input | Regola | Confidenza |
+1. **Il prodotto sta nel testo libero**, scritto in modi diversi: "Microsoft 365", "M365",
+   "MO 365", "Office 365", "licenze Exchange 365 Microsoft".
+2. **Sigle omonime.** "PSN" è anche il Piano sanitario nazionale e il Piano strategico della PAC
+   (sviluppo rurale); "GCP" è anche la Good Clinical Practice; "Aruba" è anche un marchio di
+   switch HPE.
+3. **Il vincitore spesso non è il provider.** Il prodotto di una big tech arriva quasi sempre
+   tramite integratori e telco italiane (TIM, Fastweb, Vodafone, Var Group, Engineering…).
+   La lente "chi vince" e la lente "che cosa si compra" danno risultati diversi.
+4. **Il collegamento all'accordo quadro manca.** Fra i contratti che dichiarano un'adesione, il
+   campo `cig_accordo_quadro` è vuoto nel 20% dei casi nel 2025 e nel 56% nel 2017
+   ([#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50)).
+5. **L'importo non è la spesa.** I contratti "padre" degli accordi quadro sono massimali: nel
+   2025 i dieci più grandi della classe "cloud generico" valevano l'85% del suo importo.
+6. **Contratti misti.** Licenze, migrazione e assistenza nello stesso lotto, con un solo
+   importo.
+7. **Il PSN è un canale, non un prodotto.** Eroga cloud privato nazionale ma anche tecnologie
+   di hyperscaler USA: la giurisdizione va decisa voce per voce, e i dettagli non sono nei dati
+   aperti.
+
+## Le vie di analisi, in ordine di applicazione
+
+Per questo il provider si riconosce con **più processamenti differenziati**. La prima via che dà
+un risultato vince. Ogni contratto registra la **via** e la **regola** che lo hanno attribuito,
+così ogni numero pubblicato si può scomporre e ricontrollare riga per riga.
+
+| Via | Input | Regola | Precisione misurata (v2) |
 |---|---|---|---|
-| **1. Lotto di convenzione o accordo quadro** | `cig_accordo_quadro` del contratto | Il contratto eredita il provider del lotto padre, da una tabella dei lotti curata a mano ([`config/lotti_cloud.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/lotti_cloud.yaml)) | Alta |
-| **2. Lotto dichiarato nel testo** | Descrizione, quando `cig_accordo_quadro` è vuoto | Riconoscimento di "adesione AQ… lotto N" o del nome dell'iniziativa Consip, poi come la via 1 | Media |
-| **3. Marchio nella descrizione** | `oggetto_lotto` e `oggetto_gara` | Dizionario di marchi e alias (Microsoft 365, Azure, AWS, Google Workspace…) con regole di esclusione | Alta se il marchio è esplicito |
-| **4. Polo Strategico Nazionale** | Contratti PSN e piani dei fabbisogni | Il PSN offre servizi su tecnologie diverse (Azure, Google, Oracle, AWS, cloud privato): si attribuisce la singola voce, non il contratto intero | Dipende dal documento disponibile |
-| **5. Il fornitore è il provider** | Aggiudicatario e capogruppo | Se l'aggiudicatario appartiene al gruppo del provider (Aruba, Seeweb, Microsoft Ireland…) e la descrizione è di servizi cloud | Media |
-| **6. Classificazione con modello linguistico** | Descrizione residua | Solo su ciò che le vie 1-5 non attribuiscono; modello e prompt versionati, risultati in cache, validazione sul campione | Misurata |
-| **7. Indeterminato** | — | Ciò che resta si pubblica come quota **non attribuita**, mai distribuita per stima | — |
+| **1. Lotto di AQ o convenzione** | `cig_accordo_quadro` | Il contratto eredita il provider del lotto, da una tabella curata a mano con la fonte di ogni riga ([`config/lotti_cloud.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/lotti_cloud.yaml)) | 30 su 30 |
+| **2. Lotto dichiarato nel testo** | Descrizione | "AQ IaaS e PaaS 2 … lotto N", poi come la via 1 | pochi casi |
+| **3. Marchio nella descrizione** | `oggetto_lotto`, `oggetto_gara` | Dizionario di marchi, alias ed esclusioni ([`config/marchi_cloud.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/marchi_cloud.yaml)); vince il primo marchio, i prodotti prima degli in-house | provider 93,3%, provider e tipo 83,9% |
+| **4. PSN voce per voce** | Contratti PSN e piani dei fabbisogni | Attribuzione della singola voce di catalogo | da implementare: serve accesso ai documenti |
+| **5. Il fornitore è il provider** | Aggiudicatario | Aggiudicatario del gruppo del provider (Aruba, Seeweb, Oracle Italia, TIM, Fastweb…) e testo cloud | 29 su 29 |
+| **6. Modello linguistico** | Descrizione residua | Solo sul residuo; modello, prompt e risultati versionati | da implementare |
+| **7. Indeterminato** | — | Si pubblica come quota **non attribuita**, mai redistribuita per stima | — |
 
-Una dimensione a parte, per il software in abbonamento (SaaS) di produttori italiani:
-**dove gira**. Il prodotto è italiano, ma l'infrastruttura sottostante può essere di un
-hyperscaler USA. Si registra come secondo livello, quando una fonte lo dichiara (catalogo ACN,
-documentazione del fornitore); altrimenti resta "hosting non noto".
+Dopo l'attribuzione, il **tipo di spesa** si decide con due regole: se il testo parla di
+sviluppo, manutenzione evolutiva, migrazione o consulenza è **servizi professionali**; ma se
+parla anche di licenze, crediti, sottoscrizioni o adesione al PSN resta **abbonamento**, perché
+è la voce di costo principale e la dipendenza da misurare.
 
-## Perché servono vie diverse: cosa abbiamo misurato
+Il **canale** si ricava confrontando l'aggiudicatario con le denominazioni del provider: diretto
+o rivenditore. Da qui la **mappa dei rivenditori**
+([#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41)): chi incassa i contratti di
+prodotti big tech, quanto, e quali contratti PSN nominano anche una tecnologia di hyperscaler.
 
-- **L'importo non è la spesa.** Nel 2025 i dieci contratti più grandi della classe "cloud
-  generico" valgono l'85% del suo importo: sono massimali di accordi quadro. I padri si
-  escludono dalle somme; si contano i contratti attuativi e, per la cassa, i pagamenti SIOPE.
-- **Il lotto dice il provider anche quando il testo non lo dice.** L'accordo quadro Consip
-  "Cloud IaaS e PaaS 2" (ID 2746) ha un lotto per provider: AWS, Google, Microsoft, Oracle,
-  IBM, Aruba. L'aggiudicatario registrato per AWS è Fastweb.
-- **Il collegamento al lotto spesso manca.** Fra i contratti che nella descrizione dichiarano
-  un'adesione, il campo `cig_accordo_quadro` è vuoto nel 20% dei casi nel 2025 e nel 56% nel
-  2017 ([#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50)). Per questo la via 2
-  esiste, e per questo la sua quota va pubblicata: misura un difetto del dato alla fonte.
-- **Il "cloud" senza marchio è soprattutto software italiano in abbonamento** (gestionali per
-  comuni, scuole, sanità). Da qui la dimensione "dove gira".
+## Verifica umana a campione
 
-## Come si verifica
+Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 
-1. **Due campioni distinti.** Un **campione di sviluppo**, letto per correggere le regole, e un
-   **campione di misura**, estratto dopo le correzioni con un altro seme ed escludendo i
-   contratti già visti: la precisione si misura solo su quest'ultimo, altrimenti si misurerebbe
-   sulle stesse righe usate per tarare le regole. Entrambi stratificati per via, servizio e
-   fascia di importo, con seme fisso; sono in
+1. **Campione di sviluppo e campione di misura, separati.** Il primo si legge per correggere le
+   regole; la precisione si misura solo sul secondo, estratto **dopo** le correzioni ed
+   escludendo ogni contratto già visto. Stratificato per via, tipo di spesa e fascia di
+   importo, con seme fisso ([`tools/analisi/campione_riferimento.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/campione_riferimento.py)).
+2. **Annotazione alla cieca.** L'annotatore riceve una copia **senza** le colonne del
+   classificatore (via, provider, tipo), così non è ancorato all'esito automatico. Indica per
+   ogni contratto: è cloud?, tipo di spesa, provider del prodotto, giurisdizione.
+3. **Due annotatori** su almeno il 20% delle righe, con accordo misurato (kappa di Cohen); i
+   disaccordi si risolvono e si documentano.
+4. **Si pubblica** precisione per via e per classe, richiamo (quanto cloud sfugge), e i totali
+   con intervallo di confidenza.
+5. **Chiunque può rifarlo:** il campione, le annotazioni e lo script di misura sono in
    [`report/metodo/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/metodo).
-   Il campione di misura si classifica a mano; almeno il 20% da due persone, con accordo
-   misurato (kappa di Cohen).
-2. **Precisione e richiamo per via e per classe**, pubblicati insieme ai risultati.
-3. **Totali con intervallo di confidenza**, corretti per gli errori misurati sul campione.
-4. **Riproducibilità:** ogni via è uno script in `tools/`, eseguibile da un clone pulito
-   ([#47](https://github.com/mxmap-it/analisi-spesa-ict/issues/47)); le tabelle curate a mano
-   (lotti, marchi, capogruppo) stanno in `config/` con la fonte di ogni riga.
 
-## Errori trovati nel campione di sviluppo, e come sono corretti
+### Le misure finora
 
-Le prime 190 righe del campione di sviluppo (27 ottobre 2026) hanno mostrato sei tipi di
-errore. Ognuno è corretto nelle regole, con la revisione annotata in `config/`.
+| Versione | Campione | Annotazione | Precisione provider | Provider e tipo | Cloud sfuggito |
+|---|---|---|---|---|---|
+| v2 (27/10) | misura, 437 righe | Claude, **non cieca** | 94,6% | 86,6% | 20 su 124 non attribuiti |
+| v3 (28/10) | nuovo campione | persone, alla cieca | da misurare | da misurare | da misurare |
 
-| Errore | Esempio | Correzione |
+La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
+valgono più come misura.
+
+## Test automatici
+
+Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
+([`tests/casi_classifica.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tests/casi_classifica.yaml)).
+Un caso aggiunto non si toglie: se una regola nuova lo rompe, si corregge la regola. Il
+classificatore è una funzione pura che non legge i dati ANAC
+([`tools/analisi/classifica.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/classifica.py)),
+quindi si usa anche su OCDS, TED o registri regionali.
+
+```bash
+python tests/test_classifica.py      # 48/48 casi superati, regole v3
+```
+
+## Errori trovati e come sono corretti
+
+| Classe di errore | Esempio reale | Correzione |
 |---|---|---|
-| Sigle omonime | "PSN" come fondi del Piano sanitario o di un programma operativo, non Polo Strategico | Esclusioni sul contesto ("fondi PSN", "PO PSN", "progetto PSN 2023") |
-| Accordi quadro con lotti diversi | "Public Cloud IaaS e PaaS" lotto 1 (ID 2213) scambiato per il lotto 1 AWS della seconda edizione (ID 2746) | La via 2 accetta solo riferimenti espliciti alla seconda edizione |
-| Servizi sulla piattaforma | Sviluppo e manutenzione su Salesforce o ServiceNow da parte di integratori | Prodotto attribuito, ma servizio "servizi professionali", non abbonamento cloud |
-| Consulenza chiamata cloud | "Cloud enabling", "servizi applicativi in ottica cloud" | Esclusi dal cloud |
-| Marchi in altri contesti | Router Aruba Silver Peak, connettività MPLS Retelit, VMware dentro un acquisto di server | Esclusioni per marchio |
-| Marchi mancanti | Crediti Oracle PaaS e IaaS, SAP RISE e SuccessFactors (prodotto UE) | Aggiunti al dizionario |
+| Sigle omonime | "PSN PAC 2023-2027 sviluppo rurale", "auditing GCP" clinico | Esclusioni sul contesto |
+| Connettività e sicurezza intorno al PSN | "connettività dedicata verso le sedi PSN", "firewall PSN" | Escluse: non sono spesa cloud |
+| Accordi quadro con lotti diversi | Lotto 1 di "Public Cloud IaaS e PaaS" (ID 2213) scambiato per AWS della seconda edizione | La via 2 accetta solo la seconda edizione esplicita |
+| Servizi sulla piattaforma | Manutenzione evolutiva su Salesforce, migrazione al PSN | Tipo "servizi professionali" |
+| Ambienti di sviluppo | "crediti Oracle Cloud per gli ambienti di sviluppo" classificati come servizi | Sono abbonamento |
+| Contratti misti | "licenze Salesforce per l'implementazione del CRM" | Con licenze o crediti resta abbonamento |
+| Marchi in altri contesti | Switch HPE Aruba, VMware dentro un acquisto di server | Esclusioni per marchio |
+| Marchi mancanti | SAP S/4HANA e R/3, Exchange 365, "MO 365", Oracle ULA ed Exadata, Nextcloud | Aggiunti |
+| Ordine dei marchi | SAP Fiori attribuito a Salesforce; VMware per Lepida attribuito all'in-house | Il primo marchio vince: prodotti prima, in-house in fondo |
+| Provider italiani assenti | TIM cloud, Fastweb hosting, SPC Cloud lotto 1, in-house pubblici | Aggiunti come provider IT o in-house |
+
+## Raccomandazioni per semplificare il monitoraggio
+
+Gran parte della difficoltà sta nel dato alla fonte. Queste modifiche renderebbero la misura
+quasi automatica:
+
+1. **ANAC: rendere obbligatorio e controllato `cig_accordo_quadro`** per ogni adesione, con un
+   controllo bloccante in fase di acquisizione del CIG (oggi vuoto nel 20% dei casi).
+2. **ANAC e Consip: pubblicare in formato aperto la tabella lotto → prodotto e provider** di
+   ogni accordo quadro e convenzione ICT. Oggi la ricostruiamo a mano dai documenti di gara.
+3. **ANAC: un campo strutturato per il prodotto o il servizio cloud** (o almeno il codice del
+   servizio nel catalogo ACN dei servizi cloud qualificati) nei contratti con CPV ICT.
+4. **PSN e Difesa Servizi: pubblicare le adesioni voce per voce**, con la tecnologia
+   sottostante (cloud privato nazionale o hyperscaler).
+5. **Separare negli importi** abbonamento, licenze e servizi professionali quando stanno nello
+   stesso lotto.
+6. **Per chi analizza:** tabelle di lotti e marchi come dati aperti condivisi, con la fonte di
+   ogni riga, e casi di test comuni. Le nostre sono in `config/` e `tests/`, in licenza libera.
+
+## Riuso e manutenzione
+
+Teniamo il codice nostro al minimo. A fine lavoro proporremo di portare queste capacità negli
+strumenti che già esistono, a partire da
+[anac-pl-pp-cli](https://github.com/aborruso/anac-pl-pp-cli), che oggi attribuisce la
+giurisdizione al **fornitore**: le tabelle come file dati esterni, la lente prodotto accanto a
+quella fornitore, il canale diretto/rivenditore, i casi di test
+([#22](https://github.com/mxmap-it/analisi-spesa-ict/issues/22)).
 
 ## Due lenti, per essere confrontabili
 
@@ -91,9 +167,10 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 
 ## Cosa resta aperto
 
+- Misura v3 su campione nuovo, annotato alla cieca da persone.
+- Via 4 (PSN voce per voce) e via 6 (modello linguistico).
 - Tabella completa dei lotti: altre iniziative Consip (licenze, SaaS, data center), SPC Cloud,
   convenzioni regionali.
-- Dizionario dei marchi e regole di esclusione, con i falsi positivi del pilota
-  (per esempio "Jira Data Center" non è un data center).
-- Accesso ai dettagli dei contratti PSN.
-- Confronto con il catalogo ACN per la dimensione "dove gira".
+- SaaS di produttori italiani: **dove gira** (catalogo ACN, documentazione del fornitore).
+- In-house e datacenter propri ([#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)),
+  dopo la chiusura della misura cloud.

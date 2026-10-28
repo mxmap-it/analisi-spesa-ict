@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/</link><description>Recent content on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Come si riconosce il cloud provider in un contratto</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</link><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: bozza in validazione&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/48"&gt;#48&lt;/a&gt;).
-I numeri citati vengono dal pilota sul 2025 e sono ordini di grandezza finché la precisione
-non è misurata su un campione verificato a mano.&lt;/p&gt;
-&lt;h2 id="il-principio"&gt;Il principio&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/</link><description>Recent content on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Come si riconosce il cloud provider in un contratto</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: bozza in validazione, regole v3 del 28 ottobre 2026&lt;/strong&gt;
+(&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/48"&gt;#48&lt;/a&gt;). Le precisioni citate sono
+misure intermedie: quella definitiva si fa su un campione nuovo, annotato alla cieca da persone.&lt;/p&gt;
+&lt;h2 id="cosa-misuriamo"&gt;Cosa misuriamo&lt;/h2&gt;
+&lt;p&gt;Quanto spende la PA italiana in servizi cloud, e verso chi: &lt;strong&gt;big tech statunitensi, provider
+europei, provider italiani su datacenter propri&lt;/strong&gt;. Per ciascun contratto vogliamo sapere:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;provider del prodotto&lt;/strong&gt; e sua &lt;strong&gt;giurisdizione&lt;/strong&gt; (IT, UE, EXTRA-UE);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tipo di spesa&lt;/strong&gt;: abbonamento cloud, licenza software, servizi professionali sulla
+piattaforma, adesione al PSN;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;canale&lt;/strong&gt;: comprato direttamente dal provider o tramite un &lt;strong&gt;rivenditore&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Si attribuisce la giurisdizione al &lt;strong&gt;prodotto&lt;/strong&gt; comprato, non a chi lo vende. Microsoft 365
-venduto da un rivenditore italiano resta Microsoft; AWS comprato tramite Fastweb resta AWS.&lt;/p&gt;
-&lt;p&gt;Nei dati ANAC il prodotto non è un campo: sta scritto nella descrizione, oppure si ricava dal
-lotto della convenzione a cui il contratto aderisce, oppure non si ricava affatto. Per questo il
-provider si riconosce con &lt;strong&gt;più processamenti differenziati&lt;/strong&gt;. Ognuno ha un input, una regola,
-un livello di confidenza e una verifica. Ogni contratto registra &lt;strong&gt;quale via&lt;/strong&gt; lo ha attribuito,
-così che ogni numero pubblicato si possa scomporre per via e ricontrollare.&lt;/p&gt;</description></item><item><title>I dati aperti di ANAC: problemi e rimedi</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/</link><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/</guid><description>&lt;p&gt;&lt;strong&gt;Osservatorio Nazionale Sovranità Digitale&lt;/strong&gt; · progetto
+venduto da TIM resta Microsoft; AWS comprato tramite Fastweb resta AWS. Il rivenditore si
+registra a parte, perché dice dove resta il valore economico.&lt;/p&gt;</description></item><item><title>I dati aperti di ANAC: problemi e rimedi</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/</link><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/</guid><description>&lt;p&gt;&lt;strong&gt;Osservatorio Nazionale Sovranità Digitale&lt;/strong&gt; · progetto
 &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict"&gt;analisi-spesa-ict&lt;/a&gt; · versione del 27 ottobre 2026&lt;/p&gt;
 &lt;h2 id="perché-questo-documento"&gt;Perché questo documento&lt;/h2&gt;
 &lt;p&gt;ANAC pubblica sul portale &lt;code&gt;dati.anticorruzione.it&lt;/code&gt; uno dei patrimoni di dati sugli appalti pubblici
