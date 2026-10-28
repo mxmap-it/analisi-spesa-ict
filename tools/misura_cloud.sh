@@ -5,10 +5,12 @@
 #   tools/misura_cloud.sh test          casi di riferimento del classificatore (tests/casi_classifica.yaml)
 #   tools/misura_cloud.sh attribuisci   attribuisce provider, giurisdizione, tipo e canale a ogni contratto ICT 2022-2026 (dal primo avviso PNRR cloud)
 #   tools/misura_cloud.sh rivenditori   mappa dei rivenditori dei prodotti cloud, PSN compreso
+#   tools/misura_cloud.sh pnrr          collega i finanziamenti PNRR cloud (Misure 1.1, 1.2) ai contratti attribuiti, via CUP
+#                                       (prima: tools/archivia.py --lista config/pnrr-risorse.txt)
 #   tools/misura_cloud.sh campione      ri-estrae il campione di misura (seme fisso: stesso campione se i dati sono gli stessi)
 #   tools/misura_cloud.sh misura A.csv [B.csv]   precisione e accordo sulle annotazioni alla cieca
 #   tools/misura_cloud.sh confronta     confronta i numeri con quelli pubblicati in report/metodo/
-#   tools/misura_cloud.sh tutto         test + attribuisci + rivenditori + campione + confronta
+#   tools/misura_cloud.sh tutto         test + attribuisci + rivenditori + pnrr + campione + confronta
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PY=.venv/bin/python
@@ -18,6 +20,7 @@ mkdir -p "$ESITI"
 
 test_()       { "$PY" tests/test_classifica.py; }
 attribuisci() { nice -n 10 "$PY" tools/analisi/attribuisci_provider.py 2022 2023 2024 2025 2026 >/dev/null && cp lavoro/attribuzione/riepilogo.json "$ESITI/attribuzione-riepilogo.json"; echo "esito: $ESITI/attribuzione-riepilogo.json"; }
+pnrr()        { nice -n 10 "$PY" tools/analisi/pnrr_cloud.py >/dev/null && cp lavoro/attribuzione/pnrr-cloud.json "$ESITI/pnrr-cloud.json"; echo "esito: $ESITI/pnrr-cloud.json"; }
 rivenditori() { nice -n 10 "$PY" tools/analisi/rivenditori.py >/dev/null && cp lavoro/attribuzione/rivenditori.json "$ESITI/rivenditori.json"; echo "esito: $ESITI/rivenditori.json"; }
 campione()    { "$PY" tools/analisi/campione_riferimento.py 700 20261028 campione-misura-v3 && cp lavoro/attribuzione/campione-misura-v3*.csv "$ESITI/"; }
 misura()      { "$PY" tools/analisi/misura_campione.py report/metodo/campione-misura-v3.csv "$@" | tee "$ESITI/misura.json"; }
@@ -27,9 +30,10 @@ case "${1:-}" in
   test) test_ ;;
   attribuisci) attribuisci ;;
   rivenditori) rivenditori ;;
+  pnrr) pnrr ;;
   campione) campione ;;
   misura) shift; misura "$@" ;;
   confronta) confronta ;;
-  tutto) test_; attribuisci; rivenditori; campione; confronta ;;
-  *) sed -n '2,11p' "$0"; exit 1 ;;
+  tutto) test_; attribuisci; rivenditori; pnrr; campione; confronta ;;
+  *) sed -n '2,14p' "$0"; exit 1 ;;
 esac

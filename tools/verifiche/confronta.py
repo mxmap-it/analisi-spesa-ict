@@ -17,6 +17,7 @@ PUBBLICATI = {
     # misura cloud (tools/misura_cloud.sh)
     "cloud/attribuzione-riepilogo.json": "report/metodo/attribuzione-riepilogo-v3.json",
     "cloud/rivenditori.json": "report/metodo/rivenditori-v3.json",
+    "cloud/pnrr-cloud.json": "report/metodo/pnrr-cloud-v3.json",
 }
 IGNORA = {"generato", "esempi", "nota", "regole"}  # data di esecuzione ed esempi illustrativi non sono numeri del rendiconto
 
