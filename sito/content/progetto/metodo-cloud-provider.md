@@ -23,8 +23,10 @@ venduto da TIM resta Microsoft; AWS comprato tramite Fastweb resta AWS. Il riven
 registra a parte, perché dice dove resta il valore economico.
 
 Gli acquisti **in-house** (Lepida, Cineca, CSI Piemonte e simili) e quelli per **datacenter
-propri** sono fuori da questa misura: sono riconosciuti e marcati, ma trattati come punto
-aperto dopo la chiusura della misura cloud
+propri** sono fuori da questa misura. Lo stesso vale per il **software con cui si costruisce un
+cloud in casa**, come VMware: non è un cloud provider, ma è una dipendenza rilevante per i
+cloud "sovrani" interni. Questi acquisti sono riconosciuti e marcati (tipo `in-house` e
+`software-infrastruttura`), ma trattati come punto aperto dopo la chiusura della misura cloud
 ([#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)).
 
 ## Perché è difficile

@@ -7,7 +7,7 @@ import collections, csv, datetime, glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from classifica import Classificatore  # noqa: E402
 
-BIGTECH = {"Microsoft", "Amazon Web Services", "Google", "Oracle", "IBM", "Salesforce", "ServiceNow", "Adobe", "Zoom", "Cisco Webex", "VMware", "Cloudera"}
+BIGTECH = {"Microsoft", "Amazon Web Services", "Google", "Oracle", "IBM", "Salesforce", "ServiceNow", "Adobe", "Zoom", "Cisco Webex", "Cloudera"}
 
 def normalizza(nome):
     """Denominazione confrontabile: maiuscolo, senza punteggiatura e forme societarie."""
@@ -24,7 +24,7 @@ def main():
     for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
         if "campione" in os.path.basename(f): continue
         for r in csv.DictReader(open(f, encoding="utf-8")):
-            if r["e_padre"] == "1" or not r["provider"] or r["servizio"] in ("servizi-professionali", "in-house"): continue
+            if r["e_padre"] == "1" or not r["provider"] or r["servizio"] in ("servizi-professionali", "in-house", "software-infrastruttura"): continue
             imp = float(r["importo_lotto"] or 0)
             presenti = c.marchi_presenti(r["testo"])
             if "Polo Strategico Nazionale" in presenti and BIGTECH & set(presenti):

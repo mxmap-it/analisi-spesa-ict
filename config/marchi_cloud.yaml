@@ -244,7 +244,8 @@
   fornitori: []
 - provider: VMware
   giurisdizione: EXTRA-UE
-  servizio: licenza
+  servizio: software-infrastruttura
+  nota: "software per costruire cloud e datacenter propri (virtualizzazione): non è un cloud provider; fuori dalla misura cloud, serve al punto aperto #52"
   regex:
   - vmware
   fornitori: []
