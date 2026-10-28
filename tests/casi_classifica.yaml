@@ -1,0 +1,41 @@
+# Casi di riferimento del classificatore (tools/analisi/classifica.py). Ogni caso viene da un contratto reale
+# annotato a mano: fonte = campione e riga. provider "" = nessun provider attribuibile (via 0 o 7).
+# Un caso aggiunto non si toglie: se una regola nuova lo rompe, si corregge la regola o si documenta il cambio di criterio.
+# Errori della misura v2 (report/metodo/campione-misura-2026-10-27.csv, righe annotate 0-436)
+- {fonte: misura-v2 r3, testo: "ADESIONE CONTRATTO QUADRO OPA ID 1367 SERVIZI DI CONNETTIVITÀ NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVITÀ (SPC2 CONNETTIVITÀ)", aggiudicatari: [FASTWEB SPA], provider: ""}
+- {fonte: misura-v2 r39, testo: "FORNITURA MATERIALE INFORMATICO | FORNITURA MATERIALE INFORMATIVO N.06 HPE -ARUBA 2930 F -N.06 HPE SFP MINI-GBIC", aggiudicatari: [TONITRUS GMBH], provider: ""}
+- {fonte: misura-v2 r81, testo: "MANUTENZIONE EVOLUTIVA E CORRETTIVA MODULI HR (SOTTOMODULI TM, OM, PE, ORGANIGRAMMA) E REPORTISTICA RELATIVA IN SAP FIORI", provider: SAP}
+- {fonte: misura-v2 r111, testo: "REALIZZAZIONE DI CONNETTIVITA DEDICATA TRA SEDI COMUNALI E SEDI POLO STRATEGICO NAZIONALE", aggiudicatari: [TIM S.P.A.], provider: ""}
+- {fonte: misura-v2 r156, testo: "ACQUISIZIONE DI PRODOTTI PER LA SICUREZZA PERIMETRALE IN AMBITO PSN", aggiudicatari: [TIM S.P.A.], provider: ""}
+- {fonte: misura-v2 r223, testo: "COMPLEMENTO REGIONALE PER LO SVILUPPO RURALE DEL PSN PAC 2023-2027 PER IL VENETO - INTERVENTO SRG06", provider: ""}
+- {fonte: misura-v2 r268, testo: "SERVIZIO ATTIVITÀ DI AUDITING GCP NELL'AMBITO DELLE UNITÀ CLINICHE DI FASE 1 E DELLA CRO-IRST", provider: ""}
+- {fonte: misura-v2 r367, testo: "MANUTENZIONE EVOLUTIVA E CORRETTIVA SAP R/3 (MODULI SD, MM, FI, AA, CO), ADD-ON ISU, BW/4 HANA", provider: SAP, servizio: licenza}
+- {fonte: misura-v2 r422, testo: "P15_FORTINET - FIREWALL PSN | P15_FORTINET - FIREWALL PSN", aggiudicatari: [DGS S.P.A.], provider: ""}
+- {fonte: misura-v2 r22, testo: "RINNOVO DEI CREDITI PER I SERVIZI ORACLE CLOUD UTILIZZATI DA INARCASSA PER GLI AMBIENTI DI SVILUPPO E COLLAUDO", aggiudicatari: [ORACLE ITALIA - S.R.L.], provider: Oracle, servizio: cloud, canale: diretto}
+- {fonte: misura-v2 r37, testo: "S10_MANUTENZIONE E SUPPORTO SAP BTP", aggiudicatari: [ALTEA UP S.R.L.], provider: SAP, servizio: servizi-professionali}
+- {fonte: misura-v2 r40, testo: "SERVIZIO DI MIGRAZIONE IN CLOUD AL PSN DEL SISTEMA INTERPRO/GEDOX.", provider: Polo Strategico Nazionale, servizio: servizi-professionali}
+- {fonte: misura-v2 r47, testo: "4010/GIO: SERVIZI DI MANUTENZIONE APPLICATIVA DEL SISTEMA CRM DI ARETI SU PIATTAFORMA SALESFORCE", provider: Salesforce, servizio: servizi-professionali}
+- {fonte: misura-v2 r55, testo: "L'APPALTO CONCERNE LA FORNITURA DI LICENZE DELLA PIATTAFORMA SALESFORCE PER L'IMPLEMENTAZIONE DELLA SOLUZIONE DI CRM DI SMAT.", aggiudicatari: [VAR GROUP S.P.A.], provider: Salesforce, servizio: cloud, canale: rivenditore}
+- {fonte: misura-v2 r189, testo: "SERVIZI INFORMATICI - ACQUISTO LICENZE MICROSOFT 365 - MIGRAZIONE CASELLE POSTA ELETTRONICA DA ZIMBRA A MICROSOFT 365", aggiudicatari: [TIM S.P.A.], provider: Microsoft, servizio: cloud, canale: rivenditore}
+- {fonte: misura-v2 r290, testo: "ATTIVAZIONE LICENZE SANDBOX DEVELOPER PRO PER GLI AMBIENTI DI SVILUPPO SALESFORCE", aggiudicatari: [TIM S.P.A.], provider: Salesforce, servizio: cloud}
+- {fonte: misura-v2 r322, testo: "CLOUD MIGRATION - CLOUD GOVERNANCE & IT INFRASTRUCTURE: SERVIZI PROFESSIONALI ORACLE PER NUOVA ARCHITETTURA CLOUD", aggiudicatari: [ORACLE ITALIA - S.R.L.], provider: Oracle, servizio: servizi-professionali}
+- {fonte: misura-v2 r405, testo: "ADESIONE ALLA CONVENZIONE PER LA FORNITURA DI LICENZE GOOGLE WORKSPACE E SERVIZI ACCESSORI", aggiudicatari: [TIM S.P.A.], provider: Google, servizio: cloud, canale: rivenditore}
+- {fonte: misura-v2 r424, testo: "CHANGE REQUEST E PERSONALIZZAZIONI ERP DYNAMICS 365 PER CAMERA ARBITRALE DI MILANO S.R.L.", aggiudicatari: [INFOCAMERE SCPA], provider: Microsoft, servizio: servizi-professionali}
+- {fonte: misura-v2 r16, testo: "ACQUISIZIONE IN SOTTOSCRIZIONE DI PRODOTTI E SERVIZI PROFESSIONALI SAP S4 HANA IN CLOUD", aggiudicatari: [ITALWARE - S.R.L.], provider: SAP, servizio: cloud}
+- {fonte: misura-v2 r63, testo: "CONTRATTO ULA (UNLIMITED LICENCE AGREEMENT) IN MODALITÀ APPLICATION HOSTING PER LA FORNITURA DI LICENZE D'USO DI PRODOTTI SOFTWARE ORACLE", provider: Oracle, servizio: licenza}
+- {fonte: misura-v2 r72, testo: "ACQUISTO LICENZE MO 365 BUSINESS STANDARD | ACQUISTO LICENZE MO365 STANDARD", aggiudicatari: [VODAFONE ITALIA S.P.A.], provider: Microsoft, servizio: cloud}
+- {fonte: misura-v2 r434, testo: "LICENZE EXCHANGE 365 MICROSOFT", provider: Microsoft, servizio: cloud}
+- {fonte: misura-v2 r220, testo: "FORNITURA DI NOTEBOOK E SERVIZIO NEXT CLOUD", provider: Nextcloud, giurisdizione: UE}
+- {fonte: misura-v2 r79, testo: "PROROGA ADESIONE CONTRATTO QUADRO TRA REGIONE TOSCANA E TELECOM ITALIA CLOUD", aggiudicatari: [TIM S.P.A.], provider: TIM, giurisdizione: IT}
+- {fonte: misura-v2 r250, testo: "GARA PER L'AFFIDAMENTO DEI SERVIZI DI GESTIONE IN HOSTING DEL SISTEMA INFORMATIVO CONSIP - ID 1483", aggiudicatari: [FASTWEB SPA], provider: Fastweb, giurisdizione: IT}
+- {fonte: misura-v2 r394, testo: "ADESIONE ACCORDO QUADRO SPC CLOUD LOTTO 1", provider: SPC Cloud lotto 1, giurisdizione: IT}
+- {fonte: misura-v2 r38, testo: "AFFIDAMENTO A LIGURIA DIGITALE DEL SERVIZIO DI HOSTING E DNS PER SERVER PROTOCOLLO (FOLIUM)", aggiudicatari: [LIGURIA DIGITALE], provider: In-house pubblico, servizio: in-house}
+- {fonte: misura-v2 r152, testo: "SERVIZI DATACENTER COMUNE DI FERRARA 2024/2026", aggiudicatari: [LEPIDA S.C.P.A.], provider: In-house pubblico, servizio: in-house}
+- {fonte: misura-v2 r435, testo: "SERVIZIO CLOUD VIRTUAL DATA CENTER PRESSO IL CINECA CONSORZIO INTERUNIVERSITARIO", provider: In-house pubblico, servizio: in-house}
+# Casi che la v2 attribuiva già bene: non devono rompersi
+- {fonte: lotto AQ 2746, testo: "ADESIONE ACCORDO QUADRO CLOUD IAAS E PAAS 2", cig_accordo_quadro: B6A19F6404, provider: Microsoft, via: 1-lotto}
+- {fonte: lotto nel testo, testo: "ADESIONE AQ CONSIP IAAS E PAAS 2 LOTTO 1 SERVIZI CLOUD", provider: Amazon Web Services, via: 2-lotto-nel-testo}
+- {fonte: sintetico, testo: "SERVIZI APPLICATIVI IN OTTICA CLOUD - AQ CONSIP", cpv: "72000000-5", provider: "", via: 0-ict-non-cloud}
+- {fonte: sintetico, testo: "FORNITURA PEC ARUBA PER UFFICI", provider: ""}
+- {fonte: sintetico, testo: "SOTTOSCRIZIONE AWS PER AMBIENTE DI COLLAUDO", aggiudicatari: [AMAZON WEB SERVICES EMEA SARL], provider: Amazon Web Services, canale: diretto}
+- {fonte: sintetico, testo: "SERVIZI CLOUD IAAS SU DATACENTER ARUBA", aggiudicatari: [ARUBA S.P.A.], provider: Aruba, giurisdizione: IT, canale: diretto}

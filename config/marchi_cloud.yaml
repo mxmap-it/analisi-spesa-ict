@@ -184,7 +184,8 @@
 # Cloud e datacenter pubblici in-house (IT): fonte, i siti istituzionali delle società; via 3 dal testo, via 5 dal fornitore
 - provider: In-house pubblico
   giurisdizione: IT
-  servizio: cloud
+  servizio: in-house
+  nota: fuori dalla misura cloud; punto aperto da trattare dopo (acquisti in-house e datacenter propri, #48)
   regex:
   - \blepida\b
   - \bcineca\b
