@@ -59,6 +59,11 @@ class Classificatore:
                     return m, r.pattern
         return None, ""
 
+    def marchi_presenti(self, testo):
+        """Tutti i provider nominati nel testo (non solo il primo): serve alla mappa dei rivenditori, es. PSN + Azure."""
+        return sorted({NOME_CANONICO.get(m["provider"], m["provider"]) for m in self.marchi
+                       if any(r.search(testo) for r in m["rx"]) and not any(e.search(testo) for e in m["ex"])})
+
     def _servizio(self, serv, testo):
         if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
             return "servizi-professionali"

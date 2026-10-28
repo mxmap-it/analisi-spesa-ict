@@ -9,9 +9,10 @@ random.seed(SEED)
 strati = collections.defaultdict(list)
 # il campione di misura esclude i contratti già visti nel campione di sviluppo
 import os
+# un contratto già visto da chi ha scritto le regole (qualunque campione pubblicato in report/metodo) non entra in una misura
 visti = set()
-if NOME != "campione-riferimento" and os.path.exists("lavoro/attribuzione/campione-riferimento.csv"):
-    visti = {r["cig"] for r in csv.DictReader(open("lavoro/attribuzione/campione-riferimento.csv", encoding="utf-8"))}
+for f in glob.glob("report/metodo/campione-*.csv"):
+    visti |= {r["cig"] for r in csv.DictReader(open(f, encoding="utf-8"))}
 for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
     if "campione" in f: continue
     for r in csv.DictReader(open(f, encoding="utf-8")):
@@ -35,4 +36,11 @@ with open("lavoro/attribuzione/" + NOME + ".csv", "w", newline="", encoding="utf
     w.writerow(campi + ["e_cloud (s/n)", "provider_corretto", "giurisdizione_corretta", "annotatore", "note"])
     for r in scelti:
         w.writerow([r[c] for c in campi] + ["", "", "", "", ""])
-print(len(strati), "strati,", len(scelti), "contratti")
+# copia cieca per l'annotazione umana: senza le colonne prodotte dal classificatore, così l'annotatore non è ancorato
+cieca = ["cig", "cod_cpv", "importo_lotto", "stazione_appaltante", "aggiudicatari", "testo"]
+with open("lavoro/attribuzione/" + NOME + "-cieco.csv", "w", newline="", encoding="utf-8") as f:
+    w = csv.writer(f)
+    w.writerow(cieca + ["e_cloud (s/n)", "servizio (cloud/licenza/servizi-professionali/psn/in-house/altro)", "provider_prodotto", "giurisdizione (IT/UE/EXTRA-UE)", "annotatore", "note"])
+    for r in scelti:
+        w.writerow([r[c] for c in cieca] + ["", "", "", "", "", ""])
+print(len(strati), "strati,", len(scelti), "contratti, esclusi", len(visti), "già visti")
