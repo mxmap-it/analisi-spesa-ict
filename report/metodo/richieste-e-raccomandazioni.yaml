@@ -109,3 +109,25 @@
   richiesta: Pubblicare gli acquisti cloud e di infrastruttura fatti per conto delle amministrazioni servite, collegati agli enti beneficiari
   perche_serve: Una quota della spesa cloud della PA passa dagli in-house e non si vede dal lato dell'ente (punto aperto #52)
   rif: ["#52"]
+- id: R13
+  destinatario: ANAC
+  tipo: da classificare
+  stato: verificato
+  titolo: "Aggiudicatario 'IMPRESA INESISTENTE'"
+  evidenza: "789 contratti nel perimetro ICT 2024-2026 hanno fra gli aggiudicatari la denominazione 'IMPRESA INESISTENTE' (es. adesioni Consip Licenze SW Multibrand di Acquirente Unico, RDO licenze Webex del MAECI)"
+  prova: misura del 28/10/2026 su lavoro/attribuzione/*.csv (da trasformare in verifica in tools/verifiche/)
+  richiesta: "Spiegare il significato (segnaposto? aggiudicatario non censito?) e sostituirlo con l'operatore reale o un codice esplicito di 'dato mancante'"
+  perche_serve: Senza aggiudicatario non si distingue la vendita diretta dalla rivendita
+  nota: Da classificare (errore, convenzione o segnaposto) prima di comunicarlo
+  rif: ["#54"]
+- id: R14
+  destinatario: ANAC, Consip
+  tipo: difetto
+  stato: da_verificare
+  titolo: Nelle adesioni l'importo del lotto sembra il massimale della convenzione, non la spesa dell'ente
+  evidenza: "Esempi: 430,0 milioni identici per Banca d'Italia e due volte per Infocamere (Microsoft EA); 607,4 milioni per ASL NA3 Sud (Microsoft EA 8); 723,3 milioni per un museo (convenzione PSN del DTD)"
+  prova: lavoro/attribuzione/importi-da-verificare.csv (pubblicato come report/metodo/importi-da-verificare-v3.csv)
+  richiesta: "Nelle adesioni registrare l'importo dell'ordinativo, non quello della convenzione; controllo di plausibilità (importo dell'adesione <= massimale residuo)"
+  perche_serve: "Pochi contratti di questo tipo valgono più di tutto il resto della spesa cloud: senza correzione i totali sono inutilizzabili"
+  nota: Per ogni caso va verificato l'importo reale (documenti di gara, ordinativo Consip) prima di comunicarlo
+  rif: ["#54", "#48"]
