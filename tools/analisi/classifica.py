@@ -24,9 +24,11 @@ RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b|data\s*
 RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development|cloud\s+enabling|servizi\s+applicativi\s+cloud", re.I)
 # servizi professionali su una piattaforma: il prodotto è giusto ma non è spesa in abbonamento.
 # v3: "ambienti di sviluppo" e "sandbox" sono abbonamento; i contratti misti (licenze + servizi) restano abbonamento
-RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|manutenzione\s+(evolutiva|correttiva|applicativa|di\s+base|base)|manutenzione\s+e\s+supporto|\bams\b|"
-                        r"change\s+request|personalizzazion|migrazion|assistenza\s+specialistica|servizi\s+(professionali|specialistici)|conduzione\s+sistemistica|attivit\w+\s+sistemistic|consulenz", re.I)
-RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|rinnovo|canone", re.I)
+RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|sviluppo\s*,?\s*e?\s*(manutenzione|assistenza)|manutenzione\s+(evolutiva|correttiva|applicativa|di\s+base|base)|manutenzione\s+e\s+supporto|\bams\b|"
+                        r"implementazion|integrazion|change\s+request|personalizzazion|migrazion|assistenza\s+(specialistica|sistemistica)|supporto\s+(specialistico|all.adoption)|"
+                        r"servizi\s+(professionali|specialistici)|conduzione\s+sistemistica|attivit\w+\s+sistemistic|consulenz|\bbasis\b", re.I)
+# un contratto misto (abbonamento + servizi) resta abbonamento: è la voce di costo principale e la dipendenza da misurare
+RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|canone|servizi\s+(cloud|iaas|paas|saas)\b", re.I)
 NOME_CANONICO = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}
 
 

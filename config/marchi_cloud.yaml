@@ -181,32 +181,6 @@
   regex:
   - next\s*cloud
   fornitori: []
-# Cloud e datacenter pubblici in-house (IT): fonte, i siti istituzionali delle società; via 3 dal testo, via 5 dal fornitore
-- provider: In-house pubblico
-  giurisdizione: IT
-  servizio: in-house
-  nota: fuori dalla misura cloud; punto aperto da trattare dopo (acquisti in-house e datacenter propri, #48)
-  regex:
-  - \blepida\b
-  - \bcineca\b
-  - \bnivola\b
-  - csi[\s-]+piemonte
-  - liguria\s+digitale
-  - \binva\b
-  - cloud\s+toscana
-  - trentino\s+digitale
-  - \binsiel\b
-  - aria\s+s\.?p\.?a
-  - \bsogei\b
-  fornitori:
-  - ^lepida
-  - ^cineca
-  - ^csi[\s-]+piemonte
-  - ^liguria\s+digitale
-  - ^inva\b
-  - ^trentino\s+digitale
-  - ^insiel
-  - ^sogei
 - provider: SPC Cloud lotto 1
   giurisdizione: IT
   servizio: cloud
@@ -244,8 +218,7 @@
   nota: 'Via 4: il PSN eroga anche tecnologie di hyperscaler USA; la giurisdizione del prodotto va decisa voce per voce. Qui si marca solo il canale.'
   regex:
   - polo\s+strategico\s+nazionale
-  - (cloud|al|in|nel|presso|a|verso|adesione\s+(a|al))\s+(il\s+)?psn\b
-  - \bpsn\s+(cloud|s\.?p\.?a)
+  - \bpsn\b
   fornitori:
   - ^polo\s+strategico\s+nazionale
   escludi:
@@ -288,3 +261,23 @@
   escludi:
   - appliance
   - \bhardware\b
+# Cloud e datacenter pubblici in-house (IT), fonte: siti istituzionali delle società. In fondo al dizionario: se il testo
+# nomina un prodotto (VMware, Oracle...) vince il prodotto; il nome dell'in-house conta solo con un contesto cloud/datacenter.
+# Fuori dalla misura cloud: punto aperto #52 (acquisti in-house e datacenter propri).
+- provider: In-house pubblico
+  giurisdizione: IT
+  servizio: in-house
+  regex:
+  - \bnivola\b
+  - cloud\s+toscana
+  - (lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)
+  - (cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)
+  fornitori:
+  - ^lepida
+  - ^cineca
+  - ^csi[\s-]+piemonte
+  - ^liguria\s+digitale
+  - ^inva\b
+  - ^trentino\s+digitale
+  - ^insiel
+  - ^sogei
