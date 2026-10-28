@@ -49,7 +49,8 @@ class Classificatore:
         # chi è il provider stesso (per distinguere vendita diretta da rivendita)
         self.propri = {}
         for m in self.marchi:
-            self.propri.setdefault(m["provider"], []).extend(m["fx"])
+            # rti: soci del concessionario (es. PSN: TIM, Leonardo, CDP, Sogei) che incassano come provider; contano solo per il canale
+            self.propri.setdefault(m["provider"], []).extend(m["fx"] + [re.compile(r, re.I) for r in m.get("rti", [])])
 
     def marchio(self, testo):
         """Primo marchio del dizionario che compare nel testo e non è escluso; restituisce (voce, regola)."""
@@ -88,9 +89,11 @@ class Classificatore:
             m, regola = self.marchio(testo)
             if m:
                 via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo)
-            elif RX_CLOUD.search(testo):
+            elif RX_CLOUD.search(testo) and not RX_NON_CLOUD.search(testo):
+                # via 5 solo se TUTTI gli aggiudicatari sono il provider: in un RTI la mandante (es. TIM con GPI) non dice il prodotto
                 for m in self.marchi:
-                    if m["servizio"] != "licenza" and (f := next((f for f in m["fx"] for n in aggiudicatari if f.search(n)), None)):
+                    if m["servizio"] != "licenza" and m["fx"] and aggiudicatari and all(any(f.search(n) for f in m["fx"]) for n in aggiudicatari) \
+                            and (f := next(f for f in m["fx"] if f.search(aggiudicatari[0]))):
                         via, prov, serv, regola = "5-fornitore", m["provider"], self._servizio(m["servizio"], testo), f.pattern
                         break
         if not via:

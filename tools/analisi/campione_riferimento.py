@@ -14,7 +14,7 @@ visti = set()
 for f in glob.glob("report/metodo/campione-*.csv"):
     if os.path.basename(f) == NOME + ".csv": continue  # riestrarre lo stesso campione deve dare lo stesso campione
     visti |= {r["cig"] for r in csv.DictReader(open(f, encoding="utf-8"))}
-for f in sorted(glob.glob("lavoro/attribuzione/[0-9]*.csv") + glob.glob("lavoro/attribuzione/delta.csv")):
+for f in sorted(glob.glob("lavoro/attribuzione/[0-9]*.csv") + []):
     if "campione" in f: continue
     for r in csv.DictReader(open(f, encoding="utf-8")):
         if r["e_padre"] == "1" or r["cig"] in visti: continue

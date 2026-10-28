@@ -56,6 +56,7 @@
   servizio: cloud
   regex:
   - google\s+workspace
+  - cloud\s+google
   - \bg\s*suite\b
   - google\s+cloud
   - \bgcp\b
@@ -187,7 +188,7 @@
   servizio: cloud
   nota: AQ Consip SPC Cloud lotto 1 (IaaS/PaaS), RTI guidato da Telecom Italia con Enterprise Services Italia, Poste, Postel
   regex:
-  - spc\s+cloud\s+lotto\s*1\b
+  - spc\s*cloud\W*\s*lotto\s*1\b
   fornitori: []
 # Telco italiane: solo via 5 (fornitore + parola cloud/hosting/datacenter); rivendono anche hyperscaler, quindi la via 3 vince
 - provider: TIM
@@ -222,6 +223,12 @@
   - \bpsn\b
   fornitori:
   - ^polo\s+strategico\s+nazionale
+  # soci del concessionario PSN (TIM, Leonardo, CDP Equity, Sogei): incassano come PSN; contano solo per il canale
+  rti:
+  - ^tim\b
+  - ^leonardo
+  - ^cdp\s+equity
+  - ^sogei
   escludi:
   - fondi\s+(del\s+)?(progetto\s+)?(po\s+)?psn
   - \bpo\s+psn
@@ -238,6 +245,8 @@
   servizio: licenza
   regex:
   - licenz\w*\s+(\w+\s+){0,2}microsoft
+  - prodotti\s+microsoft
+  - microsoft\s+enterprise\s+agreement
   - windows\s+server
   - sql\s+server
   - \bcal\b.{0,20}microsoft

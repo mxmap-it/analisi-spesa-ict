@@ -17,7 +17,7 @@ ESITI=esiti/$OGGI/cloud
 mkdir -p "$ESITI"
 
 test_()       { "$PY" tests/test_classifica.py; }
-attribuisci() { nice -n 10 "$PY" tools/analisi/attribuisci_provider.py 2024 2025 delta >/dev/null && cp lavoro/attribuzione/riepilogo.json "$ESITI/attribuzione-riepilogo.json"; echo "esito: $ESITI/attribuzione-riepilogo.json"; }
+attribuisci() { nice -n 10 "$PY" tools/analisi/attribuisci_provider.py 2024 2025 2026 >/dev/null && cp lavoro/attribuzione/riepilogo.json "$ESITI/attribuzione-riepilogo.json"; echo "esito: $ESITI/attribuzione-riepilogo.json"; }
 rivenditori() { nice -n 10 "$PY" tools/analisi/rivenditori.py >/dev/null && cp lavoro/attribuzione/rivenditori.json "$ESITI/rivenditori.json"; echo "esito: $ESITI/rivenditori.json"; }
 campione()    { "$PY" tools/analisi/campione_riferimento.py 700 20261028 campione-misura-v3 && cp lavoro/attribuzione/campione-misura-v3*.csv "$ESITI/"; }
 misura()      { "$PY" tools/analisi/misura_campione.py report/metodo/campione-misura-v3.csv "$@" | tee "$ESITI/misura.json"; }
