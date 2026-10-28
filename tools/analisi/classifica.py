@@ -14,7 +14,7 @@ from pathlib import Path
 import yaml
 
 RADICE = Path(__file__).resolve().parents[2]
-VERSIONE = "v3"
+VERSIONE = "v3.1"
 CPV_ICT = re.compile(r"^(48|72|302|3223|3224|3225|3226|50312|50320|51611|64216|64222|79342)")
 # via 2: solo riferimenti espliciti alla seconda edizione: "Public Cloud IaaS e PaaS" (ID 2213) ha lotti diversi
 RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*(2|ed\.?\s*2|edizione\s*2)\b", re.I)
@@ -30,6 +30,14 @@ RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|sv
 # un contratto misto (abbonamento + servizi) resta abbonamento: è la voce di costo principale e la dipendenza da misurare
 RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|canone|servizi\s+(cloud|iaas|paas|saas)\b|(acquisizione|fornitura)\s+di\s+prodotti|"
                             r"adesion\w*\s+(\w+\s+){0,3}(polo\s+strategico|psn)|contratto\s+di\s+utenza|infrastruttura\s+cloud\s+in\s+adesione", re.I)
+# v3.1 (29/10/2026, indicazione di Fabio): telefonia VoIP e centralino in cloud (UCaaS) hanno un tipo a sé, "telefonia".
+# Vale solo se la telefonia è l'oggetto: con il provider da via 5 (telco, hosting) o ignoto (via 7), o con un marchio di sola
+# comunicazione (Webex). Se c'è un'altra piattaforma (Microsoft 365, Salesforce) o altro cloud (IaaS, data center, backup) vince quella.
+RX_TELEFONIA = re.compile(r"voip|voices+overs+ip|centralin|pbx|ucaas|unifieds+communication|comunicaziones+unificata|sips+trunk|telefonias+(ip|cloud|virtuale)", re.I)
+# centralino ospitato dal fornitore: è cloud anche se il testo non dice "cloud"
+RX_TELEFONIA_CLOUD = re.compile(r"centralinw*s+(telefonicw+s+)?(virtual|ins+cloud|cloud|hosted|ospitat)|virtuals*(ips*)?pbx|(cloud|hosted)s*pbx|pbxs+(virtual|hosted|ins+cloud)|ucaas|voips+ins+cloud", re.I)
+RX_ALTRO_CLOUD = re.compile(r"(iaas|paas|saas)|datas*cent|servers+virtual|macchines+virtual|backup|storage|clouds+computing|hostings+(web|sito|siti)", re.I)
+MARCHI_COMUNICAZIONE = {"Cisco Webex", "Zoom"}
 NOME_CANONICO = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}
 
 
@@ -46,6 +54,8 @@ class Classificatore:
                 self.lotti[l["cig"]] = dict(l, iniziativa=ini["iniziativa"])
         self.lotto_n = {str(l.get("lotto")): l for l in self.lotti.values() if l.get("lotto")}
         self.giur = {m["provider"]: m["giurisdizione"] for m in self.marchi}
+        # piattaforme di prodotto: se il testo ne nomina una, la telefonia è accessoria (es. Teams Phone dentro Microsoft 365)
+        self.piattaforme = {"Microsoft", "Amazon Web Services", "Google", "Oracle", "IBM", "Salesforce", "ServiceNow", "SAP", "Adobe"}
         # chi è il provider stesso (per distinguere vendita diretta da rivendita)
         self.propri = {}
         for m in self.marchi:
@@ -65,10 +75,15 @@ class Classificatore:
         return sorted({NOME_CANONICO.get(m["provider"], m["provider"]) for m in self.marchi
                        if any(r.search(testo) for r in m["rx"]) and not any(e.search(testo) for e in m["ex"])})
 
-    def _servizio(self, serv, testo):
+    def _servizio(self, serv, testo, provider=""):
+        if serv in ("cloud", "psn", "") and RX_TELEFONIA.search(testo) and not RX_ALTRO_CLOUD.search(testo)                 and (provider in MARCHI_COMUNICAZIONE or provider not in self.piattaforme):
+            return "telefonia"
         if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
             return "servizi-professionali"
         return serv
+
+    def _e_cloud(self, testo):
+        return bool((RX_CLOUD.search(testo) or RX_TELEFONIA_CLOUD.search(testo)) and not RX_NON_CLOUD.search(testo))
 
     def canale(self, provider, aggiudicatari):
         """diretto se un aggiudicatario è il provider stesso, rivenditore se no, ignoto senza aggiudicatari."""
@@ -88,17 +103,19 @@ class Classificatore:
         else:
             m, regola = self.marchio(testo)
             if m:
-                via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo)
-            elif RX_CLOUD.search(testo) and not RX_NON_CLOUD.search(testo):
+                via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo, m["provider"])
+            elif self._e_cloud(testo) and not RX_NON_CLOUD.search(testo):
                 # via 5 solo se TUTTI gli aggiudicatari sono il provider: in un RTI la mandante (es. TIM con GPI) non dice il prodotto
                 for m in self.marchi:
                     if m["servizio"] != "licenza" and m["fx"] and aggiudicatari and all(any(f.search(n) for f in m["fx"]) for n in aggiudicatari) \
                             and (f := next(f for f in m["fx"] if f.search(aggiudicatari[0]))):
-                        via, prov, serv, regola = "5-fornitore", m["provider"], self._servizio(m["servizio"], testo), f.pattern
+                        via, prov, serv, regola = "5-fornitore", m["provider"], self._servizio(m["servizio"], testo, "via5"), f.pattern
                         break
         if not via:
-            if cpv and not CPV_ICT.match(cpv): return None
-            via = "7-indeterminato-cloud" if RX_CLOUD.search(testo) and not RX_NON_CLOUD.search(testo) else "0-ict-non-cloud"
+            # i CPV di telefonia (642) entrano solo per il centralino ospitato: il resto della telefonia è fuori perimetro
+            if cpv and not CPV_ICT.match(cpv) and not (cpv.startswith("642") and RX_TELEFONIA_CLOUD.search(testo)): return None
+            via = "7-indeterminato-cloud" if self._e_cloud(testo) else "0-ict-non-cloud"
+            if via[0] == "7": serv = self._servizio("", testo)
         prov = NOME_CANONICO.get(prov, prov)
         return {"via": via, "provider": prov, "giurisdizione": self.giur.get(prov, ""), "servizio": serv,
                 "canale": self.canale(prov, aggiudicatari) if prov else "", "regola": regola}

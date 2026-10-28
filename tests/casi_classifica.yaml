@@ -63,3 +63,12 @@
 - {fonte: 2025 grandi importi, testo: "ADESIONE ALL'ACCORDO QUADRO CONSIP SERVIZI APPLICATIVI IN OTTICA CLOUD", aggiudicatari: [ACCENTURE S.P.A.], cpv: "72000000-5", provider: ""}
 - {fonte: rivenditori v3, testo: "SOTTOSCRIZIONE SAP SUCCESSFACTORS", aggiudicatari: ["S.A.P. ITALIA SISTEMI APPLICAZIONI PRODOTTI IN DATA PROCESSING S.P.A."], provider: SAP, canale: diretto}
 - {fonte: rivenditori v3, testo: "SOTTOSCRIZIONE SERVICENOW ITSM", aggiudicatari: [SERVICENOW NEDERLAND B.V.], provider: ServiceNow, canale: diretto}
+# v3.1 telefonia VoIP / centralino in cloud (29/10/2026, indicazione di Fabio): tipo "telefonia"; se c'è una piattaforma o altro cloud vince quella
+- {fonte: attribuzione v3 2024, testo: "ACQUISIZIONE DEL SERVIZIO DI GESTIONE DEL CENTRALINO IN CLOUD IN SOLUZIONE VIRTUAL IP PBX IN ADESIONE ALLA CONVENZIONE INTERCENTER", aggiudicatari: [TIM S.P.A.], provider: TIM, servizio: telefonia}
+- {fonte: attribuzione v3, testo: "DETERMINA A CONTRARRE PER AFFIDAMENTO TRAMITE IL MEPA DELLA FORNITURA DI UN CENTRALINO VIRTUALE VOIP IN CLOUD", aggiudicatari: [FASTWEB S.P.A.], provider: Fastweb, servizio: telefonia}
+- {fonte: attribuzione v3, testo: "SERVIZIO DI CENTRALINO TELEFONICO TIM WEBEX", provider: Cisco Webex, servizio: telefonia}
+- {fonte: attribuzione v3, testo: "FORNITURA DI LICENZE 'MICROSOFT365 E5 SECURITY', 'TEAMS PHONE STANDARD' E DI LICENZE 'MICROSOFT365 E3 FULL USL ORIGINAL'", provider: Microsoft, servizio: cloud}
+- {fonte: attribuzione v3, testo: "RINNOVO DELLE 3 LICENZE PER L'UTILIZZO DELLA PIATTAFORMA CRM DI SALESFORCE, COMPRENSIVE DI CENTRALINO E FUNZIONI A.I.", provider: Salesforce, servizio: cloud}
+- {fonte: sintetico, testo: "CANONE CENTRALINO VIRTUALE PER GLI UFFICI COMUNALI", cpv: "64210000-1", provider: "", via: 7-indeterminato-cloud, servizio: telefonia}
+- {fonte: attribuzione v3, testo: "AFFIDAMENTO DEI SERVIZI DI CONNETTIVITÀ, CENTRALINO VIRTUALE, DATA CENTER SERVER VIRTUALI, VPN E SERVIZI IN HOUSING DEL BACK-UP DATI", provider: "", via: 7-indeterminato-cloud, servizio: ""}
+- {fonte: attribuzione v3, testo: "MANUTENZIONE SISTEMI VOIP ANNO 2022 - RDA 29364", cpv: "72000000-5", provider: "", via: 0-ict-non-cloud}
