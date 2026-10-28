@@ -148,3 +148,32 @@ Livello del risultato: **misurato** (prodotto da uno script su dati archiviati c
 - **Correzione collegata.** SAP Italia e ServiceNow risultavano rivenditori di sé stessi
   (mancavano le denominazioni societarie). Corretto prima della pubblicazione, commit `b2dfcca`
   e precedenti.
+
+## 10. Telefonia VoIP e centralino in cloud, regole v3.1 (29/10/2026, indicazione di Fabio)
+
+- **Ipotesi.** Il centralino in cloud (VoIP, virtual PBX, UCaaS) è spesa cloud, ma di telefonia. Contarlo
+  come cloud generico o lasciarlo fra gli indeterminati confonde la misura.
+- **Approccio.**
+  - Nuovo tipo di servizio `telefonia`, assegnato se il testo parla di VoIP, centralino o PBX.
+  - Vale solo se la telefonia è l'oggetto del contratto:
+    - il provider viene da un fornitore telco o di hosting (via 5), oppure non è attribuito (via 7),
+      oppure è un marchio di sola comunicazione (Webex, Zoom);
+    - nel testo non compaiono un'altra piattaforma (Microsoft 365 con Teams Phone, Salesforce con
+      centralino) né altro cloud (IaaS, data center, backup, storage). In quei casi vince il prodotto
+      principale.
+  - Il "centralino virtuale", il "cloud PBX" e il "virtual PBX" contano come cloud anche senza la
+    parola "cloud".
+  - Il CPV di telefonia (642) entra nel perimetro solo per questi contratti.
+  - Casi di test: 9 nuovi in `tests/casi_classifica.yaml`.
+- **Risultato** (prima esecuzione, 2022-2026). 349 contratti passano al tipo `telefonia`, per 23,6
+  milioni al netto dei padri AQ e degli importi da verificare:
+  - 190 erano già cloud indeterminato (via 7) o attribuiti;
+  - 159 sono nuovi nel perimetro, perché il centralino virtuale non diceva "cloud" o perché il
+    CPV era di telefonia.
+
+  *Misurato.*
+- **Errore trovato.** "CLOUDPBX" e "CENTRALINOCLOUD PBX", scritti attaccati, entravano nel
+  perimetro ma senza il tipo `telefonia`. Corretto.
+- **Pubblicazione.** I numeri pubblicati restano quelli v3 (1.449 su 1.449 riprodotti). La v3.1 si
+  pubblica alla prossima versione del rendiconto, insieme alla misura del campione annotato alla
+  cieca. Le annotazioni non dipendono dalla versione del classificatore.
