@@ -2,7 +2,31 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-10-26 sera
+**Ultimo aggiornamento:** 2026-10-28
+
+## Aggiornamento 28/10/2026 — misura della spesa cloud v3
+
+- **Rendiconto pubblico** `/rendiconti/cloud-metodo-2026-10/` (v1.0), per la revisione pubblica.
+  Riproduzione: `tools/misura_cloud.sh` (test, attribuisci, rivenditori, pnrr, campione, misura,
+  confronta). Il 28/10 sono stati riprodotti 1.449 numeri su 1.449.
+- **Classificatore** `tools/analisi/classifica.py` (funzione pura). Regole in `config/`, 58 casi
+  in `tests/casi_classifica.yaml`. Contratti 2022-2026; un CIG si conta una volta sola (ultima
+  versione, il delta vince).
+- **Pubblicati** `report/metodo/*-v3.*`:
+  - riepilogo, rivenditori, PNRR, importi da verificare (84 contratti, 9,8 miliardi);
+  - campione v3 di 611 contratti, con la copia cieca;
+  - `fonti-v3.sha256`.
+- **Registri:**
+  - `report/metodo/REGISTRO-PROCEDIMENTI.md`, il racconto peritale del lavoro;
+  - `report/metodo/richieste-e-raccomandazioni.yaml`, con R01-R15 per ANAC, Consip, PSN, DTD,
+    ACN, Sogei. Va aggiornato sempre (AGENTS.md §3). Nulla è stato inviato.
+- **Prossimo:**
+  1. Annotazione alla cieca del campione v3 da parte di due persone. **Serve sapere da Fabio chi
+     la fa.**
+  2. Verifica degli 84 importi da verificare.
+  3. Via 4 (PSN) e catalogo ACN.
+- **Ticket:** #48 metodo, #41 rivenditori, #43 PNRR, #52 in-house e datacenter (dopo), #53
+  interfaccia di drilldown (dopo), #54 richieste ad ANAC, #22 proposta ad aborruso a fine lavoro.
 
 ## Aggiornamento 27/10/2026 (sera)
 
