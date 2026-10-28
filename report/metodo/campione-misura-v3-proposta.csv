@@ -1,0 +1,612 @@
+cig,versione,via,provider,giurisdizione,servizio,regola
+B7EB32017F,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B277C2EA48,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+97618082CD,v3.1,0-ict-non-cloud,,,,
+B26E324F91,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+A058637CD8,v3.1,fuori-ict,,,,
+B4B888C79A,v3.1,0-ict-non-cloud,,,,
+B65C85927F,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B07CBEC7DF,v3.1,3-marchio,SAP,UE,cloud,"s/?4\s*hana.{0,40}(cloud|sottoscrizion)"
+BC3DF49DE9,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+9164554D32,v3.1,3-marchio,SAP,UE,licenza,s/?4\s*hana
+B4AE43BE75,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BBC36E6AC4,v3.1,7-indeterminato-cloud,,,,
+B489882D6A,v3.1,5-fornitore,In-house pubblico,IT,in-house,^inva\b
+B925D984B4,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+B288350F28,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B1059A2991,v3.1,5-fornitore,In-house pubblico,IT,in-house,^cineca
+B41E705983,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s+teams
+9249133202,v3.1,5-fornitore,Aruba,IT,cloud,^aruba\s+s\.?p\.?a
+9416674536,v3.1,3-marchio,SAP,UE,cloud,rise\s+with\s+sap
+B30459B338,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B2A7D6A51D,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B108B287C9,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B06D447B02,v3.1,7-indeterminato-cloud,,,,
+A002359C48,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+973340758D,v3.1,0-ict-non-cloud,,,,
+B318E8B5DB,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+B9126C54A3,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+A0408FD3BD,v3.1,5-fornitore,SAP,UE,cloud,^s\W*a\W*p\W+italia
+B8A6D04E8A,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B5299835B0,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+99120778B2,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+9147549C3A,v3.1,0-ict-non-cloud,,,,
+A000158CB0,v3.1,3-marchio,SAP,UE,licenza,"licenz\w*\s+(\w+\s+){0,2}sap\b"
+99892784FB,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,microsoft\s+enterprise\s+agreement
+BCA472B418,v3.1,0-ict-non-cloud,,,,
+9255744194,v3.1,3-marchio,SPC Cloud lotto 1,IT,cloud,spc\s*cloud\W*\s*lotto\s*1\b
+A036C8112F,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B3726E6A3C,v3.1,7-indeterminato-cloud,,,,
+B5C8F48899,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BCC2EFC328,v3.1,7-indeterminato-cloud,,,,
+9989267BE5,v3.1,0-ict-non-cloud,,,,
+99879182AD,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+BA295F3687,v3.1,7-indeterminato-cloud,,,,
+9314279230,v3.1,3-marchio,SPC Cloud lotto 1,IT,cloud,spc\s*cloud\W*\s*lotto\s*1\b
+BB4CAE07D7,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B486F51F67,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,dynamics\s*365
+B58C0D43B3,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+BA5BF7094E,v3.1,5-fornitore,In-house pubblico,IT,in-house,^inva\b
+B5D20DA979,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B796EB7338,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B3126E5D4C,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B8441CE9C9,v3.1,7-indeterminato-cloud,,,,
+B5B9D68E97,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+A006547475,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B19A783046,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B96001B6A3,v3.1,0-ict-non-cloud,,,,
+B02310E0E0,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,dynamics\s*365
+915914800A,v3.1,7-indeterminato-cloud,,,,
+923304883D,v3.1,3-marchio,SPC Cloud lotto 1,IT,cloud,spc\s*cloud\W*\s*lotto\s*1\b
+B6792F6829,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9184438600,v3.1,3-marchio,SPC Cloud lotto 1,IT,cloud,spc\s*cloud\W*\s*lotto\s*1\b
+B530788030,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B803E60D29,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+911866720F,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+91069458C0,v3.1,5-fornitore,Oracle,EXTRA-UE,servizi-professionali,^oracle\s+italia
+A00E1BD9CE,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B57E9A5079,v3.1,5-fornitore,In-house pubblico,IT,in-house,^trentino\s+digitale
+BABBEA9134,v3.1,0-ict-non-cloud,,,,
+9075651820,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B7C478836E,v3.1,0-ict-non-cloud,,,,
+BC316F3B5E,v3.1,3-marchio,Salesforce,EXTRA-UE,servizi-professionali,salesforce
+9486076D8B,v3.1,7-indeterminato-cloud,,,,
+B7B6CA4110,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BB1A112239,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B686E463A9,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B20F082B63,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+A02BBB39CA,v3.1,7-indeterminato-cloud,,,,
+B7BA7F64F1,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+BCA6527288,v3.1,7-indeterminato-cloud,,,,
+B5B826DAC2,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B4FBCC3679,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B89E34B78D,v3.1,7-indeterminato-cloud,,,,
+B2B9D3212D,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B250538ACF,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B1F26E69CD,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+B6971F8258,v3.1,5-fornitore,In-house pubblico,IT,in-house,^inva\b
+9984640196,v3.1,0-ict-non-cloud,,,,
+B88CBC4B31,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B20CBC16D7,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+BA6BD2CCB0,v3.1,0-ict-non-cloud,,,,
+B491522570,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+A038382CED,v3.1,0-ict-non-cloud,,,,
+A02AE8BE6C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9703402CA2,v3.1,3-marchio,Salesforce,EXTRA-UE,servizi-professionali,salesforce
+BBBD9CB582,v3.1,7-indeterminato-cloud,,,,
+B0D6788BAA,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B010D77039,v3.1,5-fornitore,SAP,UE,cloud,^s\W*a\W*p\W+italia
+94845366B4,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,\bexadata\b
+B95E019CBA,v3.1,7-indeterminato-cloud,,,,
+A0626AB5D7,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+BB71CE4A52,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+99916824D3,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+A05DED1AA0,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+B009E80E02,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+BB3A4643B3,v3.1,5-fornitore,In-house pubblico,IT,in-house,^cineca
+91442856B2,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B2298FA3C4,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+B343A9E9EC,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B64D448989,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BABDF96D05,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s*365
+A03DD3A6BA,v3.1,7-indeterminato-cloud,,,,
+925962651A,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BC37EF9326,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+9621969BFF,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B2EB93DB84,v3.1,7-indeterminato-cloud,,,,
+B937E7120D,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+B918859AC7,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9376897C2F,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BB23A0D08E,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BA0C185710,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B3EE41895D,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B62AAB1353,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B1EEC82A52,v3.1,3-marchio,Amazon Web Services,EXTRA-UE,cloud,\baws\b
+B8856D3A66,v3.1,7-indeterminato-cloud,,,,
+BB4B3851D2,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+A01DA99750,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+A0360A03AB,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B360712448,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"manutenzione\s+(\w+\s+){0,3}oracle"
+B338A78D2C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+96991285A0,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+9504318B52,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"manutenzione\s+(\w+\s+){0,3}oracle"
+B4E6EEA686,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B19FD6A3D1,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+A0705CFA0D,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B6FC7A2FA5,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B374A4175C,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+BD16D1E34B,v3.1,5-fornitore,In-house pubblico,IT,in-house,^inva\b
+B415678008,v3.1,3-marchio,SPC Cloud lotto 1,IT,servizi-professionali,spc\s*cloud\W*\s*lotto\s*1\b
+97756891C4,v3.1,7-indeterminato-cloud,,,,
+B0EA5C6AD6,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9103748A80,v3.1,7-indeterminato-cloud,,,,
+9790349394,v3.1,7-indeterminato-cloud,,,,
+9280070C04,v3.1,2-lotto-nel-testo,Google,EXTRA-UE,cloud,AQ 2746 lotto 2
+A0121478EF,v3.1,0-ict-non-cloud,,,,
+B66464192D,v3.1,7-indeterminato-cloud,,,,
+A06D23A8F1,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+B8E271D733,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B9A9B37EC7,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B910155FA8,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+9955108EFE,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B41A4AA766,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+96801708FC,v3.1,7-indeterminato-cloud,,,,
+BCC65B5BBD,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+BD161C345C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B496DF958E,v3.1,0-ict-non-cloud,,,,
+B27D679D61,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B54785AC5F,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+A028289D6D,v3.1,2-lotto-nel-testo,Amazon Web Services,EXTRA-UE,cloud,AQ 2746 lotto 1
+A008CC4AA9,v3.1,0-ict-non-cloud,,,,
+9521206BBD,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B7BA6A707F,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BA77B31BD0,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B8E0180D17,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B978E3F4FC,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+BCDE4A5E4D,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B0B953482D,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+98035186FA,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+B61A9E374E,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B8CAFCF122,v3.1,0-ict-non-cloud,,,,
+B08310DC25,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B5B83EC6D3,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+9457137456,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B439747F60,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B68B60BD87,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B645470989,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B61DA24952,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9309164527,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B83F351486,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+97094213AE,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+BB2033D4FA,v3.1,5-fornitore,In-house pubblico,IT,in-house,^cineca
+908562816A,v3.1,0-ict-non-cloud,,,,
+B6D3D1ED18,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B417AE81BD,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+BAC2115997,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+workspace
+B7297D85E5,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B8E9F9B620,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B6180DED99,v3.1,3-marchio,Aruba,IT,servizi-professionali,\baruba\b
+B411CCC862,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B7E250E405,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+9837856797,v3.1,5-fornitore,Oracle,EXTRA-UE,cloud,^oracle\s+italia
+B46CA94B21,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+944126170B,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9550572556,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B1CBF0B17D,v3.1,5-fornitore,In-house pubblico,IT,in-house,^cineca
+BC3631C4CF,v3.1,7-indeterminato-cloud,,,,
+BA24FC4BAF,v3.1,3-marchio,Salesforce,EXTRA-UE,cloud,salesforce
+BBE06E519C,v3.1,0-ict-non-cloud,,,,
+B6284FD63D,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+BC351F6E0E,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+A046A1FBCD,v3.1,0-ict-non-cloud,,,,
+B814229ED2,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B9110A0E6B,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+BCC1A1428C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,sql\s+server
+BC122E2069,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+98799844B8,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+9097640A05,v3.1,5-fornitore,Salesforce,EXTRA-UE,servizi-professionali,^salesforce
+B28FB6FFAF,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+A00871AE14,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+9410632B30,v3.1,3-marchio,SAP,UE,licenza,"licenz\w*\s+(\w+\s+){0,2}sap\b"
+BB0EBDB727,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+A01A1C0DCA,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+99734016DD,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+93067458ED,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+A0459FDB9E,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+BD26ACECC4,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B837B2379D,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B47236FE8B,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B49F9F5A5A,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B8A6149067,v3.1,0-ict-non-cloud,,,,
+920891905E,v3.1,3-marchio,SPC Cloud lotto 1,IT,cloud,spc\s*cloud\W*\s*lotto\s*1\b
+B14706AE5A,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+9786459971,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+A01229D32B,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+97005646A6,v3.1,3-marchio,SAP,UE,licenza,"licenz\w*\s+(\w+\s+){0,2}sap\b"
+A05E1A4F42,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+B557E941D0,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B5DA01F02D,v3.1,5-fornitore,In-house pubblico,IT,in-house,^inva\b
+944221062F,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+A047B6D390,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+B1C61A3CAB,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B13241C461,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,\bazure\b
+B1C0BD09A1,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+BC05A8F057,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+A06F01F467,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9301027A48,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+workspace
+B7BE4CB82F,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B24301BCF2,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+B97732ABAF,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+9886177B56,v3.1,2-lotto-nel-testo,Amazon Web Services,EXTRA-UE,cloud,AQ 2746 lotto 1
+B2E5630E41,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+960813757A,v3.1,0-ict-non-cloud,,,,
+B7EDC03F1F,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9532939E1D,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B9A22E75D3,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,windows\s+server
+BC77414DA7,v3.1,0-ict-non-cloud,,,,
+B8BDB991E6,v3.1,5-fornitore,In-house pubblico,IT,in-house,^trentino\s+digitale
+9402038733,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+BC2FA2BB1A,v3.1,3-marchio,Polo Strategico Nazionale,IT,telefonia,\bpsn\b
+9962241D55,v3.1,0-ict-non-cloud,,,,
+B4D836E299,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B5F01263FB,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+A03041660F,v3.1,5-fornitore,SAP,UE,cloud,^s\W*a\W*p\W+italia
+A03793D36B,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B9A07A790B,v3.1,3-marchio,Google,EXTRA-UE,servizi-professionali,google\s+cloud
+BCB68B0F5D,v3.1,7-indeterminato-cloud,,,,
+953050772C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B20FE553DF,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B0CFD6CB39,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B4B9E3684E,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B913E1B689,v3.1,0-ict-non-cloud,,,,
+A04FACF230,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+934915706D,v3.1,7-indeterminato-cloud,,,,
+BC6229394C,v3.1,0-ict-non-cloud,,,,
+A044B84A28,v3.1,3-marchio,Salesforce,EXTRA-UE,servizi-professionali,salesforce
+BB66EAB46B,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+BC8C6911FC,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B941C11592,v3.1,0-ict-non-cloud,,,,
+A01E9A0DF3,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B616F3C08B,v3.1,5-fornitore,In-house pubblico,IT,in-house,^cineca
+B41E62B59E,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+A013584C6D,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B9B6A40898,v3.1,7-indeterminato-cloud,,,,
+9512181415,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B8BB6F87BF,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B7BBDCA84D,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B600913063,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+98471415D1,v3.1,3-marchio,Aruba,IT,servizi-professionali,\baruba\b
+B5697A427B,v3.1,5-fornitore,In-house pubblico,IT,in-house,^trentino\s+digitale
+BA82B5EE55,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B79DA6F7A6,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+91877470AE,v3.1,7-indeterminato-cloud,,,,
+B1A5BF7A68,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B27B4E6891,v3.1,7-indeterminato-cloud,,,,
+B6D5740DDB,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+96886048F1,v3.1,7-indeterminato-cloud,,,,
+A039063DB2,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B03B39BEC2,v3.1,0-ict-non-cloud,,,,
+B43388905C,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+BD1F73148F,v3.1,0-ict-non-cloud,,,,
+BB42213B57,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+9867759C52,v3.1,2-lotto-nel-testo,Amazon Web Services,EXTRA-UE,cloud,AQ 2746 lotto 1
+B41435988A,v3.1,3-marchio,SAP,UE,licenza,sap\s+r/?3
+BC5DAFA3BC,v3.1,3-marchio,SAP,UE,licenza,sap\s+hana
+B1F2461589,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B2C9B52714,v3.1,0-ict-non-cloud,,,,
+B7553AFC92,v3.1,7-indeterminato-cloud,,,,
+B99FB81299,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,sql\s+server
+BB6D3194FB,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+B272173AC1,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+93054983E0,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BAD2AE870E,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+B9A511A5C6,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B07494675C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,windows\s+server
+A0279FDFD4,v3.1,3-marchio,Salesforce,EXTRA-UE,cloud,salesforce
+A06658648E,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+B22FF5E298,v3.1,7-indeterminato-cloud,,,,
+91875817AF,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B343EAD357,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+A0282C0AD1,v3.1,2-lotto-nel-testo,Microsoft,EXTRA-UE,cloud,AQ 2746 lotto 3
+B9A4F55FEF,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+B6F6B6E904,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+A069537FBA,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+A01CFA90B0,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B52A158C42,v3.1,7-indeterminato-cloud,,,,
+B9D3B219ED,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+A02ED68EC9,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+BA1A15E0A7,v3.1,0-ict-non-cloud,,,,
+BA5597A542,v3.1,5-fornitore,Aruba,IT,cloud,^aruba\s+s\.?p\.?a
+BD056A6692,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+94778866F3,v3.1,3-marchio,Amazon Web Services,EXTRA-UE,cloud,\baws\b
+B7449F2147,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B2988CC7CD,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B001A6CF76,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+9241412E6C,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B7EAE8B97F,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9880539EB5,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+BB99D6382C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B9990B61BE,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B319172AFE,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B2764FE7BE,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+BC5071EEC2,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+A00A62F46A,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BD145B7F39,v3.1,5-fornitore,Aruba,IT,cloud,^aruba\s+s\.?p\.?a
+B9E37F1A8F,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B010D99C44,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,\bazure\b
+B88C3DD5C4,v3.1,3-marchio,SAP,UE,licenza,sap\s+hana
+A01180DBBF,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,windows\s+server
+B19C8C84B8,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B107086D63,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s*365
+977621215C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B77118AB0E,v3.1,7-indeterminato-cloud,,,,
+B259586053,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+9963965C06,v3.1,0-ict-non-cloud,,,,
+B225F12A9B,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B17CFA49C6,v3.1,3-marchio,Aruba,IT,servizi-professionali,\baruba\b
+9723800D98,v3.1,0-ict-non-cloud,,,,
+97521164B5,v3.1,0-ict-non-cloud,,,,
+99911215DF,v3.1,0-ict-non-cloud,,,,
+B3437A3448,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B748C65731,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B2D27A3208,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+BBA385DC30,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+9056587405,v3.1,3-marchio,SAP,UE,licenza,"licenz\w*\s+(\w+\s+){0,2}sap\b"
+94986283CB,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B5D2AE20AA,v3.1,3-marchio,SAP,UE,licenza,"licenz\w*\s+(\w+\s+){0,2}sap\b"
+B8448E31EE,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+B1A474AA7C,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B54AA32E41,v3.1,0-ict-non-cloud,,,,
+A01A3A7FAC,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+BCC0A9DF76,v3.1,0-ict-non-cloud,,,,
+A0016278AC,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+A037472EDA,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B6ABFAE568,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9275710E07,v3.1,7-indeterminato-cloud,,,,
+B056F820A5,v3.1,7-indeterminato-cloud,,,,
+BD09DB16F5,v3.1,3-marchio,Nextcloud,UE,servizi-professionali,next\s*cloud
+91692196E2,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+A039FA4437,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B906292BFF,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B4B7B2369A,v3.1,7-indeterminato-cloud,,,,
+9025215307,v3.1,0-ict-non-cloud,,,,
+B79FF59E07,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+934358389B,v3.1,3-marchio,Google,EXTRA-UE,servizi-professionali,google\s+workspace
+9938996EF3,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9816265E20,v3.1,0-ict-non-cloud,,,,
+B11299FCBA,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+BB3FCDC56B,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B2A7129860,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BCD6C2099B,v3.1,7-indeterminato-cloud,,,,
+A04FA10491,v3.1,0-ict-non-cloud,,,,
+930131257A,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+BC40BEA222,v3.1,3-marchio,ServiceNow,EXTRA-UE,cloud,servicenow
+9033230935,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+B1FFCF1C10,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+workspace
+B7C473A310,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B1A5BFBDB4,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B8135D84E5,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+A0112E5A73,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+B600AA4B4A,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+91526784D2,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9797590B08,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B0ABF3C598,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B67FEC713C,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+B8470CF3BD,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BBE18587E3,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,\bazure\b
+BBDFCDFC11,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B0FF3E7635,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B777F49BC8,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+BB7FEF8B1B,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+909076509A,v3.1,3-marchio,Salesforce,EXTRA-UE,cloud,salesforce
+9792049E73,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B84F78F6BC,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,\bazure\b
+A01B18948A,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B9DD7901C4,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s*365
+B466CB434E,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B981D70F49,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B810675A12,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+97578776D5,v3.1,3-marchio,Amazon Web Services,EXTRA-UE,cloud,\baws\b
+B95234CF12,v3.1,3-marchio,Salesforce,EXTRA-UE,cloud,salesforce
+B54D53D36F,v3.1,5-fornitore,In-house pubblico,IT,in-house,^trentino\s+digitale
+B09DC5AACE,v3.1,3-marchio,Cloudera,EXTRA-UE,licenza,cloudera
+B2129C9FAC,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+BB43ED3503,v3.1,3-marchio,Adobe,EXTRA-UE,cloud,adobe\s+acrobat
+A023E98C45,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+9563395B34,v3.1,3-marchio,Oracle,EXTRA-UE,servizi-professionali,oracle\s+cloud
+A04A108C01,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9560827408,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B8EC2BA1BD,v3.1,0-ict-non-cloud,,,,
+B2117E29AB,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+945884884B,v3.1,3-marchio,Oracle,EXTRA-UE,cloud,oracle\s+cloud
+B1A5BF8B3B,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+9134580DDE,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+A06EF28891,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B05899877F,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B55F4B7F1C,v3.1,5-fornitore,In-house pubblico,IT,in-house,^trentino\s+digitale
+B277BD9425,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B496F08531,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bo365\b
+BA410BED85,v3.1,0-ict-non-cloud,,,,
+B74FDD214A,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B9997A0663,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+workspace
+B5A54618FA,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B4134694E1,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B2F014B1A6,v3.1,7-indeterminato-cloud,,,,
+BAF304367A,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,prodotti\s+microsoft
+94424246C8,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B847E2985B,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B3B674A557,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+A03EA60072,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BBF3F545AA,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9518472B92,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B7B77E49B4,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B36F21545C,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+BB2A92E568,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"(software|prodotti)\s+(\w+\s+){0,2}oracle"
+BC95D5E3D6,v3.1,3-marchio,Amazon Web Services,EXTRA-UE,cloud,\baws\b
+A0317665FA,v3.1,3-marchio,IBM,EXTRA-UE,cloud,ibm\s+cloud
+B96AE34225,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B21CC3CE5A,v3.1,5-fornitore,In-house pubblico,IT,in-house,^liguria\s+digitale
+B17517CE44,v3.1,5-fornitore,Retelit,IT,cloud,^retelit
+BC5F0F35A1,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+workspace
+B270FC42F7,v3.1,5-fornitore,Aruba,IT,cloud,^aruba\s+s\.?p\.?a
+B2CED5B9A6,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+A012EEDC45,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+BBACC5F005,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B6978F2432,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B24149673C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B2C3DD2E75,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B445EE4943,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+A03A34B7CC,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B9ED99A28D,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B40DC4BD6B,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+BD0471E579,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B5C1DCB150,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B8DAA05C27,v3.1,7-indeterminato-cloud,,,,
+B0ADE9A828,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+A0396150E4,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+983506478F,v3.1,7-indeterminato-cloud,,,,
+A06E7B8557,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,\bpsn\b
+91054452EB,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bo365\b
+9504411812,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+A0294136B3,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9403263A19,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B6F8093BF6,v3.1,3-marchio,Adobe,EXTRA-UE,cloud,adobe\s+acrobat
+B6F0A3C3BF,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B6488713C7,v3.1,7-indeterminato-cloud,,,,
+B8E2CA146C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B8C641EAB7,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B6D20D44D1,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+B462D2F84C,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,office\s*365
+BB5A456C2C,v3.1,0-ict-non-cloud,,,,
+B78A95508C,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+BC72C0FEF5,v3.1,0-ict-non-cloud,,,,
+B2F2FBE668,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+BA7265DB34,v3.1,5-fornitore,Polo Strategico Nazionale,IT,psn,^polo\s+strategico\s+nazionale
+B06937F577,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B7726ACB87,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B13BD88FF2,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B9A73916BE,v3.1,3-marchio,Google,EXTRA-UE,cloud,google\s+cloud
+B68430E95A,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"manutenzione\s+(\w+\s+){0,3}oracle"
+9071685F45,v3.1,0-ict-non-cloud,,,,
+B28735A34C,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B432BC5783,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+BB30B9F1EF,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+A05054327E,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+BA19ED15C6,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+9668990EF3,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+A0216E5980,v3.1,0-ict-non-cloud,,,,
+B836EF49BB,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9074930524,v3.1,5-fornitore,Fastweb,IT,servizi-professionali,^fastweb
+B700275ABB,v3.1,0-ict-non-cloud,,,,
+B821EFDA82,v3.1,3-marchio,Google,EXTRA-UE,cloud,\bgcp\b
+B7FE561C09,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B4550C64EB,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BB7EF0E923,v3.1,0-ict-non-cloud,,,,
+B31109A7BD,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+A023654A18,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+950173796A,v3.1,3-marchio,Oracle,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}oracle"
+B33DEEF10D,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+961176790B,v3.1,7-indeterminato-cloud,,,,
+B984A89688,v3.1,7-indeterminato-cloud,,,,
+B9B5698011,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,dynamics\s*365
+9822835BDD,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B68745A7B5,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B10AF33626,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B3132606A5,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,microsoft\s+enterprise\s+agreement
+BA81261F5C,v3.1,0-ict-non-cloud,,,,
+BA41725613,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B0B8B0F910,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,\bazure\b
+BB1416A216,v3.1,7-indeterminato-cloud,,,,
+B9B4C88248,v3.1,0-ict-non-cloud,,,,
+B90B096D69,v3.1,3-marchio,SAP,UE,licenza,s/?4\s*hana
+B7B142D02B,v3.1,0-ict-non-cloud,,,,
+962731145D,v3.1,7-indeterminato-cloud,,,,
+B24CC1DAD4,v3.1,7-indeterminato-cloud,,,,
+9580165A3F,v3.1,0-ict-non-cloud,,,,
+938836865C,v3.1,5-fornitore,Salesforce,EXTRA-UE,cloud,^salesforce
+A043ACBD5C,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+B128BD9DE1,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+A00177082C,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+96668633B5,v3.1,7-indeterminato-cloud,,,,
+BC0AD04C06,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+B626A10DF2,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s*365
+B70898A3E2,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+9033763110,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,dynamics\s*365
+942976476B,v3.1,3-marchio,Oracle,EXTRA-UE,cloud,cloud\s*@\s*customer
+93224519ED,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+B1E29BAD3E,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+9540402CC7,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+A041877947,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B895A84842,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+A0011461F9,v3.1,7-indeterminato-cloud,,,,
+9295120FAA,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9217958395,v3.1,7-indeterminato-cloud,,,,
+BBE291F03E,v3.1,7-indeterminato-cloud,,,,
+B7377A7739,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B055AAAD39,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+A03A365D3F,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+9931528C2A,v3.1,3-marchio,SAP,UE,cloud,successfactors
+B2A4EFD54D,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+9781510567,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+9494699979,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B760E8B01A,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bm365\b
+B65CA95A84,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BB66578D00,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,microsoft\s*365
+B988B2361F,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,microsoft\s*365
+B40D998333,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+BA3F2468C3,v3.1,7-indeterminato-cloud,,,,
+B5BFB99946,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B531AABAF5,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B90E449749,v3.1,7-indeterminato-cloud,,,,
+BCB9EE7CAE,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B416BCB8EE,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+BAFB7A81A5,v3.1,5-fornitore,In-house pubblico,IT,in-house,^insiel
+BB4EE47EDB,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+B6AA96517F,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+A016D961BC,v3.1,0-ict-non-cloud,,,,
+BC15F5A6E7,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+960810396A,v3.1,0-ict-non-cloud,,,,
+BCF935CE35,v3.1,0-ict-non-cloud,,,,
+9668975296,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+983428872F,v3.1,7-indeterminato-cloud,,,,
+B8FF00DAD8,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,\bazure\b
+B949B8530D,v3.1,5-fornitore,Fastweb,IT,cloud,^fastweb
+9422492660,v3.1,7-indeterminato-cloud,,,,
+B416BABE84,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+9267274C6C,v3.1,3-marchio,Microsoft,EXTRA-UE,cloud,office\s*365
+9183068B6F,v3.1,7-indeterminato-cloud,,,,
+9217380699,v3.1,3-marchio,SPC Cloud lotto 1,IT,servizi-professionali,spc\s*cloud\W*\s*lotto\s*1\b
+B2BEB43D4E,v3.1,3-marchio,In-house pubblico,IT,in-house,cloud\s+toscana
+B44F031135,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+B957E4D85F,v3.1,5-fornitore,Oracle,EXTRA-UE,cloud,^oracle\s+italia
+A00DF24509,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9382621FC6,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B842AF2C8F,v3.1,7-indeterminato-cloud,,,,
+A03A7B6D1F,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B9A4B13C71,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,\bpsn\b
+A028EBDF6E,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B83136399B,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+BA647FE98F,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+BB4F698BC4,v3.1,3-marchio,In-house pubblico,IT,in-house,"(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a).{0,80}(cloud|data\s*cent|hosting|housing)"
+9126322F26,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,dynamics\s*365
+B46C6EF932,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B70D725EA3,v3.1,0-ict-non-cloud,,,,
+BC76AAFCFC,v3.1,3-marchio,SAP,UE,cloud,successfactors
+B1CB65C701,v3.1,3-marchio,Polo Strategico Nazionale,IT,psn,polo\s+strategico\s+nazionale
+B213A9C1F0,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+B2BB4110E0,v3.1,5-fornitore,TIM,IT,servizi-professionali,^tim\s+s\.?p\.?a
+B7AE35518A,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+9269507F26,v3.1,0-ict-non-cloud,,,,
+B8B2AC8808,v3.1,5-fornitore,TIM,IT,telefonia,^tim\s+s\.?p\.?a
+B47F6CCAB5,v3.1,7-indeterminato-cloud,,,,
+A0289B046D,v3.1,3-marchio,Polo Strategico Nazionale,IT,servizi-professionali,polo\s+strategico\s+nazionale
+B7B718DE5B,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+BA51F36031,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+9594044790,v3.1,5-fornitore,TIM,IT,cloud,^tim\s+s\.?p\.?a
+BC1296935C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,"licenz\w*\s+(\w+\s+){0,2}microsoft"
+B491454B6F,v3.1,3-marchio,In-house pubblico,IT,in-house,\bnivola\b
+968676180D,v3.1,3-marchio,Microsoft,EXTRA-UE,servizi-professionali,office\s*365
+BAD0EA8705,v3.1,5-fornitore,In-house pubblico,IT,in-house,^lepida
+B152AC034D,v3.1,3-marchio,In-house pubblico,IT,in-house,"(cloud|data\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\s-]+piemonte|liguria\s+digitale|\binva\b|trentino\s+digitale|insiel|sogei|aria\s+s\.?p\.?a)"
+976012993D,v3.1,3-marchio,VMware,EXTRA-UE,software-infrastruttura,vmware
+B96B87043C,v3.1,3-marchio,Microsoft,EXTRA-UE,licenza,microsoft\s+enterprise\s+agreement
