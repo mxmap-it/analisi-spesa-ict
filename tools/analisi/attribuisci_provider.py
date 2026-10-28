@@ -1,5 +1,5 @@
 """Attribuzione del cloud provider ai contratti ANAC (metodo: sito/content/progetto/metodo-cloud-provider.md).
-Vie implementate: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider, 7 indeterminato.
+Regole v3 (28/10/2026). Vie implementate: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider, 7 indeterminato.
 Le vie 4 (PSN voce per voce) e 6 (modello linguistico) non sono ancora implementate: il PSN è solo marcato come canale.
 Uso: python tools/analisi/attribuisci_provider.py 2024 2025 delta  -> lavoro/attribuzione/<anno>.csv e riepilogo.json"""
 import csv, glob, io, json, os, re, sys, zipfile, collections
@@ -22,11 +22,15 @@ GIUR = {m["provider"]: m["giurisdizione"] for m in MARCHI}
 RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*(2|ed\.?\s*2|edizione\s*2)\b", re.I)
 RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)
 LOTTO_N = {str(l.get("lotto")): l for l in LOTTI.values() if l.get("lotto")}
-RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b", re.I)
+# v3: anche datacenter e housing, perché la misura include l'infrastruttura propria (in-house pubblici)
+RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b|data\s*cent(er|re)|\bhousing\b", re.I)
 # "servizi applicativi in ottica cloud" (AQ Consip) è sviluppo applicativo, non servizio cloud
 RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development|cloud\s+enabling|servizi\s+applicativi\s+cloud", re.I)
 # servizi professionali su una piattaforma (sviluppo, manutenzione evolutiva): il prodotto è giusto ma non è spesa in abbonamento cloud
-RX_SERVIZI = re.compile(r"sviluppo|manutenzione\s+(evolutiva|correttiva)|\bams\b|implementazion|digitalizzazione\s+e\s+implementazione|conduzione\s+sistemistica|consulenz", re.I)
+# v3: "ambienti di sviluppo" e "sandbox" sono abbonamento; i contratti misti (licenze + servizi) restano abbonamento
+RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|manutenzione\s+(evolutiva|correttiva|applicativa|di\s+base|base)|manutenzione\s+e\s+supporto|\bams\b|"
+                        r"change\s+request|personalizzazion|migrazion|assistenza\s+specialistica|servizi\s+(professionali|specialistici)|conduzione\s+sistemistica|attivit\w+\s+sistemistic|consulenz", re.I)
+RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|rinnovo|canone", re.I)
 # AQ non ancora richiamati da nessun attuativo: massimale presunto
 RX_AQ = re.compile(r"\baccordo\s+quadro\b|\bconvenzione\b", re.I)
 
@@ -84,12 +88,14 @@ def main(anni):
                     via, prov, serv = "2-lotto-nel-testo", LOTTO_N[mm.group(1)]["provider"], "cloud"
                 elif (m := marchio(testo)):
                     via, prov, serv = "3-marchio", m["provider"], m["servizio"]
-                    if serv == "cloud" and RX_SERVIZI.search(testo): serv = "servizi-professionali"
+                    if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo): serv = "servizi-professionali"
                 else:
                     nomi = agg.get(r["cig"], set())
                     for m in MARCHI:
                         if m["servizio"] != "licenza" and any(fx.search(n) for fx in m["fx"] for n in nomi) and RX_CLOUD.search(testo):
-                            via, prov, serv = "5-fornitore", m["provider"], m["servizio"]; break
+                            via, prov, serv = "5-fornitore", m["provider"], m["servizio"]
+                            if RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo): serv = "servizi-professionali"
+                            break
                 if not via:
                     if not ict: continue
                     via = "7-indeterminato-cloud" if RX_CLOUD.search(testo) and not RX_NON_CLOUD.search(testo) else "0-ict-non-cloud"

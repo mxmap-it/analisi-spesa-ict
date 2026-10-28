@@ -1,5 +1,30 @@
 # Dizionario dei marchi (vie 3 e 5). Metodo: sito/content/progetto/metodo-cloud-provider.md
 # Revisione 2026-10-27: correzioni dal campione di sviluppo (righe 0-189 di report/metodo/campione-riferimento-2026-10-27.csv)
+# Revisione v3 2026-10-28: classi di errore della misura v2 (righe 0-436 di report/metodo/campione-misura-2026-10-27.csv,
+# che diventa campione di sviluppo); la misura v3 si fa su un campione nuovo. L'ordine conta: vince il primo marchio.
+- provider: SAP
+  giurisdizione: UE
+  servizio: cloud
+  regex:
+  - sap\s+rise
+  - rise\s+with\s+sap
+  - successfactors
+  - s/?4\s*hana.{0,40}(cloud|sottoscrizion)
+  - (cloud|sottoscrizion).{0,60}s/?4\s*hana
+  - sap\s+(btp|business\s+technology\s+platform)
+  - \bsap\s+ariba\b
+  fornitori: []
+- provider: SAP
+  giurisdizione: UE
+  servizio: licenza
+  regex:
+  - s/?4\s*hana
+  - sap\s+hana
+  - sap\s+r/?3
+  - sap\s+fiori
+  - bw/?4\s*hana
+  - licenz\w*\s+(\w+\s+){0,2}sap\b
+  fornitori: []
 - provider: Microsoft
   giurisdizione: EXTRA-UE
   servizio: cloud
@@ -8,6 +33,8 @@
   - office\s*365
   - \bo365\b
   - \bm365\b
+  - \bmo\s*365\b
+  - exchange\s*365
   - \bazure\b
   - exchange\s+online
   - sharepoint\s+online
@@ -33,6 +60,11 @@
   - google\s+cloud
   - \bgcp\b
   - google\s+for\s+education
+  escludi:
+  - good\s+clinical
+  - clinic
+  - \bgxp\b
+  - auditing\s+gcp
   fornitori:
   - ^google\b
 - provider: Oracle
@@ -103,6 +135,10 @@
   - silver\s+peak
   - clearpass
   - \blan\d
+  - \bhpe\b
+  - hewlett
+  - gbic
+  - \bsfp\b
   fornitori:
   - ^aruba\s+s\.?p\.?a
 - provider: Seeweb
@@ -138,22 +174,68 @@
   - \bovh
   fornitori:
   - ^ovh
+- provider: Nextcloud
+  giurisdizione: UE
+  servizio: cloud
+  nota: software tedesco (Nextcloud GmbH); spesso installato su infrastruttura dell'ente o di un hoster italiano
+  regex:
+  - next\s*cloud
+  fornitori: []
+# Cloud e datacenter pubblici in-house (IT): fonte, i siti istituzionali delle società; via 3 dal testo, via 5 dal fornitore
+- provider: In-house pubblico
+  giurisdizione: IT
+  servizio: cloud
+  regex:
+  - \blepida\b
+  - \bcineca\b
+  - \bnivola\b
+  - csi[\s-]+piemonte
+  - liguria\s+digitale
+  - \binva\b
+  - cloud\s+toscana
+  - trentino\s+digitale
+  - \binsiel\b
+  - aria\s+s\.?p\.?a
+  - \bsogei\b
+  fornitori:
+  - ^lepida
+  - ^cineca
+  - ^csi[\s-]+piemonte
+  - ^liguria\s+digitale
+  - ^inva\b
+  - ^trentino\s+digitale
+  - ^insiel
+  - ^sogei
+- provider: SPC Cloud lotto 1
+  giurisdizione: IT
+  servizio: cloud
+  nota: AQ Consip SPC Cloud lotto 1 (IaaS/PaaS), RTI guidato da Telecom Italia con Enterprise Services Italia, Poste, Postel
+  regex:
+  - spc\s+cloud\s+lotto\s*1\b
+  fornitori: []
+# Telco italiane: solo via 5 (fornitore + parola cloud/hosting/datacenter); rivendono anche hyperscaler, quindi la via 3 vince
+- provider: TIM
+  giurisdizione: IT
+  servizio: cloud
+  regex:
+  - telecom\s+italia\s+cloud
+  - tim\s+cloud
+  - nuvola\s+it
+  fornitori:
+  - ^tim\s+s\.?p\.?a
+  - ^telecom\s+italia
+- provider: Fastweb
+  giurisdizione: IT
+  servizio: cloud
+  regex:
+  - fastweb\s+cloud
+  fornitori:
+  - ^fastweb
 - provider: Cloudera
   giurisdizione: EXTRA-UE
   servizio: licenza
   regex:
   - cloudera
-  fornitori: []
-- provider: SAP
-  giurisdizione: UE
-  servizio: cloud
-  regex:
-  - sap\s+rise
-  - rise\s+with\s+sap
-  - successfactors
-  - s/4\s*hana\s+cloud
-  - sap\s+(btp|business\s+technology\s+platform)
-  - \bsap\s+ariba\b
   fornitori: []
 - provider: Polo Strategico Nazionale
   giurisdizione: IT
@@ -161,7 +243,8 @@
   nota: 'Via 4: il PSN eroga anche tecnologie di hyperscaler USA; la giurisdizione del prodotto va decisa voce per voce. Qui si marca solo il canale.'
   regex:
   - polo\s+strategico\s+nazionale
-  - \bpsn\b
+  - (cloud|al|in|nel|presso|a|verso|adesione\s+(a|al))\s+(il\s+)?psn\b
+  - \bpsn\s+(cloud|s\.?p\.?a)
   fornitori:
   - ^polo\s+strategico\s+nazionale
   escludi:
@@ -170,6 +253,11 @@
   - psn\s+20\d\d
   - progett\w*\s+(aziendale\s+)?psn
   - piano\s+sanitario
+  - psn\s+pac
+  - sviluppo\s+rurale
+  - connettivit
+  - firewall
+  - sicurezza\s+perimetrale
 - provider: Microsoft
   giurisdizione: EXTRA-UE
   servizio: licenza
@@ -193,4 +281,9 @@
   regex:
   - oracle\s+database
   - licenz\w*\s+(\w+\s+){0,2}oracle
+  - (software|prodotti)\s+(\w+\s+){0,2}oracle
+  - manutenzione\s+(\w+\s+){0,3}oracle
   fornitori: []
+  escludi:
+  - appliance
+  - \bhardware\b
