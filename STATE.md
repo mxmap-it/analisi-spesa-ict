@@ -20,6 +20,9 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - `report/metodo/REGISTRO-PROCEDIMENTI.md`, il racconto peritale del lavoro;
   - `report/metodo/richieste-e-raccomandazioni.yaml`, con R01-R15 per ANAC, Consip, PSN, DTD,
     ACN, Sogei. Va aggiornato sempre (AGENTS.md §3). Nulla è stato inviato.
+- **Pagina di revisione** (privata, claude.ai): https://claude.ai/artifact/1wcRRvBGz6u2H5D8kbWPVq . Annotazione cieca
+  A/B, verifica importi, decisioni R01-R15, lacune. Si ricostruisce con `node tools/revisione/costruisci.js`;
+  le risposte stanno nel db della pagina (collezioni campione, importi, richieste) e si leggono con ArtifactData.
 - **Prossimo:**
   1. Annotazione alla cieca del campione v3 da parte di due persone. **Serve sapere da Fabio chi
      la fa.**
