@@ -17,6 +17,21 @@ function csv(t) {
 const tieni = (o, ks) => Object.fromEntries(ks.map(k => [k, o[k]]));
 const campione = csv(R("report/metodo/campione-misura-v3-cieco.csv"))
   .map(r => tieni(r, ["cig", "cod_cpv", "importo_lotto", "stazione_appaltante", "aggiudicatari", "testo"]));
+// Proposta del classificatore, mostrata solo all'annotatore in modalità assistita (A); B resta alla cieca.
+const v3 = Object.fromEntries(csv(R("report/metodo/campione-misura-v3.csv")).map(r => [r.cig, r]));
+const giurDi = {};
+const proposte = Object.fromEntries(csv(R("report/metodo/campione-misura-v3-proposta.csv")).map(r => {
+  if (r.via.startsWith("fuori")) { const o = v3[r.cig]; r = { ...r, via: o.via, provider: o.provider, servizio: o.servizio } }
+  if (r.provider && r.giurisdizione) giurDi[r.provider] = r.giurisdizione;
+  return [r.cig, r];
+}));
+const SERV = { "software-infrastruttura": "licenza", "": "cloud" };
+for (const r of campione) {
+  const q = proposte[r.cig]; if (!q) continue;
+  const v = q.via[0], servizio = v === "0" ? "altro" : (SERV[q.servizio] ?? q.servizio);
+  r.proposta = { via: q.via, regola: q.regola, provider_prodotto: q.provider, giurisdizione: q.giurisdizione || giurDi[q.provider] || (q.provider ? "" : "ignota"),
+    servizio, e_cloud: v === "0" || ["licenza", "servizi-professionali"].includes(servizio) ? "n" : "s" };
+}
 const imp = csv(R("report/metodo/importi-da-verificare-v3.csv"));
 const perImporto = {};
 imp.forEach(r => (perImporto[r.importo_lotto] ||= []).push(r));
