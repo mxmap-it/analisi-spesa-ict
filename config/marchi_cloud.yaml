@@ -258,6 +258,8 @@
   - licenz\w*\s+(\w+\s+){0,2}oracle
   - (software|prodotti)\s+(\w+\s+){0,2}oracle
   - manutenzione\s+(\w+\s+){0,3}oracle
+  - unlimited\s+(deployment|licen[cs]e)
+  - \bexadata\b
   fornitori: []
   escludi:
   - appliance
