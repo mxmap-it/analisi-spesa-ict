@@ -12,6 +12,7 @@ import os
 # un contratto già visto da chi ha scritto le regole (qualunque campione pubblicato in report/metodo) non entra in una misura
 visti = set()
 for f in glob.glob("report/metodo/campione-*.csv"):
+    if os.path.basename(f) == NOME + ".csv": continue  # riestrarre lo stesso campione deve dare lo stesso campione
     visti |= {r["cig"] for r in csv.DictReader(open(f, encoding="utf-8"))}
 for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
     if "campione" in f: continue
