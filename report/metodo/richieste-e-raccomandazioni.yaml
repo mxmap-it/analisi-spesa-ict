@@ -66,8 +66,8 @@
   tipo: miglioramento
   stato: proposta
   titolo: Tabella aperta lotto → prodotto e provider per accordi quadro e convenzioni ICT
-  richiesta: Pubblicare in formato aperto, per ogni iniziativa ICT, i CIG dei lotti con prodotto, provider e aggiudicatario (es. AQ 2746 Cloud IaaS e PaaS 2: un lotto per provider)
-  perche_serve: Oggi la ricostruiamo a mano dai documenti di gara (config/lotti_cloud.yaml); con la tabella la via 1 copre tutte le adesioni
+  richiesta: "Pubblicare in formato aperto, per ogni iniziativa ICT, i CIG dei lotti con prodotto, provider e aggiudicatario (es. AQ 2746 Cloud IaaS e PaaS 2, un lotto per provider)"
+  perche_serve: "Oggi la ricostruiamo a mano dai documenti di gara (config/lotti_cloud.yaml); con la tabella la via 1 copre tutte le adesioni"
   rif: ["#54", "#11"]
 - id: R08
   destinatario: Consip
@@ -75,7 +75,7 @@
   stato: proposta
   titolo: Ordinativi delle convenzioni ICT in dati aperti con il prodotto
   richiesta: Dati aperti degli ordinativi (chi ha comprato quale prodotto, quanto) per le convenzioni di licenze e cloud (es. Microsoft Enterprise Agreement, Licenze software multibrand)
-  perche_serve: Le adesioni a convenzioni Microsoft o multibrand passano da rivenditori (TIM): il prodotto per ordine è noto a Consip, non nei dati ANAC
+  perche_serve: Le adesioni a convenzioni Microsoft o multibrand passano da rivenditori (TIM); il prodotto per ordine è noto a Consip, non nei dati ANAC
   rif: ["#11"]
 - id: R09
   destinatario: PSN, Difesa Servizi, DTD
