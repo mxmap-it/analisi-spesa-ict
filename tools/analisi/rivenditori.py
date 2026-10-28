@@ -21,7 +21,7 @@ def main():
     agg = collections.defaultdict(lambda: {"contratti": 0, "importo": 0.0, "provider": collections.Counter(), "nomi": set()})
     psn_bigtech = []
     totali = collections.Counter()
-    for f in sorted(glob.glob("lavoro/attribuzione/*.csv")):
+    for f in sorted(glob.glob("lavoro/attribuzione/[0-9]*.csv") + glob.glob("lavoro/attribuzione/delta.csv")):
         if "campione" in os.path.basename(f): continue
         for r in csv.DictReader(open(f, encoding="utf-8")):
             if r["e_padre"] == "1" or not r["provider"] or r["servizio"] in ("servizi-professionali", "in-house", "software-infrastruttura"): continue
