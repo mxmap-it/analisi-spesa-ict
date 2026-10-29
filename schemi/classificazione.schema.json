@@ -27,7 +27,7 @@
         "e_cloud": {"enum": ["s", "n"]},
         "servizio": {"enum": ["cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro"]},
         "provider_prodotto": {"type": "string"},
-        "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "ignota"], "description": "Giurisdizione del controllo giuridico di chi eroga il servizio/prodotto (DECISIONI 29/10/2026)"},
+        "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "non-determinabile", "ignota"], "description": "Giurisdizione del controllo giuridico di chi eroga il servizio/prodotto (DECISIONI 29/10/2026)"},
         "cloud_sovrano": {"type": ["boolean", "null"], "description": "true se DC in UE, operatore UE a controllo UE non soggetto a leggi extra-UE (modello SecNumCloud 3.2)"},
         "dipendenze_tecnologiche": {"type": "array", "items": {"type": "object", "properties": {"componente": {"type": "string"}, "produttore": {"type": "string"}, "giurisdizione": {"type": "string"}}}, "description": "Software/hardware di terzi sottostante (es. VMware, Windows Server): non cambia la giurisdizione"},
         "via": {"type": "string", "description": "1-lotto, 2-lotto-nel-testo, 3-marchio, 4-psn, 5-fornitore, 6-modello, 7-indeterminato, 0-ict-non-cloud, U-revisione-umana"},

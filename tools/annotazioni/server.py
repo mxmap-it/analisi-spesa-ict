@@ -34,7 +34,7 @@ ANNOTAZIONI_PER_CIG = 2
 ORIGINI = {"https://analisi-spesa-ict.mxmap.it", "http://localhost:1313", "http://localhost:8790"}
 CHIAVE_EXPORT = os.environ.get("ANNOTAZIONI_CHIAVE", "")
 SERVIZI = {"cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro", "non-so"}
-GIUR = {"IT", "UE", "EXTRA-UE", "ignota"}
+GIUR = {"IT", "UE", "EXTRA-UE", "non-determinabile", "ignota"}
 lock = threading.Lock()
 limiti: dict[str, list[float]] = {}
 

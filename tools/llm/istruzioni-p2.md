@@ -22,3 +22,9 @@ Leggi prima `report/metodo/llm/conoscenza-iniziative.yaml` (cosa significano SPC
 
 Una riga JSON per contratto in `report/metodo/llm/giro2/esiti/<pacchetto>.jsonl`, scritta appena finito il contratto (ripartibile: salta i CIG già presenti). Campi p1 più: `ricerche` (numero), `atto_ente` (URL della determina o ""), `cambia_rispetto_giro1` (s/n), `versione_istruzioni: "p2"`, `modello`, `data`.
 Se un sito blocca (WAF, CAPTCHA, login) annota e passa oltre: non aggirare. Non contattare nessuno.
+
+## Aggiunta p2.1 (29/10/2026): informazione insufficiente
+
+- `giurisdizione: "non-determinabile"` quando il testo e le fonti trovate **non bastano** a stabilirla, anche se servizio e provider sono chiari. Caso tipico: adesione alla convenzione PSN senza indicazione del servizio (Industry Standard/housing/hosting = IT; Secure Public Cloud, PSN Managed, Hybrid = EXTRA-UE). Una «migrazione al PSN» da sola **non** è IT.
+- In quel caso aggiungi `documento_risolutivo` (es. "piano dei fabbisogni PSN 2024-...-PPDF-P1R1") e cercalo: spesso è allegato o citato nella determina di adesione.
+- `confidenza` riguarda l'intera classificazione: con giurisdizione non determinabile non può essere `alta`.
