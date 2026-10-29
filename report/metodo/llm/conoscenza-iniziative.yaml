@@ -1,0 +1,200 @@
+# Base di conoscenza: iniziative di acquisto centralizzato ICT/cloud (Consip, PSN, regionali)
+# Scopo: classificare i CIG derivati per giurisdizione del PRODOTTO (IT/UE/EXTRA-UE), non del rivenditore.
+# Livelli: stato = verificato (fonte primaria: Consip, GUUE/TED, PSN, atti di PA aderenti) | riferito (stampa/terzi) | da_verificare
+# controvalidato: true solo con DUE fonti indipendenti concordi (elencate in fonti_controvalidazione).
+# Aggiornato: 2026-10-29. Ripartibile: aggiungere voci, non riscrivere quelle verificate senza nuova fonte.
+# Coerenza con config/lotti_cloud.yaml: confermato; risolto il da_verificare sui numeri di lotto 4/5/6 (ID 2746).
+
+iniziative:
+
+  - id: consip-2746
+    nome: "Cloud IaaS e PaaS 2 (Accordo Quadro, ed. 2)"
+    id_consip: 2746
+    servizio: cloud
+    struttura: "6 lotti, uno per CSP; il fornitore e' un rivenditore, il prodotto e' del CSP"
+    periodo: "offerte entro 13/06/2025 (avviso di proroga GUUE S102 del 28/05/2025); adesioni 2026 con contratti triennali (es. 01/06/2026-31/05/2029)"
+    valore: "base 580 M EUR; massimo 835,2 M EUR"
+    parole_chiave: ["IAAS E PAAS 2", "ID 2746", "CLOUD IAAS E PAAS", "CREDITI AWS", "CREDITI AZURE", "SERVIZI IAAS E PAAS <CSP>"]
+    lotti:
+      - {lotto: "1", cig_aq: B6A19F425E, provider_prodotto: "Amazon Web Services", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: "Fastweb S.p.A.", stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202746%20AVVISO%20DI%20PROROGA%20DEL%2028-05-25%20S%20102_0.pdf (lotto 1 = AWS)", "https://www.arera.it/fileadmin/allegati/docs/26/76-26-dagr.pdf (lotto 1, CIG B6A19F425E, servizi Amazon, Fastweb)"]}
+      - {lotto: "2", cig_aq: B6A19F5331, provider_prodotto: "Google Cloud", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: da_verificare, stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["avviso Consip ID 2746 (lotto 2 = Google)", "config/lotti_cloud.yaml: oggetti CIG derivati BDNCP 'LOTTO 2_SERVIZI IAAS E PAAS GOOGLE'"]}
+      - {lotto: "3", cig_aq: B6A19F6404, provider_prodotto: "Microsoft Azure", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: "SoftwareOne Italia S.r.l. (capogruppo svizzera)", stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["avviso Consip ID 2746 (lotto 3 = Microsoft)", "https://www.giustizia.it/cmsresources/cms/documents/UCAN_decisione_a_contrarre_32_2026.pdf (lotto 3, Softwareone)"]}
+      - {lotto: "4", cig_aq: B6A19F74D7, provider_prodotto: "Oracle Cloud", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: da_verificare, stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["avviso Consip ID 2746 (lotto 4 = Oracle)", "oggetto CIG BDNCP 'SERVIZI IAAS E PAAS ORACLE' (lotti_cloud.yaml)"]}
+      - {lotto: "5", cig_aq: B6A19F85AA, provider_prodotto: "IBM Cloud", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: da_verificare, stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["avviso Consip ID 2746 (lotto 5 = IBM)", "oggetto CIG BDNCP 'SERVIZI IAAS E PAAS IBM'"]}
+      - {lotto: "6", cig_aq: B6A19F967D, provider_prodotto: "Aruba Cloud", giurisdizione_capogruppo: IT, aggiudicatario: "Aruba S.p.A. (riferito)", stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["avviso Consip ID 2746 (lotto 6 = Aruba)", "https://www.corrierecomunicazioni.it/digital-economy/cloud/cloud-per-la-pa-aruba-tra-i-fornitori-individuati-da-consip/ (riferito)"]}
+    nota: "La corrispondenza lotto->CSP e' nel titolo stesso dei lotti nell'avviso Consip: il numero di lotto basta a determinare il prodotto."
+
+  - id: consip-2213
+    nome: "Public Cloud IaaS e PaaS (Accordo Quadro, ed. 1)"
+    id_consip: 2213
+    servizio: "cloud (lotti CSP) + servizi-professionali (lotti migrazione)"
+    struttura: "11 lotti, ~550 M EUR (riferito); mix di lotti di fornitura CSP e lotti di servizi professionali di migrazione"
+    periodo: "AQ stipulati 2021-2022 (es. lotto 5 stipulato 04/03/2022)"
+    parole_chiave: ["ID 2213", "PUBLIC CLOUD IAAS E PAAS", "PC IAAS PAAS L.<n>"]
+    lotti:
+      - {lotto: "1", cig_aq: 81283942ED, provider_prodotto: "Amazon Web Services", giurisdizione_capogruppo: EXTRA-UE (USA), aggiudicatario: "RTI Almaviva - Engineering", servizio: cloud, stato: riferito, controvalidato: false,
+         fonti: ["https://www.eng.it/en/news/press-releases/2022/07/engineering-wins-two-new-lots-of-the-consip-framework-agreement-on-cloud-services (Engineering: lotto 1 con Almaviva, CSP AWS)", "https://trasparenza.agid.gov.it/download/6754.html (AgID: CIG master 81283942ED, lotto 1; non nomina il CSP)"],
+         da_verificare: "CSP del lotto 1 da fonte primaria"}
+      - {lotto: "5", cig_aq: da_verificare, provider_prodotto: "n/a (servizi professionali)", aggiudicatario: "RTI Intellera Consulting (mandataria)", servizio: servizi-professionali, stato: verificato, controvalidato: false,
+         fonti: ["https://regione.lazio.it/sites/default/files/amministrazione-trasparente/atti-procedure-affidamento/Contratto-Esecutivo-ID2213.pdf (CE CIG A00784F8F4, AQ stipulato 04/03/2022)"]}
+      - {lotto: "8, 10", provider_prodotto: "n/a (servizi professionali di migrazione)", aggiudicatario: "RTI Engineering - Leonardo - SMI", servizio: servizi-professionali, stato: riferito, controvalidato: false,
+         fonti: ["https://www.eng.it/en/news/press-releases/2022/07/engineering-wins-two-new-lots-of-the-consip-framework-agreement-on-cloud-services"]}
+      - {lotto: "altri (2-4, 6-7, 9, 11)", stato: da_verificare, nota: "RTI Kyndryl-Lutech-Vodafone su un lotto di servizi di migrazione PAC (riferito, lineaedp.it)"}
+
+  - id: consip-2297
+    nome: "Public Cloud SaaS - Catalogo prodotti SaaS produttivita' individuale e collaboration (PRINCO)"
+    id_consip: 2297
+    cig_aq: 89910186C4
+    servizio: cloud (SaaS)
+    struttura: "lotto unico, AQ multifornitore (10 aggiudicatari), stipula 19/10/2022, valore 300 M EUR"
+    aggiudicatari: ["Aruba", "Converge", "Fastweb", "RTI Dedagroup Public Services - Deda Cloud", "Lutech", "RTI Maggioli - Injenia", "Engineering", "RTI Netservice-Reevo - Axians Saiv", "Postel", "Telecom Italia"]
+    provider_prodotto: "dipende dal prodotto a catalogo (es. Microsoft 365, Google Workspace, prodotti italiani): NON deducibile dal lotto; serve l'oggetto del CIG derivato"
+    stato: verificato
+    controvalidato: false
+    fonti: ["https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202297%20-%20Public%20Cloud%20Saas%20Princo%20-%20Avviso%20di%20esito.pdf"]
+    parole_chiave: ["PRINCO", "ID 2297", "PUBLIC CLOUD SAAS", "PRODUTTIVITA' INDIVIDUALE"]
+
+  - id: spc-cloud
+    nome: "SPC Cloud (Sistema Pubblico di Connettivita' - servizi cloud), contratti quadro Consip/AgID"
+    periodo: "aggiudicazioni 2016; contratti prorogati piu' volte (da_verificare scadenza finale)"
+    lotti:
+      - {lotto: "1", oggetto: "servizi cloud IaaS/PaaS/SaaS (Cloud enabling)", aggiudicatario: "RTI Telecom Italia (mandataria) - Poste Italiane - Postel - Postecom - HPE Services Italia", valore: "500 M EUR, sconto ~50%",
+         provider_prodotto: "infrastruttura nei data center RTI (TIM/Poste); stack HPE/VMware ecc. da_verificare; NON hyperscaler",
+         giurisdizione_capogruppo: "IT (erogatore TIM/Poste); tecnologia sottostante da_verificare", servizio: cloud, stato: riferito, controvalidato: true,
+         fonti_controvalidazione: ["https://www.agid.gov.it/sites/default/files/repository_files/ufficio_stampa/consip_e_agid_sottoscritti_i_contratti_per_la_connettivita_e_aggiudicati_i_primi_due_lotti_della_gara_per_i_servizi_cloud.pdf (comunicato AgID/Consip, primario ma non letto integralmente: HTTP 504)", "https://www.corrierecomunicazioni.it/telco/spc-consip-detta-i-tempi-di-attivazione-dei-servizi"]}
+      - {lotto: "2", oggetto: "gestione identita' digitale e sicurezza applicativa", aggiudicatario: "RTI Leonardo (ex Finmeccanica) - IBM Italia - Fastweb - Sistemi Informativi", valore: "600 M EUR", servizio: "altro (sicurezza, servizi)", provider_prodotto: "n/a", stato: riferito, controvalidato: true,
+         fonti_controvalidazione: ["comunicato AgID (sopra)", "corrierecomunicazioni.it (sopra)"]}
+      - {lotto: "3", oggetto: "interoperabilita' dati e cooperazione applicativa", valore: "400 M EUR", aggiudicatario: da_verificare, servizio: servizi-professionali, stato: riferito, controvalidato: false}
+      - {lotto: "4", oggetto: "realizzazione portali e servizi online", valore: "450 M EUR", aggiudicatario: "Almaviva (mandataria; da schema contratto esecutivo AgID)", servizio: servizi-professionali, stato: riferito, controvalidato: false,
+         fonti: ["https://trasparenza.agid.gov.it/download/1870.html"]}
+    nota_classificazione: "Negli oggetti 'SPC CLOUD LOTTO 1' = IaaS/PaaS su DC italiani TIM/Poste (non hyperscaler); 'LOTTO 2' = sicurezza/identita'; 'LOTTO 3/4' = servizi applicativi: NON spesa cloud di prodotto."
+    parole_chiave: ["SPC CLOUD", "SPC CLOUD LOTTO 1", "LOTTO 1 SPC", "CONTRATTO QUADRO SPC CLOUD"]
+
+  - id: spc2-connettivita
+    nome: "SPC2 - Servizi di connettivita'"
+    servizio: connettivita
+    aggiudicatari: "Tiscali 60% (poi Fastweb per subentro, nulla osta 13/01/2017), BT Italia 20%, Vodafone 20%"
+    periodo: "contratti quadro firmati 23/05/2016, 7 anni (~23/05/2023), poi prorogati (es. 31/12/2023 e oltre); SPC3 revocata, nuova consultazione 'SPC Connettivita'' 2026 (riferito)"
+    stato: riferito
+    controvalidato: true
+    fonti_controvalidazione: ["https://www.agendadigitale.eu/procurement/sistema-pubblico-di-connettivita-spc-2-cosa-e-cambiato/", "https://www.corrierecomunicazioni.it/pa-digitale/consip-aggiudicata-la-gara-spc-previsti-risparmi-per-due-miliardi/"]
+    parole_chiave: ["SPC2", "SPC CONNETTIVITA'", "OPA SPC"]
+    nota: "connettivita': giurisdizione dell'operatore, non cloud; Vodafone Italia fusa in Fastweb (02/2026, riferito)"
+
+  - id: psn
+    nome: "Polo Strategico Nazionale - Convenzione di concessione"
+    cig: 9066973ECE
+    cup: J51B21005710007
+    servizio: psn
+    concedente: "Dipartimento per la trasformazione digitale (PCM)"
+    concessionario: "Polo Strategico Nazionale S.p.A. (TIM ~45%, Leonardo ~25%, CDP Equity ~20%, Sogei ~10%)"
+    periodo: "convenzione sottoscritta 24/08/2022, concessione 13 anni"
+    data_center: "Region Nord: Rozzano, Santo Stefano; Region Sud: Acilia, Pomezia"
+    servizi:
+      - {nome: "Industry Standard (Housing, Hosting, IaaS Shared/Private, PaaS)", provider_prodotto: "PSN su DC propri (stack sottostante: VMware/altro da_verificare)", giurisdizione: IT}
+      - {nome: "Hybrid Cloud on PSN site", provider_prodotto: "Microsoft (Azure Stack HCI / Azure Arc, control plane Azure)", giurisdizione: EXTRA-UE (USA)}
+      - {nome: "Secure Public Cloud", provider_prodotto: "Microsoft Azure e Google Cloud, region pubbliche in Italia + cifratura con chiave esterna e backup sovrano su PSN", giurisdizione: EXTRA-UE (USA)}
+      - {nome: "Public Cloud PSN Managed", provider_prodotto: "Google Cloud e Oracle Cloud, region dedicate nei DC PSN", giurisdizione: EXTRA-UE (USA) per tecnologia; gestione IT}
+    stato: verificato
+    controvalidato: true
+    fonti_controvalidazione: ["https://www.polostrategiconazionale.it/app/uploads/2025/08/PSN_Guida-alla-Convenzione_.pdf (servizi, CIG, data)", "https://www.arera.it/fileadmin/allegati/docs/25/34-25dagr.pdf (CIG 9066973ECE)"]
+    fonti_soci: ["https://www.polostrategiconazionale.it/en/faqs/ (verificato, soci)", "agendadigitale.eu (quote, riferito)"]
+    parole_chiave: ["PSN", "POLO STRATEGICO NAZIONALE", "SECURE PUBLIC CLOUD", "PUBLIC CLOUD PSN MANAGED", "HYBRID CLOUD ON PSN SITE", "INDUSTRY STANDARD"]
+    nota_classificazione: "'PSN' da solo non basta: va letto il servizio. Industry Standard/Housing/Hosting = IT; Secure Public Cloud / PSN Managed / Hybrid = tecnologia hyperscaler USA."
+
+  - id: consip-microsoft-ea7
+    nome: "Convenzione Microsoft Enterprise Agreement 7"
+    servizio: licenza
+    aggiudicatario: "Telecom Italia S.p.A. (lotto unico)"
+    provider_prodotto: Microsoft
+    giurisdizione_capogruppo: EXTRA-UE (USA)
+    periodo: "adesioni triennio 2023-2025 (scadenza convenzione da_verificare)"
+    stato: verificato
+    controvalidato: true
+    fonti_controvalidazione: ["https://regione.abruzzo.it/system/files/bandi-di-gara-e-contratti/delibere-contrarre/dpb012-046-del-29-03-23-prenotazione-impegno-di-spesa.pdf", "https://www.agcom.it/sites/default/files/migration/delibera/Delibera%2070-23-CONS.pdf"]
+    parole_chiave: ["MICROSOFT ENTERPRISE AGREEMENT", "MEA 7", "EA7", "LICENZE MICROSOFT"]
+    nota: "include licenze Office 365/M365 in subscription: prodotto Microsoft anche se fatturato da TIM"
+
+  - id: consip-licenze-multibrand
+    nome: "Licenze Software Multibrand (ed. 3+)"
+    servizio: licenza
+    struttura: "ed. 3 in 9 lotti per brand (riferito)"
+    aggiudicatari: da_verificare
+    provider_prodotto: "il brand del lotto (da_verificare elenco lotti->brand)"
+    stato: da_verificare
+    controvalidato: false
+    fonti: ["https://www.corrierecomunicazioni.it/?p=186848"]
+
+  - id: consip-centrali-telefoniche-8
+    nome: "Centrali Telefoniche 8 (CT8) - Accordo Quadro"
+    servizio: telefonia
+    aggiudicatari: "RTI Sielte - Vodafone (primo in graduatoria, riferito); Telecom Italia (ID SIGEF 2035, atto Regione Piemonte)"
+    periodo: "attivazione 14/05/2021, scadenza 14/05/2023 (Regione Piemonte)"
+    stato: riferito
+    controvalidato: false
+    fonti: ["https://www.01net.it/transizione-digitale-pa-sielte-vodafone-gara-consip-ct8/", "https://www.regione.piemonte.it/governo/bollettino/abbonati/2022/03/attach/dda1910000512_10600.pdf"]
+    parole_chiave: ["CENTRALI TELEFONICHE", "CENTRALINI", "CT8"]
+    nota: "apparati (vendor Cisco/Avaya/Alcatel ecc. da_verificare): non cloud"
+
+  - id: consip-telefonia-mobile-9
+    nome: "Telefonia Mobile 9"
+    servizio: telefonia
+    aggiudicatario: "Vodafone Italia (lotto unico), ora Fastweb per fusione (02/2026, riferito)"
+    periodo: "attiva dal 16/11/2023; scadenza 15/11/2025 + proroghe (fonti discordanti, da_verificare)"
+    stato: verificato
+    controvalidato: false
+    fonti: ["https://www.consob.it/documents/d/asset-library-1912910/telefonia_mobile_decisione", "https://regione.sicilia.it/system/files/2024-02/TM9%20-%20Convenzione.pdf"]
+    parole_chiave: ["TELEFONIA MOBILE 9", "TM9"]
+    nota: "TM8 = TIM (scaduta 16/11/2023)"
+
+  - id: consip-telefonia-fissa
+    nome: "Telefonia Fissa (ed. 5/6)"
+    servizio: telefonia
+    stato: da_verificare
+
+  - id: consip-reti-locali-8
+    nome: "Reti Locali 8 (LAN 8)"
+    id_consip: 2223
+    servizio: "altro (reti locali: apparati e servizi)"
+    lotti:
+      - {lotto: "1 (PA centrali)", cig_aq: 95436927C7, aggiudicatario: "RTI Vodafone Italia - Converge - Studio Tecnico Ing. Umberto Lisa", stato: verificato, controvalidato: true,
+         fonti_controvalidazione: ["https://www.giustizia.it/cmsresources/cms/documents/DIT_Determina3309_31ott2025.pdf", "https://trasparenza.agid.gov.it/download/9569.html"]}
+      - {lotto: "2 (PA locali)", cig_aq: 9543706356, aggiudicatario: "stesso RTI (aggiudicazione 15/09/2023)", periodo: "15/11/2023-14/05/2025 + 6 mesi", stato: verificato, controvalidato: false,
+         fonti: ["https://www.regione.piemonte.it/governo/bollettino/abbonati/2024/45/attach/dda1910000424_10600.pdf"]}
+    parole_chiave: ["RETI LOCALI 8", "LAN 8", "RL8"]
+    nota: "apparati di rete (vendor da_verificare: es. Huawei/Cisco/HPE); non cloud"
+
+  - id: consip-2212
+    nome: "Servizi applicativi in ottica cloud e PMO (gara strategica)"
+    id_consip: 2212
+    servizio: servizi-professionali
+    nota: "lotto 1 PAC stipulato giu 2021 multi-fornitore; lotto 5 RTI Engineering (atto ASL Salerno). Sviluppo applicativo, NON prodotto cloud."
+    stato: riferito
+    controvalidato: false
+    fonti: ["https://www.agid.gov.it/sites/default/files/repository_files/cs_gara_strategica_servizi_applicativi_in_ottica_cloud.pdf", "https://www.corrierecomunicazioni.it/?p=224672"]
+    parole_chiave: ["SERVIZI APPLICATIVI IN OTTICA CLOUD", "ID 2212", "APPLICATIVI CLOUD"]
+
+  - id: consip-sanita-digitale-2202
+    nome: "Sanita' digitale - Sistemi informativi clinico-assistenziali (AQ)"
+    id_consip: 2202
+    servizio: servizi-professionali
+    aggiudicatari: "Engineering (capogruppo RTI con Leonardo, Postel, CONSIS, IBM Italia, GE Medical Systems) tra gli aggiudicatari dei 4 lotti applicativi (ago 2022)"
+    stato: riferito
+    controvalidato: true
+    fonti_controvalidazione: ["https://www.corrierecomunicazioni.it/pa-digitale/e-health/sanita-digitale-a-engineering-quattro-lotti-del-primo-accordo-quadro/", "https://www.sanita-digitale.com/tendenze/engineering-e-tra-gli-aggiudicatari-dei-4-lotti-applicativi-del-primo-accordo-quadro-consip-sulla-sanita-digitale"]
+    parole_chiave: ["SANITA' DIGITALE", "SISTEMI INFORMATIVI CLINICO", "ID 2202"]
+
+  - id: sistema-gestionale-integrato
+    nome: "Sistema Gestionale Integrato"
+    stato: da_verificare
+
+  - id: regionali
+    nome: "In-house/convenzioni regionali cloud (Lepida, CSI Piemonte, ARIA Lombardia, TIX/Cloud Toscana, Liguria Digitale, LAZIOcrea)"
+    stato: da_verificare
+    nota: "non ricercate in questa sessione; tipicamente DC regionali propri (IT) qualificati ACN, ma va verificato caso per caso"
