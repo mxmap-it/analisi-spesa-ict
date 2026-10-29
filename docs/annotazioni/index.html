@@ -35,6 +35,7 @@ button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
 <li><b>Provider del prodotto:</b> chi possiede il prodotto o l'infrastruttura, <i>non</i> chi lo rivende. Licenze Microsoft vendute da TIM → Microsoft.</li>
 <li><b>Giurisdizione:</b> paese di controllo del provider: IT, UE, EXTRA-UE (es. USA), oppure «ignota».</li>
 <li><b>Quanto sei sicuro:</b> alta = il prodotto è scritto chiaramente; media = deduzione ragionevole; bassa = stai tirando a indovinare. «Non so» e «bassa» sono risposte utili, non errori.</li>
+<li><b>Quando il testo non basta, dillo.</b> Esempio: «adesione alla convenzione PSN, migrazione secondo il piano dei fabbisogni». È cloud e il servizio è PSN, ma il PSN vende sia servizi propri (in Italia) sia servizi su tecnologia di AWS, Microsoft, Google e Oracle (extra-UE): senza il piano dei fabbisogni la giurisdizione è <b>«Non determinabile dal testo»</b>. Nelle note scrivi quale documento servirebbe (es. «piano dei fabbisogni PSN»). È la risposta giusta, non un errore.</li>
 <li>Puoi aprire la scheda ANAC del contratto per approfondire. Non cercare altrove le nostre classificazioni: servono risposte indipendenti.</li>
 </ul></details>
 
@@ -69,7 +70,7 @@ const API = (location.hostname === "localhost" || location.hostname === "127.0.0
 const OPZ = {
   e_cloud: [["s","Sì"],["n","No"],["non-so","Non so"]],
   servizio: [["cloud","Cloud"],["licenza","Licenza"],["servizi-professionali","Servizi professionali"],["psn","PSN"],["in-house","In-house"],["telefonia","Telefonia"],["connettivita","Connettività"],["hardware","Hardware"],["altro","Altro"],["non-so","Non so"]],
-  giurisdizione: [["IT","Italia"],["UE","UE"],["EXTRA-UE","Extra-UE"],["ignota","Ignota"]],
+  giurisdizione: [["IT","Italia"],["UE","UE"],["EXTRA-UE","Extra-UE"],["non-determinabile","Non determinabile dal testo"],["ignota","Non so"]],
   confidenza: [["alta","Alta"],["media","Media"],["bassa","Bassa"]]
 };
 const $ = id => document.getElementById(id);
