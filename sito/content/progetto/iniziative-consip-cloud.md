@@ -25,8 +25,10 @@ aggiudicatario (es. AWS venduto da Fastweb resta extra-UE).
 | "Public Cloud IaaS e PaaS", ID 2213 | AQ Consip 2021-22, 11 lotti: lotti CSP + lotti di servizi di migrazione | lotto 1 (CIG 81283942ED): AWS, RTI Almaviva-Engineering; lotti 5, 8, 10: servizi professionali | lotto 1 extra-UE; servizi: n/a | **da verificare** ([Engineering][eng], [AgID][agid6754], [CE Regione Lazio][lazio]) |
 | "Public Cloud SaaS", PRINCO, ID 2297 (CIG 89910186C4) | AQ multifornitore, 10 aggiudicatari (Aruba, TIM, Fastweb, Engineering, Lutech…) | dipende dal prodotto a catalogo: il lotto **non** identifica il provider | dall'oggetto del CIG derivato | verificata ([esito Consip][2297]) |
 | "SPC Cloud lotto 1" | Contratto quadro SPC 2016, IaaS/PaaS/SaaS | DC del RTI TIM-Poste-Postel-Postecom-HPE; non hyperscaler | IT (erogazione); tecnologia sottostante da verificare | controvalidata (riferita: [AgID][agidspc], [CorCom][corcom]) |
-| "SPC Cloud lotto 2" | Identità digitale e sicurezza applicativa | RTI Leonardo-IBM-Fastweb-Sistemi Informativi | servizi, non prodotto cloud | controvalidata (riferita) |
-| "SPC Cloud lotto 3 / 4" | Interoperabilità; portali e servizi online (lotto 4: Almaviva) | servizi applicativi | non spesa cloud di prodotto | **da verificare** |
+| "SPC Cloud lotto 2" | Servizi di sicurezza (assessment, servizi professionali, sicurezza gestita); CQ fino al 20/07/2022 | RTI Leonardo-IBM-Fastweb-Sistemi Informativi | servizi, non cloud IaaS/PaaS/SaaS; eventuali prodotti di sicurezza di terzi: da verificare per CIG | verificata ([AgID 123/2017][agid123], [AgID 494/2021][agid494]) |
+| "SPC Cloud lotto 3" | Interoperabilità dei dati e cooperazione applicativa (web services, orchestrazione, Open Data, analisi Big Data); CQ stipulato 20/07/2016, prorogato fino al 31/12/2022 | RTI Almaviva (mandataria)-Almawave-Indra-PwC (ora Intellera); quote da verificare | servizi professionali: **non** spesa in prodotto cloud | verificata ([AgID 293/2022][agid293], [AgID 194/2017][agid194]) |
+| "SPC Cloud lotto 4" | Realizzazione di portali e servizi online (sviluppo, conduzione applicativa) | stesso RTI del lotto 3 | servizi applicativi: **non** spesa cloud di prodotto | verificata ([CE lotto 4 AgID][agid2160]) |
+| "Cloud Toscana", "Sistema Cloud Toscana", SCT | Contratto quadro Regione Toscana (soggetto aggregatore), stipula 30/09/2019, 60 mesi dal 3/10/2019, prorogato dal 3/10/2024 fino a 270 giorni dopo il nuovo accordo quadro; CIG quadro 7154112FF8, CIG derivato Regione 8006383443; massimale 68,97 M EUR | RTI TIM (mandataria, 41,27%), Enterprise Services/DXC (16,53%), IBM (9,65%), Lutech (20,48%), Dedalus (11,71%); Kyndryl negli atti 2024-25, Accenture solo subappaltatore CMP. Catalogo IaaS/PaaS/SaaS/housing/DR; stack OpenStack + VMware, Guest OS Microsoft, SAS | **misto**: cloud privato/community in Italia (DC regionale TIX + DC TIM Acilia e Firenze), gestito da RTI privato; erogazione IT con componenti tecnologiche extra-UE (VMware, Microsoft, SAS), quota non quantificata | contratto quadro **verificato** ([contratto][ctq], [Comune di Firenze][fi8446], [Progetto dei Fabbisogni][pfdsu]); stack e quota extra-UE da verificare |
 | "PSN" + Housing / Hosting / Industry Standard | Convenzione PSN 24/08/2022 (CIG 9066973ECE), DC Rozzano, Santo Stefano, Acilia, Pomezia | Polo Strategico Nazionale (TIM, Leonardo, CDP, Sogei) | IT | controvalidata ([Guida PSN][psn], [ARERA][arera34]) |
 | "PSN" + Secure Public Cloud | region pubbliche italiane degli hyperscaler + chiavi e backup su PSN | Microsoft Azure, Google Cloud | extra-UE | controvalidata ([Guida PSN][psn]) |
 | "PSN" + Public Cloud PSN Managed | region dedicate nei DC PSN | Google Cloud, Oracle Cloud | extra-UE (tecnologia) | controvalidata ([Guida PSN][psn]) |
@@ -47,7 +49,16 @@ aggiudicatario (es. AWS venduto da Fastweb resta extra-UE).
 | "Telefonia mobile 9" | convenzione TM9, Vodafone (ora Fastweb) | telefonia | **da verificare** (scadenza) |
 | "SPC2", connettività | contratti quadro 2016: Fastweb (subentrata a Tiscali), BT, Vodafone | connettività | controvalidata (riferita: [Agenda Digitale][ad], [CorCom][corcomspc]) |
 
-Le convenzioni regionali (Lepida, CSI Piemonte, ARIA, Cloud Toscana, Liguria Digitale, LAZIOcrea) e il Sistema Gestionale Integrato non sono ancora mappati: **da verificare**.
+Le altre convenzioni regionali (Lepida, CSI Piemonte, ARIA, Liguria Digitale, LAZIOcrea) e il Sistema Gestionale Integrato non sono ancora mappati: **da verificare**. Cloud Toscana: l'esito del nuovo accordo quadro e la qualifica ACN non sono stati trovati.
+
+[agid123]: https://trasparenza.agid.gov.it/download/1629.html
+[agid494]: https://trasparenza.agid.gov.it/download/2357.html
+[agid293]: https://trasparenza.agid.gov.it/download/5924.html
+[agid194]: https://trasparenza.agid.gov.it/download/1327.html
+[agid2160]: https://trasparenza.agid.gov.it/download/2160.html
+[ctq]: https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/documenti-di-gara/20210108/Contratto%20quadro.pdf
+[fi8446]: https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20251120/20251120-DD8446-Affidamento.pdf
+[pfdsu]: https://www.dsu.toscana.it/documents/4390857/15562343/DETERM_724_20203_progetto+dei+fabbisogni_sct_ards.pdf
 
 [2746]: https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202746%20AVVISO%20DI%20PROROGA%20DEL%2028-05-25%20S%20102_0.pdf
 [arera76]: https://www.arera.it/fileadmin/allegati/docs/26/76-26-dagr.pdf
