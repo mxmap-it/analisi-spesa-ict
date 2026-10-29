@@ -1,0 +1,759 @@
+                                Regione Liguria – Giunta Regionale
+
+
+Atto N° 792-2022 - Seduta N° 3755 - del 05/08/2022 - Numero d’Ordine 24
+
+Prot/2022/782751
+
+Oggetto                        Approvazione Direttiva tecnica, di cui all’art. 13 l.r. 42/2006 e s.m.i., relativa
+                               ai requisiti minimi e agli indirizzi tecnologici ed organizzativi di sicurezza
+                               cibernetica omogenei da adottare da parte degli Enti SIIR di cui all’art. 3 l.r.
+                               42/2006 e s.m.i. (D.G.R. n. 1089 del 26/11/2021) e messa a disposizione
+                               delle infrastrutture tecnologiche digitali regionali
+
+Struttura Proponente           Settore informatica
+
+Tipo Atto                      Deliberazione
+
+
+
+Certificazione delle risultanze dell’esame dell’Atto
+
+Presidente GIOVANNI TOTI - Presidente, partecipanti alla seduta:
+
+Componenti della Giunta                              Presenti                      Assenti
+
+Giovanni TOTI            Presidente della Giunta     X
+                         Regionale
+
+Alessandro PIANA         Vicepresidente della        X
+                         Giunta Regionale
+
+Andrea BENVEDUTI         Assessore                   X
+
+
+
+Giovanni BERRINO         Assessore                   X
+
+
+
+Ilaria CAVO              Assessore                   X
+
+
+
+Simona FERRO             Assessore                   X
+
+
+
+Giacomo Raul             Assessore                   X
+GIAMPEDRONE
+
+Marco SCAJOLA            Assessore                   X
+                                                        8                       0
+
+
+Relatore alla Giunta TOTI Giovanni
+
+Con l'assistenza del Direttore generale Dott.ssa Claudia Morich in sostituzione del Segretario generale Avv.
+Pietro Paolo Giampellegrini e del Segretario di Giunta Dott.ssa Roberta Rossi.
+
+La Giunta Regionale
+
+All'unanimità ha approvato il provvedimento
+
+
+
+
+Atto rientrante nei provvedimenti di cui alla lett. A punto 1 sub g
+
+Elementi di corredo all’Atto:
+
+
+    ·    ALLEGATI, che ne sono PARTE INTEGRANTE E NECESSARIA
+                                       LA GIUNTA REGIONALE
+
+Visto il Decreto Legislativo del 7 marzo 2005 n. 82 e s.m.i. “Codice dell’Amministrazione Digitale”
+(CAD) che fornisce alle Amministrazioni specifici indirizzi per la definizione di una strategia digitale
+coerente con il quadro nazionale e identifica le regole tecniche per la sicurezza e disponibilità dei
+dati, dei sistemi e delle infrastrutture delle pubbliche amministrazioni e piani di emergenza in grado
+di assicurare la continuità operativa delle operazioni indispensabili per i servizi erogati e il ritorno
+alla normale operatività;
+
+Visto il D.L. 14 giugno 2021, n. 82, convertito, con modificazioni, dalla legge 4 agosto 2021, n.109,
+che ha definito l'architettura nazionale di cybersicurezza e ha istituito l'Agenzia per la
+Cybersicurezza Nazionale (ACN) a tutela degli interessi nazionali nel campo della cybersicurezza;
+
+Considerato quanto comunicato dal governo e dalla ACN alle Regioni e Province Autonome in
+tema di cybersicurezza nazionale durante l’incontro istituzionale del 16 marzo 2022, a seguito del
+quale si configura la prossima collaborazione tra ACN e Regioni nell’ambito di un sistema a rete
+per la cybersicurezza anche attraverso l’utilizzo di risorse del Piano Nazionale di Ripresa e
+Resilienza (PNRR);
+
+Vista la legge regionale 18 dicembre 2006 n. 42 “Istituzione del sistema informativo regionale
+integrato per lo sviluppo della Società dell’Informazione in Liguria” e s.m.i. che prescrive l’insieme
+delle modalità con cui la Regione Liguria promuove lo sviluppo integrato sul territorio regionale
+delle tecnologie dell'Informazione e della Comunicazione e che prevede in particolare:
+- all’art. 2 comma 1 che la Regione:
+    g) pianifica, regolamenta e monitora l'interoperabilità e la sicurezza dei sistemi e delle reti
+    telematiche che costituiscono il sistema informativo regionale integrato (SIIR) anche definendo
+    gli standard di riferimento;
+    i) implementa infrastrutture telematiche dispiegate sul territorio, infrastrutture di calcolo e
+    piattaforme tecnologiche idonee all'erogazione multicanale dei servizi in rete, alla gestione
+    dell'identità digitale, alla cooperazione applicativa ed all'interoperabilità, anche in una logica di
+    condivisione delle infrastrutture tra enti liguri per il contenimento della spesa complessiva;
+    j) attua interventi di utilizzo coordinato e condiviso delle infrastrutture di cui alla lettera i) tra i
+    soggetti appartenenti al SIIR, in una logica di razionalizzazione e per il perseguimento degli
+    obiettivi di incremento dell'efficienza e contenimento della spesa della pubblica amministrazione
+    ligure;
+- all’art. 4 comma 1 che la Regione e gli enti del sistema regionale operano per la gestione
+    unitaria e condivisa dei servizi del SIIR nell’ottica della costruzione di una rete telematica e di
+    un Data center integrati e nel rispetto dei principi di migliore fruizione e di economicità;
+- all’art. 13 comma 1 punto a) che la Regione possa emanare specifiche direttive tecniche
+    operative relative alla sicurezza delle reti e dei sistemi informativi;
+
+Considerato che la sicurezza cibernetica a tutela dei dati e dei sistemi digitali della Pubblica
+Amministrazione rappresenta un elemento strategico di estrema rilevanza e criticità per le istituzioni
+pubbliche regionali, stante in particolare gli eventi che hanno recentemente interessato
+Amministrazioni regionali e il contesto anche internazionale in cui si inquadra l’azione pubblica;
+
+Considerato quindi la necessità di dare attuazione a iniziative regionali coordinate di
+consolidamento della sicurezza cibernetica orientate a limitare le minacce alla sicurezza,
+mantenere i sistemi digitali sicuri e gestire gli eventuali incidenti limitando al massimo i danni sulle
+basi dati e sui sistemi digitali pubblici;
+
+
+Considerato che Regione Liguria ha attivato conseguentemente tramite Liguria Digitale una serie
+di progetti integrati finalizzati a migliorare la sicurezza cibernetica complessiva dei sistemi e delle
+reti regionali anche in un’ottica di fornire servizi al territorio regionale, in particolare attraverso il
+potenziamento e la messa in sicurezza del Data Center regionale attraverso un Security Operation
+Center (SOC), un Network Operation Center (NOC) e di procedure di Risk Assessment e
+l’implementazione di una rete di fibra ottica di proprietà regionale (LIGX);
+
+Considerato che per l’attuazione dei progetti finalizzati sopra ricordati Regione Liguria ha
+effettuato un significativo investimento che ha consentito la strutturazione e la messa in sicurezza
+del Data Center regionale e che detto investimento trova valorizzazione e finalizzazione nell’ambito
+delle azioni di estensione dei servizi del Data Center agli Enti appartenenti al SIIR ed in particolare
+alle Aziende sanitarie, nelle forme previste nel presente Atto;
+
+Vista la D.G.R. n. 580 del 10/07/2020 con cui è stato nominato il Responsabile della transizione
+alla modalità operativa digitale (RTD) della Regione Liguria nella persona del Dirigente del Settore
+Informatica, che opera nelle forme previste dall’art. 17 del CAD che prevede che il RTD abbia, tra
+gli altri, compiti di indirizzo, pianificazione, coordinamento e monitoraggio della sicurezza
+informatica relativamente ai dati, ai sistemi e alle infrastrutture anche in relazione al sistema
+pubblico di connettività;
+
+Vista la D.G.R. n. 723 del 05/08/2020 “Approvazione nuovo Disciplinare Quadro delle attività di
+Liguria Digitale S.p.A. di cui all’ art. 10 comma 3 della legge regionale n. 42/2006 e s.m.i.”, che qui
+si intende integralmente richiamata;
+
+Vista la D.G.R. n. 1089 del 26/11/2021 “Politiche di gestione della sicurezza informatica della
+Regione Liguria (Versione 1.0 – Novembre 2021)” che ha approvato il documento “Politiche di
+gestione della sicurezza informatica della Regione Liguria (Versione 1.0 - Novembre 2021)”,
+elaborato dal RTD della Regione Liguria con il supporto del Settore Informatica, del Settore Staff
+della Direzione organizzazione e privacy della Direzione centrale Organizzazione e di Liguria
+Digitale, che è stato notificato a tutti gli Enti appartenenti al SIIR al fine di fornire indicazioni in
+merito all’adozione delle proprie politiche di sicurezza informatica.
+
+Considerato che detta D.G.R. dà mandato al Dirigente del Settore Informatica di effettuare, con il
+supporto operativo di Liguria Digitale, un’indagine sulle politiche di sicurezza cibernetica adottate
+dagli Enti appartenenti al SIIR, in particolare dalle Aziende sanitarie, al fine di valutare lo stato
+dell’arte attuale ed elaborare e sottoporre alla Giunta regionale l’emanazione di una specifica
+Direttiva tecnica di cui all’art. 13 della l.r. 42/2006 e s.m.i., relativa ai requisiti minimi e agli indirizzi
+tecnologici e organizzativi di sicurezza cibernetica omogenei da adottare da parte degli Enti SIIR;
+
+Considerato che, con nota a firma del Presidente della Giunta regionale Prot. 173952 del
+28/02/2022, gli Enti SIIR sono stati formalmente informati dell’emanazione di una specifica Direttiva
+tecnica di cui all’art. 13 della l.r. 42/2006 e s.m.i. relativa ai requisiti minimi e agli indirizzi tecnologici
+e organizzativi di sicurezza cibernetica omogenei da adottare da parte degli Enti SIIR stessi;
+
+Considerato che è stata effettuata la prevista indagine sulle politiche di sicurezza cibernetica
+adottate dagli Enti appartenenti al SIIR, in particolare dalle Aziende sanitarie, al fine di valutare lo
+stato dell’arte attuale somministrando a detti Enti uno specifico questionario;
+
+Considerato che dall’analisi dei risultati della predetta indagine sulle politiche di sicurezza
+cibernetica adottate dagli Enti appartenenti al SIIR, in particolare dalle Aziende sanitarie, è emersa
+la necessità di un urgente adeguamento degli Enti secondo le prescrizioni a diverso titolo emanate
+da AgID e ACN;
+
+Considerato che predetta indagine ha inoltre fornito gli elementi necessari sul piano tecnico e
+organizzativo a elaborare la prevista Direttiva tecnica di cui all’art. 13 della l.r. 42/2006 e s.m.i.,
+relativa ai requisiti minimi e agli indirizzi tecnologici e organizzativi di sicurezza cibernetica
+omogenei da adottare da parte degli Enti SIIR ivi comprese le Aziende Sanitarie e fornita come
+riferimento agli Enti Locali liguri;
+Considerato inoltre che, nell’ambito delle indagini effettuate da AgID per gli interventi di
+razionalizzazione e consolidamento dei Data Center della PA, in conformità con quanto previsto
+dalla circolare 1/2019 “Censimento del patrimonio ICT delle Pubbliche Amministrazioni e
+classificazione delle infrastrutture idonee all’uso da parte dei Poli Strategici Nazionali” e dal Piano
+Triennale per l’informatica nella Pubblica amministrazione, i sistemi di Data Center degli Enti
+appartenenti al SIIR, con l’esclusione dei sistemi già migrati al Data Center regionale, risultano
+classificati tra quelli per cui si prevede la progressiva dismissione e che quindi appare necessario
+attuare un percorso di consolidamento della sicurezza cibernetica a livello regionale che trova i
+suoi presupposti infrastrutturali nella migrazione dei data center degli Enti SIIR nel Data Center
+regionale che ha ricevuto da parte di AgID una classificazione che ne consente il mantenimento in
+funzionalità e l’erogazione di servizi al territorio;
+
+Considerato che il PNRR prevede - in particolare nell’ambito della Missione 1 tra cui sono
+ricompresi, tra gli altri, finanziamenti specifici per la digitalizzazione - di supportare la migrazione al
+cloud delle amministrazioni centrali e locali nonché rafforzare il perimetro di sicurezza cibernetica
+della PA, mettendo a disposizione risorse finanziarie ai soggetti territoriali interessati dalle azioni;
+
+Considerato che il PNRR prevede nell’ambito della Missione 1 - Componente 2 - Investimento 3
+“Reti Ultraveloci” il progetto “Sanità connessa” che provvede ad assicurare connettività in banda
+ultra larga alle sedi delle Aziende sanitarie in modalità gratuita per almeno 5 anni;
+
+Vista l’informativa resa alla Conferenza Unificata del 30 marzo 2022, ai sensi dell’articolo 9, comma
+2, lettera e) del decreto legislativo 28 agosto 1997, n. 281, dal Ministro per l’innovazione tecnologica
+e la transizione digitale sullo stato di avanzamento degli interventi di competenza del Dipartimento
+per la Trasformazione Digitale nell’ambito del PNRR, con particolare riferimento alle misure della
+Missione M1C1 (Digitalizzazione, Innovazione e Sicurezza della PA);
+
+Esaminato il documento “Direttiva tecnica - art. 13 l.r. 42/2006 e s.m.i. relativa ai requisiti minimi e
+agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica omogenei da adottare da parte
+degli Enti SIIR” elaborato dal Settore Informatica con il supporto operativo di Liguria Digitale,
+allegato parte integrante e necessaria del presente atto;
+
+Ritenuto opportuno approvare il documento “Direttiva tecnica - art. 13 l.r. 42/2006 e s.m.i. relativa
+ai requisiti minimi e agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica omogenei da
+adottare da parte degli Enti SIIR”, allegato parte integrante e necessaria del presente atto;
+
+Ritenuto opportuno, anche sulla base delle descritte risultanze dell’indagine sulle politiche di
+sicurezza cibernetica adottate dagli Enti appartenenti al SIIR di cui sopra, che detti Enti adottino e
+diano attuazione alla “Direttiva tecnica - art. 13 l.r. 42/2006 e s.m.i. relativa ai requisiti minimi e agli
+indirizzi tecnologici ed organizzativi di sicurezza cibernetica omogenei da adottare da parte degli
+Enti SIIR” che riporta in forma operativa e sintetica le azioni necessarie sul piano tecnico, normativo
+e procedurale, per assicurare l’appartenenza ad un perimetro di sicurezza cibernetica dei dati e dei
+servizi gestiti;
+
+Ritenuto necessario, valutata la rilevanza che la sicurezza cibernetica riveste all’interno dei sistemi
+informatici pubblici liguri, che le prescrizioni indicate in detto documento siano vincolanti per gli Enti
+appartenenti al SIIR, in particolare per le Aziende sanitarie che gestiscono dati particolarmente
+rilevanti sul piano della loro tutela, che sono tenuti a dar seguito operativo a dette prescrizioni nei
+minori tempi possibili e comunque entro le scadenze indicate nel documento stesso assicurando il
+completamento delle attività di migrazione al Data Center regionale entro e non oltre il 31/12/2024,
+con oneri di investimento ed esercizio a proprio carico anche a valere nelle risorse disponibili del
+PNRR ovvero nei progetti finalizzati a tale scopo sulla base di un listino di riferimento ai fini della
+congruità, messo a disposizione da parte di Liguria Digitale relativo ai servizi acquisiti, anche
+attraverso le risorse messe a disposizione dagli investimenti PNRR o dai fondi comunitari;
+Ritenuto necessario, anche ai fini della sicurezza informatica del SIIR complessivamente inteso,
+che la rete regionale in fibra ottica venga utilizzata dagli Enti appartenenti al SIIR, sulla base del
+piano di attività che verrà concertato tra Regione Liguria ed Enti SIIR che per gli enti sanitari tenga
+conto della connettività resa dal progetto nazionale “Sanità Connessa”, con oneri di investimento
+ed esercizio a proprio carico sulla base di un listino di riferimento, approvato dalla Regione, ai fini
+della congruità, messo a disposizione da parte di Liguria Digitale entro il primo trimestre 2023
+relativo ai servizi acquisiti, a valere nelle risorse messe a disposizione dal PNRR o dai programmi
+finalizzati ;
+
+Ritenuto necessario che il predetto listino riferito ai costi di investimento e gestione dei sistemi e
+delle infrastrutture regionali ricomprese nel presente Atto sia reso disponibile da Liguria Digitale,
+come previsto dal verbale del Comitato di coordinamento dei Soci di Liguria Digitale del 16/11/2020
+in cui i Soci approvano il mandato alla realizzazione di un listino delle attività e servizi da parte di
+Liguria Digitale, e venga recepito dal Settore Informatica, a seguito di verifiche tecnico-
+amministrative al fine di assicurare la congruità dei costi dei servizi erogati dalle infrastrutture
+regionali, e presentato al Comitato di Coordinamento dei Soci di Liguria Digitale per una migliore
+sinergia per la ripartizione delle spese di investimento e gestione;
+
+Ritenuto necessario dare mandato al Dirigente del Settore Informatica a effettuare - con il supporto
+operativo di Liguria Digitale e in caso di eventuali modifiche intervenute ad aspetti normativi,
+regolamentari o tecnologici - la revisione della Direttiva tecnica di cui all’art. 13 l.r. 42/2006 e s.m.i.
+relativa ai requisiti minimi e agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica
+omogenei da adottare da parte degli Enti SIIR di cui sopra, effettuandone il recepimento e adottando
+le eventuali conseguenti azioni necessarie;
+Ritenuto necessario che ciascun Ente appartenente al SIIR per attuare la Direttiva di cui sopra
+realizzi le attività conseguenti secondo un cronoprogramma preciso in essa riportato, assicurando il
+completamento delle attività di migrazione al Data Center regionale entro e non oltre il 31/12/2024,
+anche per poter utilizzare i fondi PNRR sopra citati;
+Ritenuto necessario che le attività vincolanti di completamento delle attività di migrazione al Data
+Center regionale e di utilizzo rete regionale in fibra ottica da parte degli Enti appartenenti al SIIR,
+come sopra descritte, siano dagli stessi attivate a seguito di una fase propedeutica di assessment
+– da svolgersi in stretta collaborazione con Liguria Digitale - dello stato attuale del singolo Ente
+rispetto ai vincoli definiti dalla “Direttiva tecnica - art. 13 l.r. 42/2006 e s.m.i. relativa ai requisiti
+minimi e agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica omogenei da adottare da
+parte degli Enti SIIR” allegata al presente Atto, che definisca analiticamente i costi cessanti e i costi
+sorgenti discendenti dall’adozione della Direttiva stessa, sia in termini di costi di investimento una
+tantum che di spesa corrente ricorrente e valuti le disponibilità di risorse messe a disposizione degli
+Enti dal PNRR o dai fondi comunitari, che il singolo Ente dovrà redigere entro il 30 ottobre 2022;
+
+Ritenuto necessario che in successivo Atto della Giunta regionale sia preso atto delle risultanze di
+detti assessment e della conseguente quantificazione degli oneri finanziari discendenti dalle attività
+vincolanti di migrazione al Data Center regionale e di utilizzo rete regionale in fibra ottica da parte
+degli Enti appartenenti al SIIR al fine dell’adozione vincolante della Direttiva stessa tenuto conto
+delle disponibilità di risorse messe a disposizione degli Enti dal PNRR o dai fondi comunitari;
+
+Ritenuto inoltre necessario, visti gli adempimenti a carico degli Enti discendenti dalla Circolare
+AgID 2/2017 “Misure minime sicurezza ICT per le PA”, dalla Det. AgID 628/2021 c.d. "Regolamento
+cloud”, dalle Det. ACN 306/2022 relativa al modello di classificazione dati e servizi e 307/2022
+relativa a ulteriori livelli minimi di sicurezza, a cui è necessario dare seguito nel prossimo periodo,
+che le attività non direttamente connesse alla migrazione al Data Center regionale 1a, 1b, 3a, 3b e
+3c della Direttiva di cui sopra siano obbligatoriamente avviate ed espletate dagli Enti SIIR nei tempi
+indicati dalla Direttiva stessa, mentre le altre attività direttamente connesse alla migrazione al Data
+Center regionale siano attuate a seguito del successivo Atto della Giunta regionale che prenderà
+atto delle risultanze degli assessment come sopra definito;
+
+Ritenuto opportuno rendere disponibili i servizi infrastrutturali del Data Center regionale, anche per
+gli Enti locali liguri non appartenenti al SIIR ivi compresi i Soci di Liguria Digitale, a titolo volontario
+e oneroso con la stessa modalità di attribuzione dei costi di cui sopra basata sul predetto listino;
+
+Ritenuto utile ed opportuno rendere disponibile il documento “Direttiva tecnica - art. 13 l.r. 42/2006
+e s.m.i. relativa ai requisiti minimi e agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica
+omogenei da adottare da parte degli Enti SIIR” agli Enti Locali liguri per l’eventuale utilizzo, quale
+atto di indirizzo e supporto da parte della Regione Liguria;
+
+Dato atto che dal presente provvedimento non derivano oneri diretti a carico del Bilancio regionale
+in quanto le citate attività di supporto operativo di Liguria Digitale al Settore Informatica, sono da
+ricomprendere in quelle che trovano copertura nelle risorse già all’uopo allocate alla Missione 1,
+Programma 1.008, Capitolo U360” del bilancio triennale 2022 – 2024, la collaborazione di Liguria
+Digitale agli Enti SIIR per l’effettuazione dell’assessment di cui sopra viene prestata senza oneri
+aggiuntivi nell’ambito delle forniture in essere, mentre le attività di responsabilità degli Enti
+appartenenti al SIIR saranno a carico dei relativi Bilanci;
+
+
+                                               su proposta
+                                del Presidente della Giunta regionale
+                                                DELIBERA
+               per le motivazioni sopra riportate che qui si intendono richiamate
+1) di approvare, sulla base di quanto riportato in premessa, il documento “Direttiva tecnica - art. 13
+   l.r. 42/2006 e s.m.i. relativa ai requisiti minimi e agli indirizzi tecnologici e organizzativi di
+   sicurezza cibernetica omogenei da adottare da parte degli Enti SIIR”, allegato parte integrante e
+   necessaria del presente atto;
+
+
+2) di indicare l’applicazione delle prescrizioni di detto documento come vincolante per gli Enti
+   appartenenti al SIIR, in particolare per le Aziende sanitarie, che sono tenuti a dar seguito
+   operativo a dette prescrizioni nei minori tempi possibili e comunque entro le scadenze indicate
+   nel documento stesso e assicurando il completamento delle attività di migrazione al Data Center
+   regionale entro e non oltre il 31/12/2024, con oneri di investimento ed esercizio a proprio carico
+   anche a valere nelle risorse disponibili del PNRR ovvero nei progetti finalizzati a tale scopo sulla
+   base del listino di riferimento ai fini della congruità, messo a disposizione da parte di Liguria
+   Digitale, anche attraverso le risorse messe a disposizione dagli investimenti PNRR o dei fondi
+   comunitari;
+
+3) di rendere obbligatorio l’utilizzo della rete regionale in fibra ottica da parte degli Enti appartenenti
+   al SIIR, sulla base del piano di attività che verrà concertato tra Regione Liguria ed Enti SIIR
+   stessi che, per gli enti sanitari, tenga conto della connettività resa dal progetto nazionale “Sanità
+   Connessa”, provvedendo a collegarsi ad essa con oneri di investimento ed esercizio a proprio
+   carico sulla base del listino di riferimento, approvato dalla Regione, ai fini della congruità, messo
+   a disposizione da parte di Liguria Digitale entro il primo trimestre 2023, a valere nelle risorse
+   messe a disposizione dal PNRR o dai programmi finalizzati;
+
+4) di prevedere che il predetto listino riferito ai costi di investimento e gestione dei sistemi e delle
+   infrastrutture regionali ricomprese nel presente Atto sia reso disponibile da Liguria Digitale e
+    venga recepito dal Settore Informatica, a seguito di verifiche tecnico-amministrative al fine di
+    assicurare la congruità dei costi dei servizi erogati dalle infrastrutture regionali, e presentato al
+    Comitato di Coordinamento dei Soci di Liguria Digitale;
+
+5) di prevedere che gli Enti appartenenti al SIIR ivi comprese le Aziende Sanitarie, al fine di
+   eseguire le attività vincolanti di completamento della migrazione al Data Center regionale e di
+   utilizzo rete regionale in fibra ottica come sopra descritte, effettuino e trasmettano al Settore
+   Informatica di Regione Liguria entro il 30 ottobre 2022 l’assessment – da svolgersi in stretta
+   collaborazione con Liguria Digitale - dello stato attuale del singolo Ente rispetto ai vincoli definiti
+   dalla Direttiva tecnica. Tale assessment dovrà definire tra l’altro analiticamente i costi cessanti e
+   i costi sorgenti discendenti dall’adozione della Direttiva stessa, sia in termini di costi di
+   investimento una tantum che di spesa corrente ricorrente, e valuti le disponibilità di risorse messe
+   a disposizione degli Enti dal PNRR o dai fondi comunitari;
+
+
+6) di rinviare a successiva Deliberazione la presa d’atto atto delle risultanze di detti assessment e
+   della conseguente quantificazione degli oneri finanziari discendenti dalle attività vincolanti di
+   migrazione al Data Center regionale e di utilizzo rete regionale in fibra ottica da parte degli Enti
+   appartenenti al SIIR ivi comprese le Aziende Sanitarie, al fine dell’adozione vincolante della
+   Direttiva stessa tenuto conto delle disponibilità di risorse messe a disposizione degli Enti dal
+   PNRR o dai fondi comunitari;
+
+7) di prevedere che gli Enti appartenenti al SIIR avviino e espletino le attività non direttamente
+   connesse alla migrazione al Data Center regionale 1a, 1b, 3a, 3b e 3c della Direttiva di cui sopra
+   nei tempi ivi indicati, mentre le altre attività direttamente connesse alla migrazione al Data Center
+   regionale saranno avviate alla data dell’adozione della successiva Deliberazione della Giunta
+   regionale che prenderà atto delle risultanze degli assessment come definito al punto 6);
+
+8) di rendere disponibili i servizi infrastrutturali del Data Center regionale anche agli Enti locali liguri
+   non appartenenti al SIIR, con adesione volontaria e con oneri a loro carico definiti con la modalità
+   di attribuzione dei costi basata sul listino di cui al punto 2);
+
+9) di dare mandato al Dirigente del Settore Informatica di notificare il presente atto e la “Direttiva
+   tecnica - art. 13 l.r. 42/2006 e s.m.i. relativa ai requisiti minimi e agli indirizzi tecnologici e
+   organizzativi di sicurezza cibernetica omogenei da adottare da parte degli Enti SIIR” agli Enti
+   appartenenti al SIIR per la loro applicazione vincolante e a Liguria Digitale per quanto di
+   competenza;
+
+10) di dare mandato al Dirigente del Settore Informatica a effettuare - con il supporto operativo di
+    Liguria Digitale e in caso di eventuali modifiche intervenute ad aspetti normativi, regolamentari
+    o tecnologici - la revisione della Direttiva tecnica di cui all’art. 13 l.r. 42/2006 e s.m.i. relativa ai
+    requisiti minimi e agli indirizzi tecnologici ed organizzativi di sicurezza cibernetica omogenei da
+    adottare da parte degli Enti SIIR qui approvata, effettuandone il recepimento e adottando le
+    eventuali conseguenti azioni necessarie e di informare gli Enti Locali per l’eventuale utilizzo
+    quale atto di indirizzo e supporto da parte della Regione Liguria;
+
+11) di dare mandato al Dirigente del Settore Informatica a pubblicare le Direttiva tecnica - art. 13 l.r.
+    42/2006 e s.m.i. relativa ai requisiti minimi e agli indirizzi tecnologici e organizzativi di sicurezza
+    cibernetica omogenei da adottare da parte degli Enti SIIR, ivi comprese le Aziende Sanitarie,
+    approvata sul sito istituzionale della Regione Liguria;
+   12) di dare atto che dal presente provvedimento non derivano oneri diretti a carico del Bilancio
+       regionale in quanto le citate attività di supporto operativo di Liguria Digitale al Settore Informatica,
+       sono da ricomprendere in quelle che trovano copertura nelle risorse già all’uopo allocate alla
+       Missione 1, Programma 1.008, Capitolo U360” del bilancio triennale 2022 – 2024, la
+       collaborazione di Liguria Digitale agli Enti SIIR per l’effettuazione dell’assessment di cui sopra
+       viene prestata senza oneri aggiuntivi nell’ambito delle forniture in essere, mentre le attività di
+       competenza degli Enti appartenenti al SIIR saranno a carico dei relativi Bilanci.
+Contro il presente atto è possibile promuovere ricorso giurisdizionale davanti il TAR entro 60 giorni o,
+alternativamente, ricorso straordinario davanti il Presidente della Repubblica entro 120 giorni dalla
+notifica, comunicazione o pubblicazione dello stesso.
+                                            allegato n° 1
+
+
+
+
+                        Direttiva tecnica operativa
+                  relativa ai requisiti minimi e agli indirizzi
+   tecnologici e organizzativi di sicurezza cibernetica omogenei
+                      da adottare da parte degli Enti SIIR
+
+ai sensi dell’art. 13 comma 1 punto 1) della LR 18 dicembre 2006 n. 42 “Istituzione del sistema
+informativo regionale integrato per lo sviluppo della Società dell’Informazione in Liguria” e s.m.i.
+
+
+
+
+                                           Agosto 2022
+
+
+
+
+                                                  1
+Inquadramento
+
+La presente Direttiva tecnica si inquadra in termini normativi nella legge regionale 18
+dicembre 2006 n. 42 “Istituzione del sistema informativo regionale integrato per lo
+sviluppo della Società dell’Informazione in Liguria” e s.m.i., che prescrive l’insieme
+delle modalità con cui la Regione Liguria promuove lo sviluppo integrato sul territorio
+regionale delle tecnologie dell'Informazione e della Comunicazione e che prevede in
+particolare:
+- all’art. 2 comma 1 che la Regione:
+   g) pianifica, regolamenta e monitora l'interoperabilità e la sicurezza dei sistemi e
+   delle reti telematiche che costituiscono il sistema informativo regionale integrato
+   (SIIR) anche definendo gli standard di riferimento;
+   i) implementa infrastrutture telematiche dispiegate sul territorio, infrastrutture di
+   calcolo e piattaforme tecnologiche idonee all'erogazione multicanale dei servizi in
+   rete, alla gestione dell'identità digitale, alla cooperazione applicativa ed
+   all'interoperabilità, anche in una logica di condivisione delle infrastrutture tra enti
+   liguri per il contenimento della spesa complessiva;
+   j) attua interventi di utilizzo coordinato e condiviso delle infrastrutture di cui alla
+   lettera i) tra i soggetti appartenenti al SIIR, in una logica di razionalizzazione e per
+   il perseguimento degli obiettivi di incremento dell'efficienza e contenimento della
+   spesa della pubblica amministrazione ligure;
+- all’art. 4 comma 1 che la Regione e gli enti del sistema regionale operano per la
+  gestione unitaria e condivisa dei servizi del SIIR nell’ottica della costruzione di una
+  rete telematica e di un Data center integrati e nel rispetto dei principi di migliore
+  fruizione e di economicità;
+- all’art. 13 comma 1 punto a) che la Regione possa emanare specifiche direttive
+  tecniche operative relative alla sicurezza delle reti e dei sistemi informativi.
+La normativa nazionale di riferimento, oltre al Decreto Legislativo del 7 marzo 2005
+n. 82 e s.m.i. “Codice dell’Amministrazione Digitale” (CAD) che fornisce alle
+Amministrazioni specifici indirizzi per la definizione di una strategia digitale coerente
+con il quadro nazionale e identifica le regole tecniche per la sicurezza (v. Art. 51 -
+Sicurezza e disponibilità dei dati, dei sistemi e delle infrastrutture delle pubbliche
+amministrazioni), definisce il contesto di riferimento attraverso il D.L. 14 giugno 2021,
+n. 82, convertito, con modificazioni, dalla legge 4 agosto 2021, n.109, che ha definito
+
+
+                                            2
+l'architettura nazionale di cybersicurezza e ha istituito l'Agenzia per la Cybersicurezza
+Nazionale (ACN).
+In termini procedurali l’Agenzia per l’Italia Digitale (AgID) ha emanato indirizzi per il
+mantenimento della sicurezza informatica all’interno dei sistemi pubblici, in linea con
+le disposizioni del CAD e con gli obiettivi descritti dal “Piano triennale per l’informatica
+nella pubblica amministrazione”, che affiancano le più recenti indicazioni nazionali
+emanate da ACN anche nell’ambito della Strategia Cloud Italia e attraverso il CSIRT -
+Computer Security Incident Response Team - Italia. Detta documentazione tecnica si
+intende qui integralmente richiamata.
+Tra questa ricordiamo in particolare la Circolare AgID 2/2017 “Misure minime
+sicurezza ICT per le PA”, la Det. AgID 628/2021 c.d. "Regolamento cloud”, le Det. ACN
+306/2022 relativa al modello di classificazione dati e servizi e 307/2022 relativa a
+ulteriori livelli minimi di sicurezza da cui discendono specifici adempimenti a carico
+degli Enti.
+In questo scenario Regione Liguria ha ritenuto di dare attuazione a iniziative regionali
+coordinate di consolidamento della sicurezza cibernetica orientate a limitare il
+concretizzarsi delle minacce di sicurezza e a mantenere i sistemi digitali e i dati
+pubblici gestiti dal SIIR all’interno di un perimetro di sicurezza cibernetica.
+Regione Liguria ha quindi avviato le azioni strutturali necessarie ad attivare e portare
+a compimento le iniziative regionali coordinate di consolidamento della sicurezza
+cibernetica:
+- sul piano infrastrutturale: ha attivato da tempo tramite Liguria Digitale una serie
+  di progetti integrati finalizzati a migliorare la sicurezza cibernetica complessiva del
+  sistema regionale anche in un’ottica di fornire servizi al territorio regionale, in
+  particolare attraverso il potenziamento e la messa in sicurezza del Data Center
+  regionale attraverso un Security Operation Center (SOC), un Network Operation
+  Center (NOC) e di procedure di Risk Assessment;
+- sul piano gestionale - regolamentatorio: ha adottato le “Politiche di gestione della
+  sicurezza informatica della Regione Liguria (Versione 1.0 – Novembre 2021)”
+  (approvate con D.G.R. n. 1089 del 26/11/2021), elaborate dal RTD della Regione
+  Liguria con il supporto del Settore Informatica, del Settore Staff della Direzione
+  organizzazione e privacy della Direzione centrale Organizzazione e di Liguria
+  Digitale, che sono state notificate a tutti gli Enti appartenenti al SIIR, al fine di
+  fornire indicazioni in merito all’adozione delle proprie politiche di sicurezza
+  informatica.
+
+                                             3
+Inoltre, al fine di valutare lo stato dell’arte attuale delle politiche e delle azioni
+operative di sicurezza cibernetica adottate dagli Enti appartenenti al SIIR, in
+particolare dalle Aziende sanitarie, è stata studiata ed attuata recentemente una
+specifica analisi basata sul rilevamento diretto di dati dagli Enti.
+I dati di inquadramento citati relativi al rispetto della normativa e dell’impianto
+regolamentare nazionale, quelli relativi all’attuale assetto infrastrutturale del sistema
+regionale e lo stato oggettivo della sicurezza cibernetica nei sistemi degli Enti
+appartenenti al SIIR definito tramite il rilevamento e l’analisi tecnica dei dati raccolti,
+ha consentito - come richiesto dalla Giunta regionale con la citata D.G.R. n. 1089 del
+26/11/2021 - di elaborare ed emanare la presente “Direttiva tecnica di cui all’art. 13
+della l.r. 42/2006 e s.m.i., relativa ai requisiti minimi e agli indirizzi tecnologici e
+organizzativi di sicurezza cibernetica omogenei da adottare da parte degli Enti SIIR”.
+L’attuazione della presente Direttiva da parte degli Enti appartenenti al SIIR, nella
+tempistica definita dal relativo cronoprogramma, consentirà di portare a
+compimento le iniziative regionali coordinate di consolidamento della sicurezza
+cibernetica all’interno del SIIR, obiettivo strategico irrinunciabile del sistema
+regionale nel suo insieme.
+
+
+
+
+                                            4
+Contenuti operativi della Direttiva
+
+Con riferimento all’indagine condotta da Regione Liguria nel mese di marzo 2022
+sulle politiche di sicurezza cibernetica adottate, mediante la compilazione da parte
+degli Enti appartenenti al SIIR di un apposito questionario, conformemente alle
+direttive nazionali emanate da AgID e da ACN (Agenzia per la Cybersicurezza
+Nazionale) si rende opportuno e necessario adottare i seguenti indirizzi tecnici e
+organizzativi:
+
+   1. Tutti gli Enti SIIR indistintamente:
+
+         a. Trasmettono a Regione Liguria entro 15 giorni dall’approvazione della
+            presente Direttiva l’elenco e la classificazione dei dati e dei servizi
+            digitali, secondo il “MODELLO PER LA PREDISPOSIZIONE DELL’ELENCO E
+            DELLA CLASSIFICAZIONE DEI DATI E DEI SERVIZI DELLA PUBBLICA
+            AMMINISTRAZIONE” inviato ad ACN alla scadenza del 18 luglio 2022 e le
+            successive eventuali versioni integrative, nonché le comunicazioni
+            eventualmente pervenute da ACN in merito alla validazione.
+         b. Redigono e trasmettono a Regione Liguria entro il 30 settembre 2022
+            l’analisi degli applicativi “critici o H24” che richiedono una architettura
+            comprendente BC (Business Continuity) e DR (Disaster Recovery)
+            seguendo le “LINEE GUIDA PER IL DISASTER RECOVERY DELLE PUBBLICHE
+            AMMINISTRAZIONI” emesse da AgID nel 2013 ed indicando per ogni
+            singolo applicativo il relativo “Tier” richiesto o quello già fornito
+            nell’ambito di progetti ad-hoc (es. PACS o LIS regionali).
+         c. Consegnano a Regione Liguria entro il 30 novembre 2022, e comunque
+            in linea con quanto previsto dai bandi del PNRR, un piano di migrazione
+            al cloud, utilizzando il Data Center e la rete regionale al fine di
+            minimizzare CAPEX e OPEX e massimizzare le sinergie.
+         d. Completano entro il 31 dicembre 2024 le attività previste dal piano di
+            migrazione di cui al punto che precede.
+         e. Utilizzano, per i collegamenti con il Data Center regionale e tra le sedi
+            degli Enti stessi, la rete in fibra ottica regionale, che utilizza
+            l’infrastruttura regionale in essere opportunamente integrata con
+            soluzioni specificamente identificate, sulla base di un piano di attività che
+            verrà concertato tra Regione Liguria e gli Enti SIIR che per gli enti sanitari
+            tenga conto della connettività resa dal progetto nazionale “Sanità
+            Connessa”.
+
+
+                                             5
+      f. Per le attività di cui sopra gli Enti SIIR possono avvalersi delle competenze
+         tecniche di Liguria Digitale.
+
+2. Gli Enti SIIR dotati di propri data center classificati da AgID come gruppo B (o,
+   equivalentemente, mai classificati da AgID):
+
+      a. Consegnano a RL entro il 30 novembre 2022 un piano dettagliato per la
+         dismissione dei data center dell’Ente, pianificando l’erogazione dei
+         servizi da parte di sistemi collocati nel Data Center regionale di Genova.
+      b. Suddividono opportunamente il piano e il progetto di cui sopra in più fasi,
+         dando priorità ai servizi più critici nell’ottica di anticipare la diminuzione
+         di esposizione al rischio di interruzione di servizio.
+      c. Completano entro il 31 dicembre 2024 le attività previste dal piano di
+         migrazione. Con decorrenza immediata e nelle more del completamento
+         della migrazione, ogni spesa destinata a un Data Center diverso da quello
+         di Regione deve essere preventivamente autorizzata da Regione Liguria.
+      d. Per le attività di cui sopra gli Enti SIIR possono avvalersi delle competenze
+         tecniche di Liguria Digitale.
+3. Per quanto riguarda gli aspetti di cybersecurity, tutti gli Enti SIIR
+   indistintamente:
+
+      a. Si avvalgono entro il 31 dicembre 2022 dei servizi e del personale
+         qualificato in materia di sicurezza cibernetica del Security Operation
+         Center (SOC) di Liguria Digitale, allo scopo di dotarsi, come richiesto da
+         AGID in riferimento ai CERT di prossimità, di:
+             • capacità di rilevazione e risposta agli incidenti;
+             • capacità di comprendere ciò che sta avvenendo sulle infrastrutture
+               e sui sistemi;
+             • capacità di individuare le minacce esterne e le modalità con cui
+               potrebbero essere colpiti i sistemi e servizi informatici;
+             • capacità di condividere informazioni, in modo efficiente, per
+               consentire alle organizzazioni, alle amministrazioni, alle istituzioni,
+               alle infrastrutture critiche di scambiarsi conoscenza al fine di
+               anticipare eventuali attacchi, innalzando in questo modo il proprio
+               livello di protezione.
+      b. Qualora non già adottato, si dotano con urgenza e comunque entro il 30
+         settembre 2022 di uno di strumento specifico tecnico di Endpoint
+
+                                        6
+   Detection and Response avanzato in risposta alle minacce “0-day” e
+   “ransomware” che sfrutti, oltre alle firme virali, tecniche di rilevazione
+   basate sulle anomalie di comportamento (AgID - Misure minime di
+   sicurezza ICT per le pubbliche amministrazioni - ABSC 8.10.1).
+c. Qualora non già adottato, si dotano con urgenza e comunque entro il 30
+   settembre 2022 di un sistema di autenticazione multi fattore (MFA) per
+   gli accessi VPN di fornitori e dipendenti ai sistemi dell’Ente.
+d. Qualora non già adottato, si dotano con urgenza e comunque entro il 31
+   dicembre 2022 di una piattaforma di security awareness che comprenda
+   corsi formazione sui rischi della cybersecurity e campagne di phishing
+   simulato per incrementare la consapevolezza del proprio personale.
+e. Qualora non già adottato, si dotano con urgenza e comunque entro il 31
+   gennaio 2023 di un sistema di autenticazione multi fattore (MFA Multi
+   Factor Authentication) per gli accessi extranet alla posta elettronica
+   dell’ente, nonché di un sistema (MDM Mobile Device Management) per
+   la gestione sicura dei device mobili (smartphone e tablet).
+f. Per le attività di cui sopra gli Enti SIIR possono avvalersi delle competenze
+   tecniche di Liguria Digitale.
+
+
+
+
+                                  7
+Cronoprogramma di attuazione della Direttiva
+
+
+Codice                            Attività                                    Scadenza
+
+                   1. Tutti gli Enti SIIR indistintamente
+
+  1.a    Trasmettono a Regione Liguria l’elenco e la classificazione    entro 15 giorni
+         dei dati e dei servizi digitali, secondo il “MODELLO ACN PER   dall’approvazione
+         LA     PREDISPOSIZIONE            DELL’ELENCO     E    DELLA   della       presente
+         CLASSIFICAZIONE DEI DATI E DEI SERVIZI DELLA PUBBLICA          Direttiva
+         AMMINISTRAZIONE” inviato ad ACN alla scadenza del 18
+         luglio 2022 e le successive eventuali versioni integrative,
+         nonché le comunicazioni eventualmente pervenute da ACN
+         in merito alla validazione
+
+  1.b    Redazione e invio analisi degli applicativi “critici o H24” che 30 settembre 2022
+         richiedono una architettura comprendente BC (Business
+         Continuity) e DR (Disaster Recovery)
+
+  1.c    Consegna piano di migrazione al cloud                          30 novembre 2022
+                                                                        (comunque in linea con
+                                                                        quanto previsto dagli
+                                                                        Avvisi del PNRR)
+
+  1.d    Completamento delle attività previste dal piano di 31 dicembre 2024
+         migrazione
+
+  1.e    Utilizzo della rete in fibra          regionale   in   essere Sulla base del piano di
+         opportunamente integrata                                       attività    che      verrà
+                                                                        concertato tra Regione
+                                                                        Liguria e Enti SIIR anche
+                                                                        in relazione, per gli Enti
+                                                                        sanitari, al progetto
+                                                                        nazionale          “Sanità
+                                                                        Connessa”
+
+                 2. Enti SIIR dotati di propri data center
+                     classificati da AgID come gruppo B
+
+  2.a    Consegna piano dettagliato per la dismissione dei data 30 novembre 2022
+         center dell’Ente e pianificazione erogazione dei servizi da
+         parte di sistemi collocati nel Data Center regionale. Il piano
+         e il progetto sono suddivisi in più fasi, dando priorità ai
+         servizi più critici
+
+  2.c    Completano delle attività previste dal piano di migrazione     31 dicembre 2024
+
+
+
+
+                                           8
+Codice                            Attività                              Scadenza
+
+                3. Tutti gli Enti SIIR indistintamente per
+                quanto riguarda gli aspetti di cybersecurity
+
+ 3.a     Utilizzo del Security Operation Center (SOC)               31 dicembre 2022
+
+
+
+ 3.b     Adozione strumento specifico tecnico di Endpoint Detection 30 settembre 2022
+         and Response avanzato in risposta alle minacce “0-day” e
+         “ransomware”
+
+ 3.c     Adozione di un sistema di autenticazione multi fattore 30 settembre 2022
+         (MFA) per gli accessi VPN di fornitori e dipendenti ai sistemi
+         dell’Ente
+
+ 3.d     Adozione di una piattaforma di security awareness che 31 dicembre 2022
+         comprenda corsi formazione sui rischi della cybersecurity e
+         campagne di phishing simulato
+
+ 3.e     Adozione di un sistema di autenticazione multi fattore (MFA 31 gennaio 2023
+         Multi Factor Authentication) per gli accessi extranet alla
+         posta elettronica dell’ente, nonché di un sistema (MDM
+         Mobile Device Management) per la gestione sicura dei
+         device mobili (smartphone e tablet)
+
+
+
+
+                                           9
+Iter di predisposizione e approvazione del provvedimento
+
+Identificativo atto 2022-AC-630
+
+Compito                       Completato da                In sostituzione di           Data di
+                                                                                        completamento
+Approvazione              Giovanni TOTI                                                 05/08/2022 09:46
+Amministratore proponente
+
+
+
+* Approvazione Direttore      Iacopo AVEGNO                                             05/08/2022 09:41
+generale/Vicedirettore
+generale (regolarità
+amministrativa tecnica e
+contabile)
+* Approvazione Direttore      Francesco QUAGLIA                                         05/08/2022 09:34
+generale/Vicedirettore
+generale (regolarità
+amministrativa tecnica e
+contabile)
+* Approvazione Legittimità    Marta SALVARANI              Monica FOSSA                 05/08/2022 09:16
+
+
+
+
+* Approvazione Dirigente      Isabella LANZONE                                          04/08/2022 17:36
+(regolarità amministrativa
+tecnica e contabile)
+
+
+* Approvazione Dirigente      Francesco QUAGLIA                                         04/08/2022 17:35
+(regolarità amministrativa
+tecnica e contabile)
+
+
+* Validazione Responsabile Daniela BRUZZO                                               04/08/2022 15:55
+procedimento (Istruttoria)
+
+
+
+* Validazione Responsabile Riccardo VULCANO                                             04/08/2022 14:42
+procedimento (Istruttoria)
+
+
+
+
+* La regolarità amministrativa, tecnica e contabile dell’atto è attestata da ciascun soggetto sopraindicato
+  nell’ambito delle rispettive competenze.
+
+
+
+
+Trasmissione provvedimento:
+Sito web della Regione Liguria
+
