@@ -2,7 +2,19 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-10-28
+**Ultimo aggiornamento:** 2026-10-29
+
+## Aggiornamento 29/10/2026 — via 6, classificazione con modello e fonti (#55) — PUNTO DI RIPRESA
+
+Indicazione di Fabio (29/10): la classificazione va portata avanti **costi quel che costi**, con metodo scientifico, attendibilità, ripetibilità, basi dati; ogni ostacolo va registrato come raccomandazione di policy (`report/metodo/richieste-e-raccomandazioni.yaml`, nuove R16-R18).
+
+- **Giro 1 (p1, Opus, 611 contratti):** `report/metodo/llm/esiti/`. Quasi solo dal testo: 404 alta / 161 media / 46 bassa, 204 disaccordi con regole v3.1, 0 atti dell'ente. Istruzioni `tools/llm/istruzioni.md`.
+- **Giro 2 (p2, Haiku, 337 contratti in 68 pacchetti da 5):** `report/metodo/llm/giro2/`. Fatti g2-001..009 (45): 1 solo atto dell'ente, quasi tutto declassato. Causa: WebFetch non legge i PDF delle determine; siti degli enti 403/404/502. **Sospeso** fino allo strumento server di scaricamento + estrazione testo. Istruzioni `tools/llm/istruzioni-p2.md`.
+- **Architettura proposta (da decidere):** `report/metodo/via6-architettura.md` — deterministico (regole, tabelle iniziative, scaricamento + pdftotext/tesseract con sha256) + modello solo per trovare l'URL e leggere il testo estratto + revisione umana sui dubbi e a campione.
+- **Base di conoscenza iniziative:** `report/metodo/llm/conoscenza-iniziative.yaml` (21 voci, 15 controvalidate) e pagina in bozza `sito/content/progetto/iniziative-consip-cloud.md` (draft). In corso: SPC Cloud lotti 2-4 e Sistema Cloud Toscana (mandataria TIM o Accenture: fonti discordanti).
+- **Errori delle regole dal giro 1, da trasformare in test (v3.2):** falsi positivi lessicali ("AWS" stazioni meteo, "Azure S DR" pacemaker, "lotto N" fuori AQ); "PSN" nel testo ≠ servizio PSN; rivenditore ≠ provider (TIM/Fastweb su Pure Storage, Oracle, Microsoft EA); committente ≠ fornitore (ARIA, Sogei, CINECA marcati in-house); Cloud Toscana non in-house; "Google Suite"/Workspace; consumo Azure in Enrollment; Oracle Fusion Cloud.
+- **Server:** CLI `claude` 2.1.170 installata, utente mxmap.it non autenticato (login da fare da Fabio). Trascrizione completa della sessione, fuori da git perché il repo è pubblico: `~/analisi-spesa-ict/lavoro/sessioni/2026-10-29-via6.jsonl`.
+- **Prossimi passi:** 1) `tools/llm/atti.py` (scarica nell'archivio, estrae testo, OCR); 2) runner server `claude -p` con Haiku, ripartibile, per i 59 pacchetti restanti; 3) regole v3.2 con i test sopra; 4) pagina di revisione con proposta del modello, confidenza e fonti.
 
 ## Aggiornamento 28/10/2026 — misura della spesa cloud v3
 
