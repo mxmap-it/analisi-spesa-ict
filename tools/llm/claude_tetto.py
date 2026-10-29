@@ -16,6 +16,7 @@ contatore del piano (ticket #20). Uso: tetto_stato.py per vedere a che punto si 
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import time
@@ -56,7 +57,21 @@ def main() -> int:
     if "--output-format" not in cmd:
         cmd += ["--output-format", "json"]
     t0 = time.time()
-    p = subprocess.run(cmd, stdin=sys.stdin, capture_output=True, text=True)
+    ingresso = sys.stdin.read()
+    for tentativo in range(6):
+        p = subprocess.run(cmd, input=ingresso, capture_output=True, text=True)
+        # limite dell'abbonamento ("You've hit your session limit · resets 3:40pm"): si aspetta il reset e si riprova
+        m = re.search(r"limit.{0,40}resets\s+(\d{1,2})(?::(\d{2}))?\s*(am|pm)", p.stdout + p.stderr, re.I)
+        if not m:
+            break
+        h = int(m.group(1)) % 12 + (12 if m.group(3).lower() == "pm" else 0)
+        ora = datetime.now()
+        reset = ora.replace(hour=h, minute=int(m.group(2) or 0), second=0, microsecond=0)
+        if reset <= ora:
+            reset += timedelta(days=1)
+        attesa = (reset - ora).total_seconds() + 120
+        print(f"limite dell'abbonamento: attendo il reset ({reset:%H:%M}, {attesa/60:.0f} min)", file=sys.stderr, flush=True)
+        time.sleep(attesa)
     rec = {"quando": datetime.now(timezone.utc).isoformat(timespec="seconds"), "progetto": progetto,
            "secondi": round(time.time() - t0), "codice": p.returncode, "comando": " ".join(cmd[:4])}
     try:
