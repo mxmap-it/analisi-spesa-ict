@@ -58,6 +58,8 @@ Nessuna via da sola dà una confidenza elevata. La otteniamo **incrociando vie i
 - **Ogni ostacolo diventa una richiesta di policy** (R01–R19) ad ANAC, Consip, AgID e agli enti, perché il dato nasca già strutturato. È la via più efficace per rendere la misura facile negli anni a venire.
 - **Tutto è aperto e versionato:** codice, istruzioni ai modelli, dataset intermedi, conversazioni. Chi viene dopo, noi compresi, riparte da dove siamo arrivati.
 
+Le modalità con cui cerchiamo i documenti che chiudono i casi dubbi, dai dati strutturati fino all'accesso civico, sono descritte in [acquisizione dei documenti](../acquisizione-documenti/).
+
 ## 5. Le vie di classificazione
 
 | via | cosa fa | stato |

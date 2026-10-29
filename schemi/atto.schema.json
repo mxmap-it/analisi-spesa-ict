@@ -9,7 +9,7 @@
     "schema": {"const": "spesaict.atto/1"},
     "cig": {"type": "string"},
     "url": {"type": "string"},
-    "trovato_con": {"type": "object", "description": "come si è arrivati all'URL: ricerca, navigazione Amministrazione trasparente, link in BDNCP", "properties": {"metodo": {"type": "string"}, "query": {"type": "string"}, "pagina_partenza": {"type": "string"}}},
+    "trovato_con": {"type": "object", "description": "come si è arrivati all'URL: ricerca, navigazione Amministrazione trasparente, link in BDNCP", "properties": {"livello": {"enum": ["L0","L1","L2","L3","L4","L5","L6","L7"], "description": "modalità di acquisizione (sito/content/progetto/acquisizione-documenti.md)"}, "metodo": {"type": "string"}, "query": {"type": "string"}, "pagina_partenza": {"type": "string"}}},
     "recuperato_il": {"type": "string", "format": "date-time"},
     "http_status": {"type": "integer"},
     "mime": {"type": "string"}, "byte": {"type": "integer"},

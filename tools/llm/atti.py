@@ -55,7 +55,7 @@ def testo_html(blob: Path) -> str:
 def main() -> int:
     a = argparse.ArgumentParser()
     a.add_argument("cig"); a.add_argument("url")
-    a.add_argument("--metodo", default=""); a.add_argument("--query", default="")
+    a.add_argument("--livello", default="L5"); a.add_argument("--metodo", default=""); a.add_argument("--query", default="")
     a.add_argument("--tipo", default="altro"); a.add_argument("--ente", default="")
     x = a.parse_args()
     sess = archivia.requests.Session()
@@ -64,7 +64,7 @@ def main() -> int:
     archivia.scrivi_manifest(rec)
     sha = rec.get("sha256") or (archivia.ultima_riuscita(x.url) or {}).get("sha256")
     out = {"schema": "spesaict.atto/1", "cig": x.cig, "url": x.url,
-           "trovato_con": {"metodo": x.metodo, "query": x.query},
+           "trovato_con": {"livello": x.livello, "metodo": x.metodo, "query": x.query},
            "recuperato_il": datetime.now(timezone.utc).isoformat(timespec="seconds"),
            "http_status": rec.get("http"), "mime": rec.get("tipo", ""), "byte": rec.get("dimensione"),
            "sha256": sha or "", "tipo_atto": x.tipo, "ente": x.ente}
