@@ -142,3 +142,33 @@
   perche_serve: Senza il collegamento non si sa a quali fornitori e prodotti vanno i fondi PNRR cloud
   nota: "Da capire prima di comunicarlo: CUP non indicato nel CIG, acquisti fuori BDNCP, progetti non ancora a contratto"
   rif: ["#43", "#54"]
+- id: R16
+  destinatario: ANAC
+  tipo: miglioramento
+  stato: proposta
+  titolo: Campo strutturato "prodotto/marca e produttore" nella scheda del CIG per gli acquisti ICT
+  evidenza: "Campione v3 (611 contratti), giro 1 della via 6: 204 disaccordi fra regole e lettura del modello; una quota rilevante nasce perché il testo nomina il rivenditore (TIM, Fastweb) e non il prodotto (Pure Storage, Microsoft, Oracle)"
+  prova: report/metodo/llm/esiti/ (giro 1, p1), report/metodo/via6-architettura.md
+  richiesta: Per CPV 48/72/302 e affini, campo obbligatorio con prodotto e produttore (o codice di catalogo MePA/convenzione)
+  perche_serve: Attribuire la giurisdizione al prodotto senza ricerche manuali; rende la misura annuale deterministica
+  rif: ["#55"]
+- id: R17
+  destinatario: ANAC, enti (Amministrazione trasparente), AgID
+  tipo: miglioramento
+  stato: verificato
+  titolo: Collegamento CIG → atto di affidamento, in testo leggibile da macchina
+  evidenza: "Giro 2 della via 6 (45 contratti, 2-5 ricerche ciascuno): 1 solo atto dell'ente reperito; le determine sono PDF (spesso scansioni), molti siti istituzionali rispondono 403/404/502 e la ricerca del CIG fra virgolette non restituisce l'atto"
+  prova: report/metodo/llm/giro2/esiti/g2-001..009.jsonl
+  richiesta: In BDNCP l'URL dell'atto di affidamento per ogni CIG; atti pubblicati come PDF con testo (PDF/A non scansione) e indicizzabili per CIG nella sezione Bandi di gara e contratti
+  perche_serve: È l'unica fonte primaria che chiude la classificazione; oggi richiede navigazione manuale o agenti costosi
+  rif: ["#55"]
+- id: R18
+  destinatario: Consip, centrali di committenza regionali
+  tipo: miglioramento
+  stato: proposta
+  titolo: Tabella aperta lotto → prodotto/provider e CIG di ogni iniziativa ICT
+  evidenza: "Per l'AQ 2746 la corrispondenza lotto→provider si ricava solo dal titolo di un avviso di proroga in GUUE; SPC Cloud lotti 2-4, Sistema Cloud Toscana, convenzioni ARIA: composizione dei RTI e prodotti erogati ricostruiti da stampa e determine di terzi, con fonti discordanti"
+  prova: report/metodo/llm/conoscenza-iniziative.yaml
+  richiesta: Dataset aperto per ogni iniziativa: CIG di AQ/convenzione e lotti, aggiudicatari, prodotti/marche e infrastrutture (con sede del data center)
+  perche_serve: Via 1/2 deterministiche: ogni contratto attuativo eredita prodotto e giurisdizione senza lettura del testo
+  rif: ["#55"]
