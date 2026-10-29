@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Servizio di annotazione per volontari: stato condiviso fra più persone (SQLite), solo libreria standard.
 
-La pagina (tools/annotazioni/pagina.html) è pubblicata su analisi-spesa-ict.mxmap.it/annotazioni/ (copia in sito/static); Caddy sul server serve docs/ e passa /api/ a questo servizio e chiama questo
+La pagina (tools/annotazioni/pagina.html) è pubblicata su analisi-spesa-ict.mxmap.it/annotazioni/ (copia in sito/static); il servizio è esposto in HTTPS da Caddy su annotazioni.51-158-36-151.sslip.io (nessun DNS da gestire) e chiama questo
 servizio; il servizio la serve anche direttamente su "/". Ogni contratto del campione riceve fino a
 ANNOTAZIONI_PER_CIG annotazioni indipendenti (alla cieca: chi annota non vede le altre né le proposte).
 
@@ -31,7 +31,7 @@ DB = R / "stato/annotazioni.sqlite"
 CAMPIONE = R / "report/metodo/campione-misura-v3-cieco.csv"
 PAGINA = Path(__file__).with_name("pagina.html")
 ANNOTAZIONI_PER_CIG = 2
-ORIGINI = {"http://localhost:1313", "http://localhost:8790"}
+ORIGINI = {"https://analisi-spesa-ict.mxmap.it", "http://localhost:1313", "http://localhost:8790"}
 CHIAVE_EXPORT = os.environ.get("ANNOTAZIONI_CHIAVE", "")
 SERVIZI = {"cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro", "non-so"}
 GIUR = {"IT", "UE", "EXTRA-UE", "ignota"}

@@ -65,7 +65,7 @@ button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
 <div class="card stato" id="stato">Caricamento dello stato…</div>
 </main>
 <script>
-const API = "";  // stesso indirizzo: analisi-spesa-ict.mxmap.it/api/ (Caddy sul server)
+const API = (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "" : "https://annotazioni.51-158-36-151.sslip.io";  // servizio sul server; sito su GitHub Pages
 const OPZ = {
   e_cloud: [["s","Sì"],["n","No"],["non-so","Non so"]],
   servizio: [["cloud","Cloud"],["licenza","Licenza"],["servizi-professionali","Servizi professionali"],["psn","PSN"],["in-house","In-house"],["telefonia","Telefonia"],["connettivita","Connettività"],["hardware","Hardware"],["altro","Altro"],["non-so","Non so"]],
