@@ -21,12 +21,13 @@ Sei un analista del progetto analisi-spesa-ict. Leggi e segui alla lettera tools
 Pacchetto: report/metodo/llm/giro2/lotti/$p.jsonl. Uscita: $e (una riga JSON per contratto, aggiunta appena finito; salta i CIG già presenti). modello "claude-$MODELLO", data "$(date +%F)".
 IMPORTANTE: WebFetch non legge i PDF. Per ogni documento candidato (determina, contratto, capitolato), anche PDF, usa
   .venv/bin/python tools/llm/atti.py <CIG> <URL> --metodo "<come l'hai trovato>" --query "<query>" --tipo <determina|contratto|...> --ente "<ente>"
-che lo archivia con sha256, ne estrae il testo (anche OCR) e ti stampa il testo. Metti in fonti gli URL così letti e in atto_ente quello dell'atto che cita il CIG. Non aggirare blocchi, non contattare nessuno.
+che lo archivia con sha256, ne estrae il testo (anche OCR) e ti stampa il testo. OBBLIGATORIO: per OGNI contratto chiama atti.py su almeno un URL candidato preso dai risultati di WebSearch (determina, albo, delibera, avviso, documento della convenzione), PDF compresi; se nessun risultato è pertinente, scrivilo nella motivazione. Ogni riga di uscita è un oggetto JSON su UNA SOLA riga (niente indentazione). Metti in fonti gli URL così letti e in atto_ente quello dell'atto che cita il CIG. Non aggirare blocchi, non contattare nessuno.
 PROMPT
   nice -n 15 timeout 1800 claude -p --model "$MODELLO" \
     --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Bash(.venv/bin/python tools/llm/atti.py:*),Bash(grep:*),Bash(head:*)" \
     < "log/giro2/$p.prompt" > "log/giro2/$p.log" 2>&1
-  echo "$(date -Is) $p esiti=$( [ -f "$e" ] && grep -c . "$e" || echo 0 )/$t" >> log/giro2/avanzamento.log
+  .venv/bin/python tools/llm/normalizza_jsonl.py "$e" >/dev/null 2>&1
+  echo "$(date -Is) $p atti=$(grep -c "tools/llm/atti.py" log/giro2/$p.log) esiti=$( [ -f "$e" ] && grep -c . "$e" || echo 0 )/$t" >> log/giro2/avanzamento.log
 }
 export -f uno; export MODELLO
 printf '%s\n' "${pacchetti[@]}" | xargs -P "$PAR" -I{} bash -c 'uno {}'
