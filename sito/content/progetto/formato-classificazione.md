@@ -25,13 +25,49 @@ Un record per CIG e per versione del metodo. Campi principali:
 - **`fonti`** — URL effettivamente aperti, con tipo e sha256 del documento archiviato.
 - **`revisione`** — `da-rivedere` (confidenza non alta o disaccordo fra vie), `campione-controllo`, `confermata`, `corretta`; modalità cieca o assistita.
 
-### Regole di attendibilità
+### Confidenza: definizione operativa
 
-- **alta**: un atto dell'ente sul contratto nomina il prodotto (`fonte_primaria: true`), oppure il prodotto è nominato in modo univoco nel testo **e** confermato da una fonte aperta;
-- **media**: deduzione forte senza conferma documentale;
-- **bassa**: indizi deboli.
+La confidenza dice **quanto è provata** una classificazione. Ha due componenti:
 
-Nei numeri pubblicati entrano come fatti solo le classificazioni ad alta confidenza o confermate in revisione umana; la precisione di ciascun livello è misurata su un campione rivisto alla cieca.
+1. **un livello dichiarato per regole**, che chiunque può ricontrollare;
+2. **una precisione misurata** per ciascun livello su un campione rivisto da persone alla cieca.
+
+Il livello, da solo, non è una probabilità: lo diventa solo quando la sua precisione è stata misurata.
+
+**Definizioni**
+
+- **Documento archiviato:** un documento scaricato dallo strumento `tools/llm/atti.py` e conservato nell'archivio con il suo sha256, con testo estratto e leggibile (`esito_recupero: ok`).
+- **Atto dell'ente:** un documento archiviato emesso dalla stazione appaltante sul contratto (determina, contratto, delibera) il cui testo **contiene il CIG** (`pertinenza: cig-citato`).
+- **Fonte primaria** (`fonte_primaria: true`): c'è almeno un atto dell'ente. Lo stabilisce il codice, non chi classifica.
+- **Prodotto nominato:** il nome del provider del prodotto compare nell'oggetto del contratto in BDNCP.
+
+**Livelli**
+
+| livello | condizione (tutte verificabili da codice o da persona) |
+|---|---|
+| **alta** | c'è una fonte primaria che conferma prodotto e servizio; **oppure** il prodotto è nominato e c'è almeno un documento archiviato che lo conferma (scheda della convenzione, catalogo, determina di un'iniziativa di cui il CIG è attuativo) |
+| **media** | deduzione forte ma senza documento archiviato che la provi: un fornitore che vende un solo prodotto, una convenzione nota ma non collegata al CIG, l'oggetto che descrive il servizio senza nominare il prodotto |
+| **bassa** | indizi deboli o contraddittori, campi essenziali mancanti, oppure classificazione non riuscita |
+
+**Regole applicate dal codice** (`tools/llm/verifica_esiti.py`, a ogni esecuzione):
+
+- **R1:** la fonte primaria dichiarata dal modello vale solo se esiste l'atto dell'ente archiviato che cita il CIG.
+- **R2:** «alta» senza i requisiti scende a «media».
+- **R3:** confidenza mancante o campi obbligatori assenti diventano «bassa».
+
+Ogni correzione resta registrata nel campo `verifica`, con il valore prima e dopo.
+
+**Precisione misurata.** Per ogni livello e per ciascuna via di attribuzione si rivede alla cieca:
+
+- un campione casuale stratificato: tutte le «bassa» e le «media», più almeno il 10% delle «alta»;
+- su quel campione si pubblica la precisione con il suo intervallo di confidenza al 95% (Wilson).
+
+**Uso nei numeri.** Nei numeri pubblicati come fatti entrano solo:
+
+- le classificazioni ad alta confidenza la cui precisione misurata è almeno del 95%;
+- le classificazioni confermate in revisione umana.
+
+Il resto si pubblica come intervallo («da… a…») oppure come quota non attribuita.
 
 ## Giurisdizione e cloud sovrano
 
