@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodo on Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/progetto/</link><description>Recent content in Metodo on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/progetto/index.xml" rel="self" type="application/rss+xml"/><item><title>Come si riconosce il cloud provider in un contratto</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: bozza in validazione, regole v3 del 28 ottobre 2026&lt;/strong&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodo on Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/progetto/</link><description>Recent content in Metodo on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/progetto/index.xml" rel="self" type="application/rss+xml"/><item><title>Come si riconosce il cloud provider in un contratto</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: bozza in validazione, regole v3 del 28 ottobre 2026&lt;/strong&gt;
 (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/48"&gt;#48&lt;/a&gt;). Le precisioni citate sono
 misure intermedie: quella definitiva si fa su un campione nuovo, annotato alla cieca da persone.&lt;/p&gt;
 &lt;h2 id="cosa-misuriamo"&gt;Cosa misuriamo&lt;/h2&gt;
@@ -12,7 +12,38 @@ piattaforma, adesione al PSN;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Si attribuisce la giurisdizione al &lt;strong&gt;prodotto&lt;/strong&gt; comprato, non a chi lo vende. Microsoft 365
 venduto da TIM resta Microsoft; AWS comprato tramite Fastweb resta AWS. Il rivenditore si
-registra a parte, perché dice dove resta il valore economico.&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
+registra a parte, perché dice dove resta il valore economico.&lt;/p&gt;</description></item><item><title>Formato della classificazione e artefatti intermedi</title><link>https://analisi-spesa-ict.mxmap.it/progetto/formato-classificazione/</link><pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/formato-classificazione/</guid><description>&lt;p&gt;Ogni numero che pubblichiamo deriva da una classificazione per contratto (CIG). Per renderla &lt;strong&gt;verificabile, contestabile e riprendibile da terzi con altri software&lt;/strong&gt; pubblichiamo, oltre ai risultati, gli &lt;strong&gt;artefatti intermedi&lt;/strong&gt; in formato strutturato (JSON Lines, una riga per record) con schema JSON.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;artefatto&lt;/th&gt;
+					&lt;th&gt;file&lt;/th&gt;
+					&lt;th&gt;schema&lt;/th&gt;
+					&lt;th&gt;contenuto&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Registro di classificazione&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;dati/classificazioni/*.jsonl&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/schemi/classificazione.schema.json"&gt;&lt;code&gt;schemi/classificazione.schema.json&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;per ogni CIG: dati di ingresso con provenienza (sha256), esito, attendibilità, &lt;strong&gt;tutti i passaggi&lt;/strong&gt; eseguiti, fonti, stato della revisione&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Collegamenti CIG → atti&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;dati/atti/atti.jsonl&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/schemi/atto.schema.json"&gt;&lt;code&gt;schemi/atto.schema.json&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;per ogni documento collegato a un CIG (determina, contratto, convenzione): URL, come è stato trovato, sha256, testo estratto, pertinenza&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Base di conoscenza delle iniziative&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;report/metodo/llm/conoscenza-iniziative.yaml&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;convenzioni e accordi quadro (Consip, PSN, regionali): lotti, aggiudicatari, prodotti, giurisdizione, fonti, stato di verifica&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Il collegamento &lt;strong&gt;CIG → atto&lt;/strong&gt; è quello che oggi manca fra la Banca dati nazionale dei contratti pubblici (BDNCP/ANAC) e i documenti pubblicati dagli enti in Amministrazione trasparente: lo ricostruiamo e lo pubblichiamo come dataset a sé (vedi la raccomandazione R17).&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
 strade abbiamo scartato e perché, quali strumenti riusiamo e come è fatta la pipeline. Le
 decisioni prese sono nel &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/DECISIONI.md"&gt;registro delle decisioni&lt;/a&gt;;
 i problemi trovati nei dati sono nei &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/"&gt;rendiconti&lt;/a&gt;.&lt;/p&gt;
