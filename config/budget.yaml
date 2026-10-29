@@ -23,3 +23,11 @@ token_per_punto_percentuale: null   # da tarare; finché è null non partono com
 
 # Cortesia verso i portali: una richiesta al secondo per autorità.
 pausa_tra_richieste_s: 1.0
+
+# Tetto applicato dal codice ai compiti automatici (tools/llm/claude_tetto.py), 29/10/2026.
+# Unità: costo equivalente stimato dalla CLI (total_cost_usd), l'unica misura visibile dal server.
+# Valori PROVVISORI da tarare (#20): taratura = USD-eq registrati / punti % consumati nel contatore del piano.
+# Con il tetto raggiunto il runner si ferma (codice 75) e riparte da dove era.
+tetto_settimanale_usd_equivalenti: 400
+tetto_giornaliero_usd_equivalenti: 100
+taratura_usd_per_punto_percentuale: null

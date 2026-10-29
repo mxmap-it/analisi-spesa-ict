@@ -23,9 +23,11 @@ IMPORTANTE: WebFetch non legge i PDF. Per ogni documento candidato (determina, c
   .venv/bin/python tools/llm/atti.py <CIG> <URL> --metodo "<come l'hai trovato>" --query "<query>" --tipo <determina|contratto|...> --ente "<ente>"
 che lo archivia con sha256, ne estrae il testo (anche OCR) e ti stampa il testo. OBBLIGATORIO: per OGNI contratto chiama atti.py su almeno un URL candidato preso dai risultati di WebSearch (determina, albo, delibera, avviso, documento della convenzione), PDF compresi; se nessun risultato è pertinente, scrivilo nella motivazione. Ogni riga di uscita è un oggetto JSON su UNA SOLA riga (niente indentazione). Metti in fonti gli URL così letti e in atto_ente quello dell'atto che cita il CIG. Non aggirare blocchi, non contattare nessuno. Scrivi SOLO nel file di uscita: non modificare nessun altro file del repository (STATE.md, istruzioni, base di conoscenza).
 PROMPT
-  nice -n 15 timeout 1800 claude -p --model "$MODELLO" \
+  nice -n 15 timeout 1800 .venv/bin/python tools/llm/claude_tetto.py --progetto analisi-spesa-ict -- \
+    claude -p --model "$MODELLO" \
     --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Bash(.venv/bin/python tools/llm/atti.py:*),Bash(grep:*),Bash(head:*)" \
     < "log/giro2/$p.prompt" > "log/giro2/$p.log" 2>&1
+  if [ $? -eq 75 ]; then echo "$(date -Is) $p TETTO RAGGIUNTO" >> log/giro2/avanzamento.log; return 255; fi
   .venv/bin/python tools/llm/normalizza_jsonl.py "$e" >/dev/null 2>&1
   echo "$(date -Is) $p atti=$(grep -c "tools/llm/atti.py" log/giro2/$p.log) esiti=$( [ -f "$e" ] && grep -c . "$e" || echo 0 )/$t" >> log/giro2/avanzamento.log
 }
