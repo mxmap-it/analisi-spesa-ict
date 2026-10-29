@@ -4,5 +4,5 @@
 cd "$(dirname "$0")/.." || exit 1
 git add -A report/metodo/llm/giro2 dati/atti stato/claude-consumi.jsonl 2>/dev/null
 git diff --cached --quiet || git commit -qm "Server: output dei job in corso (#55)"
-git stash -q 2>/dev/null && S=1; git pull -q --rebase; git push -q; [ -n "${S:-}" ] && git stash pop -q
+git diff --quiet || { git stash -q; S=1; }; git pull -q --rebase; git push -q; [ -n "${S:-}" ] && git stash pop -q
 git log --oneline -1
