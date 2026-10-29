@@ -27,4 +27,6 @@
     - cig: B6A19F967D
       provider: Aruba
       fonte: "oggetto del CIG ('SERVIZI IAAS E PAAS ARUBA')"
-  da_verificare: "numero di lotto di Oracle, IBM e Aruba; aggiudicatari dei lotti 2-6 (dataset aggiudicatari)"
+  # Numeri di lotto 1-6 (AWS, Google, Microsoft, Oracle, IBM, Aruba) confermati dall'avviso Consip di proroga
+  # GUUE S102 del 28/05/2025. Lotto 3 aggiudicato a SoftwareOne (Giustizia UCAN decisione 32/2026).
+  da_verificare: "CIG->lotto per 4/5/6 (dedotto dall'oggetto CIG); aggiudicatari dei lotti 2, 4, 5, 6"
