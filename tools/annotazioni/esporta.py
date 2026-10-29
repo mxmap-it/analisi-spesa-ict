@@ -22,6 +22,5 @@ if DB.exists():
         if x.get("documento") and x["documento"] != "no":
             coda.setdefault(x["cig"], {"cig": x["cig"], "documenti": set(), "note": []})["documenti"].add(x["documento"])
             if x.get("note"): coda[x["cig"]]["note"].append(x["note"])
-    (OUT.parent / "documenti-da-cercare.jsonl").write_text("".join(json.dumps(dict(v, documenti=sorted(v["documenti"]), schema="spesaict.richiesta-documento/1"), ensure_ascii=False) + "
-" for v in sorted(coda.values(), key=lambda v: v["cig"])), encoding="utf-8")
+    (OUT.parent / "documenti-da-cercare.jsonl").write_text("".join(json.dumps(dict(v, documenti=sorted(v["documenti"]), schema="spesaict.richiesta-documento/1"), ensure_ascii=False) + "\n" for v in sorted(coda.values(), key=lambda v: v["cig"])), encoding="utf-8")
     print(len(righe), "annotazioni esportate;", len(coda), "contratti con documenti da cercare")
