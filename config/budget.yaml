@@ -31,3 +31,7 @@ pausa_tra_richieste_s: 1.0
 tetto_settimanale_usd_equivalenti: 400
 tetto_giornaliero_usd_equivalenti: 100
 taratura_usd_per_punto_percentuale: null
+# Quota decisa da Fabio il 29/10/2026: analisi-spesa-ict 20%, Dossier Panigutti-Marasca 20% del limite settimanale.
+# Punti di taratura (contatore del piano letto dalla sessione interattiva vs registro stato/claude-consumi.jsonl):
+taratura_punti:
+  - {quando: "2026-10-29T11:22Z", settimanale_pct: 63, cinque_ore_pct: 55, registro_usd_eq: 7.33, nota: "inizio giro 2 Sonnet con tetto; ~1,8 USD-eq per pacchetto da 5 contratti"}
