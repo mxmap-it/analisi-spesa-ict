@@ -57,6 +57,8 @@ button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
 <label>Tipo di servizio</label><div class="opz" data-n="servizio"></div>
 <label for="provider">Provider del prodotto</label><input id="provider" type="text" maxlength="120" placeholder="es. Microsoft, Aruba, Polo Strategico Nazionale (vuoto se ignoto)">
 <label>Giurisdizione del provider</label><div class="opz" data-n="giurisdizione"></div>
+<label>Per stabilire la giurisdizione servono documenti esterni?</label><div class="opz" data-n="documento"></div>
+<p class="muted" style="margin:.3em 0 0">Se il testo basta, scegli «No, basta il testo». Altrimenti indica quale documento risolverebbe il dubbio: lo cercheremo con i crawler.</p>
 <label>Quanto sei sicuro?</label><div class="opz" data-n="confidenza"></div>
 <label for="note">Note (facoltative)</label><textarea id="note" rows="2" maxlength="1000"></textarea>
 <div class="row" style="margin-top:14px"><button type="submit">Salva e passa al prossimo</button><button type="button" class="sec" id="salta">Salta</button><span id="msg" class="stato"></span></div>
@@ -71,6 +73,7 @@ const OPZ = {
   e_cloud: [["s","Sì"],["n","No"],["non-so","Non so"]],
   servizio: [["cloud","Cloud"],["licenza","Licenza"],["servizi-professionali","Servizi professionali"],["psn","PSN"],["in-house","In-house"],["telefonia","Telefonia"],["connettivita","Connettività"],["hardware","Hardware"],["altro","Altro"],["non-so","Non so"]],
   giurisdizione: [["IT","Italia"],["UE","UE"],["EXTRA-UE","Extra-UE"],["non-determinabile","Non determinabile dal testo"],["ignota","Non so"]],
+  documento: [["no","No, basta il testo"],["determina","Determina di affidamento"],["piano-fabbisogni-psn","Piano dei fabbisogni PSN"],["contratto-ordine","Contratto o ordine con il dettaglio dei servizi"],["convenzione","Documenti della convenzione o dell'accordo quadro"],["scheda-prodotto","Scheda del prodotto o del fornitore"],["altro","Altro (scrivi nelle note)"]],
   confidenza: [["alta","Alta"],["media","Media"],["bassa","Bassa"]]
 };
 const $ = id => document.getElementById(id);
@@ -113,9 +116,9 @@ $("salta").onclick = prossimo;
 $("f").onsubmit = async ev => {
   ev.preventDefault();
   const v = n => (document.querySelector(`input[name=${n}]:checked`) || {}).value;
-  const d = {cig: corrente.cig, nome, e_cloud: v("e_cloud"), servizio: v("servizio"), giurisdizione: v("giurisdizione"), confidenza: v("confidenza"),
+  const d = {cig: corrente.cig, nome, e_cloud: v("e_cloud"), servizio: v("servizio"), giurisdizione: v("giurisdizione"), confidenza: v("confidenza"), documento: v("documento"),
              provider: $("provider").value.trim(), note: $("note").value.trim(), secondi: Math.round((Date.now() - t0) / 1000)};
-  if (!d.e_cloud || !d.servizio || !d.giurisdizione || !d.confidenza) { $("msg").textContent = "Rispondi alle quattro domande con le opzioni."; $("msg").className = "stato err"; return; }
+  if (!d.e_cloud || !d.servizio || !d.giurisdizione || !d.documento || !d.confidenza) { $("msg").textContent = "Rispondi a tutte le domande con le opzioni."; $("msg").className = "stato err"; return; }
   try { await api("/api/annota", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(d)}); $("msg").textContent = "Salvato."; $("msg").className = "stato ok"; stato(); prossimo(); }
   catch (e) { $("msg").textContent = "Errore: " + e.message; $("msg").className = "stato err"; }
 };

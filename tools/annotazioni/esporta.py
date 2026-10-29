@@ -16,4 +16,12 @@ if DB.exists():
              for r in c.execute("SELECT * FROM annotazioni ORDER BY id")]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in righe), encoding="utf-8")
-    print(len(righe), "annotazioni esportate")
+    # coda per i crawler: contratti per cui almeno un annotatore chiede un documento esterno
+    coda = {}
+    for x in righe:
+        if x.get("documento") and x["documento"] != "no":
+            coda.setdefault(x["cig"], {"cig": x["cig"], "documenti": set(), "note": []})["documenti"].add(x["documento"])
+            if x.get("note"): coda[x["cig"]]["note"].append(x["note"])
+    (OUT.parent / "documenti-da-cercare.jsonl").write_text("".join(json.dumps(dict(v, documenti=sorted(v["documenti"]), schema="spesaict.richiesta-documento/1"), ensure_ascii=False) + "
+" for v in sorted(coda.values(), key=lambda v: v["cig"])), encoding="utf-8")
+    print(len(righe), "annotazioni esportate;", len(coda), "contratti con documenti da cercare")

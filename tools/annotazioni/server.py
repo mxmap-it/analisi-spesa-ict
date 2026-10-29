@@ -34,6 +34,7 @@ ANNOTAZIONI_PER_CIG = 2
 ORIGINI = {"https://analisi-spesa-ict.mxmap.it", "http://localhost:1313", "http://localhost:8790"}
 CHIAVE_EXPORT = os.environ.get("ANNOTAZIONI_CHIAVE", "")
 SERVIZI = {"cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro", "non-so"}
+DOCUMENTI = {"no", "determina", "piano-fabbisogni-psn", "contratto-ordine", "convenzione", "scheda-prodotto", "altro"}
 GIUR = {"IT", "UE", "EXTRA-UE", "non-determinabile", "ignota"}
 lock = threading.Lock()
 limiti: dict[str, list[float]] = {}
@@ -44,6 +45,8 @@ def db():
     c.execute("""CREATE TABLE IF NOT EXISTS annotazioni (id INTEGER PRIMARY KEY, cig TEXT, annotatore TEXT, e_cloud TEXT,
                  servizio TEXT, provider TEXT, giurisdizione TEXT, confidenza TEXT, note TEXT, secondi INTEGER,
                  quando TEXT, ip_hash TEXT)""")
+    if "documento" not in [r[1] for r in c.execute("PRAGMA table_info(annotazioni)")]:
+        c.execute("ALTER TABLE annotazioni ADD COLUMN documento TEXT")
     return c
 
 
@@ -138,17 +141,17 @@ class H(BaseHTTPRequestHandler):
         rec = {"cig": pulisci(d.get("cig"), 10), "annotatore": pulisci(d.get("nome"), 60), "e_cloud": pulisci(d.get("e_cloud"), 8),
                "servizio": pulisci(d.get("servizio"), 30), "provider": pulisci(d.get("provider"), 120),
                "giurisdizione": pulisci(d.get("giurisdizione"), 10), "confidenza": pulisci(d.get("confidenza"), 6),
-               "note": pulisci(d.get("note"), 1000)}
+               "note": pulisci(d.get("note"), 1000), "documento": pulisci(d.get("documento"), 30)}
         if rec["cig"] not in CAMP or not rec["annotatore"] or rec["e_cloud"] not in ("s", "n", "non-so") \
-                or rec["servizio"] not in SERVIZI or rec["giurisdizione"] not in GIUR or rec["confidenza"] not in ("alta", "media", "bassa"):
+                or rec["servizio"] not in SERVIZI or rec["giurisdizione"] not in GIUR or rec["confidenza"] not in ("alta", "media", "bassa") or rec["documento"] not in DOCUMENTI:
             return self._json({"errore": "campi mancanti o non validi"}, 400)
         try:
             sec = max(0, min(int(d.get("secondi") or 0), 36000))
         except (TypeError, ValueError):
             sec = 0
         with lock, db() as c:
-            c.execute("INSERT INTO annotazioni (cig, annotatore, e_cloud, servizio, provider, giurisdizione, confidenza, note, secondi, quando, ip_hash)"
-                      " VALUES (?,?,?,?,?,?,?,?,?,datetime('now'),?)",
+            c.execute("INSERT INTO annotazioni (cig, annotatore, e_cloud, servizio, provider, giurisdizione, confidenza, note, documento, secondi, quando, ip_hash)"
+                      " VALUES (?,?,?,?,?,?,?,?,?,?,datetime('now'),?)",
                       (*rec.values(), sec, hashlib.sha256(("annotazioni" + ip).encode()).hexdigest()[:16]))
         return self._json({"ok": True})
 
