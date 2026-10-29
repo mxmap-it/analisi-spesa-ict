@@ -1,0 +1,1266 @@
+CLASSIFICAZIONE DEL DOCUMENTO: CONSIP PUBLIC
+
+
+
+
+SERVIZI DI SICUREZZA DA REMOTO, COMPLIANCE E CONTROLLO PER
+LE PUBBLICHE AMMINISTRAZIONI – ID 2296
+
+
+LOTTO 1 – Servizi di sicurezza da remoto
+
+
+
+
+Ultimo aggiornamento: XX/09/2022
+Sommario
+1.     Premessa ........................................................................................................... 4
+2.     Oggetto dell’accordo quadro ................................................................................... 8
+
+     2.1.    Durata dell’Accordo quadro .............................................................................. 8
+
+     2.2.    Le amministrazioni che possono aderire ............................................................... 8
+     2.3.    Massimali e valori economici dell’accordo quadro .................................................. 10
+
+3.     Servizi oggetto dell’accordo quadro ......................................................................... 11
+
+     3.1.    L1.S1 - Security Operation Center (SOC) .............................................................. 11
+
+     3.2.    L1.S2 – Next Generation Firewall ....................................................................... 12
+
+     3.3.    L1.S3 - Web Application Firewall ....................................................................... 12
+
+     3.4.    L1.S4 – Gestione continua delle vulnerabilità di sicurezza ......................................... 13
+     3.5.    L1.S5 – Threat Intelligence & Vulnerability Data Feed .............................................. 13
+
+     3.6.    L1.S6 – Protezione navigazione Internet e Posta elettronica ...................................... 14
+
+     3.7.    L1.S7 - Protezione degli end-point ..................................................................... 14
+     3.8.    L1.S8 - Certificati SSL ..................................................................................... 15
+
+     3.9.    L1.S9 - Servizio di Formazione e Security awareness ............................................... 15
+
+     3.10.     L1.S10 - Gestione dell’identità e l’accesso utente ............................................... 16
+
+     3.11.     L1.S11 - Firma digitale remota ....................................................................... 16
+
+     3.12.     L1.S12 – Sigillo elettronico ............................................................................ 17
+
+     3.13.     L1.S13 – Timbro elettronico .......................................................................... 17
+
+     3.14.     L1.S14 – Validazione temporale elettronica qualificata ......................................... 18
+
+     3.15.     L1.S15 – Servizi Specialistici .......................................................................... 19
+
+     3.16.     Indicatori di digitalizzazione ......................................................................... 19
+4.     Adesione dell’Accordo quadro ................................................................................. 20
+
+     4.1.    Documentazione disponibile e kit per ordine di acquisto .......................................... 20
+
+     4.2.    Modalità operative di adesione all’Accordo quadro ................................................. 21
+
+     4.3.    Atti modificativi ........................................................................................... 25
+
+5.     Modalita’ di fornitura ........................................................................................... 26
+
+     5.1.    Migrazione .................................................................................................. 26
+     5.2.    Collaudo di configurazione e di conformità ........................................................... 27
+
+     5.3.    Verifiche e test ai sensi del DL 105/2019 .............................................................. 28
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                                                2 di 33
+     5.4.     Piano della qualità e piani di lavoro.................................................................... 28
+
+6.      Condizioni economiche ......................................................................................... 29
+     6.1.     Corrispettivi ................................................................................................ 29
+
+7.      Contributo a carico delle amministrazioni .................................................................. 29
+
+8.      Procedura di applicazione delle penali ...................................................................... 29
+     8.1.     Rilevazione del presunto inadempimento del fornitore ............................................ 29
+
+     8.2.     Contestazione al fornitore ............................................................................... 30
+
+     8.3.     Controdeduzioni del fornitore ........................................................................... 30
+
+     8.4.     Accertamento della sussitenza/insussistenza delle condizioni di applicazione delle penali e
+     quantificazione delle medesime ................................................................................. 30
+
+     8.5.     Ulteriori tutele ............................................................................................. 31
+
+9.      Fatturazione e pagamenti ...................................................................................... 32
+
+10.         Subappalto ..................................................................................................... 32
+
+11.         Esecuzione del contratto .................................................................................... 32
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                                                  3 di 33
+1. Premessa
+La presente guida non intende sostituire né integrare la documentazione contrattuale
+sottoscritta fra le parti. Pertanto, le informazioni in essa contenute non possono costituire
+motivo di rivalsa da parte delle Amministrazioni contraenti nei confronti del Fornitore e/o di
+Consip né possono ritenersi prevalenti rispetto alla documentazione contrattuale.
+La presente guida ha l’obiettivo di illustrare le modalità operative per la gestione della fase
+esecutiva dell’Accordo quadro Sicurezza da remoto - Servizi di sicurezza da remoto – Lotto 1 –
+CIG 88846293CA (di seguito, per brevità, anche AQ), stipulato, ai sensi dell’art. 54, comma 4,
+lett. a), del D.Lgs. 50/2016, con più operatori economici quali aggiudicatari per quote della
+procedura di gara per il suddetto Accordo Quadro, sul quale basare l’aggiudicazione di contratti
+esecutivi aventi ad oggetto servizi di sicurezza da remoto, mediante affidamento di Contratti
+esecutivi che le Amministrazioni potranno sottoscrivere nel periodo di vigenza del presente
+Accordo quadro.
+Il modello adottato per il presente Accordo Quadro prevede una gara strutturata in due fasi
+procedurali:
+
+La prima fase (AQ), nella quale la Consip ha aggiudicato l’Accordo Quadro relativo al presente
+Lotto 1 ai seguenti operatori economici, le cui offerte costituiscono parte integrante dell’AQ
+medesimo:
+
+        RTI costituito ACCENTURE S.P.A. - FINCANTIERI NEXTECH S.P.A. FASTWEB S.P.A. - DEAS
+         - DIFESA E ANALISI SISTEMI S.P.A. (per l’affidamento di Contratti Esecutivi da parte delle
+         Pubbliche Amministrazioni Locali - PAL)
+
+        RTI costituito TELECOM ITALIA S.P.A. - NETGROUP S.P.A., REEVO S.P.A., KPMG
+         ADVISORY S.P.A., ALMAVIVA -THE ITALIAN INNOVATION COMPANY S.P.A. (per
+         l’affidamento di Contratti Esecutivi da parte delle Pubbliche Amministrazioni Centrali -
+         PAC)
+
+La seconda fase, caratterizzata dall’affidamento di ciascun Contratto Esecutivo a cura della
+singola Amministrazione Contraente.
+
+Si ricorda che ogni obbligazione derivante dalla sottoscrizione di un Contratto esecutivo, dal
+rispetto dei livelli di servizio all’eventuale applicazione delle penali, riguarda i soli rapporti tra la
+singola Amministrazione Contraente e il Fornitore Aggiudicatario e che tale Fornitore è il solo
+responsabile dell’adempimento contrattuale.
+
+La presente guida, unitamente a tutta la documentazione relativa all’Accordo quadro, è
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                            4 di 33
+disponibile sul internet di Consip www.consip.it, nella sezione Media> Approfondimenti> Gare
+SPC Consip e Agenda Digitale Italiana: contributi, servizi, contenuti e date, nonché sui Portali
+della fornitura dei fornitori aggiudicatari di cui si riportano di seguito gli indirizzi:
+
+        www.aqsicurezzalotto1pal.it per l’RTI costituito ACCENTURE S.P.A. - FINCANTIERI
+         NEXTECH S.P.A. FASTWEB S.P.A. - DEAS - DIFESA E ANALISI SISTEMI S.P.A
+
+        https://aqsicurezzadaremoto.tim.it per l’RTI costituito TELECOM ITALIA S.P.A. -
+         NETGROUP S.P.A., REEVO S.P.A., KPMG ADVISORY S.P.A., ALMAVIVA -THE ITALIAN
+         INNOVATION COMPANY S.P.A.
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                   5 di 33
+Modello di funzionamento della iniziativa oggetto dell’Accordo quadro
+
+Lo scenario dell’iniziativa Sicurezza da remoto è caratterizzato dalla presenza di due lotti
+merceologicamente differenziati seppur funzionalmente collegati:
+        Lotto 1 avente ad oggetto Servizi di sicurezza da remoto;
+        Lotto 2 avente ad oggetto Servizi di compliance e controllo.
+
+I lotti sono multi-aggiudicatari con attribuzione di quote.
+
+Lo scenario della presente iniziativa è caratterizzato dalla presenza di due Lotti dedicati ai servizi
+di Sicurezza da remoto e servizi di Compliance e controllo.
+
+Tale specializzazione si innesta in considerazione dei diversi obiettivi a cui i due Lotti rispondono.
+In particolare:
+
+•       il Lotto 1 “servizi di Sicurezza da remoto” ha l’obiettivo di mettere a disposizione delle
+Amministrazioni un insieme di servizi di sicurezza - erogati da remoto e in logica continuativa -
+per la protezione delle infrastrutture, delle applicazioni e dei dati;
+
+•       il Lotto 2 “servizi di Compliance e controllo” ha l’obiettivo di mettere a disposizione
+delle Amministrazioni servizi - erogati “on-site” in logica di progetto – finalizzati alla
+elaborazione di un “progetto di sicurezza” che identifica lo stato di salute della sicurezza del
+sistema informativo dell’Amministrazione e nel controllo imparziale sulla corretta esecuzione
+dei servizi di sicurezza del Lotto 1 nonchè sulla efficacia delle misure di sicurezza attuate, a
+partire dalla fase di acquisizione degli stessi sino alla loro esecuzione a regime.
+
+L’Amministrazione in funzione dell’oggetto del proprio fabbisogno dovrà seguire l’iter
+procedurale descritto nei successivi paragrafi per utilizzare l’Accordo Quadro ed attivare i servizi.
+
+Si riporta di seguito lo schema di funzionamento dei lotti.
+
+                                     Tabella 6.1 Schema di funzionamento dei lotti
+                                           LOTTO SERVIZI DI                   LOTTO SERVIZI DI
+               ELEMENTI
+                                        SICUREZZA DA REMOTO               COMPLIANCE E CONTROLLO
+                                         Accordo Quadro multi-              Accordo Quadro multi-
+        Strumento
+                                               fornitore                          fornitore
+        Lotto                                      1                                  2
+        Modalità             di
+        affidamento         dei           Ordinativo di fornitura            Ordinativo di fornitura
+        Contratti Attuativi
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                         6 di 33
+       Condizioni
+                                         Condizioni tutte fissate   Condizioni tutte fissate
+       contrattuali
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                               7 di 33
+2. Oggetto dell’accordo quadro
+L’accordo quadro prevede l’affidamento di servizi di “sicurezza da remoto” in favore delle
+Pubbliche Amministrazioni e che dovranno essere erogati nell’arco di durata dei contratti
+esecutivi che verranno sottoscritti.
+
+
+    2.1. Durata dell’Accordo quadro
+L’Accordo Quadro ha una durata di 24 mesi a decorrere dalla data di attivazione, ovvero la
+minore durata determinata dall’esaurimento dell’importo massimo stabilito nell’Accordo
+Quadro, eventualmente incrementato.
+Resta inteso che, per durata dell’Accordo Quadro, si intende il termine entro il quale le
+Amministrazioni Contraenti potranno affidare i singoli Contratti Attuativi.
+Ciascun Contratto Esecutivo dispiegherà i suoi effetti dalla data di stipula e avrà una durata
+massima di 48 mesi, decorrenti dalla data di conclusione delle attività di Presa in carico come
+meglio descritto nel Capitolato Tecnico Specifico Lotto 1.
+
+    2.2. Le amministrazioni che possono aderire
+Il Lotto 1 - Servizi di Sicurezza da remoto è destinato alle Pubbliche Amministrazioni Centrali
+(PAC) e alle Pubbliche Amministrazioni Locali (PAL).
+
+Rientrano nelle Pubbliche Amministrazioni Centrali:
+•      Organi costituzionali e di rilievo costituzionale
+•      Presidenza del Consiglio dei Ministri
+•      Ministeri, ivi compresi gli uffici periferici
+•      Agenzie fiscali
+•      Enti di regolazione dell’attività economica
+•      Enti produttori di servizi economici
+•      Autorità amministrative indipendenti
+•      Enti a struttura associativa
+•      Enti produttori di servizi assistenziali, ricreativi e culturali
+•      Enti e Istituzioni di ricerca
+•      Enti nazionali di previdenza e assistenza sociale
+•      Commissari straordinari di governo
+•      Comitati interministeriali
+•      Agenzia per i servizi sanitari regionali (AGENAS)
+•      Banca d’Italia
+•      Commissione nazionale per le società e la borsa (CONSOB)
+•      Istituto per la vigilanza sulle assicurazioni (IVASS)
+•      Autorità per l’energia elettrica e il gas e il sistema idrico (AEEGSI)
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                  8 di 33
+•        Enti pubblici esercenti attività di collegamento con le organizzazioni internazionali (enti
+che svolgono attività di collegamento con tra il Governo Italiano e le organizzazioni
+internazionali quali a titolo meramente esemplificativo:
+     - Comitato nazionale italiano Organizzazione Nazioni Unite per l’alimentazione e
+         l’agricoltura (FAO)
+     - Commissione nazionale per l’Unesco
+•        Ordini professionali nazionali e relativi uffici periferici/collegi territoriali
+•        Ogni altra Amministrazione e/o Ente di rilevanza nazionale
+•        Organismi di diritto pubblico e le Società, partecipati, anche indirettamente, dai soggetti
+di cui a tutti i punti precedenti qualificabili come stazioni appaltanti (in caso di società
+partecipate da soggetti di tipologie diverse - es. partecipati contestualmente da soggetti
+rientranti nella PAC e da soggetti rientranti nella PAL – si intenderanno ricompresi nella PAC, ai
+fini della presente iniziativa, gli Organismi di diritto pubblico e le Società partecipati in misura
+maggioritaria, anche indirettamente, dai soggetti di cui ai punti precedenti)
+•        Società in-house partecipate al 100% dai soggetti di cui ai punti precedenti
+
+Rientrano nelle Pubbliche Amministrazioni Locali:
+•       Regioni
+•       Province autonome
+•       Province
+•       Città metropolitane
+•       Comuni
+•       Comunità montane
+•       Unioni di Comuni
+•       Istituti zooprofilattici sperimentali
+•       Agenzie, Enti e Consorzi per il diritto allo studio universitario
+•       Agenzie ed Enti per il turismo
+•       Agenzie ed Enti regionali per il lavoro
+•       Agenzie ed Enti regionali e provinciali per la formazione, ricerca ed ambiente
+•       Agenzie regionali per la rappresentanza negoziale
+•       Agenzie regionali per l’erogazione in agricoltura
+•       Agenzie regionali sanitarie e aziende ed enti di supporto all’S.S.N.
+•       Enti di governo dei servizi idrici e/o dei rifiuti (ex AATO)
+•       Autorità di sistema portuale
+•       Aziende ospedaliere, aziende ospedaliero-universitarie, policlinici ed istituti di ricovero
+e cura a carattere scientifico pubblici
+•       Aziende sanitarie locali
+•       Camere di commercio, industria, artigianato e agricoltura e unioni regionali
+•       Consorzi di bacino imbrifero montano
+•       Consorzi tra amministrazioni locali
+•       Parchi nazionali, consorzi ed enti gestori di parchi ed aree naturali protetti
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                       9 di 33
+•        Consorzi interuniversitari di ricerca
+•        Agenzie ed Enti regionali di sviluppo agricolo
+•        Fondazioni lirico-sinfoniche
+•        Teatri nazionali e di rilevante interesse culturale
+•        Università e Istituti di istruzione universitaria pubblici
+•        Altre Amministrazioni locali
+•        Consorzi di funzione ed associazioni tra enti locali non esercenti attività economiche
+•        Comunità isolane e di arcipelago
+•        Enti pubblici a carattere regionale e locale
+•        Ogni altra Amministrazione e/o Ente di rilevanza regionale o locale
+•        Organismi di diritto pubblico e le Società, partecipati, anche indirettamente, dai soggetti
+di cui a tutti i punti precedenti qualificabili come stazioni appaltanti (in caso di società
+partecipate da soggetti di tipologie diverse - es. partecipati contestualmente da soggetti
+rientranti nella PAC e da soggetti rientranti nella PAL – si intenderanno ricompresi nella PAL, ai
+fini della presente iniziativa, gli Organismi di diritto pubblico e le Società partecipati in misura
+maggioritaria, anche indirettamente, dai soggetti di cui ai punti precedenti).
+
+
+    2.3. Massimali e valori economici dell’accordo quadro
+Qualora, anteriormente alla scadenza del termine di durata dell'Accordo Quadro di ogni Lotto,
+anche eventualmente prorogata, il valore relativo ad un Contratto esecutivo di una Stazione
+appaltante raggiunga il valore massimo dell'Accordo Quadro medesimo oppure lo ecceda
+(comunque fino a una soglia massima del 20%), Consip considererà quest’ultimo come giunto a
+scadenza e di conseguenza le Amministrazioni non potranno emettere ulteriori Contratti
+esecutivi. La regola sopra illustrata opera sul massimale dell’AQ stipulato con ogni singolo
+Fornitore.
+
+Il valore massimo stimato del Lotto 1 avente ad oggetto Servizi di sicurezza da remoto è pari a
+€ 468.000.000,00. Tale massimale è cosi attribuito:
+
+•      all’RTI costituito ACCENTURE S.P.A. - FINCANTIERI NEXTECH S.P.A. FASTWEB S.P.A. -
+DEAS - DIFESA E ANALISI SISTEMI S.P.AS.r.l. è stata attribuita una quota di massimale pari a €
+280.800.000,00 (su tale quota potranno emettere Contratti esecutivi esclusivamente le
+Pubbliche Amministrazioni Locali)
+
+•      all’RTI costituito TELECOM ITALIA S.P.A. - NETGROUP S.P.A., REEVO S.P.A., KPMG
+ADVISORY S.P.A., ALMAVIVA -THE ITALIAN INNOVATION COMPANY S.P.A. è stata attribuita
+una quota di massimale pari a € 187.200.000,00 (su tale quota potranno emettere Contratti
+esecutivi esclusivamente le Pubbliche Amministrazioni Centrali).
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                       10 di 33
+3. Servizi oggetto dell’accordo quadro
+
+    3.1. L1.S1 - Security Operation Center (SOC)
+Il servizio di “Security Operation Center” (SOC) è il centro da cui vengono forniti i servizi alle
+Amministrazioni servizi mirati a garantire la corretta operatività dei sistemi attraverso la
+prevenzione, gestione, risoluzione di qualsiasi criticità di sicurezza che possa degradare il
+servizio all’utenza. La sua finalità principale è di gestione e monitoraggio dei servizi di sicurezza
+oggetto di fornitura e, in aggiunta, ricevere ed analizzare ad esempio la reportistica e di log
+dando anche la giusta priorità ai processi di risoluzione e/o mitigazione delle minacce.
+La metrica di dimensionamento del servizio è Device equivalenti/anno.
+Il numero di Device equivalenti si calcola come rapporto tra il numero di Eventi Per Secondo
+richiesti (EPS) e il coefficiente EPS/Device relativo alla fascia di appartenenza, come di seguito
+indicato:
+
+
+      FASCIA – EVENTI PER                      COEFFICIENTE
+        SECONDO (EPS)                          (EPS/DEVICE)
+ Fascia 1: Fino a 300 EPS                           6
+ Fascia 2: Fino a 600 EPS                           7
+ Fascia 3: Fino a 1.200 EPS                         8
+ Fascia 4: Fino a 6.000 EPS                        10
+ Fascia 5: > 6.000 EPS                             12
+Esempio di calcolo per 4.000 EPS:
+4.000 EPS ricade nella Fascia 4.
+Il coefficiente (EPS/Device) è pari a 10.
+Il numero di Device Equivalenti è pari a: 4.000/10 = 400
+Il Canone annuale verrà calcolato come prodotto tra 400 * per il prezzo unitario offerto per la
+fascia di riferimento.
+La modalità di remunerazione del servizio è: canone annuale.
+
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        11 di 33
+    3.2. L1.S2 – Next Generation Firewall
+Il servizio di Next Generation Firewall dovrà consentire alle Amministrazione di filtrare tutto il
+traffico che i dispositivi di rete scambiano sia internamente che esternamente rispetto a un
+determinato perimetro, limitando o bloccando eventi quali accessi non autorizzati, malware o
+servizi non consentiti, attraverso una serie definita di regole (policy) di controllo degli accessi e
+tramite l’orchestrazione di più layer di sicurezza, ognuno dedicato a una specifica funzione di
+controllo.
+a metrica di dimensionamento del servizio è: Ngfw Throughput/anno
+secondo le seguenti fasce:
+        Fascia 1: fino a 250 Mbps
+        Fascia 2: fino a 2 Gbps
+        Fascia 3: fino a 4 Gbps
+        Fascia 4: fino a 7 Gbps
+        Fascia 5: fino a 15 Gbps
+        Fascia 6: > 15 Gbps
+La modalità di remunerazione del servizio è: canone annuale.
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+    3.3. L1.S3 - Web Application Firewall
+Il servizio di “Web Application Firewall” dovrà fornire alle Amministrazioni di filtrare, monitorare
+e bloccare il traffico HTTP da e verso un servizio Web, esaminando il traffico, utilizzando regole,
+analisi e firme per rilevare attacchi e quindi proteggendo le stesse Amministrazioni dagli attacchi
+incorporati nei dati trasmessi dalle applicazioni web.
+La metrica di dimensionamento del servizio può essere: Throughput http/anno
+secondo le seguenti fasce:
+       Fascia 1: fino a 500 Mbps
+       Fascia 2: fino a 5 Gbps
+       Fascia 3: > 5 Gbps
+La modalità di remunerazione del servizio è: canone annuale
+L’ordine di acquisto del servizio – per la sola modalità continua - dovrà avere una durata minima
+di 12 (dodici) mesi. Il Fornitore ha facoltà di accettare ordini per durate inferiori a quanto sopra
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        12 di 33
+indicato.
+
+    3.4. L1.S4 – Gestione continua delle vulnerabilita di sicurezza
+Il servizio di “Gestione continua delle vulnerabilità di sicurezza” dovrà consentire alle
+Amministrazioni, tramite un processo automatico di assesment delle vulnerabilità, di ottenere
+una fotografia precisa del livello e gravità del rischio a cui, in quel momento, sono esposti i propri
+sistemi informatici. Il servizio si avvarrà dell’utilizzo di uno scanner che produrrà un report con
+le specifiche indicazioni di rischio relative alle vulnerabilità rilevate.
+La metrica di dimensionamento del servizio è: Numero di IP/anno
+secondo le seguenti fasce:
+       Fascia 1: fino a 50 IP;
+       Fascia 2: fino a 200 IP;
+       Fascia 3: > 200 IP.
+La modalità di remunerazione del servizio è: canone annuale
+
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+    3.5. L1.S5 – Threat Intelligence & Vulnerability Data Feed
+Il servizio di “Threat intelligence e Vulnerability data feed” dovrà consentire alle Amministrazioni
+di ricevere un flusso continuo di dati relativi a minacce e vulnerabilità di sicurezza del Sistema
+informativo. Devono essere disponibili le informazioni più recenti, permettendo così di
+prevedere/prevenire le minacce prima che entrino in azione, migliorando gli attuali controlli e
+le funzionalità forensi.
+La metrica di dimensionamento del servizio è: Data Feed/anno
+secondo le seguenti fasce:
+       Fascia 1: fino a 10 feed;
+       Fascia 2: fino a 50 feed;
+       Fascia 3: > 50 feed.
+La modalità di remunerazione del servizio è: canone (annuale)
+
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                         13 di 33
+    3.6. L1.S6 – Protezione navigazione Internet e Posta elettronica
+Il servizio di Protezione internet e Posta elettronica consente alle Amministrazioni di proteggersi
+contro le minacce alla sicurezza online applicando le policy aziendali e filtrando il traffico
+internet dannoso in tempo reale. Viene bloccato l’accesso ai siti potenzialmente malevoli,
+applicato il controllo alle applicazioni web e rilevato e filtrato il codice dannoso.
+Nel caso della posta elettronica, il servizio consente alle Amministrazioni di proteggersi da
+contenuti dannosi presenti nelle e-mail impedendo loro di raggiungere il destinatario previsto.
+La metrica di dimensionamento del servizio è Numero utenti/anno
+secondo le seguenti fasce:
+       Fascia 1 - Fino a 1000 utenti
+       Fascia 2 - Fino a 5.000 utenti
+       Fascia 3 - Fino a 10.000 utenti
+       Fascia 4 - Fino a 20.000 utenti
+       Fascia 5 - > 20.000 utenti.
+La modalità di remunerazione del servizio è: canone (annuale)
+
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+    3.7. L1.S7 - Protezione degli end-point
+Il servizio di Protezione endpoint consente alle Amministrazioni di proteggere i dispositivi
+collegati alla rete aziendale (ad es. pc desktop. laptop, smartphone, tablet) dall’accesso non
+autorizzato o dall’esecuzione di software dannoso. La protezione degli endpoint garantisce,
+inoltre, che i dispositivi raggiungano un livello di sicurezza definito e siano conformi ai requisiti
+di conformità dell’Amministrazione.
+La metrica di dimensionamento del servizio è Numero nodi/anno
+secondo le seguenti fasce:
+       Fascia 1 - Fino a 500 nodi;
+       Fascia 2 - Fino a 1.000 nodi;
+       Fascia 3 - Fino a 5.000 nodi;
+       Fascia 4 - > 5.000 nodi.
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        14 di 33
+La modalità di remunerazione del servizio è: canone (annuale)
+
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+    3.8. L1.S8 - Certificati SSL
+Il certificato SSL (Secure Sockets Layer) e il suo successore TLS (Transport Layer Security), sono
+protocolli standard necessari a garantire affidabilità e sicurezza della comunicazione tra le
+componenti client e server di un’applicazione internet. Il certificato assicura che le informazioni
+sensibili fornite dagli utenti sul web rimangano riservate e non vengano in alcun modo
+intercettate da terze parti (comunicazione criptata tra il client server e il server web).
+La metrica di dimensionamento del servizio è Numero certificati/anno
+secondo le seguenti fasce:
+       Fascia 1 SSL OV
+       Fascia 2 SSL OV Wildcard
+       Fascia 3 SSL EV
+       Fascia 4 SSL DV
+       Fascia 5 SSL Code Signing
+       Fascia 6 SSL Client Auth
+La modalità di remunerazione del servizio è: Canone annuale
+
+
+    3.9. L1.S9 - Servizio di Formazione e Security awareness
+Il servizio “Formazione e Security awareness” è mirato a sensibilizzare l’Amministrazione su
+svariati aspetti della sicurezza delle informazioni, incrementando il livello di consapevolezza dei
+dipendenti, innalzando il livello di sicurezza dell’organizzazione e l’efficacia in termini di
+protezione dei dati aziendali critici e dei dati personali. Lo scopo è quello di sviluppare negli
+utenti le competenze essenziali, le tecniche e i metodi fondamentali per prevenire il più possibile
+gli incidenti di sicurezza e reagire al meglio a fronte di eventuali problemi.
+Il servizio è erogato mediante la messa a disposizione di figure professionali da parte del
+Fornitore.
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                      15 di 33
+La metrica del servizio è Giorni/Persona del Team ottimale
+La modalità di remunerazione del servizio è Progettuale (a corpo)
+La modalità di erogazione del servizio è a scelta dall’Amministrazione e può essere:
+       on-site
+       da remoto
+
+
+    3.10.          L1.S10 - Gestione dell’identita e l’accesso utente
+Il servizio di Gestione dell’identità e dell’accesso utente (Identity & Access Management) dovrà
+consentire all’Amministrazione la completa gestione delle attività di identificazione,
+autenticazione ed autorizzazione propedeutiche all’accesso da parte di utenti esterni al portale
+dell’Amministrazione o ai servizi da essa erogati in rete. Per l’autenticazione dei propri utenti il
+servizio può fare ricorso ad un Identity provider esterno all’Amministrazione.
+La metrica di dimensionamento del servizio è: Numero utenti/anno
+secondo le seguenti fasce:
+       Fascia 1: fino a 10.000 utenti;
+       Fascia 2: fino a 100.000 utenti;
+       Fascia 3: fino a 500.000 utenti;
+       Fascia 4: > 500.000 utenti.
+La modalità di remunerazione del servizio è: Canone annuale
+L’ordine di acquisto del servizio dovrà avere una durata minima di 12 (dodici) mesi. Il Fornitore
+ha facoltà di accettare ordini per durate inferiori a quanto sopra indicato.
+
+
+    3.11.          L1.S11 - Firma digitale remota
+Il servizio di “Firma digitale” è un tipo di firma elettronica qualificata che dovrà consentire alle
+Amministrazioni di dare efficacia probatoria ai documenti informatici firmati digitalmente,
+favorendo così i processi di dematerializzazione e consentendo l’automazione e l’ottimizzazione
+dei processi aziendali. La firma digitale è il risultato di una procedura informatica, detta
+validazione, che garantisce l’autenticità, l’integrità e il non ripudio dei documenti informatici.
+Il servizio dovrà prevedere quale modalità di utilizzo “da remoto": si intende la firma digitale
+generata usando strumenti di autenticazione (tipicamente user id+ password +OTP o telefono
+cellulare) che consentono la generazione della firma su un dispositivo (HSM) custodito dal
+prestatore del servizio fiduciario qualificato.
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                       16 di 33
+La metrica di dimensionamento del servizio è:
+     Numero di utenti/anno (best effort)
+secondo le seguenti fasce:
+             Fascia 1: > 50 e fino a 200 utenti;
+             Fascia 2: > 50 e fino a 500 utenti;
+             Fascia 3: > 50 e fino a 1.000 utenti;
+             Fascia 4: > 1.000 utenti.
+
+     Numero di firme/secondo (sla garantito).
+La modalità di remunerazione del servizio è Canone annuale
+
+
+
+    3.12.          L1.S12 – Sigillo elettronico
+Il servizio “Sigillo elettronico”, al pari del servizio di “Firma digitale” di cui al precedente
+paragrafo 3.2.2 dovrà consentire alle Amministrazioni di dare efficacia probatoria ai documenti
+informatici firmati digitalmente, favorendo così i processi di dematerializzazione e consentendo
+l’automazione e l’ottimizzazione dei processi aziendali.
+
+
+La metrica di dimensionamento del servizio è:
+     Numero di sigilli/secondo (sla garantito).
+La modalità di remunerazione del servizio è Canone annuale
+
+
+
+    3.13.          L1.S13 – Timbro elettronico
+Il servizio di “Timbro elettronico” dovrà consentire alle Amministrazioni la creazione di
+documenti informatici che possano conservare la medesima validità legale anche dopo essere
+stati stampati su supporto cartaceo.
+Il timbro digitale può essere indicato, anche in relazione alle specificità dello scenario, con
+termini differenti, quali “Contrassegno elettronico”, “Codice bidimensionale”, “Glifo”.
+La metrica di dimensionamento del servizio è:
+     Numero di timbrature
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                   17 di 33
+secondo le seguenti fasce:
+             Fascia 1: fino a 1.000 timbrature;
+             Fascia 2: > fino a 10.000 timbrature;
+             Fascia 3: > fino a 100.000 timbrature;
+             Fascia 4: > fino a 1.000.000 timbrature;
+             Fascia 5: > fino a 10.000.000 timbrature;
+             Fascia 6: > 10.000.000 timbrature.
+La modalità di remunerazione del servizio è Consumo.
+
+
+
+    3.14.          L1.S14 – Validazione temporale elettronica qualificata
+Il servizio di “Validazione temporale elettronica qualificata” (in precedenza qualificato come
+“Marca temporale”) dovrà fornire alle Amministrazioni, mediante un Certificatore accreditato,
+di associare data e ora, certe e legalmente valide, a un documento informatico, permettendo
+una validazione temporale del documento opponibile a terzi.
+Il servizio permette quindi di garantire l’apposizione di un riferimento temporale certo
+(legalmente valido) sia a documenti firmati digitalmente sia a documenti non firmati, oltre che
+l’estensione della validità legale dei propri documenti firmati digitalmente nel tempo.
+La metrica di dimensionamento del servizio è:
+     Numero di marcature (best effort)
+secondo le seguenti fasce:
+             Fascia 1: fino a 1.000 marcature;
+             Fascia 2: fino a 10.000 marcature;
+             Fascia 3: fino a 100.000 marcature;
+             Fascia 4: fino a 1.000.000 marcature;
+             Fascia 5: fino a 10.000.000 timbrature;
+             Fascia 6: > 10.000.000 marcature.
+La modalità di remunerazione del servizio è: Consumo.
+     Numero di marcature/secondo (sla garantito)
+La modalità di remunerazione del servizio è: Canone annuale.
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                  18 di 33
+    3.15.          L1.S15 – Servizi Specialistici
+Il servizio “Servizi specialistici” dovrà fornire all’Amministrazione un supporto tecnico connesso
+all’attivazione dei servizi da remoto oggetto di fornitura.
+Il servizio è erogato mediante la messa a disposizione di figure professionali da parte del
+Fornitore.
+La metrica del servizio è Giorni/Persona del Team ottimale
+La modalità di remunerazione del servizio è Progettuale (a corpo)
+La modalità di erogazione del servizio è a scelta dall’Amministrazione e può essere:
+       on-site
+       da remoto
+
+
+Per una completa e dettagliata descrizione dei servizi si rinvia in ogni caso al Capitolato Tecnico
+Generale e al Capitolato Tecnico Speciale Lotto 1.
+
+    3.16.          Indicatori di digitalizzazione
+L’acquisizione dei servizi prevede l’esplicitazione da parte dell’Amministrazione degli indicatori
+di digitalizzazione che gli organismi di coordinamento e controllo per la Governance potranno
+utilizzare per il monitoraggio della consistenza e dell’efficacia dell’intervento.
+Si intendono definite due tipologie di indicatori:
+•       Indicatori Generali, che mappano il macro-obiettivo dell’intervento rispetto ai principali
+obiettivi strategici del Piano Triennale;
+•      Indicatori Specifici, che definiscono, sulla base delle specificità della Gara Strategica, le
+misure di digitalizzazione applicabili allo specifico contratto esecutivo, in funzione dei
+prodotti/servizi acquisiti. In tale contesto, è definito un indicatore (cd. “indicatore di progresso”
+in seguito descritto) che indica il livello di maturità della infrastruttura di sicurezza ICT delle
+Amministrazioni, sulla base del grado di mappatura degli interventi effettuati con le misure
+minime di sicurezza AGID (Circolare 18 aprile 2017, n. 2/2017, Sostituzione della circolare n.
+1/2017 del 17 marzo 2017, recante «Misure minime di sicurezza ICT per le pubbliche
+amministrazioni. (Direttiva del Presidente del Consiglio dei ministri 1° agosto 2015)»).
+
+Ciascuna Amministrazione, nel proprio Contratto Esecutivo, assocerà almeno un Indicatore
+Generale per il quale fornirà, agli Organismi di coordinamento e controllo e/o ai soggetti da
+questi indicati, le misure di riferimento ex ante ed ex post rispetto al Contratto Esecutivo.
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        19 di 33
+Per gli Indicatori Generali si faccia riferimento al paragrafo 4.7.1 del Capitolato Tecnico Generale.
+
+Per gli Indicatori Specifico, per le gare strategiche inerenti la sicurezza informatica, è previsto
+l’”indicatore di Progresso”. Per tale indicatore si faccia riferimento al paragrafo 4.7.1.1 del
+Capitolato Tecnico Generale.
+
+Eventuali ulteriori elementi di dettaglio per la rilevazione degli indicatori generali saranno forniti
+secondo le modalità e i tempi concordati dall’Organismo di Coordinamento e Controllo
+finalizzato alla direzione strategica e/o secondo quanto più precisamente definito in corso
+d’opera all’atto della stipula/attivazione degli Accordi Quadro delle altre gare strategiche già
+pubblicate (Digital Transformation, Public Cloud IaaS e PaaS, Servizi Applicativi in ottica cloud e
+Data Management).
+
+
+
+4. Adesione dell’Accordo quadro
+
+    4.1. Documentazione disponibile e kit per ordine di acquisto
+
+L’Amministrazione, sul sito internet Consip (www.consip.it) e sul Portale della fornitura, ha
+disponibile la seguente documentazione:
+     Il Capitolato tecnico generale;
+     Il Capitolato tecnico speciale Lotto 1 e relative appendici;
+     Chiarimenti ed Errata Corrige.
+ Per ciascun aggiudicatario del lotto 1:
+           o l’offerta tecnica;
+           o il contratto di AQ firmato;
+           o i corrispettivi e prezzi;
+           o i riferimenti del fornitore;
+           o il Piano della Qualità Generale;
+           o il documento “Gare Strategiche - Disposizioni per la Governance”;
+           o il documento “Gare Strategiche - Regolamento degli organismi di regolamento e
+                controlli”;
+           o lo schema di contratto esecutivo;
+           o lo schema di Nomina del responsabile al trattamento dei dati.
+
+Al fine di agevolare la predisposizione della documentazione necessaria alla stipula del
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                         20 di 33
+Contratto Esecutivo è messo a disposizione il Kit per l’ordine di fornitura composto dai seguenti
+file:
+           o guida all’AQ;
+           o template di Piano dei fabbisogni;
+           o template Piano operativo.
+
+    4.2. Modalita operative di adesione all’Accordo quadro
+Nei casi descritti nel par. 2 della presente guida, le Amministrazioni legittimate potranno affidare
+i Contratti Esecutivi, successivamente alla stipula dell’Accordo Quadro e per tutta la durata dello
+stesso, alle medesime condizioni (economiche e tecnico-prestazionali) stabilite nell’Accordo
+Quadro, senza un nuovo confronto competitivo. L’affidamento di ciascun Contratto Esecutivo
+avverrà con le modalità di seguito descritte.
+Le Amministrazioni, per aderire all’AQ ed ordinare i servizi di interesse, dovranno attenersi alla
+procedura descritta nella documentazione dell’AQ eseguendo i seguenti passi:
+1. Identificazione del fornitore aggiudicatario
+Le Amministrazioni legittimate potranno affidare, uno o più Contratti Esecutivi sulla base delle
+seguenti condizioni oggettive per determinare quale degli operatori economici parti
+dell’Accordo Quadro eseguirà le prestazioni:
+     in caso di appartenenza al comparto della Pubblica Amministrazione Locale (cd. PAL)
+        affidamento all’operatore economico RTI costituito ACCENTURE S.P.A. - FINCANTIERI
+        NEXTECH S.P.A. FASTWEB S.P.A. - DEAS - DIFESA E ANALISI SISTEMI S.P.A.;
+     in caso di appartenenza al comparto della Pubblica Amministrazione Centrale (cd. PAC)
+      affidamento all’operatore economico RTI costituito TELECOM ITALIA S.P.A. - NETGROUP
+      S.P.A., REEVO S.P.A., KPMG ADVISORY S.P.A., ALMAVIVA -THE ITALIAN INNOVATION
+      COMPANY S.P.A..
+
+
+
+2. Emissione del Piano dei Fabbisogni
+L’ Amministrazione trasmetterà, a mezzo PEC, al fornitore aggiudicatario, e contestualmente
+alla Consip S.p.A. (e/o a terzi dalla stessa indicati), il “Piano dei Fabbisogni” (o “Ordinativo di
+fornitura”), contenente i) i requisiti, i servizi, le caratteristiche qualitative, i dimensionamenti; ii)
+la descrizione del contesto tecnologico ed applicativo e la descrizione delle attività
+dimensionate, al fine di permettere la identificazione e contestualizzazione dei servizi nonché
+la eventuale declinazione delle figure professionali e degli strumenti a supporto.
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                            21 di 33
+Il “Piano dei fabbisogni” conterrà, a titolo esemplificativo e non esaustivo, i seguenti elementi:
+         Indicazione se il contratto esecutivo è finanziato, in tutto o in parte, con le risorse
+            previste dal Regolamento (UE) 2021/240 del Parlamento europeo e del Consiglio del
+            10 febbraio 2021 e dal Regolamento (UE) 2021/241 del Parlamento europeo e del
+            Consiglio del 12 febbraio 2021, nonché dal PNC;
+         indicazione, laddove previsto, di utilizzo dei fondi economici ai sensi del D.L. 77/2021;
+         la categorizzazione dell’intervento;
+         il comparto di appartenenza (PAC/PAL);
+         l’importo contrattuale e le quantità previste per i servizi oggetto di fornitura;
+         la data di attivazione di ciascun servizio oggetto di fornitura;
+         la durata del Contratto esecutivo e dei singoli servizi;
+         le modalità di erogazione e consuntivazione dei servizi di fornitura, nel rispetto delle
+            previsioni dell’Accordo Quadro;
+         per ciascun servizio richiesto, la metrica di misurazione, dimensionamento, luogo di
+            erogazione (da remoto oppure presso la PA), le caratteristiche specifiche del servizio
+            tra quelle previste. Si precisa che il dimensionamento è dedicato e specifico per
+            ciascun servizio erogabile durante la durata della fornitura;
+         ogni altra eventuale indicazione riportata nel Capitolato Tecnico Speciale inerente
+            agli specifici servizi richiesti, come ad esempio un documento allegato con il contesto
+            tecnologico e applicativo;
+         l’eventuale cronoprogramma ai fini dell’anticipazione del prezzo, ove applicabile.
+
+
+3. Emissione del Piano Operativo
+Il Fornitore, sulla base del Piano dei fabbisogni, predispone un “Piano Operativo” entro un
+termine massimo di 15 giorni lavorativi dall’invio del Piano dei fabbisogni o dal maggiore
+termine eventualmente indicato dall’Amministrazione (comunque non superiore a 30 giorni
+solari), tale Piano Operativo dovrà essere trasmesso, a mezzo PEC, all’Amministrazione che ne
+abbia fatto richiesta, nonché a Consip S.p.A. e/o terzi da essa indicati.
+In particolare, fermo quanto previsto nel Capitolato Tecnico Speciale Lotto 1, il Fornitore
+aggiudicatario, mediante il “Piano Operativo”, dovrà formulare una proposta tecnico/economica
+secondo le modalità tecniche ed i listini previsti nell’Accordo Quadro.
+Il Piano Operativo dovrà indicare, a titolo esemplificativo e non esaustivo, i seguenti aspetti in
+coerenza al Piano dei Fabbisogni:
+•       la categorizzazione dell’intervento;
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                      22 di 33
+•      il comparto di appartenenza (PAC/PAL);
+•      l’importo contrattuale e le quantità previste per i servizi oggetto di fornitura;
+•      l’identificativo del servizio;
+•      la data di attivazione del servizio di fornitura;
+•      l’indicazione del/i luogo/ghi di esecuzione della fornitura;
+•      la durata del Contratto esecutivo e dei servizi;
+•      la configurazione (ove applicabile);
+•      i singoli costi dei servizi;
+•      impegno delle eventuali risorse professionali previste;
+•      specifiche di collaudo, contenenti le modalità di esecuzione dei test di collaudo, descritti
+tramite schede tecniche di dettaglio e le date di prevista disponibilità al collaudo;
+•      quota e prestazioni che intenderà subappaltare, nel rispetto delle previsioni dell’Accordo
+Quadro e di quanto indicato nel Piano dei fabbisogni.
+Il Piano Operativo, inoltre, dovrà contenere:
+•        un piano di lavoro generale coerente con il fabbisogno, che rappresenta la totalità dei
+servizi richiesti e rappresenta le attività propedeutiche all’attivazione dei servizi, e che potrà
+essere aggiornato successivamente alla stipula del Contratto esecutivo previo accordo con
+l’Amministrazione. Come previsto nel Capitolato Tecnico Speciale relativo al lotto di servizi di
+Compliance e controllo, tale piano dovrà contenere al proprio interno anche il piano di Presa in
+carico;
+•        un Piano della Qualità specifico di Contratto esecutivo (ad integrazione del Piano della
+Qualità Generale che dovrà essere trasmesso alla Consip S.p.A. ai sensi del successivo paragrafo
+7.1.1), contenente: i) l’organizzazione di ciascuno dei servizi (organigramma e responsabilità
+assegnate); ii) metodi tecniche e strumenti applicabili per ciascun servizio; iii) requisiti di qualità;
+•        ove previsto, i CV delle risorse professionali che verranno impiegate per l’erogazione dei
+servizi, con le relative certificazioni richieste e/o proposte in offerta tecnica;
+•        la proposta operativa coerente rispetto al documento di contesto tecnologico e
+applicativo allegato al Piano dei Fabbisogni.
+Si precisa che dalla mera trasmissione del Piano Operativo da parte del Fornitore
+aggiudicatario verso l’Amministrazione non scaturisce obbligo per l’Amministrazione di
+procedere alla stipula del Contratto esecutivo con il medesimo Fornitore.
+Le Amministrazioni saranno tenute a comunicare in forma scritta alla Consip S.p.A. tutte le
+ipotesi di mancato rispetto da parte del Fornitore selezionato del termine per la trasmissione
+del Piano Operativo ai fini dell’applicazione della relativa penale.
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                           23 di 33
+4. Sottoscrizione del Contratto esecutivo
+L’Amministrazione, entro 30 giorni solari dalla relativa ricezione, ha la facoltà di approvare il
+“Piano Operativo”, ovvero di comunicare la richiesta di eventuali modifiche e/o integrazioni, nel
+rispetto del Piano dei fabbisogni. In tal caso l’aggiudicatario dovrà apportare al documento
+presentato le modifiche e/o integrazioni richieste.
+L’aggiudicatario dovrà inviare la versione definitiva del Piano Operativo entro 10 giorni solari
+dalla comunicazione di richiesta dell’Amministrazione Contraente, pena l’applicazione, da parte
+di Consip S.p.A. su segnalazione dell’Amministrazione, delle penali previste nell’Accordo
+Quadro.
+Da tale data decorrerà nuovamente il termine di 30 giorni solari di cui al periodo precedente.
+Qualora, decorsi 30 giorni solari dalla ricezione del Piano Operativo, l’Amministrazione non lo
+abbia approvato ovvero non ne abbia richiesto la modifica ovvero non abbia richiesto ulteriori
+giorni per la relativa verifica, il relativo Piano dei fabbisogni precedentemente trasmesso
+dall’Amministrazione si intenderà decaduto.
+Il Contratto si perfeziona in seguito della decorrenza del termine di 4 giorni lavorativi dalla
+ricezione del Piano operativo da parte dell’operatore economico sulla base dell’apposito
+schema allegato alla documentazione di gara. Esso conterrà altresì ogni altro aspetto rilevante
+per l’esecuzione del singolo contratto, in ragione di quanto stabilito nel Capitolato Tecnico e
+nello schema di Accordo Quadro.
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                    24 di 33
+Con l’approvazione del Piano Operativo, si stipulerà con il Fornitore il Contratto Esecutivo, sulla
+base dell’apposito schema di contratto esecutivo che conterrà quali allegati il Piano dei
+Fabbisogni e il Piano Operativo.
+Le Amministrazioni Contraenti provvederanno alla nomina del Responsabile del Procedimento,
+del Responsabile del trattamento dei dati e a richiedere e all’indicazione del CIG (Codice
+Identificativo Gara) “derivato” rispetto a quello dell’Accordo Quadro.
+
+
+    4.3. Atti modificativi
+Si fa presente che nel corso dell’esecuzione del Contratto Esecutivo, l’Amministrazione potrà
+aggiornare il Piano dei fabbisogni e richiedere aggiornamenti del Piano Operativo ogni qualvolta
+lo ritenga necessario, in ogni caso nel rispetto delle previsioni di cui all’art. 106 del D.Lgs.
+50/2016 nonché dell’importo massimo dell’Accordo Quadro.
+In questo caso l’Amministrazione potrà procedere con atti modificativi in incremento e in
+decremento, allegando al contratto esecutivo il nuovo Piano dei fabbisogni.
+Le fasi del processo di acquisto restano invariate rispetto all’ordinativo iniziale, secondo quanto
+descritto nei precedenti paragrafi.
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                      25 di 33
+5. Modalita’ di fornitura
+Il Fornitore dovrà garantire il rispetto dei requisiti minimi e dei livelli di qualità di servizio a
+partire dalla data di inizio attività e garantire l’efficacia dei servizi dall’avvio della fornitura.
+Il Fornitore garantisce che tutte le risorse che impiegherà per l’erogazione dei servizi oggetto
+della fornitura siano adeguate al ruolo ricoperto all’interno dei servizi e che corrispondano
+almeno ai requisiti minimi espressi dal presente capitolato tecnico speciale e all’Appendice 2
+“Profili Professionali”, integrati con tutte le migliorie offerte in Offerta Tecnica.
+Nel Portale della fornitura, il Fornitore dovrà pubblicare i CV delle risorse proposte (ivi compresi
+i Referenti tecnici ed i ruoli aggiuntivi proposti), con la documentazione comprovante le
+eventuali competenze e certificazioni possedute e dichiarate in sede di offerta tecnica.
+Il Fornitore deve inoltre garantire che ogni dimensionamento dei servizi sia rispondente
+all’effettivo effort impiegato ed impiegabile.
+Il Fornitore dovrà rendere trasparenti i razionali delle proprie stime sia nei confronti
+dell’Amministrazione, sia di soggetti terzi (individuati dall’Amministrazione) che supportino i
+controlli dell’Amministrazione stessa.
+A partire dalla stipula del Contratto esecutivo il Fornitore dovrà svolgere l’attività di Presa in
+carico. Nell’ambito della presa in carico rientrano le seguenti attività:
+        configurazione del Portale della Fornitura per il Contratto esecutivo;
+        predisposizione e configurazione degli eventuali strumenti tecnologici richiesti e offerti;
+        predisporre la documentazione relativa alle modalità di misurazione degli Indicatori di
+         Qualità.
+Le attività di Presa in carico dovranno essere avviate entro 5 giorni dalla stipula del Contratto
+attuativo ed eseguite secondo le tempistiche concordate con l’Amministrazione nel Piano di
+Presa in carico.
+Ove richiesto dall’Amministrazione, il Fornitore dovrà anche svolgere le attività di seguito
+indicate e finalizzate:
+        all’acquisizione di know how relativo al contesto organizzativo, tecnologico e funzionale
+         dell’Amministrazione;
+        all’acquisizione degli standard, modalità operative, linee guida e metodologie in uso
+         presso l’Amministrazione, ove presenti.
+
+    5.1. Migrazione
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        26 di 33
+Il Fornitore dovrà obbligatoriamente eseguire quanto di seguito descritto sia nel caso di
+migrazione di un’Amministrazione da servizi preesistenti, sia nel caso di presa in carico ex novo.
+Nel caso in cui l’Amministrazione fruisca di analoghi servizi preesistenti, il Fornitore dovrà
+esplicitamente prevedere, congiuntamente con l’Amministrazione contraente, le procedure di
+attivazione necessarie a garantire il mantenimento dell’operatività durante le fasi di migrazione.
+Eventuali necessità di fermo dei servizi devono essere accuratamente definite dal Fornitore,
+approvate dall’Amministrazione e monitorate in modo da ridurre al minimo gli impatti
+sull’utenza di riferimento.
+Si precisa inoltre che in fase di avvio dell’erogazione dei servizi, il Fornitore dovrà sottoscrivere
+un accordo di riservatezza che lo impegna a non divulgare nessuna informazione relativa
+all’Amministrazione contraente, alle sue infrastrutture informatiche e ai suoi dati.
+
+
+    5.2. Collaudo di configurazione e di conformita
+In seguito alla stipula del Contratto esecutivo, l’Amministrazione contraente potrà richiedere
+prove di collaudo atte a verificare la conformità di ogni singolo servizio contrattualizzato rispetto
+a:
+        “Piano dei fabbisogni”, redatto dall’Amministrazione contraente;
+        “Piano operativo”, redatto dal Fornitore;
+        Specifiche e requisiti dei servizi, contenuti nel Capitolato Tecnico.
+
+
+Le verifiche di conformità delle prestazioni sono volte ad accertare, periodicamente nel corso
+della fornitura, che le prestazioni contrattuali siano eseguite a regola d’arte sotto il profilo
+tecnico-funzionale. La responsabilità dell’esecuzione della Verifica di conformità è
+dell’Amministrazione, che esegue l’attività con il supporto del fornitore.
+Il Fornitore dovrà obbligatoriamente effettuare quanto segue.
+Il Fornitore dovrà fornire il supporto all’Amministrazione contraente in tutte le attività
+necessarie alle suddette prove di collaudo e alle verifiche di conformità.
+Il Fornitore dovrà consegnare (entro i tempi previsti nel Piano dei Fabbisogni)
+all’Amministrazione un documento intitolato “Specifiche di dettaglio delle prove di collaudo”
+che descrive la tipologia delle prove di collaudo previste e la pianificazione temporale delle
+stesse.
+Il Fornitore dovrà altresì impegnarsi, qualora richiesto dall’Amministrazione, a svolgere ulteriori
+prove integrative. L’Amministrazione può procedere, a sua discrezione, ad un collaudo a
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        27 di 33
+campione.
+
+    5.3. Verifiche e test ai sensi del DL 105/2019
+Qualora l’Amministrazione beneficiaria ricada tra i soggetti di cui all’art. 1, comma 2, lett. a)
+della legge n. 133/2019 e l’oggetto del proprio Contratto esecutivo sia destinato a essere
+impiegato sulle reti, sui sistemi informativi e per l'espletamento dei servizi informatici di cui
+all’art. 1, comma 2, lettera b), della legge n. 133/2019, atteso che prima di procedere
+all’affidamento del Contratto esecutivo, il Centro di valutazione e certificazione nazionale
+(CVCN), istituito presso il Ministero dello sviluppo economico e trasferito dal D.L. 82/2021
+(convertito con modificazioni dalla L. 109/2021) presso l’Agenzia per la cybersicurezza
+nazionale, o uno dei Centri di Valutazione (CV), istituiti presso il Ministero dell’interno e il
+Ministero della difesa, potrà aver riscontrato la comunicazione della medesima prevedendo la
+necessità di effettuare verifiche preliminari e/o imporre condizioni e test hardware e software
+su forniture di beni, sistemi e servizi ICT destinati a essere impiegati sulle reti, sui sistemi
+informativi e per l'espletamento dei servizi informatici di cui al comma 2 lett. b) legge 133/2019,
+l’Amministrazione contraente prevedrà nel Contratto esecutivo medesimo le clausole che
+condizioneranno, sospensivamente ovvero risolutivamente al Contratto esecutivo al rispetto
+delle condizioni e all'esito favorevole dei test disposti dal CVCN.
+
+    5.4. Piano della qualita e piani di lavoro
+Per ciascun Contratto esecutivo il fornitore dovrà produrre un Piano della Qualità personalizzato
+sull’ambiente funzionale e tecnologico e sugli obiettivi dell’Amministrazione. Il piano è soggetto
+all’approvazione dell’Amministrazione.
+Tale documento dovrà essere prodotto a partire dal Piano della Qualità Generale dell’Accordo
+Quadro e riportare le eventuali deroghe alle regole ereditate, la declinazione specifica per i
+servizi attivati nello specifico Contratto esecutivo.
+Nella redazione del piano il Fornitore terrà come guida lo schema di riferimento indicato nel
+Capitolato tecnico speciale Lotto 1, evidenziando sia le caratteristiche qualitative relative a i
+servizi e sia le eventuali deroghe da quanto previsto nel Piano della Qualità Generale.
+Il Fornitore inoltre dovrà predisporre, con le tempistiche indicate nel Capitolato Tecnico
+Generale, e mantenere costantemente aggiornata la pianificazione dei servizi/attività, con la
+seguente articolazione:
+Piano di lavoro generale comprensivo di:
+        Piano di presa in carico di inizio fornitura, pianificazione delle attività trasversali di
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                      28 di 33
+         carattere generale ad esempio: pianificazione delle attività di assicurazione della qualità;
+        piano di lavoro dei servizi che si estrinsecherà in un piano per ogni servizio;
+A fronte di ripianificazioni autorizzate dall’Amministrazione, il Fornitore redigerà e pubblicherà
+sul Portale la versione aggiornata del Piano di lavoro.
+
+
+6. Condizioni economiche
+
+    6.1. Corrispettivi
+I corrispettivi per i servizi previsti dall’Accordo Quadro sono riportati nell’allegato Tariffe e
+Corrispettivi presenti sul sito internet della Consip (www.consip.it) nella sezione relativa alla
+documentazione dell’iniziativa e sul Portale della fornitura dell’aggiudicatario.
+
+7. Contributo a carico delle amministrazioni
+Ai sensi dell’art. 4, comma 3-quater, del D.L. 6 luglio 2012, n. 95, convertito con modificazioni in
+legge 7 agosto 2012, n. 135, si applica il contributo di cui all’art. 18, comma 3, D.Lgs. 1 dicembre
+2009, n. 177, come disciplinato dal D.P.C.M. 23 giugno 2010.
+Pertanto, le Amministrazioni sono tenute a versare a Consip S.p.A., entro il termine di 30 (trenta)
+giorni solari dalla data di perfezionamento del Contratto Esecutivo, il predetto contributo nella
+misura prevista dall’art. 2, lettera a) o lettera b), del D.P.C.M. 23 giugno 2010, in ragione del
+valore complessivo del Contratto Esecutivo.
+In caso di incremento del valore del Contratto Esecutivo ai sensi dell’articolo 29 dell’Accordo
+quadro quest’ultima è tenuta a versare a Consip S.p.A., entro il termine di 30 (trenta) giorni
+solari dalla predetta approvazione, un ulteriore contributo nella misura prevista dall’art. 2,
+lettera c), del D.P.C.M. 23 giugno 2010.
+Le modalità operative di pagamento del predetto contributo sono descritte sul sito internet della
+Consip S.p.A. (www.consip.it).
+
+
+8. Procedura di applicazione delle penali
+Le fasi operative del procedimento relativo all’applicazione delle penali sono:
+
+    8.1. Rilevazione del presunto inadempimento del fornitore
+L’Amministrazione Contraente individua e verifica eventuali inadempimenti da parte del
+Fornitore rispetto agli obblighi contrattualmente assunti con la sottoscrizione dell’Accordo
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                        29 di 33
+Quadro.
+Per dettagli rispetto alle penali applicabili si rinvia al documento “Appendice 1 - Indicatori di
+qualità Lotto 1” della documentazione contenente le previste penali in funzione dei singoli
+Indicatori di Qualità e relativi livelli di servizio, nonché quelle indicate nel contratto di AQ.
+
+
+    8.2. Contestazione al fornitore
+La contestazione dell’inadempimento al Fornitore deve avvenire in forma scritta e riportare i
+riferimenti contrattuali con la descrizione dell’inadempimento.
+La contestazione deve contenere anche il calcolo economico della penale.
+La comunicazione di contestazione dell’inadempimento da parte dell’Amministrazione
+Contraente deve essere indirizzata in copia conoscenza a Consip S.p.A., in base a quanto
+prescritto nell’ Accordo quadro.
+
+
+    8.3. Controdeduzioni del fornitore
+Il Fornitore dovrà comunicare, in ogni caso, per iscritto, le proprie deduzioni, supportate da una
+chiara ed esauriente documentazione, nel termine massimo di n. 5 (cinque) giorni lavorativi
+dalla ricezione della contestazione stessa.
+
+
+    8.4. Accertamento della sussitenza/insussistenza delle condizioni                          di
+         applicazione delle penali e quantificazione delle medesime
+
+Qualora le controdeduzioni non pervengano all’Amministrazione Contraente nel termine
+indicato, ovvero, pur essendo pervenute tempestivamente, non siano ritenute idonee
+dall’Amministrazione a giustificare l’inadempienza contestata, l’Amministrazione stessa dovrà
+comunicare per iscritto al Fornitore la ritenuta infondatezza delle suddette deduzioni e la
+conseguente applicazione delle penali stabilite nell’Accordo Quadro, a decorrere dall’inizio
+dell’inadempimento.
+Qualora, invece, le controdeduzioni del Fornitore siano ritenute idonee, l’Amministrazione
+dovrà provvedere a comunicare per iscritto al Fornitore medesimo la non applicazione delle
+penali.
+Le singole Amministrazioni potranno compensare i crediti derivanti dall’applicazione delle
+penali di cui all’Accordo Quadro con quanto dovuto al Fornitore a qualsiasi titolo, quindi anche
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                     30 di 33
+con i corrispettivi maturati, ovvero avvalersi della garanzia disciplinata nell’Accordo Quadro,
+senza bisogno di diffida, ulteriore accertamento o procedimento giudiziario.
+Resta ferma la possibilità per il Fornitore di comunicare tempestivamente all’Amministrazione
+la propria volontà di rimettere direttamente l’importo delle penali tramite Bonifico Bancario su
+conto corrente (o postale) intestato all’Amministrazione e da questa indicato.
+In fase di applicazione delle penali occorre tener presente il limite legale previsto per
+l’ammontare complessivo delle stesse (la somma di tutte le penali da applicare). L’Accordo
+quadro individua il limite complessivo massimo pari al 10% (dieci per cento) dell’ammontare del
+contratto esecutivo.
+In ogni caso, l’applicazione della penale non esonera il Fornitore dall’adempimento
+contrattuale.
+
+
+    8.5. Ulteriori tutele
+        Risarcimento del maggior danno
+L’applicazione delle penali previste nell’Accordo Quadro non preclude il diritto delle singole
+Amministrazioni Contraenti di richiedere il risarcimento degli eventuali maggiori danni subiti.
+        Risoluzione del contratto
+Le Amministrazioni Contraenti, per quanto di proprio interesse, potranno risolvere di diritto il
+contratto anche nel caso in cui il Fornitore avesse accumulato penali per un importo pari o
+superiore alla misura massima del 10% (dieci per cento) del valore del proprio contratto
+esecutivo (Accordo quadro).
+        Recesso dal contratto
+Le Amministrazioni Contraenti hanno diritto di recedere unilateralmente dal Contratto
+Esecutivo, in tutto o in parte, in qualsiasi momento, senza preavviso, nei casi di giusta causa o
+reiterati inadempimenti del Fornitore, anche se non gravi (art. 109 del D.Lgs. 50/2016).
+In caso di mutamenti di carattere organizzativo interessanti l’Amministrazione che abbiano
+incidenza sulla prestazione dei servizi, l’Amministrazione potrà recedere in tutto o in parte
+unilateralmente dal Contratto Esecutivo, con un preavviso almeno 30 (trenta) giorni solari, da
+comunicarsi al Fornitore con lettera raccomandata A/R tramite PEC.
+
+
+        Azioni in caso di risoluzione dell’Accordo Quadro per inadempimento del Fornitore
+Qualora la Consip receda dall’Accordo Quadro, non potranno essere affidati nuovi Contratti
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                    31 di 33
+esecutivi da parte delle Amministrazioni e le singole Amministrazioni potranno a loro volta
+recedere dai singoli Contratti Esecutivi, con un preavviso di almeno 30 (trenta) giorni solari, da
+comunicarsi al Fornitore con lettera raccomandata A/R o tramite PEC.
+
+
+9. Fatturazione e pagamenti
+I corrispettivi del Contratto Esecutivo derivante dall’Appalto Specifico saranno fatturati con la
+cadenza indicata dalle Amministrazioni in sede di Contratto esecutivo e saranno corrisposti dalle
+Amministrazioni secondo la normativa vigente in materia di Contabilità delle Amministrazioni
+Contraenti e previo accertamento della prestazione effettuata.
+
+10. Subappalto
+Il subappalto è ammesso in conformità all’art. 105 del D. Lgs. 50/2016.
+Il Fornitore e il subappaltatore sono responsabili in solido, nei confronti della Consip S.p.A. e/o
+delle Amministrazioni Contraenti, in relazione alle prestazioni oggetto del contratto di
+subappalto.
+Si precisa inoltre che l’impresa, che sarà indicata come subappaltatrice, ai fini
+dell’autorizzazione non dovrà aver partecipato ad un altro lotto di gara per il quale è presente
+un vincolo di partecipazione, come meglio specificato nella documentazione di gara ed in
+particolare nel par. 3.1 del documento “Capitolato d’oneri”.
+L’elenco delle aziende che hanno partecipato alla gara è disponibile insieme a tutti i documenti
+di gara, sul sito Consip (www.consip.it)
+Le richieste di autorizzazioni al subappalto, corredate dalla documentazione prescritta dall’art.
+105 del D. Lgs. n. 50/2016, dovranno essere inoltrate alla Consip S.p.A. e da quest’ultima
+rilasciate.
+Per tutti i dettagli riguardanti il subappalto si rimanda alle previsioni contenute nella
+documentazione di gara dell’Accordo Quadro.
+
+11. Esecuzione del contratto
+Per quanto riguarda l’esecuzione dei singoli Contratti Esecutivi si faccia riferimento a quanto
+riportato nella documentazione di AQ.
+Quanto è offerto dall’aggiudicatario del lotto può essere consultato nel documento di offerta
+tecnica presente sul sito internet di Consip (www.consip.it). Le Amministrazioni aderenti hanno
+a disposizione, anche il cosiddetto Portale della fornitura, specifico per ciascun fornitore,
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                      32 di 33
+accessibile dal momento della stipula del contratto esecutivo e per tutta la durata del contratto
+stesso, mediante credenziali dedicate.
+L’Amministrazione dovrà segnalare a Consip eventuali discordanze con quanto riportato nel
+Portale e sull’eventuale mancato aggiornamento dei dati esposti.
+Per il Contratto esecutivo, l’Amministrazione avrà a disposizione, indicato dal fornitore, un
+Responsabile unico delle attività contrattuali (di seguito per brevità anche RUAC). Il RUAC sarà
+il referente dell’Amministrazione su tutte le tematiche contrattuali.
+Inoltre, l’Amministrazione avrà a disposizione un Referente tecnico per ciascun Contratto
+esecutivo e comunque per ciascuna Amministrazione per tutti i servizi indicati nel Capitolato
+Speciale relativo al suddetto Lotto.
+Per il dettaglio delle attività del RUAC e dei Referenti tecnici si faccia riferimento ai paragrafi
+7.2.1 e 7.2.2 del Capitolato tecnico generale dell’AQ.
+Per gli indicatori di valutazione della qualità della fornitura l’Amministrazione farà riferimento
+agli Indicatori di qualità (descritti nel documento di gara “Appendice 1 al CT Speciale - Indicatori
+di qualità- Lotto 1”), i quali misurano l’adeguatezza delle performance del fornitore rispetto ai
+servizi ai quali sono applicati
+
+
+
+
+Classificazione del documento: Consip Public
+
+
+
+
+                                                                                                       33 di 33
+
