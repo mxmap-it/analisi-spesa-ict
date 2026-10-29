@@ -59,7 +59,7 @@ for e in righe(ESITI):
                          for a in citato if (R / "dati/atti/testi" / (a["sha256"] + ".txt")).exists())
     giur = e.get("giurisdizione")
     if e.get("servizio") == "psn" and giur != "non-determinabile" and not re.search(
-            r"industrys+standard|housing|hosting|secures+publics+cloud|psns+managed|hybrids+cloud|alloy|assured", oggetto.get(cig, "") + " " + testo_atti, re.I):
+            r"industry\s+standard|housing|hosting|secure\s+public\s+cloud|psn\s+managed|hybrid\s+cloud|alloy|assured", oggetto.get(cig, "") + " " + testo_atti, re.I):
         giur = "non-determinabile"; regole.append("R4")
         if conf == "alta":
             conf = "media"
