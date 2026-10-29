@@ -1,0 +1,3921 @@
+{
+ "regole": "v3.1",
+ "fonti": [
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "delta"
+ ],
+ "soglie_importi_da_verificare": {
+  "grande": 50000000.0,
+  "ripetuto": 5000000.0
+ },
+ "2022": [
+  {
+   "via": "0-ict-non-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 26001,
+   "importo_esclusi_padri": 9299297633,
+   "importo_esclusi_padri_e_da_verificare": 9299297633
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 408255,
+   "importo_esclusi_padri_e_da_verificare": 408255
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 15,
+   "importo_esclusi_padri": 671886,
+   "importo_esclusi_padri_e_da_verificare": 671886
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 28,
+   "importo_esclusi_padri": 71239824,
+   "importo_esclusi_padri_e_da_verificare": 51239824
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 1134900,
+   "importo_esclusi_padri_e_da_verificare": 1134900
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 226027,
+   "importo_esclusi_padri_e_da_verificare": 226027
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 208024,
+   "importo_esclusi_padri_e_da_verificare": 208024
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 15000,
+   "importo_esclusi_padri_e_da_verificare": 15000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 14,
+   "importo_esclusi_padri": 661314,
+   "importo_esclusi_padri_e_da_verificare": 661314
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 120275,
+   "importo_esclusi_padri_e_da_verificare": 120275
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 12,
+   "importo_esclusi_padri": 1835987,
+   "importo_esclusi_padri_e_da_verificare": 1835987
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 38295,
+   "importo_esclusi_padri_e_da_verificare": 38295
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 39,
+   "importo_esclusi_padri": 34146776,
+   "importo_esclusi_padri_e_da_verificare": 14146776
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 31680,
+   "importo_esclusi_padri_e_da_verificare": 31680
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 341258,
+   "importo_esclusi_padri_e_da_verificare": 341258
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 421632,
+   "importo_esclusi_padri_e_da_verificare": 421632
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 10,
+   "importo_esclusi_padri": 50596270,
+   "importo_esclusi_padri_e_da_verificare": 50596270
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 22,
+   "importo_esclusi_padri": 51173989,
+   "importo_esclusi_padri_e_da_verificare": 51173989
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 1626072,
+   "importo_esclusi_padri_e_da_verificare": 1626072
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 156,
+   "importo_esclusi_padri": 75982672,
+   "importo_esclusi_padri_e_da_verificare": 75982672
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 7,
+   "importo_esclusi_padri": 2487977,
+   "importo_esclusi_padri_e_da_verificare": 2487977
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 179,
+   "importo_esclusi_padri": 192455148,
+   "importo_esclusi_padri_e_da_verificare": 192455148
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 43661,
+   "importo_esclusi_padri_e_da_verificare": 43661
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 1492798,
+   "importo_esclusi_padri_e_da_verificare": 1492798
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 60987,
+   "importo_esclusi_padri_e_da_verificare": 60987
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 48600,
+   "importo_esclusi_padri_e_da_verificare": 48600
+  },
+  {
+   "via": "3-marchio",
+   "provider": "OVHcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 80000,
+   "importo_esclusi_padri_e_da_verificare": 80000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 14,
+   "importo_esclusi_padri": 3209362,
+   "importo_esclusi_padri_e_da_verificare": 3209362
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 7,
+   "importo_esclusi_padri": 64361,
+   "importo_esclusi_padri_e_da_verificare": 64361
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 119,
+   "importo_esclusi_padri": 117322315,
+   "importo_esclusi_padri_e_da_verificare": 117322315
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 925623,
+   "importo_esclusi_padri_e_da_verificare": 925623
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 135800,
+   "importo_esclusi_padri_e_da_verificare": 135800
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 9,
+   "importo_esclusi_padri": 19874426,
+   "importo_esclusi_padri_e_da_verificare": 19874426
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 305000,
+   "importo_esclusi_padri_e_da_verificare": 305000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 8043359,
+   "importo_esclusi_padri_e_da_verificare": 8043359
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 105560,
+   "importo_esclusi_padri_e_da_verificare": 105560
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 9,
+   "importo_esclusi_padri": 3806347,
+   "importo_esclusi_padri_e_da_verificare": 3806347
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza",
+   "giurisdizione": "UE",
+   "cig": 77,
+   "importo_esclusi_padri": 43168320,
+   "importo_esclusi_padri_e_da_verificare": 43168320
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 0,
+   "importo_esclusi_padri_e_da_verificare": 0
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 6204131,
+   "importo_esclusi_padri_e_da_verificare": 6204131
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 113,
+   "importo_esclusi_padri": 65909617,
+   "importo_esclusi_padri_e_da_verificare": 65909617
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 77071,
+   "importo_esclusi_padri_e_da_verificare": 77071
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 9,
+   "importo_esclusi_padri": 4730822,
+   "importo_esclusi_padri_e_da_verificare": 4730822
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 35,
+   "importo_esclusi_padri": 30749835,
+   "importo_esclusi_padri_e_da_verificare": 30749835
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 279392,
+   "importo_esclusi_padri_e_da_verificare": 279392
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 418895,
+   "importo_esclusi_padri_e_da_verificare": 418895
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 7,
+   "importo_esclusi_padri": 2668616,
+   "importo_esclusi_padri_e_da_verificare": 2668616
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 130000,
+   "importo_esclusi_padri_e_da_verificare": 130000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 44850,
+   "importo_esclusi_padri_e_da_verificare": 44850
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 91,
+   "importo_esclusi_padri": 154608170,
+   "importo_esclusi_padri_e_da_verificare": 68186383
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 296206,
+   "importo_esclusi_padri_e_da_verificare": 296206
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 280695,
+   "importo_esclusi_padri_e_da_verificare": 280695
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 102275,
+   "importo_esclusi_padri_e_da_verificare": 102275
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 9890235,
+   "importo_esclusi_padri_e_da_verificare": 9890235
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 72260,
+   "importo_esclusi_padri_e_da_verificare": 72260
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 131718,
+   "importo_esclusi_padri_e_da_verificare": 131718
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 921575,
+   "importo_esclusi_padri_e_da_verificare": 921575
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 2229724,
+   "importo_esclusi_padri_e_da_verificare": 2229724
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 1965210,
+   "importo_esclusi_padri_e_da_verificare": 1965210
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 67233,
+   "importo_esclusi_padri_e_da_verificare": 67233
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 5,
+   "importo_esclusi_padri": 1497686,
+   "importo_esclusi_padri_e_da_verificare": 1497686
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 1322804,
+   "importo_esclusi_padri_e_da_verificare": 1322804
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 346320,
+   "importo_esclusi_padri_e_da_verificare": 346320
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 59,
+   "importo_esclusi_padri": 33619220,
+   "importo_esclusi_padri_e_da_verificare": 33619220
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 11,
+   "importo_esclusi_padri": 2183148,
+   "importo_esclusi_padri_e_da_verificare": 2183148
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 1825694,
+   "importo_esclusi_padri_e_da_verificare": 1825694
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 326373,
+   "importo_esclusi_padri_e_da_verificare": 326373
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 1921,
+   "importo_esclusi_padri": 630726523,
+   "importo_esclusi_padri_e_da_verificare": 630726523
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 7,
+   "importo_esclusi_padri": 936688,
+   "importo_esclusi_padri_e_da_verificare": 936688
+  }
+ ],
+ "2023": [
+  {
+   "via": "0-ict-non-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 72458,
+   "importo_esclusi_padri": 11655085027,
+   "importo_esclusi_padri_e_da_verificare": 11655085027
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 1604428,
+   "importo_esclusi_padri_e_da_verificare": 1604428
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 0,
+   "importo_esclusi_padri_e_da_verificare": 0
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 87120,
+   "importo_esclusi_padri_e_da_verificare": 87120
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 25,
+   "importo_esclusi_padri": 673095,
+   "importo_esclusi_padri_e_da_verificare": 673095
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 9317,
+   "importo_esclusi_padri_e_da_verificare": 9317
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 33,
+   "importo_esclusi_padri": 27364676,
+   "importo_esclusi_padri_e_da_verificare": 7364676
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 5,
+   "importo_esclusi_padri": 221139,
+   "importo_esclusi_padri_e_da_verificare": 221139
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 7,
+   "importo_esclusi_padri": 545227,
+   "importo_esclusi_padri_e_da_verificare": 545227
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 25,
+   "importo_esclusi_padri": 653200,
+   "importo_esclusi_padri_e_da_verificare": 653200
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 88077,
+   "importo_esclusi_padri_e_da_verificare": 88077
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 90800,
+   "importo_esclusi_padri_e_da_verificare": 90800
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 6300,
+   "importo_esclusi_padri_e_da_verificare": 6300
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 12,
+   "importo_esclusi_padri": 2303034,
+   "importo_esclusi_padri_e_da_verificare": 2303034
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 28500,
+   "importo_esclusi_padri_e_da_verificare": 28500
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 5604149,
+   "importo_esclusi_padri_e_da_verificare": 5604149
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 62,
+   "importo_esclusi_padri": 28793058,
+   "importo_esclusi_padri_e_da_verificare": 8793058
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 139440,
+   "importo_esclusi_padri_e_da_verificare": 139440
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 8,
+   "importo_esclusi_padri": 3612596,
+   "importo_esclusi_padri_e_da_verificare": 3612596
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 197000,
+   "importo_esclusi_padri_e_da_verificare": 197000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 5,
+   "importo_esclusi_padri": 1025944,
+   "importo_esclusi_padri_e_da_verificare": 1025944
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 48,
+   "importo_esclusi_padri": 8681731,
+   "importo_esclusi_padri_e_da_verificare": 8681731
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 22,
+   "importo_esclusi_padri": 15691783,
+   "importo_esclusi_padri_e_da_verificare": 15691783
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 196,
+   "importo_esclusi_padri": 81981370,
+   "importo_esclusi_padri_e_da_verificare": 81981370
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 479330,
+   "importo_esclusi_padri_e_da_verificare": 479330
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 197,
+   "importo_esclusi_padri": 455306782,
+   "importo_esclusi_padri_e_da_verificare": 194287629
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 80000,
+   "importo_esclusi_padri_e_da_verificare": 80000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 23,
+   "importo_esclusi_padri": 11511807,
+   "importo_esclusi_padri_e_da_verificare": 11511807
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 4,
+   "importo_esclusi_padri": 303672,
+   "importo_esclusi_padri_e_da_verificare": 303672
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 28,
+   "importo_esclusi_padri": 26401318,
+   "importo_esclusi_padri_e_da_verificare": 26401318
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 116,
+   "importo_esclusi_padri": 126968171,
+   "importo_esclusi_padri_e_da_verificare": 126968171
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 278639,
+   "importo_esclusi_padri_e_da_verificare": 278639
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 176557,
+   "importo_esclusi_padri_e_da_verificare": 176557
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 133,
+   "importo_esclusi_padri": 744072384,
+   "importo_esclusi_padri_e_da_verificare": 544701998
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 759523,
+   "importo_esclusi_padri_e_da_verificare": 759523
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 28,
+   "importo_esclusi_padri": 171336794,
+   "importo_esclusi_padri_e_da_verificare": 171336794
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 459300,
+   "importo_esclusi_padri_e_da_verificare": 459300
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 87260,
+   "importo_esclusi_padri_e_da_verificare": 87260
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 9,
+   "importo_esclusi_padri": 4370503,
+   "importo_esclusi_padri_e_da_verificare": 4370503
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza",
+   "giurisdizione": "UE",
+   "cig": 69,
+   "importo_esclusi_padri": 33010047,
+   "importo_esclusi_padri_e_da_verificare": 33010047
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 7,
+   "importo_esclusi_padri": 310780,
+   "importo_esclusi_padri_e_da_verificare": 310780
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 12799803,
+   "importo_esclusi_padri_e_da_verificare": 12799803
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 13,
+   "importo_esclusi_padri": 2765734,
+   "importo_esclusi_padri_e_da_verificare": 2765734
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 47,
+   "importo_esclusi_padri": 82391847,
+   "importo_esclusi_padri_e_da_verificare": 82391847
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 100000,
+   "importo_esclusi_padri_e_da_verificare": 100000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 8046981,
+   "importo_esclusi_padri_e_da_verificare": 8046981
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 5,
+   "importo_esclusi_padri": 44230347,
+   "importo_esclusi_padri_e_da_verificare": 44230347
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 135,
+   "importo_esclusi_padri": 79922577,
+   "importo_esclusi_padri_e_da_verificare": 73922577
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 3645,
+   "importo_esclusi_padri_e_da_verificare": 3645
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 899,
+   "importo_esclusi_padri_e_da_verificare": 899
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 2552437,
+   "importo_esclusi_padri_e_da_verificare": 2552437
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 174623,
+   "importo_esclusi_padri_e_da_verificare": 174623
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 500001,
+   "importo_esclusi_padri_e_da_verificare": 500001
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 5,
+   "importo_esclusi_padri": 302615,
+   "importo_esclusi_padri_e_da_verificare": 302615
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 1053420,
+   "importo_esclusi_padri_e_da_verificare": 1053420
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 520147,
+   "importo_esclusi_padri_e_da_verificare": 520147
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 206625,
+   "importo_esclusi_padri_e_da_verificare": 206625
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 4,
+   "importo_esclusi_padri": 10277834,
+   "importo_esclusi_padri_e_da_verificare": 2277834
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 134312,
+   "importo_esclusi_padri_e_da_verificare": 134312
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 53,
+   "importo_esclusi_padri": 11636119,
+   "importo_esclusi_padri_e_da_verificare": 11636119
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 5,
+   "importo_esclusi_padri": 2596209,
+   "importo_esclusi_padri_e_da_verificare": 2596209
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 1270168,
+   "importo_esclusi_padri_e_da_verificare": 1270168
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 20737227,
+   "importo_esclusi_padri_e_da_verificare": 20737227
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 4325300,
+   "importo_esclusi_padri_e_da_verificare": 4325300
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 9721,
+   "importo_esclusi_padri": 640315424,
+   "importo_esclusi_padri_e_da_verificare": 640315424
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 2,
+   "importo_esclusi_padri": 50600,
+   "importo_esclusi_padri_e_da_verificare": 50600
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia",
+   "giurisdizione": "",
+   "cig": 6,
+   "importo_esclusi_padri": 412863,
+   "importo_esclusi_padri_e_da_verificare": 412863
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 7,
+   "importo_esclusi_padri": 697501,
+   "importo_esclusi_padri_e_da_verificare": 697501
+  }
+ ],
+ "2024": [
+  {
+   "via": "0-ict-non-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 59852,
+   "importo_esclusi_padri": 46745137935,
+   "importo_esclusi_padri_e_da_verificare": 46745137935
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 79,
+   "importo_esclusi_padri": 1649529,
+   "importo_esclusi_padri_e_da_verificare": 1649529
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 34,
+   "importo_esclusi_padri": 433832,
+   "importo_esclusi_padri_e_da_verificare": 433832
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 48,
+   "importo_esclusi_padri": 8932889,
+   "importo_esclusi_padri_e_da_verificare": 8932889
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 17,
+   "importo_esclusi_padri": 1412182,
+   "importo_esclusi_padri_e_da_verificare": 1412182
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 10,
+   "importo_esclusi_padri": 210457,
+   "importo_esclusi_padri_e_da_verificare": 210457
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 38000,
+   "importo_esclusi_padri_e_da_verificare": 38000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 23,
+   "importo_esclusi_padri": 328362,
+   "importo_esclusi_padri_e_da_verificare": 328362
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 36,
+   "importo_esclusi_padri": 984458,
+   "importo_esclusi_padri_e_da_verificare": 984458
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 18925,
+   "importo_esclusi_padri_e_da_verificare": 18925
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 42970,
+   "importo_esclusi_padri_e_da_verificare": 42970
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 33,
+   "importo_esclusi_padri": 1318764,
+   "importo_esclusi_padri_e_da_verificare": 1318764
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 13,
+   "importo_esclusi_padri": 280164,
+   "importo_esclusi_padri_e_da_verificare": 280164
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 7000,
+   "importo_esclusi_padri_e_da_verificare": 7000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 802299,
+   "importo_esclusi_padri_e_da_verificare": 802299
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 862418,
+   "importo_esclusi_padri_e_da_verificare": 862418
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 119,
+   "importo_esclusi_padri": 6508905,
+   "importo_esclusi_padri_e_da_verificare": 6508905
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 53,
+   "importo_esclusi_padri": 789069,
+   "importo_esclusi_padri_e_da_verificare": 789069
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 9,
+   "importo_esclusi_padri": 411060,
+   "importo_esclusi_padri_e_da_verificare": 411060
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 221894,
+   "importo_esclusi_padri_e_da_verificare": 221894
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 32509,
+   "importo_esclusi_padri_e_da_verificare": 32509
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 181,
+   "importo_esclusi_padri": 314099715,
+   "importo_esclusi_padri_e_da_verificare": 56180715
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 64,
+   "importo_esclusi_padri": 55598047,
+   "importo_esclusi_padri_e_da_verificare": 55598047
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 554,
+   "importo_esclusi_padri": 110967151,
+   "importo_esclusi_padri_e_da_verificare": 110967151
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 207,
+   "importo_esclusi_padri": 13839217,
+   "importo_esclusi_padri_e_da_verificare": 13839217
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 331,
+   "importo_esclusi_padri": 1652079676,
+   "importo_esclusi_padri_e_da_verificare": 184654001
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 134,
+   "importo_esclusi_padri": 324374328,
+   "importo_esclusi_padri_e_da_verificare": 63435540
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 35,
+   "importo_esclusi_padri": 4784293,
+   "importo_esclusi_padri_e_da_verificare": 4784293
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 16,
+   "importo_esclusi_padri": 557340,
+   "importo_esclusi_padri_e_da_verificare": 557340
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 11,
+   "importo_esclusi_padri": 1102410,
+   "importo_esclusi_padri_e_da_verificare": 1102410
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 3,
+   "importo_esclusi_padri": 56377,
+   "importo_esclusi_padri_e_da_verificare": 56377
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 21660,
+   "importo_esclusi_padri_e_da_verificare": 21660
+  },
+  {
+   "via": "3-marchio",
+   "provider": "OVHcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 129640,
+   "importo_esclusi_padri_e_da_verificare": 129640
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 23,
+   "importo_esclusi_padri": 9196522,
+   "importo_esclusi_padri_e_da_verificare": 9196522
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 12,
+   "importo_esclusi_padri": 1669257,
+   "importo_esclusi_padri_e_da_verificare": 1669257
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 124,
+   "importo_esclusi_padri": 563431539,
+   "importo_esclusi_padri_e_da_verificare": 102771164
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 29,
+   "importo_esclusi_padri": 2226995,
+   "importo_esclusi_padri_e_da_verificare": 2226995
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 19670753,
+   "importo_esclusi_padri_e_da_verificare": 19670753
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 80000,
+   "importo_esclusi_padri_e_da_verificare": 80000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 164,
+   "importo_esclusi_padri": 635317951,
+   "importo_esclusi_padri_e_da_verificare": 500590415
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 82,
+   "importo_esclusi_padri": 970480174,
+   "importo_esclusi_padri_e_da_verificare": 186188453
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 31,
+   "importo_esclusi_padri": 113596364,
+   "importo_esclusi_padri_e_da_verificare": 105604740
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 12,
+   "importo_esclusi_padri": 54368779,
+   "importo_esclusi_padri_e_da_verificare": 54368779
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 15900,
+   "importo_esclusi_padri_e_da_verificare": 15900
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 26214,
+   "importo_esclusi_padri_e_da_verificare": 26214
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 20620,
+   "importo_esclusi_padri_e_da_verificare": 20620
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 13,
+   "importo_esclusi_padri": 93377936,
+   "importo_esclusi_padri_e_da_verificare": 24137936
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 5,
+   "importo_esclusi_padri": 20264874,
+   "importo_esclusi_padri_e_da_verificare": 20264874
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza",
+   "giurisdizione": "UE",
+   "cig": 62,
+   "importo_esclusi_padri": 33843812,
+   "importo_esclusi_padri_e_da_verificare": 33843812
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 20,
+   "importo_esclusi_padri": 8330819,
+   "importo_esclusi_padri_e_da_verificare": 8330819
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 9,
+   "importo_esclusi_padri": 19225889,
+   "importo_esclusi_padri_e_da_verificare": 19225889
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 667780,
+   "importo_esclusi_padri_e_da_verificare": 667780
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 242176,
+   "importo_esclusi_padri_e_da_verificare": 242176
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 105454,
+   "importo_esclusi_padri_e_da_verificare": 105454
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 7600,
+   "importo_esclusi_padri_e_da_verificare": 7600
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 69,
+   "importo_esclusi_padri": 95591131,
+   "importo_esclusi_padri_e_da_verificare": 31707968
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 16,
+   "importo_esclusi_padri": 6074306,
+   "importo_esclusi_padri_e_da_verificare": 6074306
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 12,
+   "importo_esclusi_padri": 295444,
+   "importo_esclusi_padri_e_da_verificare": 295444
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 60017,
+   "importo_esclusi_padri_e_da_verificare": 60017
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 8,
+   "importo_esclusi_padri": 3941629,
+   "importo_esclusi_padri_e_da_verificare": 3941629
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 2859527,
+   "importo_esclusi_padri_e_da_verificare": 2859527
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 55000,
+   "importo_esclusi_padri_e_da_verificare": 55000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 22127,
+   "importo_esclusi_padri_e_da_verificare": 22127
+  },
+  {
+   "via": "3-marchio",
+   "provider": "TIM",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 54125,
+   "importo_esclusi_padri_e_da_verificare": 54125
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 175,
+   "importo_esclusi_padri": 195279557,
+   "importo_esclusi_padri_e_da_verificare": 125279557
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 53,
+   "importo_esclusi_padri": 90682660,
+   "importo_esclusi_padri_e_da_verificare": 20682660
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 25345,
+   "importo_esclusi_padri_e_da_verificare": 25345
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 3100,
+   "importo_esclusi_padri_e_da_verificare": 3100
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 11,
+   "importo_esclusi_padri": 303253,
+   "importo_esclusi_padri_e_da_verificare": 303253
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 9,
+   "importo_esclusi_padri": 310292,
+   "importo_esclusi_padri_e_da_verificare": 310292
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 800000,
+   "importo_esclusi_padri_e_da_verificare": 800000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 5,
+   "importo_esclusi_padri": 903847,
+   "importo_esclusi_padri_e_da_verificare": 903847
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 5884426,
+   "importo_esclusi_padri_e_da_verificare": 5884426
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 12194143,
+   "importo_esclusi_padri_e_da_verificare": 12194143
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 61800,
+   "importo_esclusi_padri_e_da_verificare": 61800
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 179524,
+   "importo_esclusi_padri_e_da_verificare": 179524
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 709124,
+   "importo_esclusi_padri_e_da_verificare": 709124
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 10000,
+   "importo_esclusi_padri_e_da_verificare": 10000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 108,
+   "importo_esclusi_padri": 16531048,
+   "importo_esclusi_padri_e_da_verificare": 16531048
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 22,
+   "importo_esclusi_padri": 4255267,
+   "importo_esclusi_padri_e_da_verificare": 4255267
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 10000,
+   "importo_esclusi_padri_e_da_verificare": 10000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 58134000,
+   "importo_esclusi_padri_e_da_verificare": 134000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 186921,
+   "importo_esclusi_padri_e_da_verificare": 186921
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 1371550,
+   "importo_esclusi_padri_e_da_verificare": 1371550
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 847839,
+   "importo_esclusi_padri_e_da_verificare": 847839
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 446547,
+   "importo_esclusi_padri_e_da_verificare": 446547
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 3958228,
+   "importo_esclusi_padri_e_da_verificare": 3958228
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 616279,
+   "importo_esclusi_padri_e_da_verificare": 616279
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 585000,
+   "importo_esclusi_padri_e_da_verificare": 585000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 132321,
+   "importo_esclusi_padri_e_da_verificare": 132321
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 3,
+   "importo_esclusi_padri": 575080,
+   "importo_esclusi_padri_e_da_verificare": 575080
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 40152,
+   "importo_esclusi_padri_e_da_verificare": 40152
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Seeweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 62250,
+   "importo_esclusi_padri_e_da_verificare": 62250
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Seeweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 6652,
+   "importo_esclusi_padri_e_da_verificare": 6652
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 83,
+   "importo_esclusi_padri": 18560556,
+   "importo_esclusi_padri_e_da_verificare": 18560556
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 59,
+   "importo_esclusi_padri": 2610024,
+   "importo_esclusi_padri_e_da_verificare": 2610024
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 690852,
+   "importo_esclusi_padri_e_da_verificare": 690852
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 8,
+   "importo_esclusi_padri": 508884,
+   "importo_esclusi_padri_e_da_verificare": 508884
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 28172,
+   "importo_esclusi_padri_e_da_verificare": 28172
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 16,
+   "importo_esclusi_padri": 498563,
+   "importo_esclusi_padri_e_da_verificare": 498563
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 3688,
+   "importo_esclusi_padri": 656215408,
+   "importo_esclusi_padri_e_da_verificare": 656215408
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 1,
+   "importo_esclusi_padri": 15000,
+   "importo_esclusi_padri_e_da_verificare": 15000
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia",
+   "giurisdizione": "",
+   "cig": 29,
+   "importo_esclusi_padri": 3655774,
+   "importo_esclusi_padri_e_da_verificare": 3655774
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 23,
+   "importo_esclusi_padri": 523278,
+   "importo_esclusi_padri_e_da_verificare": 523278
+  }
+ ],
+ "2025": [
+  {
+   "via": "0-ict-non-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 99425,
+   "importo_esclusi_padri": 27637995573,
+   "importo_esclusi_padri_e_da_verificare": 27637995573
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 411791,
+   "importo_esclusi_padri_e_da_verificare": 411791
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 145,
+   "importo_esclusi_padri": 2158267,
+   "importo_esclusi_padri_e_da_verificare": 2158267
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 34666,
+   "importo_esclusi_padri_e_da_verificare": 34666
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 53,
+   "importo_esclusi_padri": 36483659,
+   "importo_esclusi_padri_e_da_verificare": 6483659
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 44,
+   "importo_esclusi_padri": 1263639,
+   "importo_esclusi_padri_e_da_verificare": 1263639
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 232645,
+   "importo_esclusi_padri_e_da_verificare": 232645
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 47,
+   "importo_esclusi_padri": 1202585,
+   "importo_esclusi_padri_e_da_verificare": 1202585
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 23,
+   "importo_esclusi_padri": 716995,
+   "importo_esclusi_padri_e_da_verificare": 716995
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 34570,
+   "importo_esclusi_padri_e_da_verificare": 34570
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 56385,
+   "importo_esclusi_padri_e_da_verificare": 56385
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 40,
+   "importo_esclusi_padri": 1562225,
+   "importo_esclusi_padri_e_da_verificare": 1562225
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 278332,
+   "importo_esclusi_padri_e_da_verificare": 278332
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 7910,
+   "importo_esclusi_padri_e_da_verificare": 7910
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 135138,
+   "importo_esclusi_padri_e_da_verificare": 135138
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 15,
+   "importo_esclusi_padri": 51987458,
+   "importo_esclusi_padri_e_da_verificare": 51987458
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 181,
+   "importo_esclusi_padri": 15911703,
+   "importo_esclusi_padri_e_da_verificare": 15911703
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 142852,
+   "importo_esclusi_padri_e_da_verificare": 142852
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 163433,
+   "importo_esclusi_padri_e_da_verificare": 163433
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 5,
+   "importo_esclusi_padri_e_da_verificare": 5
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 957249,
+   "importo_esclusi_padri_e_da_verificare": 957249
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 211,
+   "importo_esclusi_padri": 128467132,
+   "importo_esclusi_padri_e_da_verificare": 88121132
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 26,
+   "importo_esclusi_padri": 711320,
+   "importo_esclusi_padri_e_da_verificare": 711320
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 867,
+   "importo_esclusi_padri": 144797492,
+   "importo_esclusi_padri_e_da_verificare": 81297492
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 50,
+   "importo_esclusi_padri": 6817385,
+   "importo_esclusi_padri_e_da_verificare": 6817385
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 523,
+   "importo_esclusi_padri": 667587712,
+   "importo_esclusi_padri_e_da_verificare": 237587712
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 8,
+   "importo_esclusi_padri": 171350,
+   "importo_esclusi_padri_e_da_verificare": 171350
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 94,
+   "importo_esclusi_padri": 13451865,
+   "importo_esclusi_padri_e_da_verificare": 13451865
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 164295,
+   "importo_esclusi_padri_e_da_verificare": 164295
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 10,
+   "importo_esclusi_padri": 466555,
+   "importo_esclusi_padri_e_da_verificare": 466555
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 118000,
+   "importo_esclusi_padri_e_da_verificare": 118000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "OVHcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 57852,
+   "importo_esclusi_padri_e_da_verificare": 57852
+  },
+  {
+   "via": "3-marchio",
+   "provider": "OVHcloud",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 5600,
+   "importo_esclusi_padri_e_da_verificare": 5600
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 39,
+   "importo_esclusi_padri": 12417164,
+   "importo_esclusi_padri_e_da_verificare": 12417164
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 168,
+   "importo_esclusi_padri": 192640165,
+   "importo_esclusi_padri_e_da_verificare": 192640165
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 60660,
+   "importo_esclusi_padri_e_da_verificare": 60660
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 2895990,
+   "importo_esclusi_padri_e_da_verificare": 2895990
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 211,
+   "importo_esclusi_padri": 862398649,
+   "importo_esclusi_padri_e_da_verificare": 496391391
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 23,
+   "importo_esclusi_padri": 22715482,
+   "importo_esclusi_padri_e_da_verificare": 22715482
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 45,
+   "importo_esclusi_padri": 65553135,
+   "importo_esclusi_padri_e_da_verificare": 65553135
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 9542355,
+   "importo_esclusi_padri_e_da_verificare": 9542355
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 72070,
+   "importo_esclusi_padri_e_da_verificare": 72070
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 159973,
+   "importo_esclusi_padri_e_da_verificare": 159973
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 23,
+   "importo_esclusi_padri": 42449485,
+   "importo_esclusi_padri_e_da_verificare": 42449485
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 5000,
+   "importo_esclusi_padri_e_da_verificare": 5000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza",
+   "giurisdizione": "UE",
+   "cig": 101,
+   "importo_esclusi_padri": 54583447,
+   "importo_esclusi_padri_e_da_verificare": 54583447
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 151728,
+   "importo_esclusi_padri_e_da_verificare": 151728
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 3,
+   "importo_esclusi_padri": 171200,
+   "importo_esclusi_padri_e_da_verificare": 171200
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 42000,
+   "importo_esclusi_padri_e_da_verificare": 42000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 40958,
+   "importo_esclusi_padri_e_da_verificare": 40958
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SPC Cloud lotto 1",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 5889,
+   "importo_esclusi_padri_e_da_verificare": 5889
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 87,
+   "importo_esclusi_padri": 126278262,
+   "importo_esclusi_padri_e_da_verificare": 94278262
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 108266,
+   "importo_esclusi_padri_e_da_verificare": 108266
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 24,
+   "importo_esclusi_padri": 23451232,
+   "importo_esclusi_padri_e_da_verificare": 23451232
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Seeweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 6228,
+   "importo_esclusi_padri_e_da_verificare": 6228
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 13,
+   "importo_esclusi_padri": 39446852,
+   "importo_esclusi_padri_e_da_verificare": 39446852
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 137500,
+   "importo_esclusi_padri_e_da_verificare": 137500
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 99200,
+   "importo_esclusi_padri_e_da_verificare": 99200
+  },
+  {
+   "via": "3-marchio",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 11604,
+   "importo_esclusi_padri_e_da_verificare": 11604
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 279,
+   "importo_esclusi_padri": 335501313,
+   "importo_esclusi_padri_e_da_verificare": 159501313
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 5,
+   "importo_esclusi_padri": 257700,
+   "importo_esclusi_padri_e_da_verificare": 257700
+  },
+  {
+   "via": "3-marchio",
+   "provider": "WIIT",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 74420,
+   "importo_esclusi_padri_e_da_verificare": 74420
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 8,
+   "importo_esclusi_padri": 105488,
+   "importo_esclusi_padri_e_da_verificare": 105488
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 136500,
+   "importo_esclusi_padri_e_da_verificare": 136500
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 14,
+   "importo_esclusi_padri": 288008,
+   "importo_esclusi_padri_e_da_verificare": 288008
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 16,
+   "importo_esclusi_padri": 2473488,
+   "importo_esclusi_padri_e_da_verificare": 2473488
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 5,
+   "importo_esclusi_padri": 2728111,
+   "importo_esclusi_padri_e_da_verificare": 2728111
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 128527,
+   "importo_esclusi_padri_e_da_verificare": 128527
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 187756,
+   "importo_esclusi_padri_e_da_verificare": 187756
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 59000,
+   "importo_esclusi_padri_e_da_verificare": 59000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 149500,
+   "importo_esclusi_padri_e_da_verificare": 149500
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 141,
+   "importo_esclusi_padri": 29679796,
+   "importo_esclusi_padri_e_da_verificare": 29679796
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 1505030,
+   "importo_esclusi_padri_e_da_verificare": 1505030
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 263361,
+   "importo_esclusi_padri_e_da_verificare": 263361
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 50000,
+   "importo_esclusi_padri_e_da_verificare": 50000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 168826,
+   "importo_esclusi_padri_e_da_verificare": 168826
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 19644,
+   "importo_esclusi_padri_e_da_verificare": 19644
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 124800,
+   "importo_esclusi_padri_e_da_verificare": 124800
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 12228912,
+   "importo_esclusi_padri_e_da_verificare": 12228912
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 61389,
+   "importo_esclusi_padri_e_da_verificare": 61389
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 2113880,
+   "importo_esclusi_padri_e_da_verificare": 2113880
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 137404,
+   "importo_esclusi_padri_e_da_verificare": 137404
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 170489,
+   "importo_esclusi_padri_e_da_verificare": 170489
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 5,
+   "importo_esclusi_padri": 827236,
+   "importo_esclusi_padri_e_da_verificare": 827236
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 10,
+   "importo_esclusi_padri": 258103,
+   "importo_esclusi_padri_e_da_verificare": 258103
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Seeweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 5,
+   "importo_esclusi_padri": 210905,
+   "importo_esclusi_padri_e_da_verificare": 210905
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 83,
+   "importo_esclusi_padri": 11480465,
+   "importo_esclusi_padri_e_da_verificare": 11480465
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 16,
+   "importo_esclusi_padri": 3832683,
+   "importo_esclusi_padri_e_da_verificare": 3832683
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 26920317,
+   "importo_esclusi_padri_e_da_verificare": 26920317
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 33769,
+   "importo_esclusi_padri_e_da_verificare": 33769
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 275104,
+   "importo_esclusi_padri_e_da_verificare": 275104
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 23,
+   "importo_esclusi_padri": 505195,
+   "importo_esclusi_padri_e_da_verificare": 505195
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 6925,
+   "importo_esclusi_padri": 474807667,
+   "importo_esclusi_padri_e_da_verificare": 474807667
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 3,
+   "importo_esclusi_padri": 146595,
+   "importo_esclusi_padri_e_da_verificare": 146595
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia",
+   "giurisdizione": "",
+   "cig": 51,
+   "importo_esclusi_padri": 1324148,
+   "importo_esclusi_padri_e_da_verificare": 1324148
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 48,
+   "importo_esclusi_padri": 4650995,
+   "importo_esclusi_padri_e_da_verificare": 4650995
+  }
+ ],
+ "2026": [
+  {
+   "via": "0-ict-non-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 71700,
+   "importo_esclusi_padri": 12873012587,
+   "importo_esclusi_padri_e_da_verificare": 12873012587
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 48,
+   "importo_esclusi_padri": 31159087,
+   "importo_esclusi_padri_e_da_verificare": 31159087
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 8,
+   "importo_esclusi_padri": 1275091,
+   "importo_esclusi_padri_e_da_verificare": 1275091
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 12,
+   "importo_esclusi_padri": 3293500,
+   "importo_esclusi_padri_e_da_verificare": 3293500
+  },
+  {
+   "via": "1-lotto",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 371616,
+   "importo_esclusi_padri_e_da_verificare": 371616
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 53,
+   "importo_esclusi_padri": 58127761,
+   "importo_esclusi_padri_e_da_verificare": 40127761
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 26,
+   "importo_esclusi_padri": 13079241,
+   "importo_esclusi_padri_e_da_verificare": 13079241
+  },
+  {
+   "via": "1-lotto",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 36488,
+   "importo_esclusi_padri_e_da_verificare": 36488
+  },
+  {
+   "via": "2-lotto-nel-testo",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 10000,
+   "importo_esclusi_padri_e_da_verificare": 10000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 89,
+   "importo_esclusi_padri": 1444263,
+   "importo_esclusi_padri_e_da_verificare": 1444263
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Adobe",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 10330,
+   "importo_esclusi_padri_e_da_verificare": 10330
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 45,
+   "importo_esclusi_padri": 3231321,
+   "importo_esclusi_padri_e_da_verificare": 3231321
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 79849,
+   "importo_esclusi_padri_e_da_verificare": 79849
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Amazon Web Services",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 9,
+   "importo_esclusi_padri": 388355,
+   "importo_esclusi_padri_e_da_verificare": 388355
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 28,
+   "importo_esclusi_padri": 2458959,
+   "importo_esclusi_padri_e_da_verificare": 2458959
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 16,
+   "importo_esclusi_padri": 625817,
+   "importo_esclusi_padri_e_da_verificare": 625817
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Aruba",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 93366,
+   "importo_esclusi_padri_e_da_verificare": 93366
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 28,
+   "importo_esclusi_padri": 806836,
+   "importo_esclusi_padri_e_da_verificare": 806836
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 87389,
+   "importo_esclusi_padri_e_da_verificare": 87389
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 6899,
+   "importo_esclusi_padri_e_da_verificare": 6899
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cisco Webex",
+   "servizio": "telefonia",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 425600,
+   "importo_esclusi_padri_e_da_verificare": 425600
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 1575892,
+   "importo_esclusi_padri_e_da_verificare": 1575892
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Cloudera",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 33903,
+   "importo_esclusi_padri_e_da_verificare": 33903
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 200,
+   "importo_esclusi_padri": 29914889,
+   "importo_esclusi_padri_e_da_verificare": 29914889
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 10,
+   "importo_esclusi_padri": 334527,
+   "importo_esclusi_padri_e_da_verificare": 334527
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Google",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 1031737,
+   "importo_esclusi_padri_e_da_verificare": 1031737
+  },
+  {
+   "via": "3-marchio",
+   "provider": "IBM",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 104676,
+   "importo_esclusi_padri_e_da_verificare": 104676
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 86,
+   "importo_esclusi_padri": 32133116,
+   "importo_esclusi_padri_e_da_verificare": 32133116
+  },
+  {
+   "via": "3-marchio",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 16,
+   "importo_esclusi_padri": 124863514,
+   "importo_esclusi_padri_e_da_verificare": 7609330
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 577,
+   "importo_esclusi_padri": 55957179,
+   "importo_esclusi_padri_e_da_verificare": 55957179
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 28,
+   "importo_esclusi_padri": 1912764,
+   "importo_esclusi_padri_e_da_verificare": 1912764
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 363,
+   "importo_esclusi_padri": 117883144,
+   "importo_esclusi_padri_e_da_verificare": 117883144
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 97192,
+   "importo_esclusi_padri_e_da_verificare": 97192
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 49,
+   "importo_esclusi_padri": 3573913,
+   "importo_esclusi_padri_e_da_verificare": 3573913
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 6,
+   "importo_esclusi_padri": 176180,
+   "importo_esclusi_padri_e_da_verificare": 176180
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 11,
+   "importo_esclusi_padri": 307205,
+   "importo_esclusi_padri_e_da_verificare": 307205
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Nextcloud",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 6200,
+   "importo_esclusi_padri_e_da_verificare": 6200
+  },
+  {
+   "via": "3-marchio",
+   "provider": "OVHcloud",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 2,
+   "importo_esclusi_padri": 95000,
+   "importo_esclusi_padri_e_da_verificare": 95000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 30,
+   "importo_esclusi_padri": 12805174,
+   "importo_esclusi_padri_e_da_verificare": 12805174
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 111092,
+   "importo_esclusi_padri_e_da_verificare": 111092
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 119,
+   "importo_esclusi_padri": 150877557,
+   "importo_esclusi_padri_e_da_verificare": 150877557
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 3,
+   "importo_esclusi_padri": 4101434,
+   "importo_esclusi_padri_e_da_verificare": 4101434
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Oracle",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 8,
+   "importo_esclusi_padri": 8515416,
+   "importo_esclusi_padri_e_da_verificare": 8515416
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 86,
+   "importo_esclusi_padri": 160330158,
+   "importo_esclusi_padri_e_da_verificare": 138730158
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 75199130,
+   "importo_esclusi_padri_e_da_verificare": 906842
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 22,
+   "importo_esclusi_padri": 18244192,
+   "importo_esclusi_padri_e_da_verificare": 18244192
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 61400,
+   "importo_esclusi_padri_e_da_verificare": 61400
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 75927,
+   "importo_esclusi_padri_e_da_verificare": 75927
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 66455,
+   "importo_esclusi_padri_e_da_verificare": 66455
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Retelit",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 75054,
+   "importo_esclusi_padri_e_da_verificare": 75054
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 22,
+   "importo_esclusi_padri": 109373956,
+   "importo_esclusi_padri_e_da_verificare": 52151214
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza",
+   "giurisdizione": "UE",
+   "cig": 36,
+   "importo_esclusi_padri": 20667979,
+   "importo_esclusi_padri_e_da_verificare": 20667979
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "licenza-fuori-cpv-ict",
+   "giurisdizione": "UE",
+   "cig": 4,
+   "importo_esclusi_padri": 68911,
+   "importo_esclusi_padri_e_da_verificare": 68911
+  },
+  {
+   "via": "3-marchio",
+   "provider": "SAP",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "UE",
+   "cig": 3,
+   "importo_esclusi_padri": 6042135,
+   "importo_esclusi_padri_e_da_verificare": 6042135
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 52,
+   "importo_esclusi_padri": 28244725,
+   "importo_esclusi_padri_e_da_verificare": 28244725
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 103880,
+   "importo_esclusi_padri_e_da_verificare": 103880
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Salesforce",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 11,
+   "importo_esclusi_padri": 5568545,
+   "importo_esclusi_padri_e_da_verificare": 5568545
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 9,
+   "importo_esclusi_padri": 10301109,
+   "importo_esclusi_padri_e_da_verificare": 10301109
+  },
+  {
+   "via": "3-marchio",
+   "provider": "ServiceNow",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 417000,
+   "importo_esclusi_padri_e_da_verificare": 417000
+  },
+  {
+   "via": "3-marchio",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 92333,
+   "importo_esclusi_padri_e_da_verificare": 92333
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 151,
+   "importo_esclusi_padri": 207046036,
+   "importo_esclusi_padri_e_da_verificare": 48630571
+  },
+  {
+   "via": "3-marchio",
+   "provider": "VMware",
+   "servizio": "software-infrastruttura-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 10,
+   "importo_esclusi_padri": 1758010,
+   "importo_esclusi_padri_e_da_verificare": 1758010
+  },
+  {
+   "via": "3-marchio",
+   "provider": "WIIT",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 20170,
+   "importo_esclusi_padri_e_da_verificare": 20170
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 15,
+   "importo_esclusi_padri": 119988,
+   "importo_esclusi_padri_e_da_verificare": 119988
+  },
+  {
+   "via": "3-marchio",
+   "provider": "Zoom",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 6217,
+   "importo_esclusi_padri_e_da_verificare": 6217
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Aruba",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 294180,
+   "importo_esclusi_padri_e_da_verificare": 294180
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 3425073,
+   "importo_esclusi_padri_e_da_verificare": 3425073
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 4148361,
+   "importo_esclusi_padri_e_da_verificare": 4148361
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 106600,
+   "importo_esclusi_padri_e_da_verificare": 106600
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Fastweb",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 230924,
+   "importo_esclusi_padri_e_da_verificare": 230924
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Google",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 5013,
+   "importo_esclusi_padri_e_da_verificare": 5013
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house",
+   "giurisdizione": "IT",
+   "cig": 71,
+   "importo_esclusi_padri": 12585067,
+   "importo_esclusi_padri_e_da_verificare": 12585067
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "In-house pubblico",
+   "servizio": "in-house-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 7,
+   "importo_esclusi_padri": 505374,
+   "importo_esclusi_padri_e_da_verificare": 505374
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Microsoft",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 112000,
+   "importo_esclusi_padri_e_da_verificare": 112000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Microsoft",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 1,
+   "importo_esclusi_padri": 52000,
+   "importo_esclusi_padri_e_da_verificare": 52000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Oracle",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 4,
+   "importo_esclusi_padri": 243000,
+   "importo_esclusi_padri_e_da_verificare": 243000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 581438944,
+   "importo_esclusi_padri_e_da_verificare": 1054820
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "psn-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 164844,
+   "importo_esclusi_padri_e_da_verificare": 164844
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Polo Strategico Nazionale",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 35799,
+   "importo_esclusi_padri_e_da_verificare": 35799
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 10,
+   "importo_esclusi_padri": 412501,
+   "importo_esclusi_padri_e_da_verificare": 412501
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 2,
+   "importo_esclusi_padri": 2448500,
+   "importo_esclusi_padri_e_da_verificare": 2448500
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "servizi-professionali-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 131900,
+   "importo_esclusi_padri_e_da_verificare": 131900
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Retelit",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 81000,
+   "importo_esclusi_padri_e_da_verificare": 81000
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "SAP",
+   "servizio": "cloud",
+   "giurisdizione": "UE",
+   "cig": 1,
+   "importo_esclusi_padri": 30515,
+   "importo_esclusi_padri_e_da_verificare": 30515
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Salesforce",
+   "servizio": "cloud",
+   "giurisdizione": "EXTRA-UE",
+   "cig": 2,
+   "importo_esclusi_padri": 89448,
+   "importo_esclusi_padri_e_da_verificare": 89448
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "Seeweb",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 21507,
+   "importo_esclusi_padri_e_da_verificare": 21507
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 38,
+   "importo_esclusi_padri": 16037709,
+   "importo_esclusi_padri_e_da_verificare": 16037709
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "cloud-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 6,
+   "importo_esclusi_padri": 1013289,
+   "importo_esclusi_padri_e_da_verificare": 1013289
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "servizi-professionali",
+   "giurisdizione": "IT",
+   "cig": 3,
+   "importo_esclusi_padri": 356215,
+   "importo_esclusi_padri_e_da_verificare": 356215
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia",
+   "giurisdizione": "IT",
+   "cig": 4,
+   "importo_esclusi_padri": 69478,
+   "importo_esclusi_padri_e_da_verificare": 69478
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "TIM",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "IT",
+   "cig": 12,
+   "importo_esclusi_padri": 313834,
+   "importo_esclusi_padri_e_da_verificare": 313834
+  },
+  {
+   "via": "5-fornitore",
+   "provider": "WIIT",
+   "servizio": "cloud",
+   "giurisdizione": "IT",
+   "cig": 1,
+   "importo_esclusi_padri": 5628,
+   "importo_esclusi_padri_e_da_verificare": 5628
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "",
+   "giurisdizione": "",
+   "cig": 4280,
+   "importo_esclusi_padri": 404981681,
+   "importo_esclusi_padri_e_da_verificare": 404981681
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 2,
+   "importo_esclusi_padri": 34100,
+   "importo_esclusi_padri_e_da_verificare": 34100
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia",
+   "giurisdizione": "",
+   "cig": 43,
+   "importo_esclusi_padri": 1331222,
+   "importo_esclusi_padri_e_da_verificare": 1331222
+  },
+  {
+   "via": "7-indeterminato-cloud",
+   "provider": "",
+   "servizio": "telefonia-fuori-cpv-ict",
+   "giurisdizione": "",
+   "cig": 39,
+   "importo_esclusi_padri": 1199636,
+   "importo_esclusi_padri_e_da_verificare": 1199636
+  }
+ ]
+}
