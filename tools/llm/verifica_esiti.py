@@ -6,6 +6,8 @@ Per ogni esito del giro 2 applica le regole di sito/content/progetto/formato-cla
      recuperato con esito "ok" e il cui testo cita il CIG (pertinenza "cig-citato"). Altrimenti diventa false.
   R2 confidenza "alta" solo se: R1 vale, oppure il provider_prodotto è nominato nell'oggetto del contratto
      e c'è almeno un documento archiviato "ok" per quel CIG. Altrimenti scende a "media".
+  R4 servizio PSN senza indicazione del servizio comprato (né nel testo né in un atto citante il CIG):
+     giurisdizione "non-determinabile" e confidenza al massimo "media" (i servizi PSN vanno da IT a extra-UE).
   R3 confidenza mancante o fuori vocabolario -> "bassa"; campi obbligatori mancanti -> "bassa".
 Scrive report/metodo/llm/giro2/verificati.jsonl con l'esito verificato e, in "verifica", le regole applicate e i valori prima/dopo.
 Idempotente. Uso: verifica_esiti.py [cartella esiti]   (default report/metodo/llm/giro2/esiti)
@@ -53,10 +55,18 @@ for e in righe(ESITI):
     prov = (e.get("provider_prodotto") or "").strip()
     nominato = bool(prov) and any(re.search(r"\b" + re.escape(t) + r"\b", oggetto.get(cig, ""), re.I)
                                   for t in re.split(r"[\s/(),]+", prov) if len(t) >= 3)
+    testo_atti = " ".join((R / "dati/atti/testi" / (a["sha256"] + ".txt")).read_text(encoding="utf-8", errors="replace")
+                         for a in citato if (R / "dati/atti/testi" / (a["sha256"] + ".txt")).exists())
+    giur = e.get("giurisdizione")
+    if e.get("servizio") == "psn" and giur != "non-determinabile" and not re.search(
+            r"industrys+standard|housing|hosting|secures+publics+cloud|psns+managed|hybrids+cloud|alloy|assured", oggetto.get(cig, "") + " " + testo_atti, re.I):
+        giur = "non-determinabile"; regole.append("R4")
+        if conf == "alta":
+            conf = "media"
     if conf == "alta" and not (fp or (nominato and docs)):
         conf = "media"; regole.append("R2")
-    v = dict(e, fonte_primaria=fp, confidenza=conf,
-             verifica={"regole": regole, "prima": prima, "documenti_archiviati": len(docs), "documenti_cig_citato": len(citato),
+    v = dict(e, fonte_primaria=fp, confidenza=conf, giurisdizione=giur,
+             verifica={"regole": regole, "prima": {**prima, "giurisdizione": e.get("giurisdizione")}, "documenti_archiviati": len(docs), "documenti_cig_citato": len(citato),
                        "atti": [{"url": a["url"], "sha256": a["sha256"]} for a in citato], "strumento": "tools/llm/verifica_esiti.py"})
     out.append(v)
 OUT.write_text("".join(json.dumps(o, ensure_ascii=False) + "\n" for o in out), encoding="utf-8")
