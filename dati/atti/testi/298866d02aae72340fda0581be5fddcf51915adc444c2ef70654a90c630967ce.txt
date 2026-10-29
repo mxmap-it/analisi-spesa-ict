@@ -1,0 +1,1096 @@
+                                                                                 Firmato digitalmente da:
+                                                                                 EMANUELE IANNETTI
+                                                                                 Amministratore Delegato
+                                                                                 POLO STRATEGICO NAZIONALE S.P.A.
+                                                                                 Firmato il 06/07/2023 12:12
+                                                                                 Seriale Certificato: 940
+                                                                                 Valido dal 26/10/2022 al 25/10/2025
+                                                                                 TI Trust Technologies QTSP CA
+
+
+
+
+   Concessione per la realizzazione e gestione di una nuova infrastruttura
+  informatica al servizio della Pubblica Amministrazione denominata Polo
+   Strategico Nazionale (“PSN”), di cui al comma 1 dell’articolo 33-septies
+                            del d.l. n. 179 del 2012
+
+
+
+                                                 CUP: J51B21005710007
+                                                        CIG: 9066973ECE
+
+
+
+
+                       PROGETTO DEL PIANO DEI FABBISOGNI
+
+                            A.O.R.N. SANTOBONO PAUSILIPON
+
+
+
+
+2023-0000006854100630-PPdF-P4R1
+Ed. 1 - ver. 1.2
+
+
+Rel. 3.3
+
+
+
+
+Questo documento contiene informazioni “confidenziali” di proprietà esclusiva della società PSN S.p.A. né il documento né sue parti possono essere
+  pubblicate, riprodotte, copiate o comunque divulgate senza autorizzazione scritta dell’azienda oltre quanto previsto dalla lista di distribuzione
+SOMMARIO
+1     PREMESSA ................................................................................................................................................ 6
+2     AMBITO ...................................................................................................................................................... 7
+3     DOCUMENTI .............................................................................................................................................. 8
+    3.1       DOCUMENTI CONTRATTUALI ........................................................................................................ 8
+    3.2       DOCUMENTI DI RIFERIMENTO ...................................................................................................... 8
+    3.3       DOCUMENTI APPLICABILI .............................................................................................................. 9
+4     ACRONIMI ................................................................................................................................................ 10
+5     PROGETTO DI ATTUAZIONE DEL SERVIZIO ....................................................................................... 11
+    5.1       SERVIZI PROPOSTI ....................................................................................................................... 11
+    5.2       INDUSTRY STANDARD .................................................................................................................. 12
+      5.2.1       Infrastructure as a Service ........................................................................................................... 12
+    5.3       CONSOLE UNICA ........................................................................................................................... 14
+      5.3.1       Overview delle caratteristiche funzionali ..................................................................................... 14
+      5.3.2       Modalità di accesso ..................................................................................................................... 15
+      5.3.3       Interfaccia applicativa della Console Unica ................................................................................. 15
+    5.4       SERVIZI E PIANO DI MIGRAZIONE ............................................................................................... 18
+      5.4.1       Piano di attivazione e Gantt ......................................................................................................... 22
+    5.5       SERVIZI PROFESSIONALI ............................................................................................................. 23
+      5.5.1       Re-architect.................................................................................................................................. 23
+      5.5.2       IT infrastructure service operations ............................................................................................. 27
+6     FIGURE PROFESSIONALI ...................................................................................................................... 28
+7     SICUREZZA ............................................................................................................................................. 29
+8     CONFIGURATORE .................................................................................................................................. 30
+    8.1       Rendicontazione .............................................................................................................................. 30
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                                                  2
+Indice delle tabelle
+Tabella 1: Informazioni Documento .................................................................................................................. 4
+Tabella 2: Autore ............................................................................................................................................... 4
+Tabella 3: Revisore............................................................................................................................................. 4
+Tabella 4: Approvatore ...................................................................................................................................... 4
+Tabella 5 Documenti Contrattuali ..................................................................................................................... 8
+Tabella 6: Documenti di riferimento ................................................................................................................. 9
+Tabella 7: Documenti Applicabili ....................................................................................................................... 9
+Tabella 8: Acronimi .......................................................................................................................................... 10
+Tabella 9: Servizi Proposti................................................................................................................................ 11
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                                                3
+STATO DEL DOCUMENTO
+La tabella seguente riporta la registrazione delle modifiche apportate al documento.
+
+                                          TITOLO DEL DOCUMENTO
+      Descrizione Modifica                         Revisione                 Data
+
+      Prima Emissione                              1                         20 Giugno 2023
+                                         Tabella 1: Informazioni Documento
+
+
+      Autore:
+                                               Unità operative Solution Development, Technology Hub e
+      Team di lavoro PSN
+                                               Sicurezza
+                                                 Tabella 2: Autore
+
+
+      Revisione:
+      PSN Solution team                        n.a.
+                                                Tabella 3: Revisore
+
+
+      Approvazione:
+      PSN Solution team                        Paolo Trevisan
+      PSN Commercial team                      Riccardo Rossi
+                                              Tabella 4: Approvatore
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                        4
+LISTA DI DISTRIBUZIONE
+INTERNA A:
+   ●   Funzione Solution
+   ●   Funzione Technology & Information
+   ●   Funzione Information Security
+   ●   Referente Servizio
+   ●   Direttore Servizio
+
+ESTERNA A:
+   ●   Referente Contratto AORN Santobono Pausilipon : EUGENIO BRUNO
+           o Email: E.BRUNO@SANTOBONOPAUSILIPON.IT
+
+   ●   Referente Tecnico AORN Santobono Pausilipon : EUGENIO BRUNO
+           o Email: E.BRUNO@SANTOBONOPAUSILIPON.IT
+           o Tel: 3892167551
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1               5
+1 PREMESSA
+Il presente documento descrive il Progetto dei Fabbisogni del PSN relativamente alla richiesta di fornitura dei
+servizi cloud nell’ambito della concessione per la realizzazione e gestione di una nuova infrastruttura
+informatica al servizio della Pubblica Amministrazione denominata Polo Strategico Nazionale (“PSN”), di cui
+al comma 1 dell’articolo 33-septies del d.l. n. 179 del 2012.
+Quanto descritto, è stato redatto in conformità alle richieste del “A.O.R.N. SANTOBONO PAUSILIPON” di
+seguito Amministrazione, sulla base delle esigenze emerse durante gli incontri tecnici per la raccolta dei
+requisiti e delle informazioni contenute nel Piano dei Fabbisogni ID 2023-0000006854100630-PdF-P4R1.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                      6
+2 AMBITO
+Il progetto Accoglienza si colloca nell’ambito del più ampio processo di trasformazione digitale dell’AORN
+Santobono Pausilipon (nel seguito AORN), resosi particolarmente urgente e necessario a seguito della crisi
+provocata dalla recente emergenza epidemiologica da COVID-19.
+Scopo del progetto Accoglienza è rafforzare la capacità di risposta dei servizi sanitari attraverso il
+rafforzamento delle soluzioni tecnologiche, nell’ambito del processo di transizione digitale in cui l’AORN è
+impegnato. Quindi, in linea con quanto previsto dall’azione in oggetto, il progetto vuole implementare
+soluzioni afferenti alla sanità elettronica e strutture di trattamento, mettendo a disposizione un bouquet di
+servizi rivolti all’accoglienza dei pazienti e parenti dell’AORN Santobono Pausilipon, in grado di fornire
+informazioni ai pazienti e parenti attraverso sistemi digitali.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                     7
+3 DOCUMENTI
+
+
+3.1 DOCUMENTI CONTRATTUALI
+
+   Riferimento     Titolo                              Documenti consegnati
+
+ #1              Piano dei Fabbisogni di Servizio   PSN_Progetto dei Fabbisogni_1.0
+                                                    PSN-SDE-CONV22-001-PianoSicurezza v.1.0
+                                                    Allegati:
+                                                    PSN - Processo IM v.03
+ #2              Piano di Sicurezza                 2.C Qualificazione Servizi Cloud
+                                                    2.B Fornitore Servizio Cloud
+                                                    2.A Soggetto Infrastruttura Digitale
+
+ #3              Piano di Qualità                   PSN-SDE-CONV22-001-Piano della Qualità
+
+ #4              Piano di Continuità Operativa      PSN-SDE-CONV22-001-Piano di Continuità Operativa ver.1.0
+                                             Tabella 5 Documenti Contrattuali
+
+
+
+3.2 DOCUMENTI DI RIFERIMENTO
+La seguente tabella riporta i documenti che costituiscono il riferimento a quanto esposto nel seguito del
+presente documento.
+
+   Riferimento                                      Codice                      Titolo
+   Convenzione Presidenza del Consiglio dei         CONV-PSN-2022               CONVENZIONE ai sensi degli artt. 164,
+   Ministri   –    Dipartimento       per   la                                  165, 179, 180, comma 3 e 183, comma
+   Trasformazione Digitale – del 24.08.2022                                     15 del d.lgs. 18 aprile 2016, n. 50 e
+                                                                                successive modificazioni o integrazioni
+                                                                                avente ad oggetto l’affidamento in
+                                                                                concessione dei servizi infrastrutturali e
+                                                                                applicativi in cloud per la gestione di dati
+                                                                                sensibili - “Polo Strategico Nazionale”
+   Convenzione Presidenza del Consiglio dei         CONV-PSN-2022               Capitolato Tecnico e relativi annessi –
+   Ministri   –    Dipartimento       per   la      (Allegato A)                Capitolato Servizi
+   Trasformazione Digitale – del 24.08.2022
+   Convenzione Presidenza del Consiglio dei         CONV-PSN-2022               “Offerta Tecnica” e relativi annessi
+   Ministri   –    Dipartimento       per   la      (Allegato B)
+   Trasformazione Digitale – del 24.08.2022
+   Convenzione Presidenza del Consiglio dei         CONV-PSN-2022               “Offerta economica del Fornitore –
+   Ministri   –    Dipartimento       per   la      (Allegato C)                Catalogo dei Servizi” e relativi annessi
+   Trasformazione Digitale – del 24.08.2022
+
+
+ 2023-0000006854100630-PPdF-P4R1                            8
+ Riferimento                                     Codice                        Titolo
+ Convenzione Presidenza del Consiglio dei        CONV-PSN-2022                 Schema di Contratto di Utenza
+ Ministri   –    Dipartimento       per   la     (Allegato D)
+ Trasformazione Digitale – del 24.08.2022
+ Convenzione Presidenza del Consiglio dei        CONV-PSN-2022                 Indicatori di Qualità
+ Ministri   –    Dipartimento       per   la     (Allegato H)
+ Trasformazione Digitale – del 24.08.2022
+ Convenzione Presidenza del Consiglio dei        CONV-PSN-2022                 Flussi informativi
+ Ministri   –    Dipartimento       per   la     (Allegato I)
+ Trasformazione Digitale – del 24.08.2022
+ Convenzione Presidenza del Consiglio dei        CONV-PSN-2022                 Elenco dei Servizi Core, no Core e CSP
+ Ministri   –    Dipartimento       per   la     (Allegato L)
+ Trasformazione Digitale – del 24.08.2022
+                                         Tabella 6: Documenti di riferimento
+
+
+
+
+3.3 DOCUMENTI APPLICABILI
+
+         Riferimento                             Codice                           Titolo
+ Template Progetto del Piano dei
+                                        PSN- TMPL- PGDF                  Progetto del Piano dei Fabbisogni Template
+ Fabbisogni
+                                          Tabella 7: Documenti Applicabili
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                          9
+4 ACRONIMI
+La seguente tabella riporta le descrizioni o i significati degli acronimi e delle abbreviazioni presenti nel
+documento.
+
+
+          Acronimo                Descrizione
+          AI                      Artificial Intelligence
+          CRC                     Cyclic Redundancy Check
+          CSP                     Cloud Service Provider
+          DB                      DataBase
+          DR                      Disaster Recovery
+          ETL                     Extract Transform and Load
+          HA                      High Availability
+          IaaS                    Infrastructure as a Service
+          IT                      Information Technology
+          ITSM                    Information Technology Service Management
+          PA                      Pubblica Amministrazione
+          PSN                     Polo Strategico Nazionale
+          VM                      Virtual Machine
+          WBT                     Web Based Training
+          WORM                    Write Once, Read Many
+                                                 Tabella 8: Acronimi
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                         10
+5 PROGETTO DI ATTUAZIONE DEL SERVIZIO
+Uno degli obiettivi del PSN è la riduzione dei consumi energetici è pertanto necessario, nell’ottica dell’energy
+control, stabilire i consumi energetici dell’infrastruttura dell’Amministrazione. Questa verrà fatta assumendo
+come valore di riferimento il consumo (misurato o stimato sulla base dei valori di targa) annuo
+dell’infrastruttura prima che questa venga migrata. Seguirà una valutazione circa l’utilizzo delle risorse HW e
+SW impegnate nel PSN con il preciso scopo di contenerne i consumi.
+
+
+5.1 SERVIZI PROPOSTI
+Di seguito si riporta una sintesi delle soluzioni individuate per soddisfare le esigenze dell’Amministrazione.
+
+
+   Servizio                                 Tipologia
+
+ Industry Standard                        Infrastructure as a Service (IaaS)
+
+ Servizi di migrazione
+
+ Servizi Professionali                    Re-Architect
+
+ Servizi Professionali                    IT Infrastructure Service Operation
+                                              Tabella 9: Servizi Proposti
+
+Di seguito, è mostrata la matrice di responsabilità nell'ambito della gestione dei servizi migrati su PSN:
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                          11
+5.2 INDUSTRY STANDARD
+
+
+5.2.1     Infrastructure as a Service
+
+
+5.2.1.1    Descrizione del servizio
+
+I servizi di tipo Infrastructure as a Service (IaaS) sono servizi Core e
+prevedono l’utilizzo, da parte dell’Amministrazione, di risorse
+infrastrutturali virtuali erogate in remoto. Infrastructure as a Service
+(IaaS) è uno dei tre modelli fondamentali di servizio di cloud
+computing. Come tutti i servizi di questo tipo, fornisce l'accesso a
+una risorsa informatica appartenente a un ambiente virtualizzato
+tramite una connessione Internet. La risorsa informatica fornita è
+specificamente un hardware virtualizzato, in altri termini,
+un'infrastruttura di elaborazione. La definizione include offerte
+come lo spazio virtuale su server, connessioni di rete, larghezza di
+banda, indirizzi IP e bilanciatori di carico.
+Il servizio IaaS è suddiviso in:                                                     Figura 1 Infrastructure as a Service
+     ▪ IaaS Private: consiste nella messa a disposizione, da parte
+          del PSN, di una infrastruttura virtualizzata e dedicata, in grado di ospitare tutte le applicazioni in
+          carico all’Amministrazione all’atto della stipula del Contratto, nonché di eventuali variazioni in corso
+          d’opera, nel rispetto dei requisiti di affidabilità, disponibilità e sicurezza fisica e logica descritti nel §.
+          3 Sicurezza e nel §. 4 Infrastruttura IT e Network del documento “Progetto di fattibilità”.
+          Il PSN è responsabile della gestione dell’infrastruttura sottostante e rende disponibile gli strumenti e
+          le console per la gestione in autonomia degli ambienti fisici e virtuali contrattualizzati.
+    ▪     IaaS Shared: consiste nella messa a disposizione, da parte del PSN, di una infrastruttura virtualizzata
+          e condivisa, in grado di ospitare tutte le applicazioni in carico all’Amministrazione all’atto della stipula
+          del Contratto, nonché di eventuali variazioni in corso d’opera, nel rispetto dei requisiti di affidabilità,
+          disponibilità e sicurezza fisica e logica descritti nel §. 3 Sicurezza e §. 4 Infrastruttura IT e Network del
+          documento “Progetto di fattibilità”.
+          In questo caso, l’Amministrazione acquisisce il pool di risorse (vCPU, vGB di RAM, vGB di Storage)
+          virtuali e il PSN è responsabile della gestione dell’infrastruttura sottostante, comprensiva degli
+          strumenti di automation e orchestration.
+
+5.2.1.2    Personalizzazione del servizio
+
+Il servizio IaaS richiesto è lo IaaS Storage HA.
+Le risorse computazionali, già disponibili in PSN (tramite il progetto di migrazione al PSN dei Sistemi SIA),
+sono arricchite dalla componente di storage prestazionale, che l’Amministrazione utilizzerà per la
+memorizzazione dei dati gestiti dalle componenti software migrate.
+Le risorse IaaS necessarie per la creazione delle VM destinate ad ospitare il software di “Accoglienza del
+Paziente”, che l’Amministrazione dovrà migrare, sono infatti già state previste nel progetto sopra indicato.
+Di seguito se ne riporta la sintesi:
+
+
+ 2023-0000006854100630-PPdF-P4R1                           12
+                                                                                                      GB
+ Componenti applicative
+                                        Macchina                  SO           Note         CPU RAM (S.O. /
+    dell’Accoglienza
+                                                                                                     DATI)
+                                                               Windows     Repository 5,5
+                               Server Applicativo e DB                                        12      64     750
+                                                                Server          TB
+MR YOU Digitale Signage
+                                                               Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+                                                               Windows
+                               Server Applicativo e DB                                        12      64     750
+                                                                Server
+MR YOU Pronto Soccorso
+                                                               Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+                                                               Windows
+                               Server Applicativo e DB                                        12      64     750
+MR YOU Pannelli Informativi                                     Server
+Sala Medici                                                    Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+                                                               Windows
+                               Server Applicativo e DB                                        12      64     750
+APP Paziente / Assistito +                                      Server
+WAYFINDING                                                     Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+                                                               Windows
+                               Server Applicativo e DB                                        12      64     750
+                                                                Server
+APP Medici Infermieri
+                                                               Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+                                                               Windows
+                               Server Applicativo e DB                                        12      64     750
+                                                                Server
+APP Post-ricovero
+                                                               Windows
+                               Server interfacce applicative                                  12      64     750
+                                                                Server
+TOTALE                                                                                      144     768     9000
+
+
+L’ Amministrazione non richiede servizi di Backup.
+
+5.2.1.3   Dettaglio del servizio contrattualizzato (ID servizio, quantità costi)
+
+Il dimensionamento del servizio ed i costi della configurazione proposta sono riportati nel paragrafo “8
+Configuratore”.
+
+
+5.2.1.4   Specifiche di collaudo
+
+Per le modalità di svolgimento delle prove di Collaudo e di Test, previste per il servizio in oggetto, finalizzate
+a verificare la conformità del Servizio standard offerto a catalogo, si rimanda, alla documentazione ufficiale
+di collaudo dei Servizi PSN effettuato dal Dipartimento della Trasformazione Digitale, disponibile in
+un’apposita sezione del Portale della Fornitura.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                         13
+5.3   CONSOLE UNICA
+
+La Fornitura prevede l’erogazione alle PAC, in maniera continuativa e sistematica, di una serie di servizi
+afferenti ad un Catalogo predefinito e gestito attraverso una Console Unica dedicata.
+Il PSN metterà a disposizione delle Amministrazioni Contraenti una piattaforma di gestione degli ambienti
+cloud unica (CU) personalizzata, interoperabile attraverso API programmabili che rappresenterà per la PA
+l’interfaccia unica di accesso a tutte le risorse acquistate nell’ambito della convenzione. In particolare, la CU
+garantirà la possibilità alle Amministrazioni di configurare ed istanziare, in autonomia e con tempestività, le
+risorse contrattualizzate per ciascuna categoria di servizio e, accedendo alle specifiche funzionalità della
+console potrà gestire, monitorare ed utilizzare i servizi acquisiti.
+Infine, attraverso la CU, l’Amministrazione avrà la possibilità di segnalare anomalie sui servizi contrattualizzati
+tramite l’apertura guidata di un ticket per la cui risoluzione il PSN si avvarrà del supporto di secondo livello
+di specialisti di prodotto/tecnologia.
+
+5.3.1 Overview delle caratteristiche funzionali
+La CU è progettata per interagire col PSN CLOUD ed integrare le funzionalità delle console native di cloud
+management degli OTT, fornendo un’interfaccia unica in grado di guidare in modo semplice l’utente nella
+definizione e gestione dei servizi sottoscritti utilizzando anche la tassonomia e le modalità di erogazione dei
+servizi previsti nella convenzione. Tale piattaforma presenta un’interfaccia applicativa responsive e
+multidevice ed è utilizzabile, oltre che in modalità desktop, anche mediante dispositivi mobili Android o iOS
+e abilita i sottoscrittori ad accedere
+in maniera semplificata agli
+strumenti che consentono di:
+√gestire in modalità integrata i
+profili di accesso alla CU tramite le
+funzionalità          di        Identity
+Management;                   disegnare
+l’architettura dei servizi acquistati e
+gestirne le eventuali variazioni;
+√consentire         l’interfacciamento
+attraverso le API per la gestione                                   Figura 2 Funzionalità CU
+delle risorse istanziate ma anche per
+definire un modello di IaC (Infrastructure as Code); segnalare eventuali anomalie in modalità “self”.
+
+Le aree di interazione che la piattaforma CU consente di gestire sono:
+             1. Area Attivazione contrattuale. All’atto dell’adesione alla convenzione da parte
+             dell’Amministrazione, sulla CU: √saranno caricati i dati contrattuali ed anagrafici
+             dell’Amministrazione; √generato il profilo del referente Master (Admin) della PA a cui sarà inviata
+             una “Welcome Letter” con il link della piattaforma, l’utenza e la password (da modificare al primo
+             login) per l’accesso alla CU; √sarà configurato il tenant dedicato alla PA, che rappresenta
+             l’ambiente cloud tramite il quale la PA usufruirà dei servizi acquisiti (IaaS, PaaS, ecc.).
+
+        2. Area Access Management e profilazione utenze. L’accesso alla CU è gestito totalmente dal
+           sistema di Identity Access Management (IAM). Gli utenti, previa registrazione, saranno censiti
+           nello IAM, e con le credenziali rilasciate potranno accedere dalla console alle risorse allocate
+           all’interno del proprio tenant. Anche la creazione dei profili delle utenze e la loro associazione
+
+
+ 2023-0000006854100630-PPdF-P4R1                        14
+           con gli account degli utenti sarà gestita tramite le funzionalità di IAM in un’apposita sezione della
+           CU denominata “Gestione Utenze”.
+        3. Area Design & Delivery. Attraverso tale modulo della CU, l’Amministrazione Contraente potrà
+           configurare in autonomia i servizi acquistati secondo le metriche definite per la convenzione,
+           costruendo, anche mediante l’utilizzo di un tool di visualizzazione, la propria architettura cloud
+           sulla base delle risorse contrattualizzate. Successivamente la CU, interagendo in tempo reale
+           attraverso le API dei servizi cloud verticali, consentirà l’immediata attivazione delle risorse e dei
+           servizi previsti nell’architettura attraverso la creazione di uno o più tenant logici per segregare le
+           risorse computazionali dei clienti (Project). Il processo è gestito mediante un workflow
+           automatizzato di delivery implementato tramite l’uso di Blueprint. La CU esporrà anche delle API
+           affinché la singola Amministrazione Contraente possa interagire attraverso i propri tools di CD/CI,
+           IaC (Terraform, Ansible...) oppure attraverso una propria CU come ulteriore livello di astrazione
+           e indipendenza (qualora ne avesse già a disposizione e quindi creare una CU Master Controller
+           che interagisce con quella del PSN appunto via API).
+        4. Area Management & Monitoring. La piattaforma consentirà ai referenti delle Amministrazioni
+           Contraenti di accedere alle funzionalità dedicate alla gestione e al monitoraggio delle risorse per
+           ciascun servizio contrattualizzato e attivo all’interno delle specifiche piattaforme Cloud che
+           erogano i servizi verticali. Punto focale della soluzione è la componente di Event Detection, che
+           ha come obiettivo l’analisi dei log e degli eventi generati dalle piattaforme Cloud che erogano i
+           servizi verticali per tutte le attività svolte dall’Amministrazione; tale modulo, in particolare,
+           verificherà la compliance di tutte le richieste effettuate rispetto al perimetro contrattuale e
+           bloccherà eventuali attività che esulino da tale contesto inviando alert, anche tramite e-mail, sia
+           ai referenti della PA abilitati all’utilizzo della CU sia agli operatori delle strutture di Operations
+           preposte alla gestione delle segnalazioni di anomalia sui servizi erogati.
+        5. Area Self Ticketing. Consente alla PA di segnalare in modalità self le anomalie riscontrate sui
+           servizi cloud contrattualizzati.
+
+
+5.3.2 Modalità di accesso
+L’accesso in modalità sicura alla Console Unica prevede l’utilizzo del sistema di Identity Management, il cui
+form di login è integrato nell’interfaccia web. Tale sistema gestisce le identità degli utenti registrati e
+consente sia l’accesso in modalità desktop, sia tramite dispositivi mobili Android o iOS. Gli utenti, autorizzati
+dal sistema di Identity Access Management, potranno accedere dalla console alle risorse allocate all’interno
+del proprio tenant, sia per attività di “Design & Delivery” sia per attività di “Management & Monitoring”.
+
+
+5.3.3 Interfaccia applicativa della Console Unica
+La Console Unica espone un’interfaccia profilata per ciascuna Amministrazione Contraente, presentando il
+set di servizi contrattualizzati e abilitandola ad eseguire le operazioni desiderate in piena autonomia. Di
+seguito è riportata una breve descrizione delle sezioni della Console Unica che sono rese disponibili.
+Dall’Home Page è possibile accedere alle sezioni:
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                       15
+• Dashboard: consente di visualizzare il
+riepilogo dei dati contrattuali, verificare
+lo stato dei propri servizi IaaS, PaaS, ecc,
+il tracking dei ticket aperti e lo storico
+delle operazioni effettuate. In
+particolare, come evidenziato in Figura 4,
+cliccando sul widget di una specifica
+categoria di servizio (ad esempio
+Compute), sarà possibile visualizzare
+direttamente, secondo le metriche della
+convenzione, il dettaglio delle quantità
+totali delle risorse acquistate, quelle già
+utilizzate e le quantità ancora disponibili.
+Inoltre, accedendo al menu del profilo
+presente nell’header dell’interfaccia della
+Console Unica, il referente
+dell’Amministrazione avrà la possibilità di
+impostare gli indirizzi e-mail a cui inviare
+tutte le notifiche previste nella sezione                              Figura 3 Dashboard CU
+Messaggi e selezionare altre impostazioni
+di base (lingua, ecc.).
+
+●       Cloud Manager: in questa sezione, per tutti i servizi della convenzione, ciascuna Amministrazione potrà,
+nell’ambito della funzione di Design & Delivery:
+             o costruire l’architettura cloud di ciascun Project all’interno del proprio tenant;
+             o attivare i servizi in self-provisioning;
+             o nell’ambito della funzione di Management & Monitoring:
+             o effettuare operazioni di scale up e scale down sui servizi contrattualizzati;
+             o gestire e monitorare tali servizi accedendo direttamente all’opportuna sezione della console.
+Dettagliando ulteriormente la sezione di Design & Delivery, viene offerto ai referenti delle Amministrazioni
+Contraenti la possibilità di definire e configurare le risorse cloud contrattualizzate in modalità semplificata
+ed aderente ai requisiti e alla classificazione dei servizi della Convenzione, garantendo massima autonomia e
+tempestività nell’attivazione.
+Il referente dell’Amministrazione, accedendo dalla sezione “I tuoi servizi” alla dashboard del Cloud Manager
+potrà nella fase di Design & Delivery:
+     ● selezionare, utilizzando l’apposito menu a tendina presente nell’header della pagina, un Project tra
+         quelli esistenti;
+     ● visualizzare sia le categorie di servizio in cui sono state attivate risorse con il relativo dettaglio
+         (identificativo della risorsa) sia quelle che non hanno risorse istanziate;
+     ● istanziare in modo semplificato, per ciascuna categoria di servizi della Convenzione, attraverso la
+         funzionalità “Configura”, nuove risorse cloud utilizzando una procedura guidata che espone solo le
+         funzionalità base per l’attivazione delle risorse cloud garantendo velocità di esecuzione. Nel caso in
+         cui l’Amministrazione voglia, invece, utilizzare tutte le funzionalità di configurazione del Cloud
+         Manager potrà accedervi direttamente dal tasto “Funzionalità Avanzate” presente in ciascuna
+         finestra di configurazione.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                          16
+    ●    monitorare, in fase di attivazione delle risorse, lo stato di avanzamento dei consumi per la specifica
+         categoria di servizi nel Project selezionato in modo da avere sempre a disposizione una vista delle
+         quantità disponibili e in uso.
+Dettagliando ulteriormente la sezione di Management & Monitoring, dopo aver terminato la fase di
+attivazione delle risorse cloud all’interno del Project selezionato, viene offerto ai referenti delle
+Amministrazioni Contraenti la possibilità di:
+     ● gestire la singola risorsa accedendo direttamente alle specifiche funzionalità presenti console tramite
+         il button “Gestisci”;
+     ● monitorare le performance della risorsa accedendo alle funzionalità di monitoraggio tramite il
+         relativo button “Monitora”.
+In alternativa, il referente dell’Amministrazione ha la possibilità di accedere alle funzionalità avanzate della
+dashboard tramite il relativo button “presente nell’header della sezione.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                      17
+5.4   SERVIZI E PIANO DI MIGRAZIONE
+
+I servizi di Migrazione sono servizi Core del PSN quantificati e valutati economicamente sulla base di specifici
+assessment effettuati in fase di definizione delle esigenze dell’Amministrazione, tenendo conto di eventuali
+vincoli temporali ed architetturali di dettaglio oltre che di specifiche esigenze di customizzazione.
+Per l’intero periodo di migrazione, il PSN mette a disposizione delle PA le seguenti figure professionali:
+     ● Un Project Manager Contratto di Adesione, che coordina le attività e collabora col referente che
+          ogni singola PA dovrà indicare e mettere a disposizione;
+     ● Un Technical Team Leader che segue tutte le fasi più strettamente legate agli aspetti operativi.
+Si chiede alla PA la disponibilità di fornire uno o più referenti coi quali il Project Manager Contratto di
+Adesione e il Technical Team Leader del PSN si possano interfacciare.
+Verranno inoltre condivisi:
+     ● la lista dei deliverables di Progetto;
+     ● la Matrice di Responsabilità;
+     ● gli exit criteria di ogni fase di progetto;
+     ● il Modello di comunicazione tra PSN e PA.
+Il Piano di Migrazione, che rappresenta un allegato parte integrante del presente documento è articolato in
+4 Capitoli descriventi le 4 fasi di Progetto:
+          1) Analisi/Discovery;
+          2) Setup;
+          3) Migrazione;
+          4) Collaudo.
+
+
+
+
+                                             Flusso di Migrazione
+
+
+
+
+Si riporta di seguito la vista di quanto specificato all’interno del Piano dei Fabbisogni ricevuto dall’
+Amministrazione e a seguire le tempistiche ed il Gantt di progetto.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                      18
+            Servizio                                                                                  Previsione tempi
+                                                         Tipo di Migrazione                              migrazione
+     dell’amministrazione
+
+ Servizio 1 – Accoglienza        modalità B - aggiornamento in sicurezza di applicazioni in cloud        T0 + 9 MESI
+
+
+
+Obiettivo del progetto è l’implementazione del sistema Accoglienza nella piattaforma dei servizi IaaS del PSN
+Industry Standard, a partire dal software a disposizione dell’AORN.
+
+
+Tale sistema è costituito da diverse componenti software, integrate tra di loro e con il contesto del SIA, che
+sono elencate di seguito:
+    ● Digital Signage: Display in sala d’attesa (Pronto Soccorso, Day Hospital, CUP, Reparti) per accogliere,
+         informare, intrattenere
+    ● Wayfinding: Soluzione per accompagnare i Pazienti / Assistiti all’interno della struttura ospedaliera,
+         favorendone l'orientamento
+    ● Pannelli in Sala Medici: informazioni ai medici su turni, reperibilità richieste di consulenza,
+         informativa aziendale
+    ● App Post-ricovero: Web app per informare il paziente dimesso dall’ospedale su terapia, contatti con
+         ospedale, e per richieste al centro di ascolto dell’AORN
+    ● App Medici Infermieri: Web app personalizzata con le informazioni dei pannelli in Sala Medici
+    ● App informativa per il Paziente / Assistito: pensata per fornire informazioni (ad es. su prenotazioni
+         e appuntamenti), per fornire servizi in modalità self e per migliorare la qualità complessiva dei servizi
+         di accoglienza
+Nel seguito si riporta la tabella che sintetizza gli step di migrazione che coinvolgono tutte le componenti
+software.
+
+
+         ITEM                                                      Descrizione
+Start-up contratto          StartUp: A valle dell'accettazione del piano esecutivo dei lavori, verrà svolta la
+                            riunione di kick-off per dare inizio ai lavori, a cui interverranno i referenti
+                            dell’AORN (Responsabile Amministrativo e Responsabile Tecnico del Progetto). In
+                            questa sede verrà presentato il progetto esecutivo di dettaglio ed il relativo piano
+                            di realizzazione, che i partecipanti potranno rivedere e validare.
+                            Il deliverable della riunione sarà il verbale di inizio lavori, da cui si evince “chi fa
+                            cosa” (Tabella RACI).
+Project Management Project Management: La gestione del progetto prevede l'adozione di una
+                   metodologia agile, che consente il raggiungimento dei risultati attraverso task
+                   predefiniti, e che evidenzi i tempi e le risorse impegnate per ogni task della
+                   migrazione, oltre che la interdipendenza dei vari task. L'attività prevede la verifica
+                   di conformità agli standard di qualità, sicurezza e sostenibilità, in coerenza con gli
+                   obiettivi, le performance, i costi ed i tempi definiti dal progetto. Attraverso stati
+                   avanzamento dei lavori, verranno presentate progressive rendicontazioni al
+                   Cliente, che consentiranno la fatturazione.
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                            19
+        ITEM                                            Descrizione
+                    Per la macroattività in esame, la migrazione in PSN prevede un unico Stato
+                    Avanzamento Lavori, coincidente con il collaudo della migrazione, come riportato
+                    di seguito.
+
+
+Analisi/Discovery   Analisi dell'as-is: verrà svolto uno specifico assessment che definirà le esigenze
+                    dell’Amministrazione, tenendo conto di eventuali vincoli temporali ed architetturali
+                    di dettaglio oltre che di specifiche esigenze di customizzazione.
+                    Quest'attività produrrà:
+                    - la lista dei deliverables di Progetto;
+                    - la Matrice di Responsabilità;
+                    - gli exit criteria di ogni fase di progetto;
+                    - il Modello di comunicazione tra PSN e PA.
+
+
+Setup               Business Process Reengineering: questa fase del Setup del progetto prevede il
+                    disegno del nuovo processo dell’Accoglienza dell'Ospedale. Verranno pertanto
+                    rappresentati i singoli step del nuovo processo con evidenza delle componenti
+                    automatizzate (interfacce software) e delle componenti che il cliente avrà deciso di
+                    mantenere manuali. Il deliverable di tale fase rappresenta il modello organizzativo
+                    di riferimento per il disegno del servizio di Accoglienza.
+
+                    Definizione delle specifiche di configurazione: questa fase dell'attività di Setup
+                    prevede la definizione delle specifiche di configurazione e la customizzazione delle
+                    funzioni software del Sistema di Accoglienza del Paziente, per adeguarlo agli
+                    standard cloud-native della piattaforma SIA in PSN Cloud, dove il sistema in
+                    oggetto ne rappresenta una componente. Pertanto, si dovrà prevedere la revisione
+                    del software ed il suo adeguamento agli standard PSN Industry Standard.
+                    Configurazione risorse IaaS: in questa fase verranno configurate le VM e lo storage
+                    per l'installazione del software migrato. Le risorse computazionali sono quelle già
+                    disponibili in PSN Industri Standard dal progetto di migrazione SIA già disponibili.
+                    Le specifiche di configurazione delle 2 VM previste sono riportate nei paragrafi
+                    precedenti.
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                  20
+        ITEM                                              Descrizione
+Installazione       Installazione Sistema Accoglienza: l'Amministrazione ha scelto di installare ex-novo
+                    il software del sistema Accoglienza, vista la dimensione dei dati da trasferire e la
+                    loro disponibilità. La configurazione che seguirà consentirà di definire gli utenti del
+                    sistema, rappresentati da diverse tipologie: DBA, Amministratore Sistema, Utente. I
+                    criteri di accesso, autorizzazione ed accountable verranno definiti di concerto con i
+                    responsabili dell’AORN. Le funzioni utente previste riguardano le macroaree:
+                         • Digital Signage
+                         • Wayfinding
+                         • Pannelli in Sala Medici
+                         • App Post-ricovero
+                         • App Medici Infermieri
+                         • App informativa per il Paziente / Assistito
+                    Installazione - Interfacce Applicative: il Sistema, per sua natura, nasce integrato con
+                    le componenti gestionale del SIA, come il sistema CUP, Anagrafica, Pronto
+                    Soccorso, Logistica, ADT, Gestione HR.
+                    Il sistema CUP Regionale, in uso presso l’AORN, fornisce una serie di informazioni
+                    attraverso API e Web Services standard. Sia la componente Digital Signage, che
+                    l’App informativa per il Paziente/Assistito, ricevono informazioni dal CUP e le
+                    visualizzano attraverso le loro interfacce. L’interfaccia da realizzare, sviluppata in
+                    base agli standard previsti da SORESA Regione Campania, titolare dei dati, dovrà
+                    quindi consentire la cooperazione applicativa del sistema Accoglienza in PSN
+                    Private e il sistema CUP Regionale implemento nel Cloud Regione Campania.
+                    Il sistema Accoglienza dovrà inoltre interoperare con il sistema HR per scambiare i
+                    dati relativi alla rilevazione presenze/assenze, alle attività core aziendali, alla
+                    comunicazione aziendale. Le informazioni scambiate andranno a popolare le
+                    interfacce utente dei pannelli informativi in sala medici e la web app dei medici ed
+                    infermieri.
+                    La componente wayfinding dovrà interagire con i sistemi logistici, da cui acquisire
+                    la planimetria dell’ospedale, e con il sistema di comunicazione aziendale, con cui
+                    scambiare i dati per la localizzazione del paziente all’interno dell’ospedale. La
+                    componente wayfinding dovrà inoltre interagire con il sistema di prenotazione per
+                    recuperare le informazioni sulla visita del paziente ed indirizzarlo verso il
+                    reparto/ambulatorio di destinazione.
+                    Tutte le componenti dell’Accoglienza potranno essere inserite nell’elenco dei
+                    servizi offerti tramite il portale dei servizi aziendale, con il sistema Accoglienza
+                    dovrà interfacciarsi.
+Collaudo            Supporto al go live: questa fase dell’attività di collaudo consiste nel supportare
+                    l’AORN nella predisposizione del sistema per l’attivazione in esercizio. È in questa
+                    fase che vengono svolte le fasi di test e collaudo del sistema, con la gestione di
+                    eventuali ricicli dovuti ad errori.
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                    21
+        ITEM                                                  Descrizione
+                       Un deliverable della fase è il documento di esito del collaudo, che se positivo attiva
+                       la fase di rendicontazione e fatturazione dell’effort previsto.
+                       Go Live: il sistema è in esercizio, per cui verranno attivati i servizi di assistenza e
+                       manutenzione.
+
+
+
+
+5.4.1   Piano di attivazione e Gantt
+In questa sezione si riporta un diagramma di Gantt di massima per le attività previste nel progetto.
+Le macroattività previste per il progetto sono state sintetizzate in:
+    ● Migrazione: comprende le attività di migrazione ed installazione in PSN Cloud degli applicativi già
+        disponibili presso il Data Center dell’AORN
+    ● Re-Architect: comprende le attività di ridisegno e sviluppo delle componenti software in chiave Cloud
+        compliant.
+    ● IT Infrastructure Service Operations: comprende le attività di assistenza e manutenzione delle
+        applicazioni software, nonché il supporto per il corretto utilizzo delle applicazioni.
+Ad ognuna di queste macroattività corrisponde una verifica dello Sato Avanzamento Lavori, e la
+corrispondente rendicontazione tecnico-economica.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                       22
+5.5     SERVIZI PROFESSIONALI
+
+Sono resi disponibili all’Amministrazione servizi di evoluzione con l’obiettivo di: ✓migliorare eventuali
+ambienti precedentemente migrati sulla piattaforma PSN tramite Re-Host o tramite i servizi di
+Housing/Hosting; ✓ supportare la migrazione di applicativi on premise verso una piattaforma cloud
+tecnologicamente avanzata, in modo da beneficiare delle funzionalità messe a disposizione dall’infrastruttura
+proposta, come sicurezza, scalabilità e ottimizzazione di costi e risorse.
+In particolare, i due servizi proposti sono quelli di Re-Platform e Re-Architect, in quanto queste due strategie
+di migrazione sono quelle che maggiormente massimizzano i benefici per l’Amministrazione di una
+piattaforma cloud come quella oggetto del presente progetto.
+I due servizi si differenziano principalmente per la quantità del codice applicativo che viene modificato e, di
+conseguenza, per le tempistiche di attuazione. Il Re-platform modifica solamente alcuni componenti senza
+impattare il core dell’applicativo, mentre il Re-architect permette di portare l’applicazione in Cloud attraverso
+interventi puntuali sulla stessa.
+Tali servizi non sono necessariamente alternativi ma possono eventualmente rappresentare fasi sequenziali
+di un programma di modernizzazione applicativa.
+Per questi servizi, in base alla specifica esigenza, viene proposto un team mix composto dai profili
+professionali elencati in precedenza.
+
+
+5.5.1    Re-architect
+La strategia di Re-architect ha come obiettivo quello di adattare l’architettura core di un applicativo in ottica
+cloud, attraverso un processo di redesign iterativo ed incrementale che miri ad adottare i servizi cloud-native
+offerti dal PSN per massimizzare i benefici che ne derivano. L’obiettivo è garantire i benefici attesi
+dall’Amministrazione e il minimo impatto per gli utenti finali. Il servizio si rende necessario, ad esempio,
+quando il livello di sicurezza è molto distante dallo standard minimo e realizza la modifica di moduli applicativi
+di un'applicazione al fine di garantirne un adeguato livello di sicurezza
+Il servizio sarà disegnato rispettando i principi di design cloud-native che non solo consente di favorire la
+flessibilità operativa dei servizi applicativi, ma consente anche:
+     ● un maggior riuso e velocità di implementazione
+     ● l’utilizzo di metodologie consolidate di test (quanto più automatici) sia per le verifiche funzionali, sia
+          per quelle di qualità e sicurezza
+     ● l’uso di best practices di sviluppo e di progettazione (definite dal PSN) che consenta la trasformazione
+          del codice applicativo in modo controllato
+     ● una progettazione secondo le metodologie Secure by design
+Discorso analogo vale per il monitoraggio delle applicazioni a valle di un progetto di “re-architect”. L’adozione
+matura di metodologie cloud-native permette all’applicazione di usufruire di piattaforme comuni di
+monitoraggio e manutenzione proattiva.
+Di seguito vengono illustrati i diversi step del processo di Re-architect.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                       23
+                                    Figura 4: Flusso processo di Re-architect
+
+
+        ITEM                                                    Descrizione
+Assessment          Analisi della configurazione SIA in PSN: verrà svolta uno specifico assessment sulla
+                    configurazione del SIA nella piattaforma Cloud PSN Industri Standard, dove sono
+                    state installate tutte le componenti software. Tale fase sarà collegata alla fase
+                    precedente di assessment per la migrazione, allo scopo di evidenziare le esigenze
+                    di adeguamento del software alla specifiche Cloud PSN. Anche in questa fase
+                    l’attività produrrà:
+                    - la lista dei deliverables di Progetto;
+                    - la Matrice di Responsabilità;
+                    - gli exit criteria di ogni fase di progetto;
+                    - il Modello di comunicazione tra PSN e PA.
+Pianificazione      La pianificazione del Re-architect descrive l’articolazione delle fasi di seguito
+                    riportata, indicandone i tempi e l’effort. Utilizzando lo strumento ad hoc previsto
+                    sarà possibile governare il piano delle attività.
+                    La macroattività abbraccia un periodo ampio di circa 3 anni, durante il quale le
+                    singole fasi di seguito descritte verranno ripetute in gruppo per ogni ulteriore add-
+                    on applicativo
+Redesign            Sistema Accoglienza compliant alla piattaforma SIA in PSN Cloud - Il sistema dovrà
+                    gestire le modalità di accesso multicanale utilizzando interfacce web (browser
+                    standard), e garantire nel contempo l'accesso alle informazioni relative alle diverse
+                    componenti software dell’Accoglienza. Inoltre l'attività avrà come deliverables le
+                    specifiche del codice software da sviluppare e le relative configurazioni e
+                    customizzazioni, e le specifiche per l'implementazione delle componenti di
+                    interfacciamento adatte alla cooperazione applicativa in ambiente PSN Cloud.
+                    L’esigenza di redesign del sistema Accoglienza nasce dai progressivi adattamenti ed
+                    evoluzione del sistema che potranno sorgere con l’utilizzo sempre più diffuso delle
+                    applicazioni web messe a disposizione degli utenti: assistiti/pazienti e
+                    medici/infermieri. Il Sistema Accoglienza in parte verrà migrato nella versione base,
+                    ed in parte installato ex-novo in ambiente PSN Cloud. In tempi successivi il sistema
+                    verrà evoluto verso un’architettura sempre più complessa ed integrata con le altre
+                    componenti del SIA. Nella fattispecie verranno attivate, in una logica di microservizi
+                    e contaneirizzazione, nuove funzionalità, che aumenteranno il livello di
+                    informatizzazione: diffusione del Digital Signage, utilizzo delle web app a
+                    disposizione, utilizzo spinto dell’APP Pazienti per il self checkin e prenotazioni on-
+                    line, etc.
+
+
+
+2023-0000006854100630-PPdF-P4R1                        24
+       ITEM                                               Descrizione
+Sviluppo codice     Questa fase dell’attività definisce gli interventi sul codice software per
+                    l’adeguamento agli standard previsti per le architetture in Cloud.
+                    Gli interventi sul codice sorgente saranno effettuati in base alle specifiche definite
+                    in fase di redisign, tenendo in debito conto le esigenze applicative e le specifiche di
+                    implementazione in PSN Industry Standard.
+Integrazione        Interfacce Applicative: Nella fase di migrazione saranno state implementate le
+                    integrazioni con le componenti gestionale del SIA, come il sistema CUP, Anagrafica,
+                    Pronto Soccorso, Logistica, ADT, Gestione HR.
+                    In questa fase di re-architect verranno implementate le interfacce per le
+                    componenti software installare ex-novo. Nello stesso tempo saranno aggiornate le
+                    interfacce migrate, attraverso il processo lift-shif.
+                    Fra queste c’è il sistema CUP Regionale. Esso fornisce una serie di informazioni
+                    attraverso API e Web Services standard. Sia la componente Digital Signage, che
+                    l’App informativa per il Paziente/Assistito, ricevono informazioni dal CUP e le
+                    visualizzano attraverso le loro interfacce. L’interfaccia da realizzare, sviluppata in
+                    base agli standard previsti da SORESA Regione Campania, titolare dei dati, dovrà
+                    quindi consentire la cooperazione applicativa del sistema Accoglienza in PSN
+                    Private e il sistema CUP Regionale implemento nel Cloud Regione Campania. Il
+                    software migrato, quindi, necessità di adeguate modifiche per allinearlo agli
+                    standard Cloud.
+                    Allo stesso modo, il sistema Accoglienza dovrà inoltre interoperare con il sistema
+                    HR per scambiare i dati relativi alla rilevazione presenze/assenze, alle attività core
+                    aziendali, alla comunicazione aziendale. Le informazioni scambiate andranno a
+                    popolare le interfacce utente dei pannelli informativi in sala medici e la web app
+                    dei medici ed infermieri. Anche in questo caso il software migrato in modalità lift-
+                    shift dovrà essere adeguato agli standard PSN Cloud.
+                    La componente wayfinding dovrà interagire con i sistemi logistici, da cui acquisire
+                    la planimetria dell’ospedale, e con il sistema di comunicazione aziendale, con cui
+                    scambiare i dati per la localizzazione del paziente all’interno dell’ospedale. La
+                    componente wayfinding dovrà inoltre interagire con il sistema di prenotazione per
+                    recuperare le informazioni sulla visita del paziente ed indirizzarlo verso il
+                    reparto/ambulatorio di destinazione.
+                    Tutte le componenti dell’Accoglienza potranno essere inserite nell’elenco dei
+                    servizi offerti tramite il portale dei servizi aziendale, con il sistema Accoglienza
+                    dovrà interfacciarsi.
+Validazione         La fase di validazione rappresenta il periodo di test, che l’utente avrà a disposizione
+                    per verificare le funzionalità del sistema e le sue interfacce verso il SIA.
+                    È in questa fase che verrà svolta l’affiancamento al Cliente per consentire
+                    l’acquisizione delle dovute conoscenze e competenze sul sistema.
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                    25
+       ITEM                                                     Descrizione
+Collaudo            In questa fase verrà svolto la verifica funzionale del sistema, a cui parteciperanno i
+                    referenti dell’AORN (Responsabile Amministrativo e Responsabile Tecnico del
+                    Progetto) e il responsabile del progetto del fornitore.
+                    Un deliverable della fase è il documento di esito del collaudo, che se positivo attiva
+                    la fase di rendicontazione e fatturazione dell’effort previsto.
+                                   Tabella 10 - Flusso processo di Re-Architect
+
+
+
+
+2023-0000006854100630-PPdF-P4R1                        26
+5.5.2   IT infrastructure service operations
+In seguito all’avvenuta migrazione, il PSN, renderà disponibili servizi di IT infrastructure-service operations
+per garantire il mantenimento di funzionalità o ottimizzazione degli ambienti su cui insistono le applicazioni.
+Pertanto, l’Amministrazione potrà decidere di affidare al PSN la gestione dell’ambiente tenendo per sé
+solamente la componente relativa al codice applicativo. Per il corretto svolgimento delle attività verrà reso
+disponibile, un Service Manager; un professionista di esperienza che coordina la gestione dei servizi di
+gestione contrattualizzata, operando a diretto contatto con l’Amministrazione. È responsabile della qualità
+del servizio offerto, e costituisce un punto di riferimento diretto del cliente per analisi congiunte del servizio,
+escalation, chiarimenti, personalizzazioni.
+Le attività che il PSN potrà prendere in carico, previa valutazione, sono:
+    ● Monitoraggio;
+    ● Workload management;
+    ● Infrastructure optimization;
+    ● Capacity management;
+    ● Operation management;
+    ● Compliance management;
+    ● Vulnerability & Remediation;
+    ● Supporto tramite la Cloud Management Platform al:
+              o Provisioning, Automazione e Orchestrazione di risorse;
+              o Inventory, Configuration Management.
+Inoltre, potranno essere erogate attività di System Management sui sistemi operativi Microsoft e Linux e sugli
+ambienti middleware effettuando la gestione ordinaria e straordinaria dei Server e dei Sistemi Operativi:
+    ● creazione/gestione delle utenze, dei privilegi e gli accessi ai sistemi;
+    ● controllare il corretto funzionamento del Sistema Operativo, verificando i processi/servizi tramite
+         agent di monitoring.
+    ● gestione dei log di sistema e verifica delle eventuali irregolarità.
+    ● gestione dei files di configurazione dei sistemi.
+    ● problem management di 2° livello, attivando le procedure e gli strumenti necessari per l’analisi dei
+         problemi, individuando e rimuovendo le cause degli stessi.
+    ● effettuare il restore in caso di failure di sistema recuperando i dati di backup.
+    ● segnalazione dell’esigenza dell’applicazione di patch/fix per il mantenimento dei sistemi agli
+         standard di sicurezza e qualità previsti dai produttori software (segnalazione periodica o eccezionale
+         a fronte di gravi vulnerabilità).
+    ● applicazione delle patch/fix, sulla base di quanto concordato con il cliente o a seguito di segnalazione
+         dagli enti deputati alla sicurezza dei sistemi e dei Data Center.
+Per tali servizi verrà proposto un team mix composto dal mix dei profili professionali elencati in precedenza,
+in base all’ambiente dell’Amministrazione ed ai requisiti della stessa.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                        27
+6 FIGURE PROFESSIONALI
+PSN rende disponibili risorse professionali in grado di poter supportare l’Amministrazione nelle diverse fasi
+del progetto, a partire dalla definizione della metodologia di migrazione (re-architect, re-platform),
+proseguendo nella fase di riavvio degli applicativi, regression test e terminando nel supporto all’esercizio.
+Per ogni progetto viene individuato il mix di figure professionali necessarie, tra quelle messe a disposizione
+del PSN, che effettuerà le attività richieste. Si rimanda al par. 8 Configuratore per il dettaglio dell'effettivo
+impegno delle risorse professionali previste per tale progetto. Il team reso disponibile per questo progetto è
+composto dalle seguenti figure professionali, i cui profili sono di seguito descritti:
+    ● Project Manager: definisce e gestisce i progetti, adottando e promuovendo metodologie agili; è
+        responsabile del raggiungimento dei risultati, conformi agli standard di qualità, sicurezza e
+        sostenibilità, in coerenza con gli obiettivi, le performance, i costi ed i tempi definiti.
+    ● Database Specialist and Administrator: È responsabile dell'installazione, dell'aggiornamento, della
+        migrazione e della manutenzione del DBMS; si occupa di strutturare e regolamentare l’accesso ai DB,
+        monitorarne l’utilizzo, ottimizzarne le prestazioni e progettare strategie di backup
+    ● System and Network Administrator: ha competenze sui sistemi operativi, framework di
+        containerizzazione, tecnologie di virtualizzazione, orchestratori e sistemi di configuration e
+        versioning; è responsabile della implementazione di sistemi di virtualizzazione, di container
+        utilizzando anche sistemi di orchestrazione e della manutenzione, della configurazione e del
+        funzionamento dei sistemi informatici di base.
+    ● System Integration & Test Specialist: Contribuisce in differenti aree dello sviluppo del sistema,
+        effettuando il testing delle funzionalità del sistema, identificando le anomalie e diagnosticandone le
+        possibili cause. Utilizza e promuove strumenti automatici.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                       28
+7 SICUREZZA
+All’interno del PSN è presente una Organizzazione di Sicurezza, con elementi caratteristici di autonomia e
+indipendenza. Tale unità è anche preposta alle attività aziendali rilevanti per la sicurezza nazionale ed è
+coinvolta nelle attività di governance, in particolare riguardo ai processi decisionali afferenti ad attività
+strategiche e di interesse nazionale.
+
+Le misure tecniche ed organizzative del PSN sono identificate ed implementate ai sensi delle normative
+vigenti elaborate a cura dell’Organizzazione di Sicurezza, in particolare con riferimento alla sicurezza e alla
+conformità dei sistemi informatici e delle infrastrutture delle reti, in totale allineamento e coerenza con i
+criteri di accreditamento AgID relativi ai PSN.
+
+L'Amministrazione non richiede l'esecuzione delle attività finalizzate ad "identificare il livello di maturità di
+sicurezza informatica AS-IS" - secondo le tre dimensioni di Governance, Detection e Prevention - così come
+previsto nell'esecuzione della "fase di assessment della Amministrazione target e definizione della strategia
+di migrazione" (Cfr. Convenzione - Relazione Tecnica Illustrativa, Par. 22.6.1 - Explore - fase di
+Analisi/Discovery - Step 1.1 Assessment - Data Collection & Analysis). In assenza di valutazione del livello di
+maturità di sicurezza, il PSN non potrà "identificare potenziali lacune e impatti su Organizzazione, Processi e
+Tecnologia al fine di definire le opportune remediation activities".
+
+Con la sottoscrizione del presente Progetto del Piano dei Fabbisogni, l’Amministrazione accetta tutte le policy
+di sicurezza di PSN.
+Le policy di sicurezza delle informazioni di PSN delimitano e regolano le aree di sicurezza applicabili ai Servizi
+PSN e all’uso che l’Amministrazione fa di tali Servizi. Il personale di PSN (compresi dipendenti, appaltatori e
+collaboratori a tempo determinato) è tenuto al rispetto delle prassi di sicurezza dei dati di PSN e di eventuali
+policy supplementari che regolano tale utilizzo o i servizi che forniscono a PSN.
+Per i Servizi che non sono inclusi nella fornitura e per i quali l’Amministrazione autonomamente configura un
+comportamento di sicurezza, se non diversamente specificato, resta a carico dell’Amministrazione la
+responsabilità della configurazione, gestione, manutenzione e protezione dei sistemi operativi e di altri
+software associati a tali Servizi non forniti da PSN.
+
+L’Amministrazione resta responsabile dell’adozione di misure appropriate per la sicurezza, la protezione e il
+backup dei propri Contenuti. L’Amministrazione, inoltre, è responsabile di:
+    ● Implementare il proprio sistema integrato di procedure, standard e policy di sicurezza e operative in
+        base ai propri requisiti aziendali e di valutazione basati sul rischio
+    ● Gestire i controlli di sicurezza dei dispositivi client in modo che dati o file siano soggetti a verifiche
+        per accertare la presenza di virus o malware prima di importare o caricare i dati nei Servizi PSN
+    ● Mantenere gli account gestiti in base alle proprie policy e best practice in materia di sicurezza
+    ● Assicurare una adeguata configurazione e monitoraggio della sicurezza di rete
+assicurare il monitoraggio della sicurezza per ridurre il rischio di minacce in tempo reale e impedire l’accesso
+non autorizzato ai servizi PSN attivati dalle reti dell'Amministrazione, che deve includere sistemi anti-
+intrusione, controllo degli accessi, firewall e altri eventuali strumenti di gestione dalla stessa gestiti.
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                       29
+8 CONFIGURATORE
+Di seguito, l’export del Configuratore contenente tutti i servizi della soluzione con la relativa sintesi
+economica in termini di canone annuo e UT. La durata contrattuale (prevista per un massimo di 10 anni) dei
+servizi contenuti nel presente progetto sarà declinata all’interno del contratto di utenza.
+
+
+
+
+8.1   Rendicontazione
+
+Di seguito, viene riportato un prospetto contenente la modalità di distribuzione dei servizi professionali,
+distinti per tipologia. La consuntivazione avverrà su base SAL mensili in linea all’effettivo effort erogato in
+termini di giorni/uomo delle relative figure professionali
+I canoni relativi all’infrastruttura partiranno una volta resi disponibili i relativi servizi Industry Standard.
+               Servizio                               UT                              Canone Annuo
+          Industry Standard                                                             € 4.004,55
+        Servizi di Migrazione                    € 126.238,02
+         Servizi Professionali                  € 1.048.167,55
+
+              TOTALE                            € 1.174.405,57                                  € 4.004,55
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                      30
+In particolare, si prevede di erogare i servizi professionali secondo la seguente pianificazione:
+Si prevede di effettuare i seguenti Stati di Avanzamento Lavori (SAL).
+
+SAL bimestrali, indicativamente di pari importo, per i servizi di Migrazione
+
+            Servizio                           Figura Professionale           Quantità          Importo
+                                    System Integrator & Testing Specialist       366                 € 76.874,64
+ Servizi di Migrazione
+                                    Database Specialist and Administrator        198                 € 49.363,38
+                                    Totale (Iva Esclusa)                                            € 126.238,02
+
+
+
+SAL bimestrali, indicativamente di pari importo, per i servizi di Re-Architect
+
+                 Servizio                              Figura Professionale          Quantità       Importo
+                                             Project Manager                             206        € 76.590,80
+
+          Servizi di Re-Architect            System and Network Administrator          1313     € 390.538,72
+
+                                             Database Specialist and Administrator     1200     € 299.172,00
+                                        Totale (Iva Esclusa)                                    € 766.301,52
+
+
+SAL bimestrali, indicativamente di pari importo, per di servizi di It Infrastructure- Service Operations
+
+                 Servizio                             Figura Professionale       Quantità       Importo
+                                             System and Network Administrator        578        € 171.920,32
+
+                                                    Database Specialist and          441        € 109.945,71
+                                                        Administrator
+
+                                     Totale (Iva Esclusa)                                       € 281.866,03
+
+
+
+
+ 2023-0000006854100630-PPdF-P4R1                           31
+
