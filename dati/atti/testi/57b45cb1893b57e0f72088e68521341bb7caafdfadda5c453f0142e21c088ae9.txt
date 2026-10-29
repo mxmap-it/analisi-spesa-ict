@@ -1,0 +1,1122 @@
+ALLEGATO n.17
+CAPITOLATO TECNICO - Parte Generale
+
+
+
+
+ID 2652 - GARA CLOUD ENABLING
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling - Capitolato Tecnico Generale
+
+                                                              Pag. 1
+Indice
+1     Contesto di riferimento ...................................................................................................................... 3
+    1.1   Inquadramento Strategico .........................................................................................................7
+    1.2       Inquadramento Normativo ........................................................................................................8
+    1.3       Introduzione alla Gara Cloud Enabling .......................................................................................9
+    1.4       Introduzione alla gara strategica Cloud Enabling.................................................................... 11
+2     Modello di funzionamento ............................................................................................................... 13
+    2.1  Perimetro dello strumento...................................................................................................... 13
+    2.2       Indicatori di digitalizzazione .................................................................................................... 14
+    2.3       Funzionamento dello strumento............................................................................................. 14
+       2.3.1          Funzionamento degli Accordi Quadro............................................................................. 14
+       2.3.2          Adesione all’Accordo Quadro.......................................................................................... 15
+       2.3.3          Piano dei fabbisogni ........................................................................................................ 15
+       2.3.4          Piano Operativo............................................................................................................... 16
+       2.3.5          Contratto Esecutivo ......................................................................................................... 17
+       2.3.6          Ruoli di coordinamento richiesti ..................................................................................... 20
+3     Trasferimento di know how ............................................................................................................. 24
+    3.1    Presa in carico ......................................................................................................................... 24
+    3.2       Trasferimento Know-how ....................................................................................................... 25
+4     Strumenti a supporto della fornitura ............................................................................................... 26
+    4.1   Portale di Fornitura ................................................................................................................. 26
+    4.2       Codice di condotta .................................................................................................................. 28
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                                                     Pag. 2
+Capitolato Tecnico Generale
+1    Contesto di riferimento
+La strategia della trasformazione digitale della Pubblica Amministrazione (PA) iniziata con il Piano Triennale per
+l’Informatica 2017 – 2019 e proseguita con le successive versioni (in avanti nel presente documento anche solo
+“Piano Triennale”) si basa sul principio “Cloud First”: le pubbliche amministrazioni, in fase di definizione di un
+nuovo progetto, e/o di sviluppo di nuovi servizi, in via prioritaria devono valutare l’adozione del paradigma cloud
+prima di qualsiasi altra tecnologia, tenendo conto della necessità di prevenire il rischio di lock-in. Dovranno altresì
+valutare il ricorso al cloud di tipo pubblico, privato o ibrido in relazione alla natura dei dati trattati e ai relativi
+requisiti di confidenzialità.
+Secondo tale principio, quindi, tutte le PP.AA sono obbligate ad effettuare una valutazione in merito all’adozione
+del cloud che rappresenta l’evoluzione tecnologica più dirompente degli ultimi anni e che sta trasformando
+radicalmente tutti i sistemi informativi della società a livello mondiale. Nel caso di eventuale esito negativo, tale
+valutazione dovrà essere motivata.
+L’adozione del paradigma cloud rappresenta, infatti, la chiave della trasformazione digitale abilitando una vera
+e propria rivoluzione del modo di pensare i processi di erogazione dei servizi della PA verso cittadini,
+professionisti ed imprese.
+Tale affermazione è sostenuta da numerose evidenze contenute in studi internazionali che riconoscono nel cloud
+il principale fattore abilitante per:
+    ●    Generare valore verso l’utente finale: il cloud abilita l’utilizzo di tecnologie innovative (es. ML, AI,
+         Cognitive, Big Data, IoT) difficilmente accessibili con l’utilizzo di infrastrutture tradizionali con un
+         miglioramento dei processi attuali di erogazione dei servizi e la possibilità di introdurre nuovi servizi
+         innovativi anche grazie ad una riqualificazione della spesa IT;
+    ●    Introdurre modelli operativi innovativi: l’utilizzo di nuovi modelli di delivery del software (es. DevOps)
+         favorisce l’innovazione e la modernizzazione dei modelli operativi attuali con la drastica riduzione dei
+         tempi di attesa per il setup dell’infrastruttura durante il ciclo di vita del software e la possibilità di
+         riqualificare le risorse e focalizzarsi sul miglioramento della qualità dei servizi;
+    ●    Ottimizzare l’infrastruttura: AgID stima una riduzione fino al 70% degli attuali costi legati
+         all’infrastruttura per la PA derivanti dalla dismissione dei data center, azione resa possibile grazie alla
+         migrazione in cloud, con una conseguente gestione ottimizzata della variabilità della domanda rispetto
+         alle risorse infrastrutturali ed una maggiore trasparenza sui costi derivante dal monitoraggio dei consumi
+         di risorse.
+Il percorso di attuazione della strategia governativa sul cloud non può che necessariamente prevedere il
+coinvolgimento di tutti gli attori e, in particolare, Governo, PA e fornitori.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 3
+Capitolato Tecnico Generale
+AgID e il Dipartimento per la Trasformazione Digitale (DTD) hanno operato in questi anni, su delega del Governo,
+per fornire gli indirizzi strategici della trasformazione digitale della Pubblica Amministrazione e facilitarne
+l’adozione del cloud.
+A tal fine è stato definito in primis il modello strategico Cloud della PA poi evoluto nella Strategia Cloud Italia
+elaborata in collaborazione con l’Agenzia per la cybersicurezza nazionale e disponibile sul sito
+https://cloud.italia.it/strategia-cloud-pa/ che si compone di 3 linee di indirizzo strategiche:
+    1.   la classificazione di dati e servizi, che determina la tipologia di dati in possesso alle PA in base al danno
+         che la loro compromissione provocherebbe al Paese;
+    2.   la qualificazione dei servizi cloud, che definisce e cataloga quali infrastrutture e servizi per la PA
+         soddisfano i requisiti di sicurezza, affidabilità e scalabilità;
+    3.   il Polo Strategico Nazionale, l’infrastruttura distribuita sul territorio nazionale progettata per garantire
+         adeguati livelli di continuità operativa e tolleranza ai guasti a partire dai servizi strategici e critici della
+         PA.
+
+
+
+   AgID e DTD, inoltre, hanno avviato il Programma nazionale di abilitazione al cloud, ovvero l’insieme dei progetti
+specifici che consentiranno alle PA di migrare infrastrutture ed applicativi esistenti verso i servizi e le infrastrutture
+qualificate secondo quanto previsto dalla Strategia Cloud Italia. Nell’ambito della Strategia è definito un
+framework di strumenti e metodologie di abilitazione al cloud (Cloud Enablement). Tale manuale rappresenta il
+principale strumento metodologico che le PA possono utilizzare per avviare il percorso di migrazione dei propri
+servizi in cloud. Ulteriori approfondimenti sono disponibili sul sito https://cloud.italia.it/programma-abilitazione-
+cloud/   .
+Le amministrazioni che devono attuare il processo di migrazione potranno avvalersi dei finanziamenti previsti nel
+PNRR per un ammontare complessivo di 1,9 miliardi di euro, nello specifico con i due investimenti che mirano
+all’adozione dell’approccio Cloud first da parte della PA, ovvero “Investimento 1.1: Infrastrutture digitali” (PA
+Centrali, ASL e Aziende Ospedaliere) e “Investimento 1.2: Abilitazione e facilitazione migrazione al cloud” (Comuni,
+Scuole, ASL e Aziende Ospedaliere).
+Consip S.p.a. gestisce la procedura di gara e la stipula dei contratti per le amministrazioni centrali e locali ed opera
+sulla base del Piano Triennale per aggregare i fabbisogni e la conseguente acquisizione di beni e servizi.
+
+A tal fine Consip S.p.a., AgID e DTD hanno definito un programma di gare strategiche ICT, di cui la presente
+iniziativa consiste nella seconda versione della Gara Public Cloud ID2213 Lotti 2-11, finalizzate ad accelerare i
+processi di procurement delle PA che hanno la necessità di contrattualizzare fornitori per essere supportate nel
+processo di trasformazione digitale e migrazione al cloud.
+Tale programma, infatti, vede nel cloud il filo conduttore di tutte le iniziative in conformità con il principio Cloud
+First. Tutte le prossime gare per beni e servizi ICT della PA dovranno avere alla base l’applicazione di tale principio
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                             Pag. 4
+Capitolato Tecnico Generale
+e AgID, ove previsto dalla norma, non potrà che ribadire questo principio in tutte le sedi, ivi compreso l’istituto del
+parere ai sensi del CAD.
+I fornitori hanno il ruolo di rivedere le attuali modalità di erogazione di servizi infrastrutturali e applicativi verso la
+PA trasformando la propria offerta in ottica cloud e qualificando i propri servizi secondo quanto previsto dal
+Decreto direttoriale prot. N. 29 del 02/01/2023 pubblicato dall’Agenzia per la Cybersicurezza Nazionale (ACN), se
+in possesso dei requisiti ivi previsti.
+Le PA devono intraprendere azioni per l’avvio di progetti finalizzati alla trasformazione digitale dei propri servizi
+in base al Modello strategico evolutivo dell’informatica della PA e ai principi definiti nel Piano Triennale a partire
+dal principio Cloud First e secondo quanto previsto dalla Strategia Cloud Italia. Inoltre, le PA possono acquisire
+servizi cloud solo se qualificati da ACN e pubblicati nel Catalogo dei servizi Cloud per la PA.
+
+
+                                                           ***
+DEFINIZIONE DI “PAC 1 – PAC 2” E PAL (AI FINI DEI LOTTI DA 1 A 10)
+Sulla base di quanto indicato nel “Consolidato ISTAT” si individuano le Amministrazioni rientranti nei lotti sopra
+indicati.
+A. Pubblica Amministrazione Centrale (PAC)
+
+   Si intendono ricompresi, ai soli fini della presente iniziativa, tra le Pubbliche Amministrazioni Centrali:
+    ● Organi costituzionali e di rilievo costituzionale
+    ● Presidenza del Consiglio dei Ministri
+    ● Ministeri, ivi compresi gli Uffici Periferici
+    ● Agenzie fiscali
+    ● Enti di regolazione dell’attività economica
+    ● Enti produttori di servizi economici
+    ● Autorità amministrative indipendenti
+    ● Enti a struttura associativa
+    ● Enti produttori di servizi assistenziali, ricreativi e culturali
+    ● Enti e Istituzioni di ricerca
+    ● Enti nazionali di previdenza e assistenza sociale
+    ● Commissari straordinari di governo
+    ● Agenzia per i servizi sanitari regionali (AGENAS)
+    ● Banca d’Italia
+    ● Commissione Nazionale per le società e la borsa (CONSOB)
+    ● Istituto per la vigilanza sulle assicurazioni (IVASS)
+    ● Autorità per l’energia elettrica e il gas e il sistema idrico (AEEGSI)
+    ● Enti pubblici esercenti attività di collegamento con le organizzazioni internazionali (enti che svolgono
+         attività di collegamento tra il Governo italiano e le organizzazioni internazionali, quali a titolo
+         meramente esemplificativo):
+              o Comitato nazionale italiano Organizzazione Nazioni Unite per l’alimentazione e agricoltura
+                   (FAO);
+              o Commissione Nazionale per l’Unesco
+    ● Ordini professionali nazionali e relativi uffici periferici/collegi territoriali
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                            Pag. 5
+Capitolato Tecnico Generale
+    ●    ogni altra Amministrazione e/o Ente, di rilevanza nazionale;
+    ●    gli Organismi di diritto pubblico e le Società, partecipati, anche indirettamente, dai soggetti di cui a
+         tutti i punti precedenti, qualificabili come stazioni appaltanti (in caso di società partecipate da soggetti
+         di tipologie diverse – es. partecipati contestualmente da soggetti rientranti nella PAC e da soggetti
+         rientranti nella PAL – si intenderanno ricompresi nella PAC, ai fini della presente iniziativa, gli Organismi
+         di diritto pubblico e le Società partecipati in misura maggioritaria, anche indirettamente, dai soggetti
+         di cui ai precedenti punti).
+B. (PAC 1) Pubblica Amministrazione Centrale “1” - Ministeri (Lotti n. 1 e n.6)
+   Nell’ambito della presente iniziativa, i Lotti n. 2 e 7 sono destinati a:
+    ● Organi costituzionali e di rilievo costituzionale
+    ● Presidenza del Consiglio dei Ministri
+    ● Ministeri e Uffici periferici dei Ministeri
+    ● Agenzie Fiscali
+    ● Comitati interministeriali
+    ● Commissari straordinari di governo
+    ● le società in house partecipate al 100% dai soggetti di cui ai punti precedenti.
+C. (PAC 2) Pubblica Amministrazione Centrale “2”- Altri enti (Lotti n. 2 e 7)
+   Nell’ambito della presente iniziativa, i Lotti nn. 3 e 8 sono destinati, relativamente al parametro del
+   “Consolidato ISTAT”, a tutti i soggetti derivanti dalla differenza della precedente lettera A e da quelli indicati
+   dalla precedente lettera B.
+                                                               ***
+D. Pubblica Amministrazione Locale (PAL)
+   Si intendono ricomprese, ai fini della presente iniziativa, tra le Pubbliche Amministrazioni Locali:
+    ● Regioni
+    ● Province Autonome
+    ● Province
+    ● Città metropolitane
+    ● Comuni
+    ● Comunità montane
+    ● Unioni di Comuni
+    ● Istituti zooprofilattici sperimentali
+    ● Agenzie, enti e consorzi per il diritto allo studio universitario
+    ● Agenzie ed enti per il turismo
+    ● Agenzie ed enti regionali del lavoro
+    ● Agenzie ed enti regionali e provinciali per la formazione, la ricerca e l'ambiente
+    ● Agenzie regionali per la rappresentanza negoziale
+    ● Agenzie regionali per le erogazioni in agricoltura
+    ● Agenzie regionali sanitarie e aziende ed enti di supporto al SSN
+    ● Enti di governo dei servizi idrici e/o dei rifiuti (ex AATO)
+    ● Autorità di sistema portuale
+    ● Aziende ospedaliere, aziende ospedaliero-universitarie, policlinici e istituti di ricovero e cura a carattere
+         scientifico pubblici
+    ● Aziende sanitarie locali
+    ● Camere di commercio, industria, artigianato e agricoltura e unioni regionali
+    ● Consorzi di bacino imbrifero montano
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                        Pag. 6
+Capitolato Tecnico Generale
+      ●    Consorzi tra amministrazioni locali
+      ●    Parchi nazionali, consorzi ed enti gestori di parchi e aree naturali protette
+      ●    Consorzi interuniversitari di ricerca
+      ●    Agenzie ed enti regionali di sviluppo agricolo
+      ●    Fondazioni lirico-sinfoniche
+      ●    Teatri nazionali e di rilevante interesse culturale
+      ●    Università e istituti di istruzione universitaria pubblici
+      ●    Altre amministrazioni locali
+      ●    Consorzi di funzione ed associazioni tra enti locali non esercenti attività economiche
+      ●    Comunità isolane e di arcipelago
+      ●    Enti pubblici a carattere regionale o locale
+      ●    ogni altra Amministrazione e/o Ente, di rilevanza regionale o locale;
+      ●    gli Organismi di diritto pubblico e le Società, partecipati, anche indirettamente, dai soggetti di cui a
+           tutti i punti precedenti, qualificabili come stazioni appaltanti (in caso di società partecipate da soggetti
+           di tipologie diverse – es. partecipati contestualmente da soggetti rientranti nella PAC e da soggetti
+           rientranti nella PAL – si intenderanno ricompresi nella PAL, ai fini della presente iniziativa, gli Organismi
+           di diritto pubblico e le Società partecipati in misura maggioritaria, anche indirettamente, dai soggetti
+           di cui ai precedenti punti).
+
+E. Pubblica Amministrazione Locale [lotti nn. 3,4, 5, 8, 9, 10 – con il rispettivo ambito territoriale regionale]
+    Nell’ambito della presente iniziativa, potranno approvvigionarsi attraverso i Lotti nn. 3,4, 5, 8, 9, 10, tutti i
+    soggetti indicati alla precedente lettera D (PAL) e aventi sede legale nelle regioni indicate per ciascun lotto.
+Si rappresenta che le sedi dell’Amministrazione potranno essere sia le sedi operative dell’Amministrazione
+medesima, sia, se necessario per l’erogazione del servizio, le sedi periferiche dell’Amministrazione dislocate sul
+territorio o le sedi di altre Amministrazioni collegate (per esempio nel caso di Ente e/o Società in house che opera
+a favore di altra Amministrazione).
+
+
+1.1       Inquadramento Strategico
+La presente iniziativa si colloca quindi nell’ambito delle seconde edizioni relative alle acquisizioni di beni e servizi
+strategici previsto da AgID ai fini dell’attuazione del Piano Triennale. Essa è infatti la riedizione dei lotti 2-11 della
+precedente Gara Public Cloud IaaS e PaaS ID 2213.
+In particolare, il Piano Triennale vincola tutte le Pubbliche Amministrazioni al rispetto dell’indirizzo strategico ed
+operativo per la trasformazione digitale. L’Agenzia per l’Italia Digitale guida le Amministrazioni nella fase di
+adeguamento alle indicazioni contenute nel piano e successive versioni ed aggiornamenti, attraverso un’azione di
+coordinamento e monitoraggio.
+L’attuazione del Piano triennale prevede un percorso graduale di coinvolgimento delle Pubbliche Amministrazioni:
+      •   il 2017 è stato l’anno della costruzione, attraverso il consolidamento della strategia di trasformazione
+          digitale e il completamento, del percorso di condivisione con le Pubbliche Amministrazioni;
+      •   il 2018 è l’anno del consolidamento del Piano che sarà gestito anche attraverso strumenti on-line che
+          consentiranno alle Pubbliche Amministrazioni di fornire i propri dati con semplicità. Essi permetteranno di
+          gestire i piani triennali delle Amministrazioni in modo dinamico;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                           Pag. 7
+Capitolato Tecnico Generale
+      •   il 2019 è l’anno di completamento delle azioni del primo ciclo triennale del processo, che potrà pertanto
+          essere ulteriormente affinato per il successivo triennio.
+      •   il 2020 e il 2021 sono gli anni della maturazione, della conclusione dei principali progetti avviati e
+          dell’evoluzione di una visione orientata a cittadini e imprese.
+      •   L’aggiornamento 2022-2024, in continuità - quindi - con la precedente edizione, consolida l’attenzione
+          sulla realizzazione delle azioni previste e sul monitoraggio dei risultati raggiunti, ampliando inoltre lo
+          spazio attribuito al Piano Nazionale di Ripresa e Resilienza (PNRR) che rappresenta una straordinaria
+          opportunità di accelerazione della fase di execution della trasformazione digitale della PA e fornisce un
+          quadro organico dei vari ambiti di cui si compone, indicando target e linee di azione.I servizi oggetto della
+          presente acquisizione sono quindi parte integrante del modello strategico di evoluzione digitale che dovrà
+          essere adottato dalle Amministrazioni.
+In ossequio alle previsioni del Piano Triennale e della Strategia Cloud Italia e al fine di indirizzare e governare la
+trasformazione digitale della PA italiana, sono previste la definizione e l’implementazione di misure di governance
+centralizzata.
+In particolare, le attività di direzione strategica prevedono il coinvolgimento di soggetti istituzionali, mentre
+nell’ambito delle attività di direzione tecnica saranno coinvolti anche soggetti non istituzionali, individuati nei
+Fornitori Aggiudicatari della presente acquisizione.
+
+1.2       Inquadramento Normativo
+Si riportano di seguito le principali previsioni normative di riferimento che i Fornitori di ciascun Lotto e le
+Amministrazioni Contraenti dovranno rispettare:
+      ●    D.Lgs. 7 marzo 2005, n. 82 e s.m.i (“Codice dell’Amministrazione Digitale”).
+      ●    D.Lgs. 1 dicembre 2009, n. 177 (”Riorganizzazione del Centro nazionale per l'informatica nella pubblica
+      ●    amministrazione, a norma dell'articolo 24 della legge 18 giugno 2009, n. 69”)
+      ●    Regolamento UE 2016/679 (“Regolamento generale sulla protezione dei dati”) e s.m.i.
+      ●    D.Lgs. 10 agosto 2018, n. 101 (“Disposizioni per l'adeguamento della normativa nazionale alle disposizioni
+           del regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio, del 27 aprile 2016, relativo alla
+           protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera
+           circolazione di tali dati e che abroga la direttiva 95/46/CE”) e s.m.i.
+      ●    Legge 9 gennaio 2004, n. 4 (”Disposizioni per favorire l’accesso dei soggetti disabili agli strumenti
+           informatici”)
+      ●    D.Lgs. 18 aprile 2016, n. 50 (“Codice dei contratti pubblici”) e s.m.i. e relative prassi attuative
+      ●    Codice Civile.
+      ●    Ove richiesto alla luce della disciplina transitoria dettata dalla normativa vigente, troveranno applicazione
+           le previsioni di cui al D.L. 21 settembre 2019, n. 105 (“Disposizioni urgenti in materia di perimetro di
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                            Pag. 8
+Capitolato Tecnico Generale
+            sicurezza nazionale cibernetica”) e le relative disposizioni attuative che dovessero essere nel frattempo
+            adottate. In tale ipotesi, la disciplina di cui all’Accordo Quadro e relativi allegati (ivi compreso il Capitolato
+            Tecnico), e di cui ai Contratti Esecutivi, potrà subire adeguamenti alla luce della richiamata normativa.
+      Si applicano inoltre tutte le previsioni del Piano Triennale e della Strategia Cloud Italia e le norme italiane ed
+      Europee da questi richiamate.
+
+
+
+1.3        Introduzione alla Gara Cloud Enabling
+Come summenzionato la Gara rappresenta la nuova edizione dei lotti di Servizi professionali relativi alla procedura
+ID 2213.
+In generale, quindi, saranno disponibili servizi per operare sulla definizione di processi e servizi, sulla analisi e
+realizzazione delle componenti applicative e infrastrutturali, con specifico riferimento al paradigma CLOUD.
+Di seguito vengono illustrati a livello macroscopico i servizi che ogni singola gara mette a disposizione del processo
+complessivo. Le presenti indicazioni si devono intendere esclusivamente come descrizione generale, dato che le
+modalità di attivazione ed i relativi contenuti dei servizi vengono dettagliati nelle singole Gare strategiche.
+
+Servizi di Supporto
+Coerentemente con il Piano triennale, la migrazione al Cloud rappresenta il principale obiettivo a cui tendono le
+gare strategiche in questione. Sfruttando le potenzialità del Cloud, le pubbliche amministrazioni hanno
+l’opportunità di migliorare la qualità dei propri servizi gestendoli in maniera più efficiente ed efficace, riuscendo a
+concentrarsi maggiormente sulle funzionalità da offrire ai propri utenti.
+Il processo di migrazione al Cloud è un’operazione complessa che comprende sia aspetti tecnologici che
+organizzativi. Attraverso le gare strategiche è possibile, in coerenza con il modello CEP, attuare un approccio
+articolato in più step:
+FASE 1: ASSESSMENT
+      1.    Lista degli applicativi e dei servizi attivi: stilare una lista degli applicativi attualmente in uso con l’obiettivo
+            di avere una visione d’insieme degli applicativi e i rispettivi servizi che l’amministrazione gestisce.
+      2.    Prioritizzazione degli applicativi: decidere l’ordine temporale con cui migrare gli applicativi classificandoli
+            secondo quattro specifiche categorie, con l’obiettivo di razionalizzare il panorama degli applicativi e
+            identificare gli applicativi prioritari con cui partire con la migrazione al cloud.
+FASE 2: STRATEGIA DI MIGRAZIONE
+      3.    Scheda di assessment dell’applicativo: approfondire gli aspetti e le caratteristiche tecnologiche e
+            funzionali degli applicativi identificati attraverso la compilazione di una specifica scheda applicativa, con
+            l’obiettivo di classificare i dati trattati dell’applicazione oggetto di analisi e valutare in dettaglio ciascun
+            applicativo per validarne l’opportunità rispetto al rischio;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                                 Pag. 9
+Capitolato Tecnico Generale
+    4.   Identificazione delle strategie di migrazione possibili: identificare quali siano le strategie di migrazione
+         più adatte per ciascun applicativo prioritizzato sulla base della scheda di assessment e del contesto
+         dell’Amministrazione, con l’obiettivo di definire e dettagliare il processo di transizione in cloud.
+FASE 3: STUDIO DI FATTIBILITA’
+    5.   Analisi costi-benefici: effettuare un’analisi costi-benefici per ciascuna delle strategie di migrazione
+         identificate per l’applicativo, per valutarne l’opportunità di migrazione, con l’obiettivo di identificare il
+         migliore modello di migrazione e la relativa piattaforma cloud. Verificare la coerenza dei servizi necessari
+         per la migrazione al cloud, la congruità economica e la sostenibilità degli stessi anche nel periodo
+         successivo al completamento della migrazione.
+    6.   Valutazione delle competenze: verificare e supportare l’Amministrazione nel prendere in carico le
+         responsabilità e le competenze necessarie alla migrazione rispetto sia a quelle interne sia esterne.
+    7.   Roadmap di Migrazione: scegliere la strategia di migrazione migliore, sulla base degli output derivanti
+         dall’analisi costi-benefici e dalla valutazione delle competenze di cui alle precedenti fasi e pianificarla
+         attraverso lo strumento della roadmap.
+FASE DI MIGRAZIONE
+    8.   Esecuzione della migrazione: in questa fase viene eseguita a livello operativo l’attività di migrazione in
+         cloud dell’applicazione o sistema dell’Amministrazione da parte dei Fornitori dei Lotti 7-11 per Servizi
+         Tecnologici e dal Fornitore dei Lotti di servizi applicativi della Gara Servizi Applicativi.
+FASE 4: PMO
+    9.   Check dei risultati: verificare e monitorare i risultati raggiunti e l’impatto generato dall’operazione di
+         migrazione sui sistemi dell’Amministrazione, con l’obiettivo di valutare il valore aggiunto ottenuto dalla
+         migrazione al cloud.
+    10. PMO: supportare l’Amministrazione nell'organizzazione, pianificazione, controllo e coordinamento
+         generale delle attività progettuali di migrazione in cloud, anche nelle fasi di migrazione operativa,
+         tecnologica o applicativa.
+Si sottolinea che il modello di Roadmap per la migrazione in cloud sopra descritto è da intendersi come un percorso
+unitario di analisi, definizione strategica ed implementazione, relativo ad un unico processo complessivo di
+migrazione in cloud dei sistemi informativi dell’Amministrazione, secondo una logica iterativa ed incrementale.
+Nella seguente figura sono rappresentati le medesime fasi di migrazione al Cloud, con accanto l’indicazione della
+gara strategica da utilizzare:
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                        Pag. 10
+Capitolato Tecnico Generale
+In particolare, le strategie definite potranno definire esigenze di revisione dei processi e dei servizi, delle
+applicazioni, delle infrastrutture.
+
+
+
+                                                          PMO
+
+Tutte le gare strategiche a supporto del Piano Triennale prevedono servizi di PMO che si identificano nelle seguenti
+attività:
+      •     Pianificazione e gestione progetti IT;
+      •     Supporto al monitoraggio degli indicatori, SLA e penali;
+      •     Analisi e gestione dei rischi di progetto;
+      •     Demand Management
+      •     Customer Satisfaction.
+
+1.4       Introduzione alla gara strategica Cloud Enabling
+Nell’ambito delle gare strategiche, la presente iniziativa ha l’obiettivo di accelerare il procurement delle PA per i
+servizi di supporto professionale all’adozione cloud sulla base della metodologia e degli strumenti definiti
+nell’ambito del Programma nazionale di abilitazione al cloud e, in particolare, nel manuale di abilitazione al cloud.
+In particolare, i servizi di supporto all’adozione del cloud (Lotti 1-5) consentiranno alle PA di essere supportati, in
+estrema sintesi, nell’effettuare un assessment del parco infrastrutturale e applicativo esistente, prioritizzare gli
+applicativi per i quali definire la tipologia di strategia di migrazione in cloud da adottare per poi eseguirla,
+monitorando tutto il processo, ivi incluso il PMO. Tali servizi comprendono anche il supporto alla definizione dei
+fabbisogni finalizzati all’acquisizione di servizi IaaS, PaaS e SaaS.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                         Pag. 11
+Capitolato Tecnico Generale
+Con riferimento ai servizi tecnologici (Lotti 6-10) nell’ambito della presente iniziativa consentiranno il supporto
+alla PA nell’esecuzione delle seguenti strategie di migrazione:
+    ●    Re-purchase: ovvero sostituzione di un applicativo installato e gestito on-premise con la corrispondente
+         modalità di erogazione in SaaS, consultando il catalogo dei servizi SaaS qualificati da AgID. A tal fine è
+         previsto un supporto principalmente nella migrazione dei dati e in aspetti relative al setup e alla
+         configurazione;
+    ●    Re-host: anche detta strategia di Lift & Shift, consiste nel migrare l’intero servizio, compreso di
+         infrastruttura, architettura, dati e traffico e migrarlo su un hosting cloud (Shift) senza modifiche al core
+         dell’applicativo. A tal fine, è previsto il supporto nell’installazione, configurazione, deploy, validazione,
+         transizione fino al rilascio in produzione.
+Per ulteriori dettagli si può fare riferimento al Manuale di abilitazione al Cloud https://docs.italia.it/italia/manuale-
+di-abilitazione-al-cloud/.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 12
+Capitolato Tecnico Generale
+2     Modello di funzionamento
+Lo scenario della presente iniziativa è caratterizzato dalla presenza di Lotti “collegati” nella logica di suddivisione
+dei ruoli in merito ai servizi erogati e dei relativi fornitori, potendosi individuare lotti deputati all’erogazione di
+servizi cosiddetti di “Supporto” (Lotti 1-5) per accompagnare le PA nell’adozione del paradigma cloud e lotti di
+“Servizi tecnologici” (Lotti 6-10) per l’implementazione e la configurazione degli ambienti atti a soddisfare le
+esigenze delle Amministrazioni.
+Tale processo di specializzazione si innesta nel contesto generale di cambiamento delineato dal Piano triennale
+per l’informatica nella PA e dalla Strategia Cloud Italia, con riferimento:
+      ●    alla presente procedura di gara;
+      ●    alle ulteriori Gare Strategiche (ed.1 e ed.2) pubblicate da Consip;
+      ●    all’acquisizione di ulteriori forniture/servizi tramite strumenti e convenzioni Consip.
+L’amministrazione beneficiaria potrà quindi disegnare il proprio percorso di adozione avendo a disposizione
+competenze – di natura tecnologica e non – in grado di supportarla in tutti i passaggi evolutivi verso un modello
+cloud native o cloud-first.
+In tale contesto i servizi di PMO hanno l’obiettivo primario di fornire all’Amministrazione il necessario sostegno
+per l’attuazione di una politica di controllo e governo nei confronti dei fornitori selezionati per la realizzazione
+della migrazione verso le infrastrutture e i servizi cloud ammissibili ai sensi dell’articolo 33-septies del DL 179/2012
+(i.e. Polo Strategico Nazionale, infrastrutture della PA adeguate, soluzioni cloud qualificate).
+I servizi di tecnologici (lotti 6-10), non potranno invece avere come ambiente target (da intendersi come risultato
+dell’analisi della Strategia di migrazione) l’infrastruttura Polo Strategico Nazionale.
+
+2.1       Perimetro dello strumento
+I servizi oggetto della presente iniziativa riguardano, come anticipato nel precedente paragrafo, sia aspetti di
+natura strategica sia aspetti tecnici ed in particolare:
+      ●    la definizione dell’evoluzione strategica dell’ambiente IT dell’Amministrazione e conseguentemente dei
+           servizi da questa offerti ai propri utenti, nelle diverse categorie individuabili (cittadini, imprese, altre PA,
+           etc.) in ottemperanza alle prescrizioni e previsioni normative;
+      ●    il disegno della corrispondente strategia di migrazione al cloud, mediante l’implementazione di
+           specifiche linee progettuali, coerenti con il framework identificato dal Piano Triennale e dalla Strategia
+           Cloud Italia, che consenta il raggiungimento degli obiettivi strategici dell’Amministrazione in ottica di
+           trasformazione digitale;
+      ●    la progettazione di alto livello dei workload cloud necessari all’erogazione di tali servizi.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                            Pag. 13
+Capitolato Tecnico Generale
+2.2       Indicatori di digitalizzazione
+Nell’ambito delle attività di governance ed in particolare della valutazione del livello di efficacia degli interventi di
+digitalizzazione operati dalle Amministrazioni attraverso l’utilizzo di contratti esecutivi afferenti alle Gare
+Strategiche, si intendono definite due tipologie di indicatori di digitalizzazione:
+      ●    Indicatori Generali di digitalizzazione, che mappano il macro-obiettivo dell’intervento rispetto ai
+           principali obiettivi strategici del Piano Triennale;
+      ●    Indicatori Specifici di digitalizzazione, che definiscono, sulla base delle specificità della Gara Strategica,
+           le misure di digitalizzazione applicabili allo specifico contratto esecutivo, in funzione dei servizi acquisiti.
+
+Gli indicatori saranno utilizzati per il monitoraggio dei contratti e del raggiungimento dei relativi obiettivi, così
+come dettagliati nel Piano dei Fabbisogni e nel Piano operativo.
+Ciascuna Amministrazione beneficiaria, all’atto di definizione del Piano dei Fabbisogni, assocerà almeno 3
+Indicatori Generali, di cui almeno uno quantitativo e uno qualitativo, per i quali fornirà le misure di riferimento
+ex ante ed ex post rispetto al contratto esecutivo.
+La seguente tabella riporta gli Indicatori Generali validi per tutte le Gare Strategiche:
+
+          Indicatori quantitativi                      Indicatori qualitativi            Indicatori di collaborazione e riuso
+
+ Riduzione % della spesa per               Obiettivi       CAD       raggiunti    con    Riuso di processi per erogazione
+ l’erogazione del servizio                 l’intervento                                  servi
+
+ Riduzione       %    dei    tempi   di    Integrazione        con      infrastrutture   Riuso soluzioni tecniche
+ erogazione del servizio                   immateriali
+
+ Numero servizi aggiuntivi offerti         Integrazione con Basi Dati di interesse       Collaborazione        con        altre
+ all’utenza       interna/     esterna     nazionale                                     Amministrazioni (progetto in         co-
+ (cittadini)/ esterna (imprese)/                                                         working)
+ altre PA
+
+Per quanto riguarda gli Indicatori Specifici di digitalizzazione utilizzabili in funzione dell’Accordo Quadro di
+riferimento, fermo restando che le Amministrazioni beneficiarie avranno la facoltà di definire alcuni Indicatori
+Specifici di digitalizzazione, si rimanda ai Capitolati tecnici Speciali relativi al lotto di pertinenza.
+
+2.3       Funzionamento dello strumento
+
+2.3.1      Funzionamento degli Accordi Quadro
+Al fine di utilizzare gli Accordi quadro ed attivare i servizi necessari, l’Amministrazione dovrà seguire l’iter
+procedurale descritto nei successivi paragrafi.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                             Pag. 14
+Capitolato Tecnico Generale
+     N. potenziali fornitori aggiudicatari per lotto         Accordo Quadro monofornitore per i lotti di servizi di
+                                                             supporto e tecnologici
+     Modalità di affidamento dei Contratti Esecutivi         Ordine
+
+     Condizioni contrattuali                                 Condizioni tutte fissate
+
+
+
+
+Per ciascun Lotto, l’affidamento del servizio oggetto dell’Accordo Quadro avviene all’esito dello svolgimento di
+due fasi procedimentali:
+    •    la prima fase, che si conclude con l’aggiudicazione dell’Accordo Quadro e la sua stipula, a cura della
+         Consip S.p.A. (così come disciplinato nel Capitolato d’Oneri);
+    •    la seconda fase, che si caratterizza per l’affidamento di ciascun Contratto Esecutivo, a cura della singola
+         Amministrazione contraente, come di seguito riportato.
+Tale seconda fase, per tutti i Lotti avverrà ai sensi di quanto previsto dall’art. 54, comma 3, del Codice, il tutto,
+secondo i termini e le condizioni dell'Accordo Quadro.
+
+2.3.2    Adesione all’Accordo Quadro
+Le Amministrazioni legittimate affideranno i Contratti Esecutivi, successivamente alla stipula dell’Accordo Quadro
+e per tutta la durata dello stesso, alle medesime condizioni (economiche e tecnico-prestazionali) stabilite
+nell’Accordo Quadro.
+L’affidamento di ciascun Contratto Esecutivo avverrà con le modalità di seguito descritte.
+Per tutti i lotti trovano applicazione il Piano dei fabbisogni ed il Piano progetto.
+
+2.3.3    Piano dei fabbisogni
+L’Amministrazione, a seguito della modalità di scelta del fornitore secondo quanto previsto per ciascuna tipologia
+di lotti, trasmetterà, a mezzo PEC, al fornitore e contestualmente, a mezzo posta elettronica, alla Consip S.p.A.
+(e/o a terzi dalla stessa indicati), il “Piano dei fabbisogni”, contenente per tutte le categorie di servizi da acquisire,
+le indicazioni di tipo progettuale e quantitativo, le modalità tecniche ed operative per l’erogazione dei servizi e i
+corrispettivi unitari da applicare, in funzione di quelli previsti nell’Accordo Quadro, nonché tutte le informazioni
+tecniche, funzionali ed economiche che l’Amministrazione ritenga utile indicare.
+In particolare, il “Piano dei fabbisogni” conterrà, a titolo esemplificativo e non esaustivo, i seguenti elementi:
+    •    l’importo contrattuale e le quantità previste per i servizi oggetto del contratto esecutivo;
+    •    la data di attivazione del servizio;
+    •    l’indicazione del/i luogo/ghi di esecuzione dei servizi;
+    •    la durata del Contratto Esecutivo e dei servizi;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                           Pag. 15
+Capitolato Tecnico Generale
+    •     come il Fornitore, che si sia riservato la possibilità di ricorrere al subappalto, debba indicare, nel Piano
+          Operativo, le prestazioni da subappaltare;
+    •     ogni altra eventuale indicazione riportata nel Capitolato tecnico – parte speciale per singolo lotto.
+Il Fornitore si impegna a fornire all’Amministrazione il supporto eventualmente richiesto nella predisposizione del
+Piano dei fabbisogni e a mantenere quest’ultimo allineato con quanto richiesto dall’Amministrazione in caso di
+eventuali modifiche e/o evoluzioni.
+Il Fornitore ha facoltà di condurre con proprio personale tecnico e congiuntamente con i referenti
+dell’Amministrazione interessata, relativamente ai servizi da svolgere presso i siti delle Amministrazioni, riunioni
+preliminari per verificare le modalità di erogazione e di attivazione dei servizi.
+Si precisa che dalla trasmissione del Piano dei fabbisogni da parte dell’Amministrazione verso il Fornitore
+selezionato non scaturisce obbligo per l’Amministrazione di procedere alla stipula del Contratto Esecutivo con il
+medesimo Fornitore.
+
+2.3.4     Piano Operativo
+Il Fornitore, sulla base del Piano dei Fabbisogni, predispone un “Piano Operativo”, nel quale raccogliere e
+dettagliare le richieste dell’Amministrazione, contenute nel Piano dei Fabbisogni, e formulare una proposta
+tecnico/economica secondo le modalità tecniche ed operative ed i corrispettivi unitari previsti nell’Accordo
+Quadro.
+Entro un termine massimo di 15 giorni lavorativi, salvo diversi accordi con l’Amministrazione, dall’invio del Piano
+dei fabbisogni (pena l’applicazione, da parte di Consip S.p.A. su segnalazione dell’Amministrazione, delle penali
+previste nell’Accordo Quadro), tale Piano Operativo dovrà essere trasmesso, a mezzo PEC, all’Amministrazione
+che ne abbia fatto richiesta e per copia conoscenza a Consip S.p.A. e/o terzi da essa indicati.
+In particolare, fermo quanto previsto nel Capitolato tecnico – parte speciale, il “Piano Operativo” dovrà
+analizzare/definire, a titolo esemplificativo e non esaustivo, almeno i seguenti aspetti, in coerenza con il Piano dei
+fabbisogni:
+        •     l’importo contrattuale ed i servizi oggetto del contratto esecutivo;
+        •     l’elenco dei deliverable di fornitura;
+        •     la data di attivazione del servizio;
+        •     l’indicazione del/i luogo/ghi e delle sedi di esecuzione dei servizi;
+        •     la durata del Contratto Esecutivo e dei servizi;
+        •     l’impegno in giorni persona dei singoli profili professionali coinvolti, previsto per l’erogazione di
+              ciascun servizio di fornitura;
+        •     i CV delle risorse professionali da impiegare con le relative certificazioni, se richieste;
+        •     le prestazioni che intenderà subappaltare, nel rispetto delle previsioni dell’Accordo Quadro e di
+              quanto indicato nel Piano dei fabbisogni.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                            Pag. 16
+Capitolato Tecnico Generale
+Compatibilmente con i tempi di elaborazione del Piano Operativo, con specifico riferimento ai servizi da svolgere
+presso la sede/i dell’Amministrazione, l’aggiudicatario potrà richiedere all’Amministrazione di condurre, con
+proprio personale tecnico o altro personale da lui stesso incaricato, e congiuntamente con i referenti
+dell’Amministrazione interessata, sopralluoghi presso la sede/i, allo scopo di verificare gli impatti e le modalità
+dell’attivazione dei servizi, secondo quanto richiesto dall’Amministrazione nel Piano dei fabbisogni. Il fornitore
+deve approntare il calendario dei sopralluoghi necessari, che deve indicare, per ciascuna sede oggetto di
+sopralluogo, il nominativo dell’incaricato dal fornitore che effettuerà il sopralluogo, con gli estremi di un
+documento di riconoscimento e l’elenco delle verifiche da effettuare. Il calendario viene sottoposto
+all’approvazione dell’Amministrazione interessata.
+L’Amministrazione potrà indicare ai fini dell’esecuzione della prestazione anche sedi diverse da quelle legali, senza
+oneri aggiuntivi a carico dell’Amministrazione stessa. In particolare si rappresenta che le sedi dell’Amministrazione
+potranno essere sia le sedi operative dell’Amministrazione medesima, sia, se necessario per l’erogazione del
+servizio, le sedi periferiche dell’Amministrazione dislocate sul territorio o le sedi di altre Amministrazioni collegate
+(per esempio nel caso di Ente e/o Società in house che opera a favore di altra Amministrazione).
+Si precisa che dalla mera trasmissione del Piano Operativo da parte del Fornitore selezionato verso
+l’Amministrazione non scaturisce obbligo per l’Amministrazione di procedere alla stipula del Contratto Esecutivo
+con il medesimo Fornitore.
+In ogni caso le Amministrazioni saranno tenute a comunicare in forma scritta alla Consip S.p.A. tutte le ipotesi di
+mancato rispetto da parte del Fornitore selezionato del termine per la trasmissione del Piano Operativo, ai fini
+dell’applicazione da parte dell’Amministrazione della relativa penale.
+
+2.3.5    Contratto Esecutivo
+L’Amministrazione, entro 30 giorni dalla relativa ricezione, ha la facoltà di approvare il “Piano Operativo”, ovvero
+di comunicare la richiesta di eventuali modifiche e/o integrazioni, in coerenza con il Piano dei fabbisogni. In tal
+caso l’aggiudicatario dovrà apportare al documento presentato quanto richiesto.
+L’affidatario dovrà inviare la versione definitiva del Piano Operativo entro 10 giorni solari dalla comunicazione di
+richiesta dell’Amministrazione contraente, pena l’applicazione, da parte di Consip S.p.A. su segnalazione
+dell’Amministrazione, delle penali previste nell’Accordo Quadro.
+Qualora, decorsi 60 giorni dalla ricezione del Piano Operativo, l’Amministrazione non lo abbia approvato ovvero
+non ne abbia richiesto la modifica, il relativo Piano dei fabbisogni precedentemente trasmesso
+dall’Amministrazione si intenderà decaduto.
+Contestualmente all’approvazione del Piano Operativo, l’Amministrazione stipulerà con il Fornitore selezionato il
+Contratto Esecutivo, sulla base dell’apposito schema allegato alla documentazione di gara. Esso conterrà almeno
+i seguenti elementi:
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 17
+Capitolato Tecnico Generale
+    •    Oggetto, dimensioni e prezzi, rinviando al Piano dei fabbisogni e al Piano Operativo, che dovranno essere
+         allegati allo stesso e che ne costituiranno parte integrante,
+    •    Durata,
+    •    Valore complessivo,
+    •    Rinvio alle modalità di esecuzione contrattuali previste nell’Accordo Quadro,
+    •    Disciplina dell’esecuzione di verifiche tecniche e documentali in corso di fornitura,
+    •    Prescrizioni relative alla riservatezza e alla trasparenza dei prezzi,
+    •    Modalità e i termini di pagamento nel rispetto della normativa vigente,
+    •    Impegno del fornitore al puntuale rispetto della Legge n. 136/2010 e successiva normativa attuativa e/o
+         modificativa, ivi incluse le ipotesi di risoluzione contrattuale nei casi di mancato rispetto degli obblighi
+         stabiliti in capo all’appaltatore,
+    •    Eventuale copertura assicurativa,
+    •    Disciplina del subappalto, nel rispetto di quanto stabilito all’art. 105 del D.Lgs. 50/2016,
+    •    Ogni altro aspetto rilevante per l’esecuzione del singolo appalto, in ragione di quanto stabilito nel
+         Capitolato Tecnico e nello schema di Accordo Quadro.
+   Nel caso di Contratto Esecutivo affidato da un Soggetto Aggregatore, il medesimo Contratto Esecutivo inoltre:
+    •    dovrà contenere l’indicazione di tutte le singole Amministrazioni per le quali il Soggetto Aggregatore
+         effettua l’affidamento;
+    •    dovrà indicare gli importi e i quantitativi relativi ad ogni singola Amministrazione;
+    •    potrà indicare le eventuali modalità di ripartizione degli obblighi di fatturazione tra il Soggetto
+         Aggregatore e le singole Amministrazioni.
+Si rinvia in ogni caso alle previsioni contenute nell’Accordo Quadro per le modalità di stipula del Contratto
+Esecutivo.
+Il Fornitore inoltre dovrà produrre, entro 10 giorni lavorativi dalla firma del Contratto esecutivo, il Piano di lavoro
+generale, riportante la pianificazione di dettaglio di tutte le attività ed i servizi ricompresi e in conformità con il
+Contratto esecutivo.
+Nel corso dell’esecuzione del Contratto Esecutivo, l’Amministrazione potrà richiedere aggiornamenti del Piano dei
+fabbisogni e del Piano Operativo ogni qualvolta lo ritenga necessario, nel rispetto delle previsioni di cui all’art. 106
+del D.Lgs. 50/2016 nonché dei massimali dell’Accordo Quadro.
+Il Fornitore sarà tenuto all’erogazione dei servizi in conformità ai processi, alle procedure ed alle responsabilità
+attribuite secondo le direttive dell’Amministrazione, che verranno definite e condivise nella fase di avvio
+dell’esecuzione dei servizi, nonché aggiornate durante il corso del contratto esecutivo in funzione delle eventuali
+evoluzioni.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 18
+Capitolato Tecnico Generale
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                               Pag. 19
+Capitolato Tecnico Generale
+Requisiti organizzativi
+Il Fornitore è tenuto ad impiegare i referenti di seguito indicati, quali ruoli minimi di coordinamento delle attività
+contrattuali previste. In caso di inadeguatezza, impreparazione e/o incompetenza, il referente dovrà
+immediatamente essere sostituito con una figura rispondente ai requisiti minimi richiesti e con l’eventuale
+applicazione dei rilievi e/o delle penali contrattualmente previsti.
+Per tutti i referenti richiesti e/o offerti, il Fornitore dovrà indicare un numero di telefono cellulare e un indirizzo di
+posta elettronica attivo durante l’orario di lavoro richiesto per la fornitura e garantire la risposta ai quesiti posti
+dall’Amministrazione entro 8 ore lavorative dall’inoltro o dal contatto telefonico.
+Si fa presente inoltre che tutti i referenti devono essere disponibili in modalità operativa presso l’Amministrazione
+ove necessario e/o richiesto per l’espletamento di tutte le attività contrattuali, secondo quanto esposto ai
+paragrafi successivi.
+Tali presenze non dovranno comportare alcun onere aggiuntivo per l’Amministrazione e, pertanto, tutti i referenti
+richiesti e/o offerti non potranno far parte di alcuno dei gruppi di lavoro relativi ai servizi oggetto della fornitura.
+
+2.3.6     Ruoli di coordinamento richiesti
+
+2.3.6.1     Responsabile unico delle attività contrattuali
+Per ciascun Accordo Quadro e per ogni singolo Contratto esecutivo, il Fornitore dovrà indicare un Responsabile
+unico delle attività contrattuali (di seguito per brevità anche RUAC). Il RUAC dovrà riferire alle Amministrazioni su
+tutte le tematiche contrattuali, quali ad esempio:
+    ●     correttezza nell’esecuzione dei servizi (ad esempio, la stima, la pianificazione e la consuntivazione degli
+          Obiettivi, gli adempimenti legati alla qualità, il controllo dell’avanzamento lavori, la verbalizzazione degli
+          incontri con l’utenza, il controllo del Piano dei Fabbisogni e del Piano Operativo, le attività di valutazione
+          e contenimento dei rischi, l’efficacia e l’efficienza dell’attività di test, ecc.);
+    ●     pieno adempimento degli impegni assunti in offerta tecnica: disponibilità delle banche dati, knowledge
+          management, soluzioni, ecc. secondo quanto indicato in offerta tecnica;
+    ●     correttezza e tempestività dell’utilizzo del Portale della fornitura e degli strumenti in uso presso
+          l’Amministrazione e/o proposti in offerta tecnica;
+    ●     predisposizioni e variazioni dei Piani di lavoro della fornitura;
+    ●     predisposizione e garanzia del rispetto del Piano della Qualità e delle specificità dei servizi richiesti;
+    ●     verifica dei livelli di servizio sulle attività oggetto della fornitura ed individuazione delle eventuali azioni
+          correttive a fronte del mancato rispetto delle soglie previste e/o a fronte di rilievi;
+    ●     verifica dei risultati sugli indicatori di qualità;
+    ●     problematiche relative a scostamenti sui mix effettivi dei singoli servizi e su problematiche relative ad
+          eventuale mancata aderenza delle risorse impiegate rispetto ai profili professionali richiesti con
+          particolare riferimento, ad esempio, alle certificazioni richieste o a competenze di tematica;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                           Pag. 20
+Capitolato Tecnico Generale
+    ●     eventuali azioni da intraprendere per migliorare l’erogazione dei servizi e valutarne i risultati ottenuti;
+    ●     pianificazione ed impiego di risorse quantitativamente e qualitativamente adeguate;
+    ●     gestione delle criticità e dei rischi complessivi di progetto risolvendo tutti i potenziali conflitti e/o
+          eventuali disservizi;
+    ●     coordinamento fra i gruppi ed i referenti per garantirne il massimo grado di sinergia e omogeneità
+          d’azione, ottimizzando in particolare la distribuzione delle risorse fra i gruppi a fronte di picchi d’attività
+          e/o di esigenze e urgenze specifiche;
+    ●     garanzia di unitarietà, integrazione, omogeneità e sinergia nelle singole erogazioni dei servizi;
+    ●     adozione di idonei strumenti per facilitare la comunicazione e lo scambio di informazioni tra i vari attori
+          coinvolti nella Fornitura;
+    ●     assicurazione di un alto grado di sinergia tra le risorse impiegate nei servizi realizzativi e quelle impiegate
+          negli altri servizi quali la gestione per la fase di avviamento in esercizio delle applicazioni/obiettivi, al fine
+          di garantire un costante e adeguato grado di conoscenza e di attenzione evitando discontinuità;
+    ●     eventuali azioni correttive proposte a fronte di situazioni critiche e/o di risultati di iniziative di Customer
+          Satisfaction;
+    ●     rendicontazione settimanale, durante il periodo di subentro, dello stato di avanzamento e partecipazione
+          a tutti i momenti di “check” con l’Amministrazione.
+Il profilo professionale minimo per tale figura dovrà essere almeno equiparabile a quello di Project Manager per
+i Lotti 1-5 e di Cloud Infrastructure Consultant per i Lotti 6-10.
+Il RUAC, inoltre, dovrà avere una qualifica da quadro direttivo o dirigenziale, con appositi poteri di firma tali da
+impegnare in maniera esecutiva l’impresa/RTI/Consorzio nei confronti dell’Amministrazione.
+
+2.3.6.2    Responsabili tecnici per l’erogazione dei servizi
+I Responsabili Tecnici per l’erogazione dei servizi sono i referenti operativi del Fornitore per le attività di erogazione
+dei servizi. Il Fornitore dovrà rendere disponibile per ciascun Contratto esecutivo, in funzione dei servizi erogati,
+almeno:
+    ●     un responsabile tecnico per i servizi di supporto (Lotti 1-5);
+    ●     un responsabile tecnico per i servizi tecnologici (Lotti 6-10).
+I suddetti responsabili dovranno garantire il corretto svolgimento delle attività e dei servizi ed il relativo livello di
+qualità di erogazione, nel pieno rispetto degli indicatori previsti dal Capitolato Tecnico e relative Appendici.
+A titolo esemplificativo si riportano le attività principali in carico ai responsabili tecnici:
+    ●     predisposizione dei Piani Operativi e dei Piani di Qualità per le attività ed i progetti;
+    ●     coordinamento delle risorse impiegate nel servizio negli ambiti assegnati;
+    ●     verifica sull’erogazione delle attività di tutte le risorse coinvolte nei servizi, conformemente ai requisiti
+          minimi di qualità della fornitura;
+    ●     partecipazione alle riunioni di avanzamento e/o a riunioni indette dalle Amministrazioni.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                             Pag. 21
+Capitolato Tecnico Generale
+Il profilo professionale minimo per tali figure deve essere almeno equivalente a Project Manager per i Lotti 1-5, a
+Cloud Architect per i lotti 6-10.
+In considerazione della natura delle attività da svolgere e a garanzia dell’operatività dei servizi, i Responsabili
+tecnici devono essere reperibili telefonicamente dal lunedì al venerdì, dalle ore 8 alle ore 20 e sempre tramite
+posta elettronica.
+
+2.3.6.3    Responsabile della strategia di migrazione
+Nell’ambito delle attività di supporto, il Responsabile della strategia di migrazione dovrà garantire che il Fornitore
+disegni e progetti la strategia di migrazione conformemente ai requisiti minimi di qualità della fornitura definiti
+nel capitolato.
+Il referente dovrà avere un profilo pari almeno ad un Cloud Architect con specifiche competenze in ambito
+infrastrutture cloud ed in possesso di un’elevata conoscenza delle principali tecnologie del settore.
+Le sue responsabilità coprono:
+    ●     la definizione e l’implementazione delle pratiche e delle procedure finalizzate a garantire la definizione
+          della miglior strategia di migrazione;
+    ●     la definizione del sistema di autovalutazione del servizio attraverso l’implementazione, misurazione degli
+          indicatori offerti oltre agli indicatori previsti contrattualmente;
+    ●     la verifica delle attività di analisi qualitativa del prodotto finale, con focus sull’individuazione delle
+          potenziali problematiche sui singoli componenti sviluppati;
+    ●     l’identificazione e la progettazione degli scenari possibili al fine dell’individuazione del migliore;
+    ●     la comprensione del contesto regolamentare con riguardo al processo di classificazione del dato e del
+          quadro dettato dalla Strategia Cloud Italia;
+    ●     la corretta stima economica relativamente a risorse necessarie e supporto tecnologico da prevedere per
+          la corretta implementazione e conduzione dello scenario definito dalla strategia;
+    ●     la stima dell’effort in termini di risorse del team testing e l’individuazione dei team di risorse necessari a
+          seconda dello scenario sorgente;
+    ●     la redazione di report sintetici periodici sulle attività complessive, sull’andamento complessivo della
+          qualità dei deliverable sviluppati e delle potenziali aree di miglioramento;
+    ●     la produzione e la verifica dei seguenti documenti:
+              o      Strategia di migrazione, che descrive il miglior scenario cloud target che l’Amministrazione dovrà
+                     adottare;
+              o      Piano dei fabbisogni, che descrive le risorse necessarie per la corretta implementazione della
+                     strategia di migrazione;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                           Pag. 22
+Capitolato Tecnico Generale
+2.3.6.4    Responsabile della migrazione cloud
+Nell’ambito delle attività di supporto tecnologico, il Responsabile della migrazione al cloud dovrà garantire che il
+Fornitore esegua le attività richieste conformemente ai requisiti minimi di qualità della fornitura definiti.
+Il referente dovrà avere un profilo pari almeno ad un Cloud Architect con specifiche competenze tecnologiche in
+ambito cloud, competenze di Security e Service management del settore.
+Le sue responsabilità coprono:
+    ●     la definizione e l’implementazione delle pratiche e delle procedure finalizzate a garantire la coerenza
+          delle architetture implementate con la strategia di migrazione;
+    ●     la definizione del sistema di autovalutazione del servizio attraverso l’implementazione, misurazione degli
+          indicatori offerti oltre agli indicatori previsti contrattualmente;
+    ●     la verifica delle attività di analisi qualitativa del prodotto finale, con focus sull’individuazione delle
+          potenziali problematiche con particolare riguardo ad aspetti di security e capacity;
+    ●     la pianificazione, il coordinamento e la corretta esecuzione del processo di migrazione e la gestione del
+          relativo team, oltre a fornire periodicamente tutte le indicazioni necessarie al miglioramento dei processi
+          di Service management;
+    ●     la stima dell’effort in termini di risorse del team di supporto tecnologico;
+    ●     l’identificazione di ottimizzazione dei costi rispetto alla pianificazione con particolare riguardo al
+          monitoraggio dei consumi di risorse rispetto alla pianificazione iniziale;
+    ●     la produzione e la verifica dei seguenti documenti:
+              o    Documento architetturale, che descrive in generale tutti gli aspetti dell’implementazione tra cui
+                   ad esempio: Architettura, Reti, Storage, policy di sicurezza, procedure di recovery, policy di
+                   backup, etc;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                        Pag. 23
+Capitolato Tecnico Generale
+3     Trasferimento di know how
+
+3.1      Presa in carico
+A partire dalla data di stipula degli Accordi Quadro, il Fornitore dovrà mettere in campo tutte le azioni necessarie
+per garantire al proprio personale l’acquisizione di tutte le conoscenze indispensabili al corretto svolgimento dei
+servizi richiesti contrattualmente, in funzione dei dimensionamenti previsti in fase di gara.
+In tale fase di esecuzione, della durata massima di trenta giorni solari a partire dalla data di stipula, il Fornitore
+dovrà attuare e rendere pienamente operativo quanto dichiarato in sede di offerta tecnica per l’avvio della fase
+di esecuzione dei servizi, compresivi di metodologie, soluzioni e tecnologici specificatamente richiesti nel
+capitolato tecnico e/o indicati in offerta tecnica dal concorrente. Il servizio di presa in carico e acquisizione di
+know-how è inteso a totale carico del Fornitore, pertanto non comporterà oneri aggiuntivi per Consip né per le
+Amministrazioni beneficiarie.
+
+A partire dalla data di stipula di ciascun Contratto Esecutivo, il Fornitore dovrà procedere alla presa in carico dei
+servizi secondo le modalità indicate nel presente Capitolato, a meno che non sia espressamente e diversamente
+indicato dall’Amministrazione nel Piano dei Fabbisogni.
+
+Durante il periodo in questione, della durata massima di 15 giorni solari, salvo diverso accordo con
+l’Amministrazione, a partire dalla data di stipula di ciascun Contratto Esecutivo, laddove previsto nel contratto
+esecutivo, il personale del Fornitore potrà affiancare il personale dell’Amministrazione e/o da terzi indicati dallo
+stesso, al fine di acquisire le competenze necessarie all’erogazione dei servizi contrattualmente previsti e
+raggiungere il necessario livello di autonomia operativa.
+A tal fine il Fornitore dovrà organizzare, pianificare e partecipare attivamente alle attività di affiancamento iniziale
+ed acquisizione del know-how, secondo i tempi contrattualmente previsti, nonché predisporre quanto necessario
+e/o dichiarato in sede di offerta tecnica per garantire l’efficace presa in carico dei servizi e l’avvio delle attività
+contrattuali.
+Inoltre, nel corso delle attività di presa in carico, le eventuali incompletezze della documentazione dovranno
+essere segnalate dal Fornitore all’Amministrazione, e dovranno risultare in modo dettagliato nel verbale
+attestante il passaggio di consegne, nonché essere accettate dall’Amministrazione, che si riserva eventualmente
+di contestarne la validità.
+Gli interventi dovranno essere realizzati in modo da non incidere negativamente sulla conduzione e gestione dei
+servizi erogati ed in modo da limitarne l’impatto sull’operatività dell’Amministrazione stessa. Durante le attività di
+affiancamento e presa in carico dei servizi, la responsabilità delle operazioni continuerà ad essere in capo
+all’Amministrazione e/o da terzi indicati dallo stesso.
+Se richiesto dall’Amministrazione nel Piano dei Fabbisogni, Il Fornitore dovrà predisporre un apposito Piano di
+subentro entro il termine di cinque giorni lavorativi dalla data di stipula del Contratto Esecutivo, che sarà soggetto
+all’approvazione dell’Amministrazione.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 24
+Capitolato Tecnico Generale
+Il servizio di presa in carico e acquisizione di know-how è inteso a totale carico del Fornitore, pertanto non
+comporterà oneri aggiuntivi per l’Amministrazione.
+
+3.2       Trasferimento Know-how
+Nella fase finale di erogazione, secondo le indicazioni previste dal Contratto Esecutivo, il Fornitore dovrà
+predisporre un piano di qualità e un Piano di Trasferimento per le attività di passaggio di consegne di fine fornitura
+(phase-out), finalizzato al trasferimento all’Amministrazione, o a terzi da essa indicati, del know-how e delle
+competenze maturate nella conduzione dei servizi.
+L’Amministrazione contraente ha la facoltà di richiedere nel Piano dei fabbisogni, oppure durante il periodo di
+durata contrattuale, il passaggio di consegne di fine fornitura per ciascun Contratto esecutivo, per un periodo
+massimo di trenta giorni solari precedenti alla data di scadenza del Contratto Esecutivo.
+Il passaggio di consegne di fine fornitura dovrà essere erogato dal Fornitore senza oneri aggiuntivi per
+l’Amministrazione, in accordo con i requisiti di qualità indicati nel presente capitolato.
+Il Fornitore dovrà mettere a disposizione un apposito gruppo di lavoro dedicato, con un numero adeguato di
+risorse professionali, strumenti organizzativi e tecnologici.
+Si fa presente che il trasferimento di know-how potrà essere richiesto anche durante l’erogazione dei servizi nel
+corso della durata contrattuale, direttamente al personale dell’Amministrazione tramite apposita comunicazione.
+Rientrano nelle responsabilità generali del Fornitore le seguenti attività:
+      ●   il project management generale del progetto e le attività di governance complessiva;
+      ●   il coordinamento generale di tutti gli attori coinvolti e la supervisione delle attività di trasferimento;
+      ●   il supporto, per tutta la durata delle attività di trasferimento, a tutti gli attori coinvolti per lo svolgimento
+          delle attività;
+      ●   lo svolgimento delle attività di propria pertinenza in conformità alla pianificazione definita;
+      ●   il reporting continuativo e conclusivo delle attività svolte al termine del trasferimento.
+Il Fornitore, a supporto della specifica fase di transizione dovrà produrre un apposito Piano di trasferimento (PTF)
+che prevede i seguenti contenuti minimi:
+      ●   l'oggetto del trasferimento,
+      ●   le attività e le relative modalità di esecuzione;
+      ●   i compiti e le responsabilità di ciascuna delle Parti;
+      ●   il programma temporale in base al quale le attività dovranno essere eseguite;
+      ●   i piani di collaudo dei servizi oggetto di trasferimento.
+
+Il PTF sarà redatto dal Fornitore e sottoposto all’approvazione dell’Amministrazione almeno 30 giorni solari prima
+della scadenza del Contratto esecutivo, oppure entro trenta giorni solari successivi alla data di comunicazione
+dell'evento di cessazione delle attività oppure entro 15 giorni solari dalla data di richiesta dell’Amministrazione se
+il trasferimento è richiesto durante il periodo di durata contrattuale. Il documento prodotto dovrà essere gestito
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                            Pag. 25
+Capitolato Tecnico Generale
+dal Fornitore ed aggiornato a seguito delle modifiche richieste dall’Amministrazione ovvero intervenute nel corso
+di svolgimento delle attività di trasferimento.
+La responsabilità della gestione contrattuale viene mantenuta dal Fornitore fino al termine delle attività di
+Trasferimento del servizio in conformità di quanto previsto dal PTF.
+Su richiesta dell’Amministrazione, il Fornitore dovrà registrare tutti gli effort delle risorse impegnate nelle attività
+di esecuzione del trasferimento per tutta la durata delle attività stesse e consegnarle unitamente al rapporto finale
+per consentire le verifiche da parte dell’Amministrazione.
+
+
+
+4     Strumenti a supporto della fornitura
+
+4.1        Portale di Fornitura
+Il Fornitore di ciascun Lotto dovrà rendere disponibile un “Portale della Fornitura”, multicanale e raggiungibile
+tramite Internet, che consenta alle singole Amministrazioni ed agli Organismi di coordinamento e controllo al
+tempo stesso di attivare e governare agevolmente i servizi e di promuovere la condivisione e l’esperienza maturata
+nelle singole iniziative.
+Il Portale dovrà fungere anche da strumento di marketing e promozione per la PA e di comunicazione verso i
+cittadini e le imprese, offrendo loro servizi di informazione e monitoraggio circa l’andamento delle varie iniziative.
+Nel realizzare il Portale, l’aggiudicatario pertanto dovrà prevedere come dotazione minima:
+      1.    strumenti e soluzioni di project management per l’attivazione, la pianificazione e la gestione delle singole
+            iniziative progettuali;
+      2.    strumenti di reporting e analisi dei dati, orientati all’analisi multidimensionale e con funzionalità di
+            creazione di grafici ed interrogazioni complesse e personalizzate, estrazioni ed esportazioni su formati
+            comuni di scambio dati;
+      3.    cruscotti grafici riassuntivi, costituiti dai parametri degli Indicatori di Qualità e SLA ed i valori
+            effettivamente conseguiti sulla base dei dati individuati per il raggiungimento degli obiettivi di
+            monitoraggio ed attuazione di processi;
+      4.    strumenti di collaborazione e cooperazione, per la condivisione di documenti e contenuti e la
+            comunicazione social a supporto del confronto su esperienze e iniziative di interesse;
+      5.    l’accesso ed il collegamento a tutti gli strumenti, le soluzioni tecnologiche, i framework proposti in sede
+            di offerta tecnica e necessari al raggiungimento degli obiettivi di fornitura ed alla produzione dei
+            deliverable.
+Il Portale dovrà quindi essere organizzato dal Fornitore nelle seguenti aree di fruizione:
+•     “Area Comunicazione”: è l’area ad accesso pubblico del portale, contiene informazioni di carattere generale
+      sull’AQ e informazioni e dati specifici dei servizi in erogazione e sull’andamento della fornitura; (a partire
+      dalla I release del portale).
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 26
+Capitolato Tecnico Generale
+•    “Area Informativa”: è l’area di supporto riservata alla PA e contiene almeno le seguenti informazioni:
+     documentazione aggiornata (normativa, tecnologica e operativa) di riferimento per i servizi dell’AQ; la
+     descrizione dei modelli operativi previsti della fornitura, con i punti di forza e le raccomandazioni di scelta; la
+     guida alla stima e alla misurazione degli effort progettuali per singolo servizio/sottoservizio/intervento; la
+     descrizione delle soluzioni migliorative offerte. (a partire dalla I release del portale).
+•    “Area Deliverable”: è l’area che contiene tutti i deliverable di fornitura, comprensivi di output ed i link ad
+     eventuali siti e/o programmi esterni al Portale, nonché tutti gli strumenti, soluzioni tecnologiche e framework
+     proposti dal Fornitore in sede di offerta tecnica.
+●    “Area Project Management”: è l’area ad accesso riservato e profilato per le singole Amministrazioni tramite
+     la quale è possibile disporre degli strumenti di attivazione, pianificazione e gestione delle singole iniziative
+     progettuali;      deve     governare      l’esecuzione      dell’intero     workflow      operativo      di    ciascun
+     servizio/sottoservizio/intervento dalla richiesta di stima alla verifica di conformità finale ed eventuali
+     rilevazioni nel periodo di garanzia; il Fornitore quindi prevederà in questa sezione anche le versioni
+     eventualmente aggiornate del Piano dei Fabbisogni e del Piano Operativo. (a partire dalla I release del
+     portale).
+•     “Area Collaborazione e Monitoraggio”: è l’area che contiene:
+    ⮚    gli strumenti e le informazioni di monitoraggio e governo della fornitura quali cruscotti statici e dinamici
+         relativi a tutti i dati di tutti i Piani di Fabbisogni predisposti dalle Amministrazioni, i Piani Operativi e le
+         eventuali revisioni dei Piani, i contratti esecutivi attivati; report statici e dinamici relativi ai dati di qualità
+         e sicurezza; reportistica sulla customer satisfaction, reportistica sul rispetto dei livelli di servizio e sui degli
+         indicatori di digitalizzazione; report statici e dinamici relativi ai valori economici dei contratti esecutivi
+         sottoscritti, evidenza della capacità contrattuale residuale; i dati devono essere estraibili nei formati
+         standard;
+    ⮚    Gli strumenti di promozione di collaborazione e condivisione tra le PA.
+•        “Area Osservatori”: è l’area che consente la gestione dei dati di qualità e sicurezza al fine di garantire agli
+         Osservatori e a Consip di svolgere le funzioni di monitoraggio della qualità e della sicurezza.
+Il Fornitore deve organizzare la navigazione delle aree di interesse prevedendo l’accesso differenziato degli utenti
+in base alle seguenti tipologie:
+             ⮚      Non autenticato: utente generico del World Wide Web (WWW);
+             ⮚      Utente accreditato (ad esempio un fornitore di servizi);
+             ⮚      Pubblica Amministrazione: l’Amministrazione contraente che ha aderito (o intende aderire) ai
+                    servizi oggetto della fornitura, l’Organismo di coordinamento e controllo, la Consip;
+             ⮚      Utente accreditato facente parte della struttura organizzativa della Pubblica Amministrazione
+                    (Consip S.p.A. e/o terzi soggetti da essa indicati, ecc.).
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                              Pag. 27
+Capitolato Tecnico Generale
+In particolare gli Utenti accreditati della PA (indicati da Consip) dovranno avere la possibilità, su loro richiesta, di
+accedere a tutte le aree sopra descritte in modo da visionare e analizzare la documentazione ivi presente. Il
+Fornitore dovrà pertanto prevedere per essi un accesso dedicato al Portale di Fornitura ed attivabile in funzione
+delle specifiche richieste e requisiti da essi indicati in corso d’opera.
+
+Il sistema dovrà essere implementato utilizzando un’infrastruttura hardware e software che il fornitore stesso
+provvederà a realizzare e mantenere in esercizio. Il portale deve essere gestito globalmente dal Fornitore che
+assume la responsabilità di garantire:
+       • hosting della piattaforma;
+       • gestione e manutenzione del portale;
+       • aggiornamento dei contenuti e la corretta alimentazione del sito;
+       • disponibilità in linea per le Amministrazioni, Consip S.p.A. e/o soggetti terzi da essa indicati;
+       • gestione degli accessi agli utenti abilitati mediante credenziali di riconoscimento (es., login e password);
+       • disponibilità di un manuale di utilizzo del portale e dei singoli sistemi integrati;
+       • disponibilità di un servizio di supporto tecnico e funzionale agli utenti.
+
+Il Fornitore dovrà procedere alla progettazione e realizzazione del sistema includendo le caratteristiche
+migliorative eventualmente proposte in Offerta Tecnica e le eventuali indicazioni provenienti da Consip nella fase
+di predisposizione del Portale.
+
+Il Fornitore dovrà rendere disponibile a Consip il Portale di Fornitura in una prima release funzionante, suddivisa
+per Aree di fruizione e contenente almeno le funzionalità, gli strumenti e le soluzioni tecnologiche generali entro
+15 giorni solari successivi alla stipula dell’Accordo Quadro.
+
+Il Fornitore si impegna a rendere operativo il Portale di Fornitura, nella versione completa di tutte le funzionalità
+entro e non oltre la data di sottoscrizione del primo Contratto Esecutivo, e dovrà essere reso disponibile con
+continuità alle Amministrazioni contraenti, a Consip S.p.A., agli Organismi di coordinamento e controllo e/o terzi
+soggetti da essa indicati, e ad eventuali strutture da essi delegate per tutta la durata contrattuale ed aggiornato
+con frequenza almeno mensile, entro il 15 del mese successivo al mese di riferimento.
+Tutta la reportistica prodotta relativa ai servizi dovrà essere archiviata e conservata a cura del Fornitore, attraverso
+un sistema di gestione della documentazione riservata, il Fornitore si impegna altresì a fornire la reportistica in
+formati standard (es. xml) e renderli disponibili all’Organismo di coordinamento e controllo.
+
+4.2        Codice di condotta
+Costituisce requisito minimo di esecuzione l’adozione da parte dei Fornitori dei principi di cui alla carta dei principi
+tecnologici del procurement che definisce i principi per lo sviluppo di servizi digitali della Pubblica Amministrazione
+che:
+       ●    soddisfino le esigenze degli utenti/cittadini;
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                          Pag. 28
+Capitolato Tecnico Generale
+     ●    siano facilmente manutenibili;
+     ●    siano capaci di evolvere in base alle esigenze dei cittadini e al progresso tecnologico;
+     ●    siano indipendenti da singole componenti architetturali di terze parti;
+     ●    diminuiscano le situazioni di dipendenza da un ristretto numero di fornitori (lock-in).
+La carta dei principi tecnologici del procurement raccoglie ed estende le linee guida definite dal Codice
+dell’Amministrazione Digitale e dal Piano Triennale per fornire una visione organica dei principi che la Pubblica
+Amministrazione e i suoi fornitori dovrebbero rispettare per lo sviluppo di nuovi servizi digitali e per la gestione
+del ciclo di vita di tali servizi.
+Si veda quanto in dettaglio espresso dalla carta al link:
+https://carta-dei-principi-tecnologici-del-procurement.readthedocs.io/it/latest/
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2652 – Gara Cloud Enabling
+                                                                                                      Pag. 29
+Capitolato Tecnico Generale
+
