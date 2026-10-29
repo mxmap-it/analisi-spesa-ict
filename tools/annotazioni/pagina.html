@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Annotazioni contratti cloud</title>
+<meta name="description" content="Aiuta l'Osservatorio Nazionale Sovranità Digitale a classificare i contratti cloud della PA italiana.">
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--fg:#1d1d1b;--muted:#5f5f5a;--line:#dddcd6;--acc:#0b5cad;--acc-fg:#fff;--ok:#1e7a3c;--warn:#a15c00;--chip:#eef3fa}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1f1f1d;--fg:#ecebe6;--muted:#a9a8a1;--line:#34342f;--acc:#5aa2ef;--acc-fg:#0b1420;--ok:#5cc47e;--warn:#e0a24a;--chip:#1d2a3a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.1rem;margin:1.2em 0 .4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.muted{color:var(--muted);font-size:.92rem}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+label{font-weight:600;display:block;margin:.8em 0 .3em}
+input[type=text],textarea,select{width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
+.opz{display:flex;gap:6px;flex-wrap:wrap}.opz label{font-weight:400;margin:0;border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;background:var(--bg)}
+.opz input{position:absolute;opacity:0}.opz input:checked+span{font-weight:700;color:var(--acc)}.opz label:has(input:checked){border-color:var(--acc);background:var(--chip)}
+button{background:var(--acc);color:var(--acc-fg);border:0;border-radius:6px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+.oggetto{font-size:1.05rem;white-space:pre-wrap;word-break:break-word}dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;margin:8px 0}dt{color:var(--muted)}dd{margin:0;word-break:break-word}
+.stato{font-size:.9rem}.err{color:var(--warn)}.ok{color:var(--ok)}a{color:var(--acc)}details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>Annotazioni: che cosa compra la PA quando compra «cloud»?</h1>
+<p class="muted">Osservatorio Nazionale Sovranità Digitale · progetto <a href="https://analisi-spesa-ict.mxmap.it/progetto/metodologia-sperimentale/">analisi della spesa ICT</a>. Leggi l'oggetto di un contratto pubblico e dicci che cosa si compra e di chi è il prodotto. Ogni contratto è letto da più persone in modo indipendente: le tue risposte servono a misurare quanto sono precisi i nostri metodi automatici.</p>
+
+<details class="card"><summary>Come si annota (leggi una volta)</summary>
+<ul>
+<li><b>È cloud?</b> Sì se il servizio gira sull'infrastruttura del fornitore (SaaS, IaaS, PaaS, hosting, centralino in cloud, PSN). No per licenze installate presso l'ente, hardware, connettività, sviluppo software.</li>
+<li><b>Tipo di servizio:</b> cloud; licenza; servizi professionali (consulenza, sviluppo, migrazione); PSN (Polo Strategico Nazionale); in-house (società pubblica dell'ente); telefonia (VoIP/centralino in cloud); connettività; hardware; altro.</li>
+<li><b>Provider del prodotto:</b> chi possiede il prodotto o l'infrastruttura, <i>non</i> chi lo rivende. Licenze Microsoft vendute da TIM → Microsoft.</li>
+<li><b>Giurisdizione:</b> paese di controllo del provider: IT, UE, EXTRA-UE (es. USA), oppure «ignota».</li>
+<li><b>Quanto sei sicuro:</b> alta = il prodotto è scritto chiaramente; media = deduzione ragionevole; bassa = stai tirando a indovinare. «Non so» e «bassa» sono risposte utili, non errori.</li>
+<li>Puoi aprire la scheda ANAC del contratto per approfondire. Non cercare altrove le nostre classificazioni: servono risposte indipendenti.</li>
+</ul></details>
+
+<div class="card" id="ingresso">
+<label for="nome">Il tuo nome o soprannome</label>
+<div class="row"><input id="nome" type="text" maxlength="60" placeholder="es. Maria R." style="flex:1;min-width:200px"><button id="inizia">Inizia</button></div>
+<p class="muted">Lo usiamo solo per non mostrarti due volte lo stesso contratto e per ringraziarti. Non chiediamo email né altri dati.</p>
+</div>
+
+<div class="card" id="scheda" hidden>
+<div class="muted" id="avanz"></div>
+<h2>Oggetto del contratto</h2>
+<div class="oggetto" id="oggetto"></div>
+<dl><dt>Ente</dt><dd id="ente"></dd><dt>Aggiudicatari</dt><dd id="aggiudicatari"></dd><dt>CPV</dt><dd id="cpv"></dd><dt>Importo</dt><dd id="importo"></dd>
+<dt>CIG</dt><dd><span id="cig"></span> · <a id="anac" target="_blank" rel="noopener">scheda ANAC</a></dd></dl>
+
+<form id="f">
+<label>È cloud?</label><div class="opz" data-n="e_cloud"></div>
+<label>Tipo di servizio</label><div class="opz" data-n="servizio"></div>
+<label for="provider">Provider del prodotto</label><input id="provider" type="text" maxlength="120" placeholder="es. Microsoft, Aruba, Polo Strategico Nazionale (vuoto se ignoto)">
+<label>Giurisdizione del provider</label><div class="opz" data-n="giurisdizione"></div>
+<label>Quanto sei sicuro?</label><div class="opz" data-n="confidenza"></div>
+<label for="note">Note (facoltative)</label><textarea id="note" rows="2" maxlength="1000"></textarea>
+<div class="row" style="margin-top:14px"><button type="submit">Salva e passa al prossimo</button><button type="button" class="sec" id="salta">Salta</button><span id="msg" class="stato"></span></div>
+</form>
+</div>
+
+<div class="card stato" id="stato">Caricamento dello stato…</div>
+</main>
+<script>
+const API = (location.hostname === "mxmap.it" || location.hostname === "www.mxmap.it") ? "https://annotazioni.mxmap.it" : "";
+const OPZ = {
+  e_cloud: [["s","Sì"],["n","No"],["non-so","Non so"]],
+  servizio: [["cloud","Cloud"],["licenza","Licenza"],["servizi-professionali","Servizi professionali"],["psn","PSN"],["in-house","In-house"],["telefonia","Telefonia"],["connettivita","Connettività"],["hardware","Hardware"],["altro","Altro"],["non-so","Non so"]],
+  giurisdizione: [["IT","Italia"],["UE","UE"],["EXTRA-UE","Extra-UE"],["ignota","Ignota"]],
+  confidenza: [["alta","Alta"],["media","Media"],["bassa","Bassa"]]
+};
+const $ = id => document.getElementById(id);
+for (const box of document.querySelectorAll(".opz")) {
+  const n = box.dataset.n;
+  for (const [v, t] of OPZ[n]) {
+    const l = document.createElement("label"), i = document.createElement("input"), s = document.createElement("span");
+    i.type = "radio"; i.name = n; i.value = v; s.textContent = t; l.append(i, s); box.append(l);
+  }
+}
+let nome = "", corrente = null, t0 = 0;
+try { nome = localStorage.getItem("annotatore") || ""; } catch (e) {}
+$("nome").value = nome;
+async function api(p, opt) { const r = await fetch(API + p, opt); const j = await r.json(); if (!r.ok) throw new Error(j.errore || r.status); return j; }
+async function stato() {
+  try {
+    const s = await api("/api/stato");
+    $("stato").textContent = "";
+    const p = document.createElement("p");
+    p.textContent = `${s.annotazioni} annotazioni da ${s.volontari} volontari · ${s.contratti_completi} contratti su ${s.totale_contratti} completati (${s.per_contratto} letture ciascuno).`;
+    $("stato").append(p);
+    if (s.classifica.length) { const q = document.createElement("p"); q.className = "muted"; q.textContent = "Grazie a: " + s.classifica.map(([n, k]) => `${n} (${k})`).join(", "); $("stato").append(q); }
+  } catch (e) { $("stato").textContent = "Servizio non raggiungibile: riprova più tardi."; }
+}
+async function prossimo() {
+  $("msg").textContent = ""; $("f").reset();
+  try {
+    const j = await api("/api/prossimo?nome=" + encodeURIComponent(nome));
+    if (j.finito) { $("scheda").hidden = true; $("ingresso").hidden = false; $("stato").prepend(Object.assign(document.createElement("p"), {className: "ok", textContent: `Hai annotato ${j.fatti} contratti: non ce ne sono altri per te. Grazie!`})); return; }
+    corrente = j.contratto; t0 = Date.now();
+    $("avanz").textContent = `Hai annotato ${j.fatti} contratti · ${j.restanti} ancora da leggere in totale`;
+    $("oggetto").textContent = corrente.oggetto; $("ente").textContent = corrente.ente; $("aggiudicatari").textContent = corrente.aggiudicatari || "—";
+    $("cpv").textContent = corrente.cpv; $("importo").textContent = Number(corrente.importo).toLocaleString("it-IT", {style: "currency", currency: "EUR", maximumFractionDigits: 0});
+    $("cig").textContent = corrente.cig; $("anac").href = "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=" + encodeURIComponent(corrente.cig);
+    $("ingresso").hidden = true; $("scheda").hidden = false; window.scrollTo(0, 0);
+  } catch (e) { $("msg").textContent = "Errore: " + e.message; $("msg").className = "stato err"; }
+}
+$("inizia").onclick = () => { nome = $("nome").value.trim(); if (!nome) { $("nome").focus(); return; } try { localStorage.setItem("annotatore", nome); } catch (e) {} prossimo(); };
+$("salta").onclick = prossimo;
+$("f").onsubmit = async ev => {
+  ev.preventDefault();
+  const v = n => (document.querySelector(`input[name=${n}]:checked`) || {}).value;
+  const d = {cig: corrente.cig, nome, e_cloud: v("e_cloud"), servizio: v("servizio"), giurisdizione: v("giurisdizione"), confidenza: v("confidenza"),
+             provider: $("provider").value.trim(), note: $("note").value.trim(), secondi: Math.round((Date.now() - t0) / 1000)};
+  if (!d.e_cloud || !d.servizio || !d.giurisdizione || !d.confidenza) { $("msg").textContent = "Rispondi alle quattro domande con le opzioni."; $("msg").className = "stato err"; return; }
+  try { await api("/api/annota", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(d)}); $("msg").textContent = "Salvato."; $("msg").className = "stato ok"; stato(); prossimo(); }
+  catch (e) { $("msg").textContent = "Errore: " + e.message; $("msg").className = "stato err"; }
+};
+stato();
+</script>
+</body>
+</html>
