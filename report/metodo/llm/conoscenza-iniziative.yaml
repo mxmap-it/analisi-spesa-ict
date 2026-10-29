@@ -110,14 +110,18 @@ iniziative:
     servizi:
       - {nome: "Industry Standard (Housing, Hosting, IaaS Shared/Private, PaaS)", provider_prodotto: "PSN su DC propri (stack sottostante: VMware/altro da_verificare)", giurisdizione: IT}
       - {nome: "Hybrid Cloud on PSN site", provider_prodotto: "Microsoft (Azure Stack HCI / Azure Arc, control plane Azure)", giurisdizione: EXTRA-UE (USA)}
-      - {nome: "Secure Public Cloud", provider_prodotto: "Microsoft Azure e Google Cloud, region pubbliche in Italia + cifratura con chiave esterna e backup sovrano su PSN", giurisdizione: EXTRA-UE (USA)}
-      - {nome: "Public Cloud PSN Managed", provider_prodotto: "Google Cloud e Oracle Cloud, region dedicate nei DC PSN", giurisdizione: EXTRA-UE (USA) per tecnologia; gestione IT}
+      - {nome: "Secure Public Cloud (AWS, Microsoft, Google)", provider_prodotto: "region pubbliche di AWS, Microsoft Azure, Google Cloud + chiavi su HSM Thales nei DC PSN (BYOK) e backup mensile su PSN", giurisdizione: EXTRA-UE (USA), qualifica_acn: "livello 2 (catalogo ACN, verifica Osservatorio 29/07/2026)"}
+      - {nome: "Secure Public Cloud Oracle", provider_prodotto: "region pubblica Oracle (servizi non erogabili via Alloy: Exadata X9M/X11M ecc.)", giurisdizione: EXTRA-UE (USA)}
+      - {nome: "Public Cloud PSN Managed - Google", provider_prodotto: "Google Assured Workloads / Italy Data Boundary su region Google Milano e Torino (policy su cloud pubblico, operato da Google); NON nei DC PSN", giurisdizione: EXTRA-UE (USA)}
+      - {nome: "Public Cloud PSN Managed - Oracle Alloy", provider_prodotto: "Oracle Alloy, realm dedicato nei DC PSN; operazioni e aggiornamenti Oracle, PSN solo patching standard", giurisdizione: EXTRA-UE (USA)}
+    allineamento_osservatorio: "Allineato il 29/10/2026 all'analisi PSN di osservatorio.mxmap.it (/psn/, fonti: listino PSN 04/2026, Guida alla Convenzione 08/2025, Manuale Utente SPC Azure 04/2025, catalogo ACN). Differenze trovate rispetto alla versione precedente di questa voce: (1) PSN Managed NON è 'Google e Oracle nei DC PSN': Google gira nelle region Google, solo Oracle Alloy nei DC PSN; (2) mancavano Secure Public Cloud AWS e Secure Public Cloud Oracle; (3) 'Hybrid Cloud on PSN site' (Azure Stack HCI/Arc) non compare nell'analisi dell'Osservatorio: da verificare sul listino. I nove servizi a livello ACN 4 sono tutti nativi PSN (Osservatorio)."
+    sovranita: "Servizi nativi PSN (Industry Standard, housing, hosting): cloud sovrano IT secondo il criterio del 29/10/2026 (DC in Italia, concessionario italiano a controllo italiano). Tutte le offerte su tecnologia hyperscaler (Secure Public Cloud, PSN Managed, eventuale Hybrid): EXTRA-UE, nessuna qualifica di sovranità (Osservatorio)."
     stato: verificato
     controvalidato: true
     fonti_controvalidazione: ["https://www.polostrategiconazionale.it/app/uploads/2025/08/PSN_Guida-alla-Convenzione_.pdf (servizi, CIG, data)", "https://www.arera.it/fileadmin/allegati/docs/25/34-25dagr.pdf (CIG 9066973ECE)"]
     fonti_soci: ["https://www.polostrategiconazionale.it/en/faqs/ (verificato, soci)", "agendadigitale.eu (quote, riferito)"]
     parole_chiave: ["PSN", "POLO STRATEGICO NAZIONALE", "SECURE PUBLIC CLOUD", "PUBLIC CLOUD PSN MANAGED", "HYBRID CLOUD ON PSN SITE", "INDUSTRY STANDARD"]
-    nota_classificazione: "'PSN' da solo non basta: va letto il servizio. Industry Standard/Housing/Hosting = IT; Secure Public Cloud / PSN Managed / Hybrid = tecnologia hyperscaler USA."
+    nota_classificazione: "'PSN' da solo non basta: va letto il servizio. Industry Standard/Housing/Hosting = IT (sovrano); Secure Public Cloud (AWS, Microsoft, Google, Oracle) e PSN Managed (Google, Oracle Alloy) = EXTRA-UE."
 
   - id: consip-microsoft-ea7
     nome: "Convenzione Microsoft Enterprise Agreement 7"
