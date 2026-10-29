@@ -84,7 +84,8 @@ def aggiorna_vista(url: str, sha: str) -> None:
     os.replace(tmp, dest)
 
 
-def archivia(sess: requests.Session, url: str) -> dict:
+def archivia(sess: requests.Session, url: str, accetta_html: bool = False) -> dict:
+    """accetta_html=True per pagine web vere (es. Amministrazione trasparente, tools/llm/atti.py)."""
     rec = {"acquisito": adesso(), "url": url}
     prec = ultima_riuscita(url)
     t0 = time.monotonic()
@@ -124,7 +125,7 @@ def archivia(sess: requests.Session, url: str) -> dict:
                     sha.update(blocco)
                     n += len(blocco)
         digest = sha.hexdigest()
-        if "text/html" in ctype and not url.endswith((".html", ".htm")):
+        if "text/html" in ctype and not accetta_html and not url.endswith((".html", ".htm")):
             part.unlink(missing_ok=True)
             rec.update(esito="errore", errore="risposta HTML al posto del file: probabile blocco WAF",
                        dimensione=n, secondi=round(time.monotonic() - t0, 2))

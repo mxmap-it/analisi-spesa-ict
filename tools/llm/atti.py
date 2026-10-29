@@ -60,7 +60,7 @@ def main() -> int:
     x = a.parse_args()
     sess = archivia.requests.Session()
     sess.headers["User-Agent"] = archivia.UA
-    rec = archivia.archivia(sess, x.url)
+    rec = archivia.archivia(sess, x.url, accetta_html=True)
     archivia.scrivi_manifest(rec)
     sha = rec.get("sha256") or (archivia.ultima_riuscita(x.url) or {}).get("sha256")
     out = {"schema": "spesaict.atto/1", "cig": x.cig, "url": x.url,
