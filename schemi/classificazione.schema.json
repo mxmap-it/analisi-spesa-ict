@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://analisi-spesa-ict.mxmap.it/schemi/classificazione.schema.json",
+  "title": "Registro di classificazione di un CIG (spesaict.classificazione/1)",
+  "description": "Una riga JSONL per CIG e per esecuzione del metodo. Documenta esito, attendibilità e TUTTI i passaggi che vi hanno portato, in modo che un terzo possa riprodurli o contestarli con altri strumenti. Metodologia: sito/content/progetto/formato-classificazione.md",
+  "type": "object",
+  "required": ["schema", "cig", "versione_metodo", "ingresso", "esito", "passaggi"],
+  "properties": {
+    "schema": {"const": "spesaict.classificazione/1"},
+    "cig": {"type": "string", "pattern": "^[0-9A-Z]{10}$"},
+    "versione_metodo": {"type": "string", "description": "es. v3.1+via6-p2"},
+    "generato_il": {"type": "string", "format": "date-time"},
+    "ingresso": {
+      "type": "object",
+      "description": "Dati di partenza così come letti dalla fonte (BDNCP/ANAC), con la loro provenienza",
+      "properties": {
+        "fonte": {"type": "object", "properties": {"dataset": {"type": "string"}, "file": {"type": "string"}, "sha256": {"type": "string"}}},
+        "oggetto": {"type": "string"}, "cpv": {"type": "string"}, "importo": {"type": "number"},
+        "stazione_appaltante": {"type": "string"}, "aggiudicatari": {"type": "array", "items": {"type": "string"}},
+        "cig_accordo_quadro": {"type": "string"}
+      }
+    },
+    "esito": {
+      "type": "object",
+      "required": ["e_cloud", "servizio", "giurisdizione", "confidenza"],
+      "properties": {
+        "e_cloud": {"enum": ["s", "n"]},
+        "servizio": {"enum": ["cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro"]},
+        "provider_prodotto": {"type": "string"},
+        "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "ignota"], "description": "Giurisdizione del controllo giuridico di chi eroga il servizio/prodotto (DECISIONI 29/10/2026)"},
+        "cloud_sovrano": {"type": ["boolean", "null"], "description": "true se DC in UE, operatore UE a controllo UE non soggetto a leggi extra-UE (modello SecNumCloud 3.2)"},
+        "dipendenze_tecnologiche": {"type": "array", "items": {"type": "object", "properties": {"componente": {"type": "string"}, "produttore": {"type": "string"}, "giurisdizione": {"type": "string"}}}, "description": "Software/hardware di terzi sottostante (es. VMware, Windows Server): non cambia la giurisdizione"},
+        "via": {"type": "string", "description": "1-lotto, 2-lotto-nel-testo, 3-marchio, 4-psn, 5-fornitore, 6-modello, 7-indeterminato, 0-ict-non-cloud, U-revisione-umana"},
+        "confidenza": {"enum": ["alta", "media", "bassa"]},
+        "fonte_primaria": {"type": "boolean", "description": "true se un atto dell'ente sul contratto conferma l'esito"},
+        "motivazione": {"type": "string"}
+      }
+    },
+    "passaggi": {
+      "type": "array",
+      "description": "Sequenza ordinata e completa dei passaggi eseguiti. Ogni passaggio è riproducibile dai suoi parametri.",
+      "items": {
+        "type": "object",
+        "required": ["n", "tipo", "strumento"],
+        "properties": {
+          "n": {"type": "integer"},
+          "tipo": {"enum": ["regola", "tabella", "modello", "ricerca-web", "apertura-pagina", "scaricamento", "estrazione-testo", "ocr", "revisione-umana", "decisione"]},
+          "strumento": {"type": "string", "description": "es. tools/analisi/classifica.py, claude-haiku-5-5, WebSearch, pdftotext"},
+          "versione": {"type": "string", "description": "versione del codice/regole/istruzioni/modello, o commit git"},
+          "parametri": {"type": "object", "description": "regola scattata, query, URL, prompt (versione istruzioni), ecc."},
+          "risultato": {"type": "object"},
+          "data": {"type": "string"},
+          "chi": {"type": "string", "description": "agente/persona"},
+          "nota": {"type": "string"}
+        }
+      }
+    },
+    "fonti": {
+      "type": "array",
+      "items": {"type": "object", "required": ["url"], "properties": {
+        "url": {"type": "string"}, "tipo": {"enum": ["atto-ente", "convenzione", "catalogo", "scheda-prodotto", "stampa", "altro"]},
+        "sha256": {"type": "string", "description": "del documento archiviato (archivio content-addressed); vuoto se non archiviato"},
+        "atto_id": {"type": "string", "description": "riferimento a una riga di dati/atti/"}, "aperta": {"type": "boolean"}
+      }}
+    },
+    "revisione": {"type": "object", "properties": {"stato": {"enum": ["da-rivedere", "confermata", "corretta", "campione-controllo"]}, "annotatore": {"type": "string"}, "modalita": {"enum": ["cieca", "assistita"]}, "data": {"type": "string"}}}
+  }
+}

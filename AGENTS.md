@@ -64,3 +64,10 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Le decisioni di perimetro, metodo e comunicazione verso gli enti spettano a Fabio Pietrosanti (etichetta `decisione-fabio`): proponi, non decidere.
 - Budget token (dopo la chiusura di ANAC): ≤ 20 % del limite settimanale su 7 giorni (`config/budget.yaml`).
 - Nessuna comunicazione verso enti o terzi (email, PR su repo altrui, post) senza approvazione di Fabio.
+
+## 8. Classificazione e artefatti intermedi (29/10/2026)
+
+- Ogni classificazione di CIG si registra nel formato `spesaict.classificazione/1` (`schemi/`, `dati/classificazioni/`) con **tutti i passaggi** (regole, modello e versione delle istruzioni, ricerche, pagine aperte, scaricamenti, estrazioni, revisioni) e i collegamenti CIG → atti in `spesaict.atto/1` (`dati/atti/`). Rigenera con `node tools/llm/registro.js`.
+- La metodologia (`sito/content/progetto/formato-classificazione.md`, `metodo-cloud-provider.md`) si aggiorna **insieme** a ogni cambio di metodo, con riga nel registro delle revisioni.
+- Le conversazioni di lavoro con gli agenti si versionano in `sessioni/`.
+- Ogni ostacolo incontrato nel classificare diventa una voce in `report/metodo/richieste-e-raccomandazioni.yaml` (policy, norme, procedure).

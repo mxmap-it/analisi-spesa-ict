@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://analisi-spesa-ict.mxmap.it/schemi/atto.schema.json",
+  "title": "Collegamento CIG -> atto/contratto (spesaict.atto/1)",
+  "description": "Una riga JSONL per documento collegato a un CIG (determina, contratto, convenzione). Colma il collegamento mancante fra BDNCP/ANAC e i documenti degli enti. Il testo estratto è in dati/atti/testi/<sha256>.txt; il documento originale nell'archivio content-addressed.",
+  "type": "object",
+  "required": ["schema", "cig", "url", "recuperato_il"],
+  "properties": {
+    "schema": {"const": "spesaict.atto/1"},
+    "cig": {"type": "string"},
+    "url": {"type": "string"},
+    "trovato_con": {"type": "object", "description": "come si è arrivati all'URL: ricerca, navigazione Amministrazione trasparente, link in BDNCP", "properties": {"metodo": {"type": "string"}, "query": {"type": "string"}, "pagina_partenza": {"type": "string"}}},
+    "recuperato_il": {"type": "string", "format": "date-time"},
+    "http_status": {"type": "integer"},
+    "mime": {"type": "string"}, "byte": {"type": "integer"},
+    "sha256": {"type": "string", "description": "del file originale"},
+    "estrazione": {"type": "object", "properties": {"strumento": {"type": "string"}, "versione": {"type": "string"}, "ocr": {"type": "boolean"}, "testo_sha256": {"type": "string"}, "caratteri": {"type": "integer"}}},
+    "tipo_atto": {"enum": ["determina", "delibera", "contratto", "convenzione", "capitolato", "avviso", "altro"]},
+    "ente": {"type": "string"},
+    "pertinenza": {"enum": ["cig-citato", "oggetto-coincidente", "contesto"], "description": "cig-citato = il testo contiene il CIG"},
+    "esito_recupero": {"enum": ["ok", "bloccato", "non-trovato", "illeggibile"]},
+    "nota": {"type": "string"}
+  }
+}

@@ -176,3 +176,7 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 - SaaS di produttori italiani: **dove gira** (catalogo ACN, documentazione del fornitore).
 - In-house e datacenter propri ([#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)),
   dopo la chiusura della misura cloud.
+
+## Cloud sovrano e dipendenze tecnologiche (29/10/2026)
+
+La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Data center in Italia + operatore italiano a controllo italiano non soggetto al CLOUD Act (immunità giuridica sul modello SecNumCloud 3.2) = **cloud sovrano (IT)**, anche con software extra-UE, che si registra come *dipendenza tecnologica* separata. Esempio: Sistema Cloud Toscana. Ogni classificazione è documentata nel [registro di classificazione](../formato-classificazione/).
