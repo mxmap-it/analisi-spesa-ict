@@ -101,6 +101,15 @@ ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tail -2 log/mirror-anac.lo
 2. Poi i dataset nell'ordine della [roadmap](sito/content/progetto/roadmap.md#8ter-i-dataset-in-ordine-prima-anac-poi-gli-altri):
    **Consip per primo**, perché cancella oltre i tre anni.
 
+### Todo a bassa priorità — rapporto CPV (#59, 30/10/2026)
+
+Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e **raccomandazione di policy per AgID, ANAC e ACN** (R21). Piano in `report/cpv/PIANO.md`, letteratura in `report/cpv/letteratura.md` (nessuna misura di correttezza esistente).
+- [ ] Aprire il PDF della Corte dei conti europea 28/2023 (p. 37) e passare la cifra del 49,8% da R a V.
+- [ ] Cercare il rapporto finale Ramboll/BME 2012 (450 documenti).
+- [ ] Misurare il CPV dichiarato contro la classe vera sul campione, appena ci sono le annotazioni umane.
+- [ ] Stima su scala con il dataset Zenodo 10007545 ed EuroTender (scaricamento in attesa dell'ok di Fabio).
+- [ ] Mappare le lacune del vocabolario, riclassificare, scrivere la proposta di policy, poi il rapporto.
+
 ## Bloccanti, che dipendono da Fabio
 
 - ~~**Board di progetto**~~ creata: https://github.com/orgs/mxmap-it/projects/1

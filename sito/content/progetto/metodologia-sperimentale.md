@@ -26,6 +26,13 @@ Vogliamo sapere, contratto per contratto (CIG), se si compra cloud, quale **prod
 - **Sigle delle convenzioni:** "SPC Cloud" copre quattro lotti molto diversi, di cui solo il primo è cloud. "PSN Managed" comprende due architetture diverse. Per decifrarle serve una conoscenza costruita a parte.
 - **Ruoli invertiti:** l'ente acquirente (ARIA, Sogei, CINECA) viene scambiato per il fornitore.
 
+**Il CPV non aiuta quanto dovrebbe**
+
+- **È l'unico "tipo di acquisto" strutturato, ma lo sceglie l'ente senza controlli di coerenza.** Spesso è generico (`72000000`, "servizi informatici") o sbagliato. Per questo da solo non basta né a includere né a escludere: serve che concordi con altri segnali.
+- **Il vocabolario è fermo al 2008** (Reg. CE 213/2008). Non distingue cloud, SaaS, PSN o hosting da un'installazione presso l'ente. Nessun codice indica prodotto, produttore, sede dei dati o giurisdizione.
+- **Nessuno ha misurato quanti CPV siano sbagliati.** Le misure pubbliche riguardano quasi solo se il campo è compilato ([rassegna](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/cpv/letteratura.md)). La Corte dei conti europea (relazione 28/2023) segnala problemi di qualità nel 49,8% dei dati TED, ma non specifici del CPV. L'unica stima vicina, spagnola e con metodo non pubblicato, parla di 34% di codici troppo generici e 7% errati.
+- **Lo misuriamo noi.** Sul campione classificato confrontiamo il CPV dichiarato con l'oggetto reale e ne ricaviamo una proposta per ANAC, AgID e ACN: controllo di coerenza al rilascio del CIG, campi obbligatori su tipologia IT e sovranità, aggiornamento del vocabolario (R21, [piano](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/cpv/PIANO.md), #59).
+
 **La giurisdizione non è un'etichetta semplice**
 
 - **Conta chi controlla il servizio, non dove sono i server.** Un data center in Italia gestito da un operatore soggetto al CLOUD Act non è sovrano.
@@ -128,5 +135,6 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 | data | modifica |
 |---|---|
+| 2026-10-30 | criticità del CPV: attendibilità non misurata da nessuno, lacune del vocabolario, misura e proposta (#59) |
 | 2026-10-29 | criticità, strategia a più vie, capitalizzazione della conoscenza |
 | 2026-10-29 | prima versione: giri 1-2 della via 6, confronto Haiku/Sonnet, confidenza verificata, cloud sovrano, Cloud Toscana, TabICL, tetto |
