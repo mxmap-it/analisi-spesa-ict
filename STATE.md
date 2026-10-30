@@ -107,7 +107,11 @@ Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e 
 - [ ] Aprire il PDF della Corte dei conti europea 28/2023 (p. 37) e passare la cifra del 49,8% da R a V.
 - [ ] Cercare il rapporto finale Ramboll/BME 2012 (450 documenti).
 - [ ] Misurare il CPV dichiarato contro la classe vera sul campione, appena ci sono le annotazioni umane.
-- [ ] Stima su scala con il dataset Zenodo 10007545 ed EuroTender (scaricamento in attesa dell'ok di Fabio).
+- [ ] **Dalla settimana del 2/11/2026 (ok di Fabio del 30/10):** scaricare sul server il dataset Zenodo 10007545 ed EuroTender e fare un **test di valutazione con rendiconto**: aiutano la metodologia o no? Possono anche non servire a niente. Criteri:
+  - elenchi di esclusione certa ricavati da Zenodo: quanti contratti escludono in più e con quale precisione;
+  - EuroTender come voto indipendente: quanto concorda con le nostre classi sul campione e se segnala errori veri.
+
+  Si includono nella pipeline solo se il guadagno misurato giustifica la complessità; altrimenti si scartano, con il motivo scritto.
 - [ ] Mappare le lacune del vocabolario, riclassificare, scrivere la proposta di policy, poi il rapporto.
 
 ## Bloccanti, che dipendono da Fabio
