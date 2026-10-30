@@ -1,0 +1,844 @@
+               Nell’ambito della CONCESSIONE per la realizzazione e
+ gestione di una nuova infrastruttura informatica al servizio della
+ Pubblica Amministrazione denominata Polo Strategico Nazionale
+  (“PSN”), di cui al comma 1 dell’articolo 33-septies del d.l. n. 179
+                                                del 2012.
+
+
+                                PIANO DEI FABBISOGNI
+
+
+
+
+               Gestione digitalizzata delle Cartelle Cliniche
+
+
+Data: 01/08/2023
+
+Template Piano dei Fabbisogni
+
+Ed. 1 - ver. 1.0
+
+
+
+
+                                                                                         1
+                                 Gruppo TIM Piano   dei Fabbisogni
+                                            - Uso Interno - Tutti i diritti riservati.
+INDICE
+
+1         PREMESSA .................................................................................................. 4
+
+2         DATI ANAGRAFICI DELL’AMMINISTRAZIONE ............................................... 6
+
+3         DOCUMENTI DI RIFERIMENTO..................................................................... 7
+    3.1        DOCUMENTI APPLICABILI ......................................................................................7
+    3.2        ACRONIMI ..............................................................................................................7
+
+4         DEFINIZIONI ................................................................................................ 9
+
+5         PIANO DI MIGRAZIONE ............................................................................. 10
+    5.1        OBIETTIVI ................................................................................................................10
+          5.1.1      Digitalizzazione di circa n°25.000 CC produzione annuale ................................................ 10
+    5.2        PIANO DI MIGRAZIONE ..............................................................................................10
+
+6         DESCRIZIONE DEI FABBISOGNI .................................................................. 12
+    6.1        CONTESTO DI RIFERIMENTO .......................................................................................12
+
+7         Servizi richiesti .......................................................................................... 14
+    7.1        INDUSTRY STANDARD ................................................................................................15
+          7.1.1      IaaS..................................................................................................................................... 15
+    7.2        SERVIZIO DI MIGRAZIONE ..................................... ERRORE. IL SEGNALIBRO NON È DEFINITO.
+    7.3        SERVIZI PROFESSIONALI..............................................................................................15
+          7.3.1      Servizi di evoluzione ........................................................................................................... 16
+                  7.3.1.1          Servizio Re-Architect .......................................................................................................................16
+                  7.3.1.2          Servizio Re-Platform........................................................................................................................16
+          7.3.2      Security Professional Services ............................................................................................ 16
+          7.3.3      IT Infrastructure - Service Operations ................................................................................ 17
+          7.3.4      Sintesi dei servizi professionali ........................................................................................... 17
+    7.4        ALTRI SERVIZI A LISTINO .............................................................................................18
+
+
+
+
+                                                                                                                                                                                2
+                                               Gruppo TIM Piano   dei Fabbisogni
+                                                          - Uso Interno - Tutti i diritti riservati.
+LISTA DELLE TABELLE
+Tabella 1: Dati anagrafici dell’Amministrazione contraente ............................................................................. 6
+Tabella 2: Dati anagrafici del referente tecnico ................................................................................................ 6
+Tabella 3: Documenti di riferimento ................................................................................................................. 7
+Tabella 4: Servizi richiesti: quadro di sintesi.................................................................................................... 14
+Tabella 8: Fabbisogno IaaS .............................................................................................................................. 15
+Tabella 15: Fabbisogno Servizi Professionali di migrazione ....................... Errore. Il segnalibro non è definito.
+Tabella 16: Fabbisogno Altri Servizi Professionali ........................................................................................... 18
+Tabella 17: Fabbisogno altri servizi a listino .................................................................................................... 18
+
+
+
+
+                                                                                                                                                          3
+                                                  Gruppo TIM Piano   dei Fabbisogni
+                                                             - Uso Interno - Tutti i diritti riservati.
+1 PREMESSA
+Il Piano Nazionale di Ripresa e Resilienza ha previsto specifici obiettivi per la transizione digitale con
+particolare riferimento agli “Obiettivi Italia Digitale 2026” – “Obiettivo 3 – Cloud e Infrastrutture Digitali”
+orientato alla migrazione dei dati e degli applicativi informatici delle singole amministrazioni. Per promuovere
+l’innovazione digitale nella Pubblica Amministrazione, l’Agenzia per l’Italia Digitale ha attivato un piano
+complessivo di trasformazione e digitalizzazione, ponendo al centro del modello strategico la componente
+infrastrutturale (come descritto nel Piano Triennale per l’Informatica nella Pubblica Amministrazione 2020-
+2022) con l’obiettivo di governare la trasformazione digitale. Le direttrici evolutive della componente
+infrastrutturale sono rappresentata da:
+     ● Sovranità digitale;
+     ● Sicurezza, assicurare un presidio tecnologico e operativo in grado di garantire i più alti standard di
+         sicurezza:
+        o Fisica (e.g. disaster recovery, business continuity, controllo accessi, etc..);
+        o Informatica (e.g. prevenzione e risposta attacchi cyber, data protection, identity access
+            management, etc.);
+     ● Innovazione, attraverso le migliori soluzioni tecnologiche per le infrastrutture data center, la
+         connettività, le piattaforme e i servizi cloud, garantendo trasferimento tecnologico di esperienze e
+         know how con i leader globali.
+
+In questo contesto, e relativamente alla razionalizzazione ed il consolidamento dei Data Center della Pubblica
+amministrazione, si inserisce la creazione del Polo Strategico Nazionale, una nuova infrastruttura digitale a
+servizio della PA italiana, che la dota di tecnologie e infrastrutture cloud affidabili, resilienti e indipendenti.
+
+L’AORN Cardarelli ha avviato un processo un processo di trasformazione digitale dei processi aziendali, fra
+cui la digitalizzazione delle Cartelle Cliniche cartacee.
+
+In considerazione delle potenzialità in termini conoscitivi che rappresenta tale patrimonio documentale,
+appare di importanza strategica mettere in atto tutte le misure necessarie alla valorizzazione e condivisione
+di tale patrimonio, sfruttando a pieno tutte le potenzialità offerte dal mondo digitale per un pieno processo
+di transizione digitale finalizzato alla sua piena fruizione.
+
+Per raggiungere tali obiettivi, occorre mettere in campo specifici interventi volti alla digitalizzazione sia delle
+Cartelle Cliniche.
+Questo progetto si colloca nel più ampio processo di dematerializzazione documentale, con servizi
+specialistici per la conservazione, gestione, valorizzazione e fruizione del patrimonio informativo contenuto
+negli archivi cartacei pregressi. Il servizio integrato di gestione delle cartelle cliniche cartacee, attraverso la
+loro digitalizzazione, permette la creazione di fascicoli in formato elettronico sicuro, che solo un processo di
+informatizzazione può assicurare.
+Tale progetto prevede la dematerializzazione delle cartelle cliniche dell’AORN Cardarelli mediante un
+processo certificato atto alla creazione di copia sostitutiva. La “conservazione sostitutiva” è un processo che
+consente di assolvere gli obblighi di conservazione di documenti originariamente analogici mediante le loro
+copie informatiche (tipicamente copie per immagine). Tale processo si conclude con l’invio delle copie
+informatiche ad un sistema di conservazione a norma e la distruzione degli originali cartacei.
+
+La dematerializzazione delle cartelle cliniche finalizzate alla creazione di copia sostitutiva mediante un
+processo certificato è stata introdotta dalle Linee guida AGID entrate in vigore il 01 Gennaio 2022.
+
+Le Linee Guida, che si compongono di sei allegati tecnici, hanno il duplice scopo di:
+
+
+
+                                                                                                                 4
+                                     Gruppo TIM Piano   dei Fabbisogni
+                                                - Uso Interno - Tutti i diritti riservati.
+       aggiornare le regole tecniche attualmente in vigore sulla formazione, protocollazione, gestione e
+        conservazione dei documenti informatici, già precedentemente regolate nei DPCM del 03/12/2013
+        e 13/11/2014;
+       fornire una cornice unica di regolamentazione per le regole tecniche e le circolari in materia, in
+        coerenza con le discipline dei Beni culturali.
+
+L’obbligo di adozione delle nuove Linee Guida è partito dal 1° gennaio 2022.
+
+Il “processo” dovrà caratterizzarsi non solo dal punto di vista oggettivo (procedura tecnologica in grado di
+garantire la corrispondenza della forma e del contenuto dell’originale e della copia) ma anche da quello
+soggettivo per attestare l’efficacia probatoria della certificazione di processo.
+     ● per l’ambito oggettivo: il ciclo di dematerializzazione massiva dovrà essere certificato da organismo
+         terzo in accordo agli standard ISO 9001 e ISO 27001, con campo di applicazione specifico per i servizi
+         di progettazione e dematerializzazione massiva di documenti;
+     ● per l’ambito soggettivo: il ciclo di dematerializzazione dovrà concludersi con il metodo del raffronto
+         a campione dei documenti, generando una certificazione ovvero un risultato probatorio differente a
+         seconda che il rapporto di verificazione sia firmato da un pubblico ufficiale.
+
+
+
+
+                                                                                                             5
+                                    Gruppo TIM Piano   dei Fabbisogni
+                                               - Uso Interno - Tutti i diritti riservati.
+2 DATI ANAGRAFICI DELL’AMMINISTRAZIONE
+Nelle seguenti tabelle si riportano i dati anagrafici dell’Amministrazione contraente e del suo referente.
+
+ Ragione sociale Contraente
+ Ragione sociale                              AORN A. CARDARELLI
+ Codice Fiscale
+ Partita Iva                                  06853240635
+ Indirizzo sede legale                        VIA A. CARDARELLI N.9
+ CAP                                          80100
+ Comune                                       NAPOLI
+ Provincia                                    NA
+ Cognome referente Contratto Esecutivo        DR. D’ANGELO
+ Nome referente Contratto Esecutivo           LORENZO
+ Indirizzo mail referente Contratto
+                                              lorenzo.dangelo@aocardarelli.it
+ Esecutivo
+ PEC Amministrazione                          aocardarelli@pec.it
+                                 Tabella 1: Dati anagrafici dell’Amministrazione contraente
+
+
+ Riferimento referente tecnico
+ Cognome                                      Ing. SALVATORE
+ Nome                                         ASCIONE
+ Telefono fisso
+ Cellulare                                    338/6220088
+ Indirizzo mail                               salvatore.ascione@aocardarelli.it
+
+                                      Tabella 2: Dati anagrafici del referente tecnico
+
+
+
+ Data                                         Firma
+
+
+
+
+                                                                                                             6
+                                      Gruppo TIM Piano   dei Fabbisogni
+                                                 - Uso Interno - Tutti i diritti riservati.
+3 DOCUMENTI DI RIFERIMENTO
+
+Riferimento                                        Codice                          Titolo
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   CONVENZIONE ai sensi degli artt. 164,
+Ministri – Dipartimento per la Trasformazione                                      165, 179, 180, comma 3 e 183, comma 15
+Digitale – del 24.08.2022                                                          del d.lgs. 18 aprile 2016, n. 50 e successive
+                                                                                   modificazioni o integrazioni avente ad
+                                                                                   oggetto l’affidamento in concessione dei
+                                                                                   servizi infrastrutturali e applicativi in cloud
+                                                                                   per la gestione di dati sensibili - “Polo
+                                                                                   Strategico Nazionale”
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   Capitolato Tecnico e relativi annessi –
+Ministri – Dipartimento per la Trasformazione      (Allegato A)                    Capitolato Servizi
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   “Offerta Tecnica” e relativi annessi
+Ministri – Dipartimento per la Trasformazione      (Allegato B)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   “Offerta economica del Fornitore –
+Ministri – Dipartimento per la Trasformazione      (Allegato C)                    Catalogo dei Servizi” e relativi annessi
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   Schema di Contratto di Utenza
+Ministri – Dipartimento per la Trasformazione      (Allegato D)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   Indicatori di Qualità
+Ministri – Dipartimento per la Trasformazione      (Allegato H)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   Flussi informativi
+Ministri – Dipartimento per la Trasformazione      (Allegato I)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei           CONV-PSN-2022                   Elenco dei Servizi Core, no Core e CSP
+Ministri – Dipartimento per la Trasformazione      (Allegato L)
+Digitale – del 24.08.2022
+                                           Tabella 3: Documenti di riferimento
+
+
+
+
+3.1 DOCUMENTI APPLICABILI
+
+Riferimento                             Codice                              Titolo
+Template Piano dei Fabbisogni           PSN- TMPL- PNDF                     Piano dei Fabbisogni Template
+
+
+
+
+3.2 ACRONIMI
+
+Acronimo                 Descrizione
+AI                       Artificial Intelligence
+
+
+                                                                                                                                     7
+                                     Gruppo TIM Piano   dei Fabbisogni
+                                                - Uso Interno - Tutti i diritti riservati.
+CaaS    Container as a Service
+CMP     Cloud Management Platform
+CSP     Cloud Service Provider
+DB      DataBase
+DBaaS   DataBase as a Service
+DR      Disaster Recovery
+GCP     Google Cloud Platform
+HA      High Availability
+IaaS    Infrastructure as a Service
+IAM     Identity and Access Management
+IT      Information Technology
+PA      Pubblica Amministrazione
+PaaS    Platform as a Service
+PSN     Polo Strategico Nazionale
+VM      Virtual Machine
+
+
+
+
+                                                                           8
+                   Gruppo TIM Piano   dei Fabbisogni
+                              - Uso Interno - Tutti i diritti riservati.
+4 DEFINIZIONI
+     ACN: l’Agenzia per la cybersicurezza nazionale, di cui al decreto-legge 14 giugno 2021, n. 82,
+      convertito, con modificazioni, dalla legge 4 agosto 2021, n. 109;
+
+     DTD: il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri;
+
+     Amministrazioni: le amministrazioni individuate dall’articolo 1, comma 3, della legge 31 dicembre
+      2009, n. 196;
+
+     Dati dell’amministrazione: le informazioni trattate dall’amministrazione, o da terzi per conto
+      dell’amministrazione;
+
+     Regolamento: il Regolamento di cui all’articolo 33-septies, comma 4, del decreto legge 18 ottobre
+      2012, n. 179, convertito, con modificazioni, dalla legge 17 dicembre 2012, n. 221, recante “livelli
+      minimi di sicurezza, capacità elaborativa, risparmio energetico e affidabilità delle infrastrutture
+      digitali per la PA e le caratteristiche di qualità, sicurezza, performance e scalabilità, portabilità dei
+      servizi cloud per la pubblica amministrazione, le modalità di migrazione nonché le modalità di
+      qualificazione dei servizi cloud per la pubblica amministrazione”, adottato dall’Agenzia per l’Italia
+      digitale (AgID), d’intesa con il DTD, con Determinazione n. 628/2021 del 15 dicembre 2021;
+
+     Servizi dell’amministrazione: servizi erogati verso terzi o internamente all’amministrazione;
+
+     “modalità A - trasferimento in sicurezza dell’infrastruttura IT”: migrazione verso il cloud effettuata
+      secondo la strategia di migrazione Lift&Shift (anche detta Rehost), ovvero la migrazione dell’intero
+      servizio dell’amministrazione, comprensivo di applicazioni e dati su un hosting cloud senza apportare
+      modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud;
+
+     “modalità B - aggiornamento in sicurezza di applicazioni in cloud”: migrazione verso il cloud
+      effettuata secondo le seguenti strategie:
+
+         repurchase/replace: si intende la migrazione del servizio dell’amministrazione verso una
+          soluzione nativa in cloud, in genere erogata in modalità Software as a Service;
+
+         replatform: si intende la riorganizzazione dell’architettura applicativa sostituendo intere
+          componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici
+          dell’infrastruttura Cloud;
+
+         re-architect: ha come obiettivo quello di ripensare significativamente l’architettura core di un
+          applicativo in ottica cloud, attraverso un processo di redesign iterativo ed incrementale che miri
+          ad adottare appieno i servizi cloud-native offerti dai cloud service provider per massimizzare i
+          benefici che ne derivano;
+
+     Housing: utilizzo delle infrastrutture impiantistiche e di connettività dei Data Center del PSN, dove
+      verranno ospitate apparecchiature delle Amministrazioni;
+
+     Hosting: utilizzo delle infrastrutture IT dei Data Center del PSN, dove verranno installate le
+      componenti software e middleware delle Amministrazioni.
+
+
+
+
+                                                                                                             9
+                                  Gruppo TIM Piano   dei Fabbisogni
+                                             - Uso Interno - Tutti i diritti riservati.
+5       PIANO DI MIGRAZIONE
+Il presente capitolo rappresenta il piano di migrazione al cloud di dati e servizi dell’Amministrazione, in linea
+con quanto richiesto nella determina del 7 ottobre 2022 del Dipartimento per la trasformazione digitale.
+L’Amministrazione chiede di effettuare un assessment, da condurre in fase di Progetto del Piano dei
+Fabbisogni, al fine di effettuare una valutazione sull’effort, in termini di quantità di Servizi di Migrazione e
+Professionali, necessario alle attività descritte nei successivi capitoli.
+
+
+5.1          Obiettivi
+Di seguito l’elenco dei seguenti fabbisogni:
+
+    ●   Digitalizzazione delle Cartelle cliniche relative all’annualità 2020-2021-2022-2023 stimate in numero
+        di n. 295.000, con processo certificato e creazione di un archivio digitale consultabile attraverso una
+        piattaforma documentale a corredo.
+
+
+Come noto, difatti, il Polo Strategico Nazionale permette di migrare i dati su infrastruttura sicura basata su
+quattro data center geografici allocati sul territorio nazionale (Acilia, Pomezia, Santo Stefano del Ticino,
+Rozzano) suddivisi in due Region in HA, di conseguenza garantendo sovranità digitale.
+
+Di seguito si riporta l’elenco di servizi che la presente intende migrare sul Polo Strategico Nazionale
+
+
+          Servizio dell’Amministrazione      Tipo di Migrazione
+
+          Digitalizzazione delle Cartelle
+          cliniche relative all’annualità
+                                          modalità A - trasferimento in sicurezza dell’infrastruttura IT
+          2020-2021-2022-2023 stimate
+          in numero di n. 295.000
+
+
+
+
+5.1.1        Digitalizzazione delle Cartelle Cliniche
+Il servizio prevede il ritiro periodico delle cartelle cliniche dai Presidi Ospedalieri, l’acquisizione ottica delle
+cartelle. Si stima una lavorazione stimata per un numero di n. 295.000 cartelle cliniche, relative all’annualità
+2020-2021-2022-2023 con processo certificato e creazione di un archivio digitale consultabile attraverso una
+piattaforma documentale a corredo.
+
+
+
+
+5.2          Piano di migrazione
+Si riporta di seguito iI piano di migrazione che fornisce un quadro sintetico del progetto di migrazione
+dell’Amministrazione.
+Installazione degli applicativi CDR e CDS per la gestione delle Cartelle Cliniche digitalizzata, su risorse
+infrastrutturali messe a disposizione dal PSN.
+
+                                                                                                                 10
+                                          Gruppo TIM Piano   dei Fabbisogni
+                                                     - Uso Interno - Tutti i diritti riservati.
+                                                                                                  Budget –      Budget -
+                                                               Classificazione Tipo     di                                 Previsione
+Nome servizio                                                                                      Costi di     Canone
+                                                               dei Dati        migrazione                                    tempi
+                                                                                                 migrazione     annuale
+Digitalizzazione di circa n° 295.000 CC produzione annuale     Ordinari           Modalità A                  A Progetto   4 Mesi
+
+
+
+
+                                                                                                                                    11
+                                         Gruppo TIM Piano   dei Fabbisogni
+                                                    - Uso Interno - Tutti i diritti riservati.
+6 DESCRIZIONE DEI FABBISOGNI
+L’Amministrazione necessità dei servizi infrastrutturali messi a disposizione dal Polo Strategico Nazionale, in
+particolare dei servizi dell’Industry Standard-Infrastructure as a Services (IaaS), nonché dei servizi
+professionali, erogati attraverso le diverse figure professionali previste.
+
+
+6.1 Contesto di Riferimento
+Nella tabella seguente, sono riportate le informazioni che descrivono l’attuale contesto di riferimento
+dell’Amministrazione.
+
+                                                                                                DOC DI DETTAGLIO
+ AMBITO                                                           VALORE (Esempi)
+                                                                                                (SE DISPONIBILE, esempi)
+ Numero di Data Center e dislocazione sul territorio
+ nazionale
+ Presenza del servizio di Business Continuity                     Si/No
+                                                                  Si/No (prevista
+                                                                  ripartenza dei servizi su
+ Presenza del servizio di Disaster Recovery
+                                                                  sito di DR o solo replica
+                                                                  del dato?)
+ Quantità e tipologia di sistemi server (divisione tra            400 (200 farm fisica, 200
+ sistemi fisici e sistemi dedicati alla farm virtuale)            farm virtuale)
+                                                                  N° xx storage modello
+ Quantità e tipologia di Storage (SAN, NAS) (con TB               xxxx. (con xxTB raw,
+ presenti, occupati e disponibili)                                occupati xxTB, liberi
+                                                                  xxTB)
+                                                                  N° xx switch modello,
+ Apparti SAN (quantità e caratteristiche della fabric)                                          schema topologico
+                                                                  firmware xxx
+ Rete (quantità e caratteristiche: Bilanciatori, piano di
+                                                                  N° xx switch modello,
+ indirizzamento, eventuali problemi nel cambio di                                               schema topologico
+                                                                  firmware xxx
+ indirizzamento IP)
+ Sistemi di sicurezza (quantità e caratteristiche)
+ (Identity & Access Management, Firewall, Sonde, Waf,
+ Soc, etc.)
+ Servizio di Active Directory
+ Sistemi di virtualizzazione (VMware, Hyper-V, RedHat)            VMware
+ In caso di presenza di VMWARE specificare: N° di
+                                                                  2
+ vCenter e versioni
+ In caso di presenza di VMWARE specificare: Presenza              NSX (SI), vRNI (SI), HCX
+ di prodotti NSX-T, vRNI, vROPS, HCX, etc.                        (NO)
+ Sistemi fisici dedicati alla farm Vmware (Fornire
+ RVTools)
+ storage fisici dedicati alla farm Vmware (Fornire
+ RVTools)
+ Presenza di sistemi Iperconvergenti (vSAN, nutanix,              SI/NO (specificare
+ DELL VxRAIL, tec.)                                               prodotto)
+ Backup, prodotti utilizzati (fornire schema topologico
+                                                                  Veritas Netbackup,
+ se disponibile, N° master e N° media server)(N° master                                         schema topologico
+                                                                  Commnvault, Veem, etc.
+ e N° media server)
+ Policy di Backup (TB sottoposti a backup e retention)
+
+
+
+
+                                                                                                                           12
+                                        Gruppo TIM Piano   dei Fabbisogni
+                                                   - Uso Interno - Tutti i diritti riservati.
+                                                                  SI/NO (specificare
+Librerie e storage dedicati al backup
+                                                                  prodotto)
+Piattaforme middleware (quantità e caratteristiche),
+identificare applicazioni single istance
+Identificazione cluster di sistema operativo (Windows,            (Windows, RedHat,
+RedHat, Solaris, etc.)                                            Solaris, etc.)
+                                                                  SI/NO (specificare
+Database (quantità e caratteristiche)
+                                                                  prodotto)
+                                                                  SI/NO (specificare
+Sistemi di posta elettronica (PEL e PEC)
+                                                                  prodotto)
+Siti e portali (quantità e caratteristiche)                       N° xxx
+È presente una stima del capacity? (eventuale
+previsione di crescita) in caso affermativo fornire i dati
+Presenza di un CMDB accurato del cliente con elenco
+delle applicazioni
+Il Data Center sorgente è gestito internamente o da
+                                                                  SI/NO
+fornitori terze parti?
+Le applicazioni vengono gestite internamente o da
+fornitori terze parti?
+Sono disponibili strumenti di monitoraggio delle                  SI/NO (specificare
+applicazioni e della rete?                                        prodotto)
+                                                                  SI/NO (specificare
+Presenza e tipologia di appliance fisiche
+                                                                  prodotto)
+                                                                  SI/NO (specificare
+Prodotti Antivirus
+                                                                  prodotto)
+                                                                  SI/NO (specificare
+Sistema di gestione delle password
+                                                                  prodotto)
+Qual è il numero totale di workloads presi in
+                                                                  500
+considerazione per questo progetto?
+Eventuali workload fisici da migrare (tipologia e
+                                                                  30
+quantità) (P2V)
+Tipologie e versioni di sistema operativo (Windows,               Windows 2008,2012,
+Linux, etc.)                                                      RHEL 7.0
+Contesto applicativo – numero di applicativi
+
+
+
+
+                                                                                                13
+                                        Gruppo TIM Piano   dei Fabbisogni
+                                                   - Uso Interno - Tutti i diritti riservati.
+7 Servizi richiesti
+
+SERVIZIO                                                                              Richiesto   Ipotesi Budget (€)
+Industry standard – Hosting
+
+Industry standard - Housing
+
+Industry standard – IaaS                                                          X
+
+Industry standard – PaaS
+
+Industry standard – CaaS
+
+Hybrid Cloud on PSN site
+
+Secure Public Cloud on Microsoft Azure
+
+Secure Public Cloud on Google GCP
+
+Public Cloud PSN Managed
+
+Servizi di migrazione
+
+Servizi professionali - Servizio Re-Architect                                     X
+
+Servizi professionali - Servizio Re-Platform
+
+Servizi professionali - Security Professional Services
+
+Servizi professionali - IT Infrastructure - Service Operations
+
+Servizi professionali - Business and culture enablement
+
+Altri servizi a listino>                                                          X
+
+                                         Tabella 4: Servizi richiesti: quadro di sintesi
+
+
+
+
+                                                                                                                       14
+                                       Gruppo TIM Piano   dei Fabbisogni
+                                                  - Uso Interno - Tutti i diritti riservati.
+7.1 Industry standard
+
+
+7.1.1 IaaS
+Il servizio IaaS consiste nel rendere disponibile delle risorse infrastrutturali virtualizzate ed è suddiviso in IaaS
+Private e IaaS Shared:
+IaaS Private
+     ● Infrastruttura virtualizzata e dedicata;
+     ● Server fisici con a bordo il virtualizzatore Vmware su cui possono essere attivate solamente VM della
+          Amministrazione (cluster dedicato);
+IaaS Shared
+     ● Porzione di infrastruttura virtualizzata all’interno di una piattaforma condivisa;
+     ● Si acquisista un pool di risorse virtuali (vCPU, vGB di RAM, vGB di Storage) e il PSN è responsabile
+          della gestione completa dell’infrastruttura sottesa, comprensiva degli strumenti di automation e
+          orchestration.
+
+      Tipologia       Elemento                             CORE    RAM    vCPU    vRAM    Storage   Caratteristiche tecniche minime         Quantità   Durata
+                                                            [Q]    [GB]    [Q]     [GB]     [GB]                                                       (mesi)
+
+
+
+                                                                                                    SAN NVMe based, replicato intra-
+IaaS - Storage (HA)   Storage High Performance                                              500     region, 170K IOPS per Storage
+                                                                                                    Array
+                                                                                                    SAN All Flash based, replicato intra-     28         4
+IaaS - Storage (HA)   Storage Standard Performance                                          500     region, 130K IOPS per Storage
+                                                                                                    Array
+IaaS Shared (HA)      VM Tiny                                               1       2       100
+
+IaaS Shared (HA)      VM Small                                              2       4       100
+                                                                                                    Replica intra-region sincrona con
+IaaS Shared (HA)      VM Medium                                             4       8       100     duplicazione delle risorse sul
+                                                                                                    secondario (0<RPO<1min, 0<RTO
+IaaS Shared (HA)      VM Large                                              8      16       100     (IaaS)<30min); include i costi del
+                                                                                                    backbone con latenza <5ms;
+IaaS Shared (HA)      VM X-Large                                           16      32       100
+                                                                                                    Gestione hypervisor, over-commit
+IaaS Shared (HA)      Pool Small                                            8      32               1:2
+                                                                                                    Sistema operativo escluso
+IaaS Shared (HA)      Pool Medium                                          16      64               Infrastruttura basata su server Intel
+                                                                                                    6342, 24 core, cache 36MB, 230W
+IaaS Shared (HA)      Pool Large                                           32      128
+
+IaaS Shared (HA)      Pool XLarge                                          64      256                                                         1        4
+
+                                                                                                    Risorsa aggiuntva per Pool IaaS           148       4
+IaaS Shared (HA)      Pool - 1GB ram aggiuntivo                                     1
+                                                                                                    shared
+                                                                                                    Risorsa aggiuntva per Pool IaaS           138       4
+IaaS Shared (HA)      Pool - 1vCPU aggiuntiva                               1
+                                                                                                    shared
+
+
+
+                                                             Tabella 5: Fabbisogno IaaS
+
+Inoltre, si richiedono 1 set di IP Pubblici (8 Indirizzi)
+
+
+
+7.2 Servizi professionali
+L’Amministrazione richiede i seguenti ulteriori servizi professionali:
+
+     ●     Servizi di evoluzione
+
+
+
+                                                                                                                                                         15
+                                                  Gruppo TIM Piano   dei Fabbisogni
+                                                             - Uso Interno - Tutti i diritti riservati.
+7.2.1 Servizi di evoluzione
+I servizi di evoluzione comprendono:
+     ● Servizio Re-Architect
+     ● Servizio Re-Platform
+
+
+7.2.1.1        Servizio Re-Architect
+
+Servizi professionali evolutivi volti alla riprogettazione dell’architettura delle applicazioni in ottica Cloud.
+
+
+
+
+7.2.1.2        Servizio Re-Platform
+
+Servizi professionali evolutivi volti alla riprogettazione delle piattaforme che gestiscono le applicazioni
+dell’Amministrazione in modo da abilitarne la trasformazione verso il Cloud.
+
+Di seguito una tabella a titolo esemplificativo dello skill mix afferente il servizio <variazioni a cura dell’Amministrazione>
+
+Figure Professionali
+                                             Mix Migrazione
+Migrazione Applicativa al Cloud
+Project Manager                                   10%
+DevOps Expert                                     10%
+Business Analyst                                  5%
+Enterprise Architect                              5%
+Cloud Application Architect                       5%
+Cloud Application Specialist                      12%
+Cloud Security Specialist                         8%
+Developer (Cloud/Mobile/Front-End Developer)      20%
+Database Specialist and Administrator             8%
+System and Network Administrator                  12%
+UX Designer                                       5%
+                                                 100%
+
+
+
+7.2.2 Security Professional Services
+Attività di Strategy & Compliance, assessment di sicurezza su infrastruttura e parco applicativo e supporto
+alle Operations per il mantenimento degli elevati standard di sicurezza.
+
+Di seguito una tabella a titolo esemplificativo dello skill mix afferente il servizio <variazioni a cura dell’Amministrazione>
+
+Figure Professionali Servizi sicurezza Skill Mix
+Project Manager                           6%
+Security Principal                        5%
+Senior Information Security Consultant    5%
+Junior Information Security Consultant    8%
+Cloud Application Architect               5%
+Cloud Application Specialist              8%
+Security Solution Architect              10%
+Senior Security Auditor/Analyst          22%
+
+
+                                                                                                                           16
+                                           Gruppo TIM Piano   dei Fabbisogni
+                                                      - Uso Interno - Tutti i diritti riservati.
+Junior Security Analyst                            10%
+Senior Penetration Tester                           4%
+Junior Penetration Tester                           6%
+Forensic Expert                                     4%
+Data Protection Specialist                          7%
+                                                  100%
+
+
+
+7.2.3 IT Infrastructure - Service Operations
+Servizi specialistici on demand a supporto delle Operations per la gestione dell’infrastruttura e del parco
+applicativo cliente.
+
+Di seguito una tabella a titolo esemplificativo dello skill mix afferente il servizio:
+
+Figure Professionali Servizi Operations                       Skill Mix
+
+Systems Architect                                                9%
+Product/Network/Technical Specialist                            53%
+Database Specialist and Administrator                            6%
+Cloud Security Specialist                                        4%
+System and Network Administrator                                28%
+                                                               100%
+
+
+
+
+7.2.4 Sintesi dei servizi professionali
+Di seguito è riportato il prospetto riassuntivo delle richieste da parte dell’Amministrazione relative al par. 5.6
+“Servizi professionali”.
+
+Tipologia                       Figura                                                     Contesto                                   Quantità
+Figura professionale            Project Manager                                            Rearch&Replat, Profess Serv               774
+Figura professionale            Cloud Application Architect                                Rearch&Replat, Profess Serv               743
+Figura professionale            UX Designer                                                Rearch&Replat
+Figura professionale            Business Analyst                                           Rearch&Replat                             968
+Figura professionale            DevOps Expert                                              Rearch&Replat
+                                                                                           Rearch&Replat, IT Infrastructur-service
+Figura professionale            Database Specialist and Administrator                                                                2308
+                                                                                           operation
+Business & Culture Eneblement                                                              Rearch&Replat, Business&Culture
+                                Developer (Cloud/Mobile/Front-End Developer)
+Figura professionale                                                                       Enablement
+Figura professionale            System Integrator & Testing Specialist
+                                                                                           Rearch&Replat, IT Infrastructur-service
+Figura professionale            System and Network Administrator                                                                     1935
+                                                                                           operation
+Figura professionale            Cloud Application Specialist                               Rearch&Replat, Profess Serv               1825
+                                                                                           Rearch&Replat, IT Infrastructur-service
+Figura professionale            Cloud Security Specialist                                                                            1154
+                                                                                           operation
+Figura professionale            Enterprise Architect                                       Rearch&Replat
+Figura professionale            Security Principal                                         Profess Serv
+Figura professionale            Senior Information Security Consultant                     Profess Serv
+Figura professionale            Junior Information Security Consultant                     Profess Serv
+Figura professionale            Security Solution Architect                                Profess Serv
+Figura professionale            Senior Security Auditor/Analyst                            Profess Serv
+Figura professionale            Junior Security Analyst                                    Profess Serv
+Figura professionale            Senior Penetration Tester                                  Profess Serv
+Figura professionale            Junior Penetration Tester                                  Profess Serv
+Figura professionale            Forensic Expert                                            Profess Serv
+Figura professionale            Data Protection Specialist                                 Profess Serv
+
+
+
+                                                                                                                                                 17
+                                                     Gruppo TIM Piano   dei Fabbisogni
+                                                                - Uso Interno - Tutti i diritti riservati.
+Figura professionale                 Systems Architect                                             Profess Serv
+Business & Culture Eneblement
+                                     Product/Network/Technical Specialist                          Profess Serv
+Figura professionale
+Business & Culture Eneblement                                                                      Business & Culture Eneblement Figura
+                                     Educational Designer/Tutoring
+Figura professionale                                                                               professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Costo adesione al servizio per Amministrazione
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 0 a 1.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 1.001 a 5.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 5.001 a 10.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 10.001 a 20.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 20.001 a 50.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 50.001 a 100.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Canone settimanale per fascia utenti da 100.001 a 150.000
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Corso bassa interattività
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Corso media interattività
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        Corso alta interattività
+                                                                                                   professionale
+                                                                                                   Business & Culture Eneblement Figura
+Business & Culture Enablement        A catalogo
+                                                                                                   professionale
+
+                                                         Tabella 6: Fabbisogno Altri Servizi Professionali
+
+
+
+
+7.3 Altri servizi a listino
+   Tipologia        Elemento                         CORE        RAM    vCPU      vRAM        Storage   Caratteristiche tecniche minime           Quantità   Durata
+                                                      [Q]        [GB]    [Q]       [GB]         [GB]                                                         (mesi)
+                    Windows Server STD CORE                                                             Licenza Microsoft Server. Ultima
+Sistemi operativi
+                    (2 core)                                                                            release disponibile
+                                                                                                        Licenza Red Hat per singola VM.
+Sistemi operativi   Red Hat per VM
+                                                                                                        Ultima release disponibile.
+                                                                                                        Licenza per due socket. Ultima release
+Sistemi operativi   Red Hat per Bare Metal
+                                                                                                        disponibile.
+Data Protection     Opzione DR                                                                          Replica su altra region
+                                                                                                        Gestione delle policy in modalità self-
+                                                                                                        managed; cifratura dei dati; ripristino
+Data Protection     Backup                                                                     1.000    granulare dei dati in modalità “a caldo
+                                                                                                        e out-of-place”; seconda copia intra-
+                                                                                                        region; GDPR compliant
+                                                                                                        Protezione antivirus, antimalware e
+                                                                                                        anti-ramsonware proattivo; WORM
+Data Protection     Golden copy                                                                1.000    copy; archiviazione in ambiente
+                                                                                                        protetto privo di ogni accesso fisico e
+                                                                                                        logico
+                                                                                                        Portale self-service con catalogo dei
+                                                                                                        servizi unificato; Governance;
+                                                                                                        Dashboard personalizzabile; Capacity
+                                                                                                        Planning; Compliance; Report di Cost
+Multicloud          CMP per server
+                                                                                                        Control e Capacity planning and
+                                                                                                        Resource Usage; Performance
+                                                                                                        Monitoring; Gestione finanziaria
+                                                                                                        dell'IT
+Security            Antivirus                                                                           Prezzo per istanza
+                    Connessione dedicata 1                                                              Tecnologia Gbe MPLS, profilo Silver
+Connettività
+                    Gbps                                                                                1000, TIR L2/L3 e outsourcing
+
+
+
+                                                            Tabella 7: Fabbisogno altri servizi a listino
+
+
+
+
+                                                                                                                                                                      18
+                                                         Gruppo TIM Piano   dei Fabbisogni
+                                                                    - Uso Interno - Tutti i diritti riservati.
+
