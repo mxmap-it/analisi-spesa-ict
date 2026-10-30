@@ -192,3 +192,13 @@
   richiesta: Pubblicare per ogni contratto di adesione al PSN (CIG) il piano dei fabbisogni approvato o almeno gli importi per servizio del listino (Industry Standard, Secure Public Cloud per provider, PSN Managed, Hybrid)
   perche_serve: È l'unico modo per attribuire la giurisdizione della spesa PSN, che è una parte rilevante della spesa cloud PNRR (Misura 1.1)
   rif: ["#55"]
+- id: R21
+  destinatario: ANAC; Commissione europea (DG GROW, vocabolario CPV); AgID, ACN
+  tipo: miglioramento
+  stato: da verificare
+  titolo: Attendibilità del CPV e campi strutturati su tipologia IT e sovranità negli acquisti ICT
+  evidenza: "Il CPV è scelto dall'ente senza controllo di coerenza con l'oggetto; spesso generico (72000000) o errato; il vocabolario (Reg. 213/2008) non distingue cloud/SaaS/PSN né prodotto, produttore, sede dei dati, giurisdizione. Misura in corso sul campione (report/cpv/PIANO.md)"
+  prova: report/cpv/PIANO.md
+  richiesta: "Controllo di coerenza CPV-oggetto al rilascio del CIG; campi obbligatori per acquisti ICT (tipologia, modello cloud, prodotto e produttore, sede dei dati, operatore e capogruppo, qualificazione ACN); aggiornamento del CPV o vocabolario supplementare ICT"
+  perche_serve: Misurare la spesa cloud e la sovranità in modo esatto e deterministico, senza lettura degli atti
+  rif: ["#55", "#59"]
