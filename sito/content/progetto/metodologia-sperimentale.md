@@ -55,6 +55,21 @@ Nessuna via da sola dà una confidenza elevata. La otteniamo **incrociando vie i
 6. **Secondo classificatore tabulare (TabICL, da sperimentare):** se si dimostra utile, filtra i casi facili senza consumare token e segnala quelli in cui le vie non concordano.
 7. **Analisi caso per caso delle infrastrutture dubbie:** un modello in 8 domande, con esito ed elenco dei punti aperti.
 
+**L'imbuto a strati.** Le vie si applicano in sequenza, e ogni strato lavora solo sul residuo del precedente. Ogni contratto porta un livello di attendibilità, come per gli MX di mxmap.it.
+
+1. **Classificare il facile:** convenzioni e lotti noti, marchi univoci.
+2. **Escludere con certezza** ciò che è ben classificato come altro (lavori, farmaci, servizi non ICT con più segnali concordi), per ridurre il dataset.
+3. **Escludere gli importi troppo piccoli per pesare sulla misura:** la soglia va fissata e documentata, e la quota di spesa esclusa va misurata.
+4. **Raggruppare il resto in gruppi da approfondire**, ciascuno con il suo metodo di approfondimento:
+   - mega contratti: a mano, caso per caso;
+   - contratti significativi ma con informazione mancante (es. adesioni al PSN senza il piano dei fabbisogni): acquisizione dei documenti e richieste di pubblicazione;
+   - contratti probabilmente significativi ma incerti nella classe o nella giurisdizione: modello linguistico con ricerca degli atti, poi revisione.
+5. **Raschiare il fondo del barile** con le pipeline più costose:
+   - lettura con l'AI, a consumo di token, della sezione Amministrazione trasparente degli enti;
+   - accesso civico automatizzato (L7, progetto a parte).
+
+**Esito di policy.** I buchi misurati e presentati bene servono a chiedere la pubblicazione dei dati mancanti: per esempio i piani dei fabbisogni PSN, al Dipartimento per la trasformazione digitale (R20). Così la misura degli anni successivi costa meno.
+
 **Concordanza come segnale.** Quando regole, base di conoscenza e modello concordano, ed esiste un documento archiviato, la classificazione è affidabile. Quando non concordano, il caso va in revisione: è lì che si impara.
 
 ## 4. Capitalizzare la conoscenza: ogni anno costa meno
@@ -135,6 +150,7 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 | data | modifica |
 |---|---|
+| 2026-10-31 | imbuto a strati: soglia d'importo, gruppi da approfondire con il loro metodo, esito di policy |
 | 2026-10-30 | criticità del CPV: attendibilità non misurata da nessuno, lacune del vocabolario, misura e proposta (#59) |
 | 2026-10-29 | criticità, strategia a più vie, capitalizzazione della conoscenza |
 | 2026-10-29 | prima versione: giri 1-2 della via 6, confronto Haiku/Sonnet, confidenza verificata, cloud sovrano, Cloud Toscana, TabICL, tetto |

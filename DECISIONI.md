@@ -104,3 +104,13 @@ vecchia.
 - 2026-10-27 — Fabio — La pipeline di verifica dev'essere ripetibile da zero da ANAC o tecnici terzi, come sotto-consegna documentata (#47); è criterio di chiusura di ANAC.
 - 2026-10-27 — Fabio — Documento e presentazione per ANAC contengono una sezione «Come riprodurre tutto» con pochi comandi copiabili (#34, #35, #47).
 - 2026-10-27 — Fabio — Il cloud provider si rileva con più processamenti differenziati (lotto di convenzione, lotto nel testo, marchio, PSN, fornitore-provider, modello linguistico, indeterminato), ciascuno documentato come metodo; ogni contratto porta la via di attribuzione (#48, #50).
+- 2026-10-31 — Fabio — **Imbuto a strati con livelli di attendibilità** (anche da confronto con un esperto esterno):
+  1. classificare il facile;
+  2. escludere con certezza ciò che è ben classificato come altro;
+  3. escludere gli importi troppo piccoli, con soglia documentata e quota di spesa esclusa misurata;
+  4. raggruppare il residuo in gruppi da approfondire, ciascuno con il suo metodo: mega contratti a mano; significativi con informazione mancante (es. PSN) tramite documenti e richieste di pubblicazione; significativi ma incerti tramite modello linguistico più revisione;
+  5. fondo del barile: lettura con AI dell'Amministrazione trasparente e accesso civico automatizzato.
+
+  I buchi misurati diventano richieste di policy, per esempio la pubblicazione dei piani dei fabbisogni PSN da parte del DTD (R20).
+
+  Riferito dall'esperto, da verificare: le classificazioni dei dati di spesa pubblica in UE «non superano il 40-50%»; EuroTender e Zenodo usati in pipeline per le esclusioni.
