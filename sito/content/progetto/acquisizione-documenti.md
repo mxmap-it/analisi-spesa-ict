@@ -34,8 +34,26 @@ Usiamo **più modalità di acquisizione**, in ordine di complessità e costo cre
 - **L5 (giro 2 della via 6):** con la ricerca web generica un atto dell'ente che cita il CIG si trova in circa 1 contratto su 10. Lo strumento web dell'agente non legge i PDF; da qui lo strumento di archiviazione con estrazione del testo.
 - **L6:** prime annotazioni in corso.
 
+## Prima e dopo il 2024
+
+Con il nuovo Codice dei contratti (d.lgs. 36/2023) dal 2024 ogni fase dell'acquisto passa da piattaforme certificate, che trasmettono le schede alla BDNCP. I documenti di gara dovrebbero essere raggiungibili da un puntatore nei dati. Prima, i documenti stavano solo sui siti degli enti, senza un collegamento leggibile da una macchina tra CIG e documento.
+
+Per il periodo dal 2024 contano quindi soprattutto i livelli L1-L3, che leggono il puntatore; per il periodo precedente servono scraping e accesso civico (L4-L7). In entrambi i casi non c'è un campo che dica quale prodotto si compra né sotto quale giurisdizione.
+
+Il quadro normativo è **riferito, da verificare** sulle delibere ANAC 261, 263 e 264/2023.
+
+**Misura in programma** (dalla settimana del 2 novembre 2026):
+- quota di contratti con il puntatore ai documenti;
+- quota di puntatori funzionanti;
+- quota di documenti coerenti con il CIG e leggibili;
+- completezza delle fasi di esecuzione;
+- confronto con il 2022-2023.
+
+Dettaglio e percorso multi-livello in [prima-e-dopo-2024.md](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/prima-e-dopo-2024.md) (#57).
+
 ## Registro delle revisioni
 
 | data | modifica |
 |---|---|
+| 2026-10-31 | prima e dopo il 2024: puntatori ai documenti nella BDNCP, misura in programma, percorso multi-livello |
 | 2026-10-29 | prima versione: livelli L0-L7, principi, prime misure |

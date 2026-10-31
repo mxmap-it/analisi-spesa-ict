@@ -101,6 +101,20 @@ ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tail -2 log/mirror-anac.lo
 2. Poi i dataset nell'ordine della [roadmap](sito/content/progetto/roadmap.md#8ter-i-dataset-in-ordine-prima-anac-poi-gli-altri):
    **Consip per primo**, perché cancella oltre i tre anni.
 
+### Todo dalla settimana del 2/11/2026 — puntatori ai documenti prima e dopo il 2024 (#57)
+
+Piano in `report/metodo/acquisizione/prima-e-dopo-2024.md`.
+- [ ] Verificare sulle delibere ANAC 261, 263 e 264/2023 il quadro normativo (oggi R) e passarlo a V.
+- [ ] Misurare sul mirror ANAC, per i CIG dal 2024 (tutto l'universo e il sottoinsieme cloud/IT):
+  - presenza del puntatore ai documenti, per fonte, fase, procedura e piattaforma;
+  - funzionamento, su un campione stratificato;
+  - coerenza con il CIG e leggibilità;
+  - completezza delle schede di esecuzione;
+  - confronto con il 2022-2023;
+  - costo per documento.
+- [ ] Pubblicare il rendiconto, la differenza tra dovuto e pubblicato e le nuove raccomandazioni; mettere le verifiche in `tools/verifiche/`.
+- [ ] Comporre il percorso multi-livello (dati strutturati, puntatori, scraping con identificazione, modello, annotazioni, FOIA) con la copertura e il costo misurati di ogni livello.
+
 ### Todo a bassa priorità — rapporto CPV (#59, 30/10/2026)
 
 Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e **raccomandazione di policy per AgID, ANAC e ACN** (R21). Piano in `report/cpv/PIANO.md`, letteratura in `report/cpv/letteratura.md` (nessuna misura di correttezza esistente).
