@@ -115,6 +115,18 @@ Piano in `report/metodo/acquisizione/prima-e-dopo-2024.md`.
 - [ ] Pubblicare il rendiconto, la differenza tra dovuto e pubblicato e le nuove raccomandazioni; mettere le verifiche in `tools/verifiche/`.
 - [ ] Comporre il percorso multi-livello (dati strutturati, puntatori, scraping con identificazione, modello, annotazioni, FOIA) con la copertura e il costo misurati di ogni livello.
 
+### Todo — censimento del patrimonio ICT della PA (AgID) (#60, 1/11/2026)
+
+Fonte: https://padigitale2026.gov.it/guide-e-risorse/censimento-del-patrimonio-ict-della-pubblica-amministrazione
+- [ ] Analizzare il censimento: chi lo compila, in quali anni, quali dati di spesa ICT, datacenter e cloud raccoglie.
+- [ ] Verificare come sono fatti i questionari: domande, granularità, voci di spesa.
+- [ ] Capire se i dati sono pubblicati (aggregati o per ente). Se non lo sono, stabilire come ottenerli:
+  - accesso civico ad AgID per il dataset completo, oppure ai singoli enti per il questionario compilato;
+  - a chi indirizzare la richiesta (ufficio e responsabile).
+
+  Nessuna richiesta parte senza l'ok di Fabio.
+- [ ] Inserirlo nella metodologia come fonte di controvalidazione della spesa misurata dagli appalti.
+
 ### Todo a bassa priorità — rapporto CPV (#59, 30/10/2026)
 
 Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e **raccomandazione di policy per AgID, ANAC e ACN** (R21). Piano in `report/cpv/PIANO.md`, letteratura in `report/cpv/letteratura.md` (nessuna misura di correttezza esistente).
