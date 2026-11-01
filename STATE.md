@@ -115,6 +115,25 @@ Piano in `report/metodo/acquisizione/prima-e-dopo-2024.md`.
 - [ ] Pubblicare il rendiconto, la differenza tra dovuto e pubblicato e le nuove raccomandazioni; mettere le verifiche in `tools/verifiche/`.
 - [ ] Comporre il percorso multi-livello (dati strutturati, puntatori, scraping con identificazione, modello, annotazioni, FOIA) con la copertura e il costo misurati di ogni livello.
 
+### Todo PRIORITARIO dalla ripresa — pipeline dettaglio-cig → link dell'ente → documenti (#57, Fabio 1/11/2026)
+
+Esempio: https://dettaglio-cig.anticorruzione.it/cig/B320E66854 ha in fondo un link alla pagina di pubblicazione dell'ente, https://www.servizipubblicaamministrazione.it/servizi/saturnweb/Pubblicazioni.aspx?Tipo=26&CE=lnmtrn203, da cui dovrebbero scaricarsi altri documenti dell'acquisto. Pipeline da valutare, validare come fattibile e scomporre in tutti i passaggi:
+- [ ] Il link c'è anche nei dataset che scarichiamo già (ANAC, BDNCP, OCDS)? Con quale campo? Se c'è solo nella pagina, vale la pena leggerla, rispettando robots e senza aggirare blocchi?
+- [ ] Copertura: quota di CIG con il link, per anno (prima e dopo il 2024), per tipo di procedura, per ente e per piattaforma.
+- [ ] Censire le piattaforme e i software di destinazione (es. SaturnWeb) e capire se un crawler per ogni famiglia copre molti enti.
+- [ ] Scomporre i passaggi:
+  1. CIG;
+  2. link;
+  3. pagina dell'ente;
+  4. elenco dei documenti;
+  5. identificazione dei documenti pertinenti;
+  6. scaricamento con archivio sha256;
+  7. estrazione del testo, con OCR se serve;
+  8. interpretazione con regole o modello;
+  9. classificazione con il livello registrato (`spesaict.atto/1`).
+- [ ] Misurare per ogni passaggio successo, errori e costo. Fare un pilota sul campione di 611, poi decidere se adottarla.
+- [ ] Documentarla in `acquisizione-documenti.md` (probabile livello L2-L3).
+
 ### Todo — censimento del patrimonio ICT della PA (AgID) (#60, 1/11/2026)
 
 Fonte: https://padigitale2026.gov.it/guide-e-risorse/censimento-del-patrimonio-ict-della-pubblica-amministrazione
