@@ -14,19 +14,20 @@ from classifica import Classificatore, CPV_ICT, VERSIONE  # noqa: E402
 from attribuisci_provider import righe_cig, aggiudicatari, D, RX_AQ  # noqa: E402
 import glob
 
-VERSIONE_IMBUTO = "imbuto-0.1 (2026-11-02)"
+VERSIONE_IMBUTO = "imbuto-0.2 (2026-11-02)"
 SOGLIA_MIN = 500          # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
 SOGLIA_DA_VERIFICARE = 50e6  # importo probabilmente massimale, non spesa
 
 # segnali ICT nel testo: se presenti con CPV non ICT il contratto NON è escluso con certezza
-RX_ICT = re.compile(r"\b(software|informatic\w*|licenz\w*|cloud|hosting|housing|server|storage|data\s*cent\w*|"
-                    r"sistem\w+\s+informativ\w*|applicativ\w*|piattaform\w+\s+(digital|informatic|telematic|web)\w*|"
-                    r"hardware|personal\s+computer|\bpc\b|notebook|stampant\w*|rete\s+(dati|lan|wan)|firewall|"
-                    r"cyber\w*|sicurezza\s+informatic\w*|backup|disaster\s+recovery|digitalizzazion\w*|"
-                    r"migrazion\w*|saas|iaas|paas|telematic\w*|portale|sito\s+(web|internet)|database|"
-                    r"posta\s+elettronic\w*|e-?mail|microsoft|oracle|google|amazon|aws|vmware|sap\b)", re.I)
+# 0.2: tolti "telematic" (procedura telematica), "applicativ" (contratto applicativo), "digitalizzazion", "piattaform",
+# "portale", "sap", "pc", "migrazion" da soli: nel giro 0.1 portavano 40 miliardi di lavori e sanità nel residuo
+RX_ICT = re.compile(r"\b(software|informatic\w*|licenz\w+\s+(d'uso|software|microsoft|oracle)|cloud|hosting|housing|server|"
+                    r"storage|data\s*cent\w*|sistem\w+\s+informativ\w*|servizi\s+applicativ\w*|software\s+applicativ\w*|"
+                    r"hardware|personal\s+computer|notebook|stampant\w*|rete\s+(dati|lan|wan)|firewall|"
+                    r"cyber\w*|sicurezza\s+informatic\w*|backup|disaster\s+recovery|migrazion\w+\s+(al\s+cloud|dei\s+dati|dei\s+sistemi)|"
+                    r"saas|iaas|paas|sito\s+(web|internet)|database|posta\s+elettronic\w*|microsoft|oracle|vmware)\b", re.I)
 # sottoclassi di S5 (ICT non cloud)
 RX_HW = re.compile(r"hardware|personal\s+computer|\bpc\b|notebook|stampant|monitor|server|storage|apparat|switch|router|tablet|scanner|fotocopiat", re.I)
 RX_TEL = re.compile(r"telefon|fonia|mobile|sim\b|connettivit|fibra|banda\s+larga|centralin", re.I)
