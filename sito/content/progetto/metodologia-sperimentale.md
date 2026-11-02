@@ -68,6 +68,18 @@ Nessuna via da sola dà una confidenza elevata. La otteniamo **incrociando vie i
    - lettura con l'AI, a consumo di token, della sezione Amministrazione trasparente degli enti;
    - accesso civico automatizzato (L7, progetto a parte).
 
+**Disegno operativo** (2 novembre 2026, [dettaglio](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/imbuto.md)):
+- universo: i CIG ANAC pubblicati **dal 2020**, con una **vista per anno** che mostra quanto pesa ogni strato, quali documenti sono raggiungibili e l'attendibilità complessiva. Ci aspettiamo due periodi, 2020-2023 e dal 2024, ma il confine va verificato;
+- strati:
+  - **S0** padri di accordo quadro (massimali, non spesa);
+  - **S1** esclusione certa non ICT;
+  - **S2** sotto i 500 €;
+  - **S3** convenzioni e lotti noti;
+  - **S4** marchi univoci;
+  - **S5** ICT non cloud, compresi hardware, telefonia e consulenza IT per infrastrutture in-house;
+  - **S6** residuo: mega contratti, PSN senza servizio specificato, incerti significativi, coda.
+- prima statistica di sovranità sul **2024 e oltre**, con la **forbice**: la quota extra-UE se il residuo fosse tutto italiano o tutto extra-UE.
+
 **Esito di policy.** I buchi misurati e presentati bene servono a chiedere la pubblicazione dei dati mancanti: per esempio i piani dei fabbisogni PSN, al Dipartimento per la trasformazione digitale (R20). Così la misura degli anni successivi costa meno.
 
 **Concordanza come segnale.** Quando regole, base di conoscenza e modello concordano, ed esiste un documento archiviato, la classificazione è affidabile. Quando non concordano, il caso va in revisione: è lì che si impara.
@@ -150,6 +162,7 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 | data | modifica |
 |---|---|
+| 2026-11-02 | disegno operativo dell'imbuto: universo dal 2020, strati S0-S6, soglia 500 €, consulenza IT in-house, forbice; giro 2 della via 6 chiuso (337 contratti, 27 con atto che cita il CIG) |
 | 2026-10-31 | imbuto a strati: soglia d'importo, gruppi da approfondire con il loro metodo, esito di policy |
 | 2026-10-30 | criticità del CPV: attendibilità non misurata da nessuno, lacune del vocabolario, misura e proposta (#59) |
 | 2026-10-29 | criticità, strategia a più vie, capitalizzazione della conoscenza |
