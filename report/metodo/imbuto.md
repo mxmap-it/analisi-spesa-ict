@@ -1,0 +1,38 @@
+# L'imbuto: disegno (2/11/2026, bozza da approvare con Fabio)
+
+Obiettivo all'11/11:
+- prime statistiche di sovranità sui contratti **dal 2024** facili da identificare;
+- la **roadmap delle difficoltà**, con numeri di tutto ciò che resta incerto: quanti contratti, quanti euro, perché sono incerti e quanto può pesare.
+
+## Universo e assi
+- **Universo:** CIG ANAC con data di pubblicazione o aggiudicazione dal 1/1/2024 (cifra di riferimento: importo di aggiudicazione, altrimenti importo a base d'asta, dichiarato).
+- **Asse A, è cloud o infrastruttura IT?** Escluso certo / incluso certo / incerto.
+- **Asse B, giurisdizione e sovranità** (solo per gli inclusi): IT sovrano / UE / extra-UE / non determinabile / incerto.
+- Ogni contratto porta lo **strato** che l'ha deciso e la **confidenza** (`spesaict.classificazione/1`).
+
+## Strati (in ordine, ciascuno sul residuo del precedente)
+
+| # | strato | regola | costo | confidenza attesa |
+|---|---|---|---|---|
+| S0 | perimetro | dal 2024; contratti annullati o duplicati fuori | zero | dato |
+| S1 | esclusione certa non ICT | CPV non ICT **e** oggetto senza termini ICT **e** nessun lotto o convenzione ICT (più segnali concordi) | zero | alta, da misurare sul campione |
+| S2 | soglia d'importo | sotto la soglia X, fuori dalla misura ma conteggiati (proposta di X dalla curva della spesa cumulata, es. il 99% della spesa ICT) | zero | dato |
+| S3 | inclusione certa da convenzione o lotto | contratto attuativo di un'iniziativa nota (AQ 2746 lotti, SPC Cloud lotto 1, PSN, Cloud Toscana…), che eredita prodotto e giurisdizione dalla base di conoscenza | zero | alta (salvo PSN: servizio da determinare) |
+| S4 | inclusione certa da marchio univoco | prodotto nominato nell'oggetto (Microsoft 365, AWS, Azure, Google Workspace, Oracle Cloud, Aruba…), con le parole ambigue gestite | zero | alta o media, da misurare |
+| S5 | ICT non cloud | ICT ma chiaramente hardware, telefonia o servizi professionali: conteggiato a parte, fuori dal numeratore cloud | zero | media |
+| S6 | residuo, in gruppi | **G1 mega** (sopra la soglia alta): a mano. **G2 informazione mancante ma significativi** (PSN senza piano dei fabbisogni, convenzioni non decifrate): documenti e richieste di pubblicazione. **G3 incerti significativi**: modello con ricerca degli atti (via 6). **G4 coda incerta sotto la media**: stima statistica dal campione | da token a FOIA | variabile |
+
+## Prodotti per l'11/11
+1. **Tabella dell'imbuto:** contratti ed euro per strato e per gruppo, dal 2024.
+2. **Statistiche di sovranità** sugli inclusi certi (S3, S4, più la via 6 con confidenza alta): spesa per IT sovrano / UE / extra-UE, con intervallo dove la precisione è misurata.
+3. **Roadmap delle difficoltà:** per ogni gruppo G1-G4:
+   - quanti contratti ed euro;
+   - perché sono incerti (manca il prodotto, PSN, RTI misti, atto irraggiungibile…);
+   - quanto può pesare: forbice della quota extra-UE se il gruppo fosse tutto IT o tutto extra-UE;
+   - metodo per risolverlo e costo;
+   - chi deve agire (noi, enti, AgID, ANAC, DTD), con il collegamento alle raccomandazioni R16-R21.
+4. **Top-5** delle cose da fare per la completezza.
+
+## Misure di qualità
+- Precisione di S1, S3 e S4 sul campione di 611 e sulle annotazioni (Wilson 95%). Finché non è misurata, la statistica si pubblica come «provvisoria».
+- La **forbice** (minimo e massimo della quota extra-UE) è il modo onesto di mostrare quanto pesa l'incerto.
