@@ -5,7 +5,17 @@ Obiettivo all'11/11:
 - la **roadmap delle difficoltà**, con numeri di tutto ciò che resta incerto: quanti contratti, quanti euro, perché sono incerti e quanto può pesare.
 
 ## Universo e assi
-- **Universo:** CIG ANAC con data di pubblicazione o aggiudicazione dal 1/1/2024 (cifra di riferimento: importo di aggiudicazione, altrimenti importo a base d'asta, dichiarato).
+- **Universo:** CIG ANAC **pubblicati dal 1/1/2020** (decisione di Fabio, 2/11). Si attendono due mondi da validare:
+  - **2020-2023:** link ai documenti scarsi, quindi attendibilità complessiva più bassa e probabilmente solo un sottoinsieme di informazioni utili;
+  - **dal 2024:** ciclo digitale, schede BDNCP e puntatori ai documenti.
+
+  Il confine e la sua nettezza vanno misurati. La prima statistica pubblicata (11/11) è sul **2024 e oltre**. Il 2020-2023 entra come vista separata, con la sua attendibilità e l'elenco di ciò che manca.
+- **Cifra di riferimento:** importo di aggiudicazione, altrimenti importo a base d'asta, dichiarato.
+- **Vista per annualità** (prodotto obbligatorio). Per ogni anno dal 2020:
+  - contratti ed euro in ogni strato;
+  - fonti e livelli di acquisizione disponibili (dati strutturati, link, documenti);
+  - quota con documento raggiungibile;
+  - attendibilità complessiva dell'anno, cioè la quota di spesa decisa con confidenza alta e la forbice sul resto.
 - **Asse A, è cloud o infrastruttura IT?** Escluso certo / incluso certo / incerto.
 - **Asse B, giurisdizione e sovranità** (solo per gli inclusi): IT sovrano / UE / extra-UE / non determinabile / incerto.
 - Ogni contratto porta lo **strato** che l'ha deciso e la **confidenza** (`spesaict.classificazione/1`).
@@ -16,10 +26,10 @@ Obiettivo all'11/11:
 |---|---|---|---|---|
 | S0 | perimetro | dal 2024; contratti annullati o duplicati fuori | zero | dato |
 | S1 | esclusione certa non ICT | CPV non ICT **e** oggetto senza termini ICT **e** nessun lotto o convenzione ICT (più segnali concordi) | zero | alta, da misurare sul campione |
-| S2 | soglia d'importo | sotto la soglia X, fuori dalla misura ma conteggiati (proposta di X dalla curva della spesa cumulata, es. il 99% della spesa ICT) | zero | dato |
+| S2 | soglia d'importo | **sotto 500 €** (Fabio, 2/11): fuori dalla misura ma conteggiati, con la quota di spesa esclusa riportata | zero | dato |
 | S3 | inclusione certa da convenzione o lotto | contratto attuativo di un'iniziativa nota (AQ 2746 lotti, SPC Cloud lotto 1, PSN, Cloud Toscana…), che eredita prodotto e giurisdizione dalla base di conoscenza | zero | alta (salvo PSN: servizio da determinare) |
 | S4 | inclusione certa da marchio univoco | prodotto nominato nell'oggetto (Microsoft 365, AWS, Azure, Google Workspace, Oracle Cloud, Aruba…), con le parole ambigue gestite | zero | alta o media, da misurare |
-| S5 | ICT non cloud | ICT ma chiaramente hardware, telefonia o servizi professionali: conteggiato a parte, fuori dal numeratore cloud | zero | media |
+| S5 | ICT non cloud, incluse le infrastrutture in-house | hardware, datacenter interni, telefonia; **consulenza e servizi professionali IT riconducibili all'implementazione o gestione di infrastrutture in-house** (Fabio, 2/11). Distinguere: consulenza IT o non IT (organizzativa, legale, formazione); se IT, se infrastrutturale (in-house), di migrazione al cloud o applicativa. Conteggiato a parte nella voce «datacenter e infrastrutture interne» dell'obiettivo finale | zero (regole), via 6 per i casi dubbi | media, da misurare |
 | S6 | residuo, in gruppi | **G1 mega** (sopra la soglia alta): a mano. **G2 informazione mancante ma significativi** (PSN senza piano dei fabbisogni, convenzioni non decifrate): documenti e richieste di pubblicazione. **G3 incerti significativi**: modello con ricerca degli atti (via 6). **G4 coda incerta sotto la media**: stima statistica dal campione | da token a FOIA | variabile |
 
 ## Prodotti per l'11/11

@@ -114,3 +114,7 @@ vecchia.
   I buchi misurati diventano richieste di policy, per esempio la pubblicazione dei piani dei fabbisogni PSN da parte del DTD (R20).
 
   Riferito dall'esperto, da verificare: le classificazioni dei dati di spesa pubblica in UE «non superano il 40-50%»; EuroTender e Zenodo usati in pipeline per le esclusioni.
+- 2026-11-02 — Fabio — Imbuto (`report/metodo/imbuto.md`):
+  - **universo dai CIG pubblicati dal 2020**, con vista per annualità e attendibilità per anno. I mondi attesi, 2020-2023 e dal 2024, sono da validare misurando la disponibilità dei link ai documenti; per il 2020-2023 eventualmente solo un sottoinsieme utile. Prima statistica di sovranità (11/11) sul 2024 e oltre;
+  - **soglia d'importo 500 €**;
+  - in **S5** anche la **consulenza IT riconducibile a infrastrutture in-house**, distinguendo consulenza IT da non IT e, nell'IT, infrastrutturale, migrazione e applicativa.
