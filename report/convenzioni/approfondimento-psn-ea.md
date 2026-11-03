@@ -39,7 +39,9 @@ Licenze Microsoft 2024-2025 (S3 convenzione + S4 marchio), classificate dall'ogg
 
 Dove l'oggetto è esplicito, **SaaS e on-premise si dividono circa a metà** (87 contro 92 M€). È coerente con i pesi di gara Consip (44 % «Microsoft 365» in EA6, 50 % in EA9). Gli ordini con dettaglio SKU letti (Calabria, ART, MAECI, Archivi notarili) sono in prevalenza M365/Dynamics, ma sono un campione piccolo.
 
-### Regola proposta (decisione Fabio)
+> **Superato** da `ea-quota-cloud-elaborazione.md`: i pesi di gara non sono una stima centrale (revisione avversariale), e «rinnovo»/«manutenzione» non indicano on-premise.
+
+### Regola proposta (decisione Fabio, superata)
 - **Cloud extra-UE certo:** solo il SaaS esplicito (~87 M€).
 - **On-premise certo:** solo l'on-premise esplicito (~92 M€): licenze, non cloud.
 - **Generico (~430 M€): intervallo.** Valore centrale 44-50 % cloud (pesi di gara); estremi 0 % e 100 %, nella forbice dell'incerto.
