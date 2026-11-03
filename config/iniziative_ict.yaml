@@ -59,6 +59,10 @@
     cosa_conferma: aggiudicazione TED, stesso CIG
 
 - cig: 97431204F9
+  dossier: report/convenzioni/97431204F9-microsoft-ea8.md
+  revisione: report/convenzioni/revisioni/licenze-revisione-avversariale.md
+  asse_a: misto-prevalenza-saas
+  nota_revisione: 'quota cloud non stimabile dai pesi di gara; ordini con dettaglio SKU letti (ART) 100% SaaS, campione piccolo; licenze a marchio Azure AD presenti (B7F5D30888)'
   iniziativa: Consip Licenze Microsoft Enterprise Agreement 8, ID 2615
   categoria: licenza-prodotto
   produttore: Microsoft
@@ -139,9 +143,13 @@
     cosa_conferma: 'aggiudicazione TED: System Management per le PA (ed.3) ID Sigef 2275, CIG lotto 1 893944468E'
 
 - cig: B1D4011AB2
+  dossier: report/convenzioni/B1D4011AB2-microsoft-ea9.md
+  revisione: report/convenzioni/revisioni/licenze-revisione-avversariale.md
+  asse_a: misto-prevalenza-saas
+  nota_revisione: 'legame CIG-ID 2755 da due enti aderenti indipendenti (MAECI det. 1019/2025, ARPA Piemonte det. 146/2026 sha256 1afb2932...) + bando TED concorde per data, importo, titolo; riserva: nessun documento Consip scrive il CIG'
   iniziativa: Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)
   categoria: licenza-prodotto
-  stato: da-verificare
+  stato: verificato
   fonte: 'oggetto CIG padre (BDNCP): solo ''FORNITURA DI LICENZE D''USO'''
   produttore: Microsoft
   giurisdizione: EXTRA-UE
@@ -175,6 +183,12 @@
     cosa_conferma: 'bando TED Consip: AQ servizi di System Management per le PA, ID Sigef 1836, CIG 7260902DDE'
 
 - cig: 9660108D4B
+  dossier: report/convenzioni/9660108D4B-multibrand6-oracle.md
+  revisione: report/convenzioni/revisioni/licenze-revisione-avversariale.md
+  asse_a: on-premise
+  quota_cloud_convenzione: 0
+  attuativi_da_verificare: [A02A0C50B1, A02A0C832A]
+  nota_revisione: 'capitolato: prodotti software on premises; due attuativi DTD Giustizia con cloud nell oggetto (13,4 M EUR) non aperti, aggancio al lotto dubbio'
   iniziativa: Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle
   categoria: licenza-prodotto
   produttore: Oracle
@@ -233,11 +247,16 @@
   nota: oggetto e categoria confermati per l'iniziativa ID 2710; manca il legame esplicito CIG B2094754F1 -> ID 2710 (eForms senza CIG)
 
 - cig: 8335254532
+  dossier: report/convenzioni/8335254532-microsoft-ea6.md
+  revisione: report/convenzioni/revisioni/licenze-revisione-avversariale.md
+  asse_a: misto-prevalenza-saas
+  quota_cloud_min: 0.44
+  nota_revisione: 'legame CIG-ID 2187 regge (record BDNCP Consip, chiarimenti Consip, determine Calabria); aggiudicatario TIM da verificare (fonti non indipendenti); 0,44 = peso di sconto in gara, non spesa: solo limite inferiore'
   iniziativa: Consip Licenze Microsoft Enterprise Agreement 6, ID 2187
   categoria: licenza-prodotto
   produttore: Microsoft
   giurisdizione: EXTRA-UE
-  stato: da-verificare
+  stato: verificato
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 5519376D26
