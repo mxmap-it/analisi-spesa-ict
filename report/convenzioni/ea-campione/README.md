@@ -18,6 +18,28 @@ Versione 0.2, 3/11/2026. Lavoro in corso: tutti i 50 C1 cercati; C2, C3 ed E sol
 - **Atti senza carrello: 5** (Consob, ARERA, Calabria, ISTAT, oltre a MAECI con i soli SKU). Danno l'importo ma non la composizione.
   - Consob distingue solo i capitoli di bilancio: 99,9 % sul capitolo «servizi informatici e cloud». È un indizio, non un carrello.
 
+## L4: portali degli enti (3/11/2026, approvato da Fabio)
+- **38 enti visitati**, 93 richieste HTTP, circa 10 minuti di rete (rispettando robots.txt e crawl-delay; pausa di almeno 3 s). Esiti:
+  - carrello trovato: 2;
+  - atto senza carrello: 8;
+  - atto non trovato: 10;
+  - portale non navigabile: 18.
+
+  Dettaglio per ente in `metriche-scraping.csv`; le prime righe sono stimate, le altre misurate.
+- **Carrelli nuovi:** Viva Servizi B47DF822B8 (E-onprem): 55.140 € tutti on-premise (licenze perpetue SQL/Windows Server, RDS CAL); conferma l'oggetto esplicito. Fuori campione, LAZIOcrea pubblica le determine EA9 con il carrello (CIG B7CBD41943, 37.920,74 €, tutto cloud).
+- **Importi confermati dall'ente:** ANCI 45.003.672 € (scheda DigitalPA, affidamento diretto a TIM del 10/9/2024, nessun allegato). Veritas: 2.226.468,42 € (autorizzazione senza carrello; la relazione è «conservata agli atti»). Roma Servizi per la Mobilità: 187.110 €.
+- **ASL Pescara:** la delibera 1431 del 23/10/2025 (EA9) risulta nell'archivio dell'albo, ma l'archivio mostra solo numero, data e oggetto: il testo non è più pubblicato dopo l'affissione.
+- **Decreto DGSIA del 6/5/2024** (EA8 Giustizia, CIG A041C635CF, 143,2 M€ IVA inclusa): è un decreto di pagamento per capitoli, senza carrello.
+- **Cosa blocca:**
+  - WAF o anti-bot: MM, SACE, CREA, AMA, EAV, ASL NA3 (403/428), non aggirati;
+  - robots.txt: profilo committente Regione ER, ricerche dei Comuni di Torino e Genova, APSS Trento;
+  - sito irraggiungibile o TLS non valido: ASL Caserta, AOU Vanvitelli, SOGIN, San Giovanni;
+  - navigazione a postback senza ricerca: ASL Città di Torino;
+  - albo storico senza testo: ASL Pescara;
+  - CIG assente dal portale: LAZIOcrea, CONSAP, IPZS, SASA.
+- **Piattaforme riconosciute** (solo se dichiarate o evidenti dal dominio): DigitalPA (portaletrasparenza.net, 9 enti), ISWEB (SISPI), Netribe on.Cube (ASL Pescara), Maggioli JCityGov (Pedrengo). Le altre: ignota.
+- **Indicazione per lo scraping massivo:** DigitalPA è l'unica piattaforma incontrata con ricerca per CIG, URL stabili e allegati scaricabili: costa 2-4 richieste per contratto. Gli albi degli enti sanitari e i siti delle partecipate danno raramente l'allegato e spesso bloccano le richieste automatiche.
+
 ## Metodo
 1. **Livelli L0-L1 (ANAC, deterministico):** per i 120 CIG si estraggono dai CIG 2024-2025 e dalle aggiudicazioni l'accordo quadro (EA6/7/8/9 o procedura propria) e l'importo aggiudicato (`anac.csv`). Risultato: 4 EA6, 4 EA7, 46 EA8, 33 EA9, 26 procedure proprie o affidamenti, 7 altri accordi quadro.
 2. **Livello L5 (ricerca web):** circa 60 ricerche per CIG, per ente + oggetto + anno e per edizione EA. Gli atti trovati sono archiviati sul server con `tools/archivia.py` (sha256 in `risultati.csv`) e letti con pdftotext.
@@ -50,4 +72,5 @@ L'accesso civico è l'ultima risorsa e richiede la decisione di Fabio. Prima van
 | data | versione | modifica |
 |---|---|---|
 | 2026-11-03 | 0.1 | avvio: 2 atti |
+| 2026-11-03 | 0.3 | L4 su 38 enti, metriche di scraping, Viva Servizi, ANCI confermato, DGSIA letto |
 | 2026-11-03 | 0.2 | tutti i C1 cercati; AIFA con carrello completo; importi C1 controllati su ANAC; verifica ripetibile `tools/verifiche/ea_campione.js` |
