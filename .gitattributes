@@ -1,3 +1,4 @@
 # Le prove devono restare identiche al byte: niente conversione dei fine riga.
 report/**/prove-*/** -text
 report/**/*.jsonl -text
+report/convenzioni/ea-campione/blocchi/** -text
