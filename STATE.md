@@ -157,6 +157,8 @@ In parallelo, senza bloccare: annotazioni umane (la verità di riferimento serve
 ### Todo PRIORITARIO dalla ripresa — pipeline dettaglio-cig → link dell'ente → documenti (#57, Fabio 1/11/2026)
 
 Esempio: https://dettaglio-cig.anticorruzione.it/cig/B320E66854 ha in fondo un link alla pagina di pubblicazione dell'ente, https://www.servizipubblicaamministrazione.it/servizi/saturnweb/Pubblicazioni.aspx?Tipo=26&CE=lnmtrn203, da cui dovrebbero scaricarsi altri documenti dell'acquisto. Pipeline da valutare, validare come fattibile e scomporre in tutti i passaggi:
+
+**Esito 3/11/2026 (sera):** il link c'è in open data via **API PVL** (`pubblicitalegale.anticorruzione.it/api/v0/avvisi`, campo `documenti_di_gara_link`, senza CAPTCHA, dal 1/1/2024; verificato sul CIG d'esempio). dettaglio-cig usa un'API con CAPTCHA mosparo: non si usa in massa. Pre-2024: nessuna fonte aperta → R30. Scaricamento completo (2,75 M avvisi) in corso sul server: `log/pvl_avvisi.log`, stato `lavoro/pvl/stato.jsonl`, ripresa in `report/metodo/acquisizione/dettaglio-cig.md`. Prima misura (gen-feb 2024): 15 % dei CIG con link; bandi 70-95 %, affidamenti diretti AD3 0,3 %. Prossimo: copertura sull'universo e sul campione ICT, censimento domini, esito versionato, pilota L3.
 - [ ] Il link c'è anche nei dataset che scarichiamo già (ANAC, BDNCP, OCDS)? Con quale campo? Se c'è solo nella pagina, vale la pena leggerla, rispettando robots e senza aggirare blocchi?
 - [ ] Copertura: quota di CIG con il link, per anno (prima e dopo il 2024), per tipo di procedura, per ente e per piattaforma.
 - [ ] Censire le piattaforme e i software di destinazione (es. SaturnWeb) e capire se un crawler per ogni famiglia copre molti enti.

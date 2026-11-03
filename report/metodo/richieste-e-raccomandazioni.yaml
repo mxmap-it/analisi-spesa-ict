@@ -283,3 +283,13 @@
   perche_serve: Senza accesso automatico alla sezione la raccolta degli atti per la spesa ICT richiede accessi civici uno per uno; l'indicizzabilità è un obbligo di legge misurabile.
   nota: "PEC preparate dal modulo (pec-prepara), inviate solo da Fabio; registro degli invii dati/trasparenza/invii.csv"
   rif: ["#61", "#55", R28]
+- id: R30
+  destinatario: ANAC (BDNCP, open data)
+  tipo: dato-mancante
+  stato: verificato
+  titolo: Pubblicare in bulk, per ogni CIG, il link alla pagina dei documenti di gara (LINK_SITO_COMMITTENTE / documenti_di_gara_link), anche prima del 2024
+  evidenza: "3/11/2026: il campo non e' nel dataset pubblicazioni (solo date) ne' negli altri dataset del catalogo; dettaglio-cig lo mostra ma la sua API richiede token CAPTCHA mosparo (HTTP 403 senza); la PVL lo espone via API paginata solo dal 1/1/2024 e quasi mai per gli affidamenti diretti AD3 (0,3 % nel primo campione)"
+  prova: report/metodo/acquisizione/dettaglio-cig.md
+  richiesta: "Aggiungere LINK_SITO_COMMITTENTE al dataset pubblicazioni (o un dataset dedicato cig -> link) in CSV/JSON, con lo storico pre-2024; rendere obbligatorio il link anche nelle schede AD; pubblicare termini d'uso e licenza dell'API PVL"
+  perche_serve: Il link e' il punto d'ingresso ai documenti da cui si attribuiscono prodotto e giurisdizione del cloud; oggi copre solo i bandi dal 2024
+  rif: ["#57"]
