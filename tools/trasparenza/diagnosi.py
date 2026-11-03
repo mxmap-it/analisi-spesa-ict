@@ -118,7 +118,8 @@ def riconosci_blocco(status, intest: dict, corpo: str, alias: list[str]) -> dict
     it = "\n".join(f"{k.lower()}: {v}" for k, v in intest.items())
     vendor = [(n, rx) for n, dove, rx in sonda.FIRME
               if re.search(rx, it if dove == "intest" else corpo[:200_000], re.I)]
-    if status == 200 and len(corpo) > 20_000:
+    if (status == 200 and len(corpo) > 20_000) or status in (404, 410):
+        # un modulo con reCAPTCHA in una pagina normale o in una pagina d'errore non è un blocco
         vendor = [v for v in vendor if v[0] not in ("CAPTCHA", "JS-challenge generica")]
     cdn = [(n, rx) for n, rx in CDN if re.search(rx, (it + "\n" + "\n".join(alias)).lower(), re.I)]
     return {"vendor_blocco": [v[0] for v in vendor], "regole_blocco": [v[1] for v in vendor],
@@ -128,10 +129,35 @@ def riconosci_blocco(status, intest: dict, corpo: str, alias: list[str]) -> dict
                                 for v in vendor) or bool(re.search(r"document\.cookie.{0,200}location\.(reload|href)", corpo[:20000], re.S))}
 
 
-def tentativo_http(url: str, ua: str, alias: list[str], verify=True, max_hop=10) -> dict:
-    """Redirect seguiti a mano: per ogni passo stato e intestazioni complete."""
+TRANSITORI = re.compile(r"timeout|timed out|reset by peer|remotedisconnected|connection aborted|temporar", re.I)
+BACKOFF = (10, 30)  # secondi fra i ritentativi di un errore transitorio
+
+
+def transitorio(d: dict) -> bool:
+    return bool(TRANSITORI.search(d.get("errore") or "")) or (d.get("status") in (502, 503, 504) and not d.get("vendor_blocco"))
+
+
+def con_ritentativi(f, *a, **k) -> dict:
+    """Errore transitorio (timeout, connessione chiusa, 502/503/504 senza firma di WAF): fino a 2 ritentativi con
+    backoff. Si registrano tutti i passaggi; l'esito è quello dell'ultimo."""
+    storia = []
+    for attesa in (0,) + BACKOFF:
+        if attesa:
+            time.sleep(attesa)
+        d = f(*a, **k)
+        storia.append({k2: d.get(k2) for k2 in ("ts_locale", "status", "errore", "secondi")})
+        if not transitorio(d):
+            break
+    d["ritentativi"] = storia[:-1]
+    d["transitorio"] = transitorio(d)
+    return d
+
+
+def tentativo_http(url: str, ua: str | None, alias: list[str], verify=True, max_hop=10) -> dict:
+    """Redirect seguiti a mano: per ogni passo stato e intestazioni complete. ua=None: User-Agent di default di requests."""
     catena, t0, sess = [], time.monotonic(), requests.Session()
     u, r, err, corpo = url, None, "", b""
+    ua = ua or requests.utils.default_user_agent()
     try:
         for _ in range(max_hop):
             t1 = time.monotonic()
@@ -148,7 +174,7 @@ def tentativo_http(url: str, ua: str, alias: list[str], verify=True, max_hop=10)
         err = f"{type(e).__name__}: {e}"[:300]
     testo = corpo.decode("utf-8", "replace")
     ultimo = catena[-1] if catena else {"status": None, "intestazioni": {}}
-    d = {"client": f"python-requests/{requests.__version__}", "user_agent": ua, "url": url, "catena": catena,
+    d = {"ts_locale": adesso(), "client": f"python-requests/{requests.__version__}", "user_agent": ua, "url": url, "catena": catena,
          "url_finale": catena[-1]["url"] if catena else "", "status": ultimo["status"], "errore": err,
          "byte": len(corpo), "sha256_corpo": hashlib.sha256(corpo).hexdigest() if corpo else "",
          "primi_kb": testo[:PRIMI_KB], "secondi": round(time.monotonic() - t0, 2)}
@@ -165,6 +191,48 @@ def tentativo_http(url: str, ua: str, alias: list[str], verify=True, max_hop=10)
     return d
 
 
+def tentativo_curl(url: str, alias: list[str]) -> dict:
+    """curl con le sue impostazioni di default (User-Agent «curl/x.y»): identità onesta di un client a riga di comando."""
+    import shutil
+    import subprocess
+    exe = shutil.which("curl")
+    t0 = time.monotonic()
+    if not exe:
+        return {"ts_locale": adesso(), "client": "curl (assente)", "url": url, "status": None, "errore": "curl non installato", "secondi": 0}
+    ver = subprocess.run([exe, "--version"], capture_output=True, text=True).stdout.split("\n")[0][:80]
+    try:
+        p = subprocess.run([exe, "-sS", "-L", "--max-redirs", "10", "-m", "40", "-D", "-", "-o", "-", "--compressed",
+                            "-w", "\n@@CURL@@%{http_code} %{url_effective}", url], capture_output=True, timeout=60)
+    except subprocess.TimeoutExpired:
+        return {"ts_locale": adesso(), "client": ver, "user_agent": "curl (default)", "url": url, "status": None,
+                "errore": "timeout (60 s)", "secondi": round(time.monotonic() - t0, 2)}
+    out = p.stdout
+    testo = out.decode("utf-8", "replace")
+    coda = testo.rsplit("@@CURL@@", 1)
+    meta = coda[1].split() if len(coda) == 2 else ["000", url]
+    blocchi = re.split(r"\r?\n\r?\n", coda[0])
+    intest_blocchi = [b for b in blocchi if re.match(r"HTTP/\S+ \d{3}", b)]
+    catena = []
+    for b in intest_blocchi:
+        righe = b.splitlines()
+        catena.append({"status": int(righe[0].split()[1]), "http": righe[0].split()[0],
+                       "intestazioni": dict(x.split(": ", 1) for x in righe[1:] if ": " in x)})
+    corpo = "\n\n".join(b for b in blocchi if b not in intest_blocchi)
+    status = int(meta[0]) if meta[0].isdigit() and meta[0] != "000" else None
+    ult = catena[-1]["intestazioni"] if catena else {}
+    d = {"ts_locale": adesso(), "client": ver, "user_agent": "curl (default)", "url": url, "catena": catena,
+         "url_finale": meta[1] if len(meta) > 1 else "", "status": status,
+         "errore": p.stderr.decode("utf-8", "replace").strip()[:300] if p.returncode else "",
+         "byte": len(corpo), "sha256_corpo": hashlib.sha256(corpo.encode()).hexdigest() if corpo else "",
+         "primi_kb": corpo[:PRIMI_KB], "secondi": round(time.monotonic() - t0, 2)}
+    d |= riconosci_blocco(status, ult, corpo, alias)
+    if d["errore"] or (status or 0) >= 400 or d["vendor_blocco"]:
+        grezzo = (f"# {ver} - {_ORIGINE.get('origine')} {_ORIGINE.get('ip')} {_ORIGINE.get('asn')} {adesso()}\n"
+                  f"# {url}\n# exit {p.returncode} {d['errore']}\n\n").encode() + out
+        d["grezzo_sha256"], d["grezzo_tipo"] = salva_blob(grezzo), "dump-http"
+    return d
+
+
 def tentativo_browser(pw, url: str, headed: bool, canale: str | None = None) -> dict:
     har = LAVORO / "har" / f"{hashlib.sha1((url + adesso()).encode()).hexdigest()}.har"
     har.parent.mkdir(parents=True, exist_ok=True)
@@ -172,7 +240,7 @@ def tentativo_browser(pw, url: str, headed: bool, canale: str | None = None) -> 
     br = pw.chromium.launch(headless=not headed, channel=canale) if canale else pw.chromium.launch(headless=not headed)
     ctx = br.new_context(user_agent=None, locale="it-IT", record_har_path=str(har), record_har_content="embed")
     ua_reale = ""
-    d = {"client": f"playwright-chromium/{br.version}" + (" (headed)" if headed else " (headless)") + (f" canale {canale}" if canale else ""), "url": url}
+    d = {"ts_locale": adesso(), "client": f"playwright-chromium/{br.version}" + (" (headed)" if headed else " (headless)") + (f" canale {canale}" if canale else ""), "url": url}
     try:
         pg = ctx.new_page()
         ua_reale = pg.evaluate("navigator.userAgent")
@@ -198,8 +266,17 @@ def tentativo_browser(pw, url: str, headed: bool, canale: str | None = None) -> 
     return d
 
 
-def diagnostica(ente: dict, nome_origine: str, browser=True, headed=False, canale=None, pw=None) -> list[dict]:
-    """Tutti i tentativi su un ente: HTTP bot, HTTP browser-UA, browser reale."""
+IDENTITA = [  # richieste reali solo con identità oneste; Googlebot, Bingbot e crawler AI solo nelle regole di robots.txt
+    ("bot-progetto", "http", UA_BOT),
+    ("python-requests", "http", None),
+    ("curl", "curl", None),
+    ("browser-ua", "http", UA_BROWSER),
+    ("browser-reale", "browser", None),
+]
+
+
+def diagnostica(ente: dict, nome_origine: str, browser=True, headed=False, canale=None, pw=None, giro=1) -> list[dict]:
+    """Tutti i tentativi su un ente, un'identità alla volta, >= 5 s fra due richieste allo stesso host."""
     at = ente.get("at_url") or ente.get("sito_ipa")
     if not at or "://" not in at:
         return []
@@ -208,14 +285,23 @@ def diagnostica(ente: dict, nome_origine: str, browser=True, headed=False, canal
     dn = dns(host)
     tl = tls(host) if at.startswith("https") else {"host": host, "valido": None, "errore": "http senza TLS"}
     comune = {"cf": ente["cf"], "origine": o["origine"], "ip": o["ip"], "asn": o["asn"], "asn_nome": o["asn_nome"],
-              "osservatore": {k: o[k] for k in ("host", "sistema", "python")}, "dns": dn, "tls": tl, "metodo": "1.1.0-sperimentale"}
+              "osservatore": {k: o[k] for k in ("host", "sistema", "python")}, "dns": dn, "tls": tl,
+              "metodo": "1.1.0", "giro_conferma": giro}
     alias = dn["alias"] + [dn["canonico"]]
     out = []
-    for ua in (UA_BOT, UA_BROWSER):
-        out.append(comune | {"ts": adesso(), "tipo": "http"} | tentativo_http(at, ua, alias, verify=tl.get("valido") is not False))
-        time.sleep(5)
-    if browser and pw is not None:
-        out.append(comune | {"ts": adesso(), "tipo": "browser"} | tentativo_browser(pw, at, headed, canale))
+    dns_ko = bool(dn["errore"]) and not dn["a"] and not dn["aaaa"]
+    for nome, tipo, ua in IDENTITA:
+        if dns_ko and nome != "bot-progetto":
+            continue  # nome inesistente: un tentativo basta, il risultato non dipende dal client
+        if tipo == "http":
+            d = con_ritentativi(tentativo_http, at, ua, alias, verify=tl.get("valido") is not False)
+        elif tipo == "curl":
+            d = con_ritentativi(tentativo_curl, at, alias)
+        elif browser and pw is not None:
+            d = tentativo_browser(pw, at, headed, canale)
+        else:
+            continue
+        out.append(comune | {"ts": adesso(), "tipo": tipo, "identita": nome} | d)
         time.sleep(5)
     return out
 

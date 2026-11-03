@@ -1,4 +1,4 @@
-# Metodo — versione 1.0.0 (3/11/2026)
+# Metodo — versione 1.1.0-beta (4/11/2026)
 
 ## Base normativa
 - Art. 9 c. 1 d.lgs. 33/2013: le amministrazioni «non possono disporre filtri e altre soluzioni tecniche atte ad
@@ -48,6 +48,24 @@ Solo con prova (host del fornitore, `generator` dichiarato, nome del fornitore n
 Gli indizi (es. percorso `/L190/`, tema Bootstrap Italia) stanno in `indizi` e non sono attribuzioni. Regole in
 `piattaforme.py`. WordPress, Drupal, Joomla, Liferay sono CMS dichiarati, non fornitori.
 
+## Verifica estesa (1.1.0-beta, sugli enti con esito dubbio)
+- **Identità oneste** nelle richieste reali: bot del progetto, python-requests e curl con UA di default, UA da browser
+  con l'URL del progetto, browser reale (Chromium di Playwright, UA standard, nessun plugin di occultamento).
+  Googlebot, Bingbot e crawler AI (GPTBot, ClaudeBot, CCBot, Google-Extended, PerplexityBot) **solo** nelle regole di robots.txt.
+- **Origini:** server (datacenter, IP e ASN registrati) e desktop (IP residenziale), stesso codice.
+- **Resilienza:** errori transitori (timeout, connessione chiusa, 502/503/504 senza firma) ripetuti con backoff 10 s e 30 s.
+  **Conferma:** un blocco è «confermato» se si ripete in due giri a distanza ≥ 60 minuti; se all'ultimo giro non si
+  ripete è «non riprodotto» e l'esito diventa «accessibile» (l'esito della prima prova resta in `esito_sonda`).
+- **Meccanismi** (`tassonomia.py`): robots.txt (motori / altri client), WAF per User-Agent, WAF per IP/ASN, challenge JS,
+  CAPTCHA, nessun client accettato (blocco totale o sito guasto), nessuna risposta, errore transitorio.
+- **Diagnostica per tentativo:** DNS (A, AAAA, alias dal resolver di sistema), TLS (versione, emittente, scadenza, errore e tipo),
+  catena dei redirect con intestazioni complete, dimensione, sha256 e primi 2 kB del corpo, vendor e regola, tempi.
+  Log grezzo (dump HTTP o HAR) per ogni tentativo fallito, sha256 nei dati.
+- **Caratterizzazione** (campione stratificato): via ANAC e via navigazione dalla home IndicePA e se coincidono;
+  ricerca nella sezione di un CIG reale 2024-2025 dell'ente (preferito importo del lotto ≥ 40.000 €) e di «determina»:
+  trovato / non trovato / ricerca assente / ricerca non funzionante.
+- **Terza via** (aggancio a #57): link ai documenti di gara e piattaforme di e-procurement dalla Pubblicità a valore legale.
+
 ## Limiti noti
 - L'URL ANAC è quello comunicato per i dati 2022 o precedenti: può essere superato.
 - La scoperta dalla home non vede menu generati via JavaScript.
@@ -59,3 +77,4 @@ Gli indizi (es. percorso `/L190/`, tema Bootstrap Italia) stanno in `indizi` e n
 | versione | data | cambiamento |
 |---|---|---|
 | 1.0.0 | 2026-11-03 | prima versione (pilota 2 × 200 enti, censimento completo) |
+| 1.1.0-beta | 2026-11-04 | verifica estesa: identità, due origini, conferma in due giri, log grezzi, caratterizzazione, terza via PVL |

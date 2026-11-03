@@ -110,5 +110,5 @@ def jdump(o) -> str:
     return json.dumps(o, ensure_ascii=False, separators=(",", ":"))
 
 # Versione del metodo: si incrementa a ogni cambio di regole (registro in METODO.md).
-VERSIONE_METODO = "1.0.0"
+VERSIONE_METODO = "1.1.0-beta"
 DATI = Path(os.environ.get("TRASPARENZA_DATI", RADICE / "dati" / "trasparenza"))

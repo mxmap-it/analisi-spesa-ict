@@ -140,6 +140,43 @@ def test_cat_sezione_non_individuata_e_url_anac_rotto():
     assert deriva_at("ftp://x") == ("", "")
 
 
+import tassonomia  # noqa: E402
+
+
+def _t(identita, status, giro=1, ts="2026-11-03T20:00:00Z", origine="server", **k):
+    return {"identita": identita, "status": status, "giro_conferma": giro, "ts": ts, "origine": origine, "errore": k.get("errore", ""),
+            "vendor_blocco": k.get("vendor", []), "challenge_js": k.get("js", False), "captcha": k.get("captcha", False),
+            "transitorio": k.get("transitorio", False)}
+
+
+def test_cat_waf_per_user_agent_confermato():
+    srv = [_t("bot-progetto", 403), _t("python-requests", 403), _t("browser-reale", 200),
+           _t("bot-progetto", 403, 2, "2026-11-03T22:00:00Z"), _t("browser-reale", 200, 2, "2026-11-03T22:00:00Z")]
+    x = tassonomia.classifica(srv, [], [])
+    assert "WAF per User-Agent/identità" in x["meccanismi"] and x["conferma"] == "confermato"
+
+
+def test_cat_waf_per_ip_datacenter():
+    srv = [_t("bot-progetto", 403), _t("browser-reale", 403)]
+    dsk = [_t("bot-progetto", 200, origine="desktop"), _t("browser-reale", 200, origine="desktop")]
+    assert "WAF per IP/ASN (datacenter)" in tassonomia.classifica(srv, dsk, [])["meccanismi"]
+
+
+def test_cat_blocco_non_riprodotto_e_transitorio():
+    srv = [_t("bot-progetto", 403), _t("bot-progetto", 200, 2, "2026-11-03T22:00:00Z")]
+    assert tassonomia.classifica(srv, [], [])["conferma"] == "non riprodotto"
+    srv = [_t("bot-progetto", None, errore="ReadTimeout: timed out", transitorio=True)]
+    assert "errore transitorio" in tassonomia.classifica(srv, [], [])["meccanismi"]
+
+
+def test_cat_robots_per_identita():
+    neg = tassonomia.robots_negati("User-agent: GPTBot\nDisallow: /\n\nUser-agent: *\nAllow: /\n", "/amministrazione-trasparente/")
+    assert neg == ["GPTBot"]
+    assert "robots.txt (solo crawler AI o altri client)" in tassonomia.classifica([], [], neg)["meccanismi"]
+    neg = tassonomia.robots_negati("User-agent: *\nDisallow: /\n", "/x")
+    assert "Googlebot" in neg and "robots.txt (motori di ricerca)" in tassonomia.classifica([], [], neg)["meccanismi"]
+
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"):

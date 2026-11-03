@@ -22,6 +22,9 @@ import shutil
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from urllib.parse import urlsplit
+
+import tassonomia
 from comune import LAVORO, RADICE, VERSIONE_METODO, adesso, connetti
 
 PUBBLICA = Path(os.environ.get("TRASPARENZA_PUBBLICA", RADICE / "sito" / "static" / "dati" / "trasparenza"))
@@ -34,7 +37,9 @@ CAMPI = ["cf", "ipa", "denominazione", "tipologia", "categoria", "regione", "sit
          "piattaforma", "piattaforma_prova", "piattaforma_corrispondenza", "generator", "indizi", "conferma_browser", "ts"]
 
 
-DASH = ["cf", "denominazione", "categoria", "regione", "esito", "dettaglio_esito", "piattaforma", "at_url", "segnali", "esito_server", "esito_desktop", "lettura_origini", "vendor_blocco", "ricercabilita", "vie_coincidono", "prove"]
+DASH = ["cf", "denominazione", "categoria", "regione", "esito", "dettaglio_esito", "piattaforma", "at_url", "segnali",
+        "meccanismi_blocco", "conferma_blocco", "identita_bloccate", "robots_identita_negate", "esito_server", "esito_desktop",
+        "lettura_origini", "vendor_blocco", "ricercabilita", "vie_coincidono", "prove", "pvl_link_n", "pvl_sistemi"]
 
 
 def _gz(path: Path, testo: str):
@@ -84,9 +89,9 @@ def _tabella(path: Path, chiave: str, righe: list[dict]):
             w.writerow([k, tot] + [c[x] for x in ESITI] + [v, f"{v / tot:.3f}"])
 
 
-CAMPI_DIAG = ["esito_server", "esito_desktop", "lettura_origini", "vendor_blocco", "cdn", "challenge_js", "captcha",
+CAMPI_DIAG = ["esito_sonda", "meccanismi_blocco", "identita_bloccate", "robots_identita_negate", "conferma_blocco", "giri_conferma", "esito_server", "esito_desktop", "lettura_origini", "vendor_blocco", "cdn", "challenge_js", "captcha",
               "dns_alias", "tls_emittente", "tls_scadenza", "tls_errore", "prove",
-              "via_anac", "via_home", "vie_coincidono", "ricercabilita", "cig_test"]
+              "via_anac", "via_home", "vie_coincidono", "ricercabilita", "cig_test", "pvl_link_n", "pvl_sistemi"]
 CAMPI_TENTATIVI = ["cf", "origine", "ip", "asn", "asn_nome", "ts", "tipo", "client", "user_agent", "url", "url_finale",
                    "redirect", "status", "errore", "byte", "sha256_corpo", "vendor_blocco", "regole_blocco", "cdn",
                    "challenge_js", "captcha", "dns_a", "dns_aaaa", "dns_alias", "tls_versione", "tls_emittente",
@@ -105,6 +110,41 @@ def _sintesi(ts: list[dict]) -> str:
     return "accessibile" if ok else "bloccato o irraggiungibile"
 
 
+PVL = Path(os.environ.get("TRASPARENZA_PVL", RADICE / "lavoro" / "pvl"))
+
+
+def leggi_pvl() -> dict:
+    """Terza via d'accesso (#57, aggancio): link ai documenti di gara dalla Pubblicità a valore legale e sistemi di
+    e-procurement usati, per codice fiscale dell'ente. File prodotti da tools/acquisizione/ (non modificati qui):
+    lavoro/pvl/link_cig.csv e lavoro/pvl/sistemi.csv. Colonne riconosciute per nome: codice fiscale (cf*,
+    codice_fiscale*), link (*link*, *url*), dominio o sistema (dominio, sistema, host). Se i file mancano: nessun dato."""
+    out: dict = {}
+    for nome in ("link_cig.csv", "sistemi.csv"):
+        f = PVL / nome
+        if not f.exists():
+            continue
+        with f.open(encoding="utf-8", newline="") as fh:
+            rd = csv.DictReader(fh)
+            col = {k.lower(): k for k in (rd.fieldnames or [])}
+            kcf = next((col[k] for k in col if k.startswith(("cf", "codice_fiscale"))), None)
+            klink = next((col[k] for k in col if "link" in k or "url" in k), None)
+            ksis = next((col[k] for k in col if k in ("dominio", "sistema", "host", "piattaforma")), None)
+            if not kcf:
+                continue
+            for row in rd:
+                cf = (row.get(kcf) or "").strip().upper()
+                if not cf:
+                    continue
+                o = out.setdefault(cf, {"n": 0, "sistemi": set()})
+                if nome == "link_cig.csv" and klink and row.get(klink):
+                    o["n"] += 1
+                    if not ksis:
+                        o["sistemi"].add(urlsplit(row[klink]).netloc.lower())
+                if ksis and row.get(ksis):
+                    o["sistemi"].add(row[ksis].strip().lower())
+    return out
+
+
 def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
     """Aggiunge a ogni ente la diagnostica estesa (due origini) e la caratterizzazione; pubblica i tentativi
     e i log grezzi dei tentativi falliti (prove/<sha256>.<tipo>.gz)."""
@@ -114,6 +154,7 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         t = json.loads(dati)
         per_cf[t["cf"]].append(t)
     car = {cf: json.loads(d) for cf, d in c.execute("SELECT cf, dati FROM caratteri WHERE run=?", (run,))}
+    pvl = leggi_pvl()
     cig = {cf: g for cf, g in c.execute("SELECT cf, cig FROM cig_test")}
     prove_dir = (pub / "prove") if pub.is_relative_to(LAVORO) else PUBBLICA / "prove"  # content-addressed, condivisa fra giri
     prove_dir.mkdir(parents=True, exist_ok=True)
@@ -135,6 +176,24 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         if ts:
             r["dns_alias"] = ";".join(ts[0]["dns"].get("alias") or [])
             r["tls_emittente"], r["tls_scadenza"], r["tls_errore"] = (ts[0]["tls"].get(k, "") for k in ("emittente", "scadenza", "errore"))
+        # tassonomia per identità e conferma del blocco
+        testo_rb = None
+        if r.get("robots_sha256") and (r.get("robots_stato") or "").startswith("presente"):
+            f = ARCHIVIO / "blobs" / "sha256" / r["robots_sha256"][:2] / r["robots_sha256"][2:4] / r["robots_sha256"]
+            testo_rb = f.read_text(encoding="utf-8", errors="replace") if f.exists() else None
+        tx = tassonomia.classifica(srv, dsk, tassonomia.robots_negati(testo_rb, urlsplit(r.get("at_url") or "/").path))
+        r["meccanismi_blocco"] = ";".join(tx["meccanismi"])
+        r["identita_bloccate"] = tx["identita_bloccate"]
+        r["robots_identita_negate"] = ";".join(tx["robots_negati"])
+        r["conferma_blocco"] = tx["conferma"]
+        r["giri_conferma"] = tx["giri_conferma"] or ""
+        r["esito_sonda"] = r["esito"]
+        if srv and r.get("at_url") and r["esito"] in ("bloccato da WAF/anti-bot", "irraggiungibile") and tx["conferma"] == "non riprodotto":
+            r["esito"] = "accessibile"
+            r["dettaglio_esito"] = f"blocco della prima prova non riprodotto nelle verifiche successive ({r['dettaglio_esito']})"[:300]
+        elif r["esito"] == "bloccato da WAF/anti-bot" and "errore transitorio" in tx["meccanismi"]:
+            r["esito"] = "irraggiungibile"
+            r["dettaglio_esito"] = "solo errori transitori di rete: non è un blocco"
         prove = []
         for t in ts:
             s = t.get("grezzo_sha256")
@@ -151,6 +210,8 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         r |= {"via_anac": k.get("via_anac", ""), "via_home": k.get("via_home", ""),
               "vie_coincidono": k.get("coincidono", "") if k else "", "ricercabilita": k.get("ricercabilita", ""),
               "cig_test": k.get("cig_test") or cig.get(r["cf"], "")}
+        pv = pvl.get(r["cf"].upper(), {})
+        r["pvl_link_n"], r["pvl_sistemi"] = pv.get("n", ""), ";".join(sorted(pv.get("sistemi", [])))[:500]
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=CAMPI_TENTATIVI, extrasaction="ignore")
     w.writeheader()
@@ -158,7 +219,50 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
     _gz(pub / "tentativi.csv.gz", buf.getvalue())
     _gz(pub / "tentativi.jsonl.gz", "".join(json.dumps(t, ensure_ascii=False) + "\n" for ts in per_cf.values() for t in ts))
     _gz(pub / "caratteri.jsonl.gz", "".join(json.dumps(k, ensure_ascii=False) + "\n" for k in car.values()))
+    # scheda diagnostica per ente (letta dalla dashboard al clic): solo enti con verifiche estese
+    (pub / "schede").mkdir(exist_ok=True)
+    for r in righe:
+        ts = per_cf.get(r["cf"], [])
+        if not ts and r["cf"] not in car:
+            continue
+        scheda = {"cf": r["cf"], "denominazione": r["denominazione"], "esito": r["esito"], "esito_sonda": r.get("esito_sonda"),
+                  "meccanismi": r.get("meccanismi_blocco"), "conferma": r.get("conferma_blocco"),
+                  "identita_bloccate": r.get("identita_bloccate"), "robots_negati": r.get("robots_identita_negate"),
+                  "robots_url": r.get("robots_url"), "robots_sha256": r.get("robots_sha256"),
+                  "tentativi": [{k: t.get(k) for k in ("origine", "ip", "asn", "asn_nome", "ts", "giro_conferma", "identita", "client",
+                                                       "user_agent", "url", "url_finale", "status", "errore", "byte", "sha256_corpo",
+                                                       "vendor_blocco", "regole_blocco", "cdn", "challenge_js", "captcha", "secondi",
+                                                       "transitorio", "ritentativi", "grezzo_tipo", "grezzo_sha256", "grezzo_url")}
+                                | {"redirect": [f"{h['status']} {h.get('url', '')}" for h in t.get("catena", [])],
+                                   "intestazioni": (t.get("catena") or [{}])[-1].get("intestazioni") or t.get("intestazioni") or {},
+                                   "dns": t.get("dns"), "tls": t.get("tls")} for t in ts],
+                  "caratterizzazione": car.get(r["cf"]), "pvl": {"link": r.get("pvl_link_n"), "sistemi": r.get("pvl_sistemi")}}
+        (pub / "schede" / f"{r['cf']}.json").write_text(json.dumps(scheda, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return righe
+
+
+def cambiamenti(righe: list[dict], pub: Path, data: str) -> list[dict]:
+    """Confronto con il giro precedente pubblicato: cosa è cambiato per ente."""
+    giri = sorted(p.name for p in (PUBBLICA / "giri").iterdir() if p.name < data and (p / "enti.json.gz").exists()) if (PUBBLICA / "giri").exists() else []
+    if not giri:
+        return []
+    prima = {e["cf"]: e for e in json.loads(gzip.decompress((PUBBLICA / "giri" / giri[-1] / "enti.json.gz").read_bytes()))["enti"]}
+    out = []
+    for r in righe:
+        p = prima.get(r["cf"])
+        if p is None:
+            out.append({"cf": r["cf"], "denominazione": r["denominazione"], "campo": "ente", "prima": "", "ora": "nuovo", "giro_precedente": giri[-1]})
+            continue
+        for k in ("esito", "at_url", "piattaforma", "robots_sha256", "meccanismi_blocco", "ricercabilita"):
+            if (p.get(k) or "") != (r.get(k) or ""):
+                out.append({"cf": r["cf"], "denominazione": r["denominazione"], "campo": k, "prima": p.get(k) or "",
+                            "ora": r.get(k) or "", "giro_precedente": giri[-1]})
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=["cf", "denominazione", "campo", "prima", "ora", "giro_precedente"])
+    w.writeheader()
+    w.writerows(out)
+    (pub / "cambiamenti.csv").write_text(buf.getvalue(), encoding="utf-8")
+    return out
 
 
 def _gzb(path: Path, dati: bytes):
@@ -211,6 +315,16 @@ def esporta(run: str, data: str = "", forza: bool = False) -> Path:
             "firme_waf": dict(Counter(f for r in righe for f in r["firme_waf"].split("; ") if f).most_common())}
     for k in ("categoria", "regione", "piattaforma"):
         riep[f"per_{k}"] = {a: dict(b) for a, b in _agg(righe, k).items()}
+    riep["meccanismi_blocco"] = dict(Counter(m for r in righe for m in (r.get("meccanismi_blocco") or "").split(";") if m).most_common())
+    riep["conferma_blocco"] = dict(Counter(r.get("conferma_blocco") for r in righe if r.get("conferma_blocco")).most_common())
+    riep["robots_identita_negate"] = dict(Counter(i for r in righe for i in (r.get("robots_identita_negate") or "").split(";") if i).most_common())
+    riep["vendor_blocco"] = dict(Counter(v for r in righe for v in (r.get("vendor_blocco") or "").split(";") if v).most_common())
+    riep["lettura_origini"] = dict(Counter(r.get("lettura_origini") for r in righe if r.get("lettura_origini")).most_common())
+    riep["ricercabilita"] = dict(Counter(r.get("ricercabilita") for r in righe if r.get("ricercabilita")).most_common())
+    riep["vie_coincidono"] = dict(Counter(str(r.get("vie_coincidono")) for r in righe if r.get("vie_coincidono") != "").most_common())
+    camb = cambiamenti(righe, pub, data)
+    riep["cambiamenti"] = {"totale": len(camb), "per_campo": dict(Counter(x["campo"] for x in camb))}
+    riep["stato"] = "beta"
     (pub / "riepilogo.json").write_text(json.dumps(riep, ensure_ascii=False, indent=1), encoding="utf-8")
     if not pilota:
         agg = RADICE / "esiti" / data / "trasparenza"

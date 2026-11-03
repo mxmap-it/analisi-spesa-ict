@@ -19,6 +19,7 @@ host è servito da un solo filo, con almeno 5 s fra due richieste.
 from __future__ import annotations
 
 import argparse
+import calendar
 import json
 import random
 import sys
@@ -174,31 +175,66 @@ def salva_tentativi(c, run: str, righe: list[dict]):
 
 
 def cmd_diagnosi(a) -> int:
-    """Diagnostica estesa sui dubbi del run, da questa origine. --elenco per il desktop (senza DB degli enti)."""
+    """Diagnostica estesa sui dubbi del run, da questa origine, giro di conferma N (--giro-conferma).
+    Un blocco si conferma solo con più giri a distanza di almeno --distanza minuti. --elenco per il desktop.
+    Enti raggruppati per host: un filo per host, --paralleli host alla volta, ogni filo con il suo browser."""
     import diagnosi
     c = connetti()
     enti = json.loads(Path(a.elenco).read_text(encoding="utf-8")) if a.elenco else _enti_dubbi(c, a.run, a.campione)
-    fatti = {r[0] for r in c.execute("SELECT DISTINCT cf FROM tentativi WHERE run=? AND origine=?", (a.run, a.origine))}
-    enti = [e for e in enti if e["cf"] not in fatti]
-    print(f"{adesso()} diagnosi run={a.run} origine={a.origine} enti={len(enti)}", flush=True)
+    n = a.giro_conferma
+    stato = {}
+    for cf, g, ts in c.execute("SELECT cf, json_extract(dati,'$.giro_conferma'), max(ts) FROM tentativi "
+                               "WHERE run=? AND origine=? GROUP BY cf, json_extract(dati,'$.giro_conferma')", (a.run, a.origine)):
+        stato.setdefault(cf, {})[g or 1] = ts
+    da_fare, attesa = [], 0
+    for e in enti:
+        s = stato.get(e["cf"], {})
+        if n in s:
+            continue
+        if n > 1:
+            prec = s.get(n - 1)
+            if not prec:
+                continue
+            if time.time() - calendar.timegm(time.strptime(prec, "%Y-%m-%dT%H:%M:%SZ")) < a.distanza * 60:
+                attesa += 1
+                continue
+        da_fare.append(e)
+    print(f"{adesso()} diagnosi run={a.run} origine={a.origine} giro={n} enti={len(da_fare)} (in attesa della distanza: {attesa})", flush=True)
     pac = Path(a.pacchetto) if a.pacchetto else None
-    pw_ctx = None
-    if not a.senza_browser:
-        from playwright.sync_api import sync_playwright
-        pw_ctx = sync_playwright().start()
-    try:
-        for i, e in enumerate(enti, 1):
-            righe = diagnosi.diagnostica(e, a.origine, browser=pw_ctx is not None, headed=a.headed, canale=a.canale, pw=pw_ctx)
-            for t in righe:
-                t["run"] = a.run
-            salva_tentativi(c, a.run, righe)
-            if pac:
-                diagnosi.esporta_pacchetto(righe, pac)
-            if i % 10 == 0:
-                print(f"{adesso()} {i}/{len(enti)}", flush=True)
-    finally:
-        if pw_ctx:
-            pw_ctx.stop()
+    per_host = defaultdict(list)
+    for e in da_fare:
+        per_host[host_di(e)].append(e)
+    lk, cont = threading.Lock(), [0]
+
+    def lavora(gruppo):
+        pw_ctx = None
+        if not a.senza_browser:
+            from playwright.sync_api import sync_playwright
+            pw_ctx = sync_playwright().start()
+        try:
+            for e in gruppo:
+                try:
+                    righe = diagnosi.diagnostica(e, a.origine, browser=pw_ctx is not None, headed=a.headed,
+                                                 canale=a.canale, pw=pw_ctx, giro=n)
+                except Exception as ex:  # noqa: BLE001
+                    print(f"{adesso()} errore {e['cf']}: {type(ex).__name__}: {ex}", flush=True)
+                    continue
+                for t in righe:
+                    t["run"] = a.run
+                with lk:
+                    salva_tentativi(c, a.run, righe)
+                    if pac:
+                        diagnosi.esporta_pacchetto(righe, pac)
+                    cont[0] += 1
+                    if cont[0] % 25 == 0:
+                        print(f"{adesso()} {cont[0]}/{len(da_fare)}", flush=True)
+        finally:
+            if pw_ctx:
+                pw_ctx.stop()
+
+    with ThreadPoolExecutor(a.paralleli) as ex:
+        list(ex.map(lavora, sorted(per_host.values(), key=len, reverse=True)))
+    print(f"{adesso()} fine diagnosi giro={n} fatti={cont[0]}", flush=True)
     return 0
 
 
@@ -277,6 +313,8 @@ def main() -> int:
     ap.add_argument("--headed", action="store_true", help="browser con finestra (sul server: xvfb-run)")
     ap.add_argument("--canale", default=None, help="es. chrome: usa il Chrome installato")
     ap.add_argument("--senza-browser", action="store_true")
+    ap.add_argument("--giro-conferma", type=int, default=1)
+    ap.add_argument("--distanza", type=int, default=60, help="minuti minimi fra due giri di conferma")
     a = ap.parse_args()
     if a.comando in ("fonti", "tutto"):
         import fonti
