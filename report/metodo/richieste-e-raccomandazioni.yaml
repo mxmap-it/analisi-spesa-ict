@@ -222,3 +222,33 @@
   richiesta: "Pubblicare, per ogni iniziativa ICT, il transato annuo per famiglia di prodotto e per tipologia (SaaS/cloud, licenza on-premise, manutenzione, servizi), e per ogni ordinativo gli SKU acquistati"
   perche_serve: Distinguere la spesa cloud dalle licenze on-premise dello stesso produttore, che hanno la stessa giurisdizione ma natura diversa
   rif: ["#55"]
+- id: R24
+  destinatario: ANAC
+  tipo: miglioramento
+  stato: verificato
+  titolo: Controllo del collegamento all'accordo quadro e dell'importo dell'attuativo
+  evidenza: "Attuativi agganciati al CIG padre sbagliato (adesioni SPC Cloud registrate sotto SPC2 5133642F61; tre liquidazioni SPC Cloud sotto ID 2212; ordini TM9 sotto Reti locali 8); importi copiati dal padre (PSN: Museo di Taranto B280091A05 723 M = valore della convenzione) o palesemente errati (Comune di Tradate 480 M su SPC2; ASPAL 2.213 M su ID 2610 lotto 2, 10 volte il massimale). Dossier e revisioni del 3/11/2026"
+  prova: report/convenzioni/ ; report/convenzioni/revisioni/
+  richiesta: "Al rilascio del CIG derivato: verificare che il CIG dell'accordo quadro esista, sia della stessa iniziativa indicata nell'oggetto e che l'importo dell'attuativo non superi la capienza residua del padre; segnalare gli importi pari al valore del padre"
+  perche_serve: Senza questi controlli la spesa per convenzione è inaffidabile e va ripulita a mano con soglie arbitrarie
+  rif: ["#55"]
+- id: R25
+  destinatario: ANAC
+  tipo: miglioramento
+  stato: verificato
+  titolo: Aggiudicatari degli attuativi valorizzati con valori fittizi o con la lista dei partecipanti
+  evidenza: "Aggiudicatario 'IMPRESA INESISTENTE' in 41 attuativi di ID 2425 lotto 1 e 243 di ID 2631; nei figli di SPC2 il campo aggiudicatari riporta la lista dei partecipanti alla gara madre, non chi esegue (firmatari reali Tiscali/Fastweb, BT, Vodafone). Dossier del 3/11/2026"
+  prova: report/convenzioni/9158053868-pc-portatili-chromebook.md; report/convenzioni/5133642F61-spc2-connettivita.md
+  richiesta: "Per gli attuativi di AQ e convenzioni, aggiudicatario obbligatorio scelto fra gli aggiudicatari del padre; vietare valori segnaposto"
+  perche_serve: L'aggiudicatario serve alla lente fornitore e a riconoscere il lotto e il prodotto
+  rif: ["#55"]
+- id: R26
+  destinatario: Consip; Dipartimento per la trasformazione digitale (PSN)
+  tipo: richiesta-dati
+  stato: proposta
+  titolo: Pubblicare gli accordi quadro firmati di tutti gli aggiudicatari, capitolati e listini, e per il PSN la ripartizione della spesa per famiglia di servizi
+  evidenza: "Sicurezza da remoto ID 2296 lotto 1: pubblicato l'AQ del RTI Accenture, non quello del RTI TIM; SPC2: contratto firmato non reperibile (non si sa se contenga l'IaaS in community cloud); PSN: unica ripartizione per famiglia (Secure Public Cloud 4,4% dei ricavi 2025) è nel bilancio del concessionario, non in documenti del concedente"
+  prova: report/convenzioni/revisioni/
+  richiesta: "Pubblicare per ogni iniziativa ICT tutti gli AQ e contratti quadro firmati con allegati tecnici e listini; per il PSN, la spesa annua per famiglia di servizi (Industry Standard, Hybrid, Secure Public Cloud per hyperscaler, PSN Managed) e per amministrazione"
+  perche_serve: Attribuire la giurisdizione del prodotto senza dipendere da documenti dei fornitori
+  rif: ["#55"]

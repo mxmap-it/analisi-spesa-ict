@@ -93,12 +93,21 @@
     cosa_conferma: 'bando TED Consip ID 2610: CIG A0259125A9 = lotto 2 ''Servizi di Demand e PMO'' PAL'
 
 - cig: 9158053868
-  iniziativa: Consip AQ PC portatili, mobile workstation e Chromebook
+  dossier: report/convenzioni/9158053868-pc-portatili-chromebook.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'CORRETTO: è il lotto 1 PC portatili, non i Chromebook (lotto 3 = 91580749BC); Windows 11 Pro Education perpetua (chiarimenti Consip ID 2425) = on-premise, prodotto USA'
+  iniziativa: Consip AQ PC portatili, mobile workstation e Chromebook, ID 2425, lotto 1 PC portatili
   categoria: hardware
   stato: da-verificare
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 88846293CA
+  dossier: report/convenzioni/88846293CA-sicurezza-da-remoto-compliance.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: misto-incerto
+  categoria_proposta: sicurezza-as-a-service
+  nota_revisione: 'servizi a canone da centri del fornitore nell UE (Fastweb Milano/Roma per RTI Accenture) ma prodotti USA/JP (Fortinet, Splunk, Palo Alto, Tenable, Qualys, Trend Micro): giurisdizione prodotto EXTRA-UE per quota Accenture, incerta per quota TIM (AQ firmato TIM non trovato); attuativo maggiore DAP 99026071D0 23,8 M misto; massimale aggiornato ~702 M (+50%)'
   iniziativa: Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto
   categoria: sicurezza
   stato: verificato
@@ -122,6 +131,10 @@
     cosa_conferma: 'aggiudicazione TED Consip ID 2212: CIG 8210577E78 = lotto 1 ''PAC per contratti di dimensioni rilevanti'''
 
 - cig: 5133642F61
+  dossier: report/convenzioni/5133642F61-spc2-connettivita.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: incerto-iaas
+  nota_revisione: 'IaaS community cloud previsto dal bando 2013, contratto firmato non trovato; firmatari Tiscali (poi Fastweb) 60%, BT 20%, Vodafone 20% (comunicato AgID/Consip 2016); scadenza 31/12/2026 per DL 200/2025 art. 4 (riferito, fonte unica ARPA Piemonte); attuativi SPC Cloud agganciati per errore'
   iniziativa: Consip SPC2 Connettività (contratto quadro OPA)
   categoria: connettivita
   stato: verificato
@@ -138,6 +151,10 @@
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 893944468E
+  dossier: report/convenzioni/893944468E-system-management-3.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'attuativi con migrazione o data center nell oggetto restano incerti, da classificare uno per uno'
   iniziativa: Consip AQ System management ed. 3, ID 2275, lotto 1
   categoria: system-management
   stato: verificato
@@ -183,6 +200,10 @@
     cosa_conferma: 'avviso TED ARNAS Garibaldi: Contratto Quadro Consip SPC Cloud Lotto 1 - servizi di cloud computing, di sicurezza, di realizzazione di portale e servizi online e di cooperazione applicativa, CIG master 55187486EA, RTI Telecom Italia (fonte secondaria)'
 
 - cig: 7260902DDE
+  dossier: report/convenzioni/7260902DDE-system-management-2.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'attuativi con migrazione o data center nell oggetto restano incerti, da classificare uno per uno'
   iniziativa: Consip AQ System management, ID 1836
   categoria: system-management
   stato: verificato
@@ -228,6 +249,10 @@
     cosa_conferma: 'avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 3 ''Interoperabilità per i dati e cooperazione applicativa'', CIG 55193442C1 (fonte secondaria)'
 
 - cig: 9543706356
+  dossier: report/convenzioni/9543706356-reti-locali-8-lotto-2.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
+  giurisdizione_prodotto: EXTRA-UE (Cisco, Aruba HPE, Juniper USA; Huawei CN; da listino, oggi riferito da oggetti)
   iniziativa: Consip Reti locali 8, ID 2223, lotto 2 PAL
   categoria: connettivita
   stato: da-verificare
@@ -247,6 +272,10 @@
     cosa_conferma: 'aggiudicazione TED ID 2536: lotto 2 CIG 985365662A ''Digitalizzazione dei processi'''
 
 - cig: B2094754F1
+  dossier: report/convenzioni/B2094754F1-system-management-4.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'attuativi con migrazione o data center nell oggetto restano incerti, da classificare uno per uno'
   iniziativa: Consip AQ System management ed. 4, ID 2710 (lotto unico)
   categoria: system-management
   stato: da-verificare
@@ -317,6 +346,9 @@
     cosa_conferma: 'candidato non confermato: bando FS per conto di Trenitalia e altre società del gruppo, servizi ICT sistemistici/hosting/IaaS/rete, CIG 7963682E45 (diverso da 7991036B82)'
 
 - cig: 9823936871
+  dossier: report/convenzioni/9823936871-pc-desktop-workstation-3.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip PC desktop e workstation 3, ID 2631, lotto 2
   categoria: hardware
   stato: da-verificare
@@ -365,6 +397,9 @@
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 8884642E81
+  dossier: report/convenzioni/88846293CA-sicurezza-da-remoto-compliance.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 2 compliance e controllo
   categoria: sicurezza
   stato: verificato
@@ -386,3 +421,13 @@
   - url: https://ted.europa.eu/it/notice/536035-2023/xml
     sha256: abcd74941a45b085eeefeaa7f0814889ea20fc02292c4410ab5d70f4908ee8c1
     cosa_conferma: 'aggiudicazione TED Consip ID 2212: CIG 82106098E2 = lotto 2 (servizi applicativi)'
+
+- cig: 91580749BC
+  dossier: report/convenzioni/9158053868-pc-portatili-chromebook.md
+  revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
+  iniziativa: Consip AQ PC portatili, ID 2425, lotto 3 Chromebook
+  categoria: hardware
+  asse_a: non-cloud
+  stato: verificato
+  fonte: 'padre_oggetto BDNCP + bando TED Consip ID 2425'
+  nota_revisione: 'dipendenza Google (ChromeOS); licenza Chrome Education Upgrade non accertata per ID 2425; 42 attuativi, ~1 M EUR (scuole)'
