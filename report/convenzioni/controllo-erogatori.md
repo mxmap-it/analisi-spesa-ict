@@ -1,3 +1,5 @@
+> **Attenzione (3/11/2026):** la revisione di sovranità (`revisioni/sovranita-revisione.md`) ha trovato affermazioni non presenti nelle fonti citate: Tiscali/Jefferies dopo il 2025 e quota 57,14%; revoca della quotazione TIM; citazioni FSTechnology e scissione 5/8/2025; frase Swisscom su Fastweb; «controllante ultimo MEF» di Poste (somma fatta da noi, non scritta nella fonte); data della scheda Leonardo; data di acquisizione del bilancio PSN (30/10). Fino alla correzione queste righe valgono come **non accertate**. N1 e N8 superate dalle decisioni di Fabio del 3/11 (niente SEC; Svizzera sovrana).
+
 # Catena di controllo degli erogatori (#55)
 
 Versione 0.1, 3/11/2026. Rilevazione di un agente, **non ancora passata per la revisione avversariale** (DECISIONI 3/11/2026).
