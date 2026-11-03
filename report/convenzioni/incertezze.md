@@ -25,3 +25,11 @@ Ogni riga ha: cosa non sappiamo, perché conta, azioni in ordine di costo, fonte
 
 ## Come si chiude un'incertezza
 Si archivia la fonte (`tools/archivia.py`, sha256), si aggiorna la voce in `config/iniziative_ict.yaml` e la riga qui sopra. Lo stato diventa «accertato» quando la fonte rende il fatto certo, senza forzature interpretative (non servono due fonti). Ogni qualificazione di sovranità è confermata da un **agente di revisione** sulla catena di controllo di chi eroga il servizio, non sull.origine del prodotto. La riga resta nel registro con la data di chiusura.
+
+## Griglia del revisore di sovranità (Fabio, 3/11/2026)
+Per ogni servizio:
+1. **Ruolo dell'erogatore:** eroga direttamente infrastruttura o servizio cloud (IaaS, PaaS, SaaS, hosting, SOC a canone…)? Oppure fa consulenza, progettazione, migrazione o gestione su infrastruttura del cliente o di terzi?
+2. **Se eroga:** catena di controllo fino al controllante ultimo ed esposizione al CLOUD Act o a normative extra-UE analoghe. Il risultato è sovrano (IT/UE) o extra-UE.
+3. **Se opera su infrastruttura altrui:** la sovranità segue chi gestisce quell'infrastruttura. Il controllo del consulente non sposta la qualificazione: si registra solo come lente fornitore.
+4. **Origine del prodotto:** solo dipendenza tecnologica, in campo separato.
+5. **Esito:** qualificabile (con la fonte che lo rende certo) oppure incerto (con l'azione per accertarlo).
