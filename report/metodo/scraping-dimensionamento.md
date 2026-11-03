@@ -33,3 +33,29 @@ File: `report/convenzioni/ea-campione/metriche-scraping.csv`, poi lo stesso form
 - Dimensionamento: macchine, giorni, disco, OCR, da integrare in `dimensionamento.md`.
 - Architettura: adattatori per piattaforma, coda ripartibile, archivio content-addressed, registro dei tentativi utilizzabile come prova nell'accesso civico.
 - Lista dei contratti per i quali lo scraping ha fallito, con il motivo: è l'ingresso della futura strategia di accesso civico.
+
+## Prime misure (3/11/2026, campione licenze Microsoft, V)
+Fonte: `report/convenzioni/ea-campione/metriche-scraping.csv`, log delle richieste sul server in `lavoro/ea-campione/l4/richieste.jsonl`.
+
+- **Ricerca web per CIG/oggetto:** 7 atti su 62 contratti cercati (~11 %).
+- **Portali degli enti (L4), 38 enti, 93 richieste, ~10 minuti di rete:**
+
+| esito | enti |
+|---|---|
+| carrello trovato | 2 |
+| atto senza carrello | 8 |
+| atto non trovato | 10 |
+| portale non navigabile | 18 |
+
+- **Cause del «non navigabile»** (nulla aggirato):
+  - protezioni anti-bot o WAF: 6 enti;
+  - robots.txt che vieta la ricerca: 4;
+  - sito irraggiungibile o certificato non valido: 4;
+  - pagine navigabili solo a click (postback ASP.NET): 1.
+- **Albi a scadenza:** in un caso (ASL Pescara) l'atto è nell'indice ma il testo è stato tolto a fine affissione. È un limite strutturale per gli atti 2024-2025.
+- **Piattaforme:**
+  - **DigitalPA** (`portaletrasparenza.net`) ha ricerca per CIG, URL stabili e allegati scaricabili. Costa 2-4 richieste per contratto, con crawl-delay di 5 s. L'abbiamo incontrata su 9 enti, da cui vengono 2 carrelli su 2. È il primo candidato per un adattatore.
+  - Piattaforme dichiarate incontrate: ISWEB, Netribe on.Cube, Maggioli JCityGov. Le altre sono «ignote».
+- **Lettura:** anche quando l'atto c'è, il carrello in euro manca spesso. Nella maggior parte dei casi l'atto riporta solo l'importo, oppure prodotti senza prezzi. Lo scraping ente per ente ha resa bassa; conviene lavorare per piattaforma.
+
+**Prossimo passo proposto:** censire quanti enti usano ciascuna piattaforma (dal dominio e dal footer dei siti di IndicePA), poi un adattatore DigitalPA e una misura della resa su un campione ampio.
