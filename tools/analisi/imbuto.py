@@ -28,7 +28,7 @@ DA_CATEGORIA = {
     "connettivita": ("S5-ict-non-cloud", "telefonia-connettivita", ""), "hardware": ("S5-ict-non-cloud", "hardware-infrastruttura", ""),
 }
 
-VERSIONE_IMBUTO = "imbuto-0.3 (2026-11-03)"  # 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
+VERSIONE_IMBUTO = "imbuto-0.3.1 (2026-11-03)"  # 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
 SOGLIA_MIN = 500          # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
@@ -115,8 +115,9 @@ def main(anno0=2020):
             padre = r["cig"] in padri or (not aq and bool(RX_AQ.search(testo)) and r.get("tipo_scelta_contraente", "").upper().startswith("PROCEDURA"))
             s, sc, g = strato(r, e, imp, padre, testo, cpv)
             ini = INIZIATIVE.get(aq) if s.startswith("S3") else None
-            giur = (ini or {}).get("giurisdizione", "") or (e or {}).get("giurisdizione", "") \
-                or ("non-determinabile" if sc == "psn-servizio-da-determinare" else "")
+            # PSN: la giurisdizione dipende dal servizio comprato (criteri-sovranita 3/11), non dall'operatore
+            giur = "incerto-servizio-psn" if sc == "psn-servizio-da-determinare" else \
+                (ini or {}).get("giurisdizione", "") or (e or {}).get("giurisdizione", "")
             dv = int(imp >= SOGLIA_DA_VERIFICARE)
             k = (anno, s, sc, g, giur, dv)
             n[k] += 1
