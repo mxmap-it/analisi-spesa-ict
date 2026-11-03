@@ -115,6 +115,11 @@ Piano in `report/metodo/acquisizione/prima-e-dopo-2024.md`.
 - [ ] Pubblicare il rendiconto, la differenza tra dovuto e pubblicato e le nuove raccomandazioni; mettere le verifiche in `tools/verifiche/`.
 - [ ] Comporre il percorso multi-livello (dati strutturati, puntatori, scraping con identificazione, modello, annotazioni, FOIA) con la copertura e il costo misurati di ogni livello.
 
+### Riproducibilità e riuso degli strumenti (Fabio, 3/11/2026)
+- Ogni script dell'imbuto (`tools/analisi/imbuto.py`, `padri_ict.py`) deve entrare in `tools/verifiche/` e in `tools/misura_cloud.sh`: un comando da un clone pulito, stessi numeri dallo snapshot sha256.
+- [ ] Inventario: per ogni funzione nostra (lettura CSV ANAC, deduplica delta, classificazione, archivio sha256, estrazione testo, crawler) quale strumento esistente la fa già (anac-pl-pp-cli di aborruso, source-observatory di DataCivicLab, anac-appalti-dbt, kingfisher/cardinal di OCP, `sito/content/progetto/strumenti.md`).
+- [ ] Dove uno strumento esistente basta con una modifica, preparare la **patch da proporre upstream**, invece di tenere codice nostro. Nessuna PR su repo altrui senza l'ok di Fabio.
+
 ## Piano fino al 12/11/2026 — fattibilità dell'imbuto (Fabio, 2/11)
 
 Obiettivo per il 12/11:
