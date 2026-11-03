@@ -202,3 +202,13 @@
   richiesta: "Controllo di coerenza CPV-oggetto al rilascio del CIG; campi obbligatori per acquisti ICT (tipologia, modello cloud, prodotto e produttore, sede dei dati, operatore e capogruppo, qualificazione ACN); aggiornamento del CPV o vocabolario supplementare ICT"
   perche_serve: Misurare la spesa cloud e la sovranità in modo esatto e deterministico, senza lettura degli atti
   rif: ["#55", "#59"]
+- id: R22
+  destinatario: ANAC; Consip
+  tipo: miglioramento
+  stato: verificato
+  titolo: Importo dei contratti attuativi di accordo quadro pari al massimale e non al valore dell'affidamento
+  evidenza: "AQ Consip 91918889EE (servizi applicativi in ottica cloud, PA centrali): 647 attuativi dichiarano 35,2 mld, di cui 31,7 mld in attuativi da 50 M EUR in su (es. B5A2C1471F 3,21 mld, B6438A7BB3 3 mld, B49A8866DE 3 mld); sotto i 50 M EUR restano 3,6 mld. Misura su file ANAC archiviati (3/11/2026)"
+  prova: tools/analisi/padri_ict.py; report/metodo/conoscenza/padri-ict.csv
+  richiesta: "Per i contratti attuativi di AQ, valorizzare importo_lotto con il valore dell'affidamento (ordine o contratto esecutivo), non con il massimale dell'AQ o del lotto; controllo al rilascio del CIG che l'importo dell'attuativo non superi un massimale plausibile e campo distinto per il massimale"
+  perche_serve: Senza questo la spesa ICT per convenzione è gonfiata di un ordine di grandezza e va corretta a mano con soglie
+  rif: ["#55"]
