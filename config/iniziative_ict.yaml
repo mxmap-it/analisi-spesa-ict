@@ -7,7 +7,7 @@
 #
 # categoria:
 #   cloud-provider      lotto con un solo cloud provider (prodotto e giurisdizione noti)       -> S3 incluso certo
-#   licenza-prodotto    licenze di un solo produttore (es. Microsoft EA)                       -> S3 incluso certo (asse B noto)
+#   licenza-prodotto    licenze di un solo produttore (es. Microsoft EA): asse B noto, asse A (cloud o on-premise) da accertare nel dossier -> S3 licenza, contata a parte dal cloud
 #   cloud-multi         servizi cloud con prodotti di più provider o non dichiarati (SPC Cloud) -> S6 G2
 #   psn                 Polo Strategico Nazionale: servizio (hosting, housing, cloud qualificato) da determinare -> S6 G2
 #   servizi-applicativi sviluppo e manutenzione applicativa, anche "in ottica cloud"           -> S5 consulenza-it-applicativa
@@ -18,7 +18,7 @@
 #   hardware            PC, server, apparati                                                    -> S5 hardware
 #   licenze-multi       licenze multibrand non univoche                                         -> S6 G3
 #   da-decifrare        oggetto non sufficiente: servono i documenti                            -> S6 G2
-# stato: verificato (oggetto e fonte documentale concordi) | da-verificare (solo oggetto CIG)
+# stato: verificato (almeno due fonti indipendenti concordi, di cui una della stazione appaltante; Fabio 3/11) | da-verificare
 
 
 - cig: 91918889EE

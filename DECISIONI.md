@@ -118,3 +118,7 @@ vecchia.
   - **universo dai CIG pubblicati dal 2020**, con vista per annualità e attendibilità per anno. I mondi attesi, 2020-2023 e dal 2024, sono da validare misurando la disponibilità dei link ai documenti; per il 2020-2023 eventualmente solo un sottoinsieme utile. Prima statistica di sovranità (11/11) sul 2024 e oltre;
   - **soglia d'importo 500 €**;
   - in **S5** anche la **consulenza IT riconducibile a infrastrutture in-house**, distinguendo consulenza IT da non IT e, nell'IT, infrastrutturale, migrazione e applicativa.
+- 2026-11-03 — Fabio — Convenzioni e accordi quadro (`config/iniziative_ict.yaml`):
+  - **«verificato» richiede più fonti indipendenti** (almeno due, di cui una dell'ente che ha bandito la gara: Consip, PCM, ecc.). Una sola fonte, o solo l'avviso di un ente aderente che cita il CIG, resta «da verificare».
+  - **Licenze ≠ cloud.** Il produttore extra-UE dà la giurisdizione, ma una licenza installata on-premise non è spesa cloud: per ogni convenzione di licenze (es. Microsoft EA) va accertato cosa contiene (licenze on-premise, abbonamenti SaaS come Microsoft 365, consumo Azure) e in che proporzione.
+  - **Ogni convenzione grossa ha un dossier analitico** (`report/convenzioni/`): documenti originali archiviati con sha256, cosa abbiamo compreso, dettaglio analitico, limiti. Ogni dossier passa poi per un **agente avversariale** che cerca di smontarne le assunzioni; si pubblica solo ciò che regge.
