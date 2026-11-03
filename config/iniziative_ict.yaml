@@ -57,6 +57,7 @@
   dossier: report/convenzioni/9066973ECE-polo-strategico-nazionale.md
   revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
   asse_a: misto
+  regola_sovranita: 'Secure Public Cloud (Azure, Google, AWS), PSN Managed (Oracle Alloy), Hybrid (Azure Stack) = extra-UE; Industry Standard erogato in proprio = IT (criteri-sovranita 3/11)'
   quota_hyperscaler_extra_ue_aggregata: incerta  # bilancio 2025: SPC 4,4% dei ricavi, non conclusivo; serve bilancio 2026 (Fabio 3/11), incertezze I3
   nota_revisione: 'Bilancio PSN 2025: ricavi 454,3 M, migrazione e service operation 79%, Secure Public Cloud (Azure, Google, AWS) 4,4%, PSN Managed (Oracle Alloy) 1%; contratti dall avvio 60% servizi professionali, 40% canoni (di cui SPC 15%, Oracle 14%). Oracle a canone in Industry Standard = EXTRA-UE per prodotto. Singolo CIG resta incerto senza piano dei fabbisogni. Anomalie: B280091A05 723 M = valore del padre (escludere), BAFE270F81 ARIA 580 M non verificato (totali con e senza)'
   iniziativa: Polo Strategico Nazionale (PPP, Presidenza del Consiglio)
@@ -119,7 +120,7 @@
   revisione: report/convenzioni/revisioni/infrastruttura-revisione-avversariale.md
   asse_a: misto-incerto
   categoria_proposta: sicurezza-as-a-service
-  giurisdizione: incerta  # Fabio 3/11: decide il controllo giuridico dell erogatore, non il prodotto; vedi incertezze I1
+  giurisdizione: sovrana  # criteri-sovranita 3/11: servizi erogati in proprio da TIM, Accenture (non fornitore cloud), Fastweb (CH); nessun cloud Microsoft/Google/Amazon/Oracle; quotazione e fondi non contano
   dipendenze_tecnologiche: [Fortinet, Splunk, Palo Alto, Tenable, Qualys, Trend Micro]
   nota_revisione: 'servizi a canone da Centri Servizi del fornitore nell UE; catena di controllo degli erogatori (RTI Accenture-Fastweb, RTI TIM) da accertare (AQ firmato TIM non trovato); attuativo maggiore DAP 99026071D0 23,8 M misto; massimale aggiornato ~702 M (+50%)'
   iniziativa: Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto
