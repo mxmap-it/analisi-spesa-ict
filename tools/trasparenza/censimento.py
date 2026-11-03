@@ -150,7 +150,9 @@ def cmd_browser(a) -> int:
 
 
 
-DUBBI = ("bloccato da WAF/anti-bot", "bloccato da robots.txt", "noindex", "irraggiungibile", "tls invalido", "sezione non individuata")
+# Verifica estesa solo dove l'esito dipende dal client o dalla rete; robots.txt e noindex sono regole lette dal
+# documento (deterministiche, già archiviate) e «sezione non individuata» riguarda la home, non la sezione.
+DUBBI = ("bloccato da WAF/anti-bot", "irraggiungibile", "tls invalido")
 
 
 def _enti_dubbi(c, run: str, campione: int = 0) -> list[dict]:
@@ -184,9 +186,13 @@ def cmd_diagnosi(a) -> int:
     enti = json.loads(Path(a.elenco).read_text(encoding="utf-8")) if a.elenco else _enti_dubbi(c, a.run, a.campione)
     n = a.giro_conferma
     stato = {}
-    for cf, g, ts in c.execute("SELECT cf, json_extract(dati,'$.giro_conferma'), max(ts) FROM tentativi "
-                               "WHERE run=? AND origine=? GROUP BY cf, json_extract(dati,'$.giro_conferma')", (a.run, a.origine)):
-        stato.setdefault(cf, {})[g or 1] = ts
+    falliti: dict[tuple, bool] = {}
+    for cf, g, ts, st, err, vend in c.execute(
+            "SELECT cf, json_extract(dati,'$.giro_conferma'), ts, status, json_extract(dati,'$.errore'), "
+            "json_extract(dati,'$.vendor_blocco') FROM tentativi WHERE run=? AND origine=?", (a.run, a.origine)):
+        g = g or 1
+        stato.setdefault(cf, {})[g] = max(ts, stato.get(cf, {}).get(g, ""))
+        falliti[(cf, g)] = falliti.get((cf, g), False) or bool(err) or (st or 0) >= 400 or vend not in (None, "[]")
     da_fare, attesa = [], 0
     for e in enti:
         s = stato.get(e["cf"], {})
@@ -194,8 +200,8 @@ def cmd_diagnosi(a) -> int:
             continue
         if n > 1:
             prec = s.get(n - 1)
-            if not prec:
-                continue
+            if not prec or not falliti.get((e["cf"], n - 1)):
+                continue  # al giro di conferma vanno solo gli enti ancora bloccati al giro precedente
             if time.time() - calendar.timegm(time.strptime(prec, "%Y-%m-%dT%H:%M:%SZ")) < a.distanza * 60:
                 attesa += 1
                 continue

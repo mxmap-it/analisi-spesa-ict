@@ -10,7 +10,9 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - diagnosi giro 1 sui dubbi già sondati: `log/trasparenza-diagnosi-2026-11-g1a.log` (`--solo-host-completati`); da rilanciare a sonda finita per gli host mancanti, poi giro 2 a ≥ 60 min (`--giro-conferma 2`), poi `caratterizza --campione 300`, poi `esporta --run 2026-11 --forza` (correzione documentata: aggiunta della diagnostica 1.1.0-beta sul giro pubblicato dalla 1.0.0).
   - desktop: `lavoro/trasparenza-desktop/` sul portatile (pilota2 in corso); per il giro: `elenco` sul server → `diagnosi --origine desktop` sul portatile → rsync del pacchetto → `importa`.
 - A giro finito: backup `tools/psn_*.py` in `lavoro/backup-psn/`, spostarli, `git pull --rebase` (mai stash -u/clean); `lavoro/trasparenza/fase2-codice/` allora non serve più.
-- Per pubblicare i nomi: controllo a campione di ≥ 50 bloccati dal portatile, esito in `report/metodo/trasparenza-falsi-positivi.md`.
+- Controllo dei falsi positivi FATTO (53 enti dal portatile): `report/metodo/trasparenza-falsi-positivi.md` (robots 15/15, noindex 8/8, WAF 13/30 → regole corrette).
+- **Catena automatica sul server:** `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) aspetta la fine di `giro.sh`, poi diagnosi giro 1 (solo WAF, irraggiungibili, TLS), elenco per il desktop, caratterizzazione di 300 enti, giro 2 di conferma, `esporta --forza`. Se si interrompe: rilanciarlo (è ripartibile).
+- Poi: dal portatile `diagnosi --origine desktop --elenco elenco-2026-11.json` (attenzione: Bitdefender intercetta HTTPS), `importa`, `esporta --forza`; copia dell'open data dal server, build Hugo, commit e push.
 
 ## Aggiornamento 3/11/2026 — Monitor «Amministrazione trasparente» (#61)
 
