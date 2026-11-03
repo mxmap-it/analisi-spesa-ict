@@ -1,7 +1,7 @@
 # Approfondimento del registro delle incertezze, giro 1 (#55)
 
 Data: 3/11/2026. Righe trattate: I7, I9, I11, I12, I14; I2 e I6 non lavorate in questo giro.
-Regola applicata: **non inferire** (DECISIONI 3/11/2026). Ogni fatto qui sotto rimanda a un documento archiviato sul server (`archivio/manifest.jsonl`, sha256). Ciò che non è scritto in un documento resta «non accertato» e ha un'azione per accertarlo.
+Regola applicata: **non inferire**; basta una fonte che renda il fatto certo (DECISIONI 3/11, sostituisce la regola delle due fonti); per ogni attuativo si indica il **ruolo dell'erogatore** (eroga infrastruttura/servizio cloud oppure consulenza su infrastruttura del cliente o di terzi) (DECISIONI 3/11/2026). Ogni fatto qui sotto rimanda a un documento archiviato sul server (`archivio/manifest.jsonl`, sha256). Ciò che non è scritto in un documento resta «non accertato» e ha un'azione per accertarlo.
 Criterio di classificazione: l'hosting dedicato è cloud (DECISIONI 3/11, punto 1); sovranità = controllo giuridico di chi eroga il servizio (punto 4).
 
 Documenti archiviati o ritrovati in questo giro:
@@ -40,6 +40,8 @@ Tentativi non riusciti (registrati in `manifest.jsonl` con esito «errore»): pa
 - Esistenza di contratti FS con AWS, Google Cloud, Oracle Cloud: una ricerca web mirata non ha trovato avvisi TED; l'assenza di risultati non prova l'assenza di contratti.
 - Ubicazione e proprietà dei data center di FSTechnology.
 
+**Ruolo dell'erogatore** (griglia del 3/11): per l'AQ MACC Microsoft **eroga direttamente** il servizio cloud (consumo Azure a impegno, D9). Per il contratto Trenitalia → FSTechnology il ruolo di FSTechnology (eroga da infrastruttura propria o rivende/gestisce Azure o altri) è non accertato.
+
 **Classificazione proposta**: resta **incerto**. Un fatto nuovo sposta il dubbio ma non lo chiude: almeno una parte dell'IT di gruppo è erogata su Azure (Microsoft, extra-UE per controllo); non si sa in che proporzione per Trenitalia.
 
 **Prossime azioni**: 1) ricerca TED per committente Ferservizi/FSTechnology 2018-2026 con parole chiave cloud, hosting, data center (via `tools/acquisizione/ted_l2.py` o ricerca esperta TED), archiviando ogni avviso; 2) bilanci d'esercizio di FSTechnology SpA (registro imprese / sito FS) per immobilizzazioni (data center) e costi per servizi cloud; 3) Relazioni finanziarie FS 2024 e 2025 (sezione ICT); 4) se resta incerto: accesso civico a Trenitalia sul contratto 7991036B82 (decisione di Fabio, non inviato).
@@ -52,6 +54,8 @@ Tentativi non riusciti (registrati in `manifest.jsonl` con esito «errore»): pa
 - Mandato di pagamento DGSIA del 18/12/2023: contratto esecutivo SIA 97.12C.EVS.38/2023P con RTI **Telecom Italia S.p.A.** (mandataria) – **Eurolink S.r.l.** (mandante), «fornitura di licenze software ORACLE e relativi servizi» tramite ordinativo diretto alla convenzione Consip «Licenze Software Multibrand 6», importo complessivo 10.069.913,02 € IVA inclusa, pagato per intero a dicembre 2023 (fatture TIM 5,90 M€ e Eurolink 2,35 M€ imponibili).
 - Il mandato **non elenca** i prodotti: non dice se fra le «licenze» ci siano sottoscrizioni Oracle Cloud (OCI, OAC). La parola «cloud» compare solo nell'oggetto ANAC del CIG, non nell'atto.
 - Erogatore contrattuale: RTI TIM–Eurolink (rivenditori). Erogatore di un eventuale servizio cloud Oracle: non accertato.
+
+**Ruolo dell'erogatore** (A02A0C50B1): TIM–Eurolink sono rivenditori di licenze e servizi Oracle (D4); se l'ordine contiene OCI/OAC, chi gestisce l'infrastruttura cloud è Oracle (non accertato sull'atto). Se sono solo licenze, l'infrastruttura è del ministero (on premise): non accertato.
 
 **A02A0C832A — atto trovato: no.** Nessun documento pubblico con questo CIG (ricerca web e giustizia.it).
 
@@ -68,11 +72,13 @@ Tentativi non riusciti (registrati in `manifest.jsonl` con esito «errore»): pa
 
 ## I11 — ID 2483 L1, ID 2610 L1, ID 2365, ID 2366
 
+Ruolo dell'erogatore per il GSE: non accertato (atto non trovato); dall'oggetto ANAC si tratta di «fornitura licenze», ma chi gestisce l'infrastruttura hybrid cloud non è noto.
+
 Selezione: righe di `prove-servizi-applicativi/attuativi.csv` dei padri 91918889EE (2483 L1), A02590F330 (2610 L1), 903054517C (2365, unico lotto presente nel file), 9188183878 (2366), con oggetto che contiene licenz/hosting/infrastruttur/data cent/nutanix/cloud dopo aver tolto la locuzione «ottica cloud»: **60 attuativi** (script `lavoro/incertezze/filtro.py` sul server). In questo giro ne sono stati aperti 2; gli altri restano da aprire.
 
 **GSE B9A1514D57 (7,32 M€, «fornitura licenze software della soluzione Nutanix per la gestione di ambienti hybrid cloud») — atto trovato: no.** Ricerca web del CIG senza risultati; il portale appalti GSE non è stato consultato in questo giro. Non accertato: se sono licenze on premise (non cloud, DECISIONI 3/11 «licenze ≠ cloud») o sottoscrizioni a un servizio gestito. Nota: un acquisto di licenze dentro un AQ di servizi applicativi è anomalo rispetto al perimetro dell'AQ (dossier 2483) e va segnalato. **Classificazione: incerto.**
 
-**CONSOB B49210B98C (2,47 M€) — atto trovato: sì, con abbinamento per importo (D11).** La decisione prot. 0109694/24 del 2/12/2024 non riporta il CIG; l'abbinamento è per ente, oggetto e importo (Piano operativo 2.465.820,00 € IVA esclusa = importo ANAC 2,47 M€). Compra «servizi di sviluppo software e supporto specialistico per il setup e la migrazione dell'infrastruttura, finalizzati all'evoluzione di un primo insieme di applicazioni al cloud» (progetto B9/I7 del Piano informatico 2024), dall'RTI IBM Italia (mandataria) con McKinsey, Sistemi Informativi, Deas, SMC Treviso, Italit, Dedagroup Public Services. L'atto non nomina alcun canone o fornitore di infrastruttura cloud. **Classificazione: cloud no come spesa (servizi professionali di migrazione); il cloud di destinazione della CONSOB è non accertato.** D12 (decisione 0073950, 2025, stesso lotto, 1.147.500 € sul capitolo 10331) è un attuativo diverso, non nel registro.
+**CONSOB B49210B98C (2,47 M€) — atto trovato: sì, con abbinamento per importo (D11).** La decisione prot. 0109694/24 del 2/12/2024 non riporta il CIG; l'abbinamento è per ente, oggetto e importo (Piano operativo 2.465.820,00 € IVA esclusa = importo ANAC 2,47 M€). Compra «servizi di sviluppo software e supporto specialistico per il setup e la migrazione dell'infrastruttura, finalizzati all'evoluzione di un primo insieme di applicazioni al cloud» (progetto B9/I7 del Piano informatico 2024), dall'RTI IBM Italia (mandataria) con McKinsey, Sistemi Informativi, Deas, SMC Treviso, Italit, Dedagroup Public Services. L'atto non nomina alcun canone o fornitore di infrastruttura cloud. **Ruolo dell'erogatore**: consulenza/sviluppo e migrazione (accertato su D11); l'infrastruttura di destinazione e chi la gestisce non sono nominati nell'atto. **Classificazione: cloud no come spesa (servizi professionali di migrazione); il cloud di destinazione della CONSOB è non accertato.** D12 (decisione 0073950, 2025, stesso lotto, 1.147.500 € sul capitolo 10331) è un attuativo diverso, non nel registro.
 
 **Altri attuativi da aprire (in ordine di rilevanza per il cloud)**: BC50F8B2C9 Roma Servizi per la Mobilità «piattaforma SAP S/4HANA Public Cloud (GROW)» 0,49 M (possibile SaaS SAP); B9EE1FEF1F Sardegna IT «canone cloud su piattaforma PSN» 0,16 M (canone PSN dentro un AQ di servizi); B78C1DAC7A Regione Sardegna «DC02 supporto specialistico data center secondario» 2,07 M; BBBCEFCA1A Roma Capitale «realizzazione e manutenzione della infrastruttura tecnologica» 4,64 M; BB4B49631B Min. Salute «conduzione applicativa e infrastrutturale» 0,19 M; A04D55DB8F e B056F820A5 So.Re.Sa. PNRR 1.1/1.2 7,47 M ciascuno; B3872F82B7 AOU Martino «adeguamento SIO al cloud» 0,79 M; B65297A7B8 ENAC «migrazione cloud perimetro TIME» 1,5 M; BC74E1B7A3 DTD «migrazione cloud native» 3,0 M; BB7B0FF2C7 Infratel 40,3 M; gli altri 47 nel file di lavoro. **Classificazione: incerto per attuativo.**
 
@@ -86,6 +92,8 @@ Selezione: righe di `prove-servizi-applicativi/attuativi.csv` dei padri 91918889
 
 **Atti trovati: nessuno degli 11.** Ricerche web per Firenze, ASL Foggia e Policlinico senza l'atto del CIG.
 - Contesto accertato per Firenze (non per il CIG): il Comune compra l'IaaS dal **Sistema Cloud Toscana** (contratto quadro Regione Toscana CIG 7154112FF8, qualificato ACN QI2) con atti propri (D14, DD 3944/2024, 194.550,74 € per un trimestre); la relazione di fabbisogno SDEA del 14/6/2024 (D13) riguarda la manutenzione del sistema e non nomina canoni cloud. Non è accertato che D13 sia l'atto di B40925114D.
+
+**Ruolo dell'erogatore**: non accertato per nessuno degli 11 (atti non letti). Solo per Firenze è accertato, da un atto diverso (D14), che l'IaaS del Comune è gestita dal Sistema Cloud Toscana (Regione Toscana e RTI aggiudicatario): un eventuale lavoro di migrazione su B40925114D sarebbe su infrastruttura di terzi, ma il collegamento al CIG non è accertato.
 
 **Classificazione proposta**: tutti **incerti** (atto non letto). L'asse «catalogo» resta escluso certo come nel dossier.
 
