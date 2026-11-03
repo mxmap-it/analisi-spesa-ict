@@ -252,3 +252,13 @@
   richiesta: "Pubblicare per ogni iniziativa ICT tutti gli AQ e contratti quadro firmati con allegati tecnici e listini; per il PSN, la spesa annua per famiglia di servizi (Industry Standard, Hybrid, Secure Public Cloud per hyperscaler, PSN Managed) e per amministrazione"
   perche_serve: Attribuire la giurisdizione del prodotto senza dipendere da documenti dei fornitori
   rif: ["#55"]
+- id: R27
+  destinatario: PSN S.p.A.; Dipartimento per la trasformazione digitale; amministrazioni utenti PSN
+  tipo: richiesta-dati
+  stato: proposta
+  titolo: Pubblicare il Riepilogo prezzi del Configuratore di ogni Progetto del piano dei fabbisogni PSN, in formato aperto
+  evidenza: "Campione di 22 contratti PSN del top-100: PPdF collegabile per 2 (Difesa, ARES Sardegna). Dove pubblicato, il Configuratore (famiglie IS/Hybrid/SPC/PSN Managed/migrazione/prof., UT e canone) è un'immagine nel PDF; i PPdF recano clausola di confidenzialita' PSN; varie determine dicono il PPdF allegato ma non lo pubblicano (OGS, Firenze, ARERA)"
+  prova: report/convenzioni/psn-progetti-campione.md
+  richiesta: "Pubblicare per ogni contratto di utenza (CIG derivato) la tabella Riepilogo prezzi in CSV con codice PPdF, famiglia di servizio, hyperscaler per Secure Public Cloud, UT e canone annuo; togliere la clausola di confidenzialita' sui prezzi da listino"
+  perche_serve: Ripartire la spesa PSN fra servizi erogati in proprio (IT) e servizi big tech (extra-UE)
+  rif: ["#55"]
