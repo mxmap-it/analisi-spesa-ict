@@ -1,50 +1,57 @@
 # Database dei documenti PSN pubblicati dagli enti (#55)
 
-Versione 1 — 3/11/2026. Database: [`documenti-psn.csv`](documenti-psn.csv) (una riga per documento).
+Versione 2 — 3/11/2026 (v1 stesso giorno). Database: [`documenti-psn.csv`](documenti-psn.csv) (una riga per documento).
 Strumenti: `tools/psn_documenti.py` (archivia + estrae codici, CIG, CUP, tratti), `tools/psn_configuratore.py`
-(OCR tesseract delle pagine "Configuratore"). Lavoro sul server in `lavoro/psn-db/` (estratti, testi, OCR).
+(OCR tesseract delle pagine "Configuratore"). Lavoro sul server in `lavoro/psn-db/` (estratti, testi, OCR; i 5 PDF
+scaricati dalla rete del portatile, su autorizzazione di Fabio, in `lavoro/psn-db/locale/`).
 Segue [psn-progetti-campione.md](../psn-progetti-campione.md); nessun contatto con enti, nessuna istanza.
+
+**Registro revisioni.** v1: 41 documenti, 15 riepiloghi (molti da OCR). v2: +6 documenti (5 scaricati dal
+portatile, PTV via Phoca dal server); tutti i riepiloghi letti **a vista**; ARES letto sul totale complessivo
+(§8.14) invece della sola scheda CRESSAN; corretti sisma 2009 (UT 16,12 e non 18,12 M€) e Latina (famiglie lette);
+Calabria 9370 riclassificato: il PPdF **non è pubblicato per la clausola di confidenzialità**; base 692 righe /
+1.918 M€ (680 CIG distinti, 1.871,7 M€).
 
 ## Sintesi
 
-- **51 righe**: 41 documenti scaricati e archiviati (sha256) + 11 riferiti dal motore di ricerca ma non scaricabili
-  dal server (timeout di connessione, 503, 404: probabile filtro sugli IP esteri; il download dal portatile è stato
-  bloccato dalle regole di sessione e non è stato aggirato).
-  - **17 Progetti del Piano dei Fabbisogni (PPdF) di PSN pubblicati per intero** (16 distinti), da **12 enti**
-    (Difesa, ARES Sardegna, ASL Latina, AST Pesaro-Urbino, AORN Santobono ×5, ATS Brescia, ASL Roma 3, ESU Verona,
-    Comune di Trento, USR Lazio, Commissario sisma 2009, Regione Calabria); altri **5 PPdF riferiti** (Provincia
-    di Benevento, AORN Cardarelli, ULSS 9 Scaligera, Provincia di Padova, ESU Padova) → **17 enti** pubblicano il PPdF.
-  - **17 determine/decreti** che citano il PPdF (di cui almeno 5 lo dichiarano "allegato" o "parte integrante" ma il
-    PDF pubblicato non lo contiene: ASL VC, OGS, Firenze ×2, Calabria 5301), **4 contratti di utenza** (MEF-Consip,
-    CONSOB, Difesa lettera, Turismo addendum), **2 piani dei fabbisogni degli enti** (Regione Sardegna, Mauriziano).
-  - Enti distinti con almeno un documento archiviato: **30**.
-- **Clausola di confidenzialità** ("informazioni confidenziali di proprietà esclusiva della società PSN S.p.A. …
-  non possono essere pubblicate") **presente in 15 dei 16 PPdF distinti** (nel 16°, ASL Latina, non rilevata nel
-  testo estratto). **Nessun PPdF è oscurato né ha omissis**: gli enti l'hanno pubblicato integralmente, prezzi
-  inclusi, nonostante la clausola. Il Configuratore è sempre un'immagine (serve OCR).
-- **Copertura sui contratti PSN 2024-2025** (base corretta: imbuto 0.3.1, sottoclasse `psn-servizio-da-determinare`,
-  importo non "da verificare": **692 CIG, 1.918 M€**. La prima versione usava solo i CIG con provider PSN attribuito,
-  586 CIG / 1.542,9 M€, e sovrastimava le percentuali; il numeratore non cambia):
+- **51 righe**: 47 documenti scaricati e archiviati (sha256), 4 ancora non ottenibili (Benevento: DNS; Cardarelli:
+  503; ULSS 9: connessione rifiutata; ASL BT e Abruzzo "Fascicolo edificio": 404, URL attuale non trovato).
+  - **19 Progetti del Piano dei Fabbisogni (PPdF) pubblicati per intero, da 15 enti**: Difesa, ARES Sardegna,
+    ASL Latina, AST Pesaro-Urbino, AORN Santobono (×5), ATS Brescia, ASL Roma 3, ESU Verona, ESU Padova, Comune di
+    Trento, Provincia di Padova, ASL Biella, Policlinico Tor Vergata, USR Lazio, Commissario sisma 2009. **Tutti e 19
+    i riepiloghi prezzi sono letti** (a vista o con somme coerenti). Altri 3 PPdF riferiti e non ottenuti
+    (Benevento, Cardarelli, ULSS 9) → **18 enti** pubblicano il PPdF.
+  - **18 determine/decreti** che citano il PPdF senza riportarlo (ASL VC, OGS, Firenze ×2, Calabria 5301 lo dichiarano
+    "allegato" o "parte integrante"); **4 contratti di utenza**; **2 piani dei fabbisogni degli enti**.
+  - **Controprova del diniego di fatto: Regione Calabria** (decreto 9370/2023, PPdF SIS da 35,8 M€) approva il PPdF
+    "parte integrante e sostanziale del presente atto, ma riservato e non pubblicato, in quanto trattasi di documento
+    che contiene informazioni 'confidenziali'" di PSN. È l'unico caso trovato in cui la clausola è invocata.
+- **Clausola di confidenzialità**: presente in **18 dei 19 PPdF** pubblicati (nel 19°, ASL Latina, non rilevata nel
+  testo). **Nessun PPdF è oscurato né ha omissis**. Il Configuratore è sempre un'immagine.
+- **Copertura sui contratti PSN 2024-2025** (base: imbuto 0.3.1, sottoclasse `psn-servizio-da-determinare`, importo
+  non "da verificare": 692 righe / 1.918 M€ = **680 CIG distinti, 1.871,7 M€**; top-100 = 1.420,0 M€):
 
   | collegamento al CIG | contratti | M€ | % valore | nel top-100 |
   |---|---|---|---|---|
-  | PPdF con riepilogo prezzi (Difesa, ARES, Latina, Pesaro, Trento, Santobono P6) | 6 | 95,4 | 5,0 % | 3 (7,6 % del top-100) |
-  | + determine/contratti senza prezzi per famiglia (MIM, ANPAL, Mauriziano, ISIN, ASL VC, BEIC) | 12 | 125,2 | 6,5 % | 4 (9,3 %) |
-  | + documenti riferiti non scaricati (ASL VCO, Cardarelli, ULSS9, Padova ×2, Benevento) | 18 | 151,4 | 7,9 % | 6 (11,4 %) |
+  | PPdF con riepilogo prezzi (Difesa, ARES, Latina, Pesaro, Trento, Santobono P6, **ASL Biella**) | 7 | 98,9 | 5,3 % | 3 (6,5 %) |
+  | + atti senza prezzi per famiglia (MIM, ANPAL, Mauriziano, ISIN, ASL VC, BEIC) | 13 | 128,7 | 6,9 % | 4 (8,0 %) |
+  | + documenti riferiti non ottenuti (Cardarelli, ULSS 9, Padova P2R1 ×2, Benevento) | 18 | 135,0 | 7,2 % | 5 (8,3 %) |
 
-  Attenzione: per Difesa il PPdF letto è l'**estensione M1** (1,8 M€), non l'intero contratto (44 M€); per ARES
-  è letta una scheda su ~10. Il **valore effettivamente ripartito per famiglia** è quindi molto minore del valore
-  dei contratti collegati. Gli altri 10 PPdF letti riguardano contratti del 2023 o del 2026, o non sono collegabili
-  a un CIG 2024-2025.
-- **Ripartizione aggregata dei 15 riepiloghi letti** (IVA esclusa; OCR, varie righe "da riverificare"):
-  - canone annuo **4,44 M€**: Industry Standard 2,21 (55 % dell'attribuito), **Secure Public Cloud 1,70 (42 %, tutto
-    Azure, tutto Difesa)**, PSN Managed (Oracle) 0,13 (3 %), Hybrid 0; 0,40 non attribuibile per OCR;
-  - una tantum **57,5 M€**: servizi professionali 47,0 (82 %), migrazione 5,8 (10 %), 4,6 non attribuibile (Latina).
+  (ASL VCO esce: l'URL indicato dal motore era una delibera sulla logistica.) Per Difesa il PPdF letto è
+  l'**estensione M1** (1,8 M€) di un contratto da 44 M€; ARES invece è ora letto per intero (20,2 M€ UT + 1,6 M€/anno
+  su un CIG da 36,6 M€). Gli altri 12 PPdF riguardano contratti 2023 o 2026, o non sono collegabili a un CIG 2024-2025.
+- **Ripartizione aggregata dei riepiloghi** (IVA esclusa). 16 PPdF hanno "Totale canone annuale"; 3 PPdF del
+  template 2025-2026 (ATS Brescia, Provincia di Padova P3R1, PTV) riportano invece "Totale infrastruttura" per
+  l'intera durata (es. 108 mesi) e sono tenuti a parte (Industry Standard 1,22 M€, nessun hyperscaler).
+  - canone annuo **5,91 M€**: Industry Standard 3,41 (**59 %** dell'attribuito), **Secure Public Cloud 1,70 (29 %,
+    tutto Azure, tutto Difesa)**, PSN Managed 0,68 (**12 %**, in ARES e Latina è Oracle Exadata "SQL instances BYOL"),
+    Hybrid 0; 0,11 non attribuito (Santobono P1);
+  - una tantum **74,6 M€**: servizi professionali 65,8 (**88 %**), migrazione 8,8 (12 %).
   - Lettura: negli enti che pubblicano (sanità, enti locali, commissari) la spesa PSN è soprattutto **servizi
-    professionali una tantum**; il canone infrastrutturale va su Industry Standard (IT). Big tech solo nella Difesa.
-    **Campione non rappresentativo** dei grandi contratti ministeriali, che non pubblicano.
+    professionali una tantum**; il canone va per lo più su Industry Standard (IT); extra-UE: Azure (Difesa) e Oracle
+    (PSN Managed, sanità). **Campione non rappresentativo** dei grandi contratti ministeriali, che non pubblicano.
 - **Riferimento verificato**: il bilancio PSN 2024 (archiviato, sha256 `5be1ea22…`) dichiara **473 PA** che hanno
-  scelto PSN al 31/12/2024 e un portafoglio ordini di ~2,6 miliardi. 17 enti su 473 (~3,6 %) pubblicano il PPdF.
+  scelto PSN al 31/12/2024 e un portafoglio ordini di ~2,6 miliardi. 18 enti su 473 (~3,8 %) pubblicano il PPdF.
 
 ## Keyword e query (resa)
 
@@ -92,7 +99,7 @@ giurisprudenza è **riferita, da verificare** (non letta sulla fonte in questa s
 
 | motivo di diniego | forza | cosa colpirebbe | come lo neutralizzano i documenti già pubblicati |
 |---|---|---|---|
-| **Clausola di confidenzialità** in copertina | debole | tutto il PPdF | Una clausola contrattuale non è un limite di legge (art. 5-bis d.lgs. 33/2013 elenca i limiti in modo tassativo; v. Linee guida ANAC 1309/2016, §§ 2 e 5). 15 PPdF su 16 la riportano e **sono stati pubblicati integralmente da 12 enti**, inclusa la Difesa: la prassi delle stesse PA la smentisce. |
+| **Clausola di confidenzialità** in copertina | debole | tutto il PPdF | Una clausola contrattuale non è un limite di legge (art. 5-bis d.lgs. 33/2013 elenca i limiti in modo tassativo; v. Linee guida ANAC 1309/2016, §§ 2 e 5). 18 PPdF su 19 la riportano e **sono stati pubblicati integralmente da 15 enti**, inclusa la Difesa: la prassi delle stesse PA la smentisce. Rischio concreto: la Regione Calabria (decreto 9370/2023) ha invece omesso il PPdF proprio citando la clausola; la risposta è che lo stesso tipo di documento è in rete, senza omissis, per 15 enti. |
 | **Interessi economici e commerciali / segreto commerciale** (art. 5-bis c. 2 lett. c; artt. 35-36 d.lgs. 36/2023 per l'accesso agli atti di gara) | media sul dettaglio, debole sul riepilogo | configurazioni voce per voce, dimensionamenti, figure professionali, giorni-uomo | I prezzi unitari sono quelli del **listino pubblico** della convenzione (PSN pubblica listino e catalogo); il riepilogo per famiglia è quantità × listino, **non contiene know-how**. 15 riepiloghi sono già in rete con cifre. Non c'è gara in corso: il PPdF è esecuzione di una concessione già aggiudicata (Ad. Plen. CdS 10/2020 sull'accesso civico in fase esecutiva: riferito, da verificare). |
 | **Sicurezza nazionale / pubblica** (art. 5-bis c. 1 lett. a-b) | forte sulle architetture, nulla sui totali | schemi di rete, VDC, region, piani di sicurezza, inventari di VM, IP | La richiesta minimale **esclude** tutto questo. Anche qui: la Difesa ha pubblicato il proprio PPdF con l'indicazione del Secure Public Cloud Azure. |
 | **Sicurezza informatica** (misure ACN, MTMS) | media sulle configurazioni | policy, cifratura, DR | Escluse dalla richiesta. PSN pubblica il proprio Manuale tecnico misure di sicurezza. |
@@ -112,13 +119,12 @@ giurisprudenza è **riferita, da verificare** (non letta sulla fonte in questa s
 > oscuramento delle parti eventualmente sottratte. Documenti analoghi sono pubblicati integralmente da almeno 12
 > amministrazioni (elenco e sha256 allegati).
 
-Allegato utile: l'elenco D01-D19 di questo database (ente, URL, sha256) come prova della pubblicazione spontanea.
+Allegato utile: le righe con tipo P di questo database (19 PPdF, 15 enti) (ente, URL, sha256) come prova della pubblicazione spontanea.
 
 ## Limiti
 
-- Riepiloghi letti con OCR tesseract: le righe marcate "da riverificare" vanno lette a vista; le somme sono state
-  controllate dove possibile (UT = migrazione + professionali).
-- 11 documenti trovati non sono stati scaricati (filtri di rete dei siti verso il server estero).
+- Riepiloghi: 12 letti a vista sulla pagina renderizzata, 7 da OCR con somme coerenti (UT = migrazione + professionali); sisma 2009 letto a 130 dpi, da riconfermare a risoluzione maggiore. Le ~11 schede ARES per azienda non sono trascritte singolarmente (si usa il totale §8.14).
+- 4 documenti trovati restano non ottenibili (Benevento, Cardarelli, ULSS 9, ASL BT; Abruzzo "Fascicolo edificio" e il suo allegato B non sono più online). 5 PDF sono stati scaricati dalla rete del portatile (autorizzazione di Fabio, 3/11): i siti filtrano il server estero.
 - Il collegamento ai CIG è per CIG esplicito, CUP o ente+oggetto; per ente con più contratti PSN (es. ASL Latina)
   il legame è probabile, non certo.
 - Base corretta il 3/11: 692 CIG / 1.918 M€ (tutti i contratti PSN dell'imbuto, non solo quelli con provider PSN attribuito). Le percentuali sul top-100 vanno ricalcolate sulla stessa base.
