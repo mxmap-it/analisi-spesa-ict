@@ -15,11 +15,11 @@ echo "$(date -u +%FT%TZ) inizio giro $RUN"
 nice -n 10 $PY $T fonti || exit 1
 nice -n 10 $PY $T indice-cig || echo "indice CIG non aggiornato (si prosegue con il precedente)"
 nice -n 10 $PY $T sonda --run "$RUN" --paralleli 24 || exit 1
-nice -n 10 $PY $T diagnosi --run "$RUN" --giro-conferma 1 --paralleli 6 || exit 1
+until nice -n 10 $PY $T diagnosi --run "$RUN" --giro-conferma 1 --paralleli 6; do [ $? -eq 3 ] || exit 1; done
 nice -n 10 $PY $T caratterizza --run "$RUN" --campione "$CAMPIONE_CARATTERI" || echo "caratterizzazione incompleta (si prosegue)"
 # giro di conferma: ripete finché tutti i dubbi hanno il secondo passaggio a >= 60 minuti dal primo
 for i in $(seq 1 30); do
-  OUT=$(nice -n 10 $PY $T diagnosi --run "$RUN" --giro-conferma 2 --paralleli 6 2>&1 | tee -a /dev/stderr)
+  OUT=$(nice -n 10 $PY $T diagnosi --run "$RUN" --giro-conferma 2 --paralleli 6 2>&1 | tee -a /dev/stderr)  # codice 3 = ente saltato: il ciclo rilancia
   echo "$OUT" | grep -q "in attesa della distanza: 0)" && break
   sleep 600
 done

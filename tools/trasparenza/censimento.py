@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import json
+import os
 import random
 import sys
 import threading
@@ -209,6 +210,24 @@ def cmd_diagnosi(a) -> int:
         prima = len(da_fare)
         da_fare = [e for e in da_fare if host_di(e) not in aperti]
         print(f"{adesso()} esclusi {prima - len(da_fare)} enti su host ancora in sonda", flush=True)
+    # sorvegliante: un ente fermo oltre --tetto secondi si annota e il processo esce (codice 3) per essere rilanciato;
+    # al riavvio quell'ente si salta (non si ripete all'infinito)
+    saltati_f = Path(c.execute("PRAGMA database_list").fetchone()[2]).with_name(f"saltati-{a.run}-{a.origine}.txt")
+    saltati = set(saltati_f.read_text(encoding="utf-8").split()) if saltati_f.exists() else set()
+    da_fare = [e for e in da_fare if e["cf"] not in saltati]
+    in_corso: dict[int, tuple[str, float]] = {}
+
+    def sorvegliante():
+        while True:
+            time.sleep(30)
+            for cf, t0 in list(in_corso.values()):
+                if time.monotonic() - t0 > a.tetto:
+                    with saltati_f.open("a", encoding="utf-8") as fh:
+                        fh.write(cf + "\n")
+                    print(f"{adesso()} ente {cf} fermo da oltre {a.tetto} s: annotato in {saltati_f.name}, uscita per riavvio", flush=True)
+                    os._exit(3)
+
+    threading.Thread(target=sorvegliante, daemon=True).start()
     pac = Path(a.pacchetto) if a.pacchetto else None
     per_host = defaultdict(list)
     for e in da_fare:
@@ -222,6 +241,7 @@ def cmd_diagnosi(a) -> int:
             pw_ctx = sync_playwright().start()
         try:
             for e in gruppo:
+                in_corso[threading.get_ident()] = (e["cf"], time.monotonic())
                 try:
                     righe = diagnosi.diagnostica(e, a.origine, browser=pw_ctx is not None, headed=a.headed,
                                                  canale=a.canale, pw=pw_ctx, giro=n)
@@ -324,6 +344,7 @@ def main() -> int:
     ap.add_argument("--senza-browser", action="store_true")
     ap.add_argument("--giro-conferma", type=int, default=1)
     ap.add_argument("--solo-host-completati", action="store_true")
+    ap.add_argument("--tetto", type=int, default=600, help="secondi massimi per ente prima di saltarlo")
     ap.add_argument("--distanza", type=int, default=60, help="minuti minimi fra due giri di conferma")
     a = ap.parse_args()
     if a.comando in ("fonti", "tutto"):

@@ -272,7 +272,7 @@ def _gzb(path: Path, dati: bytes):
 
 def _piatto(t: dict) -> dict:
     return {k: t.get(k, "") for k in CAMPI_TENTATIVI} | {
-        "redirect": " -> ".join(f"{h['status']} {h['url']}" for h in t.get("catena", [])),
+        "redirect": " -> ".join(f"{h['status']} {h.get('url', '')}" for h in t.get("catena", [])),
         "vendor_blocco": ";".join(t.get("vendor_blocco") or []), "regole_blocco": " || ".join(t.get("regole_blocco") or []),
         "cdn": ";".join(t.get("cdn") or []), "dns_a": ";".join(t["dns"].get("a", [])), "dns_aaaa": ";".join(t["dns"].get("aaaa", [])),
         "dns_alias": ";".join(t["dns"].get("alias", [])), "tls_versione": t["tls"].get("versione", ""),
