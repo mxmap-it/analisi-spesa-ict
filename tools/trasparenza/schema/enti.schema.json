@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://analisi-spesa-ict.mxmap.it/dati/trasparenza/schema/enti.schema.json",
+  "title": "trasparenza.enti/1 — accessibilità di «Amministrazione trasparente» per ente, un giro",
+  "type": "object",
+  "required": ["schema", "metodo", "giro", "licenza", "enti"],
+  "properties": {
+    "schema": {"const": "trasparenza.enti/1"},
+    "metodo": {"type": "string", "description": "versione del metodo (METODO.md)"},
+    "giro": {"type": "string", "format": "date", "description": "data di inizio del giro di verifica"},
+    "run": {"type": "string"},
+    "licenza": {"type": "string"},
+    "enti": {"type": "array", "items": {
+      "type": "object",
+      "required": ["cf", "denominazione", "esito"],
+      "properties": {
+        "cf": {"type": "string", "description": "codice fiscale dell'ente (chiave)"},
+        "ipa": {"type": ["string", "null"], "description": "codice IPA (IndicePA), vuoto se l'ente non è in IndicePA"},
+        "denominazione": {"type": "string"},
+        "tipologia": {"type": "string", "description": "tipologia IndicePA, o «non in IndicePA»"},
+        "categoria": {"type": "string", "description": "categoria IndicePA, altrimenti natura giuridica dall'anagrafica ANAC"},
+        "regione": {"type": "string", "description": "dal codice ISTAT del comune (IndicePA o anagrafica ANAC)"},
+        "sito_ipa": {"type": "string", "description": "sito istituzionale dichiarato in IndicePA"},
+        "url_l190": {"type": "string", "description": "URL del file XML comunicato ad ANAC (art. 1 c. 32 L. 190/2012), testo come registrato da ANAC"},
+        "anno_l190": {"type": "string", "description": "anno della comunicazione nel registro ANAC"},
+        "esito_anac": {"type": "string", "description": "esito dell'ultimo accesso di ANAC all'URL (successo/fallito), riferito da ANAC"},
+        "at_url": {"type": "string", "description": "URL della sezione verificata"},
+        "at_provenienza": {"enum": ["anac-l190-prefisso", "anac-l190-host-trasparenza", "anac-l190-regola-zf", "home-host-l190", "home-sito-indicepa", ""]},
+        "esito": {"enum": ["accessibile", "bloccato da robots.txt", "noindex", "bloccato da WAF/anti-bot", "irraggiungibile", "tls invalido", "url non valido", "sezione non individuata", "errore dello strumento"]},
+        "dettaglio_esito": {"type": "string"},
+        "segnali": {"type": "string", "description": "tutti i segnali rilevati, separati da «;»: robots, noindex, waf, tls"},
+        "status_bot": {"type": ["integer", "null"], "description": "HTTP con User-Agent di bot dichiarato"},
+        "status_browser": {"type": ["integer", "null"], "description": "HTTP con User-Agent da browser identificato"},
+        "tls_valido": {"type": ["boolean", "null"]},
+        "robots_url": {"type": "string"},
+        "robots_sha256": {"type": "string", "description": "impronta del robots.txt archiviato"},
+        "robots_stato": {"type": "string"},
+        "robots_blocchi": {"type": "string", "description": "agente, percorso e regola che vieta"},
+        "noindex": {"type": "string"},
+        "firme_waf": {"type": "string", "description": "protezioni anti-bot riconosciute dalle firme (sonda.py FIRME)"},
+        "piattaforma": {"type": "string", "description": "piattaforma riconosciuta o «ignota» (piattaforme.py REGOLE)"},
+        "piattaforma_prova": {"enum": ["host", "generator", "dichiarazione", ""]},
+        "piattaforma_corrispondenza": {"type": "string"},
+        "generator": {"type": "string"},
+        "indizi": {"type": "string", "description": "indizi non conclusivi, NON sono attribuzione di piattaforma"},
+        "conferma_browser": {"type": "string", "description": "esito della seconda prova con browser reale"},
+        "ts": {"type": "string", "description": "data e ora della prova (UTC)"}
+      }
+    }}
+  }
+}

@@ -147,3 +147,10 @@ vecchia.
 - **Ogni blocco è un'evidenza di violazione** da registrare e segnalare come raccomandazione. L'accesso civico resta solo per il dato che sul sito non c'è.
 - **Perché:** la catena è sito → (solo se assente) accesso civico. Un blocco tecnico non equivale a «dato assente».
 - Regola operativa in AGENTS.md §3.
+
+## 2026-11-03 — Monitor dell'accessibilità di «Amministrazione trasparente» (Fabio, #61)
+- **Byproduct deciso:** software autonomo e rieseguibile che censisce tutte le PA (registro ANAC art. 1 c. 32 L. 190/2012 + IndicePA) e misura se la sezione AT è indicizzabile (art. 9 c. 1 d.lgs. 33/2013), riconoscendo anche la piattaforma del portale (serve al dimensionamento dello scraping).
+- **Pubblicazione nominativa: sì.** Open data con esito per ente (CSV + JSON, schema documentato, CC BY 4.0), una versione datata per giro mai sovrascritta più un «ultimo»; dashboard sul sito che legge l'open data (nessun numero copiato a mano), con ricerca, filtri per esito/tipo/regione/piattaforma e serie storica fra giri.
+- **PEC:** saranno inviate da Fabio, non dagli agenti. Il modulo prepara le PEC (testo + allegati con sha256) e tiene un registro append-only degli eventi (invio, accettazione, consegna, risposta); la dashboard mostra lo stato degli invii e il giro successivo misura la risoluzione. L'invio automatico, se mai, va autorizzato a parte.
+- **Architettura:** modulo separabile (`tools/trasparenza/`: README, METODO con versione e registro delle revisioni, schema, test, comando unico, licenza EUPL-1.2), senza dipendenze dal resto del repo salvo `requests` (e `playwright` facoltativo). Diventerà un progetto con GitHub e pagina propri; per ora è una sezione del sito (`/progetto/trasparenza-accessibilita/`).
+- **Perché:** la catena sito → accesso civico richiede che il sito sia consultabile; un blocco tecnico è una violazione da misurare nel tempo, non un «dato assente».

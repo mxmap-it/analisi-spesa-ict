@@ -272,3 +272,14 @@
   richiesta: "Escludere le sezioni Amministrazione trasparente e i profili del committente da WAF, verifiche umane e regole robots.txt; ANAC: inserire nella griglia di attestazione OIV la verifica dell'accesso automatico"
   perche_serve: Gli atti di adesione (con il carrello) sono pubblicati solo li'; senza accesso automatico la ricostruzione della spesa cloud richiede accessi civici uno per uno
   rif: ["#55"]
+- id: R29
+  destinatario: ANAC (vigilanza trasparenza, art. 45 d.lgs. 33/2013); enti in violazione; fornitori di piattaforme (es. trasparenza-pa.net)
+  tipo: violazione-trasparenza
+  stato: verificato
+  titolo: Monitor mensile dell'indicizzabilità di «Amministrazione trasparente» per tutte le PA (art. 9 c. 1 d.lgs. 33/2013) e segnalazione nominativa
+  evidenza: "Pilota del 3/11/2026 su 200 enti stratificati (metodo 1.0.0): 99 accessibili, 18 bloccati da robots.txt, 4 da WAF/anti-bot; tutto l'host trasparenza-pa.net (piattaforma che ospita i file L.190 di ~3.000 enti) ha robots.txt «Disallow: /». Censimento completo (~30.700 enti) in corso, esiti per ente come open data."
+  prova: "tools/trasparenza/ (metodo METODO.md 1.0.0); open data sito/static/dati/trasparenza/giri/<data>/ con sha256 dei robots.txt e delle risposte archiviate"
+  richiesta: "ANAC: inserire nella griglia di attestazione OIV la verifica automatica dell'indicizzabilità (robots.txt, noindex, WAF) della sezione e del file XML L.190; pubblicare il registro L.190 come open data scaricabile in blocco (oggi solo API di ricerca, ultimo anno 2023) con l'URL della sezione AT oltre a quello del file XML. Enti e fornitori: escludere la sezione da robots.txt restrittivi, noindex e regole anti-bot."
+  perche_serve: Senza accesso automatico alla sezione la raccolta degli atti per la spesa ICT richiede accessi civici uno per uno; l'indicizzabilità è un obbligo di legge misurabile.
+  nota: "PEC preparate dal modulo (pec-prepara), inviate solo da Fabio; registro degli invii dati/trasparenza/invii.csv"
+  rif: ["#61", "#55", R28]

@@ -59,3 +59,6 @@ Fonte: `report/convenzioni/ea-campione/metriche-scraping.csv`, log delle richies
 - **Lettura:** anche quando l'atto c'è, il carrello in euro manca spesso. Nella maggior parte dei casi l'atto riporta solo l'importo, oppure prodotti senza prezzi. Lo scraping ente per ente ha resa bassa; conviene lavorare per piattaforma.
 
 **Prossimo passo proposto:** censire quanti enti usano ciascuna piattaforma (dal dominio e dal footer dei siti di IndicePA), poi un adattatore DigitalPA e una misura della resa su un campione ampio.
+
+## Censimento delle piattaforme e dell'accessibilità (3/11/2026, #61)
+Il monitor `tools/trasparenza/` riconosce la piattaforma di ogni sezione «Amministrazione trasparente» (regole in `piattaforme.py`, «ignota» se non certa) e misura i blocchi (robots, noindex, WAF). È l'ingresso per scegliere gli adattatori: concentrazione per host dal registro ANAC L.190 (3/11/2026, 30.701 enti): avcp.trasparenza-pa.net 2.834 enti, halleyweb.com 1.454, servizipubblicaamministrazione.it 1.419, trasparenzascuole.it 1.185, nuvola.madisoft.it 740, spaggiari.eu 460, apkappa 302. Esiti per piattaforma in `sito/static/dati/trasparenza/ultimo/per-piattaforma.csv` a fine giro.

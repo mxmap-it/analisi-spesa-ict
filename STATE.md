@@ -2,7 +2,18 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-10-29
+**Ultimo aggiornamento:** 2026-11-03
+
+## Aggiornamento 3/11/2026 — Monitor «Amministrazione trasparente» (#61)
+
+Modulo autonomo `tools/trasparenza/` (README, METODO 1.0.0, schema, test, EUPL-1.2). Fonte degli URL: registro ANAC L.190 art. 1 c. 32 (API `dati.anticorruzione.it/rest/legge190`, anni 2015-2023) + IndicePA (CKAN JSON) + anagrafica ANAC; 30.701 enti, 27.045 con URL L.190.
+
+- **Giro completo 2026-11 in corso sul server** (lanciato 3/11 20:44 UTC): `tools/trasparenza/giro.sh 2026-11` → fonti, sonda (24 host in parallelo, 1 richiesta/host ogni 5 s), browser (Chromium headless sui bloccati), esporta. Log: `log/trasparenza-giro-2026-11.log`. Stima 8-12 h, collo di bottiglia avcp.trasparenza-pa.net (2.834 enti in serie).
+- **Ripresa:** se si interrompe, rilanciare `nohup tools/trasparenza/giro.sh 2026-11 > log/trasparenza-giro-2026-11.log 2>&1 &`: riprende dagli enti mancanti (stato in `lavoro/trasparenza/stato.sqlite`).
+- **Dopo il giro:** l'open data finisce in `sito/static/dati/trasparenza/giri/<data>/` + `ultimo/`, `indice.json`, `storico.json`, `invii.json`; aggregati in `esiti/<data>/trasparenza/`. Poi `hugo --source sito --minify --cleanDestinationDir`, commit, push. La pagina `/progetto/trasparenza-accessibilita/` legge i JSON (senza dati mostra «primo giro in corso»).
+- **Pilota:** `lavoro/trasparenza/pilota/pilota2-2026-11-03/` (200 enti: 99 accessibili, 18 robots, 4 WAF, 29 sezione non individuata, 25 irraggiungibili, 22 URL non validi, 3 TLS).
+- **PEC:** `censimento.py pec-prepara --run 2026-11 --giro <data>` → `lavoro/trasparenza/pec/<giro>/<cf>/`; invii registrati con `pec-registra` in `dati/trasparenza/invii.csv`. **Nessun invio fatto; li fa Fabio.**
+- **Cron proposto (da attivare):** mensile, `0 1 2 * * cd ~/analisi-spesa-ict && tools/trasparenza/giro.sh >> log/trasparenza-giro-$(date +\%Y-\%m).log 2>&1`.
 
 ## Aggiornamento 29/10/2026 — via 6, classificazione con modello e fonti (#55) — PUNTO DI RIPRESA
 

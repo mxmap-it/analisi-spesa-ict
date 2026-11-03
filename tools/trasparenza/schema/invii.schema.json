@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trasparenza.invii/1 — registro append-only degli eventi PEC (dati/trasparenza/invii.csv, una riga per evento)",
+  "type": "object",
+  "required": ["ts_registrazione", "data_evento", "cf", "giro", "destinatario", "evento"],
+  "properties": {
+    "ts_registrazione": {"type": "string", "description": "quando la riga è stata scritta (UTC)"},
+    "data_evento": {"type": "string", "format": "date"},
+    "cf": {"type": "string"},
+    "giro": {"type": "string", "description": "giro di verifica da cui vengono le evidenze"},
+    "destinatario": {"enum": ["ente", "anac"]},
+    "evento": {"enum": ["invio", "accettazione", "consegna", "mancata-consegna", "risposta"]},
+    "indirizzo": {"type": "string", "description": "PEC del destinatario"},
+    "modello": {"type": "string", "description": "modello di testo, es. trasparenza-art9/1.0.0"},
+    "id_messaggio": {"type": "string"},
+    "sha256_file": {"type": "string", "description": "ricevuta o risposta archiviata (eml/pdf)"},
+    "sha256_allegati": {"type": "string", "description": "sha256 del file SHA256SUMS delle evidenze inviate"},
+    "nota": {"type": "string"}
+  }
+}
