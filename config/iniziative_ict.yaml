@@ -20,160 +20,327 @@
 #   da-decifrare        oggetto non sufficiente: servono i documenti                            -> S6 G2
 # stato: verificato (oggetto e fonte documentale concordi) | da-verificare (solo oggetto CIG)
 
+
 - cig: 91918889EE
-  iniziativa: "Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID 2212 bis)"
+  iniziativa: Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID Sigef 2483), lotto 1 Servizi applicativi
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
-  nota: "importi degli attuativi da verificare: molti riportano probabilmente il massimale dell'AQ"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  nota: 'importi degli attuativi da verificare: molti riportano probabilmente il massimale dell''AQ'
+  documenti:
+  - url: https://ted.europa.eu/it/notice/221218-2022/xml
+    sha256: 3ebb9f0758307324992f5feef3164920ef1567fb2992258af961168b7e840e0b
+    cosa_conferma: 'bando TED Consip ID 2483: CIG 91918889EE = lotto 1 ''Servizi applicativi'' (PAC)'
+  - url: https://ted.europa.eu/it/notice/717702-2023/xml
+    sha256: 9959a0bcf12102c082b9cdb28d55f23eb3aec752d8855b1e49366377907a92cc
+    cosa_conferma: aggiudicazione TED ID 2483, stesso CIG lotto 1
+
 - cig: A02590F330
-  iniziativa: "Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610"
+  iniziativa: Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/677161-2023/xml
+    sha256: 335c73a2522339533fe8c840ec3074280c10af5ef3da1dd002c1b791fee46900
+    cosa_conferma: 'bando TED Consip ID 2610: CIG A02590F330 = lotto 1 ''Servizi Applicativi in ottica cloud'' PAL'
+
 - cig: 9066973ECE
-  iniziativa: "Polo Strategico Nazionale (PPP, Presidenza del Consiglio)"
+  iniziativa: Polo Strategico Nazionale (PPP, Presidenza del Consiglio)
   categoria: psn
   stato: verificato
-  fonte: "oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml"
+  fonte: oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml
+  documenti:
+  - url: https://ted.europa.eu/it/notice/57802-2022/xml
+    sha256: 05c72e72723c6256ea040092ccb14b31f01985a6357b2d9c478c5a48812915e3
+    cosa_conferma: 'bando TED Difesa Servizi: PPP realizzazione e gestione del Polo Strategico Nazionale, CIG 9066973ECE'
+  - url: https://ted.europa.eu/it/notice/492519-2022/xml
+    sha256: aec5af83743e3e0843949b1f0fc1997fed5ff47550466058f8a0c57bd57a0f55
+    cosa_conferma: aggiudicazione TED, stesso CIG
+
 - cig: 97431204F9
-  iniziativa: "Consip Licenze Microsoft Enterprise Agreement 8, ID 2615"
+  iniziativa: Consip Licenze Microsoft Enterprise Agreement 8, ID 2615
   categoria: licenza-prodotto
   produttore: Microsoft
   giurisdizione: EXTRA-UE
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP): 'LICENZE D'USO MICROSOFT ENTERPRISE AGREEMENT'"
+  stato: verificato
+  fonte: 'oggetto CIG padre (BDNCP): ''LICENZE D''USO MICROSOFT ENTERPRISE AGREEMENT'''
+  documenti:
+  - url: https://ted.europa.eu/it/notice/236254-2023/xml
+    sha256: db4481a7c597f45e2a68f9d2c05a59b3b941800af7c1c82fca25bd94ac67dd28
+    cosa_conferma: 'bando TED Consip: Fornitura di licenze d''uso Microsoft Enterprise Agreement (ottava edizione) ID Sigef 2615 CIG 97431204F9, lotto unico'
+  - url: https://ted.europa.eu/it/notice/272361-2024/xml
+    sha256: 2888fafcfb7f0af5f572312a3b42edc4ace529827151e5c5a6076891666381c3
+    cosa_conferma: aggiudicazione TED ID 2615 EA ottava edizione (eForms, senza CIG)
+
 - cig: A0259125A9
-  iniziativa: "Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610, lotto Demand e PMO"
+  iniziativa: Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610, lotto Demand e PMO
   categoria: pmo-demand
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/677161-2023/xml
+    sha256: 335c73a2522339533fe8c840ec3074280c10af5ef3da1dd002c1b791fee46900
+    cosa_conferma: 'bando TED Consip ID 2610: CIG A0259125A9 = lotto 2 ''Servizi di Demand e PMO'' PAL'
+
 - cig: 9158053868
-  iniziativa: "Consip AQ PC portatili, mobile workstation e Chromebook"
+  iniziativa: Consip AQ PC portatili, mobile workstation e Chromebook
   categoria: hardware
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 88846293CA
-  iniziativa: "Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296"
+  iniziativa: Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto
   categoria: sicurezza
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/463974-2021/xml
+    sha256: 239ea5516dc821fccf3e9d3f6c6a06abdc43d6934b83c51fa5bc8761f71efddf
+    cosa_conferma: 'bando TED ID 2296: CIG 88846293CA = lotto 1 servizi di sicurezza da remoto (NGFW, WAF, IAM, firma remota...)'
+  - url: https://ted.europa.eu/it/notice/485060-2022/xml
+    sha256: a1029f10b18c1096657cd3435771d3f25593048c2ec2850ce0af661c7ec5f9de
+    cosa_conferma: aggiudicazione TED ID 2296
+
 - cig: 8210577E78
-  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC lotto 1"
+  iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC lotto 1
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/536035-2023/xml
+    sha256: abcd74941a45b085eeefeaa7f0814889ea20fc02292c4410ab5d70f4908ee8c1
+    cosa_conferma: 'aggiudicazione TED Consip ID 2212: CIG 8210577E78 = lotto 1 ''PAC per contratti di dimensioni rilevanti'''
+
 - cig: 5133642F61
-  iniziativa: "Consip SPC Connettività (contratti quadro)"
+  iniziativa: Consip SPC2 Connettività (contratto quadro OPA)
   categoria: connettivita
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/374672-2023/xml
+    sha256: 11016c0f2fd9c668d700d736dff0dc2d1af55faa873e6376f5b1af30110fb390
+    cosa_conferma: 'avviso TED di un attuativo (Consiglio regionale Puglia): contratto quadro OPA Consip SPC2 per la fornitura di servizi di connettività, CIG MASTER 5133642F61 (fonte secondaria: avviso di un ente aderente)'
+
 - cig: 9188183878
-  iniziativa: "Consip AQ Sanità digitale, sistemi informativi gestionali"
+  iniziativa: Consip AQ Sanità digitale, sistemi informativi gestionali
   categoria: servizi-applicativi
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 893944468E
-  iniziativa: "Consip AQ System management, ID 2275"
+  iniziativa: Consip AQ System management ed. 3, ID 2275, lotto 1
   categoria: system-management
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/565879-2022/xml
+    sha256: 7d5c92766e20b0461f86683e99cdbc171b4bae4aa72234ea9f19e73817f50d1e
+    cosa_conferma: 'aggiudicazione TED: System Management per le PA (ed.3) ID Sigef 2275, CIG lotto 1 893944468E'
+
 - cig: B1D4011AB2
-  iniziativa: "Consip Fornitura di licenze d'uso (2024)"
-  categoria: da-decifrare
+  iniziativa: Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)
+  categoria: licenza-prodotto
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP): solo 'FORNITURA DI LICENZE D'USO'"
+  fonte: 'oggetto CIG padre (BDNCP): solo ''FORNITURA DI LICENZE D''USO'''
+  produttore: Microsoft
+  giurisdizione: EXTRA-UE
+  documenti:
+  - url: https://ted.europa.eu/it/notice/309756-2024/xml
+    sha256: e4992b21e0b68e60b4a3a7ec4c97ca2fc7d106bd12576ef73fe97000f451f6b2
+    cosa_conferma: bando TED Consip 2024 ID 2755 Microsoft Enterprise Agreement (nona edizione), LOTTO UNICO intitolato 'Fornitura di licenze d'uso' = testo identico all'oggetto del CIG padre; il CIG non compare nell'avviso eForms
+  - url: https://ted.europa.eu/it/notice/251426-2025/xml
+    sha256: 265a0ef68464dbcd4754b12cada171e3d7baa781aeda60beebc1c57b289ffc31
+    cosa_conferma: aggiudicazione TED ID 2755, lotto unico 'Fornitura di licenze d'uso'
+  nota: 'decifrato per corrispondenza (anno 2024, Consip, titolo lotto identico, unica gara Consip ''licenze d''uso'' su TED nel 2024); manca il legame esplicito CIG -> ID 2755: verificarlo su BDNCP (data, aggiudicatario) o sulla pagina iniziativa Consip'
+
 - cig: 55187486EA
-  iniziativa: "Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)"
+  iniziativa: Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)
   categoria: cloud-multi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml
+  documenti:
+  - url: https://ted.europa.eu/it/notice/647656-2021/xml
+    sha256: 5a714d721b26ec28a3ccbed98c8fdb720ada8c5617e4e6ae9ec8f5cba3320430
+    cosa_conferma: 'avviso TED ARNAS Garibaldi: Contratto Quadro Consip SPC Cloud Lotto 1 - servizi di cloud computing, di sicurezza, di realizzazione di portale e servizi online e di cooperazione applicativa, CIG master 55187486EA, RTI Telecom Italia (fonte secondaria)'
+
 - cig: 7260902DDE
-  iniziativa: "Consip AQ System management, ID 1836"
+  iniziativa: Consip AQ System management, ID 1836
   categoria: system-management
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/455199-2017/xml
+    sha256: 9f87a64642df50b36752e8f320d165f1e76fa0aefb02254af771be3069327f5b
+    cosa_conferma: 'bando TED Consip: AQ servizi di System Management per le PA, ID Sigef 1836, CIG 7260902DDE'
+
 - cig: 9660108D4B
-  iniziativa: "Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle"
+  iniziativa: Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle
   categoria: licenza-prodotto
   produttore: Oracle
   giurisdizione: EXTRA-UE
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP): 'LOTTO 1 PRODOTTI ORACLE E SERVIZI CONNESSI'"
+  stato: verificato
+  fonte: 'oggetto CIG padre (BDNCP): ''LOTTO 1 PRODOTTI ORACLE E SERVIZI CONNESSI'''
+  documenti:
+  - url: https://ted.europa.eu/it/notice/185280-2023/xml
+    sha256: 0e564dcb4ac843b79fd628aaaace813a521bf830d56a5bf18aa3422bd8e9bf9c
+    cosa_conferma: 'bando TED Consip ID 2599 multibrand ed. 6: CIG 9660108D4B = ''Lotto 1: Prodotti Oracle e servizi connessi'''
+  - url: https://ted.europa.eu/it/notice/702067-2023/xml
+    sha256: e309be4fe996e76666b1cfeb6ea2dc905c8272327eecc80ec4081d45656790a4
+    cosa_conferma: aggiudicazione TED ID 2599, stesso CIG lotto 1
+
 - cig: 55193442C1
-  iniziativa: "Consip SPC Cloud lotto 3, interoperabilità e cooperazione applicativa (SIGEF 1403)"
+  iniziativa: Consip SPC Cloud lotto 3, interoperabilità e cooperazione applicativa (SIGEF 1403)
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/248255-2021/xml
+    sha256: ac4f6ebff2f1a8937041e2566df1bca832aa5cfd3c2172730e29b128b6e95f15
+    cosa_conferma: 'avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 3 ''Interoperabilità per i dati e cooperazione applicativa'', CIG 55193442C1 (fonte secondaria)'
+
 - cig: 9543706356
-  iniziativa: "Consip Reti locali 8, ID 2223, lotto 2 PAL"
+  iniziativa: Consip Reti locali 8, ID 2223, lotto 2 PAL
   categoria: connettivita
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 985365662A
-  iniziativa: "Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi"
+  iniziativa: Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi
   categoria: pmo-demand
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/351960-2023/xml
+    sha256: 3964268d7a6bd8ac74bdd8dd9ca0be8075fbf4f20745b94308af4d842d9cea48
+    cosa_conferma: 'bando TED Consip Digital Transformation ed. 2 ID 2536: lotto 2 CIG 985365662A'
+  - url: https://ted.europa.eu/it/notice/557722-2024/xml
+    sha256: d05ca65247409d90922e2177e767bce393db7875f492f03b82e113a83814402f
+    cosa_conferma: 'aggiudicazione TED ID 2536: lotto 2 CIG 985365662A ''Digitalizzazione dei processi'''
+
 - cig: B2094754F1
-  iniziativa: "Consip AQ System management, ID 2710"
+  iniziativa: Consip AQ System management ed. 4, ID 2710 (lotto unico)
   categoria: system-management
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/342482-2024/xml
+    sha256: b7fe91c2486ad3a5fe0b3152894ff61eafe74ae943e2644040c41a0a32497459
+    cosa_conferma: bando TED Consip 2024 'Accordo Quadro System Management ed. 4 - ID 2710', lotto unico; CIG non presente nell'avviso eForms
+  - url: https://ted.europa.eu/it/notice/605358-2025/xml
+    sha256: 7ee2cb429bc8d6e1cdc8ab5b7561430aded312a49cf42ff9d755a95b42542234
+    cosa_conferma: aggiudicazione TED ID 2710
+  nota: oggetto e categoria confermati per l'iniziativa ID 2710; manca il legame esplicito CIG B2094754F1 -> ID 2710 (eForms senza CIG)
+
 - cig: 8335254532
-  iniziativa: "Consip Licenze Microsoft Enterprise Agreement 6, ID 2187"
+  iniziativa: Consip Licenze Microsoft Enterprise Agreement 6, ID 2187
   categoria: licenza-prodotto
   produttore: Microsoft
   giurisdizione: EXTRA-UE
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 5519376D26
-  iniziativa: "Consip SPC Cloud lotto 4, realizzazione di portali e servizi online (SIGEF 1403)"
+  iniziativa: Consip SPC Cloud lotto 4, realizzazione di portali e servizi online (SIGEF 1403)
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/248256-2021/xml
+    sha256: 2b4e2dba99569558dfce089c00a89f4a18ba01b53e1bf355f8528cabe1330081
+    cosa_conferma: 'avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 4 ''Servizi di realizzazione e gestione di portali e servizi on-line'', CIG 5519376D26 (fonte secondaria)'
+
 - cig: 985369130D
-  iniziativa: "Consip Digital transformation 2, ID 2536, lotto 6 PMO Nord"
+  iniziativa: Consip Digital transformation 2, ID 2536, lotto 6 PMO Nord
   categoria: pmo-demand
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/351960-2023/xml
+    sha256: 3964268d7a6bd8ac74bdd8dd9ca0be8075fbf4f20745b94308af4d842d9cea48
+    cosa_conferma: 'bando TED ID 2536: lotto 6 CIG 985369130D'
+  - url: https://ted.europa.eu/it/notice/557722-2024/xml
+    sha256: d05ca65247409d90922e2177e767bce393db7875f492f03b82e113a83814402f
+    cosa_conferma: 'aggiudicazione TED ID 2536: lotto 6 CIG 985369130D ''PMO, lotto Nord'''
+
 - cig: 7991036B82
-  iniziativa: "Trenitalia, affidamento di servizi ICT"
+  iniziativa: Trenitalia, affidamento di servizi ICT
   categoria: da-decifrare
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+  nota: 'CIG assente da TED e dal web indicizzato. Candidato NON confermato: gara FS per Trenitalia 2019 ''servizi ICT di gestione sistemistica e delle infrastrutture hardware, hosting, housing, IaaS, apparati di rete TLC'' (TED 358459-2019, 558 M€) ma con CIG 7963682E45, diverso; resta da-decifrare'
+  documenti:
+  - url: https://ted.europa.eu/it/notice/358459-2019/xml
+    sha256: 2931682e5db4621d3e294a4e9d898a5f36bf13f00ea5cce96b1ce9668afa6f59
+    cosa_conferma: 'candidato non confermato: bando FS per conto di Trenitalia e altre società del gruppo, servizi ICT sistemistici/hosting/IaaS/rete, CIG 7963682E45 (diverso da 7991036B82)'
+
 - cig: 9823936871
-  iniziativa: "Consip PC desktop e workstation 3, ID 2631, lotto 2"
+  iniziativa: Consip PC desktop e workstation 3, ID 2631, lotto 2
   categoria: hardware
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 98209074D6
-  iniziativa: "Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica"
+  iniziativa: Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/347073-2023/xml
+    sha256: 483c7f5ef482c30f7db5d3f689a3289b0fc064beeeb245335d54a182ccf1a700
+    cosa_conferma: 'bando TED Consip ID 2601 Sanità digitale clinico-assistenziali 2: lotto 2 CIG 98209074D6'
+  - url: https://ted.europa.eu/it/notice/336340-2024/xml
+    sha256: f17420b3a7d9101ecce1b9078a5fb57388df4328d0c7c8a9c7ca6924eee2a2f5
+    cosa_conferma: 'aggiudicazione TED: Lotto 2 PPAA del SSN Centro-Sud, CIG 98209074D6, Cartella Clinica Elettronica'
+
 - cig: 8210615DD4
-  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC medio-piccole lotto 3"
+  iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC medio-piccole lotto 3
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/536035-2023/xml
+    sha256: abcd74941a45b085eeefeaa7f0814889ea20fc02292c4410ab5d70f4908ee8c1
+    cosa_conferma: 'aggiudicazione TED ID 2212: CIG 8210615DD4 = lotto 3 ''Servizi Applicativi PAC per contratti di dimensioni medio-piccole'''
+
 - cig: 903054517C
-  iniziativa: "Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino"
+  iniziativa: Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e interoperabilità dati sanitari Centro-Sud
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/674881-2021/xml
+    sha256: a169d12bca3f1feff333d4de37e354e8818a979435e4deb2c2b6b7aa385759e0
+    cosa_conferma: 'bando TED ID 2365: lotto 2 CIG 903054517C ''CUP e interoperabilità dati sanitari - Centro-Sud'''
+  - url: https://ted.europa.eu/it/notice/557162-2023/xml
+    sha256: da5bc144788f65d27c0968c3cbe4106da50ecddba683642d81a4821d9a9bc0d1
+    cosa_conferma: aggiudicazione TED ID 2365
+
 - cig: 9191898231
-  iniziativa: "Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PAC, seconda edizione, lotto Demand/PMO"
+  iniziativa: Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PAC, seconda edizione, lotto Demand/PMO
   categoria: pmo-demand
   stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  fonte: oggetto CIG padre (BDNCP)
+
 - cig: 8884642E81
-  iniziativa: "Consip AQ Servizi di sicurezza da remoto, ID 2296, secondo lotto"
+  iniziativa: Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 2 compliance e controllo
   categoria: sicurezza
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/463974-2021/xml
+    sha256: 239ea5516dc821fccf3e9d3f6c6a06abdc43d6934b83c51fa5bc8761f71efddf
+    cosa_conferma: 'bando TED ID 2296: CIG 8884642E81 = lotto 2 servizi di compliance e controllo (VA, PT, security strategy...)'
+  - url: https://ted.europa.eu/it/notice/485060-2022/xml
+    sha256: a1029f10b18c1096657cd3435771d3f25593048c2ec2850ce0af661c7ec5f9de
+    cosa_conferma: aggiudicazione TED ID 2296
+
 - cig: 82106098E2
-  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAL lotto 2"
+  iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAL lotto 2
   categoria: servizi-applicativi
-  stato: da-verificare
-  fonte: "oggetto CIG padre (BDNCP)"
+  stato: verificato
+  fonte: oggetto CIG padre (BDNCP)
+  documenti:
+  - url: https://ted.europa.eu/it/notice/536035-2023/xml
+    sha256: abcd74941a45b085eeefeaa7f0814889ea20fc02292c4410ab5d70f4908ee8c1
+    cosa_conferma: 'aggiudicazione TED Consip ID 2212: CIG 82106098E2 = lotto 2 (servizi applicativi)'
