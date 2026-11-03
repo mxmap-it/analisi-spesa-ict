@@ -111,8 +111,10 @@
   "note": "ID 7504 = gara Insiel per conto della Regione FVG"
  },
  "B8EF394204": {
-  "stato_ricerca": "L4: vietato da robots.txt",
-  "note": "profilo committente Regione ER (wwwservizi.regione.emilia-romagna.it/amministrazionetrasparente/ProfiloCommittente) escluso da robots.txt"
+  "stato_ricerca": "L4 regola AT: scheda letta, atto non allegato",
+  "url_atto": "https://wwwservizi.regione.emilia-romagna.it/amministrazionetrasparente/GareContratti/RegioneEmiliaRomagna/Dettaglio?IDProcedimento=220951",
+  "importo_atto": "8852261.73 IVA esclusa (x1,22 = ANAC); erogato 2.936.000,14",
+  "note": "profilo committente (robots.txt Disallow: /) letto con la regola AT: atto del dirigente 23379/2025 del 26/11/2025, durata 1/1/2026-31/12/2028, manutenzione licenze EA9; nessun documento allegato alla scheda"
  },
  "B92B037310": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -127,12 +129,12 @@
   "note": "LAZIOcrea (portaletrasparenza.net) pubblica le determine con il carrello EA9 (es. CIG B7CBD41943, 37.920,74 EUR tutto cloud: M365 E5, D365, Power Automate, Copilot Studio), ma la ricerca non restituisce B1EB1D0A79 (2024)"
  },
  "B2F943B35A": {
-  "stato_ricerca": "L4: portale non navigabile",
-  "note": "amministrazionetrasparente.aslnapoli3sud.it risponde 428 (anti-bot): non aggirato"
+  "stato_ricerca": "L4 regola AT: bloccato",
+  "note": "ASL Napoli 3 Sud: 428 Seeweb 'authentic user check' anche con Chrome headless (verifica umana): non superata per regola. blocco registrato come evidenza art. 9 c.1 d.lgs. 33/2013 in blocchi/blocchi.csv (3/11/2026)"
  },
  "B9D2607011": {
-  "stato_ricerca": "L4: vietato da robots.txt",
-  "note": "ricerca di comune.genova.it esclusa da robots.txt"
+  "stato_ricerca": "L4 regola AT: cercato, atto non trovato",
+  "note": "comune.genova.it: ricerca (robots /search/) usata con la regola AT ma non filtra; la ricerca di smart.comune.genova.it e' Google CSE senza risultati per CIG; Amministrazione trasparente rinvia a www2 per i bandi. Atto non trovato"
  },
  "B2454F996F": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -151,8 +153,8 @@
   "note": ""
  },
  "B23C50E5A2": {
-  "stato_ricerca": "L4: fallito",
-  "note": "L4: crea.gov.it: ricerca bloccata 403 da Azure Application Gateway (WAF): non aggirato"
+  "stato_ricerca": "L4 regola AT: cercato, atto non trovato",
+  "note": "CREA: la ricerca del sito (/web/guest/ricerca) e' bloccata 403 da Azure Application Gateway anche con Chrome headless (evidenza in blocchi/); la sezione Bandi di gara e contratti e crea.tuttogare.it sono raggiungibili ma il filtro per CIG non restituisce il contratto (accordo quadro B23A2CF2E1, non EA)"
  },
  "B8CB03FD8B": {
   "stato_ricerca": "L4: atto individuato (delibera 1431 del 23/10/2025), testo non pubblicato",
@@ -162,12 +164,21 @@
   "canale": "EA9"
  },
  "B29D87222B": {
-  "stato_ricerca": "L4: fallito",
-  "note": "L4: mmspa.eu risponde 403 al nostro User-Agent (WAF): non aggirato"
+  "stato_ricerca": "L4 regola AT: bloccato",
+  "note": "MM: Akamai 403 'Access Denied' su tutto l'host, compresi robots.txt e /amministrazione-trasparente/, anche con Chrome headless. blocco registrato come evidenza art. 9 c.1 d.lgs. 33/2013 in blocchi/blocchi.csv (3/11/2026)"
  },
  "B6F4803EAF": {
-  "stato_ricerca": "L4: vietato da robots.txt",
-  "note": "Torino: trovata solo DD 6542/2024 Dynamics 365 via MePA (altro CIG, 28k); ricerca di bandi.comune.torino.it esclusa da robots.txt"
+  "stato_ricerca": "L4 regola AT: atto letto",
+  "url_atto": "https://bandi.comune.torino.it/sites/default/files/allegati/bandi/2025/3350/Rep._66_2025__RIEPILOGO_FASE_8854379.pdf.p7m",
+  "sha256": "de4ec5af7f9f4c28247283e35c6b769f369f34daaafdbddbc5fa10060c3609f2",
+  "importo_atto": "172373.40 IVA esclusa (210295.55 IVA inclusa); ANAC 3.175.113,25: non coincide",
+  "carrello": "si (ordinativo Consip n. 8854379 allegato alla scheda: SKU, quantita, prezzo)",
+  "euro_cloud": "172373.40",
+  "euro_onprem": "0",
+  "euro_non_attribuibile": "0",
+  "prodotti": "2097 O365 E1 FUSL EEA no Teams Step-up O365 F3 Per User, 2,74 EUR/mese x 30 mesi (cloud)",
+  "canale": "EA9",
+  "note": "ricerca di bandi.comune.torino.it (/search/ esclusa da robots.txt) usata con la regola AT; scheda bando + DD 8516/2025 (sha256 542d584d...) + ordinativo firmato. L'importo ANAC (3,18 M) e' 15 volte l'atto: da verificare in ANAC"
  },
  "B992E0F8A6": {
   "stato_ricerca": "L4: fallito",
@@ -182,16 +193,25 @@
   "note": ""
  },
  "B72195F78C": {
-  "stato_ricerca": "L4: portale non percorribile",
-  "note": "ASL Città di Torino: trasparenza ASP.NET con navigazione a postback, senza ricerca per CIG; non percorso"
+  "stato_ricerca": "L4 regola AT: atto letto",
+  "url_atto": "https://trasparenza.aslcittaditorino.it/TOAmministrazioneTrasparente/SeriesItem.aspx?IdSeriesItem=45886",
+  "sha256": "00fcd5c59f102283adacb9218b33001279119b8ae59c16a66dbf1f763d948253",
+  "importo_atto": "1743120.00 IVA esclusa (2.126.606,40 IVA inclusa); ANAC 2.500.000: non coincide",
+  "carrello": "si (delibera di adesione: SKU, quantita, prezzi)",
+  "euro_cloud": "1743120.00",
+  "euro_onprem": "0",
+  "euro_non_attribuibile": "0",
+  "prodotti": "7400 M365 F3 FUSL, 400 O365 E3, 400 EMS E3, 1000 O365 E1 Step-up F3 (tutte subscription, 36 mesi 1/7/2025-30/6/2028)",
+  "canale": "EA9",
+  "note": "portale ASP.NET a postback: usato con Chrome headless il campo Oggetto ('Microsoft') della serie Bandi di gara; p7m quadruplo firmato"
  },
  "B79FF59E07": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
   "note": "giro 2: solo pagina Consip EA7"
  },
  "B11BE074BA": {
-  "stato_ricerca": "L4: fallito",
-  "note": "L4: EAV: portaleamministrazionetrasparente.it risponde 428 (protezione anti-bot): non aggirato"
+  "stato_ricerca": "L4 regola AT: bloccato",
+  "note": "EAV: 428 Seeweb 'authentic user check' anche con Chrome headless; la pagina chiede di confermare 'non sono un robot' (verifica umana): non superata per regola. blocco registrato come evidenza art. 9 c.1 d.lgs. 33/2013 in blocchi/blocchi.csv (3/11/2026)"
  },
  "B69790C9A5": {
   "stato_ricerca": "L4: atto letto, carrello no",
@@ -296,8 +316,8 @@
   "note": ""
  },
  "B2140BBF0D": {
-  "stato_ricerca": "L4: fallito",
-  "note": "SACE: TED solo per Salesforce/MuleSoft; L4: sace.it risponde 403 (WAF): non aggirato"
+  "stato_ricerca": "L4 regola AT: cercato, atto non trovato",
+  "note": "SACE: Cloudflare 403 al nostro UA dichiarato (anche robots.txt) ma Chrome headless passa; la pagina /trasparenza non ha una sezione bandi/contratti con atti per CIG. TED solo Salesforce/MuleSoft. Blocco UA registrato in blocchi/"
  },
  "B9528A372A": {
   "stato_ricerca": "L4: fallito",
@@ -349,15 +369,24 @@
   "note": "SASA (DigitalPA): ricerca per CIG senza schede"
  },
  "B3FF6B144A": {
-  "stato_ricerca": "L4: vietato da robots.txt",
-  "note": "apss.tn.it escluso da robots.txt"
+  "stato_ricerca": "L4 regola AT: cercato, atto non trovato",
+  "note": "APSS ora ASUIT: il portale delibere (Chrome headless) non restituisce il CIG; la det. 1433/2024 (Office 365 e Power BI, forse questo CIG) non e' scaricabile dal link diretto (risposta HTML)"
  },
  "B24492242E": {
-  "stato_ricerca": "L4: vietato da robots.txt",
-  "note": "apss.tn.it escluso da robots.txt"
+  "stato_ricerca": "L4 regola AT: atto letto",
+  "url_atto": "https://www.delibere.asuit.tn.it/GetProvvedimento.aspx?num=910&anno=2024&tp=DET",
+  "sha256": "93bcf7f485a03caf6cad890608eab9dabeb5f2de8c4796edbd200d6c0d493a2c",
+  "importo_atto": "169322.04 IVA esclusa (ANAC 203.186,40 = importo + 20% quinto d'obbligo)",
+  "carrello": "si (determina 910/2024: prodotti e importi)",
+  "euro_cloud": "169322.04",
+  "euro_onprem": "0",
+  "euro_non_attribuibile": "0",
+  "prodotti": "Power BI Premium P1 capacity 110.732,04; 250 EMS E3 58.590,00 (36 mesi, cloud)",
+  "canale": "EA8",
+  "note": "APSS ora ASUIT (www.asuit.tn.it, robots consente; www.apss.tn.it Disallow: /). Ricerca Chrome headless nel portale delibere ASUIT. Stesso CIG riusato dalla det. 1295/2026 (3000 M365 F1, 36.360 EUR, 1/8/2026-31/7/2027, sha256 4d811bd9...) non sommata perche successiva all'importo ANAC"
  },
  "B5C18387B5": {
-  "stato_ricerca": "L4: portale non navigabile",
-  "note": "amaroma.it 403"
+  "stato_ricerca": "L4 regola AT: bloccato",
+  "note": "AMA: Radware (Server: rdwr) 403 su tutto l'host, compresi robots.txt e /societa-trasparente/, anche con Chrome headless. blocco registrato come evidenza art. 9 c.1 d.lgs. 33/2013 in blocchi/blocchi.csv (3/11/2026)"
  }
 }

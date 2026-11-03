@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seeweb authentic user check</title>
+<style>
+body {
+  background-color: #FFFFFF;
+  color: black;
+  padding: 1em;
+  font-family: sans-serif;
+  font-size: large;
+}
+</style>
+
+<script defer>
+(() => {
+function setBotCheckCookie(expiresDays = 0) {
+  var value = String(Math.floor(Date.now() / 1000));
+  value = value.replace(/0/g, "o").replace(/1/g, "i");
+  const cookie = [ 'seeweb-bot-check=' + value ];
+  if (expiresDays) {
+    const expiresDate = new Date();
+    expiresDate.setDate(expiresDate.getDate() + expiresDays);
+    cookie.push('expires=' + expiresDate.toUTCString());
+  }
+  cookie.push('path=/');
+  document.cookie = cookie.join('; ');
+}
+
+setBotCheckCookie(1);
+document.location.reload();
+})();
+</script>
+
+</head>
+<body>
+<p>Quickly verifying that you are a human...</p>
+<noscript><p>This page requires JavaScript.</p></noscript>
+</body>
+</html>

@@ -40,6 +40,23 @@ Versione 0.2, 3/11/2026. Lavoro in corso: tutti i 50 C1 cercati; C2, C3 ed E sol
 - **Piattaforme riconosciute** (solo se dichiarate o evidenti dal dominio): DigitalPA (portaletrasparenza.net, 9 enti), ISWEB (SISPI), Netribe on.Cube (ASL Pescara), Maggioli JCityGov (Pedrengo). Le altre: ignota.
 - **Indicazione per lo scraping massivo:** DigitalPA è l'unica piattaforma incontrata con ricerca per CIG, URL stabili e allegati scaricabili: costa 2-4 richieste per contratto. Gli albi degli enti sanitari e i siti delle partecipate danno raramente l'allegato e spesso bloccano le richieste automatiche.
 
+## L4 bis: blocchi riprovati con la regola «Amministrazione trasparente» (3/11/2026)
+Regola in AGENTS.md §3: robots.txt non vincola sulle sezioni obbligatorie; Chrome headless reale (`tools/verifiche/ea_l4_browser.py`, `ea_l4_form.py`), UA da browser con l'URL del progetto, ≥ 5 s fra richieste. Mai CAPTCHA, proxy o aree riservate.
+- **Superati, con carrello (3 nuovi, tutti cloud 100 %):**
+  - Comune di Torino B6F4803EAF: ordinativo Consip allegato alla scheda bando. 2097 O365 E1 Step-up F3, 172.373,40 € IVA esclusa. ANAC indica 3,18 M€: va verificato.
+  - ASL Città di Torino B72195F78C: delibera di adesione EA9 trovata col campo «Oggetto» del portale a postback. 1.743.120 € IVA esclusa (M365 F3, O365 E3, EMS E3, step-up E1→F3).
+  - APSS Trento B24492242E: l'ente è ora ASUIT e il suo portale delibere è aperto. Det. 910/2024: Power BI Premium P1 ed EMS E3, 169.322,04 €.
+- **Superati senza carrello:**
+  - Regione Emilia-Romagna B8EF394204: scheda del profilo committente, 8.852.261,73 € netti, atto 23379/2025 non allegato.
+  - Genova: ricerca usata, nessun risultato per CIG.
+  - SACE: Chrome passa il blocco Cloudflare, ma la pagina non ha atti per CIG.
+  - APSS B3FF6B144A: CIG non restituito.
+- **Non superati** (evidenze in `blocchi/blocchi.csv`, con sha256):
+  - EAV e ASL Napoli 3 Sud: 428 con verifica umana Seeweb («confermo di non essere un robot»), da non superare;
+  - MM (Akamai) e AMA (Radware): 403 su tutto l'host, compresa la sezione trasparente;
+  - CREA: 403 Azure sulla ricerca del sito. MM, AMA e CREA bloccavano davvero pagine di Amministrazione trasparente (o la loro ricerca), non solo pagine generiche.
+- Raccomandazione R28 in `report/metodo/richieste-e-raccomandazioni.yaml`. Per i bloccati resta l'accesso civico.
+
 ## Metodo
 1. **Livelli L0-L1 (ANAC, deterministico):** per i 120 CIG si estraggono dai CIG 2024-2025 e dalle aggiudicazioni l'accordo quadro (EA6/7/8/9 o procedura propria) e l'importo aggiudicato (`anac.csv`). Risultato: 4 EA6, 4 EA7, 46 EA8, 33 EA9, 26 procedure proprie o affidamenti, 7 altri accordi quadro.
 2. **Livello L5 (ricerca web):** circa 60 ricerche per CIG, per ente + oggetto + anno e per edizione EA. Gli atti trovati sono archiviati sul server con `tools/archivia.py` (sha256 in `risultati.csv`) e letti con pdftotext.

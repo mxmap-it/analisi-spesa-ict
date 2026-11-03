@@ -262,3 +262,13 @@
   richiesta: "Pubblicare per ogni contratto di utenza (CIG derivato) la tabella Riepilogo prezzi in CSV con codice PPdF, famiglia di servizio, hyperscaler per Secure Public Cloud, UT e canone annuo; togliere la clausola di confidenzialita' sui prezzi da listino"
   perche_serve: Ripartire la spesa PSN fra servizi erogati in proprio (IT) e servizi big tech (extra-UE)
   rif: ["#55"]
+- id: R28
+  destinatario: EAV; ASL Napoli 3 Sud; MM S.p.A.; AMA Roma; CREA; SACE; ANAC (vigilanza trasparenza)
+  tipo: violazione-trasparenza
+  stato: verificato
+  titolo: Rimuovere i filtri anti-bot e WAF che impediscono l'accesso automatico alle sezioni Amministrazione trasparente (art. 9 c. 1 d.lgs. 33/2013)
+  evidenza: "3/11/2026, Chrome headless reale a ritmo >= 5 s: EAV e ASL Napoli 3 Sud rispondono 428 con verifica umana Seeweb ('authentic user check'); MM (Akamai) e AMA (Radware) 403 su tutto l'host, compresi robots.txt e la sezione trasparente; CREA 403 Azure Application Gateway sulla ricerca del sito; SACE 403 Cloudflare al nostro User-Agent dichiarato. Robots.txt che escludono la sezione o la sua ricerca: profilo committente Regione Emilia-Romagna (Disallow: /), APSS Trento (Disallow: /, ora ASUIT), ricerche dei Comuni di Torino e Genova"
+  prova: report/convenzioni/ea-campione/blocchi/blocchi.csv (URL, data, codice, intestazioni, robots.txt, sha256)
+  richiesta: "Escludere le sezioni Amministrazione trasparente e i profili del committente da WAF, verifiche umane e regole robots.txt; ANAC: inserire nella griglia di attestazione OIV la verifica dell'accesso automatico"
+  perche_serve: Gli atti di adesione (con il carrello) sono pubblicati solo li'; senza accesso automatico la ricostruzione della spesa cloud richiede accessi civici uno per uno
+  rif: ["#55"]
