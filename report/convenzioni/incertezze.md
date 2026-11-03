@@ -24,4 +24,4 @@ Ogni riga ha: cosa non sappiamo, perché conta, azioni in ordine di costo, fonte
 | I14 | Chromebook ID 2425 L3 (91580749BC) | licenza di gestione Google inclusa o no | dipendenza da servizio Google | capitolato e listino ID 2425 | Consip | incerto |
 
 ## Come si chiude un'incertezza
-Si archivia la fonte (`tools/archivia.py`, sha256), si aggiorna la voce in `config/iniziative_ict.yaml` e la riga qui sopra. Lo stato diventa «accertato» solo con due fonti indipendenti, una della stazione appaltante o dell'erogatore stesso per i dati societari. La riga resta nel registro con la data di chiusura.
+Si archivia la fonte (`tools/archivia.py`, sha256), si aggiorna la voce in `config/iniziative_ict.yaml` e la riga qui sopra. Lo stato diventa «accertato» quando la fonte rende il fatto certo, senza forzature interpretative (non servono due fonti). Ogni qualificazione di sovranità è confermata da un **agente di revisione** sulla catena di controllo di chi eroga il servizio, non sull.origine del prodotto. La riga resta nel registro con la data di chiusura.
