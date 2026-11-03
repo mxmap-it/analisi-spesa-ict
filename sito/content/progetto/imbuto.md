@@ -25,14 +25,16 @@ Importi da 50 milioni in su sono esclusi dai totali e marcati «da verificare».
 
 ## 2. Prima quota di sovranità: 2024-2025 (V, provvisoria)
 
-**Spesa cloud e software identificata con certezza** (S3 e S4):
+**Spesa identificata con certezza** (S3 e S4), separando il cloud dalle licenze. Il produttore dice la giurisdizione, non se il prodotto è cloud. Una licenza installata nei server dell'ente (on-premise) **non è spesa cloud**. Per le convenzioni di licenze, come Microsoft Enterprise Agreement, la quota cloud (Microsoft 365, Azure) e quella on-premise si accertano nei dossier delle convenzioni, in corso.
 
-| giurisdizione del prodotto | milioni € | quota |
-|---|---|---|
-| extra-UE | ~1.660 | 75% |
-| Italia | ~370 (di cui 308 società in house) | 17% |
-| UE | ~200 | 9% |
-| **totale** | **~2.220** | |
+| voce | extra-UE | UE | Italia | totale (milioni €) |
+|---|---|---|---|---|
+| cloud (prodotto nominato) | ~460 (78%) | ~86 | ~47 | ~590 |
+| licenze e software, cloud o on-premise da accertare | ~1.140 | ~92 | — | ~1.230 |
+| società in house | — | — | ~308 | ~308 |
+| servizi professionali sul prodotto | ~60 | ~19 | ~8 | ~87 |
+
+Sul **cloud certo** la quota extra-UE è circa il **78%**. Sulle licenze il produttore è quasi tutto extra-UE, ma resta da stabilire quanta parte sia cloud.
 
 **Spesa incerta sul perimetro cloud** (S6): circa 3,15 miliardi.
 
@@ -42,7 +44,7 @@ Importi da 50 milioni in su sono esclusi dai totali e marcati «da verificare».
 | cloud senza provider nell'oggetto | ~1.030 | servono gli atti |
 | convenzioni da decifrare | ~200 | in corso di verifica sui documenti Consip |
 
-**Forbice:** la quota extra-UE va dal **31%**, se l'incerto fosse tutto italiano, al **90%**, se fosse tutto extra-UE. Restringere la forbice è il lavoro dei prossimi strati. Il PSN da solo pesa più dell'80% di tutta la spesa certa.
+**Forbice sul cloud.** Si contano il cloud certo (~590 milioni) e l'incerto (~3.150). La quota extra-UE va dal **12%**, se l'incerto fosse tutto italiano, al **96%**, se fosse tutto extra-UE. Il cloud certo è ancora piccolo rispetto all'incerto: restringere la forbice è il lavoro dei prossimi strati, a partire dal PSN.
 
 Fuori dal cloud:
 - **ICT non cloud (S5): circa 21 miliardi in due anni.** Comprende servizi applicativi da convenzione (2,6 miliardi), consulenza IT (1,9), hardware (1,9), consulenza per infrastrutture interne (0,66), reti e telefonia (0,75) e una voce «ICT altro» da scomporre (12,8).
@@ -77,3 +79,4 @@ Confronto fra lo strato assegnato dall'imbuto e la classificazione approfondita 
 | data | modifica |
 |---|---|
 | 2026-11-03 | prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione |
+| 2026-11-03 | licenze separate dal cloud (Fabio): una licenza on-premise non è cloud; forbice ricalcolata sul solo cloud; regola «verificato = più fonti indipendenti» per le convenzioni |
