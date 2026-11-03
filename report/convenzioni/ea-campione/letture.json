@@ -111,8 +111,8 @@
   "note": "ID 7504 = gara Insiel per conto della Regione FVG"
  },
  "B8EF394204": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": "trovata solo determina ER 6198/2024 (EA7, Copilot, altro CIG)"
+  "stato_ricerca": "L4: vietato da robots.txt",
+  "note": "profilo committente Regione ER (wwwservizi.regione.emilia-romagna.it/amministrazionetrasparente/ProfiloCommittente) escluso da robots.txt"
  },
  "B92B037310": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -127,12 +127,12 @@
   "note": "LAZIOcrea (portaletrasparenza.net) pubblica le determine con il carrello EA9 (es. CIG B7CBD41943, 37.920,74 EUR tutto cloud: M365 E5, D365, Power Automate, Copilot Studio), ma la ricerca non restituisce B1EB1D0A79 (2024)"
  },
  "B2F943B35A": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: portale non navigabile",
+  "note": "amministrazionetrasparente.aslnapoli3sud.it risponde 428 (anti-bot): non aggirato"
  },
  "B9D2607011": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: vietato da robots.txt",
+  "note": "ricerca di comune.genova.it esclusa da robots.txt"
  },
  "B2454F996F": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -166,24 +166,24 @@
   "note": "L4: mmspa.eu risponde 403 al nostro User-Agent (WAF): non aggirato"
  },
  "B6F4803EAF": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": "Torino: trovata solo DD 6542/2024 Dynamics 365 via MePA (altro CIG, 28k)"
+  "stato_ricerca": "L4: vietato da robots.txt",
+  "note": "Torino: trovata solo DD 6542/2024 Dynamics 365 via MePA (altro CIG, 28k); ricerca di bandi.comune.torino.it esclusa da robots.txt"
  },
  "B992E0F8A6": {
   "stato_ricerca": "L4: fallito",
   "note": "L4: hsangiovanni.roma.it: certificato TLS non valido, non navigato"
  },
  "B9344AE76D": {
-  "stato_ricerca": "L4: fallito",
-  "note": "L4: sogin.it: certificato TLS non valido, non navigato"
+  "stato_ricerca": "L4: portale navigabile, CIG non presente",
+  "note": "L4: sogin.it: certificato TLS non valido, non navigato L4: ricerca per CIG sul portale DigitalPA senza schede di gara"
  },
  "B9B46EB06F": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
   "note": ""
  },
  "B72195F78C": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: portale non percorribile",
+  "note": "ASL Città di Torino: trasparenza ASP.NET con navigazione a postback, senza ricerca per CIG; non percorso"
  },
  "B79FF59E07": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -302,5 +302,39 @@
  "B9528A372A": {
   "stato_ricerca": "L4: fallito",
   "note": "L4: SISPI (sispipat.it): ricerca «microsoft» senza risultati"
+ },
+ "B47DF822B8": {
+  "stato_ricerca": "L4: atto letto",
+  "url_atto": "https://vivaservizi.portaletrasparenza.net/download/attodigara/7812/6776488652f29.pdf",
+  "sha256": "c0c27031467074996dd3f8a227733c01cc22663a47a77c2ad10f7b827a063f0c",
+  "importo_atto": "55140.00 aggiudicato (base 60.000 oltre IVA)",
+  "carrello": "si (elenco prodotti; tutti on-premise, nessuna ripartizione necessaria)",
+  "euro_cloud": "0",
+  "euro_onprem": "55140.00",
+  "euro_non_attribuibile": "0",
+  "prodotti": "licenze perpetue SQL Server, Windows Server, RDS CAL",
+  "canale": "affidamento a rivenditore (Ificonsulting), non EA",
+  "note": "oggetto esplicito on-premise confermato dall atto"
+ },
+ "B2124B2C68": {
+  "stato_ricerca": "L4: scheda trovata, carrello no",
+  "url_atto": "https://romamobilita.portaletrasparenza.net/dettagli/attodigara/6690/fornitura-di-licenze-d-uso-microsoft-enterprise-agreement-e-dei-servizi-connessi-per-le-pubbliche-amministrazioni.html",
+  "importo_atto": "187110.00 aggiudicato a Telecom Italia (coincide)",
+  "carrello": "no",
+  "euro_non_attribuibile": "187110.00",
+  "canale": "EA (Consip)",
+  "note": "scheda DigitalPA senza allegati"
+ },
+ "B369564691": {
+  "stato_ricerca": "L4: portale navigabile, CIG non presente",
+  "note": " L4: ricerca per CIG sul portale DigitalPA senza schede di gara"
+ },
+ "B885F3FD95": {
+  "stato_ricerca": "L4: portale navigabile, CIG non presente",
+  "note": " L4: ricerca per CIG sul portale DigitalPA senza schede di gara"
+ },
+ "B86936A673": {
+  "stato_ricerca": "L4: portale navigabile, CIG non presente",
+  "note": " L4: ricerca per CIG sul portale DigitalPA senza schede di gara"
  }
 }
