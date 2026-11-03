@@ -210,3 +210,32 @@ def costruisci() -> int:
     n = c.execute("SELECT count(*), sum(url_l190<>''), sum(at_url<>''), sum(sito_ipa<>'') FROM enti").fetchone()
     print(json.dumps({"enti": n[0], "con_url_l190": n[1], "at_da_l190": n[2], "con_sito_ipa": n[3]}))
     return 0
+
+
+CIG_DIR = ARCHIVIO / "mirror/dati.anticorruzione.it/opendata/download/dataset"
+
+
+def indice_cig(anni=("2024", "2025"), soglia=40000.0) -> int:
+    """Un CIG di test per ente, dai file CIG ANAC archiviati: il più recente con importo del lotto >= soglia
+    (atto atteso in AT > Bandi di gara e contratti), altrimenti il più recente. Lettura in streaming."""
+    c = connetti()
+    cfs = {r[0] for r in c.execute("SELECT cf FROM enti")}
+    migliore: dict[str, tuple] = {}
+    for anno in anni:
+        for z in sorted((CIG_DIR / f"cig-{anno}" / "filesystem").glob("cig_csv_*.zip")):
+            with zipfile.ZipFile(z) as zz, zz.open(zz.namelist()[0]) as fh:
+                for row in csv.DictReader(io.TextIOWrapper(fh, encoding="utf-8", errors="replace"), delimiter=";"):
+                    cf = (row.get("cf_amministrazione_appaltante") or "").strip().upper()
+                    if cf not in cfs or row.get("COD_MOTIVO_CANCELLAZIONE"):
+                        continue
+                    try:
+                        imp = float((row.get("importo_lotto") or "0").replace(",", "."))
+                    except ValueError:
+                        imp = 0.0
+                    chiave = (imp >= soglia, row.get("data_pubblicazione") or "")
+                    if cf not in migliore or chiave > migliore[cf][0]:
+                        migliore[cf] = (chiave, row["cig"], row.get("data_pubblicazione"), (row.get("oggetto_lotto") or row.get("oggetto_gara") or "")[:200], imp)
+    c.executemany("INSERT OR REPLACE INTO cig_test VALUES(?,?,?,?,?)", [(cf, v[1], v[2], v[3], v[4]) for cf, v in migliore.items()])
+    c.commit()
+    print(json.dumps({"enti_con_cig_test": len(migliore)}))
+    return len(migliore)

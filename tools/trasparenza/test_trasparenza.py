@@ -82,6 +82,64 @@ def test_campione_stratificato():
     assert [r["cf"] for r in s] == [r["cf"] for r in campione_stratificato(righe, 10)]
 
 
+
+
+# --- catalogo delle problematiche (README §Catalogo): un test per voce ---
+import diagnosi  # noqa: E402
+
+
+def test_cat_waf_cloudflare():
+    r = diagnosi.riconosci_blocco(403, {"Server": "cloudflare", "cf-mitigated": "challenge", "cf-ray": "x"}, "<title>Just a moment...</title>", [])
+    assert "Cloudflare challenge" in r["vendor_blocco"] and "Cloudflare" in r["cdn"] and r["challenge_js"]
+
+
+def test_cat_waf_akamai():
+    corpo = "<HTML><HEAD><TITLE>Access Denied</TITLE></HEAD><BODY>You don't have permission ... Reference&#32;#18.abc"
+    r = diagnosi.riconosci_blocco(403, {"Server": "AkamaiGHost"}, corpo, [])
+    assert "Akamai" in r["vendor_blocco"] and "Akamai" in r["cdn"]
+
+
+def test_cat_waf_imperva_f5_azure_aws():
+    assert "Imperva/Incapsula" in diagnosi.riconosci_blocco(200, {"X-Iinfo": "1"}, "", [])["vendor_blocco"]
+    assert "F5 BIG-IP ASM" in diagnosi.riconosci_blocco(200, {}, "The requested URL was rejected. Please consult with your administrator.", [])["vendor_blocco"]
+    assert "Azure Application Gateway/Front Door" in diagnosi.riconosci_blocco(403, {}, "<center>Microsoft-Azure-Application-Gateway/v2</center>", [])["vendor_blocco"]
+    assert "AWS WAF" in diagnosi.riconosci_blocco(405, {}, "<script>window.awsWafCookieDomainList=[];aws-waf-token</script>", [])["vendor_blocco"]
+
+
+def test_cat_captcha():
+    r = diagnosi.riconosci_blocco(403, {}, '<div class="g-recaptcha" data-sitekey="x"></div>', [])
+    assert r["captcha"]
+
+
+def test_cat_cdn_da_dns():
+    assert "Akamai" in diagnosi.riconosci_blocco(200, {}, "", ["www.ente.it.edgekey.net"])["cdn"]
+
+
+def test_cat_tls():
+    assert diagnosi.tipo_errore_tls("verifica: unable to get local issuer certificate (20)") == "catena incompleta o CA sconosciuta"
+    assert diagnosi.tipo_errore_tls("verifica: certificate has expired (10)") == "certificato scaduto"
+    assert diagnosi.tipo_errore_tls("verifica: Hostname mismatch, certificate is not valid for 'x' (62)") == "nome non corrispondente"
+    assert diagnosi.tipo_errore_tls("verifica: self-signed certificate (18)") == "certificato autofirmato"
+
+
+def test_cat_robots_intero_sito():
+    g = robots.analizza("User-agent: *\nDisallow: /\n")
+    assert not robots.consentito(g, "Googlebot", "/amministrazione-trasparente/")[0]
+
+
+def test_cat_ricercabilita():
+    assert diagnosi.classifica_ricerca({}, {}) == "ricerca assente"
+    assert diagnosi.classifica_ricerca({"trovato": True}, {"trovato": True}) == "trovato"
+    assert diagnosi.classifica_ricerca({"trovato": False}, {"trovato": True}) == "non trovato"
+    assert diagnosi.classifica_ricerca({"trovato": False}, {"trovato": False}) == "ricerca non funzionante"
+
+
+def test_cat_sezione_non_individuata_e_url_anac_rotto():
+    assert sonda.link_at('<a href="/news">Notizie</a>', "https://x.it/") == ""
+    assert deriva_at("  https://www.ente.it/doc/dataset.xml  ") == ("", "")
+    assert deriva_at("ftp://x") == ("", "")
+
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"):

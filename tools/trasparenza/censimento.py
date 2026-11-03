@@ -146,9 +146,118 @@ def cmd_browser(a) -> int:
     return 0
 
 
+
+
+DUBBI = ("bloccato da WAF/anti-bot", "bloccato da robots.txt", "noindex", "irraggiungibile", "tls invalido", "sezione non individuata")
+
+
+def _enti_dubbi(c, run: str, campione: int = 0) -> list[dict]:
+    c.row_factory = __import__("sqlite3").Row
+    q = f"SELECT e.*, x.dettaglio, x.esito FROM esiti x JOIN enti e USING(cf) WHERE x.run=? AND x.esito IN ({','.join('?' * len(DUBBI))})"
+    out = []
+    for r in c.execute(q, (run, *DUBBI)):
+        e = dict(r)
+        d = json.loads(e.pop("dettaglio"))
+        e["at_url_anac"] = e.get("at_url") or ""
+        e["at_url"] = d.get("at_url") or e.get("at_url") or ""
+        out.append(e)
+    c.row_factory = None
+    return campione_stratificato(out, campione) if campione else out
+
+
+def salva_tentativi(c, run: str, righe: list[dict]):
+    for t in righe:
+        c.execute("INSERT OR REPLACE INTO tentativi VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                  (run, t["cf"], t["origine"], t["ip"], t["asn"], t["ts"], t["tipo"], t.get("client", ""),
+                   t.get("status"), t.get("grezzo_sha256", ""), jdump(t)))
+    c.commit()
+
+
+def cmd_diagnosi(a) -> int:
+    """Diagnostica estesa sui dubbi del run, da questa origine. --elenco per il desktop (senza DB degli enti)."""
+    import diagnosi
+    c = connetti()
+    enti = json.loads(Path(a.elenco).read_text(encoding="utf-8")) if a.elenco else _enti_dubbi(c, a.run, a.campione)
+    fatti = {r[0] for r in c.execute("SELECT DISTINCT cf FROM tentativi WHERE run=? AND origine=?", (a.run, a.origine))}
+    enti = [e for e in enti if e["cf"] not in fatti]
+    print(f"{adesso()} diagnosi run={a.run} origine={a.origine} enti={len(enti)}", flush=True)
+    pac = Path(a.pacchetto) if a.pacchetto else None
+    pw_ctx = None
+    if not a.senza_browser:
+        from playwright.sync_api import sync_playwright
+        pw_ctx = sync_playwright().start()
+    try:
+        for i, e in enumerate(enti, 1):
+            righe = diagnosi.diagnostica(e, a.origine, browser=pw_ctx is not None, headed=a.headed, canale=a.canale, pw=pw_ctx)
+            for t in righe:
+                t["run"] = a.run
+            salva_tentativi(c, a.run, righe)
+            if pac:
+                diagnosi.esporta_pacchetto(righe, pac)
+            if i % 10 == 0:
+                print(f"{adesso()} {i}/{len(enti)}", flush=True)
+    finally:
+        if pw_ctx:
+            pw_ctx.stop()
+    return 0
+
+
+def cmd_elenco(a) -> int:
+    c = connetti()
+    enti = _enti_dubbi(c, a.run, a.campione)
+    campi = ("cf", "denominazione", "at_url", "at_url_anac", "sito_ipa", "url_l190", "esito")
+    Path(a.elenco).write_text(json.dumps([{k: e.get(k) for k in campi} for e in enti], ensure_ascii=False, indent=0), encoding="utf-8")
+    print(f"{len(enti)} enti in {a.elenco}")
+    return 0
+
+
+def cmd_importa(a) -> int:
+    """Importa un pacchetto (tentativi.jsonl + blobs/) prodotto da un'altra origine."""
+    from comune import salva_blob
+    c = connetti()
+    pac = Path(a.pacchetto)
+    righe = [json.loads(x) for x in (pac / "tentativi.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
+    for b in (pac / "blobs").glob("*"):
+        assert salva_blob(b.read_bytes()) == b.name, f"sha256 non corrisponde: {b.name}"
+    for t in righe:
+        salva_tentativi(c, t.get("run") or a.run, [t])
+    print(json.dumps({"importati": len(righe), "origini": sorted({t['origine'] for t in righe})}))
+    return 0
+
+
+def cmd_caratterizza(a) -> int:
+    """Due vie (ANAC e home IndicePA) e ricercabilità con un CIG reale dell'ente."""
+    import diagnosi
+    from playwright.sync_api import sync_playwright
+    c = connetti()
+    c.row_factory = __import__("sqlite3").Row
+    righe = [dict(r) for r in c.execute(
+        "SELECT e.*, x.dettaglio, t.cig FROM esiti x JOIN enti e USING(cf) LEFT JOIN cig_test t USING(cf) "
+        "WHERE x.run=? AND x.esito NOT IN ('url non valido','irraggiungibile','tls invalido')", (a.run,))]
+    c.row_factory = None
+    if a.campione:
+        righe = campione_stratificato(righe, a.campione)
+    fatti = {r[0] for r in c.execute("SELECT cf FROM caratteri WHERE run=?", (a.run,))}
+    righe = [r for r in righe if r["cf"] not in fatti]
+    print(f"{adesso()} caratterizza run={a.run} enti={len(righe)}", flush=True)
+    with sync_playwright() as pw:
+        for i, e in enumerate(righe, 1):
+            d = json.loads(e.pop("dettaglio"))
+            e["at_url_anac"] = e.get("at_url") or (d.get("at_url") if d.get("at_provenienza", "").startswith("anac") else "")
+            k = diagnosi.caratterizza(pw, e, e.get("cig") or "", headed=a.headed)
+            c.execute("INSERT OR REPLACE INTO caratteri VALUES(?,?,?,?,?,?)",
+                      (a.run, e["cf"], k["ts"], k.get("ricercabilita"), int(bool(k.get("coincidono"))), jdump(k)))
+            c.commit()
+            if i % 10 == 0:
+                print(f"{adesso()} {i}/{len(righe)}", flush=True)
+            time.sleep(5)
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("comando", choices=["tutto", "fonti", "sonda", "browser", "esporta", "indici", "pec-prepara", "pec-registra"])
+    ap.add_argument("comando", choices=["tutto", "fonti", "sonda", "browser", "esporta", "indici", "pec-prepara", "pec-registra",
+                                        "indice-cig", "diagnosi", "elenco", "importa", "caratterizza"])
     ap.add_argument("--run", default=date.today().strftime("%Y-%m"))
     ap.add_argument("--campione", type=int, default=0)
     ap.add_argument("--paralleli", type=int, default=24)
@@ -162,6 +271,12 @@ def main() -> int:
     ap.add_argument("--id-messaggio", default="")
     ap.add_argument("--file", default="")
     ap.add_argument("--nota", default="")
+    ap.add_argument("--origine", default="server", choices=["server", "desktop"])
+    ap.add_argument("--elenco", default="")
+    ap.add_argument("--pacchetto", default="")
+    ap.add_argument("--headed", action="store_true", help="browser con finestra (sul server: xvfb-run)")
+    ap.add_argument("--canale", default=None, help="es. chrome: usa il Chrome installato")
+    ap.add_argument("--senza-browser", action="store_true")
     a = ap.parse_args()
     if a.comando in ("fonti", "tutto"):
         import fonti
@@ -182,6 +297,12 @@ def main() -> int:
     if a.comando == "pec-registra":
         import pec
         print(jdump(pec.registra(a.cf[0], a.giro, a.destinatario, a.evento, a.indirizzo, a.id_messaggio, a.file, a.nota, a.data)))
+    if a.comando == "indice-cig":
+        import fonti
+        fonti.indice_cig()
+    for nome, f in (("diagnosi", cmd_diagnosi), ("elenco", cmd_elenco), ("importa", cmd_importa), ("caratterizza", cmd_caratterizza)):
+        if a.comando == nome:
+            f(a)
     return 0
 
 

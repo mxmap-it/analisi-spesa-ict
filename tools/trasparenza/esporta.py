@@ -34,7 +34,7 @@ CAMPI = ["cf", "ipa", "denominazione", "tipologia", "categoria", "regione", "sit
          "piattaforma", "piattaforma_prova", "piattaforma_corrispondenza", "generator", "indizi", "conferma_browser", "ts"]
 
 
-DASH = ["cf", "denominazione", "categoria", "regione", "esito", "dettaglio_esito", "piattaforma", "at_url", "segnali"]
+DASH = ["cf", "denominazione", "categoria", "regione", "esito", "dettaglio_esito", "piattaforma", "at_url", "segnali", "esito_server", "esito_desktop", "lettura_origini", "vendor_blocco", "ricercabilita", "vie_coincidono", "prove"]
 
 
 def _gz(path: Path, testo: str):
@@ -84,6 +84,97 @@ def _tabella(path: Path, chiave: str, righe: list[dict]):
             w.writerow([k, tot] + [c[x] for x in ESITI] + [v, f"{v / tot:.3f}"])
 
 
+CAMPI_DIAG = ["esito_server", "esito_desktop", "lettura_origini", "vendor_blocco", "cdn", "challenge_js", "captcha",
+              "dns_alias", "tls_emittente", "tls_scadenza", "tls_errore", "prove",
+              "via_anac", "via_home", "vie_coincidono", "ricercabilita", "cig_test"]
+CAMPI_TENTATIVI = ["cf", "origine", "ip", "asn", "asn_nome", "ts", "tipo", "client", "user_agent", "url", "url_finale",
+                   "redirect", "status", "errore", "byte", "sha256_corpo", "vendor_blocco", "regole_blocco", "cdn",
+                   "challenge_js", "captcha", "dns_a", "dns_aaaa", "dns_alias", "tls_versione", "tls_emittente",
+                   "tls_scadenza", "tls_errore", "secondi", "grezzo_tipo", "grezzo_sha256", "grezzo_url"]
+MAX_PROVA = 5_000_000
+
+
+def _fallito(t: dict) -> bool:
+    return bool(t.get("errore")) or (t.get("status") or 0) >= 400 or bool(t.get("vendor_blocco"))
+
+
+def _sintesi(ts: list[dict]) -> str:
+    if not ts:
+        return ""
+    ok = [t for t in ts if not _fallito(t)]
+    return "accessibile" if ok else "bloccato o irraggiungibile"
+
+
+def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
+    """Aggiunge a ogni ente la diagnostica estesa (due origini) e la caratterizzazione; pubblica i tentativi
+    e i log grezzi dei tentativi falliti (prove/<sha256>.<tipo>.gz)."""
+    from comune import ARCHIVIO
+    per_cf = defaultdict(list)
+    for (dati,) in c.execute("SELECT dati FROM tentativi WHERE run=? ORDER BY ts", (run,)):
+        t = json.loads(dati)
+        per_cf[t["cf"]].append(t)
+    car = {cf: json.loads(d) for cf, d in c.execute("SELECT cf, dati FROM caratteri WHERE run=?", (run,))}
+    cig = {cf: g for cf, g in c.execute("SELECT cf, cig FROM cig_test")}
+    prove_dir = (pub / "prove") if pub.is_relative_to(LAVORO) else PUBBLICA / "prove"  # content-addressed, condivisa fra giri
+    prove_dir.mkdir(parents=True, exist_ok=True)
+    base_url = "prove/" if pub.is_relative_to(LAVORO) else "/dati/trasparenza/prove/"
+    piatti = []
+    for r in righe:
+        ts = per_cf.get(r["cf"], [])
+        srv = [t for t in ts if t["origine"] == "server"]
+        dsk = [t for t in ts if t["origine"] == "desktop"]
+        r["esito_server"], r["esito_desktop"] = _sintesi(srv), _sintesi(dsk)
+        if srv and dsk:
+            r["lettura_origini"] = ("blocco legato all'IP o al datacenter" if r["esito_server"] != "accessibile" and r["esito_desktop"] == "accessibile"
+                                    else "stesso esito da datacenter e da IP residenziale" if r["esito_server"] == r["esito_desktop"]
+                                    else "accessibile dal datacenter, non da IP residenziale")
+        r["vendor_blocco"] = ";".join(sorted({v for t in ts for v in t.get("vendor_blocco") or []}))
+        r["cdn"] = ";".join(sorted({v for t in ts for v in t.get("cdn") or []}))
+        r["challenge_js"] = any(t.get("challenge_js") for t in ts) if ts else ""
+        r["captcha"] = any(t.get("captcha") for t in ts) if ts else ""
+        if ts:
+            r["dns_alias"] = ";".join(ts[0]["dns"].get("alias") or [])
+            r["tls_emittente"], r["tls_scadenza"], r["tls_errore"] = (ts[0]["tls"].get(k, "") for k in ("emittente", "scadenza", "errore"))
+        prove = []
+        for t in ts:
+            s = t.get("grezzo_sha256")
+            if s:
+                nome = f"{s}.{'har' if t.get('grezzo_tipo') == 'har' else 'txt'}.gz"
+                src = ARCHIVIO / "blobs" / "sha256" / s[:2] / s[2:4] / s
+                if src.exists() and src.stat().st_size <= MAX_PROVA and not (prove_dir / nome).exists():
+                    _gzb(prove_dir / nome, src.read_bytes())
+                t["grezzo_url"] = f"{base_url}{nome}" if (prove_dir / nome).exists() else f"archivio sha256:{s}"
+                prove.append(t["grezzo_url"])
+            piatti.append(_piatto(t))
+        r["prove"] = " ".join(prove)
+        k = car.get(r["cf"], {})
+        r |= {"via_anac": k.get("via_anac", ""), "via_home": k.get("via_home", ""),
+              "vie_coincidono": k.get("coincidono", "") if k else "", "ricercabilita": k.get("ricercabilita", ""),
+              "cig_test": k.get("cig_test") or cig.get(r["cf"], "")}
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=CAMPI_TENTATIVI, extrasaction="ignore")
+    w.writeheader()
+    w.writerows(piatti)
+    _gz(pub / "tentativi.csv.gz", buf.getvalue())
+    _gz(pub / "tentativi.jsonl.gz", "".join(json.dumps(t, ensure_ascii=False) + "\n" for ts in per_cf.values() for t in ts))
+    _gz(pub / "caratteri.jsonl.gz", "".join(json.dumps(k, ensure_ascii=False) + "\n" for k in car.values()))
+    return righe
+
+
+def _gzb(path: Path, dati: bytes):
+    with path.open("wb") as fh, gzip.GzipFile(fileobj=fh, mode="wb", mtime=0, filename="") as g:
+        g.write(dati)
+
+
+def _piatto(t: dict) -> dict:
+    return {k: t.get(k, "") for k in CAMPI_TENTATIVI} | {
+        "redirect": " -> ".join(f"{h['status']} {h['url']}" for h in t.get("catena", [])),
+        "vendor_blocco": ";".join(t.get("vendor_blocco") or []), "regole_blocco": " || ".join(t.get("regole_blocco") or []),
+        "cdn": ";".join(t.get("cdn") or []), "dns_a": ";".join(t["dns"].get("a", [])), "dns_aaaa": ";".join(t["dns"].get("aaaa", [])),
+        "dns_alias": ";".join(t["dns"].get("alias", [])), "tls_versione": t["tls"].get("versione", ""),
+        "tls_emittente": t["tls"].get("emittente", ""), "tls_scadenza": t["tls"].get("scadenza", ""), "tls_errore": t["tls"].get("errore", "")}
+
+
 def esporta(run: str, data: str = "", forza: bool = False) -> Path:
     c = connetti()
     if not data:
@@ -94,14 +185,15 @@ def esporta(run: str, data: str = "", forza: bool = False) -> Path:
         raise SystemExit(f"giro {data} già pubblicato in {pub}: non si sovrascrive (--forza solo per correzioni documentate)")
     pub.mkdir(parents=True, exist_ok=True)
     righe = sorted(righe_run(c, run), key=lambda r: r["cf"])
+    righe = arricchisci(c, run, righe, pub)
     # gzip con mtime=0: stesso contenuto, stessi byte (sha256 stabile fra rigenerazioni)
     buf = io.StringIO()
-    w = csv.DictWriter(buf, fieldnames=CAMPI, extrasaction="ignore")
+    w = csv.DictWriter(buf, fieldnames=CAMPI + CAMPI_DIAG, extrasaction="ignore")
     w.writeheader()
     w.writerows(righe)
     _gz(pub / "enti.csv.gz", buf.getvalue())
     _gz(pub / "enti.json.gz", json.dumps({"schema": "trasparenza.enti/1", "metodo": VERSIONE_METODO, "giro": data, "run": run,
-                                          "licenza": "CC BY 4.0", "enti": [{k: r.get(k) for k in CAMPI} for r in righe]},
+                                          "licenza": "CC BY 4.0", "enti": [{k: r.get(k) for k in CAMPI + CAMPI_DIAG} for r in righe]},
                                          ensure_ascii=False, separators=(",", ":")))
     # file leggero per la dashboard: una lista per ente
     (pub / "dashboard.json").write_text(json.dumps(

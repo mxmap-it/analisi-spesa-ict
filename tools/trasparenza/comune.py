@@ -15,7 +15,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-RADICE = Path(__file__).resolve().parent.parent.parent
+RADICE = Path(os.environ.get("TRASPARENZA_RADICE", Path(__file__).resolve().parent.parent.parent))
 ARCHIVIO = Path(os.environ.get("ARCHIVIO_ROOT", RADICE / "archivio"))
 LAVORO = RADICE / "lavoro" / "trasparenza"
 DB = Path(os.environ.get("TRASPARENZA_DB", LAVORO / "stato.sqlite"))
@@ -61,6 +61,14 @@ def connetti() -> sqlite3.Connection:
     CREATE TABLE IF NOT EXISTS esiti(
       run TEXT, cf TEXT, ts TEXT, esito TEXT, dettaglio TEXT,
       PRIMARY KEY(run, cf));
+    CREATE TABLE IF NOT EXISTS tentativi(
+      run TEXT, cf TEXT, origine TEXT, ip TEXT, asn TEXT, ts TEXT, tipo TEXT, client TEXT,
+      status INTEGER, grezzo_sha256 TEXT, dati TEXT,
+      PRIMARY KEY(run, cf, origine, ts, tipo, client));
+    CREATE TABLE IF NOT EXISTS caratteri(
+      run TEXT, cf TEXT, ts TEXT, ricercabilita TEXT, coincidono INTEGER, dati TEXT,
+      PRIMARY KEY(run, cf));
+    CREATE TABLE IF NOT EXISTS cig_test(cf TEXT PRIMARY KEY, cig TEXT, data TEXT, oggetto TEXT, importo REAL);
     CREATE TABLE IF NOT EXISTS fonti_scaricate(
       url TEXT, ts TEXT, sha256 TEXT, byte INTEGER, nota TEXT);
     """)
