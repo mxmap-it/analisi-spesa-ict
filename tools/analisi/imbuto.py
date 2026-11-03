@@ -13,8 +13,22 @@ sys.path.insert(0, os.path.dirname(__file__))
 from classifica import Classificatore, CPV_ICT, VERSIONE  # noqa: E402
 from attribuisci_provider import righe_cig, aggiudicatari, D, RX_AQ  # noqa: E402
 import glob
+import yaml
 
-VERSIONE_IMBUTO = "imbuto-0.2 (2026-11-02)"
+# S3 da base di conoscenza: categoria dell'iniziativa padre -> (strato, sottoclasse, gruppo)
+INIZIATIVE = {i["cig"]: i for i in yaml.safe_load(open(os.path.join(os.path.dirname(__file__), "../../config/iniziative_ict.yaml"), encoding="utf-8"))}
+DA_CATEGORIA = {
+    "cloud-provider": ("S3-convenzione-lotto", "cloud", ""), "licenza-prodotto": ("S3-convenzione-lotto", "licenza", ""),
+    "cloud-multi": ("S6-residuo", "cloud-multi-provider-iniziativa", "G2-informazione-mancante"),
+    "psn": ("S6-residuo", "psn-servizio-da-determinare", "G2-informazione-mancante"),
+    "da-decifrare": ("S6-residuo", "iniziativa-da-decifrare", "G2-informazione-mancante"),
+    "licenze-multi": ("S6-residuo", "licenze-multibrand", "G3-incerti-significativi"),
+    "servizi-applicativi": ("S5-ict-non-cloud", "consulenza-it-applicativa", ""), "pmo-demand": ("S5-ict-non-cloud", "consulenza-it-altra", ""),
+    "system-management": ("S5-ict-non-cloud", "consulenza-infrastruttura-in-house", ""), "sicurezza": ("S5-ict-non-cloud", "sicurezza-ict", ""),
+    "connettivita": ("S5-ict-non-cloud", "telefonia-connettivita", ""), "hardware": ("S5-ict-non-cloud", "hardware-infrastruttura", ""),
+}
+
+VERSIONE_IMBUTO = "imbuto-0.3 (2026-11-03)"  # 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
 SOGLIA_MIN = 500          # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
@@ -52,6 +66,8 @@ def strato(r, e, imp, padre, testo, cpv):
     """Restituisce (strato, sottoclasse, gruppo)."""
     if padre: return "S0-padre-aq", "", ""
     if imp < SOGLIA_MIN: return "S2-sotto-soglia", "ict" if (e or RX_ICT.search(testo)) else "non-ict", ""
+    ini = INIZIATIVE.get(r["cig_accordo_quadro"])
+    if ini and not (e and e["via"].startswith("1")): return DA_CATEGORIA[ini["categoria"]]
     if e is None:
         if RX_ICT.search(testo): return "S6-residuo", "cpv-non-ict-testo-ict", gruppo(imp, testo)
         return "S1-escluso-non-ict", "", ""
@@ -98,7 +114,9 @@ def main(anno0=2020):
             e = c.classifica(testo, aq, nomi, cpv)
             padre = r["cig"] in padri or (not aq and bool(RX_AQ.search(testo)) and r.get("tipo_scelta_contraente", "").upper().startswith("PROCEDURA"))
             s, sc, g = strato(r, e, imp, padre, testo, cpv)
-            giur = (e or {}).get("giurisdizione", "") or ("non-determinabile" if sc == "psn-servizio-da-determinare" else "")
+            ini = INIZIATIVE.get(aq) if s.startswith("S3") else None
+            giur = (ini or {}).get("giurisdizione", "") or (e or {}).get("giurisdizione", "") \
+                or ("non-determinabile" if sc == "psn-servizio-da-determinare" else "")
             dv = int(imp >= SOGLIA_DA_VERIFICARE)
             k = (anno, s, sc, g, giur, dv)
             n[k] += 1

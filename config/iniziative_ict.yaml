@@ -1,0 +1,179 @@
+# Base di conoscenza delle iniziative ICT (accordi quadro e convenzioni padre) per lo strato S3 dell'imbuto.
+# Un contratto attuativo il cui cig_accordo_quadro è qui eredita categoria e, se univoco, prodotto e giurisdizione.
+# Lista di lavoro: report/metodo/conoscenza/padri-ict.csv (tools/analisi/padri_ict.py), ordinata per euro.
+# Ogni voce ha la fonte. "oggetto CIG padre (BDNCP)" = testo del CIG padre nei file ANAC archiviati (sha256 nel manifest);
+# le fonti documentali aggiuntive si archiviano con tools/archivia.py e si citano con sha256.
+# I lotti a provider cloud univoco restano in config/lotti_cloud.yaml (via 1 del metodo).
+#
+# categoria:
+#   cloud-provider      lotto con un solo cloud provider (prodotto e giurisdizione noti)       -> S3 incluso certo
+#   licenza-prodotto    licenze di un solo produttore (es. Microsoft EA)                       -> S3 incluso certo (asse B noto)
+#   cloud-multi         servizi cloud con prodotti di più provider o non dichiarati (SPC Cloud) -> S6 G2
+#   psn                 Polo Strategico Nazionale: servizio (hosting, housing, cloud qualificato) da determinare -> S6 G2
+#   servizi-applicativi sviluppo e manutenzione applicativa, anche "in ottica cloud"           -> S5 consulenza-it-applicativa
+#   pmo-demand          supporto, PMO, demand, trasformazione digitale                          -> S5 consulenza-it-altra
+#   system-management   gestione sistemi e infrastrutture dell'ente                             -> S5 consulenza-infrastruttura-in-house
+#   sicurezza           servizi di sicurezza da remoto                                          -> S5 ict-altro (sicurezza)
+#   connettivita        reti e connettività (SPC, reti locali)                                  -> S5 telefonia-rete
+#   hardware            PC, server, apparati                                                    -> S5 hardware
+#   licenze-multi       licenze multibrand non univoche                                         -> S6 G3
+#   da-decifrare        oggetto non sufficiente: servono i documenti                            -> S6 G2
+# stato: verificato (oggetto e fonte documentale concordi) | da-verificare (solo oggetto CIG)
+
+- cig: 91918889EE
+  iniziativa: "Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID 2212 bis)"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+  nota: "importi degli attuativi da verificare: molti riportano probabilmente il massimale dell'AQ"
+- cig: A02590F330
+  iniziativa: "Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9066973ECE
+  iniziativa: "Polo Strategico Nazionale (PPP, Presidenza del Consiglio)"
+  categoria: psn
+  stato: verificato
+  fonte: "oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml"
+- cig: 97431204F9
+  iniziativa: "Consip Licenze Microsoft Enterprise Agreement 8, ID 2615"
+  categoria: licenza-prodotto
+  produttore: Microsoft
+  giurisdizione: EXTRA-UE
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP): 'LICENZE D'USO MICROSOFT ENTERPRISE AGREEMENT'"
+- cig: A0259125A9
+  iniziativa: "Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610, lotto Demand e PMO"
+  categoria: pmo-demand
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9158053868
+  iniziativa: "Consip AQ PC portatili, mobile workstation e Chromebook"
+  categoria: hardware
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 88846293CA
+  iniziativa: "Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296"
+  categoria: sicurezza
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 8210577E78
+  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC lotto 1"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 5133642F61
+  iniziativa: "Consip SPC Connettività (contratti quadro)"
+  categoria: connettivita
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9188183878
+  iniziativa: "Consip AQ Sanità digitale, sistemi informativi gestionali"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 893944468E
+  iniziativa: "Consip AQ System management, ID 2275"
+  categoria: system-management
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: B1D4011AB2
+  iniziativa: "Consip Fornitura di licenze d'uso (2024)"
+  categoria: da-decifrare
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP): solo 'FORNITURA DI LICENZE D'USO'"
+- cig: 55187486EA
+  iniziativa: "Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)"
+  categoria: cloud-multi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP); conoscenza-iniziative.yaml"
+- cig: 7260902DDE
+  iniziativa: "Consip AQ System management, ID 1836"
+  categoria: system-management
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9660108D4B
+  iniziativa: "Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle"
+  categoria: licenza-prodotto
+  produttore: Oracle
+  giurisdizione: EXTRA-UE
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP): 'LOTTO 1 PRODOTTI ORACLE E SERVIZI CONNESSI'"
+- cig: 55193442C1
+  iniziativa: "Consip SPC Cloud lotto 3, interoperabilità e cooperazione applicativa (SIGEF 1403)"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9543706356
+  iniziativa: "Consip Reti locali 8, ID 2223, lotto 2 PAL"
+  categoria: connettivita
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 985365662A
+  iniziativa: "Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi"
+  categoria: pmo-demand
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: B2094754F1
+  iniziativa: "Consip AQ System management, ID 2710"
+  categoria: system-management
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 8335254532
+  iniziativa: "Consip Licenze Microsoft Enterprise Agreement 6, ID 2187"
+  categoria: licenza-prodotto
+  produttore: Microsoft
+  giurisdizione: EXTRA-UE
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 5519376D26
+  iniziativa: "Consip SPC Cloud lotto 4, realizzazione di portali e servizi online (SIGEF 1403)"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 985369130D
+  iniziativa: "Consip Digital transformation 2, ID 2536, lotto 6 PMO Nord"
+  categoria: pmo-demand
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 7991036B82
+  iniziativa: "Trenitalia, affidamento di servizi ICT"
+  categoria: da-decifrare
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9823936871
+  iniziativa: "Consip PC desktop e workstation 3, ID 2631, lotto 2"
+  categoria: hardware
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 98209074D6
+  iniziativa: "Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 8210615DD4
+  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC medio-piccole lotto 3"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 903054517C
+  iniziativa: "Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 9191898231
+  iniziativa: "Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PAC, seconda edizione, lotto Demand/PMO"
+  categoria: pmo-demand
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 8884642E81
+  iniziativa: "Consip AQ Servizi di sicurezza da remoto, ID 2296, secondo lotto"
+  categoria: sicurezza
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
+- cig: 82106098E2
+  iniziativa: "Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAL lotto 2"
+  categoria: servizi-applicativi
+  stato: da-verificare
+  fonte: "oggetto CIG padre (BDNCP)"
