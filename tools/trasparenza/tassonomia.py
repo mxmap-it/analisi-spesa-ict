@@ -40,6 +40,8 @@ def per_identita(tentativi: list[dict]) -> dict[str, dict]:
     """identità -> {'giri': {n: bloccato}, 'sempre': bool, 'mai': bool}"""
     out: dict[str, dict] = {}
     for t in tentativi:
+        if t.get("interferenza_locale"):
+            continue  # pagina dell'antivirus dell'osservatore (es. desktop con Bitdefender): non è una misura del sito
         i = t.get("identita") or ("browser-reale" if t.get("tipo") == "browser" else "bot-progetto")
         g = t.get("giro_conferma") or 1
         o = out.setdefault(i, {"giri": {}, "ts": {}})
@@ -61,7 +63,7 @@ def classifica(srv: list[dict], dsk: list[dict], negati: list[str]) -> dict:
     bl_s = sorted(i for i, o in ids_s.items() if o["sempre"])
     bl_d = sorted(i for i, o in ids_d.items() if o["sempre"])
     ok_s = [i for i, o in ids_s.items() if o["mai"]]
-    tutti = srv + dsk
+    tutti = [t for t in srv + dsk if not t.get("interferenza_locale")]
     if tutti and all(not t.get("status") and t.get("errore") for t in tutti):
         mecc.append("nessuna risposta (DNS, connessione o TLS)")
     solo_transitori = bool(tutti) and all((not fallito(t)) or t.get("transitorio") for t in tutti) and any(fallito(t) for t in tutti)

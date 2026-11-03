@@ -177,6 +177,16 @@ def test_cat_robots_per_identita():
     assert "Googlebot" in neg and "robots.txt (motori di ricerca)" in tassonomia.classifica([], [], neg)["meccanismi"]
 
 
+
+def test_cat_accesso_negato_a_tutti_e_interferenza():
+    srv = [_t("bot-progetto", 403), _t("browser-reale", 403)]
+    dsk = [_t("bot-progetto", 403, origine="desktop"), _t("browser-reale", 403, origine="desktop")]
+    assert "nessun client accettato (blocco totale o sito guasto)" in tassonomia.classifica(srv, dsk, [])["meccanismi"]
+    assert diagnosi.riconosci_blocco(200, {}, "<title>Web Protection by Bitdefender</title>", [])["interferenza_locale"]
+    dsk = [dict(_t("browser-reale", 200, origine="desktop"), interferenza_locale=True)]
+    assert "WAF per IP/ASN (datacenter)" not in tassonomia.classifica(srv, dsk, [])["meccanismi"]
+
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"):

@@ -26,7 +26,7 @@
         "esito_anac": {"type": "string", "description": "esito dell'ultimo accesso di ANAC all'URL (successo/fallito), riferito da ANAC"},
         "at_url": {"type": "string", "description": "URL della sezione verificata"},
         "at_provenienza": {"enum": ["anac-l190-prefisso", "anac-l190-host-trasparenza", "anac-l190-regola-zf", "home-host-l190", "home-sito-indicepa", ""]},
-        "esito": {"enum": ["accessibile", "bloccato da robots.txt", "noindex", "bloccato da WAF/anti-bot", "irraggiungibile", "tls invalido", "url non valido", "sezione non individuata", "errore dello strumento"]},
+        "esito": {"enum": ["accessibile", "bloccato da robots.txt", "noindex", "bloccato da WAF/anti-bot", "irraggiungibile", "tls invalido", "url non valido", "sezione non individuata", "accesso negato a tutti i client", "errore dello strumento"]},
         "dettaglio_esito": {"type": "string"},
         "segnali": {"type": "string", "description": "tutti i segnali rilevati, separati da «;»: robots, noindex, waf, tls"},
         "status_bot": {"type": ["integer", "null"], "description": "HTTP con User-Agent di bot dichiarato"},

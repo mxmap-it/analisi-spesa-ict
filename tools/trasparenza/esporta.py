@@ -29,7 +29,8 @@ from comune import LAVORO, RADICE, VERSIONE_METODO, adesso, connetti
 
 PUBBLICA = Path(os.environ.get("TRASPARENZA_PUBBLICA", RADICE / "sito" / "static" / "dati" / "trasparenza"))
 ESITI = ["accessibile", "bloccato da robots.txt", "noindex", "bloccato da WAF/anti-bot",
-         "irraggiungibile", "tls invalido", "url non valido", "sezione non individuata", "errore dello strumento"]
+         "irraggiungibile", "tls invalido", "url non valido", "sezione non individuata", "accesso negato a tutti i client",
+         "errore dello strumento"]
 VIOLAZIONI = {"bloccato da robots.txt", "noindex", "bloccato da WAF/anti-bot"}
 CAMPI = ["cf", "ipa", "denominazione", "tipologia", "categoria", "regione", "sito_ipa", "url_l190", "anno_l190",
          "esito_anac", "at_url", "at_provenienza", "esito", "dettaglio_esito", "segnali", "status_bot", "status_browser",
@@ -191,6 +192,12 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         if srv and r.get("at_url") and r["esito"] in ("bloccato da WAF/anti-bot", "irraggiungibile") and tx["conferma"] == "non riprodotto":
             r["esito"] = "accessibile"
             r["dettaglio_esito"] = f"blocco della prima prova non riprodotto nelle verifiche successive ({r['dettaglio_esito']})"[:300]
+        elif (r["esito"] == "bloccato da WAF/anti-bot" and "nessun client accettato (blocco totale o sito guasto)" in tx["meccanismi"]
+              and not any(t.get("vendor_blocco") for t in ts)):
+            # nessuna identità accettata, nemmeno il browser reale, e nessuna firma: non è un filtro per i bot
+            # (controllo dei falsi positivi del 3/11/2026: 14 casi su 30 «WAF» erano così anche da IP residenziale)
+            r["esito"] = "accesso negato a tutti i client"
+            r["dettaglio_esito"] = f"anche il browser reale riceve errore ({r['dettaglio_esito']})"[:300]
         elif r["esito"] == "bloccato da WAF/anti-bot" and "errore transitorio" in tx["meccanismi"]:
             r["esito"] = "irraggiungibile"
             r["dettaglio_esito"] = "solo errori transitori di rete: non è un blocco"

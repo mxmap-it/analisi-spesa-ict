@@ -121,10 +121,12 @@ def riconosci_blocco(status, intest: dict, corpo: str, alias: list[str]) -> dict
     if (status == 200 and len(corpo) > 20_000) or status in (404, 410):
         # un modulo con reCAPTCHA in una pagina normale o in una pagina d'errore non è un blocco
         vendor = [v for v in vendor if v[0] not in ("CAPTCHA", "JS-challenge generica")]
+    interferenza = bool(re.search(r"Web Protection by Bitdefender|Kaspersky.{0,40}(blocked|bloccat)|ESET.{0,40}(blocked|bloccat)|Avast.{0,40}(blocked|bloccat)", corpo[:50000], re.I))
     cdn = [(n, rx) for n, rx in CDN if re.search(rx, (it + "\n" + "\n".join(alias)).lower(), re.I)]
     return {"vendor_blocco": [v[0] for v in vendor], "regole_blocco": [v[1] for v in vendor],
             "cdn": [c[0] for c in cdn], "regole_cdn": [c[1] for c in cdn],
             "captcha": any(v[0] == "CAPTCHA" for v in vendor),
+            "interferenza_locale": interferenza,  # pagina dell'antivirus dell'osservatore: tentativo non valido
             "challenge_js": any(v[0] in ("JS-challenge generica", "Cloudflare challenge", "Imperva/Incapsula", "AWS WAF")
                                 for v in vendor) or bool(re.search(r"document\.cookie.{0,200}location\.(reload|href)", corpo[:20000], re.S))}
 

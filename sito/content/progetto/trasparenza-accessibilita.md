@@ -147,7 +147,7 @@ disponibile 2023), IndicePA e il link nella home. Metodo completo:
 <script>
 (function(){
 const B='/dati/trasparenza/',U=B+'ultimo/';
-const COL={'accessibile':'e-acc','bloccato da robots.txt':'e-rob','noindex':'e-noi','bloccato da WAF/anti-bot':'e-waf','irraggiungibile':'e-irr','tls invalido':'e-tls','url non valido':'e-url','sezione non individuata':'e-sni','errore dello strumento':'e-err'};
+const COL={'accessibile':'e-acc','bloccato da robots.txt':'e-rob','noindex':'e-noi','bloccato da WAF/anti-bot':'e-waf','irraggiungibile':'e-irr','tls invalido':'e-tls','url non valido':'e-url','sezione non individuata':'e-sni','accesso negato a tutti i client':'e-tls','errore dello strumento':'e-err'};
 const VIOL=new Set(['bloccato da robots.txt','noindex','bloccato da WAF/anti-bot']);
 const nf=n=>Number(n||0).toLocaleString('it-IT');const pc=(a,b)=>b?(100*a/b).toLocaleString('it-IT',{maximumFractionDigits:1})+' %':'–';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
