@@ -22,6 +22,10 @@
 
 
 - cig: 91918889EE
+  dossier: report/convenzioni/2483-servizi-applicativi-cloud-pac-2.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud-servizi-con-attuativi-incerti
+  nota_revisione: 'lotto «Servizi applicativi e accessori»: servizi professionali a tariffa (ISTAT, MiTur, ARERA, Giustizia, CONSOB); attuativi con licenze/infrastruttura incerti (es. GSE B9A1514D57 licenze Nutanix 7,32 M; CONSOB setup infrastruttura); migrazione come intervallo (+49 M PNRR senza la parola)'
   iniziativa: Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID Sigef 2483), lotto 1 Servizi applicativi
   categoria: servizi-applicativi
   stato: verificato
@@ -36,9 +40,13 @@
     cosa_conferma: aggiudicazione TED ID 2483, stesso CIG lotto 1
 
 - cig: A02590F330
+  dossier: report/convenzioni/2610-servizi-applicativi-cloud-pal-3.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud-servizi-con-attuativi-incerti
+  nota_revisione: 'tesi estesa per continuità da ID 2212, capitolato non archiviabile; InfoCamere 2 x 1.605 M implausibili (massimale o x1000, da verificare)'
   iniziativa: Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: tesi per continuità, una sola fonte
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/677161-2023/xml
@@ -83,6 +91,10 @@
     cosa_conferma: aggiudicazione TED ID 2615 EA ottava edizione (eForms, senza CIG)
 
 - cig: A0259125A9
+  dossier: report/convenzioni/2610-servizi-applicativi-cloud-pal-3.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'verificato con atti Lazio DD G04481 e ASPAL; ASPAL importo 2.213 M = errore x1000 verificato (Piano operativo 2.700.000 EUR IVA incl. = 2,21 M): correggere, non escludere'
   iniziativa: Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610, lotto Demand e PMO
   categoria: pmo-demand
   stato: verificato
@@ -121,9 +133,12 @@
     cosa_conferma: aggiudicazione TED ID 2296
 
 - cig: 8210577E78
+  dossier: report/convenzioni/2212-servizi-applicativi-cloud-pmo.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC lotto 1
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: una sola fonte della stazione appaltante
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/536035-2023/xml
@@ -145,6 +160,9 @@
     cosa_conferma: 'avviso TED di un attuativo (Consiglio regionale Puglia): contratto quadro OPA Consip SPC2 per la fornitura di servizi di connettività, CIG MASTER 5133642F61 (fonte secondaria: avviso di un ente aderente)'
 
 - cig: 9188183878
+  dossier: report/convenzioni/2366-sanita-digitale-gestionali.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud-servizi-con-attuativi-incerti
   iniziativa: Consip AQ Sanità digitale, sistemi informativi gestionali
   categoria: servizi-applicativi
   stato: da-verificare
@@ -259,9 +277,12 @@
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 985365662A
+  dossier: report/convenzioni/2536-digital-transformation-2.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi
   categoria: pmo-demand
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: una sola fonte della stazione appaltante
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/351960-2023/xml
@@ -318,9 +339,12 @@
     cosa_conferma: 'avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 4 ''Servizi di realizzazione e gestione di portali e servizi on-line'', CIG 5519376D26 (fonte secondaria)'
 
 - cig: 985369130D
+  dossier: report/convenzioni/2536-digital-transformation-2.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip Digital transformation 2, ID 2536, lotto 6 PMO Nord
   categoria: pmo-demand
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: una sola fonte della stazione appaltante
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/351960-2023/xml
@@ -355,9 +379,14 @@
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 98209074D6
+  dossier: report/convenzioni/2601-sanita-digitale-clinico-assistenziali-2.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: incerto-saas
+  categoria_proposta: applicativi-con-saas
+  nota_revisione: 'CADE cloud escluso: consultazione Consip prevede erogazione anche in SaaS (sha256 8971e5af...); giurisdizione dei prodotti (Dedalus, GPI, Engineering...) da accertare'
   iniziativa: Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: solo TED+BDNCP
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/347073-2023/xml
@@ -368,9 +397,12 @@
     cosa_conferma: 'aggiudicazione TED: Lotto 2 PPAA del SSN Centro-Sud, CIG 98209074D6, Cartella Clinica Elettronica'
 
 - cig: 8210615DD4
+  dossier: report/convenzioni/2212-servizi-applicativi-cloud-pmo.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAC medio-piccole lotto 3
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: una sola fonte della stazione appaltante
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/536035-2023/xml
@@ -378,9 +410,12 @@
     cosa_conferma: 'aggiudicazione TED ID 2212: CIG 8210615DD4 = lotto 3 ''Servizi Applicativi PAC per contratti di dimensioni medio-piccole'''
 
 - cig: 903054517C
+  dossier: report/convenzioni/2365-sanita-digitale-sistemi-sanitari-cittadino.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud-servizi-con-attuativi-incerti
   iniziativa: Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e interoperabilità dati sanitari Centro-Sud
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: solo TED+BDNCP
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/674881-2021/xml
@@ -391,6 +426,9 @@
     cosa_conferma: aggiudicazione TED ID 2365
 
 - cig: 9191898231
+  dossier: report/convenzioni/2483-servizi-applicativi-cloud-pac-2.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PAC, seconda edizione, lotto Demand/PMO
   categoria: pmo-demand
   stato: da-verificare
@@ -413,9 +451,12 @@
     cosa_conferma: aggiudicazione TED ID 2296
 
 - cig: 82106098E2
+  dossier: report/convenzioni/2212-servizi-applicativi-cloud-pmo.md
+  revisione: report/convenzioni/revisioni/servizi-applicativi-revisione-avversariale.md
+  asse_a: non-cloud
   iniziativa: Consip Servizi applicativi in ottica cloud e PMO, ID 2212, PAL lotto 2
   categoria: servizi-applicativi
-  stato: verificato
+  stato: da-verificare  # revisione 3/11: una sola fonte della stazione appaltante
   fonte: oggetto CIG padre (BDNCP)
   documenti:
   - url: https://ted.europa.eu/it/notice/536035-2023/xml
