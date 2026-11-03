@@ -22,15 +22,15 @@ Segue [psn-progetti-campione.md](../psn-progetti-campione.md); nessun contatto c
   non possono essere pubblicate") **presente in 15 dei 16 PPdF distinti** (nel 16°, ASL Latina, non rilevata nel
   testo estratto). **Nessun PPdF è oscurato né ha omissis**: gli enti l'hanno pubblicato integralmente, prezzi
   inclusi, nonostante la clausola. Il Configuratore è sempre un'immagine (serve OCR).
-- **Copertura sui contratti PSN 2024-2025** (base: `lavoro/imbuto/ict.csv` di oggi, provider PSN, importo non "da
-  verificare": **586 CIG, 1.542,9 M€**; il rendiconto precedente citava 692 contratti/1.918 M€ su una versione
-  anteriore dell'imbuto):
+- **Copertura sui contratti PSN 2024-2025** (base corretta: imbuto 0.3.1, sottoclasse `psn-servizio-da-determinare`,
+  importo non "da verificare": **692 CIG, 1.918 M€**. La prima versione usava solo i CIG con provider PSN attribuito,
+  586 CIG / 1.542,9 M€, e sovrastimava le percentuali; il numeratore non cambia):
 
   | collegamento al CIG | contratti | M€ | % valore | nel top-100 |
   |---|---|---|---|---|
-  | PPdF con riepilogo prezzi (Difesa, ARES, Latina, Pesaro, Trento, Santobono P6) | 6 | 95,4 | 6,2 % | 3 (7,6 % del top-100) |
-  | + determine/contratti senza prezzi per famiglia (MIM, ANPAL, Mauriziano, ISIN, ASL VC, BEIC) | 12 | 125,2 | 8,1 % | 4 (9,3 %) |
-  | + documenti riferiti non scaricati (ASL VCO, Cardarelli, ULSS9, Padova ×2, Benevento) | 18 | 151,4 | 9,8 % | 6 (11,4 %) |
+  | PPdF con riepilogo prezzi (Difesa, ARES, Latina, Pesaro, Trento, Santobono P6) | 6 | 95,4 | 5,0 % | 3 (7,6 % del top-100) |
+  | + determine/contratti senza prezzi per famiglia (MIM, ANPAL, Mauriziano, ISIN, ASL VC, BEIC) | 12 | 125,2 | 6,5 % | 4 (9,3 %) |
+  | + documenti riferiti non scaricati (ASL VCO, Cardarelli, ULSS9, Padova ×2, Benevento) | 18 | 151,4 | 7,9 % | 6 (11,4 %) |
 
   Attenzione: per Difesa il PPdF letto è l'**estensione M1** (1,8 M€), non l'intero contratto (44 M€); per ARES
   è letta una scheda su ~10. Il **valore effettivamente ripartito per famiglia** è quindi molto minore del valore
@@ -121,5 +121,5 @@ Allegato utile: l'elenco D01-D19 di questo database (ente, URL, sha256) come pro
 - 11 documenti trovati non sono stati scaricati (filtri di rete dei siti verso il server estero).
 - Il collegamento ai CIG è per CIG esplicito, CUP o ente+oggetto; per ente con più contratti PSN (es. ASL Latina)
   il legame è probabile, non certo.
-- La base di confronto (586 CIG, 1.542,9 M€) differisce dai 692/1.918 M€ citati in precedenza: imbuto rigenerato.
+- Base corretta il 3/11: 692 CIG / 1.918 M€ (tutti i contratti PSN dell'imbuto, non solo quelli con provider PSN attribuito). Le percentuali sul top-100 vanno ricalcolate sulla stessa base.
 - Ricerca limitata al motore di ricerca: "non trovato" ≠ "non pubblicato".
