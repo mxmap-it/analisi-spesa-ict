@@ -33,3 +33,12 @@ Per ogni servizio:
 3. **Se opera su infrastruttura altrui:** la sovranità segue chi gestisce quell'infrastruttura. Il controllo del consulente non sposta la qualificazione: si registra solo come lente fornitore.
 4. **Origine del prodotto:** solo dipendenza tecnologica, in campo separato.
 5. **Esito:** qualificabile (con la fonte che lo rende certo) oppure incerto (con l'azione per accertarlo).
+
+## Aggiornamenti (3/11/2026, `approfondimento-incertezze-1.md`)
+| # | accertato | resta incerto | prossima azione |
+|---|---|---|---|
+| I7 | Ferservizi per FSTechnology: AQ Microsoft Ireland per consumo Azure (MACC), CIG 9481341A1A, 36 mesi dal 10/2/2023, per sistemi Windows/SQL 2008 prima on premise (TED 139007-2023). Microsoft eroga direttamente il cloud | quale quota dei servizi a Trenitalia gira su Azure e quale su data center propri; valore dell'AQ; altri hyperscaler (non trovati) | avvisi TED Ferservizi/FSTechnology; bilanci FSTechnology; relazioni FS 2024-2025 |
+| I9 | A02A0C50B1: «licenze software ORACLE e relativi servizi», RTI TIM-Eurolink, 10,07 M IVA incl. (mandato 18/12/2023). Contesto DGSIA 2024: Oracle Analytics Cloud e OCI fra i sistemi supportati | prodotti di A02A0C50B1; atto di A02A0C832A; nuovo caso B41CBAFA94 (8,03 M, «architetture hybrid cloud») | determina a contrarre e DM impegno 47070.U del 28/11/2023; accesso civico solo su decisione di Fabio |
+| I11 | CONSOB B49210B98C: sviluppo e migrazione, RTI IBM, nessun canone cloud (abbinamento per ente, oggetto, importo) | 60 attuativi candidati; GSE B9A1514D57 senza atto; infrastruttura di destinazione CONSOB | aprire in ordine: Roma Servizi Mobilità (SAP S/4HANA Public Cloud), Sardegna IT (canone PSN), Regione Sardegna, Roma Capitale, So.Re.Sa., ENAC, DTD, Infratel |
+| I12 | sono 11 attuativi, non 12 | tutti, nessun atto trovato | atti degli enti; Firenze: legame con Sistema Cloud Toscana da accertare |
+| I14 | capitolato tecnico ID 2425: Chrome OS, nessuna licenza Google o console di gestione | catalogo aggiudicato e capitolato generale non letti | leggerli; poi chiudere |
