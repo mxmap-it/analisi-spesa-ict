@@ -25,6 +25,8 @@ Importi da 50 milioni in su sono esclusi dai totali e marcati «da verificare».
 
 ## 2. Prima quota di sovranità: 2024-2025 (V, provvisoria)
 
+Le qualificazioni seguono i [criteri di sovranità](../criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
+
 **Spesa identificata con certezza** (S3 e S4), separando il cloud dalle licenze. Il produttore dice la giurisdizione, non se il prodotto è cloud. Una licenza installata nei server dell'ente (on-premise) **non è spesa cloud**. Per le convenzioni di licenze, come Microsoft Enterprise Agreement, la quota cloud (Microsoft 365, Azure) e quella on-premise si accertano nei dossier delle convenzioni, in corso.
 
 | voce | extra-UE | UE | Italia | totale (milioni €) |
@@ -80,3 +82,4 @@ Confronto fra lo strato assegnato dall'imbuto e la classificazione approfondita 
 |---|---|
 | 2026-11-03 | prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione |
 | 2026-11-03 | licenze separate dal cloud (Fabio): una licenza on-premise non è cloud; forbice ricalcolata sul solo cloud; regola «verificato = più fonti indipendenti» per le convenzioni |
+| 2026-11-03 | criteri di sovranità semplificati applicati alla base di conoscenza (sicurezza da remoto ID 2296 sovrana, SPC Cloud lotto 1 italiano): le cifre del cloud non cambiano, perché quei lotti stanno fra l'ICT non cloud o erano già italiani; la regola per servizio del PSN (Secure Public Cloud, Managed, Hybrid extra-UE) non è ancora applicata dall'imbuto |
