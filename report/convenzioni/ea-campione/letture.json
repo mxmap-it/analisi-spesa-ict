@@ -70,16 +70,21 @@
   "note": "aslcaserta.it in timeout (giro 2 via 6, 29/10)"
  },
  "B20F2D673A": {
-  "stato_ricerca": "cercato, atto non trovato",
-  "note": "importo 37.066.577,71 = 10 x 3.706.657,71 (B20FE553DF e B20F5880A4, stesso ente e oggetto): probabile errore di un ordine di grandezza in ANAC; aggiudicazione ANAC uguale; sito ASL in timeout"
+  "stato_ricerca": "L4: fallito",
+  "note": "importo 37.066.577,71 = 10 x 3.706.657,71 (B20FE553DF e B20F5880A4, stesso ente e oggetto): probabile errore di un ordine di grandezza in ANAC; aggiudicazione ANAC uguale; sito ASL in timeout; L4: aslcaserta.it in timeout (3/11, già 29/10)"
  },
  "B20F5880A4": {
   "stato_ricerca": "cercato, sito ente irraggiungibile",
   "note": "doppione esatto di B20FE553DF (stesso importo, stesso oggetto)"
  },
  "B2FCEA46F4": {
-  "stato_ricerca": "cercato, atto non trovato",
-  "note": "ANAC collega il CIG all'EA6 (8335254532), aggiudicatario TIM: 45 M€ per ANCI (associazione) non plausibile come fabbisogno proprio; da verificare (possibile adesione per conto dei comuni o errore)"
+  "stato_ricerca": "L4: atto trovato (scheda), carrello no",
+  "note": "L4 portaletrasparenza.net navigabile e con ricerca per CIG; la scheda non ha allegati. Altri acquisti ANCI piccoli con determina allegata (es. A04B9775CD, 335 EUR Office). Importo 45 M confermato ma non spiegato (fabbisogno di un associazione): resta da capire se comprende licenze per conto dei comuni",
+  "url_atto": "https://anci.portaletrasparenza.net/dettagli/attodigara/2856/licenze-microsoft.html",
+  "importo_atto": "45003672.00 (affidamento diretto a TIM, pubblicato 10/09/2024): importo confermato dall ente",
+  "carrello": "no",
+  "euro_non_attribuibile": "45003672.00",
+  "canale": "EA6 (derivato)"
  },
  "B6B7F94178": {
   "stato_ricerca": "cercato, atto non trovato",
@@ -118,8 +123,8 @@
   "note": "stesso oggetto di B92B037310 (seconda tranche?)"
  },
  "B1EB1D0A79": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: portale navigabile, CIG non presente",
+  "note": "LAZIOcrea (portaletrasparenza.net) pubblica le determine con il carrello EA9 (es. CIG B7CBD41943, 37.920,74 EUR tutto cloud: M365 E5, D365, Power Automate, Copilot Studio), ma la ricerca non restituisce B1EB1D0A79 (2024)"
  },
  "B2F943B35A": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -146,28 +151,31 @@
   "note": ""
  },
  "B23C50E5A2": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: crea.gov.it: ricerca bloccata 403 da Azure Application Gateway (WAF): non aggirato"
  },
  "B8CB03FD8B": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: atto individuato (delibera 1431 del 23/10/2025), testo non pubblicato",
+  "note": "albo ASL Pescara navigabile con ricerca per oggetto; l archivio storico mostra solo numero, data e oggetto, senza il testo della delibera",
+  "carrello": "no",
+  "euro_non_attribuibile": "3308823.00",
+  "canale": "EA9"
  },
  "B29D87222B": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: mmspa.eu risponde 403 al nostro User-Agent (WAF): non aggirato"
  },
  "B6F4803EAF": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
   "note": "Torino: trovata solo DD 6542/2024 Dynamics 365 via MePA (altro CIG, 28k)"
  },
  "B992E0F8A6": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: hsangiovanni.roma.it: certificato TLS non valido, non navigato"
  },
  "B9344AE76D": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: sogin.it: certificato TLS non valido, non navigato"
  },
  "B9B46EB06F": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -182,12 +190,18 @@
   "note": "giro 2: solo pagina Consip EA7"
  },
  "B11BE074BA": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: EAV: portaleamministrazionetrasparente.it risponde 428 (protezione anti-bot): non aggirato"
  },
  "B69790C9A5": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: atto letto, carrello no",
+  "note": "autorizzazione all affidamento: solo oggetto e importo; la relazione del responsabile è «conservata agli atti» (non pubblicata)",
+  "url_atto": "https://www.gruppoveritas.it/sites/default/files/bando-doc-esito-2025-04/131-25AP%20AUTO%20BE%20autorizzazione%20affidamento%20diretto%20%284%29.pdf",
+  "sha256": "6cf4d4e86fa37d07037fdee85a86f9712fbb77dc0e701f4a7e9b7f2bb36681dd",
+  "importo_atto": "2226468.42 IVA esclusa (coincide)",
+  "carrello": "no",
+  "euro_non_attribuibile": "2226468.42",
+  "canale": "EA9"
  },
  "B78AF062E6": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -206,12 +220,12 @@
   "note": ""
  },
  "B994E0BD98": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: San Gerardo: ricerca del sito senza risultati per microsoft"
  },
  "B88FDCE658": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: policliniconapoli.it in timeout"
  },
  "B3F0D19FC1": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -267,7 +281,7 @@
  },
  "B96E6FEF44": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": "DTD Giustizia: trovato solo decreto DGSIA 6/5/2024 su altro CIG (A041C635CF, ~143 M€ IVA incl. EA8): da leggere in un giro successivo"
+  "note": "DTD Giustizia. Letto decreto DGSIA 6/5/2024 (CIG A041C635CF, EA8, 143,2 M EUR IVA incl., sha256 8a57f9b5...): è un decreto di pagamento per capitoli, nessun carrello; non è un CIG del campione"
  },
  "B9674247FA": {
   "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
@@ -282,11 +296,11 @@
   "note": ""
  },
  "B2140BBF0D": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": "SACE: TED solo per Salesforce/MuleSoft"
+  "stato_ricerca": "L4: fallito",
+  "note": "SACE: TED solo per Salesforce/MuleSoft; L4: sace.it risponde 403 (WAF): non aggirato"
  },
  "B9528A372A": {
-  "stato_ricerca": "cercato (ricerca web per ente+oggetto+anno e/o CIG), atto non trovato",
-  "note": ""
+  "stato_ricerca": "L4: fallito",
+  "note": "L4: SISPI (sispipat.it): ricerca «microsoft» senza risultati"
  }
 }
