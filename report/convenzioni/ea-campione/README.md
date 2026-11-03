@@ -55,6 +55,7 @@ Regola in AGENTS.md §3: robots.txt non vincola sulle sezioni obbligatorie; Chro
   - EAV e ASL Napoli 3 Sud: 428 con verifica umana Seeweb («confermo di non essere un robot»), da non superare;
   - MM (Akamai) e AMA (Radware): 403 su tutto l'host, compresa la sezione trasparente;
   - CREA: 403 Azure sulla ricerca del sito. MM, AMA e CREA bloccavano davvero pagine di Amministrazione trasparente (o la loro ricerca), non solo pagine generiche.
+- **DigitalPA per i C1 rimasti senza atto:** fra i 41 enti C1 senza atto, solo SOGIN ha un portale su portaletrasparenza.net (sonda DNS sul nome dell'ente, 3/11). Il CIG era già assente, quindi non ci sono altri portali DigitalPA da interrogare.
 - Raccomandazione R28 in `report/metodo/richieste-e-raccomandazioni.yaml`. Per i bloccati resta l'accesso civico.
 
 ## Metodo
