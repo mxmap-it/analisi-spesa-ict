@@ -46,3 +46,17 @@ Obiettivo all'11/11:
 ## Misure di qualità
 - Precisione di S1, S3 e S4 sul campione di 611 e sulle annotazioni (Wilson 95%). Finché non è misurata, la statistica si pubblica come «provvisoria».
 - La **forbice** (minimo e massimo della quota extra-UE) è il modo onesto di mostrare quanto pesa l'incerto.
+
+## SmartCIG e i due periodi (3/11/2026)
+
+Spiegazione completa in `sito/content/progetto/evoluzione-dati.md`. In sintesi (V, file ANAC archiviati):
+- SmartCIG non ha CPV, aggiudicatario né collegamento all'accordo quadro;
+- 2020-2023: 4,4-4,7 milioni di contratti l'anno, 28-48 mld, con affidamenti sotto 40.000 €, difesa, servizi sociali e **in house**;
+- dal 2024: solo affidamenti diretti piccolissimi (~1.500 € in media, 4,5-5 mld l'anno).
+
+Effetti sull'imbuto:
+- l'universo è CIG + SmartCIG;
+- su SmartCIG si applicano solo l'esclusione dal testo, il marchio nel testo, l'in house come gruppo a sé e la stima da campione;
+- il 2020-2023 senza SmartCIG non è confrontabile con il 2024 e oltre.
+
+Profilo: `esiti/2026-11-03/smartcig/profilo.json`.
