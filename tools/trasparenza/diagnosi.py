@@ -163,7 +163,12 @@ def tentativo_http(url: str, ua: str | None, alias: list[str], verify=True, max_
             t1 = time.monotonic()
             r = sess.get(u, headers={"User-Agent": ua, "Accept": "text/html,*/*;q=0.8", "Accept-Language": "it-IT,it;q=0.9"},
                          timeout=(10, 25), allow_redirects=False, stream=True, verify=verify)
-            corpo = r.raw.read(3_000_000, decode_content=True) or b""
+            corpo, limite = b"", time.monotonic() + 40  # tetto di tempo anche per i server che rispondono a goccia
+            for ch in r.iter_content(65536):
+                corpo += ch
+                if len(corpo) > 3_000_000 or time.monotonic() > limite:
+                    break
+            r.close()
             catena.append({"url": u, "status": r.status_code, "intestazioni": dict(r.headers),
                            "secondi": round(time.monotonic() - t1, 2), "http": f"HTTP/{r.raw.version / 10:.1f}" if r.raw.version else ""})
             if r.is_redirect and r.headers.get("location"):
@@ -239,6 +244,7 @@ def tentativo_browser(pw, url: str, headed: bool, canale: str | None = None) -> 
     t0 = time.monotonic()
     br = pw.chromium.launch(headless=not headed, channel=canale) if canale else pw.chromium.launch(headless=not headed)
     ctx = br.new_context(user_agent=None, locale="it-IT", record_har_path=str(har), record_har_content="embed")
+    ctx.set_default_timeout(45000)
     ua_reale = ""
     d = {"ts_locale": adesso(), "client": f"playwright-chromium/{br.version}" + (" (headed)" if headed else " (headless)") + (f" canale {canale}" if canale else ""), "url": url}
     try:

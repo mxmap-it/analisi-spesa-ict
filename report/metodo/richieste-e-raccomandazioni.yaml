@@ -286,7 +286,7 @@
 - id: R30
   destinatario: ANAC (BDNCP, open data)
   tipo: dato-mancante
-  stato: verificato
+  stato: "proposta, da inviare quando ci sarà il sistema di invii massivi di richieste FOIA (software da progettare); nessun invio ad-hoc"
   titolo: Pubblicare in bulk, per ogni CIG, il link alla pagina dei documenti di gara (LINK_SITO_COMMITTENTE / documenti_di_gara_link), anche prima del 2024
   evidenza: "3/11/2026: il campo non e' nel dataset pubblicazioni (solo date) ne' negli altri dataset del catalogo; dettaglio-cig lo mostra ma la sua API richiede token CAPTCHA mosparo (HTTP 403 senza); la PVL lo espone via API paginata solo dal 1/1/2024 e quasi mai per gli affidamenti diretti AD3 (0,3 % nel primo campione)"
   prova: report/metodo/acquisizione/dettaglio-cig.md

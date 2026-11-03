@@ -4,6 +4,14 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-03
 
+## Aggiornamento 4/11/2026 — Monitor trasparenza 1.1.0-beta (#61) — verso la beta
+- Codice 1.1.0-beta in `tools/trasparenza/` (commit 1eca969 e successivi): identità oneste, tassonomia, due giri di conferma, curl, origine desktop, schede, cambiamenti, catalogo con test, aggancio PVL (#57: `lavoro/pvl/*.csv`, non nostri).
+- Sul server il giro 2026-11 gira ancora con il codice 1.0.0 (`tools/trasparenza/giro.sh`, non toccare). La fase 2 gira da una copia: `lavoro/trasparenza/fase2-codice/` con `TRASPARENZA_RADICE=$PWD`, stesso database.
+  - diagnosi giro 1 sui dubbi già sondati: `log/trasparenza-diagnosi-2026-11-g1a.log` (`--solo-host-completati`); da rilanciare a sonda finita per gli host mancanti, poi giro 2 a ≥ 60 min (`--giro-conferma 2`), poi `caratterizza --campione 300`, poi `esporta --run 2026-11 --forza` (correzione documentata: aggiunta della diagnostica 1.1.0-beta sul giro pubblicato dalla 1.0.0).
+  - desktop: `lavoro/trasparenza-desktop/` sul portatile (pilota2 in corso); per il giro: `elenco` sul server → `diagnosi --origine desktop` sul portatile → rsync del pacchetto → `importa`.
+- A giro finito: backup `tools/psn_*.py` in `lavoro/backup-psn/`, spostarli, `git pull --rebase` (mai stash -u/clean); `lavoro/trasparenza/fase2-codice/` allora non serve più.
+- Per pubblicare i nomi: controllo a campione di ≥ 50 bloccati dal portatile, esito in `report/metodo/trasparenza-falsi-positivi.md`.
+
 ## Aggiornamento 3/11/2026 — Monitor «Amministrazione trasparente» (#61)
 
 Modulo autonomo `tools/trasparenza/` (README, METODO 1.0.0, schema, test, EUPL-1.2). Fonte degli URL: registro ANAC L.190 art. 1 c. 32 (API `dati.anticorruzione.it/rest/legge190`, anni 2015-2023) + IndicePA (CKAN JSON) + anagrafica ANAC; 30.701 enti, 27.045 con URL L.190.

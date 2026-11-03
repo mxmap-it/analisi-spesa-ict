@@ -200,6 +200,15 @@ def cmd_diagnosi(a) -> int:
                 continue
         da_fare.append(e)
     print(f"{adesso()} diagnosi run={a.run} origine={a.origine} giro={n} enti={len(da_fare)} (in attesa della distanza: {attesa})", flush=True)
+    if a.solo_host_completati and not a.elenco:
+        # mentre la sonda gira: niente richieste a host che la sonda sta ancora visitando (ritmo per host rispettato)
+        fatti_run = {r[0] for r in c.execute("SELECT cf FROM esiti WHERE run=?", (a.run,))}
+        c.row_factory = __import__("sqlite3").Row
+        aperti = {host_di(dict(r)) for r in c.execute("SELECT * FROM enti") if r["cf"] not in fatti_run}
+        c.row_factory = None
+        prima = len(da_fare)
+        da_fare = [e for e in da_fare if host_di(e) not in aperti]
+        print(f"{adesso()} esclusi {prima - len(da_fare)} enti su host ancora in sonda", flush=True)
     pac = Path(a.pacchetto) if a.pacchetto else None
     per_host = defaultdict(list)
     for e in da_fare:
@@ -314,6 +323,7 @@ def main() -> int:
     ap.add_argument("--canale", default=None, help="es. chrome: usa il Chrome installato")
     ap.add_argument("--senza-browser", action="store_true")
     ap.add_argument("--giro-conferma", type=int, default=1)
+    ap.add_argument("--solo-host-completati", action="store_true")
     ap.add_argument("--distanza", type=int, default=60, help="minuti minimi fra due giri di conferma")
     a = ap.parse_args()
     if a.comando in ("fonti", "tutto"):
