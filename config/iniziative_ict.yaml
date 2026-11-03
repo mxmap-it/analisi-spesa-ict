@@ -46,6 +46,11 @@
     cosa_conferma: 'bando TED Consip ID 2610: CIG A02590F330 = lotto 1 ''Servizi Applicativi in ottica cloud'' PAL'
 
 - cig: 9066973ECE
+  dossier: report/convenzioni/9066973ECE-polo-strategico-nazionale.md
+  revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
+  asse_a: misto
+  quota_hyperscaler_extra_ue_aggregata: [0.05, 0.12]
+  nota_revisione: 'Bilancio PSN 2025: ricavi 454,3 M, migrazione e service operation 79%, Secure Public Cloud (Azure, Google, AWS) 4,4%, PSN Managed (Oracle Alloy) 1%; contratti dall avvio 60% servizi professionali, 40% canoni (di cui SPC 15%, Oracle 14%). Oracle a canone in Industry Standard = EXTRA-UE per prodotto. Singolo CIG resta incerto senza piano dei fabbisogni. Anomalie: B280091A05 723 M = valore del padre (escludere), BAFE270F81 ARIA 580 M non verificato (totali con e senza)'
   iniziativa: Polo Strategico Nazionale (PPP, Presidenza del Consiglio)
   categoria: psn
   stato: verificato
@@ -163,6 +168,11 @@
   nota: 'decifrato per corrispondenza (anno 2024, Consip, titolo lotto identico, unica gara Consip ''licenze d''uso'' su TED nel 2024); manca il legame esplicito CIG -> ID 2755: verificarlo su BDNCP (data, aggiudicatario) o sulla pagina iniziativa Consip'
 
 - cig: 55187486EA
+  dossier: report/convenzioni/55187486EA-spc-cloud-lotto-1.md
+  revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
+  asse_a: cloud-e-servizi
+  giurisdizione_proposta: IT (con riserva: PaaS SQL Server Microsoft; ruolo di Enterprise Services Italia/DXC nel RTI non accertato)
+  nota_revisione: 'verificato solo per identificazione: manca documento Consip sul contenuto; attuativi 961 M oltre massimale 650 M (500+150): non sommare come spesa'
   iniziativa: Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)
   categoria: cloud-multi
   stato: verificato
@@ -204,6 +214,10 @@
     cosa_conferma: aggiudicazione TED ID 2599, stesso CIG lotto 1
 
 - cig: 55193442C1
+  dossier: report/convenzioni/55193442C1-spc-cloud-lotto-3.md
+  revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
+  asse_a: non-cloud
+  nota_revisione: 'regge: nessun hosting/IaaS/hyperscaler negli attuativi; contenuto senza fonte Consip'
   iniziativa: Consip SPC Cloud lotto 3, interoperabilità e cooperazione applicativa (SIGEF 1403)
   categoria: servizi-applicativi
   stato: verificato
@@ -260,6 +274,11 @@
   fonte: oggetto CIG padre (BDNCP)
 
 - cig: 5519376D26
+  dossier: report/convenzioni/5519376D26-spc-cloud-lotto-4.md
+  revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
+  asse_a: non-cloud
+  attuativi_eccezione_hosting: [7365232DB5, 7429224596]
+  nota_revisione: 'non cloud salvo hosting web accessorio (Giustizia 9,5 M, ENIT 0,2 M)'
   iniziativa: Consip SPC Cloud lotto 4, realizzazione di portali e servizi online (SIGEF 1403)
   categoria: servizi-applicativi
   stato: verificato
@@ -283,6 +302,10 @@
     cosa_conferma: 'aggiudicazione TED ID 2536: lotto 6 CIG 985369130D ''PMO, lotto Nord'''
 
 - cig: 7991036B82
+  dossier: report/convenzioni/7991036B82-trenitalia-servizi-ict.md
+  revisione: report/convenzioni/revisioni/psn-spc-revisione-avversariale.md
+  categoria_proposta: affidamento-intragruppo
+  nota_revisione: 'AQ intragruppo Trenitalia -> FSTechnology (850 M, 2019): fuori dal numeratore cloud come un in-house (decisione Fabio pendente). Il cloud del gruppo FS va contato sul suo CIG: AQ Microsoft Azure MACC 9481341A1A (TED 139007-2023, Microsoft Ireland) = EXTRA-UE'
   iniziativa: Trenitalia, affidamento di servizi ICT
   categoria: da-decifrare
   stato: da-verificare
