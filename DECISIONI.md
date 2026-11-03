@@ -134,3 +134,9 @@ vecchia.
   - **Svizzera = sovrana** (non soggetta al CLOUD Act); si registra il paese CH;
   - **PSN rivenditore di servizi hyperscaler**: se il servizio è erogato da Microsoft/Google/AWS/Oracle il controllo è dell'hyperscaler (extra-UE); i servizi erogati da PSN in proprio seguono il controllo italiano di PSN;
   - **niente richieste alla SEC** che richiedano di dichiarare un'email: le catene che ne dipendono restano incerte con un'azione alternativa.
+
+## 2026-11-03 — Accesso civico solo come ultima risorsa; database dei documenti PSN; lettura dei contratti Microsoft (Fabio, #55)
+- **Accesso civico** (PSN, DTD, enti): solo come **ultima risorsa**, documentato e giustificato come compromesso. Prima si raccoglie tutto ciò che è pubblicato.
+- **PSN:** si costruisce un database ampio dei **piani dei fabbisogni** inviati dagli enti e dei **Progetti** inviati dal PSN, con ricerca estesa per parole chiave ricavate dai documenti già trovati. Scopo doppio: misurare quanto è ottenibile da fonti pubbliche e dimostrare che questi documenti sono già pubblicati spontaneamente, per prevenire dinieghi. Analisi avversariale dei possibili motivi di diniego (d.lgs. 33/2013 art. 5-bis, clausola di confidenzialità, sicurezza).
+- **Licenze Microsoft:** sì alla lettura dei contratti (censimento dei primi 50 con oggetto generico, campioni casuali del resto, controllo degli espliciti).
+- **No** alla forbice provvisoria 44-100 % nell'imbuto per ora.
