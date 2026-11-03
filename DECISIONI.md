@@ -140,3 +140,10 @@ vecchia.
 - **PSN:** si costruisce un database ampio dei **piani dei fabbisogni** inviati dagli enti e dei **Progetti** inviati dal PSN, con ricerca estesa per parole chiave ricavate dai documenti già trovati. Scopo doppio: misurare quanto è ottenibile da fonti pubbliche e dimostrare che questi documenti sono già pubblicati spontaneamente, per prevenire dinieghi. Analisi avversariale dei possibili motivi di diniego (d.lgs. 33/2013 art. 5-bis, clausola di confidenzialità, sicurezza).
 - **Licenze Microsoft:** sì alla lettura dei contratti (censimento dei primi 50 con oggetto generico, campioni casuali del resto, controllo degli espliciti).
 - **No** alla forbice provvisoria 44-100 % nell'imbuto per ora.
+
+## 2026-11-03 — Amministrazione trasparente: robots.txt e anti-bot non bloccano la raccolta (Fabio, #55)
+- **Base:** art. 9 c. 1 d.lgs. 33/2013 (verificato su Normattiva il 3/11/2026). Le amministrazioni «non possono disporre filtri e altre soluzioni tecniche atte ad impedire ai motori di ricerca web di indicizzare ed effettuare ricerche all'interno della sezione "Amministrazione trasparente"».
+- **Regola:** sulle sezioni obbligatorie robots.txt non vincola. Contro le protezioni anti-bot sono ammessi un client da browser identificato e un ritmo basso. Restano esclusi la soluzione di CAPTCHA, la rotazione di IP o proxy e l'accesso ad aree riservate.
+- **Ogni blocco è un'evidenza di violazione** da registrare e segnalare come raccomandazione. L'accesso civico resta solo per il dato che sul sito non c'è.
+- **Perché:** la catena è sito → (solo se assente) accesso civico. Un blocco tecnico non equivale a «dato assente».
+- Regola operativa in AGENTS.md §3.

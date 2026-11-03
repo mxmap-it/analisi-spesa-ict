@@ -28,6 +28,12 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Niente toni assoluti ("unico al mondo", "morto"): numeri, date, fonti.
 - Materiali riservati non si pubblicano: il PDF Proteggimi è una bozza interna (nessuna sua cifra in pubblico). Ad AppaltIntel (commerciale) non si comunica nulla.
 - Rispetta robots.txt; non aggirare WAF, Cloudflare o CAPTCHA. Per ANAC serve uno User-Agent da browser (più l'URL del progetto): è documentato come problema, non è un aggiramento.
+- **Eccezione: sezioni «Amministrazione trasparente» e atti obbligatori da pubblicare** (Fabio, 3/11/2026). L'art. 9 c. 1 del d.lgs. 33/2013 vieta alle amministrazioni «filtri e altre soluzioni tecniche» che impediscano ai motori di ricerca di indicizzare e cercare nella sezione. Quindi:
+  - un robots.txt che esclude quelle sezioni non vincola la raccolta;
+  - contro le protezioni anti-bot e i WAF sono ammessi User-Agent da browser con l'URL del progetto e un browser reale (headless), a ritmo basso (≥ 5 s fra richieste) e con orari di poco carico;
+  - **mai** risolvere CAPTCHA, ruotare IP o proxy per eludere blocchi, falsificare credenziali o forzare aree riservate. In quei casi si consulta il sito a mano o si registra il blocco;
+  - ogni blocco incontrato si registra come **evidenza di violazione** (URL, data, risposta, robots.txt archiviato) e diventa raccomandazione in `richieste-e-raccomandazioni.yaml`. Solo dopo, se il dato manca, si passa all'accesso civico.
+  - Fuori dalle sezioni obbligatorie (es. siti istituzionali generici, partecipate non soggette) vale la regola generale.
 
 ## 4. Dati e archivio
 
