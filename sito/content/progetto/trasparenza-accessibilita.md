@@ -1,6 +1,6 @@
 ---
 title: "Amministrazione trasparente: è indicizzabile? (beta)"
-date: 2026-11-04
+date: 2026-11-03
 description: "Monitor di tutte le amministrazioni italiane: la sezione «Amministrazione trasparente» è raggiungibile da motori di ricerca e bot, come chiede l'art. 9 c. 1 d.lgs. 33/2013? Esito per ente come open data, tassonomia dei blocchi, piattaforme, log grezzi, serie storica e stato delle segnalazioni. Versione beta."
 weight: 19
 ---
