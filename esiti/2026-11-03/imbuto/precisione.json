@@ -1,0 +1,60 @@
+{
+ "riferimento": "dati/classificazioni/campione-v3.jsonl",
+ "imbuto": "lavoro/imbuto/ict.csv",
+ "strati": {
+  "S2-sotto-soglia": {
+   "n": 7,
+   "con_fonte_primaria": 0,
+   "asse_a_accordo": 2,
+   "asse_a_wilson95": [
+    0.082,
+    0.641
+   ]
+  },
+  "S3-convenzione-lotto": {
+   "n": 13,
+   "con_fonte_primaria": 0,
+   "asse_a_accordo": 7,
+   "asse_a_wilson95": [
+    0.291,
+    0.768
+   ],
+   "asse_b_n": 7,
+   "asse_b_accordo": 7,
+   "asse_b_wilson95": [
+    0.646,
+    1.0
+   ]
+  },
+  "S4-marchio": {
+   "n": 371,
+   "con_fonte_primaria": 18,
+   "asse_a_accordo": 290,
+   "asse_a_wilson95": [
+    0.737,
+    0.821
+   ],
+   "asse_b_n": 355,
+   "asse_b_accordo": 335,
+   "asse_b_wilson95": [
+    0.915,
+    0.963
+   ]
+  },
+  "S5-ict-non-cloud": {
+   "n": 71,
+   "con_fonte_primaria": 4,
+   "asse_a_accordo": 63,
+   "asse_a_wilson95": [
+    0.793,
+    0.942
+   ]
+  },
+  "S6-residuo": {
+   "n": 149,
+   "con_fonte_primaria": 11,
+   "cloud_secondo_riferimento": 106
+  }
+ },
+ "nota": "campione stratificato v3, non casuale sull'universo: la precisione vale per strato, non si riporta all'universo senza pesi"
+}
