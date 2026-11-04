@@ -7,6 +7,8 @@ weight: 19
 
 Versione 1.0 del 4/11/2026 (#57). Metodo e ripetizione: [`report/metodo/acquisizione/dettaglio-cig.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/dettaglio-cig.md).
 
+Scheda normativa (norme violate per esito del link, rimedi, revisione avversariale): [`report/metodo/accessibilita-documenti-normativa.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/accessibilita-documenti-normativa.md).
+
 ## Da dove viene il link
 
 Per ogni CIG la scheda di [dettaglio-cig](https://dettaglio-cig.anticorruzione.it/) mostra il link alla pagina dell'ente o della piattaforma con i documenti della gara. Quella pagina interroga un servizio protetto da CAPTCHA, che non usiamo in massa. Lo stesso valore (`documenti_di_gara_link`) è nell'API pubblica della **Pubblicità a valore legale** (PVL) di ANAC, che abbiamo scaricato per intero: 2.753.119 avvisi pubblicati dal 1/1/2024 al 3/11/2026. Il campo **non c'è nei dataset open data in blocco** e la PVL **non ha avvisi prima del 2024**.

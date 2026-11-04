@@ -293,3 +293,63 @@
   richiesta: "Aggiungere LINK_SITO_COMMITTENTE al dataset pubblicazioni (o un dataset dedicato cig -> link) in CSV/JSON, con lo storico pre-2024; rendere obbligatorio il link anche per adesioni a convenzioni/accordi quadro e affidamenti in house; pubblicare termini d'uso e licenza dell'API PVL"
   perche_serve: "Il link e' il punto d'ingresso dell'imbuto ai documenti da cui si attribuiscono prodotto e giurisdizione del cloud. Con un dataset bulk completo non servirebbero scraping ente per ente ne' accessi civici per trovare gli atti; oggi manca per 1 CIG su 3 dal 2024 e per tutto il pre-2024"
   rif: ["#57"]
+- id: R31
+  destinatario: ANAC (BDNCP/PVL); stazioni appaltanti
+  tipo: violazione-trasparenza
+  stato: proposta
+  titolo: Rendere obbligatorio e validato il link ai documenti di gara in ogni avviso PVL (link mancante)
+  evidenza: "Universo 2024-2026: link assente nel 34,9 % dei CIG, sempre assente per adesioni a convenzioni/AQ e in house (vedi R30, P18)"
+  prova: [report/metodo/accessibilita-documenti-normativa.md, esiti/pvl-link-cig/2026-11-04/]
+  richiesta: "Campo obbligatorio in tutte le schede PVL, con controllo sintattico e di raggiungibilita' all'invio (art. 88 c.1 e art. 27 c.3 d.lgs. 36/2023; delibera ANAC 263/2023 art. 6.2)"
+  perche_serve: Il link e' l'ingresso dell'imbuto ai documenti da cui si attribuisce la giurisdizione del cloud
+  rif: ["#63", "#57", R30]
+- id: R32
+  destinatario: Stazioni appaltanti; gestori delle piattaforme di approvvigionamento digitale; ANAC (vigilanza)
+  tipo: violazione-trasparenza
+  stato: proposta
+  titolo: Garantire la disponibilita' costante del link fino all'esecuzione del contratto (errori DNS/TLS/HTTP)
+  evidenza: "Verifica a campione 4/11/2026: 39 errori HTTP e 93 senza risposta su 400 domini (da confermare con prove ripetute)"
+  prova: [report/metodo/accessibilita-documenti-normativa.md]
+  richiesta: "Link stabili (niente URL di sessione), migrazioni di piattaforma con redirect; ANAC: controllo periodico automatico dei link in BDNCP (art. 27 c.3; del. 263/2023 art. 6.2)"
+  perche_serve: Senza link funzionante i documenti si recuperano solo con accesso civico
+  rif: ["#63"]
+- id: R33
+  destinatario: Stazioni appaltanti; ANAC (vigilanza; griglia OIV)
+  tipo: violazione-trasparenza
+  stato: proposta
+  titolo: Pubblicare sulla pagina del link almeno i documenti dell'Allegato 1 alla delibera 264/2023 (pagina senza documenti)
+  evidenza: "Verifica a campione 4/11/2026: 65 pagine su 400 senza documenti visibili (stima da rifare con browser reale)"
+  prova: [report/metodo/accessibilita-documenti-normativa.md]
+  richiesta: "Delibera a contrarre, bando/avviso/lettera di invito, disciplinare, capitolato sulla pagina del link; ANAC: inserire il controllo nella griglia di attestazione OIV"
+  perche_serve: Prodotto e giurisdizione si leggono nei documenti, non nei metadati
+  rif: ["#63"]
+- id: R34
+  destinatario: Gestori delle piattaforme di approvvigionamento digitale; stazioni appaltanti; ANAC
+  tipo: violazione-trasparenza
+  stato: proposta
+  titolo: Consultazione e download dei documenti di gara senza login, registrazione o pagamento
+  evidenza: "Verifica a campione 4/11/2026: 158 pagine su 400 con indizi di login o area riservata (stima per eccesso, da confermare)"
+  prova: [report/metodo/accessibilita-documenti-normativa.md]
+  richiesta: "Accesso 'gratuito, illimitato e diretto' per chiunque (art. 88 c.1; nota all'All. 1 della del. 264/2023); registrazione solo per presentare offerte; ANAC: atto di indirizzo esplicito"
+  perche_serve: La registrazione impedisce la raccolta automatica e la verifica pubblica
+  rif: ["#63"]
+- id: R35
+  destinatario: Gestori delle piattaforme; stazioni appaltanti
+  tipo: miglioramento
+  stato: proposta
+  titolo: Niente CAPTCHA, WAF o robots.txt restrittivi sulle pagine dei documenti di gara; elenco documenti anche in HTML statico
+  evidenza: "Blocchi gia' misurati sulle sezioni AT (R28, R29); molti portali caricano i documenti solo via JavaScript"
+  prova: [report/metodo/accessibilita-documenti-normativa.md]
+  richiesta: "Escludere le pagine dei documenti da CAPTCHA e regole anti-bot (art. 9 c.1 d.lgs. 33/2013 se collegate ad AT); fornire l'elenco dei file con URL diretti nell'HTML o in un endpoint JSON/OCDS"
+  perche_serve: Raccolta automatica a ritmo basso senza aggirare protezioni
+  rif: ["#63", R28, R29]
+- id: R36
+  destinatario: Stazioni appaltanti; ANAC
+  tipo: violazione-trasparenza
+  stato: proposta
+  titolo: Affiancare a scansioni e .p7m una copia in formato aperto e leggibile
+  evidenza: "Documenti pubblicati come immagine o solo come busta .p7m (es. configuratori PSN in R27)"
+  prova: [report/metodo/accessibilita-documenti-normativa.md]
+  richiesta: "Copia PDF con testo o formato aperto accanto al file firmato (art. 7 d.lgs. 33/2013, art. 68 CAD)"
+  perche_serve: L'estrazione automatica di prodotto e importi richiede testo leggibile
+  rif: ["#63"]
