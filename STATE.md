@@ -4,6 +4,22 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-04
 
+## PUNTO DI RIPRESA 4/11/2026 (sessione principale; scritto prima di un possibile stop per i limiti dei token)
+Per riprendere: leggi questa sezione, poi i ticket citati. Nulla gira in locale; i job lunghi sono sul server.
+- **Fatto oggi:**
+  - #57 chiuso nella sostanza: link PVL per il 65,1 % dei CIG, esiti in `esiti/pvl-link-cig/2026-11-04/`; P18 nel registro ANAC, presentazione e rendiconto rigenerati; R30 aggiornata.
+  - #62 convenzioni (prima PRINCO 2928).
+  - #63 accessibilità link per link: pagina del sito `/progetto/normativa-documenti-gara/`, generata da `report/metodo/accessibilita-documenti-normativa.md`, con giurisprudenza §6.
+  - #64 specifica «Visibilità PA» 0.2 in `progetti/visibilita-pa/SPECIFICA.md`.
+- **In corso:** monitor trasparenza beta (#61). Lo porta avanti un agente; il suo stato è nella sezione «Monitor trasparenza» qui sotto.
+- **Prossimi passi:**
+  - fare approvare a Fabio la specifica #64 (decisioni aperte nel §10);
+  - #63: verificare gli estremi delle pronunce riferite e scaricare la delibera ANAC 968/2019;
+  - #62: database delle convenzioni;
+  - aggiungere il cron giornaliero PVL;
+  - riallineare il server a origin quando finisce il censimento della trasparenza.
+- **Regola:** nessun `git stash` sul clone locale mentre il monitor scrive file. Il 4/11 uno stash accidentale è stato ripristinato; backup in `scratchpad/bk-1793784376`.
+
 ## Aggiornamento 4/11/2026 — link ai documenti di gara (#57) e convenzioni (#62)
 - **Il link ai documenti di gara è un ingresso obbligato dell'imbuto** (Fabio, 4/11). Sta solo nell'API PVL (`documenti_di_gara_link`), dal 1/1/2024. Non è in nessun dataset bulk.
 - Statistiche sull'universo 2024-2026 (`esiti/pvl-link-cig/2026-11-04/`):
