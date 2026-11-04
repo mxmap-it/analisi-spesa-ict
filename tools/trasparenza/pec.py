@@ -93,11 +93,19 @@ Modello {MODELLO}.
 
 
 def prepara(c, run: str, giro: str, solo: list[str] | None = None) -> int:
-    from esporta import VIOLAZIONI, righe_run
+    """PEC solo per violazioni pubblicate nel giro e, per i blocchi WAF/anti-bot, solo se confermati
+    (due giri a >= 60 minuti). Si leggono i dati pubblicati, così la PEC dice esattamente ciò che è online."""
+    import gzip
+    from esporta import PUBBLICA, VIOLAZIONI
     base = LAVORO / "pec" / giro
+    pec_ipa = dict(c.execute("SELECT cf, pec_ipa FROM enti"))
+    enti = json.loads(gzip.decompress((PUBBLICA / "giri" / giro / "enti.json.gz").read_bytes()))["enti"]
     n = 0
-    for r in righe_run(c, run):
+    for r in enti:
+        r["pec_ipa"] = pec_ipa.get(r["cf"], "")
         if r["esito"] not in VIOLAZIONI or (solo and r["cf"] not in solo):
+            continue
+        if r["esito"] == "bloccato da WAF/anti-bot" and r.get("conferma_blocco") != "confermato":
             continue
         d = base / r["cf"]
         (d / "allegati").mkdir(parents=True, exist_ok=True)
