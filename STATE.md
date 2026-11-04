@@ -18,6 +18,7 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - Il problema è nel registro ANAC come **P18** (gravità alta, pronto) e quindi nella presentazione e nel rendiconto «problemi e rimedi». **R30** è aggiornata con i numeri definitivi.
   - Obiettivo: con un dataset bulk cig -> link completo non servirebbero accessi civici per trovare gli atti.
   - R30 resta una proposta fino al sistema di invii massivi.
+- **Accessibilità dei documenti di gara, link per link (#63)**, sotto-progetto a priorità medio-bassa (Fabio, 4/11). È una misura diversa dal monitor #61: un campione e poi il censimento dei 2,4 milioni di link PVL, con la tassonomia degli esiti (login, JS, errori, nessun documento…), una doppia via, open data e cruscotto, e una campagna di azione dedicata con PEC ed esposti ad ANAC preparati e inviati da Fabio. Primo campione su 400 domini: documenti visibili solo su 44.
 - **Convenzioni (#62):** database delle principali convenzioni, documenti mancanti tramite accesso civico, una mini-sezione con l'analisi di ogni documento.
   - Prima convenzione: Consip **PRINCO** ID 2928 (CIG BAFCF54A81, 105 M€). Listini: Microsoft/Postel, Google/TIM, Open Source/Converge.
   - Tetto di ~62 M€ per marchio; requisito ACN QC1; trasferimenti fuori SEE ammessi.
