@@ -11,6 +11,7 @@ const reg = yaml.load(fs.readFileSync(path.join(REPO, "report/anac/problemi.yaml
 const byId = Object.fromEntries(reg.map((p) => [p.id, p]));
 
 const BREVE = {
+  P18: { t: "Link ai documenti di gara fuori dagli open data", cosa: "Il link agli atti di ogni CIG è solo nell'API PVL, dal 2024, e manca per un CIG su tre: sempre per adesioni a convenzioni e in house.", cons: "Per trovare determine e capitolati servono scraping ente per ente o accessi civici di massa; prima del 2024 il link non esiste.", rim: "Dataset bulk cig → link con lo storico, link obbligatorio anche per convenzioni e in house, licenza dell'API PVL.", ver: "Ogni mese: quota di CIG con link nei dataset bulk (oggi 0 %, nell'API 65,1 %)." },
   P01: { t: "Mesi OCDS duplicati", cosa: "24 mesi su 96 sono la copia di un altro mese: cambia solo l'indirizzo scritto dentro il file.", cons: "Le serie storiche sono falsate e nulla lo segnala: chi analizza quegli anni conta due volte gli stessi appalti.", rim: "Rigenerare i mesi dal contenuto reale e impedire che un mese identico a un altro venga pubblicato.", ver: "Ogni giorno: nessuna coppia di mesi identici." },
   P02: { t: "OCDS fermo a marzo 2026", cosa: "Del 2026 è pubblicato solo marzo. Da aprile lo standard internazionale non riceve dati.", cons: "Per chi usa lo standard internazionale, in Europa e nel mondo, gli appalti italiani si fermano a marzo.", rim: "Pubblicare i mesi mancanti, o dichiarare sulla pagina la sospensione e la data di ripresa.", ver: "Ogni mese, dopo il giorno 2: il mese precedente è pubblicato." },
   P03: { t: "Il vincitore manca negli appalti 2026", cosa: "Nel 2026 il fornitore manca in 4 aggiudicazioni su 5. Negli anni precedenti c'era nel 99% dei casi.", cons: "Nello standard internazionale non si sa chi vince gli appalti dell'anno in corso.", rim: "Ripristinare l'esportazione del fornitore, che ANAC già possiede, e rigenerare il 2026.", ver: "Ogni mese: quota di aggiudicazioni con fornitore." },
@@ -71,14 +72,14 @@ function badge(slide, x, y, id, colore, d = 0.62) {
 
 // 1. Copertina
 pres.addSection({ title: "Apertura" });
+const pronti = reg.filter((p) => p.pronto_per_anac);
+const conta = (g) => pronti.filter((p) => p.gravita === g).length;
 let s = pres.addSlide({ masterName: "COPERTINA", sectionTitle: "Apertura" });
-s.addText("I dati aperti di ANAC: quindici problemi, quindici rimedi", { placeholder: "title" });
+s.addText(`I dati aperti di ANAC: ${pronti.length} problemi, ${pronti.length} rimedi`, { placeholder: "title" });
 s.addText("Rilevazione di ottobre 2026 sulla Banca Dati Nazionale dei Contratti Pubblici\nOsservatorio Nazionale Sovranità Digitale", { placeholder: "body" });
 s.addNotes("Obiettivo dell'incontro: concordare con ANAC le correzioni e il modo di verificarle. Non è una valutazione del lavoro di ANAC: il patrimonio di dati è tra i più ampi d'Europa.");
 
 // 2. Il messaggio
-const pronti = reg.filter((p) => p.pronto_per_anac);
-const conta = (g) => pronti.filter((p) => p.gravita === g).length;
 s = pres.addSlide({ masterName: "CONTENUTO", sectionTitle: "Apertura" });
 s.addText("Un patrimonio prezioso, che oggi non si può usare in modo affidabile", { placeholder: "title" });
 const stats = [["12 milioni", "codici di gara (CIG) dal 2007 nella banca dati"], [String(pronti.length), "problemi confermati due volte"], [String(conta("alta")), "di gravità alta"], ["100%", "riproducibile da chiunque, con pochi comandi"]];
@@ -96,15 +97,16 @@ s.addNotes("Messaggio chiave: i dati ci sono e sono preziosi; i difetti sono nel
 
 // 3. Sintesi: griglia dei 15 problemi per gravità
 s = pres.addSlide({ masterName: "CONTENUTO", sectionTitle: "Apertura" });
-s.addText("Sintesi: quindici problemi, in ordine di gravità", { placeholder: "title" });
+s.addText(`Sintesi: ${pronti.length} problemi, in ordine di gravità`, { placeholder: "title" });
 const ordine = ["alta", "media", "bassa"];
 const elenco = ordine.flatMap((g) => pronti.filter((p) => p.gravita === g));
 elenco.forEach((p, i) => {
-  const col = i % 3, row = Math.floor(i / 3);
-  const x = 0.6 + col * 4.1, y = 1.35 + row * 1.02;
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: 3.9, h: 0.92, rectRadius: 0.08, fill: { color: HEX.tenue }, line: { color: HEX.tenue } });
+  const nc = elenco.length > 15 ? 4 : 3, cw = 12.3 / nc;
+  const col = i % nc, row = Math.floor(i / nc);
+  const x = 0.6 + col * cw, y = 1.35 + row * 1.02;
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: cw - 0.2, h: 0.92, rectRadius: 0.08, fill: { color: HEX.tenue }, line: { color: HEX.tenue } });
   badge(s, x + 0.15, y + 0.17, p.id, GRAV[p.gravita].c, 0.58);
-  t(s, BREVE[p.id].t, { x: x + 0.9, y: y + 0.12, w: 2.85, h: 0.7, fontSize: 14, bold: true, valign: "middle", color: HEX.navy });
+  t(s, BREVE[p.id].t, { x: x + 0.9, y: y + 0.12, w: cw - 1.25, h: 0.7, fontSize: 14, bold: true, valign: "middle", color: HEX.navy });
 });
 t(s, [{ text: "● ", options: { color: HEX.rosso } }, { text: "alta   " }, { text: "● ", options: { color: HEX.ambra } }, { text: "media   " }, { text: "● ", options: { color: HEX.ardesia } }, { text: "bassa" }], { x: 0.6, y: 6.5, w: 6, h: 0.3, fontSize: 12, color: HEX.ardesia });
 

@@ -276,6 +276,22 @@
   pronto_per_anac: false
   manca: "seconda via; documentazione della convenzione"
 
+- id: P18
+  titolo: "Il link ai documenti di gara di ciascun CIG non è negli open data: solo nell'API PVL, dal 2024, e manca per 1 CIG su 3"
+  conseguenza: "Per arrivare agli atti di un contratto (determina, capitolato, carrello) bisogna interrogare a pagine un'API senza licenza dichiarata. Per un terzo dei CIG il link non c'è, e per convenzioni, accordi quadro e in house manca sempre. Prima del 2024 non esiste. Chi analizza la spesa deve ripiegare su scraping ente per ente o su accessi civici di massa."
+  rif: [R30, "#57"]
+  gravita: alta
+  prova:
+    script: "tools/acquisizione/pvl_avvisi.py scarica && tools/acquisizione/pvl_dopo.sh"
+    esito: esiti/pvl-link-cig/2026-11-04/
+    sintesi: "2.753.119 avvisi PVL (1/1/2024-3/11/2026) contro 3.734.845 CIG BDNCP: il 69,9 % ha almeno un avviso e il 65,1 % ha il link (43,7 % dell'importo). Senza nessun avviso: 93.485 adesioni a convenzioni e accordi quadro, 884 confronti competitivi in adesione. In house: 30.214 CIG con avviso ma 0 link. Gennaio-febbraio 2024: link nell'1,5-3,2 % dei CIG. 174.834 CIG PVL assenti dai file BDNCP 2024+. Il campo non è nei dataset bulk (pubblicazioni ha solo date, OCDS solo URI CPV). dettaglio-cig lo mostra, ma la sua API richiede token CAPTCHA."
+    verificato_il: 2026-11-04
+  controvalidazione: "Per ogni giorno gli avvisi unici scaricati coincidono con il totale dichiarato dall'API. Verifica dei link su 400 domini (report/metodo/acquisizione/dettaglio-cig.md)."
+  azione_correttiva: "Pubblicare in bulk (CSV/JSON) un dataset cig -> link ai documenti di gara, con lo storico pre-2024. Rendere obbligatorio il link anche per adesioni a convenzioni/AQ e affidamenti in house. Dichiarare licenza e termini d'uso dell'API PVL."
+  metrica: "Quota di CIG BDNCP con link nei dataset bulk (oggi 0 %; nell'API PVL 65,1 %), per anno e per tipo di procedura"
+  stato: aperto
+  pronto_per_anac: true
+
 # Da aggiungere dopo la riesecuzione sul mirror completo (#31): controlli di integrità §3 (SA, AG, AT, CU, CD),
 # uno per voce con lo stesso schema.
 

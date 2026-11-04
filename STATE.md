@@ -2,7 +2,25 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-03
+**Ultimo aggiornamento:** 2026-11-04
+
+## Aggiornamento 4/11/2026 — link ai documenti di gara (#57) e convenzioni (#62)
+- **Il link ai documenti di gara è un ingresso obbligato dell'imbuto** (Fabio, 4/11). Sta solo nell'API PVL (`documenti_di_gara_link`), dal 1/1/2024. Non è in nessun dataset bulk.
+- Statistiche sull'universo 2024-2026 (`esiti/pvl-link-cig/2026-11-04/`):
+  - CIG: 3.734.845; il 69,9 % ha un avviso PVL, il 65,1 % ha il link (43,7 % dell'importo, che contiene anomalie);
+  - **0 link per le adesioni a convenzioni e accordi quadro** (93.485 CIG, nessun avviso) e per gli in house (30.214 CIG);
+  - gennaio-febbraio 2024: link nell'1,5-3,2 % dei CIG;
+  - affidamenti diretti AD3: 96 %; bandi P1_16: 99 %;
+  - 174.834 CIG PVL assenti da BDNCP;
+  - 36.888 domini, 16 famiglie di piattaforme attribuite.
+
+  Metodo in `report/metodo/acquisizione/dettaglio-cig.md`, pagina `sito/content/progetto/sistemi-documenti.md`. Per rifare tutto: `pvl_avvisi.py scarica` + `pvl_dopo.sh`. Manca il cron giornaliero.
+- Il problema è nel registro ANAC come **P18** (gravità alta, pronto) e quindi nella presentazione e nel rendiconto «problemi e rimedi». **R30** è aggiornata con i numeri definitivi.
+  - Obiettivo: con un dataset bulk cig -> link completo non servirebbero accessi civici per trovare gli atti.
+  - R30 resta una proposta fino al sistema di invii massivi.
+- **Convenzioni (#62):** database delle principali convenzioni, documenti mancanti tramite accesso civico, una mini-sezione con l'analisi di ogni documento.
+  - Prima convenzione: Consip **PRINCO** ID 2928 (CIG BAFCF54A81, 105 M€). Listini: Microsoft/Postel, Google/TIM, Open Source/Converge.
+  - Tetto di ~62 M€ per marchio; requisito ACN QC1; trasferimenti fuori SEE ammessi.
 
 ## Aggiornamento 4/11/2026 — Monitor trasparenza 1.1.0-beta (#61) — verso la beta
 - Codice 1.1.0-beta in `tools/trasparenza/` (commit 1eca969 e successivi): identità oneste, tassonomia, due giri di conferma, curl, origine desktop, schede, cambiamenti, catalogo con test, aggancio PVL (#57: `lavoro/pvl/*.csv`, non nostri).

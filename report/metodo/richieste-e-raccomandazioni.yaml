@@ -169,8 +169,8 @@
   titolo: Tabella aperta lotto → prodotto/provider e CIG di ogni iniziativa ICT
   evidenza: "Per l'AQ 2746 la corrispondenza lotto→provider si ricava solo dal titolo di un avviso di proroga in GUUE; SPC Cloud lotti 2-4, Sistema Cloud Toscana, convenzioni ARIA: composizione dei RTI e prodotti erogati ricostruiti da stampa e determine di terzi, con fonti discordanti"
   prova: report/metodo/llm/conoscenza-iniziative.yaml
-  richiesta: Dataset aperto per ogni iniziativa: CIG di AQ/convenzione e lotti, aggiudicatari, prodotti/marche e infrastrutture (con sede del data center)
-  perche_serve: Via 1/2 deterministiche: ogni contratto attuativo eredita prodotto e giurisdizione senza lettura del testo
+  richiesta: "Dataset aperto per ogni iniziativa: CIG di AQ/convenzione e lotti, aggiudicatari, prodotti/marche e infrastrutture (con sede del data center)"
+  perche_serve: "Via 1/2 deterministiche: ogni contratto attuativo eredita prodotto e giurisdizione senza lettura del testo"
   rif: ["#55"]
 - id: R19
   destinatario: AgID, ACN, centrali di committenza (Consip, regionali), enti
@@ -288,8 +288,8 @@
   tipo: dato-mancante
   stato: "proposta, da inviare quando ci sarà il sistema di invii massivi di richieste FOIA (software da progettare); nessun invio ad-hoc"
   titolo: Pubblicare in bulk, per ogni CIG, il link alla pagina dei documenti di gara (LINK_SITO_COMMITTENTE / documenti_di_gara_link), anche prima del 2024
-  evidenza: "3/11/2026: il campo non e' nel dataset pubblicazioni (solo date) ne' negli altri dataset del catalogo; dettaglio-cig lo mostra ma la sua API richiede token CAPTCHA mosparo (HTTP 403 senza); la PVL lo espone via API paginata solo dal 1/1/2024 e quasi mai per gli affidamenti diretti AD3 (0,3 % nel primo campione)"
-  prova: report/metodo/acquisizione/dettaglio-cig.md
-  richiesta: "Aggiungere LINK_SITO_COMMITTENTE al dataset pubblicazioni (o un dataset dedicato cig -> link) in CSV/JSON, con lo storico pre-2024; rendere obbligatorio il link anche nelle schede AD; pubblicare termini d'uso e licenza dell'API PVL"
-  perche_serve: Il link e' il punto d'ingresso ai documenti da cui si attribuiscono prodotto e giurisdizione del cloud; oggi copre solo i bandi dal 2024
+  evidenza: "3/11/2026: il campo non e' nel dataset pubblicazioni (solo date) ne' negli altri dataset del catalogo; dettaglio-cig lo mostra ma la sua API richiede token CAPTCHA mosparo (HTTP 403 senza). 4/11/2026, universo 2024-2026 (problema P18): 3.734.845 CIG BDNCP, il 69,9 % con avviso PVL e il 65,1 % con link (43,7 % dell'importo); 0 link per 93.485 adesioni a convenzioni e accordi quadro (nessun avviso) e per 30.214 affidamenti in house (avviso senza link); link nell'1,5-3,2 % dei CIG a gennaio-febbraio 2024; nulla prima del 2024. Il primo campione (AD3 0,3 %) era falsato dalla transizione di inizio 2024: sull'universo gli AD3 hanno il link al 96 %."
+  prova: [report/metodo/acquisizione/dettaglio-cig.md, esiti/pvl-link-cig/2026-11-04/, "report/anac/problemi.yaml#P18"]
+  richiesta: "Aggiungere LINK_SITO_COMMITTENTE al dataset pubblicazioni (o un dataset dedicato cig -> link) in CSV/JSON, con lo storico pre-2024; rendere obbligatorio il link anche per adesioni a convenzioni/accordi quadro e affidamenti in house; pubblicare termini d'uso e licenza dell'API PVL"
+  perche_serve: "Il link e' il punto d'ingresso dell'imbuto ai documenti da cui si attribuiscono prodotto e giurisdizione del cloud. Con un dataset bulk completo non servirebbero scraping ente per ente ne' accessi civici per trovare gli atti; oggi manca per 1 CIG su 3 dal 2024 e per tutto il pre-2024"
   rif: ["#57"]
