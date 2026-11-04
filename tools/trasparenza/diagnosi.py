@@ -133,6 +133,7 @@ def riconosci_blocco(status, intest: dict, corpo: str, alias: list[str]) -> dict
 
 TRANSITORI = re.compile(r"timeout|timed out|reset by peer|remotedisconnected|connection aborted|temporar", re.I)
 BACKOFF = (10, 30)  # secondi fra i ritentativi di un errore transitorio
+BACKOFF_TIMEOUT = (15,)  # per timeout e connessioni assenti un solo ritentativo (costano fino a 40 s ciascuno)
 
 
 def transitorio(d: dict) -> bool:
@@ -143,10 +144,15 @@ def con_ritentativi(f, *a, **k) -> dict:
     """Errore transitorio (timeout, connessione chiusa, 502/503/504 senza firma di WAF): fino a 2 ritentativi con
     backoff. Si registrano tutti i passaggi; l'esito è quello dell'ultimo."""
     storia = []
-    for attesa in (0,) + BACKOFF:
-        if attesa:
-            time.sleep(attesa)
+    attese = [0] + list(BACKOFF)
+    i = 0
+    while i < len(attese):
+        if attese[i]:
+            time.sleep(attese[i])
         d = f(*a, **k)
+        if i == 0 and not d.get("status") and re.search(r"timeout|timed out|connect", d.get("errore") or "", re.I):
+            attese = [0] + list(BACKOFF_TIMEOUT)
+        i += 1
         storia.append({k2: d.get(k2) for k2 in ("ts_locale", "status", "errore", "secondi")})
         if not transitorio(d):
             break
@@ -301,6 +307,8 @@ def diagnostica(ente: dict, nome_origine: str, browser=True, headed=False, canal
     for nome, tipo, ua in IDENTITA:
         if dns_ko and nome != "bot-progetto":
             continue  # nome inesistente: un tentativo basta, il risultato non dipende dal client
+        if nome in ("curl", "browser-ua") and len(out) >= 2 and all(not t.get("status") and t.get("errore") for t in out[:2]):
+            continue  # nessuna risposta né al bot né a python: si salta a browser reale (risparmio di minuti per ente)
         if tipo == "http":
             d = con_ritentativi(tentativo_http, at, ua, alias, verify=tl.get("valido") is not False)
         elif tipo == "curl":
