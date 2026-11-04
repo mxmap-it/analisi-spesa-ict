@@ -1,4 +1,4 @@
-# Visibilità della PA: specifica funzionale e tecnica (bozza 0.1, 4/11/2026)
+# Visibilità della PA: specifica funzionale e tecnica (bozza 0.2, 4/11/2026)
 
 Nome provvisorio: **Visibilità PA** (repo futuro dedicato; per ora vive qui in `progetti/visibilita-pa/`).
 Stato: **proposta da approvare** (Fabio). Le decisioni aperte sono in §10. Nulla è implementato.
@@ -119,6 +119,14 @@ Regole:
    (Playwright); per un campione, **desktop residenziale** (la via già prevista nel monitor #61).
    Scopo: distinguere robots.txt da blocchi WAF/anti-bot che colpiscono gli UA non-browser.
 6. Sitemap dichiarate: solo indice (numero di URL, date), senza seguire tutto.
+7. **Matrice dei blocchi per User-Agent** (Fabio, 4/11): sulla home e su `/robots.txt` si ripete la stessa
+   richiesta con un insieme fisso e versionato di UA, **tutti dichiarati con l'URL del progetto**: bot del
+   progetto, browser desktop, browser mobile, curl, wget, python-requests, Go-http-client, UA vuoto. Per i
+   crawler di terzi (Googlebot, crawler AI) **non** si invia il loro UA: si registra solo il verdetto del
+   robots.txt e, dal lato R3, la risposta reale dell'origine ai crawler che passano dal proxy.
+   Esito per host: quali UA ricevono 200, 403/429/5xx, pagina di sfida (CAPTCHA, JS challenge), contenuto
+   diverso (sha256 e dimensione), e con quale firma WAF (header `server`, `cf-ray`, `x-akamai-*`, cookie di
+   sfida). La matrice è un dato pubblicato e la prova per R2 e per la configurazione di R3.
 
 ### 5.2 Interpretazione
 - Parser **Protego** (Scrapy, RFC 9309 + estensioni Google: `*`, `$`, precedenza per lunghezza) come riferimento;
@@ -182,6 +190,14 @@ Fonti di partenza, tutte conservate come vie distinte:
 3. URL dei link PVL ai documenti di gara (S3) → host AT/gare effettivamente usati;
 4. sitemap e ricerca interna.
 Esito per ente: insieme delle sezioni AT (spesso più d'una), concordanza fra vie, piattaforma.
+
+### 6.1-bis Mappare l'albo pretorio (Fabio, 4/11)
+Per ogni ente si cerca anche il **path dell'albo pretorio online**, che serve a R3 per le regole privacy (§7.4).
+Vie: link «Albo pretorio» dalla home e dal footer; path noti per piattaforma (es. `/albo`, `albo-pretorio`,
+`albopretorio`, moduli Halley, Maggioli, DigitalPA, ISWEB…); regole robots che lo escludono (categoria LLM
+`albo-pretorio` di R1); sitemap. Esito per ente: URL dell'albo (host + prefisso di path, anche su dominio di
+piattaforma), via che l'ha trovato, confidenza (`certa`, `probabile`, `non trovato`). È un dato del catalogo,
+pubblicato e riusato da R3 come proposta di esclusione.
 
 ### 6.2 Tre modalità di accesso, misurate separatamente
 | modalità | cosa si verifica | esito |
@@ -251,15 +267,26 @@ escludono, misurando quanti documenti esclusi vengono effettivamente scoperti e 
 Proposta: **B** con limiti di dimensione e tempo, più ricorso a Wayback come archivio di lungo periodo.
 
 ### 7.4 Rischi e vincoli (revisione avversariale: da decidere prima di costruire)
-1. **Dati personali.** Molti robots.txt escludono **l'albo pretorio** e allegati con dati personali: il
-   Garante privacy (linee guida 2014 sulla trasparenza on line, da verificare nel testo vigente) chiede che i
-   dati personali pubblicati per obbligo **non** siano indicizzati dai motori fuori dalla sezione AT e che gli
-   atti dell'albo non restino reperibili dopo il periodo di affissione. Re-indicizzarli può violare il GDPR e
-   rendere **noi** titolari del trattamento. ⇒ R3 va limitato alle sezioni **AT obbligatorie** (art. 9 c.1),
-   con esclusione dell'albo e dei documenti con dati personali non obbligatori, filtro e procedura di rimozione.
-2. **User-Agent.** «Cambiare user agent» per aggirare i blocchi verso il proxy contrasta con le regole del
-   progetto (§2): il proxy usa UA dichiarato; se l'origine blocca il proxy, si registra e si serve la copia
-   Wayback, senza impersonare browser in modo non dichiarato o motori.
+1. **Dati personali: regole di esclusione esplicite e configurabili per sito** (Fabio, 4/11). Molti
+   robots.txt escludono **l'albo pretorio** e allegati con dati personali. Il Garante privacy (linee guida 2014
+   sulla trasparenza on line, da verificare nel testo vigente) chiede che i dati personali pubblicati per obbligo
+   non siano indicizzati fuori dalla sezione AT e che gli atti dell'albo non restino reperibili dopo
+   l'affissione; re-indicizzarli può renderci titolari del trattamento. Quindi R3 ha un **file di regole di
+   esclusione** versionato (`r3/esclusioni.yaml`), pubblico, con:
+   - regole **globali** (default, proposte): albo pretorio (dal catalogo §6.1-bis), path con categorie LLM
+     `area-riservata-login` e `dati-personali-dichiarati`, pattern di atti con dati personali (es. concorsi,
+     graduatorie, sanzioni, notifiche), documenti oltre i termini di pubblicazione;
+   - **impostazioni per sito**, esplicite: `albo: escludi | includi`, `path_esclusi: [...]`,
+     `path_inclusi: [...]`, `motivazione`, `deciso_da`, `data`. Nessun sito entra in R3 senza una voce
+     esplicita; il default per l'albo è `escludi` finché non viene deciso diversamente sito per sito;
+   - procedura di **rimozione su richiesta** (contatto pubblico, tempi, registro delle rimozioni).
+2. **User-Agent: header sostituibile solo per configurazione** (Fabio, 4/11). Il proxy usa di norma il
+   proprio UA dichiarato. Se la matrice dei blocchi per UA di R1 (§5.1 punto 7) **prova** che un sito blocca
+   specificamente quel UA, la configurazione del sito in R3 può impostare manualmente un header `User-Agent`
+   diverso (`user_agent: "<valore>"`, con `motivazione` e riferimento alla prova della matrice). Il sistema
+   **non** cambia UA in modo proattivo o automatico, non ruota UA e non usa mai gli UA dei motori o dei crawler
+   AI. Ogni richiesta registra l'UA effettivamente usato. Se l'origine blocca comunque, si registra e si serve
+   la copia Wayback.
 3. **Diritto d'autore e riuso.** Gli atti amministrativi sono in larga parte esclusi dalla tutela (art. 5 l.
    633/1941) e il CAD (art. 52) favorisce il riuso dei dati pubblicati: da verificare caso per caso per
    allegati di terzi (progetti, offerte tecniche, elaborati di professionisti).
@@ -334,11 +361,12 @@ Ticket: uno per rilascio; il monitor #61 e la campagna #63 diventano figli di R2
 
 1. **Nome e repo** (es. «Visibilità PA», «Indicizzabile», «Aperto ai motori») e organizzazione GitHub
    (mxmap-it o nuova).
-2. **Perimetro di R3**: solo sezioni AT obbligatorie (proposta) o anche altri contenuti esclusi? Esclusione
-   dell'albo e dei documenti con dati personali (proposta: sì).
+2. **Perimetro di R3**: solo sezioni AT obbligatorie (proposta) o anche altri contenuti esclusi?
+   *Deciso 4/11:* regole di esclusione esplicite e impostazioni per sito; albo mappato per ente e incluso o
+   escluso sito per sito (default `escludi`).
 3. **R3 copia locale**: opzione B (proposta), A o C.
-4. **User-Agent di R3**: solo UA dichiarato (proposta) — la richiesta di «cambiare user agent» va riformulata
-   così, per coerenza con le regole del progetto.
+4. ~~User-Agent di R3~~ *Deciso 4/11:* UA dichiarato di norma; header sostituibile **solo manualmente** per
+   sito, quando la matrice dei blocchi per UA lo prova; mai proattivo.
 5. **Dominio del proxy** e soggetto responsabile (associazione/osservatorio), contatto per rimozioni.
 6. **llms.txt** in R1: solo presenza e contenuto (proposta) o anche valutazione qualitativa.
 7. **Frequenze**: mensile completo + giornaliero sui cambiamenti (proposta).
@@ -351,3 +379,7 @@ Ticket: uno per rilascio; il monitor #61 e la campagna #63 diventano figli di R2
 - Blocchi WAF verso il nostro server → seconda e terza via, desktop residenziale, registrazione come dato.
 - Carico sul server condiviso → giri notturni, `nice`, memoria limitata; R3 su macchina propria.
 - R3 legale/privacy → pilota piccolo, perimetro AT, parere preventivo.
+
+## Registro delle revisioni
+- 0.1 (4/11/2026): prima stesura.
+- 0.2 (4/11/2026, Fabio): matrice dei blocchi per User-Agent (§5.1.7); mappatura dell'albo pretorio per ente (§6.1-bis); R3 con regole di esclusione esplicite, impostazioni per sito e header User-Agent sostituibile solo manualmente su prova (§7.4, §10).
