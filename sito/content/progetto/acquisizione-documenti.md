@@ -38,6 +38,8 @@ Usiamo **più modalità di acquisizione**, in ordine di complessità e costo cre
 
 Con il nuovo Codice dei contratti (d.lgs. 36/2023) dal 2024 ogni fase dell'acquisto passa da piattaforme certificate, che trasmettono le schede alla BDNCP. I documenti di gara dovrebbero essere raggiungibili da un puntatore nei dati. Prima, i documenti stavano solo sui siti degli enti, senza un collegamento leggibile da una macchina tra CIG e documento.
 
+Copertura misurata del link ai documenti per CIG e mappa delle piattaforme: [Dove sono i documenti di gara](../sistemi-documenti/) (65,1 % dei CIG 2024-2026).
+
 Per il periodo dal 2024 contano quindi soprattutto i livelli L1-L3, che leggono il puntatore; per il periodo precedente servono scraping e accesso civico (L4-L7). In entrambi i casi non c'è un campo che dica quale prodotto si compra né sotto quale giurisdizione.
 
 Il quadro normativo è **riferito, da verificare** sulle delibere ANAC 261, 263 e 264/2023.
