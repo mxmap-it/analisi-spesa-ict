@@ -41,6 +41,8 @@ Per riprendere: leggi questa sezione, poi i ticket citati. Nulla gira in locale;
 
 ## Aggiornamento 4/11/2026 — Monitor trasparenza 1.1.0-beta (#61) — verso la beta
 
+**Aggiornamento 4/11, 15:00 UTC — beta completa pubblicata.** Fase 2 finita sul server (giro 2 di conferma su 3.459 enti, 12:52 UTC); pacchetto desktop b importato (3.213 tentativi); export finale con `--forza`. Numeri: 30.701 enti; violazioni art. 9: 5.546 (robots 4.592, WAF/anti-bot 759, noindex 195); accessibili 14.327; accesso negato a tutti 439; blocchi confermati in due giri 1.786. Il cron `riprendi-fase2.sh` non ha più nulla da fare (fase 2 finita) e si può togliere. Open data ~150 MB (prove 73 MB): da spostare in un repository dati per la stabile.
+
 **Stato esatto (4/11, 11:30 UTC):**
 - FATTO: giro 2026-11 (sonda 1.0.0) su 30.701 enti; diagnosi estesa giro 1 su 6.543 dubbi (max 25 per host); caratterizzazione di 300 enti; controllo falsi positivi (53 enti); **beta pubblicata** (commit 3e989b9: open data in `sito/static/dati/trasparenza/`, pagina `/progetto/trasparenza-accessibilita/`).
 - IN CORSO sul server: `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) sta facendo la **diagnosi giro 2** (conferma), poi farà da solo `esporta --run 2026-11 --forza` e scriverà «fase 2 finita».

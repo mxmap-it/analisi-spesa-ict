@@ -228,7 +228,7 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         prove = []
         # copia pubblica dei log grezzi solo per gli enti con un problema da documentare (violazioni e accesso negato);
         # per gli altri il log resta nell'archivio, citato con lo sha256
-        pubblica_prove = r["esito"] in VIOLAZIONI or r["esito"] == "accesso negato a tutti i client"
+        pubblica_prove = r["esito"] in ("bloccato da WAF/anti-bot", "accesso negato a tutti i client")  # robots e noindex: prova = robots.txt e regola
         for t in ts:
             s = t.get("grezzo_sha256")
             if s and not pubblica_prove:
