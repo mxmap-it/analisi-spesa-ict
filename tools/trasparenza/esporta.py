@@ -186,7 +186,7 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         r["meccanismi_blocco"] = ";".join(tx["meccanismi"])
         r["identita_bloccate"] = tx["identita_bloccate"]
         r["robots_identita_negate"] = ";".join(tx["robots_negati"])
-        r["conferma_blocco"] = tx["conferma"]
+        r["conferma_blocco"] = tx["conferma"] or ("solo prima prova" if r["esito"] == "bloccato da WAF/anti-bot" else "")
         r["giri_conferma"] = tx["giri_conferma"] or ""
         r["esito_sonda"] = r["esito"]
         if srv and r.get("at_url") and r["esito"] in ("bloccato da WAF/anti-bot", "irraggiungibile") and tx["conferma"] == "non riprodotto":
