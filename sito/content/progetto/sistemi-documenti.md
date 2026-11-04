@@ -7,7 +7,7 @@ weight: 19
 
 Versione 1.0 del 4/11/2026 (#57). Metodo e ripetizione: [`report/metodo/acquisizione/dettaglio-cig.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/dettaglio-cig.md).
 
-Scheda normativa (norme violate per esito del link, rimedi, revisione avversariale): [`report/metodo/accessibilita-documenti-normativa.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/accessibilita-documenti-normativa.md).
+Scheda normativa (norme violate per esito del link, giurisprudenza, rimedi, revisione avversariale): [pagina](/progetto/normativa-documenti-gara/), sorgente [`report/metodo/accessibilita-documenti-normativa.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/accessibilita-documenti-normativa.md).
 
 ## Da dove viene il link
 
