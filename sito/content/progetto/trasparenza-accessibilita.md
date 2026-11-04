@@ -109,7 +109,7 @@ intestazioni, firme riconosciute e link ai log grezzi.
 - Ultimo giro: [`enti.csv.gz`](/dati/trasparenza/ultimo/enti.csv.gz), [`enti.json.gz`](/dati/trasparenza/ultimo/enti.json.gz),
   [`tentativi.csv.gz`](/dati/trasparenza/ultimo/tentativi.csv.gz) (un tentativo per riga), `tentativi.jsonl.gz` (completo, con intestazioni),
   `caratteri.jsonl.gz` (due vie e ricerca), [`riepilogo.json`](/dati/trasparenza/ultimo/riepilogo.json),
-  [`cambiamenti.csv`](/dati/trasparenza/ultimo/cambiamenti.csv), tabelle `per-*.csv`, schede `schede/<cf>.json`.
+  [`cambiamenti.csv`](/dati/trasparenza/ultimo/cambiamenti.csv), tabelle `per-*.csv`, schede `giri/<giro>/schede/<cf>.json.gz`.
 - Ogni giro resta in `/dati/trasparenza/giri/AAAA-MM-GG/` e non si sovrascrive; elenco in [`indice.json`](/dati/trasparenza/indice.json);
   serie storica in [`storico.json`](/dati/trasparenza/storico.json); segnalazioni in [`invii.json`](/dati/trasparenza/invii.json).
 - Log grezzi dei tentativi falliti (dump HTTP o HAR del browser) in `/dati/trasparenza/prove/<sha256>.*.gz`: il nome è l'impronta del contenuto.
@@ -185,7 +185,7 @@ Promise.all([j(U+'riepilogo.json'),j(U+'dashboard.json'),j(B+'storico.json'),j(B
   $('tr-piu').style.display=ok.length>vis?'':'none'}
  tb.addEventListener('click',ev=>{const tr=ev.target.closest('tr.cl');if(!tr||ev.target.tagName==='A')return;const nx=tr.nextElementSibling;if(nx&&nx.classList.contains('tr-scheda')){nx.remove();return}
   const cf=tr.dataset.cf;const td=document.createElement('tr');td.className='tr-scheda';td.innerHTML='<td colspan="6">Caricamento…</td>';tr.after(td);
-  j(U+'schede/'+encodeURIComponent(cf)+'.json').then(s=>{if(!s){td.firstChild.textContent='Nessuna verifica estesa per questo ente (esito della sola prima prova).';return}
+  fetch(B+'giri/'+R.giro+'/schede/'+encodeURIComponent(cf)+'.json.gz').then(r=>r.ok?new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json():null).catch(()=>null).then(s=>{if(!s){td.firstChild.textContent='Nessuna verifica estesa per questo ente (esito della sola prima prova).';return}
    const t=(s.tentativi||[]).map(x=>`<tr><td>${esc(x.origine)}<br><small>${esc(x.ip)} ${esc(x.asn)} ${esc(x.asn_nome)}</small></td><td>${esc(x.identita)}<br><small>${esc(x.client)}</small></td><td>${esc(x.ts)}<br><small>giro ${esc(x.giro_conferma)}</small></td><td>${esc(x.status??'')} ${esc(x.errore||'')}<br><small>${esc((x.redirect||[]).join(' → '))}</small></td><td>${esc((x.vendor_blocco||[]).join(', '))}${x.challenge_js?' · challenge JS':''}${x.captcha?' · CAPTCHA':''}<br><small>${esc((x.cdn||[]).join(', '))}</small></td><td>${x.grezzo_url&&x.grezzo_url.startsWith('/')?`<a href="${esc(x.grezzo_url)}">log grezzo</a>`:esc(x.grezzo_sha256?('sha256 '+x.grezzo_sha256.slice(0,12)+'…'):'')}</td></tr>`).join('');
    const d=(s.tentativi||[])[0]||{};const k=s.caratterizzazione;
    td.firstChild.innerHTML=`<p><strong>${esc(s.esito)}</strong>${s.esito_sonda&&s.esito_sonda!==s.esito?` (prima prova: ${esc(s.esito_sonda)})`:''} · ${esc(s.meccanismi||'')} · ${esc(s.conferma||'')}<br>identità bloccate: ${esc(s.identita_bloccate||'nessuna')} · robots.txt vieta a: ${esc(s.robots_negati||'nessuno')} ${s.robots_sha256?`(<small>sha256 ${esc(s.robots_sha256.slice(0,12))}…</small>)`:''}</p>

@@ -91,7 +91,8 @@ def classifica(srv: list[dict], dsk: list[dict], negati: list[str]) -> dict:
     giri = sorted({t.get("giro_conferma") or 1 for t in srv})
     conferma = ""
     if srv:
-        bloccato_per_giro = {g: any(fallito(t) and not t.get("transitorio") for t in srv if (t.get("giro_conferma") or 1) == g) for g in giri}
+        # conferma sui soli rifiuti HTTP o pagine di blocco: errori di TLS o di rete non confermano un WAF
+        bloccato_per_giro = {g: any(respinto(t) for t in srv if (t.get("giro_conferma") or 1) == g) for g in giri}
         if len(giri) >= 2:
             ts = {g: max(t["ts"] for t in srv if (t.get("giro_conferma") or 1) == g) for g in giri}
             distanti = _sec(ts[giri[-1]]) - _sec(ts[giri[0]]) >= DISTANZA_CONFERMA

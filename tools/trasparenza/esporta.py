@@ -25,6 +25,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 import tassonomia
+from tassonomia import fallito as fallito_t
 from comune import LAVORO, RADICE, VERSIONE_METODO, adesso, connetti
 
 PUBBLICA = Path(os.environ.get("TRASPARENZA_PUBBLICA", RADICE / "sito" / "static" / "dati" / "trasparenza"))
@@ -197,7 +198,8 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         r["conferma_blocco"] = tx["conferma"] or ("solo prima prova" if r["esito"] == "bloccato da WAF/anti-bot" else "")
         r["giri_conferma"] = tx["giri_conferma"] or ""
         r["esito_sonda"] = r["esito"]
-        if srv and r.get("at_url") and r["esito"] in ("bloccato da WAF/anti-bot", "irraggiungibile") and tx["conferma"] == "non riprodotto":
+        if (srv and r.get("at_url") and r["esito"] == "irraggiungibile"
+                and any(not fallito_t(t) for t in srv if (t.get("giro_conferma") or 1) == max(x.get("giro_conferma") or 1 for x in srv))):
             r["esito"] = "accessibile"
             r["dettaglio_esito"] = f"blocco della prima prova non riprodotto nelle verifiche successive ({r['dettaglio_esito']})"[:300]
         elif (r["esito"] == "bloccato da WAF/anti-bot" and "nessun client accettato (blocco totale o sito guasto)" in tx["meccanismi"]
@@ -206,13 +208,32 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
             # (controllo dei falsi positivi del 3/11/2026: 14 casi su 30 «WAF» erano così anche da IP residenziale)
             r["esito"] = "accesso negato a tutti i client"
             r["dettaglio_esito"] = f"anche il browser reale riceve errore ({r['dettaglio_esito']})"[:300]
+        elif (srv and r["esito"] == "bloccato da WAF/anti-bot"
+              and not any(m.startswith(("WAF", "challenge", "CAPTCHA", "nessun client")) for m in tx["meccanismi"])):
+            # la verifica estesa non trova alcun rifiuto HTTP né pagina di blocco: resta il problema reale, se c'è
+            prima = r["dettaglio_esito"]
+            if r.get("robots_blocchi"):
+                r["esito"], r["dettaglio_esito"] = "bloccato da robots.txt", r["robots_blocchi"][:300]
+            elif any((t.get("tls") or {}).get("valido") is False for t in srv):
+                r["esito"], r["dettaglio_esito"] = "tls invalido", (srv[0]["tls"].get("errore") or "")[:300]
+            elif any(not fallito_t(t) for t in srv):
+                r["esito"] = "accessibile"
+                r["dettaglio_esito"] = f"blocco della prima prova non riprodotto nelle verifiche successive ({prima})"[:300]
+            else:
+                r["esito"], r["dettaglio_esito"] = "irraggiungibile", f"solo errori di rete, nessun rifiuto HTTP ({prima})"[:300]
+            r["conferma_blocco"] = "non riprodotto"
         elif r["esito"] == "bloccato da WAF/anti-bot" and "errore transitorio" in tx["meccanismi"]:
             r["esito"] = "irraggiungibile"
             r["dettaglio_esito"] = "solo errori transitori di rete: non è un blocco"
         prove = []
+        # copia pubblica dei log grezzi solo per gli enti con un problema da documentare (violazioni e accesso negato);
+        # per gli altri il log resta nell'archivio, citato con lo sha256
+        pubblica_prove = r["esito"] in VIOLAZIONI or r["esito"] == "accesso negato a tutti i client"
         for t in ts:
             s = t.get("grezzo_sha256")
-            if s:
+            if s and not pubblica_prove:
+                t["grezzo_url"] = f"archivio sha256:{s}"
+            elif s:
                 nome = f"{s}.{'har-ridotto.json' if t.get('grezzo_tipo') == 'har' else 'txt'}.gz"
                 src = ARCHIVIO / "blobs" / "sha256" / s[:2] / s[2:4] / s
                 if src.exists() and not (prove_dir / nome).exists():
@@ -252,7 +273,7 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
                                    "intestazioni": (t.get("catena") or [{}])[-1].get("intestazioni") or t.get("intestazioni") or {},
                                    "dns": t.get("dns"), "tls": t.get("tls")} for t in ts],
                   "caratterizzazione": car.get(r["cf"]), "pvl": {"link": r.get("pvl_link_n"), "sistemi": r.get("pvl_sistemi")}}
-        (pub / "schede" / f"{r['cf']}.json").write_text(json.dumps(scheda, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        _gz(pub / "schede" / f"{r['cf']}.json.gz", json.dumps(scheda, ensure_ascii=False, separators=(",", ":")))
     return righe
 
 
@@ -381,9 +402,12 @@ def aggiorna_indici():
     (PUBBLICA / "storico.json").write_text(json.dumps(storico, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     ult = PUBBLICA / "ultimo"
     shutil.rmtree(ult, ignore_errors=True)
-    shutil.copytree(PUBBLICA / "giri" / giri[-1], ult)
+    # «ultimo» = copia dei file dell'ultimo giro senza le schede (la dashboard le legge da giri/<giro>/schede/)
+    shutil.copytree(PUBBLICA / "giri" / giri[-1], ult, ignore=shutil.ignore_patterns("schede", "dashboard.json"))
+    if (PUBBLICA / "giri" / giri[-1] / "dashboard.json").exists():
+        shutil.move(PUBBLICA / "giri" / giri[-1] / "dashboard.json", ult / "dashboard.json")
     (ult / "GIRO").write_text(giri[-1] + "\n", encoding="utf-8")
-    for g in giri[:-1]:  # il file della dashboard serve solo nell'ultimo giro
+    for g in giri:  # il file della dashboard sta solo in «ultimo»
         (PUBBLICA / "giri" / g / "dashboard.json").unlink(missing_ok=True)
     import pec
     pec.esporta_stato_invii(PUBBLICA / "invii.json")
