@@ -1,0 +1,1232 @@
+{
+ "schema": "trasparenza.riepilogo/1",
+ "run": "2026-11",
+ "giro": "2026-11-03",
+ "metodo": "1.1.0-beta",
+ "generato": "2026-11-04T06:31:15Z",
+ "enti": 30701,
+ "esiti": {
+  "accessibile": 14124,
+  "irraggiungibile": 4600,
+  "bloccato da robots.txt": 4579,
+  "sezione non individuata": 3034,
+  "url non valido": 2233,
+  "bloccato da WAF/anti-bot": 1220,
+  "tls invalido": 578,
+  "noindex": 195,
+  "accesso negato a tutti i client": 138
+ },
+ "segnali": {
+  "robots": 4870,
+  "tls": 719,
+  "waf": 421,
+  "noindex": 211
+ },
+ "violazioni_art9": 5994,
+ "piattaforme": {
+  "ignota": 11676,
+  "(non provata)": 7943,
+  "trasparenza-pa.net": 3537,
+  "WordPress": 2360,
+  "Halley Informatica": 2323,
+  "trasparenza-valutazione-merito.it": 553,
+  "Maggioli JCityGov": 343,
+  "Joomla": 313,
+  "Drupal": 304,
+  "ISWEB": 279,
+  "Municipium": 263,
+  "DigitalPA": 156,
+  "DigitalPA (portaletrasparenza.net)": 150,
+  "APKappa": 122,
+  "Liferay": 99,
+  "ComuneWeb (comuneweb.it)": 68,
+  "Soluzioni PA (soluzionipa.it)": 65,
+  "Plone": 65,
+  "Studio K": 34,
+  "traspare.com": 20,
+  "TYPO3": 16,
+  "Netribe on.Cube": 4,
+  "Grafiche E. Gaspari": 4,
+  "Maggioli (maggiolicloud.it)": 3,
+  "Dedagroup": 1
+ },
+ "provenienza_at": {
+  "home-sito-indicepa": 9682,
+  "(nessuna)": 7943,
+  "anac-l190-host-trasparenza": 6291,
+  "anac-l190-regola-zf": 2576,
+  "anac-l190-prefisso": 2247,
+  "home-host-l190": 1962
+ },
+ "firme_waf": {
+  "Cloudflare challenge": 64,
+  "CAPTCHA": 53,
+  "Radware/ShieldSquare": 11,
+  "Azure Application Gateway/Front Door": 2
+ },
+ "per_categoria": {
+  "(n.d.)": {
+   "irraggiungibile": 168,
+   "accessibile": 205,
+   "url non valido": 62,
+   "sezione non individuata": 114,
+   "accesso negato a tutti i client": 3,
+   "bloccato da WAF/anti-bot": 25,
+   "bloccato da robots.txt": 35,
+   "tls invalido": 30,
+   "noindex": 1
+  },
+  "Comuni e loro Consorzi e Associazioni": {
+   "bloccato da robots.txt": 642,
+   "url non valido": 303,
+   "irraggiungibile": 698,
+   "accessibile": 5011,
+   "tls invalido": 91,
+   "sezione non individuata": 894,
+   "bloccato da WAF/anti-bot": 272,
+   "accesso negato a tutti i client": 94,
+   "noindex": 41
+  },
+  "Automobile Club Federati ACI": {
+   "bloccato da WAF/anti-bot": 90,
+   "accessibile": 6,
+   "irraggiungibile": 3,
+   "sezione non individuata": 1,
+   "noindex": 1
+  },
+  "Stazioni Appaltanti": {
+   "accessibile": 292,
+   "sezione non individuata": 82,
+   "irraggiungibile": 31,
+   "tls invalido": 8,
+   "url non valido": 115,
+   "bloccato da WAF/anti-bot": 26,
+   "noindex": 8,
+   "bloccato da robots.txt": 4
+  },
+  "Aziende e Consorzi Pubblici Territoriali per l'Edilizia Residenziale": {
+   "url non valido": 4,
+   "accessibile": 17,
+   "bloccato da robots.txt": 4,
+   "sezione non individuata": 3,
+   "bloccato da WAF/anti-bot": 2,
+   "noindex": 1,
+   "irraggiungibile": 1
+  },
+  "SOCIETA' PER AZIONI": {
+   "sezione non individuata": 113,
+   "accessibile": 149,
+   "tls invalido": 4,
+   "irraggiungibile": 85,
+   "url non valido": 32,
+   "noindex": 6,
+   "bloccato da WAF/anti-bot": 16,
+   "bloccato da robots.txt": 2
+  },
+  "Gestori di Pubblici Servizi": {
+   "bloccato da robots.txt": 20,
+   "sezione non individuata": 175,
+   "accessibile": 625,
+   "url non valido": 186,
+   "irraggiungibile": 90,
+   "tls invalido": 17,
+   "bloccato da WAF/anti-bot": 46,
+   "accesso negato a tutti i client": 3,
+   "noindex": 19
+  },
+  "Fondazioni Lirico, Sinfoniche": {
+   "sezione non individuata": 2,
+   "accessibile": 8,
+   "irraggiungibile": 2
+  },
+  "Autorita' Portuali": {
+   "accessibile": 10,
+   "url non valido": 2,
+   "bloccato da WAF/anti-bot": 4,
+   "sezione non individuata": 1
+  },
+  "ENTI PUBBLICI ECONOMICI": {
+   "irraggiungibile": 50,
+   "accessibile": 56,
+   "sezione non individuata": 26,
+   "bloccato da WAF/anti-bot": 7,
+   "url non valido": 9,
+   "tls invalido": 15,
+   "bloccato da robots.txt": 8,
+   "accesso negato a tutti i client": 1
+  },
+  "ENTI PUBBLICI NON ECONOMICI": {
+   "irraggiungibile": 1039,
+   "sezione non individuata": 330,
+   "accessibile": 665,
+   "noindex": 6,
+   "url non valido": 224,
+   "bloccato da robots.txt": 331,
+   "tls invalido": 116,
+   "bloccato da WAF/anti-bot": 31,
+   "accesso negato a tutti i client": 16
+  },
+  "Enti e Istituzioni di Ricerca Pubblici": {
+   "accessibile": 35,
+   "url non valido": 8,
+   "bloccato da WAF/anti-bot": 5,
+   "sezione non individuata": 5,
+   "bloccato da robots.txt": 3,
+   "irraggiungibile": 1
+  },
+  "Consorzi per l'Area di Sviluppo Industriale": {
+   "accessibile": 7,
+   "irraggiungibile": 3,
+   "noindex": 8,
+   "url non valido": 1,
+   "sezione non individuata": 1
+  },
+  "Stazioni Appaltanti Gestori di Pubblici Servizi": {
+   "irraggiungibile": 13,
+   "accessibile": 97,
+   "bloccato da WAF/anti-bot": 6,
+   "bloccato da robots.txt": 5,
+   "url non valido": 12,
+   "sezione non individuata": 15,
+   "noindex": 2,
+   "tls invalido": 4
+  },
+  "Comunita' Montane e loro Consorzi e Associazioni": {
+   "accessibile": 83,
+   "sezione non individuata": 38,
+   "irraggiungibile": 32,
+   "url non valido": 17,
+   "bloccato da robots.txt": 13,
+   "bloccato da WAF/anti-bot": 7,
+   "tls invalido": 4
+  },
+  "Aziende Pubbliche di Servizi alla Persona": {
+   "accessibile": 261,
+   "sezione non individuata": 69,
+   "irraggiungibile": 49,
+   "bloccato da robots.txt": 11,
+   "bloccato da WAF/anti-bot": 11,
+   "url non valido": 56,
+   "tls invalido": 22,
+   "noindex": 1
+  },
+  "SOCIETA' A RESPONSABILITA' LIMITATA": {
+   "accessibile": 218,
+   "irraggiungibile": 120,
+   "url non valido": 76,
+   "sezione non individuata": 82,
+   "tls invalido": 7,
+   "bloccato da WAF/anti-bot": 21,
+   "noindex": 11,
+   "bloccato da robots.txt": 7,
+   "accesso negato a tutti i client": 1
+  },
+  "Istituti Zooprofilattici Sperimentali": {
+   "bloccato da WAF/anti-bot": 3,
+   "accessibile": 6,
+   "irraggiungibile": 1
+  },
+  "Societa' in Conto Economico Consolidato": {
+   "accessibile": 87,
+   "bloccato da WAF/anti-bot": 9,
+   "url non valido": 19,
+   "irraggiungibile": 10,
+   "tls invalido": 2,
+   "bloccato da robots.txt": 2,
+   "sezione non individuata": 5,
+   "noindex": 2
+  },
+  "Consorzi tra Amministrazioni Locali": {
+   "url non valido": 30,
+   "accessibile": 97,
+   "bloccato da robots.txt": 16,
+   "irraggiungibile": 27,
+   "bloccato da WAF/anti-bot": 6,
+   "sezione non individuata": 22,
+   "tls invalido": 6,
+   "accesso negato a tutti i client": 1,
+   "noindex": 2
+  },
+  "Federazioni Nazionali, Ordini, Collegi e Consigli Professionali": {
+   "accessibile": 1324,
+   "bloccato da WAF/anti-bot": 63,
+   "url non valido": 150,
+   "sezione non individuata": 131,
+   "noindex": 23,
+   "irraggiungibile": 123,
+   "tls invalido": 61,
+   "bloccato da robots.txt": 16
+  },
+  "Altri Enti Locali": {
+   "sezione non individuata": 105,
+   "irraggiungibile": 40,
+   "accessibile": 194,
+   "url non valido": 135,
+   "noindex": 4,
+   "bloccato da robots.txt": 6,
+   "bloccato da WAF/anti-bot": 6,
+   "tls invalido": 7
+  },
+  "Enti Pubblici Non Economici": {
+   "accessibile": 39,
+   "url non valido": 10,
+   "sezione non individuata": 7,
+   "irraggiungibile": 10,
+   "bloccato da robots.txt": 3,
+   "bloccato da WAF/anti-bot": 3,
+   "noindex": 1,
+   "tls invalido": 1
+  },
+  "Province e loro Consorzi e Associazioni": {
+   "accessibile": 53,
+   "bloccato da robots.txt": 8,
+   "noindex": 2,
+   "irraggiungibile": 13,
+   "tls invalido": 1,
+   "bloccato da WAF/anti-bot": 8,
+   "url non valido": 7,
+   "sezione non individuata": 2
+  },
+  "Aziende Sanitarie Locali": {
+   "accessibile": 68,
+   "bloccato da WAF/anti-bot": 9,
+   "irraggiungibile": 21,
+   "sezione non individuata": 30,
+   "url non valido": 3,
+   "bloccato da robots.txt": 1,
+   "tls invalido": 1
+  },
+  "Istituti di Istruzione Statale di Ogni Ordine e Grado": {
+   "irraggiungibile": 1040,
+   "accessibile": 2908,
+   "bloccato da robots.txt": 3109,
+   "sezione non individuata": 273,
+   "bloccato da WAF/anti-bot": 422,
+   "url non valido": 385,
+   "tls invalido": 16,
+   "noindex": 19
+  },
+  "Agenzie ed Enti Regionali di Sviluppo Agricolo": {
+   "irraggiungibile": 1,
+   "sezione non individuata": 1,
+   "bloccato da robots.txt": 2,
+   "accessibile": 7,
+   "url non valido": 2
+  },
+  "Aziende Ospedaliere, Aziende Ospedaliere Universitarie, Policlinici e Istituti di Ricovero e Cura a Carattere Scientifico Pubblici": {
+   "accessibile": 58,
+   "url non valido": 3,
+   "bloccato da robots.txt": 6,
+   "irraggiungibile": 20,
+   "bloccato da WAF/anti-bot": 9,
+   "tls invalido": 1,
+   "sezione non individuata": 4
+  },
+  "SOCIETA' COOPERATIVA": {
+   "sezione non individuata": 1
+  },
+  "Camere di Commercio, Industria, Artigianato e Agricoltura e loro Unioni Regionali": {
+   "accessibile": 59,
+   "sezione non individuata": 3,
+   "url non valido": 3,
+   "bloccato da robots.txt": 7,
+   "irraggiungibile": 4,
+   "bloccato da WAF/anti-bot": 3,
+   "noindex": 1
+  },
+  "Agenzie ed Enti per il Turismo": {
+   "bloccato da robots.txt": 1,
+   "accessibile": 12,
+   "irraggiungibile": 3,
+   "sezione non individuata": 3,
+   "url non valido": 3
+  },
+  "Agenzie ed Enti Regionali per la Formazione, la Ricerca e l'Ambiente": {
+   "sezione non individuata": 1,
+   "url non valido": 3,
+   "accessibile": 22,
+   "tls invalido": 1,
+   "irraggiungibile": 3,
+   "bloccato da robots.txt": 3,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Teatri Stabili ad Iniziativa Pubblica": {
+   "accessibile": 14,
+   "sezione non individuata": 2,
+   "url non valido": 1
+  },
+  "OPERE PIE E SOCIETA' DI MUTUO SOCCORSO": {
+   "sezione non individuata": 5,
+   "irraggiungibile": 6,
+   "accessibile": 3,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Regioni, Province Autonome e loro Consorzi e Associazioni": {
+   "sezione non individuata": 8,
+   "accessibile": 27,
+   "bloccato da WAF/anti-bot": 4,
+   "url non valido": 8,
+   "irraggiungibile": 4,
+   "bloccato da robots.txt": 2
+  },
+  "Universita' e Istituti di Istruzione Universitaria Pubblici": {
+   "accessibile": 33,
+   "bloccato da WAF/anti-bot": 13,
+   "url non valido": 8,
+   "sezione non individuata": 6,
+   "noindex": 1,
+   "bloccato da robots.txt": 4,
+   "tls invalido": 2,
+   "irraggiungibile": 4
+  },
+  "CONSORZI CON PERSONALITA' GIURIDICA": {
+   "sezione non individuata": 51,
+   "irraggiungibile": 37,
+   "accessibile": 29,
+   "url non valido": 11,
+   "noindex": 2,
+   "tls invalido": 1,
+   "bloccato da WAF/anti-bot": 2,
+   "bloccato da robots.txt": 1
+  },
+  "ALTRI ENTI ED ISTITUTI CON PERSONALITA' GIURIDICA": {
+   "accessibile": 100,
+   "sezione non individuata": 40,
+   "accesso negato a tutti i client": 2,
+   "bloccato da WAF/anti-bot": 7,
+   "noindex": 4,
+   "irraggiungibile": 147,
+   "url non valido": 38,
+   "bloccato da robots.txt": 77,
+   "tls invalido": 21
+  },
+  "FONDAZIONI": {
+   "url non valido": 9,
+   "accessibile": 27,
+   "irraggiungibile": 7,
+   "bloccato da WAF/anti-bot": 3,
+   "sezione non individuata": 21,
+   "bloccato da robots.txt": 3,
+   "tls invalido": 3,
+   "noindex": 1
+  },
+  "AZIENDE REGIONALI, PROVINCIALI, COMUNALI E LORO CONSORZI": {
+   "accessibile": 20,
+   "irraggiungibile": 11,
+   "sezione non individuata": 8,
+   "bloccato da robots.txt": 1,
+   "bloccato da WAF/anti-bot": 1,
+   "tls invalido": 2,
+   "url non valido": 5,
+   "accesso negato a tutti i client": 1
+  },
+  "CONSORZI AI SENSI DELLA L.142/90": {
+   "sezione non individuata": 9,
+   "irraggiungibile": 7,
+   "tls invalido": 2,
+   "accessibile": 13,
+   "bloccato da robots.txt": 3,
+   "url non valido": 3
+  },
+  "ENTE": {
+   "irraggiungibile": 2,
+   "accessibile": 1,
+   "sezione non individuata": 1
+  },
+  "ENTE DIRITTO PUBBLICO": {
+   "irraggiungibile": 1,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Agenzie, Enti e Consorzi Pubblici per il Diritto allo Studio Universitario": {
+   "sezione non individuata": 2,
+   "accessibile": 20,
+   "bloccato da WAF/anti-bot": 2,
+   "irraggiungibile": 3,
+   "url non valido": 2,
+   "bloccato da robots.txt": 2
+  },
+  "Autorita' di Bacino": {
+   "accessibile": 6,
+   "bloccato da robots.txt": 2,
+   "sezione non individuata": 6,
+   "irraggiungibile": 2,
+   "bloccato da WAF/anti-bot": 2
+  },
+  "Enti di Regolazione dei Servizi Idrici e o dei Rifiuti": {
+   "bloccato da robots.txt": 14,
+   "accessibile": 58,
+   "url non valido": 8,
+   "sezione non individuata": 10,
+   "irraggiungibile": 6,
+   "bloccato da WAF/anti-bot": 4,
+   "tls invalido": 2
+  },
+  "SOCIETA' COOPERATIVE E CONSORZI ISCRITTI NEI REGISTRI PREFETTIZI": {
+   "sezione non individuata": 4,
+   "accessibile": 9,
+   "accesso negato a tutti i client": 1,
+   "bloccato da WAF/anti-bot": 2,
+   "url non valido": 1,
+   "bloccato da robots.txt": 1
+  },
+  "AMMINISTRAZIONI PUBBLICHE": {
+   "accessibile": 291,
+   "irraggiungibile": 194,
+   "bloccato da WAF/anti-bot": 7,
+   "sezione non individuata": 34,
+   "url non valido": 52,
+   "tls invalido": 26,
+   "bloccato da robots.txt": 44,
+   "accesso negato a tutti i client": 3,
+   "noindex": 1
+  },
+  "NATURA GIURIDICA SCONOSCIUTA": {
+   "accessibile": 26,
+   "sezione non individuata": 7,
+   "irraggiungibile": 24,
+   "url non valido": 4,
+   "bloccato da robots.txt": 3
+  },
+  "COMUNE": {
+   "accessibile": 4
+  },
+  "ASSOCIAZIONI RICONOSCIUTE, NON RICONOSCIUTE, DI FATTO (NON RESIDENTI)": {
+   "sezione non individuata": 3,
+   "irraggiungibile": 1,
+   "accessibile": 1
+  },
+  "Consorzi di Bacino Imbrifero Montano": {
+   "accessibile": 32,
+   "sezione non individuata": 11,
+   "irraggiungibile": 5,
+   "url non valido": 14,
+   "bloccato da WAF/anti-bot": 1,
+   "bloccato da robots.txt": 1
+  },
+  "ENTI OSPEDALIERI": {
+   "irraggiungibile": 19,
+   "accessibile": 6,
+   "sezione non individuata": 4,
+   "tls invalido": 2,
+   "url non valido": 2,
+   "bloccato da WAF/anti-bot": 1,
+   "bloccato da robots.txt": 1
+  },
+  "Enti di Previdenza ed Assistenza Sociale in Conto Economico Consolidato privati ": {
+   "url non valido": 1,
+   "accessibile": 15,
+   "sezione non individuata": 3,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Consorzi Interuniversitari di Ricerca": {
+   "sezione non individuata": 8,
+   "accessibile": 15,
+   "url non valido": 4,
+   "irraggiungibile": 4,
+   "bloccato da robots.txt": 1
+  },
+  "Enti Pubblici Produttori di Servizi Assistenziali, Ricreativi e Culturali ": {
+   "accessibile": 33,
+   "sezione non individuata": 4,
+   "bloccato da WAF/anti-bot": 5,
+   "irraggiungibile": 5,
+   "bloccato da robots.txt": 2,
+   "noindex": 2,
+   "tls invalido": 3,
+   "url non valido": 8
+  },
+  "Citta' Metropolitane": {
+   "irraggiungibile": 1,
+   "accessibile": 9,
+   "sezione non individuata": 1,
+   "bloccato da robots.txt": 2,
+   "url non valido": 1,
+   "noindex": 1
+  },
+  "Organi Costituzionali e di Rilievo Costituzionale": {
+   "url non valido": 2,
+   "bloccato da WAF/anti-bot": 2,
+   "accessibile": 4,
+   "sezione non individuata": 1
+  },
+  "Agenzie Regionali per le Erogazioni in Agricoltura": {
+   "url non valido": 2,
+   "accessibile": 4,
+   "bloccato da robots.txt": 1,
+   "irraggiungibile": 1,
+   "sezione non individuata": 1,
+   "noindex": 1
+  },
+  "Parchi Nazionali, Consorzi e Enti Gestori di Parchi e Aree Naturali Protette": {
+   "sezione non individuata": 14,
+   "accessibile": 78,
+   "bloccato da robots.txt": 31,
+   "irraggiungibile": 15,
+   "bloccato da WAF/anti-bot": 7,
+   "url non valido": 10,
+   "tls invalido": 9,
+   "accesso negato a tutti i client": 1,
+   "noindex": 1
+  },
+  "Unioni di Comuni e loro Consorzi e Associazioni": {
+   "bloccato da robots.txt": 24,
+   "url non valido": 48,
+   "irraggiungibile": 82,
+   "sezione non individuata": 85,
+   "accessibile": 230,
+   "tls invalido": 9,
+   "accesso negato a tutti i client": 8,
+   "bloccato da WAF/anti-bot": 20,
+   "noindex": 4
+  },
+  "SOCIETA' CONSORTILE A RESPONSABILITA' LIMITATA": {
+   "bloccato da robots.txt": 1,
+   "accessibile": 4,
+   "irraggiungibile": 3,
+   "url non valido": 4,
+   "sezione non individuata": 1
+  },
+  "AZIENDA SPECIALE DI ENTE LOCALE": {
+   "sezione non individuata": 2
+  },
+  "ALTRE SOCIETA' COOPERATIVE": {
+   "bloccato da robots.txt": 2,
+   "accessibile": 1
+  },
+  "CONSORZI SENZA PERSONALITA' GIURIDICA": {
+   "sezione non individuata": 12,
+   "url non valido": 1,
+   "accessibile": 4,
+   "irraggiungibile": 2,
+   "bloccato da robots.txt": 1
+  },
+  "Autorita' Amministrative Indipendenti": {
+   "accessibile": 11,
+   "bloccato da WAF/anti-bot": 3,
+   "irraggiungibile": 1,
+   "url non valido": 2
+  },
+  "SOCIETA' A RESPONSABILITA' LIMITATA CON UNICO SOCIO": {
+   "irraggiungibile": 11,
+   "noindex": 2,
+   "accessibile": 4,
+   "url non valido": 4,
+   "sezione non individuata": 2,
+   "tls invalido": 1
+  },
+  "SOCIETA' SPORTIVE DILETTANTISTICHE SENZA FINI DI LUCRO": {
+   "accessibile": 2,
+   "sezione non individuata": 1
+  },
+  "ORGANIZZAZIONI SENZA PERSONALITA', ESCLUSE LE COMUNIONI": {
+   "irraggiungibile": 147,
+   "accessibile": 85,
+   "url non valido": 31,
+   "sezione non individuata": 56,
+   "bloccato da WAF/anti-bot": 3,
+   "bloccato da robots.txt": 37,
+   "tls invalido": 34
+  },
+  "Enti di Previdenza ed Assistenza Sociale in Conto Economico Consolidato pubblici": {
+   "accessibile": 1,
+   "url non valido": 1
+  },
+  "SOCIETA' PER AZIONI,AZIENDE SPECIALI E CONSORZI DI CUI AGLI ARTT.31,113,114,115 E 116 DEL D.LGS 18 AGOSTO 2000, N.267 (TESTO UNICO DELLE LEGGI SULL'ORDINAMENTO DEGLI ENTI LOCALI)": {
+   "sezione non individuata": 2,
+   "accessibile": 1
+  },
+  "Istituzioni per l'Alta Formazione Artistica, Musicale e Coreutica - AFAM": {
+   "url non valido": 12,
+   "sezione non individuata": 10,
+   "bloccato da robots.txt": 5,
+   "accessibile": 49,
+   "noindex": 14,
+   "bloccato da WAF/anti-bot": 6,
+   "tls invalido": 9,
+   "irraggiungibile": 1
+  },
+  "ASSOCIAZIONI RICONOSCIUTE": {
+   "accessibile": 18,
+   "url non valido": 12,
+   "sezione non individuata": 13,
+   "bloccato da WAF/anti-bot": 4,
+   "irraggiungibile": 49,
+   "noindex": 1,
+   "tls invalido": 11,
+   "bloccato da robots.txt": 9
+  },
+  "SOCIETA' PER AZIONI CON SOCIO UNICO": {
+   "irraggiungibile": 2,
+   "tls invalido": 1,
+   "url non valido": 1,
+   "sezione non individuata": 2,
+   "accessibile": 4
+  },
+  "Agenzie Regionali Sanitarie": {
+   "sezione non individuata": 1,
+   "accessibile": 6,
+   "bloccato da WAF/anti-bot": 1,
+   "irraggiungibile": 1
+  },
+  "ASSOCIAZIONI NON RICONOSCIUTE E COMITATI": {
+   "tls invalido": 14,
+   "bloccato da robots.txt": 33,
+   "sezione non individuata": 13,
+   "irraggiungibile": 49,
+   "accessibile": 58,
+   "url non valido": 14,
+   "bloccato da WAF/anti-bot": 2,
+   "accesso negato a tutti i client": 2,
+   "noindex": 1
+  },
+  "SOCIETA' IN ACCOMANDITA PER AZIONI": {
+   "irraggiungibile": 4,
+   "sezione non individuata": 3,
+   "url non valido": 1,
+   "accessibile": 1
+  },
+  "AZIENDA SPECIALE": {
+   "accessibile": 1
+  },
+  "ALTRE ORGANIZZAZIONI DI PERSONE O DI BENI SENZA PERSONALITA' GIURIDICA (ESCLUSE LE COMUNIONI)": {
+   "sezione non individuata": 2,
+   "url non valido": 3,
+   "irraggiungibile": 2,
+   "accessibile": 1,
+   "accesso negato a tutti i client": 1,
+   "tls invalido": 1
+  },
+  "SOCIETA' CONSORTILE": {
+   "accessibile": 1
+  },
+  "Agenzie ed Enti Regionali del Lavoro": {
+   "accessibile": 10,
+   "url non valido": 1,
+   "sezione non individuata": 1,
+   "bloccato da robots.txt": 1
+  },
+  "CONSORZI ": {
+   "url non valido": 1,
+   "irraggiungibile": 1,
+   "accessibile": 1
+  },
+  "ASSOCIAZIONI TRA ARTISTI E PROFESSIONISTI": {
+   "sezione non individuata": 1
+  },
+  "SOCIETA' CONSORTILE PER AZIONI": {
+   "accessibile": 1,
+   "tls invalido": 1
+  },
+  "AZIENDE AUTONOME DI CURA, SOGGIORNO E TURISMO": {
+   "irraggiungibile": 3,
+   "url non valido": 1,
+   "sezione non individuata": 2
+  },
+  "ALTRO": {
+   "accessibile": 1
+  },
+  "SOCIETÀ A RESPONSABILITÀ LIMITATA": {
+   "irraggiungibile": 1
+  },
+  "Commissari Straordinari Governativi": {
+   "sezione non individuata": 5,
+   "url non valido": 38,
+   "bloccato da robots.txt": 1,
+   "accessibile": 33,
+   "irraggiungibile": 11,
+   "bloccato da WAF/anti-bot": 2
+  },
+  "Agenzie Fiscali": {
+   "irraggiungibile": 1,
+   "accessibile": 3
+  },
+  "ENTE IMPRESA": {
+   "sezione non individuata": 1
+  },
+  "ALTRI ENTI ED ISTITUTI (NON RESIDENTI)": {
+   "sezione non individuata": 1,
+   "tls invalido": 3,
+   "irraggiungibile": 2,
+   "accessibile": 1,
+   "url non valido": 2
+  },
+  "AZIENDA SPECIALE DI CUI AL DLGS 267/2000": {
+   "tls invalido": 1
+  },
+  "SOCIETA' SEMPLICI, IRREGOLARI O DI FATTO": {
+   "irraggiungibile": 7,
+   "tls invalido": 4,
+   "accessibile": 5,
+   "sezione non individuata": 2,
+   "bloccato da robots.txt": 1
+  },
+  "SOCIETA' IN NOME COLLETTIVO": {
+   "accessibile": 1
+  },
+  "CONDOMINI": {
+   "accessibile": 2,
+   "bloccato da robots.txt": 1,
+   "sezione non individuata": 2,
+   "irraggiungibile": 1
+  },
+  "Presidenza del Consiglio dei Ministri, Ministeri e Avvocatura dello Stato": {
+   "accessibile": 9,
+   "irraggiungibile": 4,
+   "sezione non individuata": 2,
+   "bloccato da WAF/anti-bot": 1,
+   "url non valido": 1
+  },
+  "Forze di Polizia ad Ordinamento Civile e Militare per la Tutela dell'Ordine e della Sicurezza Pubblica": {
+   "url non valido": 1,
+   "accessibile": 2
+  },
+  "ENTI ED ISTITUTI DI PREVIDENZA E DI ASSISTENZA SOCIALE": {
+   "irraggiungibile": 2,
+   "sezione non individuata": 3,
+   "accessibile": 4
+  },
+  "SOCIETA' O ENTI ESTERI CON AMMINISTARZIONE IN ITALIA": {
+   "irraggiungibile": 2
+  },
+  "ISTITUTO E SCUOLA PUBBLICA DI OGNI ORDINE E GRADO": {
+   "bloccato da robots.txt": 2,
+   "sezione non individuata": 1
+  },
+  "CASSE MUTUE, FONDI DI PREVIDENZA ETC. CON O SENZA PERSONALITA'": {
+   "sezione non individuata": 1
+  },
+  "UNIONE DI COMUNI": {
+   "irraggiungibile": 1
+  },
+  "ALTRE ORGANIZZAZIONI DI PERSONE O DI BENI SENZA PERSONALITA' GIURIDICA": {
+   "sezione non individuata": 1
+  },
+  "ASSOCIAZIONI TRA PROFESSIONISTI": {
+   "irraggiungibile": 1
+  },
+  "Agenzie Regionali e Provinciale per la Rappresentanza Negoziale": {
+   "accessibile": 1
+  },
+  "ALTRE ORGANIZZAZIONI DI PERSONE E DI BENI (NON RESIDENTI)": {
+   "sezione non individuata": 1
+  },
+  "ALTRE ORGANIZZAZIONI DI PERSONE O DI BENI (NON RESIDENTI)": {
+   "tls invalido": 1
+  },
+  "Aziende ed Amministrazioni dello Stato ad Ordinamento Autonomo": {
+   "accessibile": 2
+  },
+  "NON CLASSIFICATO": {
+   "accessibile": 9,
+   "bloccato da WAF/anti-bot": 1,
+   "irraggiungibile": 2,
+   "sezione non individuata": 2
+  }
+ },
+ "per_regione": {
+  "(n.d.)": {
+   "irraggiungibile": 219,
+   "accessibile": 289,
+   "url non valido": 86,
+   "sezione non individuata": 151,
+   "accesso negato a tutti i client": 7,
+   "bloccato da WAF/anti-bot": 30,
+   "bloccato da robots.txt": 46,
+   "tls invalido": 45,
+   "noindex": 1
+  },
+  "Calabria": {
+   "bloccato da robots.txt": 135,
+   "bloccato da WAF/anti-bot": 42,
+   "accessibile": 682,
+   "irraggiungibile": 176,
+   "sezione non individuata": 90,
+   "url non valido": 95,
+   "tls invalido": 12,
+   "noindex": 2
+  },
+  "Molise": {
+   "bloccato da robots.txt": 72,
+   "url non valido": 49,
+   "bloccato da WAF/anti-bot": 9,
+   "accessibile": 135,
+   "irraggiungibile": 66,
+   "sezione non individuata": 25,
+   "tls invalido": 6,
+   "noindex": 2
+  },
+  "Marche": {
+   "irraggiungibile": 162,
+   "bloccato da WAF/anti-bot": 38,
+   "url non valido": 58,
+   "accessibile": 525,
+   "tls invalido": 15,
+   "bloccato da robots.txt": 38,
+   "accesso negato a tutti i client": 3,
+   "sezione non individuata": 56,
+   "noindex": 5
+  },
+  "Valle d'Aosta": {
+   "accessibile": 58,
+   "bloccato da WAF/anti-bot": 4,
+   "sezione non individuata": 23,
+   "irraggiungibile": 97,
+   "url non valido": 12,
+   "accesso negato a tutti i client": 1,
+   "tls invalido": 1,
+   "noindex": 1
+  },
+  "Campania": {
+   "url non valido": 252,
+   "bloccato da robots.txt": 763,
+   "bloccato da WAF/anti-bot": 73,
+   "accessibile": 941,
+   "irraggiungibile": 254,
+   "sezione non individuata": 136,
+   "noindex": 11,
+   "tls invalido": 31,
+   "accesso negato a tutti i client": 3
+  },
+  "Sicilia": {
+   "bloccato da WAF/anti-bot": 69,
+   "tls invalido": 48,
+   "bloccato da robots.txt": 772,
+   "accessibile": 781,
+   "irraggiungibile": 338,
+   "url non valido": 196,
+   "sezione non individuata": 101,
+   "noindex": 17,
+   "accesso negato a tutti i client": 1
+  },
+  "Basilicata": {
+   "accessibile": 158,
+   "bloccato da WAF/anti-bot": 20,
+   "sezione non individuata": 29,
+   "irraggiungibile": 79,
+   "url non valido": 37,
+   "bloccato da robots.txt": 126,
+   "tls invalido": 6,
+   "noindex": 1
+  },
+  "Lazio": {
+   "bloccato da robots.txt": 197,
+   "bloccato da WAF/anti-bot": 111,
+   "accessibile": 1201,
+   "irraggiungibile": 326,
+   "sezione non individuata": 253,
+   "url non valido": 255,
+   "tls invalido": 63,
+   "accesso negato a tutti i client": 18,
+   "noindex": 25
+  },
+  "Veneto": {
+   "accessibile": 880,
+   "bloccato da WAF/anti-bot": 168,
+   "irraggiungibile": 423,
+   "sezione non individuata": 204,
+   "url non valido": 157,
+   "bloccato da robots.txt": 181,
+   "tls invalido": 42,
+   "accesso negato a tutti i client": 2,
+   "noindex": 8
+  },
+  "Friuli-Venezia Giulia": {
+   "sezione non individuata": 172,
+   "accessibile": 360,
+   "bloccato da WAF/anti-bot": 47,
+   "irraggiungibile": 134,
+   "url non valido": 47,
+   "tls invalido": 22,
+   "bloccato da robots.txt": 16,
+   "noindex": 2
+  },
+  "Lombardia": {
+   "bloccato da WAF/anti-bot": 192,
+   "irraggiungibile": 505,
+   "bloccato da robots.txt": 380,
+   "accessibile": 2400,
+   "url non valido": 237,
+   "sezione non individuata": 243,
+   "accesso negato a tutti i client": 29,
+   "tls invalido": 73,
+   "noindex": 22
+  },
+  "Toscana": {
+   "accessibile": 752,
+   "bloccato da WAF/anti-bot": 49,
+   "url non valido": 117,
+   "irraggiungibile": 230,
+   "bloccato da robots.txt": 337,
+   "noindex": 13,
+   "sezione non individuata": 114,
+   "tls invalido": 34,
+   "accesso negato a tutti i client": 1
+  },
+  "Emilia-Romagna": {
+   "accessibile": 813,
+   "bloccato da WAF/anti-bot": 75,
+   "irraggiungibile": 288,
+   "tls invalido": 49,
+   "noindex": 27,
+   "sezione non individuata": 181,
+   "accesso negato a tutti i client": 17,
+   "bloccato da robots.txt": 165,
+   "url non valido": 118
+  },
+  "Sardegna": {
+   "tls invalido": 23,
+   "accessibile": 379,
+   "bloccato da robots.txt": 298,
+   "bloccato da WAF/anti-bot": 45,
+   "irraggiungibile": 218,
+   "accesso negato a tutti i client": 35,
+   "sezione non individuata": 45,
+   "url non valido": 49,
+   "noindex": 4
+  },
+  "Umbria": {
+   "bloccato da WAF/anti-bot": 24,
+   "accessibile": 230,
+   "url non valido": 25,
+   "irraggiungibile": 99,
+   "sezione non individuata": 40,
+   "bloccato da robots.txt": 21,
+   "tls invalido": 11,
+   "noindex": 3,
+   "accesso negato a tutti i client": 1
+  },
+  "Puglia": {
+   "bloccato da WAF/anti-bot": 59,
+   "url non valido": 117,
+   "accessibile": 776,
+   "bloccato da robots.txt": 410,
+   "noindex": 15,
+   "sezione non individuata": 92,
+   "accesso negato a tutti i client": 15,
+   "irraggiungibile": 225,
+   "tls invalido": 16
+  },
+  "Abruzzo": {
+   "accessibile": 472,
+   "bloccato da WAF/anti-bot": 31,
+   "irraggiungibile": 132,
+   "url non valido": 54,
+   "tls invalido": 13,
+   "bloccato da robots.txt": 151,
+   "sezione non individuata": 43,
+   "noindex": 6
+  },
+  "Piemonte": {
+   "irraggiungibile": 370,
+   "accessibile": 1199,
+   "sezione non individuata": 619,
+   "accesso negato a tutti i client": 2,
+   "bloccato da WAF/anti-bot": 83,
+   "bloccato da robots.txt": 351,
+   "noindex": 18,
+   "url non valido": 130,
+   "tls invalido": 44
+  },
+  "Liguria": {
+   "bloccato da WAF/anti-bot": 35,
+   "accessibile": 371,
+   "sezione non individuata": 99,
+   "url non valido": 55,
+   "irraggiungibile": 154,
+   "bloccato da robots.txt": 110,
+   "tls invalido": 20,
+   "noindex": 6,
+   "accesso negato a tutti i client": 3
+  },
+  "Trentino-Alto Adige": {
+   "sezione non individuata": 318,
+   "accessibile": 722,
+   "bloccato da WAF/anti-bot": 16,
+   "bloccato da robots.txt": 10,
+   "url non valido": 87,
+   "irraggiungibile": 105,
+   "noindex": 6,
+   "tls invalido": 4
+  }
+ },
+ "per_piattaforma": {
+  "ignota": {
+   "irraggiungibile": 1245,
+   "bloccato da robots.txt": 826,
+   "url non valido": 285,
+   "bloccato da WAF/anti-bot": 1014,
+   "tls invalido": 543,
+   "accessibile": 7537,
+   "accesso negato a tutti i client": 131,
+   "noindex": 95
+  },
+  "trasparenza-valutazione-merito.it": {
+   "accessibile": 542,
+   "irraggiungibile": 3,
+   "noindex": 8
+  },
+  "DigitalPA (portaletrasparenza.net)": {
+   "accessibile": 110,
+   "irraggiungibile": 38,
+   "noindex": 2
+  },
+  "WordPress": {
+   "url non valido": 92,
+   "accessibile": 2112,
+   "noindex": 61,
+   "bloccato da WAF/anti-bot": 74,
+   "bloccato da robots.txt": 19,
+   "irraggiungibile": 2
+  },
+  "(n.d.)": {
+   "sezione non individuata": 3034,
+   "url non valido": 1700,
+   "irraggiungibile": 3174,
+   "tls invalido": 35
+  },
+  "Maggioli JCityGov": {
+   "accessibile": 333,
+   "url non valido": 2,
+   "bloccato da WAF/anti-bot": 4,
+   "noindex": 4
+  },
+  "Drupal": {
+   "bloccato da robots.txt": 21,
+   "accessibile": 250,
+   "url non valido": 20,
+   "bloccato da WAF/anti-bot": 12,
+   "noindex": 1
+  },
+  "Halley Informatica": {
+   "accessibile": 1875,
+   "url non valido": 38,
+   "bloccato da robots.txt": 179,
+   "bloccato da WAF/anti-bot": 98,
+   "irraggiungibile": 125,
+   "accesso negato a tutti i client": 7,
+   "noindex": 1
+  },
+  "DigitalPA": {
+   "accessibile": 143,
+   "noindex": 10,
+   "url non valido": 3
+  },
+  "ISWEB": {
+   "accessibile": 268,
+   "bloccato da WAF/anti-bot": 3,
+   "noindex": 7,
+   "bloccato da robots.txt": 1
+  },
+  "Soluzioni PA (soluzionipa.it)": {
+   "url non valido": 3,
+   "accessibile": 62
+  },
+  "Municipium": {
+   "accessibile": 237,
+   "url non valido": 24,
+   "bloccato da robots.txt": 2
+  },
+  "ComuneWeb (comuneweb.it)": {
+   "url non valido": 55,
+   "irraggiungibile": 13
+  },
+  "APKappa": {
+   "accessibile": 115,
+   "url non valido": 5,
+   "noindex": 2
+  },
+  "Liferay": {
+   "accessibile": 92,
+   "noindex": 1,
+   "bloccato da WAF/anti-bot": 3,
+   "bloccato da robots.txt": 3
+  },
+  "trasparenza-pa.net": {
+   "bloccato da robots.txt": 3523,
+   "accessibile": 13,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Joomla": {
+   "accessibile": 300,
+   "bloccato da WAF/anti-bot": 8,
+   "url non valido": 2,
+   "noindex": 3
+  },
+  "Studio K": {
+   "accessibile": 32,
+   "bloccato da robots.txt": 1,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Netribe on.Cube": {
+   "accessibile": 4
+  },
+  "Grafiche E. Gaspari": {
+   "accessibile": 4
+  },
+  "Plone": {
+   "accessibile": 56,
+   "url non valido": 4,
+   "bloccato da robots.txt": 4,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "TYPO3": {
+   "accessibile": 15,
+   "bloccato da WAF/anti-bot": 1
+  },
+  "Maggioli (maggiolicloud.it)": {
+   "accessibile": 3
+  },
+  "traspare.com": {
+   "accessibile": 20
+  },
+  "Dedagroup": {
+   "accessibile": 1
+  }
+ },
+ "meccanismi_blocco": {
+  "robots.txt (motori di ricerca)": 4584,
+  "robots.txt (solo crawler AI o altri client)": 2977,
+  "nessun client accettato (blocco totale o sito guasto)": 562,
+  "nessuna risposta (DNS, connessione o TLS)": 117,
+  "WAF per IP/ASN (datacenter)": 39,
+  "WAF per User-Agent/identità": 27,
+  "challenge JS": 25,
+  "CAPTCHA": 25
+ },
+ "conferma_blocco": {
+  "da confermare": 1022,
+  "solo prima prova": 1004,
+  "non riprodotto": 81
+ },
+ "robots_identita_negate": {
+  "CCBot": 7348,
+  "GPTBot": 6614,
+  "ClaudeBot": 6098,
+  "Google-Extended": 6044,
+  "PerplexityBot": 4821,
+  "Wget": 4593,
+  "bot del progetto": 4578,
+  "python-requests": 4578,
+  "tutti (*)": 4573,
+  "curl": 4573,
+  "Bingbot": 4122,
+  "Googlebot": 582
+ },
+ "vendor_blocco": {
+  "Akamai": 239,
+  "CAPTCHA": 25,
+  "Cloudflare challenge": 25,
+  "Radware/ShieldSquare": 3
+ },
+ "lettura_origini": {
+  "stesso esito da datacenter e da IP residenziale": 231,
+  "blocco legato all'IP o al datacenter": 39
+ },
+ "ricercabilita": {},
+ "vie_coincidono": {},
+ "cambiamenti": {
+  "totale": 0,
+  "per_campo": {}
+ },
+ "stato": "beta"
+}

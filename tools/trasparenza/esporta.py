@@ -40,7 +40,7 @@ CAMPI = ["cf", "ipa", "denominazione", "tipologia", "categoria", "regione", "sit
 
 DASH = ["cf", "denominazione", "categoria", "regione", "esito", "dettaglio_esito", "piattaforma", "at_url", "segnali",
         "meccanismi_blocco", "conferma_blocco", "identita_bloccate", "robots_identita_negate", "esito_server", "esito_desktop",
-        "lettura_origini", "vendor_blocco", "ricercabilita", "vie_coincidono", "prove", "pvl_link_n", "pvl_sistemi"]
+        "lettura_origini", "vendor_blocco", "ricercabilita", "vie_coincidono", "pvl_link_n", "pvl_sistemi"]
 
 
 def _gz(path: Path, testo: str):
@@ -114,6 +114,14 @@ def _sintesi(ts: list[dict]) -> str:
 PVL = Path(os.environ.get("TRASPARENZA_PVL", RADICE / "lavoro" / "pvl"))
 
 
+def _parti(u: str):
+    """urlsplit che non solleva eccezioni su URL malformati (registrati così come sono dalle fonti)."""
+    try:
+        return urlsplit(u)
+    except ValueError:
+        return urlsplit("/")
+
+
 def leggi_pvl() -> dict:
     """Terza via d'accesso (#57, aggancio): link ai documenti di gara dalla Pubblicità a valore legale e sistemi di
     e-procurement usati, per codice fiscale dell'ente. File prodotti da tools/acquisizione/ (non modificati qui):
@@ -140,7 +148,7 @@ def leggi_pvl() -> dict:
                 if nome == "link_cig.csv" and klink and row.get(klink):
                     o["n"] += 1
                     if not ksis:
-                        o["sistemi"].add(urlsplit(row[klink]).netloc.lower())
+                        o["sistemi"].add(_parti(row[klink]).netloc.lower())
                 if ksis and row.get(ksis):
                     o["sistemi"].add(row[ksis].strip().lower())
     return out
@@ -182,7 +190,7 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         if r.get("robots_sha256") and (r.get("robots_stato") or "").startswith("presente"):
             f = ARCHIVIO / "blobs" / "sha256" / r["robots_sha256"][:2] / r["robots_sha256"][2:4] / r["robots_sha256"]
             testo_rb = f.read_text(encoding="utf-8", errors="replace") if f.exists() else None
-        tx = tassonomia.classifica(srv, dsk, tassonomia.robots_negati(testo_rb, urlsplit(r.get("at_url") or "/").path))
+        tx = tassonomia.classifica(srv, dsk, tassonomia.robots_negati(testo_rb, _parti(r.get("at_url") or "/").path))
         r["meccanismi_blocco"] = ";".join(tx["meccanismi"])
         r["identita_bloccate"] = tx["identita_bloccate"]
         r["robots_identita_negate"] = ";".join(tx["robots_negati"])
@@ -205,10 +213,10 @@ def arricchisci(c, run: str, righe: list[dict], pub: Path) -> list[dict]:
         for t in ts:
             s = t.get("grezzo_sha256")
             if s:
-                nome = f"{s}.{'har' if t.get('grezzo_tipo') == 'har' else 'txt'}.gz"
+                nome = f"{s}.{'har-ridotto.json' if t.get('grezzo_tipo') == 'har' else 'txt'}.gz"
                 src = ARCHIVIO / "blobs" / "sha256" / s[:2] / s[2:4] / s
-                if src.exists() and src.stat().st_size <= MAX_PROVA and not (prove_dir / nome).exists():
-                    _gzb(prove_dir / nome, src.read_bytes())
+                if src.exists() and not (prove_dir / nome).exists():
+                    _gzb(prove_dir / nome, _prova_pubblicabile(src.read_bytes(), t.get("grezzo_tipo")))
                 t["grezzo_url"] = f"{base_url}{nome}" if (prove_dir / nome).exists() else f"archivio sha256:{s}"
                 prove.append(t["grezzo_url"])
             piatti.append(_piatto(t))
@@ -272,6 +280,22 @@ def cambiamenti(righe: list[dict], pub: Path, data: str) -> list[dict]:
     return out
 
 
+def _prova_pubblicabile(dati: bytes, tipo: str | None) -> bytes:
+    """Versione pubblicata del log grezzo: il dump HTTP fino a 64 kB; l'HAR senza i corpi delle risposte
+    (restano intestazioni, tempi, dimensioni). L'originale completo resta nell'archivio, citato con il suo sha256."""
+    if tipo == "har":
+        try:
+            h = json.loads(dati)
+            for e in h.get("log", {}).get("entries", []):
+                c = e.get("response", {}).get("content", {})
+                if "text" in c:
+                    c["text"] = f"[corpo omesso nella copia pubblicata: {len(c['text'])} caratteri]"
+            return json.dumps(h, ensure_ascii=False, separators=(",", ":")).encode()
+        except ValueError:
+            return dati[:65536]
+    return dati[:65536] + (b"\n[... troncato nella copia pubblicata]" if len(dati) > 65536 else b"")
+
+
 def _gzb(path: Path, dati: bytes):
     with path.open("wb") as fh, gzip.GzipFile(fileobj=fh, mode="wb", mtime=0, filename="") as g:
         g.write(dati)
@@ -308,7 +332,7 @@ def esporta(run: str, data: str = "", forza: bool = False) -> Path:
                                          ensure_ascii=False, separators=(",", ":")))
     # file leggero per la dashboard: una lista per ente
     (pub / "dashboard.json").write_text(json.dumps(
-        {"campi": DASH, "giro": data, "enti": [[r.get(k) or "" for k in DASH] for r in righe]},
+        {"campi": DASH, "giro": data, "enti": [[(str(r.get(k))[:140] if k == "dettaglio_esito" else r.get(k)) or "" for k in DASH] for r in righe]},
         ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     for k in ("esito", "categoria", "regione", "piattaforma"):
         _tabella(pub / f"per-{k}.csv", k, righe)

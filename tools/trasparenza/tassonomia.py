@@ -36,7 +36,12 @@ def _sec(ts: str) -> float:
     return calendar.timegm(time.strptime(ts, "%Y-%m-%dT%H:%M:%SZ"))
 
 
-def per_identita(tentativi: list[dict]) -> dict[str, dict]:
+def respinto(t: dict) -> bool:
+    """Risposta HTTP di rifiuto o pagina di blocco riconosciuta (non errori di rete o di TLS del client)."""
+    return (t.get("status") or 0) >= 400 or bool(t.get("vendor_blocco"))
+
+
+def per_identita(tentativi: list[dict], criterio=None) -> dict[str, dict]:
     """identità -> {'giri': {n: bloccato}, 'sempre': bool, 'mai': bool}"""
     out: dict[str, dict] = {}
     for t in tentativi:
@@ -45,7 +50,7 @@ def per_identita(tentativi: list[dict]) -> dict[str, dict]:
         i = t.get("identita") or ("browser-reale" if t.get("tipo") == "browser" else "bot-progetto")
         g = t.get("giro_conferma") or 1
         o = out.setdefault(i, {"giri": {}, "ts": {}})
-        o["giri"][g] = fallito(t)
+        o["giri"][g] = (criterio or fallito)(t)
         o["ts"][g] = t["ts"]
     for o in out.values():
         o["sempre"] = all(o["giri"].values())
@@ -60,8 +65,10 @@ def classifica(srv: list[dict], dsk: list[dict], negati: list[str]) -> dict:
     elif negati:
         mecc.append("robots.txt (solo crawler AI o altri client)")
     ids_s, ids_d = per_identita(srv), per_identita(dsk)
-    bl_s = sorted(i for i, o in ids_s.items() if o["sempre"])
-    bl_d = sorted(i for i, o in ids_d.items() if o["sempre"])
+    # per il «WAF per identità» contano solo i rifiuti HTTP: un errore di TLS di curl non è un filtro del sito
+    rs = per_identita(srv, respinto)
+    bl_s = sorted(i for i, o in rs.items() if o["sempre"])
+    bl_d = sorted(i for i, o in per_identita(dsk, respinto).items() if o["sempre"])
     ok_s = [i for i, o in ids_s.items() if o["mai"]]
     tutti = [t for t in srv + dsk if not t.get("interferenza_locale")]
     if tutti and all(not t.get("status") and t.get("errore") for t in tutti):

@@ -198,7 +198,7 @@ def tentativo_http(url: str, ua: str | None, alias: list[str], verify=True, max_
     return d
 
 
-def tentativo_curl(url: str, alias: list[str]) -> dict:
+def tentativo_curl(url: str, alias: list[str], verify=True) -> dict:
     """curl con le sue impostazioni di default (User-Agent «curl/x.y»): identità onesta di un client a riga di comando."""
     import shutil
     import subprocess
@@ -208,7 +208,7 @@ def tentativo_curl(url: str, alias: list[str]) -> dict:
         return {"ts_locale": adesso(), "client": "curl (assente)", "url": url, "status": None, "errore": "curl non installato", "secondi": 0}
     ver = subprocess.run([exe, "--version"], capture_output=True, text=True).stdout.split("\n")[0][:80]
     try:
-        p = subprocess.run([exe, "-sS", "-L", "--max-redirs", "10", "-m", "40", "-D", "-", "-o", "-", "--compressed",
+        p = subprocess.run([exe, "-sS", "-L"] + ([] if verify else ["-k"]) + [ "--max-redirs", "10", "-m", "40", "-D", "-", "-o", "-", "--compressed",
                             "-w", "\n@@CURL@@%{http_code} %{url_effective}", url], capture_output=True, timeout=60)
     except subprocess.TimeoutExpired:
         return {"ts_locale": adesso(), "client": ver, "user_agent": "curl (default)", "url": url, "status": None,
@@ -304,7 +304,7 @@ def diagnostica(ente: dict, nome_origine: str, browser=True, headed=False, canal
         if tipo == "http":
             d = con_ritentativi(tentativo_http, at, ua, alias, verify=tl.get("valido") is not False)
         elif tipo == "curl":
-            d = con_ritentativi(tentativo_curl, at, alias)
+            d = con_ritentativi(tentativo_curl, at, alias, verify=tl.get("valido") is not False)
         elif browser and pw is not None:
             d = tentativo_browser(pw, at, headed, canale)
         else:
