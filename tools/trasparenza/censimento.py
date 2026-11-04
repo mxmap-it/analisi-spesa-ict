@@ -26,7 +26,7 @@ import random
 import sys
 import threading
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
@@ -238,6 +238,15 @@ def cmd_diagnosi(a) -> int:
     per_host = defaultdict(list)
     for e in da_fare:
         per_host[host_di(e)].append(e)
+    if a.max_per_host:
+        # host con molti enti (es. una piattaforma condivisa): si verifica un campione per host, gli altri restano
+        # «solo prima prova» (nessuna estensione del risultato agli enti non verificati)
+        gia = Counter(host_di({"at_url": json.loads(d).get("url", "")}) for (d,) in c.execute(
+            "SELECT dati FROM tentativi WHERE run=? AND origine=? AND json_extract(dati,'$.identita')='bot-progetto' "
+            "AND json_extract(dati,'$.giro_conferma')=?", (a.run, a.origine, n)))
+        for h in per_host:
+            per_host[h] = per_host[h][:max(0, a.max_per_host - gia.get(h, 0))]
+        da_fare = [e for g in per_host.values() for e in g]
     lk, cont = threading.Lock(), [0]
 
     def lavora(gruppo):
@@ -351,6 +360,7 @@ def main() -> int:
     ap.add_argument("--giro-conferma", type=int, default=1)
     ap.add_argument("--solo-host-completati", action="store_true")
     ap.add_argument("--tetto", type=int, default=600, help="secondi massimi per ente prima di saltarlo")
+    ap.add_argument("--max-per-host", type=int, default=0, help="massimo di enti verificati per host (0 = tutti)")
     ap.add_argument("--distanza", type=int, default=60, help="minuti minimi fra due giri di conferma")
     a = ap.parse_args()
     if a.comando in ("fonti", "tutto"):
