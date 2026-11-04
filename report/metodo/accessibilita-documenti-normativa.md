@@ -31,7 +31,7 @@ XLSX delle delibere).
 
 | Art. | Esito |
 |---|---|
-| **53 par. 1** [R] | Testo atteso: accesso elettronico «gratuito, illimitato e diretto» ai documenti di gara dalla pubblicazione del bando; l'art. 88 lo recepisce quasi alla lettera. **Non verificato sulla fonte primaria in questa sessione:** EUR-Lex risponde HTTP 202 con verifica anti-bot (AWS WAF) al nostro client, e non la aggiriamo. Da verificare con un browser reale (ticket #63). La direttiva vale solo **sopra soglia**. |
+| **53 par. 1** [V] | Accesso elettronico «gratuito, illimitato e diretto» ai documenti di gara dalla pubblicazione dell'avviso (art. 51) o dall'invito a confermare interesse; l'avviso indica l'indirizzo Internet dei documenti. Eccezioni solo per motivi tecnici (art. 22) o di riservatezza (art. 21 par. 2), dichiarate nell'avviso, con proroga di 5 giorni. | **Verificato il 4/11/2026** su EUR-Lex con un browser reale (prova `prove-normativa/direttiva-2014-24-UE-art53.txt`, con sha256). L'art. 88 lo recepisce quasi alla lettera. Nessun considerando della direttiva tratta la registrazione per consultare. La direttiva vale solo **sopra soglia**. |
 
 ### d.lgs. 33/2013 (trasparenza)
 
@@ -79,12 +79,19 @@ d.lgs. 33/2013); internamente RPCT (art. 43) e OIV (attestazione annuale).
   «diretto» e la nota dell'Allegato 1 alla 264 dice «chiunque». Precedente sul vecchio art. 74
   d.lgs. 50/2016 (testo equivalente): una **delibera ANAC del 2019** sulla gara per il socio operativo
   del bacino Fratta-Gorzone (CIG 7995138498) avrebbe giudicato illegittima la lex specialis che
-  condiziona l'accesso ai documenti a registrazione o identificazione. **[R]** (riferito da
-  codiceappalti.it, scheda art. 74): numero e data **non verificati**, da trovare sul sito ANAC.
+  condiziona l'accesso ai documenti a registrazione o identificazione. Estremi identificati il 4/11:
+  **delibera ANAC n. 968 del 23/10/2019** [R]. Il numero e il contenuto sono riferiti da due fonti
+  secondarie indipendenti e concordi (entilocali-online.it, codiceappalti.it). L'oggetto Fratta-Gorzone
+  risulta dall'indice delle delibere. Il testo integrale non è stato trovato su anticorruzione.it (le
+  ricerche nel portale e nei motori non lo restituiscono): va scaricato dall'archivio delibere ANAC
+  prima di citarlo in un atto.
 - **TAR, Consiglio di Stato, Corte di giustizia UE.** Non abbiamo trovato e verificato pronunce che
   decidano sulla registrazione ex art. 88 o art. 53 della direttiva. La giurisprudenza trovata (es.
   TAR Lazio, sez. IV, 1/7/2024 n. 13225 [R]) riguarda l'accesso agli atti dopo l'aggiudicazione
-  (art. 36), altro tema. **Punto aperto**: ricerca in banca dati (giustizia-amministrativa.it, CURIA).
+  (art. 36), altro tema. Un sito di massime riporta una pronuncia del **Consiglio di Stato del 2020**
+  con lo stesso principio della delibera 968 (illegittima la lex specialis che subordina l'accesso a
+  registrazione, autenticazione o identificazione) [R]. Gli estremi non sono identificati: il sito
+  della massima non risponde. **Punto aperto**: ricerca su giustizia-amministrativa.it e CURIA.
 - **Affidamenti diretti senza bando.** L'88 parla di «avviso» e di «invito a confermare l'interesse»:
   per un affidamento diretto senza avviso non c'è un termine di decorrenza, quindi la sua
   applicazione letterale è **incerta**. Restano però, verificati: l'art. 27 c.3 (tutta la
@@ -128,9 +135,9 @@ invii massivi (R30, #63).
 
 ## 6. Punti incerti (da chiudere)
 
-1. Art. 53 dir. 2014/24/UE: testo da verificare su EUR-Lex con browser reale.
-2. Estremi della delibera ANAC 2019 (Fratta-Gorzone) sulla registrazione.
-3. Pronunce di TAR, Consiglio di Stato e CGUE su registrazione o accesso «diretto»: nessuna verificata.
+1. ~~Art. 53 dir. 2014/24/UE~~: **chiuso il 4/11/2026**, verificato su EUR-Lex con un browser reale.
+2. Delibera ANAC 968 del 23/10/2019: estremi identificati [R], manca il testo integrale dal sito ANAC.
+3. Pronunce: una massima del Consiglio di Stato del 2020 [R], senza estremi; nessuna pronuncia di TAR o CGUE verificata.
 4. Applicabilità dell'art. 88 agli affidamenti diretti senza avviso.
 5. Delibera ANAC 1309/2016 e griglie OIV: citate come prassi, non archiviate.
 
