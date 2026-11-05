@@ -32,6 +32,14 @@ CHIAVE = ("offerta_tecnica", "offerta_economica", "transato_monitoraggio", "ordi
 TIPI = {"consip": "Consip", "psn": "PSN", "aggregatore-regionale": "Aggregatori regionali", "consorzio-unione": "Consorzi e unioni", "altro": "Altri"}
 
 
+# iniziative che il filtro CPV ICT lascia passare ma non sono ICT (vedi § Metodo e limiti)
+FUORI_PERIMETRO = {"consip-2638"}
+
+
+def pct1(a, b):
+    return f"{100 * a / b:.1f} %".replace(".", ",") if b else "–"
+
+
 def classe(i):
     if i["stato"] in ("archiviato", "pubblicato-non-archiviato"):
         return "pubblico"
@@ -140,35 +148,39 @@ def main(versione, data, nota):
          f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**", "",
          "Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.", "",
          "## 1. Sintesi", "",
+         "*Cosa non diciamo:* che un dato non individuato sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la "
+         "convenzione; che le somme BDNCP siano spesa. Molte carenze riguardano dati che oggi nessuna norma obbliga a pubblicare.", "",
          f"- **Perimetro.** {g['iniziative']} iniziative ICT ({g['attive']} attive): Consip, PSN, soggetti aggregatori regionali, consorzi e altre "
          f"stazioni appaltanti con più contratti derivati. Criterio nel [README della base dati](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/README.md).",
          f"- **Valore.** I contratti derivati con CPV ICT pubblicati nel 2024-2025 dichiarano in BDNCP circa **{meur(g['valore_2024_2025'])} M€**. "
-         "È un ordine di grandezza, non la spesa: alcuni attuativi riportano il massimale dell'accordo quadro invece del valore del contratto.",
-         f"- **Visibilità.** Dei {tot_celle} dati attesi (iniziativa × tipo di documento o dato), sono pubblici dalla fonte ufficiale "
-         f"{g['celle'].get('pubblico', 0)} ({pct(g['celle'].get('pubblico', 0), tot_celle)}); reperibili solo altrove {g['celle'].get('altrove', 0)}; "
-         f"assenti (verificato) {g['celle'].get('assente', 0)} ({pct(g['celle'].get('assente', 0), tot_celle)}); ancora da verificare "
-         f"{g['celle'].get('ignoto', 0)} ({pct(g['celle'].get('ignoto', 0), tot_celle)}). Indice di visibilità medio: **{round(100 * g['indice_medio'])} %**.",
-         f"- **Valore non ben visibile.** {g['iniziative_ben_visibili']} iniziative su {g['iniziative']} pubblicano tutti e quattro i dati che servono a "
-         f"controllare spesa e sovranità (offerte tecnica ed economica, transato, ordinativi) nella fonte ufficiale dell'iniziativa. Il valore delle altre è circa "
-         f"**{meur(g['valore_non_ben_visibile'])} M€**, cioè {pct(g['valore_non_ben_visibile'], g['valore_2024_2025'])} del totale; per {g['celle'].get('ignoto', 0)} dati "
-         "la verifica non è ancora fatta, quindi è un limite superiore provvisorio.",
-         f"- **Concentrazione.** La prima iniziativa per valore ({nomi[top][:80]}) pesa {meur(pi[top]['valore'])} M€, "
-         f"{pct(pi[top]['valore'], g['valore_2024_2025'])} del totale: il dato è dominato da pochi accordi quadro e da importi che sono massimali.",
-         "- **Carenze principali.** Offerte dei vincitori, listini offerti, transato per lotto e marchio, elenco degli ordinativi: non pubblicati "
-         "dalla centrale su nessuna delle pagine Consip consultate (gli ordinativi si trovano, in parte, negli atti dei singoli enti aderenti). Region e data center: dichiarati in gara (verificato per IaaS/PaaS 2 e PRINCO), non pubblicati.",
-         f"- **Il dato esiste.** Per {g['flusso_dati']} iniziative la documentazione di gara prevede che il fornitore trasmetta a Consip i flussi "
-         "del fatturato (d.m. MEF 23/11/2012, commissioni): il transato è quindi presso Consip, ma non è pubblicato per lotto né per marchio.",
+         "È un ordine di grandezza, non la spesa: in molti casi l'importo dichiarato è il massimale o il valore pluriennale (§ 2).",
+         f"- **Visibilità.** Dei {tot_celle} dati attesi (iniziativa × tipo di documento o dato): pubblici dalla fonte ufficiale "
+         f"{g['celle'].get('pubblico', 0)} ({pct(g['celle'].get('pubblico', 0), tot_celle)}); reperiti solo presso enti aderenti {g['celle'].get('altrove', 0)} "
+         f"({pct1(g['celle'].get('altrove', 0), tot_celle)}); non individuati sulla pagina del bando {g['celle'].get('assente', 0)} ({pct(g['celle'].get('assente', 0), tot_celle)}); "
+         f"non ancora verificati {g['celle'].get('ignoto', 0)} ({pct(g['celle'].get('ignoto', 0), tot_celle)}). Indice di visibilità medio "
+         f"**{round(100 * g['indice_medio'])} %**, da leggere come limite inferiore finché le celle non verificate restano così tante.",
+         "- **Dati per controllare spesa e sovranità.** Nessuna iniziativa pubblica insieme offerte dei vincitori, transato per marchio ed elenco "
+         "degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).",
+         "- **Carenze principali** (pagine dei bandi su consip.it consultate il 5/11/2026; acquistinretepa e Amministrazione trasparente di Consip "
+         "non ancora consultate): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. "
+         "Gli ordinativi si trovano in parte negli atti dei singoli enti. Region e data center: per IaaS/PaaS 2 (ID 2746) e PRINCO (ID 2928) i "
+         "documenti di gara prevedono che il fornitore li dichiari, ma la dichiarazione non è pubblicata.",
+         f"- **Il dato è presso Consip, con dettaglio ignoto.** In {g['flusso_dati']} iniziative la documentazione di gara contiene un allegato sui "
+         "flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012); individuato dal nome "
+         "del file, da leggere. Il transato dovrebbe quindi esistere presso Consip; non sappiamo con quale dettaglio.",
          f"- **Rimedi.** {g['istanze_preparate']} bozze di accesso civico generalizzato preparate e **non inviate**; proposte di policy R08 e R37-R42 "
          "perché questi dati diventino pubblici senza bisogno di chiederli.", "",
          "## 2. Due misure del valore", "",
-         f"Per {g['od_iniziative']} iniziative Consip il valore si può misurare anche con gli **open data Consip** degli ordini diretti "
-         f"(dati.consip.it, 2024 e 2025, file archiviati con sha256): **{meur(g['od_ordinato'])} M€** ordinati, contro **{meur(g['od_bdncp'])} M€** "
-         "dichiarati in BDNCP per i loro CIG derivati ICT 2024-2025. Le due misure non sono la stessa grandezza: gli open data contano solo "
-         "gli ordini diretti (non gli appalti specifici con rilancio competitivo) e l'anno dell'ordine, BDNCP l'importo dichiarato all'acquisizione "
-         "del CIG (spesso il massimale). La distanza conferma che la somma BDNCP va letta come ordine di grandezza; per l'ID 2483 il rapporto è "
-         "di circa 13 a 1. Gli open data non riportano listino, marchio né ente: la carenza C3 resta.", "",
+         f"Per {g['od_iniziative']} iniziative Consip esiste una seconda misura: gli **open data Consip** degli ordini diretti "
+         f"(dati.consip.it, 2024 e 2025, file archiviati con sha256): **{meur(g['od_ordinato'])} M€** ordinati. Le stesse iniziative dichiarano "
+         f"in BDNCP **{meur(g['od_bdncp'])} M€** di derivati ICT 2024-2025. **Le due grandezze non sono confrontabili** una a una: gli open data "
+         "contano gli ordini diretti dell'anno (non gli appalti specifici degli accordi quadro con rilancio competitivo); BDNCP l'importo "
+         "dichiarato all'acquisizione del CIG, spesso pluriennale o pari al massimale. La tabella serve a mostrare l'ordine di grandezza e i casi "
+         "da spiegare (es. ID 2496, dove l'ordinato supera il dichiarato: probabili derivati con CPV non ICT o lotti mancanti, da verificare). "
+         "Gli abbinamenti «a mano (R)», compreso l'ID 2483, sono da confermare con l'ID Sigef. Gli open data non riportano listino, marchio né "
+         "ente: la carenza C3 resta.", "",
          "| Iniziativa | M€ BDNCP 2024-25 | M€ ordinati 2024+2025 (open data Consip) | Abbinamento |", "|---|---|---|---|"]
-    for v in sorted([v for v in voci if v.get("ordinato_consip")], key=lambda v: -(v["valore_ict_2024_2025"] or 0)):
+    for v in sorted([v for v in voci if v.get("ordinato_consip") and v["id"] not in FUORI_PERIMETRO], key=lambda v: -(v["valore_ict_2024_2025"] or 0)):
         o = v["ordinato_consip"]
         L.append(f"| [{v['nome'][:60]}](/convenzioni/{v['id'].lower()}/) | {meur(v['valore_ict_2024_2025'] or 0)} | {meur(o['2024'] + o['2025'])} | "
                  f"{'; '.join(n.split(' [')[1].rstrip(']')[:40] for n in o['nomi'])} |")
@@ -177,22 +189,25 @@ def main(versione, data, nota):
          "cosa manca e cosa è stato richiesto, con i riepiloghi in alto. L'[indice delle convenzioni](/convenzioni/) riporta il riquadro "
          "delle carenze di trasparenza.", "",
          "| Classe | Celle | Quota |", "|---|---|---|"]
-    for k, n in (("pubblico", "pubblico (fonte ufficiale)"), ("altrove", "solo da fonte non ufficiale"), ("assente", "assente (verificato)"), ("ignoto", "da verificare")):
-        L.append(f"| {n} | {g['celle'].get(k, 0)} | {pct(g['celle'].get(k, 0), tot_celle)} |")
+    for k, n in (("pubblico", "pubblico (fonte ufficiale)"), ("altrove", "solo da fonte non ufficiale"), ("assente", "non individuato sulla pagina del bando"), ("ignoto", "non ancora verificato")):
+        L.append(f"| {n} | {g['celle'].get(k, 0)} | {pct1(g['celle'].get(k, 0), tot_celle)} |")
     L += ["", "## 4. Convenzione per convenzione", "",
-          "Le iniziative principali (attive, per valore). Indice = dati pubblici / dati attesi; «ben visibile» = offerte, transato e ordinativi tutti pubblici.", "",
-          "| Iniziativa | Soggetto | M€ 2024-25 | Pubblici | Altrove | Assenti | Da verificare | Indice | Ben visibile | Carenze verificate |",
-          "|---|---|---|---|---|---|---|---|---|---|"]
-    princ = sorted([k for k, p in pi.items() if p["stato"] == "attiva"], key=lambda k: -pi[k]["valore"])[:30]
+          "Le iniziative principali (attive, per valore). Indice = dati pubblici / dati attesi (13; 14 per PSN e SPC Cloud, con i progetti dei fabbisogni). "
+          "«Non individuati» = non trovati sulla pagina del bando, con tipo dedotto dal nome dei file. Il PSN non ha una pagina Consip: le sue celle "
+          "sono quasi tutte «non verificate», il che non significa assenza di carenze.", "",
+          "| Iniziativa | Soggetto | M€ 2024-25 | Pubblici | Altrove | Non individuati | Non verificati | Indice | Carenze accertate |",
+          "|---|---|---|---|---|---|---|---|---|"]
+    princ = sorted([k for k, p in pi.items() if p["stato"] == "attiva" and k not in FUORI_PERIMETRO], key=lambda k: -pi[k]["valore"])[:30]
     for k in princ:
         p = pi[k]
         L.append(f"| [{nomi[k][:70]}](/convenzioni/{k.lower()}/) | {TIPI[p['tipo']]} | {meur(p['valore'])} | {p['pubblico']} | {p['altrove']} | {p['assente']} | "
-                 f"{p['ignoto']} | {round(100 * p['indice'])} % | {'sì' if p['ben_visibile'] else 'no'} | {', '.join(p['carenze_verificate']) or '–'} |")
+                 f"{p['ignoto']} | {round(100 * p['indice'])} % | {', '.join(p['carenze_verificate']) or '–'} |")
     L += ["", f"Le altre {len(pi) - len(princ)} iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/convenzioni/griglia/).", "",
           "## 5. Per tipo di soggetto", "",
-          "| Soggetto | Iniziative | M€ 2024-25 | Indice medio | Ben visibili | Dati assenti | Dati da verificare |", "|---|---|---|---|---|---|---|"]
+          "| Soggetto | Iniziative | M€ 2024-25 | Indice medio | Non individuati | Non verificati |", "|---|---|---|---|---|---|"]
     for t, x in pt.items():
-        L.append(f"| {TIPI[t]} | {x['iniziative']} | {meur(x['valore'])} | {round(100 * x['indice_medio'])} % | {x['ben_visibili']} | {x['assenti']} | {x['ignoti']} |")
+        ind = f"{round(100 * x['indice_medio'])} %" if t == "consip" else "n.d. (non ancora verificati)"
+        L.append(f"| {TIPI[t]} | {x['iniziative']} | {meur(x['valore'])} | {ind} | {x['assenti']} | {x['ignoti']} |")
     L += ["", "Per aggregatori regionali e consorzi quasi tutti i dati sono «da verificare»: le loro piattaforme (Sintel, Intercent-ER, EmPULIA, START…) "
           "non sono ancora state visitate, i CIG padre non hanno link ai documenti in PVL (verificato: nessuno dei 295 CIG padre) e su TED "
           "l'abbinamento riesce solo per testo. **Un indice basso qui misura il nostro lavoro ancora da fare, non la loro trasparenza.**", "",
@@ -202,7 +217,12 @@ def main(versione, data, nota):
           "- **Verificato e riferito.** «Assente» vuol dire che abbiamo consultato la pagina ufficiale dell'iniziativa e il documento non c'è; il tipo di "
           "documento si deduce dal nome del file (controllo a mano solo per PRINCO). Le norme e i dati che non abbiamo letto sulla fonte sono marcati [R] "
           "nelle schede ([carenze.yaml](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/carenze.yaml)).",
-          "- **Valori.** Somme di importi dichiarati in BDNCP: ordine di grandezza, non spesa né transato (confronto con gli open data Consip al § 2).",
+          "- **Valori.** Somme di importi dichiarati in BDNCP: ordine di grandezza, non spesa né transato (seconda misura al § 2). La prima "
+          f"iniziativa per valore pesa {meur(pi[top]['valore'])} M€ ({pct(pi[top]['valore'], g['valore_2024_2025'])} del totale).",
+          f"- **Archivio.** {g['documenti_ufficiali']} documenti ufficiali collegati alle iniziative (compresi i file dentro gli zip), archiviati con sha256; "
+          "una cella «pubblico» può contenerne molti.",
+          "- **PVL.** Nessuno dei 295 CIG padre ha un link ai documenti di gara nei dati PVL scaricati il 3-4/11/2026 (verificato): è lo stato "
+          "dei dati PVL, non un'assenza dei documenti, che gli aggregatori pubblicano sulle proprie piattaforme.",
          "- **Rumore nel censimento.** Il filtro per CPV ICT sui derivati lascia passare iniziative non ICT (es. ID 2638 Energia elettrica 21, 30 M€): "
          "restano in elenco finché il filtro non viene corretto, con peso trascurabile sul totale.",
          "- **Lettura dei documenti.** Letti per intero solo gli atti di PRINCO (ID 2928) e alcune determine di enti; per le altre iniziative "

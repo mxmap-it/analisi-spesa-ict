@@ -163,7 +163,7 @@ def main():
     idx = ["---", 'title: "Convenzioni e accordi quadro ICT"', "date: 2026-11-05",
            'description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, consorzi): valore, documenti archiviati e mancanti."',
            "---", "", AVVISO,
-           "**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola.", "",
+           "**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola. Rapporto: [Trasparenza delle convenzioni ICT](/rendiconti/convenzioni-trasparenza/) (bozza).", "",
            f"Censimento di **{len(voci)} iniziative** ({len(att)} attive, {len(st)} storiche) con i loro lotti, i documenti pubblici "
            f"archiviati e quelli che mancano. Copertura documentale media: **{pct(media)}** dei tipi di documento attesi.", "",
            "**Criterio.** Un'iniziativa è un ID Sigef Consip, o una gara (CIG padre) di un altro soggetto. È «attiva» se ha CIG derivati "

@@ -12,7 +12,7 @@ carenze:
     titolo: Offerte tecniche dei vincitori
     applica: inventario:offerta_tecnica
     perche_serve: "Nell'offerta tecnica stanno i prodotti, i marchi, i data center e i subfornitori effettivamente proposti: decidono la giurisdizione (asse B dell'imbuto). Senza, la giurisdizione di un lotto si deduce dal titolo."
-    base: "Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V]."
+    base: "Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerenti non definitivamente esclusi, con oscuramento delle parti indicate come segreto tecnico o commerciale (art. 36 c. 1-4 e art. 35 c. 4 d.lgs. 36/2023) [R, da rileggere sul testo]; non ne prevede la pubblicazione. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V]."
     obbligo: "no"
     raccomandazione: R39
   - id: C2
@@ -33,7 +33,7 @@ carenze:
     titolo: Ordinativi e contratti attuativi
     applica: inventario:ordinativi
     perche_serve: "L'ordinativo dice quale ente ha comprato quale prodotto: è il collegamento fra il catalogo e la spesa per ente."
-    base: "Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]."
+    base: "Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 (pubblicità legale) [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]."
     obbligo: parziale
     raccomandazione: R08
   - id: C5
@@ -47,7 +47,7 @@ carenze:
     titolo: Region e data center dichiarati
     applica: cloud
     perche_serve: "Per i servizi cloud la giurisdizione dipende da produttore e luogo del trattamento; region e data center non stanno in nessun dataset."
-    base: "Nessun obbligo di pubblicazione per singola iniziativa. ACN qualifica i servizi cloud e ne pubblica il catalogo [R]; il catalogo non è legato al CIG del lotto. Ragione: requisito di sovranità che la PA deve poter verificare prima di aderire (art. 33-septies d.l. 179/2012) [R]."
+    base: "Nessun obbligo di pubblicazione per singola iniziativa. ACN qualifica i servizi cloud e ne pubblica il catalogo [R]; il catalogo non è legato al CIG del lotto. Ragione: senza questi dati la PA non può verificare luogo del trattamento e giurisdizione prima di aderire (cfr. art. 33-septies d.l. 179/2012 e regolamento ACN sui servizi cloud) [R]."
     obbligo: "no"
     raccomandazione: R42
   - id: C7

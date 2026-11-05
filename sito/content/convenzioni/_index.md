@@ -7,7 +7,7 @@ description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, c
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola.
+**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola. Rapporto: [Trasparenza delle convenzioni ICT](/rendiconti/convenzioni-trasparenza/) (bozza).
 
 Censimento di **86 iniziative** (82 attive, 4 storiche) con i loro lotti, i documenti pubblici archiviati e quelli che mancano. Copertura documentale media: **34 %** dei tipi di documento attesi.
 
@@ -22,7 +22,7 @@ Per il contesto cloud vedi [Iniziative Consip cloud](/progetto/iniziative-consip
 <p>Dati che non vengono pubblicati pur servendo a controllare la spesa e la sovranità. «Verificato» = assenza constatata da noi sulla pagina ufficiale dell'iniziativa (con data); «da verificare» = pagina non ancora consultata o dato riferito. Valore = somma dei derivati ICT 2024-2025 delle iniziative colpite (ordine di grandezza, non transato).</p>
 <table class="table table-sm"><thead><tr><th>Carenza</th><th>Iniziative colpite (verificato / da verificare)</th><th>M€ coinvolti (verificato)</th><th>Obbligo di pubblicare?</th><th>Proposta</th></tr></thead><tbody>
 <tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R39</td></tr>
-<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R39</td></tr>
+<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>1 / 85</td><td>0,0</td><td>no</td><td>R39</td></tr>
 <tr><td><strong>C3</strong> Transato per listino, marchio ed ente</td><td>39 / 47</td><td>50.468,3</td><td>no</td><td>R37</td></tr>
 <tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>41 / 44</td><td>50.697,5</td><td>in parte</td><td>R08</td></tr>
 <tr><td><strong>C5</strong> Progetti e piani dei fabbisogni</td><td>0 / 1</td><td>0,0</td><td>no</td><td>R41</td></tr>

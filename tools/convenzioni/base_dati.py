@@ -37,7 +37,8 @@ ATTESI = {
 }
 EXTRA = {"psn": ["progetti_fabbisogni"], "consip-1403": ["progetti_fabbisogni"]}
 ATTESI_EXTRA = {"progetti_fabbisogni": ("piani e progetti dei fabbisogni delle PA", "PSN, AT degli enti", "richiesta al DTD o al PSN; AT degli enti")}
-NON_PUBBLICATI_DI_NORMA = ("offerta_tecnica", "offerta_economica", "transato_monitoraggio", "ordinativi")
+# offerta economica: i listini offerti possono stare su acquistinretepa (non ancora consultato): resta «da verificare» (revisione 5/11)
+NON_PUBBLICATI_DI_NORMA = ("offerta_tecnica", "transato_monitoraggio", "ordinativi")
 # tipo del documento dal nome del file (anche dentro gli zip); ordine = priorita'
 REGOLE = [
     ("aggiudicazione", r"aggiudicaz|esito|graduatoria"),
@@ -146,7 +147,7 @@ def inventario(ini, docs, pagine_ok, pag, c):
         elif t in (c.get("non_pubblicati") or {}):
             st, nota = "non-pubblicato", c["non_pubblicati"][t]
         elif pagine_ok and t in NON_PUBBLICATI_DI_NORMA:
-            st, nota = "non-pubblicato", f"assente dalla pagina Consip dell'iniziativa (consultata il {pag['data'][:10]})"
+            st, nota = "non-pubblicato", f"non individuato sulla pagina del bando su consip.it (consultata il {pag['data'][:10]}; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati"
         elif pagine_ok:
             st, nota = "da-verificare", "non riconosciuto dal nome dei file della pagina Consip: controllo a mano"
         else:
