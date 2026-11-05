@@ -69,6 +69,7 @@ def main():
             if tot > max_mb:
                 print("tetto di MB raggiunto: si riprende al prossimo giro"); break
             r = A.archivia(s, u)
+            A.scrivi_manifest(r)  # archivia() non scrive il manifest: lo fa il chiamante (come archivia.main)
             tot += (r.get("dimensione") or 0) / 1e6 if r.get("esito") == "nuovo" else 0
             print(ini, r.get("esito"), u[-90:], flush=True)
             if k % 20 == 19:
