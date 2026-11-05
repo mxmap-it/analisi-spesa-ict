@@ -4,15 +4,16 @@ l'oggetto, la stazione appaltante e l'anno del CIG padre. È la lista di lavoro 
 iniziative (config/lotti_cloud.yaml, report/metodo/llm/conoscenza-iniziative.yaml): si decifrano per primi i padri
 che pesano di più. Deterministico, streaming, due passate (mai tutti i CIG in memoria).
 
-Uso: python tools/analisi/padri_ict.py [anno_iniziale] -> report/metodo/conoscenza/padri-ict.csv"""
+Uso: python tools/analisi/padri_ict.py [anno_iniziale] [anno_finale] [uscita.csv] -> default report/metodo/conoscenza/padri-ict.csv
+(#62: tools/analisi/padri_ict.py 2024 2025 report/convenzioni/database/padri-ict-2024-2025.csv)"""
 import csv, glob, os, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 from classifica import CPV_ICT  # noqa: E402
 from attribuisci_provider import righe_cig, D  # noqa: E402
 
 
-def main(anno0=2020):
-    anni = {str(a) for a in range(anno0, 2027)}
+def main(anno0=2020, anno1=2026, uscita="report/metodo/conoscenza/padri-ict.csv"):
+    anni = {str(a) for a in range(anno0, anno1 + 1)}
     fonti = sorted(p[-4:] for p in glob.glob(D + "cig-20*")) + ["delta"]
     delta_cig = {r["cig"] for r in righe_cig("delta")}
     n = collections.Counter(); eur = collections.Counter(); anni_att = collections.defaultdict(set)
@@ -30,8 +31,8 @@ def main(anno0=2020):
         for r in righe_cig(fonte):
             if r["cig"] in n: info[r["cig"]] = (r.get("anno_pubblicazione", ""), r.get("denominazione_amministrazione_appaltante", ""),
                                                 ((r.get("oggetto_gara") or "") + " | " + (r.get("oggetto_lotto") or ""))[:300], r.get("cod_cpv", ""))
-    os.makedirs("report/metodo/conoscenza", exist_ok=True)
-    with open("report/metodo/conoscenza/padri-ict.csv", "w", newline="", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(uscita), exist_ok=True)
+    with open(uscita, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["cig_padre", "attuativi_ict", "euro_attuativi", "anni_attuativi", "anno_padre", "stazione_appaltante_padre", "oggetto_padre", "cpv_padre"])
         for aq, _ in sorted(eur.items(), key=lambda x: -x[1]):
@@ -40,4 +41,5 @@ def main(anno0=2020):
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]) if len(sys.argv) > 1 else 2020)
+    a = sys.argv[1:]
+    main(int(a[0]) if a else 2020, int(a[1]) if len(a) > 1 else 2026, a[2] if len(a) > 2 else "report/metodo/conoscenza/padri-ict.csv")
