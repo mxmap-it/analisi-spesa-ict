@@ -12,6 +12,8 @@
   main table.table-striped > tbody > tr:nth-of-type(odd) > * { background: #f8fafc; }
   main table.table-hover > tbody > tr:hover > * { background: #e6f0fa; }
   main table.table td.num, main table.table th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  main table.table td, main table.table td code { overflow-wrap: anywhere; }
+  @media (max-width: 768px) { main table.table { font-size: .82rem; } main table.table th { white-space: normal; } main table.table td, main table.table th { padding: .3rem .4rem; } }
   main .tabella-data { font-size: .8rem; color: #5d7083; margin-top: .25rem; }
   .datatable-wrapper .datatable-top, .datatable-wrapper .datatable-bottom { padding: .5rem 0; }
   .datatable-input { border: 1px solid #c5c7c9; border-radius: 4px; padding: .3rem .6rem; font-size: .9rem; }
