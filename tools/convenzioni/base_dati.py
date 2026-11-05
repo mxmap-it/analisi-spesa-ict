@@ -314,7 +314,15 @@ def scrivi_griglia(voci):
 
 def main():
     cens, arch, kb, cur = carica()
-    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA
+    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI
+    FLUSSI = {}
+    if (DB / "flussi-dati.csv").exists():
+        for r in csv.DictReader(open(DB / "flussi-dati.csv", encoding="utf-8")):
+            if r["esito"] == "letto":
+                si = [k for k in ("fattura", "ordine", "ente", "listino_prodotto", "marchio", "cig", "lotto", "imponibile") if r.get(k) == "si"]
+                no = [k for k in ("ente", "listino_prodotto", "marchio") if r.get(k) == "no"]
+                FLUSSI[r["iniziativa"]] = (f"Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio {r['frequenza'] or 'periodico'} a Consip; "
+                                           f"campi del tracciato trovati: {', '.join(si) or 'nessuno'}; non trovati: {', '.join(no) or '–'} (ricerca per parole nel testo, R)")
     ALTROVE, ALTROVE_EXTRA = carica_altrove()
     ORDINATO = defaultdict(list)
     if (DB / "consip-ordinato.csv").exists():
@@ -339,7 +347,7 @@ def main():
         flusso = [(n, u, h) for n, u, h in nf if re.search(r"flussi? dati|flusso.*commission|dati di fatturato", n, re.I)]
         evidenze = []
         if flusso:
-            letto = c.get("flusso_letto")
+            letto = c.get("flusso_letto") or FLUSSI.get(ini)
             evidenze.append({"carenza": "C3", "livello": "V (letto)" if letto else "R (dal nome del file)",
                              "testo": letto or "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
                              "documento": flusso[0][0], "url": flusso[0][1], "sha256": flusso[0][2]})
@@ -373,6 +381,7 @@ def main():
             "mancanze": [{"tipo": i["tipo"], "descrizione": i["descrizione"], "stato": i["stato"], "fonte": i["dove_di_norma"], "via": i["via_se_manca"]}
                          for i in inv if i["stato"] != "archiviato"],
             "ordinato_consip": {"2024": sum(int(r["ordinato_2024"]) for r in ORDINATO.get(ini, [])), "2025": sum(int(r["ordinato_2025"]) for r in ORDINATO.get(ini, [])),
+                                "2026": sum(int(r.get("ordinato_2026") or 0) for r in ORDINATO.get(ini, [])),
                                 "nomi": [r["nome_consip"] + " [" + r["abbinamento"] + "]" for r in ORDINATO.get(ini, [])]} if ini in ORDINATO else None,
             "carenze": car_ini, "evidenze_dato_esistente": evidenze, "altrove_su_carenze": ALTROVE_EXTRA.get(ini, []), "estratti": estratti_di(ini),
             "analisi": c.get("analisi"), "note": c.get("note"),

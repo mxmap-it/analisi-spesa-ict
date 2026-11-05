@@ -661,6 +661,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -675,6 +684,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -794,6 +812,7 @@
   "ordinato_consip": {
    "2024": 839750756,
    "2025": 1529514921,
+   "2026": 491760890,
    "nomi": [
     "SERVIZI APPLICATIVI IN OTTICA CLOUD 2 [a mano (V-testo): ID 2483 = «Servizi applicativi in ottica cloud e PMO 2 - PAC», CIG lotto 1 91918889EE, in atti di ARERA (det. 51/DAGR/2026, sha256 a1553160…) e Giustizia DGSIA (det. 6389/2024, sha256 7f347a3e…); il nome negli open data coincide con l'edizione (riscontro per testo)]"
    ]
@@ -845,8 +864,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2483 Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202483%20NEW%20DOC%20UFF.zip#ID 2483 - NEW DOC UFF/ID 2483 Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "6ce7356920376edfdd5169f7a95fce1c6256850482298961205535983879da42"
@@ -1548,6 +1567,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -1562,6 +1590,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -1648,6 +1685,7 @@
   "ordinato_consip": {
    "2024": 0,
    "2025": 465120323,
+   "2026": 375502492,
    "nomi": [
     "SERVIZI APPLICATIVI IN OTTICA CLOUD 3 PAL [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -1699,8 +1737,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2610-AQ SAC3-Allegato 18-Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202610%20-%20DOC%20UFF%20-%20NEW.zip#Doc firmati ID 2610/ID 2610-AQ SAC3-Allegato 18-Flussi dati commissioni.pdf.p7m",
     "sha256": "b355586e1b2469c2233d9ddca8e8249f6dc6d58a7e7e26176d3cca68b8f9f1af"
@@ -2224,6 +2262,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -2238,6 +2285,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -2325,6 +2381,7 @@
   "ordinato_consip": {
    "2024": 317213453,
    "2025": 25161377,
+   "2026": 11408254,
    "nomi": [
     "MICROSOFT ENTERPRISE AGREEMENT 8 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -3887,6 +3944,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -3901,6 +3967,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -3995,6 +4070,7 @@
   "ordinato_consip": {
    "2024": 42392417,
    "2025": 11504917,
+   "2026": 0,
    "nomi": [
     "AQ PC PORTATILI 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ PC Portatili, mobile workstation e chromebook per le PA (ed.1)» (consip/consip-2425.json, 5/11); ID 2425 = AQ PC portatili, mobile workstation e Chromebook (base di conoscenza)]"
    ]
@@ -4046,8 +4122,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202425%20DOCUMENTAZIONE%20UFF%20NEW.zip#ID 2425 documentazione NEW pdf_firmata/ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m",
     "sha256": "5f002865a2e686731d8f80f398de4ca9618cfa4d1f0189b092a32d069ffa72d9"
@@ -5268,6 +5344,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -5282,6 +5367,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -5368,6 +5462,7 @@
   "ordinato_consip": {
    "2024": 404097429,
    "2025": 64904161,
+   "2026": 34635713,
    "nomi": [
     "DIGITAL TRANSFORMATION 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -5419,8 +5514,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202536%20-%20DOC%20NON%20UFF.zip#ID 2536 - AQ Digital Transformation 2 - documentazione PDF/ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf",
     "sha256": "6cfb1539f4b173d817b439a74e3c79a9824fe78c05922dbc19499e1069acdeaf"
@@ -6616,6 +6711,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -6630,6 +6734,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -6701,6 +6814,7 @@
   "ordinato_consip": {
    "2024": 311361064,
    "2025": 4205205,
+   "2026": 0,
    "nomi": [
     "LICENZE SOFTWARE MULTIBRAND 6 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -6752,8 +6866,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2599_Multibrand6_Allegato14_Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202599%20-%20DOC%20UFF_1.zip#ID 2599_Multibrand6_Allegato14_Flusso dati commissioni.pdf.p7m",
     "sha256": "e24500a3ea03b671f6cdc465603f21d7e8907dd1837a5c153c642509ddb24f2e"
@@ -7668,6 +7782,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -7682,6 +7805,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -7767,6 +7899,7 @@
   "ordinato_consip": {
    "2024": 134037041,
    "2025": 145374293,
+   "2026": 96723787,
    "nomi": [
     "SANIT DIGITALE SISTEMI INFORMATIVI GESTIONALI 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Sanità digitale - Sistemi informativi gestionali» (consip/consip-2366.json, 5/11); dossier 2366-sanita-digitale-gestionali]"
    ]
@@ -7818,8 +7951,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202366%20DOC%20UFF%20NEW%202.zip#ID 2366  PDF-firmati/ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "c9ee5cbb8443d5c38377581ef22f7197655b922c7593b76418d27cc74af1faa9"
@@ -8429,8 +8562,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: ente, listino_prodotto, lotto; non trovati: marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc PDF firmati/ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "sha256": "a518a9cdc8e0c61c3758da93bdd9e75c98a611f86b4ed28b1587dbc4bf29a02e"
@@ -9637,6 +9770,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -9651,6 +9793,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -9705,6 +9856,7 @@
   "ordinato_consip": {
    "2024": 0,
    "2025": 389791386,
+   "2026": 77580508,
    "nomi": [
     "LICENZE SOFTWARE MULTIBRAND 7 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Licenze software multibrand (ed.7)» (consip/consip-2738.json, 5/11); ID 2738 = gara multibrand 2024 (oggetto CIG padre); numero di edizione non letto]"
    ]
@@ -9756,8 +9908,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2738 - Multibrand 7 - 5a - Allegato Flusso dati per le commissioni a carico.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID%202738.zip#Doc firmati ID 2738/ID 2738 - Multibrand 7 - 5a - Allegato Flusso dati per le commissioni a carico.pdf.p7m",
     "sha256": "4112c902fd7678c8e298ff5401954db97e44325f3c58ca7a72ee4f9c437cd073"
@@ -10287,6 +10439,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -10301,6 +10462,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -10364,6 +10534,7 @@
   "ordinato_consip": {
    "2024": 0,
    "2025": 261549713,
+   "2026": 84051311,
    "nomi": [
     "MICROSOFT ENTERPRISE AGREEMENT 9 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -10415,8 +10586,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID2755-EA9-Allegato-6-Flussi Dati Commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755 - firmati/ID2755-EA9-Allegato-6-Flussi Dati Commissioni.pdf.p7m",
     "sha256": "691c9df3898c6192793bef78993124a3768bfb6ef19d168d6fb0ec4489276062"
@@ -11152,6 +11323,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -11166,6 +11346,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -11227,6 +11416,7 @@
   "ordinato_consip": {
    "2024": 50718944,
    "2025": 112262464,
+   "2026": 55737315,
    "nomi": [
     "SANIT DIGITALE SISTEMI INFORMATIVI CLINICO ASSISTENZIALI 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -11278,8 +11468,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2601 All. 16 Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF firmati/ID 2601 All. 16 Flusso dati commissioni.pdf.p7m",
     "sha256": "b1a286195f2146622708b8a4b4334deccde5275f4fa45ed140a87182d9a1da24"
@@ -11560,6 +11750,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -11574,6 +11773,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -11670,6 +11878,7 @@
   "ordinato_consip": {
    "2024": 234519855,
    "2025": 63726178,
+   "2026": 0,
    "nomi": [
     "RETI LOCALI 8 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -11721,8 +11930,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "sha256": "5114570701b5f7eca105d1b48ea26dd520d3f05a2b8a7ffcccc5a1c092ac4f32"
@@ -12233,6 +12442,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -12247,6 +12465,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -12308,6 +12535,7 @@
   "ordinato_consip": {
    "2024": 64017010,
    "2025": 10446796,
+   "2026": 95500,
    "nomi": [
     "PC DESKTOP E WORKSTATION 3 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -12359,8 +12587,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc firmati/ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf.p7m",
     "sha256": "3fdc3e62bb253b84cc415e442d78492a1c071a6daad809747a5ac0d5b39b4d8a"
@@ -13411,8 +13639,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2202 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202202%20DOC%20UFF%20NEW.zip#Doc firmati_ID 2202/ID 2202 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "34fb6d3cdfe289ef69a2bcacfd54a0c4c97a90161247af5eddd2b679e8a728cd"
@@ -14063,6 +14291,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -14077,6 +14314,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -14138,6 +14384,7 @@
   "ordinato_consip": {
    "2024": 0,
    "2025": 290767378,
+   "2026": 462276840,
    "nomi": [
     "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -14189,8 +14436,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2648%20-%20PDF%20-%20NEW%20UFF.zip#ID2648 - PDF - NEW UFF/ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m",
     "sha256": "29ccd0091efab433b5e74c1e705e18529b06ede6ad27fc1a9d70bec3ab9d31cd"
@@ -14979,6 +15226,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -14993,6 +15249,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -15054,6 +15319,7 @@
   "ordinato_consip": {
    "2024": 124090747,
    "2025": 35231658,
+   "2026": 0,
    "nomi": [
     "SANIT DIGITALE SISTEMI INFORMATIVI SANITARI E SERVIZI AL CITTADINO 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Sanità digitale - Sistemi informativi sanitari e servizi al cittadino» (consip/consip-2365.json, 5/11); dossier 2365-sanita-digitale-sistemi-sanitari-cittadino]"
    ]
@@ -15105,8 +15371,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202365%20DOC%20UFF%20NEW3.zip#ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c"
@@ -15960,6 +16226,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -15974,6 +16249,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16035,6 +16319,7 @@
   "ordinato_consip": {
    "2024": 47518618,
    "2025": 102359,
+   "2026": 0,
    "nomi": [
     "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ SGM ed.1» (consip/consip-2181.json, 5/11); ID 2181 = AQ SGM ed. 1 (oggetto CIG padre)]"
    ]
@@ -16086,8 +16371,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "75b744bba0de48e7b6c484136268a0db78e9150fe807b5cd1d98891de8902b47"
@@ -16933,8 +17218,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202365%20DOC%20UFF%20NEW3.zip#ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c"
@@ -17907,6 +18192,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -17921,6 +18215,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -17982,6 +18285,7 @@
   "ordinato_consip": {
    "2024": 59304529,
    "2025": 108888314,
+   "2026": 77103027,
    "nomi": [
     "CLOUD ENABLING 1 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -18033,8 +18337,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "All. 14A- ID 2652 - Gara Cloud Enabling - Flusso Commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202652%20-%20DOC%20UFF.zip#All. 14A- ID 2652 - Gara Cloud Enabling - Flusso Commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "871531b03a8176e68d44de184b438ee66d517f1e105c02d1e936cdc9f68bd5fe"
@@ -19448,8 +19752,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2710 - All. 3 AQ - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202710%20DOC%20UFF.zip#ID 2710 - All. 3 AQ - Flussi dati commissioni.pdf.p7m",
     "sha256": "307598da2d1dc976c85ba576b27b07773220ee7c201199af796a157ba56e3137"
@@ -21142,6 +21446,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -21156,6 +21469,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -21217,6 +21539,7 @@
   "ordinato_consip": {
    "2024": 85463161,
    "2025": 0,
+   "2026": 0,
    "nomi": [
     "PUBLIC CLOUD IAAS E PAAS 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ Public Cloud IAAS e PAAS» (consip/consip-2213.json, 5/11); ID 2213 = AQ prodotti cloud IaaS e PaaS (oggetto CIG padre)]"
    ]
@@ -21275,8 +21598,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "All. 13 - ID 2213 - Flusso commissioni a carico del Fornitore (TUTTI I LOTTI)_NEW.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202213%20-%20DOC%20UFFICIALE%20NEW5.zip#Doc firmati_ID 2213/All. 13 - ID 2213 - Flusso commissioni a carico del Fornitore (TUTTI I LOTTI)_NEW.pdf.p7m",
     "sha256": "12f57a786430797e4a56fc34bb63a2bfbdcf256d81d7a2c0b4ce3f3e74886640"
@@ -23392,8 +23715,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2781 - PCDWM 4 - Appendice 1 SC - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202781%20-%20DOC%20UFF.zip#ID 2781 - Pubblicazione PDF/ID 2781 - PCDWM 4 - Appendice 1 SC - Flussi dati commissioni.pdf.p7m",
     "sha256": "ff3d49375cb224a44e0e9bfac79b5e41aa81b471bcc6a98cfb43cc705a0e15ce"
@@ -24423,6 +24746,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -24437,6 +24769,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -24505,6 +24846,7 @@
   "ordinato_consip": {
    "2024": 13956429,
    "2025": 298894,
+   "2026": 0,
    "nomi": [
     "MICROSOFT ENTERPRISE AGREEMENT 6 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -24556,8 +24898,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc firmati_ID 2187/ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "093fbd50bd2552202f2ba59dc949e13564d0000a8dbc089776605a3bb67bd5e9"
@@ -26939,8 +27281,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202297%20DOC%20UFF.zip#Doc firmati_ID 2297/ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m",
     "sha256": "43cd1bb87c64e23d8dc38cf34ce17b72e2ef4baa3b8dc520587dc7c3501d7bc9"
@@ -27591,8 +27933,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202700.zip#ID 2700_AQ CRM 2_Doc.firm.digit/ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m",
     "sha256": "8045472924d192d80935d1f9c609d9f603809febbaefcbdc9b1f4d9779ebf2e5"
@@ -28513,8 +28855,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID2566 - Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202566%20-%20DOC%20UFF%20NEW.zip#Doc firmati ID 2566/ID2566 - Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "51aaa99402bec3d98e547a96734a5d51fb57871935c5f77f78dde64ba0f665a5"
@@ -29095,6 +29437,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -29109,6 +29460,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -29170,6 +29530,7 @@
   "ordinato_consip": {
    "2024": 0,
    "2025": 0,
+   "2026": 0,
    "nomi": [
     "ENERGIA ELETTRICA 21 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -29221,8 +29582,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202638%20-%20DOC%20UFF.zip#EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "2a11713c91207c37bfb841c699b13648410ab0d6b7ac26042d351cbecda65862"
@@ -30863,8 +31224,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2729 - Fotocopiatrici Multifunzione 3 - All. 1 allo schema di convenzione - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202729%20-%20DOC%20UFF.zip#Doc firmati ID 2729/ID 2729 - Fotocopiatrici Multifunzione 3 - All. 1 allo schema di convenzione - Flussi dati commissioni.pdf.p7m",
     "sha256": "0dd6737e022c63cb2f2fa39f9039f576a83d8bd1269d2ee3b2f020da3b9c44e9"
@@ -32040,8 +32401,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202480.zip#Doc firmati_ID 2480/ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "fdb18188e89b4c45bb1dff75850eaf573e00f99844c3c0c97a89aa1e71fd878a"
@@ -32766,8 +33127,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc firmati ID 2452/ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "sha256": "0ab74107a630c3db3da0623a39adff459c08fd646d8bfa47ce6cbc2f73919a9d"
@@ -33478,8 +33839,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-1561-Documentazione-UFFICIALE.zip#FirmDig_ID 1561/Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m",
     "sha256": "e1985d41140b5b1d62c9c4a051eb99bbe93d141bf06e90a280354d81eb4fcc05"
@@ -34310,8 +34671,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2174 - All. 12 - Gara Strumenti di gestione, protezione email, web e dati - Flusso commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202174%20-%20DOC%20UFF.zip#Doc firmati_ID 2174/ID 2174 - All. 12 - Gara Strumenti di gestione, protezione email, web e dati - Flusso commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "a90cf50b9c8cae4b7392499dc2fce58d1bfdb1b410b890e86ad9302502791315"
@@ -35027,6 +35388,15 @@
       "nota": null
      },
      {
+      "nome": "open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "fdec9cc37defd62a6554dbe88230ae7a3c09f2e9c5868ff0664450392eaa1fd4",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
       "nome": "open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato)",
       "url": "https://dati.consip.it/download/dataset/ordini-aq-2024.csv",
       "dove": "dati.consip.it",
@@ -35041,6 +35411,15 @@
       "dove": "dati.consip.it",
       "stato": "archiviato",
       "sha256": "c34df9e61c78330e75de454b277c02d0f39ff6e0efd168f13ff55ff9511c1829",
+      "data": "2026-11-05",
+      "nota": null
+     },
+     {
+      "nome": "open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato)",
+      "url": "https://dati.consip.it/download/dataset/ordini-aq-2026.csv",
+      "dove": "dati.consip.it",
+      "stato": "archiviato",
+      "sha256": "148be0ac9702d3fb10a7610c3493c1fecedd0074eb90fae1c037086a2b48ae4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -35102,6 +35481,7 @@
   "ordinato_consip": {
    "2024": 18656170,
    "2025": 83264520,
+   "2026": 43123677,
    "nomi": [
     "AQ CENTRALI TELEFONICHE 9 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
@@ -35153,8 +35533,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2496 - AQ CT ed. 9 - All. 1AQ Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202496%20-%20DOC%20UFF%20NEW.zip#ID 2496 - AQ CT ed. 9 - All. 1AQ Flusso dati commissioni.pdf.p7m",
     "sha256": "e706f3f3cdeb0764cf940fbfbaf7d17f4e035e830c1a9257a263872eff2ed0f4"
@@ -42990,8 +43370,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202746%20DOC%20UFF.zip#ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m",
     "sha256": "e53bfe539c042b186e624c029a332b3dd65aedd4e7f8587693f71077d3366b2d"
@@ -43646,8 +44026,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2928 - Allegato AQ - Flussi dati Commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202928%20-%20DOC%20UFF.zip#ID 2928 - PRINCO - DOC Firmate/ID 2928 - Allegato AQ - Flussi dati Commissioni.pdf.p7m",
     "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48"
@@ -44463,8 +44843,8 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "R (dal nome del file)",
-    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
+    "livello": "V (letto)",
+    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
     "documento": "ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2212%20-%20DOC%20UFFICIALE%20NEW.PDF.zip#ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "ad1da466b043e0f8c440c3e9842ea699430800ad200095f838518f221b9e9d34"
