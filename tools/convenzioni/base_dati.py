@@ -119,6 +119,7 @@ def documenti_osservati(ini, lotti, arch, kb, c):
     for d in c.get("documenti", []) or []:
         docs.append(dict(d))
     docs.extend(ALTROVE.get(ini, []))
+    docs.extend(AGGREGATORI.get(ini, []))
     if ini == "psn":  # progetti dei fabbisogni e lettere di attivazione gia' archiviati (#55, report/convenzioni/psn-database/)
         for d in csv.DictReader(open(R / "report/convenzioni/psn-database/documenti-psn.csv", encoding="utf-8")):
             if d.get("sha256"):
@@ -324,7 +325,18 @@ def scrivi_griglia(voci):
 
 def main():
     cens, arch, kb, cur = carica()
-    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI, ARETEPA
+    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI, ARETEPA, AGGREGATORI
+    AGGREGATORI = defaultdict(list)
+    pa = R / "report/convenzioni/aggregatori/aggregatori-2026-11-06.csv"
+    if pa.exists():
+        for r in csv.DictReader(open(pa, encoding="utf-8")):
+            if r["esito"] not in ("archiviato", "pubblicato-non-archiviato"):
+                continue
+            t = tipo_nome(r["documento"] + " " + r["tipo_documento"])
+            if not t:
+                continue
+            AGGREGATORI[r["iniziativa"]].append({"tipo": t, "nome": r["documento"][:120], "url": r["url_documento"] or r["url_pagina"],
+                                                 "dove": r["piattaforma"], "stato": r["esito"], "sha256": r["sha256"] or None, "data": r["data"]})
     ARETEPA = {}
     for f in sorted((R / "report/convenzioni/aretepa/schede").glob("*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
