@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mxmap-it/analisi-spesa-ict/report/convenzioni/database/schema.json",
+  "title": "spesaict.iniziativa/1 — base dati delle convenzioni e degli AQ ICT (#62)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "tipo_soggetto", "stato_iniziativa", "nome", "lotti", "inventario", "copertura", "mancanze"],
+    "properties": {
+      "id": {"type": "string", "description": "consip-<ID Sigef>, psn, o cig-<CIG padre piu' basso della gara>"},
+      "tipo_soggetto": {"enum": ["consip", "psn", "aggregatore-regionale", "consorzio-unione", "altro"]},
+      "stato_iniziativa": {"enum": ["attiva", "storica"]},
+      "nome": {"type": "string"},
+      "stazione_appaltante": {"type": "string"},
+      "categoria": {"type": "array", "items": {"type": "string"}, "description": "categoria di config/iniziative_ict.yaml"},
+      "dossier": {"type": "array", "items": {"type": "string"}, "description": "rendiconti in report/convenzioni/"},
+      "valore_ict_2024_2025": {"type": ["integer", "null"], "description": "EUR, somma importi BDNCP dei CIG derivati ICT 2024-2025"},
+      "valore_ict_2020_2026": {"type": "integer"},
+      "rango_valore": {"type": ["integer", "null"]},
+      "derivati_ict_2024_2025": {"type": "integer"},
+      "aggiudicatari": {"type": ["string", "null"]},
+      "massimali": {"type": ["string", "null"]},
+      "durata": {"type": ["string", "null"]},
+      "listini_marchi_prodotti": {"type": ["string", "null"]},
+      "regola_giurisdizione": {"type": ["string", "null"], "description": "regola dell'imbuto per lotto o listino"},
+      "pagina_consip": {"type": "array", "items": {"type": "string"}},
+      "pagina_consip_sha256": {"type": "array", "items": {"type": "string"}},
+      "lotti": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["cig_padre"],
+          "properties": {
+            "cig_padre": {"type": "string"},
+            "oggetto": {"type": "string"},
+            "anno_padre": {"type": "string"},
+            "derivati_ict_2020_2026": {"type": "integer"},
+            "euro_ict_2020_2026": {"type": "integer"},
+            "derivati_ict_2024_2025": {"type": "integer"},
+            "euro_ict_2024_2025": {"type": "integer"}
+          }
+        }
+      },
+      "inventario": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["tipo", "stato"],
+          "properties": {
+            "tipo": {"enum": ["bando", "disciplinare", "capitolato", "schema_aq_convenzione", "listini", "determina", "chiarimenti", "aggiudicazione",
+                              "offerta_tecnica", "offerta_economica", "transato_monitoraggio", "ordinativi", "cig_derivati", "progetti_fabbisogni"]},
+            "descrizione": {"type": "string"},
+            "stato": {"enum": ["archiviato", "pubblicato-non-archiviato", "non-pubblicato", "da-verificare"]},
+            "dove_di_norma": {"type": "string"},
+            "via_se_manca": {"type": "string"},
+            "nota": {"type": "string"},
+            "documenti": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "nome": {"type": "string"}, "url": {"type": "string"}, "dove": {"type": "string"},
+                  "stato": {"type": "string"}, "sha256": {"type": ["string", "null"]}, "data": {"type": ["string", "null"]}
+                }
+              }
+            }
+          }
+        }
+      },
+      "copertura": {"type": "number", "minimum": 0, "maximum": 1},
+      "mancanze": {"type": "array", "items": {"type": "object", "properties": {"tipo": {}, "descrizione": {}, "stato": {}, "fonte": {}, "via": {}}}},
+      "analisi": {"type": ["array", "null"]},
+      "note": {"type": ["string", "null"]}
+    }
+  }
+}

@@ -353,3 +353,43 @@
   richiesta: "Copia PDF con testo o formato aperto accanto al file firmato (art. 7 d.lgs. 33/2013, art. 68 CAD)"
   perche_serve: L'estrazione automatica di prodotto e importi richiede testo leggibile
   rif: ["#63"]
+- id: R37
+  destinatario: Consip, centrali di committenza regionali
+  tipo: miglioramento
+  stato: proposta
+  titolo: Transato per lotto e per listino di ogni iniziativa ICT, in dati aperti
+  evidenza: "Nella base dati #62 il «transato e monitoraggio» non è pubblicato per nessuna delle iniziative censite con pagina Consip; per PRINCO ID 2928 manca il transato per listino (Microsoft / Google / Open Source)"
+  prova: report/convenzioni/database/iniziative.json (inventario, tipo transato_monitoraggio); tools/verifiche/convenzioni_copertura.py
+  richiesta: "Serie trimestrale aperta del transato e degli ordinativi per CIG di lotto e per listino/marchio"
+  perche_serve: "È l'unico modo di misurare quanto si compra di ciascun prodotto (e quindi di ciascuna giurisdizione) senza sommare i massimali dichiarati negli attuativi"
+  rif: ["#62", R07, R08, R18]
+- id: R38
+  destinatario: Consip
+  tipo: miglioramento
+  stato: proposta
+  titolo: Indice pubblico ID Sigef ↔ CIG dei lotti, ricercabile per CIG
+  evidenza: "La ricerca pubblica di consip.it/imprese/bandi per CIG padre non trova la pagina dell'iniziativa (es. SPC2 connettività 5133642F61); la corrispondenza si ricava dal testo dell'oggetto in BDNCP o dagli avvisi GUUE"
+  prova: report/convenzioni/database/consip/*.json (esito «non-trovata» con chiave = CIG)
+  richiesta: "Nella pagina di ogni bando i CIG di tutti i lotti in chiaro; un elenco scaricabile ID Sigef, lotto, CIG, stato"
+  perche_serve: "Collega in modo deterministico BDNCP (CIG) e documentazione Consip (ID): oggi il legame si deduce"
+  rif: ["#62"]
+- id: R39
+  destinatario: Consip, centrali di committenza regionali
+  tipo: miglioramento
+  stato: proposta
+  titolo: Offerta tecnica ed economica dell'aggiudicatario pubblicate dopo la stipula, con oscuramento motivato
+  evidenza: "Nessuna delle pagine Consip censite al 5/11/2026 pubblica le offerte degli aggiudicatari; per PRINCO i prodotti del listino Open Source stanno solo nell'Allegato 12 dell'offerta di Converge"
+  prova: report/convenzioni/database/iniziative.json (tipi offerta_tecnica, offerta_economica)
+  richiesta: "Pubblicare, a stipula avvenuta, offerte tecniche e listini offerti con le sole parti coperte da segreto tecnico-commerciale oscurate e motivate (art. 35 d.lgs. 36/2023)"
+  perche_serve: "Prodotti, marchi e data center effettivamente offerti decidono la giurisdizione; senza le offerte resta solo l'accesso agli atti o l'accesso civico"
+  rif: ["#62"]
+- id: R40
+  destinatario: soggetti aggregatori regionali, ANAC (elenco dei soggetti aggregatori)
+  tipo: miglioramento
+  stato: proposta
+  titolo: Pagina pubblica uniforme per ogni convenzione o AQ degli aggregatori, legata al CIG padre
+  evidenza: "Per le iniziative di aggregatori regionali e consorzi censite in #62 la documentazione sta su piattaforme diverse (Sintel, Intercent-ER, EmPULIA, START…), spesso dietro navigazione JS o login: inventario «da verificare»"
+  prova: report/convenzioni/database/iniziative.json (tipo_soggetto aggregatore-regionale, consorzio-unione)
+  richiesta: "Per ogni convenzione o AQ: pagina pubblica con CIG padre e lotti, documenti scaricabili senza login, aggiudicatari, massimali, transato"
+  perche_serve: "Rende confrontabili le iniziative regionali con quelle Consip e archiviabili con lo stesso processo"
+  rif: ["#62", "#57", R18]

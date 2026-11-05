@@ -10,6 +10,9 @@ Base dati: `report/metodo/llm/conoscenza-iniziative.yaml`; tabella dei lotti usa
 codice: `config/lotti_cloud.yaml`. Metodo generale:
 [come si riconosce il cloud provider](../metodo-cloud-provider/).
 
+Tutte le principali convenzioni e AQ ICT (Consip, PSN, soggetti aggregatori, consorzi), con i documenti archiviati e
+quelli mancanti, sono nella sezione [Convenzioni](/convenzioni/) (#62).
+
 Regola: la giurisdizione è quella della **capogruppo del produttore**, non del rivenditore
 aggiudicatario (es. AWS venduto da Fastweb resta extra-UE).
 

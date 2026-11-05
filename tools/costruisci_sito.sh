@@ -7,6 +7,7 @@ cd "$(dirname "$0")/.."
 mkdir -p sito/data sito/static/pdf
 cp report/anac/problemi.yaml sito/data/anac_problemi.yaml   # unica fonte per web, PDF e presentazione
 python3 tools/pagina_scheda_normativa.py 2>/dev/null || PYTHONUTF8=1 /c/Users/admin/AppData/Local/Python/bin/python.exe tools/pagina_scheda_normativa.py
+python3 tools/convenzioni/pagine.py 2>/dev/null || PYTHONUTF8=1 /c/Users/admin/AppData/Local/Python/bin/python.exe tools/convenzioni/pagine.py   # sezione /convenzioni/ (#62)
 hugo --source sito --minify --cleanDestinationDir
 if [ "${1:-}" = "pdf" ]; then
   CHROME=${CHROME:-$(command -v chromium || command -v google-chrome || command -v chrome || echo "/c/Program Files/Google/Chrome/Application/chrome.exe")}

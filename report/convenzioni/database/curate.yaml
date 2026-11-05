@@ -1,0 +1,17 @@
+# #62: dati curati a mano per iniziativa (chiave = id del censimento). Ogni valore porta la fonte e il livello:
+# V = verificato da noi su documento archiviato (sha256); R = riferito (terzi o fonte unica), da verificare.
+# Campi: nome, aggiudicatari, massimali, durata, listini_marchi_prodotti, regola_giurisdizione, non_pubblicati{tipo: nota}, analisi[], note.
+
+consip-2928:
+  nome: "Consip PRINCO, Public cloud SaaS produttività individuale e collaboration (ID 2928)"
+  aggiudicatari: "Listino 1 Microsoft: Postel; listino 2 Google: TIM; listino 3 Open Source: Converge (R: atti letti il 4/11, ticket #62; da riscontrare sull'avviso di aggiudicazione GUUE S209 del 28/10/2026 archiviato)"
+  massimali: "105 M EUR complessivi; tetto di circa 62 M EUR per marchio (R: atti letti il 4/11, ticket #62)"
+  listini_marchi_prodotti: "3 listini: Microsoft (Appendice 1 al CT), Google (Appendice 2), Open Source (Appendice 3; prodotti offerti nell'Allegato 12 di Converge, non pubblicato)"
+  regola_giurisdizione: "listino 1 Microsoft e listino 2 Google = EXTRA-UE (USA) per il prodotto; listino 3 Open Source = da accertare prodotto per prodotto (basta che il software sia «basato su» open source; trasferimenti fuori SEE ammessi) (R, da verificare sul Capitolato)"
+  non_pubblicati:
+    offerta_economica: "prodotti del listino 3 (Allegato 12 dell'offerta di Converge) non pubblicati (ticket #62, 4/11)"
+    transato_monitoraggio: "transato per listino non pubblicato (ticket #62, 4/11)"
+  analisi:
+    - documento: "Capitolato tecnico e determina a contrarre"
+      sintesi: "L'adesione richiede il comparatore oppure il «vincolo tecnologico» motivato ex art. 68 CAD; qualificazione ACN QC1 dei servizi; trasferimenti fuori SEE ammessi. Implicazione per l'imbuto: ogni attuativo eredita il listino, quindi il marchio, se il CIG o l'atto lo dichiarano (R: atti letti il 4/11, da rileggere sui file archiviati il 5/11)."
+  note: "Nuova (aggiudicata a ottobre 2026): nessun CIG derivato nei dati 2024-2025."
