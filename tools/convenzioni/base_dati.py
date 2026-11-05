@@ -314,7 +314,12 @@ def scrivi_griglia(voci):
 
 def main():
     cens, arch, kb, cur = carica()
-    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI
+    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI, ARETEPA
+    ARETEPA = {}
+    for f in sorted((R / "report/convenzioni/aretepa/schede").glob("*.json")):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        if d.get("cdSigef"):
+            ARETEPA[f"consip-{d['cdSigef']}"] = d
     FLUSSI = {}
     if (DB / "flussi-dati.csv").exists():
         for r in csv.DictReader(open(DB / "flussi-dati.csv", encoding="utf-8")):
@@ -337,6 +342,13 @@ def main():
     for ini, lotti in gruppi.items():
         c = cur.get(ini, {}) or {}
         docs, pagine_ok, pag = documenti_osservati(ini, lotti, arch, kb, c)
+        ar = ARETEPA.get(ini)
+        for d in (ar or {}).get("documenti", []):
+            a = arch.get(d["url"])
+            t = tipo_nome(d["nome"]) or ("pacchetto_documentazione" if "documentazione" in d["nome"].lower() else None)
+            if t:
+                docs.append({"tipo": t, "nome": d["nome"], "url": d["url"], "dove": "acquistinretepa (scheda pubblica)",
+                             "stato": "archiviato" if a else "pubblicato-non-archiviato", "sha256": a["sha256"] if a else None, "data": ar["data"][:10]})
         for f in (fonti_od if ini in ORDINATO else []):
             docs.append({"tipo": "transato_monitoraggio", "nome": "open data Consip: " + f["url"].rsplit("/", 1)[-1] + " (ordinato per lotto, aggregato)",
                          "url": f["url"], "dove": "dati.consip.it", "stato": "archiviato", "sha256": f["sha256"], "data": "2026-11-05"})
@@ -352,6 +364,12 @@ def main():
                              "testo": letto or "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
                              "documento": flusso[0][0], "url": flusso[0][1], "sha256": flusso[0][2]})
         car_ini = carenze_di(ini, inv, categorie, pagine_ok, pag, CAR, lotti[0]["tipo_soggetto"])
+        if ar and "Nessun risultato" in (ar.get("residuo_testo") or ""):
+            for k in car_ini:
+                if k["id"] == "C7":
+                    k["stato"] = "verificato"
+                    k["nota"] = (f"acquistinretepa, scheda pubblica consultata con browser il {ar['data'][:10]}: la sezione «Massimale residuo» "
+                                 "esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)")
         for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
             if k["id"] in (c.get("carenze_verificate") or {}):
                 k["stato"], k["nota"] = "verificato", c["carenze_verificate"][k["id"]]
@@ -383,6 +401,8 @@ def main():
             "ordinato_consip": {"2024": sum(int(r["ordinato_2024"]) for r in ORDINATO.get(ini, [])), "2025": sum(int(r["ordinato_2025"]) for r in ORDINATO.get(ini, [])),
                                 "2026": sum(int(r.get("ordinato_2026") or 0) for r in ORDINATO.get(ini, [])),
                                 "nomi": [r["nome_consip"] + " [" + r["abbinamento"] + "]" for r in ORDINATO.get(ini, [])]} if ini in ORDINATO else None,
+            "aretepa": {"url": ar["url"], "stato": ar.get("stato"), "documenti": len(ar.get("documenti", [])), "data": ar["data"][:10],
+                        "residuo_pubblico": "Nessun risultato" not in (ar.get("residuo_testo") or "")} if ar else None,
             "carenze": car_ini, "evidenze_dato_esistente": evidenze, "altrove_su_carenze": ALTROVE_EXTRA.get(ini, []), "estratti": estratti_di(ini),
             "analisi": c.get("analisi"), "note": c.get("note"),
         })

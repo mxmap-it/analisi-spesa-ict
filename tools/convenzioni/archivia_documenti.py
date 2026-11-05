@@ -33,6 +33,13 @@ def urls_da_archiviare():
                     yield ini, d["url"]
 
 
+def urls_aretepa():
+    for f in sorted((DB.parent / "aretepa/schede").glob("*.json")):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        for doc in d.get("documenti", []):
+            yield f"consip-{d.get('cdSigef')}", doc["url"]
+
+
 def indice(url_validi):
     ultimi = {}
     if A.MANIFEST.exists():
@@ -60,7 +67,7 @@ def indice(url_validi):
 def main():
     args = sys.argv[1:]
     max_mb = float(args[args.index("--max-mb") + 1]) if "--max-mb" in args else 200.0
-    lista = list(urls_da_archiviare())
+    lista = list(urls_da_archiviare()) + list(urls_aretepa())
     validi = {u for _, u in lista}
     if "--solo-indice" not in args:
         s = requests.Session(); s.headers["User-Agent"] = A.UA

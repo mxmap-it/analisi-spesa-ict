@@ -18,6 +18,7 @@ Indice di visibilità (nessun peso, solo conteggi):
 Uso: python tools/convenzioni/rapporto.py VERSIONE DATA "nota della revisione" """
 import csv
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -62,6 +63,17 @@ def fonti_web():
     return {"righe": len(rr), "url": len({r["url"] for r in rr}), "archiviati": len({r["url"] for r in rr if r["sha256"]})}
 
 
+def migliaia(riga):
+    """Separatore delle migliaia anche per i numeri di 4 cifre (1.120), salvo anni, ID e codici (regola del sito)."""
+    if riga.startswith("---") or riga.startswith(("title:", "date:", "lastmod:", "datiAl:", "subtitle:", "description:")):
+        return riga
+
+    def f(m):
+        n = int(m.group(0))
+        return m.group(0) if 1990 <= n <= 2035 else f"{n:,}".replace(",", ".")
+    return re.sub(r"(?<![\w./#=:-])(?<!ID )(?<!Sigef )\d{4,}(?![\w.,/%-])", f, riga)
+
+
 def pct1(a, b):
     return f"{100 * a / b:.1f} %".replace(".", ",") if b else "–"
 
@@ -99,6 +111,9 @@ def metriche(voci, reg):
          "flusso_dati": sum(1 for v in voci if v.get("evidenze_dato_esistente")),
          "flusso_letti": sum(1 for v in voci for e in v.get("evidenze_dato_esistente", []) if e["livello"].startswith("V")),
          "istanze_ritirate": sum(1 for r in reg if r["stato"] == "ritirata"),
+         "aretepa_vetrina": len(json.loads((R / "report/convenzioni/aretepa/vetrina-sintesi.json").read_text(encoding="utf-8"))) if (R / "report/convenzioni/aretepa/vetrina-sintesi.json").exists() else 0,
+         "aretepa_schede": sum(1 for v in voci if v.get("aretepa")),
+         "aretepa_documenti": sum((v.get("aretepa") or {}).get("documenti", 0) for v in voci),
          "enti_campione": enti_campione(), "fonti_web": fonti_web(),
          "od_iniziative": sum(1 for v in voci if v.get("ordinato_consip")),
          "od_bdncp": sum(v["valore_ict_2024_2025"] or 0 for v in voci if v.get("ordinato_consip")),
@@ -198,7 +213,8 @@ def main(versione, data, nota):
          "il fornitore deve trasmettere ogni mese a Consip il dettaglio delle fatture, con l'ID dell'ordine sulla piattaforma e l'imponibile, "
          "per il calcolo della commissione (d.m. MEF 23/11/2012). Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato "
          "per ordine e quindi per ente; non abbiamo verificato che il flusso avvenga né in che forma sia conservato. "
-         f"In altre {g['flusso_dati'] - g['flusso_letti']} iniziative c'è un file il cui nome rimanda ai flussi dati del fatturato (non letto, R).",
+         f"Gli altri {g['flusso_dati'] - 1} allegati, letti con una ricerca per parole (R), prevedono lo stesso schema: fattura, ID dell'ordine, imponibile; "
+         "nessun campo per ente, prodotto o marchio.",
          f"- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), {g['istanze_preparate']} bozze di accesso civico generalizzato, "
          f"tutte verso Consip, restano utili all'analisi; {g['istanze_ritirate']} sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 "
          "perché questi dati diventino pubblici senza bisogno di chiederli.", "",
@@ -217,17 +233,36 @@ def main(versione, data, nota):
         o = v["ordinato_consip"]
         L.append(f"| [{v['nome'][:60]}](/convenzioni/{v['id'].lower()}/) | {meur(v['valore_ict_2024_2025'] or 0)} | {meur(o['2024'] + o['2025'])} | "
                  f"{'; '.join(n.split(' [')[1].rstrip(']')[:40] for n in o['nomi'])} |")
+    L += ["", "### Consumato per convenzione, fonte per fonte", "",
+          f"Consultazioni del {DT}. [V] = dato letto da noi sulla fonte archiviata; [R] = riferito. Nessuna fonte pubblica dà il consumato "
+          "per listino, marchio o ente.", "",
+          "| Iniziativa | BDNCP derivati ICT 2024-25 (M€) [V] | Ordinato 2024 (M€) [V] | Ordinato 2025 (M€) [V] | Ordinato 2026 a oggi (M€) [V] | Massimale residuo su acquistinretepa | Corte dei conti [R] |",
+          "|---|---|---|---|---|---|---|"]
+    for v in sorted([v for v in voci if v["tipo_soggetto"] == "consip" and v["id"] not in FUORI_PERIMETRO and (v.get("ordinato_consip") or v.get("aretepa"))],
+                    key=lambda v: -(v["valore_ict_2024_2025"] or 0)):
+        o_ = v.get("ordinato_consip") or {}
+        ar = v.get("aretepa")
+        res = "non pubblico senza login (sezione presente, «Nessun risultato»)" if ar and not ar["residuo_pubblico"] else ("pubblico" if ar else "scheda non trovata")
+        L.append(f"| [{v['nome'][:60]}](/convenzioni/{v['id'].lower()}/) | {meur(v['valore_ict_2024_2025'] or 0)} | "
+                 + (f"{meur(o_.get('2024', 0))} | {meur(o_.get('2025', 0))} | {meur(o_.get('2026', 0))}" if o_ else "– | – | –")
+                 + f" | {res} | solo aggregato degli AQ |")
+    L += ["", "**Perché le fonti non coincidono.** BDNCP registra l'importo dichiarato quando l'ente acquisisce il CIG derivato (spesso pluriennale o "
+          "pari al massimale) e solo per i derivati con CPV ICT; gli open data Consip contano gli ordini diretti dell'anno (non gli appalti specifici "
+          "con rilancio competitivo) per convenzione o AQ; la Corte dei conti riporta l'erogato complessivo degli accordi quadro, non per iniziativa. "
+          "Il massimale residuo, che darebbe l'erosione per lotto, ha una sezione nella scheda pubblica di acquistinretepa ma non mostra dati a un "
+          "utente non autenticato: è nell'[elenco dei blocchi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/blocchi-accesso.csv) "
+          "da provare a mano.", ""]
     ec, fw = g["enti_campione"], g["fonti_web"]
     L += ["", "## 3. Fonti online consultate prima dell'accesso civico", "",
           f"Tutte consultate il {DT}, senza login né CAPTCHA, a ritmo basso e con User-Agent dichiarato.", "",
           "| Fonte | Esito | Livello |", "|---|---|---|",
           "| Pagine dei bandi su consip.it | documentazione di gara di 44 iniziative; offerte, transato per marchio ed elenco degli ordinativi non individuati | V per la presenza dei file; R per il tipo dedotto dal nome |",
           "| Open data Consip (dati.consip.it) | ordinato per anno, convenzione o AQ e lotto (2024-2025); niente ente, listino, marchio | V |",
-          "| acquistinretepa | schede iniziativa generate in JavaScript da un servizio non documentato; catalogo e acquisto dietro «Accedi»; listini offerti non consultati | parziale: da rifare con un browser reale |",
+          f"| acquistinretepa (browser reale, Chrome headless) | vetrina: {g['aretepa_vetrina']} iniziative; schede pubbliche di {g['aretepa_schede']} iniziative del censimento, con {g['aretepa_documenti']} documenti; massimale residuo non mostrato senza login; catalogo e acquisto dietro «Accedi»; chiamate JSON registrate con sha256 | V |",
           "| Amministrazione trasparente di Consip | le sottosezioni di «Bandi di gara e contratti» riguardano gli acquisti di Consip per sé; «Controlli e rilievi» rinvia alla Corte dei conti | V (indice delle sezioni) |",
           f"| Campione di enti aderenti | {ec.get('righe', 0)} righe valide (righe di controllo escluse), {ec.get('enti', 0)} enti, {ec.get('iniziative', 0)} iniziative: file nel percorso AT {ec.get('in_at', 0)}, URL esterno al percorso AT {ec.get('fuori_at', 0)} (collegamento dalla sezione AT non verificato), non trovato {ec.get('non_trovato', 0)}, AT non verificabile automaticamente il 5/11 {ec.get('at_irraggiungibile', 0)} (da ripetere); {ec.get('archiviati', 0)} archiviati | V per i documenti letti; R per la posizione rispetto all'AT |",
           f"| Ricerca web (Corte dei conti, stampa, atti di enti) | {fw.get('righe', 0)} dati da {fw.get('url', 0)} URL, {fw.get('archiviati', 0)} archiviati; erogato per iniziativa non trovato (nelle due relazioni della Corte dei conti consultate, gestioni 2021 e 2022, l'erogato degli AQ è aggregato) | R |",
-          f"| Allegati «flussi dati del fatturato» | file con questo nome in {g['flusso_dati']} iniziative; letto per intero quello di Microsoft EA8 (ID 2615): il fornitore deve trasmettere ogni mese il dettaglio delle fatture con l'ID dell'ordine | V (EA8, clausola); R per gli altri |", "",
+          f"| Allegati «flussi dati del fatturato» | letti tutti i {g['flusso_dati']}: invio mensile a Consip del dettaglio delle fatture (numero, data, ID dell'ordine, imponibile); nel tracciato non compaiono campi per ente, prodotto o marchio | V per EA8 (letto per intero); R per gli altri (ricerca per parole nel testo) |", "",
           "Il dettaglio per iniziativa e per ente è nelle [schede](/convenzioni/) e nei file "
           "[enti-campione](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/enti-campione) e "
           "[fonti-non-ufficiali](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/fonti-non-ufficiali), "
@@ -292,7 +327,7 @@ def main(versione, data, nota):
     L += ["", "## Registro delle revisioni", "", "| Versione | Data | Nota | Cosa è cambiato |", "|---|---|---|---|"]
     for s in reversed(storia):
         L.append(f"| {s['versione']} | {s['data']} | {s['nota']} | {'; '.join(s['cambiamenti'])[:600]} |")
-    OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
+    OUT.write_text("\n".join(migliaia(x) for x in L) + "\n", encoding="utf-8")
     print("rapporto", versione, "scritto;", "; ".join(diff)[:300])
 
 
