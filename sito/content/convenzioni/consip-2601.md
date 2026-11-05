@@ -16,7 +16,7 @@ description: "Iniziativa consip-2601: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 557,5 M€ (242 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 656,4 M€ |
 | Categoria (base di conoscenza) | servizi-applicativi |
-| Aggiudicatari | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari lotto 2: RTI Engineering, RTI Dedalus, RTI GPI, RTI Enterprise (fonte: TED 336340-2024; livello V; da 2601-sanita-digitale-clinico-assistenziali-2.md) |
 | Massimali e tetti | da ricavare dai documenti |
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |

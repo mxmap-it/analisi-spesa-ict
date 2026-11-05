@@ -3,6 +3,9 @@
 # Campi: nome, aggiudicatari, massimali, durata, listini_marchi_prodotti, regola_giurisdizione, non_pubblicati{tipo: nota}, analisi[], note.
 
 consip-2928:
+  carenze_verificate:
+    C6: "lo Schema AQ prevede la lista dei trasferimenti extra-UE trasmessa al Titolare prima dell'ordinativo: non pubblicata (atti letti il 5/11)"
+    C7: "il Capitolato §4.2.3 fissa la soglia di erosione per Brand e l'esclusione dal comparatore al raggiungimento; lo stato dell'erosione non è sulla pagina Consip (5/11)"
   nome: "Consip PRINCO, Public cloud SaaS produttività individuale e collaboration (ID 2928)"
   aggiudicatari: "Listino 1 Microsoft: Postel; listino 2 Google: TIM; listino 3 Open Source: Converge (R: ticket #62, 4/11; da riscontrare sull'avviso di aggiudicazione GUUE S209 del 28/10/2026, archiviato)"
   massimali: "105 M EUR (V: bando GUUE S060 del 26/3/2026 e CdO). Quota minima per aggiudicatario 10 % del massimale; soglia massima di erosione per Brand = 70 % del 70 % residuo (V: Capitolato §4.2.3): 10,5 + 0,7 x 73,5 = circa 62 M EUR per marchio (calcolo nostro); al raggiungimento il listino del Brand esce dal comparatore. Superamento ammesso fino al 5 % (V: Schema AQ art. 4 c. 5)"
@@ -25,6 +28,8 @@ consip-2928:
 # --- documenti reperiti con la ricerca online complementare (Fabio, 5/11): «fonte non ufficiale» rispetto alla centrale.
 # Non cambiano lo stato della carenza. ufficiale: false; fonte = sito; affidabilita: A (atto firmato di una PA) | B (terzi).
 consip-2746:
+  carenze_verificate:
+    C6: "gli aggiudicatari dichiarano ex DPR 445/2000 Region e Data Center di erogazione (Risposta ai chiarimenti, sha256 69104637…); la dichiarazione non è sulla pagina Consip (consultata il 5/11)"
   documenti:
     - {tipo: chiarimenti, nome: "ID 2746 - Risposta ai chiarimenti (def.)", url: "https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202746%20-%20IaaS%20e%20PaaS%202%20-%20Risposta%20ai%20chiarimenti%20def.pdf", dove: consip.it, stato: archiviato, sha256: 6910463731d3d1fc33c9382f99ad0a7fefe67e7dedc45687b6da44cd067ce0be, data: "2026-11-05", nota: "conferma (V) che gli aggiudicatari dichiarano ex DPR 445/2000 le Region e/o i Data Center di erogazione: il dato esiste ma la dichiarazione non è pubblicata (C6)"}
     - {tipo: ordinativi, ufficiale: false, fonte: "arera.it (AT di ARERA)", affidabilita: A, nome: "ARERA, determina 76/DAGR/2026: adesione al lotto 1 (AWS, Fastweb, CIG B6A19F425E)", url: "https://www.arera.it/fileadmin/allegati/docs/26/76-26-dagr.pdf", stato: archiviato, sha256: 75090b5438b35b6f3d9cffc35c340e52df1fd35ae92fbcf606e041b6eb579fba, data: "2026-11-05"}

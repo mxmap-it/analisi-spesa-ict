@@ -16,9 +16,9 @@ description: "Iniziativa consip-1836: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 3,3 M€ (1 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 554,2 M€ |
 | Categoria (base di conoscenza) | system-management |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari: 17 imprese in BDNCP (Accenture, Almaviva, Enterprise Services Italia, Fastweb, HP Italiana, Kyndryl, Leonardo, Lutech, Present, Reply…) (fonte: BDNCP aggiudicatari; livello V fonte unica → R (avviso di esito non archiviato); da 7260902DDE-system-management-2.md) |
+| Massimali e tetti | Valore stimato: 302.120.512 € (fonte: TED; BDNCP; livello V2; da 7260902DDE-system-management-2.md) |
+| Durata | Durata AQ: 24 mesi + proroga max 12; AS 12-60 mesi (fonte: TED 455199-2017; livello V (Consip via TED); da 7260902DDE-system-management-2.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 15 % dei tipi di documento attesi |

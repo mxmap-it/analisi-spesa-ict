@@ -16,9 +16,9 @@ description: "Iniziativa consip-2631: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 469,4 M€ (1383 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 469,4 M€ |
 | Categoria (base di conoscenza) | hardware |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatario: Italware S.r.l. (Roma) (fonte: Convenzione lotto 2; BDNCP; livello V2; da 9823936871-pc-desktop-workstation-3.md) |
+| Massimali e tetti | Valore lotto 2: 89.045.000 € (totale gara 243.067.500 €) (fonte: avviso di aggiudicazione; TED; BDNCP; livello V2; da 9823936871-pc-desktop-workstation-3.md) |
+| Durata | Durata: 365 giorni (BDNCP); lettera di proroga per il lotto 6 (non letta per il lotto 2) (fonte: BDNCP; pagina Consip; livello R; da 9823936871-pc-desktop-workstation-3.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 8 % dei tipi di documento attesi |

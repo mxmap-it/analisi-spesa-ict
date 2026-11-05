@@ -17,8 +17,8 @@ description: "Iniziativa consip-2599: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2020-2026 | 935,9 M€ |
 | Categoria (base di conoscenza) | licenza-prodotto |
 | Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Massimali e tetti | Valore gara / lotto: 435 M€ / 40 M€ (fonte: TED 702067-2023; BDNCP; livello V; da 9660108D4B-multibrand6-oracle.md) |
+| Durata | Durata: non letta (convenzione e ordinativi) (fonte: —; livello da verificare; da 9660108D4B-multibrand6-oracle.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

@@ -148,6 +148,26 @@ def inventario(ini, docs, pagine_ok, pag, c):
     return righe
 
 
+CAMPI_DOSSIER = {"aggiudicatari": r"aggiudicatar", "massimali": r"massimal|valore", "durata": r"durata"}
+
+
+def dai_dossier(percorsi):
+    """Aggiudicatari, massimali e durata dalle tabelle «| Campo | Valore | Fonte | Livello |» dei rendiconti esistenti (riuso, non rifare)."""
+    out = {}
+    for p in percorsi:
+        f = R / p
+        if not f.exists():
+            continue
+        for riga in f.read_text(encoding="utf-8").splitlines():
+            c = [x.strip() for x in riga.strip().strip("|").split("|")]
+            if len(c) < 4 or not riga.startswith("|"):
+                continue
+            for campo, rx in CAMPI_DOSSIER.items():
+                if re.match(rx, c[0], re.I):
+                    out.setdefault(campo, []).append(f"{c[0]}: {c[1]} (fonte: {c[2]}; livello {c[3]}; da {p.rsplit('/', 1)[-1]})")
+    return {k: " · ".join(v[:3]) for k, v in out.items()}
+
+
 def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
     """Carenze di trasparenza (report/convenzioni/database/carenze.yaml) che colpiscono l'iniziativa."""
     per_tipo = {i["tipo"]: i for i in inv}
@@ -234,8 +254,12 @@ def main():
         ok = sum(1 for i in inv if i["stato"] == "archiviato")
         categorie = sorted({kb.get(x["cig_padre"], {}).get("categoria") for x in lotti} - {None})
         car_ini = carenze_di(ini, inv, categorie, pagine_ok, pag, CAR, lotti[0]["tipo_soggetto"])
+        for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
+            if k["id"] in (c.get("carenze_verificate") or {}):
+                k["stato"], k["nota"] = "verificato", c["carenze_verificate"][k["id"]]
         l0 = lotti[0]
         kb0 = kb.get(l0["cig_padre"], {})
+        dd = dai_dossier(sorted({kb[x["cig_padre"]]["dossier"] for x in lotti if kb.get(x["cig_padre"], {}).get("dossier")}))
         regola = c.get("regola_giurisdizione") or next(
             (kb[x["cig_padre"]].get("regola_sovranita") for x in lotti if kb.get(x["cig_padre"], {}).get("regola_sovranita")), None)
         voci.append({
@@ -247,7 +271,8 @@ def main():
             "valore_ict_2024_2025": int(l0["valore_iniziativa"]) if l0["criterio_valore"] == "euro_ict_2024_2025" else None,
             "valore_ict_2020_2026": int(l0["valore_iniziativa_2020_2026"]), "rango_valore": int(l0["rango_iniziativa"] or 0) or None,
             "derivati_ict_2024_2025": sum(int(x["derivati_ict_2024_2025"]) for x in lotti),
-            "aggiudicatari": c.get("aggiudicatari"), "massimali": c.get("massimali"), "durata": c.get("durata"),
+            "aggiudicatari": c.get("aggiudicatari") or dd.get("aggiudicatari"), "massimali": c.get("massimali") or dd.get("massimali"),
+            "durata": c.get("durata") or dd.get("durata"),
             "listini_marchi_prodotti": c.get("listini_marchi_prodotti"), "regola_giurisdizione": regola,
             "pagina_consip": [p["url"] for p in pagine_ok], "pagina_consip_sha256": [p["sha256_html"] for p in pagine_ok],
             "lotti": [{"cig_padre": x["cig_padre"], "oggetto": x["oggetto"], "anno_padre": x["anno_padre"],

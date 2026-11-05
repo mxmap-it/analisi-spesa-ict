@@ -16,9 +16,9 @@ description: "Iniziativa consip-2425: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 1.616,7 M€ (468 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 1.670,7 M€ |
 | Categoria (base di conoscenza) | hardware |
-| Aggiudicatari | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari L1: 9 operatori (BSistemi, Converge, Eurome, Finbuc, Infordata, Italware, …) con quote (fonte: TED 564730-2023; BDNCP (21 imprese su tutti i lotti); livello V2; da 9158053868-pc-portatili-chromebook.md) · Aggiudicatari L3: BDNCP: A.G. Informatica, Bellucci, …; attuativi a Posdata, C2, IM Direct (fonte: BDNCP; livello R; da 9158053868-pc-portatili-chromebook.md) · aggiudicatario «IMPRESA INESISTENTE»: 41 (fonte: 0; livello 0; da 9158053868-pc-portatili-chromebook.md) |
 | Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Durata | Durata: 18 mesi (TED); 540 giorni (BDNCP) (fonte: TED; BDNCP; livello V2; da 9158053868-pc-portatili-chromebook.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 8 % dei tipi di documento attesi |

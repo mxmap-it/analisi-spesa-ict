@@ -17,8 +17,8 @@ description: "Iniziativa consip-2296: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2020-2026 | 1.652,6 M€ |
 | Categoria (base di conoscenza) | sicurezza |
 | Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Massimali e tetti | Massimali: L1 468 M€: RTI Accenture-Fincantieri NexTech-Fastweb-DEAS 280,8 M€ (solo PAL), RTI Telecom Italia-Netgroup-Reevo-KPMG-Almaviva 187,2 M€ (solo PAC); L2 117 M€: RTI Deloitte-EY-Teleco 70,2 M€ (PAL), RTI Intellera-Capgemini-… (PAC) (fonte: TED 485060-2022; BDNCP; livello V2; da 88846293CA-sicurezza-da-remoto-compliance.md) |
+| Durata | Durata: AQ 24 mesi; contratti esecutivi fino a 48 mesi (fonte: Bando GURI (zip Consip); BDNCP 1460 giorni; livello V2; da 88846293CA-sicurezza-da-remoto-compliance.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

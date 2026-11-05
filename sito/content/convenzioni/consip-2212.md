@@ -16,9 +16,9 @@ description: "Iniziativa consip-2212: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 11,1 M€ (11 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 2.157,7 M€ |
 | Categoria (base di conoscenza) | servizi-applicativi |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari lotto 1: 4 RTI: Accenture (con Avanade, ESRI, SMC, BIP), IBM (con Deda Next, EY, Pagile), Enterprise Services (con Eustema, Net Service, Claranet…), Almaviva (con Apkappa, Inmatica, Reply…) (fonte: TED 536035-2023; livello V; da 2212-servizi-applicativi-cloud-pmo.md) |
+| Massimali e tetti | Valore totale: 1.202 M (base d'asta «1,2 miliardi») (fonte: TED; BDNCP importo_complessivo_gara; comunicato; livello V; da 2212-servizi-applicativi-cloud-pmo.md) |
+| Durata | Durata: AQ 18 mesi; contratti esecutivi fino a 48 mesi (fonte: comunicato Consip (repository AgID); livello V (una fonte Consip); da 2212-servizi-applicativi-cloud-pmo.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 15 % dei tipi di documento attesi |

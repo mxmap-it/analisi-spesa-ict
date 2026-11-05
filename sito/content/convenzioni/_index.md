@@ -26,8 +26,8 @@ Per il contesto cloud vedi [Iniziative Consip cloud](/progetto/iniziative-consip
 <tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R37</td></tr>
 <tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>41 / 44</td><td>50.697,5</td><td>in parte</td><td>R08</td></tr>
 <tr><td><strong>C5</strong> Progetti e piani dei fabbisogni</td><td>0 / 1</td><td>0,0</td><td>no</td><td>R41</td></tr>
-<tr><td><strong>C6</strong> Region e data center dichiarati</td><td>0 / 5</td><td>0,0</td><td>no</td><td>R42</td></tr>
-<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>0 / 86</td><td>0,0</td><td>no</td><td>R37</td></tr>
+<tr><td><strong>C6</strong> Region e data center dichiarati</td><td>2 / 3</td><td>0,0</td><td>no</td><td>R42</td></tr>
+<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>1 / 85</td><td>0,0</td><td>no</td><td>R37</td></tr>
 <tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>4 / 41</td><td>951,7</td><td>no</td><td>R38</td></tr>
 </tbody></table>
 <p><strong>Per tipo di soggetto</strong> (iniziative colpite, verificato + da verificare):</p>

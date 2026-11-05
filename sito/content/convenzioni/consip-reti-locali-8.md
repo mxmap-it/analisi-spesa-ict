@@ -16,9 +16,9 @@ description: "Iniziativa consip-reti-locali-8: dati, documenti archiviati e manc
 | Valore ICT dei CIG derivati 2024-2025 | 554,2 M€ (251 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 554,2 M€ |
 | Categoria (base di conoscenza) | connettivita |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatario: RTI Vodafone Italia – Converge – Studio Tecnico Ing. Umberto Lisa (fonte: esito Consip; BDNCP; livello V2; da 9543706356-reti-locali-8-lotto-2.md) |
+| Massimali e tetti | Valore: stimato 217 M€; aggiudicato 145.154.513,82 €; dopo modifica 174.185.416,58 € (sesto quinto, PNRR M6C2) (fonte: esito Consip; TED 671042-2024; BDNCP (217 M€); livello V2; da 9543706356-reti-locali-8-lotto-2.md) |
+| Durata | Durata: 548 giorni (BDNCP); nulla osta subentro Fastweb 2026 sulla pagina Consip (fonte: BDNCP; pagina Consip; livello R; da 9543706356-reti-locali-8-lotto-2.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 8 % dei tipi di documento attesi |

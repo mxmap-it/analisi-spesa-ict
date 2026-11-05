@@ -16,7 +16,7 @@ description: "Iniziativa consip-2536: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 969,7 M€ (146 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 1.005,5 M€ |
 | Categoria (base di conoscenza) | pmo-demand |
-| Aggiudicatari | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari: L2 RTI Accenture e altri; L6 RTI Business Integration Partners e altri (fonte: TED 557722-2024; BDNCP; livello V; da 2536-digital-transformation-2.md) |
 | Massimali e tetti | da ricavare dai documenti |
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |

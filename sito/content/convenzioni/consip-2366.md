@@ -16,7 +16,7 @@ description: "Iniziativa consip-2366: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 834,1 M€ (45 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 896,2 M€ |
 | Categoria (base di conoscenza) | servizi-applicativi |
-| Aggiudicatari | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari: 47 operatori nell'elenco BDNCP (RTI con Accenture, Almaviva, Enterprise Services, Capgemini, Artexe…) (fonte: BDNCP aggiudicatari; livello R; da 2366-sanita-digitale-gestionali.md) |
 | Massimali e tetti | da ricavare dai documenti |
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |

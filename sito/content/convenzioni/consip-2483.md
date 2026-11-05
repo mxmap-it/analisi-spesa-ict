@@ -16,9 +16,9 @@ description: "Iniziativa consip-2483: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 29.917,7 M€ (414 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 31.340,5 M€ |
 | Categoria (base di conoscenza) | pmo-demand, servizi-applicativi |
-| Aggiudicatari | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari lotto 1: RTI Accenture (con Avanade, Engineering D.HUB, EY, InfoCert, BeSharp, Cloudmind…), RTI Enterprise Services Italia, RTI IBM Italia e altri (53 operatori nell'elenco aggiudicatari BDNCP) (fonte: TED 717702-2023; BDNCP aggiudicatari; contratto MiTur; livello V; da 2483-servizi-applicativi-cloud-pac-2.md) · Aggiudicatari lotto 2: HSPI, Intellera, Deloitte, Advant, Business Changers, LUISS, PRS, S3K, SCS Azioninnova (BDNCP) (fonte: BDNCP aggiudicatari; livello R (TED da archiviare); da 2483-servizi-applicativi-cloud-pac-2.md) |
 | Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Durata | Durata: contratti esecutivi lotto 1 fino a **60 mesi**, compresi al massimo 12 di garanzia (fonte: TED 221218-2022; contratto MiTur: 24 mesi; livello V; da 2483-servizi-applicativi-cloud-pac-2.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

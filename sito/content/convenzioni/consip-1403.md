@@ -16,9 +16,9 @@ description: "Iniziativa consip-1403: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 2,1 M€ (5 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 1.780,4 M€ |
 | Categoria (base di conoscenza) | cloud-multi, servizi-applicativi |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatario: RTI TIM (mandataria), Enterprise Services Italia S.r.l. (ex HPE Services Italia), Poste Italiane, Postel, Postecom (fonte: BDNCP aggiudicatari (Postecom assente); det. Interno; TED 647656-2021; livello V2; da 55187486EA-spc-cloud-lotto-1.md) · Aggiudicatario: RTI Almaviva (mandataria), Almawave, Indra Italia, Intellera Consulting (ex PwC Public Sector) (fonte: BDNCP aggiudicatari; TED 248255-2021; livello V2; da 55193442C1-spc-cloud-lotto-3.md) · Aggiudicatario: RTI Almaviva (mandataria), Almawave, Indra Italia, Intellera Consulting (fonte: BDNCP aggiudicatari; contratto esecutivo PCM-Casa Italia (CIG 76399763A4); TED 248256-2021; livello V2; da 5519376D26-spc-cloud-lotto-4.md) |
+| Massimali e tetti | Massimale: 500.000.000 € (importo lotto in BDNCP); variante +150 M€ (CIG 8734352748, Consip, 2021, «Lotto 1 – variante SPC Cloud – ID 1403») (fonte: BDNCP; livello V (fonte unica: Consip in BDNCP); da 55187486EA-spc-cloud-lotto-1.md) · Massimale: 400.000.000 € (BDNCP); variante +120 M€ (CIG 87343673AA, Consip 2021) (fonte: BDNCP; livello V (fonte unica); da 55193442C1-spc-cloud-lotto-3.md) · Massimale: 450.000.000 € (BDNCP); variante +135 M€ (CIG 8734381F34, Consip 2021) (fonte: BDNCP; livello V (fonte unica); da 5519376D26-spc-cloud-lotto-4.md) |
+| Durata | Durata / scadenza: proroga 24 mesi a 20/07/2021 (com. Consip 17/01/2018), addendum a 20/07/2022, poi 31/12/2022 (fonte: det. ART 138/2021; delibera AGCOM 282/22/CONS; decreto Regione Calabria 17588/2022; livello V2 (atti di aderenti che citano comunicazioni Consip); da 55187486EA-spc-cloud-lotto-1.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 14 % dei tipi di documento attesi |

@@ -16,9 +16,9 @@ description: "Iniziativa consip-2275: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 746,9 M€ (119 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 870,4 M€ |
 | Categoria (base di conoscenza) | system-management |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari lett. c: anche RTI Almaviva-Leonardo-SMI-Net Service-Eurolink-Telecom Italia (fonte: TED 565879-2022; BDNCP aggiudicatari; livello V2; da 893944468E-system-management-3.md) |
+| Massimali e tetti | Massimale: 500.000.000 €; quote lett. a: RTI Fastweb-Accenture-Atos-Consielte 125 M€, RTI Enterprise Services-Engineering D.Hub-Eustema-DGS 75 M€; lett. c: 300 M€ (fonte: TED 565879-2022; Condizioni di fornitura (125 M€/75 M€); livello V2; da 893944468E-system-management-3.md) |
+| Durata | Durata AQ: 730 giorni (BDNCP «DURATA_PREVISTA») (fonte: BDNCP; livello V fonte unica → R; da 893944468E-system-management-3.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 15 % dei tipi di documento attesi |

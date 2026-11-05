@@ -18,7 +18,7 @@ description: "Iniziativa consip-2610: dati, documenti archiviati e mancanti."
 | Categoria (base di conoscenza) | pmo-demand, servizi-applicativi |
 | Aggiudicatari | da ricavare dai documenti |
 | Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Durata | Durata: AQ 24 mesi + 12; contratti di fornitura fino a 60 mesi (fonte: TED; esito; livello V; da 2610-servizi-applicativi-cloud-pal-3.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 15 % dei tipi di documento attesi |

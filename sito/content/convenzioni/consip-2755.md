@@ -17,8 +17,8 @@ description: "Iniziativa consip-2755: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2020-2026 | 774,8 M€ |
 | Categoria (base di conoscenza) | licenza-prodotto |
 | Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Massimali e tetti | Valore in avviso di aggiudicazione: 53.750.000 € (PayableAmount/TotalAmount) (fonte: TED 251426-2025; livello V il dato; anomalo; da B1D4011AB2-microsoft-ea9.md) |
+| Durata | Durata attuativi: 36 mesi (fonte: determina MAECI; livello R; da B1D4011AB2-microsoft-ea9.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

@@ -16,9 +16,9 @@ description: "Iniziativa consip-2710: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 145,4 M€ (49 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 430,3 M€ |
 | Categoria (base di conoscenza) | system-management |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatari: 4 RTI: Telecom Italia (offerta 448,05 M€), Almaviva (406,05 M€), Fastweb (364,05 M€), Engineering D.Hub (322,05 M€) (fonte: TED 605358-2025; avviso di esito Consip; BDNCP aggiudicatari (34 imprese coerenti); livello V2; da B2094754F1-system-management-4.md) |
+| Massimali e tetti | Massimale: 720.051.840 € (incrementabile del 20 %); «valore massimo AQ» nell'avviso di esito 1.540.201.600 € (fonte: TED 342482-2024 e 605358-2025; avviso di esito Consip; BDNCP; livello V2 (il 1.540 M€ non riconciliato); da B2094754F1-system-management-4.md) |
+| Durata | Durata: non letta (fonte: —; livello R; da B2094754F1-system-management-4.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

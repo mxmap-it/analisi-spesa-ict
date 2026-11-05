@@ -17,8 +17,8 @@ description: "Iniziativa consip-2615: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2020-2026 | 3.253,2 M€ |
 | Categoria (base di conoscenza) | licenza-prodotto |
 | Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Massimali e tetti | Massimale: 430.000.000 € (fonte: TED (VAL_ESTIMATED_TOTAL, TotalAmount) = BDNCP; livello V; da 97431204F9-microsoft-ea8.md) |
+| Durata | Durata: convenzione 12 mesi (TED); contratti attuativi 36 mesi (es. ART dal 1/5/2024 al 30/4/2027) (fonte: TED; determina ART; livello V / R; da 97431204F9-microsoft-ea8.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

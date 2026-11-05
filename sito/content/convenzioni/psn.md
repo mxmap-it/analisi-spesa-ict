@@ -16,9 +16,9 @@ description: "Iniziativa psn: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 2.077,9 M€ (433 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 3.795,7 M€ |
 | Categoria (base di conoscenza) | psn |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatario: RTI TIM (mandataria), CDP Equity, Leonardo, Sogei (BDNCP, aggiudicatari); poi la società di progetto Polo Strategico Nazionale S.p.A. (Guida) (fonte: BDNCP aggiudicatari; Guida; TED 492519-2022; livello V2; da 9066973ECE-polo-strategico-nazionale.md) |
+| Massimali e tetti | Valore in BDNCP: 723.300.000 € (importo del lotto del CIG padre) (fonte: BDNCP; livello V (fonte unica); il valore dei Contratti di Utenza non è un massimale contrattuale chiuso; da 9066973ECE-polo-strategico-nazionale.md) |
+| Durata | Durata: 13 anni (3 di allestimento + 10 di esercizio); Contratti di Utenza fino a 10 anni (fonte: Guida; livello V; da 9066973ECE-polo-strategico-nazionale.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | Secure Public Cloud (Azure, Google, AWS), PSN Managed (Oracle Alloy), Hybrid (Azure Stack) = extra-UE; Industry Standard erogato in proprio = IT (criteri-sovranita 3/11) |
 | Copertura documentale | 36 % dei tipi di documento attesi |

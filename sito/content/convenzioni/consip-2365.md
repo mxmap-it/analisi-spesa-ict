@@ -18,7 +18,7 @@ description: "Iniziativa consip-2365: dati, documenti archiviati e mancanti."
 | Categoria (base di conoscenza) | servizi-applicativi |
 | Aggiudicatari | da ricavare dai documenti |
 | Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Durata | Durata: AQ 18 mesi + 12 di proroga (fonte: TED; livello V; da 2365-sanita-digitale-sistemi-sanitari-cittadino.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 23 % dei tipi di documento attesi |

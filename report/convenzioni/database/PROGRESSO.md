@@ -19,3 +19,8 @@ File di ripresa (regola di resilienza): ogni passo chiuso si annota qui, con com
 | 5/11 | scarto dei documenti di altre gare linkati nelle pagine Consip | fatto | |
 | 5/11 | ricerca online complementare: 7 documenti archiviati (6 atti di enti aderenti su 2746, 2755, 2615 come «fonte non ufficiale»; chiarimenti 2746 che confermano le Region dichiarate ex DPR 445) | fatto | curate.yaml |
 | 5/11 | cruscotto a griglia `/convenzioni/griglia/` (JSON da base_dati.py, filtri, riepiloghi, dettaglio cella, simboli+legenda) | fatto | testato nel browser locale |
+| 5/11 | BUG: `archivia_documenti.py` non scriveva il manifest (blob e mirror sì): corretto, job riavviato sul server (log del primo giro in `archivia-documenti-1.log`) | fatto | i ~430 file del primo giro si riscaricano: archivia non trova il precedente |
+| 5/11 | link PVL dei 295 CIG padre: **nessuno** in `lavoro/pvl/cig_link.csv` (padri quasi tutti pre-2024, schede di adesione senza link: cfr. R30) | esito negativo | verificato con grep sul server |
+| 5/11 | TED per le 40 iniziative non Consip (`ted_iniziative.py`): avvisi solo per 3 (ARIA_2023_807, InnovaPuglia, Trenitalia), CIG mai nell'XML: abbinamento per testo, non usato nell'inventario | esito debole | ramo da riprendere con query migliori |
+| 5/11 | aggiudicatari, massimali e durata dai rendiconti esistenti (`dai_dossier` in base_dati.py): 17 / 15 / 19 iniziative | fatto | |
+| 5/11 | C6 verificata per 2746 e 2928, C7 per 2928 (atti letti) | fatto | curate.yaml `carenze_verificate` |

@@ -16,9 +16,9 @@ description: "Iniziativa consip-2187: dati, documenti archiviati e mancanti."
 | Valore ICT dei CIG derivati 2024-2025 | 49,6 M€ (54 CIG) |
 | Valore ICT dei CIG derivati 2020-2026 | 422,2 M€ |
 | Categoria (base di conoscenza) | licenza-prodotto |
-| Aggiudicatari | da ricavare dai documenti |
-| Massimali e tetti | da ricavare dai documenti |
-| Durata | da ricavare dai documenti |
+| Aggiudicatari | Aggiudicatario: Telecom Italia S.p.A. (fonte: determine Consiglio reg. Calabria 306/2022 e 301/2023 (che citano CIG 8335254532); livello R (solo enti aderenti; manca un atto Consip di aggiudicazione archiviato); da 8335254532-microsoft-ea6.md) |
+| Massimali e tetti | Massimale: 280.000.000 € (IVA esclusa) (fonte: BDNCP `importo_lotto` = `importo_complessivo_gara`; livello V (una fonte: dichiarazione Consip ad ANAC); da 8335254532-microsoft-ea6.md) |
+| Durata | Durata contratti attuativi: 36 mesi (Calabria: M365 E3 per 36 mesi) (fonte: determina Calabria 306/2022; livello R; da 8335254532-microsoft-ea6.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 8 % dei tipi di documento attesi |
