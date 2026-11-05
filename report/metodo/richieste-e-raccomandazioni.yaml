@@ -427,3 +427,28 @@
   politica: "Campo obbligatorio nelle schede BDNCP per i CPV cloud e allegato pubblico di ogni convenzione o AQ cloud; il catalogo ACN espone il CIG delle iniziative in cui il servizio è acquistabile"
   perche_serve: "La giurisdizione del prodotto (asse B dell'imbuto) oggi si deduce dal titolo del lotto"
   rif: ["#62"]
+- id: R43
+  destinatario: Consip
+  tipo: miglioramento
+  stato: proposta
+  titolo: Schede delle iniziative di acquistinretepa leggibili senza JavaScript e con un servizio aperto documentato
+  carenze: [C2, C7]
+  evidenza: "Il 5/11/2026 la vetrina e le schede iniziativa di acquistinretepa.it sono generate in JavaScript da un servizio non documentato (publicservices/vetrineservices) che rifiuta richieste senza il client; catalogo e acquisto dietro «Accedi». Listini offerti e stato di esaurimento non sono consultabili in modo automatico"
+  prova: report/convenzioni/enti-campione/centrali-2026-11-05.csv
+  richiesta: "Pagina HTML statica per ogni iniziativa (ID Sigef, lotti, CIG, listini offerti, stato di attivazione ed erosione) e un'API pubblica documentata o un dataset aperto con gli stessi campi"
+  politica: "Le informazioni rivolte a tutte le PA e ai cittadini sulle iniziative attive pubblicate in formato aperto e indicizzabile (d.lgs. 33/2013 artt. 6-7 come principio; CAD art. 50 e 52)"
+  perche_serve: "Rende verificabili listini, prezzi e residuo dei massimali senza accesso civico"
+  rif: ["#62"]
+- id: R44
+  destinatario: enti aderenti (Ministero degli Affari esteri, Ministero del Turismo, AgID, Regione Abruzzo), ANAC
+  tipo: difetto
+  stato: da_verificare
+  titolo: Sezioni o atti di Amministrazione trasparente non raggiungibili da client automatici
+  carenze: [C4]
+  evidenza: "Campione del 5/11/2026: challenge anti-bot sulle home di esteri.it e ministeroturismo.gov.it (non aggirata; i PDF diretti si scaricano); 404 su trasparenza.agid.gov.it/download/*.html indicizzati; errore TLS su regione.abruzzo.it; home di ARIA e Intercent-ER senza link «trasparenza» nell'HTML statico"
+  prova: report/convenzioni/enti-campione/enti-campione-2026-11-05.csv; report/convenzioni/enti-campione/centrali-2026-11-05.csv
+  richiesta: "Rimuovere i filtri che impediscono l'indicizzazione della sezione AT (art. 9 c. 1 d.lgs. 33/2013) e mantenere stabili gli URL degli atti pubblicati (art. 8 c. 3)"
+  politica: "Monitoraggio continuo dell'accessibilità delle sezioni AT (monitor visibilita-pa, #61) con segnalazione agli RPCT"
+  perche_serve: "Gli atti di adesione sono oggi l'unica fonte pubblica dell'ordinativo per ente"
+  nota: "Da riconfermare in un secondo momento e con browser reale prima di qualunque comunicazione (AGENTS.md §3)"
+  rif: ["#62", "#61"]

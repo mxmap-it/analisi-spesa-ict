@@ -36,6 +36,32 @@ TIPI = {"consip": "Consip", "psn": "PSN", "aggregatore-regionale": "Aggregatori 
 FUORI_PERIMETRO = {"consip-2638"}
 
 
+DATI_AL = "2026-11-05"  # consultazione più recente delle fonti (pagine Consip, open data, enti campione, ricerca web)
+DT = "05/11/2026"
+
+
+def enti_campione():
+    import csv as _csv
+    p = R / "report/convenzioni/enti-campione/enti-campione-2026-11-05.csv"
+    if not p.exists():
+        return {}
+    rr = [r for r in _csv.DictReader(open(p, encoding="utf-8")) if "controllo" not in (r["note"] or "").lower()]
+    c = Counter(r["esito"] for r in rr)
+    return {"righe": len(rr), "enti": len({r["ente"] for r in rr}), "iniziative": len({r["iniziativa"] for r in rr}),
+            "in_at": c.get("trovato-in-AT", 0), "fuori_at": c.get("trovato-fuori-AT", 0), "non_trovato": c.get("non-trovato", 0),
+            "at_irraggiungibile": c.get("AT-irraggiungibile", 0), "archiviati": sum(1 for r in rr if r["sha256"]),
+            "at_da_home_no": sum(1 for r in rr if r["at_raggiungibile_da_home"] == "no")}
+
+
+def fonti_web():
+    import csv as _csv
+    p = R / "report/convenzioni/fonti-non-ufficiali/fonti-2026-11-05.csv"
+    if not p.exists():
+        return {}
+    rr = list(_csv.DictReader(open(p, encoding="utf-8")))
+    return {"righe": len(rr), "url": len({r["url"] for r in rr}), "archiviati": len({r["url"] for r in rr if r["sha256"]})}
+
+
 def pct1(a, b):
     return f"{100 * a / b:.1f} %".replace(".", ",") if b else "–"
 
@@ -68,9 +94,12 @@ def metriche(voci, reg):
          "indice_medio": round(sum(p["indice"] for p in per.values()) / len(per), 3),
          "celle": dict(Counter(classe(i) for v in voci for i in v["inventario"])),
          "documenti_ufficiali": sum(p["documenti"] for p in per.values()), "documenti_altrove": sum(p["altrove_doc"] for p in per.values()),
-         "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"), "istanze_inviate": sum(1 for r in reg if r["stato"] != "preparata"),
+         "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"), "istanze_inviate": sum(1 for r in reg if r["stato"] not in ("preparata", "ritirata")),
          "istanze_con_risposta": sum(1 for r in reg if r.get("risposta")),
          "flusso_dati": sum(1 for v in voci if v.get("evidenze_dato_esistente")),
+         "flusso_letti": sum(1 for v in voci for e in v.get("evidenze_dato_esistente", []) if e["livello"].startswith("V")),
+         "istanze_ritirate": sum(1 for r in reg if r["stato"] == "ritirata"),
+         "enti_campione": enti_campione(), "fonti_web": fonti_web(),
          "od_iniziative": sum(1 for v in voci if v.get("ordinato_consip")),
          "od_bdncp": sum(v["valore_ict_2024_2025"] or 0 for v in voci if v.get("ordinato_consip")),
          "od_ordinato": sum(v["ordinato_consip"]["2024"] + v["ordinato_consip"]["2025"] for v in voci if v.get("ordinato_consip"))}
@@ -115,7 +144,7 @@ def differenze(prima, ora):
         risolte = set(p["carenze_verificate"] + p["carenze_da_verificare"]) - set(o["carenze_verificate"] + o["carenze_da_verificare"])
         if risolte:
             out.append(f"{k}: carenze non più presenti {sorted(risolte)}")
-    for k in ("istanze_inviate", "istanze_con_risposta"):
+    for k in ("istanze_preparate", "istanze_inviate", "istanze_con_risposta"):
         if ora["globali"][k] != prima["globali"][k]:
             out.append(f"{k.replace('_', ' ')}: da {prima['globali'][k]} a {ora['globali'][k]}")
     return out or ["nessuna variazione nei dati"]
@@ -141,7 +170,7 @@ def main(versione, data, nota):
     tot_celle = sum(g["celle"].values())
     L = ["---", 'title: "Trasparenza delle convenzioni ICT della PA"',
          'subtitle: "Rendiconto iterativo: cosa si può verificare delle convenzioni e degli accordi quadro ICT, e cosa no"',
-         f"date: {data}",
+         "date: 2026-11-05", f"lastmod: {data}", f"datiAl: {DATI_AL}",
          'description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."',
          "---", "",
          "<!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->", "",
@@ -159,16 +188,19 @@ def main(versione, data, nota):
          f"({pct1(g['celle'].get('altrove', 0), tot_celle)}); non individuati sulla pagina del bando {g['celle'].get('assente', 0)} ({pct(g['celle'].get('assente', 0), tot_celle)}); "
          f"non ancora verificati {g['celle'].get('ignoto', 0)} ({pct(g['celle'].get('ignoto', 0), tot_celle)}). Indice di visibilità medio "
          f"**{round(100 * g['indice_medio'])} %**, da leggere come limite inferiore finché le celle non verificate restano così tante.",
-         "- **Dati per controllare spesa e sovranità.** Nessuna iniziativa pubblica insieme offerte dei vincitori, transato per marchio ed elenco "
-         "degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).",
-         "- **Carenze principali** (pagine dei bandi su consip.it consultate il 5/11/2026; acquistinretepa e Amministrazione trasparente di Consip "
-         "non ancora consultate): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. "
+         "- **Dati per controllare spesa e sovranità.** Nelle iniziative verificate non abbiamo individuato, pubblicati insieme, offerte dei vincitori, "
+         "transato per marchio ed elenco degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).",
+         "- **Carenze principali** (pagine dei bandi su consip.it, open data Consip, Amministrazione trasparente di Consip e campione di enti, "
+         "consultati il 5/11/2026; acquistinretepa solo in parte): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. "
          "Gli ordinativi si trovano in parte negli atti dei singoli enti. Region e data center: per IaaS/PaaS 2 (ID 2746) e PRINCO (ID 2928) i "
          "documenti di gara prevedono che il fornitore li dichiari, ma la dichiarazione non è pubblicata.",
-         f"- **Il dato è presso Consip, con dettaglio ignoto.** In {g['flusso_dati']} iniziative la documentazione di gara contiene un allegato sui "
-         "flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012); individuato dal nome "
-         "del file, da leggere. Il transato dovrebbe quindi esistere presso Consip; non sappiamo con quale dettaglio.",
-         f"- **Rimedi.** {g['istanze_preparate']} bozze di accesso civico generalizzato preparate e **non inviate**; proposte di policy R08 e R37-R42 "
+         "- **Il dato dovrebbe essere presso Consip.** Secondo l'allegato 4E della convenzione Microsoft EA8 (ID 2615, letto per intero), "
+         "il fornitore deve trasmettere ogni mese a Consip il dettaglio delle fatture, con l'ID dell'ordine sulla piattaforma e l'imponibile, "
+         "per il calcolo della commissione (d.m. MEF 23/11/2012). Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato "
+         "per ordine e quindi per ente; non abbiamo verificato che il flusso avvenga né in che forma sia conservato. "
+         f"In altre {g['flusso_dati'] - g['flusso_letti']} iniziative c'è un file il cui nome rimanda ai flussi dati del fatturato (non letto, R).",
+         f"- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), {g['istanze_preparate']} bozze di accesso civico generalizzato, "
+         f"tutte verso Consip, restano utili all'analisi; {g['istanze_ritirate']} sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 "
          "perché questi dati diventino pubblici senza bisogno di chiederli.", "",
          "## 2. Due misure del valore", "",
          f"Per {g['od_iniziative']} iniziative Consip esiste una seconda misura: gli **open data Consip** degli ordini diretti "
@@ -176,25 +208,43 @@ def main(versione, data, nota):
          f"in BDNCP **{meur(g['od_bdncp'])} M€** di derivati ICT 2024-2025. **Le due grandezze non sono confrontabili** una a una: gli open data "
          "contano gli ordini diretti dell'anno (non gli appalti specifici degli accordi quadro con rilancio competitivo); BDNCP l'importo "
          "dichiarato all'acquisizione del CIG, spesso pluriennale o pari al massimale. La tabella serve a mostrare l'ordine di grandezza e i casi "
-         "da spiegare (es. ID 2496, dove l'ordinato supera il dichiarato: probabili derivati con CPV non ICT o lotti mancanti, da verificare). "
-         "Gli abbinamenti «a mano (R)», compreso l'ID 2483, sono da confermare con l'ID Sigef. Gli open data non riportano listino, marchio né "
+         "da spiegare (es. ID 2496, dove l'ordinato supera il dichiarato: cause possibili derivati con CPV non ICT, lotti non censiti o abbinamento da rivedere). "
+         "Gli abbinamenti sono per coincidenza del nome («V-testo»): confermati con il titolo della pagina Consip trovata per ID Sigef, o per il 2483 con atti di enti che riportano ID e CIG; nessun open data riporta l'ID Sigef. Gli open data non riportano listino, marchio né "
          "ente: la carenza C3 resta.", "",
+         f"Open data Consip scaricati il {DT}; BDNCP elaborato il {DT}.", "",
          "| Iniziativa | M€ BDNCP 2024-25 | M€ ordinati 2024+2025 (open data Consip) | Abbinamento |", "|---|---|---|---|"]
     for v in sorted([v for v in voci if v.get("ordinato_consip") and v["id"] not in FUORI_PERIMETRO], key=lambda v: -(v["valore_ict_2024_2025"] or 0)):
         o = v["ordinato_consip"]
         L.append(f"| [{v['nome'][:60]}](/convenzioni/{v['id'].lower()}/) | {meur(v['valore_ict_2024_2025'] or 0)} | {meur(o['2024'] + o['2025'])} | "
                  f"{'; '.join(n.split(' [')[1].rstrip(']')[:40] for n in o['nomi'])} |")
-    L += ["", "## 3. Matrice", "",
+    ec, fw = g["enti_campione"], g["fonti_web"]
+    L += ["", "## 3. Fonti online consultate prima dell'accesso civico", "",
+          f"Tutte consultate il {DT}, senza login né CAPTCHA, a ritmo basso e con User-Agent dichiarato.", "",
+          "| Fonte | Esito | Livello |", "|---|---|---|",
+          "| Pagine dei bandi su consip.it | documentazione di gara di 44 iniziative; offerte, transato per marchio ed elenco degli ordinativi non individuati | V per la presenza dei file; R per il tipo dedotto dal nome |",
+          "| Open data Consip (dati.consip.it) | ordinato per anno, convenzione o AQ e lotto (2024-2025); niente ente, listino, marchio | V |",
+          "| acquistinretepa | schede iniziativa generate in JavaScript da un servizio non documentato; catalogo e acquisto dietro «Accedi»; listini offerti non consultati | parziale: da rifare con un browser reale |",
+          "| Amministrazione trasparente di Consip | le sottosezioni di «Bandi di gara e contratti» riguardano gli acquisti di Consip per sé; «Controlli e rilievi» rinvia alla Corte dei conti | V (indice delle sezioni) |",
+          f"| Campione di enti aderenti | {ec.get('righe', 0)} righe valide (righe di controllo escluse), {ec.get('enti', 0)} enti, {ec.get('iniziative', 0)} iniziative: file nel percorso AT {ec.get('in_at', 0)}, URL esterno al percorso AT {ec.get('fuori_at', 0)} (collegamento dalla sezione AT non verificato), non trovato {ec.get('non_trovato', 0)}, AT non verificabile automaticamente il 5/11 {ec.get('at_irraggiungibile', 0)} (da ripetere); {ec.get('archiviati', 0)} archiviati | V per i documenti letti; R per la posizione rispetto all'AT |",
+          f"| Ricerca web (Corte dei conti, stampa, atti di enti) | {fw.get('righe', 0)} dati da {fw.get('url', 0)} URL, {fw.get('archiviati', 0)} archiviati; erogato per iniziativa non trovato (nelle due relazioni della Corte dei conti consultate, gestioni 2021 e 2022, l'erogato degli AQ è aggregato) | R |",
+          f"| Allegati «flussi dati del fatturato» | file con questo nome in {g['flusso_dati']} iniziative; letto per intero quello di Microsoft EA8 (ID 2615): il fornitore deve trasmettere ogni mese il dettaglio delle fatture con l'ID dell'ordine | V (EA8, clausola); R per gli altri |", "",
+          "Il dettaglio per iniziativa e per ente è nelle [schede](/convenzioni/) e nei file "
+          "[enti-campione](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/enti-campione) e "
+          "[fonti-non-ufficiali](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/fonti-non-ufficiali), "
+          "in un formato riusabile dal monitor dell'Amministrazione trasparente.", ""]
+    L += ["", "## 4. Matrice", "",
          "La [griglia di tutte le iniziative](/convenzioni/griglia/) mostra cella per cella cosa è pubblico, cosa è reperito altrove, "
          "cosa manca e cosa è stato richiesto, con i riepiloghi in alto. L'[indice delle convenzioni](/convenzioni/) riporta il riquadro "
          "delle carenze di trasparenza.", "",
+         f"Celle al {DT} (documenti) e BDNCP elaborato il {DT}.", "",
          "| Classe | Celle | Quota |", "|---|---|---|"]
     for k, n in (("pubblico", "pubblico (fonte ufficiale)"), ("altrove", "solo da fonte non ufficiale"), ("assente", "non individuato sulla pagina del bando"), ("ignoto", "non ancora verificato")):
         L.append(f"| {n} | {g['celle'].get(k, 0)} | {pct1(g['celle'].get(k, 0), tot_celle)} |")
-    L += ["", "## 4. Convenzione per convenzione", "",
+    L += ["", "## 5. Convenzione per convenzione", "",
           "Le iniziative principali (attive, per valore). Indice = dati pubblici / dati attesi (13; 14 per PSN e SPC Cloud, con i progetti dei fabbisogni). "
           "«Non individuati» = non trovati sulla pagina del bando, con tipo dedotto dal nome dei file. Il PSN non ha una pagina Consip: le sue celle "
           "sono quasi tutte «non verificate», il che non significa assenza di carenze.", "",
+          f"Fonti consultate il {DT}; valori BDNCP elaborati il {DT}.", "",
           "| Iniziativa | Soggetto | M€ 2024-25 | Pubblici | Altrove | Non individuati | Non verificati | Indice | Carenze accertate |",
           "|---|---|---|---|---|---|---|---|---|"]
     princ = sorted([k for k, p in pi.items() if p["stato"] == "attiva" and k not in FUORI_PERIMETRO], key=lambda k: -pi[k]["valore"])[:30]
@@ -203,7 +253,8 @@ def main(versione, data, nota):
         L.append(f"| [{nomi[k][:70]}](/convenzioni/{k.lower()}/) | {TIPI[p['tipo']]} | {meur(p['valore'])} | {p['pubblico']} | {p['altrove']} | {p['assente']} | "
                  f"{p['ignoto']} | {round(100 * p['indice'])} % | {', '.join(p['carenze_verificate']) or '–'} |")
     L += ["", f"Le altre {len(pi) - len(princ)} iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/convenzioni/griglia/).", "",
-          "## 5. Per tipo di soggetto", "",
+          "## 6. Per tipo di soggetto", "",
+          f"Fonti consultate il {DT}.", "",
           "| Soggetto | Iniziative | M€ 2024-25 | Indice medio | Non individuati | Non verificati |", "|---|---|---|---|---|---|"]
     for t, x in pt.items():
         ind = f"{round(100 * x['indice_medio'])} %" if t == "consip" else "n.d. (non ancora verificati)"
@@ -211,7 +262,7 @@ def main(versione, data, nota):
     L += ["", "Per aggregatori regionali e consorzi quasi tutti i dati sono «da verificare»: le loro piattaforme (Sintel, Intercent-ER, EmPULIA, START…) "
           "non sono ancora state visitate, i CIG padre non hanno link ai documenti in PVL (verificato: nessuno dei 295 CIG padre) e su TED "
           "l'abbinamento riesce solo per testo. **Un indice basso qui misura il nostro lavoro ancora da fare, non la loro trasparenza.**", "",
-          "## 6. Metodo e limiti", "",
+          "## 7. Metodo e limiti", "",
           "- **Fonti.** BDNCP ANAC (nostro mirror, sha256 nel manifest) per i CIG padre e derivati; pagine dei bandi su consip.it, consultate il 5/11/2026; "
           "TED; open data Consip degli ordini (dati.consip.it, file 2024-2025 archiviati il 5/11/2026); atti di enti aderenti trovati con ricerca online (fonte non ufficiale, archiviati con sha256).",
           "- **Verificato e riferito.** «Assente» vuol dire che abbiamo consultato la pagina ufficiale dell'iniziativa e il documento non c'è; il tipo di "
@@ -230,9 +281,10 @@ def main(versione, data, nota):
           "- **Aggregatori.** Ancora da verificare (sopra). Il tipo di soggetto si assegna con regole sul nome della stazione appaltante, da controvalidare "
           "con l'elenco ANAC dei soggetti aggregatori.",
           "- **Cosa non diciamo.** Che un dato assente sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la convenzione.", "",
-          "## 7. Rimedi", "",
-          f"- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo: {g['istanze_preparate']} bozze preparate, "
-          f"{g['istanze_inviate']} inviate. [Registro](/convenzioni/accesso-civico/) e "
+          "## 8. Rimedi", "",
+          f"- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: "
+          f"{g['istanze_preparate']} bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, "
+          f"ordinativi delle più grandi, region e data center, erosione), {g['istanze_ritirate']} ritirate, {g['istanze_inviate']} inviate. [Registro](/convenzioni/accesso-civico/) e "
           "[analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).",
           "- **Proposte di policy** (stato «proposta», nessuna inviata):"]
     for c in car:

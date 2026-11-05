@@ -679,7 +679,16 @@
       "nota": null
      }
     ],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Doc. XV n. 318 - gestione Consip 2022 (con bilancio) — SAC 2: bandito oltre 3 mld EUR; 2 lotti; 8 RTI aggiudicatari; erogato AQ totale 2022 1",
+      "url": "https://documenti.camera.it/_dati/leg19/lavori/documentiparlamentari/indiceetesti/015/318/INTERO.pdf",
+      "fonte": "Corte dei conti / Camera (relazione Corte dei conti) [R]",
+      "affidabilita": "A",
+      "sha256": "1de3d5eed4447f3a87442972148f561c84d13933d2d07dafdf18c674be4b3ecc",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "ordinativi",
@@ -689,7 +698,56 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "ARERA: determina di adesione — Det. 51/DAGR/2026; AQ 2483 Lotto 1, CIG padre 91918889EE; importi 1.147.523,00 / 1.399.978,06 (IVA incl.); progetto postura cybersecurity; P",
+      "url": "https://www.arera.it/fileadmin/allegati/docs/26/51-26dagr.pdf",
+      "fonte": "ARERA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "a155316005da2e24e95c311c3fe96d2d66194009902a7eeed13b45a202ba603b",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero della Giustizia - DGSIA: determina a contrarre — AQ 2483 Lotto 1, CIG 91918889EE; gestione identita ~600.161,29 IVA incl.",
+      "url": "https://www.giustizia.it/cmsresources/cms/documents/dgsia_det_servizi_cloud_rup_maresca_15giu23.pdf",
+      "fonte": "Ministero della Giustizia - DGSIA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "e7f237a58fdeee18ae17f181705d65e46af900b515c9404271250438f0fc8ea2",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "ISTAT: contratto esecutivo — Contratto n. 73 del 16/06/2025; AQ 2483 Lotto 1, CIG 91918889EE; importo 17.613.518,00 citato (R: prob. valore/massimale) piu voci minori",
+      "url": "https://www.istat.it/wp-content/uploads/2025/10/Contratto-73-del-16-06-2025.pdf",
+      "fonte": "ISTAT (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "142d6aa6a86407ed101325c8b19dc335ccaa10efed6c31ee01125b4007b9f01d",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero degli Affari Esteri (MAECI): determina di adesione — Det. n. 62 del 5/3/2025; adesione AQ 2483 Lotto 1, CIG 91918889EE",
+      "url": "https://www.esteri.it/wp-content/uploads/2025/03/Determina-n-62-del-532025_Firmato.pdf",
+      "fonte": "Ministero degli Affari Esteri (MAECI) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "b3f40f15d4882337355e50a3dafd5a320b4b20c250007295ba1201ab5ce8704c",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero del Turismo: schema di contratto esecutivo — Schema contratto esecutivo AQ 2483 Lotto 1 (template Consip, campi non compilati); cita anche ID 2610",
+      "url": "https://www.ministeroturismo.gov.it/wp-content/uploads/2026/08/Schema-di-Contratto-Esecutivo.pdf",
+      "fonte": "Ministero del Turismo (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "66953589a7d1676eadc66404576059c60aa9a5c084aac8c0b67238234e8710d8",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "PR.447.24.A determina a contrarre — CIG derivato A05761088A; 2.000.827 EUR + IVA; RTI mandataria Capgemini Italia",
+      "url": "https://poliziadistato.it/statics/43/pr.447.24.a-determina-a-contrarre.pdf",
+      "fonte": "Polizia di Stato (determina PA) [R]",
+      "affidabilita": "A",
+      "sha256": "771ee8667a400f1fe164fbf0bbb7d2020eecbdb9a4f7ce2fc3a5e104bb5ae71f",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -737,7 +795,7 @@
    "2024": 839750756,
    "2025": 1529514921,
    "nomi": [
-    "SERVIZI APPLICATIVI IN OTTICA CLOUD 2 [a mano (R): ID 2483 = seconda edizione dei servizi applicativi in ottica cloud PAC (base di conoscenza)]"
+    "SERVIZI APPLICATIVI IN OTTICA CLOUD 2 [a mano (V-testo): ID 2483 = «Servizi applicativi in ottica cloud e PMO 2 - PAC», CIG lotto 1 91918889EE, in atti di ARERA (det. 51/DAGR/2026, sha256 a1553160…) e Giustizia DGSIA (det. 6389/2024, sha256 7f347a3e…); il nome negli open data coincide con l'edizione (riscontro per testo)]"
    ]
   },
   "carenze": [
@@ -787,11 +845,46 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2483 Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202483%20NEW%20DOC%20UFF.zip#ID 2483 - NEW DOC UFF/ID 2483 Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "6ce7356920376edfdd5169f7a95fce1c6256850482298961205535983879da42"
+   }
+  ],
+  "altrove_su_carenze": [
+   {
+    "ufficiale": false,
+    "fonte": "ARERA (determina PA) [R]",
+    "affidabilita": "A",
+    "nome": "Determinazione 51/DAGR/2026 adesione Lotto 1 ID 2483 — ID 2483 = «Servizi applicativi in ottica cloud e PMO 2 - PAC»; CIG Lotto 1 = 91918889EE; ordinativo 1.399.978 EUR IVA incl. 2026-28",
+    "url": "https://www.arera.it/fileadmin/allegati/docs/26/51-26dagr.pdf",
+    "stato": "archiviato",
+    "sha256": "a155316005da2e24e95c311c3fe96d2d66194009902a7eeed13b45a202ba603b",
+    "data": "2026-11-05",
+    "carenza": "C8"
+   },
+   {
+    "ufficiale": false,
+    "fonte": "Ministero della Giustizia DGSIA (determina PA) [R]",
+    "affidabilita": "A",
+    "nome": "Determina 6389 del 14/11/2024 — CIG Lotto 1 91918889EE confermato; base d'asta contratto esecutivo 10.655.737",
+    "url": "https://www.giustizia.it/cmsresources/cms/documents/dgsia_determina_6389_14nov2024.pdf",
+    "stato": "archiviato",
+    "sha256": "7f347a3ec127f8e0675e4c90f0facc3283a7784b5aed0bc90f81d8513065d3e6",
+    "data": "2026-11-05",
+    "carenza": "C8"
+   },
+   {
+    "ufficiale": false,
+    "fonte": "Corte dei conti / Camera (relazione Corte dei conti) [R]",
+    "affidabilita": "A",
+    "nome": "Doc. XV n. 318 - gestione Consip 2022 — SAC 2 lanciata per rapido esaurimento del lotto PAC della prima edizione (erosione ed.1 ID 2212)",
+    "url": "https://documenti.camera.it/_dati/leg19/lavori/documentiparlamentari/indiceetesti/015/318/INTERO.pdf",
+    "stato": "archiviato",
+    "sha256": "1de3d5eed4447f3a87442972148f561c84d13933d2d07dafdf18c674be4b3ecc",
+    "data": "2026-11-05",
+    "carenza": "C7"
    }
   ],
   "estratti": {
@@ -1483,7 +1576,32 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Comune di Firenze: determina di adesione — DD 07269/2025; AQ 2610 Lotto 1; CIG derivato B864C4B58F; sistema informativo del verde pubblico; Piano Operativo v1.7b pubblicato a fianco (",
+      "url": "https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20251022/20251013-Determinazione_Dirigenziale_07269_07295-ESECUTIVA.pdf",
+      "fonte": "Comune di Firenze (trovato-in-AT)",
+      "affidabilita": "A",
+      "sha256": "cf1c1d0ca76b29d7f7a674630891fde330f2597147d0a11926eafb9467f570c9",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Comune di Trieste: determina di adesione — Det. 1345/2026; AQ PAL 3 Lotto 1, CIG master A02590F330; 996.725,94 IVA 22% (anni 2026-2031); voci 732.938,65 / 516.938,65",
+      "url": "https://bandieconcorsi.comune.trieste.it/contenuti/allegati/1345_2026_DIM.pdf",
+      "fonte": "Comune di Trieste (trovato-in-AT)",
+      "affidabilita": "A",
+      "sha256": "5b16263dd41ecf5e107bed17e9381d683c741bcc30c87ef39f1a8eb32f8eae56",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Milanosport S.p.A. (partecipata Comune di Milano): determina a contrarre — Rep. 223/2025; AQ PAL 3 Lotto 1, CIG padre A02590F330, CUP H47H25001840004; 60 mesi, 2.114.010,00 (R: da snippet di ricerca)",
+      "url": "https://www.milanosport.it/workspace/uploads/determina-a-contrarre-accordo-quadro-consip-sac3-rep-223_2025.pdf",
+      "fonte": "Milanosport S.p.A. (partecipata Comune di Milano) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "7c91d40c051ededb8d2eb42f4ed5375b50359a4a9aa62831353315c86278a8d4",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -1531,7 +1649,7 @@
    "2024": 0,
    "2025": 465120323,
    "nomi": [
-    "SERVIZI APPLICATIVI IN OTTICA CLOUD 3 PAL [nome nell'oggetto del CIG padre (V)]"
+    "SERVIZI APPLICATIVI IN OTTICA CLOUD 3 PAL [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -1581,11 +1699,24 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2610-AQ SAC3-Allegato 18-Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202610%20-%20DOC%20UFF%20-%20NEW.zip#Doc firmati ID 2610/ID 2610-AQ SAC3-Allegato 18-Flussi dati commissioni.pdf.p7m",
     "sha256": "b355586e1b2469c2233d9ddca8e8249f6dc6d58a7e7e26176d3cca68b8f9f1af"
+   }
+  ],
+  "altrove_su_carenze": [
+   {
+    "ufficiale": false,
+    "fonte": "Consip (avviso di esito) [R]",
+    "affidabilita": "A",
+    "nome": "Avviso di esito ID 2610 (PAL 3) — Aggiudicatari/CIG lotti PAL 3 (da estrarre)",
+    "url": "https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202610.pdf",
+    "stato": "archiviato",
+    "sha256": "8890490293a1da2275fa7d98d2e44c024cc07a755922f7d9e83a240295684ed5",
+    "data": "2026-11-05",
+    "carenza": "C8"
    }
   ],
   "estratti": {
@@ -2129,6 +2260,30 @@
       "affidabilita": "A",
       "sha256": "6963a4a0081d85c15f66c680aa21b0fe377b81a90f086cf0a50d3440ed6c2469",
       "data": "2026-11-05"
+     },
+     {
+      "nome": "Autorita di Regolazione dei Trasporti (ART): determina di adesione — Det. 111/2024; EA8, fornitore TIM; CIG derivato B1211D08FF; spesa annua 118.714,30; seguono det. 130/2025 (SharePoint) e 112/2026 (Copilot)",
+      "url": "https://www.autorita-trasporti.it/wp-content/uploads/2024/04/det_00111_08-04-2024.pdf",
+      "fonte": "Autorita di Regolazione dei Trasporti (ART) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "c169462b3bac1b277aeb24863e330aa33b774d2671f5ab5e4f64a2b49ffa360e",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "ARERA: determina di adesione — Det. 50/DAGR/2024; EA8 CIG padre 97431204F9, CIG derivato B204DD6DAB; 556.814,25 + IVA = 679.313,39 (triennio, ~226k/anno)",
+      "url": "https://arera.it/fileadmin/allegati/docs/24/50-24dagr.pdf",
+      "fonte": "ARERA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "44585ae97b7cb53f1d077702a42b1e1af07b5e18b0cf7b9c1475a1d9c9e9bfcc",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero della Giustizia - UCAN: decisione a contrarre — Dec. 49/2026; EA8 Lotto 1 acquisti successivi (anche Dynamics 365); CIG derivato BCA682BF97; 653.777,10",
+      "url": "https://www.giustizia.it/cmsresources/cms/documents/UCAN_decisione_a_contrarre_49_2026.pdf",
+      "fonte": "Ministero della Giustizia - UCAN (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "4d2b8395bedc5fa79a751aae243ebb715e6043279e9053b0cde7cb39c2938a27",
+      "data": "2026-11-05"
      }
     ]
    },
@@ -2171,7 +2326,7 @@
    "2024": 317213453,
    "2025": 25161377,
    "nomi": [
-    "MICROSOFT ENTERPRISE AGREEMENT 8 [nome nell'oggetto del CIG padre (V)]"
+    "MICROSOFT ENTERPRISE AGREEMENT 8 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -2221,13 +2376,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "V (letto)",
+    "testo": "Allegato 4E allo schema di convenzione EA8 (letto il 5/11): il fornitore trasmette a Consip ogni mese, entro 15 giorni, il dettaglio di tutte le fatture emesse (tipo, numero, data, P. IVA, ID dell'ordine sulla piattaforma, imponibile) e ogni semestre una dichiarazione riepilogativa; Consip li usa per i controlli. Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato per ordine e quindi per ente (deduzione; non verificato che il flusso avvenga); non è pubblicato",
     "documento": "ID2615-EA8-Allegato-4E-Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-4E-Flusso dati commissioni.pdf.p7m",
     "sha256": "7269bc2cb3807e5ba3a40b37211297207ac73c7876411764b3bc461ef9f1d2d3"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 29,
    "conteggi": {
@@ -2544,15 +2700,6 @@
       "nota": null
      },
      {
-      "nome": "D25 Regione Sardegna (SIL) ",
-      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/3c67425d-f910-4856-adc7-acf42925f032/psn-pianodeifabbisogni-sil-ras-signed-1-.pdf",
-      "dove": "AT degli enti",
-      "stato": "archiviato",
-      "sha256": "50d36c9c65b00ac247449a0a43b9de49746357f72747239b29312546fd00e4c8",
-      "data": null,
-      "nota": null
-     },
-     {
       "nome": "D26 AO Ordine Mauriziano Torino (all. 2 provv. DG 195/2024) ",
       "url": "https://www.mauriziano.it/flex/FixedPages/Common/AttachDownload.php?D=czo4NToiUHJvdnZlZGltZW50by1ERy0xOTUtMjAyNC82XzEyX1BTTl9QaWFub0RlaUZhYmJpc29nbmlfQU9fTWF1cml6aWFub19MSVNfQWxsZWdhdG8yLnBkZiI7&P=czo4MToiL3Zhci93d3cvdmhvc3RzL3d3dy5tYXVyaXppYW5vLml0L2ZsZXgvQXBwRGF0YS9SZWRhdGlvbmFsL0RlbGliZXJlRGV0ZXJtaW5lRmlsZXMvIjs%3D",
       "dove": "AT degli enti",
@@ -2625,24 +2772,6 @@
       "nota": null
      },
      {
-      "nome": "D34 ARERA (det. 34/2025 DAGR) 2024-0000097190020152-PPdF-P1R1",
-      "url": "https://www.arera.it/fileadmin/allegati/docs/25/34-25dagr.pdf",
-      "dove": "AT degli enti",
-      "stato": "archiviato",
-      "sha256": "a5b662e2f14948a8ab4a5f1deab72f39e78895e058fbac0037b6e3fd820efeb2",
-      "data": null,
-      "nota": null
-     },
-     {
-      "nome": "D35 Ispettorato Nazionale del Lavoro (det. 22/2024) 2024-0000097900660586-PPdF-P1R2",
-      "url": "https://www.ispettorato.gov.it/files/2026/02/1754472955_inlavoro.INL-DCINN.Registro-DetermineR.0000022.31-10-2024.pdf",
-      "dove": "AT degli enti",
-      "stato": "archiviato",
-      "sha256": "efb660a1162293c967ea35887b8612bcb7abc106c34cd116920fa4596c9206e8",
-      "data": null,
-      "nota": null
-     },
-     {
       "nome": "D36 Comune di Firenze (DD 6006/2025) ",
       "url": "https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20250819/20250818-DD06006.pdf",
       "dove": "AT degli enti",
@@ -2706,7 +2835,32 @@
       "nota": null
      }
     ],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Ispettorato Nazionale del Lavoro (INL): determina di adesione — Det. DCINN 22 del 31/10/2024; adesione e migrazione PSN, contratto 10 anni, facolta di recesso dopo 3 anni; finanziamento PNRR 416.152,xx",
+      "url": "https://www.ispettorato.gov.it/files/2026/02/1754472955_inlavoro.INL-DCINN.Registro-DetermineR.0000022.31-10-2024.pdf",
+      "fonte": "Ispettorato Nazionale del Lavoro (INL) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "efb660a1162293c967ea35887b8612bcb7abc106c34cd116920fa4596c9206e8",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "ARERA: determina di adesione — Det. 34/DAGR/2025; PSN CIG 9066973ECE; conservazione sostitutiva documentale; 230.683,16 / 150.148,97",
+      "url": "https://www.arera.it/fileadmin/allegati/docs/25/34-25dagr.pdf",
+      "fonte": "ARERA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "a5b662e2f14948a8ab4a5f1deab72f39e78895e058fbac0037b6e3fd820efeb2",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Comune di Firenze: determina di adesione — DD 2933/2026; PSN per sistema notifiche digitali Direzione Istruzione; CIG derivato BB1DDD8915; adesione via scambio PEC; scadenza CdU 24/8/",
+      "url": "https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20260420/20260417-DD2933.pdf",
+      "fonte": "Comune di Firenze (trovato-in-AT)",
+      "affidabilita": "A",
+      "sha256": "920aaa41fa7125348a1ac4dbecdc97636368b690b43ed7c44c62a61c83d25e57",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -2907,7 +3061,16 @@
       "nota": null
      }
     ],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "PSN - Piano dei fabbisogni SIL RAS (gen. 2024) — Esempio pubblico di piano dei fabbisogni PSN (servizi Housing/Hosting; GCP citato)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/3c67425d-f910-4856-adc7-acf42925f032/psn-pianodeifabbisogni-sil-ras-signed-1-.pdf",
+      "fonte": "Regione Sardegna (piano dei fabbisogni) [R]",
+      "affidabilita": "A",
+      "sha256": "50d36c9c65b00ac247449a0a43b9de49746357f72747239b29312546fd00e4c8",
+      "data": "2026-11-05"
+     }
+    ]
    }
   ],
   "copertura": 0.357,
@@ -3015,6 +3178,30 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [
+   {
+    "ufficiale": false,
+    "fonte": "CorCom (stampa specializzata) [R]",
+    "affidabilita": "B",
+    "nome": "Polo Strategico Nazionale: tutti i servizi erogati dai CSP (28/04/2023) — Public Cloud PSN Managed: Oracle e Google region Italia; Hybrid on PSN site: Azure; Secure Public Cloud: Azure e Google",
+    "url": "https://www.corrierecomunicazioni.it/pa-digitale/polo-strategico-nazionale-ecco-tutti-i-servizi-erogati-dai-cloud-service-provider/",
+    "stato": "pubblicato-non-archiviato",
+    "sha256": null,
+    "data": "2026-11-05",
+    "carenza": "C6"
+   },
+   {
+    "ufficiale": false,
+    "fonte": "StartMag (stampa) [R]",
+    "affidabilita": "B",
+    "nome": "Articolo PSN data center (p=260026) — 4 DC in doppia region: Lazio (Pomezia; Acilia) e Lombardia (Rozzano; Santo Stefano Ticino)",
+    "url": "https://www.startmag.it/?p=260026",
+    "stato": "pubblicato-non-archiviato",
+    "sha256": null,
+    "data": "2026-11-05",
+    "carenza": "C6"
+   }
+  ],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -3728,7 +3915,40 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Ministero della Giustizia - DGSIA: decisione a contrarre — Det. 4252 del 6/8/2024; PC laptop Lotto 1 ordine diretto, Italware (R: snippet)",
+      "url": "https://www.giustizia.it/cmsresources/cms/documents/dgsia_determina_4252_6ago2024.pdf",
+      "fonte": "Ministero della Giustizia - DGSIA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "93747b9c7668585aaff7a418a8b5deba6de960bb1958cc207e3dc9f74f6d207e",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero dell'Ambiente (MASE): determina a contrarre — 400 PC portatili; Lotto 1 ordine diretto CIG 9158053868 (attivo 3/8/2023-2/2/2025); CIG derivato A02051FEB7; 470.116,00 + IVA (R: snippet)",
+      "url": "https://mase.gov.it/sites/default/files/archivio/allegati/trasparenza_valutazione_merito/RUA/det_400_pc_portatili.pdf",
+      "fonte": "Ministero dell'Ambiente (MASE) (trovato-in-AT)",
+      "affidabilita": "A",
+      "sha256": "3ceef3a33fe2b9de332ff92adf8524e3d89629cc491c6c03c5d7c5c30aade6ef",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Autorita di Regolazione dei Trasporti (ART): determina di affidamento — Det. 162/2024; 13 HP EliteBook 630 G9 a 1.220,51 cad. = 15.866,63 + IVA; VAR Group; CIG B292948560",
+      "url": "https://www.autorita-trasporti.it/wp-content/uploads/2024/07/det_00162_24-07-2024.pdf",
+      "fonte": "Autorita di Regolazione dei Trasporti (ART) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "e2cb0aa82fbbd1a62e6216fa9d3897619bb08dad11126ded058e9721615d75bd",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Universita dell'Insubria: decreto di affidamento — DD 295 del 26/3/2024; 45 portatili Lotto 1 CIG 9158053868; CIG derivato B0D89CC28F",
+      "url": "https://www.uninsubria.it/sites/default/files/2024-08/Decreto%20Dirigenziale%20del%2026%20marzo%202024%20n.%20295.pdf",
+      "fonte": "Universita dell'Insubria (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "1538921f050738369183ac35a82e6910e42e2dbb722b30f23375568a9c199f3f",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -3776,7 +3996,7 @@
    "2024": 42392417,
    "2025": 11504917,
    "nomi": [
-    "AQ PC PORTATILI 1 [a mano (R): ID 2425 = AQ PC portatili, mobile workstation e Chromebook (base di conoscenza)]"
+    "AQ PC PORTATILI 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ PC Portatili, mobile workstation e chromebook per le PA (ed.1)» (consip/consip-2425.json, 5/11); ID 2425 = AQ PC portatili, mobile workstation e Chromebook (base di conoscenza)]"
    ]
   },
   "carenze": [
@@ -3826,13 +4046,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202425%20DOCUMENTAZIONE%20UFF%20NEW.zip#ID 2425 documentazione NEW pdf_firmata/ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m",
     "sha256": "5f002865a2e686731d8f80f398de4ca9618cfa4d1f0189b092a32d069ffa72d9"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 30,
    "conteggi": {
@@ -4420,7 +4641,32 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Ministero della Giustizia - DGSIA: determina a contrarre — Det. 3749 del 15/6/2023; AQ 2296 Lotto 1 CIG 88846293CA; data encryption endpoint e DLP; CUP J51B22001240006",
+      "url": "https://www.giustizia.it/cmsresources/cms/documents/dgsia_determina_3749_15giu2023.pdf",
+      "fonte": "Ministero della Giustizia - DGSIA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "0852d4197e560fc54066c727532b6c3ebeaaa40854619b74b3224de71fed8206",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Comune di Firenze: determina di adesione — DD 08914/2023; AQ 2296 Lotto 1, RTI Accenture-Fincantieri NexTech-Fastweb-Deas; CIG derivato A02528F602",
+      "url": "https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20231107/20231103-DD%2008914.pdf",
+      "fonte": "Comune di Firenze (trovato-in-AT)",
+      "affidabilita": "A",
+      "sha256": "5354d3245d488fcbb65b4db48d09686969a9caa1531fbf6dd7000461adfcd15d",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Universita dell'Insubria: contratto esecutivo — Contratto esecutivo ID 2296, CIG AQ 88846293CA, CIG CE 953226411A; voce 1.843.248,60 (R: da verificare se valore CE)",
+      "url": "https://www.uninsubria.it/sites/default/files/2023-07/Contratto%20esecutivo_953226411A.pdf",
+      "fonte": "Universita dell'Insubria (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "536ca66f541230bb124aa47ac65bf84cd29caffe6616c299eb9bc5f316ddc38c",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -4517,6 +4763,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 4,
    "conteggi": {
@@ -5049,7 +5296,32 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Regione Calabria: decreto a contrarre — Decr. 11370/2024; DT2 Lotto 2 CIG 985365662A; ordine diretto 25/7/2024; PR FESR-FSE+ 2021-27 az. 1.2.2. Archiviati anche decr. 13964/2026 Lo",
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2024/08/Decreto_11370_del_05-08-2024.pdf",
+      "fonte": "Regione Calabria (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "69797e66ecc7a28eb461be95f084defe95a405f2196a37bf6db452b60cb2a9a8",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Regione Lazio: allegato a determina (contratto/proroga) — DD G09838/2026; DT2 Lotto 1 CIG 9853648F8D, derivato B400611461; 10.985.300,00; proroga fino a nuova gara, max 31/12/2026 (R: snippet)",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/LAV-DD-G09838-15-07-2026-All.pdf",
+      "fonte": "Regione Lazio (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "4d4c7667a5f98d84416728cb8d24d3706f0168b4caa190233d88839f8419ccf8",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "PCM - Dipartimento Funzione Pubblica: resoconto gestione finanziaria (AT) — elenca adesioni a DT ed. 1 (Lotti 1-2) e addendum CE; CIG 97392581F4, 9706852BAA; nessun atto ID 2536 (R)",
+      "url": "https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Atti_amm_aggiudicatrici/Resoconti_GestFinanz/2025/DFP%20Resoconto%20gestione%20finanziaria%202025.pdf",
+      "fonte": "PCM - Dipartimento Funzione Pubblica (non-trovato)",
+      "affidabilita": "A",
+      "sha256": "34d99632a1865fe66f7f4fb321c619d4eecec82871b61f0303b79846dd05678d",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -5097,7 +5369,7 @@
    "2024": 404097429,
    "2025": 64904161,
    "nomi": [
-    "DIGITAL TRANSFORMATION 2 [nome nell'oggetto del CIG padre (V)]"
+    "DIGITAL TRANSFORMATION 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -5147,13 +5419,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202536%20-%20DOC%20NON%20UFF.zip#ID 2536 - AQ Digital Transformation 2 - documentazione PDF/ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf",
     "sha256": "6cfb1539f4b173d817b439a74e3c79a9824fe78c05922dbc19499e1069acdeaf"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 32,
    "conteggi": {
@@ -6371,7 +6644,24 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "ARERA: determina di adesione — Det. 70/DAGR/2024; Multibrand 6 Lotto 7 (Adobe), CIG lotto 9660198792, derivato B2C1D235CD; 100 licenze; 35.695,35 + IVA = 43.548,33; RTI It",
+      "url": "https://arera.it/fileadmin/allegati/docs/24/70-2024-DAGR.pdf",
+      "fonte": "ARERA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "bba7bd9623b550928f0d75796360b0e0ab609931b6ccdbdef8092e687c65bc10",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero dell'Interno - Polizia di Stato: atto negoziale — Licenze Oracle via Multibrand, RTI Italware; 13.971.695,16 + IVA = 17.045.468,09; Roma 19/10/2022",
+      "url": "https://www.poliziadistato.it/statics/30/rti-italware---licenze-oracle_firmato.pdf",
+      "fonte": "Ministero dell'Interno - Polizia di Stato (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "d003daece33fc07aa38fc227c308272c2cdef5346c6e5c817c25365121020fac",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -6412,7 +6702,7 @@
    "2024": 311361064,
    "2025": 4205205,
    "nomi": [
-    "LICENZE SOFTWARE MULTIBRAND 6 [nome nell'oggetto del CIG padre (V)]"
+    "LICENZE SOFTWARE MULTIBRAND 6 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -6462,13 +6752,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2599_Multibrand6_Allegato14_Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202599%20-%20DOC%20UFF_1.zip#ID 2599_Multibrand6_Allegato14_Flusso dati commissioni.pdf.p7m",
     "sha256": "e24500a3ea03b671f6cdc465603f21d7e8907dd1837a5c153c642509ddb24f2e"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 65,
    "conteggi": {
@@ -7405,7 +7696,24 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Regione Calabria: decreto — Atto 15378/2024; AQ Sanita digitale sistemi gestionali; CIG lotto 9188267DC8, derivato A034C424F0; 53.487,47",
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2024/11/Atto_numero_15378_del_31-10-2024.pdf",
+      "fonte": "Regione Calabria (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "ba5d74a5c94486bb6b745f0f423275542bb4e7f51dbf6357cefb021f335a2ac3",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Regione Siciliana - Assessorato Salute: decreto di adesione — DDG 997/2024 e DDG 1434/2024 (8c597ab3...); ID 2366 Lotto 4 Servizi applicativi",
+      "url": "https://www.regione.sicilia.it/system/files/2024-10/D.D.G..%20n.997%20del%2019%20settembre%202024.pdf",
+      "fonte": "Regione Siciliana - Assessorato Salute (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "5aa169010790cf4acec6f3452c715fffb84dca0767e0ef27cf24175710e58f70",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -7460,7 +7768,7 @@
    "2024": 134037041,
    "2025": 145374293,
    "nomi": [
-    "SANIT DIGITALE SISTEMI INFORMATIVI GESTIONALI 1 [a mano (R): dossier 2366-sanita-digitale-gestionali]"
+    "SANIT DIGITALE SISTEMI INFORMATIVI GESTIONALI 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Sanità digitale - Sistemi informativi gestionali» (consip/consip-2366.json, 5/11); dossier 2366-sanita-digitale-gestionali]"
    ]
   },
   "carenze": [
@@ -7510,13 +7818,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202366%20DOC%20UFF%20NEW%202.zip#ID 2366  PDF-firmati/ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "c9ee5cbb8443d5c38377581ef22f7197655b922c7593b76418d27cc74af1faa9"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 70,
    "conteggi": {
@@ -7996,7 +8305,32 @@
     "via_se_manca": "PVL documenti_di_gara_link, poi AT degli enti",
     "nota": "non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati",
     "documenti": [],
-    "reperiti_altrove": []
+    "reperiti_altrove": [
+     {
+      "nome": "Ministero della Giustizia - DGSIA: determina a contrarre — Det. 0011 del 3/1/2025; SM3 Lotto 1 ID 2275 CIG 893944468E, ordine diretto; max 2.169.994,96 + IVA (R: snippet)",
+      "url": "https://www.giustizia.it/cmsresources/cms/documents/dgsia_determina_0011_3gen2025.pdf",
+      "fonte": "Ministero della Giustizia - DGSIA (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "1c35d5cea5c0f7add63fd8ffaa3749e8afd366cfb4c6d0b43bc98ca34a94b3d0",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Ministero dell'Interno - Polizia di Stato (CEN Napoli): determina a contrarre — SM3 Lotto 1 ordine diretto, 36 mesi; CIG derivato B1322BA041; importo x.813.516,64 + IVA (cifra iniziale troncata nell'estrazione)",
+      "url": "https://poliziadistato.it/statics/21/determina-a-contrarre-cen-napoli.pdf",
+      "fonte": "Ministero dell'Interno - Polizia di Stato (CEN Napoli) (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "58ba2d51e1cffbc147f4d7c6e26956fecab138e5bc23f7d8b10797e21221b0b5",
+      "data": "2026-11-05"
+     },
+     {
+      "nome": "Universita dell'Insubria: deliberazione a contrarre — procedura aperta propria per system management 2022-26 dopo valutazione AQ Consip SM",
+      "url": "https://www.uninsubria.it/sites/default/files/2023-07/Determina_contrarre_9034264E7C.pdf",
+      "fonte": "Universita dell'Insubria (trovato-fuori-AT)",
+      "affidabilita": "A",
+      "sha256": "2f41423886f7fbbb3e363ffebbd0c8ac4be307b185e9405f0e1dc5972b67b1a3",
+      "data": "2026-11-05"
+     }
+    ]
    },
    {
     "tipo": "cig_derivati",
@@ -8095,13 +8429,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc PDF firmati/ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "sha256": "a518a9cdc8e0c61c3758da93bdd9e75c98a611f86b4ed28b1587dbc4bf29a02e"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 3,
    "conteggi": {
@@ -9371,7 +9706,7 @@
    "2024": 0,
    "2025": 389791386,
    "nomi": [
-    "LICENZE SOFTWARE MULTIBRAND 7 [a mano (R): ID 2738 = gara multibrand 2024 (oggetto CIG padre); numero di edizione non letto]"
+    "LICENZE SOFTWARE MULTIBRAND 7 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Licenze software multibrand (ed.7)» (consip/consip-2738.json, 5/11); ID 2738 = gara multibrand 2024 (oggetto CIG padre); numero di edizione non letto]"
    ]
   },
   "carenze": [
@@ -9421,13 +9756,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2738 - Multibrand 7 - 5a - Allegato Flusso dati per le commissioni a carico.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID%202738.zip#Doc firmati ID 2738/ID 2738 - Multibrand 7 - 5a - Allegato Flusso dati per le commissioni a carico.pdf.p7m",
     "sha256": "4112c902fd7678c8e298ff5401954db97e44325f3c58ca7a72ee4f9c437cd073"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 60,
    "conteggi": {
@@ -10029,7 +10365,7 @@
    "2024": 0,
    "2025": 261549713,
    "nomi": [
-    "MICROSOFT ENTERPRISE AGREEMENT 9 [nome nell'oggetto del CIG padre (V)]"
+    "MICROSOFT ENTERPRISE AGREEMENT 9 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -10079,13 +10415,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID2755-EA9-Allegato-6-Flussi Dati Commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755 - firmati/ID2755-EA9-Allegato-6-Flussi Dati Commissioni.pdf.p7m",
     "sha256": "691c9df3898c6192793bef78993124a3768bfb6ef19d168d6fb0ec4489276062"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 29,
    "conteggi": {
@@ -10891,7 +11228,7 @@
    "2024": 50718944,
    "2025": 112262464,
    "nomi": [
-    "SANIT DIGITALE SISTEMI INFORMATIVI CLINICO ASSISTENZIALI 2 [nome nell'oggetto del CIG padre (V)]"
+    "SANIT DIGITALE SISTEMI INFORMATIVI CLINICO ASSISTENZIALI 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -10941,13 +11278,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2601 All. 16 Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF firmati/ID 2601 All. 16 Flusso dati commissioni.pdf.p7m",
     "sha256": "b1a286195f2146622708b8a4b4334deccde5275f4fa45ed140a87182d9a1da24"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 36,
    "conteggi": {
@@ -11333,7 +11671,7 @@
    "2024": 234519855,
    "2025": 63726178,
    "nomi": [
-    "RETI LOCALI 8 [nome nell'oggetto del CIG padre (V)]"
+    "RETI LOCALI 8 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -11383,13 +11721,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "sha256": "5114570701b5f7eca105d1b48ea26dd520d3f05a2b8a7ffcccc5a1c092ac4f32"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 25,
    "conteggi": {
@@ -11970,7 +12309,7 @@
    "2024": 64017010,
    "2025": 10446796,
    "nomi": [
-    "PC DESKTOP E WORKSTATION 3 [nome nell'oggetto del CIG padre (V)]"
+    "PC DESKTOP E WORKSTATION 3 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -12020,13 +12359,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc firmati/ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf.p7m",
     "sha256": "3fdc3e62bb253b84cc415e442d78492a1c071a6daad809747a5ac0d5b39b4d8a"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 34,
    "conteggi": {
@@ -12428,6 +12768,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -13070,13 +13411,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2202 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202202%20DOC%20UFF%20NEW.zip#Doc firmati_ID 2202/ID 2202 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "34fb6d3cdfe289ef69a2bcacfd54a0c4c97a90161247af5eddd2b679e8a728cd"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 33,
    "conteggi": {
@@ -13797,7 +14139,7 @@
    "2024": 0,
    "2025": 290767378,
    "nomi": [
-    "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 [nome nell'oggetto del CIG padre (V)]"
+    "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -13847,13 +14189,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2648%20-%20PDF%20-%20NEW%20UFF.zip#ID2648 - PDF - NEW UFF/ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m",
     "sha256": "29ccd0091efab433b5e74c1e705e18529b06ede6ad27fc1a9d70bec3ab9d31cd"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 3,
    "conteggi": {
@@ -14712,7 +15055,7 @@
    "2024": 124090747,
    "2025": 35231658,
    "nomi": [
-    "SANIT DIGITALE SISTEMI INFORMATIVI SANITARI E SERVIZI AL CITTADINO 1 [a mano (R): dossier 2365-sanita-digitale-sistemi-sanitari-cittadino]"
+    "SANIT DIGITALE SISTEMI INFORMATIVI SANITARI E SERVIZI AL CITTADINO 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «Gara Sanità digitale - Sistemi informativi sanitari e servizi al cittadino» (consip/consip-2365.json, 5/11); dossier 2365-sanita-digitale-sistemi-sanitari-cittadino]"
    ]
   },
   "carenze": [
@@ -14762,13 +15105,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202365%20DOC%20UFF%20NEW3.zip#ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 35,
    "conteggi": {
@@ -15141,6 +15485,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -15691,7 +16036,7 @@
    "2024": 47518618,
    "2025": 102359,
    "nomi": [
-    "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 1 [a mano (R): ID 2181 = AQ SGM ed. 1 (oggetto CIG padre)]"
+    "AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ SGM ed.1» (consip/consip-2181.json, 5/11); ID 2181 = AQ SGM ed. 1 (oggetto CIG padre)]"
    ]
   },
   "carenze": [
@@ -15741,13 +16086,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "75b744bba0de48e7b6c484136268a0db78e9150fe807b5cd1d98891de8902b47"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 22,
    "conteggi": {
@@ -16587,13 +16933,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202365%20DOC%20UFF%20NEW3.zip#ID 2365 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 34,
    "conteggi": {
@@ -16977,6 +17324,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -17635,7 +17983,7 @@
    "2024": 59304529,
    "2025": 108888314,
    "nomi": [
-    "CLOUD ENABLING 1 [nome nell'oggetto del CIG padre (V)]"
+    "CLOUD ENABLING 1 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -17685,13 +18033,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "All. 14A- ID 2652 - Gara Cloud Enabling - Flusso Commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202652%20-%20DOC%20UFF.zip#All. 14A- ID 2652 - Gara Cloud Enabling - Flusso Commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "871531b03a8176e68d44de184b438ee66d517f1e105c02d1e936cdc9f68bd5fe"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 36,
    "conteggi": {
@@ -18059,6 +18408,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -18431,6 +18781,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 44,
    "conteggi": {
@@ -19097,13 +19448,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2710 - All. 3 AQ - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202710%20DOC%20UFF.zip#ID 2710 - All. 3 AQ - Flussi dati commissioni.pdf.p7m",
     "sha256": "307598da2d1dc976c85ba576b27b07773220ee7c201199af796a157ba56e3137"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 30,
    "conteggi": {
@@ -19532,6 +19884,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -19864,6 +20217,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -20864,7 +21218,7 @@
    "2024": 85463161,
    "2025": 0,
    "nomi": [
-    "PUBLIC CLOUD IAAS E PAAS 1 [a mano (R): ID 2213 = AQ prodotti cloud IaaS e PaaS (oggetto CIG padre)]"
+    "PUBLIC CLOUD IAAS E PAAS 1 [a mano (V-testo): pagina consip.it trovata cercando l'ID Sigef, titolo «AQ Public Cloud IAAS e PAAS» (consip/consip-2213.json, 5/11); ID 2213 = AQ prodotti cloud IaaS e PaaS (oggetto CIG padre)]"
    ]
   },
   "carenze": [
@@ -20921,13 +21275,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "All. 13 - ID 2213 - Flusso commissioni a carico del Fornitore (TUTTI I LOTTI)_NEW.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202213%20-%20DOC%20UFFICIALE%20NEW5.zip#Doc firmati_ID 2213/All. 13 - ID 2213 - Flusso commissioni a carico del Fornitore (TUTTI I LOTTI)_NEW.pdf.p7m",
     "sha256": "12f57a786430797e4a56fc34bb63a2bfbdcf256d81d7a2c0b4ce3f3e74886640"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 49,
    "conteggi": {
@@ -21286,6 +21641,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -21589,6 +21945,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -22003,6 +22360,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 31,
    "conteggi": {
@@ -22361,6 +22719,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -23033,13 +23392,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2781 - PCDWM 4 - Appendice 1 SC - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202781%20-%20DOC%20UFF.zip#ID 2781 - Pubblicazione PDF/ID 2781 - PCDWM 4 - Appendice 1 SC - Flussi dati commissioni.pdf.p7m",
     "sha256": "ff3d49375cb224a44e0e9bfac79b5e41aa81b471bcc6a98cfb43cc705a0e15ce"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 34,
    "conteggi": {
@@ -23398,6 +23758,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -23701,6 +24062,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -24144,7 +24506,7 @@
    "2024": 13956429,
    "2025": 298894,
    "nomi": [
-    "MICROSOFT ENTERPRISE AGREEMENT 6 [nome nell'oggetto del CIG padre (V)]"
+    "MICROSOFT ENTERPRISE AGREEMENT 6 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -24194,13 +24556,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc firmati_ID 2187/ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "093fbd50bd2552202f2ba59dc949e13564d0000a8dbc089776605a3bb67bd5e9"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 3,
    "conteggi": {
@@ -24526,6 +24889,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -24840,6 +25204,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -25154,6 +25519,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -25468,6 +25834,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -25764,6 +26131,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -26571,13 +26939,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202297%20DOC%20UFF.zip#Doc firmati_ID 2297/ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m",
     "sha256": "43cd1bb87c64e23d8dc38cf34ce17b72e2ef4baa3b8dc520587dc7c3501d7bc9"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 29,
    "conteggi": {
@@ -27222,13 +27591,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202700.zip#ID 2700_AQ CRM 2_Doc.firm.digit/ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m",
     "sha256": "8045472924d192d80935d1f9c609d9f603809febbaefcbdc9b1f4d9779ebf2e5"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 27,
    "conteggi": {
@@ -28143,13 +28513,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID2566 - Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202566%20-%20DOC%20UFF%20NEW.zip#Doc firmati ID 2566/ID2566 - Allegato 18 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "51aaa99402bec3d98e547a96734a5d51fb57871935c5f77f78dde64ba0f665a5"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 61,
    "conteggi": {
@@ -28800,7 +29171,7 @@
    "2024": 0,
    "2025": 0,
    "nomi": [
-    "ENERGIA ELETTRICA 21 [nome nell'oggetto del CIG padre (V)]"
+    "ENERGIA ELETTRICA 21 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -28850,13 +29221,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202638%20-%20DOC%20UFF.zip#EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "2a11713c91207c37bfb841c699b13648410ab0d6b7ac26042d351cbecda65862"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 21,
    "conteggi": {
@@ -29215,6 +29587,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -29565,6 +29938,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -29861,6 +30235,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -30488,13 +30863,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2729 - Fotocopiatrici Multifunzione 3 - All. 1 allo schema di convenzione - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202729%20-%20DOC%20UFF.zip#Doc firmati ID 2729/ID 2729 - Fotocopiatrici Multifunzione 3 - All. 1 allo schema di convenzione - Flussi dati commissioni.pdf.p7m",
     "sha256": "0dd6737e022c63cb2f2fa39f9039f576a83d8bd1269d2ee3b2f020da3b9c44e9"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 28,
    "conteggi": {
@@ -31664,13 +32040,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202480.zip#Doc firmati_ID 2480/ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitore.pdf.p7m",
     "sha256": "fdb18188e89b4c45bb1dff75850eaf573e00f99844c3c0c97a89aa1e71fd878a"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 50,
    "conteggi": {
@@ -32389,13 +32766,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc firmati ID 2452/ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "sha256": "0ab74107a630c3db3da0623a39adff459c08fd646d8bfa47ce6cbc2f73919a9d"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 29,
    "conteggi": {
@@ -33100,13 +33478,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-1561-Documentazione-UFFICIALE.zip#FirmDig_ID 1561/Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m",
     "sha256": "e1985d41140b5b1d62c9c4a051eb99bbe93d141bf06e90a280354d81eb4fcc05"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 42,
    "conteggi": {
@@ -33465,6 +33844,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -33930,13 +34310,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2174 - All. 12 - Gara Strumenti di gestione, protezione email, web e dati - Flusso commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202174%20-%20DOC%20UFF.zip#Doc firmati_ID 2174/ID 2174 - All. 12 - Gara Strumenti di gestione, protezione email, web e dati - Flusso commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "a90cf50b9c8cae4b7392499dc2fce58d1bfdb1b410b890e86ad9302502791315"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 24,
    "conteggi": {
@@ -34722,7 +35103,7 @@
    "2024": 18656170,
    "2025": 83264520,
    "nomi": [
-    "AQ CENTRALI TELEFONICHE 9 [nome nell'oggetto del CIG padre (V)]"
+    "AQ CENTRALI TELEFONICHE 9 [nome nell'oggetto del CIG padre (V-testo)]"
    ]
   },
   "carenze": [
@@ -34772,13 +35153,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2496 - AQ CT ed. 9 - All. 1AQ Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202496%20-%20DOC%20UFF%20NEW.zip#ID 2496 - AQ CT ed. 9 - All. 1AQ Flusso dati commissioni.pdf.p7m",
     "sha256": "e706f3f3cdeb0764cf940fbfbaf7d17f4e035e830c1a9257a263872eff2ed0f4"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 32,
    "conteggi": {
@@ -35137,6 +35519,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -35433,6 +35816,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -35729,6 +36113,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -36052,6 +36437,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -36348,6 +36734,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -36644,6 +37031,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -36967,6 +37355,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -37344,6 +37733,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -37640,6 +38030,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -37936,6 +38327,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -38286,6 +38678,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -38600,6 +38993,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -38914,6 +39308,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -39210,6 +39605,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -39596,6 +39992,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -39892,6 +40289,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -40188,6 +40586,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -40484,6 +40883,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -40789,6 +41189,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -41085,6 +41486,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": null,
   "analisi": null,
   "note": null
@@ -41386,6 +41788,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": null,
   "analisi": null,
   "note": null
@@ -41696,6 +42099,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": null,
   "analisi": null,
   "note": null
@@ -41988,6 +42392,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": null,
   "analisi": null,
   "note": null
@@ -42585,11 +42990,24 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202746%20DOC%20UFF.zip#ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m",
     "sha256": "e53bfe539c042b186e624c029a332b3dd65aedd4e7f8587693f71077d3366b2d"
+   }
+  ],
+  "altrove_su_carenze": [
+   {
+    "ufficiale": false,
+    "fonte": "CorCom (stampa specializzata) [R]",
+    "affidabilita": "B",
+    "nome": "Cloud per la PA: Consip in corso gare per 1;7 miliardi — Public Cloud IaaS PaaS valore 550 mln; SAC ed.1 1;2 mld (2020)",
+    "url": "https://www.corrierecomunicazioni.it/digital-economy/cloud/cloud-per-la-pa-consip-in-corso-gare-per-17-miliardi/",
+    "stato": "pubblicato-non-archiviato",
+    "sha256": null,
+    "data": "2026-11-05",
+    "carenza": "C7"
    }
   ],
   "estratti": {
@@ -43228,13 +43646,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2928 - Allegato AQ - Flussi dati Commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202928%20-%20DOC%20UFF.zip#ID 2928 - PRINCO - DOC Firmate/ID 2928 - Allegato AQ - Flussi dati Commissioni.pdf.p7m",
     "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 25,
    "conteggi": {
@@ -44044,13 +44463,14 @@
   "evidenze_dato_esistente": [
    {
     "carenza": "C3",
-    "livello": "V",
-    "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+    "livello": "R (dal nome del file)",
+    "testo": "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
     "documento": "ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2212%20-%20DOC%20UFFICIALE%20NEW.PDF.zip#ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m",
     "sha256": "ad1da466b043e0f8c440c3e9842ea699430800ad200095f838518f221b9e9d34"
    }
   ],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 37,
    "conteggi": {
@@ -44550,6 +44970,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 17,
    "conteggi": {
@@ -45053,6 +45474,30 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [
+   {
+    "ufficiale": false,
+    "fonte": "Corte dei conti / Camera (relazione Corte dei conti) [R]",
+    "affidabilita": "A",
+    "nome": "Doc. XV n. 318 - gestione Consip 2022 — Autorizzazioni subappalto >1",
+    "url": "https://documenti.camera.it/_dati/leg19/lavori/documentiparlamentari/indiceetesti/015/318/INTERO.pdf",
+    "stato": "archiviato",
+    "sha256": "1de3d5eed4447f3a87442972148f561c84d13933d2d07dafdf18c674be4b3ecc",
+    "data": "2026-11-05",
+    "carenza": "C7"
+   },
+   {
+    "ufficiale": false,
+    "fonte": "AgID (documento AgID trasparenza) [R]",
+    "affidabilita": "A",
+    "nome": "Atto su incremento massimale SPC Cloud — Massimale SPC Cloud elevato fino a 1 mld EUR (da 750 mln) dopo L.2022",
+    "url": "https://trasparenza.agid.gov.it/download/2507.html",
+    "stato": "pubblicato-non-archiviato",
+    "sha256": null,
+    "data": "2026-11-05",
+    "carenza": "C7"
+   }
+  ],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},
@@ -45356,6 +45801,7 @@
    }
   ],
   "evidenze_dato_esistente": [],
+  "altrove_su_carenze": [],
   "estratti": {
    "documenti_letti": 0,
    "conteggi": {},

@@ -59,7 +59,7 @@ def main():
         if conv in mappa:
             m = mappa[conv]
             righe.append({"iniziativa": m["iniziativa"], "nome_consip": conv, "ordinato_2024": round(anni.get("2024", 0)),
-                          "ordinato_2025": round(anni.get("2025", 0)), "abbinamento": f"a mano ({m['livello']}): {m['perche']}"})
+                          "ordinato_2025": round(anni.get("2025", 0)), "abbinamento": f"a mano (V-testo): {m['perche']}"})
             continue
         if not conv or len(conv) < 8:
             continue
@@ -67,7 +67,7 @@ def main():
         if len(cand) == 1:
             nomi[cand[0]].add(conv)
             righe.append({"iniziativa": cand[0], "nome_consip": conv, "ordinato_2024": round(anni.get("2024", 0)), "ordinato_2025": round(anni.get("2025", 0)),
-                          "abbinamento": "nome nell'oggetto del CIG padre (V)"})
+                          "abbinamento": "nome nell'oggetto del CIG padre (V-testo)"})
     righe.sort(key=lambda r: (r["iniziativa"], r["nome_consip"]))
     with open(DB / "consip-ordinato.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["iniziativa", "nome_consip", "ordinato_2024", "ordinato_2025", "abbinamento"])

@@ -15,129 +15,136 @@ Censimento di **86 iniziative** (82 attive, 4 storiche) con i loro lotti, i docu
 
 Per il contesto cloud vedi [Iniziative Consip cloud](/progetto/iniziative-consip-cloud/).
 
-<p>Filtra per tipo di soggetto: <select id="filtro-tipo" onchange="(function(s){document.querySelectorAll('tr[data-tipo]').forEach(function(r){r.style.display=(!s.value||r.dataset.tipo===s.value)?'':'none'})})(this)"><option value="">tutti</option><option value="consip">Consip</option><option value="psn">PSN</option><option value="aggregatore-regionale">Aggregatore regionale</option><option value="consorzio-unione">Consorzio o unione</option><option value="altro">Altro</option></select></p>
+Le tabelle si possono ordinare e filtrare (anche per tipo di soggetto, colonna «Tipo»).
 
-<div class="callout danger" style="border-left:6px solid #b00020;padding:.8em 1em;background:#fdecee;margin:1.5em 0">
-<h2>Carenze di trasparenza</h2>
-<p>Dati che non vengono pubblicati pur servendo a controllare la spesa e la sovranità. «Verificato» = assenza constatata da noi sulla pagina ufficiale dell'iniziativa (con data); «da verificare» = pagina non ancora consultata o dato riferito. Valore = somma dei derivati ICT 2024-2025 delle iniziative colpite (ordine di grandezza, non transato).</p>
-<table class="table table-sm"><thead><tr><th>Carenza</th><th>Iniziative colpite (verificato / da verificare)</th><th>M€ coinvolti (verificato)</th><th>Obbligo di pubblicare?</th><th>Proposta</th></tr></thead><tbody>
-<tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R39</td></tr>
-<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>1 / 85</td><td>0,0</td><td>no</td><td>R39</td></tr>
-<tr><td><strong>C3</strong> Transato per listino, marchio ed ente</td><td>39 / 47</td><td>50.468,3</td><td>no</td><td>R37</td></tr>
-<tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>41 / 44</td><td>50.697,5</td><td>in parte</td><td>R08</td></tr>
-<tr><td><strong>C5</strong> Progetti e piani dei fabbisogni</td><td>0 / 1</td><td>0,0</td><td>no</td><td>R41</td></tr>
-<tr><td><strong>C6</strong> Region e data center dichiarati</td><td>2 / 3</td><td>0,0</td><td>no</td><td>R42</td></tr>
-<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>1 / 85</td><td>0,0</td><td>no</td><td>R37</td></tr>
-<tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>4 / 41</td><td>951,7</td><td>no</td><td>R38</td></tr>
-</tbody></table>
-<p><strong>Per tipo di soggetto</strong> (iniziative colpite, verificato + da verificare):</p>
-<table class="table table-sm"><thead><tr><th>Carenza</th><th>Consip</th><th>PSN</th><th>Aggregatore regionale</th><th>Consorzio o unione</th><th>Altro</th></tr></thead><tbody>
-<tr><td>C1 Offerte tecniche dei vincitori</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
-<tr><td>C2 Listini e prezzi offerti dagli aggiudicatari</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
-<tr><td>C3 Transato per listino, marchio ed ente</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
-<tr><td>C4 Ordinativi e contratti attuativi</td><td>45/45</td><td>0/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
-<tr><td>C5 Progetti e piani dei fabbisogni</td><td>1/45</td><td>0/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
-<tr><td>C6 Region e data center dichiarati</td><td>4/45</td><td>1/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
-<tr><td>C7 Monitoraggio delle soglie di erosione dei massimali</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
-<tr><td>C8 Indice ID Sigef ↔ CIG dei lotti</td><td>45/45</td><td>0/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
-</tbody></table>
-<p>Basi normative e ragioni: <a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/carenze.yaml">carenze.yaml</a> e <a href="/progetto/normativa-documenti-gara/">scheda normativa</a>. Rimedio di breve periodo: <a href="/convenzioni/accesso-civico/">bozze di accesso civico generalizzato</a> (preparate, non inviate). Proposte di policy: R37-R42 in richieste-e-raccomandazioni.yaml.</p>
-</div>
+## Carenze di trasparenza
+
+Dati che non vengono pubblicati pur servendo a controllare la spesa e la sovranità. «Accertato» = non trovato sulla pagina del bando su consip.it, negli open data Consip né nel campione di enti (consultati il 05/11/2026; tipo dedotto dal nome dei file); «da verificare» = fonti non ancora consultate. Valore = somma dei derivati ICT 2024-2025 delle iniziative colpite (BDNCP, elaborazione del 05/11/2026; ordine di grandezza, non transato).
+
+| Carenza | Iniziative colpite (accertato / da verificare) | M€ coinvolti (accertato) | Obbligo di pubblicare? | Proposta |
+|---|---|---|---|---|
+| **C1** Offerte tecniche dei vincitori | 41 / 45 | 50.697,5 | no | R39 |
+| **C2** Listini e prezzi offerti dagli aggiudicatari | 1 / 85 | 0,0 | no | R39 |
+| **C3** Transato per listino, marchio ed ente | 39 / 47 | 50.468,3 | no | R37 |
+| **C4** Ordinativi e contratti attuativi | 41 / 44 | 50.697,5 | in parte | R08 |
+| **C5** Progetti e piani dei fabbisogni | 0 / 1 | 0,0 | no | R41 |
+| **C6** Region e data center dichiarati | 2 / 3 | 0,0 | no | R42 |
+| **C7** Monitoraggio delle soglie di erosione dei massimali | 1 / 85 | 0,0 | no | R37 |
+| **C8** Indice ID Sigef ↔ CIG dei lotti | 4 / 41 | 951,7 | no | R38 |
+
+Per tipo di soggetto (iniziative colpite / iniziative del tipo):
+
+| Carenza | Consip | PSN | Aggregatore regionale | Consorzio o unione | Altro |
+|---|---|---|---|---|---|
+| C1 Offerte tecniche dei vincitori | 45/45 | 1/1 | 25/25 | 4/4 | 11/11 |
+| C2 Listini e prezzi offerti dagli aggiudicatari | 45/45 | 1/1 | 25/25 | 4/4 | 11/11 |
+| C3 Transato per listino, marchio ed ente | 45/45 | 1/1 | 25/25 | 4/4 | 11/11 |
+| C4 Ordinativi e contratti attuativi | 45/45 | 0/1 | 25/25 | 4/4 | 11/11 |
+| C5 Progetti e piani dei fabbisogni | 1/45 | 0/1 | 0/25 | 0/4 | 0/11 |
+| C6 Region e data center dichiarati | 4/45 | 1/1 | 0/25 | 0/4 | 0/11 |
+| C7 Monitoraggio delle soglie di erosione dei massimali | 45/45 | 1/1 | 25/25 | 4/4 | 11/11 |
+| C8 Indice ID Sigef ↔ CIG dei lotti | 45/45 | 0/1 | 0/25 | 0/4 | 0/11 |
+
+Basi normative e ragioni: [carenze.yaml](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/carenze.yaml) e [scheda normativa](/progetto/normativa-documenti-gara/). Rimedio di breve periodo: [bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (preparate, non inviate). Proposte di policy: R08, R37-R43 in richieste-e-raccomandazioni.yaml.
 
 ## Iniziative attive
 
-<table class="table table-sm"><thead><tr><th>#</th><th>Iniziativa</th><th>Tipo</th><th>M€ ICT 2024-25</th><th>Derivati</th><th>Archiviati</th><th>Mancanti</th><th>Copertura</th></tr></thead><tbody>
-<tr data-tipo="consip"><td>1</td><td><a href="/convenzioni/consip-2483/">Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID Sigef 2483), lott</a></td><td>Consip</td><td>29.917,7</td><td>414</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>2</td><td><a href="/convenzioni/consip-2610/">Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610</a></td><td>Consip</td><td>5.953,3</td><td>286</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>3</td><td><a href="/convenzioni/consip-2615/">Consip Licenze Microsoft Enterprise Agreement 8, ID 2615</a></td><td>Consip</td><td>3.015,2</td><td>321</td><td>10</td><td>3</td><td>77 %</td></tr>
-<tr data-tipo="psn"><td>4</td><td><a href="/convenzioni/psn/">Polo Strategico Nazionale (PPP, Presidenza del Consiglio)</a></td><td>PSN</td><td>2.077,9</td><td>433</td><td>5</td><td>9</td><td>36 %</td></tr>
-<tr data-tipo="consip"><td>5</td><td><a href="/convenzioni/consip-2425/">Consip AQ PC portatili, mobile workstation e Chromebook, ID 2425, lotto 1 PC portatili</a></td><td>Consip</td><td>1.616,7</td><td>468</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>6</td><td><a href="/convenzioni/consip-2296/">Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto</a></td><td>Consip</td><td>1.324,8</td><td>248</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>7</td><td><a href="/convenzioni/consip-2536/">Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi</a></td><td>Consip</td><td>969,7</td><td>146</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>8</td><td><a href="/convenzioni/consip-2599/">Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle</a></td><td>Consip</td><td>918,2</td><td>387</td><td>10</td><td>3</td><td>77 %</td></tr>
-<tr data-tipo="consip"><td>9</td><td><a href="/convenzioni/consip-2366/">Consip AQ Sanità digitale, sistemi informativi gestionali</a></td><td>Consip</td><td>834,1</td><td>45</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>10</td><td><a href="/convenzioni/consip-2275/">Consip AQ System management ed. 3, ID 2275, lotto 1</a></td><td>Consip</td><td>746,9</td><td>119</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>11</td><td><a href="/convenzioni/consip-2738/">GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SE</a></td><td>Consip</td><td>696,5</td><td>380</td><td>10</td><td>3</td><td>77 %</td></tr>
-<tr data-tipo="consip"><td>12</td><td><a href="/convenzioni/consip-2755/">Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)</a></td><td>Consip</td><td>691,6</td><td>186</td><td>10</td><td>3</td><td>77 %</td></tr>
-<tr data-tipo="consip"><td>13</td><td><a href="/convenzioni/consip-2601/">Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica</a></td><td>Consip</td><td>557,5</td><td>242</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>14</td><td><a href="/convenzioni/consip-reti-locali-8/">Consip Reti locali 8, ID 2223, lotto 2 PAL</a></td><td>Consip</td><td>554,2</td><td>251</td><td>4</td><td>9</td><td>31 %</td></tr>
-<tr data-tipo="consip"><td>15</td><td><a href="/convenzioni/consip-2631/">Consip PC desktop e workstation 3, ID 2631, lotto 2</a></td><td>Consip</td><td>469,4</td><td>1383</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>16</td><td><a href="/convenzioni/cig-91881762b3/">GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE </a></td><td>Consip</td><td>354,3</td><td>149</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>17</td><td><a href="/convenzioni/cig-8765571a03/">GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE </a></td><td>Consip</td><td>325,0</td><td>206</td><td>7</td><td>6</td><td>54 %</td></tr>
-<tr data-tipo="consip"><td>18</td><td><a href="/convenzioni/consip-2648/">AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 - ID 2648 / LOTTO 4</a></td><td>Consip</td><td>307,8</td><td>80</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>19</td><td><a href="/convenzioni/consip-2365/">Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e </a></td><td>Consip</td><td>297,1</td><td>69</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>20</td><td><a href="/convenzioni/cig-5133642f61/">Consip SPC2 Connettività (contratto quadro OPA)</a></td><td>Consip</td><td>257,8</td><td>444</td><td>2</td><td>11</td><td>15 %</td></tr>
-<tr data-tipo="consip"><td>21</td><td><a href="/convenzioni/consip-2181/">AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SG</a></td><td>Consip</td><td>232,3</td><td>53</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>22</td><td><a href="/convenzioni/cig-9030521daa/">GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE </a></td><td>Consip</td><td>227,5</td><td>198</td><td>7</td><td>6</td><td>54 %</td></tr>
-<tr data-tipo="consip"><td>23</td><td><a href="/convenzioni/cig-8898059e90/">GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/20</a></td><td>Consip</td><td>225,4</td><td>274</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>24</td><td><a href="/convenzioni/consip-2652/">CLOUD ENABLING 1 ID 2652 / LOTTO 1: SERVIZI SUPPORTO ALL'ADOZIONE E PMO - PAC1</a></td><td>Consip</td><td>189,8</td><td>99</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>25</td><td><a href="/convenzioni/cig-989984280e/">ARIA_2023_807 - PROCEDURA APERTA, AI SENSI DELL’ART. 60 DEL D.LGS. N. 50/2016, PER LA STIPULA DI UN ACCORDO QU</a></td><td>Aggregatore regionale</td><td>160,1</td><td>15</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>26</td><td><a href="/convenzioni/consip-1774/">GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA </a></td><td>Altro</td><td>147,4</td><td>15</td><td>4</td><td>9</td><td>31 %</td></tr>
-<tr data-tipo="consip"><td>27</td><td><a href="/convenzioni/consip-2710/">Consip AQ System management ed. 4, ID 2710 (lotto unico)</a></td><td>Consip</td><td>145,4</td><td>49</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>28</td><td><a href="/convenzioni/cig-b0da5c472c/">GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL</a></td><td>Consip</td><td>114,2</td><td>640</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>29</td><td><a href="/convenzioni/cig-a0260b3155/">PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVI</a></td><td>Altro</td><td>100,4</td><td>21</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>30</td><td><a href="/convenzioni/consip-2213/">AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 / LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI</a></td><td>Consip</td><td>90,2</td><td>41</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>31</td><td><a href="/convenzioni/cig-a008db40ba/">PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPP</a></td><td>Aggregatore regionale</td><td>86,4</td><td>112</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>32</td><td><a href="/convenzioni/consip-2453/">ID 2453 - GARA PUBLIC CLOUD SAAS ITSM / ID 2453 - GARA PUBLIC CLOUD SAAS ITSM</a></td><td>Consip</td><td>83,7</td><td>16</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>33</td><td><a href="/convenzioni/cig-b2fb115279/">L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECI</a></td><td>Altro</td><td>81,8</td><td>4</td><td>6</td><td>7</td><td>46 %</td></tr>
-<tr data-tipo="altro"><td>34</td><td><a href="/convenzioni/cig-88556834cb/">SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTR</a></td><td>Altro</td><td>67,4</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>35</td><td><a href="/convenzioni/consip-2781/">ACQUISIZIONE DI PC DESKTOP, WORKSTATION E MONITOR ED. 4 – ID 2781 / FORNITURA IN ACQUISTO DI PERSONAL COMPUTER</a></td><td>Consip</td><td>59,6</td><td>1786</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="altro"><td>36</td><td><a href="/convenzioni/cig-7930885557/">SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START) / SERVIZIO DI GESTIONE DE</a></td><td>Altro</td><td>52,1</td><td>126</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>37</td><td><a href="/convenzioni/consip-2556/">SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556 / SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 </a></td><td>Consip</td><td>51,5</td><td>79</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>38</td><td><a href="/convenzioni/consip-2187/">Consip Licenze Microsoft Enterprise Agreement 6, ID 2187</a></td><td>Consip</td><td>49,6</td><td>54</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>39</td><td><a href="/convenzioni/cig-97219284c8/">PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 / SERVIZI DI </a></td><td>Aggregatore regionale</td><td>46,5</td><td>192</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>40</td><td><a href="/convenzioni/cig-993049146a/">APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZI</a></td><td>Aggregatore regionale</td><td>44,7</td><td>55</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>41</td><td><a href="/convenzioni/cig-8664818204/">AOV/SUA SF 009/2021 - CONVENZIONE QUADRO ACP PER SERVIZI ICT / LOTTO 2: : SERVIZI INFORMATICI ICT PER APPLICAZ</a></td><td>Altro</td><td>40,5</td><td>98</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consorzio-unione"><td>42</td><td><a href="/convenzioni/cig-b1ffb3098a/">SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE </a></td><td>Consorzio o unione</td><td>38,1</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>43</td><td><a href="/convenzioni/cig-94252656ba/">SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALI</a></td><td>Altro</td><td>37,2</td><td>33</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>44</td><td><a href="/convenzioni/consip-2297/">ACCORDO QUADRO AVENTE AD OGGETTO LA FORNITURA DI UN 'CATALOGO DI PRODOTTI SAAS NELL'AMBITO DELLA PRODUTTIVITÀ </a></td><td>Consip</td><td>36,5</td><td>41</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>45</td><td><a href="/convenzioni/consip-2700/">PRODOTTI CLOUD IN MODALITÀ SOFTWARE AS A SERVICE NELL'AMBITO DEL CRM E MARKETING PER LE PUBBLICHE AMMINISTRAZI</a></td><td>Consip</td><td>32,2</td><td>25</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>46</td><td><a href="/convenzioni/consip-2566/">SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINISTRAZIONE 2 ID 2566 / LOTTO 2 SERVIZI DI DATA MANAGEMENT PER </a></td><td>Consip</td><td>31,8</td><td>26</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>47</td><td><a href="/convenzioni/consip-2638/">ENERGIA ELETTRICA 21 - ID 2638 / LOMBARDIA ESCLUSE LA PROVINCIA DI MILANO E LA PROVINCIA DI LODI</a></td><td>Consip</td><td>30,1</td><td>6</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="altro"><td>48</td><td><a href="/convenzioni/cig-945403654f/">ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO DINAMICO DELLE OPERE D'ARTE E SERVIZI C</a></td><td>Altro</td><td>28,0</td><td>33</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>49</td><td><a href="/convenzioni/cig-99617296d3/">ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI SENSI DELL'ART. 59, COMMA 4, LETT. B) DE</a></td><td>Altro</td><td>26,7</td><td>18</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="altro"><td>50</td><td><a href="/convenzioni/cig-95643027b0/">CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING / CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING</a></td><td>Altro</td><td>26,4</td><td>9</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>51</td><td><a href="/convenzioni/cig-b1457d3391/">FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E</a></td><td>Consip</td><td>25,3</td><td>409</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>52</td><td><a href="/convenzioni/consip-2480/">GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWA</a></td><td>Consip</td><td>25,0</td><td>12</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="consip"><td>53</td><td><a href="/convenzioni/consip-2452/">ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFON</a></td><td>Consip</td><td>21,0</td><td>234</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>54</td><td><a href="/convenzioni/consip-1561/">GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI C</a></td><td>Consip</td><td>21,0</td><td>4</td><td>7</td><td>6</td><td>54 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>55</td><td><a href="/convenzioni/cig-84163618ce/">PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI, PER IL SERVIZIO DI ASSISTENZA </a></td><td>Aggregatore regionale</td><td>19,6</td><td>9</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>56</td><td><a href="/convenzioni/cig-8784303c25/">GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN UNICO LOTTO AI SENSI DELL'ART. 54 COMMA 4</a></td><td>Consip</td><td>19,4</td><td>18</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>57</td><td><a href="/convenzioni/consip-2496/">AQ CENTRALI TELEFONICHE 9 - ID 2496 / AQ CENTRALI TELEFONICHE 9 - ID 2496</a></td><td>Consip</td><td>19,3</td><td>37</td><td>9</td><td>4</td><td>69 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>58</td><td><a href="/convenzioni/cig-81636687f2/">PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E</a></td><td>Aggregatore regionale</td><td>13,6</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consorzio-unione"><td>59</td><td><a href="/convenzioni/cig-9777818ea8/">ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GE</a></td><td>Consorzio o unione</td><td>12,6</td><td>6</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>60</td><td><a href="/convenzioni/cig-8637686bf8/">GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENS</a></td><td>Aggregatore regionale</td><td>11,5</td><td>5</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>61</td><td><a href="/convenzioni/cig-9845010742/">APPALTO SPECIFICO (SDA) PER LA FORNITURA IN ACQUISTO E NOLEGGIO DI PC DESKTOP E NOTEBOOK 11 / LOTTO 2 NOLEGGIO</a></td><td>Aggregatore regionale</td><td>11,3</td><td>985</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>62</td><td><a href="/convenzioni/cig-b736423c63/">PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2023, PER LA FORNITURA DI SERVIZI PROFESS</a></td><td>Aggregatore regionale</td><td>10,0</td><td>12</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>63</td><td><a href="/convenzioni/cig-9936839af1/">APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNICA AL SISTEMA INFORMATIVO LAVORO DELL'EMI</a></td><td>Aggregatore regionale</td><td>9,6</td><td>8</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consorzio-unione"><td>64</td><td><a href="/convenzioni/cig-9769148bf3/">GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI PER L'EVOLUZIONE DI P</a></td><td>Consorzio o unione</td><td>9,3</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>65</td><td><a href="/convenzioni/cig-87332390d0/">PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE Q</a></td><td>Aggregatore regionale</td><td>9,0</td><td>44</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>66</td><td><a href="/convenzioni/cig-949554539f/">PROCEDUTA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI GESTIONE INFORMATIZZATA DEL PERSONALE A QUALSIAS</a></td><td>Aggregatore regionale</td><td>8,6</td><td>5</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>67</td><td><a href="/convenzioni/cig-9923894067/">APPALTO SPECIFICO (SDA) PER L'ACQUISIZIONE DI SERVIZI DI BUSINESS ANALYTICS E DATA MANAGEMENT 2 / SERVIZI DI B</a></td><td>Aggregatore regionale</td><td>8,3</td><td>37</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>68</td><td><a href="/convenzioni/cig-7812108376/">SERVIZI DI MANUTENZIONE, ASSISTENZA HARDWARE E SOFTWARE DI BASE PER LE INFRASTRUTTURE DELLE AZIENDE SANITARIE </a></td><td>Aggregatore regionale</td><td>7,7</td><td>12</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>69</td><td><a href="/convenzioni/cig-7246653f38/">GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'ART. 61 DEL D.LGS. 50/2006, PER LA SELEZIONE DI OPERATORI PE</a></td><td>Aggregatore regionale</td><td>6,5</td><td>10</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consorzio-unione"><td>70</td><td><a href="/convenzioni/cig-a02b1c8a8a/">GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI SU TECNOLOGIE E METOD</a></td><td>Consorzio o unione</td><td>6,5</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>71</td><td><a href="/convenzioni/cig-9216207e99/">PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA DI 72 MESI, PER IL 'SERVIZIO DI CONSERVAZIONE A NORMA PER L</a></td><td>Aggregatore regionale</td><td>5,2</td><td>6</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>72</td><td><a href="/convenzioni/cig-8716552642/">PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE Q</a></td><td>Aggregatore regionale</td><td>4,8</td><td>42</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>73</td><td><a href="/convenzioni/cig-9837572d38/">PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI LETTURA ED ELABORAZIONI DATI DELLE PRESCRIZIONI FARMACEUTIC</a></td><td>Aggregatore regionale</td><td>4,6</td><td>3</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>74</td><td><a href="/convenzioni/cig-b715929978/">PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B), SUB. 2, D. LGS. 36/2023, PER L'AFFIDAME</a></td><td>Aggregatore regionale</td><td>4,3</td><td>5</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>75</td><td><a href="/convenzioni/cig-9603457f68/">PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL SERVIZIO SANITARIO REGIONALE DELLA TOSC</a></td><td>Aggregatore regionale</td><td>4,3</td><td>10</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>76</td><td><a href="/convenzioni/cig-9580558e8e/">PROCEDURA APERTA PER L?AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVIT</a></td><td>Aggregatore regionale</td><td>2,9</td><td>25</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>77</td><td><a href="/convenzioni/cig-9482392d69/">PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI </a></td><td>Aggregatore regionale</td><td>2,6</td><td>29</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>78</td><td><a href="/convenzioni/cig-759453695c/">P.A. IN DUE LOTTI PER LA STIPULA DI UNA CONVENZIONE PER LA FORNITURA IN LOCAZIONE OPERATIVA DI UN SISTEMA INFO</a></td><td>Aggregatore regionale</td><td>2,1</td><td>8</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>79</td><td><a href="/convenzioni/cig-9016294130/">PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TRASMISSIONE DATI E VOCE SU RETI FISSE E MOBILI E GESTIONE E M</a></td><td>Aggregatore regionale</td><td>2,0</td><td>73</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="aggregatore-regionale"><td>80</td><td><a href="/convenzioni/cig-9481064585/">PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI </a></td><td>Aggregatore regionale</td><td>2,0</td><td>40</td><td>1</td><td>12</td><td>8 %</td></tr>
-<tr data-tipo="consip"><td>81</td><td><a href="/convenzioni/consip-2746/">FORNITURA DI SERVIZI CLOUD IAAS E PAAS / FORNITURA SERVIZI IAAS E PAAS</a></td><td>Consip</td><td>0,0</td><td>0</td><td>7</td><td>6</td><td>54 %</td></tr>
-<tr data-tipo="consip"><td>82</td><td><a href="/convenzioni/consip-2928/">Consip PRINCO, Public cloud SaaS produttività individuale e collaboration (ID 2928)</a></td><td>Consip</td><td>0,0</td><td>0</td><td>9</td><td>4</td><td>69 %</td></tr>
-</tbody></table>
+Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026); documenti al 05/11/2026.
+
+| # | Iniziativa | Tipo | M€ ICT 2024-25 | Derivati | Archiviati | Mancanti | Copertura |
+|---|---|---|---|---|---|---|---|
+| 1 | [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID Sigef 2483), lott](/convenzioni/consip-2483/) | Consip | 29.917,7 | 414 | 9 | 4 | 69 % |
+| 2 | [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) | Consip | 5.953,3 | 286 | 9 | 4 | 69 % |
+| 3 | [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) | Consip | 3.015,2 | 321 | 10 | 3 | 77 % |
+| 4 | [Polo Strategico Nazionale (PPP, Presidenza del Consiglio)](/convenzioni/psn/) | PSN | 2.077,9 | 433 | 5 | 9 | 36 % |
+| 5 | [Consip AQ PC portatili, mobile workstation e Chromebook, ID 2425, lotto 1 PC portatili](/convenzioni/consip-2425/) | Consip | 1.616,7 | 468 | 9 | 4 | 69 % |
+| 6 | [Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto](/convenzioni/consip-2296/) | Consip | 1.324,8 | 248 | 8 | 5 | 62 % |
+| 7 | [Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi](/convenzioni/consip-2536/) | Consip | 969,7 | 146 | 9 | 4 | 69 % |
+| 8 | [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle](/convenzioni/consip-2599/) | Consip | 918,2 | 387 | 10 | 3 | 77 % |
+| 9 | [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | Consip | 834,1 | 45 | 8 | 5 | 62 % |
+| 10 | [Consip AQ System management ed. 3, ID 2275, lotto 1](/convenzioni/consip-2275/) | Consip | 746,9 | 119 | 8 | 5 | 62 % |
+| 11 | [GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SE](/convenzioni/consip-2738/) | Consip | 696,5 | 380 | 10 | 3 | 77 % |
+| 12 | [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)](/convenzioni/consip-2755/) | Consip | 691,6 | 186 | 10 | 3 | 77 % |
+| 13 | [Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica](/convenzioni/consip-2601/) | Consip | 557,5 | 242 | 9 | 4 | 69 % |
+| 14 | [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | Consip | 554,2 | 251 | 4 | 9 | 31 % |
+| 15 | [Consip PC desktop e workstation 3, ID 2631, lotto 2](/convenzioni/consip-2631/) | Consip | 469,4 | 1383 | 9 | 4 | 69 % |
+| 16 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE ](/convenzioni/cig-91881762b3/) | Consip | 354,3 | 149 | 1 | 12 | 8 % |
+| 17 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE ](/convenzioni/cig-8765571a03/) | Consip | 325,0 | 206 | 7 | 6 | 54 % |
+| 18 | [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 - ID 2648 / LOTTO 4](/convenzioni/consip-2648/) | Consip | 307,8 | 80 | 9 | 4 | 69 % |
+| 19 | [Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e ](/convenzioni/consip-2365/) | Consip | 297,1 | 69 | 9 | 4 | 69 % |
+| 20 | [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Consip | 257,8 | 444 | 2 | 11 | 15 % |
+| 21 | [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SG](/convenzioni/consip-2181/) | Consip | 232,3 | 53 | 9 | 4 | 69 % |
+| 22 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE ](/convenzioni/cig-9030521daa/) | Consip | 227,5 | 198 | 7 | 6 | 54 % |
+| 23 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/20](/convenzioni/cig-8898059e90/) | Consip | 225,4 | 274 | 1 | 12 | 8 % |
+| 24 | [CLOUD ENABLING 1 ID 2652 / LOTTO 1: SERVIZI SUPPORTO ALL'ADOZIONE E PMO - PAC1](/convenzioni/consip-2652/) | Consip | 189,8 | 99 | 9 | 4 | 69 % |
+| 25 | [ARIA_2023_807 - PROCEDURA APERTA, AI SENSI DELL’ART. 60 DEL D.LGS. N. 50/2016, PER LA STIPULA DI UN ACCORDO QU](/convenzioni/cig-989984280e/) | Aggregatore regionale | 160,1 | 15 | 1 | 12 | 8 % |
+| 26 | [GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA ](/convenzioni/consip-1774/) | Altro | 147,4 | 15 | 4 | 9 | 31 % |
+| 27 | [Consip AQ System management ed. 4, ID 2710 (lotto unico)](/convenzioni/consip-2710/) | Consip | 145,4 | 49 | 8 | 5 | 62 % |
+| 28 | [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL](/convenzioni/cig-b0da5c472c/) | Consip | 114,2 | 640 | 1 | 12 | 8 % |
+| 29 | [PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVI](/convenzioni/cig-a0260b3155/) | Altro | 100,4 | 21 | 1 | 12 | 8 % |
+| 30 | [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 / LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI](/convenzioni/consip-2213/) | Consip | 90,2 | 41 | 9 | 4 | 69 % |
+| 31 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPP](/convenzioni/cig-a008db40ba/) | Aggregatore regionale | 86,4 | 112 | 1 | 12 | 8 % |
+| 32 | [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM / ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Consip | 83,7 | 16 | 1 | 12 | 8 % |
+| 33 | [L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECI](/convenzioni/cig-b2fb115279/) | Altro | 81,8 | 4 | 6 | 7 | 46 % |
+| 34 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTR](/convenzioni/cig-88556834cb/) | Altro | 67,4 | 3 | 1 | 12 | 8 % |
+| 35 | [ACQUISIZIONE DI PC DESKTOP, WORKSTATION E MONITOR ED. 4 – ID 2781 / FORNITURA IN ACQUISTO DI PERSONAL COMPUTER](/convenzioni/consip-2781/) | Consip | 59,6 | 1786 | 8 | 5 | 62 % |
+| 36 | [SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START) / SERVIZIO DI GESTIONE DE](/convenzioni/cig-7930885557/) | Altro | 52,1 | 126 | 1 | 12 | 8 % |
+| 37 | [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556 / SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 ](/convenzioni/consip-2556/) | Consip | 51,5 | 79 | 1 | 12 | 8 % |
+| 38 | [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | Consip | 49,6 | 54 | 8 | 5 | 62 % |
+| 39 | [PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 / SERVIZI DI ](/convenzioni/cig-97219284c8/) | Aggregatore regionale | 46,5 | 192 | 1 | 12 | 8 % |
+| 40 | [APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZI](/convenzioni/cig-993049146a/) | Aggregatore regionale | 44,7 | 55 | 1 | 12 | 8 % |
+| 41 | [AOV/SUA SF 009/2021 - CONVENZIONE QUADRO ACP PER SERVIZI ICT / LOTTO 2: : SERVIZI INFORMATICI ICT PER APPLICAZ](/convenzioni/cig-8664818204/) | Altro | 40,5 | 98 | 1 | 12 | 8 % |
+| 42 | [SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE ](/convenzioni/cig-b1ffb3098a/) | Consorzio o unione | 38,1 | 3 | 1 | 12 | 8 % |
+| 43 | [SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALI](/convenzioni/cig-94252656ba/) | Altro | 37,2 | 33 | 1 | 12 | 8 % |
+| 44 | [ACCORDO QUADRO AVENTE AD OGGETTO LA FORNITURA DI UN 'CATALOGO DI PRODOTTI SAAS NELL'AMBITO DELLA PRODUTTIVITÀ ](/convenzioni/consip-2297/) | Consip | 36,5 | 41 | 8 | 5 | 62 % |
+| 45 | [PRODOTTI CLOUD IN MODALITÀ SOFTWARE AS A SERVICE NELL'AMBITO DEL CRM E MARKETING PER LE PUBBLICHE AMMINISTRAZI](/convenzioni/consip-2700/) | Consip | 32,2 | 25 | 8 | 5 | 62 % |
+| 46 | [SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINISTRAZIONE 2 ID 2566 / LOTTO 2 SERVIZI DI DATA MANAGEMENT PER ](/convenzioni/consip-2566/) | Consip | 31,8 | 26 | 8 | 5 | 62 % |
+| 47 | [ENERGIA ELETTRICA 21 - ID 2638 / LOMBARDIA ESCLUSE LA PROVINCIA DI MILANO E LA PROVINCIA DI LODI](/convenzioni/consip-2638/) | Consip | 30,1 | 6 | 9 | 4 | 69 % |
+| 48 | [ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO DINAMICO DELLE OPERE D'ARTE E SERVIZI C](/convenzioni/cig-945403654f/) | Altro | 28,0 | 33 | 1 | 12 | 8 % |
+| 49 | [ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI SENSI DELL'ART. 59, COMMA 4, LETT. B) DE](/convenzioni/cig-99617296d3/) | Altro | 26,7 | 18 | 1 | 12 | 8 % |
+| 50 | [CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING / CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING](/convenzioni/cig-95643027b0/) | Altro | 26,4 | 9 | 1 | 12 | 8 % |
+| 51 | [FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E](/convenzioni/cig-b1457d3391/) | Consip | 25,3 | 409 | 8 | 5 | 62 % |
+| 52 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWA](/convenzioni/consip-2480/) | Consip | 25,0 | 12 | 9 | 4 | 69 % |
+| 53 | [ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFON](/convenzioni/consip-2452/) | Consip | 21,0 | 234 | 8 | 5 | 62 % |
+| 54 | [GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI C](/convenzioni/consip-1561/) | Consip | 21,0 | 4 | 7 | 6 | 54 % |
+| 55 | [PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI, PER IL SERVIZIO DI ASSISTENZA ](/convenzioni/cig-84163618ce/) | Aggregatore regionale | 19,6 | 9 | 1 | 12 | 8 % |
+| 56 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN UNICO LOTTO AI SENSI DELL'ART. 54 COMMA 4](/convenzioni/cig-8784303c25/) | Consip | 19,4 | 18 | 8 | 5 | 62 % |
+| 57 | [AQ CENTRALI TELEFONICHE 9 - ID 2496 / AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | Consip | 19,3 | 37 | 9 | 4 | 69 % |
+| 58 | [PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E](/convenzioni/cig-81636687f2/) | Aggregatore regionale | 13,6 | 3 | 1 | 12 | 8 % |
+| 59 | [ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GE](/convenzioni/cig-9777818ea8/) | Consorzio o unione | 12,6 | 6 | 1 | 12 | 8 % |
+| 60 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENS](/convenzioni/cig-8637686bf8/) | Aggregatore regionale | 11,5 | 5 | 1 | 12 | 8 % |
+| 61 | [APPALTO SPECIFICO (SDA) PER LA FORNITURA IN ACQUISTO E NOLEGGIO DI PC DESKTOP E NOTEBOOK 11 / LOTTO 2 NOLEGGIO](/convenzioni/cig-9845010742/) | Aggregatore regionale | 11,3 | 985 | 1 | 12 | 8 % |
+| 62 | [PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2023, PER LA FORNITURA DI SERVIZI PROFESS](/convenzioni/cig-b736423c63/) | Aggregatore regionale | 10,0 | 12 | 1 | 12 | 8 % |
+| 63 | [APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNICA AL SISTEMA INFORMATIVO LAVORO DELL'EMI](/convenzioni/cig-9936839af1/) | Aggregatore regionale | 9,6 | 8 | 1 | 12 | 8 % |
+| 64 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI PER L'EVOLUZIONE DI P](/convenzioni/cig-9769148bf3/) | Consorzio o unione | 9,3 | 3 | 1 | 12 | 8 % |
+| 65 | [PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE Q](/convenzioni/cig-87332390d0/) | Aggregatore regionale | 9,0 | 44 | 1 | 12 | 8 % |
+| 66 | [PROCEDUTA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI GESTIONE INFORMATIZZATA DEL PERSONALE A QUALSIAS](/convenzioni/cig-949554539f/) | Aggregatore regionale | 8,6 | 5 | 1 | 12 | 8 % |
+| 67 | [APPALTO SPECIFICO (SDA) PER L'ACQUISIZIONE DI SERVIZI DI BUSINESS ANALYTICS E DATA MANAGEMENT 2 / SERVIZI DI B](/convenzioni/cig-9923894067/) | Aggregatore regionale | 8,3 | 37 | 1 | 12 | 8 % |
+| 68 | [SERVIZI DI MANUTENZIONE, ASSISTENZA HARDWARE E SOFTWARE DI BASE PER LE INFRASTRUTTURE DELLE AZIENDE SANITARIE ](/convenzioni/cig-7812108376/) | Aggregatore regionale | 7,7 | 12 | 1 | 12 | 8 % |
+| 69 | [GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'ART. 61 DEL D.LGS. 50/2006, PER LA SELEZIONE DI OPERATORI PE](/convenzioni/cig-7246653f38/) | Aggregatore regionale | 6,5 | 10 | 1 | 12 | 8 % |
+| 70 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI SU TECNOLOGIE E METOD](/convenzioni/cig-a02b1c8a8a/) | Consorzio o unione | 6,5 | 3 | 1 | 12 | 8 % |
+| 71 | [PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA DI 72 MESI, PER IL 'SERVIZIO DI CONSERVAZIONE A NORMA PER L](/convenzioni/cig-9216207e99/) | Aggregatore regionale | 5,2 | 6 | 1 | 12 | 8 % |
+| 72 | [PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE Q](/convenzioni/cig-8716552642/) | Aggregatore regionale | 4,8 | 42 | 1 | 12 | 8 % |
+| 73 | [PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI LETTURA ED ELABORAZIONI DATI DELLE PRESCRIZIONI FARMACEUTIC](/convenzioni/cig-9837572d38/) | Aggregatore regionale | 4,6 | 3 | 1 | 12 | 8 % |
+| 74 | [PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B), SUB. 2, D. LGS. 36/2023, PER L'AFFIDAME](/convenzioni/cig-b715929978/) | Aggregatore regionale | 4,3 | 5 | 1 | 12 | 8 % |
+| 75 | [PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL SERVIZIO SANITARIO REGIONALE DELLA TOSC](/convenzioni/cig-9603457f68/) | Aggregatore regionale | 4,3 | 10 | 1 | 12 | 8 % |
+| 76 | [PROCEDURA APERTA PER L?AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVIT](/convenzioni/cig-9580558e8e/) | Aggregatore regionale | 2,9 | 25 | 1 | 12 | 8 % |
+| 77 | [PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI ](/convenzioni/cig-9482392d69/) | Aggregatore regionale | 2,6 | 29 | 1 | 12 | 8 % |
+| 78 | [P.A. IN DUE LOTTI PER LA STIPULA DI UNA CONVENZIONE PER LA FORNITURA IN LOCAZIONE OPERATIVA DI UN SISTEMA INFO](/convenzioni/cig-759453695c/) | Aggregatore regionale | 2,1 | 8 | 1 | 12 | 8 % |
+| 79 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TRASMISSIONE DATI E VOCE SU RETI FISSE E MOBILI E GESTIONE E M](/convenzioni/cig-9016294130/) | Aggregatore regionale | 2,0 | 73 | 1 | 12 | 8 % |
+| 80 | [PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI ](/convenzioni/cig-9481064585/) | Aggregatore regionale | 2,0 | 40 | 1 | 12 | 8 % |
+| 81 | [FORNITURA DI SERVIZI CLOUD IAAS E PAAS / FORNITURA SERVIZI IAAS E PAAS](/convenzioni/consip-2746/) | Consip | 0,0 | 0 | 7 | 6 | 54 % |
+| 82 | [Consip PRINCO, Public cloud SaaS produttività individuale e collaboration (ID 2928)](/convenzioni/consip-2928/) | Consip | 0,0 | 0 | 9 | 4 | 69 % |
 
 ## Iniziative storiche (ancora rilevanti)
 
-<table class="table table-sm"><thead><tr><th>#</th><th>Iniziativa</th><th>Tipo</th><th>M€ ICT 2024-25</th><th>Derivati</th><th>Archiviati</th><th>Mancanti</th><th>Copertura</th></tr></thead><tbody>
-<tr data-tipo="consip"><td>1</td><td><a href="/convenzioni/consip-2212/">GARA STRATEGICA SERVIZI APPLICATIVI IN OTTICA CLOUD E PMO PER LE P.A. - ID 2212 / PAL MACROAREA CENTRO SUD - L</a></td><td>Consip</td><td>11,1</td><td>11</td><td>8</td><td>5</td><td>62 %</td></tr>
-<tr data-tipo="consip"><td>2</td><td><a href="/convenzioni/consip-1836/">Consip AQ System management, ID 1836</a></td><td>Consip</td><td>3,3</td><td>1</td><td>7</td><td>6</td><td>54 %</td></tr>
-<tr data-tipo="consip"><td>3</td><td><a href="/convenzioni/consip-1403/">Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)</a></td><td>Consip</td><td>2,1</td><td>5</td><td>3</td><td>11</td><td>21 %</td></tr>
-<tr data-tipo="altro"><td>4</td><td><a href="/convenzioni/cig-7991036b82/">Trenitalia, affidamento di servizi ICT</a></td><td>Altro</td><td>2,1</td><td>11</td><td>2</td><td>11</td><td>15 %</td></tr>
-</tbody></table>
+Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026); documenti al 05/11/2026.
+
+| # | Iniziativa | Tipo | M€ ICT 2024-25 | Derivati | Archiviati | Mancanti | Copertura |
+|---|---|---|---|---|---|---|---|
+| 1 | [GARA STRATEGICA SERVIZI APPLICATIVI IN OTTICA CLOUD E PMO PER LE P.A. - ID 2212 / PAL MACROAREA CENTRO SUD - L](/convenzioni/consip-2212/) | Consip | 11,1 | 11 | 8 | 5 | 62 % |
+| 2 | [Consip AQ System management, ID 1836](/convenzioni/consip-1836/) | Consip | 3,3 | 1 | 7 | 6 | 54 % |
+| 3 | [Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)](/convenzioni/consip-1403/) | Consip | 2,1 | 5 | 3 | 11 | 21 % |
+| 4 | [Trenitalia, affidamento di servizi ICT](/convenzioni/cig-7991036b82/) | Altro | 2,1 | 11 | 2 | 11 | 15 % |
 
 Fonte e ripetibilità: `tools/convenzioni/*.py`; numeri ricontrollati da `tools/verifiche/convenzioni_copertura.py`.

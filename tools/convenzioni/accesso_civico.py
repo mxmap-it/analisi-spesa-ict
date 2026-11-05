@@ -52,10 +52,23 @@ def destinatario(v):
     return f"{v['stazione_appaltante']}, ufficio per l'accesso civico o RPCT (indirizzo da ricavare dalla sezione Amministrazione trasparente)"
 
 
+# Istanze davvero necessarie (giro del 5/11, dopo pagina del bando, open data Consip, AT di Consip, campione di enti e ricerca web):
+# solo carenze «verificate» e solo dove il dato serve all'imbuto (prodotto, marchio, giurisdizione). Il resto si ritira.
+NECESSARIE = {
+    "C1": {"consip-2746", "consip-2928", "consip-2213", "consip-1403", "consip-2599", "consip-2738"},  # prodotti/CSP offerti: cloud e multibrand
+    "C3": {"consip-2746", "consip-2928", "consip-2213", "consip-2599", "consip-2738"},  # transato per marchio: solo iniziative multi-marchio
+    "C4": {"consip-2483", "consip-2610", "consip-2615", "consip-2755", "consip-2746", "consip-2928"},  # elenco ordinativi per ente: le più grandi e le cloud
+    "C6": {"consip-2746", "consip-2928"},  # dichiarazione region/data center: esiste, accertato negli atti
+    "C7": {"consip-2928"},  # erosione per Brand: soglia accertata nel Capitolato
+}
+MOTIVO_RITIRO = ("ritirata il 5/11: carenza non confermata su tutte le fonti online, oppure dato non necessario all'imbuto per questa "
+                 "iniziativa (es. marchio unico, servizi professionali), oppure già reperibile altrove")
+
+
 def principali(voci):
     att = [v for v in voci if v["stato_iniziativa"] == "attiva"]
     scelte = [v for v in att if v["tipo_soggetto"] == "consip"][:15]
-    scelte += [v for v in att if v["id"] in ("psn", "consip-2928") and v not in scelte]
+    scelte += [v for v in att if (v["id"] in ("psn", "consip-2928") or any(v["id"] in x for x in NECESSARIE.values())) and v not in scelte]
     scelte += [v for v in att if v["tipo_soggetto"] == "aggregatore-regionale"][:5]
     return scelte
 
@@ -72,7 +85,7 @@ def main():
     for v in principali(voci):
         cig = ", ".join(x["cig_padre"] for x in v["lotti"][:12]) + (" e altri" if len(v["lotti"]) > 12 else "")
         for k in v["carenze"]:
-            if k["id"] not in RICHIESTA:
+            if k["id"] not in RICHIESTA or k["stato"] != "verificato" or v["id"] not in NECESSARIE.get(k["id"], set()):
                 continue
             iid = f"{v['id']}-{k['id']}".lower()
             if iid in reg and reg[iid]["stato"] != "preparata":
@@ -103,6 +116,23 @@ def main():
                         "destinatario": ist["destinatario"].split(",")[0], "stato": "preparata", "preparata": DATA,
                         "note": "" if k["stato"] == "verificato" else "assenza da verificare prima dell'invio"}
             n += 1
+    attive = set()
+    for v in principali(voci):
+        for k in v["carenze"]:
+            if k["id"] in RICHIESTA and k["stato"] == "verificato" and v["id"] in NECESSARIE.get(k["id"], set()):
+                attive.add(f"{v['id']}-{k['id']}".lower())
+    per_id = {v["id"]: v for v in voci}
+    for iid, r in reg.items():
+        if r["stato"] == "preparata" and iid not in attive:
+            v = per_id.get(r["iniziativa"], {})
+            k = next((x for x in v.get("carenze", []) if x["id"] == r["carenza"]), None)
+            if k is None:
+                motivo = "la carenza non risulta più per questa iniziativa"
+            elif k["stato"] != "verificato":
+                motivo = "carenza non confermata su tutte le fonti online (resta da verificare)"
+            else:
+                motivo = "dato non necessario all'imbuto per questa iniziativa (es. marchio unico o servizi professionali)"
+            r["stato"], r["note"] = "ritirata", "ritirata il 5/11: " + motivo
     with open(reg_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=CAMPI_REG)
         w.writeheader()

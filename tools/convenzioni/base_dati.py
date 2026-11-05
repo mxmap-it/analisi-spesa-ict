@@ -118,6 +118,7 @@ def documenti_osservati(ini, lotti, arch, kb, c):
                              "dove": re.sub(r"https?://([^/]+).*", r"\1", d["url"]), "stato": "archiviato", "sha256": d["sha256"], "data": None})
     for d in c.get("documenti", []) or []:
         docs.append(dict(d))
+    docs.extend(ALTROVE.get(ini, []))
     if ini == "psn":  # progetti dei fabbisogni e lettere di attivazione gia' archiviati (#55, report/convenzioni/psn-database/)
         for d in csv.DictReader(open(R / "report/convenzioni/psn-database/documenti-psn.csv", encoding="utf-8")):
             if d.get("sha256"):
@@ -202,6 +203,39 @@ def estratti_di(ini):
     return {"documenti_letti": e["documenti_letti"], "conteggi": dict(Counter(x["tema"] for x in e["estratti"])), "esempi": dict(per)}
 
 
+CARENZA_TIPO = {"C1": "offerta_tecnica", "C2": "offerta_economica", "C3": "transato_monitoraggio", "C4": "ordinativi", "C5": "progetti_fabbisogni"}
+ID_FONTI = {"2483": "consip-2483", "2610": "consip-2610", "PSN": "psn", "SPC Cloud 1403": "consip-1403", "2746/2213": "consip-2746"}
+
+
+def carica_altrove():
+    """Documenti da fonte non ufficiale raccolti il 5/11: campione di enti aderenti (enti-campione/) e ricerca web (fonti-non-ufficiali/).
+    Non cambiano lo stato della carenza; le righe «di controllo» (altra edizione o altro ID) si scartano."""
+    out, extra = defaultdict(list), defaultdict(list)
+    p = R / "report/convenzioni/enti-campione/enti-campione-2026-11-05.csv"
+    if p.exists():
+        for r in csv.DictReader(open(p, encoding="utf-8")):
+            if r["documento_trovato"] != "si" or not r["sha256"] or "controllo" in (r["note"] or "").lower():
+                continue
+            out[r["iniziativa"]].append({"tipo": "ordinativi", "ufficiale": False, "fonte": f"{r['ente']} ({r['esito']})", "affidabilita": "A",
+                                         "nome": f"{r['ente']}: {r['tipo_documento']} — {r['dati_estratti'][:140]}", "url": r["url_documento"],
+                                         "stato": "archiviato", "sha256": r["sha256"], "data": r["data_consultazione"]})
+    p = R / "report/convenzioni/fonti-non-ufficiali/fonti-2026-11-05.csv"
+    if p.exists():
+        for r in csv.DictReader(open(p, encoding="utf-8")):
+            ini = ID_FONTI.get(r["iniziativa"])
+            if not ini:
+                continue
+            d = {"ufficiale": False, "fonte": f"{r['autore_sito']} ({r['fonte_tipo']}) [R]", "affidabilita": r["affidabilita"],
+                 "nome": f"{r['titolo'][:90]} — {r['dato_estratto'][:140]}", "url": r["url"], "stato": "archiviato" if r["sha256"] else "pubblicato-non-archiviato",
+                 "sha256": r["sha256"] or None, "data": r["data_reperimento"]}
+            t = CARENZA_TIPO.get(r["carenza"])
+            if t and r["sha256"]:
+                out[ini].append(dict(d, tipo=t))
+            else:
+                extra[ini].append(dict(d, carenza=r["carenza"]))
+    return out, extra
+
+
 def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
     """Carenze di trasparenza (report/convenzioni/database/carenze.yaml) che colpiscono l'iniziativa."""
     per_tipo = {i["tipo"]: i for i in inv}
@@ -280,7 +314,8 @@ def scrivi_griglia(voci):
 
 def main():
     cens, arch, kb, cur = carica()
-    global CAR, ORDINATO
+    global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA
+    ALTROVE, ALTROVE_EXTRA = carica_altrove()
     ORDINATO = defaultdict(list)
     if (DB / "consip-ordinato.csv").exists():
         for r in csv.DictReader(open(DB / "consip-ordinato.csv", encoding="utf-8")):
@@ -304,7 +339,9 @@ def main():
         flusso = [(n, u, h) for n, u, h in nf if re.search(r"flussi? dati|flusso.*commission|dati di fatturato", n, re.I)]
         evidenze = []
         if flusso:
-            evidenze.append({"carenza": "C3", "livello": "V", "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+            letto = c.get("flusso_letto")
+            evidenze.append({"carenza": "C3", "livello": "V (letto)" if letto else "R (dal nome del file)",
+                             "testo": letto or "Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere",
                              "documento": flusso[0][0], "url": flusso[0][1], "sha256": flusso[0][2]})
         car_ini = carenze_di(ini, inv, categorie, pagine_ok, pag, CAR, lotti[0]["tipo_soggetto"])
         for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
@@ -337,7 +374,7 @@ def main():
                          for i in inv if i["stato"] != "archiviato"],
             "ordinato_consip": {"2024": sum(int(r["ordinato_2024"]) for r in ORDINATO.get(ini, [])), "2025": sum(int(r["ordinato_2025"]) for r in ORDINATO.get(ini, [])),
                                 "nomi": [r["nome_consip"] + " [" + r["abbinamento"] + "]" for r in ORDINATO.get(ini, [])]} if ini in ORDINATO else None,
-            "carenze": car_ini, "evidenze_dato_esistente": evidenze, "estratti": estratti_di(ini),
+            "carenze": car_ini, "evidenze_dato_esistente": evidenze, "altrove_su_carenze": ALTROVE_EXTRA.get(ini, []), "estratti": estratti_di(ini),
             "analisi": c.get("analisi"), "note": c.get("note"),
         })
     voci.sort(key=lambda v: (v["stato_iniziativa"] != "attiva", -(v["valore_ict_2024_2025"] or 0), -v["valore_ict_2020_2026"], v["id"]))

@@ -2,12 +2,14 @@
 title: "Trasparenza delle convenzioni ICT della PA"
 subtitle: "Rendiconto iterativo: cosa si può verificare delle convenzioni e degli accordi quadro ICT, e cosa no"
 date: 2026-11-05
+lastmod: 2026-11-05
+datiAl: 2026-11-05
 description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."
 ---
 
 <!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->
 
-**Versione 0.1 del 2026-11-05** · [registro delle revisioni](#registro-delle-revisioni) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
+**Versione 0.2 del 2026-11-05** · [registro delle revisioni](#registro-delle-revisioni) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
 
 Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.
 
@@ -17,65 +19,88 @@ Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con 
 
 - **Perimetro.** 86 iniziative ICT (82 attive): Consip, PSN, soggetti aggregatori regionali, consorzi e altre stazioni appaltanti con più contratti derivati. Criterio nel [README della base dati](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/README.md).
 - **Valore.** I contratti derivati con CPV ICT pubblicati nel 2024-2025 dichiarano in BDNCP circa **54.798 M€**. È un ordine di grandezza, non la spesa: in molti casi l'importo dichiarato è il massimale o il valore pluriennale (§ 2).
-- **Visibilità.** Dei 1120 dati attesi (iniziativa × tipo di documento o dato): pubblici dalla fonte ufficiale 382 (34 %); reperiti solo presso enti aderenti 3 (0,3 %); non individuati sulla pagina del bando 101 (9 %); non ancora verificati 634 (57 %). Indice di visibilità medio **34 %**, da leggere come limite inferiore finché le celle non verificate restano così tante.
-- **Dati per controllare spesa e sovranità.** Nessuna iniziativa pubblica insieme offerte dei vincitori, transato per marchio ed elenco degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).
-- **Carenze principali** (pagine dei bandi su consip.it consultate il 5/11/2026; acquistinretepa e Amministrazione trasparente di Consip non ancora consultate): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. Gli ordinativi si trovano in parte negli atti dei singoli enti. Region e data center: per IaaS/PaaS 2 (ID 2746) e PRINCO (ID 2928) i documenti di gara prevedono che il fornitore li dichiari, ma la dichiarazione non è pubblicata.
-- **Il dato è presso Consip, con dettaglio ignoto.** In 36 iniziative la documentazione di gara contiene un allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012); individuato dal nome del file, da leggere. Il transato dovrebbe quindi esistere presso Consip; non sappiamo con quale dettaglio.
-- **Rimedi.** 127 bozze di accesso civico generalizzato preparate e **non inviate**; proposte di policy R08 e R37-R42 perché questi dati diventino pubblici senza bisogno di chiederli.
+- **Visibilità.** Dei 1120 dati attesi (iniziativa × tipo di documento o dato): pubblici dalla fonte ufficiale 382 (34 %); reperiti solo presso enti aderenti 11 (1,0 %); non individuati sulla pagina del bando 93 (8 %); non ancora verificati 634 (57 %). Indice di visibilità medio **34 %**, da leggere come limite inferiore finché le celle non verificate restano così tante.
+- **Dati per controllare spesa e sovranità.** Nelle iniziative verificate non abbiamo individuato, pubblicati insieme, offerte dei vincitori, transato per marchio ed elenco degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).
+- **Carenze principali** (pagine dei bandi su consip.it, open data Consip, Amministrazione trasparente di Consip e campione di enti, consultati il 5/11/2026; acquistinretepa solo in parte): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. Gli ordinativi si trovano in parte negli atti dei singoli enti. Region e data center: per IaaS/PaaS 2 (ID 2746) e PRINCO (ID 2928) i documenti di gara prevedono che il fornitore li dichiari, ma la dichiarazione non è pubblicata.
+- **Il dato dovrebbe essere presso Consip.** Secondo l'allegato 4E della convenzione Microsoft EA8 (ID 2615, letto per intero), il fornitore deve trasmettere ogni mese a Consip il dettaglio delle fatture, con l'ID dell'ordine sulla piattaforma e l'imponibile, per il calcolo della commissione (d.m. MEF 23/11/2012). Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato per ordine e quindi per ente; non abbiamo verificato che il flusso avvenga né in che forma sia conservato. In altre 35 iniziative c'è un file il cui nome rimanda ai flussi dati del fatturato (non letto, R).
+- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), 19 bozze di accesso civico generalizzato, tutte verso Consip, restano utili all'analisi; 114 sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 perché questi dati diventino pubblici senza bisogno di chiederli.
 
 ## 2. Due misure del valore
 
-Per 20 iniziative Consip esiste una seconda misura: gli **open data Consip** degli ordini diretti (dati.consip.it, 2024 e 2025, file archiviati con sha256): **6.349 M€** ordinati. Le stesse iniziative dichiarano in BDNCP **47.410 M€** di derivati ICT 2024-2025. **Le due grandezze non sono confrontabili** una a una: gli open data contano gli ordini diretti dell'anno (non gli appalti specifici degli accordi quadro con rilancio competitivo); BDNCP l'importo dichiarato all'acquisizione del CIG, spesso pluriennale o pari al massimale. La tabella serve a mostrare l'ordine di grandezza e i casi da spiegare (es. ID 2496, dove l'ordinato supera il dichiarato: probabili derivati con CPV non ICT o lotti mancanti, da verificare). Gli abbinamenti «a mano (R)», compreso l'ID 2483, sono da confermare con l'ID Sigef. Gli open data non riportano listino, marchio né ente: la carenza C3 resta.
+Per 20 iniziative Consip esiste una seconda misura: gli **open data Consip** degli ordini diretti (dati.consip.it, 2024 e 2025, file archiviati con sha256): **6.349 M€** ordinati. Le stesse iniziative dichiarano in BDNCP **47.410 M€** di derivati ICT 2024-2025. **Le due grandezze non sono confrontabili** una a una: gli open data contano gli ordini diretti dell'anno (non gli appalti specifici degli accordi quadro con rilancio competitivo); BDNCP l'importo dichiarato all'acquisizione del CIG, spesso pluriennale o pari al massimale. La tabella serve a mostrare l'ordine di grandezza e i casi da spiegare (es. ID 2496, dove l'ordinato supera il dichiarato: cause possibili derivati con CPV non ICT, lotti non censiti o abbinamento da rivedere). Gli abbinamenti sono per coincidenza del nome («V-testo»): confermati con il titolo della pagina Consip trovata per ID Sigef, o per il 2483 con atti di enti che riportano ID e CIG; nessun open data riporta l'ID Sigef. Gli open data non riportano listino, marchio né ente: la carenza C3 resta.
+
+Open data Consip scaricati il 05/11/2026; BDNCP elaborato il 05/11/2026.
 
 | Iniziativa | M€ BDNCP 2024-25 | M€ ordinati 2024+2025 (open data Consip) | Abbinamento |
 |---|---|---|---|
-| [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO P](/convenzioni/consip-2483/) | 29.918 | 2.369 | a mano (R): ID 2483 = seconda edizione d |
-| [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) | 5.953 | 465 | nome nell'oggetto del CIG padre (V) |
-| [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) | 3.015 | 342 | nome nell'oggetto del CIG padre (V) |
-| [Consip AQ PC portatili, mobile workstation e Chromebook, ID ](/convenzioni/consip-2425/) | 1.617 | 54 | a mano (R): ID 2425 = AQ PC portatili, m |
-| [Consip Digital transformation 2, ID 2536, lotto 2 digitalizz](/convenzioni/consip-2536/) | 970 | 469 | nome nell'oggetto del CIG padre (V) |
-| [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodo](/convenzioni/consip-2599/) | 918 | 316 | nome nell'oggetto del CIG padre (V) |
-| [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | 834 | 279 | a mano (R): dossier 2366-sanita-digitale |
-| [GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAN](/convenzioni/consip-2738/) | 697 | 390 | a mano (R): ID 2738 = gara multibrand 20 |
-| [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ip](/convenzioni/consip-2755/) | 692 | 262 | nome nell'oggetto del CIG padre (V) |
-| [Consip Sanità digitale, sistemi clinico assistenziali 2, ID ](/convenzioni/consip-2601/) | 558 | 163 | nome nell'oggetto del CIG padre (V) |
-| [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | 554 | 298 | nome nell'oggetto del CIG padre (V) |
-| [Consip PC desktop e workstation 3, ID 2631, lotto 2](/convenzioni/consip-2631/) | 469 | 74 | nome nell'oggetto del CIG padre (V) |
-| [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZ](/convenzioni/consip-2648/) | 308 | 291 | nome nell'oggetto del CIG padre (V) |
-| [Consip AQ Sanità digitale, sistemi informativi sanitari e se](/convenzioni/consip-2365/) | 297 | 159 | a mano (R): dossier 2365-sanita-digitale |
-| [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E ](/convenzioni/consip-2181/) | 232 | 48 | a mano (R): ID 2181 = AQ SGM ed. 1 (ogge |
-| [CLOUD ENABLING 1 ID 2652 | LOTTO 1: SERVIZI SUPPORTO ALL'ADO](/convenzioni/consip-2652/) | 190 | 168 | nome nell'oggetto del CIG padre (V) |
-| [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 ](/convenzioni/consip-2213/) | 90 | 85 | a mano (R): ID 2213 = AQ prodotti cloud  |
-| [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | 50 | 14 | nome nell'oggetto del CIG padre (V) |
-| [AQ CENTRALI TELEFONICHE 9 - ID 2496 | AQ CENTRALI TELEFONICH](/convenzioni/consip-2496/) | 19 | 102 | nome nell'oggetto del CIG padre (V) |
+| [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO P](/convenzioni/consip-2483/) | 29.918 | 2.369 | a mano (V-testo): ID 2483 = «Servizi app |
+| [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) | 5.953 | 465 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) | 3.015 | 342 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip AQ PC portatili, mobile workstation e Chromebook, ID ](/convenzioni/consip-2425/) | 1.617 | 54 | a mano (V-testo): pagina consip.it trova |
+| [Consip Digital transformation 2, ID 2536, lotto 2 digitalizz](/convenzioni/consip-2536/) | 970 | 469 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodo](/convenzioni/consip-2599/) | 918 | 316 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | 834 | 279 | a mano (V-testo): pagina consip.it trova |
+| [GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAN](/convenzioni/consip-2738/) | 697 | 390 | a mano (V-testo): pagina consip.it trova |
+| [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ip](/convenzioni/consip-2755/) | 692 | 262 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip Sanità digitale, sistemi clinico assistenziali 2, ID ](/convenzioni/consip-2601/) | 558 | 163 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | 554 | 298 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip PC desktop e workstation 3, ID 2631, lotto 2](/convenzioni/consip-2631/) | 469 | 74 | nome nell'oggetto del CIG padre (V-testo |
+| [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZ](/convenzioni/consip-2648/) | 308 | 291 | nome nell'oggetto del CIG padre (V-testo |
+| [Consip AQ Sanità digitale, sistemi informativi sanitari e se](/convenzioni/consip-2365/) | 297 | 159 | a mano (V-testo): pagina consip.it trova |
+| [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E ](/convenzioni/consip-2181/) | 232 | 48 | a mano (V-testo): pagina consip.it trova |
+| [CLOUD ENABLING 1 ID 2652 | LOTTO 1: SERVIZI SUPPORTO ALL'ADO](/convenzioni/consip-2652/) | 190 | 168 | nome nell'oggetto del CIG padre (V-testo |
+| [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 ](/convenzioni/consip-2213/) | 90 | 85 | a mano (V-testo): pagina consip.it trova |
+| [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | 50 | 14 | nome nell'oggetto del CIG padre (V-testo |
+| [AQ CENTRALI TELEFONICHE 9 - ID 2496 | AQ CENTRALI TELEFONICH](/convenzioni/consip-2496/) | 19 | 102 | nome nell'oggetto del CIG padre (V-testo |
 
-## 3. Matrice
+## 3. Fonti online consultate prima dell'accesso civico
+
+Tutte consultate il 05/11/2026, senza login né CAPTCHA, a ritmo basso e con User-Agent dichiarato.
+
+| Fonte | Esito | Livello |
+|---|---|---|
+| Pagine dei bandi su consip.it | documentazione di gara di 44 iniziative; offerte, transato per marchio ed elenco degli ordinativi non individuati | V per la presenza dei file; R per il tipo dedotto dal nome |
+| Open data Consip (dati.consip.it) | ordinato per anno, convenzione o AQ e lotto (2024-2025); niente ente, listino, marchio | V |
+| acquistinretepa | schede iniziativa generate in JavaScript da un servizio non documentato; catalogo e acquisto dietro «Accedi»; listini offerti non consultati | parziale: da rifare con un browser reale |
+| Amministrazione trasparente di Consip | le sottosezioni di «Bandi di gara e contratti» riguardano gli acquisti di Consip per sé; «Controlli e rilievi» rinvia alla Corte dei conti | V (indice delle sezioni) |
+| Campione di enti aderenti | 45 righe valide (righe di controllo escluse), 28 enti, 10 iniziative: file nel percorso AT 6, URL esterno al percorso AT 27 (collegamento dalla sezione AT non verificato), non trovato 7, AT non verificabile automaticamente il 5/11 5 (da ripetere); 31 archiviati | V per i documenti letti; R per la posizione rispetto all'AT |
+| Ricerca web (Corte dei conti, stampa, atti di enti) | 15 dati da 13 URL, 9 archiviati; erogato per iniziativa non trovato (nelle due relazioni della Corte dei conti consultate, gestioni 2021 e 2022, l'erogato degli AQ è aggregato) | R |
+| Allegati «flussi dati del fatturato» | file con questo nome in 36 iniziative; letto per intero quello di Microsoft EA8 (ID 2615): il fornitore deve trasmettere ogni mese il dettaglio delle fatture con l'ID dell'ordine | V (EA8, clausola); R per gli altri |
+
+Il dettaglio per iniziativa e per ente è nelle [schede](/convenzioni/) e nei file [enti-campione](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/enti-campione) e [fonti-non-ufficiali](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/fonti-non-ufficiali), in un formato riusabile dal monitor dell'Amministrazione trasparente.
+
+
+## 4. Matrice
 
 La [griglia di tutte le iniziative](/convenzioni/griglia/) mostra cella per cella cosa è pubblico, cosa è reperito altrove, cosa manca e cosa è stato richiesto, con i riepiloghi in alto. L'[indice delle convenzioni](/convenzioni/) riporta il riquadro delle carenze di trasparenza.
+
+Celle al 05/11/2026 (documenti) e BDNCP elaborato il 05/11/2026.
 
 | Classe | Celle | Quota |
 |---|---|---|
 | pubblico (fonte ufficiale) | 382 | 34,1 % |
-| solo da fonte non ufficiale | 3 | 0,3 % |
-| non individuato sulla pagina del bando | 101 | 9,0 % |
+| solo da fonte non ufficiale | 11 | 1,0 % |
+| non individuato sulla pagina del bando | 93 | 8,3 % |
 | non ancora verificato | 634 | 56,6 % |
 
-## 4. Convenzione per convenzione
+## 5. Convenzione per convenzione
 
 Le iniziative principali (attive, per valore). Indice = dati pubblici / dati attesi (13; 14 per PSN e SPC Cloud, con i progetti dei fabbisogni). «Non individuati» = non trovati sulla pagina del bando, con tipo dedotto dal nome dei file. Il PSN non ha una pagina Consip: le sue celle sono quasi tutte «non verificate», il che non significa assenza di carenze.
 
+Fonti consultate il 05/11/2026; valori BDNCP elaborati il 05/11/2026.
+
 | Iniziativa | Soggetto | M€ 2024-25 | Pubblici | Altrove | Non individuati | Non verificati | Indice | Carenze accertate |
 |---|---|---|---|---|---|---|---|---|
-| [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali](/convenzioni/consip-2483/) | Consip | 29.918 | 9 | 0 | 2 | 2 | 69 % | C1, C3, C4 |
-| [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) | Consip | 5.953 | 9 | 0 | 2 | 2 | 69 % | C1, C3, C4 |
+| [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali](/convenzioni/consip-2483/) | Consip | 29.918 | 9 | 1 | 1 | 2 | 69 % | C1, C3, C4 |
+| [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) | Consip | 5.953 | 9 | 1 | 1 | 2 | 69 % | C1, C3, C4 |
 | [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) | Consip | 3.015 | 10 | 1 | 1 | 1 | 77 % | C1, C3, C4 |
 | [Polo Strategico Nazionale (PPP, Presidenza del Consiglio)](/convenzioni/psn/) | PSN | 2.078 | 5 | 0 | 0 | 9 | 36 % | – |
-| [Consip AQ PC portatili, mobile workstation e Chromebook, ID 2425, lott](/convenzioni/consip-2425/) | Consip | 1.617 | 9 | 0 | 2 | 2 | 69 % | C1, C3, C4 |
-| [Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2](/convenzioni/consip-2296/) | Consip | 1.325 | 8 | 0 | 3 | 2 | 62 % | C1, C3, C4 |
-| [Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei](/convenzioni/consip-2536/) | Consip | 970 | 9 | 0 | 2 | 2 | 69 % | C1, C3, C4 |
-| [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle](/convenzioni/consip-2599/) | Consip | 918 | 10 | 0 | 2 | 1 | 77 % | C1, C3, C4 |
-| [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | Consip | 834 | 8 | 0 | 2 | 3 | 62 % | C1, C3, C4 |
-| [Consip AQ System management ed. 3, ID 2275, lotto 1](/convenzioni/consip-2275/) | Consip | 747 | 8 | 0 | 3 | 2 | 62 % | C1, C3, C4 |
+| [Consip AQ PC portatili, mobile workstation e Chromebook, ID 2425, lott](/convenzioni/consip-2425/) | Consip | 1.617 | 9 | 1 | 1 | 2 | 69 % | C1, C3, C4 |
+| [Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2](/convenzioni/consip-2296/) | Consip | 1.325 | 8 | 1 | 2 | 2 | 62 % | C1, C3, C4 |
+| [Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei](/convenzioni/consip-2536/) | Consip | 970 | 9 | 1 | 1 | 2 | 69 % | C1, C3, C4 |
+| [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle](/convenzioni/consip-2599/) | Consip | 918 | 10 | 1 | 1 | 1 | 77 % | C1, C3, C4 |
+| [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | Consip | 834 | 8 | 1 | 1 | 3 | 62 % | C1, C3, C4 |
+| [Consip AQ System management ed. 3, ID 2275, lotto 1](/convenzioni/consip-2275/) | Consip | 747 | 8 | 1 | 2 | 2 | 62 % | C1, C3, C4 |
 | [GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAND DI PRODO](/convenzioni/consip-2738/) | Consip | 697 | 10 | 0 | 2 | 1 | 77 % | C1, C3, C4 |
 | [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi fort](/convenzioni/consip-2755/) | Consip | 692 | 10 | 1 | 1 | 1 | 77 % | C1, C3, C4 |
 | [Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lott](/convenzioni/consip-2601/) | Consip | 558 | 9 | 0 | 2 | 2 | 69 % | C1, C3, C4 |
@@ -99,11 +124,13 @@ Le iniziative principali (attive, per valore). Indice = dati pubblici / dati att
 
 Le altre 56 iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/convenzioni/griglia/).
 
-## 5. Per tipo di soggetto
+## 6. Per tipo di soggetto
+
+Fonti consultate il 05/11/2026.
 
 | Soggetto | Iniziative | M€ 2024-25 | Indice medio | Non individuati | Non verificati |
 |---|---|---|---|---|---|
-| Consip | 45 | 51.555 | 56 % | 95 | 160 |
+| Consip | 45 | 51.555 | 56 % | 87 | 160 |
 | PSN | 1 | 2.078 | n.d. (non ancora verificati) | 0 | 9 |
 | Aggregatori regionali | 25 | 488 | n.d. (non ancora verificati) | 0 | 300 |
 | Consorzi e unioni | 4 | 67 | n.d. (non ancora verificati) | 0 | 48 |
@@ -111,21 +138,21 @@ Le altre 56 iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/conv
 
 Per aggregatori regionali e consorzi quasi tutti i dati sono «da verificare»: le loro piattaforme (Sintel, Intercent-ER, EmPULIA, START…) non sono ancora state visitate, i CIG padre non hanno link ai documenti in PVL (verificato: nessuno dei 295 CIG padre) e su TED l'abbinamento riesce solo per testo. **Un indice basso qui misura il nostro lavoro ancora da fare, non la loro trasparenza.**
 
-## 6. Metodo e limiti
+## 7. Metodo e limiti
 
 - **Fonti.** BDNCP ANAC (nostro mirror, sha256 nel manifest) per i CIG padre e derivati; pagine dei bandi su consip.it, consultate il 5/11/2026; TED; open data Consip degli ordini (dati.consip.it, file 2024-2025 archiviati il 5/11/2026); atti di enti aderenti trovati con ricerca online (fonte non ufficiale, archiviati con sha256).
 - **Verificato e riferito.** «Assente» vuol dire che abbiamo consultato la pagina ufficiale dell'iniziativa e il documento non c'è; il tipo di documento si deduce dal nome del file (controllo a mano solo per PRINCO). Le norme e i dati che non abbiamo letto sulla fonte sono marcati [R] nelle schede ([carenze.yaml](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/carenze.yaml)).
 - **Valori.** Somme di importi dichiarati in BDNCP: ordine di grandezza, non spesa né transato (seconda misura al § 2). La prima iniziativa per valore pesa 29.918 M€ (55 % del totale).
-- **Archivio.** 1806 documenti ufficiali collegati alle iniziative (compresi i file dentro gli zip), archiviati con sha256; una cella «pubblico» può contenerne molti.
+- **Archivio.** 1803 documenti ufficiali collegati alle iniziative (compresi i file dentro gli zip), archiviati con sha256; una cella «pubblico» può contenerne molti.
 - **PVL.** Nessuno dei 295 CIG padre ha un link ai documenti di gara nei dati PVL scaricati il 3-4/11/2026 (verificato): è lo stato dei dati PVL, non un'assenza dei documenti, che gli aggregatori pubblicano sulle proprie piattaforme.
 - **Rumore nel censimento.** Il filtro per CPV ICT sui derivati lascia passare iniziative non ICT (es. ID 2638 Energia elettrica 21, 30 M€): restano in elenco finché il filtro non viene corretto, con peso trascurabile sul totale.
 - **Lettura dei documenti.** Letti per intero solo gli atti di PRINCO (ID 2928) e alcune determine di enti; per le altre iniziative le schede mostrano estratti automatici per parole chiave, marcati «da leggere».
 - **Aggregatori.** Ancora da verificare (sopra). Il tipo di soggetto si assegna con regole sul nome della stazione appaltante, da controvalidare con l'elenco ANAC dei soggetti aggregatori.
 - **Cosa non diciamo.** Che un dato assente sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la convenzione.
 
-## 7. Rimedi
+## 8. Rimedi
 
-- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo: 127 bozze preparate, 0 inviate. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
+- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: 19 bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, ordinativi delle più grandi, region e data center, erosione), 114 ritirate, 0 inviate. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
 - **Proposte di policy** (stato «proposta», nessuna inviata):
   - C1 Offerte tecniche dei vincitori → R39
   - C2 Listini e prezzi offerti dagli aggiudicatari → R39
@@ -140,4 +167,5 @@ Per aggregatori regionali e consorzi quasi tutti i dati sono «da verificare»: 
 
 | Versione | Data | Nota | Cosa è cambiato |
 |---|---|---|---|
+| 0.2 | 2026-11-05 | fonti online consultate prima dell'accesso civico (acquistinretepa in parte, AT di Consip, campione di enti, ricerca web), allegato flussi dati di EA8 letto, abbinamenti open data confermati per testo, istanze ridotte con motivo per istanza, revisione avversariale (12 punti) | consip-2483: documenti da fonte non ufficiale da 0 a 7; consip-2610: documenti da fonte non ufficiale da 0 a 3; consip-2615: documenti da fonte non ufficiale da 1 a 4; psn: documenti da fonte non ufficiale da 0 a 4; consip-2425: documenti da fonte non ufficiale da 0 a 4; consip-2296: documenti da fonte non ufficiale da 0 a 3; consip-2536: documenti da fonte non ufficiale da 0 a 3; consip-2599: documenti da fonte non ufficiale da 0 a 2; consip-2366: documenti da fonte non ufficiale da 0 a 2; consip-2275: documenti da fonte non ufficiale da 0 a 3; istanze preparate: da 127 a 19 |
 | 0.1 | 2026-11-05 | prima versione (bozza dopo revisione avversariale): 86 iniziative, documenti Consip archiviati, open data Consip degli ordini | prima versione |
