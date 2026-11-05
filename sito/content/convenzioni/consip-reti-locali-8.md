@@ -1,0 +1,96 @@
+---
+title: "Consip Reti locali 8, ID 2223, lotto 2 PAL"
+date: 2026-11-05
+description: "Iniziativa consip-reti-locali-8: dati, documenti archiviati e mancanti."
+---
+
+<!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
+
+
+| Campo | Valore |
+|---|---|
+| Identificativo | `consip-reti-locali-8` |
+| Tipo di soggetto | Consip |
+| Stato | attiva |
+| Stazione appaltante | CONSIP SPA UNIP. |
+| Valore ICT dei CIG derivati 2024-2025 | 554,2 M€ (251 CIG) |
+| Valore ICT dei CIG derivati 2020-2026 | 554,2 M€ |
+| Categoria (base di conoscenza) | connettivita |
+| Aggiudicatari | da ricavare dai documenti |
+| Massimali e tetti | da ricavare dai documenti |
+| Durata | da ricavare dai documenti |
+| Listini, marchi e prodotti | da ricavare dai documenti |
+| Regola di giurisdizione | da ricavare dai documenti |
+| Copertura documentale | 8 % dei tipi di documento attesi |
+
+Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati con CPV ICT: alcuni attuativi riportano il massimale dell'accordo quadro invece del valore del contratto, quindi sono un ordine di grandezza (verificato: `tools/analisi/padri_ict.py`; anomalie in `report/convenzioni/incertezze.md`).
+
+## Rendiconti esistenti
+
+- [9543706356-reti-locali-8-lotto-2.md](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/9543706356-reti-locali-8-lotto-2.md)
+
+## Pagina pubblica
+
+- <https://www.consip.it/bandi/gara-reti-locali-8> (HTML sha256 `8e8637f3ea47f1a2…`)
+
+## Lotti (CIG padre)
+
+| CIG padre | Anno | Derivati ICT 2024-25 | M€ 2024-25 | M€ 2020-26 | Oggetto |
+|---|---|---|---|---|---|
+| 9543706356 | 2023 | 116 | 488,7 | 488,7 | RETI LOCALI 8 - ID 2223 / LOTTO 2 - PAL - PUBBLICHE AMMINISTRAZIONI LOCALI |
+| 95436927C7 | 2023 | 135 | 65,5 | 65,5 | RETI LOCALI 8 - ID 2223 / LOTTO 1 PAC - MINISTERI, ORGANI COSTITUZIONALI, ENTI PREVIDENZIALI |
+
+## Inventario dei documenti
+
+| Documento | Stato | Dove | Nota |
+|---|---|---|---|
+| bando o avviso di gara (GUUE) | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore; TED |  |
+| disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| schema di accordo quadro o di convenzione | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore |  |
+| listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| determina o decisione a contrarre | **pubblicato, non archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore |  |
+| avviso di aggiudicazione o esito | **pubblicato, non archiviato** | consip.it, TED |  |
+| offerta tecnica dell'aggiudicatario | **non pubblicato** | di norma non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| offerta economica e listino offerto | **non pubblicato** | acquistinretepa (catalogo) o non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| transato e monitoraggio per lotto e listino | **non pubblicato** | open data Consip (aggregato), relazioni al MEF | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
+
+### Documenti trovati
+
+| Tipo | Documento | Originale | Copia (sha256) |
+|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2223 - RL8 - Avviso di proroga dei termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20RL8%20-%20Avviso%20di%20proroga%20dei%20termini_signed.pdf) | non archiviato |
+| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Id%202223_Avviso%20di%20proroga_signed.pdf) | non archiviato |
+| bando o avviso di gara (GUUE) | ID 2223 - RL8 - Avviso di proroga dei termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202223%20-%20RL8%20-%20Avviso%20di%20proroga%20dei%20termini.pdf) | non archiviato |
+| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Id%202223_Avviso%20di%20proroga.pdf) | non archiviato |
+| schema di accordo quadro o di convenzione | Reti locali 8 - Convenzione oscurata_oscurato.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Reti%20locali%208%20-%20Convenzione%20oscurata_oscurato.pdf) | non archiviato |
+| determina o decisione a contrarre | ID2223 - RL8 - Pubblicazione gara - Determina a contrarre_signed_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2223%20-%20RL8%20-%20Pubblicazione%20gara%20-%20Determina%20a%20contrarre_signed_0.pdf) | non archiviato |
+| determina o decisione a contrarre | ID2223 - RL8 - Pubblicazione gara - Determina a contrarre_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2223%20-%20RL8%20-%20Pubblicazione%20gara%20-%20Determina%20a%20contrarre_0.pdf) | non archiviato |
+| risposte ai chiarimenti | Chiarimenti Gara ID 2223 - II tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Chiarimenti%20Gara%20ID%202223%20-%20II%20tranche_signed.pdf) | non archiviato |
+| risposte ai chiarimenti | Chiarimenti Gara ID 2223_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Chiarimenti%20Gara%20ID%202223_signed.pdf) | non archiviato |
+| risposte ai chiarimenti | Chiarimenti Gara ID 2223 - II tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Chiarimenti%20Gara%20ID%202223%20-%20II%20tranche.pdf) | non archiviato |
+| risposte ai chiarimenti | Chiarimenti Gara ID 2223.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Chiarimenti%20Gara%20ID%202223.pdf) | non archiviato |
+| avviso di aggiudicazione o esito | ID 2223 - RL8 - Esito gara v2_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20RL8%20-%20Esito%20gara%20v2_signed.pdf) | non archiviato |
+| avviso di aggiudicazione o esito | ID 2223 - RL8 - Esito gara v2.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202223%20-%20RL8%20-%20Esito%20gara%20v2.pdf) | non archiviato |
+
+## Mancanze e via per colmarle
+
+| Documento | Stato | Fonte possibile | Via |
+|---|---|---|---|
+| bando o avviso di gara (GUUE) | pubblicato, non archiviato | consip.it o sito dell'aggregatore; TED | scraping TED |
+| disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
+| capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
+| schema di accordo quadro o di convenzione | pubblicato, non archiviato | consip.it o sito dell'aggregatore | scraping |
+| listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
+| determina o decisione a contrarre | pubblicato, non archiviato | consip.it o AT dell'aggregatore | scraping |
+| risposte ai chiarimenti | pubblicato, non archiviato | consip.it o sito dell'aggregatore | scraping |
+| avviso di aggiudicazione o esito | pubblicato, non archiviato | consip.it, TED | scraping TED |
+| offerta tecnica dell'aggiudicatario | non pubblicato | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
+| offerta economica e listino offerto | non pubblicato | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
+| transato e monitoraggio per lotto e listino | non pubblicato | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |
+| ordinativi e contratti attuativi delle PA | non pubblicato | AT degli enti; PVL (link ai documenti dal 2024) | PVL documenti_di_gara_link, poi AT degli enti |
+
+Legenda: «archiviato» = copia nel nostro archivio content-addressed con sha256 (verificato); i campi descrittivi senza fonte archiviata sono «riferiti» e marcati R in `report/convenzioni/database/curate.yaml`.
