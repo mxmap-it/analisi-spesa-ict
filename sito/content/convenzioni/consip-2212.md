@@ -131,7 +131,7 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2212%20-%20DOC%20UFFICIALE%20NEW.PDF.zip#ID%202212%20All.17%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `ad1da466b043e0f8…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2212 All.17 Flusso per le commissioni a carico del Fornitore.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2212%20-%20DOC%20UFFICIALE%20NEW.PDF.zip#ID%202212%20All.17%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `ad1da466b043e0f8…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

@@ -83,12 +83,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | schema di accordo quadro o di convenzione | Reti locali 8 - Convenzione oscurata_oscurato.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Reti%20locali%208%20-%20Convenzione%20oscurata_oscurato.pdf) | `28bb8a262c4bd604…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID%202223%20-%20Reti%20locali%208%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5114570701b5f7ec…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID%202223%20-%20Reti%20locali%208%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5114570701b5f7ec…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

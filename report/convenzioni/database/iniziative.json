@@ -577,8 +577,8 @@
       "nome": "Chiarimenti NON firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=5993e93eb7c269be",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1b404cde402ee3cdc5ef37f7b0baf5c352caac8775c1fdc1ff035006312639fe",
       "data": "2026-11-05",
       "nota": null
      },
@@ -586,8 +586,8 @@
       "nome": "Chiarimenti firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=6c17c8011b91ad4f",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "bbc4c2cc8927240e637a75d80fb4b025b9fad22ba2478ca25ec611bdd68a27b7",
       "data": "2026-11-05",
       "nota": null
      },
@@ -595,8 +595,8 @@
       "nome": "Chiarimenti - 4 - NON firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=0bff0a6ad542ad25",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "c94372985f14de51cd8d92b5c1d3a94c5ae5cff99524478020643ad3a2ed9c2c",
       "data": "2026-11-05",
       "nota": null
      },
@@ -604,8 +604,8 @@
       "nome": "Chiarimenti - 4 - firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=cc10415115c72a47",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "e64e2895a7460d311d06f81a9087f40692a1356c96be7af2b7c04f3fe218e9dc",
       "data": "2026-11-05",
       "nota": null
      },
@@ -613,8 +613,8 @@
       "nome": "Chiarimenti - 3 - NON firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=fcc8ee10c68bd4ca",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "5f7e9dc1a09f5d1074f5f629e1934d1c48640453b1193122ac58f31d322e490d",
       "data": "2026-11-05",
       "nota": null
      },
@@ -622,8 +622,8 @@
       "nome": "Chiarimenti - 3 - firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=7f70c41ee945f2a1",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "48ac1a2a660d26a2513b1461345968976d47358022a2dcf22425da14bdfd0ad4",
       "data": "2026-11-05",
       "nota": null
      },
@@ -631,8 +631,8 @@
       "nome": "Chiarimenti - 2 - NON firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=96d1bf3d571ababc",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "59222c8857ab04ced73a59b24329011a67488381eecdfe94b0efefa4886a55c3",
       "data": "2026-11-05",
       "nota": null
      },
@@ -640,8 +640,8 @@
       "nome": "Chiarimenti - 2 - firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=2dbab2abebc8d1d5",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "5c2a07b25d5ddb31c0a5701e34beb11ea38bf4528607e35eff1e95303d893d23",
       "data": "2026-11-05",
       "nota": null
      }
@@ -929,7 +929,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -1593,7 +1593,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "8890490293a1da2275fa7d98d2e44c024cc07a755922f7d9e83a240295684ed5",
-      "data": "2026-11-05T15:43:14+00:00",
+      "data": "2026-11-05T19:38:13+00:00",
       "nota": null
      }
     ],
@@ -1809,7 +1809,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -2264,8 +2264,8 @@
       "nome": "Chiarimenti II tranche",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a98f9401a7c57486",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "4e4342a63d0995d83b6c1374409e2da75abdcd7d31e2611033a0e540580c960d",
       "data": "2026-11-05",
       "nota": null
      },
@@ -2273,8 +2273,8 @@
       "nome": "Chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=04b312b62d6d4341",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1eae2e0c9eb9996ceb779dc0a479cfd6d82a9f06b1018469932c8341a20eda4e",
       "data": "2026-11-05",
       "nota": null
      }
@@ -2530,7 +2530,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -3641,8 +3641,8 @@
       "nome": "Capitolato Tecnico Speciale - NEW.pdf.p7m",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=db1b4bd2c41fc580",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "92cf10f6e9a3246696910954e93ca19787269314cbce45e20c2b9eb4267db898",
       "data": "2026-11-05",
       "nota": null
      }
@@ -3990,8 +3990,8 @@
       "nome": "II tranche Chiarimenti_signed.pdf",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=613d2543dad18580",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "6ac433626fa05b93639b70c08117168a6a2d6ee7c246a49122b971bf1f6325b4",
       "data": "2026-11-05",
       "nota": null
      },
@@ -3999,8 +3999,8 @@
       "nome": "V tranche Chiarimenti.pdf",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=606a2a9fc9fdf655",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "18165793e1cf00673f165cde399e109346c0b86db50887608c92c8f431043549",
       "data": "2026-11-05",
       "nota": null
      },
@@ -4008,8 +4008,8 @@
       "nome": "IV tranche Chiarimenti.pdf",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=267075301b42646d",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "4b3a71ad7c305f91f76d3a2d99f14427b8b3cb9863007082165cb288dea4518c",
       "data": "2026-11-05",
       "nota": null
      },
@@ -4017,8 +4017,8 @@
       "nome": "Chiarimenti_29042022_signed.pdf",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=d99fae058cd4a66c",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "dde60d6cbd07902430950cfa1a1eb7d303d43b9ee0082c91db71219ebe016dec",
       "data": "2026-11-05",
       "nota": null
      },
@@ -4026,8 +4026,8 @@
       "nome": "III tranche Chiarimenti.pdf",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=61dac587f9b21c74",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "6d63c2afe7818d13b2f8f0e5baa09902412ac80bf15549fbd01f027f09e255c7",
       "data": "2026-11-05",
       "nota": null
      }
@@ -4281,7 +4281,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -5434,8 +5434,8 @@
       "nome": "Chiarimenti II tranche firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=8b84c91a4fada5d2",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "4d61926b11c70825c0d7e004d50ddbce023526f556ae5ae038eb73ac8c09335c",
       "data": "2026-11-05",
       "nota": null
      },
@@ -5443,8 +5443,8 @@
       "nome": "Errata corrige e chiarimenti firmata",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=9a319d8e2fd12fed",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "5b116e25005926729123d9a22b63dea0098316a5c5865310a682a6145a6a9bc8",
       "data": "2026-11-05",
       "nota": null
      },
@@ -5452,8 +5452,8 @@
       "nome": "Errata corrige e chiarimenti non firmata",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=dc9477553070aefe",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "95ceacf019a74baaa5f4cc3ae5a839d8c672816a423e3eb6b76cdeae47b5d255",
       "data": "2026-11-05",
       "nota": null
      },
@@ -5461,8 +5461,8 @@
       "nome": "Chiarimenti II tranche non firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c524518787b63394",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1b42fb1e8618581b954b7cf3104ac3735b9ef1168dbf58f54e07132703b884c2",
       "data": "2026-11-05",
       "nota": null
      }
@@ -5717,7 +5717,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -7925,8 +7925,8 @@
       "nome": "ID2366 - CHIARIMENTI NON FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=3611bbf7f1afb83c",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "2ca72bd83b2a83c476fd4a1c4545bf331bcc5dabc46a41be59b91a892641e068",
       "data": "2026-11-05",
       "nota": null
      },
@@ -7934,8 +7934,8 @@
       "nome": "ID2366 - CHIARIMENTI III TRANCHE NON FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=dc4de9d1ff421e96",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "8b5217d673339d5f66fad0e15245d196346d4b6ce4b942fb9641ce1137076ef8",
       "data": "2026-11-05",
       "nota": null
      },
@@ -7943,8 +7943,8 @@
       "nome": "ID2366 - CHIARIMENTI III TRANCHE FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a1ade5dc02461822",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "d50d174294abe00609a2ae816994c361a4699f3f2e85e798b2531b55a7aba6a0",
       "data": "2026-11-05",
       "nota": null
      },
@@ -7952,8 +7952,8 @@
       "nome": "ID2366 - CHIARIMENTI II TRANCHE NON FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a4afd15ca2cd3bd4",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "dd766ea7a0a58332563af75c0ca166789f5009cfbf85df397a058d936d5e1d35",
       "data": "2026-11-05",
       "nota": null
      },
@@ -7961,8 +7961,8 @@
       "nome": "ID2366 - CHIARIMENTI II TRANCHE FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=274e092312219c72",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "12dae1ddb173798600d8ea216aaf3fa434f36af86082f608e6b444e1ce392190",
       "data": "2026-11-05",
       "nota": null
      },
@@ -7970,8 +7970,8 @@
       "nome": "ID2366 - CHIARIMENTI FIRMATI",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=4d90c5d3d171ddb9",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "7ac2b1061c6d01c1163e2584bbe8de92c611d16a5ac28d1f0b1db826e5db0468",
       "data": "2026-11-05",
       "nota": null
      }
@@ -8216,7 +8216,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -8912,7 +8912,7 @@
   "id": "consip-2738",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SERVIZI CONNESSI PER LE PUBBLICHE AMMINISTRAZIONI AI",
+  "nome": "GARA A PROCEDURA APERTA PER L’APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SERVIZI CONNESSI PER LE PUBBLICHE AMMINISTRAZIONI…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -10181,7 +10181,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -10866,7 +10866,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -11533,8 +11533,8 @@
       "nome": "Chiarimenti 11_07_2023",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=fcf34dd283d1910b",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "0c077ccdf1d5a6d94d3516f0432a3a814fb1cad1bd7993ee56a410aad3573a1b",
       "data": "2026-11-05",
       "nota": null
      },
@@ -11542,8 +11542,8 @@
       "nome": "Chiarimenti 05_07_2023",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=7d4a13ba2045747e",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "0229c01b02c139752c5d70679d78b489d1100d782488031ec2f65c42f4ab70d5",
       "data": "2026-11-05",
       "nota": null
      }
@@ -11773,7 +11773,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -12900,7 +12900,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -12996,7 +12996,7 @@
   "id": "cig-91881762B3",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E ",
+  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -13337,7 +13337,7 @@
   "id": "cig-8765571A03",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E ",
+  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -14794,7 +14794,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -15514,8 +15514,8 @@
       "nome": "Chiarimenti_2",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=faf3089a899ef6d3",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "a633e631c2281ec5e1ed068a7d32af365c78823143df62baa7652126f0070fd6",
       "data": "2026-11-05",
       "nota": null
      },
@@ -15523,8 +15523,8 @@
       "nome": "Chiarimenti_3",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=affcb6b423eede38",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "39491da4a2ef421bfaf0ff8ccbfc1f5461726e79f528e5f0ecaebc863563cc72",
       "data": "2026-11-05",
       "nota": null
      },
@@ -15532,8 +15532,8 @@
       "nome": "Chiarimenti_1",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=f1d0bab2a78be2ba",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "eefb9c26811b72923760d67663bf1c3739a32499bde68144ddc9215a1aaecf32",
       "data": "2026-11-05",
       "nota": null
      }
@@ -15763,7 +15763,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -16416,8 +16416,8 @@
       "nome": "Capitolato tecnico - Lotti 1, 4 e 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=443cbd22a815acfc",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "625b7bfcae071d054dfdf573585bfc73293eefc7c84fb79baf042027f5199325",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16463,8 +16463,8 @@
       "nome": "Accordo quadro Vodafone - Lotti 1, 4 e 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=2b4b0fa5ef2c4825",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1588e065438c3a898d9e38cb5480f017b453a6313a57fe595fcde775a3428349",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16472,8 +16472,8 @@
       "nome": "Accordo quadro Fastweb - Lotti 1, 4 e 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c01a35cb335dc453",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "67bef60126a4b8014bbf97afe3e5e541cb6b6472210c4c037218a3855d2597f8",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16483,7 +16483,7 @@
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "pubblicato-non-archiviato",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
     "nota": "",
@@ -16492,8 +16492,8 @@
       "nome": "Corrispettivi e tariffe - Lotti 1, 4 e 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=80b627e662acaca5",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "d36f48cb749bc9b6951aecb694f006793fd54a4335d2ea20e9ef34199cea3e77",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16501,8 +16501,8 @@
       "nome": "Corrispettivi e tariffe - Lotti 1, 4 e 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=244f0a8075ef5189",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "6abf85b934ccc69ac546cb448cb5c83b53890689a238ebd6500a07e01ae12705",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16604,8 +16604,8 @@
       "nome": "Chiarimenti NON firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=48c6baee1fb67269",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "bd2b017c7b6c313c795e518b37eedaa26e2e6032e964c616a39d7f9cf44707f5",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16613,8 +16613,8 @@
       "nome": "Chiarimenti III Tranche - NON firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=475fadb27385c9c6",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "e1cd291534f3008e3d3db89488d35d27c9e748c4eda5ec87f69061927bc4f5cf",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16622,8 +16622,8 @@
       "nome": "Chiarimenti III Tranche - firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=3ba385c2ba555a4a",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "55b61355f3475d93b9fff30925b25fe12e547082e3de3f93c15285a6273d04bd",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16631,8 +16631,8 @@
       "nome": "Chiarimenti II Tranche - NON firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=ca72d27dd8898f1e",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "61d21ab1c1202c168b84f104ce6bb0d0f1e758cba563d441b3a73fb261261e75",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16640,8 +16640,8 @@
       "nome": "Chiarimenti II Tranche - firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a64f108ef786360f",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "9b4c892ac6733cd5032317efebf88ea8947a1f14842744448a6c1b5a58a911d0",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16649,8 +16649,8 @@
       "nome": "Chiarimenti firmati digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=ac2aa0aca916ba3a",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "360aacb09890ddde52bc609c5aa4a77929a3d2f006b461828d5f16d874829a77",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16658,8 +16658,8 @@
       "nome": "Chiarimenti Allegato A - NON firmato digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=0da0ef41db0fe294",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "3791ba0349b04d90eb1a0c5611245719e00aa8dbd11dfc4701d01b3942fa4e86",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16667,8 +16667,8 @@
       "nome": "Chiarimenti Allegato A - firmato digitalmente",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=01b67d56fc7437e8",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1f914e714ed2b62a08ed8c8a9ce0bd08803fed42248f855e7541c473d8806959",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16705,8 +16705,8 @@
       "nome": "AVVISO DI ESITO NON FIRMATO DIGITALMENTE",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=0412e3e188c61739",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "546383361000bef733267e8a7824d37da04e80dd358fe51ce18c313fbbb19e88",
       "data": "2026-11-05",
       "nota": null
      },
@@ -16714,8 +16714,8 @@
       "nome": "AVVISO DI ESITO FIRMATO DIGITALMENTE",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=195ed3c41c63dec9",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "9b48e6d245d18ca5f165278e43d459966d8749dbf5bd15e77956dbce7ffa4cd0",
       "data": "2026-11-05",
       "nota": null
      }
@@ -16828,15 +16828,8 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.692,
+  "copertura": 0.769,
   "mancanze": [
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "pubblicato-non-archiviato",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
-   },
    {
     "tipo": "offerta_tecnica",
     "descrizione": "offerta tecnica dell'aggiudicatario",
@@ -16907,7 +16900,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -17003,7 +16996,7 @@
   "id": "cig-9030521DAA",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E ",
+  "nome": "GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -17851,7 +17844,7 @@
   "id": "cig-8898059E90",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/2016, PER LA FORNITURA DI PRODOTTI PER LA SICUREZZA ",
+  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/2016, PER LA FORNITURA DI PRODOTTI PER LA SICUREZZA…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -18651,8 +18644,8 @@
       "nome": "Chiarimenti 2 - non firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=3ec4e13c3995c3fb",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "35cb333cae2fc9d976ee152505fadf220658cb65c83c17704417c888d744d746",
       "data": "2026-11-05",
       "nota": null
      },
@@ -18660,8 +18653,8 @@
       "nome": "Chiarimenti 2 - firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=40b8f0f3635967da",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "6b114f62f3a64d3888928655f57cc16012ff4c5dd1f4a9057e3b1ec5343e8ccb",
       "data": "2026-11-05",
       "nota": null
      },
@@ -18669,8 +18662,8 @@
       "nome": "Chiarimenti - non firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c65e20d40751d8b9",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "c878f1ba17d0d7d97701579ebb10290934be1c1b8d4eb3357d1f4935cb54cd7a",
       "data": "2026-11-05",
       "nota": null
      },
@@ -18678,8 +18671,8 @@
       "nome": "Chiarimenti - firmati",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a3f4e73e725faa76",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "efc76e02d2c009810de2b04f7c0ca9997c98adf267d3723fbbe8d4117d99d0c0",
       "data": "2026-11-05",
       "nota": null
      }
@@ -18918,7 +18911,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -19014,7 +19007,7 @@
   "id": "cig-989984280E",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "ARIA_2023_807 - PROCEDURA APERTA, AI SENSI DELL’ART. 60 DEL D.LGS. N. 50/2016, PER LA STIPULA DI UN ACCORDO QUADRO PER L’AFFIDAMENTO DEL SERVIZIO DI INFRASTRUTT",
+  "nome": "ARIA_2023_807 - PROCEDURA APERTA, AI SENSI DELL’ART. 60 DEL D.LGS. N. 50/2016, PER LA STIPULA DI UN ACCORDO QUADRO PER L’AFFIDAMENTO DEL SERVIZIO DI…",
   "stazione_appaltante": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A.",
   "categoria": [],
   "dossier": [],
@@ -19321,7 +19314,7 @@
   "id": "consip-1774",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA INFORMATIVO AGRICOLO NAZIONALE (SIAN) PER AGEA - I",
+  "nome": "GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA INFORMATIVO AGRICOLO NAZIONALE (SIAN) PER AGEA -…",
   "stazione_appaltante": "AGENZIA PER LE EROGAZIONI IN AGRICOLTURA",
   "categoria": [],
   "dossier": [],
@@ -20342,7 +20335,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -20438,7 +20431,7 @@
   "id": "cig-B0DA5C472C",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL?ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL?ART. 5",
+  "nome": "GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL’ART.…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -20806,7 +20799,7 @@
   "id": "cig-A0260B3155",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVITÀ DI BACK OFFICE) | LOTTO 2 AREA BOLOGNA 2 - SERV",
+  "nome": "PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVITÀ DI BACK OFFICE) | LOTTO 2 AREA BOLOGNA 2 -…",
   "stazione_appaltante": "HERA S.P.A.",
   "categoria": [],
   "dossier": [],
@@ -21628,8 +21621,8 @@
       "nome": "Capitolato tecnico speciale e appendici - Lotto 1",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=4d95c218ac5cd10e",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "5168801f2326b56b7ec580b6439c8d8c86f929651ed08f1b55b2dfcd05fb5585",
       "data": "2026-11-05",
       "nota": null
      },
@@ -21637,8 +21630,8 @@
       "nome": "Capitolato tecnico speciale e appendici - Lotti 2 3 4 5",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=cf266224ceecf4e5",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "914d11928506027adc212ec6a7857bfe7ba0d2d5ba5c96d9db51b032cd8c8432",
       "data": "2026-11-05",
       "nota": null
      },
@@ -21646,8 +21639,8 @@
       "nome": "Capitolato tecnico speciale e appendici - Lotti 7 8 9 10 11",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=65ef094784e58b0e",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "61cb7172d08d29e0f6cf0b4ee791ced0072bb191442e76f59e36e5de705ec43b",
       "data": "2026-11-05",
       "nota": null
      }
@@ -21794,7 +21787,7 @@
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "pubblicato-non-archiviato",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
     "nota": "",
@@ -21803,8 +21796,8 @@
       "nome": "Corrispettivi e tariffe - Lotti 1, 2, 3, 4, 5, 7, 8, 9, 10 e 11",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=896df7aa6d83f190",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "a9a2dd1dfce8a3114722c91fce1844324353c3a43a2a4d66da5e0a0dd4b5647f",
       "data": "2026-11-05",
       "nota": null
      }
@@ -22014,8 +22007,8 @@
       "nome": "Chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=577dc4995a1fd626",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "c93a3bdb45b2a20fb9448e3102350233078ec14ddd2f16eef41961361d0f1db9",
       "data": "2026-11-05",
       "nota": null
      }
@@ -22157,15 +22150,8 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.692,
+  "copertura": 0.769,
   "mancanze": [
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "pubblicato-non-archiviato",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
-   },
    {
     "tipo": "offerta_tecnica",
     "descrizione": "offerta tecnica dell'aggiudicatario",
@@ -22243,7 +22229,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -22339,7 +22325,7 @@
   "id": "cig-A008DB40BA",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPPORTO DELLE PP.AA. 2 | SERVIZI DI SVILUPPO, EVOLUZI",
+  "nome": "PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPPORTO DELLE PP.AA. 2 | SERVIZI DI SVILUPPO,…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -22637,7 +22623,7 @@
   "id": "consip-2453",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM | ID 2453 - GARA PUBLIC CLOUD SAAS ITSM",
+  "nome": "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -22727,7 +22713,7 @@
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "pubblicato-non-archiviato",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
     "nota": "",
@@ -22736,8 +22722,8 @@
       "nome": "Chiarimenti II tranche firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=70f3818b67e08f52",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "692b0b48fc5d75342b688bb3412ed13babf4d72b53550a6f87579889bdf5d74b",
       "data": "2026-11-05",
       "nota": null
      },
@@ -22745,8 +22731,8 @@
       "nome": "Chiarimenti II tranche",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=087398e9d52af6f9",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "55504d2e471dd95cc478d7cc2cc5f20208f5fa894ea0df014d4a6e31f2fb2134",
       "data": "2026-11-05",
       "nota": null
      },
@@ -22754,8 +22740,8 @@
       "nome": "Errata Corrige n. 1 Chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=4e55b0258da689b1",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "90d868361c455ac51faeba6acdc4ad38873f25f7a9f2bd2d75589a7f892ecce1",
       "data": "2026-11-05",
       "nota": null
      },
@@ -22763,8 +22749,8 @@
       "nome": "Errata Corrige n. 1 Chiarimenti firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a38df10a95bd0fba",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "f3e2956aec0c5dc9f37c01af76f11f1ed2ad3224a681abc93e47febb34f58a93",
       "data": "2026-11-05",
       "nota": null
      }
@@ -22832,7 +22818,7 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.154,
   "mancanze": [
    {
     "tipo": "bando",
@@ -22874,13 +22860,6 @@
     "descrizione": "determina o decisione a contrarre",
     "stato": "da-verificare",
     "fonte": "consip.it o AT dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "chiarimenti",
-    "descrizione": "risposte ai chiarimenti",
-    "stato": "pubblicato-non-archiviato",
-    "fonte": "consip.it o sito dell'aggregatore",
     "via": "scraping"
    },
    {
@@ -22960,7 +22939,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -22985,7 +22964,7 @@
   "id": "cig-B2FB115279",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECIFICO: SVILUPPO, MANUTENZIONE EVOLUTIVA (MEV) E MIG",
+  "nome": "L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECIFICO: SVILUPPO, MANUTENZIONE EVOLUTIVA (MEV) E…",
   "stazione_appaltante": "ISTITUTO NAZIONALE PERL'ASSICURAZIONE CONTRO GLI INFORTUNI SUL LAVORO",
   "categoria": [],
   "dossier": [],
@@ -23463,7 +23442,7 @@
   "id": "cig-88556834CB",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTRIA DI TRASFORMAZIONE DEI PRODOTTI ITTICI | SERVIZI",
+  "nome": "SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTRIA DI TRASFORMAZIONE DEI PRODOTTI ITTICI",
   "stazione_appaltante": "MINISTERO DELLE POLITICHE AGRICOLE ALIMENTARI E FORESTALI",
   "categoria": [],
   "dossier": [],
@@ -23761,7 +23740,7 @@
   "id": "consip-2781",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "ACQUISIZIONE DI PC DESKTOP, WORKSTATION E MONITOR ED. 4 – ID 2781 | FORNITURA IN ACQUISTO DI PERSONAL COMPUTER DESKTOP ULTRACOMPATTI, OPZIONI E SERVIZI CONNESSI",
+  "nome": "ACQUISIZIONE DI PC DESKTOP, WORKSTATION E MONITOR ED. 4 – ID 2781 | FORNITURA IN ACQUISTO DI PERSONAL COMPUTER DESKTOP ULTRACOMPATTI, OPZIONI E SERVIZI…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -24414,7 +24393,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -24510,7 +24489,7 @@
   "id": "cig-7930885557",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START) | SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSC",
+  "nome": "SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START)",
   "stazione_appaltante": "REGIONE TOSCANA",
   "categoria": [],
   "dossier": [],
@@ -24808,7 +24787,7 @@
   "id": "consip-2556",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556 | SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556",
+  "nome": "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -25654,7 +25633,7 @@
   "id": "cig-97219284C8",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 | SERVIZI DI IT SYSTEM MANAGEMENT ",
+  "nome": "PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 | SERVIZI DI IT SYSTEM MANAGEMENT",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -25961,7 +25940,7 @@
   "id": "cig-993049146A",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZIONE E MANUTENZIONE DELLE POSTAZIONI DI LAVORO E DE",
+  "nome": "APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZIONE E MANUTENZIONE DELLE POSTAZIONI DI LAVORO E…",
   "stazione_appaltante": "INNOVAPUGLIA S.P.A.",
   "categoria": [],
   "dossier": [],
@@ -26593,7 +26572,7 @@
   "id": "cig-B1FFB3098A",
   "tipo_soggetto": "consorzio-unione",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  | SERVIZI INFORMATICI DI PROGETTAZIONE, SVILUPPO,",
+  "nome": "SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  | SERVIZI INFORMATICI DI PROGETTAZIONE,…",
   "stazione_appaltante": "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
   "categoria": [],
   "dossier": [],
@@ -26909,7 +26888,7 @@
   "id": "cig-94252656BA",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALITÀ SAAS TRAMITE SISTEMA CLOUD TOSCANA - SCT, DEL F",
+  "nome": "SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALITÀ SAAS TRAMITE SISTEMA CLOUD TOSCANA - SCT, DEL…",
   "stazione_appaltante": "REGIONE TOSCANA",
   "categoria": [],
   "dossier": [],
@@ -27207,7 +27186,7 @@
   "id": "consip-2297",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "ACCORDO QUADRO AVENTE AD OGGETTO LA FORNITURA DI UN 'CATALOGO DI PRODOTTI SAAS NELL'AMBITO DELLA PRODUTTIVITÀ INDIVIDUALE E COLLABORATION (PRINCO) PER LE PUBBLI",
+  "nome": "ACCORDO QUADRO AVENTE AD OGGETTO LA FORNITURA DI UN 'CATALOGO DI PRODOTTI SAAS NELL'AMBITO DELLA PRODUTTIVITÀ INDIVIDUALE E COLLABORATION (PRINCO) PER LE…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -28085,7 +28064,7 @@
   "id": "consip-2700",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "PRODOTTI CLOUD IN MODALITÀ SOFTWARE AS A SERVICE NELL'AMBITO DEL CRM E MARKETING PER LE PUBBLICHE AMMINISTRAZIONI -ID 2700 | SERVIZI SAAS CRM E MARKETING - SALE",
+  "nome": "PRODOTTI CLOUD IN MODALITÀ SOFTWARE AS A SERVICE NELL'AMBITO DEL CRM E MARKETING PER LE PUBBLICHE AMMINISTRAZIONI -ID 2700 | SERVIZI SAAS CRM E MARKETING -…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -28648,7 +28627,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -29401,8 +29380,8 @@
       "nome": "Risposte ai chiarimenti - 29agosto2023",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=b9252b0d70d07910",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "271340d96337cebcbaa49fef63442baaea0462cf82fee22bc551f3240873bda9",
       "data": "2026-11-05",
       "nota": null
      },
@@ -29410,8 +29389,8 @@
       "nome": "Risposte ai chiarimenti - 01agosto2023",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=28aa3c7abd8ef97d",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "b6d96ca0782178e46cc3844082d9c585fd6d0f62522b8f17e41c40416cebd731",
       "data": "2026-11-05",
       "nota": null
      }
@@ -29595,7 +29574,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -30116,8 +30095,8 @@
       "nome": "Risposte ai chiarimenti - II tranche - NON firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=4421da76ce1f10e3",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "0c53df8085a6a504c383ed78ee04bd67226cd62c05edb27976c2c4827c761693",
       "data": "2026-11-05",
       "nota": null
      },
@@ -30125,8 +30104,8 @@
       "nome": "Risposte ai chiarimenti - II tranche - firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a49ba234b3250a7b",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "7ac6bb3dbd9ef2c34a9d76072e38a220af6ce720ec7fde43ae1433e34d733b76",
       "data": "2026-11-05",
       "nota": null
      },
@@ -30134,8 +30113,8 @@
       "nome": "Risposte ai chiarimenti NON firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=0753b33084120f07",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "a4a2ca58b4c4672fb78e4e790b8feaa037b7d4678007fdb44db805ea358ff878",
       "data": "2026-11-05",
       "nota": null
      },
@@ -30143,8 +30122,8 @@
       "nome": "Risposte ai chiarimenti firmato",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=a9a81d89fe0fce47",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "d643d538ed58595bc279a812b43c1877b61f1f6c8a4fd65d4e6585122d6948f8",
       "data": "2026-11-05",
       "nota": null
      }
@@ -30365,7 +30344,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -30461,7 +30440,7 @@
   "id": "cig-945403654F",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO DINAMICO DELLE OPERE D'ARTE E SERVIZI CORRELATI | ACCORDO QUADRO PER LA FORNITURA DI UNA ",
+  "nome": "ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO DINAMICO DELLE OPERE D'ARTE E SERVIZI CORRELATI",
   "stazione_appaltante": "ANAS SPA",
   "categoria": [],
   "dossier": [],
@@ -30759,7 +30738,7 @@
   "id": "cig-99617296D3",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI SENSI DELL'ART. 59, COMMA 4, LETT. B) DEL D.LGS. N.36/2023,AVENTE AD OGGETTO L'AFFIDAMENTO",
+  "nome": "ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI SENSI DELL'ART. 59, COMMA 4, LETT. B) DEL D.LGS. N.36/2023,AVENTE AD OGGETTO…",
   "stazione_appaltante": "ENTE REGIONE MARCHE",
   "categoria": [],
   "dossier": [],
@@ -31111,7 +31090,7 @@
   "id": "cig-95643027B0",
   "tipo_soggetto": "altro",
   "stato_iniziativa": "attiva",
-  "nome": "CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING | CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING",
+  "nome": "CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING",
   "stazione_appaltante": "PROVINCIA AUTONOMA DI TRENTO",
   "categoria": [],
   "dossier": [],
@@ -31409,7 +31388,7 @@
   "id": "cig-B1457D3391",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E DEI SERVIZI CONNESSI ED OPZIONALI PER LE PA | LOT",
+  "nome": "FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E DEI SERVIZI CONNESSI ED OPZIONALI PER LE PA |…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -32107,7 +32086,7 @@
   "id": "consip-2480",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWARE E SERVIZI CONNESSI PER LE PUBBLICHE AMMINISTRAZ",
+  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWARE E SERVIZI CONNESSI PER LE PUBBLICHE…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -33285,7 +33264,7 @@
   "id": "consip-2452",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFONIA MOBILE (ED. 9) PER LE PUBBLICHE AMMINISTRAZIONI",
+  "nome": "ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFONIA MOBILE (ED. 9) PER LE PUBBLICHE…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -33764,8 +33743,8 @@
       "nome": "Seconda Tranche Risposte alle richieste di chiarimento",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=58aa96735dcde5bc",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "9592158410a018432ba8142e0ec27a279861834c88fe12b3f49f7676b19c72b4",
       "data": "2026-11-05",
       "nota": null
      },
@@ -33773,8 +33752,8 @@
       "nome": "Risposta alle richieste di chiarimento",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=470bf6e6e3cada69",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "fd05b6d7220c418a16b57abc7b4ad7642b878cab6f690a64219acccee6da00f1",
       "data": "2026-11-05",
       "nota": null
      }
@@ -33940,7 +33919,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -34036,7 +34015,7 @@
   "id": "consip-1561",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI CULTURA PUBBLICI INDIVIDUATI ALL'ART.101 DEL D.LGS ",
+  "nome": "GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI CULTURA PUBBLICI INDIVIDUATI ALL'ART.101 DEL D.LGS…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -34234,8 +34213,8 @@
       "nome": "Condizioni generali Lotti 6 e 8",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=7afd6b79c0554a2b",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1e416f7393adfd3ccd6f71f08bb91879e20ce75722155f142bf3ea03dfe83a61",
       "data": "2026-11-05",
       "nota": null
      }
@@ -34272,8 +34251,8 @@
       "nome": "Capitolato tecnico  Lotti 6 e 8",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=12790f39fd84b73a",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "7ad0ca20149009ee8a7b0742e7cdce367033c87667216113008d5a09b351930c",
       "data": "2026-11-05",
       "nota": null
      }
@@ -34427,8 +34406,8 @@
       "nome": "Schema delle penali Lotti 6 e 8",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=f53c0ebc12ca6a6c",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1af49c9211b6285c78ed8675a0a928032cf8bf2558ff2b27bd0b303a004ef0ab",
       "data": "2026-11-05",
       "nota": null
      },
@@ -34436,8 +34415,8 @@
       "nome": "Convenzione Lotti 6 e 8",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=2f7df3440617e8b0",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "7795cc122bae2243189325fb1e4bf29ceadafe773117402c269f91e4d16bf350",
       "data": "2026-11-05",
       "nota": null
      }
@@ -34474,8 +34453,8 @@
       "nome": "Corrispettivi e tariffe Lotti 6 e 8",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c79f991a52f3660c",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "eb2e8e1772afc41e2f6662a63b604f2399a0c27a6d1d0d72e997c0194ef7372a",
       "data": "2026-11-05",
       "nota": null
      }
@@ -34558,8 +34537,8 @@
       "nome": "III tranche Richieste Chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=d70495bbdd246d4c",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "734b89373332fdc21351956d7a0dfa255f0e2d941f51ec5e93b74dd66ff1826b",
       "data": "2026-11-05",
       "nota": null
      },
@@ -34567,8 +34546,8 @@
       "nome": "Errata corrige e II tranche chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c82b660e208b97a3",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "1564a97d2e2c1baadfa9be759f20b15e4ef752094dc440de49ceab1a58e7650b",
       "data": "2026-11-05",
       "nota": null
      },
@@ -34576,8 +34555,8 @@
       "nome": "Chiarimenti",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=0ea201863d339c5d",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "fc5214c6c7e2585bf7b47f94c73aabe6978fed785d9417cb9ac0e2c1506ba414",
       "data": "2026-11-05",
       "nota": null
      }
@@ -34731,7 +34710,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -34827,7 +34806,7 @@
   "id": "cig-84163618CE",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI, PER IL SERVIZIO DI ASSISTENZA E MANUTENZIONE E PER L | PROCEDURA APERTA PER LA C",
+  "nome": "PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI, PER IL SERVIZIO DI ASSISTENZA E MANUTENZIONE E PER L",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -35125,7 +35104,7 @@
   "id": "cig-8784303C25",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN UNICO LOTTO AI SENSI DELL'ART. 54 COMMA 4, LETT. C) DEL D. LGS. 50/2016, PER LA FORNITURA D",
+  "nome": "GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN UNICO LOTTO AI SENSI DELL'ART. 54 COMMA 4, LETT. C) DEL D. LGS. 50/2016, PER LA FORNITURA…",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -35661,7 +35640,7 @@
   "id": "consip-2496",
   "tipo_soggetto": "consip",
   "stato_iniziativa": "attiva",
-  "nome": "AQ CENTRALI TELEFONICHE 9 - ID 2496 | AQ CENTRALI TELEFONICHE 9 - ID 2496",
+  "nome": "AQ CENTRALI TELEFONICHE 9 - ID 2496",
   "stazione_appaltante": "CONSIP SPA UNIP.",
   "categoria": [],
   "dossier": [],
@@ -36221,8 +36200,8 @@
       "nome": "Chiarimenti 2 - NON Ufficiale",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=c878157761f57fcf",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "e05874133e87e26e2ac73d910370fa0f2a93b0b9cf014a9f0fd66f5d7f08bdad",
       "data": "2026-11-05",
       "nota": null
      },
@@ -36230,8 +36209,8 @@
       "nome": "Chiarimenti 2 - Ufficiale",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=36dcf62a9df02208",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "63b04bbaaf17fc63f41a7705a8ef1aa7e035cf7bda94cde66afb7ee8cc38db3d",
       "data": "2026-11-05",
       "nota": null
      },
@@ -36239,8 +36218,8 @@
       "nome": "Chiarimenti - Ufficiale",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=b00d0793be34eef4",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "fd0d8d4ab24c23c8cbea368a5ace89497b535f2d50776ac9c014dc4af09ee87c",
       "data": "2026-11-05",
       "nota": null
      },
@@ -36248,8 +36227,8 @@
       "nome": "Chiarimenti - NON Ufficiale",
       "url": "https://www.acquistinretepa.it/downloadservices/getDocument?id=6263046f39d6c5ab",
       "dove": "acquistinretepa (scheda pubblica)",
-      "stato": "pubblicato-non-archiviato",
-      "sha256": null,
+      "stato": "archiviato",
+      "sha256": "b1be394ca28489c0a57f7472becf1d3be7fdccf11c2292694ddc9361f50bc4e7",
       "data": "2026-11-05",
       "nota": null
      }
@@ -36470,7 +36449,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -36566,7 +36545,7 @@
   "id": "cig-81636687F2",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E MANUTENZIONE E PER L'ACQUISZIONE IN LOCAZIONE OPE",
+  "nome": "PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E MANUTENZIONE E PER L'ACQUISZIONE IN LOCAZIONE…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -36864,7 +36843,7 @@
   "id": "cig-9777818EA8",
   "tipo_soggetto": "consorzio-unione",
   "stato_iniziativa": "attiva",
-  "nome": "ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GESTIONE DEGLI ATTI SANZIONATORI AMMINISTRATIVI EMES",
+  "nome": "ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GESTIONE DEGLI ATTI SANZIONATORI AMMINISTRATIVI…",
   "stazione_appaltante": "PROVINCIA DI BRESCIA",
   "categoria": [],
   "dossier": [],
@@ -37162,7 +37141,7 @@
   "id": "cig-8637686BF8",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENSI DELL'ART. 54 DEL D. LGS. N. 50/2016 E S.M.I., AV",
+  "nome": "GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENSI DELL'ART. 54 DEL D. LGS. N. 50/2016 E S.M.I.,…",
   "stazione_appaltante": "INNOVAPUGLIA S.P.A.",
   "categoria": [],
   "dossier": [],
@@ -37785,7 +37764,7 @@
   "id": "cig-B736423C63",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2023, PER LA FORNITURA DI SERVIZI PROFESSIONALI DI SANITÀ DIGITALE PER LA REALIZZAZIONE DEL",
+  "nome": "PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2023, PER LA FORNITURA DI SERVIZI PROFESSIONALI DI SANITÀ DIGITALE PER LA REALIZZAZIONE…",
   "stazione_appaltante": "AZIENDA ZERO",
   "categoria": [],
   "dossier": [],
@@ -38083,7 +38062,7 @@
   "id": "cig-9936839AF1",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNICA AL SISTEMA INFORMATIVO LAVORO DELL'EMILIA-ROMAGNA (SILER) E DELLE AMMINISTRAZIONI RIUSAN",
+  "nome": "APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNICA AL SISTEMA INFORMATIVO LAVORO DELL'EMILIA-ROMAGNA (SILER) E DELLE AMMINISTRAZIONI…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -38381,7 +38360,7 @@
   "id": "cig-9769148BF3",
   "tipo_soggetto": "consorzio-unione",
   "stato_iniziativa": "attiva",
-  "nome": "GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI PER L'EVOLUZIONE DI PIATTAFORME MIDDLEWARE ABILITANTI (N. GA23_006) | L",
+  "nome": "GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI PER L'EVOLUZIONE DI PIATTAFORME MIDDLEWARE ABILITANTI (N. GA23_006) |…",
   "stazione_appaltante": "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
   "categoria": [],
   "dossier": [],
@@ -38706,7 +38685,7 @@
   "id": "cig-87332390D0",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE QUADRIENNALE (2021-2024) PER IL SERVIZIO DI ASSISTE",
+  "nome": "PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE QUADRIENNALE (2021-2024) PER IL SERVIZIO DI…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -39085,7 +39064,7 @@
   "id": "cig-949554539F",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDUTA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI GESTIONE INFORMATIZZATA DEL PERSONALE A QUALSIASI TITOLO IMPIEGATO DALLE AZIENDE ULSS DEL VENETO, ",
+  "nome": "PROCEDUTA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI GESTIONE INFORMATIZZATA DEL PERSONALE A QUALSIASI TITOLO IMPIEGATO DALLE AZIENDE ULSS DEL VENETO,…",
   "stazione_appaltante": "AZIENDA ZERO",
   "categoria": [],
   "dossier": [],
@@ -39681,7 +39660,7 @@
   "id": "cig-7812108376",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "SERVIZI DI MANUTENZIONE, ASSISTENZA HARDWARE E SOFTWARE DI BASE PER LE INFRASTRUTTURE DELLE AZIENDE SANITARIE DEL SERVIZIO SANITARIO TOSCANO. | LOTTO 1: ASSISTE",
+  "nome": "SERVIZI DI MANUTENZIONE, ASSISTENZA HARDWARE E SOFTWARE DI BASE PER LE INFRASTRUTTURE DELLE AZIENDE SANITARIE DEL SERVIZIO SANITARIO TOSCANO. | LOTTO 1:…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -40033,7 +40012,7 @@
   "id": "cig-7246653F38",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'ART. 61 DEL D.LGS. 50/2006, PER LA SELEZIONE DI OPERATORI PER I SERVIZI DI GESTIONE DELLE POSTAZIONI DI LAVORO",
+  "nome": "GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'ART. 61 DEL D.LGS. 50/2006, PER LA SELEZIONE DI OPERATORI PER I SERVIZI DI GESTIONE DELLE POSTAZIONI DI…",
   "stazione_appaltante": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A.",
   "categoria": [],
   "dossier": [],
@@ -40349,7 +40328,7 @@
   "id": "cig-A02B1C8A8A",
   "tipo_soggetto": "consorzio-unione",
   "stato_iniziativa": "attiva",
-  "nome": "GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI SU TECNOLOGIE E METODICHE AD ALTA SPECIALIZZAZIONE (N. GA23_011) | LOTT",
+  "nome": "GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI SU TECNOLOGIE E METODICHE AD ALTA SPECIALIZZAZIONE (N. GA23_011) |…",
   "stazione_appaltante": "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
   "categoria": [],
   "dossier": [],
@@ -40665,7 +40644,7 @@
   "id": "cig-9216207E99",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA DI 72 MESI, PER IL 'SERVIZIO DI CONSERVAZIONE A NORMA PER LE AZIENDE SANITARIE ED AZIENDE OSPEDALIERE DELLA R",
+  "nome": "PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA DI 72 MESI, PER IL 'SERVIZIO DI CONSERVAZIONE A NORMA PER LE AZIENDE SANITARIE ED AZIENDE OSPEDALIERE DELLA…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -40963,7 +40942,7 @@
   "id": "cig-8716552642",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE QUADRIENNALE (2021-2024) PER IL SERVIZIO DI ASSISTE",
+  "nome": "PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. N. 50/16 PER LA STIPULA DI CONVENZIONE QUADRIENNALE (2021-2024) PER IL SERVIZIO DI…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -41649,7 +41628,7 @@
   "id": "cig-B715929978",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B), SUB. 2, D. LGS. 36/2023, PER L'AFFIDAMENTO DEL SERVIZIO DI ASSISTENZA E MANUTENZIONE DEI ",
+  "nome": "PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B), SUB. 2, D. LGS. 36/2023, PER L'AFFIDAMENTO DEL SERVIZIO DI ASSISTENZA E MANUTENZIONE DEI…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -41947,7 +41926,7 @@
   "id": "cig-9603457F68",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL SERVIZIO SANITARIO REGIONALE DELLA TOSCANA | PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NOR",
+  "nome": "PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL SERVIZIO SANITARIO REGIONALE DELLA TOSCANA",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -42245,7 +42224,7 @@
   "id": "cig-9580558E8E",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA APERTA PER L?AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVITÀ DI POLIZIA LOCALE 4 | GESTIONE DELLE SANZIONI AM",
+  "nome": "PROCEDURA APERTA PER L’AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVITÀ DI POLIZIA LOCALE 4 | GESTIONE DELLE SANZIONI…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -42552,7 +42531,7 @@
   "id": "cig-9482392D69",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI DEGLI APPLICATIVI UTILIZZATI IN LICENZA D’USO PRES",
+  "nome": "PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI DEGLI APPLICATIVI UTILIZZATI IN LICENZA D’USO…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -42846,7 +42825,7 @@
   "id": "cig-759453695C",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "P.A. IN DUE LOTTI PER LA STIPULA DI UNA CONVENZIONE PER LA FORNITURA IN LOCAZIONE OPERATIVA DI UN SISTEMA INFORMATIVO PER LA GESTIONE DEI LABORATORI DI ANALISI ",
+  "nome": "P.A. IN DUE LOTTI PER LA STIPULA DI UNA CONVENZIONE PER LA FORNITURA IN LOCAZIONE OPERATIVA DI UN SISTEMA INFORMATIVO PER LA GESTIONE DEI LABORATORI DI ANALISI…",
   "stazione_appaltante": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
   "categoria": [],
   "dossier": [],
@@ -43149,7 +43128,7 @@
   "id": "cig-9016294130",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TRASMISSIONE DATI E VOCE SU RETI FISSE E MOBILI E GESTIONE E MANUTENZIONE APPARATI DI TELEFONIA 4 | TRASMISSIONE",
+  "nome": "PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TRASMISSIONE DATI E VOCE SU RETI FISSE E MOBILI E GESTIONE E MANUTENZIONE APPARATI DI TELEFONIA 4 |…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -43461,7 +43440,7 @@
   "id": "cig-9481064585",
   "tipo_soggetto": "aggregatore-regionale",
   "stato_iniziativa": "attiva",
-  "nome": "PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI DEGLI APPLICATIVI UTILIZZATI IN LICENZA D’USO PRES",
+  "nome": "PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI DEGLI APPLICATIVI UTILIZZATI IN LICENZA D’USO…",
   "stazione_appaltante": "INTERCENT-ER AGENZIA REGIONALE DI SVILUPPO DEI MERCATI TELEMATICI",
   "categoria": [],
   "dossier": [],
@@ -44107,7 +44086,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "6910463731d3d1fc33c9382f99ad0a7fefe67e7dedc45687b6da44cd067ce0be",
-      "data": "2026-11-05T17:32:04+00:00",
+      "data": "2026-11-05T15:28:37+00:00",
       "nota": null
      }
     ],
@@ -44337,7 +44316,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
     "raccomandazione": "R37"
    },
    {
@@ -44490,7 +44469,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44499,7 +44478,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      }
     ],
@@ -44519,7 +44498,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44528,7 +44507,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44537,7 +44516,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      }
     ],
@@ -44557,7 +44536,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44566,7 +44545,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44575,7 +44554,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      }
     ],
@@ -44595,7 +44574,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44604,7 +44583,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44613,7 +44592,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      }
     ],
@@ -44633,7 +44612,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44642,7 +44621,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44651,7 +44630,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44660,7 +44639,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48",
-      "data": "2026-11-05T17:32:51+00:00",
+      "data": "2026-11-05T14:25:08+00:00",
       "nota": null
      },
      {
@@ -44669,7 +44648,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44678,7 +44657,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44687,7 +44666,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44696,7 +44675,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "337c3fac98730f623de653a8cf864b0c4060fbaaead3cbfa0a7961fedba9174c",
-      "data": "2026-11-05T17:33:33+00:00",
+      "data": "2026-11-05T14:26:19+00:00",
       "nota": null
      },
      {
@@ -44705,7 +44684,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      },
      {
@@ -44714,7 +44693,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      },
      {
@@ -44723,7 +44702,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      },
      {
@@ -44732,7 +44711,7 @@
       "dove": "consip.it (nello zip)",
       "stato": "archiviato",
       "sha256": "a0f5e66dae526f7cd949e01abe4ac396cf1f0ca363f95226a9d2a7086c8e989e",
-      "data": "2026-11-05T17:33:38+00:00",
+      "data": "2026-11-05T14:26:30+00:00",
       "nota": null
      }
     ],
@@ -44752,7 +44731,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "166e033ae88ce8760521baaecdcda81cbeb3e810dc5ec3949759b3f3f9b86a05",
-      "data": "2026-11-05T17:32:57+00:00",
+      "data": "2026-11-05T14:25:19+00:00",
       "nota": null
      },
      {
@@ -44761,7 +44740,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "7d2f94ba84ed8cd754d1196bcdea97236f972fb8cf749f2e42a95176f14a5673",
-      "data": "2026-11-05T17:33:44+00:00",
+      "data": "2026-11-05T14:26:40+00:00",
       "nota": null
      }
     ],
@@ -44781,7 +44760,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "408ceea65241a39759f335976a29579f47df17021b1826dd393b558287e1f4f4",
-      "data": "2026-11-05T17:32:35+00:00",
+      "data": "2026-11-05T14:24:36+00:00",
       "nota": null
      },
      {
@@ -44790,7 +44769,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "7729d375aa3ea7e344142a6a9f913559357a423dd8a77c40c03764228361a2e0",
-      "data": "2026-11-05T17:33:02+00:00",
+      "data": "2026-11-05T14:25:29+00:00",
       "nota": null
      },
      {
@@ -44799,7 +44778,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "1be28fcd2f0e3110e7d2eef9f275b4652ddec34a4262810118a3d6aa01284842",
-      "data": "2026-11-05T17:33:07+00:00",
+      "data": "2026-11-05T14:25:41+00:00",
       "nota": null
      },
      {
@@ -44808,7 +44787,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "372cceda162bac679e9de0a7e3d33883de8f28cf018d3bf04550434c1dd185dd",
-      "data": "2026-11-05T17:33:12+00:00",
+      "data": "2026-11-05T14:25:51+00:00",
       "nota": null
      },
      {
@@ -44817,7 +44796,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "4bd59c3edc0f196bf6c8cdd0cacd6999e122bebd66b508688fdee9559cfc942f",
-      "data": "2026-11-05T17:33:17+00:00",
+      "data": "2026-11-05T14:26:00+00:00",
       "nota": null
      },
      {
@@ -44826,7 +44805,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "6d2c3fd3b6613e91a2eb64dda2c3763ecac1bd10feecb6dacd10447ab45105bd",
-      "data": "2026-11-05T17:33:49+00:00",
+      "data": "2026-11-05T14:26:49+00:00",
       "nota": null
      },
      {
@@ -44835,7 +44814,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "94edf6956f23d461a3a9e01795f19e2dbbff3f807ea40af027703d3622314591",
-      "data": "2026-11-05T17:33:54+00:00",
+      "data": "2026-11-05T14:26:58+00:00",
       "nota": null
      }
     ],
@@ -44855,7 +44834,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "32245898a00cbf176d4f3285ba90c36f647fd06d47557f280472779ce51ad005",
-      "data": "2026-11-05T17:32:46+00:00",
+      "data": "2026-11-05T14:24:58+00:00",
       "nota": null
      },
      {
@@ -44864,7 +44843,7 @@
       "dove": "consip.it",
       "stato": "archiviato",
       "sha256": "dbe198ea4aaf4b730a29aa7ea8235dd8749fb9a0bfd9050b5465aa5cbf329ffd",
-      "data": "2026-11-05T17:33:28+00:00",
+      "data": "2026-11-05T14:26:09+00:00",
       "nota": null
      }
     ],

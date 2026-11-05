@@ -236,6 +236,16 @@ def carica_altrove():
     return out, extra
 
 
+def pulisci_nome(t):
+    t = (t or "").replace("L?A", "L’A").replace("D?U", "D’U").replace("?", "’")
+    a = t.split(" | ")
+    if len(a) == 2 and (a[0].strip() == a[1].strip() or a[1].strip().startswith(a[0].strip()[:30])):
+        t = a[0]
+    if len(t) > 160:
+        t = t[:160].rsplit(" ", 1)[0] + "…"
+    return t.strip()
+
+
 def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
     """Carenze di trasparenza (report/convenzioni/database/carenze.yaml) che colpiscono l'iniziativa."""
     per_tipo = {i["tipo"]: i for i in inv}
@@ -369,7 +379,7 @@ def main():
                 if k["id"] == "C7":
                     k["stato"] = "verificato"
                     k["nota"] = (f"acquistinretepa, scheda pubblica consultata con browser il {ar['data'][:10]}: la sezione «Massimale residuo» "
-                                 "esiste ma per un utente non autenticato risulta «Nessun risultato» (servizio getDettaglioLotti con payload vuoto)")
+                                 "esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)")
         for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
             if k["id"] in (c.get("carenze_verificate") or {}):
                 k["stato"], k["nota"] = "verificato", c["carenze_verificate"][k["id"]]
@@ -380,7 +390,7 @@ def main():
             (kb[x["cig_padre"]].get("regola_sovranita") for x in lotti if kb.get(x["cig_padre"], {}).get("regola_sovranita")), None)
         voci.append({
             "id": ini, "tipo_soggetto": l0["tipo_soggetto"], "stato_iniziativa": l0["stato_iniziativa"],
-            "nome": c.get("nome") or kb0.get("iniziativa") or l0["oggetto"][:160],
+            "nome": pulisci_nome(c.get("nome") or kb0.get("iniziativa") or l0["oggetto"]),
             "stazione_appaltante": l0["stazione_appaltante"] or c.get("stazione_appaltante", ""),
             "categoria": sorted({kb.get(x["cig_padre"], {}).get("categoria") for x in lotti} - {None}),
             "dossier": sorted({kb[x["cig_padre"]]["dossier"] for x in lotti if kb.get(x["cig_padre"], {}).get("dossier")}),

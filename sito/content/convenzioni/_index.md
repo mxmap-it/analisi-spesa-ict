@@ -29,7 +29,7 @@ Dati che non vengono pubblicati pur servendo a controllare la spesa e la sovrani
 | **C4** Ordinativi e contratti attuativi | 41 / 44 | 50.697,5 | in parte | R08 |
 | **C5** Progetti e piani dei fabbisogni | 0 / 1 | 0,0 | no | R41 |
 | **C6** Region e data center dichiarati | 2 / 3 | 0,0 | no | R42 |
-| **C7** Monitoraggio delle soglie di erosione dei massimali | 1 / 85 | 0,0 | no | R37 |
+| **C7** Monitoraggio delle soglie di erosione dei massimali | 26 / 60 | 46.283,1 | no | R37 |
 | **C8** Indice ID Sigef ↔ CIG dei lotti | 4 / 41 | 951,7 | no | R38 |
 
 Per tipo di soggetto (iniziative colpite / iniziative del tipo):
@@ -63,7 +63,7 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 8 | [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle](/convenzioni/consip-2599/) | Consip | 918,2 | 387 | 10 | 3 | 77 % |
 | 9 | [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) | Consip | 834,1 | 45 | 8 | 5 | 62 % |
 | 10 | [Consip AQ System management ed. 3, ID 2275, lotto 1](/convenzioni/consip-2275/) | Consip | 746,9 | 119 | 8 | 5 | 62 % |
-| 11 | [GARA A PROCEDURA APERTA PER L?APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SE](/convenzioni/consip-2738/) | Consip | 696,5 | 380 | 10 | 3 | 77 % |
+| 11 | [GARA A PROCEDURA APERTA PER L’APPALTO DI FORNITURA MULTIBRAND DI PRODOTTI SOFTWARE, MANUTENZIONE SOFTWARE E SE](/convenzioni/consip-2738/) | Consip | 696,5 | 380 | 10 | 3 | 77 % |
 | 12 | [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)](/convenzioni/consip-2755/) | Consip | 691,6 | 186 | 10 | 3 | 77 % |
 | 13 | [Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lotto 2 cartella clinica](/convenzioni/consip-2601/) | Consip | 557,5 | 242 | 9 | 4 | 69 % |
 | 14 | [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | Consip | 554,2 | 251 | 4 | 9 | 31 % |
@@ -73,7 +73,7 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 18 | [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LAVORO 2 - ID 2648 / LOTTO 4](/convenzioni/consip-2648/) | Consip | 307,8 | 80 | 9 | 4 | 69 % |
 | 19 | [Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e ](/convenzioni/consip-2365/) | Consip | 297,1 | 69 | 9 | 4 | 69 % |
 | 20 | [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Consip | 257,8 | 444 | 2 | 11 | 15 % |
-| 21 | [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SG](/convenzioni/consip-2181/) | Consip | 232,3 | 53 | 9 | 4 | 69 % |
+| 21 | [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SG](/convenzioni/consip-2181/) | Consip | 232,3 | 53 | 10 | 3 | 77 % |
 | 22 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE ](/convenzioni/cig-9030521daa/) | Consip | 227,5 | 198 | 7 | 6 | 54 % |
 | 23 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/20](/convenzioni/cig-8898059e90/) | Consip | 225,4 | 274 | 1 | 12 | 8 % |
 | 24 | [CLOUD ENABLING 1 ID 2652 / LOTTO 1: SERVIZI SUPPORTO ALL'ADOZIONE E PMO - PAC1](/convenzioni/consip-2652/) | Consip | 189,8 | 99 | 9 | 4 | 69 % |
@@ -82,14 +82,14 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 27 | [Consip AQ System management ed. 4, ID 2710 (lotto unico)](/convenzioni/consip-2710/) | Consip | 145,4 | 49 | 8 | 5 | 62 % |
 | 28 | [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL](/convenzioni/cig-b0da5c472c/) | Consip | 114,2 | 640 | 1 | 12 | 8 % |
 | 29 | [PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVI](/convenzioni/cig-a0260b3155/) | Altro | 100,4 | 21 | 1 | 12 | 8 % |
-| 30 | [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 / LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI](/convenzioni/consip-2213/) | Consip | 90,2 | 41 | 9 | 4 | 69 % |
+| 30 | [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 / LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI](/convenzioni/consip-2213/) | Consip | 90,2 | 41 | 10 | 3 | 77 % |
 | 31 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPP](/convenzioni/cig-a008db40ba/) | Aggregatore regionale | 86,4 | 112 | 1 | 12 | 8 % |
-| 32 | [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM / ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Consip | 83,7 | 16 | 1 | 12 | 8 % |
+| 32 | [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Consip | 83,7 | 16 | 2 | 11 | 15 % |
 | 33 | [L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECI](/convenzioni/cig-b2fb115279/) | Altro | 81,8 | 4 | 6 | 7 | 46 % |
 | 34 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTR](/convenzioni/cig-88556834cb/) | Altro | 67,4 | 3 | 1 | 12 | 8 % |
 | 35 | [ACQUISIZIONE DI PC DESKTOP, WORKSTATION E MONITOR ED. 4 – ID 2781 / FORNITURA IN ACQUISTO DI PERSONAL COMPUTER](/convenzioni/consip-2781/) | Consip | 59,6 | 1786 | 8 | 5 | 62 % |
-| 36 | [SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START) / SERVIZIO DI GESTIONE DE](/convenzioni/cig-7930885557/) | Altro | 52,1 | 126 | 1 | 12 | 8 % |
-| 37 | [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556 / SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 ](/convenzioni/consip-2556/) | Consip | 51,5 | 79 | 1 | 12 | 8 % |
+| 36 | [SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START)](/convenzioni/cig-7930885557/) | Altro | 52,1 | 126 | 1 | 12 | 8 % |
+| 37 | [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556](/convenzioni/consip-2556/) | Consip | 51,5 | 79 | 1 | 12 | 8 % |
 | 38 | [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | Consip | 49,6 | 54 | 8 | 5 | 62 % |
 | 39 | [PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 / SERVIZI DI ](/convenzioni/cig-97219284c8/) | Aggregatore regionale | 46,5 | 192 | 1 | 12 | 8 % |
 | 40 | [APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZI](/convenzioni/cig-993049146a/) | Aggregatore regionale | 44,7 | 55 | 1 | 12 | 8 % |
@@ -102,14 +102,14 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 47 | [ENERGIA ELETTRICA 21 - ID 2638 / LOMBARDIA ESCLUSE LA PROVINCIA DI MILANO E LA PROVINCIA DI LODI](/convenzioni/consip-2638/) | Consip | 30,1 | 6 | 9 | 4 | 69 % |
 | 48 | [ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO DINAMICO DELLE OPERE D'ARTE E SERVIZI C](/convenzioni/cig-945403654f/) | Altro | 28,0 | 33 | 1 | 12 | 8 % |
 | 49 | [ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI SENSI DELL'ART. 59, COMMA 4, LETT. B) DE](/convenzioni/cig-99617296d3/) | Altro | 26,7 | 18 | 1 | 12 | 8 % |
-| 50 | [CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING / CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING](/convenzioni/cig-95643027b0/) | Altro | 26,4 | 9 | 1 | 12 | 8 % |
+| 50 | [CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING](/convenzioni/cig-95643027b0/) | Altro | 26,4 | 9 | 1 | 12 | 8 % |
 | 51 | [FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E](/convenzioni/cig-b1457d3391/) | Consip | 25,3 | 409 | 8 | 5 | 62 % |
 | 52 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWA](/convenzioni/consip-2480/) | Consip | 25,0 | 12 | 9 | 4 | 69 % |
 | 53 | [ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFON](/convenzioni/consip-2452/) | Consip | 21,0 | 234 | 8 | 5 | 62 % |
 | 54 | [GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI C](/convenzioni/consip-1561/) | Consip | 21,0 | 4 | 7 | 6 | 54 % |
 | 55 | [PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI, PER IL SERVIZIO DI ASSISTENZA ](/convenzioni/cig-84163618ce/) | Aggregatore regionale | 19,6 | 9 | 1 | 12 | 8 % |
 | 56 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN UNICO LOTTO AI SENSI DELL'ART. 54 COMMA 4](/convenzioni/cig-8784303c25/) | Consip | 19,4 | 18 | 8 | 5 | 62 % |
-| 57 | [AQ CENTRALI TELEFONICHE 9 - ID 2496 / AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | Consip | 19,3 | 37 | 9 | 4 | 69 % |
+| 57 | [AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | Consip | 19,3 | 37 | 9 | 4 | 69 % |
 | 58 | [PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E](/convenzioni/cig-81636687f2/) | Aggregatore regionale | 13,6 | 3 | 1 | 12 | 8 % |
 | 59 | [ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GE](/convenzioni/cig-9777818ea8/) | Consorzio o unione | 12,6 | 6 | 1 | 12 | 8 % |
 | 60 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENS](/convenzioni/cig-8637686bf8/) | Aggregatore regionale | 11,5 | 5 | 1 | 12 | 8 % |
@@ -128,7 +128,7 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 73 | [PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI LETTURA ED ELABORAZIONI DATI DELLE PRESCRIZIONI FARMACEUTIC](/convenzioni/cig-9837572d38/) | Aggregatore regionale | 4,6 | 3 | 1 | 12 | 8 % |
 | 74 | [PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B), SUB. 2, D. LGS. 36/2023, PER L'AFFIDAME](/convenzioni/cig-b715929978/) | Aggregatore regionale | 4,3 | 5 | 1 | 12 | 8 % |
 | 75 | [PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL SERVIZIO SANITARIO REGIONALE DELLA TOSC](/convenzioni/cig-9603457f68/) | Aggregatore regionale | 4,3 | 10 | 1 | 12 | 8 % |
-| 76 | [PROCEDURA APERTA PER L?AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVIT](/convenzioni/cig-9580558e8e/) | Aggregatore regionale | 2,9 | 25 | 1 | 12 | 8 % |
+| 76 | [PROCEDURA APERTA PER L’AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZIONI AMMINISTRATIVE RELATIVE ALLE ATTIVIT](/convenzioni/cig-9580558e8e/) | Aggregatore regionale | 2,9 | 25 | 1 | 12 | 8 % |
 | 77 | [PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASSISTENZA TECNICA E SERVIZI PROFESSIONALI ](/convenzioni/cig-9482392d69/) | Aggregatore regionale | 2,6 | 29 | 1 | 12 | 8 % |
 | 78 | [P.A. IN DUE LOTTI PER LA STIPULA DI UNA CONVENZIONE PER LA FORNITURA IN LOCAZIONE OPERATIVA DI UN SISTEMA INFO](/convenzioni/cig-759453695c/) | Aggregatore regionale | 2,1 | 8 | 1 | 12 | 8 % |
 | 79 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TRASMISSIONE DATI E VOCE SU RETI FISSE E MOBILI E GESTIONE E M](/convenzioni/cig-9016294130/) | Aggregatore regionale | 2,0 | 73 | 1 | 12 | 8 % |

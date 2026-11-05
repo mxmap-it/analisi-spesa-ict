@@ -1,5 +1,5 @@
 ---
-title: "ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFONIA MOBILE (ED. 9) PER LE PUBBLICHE AMMIN"
+title: "ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFONIA MOBILE (ED. 9) PER LE PUBBLICHE…"
 date: 2026-11-05
 description: "Iniziativa consip-2452: dati, documenti archiviati e mancanti."
 ---
@@ -33,7 +33,7 @@ Pagina del bando su consip.it consultata il 05/11/2026; open data Consip, campio
 | **C2** Listini e prezzi offerti dagli aggiudicatari | da verificare | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente. | R39 |
 | **C3** Transato per listino, marchio ed ente | accertato (non trovato sulle fonti consultate) (assente dalla pagina Consip; open data Consip senza listino e marchio) | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R]. | R37 |
 | **C4** Ordinativi e contratti attuativi | accertato (non trovato sulle fonti consultate) (non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati) | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 (pubblicità legale) [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]. | R08 |
-| **C7** Monitoraggio delle soglie di erosione dei massimali | da verificare | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
+| **C7** Monitoraggio delle soglie di erosione dei massimali | accertato (non trovato sulle fonti consultate) (acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)) | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
 | **C8** Indice ID Sigef ↔ CIG dei lotti | da verificare | Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede. | R38 |
 
 Rimedio di breve periodo: [bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (non inviate).
@@ -115,12 +115,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | risposte ai chiarimenti | ID 2452 - TM9 - Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20TM9%20-%20Chiarimenti_signed.pdf) | `fd05b6d7220c418a…` |
 | risposte ai chiarimenti | ID 2452 - TM9 - Chiarimenti II.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202452%20-%20TM9%20-%20Chiarimenti%20II.pdf) | `09efd8fd1551555b…` |
 | risposte ai chiarimenti | ID 2452 - TM9 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202452%20-%20TM9%20-%20Chiarimenti.pdf) | `61eb7493b35032bc…` |
+| risposte ai chiarimenti | Seconda Tranche Risposte alle richieste di chiarimento | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=58aa96735dcde5bc) | `9592158410a01843…` |
+| risposte ai chiarimenti | Risposta alle richieste di chiarimento | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=470bf6e6e3cada69) | `fd05b6d7220c418a…` |
 | avviso di aggiudicazione o esito | ID 2452 - TM9 - Esito gara_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20TM9%20-%20Esito%20gara_signed.pdf) | `caa6e17dfe05042c…` |
 | avviso di aggiudicazione o esito | ID 2452 - TM9 - Esito gara.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202452%20-%20TM9%20-%20Esito%20gara.pdf) | `f8f5acf478f4acdd…` |
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc%20firmati%20ID%202452/ID%202452%20-%20TM9%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `0ab74107a630c3db…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc%20firmati%20ID%202452/ID%202452%20-%20TM9%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `0ab74107a630c3db…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

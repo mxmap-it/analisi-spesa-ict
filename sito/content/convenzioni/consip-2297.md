@@ -136,7 +136,7 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202297%20DOC%20UFF.zip#Doc%20firmati_ID%202297/ID%202297%20-%20Public%20Cloud%20SaaS%20Princo%20-%20Allegato%2017%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `43cd1bb87c64e23d…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2297 - Public Cloud SaaS Princo - Allegato 17 - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202297%20DOC%20UFF.zip#Doc%20firmati_ID%202297/ID%202297%20-%20Public%20Cloud%20SaaS%20Princo%20-%20Allegato%2017%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `43cd1bb87c64e23d…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

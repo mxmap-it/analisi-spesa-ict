@@ -21,7 +21,7 @@ description: "Iniziativa consip-2181: dati, documenti archiviati e mancanti."
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 69 % dei tipi di documento attesi |
+| Copertura documentale | 77 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -33,7 +33,7 @@ Pagina del bando su consip.it consultata il 05/11/2026; open data Consip, campio
 | **C2** Listini e prezzi offerti dagli aggiudicatari | da verificare | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente. | R39 |
 | **C3** Transato per listino, marchio ed ente | accertato (non trovato sulle fonti consultate) (open data Consip: ordinato per lotto e anno, senza listino, marchio ed ente) | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R]. | R37 |
 | **C4** Ordinativi e contratti attuativi | accertato (non trovato sulle fonti consultate) (non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati) | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 (pubblicità legale) [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]. | R08 |
-| **C7** Monitoraggio delle soglie di erosione dei massimali | da verificare | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
+| **C7** Monitoraggio delle soglie di erosione dei massimali | accertato (non trovato sulle fonti consultate) (acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)) | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
 | **C8** Indice ID Sigef ↔ CIG dei lotti | da verificare | Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede. | R38 |
 
 Rimedio di breve periodo: [bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (non inviate).
@@ -63,7 +63,7 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | disciplinare o condizioni della procedura | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
 | capitolato tecnico | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
 | schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
-| listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| listini e appendici di prezzo | **archiviato** | consip.it, acquistinretepa (scheda dell'iniziativa) |  |
 | determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
 | risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
 | avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
@@ -93,9 +93,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.5%20-%20Capitolato%20Tecnico_NEW.pdf) | `b6dfe7db2f45e6f2…` |
 | capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Appendice B al Capitolato tecnico.xlsx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Appendice%20B%20al%20Capitolato%20tecnico.xlsx) | `b6dfe7db2f45e6f2…` |
 | capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Capitolato d'Oneri_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Capitolato%20d'Oneri_NEW.pdf) | `b6dfe7db2f45e6f2…` |
+| capitolato tecnico | Capitolato tecnico - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=443cbd22a815acfc) | `625b7bfcae071d05…` |
 | schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf.p7m) | `75b744bba0de48e7…` |
 | schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf) | `b6dfe7db2f45e6f2…` |
 | schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro.docx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/MODULI%20DI%20DICHIARAZIONE%20-%20ID%202181.zip#MODULI%20DI%20DICHIARAZIONE/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro.docx) | `58dc2d19c6031c30…` |
+| schema di accordo quadro o di convenzione | Accordo quadro Vodafone - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=2b4b0fa5ef2c4825) | `1588e065438c3a89…` |
+| schema di accordo quadro o di convenzione | Accordo quadro Fastweb - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=c01a35cb335dc453) | `67bef60126a4b801…` |
+| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=80b627e662acaca5) | `d36f48cb749bc9b6…` |
+| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=244f0a8075ef5189) | `6abf85b934ccc69a…` |
 | determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW-signed.pdf) | `596c844fb78cf915…` |
 | determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW.pdf) | `4905bfd64fcd9f93…` |
 | risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche_signed.pdf) | `9b4c892ac6733cd5…` |
@@ -104,16 +109,28 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche.pdf) | `61d21ab1c1202c16…` |
 | risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti III Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20III%20Tranche.pdf) | `e1cd291534f3008e…` |
 | risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti.pdf) | `bd2b017c7b6c313c…` |
+| risposte ai chiarimenti | Chiarimenti NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=48c6baee1fb67269) | `bd2b017c7b6c313c…` |
+| risposte ai chiarimenti | Chiarimenti III Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=475fadb27385c9c6) | `e1cd291534f3008e…` |
+| risposte ai chiarimenti | Chiarimenti III Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=3ba385c2ba555a4a) | `55b61355f3475d93…` |
+| risposte ai chiarimenti | Chiarimenti II Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ca72d27dd8898f1e) | `61d21ab1c1202c16…` |
+| risposte ai chiarimenti | Chiarimenti II Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a64f108ef786360f) | `9b4c892ac6733cd5…` |
+| risposte ai chiarimenti | Chiarimenti firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ac2aa0aca916ba3a) | `360aacb09890ddde…` |
+| risposte ai chiarimenti | Chiarimenti Allegato A - NON firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0da0ef41db0fe294) | `3791ba0349b04d90…` |
+| risposte ai chiarimenti | Chiarimenti Allegato A - firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=01b67d56fc7437e8) | `1f914e714ed2b62a…` |
 | avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF_signed.pdf) | `deafe7a8114a49d4…` |
 | avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF.pdf) | `ae83048ed974b7f3…` |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO NON FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0412e3e188c61739) | `546383361000bef7…` |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=195ed3c41c63dec9) | `9b48e6d245d18ca5…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
 | transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.15%20-%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `75b744bba0de48e7…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.15%20-%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `75b744bba0de48e7…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 
@@ -148,7 +165,6 @@ Ricerca per parole chiave su 22 documenti chiave archiviati (`tools/convenzioni/
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
 | offerta tecnica dell'aggiudicatario | non pubblicato | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
 | ordinativi e contratti attuativi delle PA | non pubblicato | AT degli enti; PVL (link ai documenti dal 2024) | PVL documenti_di_gara_link, poi AT degli enti |

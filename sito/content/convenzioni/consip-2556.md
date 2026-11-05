@@ -1,5 +1,5 @@
 ---
-title: "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556 / SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556"
+title: "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556"
 date: 2026-11-05
 description: "Iniziativa consip-2556: dati, documenti archiviati e mancanti."
 ---

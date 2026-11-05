@@ -1,5 +1,5 @@
 ---
-title: "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM / ID 2453 - GARA PUBLIC CLOUD SAAS ITSM"
+title: "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM"
 date: 2026-11-05
 description: "Iniziativa consip-2453: dati, documenti archiviati e mancanti."
 ---
@@ -21,7 +21,7 @@ description: "Iniziativa consip-2453: dati, documenti archiviati e mancanti."
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 8 % dei tipi di documento attesi |
+| Copertura documentale | 15 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -33,7 +33,7 @@ Pagina del bando su consip.it consultata il 05/11/2026; open data Consip, campio
 | **C2** Listini e prezzi offerti dagli aggiudicatari | da verificare | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente. | R39 |
 | **C3** Transato per listino, marchio ed ente | da verificare | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R]. | R37 |
 | **C4** Ordinativi e contratti attuativi | da verificare | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 (pubblicità legale) [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]. | R08 |
-| **C7** Monitoraggio delle soglie di erosione dei massimali | da verificare | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
+| **C7** Monitoraggio delle soglie di erosione dei massimali | accertato (non trovato sulle fonti consultate) (acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)) | Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa. | R37 |
 | **C8** Indice ID Sigef ↔ CIG dei lotti | da verificare | Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede. | R38 |
 
 Rimedio di breve periodo: [bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (non inviate).
@@ -57,13 +57,22 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
 | determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
 | avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
+
+### Documenti trovati
+
+| Tipo | Documento | Originale | Copia (sha256) |
+|---|---|---|---|
+| risposte ai chiarimenti | Chiarimenti II tranche firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=70f3818b67e08f52) | `692b0b48fc5d7534…` |
+| risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=087398e9d52af6f9) | `55504d2e471dd95c…` |
+| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=4e55b0258da689b1) | `90d868361c455ac5…` |
+| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a38df10a95bd0fba) | `f3e2956aec0c5dc9…` |
 
 ## Mancanze e via per colmarle
 
@@ -75,7 +84,6 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
 | determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
 | avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |

@@ -118,7 +118,7 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (R (dal nome del file)): Allegato sui flussi dati del fatturato da trasmettere a Consip per la commissione a carico del fornitore (d.m. MEF 23/11/2012): individuato dal nome del file, da leggere. Documento: [ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%2018%20-%20Flussi%20dati%20monitoraggio.pdf.p7m), sha256 `a518a9cdc8e0c61c…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: ente, listino_prodotto, lotto; non trovati: marchio (ricerca per parole nel testo, R). Documento: [ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%2018%20-%20Flussi%20dati%20monitoraggio.pdf.p7m), sha256 `a518a9cdc8e0c61c…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 
