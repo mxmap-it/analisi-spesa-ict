@@ -221,8 +221,10 @@ def main(versione, data, nota):
          "il fornitore deve trasmettere ogni mese a Consip il dettaglio delle fatture, con l'ID dell'ordine sulla piattaforma e l'imponibile, "
          "per il calcolo della commissione (d.m. MEF 23/11/2012). Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato "
          "per ordine e quindi per ente; non abbiamo verificato che il flusso avvenga né in che forma sia conservato. "
-         f"Gli altri {g['flusso_dati'] - 1} allegati, analizzati per parole chiave (R), seguono in gran parte lo stesso schema; fa eccezione quello "
-         "di System Management 3 (ID 2275), sui flussi di monitoraggio, dove compaiono campi per ente e prodotto.",
+         f"Gli altri allegati sulle commissioni, analizzati per parole chiave (R), seguono lo stesso schema. Più ricco è il flusso di **monitoraggio** "
+         "dell'AQ System Management 3 (ID 2275, allegato 18, letto per intero): ogni mese il fornitore invia a Consip l'«Erogato» per ordine, lotto, "
+         "sede dell'amministrazione, prodotto, quantità e importo, pena penali. Consip riceve quindi, per contratto, il consumato mensile per prodotto "
+         "e per ordine; non è pubblicato. Allegati di monitoraggio analoghi compaiono per gli ID 2452 e 2648 (da leggere).",
          f"- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), {g['istanze_preparate']} bozze di accesso civico generalizzato, "
          f"tutte verso Consip, restano utili all'analisi; {g['istanze_ritirate']} sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 "
          "perché questi dati diventino pubblici senza bisogno di chiederli.", "",
@@ -273,7 +275,7 @@ def main(versione, data, nota):
           "| Amministrazione trasparente di Consip | le sottosezioni di «Bandi di gara e contratti» riguardano gli acquisti di Consip per sé; «Controlli e rilievi» rinvia alla Corte dei conti | V (indice delle sezioni) |",
           f"| Campione di enti aderenti | {ec.get('righe', 0)} righe valide (righe di controllo escluse), {ec.get('enti', 0)} enti, {ec.get('iniziative', 0)} iniziative: file nel percorso AT {ec.get('in_at', 0)}, URL esterno al percorso AT {ec.get('fuori_at', 0)} (collegamento dalla sezione AT non verificato), non trovato {ec.get('non_trovato', 0)}, AT non verificabile automaticamente il 5/11 {ec.get('at_irraggiungibile', 0)} (da ripetere); {ec.get('archiviati', 0)} archiviati | V per i documenti letti; R per la posizione rispetto all'AT |",
           f"| Ricerca web (Corte dei conti, stampa, atti di enti) | {fw.get('righe', 0)} dati da {fw.get('url', 0)} URL, {fw.get('archiviati', 0)} archiviati; erogato per iniziativa non trovato (nelle due relazioni della Corte dei conti consultate, gestioni 2021 e 2022, l'erogato degli AQ è aggregato) | R |",
-          f"| Allegati «flussi dati del fatturato» | {g['flusso_dati']} allegati acquisiti e analizzati per parole chiave, letto per intero quello di EA8: invio mensile a Consip del dettaglio delle fatture (numero, data, ID dell'ordine, imponibile); in 35 non compaiono campi per ente, prodotto o marchio; in quello di System Management 3 (ID 2275, flussi di monitoraggio) compaiono campi per ente e prodotto (da leggere) | V per EA8; R per gli altri |", "",
+          f"| Allegati «flussi dati del fatturato» | {g['flusso_dati']} allegati acquisiti e analizzati per parole chiave, letto per intero quello di EA8: invio mensile a Consip del dettaglio delle fatture (numero, data, ID dell'ordine, imponibile); in 35 non compaiono campi per ente, prodotto o marchio; in quello di System Management 3 (ID 2275), letto per intero, c'è il flusso di **monitoraggio** «Erogato»: ogni mese, per ordine, lotto, sede, prodotto, quantità e importo erogato | V per EA8 e ID 2275; R per gli altri |", "",
           "Il dettaglio per iniziativa e per ente è nelle [schede](/convenzioni/) e nei file "
           "[enti-campione](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/enti-campione) e "
           "[fonti-non-ufficiali](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/convenzioni/fonti-non-ufficiali), "
