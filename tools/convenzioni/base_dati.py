@@ -142,8 +142,38 @@ def inventario(ini, docs, pagine_ok, pag, c):
     return righe
 
 
+def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
+    """Carenze di trasparenza (report/convenzioni/database/carenze.yaml) che colpiscono l'iniziativa."""
+    per_tipo = {i["tipo"]: i for i in inv}
+    out = []
+    for c in car["carenze"]:
+        a = c["applica"]
+        st = None
+        if a.startswith("inventario:"):
+            i = per_tipo.get(a.split(":", 1)[1])
+            if i and i["stato"] != "archiviato":
+                st = "verificato" if i["stato"] == "non-pubblicato" else "da-verificare"
+        elif a == "cloud":
+            if ini in car["iniziative_cloud"] or set(categorie) & {"cloud-provider", "cloud-multi", "psn"}:
+                st = "da-verificare"
+        elif a == "tutte":
+            st = "da-verificare"
+        elif a == "indice" and tipo_sogg == "consip":
+            st = "verificato" if (pag and not pagine_ok and pag.get("chiave_ricerca", "").upper() == pag.get("chiave_ricerca", "") and not pag["chiave_ricerca"].isdigit()) else "da-verificare"
+        if st:
+            nota = ""
+            if st == "verificato" and a.startswith("inventario:"):
+                nota = per_tipo[a.split(":", 1)[1]]["nota"]
+            elif st == "verificato" and a == "indice":
+                nota = f"ricerca pubblica consip.it per CIG {pag['chiave_ricerca']} senza esito ({pag['data'][:10]})"
+            out.append({"id": c["id"], "titolo": c["titolo"], "stato": st, "nota": nota, "raccomandazione": c["raccomandazione"]})
+    return out
+
+
 def main():
     cens, arch, kb, cur = carica()
+    global CAR
+    CAR = yaml.safe_load(open(DB / "carenze.yaml", encoding="utf-8"))
     gruppi = defaultdict(list)
     for r in cens:
         gruppi[r["iniziativa"]].append(r)
@@ -153,6 +183,8 @@ def main():
         docs, pagine_ok, pag = documenti_osservati(ini, lotti, arch, kb, c)
         inv = inventario(ini, docs, pagine_ok, pag, c)
         ok = sum(1 for i in inv if i["stato"] == "archiviato")
+        categorie = sorted({kb.get(x["cig_padre"], {}).get("categoria") for x in lotti} - {None})
+        car_ini = carenze_di(ini, inv, categorie, pagine_ok, pag, CAR, lotti[0]["tipo_soggetto"])
         l0 = lotti[0]
         kb0 = kb.get(l0["cig_padre"], {})
         regola = c.get("regola_giurisdizione") or next(
@@ -176,6 +208,7 @@ def main():
             "inventario": inv, "copertura": round(ok / len(inv), 3),
             "mancanze": [{"tipo": i["tipo"], "descrizione": i["descrizione"], "stato": i["stato"], "fonte": i["dove_di_norma"], "via": i["via_se_manca"]}
                          for i in inv if i["stato"] != "archiviato"],
+            "carenze": car_ini,
             "analisi": c.get("analisi"), "note": c.get("note"),
         })
     voci.sort(key=lambda v: (v["stato_iniziativa"] != "attiva", -(v["valore_ict_2024_2025"] or 0), -v["valore_ict_2020_2026"], v["id"]))

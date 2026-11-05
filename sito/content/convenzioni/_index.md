@@ -15,6 +15,33 @@ Per il contesto cloud vedi [Iniziative Consip cloud](/progetto/iniziative-consip
 
 <p>Filtra per tipo di soggetto: <select id="filtro-tipo" onchange="(function(s){document.querySelectorAll('tr[data-tipo]').forEach(function(r){r.style.display=(!s.value||r.dataset.tipo===s.value)?'':'none'})})(this)"><option value="">tutti</option><option value="consip">Consip</option><option value="psn">PSN</option><option value="aggregatore-regionale">Aggregatore regionale</option><option value="consorzio-unione">Consorzio o unione</option><option value="altro">Altro</option></select></p>
 
+<div class="callout danger" style="border-left:6px solid #b00020;padding:.8em 1em;background:#fdecee;margin:1.5em 0">
+<h2>Carenze di trasparenza</h2>
+<p>Dati che non vengono pubblicati pur servendo a controllare la spesa e la sovranità. «Verificato» = assenza constatata da noi sulla pagina ufficiale dell'iniziativa (con data); «da verificare» = pagina non ancora consultata o dato riferito. Valore = somma dei derivati ICT 2024-2025 delle iniziative colpite (ordine di grandezza, non transato).</p>
+<table class="table table-sm"><thead><tr><th>Carenza</th><th>Iniziative colpite (verificato / da verificare)</th><th>M€ coinvolti (verificato)</th><th>Obbligo di pubblicare?</th><th>Proposta</th></tr></thead><tbody>
+<tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>40 / 46</td><td>50.607,3</td><td>no</td><td>R39</td></tr>
+<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R39</td></tr>
+<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>41 / 45</td><td>50.697,5</td><td>no</td><td>R37</td></tr>
+<tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>41 / 44</td><td>50.697,5</td><td>in parte</td><td>R08</td></tr>
+<tr><td><strong>C5</strong> Progetti e piani dei fabbisogni</td><td>0 / 1</td><td>0,0</td><td>no</td><td>R41</td></tr>
+<tr><td><strong>C6</strong> Region e data center dichiarati</td><td>0 / 5</td><td>0,0</td><td>no</td><td>R42</td></tr>
+<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>0 / 86</td><td>0,0</td><td>no</td><td>R37</td></tr>
+<tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>4 / 41</td><td>951,7</td><td>no</td><td>R38</td></tr>
+</tbody></table>
+<p><strong>Per tipo di soggetto</strong> (iniziative colpite, verificato + da verificare):</p>
+<table class="table table-sm"><thead><tr><th>Carenza</th><th>Consip</th><th>PSN</th><th>Aggregatore regionale</th><th>Consorzio o unione</th><th>Altro</th></tr></thead><tbody>
+<tr><td>C1 Offerte tecniche dei vincitori</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
+<tr><td>C2 Listini e prezzi offerti dagli aggiudicatari</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
+<tr><td>C3 Transato per lotto, listino e marchio</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
+<tr><td>C4 Ordinativi e contratti attuativi</td><td>45/45</td><td>0/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
+<tr><td>C5 Progetti e piani dei fabbisogni</td><td>1/45</td><td>0/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
+<tr><td>C6 Region e data center dichiarati</td><td>4/45</td><td>1/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
+<tr><td>C7 Monitoraggio delle soglie di erosione dei massimali</td><td>45/45</td><td>1/1</td><td>25/25</td><td>4/4</td><td>11/11</td></tr>
+<tr><td>C8 Indice ID Sigef ↔ CIG dei lotti</td><td>45/45</td><td>0/1</td><td>0/25</td><td>0/4</td><td>0/11</td></tr>
+</tbody></table>
+<p>Basi normative e ragioni: <a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/carenze.yaml">carenze.yaml</a> e <a href="/progetto/normativa-documenti-gara/">scheda normativa</a>. Rimedio di breve periodo: <a href="/convenzioni/accesso-civico/">bozze di accesso civico generalizzato</a> (preparate, non inviate). Proposte di policy: R37-R42 in richieste-e-raccomandazioni.yaml.</p>
+</div>
+
 ## Iniziative attive
 
 <table class="table table-sm"><thead><tr><th>#</th><th>Iniziativa</th><th>Tipo</th><th>M€ ICT 2024-25</th><th>Derivati</th><th>Archiviati</th><th>Mancanti</th><th>Copertura</th></tr></thead><tbody>

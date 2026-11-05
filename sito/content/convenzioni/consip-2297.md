@@ -23,6 +23,20 @@ description: "Iniziativa consip-2297: dati, documenti archiviati e mancanti."
 | Regola di giurisdizione | da ricavare dai documenti |
 | Copertura documentale | 8 % dei tipi di documento attesi |
 
+<div class="callout warning" style="border-left:6px solid #a66300;padding:.8em 1em;background:#fff6e5;margin:1.5em 0">
+<div class="callout-title"><strong>Carenze di trasparenza di questa iniziativa</strong></div>
+<table class="table table-sm"><thead><tr><th>Carenza</th><th>Stato</th><th>Base (norma o ragione)</th><th>Proposta</th></tr></thead><tbody>
+<tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V].</td><td>R39</td></tr>
+<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente.</td><td>R39</td></tr>
+<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già.</td><td>R37</td></tr>
+<tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R].</td><td>R08</td></tr>
+<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>riferito / da verificare</td><td>Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa.</td><td>R37</td></tr>
+<tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>riferito / da verificare</td><td>Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede.</td><td>R38</td></tr>
+</tbody></table>
+<p>Rimedio di breve periodo: <a href="/convenzioni/accesso-civico/">bozze di accesso civico generalizzato</a> (non inviate).</p>
+</div>
+
+
 Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati con CPV ICT: alcuni attuativi riportano il massimale dell'accordo quadro invece del valore del contratto, quindi sono un ordine di grandezza (verificato: `tools/analisi/padri_ict.py`; anomalie in `report/convenzioni/incertezze.md`).
 
 ## Pagina pubblica

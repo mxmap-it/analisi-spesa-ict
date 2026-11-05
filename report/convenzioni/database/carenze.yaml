@@ -1,0 +1,68 @@
+# #62 — Carenze delle politiche di trasparenza delle iniziative ICT (Fabio, 5/11/2026).
+# Una classe per dato che non viene pubblicato pur servendo a controllare spesa e sovranità.
+# Livelli: [V] = verificato da noi (norma letta sul testo, scheda report/metodo/accessibilita-documenti-normativa.md, o assenza
+# constatata sulla pagina ufficiale con data); [R] = riferito o da verificare sul testo (non letto in questa sessione).
+# applica: come si decide se la carenza colpisce un'iniziativa (lo fa tools/convenzioni/base_dati.py):
+#   inventario:<tipo>  -> colpisce se quel tipo non è archiviato; «verificato» se lo stato è non-pubblicato (pagina consultata)
+#   cloud              -> iniziative con categoria cloud-provider, cloud-multi, psn, o in iniziative_cloud
+#   tutte              -> tutte le iniziative attive; stato «da-verificare» finché non si controlla la pagina
+#   indice             -> «verificato» se la pagina ufficiale non si trova cercando il CIG; altrimenti da verificare
+carenze:
+  - id: C1
+    titolo: Offerte tecniche dei vincitori
+    applica: inventario:offerta_tecnica
+    perche_serve: "Nell'offerta tecnica stanno i prodotti, i marchi, i data center e i subfornitori effettivamente proposti: decidono la giurisdizione (asse B dell'imbuto). Senza, la giurisdizione di un lotto si deduce dal titolo."
+    base: "Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V]."
+    obbligo: "no"
+    raccomandazione: R39
+  - id: C2
+    titolo: Listini e prezzi offerti dagli aggiudicatari
+    applica: inventario:offerta_economica
+    perche_serve: "Il listino offerto dice quali prodotti si comprano e a che prezzo per marchio; per PRINCO i prodotti del listino Open Source stanno solo nell'Allegato 12 dell'offerta di Converge."
+    base: "Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente."
+    obbligo: "no"
+    raccomandazione: R39
+  - id: C3
+    titolo: Transato per lotto, listino e marchio
+    applica: inventario:transato_monitoraggio
+    perche_serve: "Gli importi BDNCP degli attuativi spesso riportano il massimale (31 G€ dichiarati sul lotto 1 dell'ID 2483): solo il transato misura la spesa reale e, per listino o marchio, la quota extra-UE."
+    base: "Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già."
+    obbligo: "no"
+    raccomandazione: R37
+  - id: C4
+    titolo: Ordinativi e contratti attuativi
+    applica: inventario:ordinativi
+    perche_serve: "L'ordinativo dice quale ente ha comprato quale prodotto: è il collegamento fra il catalogo e la spesa per ente."
+    base: "Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R]."
+    obbligo: parziale
+    raccomandazione: R08
+  - id: C5
+    titolo: Progetti e piani dei fabbisogni
+    applica: inventario:progetti_fabbisogni
+    perche_serve: "Nel PSN e in SPC Cloud il Progetto del Piano dei Fabbisogni ripartisce l'importo fra Industry Standard, Secure Public Cloud (per provider), Hybrid e servizi: è l'unico documento che separa la quota extra-UE."
+    base: "Nessun obbligo esplicito; è parte del contratto di utenza, quindi rientra negli atti dell'esecuzione [R]. Precedente verificato: 19 PPdF pubblicati integralmente da 15 enti (report/convenzioni/psn-database/), un diniego di fatto (Regione Calabria) per clausola di confidenzialità [V]."
+    obbligo: "no"
+    raccomandazione: R41
+  - id: C6
+    titolo: Region e data center dichiarati
+    applica: cloud
+    perche_serve: "Per i servizi cloud la giurisdizione dipende da produttore e luogo del trattamento; region e data center non stanno in nessun dataset."
+    base: "Nessun obbligo di pubblicazione per singola iniziativa. ACN qualifica i servizi cloud e ne pubblica il catalogo [R]; il catalogo non è legato al CIG del lotto. Ragione: requisito di sovranità che la PA deve poter verificare prima di aderire (art. 33-septies d.l. 179/2012) [R]."
+    obbligo: "no"
+    raccomandazione: R42
+  - id: C7
+    titolo: Monitoraggio delle soglie di erosione dei massimali
+    applica: tutte
+    perche_serve: "Senza erosione per lotto non si sa se un massimale è speso, residuo o esaurito: si confondono massimali e spesa."
+    base: "Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa."
+    obbligo: "no"
+    raccomandazione: R37
+  - id: C8
+    titolo: Indice ID Sigef ↔ CIG dei lotti
+    applica: indice
+    perche_serve: "BDNCP parla per CIG, Consip per ID Sigef: senza indice il legame fra dati e documenti si deduce dal testo."
+    base: "Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede."
+    obbligo: "no"
+    raccomandazione: R38
+# iniziative trattate come cloud per C6 anche senza categoria nella base di conoscenza
+iniziative_cloud: [consip-2928, consip-2746, consip-2213, consip-1403, psn]

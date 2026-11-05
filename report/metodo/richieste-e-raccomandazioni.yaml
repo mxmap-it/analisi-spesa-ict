@@ -74,6 +74,8 @@
   tipo: miglioramento
   stato: proposta
   titolo: Ordinativi delle convenzioni ICT in dati aperti con il prodotto
+  carenze: [C4]
+  politica: "Consip e aggregatori pubblicano in dati aperti gli ordinativi (ente, data, lotto, prodotto, importo, CIG derivato); ANAC rende obbligatorio il link ai documenti anche nelle schede di adesione (R30); gli enti pubblicano l'ordinativo con l'atto ex art. 28 d.lgs. 36/2023 (aggiornata il 5/11/2026, #62)"
   richiesta: Dati aperti degli ordinativi (chi ha comprato quale prodotto, quanto) per le convenzioni di licenze e cloud (es. Microsoft Enterprise Agreement, Licenze software multibrand)
   perche_serve: Le adesioni a convenzioni Microsoft o multibrand passano da rivenditori (TIM); il prodotto per ordine è noto a Consip, non nei dati ANAC
   rif: ["#11"]
@@ -354,10 +356,12 @@
   perche_serve: L'estrazione automatica di prodotto e importi richiede testo leggibile
   rif: ["#63"]
 - id: R37
-  destinatario: Consip, centrali di committenza regionali
+  destinatario: Consip, MEF (Programma di razionalizzazione degli acquisti), centrali di committenza regionali
   tipo: miglioramento
   stato: proposta
-  titolo: Transato per lotto e per listino di ogni iniziativa ICT, in dati aperti
+  titolo: Transato per lotto, listino e marchio ed erosione dei massimali di ogni iniziativa ICT, in dati aperti
+  carenze: [C3, C7]
+  politica: "Pubblicazione trimestrale obbligatoria (decreto MEF o linee guida AgID per l'ICT) del transato e del massimale eroso per CIG di lotto, listino e marchio, in formato aperto e con licenza libera; stessa regola per i soggetti aggregatori (art. 9 d.l. 66/2014)"
   evidenza: "Nella base dati #62 il «transato e monitoraggio» non è pubblicato per nessuna delle iniziative censite con pagina Consip; per PRINCO ID 2928 manca il transato per listino (Microsoft / Google / Open Source)"
   prova: report/convenzioni/database/iniziative.json (inventario, tipo transato_monitoraggio); tools/verifiche/convenzioni_copertura.py
   richiesta: "Serie trimestrale aperta del transato e degli ordinativi per CIG di lotto e per listino/marchio"
@@ -368,6 +372,8 @@
   tipo: miglioramento
   stato: proposta
   titolo: Indice pubblico ID Sigef ↔ CIG dei lotti, ricercabile per CIG
+  carenze: [C8]
+  politica: "Ogni pagina di bando riporta i CIG di tutti i lotti; Consip pubblica un dataset aperto ID Sigef, lotto, CIG, stato, date; ANAC aggiunge in BDNCP il campo dell'identificativo della centrale"
   evidenza: "La ricerca pubblica di consip.it/imprese/bandi per CIG padre non trova la pagina dell'iniziativa (es. SPC2 connettività 5133642F61); la corrispondenza si ricava dal testo dell'oggetto in BDNCP o dagli avvisi GUUE"
   prova: report/convenzioni/database/consip/*.json (esito «non-trovata» con chiave = CIG)
   richiesta: "Nella pagina di ogni bando i CIG di tutti i lotti in chiaro; un elenco scaricabile ID Sigef, lotto, CIG, stato"
@@ -378,6 +384,8 @@
   tipo: miglioramento
   stato: proposta
   titolo: Offerta tecnica ed economica dell'aggiudicatario pubblicate dopo la stipula, con oscuramento motivato
+  carenze: [C1, C2]
+  politica: "Per accordi quadro e convenzioni (che valgono per tutte le PA aderenti) pubblicazione, a stipula avvenuta, dell'offerta tecnica con le sole parti segrete oscurate e motivate in gara, e del listino offerto integrale; obbligo da inserire nelle linee guida ANAC sulla trasparenza (del. 264/2023) o nel disciplinare tipo Consip"
   evidenza: "Nessuna delle pagine Consip censite al 5/11/2026 pubblica le offerte degli aggiudicatari; per PRINCO i prodotti del listino Open Source stanno solo nell'Allegato 12 dell'offerta di Converge"
   prova: report/convenzioni/database/iniziative.json (tipi offerta_tecnica, offerta_economica)
   richiesta: "Pubblicare, a stipula avvenuta, offerte tecniche e listini offerti con le sole parti coperte da segreto tecnico-commerciale oscurate e motivate (art. 35 d.lgs. 36/2023)"
@@ -388,8 +396,34 @@
   tipo: miglioramento
   stato: proposta
   titolo: Pagina pubblica uniforme per ogni convenzione o AQ degli aggregatori, legata al CIG padre
+  carenze: [C1, C2, C3, C4, C7, C8]
+  politica: "Lo stesso pacchetto minimo di Consip (documenti, CIG dei lotti, aggiudicatari, listini, transato, erosione) per ogni soggetto aggregatore, come condizione di iscrizione all'elenco ANAC"
   evidenza: "Per le iniziative di aggregatori regionali e consorzi censite in #62 la documentazione sta su piattaforme diverse (Sintel, Intercent-ER, EmPULIA, START…), spesso dietro navigazione JS o login: inventario «da verificare»"
   prova: report/convenzioni/database/iniziative.json (tipo_soggetto aggregatore-regionale, consorzio-unione)
   richiesta: "Per ogni convenzione o AQ: pagina pubblica con CIG padre e lotti, documenti scaricabili senza login, aggiudicatari, massimali, transato"
   perche_serve: "Rende confrontabili le iniziative regionali con quelle Consip e archiviabili con lo stesso processo"
   rif: ["#62", "#57", R18]
+- id: R41
+  destinatario: DTD-PCM (concedente PSN), Consip (SPC Cloud), enti aderenti
+  tipo: miglioramento
+  stato: proposta
+  titolo: Pubblicazione dei Progetti dei Piani dei Fabbisogni (almeno il riepilogo prezzi)
+  carenze: [C5]
+  evidenza: "19 PPdF pubblicati integralmente da 15 enti; un diniego di fatto (Regione Calabria, decreto 9370/2023) per clausola di confidenzialità"
+  prova: report/convenzioni/psn-database/documenti-psn.csv
+  richiesta: "Pubblicazione, da parte dell'ente, del riepilogo prezzi del PPdF approvato insieme all'atto di affidamento; rimozione della clausola di confidenzialità dai modelli"
+  politica: "Il PPdF (o il suo riepilogo per famiglia di servizio e cloud provider) come allegato obbligatorio dell'atto pubblicato ex art. 28 d.lgs. 36/2023"
+  perche_serve: "È l'unico documento che separa la quota extra-UE (Secure Public Cloud per provider) dentro un contratto PSN"
+  rif: ["#55", "#62"]
+- id: R42
+  destinatario: ACN, AgID, Consip, PSN, centrali di committenza
+  tipo: miglioramento
+  stato: proposta
+  titolo: Region e data center dichiarati per ogni lotto e servizio cloud, legati al CIG
+  carenze: [C6]
+  evidenza: "Nelle pagine delle iniziative cloud censite (#62) region e data center non sono indicati per lotto; il catalogo ACN dei servizi qualificati non porta il CIG"
+  prova: report/convenzioni/database/iniziative.json (carenza C6)
+  richiesta: "Per ogni lotto o listino cloud: produttore, paese della capogruppo, region e paese dei data center, livello di qualificazione ACN, in un dataset aperto con il CIG"
+  politica: "Campo obbligatorio nelle schede BDNCP per i CPV cloud e allegato pubblico di ogni convenzione o AQ cloud; il catalogo ACN espone il CIG delle iniziative in cui il servizio è acquistabile"
+  perche_serve: "La giurisdizione del prodotto (asse B dell'imbuto) oggi si deduce dal titolo del lotto"
+  rif: ["#62"]

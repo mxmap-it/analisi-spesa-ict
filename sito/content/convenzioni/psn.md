@@ -23,6 +23,19 @@ description: "Iniziativa psn: dati, documenti archiviati e mancanti."
 | Regola di giurisdizione | Secure Public Cloud (Azure, Google, AWS), PSN Managed (Oracle Alloy), Hybrid (Azure Stack) = extra-UE; Industry Standard erogato in proprio = IT (criteri-sovranita 3/11) |
 | Copertura documentale | 36 % dei tipi di documento attesi |
 
+<div class="callout warning" style="border-left:6px solid #a66300;padding:.8em 1em;background:#fff6e5;margin:1.5em 0">
+<div class="callout-title"><strong>Carenze di trasparenza di questa iniziativa</strong></div>
+<table class="table table-sm"><thead><tr><th>Carenza</th><th>Stato</th><th>Base (norma o ragione)</th><th>Proposta</th></tr></thead><tbody>
+<tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>riferito / da verificare</td><td>Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V].</td><td>R39</td></tr>
+<tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>riferito / da verificare</td><td>Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente.</td><td>R39</td></tr>
+<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>riferito / da verificare</td><td>Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già.</td><td>R37</td></tr>
+<tr><td><strong>C6</strong> Region e data center dichiarati</td><td>riferito / da verificare</td><td>Nessun obbligo di pubblicazione per singola iniziativa. ACN qualifica i servizi cloud e ne pubblica il catalogo [R]; il catalogo non è legato al CIG del lotto. Ragione: requisito di sovranità che la PA deve poter verificare prima di aderire (art. 33-septies d.l. 179/2012) [R].</td><td>R42</td></tr>
+<tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>riferito / da verificare</td><td>Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa.</td><td>R37</td></tr>
+</tbody></table>
+<p>Rimedio di breve periodo: <a href="/convenzioni/accesso-civico/">bozze di accesso civico generalizzato</a> (non inviate).</p>
+</div>
+
+
 Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati con CPV ICT: alcuni attuativi riportano il massimale dell'accordo quadro invece del valore del contratto, quindi sono un ordine di grandezza (verificato: `tools/analisi/padri_ict.py`; anomalie in `report/convenzioni/incertezze.md`).
 
 ## Rendiconti esistenti

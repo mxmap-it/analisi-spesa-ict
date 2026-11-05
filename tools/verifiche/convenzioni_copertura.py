@@ -43,6 +43,11 @@ def main():
             st[i["tipo"]][i["stato"]] += 1
     for t, c in st.items():
         print(f"  {t}: {dict(c)}")
+    # numeri del riquadro «Carenze di trasparenza»: iniziative colpite e valore (verificato)
+    for cid in sorted({k["id"] for v in voci for k in v.get("carenze", [])}):
+        ver = [v for v in voci if any(k["id"] == cid and k["stato"] == "verificato" for k in v["carenze"])]
+        dv = [v for v in voci if any(k["id"] == cid and k["stato"] != "verificato" for k in v["carenze"])]
+        print(f"carenza {cid}: verificato {len(ver)} ({round(sum(v['valore_ict_2024_2025'] or 0 for v in ver) / 1e6)} M EUR), da verificare {len(dv)}")
     sys.exit(0 if ok else 1)
 
 
