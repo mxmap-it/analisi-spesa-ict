@@ -125,7 +125,8 @@ def inventario(ini, docs, pagine_ok, pag, c):
     righe = []
     for t in list(ATTESI) + EXTRA.get(ini, []):
         desc, dove, via = ATTESI.get(t) or ATTESI_EXTRA[t]
-        dt = [d for d in docs if d["tipo"] == t]
+        altrove = [d for d in docs if d["tipo"] == t and d.get("ufficiale") is False]  # fonte non ufficiale: non cambia lo stato
+        dt = [d for d in docs if d["tipo"] == t and d.get("ufficiale") is not False]
         nota = ""
         if t == "cig_derivati":
             st, nota = "archiviato", "BDNCP ANAC, verificato (tools/analisi/padri_ict.py)"
@@ -142,7 +143,8 @@ def inventario(ini, docs, pagine_ok, pag, c):
         else:
             st, nota = "da-verificare", "pagina pubblica dell'iniziativa non ancora individuata"
         righe.append({"tipo": t, "descrizione": desc, "stato": st, "dove_di_norma": dove, "via_se_manca": via, "nota": nota,
-                      "documenti": [{k: d.get(k) for k in ("nome", "url", "dove", "stato", "sha256", "data")} for d in dt]})
+                      "documenti": [{k: d.get(k) for k in ("nome", "url", "dove", "stato", "sha256", "data", "nota")} for d in dt],
+                      "reperiti_altrove": [{k: d.get(k) for k in ("nome", "url", "fonte", "affidabilita", "sha256", "data")} for d in altrove]})
     return righe
 
 
@@ -172,6 +174,49 @@ def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
                 nota = f"ricerca pubblica consip.it per CIG {pag['chiave_ricerca']} senza esito ({pag['data'][:10]})"
             out.append({"id": c["id"], "titolo": c["titolo"], "stato": st, "nota": nota, "raccomandazione": c["raccomandazione"]})
     return out
+
+
+def scrivi_griglia(voci):
+    """JSON compatto per il cruscotto a griglia (/convenzioni/griglia/): una riga per iniziativa, una cella per tipo atteso.
+    Stato della cella: ufficiale | non-ufficiale | pubblicato | carenza | da-verificare | richiesto (istanza nel registro)."""
+    reg = {}
+    rp = R / "report/convenzioni/accesso-civico/registro.csv"
+    if rp.exists():
+        for r in csv.DictReader(open(rp, encoding="utf-8")):
+            reg[r["id"]] = r
+    car_tipo = {c["applica"].split(":", 1)[1]: c["id"] for c in CAR["carenze"] if c["applica"].startswith("inventario:")}
+    tipi = list(ATTESI) + ["progetti_fabbisogni"]
+    righe = []
+    for v in voci:
+        celle = {}
+        for i in v["inventario"]:
+            cid = car_tipo.get(i["tipo"])
+            istanza = reg.get(f"{v['id']}-{cid}".lower()) if cid else None
+            if i["stato"] == "archiviato":
+                st = "ufficiale"
+            elif i["reperiti_altrove"]:
+                st = "non-ufficiale"
+            elif istanza and istanza["stato"] != "preparata":
+                st = "richiesto"
+            elif i["stato"] == "pubblicato-non-archiviato":
+                st = "pubblicato"
+            elif i["stato"] == "non-pubblicato":
+                st = "carenza"
+            else:
+                st = "da-verificare"
+            d0 = (i["documenti"] or i["reperiti_altrove"] or [{}])[0]
+            celle[i["tipo"]] = {"s": st, "n": len(i["documenti"]), "a": len(i["reperiti_altrove"]), "nota": i["nota"][:200],
+                                "doc": d0.get("nome", "")[:120], "url": d0.get("url"), "sha": d0.get("sha256"), "fonte": d0.get("fonte") or d0.get("dove"),
+                                "carenza": cid, "istanza": (istanza or {}).get("id"), "istanza_stato": (istanza or {}).get("stato")}
+        righe.append({"id": v["id"], "nome": v["nome"][:140], "tipo": v["tipo_soggetto"], "stato": v["stato_iniziativa"],
+                      "categoria": v["categoria"][0] if v["categoria"] else "non-classificata", "valore": v["valore_ict_2024_2025"] or 0,
+                      "copertura": v["copertura"], "carenze": [k["id"] for k in v["carenze"]], "celle": celle})
+    out = {"generato": "tools/convenzioni/base_dati.py", "tipi": [{"id": t, "descrizione": (ATTESI.get(t) or ATTESI_EXTRA[t])[0]} for t in tipi],
+           "istanze": {"preparate": sum(1 for r in reg.values() if r["stato"] == "preparata"), "inviate": sum(1 for r in reg.values() if r["stato"] != "preparata")},
+           "righe": righe}
+    dest = R / "sito/static/dati/convenzioni-griglia.json"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
 def main():
@@ -217,6 +262,7 @@ def main():
         })
     voci.sort(key=lambda v: (v["stato_iniziativa"] != "attiva", -(v["valore_ict_2024_2025"] or 0), -v["valore_ict_2020_2026"], v["id"]))
     (DB / "iniziative.json").write_text(json.dumps(voci, ensure_ascii=False, indent=1), encoding="utf-8")
+    scrivi_griglia(voci)
     with open(DB / "lotti.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["iniziativa", "tipo_soggetto", "stato_iniziativa", "cig_padre", "anno_padre", "derivati_ict_2024_2025", "euro_ict_2024_2025",

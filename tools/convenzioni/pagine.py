@@ -3,11 +3,14 @@
 Non si modificano a mano le pagine generate: si cambia la base dati (o curate.yaml) e si rilancia.
 Uso: python tools/convenzioni/pagine.py"""
 import json
+import sys
 import yaml
 import shutil
 from pathlib import Path
 
 R = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from griglia_pagina import GRIGLIA  # noqa: E402
 DB = R / "report/convenzioni/database"
 OUT = R / "sito/content/convenzioni"
 GH = "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/"
@@ -82,6 +85,15 @@ def pagina(v):
         for desc, d in docs:
             sha = f"`{d['sha256'][:16]}…`" if d.get("sha256") else "non archiviato"
             righe.append(f"| {desc} | {esc(d['nome'])[:90]} | [link]({d['url'].replace(' ', '%20')}) | {sha} |")
+    altrove = [(i["descrizione"], d) for i in v["inventario"] for d in i.get("reperiti_altrove", [])]
+    if altrove:
+        righe += ["", "### Reperiti da fonte non ufficiale", "",
+                  "Documenti che la centrale non pubblica, trovati con la ricerca online complementare. **La carenza resta**: il dato "
+                  "esiste altrove, ma la politica di pubblicazione non lo garantisce.", "",
+                  "| Tipo | Documento | Dove | Affidabilità | Copia (sha256) |", "|---|---|---|---|---|"]
+        for desc, d in altrove:
+            righe.append(f"| {desc} | [{esc(d['nome'])[:110]}]({d['url']}) | non pubblicato dalla centrale; reperito su {esc(d.get('fonte'))} il {d.get('data')} | "
+                         f"{d.get('affidabilita') or '–'} | `{(d.get('sha256') or '')[:16]}…` |")
     if v.get("analisi"):
         righe += ["", "## Analisi dei documenti chiave", ""]
         for a in v["analisi"]:
@@ -133,6 +145,7 @@ def main():
     idx = ["---", 'title: "Convenzioni e accordi quadro ICT"', "date: 2026-11-05",
            'description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, consorzi): valore, documenti archiviati e mancanti."',
            "---", "", AVVISO,
+           "**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola.", "",
            f"Censimento di **{len(voci)} iniziative** ({len(att)} attive, {len(st)} storiche) con i loro lotti, i documenti pubblici "
            f"archiviati e quelli che mancano. Copertura documentale media: **{pct(media)}** dei tipi di documento attesi.", "",
            "**Criterio.** Un'iniziativa è un ID Sigef Consip, o una gara (CIG padre) di un altro soggetto. È «attiva» se ha CIG derivati "
@@ -188,6 +201,7 @@ def main():
     for v in voci:
         (OUT / f"{v['id'].lower()}.md").write_text(pagina(v), encoding="utf-8")
     pagina_registro(voci)
+    (OUT / "griglia.md").write_text(GRIGLIA, encoding="utf-8")
     print(len(voci), "pagine")
 
 

@@ -7,6 +7,8 @@ description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, c
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
+**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola.
+
 Censimento di **86 iniziative** (82 attive, 4 storiche) con i loro lotti, i documenti pubblici archiviati e quelli che mancano. Copertura documentale media: **11 %** dei tipi di documento attesi.
 
 **Criterio.** Un'iniziativa è un ID Sigef Consip, o una gara (CIG padre) di un altro soggetto. È «attiva» se ha CIG derivati con CPV ICT nel 2024-2025 (o è nuova: PRINCO ID 2928, IaaS/PaaS 2 ID 2746). Si prendono le prime per valore dei derivati ICT 2024-2025 in ciascun tipo di soggetto (40 Consip, 25 aggregatori regionali, 15 consorzi o unioni, 10 altri; fuori Consip almeno 3 derivati e 1 M€), più il PSN. Le iniziative della base di conoscenza senza derivati recenti ma con almeno 100 M€ dal 2020 sono elencate a parte come «storiche». Dettagli: [README della base dati](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/README.md).

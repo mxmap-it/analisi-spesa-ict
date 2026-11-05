@@ -94,6 +94,17 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2746 L 2-3-4 GUUE ONLINE 24.02.2026 S 38.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202746%20L%202-3-4%20GUUE%20ONLINE%2024.02.2026%20S%2038.pdf) | non archiviato |
 | avviso di aggiudicazione o esito | ID 2746 L.1-5-6 ESITO GUUE S 11 DEL 16-01-26.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202746%20L.1-5-6%20ESITO%20GUUE%20S%2011%20DEL%2016-01-26.pdf) | non archiviato |
 
+### Reperiti da fonte non ufficiale
+
+Documenti che la centrale non pubblica, trovati con la ricerca online complementare. **La carenza resta**: il dato esiste altrove, ma la politica di pubblicazione non lo garantisce.
+
+| Tipo | Documento | Dove | Affidabilità | Copia (sha256) |
+|---|---|---|---|---|
+| ordinativi e contratti attuativi delle PA | [ARERA, determina 76/DAGR/2026: adesione al lotto 1 (AWS, Fastweb, CIG B6A19F425E)](https://www.arera.it/fileadmin/allegati/docs/26/76-26-dagr.pdf) | non pubblicato dalla centrale; reperito su arera.it (AT di ARERA) il 2026-11-05 | A | `75090b5438b35b6f…` |
+| ordinativi e contratti attuativi delle PA | [ARERA, determina 57/DAGR/2026: adesione al lotto 3 (Microsoft Azure, SoftwareOne)](https://www.arera.it/fileadmin/allegati/docs/26/57-26dagr.pdf) | non pubblicato dalla centrale; reperito su arera.it (AT di ARERA) il 2026-11-05 | A | `a9ec76d0d5d56f1a…` |
+| ordinativi e contratti attuativi delle PA | [UCAN, decisione a contrarre 32/2026: adesione al lotto 3 (Azure)](https://www.giustizia.it/cmsresources/cms/documents/UCAN_decisione_a_contrarre_32_2026.pdf) | non pubblicato dalla centrale; reperito su giustizia.it (Ministero della Giustizia, UCAN) il 2026-11-05 | A | `cfab9c1b44e89c63…` |
+| ordinativi e contratti attuativi delle PA | [Comune di Firenze, DD 2941/2026: servizi Microsoft Azure, lotto 3 (riferito dal titolo, da leggere)](https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20260420/20260417-DD2941.pdf) | non pubblicato dalla centrale; reperito su affidamenti.comune.fi.it (Comune di Firenze) il 2026-11-05 | A | `840fd37589af3e7a…` |
+
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |

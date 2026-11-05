@@ -87,6 +87,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | avviso di aggiudicazione o esito | ESITO ID 2755.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ESITO%20ID%202755.pdf) | non archiviato |
 | avviso di aggiudicazione o esito | aggiudicazione TED ID 2755, lotto unico 'Fornitura di licenze d'uso' | [link](https://ted.europa.eu/it/notice/251426-2025/xml) | `265a0ef68464dbcd…` |
 
+### Reperiti da fonte non ufficiale
+
+Documenti che la centrale non pubblica, trovati con la ricerca online complementare. **La carenza resta**: il dato esiste altrove, ma la politica di pubblicazione non lo garantisce.
+
+| Tipo | Documento | Dove | Affidabilità | Copia (sha256) |
+|---|---|---|---|---|
+| ordinativi e contratti attuativi delle PA | [MAECI, determina 1019 del 10/10/2025 (Microsoft EA9): rinnovo licenze M365, cita ordinativi EA7 (2.057 licenze](https://www.esteri.it/wp-content/uploads/2025/10/Determina-n.-1019-del-10.10.2025-Microsoft-EA9_Firmato.pdf) | non pubblicato dalla centrale; reperito su esteri.it (AT del MAECI) il 2026-11-05 | A | `9c57dba2cd3e31a1…` |
+
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |

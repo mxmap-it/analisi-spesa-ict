@@ -21,6 +21,11 @@ un processo ripetibile: gli anni passati, l'anno in corso, quelli futuri.
 **È l'ultimo risultato a uscire**, perché non si misura la spesa su dati di cui non si conoscono
 i buchi. Prima vengono cinque passi, ciascuno pubblico e utile da solo.
 
+## Convenzioni e accordi quadro ICT
+
+Le principali iniziative di acquisto ICT (Consip, PSN, soggetti aggregatori): documenti archiviati e mancanti,
+carenze di trasparenza e accesso civico. [Indice](/convenzioni/) · [griglia di tutte le iniziative](/convenzioni/griglia/).
+
 ## I passi intermedi
 
 | | Passo | Stato |

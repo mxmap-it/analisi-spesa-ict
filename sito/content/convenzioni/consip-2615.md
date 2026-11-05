@@ -87,6 +87,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2615.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202615.pdf) | non archiviato |
 | avviso di aggiudicazione o esito | aggiudicazione TED ID 2615 EA ottava edizione (eForms, senza CIG) | [link](https://ted.europa.eu/it/notice/272361-2024/xml) | `2888fafcfb7f0af5…` |
 
+### Reperiti da fonte non ufficiale
+
+Documenti che la centrale non pubblica, trovati con la ricerca online complementare. **La carenza resta**: il dato esiste altrove, ma la politica di pubblicazione non lo garantisce.
+
+| Tipo | Documento | Dove | Affidabilità | Copia (sha256) |
+|---|---|---|---|---|
+| ordinativi e contratti attuativi delle PA | [ART, determina 112/2026: licenze Microsoft Office 365 con adesione a EA8 (riferito dal titolo, da leggere)](https://www.autorita-trasporti.it/wp-content/uploads/2026/06/det_00112_04-06-2026.pdf) | non pubblicato dalla centrale; reperito su autorita-trasporti.it (AT dell'ART) il 2026-11-05 | A | `6963a4a0081d85c1…` |
+
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |

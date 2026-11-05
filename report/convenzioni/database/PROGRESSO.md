@@ -17,3 +17,5 @@ File di ripresa (regola di resilienza): ogni passo chiuso si annota qui, con com
 | 5/11 | carenze C1-C8, bozze accesso civico (127, non inviate), registro, R37-R42, DECISIONI | fatto | |
 | 5/11 | rilettura atti PRINCO archiviati (R → V) | fatto | curate.yaml |
 | 5/11 | scarto dei documenti di altre gare linkati nelle pagine Consip | fatto | |
+| 5/11 | ricerca online complementare: 7 documenti archiviati (6 atti di enti aderenti su 2746, 2755, 2615 come «fonte non ufficiale»; chiarimenti 2746 che confermano le Region dichiarate ex DPR 445) | fatto | curate.yaml |
+| 5/11 | cruscotto a griglia `/convenzioni/griglia/` (JSON da base_dati.py, filtri, riepiloghi, dettaglio cella, simboli+legenda) | fatto | testato nel browser locale |
