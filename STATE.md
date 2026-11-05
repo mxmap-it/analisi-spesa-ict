@@ -2,7 +2,14 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-04
+**Ultimo aggiornamento:** 2026-11-05
+
+## #62 CONVENZIONI ICT — punto di ripresa 5/11/2026
+- **Fatto:** sezione `/convenzioni/` (indice con filtro per tipo di soggetto + 86 mini-pagine) generata da `tools/convenzioni/pagine.py` dalla base dati `report/convenzioni/database/iniziative.json` (README, schema.json, PROGRESSO.md lì). 86 iniziative (82 attive, 4 storiche; 45 Consip, 1 PSN, 25 aggregatori regionali, 4 consorzi/unioni, 11 altro), 295 lotti. Criterio nel README (derivati ICT 2024-2025; quote per tipo). PRINCO 2928 archiviato (16 file, copertura 69 %). Pagine Consip trovate per 44 iniziative (1.503 documenti linkati). Raccomandazioni R37-R40. Verifica: `python tools/verifiche/convenzioni_copertura.py`.
+- **Gira sul server:** archiviazione dei 1.503 documenti Consip, ripartibile: `cd ~/analisi-spesa-ict/lavoro/convenzioni && nohup nice -n 15 ../../.venv/bin/python tools/convenzioni/archivia_documenti.py --max-mb 20000 > archivia-documenti.log 2>&1 &` (5 s fra richieste, ~2,5 h; idempotente, si rilancia uguale). Archivio = `~/analisi-spesa-ict/archivio` (symlink). Disco: 54 GB liberi al 5/11, guardia a 40 GB.
+- **Al termine:** `scp` di `lavoro/convenzioni/report/convenzioni/database/archiviati.jsonl` nel clone, poi `base_dati.py`, `pagine.py`, `bash tools/costruisci_sito.sh`, verifica, commit (solo file della sezione).
+- **Da fare:** aggregatori regionali e consorzi via mappa piattaforme #57 (inventario oggi «da verificare»); controvalidare `config/tipi_soggetto.yaml` con l'elenco ANAC dei soggetti aggregatori archiviato; curare aggiudicatari/massimali/durata in `curate.yaml` partendo dai rendiconti; rileggere gli atti PRINCO archiviati per passare da R a V; ricostruire tutto `docs/` per il menu «Convenzioni» (le altre pagine di docs/ hanno modifiche non nostre, non committate).
+
 
 ## PUNTO DI RIPRESA 4/11/2026 (sessione principale; scritto prima di un possibile stop per i limiti dei token)
 Per riprendere: leggi questa sezione, poi i ticket citati. Nulla gira in locale; i job lunghi sono sul server.
