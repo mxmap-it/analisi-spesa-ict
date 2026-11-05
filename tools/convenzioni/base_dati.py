@@ -80,6 +80,10 @@ def documenti_osservati(ini, lotti, arch, kb, c):
     docs = []
     for p in pagine_ok:
         for d in p["documenti"]:
+            # le pagine Consip linkano a volte documenti di altre gare (es. «ID 2912» nella pagina dell'ID 2928): si scartano
+            altri = set(re.findall(r"ID\s*(\d{4})", d["nome"])) - {ini.split("-", 1)[-1]}
+            if altri and ini.startswith("consip-"):
+                continue
             a = arch.get(d["url"])
             t = tipo_nome(d["nome"]) or ("pacchetto_documentazione" if d["nome"].lower().endswith(".zip") else d["tipo"])
             docs.append({"tipo": t, "nome": d["nome"], "url": d["url"], "dove": "consip.it",

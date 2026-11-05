@@ -14,3 +14,6 @@ File di ripresa (regola di resilienza): ogni passo chiuso si annota qui, con com
 | 5/11 | verifica rieseguibile | fatto | ricostruzione identica, seconda via OK |
 | | reimportare archiviati.jsonl dal server e rigenerare | da fare | vedi STATE.md |
 | | aggregatori/consorzi via mappa piattaforme #57 | da fare | |
+| 5/11 | carenze C1-C8, bozze accesso civico (127, non inviate), registro, R37-R42, DECISIONI | fatto | |
+| 5/11 | rilettura atti PRINCO archiviati (R → V) | fatto | curate.yaml |
+| 5/11 | scarto dei documenti di altre gare linkati nelle pagine Consip | fatto | |
