@@ -11,7 +11,7 @@ Uso: python tools/convenzioni/base_dati.py"""
 import csv
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import yaml
@@ -53,8 +53,15 @@ REGOLE = [
 ]
 
 
+MODELLO = re.compile(r"schema di offerta|fac.?simile|modello|modulo|format|istruzioni|dichiarazion|template|dgue", re.I)
+
+
 def tipo_nome(n):
     n = n.lower()
+    # nelle pagine di gara i file «offerta tecnica/economica» sono modelli o regole per i concorrenti, mai l'offerta del vincitore:
+    # l'offerta dell'aggiudicatario entra solo da curate.yaml, letta e confermata
+    if re.search(r"offert[ae]", n):
+        return None
     return next((t for t, rx in REGOLE if re.search(rx, n)), None)
 
 
@@ -90,6 +97,8 @@ def documenti_osservati(ini, lotti, arch, kb, c):
                          "stato": "archiviato" if a else "pubblicato-non-archiviato",
                          "sha256": a["sha256"] if a else None, "data": (a or {}).get("acquisito")})
             for f in (a or {}).get("contenuto") or []:
+                if ini.startswith("consip-") and set(re.findall(r"\bID\s*(\d{4})\b", f)) - {ini.split("-", 1)[-1]}:
+                    continue  # file di un'altra gara dentro lo zip
                 tz = tipo_nome(f.rsplit("/", 1)[-1])
                 if tz:
                     docs.append({"tipo": tz, "nome": f.rsplit("/", 1)[-1], "url": d["url"] + "#" + f, "dove": "consip.it (nello zip)",
@@ -168,6 +177,30 @@ def dai_dossier(percorsi):
     return {k: " · ".join(v[:3]) for k, v in out.items()}
 
 
+def nomi_file(ini, pagine_ok, arch):
+    """Tutti i nomi di file dell'iniziativa: documenti della pagina ufficiale e contenuto degli zip archiviati."""
+    out = []
+    for p in pagine_ok:
+        for d in p["documenti"]:
+            out.append((d["nome"], d["url"], (arch.get(d["url"]) or {}).get("sha256")))
+            for f in (arch.get(d["url"]) or {}).get("contenuto") or []:
+                out.append((f.rsplit("/", 1)[-1], d["url"] + "#" + f, arch[d["url"]]["sha256"]))
+    return out
+
+
+def estratti_di(ini):
+    """Estratti per parole chiave (tools/convenzioni/estrai_documenti.py): al massimo 2 per tema, marcati «automatico, da leggere»."""
+    p = DB / "estratti" / f"{ini}.json"
+    if not p.exists():
+        return None
+    e = json.loads(p.read_text(encoding="utf-8"))
+    per = defaultdict(list)
+    for x in e["estratti"]:
+        if len(per[x["tema"]]) < 2 and x["documento"] not in [y["documento"] for y in per[x["tema"]]]:
+            per[x["tema"]].append({k: x[k] for k in ("documento", "url", "sha256")} | {"testo": x["testo"][:420]})
+    return {"documenti_letti": e["documenti_letti"], "conteggi": dict(Counter(x["tema"] for x in e["estratti"])), "esempi": dict(per)}
+
+
 def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
     """Carenze di trasparenza (report/convenzioni/database/carenze.yaml) che colpiscono l'iniziativa."""
     per_tipo = {i["tipo"]: i for i in inv}
@@ -182,6 +215,9 @@ def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
         elif a == "cloud":
             if ini in car["iniziative_cloud"] or set(categorie) & {"cloud-provider", "cloud-multi", "psn"}:
                 st = "da-verificare"
+        elif a == "transato_marchio":
+            # l'ordinato per lotto è negli open data Consip, ma senza listino, marchio ed ente: verificato se la pagina o gli open data sono letti
+            st = "verificato" if (tipo_sogg == "consip" and (pagine_ok or ini in ORDINATO)) else "da-verificare"
         elif a == "tutte":
             st = "da-verificare"
         elif a == "indice" and tipo_sogg == "consip":
@@ -190,6 +226,8 @@ def carenze_di(ini, inv, categorie, pagine_ok, pag, car, tipo_sogg):
             nota = ""
             if st == "verificato" and a.startswith("inventario:"):
                 nota = per_tipo[a.split(":", 1)[1]]["nota"]
+            elif st == "verificato" and a == "transato_marchio":
+                nota = "open data Consip: ordinato per lotto e anno, senza listino, marchio ed ente" if ini in ORDINATO else "assente dalla pagina Consip; open data Consip senza listino e marchio"
             elif st == "verificato" and a == "indice":
                 nota = f"ricerca pubblica consip.it per CIG {pag['chiave_ricerca']} senza esito ({pag['data'][:10]})"
             out.append({"id": c["id"], "titolo": c["titolo"], "stato": st, "nota": nota, "raccomandazione": c["raccomandazione"]})
@@ -241,7 +279,12 @@ def scrivi_griglia(voci):
 
 def main():
     cens, arch, kb, cur = carica()
-    global CAR
+    global CAR, ORDINATO
+    ORDINATO = defaultdict(list)
+    if (DB / "consip-ordinato.csv").exists():
+        for r in csv.DictReader(open(DB / "consip-ordinato.csv", encoding="utf-8")):
+            ORDINATO[r["iniziativa"]].append(r)
+    fonti_od = json.loads((DB / "consip-ordinato-fonti.json").read_text(encoding="utf-8"))["fonti"] if (DB / "consip-ordinato-fonti.json").exists() else []
     CAR = yaml.safe_load(open(DB / "carenze.yaml", encoding="utf-8"))
     gruppi = defaultdict(list)
     for r in cens:
@@ -250,9 +293,18 @@ def main():
     for ini, lotti in gruppi.items():
         c = cur.get(ini, {}) or {}
         docs, pagine_ok, pag = documenti_osservati(ini, lotti, arch, kb, c)
+        for f in (fonti_od if ini in ORDINATO else []):
+            docs.append({"tipo": "transato_monitoraggio", "nome": "open data Consip: " + f["url"].rsplit("/", 1)[-1] + " (ordinato per lotto, aggregato)",
+                         "url": f["url"], "dove": "dati.consip.it", "stato": "archiviato", "sha256": f["sha256"], "data": "2026-11-05"})
         inv = inventario(ini, docs, pagine_ok, pag, c)
         ok = sum(1 for i in inv if i["stato"] == "archiviato")
         categorie = sorted({kb.get(x["cig_padre"], {}).get("categoria") for x in lotti} - {None})
+        nf = nomi_file(ini, pagine_ok, arch)
+        flusso = [(n, u, h) for n, u, h in nf if re.search(r"flussi? dati|flusso.*commission|dati di fatturato", n, re.I)]
+        evidenze = []
+        if flusso:
+            evidenze.append({"carenza": "C3", "livello": "V", "testo": "Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato",
+                             "documento": flusso[0][0], "url": flusso[0][1], "sha256": flusso[0][2]})
         car_ini = carenze_di(ini, inv, categorie, pagine_ok, pag, CAR, lotti[0]["tipo_soggetto"])
         for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
             if k["id"] in (c.get("carenze_verificate") or {}):
@@ -282,7 +334,9 @@ def main():
             "inventario": inv, "copertura": round(ok / len(inv), 3),
             "mancanze": [{"tipo": i["tipo"], "descrizione": i["descrizione"], "stato": i["stato"], "fonte": i["dove_di_norma"], "via": i["via_se_manca"]}
                          for i in inv if i["stato"] != "archiviato"],
-            "carenze": car_ini,
+            "ordinato_consip": {"2024": sum(int(r["ordinato_2024"]) for r in ORDINATO.get(ini, [])), "2025": sum(int(r["ordinato_2025"]) for r in ORDINATO.get(ini, [])),
+                                "nomi": [r["nome_consip"] + " [" + r["abbinamento"] + "]" for r in ORDINATO.get(ini, [])]} if ini in ORDINATO else None,
+            "carenze": car_ini, "evidenze_dato_esistente": evidenze, "estratti": estratti_di(ini),
             "analisi": c.get("analisi"), "note": c.get("note"),
         })
     voci.sort(key=lambda v: (v["stato_iniziativa"] != "attiva", -(v["valore_ict_2024_2025"] or 0), -v["valore_ict_2020_2026"], v["id"]))

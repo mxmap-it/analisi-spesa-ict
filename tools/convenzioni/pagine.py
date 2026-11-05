@@ -94,6 +94,24 @@ def pagina(v):
         for desc, d in altrove:
             righe.append(f"| {desc} | [{esc(d['nome'])[:110]}]({d['url']}) | non pubblicato dalla centrale; reperito su {esc(d.get('fonte'))} il {d.get('data')} | "
                          f"{d.get('affidabilita') or '–'} | `{(d.get('sha256') or '')[:16]}…` |")
+    if v.get("evidenze_dato_esistente"):
+        righe += ["", "### Il dato esiste, ma non è pubblico", ""]
+        for e in v["evidenze_dato_esistente"]:
+            righe.append(f"- **{e['carenza']}** ({e['livello']}): {e['testo']}. Documento: [{esc(e['documento'])[:90]}]({e['url'].replace(' ', '%20')}), "
+                         f"sha256 `{(e['sha256'] or '')[:16]}…`.")
+    ex = v.get("estratti")
+    if ex and ex["documenti_letti"]:
+        TEMI_N = {"prodotti_marchi": "Prodotti e marchi", "tetti_erosione": "Massimali, tetti ed erosione", "region_datacenter": "Region, data center e trasferimenti", "reporting": "Reporting e monitoraggio"}
+        righe += ["", "## Estratti dai documenti (automatici, da leggere)", "",
+                  f"Ricerca per parole chiave su {ex['documenti_letti']} documenti chiave archiviati (`tools/convenzioni/estrai_documenti.py`). "
+                  "Un estratto orienta la lettura: **non è un'analisi** e non va citato come accertato.", ""]
+        for t, n in TEMI_N.items():
+            es = ex["esempi"].get(t) or []
+            righe.append(f"**{n}** ({ex['conteggi'].get(t, 0)} occorrenze)")
+            righe.append("")
+            for x in es:
+                righe.append(f"> «…{esc(x['testo'])}…» — {esc(x['documento'])[:80]} (sha256 `{(x['sha256'] or '')[:12]}…`)")
+                righe.append("")
     if v.get("analisi"):
         righe += ["", "## Analisi dei documenti chiave", ""]
         for a in v["analisi"]:

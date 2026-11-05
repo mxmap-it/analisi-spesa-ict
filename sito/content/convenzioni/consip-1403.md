@@ -21,14 +21,14 @@ description: "Iniziativa consip-1403: dati, documenti archiviati e mancanti."
 | Durata | Durata / scadenza: proroga 24 mesi a 20/07/2021 (com. Consip 17/01/2018), addendum a 20/07/2022, poi 31/12/2022 (fonte: det. ART 138/2021; delibera AGCOM 282/22/CONS; decreto Regione Calabria 17588/2022; livello V2 (atti di aderenti che citano comunicazioni Consip); da 55187486EA-spc-cloud-lotto-1.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 14 % dei tipi di documento attesi |
+| Copertura documentale | 21 % dei tipi di documento attesi |
 
 <div class="callout warning" style="border-left:6px solid #a66300;padding:.8em 1em;background:#fff6e5;margin:1.5em 0">
 <div class="callout-title"><strong>Carenze di trasparenza di questa iniziativa</strong></div>
 <table class="table table-sm"><thead><tr><th>Carenza</th><th>Stato</th><th>Base (norma o ragione)</th><th>Proposta</th></tr></thead><tbody>
 <tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V].</td><td>R39</td></tr>
 <tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente.</td><td>R39</td></tr>
-<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già.</td><td>R37</td></tr>
+<tr><td><strong>C3</strong> Transato per listino, marchio ed ente</td><td>verificato (assenza constatata) (assente dalla pagina Consip; open data Consip senza listino e marchio)</td><td>Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R].</td><td>R37</td></tr>
 <tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R].</td><td>R08</td></tr>
 <tr><td><strong>C5</strong> Progetti e piani dei fabbisogni</td><td>riferito / da verificare</td><td>Nessun obbligo esplicito; è parte del contratto di utenza, quindi rientra negli atti dell'esecuzione [R]. Precedente verificato: 19 PPdF pubblicati integralmente da 15 enti (report/convenzioni/psn-database/), un diniego di fatto (Regione Calabria) per clausola di confidenzialità [V].</td><td>R41</td></tr>
 <tr><td><strong>C6</strong> Region e data center dichiarati</td><td>riferito / da verificare</td><td>Nessun obbligo di pubblicazione per singola iniziativa. ACN qualifica i servizi cloud e ne pubblica il catalogo [R]; il catalogo non è legato al CIG del lotto. Ragione: requisito di sovranità che la PA deve poter verificare prima di aderire (art. 33-septies d.l. 179/2012) [R].</td><td>R42</td></tr>
@@ -64,7 +64,7 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
 | disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
 | schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
@@ -83,6 +83,12 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Tipo | Documento | Originale | Copia (sha256) |
 |---|---|---|---|
+| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Doc%20pubblicazione%20gara%20cloud_ID%201403/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf.p7m) | `77e4cd51d7909127…` |
+| bando o avviso di gara (GUUE) | Bando GUUE Cloud.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Bando%20GUUE%20Cloud.pdf.p7m) | `77e4cd51d7909127…` |
+| bando o avviso di gara (GUUE) | GUUE.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8704AvvisodiprorogaU.zip#Avviso%20di%20proroga%20UFFICIALE/GUUE.pdf.p7m) | `5884389f7008cada…` |
+| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Doc%20pubblicazione%20gara%20cloud%2020131224_pdf/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf) | `dce278297cfde8d6…` |
+| bando o avviso di gara (GUUE) | Bando GUUE Ristretta Cloud.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Bando%20GUUE%20Ristretta%20Cloud.pdf) | `dce278297cfde8d6…` |
+| bando o avviso di gara (GUUE) | GUUE.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8705AvvisodiprorogaN.zip#Avviso%20di%20proroga%20NON%20UFFICIALE/GUUE.pdf) | `c77762bd8cf8e060…` |
 | schema di accordo quadro o di convenzione | avviso TED ARNAS Garibaldi: Contratto Quadro Consip SPC Cloud Lotto 1 - servizi di cloud c | [link](https://ted.europa.eu/it/notice/647656-2021/xml) | `5a714d721b26ec28…` |
 | schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 3 'Inter | [link](https://ted.europa.eu/it/notice/248255-2021/xml) | `ac4f6ebff2f1a893…` |
 | schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 4 'Servi | [link](https://ted.europa.eu/it/notice/248256-2021/xml) | `2b4e2dba99569558…` |
@@ -91,7 +97,6 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
 | disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |

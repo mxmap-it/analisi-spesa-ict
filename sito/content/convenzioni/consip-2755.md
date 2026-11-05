@@ -21,14 +21,14 @@ description: "Iniziativa consip-2755: dati, documenti archiviati e mancanti."
 | Durata | Durata attuativi: 36 mesi (fonte: determina MAECI; livello R; da B1D4011AB2-microsoft-ea9.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 23 % dei tipi di documento attesi |
+| Copertura documentale | 77 % dei tipi di documento attesi |
 
 <div class="callout warning" style="border-left:6px solid #a66300;padding:.8em 1em;background:#fff6e5;margin:1.5em 0">
 <div class="callout-title"><strong>Carenze di trasparenza di questa iniziativa</strong></div>
 <table class="table table-sm"><thead><tr><th>Carenza</th><th>Stato</th><th>Base (norma o ragione)</th><th>Proposta</th></tr></thead><tbody>
 <tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V].</td><td>R39</td></tr>
 <tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente.</td><td>R39</td></tr>
-<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già.</td><td>R37</td></tr>
+<tr><td><strong>C3</strong> Transato per listino, marchio ed ente</td><td>verificato (assenza constatata) (open data Consip: ordinato per lotto e anno, senza listino, marchio ed ente)</td><td>Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R].</td><td>R37</td></tr>
 <tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R].</td><td>R08</td></tr>
 <tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>riferito / da verificare</td><td>Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa.</td><td>R37</td></tr>
 <tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>riferito / da verificare</td><td>Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede.</td><td>R38</td></tr>
@@ -58,16 +58,16 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
 | bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
-| disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| schema di accordo quadro o di convenzione | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore |  |
-| listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| determina o decisione a contrarre | **pubblicato, non archiviato** | consip.it o AT dell'aggregatore |  |
-| risposte ai chiarimenti | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore |  |
+| disciplinare o condizioni della procedura | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| capitolato tecnico | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
+| listini e appendici di prezzo | **archiviato** | consip.it, acquistinretepa (scheda dell'iniziativa) |  |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
 | avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **non pubblicato** | di norma non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
 | offerta economica e listino offerto | **non pubblicato** | acquistinretepa (catalogo) o non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
-| transato e monitoraggio per lotto e listino | **non pubblicato** | open data Consip (aggregato), relazioni al MEF | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| transato e monitoraggio per lotto e listino | **archiviato** | open data Consip (aggregato), relazioni al MEF |  |
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
@@ -75,17 +75,41 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Tipo | Documento | Originale | Copia (sha256) |
 |---|---|---|---|
+| bando o avviso di gara (GUUE) | BANDO DI GARA ID 2755.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/BANDO%20DI%20GARA%20ID%202755.pdf.p7m) | `691c9df3898c6192…` |
+| bando o avviso di gara (GUUE) | BANDO DI GARA ID 2755.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/BANDO%20DI%20GARA%20ID%202755.pdf) | `c02f5a50f491c246…` |
 | bando o avviso di gara (GUUE) | bando TED Consip 2024 ID 2755 Microsoft Enterprise Agreement (nona edizione), LOTTO UNICO  | [link](https://ted.europa.eu/it/notice/309756-2024/xml) | `e4992b21e0b68e60…` |
-| schema di accordo quadro o di convenzione | ID-2755-MEA9-Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-MEA9-Convenzione.pdf) | non archiviato |
-| determina o decisione a contrarre | ID-2755-EA9-Determina a contrarre_signed_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Determina%20a%20contrarre_signed_0.pdf) | non archiviato |
-| determina o decisione a contrarre | ID-2755-EA9-Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Determina%20a%20contrarre.pdf) | non archiviato |
-| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti -II-Tranche-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Risposte-chiarimenti%20-II-Tranche-signed.pdf) | non archiviato |
-| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Risposte-chiarimenti_signed.pdf) | non archiviato |
-| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti -II-Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Risposte-chiarimenti%20-II-Tranche.pdf) | non archiviato |
-| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Risposte-chiarimenti.pdf) | non archiviato |
-| avviso di aggiudicazione o esito | ESITO ID 2755.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ESITO%20ID%202755.pdf.p7m) | non archiviato |
-| avviso di aggiudicazione o esito | ESITO ID 2755.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ESITO%20ID%202755.pdf) | non archiviato |
+| disciplinare o condizioni della procedura | ID2755-EA9-Disciplinare.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Disciplinare.pdf.p7m) | `691c9df3898c6192…` |
+| disciplinare o condizioni della procedura | ID2755-EA9-Disciplinare.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Disciplinare.pdf) | `c02f5a50f491c246…` |
+| capitolato tecnico | ID2755-EA9- Allegato-2-Capitolato Tecnico-Appendice-3-Restrizioni e Diritti sull'Utilizzo  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-%20Allegato-2-Capitolato%20Tecnico-Appendice-3-Restrizioni%20e%20Diritti%20sull'Utilizzo%20Aggiuntivi%20del%20contratto%20Microsoft%20EA.pdf.p7m) | `691c9df3898c6192…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-1-Schema delle verifiche ispettive.pdf. | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-1-Schema%20delle%20verifiche%20ispettive.pdf.p7m) | `691c9df3898c6192…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-2-Schede Indicatori di qualità.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-2-Schede%20Indicatori%20di%20qualità.pdf.p7m) | `691c9df3898c6192…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-2-Capitolato%20Tecnico.pdf.p7m) | `691c9df3898c6192…` |
+| capitolato tecnico | ID2755-EA9- Allegato-2-Capitolato Tecnico-Appendice-3-Restrizioni e Diritti sull'Utilizzo  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-%20Allegato-2-Capitolato%20Tecnico-Appendice-3-Restrizioni%20e%20Diritti%20sull'Utilizzo%20Aggiuntivi%20del%20contratto%20Microsoft%20EA.pdf) | `c02f5a50f491c246…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-1-Schema delle verifiche ispettive.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-1-Schema%20delle%20verifiche%20ispettive.pdf) | `c02f5a50f491c246…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-2-Schede Indicatori di qualità.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-2-Schede%20Indicatori%20di%20qualità.pdf) | `c02f5a50f491c246…` |
+| capitolato tecnico | ID2755-EA9-Allegato-2-Capitolato Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-2-Capitolato%20Tecnico.pdf) | `c02f5a50f491c246…` |
+| schema di accordo quadro o di convenzione | ID2755-EA9-Allegato-1-Condizioni Generali Convenzione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-1-Condizioni%20Generali%20Convenzione.pdf.p7m) | `691c9df3898c6192…` |
+| schema di accordo quadro o di convenzione | ID2755-EA9-Allegato-17-Schema di Convenzione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-17-Schema%20di%20Convenzione.pdf.p7m) | `691c9df3898c6192…` |
+| schema di accordo quadro o di convenzione | ID2755-EA9-Allegato-1-Condizioni Generali Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-1-Condizioni%20Generali%20Convenzione.pdf) | `c02f5a50f491c246…` |
+| schema di accordo quadro o di convenzione | ID2755-EA9-Allegato-17-Schema di Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-17-Schema%20di%20Convenzione.pdf) | `c02f5a50f491c246…` |
+| schema di accordo quadro o di convenzione | ID-2755-MEA9-Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-MEA9-Convenzione.pdf) | `82035cd3c1472c82…` |
+| listini e appendici di prezzo | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-4-Struttura listino e principali clauso | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-4-Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf.p7m) | `691c9df3898c6192…` |
+| listini e appendici di prezzo | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-5-Listino di riferimento Microsoft EA - | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-5-Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf.p7m) | `691c9df3898c6192…` |
+| listini e appendici di prezzo | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-4-Struttura listino e principali clauso | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-4-Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf) | `c02f5a50f491c246…` |
+| listini e appendici di prezzo | ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-5-Listino di riferimento Microsoft EA - | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF_0.zip#Pdf/ID2755-EA9-Allegato-2-Capitolato%20Tecnico-Appendice-5-Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf) | `c02f5a50f491c246…` |
+| determina o decisione a contrarre | ID-2755-EA9-Determina a contrarre_signed_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Determina%20a%20contrarre_signed_0.pdf) | `b162c585c3f47eee…` |
+| determina o decisione a contrarre | ID-2755-EA9-Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Determina%20a%20contrarre.pdf) | `19973728b27a8751…` |
+| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti -II-Tranche-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Risposte-chiarimenti%20-II-Tranche-signed.pdf) | `50a9a7ec564e5d08…` |
+| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-2755-EA9-Risposte-chiarimenti_signed.pdf) | `e6f7e94ab3974daf…` |
+| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti -II-Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Risposte-chiarimenti%20-II-Tranche.pdf) | `64fa1f76023857cf…` |
+| risposte ai chiarimenti | ID-2755-EA9-Risposte-chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID-2755-EA9-Risposte-chiarimenti.pdf) | `6c93217abf038c81…` |
+| avviso di aggiudicazione o esito | ESITO ID 2755.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ESITO%20ID%202755.pdf.p7m) | `e0fc07a172b08413…` |
+| avviso di aggiudicazione o esito | ESITO ID 2755.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ESITO%20ID%202755.pdf) | `58de21d5004cd9b8…` |
 | avviso di aggiudicazione o esito | aggiudicazione TED ID 2755, lotto unico 'Fornitura di licenze d'uso' | [link](https://ted.europa.eu/it/notice/251426-2025/xml) | `265a0ef68464dbcd…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
 
 ### Reperiti da fonte non ufficiale
 
@@ -95,19 +119,45 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 |---|---|---|---|---|
 | ordinativi e contratti attuativi delle PA | [MAECI, determina 1019 del 10/10/2025 (Microsoft EA9): rinnovo licenze M365, cita ordinativi EA7 (2.057 licenze](https://www.esteri.it/wp-content/uploads/2025/10/Determina-n.-1019-del-10.10.2025-Microsoft-EA9_Firmato.pdf) | non pubblicato dalla centrale; reperito su esteri.it (AT del MAECI) il 2026-11-05 | A | `9c57dba2cd3e31a1…` |
 
+### Il dato esiste, ma non è pubblico
+
+- **C3** (V): Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato. Documento: [ID2755-EA9-Allegato-6-Flussi Dati Commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF_0.zip#ID2755%20-%20firmati/ID2755-EA9-Allegato-6-Flussi%20Dati%20Commissioni.pdf.p7m), sha256 `691c9df3898c6192…`.
+
+## Estratti dai documenti (automatici, da leggere)
+
+Ricerca per parole chiave su 29 documenti chiave archiviati (`tools/convenzioni/estrai_documenti.py`). Un estratto orienta la lettura: **non è un'analisi** e non va citato come accertato.
+
+**Prodotti e marchi** (18 occorrenze)
+
+> «…ei supporti di memorizzazione contenenti i Prodotti di cui ha necessità per distribuire i Prodotti all’interno dell’Organizzazione. Le copie dovranno essere vere e complete (e includere le informazioni sul copyright e i marchi) ed effettuate da copie principali ottenute da una fonte di rete approvata da Microsoft. La Consociata Iscritta potrà utilizzare terzi per effettuare tali copie, ma accetta di essere ritenuta r…» — ID2755-EA9- Allegato-2-Capitolato Tecnico-Appendice-3-Restrizioni e Diritti sull (sha256 `c02f5a50f491…`)
+
+> «…contratti di fornitura e/o della Convenzione, recuperando e/o ripetendo il corrispettivo versato, detratto un equo compenso per i servizi e/o le forniture erogati. 4. E’ vietato qualsiasi uso da parte del Fornitore dei marchi e/o dei loghi e/o delle denominazioni "Ministero dell'Economia e Finanze" e/o "Consip S.p.A." o del testo o del materiale grafico contenuto nel sito istituzionale www.consip.it e nel Portale di…» — ID2755-EA9-Allegato-1-Condizioni Generali Convenzione.pdf (sha256 `c02f5a50f491…`)
+
+**Massimali, tetti ed erosione** (11 occorrenze)
+
+> «…e server multifunzione o come sostituto commercialmente accettabile di uno di tali sistemi e (2) utilizza solo un programma software specifico di un settore o di un’attività, ad esempio un programma CAD usato da un architetto o un programma per punti di vendita al dettaglio (“Programma di Settore”). Il dispositivo potrà includere funzionalità e funzioni derivate da software Microsoft o da software di terzi. Qualora i…» — ID2755-EA9- Allegato-2-Capitolato Tecnico-Appendice-3-Restrizioni e Diritti sull (sha256 `c02f5a50f491…`)
+
+> «…ertanto determinato, in funzione del possesso (S) o mancato possesso (N), da parte dell’offerente, di ciascun requisito, secondo quanto illustrato nella seguente tabella: Importo garanzia base (€) Euro 8.600.000 (2% del massimale) ISO 9000 o Registrazione Certificazione Inventario / Importo garanzia Importo MPMI EMAS ambientale Impronta climatica (%garanzia base) garanzia (€) S S - S 29,75% 2.558.500 S S - N 35,00% 3…» — ID2755-EA9-Allegato-16-Tabella garanzia provvisoria.pdf (sha256 `c02f5a50f491…`)
+
+**Region, data center e trasferimenti** (12 occorrenze)
+
+> «…dati personali oggetto di trattamento, verranno gestiti nell’ambito dell’UE e che non sarà effettuato alcun trasferimento degli stessi verso un paese terzo o un’organizzazione internazionale al di fuori dell’UE o dello Spazio Economico Europeo, senza la previa autorizzazione del Titolare del trattamento. A tal fine il Responsabile trasmette al Titolare, prima della stipula del contratto, la lista dei trasferimenti d…» — ID2755-EA9-Allegato-1-Condizioni Generali Convenzione.pdf (sha256 `c02f5a50f491…`)
+
+> «…s Year(s) License &TrueUp Software Yr2 Assurance 2Servers Licenses License/Software Assurance SystemPack Center Standard Core 116,00 Fam 2 9EP-00201 System Center DC Core Microsoft® ALng LSA System 16L Center Additional Datacenter ProductCore 3 AllYear(s) Languages License TrueUp & Software Yr1 AssuranceServers 16 Licenses License/Software Assurance SystemPack Center Datacenter Core 2.976,00 Fam 2 9EP-00203 System Ce…» — ID2755-EA9-Allegato-2-Capitolato Tecnico-Appendice-5-Listino di riferimento Micr (sha256 `c02f5a50f491…`)
+
+**Reporting e monitoraggio** (19 occorrenze)
+
+> «…ip, i pagamenti dei costi per le verifiche ispettive effettuate dall’Ente Terzo, dietro presentazione di fattura elettronica che verrà emessa da Consip al termine del ciclo ispettivo, corredata del relativo documento di rendicontazione analitica delle attività ispettive svolte dall’Organismo di Ispezione incaricato. 4. Il Fornitore si impegna, in particolare, ad effettuare il pagamento dell’importo indicato in fattur…» — ID2755-EA9-Allegato-1-Condizioni Generali Convenzione.pdf (sha256 `c02f5a50f491…`)
+
+> «…medesima ed ai prezzi e condizioni ivi previsti; b) che con propri Decreti Ministeriali del 24 febbraio 2000 e del 2 maggio 2001, il Ministero ha affidato a Consip , tra l’altro, l’assistenza nella pianificazione e nel monitoraggio dei fabbisogni di beni e servizi delle Pubbliche Amministrazioni, la conclusione per conto del Ministero medesimo e delle altre Pubbliche Amministrazioni delle Convenzioni per l’acquisto…» — ID2755-EA9-Allegato-17-Schema di Convenzione.pdf (sha256 `c02f5a50f491…`)
+
+
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| schema di accordo quadro o di convenzione | pubblicato, non archiviato | consip.it o sito dell'aggregatore | scraping |
-| listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | pubblicato, non archiviato | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | pubblicato, non archiviato | consip.it o sito dell'aggregatore | scraping |
 | offerta tecnica dell'aggiudicatario | non pubblicato | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | non pubblicato | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
-| transato e monitoraggio per lotto e listino | non pubblicato | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |
 | ordinativi e contratti attuativi delle PA | non pubblicato | AT degli enti; PVL (link ai documenti dal 2024) | PVL documenti_di_gara_link, poi AT degli enti |
 
 Legenda: «archiviato» = copia nel nostro archivio content-addressed con sha256 (verificato); i campi descrittivi senza fonte archiviata sono «riferiti» e marcati R in `report/convenzioni/database/curate.yaml`.

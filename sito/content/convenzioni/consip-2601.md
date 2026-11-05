@@ -21,14 +21,14 @@ description: "Iniziativa consip-2601: dati, documenti archiviati e mancanti."
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 23 % dei tipi di documento attesi |
+| Copertura documentale | 69 % dei tipi di documento attesi |
 
 <div class="callout warning" style="border-left:6px solid #a66300;padding:.8em 1em;background:#fff6e5;margin:1.5em 0">
 <div class="callout-title"><strong>Carenze di trasparenza di questa iniziativa</strong></div>
 <table class="table table-sm"><thead><tr><th>Carenza</th><th>Stato</th><th>Base (norma o ragione)</th><th>Proposta</th></tr></thead><tbody>
 <tr><td><strong>C1</strong> Offerte tecniche dei vincitori</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione. Il codice prevede la messa a disposizione delle offerte dell'aggiudicatario ai soli partecipanti (art. 36 d.lgs. 36/2023) e l'accesso agli atti con i limiti del segreto tecnico-commerciale (art. 35) [R]. Per chiunque resta l'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) con i limiti dell'art. 5-bis c. 2 lett. c [V].</td><td>R39</td></tr>
 <tr><td><strong>C2</strong> Listini e prezzi offerti dagli aggiudicatari</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, spesso dopo login [R]. Ragione: i prezzi di una convenzione sono condizioni contrattuali erga omnes per tutte le PA aderenti, non un segreto del singolo offerente.</td><td>R39</td></tr>
-<tr><td><strong>C3</strong> Transato per lotto, listino e marchio</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Nessun obbligo di pubblicazione per lotto o listino. Consip pubblica open data aggregati e riferisce al MEF sul Programma di razionalizzazione [R]. Ragione: è la grandezza che il Programma stesso deve monitorare; pubblicarla costa poco a chi la possiede già.</td><td>R37</td></tr>
+<tr><td><strong>C3</strong> Transato per listino, marchio ed ente</td><td>verificato (assenza constatata) (open data Consip: ordinato per lotto e anno, senza listino, marchio ed ente)</td><td>Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia e provincia della PA [V, file archiviati]; non per listino, marchio né ente [V, intestazioni dei file]. I fornitori trasmettono a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012) [V nei documenti di gara]. Nessun obbligo di pubblicare il dettaglio per marchio [R].</td><td>R37</td></tr>
 <tr><td><strong>C4</strong> Ordinativi e contratti attuativi</td><td>verificato (assenza constatata) (assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05))</td><td>Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP [V]; documentazione accessibile dal link ex art. 27 c. 3 e del. ANAC 263/2023 art. 6.2 [V]. Nelle schede di adesione il link spesso manca (R30). Obbligo di pubblicare l'elenco degli ordinativi per Consip: nessuno [R].</td><td>R08</td></tr>
 <tr><td><strong>C7</strong> Monitoraggio delle soglie di erosione dei massimali</td><td>riferito / da verificare</td><td>Nessun obbligo noto di pubblicazione [R]. Acquistinretepa mostra per alcune convenzioni lo stato di attivazione ed esaurimento [R, da verificare]. Ragione: è il dato minimo per pianificare le adesioni e per misurare la spesa.</td><td>R37</td></tr>
 <tr><td><strong>C8</strong> Indice ID Sigef ↔ CIG dei lotti</td><td>riferito / da verificare</td><td>Il CIG è obbligatorio negli atti e in BDNCP (art. 28 d.lgs. 36/2023; del. ANAC 261/2023) [V]; nessun obbligo di pubblicare la corrispondenza con l'identificativo interno della centrale [R]. Ragione: costo nullo per chi la possiede.</td><td>R38</td></tr>
@@ -63,16 +63,16 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
 | bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
-| disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
+| disciplinare o condizioni della procedura | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| capitolato tecnico | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
-| determina o decisione a contrarre | **pubblicato, non archiviato** | consip.it o AT dell'aggregatore |  |
-| risposte ai chiarimenti | **pubblicato, non archiviato** | consip.it o sito dell'aggregatore |  |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
 | avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **non pubblicato** | di norma non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
 | offerta economica e listino offerto | **non pubblicato** | acquistinretepa (catalogo) o non pubblicata | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
-| transato e monitoraggio per lotto e listino | **non pubblicato** | open data Consip (aggregato), relazioni al MEF | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
+| transato e monitoraggio per lotto e listino | **archiviato** | open data Consip (aggregato), relazioni al MEF |  |
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | assente dalla pagina Consip dell'iniziativa (consultata il 2026-11-05) |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
@@ -80,32 +80,100 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Tipo | Documento | Originale | Copia (sha256) |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | Avviso di  proroga termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Avviso%20di%20%20proroga%20termini_signed.pdf) | non archiviato |
-| bando o avviso di gara (GUUE) | Avviso di  proroga termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Avviso%20di%20%20proroga%20termini.pdf) | non archiviato |
+| bando o avviso di gara (GUUE) | Avviso di  proroga termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Avviso%20di%20%20proroga%20termini_signed.pdf) | `d10bf607f27f7b80…` |
+| bando o avviso di gara (GUUE) | ID 2601 Bando AQ.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20Bando%20AQ.pdf.p7m) | `b1a286195f214662…` |
+| bando o avviso di gara (GUUE) | Avviso di  proroga termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Avviso%20di%20%20proroga%20termini.pdf) | `fa8657608c696397…` |
+| bando o avviso di gara (GUUE) | ID 2601 Bando AQ.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20Bando%20AQ.pdf) | `7b259b50bfe59be2…` |
 | bando o avviso di gara (GUUE) | bando TED Consip ID 2601 Sanità digitale clinico-assistenziali 2: lotto 2 CIG 98209074D6 | [link](https://ted.europa.eu/it/notice/347073-2023/xml) | `483c7f5ef482c30f…` |
-| determina o decisione a contrarre | ID 2601 Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Determina%20a%20contrarre_signed.pdf) | non archiviato |
-| determina o decisione a contrarre | ID 2601 Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Determina%20a%20contrarre.pdf) | non archiviato |
-| risposte ai chiarimenti | ID 2601 Chiarimenti - seconda tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Chiarimenti%20-%20seconda%20tranche_signed.pdf) | non archiviato |
-| risposte ai chiarimenti | ID 2601 Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Chiarimenti_signed.pdf) | non archiviato |
-| risposte ai chiarimenti | ID 2601 Chiarimenti - seconda tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Chiarimenti%20-%20seconda%20tranche.pdf) | non archiviato |
-| risposte ai chiarimenti | ID 2601 Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Chiarimenti.pdf) | non archiviato |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO GUUE ID 2601_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20GUUE%20ID%202601_signed.pdf) | non archiviato |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO GUUE ID 2601.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20GUUE%20ID%202601.pdf) | non archiviato |
+| disciplinare o condizioni della procedura | ID 2601 All. 19 Condizioni di assicurazione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%2019%20Condizioni%20di%20assicurazione.pdf.p7m) | `b1a286195f214662…` |
+| disciplinare o condizioni della procedura | METEDA Reg. Disciplinare rev. 27001.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20NUVYTA%20-%20EDP%20-%20MICE%20-%20METEDA.zip#ID%202601%20-%20NUVYTA%20-%20EDP%20-%20MICE%20-%20METEDA/ID%202601%20-%20RTI%20GPI%20-%20METEDA/METEDA%20Reg.%20Disciplinare%20rev.%2027001.pdf) | `a1d5d0d7e3be50cf…` |
+| disciplinare o condizioni della procedura | ID 2601 All. 19 Condizioni di assicurazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%2019%20Condizioni%20di%20assicurazione.pdf) | `7b259b50bfe59be2…` |
+| capitolato tecnico | ID 2601 All. 1 Capitolato Tecnico Generale.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%201%20Capitolato%20Tecnico%20Generale.pdf.p7m) | `b1a286195f214662…` |
+| capitolato tecnico | ID 2601 All. 2A Capitolato Tecnico Speciale Lotti Applicativi.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%202A%20Capitolato%20Tecnico%20Speciale%20Lotti%20Applicativi.pdf.p7m) | `b1a286195f214662…` |
+| capitolato tecnico | ID 2601 All. 2B Capitolato Tecnico Speciale Lotti Supporto.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%202B%20Capitolato%20Tecnico%20Speciale%20Lotti%20Supporto.pdf.p7m) | `b1a286195f214662…` |
+| capitolato tecnico | ID 2601 Capitolato Oneri AQ.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20Capitolato%20Oneri%20AQ.pdf.p7m) | `b1a286195f214662…` |
+| capitolato tecnico | ID 2601 All. 1 Capitolato Tecnico Generale.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%201%20Capitolato%20Tecnico%20Generale.pdf) | `7b259b50bfe59be2…` |
+| capitolato tecnico | ID 2601 All. 2A Capitolato Tecnico Speciale Lotti Applicativi.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%202A%20Capitolato%20Tecnico%20Speciale%20Lotti%20Applicativi.pdf) | `7b259b50bfe59be2…` |
+| capitolato tecnico | ID 2601 All. 2B Capitolato Tecnico Speciale Lotti Supporto.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%202B%20Capitolato%20Tecnico%20Speciale%20Lotti%20Supporto.pdf) | `7b259b50bfe59be2…` |
+| capitolato tecnico | ID 2601 Capitolato Oneri AQ.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20Capitolato%20Oneri%20AQ.pdf) | `7b259b50bfe59be2…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 3A Schema Accordo Quadro_lotti applicativi.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%203A%20Schema%20Accordo%20Quadro_lotti%20applicativi.pdf.p7m) | `b1a286195f214662…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 3B Schema Accordo Quadro_lotti di supporto.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%203B%20Schema%20Accordo%20Quadro_lotti%20di%20supporto.pdf.p7m) | `b1a286195f214662…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 4A Schema di Contratto Esecutivo Lotti Applicativi.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%204A%20Schema%20di%20Contratto%20Esecutivo%20Lotti%20Applicativi.pdf.p7m) | `b1a286195f214662…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 4B Schema di Contratto Esecutivo Lotti di supporto.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%204B%20Schema%20di%20Contratto%20Esecutivo%20Lotti%20di%20supporto.pdf.p7m) | `b1a286195f214662…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L1 - DEDALUS_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L1%20-%20DEDALUS_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L1 - ENG_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L1%20-%20ENG_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L1 - ES_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L1%20-%20ES_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L1 - GPI_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L1%20-%20GPI_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L2 - DEDALUS_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L2%20-%20DEDALUS_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L2 - ENG_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L2%20-%20ENG_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L2 - ES_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L2%20-%20ES_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L2 - GPI_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L2%20-%20GPI_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L3 - EBIT_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L3%20-%20EBIT_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L3 - ENG_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L3%20-%20ENG_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L3 - ES_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L3%20-%20ES_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L3 -GPI_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L3%20-GPI_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L4 - EBIT_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L4%20-%20EBIT_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L4 - ENG_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L4%20-%20ENG_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L4 - ES_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L4%20-%20ES_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 Schema AQ L4 - GPI_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20lotti%20da%201%20a%204%20AQ%20FIRMATI.zip#ID%202601%20Schema%20AQ%20L4%20-%20GPI_signed.pdf) | `e199d8181feaedc8…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 3A Schema Accordo Quadro_lotti applicativi.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%203A%20Schema%20Accordo%20Quadro_lotti%20applicativi.pdf) | `7b259b50bfe59be2…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 3B Schema Accordo Quadro_lotti di supporto.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%203B%20Schema%20Accordo%20Quadro_lotti%20di%20supporto.pdf) | `7b259b50bfe59be2…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 4A Schema di Contratto Esecutivo Lotti Applicativi.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%204A%20Schema%20di%20Contratto%20Esecutivo%20Lotti%20Applicativi.pdf) | `7b259b50bfe59be2…` |
+| schema di accordo quadro o di convenzione | ID 2601 All. 4B Schema di Contratto Esecutivo Lotti di supporto.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20-%20DOC%20NON%20UFF.zip#ID%202601%20All.%204B%20Schema%20di%20Contratto%20Esecutivo%20Lotti%20di%20supporto.pdf) | `7b259b50bfe59be2…` |
+| determina o decisione a contrarre | ID 2601 Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Determina%20a%20contrarre_signed.pdf) | `b42e8fa205de0b70…` |
+| determina o decisione a contrarre | ID 2601 Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Determina%20a%20contrarre.pdf) | `92dea79b5b087602…` |
+| risposte ai chiarimenti | ID 2601 Chiarimenti - seconda tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Chiarimenti%20-%20seconda%20tranche_signed.pdf) | `0c077ccdf1d5a6d9…` |
+| risposte ai chiarimenti | ID 2601 Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20Chiarimenti_signed.pdf) | `0229c01b02c13975…` |
+| risposte ai chiarimenti | ID 2601 Chiarimenti - seconda tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Chiarimenti%20-%20seconda%20tranche.pdf) | `9600b81f10fa8eee…` |
+| risposte ai chiarimenti | ID 2601 Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202601%20Chiarimenti.pdf) | `42bcc7a9cebea7c7…` |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO GUUE ID 2601_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20GUUE%20ID%202601_signed.pdf) | `bdba3ef7b08cc8b1…` |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO GUUE ID 2601.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20GUUE%20ID%202601.pdf) | `059b04a8dd22679a…` |
 | avviso di aggiudicazione o esito | aggiudicazione TED: Lotto 2 PPAA del SSN Centro-Sud, CIG 98209074D6, Cartella Clinica Elet | [link](https://ted.europa.eu/it/notice/336340-2024/xml) | `f17420b3a7d9101e…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
+
+### Il dato esiste, ma non è pubblico
+
+- **C3** (V): Il fornitore trasmette a Consip i flussi del fatturato per le commissioni (d.m. MEF 23/11/2012): il transato esiste presso Consip ma non è pubblicato. Documento: [ID 2601 All. 16 Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202601%20-%20DOC%20UFF.zip#PDF%20firmati/ID%202601%20All.%2016%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `b1a286195f214662…`.
+
+## Estratti dai documenti (automatici, da leggere)
+
+Ricerca per parole chiave su 36 documenti chiave archiviati (`tools/convenzioni/estrai_documenti.py`). Un estratto orienta la lettura: **non è un'analisi** e non va citato come accertato.
+
+**Prodotti e marchi** (8 occorrenze)
+
+> «…o n. C12. 4.DOCUMENTAZIONE COPERTA DA RISERVATEZZA Nel presente paragrafo il concorrente è tenuto a indicare analiticamente le parti della documentazione presentata che ritiene coperte da riservatezza, con riferimento a marchi, know-how, brevetti ecc. 5. SCHEDE ESPERIENZE PREGRESSE LOTTI APPLICATIVI ID 2601– «SANITA’ DIGITALE» Lotti Applicativi Allegato 10A – Offerta tecnica Lotti Applicativi 5 di 6 Classificazione d…» — ID 2601 All. 10 A Schema Offerta tecnica Lotti Applicativi.pdf (sha256 `7b259b50bfe5…`)
+
+> «…n. C10. 4. DOCUMENTAZIONE COPERTA DA RISERVATEZZA Nel presente paragrafo il concorrente è tenuto a indicare analiticamente le parti della documentazione presentata che ritiene coperte da riservatezza, con riferimento a marchi, know-how, brevetti ecc. 5. SCHEDE ESPERIENZE PREGRESSE Tale paragrafo deve essere compilato con le modalità indicate nell’Allegato 10 E. 6. SCHEDE BUSINESS CASE Tale paragrafo deve essere comp…» — ID 2601 All. 10 B Schema Offerta tecnica Lotti Supporto.pdf (sha256 `7b259b50bfe5…`)
+
+**Massimali, tetti ed erosione** (22 occorrenze)
+
+> «…a n.a. cui alla tabella 6.2 6.2 Ordinativo di fornitura, sulla base delle risultanze della classifica Modalità di finale (per una quota massima Rilancio competitivo (per una affidamento dei Ordinativo di pari al 30% del massimale del quota massima pari al 70% del Contratti fornitura relativo lotto), fino ad un massimale del relativo lotto). Esecutivi massimo di 4 aggiudicatari, come riportato nella tabella 6.3. Possi…» — ID 2601 All. 1 Capitolato Tecnico Generale.pdf (sha256 `7b259b50bfe5…`)
+
+> «…i a terzi per morte, lesioni personali e danneggiamenti a cose verificatisi in relazione all’attività oggetto dell’appalto (comprese le complementari, accessorie, connesse e collegate) svolta anche presso terzi . Art. 2 Massimale € 3.000.000 per sinistro/anno Art. 3 Clausole aggiuntive La polizza dovrà richiamare le seguenti clausole aggiuntive: a) i danni a terzi conseguenziali e da interruzione di esercizio con un…» — ID 2601 All. 19 Condizioni di assicurazione.pdf (sha256 `7b259b50bfe5…`)
+
+**Region, data center e trasferimenti** (23 occorrenze)
+
+> «…Ministero della Salute che è l'organo centrale  ISS - Istituto Superiore di Sanità;  IZS- Istituti Zooprofilattici Sperimentali;  Ministeri che operano a favore e per conto del SSN. 2. Enti ed organi territoriali:  Regioni, Province autonome e Università che operano, a favore e per conto del SSN;  Aziende Sanitarie Locali (ASL, AUSL, ATS, …), Aziende Ospedaliere, IRCCS pubblici. 3. Società partecipate “in-house…» — ID 2601 All. 1 Capitolato Tecnico Generale.pdf (sha256 `7b259b50bfe5…`)
+
+> «…ndicazioni Concorrente Indicare il concorrente (in caso di RTI e/o Consorzio indicare la singola impresa) Tipologia Committente Indicare l’Amministrazione del SSN committente del progetto Luogo di erogazione Indicare la Regione luogo di erogazione dei servizi Indicare il periodo di esecuzione del progetto (dal mm/aaaa al mm/aaaa) e la durata Periodo complessiva in mesi Fornire la descrizione sintetica del progetto co…» — ID 2601 All. 10 C Schede esperienze pregresse Lotti Applicativi.pdf (sha256 `7b259b50bfe5…`)
+
+**Reporting e monitoraggio** (39 occorrenze)
+
+> «…nelle seguenti classi (specificati nei Capitolati Tecnici Speciali Lotti): Classe di Rischio A, Classe di Rischio B e Classe di Rischio C. Componente: Il singolo elemento della configurazione di un sistema sottoposto a monitoraggio. Obiettivo/Intervento/Progetto: Unità organica di lavoro, affidata al fornitore, in cui si scompongono i servizi erogati in modalità progettuale. Dal punto di vista del Fornitore l’obiett…» — ID 2601 All. 1 Capitolato Tecnico Generale.pdf (sha256 `7b259b50bfe5…`)
+
+> «…ivi Sanitari Integrazione con i Sistemi Territoriali e Nazionali, a titolo di esempio: ANA, SistemaTS, FSE 2.0, Prescrizione Informativi Sanitari Elettronica, codifiche, Clinical Data Repository (CDR) , CUP, sistemai di Monitoraggio Territoriali e Nazionali spesa sanitaria, … Indicare il livello di aderenza agli standard di riferimento ed ai profili di interoperabilità Standard e direttive di utilizzati (Hl7, FHIR, I…» — ID 2601 All. 10 C Schede esperienze pregresse Lotti Applicativi.pdf (sha256 `7b259b50bfe5…`)
+
 
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | pubblicato, non archiviato | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | pubblicato, non archiviato | consip.it o sito dell'aggregatore | scraping |
 | offerta tecnica dell'aggiudicatario | non pubblicato | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | non pubblicato | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
-| transato e monitoraggio per lotto e listino | non pubblicato | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |
 | ordinativi e contratti attuativi delle PA | non pubblicato | AT degli enti; PVL (link ai documenti dal 2024) | PVL documenti_di_gara_link, poi AT degli enti |
 
 Legenda: «archiviato» = copia nel nostro archivio content-addressed con sha256 (verificato); i campi descrittivi senza fonte archiviata sono «riferiti» e marcati R in `report/convenzioni/database/curate.yaml`.

@@ -28,7 +28,13 @@ for v in voci:
     bv += ok
     nbv += 0 if ok else val
 attesi = {"iniziative": len(voci), "valore_2024_2025": tot, "valore_non_ben_visibile": nbv, "iniziative_ben_visibili": bv,
-          "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata")}
+          "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"),
+          "od_ordinato": sum(v["ordinato_consip"]["2024"] + v["ordinato_consip"]["2025"] for v in voci if v.get("ordinato_consip")),
+          "od_bdncp": sum(v["valore_ict_2024_2025"] or 0 for v in voci if v.get("ordinato_consip"))}
+# terza via per l'ordinato: direttamente dal CSV versionato
+import csv as _c
+attesi["od_ordinato_csv"] = sum(int(r["ordinato_2024"]) + int(r["ordinato_2025"]) for r in _c.DictReader(open(R / "report/convenzioni/database/consip-ordinato.csv", encoding="utf-8")))
+m["od_ordinato_csv"] = m["od_ordinato"]
 errori = 0
 for k, a in attesi.items():
     print(f"{k}: seconda via {a} / rapporto {m[k]}", "OK" if a == m[k] else "DIVERSO")
