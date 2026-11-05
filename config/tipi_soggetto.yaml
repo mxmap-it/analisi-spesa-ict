@@ -1,0 +1,15 @@
+# #62: tipo di soggetto della stazione appaltante del CIG padre, per il filtro della sezione /convenzioni/.
+# Regole sul nome della stazione appaltante in BDNCP (maiuscolo); vince la prima che corrisponde.
+# Fonte delle denominazioni: elenco ANAC dei soggetti aggregatori (anticorruzione.it, «Elenco dei soggetti aggregatori»)
+# stato: da-verificare (le regole vanno controvalidate con l'elenco ANAC archiviato con sha256: vedi mancanze M-SA1).
+regole:
+  - tipo: consip
+    rx: '\bCONSIP\b'
+  - tipo: psn
+    rx: 'POLO STRATEGICO NAZIONALE'
+  - tipo: aggregatore-regionale
+    rx: 'AZIENDA REGIONALE PER L.INNOVAZIONE E GLI ACQUISTI|\bARIA\b|INTERCENT|S\.?C\.?R\.? PIEMONTE|SOCIETA. DI COMMITTENZA REGIONE PIEMONTE|SO\.?RE\.?SA|INNOVAPUGLIA|\bESTAR\b|ENTE DI SUPPORTO TECNICO.AMMINISTRATIVO REGIONALE|AZIENDA ZERO|\bARCS\b|AZIENDA REGIONALE DI COORDINAMENTO PER LA SALUTE|CENTRALE (UNICA )?(DI )?COMMITTENZA (DELLA )?REGION|CENTRALE REGIONALE|STAZIONE UNICA APPALTANTE (DELLA )?REGION|SOGGETTO AGGREGATORE|\bARES\b|AREUS|\bCRAS\b|DIREZIONE CENTRALE ACQUISTI|^CITTA. METROPOLITANA'
+  - tipo: consorzio-unione
+    rx: '\bUNIONE (DEI |DEI COMUNI|DI COMUNI|COMUNI|MONTANA)|\bCONSORZIO\b|CENTRALE (UNICA )?(DI )?COMMITTENZA|\bC\.?U\.?C\.?\b|STAZIONE UNICA APPALTANTE|\bS\.?U\.?A\.?\b|ASMEL|PROVINCIA D|COMUNITA. MONTANA'
+  - tipo: altro
+    rx: '.'
