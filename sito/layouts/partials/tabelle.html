@@ -1,0 +1,97 @@
+{{- /* Tutte le tabelle del sito (dentro <main>; escluse con data-no-tabella): stile Bootstrap Italia, ordinamento e ricerca con simple-datatables (LGPL-3.0, vendor locale), data dei dati sotto ogni tabella. */ -}}
+{{- $datiAl := .Lastmod -}}
+{{- with .Params.datiAl }}{{ $datiAl = time . }}{{ end -}}
+<link rel="stylesheet" href="{{ "vendor/simple-datatables/style.css" | relURL }}">
+<style>
+  main .tabella-wrap { margin: 1.5rem 0 2rem; }
+  main table.table { font-size: .9rem; margin-bottom: .25rem; }
+  main table.table th { background: #f2f7fc; color: #17324d; vertical-align: bottom; border-bottom: 2px solid #0066CC; white-space: nowrap; }
+  main table.table td { vertical-align: top; }
+  main table.table, main table.table th, main table.table td { border: 1px solid #d1d9e0 !important; }
+  main table.table td, main table.table th { padding: .4rem .55rem; }
+  main table.table-striped > tbody > tr:nth-of-type(odd) > * { background: #f8fafc; }
+  main table.table-hover > tbody > tr:hover > * { background: #e6f0fa; }
+  main table.table td.num, main table.table th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  main .tabella-data { font-size: .8rem; color: #5d7083; margin-top: .25rem; }
+  .datatable-wrapper .datatable-top, .datatable-wrapper .datatable-bottom { padding: .5rem 0; }
+  .datatable-input { border: 1px solid #c5c7c9; border-radius: 4px; padding: .3rem .6rem; font-size: .9rem; }
+  .datatable-selector { border: 1px solid #c5c7c9; border-radius: 4px; padding: .2rem; }
+  .datatable-sorter::before, .datatable-sorter::after { opacity: .35; }
+  .datatable-pagination a, .datatable-pagination button { color: #0066CC; }
+  .datatable-pagination .datatable-active a, .datatable-pagination .datatable-active button { background: #0066CC; color: #fff; }
+</style>
+<script src="{{ "vendor/simple-datatables/simple-datatables.js" | relURL }}"></script>
+<script>
+(function () {
+  var DATA = {{ partial "date-it.html" $datiAl }};
+  var NUM = /^[−\-+]?[\d.]+(,\d+)?\s*(%|M€|€|k€)?$/;
+  function valore(t) {
+    t = t.replace(/\s+/g, ' ').trim();
+    if (!NUM.test(t)) return null;
+    var n = parseFloat(t.replace(/[^\d,−\-]/g, '').replace('−', '-').replace(',', '.'));
+    return isNaN(n) ? null : n;
+  }
+  function init() {
+    document.querySelectorAll('main table:not([data-no-tabella])').forEach(function (tb) {
+      if (tb.closest('.tabella-wrap')) return;
+      tb.classList.add('table', 'table-bordered', 'table-striped', 'table-hover', 'table-sm');
+      var wrap = document.createElement('div');
+      wrap.className = 'tabella-wrap';
+      var resp = document.createElement('div');
+      resp.className = 'table-responsive';
+      tb.parentNode.insertBefore(wrap, tb);
+      resp.appendChild(tb);
+      wrap.appendChild(resp);
+      var nota = document.createElement('p');
+      nota.className = 'tabella-data';
+      nota.textContent = 'Dati aggiornati al ' + DATA + '.';
+      wrap.appendChild(nota);
+
+      var righe = tb.tBodies[0] ? tb.tBodies[0].rows : [];
+      var nCol = tb.tHead ? tb.tHead.rows[0].cells.length : 0;
+      var cols = [];
+      for (var c = 0; c < nCol; c++) {
+        var numeriche = righe.length > 0;
+        for (var r = 0; r < righe.length; r++) {
+          var cell = righe[r].cells[c];
+          if (!cell) continue;
+          var t = cell.textContent.trim();
+          if (t === '' || t === '—' || t === '-') continue;
+          if (valore(t) === null) { numeriche = false; break; }
+        }
+        if (numeriche) {
+          tb.tHead.rows[0].cells[c].classList.add('num');
+          for (var r2 = 0; r2 < righe.length; r2++) {
+            var cl = righe[r2].cells[c]; if (!cl) continue;
+            cl.classList.add('num');
+            var v = valore(cl.textContent.trim());
+            cl.setAttribute('data-order', v === null ? '-1e18' : String(v));
+          }
+          cols.push({ select: c, type: 'number' });
+        }
+      }
+      // Ordinamento e ricerca solo per le tabelle con abbastanza righe; le piccole restano statiche.
+      if (window.simpleDatatables && righe.length >= 8 && nCol > 0) {
+        new simpleDatatables.DataTable(tb, {
+          searchable: righe.length >= 15,
+          paging: righe.length > 50,
+          perPage: 50,
+          perPageSelect: [25, 50, 100, 500],
+          fixedHeight: false,
+          columns: cols,
+          classes: { table: 'datatable-table table table-bordered table-striped table-hover table-sm' },
+          labels: {
+            placeholder: 'Cerca nella tabella…',
+            searchTitle: 'Cerca nella tabella',
+            perPage: 'righe per pagina',
+            noRows: 'Nessuna riga',
+            noResults: 'Nessun risultato',
+            info: 'Righe {start}–{end} di {rows}'
+          }
+        });
+      }
+    });
+  }
+  if (document.readyState !== 'loading') init(); else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
