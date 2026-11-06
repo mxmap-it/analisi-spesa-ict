@@ -260,6 +260,8 @@ def main(bozze=False):
                       "data_controllo": max((x["data"][:10] for x in lv), default=""), "url_pagina": pg[0]["url"] if pg else "",
                       "bozza_accesso_civico": {(r["iniziativa"], r["carenza"]): r["id"] for r in reg if r["stato"] == "preparata"}.get((c["iniziativa"], c.get("carenza")), ""),
                       "dietro_login": "no" if lv else "ignoto"})
+    INI[:] = [v["id"] for v in voci]
+    righe = revisiona(righe)
     righe.sort(key=lambda r: (r["iniziativa"], -r["criticita"], r["metodo"], r["documento_atteso"]))
     prepara_bozze(voci, righe, scrivi=bozze)
     with open(OUT, "w", newline="", encoding="utf-8") as f:
@@ -274,12 +276,104 @@ def main(bozze=False):
     return righe
 
 
+INI = []
+
+
+def revisiona(righe):
+    """Revisione a mano (revisione-mancanti.yaml) e offerte/listini trovati DENTRO i contratti firmati (allegati-nei-contratti.jsonl).
+    Le righe scartate vanno in documenti-mancanti-scartati.csv con la motivazione: nulla sparisce senza traccia."""
+    rev = yaml.safe_load(open(DB / "revisione-mancanti.yaml", encoding="utf-8")) or [] if (DB / "revisione-mancanti.yaml").exists() else []
+    dentro = defaultdict(list)
+    for a in leggi_jsonl(DB / "allegati-nei-contratti.jsonl"):
+        nome = a["documento"].rsplit("/", 1)[-1]
+        # solo copertine dentro contratti stipulati (non schemi, fac-simili, disciplinari: falsi positivi verificati a mano)
+        if (a["esito"] == "pubblicato-nel-documento" and a["via"] == "copertina"
+                and re.search(r"(?i)accordo.quadro|convenzione|contratto|signed|stipul", nome) and not re.search(r"(?i)schema|fac|modell", nome)):
+            dentro[(a["iniziativa"], a["tipo"])].append(a)
+    TIPI = {"Offerta tecnica dell'aggiudicatario (per lotto)": "offerta_tecnica",
+            "Offerta economica e listino offerto dall'aggiudicatario (per lotto)": "offerta_economica",
+            "Listini prezzi applicati alle amministrazioni (per lotto e listino)": "listini"}
+    # ricognizione dal vivo degli aggregatori (report/convenzioni/aggregatori/aggregatori-*.csv): pagina, login, documenti trovati
+    agg_pag, agg_doc = {}, defaultdict(list)
+    ALIAS = {"listino": "listini", "erosione": "transato_monitoraggio", "piano-fabbisogni": "progetti_fabbisogni",
+             "convenzione": "schema_aq_convenzione", "stipula": "schema_aq_convenzione", "atto-indizione": "determina",
+             "rinnovo/estensione": "modifica", "estensione-quinto": "modifica", "rinnovo": "modifica", "avviso-proroga": "modifica"}
+    for f in sorted((R / "report/convenzioni/aggregatori").glob("aggregatori-*.csv")):
+        for a in csv.DictReader(open(f, encoding="utf-8")):
+            ini = next((v for v in INI if v.lower() == a["iniziativa"].lower()), a["iniziativa"])
+            if a["documento"] == "(pagina)" or a["tipo_documento"] in ("pagina", "pagina-bando", "pagina-convenzione"):
+                lg = "sì" if "dietro_login=sì" in a["note"] else "no"
+                if a["esito"] != "pagina-non-trovata":
+                    agg_pag.setdefault(ini, (a["url_pagina"], a["data"][:10], lg))
+                elif lg == "sì":
+                    agg_pag.setdefault(ini, ("", a["data"][:10], "sì"))
+            elif a["esito"] in ("archiviato", "pubblicato-non-archiviato") and not re.search(
+                    r"(?i)modell|fac.?simile|schema|dettaglio economico", a["documento"] + " " + a["note"] + " " + a["dati_estratti"]):
+                # modelli e fac-simili di gara non sono l'offerta né il transato (revisione 6/11)
+                agg_doc[(ini, ALIAS.get(a["tipo_documento"], a["tipo_documento"]))].append(a)
+            if a["esito"] == "dietro-login":
+                agg_pag[ini] = (a["url_pagina"], a["data"][:10], "sì")
+    INV = {v[0]: k for k, v in ATTESI.items()}
+    tenute, scarti = [], []
+    for r in righe:
+        if r["iniziativa"] in agg_pag and not r["url_pagina"]:
+            u, d, lg = agg_pag[r["iniziativa"]]
+            r = {**r, "url_pagina": u, "data_controllo": d, "dietro_login": lg if r["dietro_login"] == "ignoto" or lg == "sì" else r["dietro_login"]}
+            if u and r["metodo"] == "atteso" and r["livello"] == "[R]" and "trovata" not in r["evidenza"]:
+                r["livello"] = "[V]"
+                r["evidenza"] += f" | ricognizione dal vivo {d}: pagina {u} senza documenti del tipo"
+        tp = INV.get(r["documento_atteso"]) or ("modifica" if r["documento_atteso"].startswith("Atti di proroga") else None)
+        found = agg_doc.get((r["iniziativa"], tp), []) if tp else []
+        if found and r["metodo"] == "atteso":
+            scarti.append({**r, "motivazione_scarto": "trovato dal vivo sulla piattaforma dell'aggregatore: " + "; ".join(
+                f"{a['documento'][:60]} ({a['esito']}, sha256 {a['sha256'][:12] or '-'})" for a in found[:3])})
+            continue
+        voce = next((x for x in rev if x["iniziativa"] == r["iniziativa"] and r["metodo"] != "atteso"
+                     and re.split(r"\s+(?:–|al/allo)\s*|\s*$", r["documento_atteso"].strip())[0].replace("  ", " ") == x["documento"]), None)
+        t = TIPI.get(r["documento_atteso"])
+        trov = dentro.get((r["iniziativa"], t), []) + (dentro.get((r["iniziativa"], "offerta_economica"), []) if t == "listini" else [])
+        if voce and voce["azione"] == "scarta":
+            scarti.append({**r, "motivazione_scarto": voce["motivazione"]})
+            continue
+        if voce:
+            r = {**r, "documento_atteso": voce.get("titolo", r["documento_atteso"]), "criticita": voce.get("criticita", r["criticita"]),
+                 "evidenza": r["evidenza"] + f" | revisione 6/11: {voce['motivazione']}"}
+        if trov:
+            docs = sorted({(a["documento"].rsplit("/", 1)[-1][:80], a["pagina"], a["sha256"][:12]) for a in trov})
+            r = {**r, "metodo": r["metodo"] + ";nel-contratto", "criticita": min(r["criticita"], 2), "livello": "[V]",
+                 "documento_atteso": r["documento_atteso"] + " – trovata dentro il contratto firmato per almeno un lotto: resta da coprire il resto",
+                 "evidenza": r["evidenza"] + " | allegati nei contratti: " + "; ".join(f"{d} p. {p} (sha256 {s})" for d, p, s in docs[:4])}
+        tenute.append(r)
+    with open(DB / "documenti-mancanti-scartati.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CAMPI + ["motivazione_scarto"])
+        w.writeheader()
+        w.writerows(sorted(scarti, key=lambda r: (r["iniziativa"], r["documento_atteso"])))
+    print(len(scarti), "righe scartate dalla revisione")
+    return tenute
+
+
 def destinatario(v):
     if v["tipo_soggetto"] == "consip":
         return "Consip S.p.A."
     if v["tipo_soggetto"] == "psn":
         return "Presidenza del Consiglio dei ministri - Dipartimento per la trasformazione digitale"
     return v["stazione_appaltante"]
+
+
+# Gare su delega (Consip centrale di committenza per un ente: AGEA ID 1774, INAIL ID 2748): proposta del 6/11 (DECISIONI.md, da
+# approvare). L'istanza va all'ufficio che DETIENE il documento (art. 5 c. 3 d.lgs. 33/2013). Consip detiene gli atti della
+# procedura (documenti di gara, offerte, verbali, aggiudicazione); l'ente delegante stipula ed esegue il contratto, quindi
+# detiene contratto firmato, ordinativi/contratti esecutivi, flussi di monitoraggio, progetti, proroghe e modifiche.
+ESECUZIONE = re.compile(r"(?i)ordinativ|contratti attuativi|transato|monitoraggio|fabbisogn|proroga|incremento|modific|"
+                        r"convenzione / accordo quadro stipulato|listini prezzi applicati")
+
+
+def detentore(r, v):
+    if "consip.it" not in r["url_pagina"]:
+        return destinatario(v)
+    if v["tipo_soggetto"] != "consip" and ESECUZIONE.search(r["documento_atteso"]):
+        return v["stazione_appaltante"].strip()  # su delega: atti di esecuzione all'ente delegante
+    return "Consip S.p.A."
 
 
 def slug(s):
@@ -296,8 +390,7 @@ def prepara_bozze(voci, righe, scrivi=False):
     gruppi = defaultdict(list)
     for r in righe:
         if r["criticita"] >= 2 and not r["bozza_accesso_civico"] and (r["livello"] == "[V]" or r["metodo"] != "atteso"):
-            # chi detiene i documenti: la centrale che ha pubblicato la pagina (Consip anche per le gare su delega di un ente)
-            gruppi["Consip S.p.A." if "consip.it" in r["url_pagina"] else destinatario(per_id[r["iniziativa"]])].append(r)
+            gruppi[detentore(r, per_id[r["iniziativa"]])].append(r)
     for dest, rr in sorted(gruppi.items()):
         iid = "mancanti-" + slug(dest)
         if iid in reg and reg[iid]["stato"] not in ("preparata", "ritirata"):

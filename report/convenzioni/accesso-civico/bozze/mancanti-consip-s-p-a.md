@@ -19,6 +19,7 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Allegato G – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
 
 **GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SE** (CIG dei lotti: 9030563057, 90305727C2, 9030580E5A, 90305884F7, 9030521DAA; pagina: https://www.consip.it/bandi/gara-sanita-digitale-sistemi-informativi-sanitari-e-servizi-al-cittadino-per-le-pubbliche-amministrazioni-del-snn)
 
@@ -37,10 +38,7 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 **L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECIFICO: SVILUPPO, MANUTENZIONE E** (CIG dei lotti: B2FB115279; pagina: https://www.consip.it/bandi/gara-sviluppo-applicativo-dei-sistemi-istituzionali-dellinail-ed-3)
 
-- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
-- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Appendice 3  – Linee Guida INAIL Architetture applicative_processo di rilascio e Monitoraggio t (criticità 2, rimando)
 - Appendice 6  – Cicli e Prodotti (criticità 2, rimando)
 
 **Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)** (CIG dei lotti: 55187486EA, 5518849A42, 55193442C1, 5519376D26; pagina: https://www.consip.it/bandi/gara-cloud-e-cooperazione-applicativa)
@@ -48,7 +46,6 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato A  – I (criticità 2, rimando)
 
 **GARA PER LA FORNITURA DI SERVIZI INTEGRATI, GESTIONALI ED OPERATIVI, DA ESEGUIRSI NEGLI ISTITUTI E LUOGHI DI CULTURA PUBBLICI INDIVIDUATI AL** (CIG dei lotti: 63461722CE, 6346123A5C, 63460974E9; pagina: https://www.consip.it/bandi/gara-servizi-integrati-per-gli-istituti-e-i-luoghi-di-cultura-pubblici)
 
@@ -58,10 +55,7 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 **GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA INFORMATIVO AGRICOLO NAZIONALE** (CIG dei lotti: 6816184CF7, 68161901EE; pagina: https://www.consip.it/bandi/gara-sistema-informativo-agricolo-nazionale-sian-per-agea)
 
-- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
-- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  (criticità 3, rimando)
 - Allegato 5 – Schema di Accordo Quadro Lotto 3 – Par (criticità 2, numerazione;rimando)
 - Appendice 1 al/allo capitolato – Lotto 2 Refresh e SIPA Pag (criticità 2, rimando)
 - Appendice 3  – Controlli a superficie nell’ambito del Piano Nazionale dello Sviluppo Rurale (criticità 2, rimando)
@@ -71,16 +65,16 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato F al/allo schema (criticità 2, rimando)
 
 **AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 | AQ SGM - ID 2181 - LOTTO 2** (CIG dei lotti: 8133313E33, 8133318257, 8133329B68, 8133337205, 8133302522; pagina: https://www.consip.it/bandi/aq-sgm-ed1)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  – del presente Accordo Quadro (criticità 3, rimando)
-- Allegato D  (criticità 3, rimando)
+- Allegato C all'AQ – Offerta economica del fornitore (criticità 3, rimando)
+- Allegato D all'AQ – Corrispettivi e tariffe (criticità 3, rimando)
 - Allegato E  – Capitolato d’Oneri (criticità 2, rimando)
-- Appendice A al/allo capitolato – Schema delle Verifiche Ispettive (criticità 2, rimando)
+- Allegato F  – Flusso dati per le commissioni a carico del Fornitore (criticità 2, rimando)
+- Allegato G  – Flusso dati per le commissioni a carico del Fornitore (criticità 2, rimando)
 
 **Consip Licenze Microsoft Enterprise Agreement 6, ID 2187** (CIG dei lotti: 8335254532; pagina: https://www.consip.it/bandi/as-sdapa-microsoft-enterprise-agreement-per-la-pa-ed-6)
 
@@ -99,8 +93,8 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 **AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 | LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI** (CIG dei lotti: 812841436E, 81284121C8, 81284186BA, 81284018B2, 8128410022, 8128416514 e altri; pagina: https://www.consip.it/bandi/aq-public-cloud-iaas-e-paas)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
-- Allegato C  – del presente Accordo Quadro (criticità 3, rimando)
-- Allegato D  (criticità 3, rimando)
+- Allegato C all'AQ – Offerta economica del fornitore (criticità 3, rimando)
+- Allegato D all'AQ – Corrispettivi e tariffe (criticità 3, rimando)
 - Appendice 4  – Supporto alla compilazione Offerta Economica Lotto 4 (criticità 3, rimando)
 
 **Consip AQ System management ed. 3, ID 2275, lotto 1** (CIG dei lotti: 893944468E; pagina: https://www.consip.it/bandi/aq-servizi-di-system-management-ed3)
@@ -108,27 +102,25 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato B  (criticità 3, rimando)
-- Allegato C  (criticità 3, rimando)
+- Allegato B all'AQ (fra offerta tecnica e corrispettivi: presumibilmente offerta economica) (criticità 3, rimando)
+- Allegato C all'AQ – Corrispettivi e tariffe (criticità 3, rimando)
+- Allegato G – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
 
 **Consip AQ Servizi di sicurezza da remoto, compliance e controllo, ID 2296, lotto 1 sicurezza da remoto** (CIG dei lotti: 88846293CA, 8884642E81; pagina: https://www.consip.it/bandi/avviso-di-preinformazione-sicurezza-da-remoto)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
-- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato B  – OFFERTA ECONOMICA DEL FORNITORE (criticità 3, rimando)
-- Allegato C  – CORRISPETTIVI E TARIFFE PAL (criticità 3, rimando)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) – trovata dentro il contratto firmato per almeno un lotto: resta da coprire il resto (criticità 2, atteso;nel-contratto)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) – trovata dentro il contratto firmato per almeno un lotto: resta da coprire il resto (criticità 2, atteso;nel-contratto)
+- Offerta tecnica dell'aggiudicatario (per lotto) – trovata dentro il contratto firmato per almeno un lotto: resta da coprire il resto (criticità 2, atteso;nel-contratto)
 - Allegato 13A  – Schema di Accordo Quadro Lotto 1 (criticità 2, rimando)
-- Allegato A  – OFFERTA TECNICA DEL FORNITORE (criticità 2, rimando)
-- Allegato F  (criticità 2, rimando)
+- Allegato 18  – Flusso dati commissioni (criticità 2, rimando)
 
 **ACCORDO QUADRO AVENTE AD OGGETTO LA FORNITURA DI UN 'CATALOGO DI PRODOTTI SAAS NELL'AMBITO DELLA PRODUTTIVITÀ INDIVIDUALE E COLLABORATION (P** (CIG dei lotti: 89910186C4, B44C03DEB7; pagina: https://www.consip.it/bandi/aq-public-cloud-saas-produttivita-individuale-e-collaboration)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato 5 – Fac simile - Dichiarazione Offerta Economica – AQ (comunque generata dal Sistema (criticità 3, numerazione;rimando)
-- Allegato 6 – Fac simile - Dichiarazione Offerta Economica – AS (comunque generata dal Sistema (criticità 3, numerazione;rimando)
 - Allegato B  – Corrispettivi e tariffe (criticità 3, rimando)
 
 **Consip AQ Sanità digitale, sistemi informativi sanitari e servizi al cittadino (ID Sigef 2365), lotto 2 CUP e interoperabilità dati sanitari** (CIG dei lotti: 903054517C, A0376B9FF5; pagina: https://www.consip.it/bandi/avviso-di-preinformazione-sanita-digitale-sistemi-informativi-sanitari-e-servizi-al-cittadino-per-le-pubbliche-amministrazioni-del-snn)
@@ -151,7 +143,6 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Appendice D  – del presente Capitolato (criticità 2, rimando)
 
 **ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS. 50/2016 E S.M.I., PER L'AFFIDAMENTO DEI SERVIZI DI TELEFONIA MOBILE (ED. 9) PER LE PUBBL** (CIG dei lotti: 9458158EE1; pagina: https://www.consip.it/bandi/avviso-di-preinformazione-servizi-di-telefonia-mobile-per-le-pubbliche-amministrazioni-ed9)
 
@@ -164,34 +155,34 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato D  (criticità 2, rimando)
 
 **Consip AQ Servizi applicativi in ottica cloud e Demand/PMO PA centrali, seconda edizione (ID Sigef 2483), lotto 1 Servizi applicativi** (CIG dei lotti: 91918889EE, 9191898231, 96693529B0; pagina: https://www.consip.it/bandi/avviso-di-preinformazione-aq-servizi-applicativi-in-ottica-cloud-per-la-pac-ed-2)
 
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato B  – del presente Accordo Quadro e nel (criticità 3, rimando)
-- Allegato C  (criticità 3, rimando)
+- Allegato B all'AQ – Offerta economica del fornitore (criticità 3, rimando)
+- Allegato C all'AQ – Corrispettivi e tariffe (criticità 3, rimando)
 
 **AQ CENTRALI TELEFONICHE 9 - ID 2496** (CIG dei lotti: 9727920589; pagina: https://www.consip.it/bandi/aq-centrali-telefoniche-ed-9)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato B  (criticità 3, rimando)
+- Allegato B all'AQ – Offerta economica del fornitore (criticità 3, rimando)
+- Allegato H – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
 - Appendice 1 al/allo capitolato – Speciale (“Penali (criticità 2, rimando)
 
 **Consip Digital transformation 2, ID 2536, lotto 2 digitalizzazione dei processi** (CIG dei lotti: 985365662A, 985369130D, 9853648F8D, 9853694586, 9853684D43, 9853673432 e altri; pagina: https://www.consip.it/bandi/gara-digital-transformation-ed-2)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  – del presente Accordo Quadro (criticità 3, rimando)
-- Allegato 13A  – Facsimile Dichiarazione Dati titolare effettivo (criticità 2, rimando)
+- Allegato C all'AQ – Offerta economica del fornitore (criticità 3, rimando)
+- Allegato A  – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
 
 **SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINISTRAZIONE 2 ID 2566 | LOTTO 2 SERVIZI DI DATA MANAGEMENT PER LA PAL - AREA NORD** (CIG dei lotti: 9852922872, 9852991165, 9852886ABC, 98530122B9, 98530344E0, 98530523BB; pagina: https://www.consip.it/bandi/gara-servizi-di-data-management-per-la-pubblica-amministrazione-ed2)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato B  – del presente Accordo Quadro e nel (criticità 3, rimando)
+- Allegato B all'AQ – Offerta economica del fornitore (criticità 3, rimando)
 - Allegato C  – Corrispettivi e tariffe (criticità 3, rimando)
 
 **Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle** (CIG dei lotti: 9660108D4B, 9660167DFB, 966021124E, 9660153271, 9660185CD6, 9660129E9F e altri; pagina: https://www.consip.it/bandi/gara-licenze-software-multibrand-6)
@@ -203,7 +194,6 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
 - Allegato C  – Offerta economica (criticità 3, rimando)
-- Allegato 17A  (criticità 2, rimando)
 
 **Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610** (CIG dei lotti: A02590F330, A0259125A9; pagina: https://www.consip.it/bandi/gara-servizi-applicativi-in-ottica-cloud-ed-3-pal)
 
@@ -216,13 +206,11 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Appendice 4 al/allo capitolato – Listino Microsoft EA per l’Utente Finale (criticità 3, rimando)
 - Appendice 4.1  (criticità 3, rimando)
 - Allegato A al/allo schema – Convenzione (criticità 2, rimando)
-- Appendice A  – Restrizioni e Diritti di utilizzo aggiuntivi (criticità 2, rimando)
 
 **Consip PC desktop e workstation 3, ID 2631, lotto 2** (CIG dei lotti: 9823936871, 9823953679, 9823965062, 9824017B48, 9823924E88, 9824002EE6; pagina: https://www.consip.it/bandi/gara-pc-desktop-e-workstation-ed-3)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato 19A  – Dichiarazione Dati titolare effettivo (criticità 2, rimando)
 
 **ENERGIA ELETTRICA 21 - ID 2638 | LOMBARDIA ESCLUSE LA PROVINCIA DI MILANO E LA PROVINCIA DI LODI** (CIG dei lotti: 9852519BE0, 98526052DB, 98525938F2, 9852504F7E, 98526507FC; pagina: https://www.consip.it/bandi/avviso-di-preinformazione-fornitura-di-energia-elettrica-e-dei-servizi-connessi-per-le-pa-ed-21)
 
@@ -233,21 +221,19 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  (criticità 3, rimando)
-- Appendice A – Schema delle Verifiche Ispettive (criticità 2, numerazione;rimando)
+- Allegato C – Corrispettivi e tariffe (criticità 3, rimando)
 
 **CLOUD ENABLING 1 ID 2652 | LOTTO 1: SERVIZI SUPPORTO ALL'ADOZIONE E PMO - PAC1** (CIG dei lotti: 9876804480, 9876898213, 9876875F14, 9876856F66, 987694158E, 9876910BF7 e altri; pagina: https://www.consip.it/bandi/aq-cloud-enabling)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  – Offerta (criticità 3, rimando)
+- Allegato C – Offerta economica (criticità 3, rimando)
 
 **PRODOTTI CLOUD IN MODALITÀ SOFTWARE AS A SERVICE NELL'AMBITO DEL CRM E MARKETING PER LE PUBBLICHE AMMINISTRAZIONI -ID 2700 | SERVIZI SAAS CR** (CIG dei lotti: B33B44C1B5, B33B44A00F, B33B44B0E2; pagina: https://www.consip.it/bandi/gara-public-cloud-saas-crm-ed-2)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato C  – Dichiarazione Dati titolare effettivo (criticità 2, rimando)
 
 **Consip AQ System management ed. 4, ID 2710 (lotto unico)** (CIG dei lotti: B2094754F1; pagina: https://www.consip.it/bandi/aq-system-management-ed4)
 
@@ -263,8 +249,7 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 **FORNITURA DI SERVIZI CLOUD IAAS E PAAS | FORNITURA SERVIZI IAAS E PAAS** (CIG dei lotti: B6A19F425E, B6A19F5331, B6A19F6404, B6A19F74D7, B6A19F85AA, B6A19F967D; pagina: https://www.consip.it/bandi/aq-iaas-e-paas-2-ed-2)
 
-- Allegato A  – del presente (criticità 3, rimando)
-- Allegato B  – APPENDICE 5 AL CAPITOLATO TECNICO (criticità 3, rimando)
+- Allegato A all'AQ – Offerta economica del fornitore (criticità 3, rimando)
 
 **Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi forte, CIG non presente negli avvisi eForms)** (CIG dei lotti: B1D4011AB2; pagina: https://www.consip.it/bandi/gara-microsoft-enterprise-agreement-ed9)
 
@@ -285,8 +270,7 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
-- Allegato H  – Dichiarazione Dati titolare effettivo (criticità 2, rimando)
-- Appendice A  – Tabelle Lavori pag (criticità 2, rimando)
+- Appendice A al capitolato – Tabelle lavori (criticità 2, rimando)
 
 Per le offerte accetto l'oscuramento delle parti motivatamente dichiarate segreto tecnico o commerciale. Chiedo i documenti nel formato in cui sono già detenuti, senza elaborazione; in caso di limiti ex art. 5-bis, l'accesso parziale con oscuramento delle sole parti sottratte.
 

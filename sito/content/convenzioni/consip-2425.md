@@ -24,7 +24,7 @@ jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "nam
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 67 documenti pubblicati e archiviati; **5 mancanti**: 4 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 0 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 67 documenti pubblicati e archiviati; **5 mancanti**: 4 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 0 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -225,7 +225,7 @@ Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pu
 | Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
 | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
 | Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
-| Appendice D  – del presente Capitolato | 2 | rimando | del presente Capitolato | «ato e nei suoi allegati (Schema delle Verifiche Ispettive – Appendice D del presente Capitolato). Tale Schema, in sede di verifica potrà essere oggetto di ulteriori modif» — ID 2425 - Allegato 2 - Capitolato Tecnico Speciale - NEW.pdf.p7m, p. 34, sha256 92cf1 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Appendice D al capitolato – Schema delle verifiche ispettive | 1 | rimando | del presente Capitolato | «ato e nei suoi allegati (Schema delle Verifiche Ispettive – Appendice D del presente Capitolato). Tale Schema, in sede di verifica potrà essere oggetto di ulteriori modif» — ID 2425 - Allegato 2 - Capitolato Tecnico Speciale - NEW.pdf.p7m, p. 34, sha256 92cf1 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
 
 ## Hai uno di questi documenti?
 

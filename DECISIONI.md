@@ -172,3 +172,22 @@ vecchia.
   - Quindi: una release per iniziativa (max 1.000 file; la più grande ne ha meno), nessun file oltre 2 GiB. GitHub espone il digest sha256 di ogni asset: verifica completa senza riscaricare.
 - Il repo contiene solo README, licenza CC0 del manifest e `manifest.csv/json`; i documenti restano delle amministrazioni (riuso ex art. 7 d.lgs. 33/2013 e art. 52 CAD, citando la fonte). Esclusi: fonti non ufficiali e materiali interni (es. PDF Proteggimi, che comunque non è nell'archivio delle convenzioni).
 - Caricamento dal portatile (il token GitHub non si porta sul server), con i blob copiati dal server.
+
+## 2026-11-06 — PROPOSTA (da approvare, Fabio): destinatario dell'accesso civico per le gare Consip su delega (#62)
+
+Stato: **proposta**, nessuna istanza inviata. Casi: ID 1774 SIAN (AGEA, `consip-1774`) e ID 2748 INAIL (`cig-B2FB115279`): in BDNCP la stazione
+appaltante del CIG padre è l'ente, la pagina con i documenti è su consip.it (Consip centrale di committenza su delega).
+
+- **Norma.** Art. 5 c. 3 d.lgs. 33/2013: l'istanza si presenta «all'ufficio che detiene i dati, le informazioni o i documenti» (in alternativa
+  all'URP o all'ufficio indicato in AT); art. 5 c. 2: il diritto vale verso il soggetto che detiene il documento. Linee guida ANAC del. 1309/2016
+  §5 e circolare FP 2/2017 §3: l'amministrazione che riceve un'istanza per documenti che non detiene la trasmette a quella che li detiene [R:
+  testi da riarchiviare con sha256 prima dell'invio]. Il d.lgs. 36/2023 (art. 62-63) separa la fase di affidamento, svolta dalla centrale
+  delegata, dall'esecuzione, che resta all'ente stipulante [R].
+- **Atti** [V]: le pagine consip.it delle due gare pubblicano bando, disciplinare, capitolato e aggiudicazione a nome di Consip; il contratto
+  si stipula fra ente e aggiudicatario (schema di contratto/AQ fra i documenti di gara).
+- **Proposta di instradamento** (implementata in `tools/convenzioni/documenti_mancanti.py`, funzione `detentore`):
+  - documenti della procedura (offerte, allegati di gara, verbali, aggiudicazione, chiarimenti) → **Consip** (bozza `mancanti-consip-s-p-a`);
+  - atti di esecuzione (contratto stipulato, ordinativi/contratti esecutivi, flussi di monitoraggio, piani dei fabbisogni, proroghe e modifiche,
+    listini applicati) → **ente delegante** (bozze `mancanti-agenzia-per-le-erogazioni-in-agricoltura`, `mancanti-istituto-nazionale-…`);
+  - nei casi dubbi istanza a Consip con richiesta esplicita di trasmissione all'ente ex art. 5 c. 3 se non detiene il documento.
+- Da decidere: approvare l'instradamento; se inviare a entrambi in parallelo per i documenti dubbi.

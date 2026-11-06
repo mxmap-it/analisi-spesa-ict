@@ -32,7 +32,7 @@ if sha(CSV) != prima:
 righe = list(csv.DictReader(open(CSV, encoding="utf-8")))
 reg = {r["id"] for r in csv.DictReader(open(R / "report/convenzioni/accesso-civico/registro.csv", encoding="utf-8"))}
 for r in righe:
-    ok = (set(r["metodo"].split(";")) <= {"numerazione", "rimando", "atteso"} and r["criticita"] in "123" and r["livello"] in ("[V]", "[R]")
+    ok = (set(r["metodo"].split(";")) <= {"numerazione", "rimando", "atteso", "nel-contratto"} and r["criticita"] in "123" and r["livello"] in ("[V]", "[R]")
           and r["dietro_login"] in ("sì", "no", "ignoto") and (r["livello"] != "[V]" or (r["data_controllo"] and r["url_pagina"]))
           and (not r["bozza_accesso_civico"] or r["bozza_accesso_civico"] in reg))
     if not ok:

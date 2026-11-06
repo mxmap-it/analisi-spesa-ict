@@ -1,0 +1,34 @@
+{
+ "formato": "spesaict.istanza/1",
+ "id": "mancanti-agenzia-per-le-erogazioni-in-agricoltura",
+ "tipo": "accesso-civico-generalizzato",
+ "base": "art. 5 c. 2 d.lgs. 33/2013",
+ "destinatario": "AGENZIA PER LE EROGAZIONI IN AGRICOLTURA",
+ "oggetto": "Istanza di accesso civico generalizzato: documenti non pubblicati di 1 iniziative ICT",
+ "testo": "Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti documenti, che non risultano pubblicati sulle pagine ufficiali delle iniziative alla data del controllo indicata, oppure risultano citati negli atti pubblicati ma non allegati:\n\n\n**GARA A PROCEDURA APERTA SUDDIVISA IN 4 LOTTI PER L'AFFIDAMENTO DEI SERVIZI DI SVILUPPO E GESTIONE DEL SISTEMA INFORMATIVO AGRICOLO NAZIONALE** (CIG dei lotti: 6816184CF7, 68161901EE; pagina: https://www.consip.it/bandi/gara-sistema-informativo-agricolo-nazionale-sian-per-agea)\n\n- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)\n- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)\n\nPer le offerte accetto l'oscuramento delle parti motivatamente dichiarate segreto tecnico o commerciale. Chiedo i documenti nel formato in cui sono già detenuti, senza elaborazione; in caso di limiti ex art. 5-bis, l'accesso parziale con oscuramento delle sole parti sottratte.",
+ "documenti": [
+  {
+   "iniziativa": "consip-1774",
+   "documento_atteso": "Elenco degli ordinativi e contratti attuativi delle PA",
+   "metodo": "atteso",
+   "criticita": 3,
+   "livello": "[V]",
+   "evidenza": "inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo"
+  },
+  {
+   "iniziativa": "consip-1774",
+   "documento_atteso": "Flussi di monitoraggio: transato/erogato per lotto, listino e marchio",
+   "metodo": "atteso",
+   "criticita": 3,
+   "livello": "[V]",
+   "evidenza": "inventario: stato «non-pubblicato» (open data Consip (aggregato), relazioni al MEF); classe C3; pagina ricontrollata dal vivo senza file del tipo"
+  }
+ ],
+ "riferimenti": [
+  "report/convenzioni/database/documenti-mancanti.csv",
+  "report/convenzioni/accesso-civico/analisi-dinieghi.md"
+ ],
+ "preparata": "2026-11-06",
+ "inviata": null,
+ "approvazione": "da approvare (Fabio)"
+}

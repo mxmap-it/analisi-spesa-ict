@@ -1,0 +1,87 @@
+# #62: revisione a mano (lettura della citazione e, dove serve, della pagina del PDF) delle righe «rimando»/«numerazione»
+# di documenti-mancanti.csv. Applicata da tools/convenzioni/documenti_mancanti.py DOPO le regole; le righe scartate finiscono
+# in documenti-mancanti-scartati.csv con la motivazione. Chiave: iniziativa + inizio di «documento_atteso» (fino al trattino).
+# azione: scarta (non è un documento mancante della gara) | correggi (titolo e/o criticità). Revisione del 6/11/2026 (Claude, agente #62).
+# Criteri (metodologia, §«Revisione delle righe»):
+#  R1 norma o documento di altri soggetti (decreti, circolari, linee guida, condizioni del produttore) -> scarta;
+#  R2 intestazione del documento stesso o allegato contenuto nel PDF firmato (verificato alla pagina) -> scarta;
+#  R3 falso positivo lessicale («annessi 2TB», appendici di polizze, «informativa sub allegato») -> scarta;
+#  R4 regole generali del sistema di e-procurement (pubblicate su acquistinretepa) -> scarta;
+#  R5 moduli amministrativi (titolare effettivo, conflitto d'interessi, conti dedicati, nomina responsabile, fac-simili
+#     di offerta non compilati) -> criticità 1: non servono alla spesa né alla giurisdizione;
+#  R6 schemi delle verifiche ispettive -> criticità 1;
+#  R7 titolo troncato dalla regola -> titolo ricostruito dalla citazione, criticità invariata se già coerente.
+- {iniziativa: cig-B2FB115279, documento: "Allegato A", azione: scarta, motivazione: "R1: «Linee guida … 8 luglio 2005 – Allegato A» (accessibilità, CNIPA): norma esterna"}
+- {iniziativa: cig-B2FB115279, documento: "Allegato 15", azione: correggi, criticita: 1, motivazione: "R5: dichiarazione per conto di terzi (titolare effettivo)"}
+- {iniziativa: consip-1403, documento: "Allegato A", azione: scarta, motivazione: "R1: «completare l'allegato A.I» è l'allegato del modulo GUUE del bando (punti di contatto), non un documento di gara"}
+- {iniziativa: consip-1403, documento: "Allegato B", azione: correggi, titolo: "Allegato B – Descrizione dei servizi (Portali e Servizi on-line)", motivazione: "R7"}
+- {iniziativa: consip-1561, documento: "Allegato A", azione: scarta, motivazione: "R1: Allegato A all'allegato del DM 24/5/2012 (CAM): norma"}
+- {iniziativa: consip-1561, documento: "Allegato B", azione: scarta, motivazione: "R1: Allegato B all'allegato del DM 24/5/2012 (CAM): norma"}
+- {iniziativa: consip-1561, documento: "Allegato F", azione: scarta, motivazione: "R4: Regole del Sistema di e-Procurement della PA"}
+- {iniziativa: consip-2187, documento: "Allegato F", azione: scarta, motivazione: "R4: Regole del Sistema di e-Procurement della PA"}
+- {iniziativa: consip-2480, documento: "Allegato F", azione: scarta, motivazione: "R4: Regole del Sistema di e-Procurement della PA"}
+- {iniziativa: consip-2187, documento: "Appendice B", azione: scarta, motivazione: "R1: «Appendice B – Software Assurance» del documento Microsoft (Product Terms): documento del produttore"}
+- {iniziativa: consip-2213, documento: "Annesso 2", azione: scarta, motivazione: "R3: «con annessi 2TB di storage»"}
+- {iniziativa: consip-2213, documento: "Allegato 3A", azione: correggi, titolo: "Allegato 3A (penali)", motivazione: "R7"}
+- {iniziativa: consip-2296, documento: "Sub-allegato C", azione: scarta, motivazione: "R3: informativa privacy di Deloitte «sub allegato C»"}
+- {iniziativa: consip-2296, documento: "Allegato A", azione: scarta, motivazione: "R2: offerta tecnica del fornitore contenuta nell'AQ firmato Lotto 2 RTI Deloitte (pp. 35-67, letta)"}
+- {iniziativa: consip-2296, documento: "Allegato B", azione: scarta, motivazione: "R2: offerta economica del fornitore contenuta nell'AQ firmato Lotto 2 (pp. 68-73, letta: prezzi per voce)"}
+- {iniziativa: consip-2296, documento: "Allegato C", azione: scarta, motivazione: "R2: «Corrispettivi e tariffe PAL» contenuti nell'AQ firmato Lotto 2 (pp. 74-…, letta: es. Security Strategy 250 €/gg)"}
+- {iniziativa: consip-2296, documento: "Allegato G", azione: scarta, motivazione: "R2: «Disposizioni per la governance» contenute nell'AQ firmato Lotto 2 (p. 113)"}
+- {iniziativa: consip-2296, documento: "Allegato F", azione: scarta, motivazione: "R2: intestazione dello schema di contratto esecutivo contenuto nell'AQ Lotto 1 (p. 119)"}
+- {iniziativa: consip-1836, documento: "Allegato F", azione: scarta, motivazione: "R2: intestazione del file pubblicato «Allegato 5a Flusso dati FEE»"}
+- {iniziativa: consip-2480, documento: "Allegato D", azione: scarta, motivazione: "R2: intestazione della nomina a responsabile contenuta nella convenzione Lotto 3 IBM (p. 66)"}
+- {iniziativa: consip-2480, documento: "Allegato B", azione: scarta, motivazione: "R2: Condizioni generali contenute nella convenzione Lotto 3 IBM (p. 34)"}
+- {iniziativa: consip-2480, documento: "Allegato C", azione: correggi, criticita: 1, motivazione: "R5: nomina a responsabile del trattamento"}
+- {iniziativa: consip-2483, documento: "Allegato D", azione: scarta, motivazione: "R2: patto di integrità contenuto nell'AQ L2 firmato"}
+- {iniziativa: consip-2566, documento: "Allegato A", azione: scarta, motivazione: "R2: intestazione nella relazione di genere (adempimenti art. 47 DL 77/2021) pubblicata"}
+- {iniziativa: consip-2599, documento: "Allegato 11A", azione: scarta, motivazione: "R2: intestazione del fac-simile 11 A e B pubblicato"}
+- {iniziativa: consip-2652, documento: "Allegato 5A", azione: scarta, motivazione: "R2: intestazione del fac-simile 5 A/B pubblicato"}
+- {iniziativa: consip-2755, documento: "Allegato 14A", azione: scarta, motivazione: "R2: intestazione del fac-simile 14 A-B pubblicato"}
+- {iniziativa: consip-2746, documento: "Allegato B", azione: scarta, motivazione: "R2: «Allegato B – Appendice 5 al CT, macrocategorie listino IBM» contenuto nell'AQ L5 oscurato (p. 43)"}
+- {iniziativa: consip-2746, documento: "Allegato C", azione: scarta, motivazione: "R2: patto di integrità contenuto nell'AQ"}
+- {iniziativa: consip-2746, documento: "Allegato D", azione: scarta, motivazione: "R2: «Scheda 6 – Servizi di hosting e cloud» (DNSH, circ. RGS 33/2022) contenuta nell'AQ"}
+- {iniziativa: consip-2746, documento: "Allegato A", azione: correggi, titolo: "Allegato A all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2746, documento: "Allegato G", azione: correggi, criticita: 1, motivazione: "R5: nomina a responsabile"}
+- {iniziativa: consip-2746, documento: "Appendice A", azione: correggi, titolo: "Appendice A – Restrizioni e diritti di utilizzo aggiuntivi (condizioni del produttore)", motivazione: "R7; documento delle condizioni di licenza, utile per la giurisdizione: criticità 1 mantenuta"}
+- {iniziativa: consip-2755, documento: "Appendice A", azione: correggi, titolo: "Appendice A – Restrizioni e diritti di utilizzo aggiuntivi (condizioni del produttore)", motivazione: "R7"}
+- {iniziativa: consip-2615, documento: "Appendice A", azione: correggi, criticita: 1, motivazione: "condizioni di licenza del produttore (Consociate): non un atto di gara mancante"}
+- {iniziativa: consip-2599, documento: "Appendice B", azione: scarta, motivazione: "R3: appendici della polizza fideiussoria n. B.2023.1251226"}
+- {iniziativa: consip-2700, documento: "Appendice 1", azione: scarta, motivazione: "R3: appendice n. 1 della garanzia definitiva"}
+- {iniziativa: consip-2700, documento: "Appendice 8", azione: scarta, motivazione: "R1: Appendice 8 della Circolare RGS 33/2022 (scheda DNSH 6 «hosting e cloud»)"}
+- {iniziativa: consip-2928, documento: "Appendice 8", azione: scarta, motivazione: "R1: Appendice 8 della Circolare RGS 33/2022"}
+- {iniziativa: consip-2700, documento: "Allegato C", azione: correggi, criticita: 1, motivazione: "R5: dichiarazione titolare effettivo"}
+- {iniziativa: consip-2700, documento: "Allegato B", azione: correggi, titolo: "Allegato B all'AQ – Nomina a responsabile del trattamento", motivazione: "R7, R5"}
+- {iniziativa: consip-2483, documento: "Allegato B", azione: correggi, titolo: "Allegato B all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2483, documento: "Allegato C", azione: correggi, titolo: "Allegato C all'AQ – Corrispettivi e tariffe", motivazione: "R7"}
+- {iniziativa: consip-2483, documento: "Appendice 19", azione: correggi, criticita: 1, motivazione: "R5"}
+- {iniziativa: consip-2566, documento: "Allegato B", azione: correggi, titolo: "Allegato B all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2536, documento: "Allegato C", azione: correggi, titolo: "Allegato C all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2536, documento: "Allegato 13A", azione: correggi, criticita: 1, motivazione: "R5"}
+- {iniziativa: consip-2181, documento: "Allegato C", azione: correggi, titolo: "Allegato C all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2181, documento: "Allegato D", azione: correggi, titolo: "Allegato D all'AQ – Corrispettivi e tariffe", motivazione: "R7"}
+- {iniziativa: consip-2181, documento: "Appendice A", azione: correggi, criticita: 1, motivazione: "R6"}
+- {iniziativa: consip-2213, documento: "Allegato C", azione: correggi, titolo: "Allegato C all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2213, documento: "Allegato D", azione: correggi, titolo: "Allegato D all'AQ – Corrispettivi e tariffe", motivazione: "R7"}
+- {iniziativa: consip-2275, documento: "Allegato B", azione: correggi, titolo: "Allegato B all'AQ (fra offerta tecnica e corrispettivi: presumibilmente offerta economica)", motivazione: "R7"}
+- {iniziativa: consip-2275, documento: "Allegato C", azione: correggi, titolo: "Allegato C all'AQ – Corrispettivi e tariffe", motivazione: "R7"}
+- {iniziativa: consip-2496, documento: "Allegato B", azione: correggi, titolo: "Allegato B all'AQ – Offerta economica del fornitore", motivazione: "R7"}
+- {iniziativa: consip-2648, documento: "Allegato C", azione: correggi, titolo: "Allegato C – Corrispettivi e tariffe", motivazione: "R7"}
+- {iniziativa: consip-2648, documento: "Appendice A", azione: correggi, criticita: 1, motivazione: "R6"}
+- {iniziativa: consip-2425, documento: "Appendice D", azione: correggi, titolo: "Appendice D al capitolato – Schema delle verifiche ispettive", criticita: 1, motivazione: "R6, R7"}
+- {iniziativa: consip-2652, documento: "Allegato C", azione: correggi, titolo: "Allegato C – Offerta economica", motivazione: "R7"}
+- {iniziativa: consip-1774, documento: "Allegato C", azione: correggi, titolo: "Allegato C – Dichiarazione di offerta economica (modulo)", criticita: 1, motivazione: "R5: è il modulo, non l'offerta (chiarimento lotti 2 e 3)"}
+- {iniziativa: consip-2297, documento: "Allegato 5", azione: correggi, criticita: 1, motivazione: "R5: fac-simile di dichiarazione di offerta non compilato"}
+- {iniziativa: consip-2297, documento: "Allegato 6", azione: correggi, criticita: 1, motivazione: "R5: fac-simile di dichiarazione di offerta non compilato"}
+- {iniziativa: consip-2601, documento: "Allegato 17A", azione: correggi, criticita: 1, motivazione: "R5"}
+- {iniziativa: consip-2631, documento: "Allegato 19A", azione: correggi, criticita: 1, motivazione: "R5"}
+- {iniziativa: consip-reti-locali-8, documento: "Allegato H", azione: correggi, criticita: 1, motivazione: "R5"}
+- {iniziativa: consip-reti-locali-8, documento: "Appendice A", azione: correggi, titolo: "Appendice A al capitolato – Tabelle lavori", motivazione: "R7"}
+- {iniziativa: consip-2710, documento: "Appendice 4", azione: correggi, titolo: "Appendice 4 – Documentazione per le verifiche ispettive", motivazione: "R7"}
+- {iniziativa: cig-8784303C25, documento: "Allegato G", azione: correggi, titolo: "Allegato G – Flusso dati per le commissioni a carico del fornitore", criticita: 2, motivazione: "R7; tracciato del flusso del fatturato (via C3): criticità 2"}
+- {iniziativa: consip-2181, documento: "Allegato F", azione: correggi, criticita: 2, motivazione: "tracciato del flusso del fatturato (via C3)"}
+- {iniziativa: consip-2181, documento: "Allegato G", azione: correggi, criticita: 2, motivazione: "tracciato del flusso del fatturato (via C3)"}
+- {iniziativa: consip-2275, documento: "Allegato G", azione: correggi, titolo: "Allegato G – Flusso dati per le commissioni a carico del fornitore", criticita: 2, motivazione: "R7; via C3"}
+- {iniziativa: consip-2496, documento: "Allegato H", azione: correggi, titolo: "Allegato H – Flusso dati per le commissioni a carico del fornitore", criticita: 2, motivazione: "R7; via C3"}
+- {iniziativa: consip-2536, documento: "Allegato A", azione: correggi, criticita: 2, motivazione: "tracciato del flusso del fatturato (via C3)"}
+- {iniziativa: consip-2296, documento: "Allegato 18", azione: correggi, criticita: 2, motivazione: "tracciato del flusso del fatturato (via C3)"}
