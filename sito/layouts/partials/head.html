@@ -125,3 +125,6 @@
     .beta-tip .arr { display:none; }
   }
 </style>
+{{- with .Params.jsonld }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}

@@ -3,6 +3,12 @@
   <div class="row justify-content-center">
     <div class="col-lg-8">
       <article>
+        {{- with .Params.breadcrumb }}
+        <nav aria-label="Percorso" class="breadcrumb-container mb-2"><ol class="breadcrumb p-0">
+          {{- range . }}<li class="breadcrumb-item"><a href="{{ .url | relURL }}">{{ .nome }}</a><span class="separator">/</span></li>{{ end }}
+          <li class="breadcrumb-item active" aria-current="page">{{ $.Title | truncate 60 }}</li>
+        </ol></nav>
+        {{- end }}
         <div class="category-top mb-3">
           <span class="category">{{ .Section | humanize }}</span>
           <span class="data">Pubblicato il {{ partial "date-it.html" .Date }}{{ if gt .Lastmod .Date }} · aggiornato il {{ partial "date-it.html" .Lastmod }}{{ end }}{{ with .Params.datiAl }} · dati al {{ partial "date-it.html" (time .) }}{{ end }}</span>
