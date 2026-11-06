@@ -712,7 +712,7 @@ Per aggregatori regionali e consorzi molti dati sono «da verificare»: le parti
 
 ## 8. Rimedi
 
-- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: 30 bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, ordinativi delle più grandi, region e data center, erosione), 114 ritirate, 1 inviate. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
+- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: 30 bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, ordinativi delle più grandi, region e data center, erosione), 114 ritirate, 1 annullata, nessuna inviata. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
 - **Proposte di policy** (stato «proposta», nessuna inviata):
   - C1 Offerte tecniche dei vincitori → R39
   - C2 Listini e prezzi offerti dagli aggiudicatari → R39
@@ -727,7 +727,7 @@ Per aggregatori regionali e consorzi molti dati sono «da verificare»: le parti
 
 | Versione | Data | Nota | Cosa è cambiato |
 |---|---|---|---|
-| 0.9 | 2026-11-06 | bozza: Allegato 6 WebRT18 archiviato; 2 pagine Azienda Zero trovate (25 documenti); dietro_login verificato da anonimo su 25 schede acquistinretepa e 2 pagine Azienda Zero (ignoto 308 → 234) | documenti mancanti per file: 782 (criticità 3: 415), prima 788; istanze preparate: da 29 a 30; istanze inviate: da 0 a 1 |
+| 0.9 | 2026-11-06 | bozza: Allegato 6 WebRT18 archiviato; 2 pagine Azienda Zero trovate (25 documenti); dietro_login verificato da anonimo su 25 schede acquistinretepa e 2 pagine Azienda Zero (ignoto 308 → 234) | documenti mancanti per file: 782 (criticità 3: 415), prima 788; istanze preparate: da 29 a 30 |
 | 0.8 | 2026-11-07 | bozza non pubblica: zip del giro 7/11 letti (listini Intercent-ER con prezzi offerti e marchi), copie START/Sintel portate in archivio, ricerca fuori piattaforma (5 parziali, 411 non trovati) e visita delle sezioni AT di 60 enti aderenti (nessun documento di criticità 3; 12 blocchi) | documenti mancanti per file: 788 (criticità 3: 415), prima 797 |
 | 0.7 | 2026-11-06 | bozza non pubblica: revisione a mano delle righe rimando/numerazione (89 scartate con motivazione, criticità corrette), offerte e corrispettivi trovati dentro gli AQ firmati dell'ID 2296, ricognizione dal vivo di 31 iniziative di aggregatori e altri soggetti, 36 allegati flussi letti per intero, instradamento proposto delle istanze per le gare su delega | documenti mancanti per file: 797 (criticità 3: 415), prima 886; istanze preparate: da 20 a 29 |
 | 0.6 | 2026-11-06 | bozza: inventario per file dei documenti mancanti (numerazione, rimandi, attesi), criticità 1-3, ricontrollo dal vivo delle pagine Consip, Allegato 12 della 2.928 chiarito, bozza di accesso civico raggruppata per Consip; non è una release pubblica | documenti mancanti per file: 886 (criticità 3: 431) (nuovo inventario); istanze preparate: da 19 a 20 |

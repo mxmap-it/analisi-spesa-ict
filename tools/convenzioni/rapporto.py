@@ -114,7 +114,7 @@ def metriche(voci, reg):
          "indice_medio": round(sum(p["indice"] for p in per.values()) / len(per), 3),
          "celle": dict(Counter(classe(i) for v in voci for i in v["inventario"])),
          "documenti_ufficiali": sum(p["documenti"] for p in per.values()), "documenti_altrove": sum(p["altrove_doc"] for p in per.values()),
-         "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"), "istanze_inviate": sum(1 for r in reg if r["stato"] not in ("preparata", "ritirata")),
+         "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"), "istanze_inviate": sum(1 for r in reg if r["stato"] not in ("preparata", "ritirata", "annullata")),
          "istanze_con_risposta": sum(1 for r in reg if r.get("risposta")),
          "flusso_dati": sum(1 for v in voci if v.get("evidenze_dato_esistente")),
          "flusso_letti": sum(1 for v in voci for e in v.get("evidenze_dato_esistente", []) if e["livello"].startswith("V")),
