@@ -16,7 +16,7 @@ sys.path.insert(0, str(R / "tools/analisi")); sys.path.insert(0, str(R / "tools/
 from classifica import Classificatore, NOME_CANONICO  # noqa: E402
 from lente_prodotto import BIGTECH_USA, wilson  # noqa: E402
 
-D = R / "report/metodo/lente-cieco"
+D = R / (sys.argv[1] if len(sys.argv) > 1 else "report/metodo/lente-cieco")
 
 
 def main():
@@ -49,7 +49,7 @@ def main():
     out["errori"] = err
     out["nota"] = "riferimento = lettura umana del solo oggetto; negli strati S0/S5 (314 mila CIG) 0 menzioni su 80: il richiamo pesato ha incertezza alta"
     o = R / f"esiti/{datetime.date.today().isoformat()}/lente-prodotto"; os.makedirs(o, exist_ok=True)
-    json.dump(out, open(o / "lente-cieco.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(out, open(o / (D.name + ".json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({k: v for k, v in out.items() if k != "disegno"}, indent=1, ensure_ascii=False))
 
 

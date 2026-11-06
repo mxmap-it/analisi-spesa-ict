@@ -1,0 +1,169 @@
+{
+ "disegno": {
+  "universo": "lavoro/imbuto/ict.csv, anno>=2024, strati S2-S4, esclusi v3 e primo campione a cieco",
+  "seme": 20261107,
+  "per_strato": 40,
+  "dimensione_strati": {
+   "S2": 5197,
+   "S3": 840,
+   "S4": 7719
+  }
+ },
+ "per_strato": {
+  "S2": {
+   "n": 40,
+   "bt_tp": 1,
+   "bt_fp": 0,
+   "bt_fn": 1,
+   "diz_tp": 2,
+   "diz_fp": 0,
+   "diz_fn": 1
+  },
+  "S3": {
+   "n": 40,
+   "bt_tp": 32,
+   "bt_fp": 0,
+   "bt_fn": 6,
+   "diz_tp": 32,
+   "diz_fp": 0,
+   "diz_fn": 6
+  },
+  "S4": {
+   "n": 40,
+   "bt_tp": 23,
+   "bt_fp": 3,
+   "bt_fn": 0,
+   "diz_tp": 29,
+   "diz_fp": 4,
+   "diz_fn": 0
+  }
+ },
+ "bigtech_usa": {
+  "campione": {
+   "tp": 56,
+   "fp": 3,
+   "fn": 7,
+   "precisione": 0.949,
+   "precisione_w95": [
+    0.861,
+    0.983
+   ],
+   "richiamo": 0.889,
+   "richiamo_w95": [
+    0.788,
+    0.945
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 0.901,
+   "richiamo": 0.953,
+   "cig_stimati_veri_positivi": 5240,
+   "cig_stimati_falsi_positivi": 579,
+   "cig_stimati_mancati": 256
+  }
+ },
+ "tutti_i_provider": {
+  "campione": {
+   "tp": 63,
+   "fp": 4,
+   "fn": 7,
+   "precisione": 0.94,
+   "precisione_w95": [
+    0.856,
+    0.977
+   ],
+   "richiamo": 0.9,
+   "richiamo_w95": [
+    0.808,
+    0.951
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 0.894,
+   "richiamo": 0.962,
+   "cig_stimati_veri_positivi": 6528,
+   "cig_stimati_falsi_positivi": 772,
+   "cig_stimati_mancati": 256
+  }
+ },
+ "errori": [
+  {
+   "cig": "B3DB05611C",
+   "strato": "S2",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA NR. 10 PC, NR. 1 SERVER E RELATIVE LICENZE OFFICE, DISPOSITIVO RILEVAMENTO PRESENZE E MONITOR INTERATTIVO | SVILUPPO DEL SISTEMA INFORMATIVO COMUNALE"
+  },
+  {
+   "cig": "BA037115C0",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "ADESIONE CONVENZIONE CONSIP ENTERPRISE 9 | ADESIONE CONVENZIONE CONSIP ENTERPRISE 9"
+  },
+  {
+   "cig": "B21379B755",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FONIA MOBILE - CONVENZIONE CONSIP TELEFONIA MOBILE 9 LOTTO UNICO | DGACQ 29-24 FORNITURA LICENZE MS CP-PILOT"
+  },
+  {
+   "cig": "B9474AB35A",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "ACQUISIZIONE TRIENNALE SUBSCRIPTION E SERVIZI DI SOFTWARE ASSURANCE MICROSOFT | ACQUISTO SUBSCRIPTION MICROSOFT E SERVIZI DI SOFTWARE ASSURANCE PER LE LICENZE ON-PREMISES MICROSOFT IN USO"
+  },
+  {
+   "cig": "B62D12F719",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA DI LICENZE CORRELATE ALL'AGGIORNAMENTO DEL SISTEMA OPERATIVO WINDOWS XP DEI DATACENTER E DELLE POSTAZIONI DI LAVORO AZIENDALI, CON RELATIVA ASSISTENZA: AUMENTO DELLE PRESTAZIONI CONTRATTUALI"
+  },
+  {
+   "cig": "B0761EF105",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "ADESIONE ALLA CONVENZIONE PER LA FORNITURA DI LICENZE D'USO ENTERPRISE AGREEMENT DI SOFTWARE MICROSOFT, LA PRESTAZIONE DI AGGIORNAMENTO EVOLUTIVO E SERVIZI CONNESSI | ADESIONE ALLA CONVENZIONE PER LA "
+  },
+  {
+   "cig": "B76FB69827",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "RINNOVO DELLE LICENZE PER I PRODOTTI E SERVIZI MICROSOFT MEDIANTE ADESIONE ALLA CONVENZIONE CONSIP ENTERPRISE AGREEMENT 9 | RINNOVO DELLE LICENZE PER I PRODOTTI E SERVIZI MICROSOFT MEDIANTE ADESIONE A"
+  },
+  {
+   "cig": "BAC3A67EB3",
+   "strato": "S4",
+   "lente": "Microsoft",
+   "etichetta": "",
+   "testo": "SERVIZIO DI RINNOVO PER GESTIONE BACKUP IN CLOUD DELLE VIRTUAL MACHINES E BACKUP DI MICROSOFT 365 - AFFIDAMENTO DIRETTO ART. 50 D.LGS 36/2023 | SERVIZIO DI RINNOVO PER GESTIONE BACKUP IN CLOUD DELLE V"
+  },
+  {
+   "cig": "B8C53BE75F",
+   "strato": "S4",
+   "lente": "Amazon Web Services",
+   "etichetta": "",
+   "testo": "PROCEDURA NEGOZIATA SENZA BANDO, AI SENSI DELL'ART. 50, COMMA 1, LETT. E) DEL D. LGS. N. 36/2023 E S.M.I. PER L'AFFIDAMENTO DI UN SERVIZIO DI COLLOCATION PRESSO PUNTO DI INTERSCAMBIO CON AMAZON WEB SE"
+  },
+  {
+   "cig": "BCC1005596",
+   "strato": "S4",
+   "lente": "In-house pubblico",
+   "etichetta": "",
+   "testo": "PREV26_042SA SUPPORTO NELL'ANALISI DELL'ARCHITETTURA INFRASTRUTTURALE CLOUD DI LEPIDA SCPA | PREV26_042SA SUPPORTO NELL'ANALISI DELL'ARCHITETTURA INFRASTRUTTURALE CLOUD DI LEPIDA SCPA"
+  },
+  {
+   "cig": "B8C6E34D72",
+   "strato": "S4",
+   "lente": "Amazon Web Services",
+   "etichetta": "",
+   "testo": "PROCEDURA APERTA PER L'AFFIDAMENTO DI INCARICHI DI DOCENZA PER IL BIENNIO FORMATIVO 2025/2027 RELATIVO AL PROGRAMMA REGIONALE PR FSE+ 2021/2027 - CORSO TECNICO SUPERIORE SYSTEM ADMINISTRATOR - AWS CLO"
+  }
+ ],
+ "nota": "riferimento = lettura umana del solo oggetto; negli strati S0/S5 (314 mila CIG) 0 menzioni su 80: il richiamo pesato ha incertezza alta"
+}

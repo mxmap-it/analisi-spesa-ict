@@ -586,3 +586,23 @@
   richiesta: "URL stabili e scaricabili senza JavaScript né filtri anti-bot per tutti i dataset del catalogo, con versioni storiche e sha256; pubblicazione anche su dati.gov.it"
   perche_serve: "È la sola fonte ufficiale che collega i progetti PNRR alle gare ReGiS: serve a misurare la quota di fondi PNRR cloud andata a prodotti esteri ogni anno"
   rif: ["#43", "#26", "R55"]
+- id: R58
+  destinatario: ANAC, stazioni appaltanti
+  tipo: difetto
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: FLAG_PNRR_PNC a 0 su CIG collegati a CUP PNRR e con il PNRR nell'oggetto
+  evidenza: "Dei 12.504 CIG collegati ai CUP finanziati dalla Misura 1.2 (PA Digitale 2026 → dataset ANAC cup), 1.050 hanno FLAG_PNRR_PNC = 0 e 14 vuoto (93,1 M€); 627 di questi (59 %) nominano il PNRR, la misura 1.2, NextGenerationEU o M1C1 nell'oggetto. Per anno: 2022 37, 2023 348, 2024 379, 2025 291, 2026 9"
+  prova: "tools/verifiche/pnrr_flag.py; esiti/2026-11-06/pnrr/pnrr-flag.json; rendiconto obiettivo-6 § 3"
+  richiesta: "Controllo bloccante all'acquisizione del CIG: se il CUP collegato è finanziato PNRR/PNC (ReGiS) il flag non può essere 0; correzione retroattiva dei casi"
+  perche_serve: "Il flag è la sola via aperta e per CIG per misurare la spesa PNRR: un 8 % di falsi negativi sposta le quote per prodotto e per giurisdizione"
+  rif: ["#43", "R57"]
+- id: R59
+  destinatario: "ANAC, DTD (eForms nazionale), Ufficio delle pubblicazioni UE"
+  tipo: dato-mancante
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Il CIG negli avvisi TED italiani come identificativo strutturato
+  evidenza: "Avvisi TED con acquirente italiano e CPV ICT, 2024-01 → 2026-10: 5.348. Solo 355 (6,6 %) contengono un CIG valido, nei campi di testo o negli identificativi interni (283 dei 1.988 esiti di gara, 10 dei 2.704 bandi). Dove c'è, la P.IVA del vincitore coincide con gli aggiudicatari ANAC in 157 casi su 177"
+  prova: "tools/acquisizione/ted_mirror.py, tools/verifiche/ted_cig.py; esiti/2026-11-06/mirror/ted-cig.json"
+  richiesta: "Valorizzare sempre il CIG di ogni lotto in un campo strutturato dell'avviso eForms (es. BT-22 identificativo interno del lotto con schema «CIG»), trasmesso automaticamente dalle piattaforme certificate"
+  perche_serve: "Collegare TED e BDNCP permette la controvalidazione di importi e aggiudicatari dei contratti sopra soglia, che sono la maggior parte della spesa"
+  rif: ["#27", "R14"]

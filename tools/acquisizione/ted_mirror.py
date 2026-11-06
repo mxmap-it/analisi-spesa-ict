@@ -8,7 +8,10 @@ tools/archivia.py --da-file (URL convenzionale con la query, per ritrovarla). Un
 raccolte coincidono con totalNoticeCount; lo stato è in lavoro/ted/stato.jsonl. Ripartibile e idempotente.
 Pausa 2 s fra richieste.
 
-    ted_mirror.py [--da 2024-01] [--a 2026-10]
+    ted_mirror.py [--da 2024-01] [--a 2026-10] [--dir lavoro/ted-v2]
+
+Filtro CPV verificato il 6/11/2026 sul marzo 2024: classification-cpv (tutti i CPV, anche aggiuntivi) 143 avvisi,
+main-classification-proc (solo il principale) 132; IN (…) equivale a 72* OR 48* OR 302*. Totale IT nel mese: 2.012.
 """
 import argparse, datetime, json, os, subprocess, sys, time, urllib.parse
 from pathlib import Path
@@ -19,7 +22,10 @@ D = R / "lavoro/ted"
 API = "https://api.ted.europa.eu/v3/notices/search"
 UA = "analisi-spesa-ict (+https://analisi-spesa-ict.mxmap.it)"
 CAMPI = ["publication-number", "notice-type", "publication-date", "buyer-name", "buyer-identifier", "notice-title",
-         "classification-cpv", "total-value", "total-value-cur", "winner-name", "winner-identifier", "procedure-type"]
+         "classification-cpv", "total-value", "total-value-cur", "winner-name", "winner-identifier", "procedure-type",
+         # v2 (6/11/2026): testi e identificativi interni, dove le stazioni italiane scrivono spesso il CIG
+         "internal-identifier-lot", "internal-identifier-proc", "title-lot", "description-lot", "title-proc", "description-proc",
+         "organisation-identifier-tenderer", "organisation-name-tenderer"]
 
 
 def mesi(da, a):
@@ -32,7 +38,8 @@ def mesi(da, a):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--da", default="2024-01")
     ap.add_argument("--a", default=(datetime.date.today().replace(day=1) - datetime.timedelta(days=1)).strftime("%Y-%m"))
-    a = ap.parse_args(); (D / "pagine").mkdir(parents=True, exist_ok=True)
+    ap.add_argument("--dir", default="lavoro/ted-v2")
+    a = ap.parse_args(); global D; D = R / a.dir; (D / "pagine").mkdir(parents=True, exist_ok=True)
     fatti = set()
     if (D / "stato.jsonl").exists():
         fatti = {json.loads(l)["mese"] for l in open(D / "stato.jsonl", encoding="utf-8") if json.loads(l).get("completo")}

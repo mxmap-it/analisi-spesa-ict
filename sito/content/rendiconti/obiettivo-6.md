@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.3 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.4 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -54,6 +54,22 @@ Per togliere la circolarità: 240 CIG estratti a caso, 40 per ciascuno dei 6 str
 - Il richiamo pesato di tutti i provider (59 %) è basso per gli strati S2: Aruba firma digitale, in-house Lepida, Google nominato come piattaforma di un SaaS italiano. Gli strati S0 e S5 (315 mila CIG) hanno 0 menzioni su 80, quindi la stima pesata è molto incerta.
 
 Rifare: `python tools/verifiche/lente_cieco.py` → `esiti/2026-11-06/lente-prodotto/lente-cieco.json`.
+
+### 1.2 Secondo campione a cieco: misura delle regole v0.3 (v0.4)
+
+- **Disegno:** 120 CIG nuovi, 40 per strato S2, S3, S4 (dove stanno i prodotti), seme 20261107, esclusi il v3 e il primo campione (`report/metodo/lente-cieco-2/`). Etichette sul solo oggetto, senza vedere la lente. Le regole v0.3 erano già nel dizionario, ma il campione non è stato usato per scriverle.
+- **Correzioni dopo la misura:** 3 etichette di provider non big tech (Cloud Toscana, Lepida, Nextcloud), perché il nome stava oltre i 170 caratteri letti in etichettatura (la lente ne legge 400). Sono annotate nel file e non toccano i numeri big tech.
+
+| Insieme | Precisione | Richiamo | Pesato su S2-S4 (P / R) |
+|---|---|---|---|
+| Big tech USA | 56/59 = **95 %** (86-98) | 56/63 = **89 %** (79-95) | 90 % / 95 % |
+| Tutti i provider | 63/67 = 94 % (86-98) | 63/70 = 90 % (81-95) | 89 % / 96 % |
+
+- **Falsi positivi big tech** (3): un servizio di backup *di* Microsoft 365, una collocation al punto di interscambio AWS, un corso di formazione «AWS Cloud Architect». Il marchio è nominato come oggetto, non come prodotto comprato: servono regole di esclusione per formazione, backup e collocation.
+- **Mancati** (7, tutti Microsoft): «Consip Enterprise 9» senza la parola Microsoft, «licenze MS CP-PILOT», «software assurance Microsoft», «Windows XP», «licenze d'uso enterprise agreement di software Microsoft», «prodotti e servizi Microsoft», PC «con licenze Office».
+- **Non applicate:** le regole per questi errori le scriverei guardando questo campione, che diventerebbe a sua volta di sviluppo. Il richiamo misurato senza circolarità è quindi **89 %** (primo campione a cieco: 81 %, prima delle regole v0.3).
+
+Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-2`.
 
 ## 2. Rivenditori dei prodotti esteri (#41)
 
@@ -103,7 +119,13 @@ Catena PA Digitale 2026 → CUP → dataset ANAC cup → CIG → attribuzione v3
   | 1.1 (v3) | 61 | 48 (79 %), 344,1 M€ | 10, 14,6 M€ | 3, 19,5 M€ |
   | 1.1 (decreti) | 197 | 136 (69 %), 1.048,1 M€ | 26, 90,2 M€ | 35, 43,0 M€ |
 
-  Gli importi qui sono lordi: comprendono padri di AQ e importi da verificare. Il 10 % di CIG 1.2 senza flag va guardato: CIG collegati al CUP ma pagati con altri fondi, oppure flag omesso.
+  Gli importi qui sono lordi: comprendono padri di AQ e importi da verificare.
+- **I 1.064 CIG 1.2 senza flag (v0.4)** [V]:
+  - 1.050 hanno il flag a 0 e 14 vuoto, per 93,1 M€;
+  - per anno: 2022 37, 2023 348, 2024 379, 2025 291, 2026 9;
+  - **627 (59 %) nominano PNRR, misura 1.2, NextGenerationEU o M1C1 nell'oggetto**: il flag è sbagliato o omesso, nuova **R58**;
+  - gli altri 437 sono SaaS, conservazione e gestionali comunali collegati al CUP: compatibili con il progetto, ma senza prova nell'oggetto;
+  - 1.043 su 1.064 non hanno provider attribuito; 3 sono Microsoft, 1 Google, 1 AWS.
 - **Ponte ufficiale CUP → CIG di Italia Domani (gare ReGiS):** la pagina del catalogo c'è (PNRR_Gare.csv, v11, 13/06/2026), ma il file risponde 403 (Akamai) e il pulsante di scaricamento è solo JavaScript. Nuova **R57**. openpnrr: nell'archivio ci sono solo 3 pagine di progetto, nessun file ponte.
 
 Rifare: `python tools/verifiche/pnrr_bigtech.py` → `esiti/2026-11-06/pnrr/pnrr-bigtech.json`.
@@ -118,22 +140,34 @@ Rifare: `python tools/verifiche/pnrr_bigtech.py` → `esiti/2026-11-06/pnrr/pnrr
 
 Con gli strumenti esistenti: `tools/archivia.py` (content-addressed, idempotente) e `config/risorse.yaml`, con guardia sul disco (stop sotto 45 GB liberi).
 
-- **Consip:** `tools/acquisizione/consip_elenco.py` legge il catalogo CKAN (16 dataset, 151 risorse dal 2024 in poi, 8,3 GB dichiarati in tutti i formati). Si specchiano per ora le **49 CSV (1,59 GB)**; JSON, XLSX e TTL sono gli stessi dati in altri formati e restano da decidere, per lo spazio. Lanciatore ripartibile `lavoro/consip/specchia.sh`. Esito: **49/49 archiviate** (43 nuove, 6 già presenti e invariate), disco da 60 a 58 GB liberi; elenco in `esiti/2026-11-06/mirror/consip-risorse.csv`.
-- **TED:** `tools/acquisizione/ted_mirror.py`, API v3 anonima. Avvisi con acquirente italiano e CPV 72/48/302 dal 2024-01, un mese alla volta, pagine grezze in archivio, mese «completo» quando i raccolti sono pari al totale dichiarato. Esito: **33 mesi (2024-01 → 2026-10), 5.254 avvisi, 33/33 mesi completi**; stato in `esiti/2026-11-06/mirror/ted-stato.jsonl`. Il numero (circa 160 al mese) è basso rispetto alle gare ICT sopra soglia attese: il filtro CPV prende il CPV principale, da controllare.
-- **FTS** (beneficiari del bilancio UE): 19 file annuali 2007-2025: **19/19 archiviati** (circa 270 MB).
+- **Consip:** `tools/acquisizione/consip_elenco.py` legge il catalogo CKAN: 16 dataset, 151 risorse dal 2024 in poi, 8,3 GB dichiarati. In v0.3 le 49 CSV (1,59 GB); in v0.4 **tutti i formati** (JSON, XLSX, TTL), secondo la regola del mirror in tutti i formati. Lanciatore `lavoro/consip/specchia-tutti.sh`. Esito al momento del commit: **in corso, circa 90 risorse su 151** (le CSV della v0.3 risultano invariate). Il lanciatore è ripartibile e prosegue da solo sul server; disco a 57 GB liberi. Elenco in `esiti/2026-11-06/mirror/consip-risorse.csv`.
+- **TED:** `tools/acquisizione/ted_mirror.py`, API v3 anonima, acquirente italiano, CPV 72/48/302 discendenti compresi.
+  - **Filtro verificato** sul marzo 2024 [V]: `classification-cpv`, che guarda tutti i CPV compresi gli aggiuntivi, dà 143 avvisi; `main-classification-proc`, solo il principale, ne dà 132. Il filtro usato è quindi il più largo; `IN (…)` equivale a `72* OR 48* OR 302*`. Gli avvisi italiani di tutti i settori nello stesso mese sono 2.012.
+  - Non serviva ripetere per il filtro. Si è ripetuto (v2, `lavoro/ted-v2/`) per aggiungere identificativi interni, testi dei lotti e vincitori: **34 mesi (2024-01 → 2026-10), 5.348 avvisi, 34/34 mesi completi**. La v0.3 diceva 33 mesi e 5.254 avvisi: errore di conteggio, la prova di gennaio era già stata contata.
+- **TED → CIG** (`tools/verifiche/ted_cig.py`) [V]:
+  - il CIG non è un campo TED; lo si cerca negli identificativi interni e nei testi, tenendo solo i codici che esistono nei file CIG ANAC: 495 candidati, 421 esistenti;
+  - **355 avvisi su 5.348 (6,6 %)** hanno almeno un CIG valido, di cui 283 dei 1.988 esiti di gara (14 %) e 10 dei 2.704 bandi (0,4 %);
+  - controprova sugli esiti con P.IVA del vincitore e aggiudicatari ANAC: **157/177 (89 %)** coincidono.
+  Il ponte TED → CIG è quindi affidabile dove c'è, ma copre poco: nuova **R59** (CIG obbligatorio negli avvisi eForms italiani).
+- **FTS → P.IVA** (`tools/verifiche/fts_piva.py`, xlsx letti con la sola libreria standard): FTS 2007-2025, 19 file archiviati [V]:
+  - dei 1.018 aggiudicatari dei contratti cloud con P.IVA italiana (`rivenditori-cf.csv`), **90 ricevono anche fondi UE in gestione diretta**;
+  - i primi 30 sommano 870 M€ nel 2007-2025: Leonardo 318 M€, Engineering 204 M€, Cogea 72 M€, TIM 52 M€, KPMG Advisory 33 M€, TI Sparkle 31 M€, Maggioli 29 M€;
+  - FTS registra l'importo dell'impegno per beneficiario, che per i consorzi di progetto può essere quello del coordinatore: è una misura di presenza, non di incasso.
+  Serve a riconoscere i fornitori, non entra nella spesa ICT della PA.
 
 ## 6. Prossimi passi
 
-1. #40: un campione a cieco nuovo (il secondo) per misurare le regole v0.3; atti con browser reale solo su decisione di Fabio.
+1. #40: regole di esclusione (formazione, backup, collocation) e «microsoft» nominato con licenze o EA, da misurare su un terzo campione a cieco.
 2. #41: aggiudicatari dei 0,41 mld senza righe ANAC.
 3. #43: i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
-4. #11 e #27: altri formati Consip; incrocio TED → CIG (`tools/acquisizione/ted_l2.py`) e FTS → aggiudicatari per P.IVA.
+4. #27: CIG negli avvisi TED (R59); TED come fonte di aggiudicatari e valori per i CIG ANAC senza esito.
 4. #45: catalogo ACN a mano con Fabio (consultazione da browser, non automatica) o richiesta ad ACN (R55).
 
 ## Registro delle revisioni
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.4 | 2026-11-06 | Secondo campione a cieco (regole v0.3 misurate: big tech P 95 %, R 89 %); 1.064 CIG senza flag (R58); filtro TED verificato, TED v2 e TED → CIG; FTS → P.IVA; Consip in tutti i formati; correzione 33 → 34 mesi TED |
 | 0.3 | 2026-11-06 | Regole della lente applicate (non misurate); sottocampione sugli atti 1/9; rivenditori v3.1 con RTI ripartiti; FLAG_PNRR_PNC; R57; mirror Consip, TED e FTS |
 | 0.2 | 2026-11-06 | Campione a cieco di 240 CIG (`lente_cieco.py`); CF e nazionalità dei rivenditori, riconciliazione 2,04/1,82 mld (`rivenditori_cf.py`); 1.1 dai 312 CUP dei decreti (`pnrr11_prodotto.py`) |
 | 0.1 | 2026-11-06 | Prima bozza: tre verifiche nuove (`lente_prodotto.py`, `rivenditori_esteri.py`, `pnrr_bigtech.py`), R55-R56 |

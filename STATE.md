@@ -4,16 +4,14 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
-## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.3)
-- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.3.
-- **Verifiche locali:** `tools/verifiche/{lente_prodotto,lente_cieco,rivenditori_esteri,pnrr_bigtech}.py`.
-- **Verifiche sul server:** `rivenditori_cf.py`, `pnrr11_prodotto.py`, `pnrr_flag.py`.
-- **#40:** misura indipendente a cieco: big tech P 100 %, R 81 %. Regole nuove applicate in `config/marchi_cloud.yaml` (la via 6 non lo legge): circa 40 CIG in più dal 2024; il campione a cieco ora è di sviluppo, serve un secondo campione a cieco per misurarle. Atti: resa 1/9 con i link PVL, fermato.
-- **#41:** `tools/analisi/rivenditori.py` ripartisce gli RTI. Rigenerato sul server (backup in `lavoro/backup-rivenditori-20261106/`), pubblicato come `report/metodo/rivenditori-v3.1.*`: 1,824 mld = totale per canale. CF italiani 99,9 %.
-- **#43:** FLAG_PNRR_PNC conferma il 90 % dei CIG 1.2 (11.306 su 12.504), il 79 % degli 1.1 v3, il 69 % degli 1.1 dai decreti. Il file gare ReGiS di Italia Domani dà 403 Akamai (R57).
-- **#11:** Consip CKAN, 151 risorse dal 2024 (8,3 GB in tutti i formati); archiviate le 49 CSV (1,59 GB). Strumenti: `tools/acquisizione/consip_elenco.py`, `lavoro/consip/specchia.sh` (guardia 45 GB). Altri formati: da decidere.
-- **#27:** TED con `tools/acquisizione/ted_mirror.py`: 33 mesi completi, 5.254 avvisi IT ICT (controllare il filtro CPV). FTS 2007-2025: 19 file archiviati. Disco 58 GB liberi.
-- **Prossimo:** secondo campione a cieco; 1.064 CIG 1.2 senza flag; incrocio TED → CIG (`ted_l2.py`) e FTS → P.IVA aggiudicatari; catalogo ACN (Fabio).
+## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.4)
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.4. Verifiche in `tools/verifiche/` (lente_prodotto, lente_cieco [arg: cartella del campione], rivenditori_esteri, pnrr_bigtech locali; rivenditori_cf, pnrr11_prodotto, pnrr_flag, ted_cig, fts_piva sul server).
+- **#40:** il secondo campione a cieco (`report/metodo/lente-cieco-2/`, 120 CIG S2-S4) misura le regole v0.3: big tech P 56/59 = 95 %, R 56/63 = 89 %. Falsi positivi: backup di M365, collocation AWS, corso AWS. Mancati: Microsoft senza le parole chiave (EA9, CP-PILOT, Windows XP…). Regole nuove NON applicate: andrebbero misurate su un terzo campione.
+- **#41:** v3.1 con RTI ripartiti (1,824 mld), CF italiani 99,9 %.
+- **#43:** FLAG_PNRR_PNC sul 90 % dei CIG 1.2. Dei 1.064 senza flag, 627 nominano il PNRR nell'oggetto → R58. ReGiS 403 → R57.
+- **#11:** Consip in tutti i formati, `lavoro/consip/specchia-tutti.sh` sul server (in corso al commit, circa 90/151, ripartibile, guardia 45 GB): alla fine contare nuovo/invariato in `lavoro/consip/specchia-tutti.log` e aggiornare il rendiconto § 5.
+- **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
+- **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
 
 ## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
 - **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
