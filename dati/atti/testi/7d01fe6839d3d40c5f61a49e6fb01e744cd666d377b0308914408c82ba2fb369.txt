@@ -1,0 +1,252 @@
+PER LA FORNITURA DI UN CLUSTER GPU CON STORAGE NAS E STORAGE SAN DESTINATO A CARICHI DI
+LAVORO AVANZATI TRA CUI INTELLIGENZA ARTIFICIALE, SIMULAZIONI SCIENTIFICHE, MACHINE LEARNING
+E CALCOLO AD ALTE PRESTAZIONI DA UBICARE NEL DATA CENTER DEL CNR - AREA TERRITORIALE DI
+RICERCA DI ROMA 2.
+
+                                                                    CAPITOLATO TECNICO
+
+FASCICOLO 027_2025
+GARA ASP N. 5421015
+CUI F80054330586202500050
+CIG B73505CA45
+CUP B52F24000490001
+
+A cura di Emanuele Costantini – Responsabile del Servizio Informatico di Area
+
+
+
+1.   PREMESSE .......................................................................................................................................................... 2
+2.   CARATTERISTICHE TECNICHE/FUNZIONALITÀ E DOTAZIONI MINIME DELLA FORNITURA ................................... 2
+   2.1.      ULTERIORI CARATTERISTICHE DELLA FORNITURA ....................................................................................................... 12
+      2.1.1.       INSTALLAZIONE E AVVIO OPERATIVO ............................................................................................................. 12
+      2.1.2.       FORMAZIONE........................................................................................................................................... 13
+      2.1.3.       GARANZIA............................................................................................................................................... 13
+      2.1.4.       ASSISTENZA TECNICA, SUPPORTO E MANUTENZIONE ........................................................................................ 13
+3. MODALITÀ DI ESECUZIONE DELLA FORNITURA .................................................................................................13
+   3.1.      LUOGO DI CONSEGNA ......................................................................................................................................... 13
+   3.2.      TERMINI DI SVOLGIMENTO/CONSEGNA E INSTALLAZIONE............................................................................................ 13
+4. MODALITÀ DI ESECUZIONE DEL CONTRATTO ....................................................................................................13
+   4.1.      AVVIO DELL’ESECUZIONE ..................................................................................................................................... 13
+   4.2.      SOSPENSIONE DELL’ESECUZIONE ........................................................................................................................... 13
+   4.3.      TERMINE DELL’ESECUZIONE .................................................................................................................................. 14
+5. PENALI ..............................................................................................................................................................14
+6. MODALITÀ DI RESA ...........................................................................................................................................14
+7. ONERI ED OBBLIGHI DELL’AGGIUDICATARIO .....................................................................................................15
+8. SICUREZZA SUL LAVORO ...................................................................................................................................15
+9. CCNL APPLICATO E TUTELE CONTRATTUALI DI LAVORO ....................................................................................16
+10. DIVIETO DI CESSIONE DEL CONTRATTO .............................................................................................................16
+11. VERIFICA DI CONFORMITÀ FORNITURE .............................................................................................................16
+12. ANTICIPAZIONE, STATI DI AVANZAMENTO, FATTURAZIONE E PAGAMENTO ....................................................17
+13. TRACCIABILITÀ DEI FLUSSI FINANZIARI .............................................................................................................18
+14. RISOLUZIONE DEL CONTRATTO .........................................................................................................................18
+15. RECESSO DAL CONTRATTO E VALUTAZIONE DEL DECIMO .................................................................................19
+1. PREMESSE
+la Stazione appaltante Area di Ricerca di Roma 2 Tor Vergata del Consiglio Nazionale delle Ricerche intende
+procedere mediante procedura di gara all’affidamento della fornitura e resa operativa di un cluster GPU con
+storage NAS, storage SAN destinato a carichi di lavoro avanzati, tra cui intelligenza artificiale, simulazioni
+scientifiche, machine learning e calcolo ad alte prestazioni (HPC). Il sistema deve garantire affidabilità,
+scalabilità e compatibilità con gli strumenti software più diffusi nel settore.
+da consegnare presso il luogo di cui al successivo paragrafo § 3.
+
+2. CARATTERISTICHE TECNICHE/FUNZIONALITÀ E DOTAZIONI MINIME DELLA FORNITURA
+L’offerta del concorrente deve rispettare tutte le caratteristiche tecniche, funzionalità e dotazioni minime
+della fornitura stabilite nel presente paragrafo, pena l’esclusione dalla procedura di gara.
+
+Al fine di garantire un elevato livello di integrazione tra le componenti ed una efficacia del supporto nel suo
+insieme, gli apparati oggetto della fornitura, fatta eccezione degli accessori per l’infrastruttura network
+esistente, devono essere realizzati/commercializzati tutti dallo stesso produttore. Tutte le parti hardware e
+software della fornitura devono essere ufficialmente commercializzate, comparire nel listino del produttore,
+essere in regolare produzione senza che per gli stessi sia stato annunciato il termine della manutenzione o
+del supporto specialistico.
+
+Tutti i sistemi hardware offerti, a pena di esclusione, dovranno essere prodotti da primarie aziende
+internazionali, ove per aziende internazionali si intendono quelle che hanno sedi commerciali a livello
+mondiale, direttamente o tramite società controllate, in almeno cinque paesi europei, in U.S.A. ed in Canada.
+
+Considerata la complessità della fornitura è richiesto un servizio di assistenza e manutenzione che sia
+complessivamente riconducibile ad un unico produttore/casa madre, per la durata complessiva minima di
+36 mesi dalla verifica di conformità, salvo diversa offerta migliorativa in fase di gara come esposto dal
+disciplinare per l’attribuzione del punteggio tecnico migliorativo.
+Pertanto, si ritiene indispensabile che la garanzia sia erogata direttamente dai costruttori/produttori delle
+componenti hardware e software con i quali il personale tecnico del Committente intende interagire
+direttamente, senza l’intermediazione del Fornitore (Operatore Economico).
+Per quanto sopra riportato, l’operatore economico agirà in tal senso esclusivamente in regime di rivenditore.
+Pertanto, pena esclusione, dovrà offrire il servizio di assistenza in garanzia ufficiale, includendo
+documentazione del produttore attestante tipologia, codifica e dettagli.
+
+OGGETTO DELLA FORNITURA
+  A) Cluster costituito da nodi Server-GPU;
+  B) Licenze Software Nvidia;
+  C) Storage All-Flash end-to-end NVMe SAN (Storage Area Network);
+  D) Sistema Scale-OUT NAS (Network Attached Storage);
+  E) Ottiche HPE Aruba (accessori per infrastruttura esistente)
+
+La fornitura comprende un cluster di calcolo basato su nodi GPU ad alte prestazioni con relative licenze
+NVIDIA, un sistema di storage NAS centralizzato ad elevata capacità, un sistema di storage centralizzato ad
+elevate prestazioni SAN e una predisposizione per interconnessione Fiber Channel FC32. Il sistema dovrà
+includere i servizi di installazione, configurazione, collaudo e supporto tecnico per un periodo minimo di 36
+mesi.
+SPECIFICHE TECNICHE MINIME
+
+   A)   Cluster costituito da nodi Server-GPU (Nr. 3 server)
+   ➢    Nr 1 Nodo GPU Workload “CALCOLO”:
+   -    dimensione massima in termini di occupazione Rack di 2 Unit;
+   -    essere in grado di supportare schede GPU di formato PCIe prodotte da NVIDIA, AMD ed Intel;
+   -    disporre di almeno nr.2 processori almeno Intel XEON Gold 6542Y (5th generation “Emerald
+        Rapids”), con 2.9GHz frequenza di base, 24 Core (Totale nr. 48 Core);
+   -    avere una configurazione RAM composta da almeno nr. 16 banchi da 96GB di tipo RDIMM 5600MT/s
+        per un totale di 1.5TB ed espandibile di altri 16 slot fino a 32 slots DIMM totali;
+   -    avere uno storage interno composto da almeno nr. 4 dischi da 3.2TB NVMe Mixed Use;
+   -    controller raid fisica in grado di gestire raid 0,1,5,6,10;
+   -    dovrà disporre di alimentazione ridondata 2800W AC classe Titanium;
+   -    essere equipaggiato con almeno nr. 2 schede Nvidia ConnectX-6 Lx Dual Port 10/25GbE (con 4x
+        ottiche SFP28 25GbE SR);
+   -    esser equipaggiato con una ulteriore scheda di rete dual port 1Gbit/s base T;
+   -    essere equipaggiato con almeno nr. 2 NVIDIA H100 NVL, PCIe, 94GB with NV-Link Bridge ed essere
+        espandibile di ulteriori due GPU della stessa tipologia;
+   -    essere equipaggiato con nr. 2 dischi NVMe formato M.2 da almeno 960GB per il sistema operativo,
+        con possibilità di sostituzione hot-plug;
+   -    essere equipaggiato con nr. 1 interfaccia BMC (Baseboard Management Controller) 1GbE Base-T
+        compatibile IPMI versione 2.0 o superiore;
+   -    fornire un software di gestione e monitoraggio del Cluster Server-GPU in grado di garantire la piena
+        integrazione con VMware, consentendo l'utilizzo del vCenter Server per gestire l'infrastruttura
+        server, sia fisica che virtuale.
+
+    ➢ Nr. 2 Nodi GPU Workload “AI”:
+   - dimensione massima in termini di occupazione Rack di 2 Unit;
+   - essere in grado di supportare schede GPU di formato PCIe prodotte da NVIDIA, AMD ed Intel;
+   - disporre di almeno nr.2 processori almeno Intel XEON Gold 6542Y (5th generation “Emerald
+      Rapids”), con 2.9GHz frequenza di base, 24 Core (Totale nr. 48 Core);
+   - avere una configurazione RAM composta da almeno nr. 16 banchi da 96GB di tipo RDIMM 5600MT/s
+      per un totale di 1.5TB ed espandibile di altri 16 slot fino a 32 slots DIMM totali;
+   - avere uno storage interno composto da almeno nr. 4 dischi da 3.2TB NVMe Mixed Use;
+   - controller raid fisica in grado di gestire raid 0,1,5,6,10;
+   - dovrà disporre di alimentazione ridondata 2800W AC classe Titanium;
+   - essere equipaggiato con almeno nr. 2 schede Nvidia ConnectX-6 Lx Dual Port 10/25GbE (con 4x
+      ottiche SFP28 25GbE SR);
+   - esser equipaggiato con una ulteriore scheda di rete dual port 1Gbit/s base T;
+   - essere equipaggiato con almeno nr. 2 NVIDIA L40S, PCIe, 48GB ed essere espandibile di ulteriori due
+      GPU della stessa tipologia;
+   - essere equipaggiato con nr. 2 dischi NVMe formato M.2 da almeno 960GB per il sistema operativo,
+      con possibilità di sostituzione hot-plug;
+   - essere equipaggiato con nr. 1 interfaccia BMC (Baseboard Management Controller) 1GbE Base-T
+      compatibile IPMI versione 2.0 o superiore;
+   - fornire un software di gestione e monitoraggio del Cluster Server-GPU in grado di garantire la piena
+      integrazione con VMware, consentendo l'utilizzo del vCenter Server per gestire l'infrastruttura
+      server, sia fisica che virtuale.
+     ➢ Interfaccia BMC e Console di Management
+È richiesta una soluzione di monitoraggio proattivo basata su cloud che utilizza l'analisi predittiva e
+l'apprendimento automatico al fine di poter intraprendere azioni rapide e semplificare la gestione
+dell'infrastruttura di calcolo.
+
+È richiesto un software di gestione e monitoraggio del Cluster Server-GPU in grado di garantire la piena
+integrazione con VMware, consentendo l'utilizzo del vCenter Server per gestire l'infrastruttura server, sia
+fisica che virtuale.
+
+È richiesta una Interfaccia BMC Server con porta dedicata 1GbE. La BMC deve essere accessibile da remoto,
+che non richieda l’installazione di Agent a livello di sistema operativo e che supporti almeno le seguenti
+funzionalità:
+     - Console virtuale con HTML5 o Virtual Network Computing (VNC)
+     - Scheduling dell’aggiornamento automatico del BIOS e del firmware dei componenti interni;
+     - Protocollo Redfish (RESTful API);
+     - Aggiornamenti Firmware firmati digitalmente;
+     - Possibilità di effettuare Rollback del Firmware
+     - Protezione di aggiornamenti firmware dei componenti interni
+     - Password univoca (per ciascun server) e generata in modo casuale per garantire una maggiore
+         sicurezza.
+     - Supporto Active Directory e autenticazione LDAP
+     - Supporto per il protocollo SNMP v3
+     - Possibilità di effettuare operazioni di “IP Blocking”
+     - Protocollo di comunicazione TLS 1.3.
+     - Possibilità di accedere alla telemetria dei parametri di funzionamento
+     - Integrazione con dispositivi Mobile (supporto iOS e Android via apps)
+     - Al fine di migliorare la sicurezza, ma senza compromettere le funzionalità del server, si richiede che
+         le porte USB possano essere abilitate e disabilitate dinamicamente, senza che sia necessario il riavvio
+         del server, attraverso l’interfaccia grafica della Console di Management o tramite RESTful API
+     - Funzionalità di Autenticazione a 2 fattori (Easy-2FA, Strong RSA)
+     - Possibilità attraverso l’interfaccia grafica della Console di Management o tramite RESTful API, di
+         inibire qualsiasi modifica agli aggiornamenti della configurazione, del firmware e de BIOS, per
+         garantire la protezione del sistema da modifiche involontarie o malevole. Quindi la possibilità di
+         impostare il sistema in modalità “lock-down” senza che sia necessario il riavvio del server.
+     - Possibilità di monitorare dispositivi di terze parti (altri vendor) con protocolli sicuri (Redfish)
+     - Funzionalità di monitoraggio e streaming delle metriche del dispositivo (metriche di alimentazione,
+         condizioni termiche, utilizzo del sistema, CPU, GPU, I/O, memoria, circolazione dell'aria, consumi
+         energetici).
+     - Rilevamento server inattivo
+     - Funzionalità di Riduzione dell'alimentazione di emergenza (limitazione e arresto) – EPR (Emergency
+         Power Reduction)
+     - Al fine di garantire la massima sicurezza in termini di integrità del server e di tutte le sue componenti
+         interne, è richiesto uno strumento in grado di verificare che la configurazione hardware del server
+         consegnato al data center di destinazione corrisponda a quella certificata e firmata digitalmente al
+         momento dell’assemblaggio in fabbrica.
+
+    B) Licenze Software NVIDIA
+L’aggiudicatario dovrà fornire nr 4. licenze NVIDIA AI Enterprise “per GPU”. Le licenze richieste saranno di
+tipo “Subscription” per 5 anni.
+
+    C) Storage "ALL-FLASH" END-TO-END NVME SAN (Storage Area Network)
+
+    ➢ Requisiti Generali
+    - La soluzione di storage SAN dovrà appartenere alla più recente famiglia di prodotti rilasciati dal
+      Vendor e direttamente da esso supportato. Deve quindi garantire un tempo di vita utile di almeno 5
+      anni.
+    - La soluzione di storage SAN dovrà essere di tipo “Unified” nativo, senza l’utilizzo di hardware
+      esterno, ovvero supportare risorse blocco (iSCSI, FC, NVMe oF-FC, NVMe oF-TCP) che NAS (NFS,
+      SMB) sebbene l’utilizzo finale sarà di tipo block. Come risorse Block dovrà supportare volumi, vVOL
+      e persistent storage per l’utilizzo in ambito container.
+    - La soluzione di storage SAN dovrà fornire ai sistemi connessi una capacità di almeno 17,5 TB "usable"
+      al netto della deduplica e compressione.
+    - La soluzione di storage SAN dovrà utilizzare un meccanismo di protezione del dato di tipo RAID 5 o
+      equivalente con un disco hot spare, anche dinamicamente distribuito.
+    - La soluzione di storage SAN dovrà garantire una prestazione massima di almeno 99.000 IOPS.
+    - La soluzione di storage SAN dovrà utilizzare processori scalabili Intel Xeon (o equivalenti in termini
+      di performance) e supportare tecnologie di storage All-Flash end-to-end NVMe, meccanismi di
+      riduzione dei dati sempre attivi (in line).
+    - La soluzione di storage SAN dovrà automaticamente bilanciare le risorse per ottimizzare le
+      prestazioni ed eliminare il sovraccarico di gestione.
+    - La soluzione di storage SAN dovrà essere di tipo High-End e “All-Flash”, ovvero essere
+      specificatamente costruita per supportare solo drive di tipo All-Flash. La soluzione dovrà altresì
+      essere di tipo multicontroller, ovvero essere in grado di aggregare risorse fino ad un massimo di nr.
+      2 controller. La ridondanza del singolo controller dovrà essere di tipo 1+1 o 1+n.
+    - La soluzione di storage SAN dovrà garantire scalabilità sia di tipo Scale-UP (aggiunta di dischi per
+      coppia di controller) che scale-out (aggiunta di controller).
+    - La soluzione di storage SAN dovrà garantire il funzionamento dei controller esclusivamente in
+      modalità Active/Active sia sul Front-End che sul Back-End (no Active-Passive e/o Active- Standby).
+    - Le coppie di controller della soluzione di storage SAN che possono realizzare una scalabilità di tipo
+      Scale-Out dovranno poter essere anche di diverso modello all’interno delle disponibilità della
+      famiglia di prodotto.
+    - La soluzione di storage SAN dovrà supportare contemporaneamente protocolli di tipo Blocco e File
+      senza la necessità di un hardware aggiuntivo, esterno ai controller.
+    - La soluzione di storage SAN dovrà essere realizzata con connessione full NVMe del Back-End oltre a
+      rendere disponibile lo stesso protocollo NVMe, tra gli altri, al front-end. In generale, la connessione
+      NVMe al Front-End dovrà essere possibile sia su connessione FC che IP.
+    - Ciascun controller della soluzione di storage SAN dovrà disporre di almeno nr. 12 core Intel x86 o
+      equivalenti (nr. 24 core per singolo storage).
+    - La soluzione deve prevedere almeno 96 GB di cache per controller (192 GB per appliance).
+
+    ➢ Scalabilità
+    - La soluzione di storage SAN dovrà poter funzionare con un minimo di una coppia di controller e poter
+      scalare fino ad almeno nr. 4 coppie di controller (appliance) Active/Active.
+    - La soluzione di storage SAN dovrà avere una scalabilità massima non inferiore a nr. 370 dischi delle
+      tipologie NVMe SSD tutti Dual-Port Enterprise con differenti capacità e dovrà essere possibile il mix
+      e la crescita di un singolo disco alla volta anche con lo storage in configurazione scale-out.
+-   La soluzione di storage SAN deve prevedere una scalabilità massima in termini di somma della
+    memoria di tutte le controller, fino a non meno di 7800GB
+-   La soluzione di storage SAN dovrà prevedere la possibilità di integrazione con soluzioni di Data
+    Protection HW basate su tecnologia di deduplica e compressione che consentano la replica nativa di
+    snapshot di volumi. Tale integrazione dovrà essere gestibile direttamente dalla interfaccia GUI della
+    soluzione storage.
+-   La soluzione di storage SAN dovrà prevedere nr. Minimo di 4 porte Ethernet di front end da 25Gbps
+    per ogni controller.
+-   La soluzione di storage SAN dovrà prevedere nr. Minimo di 4 porte FC32 per ogni controller.
+-   La soluzione di storage SAN dovrà avere la possibilità di aggiungere ulteriori 4 porte per controller
+    siano esse Eth o FC.
+-   La soluzione di storage SAN dovrà essere in grado di scalare, semplicemente attraverso l'aggiunta di
+    ulteriori dischi e/o ulteriori appliance senza impatti sull'operatività (upgrade a caldo).
+
+➢ Disponibilità
+- La soluzione di storage SAN dovrà fornire alta affidabilità, integrità e protezione dei dati, con un
+  obiettivo di uptime del 99,9999%.
+- La soluzione di storage SAN dovrà supportare aggiornamenti hardware e software del sistema
+  operativo senza interruzioni.
+- 

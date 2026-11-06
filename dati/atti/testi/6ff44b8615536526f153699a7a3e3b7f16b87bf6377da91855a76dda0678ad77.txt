@@ -1,0 +1,303 @@
+PROCEDURA TELEMATICA NEGOZIATA SENZA PUBBLICAZIONE DI UN
+BANDO, AI SENSI DELL'ART. 50, COMMA 1 LETT. "E" DEL CODICE, PER
+L'AFFIDAMENTO DELLA «FORNITURA DI UNA COPPIA DI APPARATI NEXT-
+GENERATION FIREWALL (NGFW) CONFIGURABILI IN ALTA AFFIDABILITÀ
+E CORREDATI DI LICENZE SOFTWARE PER ADVANCED THREAT
+PREVENTION E SUPPORTO BACKLINE» NELL'AMBITO DEL PROGETTO:
+DIT.AD005.090.001 - Cofinanziamento - Rete telematica CNR di Pisa
+
+
+
+CIG: B670E49B5A
+
+CUI: F80054330586202500049
+
+CUP: B55F02000010008
+
+Pagina dedicata https://www.urp.cnr.it/118994-2025
+
+
+
+
+                CAPITOLATO TECNICO
+1. PREMESSE                                                                     3
+2. CARATTERISTICHE TECNICHE, FUNZIONALITÀ E DOTAZIONI MINIME DELLA FORNITURA    3
+   2.1. ULTERIORI CARATTERISTICHE DELLA FORNITURA                               4
+     2.1.1. INSTALLAZIONE ED AVVIO OPERATIVO                                    4
+     2.1.2. GARANZIA                                                            4
+     2.1.3. ASSISTENZA TECNICA, SUPPORTO E MANUTENZIONE                         5
+3. MODALITÀ DI ESECUZIONE DELLA FORNITURA                                       6
+   3.1. LUOGO DI CONSEGNA                                                       6
+   3.2. TERMINI DI CONSEGNA E INSTALLAZIONE                                     6
+4. MODALITÀ DI ESECUZIONE DEL CONTRATTO                                         7
+   4.1. AVVIO DELL'ESECUZIONE                                                   7
+   4.2. SOSPENSIONE DELL'ESECUZIONE                                             7
+   4.3. TERMINE DELL'ESECUZIONE                                                 7
+5. PENALI                                                                       7
+6. MODALITÀ DI RESA                                                             8
+7. ONERI ED OBBLIGHI DELL'AGGIUDICATARIO                                        8
+8. SICUREZZA SUL LAVORO                                                        10
+9. DIVIETO DI CESSIONE DEL CONTRATTO                                           10
+10. VERIFICA DI CONFORMITÀ DI SERVIZI/FORNITURE                                10
+11. ANTICIPAZIONE, FATTURAZIONE E PAGAMENTO                                     11
+12. TRACCIABILITÀ DEI FLUSSI FINANZIARI                                        13
+13. RISOLUZIONE DEL CONTRATTO                                                  13
+14. RECESSO DAL CONTRATTO E VALUTAZIONE DEL DECIMO                             14
+1. PREMESSE
+L'Area della Ricerca del CNR di Pisa (AdR-Pisa) sta attraversando una fase di significativa evoluzione
+infrastrutturale, caratterizzata da implementazione e potenziamento di molteplici infrastrutture di
+ricerca che necessitano di connettività Internet ad alte prestazioni.
+
+A tal proposito, al fine di soddisfare questa crescente esigenza, è in fase d'attuazione, presso l'AdR-
+Pisa, l'installazione di un PoP (Point of Presence) GARR con conseguente upgrade della capacità
+trasmissiva verso Internet, sia in upload che in download. Tale upgrade comporta inevitabilmente un
+incremento sostanziale dei requisiti prestazionali dell'infrastruttura di sicurezza, rendendo necessari
+sia l'estensione che il potenziamento tecnologico degli apparati Next-Generation Firewall (NGFW)
+attualmente in produzione.
+
+In particolare, la soluzione di firewalling attualmente in produzione si basa su una coppia di apparati
+della serie PA-5220, del produttore Palo Alto Networks, configurati in alta affidabilità (High Availability,
+HA) e corredati di licenze software per la protezione della rete mediante le funzionalità tipiche degli
+apparati NGFW come threat prevention, anti-malware (virus, spyware, etc.), URL filtering, file
+blocking, DoS protection e altre funzionalità avanzate.
+
+Al fine di far fronte all'evoluzione infrastrutturale e agli upgrade tecnologici descritti
+precedentemente, si rende necessaria l'espansione della soluzione di firewalling esistente mediante
+l'affiancamento di una nuova coppia di apparati NGFW agli apparati PA-5220 attualmente in
+produzione.
+
+In questo scenario, la Stazione Appaltante Istituto di Informatica e Telematica del Consiglio Nazionale
+delle Ricerche IIT-CNR intende procedere mediante procedura di gara all'affidamento della fornitura
+di una coppia di apparati NGFW configurabili in HA e corredati di licenze software per advanced
+threat prevention e supporto backline entrambe aventi validità minima di 3 anni dalla loro data di
+attivazione, da consegnare presso il luogo e secondo le modalità di cui al successivo paragrafo § 3.
+
+2. CARATTERISTICHE TECNICHE, FUNZIONALITÀ E DOTAZIONI MINIME DELLA FORNITURA
+L'offerta del concorrente deve rispettare tutte le caratteristiche tecniche, funzionalità e dotazioni
+minime della fornitura stabilite nel presente paragrafo, pena l'esclusione dalla procedura di gara.
+
+Gli apparati oggetto della fornitura devono necessariamente:
+
+● essere configurabili in HA;
+● essere corredati almeno delle seguenti licenze software con validità di almeno 36 (trentasei) mesi
+  dalla data di attivazione:
+   ○ advanced threat prevention, ovvero funzionalità avanzate di sicurezza che forniscano
+     protezione contro le minacce cyber, con accesso garantito agli aggiornamenti e ai nuovi rilasci
+     dei database di threat intelligence per tutta la durata della licenza, assicurando così una
+     protezione costantemente aggiornata contro le minacce emergenti;
+   ○ supporto backline (maggiori dettagli al paragrafo paragrafo § 2.1.3);
+● insieme agli apparati NGFW attualmente in produzione presso l'AdR-Pisa, operare come un'unica
+  infrastruttura di sicurezza completamente gestibile mediante la piattaforma unica di gestione ed
+  orchestrazione centralizzata Panorama, già operativa presso l'AdR-Pisa.
+Con lo scopo di realizzare gli obiettivi di estensione e potenziamento dell'infrastruttura di sicurezza
+descritti al paragrafo § 1, è stata identificata una soluzione le cui caratteristiche tecniche, funzionalità
+e dotazioni minime consentono di soddisfare pienamente tali obiettivi. Questa soluzione si basa su
+una coppia di apparati PA-5410 del produttore Palo Alto Networks, i cui dettagli sono specificati in
+Tabella 1.
+
+    material code              product description                                           years qty
+    PAN-PA-5410-AC             Palo Alto Networks PA-5410 with redundant AC power supplies   -      2
+                               Power cord for Continental Europe with IEC-60320 C13 and
+    PAN-PWR-CORD-EU                                                                          -      4
+                               CEE 7/7 SCHUKO cord ends, 10A, 250V max, 6ft
+                               Advanced Threat Prevention subscription 3 year term
+    PAN-PA-5410-ATP-3YR-HA2                                                                  3      2
+                               for device in an HA pair, PA-5410
+    PAN-SVC-BKLN-5410-3YR      Partner enabled premium support 3-year term, PA-5410          3      2
+
+             Tabella 1: codici prodotto Palo Alto Networks con descrizioni, durata e quantità
+
+Pertanto, si richiede la fornitura dei prodotti elencati in Tabella 1 o di soluzioni equivalenti che
+garantiscano:
+● piena compatibilità con i sistemi in uso presso l'AdR-Pisa (come descritto precedentemente);
+● caratteristiche tecniche, funzionalità e dotazioni minime equivalenti o superiori.
+
+Ai sensi di quanto previsto nell'allegato II. 5 del D.Lgs. 36/2023 (codice) l'offerente dimostra, nella
+propria offerta, con qualsiasi mezzo appropriato, compresi i mezzi di prova di cui all'articolo 105 del
+codice, che le soluzioni proposte ottemperano in maniera equivalente alle prestazioni, ai requisiti
+funzionali e alle specifiche tecniche prescritti nel presente documento.
+
+2.1. ULTERIORI CARATTERISTICHE DELLA FORNITURA
+2.1.1.   INSTALLAZIONE ED AVVIO OPERATIVO
+Gli apparati oggetto della presente procedura dovranno essere consegnati presso il luogo e secondo
+le modalità di cui al successivo paragrafo § 3. L'aggiudicatario deve garantire la fornitura esente da
+difetti e perfettamente funzionante. Il montaggio, l'installazione e la configurazione degli apparati,
+nonché la verifica di conformità (vedi paragrafo § 10) della fornitura, saranno a cura della Stazione
+Appaltante.
+
+2.1.2.   GARANZIA
+La garanzia fornita dall'aggiudicatario dovrà coprire un periodo di almeno 36 (trentasei) mesi dalla
+data dal superamento della verifica di conformità della strumentazione, fatta salva l'offerta
+migliorativa presentata in sede di gara. Tale garanzia deve comprendere le riparazioni o sostituzioni
+di parti (con esclusione delle parti cc. dd. "consumabili" chiaramente individuabili nella
+documentazione a corredo) necessarie al funzionamento ottimale della strumentazione.
+
+Devono ritenersi, inoltre, comprese nella garanzia le spese di trasferta ed i costi della manodopera dei
+tecnici presso la sede di consegna ed installazione. Per l'intero periodo di vigenza della garanzia,
+l'aggiudicatario dovrà impegnarsi a fornire gratuitamente gli eventuali upgrade alle licenze software.
+2.1.3.   ASSISTENZA TECNICA, SUPPORTO E MANUTENZIONE
+L'aggiudicatario dovrà garantire un servizio di supporto backline (partner enabled premium support)
+per un periodo di 36 (trentasei) mesi a partire dalla data di attivazione degli apparati e a superamento
+della verifica di conformità avvenuto. In caso di guasto, l'aggiudicatario dovrà intervenire
+tempestivamente dalla segnalazione effettuata dalla Stazione Appaltante al fornitore, con tempi di
+risposta differenziati in base alla gravità del problema:
+
+● criticità elevata: tempo di risposta massimo 1 ora lavorativa;
+● criticità media: tempo di risposta massimo 4 ore lavorative;
+● criticità bassa: tempo di risposta massimo 8 ore lavorative.
+
+L'intervento dovrà essere finalizzato all'immediata assistenza e al ripristino delle funzionalità degli
+apparati o, nel caso in cui ciò non sia possibile, alla valutazione del guasto e degli interventi necessari.
+L'aggiudicatario dovrà garantire la disponibilità delle parti di ricambio per tutto il periodo di validità
+del supporto backline.
+
+Considerata la natura critica dei dispositivi di sicurezza di rete, il supporto backline dovrà coprire tutte
+le componenti, sia hardware che software, incluse nella fornitura. In questo modello di supporto, il
+fornitore agirà da intermediario qualificato tra la Stazione Appaltante e il produttore degli apparati,
+garantendo una gestione efficace e tempestiva delle problematiche tecniche che potrebbero
+compromettere la sicurezza della rete.
+
+Più specificamente, il servizio di supporto backline richiesto dovrà avere i seguenti requisiti minimi:
+
+● supporto tecnico specialistico di secondo/terzo livello fornito da esperti qualificati per
+  problematiche complesse relative a tutte le componenti, sia hardware che software, incluse nella
+  fornitura;
+● supporto tecnico disponibile 24/7 sia via email che in modalità remota (telefono, videoconferenza
+  e altri sistemi);
+● sostituzione dell'hardware con spedizione entro il Next-Business Day (NBD);
+● accesso alla knowledge base del produttore;
+● accesso agli aggiornamenti e nuovi rilasci software.
+
+Nel caso della soluzione basata su apparati PA-5410 di Palo Alto Networks identificata
+precedentemente, tale servizio corrisponde al codice prodotto "PAN-SVC-BKLN-5410-3YR" come
+specificato in Tabella 1. In caso di offerta di soluzioni equivalenti o superiori, dovrà essere garantito un
+servizio di supporto backline con caratteristiche analoghe o migliori rispetto a quanto sopra indicato.
+
+3. MODALITÀ DI ESECUZIONE DELLA FORNITURA
+3.1. LUOGO DI CONSEGNA
+La fornitura dovrà essere consegnata presso l'Istituto di Informatica e Telematica del CNR di Pisa
+ubicato in Via G.Moruzzi 1, 56124, Pisa (PI).
+
+3.2. TERMINI DI CONSEGNA E INSTALLAZIONE
+La fornitura dovrà essere consegnata entro 45 (quarantacinque) giorni naturali e consecutivi
+decorrenti dalla data di stipula del contratto di appalto, ovvero dalla data di sottoscrizione del verbale
+di avvio anticipato dell'esecuzione del contratto.
+4. MODALITÀ DI ESECUZIONE DEL CONTRATTO
+4.1. AVVIO DELL'ESECUZIONE
+Il Direttore dell'esecuzione del contratto (DEC) appositamente nominato, sulla base delle disposizioni
+del Responsabile Unico del Progetto (RUP), darà avvio all'esecuzione del contratto, fornendo
+all'aggiudicatario tutte le istruzioni e direttive necessarie e redigendo, laddove sia indispensabile in
+relazione alla natura e al luogo di esecuzione delle prestazioni, apposito verbale come meglio
+disciplinato all'art. 31, c.2, lett. c) dell'Allegato II.14 del D.Lgs. 36/2023.
+
+È ammesso l'avvio del contratto in via d'urgenza, dopo l'aggiudicazione e prima della stipula nel
+contratto, nei casi previsti all'art.17, comma 9 del codice.
+
+4.2. SOSPENSIONE DELL'ESECUZIONE
+In tutti i casi in cui ricorrano circostanze speciali che impediscano in via temporanea l'esecuzione
+dell'appalto si applicano le disposizioni di cui all'art. 121 del D. Lgs. 36/2023 e s.m.i. e all'art. 8 dell'Allegato
+II.14 del D.Lgs. 36/2023.
+
+4.3. TERMINE DELL'ESECUZIONE
+Ai sensi dell'art. 31, c. 2, lett. n) dell'Allegato II.14 del D.Lgs. 36/2023, dopo la comunicazione
+dell'esecutore di intervenuta ultimazione delle prestazioni, il DEC effettua, entro 5 (cinque) giorni, i
+necessari accertamenti in contraddittorio e nei successivi giorni 5 (cinque) elabora il certificato di
+ultimazione delle prestazioni, da inviare al RUP, che ne rilascia copia conforme all'esecutore.
+
+5. PENALI
+Per ogni giorno naturale e consecutivo di ritardo rispetto ai termini previsti per l'esecuzione
+dell'appalto, di cui al punto 3.2, si applicherà una penale pari all'1‰ (uno per mille) dell'importo
+contrattuale, al netto dell'IVA e dell'eventuale costo relativo alla sicurezza sui luoghi di lavoro derivante
+dai rischi di natura interferenziale.
+
+Nel caso in cui la prima verifica di conformità della fornitura abbia esito sfavorevole non si applicano
+le penali; qualora tuttavia l'Aggiudicatario non renda nuovamente la fornitura disponibile per la
+verifica di conformità entro i 20 (venti) giorni naturali e consecutivi successivi al primo esito
+sfavorevole, ovvero la verifica di conformità risulti nuovamente negativa, si applicherà la penale sopra
+richiamata per ogni giorno solare di ritardo.
+
+Gli eventuali inadempimenti contrattuali che daranno luogo all'applicazione delle penali sopra
+elencate saranno contestati al Fornitore per iscritto. Il Fornitore dovrà comunicare, in ogni caso, per
+iscritto, le proprie deduzioni, supportate da una chiara ed esauriente documentazione, nel termine
+massimo di 5 (cinque) giorni lavorativi dalla ricezione della contestazione stessa. Qualora le predette
+deduzioni non pervengano al Direttore dell'Esecuzione nel termine indicato, ovvero, pur essendo
+pervenute tempestivamente, non siano idonee, a giudizio del CNR, a giustificare l'inadempienza,
+saranno applicate al Fornitore le penali a decorrere dall'inizio dell'inadempimento.
+
+La richiesta e/o il pagamento delle penali non esonera in nessun caso il Fornitore dall'adempimento
+dell'obbligazione per la quale si è reso inadempiente e che ha fatto sorgere l'obbligo di pagamento
+della medesima penale.
+
+Ferma restando l'applicazione delle penali previste nei precedenti commi, il Committente si riserva di
+richiedere il maggior danno, sulla base di quanto disposto all'articolo 1382 cod. civ., nonché la
+risoluzione del presente Contratto nell'ipotesi di grave e reiterato inadempimento.
+Fatto salvo quanto previsto ai precedenti commi, l'Impresa si impegna espressamente a rifondere al
+Committente l'ammontare di eventuali oneri che il CNR dovesse applicare, anche per cause diverse
+da quelle di cui al presente articolo, a seguito di fatti che siano ascrivibili a responsabilità della Impresa
+stessa.
+
+Il Committente, per i crediti derivanti dall'applicazione delle penali di cui al presente articolo, potrà, a
+sua insindacabile scelta, avvalersi della cauzione definitiva senza bisogno di diffida o procedimento
+giudiziario, ovvero compensare il credito con quanto dovuto all'Impresa a qualsiasi titolo, quindi anche
+per i corrispettivi maturati; in questo caso il Fornitore dovrà emettere una nota di credito pari
+all'importo della penale o decrementare la fattura del mese in corso di un valore pari all'importo della
+penale stessa.
+
+6. MODALITÀ DI RESA
+Per operatori economici appartenenti a Stati membri dell'Unione europea, si applica la regola
+Incoterms 2020 - DPU (Delivered At Place Unloaded) presso il luogo di destinazione (sede di
+consegna) indicato al paragrafo § 3.1 del presente Capitolato tecnico.
+
+Per operatori economici non appartenenti a Stati membri dell'Unione europea, si applica la regola
+Incoterms 2020 - DDP1 (Delivered Duty Paid) presso il luogo di destinazione (sede di consegna)
+indicato al paragrafo § 3.1 del presente Capitolato tecnico.
+
+In aggiunta l'operatore economico è tenuto a provvedere allo scarico della merce nel luogo di
+destinazione, a sua cura e spesa.
+
+Tutti gli operatori economici sono obbligati, incluso nel prezzo contrattuale d'appalto a stipulare un
+contratto di assicurazione per la parte di trasporto sotto la loro responsabilità.
+
+7. ONERI ED OBBLIGHI DELL'AGGIUDICATARIO
+L'Aggiudicatario:
+
+● si impegna ad eseguire le prestazioni oggetto dell'appalto, senza alcun onere aggiuntivo,
+  salvaguardando le esigenze della Stazione Appaltante e di terzi autorizzati, senza recare intralci,
+  disturbi o interruzioni all'attività lavorativa in atto;
+
+● rinuncia a qualsiasi pretesa o richiesta di compenso nel caso in cui lo svolgimento delle prestazioni
+  dovesse essere ostacolato o reso più oneroso dalle attività svolte dalla Stazione Appaltante e/o da
+  terzi;
+
+● è direttamente responsabile dell'inosservanza delle clausole che saranno contenute nel contratto
+  anche se queste dovessero derivare dall'attività del personale dipendente di altre imprese a diverso
+  titolo coinvolto;
+
+● deve avvalersi di personale qualificato in regola con gli obblighi previsti dai contratti collettivi di
+  lavoro e da tutte le normative vigenti, in particolare in materia previdenziale, fiscale, di igiene ed in
+  materia di sicurezza sul lavoro;
+
+● risponderà direttamente dei danni alle persone, alle cose o all'ambiente comunque provocati
+  nell'esecuzione dell'appalto che possano derivare da fatto proprio, dal personale o da chiunque
+  chiamato a collaborare. La Stazione Appaltante è esonerata da ogni responsabilità per danni,
+
+             1
+               L'operatore economico ha l'obbligo di sdoganare la merce sia all'esportazione sia all'importazione, assumendosi
+             il costo degli eventuali dazi all'importazione nonché delle spese accessorie. L'IVA rimane a carico della Stazione
+             Appaltante.
+   infortuni o qualsiasi altra cosa accadesse al personale di cui si avvarrà l'Aggiudicatario
+   nell'esecuzione delle prestazioni relative all'appalto;
+
+● si fa carico, intendendosi remunerati con il corrispettivo contrattuale, di tutti gli oneri ed i rischi
+  relativi alle attività ed agli adempimenti occorrenti all'integrale espletamento dell'oggetto
+  contrattuale, ivi compresi, a mero titolo esemplificativo e non esaustivo, gli oneri relativi alle spese
+  di trasporto, di viaggio e di missione per il personale addetto alla esecuzione della prestazione,
+  nonché i connessi oneri assicurativi;
+
+● si impegna ad eseguire le prestazioni oggetto dell'appalto a perfetta regola d'arte e nel rispetto di
+  tutte le norme e le prescrizioni tecniche e di sicurezza in vigore e di quelle che dovessero essere
+  emanate nel corso della procedura di gara e fino alla sua completa conclusione, nonché secondo
+  le condizioni, le modalità, i termini e le prescrizioni contenute negli atti di gara e relativi allegati;
+
+● si impegna a consegnare gli elaborati progettuali e tutte le dichiarazioni e/o certificazioni
+  discendenti da specifici obblighi normativi e legislativi correlati con l'oggetto della prestazione
