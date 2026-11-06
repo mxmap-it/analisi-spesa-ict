@@ -28,6 +28,33 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
 - **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
 
+## #44 #59 #46 #50 #52 PERIMETRO, CPV, OCDS, AQ, IN-HOUSE — punto di ripresa 6/11/2026
+- **#44 perimetro ICT:**
+  - lista bianca in `config/perimetro_cpv.yaml` (13 prefissi, uguale a `CPV_ICT`, la verifica lo controlla);
+  - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
+  - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
+  - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
+- **#59 CPV:**
+  - sui 543 ICT del campione 611: 74 % specifico, 17 % generico, 9 % fuori lista (25 con il segnaposto 99999999);
+  - cloud con codice di servizio erogato: 30 % (contro l'11 % dei non cloud);
+  - base dal 2024: 99999999 o vuoto 8,3 %, codice di gruppo 16,2 %;
+  - ECA SR 28/2023 aperta e archiviata: **il 49,8 % non c'è** (valori mancanti circa 30 %);
+  - Ramboll/BME 2012 trovato: 405 avvisi, 23 % di codici inesatti;
+  - rendiconto bozza `sito/content/rendiconti/perimetro-cpv.md` (non elencato); R21 aggiornata, R60 nuova (segnaposto).
+  - **Prossimo:** uscita di riclassificazione `dati/classificazioni/cpv-riclassificazione.csv`; etichette umane su L e S1; includere `lente-cieco-3` quando sarà versionato.
+- **#46 OCDS release.date** (`tools/verifiche/ocds_release_date.py`, `esiti/2026-11-06/ocds/`, 96 mesi):
+  - le due vie concordano su 4.751.105 date;
+  - conformi solo 2018/01-2019/11; **da 2019/12 zero conformi** (la scheda P04 diceva «fra il 2021 e il 2023»: corretta);
+  - 3.594.570 release senza data. P04 aggiornata con sha256 e metrica.
+- **#50 cig_accordo_quadro** (`tools/verifiche/cig_aq_modalita.py`, `esiti/2026-11-06/cig-aq/`):
+  - con modalità «discendente» il campo è compilato nel 98,6-100 %: mancano 4.130 CIG nel 2024 e 3.946 nel 2025;
+  - il «20 % vuoto» era l'espressione sul testo: precisione 3/60 (5 %), quasi tutti appalti specifici di SDA;
+  - **decisione:** P15 resta interno (esito nella scheda) e R01 è ridimensionata. Se Fabio vuole, il difetto piccolo («discendente senza CIG padre», circa 4.000 l'anno) può diventare una scheda pronta: è verificato su campo strutturato.
+- **#52 in-house/datacenter** (`tools/verifiche/inhouse_datacenter.py`, `esiti/2026-11-06/inhouse/`), punto aperto:
+  - in-house dal 2024: 943 CIG, 774 M€, 446 enti. La classe è **contaminata da privati** (Accenture 91 M€, HTDI 48, TAI 31, DGS, TIM, Fastweb): va ristretta alle società pubbliche;
+  - SAL su 17 CIG su 943;
+  - infrastruttura propria: hardware 31.677 CIG e 4,5 mld; consulenza su infrastruttura 3.527 e 2,7 mld; software di infrastruttura 663 e 0,8 mld (VMware 651); testo datacenter/CED 10.991 e 3,1 mld (importi del lotto, con i tetti).
+
 ## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
 - **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
 - **Selezione:** `report/metodo/llm/imbuto-g1g3/selezione.json`: G1 196 CIG unici (4,70 mld), G3 1.000 (1,55 mld), CTL 15 dal campione 611. ict.csv ha CIG ripetuti (G1 13, G3 52): R53.
