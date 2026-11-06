@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Costruisce il sito dal registro dei problemi e produce il PDF del documento per ANAC.
 #   tools/costruisci_sito.sh          sito
-#   tools/costruisci_sito.sh pdf      sito + PDF (serve Chrome o Chromium)
+#   tools/costruisci_sito.sh pdf      sito + PDF (serve pip install typst)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p sito/data sito/static/pdf
@@ -10,13 +10,7 @@ python3 tools/pagina_scheda_normativa.py 2>/dev/null || PYTHONUTF8=1 /c/Users/ad
 python3 tools/convenzioni/pagine.py 2>/dev/null || PYTHONUTF8=1 /c/Users/admin/AppData/Local/Python/bin/python.exe tools/convenzioni/pagine.py   # sezione /convenzioni/ (#62)
 hugo --source sito --minify --cleanDestinationDir
 if [ "${1:-}" = "pdf" ]; then
-  CHROME=${CHROME:-$(command -v chromium || command -v google-chrome || command -v chrome || echo "/c/Program Files/Google/Chrome/Application/chrome.exe")}
-  # dalla pagina pubblicata: via file:// i fogli di stile con percorsi assoluti non si caricano
-  URL=${URL:-https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10-problemi/}
-  OUT="$(pwd)/sito/static/pdf/anac-problemi-e-rimedi-2026-10.pdf"
-  PROFILO=$(mktemp -d)
-  command -v cygpath >/dev/null && OUT=$(cygpath -m "$OUT") && PROFILO=$(cygpath -m "$PROFILO")
-  "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir="$PROFILO" --print-to-pdf="$OUT" "$URL" 2>/dev/null
-  hugo --source sito --minify --cleanDestinationDir   # ricostruisce per pubblicare anche il PDF
-  echo "PDF: $OUT"
+  # impaginazione dedicata con typst dal registro (#34), non la stampa del sito
+  python3 tools/documento_anac/genera.py 2>/dev/null || PYTHONUTF8=1 /c/Users/admin/AppData/Local/Python/bin/python.exe tools/documento_anac/genera.py
+  hugo --source sito --minify --cleanDestinationDir
 fi

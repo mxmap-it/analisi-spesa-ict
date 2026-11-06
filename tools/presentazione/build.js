@@ -27,6 +27,7 @@ const BREVE = {
   P07: { t: "Due licenze diverse per gli stessi dati", rim: "Una sola licenza in catalogo, pagina e file." },
   P11: { t: "Dimensioni dichiarate 4 volte quelle reali", rim: "Dichiarare la dimensione del file servito." },
   P13: { t: "Nessuna impronta per sapere se un file è cambiato", rim: "Esporre l'ETag, per scaricare solo ciò che cambia." },
+  P17: { t: "Stazioni appaltanti con codice fiscale segnaposto", rim: "Documentare i segnaposto CFAVCP- (1.282 in anagrafica) o usare il codice fiscale reale." },
 };
 for (const id of Object.keys(BREVE)) if (!byId[id] || !byId[id].pronto_per_anac) throw new Error(`${id} non è pronto nel registro`);
 

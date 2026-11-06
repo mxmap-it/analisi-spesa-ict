@@ -1,0 +1,338 @@
+{
+ "data": "2026-11-06",
+ "registro_sha256": "fbdc85fb0329f8c9f0e052d4233811dc3594a4ce47a423502c16d1425bfa3721",
+ "pronti": [
+  {
+   "id": "P01",
+   "titolo": "Mesi OCDS diversi servono lo stesso file, con il solo campo uri riscritto",
+   "conseguenza": "Chi costruisce una serie storica dall'OCDS conta più volte gli stessi appalti e perde i mesi reali: ogni analisi su quegli anni è falsata, senza che nulla lo segnali.",
+   "rif": "D14, I4",
+   "gravita": "alta",
+   "prova": {
+    "script": "tools/verifiche/ocds_mesi_duplicati.py",
+    "esito": "report/anac/verifica-ocds-mesi-duplicati-2026-10-27.json",
+    "sintesi": "96 mesi serviti, 80 contenuti distinti; 24 mesi in 8 gruppi differiscono di 1-3 byte (cifre del mese nel campo uri)",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "AgID, Cruscotto Italia etl/sources/anac.py commit 2bc27d9: «i 12 file OCDS usati erano 4 file distinti»",
+   "azione_correttiva": "Rigenerare i mesi duplicati dal loro contenuto reale; aggiungere al processo di generazione un controllo che rifiuti un mese identico a un altro",
+   "metrica": "I4: nessuna coppia di mesi con stessa dimensione e stessi blocchi interni (sonda giornaliera)",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P02",
+   "titolo": "OCDS fermo a marzo 2026; del 2026 è pubblicato solo marzo",
+   "conseguenza": "Dall'aprile 2026 l'Italia non pubblica dati nello standard internazionale degli appalti: chi usa strumenti OCDS, in Europa e nel mondo, vede i contratti italiani fermi a marzo.",
+   "rif": "D1, D11, I1",
+   "gravita": "alta",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I1, giornaliero); report/anac/ocds-2026-03-periodo.json",
+    "sintesi": "2025/12, 2026/01, 2026/02 e da 2026/04 in poi rispondono 404; il file di marzo contiene solo release di marzo (e 1.139 di aprile)",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "AgID, Cruscotto Italia etl/sources/anac.py commit 2bc27d9: «ANAC non rigenera l'OCDS da aprile 2026»",
+   "azione_correttiva": "Pubblicare i mesi mancanti, oppure dichiarare sulla pagina OCDS la sospensione con la data di ripresa",
+   "metrica": "I1: esiste il file del mese precedente dopo il giorno 2 di ogni mese",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P03",
+   "titolo": "OCDS 2026: il fornitore aggiudicatario manca nell'80% degli award, contro il 99% degli anni precedenti",
+   "conseguenza": "Con lo standard internazionale non si sa chi ha vinto quattro appalti su cinque del 2026: niente analisi di concentrazione dei fornitori né di conflitti di interesse, proprio sull'anno in corso.",
+   "rif": "§3.5",
+   "gravita": "alta",
+   "prova": {
+    "script": "tools/verifiche/verifica_38_42.py",
+    "esito": "report/anac/verifica-38-42-2026-10-27.json",
+    "sintesi": "Marzo 2026 (unico mese 2026 pubblicato): award con fornitore 20,4% (21.927/107.318), e per il 97,3% degli altri i tabellari ANAC hanno l'aggiudicatario. Negli anni precedenti il fornitore c'è: 99,9% (2019/03), 99,6% (2022/06), 98,9% (2024/10, campioni di 28-40 mila release). È una regressione della generazione 2026",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Seconda via indipendente (tools/verifiche/seconde_vie.py, codice e mese diversi): ottobre 2024 → 99,2% di award con fornitore su 108.437, quindi il difetto è proprio del 2026. Coerente con il rapporto «circa 1/5» riportato da AgID",
+   "azione_correttiva": "Ripristinare nella generazione dell'OCDS l'esportazione di awards.suppliers e parties con ruolo supplier, come negli anni precedenti, e rigenerare il 2026",
+   "metrica": "Quota di award OCDS con fornitore, per mese (nuova metrica I10, da aggiungere alla sonda)",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P08",
+   "titolo": "Aggiornamenti mensili (delta) rimossi senza regola dichiarata; gennaio-marzo 2026 persi",
+   "conseguenza": "I contratti di gennaio, febbraio e marzo 2026 non sono più scaricabili e non esiste un file completo dell'anno: per chi non li ha archiviati in tempo, quei mesi sono persi.",
+   "rif": "D2, D3, D4, I6",
+   "gravita": "alta",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I5, I6); archivio/manifest.jsonl",
+    "sintesi": "20260101-, 20260201-, 20260301-cig_csv.zip → 404; nessun file annuale 2026; a settembre 6 delta in linea, a ottobre 7",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "AgID, scripts/anac_archivio_mensile.sh: «finestra mobile di ~7 mesi … il file più vecchio sparisce e non si recupera più»",
+   "azione_correttiva": "Conservare i delta fino al full successivo, o pubblicare il full dell'anno in corso; dichiarare la politica di conservazione",
+   "metrica": "I6: nessun delta presente nel nostro archivio sparisce dal server prima del full successivo",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P18",
+   "titolo": "Il link ai documenti di gara di ciascun CIG non è negli open data: solo nell'API PVL, dal 2024, e manca per 1 CIG su 3",
+   "conseguenza": "Per arrivare agli atti di un contratto (determina, capitolato, carrello) bisogna interrogare a pagine un'API senza licenza dichiarata. Per un terzo dei CIG il link non c'è, e per convenzioni, accordi quadro e in house manca sempre. Prima del 2024 non esiste. Chi analizza la spesa deve ripiegare su scraping ente per ente o su accessi civici di massa.",
+   "rif": "R30, #57",
+   "gravita": "alta",
+   "prova": {
+    "script": "tools/acquisizione/pvl_avvisi.py scarica && tools/acquisizione/pvl_dopo.sh",
+    "esito": "esiti/pvl-link-cig/2026-11-04/",
+    "sintesi": "2.753.119 avvisi PVL (1/1/2024-3/11/2026) contro 3.734.845 CIG BDNCP: il 69,9 % ha almeno un avviso e il 65,1 % ha il link (43,7 % dell'importo). Senza nessun avviso: 93.485 adesioni a convenzioni e accordi quadro, 884 confronti competitivi in adesione. In house: 30.214 CIG con avviso ma 0 link. Gennaio-febbraio 2024: link nell'1,5-3,2 % dei CIG. 174.834 CIG PVL assenti dai file BDNCP 2024+. Il campo non è nei dataset bulk (pubblicazioni ha solo date, OCDS solo URI CPV). dettaglio-cig lo mostra, ma la sua API richiede token CAPTCHA.",
+    "verificato_il": "2026-11-04"
+   },
+   "controvalidazione": "Per ogni giorno gli avvisi unici scaricati coincidono con il totale dichiarato dall'API. Verifica dei link su 400 domini (report/metodo/acquisizione/dettaglio-cig.md).",
+   "azione_correttiva": "Pubblicare in bulk (CSV/JSON) un dataset cig -> link ai documenti di gara, con lo storico pre-2024. Rendere obbligatorio il link anche per adesioni a convenzioni/AQ e affidamenti in house. Dichiarare licenza e termini d'uso dell'API PVL.",
+   "metrica": "Quota di CIG BDNCP con link nei dataset bulk (oggi 0 %; nell'API PVL 65,1 %), per anno e per tipo di procedura",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P04",
+   "titolo": "OCDS: date delle release in formato non conforme in tutte le release",
+   "conseguenza": "Le date non sono leggibili dagli strumenti standard: gli appalti non si collocano nel tempo senza correzioni manuali.",
+   "rif": "§3.5, D15",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/verifiche/verifica_38_42.py",
+    "esito": "report/anac/verifica-38-42-2026-10-27.json",
+    "sintesi": "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Il difetto è comparso fra il 2021 e il 2023",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Seconda via indipendente (parser di date standard di Python, mese diverso): ottobre 2024, 0 date valide su 117.271 release",
+   "azione_correttiva": "Emettere date ISO 8601 / RFC 3339 come richiesto dallo schema OCDS 1.1; valorizzare sempre release.date",
+   "metrica": "Quota di release con date valida secondo lo schema = 100% (nuova metrica I11)",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P05",
+   "titolo": "OCDS: copertura parziale delle aggiudicazioni rispetto ai tabellari",
+   "conseguenza": "Un terzo delle aggiudicazioni non arriva nell'OCDS: chi usa solo quel canale sottostima appalti e spesa.",
+   "rif": "§3.5",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/verifiche/verifica_38_42.py",
+    "esito": "report/anac/verifica-38-42-2026-10-27.json",
+    "sintesi": "Aggiudicazioni definitive del mese presenti anche nell'OCDS: 67% a marzo 2026 (67.282/99.949), 77,7% a ottobre 2024 (80.863/104.087)",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Seconda via indipendente su un mese diverso (ottobre 2024, tools/verifiche/seconde_vie.py): copertura 77,7%; il difetto c'è in entrambi i periodi",
+   "azione_correttiva": "Includere nell'OCDS tutte le aggiudicazioni della BDNCP, o documentare il criterio di esclusione",
+   "metrica": "Rapporto mensile OCDS/tabellari per data di aggiudicazione",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P06",
+   "titolo": "API REST OCDS dichiarata ma non funzionante",
+   "conseguenza": "Chi segue la documentazione ufficiale per accedere ai dati in tempo reale non ottiene nulla.",
+   "rif": "D7, I2",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I2); report/anac/prove-2026-10-26/api_ui.html, swagger.json",
+    "sintesi": "Endpoint version, releases, awards su api.anticorruzione.it/opendata/ocds/api/v1 → 404; swagger.json non è JSON valido",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Riprodotto il 27/10/2026 da una seconda rete (rete domestica, IP diverso dal server): version, releases e awards → 404",
+   "azione_correttiva": "Ripristinare l'API o rimuoverla dalla pagina; pubblicare uno swagger.json valido",
+   "metrica": "I2",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P09",
+   "titolo": "Mesi mancanti di smartcig (giugno e luglio 2026) e distribuzione JSON interrotta",
+   "conseguenza": "Mancano due mesi di affidamenti sotto soglia, quelli diretti e a più alto rischio, e il formato JSON si è fermato senza avviso.",
+   "rif": "D10, D12, I5",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I5)",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Riprodotto il 27/10/2026 da una seconda rete: smartcig 20260601 e 20260701 → 404 in CSV e JSON; 20260801 → 200 in CSV, 404 in JSON",
+   "azione_correttiva": "Pubblicare giugno e luglio 2026; riprendere la distribuzione JSON o dichiararne la cessazione",
+   "metrica": "I5: continuità di ogni serie mensile dichiarata",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P10",
+   "titolo": "Il catalogo elenca risorse inesistenti",
+   "conseguenza": "Il catalogo promette file che non esistono: gli scarichi automatici falliscono senza spiegazione.",
+   "rif": "D17, I8",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I8)",
+    "sintesi": "4 risorse elencate rispondono 404 il 27/10/2026: OCDS 2025/12, 2026/01, 2026/02 e smartcig-2025_csv_logCsv.csv",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "AgID, scripts/anac_archivio_mensile.sh: «202304-202603 in 404 anche se elencati nel log»",
+   "azione_correttiva": "Togliere dal catalogo le risorse inesistenti, o pubblicarle",
+   "metrica": "I8",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P12",
+   "titolo": "HEAD dei programmi non-browser: risposta 200 text/html invece dei metadati del file",
+   "conseguenza": "Gli strumenti automatici ricevono informazioni false sui file, senza alcun errore: aggiornamenti non rilevati, controlli che passano quando non dovrebbero.",
+   "rif": "D6, I9",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I9)",
+    "sintesi": "HEAD con user-agent python-requests o curl → 200 text/html; con user-agent da browser → 200 application/zip; GET → il file con qualunque user-agent",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Riprodotto il 27/10/2026 da due reti diverse (datacenter 51.158.36.151 e rete domestica). AgID, scripts/anac_archivio_mensile.sh: «il firewall risponde 200 con una pagina di blocco» (contesto della loro osservazione non specificato)",
+   "azione_correttiva": "Rispondere a HEAD con gli stessi metadati del GET per qualunque user-agent, o con un codice di errore esplicito (403/429)",
+   "metrica": "I9: HEAD e GET con più user-agent, stesso Content-Type",
+   "stato": "aperto",
+   "pronto_per_anac": true,
+   "storia": "Fino alla versione 1.5 del rendiconto scritto come 'pagina HTML al posto del file': per il GET non c'erano prove archiviate e il 27/10 non si riproduce; corretto nella 1.6"
+  },
+  {
+   "id": "P14",
+   "titolo": "CUP 'ND' al posto del codice in 1.951.844 righe",
+   "conseguenza": "Quasi due milioni di righe non collegano il contratto al progetto finanziato: non si può seguire il denaro pubblico, PNRR compreso, dal finanziamento al contratto.",
+   "rif": "§3",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/anac_integrita.py",
+    "esito": "report/anac/integrita-2026-10-26.json (in ripetizione sul mirror completo)",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Seconda via indipendente (modulo csv di Python, tools/verifiche/seconde_vie.py): 1.951.844 righe con CUP 'ND' su 7.228.216, stesso numero",
+   "azione_correttiva": "Lasciare vuoto il campo quando il CUP non c'è, e documentare la convenzione",
+   "metrica": "Numero di righe con CUP = 'ND'",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P16",
+   "titolo": "Aggiornamenti mensili 2026 con righe non conformi al formato CSV (escape \\\" invece di \"\")",
+   "conseguenza": "I file del 2026 non si leggono senza errori con gli strumenti standard: righe scartate o lette male.",
+   "rif": "CD-CSV",
+   "gravita": "media",
+   "prova": {
+    "script": "tools/anac_integrita.py --completo",
+    "esito": "report/anac/integrita-completo-2026-10-27.json",
+    "sintesi": "158 righe con \\\" nei delta 2026, nessuna nei file annuali 2007-2025; duckdb in modalità rigorosa ne scarta 55, il lettore csv di Python in modalità strict ne rifiuta 156",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Seconda via indipendente: lettore csv di Python in modalità strict (tools/verifiche/seconde_vie.py), che rifiuta 156 delle 158 righe con escape",
+   "azione_correttiva": "Esportare i CSV secondo RFC 4180 (virgolette raddoppiate), come nei file annuali",
+   "metrica": "Righe rifiutate da un lettore CSV rigoroso in ogni nuovo file = 0",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P07",
+   "titolo": "Licenza dell'OCDS: CC BY 4.0 nel catalogo e nella pagina, CC BY-SA 4.0 nel file",
+   "conseguenza": "Il riuso è giuridicamente incerto: le due licenze impongono obblighi diversi a chi ripubblica i dati.",
+   "rif": "I3",
+   "gravita": "bassa",
+   "prova": {
+    "script": "tools/metriche_anac.py",
+    "esito": "stato/metriche/ (I3); report/anac/prove-2026-10-26/",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Lettura diretta dei tre documenti archiviati con hash (prova documentale, non serve seconda via)",
+   "azione_correttiva": "Allineare la licenza di catalogo, pagina e file",
+   "metrica": "I3",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P11",
+   "titolo": "Dimensioni dichiarate dal catalogo 4,1 volte quelle servite",
+   "conseguenza": "Chi pianifica spazio e tempi di scarico sbaglia di quattro volte: il segno di metadati non curati.",
+   "rif": "D13, D18, I7",
+   "gravita": "bassa",
+   "prova": {
+    "script": "tools/censisci_anac.py",
+    "esito": "config/anac-risorse.jsonl",
+    "sintesi": "524,78 GB dichiarati contro 128,92 GB serviti su 1.797 risorse; il campo size descrive il file scompattato",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Seconda via: per 1.650 risorse il Content-Length coincide al byte con i byte effettivamente archiviati (48,70 GB); la dimensione dichiarata dal catalogo è molto più alta. Sull'insieme delle 1.797 risorse: 524,78 GB dichiarati contro 128,92 GB serviti",
+   "azione_correttiva": "Valorizzare size con la dimensione della distribuzione servita",
+   "metrica": "I7",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P13",
+   "titolo": "Nessun ETag sulle risorse",
+   "conseguenza": "Per sapere se un file è cambiato bisogna riscaricarlo per intero: decine di gigabyte di traffico inutile per ANAC e per chi riusa i dati.",
+   "rif": "D9",
+   "gravita": "bassa",
+   "prova": {
+    "script": "tools/sonda.py",
+    "esito": "report/anac/sonda-2026-10-26.jsonl",
+    "verificato_il": "2026-10-26"
+   },
+   "controvalidazione": "Riprodotto il 27/10/2026 da una seconda rete: nessun header ETag su delta CIG, OCDS 2026/03, cup_csv.zip",
+   "azione_correttiva": "Esporre ETag (e mantenere Last-Modified) per permettere download condizionali",
+   "metrica": "Quota di risorse con ETag (sonda)",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P17",
+   "titolo": "Codici fiscali segnaposto delle stazioni appaltanti (es. CFAVCP-0001C57)",
+   "conseguenza": "Alcune stazioni appaltanti non sono identificabili e non si collegano agli altri registri pubblici.",
+   "rif": "CD-04",
+   "gravita": "bassa",
+   "prova": {
+    "script": "tools/anac_integrita.py --completo",
+    "esito": "report/anac/integrita-completo-2026-10-27.json",
+    "sintesi": "902 stazioni appaltanti su 39.486 (2,28%) con codice fiscale non valido, fra cui segnaposto CFAVCP-…",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Seconda via indipendente (6/11): anagrafica stazioni-appaltanti in JSON (sha256 d6cb2e0c…77d8b2), letta con json della libreria standard e un validatore del codice fiscale riscritto (tools/verifiche/cf_segnaposto.py, esito report/anac/verifica-cf-segnaposto-2026-11-06.json): 1.285 stazioni su 48.040 (2,68 %) con codice fiscale non valido, di cui 1.282 segnaposto CFAVCP- (1.191 ATTIVO, 91 CESSATO), tutte con codice AUSA; molte sono centrali uniche di committenza senza codice fiscale proprio",
+   "azione_correttiva": "Documentare nei metadati la convenzione dei segnaposto CFAVCP- (a chi si assegnano, per esempio alle centrali uniche di committenza senza codice fiscale proprio) e, dove esiste, sostituirli con il codice fiscale reale o dell'ente capofila",
+   "metrica": "Numero di stazioni appaltanti con codice fiscale non valido, in cig_delta e nell'anagrafica stazioni-appaltanti (oggi 902 e 1.285)",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  }
+ ],
+ "interni": [
+  {
+   "id": "P15",
+   "titolo": "Contratti attuativi senza collegamento all'accordo quadro o convenzione",
+   "conseguenza": "Non si sa da quale accordo quadro o convenzione nasce un acquisto: la spesa fatta tramite i grandi contratti centralizzati, come il cloud comprato tramite Consip, non si attribuisce.",
+   "rif": "#50",
+   "gravita": "da_valutare",
+   "prova": {
+    "script": "tools/verifiche/cig_accordo_quadro.py",
+    "esito": "report/anac/verifica-cig-accordo-quadro-2026-10-27.json",
+    "sintesi": "Fra i CIG che nel testo dichiarano un'adesione, cig_accordo_quadro vuoto: 20% nel 2025, 56% nel 2017; 11.568 CIG padre puntati non esistono",
+    "verificato_il": "2026-10-27"
+   },
+   "controvalidazione": "Da fare: campione verificato a mano; obbligo normativo e ANAC del campo da documentare",
+   "azione_correttiva": "Da definire dopo la verifica dell'obbligo: controllo di compilazione in fase di richiesta del CIG derivato",
+   "metrica": "Quota di CIG derivati con cig_accordo_quadro valorizzato e esistente",
+   "stato": "in_verifica",
+   "pronto_per_anac": false,
+   "manca": "validazione su campione, norma, controvalidazione",
+   "motivo_interno": "Resta interno (verifica del 6/11, #33): l'obbligo di compilare cig_accordo_quadro per ogni derivato non è documentato in una norma o in un atto ANAC che abbiamo letto; il denominatore dipende da una classificazione testuale delle adesioni non validata a mano; gli 11.568 CIG padre inesistenti possono essere CIG di accordi quadro non presenti nel mirror (ante 2007 o SmartCIG). Senza le tre verifiche il rilievo non regge davanti ad ANAC. Il tema prosegue nel lavoro sulle convenzioni (#50, #62)."
+  }
+ ],
+ "totale": 18,
+ "gravita": {
+  "alta": 5,
+  "media": 8,
+  "bassa": 4,
+  "da_valutare": 0
+ }
+}
