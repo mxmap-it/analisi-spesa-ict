@@ -82,6 +82,10 @@ def piano(a):
     def aggiungi(ini, s, titolo, url, data=None, byte=None):
         if ini not in nomi:
             return
+        if "#" in url:
+            # documento dentro uno zip: lo sha256 è quello dello zip, quindi l'asset è lo zip e prende il suo nome
+            url = url.split("#", 1)[0]
+            titolo = urllib.parse.unquote(url.split("?")[0].rsplit("/", 1)[-1])
         r = righe[ini].setdefault(s, {"iniziativa": ini, "sha256": s, "titolo": titolo, "url_originale": url,
                                       "byte": byte, "data_acquisizione": data})
         if not r["titolo"] and titolo:
@@ -123,7 +127,7 @@ def piano(a):
                 esclusi.append({**r, "motivo": "file vuoto (0 byte) alla fonte: GitHub non accetta asset vuoti"}); continue
             if r["byte"] >= 2 * 1024 ** 3:
                 esclusi.append({**r, "motivo": "oltre 2 GiB (limite asset)"}); continue
-            base = urllib.parse.unquote(r["url_originale"].split("?")[0].rsplit("/", 1)[-1])
+            base = urllib.parse.unquote(r["url_originale"].split("#")[0].split("?")[0].rsplit("/", 1)[-1])
             if "getDocument" in r["url_originale"] or "." not in base or r["url_originale"].startswith("https://ted.europa.eu"):
                 base = (r["titolo"] or base) + estensione(p)
             n = pulisci(base)
@@ -197,7 +201,13 @@ def carica(a):
         # GitHub ripulisce i nomi (es. «..._» diventa «._»): un asset già caricato si riconosce dal digest, non dal nome.
         per_digest = {x.get("digest"): x for x in lista if x.get("state") == "uploaded"}
         for r in per[ini]:
-            if f"sha256:{r['sha256']}" in per_digest:
+            x = per_digest.get(f"sha256:{r['sha256']}")
+            if x:
+                if x["name"] != r["asset"] and r["asset"] not in ci:
+                    # 7/11/2026: gli zip erano stati caricati col nome del primo file contenuto: si rinominano
+                    y = api("PATCH", f"https://api.github.com/repos/{REPO}/releases/assets/{x['id']}", {"name": r["asset"]})
+                    print(ini, "rinominato", x["name"], "->", y["name"] if y else "?", flush=True)
+                    ci[r["asset"]] = x
                 continue
             x = ci.get(r["asset"])
             if x:   # parziale o diverso: si rifà

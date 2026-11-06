@@ -226,7 +226,9 @@ def pagina(v, voci=()):
         for desc, d in docs:
             sha = f"`{d['sha256'][:16]}…`" if d.get("sha256") else "non archiviato"
             if d.get("sha256") and COPIE.get((v["id"], d["sha256"])):
-                sha = f"[copia]({COPIE[(v['id'], d['sha256'])]}) {sha}"
+                # un documento dentro uno zip ha lo sha256 dello zip: la copia è lo zip intero
+                etichetta = "copia dello zip" if "#" in d["url"] else "copia"
+                sha = f"[{etichetta}]({COPIE[(v['id'], d['sha256'])]}) {sha}"
             righe.append(f"| {desc} | {esc(d['nome'])[:90]} | [link]({d['url'].replace(' ', '%20')}) | {sha} | {(d.get('data') or '')[:10]} |")
     altrove = [(i["descrizione"], d) for i in v["inventario"] for d in i.get("reperiti_altrove", [])]
     if altrove:
