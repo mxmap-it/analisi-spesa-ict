@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.4 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.5 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -32,6 +32,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - il quadro economico ANAC conferma gli errori d'importo: 8 CIG dichiarati per 10,1 mld valgono 70.150 €;
   - i SAL certificati sono 0,40 mld;
   - 238 CUP PNRR 1.1 su 312 sono collegati ai CIG: 431 M€ di contributo coprono circa un quinto dei 2,20 mld dei contratti PSN collegati [V] (§ 2.4, § 4.4).
+- **Chiusura del giro sugli incerti (nuovo in 0.5):** le sezioni AT di 40 enti, con 64 dei 79 CIG ICT incerti, non contengono **nessun atto con l'importo**; ci sono 4 blocchi (403 e CAPTCHA), già registrati. I 79 CIG (14,4 mld) restano incerti: l'ordinativo non è raggiungibile da fonti aperte (R54). E4 toglie correttamente l'importo errato in 14 casi su 15 (70-99 %), ma il quadro economico è plausibile solo in 9 su 15 (36-80 %). PNRR chiuso a 16 decreti, 537,6 M€ (§ 2.5).
 - **PNRR 1.1 (nuovo in 0.3):** lo spoglio di 15 decreti di finanziamento dà 524 milioni a 274 enti, cioè il 75 % dei ~700 milioni assegnati dichiarati da PSN [V; riferimento R] (§ 4.2).
 - **PSN (nuovo in 0.2):** al netto dei tetti certi, gli impegni ANAC sono 4,38 miliardi, contro un portafoglio ordini di 3,8 miliardi [R]. I ricavi PSN 2023-2025 sono 0,79 miliardi, circa il 18 % degli impegni [R, bilanci PSN] (§ 4.1).
 - **Zenodo 10007545:** fuori, con il motivo scritto. **EuroTender:** non testato, fuori per ora (§ 6).
@@ -174,6 +175,39 @@ Lettura:
 - S3-S6 resta a **58,3 miliardi**, di cui 14,4 incerti in 79 CIG ICT;
 - S5 scende a 41,6 miliardi;
 - S1 escluso scende da 1.132 a 998 miliardi, per effetto di E4 sulle forniture non ICT (precisione da misurare).
+
+### 2.5 Ultimo giro: sezioni AT degli enti, precisione di E4, chiusura (nuovo in 0.5)
+
+**Visita delle sezioni «Bandi di gara e contratti»** dei 55 enti titolari dei 79 CIG ICT incerti, con lo strumento già usato per #62 (`tools/convenzioni/fuori_piattaforma_at.py`):
+- sito ricavato da IndicePA (API CKAN); browser headless, almeno 5,5 secondi fra le richieste, mai login né CAPTCHA;
+- ingresso in `lavoro/imbuto/at79/derivati.csv`, esito in `esiti/2026-11-06/imbuto/at79-visite.csv` [V].
+
+| esito | enti |
+|---|---:|
+| sezione «Bandi di gara e contratti» raggiunta | 22 |
+| sito irraggiungibile | 9 |
+| sezione AT senza bandi / AT non trovata | 3 / 1 |
+| sito assente in IndicePA | 2 |
+| bloccata | 3 (+1 CAPTCHA del cruscotto ANAC a cui rimanda l'AT) |
+| **totale visitati** (64 CIG) | **40** |
+
+- **CIG trovati nelle pagine: 0. Allegati con l'importo: 0.** Il giro si è fermato da solo dopo un blocco di 20 enti a resa zero, come previsto dalla regola dello strumento.
+- **Blocchi**, aggiunti a `report/convenzioni/blocchi-accesso.csv` e da validare nel monitoraggio PVL/AT (R45/R46):
+  - SOGEI e CINECA: HTTP 403;
+  - Università di Bari: CAPTCHA Radware;
+  - ASL Pescara: l'AT rimanda al cruscotto ANAC, protetto da reCAPTCHA.
+- **Conclusione:** per gli attuativi di AQ e le adesioni PSN l'importo dell'ordinativo **non è raggiungibile da fonti aperte**, né dal CIG (PVL, motori), né dalle sezioni AT. Resta l'accesso agli atti, escluso per ora. Gli **79 CIG (14,4 mld) restano incerti** e sono il perimetro di R54.
+
+**Precisione di E4** (quadro economico al posto dell'importo dichiarato). Campione casuale di 15 dei 115 CIG E4, seme 20261108, giudizi in `campione-e4-giudizi.csv` [V]:
+- **l'importo dichiarato è errato: 14/15 (93 %, intervallo 70-99 %)**. Esempi: asfaltatura comunale da 198 milioni, buoni pasto di un comune da 2,9 miliardi, marcatore laser da 417 milioni;
+- **il quadro economico è plausibile: 9/15 (60 %, intervallo 36-80 %)**. Negli altri casi è anch'esso implausibile (poche decine di euro) o parziale;
+- in 46 dei 115 CIG il rapporto fra dichiarato e quadro economico è una potenza di 10 esatta. È il segno di un errore di separatore decimale o di unità all'immissione (R51).
+- **Lettura:** E4 è affidabile per togliere l'importo errato, meno per sostituirlo. L'effetto sugli strati ICT è trascurabile: il quadro economico vale in tutto pochi milioni.
+
+**PNRR 1.1, ultimo giro mirato:**
+- una ricerca sui decreti ASL/AO (multimisura 2023) trova solo atti degli enti che citano i decreti di finestra 48-x/2023 (per esempio ASL BT, 68.100 € a valere sull'1.1), non i decreti stessi;
+- la Presidenza pubblica solo la prima e la seconda finestra;
+- **chiuso a 16 decreti, 537,6 M€ (77 %)**. Il resto è in R50.
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -428,3 +462,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.2 | 2026-11-06 | § 2.2: tetti e spesa per i 2.130 CIG sopra 50 M€, con la via di ogni CIG e gli strati ricalcolati; § 4.1: PSN, impegni contro bilanci 2024-2025 e piani dei fabbisogni; top-5 punti 2 e 3 aggiornati; R49 e R50 |
 | 0.3 | 2026-11-06 | § 2.3: precisione di T3 e T4 su un campione stratificato (Wilson) e sul PVL; regole v2 (T3 tondo ristretto, T5/E2 dal PVL); revisione degli incerti ICT (errori d'importo, lotti ripetuti); S3-S6 a 58,2 mld. § 4.2: decreti PNRR 1.1 per ente. R51 |
 | 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli. § 2.4: secondo campione T4 concessione e regola I6, quadro economico e SAL ANAC (E4), ricerca degli atti degli incerti (esito negativo); § 4.4: decreto PNRR mancante e CUP → CIG; R54 |
+| 0.5 | 2026-11-06 | § 2.5: visita delle sezioni AT di 40 enti per i 79 CIG ICT incerti (0 atti, 4 blocchi in blocchi-accesso.csv), precisione di E4 su campione (Wilson), chiusura del giro PNRR 1.1 |

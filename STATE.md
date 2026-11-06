@@ -21,6 +21,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.5 (chiusura del giro tetti/PNRR):**
+  - visita AT dei 79 CIG ICT incerti (`fuori_piattaforma_at.py`, ingresso `lavoro/imbuto/at79/`): 40 enti, 0 atti, fermata per resa zero; 4 blocchi aggiunti a `report/convenzioni/blocchi-accesso.csv` (SOGEI, CINECA 403; UniBa Radware; ASL Pescara → reCAPTCHA ANAC), da validare in R45/R46;
+  - E4: dichiarato errato 14/15 (70-99 %), quadro economico plausibile 9/15 (36-80 %), 46/115 rapporti potenza di 10;
+  - PNRR chiuso a 16 decreti, 537,6 M€.
+  - **Chiuso per ora:** 79 CIG / 14,4 mld incerti, solo accesso agli atti (non autorizzato).
 - **0.4, parte tetti/PNRR (6/11 notte):**
   - secondo campione T4 concessione: 9/15, totale 20/30 (67 %, 49-81); con la regola I6 (concessioni energia/TPL/impianti → incerto) 17/18 (94 %, 74-99);
   - `imbuto_qe_sal.py`: quadro economico e SAL ANAC per 442 e 41 dei 2.130 CIG; regola E4; gli 8 errori d'importo con QE valgono 70.150 €; SAL 0,40 mld (ICT 0,15);
