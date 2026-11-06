@@ -1,0 +1,97 @@
+{
+ "righe_contate": 5713798,
+ "cig_distinti": 5702755,
+ "eccesso": [
+  {
+   "periodo": "dal-2024",
+   "strato": "S0-padre-aq",
+   "gruppo": "",
+   "righe": 121,
+   "euro": 124803751.98999998,
+   "righe_oltre_50M": 1
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S1-escluso-non-ict",
+   "gruppo": "",
+   "righe": 8387,
+   "euro": 7826226539.659618,
+   "righe_oltre_50M": 29
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S2-sotto-soglia",
+   "gruppo": "",
+   "righe": 442,
+   "euro": 90341.4061,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S3-convenzione-lotto",
+   "gruppo": "",
+   "righe": 4,
+   "euro": 1216249802.0,
+   "righe_oltre_50M": 2
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S4-marchio",
+   "gruppo": "",
+   "righe": 33,
+   "euro": 4862601.94,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S5-ict-non-cloud",
+   "gruppo": "",
+   "righe": 1744,
+   "euro": 1466015955.3860006,
+   "righe_oltre_50M": 3
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G1-mega",
+   "righe": 16,
+   "euro": 222555782.0,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G2-informazione-mancante",
+   "righe": 12,
+   "euro": 45947894.32,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G3-incerti-significativi",
+   "righe": 75,
+   "euro": 32511011.12,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G4-coda",
+   "righe": 209,
+   "euro": 2805774.02,
+   "righe_oltre_50M": 0
+  }
+ ],
+ "fonti_dei_doppioni": [
+  {
+   "fonti": "2025",
+   "cig": 4089
+  },
+  {
+   "fonti": "2024",
+   "cig": 3773
+  }
+ ],
+ "nota": "strato dei CIG fuori da ict.csv: S1 (o S2 se importo < 500 €)"
+}

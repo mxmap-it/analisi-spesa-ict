@@ -1,0 +1,195 @@
+{
+ "strati": [
+  {
+   "periodo": "2020-2023",
+   "strato": "S0-padre-aq",
+   "cig_prima": 126904,
+   "cig_eccesso": 0,
+   "cig_dopo": 126904,
+   "euro_prima": 0,
+   "euro_eccesso": 0,
+   "euro_dopo": 0
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S1-escluso-non-ict",
+   "cig_prima": 1629304,
+   "cig_eccesso": 0,
+   "cig_dopo": 1629304,
+   "euro_prima": 921829636668,
+   "euro_eccesso": 0,
+   "euro_dopo": 921829636668
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S2-sotto-soglia",
+   "cig_prima": 56983,
+   "cig_eccesso": 0,
+   "cig_dopo": 56983,
+   "euro_prima": 12037015,
+   "euro_eccesso": 0,
+   "euro_dopo": 12037015
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S3-convenzione-lotto",
+   "cig_prima": 41,
+   "cig_eccesso": 0,
+   "cig_dopo": 41,
+   "euro_prima": 249045495,
+   "euro_eccesso": 0,
+   "euro_dopo": 249045495
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S4-marchio",
+   "cig_prima": 3828,
+   "cig_eccesso": 0,
+   "cig_dopo": 3828,
+   "euro_prima": 2674581926,
+   "euro_eccesso": 0,
+   "euro_dopo": 2674581926
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S5-ict-non-cloud",
+   "cig_prima": 126723,
+   "cig_eccesso": 0,
+   "cig_dopo": 126723,
+   "euro_prima": 34649318669,
+   "euro_eccesso": 0,
+   "euro_dopo": 34649318669
+  },
+  {
+   "periodo": "2020-2023",
+   "strato": "S6-residuo",
+   "cig_prima": 24132,
+   "cig_eccesso": 0,
+   "cig_dopo": 24132,
+   "euro_prima": 7193197802,
+   "euro_eccesso": 0,
+   "euro_dopo": 7193197802
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S0-padre-aq",
+   "cig_prima": 88913,
+   "cig_eccesso": 121,
+   "cig_dopo": 88792,
+   "euro_prima": 0,
+   "euro_eccesso": 0,
+   "euro_dopo": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S1-escluso-non-ict",
+   "cig_prima": 3216533,
+   "cig_eccesso": 8387,
+   "cig_dopo": 3208146,
+   "euro_prima": 1286317325147,
+   "euro_eccesso": 7826226540,
+   "euro_dopo": 1278491098607
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S2-sotto-soglia",
+   "cig_prima": 147715,
+   "cig_eccesso": 442,
+   "cig_dopo": 147273,
+   "euro_prima": -1739981,
+   "euro_eccesso": 90341,
+   "euro_dopo": -1830322
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S3-convenzione-lotto",
+   "cig_prima": 897,
+   "cig_eccesso": 4,
+   "cig_dopo": 893,
+   "euro_prima": 4829931823,
+   "euro_eccesso": 1216249802,
+   "euro_dopo": 3613682021
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S4-marchio",
+   "cig_prima": 8049,
+   "cig_eccesso": 33,
+   "cig_dopo": 8016,
+   "euro_prima": 3609535787,
+   "euro_eccesso": 4862602,
+   "euro_dopo": 3604673185
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S5-ict-non-cloud",
+   "cig_prima": 227830,
+   "cig_eccesso": 1744,
+   "cig_dopo": 226086,
+   "euro_prima": 92394654918,
+   "euro_eccesso": 1466015955,
+   "euro_dopo": 90928638963
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "cig_prima": 55946,
+   "cig_eccesso": 312,
+   "cig_dopo": 55634,
+   "euro_prima": 12504173755,
+   "euro_eccesso": 303820461,
+   "euro_dopo": 12200353294
+  }
+ ],
+ "gruppi_eccesso": [
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G1-mega",
+   "righe": 16,
+   "euro": 222555782.0,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G2-informazione-mancante",
+   "righe": 12,
+   "euro": 45947894.32,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G3-incerti-significativi",
+   "righe": 75,
+   "euro": 32511011.12,
+   "righe_oltre_50M": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "strato": "S6-residuo",
+   "gruppo": "G4-coda",
+   "righe": 209,
+   "euro": 2805774.02,
+   "righe_oltre_50M": 0
+  }
+ ],
+ "coerenza": {
+  "righe_riepilogo": 5713798,
+  "righe_ricostruite": 5713798,
+  "eccesso": 11043,
+  "cig_distinti": 5702755,
+  "torna": true
+ },
+ "fonti_dei_doppioni": [
+  {
+   "fonti": "2025",
+   "cig": 4089
+  },
+  {
+   "fonti": "2024",
+   "cig": 3773
+  }
+ ]
+}
