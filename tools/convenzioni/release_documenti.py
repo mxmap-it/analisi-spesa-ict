@@ -119,6 +119,8 @@ def piano(a):
             if not p.exists():
                 esclusi.append({**r, "motivo": "blob assente dall'archivio"}); continue
             r["byte"] = p.stat().st_size
+            if r["byte"] == 0:
+                esclusi.append({**r, "motivo": "file vuoto (0 byte) alla fonte: GitHub non accetta asset vuoti"}); continue
             if r["byte"] >= 2 * 1024 ** 3:
                 esclusi.append({**r, "motivo": "oltre 2 GiB (limite asset)"}); continue
             base = urllib.parse.unquote(r["url_originale"].split("?")[0].rsplit("/", 1)[-1])
@@ -190,11 +192,14 @@ def carica(a):
         per[r["iniziativa"]].append(r)
     for ini in sorted(per):
         rel = release(ini, P["nomi"].get(ini, ini))
-        ci = {x["name"]: x for x in assets(rel["id"])}
+        lista = assets(rel["id"])
+        ci = {x["name"]: x for x in lista}
+        # GitHub ripulisce i nomi (es. «..._» diventa «._»): un asset già caricato si riconosce dal digest, non dal nome.
+        per_digest = {x.get("digest"): x for x in lista if x.get("state") == "uploaded"}
         for r in per[ini]:
-            x = ci.get(r["asset"])
-            if x and x.get("digest") == f"sha256:{r['sha256']}" and x.get("state") == "uploaded":
+            if f"sha256:{r['sha256']}" in per_digest:
                 continue
+            x = ci.get(r["asset"])
             if x:   # parziale o diverso: si rifà
                 api("DELETE", f"https://api.github.com/repos/{REPO}/releases/assets/{x['id']}")
             p = blob(a.archivio, r["sha256"])
@@ -202,7 +207,15 @@ def carica(a):
             if hashlib.sha256(dati).hexdigest() != r["sha256"]:
                 print("SHA LOCALE NON COINCIDE", p, file=sys.stderr); continue
             u = (rel["upload_url"].split("{")[0] + "?name=" + urllib.parse.quote(r["asset"]))
-            y = api("POST", u, dati, "application/octet-stream")
+            try:
+                y = api("POST", u, dati, "application/octet-stream")
+            except RuntimeError as e:
+                if "already_exists" not in str(e):
+                    raise
+                # il nome ripulito da GitHub coincide con quello di un altro file: prefisso sha256 corto
+                r["asset"] = f"{r['sha256'][:12]}_{r['asset']}"
+                u = (rel["upload_url"].split("{")[0] + "?name=" + urllib.parse.quote(r["asset"]))
+                y = api("POST", u, dati, "application/octet-stream")
             log.write(json.dumps({"iniziativa": ini, "asset": r["asset"], "sha256": r["sha256"], "digest": y.get("digest"),
                                   "id": y["id"], "t": time.strftime("%Y-%m-%dT%H:%M:%S")}) + "\n"); log.flush()
             print(ini, r["asset"], y.get("digest") == f"sha256:{r['sha256']}", flush=True)
@@ -215,14 +228,14 @@ def manifest(a):
     for ini in sorted({r["iniziativa"] for r in P["righe"]}):
         rel = api("GET", f"https://api.github.com/repos/{REPO}/releases/tags/{ini}")
         for x in assets(rel["id"]) if rel else []:
-            idx[(ini, x["name"])] = x
+            idx[(ini, x.get("digest"))] = x
     righe, mancano = [], 0
     for r in P["righe"]:
-        x = idx.get((r["iniziativa"], r["asset"]))
+        x = idx.get((r["iniziativa"], f"sha256:{r['sha256']}"))
         ok = bool(x) and x.get("digest") == f"sha256:{r['sha256']}"
         mancano += not ok
         righe.append({"iniziativa": r["iniziativa"], "titolo": r["titolo"], "url_originale": r["url_originale"], "sha256": r["sha256"],
-                      "byte": r["byte"], "data_acquisizione": r["data_acquisizione"], "asset": r["asset"],
+                      "byte": r["byte"], "data_acquisizione": r["data_acquisizione"], "asset": x["name"] if ok else r["asset"],
                       "asset_url": x["browser_download_url"] if ok else ""})
     with open(Path(a.out) / "manifest.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(righe[0]))
