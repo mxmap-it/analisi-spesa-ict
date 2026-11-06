@@ -207,6 +207,31 @@ def robots_ok(u):
     return ROBOTS[k].can_fetch(UA, u)
 
 
+# Eccezione AGENTS.md §3 (Fabio, 3/11/2026): per le sezioni «Amministrazione trasparente» e gli atti obbligatori robots.txt
+# non vincola (art. 9 c. 1 d.lgs. 33/2013). Su questi host si scarica anche se robots.txt esclude, solo in orari di poco
+# carico (ORE_AT, default 21-7), >= 5 s per host; robots.txt si archivia come evidenza di violazione.
+AT_HOST = [l.split("#")[0].strip() for l in open(RADICE / "config/at_robots_esenti.txt", encoding="utf-8")
+           if l.split("#")[0].strip()] if (RADICE / "config/at_robots_esenti.txt").exists() else []
+ORE_AT = os.environ.get("ORE_AT", "21-7")
+EVIDENZE = {}
+
+
+def at_esente(u):
+    h = urlsplit(u).netloc.lower()
+    return any(h == d or h.endswith("." + d) for d in AT_HOST)
+
+
+def ora_at():
+    a, b = (int(x) for x in ORE_AT.split("-")); o = time.localtime().tm_hour
+    return (o >= a or o < b) if a > b else (a <= o < b)
+
+
+def robots_evidenza(u, out):
+    p = urlsplit(u); k = f"{p.scheme}://{p.netloc}/robots.txt"
+    attendi(k); r = requests.get(k, headers={"User-Agent": UA}, timeout=20)
+    return {"url": k, "http": r.status_code, "sha256": archivia(r.content, k, out), "norma": "art. 9 c. 1 d.lgs. 33/2013"}
+
+
 def normalizza(u):
     u = u.strip().strip('"').strip("'").strip()
     return u if re.match(r"https?://", u, re.I) else ("http://" + u if u else "")
@@ -214,7 +239,13 @@ def normalizza(u):
 
 def main():
     ing, out = Path(sys.argv[1]), Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
-    fatti = {json.loads(l)["cig"] for l in open(out / "esiti.jsonl", encoding="utf-8")} if (out / "esiti.jsonl").exists() else set()
+    # RIPASSA=robots,errore rifà i CIG il cui ULTIMO esito è fra quelli (le righe nuove si accodano: vale l'ultima)
+    ripassa = set(filter(None, os.environ.get("RIPASSA", "").split(",")))
+    ultimo = {}
+    if (out / "esiti.jsonl").exists():
+        for l in open(out / "esiti.jsonl", encoding="utf-8"):
+            x = json.loads(l); ultimo[x["cig"]] = x["esito"]
+    fatti = {c for c, e in ultimo.items() if e not in ripassa}
     per_host = {}
     for r in csv.DictReader(open(ing, encoding="utf-8")):
         u = normalizza(r.get("link", ""))
@@ -239,8 +270,14 @@ def main():
             t0 = time.time()
             try:
                 if not u: rec["esito"] = "senza-link"
-                elif rec["famiglia"] != "js" and not robots_ok(u): rec["esito"] = "robots"
+                elif rec["famiglia"] != "js" and not robots_ok(u) and not at_esente(u): rec["esito"] = "robots"
+                elif rec["famiglia"] != "js" and not robots_ok(u) and not ora_at():
+                    continue   # host AT escluso da robots.txt: si passa solo in orari di poco carico, al prossimo giro
                 else:
+                    if rec["famiglia"] != "js" and not robots_ok(u):
+                        k = urlsplit(u).netloc
+                        if k not in EVIDENZE: EVIDENZE[k] = robots_evidenza(u, out)
+                        rec["robots_escluso_at"] = EVIDENZE[k]
                     {"portaleappalti": portaleappalti, "esop": esop, "generico": generico, "js": js, "home": home}[rec["famiglia"]](s, cig, u, out, rec)
             except Exception as e:
                 rec["esito"] = "errore"; rec["errore"] = str(e)[:200]
@@ -254,7 +291,7 @@ def main():
     # host grandi prima, così i 10 posti restano pieni
     with ThreadPoolExecutor(PARALLELO) as ex:
         list(ex.map(host, sorted(per_host, key=lambda h: -len(per_host[h]))))
-    if not stop.is_set(): (out / "FINITO.txt").write_text(time.strftime("%FT%T\n"))
+    if not stop.is_set(): (out / os.environ.get("FINE_FILE", "FINITO.txt")).write_text(time.strftime("%FT%T\n"))
 
 
 if __name__ == "__main__":
