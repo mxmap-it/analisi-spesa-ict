@@ -4,6 +4,12 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
+## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **Fatto:** rendiconto bozza `sito/content/rendiconti/imbuto-dove-siamo.md` v0.1 (non elencato, non in sitemap; pubblicazione da decidere con Fabio). Verifiche `tools/verifiche/imbuto_strati.py` (strati, assi, soglia, gruppi, link PVL per strato; `--rigenera` sul server) e `tools/verifiche/zenodo_test.py`; esiti in `esiti/2026-11-06/{imbuto,zenodo}/`. R48 (censimento AgID) nuova.
+- **Numeri dal 2024 (imbuto-0.3.1):** 3.745.883 CIG; S1 escluso certo 3.216.533 (85,9 %); incluso certo cloud 4.537 CIG/1,21 mld + in-house 894/0,72 mld (asse B: extra-UE 45 %, IT 41 %, UE 14 %); incerto con marchio/lotto 3.515/6,51 mld; residuo S6 55.946/12,50 mld (G1 209/4,88; G2 884/4,08 di cui PSN 864/4,07; G3 12.615/2,94; G4 42.238/0,61). Link PVL: S3 0,1 %, G2 19,6 %, G3 73,1 %.
+- **#59:** Zenodo fuori (+245 CIG S6, 0,44 %, stessa fonte ANAC); EuroTender non testato (installazione del pacchetto negata dal permesso), fuori per ora; clone in `lavoro/eurotender/repo`.
+- **#60:** ricerca fatta (§7 del rendiconto), nessun contatto. **Prossimo:** top-5 del rendiconto §8 (primo: precisione di S1 su campione casuale).
+
 ## #62 DOCUMENTI MANCANTI PER FILE — punto di ripresa 6/11/2026
 - **Fatto:** inventario analitico `report/convenzioni/database/documenti-mancanti.csv` (886 righe, 86 iniziative; criticità 3: 431, 2: 167, 1: 288; [V] 272, [R] 614) da `tools/convenzioni/documenti_mancanti.py` (metodi numerazione / rimando / atteso; righe a mano in `documenti-mancanti-curati.yaml`). Ingressi nuovi: `rimandi.jsonl` (1.555 rimandi estratti pagina per pagina dai PDF archiviati, `tools/convenzioni/rimandi_documenti.py`, gira sul server in `lavoro/convenzioni`, cache `lavoro/rimandi-cache/`), `ricontrollo-pagine.json` (44 pagine consip.it riscaricate dal vivo il 6/11, tutte 200, nessun blocco: `blocchi-accesso.csv` vuoto). Verifica: `python tools/verifiche/convenzioni_mancanti.py`.
 - **Allegato 12 della 2928:** pubblicato solo come facsimile vuoto; l'Appendice 3 al CT (Listino Open Source) rinvia ai prodotti «presentati … conformemente all'allegato 12»: manca l'Allegato 12 compilato da Converge (criticità 3, [V]).
