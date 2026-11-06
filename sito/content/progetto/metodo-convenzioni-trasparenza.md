@@ -83,6 +83,29 @@ Chi ha uno dei documenti mancanti può segnalarlo sul [gruppo Telegram](https://
 ottenuto) e, se possibile, l'atto che lo accompagna. Verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo
 pubblichiamo come «fonte non ufficiale» finché la centrale non lo pubblica.
 
+## Revisione delle righe (6/11/2026)
+
+Le regole sul titolo producono rumore. Ogni riga «rimando» e «numerazione» (175) è stata riletta a mano sulla citazione e, dove serviva,
+sulla pagina del PDF; le correzioni stanno in
+[`revisione-mancanti.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/revisione-mancanti.yaml)
+(una voce per riga, con la motivazione) e le righe scartate in
+[`documenti-mancanti-scartati.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti-scartati.csv):
+nulla sparisce senza traccia. Criteri: R1 norme o documenti di altri soggetti (decreti, circolari, condizioni del produttore) → scartate;
+R2 intestazione del documento stesso o allegato contenuto nel PDF firmato → scartate; R3 falsi positivi lessicali (polizze, «annessi 2TB») →
+scartate; R4 regole generali del sistema di e-procurement → scartate; R5 moduli amministrativi e fac-simili di offerta non compilati →
+criticità 1; R6 schemi delle verifiche ispettive → criticità 1; R7 titoli troncati ricostruiti dalla citazione.
+
+Due controlli automatici si aggiungono alla lettura:
+
+- **Allegati dentro i contratti firmati** (`tools/convenzioni/allegati_nei_contratti.py`, uscita `allegati-nei-contratti.jsonl`): pagine di
+  copertina «Allegato X – Offerta tecnica/economica, Corrispettivi e tariffe, Listino» dentro gli accordi quadro e le convenzioni stipulati,
+  con il controllo che le pagine seguenti abbiano contenuto (testo e importi in euro). Valgono solo le copertine nei contratti stipulati: le
+  stesse parole negli schemi di offerta, nei fac-simili e nei disciplinari sono falsi positivi (verificati a mano). L'offerta trovata per un
+  lotto abbassa la riga a criticità 2 e la marca [V] «trovata per almeno un lotto».
+- **Ricognizione dal vivo degli aggregatori** (`report/convenzioni/aggregatori/aggregatori-*.csv`): la pagina trovata dà l'URL, la data e
+  `dietro_login`; le righe «attese» per un tipo di documento trovato sulla piattaforma si scartano, salvo modelli e fac-simili di gara
+  (non sono l'offerta né il transato); le altre diventano [V] sulla pagina ricontrollata.
+
 ## Ripetibilità
 
 `python tools/verifiche/convenzioni_mancanti.py` da un clone pulito rigenera l'inventario, controlla che non cambi e ricalcola i buchi di
@@ -92,4 +115,5 @@ numerazione per seconda via.
 
 | Versione | Data | Cosa è cambiato |
 |---|---|---|
+| 1.2 | 6/11/2026 | revisione a mano delle righe rimando/numerazione, allegati dentro i contratti firmati, ricognizione aggregatori nel generatore |
 | 1.0 | 6/11/2026 | prima versione: tre metodi, criticità, livelli, ricontrollo, blocchi, ciclo dell'accesso civico, contributi |
