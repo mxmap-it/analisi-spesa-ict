@@ -13,6 +13,7 @@ voci = json.loads((R / "report/convenzioni/database/iniziative.json").read_text(
 m = json.loads((R / "report/convenzioni/rapporto/metriche-ultime.json").read_text(encoding="utf-8"))["globali"]
 reg = list(csv.DictReader(open(R / "report/convenzioni/accesso-civico/registro.csv", encoding="utf-8")))
 
+FUORI = {"consip-2638"}  # fuori perimetro (energia), come in rapporto.py
 celle = {"pubblico": 0, "altrove": 0, "assente": 0, "ignoto": 0}
 tot = nbv = bv = 0
 for v in voci:
@@ -29,11 +30,11 @@ for v in voci:
     nbv += 0 if ok else val
 attesi = {"iniziative": len(voci), "valore_2024_2025": tot, "valore_non_ben_visibile": nbv, "iniziative_ben_visibili": bv,
           "istanze_preparate": sum(1 for r in reg if r["stato"] == "preparata"),
-          "od_ordinato": sum(v["ordinato_consip"]["2024"] + v["ordinato_consip"]["2025"] for v in voci if v.get("ordinato_consip")),
-          "od_bdncp": sum(v["valore_ict_2024_2025"] or 0 for v in voci if v.get("ordinato_consip"))}
+          "od_ordinato": sum(v["ordinato_consip"]["2024"] + v["ordinato_consip"]["2025"] for v in voci if v.get("ordinato_consip") and v["id"] not in FUORI),
+          "od_bdncp": sum(v["valore_ict_2024_2025"] or 0 for v in voci if v.get("ordinato_consip") and v["id"] not in FUORI)}
 # terza via per l'ordinato: direttamente dal CSV versionato
 import csv as _c
-attesi["od_ordinato_csv"] = sum(int(r["ordinato_2024"]) + int(r["ordinato_2025"]) for r in _c.DictReader(open(R / "report/convenzioni/database/consip-ordinato.csv", encoding="utf-8")))
+attesi["od_ordinato_csv"] = sum(int(r["ordinato_2024"]) + int(r["ordinato_2025"]) for r in _c.DictReader(open(R / "report/convenzioni/database/consip-ordinato.csv", encoding="utf-8")) if r["iniziativa"] not in FUORI)
 m["od_ordinato_csv"] = m["od_ordinato"]
 errori = 0
 for k, a in attesi.items():

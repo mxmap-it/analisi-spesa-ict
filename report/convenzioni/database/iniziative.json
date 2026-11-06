@@ -8843,7 +8843,7 @@
    {
     "carenza": "C3",
     "livello": "V (letto)",
-    "testo": "Allegato 18 «Flussi dati per il sistema di monitoraggio delle Convenzioni/AQ» v1.4 del 15/5/2019 (letto per intero il 6/11): il fornitore invia a Consip ogni mese, entro il 15, tramite acquistinretepa (area fornitori, «Gestione flussi»), il flusso «Erogato» con identificativo dell'ordine, codice lotto, codice sede dell'amministrazione beneficiaria, codice prodotto (dal catalogo), anno e mese, voce di spesa, tariffa, quantità e importo erogato IVA esclusa; per questo AQ è richiesto il solo flusso Erogato (non Sedi né Catalogo). Consip riceve quindi il consumato mensile per ordine, lotto e prodotto, con penali in caso di mancato invio; non è pubblicato. Allegati analoghi di monitoraggio risultano anche per ID 2452 (Telefonia mobile 9) e 2648 (SGM 2), da leggere",
+    "testo": "Obbligo contrattuale (V, letto per intero il 6/11): Allegato 18 «Flussi dati per il sistema di monitoraggio delle Convenzioni/AQ», versione 1.4 del 15/5/2019, documentazione ufficiale dell'AQ System Management 3 (ID 2275). Il fornitore deve inviare a Consip, entro il 15 del mese successivo e tramite la funzione «Gestione flussi» dell'area fornitori di acquistinretepa, il flusso «Erogato» (§ 3.1) con identificativo dell'ordine, codice lotto, codice sede beneficiaria, codice prodotto, anno e mese, voce di spesa, tariffa, quantità e importo erogato IVA esclusa, pena le penali dello schema di AQ (§ 2). Per questo AQ è richiesto il solo flusso Erogato. Non abbiamo verificato che i flussi siano effettivamente inviati, né come Consip li conservi; il loro contenuto non risulta pubblicato",
     "documento": "ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc PDF firmati/ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "sha256": "a518a9cdc8e0c61c3758da93bdd9e75c98a611f86b4ed28b1587dbc4bf29a02e"
@@ -34572,7 +34572,7 @@
    {
     "carenza": "C3",
     "livello": "V (letto)",
-    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R)",
+    "testo": "Obbligo contrattuale (V, letto per intero il 6/11): Allegato B allo schema di convenzione Telefonia mobile ed. 9 (ID 2452), «Flussi dati per il sistema di monitoraggio delle convenzioni» (versione non indicata nel testo). Stesso schema dell'ID 2275: flusso «Erogato» mensile (entro il 15 del mese successivo) per ordine, lotto, sede, prodotto, periodo, quantità e importo, inviato tramite acquistinretepa, pena le penali dello schema di convenzione. Non verificato l'invio effettivo; contenuto non pubblicato",
     "documento": "ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc firmati ID 2452/ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m",
     "sha256": "0ab74107a630c3db3da0623a39adff459c08fd646d8bfa47ce6cbc2f73919a9d"

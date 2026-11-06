@@ -122,7 +122,7 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc%20firmati%20ID%202452/ID%202452%20-%20TM9%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `0ab74107a630c3db…`.
+- **C3** (V (letto)): Obbligo contrattuale (V, letto per intero il 6/11): Allegato B allo schema di convenzione Telefonia mobile ed. 9 (ID 2452), «Flussi dati per il sistema di monitoraggio delle convenzioni» (versione non indicata nel testo). Stesso schema dell'ID 2275: flusso «Erogato» mensile (entro il 15 del mese successivo) per ordine, lotto, sede, prodotto, periodo, quantità e importo, inviato tramite acquistinretepa, pena le penali dello schema di convenzione. Non verificato l'invio effettivo; contenuto non pubblicato. Documento: [ID 2452 - TM9 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202452%20-%20DOC%20UFF.zip#Doc%20firmati%20ID%202452/ID%202452%20-%20TM9%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `0ab74107a630c3db…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 
