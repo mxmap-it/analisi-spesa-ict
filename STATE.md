@@ -79,6 +79,7 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.9:** § 4.8, vincitori TED (`ted-vincitori.csv`, altro agente) come seconda fonte degli aggiudicatari: 72 CIG nell'imbuto, precisione P.IVA 89 % (riferita da #27); strati invariati (integratori, non produttori).
 - **0.8:**
   - `tools/acquisizione/piattaforme_cig.py`: adattatori portaleappalti/esop/generico; CINECA Oracle B90DB64041 scaricato da anonimo (ULA, nessun cloud); Banca d'Italia non in elenco pubblico; Terna = login (rimando JS non riconosciuto: da correggere); Calabria, CSI, Hera non trovati.
   - Oracle: 5 atti (CINECA, ISTAT, MAECI, Giustizia DIT, Lepida), 0 con cloud (Wilson 0-43 %). EA: 3 ricerche in più, 0 atti.
