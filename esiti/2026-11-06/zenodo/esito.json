@@ -1,0 +1,131 @@
+{
+ "dataset": "zenodo 10007545 cpv_5M.csv.gz",
+ "md5": "dd68c3480819ff3065bb8dc49b053905",
+ "sha256": "8fa6b264f002a41e68fa2c5a122f5096ed10f4135e07eba58847e4aa04e8c0fd",
+ "righe": 5000000,
+ "righe_cpv_ict": 291830,
+ "cig_distinti": 5000000,
+ "cig_zenodo_presenti_in_ict_csv_per_anno": {
+  "2020": 31307,
+  "2021": 33784,
+  "2022": 5755
+ },
+ "parametri": {
+  "min_occ": 500,
+  "max_quota_ict": 0.001,
+  "k": 2
+ },
+ "lessico_parole": 1200,
+ "lessico_esempi": [
+  "abbandonati",
+  "abbott",
+  "abbvie",
+  "ablazione",
+  "accompagnati",
+  "accord",
+  "acellulare",
+  "acetato",
+  "aciclovir",
+  "acidi",
+  "acido",
+  "acquosa",
+  "acrilico",
+  "addominale",
+  "addominali",
+  "adesiva",
+  "adiacente",
+  "adrenalina",
+  "adsorbito",
+  "adulto",
+  "affidi",
+  "agar",
+  "aggiudicati",
+  "agglomerato",
+  "aggregatori",
+  "aiuole",
+  "alberghieri",
+  "alcol",
+  "alcon",
+  "alette",
+  "alimentari",
+  "alimento",
+  "allergan",
+  "allergeni",
+  "allergenici",
+  "alloro",
+  "alluminio",
+  "alluvionali",
+  "aloperidolo",
+  "altezza",
+  "alveo",
+  "amgen",
+  "aminoacidi",
+  "ammalorata",
+  "ammalorate",
+  "ammalorati",
+  "amoxicillina",
+  "ampicillina",
+  "anatomica",
+  "anatomiche",
+  "anca",
+  "andati",
+  "anelli",
+  "anestesia",
+  "aneurismi",
+  "angelini",
+  "angiografia",
+  "angioplastica",
+  "angolare",
+  "anse"
+ ],
+ "esclusi_in_piu_dal_2024": [
+  {
+   "strato": "S0-padre-aq",
+   "gruppo": "",
+   "cig": 27795,
+   "euro": 84319594501
+  },
+  {
+   "strato": "S2-sotto-soglia",
+   "gruppo": "",
+   "cig": 6,
+   "euro": 1435
+  },
+  {
+   "strato": "S4-marchio",
+   "gruppo": "",
+   "cig": 2,
+   "euro": 24744
+  },
+  {
+   "strato": "S5-ict-non-cloud",
+   "gruppo": "",
+   "cig": 120,
+   "euro": 4374868
+  },
+  {
+   "strato": "S6-residuo",
+   "gruppo": "G1-mega",
+   "cig": 2,
+   "euro": 14497260
+  },
+  {
+   "strato": "S6-residuo",
+   "gruppo": "G3-incerti-significativi",
+   "cig": 106,
+   "euro": 42141633
+  },
+  {
+   "strato": "S6-residuo",
+   "gruppo": "G4-coda",
+   "cig": 137,
+   "euro": 2135597
+  }
+ ],
+ "campione_v3": {
+  "n": 611,
+  "esclusi_dalla_regola": 3,
+  "di_cui_cloud_per_riferimento": 0,
+  "errori_esempi": []
+ }
+}
