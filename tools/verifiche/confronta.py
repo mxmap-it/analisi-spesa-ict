@@ -14,6 +14,7 @@ PUBBLICATI = {
     "verifica_cig_accordo_quadro.json": "report/anac/verifica-cig-accordo-quadro-2026-10-27.json",
     "integrita-completo.json": "report/anac/integrita-completo-2026-10-27.json",
     "seconde_vie.json": "report/anac/seconde-vie-2026-10-27.json",
+    "verifica_cf_segnaposto.json": "report/anac/verifica-cf-segnaposto-2026-11-06.json",
     # misura cloud (tools/misura_cloud.sh)
     "cloud/attribuzione-riepilogo.json": "report/metodo/attribuzione-riepilogo-v3.json",
     "cloud/rivenditori.json": "report/metodo/rivenditori-v3.json",

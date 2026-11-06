@@ -44,6 +44,7 @@ verifiche() {
   nice -n 10 "$PY" tools/verifiche/verifica_38_42.py      >/dev/null && cp lavoro/verifica_38_42.json "$ESITI/"
   nice -n 10 "$PY" tools/verifiche/cig_accordo_quadro.py  >/dev/null && cp lavoro/verifica_cig_accordo_quadro.json "$ESITI/"
   nice -n 10 "$PY" tools/verifiche/seconde_vie.py       >/dev/null && cp lavoro/seconde_vie.json "$ESITI/"
+  nice -n 10 "$PY" tools/verifiche/cf_segnaposto.py archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/stazioni-appaltanti/filesystem/stazioni-appaltanti_json.zip "$ESITI/verifica_cf_segnaposto.json" >/dev/null
   nice -n 10 "$PY" tools/anac_integrita.py --completo --oggi 2026-10-27 --out "$ESITI/integrita-completo.json"
   echo "esiti in $ESITI/"
 }
