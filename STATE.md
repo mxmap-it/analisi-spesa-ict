@@ -18,6 +18,13 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
   3. Gli scaricamenti delle prossime annualità.
 - **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
 - **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
+## #57 DOCUMENTI L3 PER IL RESIDUO S6 FUORI DALLA VIA 6 — punto di ripresa 7/11/2026
+- **In corso sul server** (`lavoro/residuo-s6/`, `giro.log`, stato in `out/esiti.jsonl`): `bash tools/acquisizione/residuo_s6.sh` (lock, ripartibile; `FINITO.txt` a fine giro, `STOP-disco.txt` se il disco scende sotto 15 GB, guardia decisa da Fabio il 7/11).
+- **Ripresa automatica, RIGA DA METTERE NEL CRONTAB (Fabio):** `*/30 * * * * cd ~/analisi-spesa-ict && bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1`
+- **Ingresso** `tools/acquisizione/residuo_s6_ingresso.py`: 28.583 CIG (P1 70 ICT incerti, P2 21.525 G3 oltre la via 6, P3 2.395 G2, P4 3.593 nuovi «sw»/«connettività», P5 1.000 G4 a campione); 16.403 senza link PVL (pre-2024).
+- **Misure parziali** (2.093 CIG con link su 12.180): CIG citato 137, con documenti 62, con documento che cita il CIG 20; robots 317, blocchi 19. Documenti che citano il CIG in `dati/atti/atti-server.jsonl` (livello L3): la via 6 li trova per CIG. Rimisurare con `tools/verifiche/residuo_s6_copertura.py <data>` e aggiornare `acquisizione-documenti.md`.
+- **Decisioni a Fabio:** ripassare gli host AT esclusi da robots.txt (trasparenza-pa.net, cloud.urbi.it, sicopat2: art. 9 d.lgs. 33/2013); MePA con browser reale (591 CIG). Prossimo: L4 per i senza-link e i «cig-non-trovato»; errori ariaspa (40 «home» in errore) da rivedere.
+
 ## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
 - **Aggiornamento 0.5.1 (6/11, sera):**
   - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
