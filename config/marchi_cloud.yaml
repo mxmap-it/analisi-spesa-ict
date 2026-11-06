@@ -43,6 +43,9 @@
   - dynamics\s*365
   - microsoft\s+teams
   - iaas\s+e\s+paas.{0,20}microsoft   # #40, 6/11/2026, campione a cieco
+  # #40 v0.5: il marchio come oggetto di un servizio altrui (secondo campione a cieco)
+  escludi:
+  - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
   fornitori:
   - ^microsoft\b
 - provider: Amazon Web Services
@@ -51,6 +54,10 @@
   regex:
   - \baws\b
   - amazon\s+web\s+services
+  # #40 v0.5: corsi e collocation presso il punto di interscambio non sono il prodotto AWS
+  escludi:
+  - docenz|\bcors[oi]\b|formazion
+  - collocation|interscambio
   fornitori:
   - ^amazon\s+web\s+services
   - ^aws\b
@@ -263,6 +270,16 @@
   - licenz\w*\s+(\w+\s+){0,2}win(dows)?\s*1[01]\b
   - \bwin(dows)?\s*1[01]\s+extended\s+security
   - licenz\w*\s+sql\b
+  # #40 v0.5: mancati del secondo campione a cieco (report/metodo/lente-cieco-2/)
+  - (licenz|subscription|software\s+assurance|enterprise\s+agreement)\w*\W+(\w+\W+){0,5}microsoft
+  - microsoft\W+(\w+\W+){0,3}(licenz|subscription|software\s+assurance)
+  - consip\s+enterprise\s*(agreement\s*)?\d
+  - \bms\W+c[op]-?pilot
+  - windows\s+xp
+  # «licenze … office» da solo prende 254 CIG, fra cui Solibri Office: solo con versione o edizione Microsoft
+  - licenz\w*\s+(\w+\s+){0,2}(ms\s+|microsoft\s+)?office\s+(20[12]\d|pro|standard|ltsc|professional|home)\b
+  escludi:
+  - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
   fornitori: []
 - provider: VMware
   giurisdizione: EXTRA-UE

@@ -127,7 +127,7 @@
    1
   ]
  ],
- "predetti": 336,
+ "predetti": 337,
  "per_provider": {
   "Adobe": {
    "tp": 2,
@@ -259,18 +259,18 @@
    ]
   },
   "Microsoft": {
-   "tp": 73,
+   "tp": 74,
    "fp": 2,
-   "fn": 5,
-   "precisione": 0.973,
+   "fn": 4,
+   "precisione": 0.974,
    "precisione_w95": [
-    0.908,
+    0.909,
     0.993
    ],
-   "richiamo": 0.936,
+   "richiamo": 0.949,
    "richiamo_w95": [
-    0.859,
-    0.972
+    0.875,
+    0.98
    ]
   },
   "Nextcloud": {
@@ -420,101 +420,101 @@
  },
  "estero_extra_ue": {
   "provider_esatto": {
-   "tp": 168,
+   "tp": 169,
    "fp": 7,
-   "fn": 18,
+   "fn": 17,
    "precisione": 0.96,
    "precisione_w95": [
     0.92,
-    0.98
+    0.981
    ],
-   "richiamo": 0.903,
+   "richiamo": 0.909,
    "richiamo_w95": [
-    0.852,
-    0.938
+    0.859,
+    0.942
    ]
   },
   "appartenenza_al_gruppo": {
-   "tp": 168,
+   "tp": 169,
    "fp": 7,
-   "fn": 18,
+   "fn": 17,
    "precisione": 0.96,
    "precisione_w95": [
     0.92,
-    0.98
+    0.981
    ],
-   "richiamo": 0.903,
+   "richiamo": 0.909,
    "richiamo_w95": [
-    0.852,
-    0.938
+    0.859,
+    0.942
    ]
   }
  },
  "bigtech_usa": {
   "provider_esatto": {
-   "tp": 168,
+   "tp": 169,
    "fp": 7,
-   "fn": 18,
+   "fn": 17,
    "precisione": 0.96,
    "precisione_w95": [
     0.92,
-    0.98
+    0.981
    ],
-   "richiamo": 0.903,
+   "richiamo": 0.909,
    "richiamo_w95": [
-    0.852,
-    0.938
+    0.859,
+    0.942
    ]
   },
   "appartenenza_al_gruppo": {
-   "tp": 168,
+   "tp": 169,
    "fp": 7,
-   "fn": 18,
+   "fn": 17,
    "precisione": 0.96,
    "precisione_w95": [
     0.92,
-    0.98
+    0.981
    ],
-   "richiamo": 0.903,
+   "richiamo": 0.909,
    "richiamo_w95": [
-    0.852,
-    0.938
+    0.859,
+    0.942
    ]
   }
  },
  "tutti_i_provider_del_dizionario": {
   "provider_esatto": {
-   "tp": 286,
+   "tp": 287,
    "fp": 50,
-   "fn": 169,
-   "precisione": 0.851,
+   "fn": 168,
+   "precisione": 0.852,
    "precisione_w95": [
-    0.809,
-    0.885
+    0.81,
+    0.886
    ],
-   "richiamo": 0.629,
+   "richiamo": 0.631,
    "richiamo_w95": [
-    0.583,
-    0.672
+    0.586,
+    0.674
    ]
   },
   "appartenenza_al_gruppo": {
-   "tp": 297,
+   "tp": 298,
    "fp": 39,
-   "fn": 158,
+   "fn": 157,
    "precisione": 0.884,
    "precisione_w95": [
-    0.845,
+    0.846,
     0.914
    ],
-   "richiamo": 0.653,
+   "richiamo": 0.655,
    "richiamo_w95": [
-    0.608,
-    0.695
+    0.61,
+    0.697
    ]
   }
  },
- "errori": 208,
+ "errori": 207,
  "falsi_positivi_con_formula_negativa": 0,
  "falsi_positivi_con_formula_negativa_cig": [],
  "nota": "campione stratificato v3, non casuale: precisione/richiamo valgono sul campione; VMware conta come estero (Broadcom, USA)"

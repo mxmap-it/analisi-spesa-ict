@@ -114,6 +114,8 @@ I 13 mancati del campione a cieco hanno portato a regole nuove in `config/marchi
 
 Effetto sull'universo dal 2024, verificato a mano su un estratto: le regole nuove aggiungono circa 40 CIG. Si è scartato «win 10/11» da solo perché prendeva 242 CIG di PC con Windows preinstallato. Verifiche: `tools/verifiche/lente_prodotto.py`, `tools/verifiche/lente_cieco.py`.
 
+**v0.5 (6/11/2026):** esclusioni (AWS in corsi e collocation, backup *di* Microsoft 365) e altre regole Microsoft licenza, scritte sugli errori del secondo campione a cieco (`report/metodo/lente-cieco-2/`, big tech P 95 %, R 89 %). Misurate su un **terzo campione a cieco** (`report/metodo/lente-cieco-3/`): big tech P 62/62 = 100 %, R 62/70 = 89 %. I mancati sono testi senza il nome del produttore o con il nome sbagliato.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso

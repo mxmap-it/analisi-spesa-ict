@@ -269,7 +269,7 @@ risorse:
     dataset: siope-uscite
     url: https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.{AAAA}.zip
     modello: annuale
-    da: 2024
+    da: 2017  # #12, 6/11/2026: tutti gli anni pubblicati (2017-2026, circa 73 MB l'uno)
     a: 2026
     cadenza: mensile
     specchia: true
@@ -358,3 +358,54 @@ risorse:
     nota: >-
       ReGiS, ponte CUP-CIG ufficiale (v11, osservazione 13/06/2026). 403 Akamai
       dal server il 6/11/2026 (R57); da riprovare.
+
+  # ------------------------------------------------- mirror della roadmap (#25 #26 #28 #29), 6/11/2026
+  - autorita: rgs
+    dataset: bdap-catalogo
+    url: https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_list
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Catalogo CKAN di BDAP (non /api/3, che dà 404): si specchiano package_list
+      e package_search a pagine da 1000 (config/coda-mirror-2026-11.txt); i
+      dataset si scelgono dopo, solo quelli ICT.
+
+  - autorita: opencoesione
+    dataset: progetti-esteso
+    url: https://opencoesione.gov.it/it/opendata/progetti_esteso.zip
+    cadenza: bimestrale
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: Redirect al file datato (progetti_esteso_AAAAMMGG.zip, circa 270 MB il 31/08/2026). Ponte CUP per i fondi di coesione.
+
+  - autorita: opencup
+    dataset: progetti
+    url: https://www.opencup.gov.it/portale/web/opencup/opendata
+    cadenza: mensile
+    specchia: false
+    partizione: nessuna
+    ict: true
+    nota: L'URL degli open data dà 404 il 6/11/2026; bulk (2,2 GB) da ritrovare (#26).
+
+  - autorita: gleif
+    dataset: golden-copy
+    url: https://goldencopy.gleif.org/api/v2/golden-copies/publishes/latest
+    cadenza: giornaliera
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: >-
+      CC0. L'indice dà gli URL datati dei file (LEI2 485 MB, relazioni RR 23 MB,
+      eccezioni REPEX 60 MB in CSV); copia del 6/11/2026 in config/coda-mirror-2026-11.txt.
+
+  - autorita: eurostat
+    dataset: gov_10a_exp
+    url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/gov_10a_exp?format=TSV&compressed=true
+    cadenza: annuale
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: Spesa delle amministrazioni per funzione COFOG, tutti i paesi. Denominatore, non misura (#29).

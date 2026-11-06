@@ -7,11 +7,12 @@ tools/archivia.py --lista consuma, più un CSV con dataset, nome, formato, dimen
 Idempotente: rifarlo riproduce l'elenco; archivia.py non riscarica ciò che non è cambiato.
 
     consip_elenco.py [--da 2024] > lavoro/consip/elenco.txt   (CSV in lavoro/consip/risorse.csv)
+    consip_elenco.py --api https://indicepa.gov.it/ipa-dati/api/3/action/ --out lavoro/indicepa > lavoro/indicepa/elenco.txt
 """
 import argparse, csv, json, os, re, sys, time, urllib.request
 
 UA = "Mozilla/5.0 (compatible; analisi-spesa-ict; +https://analisi-spesa-ict.mxmap.it)"
-API = "https://dati.consip.it/api/3/action/"
+API = "https://dati.consip.it/api/3/action/"  # --api per altri cataloghi CKAN (IndicePA, #13)
 
 
 def get(u, metodo="GET"):
@@ -21,8 +22,11 @@ def get(u, metodo="GET"):
 
 
 def main():
+    global API
     ap = argparse.ArgumentParser(); ap.add_argument("--da", type=int, default=2024); ap.add_argument("--out", default="lavoro/consip")
+    ap.add_argument("--api", default=API)
     a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
+    API = a.api
     righe = []
     for p in json.loads(get(API + "package_list"))["result"]:
         d = json.loads(get(API + "package_show?id=" + p))["result"]; time.sleep(1)

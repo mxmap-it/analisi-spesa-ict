@@ -4,14 +4,14 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
-## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.4)
-- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.4. Verifiche in `tools/verifiche/` (lente_prodotto, lente_cieco [arg: cartella del campione], rivenditori_esteri, pnrr_bigtech locali; rivenditori_cf, pnrr11_prodotto, pnrr_flag, ted_cig, fts_piva sul server).
-- **#40:** il secondo campione a cieco (`report/metodo/lente-cieco-2/`, 120 CIG S2-S4) misura le regole v0.3: big tech P 56/59 = 95 %, R 56/63 = 89 %. Falsi positivi: backup di M365, collocation AWS, corso AWS. Mancati: Microsoft senza le parole chiave (EA9, CP-PILOT, Windows XP…). Regole nuove NON applicate: andrebbero misurate su un terzo campione.
-- **#41:** v3.1 con RTI ripartiti (1,824 mld), CF italiani 99,9 %.
-- **#43:** FLAG_PNRR_PNC sul 90 % dei CIG 1.2. Dei 1.064 senza flag, 627 nominano il PNRR nell'oggetto → R58. ReGiS 403 → R57.
-- **#11:** Consip in tutti i formati, `lavoro/consip/specchia-tutti.sh` sul server (in corso al commit, circa 90/151, ripartibile, guardia 45 GB): alla fine contare nuovo/invariato in `lavoro/consip/specchia-tutti.log` e aggiornare il rendiconto § 5.
-- **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
-- **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
+## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.5.
+- **#40:** tre campioni a cieco (`report/metodo/lente-cieco{,-2,-3}/`; `tools/verifiche/lente_cieco.py CARTELLA`). Misure indipendenti big tech: R 81 % → 89 % → 89 %, P 100 % / 95 % / 100 %. Regole v0.5 in `config/marchi_cloud.yaml`; il terzo campione le misura. La lente testuale è al limite: non aggiungere regole senza un quarto campione.
+- **#41 / #43:** invariati rispetto a 0.4 (rivenditori v3.1; FLAG_PNRR_PNC 90 %; R57, R58).
+- **#11 Consip:** 151 risorse, 94 nuove, 50 invariate, 7 errori (JSON e TTL grandi, connessione interrotta). Nuovo tentativo in coda: `lavoro/consip/riprova.txt` (più BDAP start=1000), parte da solo dopo IndicePA.
+- **#27:** TED v2 di 34 mesi, 5.348 avvisi; TED → CIG 6,6 %; TED come fonte di esiti: 112 righe senza aggiudicatari ANAC, 88 con vincitore e P.IVA TED, 298 M€ (`esiti/2026-11-06/mirror/ted-esiti.csv`). R59.
+- **Coda mirror** (`config/coda-mirror-2026-11.txt`, `tools/acquisizione/coda_mirror.sh`, guardia 45 GB). Archiviati: PA Digitale 2026, SIOPE uscite 2017-2026 e anagrafiche, BDAP (4/5 pagine del catalogo), Eurostat COFOG, GLEIF (LEI2, RR, REPEX), OpenCoesione. IndicePA: 54 risorse in corso (`lavoro/indicepa/mirror.log`).
+- **Da fare:** OpenCUP (URL 404, da ritrovare), CPT e ISTAT (URL), ItaliaDomani (R57). Registrazioni in `config/risorse.yaml`. Disco 52 GB liberi.
 
 ## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
 - **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).

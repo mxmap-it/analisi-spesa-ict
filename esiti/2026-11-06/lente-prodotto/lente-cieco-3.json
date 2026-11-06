@@ -1,0 +1,176 @@
+{
+ "disegno": {
+  "universo": "lavoro/imbuto/ict.csv, anno>=2024, strati S2-S4, esclusi v3 e i due campioni a cieco precedenti",
+  "seme": 20261108,
+  "per_strato": 40,
+  "dimensione_strati": {
+   "S2": 5157,
+   "S3": 800,
+   "S4": 7679
+  }
+ },
+ "per_strato": {
+  "S2": {
+   "n": 40,
+   "bt_tp": 2,
+   "bt_fp": 0,
+   "bt_fn": 0,
+   "diz_tp": 3,
+   "diz_fp": 0,
+   "diz_fn": 1
+  },
+  "S3": {
+   "n": 40,
+   "bt_tp": 30,
+   "bt_fp": 0,
+   "bt_fn": 8,
+   "diz_tp": 30,
+   "diz_fp": 0,
+   "diz_fn": 8
+  },
+  "S4": {
+   "n": 40,
+   "bt_tp": 30,
+   "bt_fp": 0,
+   "bt_fn": 0,
+   "diz_tp": 36,
+   "diz_fp": 2,
+   "diz_fn": 1
+  }
+ },
+ "bigtech_usa": {
+  "campione": {
+   "tp": 62,
+   "fp": 0,
+   "fn": 8,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.942,
+    1.0
+   ],
+   "richiamo": 0.886,
+   "richiamo_w95": [
+    0.79,
+    0.941
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 1.0,
+   "richiamo": 0.976,
+   "cig_stimati_veri_positivi": 6617,
+   "cig_stimati_falsi_positivi": 0,
+   "cig_stimati_mancati": 160
+  }
+ },
+ "tutti_i_provider": {
+  "campione": {
+   "tp": 69,
+   "fp": 2,
+   "fn": 10,
+   "precisione": 0.972,
+   "precisione_w95": [
+    0.903,
+    0.992
+   ],
+   "richiamo": 0.873,
+   "richiamo_w95": [
+    0.782,
+    0.93
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 0.954,
+   "richiamo": 0.943,
+   "cig_stimati_veri_positivi": 7898,
+   "cig_stimati_falsi_positivi": 384,
+   "cig_stimati_mancati": 481
+  }
+ },
+ "errori": [
+  {
+   "cig": "B99EBD0FA6",
+   "strato": "S2",
+   "lente": "",
+   "etichetta": "In-house pubblico",
+   "testo": "AFFIDO INCARICO PER L'EROGAZIONE DEL SERVIZIO DI ASSISTENZA E GESTIONE PAGOPA - FASCIA A ALLA DITTA TRENTINO DIGITALE S.P.A. - ANNO 2026 | AFFIDO INCARICO PER L'EROGAZIONE DEL SERVIZIO DI ASSISTENZA E"
+  },
+  {
+   "cig": "B2EDB19C93",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "LICENZE SERVER WINDOWS | ADESIONE LICENZE SERVER WINDOWS"
+  },
+  {
+   "cig": "B22ABAC14D",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Oracle",
+   "testo": "CQUISIZIONE N. 17 SOTTOSCRIZIONI MYSQL ENTERPRISE EDITION (1-4 SOCKET SERVER) | RINNOVO LICENZA MANUTENZIONE E SUPPORTO MYSQL"
+  },
+  {
+   "cig": "BB7BD7071E",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "LICENZE OFFICE PER AST MACERATA | LICENZE OFFICE PER AST MACERATA"
+  },
+  {
+   "cig": "B401E0E019",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA LICENZE SERVER PER RIS/PACS | ACQUISIZIONE LICENZE WIN SERVER RIS PACS"
+  },
+  {
+   "cig": "A05C83FA78",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "38 LICENZE COPILOT FINO AL 31.12.2024  | 38 LICENZE COPILOT FINO AL 31.12.2024 "
+  },
+  {
+   "cig": "B213B80E13",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA LICENZE MIRCOSOFT ENTERPRISE AGREEMENT | AFFIDAMENTO DIRETTO"
+  },
+  {
+   "cig": "B9DC180CE0",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA DI LICENZE D'USO ENTERPRICE AGREEMENT | FORNITURA DI LICENZE D'USO ENTERPRICE AGREEMENT"
+  },
+  {
+   "cig": "B2766C81B4",
+   "strato": "S3",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "ADESIONE A CONVENZIONE CONSIP ACQUISTO LICENZE DYNAMICS- RA INNOV/B | ADESIONE A CONVENZIONE CONSIP ACQUISTO LICENZE DYNAMICS- RA INNOV/B"
+  },
+  {
+   "cig": "B1A90E041A",
+   "strato": "S4",
+   "lente": "In-house pubblico",
+   "etichetta": "",
+   "testo": "PREV24_024 SERVIZIO DI SMALTIMENTO RIFIUTI PRESSO I POP DI RETE CON FUNZIONALITÀ DI DATA CENTER DI LEPIDA  | PREV24_024 SERVIZIO DI SMALTIMENTO RIFIUTI PRESSO I POP DI RETE CON FUNZIONALITÀ DI DATA CE"
+  },
+  {
+   "cig": "B3E6D6DBD1",
+   "strato": "S4",
+   "lente": "In-house pubblico",
+   "etichetta": "",
+   "testo": "AFFIDAMENTO INCARICO COLLAUDO TECNICO AMMINISTRATIVO E TECNICO FUNZIONALE DEGLI IMPIANTI PER I LAVORI DI SITE ADAPTATION PER IL COSTITUENDO DATA CENTER CINECA LOCALIZZATO PRESSO IL POLO EST DI SAN GIO"
+  },
+  {
+   "cig": "B98CE12260",
+   "strato": "S4",
+   "lente": "",
+   "etichetta": "Fastweb",
+   "testo": "SERVIZI FASTCLOUD IAAS, FASTCLOUD BACK UP BAAS E CYBER SECURITY (ASSESSMENT NIS2) PER 3 ANNI PROROGABILI PER ULTERIORI 3 | SERVIZI FASTCLOUD IAAS, FASTCLOUD BACK UP BAAS E CYBER SECURITY (ASSESSMENT N"
+  }
+ ],
+ "nota": "riferimento = lettura umana del solo oggetto; negli strati S0/S5 (314 mila CIG) 0 menzioni su 80: il richiamo pesato ha incertezza alta"
+}

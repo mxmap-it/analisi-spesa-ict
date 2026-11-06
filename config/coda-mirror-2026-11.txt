@@ -1,0 +1,30 @@
+# Coda dei mirror della roadmap, 6/11/2026 (tools/acquisizione/coda_mirror.sh). Ordine = priorità; la guardia ferma sotto 45 GB.
+# #13 PA Digitale 2026 (repository intero)
+https://codeload.github.com/teamdigitale/padigitale2026-opendata/zip/refs/heads/main
+# #12 SIOPE uscite (le entrate sono fuori perimetro) e anagrafiche
+https://www.siope.it/documenti/siope2/open/last/SIOPE_ANAGRAFICHE.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2017.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2018.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2019.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2020.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2021.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2022.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2023.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2024.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2025.zip
+https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.2026.zip
+# #25 BDAP: catalogo CKAN (metadati; i 3.700 dataset si scelgono dopo, solo ICT)
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_list
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=1000&start=0
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=1000&start=1000
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=1000&start=2000
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=1000&start=3000
+# #29 Eurostat COFOG (spesa per funzione, tutti i paesi)
+https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/gov_10a_exp?format=TSV&compressed=true
+# #28 GLEIF: indice delle golden copy e file CSV del 6/11/2026 (URL datati presi dall indice; LEI, relazioni, eccezioni)
+https://goldencopy.gleif.org/api/v2/golden-copies/publishes/latest
+https://goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297685/20261106-0800-gleif-goldencopy-lei2-golden-copy.csv.zip
+https://goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297730/20261106-0800-gleif-goldencopy-rr-golden-copy.csv.zip
+https://goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297775/20261106-0800-gleif-goldencopy-repex-golden-copy.csv.zip
+# #26 OpenCoesione progetti (nazionale, esteso)
+https://opencoesione.gov.it/it/opendata/progetti_esteso.zip
