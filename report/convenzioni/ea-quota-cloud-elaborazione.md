@@ -49,3 +49,19 @@ Avvertenze: alcuni dei primi 50 vanno verificati prima come importi (ASL Caserta
 3. **Campioni C2-C3 e controllo degli espliciti** (70 contratti).
 4. In parallelo **R23 a Consip** (decisione di Fabio): chiude il dato per tutte le edizioni EA in una volta.
 5. Gli enti che non pubblicano il carrello vanno nella lista per l'accesso civico, insieme ai progetti PSN.
+
+## 4. Aggiornamento del 6/11/2026: primo censimento degli atti (#66, imbuto 0.7)
+
+Fonte: `tools/verifiche/ea_censimento.py`, atti in `esiti/2026-11-06/imbuto/ea-campione.csv` (URL e sha256). Confine R-S5 del § 1.
+
+- **C1, i primi 50 EA per importo:**
+  - 1 atto letto su 50: MAECI, EA9, 9,41 M€ con IVA. Il carrello è M365 E3 per 8.000 utenti più CIS Suite, SQL Server e RDS CAL; quota cloud ~92 %, stimata con i prezzi unitari EA8 di un altro atto [V-quantità, prezzi da EA02];
+  - per gli altri 49 non è stato trovato in rete nessun atto con il carrello. Le vie tentate sono le ricerche per ente e oggetto (10); i link PVL portano alla home delle piattaforme.
+- **Atti trovati per edizione (EA7-EA9), di enti più piccoli:** 7 con il dettaglio dei prodotti, 6 con i prezzi unitari dell'ordinativo. Le quote cloud sono 92, 100, 100, 100, 57, 100 e 100 %.
+- **Campione complessivo:**
+  - 8 atti, quota pesata **92 %**;
+  - 8 su 8 a prevalenza cloud: intervallo di Wilson **68-100 %**.
+- **Forbice aggiornata:**
+  - sul generico, cioè il residuo Microsoft incerto di 819 M€ in imbuto 0.7, si passa dal **44-100 %** della raccomandazione 1 al **68-100 %**, cioè **0,55-0,81 mld cloud extra-UE**;
+  - è una forbice provvisoria: il campione non è casuale (atti trovabili in rete, enti piccoli e autorità). La sua distorsione possibile va verso il cloud, se i grandi enti, che non pubblicano il carrello, comprano più licenze on premises;
+  - la raccomandazione 2 (lettura di C1) resta aperta, con 49 contratti; restano anche R23 e R54.

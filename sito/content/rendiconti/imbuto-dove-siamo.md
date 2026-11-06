@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.6 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.7 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -32,6 +32,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - il quadro economico ANAC conferma gli errori d'importo: 8 CIG dichiarati per 10,1 mld valgono 70.150 €;
   - i SAL certificati sono 0,40 mld;
   - 238 CUP PNRR 1.1 su 312 sono collegati ai CIG: 431 M€ di contributo coprono circa un quinto dei 2,20 mld dei contratti PSN collegati [V] (§ 2.4, § 4.4).
+- **EA Microsoft e Oracle (nuovo in 0.7):** negli 8 atti di adesione agli EA letti la quota cloud pesata è il 92 % (8 su 8 a prevalenza cloud, 68-100 %). Sul residuo Microsoft di 819 M€ la forbice cloud passa a 0,55-0,81 mld, con un campione non casuale. I primi 20 Oracle (261 M€) sono supporto e rinnovi: on premises probabile (§ 4.6).
 - **Doppioni e licenze (nuovo in 0.6):**
   - 11.043 righe erano un CIG ripetuto dentro lo stesso file annuale (2024 o 2025): tolte, gli strati ICT S3-S6 dal 2024 scendono a **55,3 miliardi** [V] (§ 2.6);
   - fra licenze e marchi, cloud certo 168 M€ (extra-UE 141), non cloud certo 892 M€ (VMware 595), incerto 1,68 mld, quasi tutto EA Microsoft e licenze Oracle senza dettaglio [V] (§ 4.5).
@@ -381,6 +382,53 @@ Lettura:
   - i primi 30 per importo puntano quasi tutti alla home di una piattaforma di e-procurement (Terna, Cineca, Banca d'Italia, Regione Calabria), non all'atto;
   - la lettura dei contratti, cioè il censimento dei primi 50 EA con il campione già disegnato, resta da fare e richiede gli atti degli enti (R23, R54).
 
+### 4.6 Censimento dei prodotti negli EA Microsoft e nelle licenze Oracle (nuovo in 0.7)
+
+**Come:** `tools/verifiche/ea_censimento.py` e gli atti in `esiti/2026-11-06/imbuto/ea-campione.csv`, tutti archiviati con sha256.
+- **Vie tentate per i primi 50 EA Microsoft e i primi 20 Oracle per importo:**
+  - link PVL: per i primi 30 puntano alla home di una piattaforma. La ricerca del CIG dentro le piattaforme da anonimo non è stata fatta in questo giro, perché ogni piattaforma ha una sua ricerca (da fare);
+  - sezioni AT: non ripetute per questi enti, perché il giro del § 2.5 su enti dello stesso tipo ha reso zero;
+  - **10 ricerche web** per ente, oggetto e anno, sugli enti più grandi: Roma Capitale, Regione Emilia-Romagna, INSIEL, ANAS, Regione Campania, ASL Caserta, INPS e altri;
+  - ricerche per edizione dell'EA (EA8, EA9) con «M365» e prezzo unitario.
+- **Resa sui primi 50:** 1 atto su 50. È MAECI, determina 1019/2025: EA9, 7,71 M€ IVA esclusa = 9,41 M€ del CIG B89CF8349C. Per gli altri 49 la ricerca non ha trovato l'atto.
+- **Resa per edizione:** 7 atti di altri enti, più piccoli, con il dettaglio dei prodotti, quasi tutti con i prezzi unitari dell'ordinativo Consip.
+
+**Esito Microsoft** [V sugli atti; la quota MAECI usa i prezzi unitari EA8 di un altro atto, quindi è una stima]:
+
+| atto | anno, edizione | prodotti | quota cloud |
+|---|---|---|---:|
+| MAECI (fra i primi 50) | 2025, EA9 | M365 E3 per 8.000 utenti, CIS Suite, SQL Server, RDS CAL | ~92 % |
+| Consiglio regionale del Lazio | 2023, EA8 | M365 E3/E5, Core CAL, Office Pro Plus SA, Windows Server | 92 % |
+| Autorità dei trasporti | 2024, EA8 | O365 E5/E3, EMS E3, Visio Online | 100 % |
+| Autorità dei trasporti | 2026, EA8 | Copilot add-on, Copilot Studio | 100 % |
+| Comune di Firenze | 2024, EA7 | O365 E1 | 100 % |
+| Città metropolitana di Firenze | 2025, EA9 | 365 Apps for Enterprise, Windows Enterprise | 57 % |
+| Regione Emilia-Romagna | 2024, EA7 | Copilot per M365 | 100 % |
+| Ministero della giustizia (UCAN) | 2026, EA9 | Dynamics 365 Finance & Operations | 100 % |
+
+Sintesi del campione:
+- quota cloud pesata **92 %**, media per atto 93 %;
+- **8 atti su 8** a prevalenza cloud (intervallo di Wilson 68-100 %);
+- giurisdizione del prodotto: **extra-UE** (Microsoft, USA) per tutti.
+
+**Forbice EA aggiornata** (aggiorna `report/convenzioni/ea-quota-cloud-elaborazione.md`):
+- il residuo Microsoft incerto è di 819 M€;
+- applicando l'intervallo del campione, la quota cloud sta fra **554 e 819 M€**, contro la forbice 0-100 % della 0.6;
+- **non è ancora una misura**: il campione non è casuale, è fatto degli atti che si trovano in rete (enti piccoli e autorità) più MAECI. Potrebbe sovrastimare il cloud, se i grandi enti comprano più licenze on premises;
+- il dato certo resta per contratto: 9,4 M€ (MAECI) dei primi 50.
+
+**Oracle, primi 20 incerti (261 M€):**
+- tutti gli oggetti parlano di supporto, rinnovo, manutenzione, Exadata o licenze; nessuno nomina cloud o OCI;
+- classificazione: **on premises probabile**, non certo, perché nessun atto è stato letto. Giurisdizione extra-UE;
+- è coerente con il capitolato di Multibrand 6, che non prevede OCI.
+
+**Strato licenze dopo 0.7:**
+- cloud certo 168 M€ + MAECI 8,7 M€ (quota cloud di 9,4) ≈ **177 M€**;
+- non cloud certo 892 M€;
+- Oracle on premises probabile 261 M€;
+- Microsoft incerto 810 M€, con forbice cloud 0,55-0,81 mld;
+- resto incerto (Oracle oltre i primi 20, SAP, marchio non attribuito) ≈ 0,62 mld.
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -523,3 +571,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli. § 2.4: secondo campione T4 concessione e regola I6, quadro economico e SAL ANAC (E4), ricerca degli atti degli incerti (esito negativo); § 4.4: decreto PNRR mancante e CUP → CIG; R54 |
 | 0.5 | 2026-11-06 | § 2.5: visita delle sezioni AT di 40 enti per i 79 CIG ICT incerti (0 atti, 4 blocchi in blocchi-accesso.csv), precisione di E4 su campione (Wilson), chiusura del giro PNRR 1.1 |
 | 0.6 | 2026-11-06 | § 2.6: CIG contati due volte (11.043 righe, i conti tornano; S3-S6 dal 2024 a 55,3 mld); § 4.5: licenze e marchi, cloud sì o no con la via di ogni CIG (cloud 168 M€, non cloud 892 M€, incerto 1,68 mld); top-5 punto 5 aggiornato |
+| 0.7 | 2026-11-06 | § 4.6: censimento dei prodotti negli EA Microsoft (8 atti, quota cloud pesata 92 %, forbice sul residuo 0,55-0,81 mld) e nei primi 20 Oracle (on premises probabile, 261 M€); imbuto.py 0.3.2 contro i doppioni (non ancora rigenerato) |

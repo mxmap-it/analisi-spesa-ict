@@ -21,6 +21,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.7:**
+  - `ea_censimento.py`: 8 atti EA con prodotti (MAECI fra i primi 50, 9,4 M€), quota cloud pesata 92 %, 8/8 a prevalenza cloud (Wilson 68-100 %); forbice sul residuo MS 819 M€: 0,55-0,81 mld cloud; `ea-quota-cloud-elaborazione.md` § 4 aggiornato.
+  - Oracle: i primi 20 incerti (261 M€) sono supporto e rinnovi, on premises probabile (nessun atto letto).
+  - `imbuto.py` 0.3.2: dedup per fonte (CIG ripetuti nello stesso file annuale); NON rigenerato finché gira la via 6 (`tools/llm/giro_imbuto.sh`).
+  - Da fare: ricerca del CIG dentro le piattaforme di e-procurement da anonimo (per i primi 30 link PVL), 49 EA C1 senza atto.
 - **0.6:**
   - `imbuto_doppioni.py`: 11.043 righe duplicate nei file annuali 2024/2025 (conti che tornano: 5.713.798 righe − 11.043 = 5.702.755 CIG); correzione sui totali, `ict.csv` non toccato (via 6 in corso). S3-S6 dal 2024 a 55,3 mld.
   - `imbuto_licenze.py`: 3.508 CIG di licenze/marchi, 2,76 mld netti; cloud 168 M€ (extra-UE 141), non cloud 892 M€, incerto 1,68 mld (MS 799, Oracle 401, ? 396, SAP 83).
