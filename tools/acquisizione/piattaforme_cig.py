@@ -87,6 +87,9 @@ def blocco(r, testo):
     if "login" in r.url.lower() and "public" not in r.url.lower(): return "login"
     if r.status_code in (401, 403, 429): return f"HTTP {r.status_code}"
     if re.search(r"login.html", r.text) and len(testo) < 1500: return "login"
+    # pagina-cancello con CAPTCHA nell'URL (es. dati.anticorruzione.it/superset/recaptcha/): riconosci_blocco guarda solo
+    # il corpo e la scarta perché è lunga; regola da proporre a visibilita-pa
+    if re.search(r"/[^/?]*captcha", urlsplit(r.url).path, re.I): return "anti-bot"
     b = VEXT.riconosci_blocco(r.status_code, dict(r.headers), r.text, [])
     if b["vendor_blocco"] or b["challenge_js"]: return "anti-bot"
     return ""
