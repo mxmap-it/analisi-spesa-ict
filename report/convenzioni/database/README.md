@@ -13,6 +13,10 @@ Versione 0.1 — 5/11/2026. Sezione del sito generata: `/convenzioni/` (`tools/c
 | `curate.yaml` | dati curati a mano (aggiudicatari, massimali, listini, giurisdizione, analisi), ognuno con fonte e livello V/R | a mano |
 | `iniziative.json` | **la base dati**: una voce per iniziativa con i lotti, l'inventario dei documenti e le mancanze | `tools/convenzioni/base_dati.py` |
 | `lotti.csv` | vista piatta: una riga per iniziativa e lotto | `tools/convenzioni/base_dati.py` |
+| `rimandi.jsonl` | allegati/appendici citati nei PDF archiviati, con documento, pagina, sha256 | `tools/convenzioni/rimandi_documenti.py` (server) |
+| `ricontrollo-pagine.json` | ricontrollo dal vivo delle pagine ufficiali (http, sha256, nomi dei file) | `tools/convenzioni/ricontrollo_pagine.py` |
+| `documenti-mancanti.csv` | inventario per file dei documenti mancanti (metodo, evidenza, criticità, livello, accesso civico) | `tools/convenzioni/documenti_mancanti.py` |
+| `documenti-mancanti-curati.yaml`, `blocchi-accesso.csv` | righe accertate a mano; blocchi (login, 401/403/429) del ricontrollo | a mano; `documenti_mancanti.py` |
 | `schema.json` | schema JSON di `iniziative.json` | a mano |
 | `PROGRESSO.md` | file di ripresa del lavoro | a mano |
 

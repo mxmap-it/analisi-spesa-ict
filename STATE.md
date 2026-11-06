@@ -2,7 +2,14 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-05
+**Ultimo aggiornamento:** 2026-11-06
+
+## #62 DOCUMENTI MANCANTI PER FILE — punto di ripresa 6/11/2026
+- **Fatto:** inventario analitico `report/convenzioni/database/documenti-mancanti.csv` (886 righe, 86 iniziative; criticità 3: 431, 2: 167, 1: 288; [V] 272, [R] 614) da `tools/convenzioni/documenti_mancanti.py` (metodi numerazione / rimando / atteso; righe a mano in `documenti-mancanti-curati.yaml`). Ingressi nuovi: `rimandi.jsonl` (1.555 rimandi estratti pagina per pagina dai PDF archiviati, `tools/convenzioni/rimandi_documenti.py`, gira sul server in `lavoro/convenzioni`, cache `lavoro/rimandi-cache/`), `ricontrollo-pagine.json` (44 pagine consip.it riscaricate dal vivo il 6/11, tutte 200, nessun blocco: `blocchi-accesso.csv` vuoto). Verifica: `python tools/verifiche/convenzioni_mancanti.py`.
+- **Allegato 12 della 2928:** pubblicato solo come facsimile vuoto; l'Appendice 3 al CT (Listino Open Source) rinvia ai prodotti «presentati … conformemente all'allegato 12»: manca l'Allegato 12 compilato da Converge (criticità 3, [V]).
+- **Sito:** pagine per convenzione con sintesi, documenti presenti, mancanti, accesso civico, invito a contribuire (Telegram/issue), JSON-LD Dataset+BreadcrumbList, breadcrumb; indice con presenti/mancanti/FOIA; metodo `/progetto/metodo-convenzioni-trasparenza/`; rapporto **0.6 bozza** (§ 5bis). Nessuna release pubblica.
+- **Accesso civico:** nuova bozza raggruppata `bozze/mancanti-consip-s-p-a.{md,json}` (41 iniziative, solo criticità 2-3 [V] o da numerazione/rimando, non coperte), NON inviata.
+- **Aperti:** (1) copie scaricabili: ~4,3 GB di documenti archiviati, troppo per Pages: **decisione di Fabio** (server mxmap.it con nginx, release GitHub, o solo i file < 5 MB ≈ 0,9 GB); (2) giro assistito con Fabio per i 53 mancanti Consip probabilmente dietro login su acquistinretepa (offerte economiche/listini/flussi, 26 iniziative); (3) aggregatori: pagine non ricontrollate (righe [R], dietro_login «ignoto»); (4) criticità per regole sul titolo: rivedere a mano prima di inviare; (5) overflow orizzontale di 13 px su mobile in tutto il sito (`.row`), preesistente.
 
 ## #62 CONVENZIONI ICT — punto di ripresa 5/11/2026
 - **Fatto:** sezione `/convenzioni/` (indice con filtro per tipo di soggetto + 86 mini-pagine) generata da `tools/convenzioni/pagine.py` dalla base dati `report/convenzioni/database/iniziative.json` (README, schema.json, PROGRESSO.md lì). 86 iniziative (82 attive, 4 storiche; 45 Consip, 1 PSN, 25 aggregatori regionali, 4 consorzi/unioni, 11 altro), 295 lotti. Criterio nel README (derivati ICT 2024-2025; quote per tipo). PRINCO 2928 archiviato (16 file, copertura 69 %). Pagine Consip trovate per 44 iniziative (1.503 documenti linkati). Raccomandazioni R37-R40. Verifica: `python tools/verifiche/convenzioni_copertura.py`.

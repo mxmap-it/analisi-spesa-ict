@@ -29,3 +29,4 @@ File di ripresa (regola di resilienza): ogni passo chiuso si annota qui, con com
 | 6/11 | acquistinretepa in browser (vetrina, 26 schede, 259 documenti), flussi dati 36, siti AT in browser, blocchi-accesso.csv, rapporto 0.3 | fatto | |
 | 6/11 | residuo riprovato (vuoto), ID 2275 monitoraggio letto, aggregatori, rapporto 0.4 | fatto | |
 | 6/11 | allegati 2452 e 2648 letti, rapporto 0.5 con revisione avversariale | fatto | |
+| 6/11 | inventario per file dei documenti mancanti (rimandi sul server, ricontrollo dal vivo, generatore, verifica), pagine per convenzione, metodo, rapporto 0.6 bozza, bozza AC raggruppata | fatto | STATE.md |
