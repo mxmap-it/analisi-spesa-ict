@@ -21,6 +21,10 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.8:**
+  - `tools/acquisizione/piattaforme_cig.py`: adattatori portaleappalti/esop/generico; CINECA Oracle B90DB64041 scaricato da anonimo (ULA, nessun cloud); Banca d'Italia non in elenco pubblico; Terna = login (rimando JS non riconosciuto: da correggere); Calabria, CSI, Hera non trovati.
+  - Oracle: 5 atti (CINECA, ISTAT, MAECI, Giustizia DIT, Lepida), 0 con cloud (Wilson 0-43 %). EA: 3 ricerche in più, 0 atti.
+  - **Rigenerazione imbuto 0.3.2 da fare a mano** a fine via 6 (`pgrep -f giro_imbuto.sh` vuoto e guardiano senza pacchetti mancanti): `nice .venv/bin/python tools/analisi/imbuto.py 2020`, poi copiare `lavoro/imbuto/riepilogo.json` in `esiti/…/riepilogo-0.3.2.json`. La regola cron automatica non è stata autorizzata.
 - **0.7:**
   - `ea_censimento.py`: 8 atti EA con prodotti (MAECI fra i primi 50, 9,4 M€), quota cloud pesata 92 %, 8/8 a prevalenza cloud (Wilson 68-100 %); forbice sul residuo MS 819 M€: 0,55-0,81 mld cloud; `ea-quota-cloud-elaborazione.md` § 4 aggiornato.
   - Oracle: i primi 20 incerti (261 M€) sono supporto e rinnovi, on premises probabile (nessun atto letto).

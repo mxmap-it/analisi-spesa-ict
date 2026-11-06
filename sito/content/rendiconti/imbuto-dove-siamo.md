@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.7 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.8 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -32,6 +32,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - il quadro economico ANAC conferma gli errori d'importo: 8 CIG dichiarati per 10,1 mld valgono 70.150 €;
   - i SAL certificati sono 0,40 mld;
   - 238 CUP PNRR 1.1 su 312 sono collegati ai CIG: 431 M€ di contributo coprono circa un quinto dei 2,20 mld dei contratti PSN collegati [V] (§ 2.4, § 4.4).
+- **Piattaforme e Oracle (nuovo in 0.8):** l'adattatore per PortaleAppalti ha scaricato da anonimo l'aggiudicazione Oracle di CINECA: ULA, nessun cloud. Nessuno dei 5 atti Oracle letti contiene servizi cloud (0-43 %). Per gli EA Microsoft la ricerca per ente non rende: 1 atto su 50 (§ 4.7).
 - **EA Microsoft e Oracle (nuovo in 0.7):** negli 8 atti di adesione agli EA letti la quota cloud pesata è il 92 % (8 su 8 a prevalenza cloud, 68-100 %). Sul residuo Microsoft di 819 M€ la forbice cloud passa a 0,55-0,81 mld, con un campione non casuale. I primi 20 Oracle (261 M€) sono supporto e rinnovi: on premises probabile (§ 4.6).
 - **Doppioni e licenze (nuovo in 0.6):**
   - 11.043 righe erano un CIG ripetuto dentro lo stesso file annuale (2024 o 2025): tolte, gli strati ICT S3-S6 dal 2024 scendono a **55,3 miliardi** [V] (§ 2.6);
@@ -429,6 +430,36 @@ Sintesi del campione:
 - Microsoft incerto 810 M€, con forbice cloud 0,55-0,81 mld;
 - resto incerto (Oracle oltre i primi 20, SAP, marchio non attribuito) ≈ 0,62 mld.
 
+### 4.7 Piattaforme di e-procurement da anonimo, EA mancanti, Oracle (nuovo in 0.8)
+
+**Adattatori per piattaforma** (`tools/acquisizione/piattaforme_cig.py`, riusabile). Le regole sono le solite: UA da browser con l'URL del progetto, almeno 6 secondi fra le richieste, mai login né CAPTCHA, ogni pagina e documento archiviato con sha256.
+
+| famiglia | come lavora |
+|---|---|
+| `portaleappalti` (Maggioli/Eldasoft) | dalla pagina della procedura passa ad «Altri atti e documenti» e scarica i documenti pubblici |
+| `esop` (Jaggaer) | cerca il CIG nell'elenco pubblico delle opportunità; un rimando a `login.html` è un blocco |
+| `generico` | cerca il CIG nella pagina e in fino a 15 sottopagine della stessa sezione |
+
+Esito sui 7 CIG dei primi 50 EA e dei primi 20 Oracle che hanno un link PVL (`piattaforme-esiti.jsonl`) [V]:
+- **CINECA, PortaleAppalti: raggiunto da anonimo.** 2 documenti pubblici, fra cui il provvedimento di aggiudicazione. È Oracle in **ULA** (licenze ULA e ULA Capped, manutenzione, giornate di consulenza): **nessun servizio cloud**;
+- Banca d'Italia (esop): il CIG non è nell'elenco pubblico delle opportunità;
+- Terna (esop): la home rimanda al login, quindi è un blocco. L'adattatore non lo ha riconosciuto perché il rimando passa da JavaScript, ed è da correggere;
+- Regione Calabria, CSI Piemonte, Hera (generico): CIG non trovato nella pagina né nelle sottopagine.
+
+**EA Microsoft mancanti** (49):
+- altre 3 ricerche per ente e oggetto (ANCI, Azienda sanitaria dell'Alto Adige, Unione dei comuni della Bassa Romagna) hanno dato **0 atti dell'ente**;
+- con 13 ricerche in tutto e un solo atto trovato fra i primi 50, la ricerca web per ente non rende. Restano le sezioni AT, già a resa zero, e l'accesso agli atti, escluso.
+
+**Oracle con lo stesso metodo:** 1 atto fra i primi 20 (CINECA, sopra) e 4 di enti fuori dai primi 20, trovati con una ricerca per prodotto (`oracle-campione.csv`) [V]:
+- ISTAT: accordo ULA con hardware, software e supporto;
+- MAECI: ULA database per i servizi consolari. OCI compare solo nei crediti di formazione Oracle University;
+- Ministero della giustizia (DIT): supporto ULA;
+- Lepida: contratto Oracle 2023-2026 per gli enti dell'Emilia-Romagna.
+
+**0 atti su 5 contengono servizi cloud** (intervallo 0-43 %). La classificazione «on premises probabile» dei primi 20 Oracle (261 M€) è sostenuta da questi atti. Diventa **certa solo per CINECA** (14,4 M€).
+
+**Rigenerazione di imbuto 0.3.2:** non è stata fatta. La via 6 (`giro_imbuto.sh`) è ancora in corso e il suo guardiano la rilancia finché mancano esiti. L'esecuzione automatica a fine via 6 con una regola cron non è stata autorizzata: va lanciata a mano (`python tools/analisi/imbuto.py 2020` sul server) quando `giro_imbuto.sh` ha finito.
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -572,3 +603,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.5 | 2026-11-06 | § 2.5: visita delle sezioni AT di 40 enti per i 79 CIG ICT incerti (0 atti, 4 blocchi in blocchi-accesso.csv), precisione di E4 su campione (Wilson), chiusura del giro PNRR 1.1 |
 | 0.6 | 2026-11-06 | § 2.6: CIG contati due volte (11.043 righe, i conti tornano; S3-S6 dal 2024 a 55,3 mld); § 4.5: licenze e marchi, cloud sì o no con la via di ogni CIG (cloud 168 M€, non cloud 892 M€, incerto 1,68 mld); top-5 punto 5 aggiornato |
 | 0.7 | 2026-11-06 | § 4.6: censimento dei prodotti negli EA Microsoft (8 atti, quota cloud pesata 92 %, forbice sul residuo 0,55-0,81 mld) e nei primi 20 Oracle (on premises probabile, 261 M€); imbuto.py 0.3.2 contro i doppioni (non ancora rigenerato) |
+| 0.8 | 2026-11-06 | § 4.7: adattatori per piattaforme di e-procurement (PortaleAppalti, esop, generico); CINECA Oracle raggiunto da anonimo (ULA, nessun cloud); 5 atti Oracle, 0 con cloud; 3 ricerche EA in più (0 atti); rigenerazione 0.3.2 rinviata |
