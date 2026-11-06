@@ -1,0 +1,323 @@
+                                 DISCIPLINARE DI GARA
+                            PARTE B: CAPITOLATO TECNICO
+ Procedura aperta per l’affidamento del servizio integrato di digitalizzazione degli archivi edilizi,
+ realizzazione e collaudo di una piattaforma cloud interoperabile e attivazione di servizi digitali
+     innovativi a supporto della trasformazione digitale dei Comuni di Copertino e Leverano
+
+
+                       Programma Regionale Puglia FESR-FSE+ 2021–2027
+                             Priorità I – Competitività e innovazione
+                  Azione 1.8 – Digitalizzazione della Pubblica Amministrazione
+       Sub-Azione 1.8.3 – Trasformazione digitale delle Pubbliche Amministrazioni pugliesi
+
+
+
+
+APPROVAZIONI DI PROGETTO
+
+Determinazione Dirigenziale Sezione Crescita Digitale n. 96 del 19 luglio 2024 (pubblicata sul BURP n. 60 del
+25 luglio 2024)
+Approvazione con prescrizioni della Soprintendenza Archivistica e Bibliografica della Regione Puglia (ai sensi
+del D.Lgs. 42/2004)
+
+
+
+STAZIONE APPALTANTE
+
+Comune di Copertino (capofila)
+Comune di Leverano (partner)
+
+
+
+RESPONSABILE UNICO DEL PROCEDIMENTO (RUP)
+
+Arch. Francesco Calasso
+
+LOTTO UNICO
+
+CUP: B41H24000760002
+CIG: B9683D179C
+INDICE – PARTE B: CAPITOLATO TECNICO
+
+
+ART. B.1 – OGGETTO TECNICO E FINALITÀ OPERATIVA
+
+ART. B.2 – CONTESTO E CONSISTENZA DEGLI ARCHIVI
+
+ART. B.3 – ARCHITETTURA TECNOLOGICA GENERALE
+
+ART. B.4 – SERVIZI OPERATIVI E CICLO DI LAVORO
+
+ART. B.5 – FORMAZIONE, AFFIANCAMENTO E TRASFERIMENTO COMPETENZE
+
+ART. B.6 – OBBLIGHI VERSO LA SOPRINTENDENZA ARCHIVISTICA E BIBLIOGRAFICA
+
+ART. B.7 – OBBLIGHI E REQUISITI DELL’OPERATORE ECONOMICO
+
+ART. B.8 – MODALITÀ OPERATIVE DI ESECUZIONE DEL SERVIZIO
+
+ART. B.9 – SICUREZZA E RISERVATEZZA
+
+ART. B.10 – PIATTAFORMA DIGITALE E INTEROPERABILITÀ
+
+ART. B.11 – SISTEMA QUALITÀ E COLLAUDO
+
+ART. B.12 – MONITORAGGIO, KPI E AUDIT
+
+ART. B.13 – OBBLIGHI AMBIENTALI E SOSTENIBILITÀ (DNSH)
+
+ART. B.14 – GESTIONE DELLE URGENZE E RICHIESTE FUORI FLUSSO
+
+ART. B.15 – CLAUSOLE FINALI E RAPPORTI CONTRATTUALI
+ART. B.1 – OGGETTO TECNICO E FINALITÀ OPERATIVA
+Il presente Capitolato Tecnico disciplina, nel dettaglio operativo, i servizi oggetto dell’appalto finalizzato alla
+riordino, digitalizzazione, metadatazione e certificazione digitale dei fascicoli edilizi dei Comuni di Copertino
+e Leverano. L’intervento, previsto nell’ambito dell’Azione 1.8 – Sub-azione 1.8.3 dell’Avviso pubblico della
+Regione Puglia, si inserisce tra le azioni strategiche di rafforzamento della trasformazione digitale degli enti
+locali, al fine di favorire la semplificazione e l’efficientamento dei procedimenti edilizi, il rafforzamento della
+trasparenza amministrativa e l’adeguamento della gestione documentale agli standard tecnici nazionali ed
+europei vigenti.
+
+Il progetto prevede la costituzione di un archivio digitale certificato, strutturato come infrastruttura
+centralizzata per la gestione integrata del patrimonio informativo edilizio. La piattaforma sarà organizzata
+per garantire accessi multilivello — backend riservato agli operatori comunali e frontend destinato a cittadini,
+professionisti e imprese, autenticati tramite SPID, CIE o altri sistemi riconosciuti — e includerà, per ciascuna
+pratica digitalizzata, un set di metadati geospaziali strutturati.
+
+Questi metadati saranno estratti dalle banche dati catastali e cartografiche dei Comuni di Copertino e
+Leverano, e rappresentati in formati interoperabili (GeoJSON, KML, Shapefile), compatibili con strumenti GIS
+esterni per consentirne l’importazione, la consultazione su mappa e la navigazione territoriale.
+
+Sarà inoltre garantita l’interoperabilità con i sistemi informatici comunali esistenti e con le principali
+piattaforme nazionali e regionali (PagoPA, PDND, ANPR), mediante un modello di integrazione centralizzato
+e unidirezionale: la piattaforma acquisirà i dati dai sistemi attualmente in uso presso le amministrazioni,
+organizzandoli in un archivio digitale conforme, che diventerà il sistema informativo di riferimento. I sistemi
+comunali accederanno alla piattaforma per la consultazione e, se previsto, per l’aggiornamento dei contenuti
+tramite interfacce sicure e tracciate.
+
+Le prestazioni richieste comprendono un servizio completo e integrato che abbraccia tutte le fasi operative,
+dalla presa in carico fisica dei materiali e dal riordino con movimentazione tracciata, fino alla digitalizzazione
+ottica, alla metadatazione multilivello, alla certificazione dei processi digitali, alla fascicolazione elettronica,
+nonché alla predisposizione per il versamento in conservazione digitale a norma. Il servizio dovrà garantire la
+validità giuridica delle copie digitalizzate ai sensi degli articoli 22 e 23-ter del Codice dell’Amministrazione
+Digitale (CAD), mediante attestazione di conformità, firma digitale da parte del responsabile abilitato,
+applicazione di marcatura temporale e, ove previsto, contrassegno elettronico, nonché assicurare la
+restituzione ordinata dei fascicoli fisici negli archivi comunali e la piena integrazione con l’ecosistema
+tecnologico delle amministrazioni.
+
+Il servizio, nella sua articolazione tecnica e gestionale, dovrà rispettare parametri operativi ben definiti, inclusi
+i requisiti minimi relativi ai locali adibiti alle lavorazioni, alle tempistiche massime per il trattamento delle
+pratiche, alla distanza dai luoghi di conservazione originaria e ai livelli di sicurezza fisica, logistica e informatica
+richiesti. Tali condizioni, descritte nei capitoli successivi, costituiscono vincoli minimi inderogabili a garanzia
+della qualità, della tracciabilità e della conformità normativa dell’intero processo.
+
+L’esecuzione delle attività dovrà avvenire in stretta osservanza delle prescrizioni impartite dalla
+Soprintendenza Archivistica e Bibliografica della Regione Puglia e nel pieno rispetto del quadro normativo
+vigente, comprendente il Codice dell’Amministrazione Digitale (D.Lgs. 82/2005 e s.m.i.), il DPCM 13
+novembre 2014, il D.Lgs. 42/2004 (Codice dei beni culturali e del paesaggio), il Regolamento UE 2016/679
+(GDPR), le Linee guida emanate da AgID e i principi DNSH – Do No Significant Harm.
+Il presente Capitolato Tecnico costituisce parte integrante e sostanziale del Disciplinare di Gara – Parte A
+(Normativa) e rappresenta il riferimento tecnico-operativo vincolante sia per la predisposizione delle offerte
+da parte degli operatori economici sia per l’esecuzione puntuale e conforme delle attività affidate.
+
+ART. B.2 – CONTESTO E CONSISTENZA DEGLI ARCHIVI
+Il presente appalto ha per oggetto il patrimonio documentale edilizio dei Comuni di Copertino e Leverano,
+comprendente la documentazione urbanistica, edilizia e amministrativa relativa ai rispettivi territori. Tali
+archivi costituiscono una risorsa strategica per la gestione del territorio, la trasparenza amministrativa e la
+tutela dei diritti di cittadini e imprese. Tuttavia, si trovano attualmente in condizioni frammentarie, che
+comportano difficoltà di accesso, consultazione e gestione archivistica.
+
+Per il Comune di Copertino, gli archivi edilizi sono localizzati presso la sede municipale di Via Giovanbattista
+Del Prete n. 10, distribuiti in tre distinti locali adibiti a deposito, dotati di scaffalature metalliche, armadi e
+contenitori misti. Per il Comune di Leverano, il materiale è suddiviso tra la sede degli uffici tecnici in Via
+Menotti Ciro, per le pratiche recenti, ed il deposito storico di Via Turati, per la documentazione più datata. I
+locali di conservazione presentano condizioni ambientali naturali, prive di impianti avanzati di climatizzazione
+e controllo ambientale, con criticità localizzate legate a umidità, spazi ristretti e accessibilità non ottimale,
+che impongono un’attenta pianificazione logistica e operativa.
+
+Sulla base della Relazione progettuale approvata e delle risultanze istruttorie, il volume stimato dei materiali
+ammonta a circa:
+
+
+    ●   450 metri lineari per il Comune di Copertino (oltre 9.000 fascicoli, circa 950.000 pagine, periodo
+        1940–2022);
+
+    ●   91 metri lineari per il Comune di Leverano (circa 910 fascicoli, circa 91.000 pagine, periodo 1947–
+        2019).
+
+
+In linea con le finalità generali dell’intervento e con quanto previsto dalla progettazione esecutiva approvata,
+l’appalto ha come obiettivo la digitalizzazione dell’intera consistenza documentale censita per ciascun ente,
+garantendo la completa dematerializzazione delle pratiche edilizie esistenti e superando i requisiti minimi
+previsti a livello regionale.
+
+Le tipologie documentali prevalenti comprendono licenze edilizie, concessioni, permessi di costruire, pratiche
+SCIA, DIA, CILA, elaborati grafici (planimetrie, prospetti, sezioni, disegni su lucido), certificati di agibilità,
+verbali di collaudo statico, attestazioni di conformità impiantistica, documentazione di condono edilizio,
+comunicazioni e pareri tecnici. Il materiale si presenta organizzato in faldoni, raccoglitori, tubi portapiante e
+documentazione non fascicolata o priva di supporti di contenimento, con ordinamenti disomogenei e, in
+alcuni casi, non coerenti tra i due enti.
+
+Gli archivi mostrano condizioni di conservazione eterogenee: la documentazione più antica è spesso fragile
+e deteriorata, con fascicoli rilegati in modo non conforme, documenti piegati, arrotolati o di grande formato,
+generalmente privi di strumenti di corredo aggiornati, inventari digitali o registrazioni delle precedenti
+movimentazioni archivistiche.
+
+In ragione della loro estensione cronologica e tipologica, i patrimoni documentali oggetto di intervento
+costituiscono, nel loro complesso, bene culturale ai sensi dell’art. 10, c.2, lett. b) del D.Lgs 42/2004. La
+distinzione tra documentazione ultraquarantennale (archivio storico) e infraquarantennale (archivio di
+deposito e corrente) rileva esclusivamente ai fini della gestione archivistica (Capo IV, D.P.R. 445/2000) e del
+regime di consultabilità (artt. 122 e ss., D.Lgs 42/2004). Entrambe le serie sono tutelate e saranno trattate
+con criteri e cautele archivistiche uniformi; il riordino e l’inventariazione costituiscono fase propedeutica
+alla digitalizzazione per entrambe.
+
+Questa distinzione preliminare, da effettuarsi in fase esecutiva, rappresenta presupposto fondamentale per
+l’applicazione delle corrette modalità di riordinamento, inventariazione e digitalizzazione, nel rispetto dei
+principi archivistici e delle disposizioni normative di tutela.
+
+Il servizio dovrà essere calibrato su tali specificità, prevedendo un adeguato dimensionamento delle risorse
+umane e tecnologiche, l’adozione di modalità operative appropriate e l’impiego di attrezzature idonee,
+nonché una pianificazione puntuale in funzione della tipologia, del volume e dello stato fisico dei materiali,
+delle limitazioni logistiche e dei vincoli normativi e di tutela archivistica ai sensi del D.Lgs. 42/2004, sotto la
+vigilanza della Soprintendenza Archivistica e Bibliografica.
+
+Tutti i materiali archivistici oggetto dell’appalto sono sottoposti a tutela ai sensi del D.Lgs. 42/2004, artt. 21
+e 30, e costituiscono beni culturali pubblici. Ogni attività di movimentazione, trattamento o trasformazione
+degli stessi è subordinata ad autorizzazione preventiva da parte della Soprintendenza Archivistica e
+Bibliografica della Puglia.
+
+Il dettaglio delle consistenze documentali, delle cronologie, delle tipologie e delle criticità è definito nella
+documentazione resa disponibile tramite la piattaforma telematica di gara, e costituisce riferimento tecnico
+vincolante sia ai fini della predisposizione delle offerte che dell’esecuzione conforme del servizio.
+
+
+
+
+ART. B.3 – ARCHITETTURA TECNOLOGICA GENERALE
+L’appalto ha per oggetto la realizzazione di un sistema digitale avanzato, basato su una piattaforma cloud
+dedicata, dotata di requisiti di scalabilità, sicurezza e affidabilità, che fungerà da infrastruttura portante per
+la gestione, la consultazione e la valorizzazione del patrimonio documentale edilizio dei Comuni di Copertino
+e Leverano.
+
+La piattaforma dovrà essere progettata in conformità agli standard previsti dal Codice dell’Amministrazione
+Digitale (D.Lgs. 82/2005 e s.m.i.), alle Linee guida emanate da AgID in materia di interoperabilità, accessibilità,
+sicurezza informatica, firme elettroniche, formazione-gestione e conservazione dei documenti informatici,
+nonché ai principi europei sul trattamento e la protezione dei dati personali (Regolamento UE 2016/679 –
+GDPR).
+
+L’architettura dovrà essere progettata per acquisire dati e informazioni dai sistemi informatici comunali
+esistenti (es. CPortal, DMS, SUE, ecc.) al fine di centralizzarli nella piattaforma e renderli fruibili, consultabili
+e aggiornabili in modo tracciabile. I sistemi comunali potranno accedere ai dati centralizzati in modalità
+lettura e, se autorizzati, scrittura tramite API o strumenti di backend, ma la governance e la coerenza
+informativa saranno mantenute dalla piattaforma centrale.
+
+Il       sistema    dovrà       garantire,      almeno,       le     seguenti       caratteristiche      funzionali:
+
+
+     ●    una struttura modulare, scalabile e adattabile, capace di evolvere in linea con i volumi
+          documentali, le esigenze operative e gli aggiornamenti normativi;
+
+     ●    un backend dedicato per gli operatori comunali, con dashboard di controllo, strumenti di
+          supervisione dei flussi, gestione avanzata dei metadati e configurazione dei processi;
+    ●   un frontend accessibile per cittadini, professionisti e imprese, autenticati tramite SPID, CIE e altri
+        sistemi riconosciuti, conforme ai requisiti di accessibilità previsti dalla Legge 4/2004 e alle Linee guida
+        AgID sull’accessibilità digitale;
+
+    ●   piena interoperabilità con i sistemi informatici comunali esistenti (es. CPortal, DMS, SUE, Impresa in
+        un giorno – SUAP telematico), con le principali piattaforme nazionali (PagoPA, PDND, ANPR) e con i
+        canali regionali, assicurando compatibilità e scambio dati efficace;
+
+    ●   la predisposizione di metadati geografici strutturati in formati aperti e interoperabili (ad es. Shapefile,
+        GeoJSON, KML), associati a ciascun fascicolo edilizio, mediante estrazione e correlazione con le
+        banche dati catastali e cartografiche comunali. Tali metadati saranno integrati direttamente nella
+        piattaforma digitale per abilitare la navigazione cartografica delle pratiche, la ricerca territoriale e
+        l’interoperabilità con i portali urbanistici in uso presso i Comuni, oltre che con strumenti GIS esterni,
+        attraverso l’adozione di formati aperti e standard interoperabili.
+
+    ●   supporto per l’esportazione dei dati in formati aperti e standard (CSV, XML, JSON, RDF), favorendo
+        il riuso e la pubblicazione come open data;
+
+    ●   predisposizione di API e interfacce di integrazione per l’interconnessione con servizi esterni e
+        applicazioni terze, in linea con le migliori pratiche di interoperabilità tecnica, e pienamente
+        compatibili con i principali standard API per l’interoperabilità dei dati pubblici, anche in ottica di
+        integrazione con piattaforme esterne
+
+In coerenza con l’impianto progettuale approvato, la piattaforma digitale dovrà adottare una struttura multi-
+ente (multi-tenant) che garantisca la gestione separata e autonoma degli archivi digitali dei Comuni di
+Copertino e Leverano. Tale separazione dovrà essere assicurata a livello:
+
+    ●   logico, tramite segmentazione delle istanze applicative, dei database documentali e dei relativi spazi
+        di archiviazione;
+
+    ●   gestionale, mediante dashboard distinte per ciascun Comune, accessibili esclusivamente da utenti
+        abilitati e personalizzate in base all’organizzazione interna;
+
+    ●   auditabile, con logging indipendente delle operazioni effettuate, in modo da assicurare la
+        tracciabilità, l’opponibilità e il controllo disgiunto delle attività relative a ciascun ente.
+
+Il sistema dovrà inoltre permettere la reportistica separata, la definizione di profili utente distinti, e la
+configurazione autonoma dei flussi operativi e autorizzativi, nel rispetto dei modelli organizzativi propri dei
+due Comuni. Ciascuna interfaccia utente dovrà rendere disponibili esclusivamente i fascicoli, i dati e i log
+pertinenti al Comune di riferimento.
+
+L’architettura dovrà inoltre garantire la piena compatibilità con i requisiti previsti per la produzione e il
+versamento dei pacchetti informativi conformi ai requisiti per la conservazione digitale a norma, secondo le
+Linee guida AgID.
+
+Dal punto di vista della sicurezza, l’architettura dovrà prevedere:
+
+
+
+    ●   L’utilizzo di infrastrutture cloud localizzate preferibilmente nell’Unione Europea o, in alternativa, in
+        Paesi riconosciuti come adeguati ai sensi dell’art. 45 del GDPR, conformi agli standard internazionali
+        di sicurezza ICT (es. ISO/IEC 27001) e alle normative vigenti in materia di protezione dei dati personali;
+    ●   l’implementazione di meccanismi avanzati di autenticazione, crittografia dei dati in transito e a
+        riposo, registrazione e monitoraggio (audit log), nonché piani di business continuity e disaster
+        recovery;
+
+    ●   la piena conformità ai principi di privacy by design e by default, garantendo la tutela dei dati personali
+        e la rispondenza alla normativa vigente.
+
+In sede di offerta tecnica, l’operatore economico dovrà descrivere dettagliatamente l’architettura proposta,
+allegando schemi, componenti, software, licenze e strumenti utilizzati, e illustrando le modalità con cui
+saranno assicurati i requisiti di affidabilità, sicurezza, interoperabilità, scalabilità, accessibilità e sostenibilità
+ambientale, in linea con i principi DNSH – Do No Significant Harm, includendo, ove pertinente, la capacità di
+interoperare secondo modelli semantici standard e di pubblicare i dati secondo i principi dei Linked Open
+Data (LOD), anche in formato RDF, nel rispetto delle direttive europee sull’apertura e il riuso dei dati pubblici.
+
+
+
+
+ART. B.4 – SERVIZI OPERATIVI E CICLO DI LAVORO
+
+
+Autorizzazione preliminare SAB
+
+Prima dell’avvio operativo, l’Amministrazione, in quanto soggetto proprietario, possessore e detentore dei
+beni archivistici, dovrà trasmettere alla Soprintendenza Archivistica e Bibliografica della Puglia la descrizione
+completa del piano di lavoro (riordino, digitalizzazione, gestione fascicoli rilegati), al fine di ottenere
+l’autorizzazione formale prevista ai sensi dell’art. 21 del D.Lgs. 42/2004. L’Aggiudicatario collaborerà con
+l’Amministrazione per la predisposizione tecnica del piano, fornendo tutta la documentazione necessaria.
+
+L’avvio delle attività sarà consentito esclusivamente a seguito del rilascio dell’autorizzazione.
+
+
+
+1. RIORDINO FISICO E LOGICO – INVENTARIAZIONE
+     Il servizio comprende la valutazione conservativa preliminare, la presa in carico, il riordino fisico e logico
+     e l’inventariazione dei fascicoli edilizi conservati presso gli archivi comunali di Copertino e Leverano, al
+     fine di garantire un’organizzazione coerente, funzionale e tracciabile dei materiali da sottoporre a
+     digitalizzazione.
+
+     La valutazione preliminare e l’analisi archivistica sono propedeutiche alla digitalizzazione e devono
+     essere svolte da un Archivista qualificato (art. 9-bis D.Lgs. 42/2004; D.M. 244/2019).
+
+     Laddove lo stato di conservazione lo richieda, la Stazione appaltante potrà prescrivere il coinvolgimento
+     di un Restauratore abilitato – settore 9, per le sole attività di competenza.
+
+     L’operatore                economico                 aggiudicatario                dovrà               eseguire:
+
+
+    ●   Analisi preliminare della consistenza archivistica (a cura dell’archivista ex art. 9-bis D.Lgs. 42/2004
+        e D.M. 244/2009): ricognizione delle serie e dei livelli di descrizione, individuazione dei lotti lavorabili,
+                               definizione                 dei                meta
