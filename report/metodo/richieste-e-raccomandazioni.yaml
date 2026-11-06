@@ -505,3 +505,44 @@
   richiesta: "Dataset aperto per ente: spesa ICT (opex/capex, licenze, servizi cloud), data center di proprietà, livello di migrazione e fornitori cloud; con codice IPA per il collegamento ai CIG"
   perche_serve: "È l'unica controprova dichiarata dagli enti della spesa cloud misurata dagli appalti (obiettivo finale); senza, l'imbuto non ha un controllo indipendente sul totale"
   rif: ["#60"]
+- id: R49
+  destinatario: Consip, ANAC
+  tipo: dato-mancante
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Pubblicare l'importo ordinato per CIG derivato (ordinativo o contratto esecutivo), non solo per iniziativa e lotto
+  evidenza: "Dal 2024, 2.130 CIG sopra 50 M€: 781 sono tetti certi (178 mld), ma 1.317 (612,8 mld; 33,6 negli strati ICT) restano incerti, perché né BDNCP né gli open data Consip danno l'importo ordinato per CIG; Consip pubblica l'ordinato per anno, iniziativa e lotto [V, intestazioni dei file]; il link PVL ai documenti manca per tutte le adesioni"
+  prova: "tools/verifiche/imbuto_tetti.py; esiti/2026-11-06/imbuto/tetti-cig.csv"
+  richiesta: "Negli open data «Ordini diretti di acquisto in Convenzione/AQ» aggiungere il CIG derivato e il codice fiscale dell'ente; in BDNCP controllo di plausibilità: derivato <= massimale residuo del padre"
+  perche_serve: "Senza l'ordinato per CIG i totali in euro restano dominati dai massimali (S3-S6 da 113,3 a 76,5 mld solo con le regole certe)"
+  rif: ["#66", "#62", "R14", "R37"]
+- id: R50
+  destinatario: DTD, PSN S.p.A.
+  tipo: dato-mancante
+  stato: "proposta; nessuna richiesta inviata (decisione di Fabio)"
+  titolo: Pubblicare in open data, per ente, contratti di utenza PSN (valore, canoni per servizio, servizi professionali) e finanziamenti PNRR 1.1
+  evidenza: "6/11/2026: impegni ANAC PSN 2020-2026 di 4,38 mld al netto dei tetti certi, contro un portafoglio ordini di 3,8 mld e ricavi 2023-2025 di 0,79 mld dichiarati da PSN [R, bilanci 2024 e 2025, sha256 5be1ea22…, b8fe9ec1…]; il mix dei canoni (Secure Public Cloud 15 %, Oracle 14 %) c'è solo in forma aggregata; PPdF pubblicati da 20 enti su 617 (3,2 %); i decreti di finanziamento della misura 1.1 esistono solo in PDF su presidenza.governo.it"
+  prova: "tools/verifiche/imbuto_psn.py; esiti/2026-11-06/psn/"
+  richiesta: "Dataset per ente: codice PPdF, CIG derivato, valore del contratto di utenza, canone annuo per tipologia di servizio (Industry Standard, Hybrid, Secure Public Cloud per CSP, PSN Managed), una tantum, fatturato per anno; elenco aperto dei finanziamenti PNRR 1.1 con CUP"
+  perche_serve: "PSN è il gruppo più pesante dell'incerto (864 CIG, 4,07 mld dal 2024) e la giurisdizione dipende dal servizio comprato, che oggi non è pubblico"
+  rif: ["#66", "R20", "R26", "R39"]
+- id: R51
+  destinatario: ANAC
+  tipo: difetto
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Controllo di plausibilità sull'importo del CIG (errori di ordini di grandezza)
+  evidenza: "Fra i CIG ICT sopra 50 M€ dal 2024, 10 errori d'importo evidenti per 14,1 mld (es. telecamera 4,70 mld, 2 licenze software 3,09 mld, servizio trasparenza di un piccolo comune 3,03 mld, 55 notebook 862 M); il valore di affidamento PVL ripete lo stesso importo, quindi l'errore è alla fonte"
+  prova: "esiti/2026-11-06/imbuto/revisione-incerti-ict.csv; tools/verifiche/imbuto_revisione.py"
+  richiesta: "All'acquisizione del CIG: avviso bloccante se l'importo supera di 100 volte la mediana per CPV e tipo di procedura o il bilancio dell'ente; correzione retroattiva dei casi segnalati"
+  perche_serve: "Pochi errori pesano miliardi: senza controllo, ogni totale per strato va ripulito a mano"
+  rif: ["#66", "R14"]
+
+- id: R53
+  destinatario: enti (stazioni appaltanti), ANAC; interno (imbuto)
+  tipo: ostacolo
+  stato: "in raccolta; conteggio aggiornato in esiti/imbuto-via6/via6-g1g3.json (campo ostacoli); R53 per non collidere con R51-R52 dell agente dei punti 2-3"
+  titolo: "Via 6 su G1/G3: i documenti di gara dei contratti più grandi sono spesso dietro login, WAF o link PVL rotti"
+  evidenza: "6/11/2026, primi pacchetti del giro G1/G3 (istruzioni p3): pagine esito con 403 (es. amaroma.it), portali gare con login (es. seamilano.bravosolution.com), URL che non riguardano il CIG; il link PVL c'è solo per 112 G1 su 196 e 507 G3 su 1.000. Interno: lavoro/imbuto/ict.csv ha CIG ripetuti su più anni (13 righe G1, 52 G3), quindi i totali di G1/G3 nel § 4 del rendiconto contano due volte (G1: 4,88 mld lordi, 4,70 mld netti)"
+  prova: "report/metodo/llm/imbuto-g1g3/verificati.jsonl (campo ostacoli per CIG); report/metodo/llm/imbuto-g1g3/selezione.json"
+  richiesta: "Enti: documenti di gara accessibili senza login e senza blocchi anti-bot (art. 28 d.lgs. 36/2023, art. 9 d.lgs. 33/2013), link PVL stabili e puntuali al CIG. ANAC: controllo di raggiungibilità del link alla pubblicazione. Interno: deduplicare per CIG in tools/analisi/imbuto.py"
+  perche_serve: "Sul residuo S6 la prova primaria (atto che cita il CIG) è ciò che separa un'ipotesi da un fatto; senza atti gli stati restano incerti anche per contratti da centinaia di milioni"
+  rif: ["#66", "#55", "R31", "R32", "R33", "R44"]

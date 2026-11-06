@@ -79,8 +79,44 @@ La giurisdizione è quella del **controllo giuridico di chi eroga il servizio** 
 - Le istruzioni date ai modelli sono versionate (`tools/llm/istruzioni.md` p1, `istruzioni-p2.md` p2) e citate in ogni passaggio.
 - Le conversazioni di lavoro con gli agenti sono versionate in `sessioni/`.
 
+## Due assi con stato, nel residuo dell'imbuto (via 6, istruzioni p3)
+
+Dal 7/11/2026 (decisione di Fabio, top-5 del rendiconto «Imbuto: dove siamo», punto 4) la via 6 lavora sul residuo S6 dell'imbuto:
+tutti i 209 CIG del gruppo G1 «mega» (due per chiamata, uno per uno) e i primi 1.000 CIG per importo del gruppo G3 «incerti rilevanti».
+Ogni esito ha **due assi, ciascuno con il suo stato**:
+
+- **asse A, è cloud?** `escluso-certo` / `incluso-certo` / `incerto`;
+- **asse B, giurisdizione del prodotto** (non del rivenditore) `incluso-certo` / `incerto` / `non-applicabile`.
+
+Il modello (Claude Sonnet in abbonamento sul server, `tools/llm/giro_imbuto.sh`, istruzioni `tools/llm/istruzioni-p3.md`) apre per primo il
+link ai documenti di gara dell'API PVL, poi cerca gli atti dell'ente; ogni documento passa da `tools/llm/atti.py` (sha256, testo, OCR).
+`tools/llm/verifica_imbuto.py` ricontrolla gli stati con regole di codice (R1-R4 come sopra, più A1-A2 e B1-B2): uno stato «certo» senza
+prova torna «incerto». Tutte le classificazioni sono **proposte da revisionare** (`revisione.stato: da-rivedere`), registrate in
+`dati/classificazioni/imbuto-g1g3.jsonl`. La precisione si misura sui CIG che si sovrappongono al campione 611
+(`tools/verifiche/imbuto_via6.py`).
+
+## Riproducibilità su altri modelli: il prompt portabile
+
+Per chi vuole rifare la classificazione **con un altro modello linguistico** (anche open-weight, anche senza accesso alla rete):
+
+| artefatto | file |
+|---|---|
+| prompt completo, autosufficiente, versionato | `report/metodo/llm/prompt-analisi-documentale-v1.md` (sha256 in `prompt-analisi-documentale-v1.sha256`) |
+| schema dell'uscita | `schemi/analisi-documentale.schema.json` (sottoinsieme di `spesaict.classificazione/1`) |
+| runner neutro | `tools/llm/analisi_documentale.py` (solo libreria standard): `stampa` (prompt da incollare a mano), `openai` (qualunque endpoint compatibile), `ollama` (modelli locali), `claude-cli`; `importa` per le risposte incollate |
+| pacchetto di riproduzione | `report/metodo/llm/riproduzione/v1/`: per 50 CIG i testi d'ingresso con sha256 (`ingressi/`, `SHA256SUMS`), gli esiti di Claude (`esiti-claude-via6/`, `esiti-<modello>/`) |
+| confronto | `tools/verifiche/concordanza_llm.py esiti-A esiti-B`: accordo per asse con Wilson 95 % e kappa di Cohen, validità dello schema, citazioni letterali |
+
+Il prompt lavora **solo sui testi forniti**: definizioni dei due assi, tassonomia dei servizi, criteri di esclusione e inclusione certa,
+obbligo di prova con citazione letterale, pagina e sha256 del documento, esempi positivi e negativi dal campione 611, cosa fare quando i
+documenti mancano (`documento_risolutivo`). Il runner valida l'uscita contro lo schema e cerca ogni citazione, alla lettera, nel testo.
+
+Per rieseguire: `python tools/llm/analisi_documentale.py esegui --fornitore openai --url https://<host>/v1 --chiave-env <VARIABILE> --modello <nome>`
+(oppure `--fornitore stampa` e incollare i prompt), poi `python tools/verifiche/concordanza_llm.py esiti-claude-via6 esiti-<nome>`.
+
 ## Registro delle revisioni
 
 | data | modifica |
 |---|---|
 | 2026-10-29 | prima versione: schemi `spesaict.classificazione/1` e `spesaict.atto/1`; registro del campione v3 (611 CIG) con regole v3.1 e giri 1-2 della via 6 |
+| 2026-11-06 | via 6 sul residuo S6 (G1 e primi 1.000 G3): istruzioni p3 a due assi con stato, regole A1-A2 e B1-B2 (`tools/llm/verifica_imbuto.py`); prompt portabile v1, schema `analisi-documentale.schema.json`, runner neutro e pacchetto di riproduzione |
