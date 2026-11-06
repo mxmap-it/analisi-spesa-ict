@@ -39,7 +39,7 @@ Legenda: **V** = visto (letto da noi sulla pagina o nel documento); **R** = dedo
 - Non abbiamo scaricato le determine di autorizzazione al subappalto di Intercent-ER (circa 120): sono elencate nel CSV come `pubblicato-non-archiviato`.
 - Non abbiamo letto i chiarimenti START (scheda "Chiarimenti" della SPA) né i chiarimenti in testo di SATER, se non dentro la pagina archiviata.
 - Le copie Sintel e START scaricate con Chrome headless (6/11 e 7/11) sono nell'archivio content-addressed dal 6/11: `tools/archivia.py --da-file` (119 file, sha256 ricontrollati sui blob e uguali a quelli dei CSV). Nel manifest hanno `via: "browser-headless"`, la data originale dello scaricamento (mtime del file) e come `url` la pagina della procedura + `#<nome file>`; per START la `nota` riporta anche l'URL monouso `documents-api/?access-code=` e l'allegato `tendering-api`. La vista è in `mirror/<host>/<path>__allegati/<query>/<nome>`.
-- Un allegato START (cig-94252656BA, «Allegato 6 … WebRT18», sha256 7c7b3567…) è stato sovrascritto in `lavoro/` da un omonimo prima dell'archiviazione: nel CSV del 7/11 è `scaricato-perso`, da riscaricare.
+- Un allegato START (cig-94252656BA, «Allegato 6 … WebRT18», sha256 7c7b3567…) era stato sovrascritto in `lavoro/` da un omonimo (allegato 690955) prima dell’archiviazione; riscaricato il 6/11 (allegato 690934, `start_dl_uno.py`), sha256 verificato, archiviato: nel CSV del 7/11 ora è `archiviato`. Nota: il CLI `archivia.py --da-file` perdeva `--url` (stessa dest dell’argomento posizionale), corretto.
 
 ## Ricontrollo del 7/11
 

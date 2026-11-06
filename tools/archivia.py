@@ -219,7 +219,7 @@ def archivia_file(sorgente: Path, url: str, data: str, via: str = "browser-headl
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("url", nargs="*")
+    ap.add_argument("urls", nargs="*", metavar="url")
     ap.add_argument("--lista", type=Path, help="file con un URL per riga")
     ap.add_argument("--da-file", type=Path, help="copia locale già scaricata da archiviare")
     ap.add_argument("--url", help="con --da-file: URL originale (o pagina + #nome per URL monouso)")
@@ -233,7 +233,7 @@ def main() -> int:
         scrivi_manifest(rec)
         print(f"{rec['esito']:9s} {rec['sha256']}  {a.url}")
         return 0
-    urls = list(a.url)
+    urls = list(a.urls)
     if a.lista:
         urls += [u.strip() for u in a.lista.read_text(encoding="utf-8").splitlines()
                  if u.strip() and not u.startswith("#")]
