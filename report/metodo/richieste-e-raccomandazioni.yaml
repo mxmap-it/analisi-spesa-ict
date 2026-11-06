@@ -570,9 +570,9 @@
   destinatario: ANAC
   tipo: difetto
   stato: "verificato sulla mappa rivenditori v3 (6/11/2026); proposta, nessuna richiesta inviata"
-  titolo: Aggiudicatario segnaposto «IMPRESA INESISTENTE» su contratti di prodotti cloud esteri
-  evidenza: "Nella mappa dei rivenditori v3 (contratti attuativi 2022-2026) il nome normalizzato «IMPRESA INESISTENTE» compare come rivenditore di Oracle, Microsoft, IBM, AWS per 46,5 M€: è il 7° «rivenditore» per importo di prodotti extra-UE"
-  prova: "tools/verifiche/rivenditori_esteri.py; esiti/2026-11-06/rivenditori/rivenditori-esteri.json"
-  richiesta: "Vietare segnaposto nel campo aggiudicatario dei CIG aggiudicati; correzione retroattiva con il CF reale"
+  titolo: Aggiudicatario segnaposto «IMPRESA INESISTENTE» su CF validi, e CF senza zero iniziale
+  evidenza: "Nella mappa dei rivenditori v3 (contratti attuativi 2022-2026) il nome normalizzato «IMPRESA INESISTENTE» compare come rivenditore di Oracle, Microsoft, IBM, AWS per 46,5 M€: è il 7° «rivenditore» per importo di prodotti extra-UE. Dal dataset aggiudicatari: il nome segnaposto sta su CF validi (02102821002: 24 CIG, 74,8 M€; altri 4 CF con 1 CIG). Inoltre CF italiani con lo zero iniziale perso (es. 1682521008 per P.S.N. S.p.A.)"
+  prova: "tools/verifiche/rivenditori_esteri.py, tools/verifiche/rivenditori_cf.py; esiti/2026-11-06/rivenditori/rivenditori-cf.json"
+  richiesta: "Denominazione dall'anagrafe operatori a partire dal CF (mai segnaposto) e CF validato con il carattere di controllo (11 cifre, zeri iniziali conservati); correzione retroattiva"
   perche_serve: "Senza l'aggiudicatario non si sa chi intermedia la spesa estera (canale) né la sua giurisdizione"
   rif: ["#41", "P17"]
