@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.2 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.3 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -26,6 +26,8 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **Giurisdizione degli inclusi certi dal 2024:** extra-UE 0,87 miliardi (45 %), IT 0,80 (41 %), UE 0,26 (14 %) [V]. È provvisoria: la precisione di S3 e S4 è misurata solo sul campione stratificato (§ 4).
 - **Soglia:** 500 € toglie 147.715 CIG e una quota d'importo trascurabile. Alzarla a 5.000 € toglierebbe un altro 6 % dei CIG ICT per lo 0,04 % degli euro [V]. **Proposta:** tenere 500 € per la misura e usare 40.000 € solo per separare G3 da G4 (§ 3).
 - **Tetti separati dalla spesa (nuovo in 0.2):** dei 2.130 CIG sopra 50 milioni, 781 sono tetti certi per 178 miliardi, 32 sono contratti aggiudicati e 1.317 restano incerti [V]. Negli strati ICT S3-S6 gli euro dal 2024 scendono da **113,3 a 76,5 miliardi**, di cui 33,6 ancora incerti (§ 2.2).
+- **Tetti, precisione e revisione (nuovo in 0.3):** su un campione stratificato giudicato sugli atti, T4 accordo quadro e T3 non tondo risultano precisi al 100 % (intervallo 80-100 %) e T4 concessione al 73 % (48-89 %). T3 con importo tondo si ferma al 53 % ed è ristretto [V]. Con le regole v2, i dati PVL e la revisione degli incerti ICT (10 errori d'importo per 14,1 mld), **S3-S6 dal 2024 scende a 58,2 miliardi**, di cui 14,4 ancora incerti in 80 CIG (§ 2.3).
+- **PNRR 1.1 (nuovo in 0.3):** lo spoglio di 15 decreti di finanziamento dà 524 milioni a 274 enti, cioè il 75 % dei ~700 milioni assegnati dichiarati da PSN [V; riferimento R] (§ 4.2).
 - **PSN (nuovo in 0.2):** al netto dei tetti certi, gli impegni ANAC sono 4,38 miliardi, contro un portafoglio ordini di 3,8 miliardi [R]. I ricavi PSN 2023-2025 sono 0,79 miliardi, circa il 18 % degli impegni [R, bilanci PSN] (§ 4.1).
 - **Zenodo 10007545:** fuori, con il motivo scritto. **EuroTender:** non testato, fuori per ora (§ 6).
 
@@ -96,6 +98,47 @@ Lettura:
 - **S3** (l'inclusione certa da convenzione) perde il 48 % degli euro: gli attuativi registrano spesso il massimale;
 - gli incerti si sciolgono solo con l'importo dell'ordinativo per CIG. Consip lo pubblica **per iniziativa e lotto, non per CIG né per ente** [V], e il link PVL manca per tutte le adesioni (§ 5). Raccomandazioni R14 e **R49**;
 - le regole T3 e T4 sono nuove. La loro precisione non è ancora misurata: serve un controllo a campione sugli atti (da fare).
+
+### 2.3 Quanto sono precise le regole dei tetti, e la revisione degli incerti ICT (nuovo in 0.3)
+
+**Campione stratificato:** 15 CIG per ognuno dei quattro gruppi di T3 e T4, estratti con seme fisso (`imbuto_revisione.py --campione`). Ogni CIG è giudicato sugli atti pubblicati: l'oggetto ANAC e l'avviso PVL (campo `accordo_quadro`, descrizione, valore aggiudicato). «Confermato» vuol dire che l'importo dichiarato **non è spesa della PA** per quel CIG [V]:
+
+| gruppo | CIG nel gruppo | confermati nel campione | precisione | intervallo di Wilson 95 % |
+|---|---:|---:|---:|---|
+| T3 importo ripetuto, tondo (multiplo di 100.000 €) | 103 | 8/15 | 53 % | 30-75 % |
+| T3 importo ripetuto, non tondo | 84 | 15/15 | 100 % | 80-100 % |
+| T4 accordo quadro | 368 | 15/15 | 100 % | 80-100 % |
+| T4 concessione | 134 | 11/15 | 73 % | 48-89 % |
+
+Controllo esaustivo di T4 sull'avviso PVL: dei 192 accordi quadro che hanno il campo nell'avviso, **191 sono «accordo quadro» anche lì** (99,5 %, intervallo 97,1-99,9 %) [V].
+
+Lettura:
+- **T3 con importo tondo non regge:** 50, 60 o 100 milioni si ripetono per caso fra appalti veri (una nave, un satellite, un depuratore). Nel campione i tondi confermati sono tutti adesioni a convenzioni o AQ. Dalla regola v2 un T3 tondo resta tetto solo se la modalità è «discendente da AQ/convenzione»; gli altri tornano incerti (51 CIG, 4,5 mld);
+- **T4 concessione è precisa al 73 %:** le eccezioni sono partenariati in cui i canoni li paga la PA (efficienza energetica, impianti termici, centro cottura). Per questo il dato in euro di T4-concessione (42,8 mld nel gruppo) va letto con questa forchetta.
+
+**Regole v2, dall'avviso PVL** (`esiti/2026-11-06/imbuto/pvl-percig.csv`, estratto dagli avvisi già scaricati per #57) [V]:
+- un incerto che nel PVL è dichiarato accordo quadro diventa tetto (T5, 30 CIG);
+- un incerto che nel PVL non è AQ e ha un valore aggiudicato più basso diventa spesa effettiva, con l'importo del PVL (E2, 188 CIG: 34,9 → 23,4 mld).
+
+**Revisione a mano dei CIG ICT incerti** (`revisione-incerti-ict.csv`, una riga e un motivo per CIG) [V-testo]:
+- **10 errori d'importo evidenti per 14,1 mld**, tolti dai totali: una telecamera da 4,7 miliardi, due licenze software da 3,1 miliardi, il servizio di trasparenza di un piccolo comune da 3,0 miliardi, 55 notebook da 862 milioni. L'importo del PVL è lo stesso di BDNCP, quindi l'errore nasce alla fonte (raccomandazione **R51**);
+- **9 tetti**: lotti ripetuti degli AQ PC e valori della convenzione SPC.
+
+**Importo dell'ordinativo per gli incerti ICT:** dei 114 CIG di partenza,
+- 18 hanno ora un valore aggiudicato dal PVL o da ANAC (1,68 → 0,94 mld);
+- 54 sono tetti e 10 errori;
+- **80 restano incerti, per 14,4 mld**. Sono quasi tutti attuativi di AQ e adesioni PSN, che non hanno né l'avviso PVL né il link ai documenti (§ 5). Il loro ordinativo sta solo negli atti dell'ente (determina di adesione, contratto esecutivo), da cercare uno per uno, oppure nei flussi di Consip e PSN (R49, R50).
+
+**Strati ricalcolati dal 2024 (v2)** [V]:
+
+| strato | euro dichiarati | 0.2 (regole v1) | **0.3 (regole v2)** | di cui incerti > 50 M€ |
+|---|---:|---:|---:|---:|
+| S3 convenzione o lotto | 4,83 mld | 2,53 | **2,53 mld** | 0,59 |
+| S4 marchio | 3,61 mld | 3,05 | **3,01 mld** | 0,18 |
+| S5 ICT non cloud | 92,39 mld | 59,87 | **41,78 mld** | 10,98 |
+| S6 residuo | 12,50 mld | 11,08 | **10,92 mld** | 2,67 |
+| **S3-S6** | **113,3 mld** | 76,5 | **58,2 mld** | **14,4** |
+| S1 escluso non ICT | 1.286,3 mld | 1.140,0 | 1.132,4 mld | 549,1 |
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -168,6 +211,20 @@ Lettura:
 - **piani dei fabbisogni:** il database del 3/11 (`report/convenzioni/psn-database/`) ha 20 Progetti del Piano dei Fabbisogni pubblicati da 20 enti, il **3,2 % delle 617 PA** contrattualizzate [V]. I grandi contratti ministeriali non li pubblicano;
 - **PA digitale 2026:** la misura PNRR 1.1 ha assegnato circa 700 dei 900 milioni [R, bilancio 2025]. I decreti di finanziamento per ente sono pubblicati in PDF su presidenza.governo.it, **non in open data** (R50). Il loro spoglio è il passo successivo: dà il finanziato per ente da confrontare con il CIG.
 
+### 4.2 PNRR 1.1: chi è stato finanziato per migrare al PSN (nuovo in 0.3)
+
+I decreti di finanziamento dell'Investimento 1.1 «Infrastrutture digitali» sono quindici:
+- dodici sono su presidenza.governo.it, nella pagina «Criteri e modalità» archiviata il 6/11;
+- tre (PAC pilota 2023, bis 2024, ter 2025) solo su assets.innovazione.gov.it.
+
+Tutti sono archiviati con sha256. `tools/verifiche/pnrr11_decreti.py` legge l'elenco degli ammessi e prende CUP, ente e importo 1.1; per i multimisura prende la sola colonna 1.1. Ne escono `esiti/2026-11-06/pnrr11/finanziati.csv` e `decreti.json` [V].
+
+- **Controllo interno:** in **15 decreti su 15** la somma delle righe coincide con un importo scritto nel decreto stesso. Solo il PAC pilota ter differisce di 2 € (312.798.116,16 contro 312.798.118,16).
+- **Totale lordo: 524,2 milioni**, su 298 CUP e 274 enti. Il PAC pilota ter (312,8 M€, 20 PA centrali) ne fa il 60 %. Per esempio: Difesa 44,0 M€, Ambiente 50,2 M€, Interno-Vigili del fuoco 33,5 M€.
+- **Controvalidazione:** PSN dichiara circa 700 milioni assegnati su 900 [R]. Lo spoglio ne trova **il 75 %**. Mancano le finestre i cui decreti non sono linkati dalla pagina, come la «fin 3.1» delle altre PAC 2023, che troviamo citata altrove. Le rinunce non sono sottratte.
+- **Uso nell'imbuto:** il finanziamento PNRR è un tetto forfettario per la migrazione, versato a migrazione completata. È un **minimo** della spesa PSN dell'ente, non il suo contratto di utenza. Il collegamento CUP → CIG (dataset CUP ANAC) è il passo successivo.
+- Raccomandazione R50 (elenco aperto dei finanziamenti con CUP) confermata: oggi lo spoglio richiede quindici PDF con tre impaginazioni diverse.
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -238,8 +295,8 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 | # | cosa | metodo | costo stimato | chi deve agire |
 |---|---|---|---|---|
 | 1 | **Misurare la precisione di S1** (3,2 M CIG, 85,9 %), che oggi è un'ipotesi | campione casuale di ~400 CIG di S1 annotato (volontari + via 6 a regole); con 0 errori il limite superiore Wilson è ~1 % | ~400 annotazioni, qualche ora di volontari; token trascurabili | noi |
-| 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT | prossimo passo: l'importo dell'ordinativo per CIG, dagli atti (link PVL dove c'è) o da Consip; controllo a campione delle regole T3 e T4 | script, zero token; lettura degli atti per i ~110 CIG ICT incerti | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
-| 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA | prossimo passo: spoglio dei decreti di finanziamento PNRR 1.1 per ente; ricerca dei PPdF dei 9 CIG PSN incerti sopra 50 M€ | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
+| 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT . **0.3** (§ 2.3): precisione di T3 e T4 misurata, regole v2, valori PVL; S3-S6 a 58,2 mld; restano 80 CIG ICT incerti per 14,4 mld (attuativi AQ e adesioni PSN senza avviso PVL) | prossimo passo: determina di adesione o contratto esecutivo degli 80, ente per ente; secondo campione per T4 concessione | lettura atti, ~80 ricerche | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
+| 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA . **0.3** (§ 4.2): decreti PNRR 1.1 spogliati, 524 M€ su 274 enti (75 % del riferimento) | prossimo passo: decreti mancanti (~176 M€), collegamento CUP → CIG, PPdF dei 9 CIG PSN incerti | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
 | 4 | **G1 + G3 con la via 6** (12.824 CIG, 7,8 mld) | G1 (209) a mano; G3 in ordine d'importo con il modello e gli atti dal link PVL (73 % raggiungibile) | ~1,8 USD-eq per 5 CIG (giro 2): G3 intero ≈ 4.500 USD-eq, oltre 10 settimane di tetto (400/settimana); i primi 1.000 CIG per importo ≈ 360 USD-eq | noi; **enti** per i link che non funzionano (R31-R33) |
 | 5 | **Licenze e marchi «cloud da accertare»** (3.515 CIG, 6,5 mld) e controprova dal censimento AgID | lettura dei contratti Microsoft (decisione del 3/11) e Oracle; richiesta dei dati del censimento 2026 | lettura, centinaia di USD-eq; accesso civico solo dopo l'ok di Fabio | noi; **AgID** (R48); **ANAC/ACN** per un campo strutturato su prodotto e modalità (R21) |
 
@@ -252,6 +309,8 @@ python tools/verifiche/imbuto_strati.py        # strati, assi, soglia, gruppi, l
 python tools/verifiche/zenodo_test.py          # esito del test Zenodo
 python tools/verifiche/imbuto_tetti.py         # tetti, spesa e incerti sopra 50 M€; strati ricalcolati
 python tools/verifiche/imbuto_psn.py           # PSN: impegni ANAC contro bilanci PSN e piani dei fabbisogni
+python tools/verifiche/imbuto_revisione.py     # precisione T3/T4 (Wilson), regole v2, strati ricalcolati
+python tools/verifiche/pnrr11_decreti.py       # PNRR 1.1: finanziati per ente dai decreti, con controllo interno
 ```
 
 Sul server, `imbuto_tetti.py --rigenera` rilegge il mirror ANAC (righe ≥ 45 M€, aggiudicazioni) e riscrive `tetti-cig.csv`. `imbuto_psn.py --rigenera` ricontrolla gli sha256 dei bilanci PSN e cerca le cifre nel loro testo.
@@ -282,3 +341,4 @@ Coerenza controllata: i CIG non esclusi coincidono fra riepilogo e `ict.csv`, 38
 |---|---|---|
 | 0.1 | 2026-11-06 | prima bozza per Fabio: strati, soglia, gruppi, link PVL per strato, Zenodo/EuroTender, censimento AgID, top-5 |
 | 0.2 | 2026-11-06 | § 2.2: tetti e spesa per i 2.130 CIG sopra 50 M€, con la via di ogni CIG e gli strati ricalcolati; § 4.1: PSN, impegni contro bilanci 2024-2025 e piani dei fabbisogni; top-5 punti 2 e 3 aggiornati; R49 e R50 |
+| 0.3 | 2026-11-06 | § 2.3: precisione di T3 e T4 su un campione stratificato (Wilson) e sul PVL; regole v2 (T3 tondo ristretto, T5/E2 dal PVL); revisione degli incerti ICT (errori d'importo, lotti ripetuti); S3-S6 a 58,2 mld. § 4.2: decreti PNRR 1.1 per ente. R51 |

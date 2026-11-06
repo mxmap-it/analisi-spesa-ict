@@ -525,3 +525,13 @@
   richiesta: "Dataset per ente: codice PPdF, CIG derivato, valore del contratto di utenza, canone annuo per tipologia di servizio (Industry Standard, Hybrid, Secure Public Cloud per CSP, PSN Managed), una tantum, fatturato per anno; elenco aperto dei finanziamenti PNRR 1.1 con CUP"
   perche_serve: "PSN è il gruppo più pesante dell'incerto (864 CIG, 4,07 mld dal 2024) e la giurisdizione dipende dal servizio comprato, che oggi non è pubblico"
   rif: ["#66", "R20", "R26", "R39"]
+- id: R51
+  destinatario: ANAC
+  tipo: difetto
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Controllo di plausibilità sull'importo del CIG (errori di ordini di grandezza)
+  evidenza: "Fra i CIG ICT sopra 50 M€ dal 2024, 10 errori d'importo evidenti per 14,1 mld (es. telecamera 4,70 mld, 2 licenze software 3,09 mld, servizio trasparenza di un piccolo comune 3,03 mld, 55 notebook 862 M); il valore di affidamento PVL ripete lo stesso importo, quindi l'errore è alla fonte"
+  prova: "esiti/2026-11-06/imbuto/revisione-incerti-ict.csv; tools/verifiche/imbuto_revisione.py"
+  richiesta: "All'acquisizione del CIG: avviso bloccante se l'importo supera di 100 volte la mediana per CPV e tipo di procedura o il bilancio dell'ente; correzione retroattiva dei casi segnalati"
+  perche_serve: "Pochi errori pesano miliardi: senza controllo, ogni totale per strato va ripulito a mano"
+  rif: ["#66", "R14"]

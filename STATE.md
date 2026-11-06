@@ -5,6 +5,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-06
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.3 (6/11 notte):**
+  - `tools/verifiche/imbuto_revisione.py`: precisione sul campione stratificato (15 per gruppo, giudizi sugli atti in `esiti/2026-11-06/imbuto/campione-tetti-giudizi.csv`): T3 tondo 8/15 (53 %, 30-75), T3 non tondo 15/15 (80-100), T4 AQ 15/15 (80-100), T4 concessione 11/15 (73 %, 48-89); T4 su PVL 191/192.
+  - Regole v2: T3 tondo solo se discendente; T5 e E2 dal PVL (`pvl-percig.csv`); revisione degli incerti ICT con 10 errori d'importo (14,1 mld) e 9 tetti. S3-S6 dal 2024 scende a **58,2 mld** (incerti 14,4 mld in 80 CIG).
+  - `tools/verifiche/pnrr11_decreti.py`: 15 decreti PNRR 1.1 archiviati, 15/15 coerenti al loro interno, 524,2 M€ su 298 CUP e 274 enti (75 % dei ~700 M€ [R]). Nuova R51.
+  - Prossimo: atti degli 80 incerti ICT; decreti PNRR mancanti; CUP → CIG.
 - **0.2 (6/11 sera), top-5 punti 2 e 3 fatti:**
   - `tools/verifiche/imbuto_tetti.py`: i 2.160 «da verificare» sono 2.130 CIG distinti (30 righe duplicate nei file annuali). Esito: 781 tetti per 178,0 mld (vie T1 padre copiato 78, T2 oltre l'ordinato Consip 14, T3 importo ripetuto 187, T4 modalità AQ/concessione 502); 32 spesa effettiva (E1, aggiudicato); 1.317 incerti per 612,8 mld. S3-S6 dal 2024 da 113,3 a 76,5 mld (incerti ancora dentro 33,6). Esiti in `esiti/2026-11-06/imbuto/tetti*`.
   - `tools/verifiche/imbuto_psn.py`: impegni ANAC PSN 5,10 → 4,38 mld (tetto Taranto 723 M€), contro un portafoglio di 3,8 mld [R] e ricavi 2023-25 di 0,79 mld [R] (Libro PSN 2025 e bilancio 2024 archiviati, sha256 in `esiti/2026-11-06/psn/bilanci-psn.json`); PPdF pubblicati da 20 PA su 617. Nuove R49 (ordinato per CIG) e R50 (contratti di utenza PSN e PNRR 1.1 per ente).
