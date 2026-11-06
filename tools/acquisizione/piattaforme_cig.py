@@ -18,9 +18,10 @@ Famiglie (riconosciute dall'URL o dal contenuto):
                   (opportunityListFiltered.jsp); si cerca il CIG nell'elenco e nelle pagine di dettaglio pubbliche;
                   se l'URL porta a login.html è un blocco «login»
   generico        qualunque altra pagina: si cerca il CIG nella pagina e nei link della stessa sezione (max 15)
-Uso (server): nice .venv/bin/python tools/acquisizione/piattaforme_cig.py INGRESSO.csv USCITA_DIR
-  INGRESSO.csv: colonne cig, link (altre ignorate). Ripartibile: i CIG già in USCITA_DIR/esiti.jsonl si saltano.
-Uscita: USCITA_DIR/esiti.jsonl (una riga per CIG: famiglia, esito, pagine, documenti con sha256 e testo estratto).
+Uso (server): nice .venv/bin/python tools/acquisizione/piattaforme_cig.py INGRESSO.csv USCITA_DIR  (env: PAUSA_HOST=5, HOST_PARALLELI=10, GUARDIA_GB=15)
+  INGRESSO.csv: colonne cig, link [priorita, importo, stazione_appaltante]. Un thread per host (max 10 host insieme). Ripartibile: i CIG già in USCITA_DIR/esiti.jsonl si saltano.
+Uscita: USCITA_DIR/esiti.jsonl (una riga per CIG: famiglia, esito, pagine, documenti con sha256); i documenti che citano
+  il CIG vanno anche in dati/atti/atti-server.jsonl (spesaict.atto/1, livello L3) con il testo in dati/atti/testi/.
 """
 import csv, hashlib, html, json, os, re, subprocess, sys, time
 from pathlib import Path
@@ -31,7 +32,7 @@ import requests
 RADICE = Path(__file__).resolve().parent.parent.parent
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36 "
       "analisi-spesa-ict (+https://github.com/mxmap-it/analisi-spesa-ict)")
-PAUSA = 6.0
+PAUSA = float(os.environ.get("PAUSA_HOST", "5"))
 ULTIMO = {}
 SEGNI_BLOCCO = re.compile(r"captcha|recaptcha|hcaptcha|turnstile|just a moment|checking your browser|access denied|radware|imperva", re.I)
 
@@ -75,10 +76,55 @@ def testo_pdf(dati):
         return ""
 
 
+# Famiglie aggiunte per il residuo S6 (#57, mappa esiti/pvl-link-cig/2026-11-04/sistemi.csv):
+#   js    MePA/acquistinretepa: le schede sono in JavaScript; il browser reale lo decide Fabio: non si tenta
+#   home  il link PVL è la sola home della piattaforma o dell'ente (START, Sintel, SATER, EmPULIA, Alto Adige…):
+#         la home si scarica UNA volta per URL (cache) e si guarda solo se cita il CIG
+#   generico (anche trasparenza-pa.net, halleyweb, ASMECOMM, STELLA, Traspare…): se la pagina o una sottopagina
+#         cita il CIG, si scaricano i documenti collegati (PDF, p7m, allegati; max 12)
+JS = ("acquistinretepa.it",)
+HOME = re.compile(r"^/?(index\.(php|html?|jsp|aspx?)|home|it|portale|web|alboeproc/?[^/]*)?/?$", re.I)
+RX_DOC = re.compile(r"\.(pdf|p7m|docx?|xlsx?|zip|odt)(\?|$)|download|scarica|allegat|documento|getfile|attachment", re.I)
+CACHE = {}
+
+
 def famiglia(u):
+    p = urlsplit(u if "://" in u else "http://" + u); h = p.netloc.lower()
     if "PortaleAppalti" in u or "ppgare_" in u: return "portaleappalti"
     if "/esop/" in u: return "esop"
+    if any(h.endswith(d) for d in JS): return "js"
+    if HOME.match(p.path) and not p.query: return "home"
     return "generico"
+
+
+def documenti_pagina(s, cig, r, out, rec, massimo=12):
+    """Scarica i documenti collegati da una pagina che cita il CIG (stesso dominio)."""
+    base = ".".join(urlsplit(r.url).netloc.split(".")[-2:]); visti = set()
+    for href in re.findall(r"href=[\"']([^\"'#]+)[\"']", r.text):
+        du = urljoin(r.url, html.unescape(href)).split(";jsessionid")[0]
+        if du in visti or not RX_DOC.search(du) or not urlsplit(du).netloc.endswith(base): continue
+        visti.add(du)
+        if len(visti) > massimo: break
+        try:
+            attendi(du); d = s.get(du, timeout=120)
+        except Exception:
+            continue
+        if d.status_code != 200 or len(d.content) < 200 or "html" in d.headers.get("content-type", ""): continue
+        hd = archivia(d.content, du, out)
+        tx = testo_pdf(d.content) if d.content[:4] == b"%PDF" else ""
+        rec["documenti"].append({"url": du, "sha256": hd, "byte": len(d.content), "cig_presente": cig in tx, "testo": tx[:20000]})
+
+
+def js(s, cig, u, out, rec):
+    rec["esito"] = "non-tentato-js"
+
+
+def home(s, cig, u, out, rec):
+    if u not in CACHE:
+        r, h, t = prendi(s, u, out); CACHE[u] = (r.url, h, t, blocco(r, t))
+    url, h, t, b = CACHE[u]; rec["pagine"].append({"url": url, "sha256": h, "cig_presente": cig in t})
+    rec["esito"] = ("blocco" if b else "cig-nella-home" if cig in t else "link-home")
+    if b: rec["blocco"] = b
 
 
 def portaleappalti(s, cig, u, out, rec):
@@ -110,7 +156,8 @@ def esop(s, cig, u, out, rec):
 def generico(s, cig, u, out, rec):
     r, h, t = prendi(s, u, out); rec["pagine"].append({"url": r.url, "sha256": h, "cig_presente": cig in t})
     if (b := blocco(r, t)): rec["esito"] = "blocco"; rec["blocco"] = b; return
-    if cig in t: rec["esito"] = "cig-nella-pagina"; return
+    if cig in t:
+        documenti_pagina(s, cig, r, out, rec); rec["esito"] = "documenti" if rec["documenti"] else "cig-nella-pagina"; return
     base = urlsplit(r.url).netloc; visti = 0
     for href in re.findall(r'href="([^"#]+)"', r.text):
         v = urljoin(r.url, html.unescape(href))
@@ -120,24 +167,94 @@ def generico(s, cig, u, out, rec):
         try: rr, hh, tt = prendi(s, v, out)
         except Exception: continue
         rec["pagine"].append({"url": rr.url, "sha256": hh, "cig_presente": cig in tt})
-        if cig in tt: rec["esito"] = "cig-in-sottopagina"; return
+        if cig in tt:
+            documenti_pagina(s, cig, rr, out, rec); rec["esito"] = "documenti" if rec["documenti"] else "cig-in-sottopagina"; return
     rec["esito"] = "cig-non-trovato"
+
+
+def registra_atto(cig, d, livello, ente):
+    """spesaict.atto/1 (come tools/llm/atti.py) per i documenti che citano il CIG: la via 6 li trova per CIG."""
+    TESTI = RADICE / "dati/atti/testi"; TESTI.mkdir(parents=True, exist_ok=True)
+    (TESTI / f"{d['sha256']}.txt").write_text(d["testo"], encoding="utf-8")
+    rec = {"schema": "spesaict.atto/1", "cig": cig, "url": d["url"],
+           "trovato_con": {"livello": livello, "metodo": "link PVL documenti_di_gara_link, piattaforme_cig.py", "query": ""},
+           "recuperato_il": time.strftime("%Y-%m-%dT%H:%M:%S+00:00", time.gmtime()), "http_status": 200, "mime": "application/pdf",
+           "byte": d["byte"], "sha256": d["sha256"], "tipo_atto": "altro", "ente": ente,
+           "estrazione": {"strumento": "pdftotext", "ocr": False, "testo_sha256": hashlib.sha256(d["testo"].encode()).hexdigest(), "caratteri": len(d["testo"])},
+           "pertinenza": "cig-citato", "esito_recupero": "ok"}
+    with LOCK, open(RADICE / "dati/atti/atti-server.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+import threading, shutil, urllib.robotparser
+from concurrent.futures import ThreadPoolExecutor
+LOCK = threading.Lock()
+GUARDIA_GB = float(os.environ.get("GUARDIA_GB", "15"))   # Fabio 7/11: scaricamenti per l'analisi fino a 15 GB liberi
+PARALLELO = int(os.environ.get("HOST_PARALLELI", "10"))
+ROBOTS = {}
+
+
+def robots_ok(u):
+    p = urlsplit(u); k = f"{p.scheme}://{p.netloc}"
+    if k not in ROBOTS:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            attendi(k + "/robots.txt"); r = requests.get(k + "/robots.txt", headers={"User-Agent": UA}, timeout=20)
+            rp.parse(r.text.splitlines() if r.status_code == 200 else [])
+        except Exception:
+            rp.parse([])
+        ROBOTS[k] = rp
+    return ROBOTS[k].can_fetch(UA, u)
+
+
+def normalizza(u):
+    u = u.strip().strip('"').strip("'").strip()
+    return u if re.match(r"https?://", u, re.I) else ("http://" + u if u else "")
 
 
 def main():
     ing, out = Path(sys.argv[1]), Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
     fatti = {json.loads(l)["cig"] for l in open(out / "esiti.jsonl", encoding="utf-8")} if (out / "esiti.jsonl").exists() else set()
-    s = requests.Session(); s.headers["User-Agent"] = UA
+    per_host = {}
     for r in csv.DictReader(open(ing, encoding="utf-8")):
-        cig, u = r["cig"], r.get("link", "")
-        if not u or cig in fatti: continue
-        rec = {"cig": cig, "link": u, "famiglia": famiglia(u), "pagine": [], "documenti": [], "esito": "", "data": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-        try:
-            {"portaleappalti": portaleappalti, "esop": esop, "generico": generico}[rec["famiglia"]](s, cig, u, out, rec)
-        except Exception as e:
-            rec["esito"] = "errore"; rec["errore"] = str(e)[:200]
-        with open(out / "esiti.jsonl", "a", encoding="utf-8") as f: f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-        print(cig, rec["famiglia"], rec["esito"], len(rec["documenti"]), flush=True)
+        u = normalizza(r.get("link", ""))
+        if r["cig"] in fatti: continue
+        per_host.setdefault(urlsplit(u).netloc.lower() if u else "", []).append((r, u))
+    stop = threading.Event()
+
+    def scrivi(rec):
+        with LOCK, open(out / "esiti.jsonl", "a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+    def host(h):
+        s = requests.Session(); s.headers["User-Agent"] = UA
+        for r, u in per_host[h]:
+            if stop.is_set(): return
+            if shutil.disk_usage(RADICE).free / 1e9 < GUARDIA_GB:
+                stop.set(); (out / "STOP-disco.txt").write_text(time.strftime("%FT%T ") + f"spazio libero sotto {GUARDIA_GB} GB\n"); return
+            cig = r["cig"]
+            rec = {"cig": cig, "priorita": r.get("priorita", ""), "importo": r.get("importo", ""), "link": u,
+                   "famiglia": famiglia(u) if u else "senza-link", "pagine": [], "documenti": [], "esito": "",
+                   "data": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+            t0 = time.time()
+            try:
+                if not u: rec["esito"] = "senza-link"
+                elif rec["famiglia"] != "js" and not robots_ok(u): rec["esito"] = "robots"
+                else:
+                    {"portaleappalti": portaleappalti, "esop": esop, "generico": generico, "js": js, "home": home}[rec["famiglia"]](s, cig, u, out, rec)
+            except Exception as e:
+                rec["esito"] = "errore"; rec["errore"] = str(e)[:200]
+            rec["secondi"] = round(time.time() - t0, 1)
+            for d in rec["documenti"]:
+                if d.get("cig_presente") and d.get("testo"): registra_atto(cig, d, "L3", r.get("stazione_appaltante", ""))
+                d["testo"] = d.get("testo", "")[:500]   # il testo intero sta in dati/atti/testi (se cita il CIG) o si rigenera dal blob
+            scrivi(rec)
+            print(cig, h, rec["famiglia"], rec["esito"], len(rec["documenti"]), flush=True)
+
+    # host grandi prima, così i 10 posti restano pieni
+    with ThreadPoolExecutor(PARALLELO) as ex:
+        list(ex.map(host, sorted(per_host, key=lambda h: -len(per_host[h]))))
+    if not stop.is_set(): (out / "FINITO.txt").write_text(time.strftime("%FT%T\n"))
 
 
 if __name__ == "__main__":
