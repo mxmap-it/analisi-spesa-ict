@@ -1,0 +1,21 @@
+{
+ "nota": "Cifre dichiarate da PSN S.p.A. nei bilanci (dato riferito [R]); lette da noi nel PDF archiviato (sha256), riga del testo estratto con pdftotext -layout. Si rileggono con: python tools/verifiche/imbuto_psn.py --rigenera (sul server).",
+ "documenti": [
+  {"esercizio": 2025, "url": "https://www.polostrategiconazionale.it/app/uploads/2026/07/Libro-PSN-2025.pdf", "sha256": "b8fe9ec1b4becdbf07cf837cac4f5ef26621bda85c7bfa1162773bf9a7ed64ed"},
+  {"esercizio": 2024, "url": "https://www.polostrategiconazionale.it/app/uploads/2025/06/PSN_Bilancio_esercizio_2024-25-LowRes.pdf", "sha256": "5be1ea22301b05d11e17428b3320bb74e367c78b547c7ad9e924d8c7834a3937"}
+ ],
+ "ricavi": {"2023": 78296499, "2024": 255546505, "2025": 454347596},
+ "ricavi_2025_composizione": {"servizi_professionali": 360684000, "canoni_o_consumo": 93644000, "no_core": 20000},
+ "portafoglio_ordini": {"2024-12-31": 2600000000, "2025-12-31": 3800000000},
+ "pa_contrattualizzate_2025-12-31": 617,
+ "pa_migrate_2025-12-31": 417,
+ "mix_contratti_dall_inizio": {"servizi_professionali": 0.60, "canoni_infrastrutturali": 0.40},
+ "canoni_per_servizio_totale": {"IaaS": 0.32, "Secure Public Cloud (Azure, GCP, AWS)": 0.15, "Oracle PSN": 0.14, "Backup": 0.13, "Housing/Hosting": 0.13, "PaaS": 0.04, "altri": 0.09},
+ "canoni_secure_public_cloud_per_tipo_pa": {"PAC": 0.24, "PAL": 0.06, "ASL/AO": 0.07},
+ "pnrr_misura_1_1_assegnati": 700000000,
+ "pnrr_misura_1_1_dotazione": 900000000,
+ "controlli_testo": {
+  "2025": {"Ricavi": "454.347.596", "servizi professionali": "360.684", "canone o a consumo": "93.644", "portafoglio": "3,8 miliardi", "617 Pubbliche Amministrazioni": "617", "assegnati circa 700 milioni": "700"},
+  "2024": {"Ricavi": "255.546.505", "Ricavi 2023": "78.296.499"}
+ }
+}
