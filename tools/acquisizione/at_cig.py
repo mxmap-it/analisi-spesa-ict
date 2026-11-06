@@ -27,8 +27,8 @@ import requests  # noqa: E402
 R = P.RADICE
 BASE = Path(os.environ.get("SPESAICT_BASE", R))
 MAX_SOTTO = int(os.environ.get("MAX_SOTTO", "20"))
-RX_BANDI = re.compile(r"bandi\s*di\s*gara|bandi.{0,5}contratt|gare\s*e\s*contratti|bandi-di-gara", re.I)
-RX_AT = re.compile(r"amministrazione\s*trasparente|trasparenza", re.I)
+RX_BANDI = re.compile(r"bandi[\s_-]*(di[\s_-]*)?gar[ae]|bandi.{0,8}contratt|gare[\s_-]*e[\s_-]*contratti|ricerca[\s_-]*gare|bandi[\s_-]*e[\s_-]*gare", re.I)
+RX_AT = re.compile(r"amministrazione[\s_-]*trasparente|trasparenza", re.I)
 RX_SOTTO = re.compile(r"gar[ae]|band|contratt|affidament|esit|determin|aggiudic|avvis|20(1[89]|2[0-6])", re.I)
 RX_CIG = re.compile(r"\b[0-9A-Z]{10}\b")
 csv.field_size_limit(10**9)
