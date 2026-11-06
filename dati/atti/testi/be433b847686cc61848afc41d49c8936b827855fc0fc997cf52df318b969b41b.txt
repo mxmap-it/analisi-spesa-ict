@@ -1,0 +1,274 @@
+CAPITOLATO TECNICO - PROCEDURA NEGOZIATA SENZA BANDO PER LA FORNITURA, IN
+MODALITA’ SAAS, DI UNA PIATTAFORMA PER IL RILASCIO DI COMPETENCE BADGE E SERVIZI
+CONNESSI, PER LA DURATA DI 36 MESI - CIG B59CC99C1D
+
+
+1. OGGETTO DELL’AFFIDAMENTO
+Oggetto della presente procedura è la fornitura, in licenza SaaS (Software as a Service), di una Piattaforma
+personalizzata per il rilascio di Competence Badge in esito alle attività formative finanziate dal Fondo e
+l’erogazione dei servizi connessi. La Piattaforma esterna deve essere integrata, senza oneri per il Fondo, con
+le Piattaforme proprietarie del Fondo:
+ -      Piattaforma PGA;
+ -      Piattaforma CIA-PGA;
+ -      Piattaforma “Voucher”.
+Sono oggetto della presente procedura le seguenti attività:
+
+
+• LINEA A – FORNITURA ED INTEGRAZIONE DELLA SOLUZIONE TECNOLOGICA IN SERVIZIO SAAS, SERVIZIO
+  DI HELP DESK E SERVIZIO MAC
+     Come specificato nell’Avviso, rientrano nella “Linea A”, remunerata a canone:
+      1. gli sviluppi necessari per l’integrazione della soluzione tecnologia proposta con la Piattaforma PGA
+         e con le Piattaforme CIA-PGA e “Voucher” del Fondo, per consentire l’interscambio di dati nel
+         rispetto delle esigenze di personalizzazione espresse dal Fondo (in termini di rappresentazione dei
+         contenuti imposti dal Decreto e aspetto grafico);
+      2. il funzionamento della Piattaforma in servizio SaaS, mediante fornitura di licenza per il rilascio di
+         un numero illimitato di Competence Badge. A tal riguardo, si specifica che è incluso nell’oggetto
+         dell’affidamento l’adeguamento nel tempo agli standard tecnologici di nuova emissione e/o richiesti
+         dalla normativa applicabile durante il periodo di vigenza contrattuale (es. rinnovo delle certificazioni
+         richieste come requisito minimo e/o offerte in relazione alla Piattaforma proposta e/o ai
+         Competence Badge; evoluzioni sul processo, sul sistema e sulle Attestazioni che impattano sulla
+         Piattaforma e/o sui Competence Badge in funzione delle evoluzioni nella normativa applicabile);
+      3. il servizio di Help Desk di I e di II livello, finalizzato ad acquisire le richieste di assistenza e fornire
+         supporto agli utenti della soluzione tecnologica proposta. Il servizio di Help Desk deve essere svolto
+         in stretto coordinamento con l’Area ICT del Fondo. L’Affidataria deve dunque divenire unico centro
+         di coordinamento e gestione delle richieste di assistenza legate all’utilizzo della soluzione
+         tecnologica proposta, per la gestione e risoluzione delle problematiche tecniche/informatiche
+         riscontrate, anche qualora derivanti da errori/malfunzionamenti;
+      4. Il servizio di Manutenzione Correttiva ed Adeguativa (MAC) comprendente: per la manutenzione
+         correttiva, la diagnosi e la rimozione delle cause e degli effetti dei malfunzionamenti nelle procedure
+
+
+                                                                                                          Pag. 1 di 9
+         e nei programmi anche oggetto di Manutenzione evolutiva; per la manutenzione adeguativa, le
+         attività volte a garantire la costante aderenza delle manutenzioni evolutive realizzate sulla soluzione
+         tecnologica proposta alle evoluzioni della Piattaforma in uso presso il Fondo, nonché ad assicurare
+         l’aggiornamento periodico della soluzione al variare delle condizioni, anche di carattere normativo,
+         e dei carichi di lavoro (es. per incremento del volume della base dati).
+   Un maggiore dettaglio su attività/prodotti previsti e relativi requisiti minimi è contenuta all’Art. 2.
+• LINEA B - MANUTENZIONE EVOLUTIVA (MEV)
+   Come specificato nell’Avviso, obiettivo della “Linea B”, remunerata a consumo, è quello di consentire al
+   Fondo, mediante un supporto consulenziale specialistico, di richiedere Manutenzioni evolutive finalizzate
+   allo sviluppo di nuove funzionalità o alla modifica/integrazione delle funzionalità associate alla soluzione
+   tecnologica proposta (es. redazione di prospetti/report personalizzati; modifiche di flussi informativi per
+   consentire l’interscambio con altri sistemi informatici anche esterni).
+   Un maggiore dettaglio su attività/prodotti previsti e relativi requisiti minimi è contenuta all’Art. 2
+
+
+2. DETTAGLIO DEI SERVIZI RICHIESTI
+Di seguito sono specificati i requisiti minimi delle forniture e dei servizi in carico all’Aggiudicataria della
+presente procedura.
+
+
+2.1 LINEA A – FORNITURA ED INTEGRAZIONE DELLA SOLUZIONE TECNOLOGICA IN SERVIZIO SAAS,
+    SERVIZIO DI HELP DESK E SERVIZIO MAC
+Gli obiettivi complessivi della “Linea A” sono:
+   - rendere disponibile al Fondo la soluzione software (di seguito anche “Piattaforma esterna”) finalizzata
+     all’Attestazione delle competenze acquisite nell’ambito dei percorsi formativi finanziati da For.Te.;
+   - adeguare la soluzione software proposta alle esigenze del Fondo ed integrarla, per la generazione dei
+     Competence Badge e per la conseguente relativa archiviazione, con le Piattaforme proprietarie di
+     For.Te.;
+   - implementare e gestire l’intera infrastruttura destinata ad ospitare il servizio per la generazione e
+     archiviazione dei Competence Badge formata da server, storage e servizi di protezione, ecc.;
+   - prevedere un funzionamento della Piattaforma 24H/24H, preservando di conseguenza un livello
+     elevato di accessibilità, superiore al 99,99% del tempo;
+   - rendere sicuro l’accesso ai Competence Badge e assicurare la disponibilità/archiviazione degli stessi;
+   - garantire tutte le procedure di backup e più in generale di sicurezza della Piattaforma.
+La fornitura e i servizi della “Linea A” sono da considerarsi ricompresi nel canone offerto, per l’intera durata
+dell’affidamento.
+
+
+2.1.1 Requisiti e servizi minimi della Piattaforma in servizio SaaS
+Si specificano di seguito i requisiti fondamentali di cui la soluzione tecnologica proposta deve essere dotata:
+
+
+
+                                                                                                       Pag. 2 di 9
+     a. Possedere la Certificazione di IMS Global - 1EdTech di Open Badges (versione 2.0 o successive)
+        come Issuer, Displayer e Host;
+     b. Assicurare la Blockchain Pubblica: tutte le informazioni dei Competence Badge devono essere
+        rilasciate e registrate su una blockchain pubblica per conferire al sistema un elevato livello di
+        sicurezza e trasparenza, affinché tutte le transazioni siano verificabili da qualsiasi user;
+     c. Assicurare l’applicazione di tecnologia NFT (Non Fungible Token): tutte le transazioni relative agli
+        NFT devono essere pubblicamente visibili sulla blockchain, consentendo a chiunque di verificare
+        l'autenticità di un Competence Badge. I Competence Badge rilasciati dalla Piattaforma esterna
+        devono poter essere trasferiti tra diverse Piattaforme e Wallet;
+     d. Prevedere possibilità di interfacciamento tramite API;
+     e. Assicurare il rilascio di Competence Badge conformi alla normativa applicabile: il contenuto dei
+        Competence Badge deve rispettare le indicazioni fornite dal Fondo, coerenti con il Decreto del
+        Ministero del Lavoro e delle Politiche Sociali del 9 luglio 2024 recante disciplina dei “servizi di
+        individuazione, di validazione e di certificazione delle competenze” relativi alle qualificazioni di
+        titolarità del Ministero del Lavoro e delle Politiche Sociali, pubblicato sulla Gazzetta Ufficiale n. 185
+        dell’8 agosto 2024;
+     f. Presentare l’ambiente del backpack dei discenti in lingua italiana;
+     g. Garantire l'operatività della Piattaforma H24 per 7gg alla settimana.
+Inoltre la soluzione tecnologica proposta dovrà includere/prevedere:
+
+ • sistemi di protezione perimetrale (firewall) e soluzioni a garanzia delle ulteriori condizioni di sicurezza
+   previste dalla normativa, anche con riferimento alla sicurezza fisica dei locali dove è ospitata
+   l’infrastruttura proposta;
+ • soluzioni di backup dei dati;
+ • soluzioni finalizzate al controllo e monitoraggio dei servizi e alla verifica delle funzionalità;
+ • soluzioni a garanzia della continuità dei servizi erogati;
+ • strumenti/sistemi per la minimizzazione dell’impatto di possibili incidenti o errori mediante l’utilizzo di
+   metodi e procedure standardizzate;
+
+ • connettività dei server con banda adeguata a consentire la fruizione del servizio senza rallentamenti o
+   colli di bottiglia;
+
+ • idonea tecnologia in grado di garantire che l’accesso ai servizi sia ammesso solo agli utenti abilitati e
+   profilati;
+ • tutto quanto altro necessario per garantire le prestazioni e servizi richiesti.
+In merito ai punti sopra elencati si forniscono le seguenti ulteriori informazioni di dettaglio.
+La soluzione tecnologica proposta dovrà prevedere le seguenti tipologie di accesso profilato:
+   a. Gestione For.Te.: tracciatura e monitoraggio delle attività degli utenti (Issuer e destinatari dei Badge),
+      funzioni di ricerca e reportistica sui diversi contenuti ospitati nell’ambiente, quali ad esempio ricerche
+      sui profili di competenza rilasciati, numero di digital badge rilasciati in un arco temporale, ricerca di
+      tutti i digital badge rilasciati da un singolo Issuer o da più Issuer, ecc.);
+
+
+
+                                                                                                       Pag. 3 di 9
+   b. Issuer: gli Enti Formativi o Aziende che utilizzano la piattaforma per il rilascio dei digital badge;
+   c. Destinatari dei Badge: le persone che sono destinatarie delle Attestazioni e che, in qualità di utenti
+      della Piattaforma, possono accedere al proprio back pack.
+La soluzione tecnologica proposta deve integrare le API dei seguenti framework per la referenziazione delle
+competenze attestate: LifeComp - DigComp – UNI EN 16234-1 «e-Competence Framework 3.0» – ESCO –
+ADA (Atlante del lavoro e delle qualificazioni). Tali API, di proprietà del Fondo, verranno fornite
+all’Aggiudicataria per procedere all’integrazione delle stesse nell’ambito della soluzione proposta.
+In fase di avvio delle attività progettuali sarà richiesto all’Aggiudicataria di sviluppare ed integrare le API
+riferite ai seguenti ulteriori framework: Quadro comune europeo di riferimento per la conoscenza delle
+lingue (QCER); Quadro comune europeo di riferimento per le competenze imprenditoriali (EntreComp);
+standard di competenze stabiliti nell’ambito dell’indagine internazionale dell’OCSE-PIAAC, quali riferimenti
+in termini di livelli e di risultati di apprendimento per le competenze di Numeracy.
+I Competence Badge rilasciati dalla soluzione tecnologica devono:
+   - rispettare le indicazioni fornite dal Fondo, in coerenza con il Decreto del Ministero del Lavoro e delle
+     Politiche Sociali del 9 luglio 2024 recante disciplina dei “servizi di individuazione, di validazione e di
+     certificazione delle competenze” relativi alle qualificazioni di titolarità del Ministero del Lavoro e delle
+     Politiche Sociali, pubblicato sulla Gazzetta Ufficiale n. 185 dell’8 agosto 2024;
+   - essere resi in formato digitale aperto, sottoscritti con firma digitale degli Enti titolati per poter essere
+     conservati sulle Piattaforme proprietarie del Fondo, in conformità e applicazione del D.lgs. 7 marzo
+     2005, n. 82 e ss.mm.ii.;
+   - essere associabili al modulo e/o al progetto formativo a seconda dell’esigenza degli utenti;
+   - essere inoltrabili ad uno o più indirizzi e-mail (a seconda che siano disponibili le e-mail dei singoli
+     lavoratori formati o la/e email fornita/e dall’Ente);
+   - poter essere condivisi dall’user sui social, nel Curriculum Vitae ed in calce alla firma della email.
+L’Aggiudicataria dovrà definire le politiche di backup nel rispetto della normativa vigente sulla privacy. In
+ogni caso le operazioni di backup dovranno essere pianificate in modo da ridurre eventuali periodi di degrado
+delle prestazioni dovuti alla sovrapposizione di processi.
+Eventuali procedure di ripristino dei dati o di fermo programmato del Servizio garantito dalla soluzione
+tecnologia proposta devono essere concordate con For.Te. ed in ogni caso effettuate dopo un’attenta
+valutazione del Responsabile del progetto e del D.E.C. di For.Te.
+La fornitura della soluzione tecnologica in servizio SaaS deve comprendere, infine, le seguenti attività:
+   a. predisposizione e mantenimento delle componenti hardware di base, della connettività di rete, degli
+      storage e dei server;
+   b. predisposizione e mantenimento del sistema operativo, delle eventuali componenti di virtualizzazione
+      e delle componenti software di base;
+   c. predisposizione e mantenimento delle soluzioni di sicurezza e dei sistemi di backup;
+   d. predisposizione e mantenimento dell’ambiente idoneo ad ospitare il servizio dei Competence Badge;
+   e. parametrizzazione e configurazione dell’ambiente di base, comprensivo della personalizzazione dei
+      Badge indicati;
+
+
+                                                                                                        Pag. 4 di 9
+   f. gestione dell’ambiente;
+   g. verifica della persistenza dei dati e di tutto ciò che garantisce il corretto funzionamento
+      dell’applicativo;
+   h. amministrazione del sistema software e supporto sistemistico.
+Tutte le attività di manutenzione previste devono essere eseguite mantenendo la continuità dei servizi.
+
+
+   2.1.2 Integrazione della soluzione tecnologica proposta con le Piattaforme proprietarie del Fondo.
+Ai fini dell’integrazione della soluzione tecnologica proposta con la Piattaforma PGA, il Fondo metterà a
+disposizione dell’Aggiudicataria l’attuale tracciato dei web services per le comunicazioni “da e verso” la
+Piattaforma PGA, implementati nell’ambito del periodo sperimentale.
+L’Aggiudicataria deve rendere operativa la soluzione tecnologica proposta consentendo la trasmissione dati
+“da e verso” la Piattaforma PGA entro il termine massimo di 30 (trenta) giorni lavorativi dall’invio della
+documentazione tecnica. Tali tempistiche sono da intendersi comprensive del collaudo e della messa in
+esercizio.
+Le attività di integrazione sono a carico dell’Aggiudicataria e nessun onere potrà essere imputato al Fondo
+per l’attività.
+L’integrazione della soluzione tecnologica proposta con la Piattaforma CIA-PGA e con la Piattaforma
+“Voucher” non è stata oggetto della fase sperimentale conclusasi e deve essere dunque realizzata ex-novo
+nell’ambito del contratto affidato.
+Sono anche in tal caso a carico dell’Aggiudicataria tutti gli sviluppi per l’adeguamento della soluzione
+proposta alle esigenze del Fondo e l’implementazione dei servizi di trasmissione dei dati/Competence Badge
+dalla soluzione proposta alle Piattaforme di For.Te.
+
+
+   2.1.3 Il Servizio di Help Desk di I e di II livello
+Il Servizio di Helpdesk, di cui il Fondo intende avvalersi, è volto alla risoluzione delle problematiche segnalate
+dagli utenti esterni a fronte del rilascio dei Competence Badge. Al Concorrente è richiesto di descrivere:
+   - come intende strutturare il Servizio, descrivendo altresì le caratteristiche degli ambiti tecnologici, di
+     qualità e di copertura temporale del Servizio;
+   - numerosità e livello di competenza del personale impiegato nel Servizio dell’Helpdesk;
+   - i Livelli di Servizio proposti.
+   2.1.4 Il Servizio di manutenzione adeguativa e correttiva (MAC)
+Il Servizio MAC include almeno le attività relative alla:
+
+   • manutenzione adeguativa, che comprende l’attività di manutenzione volta ad assicurare la costante
+     aderenza delle procedure e dei programmi all’evoluzione dell’ambiente tecnologico del sistema
+     informativo ed al cambiamento dei requisiti (organizzativi, normativi, d’ambiente);
+   • manutenzione correttiva, che comprende la diagnosi e la rimozione delle cause e degli effetti del
+     malfunzionamento delle procedure e dei programmi;
+
+
+
+                                                                                                        Pag. 5 di 9
+   • manutenzione migliorativa, che comprende ad esempio, l’attività di adeguamento delle prestazioni ai
+     livelli ritenuti adeguati, tenuto conto del generale aumento della qualità dei Servizi nel corso del
+     tempo.
+Gli obiettivi del servizio sono:
+   • mantenere operativa la soluzione proposta attraverso attività che assicurino in via continuativa la
+     rimozione dei malfunzionamenti;
+   • assicurare il miglioramento tempestivo delle funzionalità e delle prestazioni;
+   • garantire l’evoluzione tecnico funzionale della soluzione proposta;
+
+   • fornire Servizi di supporto per risolvere tempestivamente problemi relativi a malfunzionamenti ed
+     errori;
+   • assicurare l’aggiornamento periodico della soluzione proposta attraverso il miglioramento della
+     funzionalità, dell’affidabilità e dell’efficienza della stessa, anche quando l’aggiornamento presuppone
+     il rilascio di nuove versioni e/o correzioni dei prodotti da parte dell’Aggiudicataria;
+   • assicurare l’applicazione dei massimi livelli di sicurezza e l’adeguamento alle procedure di sicurezza
+     allo stato dell’arte.
+Nell’Offerta tecnica deve essere previsto uno specifico "Piano di Manutenzione adeguativa e correttiva",
+che contenga almeno:
+
+   • la descrizione delle attività di manutenzione ordinaria e della periodicità di esecuzione di tali
+     operazioni;
+   • la descrizione delle modalità di aggiornamento della piattaforma proposta e delle relative librerie, sia
+     per quanto riguarda gli aggiornamenti di sicurezza che per gli altri aggiornamenti;
+   • la descrizione delle modalità di gestione delle chiamate di assistenza per interventi di manutenzione
+     straordinaria nonché gli accorgimenti che l'Aggiudicataria intende adottare per garantire i Livelli di
+     Servizio indicati nel prosieguo del presente Capitolato;
+
+   • la struttura dei report statistici finalizzati a facilitare il controllo e la verifica, da parte di For.Te., delle
+     attività svolte dall'Aggiudicataria nonché dei Livelli di Servizio erogati dal sistema;
+   • i Livelli di Servizio offerti, se migliorativi rispetto a quelli richiesti nel presente Capitolato tecnico.
+
+
+2.2 LINEA B – MANUTENZIONE EVOLUTIVA (MEV)
+Il servizio è finalizzato alla personalizzazione di procedure dovute a variazioni di contesto o alla modifica delle
+funzionalità già realizzate, collaudate e poste in esercizio. Le variazioni possono essere di tipo metodologico,
+organizzativo o possono scaturire da esigenze specifiche.
+Sono compresi formalmente nell’ambito della MEV gli interventi di Manutenzione Adeguativa di impegno
+superiore a 3 (tre) giorni/persona.
+Il servizio ha come obiettivi principali:
+   • migliorare le prestazioni della soluzione di rilascio dei Competence Badge;
+
+   • migliorare le funzionalità esistenti;
+
+
+
+                                                                                                            Pag. 6 di 9
+   •    ottimizzare i processi informatici.
+Durante la realizzazione delle componenti e delle funzionalità richieste, tutti gli elementi concettuali, le
+astrazioni utilizzate e le procedure per l’elaborazione dei dati dovranno essere realizzati in modo da garantire
+la piena integrazione ed uniformità con le piattaforme di For.Te.
+La fase di manutenzione evolutiva sarà suddivisa in singoli Obiettivi, ognuno dei quali potrà essere assimilato
+ad un “progetto”, la cui esecuzione è suddivisa in fasi, secondo un ciclo di sviluppo dipendente dalle
+dimensioni, dalle criticità e dalla tipologia di soluzione da implementare.
+L’attività di MEV include tutti gli elementi di evoluzione del sistema che si dovessero rendere necessari in
+relazione a nuove esigenze quali a titolo di esempio:
+   - adeguamento delle funzionalità a fronte dell’introduzione di regolamenti e circolari interne;
+   - miglioramento della gestione dei processi e dell’interazione con le componenti delle piattaforme del
+     Fondo e alt
