@@ -2,14 +2,14 @@
 title: "Trasparenza delle convenzioni ICT della PA"
 subtitle: "Rendiconto iterativo: cosa si può verificare delle convenzioni e degli accordi quadro ICT, e cosa no"
 date: 2026-11-05
-lastmod: 2026-11-06
+lastmod: 2026-11-07
 datiAl: 2026-11-06
 description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."
 ---
 
 <!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->
 
-**Versione 0.7 del 2026-11-06** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
+**Versione 0.8 del 2026-11-07** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
 
 Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.
 
@@ -167,7 +167,7 @@ Le altre 56 iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/conv
 
 ## 5bis. Documenti mancanti, file per file
 
-Inventario analitico ([CSV](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv), [metodo](/progetto/metodo-convenzioni-trasparenza/)): **797 documenti mancanti** in 86 iniziative; criticità 3: **415**, criticità 2: 139, criticità 1: 243. Per metodo: numerazione 13, rimando 143, atteso 648 (una riga può averne due). Livello: [V] 412 (pagina ufficiale ricontrollata dal vivo, file assente), [R] 385 (da verificare). Blocchi incontrati nel ricontrollo: 0; documenti forse in aree riservate (dietro_login «ignoto»): 308, da provare in un giro assistito.
+Inventario analitico ([CSV](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv), [metodo](/progetto/metodo-convenzioni-trasparenza/)): **788 documenti mancanti** in 86 iniziative; criticità 3: **415**, criticità 2: 133, criticità 1: 240. Per metodo: numerazione 13, rimando 143, atteso 639 (una riga può averne due). Livello: [V] 403 (pagina ufficiale ricontrollata dal vivo, file assente), [R] 385 (da verificare). Blocchi incontrati nel ricontrollo: 0; documenti forse in aree riservate (dietro_login «ignoto»): 308, da provare in un giro assistito.
 
 **Esempio guida: PRINCO, ID 2928, Allegato 12.** L'Allegato 12 «Facsimile per allegato al Listino OpenSource» è pubblicato, ma è un modulo vuoto: l'Appendice 3 al Capitolato (Listino Open Source) dice che i prodotti «saranno presentati dai concorrenti conformemente all'allegato 12». Manca quindi l'Allegato 12 **compilato** dall'aggiudicatario (Converge): l'unico documento con i prodotti del listino 3 e dunque con la loro giurisdizione [V, atti letti].
 
@@ -214,9 +214,6 @@ Conteggi per iniziativa:
 | [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | 5 | 3 | 3 | 11 | 0 |
 | [Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lott](/convenzioni/consip-2601/) | 5 | 0 | 6 | 11 | 9 |
 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QU](/convenzioni/cig-8637686bf8/) | 5 | 1 | 4 | 10 | 10 |
-| [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-9769148bf3/) | 5 | 2 | 3 | 10 | 10 |
-| [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-a02b1c8a8a/) | 5 | 3 | 2 | 10 | 10 |
-| [SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENT](/convenzioni/cig-b1ffb3098a/) | 5 | 3 | 2 | 10 | 10 |
 | [AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | 5 | 2 | 3 | 10 | 8 |
 | [PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI LETTURA ED ELABORAZ](/convenzioni/cig-9837572d38/) | 5 | 2 | 2 | 9 | 9 |
 | [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI](/convenzioni/consip-2181/) | 5 | 3 | 1 | 9 | 8 |
@@ -227,6 +224,9 @@ Conteggi per iniziativa:
 | [PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI](/convenzioni/cig-84163618ce/) | 5 | 1 | 1 | 7 | 7 |
 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN U](/convenzioni/cig-8784303c25/) | 5 | 1 | 1 | 7 | 5 |
 | [SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZI](/convenzioni/cig-94252656ba/) | 5 | 1 | 1 | 7 | 7 |
+| [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-9769148bf3/) | 5 | 0 | 2 | 7 | 7 |
+| [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-a02b1c8a8a/) | 5 | 1 | 1 | 7 | 7 |
+| [SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENT](/convenzioni/cig-b1ffb3098a/) | 5 | 1 | 1 | 7 | 7 |
 | [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LA](/convenzioni/consip-2648/) | 5 | 0 | 2 | 7 | 4 |
 | [Consip AQ System management, ID 1836](/convenzioni/consip-1836/) | 5 | 0 | 1 | 6 | 3 |
 | [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 | LOTTO 8 ](/convenzioni/consip-2213/) | 5 | 0 | 1 | 6 | 5 |
@@ -727,6 +727,7 @@ Per aggregatori regionali e consorzi molti dati sono «da verificare»: le parti
 
 | Versione | Data | Nota | Cosa è cambiato |
 |---|---|---|---|
+| 0.8 | 2026-11-07 | bozza non pubblica: zip del giro 7/11 letti (listini Intercent-ER con prezzi offerti e marchi), copie START/Sintel portate in archivio, ricerca fuori piattaforma (5 parziali, 411 non trovati) e visita delle sezioni AT di 60 enti aderenti (nessun documento di criticità 3; 12 blocchi) | documenti mancanti per file: 788 (criticità 3: 415), prima 797 |
 | 0.7 | 2026-11-06 | bozza non pubblica: revisione a mano delle righe rimando/numerazione (89 scartate con motivazione, criticità corrette), offerte e corrispettivi trovati dentro gli AQ firmati dell'ID 2296, ricognizione dal vivo di 31 iniziative di aggregatori e altri soggetti, 36 allegati flussi letti per intero, instradamento proposto delle istanze per le gare su delega | documenti mancanti per file: 797 (criticità 3: 415), prima 886; istanze preparate: da 20 a 29 |
 | 0.6 | 2026-11-06 | bozza: inventario per file dei documenti mancanti (numerazione, rimandi, attesi), criticità 1-3, ricontrollo dal vivo delle pagine Consip, Allegato 12 della 2.928 chiarito, bozza di accesso civico raggruppata per Consip; non è una release pubblica | documenti mancanti per file: 886 (criticità 3: 431) (nuovo inventario); istanze preparate: da 19 a 20 |
 | 0.5 | 2026-11-06 | allegati di monitoraggio dell'ID 2452 e dell'ID 2648 letti per intero (ID 2452: flusso Erogato come l'ID 2275; ID 2648: solo commissioni); flussi di monitoraggio scritti come obbligo contrattuale con allegato e versione; revisione avversariale (10 punti) | nessuna variazione nei dati |

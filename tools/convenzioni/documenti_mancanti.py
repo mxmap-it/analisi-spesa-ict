@@ -313,6 +313,19 @@ def revisiona(righe):
                 agg_doc[(ini, ALIAS.get(a["tipo_documento"], a["tipo_documento"]))].append(a)
             if a["esito"] == "dietro-login":
                 agg_pag[ini] = (a["url_pagina"], a["data"][:10], "sì")
+    # zip letti a mano (giro 7/11): file interni con tipo dell'inventario (esclusi i modelli vuoti dal filtro sotto)
+    zl = R / "report/convenzioni/aggregatori/zip-letti-2026-11-07.csv"
+    for a in (csv.DictReader(open(zl, encoding="utf-8")) if zl.exists() else []):
+        if not re.search(r"(?i)modell|vuot|fac.?simile|base di gara", a["contenuto"]):
+            ini = next((v for v in INI if v.lower() == a["iniziativa"].lower()), a["iniziativa"])
+            agg_doc[(ini, a["tipo_documento"])].append({"documento": a["file_interno"].rsplit("/", 1)[-1], "esito": "archiviato (zip letto)",
+                                                        "sha256": a["sha256_file"]})
+    # ricerca fuori dalle piattaforme (AT degli enti, determine di adesione, web): i parziali si annotano, i completi si scartano
+    fp = defaultdict(list)
+    tf = R / "report/convenzioni/fuori-piattaforma/trovati-2026-11-07.csv"
+    for a in (csv.DictReader(open(tf, encoding="utf-8")) if tf.exists() else []):
+        if a["esito"].startswith("trovato"):
+            fp[(a["iniziativa"], a["documento_atteso"])].append(a)
     INV = {v[0]: k for k, v in ATTESI.items()}
     tenute, scarti = [], []
     for r in righe:
@@ -324,6 +337,11 @@ def revisiona(righe):
                 r["evidenza"] += f" | ricognizione dal vivo {d}: pagina {u} senza documenti del tipo"
         tp = INV.get(r["documento_atteso"]) or ("modifica" if r["documento_atteso"].startswith("Atti di proroga") else None)
         found = agg_doc.get((r["iniziativa"], tp), []) if tp else []
+        for a in fp.get((r["iniziativa"], r["documento_atteso"]), []):
+            if a["esito"] == "trovato-completo":
+                found = found + [{"documento": f"{a['ente']}: {a['url_documento'][:60]}", "esito": "fuori piattaforma", "sha256": a["sha256"]}]
+            else:
+                r = {**r, "evidenza": r["evidenza"] + f" | trovato in parte fuori piattaforma ({a['fonte_tipo']}, {a['ente']}, sha256 {a['sha256'][:12]}, {a['livello']}): {a['note'][:160]}"}
         if found and r["metodo"] == "atteso":
             scarti.append({**r, "motivazione_scarto": "trovato dal vivo sulla piattaforma dell'aggregatore: " + "; ".join(
                 f"{a['documento'][:60]} ({a['esito']}, sha256 {a['sha256'][:12] or '-'})" for a in found[:3])})

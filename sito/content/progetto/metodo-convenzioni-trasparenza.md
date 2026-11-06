@@ -106,6 +106,11 @@ Due controlli automatici si aggiungono alla lettura:
   `dietro_login`; le righe «attese» per un tipo di documento trovato sulla piattaforma si scartano, salvo modelli e fac-simili di gara
   (non sono l'offerta né il transato); le altre diventano [V] sulla pagina ricontrollata.
 
+- **Zip letti e ricerca fuori piattaforma** (7/11): i file interni degli zip degli aggregatori letti a mano
+  (`report/convenzioni/aggregatori/zip-letti-2026-11-07.csv`, strumenti in `tools/convenzioni/zip_aggregatori/`) valgono come documenti
+  trovati, esclusi i modelli vuoti; gli esiti della ricerca fuori piattaforma (`report/convenzioni/fuori-piattaforma/trovati-2026-11-07.csv`:
+  AT degli enti aderenti, determine di adesione, web) scartano le righe solo se «trovato-completo», altrimenti si annotano nell'evidenza.
+
 ## Ripetibilità
 
 `python tools/verifiche/convenzioni_mancanti.py` da un clone pulito rigenera l'inventario, controlla che non cambi e ricalcola i buchi di
@@ -115,5 +120,6 @@ numerazione per seconda via.
 
 | Versione | Data | Cosa è cambiato |
 |---|---|---|
+| 1.3 | 7/11/2026 | zip letti e ricerca fuori piattaforma nel generatore |
 | 1.2 | 6/11/2026 | revisione a mano delle righe rimando/numerazione, allegati dentro i contratti firmati, ricognizione aggregatori nel generatore |
 | 1.0 | 6/11/2026 | prima versione: tre metodi, criticità, livelli, ricontrollo, blocchi, ciclo dell'accesso civico, contributi |
