@@ -9,7 +9,7 @@ description: "Stato della trasparenza delle principali convenzioni e accordi qua
 
 <!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->
 
-**Versione 0.9 del 2026-11-06** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
+**Versione 0.10 del 2026-11-06** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
 
 Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.
 
@@ -23,7 +23,7 @@ Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con 
 - **Dati per controllare spesa e sovranità.** Nelle iniziative verificate non abbiamo individuato, pubblicati insieme, offerte dei vincitori, transato per marchio ed elenco degli ordinativi per ente: sono dati che oggi la norma non obbliga la centrale a pubblicare (carenze C1-C4, con la base di ciascuna).
 - **Carenze principali** (pagine dei bandi su consip.it, open data Consip, Amministrazione trasparente di Consip e campione di enti, consultati il 5-6/11/2026; acquistinretepa senza accesso): offerte tecniche dei vincitori, transato per listino e marchio, elenco degli ordinativi per ente non individuati. Gli ordinativi si trovano in parte negli atti dei singoli enti. Region e data center: per IaaS/PaaS 2 (ID 2746) e PRINCO (ID 2928) i documenti di gara prevedono che il fornitore li dichiari, ma la dichiarazione non è pubblicata.
 - **Gli obblighi contrattuali prevedono che Consip riceva dati di dettaglio.** Secondo l'allegato 4E della convenzione Microsoft EA8 (ID 2615, letto per intero), il fornitore deve trasmettere ogni mese a Consip il dettaglio delle fatture, con l'ID dell'ordine sulla piattaforma e l'imponibile, per il calcolo della commissione (d.m. MEF 23/11/2012). Se il flusso è rispettato, Consip dispone dei dati per ricostruire il transato per ordine e quindi per ente (nostra deduzione, R); non abbiamo verificato che il flusso avvenga né in che forma sia conservato. Gli altri allegati sui flussi di fatturato li abbiamo letti per intero il 6/11 (`flussi-dati-letti.yaml`, V): 34 sono solo flussi per le commissioni sullo stesso modello (7 campi: tipo, numero, riferimento e data della fattura, partita IVA del fornitore, ID dell'ordine, imponibile; mensili più una dichiarazione semestrale), senza ente, prodotto, marchio né CIG; in 10 allegati recenti l'invio è dovuto anche a fatturato zero, «pena applicazione delle penali previste». Due allegati di **monitoraggio**, letti per intero, prevedono come obbligo contrattuale del fornitore l'invio mensile a Consip del flusso «Erogato» (ordine, lotto, sede beneficiaria, prodotto, quantità, importo IVA esclusa), entro il 15 del mese successivo, tramite la funzione «Gestione flussi» di acquistinretepa, pena le penali previste: l'allegato 18 «Flussi dati per il sistema di monitoraggio delle Convenzioni/AQ», versione 1.4 del 15/5/2019, all'AQ System Management 3 (ID 2275), e l'allegato B, versione non indicata nel testo, alla convenzione Telefonia mobile 9 (ID 2452). Non sappiamo se lo stesso obbligo valga per altre iniziative, i cui allegati di monitoraggio non abbiamo letto; non abbiamo verificato l'invio dei flussi né come Consip li conservi. Nessuna norma, a nostra conoscenza, ne impone la pubblicazione, che proponiamo in R37.
-- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), 30 bozze di accesso civico generalizzato, tutte verso Consip, restano utili all'analisi; 114 sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 perché questi dati diventino pubblici senza bisogno di chiederli.
+- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), 31 bozze di accesso civico generalizzato, tutte verso Consip, restano utili all'analisi; 114 sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 perché questi dati diventino pubblici senza bisogno di chiederli.
 
 ## 2. Due misure del valore
 
@@ -167,7 +167,7 @@ Le altre 56 iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/conv
 
 ## 5bis. Documenti mancanti, file per file
 
-Inventario analitico ([CSV](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv), [metodo](/progetto/metodo-convenzioni-trasparenza/)): **782 documenti mancanti** in 86 iniziative; criticità 3: **415**, criticità 2: 131, criticità 1: 236. Per metodo: numerazione 13, rimando 143, atteso 633 (una riga può averne due). Livello: [V] 421 (pagina ufficiale ricontrollata dal vivo, file assente), [R] 361 (da verificare). Blocchi incontrati nel ricontrollo: 0; documenti forse in aree riservate (dietro_login «ignoto»): 234, da provare in un giro assistito.
+Inventario analitico ([CSV](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv), [metodo](/progetto/metodo-convenzioni-trasparenza/)): **757 documenti mancanti** in 86 iniziative; criticità 3: **414**, criticità 2: 124, criticità 1: 219. Per metodo: numerazione 13, rimando 143, atteso 608 (una riga può averne due). Livello: [V] 475 (pagina ufficiale ricontrollata dal vivo, file assente), [R] 282 (da verificare). Blocchi incontrati nel ricontrollo: 0; documenti forse in aree riservate (dietro_login «ignoto»): 155, da provare in un giro assistito.
 
 **Esempio guida: PRINCO, ID 2928, Allegato 12.** L'Allegato 12 «Facsimile per allegato al Listino OpenSource» è pubblicato, ma è un modulo vuoto: l'Appendice 3 al Capitolato (Listino Open Source) dice che i prodotti «saranno presentati dai concorrenti conformemente all'allegato 12». Manca quindi l'Allegato 12 **compilato** dall'aggiudicatario (Converge): l'unico documento con i prodotti del listino 3 e dunque con la loro giurisdizione [V, atti letti].
 
@@ -196,35 +196,35 @@ Conteggi per iniziativa:
 | [PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. ](/convenzioni/cig-8716552642/) | 5 | 3 | 4 | 12 | 0 |
 | [PROCEDURA NEGOZIATA, EX ART. 63, COMMA 2 - LETT. B) PUNTO 3), D. LGS. ](/convenzioni/cig-87332390d0/) | 5 | 3 | 4 | 12 | 0 |
 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DEL](/convenzioni/cig-88556834cb/) | 5 | 3 | 4 | 12 | 0 |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENS](/convenzioni/cig-8898059e90/) | 5 | 3 | 4 | 12 | 0 |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SE](/convenzioni/cig-91881762b3/) | 5 | 3 | 4 | 12 | 0 |
 | [ACCORDO QUADRO PER LA FORNITURA DI UNA PIATTAFORMA PER IL MONITORAGGIO](/convenzioni/cig-945403654f/) | 5 | 3 | 4 | 12 | 0 |
 | [PROSECUZIONE SERVIZIO DI CONSERVAZIONE A NORMA PER AZIENDE ED ENTI DEL](/convenzioni/cig-9603457f68/) | 5 | 3 | 4 | 12 | 0 |
 | [ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FOR](/convenzioni/cig-9777818ea8/) | 5 | 3 | 4 | 12 | 0 |
 | [ACCORDO QUADRO, SUDDIVISO IN 9 LOTTI, CON PIÙ OPERATORI ECONOMICI, AI ](/convenzioni/cig-99617296d3/) | 5 | 3 | 4 | 12 | 0 |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA C](/convenzioni/cig-b0da5c472c/) | 5 | 3 | 4 | 12 | 0 |
 | [PROCEDURA NEGOZIATA SENZA BANDO AI SENSI DELL'ART. 76, C. 2, LETT. B),](/convenzioni/cig-b715929978/) | 5 | 3 | 4 | 12 | 0 |
 | [PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2](/convenzioni/cig-b736423c63/) | 5 | 3 | 4 | 12 | 12 |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556](/convenzioni/consip-2556/) | 5 | 3 | 4 | 12 | 0 |
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | 5 | 2 | 4 | 11 | 0 |
 | [Trenitalia, affidamento di servizi ICT](/convenzioni/cig-7991036b82/) | 5 | 3 | 3 | 11 | 0 |
 | [CONVENZIONE PER IL SERVIZIO DI DESKTOP OUTSOURCING](/convenzioni/cig-95643027b0/) | 5 | 2 | 4 | 11 | 0 |
 | [PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUS](/convenzioni/cig-a0260b3155/) | 5 | 3 | 3 | 11 | 0 |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | 5 | 3 | 3 | 11 | 0 |
 | [Consip Sanità digitale, sistemi clinico assistenziali 2, ID 2601, lott](/convenzioni/consip-2601/) | 5 | 0 | 6 | 11 | 9 |
 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QU](/convenzioni/cig-8637686bf8/) | 5 | 1 | 4 | 10 | 10 |
 | [AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | 5 | 2 | 3 | 10 | 8 |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | 5 | 2 | 2 | 9 | 9 |
 | [PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI LETTURA ED ELABORAZ](/convenzioni/cig-9837572d38/) | 5 | 2 | 2 | 9 | 9 |
 | [AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI](/convenzioni/consip-2181/) | 5 | 3 | 1 | 9 | 8 |
 | [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) | 5 | 1 | 3 | 9 | 8 |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENS](/convenzioni/cig-8898059e90/) | 5 | 2 | 1 | 8 | 8 |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SE](/convenzioni/cig-91881762b3/) | 5 | 2 | 1 | 8 | 8 |
 | [PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA DI 72 MESI, PER IL ](/convenzioni/cig-9216207e99/) | 5 | 2 | 1 | 8 | 8 |
 | [ARIA_2023_807 - PROCEDURA APERTA, AI SENSI DELL’ART. 60 DEL D.LGS. N. ](/convenzioni/cig-989984280e/) | 5 | 1 | 2 | 8 | 8 |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | 5 | 2 | 1 | 8 | 8 |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556](/convenzioni/consip-2556/) | 5 | 2 | 1 | 8 | 8 |
 | [PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI](/convenzioni/cig-81636687f2/) | 5 | 1 | 1 | 7 | 7 |
 | [PROCEDURA APERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI](/convenzioni/cig-84163618ce/) | 5 | 1 | 1 | 7 | 7 |
 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO IN UN U](/convenzioni/cig-8784303c25/) | 5 | 1 | 1 | 7 | 5 |
 | [SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZI](/convenzioni/cig-94252656ba/) | 5 | 1 | 1 | 7 | 7 |
 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-9769148bf3/) | 5 | 0 | 2 | 7 | 7 |
 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI S](/convenzioni/cig-a02b1c8a8a/) | 5 | 1 | 1 | 7 | 7 |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA C](/convenzioni/cig-b0da5c472c/) | 5 | 1 | 1 | 7 | 7 |
 | [SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENT](/convenzioni/cig-b1ffb3098a/) | 5 | 1 | 1 | 7 | 7 |
 | [AQ SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONE DI LA](/convenzioni/consip-2648/) | 5 | 0 | 2 | 7 | 4 |
 | [PROCEDUTA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI GESTIONE](/convenzioni/cig-949554539f/) | 5 | 1 | 0 | 6 | 6 |
@@ -241,7 +241,6 @@ Conteggi per iniziativa:
 | [PROCEDURA NEGOZIATA PER L’AFFIDAMENTO DEI SERVIZI DI MANUTENZIONE, ASS](/convenzioni/cig-9482392d69/) | 4 | 2 | 3 | 9 | 9 |
 | [APPALTO SPECIFICO (SDA) PER L'ACQUISIZIONE DI SERVIZI DI BUSINESS ANAL](/convenzioni/cig-9923894067/) | 4 | 1 | 4 | 9 | 9 |
 | [APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIP](/convenzioni/cig-993049146a/) | 4 | 1 | 4 | 9 | 9 |
-| [Polo Strategico Nazionale (PPP, Presidenza del Consiglio)](/convenzioni/psn/) | 4 | 2 | 3 | 9 | 0 |
 | [AOV/SUA SF 009/2021 - CONVENZIONE QUADRO ACP PER SERVIZI ICT | LOTTO 2](/convenzioni/cig-8664818204/) | 4 | 2 | 2 | 8 | 8 |
 | [PROCEDURA APERTA PER L’AFFIDAMENTO DEI SERVIZI DI GESTIONE DELLE SANZI](/convenzioni/cig-9580558e8e/) | 4 | 1 | 3 | 8 | 8 |
 | [APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNIC](/convenzioni/cig-9936839af1/) | 4 | 1 | 3 | 8 | 8 |
@@ -257,6 +256,7 @@ Conteggi per iniziativa:
 | [PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT](/convenzioni/cig-97219284c8/) | 4 | 0 | 0 | 4 | 4 |
 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E](/convenzioni/cig-a008db40ba/) | 4 | 0 | 0 | 4 | 4 |
 | [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | 3 | 1 | 3 | 7 | 3 |
+| [Polo Strategico Nazionale (PPP, Presidenza del Consiglio)](/convenzioni/psn/) | 3 | 1 | 2 | 6 | 6 |
 | [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodotti Oracle](/convenzioni/consip-2599/) | 3 | 0 | 2 | 5 | 4 |
 | [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ipotesi fort](/convenzioni/consip-2755/) | 3 | 0 | 1 | 4 | 3 |
 | [GARA A PROCEDURA APERTA PER L’APPALTO DI FORNITURA MULTIBRAND DI PRODO](/convenzioni/consip-2738/) | 3 | 0 | 0 | 3 | 2 |
@@ -266,11 +266,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 
 | Iniziativa | Documento | Metodo | Livello | Contenuto presunto | Accesso civico |
 |---|---|---|---|---|---|
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'](/convenzioni/cig-7246653f38/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
 | [GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'](/convenzioni/cig-7246653f38/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
 | [GARA 7/2017/LI: PROCEDURA RISTRETTA AI SENSI DELL'](/convenzioni/cig-7246653f38/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
@@ -342,11 +342,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI ](/convenzioni/cig-88556834cb/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI ](/convenzioni/cig-88556834cb/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI ](/convenzioni/cig-88556834cb/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN AC](/convenzioni/cig-8898059e90/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TR](/convenzioni/cig-9016294130/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TR](/convenzioni/cig-9016294130/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI TR](/convenzioni/cig-9016294130/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
@@ -358,11 +358,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-9030521daa/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-9030521daa/) | Allegato C  – Offerta economica | rimando | [V] | Offerta economica (parte dell'offerta dell'aggiudicatario) | in preparazione |
 | [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-9030521daa/) | Allegato D  – Corrispettivi e tariffe | rimando | [V] | Corrispettivi e tariffe | in preparazione |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN A](/convenzioni/cig-91881762b3/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA](/convenzioni/cig-9216207e99/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
 | [PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA](/convenzioni/cig-9216207e99/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
 | [PA PER LA STIPULA DI UNA CONVENZIONE, DELLA DURATA](/convenzioni/cig-9216207e99/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
@@ -464,11 +464,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ](/convenzioni/cig-a02b1c8a8a/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ](/convenzioni/cig-a02b1c8a8a/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ](/convenzioni/cig-a02b1c8a8a/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER](/convenzioni/cig-b0da5c472c/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZ](/convenzioni/cig-b1457d3391/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
 | [FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZ](/convenzioni/cig-b1457d3391/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
 | [FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZ](/convenzioni/cig-b1457d3391/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
@@ -571,11 +571,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS](/convenzioni/consip-2452/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
 | [ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS](/convenzioni/consip-2452/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
 | [ID 2452 GARA A PROCEDURA APERTA AI SENSI DEL D.LGS](/convenzioni/consip-2452/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FO](/convenzioni/consip-2480/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FO](/convenzioni/consip-2480/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
 | [GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FO](/convenzioni/consip-2480/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
@@ -596,11 +596,11 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [Consip Digital transformation 2, ID 2536, lotto 2 ](/convenzioni/consip-2536/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
 | [Consip Digital transformation 2, ID 2536, lotto 2 ](/convenzioni/consip-2536/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [Consip Digital transformation 2, ID 2536, lotto 2 ](/convenzioni/consip-2536/) | Allegato C all'AQ – Offerta economica del fornitore | rimando | [V] | del presente Accordo Quadro | in preparazione |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [R] | ordinativi e contratti attuativi delle PA | – |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [V] | listini e appendici di prezzo | in preparazione |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 -](/convenzioni/consip-2556/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 | [SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINIS](/convenzioni/consip-2566/) | Elenco degli ordinativi e contratti attuativi delle PA | atteso | [V] | ordinativi e contratti attuativi delle PA | in preparazione |
 | [SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINIS](/convenzioni/consip-2566/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
 | [SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINIS](/convenzioni/consip-2566/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
@@ -677,10 +677,9 @@ Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo de
 | [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
 | [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
 | [Consip Reti locali 8, ID 2223, lotto 2 PAL](/convenzioni/consip-reti-locali-8/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
-| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [R] | transato e monitoraggio per lotto e listino | – |
-| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Listini prezzi applicati alle amministrazioni (per lotto e listino) | atteso | [R] | listini e appendici di prezzo | – |
-| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [R] | offerta economica e listino offerto | – |
-| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [R] | offerta tecnica dell'aggiudicatario | – |
+| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | atteso | [V] | transato e monitoraggio per lotto e listino | in preparazione |
+| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Offerta economica e listino offerto dall'aggiudicatario (per lotto) | atteso | [V] | offerta economica e listino offerto | in preparazione |
+| [Polo Strategico Nazionale (PPP, Presidenza del Con](/convenzioni/psn/) | Offerta tecnica dell'aggiudicatario (per lotto) | atteso | [V] | offerta tecnica dell'aggiudicatario | in preparazione |
 
 Le criticità si assegnano per regole sul titolo: classificazione automatica, da rivedere prima di ogni richiesta. I «rimandi» a lettere (Allegato A, B…) e i titoli troncati vengono dal testo estratto dei PDF e vanno letti nel contesto (colonna evidenza del CSV).
 
@@ -712,7 +711,7 @@ Per aggregatori regionali e consorzi molti dati sono «da verificare»: le parti
 
 ## 8. Rimedi
 
-- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: 30 bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, ordinativi delle più grandi, region e data center, erosione), 114 ritirate, 1 annullata, nessuna inviata. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
+- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: 31 bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, ordinativi delle più grandi, region e data center, erosione), 114 ritirate, 0 inviate. [Registro](/convenzioni/accesso-civico/) e [analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).
 - **Proposte di policy** (stato «proposta», nessuna inviata):
   - C1 Offerte tecniche dei vincitori → R39
   - C2 Listini e prezzi offerti dagli aggiudicatari → R39
@@ -727,6 +726,7 @@ Per aggregatori regionali e consorzi molti dati sono «da verificare»: le parti
 
 | Versione | Data | Nota | Cosa è cambiato |
 |---|---|---|---|
+| 0.10 | 2026-11-06 | bozza: pagine ufficiali delle 7 iniziative Consip/PSN trovate (6 consip.it, 1 AT Presidenza), 195 documenti archiviati; righe mancanti 782 → 757, dietro_login ignoto 234 → 155 | documenti mancanti per file: 757 (criticità 3: 414), prima 782; istanze preparate: da 30 a 31 |
 | 0.9 | 2026-11-06 | bozza: Allegato 6 WebRT18 archiviato; 2 pagine Azienda Zero trovate (25 documenti); dietro_login verificato da anonimo su 25 schede acquistinretepa e 2 pagine Azienda Zero (ignoto 308 → 234) | documenti mancanti per file: 782 (criticità 3: 415), prima 788; istanze preparate: da 29 a 30 |
 | 0.8 | 2026-11-07 | bozza non pubblica: zip del giro 7/11 letti (listini Intercent-ER con prezzi offerti e marchi), copie START/Sintel portate in archivio, ricerca fuori piattaforma (5 parziali, 411 non trovati) e visita delle sezioni AT di 60 enti aderenti (nessun documento di criticità 3; 12 blocchi) | documenti mancanti per file: 788 (criticità 3: 415), prima 797 |
 | 0.7 | 2026-11-06 | bozza non pubblica: revisione a mano delle righe rimando/numerazione (89 scartate con motivazione, criticità corrette), offerte e corrispettivi trovati dentro gli AQ firmati dell'ID 2296, ricognizione dal vivo di 31 iniziative di aggregatori e altri soggetti, 36 allegati flussi letti per intero, instradamento proposto delle istanze per le gare su delega | documenti mancanti per file: 797 (criticità 3: 415), prima 886; istanze preparate: da 20 a 29 |

@@ -1,9 +1,19 @@
-# Istanza di accesso civico generalizzato: documenti non pubblicati di 41 iniziative ICT
+# Istanza di accesso civico generalizzato: documenti non pubblicati di 47 iniziative ICT
 
 **Bozza non inviata** (2026-11-06). Destinatario: Consip S.p.A., ufficio per l'accesso civico o RPCT (indirizzo da ricavare dalla sezione trasparenza).
 
 Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti documenti, che non risultano pubblicati sulle pagine ufficiali delle iniziative alla data del controllo indicata, oppure risultano citati negli atti pubblicati ma non allegati:
 
+
+**Consip SPC2 Connettività (contratto quadro OPA)** (CIG dei lotti: 5133642F61; pagina: https://www.consip.it/bandi/gara-spc-connettivita)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
+- Provvedimento o avviso di aggiudicazione (criticità 2, atteso)
 
 **GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SE** (CIG dei lotti: 876560888C, 8765585592, 8765599121, 8765571A03, 8765614D7E, 876562890D; pagina: https://www.consip.it/bandi/gara-sanita-digitale-sistemi-informativi-clinico-assistenziali)
 
@@ -21,6 +31,16 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
 - Allegato G – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
 
+**GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DI UN ACCORDO QUADRO AI SENSI DELL'ART. 54 COMMA 3 DEL D. LGS. 50/2016, PER LA FORNITURA DI PRODOT** (CIG dei lotti: 8898075BC5, 8898059E90, 88980918FA; pagina: https://www.consip.it/bandi/gara-sicurezza-on-premises-protezione-perimetrale-endpoint-e-anti-apt-per-le-pa)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
+- Convenzione / accordo quadro stipulato (o schema) (criticità 2, atteso)
+
 **GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SE** (CIG dei lotti: 9030563057, 90305727C2, 9030580E5A, 90305884F7, 9030521DAA; pagina: https://www.consip.it/bandi/gara-sanita-digitale-sistemi-informativi-sanitari-e-servizi-al-cittadino-per-le-pubbliche-amministrazioni-del-snn)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
@@ -29,6 +49,25 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Allegato C  – Offerta economica (criticità 3, rimando)
 - Allegato D  – Corrispettivi e tariffe (criticità 3, rimando)
 - Appendice 3A al/allo capitolato – Profili Professionali (criticità 2, rimando)
+
+**GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L'AFFIDAMENTO DI SE** (CIG dei lotti: 9188267DC8, 9188224A4D, 91881762B3, 91882439FB, 91882553E4; pagina: https://www.consip.it/bandi/gara-sanita-digitale-sistemi-informativi-gestionali)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
+- Convenzione / accordo quadro stipulato (o schema) (criticità 2, atteso)
+
+**GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E ** (CIG dei lotti: B0DA5C8A78, B0DA5C9B4B, B0DA5C472C, B0DA5C79A5, B0DA5C68D2, B0DA5CBCF1 e altri; pagina: https://www.consip.it/bandi/gara-tecnologie-server-ed5)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
 
 **FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE DI FASCIA MEDIA ED ALTA PER SCANSIONE, COPIA E STAMPA E DEI SERVIZI CONNESSI ED OPZIO** (CIG dei lotti: B1457D87B0, B1457D5537, B1457D3391, B1457D4464, B1457D76DD, B1457D660A; pagina: https://www.consip.it/bandi/gara-fotocopiatrici-multifunzione-fascia-media-e-alta-ed3)
 
@@ -150,6 +189,16 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
 
+**ID 2453 - GARA PUBLIC CLOUD SAAS ITSM** (CIG dei lotti: 942570737B; pagina: https://www.consip.it/bandi/gara-public-cloud-saas-it-service-management)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
+- Convenzione / accordo quadro stipulato (o schema) (criticità 2, atteso)
+
 **GARA A PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI PRODOTTI SOFTWARE MULTIBRAND, MANUTENZIONE SOFTWARE E SERVIZI CONNESSI PER LE P** (CIG dei lotti: 913379995F, 913381783A, 913379239A, 9133835715, 91338546C3, 913375878A e altri; pagina: https://www.consip.it/bandi/gara-licenze-software-multibrand-ed-5)
 
 - Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
@@ -176,6 +225,16 @@ Ai sensi dell'art. 5, comma 2, del d.lgs. 33/2013 chiedo copia dei seguenti docu
 - Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
 - Allegato C all'AQ – Offerta economica del fornitore (criticità 3, rimando)
 - Allegato A  – Flusso dati per le commissioni a carico del fornitore (criticità 2, rimando)
+
+**SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556** (CIG dei lotti: 9774270EC1; pagina: https://www.consip.it/bandi/gara-servizi-di-posta-elettronica-certificata-pec-ed-2)
+
+- Elenco degli ordinativi e contratti attuativi delle PA (criticità 3, atteso)
+- Flussi di monitoraggio: transato/erogato per lotto, listino e marchio (criticità 3, atteso)
+- Listini prezzi applicati alle amministrazioni (per lotto e listino) (criticità 3, atteso)
+- Offerta economica e listino offerto dall'aggiudicatario (per lotto) (criticità 3, atteso)
+- Offerta tecnica dell'aggiudicatario (per lotto) (criticità 3, atteso)
+- Capitolato tecnico (criticità 2, atteso)
+- Convenzione / accordo quadro stipulato (o schema) (criticità 2, atteso)
 
 **SERVIZI DI DATA MANAGEMENT PER LA PUBBLICA AMMINISTRAZIONE 2 ID 2566 | LOTTO 2 SERVIZI DI DATA MANAGEMENT PER LA PAL - AREA NORD** (CIG dei lotti: 9852922872, 9852991165, 9852886ABC, 98530122B9, 98530344E0, 98530523BB; pagina: https://www.consip.it/bandi/gara-servizi-di-data-management-per-la-pubblica-amministrazione-ed2)
 
