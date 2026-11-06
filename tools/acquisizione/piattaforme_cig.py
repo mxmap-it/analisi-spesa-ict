@@ -54,7 +54,13 @@ def archivia(dati, url, out):
 
 
 def prendi(s, u, out):
-    attendi(u); r = s.get(u, timeout=60, allow_redirects=True)
+    attendi(u)
+    try:
+        r = s.get(u, timeout=60, allow_redirects=True)
+    except requests.exceptions.ConnectionError:
+        # es. ariaspa.it: la porta 80 non risponde, la 443 sì
+        if not u.lower().startswith("http://"): raise
+        u = "https://" + u[7:]; attendi(u); r = s.get(u, timeout=60, allow_redirects=True)
     h = archivia(r.content, r.url, out)
     testo = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r.text))) if "html" in r.headers.get("content-type", "") else ""
     return r, h, testo
@@ -115,6 +121,58 @@ def documenti_pagina(s, cig, r, out, rec, massimo=12):
         rec["documenti"].append({"url": du, "sha256": hd, "byte": len(d.content), "cig_presente": cig in tx, "testo": tx[:20000]})
 
 
+# Ricerca interna per CIG (adattatore trasversale ai software AT e ai portali): moduli GET con un solo campo di testo
+# (ISWEB, Halley, PortaleAppalti, Traspare, trasparenza-pa.net, Drupal, WordPress…) e ricerche note per generatore.
+RX_FORM = re.compile(r"<form\b([^>]*)>(.*?)</form>", re.I | re.S)
+RX_INPUT = re.compile(r"<input\b([^>]*)>", re.I)
+
+
+def _attr(a, n):
+    m = re.search(rf"\b{n}\s*=\s*[\"']([^\"']*)[\"']", a, re.I)
+    return html.unescape(m.group(1)) if m else ""
+
+
+def modelli_ricerca(r):
+    """URL modello (con {CIG}) dalle form GET con un solo campo di testo e dai generatori noti."""
+    mod = []
+    for fa, corpo in RX_FORM.findall(r.text):
+        if _attr(fa, "method").lower() == "post": continue
+        testo, nascosti = [], []
+        for ia in RX_INPUT.findall(corpo):
+            t = (_attr(ia, "type") or "text").lower(); n = _attr(ia, "name")
+            if not n: continue
+            if t in ("text", "search"): testo.append(n)
+            elif t == "hidden": nascosti.append((n, _attr(ia, "value")))
+        if len(testo) != 1: continue
+        az = urljoin(r.url, _attr(fa, "action") or r.url)
+        if "login" in az.lower(): continue
+        q = "&".join(f"{n}={requests.utils.quote(v)}" for n, v in nascosti if n.lower() not in ("csrf", "_token"))
+        mod.append(az.split("#")[0] + ("&" if "?" in az else "?") + (q + "&" if q else "") + f"{testo[0]}={{CIG}}")
+    g = re.search(r"<meta[^>]+generator[^>]+content=[\"']([^\"']+)", r.text, re.I)
+    base = f"{urlsplit(r.url).scheme}://{urlsplit(r.url).netloc}"
+    if g and "wordpress" in g.group(1).lower(): mod.append(base + "/?s={CIG}")
+    if g and "drupal" in g.group(1).lower(): mod.append(base + "/search/node?keys={CIG}")
+    return list(dict.fromkeys(mod))[:2]
+
+
+def cerca_cig(s, cigs, pagine, out, massimo=25):
+    """Prova la ricerca interna per i CIG (ordinati per priorità): {cig: risposta della pagina che lo cita}, richieste."""
+    mod = []
+    for r in pagine:
+        mod += [m for m in modelli_ricerca(r) if m not in mod]
+    trovati, n = {}, 0
+    if not mod: return trovati, 0, []
+    m0 = mod[0]
+    for c in cigs[:massimo]:
+        try:
+            rr, hh, tt = prendi(s, m0.replace("{CIG}", c), out); n += 1
+        except Exception:
+            continue
+        if blocco(rr, tt): break
+        if c in tt: trovati[c] = rr
+    return trovati, n, mod
+
+
 def js(s, cig, u, out, rec):
     rec["esito"] = "non-tentato-js"
 
@@ -169,6 +227,10 @@ def generico(s, cig, u, out, rec):
         rec["pagine"].append({"url": rr.url, "sha256": hh, "cig_presente": cig in tt})
         if cig in tt:
             documenti_pagina(s, cig, rr, out, rec); rec["esito"] = "documenti" if rec["documenti"] else "cig-in-sottopagina"; return
+    tr, n, mod = cerca_cig(s, [cig], [r], out, 1)
+    if mod: rec["ricerca"] = {"modelli": mod, "richieste": n}
+    if cig in tr:
+        documenti_pagina(s, cig, tr[cig], out, rec); rec["esito"] = "documenti" if rec["documenti"] else "cig-con-ricerca"; return
     rec["esito"] = "cig-non-trovato"
 
 
@@ -214,6 +276,7 @@ AT_HOST = [l.split("#")[0].strip() for l in open(RADICE / "config/at_robots_esen
            if l.split("#")[0].strip()] if (RADICE / "config/at_robots_esenti.txt").exists() else []
 ORE_AT = os.environ.get("ORE_AT", "21-7")
 EVIDENZE = {}
+SOLO_HOST = os.environ.get("SOLO_HOST", "")   # regex sugli host: limita un ripasso (es. RIPASSA=errore SOLO_HOST=ariaspa)
 
 
 def at_esente(u):
@@ -250,6 +313,7 @@ def main():
     for r in csv.DictReader(open(ing, encoding="utf-8")):
         u = normalizza(r.get("link", ""))
         if r["cig"] in fatti: continue
+        if SOLO_HOST and not re.search(SOLO_HOST, urlsplit(u).netloc, re.I): continue
         per_host.setdefault(urlsplit(u).netloc.lower() if u else "", []).append((r, u))
     stop = threading.Event()
 

@@ -37,11 +37,44 @@ csv.field_size_limit(10**9)
 RX_REFRESH = re.compile(r"http-equiv=[\"']?refresh[\"']?[^>]*url=([^\"'>\s]+)|(?:window\.)?location(?:\.href)?\s*=\s*[\"']([^\"']+)[\"']", re.I)
 
 
+MAX_RICERCHE = int(os.environ.get("MAX_RICERCHE", "25"))
+JS_LOCK = threading.Lock()
+
+
+class Resa:
+    """Pagina resa da Chromium headless (Playwright), con la stessa interfaccia minima di requests.Response."""
+    def __init__(self, url, testo):
+        self.url, self.text, self.status_code = url, testo, 200
+        self.content = testo.encode("utf-8"); self.headers = {"content-type": "text/html"}
+
+
+def rendi_js(u, out):
+    """Pagine AT scritte in JavaScript: Chromium headless, una alla volta, >= 5 s per host, mai login/CAPTCHA."""
+    from playwright.sync_api import sync_playwright
+    with JS_LOCK, sync_playwright() as p:
+        P.attendi(u)
+        b = p.chromium.launch()
+        try:
+            pg = b.new_page(user_agent=P.UA); pg.goto(u, wait_until="networkidle", timeout=60000)
+            r = Resa(pg.url, pg.content())
+        finally:
+            b.close()
+    h = P.archivia(r.content, r.url, out)
+    return r, h, re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style).*?</\1>", " ", r.text))))
+
+
 def prendi_seg(s, u, out, salti=3):
-    """Come P.prendi, ma segue i meta refresh e i redirect JavaScript semplici delle pagine quasi vuote."""
+    """Come P.prendi, ma segue i meta refresh e i redirect JavaScript semplici; se la pagina resta quasi vuota la rende
+    con Chromium headless (RENDI_JS=1, default)."""
     r, h, t = P.prendi(s, u, out)
     while salti and len(t) < 3000 and (m := RX_REFRESH.search(r.text)):
         salti -= 1; r, h, t = P.prendi(s, urljoin(r.url, html.unescape(m.group(1) or m.group(2))), out)
+    if len(t) < 1500 and os.environ.get("RENDI_JS", "1") == "1" and not P.blocco(r, t):
+        try:
+            r2, h2, t2 = rendi_js(r.url, out)
+            if len(t2) > len(t): return r2, h2, t2
+        except Exception:
+            pass
     return r, h, t
 
 
@@ -123,6 +156,13 @@ def main():
                                 if c in tt and c not in trovati: trovati[c] = rr
                         for c in cigs:
                             if c not in trovati and c in t: trovati[c] = r
+                        # ricerca interna per CIG (moduli GET della sezione bandi, poi del sito; WordPress, Drupal)
+                        resto = sorted((c for c in cigs if c not in trovati), key=lambda c: -float(cigs[c]["importo"] or 0))
+                        if resto:
+                            pag = [p for p, _ in pagine if RX_BANDI.search(p.url)] + [p for p, _ in pagine if not RX_BANDI.search(p.url)]
+                            tr, n, mod = P.cerca_cig(s, resto, pag, out, MAX_RICERCHE)
+                            if mod: e["ricerca"] = {"modelli": mod, "richieste": n, "trovati": len(tr)}
+                            trovati.update(tr)
                         e["esito"] = "cig-trovati" if trovati else ("pagina-quasi-vuota-js" if len(t) < 1500 and len(e["pagine"]) == 1 else "sezione-bandi-raggiunta" if any(RX_BANDI.search(p["url"]) for p in e["pagine"]) else "sezione-bandi-non-trovata")
                         for c, rr in trovati.items():
                             rec = {"cig": c, "documenti": []}
