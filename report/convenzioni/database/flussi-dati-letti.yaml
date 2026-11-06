@@ -1,0 +1,782 @@
+descrizione: '#62: lettura per intero degli allegati «flussi dati» (6/11/2026). Letto da tools/convenzioni/leggi_flussi.py: i valori qui prevalgono sulle parole chiave. Testi estratti sul server in lavoro/convenzioni/flussi/<iniziativa>.txt.'
+allegati:
+- iniziativa: consip-2483
+  sha256: 6ce7356920376edfdd5169f7a95fce1c6256850482298961205535983879da42
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2610
+  sha256: b355586e1b2469c2233d9ddca8e8249f6dc6d58a7e7e26176d3cca68b8f9f1af
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2615
+  sha256: 7269bc2cb3807e5ba3a40b37211297207ac73c7876411764b3bc461ef9f1d2d3
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2425
+  sha256: 5f002865a2e686731d8f80f398de4ca9618cfa4d1f0189b092a32d069ffa72d9
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+  - 'residuo del modello: «<ovvero per le iniziative energy ... indicare le quantità ...>» seguito da un secondo tracciato identico, SENZA campo quantità'
+- iniziativa: consip-2536
+  sha256: 6cfb1539f4b173d817b439a74e3c79a9824fe78c05922dbc19499e1069acdeaf
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2599
+  sha256: e24500a3ea03b671f6cdc465603f21d7e8907dd1837a5c153c642509ddb24f2e
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2366
+  sha256: c9ee5cbb8443d5c38377581ef22f7197655b922c7593b76418d27cc74af1faa9
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2275
+  sha256: a518a9cdc8e0c61c3758da93bdd9e75c98a611f86b4ed28b1587dbc4bf29a02e
+  fattura: 'no'
+  ordine: si
+  ente: si (codice sede; flusso Sedi con anagrafica della sede; il controllo E250 lega ordine e codice fiscale dell'ente)
+  listino_prodotto: si (codice prodotto; flusso Catalogo una tantum con descrizione e prezzo unitario)
+  marchio: si (campo PRODUTTORE «Marchio del Bene/Servizio» nel Catalogo)
+  cig: 'no'
+  lotto: si (codice lotto)
+  imponibile: no (prezzo unitario a catalogo, quantità ed erogato per voce di spesa/tariffa)
+  quantita: si
+  tipo_flusso: monitoraggio dell'erogato
+  frequenza: mensile (entro il 15 del mese successivo); Catalogo una tantum; Sedi con il primo Erogato e a ogni nuova sede
+  versione: 1.4 del 15 maggio 2019
+  obbligo: 'si: par. 2, «Il Fornitore è tenuto a trasmettere a Consip i flussi ... per tutta la durata dell''Accordo Quadro e ... dei contratti attuativi», pena le penali previste nello Schema di AQ (articolo
+    non indicato nell''allegato)'
+  letto_per_intero: si
+  correzioni:
+  - 'marchio: si (campo PRODUTTORE del Catalogo, fuori dai 12.000 caratteri esaminati dalla regex)'
+  - 'ordine: si (IDENTIFICATIVO ORDINE nel flusso Erogato; la regex cercava «id ordine»)'
+  note:
+  - già letto per intero il 6/11; invio da acquistinretepa «Gestione flussi», file di testo
+- iniziativa: consip-2738
+  sha256: 4112c902fd7678c8e298ff5401954db97e44325f3c58ca7a72ee4f9c437cd073
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 1 %
+- iniziativa: consip-2755
+  sha256: 691c9df3898c6192793bef78993124a3768bfb6ef19d168d6fb0ec4489276062
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2601
+  sha256: b1a286195f2146622708b8a4b4334deccde5275f4fa45ed140a87182d9a1da24
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+  - 'residuo del modello: «<ovvero per le iniziative energy ... indicare le quantità ...>» seguito da un secondo tracciato identico, SENZA campo quantità'
+- iniziativa: consip-reti-locali-8
+  sha256: 5114570701b5f7eca105d1b48ea26dd520d3f05a2b8a7ffcccc5a1c092ac4f32
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 1 %
+- iniziativa: consip-2631
+  sha256: 3fdc3e62bb253b84cc415e442d78492a1c071a6daad809747a5ac0d5b39b4d8a
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: cig-8765571A03
+  sha256: 34fb6d3cdfe289ef69a2bcacfd54a0c4c97a90161247af5eddd2b679e8a728cd
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2648
+  sha256: 29ccd0091efab433b5e74c1e705e18529b06ede6ad27fc1a9d70bec3ab9d31cd
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+  - già letto per intero il 6/11 (solo commissioni)
+- iniziativa: consip-2365
+  sha256: 7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2181
+  sha256: 75b744bba0de48e7b6c484136268a0db78e9150fe807b5cd1d98891de8902b47
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: cig-9030521DAA
+  sha256: 7f2b96c5114123651fc2aa13d30e757649f074018e07ac0fff109be885862c7c
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2652
+  sha256: 871531b03a8176e68d44de184b438ee66d517f1e105c02d1e936cdc9f68bd5fe
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2710
+  sha256: 307598da2d1dc976c85ba576b27b07773220ee7c201199af796a157ba56e3137
+  fattura: si
+  ordine: 'si (ordine diretto: ID ordine; appalto specifico: numero AS)'
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'parziale (solo per gli appalti specifici: numero lotto AS = ambiente di negoziazione, non lotto della convenzione)'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: non è il lotto dell''AQ ma l''identificativo dell''ambiente di negoziazione dell''appalto specifico'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+  - 'due tracciati: par. 4.1 ordini diretti (7 campi), par. 4.2 appalti specifici (8 campi con numero AS e numero lotto AS)'
+- iniziativa: consip-2213
+  sha256: 12f57a786430797e4a56fc34bb63a2bfbdcf256d81d7a2c0b4ce3f3e74886640
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: si (secondo tracciato, campo 8 QUANTITA' «Quantità fatturata»)
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5
+  - l'allegato riporta due tracciati, il secondo con la quantità fatturata, senza dire quale si applichi; nessun codice prodotto, quindi la quantità non è attribuibile a un prodotto
+- iniziativa: consip-2781
+  sha256: ff3d49375cb224a44e0e9bfac79b5e41aa81b471bcc6a98cfb43cc705a0e15ce
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2187
+  sha256: 093fbd50bd2552202f2ba59dc949e13564d0000a8dbc089776605a3bb67bd5e9
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2297
+  sha256: 43cd1bb87c64e23d8dc38cf34ce17b72e2ef4baa3b8dc520587dc7c3501d7bc9
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2700
+  sha256: 8045472924d192d80935d1f9c609d9f603809febbaefcbdc9b1f4d9779ebf2e5
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2566
+  sha256: 51aaa99402bec3d98e547a96734a5d51fb57871935c5f77f78dde64ba0f665a5
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2638
+  sha256: 2a11713c91207c37bfb841c699b13648410ab0d6b7ac26042d351cbecda65862
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: si (campo 8 QUANTITÀ kWh, comprensiva delle perdite di rete)
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione ___ euro/MWh (in bianco)
+  - 'convenzione Energia elettrica ed. 21: non ICT'
+- iniziativa: cig-B1457D3391
+  sha256: 0dd6737e022c63cb2f2fa39f9039f576a83d8bd1269d2ee3b2f020da3b9c44e9
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2480
+  sha256: fdb18188e89b4c45bb1dff75850eaf573e00f99844c3c0c97a89aa1e71fd878a
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2452
+  sha256: 0ab74107a630c3db3da0623a39adff459c08fd646d8bfa47ce6cbc2f73919a9d
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 1,5 %
+  - questo è l'Allegato A (commissioni); il flusso di monitoraggio «Erogato» è l'Allegato B, letto a parte
+- iniziativa: consip-1561
+  sha256: e1985d41140b5b1d62c9c4a051eb99bbe93d141bf06e90a280354d81eb4fcc05
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 1 %
+  - 'campi aggiuntivi 8-11: imponibile non incassato, data di incasso, imponibile incassato, CRO (dichiarazioni di insoluto/incassato); servizi negli istituti di cultura: non ICT'
+- iniziativa: cig-8784303C25
+  sha256: a90cf50b9c8cae4b7392499dc2fce58d1bfdb1b410b890e86ad9302502791315
+  fattura: si
+  ordine: si (ID appalto specifico, non ID ordine)
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  correzioni:
+  - 'ordine: si (le parole chiave davano no: il campo 6 è ID APPALTO SPECIFICO, identificativo dello stesso livello)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID appalto specifico, imponibile'
+  - commissione 0,5 %
+- iniziativa: consip-2496
+  sha256: e706f3f3cdeb0764cf940fbfbaf7d17f4e035e830c1a9257a263872eff2ed0f4
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
+- iniziativa: consip-2746
+  sha256: e53bfe539c042b186e624c029a332b3dd65aedd4e7f8587693f71077d3366b2d
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: no (la parola compare solo nell''intestazione «Lotto __» o nel titolo, non nel tracciato)'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,50 %
+- iniziativa: consip-2928
+  sha256: e1000c2c7c119c5c2db840e61e1caa62e56a6f6349c883efad8ad3a226072f48
+  fattura: si
+  ordine: 'si (ordine diretto: ID ordine; appalto specifico: numero AS)'
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'parziale (solo per gli appalti specifici: numero lotto AS = ambiente di negoziazione, non lotto della convenzione)'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato; par. 3.2: flussi dovuti anche con fatturato zero «pena applicazione delle penali previste»; dal primo contratto attuativo
+    fino alla comunicazione di termine fatturazione'
+  letto_per_intero: si
+  correzioni:
+  - 'lotto: non è il lotto dell''AQ ma l''identificativo dell''ambiente di negoziazione dell''appalto specifico'
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione 0,5 %
+  - 'due tracciati: par. 4.1 ordini diretti (7 campi), par. 4.2 appalti specifici (8 campi con numero AS e numero lotto AS)'
+  - i par. 4.1/4.2 riportano ancora le istruzioni del modello fra parentesi uncinate («<sezione da inserire ...>»)
+- iniziativa: consip-2212
+  sha256: ad1da466b043e0f8c440c3e9842ea699430800ad200095f838518f221b9e9d34
+  fattura: si
+  ordine: si
+  ente: 'no'
+  listino_prodotto: 'no'
+  marchio: 'no'
+  cig: 'no'
+  lotto: 'no'
+  imponibile: si
+  quantita: 'no'
+  tipo_flusso: solo commissioni
+  frequenza: mensile e semestrale
+  versione: non indicata
+  obbligo: 'si: Allegato par. 3.1, «il Fornitore è tenuto a trasmettere alla Consip S.p.A.» dichiarazione mensile (entro 15 giorni dal mese di fatturazione) e semestrale (entro 30 giorni) con i report del
+    par. 4; penali rinviate alla Convenzione/AQ, articolo non indicato nell''allegato'
+  letto_per_intero: si
+  note:
+  - 'tracciato a 7 campi: tipo fattura, numero fattura, fattura di riferimento, data emissione, P.IVA emittente, ID ordine piattaforma, imponibile'
+  - commissione in bianco nello schema (da indicare alla stipula)
