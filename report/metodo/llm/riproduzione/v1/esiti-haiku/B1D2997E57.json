@@ -1,0 +1,52 @@
+{
+ "cig": "B1D2997E57",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "f0e1f4ee6a8af5a9a3901ec83dd36123df951fc31b8c5c17030b42fbbae540d3",
+ "quando": "2026-11-06T13:09:42+00:00",
+ "uscita": {
+  "cig": "B1D2997E57",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "lavori-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "servizio di esercizio e manutenzione degli impianti di riscaldamento, ventilazione e condizionamento aria (HVAC), idrico sanitari e idrici antincendio"
+   },
+   {
+    "sha256": "c0d5fda869069c3199f9c5682bd5640422741883bfb5d0639912cd66e3e615f3",
+    "pagina": null,
+    "citazione": "per l'affidamento del servizio di esercizio e manutenzione degli impianti di riscaldamento, ventilazione e condizionamento aria (HVAC), idrico sanitari e idrico antincendio installati presso gli insediamenti Rai di Roma, Napoli e Torino"
+   }
+  ],
+  "deduzioni": [
+   "CPV 50700000-2 identifica esplicitamente manutenzione di impianti di climatizzazione (non informatici)"
+  ],
+  "documenti_non_pertinenti": [
+   "8fac8324efac82e48344e0224ac929f227ac51b63e527d2aaf250c8b7a46daca"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Servizio di manutenzione ordinaria di infrastrutture edilizie (HVAC, impianti idrici, antincendio) presso sedi RAI. Nessun elemento informatico o cloud; esclusione certa da ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  false,
+  true
+ ],
+ "valida": false
+}

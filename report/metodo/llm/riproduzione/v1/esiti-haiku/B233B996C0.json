@@ -1,0 +1,48 @@
+{
+ "cig": "B233B996C0",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "3c7bb6a63ae7054626376e14b660014fc8e856ff4bcbc329006deb0f61e69ef9",
+ "quando": "2026-11-06T13:10:15+00:00",
+ "uscita": {
+  "cig": "B233B996C0",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "LOTTO 2 - PERSONAL COMPUTER DESKTOP SMALL FORM FACTOR | PC DESKTOP SIGEF 2631 LOTTO 2"
+   },
+   {
+    "sha256": "5f6d32df333860049afdc2b9e47a65072523a14569fc9a1afc9aa09fef41df8c",
+    "pagina": 1,
+    "citazione": "Adesione alla CONVENZIONE CONSIP PC Desktop, Workstation e Monitor 3 per la fornitura di Personal Computer Desktop, Workstation e Monitor"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Adesione a convenzione CONSIP per la fornitura di personal computer desktop e workstation. Non è un servizio cloud ma una fornitura di beni informatici hardware (CPV 50322000-8), confermata dalla determina che specifica chiaramente «fornitura di Personal Computer Desktop, Workstation e Monitor»."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true
+ ],
+ "valida": false
+}

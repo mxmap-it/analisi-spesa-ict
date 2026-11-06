@@ -1,0 +1,46 @@
+{
+ "cig": "B2A6ED6D5C",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "af6b4551594a55d8249c6035d26ff650e3d92e7dafa78c5eba94e79cfbf4ae9d",
+ "quando": "2026-11-06T13:12:04+00:00",
+ "uscita": {
+  "cig": "B2A6ED6D5C",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "FORNITURA E POSA IN OPERA DI UN DATA CENTER MODULARE PREFABBRICATO PRESSO IL SITO DEL POLIGRAFICO DI TOR SAPIENZA"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "a3f4ff45530732deb457d9d2c6fe83d7e2a571e5c2231b8942264ff397751faa",
+   "29fe3757668736580506332a2e2663af544f581b19a372866a575f3983a2e8f9",
+   "7b27330ae3c9cf26db8311081565af203e1f00b8da08ee075a38bbb7f872e1bc"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Contratto per fornitura e posa in opera di infrastruttura fisica (data center modulare prefabbricato). Non è un servizio cloud erogato da un fornitore, ma l'acquisto di beni e infrastruttura da installare presso il sito dell'ente. IPZS diventa proprietaria dell'infrastruttura, non cliente di un servizio."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

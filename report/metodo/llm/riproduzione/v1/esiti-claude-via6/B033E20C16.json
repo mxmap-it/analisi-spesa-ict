@@ -1,0 +1,18 @@
+{
+ "cig": "B033E20C16",
+ "asse_a": {
+  "stato": "incerto",
+  "e_cloud": "?",
+  "servizio": "cloud",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "incerto",
+  "provider_prodotto": "Arionline S.r.l.",
+  "giurisdizione": "IT"
+ },
+ "confidenza": "bassa",
+ "fonte_primaria": true,
+ "motivazione": "ARIONLINE S.R.L. (Cagliari, IT) è fornitore storico ICT per Arzachena con prodotti cloud ACN-qualificati (SaaS Civis OpenPA Cloud, 5 PaaS). 'FORNITURA SOFTWARE ATTIVA PDND' per PNRR Misura 1.3.1 è sicuramente ICT (ict:s) ma la natura cloud vs licenza/installazione on-premise resta incerta: i siti del Comune hanno problemi TLS sistematici e nessun documento dell'ente è accessibile. L'importo di 101M€ è chiaramente un errore di dato (importo_da_verificare:true; Misura 1.3.1 per comuni di questa fascia eroga contributi nell'ordine delle decine di migliaia di euro).",
+ "modello": "claude-sonnet"
+}

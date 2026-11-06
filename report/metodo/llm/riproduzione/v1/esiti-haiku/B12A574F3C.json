@@ -1,0 +1,56 @@
+{
+ "cig": "B12A574F3C",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "4f07d906d68e75f16d82145baa69d737618cf72a0fa333e3bb207457fbf60e84",
+ "quando": "2026-11-06T13:06:18+00:00",
+ "uscita": {
+  "cig": "B12A574F3C",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "incluso-certo",
+   "provider_prodotto": "Fortinet",
+   "giurisdizione": "EXTRA-UE"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "cf80d7edbd4f9cb0dddf3a95a0c37ab58afc591c7e1e890a2a0579e3ac758547",
+    "pagina": null,
+    "citazione": "l'architettura SDWAN realizzata sarà di tipo Hub e Spoke su tecnologia Fortinet in cui la sede del presidio ospedaliero Santo Spirito costituirà l'Hub e gli altri punti individuati gli spoke"
+   },
+   {
+    "sha256": "cf80d7edbd4f9cb0dddf3a95a0c37ab58afc591c7e1e890a2a0579e3ac758547",
+    "pagina": null,
+    "citazione": "il cliente dispone di un'installazione in esercizio di un cluster FortiGate su apparati 1800F"
+   },
+   {
+    "sha256": "cf80d7edbd4f9cb0dddf3a95a0c37ab58afc591c7e1e890a2a0579e3ac758547",
+    "pagina": null,
+    "citazione": "tutti i servizi esposti all'interno della rete sono ospitati in gran parte presso il CED del Presidio Ospedaliero Santo Spirito"
+   }
+  ],
+  "deduzioni": [
+   "TIM S.p.A. è rivenditore/integratore, non produttore di Fortinet",
+   "Fortinet Inc. è una società USA (sede: Sunnyvale, California)",
+   "I servizi (assistenza, manutenzione, supporto specialistico) sono ancillari ai prodotti, non erogati da infrastruttura cloud del fornitore"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Fornitura on-premise di prodotti di sicurezza perimetrale (Fortinet FortiGate NGFW, NAC, EPP/EDR, SPP, Anti-APT) installati presso il data center interno dell'ASL, con servizi di assistenza, manutenzione e supporto specialistico. Non è cloud. Il prodotto è Fortinet (EXTRA-UE, USA)."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  false,
+  false,
+  false
+ ],
+ "valida": true
+}

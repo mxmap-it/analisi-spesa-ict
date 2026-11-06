@@ -1,0 +1,18 @@
+{
+ "cig": "B6F0825A3E",
+ "asse_a": {
+  "stato": "escluso-certo",
+  "e_cloud": "n",
+  "servizio": "servizi-professionali",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "non-applicabile",
+  "provider_prodotto": "",
+  "giurisdizione": "non-determinabile"
+ },
+ "confidenza": "media",
+ "fonte_primaria": false,
+ "motivazione": "Il CSA (680K caratteri) e l'Allegato A sistemi informativi (142K caratteri) non contengono alcun riferimento a cloud, SaaS, hosting, AWS, Azure o PSN. Il software Nettuno (gestionale tributi, 400 utenti interni) è descritto come applicazione on-premise modulare; il contratto copre servizi operativi di riscossione tributaria (non ICT) e sviluppo/manutenzione SW on-premise, entrambi non cloud.",
+ "modello": "claude-sonnet"
+}

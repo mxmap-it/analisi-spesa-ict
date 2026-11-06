@@ -1,0 +1,42 @@
+{
+ "cig": "B22A58B285",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "937a31ab125997735385132a0258d156e21a867c6050f23399a7aff13c83ac29",
+ "quando": "2026-11-06T13:09:54+00:00",
+ "uscita": {
+  "cig": "B22A58B285",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "lavori-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZIO DI GESTIONE E MANUTENZIONE DEGLI IMPIANTI TERMICI COMPRENSIVO DELLA FORNITURA DI ENERGIA TERMICA; SERVIZIO DI GESTIONE E MANUTENZIONE DEGLI IMPIANTI ELETTRICI ED ELETTRICO SPECIALI COMPRENSIVO DELLA FORNITURA DI ENERGIA ELETTRICA; SERVIZIO DI GESTIONE E MANUTENZIONE DEGLI IMPIANTI DI CLIMATIZZAZIONE; SERVIZIO DI GESTIONE E MANUTENZIONE DEGLI IMPIANTI IDRICO-SANITARI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda esclusivamente gestione e manutenzione di impianti termici, elettrici, di climatizzazione e idrico-sanitari, con fornitura di energia. È un contratto di facilities management, completamente fuori dal perimetro ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  false
+ ],
+ "valida": false
+}

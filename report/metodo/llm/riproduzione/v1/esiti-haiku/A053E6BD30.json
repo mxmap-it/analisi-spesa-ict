@@ -4,7 +4,7 @@
  "fornitore": "claude-cli",
  "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
  "ingresso_sha256": "e23040a3683f5a435c3f41031d01e0f50fb7884ce8d85711b78b9f95ce40c51a",
- "quando": "2026-11-06T12:20:29+00:00",
+ "quando": "2026-11-06T13:01:39+00:00",
  "uscita": {
   "cig": "A053E6BD30",
   "asse_a": {
@@ -15,11 +15,11 @@
   },
   "asse_b": {
    "stato": "incerto",
-   "provider_prodotto": "ignoto",
+   "provider_prodotto": "ignota",
    "giurisdizione": "ignota"
   },
   "dipendenze_tecnologiche": [],
-  "confidenza": "alta",
+  "confidenza": "media",
   "prove": [
    {
     "sha256": "oggetto-bdncp",
@@ -28,12 +28,12 @@
    }
   ],
   "deduzioni": [
-   "Gli aggiudicatari (Engineering, Leonardo, SMI) sono integratori/consulenti, non provider di infrastruttura",
-   "La convenzione Consip riconduce a un provider cloud non specificato nell'oggetto"
+   "Engineering è integratore/system integrator italiano, non provider infrastrutturale del prodotto cloud",
+   "La convenzione Consip per IaaS/PaaS comprende più provider (Microsoft, AWS, Google, Aruba); il provider specifico non è identificabile dal solo oggetto"
   ],
   "documenti_non_pertinenti": [],
-  "documento_risolutivo": "Convenzione Consip LOTTO 10 o capitolato tecnico che identifichi il provider della piattaforma IaaS/PaaS",
-  "motivazione": "L'oggetto nomina esplicitamente 'IAAS & PAAS', servizi cloud per definizione. Il provider della piattaforma non è identificato: potrebbe essere un operatore internazionale (Microsoft, AWS, Google, Oracle) o italiano (Aruba, TIM, PSN)."
+  "documento_risolutivo": "Disciplinare di gara, capitolato tecnico o determina di affidamento che nomini il provider cloud utilizzato (es. Microsoft Azure, AWS, Google Cloud, Aruba Cloud)",
+  "motivazione": "L'oggetto nomina esplicitamente «IAAS & PAAS», dunque è cloud per certo. Tuttavia, senza documenti che specifichino l'infrastruttura cloud e il suo provider, non è possibile determinare la giurisdizione del prodotto."
  },
  "errori_schema": [],
  "prove_letterali": [

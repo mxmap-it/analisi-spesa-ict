@@ -1,0 +1,42 @@
+{
+ "cig": "B14D34FA9B",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "d5b17ae219119153dfa94bd16aa7f706bce10a8161cb02f9b7efeffa644d45a1",
+ "quando": "2026-11-06T13:06:46+00:00",
+ "uscita": {
+  "cig": "B14D34FA9B",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZIO DI MANUTENZIONE CORRETTIVA E RIPARAZIONE DEI COMPONENTI DELLE PARTI DI SISTEMA DELLA LINEA 1 DELLA METROPOLITANA (LIV.3), PER LA GESTIONE DELLE OBSOLESCENZE, PER LA MANUTENZIONE DI LIV. 1 E 2 DEI SISTEMI INFORMATICI E PER IL SUPPORTO DI INTERFACCIA CON IL NUOVO SISTEMA DI SEGNALAMENTO DELLA LINEA"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Contratto per manutenzione correttiva e riparazione di infrastrutture della metropolitana di Torino, inclusa manutenzione di sistemi informatici integrati. Non è un servizio cloud: è manutenzione di infrastrutture critiche ferroviarie, quindi escluso dall'analisi della spesa cloud."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

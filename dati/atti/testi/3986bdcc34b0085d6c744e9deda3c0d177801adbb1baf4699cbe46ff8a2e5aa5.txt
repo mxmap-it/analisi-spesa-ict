@@ -1,0 +1,665 @@
+                                              ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                               Direzione generale dell’innovazione e sicurezza it
+                                                                           Servizio Agenda Digitale
+
+
+
+
+APPALTO SPECIFICO INDETTO DALLA REGIONE AUTONOMA DELLA SARDEGNA PER
+L’UPGRADE, L’ADEGUAMENTO E IL RINNOVO DELLE INFRASTRUTTURE DEL DATACENTER
+REGIONALE (SITO 1) E L’IMPLEMENTAZIONE DI UN SECONDO SITO DI EROGAZIONE DEI
+SERVIZI PER LA BUSINESS CONTINUITY NONCHÈ LA FORNITURA DI LICENZE D'USO
+ARCGIS, NELL’AMBITO DELLA PROCEDURA NEGOZIATA EX ART. 76 COMMA 6 D.LGS 36/2023
+(RIPETIZIONE SERVIZI ANALOGHI) PER LA FORNITURA DI PRODOTTI E SERVIZI PER
+L'INFORMATICA E LE TELECOMUNICAZIONI
+
+
+                PROGRAMMA REGIONALE SARDEGNA FESR 2021-2027
+        CUP Master E26G24000130006 - Potenziamento del data center regionale
+                                      BC01-CD01
+   INTERVENTO “Potenziamento del data center regionale e licenze GIS - Sistema SITR”
+                             SDAPA ICT CONSIP - 4913949
+
+
+                            CUP Master E26G24000130006
+
+
+                                        Lotto 2
+
+
+                                   CIG B4A9195A54
+
+
+
+
+                             CAPITOLATO SPECIALE
+                                                                    ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                                      ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                                     Direzione generale dell’innovazione e sicurezza it
+                                                                                                 Servizio Agenda Digitale
+
+
+
+
+INDICE
+1     PREMESSA .................................................................................................................. 3
+
+2     DEFINIZIONI ................................................................................................................ 3
+
+3     OGGETTO DELL’APPALTO ............................................................................................ 3
+
+4     CARATTERISTICHE TECNICHE GENERALI DELLA FORNITURA ......................................... 4
+    4.1     STORAGE: Fornitura di sistemi di archiviazione dati ad alta affidabilità ............................. 4
+
+5     MODALITÀ DI ESECUZIONE DELLA FORNITURA ............................................................ 6
+    5.1     Pianificazione, consegna, configurazione, verifica qualità dei prodotti hardware ............... 6
+    5.2     Pianificazione, consegna, configurazione, verifica qualità dei prodotti software ................ 8
+
+6     DOCUMENTI DI PROGETTO ......................................................................................... 9
+    6.1     Piano operativo di fornitura ........................................................................................... 10
+    6.2     Piano delle verifiche di conformità ................................................................................. 10
+    6.3     Manuali tecnici e documenti relativi alla configurazione e installazione degli apparati .... 10
+    6.4     Installazione, configurazione e messa in esercizio ........................................................... 10
+    6.5     Precisazioni sulla tecnologia e configurazione degli apparati ........................................... 11
+    6.6     Condizioni particolari di fornitura e accettazione ............................................................ 11
+    6.7     Variazioni in corso d’opera............................................................................................. 12
+
+7     GARANZIA ................................................................................................................ 12
+
+8     OBBLIGHI DEL FORNITORE ........................................................................................ 13
+
+9     RESPONSABILE DELLA FORNITURA ............................................................................ 13
+
+10        PENALI................................................................................................................... 14
+                                                       ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                         ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                        Direzione generale dell’innovazione e sicurezza it
+                                                                                    Servizio Agenda Digitale
+
+
+
+
+1    PREMESSA
+Il presente documento costituisce il Capitolato Speciale della gara d’appalto finalizzata all’acquisizione
+di STORAGE: sistemi di archiviazione dati ad alta affidabilità e prestazioni. CIG B4A9195A54.
+La procedura di gara sarà espletata attraverso la piattaforma AcquistinretePA nel rispetto delle norme
+di aggiudicazione dei contratti sopra soglia con procedura negoziata senza previa pubblicazione di un
+bando di gara ai sensi dell’art. 76 comma 6 del d.lgs. n. 36/2023.
+
+
+
+
+2    DEFINIZIONI
+Nell’ambito del presente Capitolato tecnico, si intende per:
+
+
+•   Aggiudicatario o Fornitore: l’Operatore Economico che all’esito della presente procedura di gara
+    risulterà Aggiudicatario;
+•   Atti di gara: il presente Capitolato Speciale, il Disciplinare di gara, lo Schema di Contratto e i relativi
+    allegati;
+•   Committente: la Giunta Regionale ed altri Enti della Regione Sardegna;
+•   Contratto: l’atto che all’esito della presente procedura di gara, la Stazione Appaltante stipula con
+    l’Aggiudicatario, conformemente all’Allegato 3 al Disciplinare di gara – Schema di Contratto;
+•   Ordine di consegna: il documento con il quale verrà comunicato al Fornitore il quantitativo dei
+    prodotti richiesti, nonché la Sede di Consegna;
+•   Sede di Consegna: luogo fisico in cui è prevista la consegna della fornitura;
+•   Specifiche Tecniche: insieme delle caratteristiche tecniche e merceologiche esplicitate nel
+    Capitolato Speciale, che l’Aggiudicatario deve rispettare.
+•   Stazione Appaltante: la Direzione Regionale dell’Innovazione e Sicurezza IT della Regione
+    Sardegna – Servizio Sistemi;
+•   Punti Ordinanti: la Direzione Regionale dell’Innovazione e Sicurezza IT della Regione Sardegna.
+
+
+
+
+3    OGGETTO DELL’APPALTO
+L’appalto ha ad oggetto la fornitura di sistemi di archiviazione dati ad alta affidabilità e prestazioni già in
+uso presso l’Amministrazione regionale, dettagliatamente riportati nel paragrafo successivo.
+L’intervento è finalizzato a garantire l’implementazione di una soluzione integrata e completa che
+risponda alle esigenze tecniche e i servizi indicati nei paragrafi successivi che garantiscano l’esecuzione
+di forniture complete, assemblate, collaudate e funzionanti.
+L’oggetto dell’appalto si intende comprensivo di tutte le attività necessarie a garantire la corretta
+esecuzione della fornitura come descritte nel Capitolato Speciale, ed in particolare del trasporto e la
+                                                         ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                           ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                          Direzione generale dell’innovazione e sicurezza it
+                                                                                      Servizio Agenda Digitale
+
+
+
+
+consegna dei prodotti, nel rispetto dei termini previsti dai successivi paragrafi 5 e 6, nonché la garanzia
+nel rispetto di quanto previsto dal successivo paragrafo 4.
+I prezzi offerti indicati dovranno comprendere gli oneri di consegna, intesi come tutti i corrispettivi relativi
+al trasporto ed alla consegna dei prodotti nonché ogni onere relativo ad imballaggio, trasporto, carico,
+scarico, consegna a livello stradale o al piano, con o senza montacarichi, qualsiasi altra attività ad essa
+strumentale, nonché gli oneri di installazione fisica, configurazione e messa in esercizio dei prodotti /
+servizi.
+
+
+
+
+4     CARATTERISTICHE TECNICHE GENERALI DELLA FORNITURA
+Nel seguente capitolo si descrive l’intervento atteso che l’aggiudicatario dovrà erogare nell’ambito del
+presente appalto.
+
+4.1    STORAGE: Fornitura di sistemi di archiviazione dati ad alta affidabilità
+L’intervento prevede la fornitura di STORAGE: sistemi di archiviazione dati ad alta affidabilità e
+prestazioni già in uso presso l’Amministrazione regionale, riportati nel file excel denominato
+Allegato B – Specifiche tecniche”
+
+
+
+Le caratteristiche tecniche, così come definite e indicate nel presente Capitolato Speciale, devono
+essere necessariamente possedute dai prodotti offerti, a pena di esclusione dalla gara.
+Le apparecchiature informatiche dovranno essere nuove di fabbrica, non ricondizionate per cui il
+primo acquirente è la Giunta Regionale e\o Altri Enti della Regione Sardegna (rif. Punto Ordinante),
+della migliore qualità, di recente progettazione e pervenire da primari marchi internazionali riconosciuti
+(al fine di garantire il massimo livello di garanzia della qualità del prodotto), ed in nessun caso
+potranno essere offerti prodotti assemblati con autocertificazioni fornite dal produttore e/o privi delle
+necessarie certificazioni di qualità e ambientali fornite da Enti neutrali riconosciuti per legge, nonché
+possedere tutti i requisiti necessari per il loro corretto utilizzo.
+Tutte le apparecchiature dovranno essere perfettamente funzionanti ed esenti da vizi e/o danni. Le
+stesse dovranno essere consegnate alla Committente già assemblate e l’assemblaggio dovrà essere
+effettuato in fabbrica.
+Le apparecchiature dovranno altresì essere di attuale produzione e conformi alle vigenti disposizioni in
+materia antinfortunistica.
+Tutte le apparecchiature dovranno essere alimentate direttamente con la tensione erogata
+attualmente in Italia, conformi alle normative CEI (Comitato Elettronico Italiano) o ad altre disposizioni
+internazionali relative alla compatibilità elettromagnetica, munite di uno dei marchi di certificazione
+riconosciuti da tutti i paesi dell’Unione Europea (CE) nel suo complesso.
+                                                           ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                             ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                            Direzione generale dell’innovazione e sicurezza it
+                                                                                        Servizio Agenda Digitale
+
+
+
+
+L’Appaltatore, considerato l’invecchiamento tecnologico e la costante diminuzione dei prezzi, deve
+procedere alla fornitura e installazione dell'hardware e del software più recente disponibile in
+commercio alla data di effettiva fornitura, a costi equivalenti.
+Le forniture dovranno essere comprensive degli accessori necessari al funzionamento (cavi,
+adattatori, ecc.).
+La Stazione Appaltante avrà la facoltà, qualora ritenuto necessario, in fase di valutazione delle Offerte
+tecniche, di chiedere alle aziende concorrenti la presentazione di opportuna ulteriore documentazione
+attestante la sussistenza di tutti i suddetti requisiti.
+
+
+Conformità alle norme
+
+
+Tutte le apparecchiature dovranno essere conformi agli standard di comunicazione e dovranno essere
+fornite delle assicurazioni di qualità, sicurezza, ergonomia come previsto dalla normativa italiana ed
+europea in vigore. Le attrezzature informatiche dovranno essere certificate e conformi alle direttive UNI
+EN ISO 9001-2015 o altre norme successive e aggiornate.
+
+Tutte le apparecchiature dovranno essere conformi alle norme vigenti in campo nazionale e comunitario
+per quanto attiene le autorizzazioni alla produzione, alla importazione ed alla immissione in commercio
+e all’uso e dovranno rispondere ai requisiti previsti dalle disposizioni vigenti in materia all’atto dell’offerta
+nonché ad ogni altro eventuale provvedimento emanato durante la fornitura e rispondere a prescrizioni
+tecniche che definiscono aspetti qualitativi essenziali del prodotto e che definiscono la capacità tecnica
+del fabbricante.
+
+Le apparecchiature devono altresì essere provviste della marcatura CE in ottemperanza alle Direttive
+Comunitarie applicabili per il settore di riferimento.
+Le compatibilità di cui al presente paragrafo dovranno essere provate mediante uno dei seguenti modi:
+         •   dichiarazione di conformità alle norme CEI ed UNI applicabili, rilasciata dal costruttore,
+             redatta secondo i criteri definiti dalla norma europea UNI CEI EN ISO/IEC 17050-1 e UNI
+             CEI EN ISO/IEC 17050-2, corredata da documentazione tecnica digitale e fascicolo tecnico
+             aggiornato;
+         •   copia del certificato di conformità alle norme CEI e/o UNI applicabili (o equivalenti
+             CENELEC e/o CEN) rilasciato da organismi accreditati nazionali o internazionali.
+I requisiti indicati rappresentano le caratteristiche minime previste e potranno essere derogate
+esclusivamente nel caso in cui i prodotti offerti presentino caratteristiche inequivocabilmente migliorative
+rispetto alle suddette specifiche.
+                                                       ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                         ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                        Direzione generale dell’innovazione e sicurezza it
+                                                                                    Servizio Agenda Digitale
+
+
+
+
+ 5     MODALITÀ DI ESECUZIONE DELLA FORNITURA
+
+5.1    Pianificazione, consegna, configurazione, verifica qualità dei prodotti hardware
+
+
+Sono a carico del fornitore le attività di trasporto e consegna dei prodotti nei luoghi e nei locali indicati
+dalla Stazione Appaltante e si intendono comprensive di ogni relativo onere e spesa, ivi compresi a
+titolo meramente esemplificativo e non esaustivo, quelli di imballaggio, facchinaggio, eventuale asporto
+dell’imballaggio. L’asporto dell’imballaggio deve essere effettuato in conformità a quanto previsto dal
+D.Lgs. n.152/2006 e s.m.i.
+
+La consegna dovrà essere effettuata presso due sedi individuate dalla Stazione Appaltante,
+dislocate sul territorio regionale.
+
+Tutti i prodotti dovranno essere confezionati in modo da garantirne l’integrità e la corretta conservazione
+durante le fasi di trasporto.
+
+La consegna della fornitura oggetto della procedura di gara dovrà essere garantita entro 30 (trenta)
+giorni solari dalla trasmissione dell’Ordine di consegna da parte del Punto Ordinante, pena
+l’applicazione delle penali dettagliate al par. 11.
+
+I termini di consegna, anche ai fini dell’eventuale applicazione delle penali, decorreranno dal giorno
+lavorativo successivo alla data di trasmissione del Contratto da parte dell’Aggiudicatario.
+
+I prodotti consegnati devono essere conformi all’Ordinativo trasmesso dal Punto Ordinante. Nel caso di
+consegna non conforme, la consegna non sarà accettata dall’Amministrazione, la quale invierà una
+contestazione via PEC al Fornitore, che dovrà adempiere entro 5 (cinque) giorni lavorativi, pena
+l’applicazione delle penali di cui al par. 11 per consegna non conforme si intende anche la consegna di
+un quantitativo di prodotti inferiore a quello richiesto nell’Ordine di consegna.
+La presa in carico della fornitura, consegnata presso i locali del Punto Ordinante, avverrà con
+accettazione provvisoria che potrà avvenire una volta completate le consegne di tutte le componenti di
+fornitura e accertate le corrispondenze in termini di marca/modello e quantità dei componenti oggetto di
+fornitura.
+Entro 30 (trenta) giorni lavorativi dalla data di consegna della fornitura, si provvederà all’esecuzione
+delle verifiche di conformità e definitiva accettazione e presa in carico su avvenuto accertamento ed
+esito positivo di regolare esecuzione della fornitura e servizi in tutte le sue parti ed elementi.
+La Stazione Appaltante provvederà a comunicare formalmente al Fornitore la data fissata per
+l’esecuzione dei test di verifica e di accettazione; in tale data, alla presenza dei referenti/responsabili
+della Stazione Appaltante e del rappresentante dell'Aggiudicatario o suo delegato, si procederà
+all’esame della conformità della fornitura e delle prestazioni.
+                                                         ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                           ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                          Direzione generale dell’innovazione e sicurezza it
+                                                                                      Servizio Agenda Digitale
+
+
+
+
+Le verifiche sono tese ad accertare:
+         •    la rispondenza, per ciascuno dei componenti oggetto di fornitura, a tutte le specifiche
+              richieste e ai dimensionamenti minimi;
+         •    la regolare esecuzione delle fasi di consegna;
+         •    l'avvenuto rilascio di tutte le richieste certificazioni e delle garanzie (compresi i tempi di
+              validità); • la registrazione dei prodotti presso i vari produttori e/o il rilascio dei codici di
+              accesso per le rispettive registrazioni;
+         •    l'avvenuto rispetto dei termini di scadenza posti per l'esecuzione della fornitura e
+              completamento delle attività;
+         •    l'assenza di danni
+Nel caso in cui la fornitura non superi in tutto o in parte l'esame di conformità, l’Aggiudicatario è obbligato
+a provvedere alla risoluzione delle difformità riscontrate e a stabilire le condizioni di collaudabilità e
+corretto funzionamento della fornitura entro 2 (due) giorni lavorativi, periodo al termine del quale si
+provvederà all’esecuzione di nuovo esame di conformità.
+L’esecuzione di interventi correttivi, necessari a garantire la collaudabilità ed il regolare funzionamento
+della fornitura, non sospende i tempi contrattualmente previsti per il completamento e regolare
+esecuzione della fornitura e potrà comunque dare adito all’applicazione di penali. Nel caso di secondo
+esito negativo, conseguente alle verifiche di conformità e regolare funzionamento, la Stazione
+Appaltante ha facoltà di dichiarare la risoluzione di diritto del contratto.
+Al termine delle sessioni di verifica, sarà redatto, in contraddittorio con i rappresentanti dell'affidatario,
+apposito verbale che ne conterrà l’esito.
+Il verbale di verifica di conformità, con esito positivo, determina l’accettazione definitiva delle prestazioni
+e il diritto al pagamento del saldo del corrispettivo.
+Le consegne dovranno essere effettuate presso la sede indicata dalla Committente, durante gli orari di
+apertura delle stesse nelle quantità richieste.
+Ogni consegna dovrà essere accompagnata da regolare Documento di trasporto che deve
+obbligatoriamente indicare le seguenti informazioni:
+     • Il seguente riferimento: “Appalto specifico indetto dalla Regione Autonoma della Sardegna per la
+realizzazione di un nodo di business continuity / disaster recovery del data center regionale e la fornitura
+di licenze d'uso GIS, nell’ambito del sistema dinamico di acquisizione della pubblica amministrazione
+per la fornitura di prodotti e servizi per l'informatica e le telecomunicazioni - Lotto n. 2”
+     • CIG del lotto di riferimento;
+     • la data e il luogo dell'avvenuta consegna, corrispondente a quello indicato nell'Ordinativo;
+     • il numero di protocollo e la data di ricezione dell'Ordine di consegna;
+     • codice fiscale ovvero la Partita IVA del Fornitore;
+     • l'elenco dettagliato delle apparecchiature consegnate con l'indicazione di:
+          ➢ codice prodotto;
+                                                      ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                        ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                       Direzione generale dell’innovazione e sicurezza it
+                                                                                   Servizio Agenda Digitale
+
+
+
+
+          ➢ descrizione e marca dell'apparecchiatura e degli eventuali accessori a corredo;
+
+          ➢ quantità;
+          ➢ numero identificativo del lotto di produzione.
+L’originale del Documento di trasporto ovvero una sua copia dovrà essere rilasciato al Committente che
+lo sottoscrive per accettazione.
+I dati relativi alla fornitura dovranno essere consegnati anche alla Stazione appaltante mediante
+foglio di calcolo elettronico via PEC.
+Il piano di consegna dovrà rispettare le modalità e le tempistiche indicate; a tale scopo il fornitore dovrà
+prendere contatti anticipatamente alla data prevista per l’arrivo e scarico del materiale oggetto di
+fornitura, nonché predisporre la documentazione di identificazione e inventario della fornitura con
+associato elenco di verifica e di spunta con cui si provvederà alla verifica di corrispondenza alla
+consegna dei beni di quanto definito nel presente Capitolato;
+Nel caso in cui la consegna non dovesse essere espletata direttamente dal Fornitore, ma operata
+tramite trasportatore e/o corriere, la ricezione degli imballi ed il provvisorio stoccaggio presso i locali
+della Stazione Appaltante saranno consentiti esclusivamente previa formale comunicazione anticipata
+(indicante Nome del Corriere/Trasportatore, data e ora prevista di consegna);
+La Stazione Appaltante si riserva di accettare consegne parziali e/o compiute in più fasi solo
+subordinatamente      ad    opportuna    giustificazione     e     comunicazione                     preventiva             da   parte
+dell’Aggiudicatario, laddove siano difformi dalle indicazioni del presente Capitolato.
+
+
+
+5.2   Pianificazione, consegna, configurazione, verifica qualità dei prodotti software
+
+L’Operatore Economico dovrà assicurare la fornitura di servizi di espansione software di
+virtualizzazione, che comprendano diversi elementi essenziali per l'ottimizzazione delle risorse
+informatiche.
+Le Licenze dovranno essere relative all’ultima versione software disponibile alla Data di Consegna. Tali
+Licenze dovranno, inoltre, essere originali e conformi a quanto dichiarato nella documentazione relativa
+al codice prodotto specifico (guide, manuali o altra idonea documentazione descrittiva della funzionalità
+del prodotto).
+Il software di virtualizzazione e back-up in Licenza d’uso dovrà essere disponibile nella versione che
+includerà non solo tutte le correzioni ai malfunzionamenti ma anche tutte le funzioni, rilasciate
+ufficialmente dal Produttore, che migliorano la disponibilità del servizio e le prestazioni.
+Unitamente alle licenze, è resa disponibile la manutenzione del software la cui durata e le cui
+caratteristiche sono descritte nei successivi paragrafi.
+La consegna della fornitura oggetto della procedura di gara dovrà essere garantita entro 30 (trenta)
+giorni solari dalla trasmissione dell’Ordine di consegna da parte del Punto Ordinante, pena
+l’applicazione delle penali di cui al successivo par. 9.
+                                                         ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                           ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                          Direzione generale dell’innovazione e sicurezza it
+                                                                                      Servizio Agenda Digitale
+
+
+
+
+L’Amministrazione procederà alla verifica di conformità della fornitura. Tale verifica dovrà essere
+effettuata non appena l’Amministrazione abbia ricevuto l’e-mail di consegna e comunque entro e non
+oltre 5 (cinque) giorni solari dalla Data di consegna e riguarderà la corrispondenza del software
+disponibile rispetto a quanto ordinato.
+In caso di esito negativo della verifica di conformità, qualora il software non sia rispondente a quanto
+ordinato, il Fornitore si impegna, ora per allora e senza alcun onere aggiuntivo per l’Amministrazione, a
+rendere disponibile, ai fini della ulteriore verifica di conformità, il software effettivamente richiesto entro
+il termine perentorio di 10 (dieci) giorni solari decorrenti dalla data di comunicazione di non conformità,
+pena l’applicazione delle penali di cui al par. 9.
+Contestualmente alle verifiche di conformità relative alle licenze d’uso, l’Amministrazione effettuerà le
+verifiche di conformità per l’attivazione della manutenzione del software.
+Nel caso di esito positivo della verifica di conformità rispetto alla fornitura delle licenze,
+l’Amministrazione provvederà a redigere apposito verbale, la cui data verrà considerata quale Data di
+Accettazione della fornitura.
+Resta ferma, in ogni caso, la possibilità di effettuare controlli a campione con modalità comunque idonee
+a garantire la verifica dell’esecuzione contrattuale. La Amministrazione potrà altresì effettuare unilaterali
+verifiche, anche in corso d’opera, per l’accertamento della conformità delle forniture.
+L’Amministrazione dovrà dare comunicazione dell’esito delle suddette verifiche di conformità al
+Fornitore mediante e-mail al Contact Center dedicato.
+
+
+
+
+6      DOCUMENTI DI PROGETTO
+
+
+Si riporta di seguito un elenco minimale dei deliverable che dovranno essere predisposti
+dall’Aggiudicatario e approvati dall’Amministrazione.
+
+ Attività        ID       Deliverable
+
+                 GP1      Piano operativo di fornitura
+
+ Gestione        GP2      Piano delle verifiche di conformità
+ del progetto
+                          Manuali tecnici e documenti relativi alla configurazione e installazione degli
+                 GP3
+                          apparati
+Durante l’esecuzione del contratto l’Amministrazione potrà effettuare tutte le verifiche ritenute opportune
+allo scopo di controllare il rispetto di quanto stabilito nei Piani sopra citati.
+Si precisa, inoltre, che i documenti dovranno essere prodotti in lingua italiana, fatta eccezione per la
+documentazione di prodotto che, se non disponibile, potrà essere consegnata in lingua inglese.
+                                                         ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                           ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                          Direzione generale dell’innovazione e sicurezza it
+                                                                                      Servizio Agenda Digitale
+
+
+
+
+6.1    Piano operativo di fornitura
+
+
+Nel Piano operativo dovranno essere specificate le date di consegna di ogni deliverable nel rispetto di
+quanto richiesto nel presente Capitolato.
+In particolare, il Piano operativo dovrà contenere:
+il cronoprogramma di dettaglio;
+le interfacce organizzative e tecniche;
+gli indicatori da utilizzare per misurare lo stato di avanzamento e il calendario programmato per la
+presentazione di deliverable e lo svolgimento di riesami e verifiche;
+le principali milestone, vale a dire i momenti a cui corrispondono fatti rilevanti dal punto di vista
+gestionale e che costituiscono dei punti di controllo essenziali per la verifica del corretto avanzamento
+dei lavori;
+la stima dei costi di ogni attività (unità di lavoro);
+le assegnazioni di responsabilità per ciascuna attività.
+Il Piano operativo dovrà essere accompagnato dal Piano di fatturazione.
+
+
+
+6.2    Piano delle verifiche di conformità
+
+
+Il Piano delle verifiche di conformità dovrà essere predisposto dall’Aggiudicatario e consegnato
+all’Amministrazione. Tale documento deve contenere le metodologie e i tempi previsti per le verifiche
+della conformità delle prestazioni eseguite, in termini di forniture e servizi, alle prescrizioni contrattuali.
+Nell’esecuzione della fornitura l’Aggiudicatario dovrà tenere costantemente aggiornati i piani suddetti.
+
+
+
+6.3    Manuali tecnici e documenti relativi alla configurazione e installazione degli apparati
+
+
+È onere dell’Aggiudicatario produrre tutta la documentazione, rilasciare le copie del software, i manuali
+tecnici dei prodotti, gli schemi riferiti alle attività di installazione e configurazione condotte per la
+consegna, configurazione, test e messa in esercizio delle forniture.
+Si precisa che, se non disponibile, tale documentazione potrà essere consegnata in lingua inglese.
+
+
+
+6.4    Installazione, configurazione e messa in esercizio
+
+
+L’installazione delle apparecchiature oggetto dell’appalto, secondo i requisiti tecnici e di
+dimensionamento specificati, deve essere svolta “rack and stack” e ricomprendere, dunque,
+l'assemblaggio, il montaggio, il cablaggio e la configurazione iniziale di server, dispositivi di storage,
+switch di rete e altri componenti hardware all'interno dei rack del data center.
+                                                       ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                         ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                        Direzione generale dell’innovazione e sicurezza it
+                                                                                    Servizio Agenda Digitale
+
+
+
+
+omnicomprensiva di tutti i necessari componenti, accessori, cablaggi, supporti, viti e bullonerie, driver,
+manualistica a corredo e quant'altro necessario per renderla completa, funzionante, nonché pienamente
+rispondente alle specifiche del presente Capitolato.
+Restano a carico del Fornitore l'identificazione, la consegna di tutti i necessari componenti atti a
+consentire la messa in esercizio ed il regolare funzionamento dei sistemi richiesti (anche se non
+analiticamente specificati nelle tabelle di configurazione e dimensionamento di cui sopra).
+
+
+
+6.5    Precisazioni sulla tecnologia e configurazione degli apparati
+
+
+Tutti i prodotti oggetto di fornitura devono essere puntualmente identificati dal fornitore con marca e
+modello all’atto di formulazione dell’offerta. Gli stessi dovranno essere registrati e rintracciabili sul sito
+web ufficiale del produttore a cui la stazione appaltante dovrà poter accedere direttamente per il
+download di patch, documentazione tecnica, FAQ.
+L’identificazione dei componenti oggetto di fornitura deve essere fatta e proposta dal fornitore all’atto
+della presentazione dell’offerta, e deve essere completa e dettagliata al fine di comprovare la validità
+dell’offerta stessa dal punto di vista infrastrutturale e tecnologico rispetto alle specifiche descritte nel
+presente documento.
+
+
+
+6.6    Condizioni particolari di fornitura e accettazione
+
+
+Nell'espletamento della fornitura e ai fini della piena accettazione da parte della Stazione Appaltante,
+dovranno essere soddisfatte le seguenti ulteriori condizioni:
+I prodotti forniti devono presentare caratteristiche almeno pari o superiori alle specifiche indicate nelle
+schede descrittive di dettaglio riportate al paragrafo 4;
+I prodotti oggetto di fornitura dovranno essere già identificati (in termini di marca, modello, codice e
+dotazioni accessorie comprese in fornitura) all'atto della presentazione dell'offerta stessa; in caso di
+omessa o solo parziale indicazione del dettaglio descrittivo, la Stazione Appaltante assumerà comunque
+ad oggetto di offerta quanto precisamente identificato dai codici prodotto definiti dal presente documento
+e provvederà ad aggiudicare l’appalto solo dopo aver univocamente accertato le caratteristiche precise
+e la chiara identificazione dei prodotti offerti;
+Eventuali prodotti che hanno costituito oggetto dell'offerta e che dovessero non risultare più presenti nel
+listino ufficiale del produttore all'atto dell'aggiudicazione e/o di consegna della fornitura, dovranno
+essere sostituiti, senza alcun costo aggiuntivo per la Stazione Appaltante, con prodotti analoghi del
+medesimo       costruttore e dovranno presentare caratteristiche uguali o superiori e mantenere
+compatibilità e garanzia di integrazione con le dotazioni esistenti qualora trattasi di moduli di upgrade;
+                                                          ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                            ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                           Direzione generale dell’innovazione e sicurezza it
+                                                                                       Servizio Agenda Digitale
+
+
+
+
+Tutti i prodotti oggetto di fornitura dovranno essere originali, nuovi di fabbrica, non usati o rigenerati,
+recanti il marchio del costruttore e il marchio europeo CE.
+
+
+
+6.7    Variazioni in corso d’opera
+
+
+Non sono previste variazioni alle specifiche e ai dimensionamenti di cui all’elenco dei componenti definiti
+ad oggetto della fornitura.
+Qualora la Stazione Appaltante intenda avvalersi della facoltà di ordinare variazioni e varianti in corso
+di esecuzione, il relativo aumento o diminuzione del corrispettivo sarà calcolato sulla base dei prezzi
+risultanti dall’offerta economica dell’Aggiudicatario presentata in sede di procedura e - laddove non
+eventualmente possibile - con riferimento ad opportune valutazioni operate dalla Stazione Appaltante
+con riferimento a listini pubblici e l’applicazione di eventuale livello di sconto analogo a quanto
+eventualmente desumibile sulla base dell’offerta economica presentata in sede di gara
+dall’Aggiudicatario.
+L'Aggiudicatario non può introdurre variazioni alla fornitura affidata, non disposte dalla Stazione
+Appaltante; le modifiche non previamente autorizzate non danno titolo a pagamenti o rimborsi di sorta.
+L'Aggiudicatario è tenuto altresì a effettuare le varianti ordinate dalla Stazione Appaltante, nelle ipotesi,
+con i limiti e alle condizioni stabilite dalla legge.
+Per quanto riguarda l’eventuale aggiornamento tecnologico delle dotazioni offerte si fa integrale rinvio
+allo schema di Contratto.
+
+
+
+
+7      GARANZIA
+Tutti i prodotti oggetto di fornitura devono essere dotati di garanzia, rilasciata direttamente dal
+produttore, avente validità di almeno 24 mesi. Dovrà essere consegnato alla Stazione appaltante il
+codice di garanzia ufficiale rilasciato dal produttore.
+La garanzia dovrà garantire i seguenti SLA di intervento:
+apertura ticket, Lun.-Ven. 9:00-18:00 (esclusi i festivi);
+tempo d’intervento: 3 giorni
+Tutti i prodotti oggetto di fornitura dovranno essere registrati come specificato, a nome di Regione
+Sardegna, sul sito web del produttore a cui la stazione appaltante dovrà poter successivamente
+accedere direttamente per il download di patch, documentazione tecnica, FAQ.
+In caso di guasto e/o malfunzionamento accertato, che richieda la sostituzione del prodotto e/o
+componente, dovrà essere prevista per l’intera durata della garanzia la completa sostituzione. Esulano
+dalle sostituzioni in garanzia i soli prodotti e/o componenti che dovessero risultare danneggiati ad opera
+della Stazione Appaltante o impiegati in difformità alle modalità e condizioni specificate dai rispettivi
+manuali d’impiego.
+                                                       ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                         ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                        Direzione generale dell’innovazione e sicurezza it
+                                                                                    Servizio Agenda Digitale
+
+
+
+
+La sostituzione di apparati o componenti guasti e/o difettosi, ed eventuale fornitura di componenti di
+ricambio è da compiersi esclusivamente con componenti originali corrispondenti, di analogo modello,
+certificati anch’essi dal produttore come originali.
+Per tutta la durata della garanzia dovrà essere sempre assicurata la disponibilità del produttore a fornire
+supporto tecnico, tramite servizio di ricevimento segnalazioni guasti, operativo in modalità telefonica e
+via mail o web.
+Per assicurare il rispetto dei suddetti requisiti, il fornitore dovrà comprendere in offerta esclusivamente
+componenti la cui garanzia è rilasciata dal produttore. Il produttore potrà avvalersi di una propria rete di
+partner da esso certificati in grado di erogare, per conto del Fornitore o anche senza suo tramite, i servizi
+di garanzia sopra richiesti.
+
+
+
+
+8     OBBLIGHI DEL FORNITORE
+L’Operatore Economico Aggiudicatario si impegna a:
+rispettare tutte le clausole contrattuali e garantire l’esatto adempimento di tutti gli obblighi di cui al
+presente Capitolato;
+assicurare lo svolgimento della fornitura nel rispetto delle norme vigenti in materia di tutela della salute
+e della sicurezza nei luoghi di lavoro;
+impiegare personale adeguato, per numero e qualificazione professionale, all’ambito oggetto
+dell’Appalto;
+retribuire il personale dipendente in misura non inferiore a quella stabilita nel CCNL di categoria e ad
+assolvere tutti i conseguenti oneri, compresi quelli concernenti le norme previdenziali, assicurative e
+similari, aprendo le posizioni contributive presso le sedi degli Enti territorialmente competenti;
+assumersi ogni responsabilità ed oneri nei confronti della Regione o di terzi nei casi di mancata adozione
+di quei provvedimenti e/o azioni utili alla salvaguardia delle persone e degli strumenti coinvolti nella
+gestione della fornitura;
+assicurare lo svolgimento dell’attività nel rispetto delle norme vigenti in materia di trattamento dati e
+privacy.
+
+
+
+
+9          RESPONSABILE DELLA FORNITURA
+L’Aggiudicatario, all’atto della stipula del Contratto di fornitura, deve indicare al Committente il
+nominativo del soggetto responsabile della gestione dei rapporti contrattuali e della gestione della
+commessa che svolgerà il ruolo di interfaccia con l’Amministrazione per tutte le eventuali
+problematiche inerenti alle modalità di esecuzione del Contratto.
+                                                               ASSESSORADU DE SOS AFÀRIOS GENERALES, PERSONALE E REFORMA DE SA REGIONE
+                                                                 ASSESSORATO DEGLI AFFARI GENERALI, PERSONALE E RIFORMA DELLA REGIONE
+
+                                                                                Direzione generale dell’innovazione e sicurezza it
+                                                                                            Servizio Agenda Digitale
+
+
+
+
+In caso di sostituzione del Responsabile della Fornitura nel corso del Contratto, l’Aggiudicatario dovrà
+tempestivamente darne comunicazione all’Amministrazione, inviando congiuntamente i riferimenti del
+Responsabile della Fornitura proposto in sostituzione.
+
+
+
+
+10     PENALI
+L’Amministrazione Regionale, qualora riscontri una delle inadempienze contrattuali meglio dettagliate
+in seguito, potrà dar luogo all’applicazione delle penali come successivamente specificato.
+Il sistema di penali prevede sanzioni monetarie, anche mediante trattenute sui corrispettivi dovuti,
+relativi ad eventuali singoli inadempimenti rilevati.
+Di seguito si riportano le penali che saranno applicate in caso di inadempienze riscontrate durante
+l’esecuzione delle attività:
+ Inadempienza                              Penale
+
+                                           1‰ dell’importo contrattuale, per ogni giorno solare di ritardo rispetto ai termini
+ Ritardo nella consegna delle forniture    massimi stabiliti al precedente par. 5 per la consegna. La penale sarà applicata
+                                           anche in caso di consegna parziale.
+
+
+ Ritardo nella sostituzione dei prodotti   1‰ dell’importo contrattuale, per ogni giorno solare di ritardo nella sostituzione
+ a seguito di esito negativo della         dei prodotti a seguito di esito negativo di verifica di conformità ai sensi del par.
+ verifica di conformità                    4.1.1
+
+
+
+L’applicazione di tutte le penali di cui sopra avviene mediante detrazione delle somme dovute in
+seguito alla fatturazione periodica ed eventualmente, mediante prelievo dalla cauzione definitiva.
+La procedura di contestazione delle penali, nonché la percentuale massima applicabile, sono
+specificate nello Schema di Contratto.
+
+
+                                                                         Il Direttore del Servizio Agenda Digitale
+                                                                                                   Dott.ssa Francesca Murru
+

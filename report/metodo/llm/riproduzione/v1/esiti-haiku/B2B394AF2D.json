@@ -1,0 +1,54 @@
+{
+ "cig": "B2B394AF2D",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "77fa880f6184cd035121704de9e8b66c93c203d07a196382793795790988d35e",
+ "quando": "2026-11-06T13:13:28+00:00",
+ "uscita": {
+  "cig": "B2B394AF2D",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI E PRODOTTI PER IL RE-ARCHITECT IN CLOUD E LA TRASFORMAZIONE DIGITALE DEL SIL SARDEGNA"
+   },
+   {
+    "sha256": "4de28be9ee39820fe7f2890ad189bd576b1fbc157d1bd1f187ce4b7ea91ef254",
+    "pagina": null,
+    "citazione": "Servizi e prodotti per il Re-Architect in cloud e la trasformazione digitale del SIL Sardegna"
+   },
+   {
+    "sha256": "c48faa3bd9a4cd4ca074e141cdd8c54a44632d1253010fb3dba35b8065495a39",
+    "pagina": null,
+    "citazione": "GESTIONE DELLA PIATTAFORMA IN CLOUD"
+   }
+  ],
+  "deduzioni": [
+   "Avanade Italy S.r.l. è una divisione di Accenture specializzata in soluzioni Microsoft, suggerendo possibile cloud Azure, ma il provider non è esplicitato nel contratto fornito"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "Capitolato tecnico completo (Allegato 6 - Elaborati tecnici di progetto) con specifica della piattaforma cloud utilizzata (es. Azure, AWS, PSN, altro)",
+  "motivazione": "Il contratto riguarda il re-architecting e la gestione in cloud del Sistema Informativo del Lavoro (SIL) della Sardegna. L'asse A è incluso-certo: l'oggetto BDNCP, la determina di aggiudicazione e il capitolato confermano esplicitamente 'cloud' e descrivono servizi di gestione della piattaforma in cloud. L'asse B rimane incerto perché il provider cloud specifico (Azure, AWS, PSN, etc.) non è identificato nei documenti forniti."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true,
+  true,
+  true
+ ],
+ "valida": true
+}

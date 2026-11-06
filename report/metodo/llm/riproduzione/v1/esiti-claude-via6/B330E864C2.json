@@ -1,0 +1,18 @@
+{
+ "cig": "B330E864C2",
+ "asse_a": {
+  "stato": "escluso-certo",
+  "e_cloud": "n",
+  "servizio": "sanitario-non-ict",
+  "ict": "n"
+ },
+ "asse_b": {
+  "stato": "non-applicabile",
+  "provider_prodotto": "",
+  "giurisdizione": "non-determinabile"
+ },
+ "confidenza": "media",
+ "fonte_primaria": false,
+ "motivazione": "Contratto di servizio triennale con la società in-house Sanitaservice ASL BT per ausiliariato alberghiero, sanificazione e supporto tecnico-operativo al sistema informativo (CUP). CPV 90910000 = pulizie; le istruzioni indicano escluso-certo senza ricerche per servizi di pulizia. Confermato da articolo ottobre 2024: servizi sono sanificazione, pulizia, movimentazione, custodia e supporto tecnico al sistema informativo aziendale (on-premises). Falso positivo cpv-non-ict-testo-ict: la componente software CUP è manutenzione on-premises, non cloud.",
+ "modello": "claude-sonnet"
+}

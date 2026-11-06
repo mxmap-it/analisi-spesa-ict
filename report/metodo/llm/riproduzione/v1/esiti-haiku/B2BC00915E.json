@@ -1,0 +1,53 @@
+{
+ "cig": "B2BC00915E",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "95723f410db9b3e7003d8b720f47da3ec0de433dbb4a24103c2ac2e637f59a0e",
+ "quando": "2026-11-06T13:13:54+00:00",
+ "uscita": {
+  "cig": "B2BC00915E",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROCEDURA DI GARA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI REALIZZAZIONE DEL MODELLO DIGITALE DEL TERRENO NAZIONALE DA RILIEVO LIDAR AEREO E DEL DATABASE GRAVIMETRICO E MODELLO DEL CAMPO DELLA GRAVITÀ NAZIONALE"
+   },
+   {
+    "sha256": "8bc44250a781dc7dce16e7e1788535c68778bd0d44223e60aed7b3867a3654ae",
+    "pagina": null,
+    "citazione": "Affidamento del servizio di realizzazione del modello digitale del terreno nazionale da rilievo lidar aereo e del database gravimetrico e modello del campo della gravità nazionale"
+   }
+  ],
+  "deduzioni": [
+   "CPV 71354100-5 classifica il servizio come rilievi cartografici, non come infrastruttura cloud",
+   "Gli aggiudicatari (Compagnia Generale Riprese Aeree, E-GEOS, IRS, Geomatics Research & Development) sono specializzati in telerilevamento aereo/satellitare e geomatica, non fornitori di cloud computing"
+  ],
+  "documenti_non_pertinenti": [
+   "e22945c018b4ce0d7688371aa147bf5808bb1c0753d790b9974e6602aa453ddb (home page generica di InGaTe)"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto affida la realizzazione di rilievi cartografici lidar e la creazione di database e modelli digitali del terreno nazionale. È un servizio professionale di rilievo e elaborazione dati geografici, non un servizio cloud (SaaS/IaaS/PaaS). Il CPV 71354100-5 e i fornitori specializzati in telerilevamento confermano la natura del servizio."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true
+ ],
+ "valida": false
+}

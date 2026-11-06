@@ -1,0 +1,18 @@
+{
+ "cig": "B2B394AF2D",
+ "asse_a": {
+  "stato": "escluso-certo",
+  "e_cloud": "n",
+  "servizio": "servizi-professionali",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "non-applicabile",
+  "provider_prodotto": "",
+  "giurisdizione": "ignota"
+ },
+ "confidenza": "alta",
+ "fonte_primaria": true,
+ "motivazione": "Il capitolato speciale (pag.66) dichiara esplicitamente: 'La fornitura della piattaforma Cloud (CSP) è a carico dell'Amministrazione Regionale' e il GOC si interfaccia con il CSP 'attualmente rappresentato da AWS'. L'importo aggiudicato è €5.82M (il valore BDNCP di ~18.9M€ è verosimilmente il massimale di gara). Il contratto eroga servizi professionali di re-architecting e gestione applicativa/operativa (GAC/GOC) sulla piattaforma AWS della Regione, che è un contratto separato: e_cloud n, servizi-professionali.",
+ "modello": "claude-sonnet"
+}

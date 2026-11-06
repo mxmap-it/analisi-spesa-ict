@@ -1,0 +1,49 @@
+{
+ "cig": "B06B262288",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "2b5e807ce4497fd9e31d37b13140cb28983861e36b96a802ee3cbe6e36e51264",
+ "quando": "2026-11-06T13:02:34+00:00",
+ "uscita": {
+  "cig": "B06B262288",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI INFORMATICI PER L'EVOLUZIONE DI PIATTAFORME TECNOLOGICHE PER LA DIGITAL INNOVATION (LOTTO 2 GA23_006)"
+   }
+  ],
+  "deduzioni": [
+   "Gli aggiudicatari (Almaviva, KPMG, Bridgeplanet) sono società di consulenza e integrazione, non provider cloud.",
+   "L'oggetto generico 'evoluzione di piattaforme tecnologiche' potrebbe includere sviluppo, consulenza, integrazione o hosting, ma non è specificato."
+  ],
+  "documenti_non_pertinenti": [
+   "db740e497141e100260a3f782ea136fa442ca42ddcdd667685c5132b4362e727",
+   "0373e6c46afebd84f160845f7d3d9b93392106eff3f9d8901c6c45ceb22e6f59",
+   "a8795c5670f87911cc3f1096eb93787e0f741a7ee48f7e19adcf77cfe0480fbb",
+   "828470cdbd01f761f003715b0af3994908caf3e4dc504d2eef29d85301f17446",
+   "02fe0a66538431e7aa21703879941f404270e7518ff6e8c74665f6ce1dedfbf6"
+  ],
+  "documento_risolutivo": "Capitolato tecnico o determina di affidamento che specifichi quali servizi esattamente rientrano in 'evoluzione di piattaforme': sviluppo software, cloud, consulenza, integrazione, hosting.",
+  "motivazione": "L'oggetto BDNCP è vago e non distingue tra servizi di consulenza, sviluppo software, o infrastruttura cloud. I documenti forniti riguardano altre procedure (TED, amministrazione trasparente generica, Oracle licensing) e non chiariscono il contenuto specifico di questo lotto."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

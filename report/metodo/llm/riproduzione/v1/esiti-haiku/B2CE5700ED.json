@@ -1,0 +1,56 @@
+{
+ "cig": "B2CE5700ED",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "c76ad1776860ba01e7f02692953f41814f4cb81678ff217511f497d2dc34b324",
+ "quando": "2026-11-06T13:15:18+00:00",
+ "uscita": {
+  "cig": "B2CE5700ED",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "IMPIANTI RETE LAN | RICHIESTA PIANO ESECUZIONE DEFINITIVO PER AMPLIAMENTI E MESSA IN SICUREZZA RETE ASL"
+   },
+   {
+    "sha256": "8e8637f3ea47f1a2b1c24ed043b77dbb589da113c36b11b48c2de0f3aba0fbdd",
+    "pagina": null,
+    "citazione": "Gara Reti Locali 8 - fornitura di prodotti e di servizi per la realizzazione, manutenzione e gestione di Reti Locali - CPV 32410000-0, 32415000-5, 32420000-3, 32421000-0, 32510000-1, 32581000-9, 32581100-0"
+   }
+  ],
+  "deduzioni": [
+   "L'oggetto 'IMPIANTI RETE LAN' con 'AMPLIAMENTI E MESSA IN SICUREZZA RETE' descrive infrastruttura di rete on-premise, non servizi cloud",
+   "Il CPV 32412100-5 (Cablaggio per le telecomunicazioni) e i CPV della Gara Consip Reti Locali 8 indicano equipaggiamenti hardware di telecomunicazioni e servizi di installazione/manutenzione on-site",
+   "Vodafone Italia è aggiudicataria dell'RTI per il tender Consip Reti Locali 8, ma potrebbe essere rivenditore di equipaggiamenti di altri produttori"
+  ],
+  "documenti_non_pertinenti": [
+   "03c14343973263fbd9bdd9383dfc8528f75fd0aabda0582464c49a6f9d8a5f07",
+   "7ca7d2fe80f9c3aafd60f41a079ccdf661242a759c345e2423cd9dcd6bdd66de",
+   "9b5112afb46108473fb47be83e1874b3c3e6fc4602f0790709df653dd4de5a90",
+   "caca4cd3494f916b68cb53c7168af297e34ee28c06d518420d5896596ec120b1",
+   "ca5d02b60eb6a80cf26cb48619cc691f1836349a7a95053e1e7d9e234cb214c4"
+  ],
+  "documento_risolutivo": "Capitolato tecnico con descrizione dei componenti e equipaggiamenti forniti; contratto o determina di affidamento che identifichi il costruttore/produttore primario dell'infrastruttura di rete",
+  "motivazione": "L'oggetto BDNCP 'IMPIANTI RETE LAN' per 'AMPLIAMENTI E MESSA IN SICUREZZA' e il CPV 32412100-5 descrivono chiaramente infrastruttura di rete on-premise (cablaggio, equipaggiamenti), non servizi cloud. Asse B incerto perché Vodafone Italia è contractor ma potrebbe essere rivenditore; il costruttore effettivo dell'infrastruttura non è identificato nei documenti."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": true
+}

@@ -1,0 +1,50 @@
+{
+ "cig": "B2D75214DD",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "7a73c1e28fe423f913381db828972ba73192cb06ca83c745645a23c2aa45e6d5",
+ "quando": "2026-11-06T13:15:53+00:00",
+ "uscita": {
+  "cig": "B2D75214DD",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "f029296a8293ea001d64e6b728911032c879c291cea734096f15aeacc08ea18a",
+    "pagina": null,
+    "citazione": "FORNITURA DI APPARATI DI RETE E RELATIVI ACCESSORI DESTINATI ALL'ESPANSIONE DEL NETWORK NEL DATA CENTER PER IL NUOVO CENTRO CONGRESSI E PER LA RETE DI AREA DI RICERCA"
+   },
+   {
+    "sha256": "f029296a8293ea001d64e6b728911032c879c291cea734096f15aeacc08ea18a",
+    "pagina": null,
+    "citazione": "Aruba 8360-48Y6C v2 FB 5F 2AC Bundle, Aruba 6200M 48G Class4 PoE 4SFP+ Switch, Aruba 2930F 24G 4SFP Switch, Aruba Controller 9240, Aruba AP-615 Campus AP, Aruba AP-515, transceiver, UPS"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "c440753420f01c53858b06ba9968b917152d32314ab5cc0d31803a83064a9d7a"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Fornitura di apparati di rete hardware (switch, access point, controller wireless, UPS) per infrastruttura informatica interna CNR. È ICT ma non è cloud: sono beni fisici da installare nel data center CNR, non servizi erogati dall'infrastruttura del fornitore."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

@@ -4,19 +4,19 @@
  "fornitore": "claude-cli",
  "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
  "ingresso_sha256": "e7ace65c09fffb47bef803a0d31aeb64295f42e1e4f4b3a6857fada773088680",
- "quando": "2026-11-06T12:21:02+00:00",
+ "quando": "2026-11-06T13:03:21+00:00",
  "uscita": {
   "cig": "B0FCC3FC81",
   "asse_a": {
    "stato": "incerto",
    "e_cloud": "?",
-   "ict": "?",
+   "ict": "s",
    "servizio": "servizi-professionali"
   },
   "asse_b": {
    "stato": "incerto",
-   "provider_prodotto": "",
-   "giurisdizione": "ignota"
+   "provider_prodotto": "Datagraph S.R.L.",
+   "giurisdizione": "IT"
   },
   "dipendenze_tecnologiche": [],
   "confidenza": "bassa",
@@ -28,14 +28,14 @@
    }
   ],
   "deduzioni": [
-   "Datagraph fornisce portali web ai comuni; potrebbe fornire assistenza SaaS ma non è provato",
-   "L'importo (4,95 M€) su due anni è coerente con un contratto pluriennale di assistenza"
+   "Il sito web del comune (nel documento fornito) è gestito da Datagraph ('Powered by Datagraph'), il che suggerisce che il servizio di assistenza potrebbe riguardare il portale web comunale",
+   "L'importo elevato (circa 5 milioni) su due anni suggerisce un servizio gestito o di supporto continuativo, non una semplice assistenza episodica"
   ],
   "documenti_non_pertinenti": [
    "dd2698738f15f7215c0bb27a57ff063476abb003cd111b8aeb2564da8619863c"
   ],
-  "documento_risolutivo": "Determina di affidamento o capitolato che specifichi il tipo di servizio: è assistenza a software cloud (SaaS), on-premise, sviluppo o manutenzione?",
-  "motivazione": "L'oggetto 'servizio assistenza software' è generico. Il documento fornito (home page del Comune) non contiene informazioni sul CIG. Serve documentazione che dettagli il servizio."
+  "documento_risolutivo": "Determina di affidamento, capitolato tecnico o addendum che specifichino quale servizio di assistenza è fornito (hosting web, SaaS, supporto tecnico on-premise, manutenzione di applicazioni, ecc.) e il nome del prodotto o della piattaforma",
+  "motivazione": "L'oggetto 'SERVIZIO ASSISTENZA SOFTWARE 2024 2025' è troppo generico per determinare se il servizio è cloud o meno. Il documento fornito (homepage del sito comunale) conferma che Datagraph eroga il portale web ma non specifica il tipo di assistenza contrattualizzata. Mancano capitolato, determina o documenti tecnici che specifichino se si tratta di hosting, SaaS, supporto tecnico on-premise o altra forma di assistenza."
  },
  "errori_schema": [],
  "prove_letterali": [

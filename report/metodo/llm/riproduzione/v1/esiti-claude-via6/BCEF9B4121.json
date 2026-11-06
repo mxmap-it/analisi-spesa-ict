@@ -1,0 +1,18 @@
+{
+ "cig": "BCEF9B4121",
+ "asse_a": {
+  "stato": "incerto",
+  "e_cloud": "?",
+  "servizio": "servizi-professionali",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "incerto",
+  "provider_prodotto": "",
+  "giurisdizione": "ignota"
+ },
+ "confidenza": "bassa",
+ "fonte_primaria": true,
+ "motivazione": "Il contratto copre principalmente sviluppo e manutenzione del Sistema Informatico FPF (CPV 72230000-6), con in bundle 'housing, conduzione e manutenzione HW/SW'. Il capitolato tecnico (risolutivo per l'ambiguità) non è accessibile pubblicamente (login richiesto, gara attiva fino al 15/11/2026). Il termine 'housing' è ambiguo tra co-location (non cloud) e hosting su infrastruttura del contraente (cloud); la gara accessoria per il Disaster Recovery del FPF (TED 125519-2025, PaaS) suggerisce componenti cloud nell'ecosistema FPF ma non documenta direttamente BCEF9B4121.",
+ "modello": "claude-sonnet"
+}

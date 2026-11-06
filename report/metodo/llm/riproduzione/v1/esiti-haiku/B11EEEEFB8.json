@@ -1,0 +1,42 @@
+{
+ "cig": "B11EEEEFB8",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "33b7bc50937fe362d1b41afe86a77cd2902ab02e721d044ff3eaf55d7f87d36a",
+ "quando": "2026-11-06T13:04:53+00:00",
+ "uscita": {
+  "cig": "B11EEEEFB8",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "L'APPALTO HA PER OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SICUREZZA DEI PASSEGGERI, BAGAGLI A MANO E DA STIVA, MERCI ED ALTRI SERVIZI DI AVIATION SECURITY PRESSO L'AEROPO"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda servizi di sicurezza fisica presso l'aeroporto (aviation security), non servizi informatici né cloud. L'oggetto BDNCP e il CPV 79710000-4 (security services) escludono univocamente sia cloud che ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

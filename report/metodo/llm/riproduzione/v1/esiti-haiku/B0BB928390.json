@@ -1,0 +1,46 @@
+{
+ "cig": "B0BB928390",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "7c86d9145a4fa5012752e557e872bb8b5c09bc486f2718ecfdf8317f851b48da",
+ "quando": "2026-11-06T13:02:57+00:00",
+ "uscita": {
+  "cig": "B0BB928390",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "non-identificato",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI CLOUD IAAS E PAAS – SERVIZI DI MIGRAZIONE E DI EVOLUZIONE OPERATIVA DEI SISTEMI"
+   }
+  ],
+  "deduzioni": [
+   "Engineering D.Hub SPA è aggiudicataria ma il suo ruolo (provider, integratore, rivenditore) non è specificato nell'oggetto. L'oggetto non nomina alcun provider cloud specifico (AWS, Azure, Google Cloud, Oracle, ecc.) che eroga i servizi IaaS/PaaS."
+  ],
+  "documenti_non_pertinenti": [
+   "5d573fcdf0cff90f9939b48c2b20be2b790edde22e30c93b192dca320be69ffd",
+   "067015e472f2147756a0468264e93df89403822e56fca19f74beb2503e077ea1",
+   "64cd311f7346360740ad7462af3eab48ae398ce56682601592075ca3db277260"
+  ],
+  "documento_risolutivo": "Capitolato, determina di affidamento o contratto che identifichi il provider cloud e la sede della sua capogruppo.",
+  "motivazione": "L'oggetto nomina esplicitamente servizi IaaS e PaaS, confermando cloud certo sull'asse A. Engineering D.Hub è l'aggiudicataria ma non è identificata come provider nativo del cloud; i documenti forniti non chiariscono chi eroga l'infrastruttura, lasciando incerta la giurisdizione del prodotto."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

@@ -1,0 +1,48 @@
+{
+ "cig": "B10A6B541C",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "4579e229003241cd7385923871185f189a1ceaf0fd0b1958bc954e8ff4ef94e7",
+ "quando": "2026-11-06T13:04:32+00:00",
+ "uscita": {
+  "cig": "B10A6B541C",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI DI MANUTENZIONE HARDWARE DELLE APPARECCHIATURE ELETTRONICHE DEL SISTEMA INFORMATICO INPS"
+   },
+   {
+    "sha256": "463bd6d1e4bdc0d985195f8a1b1319fe9d07470b9acda606c36a4956448170b7",
+    "pagina": null,
+    "citazione": "SERVIZI MANUTENZIONE HARDWARE APP.RE ELETTRONICHE INPS"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Contratto per manutenzione hardware del sistema informatico INPS. Non è un servizio cloud, bensì assistenza tecnica su apparecchiature informatiche. Asse B non applicabile."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

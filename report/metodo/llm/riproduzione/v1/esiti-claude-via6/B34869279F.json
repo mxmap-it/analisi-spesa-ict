@@ -1,0 +1,18 @@
+{
+ "cig": "B34869279F",
+ "asse_a": {
+  "stato": "incerto",
+  "e_cloud": "n",
+  "servizio": "connettivita",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "non-applicabile",
+  "provider_prodotto": "",
+  "giurisdizione": "non-determinabile"
+ },
+ "confidenza": "alta",
+ "fonte_primaria": true,
+ "motivazione": "Connettività WAN/fibra per le strutture ospedaliere regionali del Veneto, aggiudicata a Fastweb S.p.A. (operatore di rete). CPV 64210000-1 (servizi telefonici e trasmissione dati) e capitolato speciale scaricato (bandi.regione.veneto.it) confermano: servizi di connettività di rete, nessuna componente cloud. Non è cloud: la connettività è infrastruttura di rete (WAN/fibra), non servizio erogato su infrastruttura del fornitore in modalità IaaS/SaaS/PaaS. Aggiudicazione a Fastweb S.p.A. coerente con servizi di connettività.",
+ "modello": "claude-sonnet"
+}

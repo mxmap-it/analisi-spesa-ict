@@ -1,0 +1,42 @@
+{
+ "cig": "B26C7DDD04",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "beb221254f99ff8eac420d262af400e695b9886dfafd051490923e5ba625b445",
+ "quando": "2026-11-06T13:11:23+00:00",
+ "uscita": {
+  "cig": "B26C7DDD04",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "sanitario-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "IL LOTTO COMPRENDE LA FORNITURA DI: APPARECCHIATURE; SOFTWARE GESTIONALE; REAGENTI (FLACONI) E MATERIALI DI CONSUMO; TERRENI SOLIDI (PIASTRE) SELETTIVI E DIFFERENZIALI UTILI ALL'ISOLAMENTO DI MICRORGANISMI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Fornitura di apparecchiature diagnostiche, reagenti biologici e materiali di laboratorio per microbiologia clinica. CPV 33124110-9 e aggiudicatario (bioMérieux) confermano trattarsi di beni sanitario-diagnostici, non ICT. Software accessorio on-premise."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  false
+ ],
+ "valida": false
+}

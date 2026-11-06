@@ -1,0 +1,18 @@
+{
+ "cig": "B0BB928390",
+ "asse_a": {
+  "stato": "incerto",
+  "e_cloud": "s",
+  "servizio": "cloud",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "incerto",
+  "provider_prodotto": "Engineering D.HUB / Cloudeng (deduzione: aggiudicatario unico senza RTI; Engineering D.HUB ha proprio Cloudeng IaaS AGID/ACN Livello 2 con DC propri a Vicenza e Pont-Saint-Martin, VMware Cloud Director)",
+  "giurisdizione": "IT"
+ },
+ "confidenza": "media",
+ "fonte_primaria": false,
+ "motivazione": "Asse A incluso-certo dall'oggetto (SERVIZI CLOUD IAAS E PAAS). Asse B incerto: Engineering D.HUB e aggiudicatario unico e dispone di Cloudeng IaaS (proprio, AGID/ACN Livello 2, DC a Vicenza e Pont-Saint-Martin, VMware Cloud Director); la giurisdizione ipotizzata e IT (capogruppo Engineering Group S.p.A., italiano). Se fosse reselling di AWS/Azure, la giurisdizione sarebbe EXTRA-UE. Senza capitolato o determina ENPAIA non e confermabile.",
+ "modello": "claude-sonnet"
+}

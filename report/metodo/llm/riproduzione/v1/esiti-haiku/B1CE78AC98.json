@@ -1,0 +1,42 @@
+{
+ "cig": "B1CE78AC98",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "23a00015f0aec02cd5ca1e41ad6bdc0cf47f8f4047e6eeca5975c63f4644458e",
+ "quando": "2026-11-06T13:09:14+00:00",
+ "uscita": {
+  "cig": "B1CE78AC98",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "7663167ece0b80136133923100f3cf0a1c36ee8e0efa71a7cf69c7ae99da577f",
+    "pagina": null,
+    "citazione": "Accordo Quadro – per Servizi applicativi in ottica cloud e PMO ed. 2 per le PAC – Lotto 1 ID 2483"
+   }
+  ],
+  "deduzioni": [
+   "Avanade, parte del raggruppamento mandato da Accenture, è specializzata in soluzioni Microsoft Azure; il provider di cloud potrebbe essere Azure (EXTRA-UE), ma non è esplicitato nel documento"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "Piano dei Fabbisogni con specifica dei servizi applicativi cloud e dei provider",
+  "motivazione": "Accordo Quadro esplicitamente per servizi cloud (Asse A certo, confidenza alta). Provider cloud ignoto (Asse B incerto). Avanade nel RTI suggerisce deduttivamente Azure."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

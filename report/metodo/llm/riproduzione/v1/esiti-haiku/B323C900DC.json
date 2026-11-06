@@ -1,0 +1,56 @@
+{
+ "cig": "B323C900DC",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "387ff72ee115d4d2b9f15411f0505d0d43042d1260abfee08c82c1fff56949e1",
+ "quando": "2026-11-06T13:16:38+00:00",
+ "uscita": {
+  "cig": "B323C900DC",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "AFFIDAMENTO DI SERVIZI E FORNITURE PER LA GESTIONE DELLE PROCEDURE CONCERNENTI LE SANZIONI AMMINISTRATIVE"
+   },
+   {
+    "sha256": "7b507089e0b1cddf8c9f66f74ce0ed8ecfa64cd81255c40b36a40da1a7a9535e",
+    "pagina": null,
+    "citazione": "servizi di notifica a mezzo Posta Elettronica Certificata, di notifica, nel Territorio della Città di Napoli, per il tramite dei messi comunali e delle forniture accessorie"
+   },
+   {
+    "sha256": "9499a6061a266103631535be44d05875fbb7dcc3945e122035fd60ca1db50734",
+    "pagina": null,
+    "citazione": "Affidamento dei servizi e delle forniture per la gestione e la notificazione degli atti relativi alle violazioni alle norme del Codice della Strada, ai Regolamenti Comunali, alle Ordinanze Sindacali"
+   }
+  ],
+  "deduzioni": [
+   "La PEC è una tecnologia di trasmissione ma il servizio comprato è notificazione postale amministrativa tradizionale, non hosting o infrastruttura ICT ospitata nel data center del fornitore"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda gestione amministrativa e notificazione di sanzioni via PEC, messi comunali e raccomandate internazionali. Non è cloud né infrastruttura ICT ospitata, ma servizio amministrativo e postale tradizionale. CPV 64110000-0 (Servizi postali e di corriere) conferma la natura non-cloud del servizio."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true,
+  true
+ ],
+ "valida": false
+}

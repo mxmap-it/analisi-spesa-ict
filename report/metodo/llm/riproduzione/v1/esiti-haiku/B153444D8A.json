@@ -1,0 +1,42 @@
+{
+ "cig": "B153444D8A",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "76f600339fee0b0bcaf8eda05cf5a1a09df320aff406f70138a7302747aabe10",
+ "quando": "2026-11-06T13:07:43+00:00",
+ "uscita": {
+  "cig": "B153444D8A",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "FORNITURA HARDWARE TIER-1 PER IL DATA CENTER LOCALIZZATO PRESSO IL POLO EST DI SAN GIOVANNI A TEDUCCIO E RELATIVI SOFTWARE E SERVIZI CONNESSI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto specifica chiaramente 'FORNITURA HARDWARE TIER-1': è acquisto di componenti hardware per il data center di CINECA, non servizio cloud. Il CPV 30200000-1 (componenti computer) conferma. Non è cloud perché il fornitore eroga beni fisici, non un servizio dalla propria infrastruttura."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

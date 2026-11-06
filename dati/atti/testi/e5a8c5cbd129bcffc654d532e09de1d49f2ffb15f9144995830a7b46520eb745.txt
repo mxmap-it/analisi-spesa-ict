@@ -1,0 +1,1673 @@
+Sommario
+Servizio di accoglienza e relazioni con l’utenza .......................................................... 3
+  1.      Articolazione del Servizio Sanitario Toscano (SST) ............................................ 3
+  2.      Premessa...................................................................................................... 3
+       Attività preliminari ............................................................................................. 4
+       Formazione del personale ................................................................................. 4
+  3.      Consegna, installazione, collaudo, nuove installazioni, ritiro ............................ 4
+       3.1 Roll-out iniziale............................................................................................ 5
+       3.2 Forniture successive .................................................................................... 5
+  4.      Servizi di Manutenzione e Assistenza .............................................................. 6
+       4.1 Servizi di Manutenzione Preventiva ............................................................... 6
+       4.2 Servizi di Manutenzione Correttiva ................................................................ 7
+       4.3 Servizi di Manutenzione Evolutiva ................................................................. 7
+       4.4 Servizio di telemonitoraggio per le apparecchiature ....................................... 8
+       4.5 Materiali di consumo per le apparecchiature ................................................. 9
+       4.6 Oneri a carico delle aziende sanitarie ............................................................ 9
+  5.      Verifica e controllo del DEC ............................................................................ 9
+  6. Totem multiservizio ........................................................................................ 11
+       6.1 Servizi Punto SI .......................................................................................... 13
+         6.1.1 Ritiro referti .......................................................................................... 14
+         6.1.2 Attivazione App. ................................................................................... 15
+         6.1.3 Attivazione e Personalizzazione Tessera Sanitaria .................................. 15
+         6.1.4 Piattaforma Centrale ............................................................................ 15
+         6.1.5 Cartella Clinica .................................................................................... 16
+         6.1.6 Customer Satisfaction .......................................................................... 16
+         6.1.7 Gestione Consensi ............................................................................... 17
+         6.1.8 Attivazione Fascicolo Sanitario Elettronico ............................................ 17
+         6.1.9 Scelta e Revoca del Medico di Famiglia o Pediatra .................................. 18
+         6.1.10 Modulistica (consultazione, download e stampa documenti) ................ 19
+         6.1.11 Materiale multimediale ....................................................................... 19
+       6.2 Servizi di Accoglienza ................................................................................. 20
+     6.2.1 API MAPS ............................................................................................ 20
+     6.2.2 API Zerocode ....................................................................................... 22
+   6.3 Servizi Self Accettazione ............................................................................ 22
+   6.4 Pagamenti ................................................................................................. 22
+7 Infrastruttura servizi Core ................................................................................. 24
+   7.1 Sicurezza del sistema ................................................................................ 25
+   7.2 Infrastruttura Tecnologica .......................................................................... 25
+   7.3 Requisiti Infrastrutturali ............................................................................. 26
+   7.4 CAST......................................................................................................... 29
+8 Monitor multimediali ........................................................................................ 33
+   8.1 Specifiche Tecniche dei Monitor ................................................................. 33
+   8.2 Contenuti e Servizi Aggiuntivi ...................................................................... 34
+   8.3 Installazione, Collaudo e Manutenzione ...................................................... 35
+9 Requisiti Tecnici dell’Hardware ......................................................................... 35
+10 Servizio Help Desk. ........................................................................................ 39
+11 Manutenzione adeguativa dei servizi applicativi (MAD)...................................... 40
+12 Manutenzione evolutiva a ciclo ridotto ............................................................. 41
+13 MEV Manutenzione evolutiva a progetto .......................................................... 41
+14 Realizzazione nuovi canali di integrazione per i Totem PuntoSi .......................... 42
+15 Team di Progetto ............................................................................................ 42
+16 SLA e Penali (in fase di definizione) .................................................................. 44
+Servizio di accoglienza e relazioni con l’utenza
+1.       Articolazione del Servizio Sanitario Toscano (SST)
+Le Aziende ASL sono articolazioni territoriali del Servizio Sanitario Regionale e
+garantiscono la omogeneità dell'assistenza nelle diverse aree della regione. Articolate
+in zone-distretto, provvedono alla gestione e programmazione delle attività definite
+nei livelli uniformi ed essenziali di assistenza, comprese le prestazioni socio-sanitarie
+ad elevata integrazione sanitaria, le prestazioni sanitarie a rilevanza sociale e le attività
+di assistenza sociale delegate agli enti locali. Possono avviare localmente forme di
+assistenza integrativa, coperte da risorse finanziarie aggiuntive per le prestazioni che
+non sono elencate tra i Livelli essenziali di assistenza (Lea). Sono dotate di personalità
+giuridica pubblica e di autonomia imprenditoriale. L'organizzazione e il funzionamento
+delle aziende sanitarie sono disciplinati dallo statuto aziendale, un atto aziendale di
+diritto privato.
+Le Aziende ospedaliere-universitarie (Aou) integrano le funzioni di ricerca, formazione
+e assistenza svolte dalle Università e dal Servizio Sanitario Regionale, secondo i principi
+del decreto legislativo n° 517/1999.
+Le 4 Aziende ospedaliere toscane costituite nel 1994, ovvero A.O. Careggi, A.O. Meyer,
+A.O. Pisana e A.O. Senese, si sono dotate di statuti che sanciscono la trasformazione
+nelle nuove Aziende Ospedaliere Universitarie. Con questo passaggio l'Università
+partecipa a pieno titolo al Sistema Sanitario Regionale.
+Le Aree Vaste suddividono il territorio toscano in 3 aree e su ognuna insiste una
+Azienda Sanitaria Territoriale e la Azienda Ospedaliera Universitaria di riferimento.
+L'ospedale pediatrico Meyer ha funzioni di riferimento per tutta la regione.
+Fanno parte del sistema sanitario regionale anche ISPRO (Istituto per lo studio, la
+prevenzione e la rete oncologica) e FTGM (centro di eccellenza per le malattie cardio-
+polmonari.
+
+
+
+2.       Premessa
+L’appalto in oggetto riguarda la fornitura di Totem e Monitor che dovranno essere
+integrati con i servizi core delle AASS e della Regione Toscana quali:
+
+     •   Servizi di prenotazione ed accoglienza
+     •   Servizi PuntoSI di Regione Toscana
+     •   Servizi di self-accettazione
+     •   Servizio di pagamento
+     •   Servizi proprietari delle AASS
+Le Società partecipanti non dovranno fornire software di gestione accoglienza,
+pagamenti, gestione delle code, ecc.…, pena esclusione dalla gara.
+Dovranno altresì interfacciarsi con i servizi esposti da fornitori terzi aggiudicatari delle
+gare relative ai servizi indicati sopra, ed a costo zero con quelli futuri, qualora il cambio
+di fornitore o di data center non comporti interventi evolutivi.
+
+
+
+Attività preliminari
+Su richiesta del DEC del contratto, i Partecipanti saranno tenuti ad effettuare
+sopralluoghi, analisi di esigenza e stesura del progetto esecutivo con dettaglio
+economico tutto a costo zero e in modo illimitato e rilasciato entro una data
+concordata col DEC e le AASS.
+
+I Partecipanti dovranno predisporre un progetto chiaro e sostenibile di roll-out per
+garantire tempi certi e rapidi di installazione e messa in esercizio dei componenti
+richiesti dalle AASS a prescindere dal loro numero e locazione.
+
+Il progetto sarà oggetto di punteggio valutativo in fase di aggiudicazione.
+
+
+
+
+Formazione del personale
+Il servizio offerto dovrà garantire:
+   •   formazione presso le sedi aziendali per tutti gli operatori coinvolti con piano di
+       formazione da allegare all’offerta
+   •   supporto all’avviamento per gli operatori (on site)
+   •   corsi per amministratori di sistema
+   •   ogni altra attività formativa volta a garantire il miglior risultato
+
+Il progetto formativo sarà oggetto di punteggio valutativo in fase di aggiudicazione.
+
+
+
+
+3. Consegna, installazione, collaudo, nuove installazioni, ritiro
+Le attività di consegna e installazione delle apparecchiature si intendono comprensive
+di ogni onere relativo ad imballaggio, trasporto, facchinaggio, consegna “al piano”,
+posa in opera, installazione completa di ancoraggio (previo accordo con ciascuna
+Azienda), messa in esercizio, verifica di funzionalità delle apparecchiature, asporto
+dell’imballaggio e qualsiasi altra attività ad essi strumentale.
+
+3.1 Roll-out iniziale
+
+
+L’aggiudicatario deve prevedere la consegna del materiale e la sua messa in esercizio
+nei tempi indicati sotto a partire dalla data di sottoscrizione dei contratti attuativi ed in
+accordo con le AASS.
+
+I tempi massimi per la completa sostituzione del parco macchine esistente devono
+essere garantiti entro:
+
+   •   2 mesi per Azienda Ospedaliera ed Universitaria Meyer, ISPRO, Fondazione
+       Monasterio
+   •   3 mesi per altre Aziende Ospedaliere ed Universitarie (AOUC, AOUP, AOUS)
+   •   6 mesi per le Aziende Sanitarie Territoriali (ASL Toscana Nord Ovest, ASL
+       Toscana Centro, ASL Toscana Sud Est)
+
+
+
+L'aggiudicatario è tenuto allo smontaggio e rimozione degli apparati esistenti.
+
+Se il vecchio aggiudicatario non è interessato alla restituzione, il materiale dovrà essere
+trasportato all’isola ecologica indicata dalle AASS e smaltito dalle AASS tramite
+l’appalto dello smaltimento rifiuti.
+
+Se il vecchio aggiudicatario vuole la restituzione, il nuovo aggiudicatario sarà tenuto a
+recapitarlo nel luogo indicato.
+
+
+
+3.2 Forniture successive
+
+Il Fornitore è tenuto a consegnare, collaudare ed attivare in uso le apparecchiature e, in
+fase di successiva eventuale integrazione di contratto, nei luoghi indicati dalle singole
+Aziende, entro e non oltre 90 (novanta) giorni solari dalla data di ricezione dell’ordinativo
+di fornitura.
+
+Dovrà altresì essere garantita la fornitura in urgenza entro 30 (trenta) giorni solari di
+massimo 5 monitor e 10 totem. Tali richieste saranno possibili per un massimo di 2
+annue per ogni azienda sanitaria.
+
+Il collaudo, che dovrà avvenire entro e non oltre 15 (quindici) giorni dalla consegna e con
+un preavviso di almeno 7 (sette) giorni, verrà effettuato da parte degli incaricati di
+ciascuna Azienda in contraddittorio con i tecnici del Fornitore medesimo.
+Le Aziende sanitarie dovranno garantire la tempestiva predisposizione delle
+infrastrutture locali di competenza (spazi, reti, alimentazione elettrica, opere
+impiantistiche), e successivamente verificati e certificati dal collaudatore quale
+condizione preliminare al computo dei tempi ai fini del rispetto degli SLA.
+
+In sede di collaudo si dovrà verificare che tutte le attrezzature fornite risultino possedere
+tutti i requisiti e le caratteristiche tecnico-funzionali dichiarate in sede di gara e che siano
+regolarmente funzionanti (ivi comprese le prove delle varie fasi sistemistico/applicative).
+L’avvenuto accertamento dell’esito favorevole delle prove di collaudo dovrà risultare da
+apposito verbale. Il piano di collaudo sarà concordato con le Aziende in una fase
+successiva alla sottoscrizione dell’Ordinativo di fornitura.
+
+In caso di esito negativo del collaudo, verrà concesso al Fornitore un termine pari a 20
+(venti) giorni lavorativi per ripristinare quanto non idoneo.
+
+Qualora il ritardo si protragga oltre tale termine verranno applicate le penali previste
+nell’apposito paragrafo riservando, altresì, la facoltà a ciascuna delle Aziende di
+richiedere la sostituzione dell’apparecchiatura.
+
+Il fornitore è tenuto allo spostamento delle apparecchiature in base alle indicazioni delle
+AASS.
+
+
+
+i Partecipanti dovranno prevedere un Progetto Esecutivo ed il Cronoprogramma di roll-
+out che illustri le modalità ed i tempi di dispiegamento degli apparati nelle AASS, e che
+sarà soggetto a valutazione.
+
+
+
+4. Servizi di Manutenzione e Assistenza
+4.1 Servizi di Manutenzione Preventiva
+
+Il fornitore è tenuto a presentare un progetto per il servizio di manutenzione
+preventiva; tale servizio dovrà essere effettuato preferibilmente al di fuori degli orari
+di maggior afflusso dell’utenza, ovvero dalle ore 14,30 alle 6,00 del giorno
+successivo, dovrà essere cadenzato secondo il calendario predisposto dalla ditta
+fornitrice in accordo con le AAS al fine di assicurare gli interventi ordinari necessari a
+garantire sempre il perfetto funzionamento delle apparecchiature.
+
+Il progetto sarà oggetto di punteggio valutativo in fase di aggiudicazione. La messa in
+opera dei servizi di manutenzione preventiva costituisce un vincolo per il collaudo di
+ciascun contratto attuativo.
+4.2 Servizi di Manutenzione Correttiva
+Gli interventi di assistenza tecnica dovranno essere richiesti dalle Azienda
+Sanitarie/Ospedaliere al Fornitore mediante un Call Center dedicato e gestito dal
+Fornitore, attivabile o con un numero verde o tramite un portale web, documentato
+e reso disponibile facilmente agli operatori delle AASS.
+Deve essere prevista la comunicazione a referenti delle AASS (ad es. Maillinglist,
+ecc..) dall'apertura del ticket e deve essere notificato all’operatore che ha aperto la
+segnalazione ogni cambio di stato della stessa fino alla chiusura.
+
+Il servizio sarò reso dall’Aggiudicatario in caso di necessità di intervento in situazioni di
+alta, media e bassa criticità relativamente all’Hardware coinvolto.
+
+Alta criticità - I servizi risultano non funzionanti in gran parte delle sedi e bloccano
+l’attività di utenza/sportello creando forte disagio
+Media criticità - I servizi risultano non funzionanti in una sede e l’attività è limitata sia
+per l’utenza che per gli sportelli.
+Bassa criticità - Uno o più servizi risultano non funzionanti per un singolo dispositivo e
+non è pregiudicato il servizio complessivo. Se la percentuale dei guasti è superiore al
+50% degli apparati/servizi, la criticità è da considerarsi Media.
+
+L’attivazione del servizio di assistenza deve essere garantita dalle ore 07:00 alle ore
+20:00 dal lunedì al sabato secondo i canali definiti nel capitolato.
+
+
+
+
+4.3 Servizi di Manutenzione Evolutiva
+La manutenzione evolutiva (comprendente quella correttiva e normativa) riguarda la
+componente SW dei sistemi. Il riferimento è quello in Allegato A relativo alle LINEE
+GUIDA PER I SERVIZI DI ASSISTENZA E MANUTENZIONE PER I SOFTWARE dove vengono
+normate le modalità di erogazione dei servizi di assistenza e manutenzione per i
+software che devono essere erogati ad ESTAR e alle Aziende Sanitarie della Regione
+Toscana.
+
+
+
+4.4 Servizio di telemonitoraggio per le apparecchiature
+
+Il monitoraggio continuo e preventivo sarà fatto via proxy con autenticazione, mentre
+il collegamento puntuale in teleassistenza dovrà essere assicurato via VPN con le
+politiche aziendali (smart card o altro).
+
+Attraverso il servizio di telemonitoraggio, il Fornitore rileverà, lo stato di funzionamento
+delle apparecchiature e degli allarmi.
+
+Nel caso in cui l’apparecchiatura dovesse andare in “warning” oppure in “fuori
+servizio”, il telemonitoraggio dovrà attivare automaticamente l’assistenza tecnica al
+fine di procedere al più presto con la risoluzione del problema sia da remoto che on-
+site. Il Fornitore dovrà dare tempestiva comunicazione di eventuali fuori servizio delle
+macchine a ciascuna Azienda al fine di poter procedere ad una informativa all’utenza
+oltre che ad una verifica dei tempi di ripristino. Le Aziende sanitarie si impegneranno
+a creare le necessarie condizioni infrastrutturali per garantire l’accesso da remoto alle
+apparecchiature. Per la tipologia di allarme che il fornitore ed il DEC riterranno far
+parte della categoria dei guasti rientranti nella segnalazione automatica il ticket viene
+aperto direttamente dal sistema di monitoraggio e gli SLA decorrono dall’attivazione
+del ticket medesimo.
+
+Con l’utilizzo dell’assistenza remota dovranno essere fruibili i seguenti servizi:
+       • Caricamento eventuali nuove parametrizzazioni;
+       • Caricamento procedure software da remoto (aggiornamenti eseguibili,
+            immagini, personalizzazioni richieste, etc.)
+       • Altre funzionalità facilmente eseguibili in assistenza remota.
+
+Il Fornitore inoltre dovrà mettere a disposizione delle Aziende un accesso online ad un
+portale di governo della fornitura che consenta ad esempio:
+
+   •   di consultare in tempo reale lo stato di funzionamento delle apparecchiature
+       fornite.
+   •   di rendere disponibili i dati di utilizzo di tutti gli asset in mappa navigabile, come
+       ad esempio numero di stampe effettuate, numero accessi positivi e negativi,
+       statistiche sull’utilizzo delle singole funzionalità dei totem PuntoSì, ecc...
+   •   di valutare quanti e quali operazioni vanno a buon fine ed il tasso di abbandono
+       della cittadinanza
+Il Fornitore è tenuto a gestire l’escalation verso gli Help Desk dei gestori dei servizi
+integrati fino alla chiusura del ticket e risoluzione del disservizio.
+
+
+
+4.5 Materiali di consumo per le apparecchiature
+
+La fornitura del materiale di consumo sarà a carico delle AASS, come ad esempio:
+
+       •   Carta A4
+
+       •   Toner stampanti
+
+       •   Carta Termica
+
+       •   Ogni altro materiale di consumo
+
+
+
+4.6 Oneri a carico delle aziende sanitarie
+
+Le Aziende sanitarie assumeranno a proprio carico le seguenti attività e/o interventi
+ed i relativi oneri economici:
+       •   eventuali adeguamenti e/o opere strutturali, edili e impiantistiche necessarie
+           a predisporre in modo adeguato e sicuro i locali destinati ad ospitare le casse
+           automatiche;
+       •   adeguamento delle reti informatiche e predisposizione dei punti rete in
+           ciascun sito per consentire i collegamenti con le casse automatiche;
+       •   predisposizione di prese elettriche;
+       •   predisposizione di punti rete LAN;
+       •   costo e consumi energia elettrica;
+
+
+5. Verifica e controllo del DEC
+Alla firma del primo contratto attuativo i Partecipanti dovranno prevedere un Progetto
+Esecutivo ed un Cronoprogramma coinvolgendo anche il DEC e l’Azienda di
+riferimento. Tale progetto sarà lo stesso per ogni altra installazione nelle AASS
+successive.
+
+Per ogni installazione, al momento del collaudo, il DEC deve verificare l'attinenza delle
+specifiche tecniche del prodotto richiesto con quello consegnato. Se queste non
+fossero rispettate il calcolo dei tempi di consegna rimane quello a partire dall’ordine.
+
+Redige un verbale di conformità dei prodotti forniti e, nel caso di consegne massive,
+potrà effettuare verifiche a campione su almeno il 10% del materiale consegnato.
+Se risultassero malfunzionamenti nella parte di materiale non collaudato il fornitore
+deve sostituire il materiale con gli stessi SLA indicati nel capitolato.
+
+Al momento della consegna della fornitura, il DEC deve verificare se sono stati
+rispettati i tempi di consegna stabiliti nel capitolato al punto 3
+
+Dovrà essere in possesso dell'ordine e del documento di consegna del materiale in
+modo da verificare che i tempi rientrino in quanto richiesto nel capitolato di gara e
+potrà richiedere l'applicazione delle penali previste se il fornitore non è adempiente.
+
+Dovrà procedere al collaudo del funzionamento delle integrazioni con i sistemi terzi
+verificando il workflow delle funzionalità di ogni componente sottoscritte da tutte le
+parti.
+
+Nel caso di subentro di nuovo fornitore di componenti SW, il collaudo delle stesse
+dovrà essere eseguito entro 4 settimane dalla richiesta del DEC
+6. Totem multiservizio
+Il presente appalto prevede la fornitura di totem multiservizio per la fruizione di servizi
+al cittadino con le indicazioni del Decreto Legislativo n. 106/2018, che ha recepito la
+Direttiva Europea (UE) 2016/2102 sull'accessibilità dei siti web e delle applicazioni
+mobili degli enti pubblici e definiti dalle gare attive di seguito riportate.
+
+Il Totem dovrà essere fornito con un sistema operativo che ne gestisca le funzioni
+primarie: accensione, spegnimento, diagnostica, riproduzione di palinsesti in standby,
+interfacce di base per l'accoglienza con le seguenti caratteristiche:
+    • touch screen da 18,5” o superiore;
+    • tastiera virtuale (opzionale fisica);
+    • Interfacciamento con i servizi esposti dalle gare attive;
+    • riconoscimento dell’utente tramite CNS, CIE, SPID o nuove tecnologie aderenti
+       alle presenti o future normative nazionali riguardanti l’autenticazione per
+       l’accesso sicuro a servizi sanitari;
+    • protezione contro la manipolazione, la pirateria informatica, i virus e ogni altro
+       software dannoso per la perfetta funzionalità del totem;
+    • I Totem non devono prevedere l’installazione di certificati in locale.
+    • fornitura di tutti i software/drivers che permettono di utilizzare tutte le
+       periferiche installate sul Totem (stampanti, lettore CNS, lettore NFC, scanner,
+       telecamera, eventuale POS di pagamento fornito dal tesoriere e quant’altro
+       installato sul Totem) e porte USB ad uso dell’Utenza per il download di file di
+       proprio interesse
+    • dovranno essere previste tutte le licenze necessarie per il funzionamento di
+       tutte le componenti del totem;
+    • in stand-by il totem deve funzionare da postazione informativa;
+    • Il totem può essere richiesto con la stampante Laser A4 /B/N o colore) e con
+       stampante termica 80 mm.
+    • Fornitura dei POS con relativa manutenzione ed integrazione con la gara
+       pagamenti;
+    • Fornito di Hardware come minicomputer o schede industriali integrate"
+    • Lettore barcode/qr-code
+    • il totem deve essere gestibile e configurabile da remoto, anche tramite
+       connessione mobile (inclusa nella fornitura) per una diagnostica tempestiva;
+    • deve essere messa a disposizione la configurazione dei seguenti aspetti
+       dell’interfaccia grafica, da eseguire a cura di uno specifico gruppo di operatori
+       aziendali:
+           a) loghi e intestazioni;
+           b) denominazione dei servizi;
+           c) attivazione/disattivazione dei servizi;
+           d) configurazione menu;
+   • ogni elemento dell’interfaccia deve essere disponibile per almeno le seguenti
+Caratteristiche preferenziali:
+   • proposte di soluzioni che garantiscano la privacy del cittadino che effettua le
+       operazioni
+   • rispetto dei requisiti di accessibilità definite dal Decreto Legislativo n. 106/2018,
+       che ha recepito la Direttiva Europea (UE) 2016/2102 sull'accessibilità dei siti
+       web e delle applicazioni mobili degli enti pubblici.
+   • eventuali sistemi di rilevazione presenza fisica che permettano al totem di
+       passare dalla modalità di presentazione del palinsesto alla modalità di
+       operatività e viceversa.
+
+   •   Sistema multilingua selezionabile dal menu principale:
+           a) italiano;
+           b) inglese;
+           c) tedesco;
+           d) francese;
+           e) Spagnolo
+           f) cinese;
+           g) arabo;
+           h) ulteriori lingue straniere potranno essere configurate su richiesta delle
+              AASS
+
+
+
+
+I Totem devono essere macchine marcate CE a fronte di rigide prove di laboratorio
+effettuate tramite l’ente accreditato TUV: superamento delle prove EMC e Safety.
+
+       EMC: il test di compatibilità elettromagnetica (EMC) valuta il livello di emissioni
+       elettromagnetiche generate da un dispositivo. I test determineranno il
+       potenziale di un dispositivo nell'interferire con altri dispositivi nelle vicinanze,
+       nonché il suo potenziale nel subire anche le interferenze dalle loro emissioni
+       elettromagnetiche. Vengono inoltre verificate le modalità di cablaggio
+       dell’impianto.
+
+       SAFETY: i test safety sono test che valutano quanto segue:
+       • Classification and limits of electrical energy sources
+       • Stored discharge on capacitors
+       • Electrical power sources (PS) measurements for classification
+       • Single Fault Conditions test
+       • Input test
+       • Temperature measurements
+       • Permanence of markings
+
+       STANDARD ADA: L’Americans with Disabilities Act, (ADA), garantisce accesso
+       all’ambiente per le persone con disabilità. Le norme ADA stabiliscono requisiti
+       di progettazione per la costruzione e la modifica di impianti soggetti alla legge.
+       Queste norme sono applicabili ai luoghi di pubblica accoglienza, strutture
+       commerciali, statali e strutture del governo locale. Tutti i prodotti della linea
+       Teseo sono ottimizzati, grazie al suo design e all’intuitiva interfaccia grafica, per
+       l’utilizzo da parte di persone disabili e ipovedenti.
+
+       ACCESSIBILITA’ DELL’INTERFACCIA: L’interfaccia dei Totem dovrà essere
+       progettata nel rispetto delle linee guida AgID, assicurando elevata leggibilità,
+       coerenza visiva e semplicità d’uso. L’adozione di tipografia, cromatismi e icone
+       standardizzati garantisce uniformità con i canali della Pubblica Amministrazione,
+       mentre le procedure di autenticazione rispettano il Codice dell’Amministrazione
+       Digitale. I contenuti sono chiari e supportati da elementi visivi intuitivi, e i
+       dispositivi integrati sono resi accessibili grazie a etichette esplicative.
+
+       BRAND IDENTITY: L’interfaccia utente dei totem deve essere progettata per
+       riflettere in modo coerente la brand identity dell’Azienda sanitaria, garantendo
+       riconoscibilità e continuità visiva con tutti gli altri canali di comunicazione. Gli
+       elementi distintivi più evidenti sono il logo istituzionale e l’uso dei colori
+       principali della corporate identity, che contribuiscono a rendere l’esperienza
+       d’uso chiara e immediatamente associabile all’Ente di riferimento. In questo
+       modo il totem diventa un punto di contatto coerente e affidabile, rafforzando
+       la percezione di professionalità e fiducia da parte degli utenti.
+
+
+6.1 Servizi Punto SI
+Per l’erogazione di informazioni al Cittadino, dovranno essere garantiti e strutturati i
+servizi di interfacciamento così come disposto dal DGRT 657/2015 (del. Del PuntoSi)
+ed esposti nel portale di Regione Toscana e nell’APP Toscana Salute.
+
+L’allegato di riferimento è Allegato H - Regione Toscana - Integrazione Totem-v1.8
+
+Per i totem puntosì è prevista anche la parte client, il Sistema Operativo, interfaccia al
+cittadino e servizi di interoperabilità
+
+I servizi attualmente in uso sono i seguenti:
+
+•   Processo di attivazione APP e promozione APP di RT;
+•   Processo di attivazione TS/CNS;
+•   Processo di Pagamento;
+•   Processo inerente il rilascio dei vari consensi;
+•   Processo di scelta/revoca del medico;
+•   Processo di attivazione Fascicolo Sanitario Elettronico
+•   Processo di prenotazione di una prestazione
+•   Processo ritiro referti
+•   Processo di stampa modulistica
+•   Processo richiesta copia Cartella Clinica
+•   Customer Satisfaction
+
+
+
+Viene richiesto che sul Totem possano essere attivati, a discrezione delle Aziende, tutti
+o parte dei servizi sottoelencati:
+
+
+
+
+6.1.1 Ritiro referti
+
+Possibilità per i cittadini di ritirare i referti direttamente dai totem multimediali presenti
+nelle strutture.
+
+I totem dovranno consentire ai cittadini di accedere ai propri referti in modo sicuro e
+riservato.
+
+Prevedere un sistema di autenticazione forte per l'accesso ai referti (es. TS-CNS, SPID,
+CIE).
+
+Accesso autonomo al referto in formato digitale in qualsiasi momento.
+
+I referti dovranno essere disponibili in formato PDF o altro formato standard.
+
+Prevedere la possibilità di scaricare e stampare i referti
+
+Predisposizione per la refertazione cartacea (esami di laboratorio, visite ambulatoriali,
+ecc.) su supporto carta standard A4 con stampa tramite stampante laser.
+
+Definire le specifiche delle stampanti laser (es. velocità, risoluzione).
+
+Prevedere la fornitura e la manutenzione delle stampanti.
+
+    •   Opzione per il download dei referti su memoria USB fornita dall'utente
+    •   La porta USB dei totem dovrà essere protetta per evitare l'introduzione di virus o
+        malware.
+    •   Predisposizione della porta USB del totem per l'attivazione futura di ulteriori
+        servizi (es. ritiro immagini radiografiche).
+   •   In presenza di TS-CNS, CIE, ecc.. attivata, l'utente dovrà poter accedere ai referti.
+
+
+La ASL Toscana Sud Est ha attivato lo scarico immagini radiologiche su chiavetta USB
+come riportato nel
+
+Allegato I - Specifiche_di Intregrazione_SOL_ver_4_0_totem
+
+6.1.2 Attivazione App.
+Funzionalità che permette di poter stampare il modulo con il QRCODE atto
+all'attivazione del proprio device, previa Autenticazione Forte (CNS, CIE, SPID).
+
+La piattaforma dovrà fornire istruzioni chiare e semplici per l'attivazione dell'app
+Toscana Salute.
+
+
+
+6.1.3 Attivazione e Personalizzazione Tessera Sanitaria
+
+Funzionalità che permette di accedere ai dati (PIN, PUK, Codice Utente)
+della TS/CNS e di poterli stampare, previa Autenticazione Forte. La
+piattaforma dovrà fornire informazioni chiare e complete sulle funzionalità
+della TS/CNS.
+
+Possibilità di sostituire il codice PIN assegnato con uno scelto dall'utente
+e di recuperare il codice PUK.
+
+
+
+6.1.4 Piattaforma Centrale
+Integrazione con i sistemi esistenti di self-accettazione, gestione delle
+code (MR-You o equivalenti) e chiamata dei pazienti.
+La piattaforma dovrà essere in grado di interfacciarsi con i sistemi
+informativi sanitari regionali (es. CUP, FSE).
+Garantire la compatibilità con i diversi sistemi di gestione delle code
+utilizzati dalle aziende sanitarie.
+Prevedere un sistema di monitoraggio e gestione degli accessi e delle code
+Integrazione con i servizi esposti dal Fascicolo Sanitario Elettronico (FSE)
+della Regione Toscana, garantendo l'accesso e la fruizione da parte dei
+cittadini.
+La piattaforma dovrà consentire ai cittadini di accedere ai servizi del FSE
+tramite i totem e altri dispositivi.
+Garantire la sicurezza e la riservatezza dei dati sanitari dei cittadini
+(conformità al GDPR).
+Prevedere un sistema di autenticazione forte per l'accesso ai servizi del
+FSE (es. TS-CNS, SPID, CIE).
+
+
+6.1.5 Cartella Clinica
+Servizio per la richiesta di copia della cartella clinica tramite totem, con
+identificazione del richiedente.
+La piattaforma dovrà consentire ai cittadini di richiedere la copia della
+propria cartella clinica in modo semplice e veloce.
+Prevedere un sistema di gestione delle richieste e dei tempi di consegna
+Gestione dell'invio di un messaggio (SMS, Whatsapp o e-mail) all'utente
+al momento della messa a disposizione dei documenti.
+Prevedere un sistema di notifica automatica per informare gli utenti sulla
+disponibilità dei documenti.
+
+
+6.1.6 Customer Satisfaction
+Sistema per il monitoraggio della soddisfazione del servizio ricevuto dal
+cittadino e della qualità percepita, attraverso la somministrazione di
+questionari anonimi. I questionari dovranno essere brevi e facili da
+compilare. Dovranno essere disponibili in diverse modalità (es. totem, app
+mobile, sito web).
+L'utente compilerà in maniera totalmente anonima il questionario
+Reportistica fornita per l'elaborazione dei dati e l'analisi della soddisfazione
+degli utenti accessibile anche da remoto.
+La reportistica dovrà essere chiara e dettagliata.
+Dovrà consentire l'individuazione dei punti di forza e di debolezza dei
+servizi offerti.
+Il Committente gestirà le domande, i questionari, le scale di valutazione e
+l'analisi dei risultati.
+Tutti questi servizi sono accessibili tramite autenticazione CNS, SPID, CIE,
+dovranno anche essere previste nuove autenticazioni normate a livello
+nazionale.
+
+
+6.1.7 Gestione Consensi
+Servizio che permette al Cittadino di rilasciare i consensi relativamente ai
+propri dati sanitari contenuti sul Fascicolo Sanitario Elettronico.
+La piattaforma dovrà fornire informazioni chiare e complete sui consensi
+e sulla loro importanza.
+Il servizio dovrà permettere al Cittadino di rilasciare i propri consensi
+relativamente ai dati sanitari contenuti sul proprio FSE ed a quale attore
+potrà accedervi (come da normative nazionali).
+Il servizio sarà accessibile tramite Autenticazione Forte e proporrà al
+cittadino, previa lettura della pagina informativa, la scelta del dominio
+informativo e l'identificazione degli Attori su tre livelli:
+      1. Tutti;
+      2. Solo un sottoinsieme;
+      3. Solo nominativo.
+Servizio che permette al Cittadino di rilasciare il consenso dell’invio dei
+dati del pagamento ai fini del 730 precompilato
+
+
+6.1.8 Attivazione Fascicolo Sanitario Elettronico
+Servizio che consente, tramite autenticazione forte, di rilasciare il proprio
+consenso alla popolazione del Fascicolo Sanitario Elettronico personale.
+La piattaforma dovrà fornire informazioni chiare e complete sul FSE e sui
+vantaggi della sua attivazione.
+Possibilità di esprimere la propria revoca.
+Il servizio comunica con le WS Regionali, permettendo al cittadino
+autenticato, di poter effettuare la propria scelta e confermare l'esito di
+tale operazione e, ove richiesto, la stampa della stessa.
+Processo:
+   1. Il Cittadino si autentica con l’autenticazione forte.
+   2. Sarà richiesta la conferma alla attivazione del proprio FSE.
+   3. Il totem invoca un WS regionale.
+   4. In caso positivo verrà stampata la documentazione amministrativa
+      della scelta appena operata.
+
+
+6.1.9 Scelta e Revoca del Medico di Famiglia o Pediatra
+
+Servizio che permette al Cittadino di scegliere e revocare il proprio medico
+di famiglia tramite Autenticazione Forte.
+
+La piattaforma dovrà fornire informazioni chiare e complete sulla
+procedura di scelta e revoca del medico
+
+Processo:
+   1. Il Cittadino si autentica tramite Autenticazione Forte.
+   2. Il totem invoca le WS regionale per recuperare i dati dei server
+      centrali
+   3. Verrà visualizzato il proprio medico e la lista dei medici disponibili.
+   4. Il totem invoca le WS regionale per comunicare la scelta e ricevere
+      il documento da stampare.
+   5. Verrà stampata la documentazione amministrativa della scelta
+      appena operata.
+6.1.10 Modulistica (consultazione, download e stampa documenti)
+
+   • Accesso ai moduli in formato digitale secondo un catalogo e/o
+     dominio
+   • Possibilità di download del documento
+   • Possibilità di stampa del documento
+
+
+6.1.11 Materiale multimediale
+Sarà valutato in sede di aggiudicazione il materiale multimediale che verrà
+fornito per diffondere conoscenza delle funzionalità dei Totem PuntoSI.
+
+
+A titolo esemplificativo vengono allegati alcuni screenshot dei menu
+attualmente in uso relativi ai servizi PuntoSi implementati sui Totem
+(Allegato B – Schermate PuntoSi)
+6.2 Servizi di Accoglienza
+
+I Totem ed i Monitor dovranno essere integrati con gli attuali sistemi di accoglienza
+MR-You di MAPS e Zerocode di Lutech, tramite l’utilizzo delle API di integrazione
+
+6.2.1 API MAPS
+
+Le API permettono l’accodamento da parte dei Totem sui servizi/code MR-You di primo
+livello (sportelli) e di secondo livello (centri prelievi, ambulatori) oltre che del pronto
+soccorso.
+
+MRYOU API DI INTEGRAZIONE
+
+L'utilizzo delle seguenti API è subordinato all'ottenimento tramite autenticazione del
+
+token JWT necessario per usufruire di tutti i servizi offerti dalla piattaforma.
+
+Autenticazione
+
+1. POST /api/v3/auth/login
+
+Ottiene un JWT per autorizzare le chiamate alle altre API (login terminal users).
+
+2. POST /api/v3/auth/refresh
+
+Rigenera un JWT per continuare ad autorizzare le chiamate alle API (refresh
+
+token terminal users).
+
+3. POST /realms/mryou/protocol/openid-connect/token
+
+Ottiene un JWT tramite Keycloak per autorizzare le chiamate alle altre API (login
+utenti).
+
+
+
+Gestione code ambulatoriali
+
+4. PUT /api/v3/clinic/queue/ticket
+
+Aggiorna lo stato di un paziente in coda (es. chiamata, richiamata, in visita, fine
+
+visita). Utilizzabile per primo e secondo livello.
+
+5. POST /api/v3/clinic/queue/ticket
+
+Richiede un nuovo ticket di accodamento:
+o Primo livello: paziente in attesa di accettazione.
+
+o Secondo livello: paziente già accettato, chiamabile direttamente in
+
+ambulatorio.
+
+6. POST /api/v3/clinic/queue/ticket/call
+
+Esegue la chiamata automatica del primo paziente in attesa al primo livello,
+
+secondo logiche di priorità configurate.
+
+
+
+Gestione code pronto soccorso
+
+7. PUT /api/v3/firstaid/queue/ticket
+
+Aggiorna lo stato di un paziente in coda al pronto soccorso (es. accettato,
+
+chiamato, in visita, fine visita, OBI).
+
+
+
+8. POST /api/v3/firstaid/queue/ticket
+
+Accoda un nuovo paziente al pronto soccorso, dopo il triage, con gestione di
+
+priorità e condizioni cliniche.
+
+
+
+Consultazione ticket
+
+9. GET /api/v3/ticket/{id}
+
+Ottiene i dati di un ticket specifico (primo o secondo livello).
+
+10. GET /api/v3/ticket
+
+Ottiene i dati di un ticket di accodamento a partire da parametri di ricerca
+
+(primo o secondo livello).
+
+
+
+Ticket personalizzati
+11. POST /api/v3/template/ticket
+
+Genera un ticket dinamico partendo da un template personalizzato e relativo
+
+payload.
+
+
+
+6.2.2 API Zerocode
+
+Per l’integrazione con Zerocode il riferimento è l’allegato:
+
+Allegato C - Zerocoda - Integrazione servizio notifica appuntamenti.pdf
+
+NB – L'allegato sarà sostituito ad aprile con quello di Lutech
+
+
+
+6.3 Servizi Self Accettazione
+Al fine di migliorare la gestione dell’accoglienza e diminuire i tempi di attesa nelle
+strutture sanitarie, devono essere garantita l’implementazione dei servizi di self
+accettazione previsti dai CUP di 2° livello.
+
+Si rimanda alla documentazione tecnica di integrazione self accettazione allegata al
+presente capitolato (Allegato D ed Allegato E)
+
+
+
+
+6.4 Pagamenti
+La fornitura deve integrarsi con il PSP aggiudicatario della gara di riscossione ticket
+attraverso un Terminal ID attestato sul PSP stesso. Deve comunque essere garantita
+la possibilità di montare un POS fornito dall'aggiudicatario del presente bando che
+dovrà integrarsi con il servizio del PSP della gara di riscossione. I POS devono essere
+sempre aggiornati agli standard di mercato.
+
+La gara di riscossione ticket prevede che l’Azienda convenzioni un PSP per consentire
+alla cassa di eseguire pagamenti tramite POS (rectius: con carta di pagamento), in tale
+casistica le commissioni sono disciplinate dal contratto tra l’Azienda e il PSP e il
+pagatore non può scegliere di pagare con altri PSP se non con quello convenzionato
+con l’Azienda.
+I costi per l’attività per l'aggancio al PSP da parte del soggetto terzo e viceversa,
+devono essere ricompresi nell’offerta.
+
+I totem di solo pagamento sono previsti in una specifica gara della riscossione.
+
+I totem puntosì devono interfacciarsi con IRIS; il riferimento è l’Allegato F.
+7 Infrastruttura servizi Core
+Il sistema integrato dovrà essere costituito da componenti remoti e centrali. I
+componenti remoti sono tutti gli apparati periferici per la divulgazione di
+informazioni/servizi, mentre quelli centrali (CORE) sono costituiti da tutto il necessario
+per il funzionamento e controllo dell’intero sistema.
+
+L’ Installazione del Core avverrà su infrastruttura Regionale, Sistema Cloud Toscana
+(SCT).
+
+È richiesto che tutti i componenti hardware e software del sistema CORE, nonché dei
+software applicativi distribuiti previsti dalla fornitura vengano collocati presso il Data
+Center Presso Il TIX Regione Toscana e gestiti dalla funzione ICT di ESTAR, come
+descritto nei capitoli successivi.
+
+
+
+Detto Ciò, si definisce CORE l’insieme minimale degli elementi che il fornitore riterrà
+necessario, al fine di gestire tutti i componenti remoti secondo le funzionalità descritte
+sopra.
+
+È richiesto che tutti gli apparati remoti siano gestiti dal CORE, inclusa: la
+configurazione dei menu e dei servizi esposti, monitoraggio del funzionamento,
+monitoraggio statistico, sia per quanto riguarda i riscuotitori sia per totem e monitor
+informativi, sia per i sistemi di gestione dell’accoglienza
+
+Tutte le comunicazioni via rete tra apparati centrali CORE e apparati remoti dovranno
+avvenire con l’utilizzo di protocolli informatici standard di Regione Toscana.
+
+Non è consentita nessuna comunicazione nella direzione                  server>client   o
+server>dispositivi che venga attivata nativamente dal server
+
+Il Fornitore dovrà presentare il progetto distinguendo le seguenti parti:
+
+Nelle parti software dovranno essere descritte:
+
+   •   tutte le funzionalità degli applicativi che si ritengano necessari per il
+       funzionamento e la sincronia dei componenti remoti, nonché per la
+       creazione/modifica dei progetti che compongono il palinsesto e la gestione della
+       relativa scaletta;
+   •   tutte le funzionalità degli applicativi che si ritengano necessari per il
+       funzionamento dei totem (creazione menu dinamici di navigazione e quant’altro
+       previsto dalle funzionalità richieste);
+   •   tutte le funzionalità dell’applicativo di controllo di tutte le postazioni remote
+       inerente al monitoraggio del funzionamento e produzione statistiche di utilizzo
+       dei singoli componenti remoti (gestione remota, alert, cruscotto,
+       georeferenziazione); dovrà essere possibile attivare sistemi di “Alert” proattivi
+       (sms - e-mail), inerentemente a malfunzionamenti parziali o totali (watch dog)
+       o di messaggi inerenti alla normale gestione (es. warning di fine carta).
+   •   tutte le funzionalità necessarie alla gestione del flusso di accesso e accoglienza;
+   •   possibilità di interfacciare apparati remoti di terze parti (per mezzo delle RFC e
+       WS sopra citati).
+
+Trattandosi di servizio, dovranno essere comprese tutte le attività di installazione,
+configurazione e messa a regime dei sistemi CORE software, nonché dei software
+applicativi.
+
+Sono altresì a carico totale del fornitore tutti i servizi di assistenza tecnica e supporto
+sistemistico dei componenti software oggetto del servizio, secondo le prescrizioni tutte
+riportate nei successivi paragrafi SCT
+
+
+
+7.1 Sicurezza del sistema
+
+L’infrastruttura proposta dovrà essere posizionata in DMZ dei sistemi di firewalling
+esistenti, che verranno comunicati dai referenti ICT ESTAR, e facente uso di DNS per
+la risoluzione di hostname/url, e funzionante sia in presenza di NAT che di meccanismi
+di trasporto sicuri quali VPN IPSEC, SSL/TLS, etc. Certificati digitali, eventuali licenze
+a qualunque titolo e di qualsiasi componente dell’architettura (S.O., Application Server,
+DBMS, ecc.) e quant’altro necessario, devono essere compresi nella fornitura, ad
+eccezione soltanto di eventuali licenze/certificati che dovessero già essere nella
+disponibilità di ESTAR/Aziende Sanitarie.
+
+Al fornitore è richiesto di attestare la funzionalità del servizio in ambiente geografico
+all’interno di RTRT/INTERSST, ovvero con i client che contattano il servizio non tramite
+collegamenti LAN, ma tramite collegamenti WAN/Internet con BMG non inferiore a
+512Kbps.
+
+Al fornitore è altresì richiesto di predisporre un adeguato protocollo operativo da far
+utilizzare alle strutture sanitarie coinvolte in caso di indisponibilità del servizio, da
+mantenere aggiornato almeno annualmente e da testare almeno mensilmente
+(concordando tempi e modi).
+
+
+
+7.2 Infrastruttura Tecnologica
+
+La soluzione offerta dovrà essere cloud ready ed implementabile quindi
+sull’infrastruttura tecnologica messa a disposizione da RT sul proprio Cloud Regionale
+(SCT).
+
+Tale infrastruttura deve essere organizzata e dimensionata in modo tale da mettere a
+disposizione almeno i seguenti ambienti:
+
+
+       1) PRODUZIONE (PR): ambiente operativo di erogazione del servizio, utilizzato
+          H24 dagli operatori.
+       2) TEST (TEST): ambiente non produttivo (ovvero con dati non riconducibili
+              ad assistiti reali) per testare gli effetti degli aggiornamenti di prodotto, il
+          rilascio di nuovi moduli e il collaudo dei moduli/funzionalità prima
+          dell’installazione in produzione. Non deve interferire, in nessun caso,
+          sull’ambiente di produzione e deve essere integrabile con tutti gli altri
+          sistemi/strumenti          interessati al processo. Tale ambiente deve essere
+          disponibile sin dall’inizio del progetto.
+
+
+
+Inoltre, si dovranno prevedere le seguenti attività:
+
+   1) Eseguire tutte le attività e i servizi professionali necessari all’installazione e
+      configurazione degli ambienti     sopra elencati;
+   2) Aggiornare (all’ultima versione stabile rilasciata e con le patch di
+      aggiornamento) tutti gli ambienti sopra elencati, per tutti i software installati,
+      per tutta la durata contrattuale;
+   3) Dimensionare in termini di risorse e di licenze, di tutti gli ambienti sopra
+      elencati, per tutti i software installati, per l’intera durata contrattuale e nella
+      misura sufficiente a garantite la fruibilità di tutti i sistemi nei vari ambienti in
+      modo appropriato e congruo rispetto al contesto d’uso.
+
+
+7.3 Requisiti Infrastrutturali
+Il SSR Toscano ha definito politiche strategiche in merito ai data center che prevedono
+la realizzazione e la convergenza di tutti i data center delle AA.SS. verso il Sistema
+Cloud Toscana (SCT).
+
+Le infrastrutture a supporto e servizio del software saranno dunque rese disponibili da
+parte della stazione appaltante su SCT in ottemperanza a quanto disposto dall'Agenzia
+per l'Italia Digitale (AgID) attraverso il piano triennale nelle modalità:
+
+   1) IaaS (Infrastructure As A Service), ossia “Infrastruttura tecnologica fisica e
+      virtuale in grado di fornire risorse di computing, networking e storage da
+      remoto e mediante API” secondo la definizione riscontrabile nel suddetto piano
+      triennale: in questo caso la stazione appaltante mette a disposizione
+      dell'aggiudicatario le suddette risorse (VM dispiegate con sistema operativo
+      ospite installato e pacchetti standard, in versioni per le quali sia attivo il
+      supporto del produttore) ed è compito dell'aggiudicatario amministrare e
+      gestire tutti gli ulteriori aspetti della piattaforma sotto la supervisione e il
+      coordinamento del personale tecnico ICT della stazione appaltante e/o di
+      soggetti terzi qualora ritenuto necessario dalla stazione appaltante stessa;
+
+                                               Oppure
+   2) PaaS (Platform As A Service), ossia “Piattaforme per sviluppare, testare e
+      distribuire le applicazioni” secondo la definizione: in questo caso la stazione
+      appaltante fornisce all'aggiudicatario il solo accesso alla piattaforma applicativa
+      dispiegata in ambienti standard, riservandosi di assegnare le attività di gestione
+      di tutti i livelli sottostanti al personale tecnico ICT della stazione appaltante e/o a
+      soggetti terzi individuati per l'amministrazione del servizio.
+
+
+
+
+Nel caso di implementazioni per cui è prevista l'erogazione di ambienti IaaS
+l'aggiudicatario si fa carico di ogni attività di gestione tecnologica (sistemistica, DBMS
+e applicativa) dell'ambiente dispiegato.
+
+Fatte salve diverse indicazioni la gestione e l'amministrazione dell'ambiente di
+networking, per il quale viene fornita documentazione specifica negli allegati tecnici
+al presente bando, sono a carico della stazione appaltante e vengono espletate
+attraverso il personale tecnico ICT della stazione appaltante e/o di soggetti terzi
+opportunamente individuate allo scopo.
+
+Assunto che è obiettivo del SSR garantire che tutti i software della Sanità Toscana
+siano gestiti in modalità PAAS, le ditte concorrenti dovranno dettagliare nell’offerta
+tecnica la soluzione architetturale proposta, in ottica di installazioni centralizzate
+presso il Cloud SCT, che sarà oggetto di valutazione da parte della Commissione
+Giudicatrice come previsto nella griglia punteggi.
+
+        Sono da considerare queste specifiche:
+
+                1. LICENZE: l’aggiudicatario deve prevedere e includere nell’offerta tutte
+                le licenze software necessarie al proprio progetto; tuttavia, non devono
+                essere fornite licenze per:
+
+
+
+
+    •   sistema operativo ospite (tra i seguenti):
+
+        Linux                     Ogni Piattaforma Linux
+        Microsoft                 Ogni versione Windows Server
+
+
+
+
+    •   sistema DBMS (tra i seguenti):
+        PaaSAddOn-JEAP            Jboss EAP
+        PaaSAddOn-Owebl           Oracle Weblogic,
+        PaaSAddOn-DB2             IBM DB2 AESE
+        PaaSAddOn-MSQLSEE         Microsoft SQL Server Enterprise Edition
+        PaaSAddOn-MSQLSSE         Microsoft SQL Server Standard Edition
+        PaaSAddOn-MSQLSWE         Microsoft SQL Server Web Edition
+        PaaSAddOn-MySQLEE         MySQL Enterprise Edition
+        PaaSAddOn-MySQLSE         MySQL Standard Edition
+        PaaSAddOn-ODBEE           Oracle Database Enterprise Edition
+        PaaSAddOn-ODBSE           Oracle Database Standard Edition
+        PaaSAddOn-PGS-SUP         PostGRESql con Supporto commerciale
+
+
+
+2. SERVIZI di GESTIONE:
+
+Rimangono in carico della stazione appaltante i layer Bilanciamento locale e su siti BC
+e DR;
+
+l’infrastruttura layer DATI (esempio Oracle, MongoDB, PostgreSQL, MySQL) sia fisica
+che virtuale;
+
+il monitoraggio infrastrutturale di base, il backup e la gestione dei sistemi antivirus
+(anche sulle VM IaaS);
+
+gestione firewalling del resource group del progetto aggiudicato;
+
+interventi programmabili (patching sistema operativo ospite e/o pacchetti software)
+anche sulle macchine IaaS qualora l’aggiudicatario non possedesse skills adeguati.
+
+Tutti i dispositivi e i software oggetti della fornitura devono essere compatibili con
+l’ambiente tecnologico informatico preesistente con particolare riferimento all’ultima
+release vigente alla data di pubblicazione del presente bando, disponibili nei seguenti
+documenti pubblicati alla pagina Web di ESTAR “linee guida tecnologiche” all’ URL
+pubblica http://servizi.estar.toscana.it/index.php/documentazione-ict
+Versione attuale: “ll documento contiene le specifiche tecniche per la progettazione,
+l'acquisizione e l'implementazione di automazioni informatiche Release 1.6 09-06-
+2023", Allegato G
+
+
+
+
+7.4 CAST
+
+Nell’ambito del SSR è in fase di dispiegamento la nuova infrastruttura di trasporto degli
+eventi sanitari di tipo applicativo (CAST).
+
+Tenendo in considerazione le linee evolutive dettate da AGID per la Pubblica
+Amministrazione sono state revisionate e riprogettate completamente le componenti
+critiche della pregressa infrastruttura, predisponendola alla gestione delle nuove
+funzionalità in modo da garantire la piena efficienza del sistema anche in situazione di
+carico elevato, mediante meccanismi di scaling efficiente.
+
+La soluzione implementata prevede il dispiegamento di una architettura a microservizi
+secondo cui sono stati riprogettati i Nodi di Trasporto degli Eventi Sanitari e il Registry
+OID che sono istanziati in modalità centralizzata in modo da diminuire la complessità
+del sistema e, quindi, aumentarne l’efficienza riducendone il routing gerarchico.
+
+Il sistema prevede fin da subito l’attivazione di un nuovo componente infrastrutturale
+CAST denominato “CAST API GATEWAY” che offre le seguenti funzionalità:
+
+   1) Esposizione delle API dei servizi applicativi erogatori mediante interfacce
+      standard;
+   2) Protezione dei servizi applicativi erogatori mediante gestione dell’autenticazione
+      e dell’autorizzazione all’accesso;
+   3) Instradamento delle richieste di servizio verso i servizi applicativi erogatori
+      mediante regole di routing configurate tramite il Registro delle API;
+   4) Supporto all’interoperabilità degli applicativi in conformità a quanto indicato
+      dalle Linee Guida AGID – ModI.
+
+Già nella prima fase di dispiegamento sono disponibili le funzionalità di base del CAST
+API GATEWAY che sono in grado di garantire l’accesso sicuro ai servizi erogatori in
+aderenza alle primarie regole tecniche indicate nelle Linee Guida su Interoperabilità
+tecnica della PA (ModI) emesse da AGID.
+Le informazioni specifiche di CAST, finora contenute nella busta 98, possono essere
+gestite in due modalità:
+
+   •   I metadati di trasporto che identificano lo scenario, ovvero mittente,
+       destinatario, RFC e versione, vengono gestiti mediante regole di definizione
+       delle URL (“URL Pattern”) delle interfacce;
+   •   Le informazioni essenziali, invece, che sono specifiche del singolo evento (quali
+       ad esempio ID Applicativo, Data, Keyword, o altro) vengono trasmesse
+       mediante HTTP Header.Eventuali metadati di trasporto previsti dai pattern
+       ModI (quali ad esempio X-ReplyTo, X-Correlation-ID, X- Location, ecc. )
+       vengono gestiti mediante HTTP Header o SOAP Header, secondo quanto
+       indicato dalle regole AGID.
+
+È prevista l’attivazione di un gateway infrastrutturale che garantisca la comunicazione
+fra un applicativo fruitore e servizi applicativi erogati in modalità ModI, in accordo ad
+una API condivisa. L’autenticazione, l’autorizzazione e l’instradamento di messaggi
+applicativi è basata su regole definite mediante il Registro delle API CAST e su regole
+di definizione delle URL (“URL pattern”) delle interfacce applicative del gateway.
+
+Si prevede inoltre, l’attivazione di interfacce applicative REST per veicolare messaggi
+JSON e di nuove interfacce per veicolare messaggi SOAP privi di Busta 98, in completa
+aderenza alle regole tecniche indicate nelle Linee Guida AGID – Modello di
+Interoperabilità (ModI), per quanto riguarda:
+
+   •   Pattern di interazione: modalità bloccante (BLOCK_REST, BLOCK_SOAP),
+       modalità non bloccante PUSH e PULL (NONBLOCK_PUSH_REST,
+       NONBLOCK_PUSH_SOAP, NONBLOCK_PULL_REST, NONBLOCK_PULL_SOAP) e
+       modalità CRUD (CRUD_REST);
+   •   Pattern di sicurezza a livello di canale che garantisce la confidenzialità e
+       integrità della comunicazione tra fruitore ed erogatore e l’identificazione e
+       autenticazione        degli    interlocutori  (ID_AUTH_CHANNEL_01           e
+       ID_AUTH_CHANNEL_02);
+   •   Tracciabilità delle comunicazioni (Logging);
+   •   Tecnologie per le API, raccomandazioni generali, tecniche e standard di
+       implementazione.
+
+Già nella prima fase sono previsti, infine:
+
+   •   L’adozione di regole di definizione delle URL delle interfacce applicative del
+       CAST     API    GATEWAY,        basato    sul   seguente      URL     pattern:
+       https://{dominio}/{tecnologia}/{mittente}/{destinatario}/{api}/{versione}/{ri
+       sorsa}/
+   •   L’Attivazione del Registro delle API CAST (Catalogo API) e della relativa console
+       web di amministrazione, per la configurazione delle abilitazioni delle fruizioni e
+       erogazioni REST o SOAP e il controllo degli accessi;
+   •   L’Attivazione di una console web di tracciamento e diagnostica dei messaggi
+       inoltrati dal gateway.
+
+Al termine di questa fase è già possibile avviare il dispiegamento di nuovi scenari di
+cooperazione basati sul nuovo paradigma.
+
+In una successiva fase ad oggi in fase di pianificazione le funzionalità saranno
+completate con:
+
+   • Evoluzione del Registro delle API CAST (Catalogo API) in modo da poter gestire:
+    o Descrizione formale delle API dei servizi erogati tramite gateway (WSDL per
+       SOAP, Swagger per REST) e tracciabilità delle versioni delle API (versioning);
+    o Gestione certificati dei servizi applicativi fruitori e erogatori;
+   • Validazione dei messaggi in ingresso basata sulla descrizione formale delle API
+     dei servizi erogati (WSDL per SOAP, Swagger per REST) in modalità bloccante
+     o in modalità monitoraggio;
+   • Adesione completa alle regole tecniche indicate nelle Linee Guida AGID –
+     Modello di Interoperabilità (ModI) inerenti in particolare a:
+     o Pattern di sicurezza a livello di messaggio in modo da garantire la
+         confidenzialità e autenticità della comunicazione tra fruitore ed erogatore,
+         l’integrità del messaggio scambiato e la garanzia di opponibilità ai terzi e
+         non ripudio delle trasmissioni (ID_AUTH_SOAP_01, ID_AUTH_SOAP_02,
+         ID_AUTH_REST_01, ID_AUTH_REST_02).
+     o Profili di interoperabilità: in conseguenza all’adozione dei pattern di
+         sicurezza a livello di messaggio, gli erogatori dei servizi potranno adottare
+         combinazioni di pattern di interazione e di pattern di sicurezza, secondo i
+         profili di confidenzialità ed autenticazione del fruitore
+         [PROFILE_CONF_ID_AUTH_01] e/o i profili per la non ripudiabilità della
+         trasmissione [PROFILE_NON_REPUDIATION_01].
+     o Limitazioni di utilizzo dei servizi erogatori in base alle caratteristiche delle
+         API ed al profilo degli utilizzatori (throttling).
+8 Monitor multimediali
+La presente fornitura deve prevedere l'acquisizione, l'installazione e la configurazione
+di monitor multimediali per i punti di accoglienza e le aree di attesa delle Aziende
+Sanitarie della Regione Toscana. L'obiettivo è migliorare l'esperienza utente fornendo
+informazioni chiare e dinamiche, riducendo la percezione dei tempi di attesa e offrendo
+un canale di comunicazione efficace con l'utenza.
+
+Tutti i video devono essere forniti in formato compatibile con il sistema dei palinsesti
+oggetto di questo capitolato e devono essere previsti analoghi palinsesti video per ogni
+nuovo servizio che verrà aggiunto durante tutto il periodo dell’appalto.
+Il software per le postazioni informative, ed installato su di esse, deve garantire il
+funzionamento stand-alone del sistema. Tutte le informazioni del palinsesto
+programmato ed i vari progetti grafici che lo compongono devono essere memorizzate
+sul punto informativo in modo da renderlo autonomo per la propria visualizzazione.
+Ovviamente questa caratteristica decade per tutti quei flussi che per natura sono
+veicolabili solo tramite broadcast (esempio TV, informazioni relative all’accoglienza).
+
+Il sistema dovrà essere caratterizzato dai seguenti punti:
+
+          •   Sostenere e visualizzare in maniera fluida file di dimensioni considerevoli
+              (data l’opportunità di inserire nel palinsesto elementi diversi, fra cui
+              video);
+          •   garantire una diffusione delle informazioni in tempo reale (questa
+              funzionalità consentirebbe di usare lo strumento degli schermi-video per
+              comunicazioni di servizio);
+          •   funzionalità del sistema 24 ore su 24 ore no-stop;
+          •   autonomia di aggiornamento. Data la scelta tecnologica di avere un
+              unico server centrale, per garantire il minimo impatto sulle regole di
+              instradamento dei vari collegamenti attraverso le varie reti aziendali, si
+              richiede che sia il client a contattare il server per prelevare i propri
+              aggiornamenti, questo deve poter avvenire automaticamente ad una
+              scadenza giornaliera, oppure forzando l’aggiornamento manualmente
+              collegandosi al client;
+          •   completo di tutte le licenze software necessarie per il suo funzionamento
+              (compreso Sistema Operativo)
+
+
+
+
+8.1 Specifiche Tecniche dei Monitor
+
+
+Monitor di sala d’attesa
+si richiedono monitor con almeno le seguenti caratteristiche:
+
+   •   Dimensioni come da tabella seguente
+   •   connettività HDMI,
+   •   Risoluzioni supportate: minimo FULLHD
+   •   luminosità almeno 350 cd/m²
+   •   dotati di altoparlanti interni per la produzione degli avvisi di chiamata (10 W +
+       10W) anche con l’aggiunta di annunci vocali (ad esempio, per un sistema di
+       gestione della coda in cui viene visualizzato e pronunciato ad alta voce un testo).
+   •   dotati di Hardware come minicomputer o schede industriali integrate".
+
+"Hardware come minicomputer o schede industriali integrate"
+
+I monitor dovranno veicolare il software di accoglienza, già in uso in tutti gli Enti del
+SSR, oppure il software CMS che è oggetto di altra gara.
+
+I monitor utilizzati per l’accoglienza sono monitor professionali che devono garantire il
+funzionamento continuativo e prolungato nel tempo richiesto nel contesto delle sale
+d’attesa ospedaliere garantito 16/7 e Pronto Soccorso 24/7.
+
+Monitor visori fuori porta ( Sportelli, Ambulatori e Box prelievi) dotati di Hardware
+come minicomputer o schede industriali integrate.
+
+
+
+Funzionalità di accensione/spegnimento programmabile: I monitor devono
+poter essere programmati per accendersi e spegnersi automaticamente o in base alle
+funzionalità del software di gestione centralizzato.
+
+
+
+8.2 Contenuti e Servizi Aggiuntivi
+
+Il concorrente dovrà prevedere la possibilità di integrare i seguenti contenuti e servizi
+esposti sulle piattaforme self-accettazione, MR-You e CUP accettatore:
+
+   •   Sistema di gestione delle code: Visualizzazione dei numeri chiamati e degli
+       sportelli a cui rivolgersi.
+   •   Informazioni sanitarie: Proiezione di video e messaggi informativi su
+       prevenzione, campagne vaccinali e orari di servizio, campagne informative, etc.
+   •   Avvisi urgenti: Un sistema che permetta di interrompere il palinsesto ordinario
+       per comunicazioni di emergenza.
+   •   Programmi televisivi
+8.3 Installazione, Collaudo e Manutenzione
+
+   •   Installazione: L'azienda aggiudicataria dovrà farsi carico dell'installazione
+       fisica dei monitor, inclusi staffaggi a muro e configurazione iniziale, nel rispetto
+       delle normative di sicurezza e delle indicazioni fornite dall'Azienda Sanitaria.
+   •   Collaudo: Al termine dell'installazione, dovrà essere effettuato un collaudo
+       congiunto per verificare il corretto funzionamento di tutti i dispositivi.
+   •   Manutenzione: Il servizio di manutenzione dovrà includere assistenza tecnica
+       remota, interventi on-site entro 24 ore dalla segnalazione e la sostituzione di
+       componenti difettosi. Dovrà essere garantita una manutenzione ordinaria
+       annuale.
+
+
+
+9 Requisiti Tecnici dell’Hardware
+Tutte le apparecchiature dedicate al servizio dovranno essere conformi agli standard
+internazionali, dettati in tema di tutela della salute, per quanto attiene all'ergonomia
+ed alle interferenze elettromagnetiche, rispettando le normative per il livello di
+emissioni dei raggi X, per la sicurezza elettrica e meccanica e relativi aggiornamenti
+temporali.
+
+   1. Norme CEI EN 62368-1 relative sicurezza delle apparecchiature elettriche ed
+      elettroniche
+   2. Norme di Sicurezza CEI EN 55032 Compatibilità elettromagnetica delle
+      apparecchiature multimediali
+   3. Norme IEC 1156 per la misura dei parametri elettrici e trasmissivi;
+   4. Direttiva 2006/25/CE, prescrizione minime di sicurezza e di salute, relative all’
+      esposizione di agenti fisici (radiazioni ottiche artificiali).
+   5. I requisiti di immunità ai campi elettromagnetici definiti dalla EN 55035
+   6. Cavi UTP rispondenti a ISO/IEC 11801-1:2017, minimo Cat. 6
+   7. Guaine secondo norme IEC 60332-3:2018
+
+
+
+
+L'appaltatore dovrà garantire:
+   − la conformità delle apparecchiature alle normative CEI o ad altre disposizioni
+       internazionali riconosciute e, in generale, alle vigenti norme legislative,
+       regolamentari e tecniche disciplinanti i componenti e le modalità di impiego
+       delle apparecchiature medesime ai fini della sicurezza degli utilizzatori;
+   − per ogni installazione dovrà essere fornita tutta la documentazione di progetto
+       relativa alle apparecchiature hardware (hardware technical reference, operator
+       & service guide, installation guide, tuning guide etc.). La documentazione dovrà
+       essere redatta in lingua italiana, o in subordine in lingua inglese, e dovrà essere
+       fornita su supporto cartaceo (manuali) ed elettronico;
+   − l'appaltatore si obbliga a fornire modelli, componenti e prodotti originali. Nel
+       caso in cui al momento della formalizzazione dell'ordine o in fase di successive
+       adesioni da parte delle Aziende Sanitarie/Ospedaliere i modelli offerti non
+       risultassero più in produzione, saranno forniti i modelli equivalenti dello stesso
+       produttore realizzati in sostituzione;
+
+
+Le AASS potranno richiedere una specifica dimensione di Monitor, ed il fornitore sarà
+tenuto a fornire un prodotto coma da tabella seguente, con differenza di non oltre 2
+pollici da quanto richiesto.
+Ad esempio, se l’AASS richiede un monitor da 56”, il fornitore sarà tenuto a fornirne
+uno con un range da 54” a 58”.
+
+
+
+ Riferimento    Descrizione
+ M70            Stazione multimediale per interni – Monitor da 70” o oltre
+ M60            Stazione multimediale per interni – Monitor da 60” a 69”
+ M50            Stazione multimediale per interni – Monitor da 50” a 59”
+ M40            Stazione multimediale per interni – Monitor da 40” a 49”
+ M30            Stazione multimediale per interni – Monitor da 30” a 39”
+ M20            Stazione multimediale per interni – Monitor da 20” a 29”
+ M10            Stazione multimediale per interni – Monitor da 10” a 19”
+
+
+
+
+ V10            Visore per fuori porta o sportello
+
+
+ TOTEM multimediali
+
+
+
+ TBA            modello “Base Accoglienza”,
+                Postazione multimediale informativa/consultativa per interni
+                con caratteristiche minime adatte per la gestione
+                dell’accoglienza, dotata di:
+                - Tecnologica touch screen
+                - Lettore QR-Code
+                - Stampante termica (ticket)
+
+                Collocazione tipo: posto in ambienti di attesa, comunemente
+                ambulatori, cup, pronti soccorsi, dove il servizio di accesso
+                deve essere controllato e monitorato.
+
+
+ TEA            modello “Evoluto Accoglienza”
+      Postazione multimediale informativa/dispositiva per interni per
+      l’interazione con i servizi, dotata di:
+      - tecnologia touch screen
+      - lettore smart card TS/CNS/CIE (standard CNS)
+      - stampante b/n su carta A4 e/o stampante termica (ticket)
+      - lettore di codici a barre compatibile con standard sanitari
+      (ricetta rossa, tessera Team, promemoria (DM2011) …)
+
+      collocazione tipo: posto in ambiente dedicato con libero
+      accesso per l’utilizzo dei servizi
+
+TPB   modello “PuntoSi senza POS”
+      Postazione multimediale informativa/dispositiva per interni per
+      l’interazione con i servizi, dotata di:
+      - tecnologia touch screen
+      - lettore smart card TS/CNS/CIE (standard CNS)
+      - stampante b/n su carta A4 e/o stampante termica (ticket)
+      - lettore di codici a barre compatibile con standard sanitari
+      (ricetta rossa, tessera Team, promemoria (DM2011) …)
+
+      Collocazione tipo: posto nelle vicinanze dei servizi di
+      accettazioni, comunemente laboratori, radiologie, accettazioni
+      ambulatoriali o pronti soccorsi.
+
+TPP   modello “PuntoSi con POS”
+      Postazione multimediale informativa/dispositiva per interni per
+      l’interazione con i servizi, dotata di:
+      - tecnologia touch screen
+      - lettore smart card TS/CNS/CIE (standard CNS)
+      - stampante b/n su carta A4 e/o stampante termica (ticket)
+      - lettore di codici a barre compatibile con standard sanitari
+      (ricetta rossa, tessera Team, promemoria (DM2011) …)
+      - lettore di Bancomat e Carte di Credito + Software di
+      pagamento (ovvero integrazione con il PSP della gara di
+      riscossione)
+
+      Collocazione tipo: posto nelle vicinanze dei servizi di
+      accettazioni, comunemente laboratori, radiologie, accettazioni
+      ambulatoriali o pronti soccorsi dove è necessario offrire un
+      punto di riscossione automatico legato alle pratiche sanitarie.
+10 Servizio Help Desk.
+Il fornitore dovrà produrre un documento che descrive dettagliatamente la tipologia
+di intervento ed il soggetto a cui viene dato in carico.
+A decorrere da ogni singola attivazione/adesione, il servizio dovrà ricomprendere
+anche l'assistenza e manutenzione full risk di ogni componente acquisita dagli Enti,
+che dovranno essere assicurate con la massima tempestività ed efficienza e dovranno
+prevedere:
+
+   ● Riparazione guasti, anomalie e malfunzionamenti del software applicativo o
+     dell’hardware oggetto della fornitura
+   ● Interventi di modifica del software resi necessari dal rilascio di nuove versioni
+     dello stesso o dall’aggiornamento dei sistemi software di base con dichiarazione
+     dei tempi di intervento
+   ● Interventi correttivi/migliorativi
+   ● Richieste di chiarimenti sugli applicativi e/o hardware
+   ● Richieste di assistenza ordinaria
+
+
+Il Fornitore dovrà garantire la disponibilità di un servizio help desk che si occupi della
+presa in carico delle segnalazioni di malfunzionamento o di problemi nelle procedure
+informatiche messe in campo dal Fornitore medesimo per l'erogazione dei servizi
+oggetto della fornitura e l’escalation verso fornitori terzi con i quali il sistema della
+fornitura è integrata.
+
+Il servizio di help desk è rivolto esclusivamente a personale delle Aziende
+Sanitarie/Ospedaliere a tale scopo nominate, e dovrà essere erogato attraverso canale
+telefonico ed e-mail e portale web. Il servizio di help desk dovrà essere provvisto di
+un sistema di trouble ticketing che dovrà accettare, classificare e tracciare le
+segnalazioni provenienti da personale a tale scopo nominato, delle Aziende
+Sanitarie/Ospedaliere RT, secondo la seguente scala di priorità:
+
+   •   Bassa: riguardante malfunzionamenti che non determinano blocchi dei servizi
+       erogati all’utenza o ai sistemi
+   •   Media: riguardante malfunzionamenti che determinano un blocco parziale dei
+       servizi erogati all’utenza o dei sistemi
+   •   Alta: riguardante malfunzionamenti che determinano situazioni di blocco totale
+       dei servizi erogati all’utenza o dei sistemi. ll sistema di trouble ticketing dovrà
+       tenere traccia dei ticket aperti e del relativo stato di evasione e dovrà produrre
+       report mensili relativamente ai tempi di presa in carico e chiusura dei ticket.
+
+Dovrà essere previsto un sistema che tenga traccia dei ticket aperti e del relativo stato
+di evasione che dovrà produrre report mensili relativamente ai tempi di presa in carico
+e chiusura del ticket. Deve inoltre essere previsto un portale web cui i referenti
+aziendali del servizio devono poter vedere lo stato di lavorazione dei ticket.
+Il servizio di help desk dovrà essere reso disponibile agli utenti all'uopo nominati dalle
+Aziende Sanitarie/Ospedaliere, o loro delegati, per la segnalazione di eventuali
+anomalie e problemi. La disponibilità del servizio dovrà essere garantita nei giorni dal
+lunedì al sabato dalle 8 alle 18, festivi esclusi. Potrà essere richiesto un servizio h24
+per un numero limitato di Totem indicati delle AASS per i servizi continuativi (es. Pronto
+Soccorso).
+
+Il Servizio di Help Desk offerto sarà oggetto di valutazione in fase di aggiudicazione
+
+
+
+11 Manutenzione adeguativa dei servizi applicativi (MAD)
+Il servizio dovrà comprendere tutte le attività di manutenzione volte ad assicurare la
+costante aderenza Hardware e Software all’evoluzione dell’ambiente tecnologico del
+sistema informativo ed a garantire l’adeguamento a seguito di modifiche di norme o
+disposizioni di legge, sia in ambito regionale che nazionale, modifiche organizzative,
+amministrative, dei processi interni o delle esigenze funzionali dell’amministrazione,
+anche su input regionale. Rientrano in tale ambito le attività di modifica alle procedure,
+alle funzionalità, alle sezioni ed ai programmi offerti per la conduzione del presente
+servizio volte a:
+
+   •   assicurare la costante aderenza Hardware e Software alle più recenti versioni
+       dei software di base (es application server, http server), di librerie e package
+       esterni utilizzati per le integrazioni con altri sistemi, del sistema operativo.
+   •   recepire il cambiamento dei requisiti (organizzativi, normativi, ambientali), che
+       non impattano in modo rilevante su funzionalità e architettura delle integrazioni
+
+Rientrano, inoltre nell’ambito del servizio MAD:
+
+   •   il supporto ai contributi di competenza sistemistica e specialistica di prodotto
+       necessari alla corretta esecuzione dell’attività ed al mantenimento di livelli di
+       performance adeguati ad un servizio rivolto al cittadino
+   •   gli adeguamenti dovuti a cambiamenti di condizioni di contorno (ad es. per
+       variazione del numero di utenti, per migliorie di performance, per aumento delle
+       dimensioni delle Base Dati.)
+   •   l’analisi dei requisiti obbligatori, espliciti ed impliciti, relativi all’intervento da
+       realizzare
+   •   la definizione dei test da effettuare per garantire che quanto realizzato sia
+       conforme ai requisiti richiesti
+   •   la produzione e l’aggiornamento della documentazione di progetto (manuali
+       tecnici per l’utente) ai fini della formazione degli operatori
+   •   il rilascio della soluzione modificata (o l’inoltro del pacchetto da rilasciare) negli
+       ambienti di collaudo ed esercizio secondo le politiche di sicurezza definite dalle
+       Amministrazioni
+   •   l’aggiornamento del repository di progetto
+
+
+12 Manutenzione evolutiva a ciclo ridotto
+Il servizio oggetto del presente appalto dovrà comprendere piccole evoluzioni del
+sistema caratterizzate da una breve durata delle attività e che non comportano
+significative modifiche della baseline, né sostanziale reingegnerizzazione del sistema.
+Questo particolare servizio, pur essendo a tutti gli effetti un servizio di sviluppo, viene
+inserito all’interno dei servizi a canone in quanto, sia per la frequenza di utilizzo, sia
+per le modalità di esecuzione, risulta analogo a tutti i servizi continuativi oggetto del
+presente appalto. Le modifiche da MEV a ciclo ridotto non scaturiscono da
+malfunzionamenti, ma sono finalizzate a migliorie o a variazioni di requisiti di modesta
+entità.
+
+Sono ad es. ricompresi in questo servizio l’introduzione di migliorie atte ad arricchire
+il sistema di altre caratteristiche non funzionali, quali l’usabilità, le prestazioni.
+
+Rientrano, inoltre, nell’ambito del servizio di manutenzione MEV a ciclo ridotto:
+
+   •   la presa in carico delle segnalazioni pervenute al servizio di help desk o di
+       assistenza utenti che non si qualificano come attività di manutenzione
+       correttiva, ma garantiscono una migliore qualità ed usabilità dei servizi forniti
+   •   la stima dell’effort necessario all’esecuzione dell’attività
+   •   l’analisi dei requisiti obbligatori, espliciti ed impliciti, relativi all’intervento da
+       realizzare
+   •   l’eventuale supporto ai referenti delle attività sistemistiche e specialistiche di
+       prodotto necessari alla corretta esecuzione dell’attività
+
+La MEV a ciclo ridotto dovrà essere quotata a giornata/uomo ed ordinabile a
+discrezione delle AASS.
+
+
+
+
+13 MEV Manutenzione evolutiva a progetto
+Il servizio di manutenzione evolutiva comprende tutte le attività relative
+all’introduzione di nuove funzionalità e/o integrazioni, attualmente non presenti, nei
+sistemi oggetto dell’appalto.
+Nell’erogazione di tali servizi, il Fornitore si impegna a realizzare le seguenti attività
+
+   •   L’individuazione e condivisione con l’Amministrazione delle soluzioni
+       tecnologiche più appropriate per il soddisfacimento puntuale dei requisiti
+   •   L’individuazione e condivisione con i Fornitori dei sistemi integrati delle soluzioni
+       tecnologiche più appropriate per il soddisfacimento puntuale dei requisiti
+   •   La produzione e l’aggiornamento della documentazione relativa a tutti gli
+       aspetti, sistemistici ed applicativi ed il relativo aggiornamento di baseline
+   •   La garanzia di elevati livelli di sicurezza applicativa e di infrastruttura, facendo
+       riferimento ed applicando i vincoli imposti dalla normativa vigente in materia di
+       sicurezza informatica e tutela della privacy
+   •   L’aderenza a tutta la normativa vigente
+   •   Il supporto all’acquisizione del know-how da parte del personale
+       dell’amministrazione, attraverso affiancamento professionale
+
+
+
+
+14 Realizzazione nuovi canali di integrazione per i Totem PuntoSi
+
+
+Per i Totem PuntoSI è prevista non solo una possibile evoluzione in ambito grafico,
+ma anche in termini di pubblicazione di nuovo servizi di interoperabilità (es. Attivazione
+nuovi servizi su FSE)
+
+
+Pertanto, potranno essere richieste 2 tipologie di canali di interoperabilità:
+
+
+   •   Realizzazione nuovo canale di integrazione a bassa complessità (es
+       attivazione dell’accesso a nuove tipologie di documenti pubblicati su
+       FSE)
+   •   Realizzazione nuovo canale di integrazione ad alta complessità (es.
+       Attivazione di nuove modalità di selfaccettazione, nuove integrazioni
+       indotte da progetti terzi, ecc...)
+
+
+Sarà oggetto di analisi tra Fornitore e AASS la tipologia di canali da utilizzare per la
+progettualità richiesta e stabilire la data di consegna e collaudo.
+
+
+
+
+15 Team di Progetto
+Per quanto riguarda l’integrazione con piattaforme software delle Aziende Sanitarie si
+dovrà far riferimento a personale tecnico di Estar a tale scopo nominato; per quanto
+concerne le integrazioni con i sistemi ed applicativi regionali l’Aggiudicatario dovrà
+interagire direttamente con i riferimenti definiti da RT della piattaforma medesima,
+onde garantire tempi di interazione e risoluzione dei problemi secondo i livelli di
+servizio previsti nel presente documento.
+
+Per la componente infrastrutturale il riferimento saranno le strutture Estar di zona e
+quelle regionali (SCT).
+16 SLA e Penali (in fase di definizione)
+Per gli SLA sulla componente Software del Punto SI fa fede l’allegato ”linee guida
+sull’assistenza e manutenzione per i SW” - Allegato A - Linee guida assistenza e manut
+enzione SW
+
+
+
+All’Aggiudicatario saranno forniti i riferimenti per l’attivazione del supporto tecnico
+infrastrutturale (sia SCT che reti) e l’interazione con tale supporto deve essere a carico
+dell’Aggiudicatario fino alla risoluzione del problema. In questo caso i tempi degli SLA
+son sospesi fino alla chiusura del ticket da parte del supporto infrastrutturale attivato.
+
+
+
+Per gli SLA sulla componente Hardware e Software in gestione all’Aggiudicatario, Il
+servizio di assistenza e manutenzione fornito deve prevedere:
+
+
+
+Per gli interventi ad:
+
+Alta criticità:
+
+Dal momento dell’attivazione del ticket, la risoluzione della problematica deve avvenire
+entro 2 ore lavorative nel caso di possibilità di risoluzione da remoto, entro 4 ore
+lavorative nel caso di necessità di intervento on-site, con giornata lavorativa
+convenzionalmente considerata dal lunedì al sabato dalle ore 8.00 alle ore 20.00.
+
+Qualora sia ravvisata l'impossibilità del ripristino del guasto entro 2 ore,
+l’Aggiudicatario procederà con l’invio di una mail di avviso agli uffici di competenza
+delle Aziende. Questo al fine di consentire agli uffici di competenza la pianificazione
+delle attività "d'emergenza" conseguenti (es., comunicazione agli utenti di dove poter
+pagare in alternativa, etc.).
+
+
+
+Media criticità:
+
+Dal momento dell’attivazione del ticket, la risoluzione della problematica deve avvenire
+entro 2 ore lavorative nel caso di possibilità di risoluzione da remoto, entro 4 ore
+lavorative nel caso di necessità di intervento on-site, con giornata lavorativa
+convenzionalmente considerata dal lunedì al sabato dalle ore 8.00 alle ore 20.00.
+Qualora sia ravvisata l'impossibilità del ripristino del guasto entro 2 ore,
+l’Aggiudicatario procederà con l’invio di una mail di avviso agli uffici di competenza
+delle Aziende. Questo al fine di consentire agli uffici di competenza la pianificazione
+delle attività "d'emergenza" conseguenti (es., comunicazione agli utenti di dove poter
+pagare in alternativa, etc.).
+
+
+
+Bassa criticità:
+
+Dal momento dell’attivazione del ticket, la risoluzione della problematica deve avvenire
+entro 2 ore lavorative nel caso di possibilità di risoluzione da remoto, entro 6 ore
+lavorative nel caso di necessità di intervento on-site, con giornata lavorativa
+convenzionalmente considerata dal lunedì al sabato dalle ore 8.00 alle ore 20.00.
+
+Qualora sia ravvisata l'impossibilità del ripristino del guasto entro 2 ore,
+l’Aggiudicatario procederà con l’invio di una mail di avviso agli uffici di competenza
+delle Aziende. Questo al fine di consentire agli uffici di competenza la pianificazione
+delle attività "d'emergenza" conseguenti (es., comunicazione agli utenti di dove poter
+pagare in alternativa, etc.).
+
+
+
+
+Le penali potranno essere erogate per:
+
+Ritardo consegna materiale ordinato
+
+Ritardo su installazione materiale ordinato
+
+Ritardo su ripristino da collaudo negativo
+
+Ritardo assistenza su componenti Hardware e successivo ripristino servizio
+
+Ritardo su progetti semplici o complessi ordinati dalle AASS
+
+Ritardo sugli SLA di assistenza e manutenzione
+
+Ritardo su malfunzionamenti su POS, lettori Barcode/QRCode e lettura tessere
+TS/CIE/CNS
+
+
+
+Ritardo su consegna materiale ordinato
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nel
+capitolato
+Ritardo su installazione materiale ordinato
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nel
+capitolato
+
+
+
+Ritardo su ripristino da collaudo negativo
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nel
+capitolato
+
+
+
+Ritardo assistenza su componenti Hardware e ripristino servizio
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nel
+capitolato
+
+
+
+Ritardo su progetti semplici o complessi ordinati dalle AASS
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nell’ordine
+
+
+
+Ritardo sugli SLA di assistenza e manutenzione
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nell’ordine
+
+
+
+Ritardo su malfunzionamenti su POS, lettori Barcode/QRCode e lettura tessere
+TS/CIE/CNS
+
+La penale consiste in ____________ per ogni giorno di ritardo da quelli indicati nell’ordine
+

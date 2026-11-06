@@ -23,27 +23,27 @@
   "G1": {
    "cig_totali": 196,
    "euro_totali": 4704781208,
-   "cig_classificati": 28,
-   "euro_classificati": 2746495474,
+   "cig_classificati": 62,
+   "euro_classificati": 3503749685,
    "confidenza": {
-    "media": 20,
-    "alta": 7,
-    "bassa": 1
+    "media": 45,
+    "alta": 13,
+    "bassa": 4
    },
-   "fonte_primaria": 7,
-   "con_documento_archiviato": 19,
+   "fonte_primaria": 17,
+   "con_documento_archiviato": 38,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 22,
-     "euro": 1723809195
+     "cig": 46,
+     "euro": 2254724019
     },
     "A:incerto | B:incerto": {
-     "cig": 3,
-     "euro": 872511624
+     "cig": 7,
+     "euro": 960649699
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 2,
-     "euro": 106647331
+     "cig": 8,
+     "euro": 244848643
     },
     "A:incluso-certo | B:incluso-certo": {
      "cig": 1,
@@ -91,20 +91,20 @@
  "spostamenti": {
   "G1": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 13,
-    "euro": 1108918678
+    "cig": 25,
+    "euro": 1387658374
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 9,
-    "euro": 614890516
+    "cig": 21,
+    "euro": 867065644
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
     "cig": 1,
     "euro": 43527324
    },
    "resta incerto (S6)": {
-    "cig": 5,
-    "euro": 979158955
+    "cig": 15,
+    "euro": 1205498342
    }
   },
   "G3": {
@@ -146,36 +146,36 @@
   "disaccordi": []
  },
  "ostacoli": {
-  "cig_con_ostacoli": 18,
+  "cig_con_ostacoli": 36,
   "per_tipo": {
-   "altro": 16,
-   "404": 7,
-   "login": 4,
-   "403": 3,
+   "altro": 31,
+   "login": 10,
+   "404": 9,
+   "403": 5,
    "pdf-illeggibile": 1
   },
   "domini_principali": {
-   "www.sintel.regione.lombardia.it": 3,
+   "www.sintel.regione.lombardia.it": 4,
+   "pubblicitalegale.anticorruzione.it": 3,
+   "sisgap.regione.calabria.it": 3,
+   "www.anticorruzione.it": 2,
    "dati.anticorruzione.it": 2,
    "www.asl.pe.it": 2,
-   "pubblicitalegale.anticorruzione.it": 2,
+   "appaltitelematici.regione.veneto.it": 2,
    "www.asst-crema.it": 2,
-   "www.anticorruzione.it": 1,
+   "www.trasparenza.ipzs.it": 2,
+   "op.europa.eu": 2,
+   "piattaformaacquisti.rai.it": 2,
+   "trasparenza.cds.giustizia-amministrativa.it": 2,
    "www.asl.bari.it": 1,
    "www.comune.arzachena.it": 1,
-   "servizi.comune.arzachena.ss.it": 1,
-   "openpnrr.it": 1,
-   "www.staffettaonline.com": 1,
-   "www.aressardegna.it": 1,
-   "www.inmp.it": 1,
-   "www.regione.lazio.it": 1,
-   "appaltitelematici.regione.veneto.it": 1
+   "servizi.comune.arzachena.ss.it": 1
   }
  },
  "consumo": {
   "imbuto-g1": {
-   "chiamate": 14,
-   "usd_eq": 19.63
+   "chiamate": 31,
+   "usd_eq": 42.47
   },
   "imbuto-g3": {
    "chiamate": 2,

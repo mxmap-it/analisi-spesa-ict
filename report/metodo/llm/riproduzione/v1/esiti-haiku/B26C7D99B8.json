@@ -1,0 +1,42 @@
+{
+ "cig": "B26C7D99B8",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "7c0e4f85a09ab49431ca73a92162c956290e260b80bda0c38f1292e74adc1093",
+ "quando": "2026-11-06T13:10:55+00:00",
+ "uscita": {
+  "cig": "B26C7D99B8",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "FORNITURA IN SERVICE DI SISTEMI DIAGNOSTICI DI LABORATORIO E MICROBI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Fornitura di apparecchiature mediche per diagnostica di laboratorio con servizio in-house di manutenzione, reagenti e supporto. Non è cloud, non è ICT: è hardware sanitario."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}
