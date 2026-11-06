@@ -16,6 +16,7 @@ contatore del piano (ticket #20). Uso: tetto_stato.py per vedere a che punto si 
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -74,6 +75,8 @@ def main() -> int:
         time.sleep(attesa)
     rec = {"quando": datetime.now(timezone.utc).isoformat(timespec="seconds"), "progetto": progetto,
            "secondi": round(time.time() - t0), "codice": p.returncode, "comando": " ".join(cmd[:4])}
+    if os.environ.get("TETTO_ETICHETTA"):
+        rec["etichetta"] = os.environ["TETTO_ETICHETTA"]  # per misurare il consumo di un giro (es. imbuto-g3)
     try:
         j = json.loads(p.stdout)
         rec.update(costo_usd_equivalente=j.get("total_cost_usd"), usage=j.get("usage"), modello=j.get("modelUsage") and list(j["modelUsage"]),

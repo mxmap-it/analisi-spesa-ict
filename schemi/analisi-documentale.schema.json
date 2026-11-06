@@ -1,0 +1,28 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/schemi/analisi-documentale.schema.json",
+ "title": "spesaict.analisi-documentale/1 — uscita del prompt portabile (report/metodo/llm/prompt-analisi-documentale-v1.md)",
+ "description": "Sottoinsieme di spesaict.classificazione/1 (campo esito + assi + prove). Il runner tools/llm/analisi_documentale.py lo valida e lo converte in spesaict.classificazione/1.",
+ "type": "object",
+ "required": ["cig", "asse_a", "asse_b", "confidenza", "prove", "motivazione"],
+ "properties": {
+  "cig": {"type": "string", "pattern": "^[0-9A-Z]{10}$"},
+  "asse_a": {"type": "object", "required": ["stato", "e_cloud", "servizio"], "properties": {
+   "stato": {"enum": ["escluso-certo", "incluso-certo", "incerto"]},
+   "e_cloud": {"enum": ["s", "n", "?"]},
+   "ict": {"enum": ["s", "n", "?"]},
+   "servizio": {"enum": ["cloud", "psn", "in-house", "telefonia", "licenza", "servizi-professionali", "connettivita", "hardware", "lavori-non-ict", "sanitario-non-ict", "altro"]}}},
+  "asse_b": {"type": "object", "required": ["stato", "giurisdizione"], "properties": {
+   "stato": {"enum": ["incluso-certo", "incerto", "non-applicabile"]},
+   "provider_prodotto": {"type": "string"},
+   "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "ignota", "non-determinabile"]}}},
+  "dipendenze_tecnologiche": {"type": "array", "items": {"type": "string"}},
+  "confidenza": {"enum": ["alta", "media", "bassa"]},
+  "prove": {"type": "array", "items": {"type": "object", "required": ["sha256", "citazione"], "properties": {
+   "sha256": {"type": "string"}, "pagina": {"type": ["integer", "null"]}, "citazione": {"type": "string", "maxLength": 400}}}},
+  "deduzioni": {"type": "array", "items": {"type": "string"}},
+  "documenti_non_pertinenti": {"type": "array", "items": {"type": "string"}},
+  "documento_risolutivo": {"type": "string"},
+  "motivazione": {"type": "string"}
+ }
+}
