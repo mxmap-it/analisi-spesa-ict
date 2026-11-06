@@ -1,0 +1,284 @@
+Proposta                       n. PDET-2026-678 del 02/09/2026
+
+Determinazione dirigenziale    n. DET-2026-637 del 02/09/2026
+
+Oggetto                        Struttura Idro-Meteo-Clima. Affidamento diretto servizio di
+                               manutenzione        software,     gestione   dati     meteorologici,
+                               razionalizzazione      architetturale   e    documentazione      per
+                               l'estendibilità e il riuso dei pacchetti software in ambienti cloud e
+                               HPC per il progetto Modmet - CIG BCD6EDA99D
+
+Dirigente adottante            Struttura Idro-Meteo-Clima - Alberoni Pier Paolo
+
+Dirigente proponente           STRUTTURA IDRO-METEO-CLIMA - Alberoni Pier Paolo
+
+Responsabile del procedimento Di Giacomo Emanuele
+
+
+
+
+Questo giorno 02/09/2026 il Responsabile di STRUTTURA IDRO-METEO-CLIMA, Alberoni Pier
+Paolo, ai sensi del Regolamento Arpae per l’adozione degli atti di gestione delle risorse
+dell’Agenzia, approvato con D.D.G. n. 19 del 26/02/2026 e dell’art. 4, comma 2 del D.Lgs. 30
+marzo 2001, n. 165 determina quanto segue.
+
+
+
+
+                                                                                          Pag 1 di 7
+VISTI:
+ • la D.D.G. n. 159 del 30/12/2025 "Direzione Amministrativa. Servizio Amministrazione,
+   Bilancio e Controllo Economico. Approvazione del Bilancio pluriennale di previsione per il
+   triennio 2026-2028, del Piano Investimenti 2026-2028, del Bilancio economico preventivo per
+   l’esercizio 2026, del Budget generale e della Programmazione di Cassa per l'esercizio 2026";
+ • la D.D.G. n. 160 del 30/12/2025 "Direzione Amministrativa. Servizio Amministrazione,
+   Bilancio e Controllo Economico. Approvazione delle linee guida e assegnazione ai Centri di
+   Responsabilità dei budget di esercizio e investimenti per l’esercizio 2026", così come
+   modificata dalla D.D.G. n. 24 del 26/02/2026;
+ • il Regolamento per l’adozione degli atti di gestione dell’Agenzia approvato con D.D.G. n. 19
+   del 26/02/2026;
+ • il Regolamento per la disciplina dei contratti pubblici di servizi e forniture di Arpae approvato
+   con D.D.G. n. 136 del 29/12/2023, revisionato con D.D.G. n. 63 del 14/05/2026 ;
+RICHIAMATI:
+ • il D. Lgs. 36/2023 recante il nuovo Codice dei contratti pubblici;
+ • l’art. 50 del D.lgs. 36/2023 il quale disciplina le procedure di affidamento dei contratti pubblici
+   sotto soglia comunitaria;
+PREMESSO:
+ • che, con deliberazione del Direttore Generale n. 166 del 30/12/2025, è stato approvato
+   l’Accordo di collaborazione con il Dipartimento della Protezione Civile della Presidenza del
+   Consiglio dei Ministri, per lo sviluppo della conoscenza, delle metodologie e delle tecnologie
+   utili alla realizzazione, presso i centri funzionali, di sistemi di monitoraggio, previsione e
+   sorveglianza nazionali, nonché per l’attuazione dell’organizzazione della funzione di supporto
+   tecnico-scientifico nell’ambito del servizio nazionale della protezione civile (progetto
+   Modmet);
+ • che l’accordo, in corso, si concluderà al 20/11/2028;
+ • che, previa verifica dello svolgimento delle attività e del raggiungimento degli obiettivi previsti
+   nell’allegato tecnico all’Accordo, il Dipartimento della Protezione Civile corrisponderà ad
+   Arpae SIMC un contributo massimo di Euro 409.500,00 per il 2026, un contributo massimo
+   pari a Euro 409.500,00 per l’annualità 2027 e un contributo massimo pari a Euro 375.375,00
+   per il periodo 1/01 - 20/11/2028 per un totale complessivo massimo pari a Euro 1.194.375,00;
+ • che, tra le attività del WP 8 “Infrastruttura informatica” del piano delle attività allegato alla
+
+
+                                                                                            Pag 2 di 7
+   suddetta delibera, è prevista la gestione della manutenzione ordinaria ed evolutiva dei sistemi
+   per l’archiviazione, l’elaborazione e la distribuzione dei dati operativi al Dipartimento di
+   Protezione Civile Nazionale e alla rete dei Centri Funzionali nonché per il raggiungimento
+   degli obiettivi definiti nei WP del suddetto piano, che richiedono degli applicativi in uso sui
+   sistemi cloud e HPC di Arpae-SIMC, in particolare Wreport, DB-All.e, Arkimet, Meteosatlib,
+   Meteomixer, ElaboRadar, Arkiweb, DB-All.e-web, Arkimaps e Moncic-CI;
+ • che, per tali ragioni, è necessario un servizio di manutenzione correttiva ed evolutiva dei
+   suddetti software e di assistenza tecnica e consulenza specialistica per l'utilizzo,
+   l'interpretazione, la conversione e la manipolazione dei formati dati standard impiegati in
+   ambito meteorologico;
+ • che, in ragione degli ampliamenti ed evoluzioni incrementali subiti dagli applicativi nel corso
+   degli anni, risulta inoltre necessaria un’attività di ristrutturazione del codice e di aggiornamento
+   della documentazione architetturale e per sviluppatori;
+ • che, per soddisfare le suddette finalità, la Struttura Idro-Meteo-Clima ha necessità di affidare i
+   servizi di manutenzione software, gestione dati meteorologici, razionalizzazione architetturale
+   e documentazione per l'estendibilità e il riuso dei pacchetti software in ambienti cloud e HPC
+   per il progetto Modmet, relativamente ai suddetti software;
+ • che da parte della Struttura è stata effettuata l’istruttoria volta a definire la tipologia ed il
+   fabbisogno del servizio al fine di soddisfare le esigenze sopra esposte;
+ • che l’importo complessivo stimato per l’affidamento dei servizi di cui trattasi è pari ad euro
+   50.000,00 (IVA esclusa);
+RICHIAMATO:
+ • l'art. 1, comma 512, della legge 28 dicembre 2015, n. 208, che prevede per le amministrazioni
+   pubbliche l'obbligo di provvedere ai propri acquisti di beni e servizi informatici esclusivamente
+   tramite Consip s.p.a. o i soggetti aggregatori, ivi comprese le centrali di committenza regionali
+   per i beni e servizi disponibili presso gli stessi soggetti;
+CONSIDERATO:
+ • che gli applicativi gestiscono attività essenziali per Arpae-SIMC, per la rete dei Centri
+   Funzionali e per il Dipartimento di Protezione Civile, rendendo necessaria la continuità nel
+   servizio di manutenzione correttiva ed evolutiva per evitare interruzioni nei servizi di
+   archiviazione, elaborazione e distribuzione dati;
+ • che l'affidamento ha inoltre l’obiettivo di ristrutturare il codice e integrare la documentazione
+   architetturale e per sviluppatori, per rendere i sistemi completamente manutenibili ed
+   estendibili da soggetti terzi al termine del progetto;
+
+                                                                                             Pag 3 di 7
+ • che la ditta ENRICO ZINI, in qualità di unico autore rilevante dei software in oggetto, detiene
+   la conoscenza specialistica esclusiva necessaria non solo per garantire la continuità operativa
+   richiesta, ma anche per condurre le attività di ristrutturazione e razionalizzazione del codice e
+   di aggiornamento della documentazione architetturale e per sviluppatori, al fine di rendere i
+   sistemi pienamente riusabili, manutenibili ed estendibili da parte di soggetti terzi al termine del
+   progetto;
+CONSIDERATO:
+ • che è stata pertanto contattata la ditta ENRICO ZINI;
+ • Che la ditta ha inviato il preventivo protocollato con numero 0126902/2026 del 10/07/2026;
+ • che sussistono i presupposti per l’espletamento di un affidamento diretto, ai sensi dell’art. 50
+   comma 1 lett. b) del d. lgs. n. 36/2023 con la società summenzionata;
+ • che, con richiesta d’acquisto (RDA) del 14/07/2026, la Struttura IdroMeteoClima ha
+   manifestato la necessità di procedere all’affidamento del servizio di manutenzione software,
+   gestione    dati   meteorologici,    razionalizzazione    architetturale   e   documentazione       per
+   l'estendibilità e il riuso dei pacchetti software in ambienti cloud e HPC;
+ • che con la stessa RDA è stato nominato Responsabile Unico del Progetto (RUP), ai sensi
+   dell’art. 3 del Regolamento per la disciplina dei contratti pubblici di servizi e forniture vigente
+   in Arpae, il dott. Emanuele Di Giacomo;
+ • che la ditta ENRICO ZINI, con sede legale in via VIA SCHIASSI 2, SAN GIORGIO DI
+   PIANO BO - P.IVA 02533751208 C.F. ZNINRC76E03A785Z detiene la conoscenza
+   specialistica esclusiva necessaria per il servizio richiesto;
+ • che è stata acquisita e conservata agli atti la dichiarazione per affidamento diretto senza
+   confronto concorrenziale, sottoscritta dal RUP del procedimento;
+ • che per tali ragioni e per l’affidamento del servizio richiesto, il RUP ha individuato la ditta
+   ENRICO ZINI, abilitata al bando Mepa “Servizi”, Categoria “Supporto e consulenza in ambito
+   ICT”;
+ • che sono stati definiti gli atti della procedura, allegati tutti al presente atto, e più precisamente:
+      ◦ Lettera di invito (prot. Arpae n. 0148469 del 12/08/2026);
+      ◦ Capitolato speciale;
+      ◦ Disciplinare tecnico;
+      ◦ DGUE;
+      ◦ Dichiarazione di offerta economica:
+ • che, pertanto, in data 12/08/2026, la ditta individuata è stata invitata alla trattativa diretta n.
+   6522490, espletata sul portale Mepa, corredata degli atti della procedura summenzionati;
+
+                                                                                                Pag 4 di 7
+ • che, in data 24/08/2026, entro i termini richiesti, la ditta ENRICO ZINI ha presentato la propria
+   offerta;
+ • che la documentazione amministrativa presentata dalla suddetta società è risultata regolare, e
+   l’offerta economica, pari ad euro 48.000,00 (IVA esclusa) è da considerarsi congrua rispetto ai
+   prezzi di mercato per prestazioni equivalenti;
+ • che in relazione alla trattativa diretta n. 6522490 è stato acquisito il CIG BCD6EDA99D sulla
+   piattaforma certificata “Acquistinrete” di Consip Spa, attraverso il sistema di interoperabilità
+   con la piattaforma Contratti Pubblici di ANAC;
+ATTESTATO:
+ • che la fornitura non rientra nei settori merceologici oggetto di Criteri Ambientali Minimi
+   approvati con decreto del Ministero dell’Ambiente, di cui all’art. all’art. 57 del D.Lgs.
+   36/20023;
+ • che sono stati condotti accertamenti volti ad appurare l’esistenza di rischi da interferenza
+   nell’esecuzione dell’appalto in oggetto e che non sono stati riscontrati i suddetti rischi,
+   pertanto, non è stato necessario provvedere alla redazione del DUVRI e del documento
+   informativo;
+ • che , come previsto dall’art. 17 comma 5 del D. Lgs. n. 36/2023, sono stati effettuati i controlli
+   in capo alla ENRICO ZINI sul possesso dei requisiti e sull’insussistenza delle cause di
+   esclusione previste dagli artt. 94 e 95 del D. Lgs. n. 36/2023 tramite il sistema Fascicolo
+   Virtuale dell’operatore economico - FVOE 2.0, reso disponibile sul portale ANAC, con esito
+   positivo;
+ • che non sussistono situazioni di conflitto anche potenziale di interesse secondo quanto previsto
+   dall’art. 16 del D.lgs. 36/2023;
+RITENUTO
+ • di affidare, in esito a trattativa diretta n. 6522490, avviata in data 12/08/2026, ai sensi dell’art.
+   50 comma 1 lett. b) del D.Lgs. n. 36/2023, CIG: BCD6EDA99D il servizio di manutenzione
+   software, gestione dati meteorologici, razionalizzazione architetturale e documentazione per
+   l'estendibilità e il riuso dei pacchetti software in ambienti cloud e HPC per il progetto Modmet
+   alla ditta ENRICO ZINI, con sede legale in via VIA SCHIASSI 2, SAN GIORGIO DI PIANO
+   BO - P.IVA 02533751208 C.F. ZNINRC76E03A785Z, per l’importo complessivo di euro
+   48.000,00 (IVA esclusa);
+ • di dare atto che la stipula del contratto avverrà sul sistema del mercato elettronico della P.A.
+   (Mepa), fermi gli obblighi dell’affidatario previsti dagli atti di gara;
+SU PROPOSTA:
+
+                                                                                              Pag 5 di 7
+ • del Responsabile della Struttura Idro-Meteo-Clima, dott. Pier Paolo Alberoni, che ha attestato
+   la regolarità amministrativa del presente atto;
+ACQUISITO:
+ • il parere favorevole di regolarità contabile espresso, ai sensi del Regolamento per l’adozione
+   degli atti di gestione dell’Agenzia, approvato con D.D.G. n. 19 del 26/02/2026, dal dott. Matteo
+   Angelillis, IF Amministrazione Area Metropolitana e Struttura Idro-Meteo-Clima;
+
+
+                                           DETERMINA
+
+
+
+ 1. di affidare, in esito a trattativa diretta n. 6522490 del 12/08/2026 (CIG BCD6EDA99D), ai
+   sensi dell’art. 50 comma 1 lett. b) del D.Lgs. n. 36/2023, la fornitura del servizio di
+   manutenzione software, gestione dati meteorologici, razionalizzazione architetturale e
+   documentazione per l'estendibilità e il riuso dei pacchetti software in ambienti cloud e HPC
+   per il progetto Modmet alla ditta ENRICO ZINI, con sede legale in via VIA SCHIASSI 2,
+   SAN GIORGIO DI PIANO BO - P.IVA 02533751208 C.F. ZNINRC76E03A785Z, per
+   l’importo complessivo di euro 48.000,00 (IVA esclusa), alle condizioni di cui agli atti allegati
+   tutti alla presente determinazione quali parti integranti e sostanziali della stessa e all’offerta del
+   fornitore agli atti;
+ 2. di dare atto che la stipula del contratto avverrà sul sistema del mercato elettronico della P.A.
+   (Mepa), fermi gli obblighi dell’affidatario previsti dagli atti di gara;
+ 3. di dare atto che al Responsabile unico del progetto sono assegnate le funzioni ed i compiti di
+   cui all’art. 15 del D.Lgs. n. 36/2023 e ulteriormente specificati nell’allegato I.2 del Codice dei
+   contratti, ed in particolare l’attestazione della regolare esecuzione della prestazione eseguita
+   con riferimento alle prescrizioni contrattuali, anche ai fini del pagamento delle fatture;
+ 4. di dare atto che il costo relativo al presente provvedimento è pari complessivamente ad euro
+   58.560,00 (IVA inclusa) avente natura di “Servizi informatici” con riferimento al progetto
+   Modmet e trova copertura nel Budget 2026 e nel bilancio preventivo pluriennale 2026-2028,
+   come di seguito indicato:
+     ◦ Euro 8.798,43 (IVA inclusa) progetto 26MM per l’anno 2026;
+     ◦ Euro 26.323,15 (IVA inclusa) progetto 27MM per l’anno 2027;
+     ◦ Euro 23.438,42 (IVA inclusa) progetto 28MM per l’anno 2028;
+ 5. di demandare al RUP tutti gli adempimenti in materia di trasparenza di cui alla normativa
+   vigente.
+
+                                                                                               Pag 6 di 7
+                                                                IL DIRIGENTE ADOTTANTE
+                                                                      Firmato digitalmente
+                                                                       Alberoni Pier Paolo
+
+
+Si dichiara che sono parte integrante del presente provvedimento gli allegati riportati a seguire 1,
+come file separati dal testo del provvedimento sopra riportato:
+
+
+
+
+1 L'impronta degli allegati rappresentata nel timbro digitale QRCode in elenco è quella dei file pre-esistenti alla firma
+  digitale con cui è stato adottato il provvedimento
+
+                                                                                                              Pag 7 di 7
+Copia conforme dell'originale sottoscritto digitalmente da Pier Paolo Alberoni
+
+
+
+
+                                                                                 OGGETTO: Lettera di invito per l’affidamento della fornitura del servizio di
+                                                                                 manutenzione             software,         gestione         dati      meteorologici,            razionalizzazione
+                                                                                 architetturale e documentazione per l'estendibilità e il riuso dei pacchetti
+                                                                                 software in ambienti cloud e HPC per il progetto Modmet
+
+
+                                                                                 Trattativa diretta n. 6522490
+
+                                                                                 Facendo seguito al Vs. preventivo del 10/07/2026, PROT. 126902/2026, con la
+                                                                                 presente si precisano le seguenti condizioni particolari di risposta alla Trattativa
+                                                                                 diretta n. 6522490, predisposta sulla piattaforma del mercato elettronico MePA di
+                                                                                 Consip.
+
+
+
+                                                                                 1. OGGETTO DELLA FORNITURA, LUOGO DI CONSEGNA, TEMPISTICA
+
+                                                                                 Oggetto dell’affidamento è la fornitura del servizio di manutenzione software,
+arpa.Arpae Emilia-Romagna - Prot. 12/08/2026.0148469.U
+
+
+
+
+                                                                                 gestione dati meteorologici, razionalizzazione architetturale e documentazione per
+                                                                                 l'estendibilità e il riuso dei pacchetti software in ambienti cloud e HPC per il progetto
+                                                                                 Modmet.
+
+                                                                                 Caratteristiche, modalità e termini di esecuzione del servizio sono precisati nel
+                                                                                 Capitolato speciale e nel Disciplinare tecnico allegati alla presente lettera di invito.
+
+                                                                                 Non sono ammesse offerte in aumento rispetto al valore indicato pari ad Euro
+                                                                                 48.000 (IVA esclusa). Oneri per la sicurezza euro 0,00.
+
+                                                                                 I prezzi offerti sono fissi e invariabili e si intendono onnicomprensivi di ogni onere e
+                                                                                 spesa.
+
+                                                                                 In relazione al servizio richiesto, non sono stati individuati rischi da interferenza,
+                                                                                 pertanto non si è reso necessario provvedere alla redazione del Documento
+                                                                                 informativo della sicurezza e del Documento unico di valutazioni dei rischi da
+                                                                                 Interferenza (DUVRI).
+
+                                                                                 Sono a carico del fornitore aggiudicatario, senza alcuna possibilità di rivalsa nei
+                                                                                 riguardi di Arpae, tutte le spese di contratto, inclusa l’imposta di bollo.
+                                                                                 Arpae - Agenzia regionale per la prevenzione, l'ambiente e l'energia dell’Emilia-Romagna​
+                                                                                 Struttura Idro-Meteo-Clima viale Antonio Silvani, 6| 40122 Bologna | tel.+39 051 6497611 | PEC simc@pec.arpae.it
+                                                                                 Sede legale: via Po 5, 40139 Bologna | tel. 051 6223811| PEC dirgen@pec.arpe.it | www.arpae.it | P.IVA 04290860370
+L’imposta è pari a 40 euro, calcolato sul valore contratto che sarà perfezionato sulla
+piattaforma Mepa, ai sensi dell’ art. 18, comma 10 e l'Allegato I.4 al nuovo D.Lgs. n.
+36/2023.
+
+
+
+2. REQUISITI DI CAPACITA’ TECNICO-PROFESSIONALE
+
+Quali requisiti di capacità tecnico-professionale, ai fini della presente procedura, 
