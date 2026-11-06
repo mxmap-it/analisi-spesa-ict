@@ -38,7 +38,8 @@ Legenda: **V** = visto (letto da noi sulla pagina o nel documento); **R** = dedo
 - In `archivio/manifest.jsonl` restano alcune righe con URL che finiscono in `\r`. Sono un errore del primo giro: il file di elenco aveva i fine riga CRLF. Gli URL Intercent-ER corrispondenti sono stati riarchiviati con l'URL corretto. Il manifest è append-only e non è stato corretto.
 - Non abbiamo scaricato le determine di autorizzazione al subappalto di Intercent-ER (circa 120): sono elencate nel CSV come `pubblicato-non-archiviato`.
 - Non abbiamo letto i chiarimenti START (scheda "Chiarimenti" della SPA) né i chiarimenti in testo di SATER, se non dentro la pagina archiviata.
-- Le copie dei file Sintel e START stanno sul server, fuori da `archivio/`. Per portarle nell'archivio content-addressed serve un'estensione di `archivia.py` che accetti file locali.
+- Le copie Sintel e START scaricate con Chrome headless (6/11 e 7/11) sono nell'archivio content-addressed dal 6/11: `tools/archivia.py --da-file` (119 file, sha256 ricontrollati sui blob e uguali a quelli dei CSV). Nel manifest hanno `via: "browser-headless"`, la data originale dello scaricamento (mtime del file) e come `url` la pagina della procedura + `#<nome file>`; per START la `nota` riporta anche l'URL monouso `documents-api/?access-code=` e l'allegato `tendering-api`. La vista è in `mirror/<host>/<path>__allegati/<query>/<nome>`.
+- Un allegato START (cig-94252656BA, «Allegato 6 … WebRT18», sha256 7c7b3567…) è stato sovrascritto in `lavoro/` da un omonimo prima dell'archiviazione: nel CSV del 7/11 è `scaricato-perso`, da riscaricare.
 
 ## Ricontrollo del 7/11
 
@@ -100,4 +101,4 @@ Elenco dei documenti: `aggregatori-2026-11-07.csv` (239 righe, stesse colonne de
 - Non abbiamo ancora cercato i documenti mancanti fuori dalle piattaforme: Amministrazione trasparente delle centrali e degli enti aderenti, delibere di adesione, albi pretori. Resta da fare per le 17 iniziative senza pagina e per le offerte e il transato di tutte.
 - Abbiamo aperto solo il bando e l'esito TED. Non abbiamo esplorato i portali Brescia, SUAM Marche, Azienda Zero, ANAS e FS.
 - Gli zip («Documentazione su Sintel.zip», «listini.zip», ecc.) sono archiviati ma non ancora estratti né letti.
-- Come il 6/11, i file START e Sintel sono sul server fuori da `archivio/`.
+- I file START e Sintel sono nell'archivio (vedi Limiti sopra, `archivia.py --da-file`).

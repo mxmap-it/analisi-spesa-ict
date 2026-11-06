@@ -16,6 +16,13 @@ rsync senza toccare il codice.
 
     archivia.py URL [URL ...]
     archivia.py --lista risorse.txt
+    archivia.py --da-file FILE --url URL_ORIGINALE --data DATA_ISO [--nota TESTO]
+
+Con --da-file si porta nell'archivio una copia già scaricata con altri mezzi
+(Chrome headless, quando l'allegato è un POST JSF o un URL monouso): sha256, blob
+se manca (copia; l'originale resta), vista e riga di manifest con
+via="browser-headless" e la data originale dello scaricamento. Per non collidere
+con la pagina, la vista sta in mirror/<host>/<path>__allegati/<query>/<frammento>.
 """
 from __future__ import annotations
 
@@ -164,11 +171,68 @@ def archivia(sess: requests.Session, url: str, accetta_html: bool = False) -> di
         return rec
 
 
+def percorso_mirror_file(url: str) -> Path:
+    p = urlsplit(url)
+    base = ROOT / "mirror" / p.netloc / p.path.lstrip("/")
+    if not (p.query or p.fragment):
+        return base
+    dest = base.with_name(base.name + "__allegati")
+    if p.query:
+        dest = dest / p.query.replace("/", "_")
+    return dest / (p.fragment.replace("/", "_") or "_")
+
+
+def archivia_file(sorgente: Path, url: str, data: str, via: str = "browser-headless",
+                  nota: str | None = None) -> dict:
+    """Porta nell'archivio una copia locale già scaricata, senza toccare l'originale."""
+    import shutil
+    rec = {"acquisito": data, "archiviato": adesso(), "url": url, "via": via,
+           "origine_locale": str(sorgente)}
+    if nota:
+        rec["nota"] = nota
+    sha = hashlib.sha256()
+    with sorgente.open("rb") as f:
+        for blocco in iter(lambda: f.read(CHUNK), b""):
+            sha.update(blocco)
+    digest = sha.hexdigest()
+    blob = percorso_blob(digest)
+    if blob.exists():
+        esito = "invariato"
+    else:
+        part = ROOT / "tmp" / (digest + ".part")
+        part.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(sorgente, part)
+        blob.parent.mkdir(parents=True, exist_ok=True)
+        os.replace(part, blob)
+        esito = "nuovo"
+    dest = percorso_mirror_file(url)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_name(dest.name + ".link")
+    if tmp.exists():
+        tmp.unlink()
+    os.link(blob, tmp)
+    os.replace(tmp, dest)
+    rec.update(esito=esito, sha256=digest, dimensione=blob.stat().st_size, verifica="hash",
+               mirror=str(dest.relative_to(ROOT)))
+    return rec
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("url", nargs="*")
     ap.add_argument("--lista", type=Path, help="file con un URL per riga")
+    ap.add_argument("--da-file", type=Path, help="copia locale già scaricata da archiviare")
+    ap.add_argument("--url", help="con --da-file: URL originale (o pagina + #nome per URL monouso)")
+    ap.add_argument("--data", help="con --da-file: data ISO dello scaricamento originale")
+    ap.add_argument("--nota", help="con --da-file: annotazione nel manifest")
     a = ap.parse_args()
+    if a.da_file:
+        if not (a.url and a.data):
+            ap.error("--da-file richiede --url e --data")
+        rec = archivia_file(a.da_file, a.url, a.data, nota=a.nota)
+        scrivi_manifest(rec)
+        print(f"{rec['esito']:9s} {rec['sha256']}  {a.url}")
+        return 0
     urls = list(a.url)
     if a.lista:
         urls += [u.strip() for u in a.lista.read_text(encoding="utf-8").splitlines()
