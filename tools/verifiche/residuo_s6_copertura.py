@@ -45,6 +45,20 @@ def main():
         w = csv.writer(f); w.writerow(["priorita", "famiglia", "esito", "cig", "importo", "richieste", "secondi", "documenti", "documenti_con_cig", "cig_con_documento_che_cita"])
         for (p, fa, e), a in sorted(agg.items()):
             w.writerow([p, fa, e, a["cig"], round(a["importo"], 2), a["richieste"], round(a["secondi"], 1), a["documenti"], a["documenti_con_cig"], a["cig_con_documento_che_cita"]])
+    # L4 (tools/acquisizione/at_cig.py): per ente
+    l4 = {}
+    if (D / "l4/enti.jsonl").exists():
+        en = [json.loads(l) for l in open(D / "l4/enti.jsonl", encoding="utf-8")]
+        ce = [json.loads(l) for l in open(D / "l4/esiti.jsonl", encoding="utf-8")] if (D / "l4/esiti.jsonl").exists() else []
+        senza = [x for x in ing.values() if not x["link"]]
+        l4 = {"cig_senza_link": len(senza), "enti_elaborati": len(en), "cig_degli_enti_elaborati": sum(e["cig"] for e in en),
+              "esiti_enti": dict(collections.Counter(e["esito"] for e in en)),
+              "cig_trovati": len(ce), "cig_con_documenti": sum(1 for c in ce if c["documenti"]),
+              "cig_con_documento_che_cita": sum(1 for c in ce if any(d.get("cig_presente") for d in c["documenti"])),
+              "importo_cig_trovati": round(sum(float(c["importo"] or 0) for c in ce), 2),
+              "richieste": sum(len(e["pagine"]) for e in en), "secondi": round(sum(e["secondi"] for e in en), 1),
+              "finito": (D / "l4/FINITO.txt").exists()}
+        json.dump(l4, open(out / "residuo-s6-l4.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # registro dei blocchi di #57 (da validare nel monitoraggio PVL/AT prima di diventare evidenza): un host per riga
     bl = {}
     for r in es.values():
