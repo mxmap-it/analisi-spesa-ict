@@ -1,11 +1,33 @@
 ---
-title: "Consip AQ System management ed. 3, ID 2275, lotto 1"
-date: 2026-11-05
-description: "Iniziativa consip-2275: dati, documenti archiviati e mancanti."
+title: 'Consip AQ System management ed. 3, ID 2275, lotto 1: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2275, Consip, CIG 893944468E: 27 documenti pubblicati e archiviati con sha256, 8 mancanti (7 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2275
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 893944468E
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip AQ System management ed. 3, ID 2275, lotto 1", "description": "ID 2275, Consip, CIG 893944468E: 27 documenti pubblicati e archiviati con sha256, 8 mancanti (7 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2275/", "identifier": ["ID 2275", "893944468E"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip AQ System management ed. 3, ID 2275, lotto 1", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2275", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2275/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 27 documenti pubblicati e archiviati; **8 mancanti**: 7 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 0 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ System management ed. 4, ID 2710 (lotto unico)](/convenzioni/consip-2710/)
 
 | Campo | Valore |
 |---|---|
@@ -74,37 +96,39 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di proroga_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20proroga_signed.pdf) | `012da3642234035b…` |
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_signed.pdf) | `8fe4516c6ea0cfe2…` |
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_signed_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_signed_0.pdf) | `d61d91e7d29f963b…` |
-| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Bando GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20-%20Bando%20GURI.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20proroga.pdf) | `cfaf54e8e6ccc996…` |
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini.pdf) | `e96b19343c19f900…` |
-| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_0.pdf) | `8b48ec3b4d8abe17…` |
-| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Avviso Preinformazione.pdf.p7m | [link](https://www.consip.it/sites/default/files/avvisi/documentazione_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Avviso%20Preinformazione.pdf.p7m) | `598ed9206f85c8c5…` |
-| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Avviso Preinformazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Avviso%20Preinformazione.pdf) | `b0a73ff02425e6f8…` |
-| disciplinare o condizioni della procedura | ID 2275 AQ System Management 3 - Condizioni di fornitura.pdf.p7m | [link](https://www.consip.it/sites/default/files/avvisi/documentazione_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Condizioni%20di%20fornitura.pdf.p7m) | `16396b1a11579da8…` |
-| disciplinare o condizioni della procedura | ID 2275 AQ System Management 3 - Condizioni di fornitura.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Condizioni%20di%20fornitura.pdf) | `9d3ade94c344e1ec…` |
-| capitolato tecnico | ID 2275 AQ System Management 3 - Capitolato Oneri NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20-%20Capitolato%20Oneri%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| capitolato tecnico | ID 2275 AQ System Management 3 All. 1 - Capitolato Tecnico Generale NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%201%20-%20Capitolato%20Tecnico%20Generale%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| capitolato tecnico | ID 2275 AQ System Management 3 All. 2 - Capitolato Tecnico Speciale NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%202%20-%20Capitolato%20Tecnico%20Speciale%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 3A - Schema Accordo Quadro ex art 54 comma 4 lett_a.pd | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%203A%20-%20Schema%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_a.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 3B - Schema Accordo Quadro ex art 54 comma 4 lett_c.pd | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%203B%20-%20Schema%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_c.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 4A - Schema di Contratto Esecutivo ex art 54 comma 4 l | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%204A%20-%20Schema%20di%20Contratto%20Esecutivo%20ex%20art%2054%20comma%204%20lett_a.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 4B - Schema di Contratto Esecutivo ex art 54 comma 4 l | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%204B%20-%20Schema%20di%20Contratto%20Esecutivo%20ex%20art%2054%20comma%204%20lett_c.pdf.p7m) | `a518a9cdc8e0c61c…` |
-| schema di accordo quadro o di convenzione | ID 2275 - AQSM3 - Accordo Quadro ex art 54 comma 4 lett a FASTWEB.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20SYSTEM%20MANAGEMENT%20ED%203.zip#ID%202275%20SYSTEM%20MANAGEMENT%20ED%203/ID%202275%20-%20AQSM3%20-%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett%20a%20FASTWEB.pdf) | `abd7c477500d3dc3…` |
-| schema di accordo quadro o di convenzione | ID 2275 - AQSM3 - Accordo Quadro ex art 54 comma 4 lett_c FASTWEB.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20SYSTEM%20MANAGEMENT%20ED%203.zip#ID%202275%20SYSTEM%20MANAGEMENT%20ED%203/ID%202275%20-%20AQSM3%20-%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_c%20FASTWEB.pdf) | `abd7c477500d3dc3…` |
-| determina o decisione a contrarre | ID 2275 AQSM3 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20Determina%20a%20contrarre_signed.pdf) | `48547f174ca33e02…` |
-| determina o decisione a contrarre | ID 2275 AQSM3 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQSM3%20-%20Determina%20a%20contrarre.pdf) | `d7550b824dc793b6…` |
-| risposte ai chiarimenti | ID 2275 - AQSM3 - Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20AQSM3%20-%20Chiarimenti_signed.pdf) | `ab8e4cd795168eee…` |
-| risposte ai chiarimenti | ID 2275 - AQSM3 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20AQSM3%20-%20Chiarimenti.pdf) | `1ca6d02f2bb84c2e…` |
-| avviso di aggiudicazione o esito | ID 2275 AQSM3 - Avviso aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20Avviso%20aggiudicazione_signed.pdf) | `945b9a7e48ad7f4f…` |
-| avviso di aggiudicazione o esito | ID 2275 AQSM3 - Avviso aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQSM3%20-%20Avviso%20aggiudicazione.pdf) | `7a42f4f045159a11…` |
-| avviso di aggiudicazione o esito | aggiudicazione TED: System Management per le PA (ed.3) ID Sigef 2275, CIG lotto 1 89394446 | [link](https://ted.europa.eu/it/notice/565879-2022/xml) | `7d5c92766e20b046…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di proroga_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20proroga_signed.pdf) | `012da3642234035b…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_signed.pdf) | `8fe4516c6ea0cfe2…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_signed_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_signed_0.pdf) | `d61d91e7d29f963b…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Bando GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20-%20Bando%20GURI.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20proroga.pdf) | `cfaf54e8e6ccc996…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini.pdf) | `e96b19343c19f900…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 - Avviso di rettifica e proroga dei termini_0.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_0.pdf) | `8b48ec3b4d8abe17…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Avviso Preinformazione.pdf.p7m | [link](https://www.consip.it/sites/default/files/avvisi/documentazione_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Avviso%20Preinformazione.pdf.p7m) | `598ed9206f85c8c5…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2275 AQ System Management 3 - Avviso Preinformazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Avviso%20Preinformazione.pdf) | `b0a73ff02425e6f8…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2275 AQ System Management 3 - Condizioni di fornitura.pdf.p7m | [link](https://www.consip.it/sites/default/files/avvisi/documentazione_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Condizioni%20di%20fornitura.pdf.p7m) | `16396b1a11579da8…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2275 AQ System Management 3 - Condizioni di fornitura.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQ%20System%20Management%203%20-%20Condizioni%20di%20fornitura.pdf) | `9d3ade94c344e1ec…` | 2026-11-05 |
+| capitolato tecnico | ID 2275 AQ System Management 3 - Capitolato Oneri NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20-%20Capitolato%20Oneri%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| capitolato tecnico | ID 2275 AQ System Management 3 All. 1 - Capitolato Tecnico Generale NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%201%20-%20Capitolato%20Tecnico%20Generale%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| capitolato tecnico | ID 2275 AQ System Management 3 All. 2 - Capitolato Tecnico Speciale NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%202%20-%20Capitolato%20Tecnico%20Speciale%20NEW.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 3A - Schema Accordo Quadro ex art 54 comma 4 lett_a.pd | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%203A%20-%20Schema%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_a.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 3B - Schema Accordo Quadro ex art 54 comma 4 lett_c.pd | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%203B%20-%20Schema%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_c.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 4A - Schema di Contratto Esecutivo ex art 54 comma 4 l | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%204A%20-%20Schema%20di%20Contratto%20Esecutivo%20ex%20art%2054%20comma%204%20lett_a.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 AQ System Management 3 All. 4B - Schema di Contratto Esecutivo ex art 54 comma 4 l | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc%20PDF%20firmati/ID%202275%20AQ%20System%20Management%203%20All.%204B%20-%20Schema%20di%20Contratto%20Esecutivo%20ex%20art%2054%20comma%204%20lett_c.pdf.p7m) | `a518a9cdc8e0c61c…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 - AQSM3 - Accordo Quadro ex art 54 comma 4 lett a FASTWEB.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20SYSTEM%20MANAGEMENT%20ED%203.zip#ID%202275%20SYSTEM%20MANAGEMENT%20ED%203/ID%202275%20-%20AQSM3%20-%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett%20a%20FASTWEB.pdf) | `abd7c477500d3dc3…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2275 - AQSM3 - Accordo Quadro ex art 54 comma 4 lett_c FASTWEB.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20SYSTEM%20MANAGEMENT%20ED%203.zip#ID%202275%20SYSTEM%20MANAGEMENT%20ED%203/ID%202275%20-%20AQSM3%20-%20Accordo%20Quadro%20ex%20art%2054%20comma%204%20lett_c%20FASTWEB.pdf) | `abd7c477500d3dc3…` | 2026-11-05 |
+| determina o decisione a contrarre | ID 2275 AQSM3 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20Determina%20a%20contrarre_signed.pdf) | `48547f174ca33e02…` | 2026-11-05 |
+| determina o decisione a contrarre | ID 2275 AQSM3 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQSM3%20-%20Determina%20a%20contrarre.pdf) | `d7550b824dc793b6…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2275 - AQSM3 - Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20-%20AQSM3%20-%20Chiarimenti_signed.pdf) | `ab8e4cd795168eee…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2275 - AQSM3 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20-%20AQSM3%20-%20Chiarimenti.pdf) | `1ca6d02f2bb84c2e…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2275 AQSM3 - Avviso aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20Avviso%20aggiudicazione_signed.pdf) | `945b9a7e48ad7f4f…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2275 AQSM3 - Avviso aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202275%20AQSM3%20-%20Avviso%20aggiudicazione.pdf) | `7a42f4f045159a11…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | aggiudicazione TED: System Management per le PA (ed.3) ID Sigef 2275, CIG lotto 1 89394446 | [link](https://ted.europa.eu/it/notice/565879-2022/xml) | `7d5c92766e20b046…` |  |
 
 ### Reperiti da fonte non ufficiale
 
@@ -145,7 +169,27 @@ Ricerca per parole chiave su 3 documenti chiave archiviati (`tools/convenzioni/e
 > «…ormità del proprio sistema di gestione del proprio sistema di gestione della sicurezza delle informazioni alla/e norma/e ISO 27001 idonea, pertinente e proporzionata al seguente ambito di attività: erogazione servizi di monitoraggio da remoto (Centro Servizi);  possesso di una valutazione di conformità del proprio sistema di gestione della qualità alla norma UNI EN ISO 9001:2015 idonea, pertinente e proporzionata al…» — ID 2275 AQSM3 - Determina a contrarre.pdf (sha256 `d7550b824dc7…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | 3 | atteso | transato e monitoraggio per lotto e listino | inventario: stato «non-pubblicato» (open data Consip (aggregato), relazioni al MEF); classe C3; pagina ricontrollata dal vivo senza file del tipo | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia  | [V] | in preparazione |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Allegato B | 3 | rimando | titolo non leggibile dal rimando | «A (Offerta Tecnica del Fornitore), Allegato B , Allegato C (Corrispettivi e tariffe), D» — ID 2275 SYSTEM MANAGEMENT ED 3.zip#ID 2275 SYSTEM MANAGEMENT ED 3/ID 2275 - AQSM3 - Accordo Quadro ex art 54 comma 4 lett a FASTWEB.pdf, p. 6, sha256 abd7c477500d3dc349 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato C | 3 | rimando | titolo non leggibile dal rimando | «o verranno determinati sulla base dei prezzi stabiliti nell’Allegato C, “Corrispettivi e tariffe”, i quali rappresentano quindi un vincolo per il Fornitore. 2. Il F» — ID 2275 AQSM3 - DOC UFFICIALE NEW.zip#Doc PDF firmati/ID 2275 AQ System Management 3 All. 3 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato G  – FLUSSO DATI PER LE | 1 | rimando | FLUSSO DATI PER LE | «o tracciato e modalità fissati da Consip S.p.A. (di cui all’Allegato G“ FLUSSO DATI PER LE COMMISSIONI A CARICO DEL FORNITORE al presente AQ), contenenti per ciascun» — ID 2275 SYSTEM MANAGEMENT ED 3.zip#ID 2275 SYSTEM MANAGEMENT ED 3/ID 2275 - AQSM3 - Accord | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

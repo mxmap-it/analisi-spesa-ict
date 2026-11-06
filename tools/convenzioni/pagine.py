@@ -33,6 +33,51 @@ def esc(t):
     return (t or "").replace("|", "/").replace("\n", " ").strip()
 
 
+import csv as _csv
+from collections import Counter as _Counter
+
+MANC = {}
+for _r in _csv.DictReader(open(DB / "documenti-mancanti.csv", encoding="utf-8")):
+    MANC.setdefault(_r["iniziativa"], []).append(_r)
+_REG_P = R / "report/convenzioni/accesso-civico/registro.csv"
+REG = {r["id"]: r for r in _csv.DictReader(open(_REG_P, encoding="utf-8"))} if _REG_P.exists() else {}
+SITO = "https://analisi-spesa-ict.mxmap.it"
+TELEGRAM = "https://t.me/+Ot-M_g0dkh1kMGI0"
+ISSUE = "https://github.com/mxmap-it/analisi-spesa-ict/issues/new"
+
+
+def stato_ac(iid):
+    """stato pubblico di un'istanza: le bozze non approvate compaiono solo come «in preparazione»."""
+    r = REG.get(iid)
+    if not r or r["stato"] == "ritirata":
+        return "–"
+    if r["stato"] == "preparata":
+        return "in preparazione"
+    t = f"inviata il {r['inviata']}" if r["inviata"] else r["stato"]
+    if r["risposta"]:
+        t += f"; risposta del {r['risposta']}"
+    if r["esito"]:
+        t += f"; esito: {r['esito']}"
+    return t
+
+
+def conta(v):
+    m = MANC.get(v["id"], [])
+    c = _Counter(x["criticita"] for x in m)
+    pres = sum(len(i["documenti"]) for i in v["inventario"])
+    ac = sorted({x["bozza_accesso_civico"] for x in m if x["bozza_accesso_civico"]})
+    return pres, len(m), c, ac
+
+
+def stati_ac(ac):
+    c = _Counter(stato_ac(a) for a in ac)
+    return ", ".join(f"{n} {'istanza' if n == 1 else 'istanze'} {k}" for k, n in sorted(c.items()) if k != "–")
+
+
+def data_controllo(v):
+    return max((x["data_controllo"] for x in MANC.get(v["id"], []) if x["data_controllo"]), default="")
+
+
 CAR = yaml.safe_load(open(DB / "carenze.yaml", encoding="utf-8"))
 CAR_ID = {c["id"]: c for c in CAR["carenze"]}
 STATO_C = {"verificato": "accertato (non trovato sulle fonti consultate)", "da-verificare": "da verificare"}
@@ -52,9 +97,92 @@ def blocco_carenze(v):
     return r
 
 
-def pagina(v):
-    righe = ["---", f'title: "{esc(v["nome"])[:150].replace(chr(34), chr(39))}"', "date: 2026-11-05",
-             f'description: "Iniziativa {v["id"]}: dati, documenti archiviati e mancanti."', "---", "", AVVISO]
+def sigla(v):
+    p = v["id"].split("-")
+    if v["id"].startswith("consip-") and p[1].isdigit():
+        return f"ID {p[1]}"
+    return f"CIG {v['lotti'][0]['cig_padre']}" if v["lotti"] else v["id"]
+
+
+def correlate(v, voci):
+    out = []
+    for x in voci:
+        if x["id"] == v["id"] or x["stato_iniziativa"] != "attiva":
+            continue
+        if (set(x["categoria"]) & set(v["categoria"])) if v["categoria"] else x["tipo_soggetto"] == v["tipo_soggetto"]:
+            out.append(x)
+    return out[:4]
+
+
+def front(v):
+    pres, nm, c, ac = conta(v)
+    nome = esc(v["nome"]).replace(chr(34), chr(39))
+    breve = nome[:90] + ("…" if len(nome) > 90 else "")
+    cig = ", ".join(x["cig_padre"] for x in v["lotti"][:3])
+    centrale = "Consip" if v["tipo_soggetto"] == "consip" else esc(v["stazione_appaltante"]).replace(chr(34), chr(39))[:60]
+    suf = "" if sigla(v) in nome else f" ({sigla(v)})"
+    title = f"{breve}{suf}: documenti pubblicati e mancanti"
+    desc = (f"{sigla(v)}, {centrale}, CIG {cig}{' e altri' if len(v['lotti']) > 3 else ''}: {pres} documenti pubblicati e archiviati con sha256, "
+            f"{nm} mancanti ({c.get('3', 0)} decisivi per giurisdizione o spesa). Stato dell'accesso civico.")
+    url = f"{SITO}/convenzioni/{v['id'].lower()}/"
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Dataset", "name": f"Documenti dell'iniziativa {nome}{suf}", "description": desc, "url": url,
+         "identifier": [sigla(v)] + [x["cig_padre"] for x in v["lotti"][:20]], "inLanguage": "it-IT", "isAccessibleForFree": True,
+         "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": data_controllo(v) or "2026-11-06",
+         "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": SITO + "/"},
+         "about": {"@type": "GovernmentService", "name": nome, "provider": {"@type": "GovernmentOrganization", "name": centrale}},
+         "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv",
+                           "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITO + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": SITO + "/convenzioni/"},
+            {"@type": "ListItem", "position": 3, "name": sigla(v), "item": url}]}]}
+    fm = {"title": title, "date": "2026-11-05", "lastmod": data_controllo(v) or "2026-11-06", "description": desc,
+          "keywords": [sigla(v), centrale, "convenzione", "accordo quadro", "documenti di gara", "accesso civico", "trasparenza"] + [x["cig_padre"] for x in v["lotti"][:5]],
+          "breadcrumb": [{"nome": "Home", "url": "/"}, {"nome": "Convenzioni ICT", "url": "/convenzioni/"}], "jsonld": json.dumps(ld, ensure_ascii=False)}
+    return ["---", yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, width=10000).strip(), "---", ""]
+
+
+def blocco_sintesi(v, voci):
+    pres, nm, c, ac = conta(v)
+    dc = data_controllo(v)
+    r = [f"**In sintesi.** {pres} documenti pubblicati e archiviati; **{nm} mancanti**: {c.get('3', 0)} di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), "
+         f"{c.get('2', 0)} di criticità 2, {c.get('1', 0)} di criticità 1. "
+         + (f"Pagina ufficiale ricontrollata dal vivo il {dc}. " if dc else "Pagina ufficiale non individuata o non ricontrollata: i mancanti sono [R]. ")
+         + (f"Accesso civico: {stati_ac(ac)}." if ac else "Nessuna istanza di accesso civico."), "",
+         "Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · "
+         "[metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)", ""]
+    cor = correlate(v, voci)
+    if cor:
+        r += ["Iniziative correlate: " + " · ".join(f"[{esc(x['nome'])[:60]}](/convenzioni/{x['id'].lower()}/)" for x in cor), ""]
+    return r
+
+
+def blocco_mancanti(v):
+    m = MANC.get(v["id"], [])
+    if not m:
+        return []
+    r = ["## Documenti mancanti", "",
+         "Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), "
+         "*atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. "
+         "[Metodo](/progetto/metodo-convenzioni-trasparenza/).", "",
+         "| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |", "|---|---|---|---|---|---|---|---|"]
+    for x in m:
+        r.append(f"| {esc(x['documento_atteso'])[:120]} | {x['criticita']} | {x['metodo']} | {esc(x['contenuto_presunto'])[:160]} | {esc(x['evidenza'])[:260]} | "
+                 f"{esc(x['base_normativa'])[:180]} | {x['livello']} | {stato_ac(x['bozza_accesso_civico']) if x['bozza_accesso_civico'] else '–'} |")
+    return r + [""]
+
+
+def blocco_cta():
+    return ["## Hai uno di questi documenti?", "",
+            f"Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul "
+            f"[gruppo Telegram del progetto]({TELEGRAM}) o aprendo una [issue su GitHub]({ISSUE}). Servono: il file, da dove viene e quando l'hai ottenuto, "
+            "e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) "
+            "e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.", ""]
+
+
+def pagina(v, voci=()):
+    righe = front(v) + [AVVISO] + blocco_sintesi(v, voci)
     righe += ["| Campo | Valore |", "|---|---|",
               f"| Identificativo | `{v['id']}` |", f"| Tipo di soggetto | {TIPI[v['tipo_soggetto']]} |",
               f"| Stato | {v['stato_iniziativa']} |", f"| Stazione appaltante | {esc(v['stazione_appaltante'])} |",
@@ -82,10 +210,14 @@ def pagina(v):
         righe.append(f"| {i['descrizione']} | **{STATI[i['stato']]}** | {i['dove_di_norma']} | {esc(i['nota'])} |")
     docs = [(i["descrizione"], d) for i in v["inventario"] for d in i["documenti"]]
     if docs:
-        righe += ["", "### Documenti trovati", "", "| Tipo | Documento | Originale | Copia (sha256) |", "|---|---|---|---|"]
+        righe += ["", "## Documenti presenti", "",
+                  "Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). "
+                  "La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, "
+                  "con lo sha256 per verificarne l'identità.", "",
+                  "| Tipo | Documento | Originale | Copia (sha256) | Acquisita |", "|---|---|---|---|---|"]
         for desc, d in docs:
             sha = f"`{d['sha256'][:16]}…`" if d.get("sha256") else "non archiviato"
-            righe.append(f"| {desc} | {esc(d['nome'])[:90]} | [link]({d['url'].replace(' ', '%20')}) | {sha} |")
+            righe.append(f"| {desc} | {esc(d['nome'])[:90]} | [link]({d['url'].replace(' ', '%20')}) | {sha} | {(d.get('data') or '')[:10]} |")
     altrove = [(i["descrizione"], d) for i in v["inventario"] for d in i.get("reperiti_altrove", [])]
     if altrove:
         righe += ["", "### Reperiti da fonte non ufficiale", "",
@@ -117,7 +249,8 @@ def pagina(v):
         righe += ["", "## Analisi dei documenti chiave", ""]
         for a in v["analisi"]:
             righe.append(f"- **{esc(a['documento'])}.** {a['sintesi']}")
-    righe += ["", "## Mancanze e via per colmarle", "", "| Documento | Stato | Fonte possibile | Via |", "|---|---|---|---|"]
+    righe += [""] + blocco_mancanti(v) + blocco_cta()
+    righe += ["", "## Mancanze per tipo e via per colmarle", "", "| Documento | Stato | Fonte possibile | Via |", "|---|---|---|---|"]
     for m in v["mancanze"]:
         righe.append(f"| {m['descrizione']} | {STATI[m['stato']]} | {m['fonte']} | {m['via']} |")
     if v.get("note"):
@@ -125,6 +258,12 @@ def pagina(v):
     righe += ["", "Legenda: «archiviato» = copia nel nostro archivio content-addressed con sha256 (verificato); i campi descrittivi "
               "senza fonte archiviata sono «riferiti» e marcati R in `report/convenzioni/database/curate.yaml`.", ""]
     return "\n".join(righe)
+
+
+def lista_ini(campo, nomi):
+    ii = campo.split(";")
+    t = ", ".join(f"[{esc(nomi.get(i, i))[:40]}](/convenzioni/{i.lower()}/)" for i in ii[:3])
+    return t + (f" e altre {len(ii) - 3}" if len(ii) > 3 else "")
 
 
 def pagina_registro(voci):
@@ -147,8 +286,7 @@ def pagina_registro(voci):
          f"Bozze riusabili (JSON `spesaict.istanza/1`) in [report/convenzioni/accesso-civico/bozze/]({GH.replace('/blob/', '/tree/')}report/convenzioni/accesso-civico/bozze).", "",
          "| Istanza | Iniziativa | Carenza | Destinatario | Stato | Inviata | Risposta | Esito | Note |", "|---|---|---|---|---|---|---|---|---|"]
     for r in reg:
-        t.append(f"| [{r['id']}]({GH}report/convenzioni/accesso-civico/bozze/{r['id']}.md) | [{esc(nomi.get(r['iniziativa'], r['iniziativa']))[:60]}]"
-                 f"(/convenzioni/{r['iniziativa'].lower()}/) | {r['carenza']} {CAR_ID[r['carenza']]['titolo']} | {esc(r['destinatario'])} | {r['stato']} | "
+        t.append(f"| [{r['id']}]({GH}report/convenzioni/accesso-civico/bozze/{r['id']}.md) | {lista_ini(r['iniziativa'], nomi)} | {r['carenza']} {CAR_ID[r['carenza']]['titolo'] if r['carenza'] in CAR_ID else '(elenco analitico per file)'} | {esc(r['destinatario'])} | {r['stato']} | "
                  f"{r['inviata']} | {r['risposta']} | {esc(r['esito'])} | {esc(r['note'])} |")
     (OUT / "accesso-civico.md").write_text("\n".join(t) + "\n", encoding="utf-8")
 
@@ -178,11 +316,12 @@ def main():
 
     def tabella(vs):
         t = [f"Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del {DATA_BDNCP}); documenti al {DATA_FONTI}.", "",
-             "| # | Iniziativa | Tipo | M€ ICT 2024-25 | Derivati | Archiviati | Mancanti | Copertura |", "|---|---|---|---|---|---|---|---|"]
+             "| # | Iniziativa | Tipo | M€ ICT 2024-25 | Derivati | Documenti presenti | Mancanti (crit. 3/2/1) | Accesso civico | Copertura |", "|---|---|---|---|---|---|---|---|---|"]
         for k, v in enumerate(vs, 1):
-            arch = sum(1 for i in v["inventario"] if i["stato"] == "archiviato")
+            pres, nm, c, ac = conta(v)
             t.append(f"| {k} | [{esc(v['nome'])[:110]}](/convenzioni/{v['id'].lower()}/) | {TIPI[v['tipo_soggetto']]} | {meur(v['valore_ict_2024_2025'])} | "
-                     f"{v['derivati_ict_2024_2025']} | {arch} | {len(v['mancanze'])} | {pct(v['copertura'])} |")
+                     f"{v['derivati_ict_2024_2025']} | {pres} | {nm} ({c.get('3', 0)}/{c.get('2', 0)}/{c.get('1', 0)}) | "
+                     f"{stati_ac(ac) or '–'} | {pct(v['copertura'])} |")
         return t
     # riquadro «Carenze di trasparenza»: carenza -> iniziative colpite -> valore coinvolto
     idx += ["## Carenze di trasparenza", "",
@@ -212,7 +351,7 @@ def main():
     idx += ["", "Fonte e ripetibilità: `tools/convenzioni/*.py`; numeri ricontrollati da `tools/verifiche/convenzioni_copertura.py`.", ""]
     (OUT / "_index.md").write_text("\n".join(idx), encoding="utf-8")
     for v in voci:
-        (OUT / f"{v['id'].lower()}.md").write_text(pagina(v), encoding="utf-8")
+        (OUT / f"{v['id'].lower()}.md").write_text(pagina(v, voci), encoding="utf-8")
     pagina_registro(voci)
     (OUT / "griglia.md").write_text(GRIGLIA, encoding="utf-8")
     print(len(voci), "pagine")

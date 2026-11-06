@@ -167,15 +167,65 @@ def differenze(prima, ora):
         risolte = set(p["carenze_verificate"] + p["carenze_da_verificare"]) - set(o["carenze_verificate"] + o["carenze_da_verificare"])
         if risolte:
             out.append(f"{k}: carenze non più presenti {sorted(risolte)}")
+    if ora.get("mancanti") and ora["mancanti"] != prima.get("mancanti"):
+        out.append(f"documenti mancanti per file: {ora['mancanti']['righe']} (criticità 3: {ora['mancanti']['criticita'].get('3', 0)})"
+                   + (f", prima {prima['mancanti']['righe']}" if prima.get("mancanti") else " (nuovo inventario)"))
     for k in ("istanze_preparate", "istanze_inviate", "istanze_con_risposta"):
         if ora["globali"][k] != prima["globali"][k]:
             out.append(f"{k.replace('_', ' ')}: da {prima['globali'][k]} a {ora['globali'][k]}")
     return out or ["nessuna variazione nei dati"]
 
 
+def sezione_mancanti(nomi):
+    """§ 5bis: inventario per file dei documenti mancanti (report/convenzioni/database/documenti-mancanti.csv)."""
+    f = DB / "documenti-mancanti.csv"
+    if not f.exists():
+        return [], {}
+    rr = list(csv.DictReader(open(f, encoding="utf-8")))
+    cr = Counter(r["criticita"] for r in rr)
+    me = Counter(m for r in rr for m in r["metodo"].split(";"))
+    lv = Counter(r["livello"] for r in rr)
+    dl = Counter(r["dietro_login"] for r in rr)
+    per = {}
+    for r in rr:
+        x = per.setdefault(r["iniziativa"], Counter())
+        x[r["criticita"]] += 1
+        x["V"] += r["livello"] == "[V]"
+    m = {"righe": len(rr), "criticita": dict(sorted(cr.items())), "metodo": dict(sorted(me.items())), "livello": dict(sorted(lv.items())),
+         "dietro_login": dict(sorted(dl.items())), "iniziative": len(per)}
+    L = ["## 5bis. Documenti mancanti, file per file", "",
+         f"Inventario analitico ([CSV](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv), "
+         f"[metodo](/progetto/metodo-convenzioni-trasparenza/)): **{len(rr)} documenti mancanti** in {len(per)} iniziative; "
+         f"criticità 3: **{cr.get('3', 0)}**, criticità 2: {cr.get('2', 0)}, criticità 1: {cr.get('1', 0)}. "
+         f"Per metodo: numerazione {me.get('numerazione', 0)}, rimando {me.get('rimando', 0)}, atteso {me.get('atteso', 0)} (una riga può averne due). "
+         f"Livello: [V] {lv.get('[V]', 0)} (pagina ufficiale ricontrollata dal vivo, file assente), [R] {lv.get('[R]', 0)} (da verificare). "
+         f"Blocchi incontrati nel ricontrollo: {sum(1 for _ in open(DB / 'blocchi-accesso.csv', encoding='utf-8')) - 1 if (DB / 'blocchi-accesso.csv').exists() else 0}; "
+         f"documenti forse in aree riservate (dietro_login «ignoto»): {dl.get('ignoto', 0)}, da provare in un giro assistito.", "",
+         "**Esempio guida: PRINCO, ID 2928, Allegato 12.** L'Allegato 12 «Facsimile per allegato al Listino OpenSource» è pubblicato, ma è un modulo vuoto: "
+         "l'Appendice 3 al Capitolato (Listino Open Source) dice che i prodotti «saranno presentati dai concorrenti conformemente all'allegato 12». "
+         "Manca quindi l'Allegato 12 **compilato** dall'aggiudicatario (Converge): l'unico documento con i prodotti del listino 3 e dunque con la loro giurisdizione [V, atti letti].", "",
+         "Conteggi per iniziativa:", "",
+         "| Iniziativa | Criticità 3 | Criticità 2 | Criticità 1 | Totale | di cui [V] |", "|---|---|---|---|---|---|"]
+    for k in sorted(per, key=lambda k: (-per[k]["3"], -sum(per[k][c] for c in "123"))):
+        x = per[k]
+        L.append(f"| [{nomi.get(k, k)[:70]}](/convenzioni/{k.lower()}/) | {x['3']} | {x['2']} | {x['1']} | {x['1'] + x['2'] + x['3']} | {x['V']} |")
+    L += ["", "Mancanti di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa):", "",
+          "| Iniziativa | Documento | Metodo | Livello | Contenuto presunto | Accesso civico |", "|---|---|---|---|---|---|"]
+    for r in rr:
+        if r["criticita"] == "3":
+            ac = "in preparazione" if r["bozza_accesso_civico"] else "–"
+            L.append(f"| [{nomi.get(r['iniziativa'], r['iniziativa'])[:50]}](/convenzioni/{r['iniziativa'].lower()}/) | {r['documento_atteso'][:110].replace('|', '/')} | "
+                     f"{r['metodo']} | {r['livello']} | {r['contenuto_presunto'][:120].replace('|', '/')} | {ac} |")
+    L += ["", "Le criticità si assegnano per regole sul titolo: classificazione automatica, da rivedere prima di ogni richiesta. "
+          "I «rimandi» a lettere (Allegato A, B…) e i titoli troncati vengono dal testo estratto dei PDF e vanno letti nel contesto (colonna evidenza del CSV).", ""]
+    return L, m
+
+
 def main(versione, data, nota):
     voci, reg = carica()
     m = metriche(voci, reg)
+    nomi0 = {v["id"]: v["nome"] for v in voci}
+    sez_manc, m["mancanti"] = sezione_mancanti(nomi0)
     RAP.mkdir(parents=True, exist_ok=True)
     vf = RAP / "versioni.jsonl"
     storia = [json.loads(x) for x in open(vf, encoding="utf-8")] if vf.exists() else []
@@ -197,7 +247,7 @@ def main(versione, data, nota):
          'description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."',
          "---", "",
          "<!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->", "",
-         f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**", "",
+         f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**", "",
          "Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.", "",
          "## 1. Sintesi", "",
          "*Cosa non diciamo:* che un dato non individuato sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la "
@@ -307,6 +357,7 @@ def main(versione, data, nota):
         L.append(f"| [{nomi[k][:70]}](/convenzioni/{k.lower()}/) | {TIPI[p['tipo']]} | {meur(p['valore'])} | {p['pubblico']} | {p['altrove']} | {p['assente']} | "
                  f"{p['ignoto']} | {round(100 * p['indice'])} % | {', '.join(p['carenze_verificate']) or '–'} |")
     L += ["", f"Le altre {len(pi) - len(princ)} iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/convenzioni/griglia/).", "",
+          ] + sez_manc + [
           "## 6. Per tipo di soggetto", "",
           f"Fonti consultate il {DT}.", "",
           "| Soggetto | Iniziative | M€ 2024-25 | Indice medio | Non individuati | Non verificati |", "|---|---|---|---|---|---|"]

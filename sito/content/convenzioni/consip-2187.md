@@ -1,11 +1,33 @@
 ---
-title: "Consip Licenze Microsoft Enterprise Agreement 6, ID 2187"
-date: 2026-11-05
-description: "Iniziativa consip-2187: dati, documenti archiviati e mancanti."
+title: 'Consip Licenze Microsoft Enterprise Agreement 6, ID 2187: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2187, Consip, CIG 8335254532: 26 documenti pubblicati e archiviati con sha256, 9 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2187
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- '8335254532'
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip Licenze Microsoft Enterprise Agreement 6, ID 2187", "description": "ID 2187, Consip, CIG 8335254532: 26 documenti pubblicati e archiviati con sha256, 9 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2187/", "identifier": ["ID 2187", "8335254532"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip Licenze Microsoft Enterprise Agreement 6, ID 2187", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2187", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2187/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 26 documenti pubblicati e archiviati; **9 mancanti**: 3 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 5 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) · [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodo](/convenzioni/consip-2599/) · [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ip](/convenzioni/consip-2755/)
 
 | Campo | Valore |
 |---|---|
@@ -73,36 +95,38 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| disciplinare o condizioni della procedura | ID 2187 - MS EA - 6 - Allegato 3A Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203A%20Condizioni%20Generali.pdf.p7m) | `093fbd50bd255220…` |
-| disciplinare o condizioni della procedura | ID 2187 - MS EA - 6 - Allegato 3A Condizioni Generali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203A%20Condizioni%20Generali.pdf) | `d35e11871ad7fab2…` |
-| capitolato tecnico | ID 2187 - MS EA 6 - Allegato 2 - Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%206%20-%20Allegato%202%20-%20Capitolato%20Tecnico.pdf.p7m) | `093fbd50bd255220…` |
-| capitolato tecnico | ID 2187 - MS EA 6 - Capitolato d oneri AS.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%206%20-%20Capitolato%20d%20oneri%20AS.pdf.p7m) | `093fbd50bd255220…` |
-| capitolato tecnico | ID 2187 - MS EA 6 - Allegato 2 - Capitolato Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%206%20-%20Allegato%202%20-%20Capitolato%20Tecnico.pdf) | `d35e11871ad7fab2…` |
-| capitolato tecnico | ID 2187 - MS EA 6 - Capitolato d'oneri AS.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%206%20-%20Capitolato%20d'oneri%20AS.pdf) | `d35e11871ad7fab2…` |
-| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 2 - Schema delle verifiche ispettive.pdf.p | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%202%20-%20Schema%20delle%20verifiche%20ispettive.pdf.p7m) | `093fbd50bd255220…` |
-| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 3B Convenzione condizioni speciali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203B%20Convenzione%20condizioni%20speciali.pdf.p7m) | `093fbd50bd255220…` |
-| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 2 - Schema delle verifiche ispettive.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%202%20-%20Schema%20delle%20verifiche%20ispettive.pdf) | `d35e11871ad7fab2…` |
-| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 3B Convenzione condizioni speciali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203B%20Convenzione%20condizioni%20speciali.pdf) | `d35e11871ad7fab2…` |
-| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 1 - Struttura listino e principali clausol | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf.p7m) | `093fbd50bd255220…` |
-| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 5 CT - Appendice 4 - Listino di riferimento Microsoft EA -  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%205%20CT%20-%20Appendice%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf.p7m) | `093fbd50bd255220…` |
-| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 1 - Struttura listino e principali clausol | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf) | `d35e11871ad7fab2…` |
-| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 5 CT - Appendice 4 - Listino di riferimento Microsoft EA -  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%205%20CT%20-%20Appendice%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf) | `d35e11871ad7fab2…` |
-| determina o decisione a contrarre | ID2187_Determina a contrarre-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2187_Determina%20a%20contrarre-signed.pdf) | `fd2c25002533c74e…` |
-| determina o decisione a contrarre | ID2187_Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187_Determina%20a%20contrarre.pdf) | `a15730f33c30f44e…` |
-| risposte ai chiarimenti | ID 2187_ EA6_Risposta_chiarimento II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202187_%20EA6_Risposta_chiarimento%20II%20Tranche_signed.pdf) | `1fa9f0fd838ff9af…` |
-| risposte ai chiarimenti | ID 2187_ EA6_Risposte_chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202187_%20EA6_Risposte_chiarimenti_signed.pdf) | `29520670b1d4c0fa…` |
-| risposte ai chiarimenti | ID 2187_ EA6_Risposta_chiarimento II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202187_%20EA6_Risposta_chiarimento%20II%20Tranche.pdf) | `cbe810a65f7405b6…` |
-| risposte ai chiarimenti | ID 2187_ EA6_Risposte_chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202187_%20EA6_Risposte_chiarimenti.pdf) | `4dda75e541ce0384…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| disciplinare o condizioni della procedura | ID 2187 - MS EA - 6 - Allegato 3A Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203A%20Condizioni%20Generali.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2187 - MS EA - 6 - Allegato 3A Condizioni Generali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203A%20Condizioni%20Generali.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| capitolato tecnico | ID 2187 - MS EA 6 - Allegato 2 - Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%206%20-%20Allegato%202%20-%20Capitolato%20Tecnico.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| capitolato tecnico | ID 2187 - MS EA 6 - Capitolato d oneri AS.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%206%20-%20Capitolato%20d%20oneri%20AS.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| capitolato tecnico | ID 2187 - MS EA 6 - Allegato 2 - Capitolato Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%206%20-%20Allegato%202%20-%20Capitolato%20Tecnico.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| capitolato tecnico | ID 2187 - MS EA 6 - Capitolato d'oneri AS.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%206%20-%20Capitolato%20d'oneri%20AS.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 2 - Schema delle verifiche ispettive.pdf.p | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%202%20-%20Schema%20delle%20verifiche%20ispettive.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 3B Convenzione condizioni speciali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203B%20Convenzione%20condizioni%20speciali.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 2 - Schema delle verifiche ispettive.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%202%20-%20Schema%20delle%20verifiche%20ispettive.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2187 - MS EA - 6 - Allegato 3B Convenzione condizioni speciali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%203B%20Convenzione%20condizioni%20speciali.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 1 - Struttura listino e principali clausol | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 5 CT - Appendice 4 - Listino di riferimento Microsoft EA -  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%205%20CT%20-%20Appendice%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf.p7m) | `093fbd50bd255220…` | 2026-11-05 |
+| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 1 - Struttura listino e principali clausol | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| listini e appendici di prezzo | ID 2187 - MS EA - 6 - Allegato 5 CT - Appendice 4 - Listino di riferimento Microsoft EA -  | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187%20-%20MEA6%20-%20PDF.zip#ID2187%20-%20MEA6%20-%20PDF/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%205%20CT%20-%20Appendice%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf) | `d35e11871ad7fab2…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2187_Determina a contrarre-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2187_Determina%20a%20contrarre-signed.pdf) | `fd2c25002533c74e…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2187_Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2187_Determina%20a%20contrarre.pdf) | `a15730f33c30f44e…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2187_ EA6_Risposta_chiarimento II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202187_%20EA6_Risposta_chiarimento%20II%20Tranche_signed.pdf) | `1fa9f0fd838ff9af…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2187_ EA6_Risposte_chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202187_%20EA6_Risposte_chiarimenti_signed.pdf) | `29520670b1d4c0fa…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2187_ EA6_Risposta_chiarimento II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202187_%20EA6_Risposta_chiarimento%20II%20Tranche.pdf) | `cbe810a65f7405b6…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2187_ EA6_Risposte_chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202187_%20EA6_Risposte_chiarimenti.pdf) | `4dda75e541ce0384…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` | 2026-11-05 |
 
 ### Il dato esiste, ma non è pubblico
 
@@ -125,7 +149,28 @@ Ricerca per parole chiave su 3 documenti chiave archiviati (`tools/convenzioni/e
 **Reporting e monitoraggio** (0 occorrenze)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Provvedimento o avviso di aggiudicazione | 2 | atteso | avviso di aggiudicazione o esito | inventario: stato «da-verificare» (consip.it, TED); pagina ricontrollata dal vivo senza file del tipo | Avviso di aggiudicazione: art. 50 c. 9 e art. 84-85 d.lgs. 36/2023 (GUUE/BDNCP); provvedimento ex art. 28 [R] | [R] | – |
+| Bando o avviso di gara | 1 | atteso | bando o avviso di gara (GUUE) | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore; TED); pagina ricontrollata dal vivo senza file del tipo | Bando: art. 84-85 d.lgs. 36/2023 (GUUE, BDNCP) [R] | [R] | – |
+| Allegato 1 | 1 | numerazione | non dedotto (numero saltato: forse ritirato, rinumerato o non pubblicato) | numerazione: presenti 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13; vicini: Doc firmati_ID 2187/ID 2187 - MS EA - 6 - Allegato 2 CT - Appendice 1 - Struttura listino e principali clausole commerciali.pdf.p7m (sha256 093fbd50bd25) | Documenti di gara: messa a disposizione integrale e gratuita (art. 25, 27 e 85 d.lgs. 36/2023) [R] | [R] | – |
+| Allegato F | 1 | rimando | titolo non leggibile dal rimando | «Amministrazione di cui all’Allegato F; ii) ad utilizzare il Sistema sulla base di quanto previsto dalla presente Convenzione e nel» — Doc firmati_ID 2187.zip#Doc firmati_ID 2187/ID 2187 - MS EA - 6 - Allegato 3B Convenzione condizioni speciali.pdf.p7m, p. 6,  | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+| Appendice 5 | 1 | rimando | titolo non leggibile dal rimando | «attuativi: la Fornitura Iniziale (così come descritta nell’Appendice 5) può essere composta sino a 3 (tre) differenti gruppi (Profili Enterprise) di Prodotti della piatta» — Doc firmati_ID 2187.zip#Doc firmati_ID 2187/ID 2187 - MS EA 6 - Allegato 2 - Capitola | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+| Appendice B  – SOFTWARE ASSURANCE | 1 | rimando | SOFTWARE ASSURANCE | «URANCE (SA) E LIVELLI DI SERVIZIO DEL SUPPORTO MICROSOFT L’”APPENDICE B – SOFTWARE ASSURANCE” del documento Microsoft “Condizioni relative ai Prodotti”, riporta la descriz» — Doc firmati_ID 2187.zip#Doc firmati_ID 2187/ID 2187 - MS EA 6 - Allegato 2 - Capitol | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

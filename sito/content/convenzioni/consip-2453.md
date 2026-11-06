@@ -1,11 +1,33 @@
 ---
-title: "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM"
-date: 2026-11-05
-description: "Iniziativa consip-2453: dati, documenti archiviati e mancanti."
+title: 'ID 2453 - GARA PUBLIC CLOUD SAAS ITSM: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2453, Consip, CIG 942570737B: 4 documenti pubblicati e archiviati con sha256, 11 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2453
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 942570737B
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "description": "ID 2453, Consip, CIG 942570737B: 4 documenti pubblicati e archiviati con sha256, 11 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/", "identifier": ["ID 2453", "942570737B"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2453", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 4 documenti pubblicati e archiviati; **11 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 3 di criticità 2, 3 di criticità 1. Pagina ufficiale non individuata o non ricontrollata: i mancanti sono [R]. Nessuna istanza di accesso civico.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO P](/convenzioni/consip-2483/) · [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) · [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) · [Consip AQ PC portatili, mobile workstation e Chromebook, ID ](/convenzioni/consip-2425/)
 
 | Campo | Valore |
 |---|---|
@@ -65,16 +87,41 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| risposte ai chiarimenti | Chiarimenti II tranche firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=70f3818b67e08f52) | `692b0b48fc5d7534…` |
-| risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=087398e9d52af6f9) | `55504d2e471dd95c…` |
-| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=4e55b0258da689b1) | `90d868361c455ac5…` |
-| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a38df10a95bd0fba) | `f3e2956aec0c5dc9…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
 
-## Mancanze e via per colmarle
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| risposte ai chiarimenti | Chiarimenti II tranche firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=70f3818b67e08f52) | `692b0b48fc5d7534…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=087398e9d52af6f9) | `55504d2e471dd95c…` | 2026-11-05 |
+| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=4e55b0258da689b1) | `90d868361c455ac5…` | 2026-11-05 |
+| risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a38df10a95bd0fba) | `f3e2956aec0c5dc9…` | 2026-11-05 |
+
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «da-verificare» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ufficiale non ricontrollata/non individuata | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [R] | – |
+| Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | 3 | atteso | transato e monitoraggio per lotto e listino | inventario: stato «da-verificare» (open data Consip (aggregato), relazioni al MEF); classe C3; pagina ufficiale non ricontrollata/non individuata | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia  | [R] | – |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ufficiale non ricontrollata/non individuata | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ufficiale non ricontrollata/non individuata | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «da-verificare» (di norma non pubblicata); classe C1; pagina ufficiale non ricontrollata/non individuata | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [R] | – |
+| Capitolato tecnico | 2 | atteso | capitolato tecnico | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ufficiale non ricontrollata/non individuata | Documenti di gara: pubblicazione sul sito della stazione appaltante e in BDNCP (art. 27-28 d.lgs. 36/2023; art. 37 d.lgs. 33/2013) [R] | [R] | – |
+| Convenzione / accordo quadro stipulato (o schema) | 2 | atteso | schema di accordo quadro o di convenzione | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore); pagina ufficiale non ricontrollata/non individuata | Atti della procedura e contratto: art. 28 d.lgs. 36/2023, art. 37 d.lgs. 33/2013 [R] | [R] | – |
+| Provvedimento o avviso di aggiudicazione | 2 | atteso | avviso di aggiudicazione o esito | inventario: stato «da-verificare» (consip.it, TED); pagina ufficiale non ricontrollata/non individuata | Avviso di aggiudicazione: art. 50 c. 9 e art. 84-85 d.lgs. 36/2023 (GUUE/BDNCP); provvedimento ex art. 28 [R] | [R] | – |
+| Bando o avviso di gara | 1 | atteso | bando o avviso di gara (GUUE) | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore; TED); pagina ufficiale non ricontrollata/non individuata | Bando: art. 84-85 d.lgs. 36/2023 (GUUE, BDNCP) [R] | [R] | – |
+| Determina o decisione a contrarre | 1 | atteso | determina o decisione a contrarre | inventario: stato «da-verificare» (consip.it o AT dell'aggregatore); pagina ufficiale non ricontrollata/non individuata | Decisione di contrarre: art. 17 c. 1 d.lgs. 36/2023; pubblicazione ex art. 28 [R] | [R] | – |
+| Disciplinare di gara o condizioni della procedura | 1 | atteso | disciplinare o condizioni della procedura | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ufficiale non ricontrollata/non individuata | Documenti di gara: art. 82-85 d.lgs. 36/2023 [R] | [R] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

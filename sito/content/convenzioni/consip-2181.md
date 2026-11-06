@@ -1,11 +1,37 @@
 ---
-title: "AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SGM - ID 2181 - LOTTO 2"
-date: 2026-11-05
-description: "Iniziativa consip-2181: dati, documenti archiviati e mancanti."
+title: 'AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PP…: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2181, Consip, CIG 8133313E33, 8133318257, 8133329B68 e altri: 50 documenti pubblicati e archiviati con sha256, 9 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2181
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 8133313E33
+- '8133318257'
+- 8133329B68
+- '8133337205'
+- '8133302522'
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SGM - ID 2181 - LOTTO 2", "description": "ID 2181, Consip, CIG 8133313E33, 8133318257, 8133329B68 e altri: 50 documenti pubblicati e archiviati con sha256, 9 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2181/", "identifier": ["ID 2181", "8133313E33", "8133318257", "8133329B68", "8133337205", "8133302522"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "AQ PER I SERVIZI DI GESTIONE E MANUTENZIONE DI SISTEMI IP E POSTAZIONI DI LAVORO PER LE PPAA - ID 2181 / AQ SGM - ID 2181 - LOTTO 2", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2181", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2181/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 50 documenti pubblicati e archiviati; **9 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 2 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO P](/convenzioni/consip-2483/) · [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) · [Consip Licenze Microsoft Enterprise Agreement 8, ID 2615](/convenzioni/consip-2615/) · [Consip AQ PC portatili, mobile workstation e Chromebook, ID ](/convenzioni/consip-2425/)
 
 | Campo | Valore |
 |---|---|
@@ -73,60 +99,62 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | ID2181 - Gara AQ SGM ed.1 - Bando GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Bando%20GURI.pdf.p7m) | `75b744bba0de48e7…` |
-| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20proroga-signed.pdf) | `8ba97d6c82db4ed5…` |
-| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di rettifica-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20rettifica-signed.pdf) | `af738009761569c8…` |
-| bando o avviso di gara (GUUE) | ID2181 - AQ SGM ed.1 - Terzo Avviso di Proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Terzo%20Avviso%20di%20Proroga-signed.pdf) | `5a2130d796800d4e…` |
-| bando o avviso di gara (GUUE) | ID2181 - Gara AQ SGM ed.1 - Bando GURI.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Bando%20GURI.pdf) | `b6dfe7db2f45e6f2…` |
-| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20proroga.pdf) | `7d3619ccd9efd0cf…` |
-| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di rettifica.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20rettifica.pdf) | `a2253a3bd75ec8db…` |
-| bando o avviso di gara (GUUE) | ID2181 - AQ SGM ed.1 - Terzo Avviso di Proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Terzo%20Avviso%20di%20Proroga.pdf) | `74a448a3360d2a7d…` |
-| disciplinare o condizioni della procedura | ID2181 - Gara AQ SGM ed.1 - All.8 - Condizioni assicurazione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.8%20-%20Condizioni%20assicurazione.pdf.p7m) | `75b744bba0de48e7…` |
-| disciplinare o condizioni della procedura | ID2181 - Gara AQ SGM ed.1 - All.8 - Condizioni assicurazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.8%20-%20Condizioni%20assicurazione.pdf) | `b6dfe7db2f45e6f2…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.5%20-%20Capitolato%20Tecnico_NEW.pdf.p7m) | `75b744bba0de48e7…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Appendice B al Capitolato tecnico.xlsx.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Appendice%20B%20al%20Capitolato%20tecnico.xlsx.p7m) | `75b744bba0de48e7…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Capitolato d'Oneri_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Capitolato%20d'Oneri_NEW.pdf.p7m) | `75b744bba0de48e7…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.5%20-%20Capitolato%20Tecnico_NEW.pdf) | `b6dfe7db2f45e6f2…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Appendice B al Capitolato tecnico.xlsx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Appendice%20B%20al%20Capitolato%20tecnico.xlsx) | `b6dfe7db2f45e6f2…` |
-| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Capitolato d'Oneri_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Capitolato%20d'Oneri_NEW.pdf) | `b6dfe7db2f45e6f2…` |
-| capitolato tecnico | Capitolato tecnico - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=443cbd22a815acfc) | `625b7bfcae071d05…` |
-| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf.p7m) | `75b744bba0de48e7…` |
-| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf) | `b6dfe7db2f45e6f2…` |
-| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro.docx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/MODULI%20DI%20DICHIARAZIONE%20-%20ID%202181.zip#MODULI%20DI%20DICHIARAZIONE/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro.docx) | `58dc2d19c6031c30…` |
-| schema di accordo quadro o di convenzione | Accordo quadro Vodafone - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=2b4b0fa5ef2c4825) | `1588e065438c3a89…` |
-| schema di accordo quadro o di convenzione | Accordo quadro Fastweb - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=c01a35cb335dc453) | `67bef60126a4b801…` |
-| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=80b627e662acaca5) | `d36f48cb749bc9b6…` |
-| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=244f0a8075ef5189) | `6abf85b934ccc69a…` |
-| determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW-signed.pdf) | `596c844fb78cf915…` |
-| determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW.pdf) | `4905bfd64fcd9f93…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche_signed.pdf) | `9b4c892ac6733cd5…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti III Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20III%20Tranche_signed.pdf) | `55b61355f3475d93…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti_signed.pdf) | `360aacb09890ddde…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche.pdf) | `61d21ab1c1202c16…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti III Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20III%20Tranche.pdf) | `e1cd291534f3008e…` |
-| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti.pdf) | `bd2b017c7b6c313c…` |
-| risposte ai chiarimenti | Chiarimenti NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=48c6baee1fb67269) | `bd2b017c7b6c313c…` |
-| risposte ai chiarimenti | Chiarimenti III Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=475fadb27385c9c6) | `e1cd291534f3008e…` |
-| risposte ai chiarimenti | Chiarimenti III Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=3ba385c2ba555a4a) | `55b61355f3475d93…` |
-| risposte ai chiarimenti | Chiarimenti II Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ca72d27dd8898f1e) | `61d21ab1c1202c16…` |
-| risposte ai chiarimenti | Chiarimenti II Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a64f108ef786360f) | `9b4c892ac6733cd5…` |
-| risposte ai chiarimenti | Chiarimenti firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ac2aa0aca916ba3a) | `360aacb09890ddde…` |
-| risposte ai chiarimenti | Chiarimenti Allegato A - NON firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0da0ef41db0fe294) | `3791ba0349b04d90…` |
-| risposte ai chiarimenti | Chiarimenti Allegato A - firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=01b67d56fc7437e8) | `1f914e714ed2b62a…` |
-| avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF_signed.pdf) | `deafe7a8114a49d4…` |
-| avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF.pdf) | `ae83048ed974b7f3…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO NON FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0412e3e188c61739) | `546383361000bef7…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=195ed3c41c63dec9) | `9b48e6d245d18ca5…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID2181 - Gara AQ SGM ed.1 - Bando GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Bando%20GURI.pdf.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20proroga-signed.pdf) | `8ba97d6c82db4ed5…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di rettifica-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20rettifica-signed.pdf) | `af738009761569c8…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID2181 - AQ SGM ed.1 - Terzo Avviso di Proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Terzo%20Avviso%20di%20Proroga-signed.pdf) | `5a2130d796800d4e…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID2181 - Gara AQ SGM ed.1 - Bando GURI.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Bando%20GURI.pdf) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20proroga.pdf) | `7d3619ccd9efd0cf…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID 2181 - AQ SGM ed.1 - Avviso di rettifica.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20AQ%20SGM%20ed.1%20-%20Avviso%20di%20rettifica.pdf) | `a2253a3bd75ec8db…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID2181 - AQ SGM ed.1 - Terzo Avviso di Proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Terzo%20Avviso%20di%20Proroga.pdf) | `74a448a3360d2a7d…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID2181 - Gara AQ SGM ed.1 - All.8 - Condizioni assicurazione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.8%20-%20Condizioni%20assicurazione.pdf.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID2181 - Gara AQ SGM ed.1 - All.8 - Condizioni assicurazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.8%20-%20Condizioni%20assicurazione.pdf) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.5%20-%20Capitolato%20Tecnico_NEW.pdf.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Appendice B al Capitolato tecnico.xlsx.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Appendice%20B%20al%20Capitolato%20tecnico.xlsx.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Capitolato d'Oneri_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Capitolato%20d'Oneri_NEW.pdf.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.5%20-%20Capitolato%20Tecnico_NEW.pdf) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Appendice B al Capitolato tecnico.xlsx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Appendice%20B%20al%20Capitolato%20tecnico.xlsx) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| capitolato tecnico | ID2181 - Gara AQ SGM ed.1 - Capitolato d'Oneri_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Capitolato%20d'Oneri_NEW.pdf) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| capitolato tecnico | Capitolato tecnico - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=443cbd22a815acfc) | `625b7bfcae071d05…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf.p7m) | `75b744bba0de48e7…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFF%20ID2181%20-%20NEW.zip#PDF/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro_NEW.pdf) | `b6dfe7db2f45e6f2…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro.docx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/MODULI%20DI%20DICHIARAZIONE%20-%20ID%202181.zip#MODULI%20DI%20DICHIARAZIONE/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.4%20-%20Schema%20Accordo%20Quadro.docx) | `58dc2d19c6031c30…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | Accordo quadro Vodafone - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=2b4b0fa5ef2c4825) | `1588e065438c3a89…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | Accordo quadro Fastweb - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=c01a35cb335dc453) | `67bef60126a4b801…` | 2026-11-05 |
+| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=80b627e662acaca5) | `d36f48cb749bc9b6…` | 2026-11-05 |
+| listini e appendici di prezzo | Corrispettivi e tariffe - Lotti 1, 4 e 5 | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=244f0a8075ef5189) | `6abf85b934ccc69a…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW-signed.pdf) | `596c844fb78cf915…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2181 - AQ SGM ed.1 - Determina a contrarre_NEW.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20AQ%20SGM%20ed.1%20-%20Determina%20a%20contrarre_NEW.pdf) | `4905bfd64fcd9f93…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche_signed.pdf) | `9b4c892ac6733cd5…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti III Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20III%20Tranche_signed.pdf) | `55b61355f3475d93…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti_signed.pdf) | `360aacb09890ddde…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20II%20Tranche.pdf) | `61d21ab1c1202c16…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti III Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti%20III%20Tranche.pdf) | `e1cd291534f3008e…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2181 - Gara AQ SGM ed.1 - Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20Chiarimenti.pdf) | `bd2b017c7b6c313c…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=48c6baee1fb67269) | `bd2b017c7b6c313c…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti III Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=475fadb27385c9c6) | `e1cd291534f3008e…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti III Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=3ba385c2ba555a4a) | `55b61355f3475d93…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti II Tranche - NON firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ca72d27dd8898f1e) | `61d21ab1c1202c16…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti II Tranche - firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a64f108ef786360f) | `9b4c892ac6733cd5…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti firmati digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=ac2aa0aca916ba3a) | `360aacb09890ddde…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti Allegato A - NON firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0da0ef41db0fe294) | `3791ba0349b04d90…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti Allegato A - firmato digitalmente | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=01b67d56fc7437e8) | `1f914e714ed2b62a…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF_signed.pdf) | `deafe7a8114a49d4…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2181 - Avviso aggiudicazione_DEF.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202181%20-%20Avviso%20aggiudicazione_DEF.pdf) | `ae83048ed974b7f3…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO NON FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=0412e3e188c61739) | `546383361000bef7…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO FIRMATO DIGITALMENTE | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=195ed3c41c63dec9) | `9b48e6d245d18ca5…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` | 2026-11-05 |
 
 ### Il dato esiste, ma non è pubblico
 
@@ -161,7 +189,28 @@ Ricerca per parole chiave su 22 documenti chiave archiviati (`tools/convenzioni/
 > «…e dei servizi (es. eventi di disastro);  le modalità di interfacciamento verso i sistemi dell 'Amministrazione necessari a garantire l'erogazione dei servizi da remoto e criteri di sicurezza adottati . 13. STRUMENTI DI MONITORAGGIO E REPORTISTICA Eventuale possibilità fornita alle Amministrazioni Contraenti e, per quanto di propria competenza, all’Amministrazione Aggiudicatrice, di accedere via web ai dati contenuti…» — ID2181 - Gara AQ SGM ed.1 - All.3 - Offerta tecnica_NEW.pdf (sha256 `b6dfe7db2f45…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Allegato C  – del presente Accordo Quadro | 3 | rimando | del presente Accordo Quadro | «Specifico sono indicati nell’Offerta Economica , di cui all’Allegato C del presente Accordo Quadro. 2. I corrispettivi si riferiscono ai servizi prestati a perfetta reg» — DOC UFF ID2181 - NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW. | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato D | 3 | rimando | titolo non leggibile dal rimando | «o verranno determinati sulla base dei prezzi stabiliti nell’Allegato D, “Corrispettivi e tariffe”, i quali rappresentano quindi un vincolo per il Fornitore. 2. Il Forn» — DOC UFF ID2181 - NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.p | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato E  – Capitolato d’Oneri | 2 | rimando | Capitolato d’Oneri | «indicati nel presente Accordo Quadro e al par. 25 dell ’Allegato E (Capitolato d’Oneri) - dell’Ordine di fornitura, avente ad oggetto i servizi di gestione e man» — DOC UFF ID2181 - NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf.p7m | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Appendice A al/allo capitolato – Schema delle Verifiche Ispettive | 2 | rimando | Schema delle Verifiche Ispettive | «r le Pubbliche Amministrazioni – edizione 1 – ID 2181 Appendice A al Capitolato Tecnico – Schema delle Verifiche Ispettive» — DOC UFF ID2181 - NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.5 - Capitolato Tecnico_NEW.pdf.p7m, p. 85, sha256 75b744bba0de48e7b6c4841362 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato F  – Flusso dati per le commissioni a carico del Fornitore | 1 | rimando | Flusso dati per le commissioni a carico del Fornitore | «cciato e modalità fissati da Consip S.p.A. (di cui all’Allegato F - “Flusso dati per le commissioni a carico del Fornitore” al presente Accordo Quadro), contene» — ID 2181 SGM IP&PDL.zip#ID 2181 SGM IP&PDL/lotto 1/ID2181_-_AQ_SGM_ed.1_-_RTI_Fastweb.pdf, p. 34 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+| Allegato G  – Flusso dati per le commissioni a carico del Fornitore | 1 | rimando | Flusso dati per le commissioni a carico del Fornitore | «cciato e modalità fissati da Consip S.p.A. (di cui all’Allegato G - “Flusso dati per le commissioni a carico del Fornitore” al presente Accordo Quadro), contene» — DOC UFF ID2181 - NEW.zip#ID2181 - Gara AQ SGM ed.1 - All.4 - Schema Accordo Quadro_NEW.pdf.p7m, | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

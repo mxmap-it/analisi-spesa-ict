@@ -1,11 +1,34 @@
 ---
-title: "Consip Reti locali 8, ID 2223, lotto 2 PAL"
-date: 2026-11-05
-description: "Iniziativa consip-reti-locali-8: dati, documenti archiviati e mancanti."
+title: 'Consip Reti locali 8, ID 2223, lotto 2 PAL (CIG 9543706356): documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'CIG 9543706356, Consip, CIG 9543706356, 95436927C7: 9 documenti pubblicati e archiviati con sha256, 10 mancanti (4 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- CIG 9543706356
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- '9543706356'
+- 95436927C7
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip Reti locali 8, ID 2223, lotto 2 PAL (CIG 9543706356)", "description": "CIG 9543706356, Consip, CIG 9543706356, 95436927C7: 9 documenti pubblicati e archiviati con sha256, 10 mancanti (4 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-reti-locali-8/", "identifier": ["CIG 9543706356", "9543706356", "95436927C7"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip Reti locali 8, ID 2223, lotto 2 PAL", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG 9543706356", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-reti-locali-8/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 9 documenti pubblicati e archiviati; **10 mancanti**: 4 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 3 di criticità 2, 3 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip SPC2 Connettività (contratto quadro OPA)](/convenzioni/cig-5133642f61/)
 
 | Campo | Valore |
 |---|---|
@@ -74,19 +97,21 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Id%202223_Avviso%20di%20proroga_signed.pdf) | `201159fa74b79b96…` |
-| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Id%202223_Avviso%20di%20proroga.pdf) | `2ff22979247c5e1d…` |
-| schema di accordo quadro o di convenzione | Reti locali 8 - Convenzione oscurata_oscurato.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Reti%20locali%208%20-%20Convenzione%20oscurata_oscurato.pdf) | `28bb8a262c4bd604…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Id%202223_Avviso%20di%20proroga_signed.pdf) | `201159fa74b79b96…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | Id 2223_Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Id%202223_Avviso%20di%20proroga.pdf) | `2ff22979247c5e1d…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | Reti locali 8 - Convenzione oscurata_oscurato.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/Reti%20locali%208%20-%20Convenzione%20oscurata_oscurato.pdf) | `28bb8a262c4bd604…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` | 2026-11-05 |
 
 ### Il dato esiste, ma non è pubblico
 
@@ -121,7 +146,29 @@ Ricerca per parole chiave su 25 documenti chiave archiviati (`tools/convenzioni/
 > «…se/trifase Tipo tower con capacità di circa 140 20000VA trifase/trifase Tipo tower con capacità di circa 141 40000VA trifase/trifase 142 Scheda per parallelo Tabella – GRUPPI DI CONTINUITÀ TABELLA SEZIONE 6 - SISTEMA DI MONITORAGGIO E GESTIONE Codici identificativi univoci Identificazione del prodotto offerto Marca Modello del produttore Piattaforma hardware (completo di 143 tutto) 144 SW di monitoraggio e gestione d…» — ID 2223 - Reti locali 8 - All 6 Tabelle di Offerta Tecnica.pdf (sha256 `e33413b8b82c…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Capitolato tecnico | 2 | atteso | capitolato tecnico | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ricontrollata dal vivo senza file del tipo | Documenti di gara: pubblicazione sul sito della stazione appaltante e in BDNCP (art. 27-28 d.lgs. 36/2023; art. 37 d.lgs. 33/2013) [R] | [R] | – |
+| Allegato H  – Dichiarazione Dati titolare effettivo | 2 | rimando | Dichiarazione Dati titolare effettivo | «he si impegna a produrre, la dichiarazione di cui all’“Allegato H – Dichiarazione Dati titolare effettivo” resa dal subappaltatore. < …ovvero, in alternati» — ID 2223 - DOC UFF_0.zip#ID 2223 - Reti locali 8 - Schema di convenzione.pdf.p7m, p. 23, sha256 51145 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Appendice A  – Tabelle Lavori pag | 2 | rimando | Tabelle Lavori pag | «del Disciplinare di gara. 4) DOMANDA Capitolato Tecnico – Appendice A – Tabelle Lavori pag. 101 [...] Classificazione Consip Public» — Chiarimenti Gara ID 2223_signed.pdf, p. 2, sha256 65efcb95c6d9125746f6a1df0f9545cc38e436b1038834c2ca7faf29c7a03206 (136 cita | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Disciplinare di gara o condizioni della procedura | 1 | atteso | disciplinare o condizioni della procedura | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ricontrollata dal vivo senza file del tipo | Documenti di gara: art. 82-85 d.lgs. 36/2023 [R] | [R] | – |
+| Allegato 14 | 1 | rimando | titolo non leggibile dal rimando | «one dei rischi standard da interferenze” redatto da Consip (Allegato n. 14) riferendolo ai rischi specifici da interferenza presenti nei luoghi in cui verrà espletato l’appa» — ID 2223 - DOC UFF_0.zip#ID 2223 - Reti locali 8 - Disciplinare.pdf.p7m, p. 21, sha | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+| Allegato 8A | 1 | rimando | titolo non leggibile dal rimando | «TI o Consorzi ordinari le dichiarazioni di cui sopra [e.g.: Allegato n. 8 A- Dichiarazione Dati titolare effettivo e B –Dichiarazione assenza conflitto di interessi del titola» — Chiarimenti Gara ID 2223_signed.pdf, p. 61, sha256 65efcb95c6d9125746f6a1df0f954 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

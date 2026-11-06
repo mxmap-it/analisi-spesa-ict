@@ -1,11 +1,36 @@
 ---
-title: "Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)"
-date: 2026-11-05
-description: "Iniziativa consip-1403: dati, documenti archiviati e mancanti."
+title: 'Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403) (ID 1403): documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 1403, Consip, CIG 55187486EA, 5518849A42, 55193442C1 e altri: 9 documenti pubblicati e archiviati con sha256, 13 mancanti (6 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 1403
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 55187486EA
+- 5518849A42
+- 55193442C1
+- 5519376D26
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403) (ID 1403)", "description": "ID 1403, Consip, CIG 55187486EA, 5518849A42, 55193442C1 e altri: 9 documenti pubblicati e archiviati con sha256, 13 mancanti (6 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-1403/", "identifier": ["ID 1403", "55187486EA", "5518849A42", "55193442C1", "5519376D26"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip SPC Cloud lotto 1, servizi di cloud computing (SIGEF 1403)", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 1403", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-1403/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 9 documenti pubblicati e archiviati; **13 mancanti**: 6 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 3 di criticità 2, 4 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PMO P](/convenzioni/consip-2483/) · [Consip Servizi applicativi in ottica cloud 3 (PAL), ID 2610](/convenzioni/consip-2610/) · [Consip AQ Sanità digitale, sistemi informativi gestionali](/convenzioni/consip-2366/) · [Consip Sanità digitale, sistemi clinico assistenziali 2, ID ](/convenzioni/consip-2601/)
 
 | Campo | Valore |
 |---|---|
@@ -81,21 +106,48 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 | piani e progetti dei fabbisogni delle PA | **da verificare** | PSN, AT degli enti | non riconosciuto dal nome dei file della pagina Consip: controllo a mano |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Doc%20pubblicazione%20gara%20cloud_ID%201403/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf.p7m) | `77e4cd51d7909127…` |
-| bando o avviso di gara (GUUE) | Bando GUUE Cloud.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Bando%20GUUE%20Cloud.pdf.p7m) | `77e4cd51d7909127…` |
-| bando o avviso di gara (GUUE) | GUUE.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8704AvvisodiprorogaU.zip#Avviso%20di%20proroga%20UFFICIALE/GUUE.pdf.p7m) | `5884389f7008cada…` |
-| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Doc%20pubblicazione%20gara%20cloud%2020131224_pdf/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf) | `dce278297cfde8d6…` |
-| bando o avviso di gara (GUUE) | Bando GUUE Ristretta Cloud.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Bando%20GUUE%20Ristretta%20Cloud.pdf) | `dce278297cfde8d6…` |
-| bando o avviso di gara (GUUE) | GUUE.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8705AvvisodiprorogaN.zip#Avviso%20di%20proroga%20NON%20UFFICIALE/GUUE.pdf) | `c77762bd8cf8e060…` |
-| schema di accordo quadro o di convenzione | avviso TED ARNAS Garibaldi: Contratto Quadro Consip SPC Cloud Lotto 1 - servizi di cloud c | [link](https://ted.europa.eu/it/notice/647656-2021/xml) | `5a714d721b26ec28…` |
-| schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 3 'Inter | [link](https://ted.europa.eu/it/notice/248255-2021/xml) | `ac4f6ebff2f1a893…` |
-| schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 4 'Servi | [link](https://ted.europa.eu/it/notice/248256-2021/xml) | `2b4e2dba99569558…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
 
-## Mancanze e via per colmarle
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Doc%20pubblicazione%20gara%20cloud_ID%201403/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf.p7m) | `77e4cd51d7909127…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | Bando GUUE Cloud.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8555DocumentazioneUF.zip#Bando%20GUUE%20Cloud.pdf.p7m) | `77e4cd51d7909127…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | GUUE.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/8704AvvisodiprorogaU.zip#Avviso%20di%20proroga%20UFFICIALE/GUUE.pdf.p7m) | `5884389f7008cada…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | Gara Cloud_Bando di gara (24_12_2013).pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Doc%20pubblicazione%20gara%20cloud%2020131224_pdf/Gara%20Cloud_Bando%20di%20gara%20(24_12_2013).pdf) | `dce278297cfde8d6…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | Bando GUUE Ristretta Cloud.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8555DocumentazioneNO.zip#Bando%20GUUE%20Ristretta%20Cloud.pdf) | `dce278297cfde8d6…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | GUUE.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/8705AvvisodiprorogaN.zip#Avviso%20di%20proroga%20NON%20UFFICIALE/GUUE.pdf) | `c77762bd8cf8e060…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | avviso TED ARNAS Garibaldi: Contratto Quadro Consip SPC Cloud Lotto 1 - servizi di cloud c | [link](https://ted.europa.eu/it/notice/647656-2021/xml) | `5a714d721b26ec28…` |  |
+| schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 3 'Inter | [link](https://ted.europa.eu/it/notice/248255-2021/xml) | `ac4f6ebff2f1a893…` |  |
+| schema di accordo quadro o di convenzione | avviso TED Regione Campania: contratto quadro SPC Cloud Consip-RTI Almaviva lotto 4 'Servi | [link](https://ted.europa.eu/it/notice/248256-2021/xml) | `2b4e2dba99569558…` |  |
+
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | 3 | atteso | transato e monitoraggio per lotto e listino | inventario: stato «non-pubblicato» (open data Consip (aggregato), relazioni al MEF); classe C3; pagina ricontrollata dal vivo senza file del tipo | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia  | [V] | in preparazione |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Progetti dei Piani dei Fabbisogni approvati | 3 | atteso | piani e progetti dei fabbisogni delle PA | inventario: stato «da-verificare» (PSN, AT degli enti); classe C5; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito; è parte del contratto di utenza, quindi rientra negli atti dell'esecuzione [R]. Precedente verificato: 19 PPdF pubblicati integralmente da 15 enti (report | [R] | – |
+| Capitolato tecnico | 2 | atteso | capitolato tecnico | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ricontrollata dal vivo senza file del tipo | Documenti di gara: pubblicazione sul sito della stazione appaltante e in BDNCP (art. 27-28 d.lgs. 36/2023; art. 37 d.lgs. 33/2013) [R] | [R] | – |
+| Provvedimento o avviso di aggiudicazione | 2 | atteso | avviso di aggiudicazione o esito | inventario: stato «da-verificare» (consip.it, TED); pagina ricontrollata dal vivo senza file del tipo | Avviso di aggiudicazione: art. 50 c. 9 e art. 84-85 d.lgs. 36/2023 (GUUE/BDNCP); provvedimento ex art. 28 [R] | [R] | – |
+| Allegato A  – I | 2 | rimando | I | «I punti di contatto sopra indicati Altro (completare l'allegato A.I) Il capitolato d'oneri e la documentazione complementare (inclusi i documenti per il dialogo comp» — 8555DocumentazioneUF.zip#Bando GUUE Cloud.pdf.p7m, p. 1, sha256 77e4cd51d79091273f2afb2acd | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Determina o decisione a contrarre | 1 | atteso | determina o decisione a contrarre | inventario: stato «da-verificare» (consip.it o AT dell'aggregatore); pagina ricontrollata dal vivo senza file del tipo | Decisione di contrarre: art. 17 c. 1 d.lgs. 36/2023; pubblicazione ex art. 28 [R] | [R] | – |
+| Disciplinare di gara o condizioni della procedura | 1 | atteso | disciplinare o condizioni della procedura | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ricontrollata dal vivo senza file del tipo | Documenti di gara: art. 82-85 d.lgs. 36/2023 [R] | [R] | – |
+| Risposte ai chiarimenti | 1 | atteso | risposte ai chiarimenti | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore); pagina ricontrollata dal vivo senza file del tipo | Chiarimenti: art. 88 d.lgs. 36/2023 (pubblicati sul sito) [R] | [R] | – |
+| Allegato B  – e come meglio descritto | 1 | rimando | e come meglio descritto | «one di Portali e Servizi on-line; il tutto come indicato in Allegato B e come meglio descritto, allo stato, nel Documento descrittivo. II.1.6) Vocabolario comune per gl» — 8555DocumentazioneUF.zip#Doc pubblicazione gara cloud_ID 1403/Gara Cloud_Bando di gara  | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

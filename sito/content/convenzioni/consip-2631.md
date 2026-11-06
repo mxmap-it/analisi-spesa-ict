@@ -1,11 +1,37 @@
 ---
-title: "Consip PC desktop e workstation 3, ID 2631, lotto 2"
-date: 2026-11-05
-description: "Iniziativa consip-2631: dati, documenti archiviati e mancanti."
+title: 'Consip PC desktop e workstation 3, ID 2631, lotto 2: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2631, Consip, CIG 9823936871, 9823953679, 9823965062 e altri: 30 documenti pubblicati e archiviati con sha256, 7 mancanti (4 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2631
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- '9823936871'
+- '9823953679'
+- '9823965062'
+- 9824017B48
+- 9823924E88
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip PC desktop e workstation 3, ID 2631, lotto 2", "description": "ID 2631, Consip, CIG 9823936871, 9823953679, 9823965062 e altri: 30 documenti pubblicati e archiviati con sha256, 7 mancanti (4 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2631/", "identifier": ["ID 2631", "9823936871", "9823953679", "9823965062", "9824017B48", "9823924E88", "9824002EE6"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip PC desktop e workstation 3, ID 2631, lotto 2", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2631", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2631/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 30 documenti pubblicati e archiviati; **7 mancanti**: 4 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 2 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ PC portatili, mobile workstation e Chromebook, ID ](/convenzioni/consip-2425/)
 
 | Campo | Valore |
 |---|---|
@@ -78,40 +104,42 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Bando.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Bando.pdf.p7m) | `3fdc3e62bb253b84…` |
-| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 10 Condizioni di assicurazione | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2010%20Condizioni%20di%20assicurazione.pdf.p7m) | `3fdc3e62bb253b84…` |
-| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 3 Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%203%20Condizioni%20Generali.pdf.p7m) | `3fdc3e62bb253b84…` |
-| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Disciplinare.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Disciplinare.pdf.p7m) | `3fdc3e62bb253b84…` |
-| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1 Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201%20Capitolato%20Tecnico.pdf.p7m) | `3fdc3e62bb253b84…` |
-| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1bis Capitolato Tecnico - Appe | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201bis%20Capitolato%20Tecnico%20-%20Appendice%201%20Schema_verifiche_ispettive.pdf.p7m) | `3fdc3e62bb253b84…` |
-| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1ter Capitolato Tecnico - Appe | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201ter%20Capitolato%20Tecnico%20-%20Appendice%202%20Indicatori%20di%20qualità.pdf.p7m) | `3fdc3e62bb253b84…` |
-| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 2 Schema di convenzione.pdf.p7 | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%202%20Schema%20di%20convenzione.pdf.p7m) | `3fdc3e62bb253b84…` |
-| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 15.1 Schema Conto Economico Co | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE.zip#ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2015.1%20Schema%20Conto%20Economico%20Commessa.xlsx) | `d94586ed89a8d245…` |
-| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 15.2 Schema Costi manodopera.x | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE.zip#ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2015.2%20Schema%20Costi%20manodopera.xlsx) | `d94586ed89a8d245…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3 - Lotto 2 - Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203%20-%20Lotto%202%20-%20Convenzione.pdf) | `aeebf9e8c139aa97…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 1_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%201_Convenzione.pdf) | `c95087c299f09b09…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 3_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%203_Convenzione.pdf) | `632d19cd894fbf61…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 4_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%204_Convenzione.pdf) | `53a021067709bfcb…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 5_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%205_Convenzione.pdf) | `dda469aaee38eb21…` |
-| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 6_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%206_Convenzione.pdf) | `af48cafb22bac980…` |
-| determina o decisione a contrarre | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Determina%20a%20contrarre_signed.pdf) | `ba655ff4e90ac895…` |
-| determina o decisione a contrarre | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Determina%20a%20contrarre.pdf) | `5efb6ae141451f44…` |
-| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti II tranche_signed.p | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti%20II%20tranche_signed.pdf) | `2edc2239e7a764d2…` |
-| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti_signed.pdf) | `4931a97af9b94464…` |
-| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti II tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti%20II%20tranche.pdf) | `92183ed862cf89c9…` |
-| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti.pdf) | `7a66a1b3b4b369b7…` |
-| avviso di aggiudicazione o esito | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Avviso di aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Avviso%20di%20aggiudicazione_signed.pdf) | `4cdd93e7c1ec4c98…` |
-| avviso di aggiudicazione o esito | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Avviso di aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Avviso%20di%20aggiudicazione.pdf) | `9e028ac403e5caaa…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Bando.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Bando.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 10 Condizioni di assicurazione | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2010%20Condizioni%20di%20assicurazione.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 3 Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%203%20Condizioni%20Generali.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Disciplinare.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Disciplinare.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1 Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201%20Capitolato%20Tecnico.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1bis Capitolato Tecnico - Appe | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201bis%20Capitolato%20Tecnico%20-%20Appendice%201%20Schema_verifiche_ispettive.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| capitolato tecnico | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 1ter Capitolato Tecnico - Appe | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%201ter%20Capitolato%20Tecnico%20-%20Appendice%202%20Indicatori%20di%20qualità.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 2 Schema di convenzione.pdf.p7 | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%202%20Schema%20di%20convenzione.pdf.p7m) | `3fdc3e62bb253b84…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 15.1 Schema Conto Economico Co | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE.zip#ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2015.1%20Schema%20Conto%20Economico%20Commessa.xlsx) | `d94586ed89a8d245…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 15.2 Schema Costi manodopera.x | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE.zip#ID%202631%20-%20MODULI%20DI%20DICHIARAZIONE/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2015.2%20Schema%20Costi%20manodopera.xlsx) | `d94586ed89a8d245…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3 - Lotto 2 - Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203%20-%20Lotto%202%20-%20Convenzione.pdf) | `aeebf9e8c139aa97…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 1_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%201_Convenzione.pdf) | `c95087c299f09b09…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 3_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%203_Convenzione.pdf) | `632d19cd894fbf61…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 4_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%204_Convenzione.pdf) | `53a021067709bfcb…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 5_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%205_Convenzione.pdf) | `dda469aaee38eb21…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2631_PCDWM 3_Lotto 6_Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2631_PCDWM%203_Lotto%206_Convenzione.pdf) | `af48cafb22bac980…` | 2026-11-05 |
+| determina o decisione a contrarre | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Determina%20a%20contrarre_signed.pdf) | `ba655ff4e90ac895…` | 2026-11-05 |
+| determina o decisione a contrarre | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Determina%20a%20contrarre.pdf) | `5efb6ae141451f44…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti II tranche_signed.p | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti%20II%20tranche_signed.pdf) | `2edc2239e7a764d2…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti_signed.pdf) | `4931a97af9b94464…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti II tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti%20II%20tranche.pdf) | `92183ed862cf89c9…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Risposta chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Risposta%20chiarimenti.pdf) | `7a66a1b3b4b369b7…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Avviso di aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20PC%20Desktop%2C%20Workstation%20e%20Monitor%20ed%203%20-%20Avviso%20di%20aggiudicazione_signed.pdf) | `4cdd93e7c1ec4c98…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2631 - PC Desktop Workstation e Monitor ed 3 - Avviso di aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202631%20-%20PC%20Desktop%20Workstation%20e%20Monitor%20ed%203%20-%20Avviso%20di%20aggiudicazione.pdf) | `9e028ac403e5caaa…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` | 2026-11-05 |
 
 ### Il dato esiste, ma non è pubblico
 
@@ -146,7 +174,26 @@ Ricerca per parole chiave su 34 documenti chiave archiviati (`tools/convenzioni/
 > «…d. 3 - ID 2631 Allegato 13 – Dichiarazioni DPCM 187/1991 Indice 1. SCOPO DEL DOCUMENTO 3 2. CRITERIO DI CALCOLO DELLA FEE 3 3. TEMPISTICA E MODALITÀ DI INVIO 3 3.1 Tempistica 3 3.2 Modalità di invio 5 4. DESCRIZIONE DEI FLUSSI DATI FATTURATO 5 5. FACSIMILE DICHIARAZIONI 6 5.1 FACSIMILE DI DICHIARAZIONE LETTERA “A” 6 5.2 FACSIMILE DI DICHIARAZIONE LETTERA “B” 7 Gara a procedura aperta ai sensi del D.Lgs. 50/2016 e s.m…» — ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commi (sha256 `1b2d2223d9b5…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Allegato 19A  – Dichiarazione Dati titolare effettivo | 2 | rimando | Dichiarazione Dati titolare effettivo | «he si impegna a produrre, la dichiarazione di cui all’”Allegato 19 A – Dichiarazione Dati titolare effettivo” resa dal subappaltatore. Classificazione del documen» — ID 2631 - DOC UFF.zip#Doc firmati/ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato 20 – Dichiarazione di ammissione al concordato preventivo | 1 | numerazione;rimando | Dichiarazione di ammissione al concordato preventivo | numerazione: presenti 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22; vicini: ID 2631 - MODULI DI DICHIARAZIONE/ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 19 Dichiarazioni PNRR Titolare Effettivo.docx (sha256 d94586e | Documenti di gara: messa a disposizione integrale e gratuita (art. 25, 27 e 85 d.lgs. 36/2023) [R] | [R] | – |
+| Allegato 19B  – Facsimile Dichiarazione | 1 | rimando | Facsimile Dichiarazione | «atori economici devono produrre le dichiarazioni di cui all’Allegato n. 19 B – “Facsimile Dichiarazione di assenza di conflitto di interessi del titolare effettivo”, resa d» — ID 2631 - DOC UFF.zip#Doc firmati/ID 2631 - PC Desktop, Workstation e Monitor ed 3  | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

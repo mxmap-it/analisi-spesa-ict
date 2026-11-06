@@ -1,11 +1,33 @@
 ---
-title: "Consip AQ System management, ID 1836"
-date: 2026-11-05
-description: "Iniziativa consip-1836: dati, documenti archiviati e mancanti."
+title: 'Consip AQ System management, ID 1836: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 1836, Consip, CIG 7260902DDE: 18 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 1836
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 7260902DDE
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip AQ System management, ID 1836", "description": "ID 1836, Consip, CIG 7260902DDE: 18 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-1836/", "identifier": ["ID 1836", "7260902DDE"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip AQ System management, ID 1836", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 1836", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-1836/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 18 documenti pubblicati e archiviati; **7 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip AQ System management ed. 3, ID 2275, lotto 1](/convenzioni/consip-2275/) · [Consip AQ System management ed. 4, ID 2710 (lotto unico)](/convenzioni/consip-2710/)
 
 | Campo | Valore |
 |---|---|
@@ -73,28 +95,30 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | 1836 - AQ System Management 2 - Avviso di proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Avviso%20di%20proroga-signed.pdf) | `73a4dc4e67bde248…` |
-| bando o avviso di gara (GUUE) | AQ_System_Management2_Bando_GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Bando_GURI.pdf.p7m) | `33d96bbff9721060…` |
-| bando o avviso di gara (GUUE) | 1836 - AQ System Management 2 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Avviso%20di%20proroga.pdf) | `be4dc8bde6bb7890…` |
-| bando o avviso di gara (GUUE) | AQ_System_Management2_Bando_GURI.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Bando_GURI.pdf) | `e953d284753fa72d…` |
-| bando o avviso di gara (GUUE) | bando TED Consip: AQ servizi di System Management per le PA, ID Sigef 1836, CIG 7260902DDE | [link](https://ted.europa.eu/it/notice/455199-2017/xml) | `9f87a64642df50b3…` |
-| capitolato tecnico | AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf.p7m) | `33d96bbff9721060…` |
-| capitolato tecnico | AQ_System_Management2_Capitolato_d'O neri.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Capitolato_d'O%20neri.pdf.p7m) | `33d96bbff9721060…` |
-| capitolato tecnico | AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf) | `e953d284753fa72d…` |
-| capitolato tecnico | AQ_System_Management2_Capitolato_d'Oneri.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Capitolato_d'Oneri.pdf) | `e953d284753fa72d…` |
-| schema di accordo quadro o di convenzione | 20237_18 ID 1836 - Accordo Quadro system management 2-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/20237_18%20ID%201836%20-%20Accordo%20Quadro%20system%20management%202-signed.pdf) | `5c43008b37106192…` |
-| schema di accordo quadro o di convenzione | AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf.p7m) | `33d96bbff9721060…` |
-| schema di accordo quadro o di convenzione | AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf) | `e953d284753fa72d…` |
-| determina o decisione a contrarre | ID  1836 Determina a contrarre.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%20%201836%20Determina%20a%20contrarre.pdf.p7m) | `0f8566dec46e2bd6…` |
-| determina o decisione a contrarre | ID  1836 Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%20%201836%20Determina%20a%20contrarre.pdf) | `ed8938f07d60d9dc…` |
-| risposte ai chiarimenti | 1836 - AQ System Management 2 - Errata Corrige e Chiarimenti-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Errata%20Corrige%20e%20Chiarimenti-signed.pdf) | `4fd1ff0f1eed72bf…` |
-| risposte ai chiarimenti | 1836 - AQ System Management 2 - Errata Corrige e Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Errata%20Corrige%20e%20Chiarimenti.pdf) | `17f3070941e1eb45…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO - ID 1836.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20-%20ID%201836.p7m) | `3d443c67abe3eb08…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO - ID 1836.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20-%20ID%201836.pdf) | `c4e5b27cb6a25ce2…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | 1836 - AQ System Management 2 - Avviso di proroga-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Avviso%20di%20proroga-signed.pdf) | `73a4dc4e67bde248…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | AQ_System_Management2_Bando_GURI.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Bando_GURI.pdf.p7m) | `33d96bbff9721060…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | 1836 - AQ System Management 2 - Avviso di proroga.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Avviso%20di%20proroga.pdf) | `be4dc8bde6bb7890…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | AQ_System_Management2_Bando_GURI.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Bando_GURI.pdf) | `e953d284753fa72d…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | bando TED Consip: AQ servizi di System Management per le PA, ID Sigef 1836, CIG 7260902DDE | [link](https://ted.europa.eu/it/notice/455199-2017/xml) | `9f87a64642df50b3…` |  |
+| capitolato tecnico | AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf.p7m) | `33d96bbff9721060…` | 2026-11-05 |
+| capitolato tecnico | AQ_System_Management2_Capitolato_d'O neri.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Capitolato_d'O%20neri.pdf.p7m) | `33d96bbff9721060…` | 2026-11-05 |
+| capitolato tecnico | AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf) | `e953d284753fa72d…` | 2026-11-05 |
+| capitolato tecnico | AQ_System_Management2_Capitolato_d'Oneri.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Capitolato_d'Oneri.pdf) | `e953d284753fa72d…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | 20237_18 ID 1836 - Accordo Quadro system management 2-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/20237_18%20ID%201836%20-%20Accordo%20Quadro%20system%20management%202-signed.pdf) | `5c43008b37106192…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf.p7m) | `33d96bbff9721060…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/DOC%20NON%20UFFICIALE%20ID%201836.zip#AQ_System_Management2_Allegato_5_Schema_Accordo_Quadro.pdf) | `e953d284753fa72d…` | 2026-11-05 |
+| determina o decisione a contrarre | ID  1836 Determina a contrarre.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%20%201836%20Determina%20a%20contrarre.pdf.p7m) | `0f8566dec46e2bd6…` | 2026-11-05 |
+| determina o decisione a contrarre | ID  1836 Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%20%201836%20Determina%20a%20contrarre.pdf) | `ed8938f07d60d9dc…` | 2026-11-05 |
+| risposte ai chiarimenti | 1836 - AQ System Management 2 - Errata Corrige e Chiarimenti-signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Errata%20Corrige%20e%20Chiarimenti-signed.pdf) | `4fd1ff0f1eed72bf…` | 2026-11-05 |
+| risposte ai chiarimenti | 1836 - AQ System Management 2 - Errata Corrige e Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/1836%20-%20AQ%20System%20Management%202%20-%20Errata%20Corrige%20e%20Chiarimenti.pdf) | `17f3070941e1eb45…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO - ID 1836.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20-%20ID%201836.p7m) | `3d443c67abe3eb08…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO - ID 1836.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20-%20ID%201836.pdf) | `c4e5b27cb6a25ce2…` | 2026-11-05 |
 
 ## Estratti dai documenti (automatici, da leggere)
 
@@ -125,7 +149,26 @@ Ricerca per parole chiave su 17 documenti chiave archiviati (`tools/convenzioni/
 > «…amento del servizio ............................................................... 40 7.2.1. Dimensionamento del servizio ............................................................................ 40 7.3. Servizio di monitoraggio notturno/festivo sistemi open (onsite o remoto) .................................. 43 7.3.1. Variabili di dimensionamento del servizio ....................................................…» — AQ_System_Management2_Allegato_4_Capitolato_Tecnico.pdf (sha256 `e953d284753f…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Flussi di monitoraggio: transato/erogato per lotto, listino e marchio | 3 | atteso | transato e monitoraggio per lotto e listino | inventario: stato «non-pubblicato» (open data Consip (aggregato), relazioni al MEF); classe C3; pagina ricontrollata dal vivo senza file del tipo | Consip pubblica in open data (dati.consip.it, «Ordini diretti di acquisto in Convenzione / su Accordi Quadro») l'importo ordinato per anno, convenzione o AQ e lotto, con tipologia  | [V] | in preparazione |
+| Listini prezzi applicati alle amministrazioni (per lotto e listino) | 3 | atteso | listini e appendici di prezzo | inventario: stato «da-verificare» (consip.it, acquistinretepa (scheda dell'iniziativa)); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Allegato F al/allo schema | 2 | rimando | titolo non leggibile dal rimando | «ALLEGATO F ALLO SCHEMA DI ACCORDO QUADRO “FLUSSO DATI PER LE COMMISSIONI A CARICO DEL FORNITORE” CLASSIFI» — DOC UFFICIALE ID 1836.zip#AQ_System_Management2_Allegato_5a_Flusso_dati_FEE.pdf.p7m, p. 1, sha256 33d96bbff97210609a74319128ec5c7a7ac93ec60c7fb1e72eb4 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Disciplinare di gara o condizioni della procedura | 1 | atteso | disciplinare o condizioni della procedura | inventario: stato «da-verificare» (consip.it o sito dell'aggregatore (pacchetto documentazione)); pagina ricontrollata dal vivo senza file del tipo | Documenti di gara: art. 82-85 d.lgs. 36/2023 [R] | [R] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

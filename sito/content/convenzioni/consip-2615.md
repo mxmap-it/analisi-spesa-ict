@@ -1,11 +1,33 @@
 ---
-title: "Consip Licenze Microsoft Enterprise Agreement 8, ID 2615"
-date: 2026-11-05
-description: "Iniziativa consip-2615: dati, documenti archiviati e mancanti."
+title: 'Consip Licenze Microsoft Enterprise Agreement 8, ID 2615: documenti pubblicati e mancanti'
+date: '2026-11-05'
+lastmod: '2026-11-06'
+description: 'ID 2615, Consip, CIG 97431204F9: 37 documenti pubblicati e archiviati con sha256, 9 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+keywords:
+- ID 2615
+- Consip
+- convenzione
+- accordo quadro
+- documenti di gara
+- accesso civico
+- trasparenza
+- 97431204F9
+breadcrumb:
+- nome: Home
+  url: /
+- nome: Convenzioni ICT
+  url: /convenzioni/
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Consip Licenze Microsoft Enterprise Agreement 8, ID 2615", "description": "ID 2615, Consip, CIG 97431204F9: 37 documenti pubblicati e archiviati con sha256, 9 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2615/", "identifier": ["ID 2615", "97431204F9"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Consip Licenze Microsoft Enterprise Agreement 8, ID 2615", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2615", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2615/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
+
+**In sintesi.** 37 documenti pubblicati e archiviati; **9 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 2 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 2 istanze in preparazione.
+
+Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
+
+Iniziative correlate: [Consip Licenze software multibrand 6, ID 2599, lotto 1 prodo](/convenzioni/consip-2599/) · [Consip Licenze Microsoft Enterprise Agreement 9, ID 2755 (ip](/convenzioni/consip-2755/) · [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/)
 
 | Campo | Valore |
 |---|---|
@@ -73,47 +95,49 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | ordinativi e contratti attuativi delle PA | **non pubblicato** | AT degli enti; PVL (link ai documenti dal 2024) | non individuato sulla pagina del bando su consip.it (consultata il 2026-11-05; tipo dedotto dal nome dei file); acquistinretepa e AT di Consip non ancora consultati |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
-### Documenti trovati
+## Documenti presenti
 
-| Tipo | Documento | Originale | Copia (sha256) |
-|---|---|---|---|
-| bando o avviso di gara (GUUE) | ID2615-EA8-Bando.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Bando.pdf.p7m) | `7269bc2cb3807e5b…` |
-| bando o avviso di gara (GUUE) | ID2615-EA8-Bando.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Bando.pdf) | `3604c93af4a9d996…` |
-| bando o avviso di gara (GUUE) | bando TED Consip: Fornitura di licenze d'uso Microsoft Enterprise Agreement (ottava edizio | [link](https://ted.europa.eu/it/notice/236254-2023/xml) | `db4481a7c597f45e…` |
-| disciplinare o condizioni della procedura | ID2615-Disciplinare EA8.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-Disciplinare%20EA8.pdf.p7m) | `7269bc2cb3807e5b…` |
-| disciplinare o condizioni della procedura | ID2615-EA8-Allegato-3A-Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-3A-Condizioni%20Generali.pdf.p7m) | `7269bc2cb3807e5b…` |
-| disciplinare o condizioni della procedura | ID2615-Disciplinare EA8.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-Disciplinare%20EA8.pdf) | `3604c93af4a9d996…` |
-| disciplinare o condizioni della procedura | ID2615-EA8-Allegato-3A-Condizioni Generali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-3A-Condizioni%20Generali.pdf) | `3604c93af4a9d996…` |
-| capitolato tecnico | ID2615-EA8-Allegato-2-Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-2-Capitolato%20Tecnico.pdf.p7m) | `7269bc2cb3807e5b…` |
-| capitolato tecnico | ID2615-EA8-Allegato-2-Capitolato Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-2-Capitolato%20Tecnico.pdf) | `3604c93af4a9d996…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-14.1 Schema Conto Economico Commessa.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-14.1%20Schema%20Conto%20Economico%20Commessa.pdf.p7m) | `7269bc2cb3807e5b…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-2-CT-Appendice 2-Schema delle verifiche ispettive.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-2-CT-Appendice%202-Schema%20delle%20verifiche%20ispettive.pdf.p7m) | `7269bc2cb3807e5b…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-4-Schema di Convenzione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-4-Schema%20di%20Convenzione.pdf.p7m) | `7269bc2cb3807e5b…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-14.1 Schema Conto Economico Commessa.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-14.1%20Schema%20Conto%20Economico%20Commessa.pdf) | `3604c93af4a9d996…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-2-CT-Appendice 2-Schema delle verifiche ispettive.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-2-CT-Appendice%202-Schema%20delle%20verifiche%20ispettive.pdf) | `3604c93af4a9d996…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-4-Schema di Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-4-Schema%20di%20Convenzione.pdf) | `3604c93af4a9d996…` |
-| schema di accordo quadro o di convenzione | ID2615-EA8- Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615-EA8-%20Convenzione.pdf) | `607c6c4cb7a5cb80…` |
-| listini e appendici di prezzo | ID2615-EA-8-Allegato 2 CT - Appendice 1 - Struttura listino e principali clausole commerci | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA-8-Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf.p7m) | `7269bc2cb3807e5b…` |
-| listini e appendici di prezzo | ID2615-EA8-Allegato 2CT - App 4 - Listino di riferimento Microsoft EA - Fascia D.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato%202CT%20-%20App%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf.p7m) | `7269bc2cb3807e5b…` |
-| listini e appendici di prezzo | ID2615-EA-8-Allegato 2 CT - Appendice 1 - Struttura listino e principali clausole commerci | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA-8-Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf) | `3604c93af4a9d996…` |
-| listini e appendici di prezzo | ID2615-EA8-Allegato 2CT - App 4 - Listino di riferimento Microsoft EA - Fascia D.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato%202CT%20-%20App%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf) | `3604c93af4a9d996…` |
-| determina o decisione a contrarre | ID2615_Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2615_Determina%20a%20contrarre_signed.pdf) | `92f80af051295ff7…` |
-| determina o decisione a contrarre | ID2615_Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615_Determina%20a%20contrarre.pdf) | `c6319fbe0425343b…` |
-| risposte ai chiarimenti | ID 2615_ Risposte_Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615_%20Risposte_Chiarimenti_signed.pdf) | `1eae2e0c9eb9996c…` |
-| risposte ai chiarimenti | ID2615-Risposte-chiarimenti-seconda-tranche_def_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2615-Risposte-chiarimenti-seconda-tranche_def_signed.pdf) | `4e4342a63d0995d8…` |
-| risposte ai chiarimenti | ID 2615_ Risposte_Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615_%20Risposte_Chiarimenti.pdf) | `d275c8aca9ccb36a…` |
-| risposte ai chiarimenti | ID2615-Risposte-chiarimenti-seconda-tranche_def.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615-Risposte-chiarimenti-seconda-tranche_def.pdf) | `f46439314e964cdb…` |
-| risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a98f9401a7c57486) | `4e4342a63d0995d8…` |
-| risposte ai chiarimenti | Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=04b312b62d6d4341) | `1eae2e0c9eb9996c…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2615.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20ID%202615.pdf.p7m) | `d9c500c21db2ea74…` |
-| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2615.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202615.pdf) | `e4907c2cdfb8b3a8…` |
-| avviso di aggiudicazione o esito | aggiudicazione TED ID 2615 EA ottava edizione (eForms, senza CIG) | [link](https://ted.europa.eu/it/notice/272361-2024/xml) | `2888fafcfb7f0af5…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` |
-| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` |
+Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, con lo sha256 per verificarne l'identità.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID2615-EA8-Bando.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Bando.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | ID2615-EA8-Bando.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Bando.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| bando o avviso di gara (GUUE) | bando TED Consip: Fornitura di licenze d'uso Microsoft Enterprise Agreement (ottava edizio | [link](https://ted.europa.eu/it/notice/236254-2023/xml) | `db4481a7c597f45e…` |  |
+| disciplinare o condizioni della procedura | ID2615-Disciplinare EA8.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-Disciplinare%20EA8.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID2615-EA8-Allegato-3A-Condizioni Generali.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-3A-Condizioni%20Generali.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID2615-Disciplinare EA8.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-Disciplinare%20EA8.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| disciplinare o condizioni della procedura | ID2615-EA8-Allegato-3A-Condizioni Generali.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-3A-Condizioni%20Generali.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| capitolato tecnico | ID2615-EA8-Allegato-2-Capitolato Tecnico.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-2-Capitolato%20Tecnico.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| capitolato tecnico | ID2615-EA8-Allegato-2-Capitolato Tecnico.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-2-Capitolato%20Tecnico.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-14.1 Schema Conto Economico Commessa.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-14.1%20Schema%20Conto%20Economico%20Commessa.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-2-CT-Appendice 2-Schema delle verifiche ispettive.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-2-CT-Appendice%202-Schema%20delle%20verifiche%20ispettive.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-4-Schema di Convenzione.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato-4-Schema%20di%20Convenzione.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-14.1 Schema Conto Economico Commessa.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-14.1%20Schema%20Conto%20Economico%20Commessa.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-2-CT-Appendice 2-Schema delle verifiche ispettive.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-2-CT-Appendice%202-Schema%20delle%20verifiche%20ispettive.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8-Allegato-4-Schema di Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato-4-Schema%20di%20Convenzione.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| schema di accordo quadro o di convenzione | ID2615-EA8- Convenzione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615-EA8-%20Convenzione.pdf) | `607c6c4cb7a5cb80…` | 2026-11-05 |
+| listini e appendici di prezzo | ID2615-EA-8-Allegato 2 CT - Appendice 1 - Struttura listino e principali clausole commerci | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA-8-Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| listini e appendici di prezzo | ID2615-EA8-Allegato 2CT - App 4 - Listino di riferimento Microsoft EA - Fascia D.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615%20-%20DOC%20UFF.zip#ID2615-EA8-Allegato%202CT%20-%20App%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf.p7m) | `7269bc2cb3807e5b…` | 2026-11-05 |
+| listini e appendici di prezzo | ID2615-EA-8-Allegato 2 CT - Appendice 1 - Struttura listino e principali clausole commerci | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA-8-Allegato%202%20CT%20-%20Appendice%201%20-%20Struttura%20listino%20e%20principali%20clausole%20commerciali.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| listini e appendici di prezzo | ID2615-EA8-Allegato 2CT - App 4 - Listino di riferimento Microsoft EA - Fascia D.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615%20-%20DOC%20NON%20UFF.zip#ID%202615%20-%20allegati%20pdf%20-%20rev.1/ID2615-EA8-Allegato%202CT%20-%20App%204%20-%20Listino%20di%20riferimento%20Microsoft%20EA%20-%20Fascia%20D.pdf) | `3604c93af4a9d996…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2615_Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2615_Determina%20a%20contrarre_signed.pdf) | `92f80af051295ff7…` | 2026-11-05 |
+| determina o decisione a contrarre | ID2615_Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615_Determina%20a%20contrarre.pdf) | `c6319fbe0425343b…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2615_ Risposte_Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202615_%20Risposte_Chiarimenti_signed.pdf) | `1eae2e0c9eb9996c…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2615-Risposte-chiarimenti-seconda-tranche_def_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2615-Risposte-chiarimenti-seconda-tranche_def_signed.pdf) | `4e4342a63d0995d8…` | 2026-11-05 |
+| risposte ai chiarimenti | ID 2615_ Risposte_Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202615_%20Risposte_Chiarimenti.pdf) | `d275c8aca9ccb36a…` | 2026-11-05 |
+| risposte ai chiarimenti | ID2615-Risposte-chiarimenti-seconda-tranche_def.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID2615-Risposte-chiarimenti-seconda-tranche_def.pdf) | `f46439314e964cdb…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a98f9401a7c57486) | `4e4342a63d0995d8…` | 2026-11-05 |
+| risposte ai chiarimenti | Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=04b312b62d6d4341) | `1eae2e0c9eb9996c…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2615.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20ID%202615.pdf.p7m) | `d9c500c21db2ea74…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2615.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202615.pdf) | `e4907c2cdfb8b3a8…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | aggiudicazione TED ID 2615 EA ottava edizione (eForms, senza CIG) | [link](https://ted.europa.eu/it/notice/272361-2024/xml) | `2888fafcfb7f0af5…` |  |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2024.csv) | `c2ab590606a4ff56…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2025.csv) | `21c13ae578dfb4d7…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-convenzione-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-convenzione-2026.csv) | `fdec9cc37defd62a…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2024.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2024.csv) | `6b96defcdab372f8…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2025.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2025.csv) | `c34df9e61c78330e…` | 2026-11-05 |
+| transato e monitoraggio per lotto e listino | open data Consip: ordini-aq-2026.csv (ordinato per lotto, aggregato) | [link](https://dati.consip.it/download/dataset/ordini-aq-2026.csv) | `148be0ac9702d3fb…` | 2026-11-05 |
 
 ### Reperiti da fonte non ufficiale
 
@@ -159,7 +183,28 @@ Ricerca per parole chiave su 29 documenti chiave archiviati (`tools/convenzioni/
 > «…1RTCCASO - RISPETTO DEI TEMPI CONTRATTUALI DI CONSEGNA (PER SINGOLO ORDINE) ................................................................................ 3 1.2RTCCR – RISPETTO DEI TEMPI CONTRATTUALI DI CONSEGNA DELLA REPORTISTICA ........................................................................ 4 1.3TRCT – TEMPESTIVITÀ DI RISPOSTA ALLE CHIAMATE TELEFONICHE ........ 5 1.4CTP – CHIAMATE TELEFONICHE PERDUTE ..…» — ID2615-EA8-Allegato-2 CT-Appendice 3-Schede Indicatori di qualità.pdf (sha256 `3604c93af4a9…`)
 
 
-## Mancanze e via per colmarle
+## Documenti mancanti
+
+Un documento per riga. Metodo: *numerazione* (numero saltato fra gli allegati pubblicati), *rimando* (citato negli atti ma non pubblicato), *atteso* (previsto per legge o prassi). Criticità 3 = decisivo per giurisdizione o spesa; [V] = pagina ricontrollata dal vivo, [R] = da verificare. [Metodo](/progetto/metodo-convenzioni-trasparenza/).
+
+| Documento | Criticità | Metodo | Contenuto presunto | Evidenza | Base normativa | Livello | Accesso civico |
+|---|---|---|---|---|---|---|---|
+| Elenco degli ordinativi e contratti attuativi delle PA | 3 | atteso | ordinativi e contratti attuativi delle PA | inventario: stato «non-pubblicato» (AT degli enti; PVL (link ai documenti dal 2024)); classe C4; pagina ricontrollata dal vivo senza file del tipo | Obbligo dell'ente aderente: dati e atti del contratto ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013, assolto con la BDNCP secondo la del. ANAC 264/2023 [V]; documentazione acc | [V] | in preparazione |
+| Offerta economica e listino offerto dall'aggiudicatario (per lotto) | 3 | atteso | offerta economica e listino offerto | inventario: stato «da-verificare» (acquistinretepa (catalogo) o non pubblicata); classe C2; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo esplicito di pubblicare l'offerta economica. Le condizioni economiche delle convenzioni (art. 26 l. 488/1999) sono consultabili dalle PA sul portale acquistinretepa, | [R] | – |
+| Offerta tecnica dell'aggiudicatario (per lotto) | 3 | atteso | offerta tecnica dell'aggiudicatario | inventario: stato «non-pubblicato» (di norma non pubblicata); classe C1; pagina ricontrollata dal vivo senza file del tipo | Nessun obbligo di pubblicazione. Il codice prevede che le offerte dell'aggiudicatario siano messe a disposizione, con la comunicazione dell'aggiudicazione, dei candidati e offerent | [V] | in preparazione |
+| Appendice 4 al/allo capitolato – Listino Microsoft EA per l’Utente Finale | 3 | rimando | Listino Microsoft EA per l’Utente Finale | «“Licenze d’uso Microsoft EA per l’Utente Finale” di cui all’Appendice 4 del Capitolato Tecnico (Listino Microsoft EA per l’Utente Finale dei Prodotti Microsoft di interess» — ID 2615 - DOC UFF.zip#ID2615-Disciplinare EA8.pdf.p7m, p. 10, sha256 7269bc2cb3807e5 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Appendice 4.1 | 3 | rimando | titolo non leggibile dal rimando | «nze d’uso Microsoft EA Fascia D” di cui rispettivamente all’Appendice 4-1. Il listino riporta per ciascun prodotto le denominazioni della famiglia software e del Gruppo di a» — ID 2615 - DOC UFF.zip#ID2615-EA8-Allegato-2-Capitolato Tecnico.pdf.p7m, p. 6, sha2 | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato A al/allo schema – Convenzione | 2 | rimando | Convenzione | «ni Generali e Schema di Convenzione e relativi allegati: a) Allegato A allo schema di Convenzione, “Flusso dati per le commissioni a carico del fornitore”; 5) Regole Sist» — ID 2615 - DOC UFF.zip#ID2615-Disciplinare EA8.pdf.p7m, p. 9, sha256 7269bc2cb3807e5ba | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Appendice A  – Restrizioni e Diritti di utilizzo aggiuntivi | 2 | rimando | Restrizioni e Diritti di utilizzo aggiuntivi | «ione" indicando le proprie Consociate — come definite nell'Appendice A "Restrizioni e Diritti di utilizzo aggiuntivi", a cui si riferisce il contratto attuativi. Le Con» — ID 2615 - DOC UFF.zip#ID2615-EA-8-Allegato 2 CT - Appendice 1 - Struttura listino e pri | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | in preparazione |
+| Allegato 12 | 1 | numerazione | non dedotto (numero saltato: forse ritirato, rinumerato o non pubblicato) | numerazione: presenti 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15; vicini: ID2615-EA8-Allegato-11-Nomina Responsabile trattamento dati.pdf.p7m (sha256 7269bc2cb380); ID2615-EA8-Allegato-13-Dichiarazione Domicilio e altre infrmazioni.pdf.p7m (sha256 7269bc2cb | Documenti di gara: messa a disposizione integrale e gratuita (art. 25, 27 e 85 d.lgs. 36/2023) [R] | [V] | – |
+| Allegato 16A | 1 | rimando | titolo non leggibile dal rimando | «costo medio orario sia della manodopera (come definita nell'Allegato 16A) che del personale direttamente impiegato nell'esecuzione dell'appalto ma non rientrante nella mano» — ID 2615 - DOC UFF.zip#ID2615-EA8-Allegato-14.1 Schema Conto Economico Commessa.pdf. | Documenti di gara: messa a disposizione integrale (art. 25, 27, 85 d.lgs. 36/2023) [R] | [V] | – |
+
+## Hai uno di questi documenti?
+
+Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o con un accesso agli atti), segnalacelo sul [gruppo Telegram del progetto](https://t.me/+Ot-M_g0dkh1kMGI0) o aprendo una [issue su GitHub](https://github.com/mxmap-it/analisi-spesa-ict/issues/new). Servono: il file, da dove viene e quando l'hai ottenuto, e se possibile l'atto che lo accompagna. Ne verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo pubblichiamo come «fonte non ufficiale». Non inviare dati personali né documenti riservati.
+
+
+## Mancanze per tipo e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|

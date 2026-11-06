@@ -67,5 +67,12 @@ for f in sorted((DB / "consip").glob("*.json")):
                 attesi += 1
                 if not any(r["iniziativa"] == ini and "numerazione" in r["metodo"] and re.match(rf"Allegato {k}\b", r["documento_atteso"]) for r in righe):
                     print("ERRORE seconda via: manca nel CSV", ini, "Allegato", k); err += 1
+# 4. il rapporto riporta gli stessi conteggi
+mu = R / "report/convenzioni/rapporto/metriche-ultime.json"
+if mu.exists():
+    mm = json.loads(mu.read_text(encoding="utf-8")).get("mancanti")
+    from collections import Counter
+    if mm and (mm["righe"] != len(righe) or mm["criticita"] != dict(sorted(Counter(r["criticita"] for r in righe).items()))):
+        print("ERRORE: conteggi del rapporto diversi dal CSV (rilanciare tools/convenzioni/rapporto.py)"); err += 1
 print(len(righe), "righe;", attesi, "buchi di numerazione ricalcolati per seconda via;", "OK" if not err else f"{err} errori")
 sys.exit(1 if err else 0)
