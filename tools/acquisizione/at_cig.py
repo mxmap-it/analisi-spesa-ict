@@ -22,6 +22,12 @@ from urllib.parse import urljoin, urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import piattaforme_cig as P  # noqa: E402
+# Monitoraggio PVL/AT (mxmap-it/monitoraggio-pvl-e-amministrazione-trasparente, clone ~/visibilita-pa): si riusano
+# la ricerca della sezione AT (locate.link_at) e la ricerca interna con browser (extended._cerca). Blob nello stesso
+# archivio content-addressed di analisi-spesa-ict.
+os.environ.setdefault("ARCHIVIO_ROOT", str(Path(os.environ.get("SPESAICT_BASE", P.RADICE)) / "archivio"))
+sys.path.insert(0, os.environ.get("VISIBILITA_PA", str(Path.home() / "visibilita-pa")))
+from visibilita_pa.core.probes import locate as LOC, extended as EXT, checks as CHK  # noqa: E402
 import requests  # noqa: E402
 
 R = P.RADICE
@@ -48,17 +54,37 @@ class Resa:
         self.content = testo.encode("utf-8"); self.headers = {"content-type": "text/html"}
 
 
-def rendi_js(u, out):
-    """Pagine AT scritte in JavaScript: Chromium headless, una alla volta, >= 5 s per host, mai login/CAPTCHA."""
+def cerca_browser(base, cigs):
+    """Ricerca interna del sito con Chromium headless, con la funzione del monitoraggio AT (visibilita_pa
+    core.probes.extended._cerca: campi di ricerca noti, invio, testo dei risultati). Una pagina per ente, 5 s fra le
+    ricerche; si ferma al primo campo assente. {cig: Resa della pagina dei risultati}, numero di ricerche."""
     from playwright.sync_api import sync_playwright
+    trovati, n = {}, 0
     with JS_LOCK, sync_playwright() as p:
-        P.attendi(u)
         b = p.chromium.launch()
         try:
-            pg = b.new_page(user_agent=P.UA); pg.goto(u, wait_until="networkidle", timeout=60000)
-            r = Resa(pg.url, pg.content())
+            pg = b.new_context(locale="it-IT", user_agent=P.UA).new_page()
+            for c in cigs:
+                P.attendi(base); pg.goto(base, timeout=45000, wait_until="domcontentloaded"); pg.wait_for_timeout(2000)
+                r = EXT._cerca(pg, c); n += 1
+                if not r: break
+                if r.get("trovato"):
+                    trovati[c] = Resa(r["url_risultati"], pg.content())
+        except Exception:
+            pass
         finally:
             b.close()
+    return trovati, n
+
+
+def rendi_js(u, out):
+    """Pagine AT scritte in JavaScript: Chromium headless, una alla volta, >= 5 s per host, mai login/CAPTCHA."""
+    """(resa con la sonda browser del monitoraggio AT: visibilita_pa core.probes.checks.browser_playwright)"""
+    from playwright.sync_api import sync_playwright
+    with JS_LOCK, sync_playwright() as p:
+        P.attendi(u); d = CHK.browser_playwright(p, u, P.UA)
+    if not d.get("_html"): raise RuntimeError(d.get("errore", "pagina vuota"))
+    r = Resa(d.get("finale") or u, d["_html"])
     h = P.archivia(r.content, r.url, out)
     return r, h, re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style).*?</\1>", " ", r.text))))
 
@@ -139,7 +165,8 @@ def main():
                     else:
                         coda = []
                         if not at:   # sito istituzionale: prima la sezione AT
-                            coda += list(link_con(r, RX_AT))[:1]
+                            la = LOC.link_at(r.text, r.url).get("url")   # ricerca della sezione AT: visibilita-pa
+                            if la: coda.append(la)
                         coda += list(link_con(r, RX_BANDI))[:2]
                         visti = {r.url}; pagine = [(r, t)]
                         while coda and len(visti) <= MAX_SOTTO:
@@ -163,6 +190,10 @@ def main():
                             tr, n, mod = P.cerca_cig(s, resto, pag, out, MAX_RICERCHE)
                             if mod: e["ricerca"] = {"modelli": mod, "richieste": n, "trovati": len(tr)}
                             trovati.update(tr)
+                            resto = [c for c in resto if c not in tr]
+                            if resto and not mod and os.environ.get("RICERCA_BROWSER", "1") == "1":
+                                tb, nb = cerca_browser(pag[0].url, resto[:MAX_RICERCHE])
+                                e["ricerca_browser"] = {"richieste": nb, "trovati": len(tb)}; trovati.update(tb)
                         e["esito"] = "cig-trovati" if trovati else ("pagina-quasi-vuota-js" if len(t) < 1500 and len(e["pagine"]) == 1 else "sezione-bandi-raggiunta" if any(RX_BANDI.search(p["url"]) for p in e["pagine"]) else "sezione-bandi-non-trovata")
                         for c, rr in trovati.items():
                             rec = {"cig": c, "documenti": []}
