@@ -505,3 +505,23 @@
   richiesta: "Dataset aperto per ente: spesa ICT (opex/capex, licenze, servizi cloud), data center di proprietà, livello di migrazione e fornitori cloud; con codice IPA per il collegamento ai CIG"
   perche_serve: "È l'unica controprova dichiarata dagli enti della spesa cloud misurata dagli appalti (obiettivo finale); senza, l'imbuto non ha un controllo indipendente sul totale"
   rif: ["#60"]
+- id: R49
+  destinatario: Consip, ANAC
+  tipo: dato-mancante
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Pubblicare l'importo ordinato per CIG derivato (ordinativo o contratto esecutivo), non solo per iniziativa e lotto
+  evidenza: "Dal 2024, 2.130 CIG sopra 50 M€: 781 sono tetti certi (178 mld), ma 1.317 (612,8 mld; 33,6 negli strati ICT) restano incerti, perché né BDNCP né gli open data Consip danno l'importo ordinato per CIG; Consip pubblica l'ordinato per anno, iniziativa e lotto [V, intestazioni dei file]; il link PVL ai documenti manca per tutte le adesioni"
+  prova: "tools/verifiche/imbuto_tetti.py; esiti/2026-11-06/imbuto/tetti-cig.csv"
+  richiesta: "Negli open data «Ordini diretti di acquisto in Convenzione/AQ» aggiungere il CIG derivato e il codice fiscale dell'ente; in BDNCP controllo di plausibilità: derivato <= massimale residuo del padre"
+  perche_serve: "Senza l'ordinato per CIG i totali in euro restano dominati dai massimali (S3-S6 da 113,3 a 76,5 mld solo con le regole certe)"
+  rif: ["#66", "#62", "R14", "R37"]
+- id: R50
+  destinatario: DTD, PSN S.p.A.
+  tipo: dato-mancante
+  stato: "proposta; nessuna richiesta inviata (decisione di Fabio)"
+  titolo: Pubblicare in open data, per ente, contratti di utenza PSN (valore, canoni per servizio, servizi professionali) e finanziamenti PNRR 1.1
+  evidenza: "6/11/2026: impegni ANAC PSN 2020-2026 di 4,38 mld al netto dei tetti certi, contro un portafoglio ordini di 3,8 mld e ricavi 2023-2025 di 0,79 mld dichiarati da PSN [R, bilanci 2024 e 2025, sha256 5be1ea22…, b8fe9ec1…]; il mix dei canoni (Secure Public Cloud 15 %, Oracle 14 %) c'è solo in forma aggregata; PPdF pubblicati da 20 enti su 617 (3,2 %); i decreti di finanziamento della misura 1.1 esistono solo in PDF su presidenza.governo.it"
+  prova: "tools/verifiche/imbuto_psn.py; esiti/2026-11-06/psn/"
+  richiesta: "Dataset per ente: codice PPdF, CIG derivato, valore del contratto di utenza, canone annuo per tipologia di servizio (Industry Standard, Hybrid, Secure Public Cloud per CSP, PSN Managed), una tantum, fatturato per anno; elenco aperto dei finanziamenti PNRR 1.1 con CUP"
+  perche_serve: "PSN è il gruppo più pesante dell'incerto (864 CIG, 4,07 mld dal 2024) e la giurisdizione dipende dal servizio comprato, che oggi non è pubblico"
+  rif: ["#66", "R20", "R26", "R39"]

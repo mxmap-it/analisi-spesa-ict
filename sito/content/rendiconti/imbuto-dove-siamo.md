@@ -4,14 +4,14 @@ subtitle: "Quanto dell'universo ANAC si esclude o si include con certezza, quant
 date: 2026-11-06
 lastmod: 2026-11-06
 datiAl: 2026-11-03
-description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numero ed euro, per i due assi (è cloud? giurisdizione?), con soglia, residuo per gruppo, link ai documenti, test di Zenodo ed EuroTender, censimento ICT AgID e top-5."
+description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numero ed euro, per i due assi (è cloud? giurisdizione?), con soglia, residuo per gruppo, tetti di accordo quadro separati dalla spesa, PSN impegni contro bilanci, link ai documenti, test di Zenodo ed EuroTender, censimento ICT AgID e top-5."
 sitemap:
   disable: true
 build:
   list: never
 ---
 
-**Versione 0.1 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.2 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -25,6 +25,8 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - **3.515 CIG per 6,5 miliardi** di licenze, software e PSN con marchio o lotto noti ma con il cloud ancora da accertare [V].
 - **Giurisdizione degli inclusi certi dal 2024:** extra-UE 0,87 miliardi (45 %), IT 0,80 (41 %), UE 0,26 (14 %) [V]. È provvisoria: la precisione di S3 e S4 è misurata solo sul campione stratificato (§ 4).
 - **Soglia:** 500 € toglie 147.715 CIG e una quota d'importo trascurabile. Alzarla a 5.000 € toglierebbe un altro 6 % dei CIG ICT per lo 0,04 % degli euro [V]. **Proposta:** tenere 500 € per la misura e usare 40.000 € solo per separare G3 da G4 (§ 3).
+- **Tetti separati dalla spesa (nuovo in 0.2):** dei 2.130 CIG sopra 50 milioni, 781 sono tetti certi per 178 miliardi, 32 sono contratti aggiudicati e 1.317 restano incerti [V]. Negli strati ICT S3-S6 gli euro dal 2024 scendono da **113,3 a 76,5 miliardi**, di cui 33,6 ancora incerti (§ 2.2).
+- **PSN (nuovo in 0.2):** al netto dei tetti certi, gli impegni ANAC sono 4,38 miliardi, contro un portafoglio ordini di 3,8 miliardi [R]. I ricavi PSN 2023-2025 sono 0,79 miliardi, circa il 18 % degli impegni [R, bilanci PSN] (§ 4.1).
 - **Zenodo 10007545:** fuori, con il motivo scritto. **EuroTender:** non testato, fuori per ora (§ 6).
 
 ## 2. Gli strati, per periodo e per asse A (è cloud o infrastruttura IT?)
@@ -58,6 +60,42 @@ Dal 2024 questi CIG pesano più del resto, quindi i totali in euro vanno letti a
 | S6 residuo | 26 | 4,2 mld |
 
 Per esempio, S5 ICT non cloud dal 2024 scende da 92,4 a **29,3 miliardi** al netto. La raccomandazione è già scritta (R14).
+
+### 2.2 Tetti o spesa? I CIG sopra 50 milioni, uno per uno (top-5 punto 2, nuovo in 0.2)
+
+I 2.160 «da verificare» dal 2024 sono **2.130 CIG distinti**: 30 righe sono CIG ripetuti nei file annuali ANAC [V]. Ogni CIG ha una classe e la via che l'ha decisa (`esiti/2026-11-06/imbuto/tetti-cig.csv`). Le vie valgono in ordine, e vince la prima che scatta [V]:
+
+| via | regola | classe | CIG | euro dichiarati |
+|---|---|---|---:|---:|
+| T1 padre copiato | derivato (`cig_accordo_quadro`) con importo uguale, ±1 %, a quello del CIG padre | tetto | 78 | 14,75 mld |
+| T2 oltre l'ordinato | derivato di un'iniziativa Consip con importo maggiore dell'ordinato Consip 2024-2026 **dell'intera iniziativa** (open data dati.consip.it, #62) | tetto | 14 | 31,86 mld |
+| T3 importo ripetuto | stesso importo, all'euro, in almeno 3 CIG di stazioni appaltanti diverse | tetto | 187 | 38,23 mld |
+| T4 modalità | modalità di realizzazione ANAC «accordo quadro» o concessione non discendente | tetto | 502 | 93,22 mld |
+| E1 aggiudicato | contratto d'appalto senza AQ, esito «aggiudicata», importo di aggiudicazione presente | spesa effettiva ¹ | 32 | 9,78 → 4,68 mld |
+| I1 derivato senza riscontro | discende da un AQ o da una convenzione, ma nessuna via lo conferma | incerto | 477 | 313,94 mld |
+| I2 testo | il testo parla di AQ, convenzione, massimale o concessione | incerto | 79 | 11,56 mld |
+| I3 senza aggiudicazione | appalto senza importo di aggiudicazione | incerto | 761 | 287,30 mld |
+
+¹ «Spesa effettiva» qui vuol dire valore contrattuale aggiudicato, cioè un impegno: non è un pagamento. Gli euro sono quelli dell'aggiudicazione.
+
+In tutto: **781 tetti per 178,0 miliardi** tolti dai totali, 32 contratti con spesa effettiva, **1.317 incerti per 612,8 miliardi** [V].
+
+Gli strati dal 2024 si ricalcolano così [V]. La colonna «dopo» comprende ancora gli incerti sopra 50 milioni:
+
+| strato | euro prima | euro dopo | di cui incerti > 50 M€ |
+|---|---:|---:|---:|
+| S1 escluso non ICT | 1.286,3 mld | 1.140,0 mld | 579,2 mld |
+| S3 convenzione o lotto | 4,83 mld | **2,53 mld** | 0,59 mld |
+| S4 marchio | 3,61 mld | **3,05 mld** | 0,54 mld |
+| S5 ICT non cloud | 92,39 mld | **59,87 mld** | 29,65 mld |
+| S6 residuo | 12,50 mld | **11,08 mld** | 2,82 mld |
+| **S3-S6** | **113,3 mld** | **76,5 mld** | 33,6 mld |
+
+Lettura:
+- negli strati ICT (162 CIG sopra 50 milioni) i tetti certi pesano **36,8 miliardi**. Il 33,6 restante, quasi tutto S5, è ancora incerto;
+- **S3** (l'inclusione certa da convenzione) perde il 48 % degli euro: gli attuativi registrano spesso il massimale;
+- gli incerti si sciolgono solo con l'importo dell'ordinativo per CIG. Consip lo pubblica **per iniziativa e lotto, non per CIG né per ente** [V], e il link PVL manca per tutte le adesioni (§ 5). Raccomandazioni R14 e **R49**;
+- le regole T3 e T4 sono nuove. La loro precisione non è ancora misurata: serve un controllo a campione sugli atti (da fare).
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -108,6 +146,27 @@ Lettura:
 | S5 ICT non cloud | 63/71, da 79 a 94 % | non applicabile |
 
 S1 (esclusione certa) non è misurato: il campione v3 è centrato sull'ICT.
+
+### 4.1 PSN: impegni ANAC contro bilanci PSN (top-5 punto 3, nuovo in 0.2)
+
+Il confronto mette gli impegni registrati in ANAC accanto a quello che PSN S.p.A. dichiara nei bilanci 2024 e 2025. I PDF sono archiviati con sha256, e le cifre sono ricontrollate nel testo da `imbuto_psn.py --rigenera`.
+
+| voce | valore | fonte |
+|---|---:|---|
+| impegni ANAC, CIG PSN 2020-2026 (235 + 864 CIG) | 5,10 mld | [V] imbuto-0.3.1 |
+| … meno i tetti certi sopra 50 M€ (1 CIG: il museo di Taranto, 723,3 M€ = valore della convenzione, T1) | **4,38 mld** | [V] § 2.2 |
+| … di cui ancora incerti sopra 50 M€ (9 adesioni, fra cui Aria Lombardia 580 M€ e Careggi 123 M€) | 1,22 mld | [V] |
+| portafoglio ordini PSN al 31/12/2025 | 3,8 mld | [R] bilancio 2025 (2,6 a fine 2024) |
+| **ricavi PSN 2023-2025** (78,3 + 255,5 + 454,3 M€): la spesa fatturata alle PA | **0,79 mld** | [R] bilanci 2024 e 2025 |
+| ricavi 2025 da servizi professionali (migrazione, replatform…) | 79 % | [R] bilancio 2025 |
+| PA contrattualizzate / migrate al 31/12/2025 | 617 / 417 | [R] bilancio 2025 |
+
+Lettura:
+- anche al netto del tetto certo, gli impegni ANAC (4,38 miliardi) **superano del 15 % il portafoglio** che PSN dichiara (3,8). È coerente con altri massimali ancora nascosti fra i 9 incerti;
+- la spesa fatturata finora è **circa il 18 % degli impegni ANAC** e il 21 % del portafoglio. Il resto è spesa futura, per contratti che durano fino a 10 anni;
+- per la giurisdizione il bilancio 2025 dà il mix dei **canoni** dei contratti firmati [R]: Secure Public Cloud (Azure, Google, AWS) 15 % (24 % nelle PA centrali); Oracle PSN 14 %; IaaS 32 %; backup 13 %; housing e hosting 13 %. Dall'inizio i canoni sono il 40 % dei contratti e i servizi professionali il 60 %. Applicato al portafoglio (3,8 × 40 % × 15 %), il Secure Public Cloud extra-UE vale circa **0,23 miliardi** di canoni, 0,44 con Oracle PSN [stima da dati R, non per ente];
+- **piani dei fabbisogni:** il database del 3/11 (`report/convenzioni/psn-database/`) ha 20 Progetti del Piano dei Fabbisogni pubblicati da 20 enti, il **3,2 % delle 617 PA** contrattualizzate [V]. I grandi contratti ministeriali non li pubblicano;
+- **PA digitale 2026:** la misura PNRR 1.1 ha assegnato circa 700 dei 900 milioni [R, bilancio 2025]. I decreti di finanziamento per ente sono pubblicati in PDF su presidenza.governo.it, **non in open data** (R50). Il loro spoglio è il passo successivo: dà il finanziato per ente da confrontare con il CIG.
 
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
@@ -179,8 +238,8 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 | # | cosa | metodo | costo stimato | chi deve agire |
 |---|---|---|---|---|
 | 1 | **Misurare la precisione di S1** (3,2 M CIG, 85,9 %), che oggi è un'ipotesi | campione casuale di ~400 CIG di S1 annotato (volontari + via 6 a regole); con 0 errori il limite superiore Wilson è ~1 % | ~400 annotazioni, qualche ora di volontari; token trascurabili | noi |
-| 2 | **Separare spesa e massimali** (dal 2024: 2.160 CIG «da verificare»; S5 da 92,4 a 29,3 mld al netto) | riconciliare gli attuativi con gli open data Consip dell'ordinato (`consip-ordinato.csv`, #62) e con l'importo dell'ordinativo | script, zero token | noi; **ANAC/Consip** per il dato alla fonte (R14, R37) |
-| 3 | **PSN, il gruppo più pesante dell'incerto** (G2: 864 CIG, 4,07 mld, link PVL solo nel 19,6 %) | database dei piani dei fabbisogni e dei Progetti già pubblicati (decisione del 3/11); bilancio PSN 2026 | ricerca e lettura, decine di USD-eq | noi; **DTD/PSN** per la pubblicazione (R20, R39) |
+| 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT | prossimo passo: l'importo dell'ordinativo per CIG, dagli atti (link PVL dove c'è) o da Consip; controllo a campione delle regole T3 e T4 | script, zero token; lettura degli atti per i ~110 CIG ICT incerti | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
+| 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA | prossimo passo: spoglio dei decreti di finanziamento PNRR 1.1 per ente; ricerca dei PPdF dei 9 CIG PSN incerti sopra 50 M€ | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
 | 4 | **G1 + G3 con la via 6** (12.824 CIG, 7,8 mld) | G1 (209) a mano; G3 in ordine d'importo con il modello e gli atti dal link PVL (73 % raggiungibile) | ~1,8 USD-eq per 5 CIG (giro 2): G3 intero ≈ 4.500 USD-eq, oltre 10 settimane di tetto (400/settimana); i primi 1.000 CIG per importo ≈ 360 USD-eq | noi; **enti** per i link che non funzionano (R31-R33) |
 | 5 | **Licenze e marchi «cloud da accertare»** (3.515 CIG, 6,5 mld) e controprova dal censimento AgID | lettura dei contratti Microsoft (decisione del 3/11) e Oracle; richiesta dei dati del censimento 2026 | lettura, centinaia di USD-eq; accesso civico solo dopo l'ok di Fabio | noi; **AgID** (R48); **ANAC/ACN** per un campo strutturato su prodotto e modalità (R21) |
 
@@ -191,7 +250,11 @@ Da un clone pulito, senza dati grezzi (legge gli esiti versionati):
 ```
 python tools/verifiche/imbuto_strati.py        # strati, assi, soglia, gruppi, link PVL; controlla la coerenza
 python tools/verifiche/zenodo_test.py          # esito del test Zenodo
+python tools/verifiche/imbuto_tetti.py         # tetti, spesa e incerti sopra 50 M€; strati ricalcolati
+python tools/verifiche/imbuto_psn.py           # PSN: impegni ANAC contro bilanci PSN e piani dei fabbisogni
 ```
+
+Sul server, `imbuto_tetti.py --rigenera` rilegge il mirror ANAC (righe ≥ 45 M€, aggiudicazioni) e riscrive `tetti-cig.csv`. `imbuto_psn.py --rigenera` ricontrolla gli sha256 dei bilanci PSN e cerca le cifre nel loro testo.
 
 Dal mirror, sul server:
 - `python tools/analisi/imbuto.py 2020` rigenera `lavoro/imbuto/ict.csv` e il riepilogo;
@@ -200,7 +263,9 @@ Dal mirror, sul server:
 Ingressi:
 - `esiti/2026-11-03/imbuto/riepilogo-0.3.1.json` (imbuto-0.3.1, regole v3.1);
 - `esiti/2026-11-06/imbuto/distribuzione.json` (con lo sha256 di `ict.csv`);
-- `esiti/2026-11-06/zenodo/esito.json`.
+- `esiti/2026-11-06/zenodo/esito.json`;
+- `esiti/2026-11-06/imbuto/tetti-cig.csv` (una riga per CIG, con classe e via) e `tetti.json`;
+- `esiti/2026-11-06/psn/bilanci-psn.json` (cifre [R] di PSN, con lo sha256 dei PDF) e `psn.json`.
 
 Coerenza controllata: i CIG non esclusi coincidono fra riepilogo e `ict.csv`, 386.911 dal 2024 e 284.629 nel 2020-2023.
 
@@ -216,3 +281,4 @@ Coerenza controllata: i CIG non esclusi coincidono fra riepilogo e `ict.csv`, 38
 | versione | data | cosa |
 |---|---|---|
 | 0.1 | 2026-11-06 | prima bozza per Fabio: strati, soglia, gruppi, link PVL per strato, Zenodo/EuroTender, censimento AgID, top-5 |
+| 0.2 | 2026-11-06 | § 2.2: tetti e spesa per i 2.130 CIG sopra 50 M€, con la via di ogni CIG e gli strati ricalcolati; § 4.1: PSN, impegni contro bilanci 2024-2025 e piani dei fabbisogni; top-5 punti 2 e 3 aggiornati; R49 e R50 |
