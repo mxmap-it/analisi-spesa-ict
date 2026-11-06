@@ -173,9 +173,9 @@ vecchia.
 - Il repo contiene solo README, licenza CC0 del manifest e `manifest.csv/json`; i documenti restano delle amministrazioni (riuso ex art. 7 d.lgs. 33/2013 e art. 52 CAD, citando la fonte). Esclusi: fonti non ufficiali e materiali interni (es. PDF Proteggimi, che comunque non è nell'archivio delle convenzioni).
 - Caricamento dal portatile (il token GitHub non si porta sul server), con i blob copiati dal server.
 
-## 2026-11-06 — PROPOSTA (da approvare, Fabio): destinatario dell'accesso civico per le gare Consip su delega (#62)
+## 2026-11-06 — DECISIONE (approvata da Fabio il 7/11/2026, «andiamo avanti su tutto»): destinatario dell'accesso civico per le gare Consip su delega (#62)
 
-Stato: **proposta**, nessuna istanza inviata. Casi: ID 1774 SIAN (AGEA, `consip-1774`) e ID 2748 INAIL (`cig-B2FB115279`): in BDNCP la stazione
+Stato: **approvata** come regola di instradamento; nessuna istanza inviata (ogni invio resta da approvare). Casi: ID 1774 SIAN (AGEA, `consip-1774`) e ID 2748 INAIL (`cig-B2FB115279`): in BDNCP la stazione
 appaltante del CIG padre è l'ente, la pagina con i documenti è su consip.it (Consip centrale di committenza su delega).
 
 - **Norma.** Art. 5 c. 3 d.lgs. 33/2013: l'istanza si presenta «all'ufficio che detiene i dati, le informazioni o i documenti» (in alternativa
