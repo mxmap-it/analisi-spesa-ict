@@ -1,0 +1,44 @@
+{
+ "cig": "BCD3FF8940",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "15c4d8558b726be0f6c6adb79dc3c7dd5797301b1e140fa15d70710f067b1be4",
+ "quando": "2026-11-06T13:28:49+00:00",
+ "uscita": {
+  "cig": "BCD3FF8940",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "GARA EUROPEA A PROCEDURA APERTA, AI SENSI DELL'ART. 71 DEL D.LGS. N. 36/2023, PER L'AFFIDAMENTO DEI SERVIZI AMMINISTRATIVI, INFORMATICI E POSTALI A SUPPORTO DELLA GESTIONE DELLA TASSA AUTOMOBILISTICA REGIONALE"
+   }
+  ],
+  "deduzioni": [
+   "L'oggetto cita 'servizi informatici' ma è generico; l'importo elevato (63,9 milioni) e la pluriennalità suggeriscono un appalto complesso che potrebbe coprire assistenza, manutenzione, sviluppo, infrastruttura on-premise, cloud, o una combinazione"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "Bando di gara e allegato C (capitolato speciale d'appalto): devono specificare la natura tecnica dei servizi informatici (cloud SaaS/IaaS/hosting, infrastruttura on-premise, sviluppo, assistenza, o mix)",
+  "motivazione": "L'oggetto BDNCP nomina 'servizi informatici' senza precisare se cloud, in-house, assistenza o sviluppo. Il documento fornito è la pagina di dettaglio della procedura senza i contenuti risolutivi dei bandi. Confidenza bassa fino all'accesso ai bandi pubblici."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

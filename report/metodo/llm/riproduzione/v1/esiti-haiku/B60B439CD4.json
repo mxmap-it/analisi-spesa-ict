@@ -1,0 +1,51 @@
+{
+ "cig": "B60B439CD4",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "5d68888b2d625468af63f10bca78c61c16e0c1e87eae7cc4f7904a7b6b0a15a0",
+ "quando": "2026-11-06T13:20:56+00:00",
+ "uscita": {
+  "cig": "B60B439CD4",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "lavori-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "4725618abcab9e9017c2c518d5e494764857f001e7685d48adb177f27e64e754",
+    "pagina": null,
+    "citazione": "AFFIDAMENTO DELLA CONCESSIONE IN REGIME DI PARTENARIATO PUBBLICO-PRIVATO AVENTE AD OGGETTO LA PROGETTAZIONE, REALIZZAZIONE E GESTIONE DI UN IMPIANTO DI PRODUZIONE DI ENERGIA ELETTRICA DA FONTI RINNOVABILI (PARCO ENERGETICO) A SERVIZIO DEL DATA CENTER CINECA"
+   },
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROGETTAZIONE REALIZZAZIONE E GESTIONE DI UN IMPIANTO DI PRODUZIONE DI ENERGIA ELETTRICA DA FONTI RINNOVABILI PARCO ENERGETICO A SERVIZIO DEL DATA CENTER"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "f889e36d79a8b8a31d0890dbd1d3e112bbbef9bae729b43c08ee7c03e5d8c9df",
+   "27106c04af27e65f68afa3f1d619661b5a89db67bf8e131788c35b700a88840d"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda la progettazione, realizzazione e gestione di un impianto di produzione di energia da fonti rinnovabili (parco energetico) a supporto del data center CINECA, oltre a uno spazio verde pubblico. È infrastruttura energetica, non servizi cloud o ICT. Il CPV 65310000-9 classifica correttamente il contratto come impianto di generazione di energia."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  false,
+  true
+ ],
+ "valida": false
+}

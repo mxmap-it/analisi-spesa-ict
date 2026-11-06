@@ -1,0 +1,48 @@
+{
+ "cig": "BB57EC8E72",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "2e97f20b7784890ee6c1052dd197efdd65052ddcf437b79feaddef0b6725ad55",
+ "quando": "2026-11-06T13:24:33+00:00",
+ "uscita": {
+  "cig": "BB57EC8E72",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SCUOLABUS NUOVI DI FABBRICA, AD ALIMENTAZIONE IBRIDA/MILD-HYBRID ED ELETTRICA, IDONEI PER L'EFFETTUAZIONE DEI SERVIZI SU STRADE EXTRAURBANE, DA DESTINARE AL SERVIZIO DI TRASPORTO STUDENTI DELLE SCUOLE PRIMARIE E SECONDARIE. | FORNITURA DI SCUOLABUS (IBRIDI E ELETTRICI), AUTOBUS DI LINEA IBRIDI PER TPL EXTRAURBANO E RELATIVE ATTREZZATURE DI NODO E SISTEMI INFORMATIVI."
+   },
+   {
+    "sha256": "f2fac92d1f85de5db038864fdb46d845ca3ba44f624586242ff5777dda473de0",
+    "pagina": null,
+    "citazione": "Nove lotti, di cui cinque dedicati agli autobus, e quattro a supporti infrastrutturali quali pensiline, paline, totem e monitor"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Il CIG compra veicoli (scuolabus e autobus ibridi/elettrici) e infrastrutture di nodo (totem informativi, monitor, paline, pensiline). Non è un servizio cloud erogato da piattaforma esterna, ma hardware e infrastrutture fisiche. Asse A escluso-certo per assenza di servizio cloud; Asse B non applicabile."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true
+ ],
+ "valida": false
+}

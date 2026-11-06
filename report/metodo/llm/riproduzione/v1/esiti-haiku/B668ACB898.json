@@ -1,0 +1,52 @@
+{
+ "cig": "B668ACB898",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "54bc49d06024809a03b36be5c655ebb8fc57c7058ee86769c8247538abde7f97",
+ "quando": "2026-11-06T13:21:57+00:00",
+ "uscita": {
+  "cig": "B668ACB898",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "?",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "ACQUISIZIONE IN SERVICE DI APPARECCHIATURE PRE-POST ANALITICHE E SISTEMI DI AUTOMAZIONE"
+   },
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "CPV 33696000-5 (Apparecchiature diagnostiche, di laboratorio, di misurazione e di controllo)"
+   }
+  ],
+  "deduzioni": [
+   "L'acquisizione in service di apparecchiature fisiche per laboratorio diagnostico, anche se include componenti informatiche di controllo, non costituisce un servizio cloud ma una fornitura di hardware con servizi di gestione on-premise"
+  ],
+  "documenti_non_pertinenti": [
+   "79579c40dcba00a6d513b6377816ae6e4c1b2ba734a453e67e12687f62f8192a (pagina navigazionale del portale appalti senza contenuto effettivo della determina)"
+  ],
+  "documento_risolutivo": "Testo completo della Determina Dirigenziale n.62 del 30/12/2025 per confermare nature e dettagli dei 3 lotti, ma già l'oggetto BDNCP esclude il cloud",
+  "motivazione": "Si tratta di apparecchiature diagnostiche e strumentazioni analitiche fisiche (CPV 33696000-5) fornite in modalità service; non è un servizio cloud, SaaS, IaaS, PaaS, hosting o infrastruttura informatica remotizzata. I sistemi informatici citati sono componenti delle apparecchiature stesse, non servizi erogati."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

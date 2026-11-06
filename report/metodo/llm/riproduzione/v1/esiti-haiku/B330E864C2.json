@@ -1,0 +1,44 @@
+{
+ "cig": "B330E864C2",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "a184ddd1d831592363b9d79f78dd58127ffc8ecae7b814350d362f3a73e773c7",
+ "quando": "2026-11-06T13:17:52+00:00",
+ "uscita": {
+  "cig": "B330E864C2",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "7bde4b784942b37e59611213574c4e2c33d927293c44e8e2e4110bbf640822fa",
+    "pagina": null,
+    "citazione": "Servizi di sanificazione e pulizia, ma anche di movimentazione interna di rifiuti, di beni sanitari e non sanitari oltre a custodia e reception e supporto tecnico-operativo al sistema informativo aziendale"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "bd97ce431ad257e2c99ccced2e4c13c76511dc7dd315a5dabfc1b9da51c8ba61"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Contratto per servizi di ausiliariato alberghiero, sanificazione e supporto tecnico-operativo al sistema informativo (assistenza ICT on-premise), non servizi cloud. Fonte articolo descrive direttamente il contratto firmato tra ASL BT e Sanitaservice."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

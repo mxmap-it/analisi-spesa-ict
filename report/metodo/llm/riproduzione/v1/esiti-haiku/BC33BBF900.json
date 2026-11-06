@@ -1,0 +1,53 @@
+{
+ "cig": "BC33BBF900",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "646088ab5402bfa75190ba6a2f7ab166986131ac9cd982de6930f9c9e2e175a9",
+ "quando": "2026-11-06T13:26:05+00:00",
+ "uscita": {
+  "cig": "BC33BBF900",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "APPALTO INTEGRATO PER LAVORI DI REALIZZAZIONE DI UN NUOVO DATA CENTER A PALMANOVA"
+   },
+   {
+    "sha256": "6bace9fe9d404b0e07c619cd4b9ab0ff2d91234ca296743495aef9aaf8d6c098",
+    "pagina": 1,
+    "citazione": "realizzazione di un nuovo Data Center della Regione Friuli Venezia Giulia a Palmanova"
+   }
+  ],
+  "deduzioni": [
+   "Appalto integrato (progettazione + esecuzione) per lavori di realizzazione di infrastruttura informatica presso INSIEL",
+   "INSIEL è società informatica pubblica in-house della Regione Friuli Venezia Giulia (CPV 45200000-9: Lavori di costruzione specializzati)"
+  ],
+  "documenti_non_pertinenti": [
+   "fde30852596d9776cd2dcb0f19b1492b745a3515078aee8be34628aac32e4136"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Appalto per lavori di realizzazione di infrastruttura informatica (data center), non servizio cloud. È ICT (infrastruttura), non SaaS/IaaS/PaaS. Asse A: escluso-certo dal cloud, incluso per ICT. Asse B: non-applicabile."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true
+ ],
+ "valida": false
+}

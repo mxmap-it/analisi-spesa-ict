@@ -1,0 +1,50 @@
+{
+ "cig": "BC6A458025",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "749d10132436b6251edacbd7cfe650ded0cea26569bda1ef0cb8d225d010058a",
+ "quando": "2026-11-06T13:27:31+00:00",
+ "uscita": {
+  "cig": "BC6A458025",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "LOTTO 3 PRODOTTI SOLUZIONI E SERVIZI FORTIGATE | FORNITURA IN ACQUISTO E/O LOCAZIONE, DI PRODOTTI E SOLUZIONI DI RETE E SICUREZZA, HARDWARE E SOFTWARE E DELLA RELATIVA MANUTENZIONE"
+   },
+   {
+    "sha256": "b29697c2217736581b1d2b15d44bfaae1c22b8c5094b1ca6e557002577367f74",
+    "pagina": null,
+    "citazione": "essi non costituiscono comunque l'oggetto principale della gara, che resta costituito dalla fornitura"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "f31aa50c7576956c1f96554f3c42b98a6bec2468104450b40d5428ccc7e4a8c6"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto della gara riguarda la fornitura (in acquisto o locazione) di prodotti e soluzioni di rete e sicurezza Fortigate, primariamente hardware. L'oggetto esplicitamente nomina 'HARDWARE' e 'FORNITURA', non un servizio cloud. La procedura chiarisce che l'oggetto principale è la 'fornitura', non i servizi. Non è cloud, è ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  true
+ ],
+ "valida": false
+}

@@ -1,0 +1,1196 @@
+GARA EUROPEA A PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO DELLA FORNITURA DI SERVIZI
+    DI SVILUPPO DI APPLICATIVI ED EROGAZIONE IN MODALITÀ SAAS - SOFTWARE AS A SERVICE
+
+                                     CIG B68C16F3E6
+
+
+
+
+                                  CAPITOLATO TECNICO
+
+
+
+
+                                                                                        1
+INDICE
+INDICE ..................................................................................................................................................................................... 2
+PREMESSE .............................................................................................................................................................................. 4
+Art. 1.           OGGETTO ............................................................................................................................................................ 4
+Art. 1.1 -            CONTESTO DI EROGAZIONE DEI SERVIZI .................................................................................................. 4
+Art. 1.2 -            PROFILI PROFESSIONALI RICHIESTI ............................................................................................................ 5
+Art. 1.2.1 -               Corrispondenza con i Profili professionali AgID e con le e-Competences UNI 16234-1.............. 6
+Art. 1.2.2 -               Attività di pertinenza ............................................................................................................................... 6
+Art. 1.2.3 -               Requisiti di competenza ......................................................................................................................... 8
+Art. 1.3 -            ORGANIZZAZIONE E GESTIONE DEL SERVIZIO ....................................................................................... 10
+Art. 1.3.1 -               Requisiti generali delle risorse ............................................................................................................ 10
+Art. 1.3.2 -               Verifica di conformità delle risorse ..................................................................................................... 10
+Art. 1.3.3 -               Responsabile del Servizio...................................................................................................................... 11
+Art. 1.3.3.1 -                  Nomina del Responsabile del Servizio ............................................................................................ 11
+Art. 1.3.3.2.               Attività di competenza del Responsabile del Servizio .................................................................... 11
+Art. 1.3.4 -               Avvio dei Servizi ...................................................................................................................................... 12
+Art. 1.3.5 -               Sostituzione delle risorse......................................................................................................................13
+Art. 1.3.5.1. -                 Richiesta di sostituzione avanzata dal Committente .................................................................13
+Art. 1.3.5.2. -                 Richiesta di sostituzione avanzata dal Fornitore .........................................................................13
+Art. 1.3.6 -               Requisiti di stabilità delle risorse ........................................................................................................ 14
+Art. 1.3.6.1. -                 Limiti alle sostituzioni richieste dal Fornitore .............................................................................. 14
+Art. 1.3.6.2. -                 Indisponibilità temporanee delle risorse ed interruzione del servizio .................................... 14
+Art. 1.3.7 -               Requisiti di non obsolescenza delle competenze tecniche delle risorse ................................... 14
+Art. 1.3.8 -               Svolgimento delle Attività .................................................................................................................... 15
+Art. 1.3.9 -               Requisiti di continuità del Servizio ...................................................................................................... 16
+Art. 2.           DURATA DELL’APPALTO ................................................................................................................................. 16
+Art. 3.           VALORE DELL’APPALTO ................................................................................................................................... 17
+Art. 3.1 -            Opzioni ..........................................................................................................................................................20
+Art. 4.           REVISIONE PREZZI............................................................................................................................................ 21
+Art. 5.           REGOLARITÀ DEL SERVIZIO, CONTROLLI E PENALITÀ ............................................................................... 22
+Art. 6.           Inadempimenti contrattuali e risoluzione del Contratto ......................................................................... 23
+Art. 7.           RECESSO ........................................................................................................................................................... 24
+Art. 8.           GARANZIA DEFINITIVA E POLIZZA ASSICURATIVA ...................................................................................... 24
+Art. 9.           MODALITÀ DI PRESENTAZIONE DELLE FATTURE E PAGAMENTO ............................................................ 24
+Art. 10.               DIVIETO DI CESSIONE DEL CONTRATTO ................................................................................................. 25
+Art. 11.          RESPONSABILE UNICO DEL PROGETTO ....................................................................................................... 25
+Art. 12.          TRACCIABILITÀ DEI FLUSSI FINANZIARI ........................................................................................................ 25
+Art. 13.          NORME APPLICABILI ........................................................................................................................................ 25
+Art. 14.          FORO COMPETENTE ........................................................................................................................................ 25
+Art. 15.          TRATTAMENTO DATI .......................................................................................................................................26
+Art. 16.               SPESE CONTRATTUALI ..............................................................................................................................26
+Art. 17.          UTILIZZO DEL NOME E DEL LOGO DEL POLITECNICO DI MILANO .............................................................26
+Art. 18.          RISERVATEZZA .................................................................................................................................................26
+
+
+                                                                                                                                                                                           2
+Art. 19.       NORMATIVA ANTICORRUZIONE ................................................................................................................ 27
+Art. 20.       ACCESSO AGLI ATTI.................................................................................................................................... 27
+Art. 21.   CONTATTI.......................................................................................................................................................... 28
+
+
+
+
+                                                                                                                                                                              3
+PREMESSE
+Il presente documento disciplina le caratteristiche tecniche minime della fornitura di servizi di sviluppo di
+applicativi ed erogazione in modalità SaaS - Software as a Service oggetto del presente appalto, bandito ai
+sensi dell’art. 71 del D. Lgs. n. 36/2023 e ss.mm.ii.
+
+
+Art. 1. OGGETTO
+Oggetto del presente capitolato è la fornitura di servizi di analisi, progettazione, sviluppo e manutenzione di
+applicazioni, componenti e servizi software per l’Area “Servizi ICT” del Politecnico di Milano.
+Nello specifico nell’ambito della fornitura sono richiesti servizi riferiti ai seguenti profili professionali, per
+ciascuno dei quali è specificato il numero standard di FTE previsti:
+#          Profilo           Figura professionale                                                             FTE std
+1          SVI-APJ           Sviluppatore full stack junior di applicazioni                                       2
+2          SVI-APE           Sviluppatore full stack esperto di applicazioni                                      3
+1          SVI-APS           Sviluppatore full stack senior di applicazioni                                       3
+2          SPC-FRM           Specialista framework e dev ops                                                      2
+3          SPC-IDM           Specialista identity management                                                      1
+4          SPC-UXD           Specialista UI/UX design                                                             1
+
+
+Per tali servizi potrà essere chiesta sia l’erogazione:
+-     “a consumo”, per i differenti profili professionali previsti
+-     “a corpo”, a fronte della definizione di specifiche commesse con le modalità specificate all’art.1.3.3.
+Nel caso di realizzazioni “a corpo”, su motivata proposta del fornitore potrà essere valutata dal Politecnico di
+Milano l’implementazione su piattaforme di sviluppo ed erogazione differenti da quelle in uso presso l’Ateneo.
+In caso di accettazione della soluzione proposta, il fornitore dovrà garantire nell’ambito della fornitura anche
+l’erogazione del corrispondente servizio SaaS che:
+-     dovrà rispettare i requisiti minimi di cui all’Allegato A1 - Requisiti generali e livelli di servizio per l’erogazione
+      in modalità SaaS;
+-     avrà un costo annuo forfettario pari al 10% del costo complessivo della commessa “a corpo”;
+-     comprenderà anche la manutenzione correttiva e di adeguamento all’evolversi della piattaforma di
+      erogazione.
+
+
+    Art. 1.1 -       CONTESTO DI EROGAZIONE DEI SERVIZI
+L’Area servizi ICT (ASICT) garantisce una gestione sicura, sinergica ed efficace delle informazioni a supporto
+della Governance, dell’Amministrazione, delle Scuole, dei Dipartimenti e dei Poli Territoriali nella relazione con
+studenti, docenti, fornitori e altre organizzazioni.
+In particolare presidia:
+-     la progettazione e gestione di applicazioni e servizi integrati per la realizzazione delle strategie
+      istituzionali in materia di didattica, ricerca, terza missione e processi di supporto
+-     la completa dematerializzazione ed integrazione dei processi
+
+
+                                                                                                                          4
+-     lo sviluppo di strumenti di data analytics a supporto della gestione e delle decisioni
+-     la sicurezza dei dati e delle infrastrutture informatiche e la definizione delle corrispondenti policy di
+      Ateneo, in conformità alla normativa vigente
+-     gli strumenti a supporto della gestione degli edifici e degli impianti (building automation, facility
+      management)
+-     lo sviluppo di servizi di rete e connettività che supportino flessibili modelli di erogazione (es. multicloud)
+      e fruizione (es. smartworking)
+-     la disponibilità delle risorse di calcolo e storage e le infrastrutture necessarie al funzionamento
+      dell’Ateneo garantendo l’erogazione dei servizi con elevati livelli di sicurezza e continuità operativa.
+
+
+
+
+Ulteriori informazioni sull’articolazione organizzativa dell’Area Servizi ICT sono disponibili alla pagina:
+https://www.polimi.it/il-politecnico/governance/amministrazione/servizi-ict
+
+
+    Art. 1.2 -    PROFILI PROFESSIONALI RICHIESTI
+I paragrafi che seguono descrivono le attività di pertinenza ed i requisiti di conoscenza e competenza delle
+figure professionali richieste. Per la definizione delle caratteristiche di ognuna delle figure professionali si
+assumono come riferimenti generali:
+
+
+
+
+                                                                                                                  5
+-    AgID - Linee guida per la qualità delle competenze digitali nelle professionalità ICT - Aggiornamento del
+     manuale operativo "Dizionario dei profili di competenza per le professioni ICT" https://open.gov.it/wp-
+     content/uploads/2017/03/linee-guida-competenze-digitali-ict.pdf
+-    UNI EN 16234-1 “e-Competence Framework (e-CF) - A common European Framework for ICT Professionals
+     in all sectors”.
+Per ogni figura viene di seguito indicata la corrispondenza con tali elementi standard e vengono dettagliate
+le specificità implicate dal contesto di utilizzo da parte del Committente e dalle sue modalità di
+organizzazione del servizio. In taluni casi le figure professionali richieste sono poste in corrispondenza con
+molteplici figure professionali standard, ciò perché, come da prassi consolidata per il Committente, si intende
+privilegiare un ampliamento dell’ambito di competenza a tutto vantaggio della visione d’insieme e della
+semplificazione dei flussi comunicativi.
+
+
+    Art. 1.2.1 -     Corrispondenza con i Profili professionali AgID e con le e-Competences UNI 16234-1
+Per l'erogazione dei servizi oggetto della fornitura sono richiesti differenti profili professionali, per ciascuno
+dei quali sono di seguito riportate le attività specifiche di pertinenza ed i requisiti dei corrispondenti profili di
+competenza.
+Profilo            Figura professionale          Profili di competenza AGID      Rif. UNI 16234 -1
+
+                   Sviluppatore full stack junior                                B.1. Application Development
+SVI-APJ                                           Developer/Test specialist
+                   di applicazioni                                               B.3. Testing
+                                                                                 A.6. Application Design
+                                                 Business
+                   Sviluppatore     full   stack
+SVI-APE                                          Analyst/Developer/Test          B.1. Application Development
+                   esperto di applicazioni
+                                                 specialist
+                                                                                 B.3. Testing
+                                                                               A.6. Application Design
+                   Sviluppatore full stack senior Business Analyst / Developer
+SVI-APS                                                                        B.1. Application Development
+                   di applicazioni                /Test specialist
+                                                                               B.3. Testing
+                                                                                 A.5. Architecture Design
+
+                   Specialista framework e dev                             A.6. Application Design
+SPC-FRM                                        System Architect /Developer
+                   ops                                                     B.1. Application Development
+                                                                                 B.2. Component Integration
+                                                                                 A.6. Application Design
+
+                   Specialista identity          Application Security            B.1. Application Development
+SPC-IDM
+                   management                    Specialist / Developer          B.2. Component Integration
+                                                                                 C.5. Systems Management
+SPC-UXD            Specialista UI/UX design      Digital Media Specialist        A.10 User Experience
+
+
+    Art. 1.2.2 -     Attività di pertinenza
+
+SVI-APJ, SVI-APE, SVI-APS – Sviluppatore full stack di applicazioni
+
+
+
+
+                                                                                                                   6
+-   analisi dei fabbisogni degli utenti e stesura dello studio di fattibilità [richiesto solo per il profilo SVI-APE e
+    SVI-APS]
+-   analisi dettagliata del dominio applicativo e formalizzazione dei requisiti [richiesto solo per i profili SVI-
+    APE e SVI-APS]
+-   analisi funzionale dei servizi applicativi, progettazione concettuale della base dati, progettazione
+    dell'architettura applicativa (nel rispetto degli standard di progettazione e documentazione concordati)
+    [richiesto solo per i profili SVI-APE e SVI-APS]
+-   interazione con il Servizio SDMA dell'Area Servizi ICT per la validazione del progetto concettuale della
+    base dati ed il supporto alla progettazione logica
+-   interazione con il Servizio SDTF dell'Area Servizi ICT per la validazione/ottimizzazione dell'architettura
+    applicativa e l'individuazione di eventuali sinergie con componenti/servizi comuni
+-   sviluppo dei moduli applicativi sulle differenti piattaforme adottate dal Sistema Informativo di Ateneo
+-   verifica della qualità del SW prodotto e del rispetto degli standard di sviluppo concordati
+-   esecuzione delle attività previste dal piano di test, sia con riferimento alla verifica dei singoli moduli che
+    al test funzionale del sistema realizzato
+-   supporto di secondo livello e troubleshooting per le tecnologie e le architetture sopra elencate.
+-   stima delle risorse necessarie al progetto, stesura del documento di pianificazione delle attività [richiesto
+    solo per il profilo SVI-APS]
+-   pianificazione operativa del progetto, coordinamento/verifica delle attività svolte dalle risorse
+    assegnate, consuntivazione con stesura dello stato avanzamento lavori [richiesto solo per il profilo SVI-
+    APS]
+
+SPC-FRM - Specialista framework e dev ops
+-   analisi dei fabbisogni del team di sviluppo rispetto a componenti software di base (componenti del
+    framework) e formalizzazione dei requisiti
+-   pianificazione di progetto, stima delle risorse necessarie, coordinamento/verifica delle attività svolte
+    dalle risorse assegnate, consuntivazione con stesura dello stato avanzamento lavori
+-   analisi funzionale, progettazione e sviluppo di componenti del framework nel rispetto degli standard
+    concordati con il Servizio SDTF, SIPS, SOC e SNET
+-   progettazione concettuale e logica della base dati nel rispetto degli standard concordati con il Servizio
+    SDMA
+-   supporto di secondo livello e troubleshooting per le tecnologie e le architetture sopra elencate.
+
+SPC-IDM - Specialista identity management
+-   analisi dei fabbisogni del team di sviluppo rispetto a componenti software IAM e formalizzazione dei
+    requisiti
+-   pianificazione di progetto, stima delle risorse necessarie, coordinamento/verifica delle attività svolte
+    dalle risorse assegnate, consuntivazione con stesura dello stato avanzamento lavori
+-   analisi funzionale progettazione e sviluppo di componenti IAM nel rispetto degli standard funzionali,
+    infrastrutturali, e di sicurezza concordati con il Servizio SIDM, SIPS e con SOC
+
+
+
+                                                                                                                    7
+-    progettazione concettuale e logica della base dati nel rispetto degli standard concordati con il Servizio
+     SDMA
+-    supporto di secondo livello e troubleshooting per le tecnologie e le architetture sopra elencate.
+
+SPC-UXD - Specialista UX/UI Design
+-    progettazione della UI/UX delle applicazioni nel rispetto dei vincoli di accessibilità e usabilità dettati da
+     AGID
+-    produzione dei documenti di design UI/UX
+-    fornisce supporto nella progettazione di interfacce e delle interazioni tra utenti e applicazioni
+     dell’Amministrazione per Web, Mobile e App.
+-    integra i requisiti dell’utente, i requisiti dell’applicazione, i vincoli di accessibilità e di usabilità in una
+     interfaccia visuale e in un modello di interazione (altrimenti detto “esperienza dell’utente”) il più possibile
+     uniforme e integrato.
+-    definisce uno “stile” visuale e interattivo per le interazioni tra utente del servizio digitale e i sistemi
+     dell’Amministrazione al fine di garantire il raggiungimento efficace ed efficiente degli obiettivi dell’utente.
+-    definisce gli aspetti visuali, cromatici, tipografici, interattivi che consentono all’utente del servizio digitale
+     dell’Amministrazione di raggiungere i suoi obiettivi di fruizione in modo efficace e efficiente.
+-    comprende le esigenze, i comportamenti e le capacità degli utenti, rappresenta le esigenze del cliente al
+     team di sviluppo
+-    pianifica e conduce sessioni di rilevazione dell’esperienza utente per misurare il livello di gradimento delle
+     soluzioni, l’usabilità e l’accessibilità
+-    controlla, valuta e gestisce le problematiche di accessibilità, intervenendo sempre con linguaggio
+     appropriato e adeguato alla tipologia di utente
+-    traduce i requisiti utente in un comportamento interattivo tramite la produzione di scenari, storyboard,
+     user case, user stories
+-    contribuisce alla progettazione di prototipi interattivi, wireframe model, documenti di design e
+     tassonomie di contenuti
+-    realizza prototipi funzionali o specifiche funzionali pronte per essere sviluppate dai team di sviluppo
+-    redige documentazione di design in forma di modelli di pagina, modelli di navigazione e sitemap.
+
+
+    Art. 1.2.3 -   Requisiti di competenza
+
+SVI-APJ, SVI-APE, SVI-APS – Sviluppatore full stack di applicazioni
+-    seniority: esperienza documentata di almeno 10 anni (SVI-APS), 5 anni (SVI-APE), 2 anni (SVI-APJ) nel
+     ruolo
+-    Laurea in Informatica o in Ingegneria Informatica (o titolo equivalente/superiore)
+-    ottima conoscenza del linguaggio Java e dei framework Spring e React
+-    ottima conoscenza del modello MVC e del modello di sviluppo a microservizi
+-    ottima conoscenza del data modeling relazionale e ad oggetti
+-    ottima conoscenza di SQL e PL- SQL per ORACLE Database
+
+
+
+                                                                                                                     8
+-   ottima conoscenza di Git e Gradle
+-   ottima conoscenza delle metodologie di analisi e progettazione basate sul formalismo UML
+-   esperienza, commisurata al profilo, nella realizzazione, in un contesto enterprise, di:
+-   applicazioni basate su architettura JEE
+-   web-services a supporto della cooperazione applicativa
+-   determinazione, autonomia e propensione al lavoro in team
+
+SPC-FRM - Specialista framework e dev ops
+-   seniority: esperienza documentata di almeno 10 anni nel ruolo
+-   laurea in Informatica o in Ingegneria Informatica (o titolo equivalente/superiore)
+-   conoscenza approfondita del linguaggio Java e dei framework Spring e React
+-   ottima conoscenza del modello MVC e del modello di sviluppo a microservizi
+-   ottima conoscenza di SQL e PL- SQL per ORACLE Database
+-   ottima conoscenza di Git e Gradle
+-   ottima conoscenza di docker e kubernetes e delle tecniche di CI/CD
+-   ottima conoscenza delle metodologie di analisi e progettazione basate sul formalismo UML
+-   esperienza nella progettazione e realizzazione, in un contesto enterprise e multi cloud, di:
+    -   applicazioni web e mobile basate su architetture a servizi e in alta disponibilità
+    -   framework per team di sviluppo
+    -   applicazioni web e mobile basate su architetture a servizi
+    -   componenti di interfaccia visuale in presenza di vincoli di accessibilità
+-   determinazione, autonomia e propensione al lavoro in team
+
+SPC-IDM - Specialista identity management
+-   seniority: esperienza documentata di almeno 10 anni nel ruolo
+-   laurea in Informatica o in Ingegneria Informatica (o titolo equivalente/superiore)
+-   conoscenza approfondita del linguaggio Java e del framework Spring
+-   ottima conoscenza di SQL e PL- SQL per ORACLE Database
+-   ottima conoscenza di Git e Gradle
+-   ottima conoscenza delle metodologie di analisi e progettazione basate sul formalismo UML
+-   esperienza nell’integrazione, in un contesto enterprise, delle seguenti tecnologie:
+    -   sistemi di autenticazione e autorizzazione anche in contesti federati (LDAP, AD, Shibboleth, OAuth,
+        OpenID Connect)
+    -   sistemi di firma digitale
+-   determinazione, autonomia e propensione al lavoro in team
+
+SPC-UXD - Specialista UI/UX Design
+-   seniority: esperienza documentata di almeno 5 anni nel ruolo
+-   formazione universitaria specifica (laurea o titolo superiore)
+-   ottima conoscenza teorica e pratica:
+    -   della normativa in tema di accessibilità degli strumenti di analisi dell’accessibilità (es. Site Improve)
+
+
+                                                                                                                    9
+      -    dei principi di usabilità, dei paradigmi di interazione e dei principi di interaction design
+      -    delle problematiche di compatibilità cross-browser (desktop, tablet, mobile).
+      -    di HTML e CSS, JavaScript
+      -    di strumenti di rapid prototyping (Figma, Axure, Sketch, Invision, ecc.)
+      -    del Responsive Web Design e delle dinamiche di sviluppo Mobile First;
+      -    di processi e metodi di User Centered Design, Human Factors Engineering, User Experience.
+      -    di strumenti di creazione ed editing multimediale (es. suite Adobe CC o equivalente);
+Per ciascuno dei profili indicati costituiscono titolo preferenziale specifiche certificazioni, relative alle
+suddette competenze, possedute dalle risorse rese disponibili dal Fornitore. Di ciò e di eventuali ulteriori titoli
+si terrà in debito conto in sede di valutazione dell'Offerta Tecnica.
+
+
+    Art. 1.3 -     ORGANIZZAZIONE E GESTIONE DEL SERVIZIO
+    Art. 1.3.1 -   Requisiti generali delle risorse
+Il Fornitore garantisce che tutto il personale impiegato nell'erogazione dei servizi sia pienamente conforme a
+tutti i requisiti per il corrispondente profilo professionale
+-     sia pienamente conforme a quanto descritto nell'Offerta Tecnica presentata
+-     sia di madrelingua italiana o abbia un livello certificato di conoscenza della lingua italiana pari a C2
+      secondo       il   Common       European      Framework       of    Reference       for    Languages       (CEFR)
+      http://www.coe.int/t/dg4/linguistic/source/framework_en.pdf
+-     abbia provata capacità, correttezza ed affidabilità.
+Il mancato possesso del titolo di studio o della seniority indicati per ciascun profilo potrebbe essere
+eccezionalmente ritenuto accettabile dal Committente nel caso in cui venissero proposti candidati con
+esperienza e competenze di particolare interesse e rilevanza in relazione ai servizi richiesti. Non potranno
+comunque essere accettate e impiegate più di 2 risorse con tali caratteristiche.
+
+
+    Art. 1.3.2 -   Verifica di conformità delle risorse
+L’inserimento da parte del Fornitore di una risorsa da impiegare nel servizio, per la copertura di uno dei profili
+professionali richiesti o come "Responsabile del Servizio", richiede la preventiva verifica di conformità delle
+competenze e delle capacità tecnico-‐professionali della stessa rispetto:
+-     ai requisiti specificati per il corrispondente profilo professionale;
+-     a quanto dichiarato dall’Impresa nella propria Offerta Tecnica.
+Tale verifica viene effettuata in via esclusiva dal Committente tenendo conto:
+-     del curriculum vitae della risorsa proposta, che deve essere presentato dal fornitore redatto secondo lo
+      standard Europass descritto su http://europass.cedefop.europa.eu ; il Committente si riserva di
+      verificare quanto dichiarato nel CV, in particolare i titoli e le certificazioni professionali; nel caso la risorsa
+      proposta sia diversa da quella descritta nell’offerta tecnica per il corrispondente profilo professionale, le
+      competenze, le esperienze professionali, le capacità tecnico-‐professionali, i titoli e le certificazioni
+      dichiarate nel CV devono essere equivalenti a quelli proposti nell’offerta tecnica per il corrispondente
+      profilo professionale;
+
+
+                                                                                                                      10
+-    degli esiti di una eventuale prova tecnica, che avrà luogo a discrezione del Committente ed in caso di
+     positiva valutazione del CV, volta a verificare sul campo le effettive capacità della risorsa proposta
+     rispetto ai punti 1. e 2 sopra indicati.
+-    di un colloquio, che avrà luogo in caso di positiva valutazione del CV e della prova tecnica, volto ad
+     accertare l'effettiva adeguatezza della risorsa rispetto ai punti 1 e 2 sopra indicati;
+Al fine di garantire continuità nell’erogazione del servizio, in caso di verifica di conformità di una risorsa
+effettuata in condizioni di regime ovvero successiva rispetto alla fase iniziale di avvio, l’integrazione delle
+conoscenze implicata dal piano di formazione costituirà per ciascun profilo un ulteriore requisito soggetto a
+verifica per la risorsa in valutazione.
+Il Committente si impegna a iniziare la verifica di conformità entro cinque giorni lavorativi dal momento della
+proposta da parte del Fornitore.
+Il Committente si riserva di rifiutare, in modo motivato ma insindacabile, l'inserimento della risorsa proposta e
+di chiedere che venga presentata una nuova candidatura.
+Per ciascuna verifica di conformità, finalizzata all'avvio del servizio o alla sostituzione di una risorsa, deve
+essere il più possibile limitato il numero di candidature proposte per la valutazione.
+La mancata individuazione di una risorsa idonea entro la seconda candidatura costituirà “mancato rispetto di
+quanto indicato nell'Offerta Tecnica” e comporterà l'applicazione della corrispondente penale. Analoga
+penale verrà applicata per ogni ulteriore candidatura proposta e scartata in sede di valutazione. Nel computo
+delle candidature proposte per l'avvio del servizio è inclusa quella descritta nell'Offerta Tecnica.
+
+
+    Art. 1.3.3 -   Responsabile del Servizio
+          Art. 1.3.3.1 -   Nomina del Responsabile del Servizio
+Il Fornitore deve proporre un "Responsabile del Servizio" che costituisca l’interfaccia unica verso il
+Committente. La risorsa proposta dal Fornitore per la copertura di tale ruolo deve possedere:
+-    titolo di studio: diploma di maturità (o titolo equivalente/superiore)
+-    conoscenze documentabili in ICT Service Management
+-    pluriennale (> 3 anni) esperienza della loro applicazione in contesti organizzativi complessi e per servizi
+     con contenuti tecnici strettamente analoghi a quelli oggetto dell’appalto
+-    competenze e capacità tecnico-‐professionali necessarie per lo svolgimento delle attività indicate al
+     paragrafo successivo
+-    è soggetta alla verifica di conformità
+Il Fornitore deve inoltre proporre una risorsa aggiuntiva, anch’essa soggetta alla verifica di conformità che:
+-    ricopra il ruolo di sostituto del Responsabile del Servizio in caso di indisponibilità dello stesso
+-    soddisfi gli stessi requisiti della risorsa proposta come Responsabile del Servizio
+Avvenuta l'accettazione delle risorse da parte del Committente, il Fornitore procede alla nomina del
+Responsabile del Servizio e del suo sostituto; ciò costituisce condizione necessaria per l'avvio dei servizi.
+
+
+          Art. 1.3.3.2.    Attività di competenza del Responsabile del Servizio
+
+
+
+
+                                                                                                                 11
+Il Responsabile del Servizio provvederà alla gestione del team di risorse reso disponibile dal Fornitore, in
+particolare:
+-     concorderà con il Committente le modalità organizzative ed operative di erogazione dei servizi e sarà
+      responsabile della loro attuazione
+-     avrà la responsabilità di direzione, controllo del team di risorse del Fornitore e di verifica del rispetto delle
+      norme di esecuzione delle prestazioni
+-     avrà la responsabilità del controllo e del rispetto da parte del team di risorse del Fornitore delle
+      disposizioni impartite dal competente "Responsabile di struttura ai fini della sicurezza" del Committente
+-     concorderà periodicamente con il Committente:
+-     la pianificazione delle attività da assegnare alle risorse
+-     i risultati da conseguire e le scadenze ad essi associate
+-     i livelli di servizio che dovrà garantire il Fornitore e gli indicatori (SLA) utilizzati per il loro monitoraggio. Il
+      mancato rispetto dei livelli di servizio concordati comporterà l'applicazione delle corrispondenti penali.
+-     provvederà, in accordo con il Committente, alla supervisione e coordinamento delle attività assegnate
+      alle risorse
+-     provvederà alla rendicontazione del team di risorse del Fornitore sia per la verifica di avanzamento che
+      per la consuntivazione mensile finalizzata alla fatturazione dei servizi
+-     parteciperà alle riunioni per il controllo e la verifica di avanzamento delle attività assegnate
+-     provvederà alla periodica redazione di un rapporto sull'andamento delle attività, sul rispetto degli SLA
+      concordati e sulle eventuali criticità evidenziatesi, con relative proposte di intervento per la loro
+      risoluzione
+-     promuoverà azioni di controllo e miglioramento della qualità dei servizi
+-     concorderà con il Committente l'attuazione delle attività di formazione e aggiornamento delle risorse
+      previste dall'Offerta Tecnica presentata dal Fornitore.
+Tutte le attività di competenza del Responsabile del Servizio sono comprese nell'importo della fornitura e non
+determineranno alcun onere aggiuntivo per il Committente.
+Gli accordi relativi alla pianificazione delle attività, all’allocazione delle risorse ed alla definizione di scadenze
+potranno, previo accordo tra le parti, configurarsi di fatto come accordi per commesse “a corpo”:
+-     con obbligazione in merito alla realizzazione di quanto stabilito nei tempi e nei modi concordati
+-     con l’impegno di risorse concordato ex-ante per ciascuno dei profili coinvolti
+-     con i costi unitari contrattualmente previsti per ciascun profilo.
+In termini generali il mancato rispetto delle scadenze di pianificazione concordate o dei livelli di servizio
+definiti comporterà l'applicazione delle corrispondenti penali.
+
+
+     Art. 1.3.4 -    Avvio dei Servizi
+Entro 30 giorni dalla data di stipula del contratto, il Fornitore dovrà provvedere:
+a.    ad accettare il piano di avvio dei servizi definito dal Committente: tale piano specificherà per ciascun
+      profilo eventuali differenze rispetto ai valori standard e relativa data di attivazione. Tale piano potrebbe
+      prevedere il differimento dell'attivazione del servizio relativo a ciascun profilo allo scopo di gestire
+
+
+                                                                                                                        12
+      adeguatamente il transitorio di avvio; tale differimento non potrà superare i 180 giorni dalla data di stipula
+      del contratto. Ciascuna delle scadenze indicate nel piano di differimento varrà ai fini dell’applicazione
+      delle penali per l’avvio del servizio.
+b. all’individuazione di tutte le risorse previste
+c.    alla nomina del Responsabile del Servizio
+d. alla sottoscrizione del verbale di avvio dell'esecuzione del contratto
+e. all'avvio di tutti i servizi ed in accordo con il piano di avvio di cui al punto a., previo completamento delle
+      attività previste ai punti precedenti.
+Il mancato completamento, entro i 30 giorni dalla stipula del contratto, di tutte le attività di cui ai punti a., b.,
+c., d. ed e. costituisce “ritardo nell’avvio del servizio” e comporterà l'applicazione delle corrispondenti penali.
+Il mancato completamento delle attività di cui sopra entro i 40 giorni dalla stipula del contratto costituisce
+"grave inadempimento" e comporterà l'applicazione di penali.
+
+
+     Art. 1.3.5 -   Sostituzione delle risorse
+Le condizioni di seguito specificate si applicano complessivamente a tutte le unità di personale impiegate dal
+Fornitore per l'erogazione dei servizi previsti dalla fornitura, incluso il Responsabile del Servizio.
+           Art. 1.3.5.1. -   Richiesta di sostituzione avanzata dal Committente
+Il Committente si riserva la facoltà di chiedere la sostituzione di una o più unità di personale impiegate dal
+Fornitore per l'erogazione dei servizi per carenze non emerse nella fase di iniziale valutazione delle
+competenze e capacità tecnico-professionali o per comportamenti ritenuti non consoni all’ambiente di lavoro
+o in contrasto con le condizioni di erogazione del servizio.
+Il Fornitore dovrà provvedere alla sostituzione della risorsa:
+-     nel rispetto di quanto indicato per le competenze delle risorse
+-     entro il periodo massimo di 20gg lavorativi secondo il calendario di apertura del Politecnico di Milano dalla
+      data della richiesta di sostituzione notificata dal Committente
+-     garantendo continuità del servizio ed un adeguato passaggio di consegne, i cui oneri saranno totalmente
+      a carico del Fornitore stesso.
+Alla scadenza del periodo la risorsa da sostituire non potrà essere utilizzata per l’erogazione del servizio.
+Il mancato rispetto della procedura di sostituzione sopra descritta comporterà l'applicazione delle
+corrispondenti penali.
+           Art. 1.3.5.2. -   Richiesta di sostituzione avanzata dal Fornitore
+Premesso che vi è l’obbligo contrattuale di garantire la stabilità del team di risorse rese disponibili per
+l’erogazione del servizio, il Fornitore potrebbe trovarsi nelle condizioni di dover effettuare la sostituzione di
+personale già operativo presso il Committente.
+A fine di ridurre il più possibile l’impatto sul servizio erogato, tale richiesta di sostituzione dovrà essere
+effettuata dal Fornitore con un anticipo di almeno 20 gg lavorativi secondo il calendario di apertura del
+Politecnico di Milano rispetto alla decorrenza desiderata.
+
+
+
+
+                                                                                                                  13
+A fronte di tale richiesta il Committente, tenendo conto delle attività assegnate alla risorsa, indicherà le
+tempistiche di sostituzione e di affiancamento per il passaggio di consegne ritenute accettabili per la
+continuità dei servizi.
+Il Fornitore provvederà poi alla sostituzione del personale:
+-    nel rispetto di quanto indicato per le competenze delle risorse
+-    nel rispetto della tempistica concordata
+-    garantendo continuità del servizio ed un adeguato passaggio di consegne, i cui oneri saranno totalmente
+     a carico del Fornitore stesso (non saranno quindi fatturabili i giorni di affiancamento).
+Il mancato rispetto della procedura di sostituzione sopra descritta comporterà l'applicazione delle
+corrispondenti penali.
+
+
+    Art. 1.3.6 -   Requisiti di stabilità delle risorse
+Le condizioni di seguito specificate si applicano complessivamente a tutte le unità di personale impiegate dal
+Fornitore per l'erogazione dei servizi previsti dalla fornitura, incluso il "Responsabile del Servizio".
+
+
+          Art. 1.3.6.1. -   Limiti alle sostituzioni richieste dal Fornitore
+L’Impresa deve garantire un adeguato livello di stabilità delle risorse preposte all'erogazione dei servizi
+limitando il più possibile le necessità di sostituzione.
+Il numero massimo di sostituzioni all’anno complessivamente consentite è di 2 unità.
+Il mancato rispetto di tale soglia comporterà l'applicazione delle corrispondenti penali.
+
+
+          Art. 1.3.6.2. -   Indisponibilità temporanee delle risorse ed interruzione del servizio
+Eventuali indisponibilità temporanee di una delle risorse preposte all'erogazione dei servizi dovranno essere
+tempestivamente e ove possibile preventivamente notificate dal Responsabile del Servizio al Committente
+che valuterà se accettare la momentanea sospensione del servizio o procedere con la richiesta di
+sostituzione considerando tale indisponibilità come una interruzione del servizio.
+L'interruzione del servizio comporterà l'applicazione della corrispondente penali.
+
+
+    Art. 1.3.7 -   Requisiti di non obsolescenza delle competenze tecniche delle risorse
+Il Fornitore garantisce che il personale impiegato nell'erogazione dei servizi manterrà, per tutta la durata del
+contratto, competenze tecniche adeguate ed aggiornate sulla base dell'evolversi delle tecnologie e delle
+architetture adottate dal Politecnico per l'implementazione e l'erogazione dei propri servizi.
+Ciò dovrà essere ottenuto mediante un adeguato piano di formazione che dovrà rispettare i seguenti
+requisiti:
+-    i contenuti, l’articolazione e le modalità di erogazione dovranno essere concordati con il Committente
+-    il numero medio di giornate di formazione ed aggiornamento dovrà essere, per ciascuna risorsa, di almeno
+     5gg/anno.
+-    le giornate di formazione seguite dal personale del Fornitore reso disponibile per l’erogazione dei servizi
+     non potranno essere oggetto di fatturazione al Committente
+
+
+                                                                                                              14
+Il Fornitore dovrà inoltre fornire al personale del Politecnico un piano di formazione che dovrà rispettare i
+seguenti requisiti:
+-    il numero di partecipanti dovrà essere pari almeno al numero di unità di personale fornite
+-    il numero medio annuo di giornate di formazione per partecipante dovrà essere pari almeno a quello
+     previsto per le unità di personale fornite
+-    l’articolazione, i contenuti e le modalità di erogazione saranno concordati con il Committente, inclusa la
+     partecipazione agli interventi formativi previsti per le unità di personale fornite, se richiesta
+-    le attività di formazione si svolgeranno in orario lavorativo
+Tutte le attività comprese nel suddetto piano di formazione, sia per il personale del Fornitore reso disponibile
+per l’erogazione dei servizi che per il personale del Politecnico, saranno a totale carico del Fornitore.
+Il mancato rispetto dei requisiti previsti per il piano di formazione comporterà l'applicazione delle
+corrispondenti penali.
+
+
+    Art. 1.3.8 -   Svolgimento delle Attività
+Tutte le attività relative ai servizi previsti:
+-    Dovranno svolgersi negli uffici del Committente. Previo accordo tra le parti potrà essere autorizzato lo
+     svolgimento da remoto di una parte delle attività connesse all’erogazione dei servizi, sia in orario
+     lavorativo che nell’ambito di interventi volti a preservarne la continuità. Dovrà comunque essere garantita
+     l’erogazione dei servizi in orario lavorativo presso i locali del Committente per un numero di giornate pari
+     almeno al 60%, su base mensile, delle giornate richieste dal Committente per ogni unità di personale
+     fornita. Il personale del Fornitore impiegato per lo svolgimento delle attività da remoto dovrà essere lo
+     stesso impiegato presso le sedi del Committente. Si specifica che al personale in attività remota potrà
+     essere richiesto di recarsi fisicamente presso gli uffici del committente in caso di necessità entro 4h dalla
+     richiesta nell’ambito delle attività previste.
+-    Dovranno svolgersi con modalità e secondo una pianificazione concordate con il Responsabile del
+     Servizio. Il mancato rispetto di tale pianificazione comporterà l'applicazione delle corrispondenti penali
+La fascia oraria per il servizio on site è lunedì ‐venerdì 8:00-19:00 (giorni feriali). Tali orari potranno subire
+variazioni per motivi di servizio contingenti.
+Potranno rendersi necessari interventi in altre fasce orarie, anche notturne e/o festive. Tali interventi:
+-    verranno programmati dal Committente con un preavviso minimo di 5gg lavorativi
+-    potranno rendersi necessari in modo non prevedibile per il ripristino della continuità operativa
+-    verranno tariffati secondo i compensi standard, non sono infatti previste maggiorazioni per erogazione
+     notturna / festiva dei servizi.
+Al fine di salvaguardare la continuità dei servizi erogati, il Fornitore dovrà garantire, per ciascuna delle risorse
+rese disponibili, reperibilità e disponibilità ad intervenire.
+Si intendono a carico del Fornitore tutti gli strumenti di lavoro ritenuti necessari per lo svolgimento delle
+attività oggetto del presente progetto di gara. Fanno eccezione le postazioni di lavoro, desktop o portatili,
+che verranno fornite dal Committente e tramite le quali dovrà essere effettuato l’accesso ai sistemi; in
+
+
+
+
+                                                                                                                 15
+condizioni di emergenza potranno essere usati altri dispositivi, sempre nel rispetto di adeguate misure
+sicurezza e delle policy di ateneo.
+Il Fornitore si impegna inoltre a garantire, negli ultimi sei mesi di efficacia del contratto ovvero nel caso di
+cessazione anticipata del rapporto contrattuale, il trasferimento del know-how e delle competenze a
+personale del Committente o a terzi da questo designati, con riferimento agli ambiti previsti dal presente
+progetto. Le modalità di esecuzione di tali attività di affiancamento verranno concordate. Al periodo di
+affiancamento saranno applicate le medesime tariffe giornaliere, per figura professionale, applicate per lo
+svolgimento delle attività contrattuali.
+
+
+    Art. 1.3.9 -   Requisiti di continuità del Servizio
+Considerata la criticità delle attività previste dalla presente fornitura ai fini della continuità operativa dei
+servizi ICT erogati dal Committente ai propri utenti, il Fornitore deve garantire senza alcun onere aggiuntivo:
+-    La reperibilità telefonica continuativa (24h/giorno inclusi i festivi) da parte del Responsabile del Servizio
+     o di un suo delegato
+-    La disponibilità, da parte di unità di personale individuate fra quelle fornite e concordate con il
+     Committente, ad intervenire entro 4h dalla segnalazione (24h/giorno inclusi i festivi). La segnalazione:
+     -    verrà notificata al Responsabile del Servizio o a un suo delegato
+     -    potrà essere effettuata telefonicamente e/o tramite e-mail
+     -    potrà essere effettuata dal personale del Committente o mediante dispositivi di segnalazione
+          automatica
+L’intervento si svolgerà, sulla base delle specifiche necessità implicate dall'anomalia rilevata ed in accordo
+con il Committente, presso le strutture dello stesso (uffici/server farm) o da postazione remota.
+Il mancato rispetto di tale requisito comporterà l'applicazione delle corrispondenti penali.
+
+
+Art. 2. DURATA DELL’APPALTO
+La durata dell’appalto per i servizi di analisi, progettazione e sviluppo applicativo è di 36 mesi.
+Alla scadenza di tale primo periodo, il Politecnico di Milano, ai sensi dell’art. 120, comma 1, lett. a) D.Lgs.
+26/2023, si riserva la facoltà di richiedere la proroga del servizio per ulteriori 36 mesi.
+Qualora la stazione appaltante voglia avvalersi della opzione di proroga, è tenuta tramite il Responsabile del
+Procedimento a darne comunicazione alla controparte con un preavviso di almeno otto mesi dalla scadenza
+del contratto. Entro 20 giorni dalla richiesta di proroga il Fornitore è tenuto a rispondere indicando
+l'accettazione o il rifiuto a proseguire l'erogazione dei servizi.
+La mancata risposta entro il termine stabilito verrà considerata come un rifiuto della richiesta di proroga. In
+caso di accettazione, la proroga dovrà essere sottoscritta tra le parti entro 10 giorni.
+Il Politecnico di Milano si riserva la facoltà di ordinare l'avvio delle prestazioni oggetto del contratto nelle more
+della stipulazione dello stesso, ai sensi dell’art. 18 D. Lgs. n. 36/2023. In tal caso, nell'ipotesi in cui
+l'aggiudicatario sia successivamente dichiarato decaduto, l’Amministrazione provvederà al pagamento dei
+soli servizi effettivamente erogati, sulla base delle tariffe unitarie offerte in sede di gara.
+
+
+
+
+                                                                                                                  16
+Alla scadenza del rapporto contrattuale il Politecnico di Milano non è impegnato a richiedere eventuali
+prestazioni di servizio che dovessero risultare ancora disponibili nell’ambito dell'importo contrattuale
+stabilito. In tale eventualità il Politecnico di Milano si riserva la facoltà di chiedere il completamento dei servizi
+fino all’esaurimento dell'importo contrattuale stabilito, rimanendo invariate tutte le rimanenti condizioni del
+contratto.
+L’erogazione dei servizi SaaS definiti per le realizzazioni “a corpo” dovrà essere garantita dal fornitore per
+l’intero periodo concordato per la specifica commessa, che potrà essere annualmente prorogato dal
+Politecnico di Milano fino alla durata massima di 72 mesi a partire dalla data di passaggio in produzione
+dell’applicativo realizzato.
+L’erogazione dei servizi SaaS potrà quindi proseguire oltre la scadenza del contratto principale, che va intesa
+come data entro la quale dovranno terminare i servizi di analisi, progettazione e sviluppo applicativo; la durata
+complessiva del contratto è pertanto di 108 mesi, che potrebbero estendersi di ulteriori 36 mesi in caso di
+proroga, per una durata massima di 144 mesi.
+L’erogazione di servizi (di analisi, progettazione, sviluppo e di erogazione SaaS) sarà ovviamente subordinata
+alla capienza contrattuale disponibile.
+Nulla potrà essere preteso dal fornitore in caso di mancato uso di tutte le giornate di analisi, progettazione e
+sviluppo stimate per ciascun profilo professionale ai fini della definizione della base d’asta.
+
+
+Art. 3. VALORE DELL’APPALTO
+Il valore massimo stimato dell’appalto, ai sensi dell’art. 14, comma 4 del Codice, è pari a € 6.141.960,00 oltre
+IVA e/o di altre imposte e contributi di legge e di tutte le opzioni così suddiviso:
+
+
+                                                                               P (principale)       Importo € al
+  n.            Descrizione servizi/beni                       CPV
+                                                                               S (secondaria)      netto dell’IVA
+
+
+        Servizi di sviluppo di applicativi ed          72230000-6 Servizi di
+   1    erogazione in modalità SaaS - Software as      sviluppo di software            P            2.791.800,00 €
+        a Service primi 36 mesi                        personalizzati
+
+        Servizi di sviluppo di applicativi ed
+                                                       72230000-6 Servizi di
+        erogazione in modalità SaaS - Software as
+  2                                                    sviluppo di software            P            2.791.800,00 €
+        a Service ulteriori 36 mesi (opzionale e non
+                                                       personalizzati
+        garantito)
+
+        Incremento     del   10%     dell’importo
+                                                       72230000-6 Servizi di
+        contrattuale, per eventuali modifiche
+  3                                                    sviluppo di software            P             558.360,00 €
+        all’assetto di competenze richieste nel
+                                                       personalizzati
+        tempo (opzionale e non garantito);
+
+        Modifiche in corso di esecuzione del           72230000-6 Servizi di
+  4     contratto ai sensi dell'art. 120 c. 9          sviluppo di software            P             558.360,00 €
+        (opzionale e non garantito)                    personalizzati
+
+
+
+
+                                                                                                                     17
+                                                   72230000-6 Servizi di
+          Proroga tecnica   (opzionale   e   non
+  5                                                sviluppo di software             P                465.300,00 €
+          garantito)
+                                                   personalizzati
+
+                                                                    A) Importo a base di gara   7.165.620,00 €
+
+                             B) Oneri per la sicurezza da interferenze non soggetti a ribasso        € 0,00
+
+                                                           Importo complessivo dell’appalto     7.165.620,00 €
+
+
+
+L’importo complessivo a base di gara è al netto di Iva e/o di altre imposte e contributi di legge.
+
+A norma della disciplina vigente (decreti legislativi nn. 36/2023 e 81/08) la Stazione appaltante reputa che
+non vi siano rischi interferenziali per la sicurezza dei lavoratori dell’aggiudicatario e pertanto non reputa
+opportuno scomputare dalla base di gara alcun costo sulla sicurezza.
+
+Le opzioni di gara che concorrono alla determinazione del valore complessivo dell’appalto sono attivabili nel
+corso della durata massima del contratto.
+
+La copertura finanziaria è garantita da fondi di bilancio della Stazione Appaltante.
+
+La tabella seguente dettaglia per la fornitura l’articolazione che determina l’importo complessivo a base
+d'asta.
+
+Sono specificati i fabbisogni previsti per ciascuno dei profili professionali, dettagliatamente descritti all’Art. 1
+del capitolato di gara.
+
+Tutti gli importi indicati sono al netto dell'IVA e sono comprensivi di tutti gli oneri concernenti la fornitura
+(prestazioni, spese accessorie, oneri, indennità, assicurazioni di ogni specie, manodopera, mezzi d’opera,
+trasporto, e quanto occorre per offrire il servizio compiuto a perfetta regola d’arte secondo le disposizioni del
+Capitolato di gara) che devono, pertanto, intendersi totalmente a carico della Ditta offerente.
+
+I costi unitari riportati hanno valore puramente indicativo e funzionale alla sola definizione della base d'asta.
+
+L’ammontare definitivo dell’appalto verrà comunque determinato a misura dal computo delle prestazioni
+effettivamente richieste dall’ Ateneo.
+
+Per ciascun profilo professionale:
+
+
+
+
+                                                                                                                    18
+                                          Costo                           Costo annuo       Costo FTE      Costo FTE
+                         Figura                          Range FTE
+#        Profilo                            gg                           profilo con FTE       std            std
+                     professionale
+                                          profilo   min     std   max          std           anni 1..3      anni 4..6
+                Sviluppatore full
+    1   SVI-API stack junior di            290      0       2        3       127.600,00 € 382.800,00 €     382.800,00 €
+                applicazioni
+                Sviluppatore full
+    2   SVI-APE stack esperto di           330       1       3       4       217.800,00 € 653.400,00 € 653.400,00 €
+                applicazioni
+                Sviluppatore full
+    3   SVI-APS stack senior di            390       2       3       4      257.400,00 €   772.200,00 €    772.200,00 €
+                applicazioni
+                Specialista
+         SPC-
+    4           framework e dev            400       2      2        4      176.000,00 € 528.000,00 € 528.000,00 €
+         FRM
+                ops
+                   Specialista identity
+    5 SPC-IDM                              400      0        1       2       88.000,00 € 264.000,00 € 264.000,00 €
+                   management
+
+          SPC-     Specialista UI/UX
+    6                                      290      0        1       2       63.800,00 €    191.400,00 €   191.400,00 €
+          UXD      design
+                                                                                           2.791.800,00 2.791.800,00
+                                                                           930.600,00 €
+                                                                                                      €            €
+                                                                             Totale              5.583.600,00 €
+
+
+
+-       1 FTE corrisponde a 220gg/anno
+-       dovrà essere garantita, per l’intera durata dell’appalto, la disponibilità di un numero di FTE pari al valore
+        standard per esso specificato.
+Il contratto collettivo applicato è il Contratto collettivo nazionali di lavoro per il personale dipendente da
+aziende del Terziario della Distribuzione e dei Servizi identificato dal codice H011.
+
+In occasione dei SAL mensili di avanzamento, il Committente potrà chiedere, in relazione al carico di lavoro ed
+alle attività previste, una variazione del mix di profili reso disponibile dal fornitore, nel rispetto dei range
+min/max di FTE specificati per ciascun profilo.
+
+La richiesta:
+
+-       dovrà essere effettuata con un preavviso di almeno 3 mesi rispetto alla decorrenza della variazione
+
+-       dovrà avere una durata minima di 3 mesi, salvo eccezioni che potranno essere concordate tra le parti.
+
+Il nuovo mix di profili concordato nel SAL costituirà il nuovo riferimento contrattuale al quale il fornitore dovrà
+attenersi sino ad eventuali ulteriori accordi di modifica.
+
+Nel caso di richieste di inserimento di nuove risorse il Fornitore dovrà provvedere alla loro individuazione entro
+la scadenza fissata. La mancata individuazione di idonea risorsa entro tale scadenza comporterà
+l'applicazione delle corrispondenti penali secondo le modalità specificate all' Art. 5 "Regolarità del servizio,
+controlli e penalità". Le risorse saranno soggette alla verifica di conformità di cui all’Art. 1.3.2.
+
+
+
+
+                                                                                                                        19
+I fabbisogni indicati sono da considerarsi come stime, effettuate al meglio delle possibilità e conoscenze del
+Politecnico di Milano.
+
+L’effettivo utilizzo dei servizi indicati è fortemente condizionato dall’andamento dei progetti ICT e dalla
+dinamica dei processi organizzativi dell’Ateneo. L’attivazione del contratto non impegna pertanto il
+Committente nei confronti del Fornitore all’effettivo totale utilizzo del fabbisogno stimato per ciascuno dei
+profili professionali sopra indicati.
+
+Il Committente avrà la facoltà di modulare l’impegno delle risorse rese disponibili dal Fornitore in rapporto alle
+contingenti esigenze di servizio garantendo comunque, nell'ambito del periodo contrattuale, un numero
+minimo di giornate pari a quanto sopra specificato per il valore minimo di FTE di ciascun profilo.
+
+Il prezzo presunto e stimato e non garantito posto a base di offerta corrisponde all’importo dei fabbisogni
+relativi agli FTE standard.
+
+Il Politecnico di Milano si riserva, agli stessi patti, prezzi e condizioni, di incrementare il quantitativo dei servizi
+richiesti fino alla concorrenza di un quinto ai sensi dell’art. 120 del D.lgs 36/2023.
+Il Fornitore:
+-     formulerà l’offerta avendo preso conoscenza di tutte le circostanze di fatto e di luogo, sia generali che
+      particolari, che possono influire sulla determinazione delle condizioni economiche e che potranno
+      incidere sull’esecuzione delle attività oggetto della fornitura.
+-     non eccepirà, nello svolgimento delle attività oggetto della fornitura, la mancata conoscenza di
+      condizioni o la sopravvenienza di elementi non valutati o non considerati salvo che tali elementi si
+      configurino come cause di forza maggiore contemplate dal C.C. e non escluse dalla legge.
+-     avendo tenuto conto di quanto sopra nella formulazione dell’offerta, riterrà quest’ultima
+      complessivamente congrua e remunerativa senza riserva alcuna.
+Tutti gli oneri economici non esplicitamente esclusi nel presente capitolato e nei relativi allegati sono
+interamente a carico dell’aggiudicatario.
+Tutti gli importi di cui sopra sono al netto dell’IVA e sono comprensivi di tutti gli oneri concernenti la fornitura
+(prestazioni, spese accessorie, oneri, indennità, assicurazioni di ogni specie, manodopera, mezzi d’opera,
+trasporto, e quanto occorre per offrire il servizio compiuto a perfetta regola d’arte secondo le disposizioni del
+presente Capitolato) che devono, pertanto, intendersi totalmente a carico della Ditta offerente.
+
+
+    Art. 3.1 -    Opzioni
+Il Politecnico, ai sensi dell’art. 120 D.Lgs. 26/2023, si riserva la facoltà di estendere la durata del contratto, per
+ulteriori 36 mesi, per l’importo massimo di € 2.791.800,00 + IVA.
+La stazione appaltante esercita tale facoltà comunicandola all’appaltatore mediante posta elettronica
+certificata almeno 8 mesi prima della scadenza del contratto originario.
+In tali ipotesi il contraente è tenuto all’esecuzione delle prestazioni previste nel contratto agli stessi prezzi
+patti e condizioni.
+
+
+
+
+                                                                                                                     20
+In casi eccezionali, il contratto in corso di esecuzione può essere prorogato per il tempo strettamente
+necessario alla conclusione della procedura di individuazione del nuovo contraente se si verificano le
+condizioni indicate all’articolo 120, comma 11, del Codice. In tal caso il contraente è tenuto all’esecuzione delle
+prestazioni oggetto del contratto agli stessi prezzi, patti e condizioni previsti nel contratto, per un importo
+massimo di € 465.300,00 oltre IVA.
+
+
+
+La stazione appaltante si riserva la facoltà di incrementare l’importo contrattuale del 10% ai sensi dell’art. 120,
+c. 1, lett. a) del D.lgs 36/2023, per eventuali modifiche all’assetto di competenze richieste nel corso della
+durata contrattuale, per un importo massimo di € 558.360,00 oltre IVA.
+
+
+Il Politecnico di Milano si riserva, inoltre, agli stessi patti, prezzi e condizioni, di incrementare il quantitativo
+dei servizi richiesti fino alla concorrenza di un quinto ai sensi del art. 120 del D.lgs 36/2023, per un importo
+massimo di € 558.360,00 oltre IVA.
+
+
+
+Art. 4. REVISIONE PREZZI
+Ai sensi di quanto previsto dall’art. 60 del Codice, durante l’esecuzione del contratto sarà consentita la
+revisione dei prezzi, in aumento o in diminuzione, alle condizioni previsti dall’Allegato II.2-bis del Codice e
+secondo le modalità previste all’interno del presente articolo.
+
+Ai sensi dell’art. 11 dell’Allegato II.2-bis del Codice, ai fini del calcolo della variazione dei prezzi, data
+l’associazione univoca all’indice ISTAT Prezzi alla Produzione dei Servizi - PPS [62]Produzione di software,
+consulenza informatica ed attività connesse, sul mercato business (BtoB)
+
+Al fine di valutare se sussistono le condizioni per l’attivazione del meccanismo di revisione dei prezzi,
+l’Amministrazione monitora l’andamento degli indici ISTAT individuati con frequenza annuale, a decorrere dal
+mese del provvedimento di aggiudicazione.
+
+Qualora la variazione, in aumento o in diminuzione, superi la soglia del 5 per cento, la presente clausola di
+revisione viene attivata automaticamente dall’Amministrazione nella misura dell’80 per cento del valore
+eccedente la variazione del 5 per cento, applicata alle prestazioni ancora da eseguire.
+
+In conformità a quanto previsto dall’art. 12, comma 2, dell’Allegato II.2-bis del Codice, in caso di sospensione
+o proroga dei termini di aggiudicazione nelle ipotesi di cui all’art. 1, commi 3, 4 e 5, dell’Allegato I.3 del Codice,
+il valore di riferimento per il calcolo della variazione è quello relativo al mese di scadenza del termine massimo
+per l’aggiudicazione, come individuato dall’art. 1, commi 1 e 2, del predetto Allegato.
+
+In seguito alla determinazione di cui al precedente periodo, l’Amministrazione comunica all’appaltatore i nuovi
+prezzi a seguito della revisione, da applicare alle prestazioni ancora da eseguire. L’appaltatore potrà fatturare
+l’importo derivante dalla revisione dei prezzi contrattuali nella prima fattura successiva alla comunicazione di
+cui al periodo precedente, secondo le modalità previste nel Capitolato.
+
+
+
+
+                                                                                                                   21
+Ai sensi dell’art. 2, comma 2, dell’Allegato II.2-bis del Codice, qualora l’applicazione del presente articolo non
+permetta di raggiungere la conservazione dell’equilibrio contrattuale e tale principio non possa essere
+garantito mediante rinegoziazione secondo buona fede, è fatta salva la possibilità per l’Amministrazione o
+per l’appaltatore di invocare la risoluzione per eccessiva onerosità sopravvenuta del contratto. In tale
+eventualità si applica l’art. 122, comma 5, del Codice.
+
+In caso di ricorso al subappalto, con riferimento alle prestazioni oggetto dello stesso il contratto di subappalto
+dovrà necessariamente contenere clausole di revisione prezzi, determinate secondo quanto previsto dall’art.
+119, comma 2-bis, del Codice.
+
+Per tutto quanto qui non disposto si rinvia alla disciplina prevista dall’Allegato II.2-bis del Codice.
+
+
+
+Art. 5. REGOLARITÀ DEL SERVIZIO, CONTROLLI E PENALITÀ
+A fronte di eventuali inadempienze rilevate nell'esecuzione dei servizi, il Committente provvederà a notificare
+al Fornitore l’accertamento delle stesse e all’applicazione di penalità come di seguito descritto:
+ #     Causale                                            Penale
+ 1     Ritardo nell'avvio del servizio                    € 500,00 per ciascun giorno lavorativo di ritardo e per
+                                                          ciascuna delle risorse contrattualmente previste per
+                                                          l’erogazione del servizio
+ 2     Ritardo nella sostituzione di una risorsa su       Costo giornaliero della risorsa per ciascun giorno
+       richiesta del Committente                          lavorativo di ritardo
+ 3     Ritardo nella notifica di sostituzione di una      Costo giornaliero della risorsa per ciascun giorno
+       risorsa su richiesta del Fornitore                 lavorativo di ritardo
+ 4     Superamento       del     numero     massimo       € 5.000,00 per ciascuna sostituzione aggiuntiva
+       consentito di sostituzioni di risorse su
+       richiesta del Fornitore
+ 5     Interruzione del servizio                          Costo giornaliero della risorsa per ciascun giorno
+                                                          lavorativo di interruzione e per ciascuna risorsa
+ 6     Mancato aggiornamento delle risorse e              da € 500,00 a 2.000,00 per ciascun evento rilevato per
+       mancato rispetto del piano formativo               ciascuna risorsa
+       proposto nell'Offerta Tecnica
+ 7     Mancato      rispetto   delle   scadenze    di     € 500,00 per ciascun giorno lavorativo di ritardo e per
+       pianificazione concordate                          ciascuna scadenza
+ 8     Mancato supporto alla continuità dei               € 1.000,00 per ciascun mancato intervento entro 4h
+       servizi                                            dalla segnalazione
+ 9     Mancato rispetto dei livelli di servizio           € 1.000,00 per ciascun superamento di soglia nel
+       concordati                                         periodo di osservazione concordato
+
+
+
+
+                                                                                                                22
+ 10      Altre inadempienze, non riconducibili ai          Commisurata all’inadempienza, da € 500,00 a €
+         casi   precedenti,    dovute    a   mancata,      5.000,00
+         ritardata o insufficiente esecuzione delle
+         prestazioni      rispetto       a      quanto
+         contrattualmente definito ovvero previsto
+         dal progetto di gara e
+         dall’Offerta Tecnica presentata
+
+
+Tutte le penali verranno applicate previo contraddittorio con il Fornitore, con la sola formalità della
+contestazione scritta dell’inadempienza al Fornitore, con termine di 5 giorni lavorativi dalla data di
+ricevimento della stessa per eventuali difese scritte da parte di quest’ultimo.
+L’ammontare delle penalità è addebitato sui crediti del Fornitore nei confronti dell’Ateneo; ovvero tramite
+emissione di note di credito da parte del Fornitore.
+L’applicazione delle penali previste dal presente articolo non preclude il diritto dell’Ateneo a richiedere il
+risarcimento degli eventuali maggiori danni.
+Il Fornitore dovrà risarcire il Committente di qualsiasi danno diretto e indiretto che possa comunque derivare
+da un'inadempienza del Fornitore stesso.
+Il Politecnico di Milano si riserva, comunque, in caso di constatata applicazione di 3 penali o al raggiungimento
+di penali per un importo pari al 10% dell’ammontare dell’affidamento, indipendentemente da qualsiasi
+contestazione, di procedere alla risoluzione del rapporto, ai sensi dell'art. 1456 C.C. con conseguente
+esecuzione del servizio in danno del gestore inadempiente, salvo il risarcimento per maggiori danni.
+L’amministrazione si riserva, in tal caso, la facoltà di interpellare il secondo classificato.
+Le sanzioni pecuniarie di cui sopra verranno fatturate dal Politecnico di Milano e, qualora non liquidate a
+scadenza, l’importo verrà prelevato direttamente dalla cauzione, con conseguente obbligo di reintegro.
+
+
+Art. 6. Inadempimenti contrattuali e risoluzione del Contratto
+Il Politecnico di Milano, in qualità di committente, si riserva la facoltà di disporre la risoluzione del contratto,
+previa diffida ad adempiere ai sensi degli art. 1453 e 1454 del C.C., in caso di inadempimento dell’appaltatore
+anche di uno solo degli obblighi previsti dal presente contratto, salvo in ogni caso il risarcimento del danno.
+Il contratto inoltre potrà essere risolto di diritto, ai sensi dell’Art. 1456 del C.C., allorché il totale delle penali
+accumulate superi il 10% (dieci per cento) del costo dell’intera fornitura, salvo in ogni caso il risarcimento del
+danno.
+Resta tuttavia espressamente inteso che in nessun caso il Fornitore potrà sospendere la prestazione dei
+servizi e/o forniture.
+È espressamente inteso che in caso di perdita dei requisiti di cui agli artt. 94 e 95 del D.Lgs. n. 36/2023 e nei
+casi previsti dai patti di integrità il Politecnico di Milano si riserva la facoltà di risolvere il contratto e si riserva
+il pagamento in tal caso del corrispettivo pattuito solo con riferimento alle prestazioni già eseguite e nei limiti
+dell’utilità ricevuta.
+
+
+
+
+                                                                                                                       23
+In caso di risoluzione del contratto si procederà all’incameramento della cauzione definitiva ove richiesta o,
+in alternativa, l’applicazione di una penale in misura non inferiore al 10% (dieci per cento) del valore del
+contratto.
+Il Politecnico di Milano può inoltre risolvere il contratto nei casi e con le modalità previste dall’art. 122 del D.Lgs.
+36/2023.
+
+
+Art. 7. RECESSO
+Il Politecnico di Milano ha il diritto di recedere in qualunque tempo dal contratto con le modalità previste
+dall’art. 123 D.lgs 36/2023.
+
+
+Art. 8. GARANZIA DEFINITIVA E POLIZZA ASSICURATIVA
+A garanzia di tutte le obbligazioni contrattuali assunte con la stipula del Contratto, l’aggiudicatario dovrà
+prestare, ai sensi e con le modalità di cui all’art. 117 del D.Lgs. n. 36/2023, una garanzia definitiva che dovrà
+rispettare tutte le condizioni previste dall’art. 117 richiamato.
+
+
+Art. 9. MODALITÀ DI PRESENTAZIONE DELLE FATTURE E PAGAMENTO
+L’emissione delle fatture avverrà mensilmente sulla base dei servizi richiesti ed effettivamente svolti nel
+periodo o, nel caso di commesse “a corpo”, in corrispondenza delle scadenze di avanzamento concordate.
+Le fatture dovranno essere trasmesse in forma elettronica secondo il formato di cui all’allegato A “Formato
+della fattura elettronica” del DM n. 55/2013, indirizzandole al Codice Univoco Ufficio 87W7WE.
+Oltre al “Codice Univoco Ufficio” che deve essere inserito obbligatoriamente nell’elemento “Codice
+Destinatario” del tracciato della fattura elettronica, dovranno altresì essere indicate nella fattura anche le
+seguenti informazioni.
+                                                                              Elemento      del   tracciato    fattura
+Informazione
+                                                                              elettronica
+Codice Unitario Progetto (se indicato in RDO)                                 <CodiceCUP>
+Codice Identificativo Gara                                                    <CodiceCIG>
+ORDINE (se indicato): dovrà essere indicato l'identificativo ID_DG che <Dati
+verrà comunicato in sede di stipula                                           Generali><DatiOrdineAcquisto>
+CONTRATTO (se indicato): in caso di riferimento a contratto, dovrà
+essere     indicato   il   numero   di   protocollo/repertorio che      verrà <Dati Generali><DatiContratto>
+comunicato in sede di stipula
+
+NOTE CREDITO (se indicato): dovrà essere indicato il numero della <Dati
+fattura trasmessa                                                             Generali><DatiFattureCollegate>
+
+
+La compilazione e sottoscrizione dell’autocertificazione inerente la dichiarazione di regolarità del D.U.R.C. e
+la tracciabilità dei flussi finanziari dovrà precedere l’emissione della fattura.
+
+
+
+
+                                                                                                                     24
+La fattura sarà respinta tramite il Sistema di Interscambio in caso di mancato ricevimento della predetta
+documentazione.
+
+
+Il pagamento avverrà entro 30 giorni dalla data di ricezione della fattura, previo accertamento della
+prestazione da parte del direttore dell'esecuzione del contratto (DEC).
+
+
+L’operatore economico può chiedere anticipazione del prezzo, come previsto dall’art. 125 D.Lgs. 36/2023.
+L'erogazione dell'anticipazione è subordinata alla costituzione di garanzia fideiussoria bancaria o
+assicurativa di importo pari all'anticipazione maggiorato del tasso di interesse legale applicato al periodo
+necessario al recupero dell'anticipazione stessa secondo il cronoprogramma della prestazione.
+
+
+Art. 10. DIVIETO DI CESSIONE DEL CONTRATTO
+È fatto divieto assoluto di cedere a terzi l’appalto.
+Qualsiasi cessione dell’appalto è nulla nei confronti del Concedente e comporta l'immediata revoca
+dell’appalto e la perdita della cauzione definitiva, fatto salvo ogni ulteriore risarcimento dei danni
+eventualmente arrecati al Politecnico di Milano.
+
+
+Art. 11. RESPONSABILE UNICO DEL PROGETTO
+Il Responsabile Unico del Progetto di gara è l’Ing. Fabrizio Pedranzini.
+
+
+Art. 12. TRACCIABILITÀ DEI FLUSSI FINANZIARI
+Al fine di assicurare la tracciabilità dei flussi finanziari finalizzata a prevenire infiltrazioni criminali, il Fornitore
+assume tutti gli obblighi di tracciabilità dei flussi finanziari di cui alla legge 136/2010.
+Il fornitore si impegna inoltre a produrre, su richiesta della Stazione appaltante, documentazione idonea per
+consentire le verifiche di cui all’art. 3, comma 9 della legge 136/2010.
+A pena di risoluzione del contratto, tutti i movimenti finanziari relativi alla fornitura devono essere registrati
+su conto corrente dedicato e devono essere effettuati esclusivamente tramite lo strumento del bonifico
+bancario o altri strumenti previsti dalla legge 136/2010, salvo le deroghe previste dalla legge stessa e registrati
+su conto corrente dedicato i cui estremi identificativi e i nominativi dei soggetti autorizzati ad operarvi
+dovranno essere comunicati dal Fornitore all’Ateneo prima della stipula del contratto. Il Fornitore si impegna
+a comunicare all’Ateneo ogni variazione dei predetti dati.
+
+
+Art. 13. NORME APPLICABILI
+Per tutto quanto non espressamente previsto dagli atti e documenti di gara si fa riferimento al D. Lgs. 36/2023
+e al Codice Civile.
+
+
+Art. 14. FORO COMPETENTE
+Per ogni controversia che dovesse insorgere circa l’applicazione, l’interpretazione, l’esecuzione o la
+risoluzione del contratto, sarà competente il Foro di Milano.
+
+
+                                                                                                                       25
+Art. 15. TRATTAMENTO DATI
+Ai sensi e per gli effetti del Regolamento UE n. 679/2016, le Parti così come individuate, denominate e
+domiciliate dal presente contratto, in qualità di autonomi Titolari del trattamento, dichiarano reciprocamente
+di essere informate e di acconsentire, tramite sottoscrizione di questo documento, che i dati personali
+raccolti e considerati nel corso dell’esecuzione del presente contratto saranno trattati esclusivamente per
+le finalità previste dal contratto stesso ed in ottemperanza delle misure di sicurezza necessarie per garantire
+la loro integrità e riservatezza.
+Le Parti, in qualità di Titolari autonomi del trattamento, si impegnano a raccogliere i dati degli interessati per
+le rispettive finalità rispettando il principio di liceità del trattamento. L’eventuale utilizzo dei dati per finalità
+ulteriori è condizionato alla manifestazione di espresso consenso specifico da parte dell’interessato.
+In caso di servizi che richiedano il trasferimento di dati personali dal Politecnico al Fornitore o la raccolta di
+dati personali da parte del Fornitore nell’ambito dello svolgimento del servizio, il Fornitore verrà nominato
+all’avvio dei servizi dal Committente con apposito atto negoziale ai sensi dell’art. 28 e seguenti del GDPR
+“Responsabile del trattamento” in relazione alle attività connesse alla esecuzione del presente contratto.
+Punto di contatto del Responsabile per la protezione dei dati per il Politecnico di Milano è: privacy@polimi.it.
+Le Parti di impegnano, inoltre, ad escludere la diffusione dei dati raccolti in Paesi extra UE e/o Organizzazioni
+internazionali.
+
+
+Art. 16. SPESE CONTRATTUALI
+Tutte le spese, diritti e imposte, inerenti e conseguenti alla sottoscrizione del contratto, sono a carico
+dell'aggiudicatario.
+
+
+Art. 17. UTILIZZO DEL NOME E DEL LOGO DEL POLITECNICO DI MILANO
+Il Politecnico di Milano non potrà essere citato a scopi pubblicitari, promozionali e nella documentazione
+commerciale né potrà mai essere utilizzato il logo del Politecnico di Milano se non previa autorizzazione da
+parte   del    Politecnico    stesso.    Le    richieste   di   autorizzazione     possono     essere     inviate    a
+comunicazione@polimi.it.
+
+
+Art. 18. RISERVATEZZA
+Il Fornitore si impegna a conservare il più rigoroso riserbo in ordine a tutta la documentazione fornita dal
+Politecnico di Milano.
+Il Fornitore si impegna altresì a non divulgare a terzi e a non utilizzare per fini estranei all’adempimento
+dell’accordo stesso procedure, notizie, dati, atti, informazioni o quant’altro relativo al Politecnico di Milano e
+al suo know-how.
+Il Fornitore si impegna altresì a restituire al Politecnico di Milano, entro 10 giorni dall’ultimazione delle attività
+commissionatele tutti gli atti ed i documenti alla stessa forniti dalla committente ed a distruggere, ovvero
+rendere altrimenti inutilizzabili, ogni altro atto.
+
+
+
+
+                                                                                                                    26
+Eventuali violazioni commesse dal Fornitore sulle disposizioni di cui al presente paragrafo saranno sanzionate
+ai sensi della normativa vigente in materia.
+
+
+Art. 19. NORMATIVA ANTICORRUZIONE
+1)         RAPPORTI DI PARENTELA
+Il Fornitore dichiara che non sussistono rapporti di parentela, affinità, coniugio, convivenza tra i titolari e i soci
+dell’azienda e il Rettore, Prorettori, Prorettori delegati dei Poli territoriali, Direttore Generale, Dirigenti,
+Componenti del Consiglio di Amministrazione, i Direttori di Dipartimento, Presidi di Scuola, visibili all’indirizzo
+http://www.polimi.it/ateneo/ ,RUP della presente procedura.
+2)         TENTATIVI DI CONCUSSIONE
+Il fornitore si impegna a dare comunicazione tempestiva alla Stazione appaltante e alla Prefettura, di tentativi
+di concussione che si siano, in qualsiasi modo, manifestati nei confronti dell’imprenditore, degli organi sociali
+o dei dirigenti di impresa.
+Il predetto adempimento ha natura essenziale ai fini della esecuzione del contratto e il relativo
+inadempimento darà luogo alla risoluzione espressa del contratto stesso, ai sensi dell’art. 1456 del c.c., ogni
+qualvolta nei confronti di pubblici amministratori che abbiano esercitato funzioni relative alla stipula ed
+esecuzione del contratto, sia stata disposta misura cautelare o sia intervenuto rinvio a giudizio per il delitto
+previsto dall’art. 317 del c.p.
+3)         CONOSCENZA DEL CODICE COMPORTAMENTO DEI DIPENDENTI PUBBLICI DEL POLITECNICO DI
+MILANO E PIANO INTEGRATO DI ATTIVITÁ E ORGANIZZAZIONE CORRUZIONE DI ATENEO
+Il fornitore dichiara di conoscere il Codice Etico e di Comportamento del Politecnico di Milano e il Piano
+Integrato di Attività e Organizzazione dell’Ateneo, reperibili agli indirizzi:
+https://trasparenza.polimi.it/pagina769_prevenzione-della-corruzione.html                                           e
+https://www.normativa.polimi.it/strumenti/dettaglio-regolamento/codice-etico-e-di-comportamento
+L’appaltatore ha l’obbligo di rispettare e di divulgare all’interno della propria organizzazione il Codice Etico e
+di Comportamento del Politecnico di Milano per tutta la durata della procedura di affidamento e del contratto.
+Fatti salvi gli eventuali altri effetti, l’inosservanza delle norme e/o la violazione degli obblighi derivanti dal
+codice di comportamento dei dipendenti pubblici di cui all’art. 54 del D.Lgs. 165/2001 o al Codice Etico e di
+Comportamento del Politecnico di Milano comporta la risoluzione del presente contratto ai sensi dell’art.1456
+del c.c.
+4)         EX DIPENDENTI
+Il Fornitore dichiara di non avere concluso contratti di lavoro subordinato o autonomo e/o di non aver
+attribuito incarichi ad ex dipendenti che hanno esercitato poteri autoritativi o negoziali per conto
+dell’Università per il triennio successivo alla cessazione del rapporto e si impegna a non stipularli nel
+successivo triennio.
+
+
+Art. 20. ACCESSO AGLI ATTI
+
+
+
+
+                                                                                                                   27
+In caso di richiesta di accesso agli atti, come previsto dal Regolamento di Ateneo, emanato con Decreto del
+Direttore Generale Rep. n. 7760 Prot. n. 113938 del 04/12/2017, verrà applicato il tariffario approvato dal
+Consiglio di Amministrazione il 28/11/2017 visibile al seguente indirizzo:
+https://www.normativa.polimi.it/fileadmin/user_upload/regolamenti/regolamenti_generali/388_rimborso_
+costi_riproduzione_e_ricerca_di_documenti.pdf
+
+
+Art. 21. CONTATTI
+Eventuali richieste di chiarimenti, in ordine al contenuto del Bando di gara, del presente Capitolato e del
+Disciplinare di gara potranno essere formulate esclusivamente per via telematica attraverso la funzione
+comunicazioni sul sistema di gara Sintel di ARIA Lombardia S.p.A.
+
+
+Il RUP
+Ing. Fabrizio Pedranzini
+
+
+
+
+                                                                                                        28
+

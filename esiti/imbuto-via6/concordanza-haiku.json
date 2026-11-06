@@ -1,0 +1,511 @@
+{
+ "a": "esiti-claude-via6",
+ "b": "esiti-haiku",
+ "cig_comuni": 50,
+ "campi": {
+  "asse_a.stato": {
+   "accordo": 30,
+   "n": 50,
+   "pct": 60.0,
+   "wilson95": [
+    0.462,
+    0.724
+   ],
+   "kappa": 0.296,
+   "disaccordi": [
+    {
+     "cig": "A053E6BD30",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B06B262288",
+     "a": "escluso-certo",
+     "b": "incerto"
+    },
+    {
+     "cig": "B0BB928390",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B14DCBD2B6",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B153444D8A",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B179EF4C27",
+     "a": "escluso-certo",
+     "b": "incerto"
+    },
+    {
+     "cig": "B1CE78AC98",
+     "a": "escluso-certo",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B2A6ED6D5C",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B2B394AF2D",
+     "a": "escluso-certo",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B323C900DC",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B34869279F",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B52A158C42",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B6F0825A3E",
+     "a": "escluso-certo",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B8DA8CC9DC",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "BC171F5176",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "BC33BBF900",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "BC71BD9E45",
+     "a": "escluso-certo",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "BC7C312D60",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "BCD3FF8940",
+     "a": "escluso-certo",
+     "b": "incerto"
+    },
+    {
+     "cig": "BCE1AC262B",
+     "a": "incerto",
+     "b": "incluso-certo"
+    }
+   ]
+  },
+  "servizio": {
+   "accordo": 29,
+   "n": 50,
+   "pct": 58.0,
+   "wilson95": [
+    0.442,
+    0.706
+   ],
+   "kappa": 0.492,
+   "disaccordi": [
+    {
+     "cig": "A053E6BD30",
+     "a": "servizi-professionali",
+     "b": "cloud"
+    },
+    {
+     "cig": "B033E20C16",
+     "a": "cloud",
+     "b": "?"
+    },
+    {
+     "cig": "B0FCC3FC81",
+     "a": "?",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B10A6B541C",
+     "a": "hardware",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B14D34FA9B",
+     "a": "lavori-non-ict",
+     "b": "altro"
+    },
+    {
+     "cig": "B179EF4C27",
+     "a": "servizi-professionali",
+     "b": "altro"
+    },
+    {
+     "cig": "B1CE78AC98",
+     "a": "servizi-professionali",
+     "b": "cloud"
+    },
+    {
+     "cig": "B26C7D99B8",
+     "a": "sanitario-non-ict",
+     "b": "hardware"
+    },
+    {
+     "cig": "B2B394AF2D",
+     "a": "servizi-professionali",
+     "b": "cloud"
+    },
+    {
+     "cig": "B2BC00915E",
+     "a": "lavori-non-ict",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B323C900DC",
+     "a": "servizi-professionali",
+     "b": "altro"
+    },
+    {
+     "cig": "B330E864C2",
+     "a": "sanitario-non-ict",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B3A41F1157",
+     "a": "sanitario-non-ict",
+     "b": "altro"
+    },
+    {
+     "cig": "B6145DBAE9",
+     "a": "altro",
+     "b": "lavori-non-ict"
+    },
+    {
+     "cig": "B654EA42ED",
+     "a": "sanitario-non-ict",
+     "b": "altro"
+    },
+    {
+     "cig": "B668ACB898",
+     "a": "sanitario-non-ict",
+     "b": "hardware"
+    },
+    {
+     "cig": "B6F0825A3E",
+     "a": "servizi-professionali",
+     "b": "cloud"
+    },
+    {
+     "cig": "BB57EC8E72",
+     "a": "altro",
+     "b": "hardware"
+    },
+    {
+     "cig": "BC33BBF900",
+     "a": "lavori-non-ict",
+     "b": "altro"
+    },
+    {
+     "cig": "BC71BD9E45",
+     "a": "altro",
+     "b": "cloud"
+    },
+    {
+     "cig": "BCD3FF8940",
+     "a": "altro",
+     "b": "servizi-professionali"
+    }
+   ]
+  },
+  "asse_b.stato": {
+   "accordo": 38,
+   "n": 50,
+   "pct": 76.0,
+   "wilson95": [
+    0.626,
+    0.857
+   ],
+   "kappa": 0.445,
+   "disaccordi": [
+    {
+     "cig": "A053E6BD30",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B06B262288",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B12A574F3C",
+     "a": "non-applicabile",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B179EF4C27",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B1CE78AC98",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B2B394AF2D",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B2CE5700ED",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B323C900DC",
+     "a": "incerto",
+     "b": "non-applicabile"
+    },
+    {
+     "cig": "B3A41F1157",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B6F0825A3E",
+     "a": "non-applicabile",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "BC171F5176",
+     "a": "incerto",
+     "b": "non-applicabile"
+    },
+    {
+     "cig": "BC71BD9E45",
+     "a": "non-applicabile",
+     "b": "incerto"
+    }
+   ]
+  },
+  "giurisdizione": {
+   "accordo": 13,
+   "n": 50,
+   "pct": 26.0,
+   "wilson95": [
+    0.159,
+    0.396
+   ],
+   "kappa": 0.164,
+   "disaccordi": [
+    {
+     "cig": "A04CCEA29B",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B033E20C16",
+     "a": "IT",
+     "b": "ignota"
+    },
+    {
+     "cig": "B06B262288",
+     "a": "non-determinabile",
+     "b": "ignota"
+    },
+    {
+     "cig": "B0BB928390",
+     "a": "IT",
+     "b": "ignota"
+    },
+    {
+     "cig": "B10A6B541C",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B11EEEEFB8",
+     "a": "ignota",
+     "b": ""
+    },
+    {
+     "cig": "B14D34FA9B",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B14DCBD2B6",
+     "a": "EXTRA-UE",
+     "b": "ignota"
+    },
+    {
+     "cig": "B153444D8A",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B179EF4C27",
+     "a": "non-determinabile",
+     "b": "ignota"
+    },
+    {
+     "cig": "B1D2997E57",
+     "a": "",
+     "b": null
+    },
+    {
+     "cig": "B22A58B285",
+     "a": "ignota",
+     "b": null
+    },
+    {
+     "cig": "B233B996C0",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B26C7D99B8",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B26C7DDD04",
+     "a": "ignota",
+     "b": ""
+    },
+    {
+     "cig": "B2A6ED6D5C",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B2BC00915E",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B323C900DC",
+     "a": "ignota",
+     "b": ""
+    },
+    {
+     "cig": "B330E864C2",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B33E5F5CCB",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B34869279F",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B3A41F1157",
+     "a": "non-determinabile",
+     "b": "ignota"
+    },
+    {
+     "cig": "B45EB1C19B",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B52A158C42",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B60B439CD4",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B654EA42ED",
+     "a": "non-determinabile",
+     "b": "ignota"
+    },
+    {
+     "cig": "B668ACB898",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B6F0825A3E",
+     "a": "non-determinabile",
+     "b": "EXTRA-UE"
+    },
+    {
+     "cig": "B8DA8CC9DC",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "BB2480578E",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "BB57EC8E72",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "BC171F5176",
+     "a": "ignota",
+     "b": ""
+    },
+    {
+     "cig": "BC33BBF900",
+     "a": "",
+     "b": null
+    },
+    {
+     "cig": "BC6A456E7A",
+     "a": "ignota",
+     "b": null
+    },
+    {
+     "cig": "BC6A458025",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "BC71BD9E45",
+     "a": "non-determinabile",
+     "b": "ignota"
+    },
+    {
+     "cig": "BCD3FF8940",
+     "a": "non-determinabile",
+     "b": null
+    }
+   ]
+  }
+ },
+ "validita_b": {
+  "uscite": 50,
+  "valide": 19,
+  "citazioni": 69,
+  "citazioni_letterali": 51
+ }
+}

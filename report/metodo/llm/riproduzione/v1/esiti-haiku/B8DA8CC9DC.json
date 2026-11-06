@@ -1,0 +1,42 @@
+{
+ "cig": "B8DA8CC9DC",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "6ae3d9d57dacc279bfcd3576efe104488abe504a0c9460131aa96d2beabf993a",
+ "quando": "2026-11-06T13:22:57+00:00",
+ "uscita": {
+  "cig": "B8DA8CC9DC",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "sanitario-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "FORNITURA IN SERVICE QUINQUENNALE PER INDAGINI ANALITICHE DI CHIMICA ED IMMUNOCHIMICA (AREA SIERO) PER I SERVIZI DI PATOLOGIA CLINICA DELL'ASP MESSINA | GARA EUROPEA A PROCEDURA APERTA TELEMATICA TRAMITE PIATTAFORMA AZIENDALE (E-PROCUREMENT) PER LA FORNITURA QUINQUENNALE IN SERVICE IN NN. 18 LOTTI DI REAGENTI E MATERIALE DI CONSUMO"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto e il CPV 33696500-0 (Reagenti chimici per laboratorio clinico) indicano una fornitura quinquennale di reagenti e materiale di consumo per laboratorio clinico (patologia clinica), non un servizio ICT o cloud. Sebbene la gara menzioni un componente secondario di sistema informatico gestionale, l'appalto è primariamente sanitario."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

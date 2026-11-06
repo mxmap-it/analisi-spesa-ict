@@ -1,0 +1,48 @@
+{
+ "cig": "B6F0825A3E",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "38f59f02e0b3f65eee3a4eeae657cb03700399ae1049b24a9abbd4f63497d337",
+ "quando": "2026-11-06T13:22:24+00:00",
+ "uscita": {
+  "cig": "B6F0825A3E",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incluso-certo",
+   "provider_prodotto": "Amazon Web Services",
+   "giurisdizione": "EXTRA-UE"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "fea37fabb1a426a23b1d104f4a50ca048d8743947d6dc93333bcc72a8850b323",
+    "pagina": null,
+    "citazione": "Nettuno è la soluzione dispiegata su piattaforma IaaS / Paas di Amazon, pensata e sviluppata da Municipia"
+   },
+   {
+    "sha256": "fea37fabb1a426a23b1d104f4a50ca048d8743947d6dc93333bcc72a8850b323",
+    "pagina": null,
+    "citazione": "Cloud Deployment Model: Public Cloud"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "c791c1061290b0b6bfc09f95b7c20bbe2d809cf89a7463696937c1267c4217e7"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "La scheda del catalogo ACN (SA-6295) certifica che Nettuno è una soluzione cloud IaaS/PaaS dispiegata su infrastruttura Amazon. Provider: Amazon Web Services (EXTRA-UE)."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": true
+}

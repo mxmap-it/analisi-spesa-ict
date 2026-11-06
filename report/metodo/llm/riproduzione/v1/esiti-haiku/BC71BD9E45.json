@@ -1,0 +1,48 @@
+{
+ "cig": "BC71BD9E45",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "c3521117fc6c4894c72e11b729b3325d3524c6169c63a31695abae2e9d752677",
+ "quando": "2026-11-06T13:27:59+00:00",
+ "uscita": {
+  "cig": "BC71BD9E45",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "AFFIDAMENTO DEL SERVIZIO DI EROGAZIONE, GESTIONE E MONITORAGGIO DEI SERVIZI DI WELFARE AZIENDALE IN FAVORE DEI DIPENDENTI DI AMA S.P.A. TRAMITE L'UTILIZZO DI UNA PIATTAFORMA INFORMATICA"
+   },
+   {
+    "sha256": "904ed4ab8bb221112048efcde993146390a77e45fc47dcb2bab1b10c4b45d3a1",
+    "pagina": 5,
+    "citazione": "Le attività del presente appalto avranno esecuzione presso la Sede dell'Appaltatore con utilizzo della piattaforma da remoto tramite postazioni informatiche individuali dei dipendenti beneficiari"
+   }
+  ],
+  "deduzioni": [
+   "La piattaforma è erogata online da remoto, dunque gestita dal fornitore dal suo data center o cloud provider"
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "Determinazione di aggiudicazione con indicazione dell'aggiudicatario e della piattaforma utilizzata (provider e localizzazione dell'infrastruttura)",
+  "motivazione": "Il contratto affida la gestione integrale di un piano di welfare attraverso una piattaforma informatica SaaS erogata da remoto. È cloud per definizione, ma l'assenza di aggiudicatario e il silenzio del capitolato sulla localizzazione dell'infrastruttura lasciano incerto il provider del prodotto e la sua giurisdizione."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  false,
+  false
+ ],
+ "valida": true
+}

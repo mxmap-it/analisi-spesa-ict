@@ -1,0 +1,36 @@
+{
+ "cig": "B654EA42ED",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "ff7a3058451c211c2d3d33feb0691956ddf23982e7e5717b1bac12b7667fea27",
+ "quando": "2026-11-06T13:21:36+00:00",
+ "uscita": {
+  "cig": "B654EA42ED",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "?",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [],
+  "deduzioni": [
+   "L'oggetto BDNCP descrive un general contract di laboratorio il cui fulcro è attrezzature, reagenti e materiale diagnostico. La voce 'gestione software' potrebbe riferirsi a una soluzione cloud, on-premise, a sviluppo custom, o a servizi di integrazione, ma l'oggetto non lo specifica"
+  ],
+  "documenti_non_pertinenti": [
+   "9a3cb23dea035c30152ce99a7449df1a59113ffe57ab02ad1a61f6c314867217"
+  ],
+  "documento_risolutivo": "Capitolato tecnico o determina di affidamento che descriva la natura e le modalità di erogazione del software e dei servizi di integrazione con laboratori esterni",
+  "motivazione": "Il CIG riguarda un general contract di laboratorio (CPV 85148000-8, importo 55 M€, durata 108 mesi). L'oggetto nomina 'gestione software' e 'integrazioni con laboratori esterni' ma non specifica se siano cloud, on-premise o consulenziali. Il documento fornito tratta test psicologici ed è non pertinente. Solo il capitolato tecnico può chiarire se il software sia infrastrutturaale o accessorio al servizio."
+ },
+ "errori_schema": [],
+ "prove_letterali": [],
+ "valida": true
+}

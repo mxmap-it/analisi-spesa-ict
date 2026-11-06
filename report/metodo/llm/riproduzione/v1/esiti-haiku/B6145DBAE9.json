@@ -1,0 +1,42 @@
+{
+ "cig": "B6145DBAE9",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "9f9cde2e51286297fb2f8eb20d19a38a0e6f5bf56bc531ca74b96ea3d04a465d",
+ "quando": "2026-11-06T13:21:14+00:00",
+ "uscita": {
+  "cig": "B6145DBAE9",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "lavori-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "4edcf5a1ca69073cd92ffb3a7942097c8ce585a66d8eceac9383b11912f78483",
+    "pagina": null,
+    "citazione": "SERVIZI DI PULIZIA DELLE AREE E LOCALI APERTI AL PUBBLICO COMPRESE LE TOILETTES NONCHE DI ALTRE AREE E LOCALI NON APERTI AL PUBBLICO PRESSO L AEROPORTO DI PALERMO"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda servizi di pulizia presso l'aeroporto di Palermo, confermato dal CPV 90910000-9 e dal documento fornito. Non è un servizio cloud né ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

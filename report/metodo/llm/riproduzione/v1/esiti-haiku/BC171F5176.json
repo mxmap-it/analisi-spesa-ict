@@ -1,0 +1,52 @@
+{
+ "cig": "BC171F5176",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "c5f2b2982c46d30fb5d0b5fb00abf3c202fa8164a965849017b5d398b364878a",
+ "quando": "2026-11-06T13:25:04+00:00",
+ "uscita": {
+  "cig": "BC171F5176",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROCEDURA APERTA PER L'AFFIDAMENTO IN NOLEGGIO OPERATIVO DELLE TECNOLOGIE INFORMATICHE RELATIVE ALL'ACCOGLIENZA"
+   },
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "CPV 32320000-2 - Apparecchiature audiovisive e televisive"
+   }
+  ],
+  "deduzioni": [
+   "Il CPV 32320000-2 identifica apparecchiature audiovisive e televisive, beni hardware. Il termine 'noleggio operativo' indica acquisizione di beni per uso presso i siti ospedalieri, non servizio erogato dall'infrastruttura del fornitore"
+  ],
+  "documenti_non_pertinenti": [
+   "998f294209bc977a97c4399dcfaaf433028b43930b612f6509b2d2478ca4eef9"
+  ],
+  "documento_risolutivo": "Capitolato tecnico completo per escludere la presenza di componenti di servizio cloud (es. hosting remoto, gestione centralizzata in data center del fornitore)",
+  "motivazione": "Noleggio di apparecchiature informatiche per accoglienza ospedaliera (hardware), non servizio cloud. ICT = sì perché hardware informatico, cloud = no perché bene fisico acquisito in locazione, non servizio da infrastruttura remota."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

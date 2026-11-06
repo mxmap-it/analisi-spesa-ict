@@ -1,0 +1,51 @@
+{
+ "cig": "B34869279F",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "c3712d6d2a3fd3e7fa0b91d797b1347ba6140ad0bb6f5b27bba245e0565bff4c",
+ "quando": "2026-11-06T13:18:49+00:00",
+ "uscita": {
+  "cig": "B34869279F",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "connettivita"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ PER LO SVILUPPO DELLA RETE TELEMATICA DEL SISTEMA INFORMATIVO OSPEDALIERO E DEI PROGETTI DI DIGITALIZZAZIONE DEGLI OSPEDALI DELLA REGIONE DEL VENETO"
+   },
+   {
+    "sha256": "d81d82eb5b39a4c744122985abb19e516aabf31310e99f2716c20e504ee3214e",
+    "pagina": 5,
+    "citazione": "Il presente appalto ha come oggetto l'erogazione di servizi di connettività basati sulle tecnologie indicate di seguito. Connettività L2 a 100 Gbps tra i tre data center del PSR [...] Connettività MPLS a 10 Gbps"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "1e1ca8297eed0a89bb009865dd5b6a703b10e2c08577cbd455d16500e2022e4c",
+   "2a203974819aac1d0eefdf203167e1cef52216f72a52e2c4d9efb953f20737c1"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto acquista servizi di connettività (L2, MPLS) per trasporto dati tra data center, non servizi cloud (SaaS/IaaS/PaaS). È un servizio di telecomunicazione, esclusivamente infrastrutturale."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

@@ -1,0 +1,42 @@
+{
+ "cig": "BCE1AC262B",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "44985e05b90b7c8b8d4f6b0b96a2e9747d307de7354841c2a4d4127b898bbd16",
+ "quando": "2026-11-06T13:29:48+00:00",
+ "uscita": {
+  "cig": "BCE1AC262B",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignota",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI DATA CENTER IN OUTSOURCING PER IL SISTEMA SAP DI AMA S.P.A., PER UN PERIODO DI 60 (SESSANTA) MESI."
+   }
+  ],
+  "deduzioni": [
+   "Un data center in outsourcing è un servizio di hosting/housing erogato dall'infrastruttura del fornitore, rientrando nella definizione di cloud."
+  ],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "Capitolato tecnico con la descrizione dell'architettura e del provider del data center (Public Cloud commerciale, PSN, o in-house pubblico); determina di aggiudicazione che nomina il fornitore.",
+  "motivazione": "L'oggetto BDNCP nomina esplicitamente 'servizio di data center in outsourcing' per il sistema SAP, confermando con certezza che è un servizio cloud di hosting. La procedura è ancora in aggiudicazione (aggiudicatari: None), quindi il provider produttivo e la giurisdizione rimangono ignoti fino all'assegnazione del contratto."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

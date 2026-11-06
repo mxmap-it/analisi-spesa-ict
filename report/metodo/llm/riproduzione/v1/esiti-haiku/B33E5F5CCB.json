@@ -1,0 +1,38 @@
+{
+ "cig": "B33E5F5CCB",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "31f7592493638534cef5038bbb233cce4dee90cb1fd184e78cb34cad8be79592",
+ "quando": "2026-11-06T13:18:19+00:00",
+ "uscita": {
+  "cig": "B33E5F5CCB",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO | ATTIVITÀ DI SVILUPPO E REALIZZAZIONE DEL CENTRO OPERATIVO DI CYBERSECURITY (C-SOC)"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto BDNCP descrive servizi di progettazione, sviluppo e realizzazione di un centro operativo, non l'acquisizione di un servizio cloud erogato. Il CPV 73300000-5 (Research and development services) conferma che si tratta di servizi di R&D, classificabili come servizi-professionali."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

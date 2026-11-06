@@ -1,0 +1,48 @@
+{
+ "cig": "BC7C312D60",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "a2dcccce2cc8d284a4c0ccfeb6ed5d71bb8296996d204caa12aafe3182b14525",
+ "quando": "2026-11-06T13:28:21+00:00",
+ "uscita": {
+  "cig": "BC7C312D60",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignoto",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZIO DI WELFARE A FAVORE DEL PERSONALE DELLE AZIENDE ED ENTI DEL SSSR MEDIANTE PIATTAFORMA SAAS"
+   }
+  ],
+  "deduzioni": [
+   "L'oggetto nomina esplicitamente una piattaforma SaaS (Software as a Service), che rientra nella categoria cloud per la definizione fornita",
+   "Servizio di welfare aziendale erogato via piattaforma in abbonamento"
+  ],
+  "documenti_non_pertinenti": [
+   "d47a5b4d47791bfd3a8cd306cb9a22d840d7886c7bbdc52cd7443b31b810b5c3",
+   "325b00778c35a58a5d55f7c68dfa4869c10f9cbb95c13be5812c8ee71f4409dc",
+   "c2d78e210ad759eb0d3ae5785e7596549097e4d86a2b2fd91e7159b840ec6215",
+   "8ab5e0ea56cdf2e85cb406ec108149ed2736f68445ecfd699ec5a51e230bcee1"
+  ],
+  "documento_risolutivo": "Capitolato tecnico, determina di affidamento o contratto che indichi il nome del provider della piattaforma SaaS di welfare e i dettagli della sua giurisdizione (filiale/capogruppo)",
+  "motivazione": "L'oggetto della gara nomina una piattaforma SaaS per la gestione del welfare, che è cloud. La confidenza è media perché l'asse A è certo da citazione diretta nell'oggetto, ma l'asse B rimane incerto: non si identifica il provider né la giurisdizione. I documenti forniti sono per la maggior parte non pertinenti (storico gare di altre procedure, piattaforma Sintel generica)."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

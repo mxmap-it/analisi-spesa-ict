@@ -1,0 +1,567 @@
+CLASSIFICAZIONE DEL DOCUMENTO: CONSIP PUBLIC
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+ACCORDO QUADRO AI SENSI DELL’ART. 54 DEL D. LGS. 50/2016 PER LA
+DEFINIZIONE DI UN CATALOGO ELETTRONICO PER PRODOTTI CLOUD IN
+MODALITÀ SAAS NELL’AMBITO ITSM – ID 2453
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+  INDICE
+  1)     CONTESTO .............................................................................................................................4
+  1.1          Definizioni e Acronimi ...........................................................................................................4
+  1.2          Le Gare Strategiche e l’ambito PRINCO ................................................................................ 4
+  2)           DESCRIZIONE DELLA FORNITURA .......................................................................................... 7
+  2.1          Oggetto della Fornitura .........................................................................................................7
+  2.2          Modello di erogazione e remunerazione .............................................................................. 7
+  2.3          “Requisiti minimi” dei bundle ............................................................................................... 8
+  2.3.1        “Requisiti minimi” di e-mail (Posta Elettronica) .................................................................... 8
+  2.3.2        “Requisiti minimi” di gestione documentale e di file sharing (Documentale) ....................... 9
+  2.3.3        “Requisiti minimi” di Collaboration (Instant Messaging e di Audio/Video Conference) ..... 10
+  2.4          Descrizione dei bundle e delle “caratteristiche ulteriori” ................................................... 12
+  2.4.1        Caratteristiche ulteriori del “Bundle Posta Elettronica” ...................................................... 12
+  2.4.2        Caratteristiche ulteriori del “Bundle Documentale”............................................................ 13
+  2.4.3        Caratteristiche ulteriori del “Bundle Collaboration” ........................................................... 13
+  2.4.4        Caratteristiche ulteriori del “Bundle Posta Elettronica+Documentale”............................... 14
+  2.4.5        Caratteristiche ulteriori del “Bundle Posta Elettronica+Documentale+Collaboration”Errore.
+  Il segnalibro non è definito.
+  2.5          Caratteristiche complementari ........................................................................................... 14
+  2.6          Indicatori di Qualità ............................................................................................................14
+  3)           Verifiche tecniche ...............................................................................................................15
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+1) CONTESTO
+
+1.1      Definizioni e Acronimi
+Nel corpo del presente Capitolato Tecnico si riportano i seguenti termini, intesi come:
+     Stazione Appaltante/Amministrazione Aggiudicatrice: Consip S.p.A;
+     Amministrazione / Amministrazione Contraente: le Amministrazioni dello Stato, nonché le
+        restanti Pubbliche Amministrazioni definite dall’articolo 1 del D.Lgs. n. 165/2001 (che ha
+        sostituito l’art. 1 del D.Lgs. n. 29/1993), come modificato dall’articolo 1 della legge 145/2002,
+        come richiamato dall’articolo 58, Legge 23 dicembre 2000, n. 388, nonché gli altri soggetti
+        legittimati, che aderiscono all’Accordo Quadro nel periodo della sua validità ed efficacia;
+     Aggiudicatario/i dell’Accordo Quadro (Aggiudicatario/i o Fornitore/i): l’Impresa/e
+        selezionata/e nell’ambito della presente procedura che offrirà i propri prodotti SaaS PRINCO a
+        seguito della stipula della Convenzione;
+     Fase 1 (dell’AQ): la prima fase del procedimento di affidamento dei servizi oggetto del
+        presente Accordo Quadro, come definito dal paragrafo 2.2 del Capitolato Tecnico Generale;
+     Fase 2 (dell’AQ): la seconda fase del procedimento di affidamento dei servizi oggetto del
+        presente Accordo Quadro, come definito dal paragrafo 2.2 del Capitolato Tecnico Generale;
+     Appalto Specifico: la procedura indetta dall’Amministrazione Contraente per la competizione
+        fra gli aggiudicatari di Fase 1 secondo le regole indicate nel CdO.
+     Unità Ordinante/i: gli Uffici e le persone fisiche delle Amministrazioni Contraenti abilitati ad
+        effettuare le richieste di fornitura e ad emettere gli ordinativi, così come indicati nelle stesse
+        richieste di fornitura.
+     Ordinativo/i di Fornitura (OdF): il documento con il quale le Amministrazioni Contraenti,
+        eventualmente anche attraverso le Unità Ordinanti, manifestano la loro volontà di acquistare
+        i Prodotti SaaS PRINCO oggetto del presente Accordo Quadro senza riapertura del confronto
+        competitivo secondo le regole stabilite dall’AQ;
+     Contratto esecutivo: il contratto stipulato tra l’Amministrazione Contraente e l’Aggiudicatario
+        a seguito del perfezionamento della procedura di acquisizione (o mediante Ordinativo o
+        mediante AS);
+     Offerente o Concorrente: impresa o Raggruppamento Temporaneo di Imprese (R.T.I.) che
+        presenta offerta per la presente procedura;
+     Service Level Agreement (SLA): elementi che regolano i termini qualitativi e i livelli di servizio
+        richiesti;
+     AgID: Agenzia per l’Italia Digitale.
+
+Laddove applicabile, valgono le disposizioni di cui al DL n. 105/2019 (convertito in L. n. 133/2019) in
+materia di sicurezza cibernetica e tutte le disposizioni integrative.
+
+
+
+1.2      Le Gare Strategiche e l’ambito ITSM
+Le Gare Strategiche ICT a supporto dello sviluppo del Piano Triennale costituiscono l’insieme dei servizi
+che dovranno essere messi a disposizione delle Amministrazioni (PP.AA.) per consentire la definizione
+e l’implementazione della strategia per la Trasformazione Digitale della Pubblica Amministrazione
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+Italiana. L’obiettivo è quello di creare il “sistema operativo” del Paese, ovvero una serie di componenti
+fondamentali sui quali definire ed erogare servizi più semplici ed efficaci per i cittadini, le imprese e la
+stessa Pubblica Amministrazione (P.A.).
+In generale, quindi, saranno disponibili servizi per operare sulla definizione di processi e servizi, sulla
+analisi e realizzazione delle componenti applicative e infrastrutturali, con specifico riferimento al
+paradigma CLOUD.
+Il presente Capitolato tecnico speciale (in avanti anche solo “CTS”) disciplina quindi:
+      1. i requisiti minimi relativi a una parte dei servizi cloud SaaS, oggetto della presente iniziativa,
+          che riguardano l’ambito (ITSM);
+          In particolar modo verranno descritti i requisiti minimi richiesti ai fornitori aggiudicatari che
+          identificano le caratteristiche funzionali le quali classificano ciascun prodotto SaaS.
+      2. le modalità con le quali i fornitori aggiudicatari, nell’ambito del proprio “catalogo elettronico
+          di fornitura” (d’ora in poi anche “listino” o “listino del fornitore”), presentato nella prima fase
+          (c.d. “Fase 1”) di quanto previsto dal capitolo 2 “Modello di Funzionamento” del Capitolato
+          Tecnico Generale (CTG), allegato alla documentazione della presente procedura di gara,
+          indicheranno le caratteristiche «ulteriori» (o di secondo livello): queste ultime consentiranno
+          alle amministrazioni di dettagliare, nella seconda fase (c.d. “Fase 2”) prevista dal citato
+          capitolo 2 del CTG, specificatamente il proprio fabbisogno. Lo stesso verrà identificato sia dai
+          requisiti minimi (tutti obbligatori) che dalle “caratteristiche ulteriori” che
+          ciascun’amministrazione riterrà applicabili al proprio scenario tecnico.
+Pertanto, ogni concorrente partecipante alla procedura per la conclusione dell’AQ dovrà offrire nel
+proprio listino:
+      1. tutti i requisiti minimi previsti da Consip (e quindi da ritenersi come obbligatori a pena di
+          inammissibilità dell’offerta);
+      2. le “caratteristiche ulteriori” (non obbligatorie) che serviranno ad integrare l’offerta del
+          proprio prodotto e saranno utili in Fase 2 per le Amministrazioni acquirenti.
+
+LE CARATTERISTICHE “ULTERIORI”
+Le “caratteristiche ulteriori” si distingueranno in due tipologie:
+      qualitative
+      e quantitative.
+
+Le caratteristiche ulteriori qualitative saranno utilizzate dalle Amministrazioni con una indicazione di
+tipo “on/off” al fine descrivere i propri requisiti minimi di Fase 2.
+Le caratteristiche ulteriori quantitative saranno, invece, utilizzate dalle Amministrazioni con una
+indicazione di tipo soglia “maggiore di” o “minore di” a seconda della specifica caratteristica al fine
+descrivere i propri requisiti minimi di Fase 2.
+
+L’unione dei due insiemi di “requisiti minimi” e “caratteristiche ulteriori (quantitative e/o qualitative)”
+costituirà il fabbisogno tecnologico della singola amministrazione in Fase 2.
+Sulla scorta della vetrina popolata dai Cataloghi di fornitura di ciascun aggiudicatario di Fase 1, la
+singola Amministrazione potrà:
+     1. individuare la platea di listini che possono coincidere col proprio fabbisogno;
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+    2.   sulla scorta di questo ‘sotto-insieme’ avvierà la selezione tra gli aggiudicatari secondo le regole
+         descritte nel Capitolato d’Oneri (CdO).
+
+Le regole di catalogo elettronico di fornitura sono tali per cui il fabbisogno selezionato
+dall’Amministrazione, sulla base di un determinato perimetro tecnico minimo (costituito quindi dai
+requisiti minimi e dalle caratteristiche ulteriori - qualitative e/o quantitative - individuati dalla PA),
+tutti i bundle che risulteranno uguali e/o superiori in termini di caratteristiche minime ed ulteriori
+rientreranno nel confronto competitivo.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+2) DESCRIZIONE DELLA FORNITURA
+2.1      Oggetto della Fornitura
+Oggetto della fornitura sono i prodotti dell’ambito di IT Service Management erogati in modalità
+Software as a Service (in avanti per comodità “ITSM”).
+
+Sono identificati quattro declinazioni di bundle funzionali (d’ora in poi anche solo “bundle”), cioè
+quattro pacchetti di funzionalità, che indicano le componenti elementare in ambito ITSM, in modalità
+SaaS, e che potranno essere offerte anche parzialmente, come dettagliatamente indicato nel successivo
+paragrafo Errore. L'origine riferimento non è stata trovata.:
+     1. Bundle ITSM: è il modulo che comprende la sola componente di Service Management;
+     2. Bundle Operation management: è il modulo che comprende le funzionalità legate alle
+          Operation dei Servizi IT;
+     3. Bundle Asset management: è il modulo che comprende le funzionalità di gestione del ciclio di
+          vita degli asset;
+     4. Bundle Contract management: è il modulo che comprende le funzionalità il pacchetto
+          intermedio, che comprende sia la componente e-mail che la componente di “gestione
+          documentale” e di “file sharing”.
+Ogni concorrente nella prima fase come definita nelle premesse del Capitolato d’Oneri, offre almeno
+un Bundle, caratterizzato dai requisiti minimi obbligatori e dalle caratteristiche ulteriori eventualmente
+offerte, con riferimento a quanto riportato successivamente nel presente capitolo. Il concorrente può
+offrire esclusivamente il medesimo CSP per ogni bundle. Ogni bundle offerto deve risultare
+perfettamente integrabile con gli altri eventualmente offerti.
+
+I requisiti minimi dei quattro bundle sono descritti successivamente.
+
+2.2      Modello di erogazione e remunerazione
+Per tutte e quattro le tipologie di bundle l’appalto prevede un modello di erogazione in cloud dei
+prodotti SaaS che verranno descritti successivamente.
+Tali servizi dovranno essere qualificati da AgID ai sensi d circolare n.3 del 9 aprile 2018 e s.m.i. e saranno
+remunerati secondo le logiche di seguito rappresentate:
+                                                                      Metrica di
+                            Funzionalità (bundle)
+                                                                    remunerazione
+
+                    Service Management                               Utente/mese
+
+                    Operation Management                              Unità/mese
+
+                    Asset management                                  Unità/mese
+
+                    Contract management                              Utente/mese
+
+
+omnicomprensivi di tutte le funzionalità presenti nel bundle previsto dal Contratto della relativa
+Amministrazione, sia per ciò che concerne i requisiti minimi che le caratteristiche ulteriori (o di secondo
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+livello) presenti nel catalogo dell’aggiudicatario.
+La qualificazione cloud per la Pubblica Amministrazione (c.d. qualificazione AgID) dovrà essere
+posseduta almeno in fase di stipula.
+
+2.3      “Requisiti minimi” dei bundle
+Nelle sezioni successive del documento sono descritti e definiti i requisiti minimi richiesti per ciascuna
+tipologia di bundle indicata in precedenza.
+Tutte le funzionalità descritte nei successivi sotto-paragrafi riguardano il possesso dei seguenti requisiti
+minimi obbligatori per tutte le tipologie di bundle:
+      accesso attraverso API, anche per integrazione con sistemi di gestione del personale;
+      utilizzo attraverso un browser web;
+      capacità di Data Protection secondo i protocolli: TLS e IPSEC VPN;
+      caricamento dei dati da formati standard (csv,xls,etc);
+      estrazione dei dati in formati standard (csv,xls,etc);
+      certificazioni ISO 27001.
+
+Si ricorda che oltre ai requisiti minimi, in sede di presentazione delle offerte, dovranno essere indicate
+le “caratteristiche ulteriori” di cui i prodotti offerti godono. Tutti i requisiti minimi e le “caratteristiche
+ulteriori” saranno oggetto di comprova tecnico-funzionale, come descritto successivamente nel
+paragrafo 3).
+
+2.3.1 “Requisiti minimi” di ITSM (Service Management)
+
+Le funzionalità di Service management richieste devono consentire alla PA la gestione dei propri
+processi ed i sistemi IT in linea con le pratiche ITIL. In particolare la soluzione dovrà garantire alle
+Amministrazioni pubbliche la possibilità di:
+             -    Monitorare il funzionamento dei sistemi IT;
+             -    Supervisionare l’aggiornamento delle infrastrutture IT;
+             -    Gestire i livelli di Servizio ed i KPI (indicatori di qualità);
+             -    Analizzare eventuali problemi o necessità IT espresse dei dipendenti e/o da altri
+                  utenti.
+
+In particolare è richiesto che la suite consenta alle Amministrazioni di implementare policy diversificate
+per i servizi IT, consenta di raccogliere richieste di intervento di diversa natura da parte degli utenti,
+consenta al personale IT la gestione delle richieste.
+
+Inoltre, deve essere possibile per gli utenti monitorare lo stato di risoluzione di una richiesta di
+intervento, e deve essere possibile configurare notifiche automatiche dei cambi di stato di una richiesta.
+
+Dovrà essere garantita la possibilità di configurare dashboard per monitorare lo stato di salute dei
+servizi IT e reportistica per misurare i KPI e monitorare i livelli di servizio.
+
+Le funzionalità di ITSM dovranno essere realizzate con applicazioni conformi agli attuali standard di
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+mercato ed in linea con le best practice ITIL.
+
+Inoltre, dovranno essere soddisfatti le seguenti funzionalità minime:
+        1. Disponibilità di strumenti self-service web based per gli utenti;
+        2. Classificazione delle richieste di intervento in base a priorità definite dalle Pubbliche
+            Amministrazioni tra cui la gestione di utenti VIP;
+        3. Dovrà essere possibile misurare opportune metriche che alimenteranno le misurazioni dei
+            livelli di servizio;
+        4. Dovrà essere possibile definire delle policy di assegnazione automatica del livello di severità;
+        5. Dovrà essere possibile configurare una dashboard per il monitoraggio delle richieste di
+            intervento - sia da un punto di vista utente che da un punto di vista Amministratore IT - in
+            qualsiasi stato e collezionare dati a fini statistici;
+        6. Possibilità di definire workflow per la gestione dei change;
+        7. Possibilità di definire workflow per la gestione delle release;
+        8. Gestione della configurazione degli Asset;
+        9. Funzionalità di reportistica;
+        10. Funzionalità di logging sugli incident;
+        11. Disponibilità di una knowledge base dei casi risolti;
+        12. Disponibilità di un CMDB (Configuration management Database) completo di informazioni
+            amministrative;
+        13. Gestione delle code per instradamento dei case con evidenza delle priorità;
+
+Oltre alle funzionalità su esposte, dovrà essere possibile alimentare il CMDB da fonti standard (csv, xls,
+etc) e dovranno essere disponibili 30 giorni di grace period al termina contrattuale durante il quale
+l’amministrazione potrà accedere ai propri dati senza utilizzo delle funzionalità.
+E’ richiesta la fruizione attraverso un portale web sicuro (conforme allo standard HTTPS - Secure Hyper
+Text Transfer Protocol) sia per l’accesso utente che per l’accesso amministrativo.
+Dovrà esser possibile profilare qualsiasi tipo di utente configurando gli opportuni permessi e privilegi.
+
+Attraverso l’interfaccia web saranno previste almeno le seguenti funzionalità Amministrative:
+       a. Navigazione dei menù e visibilità delle schede effettivamente profilate per l’utente;
+       b. Rubrica dei dipendenti;
+       c. Menù della reportistica;
+       d. Menù dei case e relativi dati storici;
+       e. Dashboard con lo stato di salute dei servizi IT;
+       f. Console amministrativa per la gestione delle utenze e configurazione dei permessi/privilegi;
+
+La metrica di consumo delle funzionalità del bundle ITSM è utente/mese.
+
+2.3.2 “Requisiti minimi” di Operation Management
+Le funzionalità di Operation management richieste devono consentire alla PA la gestione delle
+configurazioni dei propri asset (o Configuration Item) IT. In particolare la soluzione dovrà garantire alle
+Amministrazioni pubbliche la possibilità di:
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+             -    Gestire in maniera remota gli asset IT;
+             -    Pianificare le configurazioni e/o rilasci degli asset;
+             -    Gestire i livelli di Servizio ed i KPI (indicatori di qualità);
+             -    Analizzare eventuali problemi di configurazione degli asset.
+
+In particolare è richiesto che la suite consenta alle Amministrazioni di implementare specifiche policy
+per la gestione delle configurazioni.
+
+Dovrà essere garantita la possibilità di configurare dashboard per monitorare lo stato di salute degli
+asset e reportistica per misurare i KPI e monitorare i livelli di servizio.
+
+Inoltre, dovranno essere soddisfatti le seguenti funzionalità minime:
+        1. Rilasci automatici pacchetti di aggiornamento;
+        2. Gestione remota del Hardware;
+        3. Gestione remota del Software inclusi Sistemi Operativi e relative patch di aggiornamento;
+        4. Creazione di policy per la gestione di eventi che hanno impatto sui servizi IT;
+        5. Avvisi e notifiche automatiche con possibilità di creazione regole;
+        6. Disponibilità di APIRest per importare dati da terze parti;
+        7. Gestione alimentazione da remoto (WoL);
+        8. Dashboard per il monitoraggio dello stato di salute dei CT gestiti;
+
+Dovranno essere disponibili 30 giorni di grace period al termine contrattuale durante il quale
+l’amministrazione potrà accedere ai propri dati senza utilizzo delle funzionalità.
+E’ richiesta la fruizione attraverso un portale web sicuro (conforme allo standard HTTPS - Secure Hyper
+Text Transfer Protocol) sia per l’accesso utente che per l’accesso amministrativo.
+Dovrà esser possibile profilare qualsiasi tipo di utente configurando gli opportuni permessi e privilegi.
+
+Attraverso l’interfaccia web saranno previste almeno le seguenti funzionalità Amministrative:
+               a. Navigazione dei menù e visibilità delle schede effettivamente profilate per l’utente;
+               b. Rubrica dei CI;
+               c. Menù della reportistica;
+               d. Menù dei case e relativi dati storici;
+               e. Dashboard con lo stato di salute dei CI;
+               f. Console amministrativa per la gestione delle utenze e configurazione dei
+                   permessi/privilegi;
+
+La metrica di consumo delle funzionalità del bundle OM è CI/mese.
+
+2.3.3 “Requisiti minimi” di Asset management
+Le funzionalità di Asset management richieste devono consentire alla PA la gestione del ciclo di vita dei
+propri asset (o Configuration Item) IT. In particolare la soluzione dovrà garantire alle Amministrazioni
+pubbliche la possibilità di:
+              -    Gestire in maniera remota gli asset HW e SW;
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+             -    Pianificare le configurazioni e/o rilasci degli asset;
+             -    Gestire i livelli di Servizio ed i KPI (indicatori di qualità);
+             -    Gestire i contratti di servizio e/o di garanzia associati agli asset.
+
+In particolare è richiesto che la suite consenta alle Amministrazioni di implementare specifiche policy
+per la gestione del ciclo di vita degli asset.
+
+Inoltre, dovranno essere soddisfatti le seguenti funzionalità minime:
+        1. Gestione inventario degli asset hardware;
+        2. Gestione inventario asset software;
+        3. Gestione inventario asset mobile;
+        4. Gestione garanzia asset;
+        5. Gestione del fine vita degli asset;
+        6. CMDB alimentabile da fonti esterne standard
+
+Dovranno essere disponibili 30 giorni di grace period al termine contrattuale durante il quale
+l’amministrazione potrà accedere ai propri dati senza utilizzo delle funzionalità.
+E’ richiesta la fruizione attraverso un portale web sicuro (conforme allo standard HTTPS - Secure Hyper
+Text Transfer Protocol) sia per l’accesso utente che per l’accesso amministrativo.
+Dovrà esser possibile profilare qualsiasi tipo di utente configurando gli opportuni permessi e privilegi.
+
+Attraverso l’interfaccia web saranno previste almeno le seguenti funzionalità Amministrative:
+               a. Navigazione dei menù e visibilità delle schede effettivamente profilate per l’utente;
+               b. Inventario dei CI;
+               c. Menù della reportistica;
+               d. Localizzazione dei CI;
+               e. Console amministrativa per la gestione delle utenze e configurazione dei
+                   permessi/privilegi;
+
+La metrica di consumo delle funzionalità del bundle AM è CI/mese.
+
+2.3.4 “Requisiti minimi” di Contract management
+Le funzionalità di contract management richieste devono consentire alla PA la gestione delle
+configurazioni dei propri contratti IT. In particolare la soluzione dovrà garantire alle Amministrazioni
+pubbliche la possibilità di:
+             -    Gestire e pianificazione degli economics dei contratti;
+             -    Gestione delle scadenze;
+             -    Gestire i livelli di Servizio ed i KPI (indicatori di qualità);
+             -    Analizzare eventuali problemi di configurazione degli asset.
+
+Dovranno essere soddisfatti le seguenti funzionalità minime:
+      1. Gestione dei contratti IT comprensiva di pianificazione economica, consumo ,estensioni
+         disponibili;
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+       2. Versioning dei contratti nel tempo;
+       3. Monitoraggio delle scadenze;
+       4. Monitoraggio e gestione degli allarmi relativi a scadenze ed esaurimento massimali;
+
+Dovranno essere disponibili 30 giorni di grace period al termine contrattuale durante il quale
+l’amministrazione potrà accedere ai propri dati senza utilizzo delle funzionalità.
+E’ richiesta la fruizione attraverso un portale web sicuro (conforme allo standard HTTPS - Secure Hyper
+Text Transfer Protocol) sia per l’accesso utente che per l’accesso amministrativo.
+Dovrà esser possibile profilare qualsiasi tipo di utente configurando gli opportuni permessi e privilegi.
+
+Attraverso l’interfaccia web saranno previste almeno le seguenti funzionalità Amministrative:
+               a. Navigazione dei menù e visibilità delle schede effettivamente profilate per l’utente;
+               b. Rubrica dei Contratti;
+               c. Menù della reportistica;
+               d. Dashboard con monitoraggio dei contratti;
+               e. Console amministrativa per la gestione delle utenze e configurazione dei
+                   permessi/privilegi;
+
+La metrica di consumo delle funzionalità del bundle Contract Management è utente/mese.
+
+
+
+2.4      Caratteristiche ulteriori
+La presente sezione descrive per ognuno dei quattro bundle funzionali (anche solo “bundle”) di cui ai
+paragrafi 2.1 e 2.3. ma per quanto riguarda le “caratteristiche ulteriori”.
+
+E’ inteso che qualora offerti più moduli, e qualora le Amministrazioni dovessero selezionarne più di uno
+in seconda fase, dovranno essere garantite dai bundle tutti i requisiti minimi e le ulteriori caratteristiche
+eventualmente offerte anche dall’integrazione (cfr. par. 2.1) dei bundle.
+Tutti i bundle dovranno essere disponibili via web attraverso le ultime versioni di almeno due dei
+seguenti browser:
+
+                      Google Chrome;
+
+                      Mozilla Firefox;
+
+                      Apple Safari;
+
+                      Microsoft Edge.
+
+2.4.1 Caratteristiche ulteriori del “ITSM”
+Il primo modulo base, denominato Bundle ITSM, comprenderà obbligatoriamente i requisiti descritti al
+paragrafo 2.3.1.
+Di seguito sono invece riportate le caratteristiche ulteriori che il Concorrente può indicare (giacché il
+concorrente può partecipare anche solo con le caratteristiche minime) per la propria offerta di Fase 1
+(AQ) e che verranno utilizzate dalle Amministrazioni per delineare il proprio fabbisogno propedeutico
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+alla fase competitiva tra gli aggiudicatari di Fase 1 per quel fabbisogno specifico:
+         Strumenti self-service da app mobili [qualitativo];
+         Incident matching per l’individuazione di casistiche simili per la rapida risoluzione degli
+            incident [qualitativo];
+         Machine learning per la classificazione e il raggruppamento logico degli incident
+            [qualitativo];
+         integrazione completa della libreria di risoluzioni comprensiva di correlazione delle
+            risoluzioni con i problemi sollevati dall'utenza [qualitativo]
+         possibilità di collegare un task a degli incident ed effettuare attività di fix massive
+            [qualitativo];
+         localizzazione geografica utente con indicazione di piano, luogo, postazione fisica
+            [qualitativo]
+         integrazione con sistemi di monitoring per mostrare agli utenti lo state di salute dei servizi IT
+            [qualitativo]
+         chatbot per la gestione ed instradamento verso risoluzioni di primo livello presenti nella
+            libreria [qualitativo];
+         CMDB alimentabile anche da db relazionali open source con ereditamento delle relazioni
+            [qualitativo];
+         navigabilità del CMDB con vista delle dipendenze [qualitativo];
+         Canale esterno per utenti esterni all'organizzazione per attività di Customer Engagement
+            [qualitativo];
+         Numero di canali per CE [quantitativo]: questo requisito ulteriore è obbligatorio se offerto il
+            requisito al punto precedente, in particolare specifica in maniera quantitativa il numero di
+            canali inclusi nel prezzo per utente previsto per il bundle.
+
+
+
+2.4.2 Caratteristiche ulteriori del “Operation management”
+Il secondo modulo base, denominato Bundle Operation management, comprenderà obbligatoriamente
+i requisiti descritti al paragrafo 2.3.2.
+Le caratteristiche ulteriori che il Concorrente può offrire sono di seguito riportate:
+         Gestione riassegnazione delle licenze SW [qualitativo];
+         verifica compliance del licensing rispetto alle metriche di prodotto [qualitativo];
+         machine learning per analisi dati HW e SW [qualitativo];
+         disponibilità di connettori specifici per integrazioni con soluzioni di terze parti (per
+             l'acquisizione di metriche, eventi e topologie) [qualitativo];
+         verifica della compliance delle configurazioni dei device [qualitativo];
+         End point protection [qualitativo].
+
+2.4.3 Caratteristiche ulteriori del bundle “Asset management”
+Il terzo modulo base, denominato Bundle Asset Management, ed i cui requisiti minimi sono riportati
+nella precedente sezione 2.3.3.
+Le caratteristiche ulteriori che il Concorrente può offrire sono le seguenti:
+         indicazione contratti di servizio per ogni asset [qualitativo]
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+           indicazione contratti di leasing per ogni asset [qualitativo]
+           registrazione di tutte le attività di manutenzione relative all'asset [qualitativo]
+           libreria di modelli HW per la rapida creazione di una entry nel CMDB [qualitativo]
+           libreria di modelli SW per la rapida creazione di una entry nel CMDB [qualitativo]
+           libreria di modelli Mobile per la rapida creazione di una entry nel CMDB [qualitativo]
+           gestione del magazzino inclusi i materiali di consumo [qualitativo].
+           ricerca automatica di nuovi asset raggiungibili sulla rete/dominio della PA [qualitativo]
+           indicazioni non conformità licenze SW [qualitativo]
+
+2.4.4 Caratteristiche ulteriori del bundle “Contract management”
+Il quarto modulo base, denominato Bundle Contract Management, i cui requisiti minimi sono descritti
+al precedente paragrafo 2.3.1.
+Le caratteristiche ulteriori che il Concorrente può offrire sono:
+         Disponibilità di template di contratti HW [qualitativo];
+         Disponibilità di template di contratti SW [qualitativo];
+         dashboard spesa cloud con simulazioni consumi futuri [qualitativo];
+         gestione di contratti padre-figlio e navigabilità in drill-down [qualitativo].
+
+
+2.5        Caratteristiche complementari
+Sarà possibile per l‘Amministrazione lanciare Appalti Specifici, secondo le regole specificate nel capitolo
+23 del Capitolato d’Oneri della presente documentazione di gara, per integrare i requisiti minimi e le
+ulteriori caratteristiche.
+Le Amministrazioni potranno sempre meglio specificare le carattarestiche minime e migliorative
+previste da Consip in fase 1.
+Si riporta di seguito alcuni ambiti di esempio su cui potranno essere lanciati AS per integrare i requisiti
+minimi e le ulteriori caratteristiche:
+         Servizi di gestione delle identità, con i quali le Amministrazioni potranno utilizzare funzioni
+            di Single-Sign-On e autenticazione a più fattori per l’accesso alle risorse ed alle funzionalità
+            cloud;
+         Livelli di servizio;
+         Grace period;
+         Servizi di sicurezza (sandboxing, antispam, antimalware, etc);
+         Funzionalità aggiuntive per le video conferenze (es. lavagna virtuale);
+
+2.6        Indicatori di Qualità
+Per tutti e cinque i bundle funzionali è richiesta una disponibilità del servizio pari al 99,9%, misurata in
+un arco temporale pari al mese. Il mancato rispetto di tale livello di servizio comporterà l’applicazione
+di apposita penale.
+Si specifica che il Grace period minimo previsto per l’esecuzione dei servizi, inteso come la disponibilità
+dei dati oltre la scadenza contrattuale, è da intendersi pari a 1 mese solare dallo spirare del contratto
+incluse eventuali estensioni.
+Per la definizione dei livelli di qualità minimi e le relative penali previste si rimanda all’appendice 1 al
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+presente documento.
+
+3) Verifiche tecniche
+Nel presente capitolo verranno descritte le modalità di effettuazione delle verifiche tecniche
+propedeutiche alla stipula degli Accordo Quadro.
+Tutti i prodotti che verranno offerti nell’ambito del presente Accordo Quadro saranno soggetti a
+comprova documentale prima della stipula dei rispettivi contratti, secondo quanto indicato nel
+Capitolato d’Oneri e secondo le modalità di seguito indicate.
+I Concorrenti forniranno, nell’ambito della documentazione di gara, una tabella riepilogativa delle varie
+caratteristiche minime e ulteriori, organizzata secondo lo Schema di cui all’allegato 16 della
+documentazione di gara.
+
+In Fase 2, le Amministrazioni dovranno provvedere a verificare i prodotti offerti nel caso in cui vengano
+aggiunte caratteristiche ulteriori.
+
+La comprova sarà su base documentale ed il fornitore dovrà caricare nell’apposita area del Sistema i
+documenti utili a verificare il possesso della caratteristica (minima e/o ulteriore) e referenziata in
+maniera puntuale all’interno dell’allegato Schema verifiche tecniche (nome documento, paragrafo,
+pagina, capoverso). Sarà facoltà della Consip convocare il fornitore ad un test c.d. di laboratorio per
+dirimere eventuali dubbi.
+
+L’esito negativo della comprova in riferimento sia ai requisiti minimi che alle ulteriori caratteristiche
+comporta l’annullamento dell’aggiudicazione definitiva non efficace e quindi la non idoneità alla
+stipulazione del contratto, fatto salvo ogni altro adempimento di legge.
+
+
+
+QUALIFICAZIONE AGID DEI PRODOTTI SAAS.
+In sede di verifica tecnica e comunque prima della stipula del Contratto, la Consip S.p.a. verificherà –
+tramite la consultazione del Catalogo (ossia il Cloud Marketplace) che i prodotti siano stati qualificati.
+La mancata qualifica del prodotto non consente la stipula del contratto.
+Le Amministrazioni possono acquistare esclusivamente servizi qualificati da AgID e pubblicati nel Cloud
+Marketplace.
+È fatto obbligo agli aggiudicatari dell’AQ di mantenere per tutta la durata del Accordo Quadro e dei
+singoli contratti attuativi la qualificazione del prodotto.
+La qualificazione deve intendersi valida anche rispetto alle eventuali sopravvenute disposizioni in
+materia.
+
+
+
+
+Classificazione del documento: Consip Public
+ID 2453 – Public Cloud SaaS ITSM – Specifiche
+

@@ -1,0 +1,47 @@
+{
+ "cig": "BCEF9B4121",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "c1072a77f0e241036457616ed660b6225bafa87d5cae597ebf148f85cea56cde",
+ "quando": "2026-11-06T13:31:28+00:00",
+ "uscita": {
+  "cig": "BCEF9B4121",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "non-determinato",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SVILUPPO SOFTWARE E MEV, MANUTENZIONE CORRETTIVA E ADEGUATIVA (MAC/MAD), HOUSING, CONDUZIONE E MANUTENZIONE HW/SW, HELPDESK"
+   }
+  ],
+  "deduzioni": [
+   "Il contratto comprende servizi professionali (sviluppo software, manutenzione evolutiva, manutenzione correttiva/adeguativa, helpdesk) e un servizio di hosting infrastrutturale.",
+   "Il servizio di housing/conduzione potrebbe essere erogato da cloud pubblico, data center interno del fornitore (in-house), o on-premise presso Fondimpresa, ma il capitolato non specifica quale modalità.",
+   "L'aggiudicatario non è ancora determinato (procedura aperta in corso)."
+  ],
+  "documenti_non_pertinenti": [
+   "4350ee3b9ef98d70ad76a02c4d347b90db3ea33ac8db6d7a6629a62f21875a4a",
+   "cd6560cd8631a91ef3850688325231e2595114c7a1fb06f1faa500a66c75550a"
+  ],
+  "documento_risolutivo": "Contratto stipulato con identificazione del fornitore aggiudicatario e specifica della tecnologia/infrastruttura per il servizio di hosting (cloud provider, data center interno, on-premise)",
+  "motivazione": "Il contratto comprende sviluppo software, manutenzione e servizi di hosting infrastrutturale, ma la modalità di erogazione del servizio di hosting (cloud, in-house, on-premise) non è specificata nei documenti forniti. L'aggiudicatario non è ancora determinato, quindi la classificazione rimane incerta su entrambi gli assi."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  false
+ ],
+ "valida": true
+}

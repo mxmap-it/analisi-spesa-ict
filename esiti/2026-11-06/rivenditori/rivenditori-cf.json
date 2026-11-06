@@ -1,0 +1,278 @@
+{
+ "ingresso": {
+  "attribuzione": "lavoro/attribuzione/[0-9]*.csv (v3)",
+  "aggiudicatari": "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip"
+ },
+ "righe_considerate": 9580,
+ "cig_distinti": 9580,
+ "cig_ripetuti_su_piu_anni": 0,
+ "A_per_canale_righe": {
+  "EXTRA-UE|diretto": 454178877,
+  "EXTRA-UE|ignoto": 671274030,
+  "EXTRA-UE|rivenditore": 1823900810,
+  "IT|diretto": 1531211685,
+  "IT|ignoto": 538726539,
+  "IT|rivenditore": 86428775,
+  "UE|diretto": 69508835,
+  "UE|ignoto": 76263565,
+  "UE|rivenditore": 203479465
+ },
+ "B_per_rivenditore_somma_ogni_membro": {
+  "EXTRA-UE": 2038728710,
+  "IT": 244672488,
+  "UE": 250508108
+ },
+ "C_per_canale_dedup_cig": {
+  "EXTRA-UE|diretto": 454178877,
+  "EXTRA-UE|ignoto": 671274030,
+  "EXTRA-UE|rivenditore": 1823900810,
+  "IT|diretto": 1531211685,
+  "IT|ignoto": 538726539,
+  "IT|rivenditore": 86428775,
+  "UE|diretto": 69508835,
+  "UE|ignoto": 76263565,
+  "UE|rivenditore": 203479465
+ },
+ "D_rivenditore_ripartito_dedup": {
+  "EXTRA-UE": 1409769299,
+  "IT": 82270181,
+  "UE": 146194731
+ },
+ "rivenditore_senza_aggiudicatari_anac": {
+  "EXTRA-UE": 414131511,
+  "IT": 4158594,
+  "UE": 57284733
+ },
+ "nazionalita_rivenditore_per_giurisdizione_prodotto": {
+  "EXTRA-UE": {
+   "IT": 1408285598,
+   "non-IT-o-non-valido": 1483701
+  },
+  "UE": {
+   "IT": 145825333,
+   "non-IT-o-non-valido": 369398
+  },
+  "IT": {
+   "IT": 79536548,
+   "non-IT-o-non-valido": 2733633
+  }
+ },
+ "quota_extra_ue_rivenduta_da_cf_italiani": 0.9989,
+ "rivenditori_cf_distinti": 1104,
+ "non_it_o_non_validi_primi": [
+  {
+   "cf": "1682521008",
+   "denominazione": "P.S.N. S.P.A.",
+   "tipo_soggetto": "",
+   "importo": 2500000
+  },
+  {
+   "cf": "019732",
+   "denominazione": "EUROLINK SRL",
+   "tipo_soggetto": "",
+   "importo": 344133
+  },
+  {
+   "cf": "0269660309",
+   "denominazione": "P.A. A.B.S. SRL",
+   "tipo_soggetto": "",
+   "importo": 285221
+  },
+  {
+   "cf": "1603630299",
+   "denominazione": "ORACLE",
+   "tipo_soggetto": "",
+   "importo": 148622
+  },
+  {
+   "cf": "CHE115296146",
+   "denominazione": "MORESI.COM SA",
+   "tipo_soggetto": "MONOSOGGETTIVO",
+   "importo": 139000
+  },
+  {
+   "cf": "1173301005",
+   "denominazione": "GWAY SRL",
+   "tipo_soggetto": "",
+   "importo": 137750
+  },
+  {
+   "cf": "FR57432518553",
+   "denominazione": "SPIRTECH",
+   "tipo_soggetto": "MONOSOGGETTIVO",
+   "importo": 121600
+  },
+  {
+   "cf": "2060250996",
+   "denominazione": "OSPEDALE POLICLINICO SAN MARTINO IRCCS",
+   "tipo_soggetto": "",
+   "importo": 88839
+  },
+  {
+   "cf": "SM23302",
+   "denominazione": "GRUPPO INFORMATICA E SERVIZI GIES SRL",
+   "tipo_soggetto": "MONOSOGGETTIVO",
+   "importo": 72355
+  },
+  {
+   "cf": "ATU31840700",
+   "denominazione": "EGOS! GMBH",
+   "tipo_soggetto": "",
+   "importo": 68220
+  },
+  {
+   "cf": "2994540108",
+   "denominazione": "LIGURIA DIGITALE SPA",
+   "tipo_soggetto": "",
+   "importo": 63639
+  },
+  {
+   "cf": "0488410010",
+   "denominazione": "TELECOM ITALIA SPA",
+   "tipo_soggetto": "",
+   "importo": 60656
+  },
+  {
+   "cf": "EU528003555",
+   "denominazione": "ZOOM VIDEO COMMUNICATIONS, INC.",
+   "tipo_soggetto": "MONOSOGGETTIVO",
+   "importo": 58424
+  },
+  {
+   "cf": "042156500986",
+   "denominazione": "NO-RAD S.R.L.",
+   "tipo_soggetto": "",
+   "importo": 50966
+  },
+  {
+   "cf": "085390110",
+   "denominazione": "VODAFONE ITALIA S.P.A.",
+   "tipo_soggetto": "",
+   "importo": 48500
+  }
+ ],
+ "primi_15_estero": [
+  {
+   "cf": "00488410010",
+   "denominazione": "TIM S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 874308332
+  },
+  {
+   "cf": "01973270604",
+   "denominazione": "EUROLINK SOCIETA' A RESPONSABILITA' LIMITATA",
+   "nazionalita_cf": "IT",
+   "estero": 61818343
+  },
+  {
+   "cf": "12878470157",
+   "denominazione": "FASTWEB SPA",
+   "nazionalita_cf": "IT",
+   "estero": 44416431
+  },
+  {
+   "cf": "02102821002",
+   "denominazione": "IMPRESA INESISTENTE",
+   "nazionalita_cf": "IT",
+   "estero": 41776127
+  },
+  {
+   "cf": "03301640482",
+   "denominazione": "VAR GROUP S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 41554393
+  },
+  {
+   "cf": "08619670584",
+   "denominazione": "ITALWARE - S.R.L.",
+   "nazionalita_cf": "IT",
+   "estero": 31965238
+  },
+  {
+   "cf": "02006010165",
+   "denominazione": "PROJECT INFORMATICA S.R.L.",
+   "nazionalita_cf": "IT",
+   "estero": 20933595
+  },
+  {
+   "cf": "01468500218",
+   "denominazione": "INFORMATICA ALTO ADIGE SPA",
+   "nazionalita_cf": "IT",
+   "estero": 20394339
+  },
+  {
+   "cf": "05032840968",
+   "denominazione": "MATICMIND S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 17308814
+  },
+  {
+   "cf": "04662680158",
+   "denominazione": "KPMG ADVISORY S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 16848676
+  },
+  {
+   "cf": "02824320176",
+   "denominazione": "LUTECH S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 15773619
+  },
+  {
+   "cf": "04839740489",
+   "denominazione": "POSTEL S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 13028767
+  },
+  {
+   "cf": "05692591000",
+   "denominazione": "POSTEL SPA",
+   "nazionalita_cf": "IT",
+   "estero": 11264595
+  },
+  {
+   "cf": "05773090013",
+   "denominazione": "ITD SOLUTIONS S.P.A.",
+   "nazionalita_cf": "IT",
+   "estero": 10778920
+  },
+  {
+   "cf": "04108030281",
+   "denominazione": "ARSLOGICA SISTEMI S.R.L.",
+   "nazionalita_cf": "IT",
+   "estero": 10235710
+  }
+ ],
+ "impresa_inesistente": [
+  {
+   "cf": "02102821002",
+   "denominazione": "IMPRESA INESISTENTE",
+   "importo": 74787662,
+   "cig": 24
+  },
+  {
+   "cf": "01924961004",
+   "denominazione": "IMPRESA INESISTENTE",
+   "importo": 755,
+   "cig": 1
+  },
+  {
+   "cf": "00149520280",
+   "denominazione": "IMPRESA INESISTENTE",
+   "importo": 12720,
+   "cig": 1
+  },
+  {
+   "cf": "01230291005",
+   "denominazione": "IMPRESA INESISTENTE",
+   "importo": 104000,
+   "cig": 1
+  },
+  {
+   "cf": "00305120974",
+   "denominazione": "IMPRESA INESISTENTE",
+   "importo": 3992,
+   "cig": 1
+  }
+ ]
+}

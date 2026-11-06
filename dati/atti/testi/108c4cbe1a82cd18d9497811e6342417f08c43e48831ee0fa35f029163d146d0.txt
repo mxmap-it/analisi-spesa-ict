@@ -1,0 +1,1068 @@
+                               ACI INFORMATICA S.p.A.
+           Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+
+
+
+ Gara a procedura aperta per l’acquisizione
+        di servizi bancari e finanziari
+
+
+
+                               Capitolato Tecnico
+
+
+
+
+                          Allegato N. 5 al Disciplinare di gara
+
+
+
+
+                                      CIG: 5823264578
+                                    ACI INFORMATICA S.p.A.
+                Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+Sommario
+
+    1.      PREMESSA .........................................................................................................................................3
+         1. 1        Definizioni.......................................................................................................................3
+    2.      OGGETTO DELLA GARA DI APPALTO .........................................................................................4
+    3.      DURATA DEL CONTRATTO ............................................................................................................4
+    4.      SERVIZI BANCARI TRADIZIONALI .................................................................................................4
+         4. 1        Ordinativi di pagamento trasmessi in modalità telematica e con firma digitale. .4
+         4. 2    Disposizioni di incasso a mezzo SDD (B2B e CORE) trasmessi in modalità
+         telematica senza firma digitale. ................................................................................................5
+         4. 3        Commissioni bancarie sulle operazioni .....................................................................5
+         4. 4        Interessi attivi sulle giacenze di c/c............................................................................5
+         4. 5        Interessi passivi sulle linee di credito utilizzate........................................................5
+         4. 6        Servizi inclusi senza oneri e spese aggiuntive ........................................................6
+    5.      SERVIZI DI MONETA ELETTRONICA ............................................................................................6
+         5. 1        Dati relativi alle transazioni di moneta elettronica ...................................................8
+            5.1.1 Dati riguardanti i servizi di incasso tramite POS fisici ..........................................8
+            5.1.2 Dati riguardanti l’e-commerce ..................................................................................9
+         5. 2        I POS fisici .....................................................................................................................9
+         5. 3        Specifiche tecniche e funzionali dei POS ...............................................................10
+            5.3.1        Specifiche tecniche dei POS .................................................................................11
+            5.3.2        Caratteristiche della libreria software API-POS .................................................11
+            5.3.3        Modelli di architettura di rete da supportare .......................................................12
+            5.3.4        Funzionalità della libreria API-DOC per la gestione del pagamento ..............13
+         5. 4        Gestione dei contratti di adesione ai servizi bancari per l’utilizzo dei POS.......15
+         5. 5        L’e-commerce..............................................................................................................15
+         5. 6        I dispositivi di tipo “mobile” ........................................................................................18
+         5. 7        Livelli di Servizio .........................................................................................................19
+         5. 8        Procedura di mantenimento del software ...............................................................19
+         5. 9        Monitoraggio delle transazioni ..................................................................................20
+            5.9.1 Strumenti di back office ...........................................................................................20
+
+
+
+
+                                                                            2
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+1. PREMESSA
+ACI Informatica è una Società per azioni interamente partecipata dall’Automobile Club d’Italia (ACI),
+Ente pubblico non economico, nei confronti del quale provvede alla progettazione, realizzazione,
+gestione e conduzione dei sistemi informatici centrali e periferici di interesse ACI, nonché allo
+sviluppo commerciale della rete dei punti di servizio ACI.
+
+La Società è soggetta ai sensi degli artt. 2497 e segg. del codice civile all’attività di direzione e
+coordinamento dell’ACI ed opera in regime di “in house” per l’Ente proprietario.
+
+La Società è strutturata per l’espletamento di attività informatiche e per l’erogazione di servizi all’ACI
+e ai clienti di interesse dell’Ente.
+
+ACI Informatica emette fatture ad ACI per il rimborso dei costi sostenuti rendicontati trimestralmente,
+fatture che l’Ente provvede a liquidare mediamente a 90 gg. dalla data di emissione..
+
+Alla luce di ciò, ACI Informatica fa ricorso al finanziamento bancario per garantire la continuità della
+gestione e questo attraverso affidamenti che alla data odierna ammontano complessivamente a 28
+Mln./Euro di cui 25 Mln./Euro per anticipi su fatture senza notifica verso l’Ente controllante ACI e a 3
+Mln./Euro per scoperto di conto.
+
+A titolo informativo, l’utilizzo medio dell’affidamento bancario nel corso dell’anno 2013 è stato pari ad
+Euro 19 milioni e nel 1° semestre 2014 è stato di Euro 5 milioni.
+
+Nell’ambito delle attività svolte per ACI, ACI Informatica ha esigenza di utilizzare servizi bancari e
+finanziari per soddisfare:
+    a) le esigenze connesse con la gestione caratteristica (pagamenti, incassi, fidi, cassa, depositi,
+        ecc.) dell’azienda;
+    b) le esigenze connesse con i servizi di incasso e riversamento effettuati da ACI Informatica per
+        conto di ACI e di terzi in genere sia tramite modalità tradizionali bancarie (SDD, bonifici) che
+        tramite moneta elettronica (POS, e-commerce). A titolo di esempio citiamo I seguenti servizi di
+        incasso:
+             • tramite SDD B2B e riversamento delle tasse automobilistiche pagate presso le
+                Delegazioni ACI delle Regione Convenzionate con ACI
+             • tramite SDD CORE dei contratti Bollo Sicuro sottoscritti dai Soci ACI
+             • tramite SDD CORE delle Associazioni ACI pagate presso le Delegazioni ACI
+             • tramite POS delle tasse automobilistiche pagate nelle Delegazioni ACI
+             • tramite POS dei tributi del Comune di Roma pagate nelle Delegazioni ACI
+             • tramite POS dei bollettini postali pagati nelle Delegazioni ACI
+             • tramite bonifico delle Tasse Automobilistiche pagate presso gli ATM delle Banche
+                Convenzionate con ACI
+             • tramite bonifico delle tasse automobilistiche pagate presso i tabaccai – ITB
+             • tramite POS virtuali e-commerce delle Visure PRA effettuate sul sito ACI
+             • tramite POS virtuali e-commerce delle Tasse Automobilistiche pagate sul sito ACI
+             • tramite POS virtuali e-commerce delle Tessere Associative pagate sul sito ACI
+
+
+   1. 1        Definizioni
+
+  TERMINE                                                    DESCRIZIONE
+  TERMINAL ID:         Indentificativo del Terminale POS. Su un POS possono essere presenti più Terminal
+                       ID per indicare diverse tipologie di servizi acquistabili (ad es. Terminale Bolli,
+                       Terminale Cassa, Terminale per Bill Payment, ecc.).
+  BILL PAYMENT:        Regole tariffarie agevolate applicate a tipologie di pagamenti di tipo “tasse” e “tributi”.
+
+
+                                                       3
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+
+
+2. OGGETTO DELLA GARA DI APPALTO
+L’appalto ha per oggetto la fornitura, secondo le specifiche di seguito riportate, dei servizi bancari e
+finanziari e delle relative infrastrutture tecnologiche (apparati, sistemi e servizi connessi a detti
+servizi), necessari ad ACI Informatica S.p.A. per lo svolgimento delle proprie attività.
+
+I servizi bancari e finanziari riguardano:
+
+   1. Servizi tradizionali:
+
+           a. l’esecuzione di qualsiasi tipo di ordinativo di pagamento, inclusi bollettini di c/c postale,
+              disposti da ACI Informatica con modalità telematica e con firma digitale;
+           b. le disposizioni di incasso a mezzo SDD (B2B e CORE), disposte da ACI Informatica
+              con modalità telematica, senza firma digitale;
+
+   2. Servizi con moneta elettronica riguardanti gli incassi effettuati tramite:
+
+           a. POS fisici da installare nei circa 1.500 punti di servizio della rete Aci distribuiti sul
+              territorio italiano;
+           b. POS GSM/GPRS/UMTS con SIM Card per consentire pagamenti ai soggetti che non
+              possono recarsi presso gli uffici ACI PRA;
+           c. modalità di e-commerce disponibile sul sito web ACI (Virtual POS)
+           d. Apps disponibili su dispositivi di tipo “mobile” con sistema operativo Android, IOS e
+              Windows Phone;
+
+
+3. DURATA DEL CONTRATTO
+Il contratto avrà la durata di 36 mesi a decorrere dalla data di presa in carico delle attività.
+
+
+4. SERVIZI BANCARI TRADIZIONALI
+Di seguito si riportano per singola voce, le specifiche dei servizi oggetto della gara fornendo anche
+informazioni storiche utili per la formulazione dell’offerta.
+
+
+   4. 1       Ordinativi di pagamento trasmessi in modalità telematica e con firma
+       digitale.
+Si riportano di seguito i volumi in termini economici e di quantità delle operazioni che hanno
+caratterizzato questo servizio nel triennio 2011-2013.
+
+                                         Importi in milioni di €                   N. operazioni
+      TIPO DI ATTIVITA’
+                                     2011         2012         2013        2011         2012       2013
+Servizi di pagamento con
+                                      110          117             160    10.700       10.900      12.400
+bonifico
+
+
+
+
+E’ oggetto di gara il servizio di pagamento a mezzo bonifico Sepa sia ordinario che
+permanente/ricorrente trasmessi in modalità telematica con firma digitale. Nell’offerta dovrà essere
+indicata la commissione in euro richiesta per ciascuna operazione e il valore totale ottenuto
+
+
+                                                      4
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+moltiplicando per il quantitativo di N. 25.000 operazioni stimate in tre anni. L’impresa aggiudicataria
+dovrà garantire il rilascio delle firme digitali per l’esecuzione degli ordinativi di pagamento.
+
+
+   4. 2     Disposizioni di incasso a mezzo SDD (B2B e CORE) trasmessi in modalità
+       telematica senza firma digitale.
+Si riportano di seguito i volumi in termini economici e di quantità delle operazioni che hanno
+caratterizzato questo servizio nel triennio 2011-2013.
+
+                                          Importi in milioni di €                       N. operazioni
+       TIPO DI ATTIVITA’
+                                    2011           2012         2013           2011         2012        2013
+Servizi d’incasso a mezzo
+                                      0              24             152          0          3.500       22.000
+SDD B2B
+Servizi d’incasso a mezzo
+                                     21              20             21         35.000       42.000      55.000
+SDD CORE
+
+Sono oggetto di gara i servizi di incasso:
+
+        a. a mezzo SDD B2B con accredito SBF alla scadenza trasmessi con modalità telematica
+           senza firma digitale. Nell’offerta dovrà essere indicata la commissione in euro richiesta per
+           ciascuna operazione e il valore totale ottenuto moltiplicando la commissione per il
+           quantitativo di N. 600.000 operazioni stimate in tre anni;
+        b. a mezzo SDD CORE con accredito SBF alla scadenza trasmessi con modalità telematica
+           senza firma digitale. Nell’offerta dovrà essere indicata la commissione in euro richiesta per
+           ciascuna operazione e il valore totale ottenuto moltiplicando la commissione per il
+           quantitativo di N. 150.000 operazioni stimate in tre anni.
+
+
+   4. 3        Commissioni bancarie sulle operazioni
+E’ oggetto di gara il valore economico delle commissioni addebitate sulle operazioni effettuate sui
+conti correnti risultanti dai rendiconti trimestrali di ciascun conto corrente. Nell’offerta dovrà essere
+indicata la commissione in euro richiesta per ciascuna operazione e il valore totale ottenuto
+moltiplicando la commissione per il quantitativo di N. 250.000 registrazioni.
+
+
+   4. 4        Interessi attivi sulle giacenze di c/c
+Il tasso degli interessi attivi riconosciuti ad ACI Informatica sulle giacenze presenti sui c/c bancari non
+è oggetto di gara. Il tasso è variabile ed è espresso dalla somma dell’EURIBOR a 1 mese/365
+(media del mese precedente) e da uno spread fissato da ACI Informatica allo 0,2%. Il valore dello
+spread è mandatorio per l’aggiudicatario e non può diminuire per tutto il periodo di validità
+contrattuale. Per la valutazione del valore economico degli interessi attivi si stima una giacenza media
+di € 5.000.000 per tutta la durata del contratto.
+
+   4. 5        Interessi passivi sulle linee di credito utilizzate
+E’ oggetto di gara il costo degli interessi passivi addebitati ad ACI Informatica sugli affidamenti e sugli
+utilizzi di somme sui c/c bancari.
+
+In offerta dovrà essere distinto il costo sulle scoperture di conto corrente da quello derivante
+dall’anticipo di fatture. In entrambi i casi, devono essere indicati due valori percentuali:
+
+   •    il primo relativo alle commissioni           da    applicare      al   valore   totale   dell’affidamento
+        indipendentemente dal suo utilizzo;
+
+                                                       5
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+   •   il secondo relativo al costo dell’utilizzo effettivo del fido determinato tramite l’incremento
+       (spread) da applicare all’EURIBOR a 3 mesi/365 (media del mese precedente), fissato in
+       0,30% ai fini della presentazione dell’offerta.
+
+L’Istituto bancario aggiudicatario dovrà accordare ad ACI Informatica le seguenti aperture di credito
+che dovranno anche essere utilizzate per il calcolo degli interessi passivi da indicare in offerta:
+
+   •   3 Mln/Euro scoperto di conto corrente;
+   •   7 Mln/Euro per anticipi su fatture senza notifica emesse verso ACI
+
+
+
+   4. 6       Servizi inclusi senza oneri e spese aggiuntive
+Nella fornitura dei servizi bancari devono essere inclusi anche i seguenti servizi accessori senza oneri
+e spese aggiuntive per ACI Informatica:
+
+   •   Spese di chiusura trimestrale dei c/c
+   •   Fornitura fino a N. 50 Carte di Credito aziendali, fino a N. 5 Carte Bancomat aziendali e fino a
+       N. 5 Carte di Credito Prepagate aziendali. Il plafond complessivo per le carte di credito è
+       fissato in € 200.000,00
+   •   Incassi tramite bonifici (circa 4.000/anno)
+   •   Bonifici per Stipendi (circa 7.000/anno)
+   •   Certificazioni annue dei conti correnti richieste dalla Società di Revisione del Bilancio
+   •   Internet Banking e collegamento sistema FTP
+   •   Pagamenti effettuati tramite F24 addebitati con valuta 2 giorni successivi alla scadenza.
+   •   L’invio giornaliero per ciascun c/c di un file tramite FTP contenente la movimentazione del
+       conto; in particolare i file dovranno contenere le informazioni necessarie all’attribuzione dei
+       bonifici:
+            - Codice identificativo del bonifico
+            - Estremi della Banca di provenienza
+            - Intestatario che ha effettuato il bonifico
+            - Data esecuzione
+            - Causale
+   •   Installazione, gestione e manutenzione di un apparato ATM presso la sede di ACI Informatica
+       di Roma Via Fiume delle Perle, 24
+
+
+
+5. SERVIZI DI MONETA ELETTRONICA
+
+I servizi di moneta elettronica sono quelli che consentono il pagamento di beni/servizi con l’uso di
+carte di pagamento (Carte di Credito/Debito e derivati) tramite dispositivi fisici (POS) o tramite
+applicazioni software (e-commerce o dispositivi “mobile”).
+
+L’Istituto Bancario aggiudicatario dovrà mettere a disposizione di Aci Informatica un’infrastruttura per
+la gestione di pagamenti con moneta elettronica che consenta l’espletamento dei servizi di acquirer
+per i POS fisici, virtuali e per i dispositivi “mobile”.
+
+Il servizio richiesto deve prevedere la gestione delle piattaforme riepilogate nel seguente prospetto:
+
+
+
+
+                                                   6
+                                 ACI INFORMATICA S.p.A.
+             Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+                                                               Piattaforma
+                                         POS fisici             E-commerce              “Mobile”
+            Circuito               std     bill payment      std     bill payment   std   bill payment
+VISA credito e debito               X             X           X             X        X           X
+Mastercard/Maestro credito e        X           X             X          X           X          X
+debito, Masterpass
+Pagobancomat                        X           X
+
+
+POS fisici
+Per i POS fisici, è oggetto di gara il valore delle commissioni richieste per i servizi di incasso effettuati
+con l’utilizzo di carte di credito dei circuiti VISA, Mastercard Masterpass e per il circuito
+Pagobancomat.
+
+Per le carte di credito, in offerta dovrà essere distinto il costo per i servizi di “bill payment” dagli altri
+tipi di pagamento. Per ciascuna delle due tipologie di pagamento in offerta dovrà essere indicata la
+percentuale da applicare al valore del transato che:
+
+    •   per il “bill payment” è di € 1.260.000.000 corrispondente all’effettuazione di 7 milioni di
+        transazioni stimate in tre anni;
+    •   per gli altri tipi di pagamento è di € 162.000.000 corrispondente all’effettuazione di 900 mila
+        transazioni stimate nel triennio.
+
+Per il Pagobancomat, in offerta le commissioni dovranno essere indicate per tutti i tipi di pagamento
+tramite la combinazione di un importo fisso in euro da applicare a ciascuna operazione e un valore
+percentuale da applicare al valore del transato. I riferimenti ai fini dell’offerta sono per il triennio: N.
+6.200.000 operazioni stimate per un valore del transato di € 1.116.000.000.
+
+E-commerce e dispositivi ”mobile”
+Per i POS virtuali e il “mobile”, è oggetto di gara il valore delle commissioni richieste per i servizi di
+incasso effettuati con l’utilizzo di carte di credito dei circuiti VISA, Mastercard e Masterpass.
+
+Per le carte di credito, in offerta dovrà essere distinto il costo per i servizi di “bill payment” dagli altri
+tipi di pagamento. Per ciascuna delle due tipologie di pagamento in offerta dovrà essere indicata la
+percentuale da applicare al valore del transato che:
+
+    •   per il “bill payment” è di € 234.000.000 corrispondente all’effettuazione di 1 milione e 800 mila
+        di transazioni stimate in tre anni;
+    •   per gli altri tipi di pagamento è di € 52.000.000 corrispondente all’effettuazione di 400 mila di
+        transazioni stimate nel triennio.
+
+
+Per la formulazione della migliore offerta si invita a tener conto della possibilità che i
+pagamenti dei servizi ACI effettuati tramite piattaforma e.commerce e mobile siano
+considerati appartenenti alla tipologia “bill payment” e quindi con commissioni ridotte.
+
+
+
+
+                                                      7
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+
+Servizi inclusi senza oneri aggiuntivi
+Devono essere considerati inclusi nei servizi di monetica, senza oneri e spese aggiuntive per ACI
+Informatica per tutta la durata del contratto:
+
+   •   La fornitura dei POS, dei relativi accessori e l’erogazione dei servizi di installazione e di
+       manutenzione dei medesimi.
+   •   La messa a disposizione dei sistemi, delle infrastrutture e delle piattaforme necessarie per la
+       gestione dei pagamenti tramite POS fisici, POS virtuali e App su dispositivi “mobile”.
+
+
+
+
+   5. 1        Dati relativi alle transazioni di moneta elettronica
+Al fine di agevolare l’Istituto Bancario nella formulazione dell’offerta si forniscono di seguito elementi
+quantitativi sui volumi attuali e stimati per il futuro delle transazioni di moneta elettronica sia tramite il
+sito e-commerce di ACI che attraverso i POS fisici della rete ACI.
+
+
+5.1.1 Dati riguardanti i servizi di incasso tramite POS fisici
+La tabella riportata di seguito riepiloga la quantità di operazioni dell’anno 2013, il relativo importo
+medio per ogni operazione ed il totale degli importi gestiti dal circuito ACI sia per contanti che tramite
+POS. Attualmente solo il 3% circa delle operazioni è effettuato tramite moneta elettronica.
+
+                                                           Importo
+                                              Tipo                        N. operazioni
+                                                           unitario                             Importo
+                                          transazione                         annue
+                                                           medio (€)
+Pagamento Tasse Automobilistiche          bill payment             170         16.000.000     2.720.000.000
+
+Pagamento bollettini postali (*)          bill payment             100                                    0
+Pratiche automobilistiche                   standard               220          2.000.000       440.000.000
+
+Acquisto/rinnovo associazioni ACI          standard                  80           600.000        48.000.000
+
+Pagamento pratiche
+                                          bill payment             138          1.230.000       170.000.000
+automobilistiche presso Uffici PRA
+                                 Totale                                       19.830.000      3.330.000.000
+(*) il servizio è avviato nel 2014.
+
+Il limitato utilizzo della moneta elettronica è dovuto principalmente al costo delle commissioni bancarie
+ritenute dall’esercente (Delegazioni ACI, AACC provinciali) alte rispetto all’aggio percepito per la
+riscossione delle Tasse Automobilistiche. Tali commissioni sono quantificabili in circa il 60%
+dell’aggio.
+
+Per incrementare l’uso della moneta elettronica sono in corso di adozione nuove modalità per il
+servizio di “bill-payment” basate sul concetto che sarà ACI Informatica il merchant che sottoscriverà il
+contratto di acquiring e pertanto le commissioni bancarie saranno sostenute da ACI Informatica. Il
+conto di accredito di tali transazioni sarà aperto da ACI Informatica presso l’Istituto Bancario
+aggiudicatario della gara e sarà dedicato a tali transazioni.
+
+
+
+
+                                                      8
+                                  ACI INFORMATICA S.p.A.
+              Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+Per i punti di servizio ACI ci sarà quindi una drastica riduzione dei costi in quanto corrisponderanno
+ad ACI Informatica un importo fisso per transazione, molto contenuto, sia per le operazioni effettuate
+in contante sia per quelle con utilizzo della moneta elettronica. Questo produrrà un significativo
+aumento dei pagamenti con moneta elettronica.
+
+Altro motivo di incremento atteso per le operazioni con moneta elettronica è legato al fatto che la
+Delegazione per contratto deve rilasciare ad ACI una fidejussione di importo tanto maggiore quanto
+maggiore è la quota di incassi che effettua in contanti. Quindi, maggiori saranno le transazioni di
+moneta elettronica, minore sarà l’importo della fideiussione da rilasciare ad ACI.
+
+Per il 2014 e gli anni successivi è atteso un progressivo incremento delle transazioni di moneta
+elettronica tramite POS. Di seguito si riporta il riepilogo delle transazioni stimate per l’anno 2015:
+
+
+
+                                                            Importo
+                                                 Tipo                  N. operazioni
+                 Servizio                                   unitario                          Importo
+                                             transazione                   annue
+                                                            medio (€)
+Pagamento Tasse Automobilistiche             bill payment          170      4.000.000          680.000.000
+pagamento bollettini postali (*)             bill payment          100           50.000           5.000.000
+pratiche automobilistiche                     standard             220          200.000          44.000.000
+acquisto/rinnovo associazioni ACI             standard              80           80.000           6.400.000
+Pagamento pratiche automobilistiche
+                                             bill payment          138          400.000          55.200.000
+presso uff. PRA
+                                    Totale                                    4.730.000        790.600.000
+
+
+
+5.1.2 Dati riguardanti l’e-commerce
+La tabella seguente riepiloga i dati relativi alle transazioni di pagamento tramite e-commerce
+effettuate nel corso del 2013 per i principali servizi di incasso attivi:
+
+                          Servizio                    N° Transazioni Importo Transato
+           SOCIONET (vendita tessere associative ACI)         15.419        1.146.903
+           BOLLONET (riscossione Bollo ACI)                  421.097       78.173.839
+           VISURENET (vendita Visure PRA)                    282.475        1.994.039
+                                               Totale        718.991       81.314.781
+
+I volumi previsti per il prossimo triennio, sono sostanzialmente invariati.
+
+
+    5. 2        I POS fisici
+Attualmente la rete ACI è composta da circa 1.500 Punti di Servizio (Delegazioni ACI, AACC
+provinciali e Uffici Provinciali PRA) distribuiti su tutto il territorio nazionale con un numero complessivo
+di circa 4.000 postazioni di lavoro informatiche.
+
+Ogni posto di lavoro (personal computer) deve essere dotato di un POS e quindi è richiesta la
+fornitura in noleggio di N. 4.000 (quattromila) POS per l’intera durata contrattuale.
+
+I POS devono essere dotati di PIN PAD per la digitazione del PIN e di tutti i cavi di connessione come
+di seguito meglio specificato.
+
+
+
+
+                                                      9
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+L’aggiudicatario per tutta la durata del contratto dovrà provvedere all’installazione e alla
+manutenzione degli apparati tramite help desk tecnico e interventi on-site fornendo tutto il necessario
+per la messa in opera e mantenimento delle funzionalità dell’intero sistema di pagamento.
+
+Le principali attività da svolgere sono:
+
+   a. Installare, configurare e manutenere i POS e PIN PAD
+   b. Garantire la connessione dall’apparato POS alla rete locate tramite cavo LAN fornito
+      dall’aggiudicatario.
+   c. Garantire la connessione dall’apparato POS alla postazione di lavoro tramite cavo USB fornito
+      dall’aggiudicatario di lunghezza non inferiore a due metri.
+   d. Fornire e configurare e collegare alla rete dove richiesto l ’apparato wifi di classe n o ac
+   e. Garantire tutte le connessioni o quant’altro necessario all’intero sistema di pagamento al
+      corretto funzionamento.
+   f. Registrare su ciascun POS un minimo di 3 Term ID in relazione alle esigenze di Aci
+      Informatica
+   g. Installare e configurazione di tutti i componenti software necessari al corretto e buon
+      funzionamento del sistema di pagamento
+   h. Sottoporre per autorizzazione preventiva ad Aci Informatica la lista di distribuzione delle
+      installazione con indicati i periodi di intervento
+   i. Eseguire i test di funzionamento con un minimo di 5 transazioni sia positive che negative. I
+      test eseguiti dovranno preventivamente essere sottoposti ed approvati da Aci Informatica
+   j. Redigere un verbale dettagliato di intervento con l’indicazione di tutti i test eseguiti.
+   k. Inviare periodicamente ad Aci Informatica il riepilogo degli interventi effettuati, allegando il
+      relativo verbale. Le modalità di invio e la periodicità saranno comunicate all’aggiudicatario.
+   l. Ritirare i POS indicati da Aci Informatica che attualmente risultano essere in uso in ciascun
+      punto di servizio provvedendo alla rottamazione in conformità con la normativa vigente per le
+      apparecchiature fuori uso e la consegna ad ACI Informatica del Formulario di Identificazione
+      Rifiuto (codice europeo 160214).
+   m. Mantenere in uso tutte le componentistiche software fornite a corredo del sistema POS
+   n. Garantire l’intervento sulla postazione di lavoro entro e non oltre le 24 dalla chiamata
+      effettuata da parte di Aci Informatica o da un soggetto da essa delegato.
+
+
+   5. 3        Specifiche tecniche e funzionali dei POS
+Ogni POS fisico dovrà essere configurato con un numero di Terminal ID variabile da 3 (minimo) a 5
+(massimo).
+
+Le funzionalità associate ai Term ID sono tipicamente le seguenti:
+
+       •   Riscossione Bolli Auto (Bill Payment)
+       •   Riscossione Altre Tasse (Bill Payment)
+       •   Pagamenti diversi
+       •   Bollettini postali (Bill Payment)
+
+
+Il codice Terminal ID identifica la tipologia di transazione eseguita e indirizza il successivo accredito
+sull’IBAN dedicato.
+
+
+
+                                                   10
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+Ogni Terminal ID è legato ad un codice IBAN; quindi in relazione al Term.id, gli accrediti delle somme
+transate potranno essere effettuati su conti correnti diversi.
+
+
+Sui POS possono essere effettuate le seguenti tipologie di transazioni:
+
+   •    Transazioni di Bill Payment
+            - Per tali transazioni il merchant sarà ACI Informatica che aprirà con l’Istituto Bancario
+                 aggiudicatario della gara un conto corrente dedicato per l’accredito di tutte le
+                 transazioni effettuate da tutti i POS; è richiesto che le somme transate siano disponibili
+                 sul conto con valuta il giorno successivo a quello della transazione.
+   •    Altre transazioni bancarie di pagamento
+            - Per tali transazioni il merchant sarà la Delegazione dove è installato il POS e
+                 l’accredito delle somme transate avverrà sul conto corrente intestato alla Delegazione
+                 stessa che quindi potrà essere intrattenuto su Istituto Bancario diverso da quello
+                 aggiudicatario della gara; è richiesto che le somme transate siano disponibili sul conto
+                 entro 2 giorni successivi a quello della transazione .
+
+5.3.1 Specifiche tecniche dei POS
+Tutti i POS devono rispettare le seguenti specifiche:
+
+   a. Accettare tutte le carte dei circuiti VISA, MASTERCARD, DINERS,AMEX, PAGO BANCOMAT
+      con dispositivo a banda magnetica, microchip e contactless.
+   b. Rispettare la omologazione CB2 (Consorzio Bancomat II)
+   c. Essere in grado di gestire transazioni di “bill payment” secondo i protocolli di comunicazione
+      definiti dai circuiti internazionali (VISA e Mastercard) e dal Consorzio Bancomat.
+   d. Garantire la gestione di almeno 5 (cinque) term-id differenti dedicati ad Aci Informatica.
+   e. Impedire l’esecuzione di un qualsiasi comando inerente le transazioni direttamente
+      dall’interfaccia del POS su term-id identificati e comunicati da Aci Informatica al momento
+      dell’installazione.
+   f. Garantire la riservatezza delle informazioni trasmesse dalla postazione di lavoro al sistema
+      POS.
+   g. Disporre di un software ad uso libreria applicativa, denominato da qui a seguire libreria API-
+      POS, che realizzi l’interfaccia di comunicazione con gli applicativi Aci Informatica e il sistema
+      di pagamento fornito dall’aggiudicatario
+   h. Avere in dotazione di Pin-pad per la digitazione del PIN quando richiesto
+   i. La connessione verso l’aggiudicatario deve avvenire, in relazione alle esigenze di Aci
+      Informatica, direttamente su rete internet o transitando attraverso rete locale Aci Informatica
+      che instraderà i pacchetti su connessione punto punto tra la propria sede e l’affidatario.
+   j. Supportare la connessione su rete ethernet con velocità di trasmissione 10/100/1000 Mbits/s
+      attraverso connettore RJ45
+   k. Supportare quando necessario ad Aci Informatica la connessione su rete wireless come da
+      standard IEEE 802.11n,ac o su previa autorizzazione da parte di Aci Informatica su altro
+      standard o protocollo.
+   l. La connessione alla postazione, dove e quando richiesta da Aci Informatica, deve avvenire
+      tramite interfaccia USB con connettore TIPO A compatibile con la versione 2.0 e successive
+   m. Disporre di driver certificati per il sistema operativo presente sulla postazione di lavoro (vedi
+      par. 5.3.2).
+
+
+5.3.2   Caratteristiche della libreria software API-POS
+Le caratteristiche dell’interfaccia di libreria software API-POS sono:
+
+                                                    11
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+   a. Garantire il rispetto delle certificazioni della libreria API-POS, in particolare l’utilizzo non dovrà
+      attivare segnalazioni da software nativo (es. JRE java, browser web) e/o richiedere
+      componenti aggiuntivi se utilizzata, a titolo di esempio, da Applet JAVA da qualsiasi
+      contenitore essa sia racchiusa.
+   b. La libreria API-POS dovrà essere firmata digitalmente da autorità già nota all’ambiente target.
+   c. Garantire la sicurezza della comunicazione tra la libreria API-POS e applicativo Aci
+      Informatica attraverso l’implementazione di opportuni meccanismi di sicurezza e riservatezza
+      da concordare ed autorizzati preventivamente da parte di Aci Informatica.
+   d. Realizzare la libreria per sistemi operativi Windows compatibile con la versione 7 e successive
+      sia a 32 che 64 bit.
+   e. Essere compatibile con il JRE versione 1.6 e successive preinstallato da Aci Informatica, a tal
+      proposito verrà fornito all’aggiudicatario e successivamente alla fase di aggiudicazione da
+      parte di Aci Informatica il JRE che verrà distribuito e preinstallato sulle postazioni di lavoro.
+   f. Garantire la compatibilità o evoluzione della librerie per almeno due major release del JRE.
+   g. La libreria potrà essere costituita da più competenti ed in tal caso essi dovranno risiedere in
+      una ed una sola directory dedicata il cui nome dovrà esser concordato con Aci Informatica.
+      Resta inteso che tutte le azioni necessarie alla messa in essere della directory e software
+      rimangono a carico dell’aggiudicatario.
+   h. Supportare il collegamento e tutte le funzionalità di controllo richieste da Aci Informativa via
+      rete e quanto presente via cavo USB.
+Le medesime funzionalità della libreria devono essere garantite per sistemi operativi su dispositivi
+“mobile”: Android, iOs e Windows Mobile.
+
+5.3.3 Modelli di architettura di rete da supportare
+In relazione alle proprie esigenze Aci Informatica ha la necessità di poter configurare diverse soluzioni
+per realizzare la propria postazione di pagamento.
+La postazione di pagamento sarà costituita da una postazione di lavoro (personal computer) e il
+POS.
+La libreria API-Pos verrà installata sempre e solo sulla postazione di lavoro e soltanto da questa è
+possibile comandare il POS.
+E’ necessario poter connettere esclusivamente la postazione di lavoro alla rete locale Aci Informatica,
+mentre è possibile che il POS sia collegato sia rete locale che su rete internet.
+E’ anche possibile che oltre al collegamento già citato, il pos venga connesso attraverso cavo USB o
+cavo di rete ethernet alla postazione di lavoro, in tal caso la libreria deve utilizzare questo
+collegamento per le comunicazioni.
+
+La libreria API-Pos e il POS fornito devono permettere di realizzare almeno le seguenti configurazioni:
+
+Configurazione 1.
+La postazione di lavoro è collegata su rete locale ACI Informatica ed il POS è a sua volta collegato
+sulla medesima rete.
+La rete Aci Informatica sarà opportunamente configurata in modo da permettere al POS di
+comunicare con l’affidatario attraverso una connessione P2P tra le sedi di Aci Informatica e
+l’affidatario.
+
+
+
+
+                                                    12
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+
+
+
+Configurazione 2.
+La postazione di lavoro, sulla quale verrà installata la libreria API-POS, è collegata su rete locale ACI
+Informatica ed il POS è collegato con connessione P2P alla postazione di lavoro.
+Il POS colloquierà con l’affidatario mediate la postazione di lavoro che fungerà da router verso la LAN
+Aci Informatica che sarà opportunamente configurata in modo da permettere al POS di comunicare
+con l’affidatario attraverso una connessione P2P tra le sedi di Aci Informatica e l’affidatario.
+
+
+
+
+Configurazione 3
+La postazione di lavoro, sulla quale verrà installata la libreria API-POS, è collegata su rete locale ACI
+Informatica.
+E’ prevista la connessione diretta del POS via cavo USB alla postazione di lavoro.
+La libreria API-POS deve utilizzare il collegamento USB per pilotare il POS.
+La connessione tra POS ed affidatario deve avvenire in modo esclusivo tra: una connessione diretta (
+le richieste transitano direttamente su rete internet) o indiretta come indicato in Configurazione 1.
+
+
+
+
+5.3.4   Funzionalità della libreria API-DOC per la gestione del pagamento
+
+
+
+                                                   13
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+A titolo esemplificativo ma non esaustivo viene fornito un elenco di funzionalità che la libreria API-
+DOC dovrà implementare:
+
+   a. Richiesta lista Terminal ID gestiti
+      Con questo messaggio la libreria API-POS restituisce una lista di Terminal ID installati sul
+      POS.
+      A corredo per ogni Terminal ID sono restituiti i seguenti dati minimi:
+           - Numero ultima operazione di pagamento online
+           - STAN ultimo pagamento
+           - Lista Acquirer ID abilitati per lo specifico Terminal ID
+   b. Richiesta di pagamento
+      Con questo messaggio il client Aci Informatica richiede alla libreria di effettuare un
+      pagamento, trasmettendo l’importo della transazione e una lista di coppie terminal ID /Acquirer
+      ID abilitato all’acquisto del prodotto (nel caso venga passato solo il Terminal ID il POS fa
+      selezionare all’utente il tipo di pagamento da effettuare).
+      La libreria API-POS risponde con l’esito della transazione.
+   c. Richiesta scontrino
+      Questo messaggio permette al client della libreria di richiedere al POS uno specifico scontrino,
+      viene trasmesso il terminal ID di cui si vuole ottenere lo scontrino e lo STAN scontrino
+      La libreria restituisce il seguente set di informazioni minime:
+            o Identificativo operazione
+            o Terminal ID
+            o Acquirer ID
+            o Nome Acquirer
+            o Importo
+            o Merchant ID
+            o Modalità di inserimento dati (EMV chip, Banda Magnetica, contactless)
+            o Tipo transazione (Credito/Debito)
+            o PAN (in chiaro le prime 6 cifre)
+            o Codice ABI (per transazioni PagoBancomat)
+            o Numero Carta (per transazioni PagoBancomat in chiaro le prime 6 cifre)
+            o A.I.D.
+            o STAN
+            o Numero operazione online
+            o Action Code
+            o Data ora operazione
+            o Codice Autorizzazione Acquirer
+            o Tipo autorizzazione (Offline/Online)
+   d. Storno pagamento
+      Questo messaggio permette al client Aci Informatica di chiedere alla libreria API-POS lo
+      storno di un pagamento effettuato per terminal ID.
+      Il client invia il codice terminal ID e l’ID della transazione da stornare.
+      La libreria restituisce i dati minimi indicati precedentemente al punto c.
+   e. Chiusura contabile
+      Questo messaggio permette al client Aci Informatica di richiedere la chiusura contabile per
+      ciascun terminal ID installato. La libreria restituire l’esito della chiusura e i totali remoti e locali
+   f. Totali remoti
+      La libreria restituisce i totali remoti relativi al terminal ID specificato, contestualmente vengono
+      restituiti i totali locali a scopo di verifica dell’allineamento. La lista va organizzata per Acquirer
+      con dettaglio dei totali secondo la contabilizzazione locale del terminale.
+
+
+                                                     14
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+   g. Totali locali
+      Il cliente invia questa richiesta per richiedere al terminale la stampa dei totali locali.
+      La libreria restituire i totali locali, la lista va organizzata per Acquirer con il del dettaglio dei
+      totali secondo la contabilizzazione locale del terminale.
+   h. Totali giornalieri
+      Questo messaggio permette al client della libreria API-POS di richiedere al terminale la
+      stampa dei totali giornalieri. Vengono inoltre restituiti al client della libreria i totali giornalieri
+      organizzati a per acquirer con i dettagli dei totali secondo la contabilizzazione locale del
+      terminale
+   i. Versione, la libreria restituisce la propria versione.
+
+
+   5. 4        Gestione dei contratti di adesione ai servizi bancari per l’utilizzo dei POS
+Per la formalizzazione dei rapporti contrattuali inerenti l’utilizzo dei POS da parte dei punti di servizio
+ACI, l’aggiudicatario dovrà seguire le seguenti procedure operative:
+
+   a) ACI Informatica, in qualità di merchant, sottoscriverà con l’Istituto Bancario aggiudicatario il
+      contratto di adesione per la gestione delle transazioni di bill payment. Tale contratto sarà
+      riferito ai Term-id assegnati al servizio di bill-payment che saranno configurati sui POS
+      presenti presso tutti i punti di servizio ACI.
+   b) ACI Informatica fornirà all’Istituto Bancario aggiudicatario, in uno o più elenchi i punti di
+      servizio che utilizzeranno i POS.
+   c) l’Istituto Bancario aggiudicatario dovrà, tramite un sito web o prendendo contatti con ciascun
+      punto di servizio, mettere a disposizione di questi ultimi i moduli da compilare e firmare per
+      l’attivazione dei servizi POS fornendo le relative istruzioni anche sulla documentazione da
+      produrre;
+   d) l’Istituto Bancario aggiudicatario dovrà raccogliere i moduli debitamente compilati e sottoscritti
+      dai punti di servizio completi della documentazione richiesta verificandone la correttezza e la
+      completezza;
+   e) l’Istituto Bancario dovrà gestire le variazioni contrattuali dovute a qualsiasi motivo (ad es.
+      cambio di denominazione, di poteri di firma, ecc.) per l’intera durata del contratto;
+   f) l’Istituto Bancario dovrà assegnare e gestire i Term-id per ciascun POS alcuni dei quali
+      saranno assegnati ad ACI Informatica con IBAN alla stessa intestati (ad es. quello del Bill
+      Payment) e altri assegnati al punto di servizio che si riferiranno a IBAN del punto di servizio
+      stesso;
+   g) l’Istituto Bancario aggiudicatario fornirà ad ACI Informatica settimanalmente un file con le
+      informazioni dei punti di servizi contrattualizzati, i Term-id assegnati per ogni singolo punto di
+      servizio e provvederà ad installare ed attivare i POS;
+   h) ACI Informatica censirà tali Term-id al fine di poter gestire correttamente il colloquio tra il POS
+      e il proprio applicativo di cassa.
+
+   5. 5        L’e-commerce
+L’Istituto Bancario aggiudicatario dovrà mettere a disposizione di Aci Informatica un sistema di
+gestione di pagamenti con moneta elettronica che consenta espletamento di servizi di e-commerce.
+
+ACI Informatica è da considerare sollevata da ogni responsabilità concernente le attività di
+pagamento con moneta elettronica ed in nessun caso realizzerà e/o ospiterà sui propri sistemi
+software o componenti hardware che necessitano o fungano da transito di informazioni personali
+connesse al pagamento con moneta elettronica.
+
+
+                                                      15
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+Dove e quando si renderanno necessarie le informazioni relative alle carte saranno trattate su
+ambienti certificati ed esterni ad ACI Informatica di proprietà dell’Istituto aggiudicatario.
+L’aggiudicatario si fa garante della riservatezza e sicurezza del trattamento dei dati acquisiti ad i fini
+del pagamento elettronico.
+
+L’aggiudicatario si fa garante di utilizzare protocolli a doppia sicurezza CV2 e 3DSecure per
+l’implementazione della transazione.
+
+L’aggiudicatario comunicherà tempestivamente ad Aci Informatica qualsiasi variazioni inerente il
+sistema di pagamento ed attenderà il collaudo da parte di Aci Informatica, dalla propria sede, prima di
+renderlo effettivo verso l’utente.
+
+L’aggiudicatario fornirà ad ACI Informatica un servizio software che permetta l’espletamento del
+pagamento via moneta elettronica, simmetricamente Aci Informatica si impegna a fornire la propria
+controparte di interfaccia alla quale l’aggiudicatario deve trasmettere in caso di esecuzioni asincrone
+gli esiti delle proprie lavorazioni. Aci Informatica si impegna a fornire la propria l’interfaccia a contratto
+in essere.
+
+L’aggiudicatario trasmetterà tutta la documentazione sull’utilizzo dell’interfaccia di comunicazione ad
+ACI Informatica, documentazione deve essere corredata da esempi esaustivi e casistiche di utilizzo
+scritte in linguaggio JAVA.
+
+L’interfaccia fornita dall’aggiudicatario deve rispettare gli standard W3C in merito alla realizzazione
+dei web service ed implementare il protocollo WS-Reliability.
+
+L’aggiudicatario deve garantire ad ACI Informatica la realizzabilità ed il supporto all’implementazione
+di un client in linguaggio Java versione 6 e successive.
+
+Il client del software dell’aggiudicatario per la sua realizzazione ed esecuzione non deve richiedere
+librerie native se non quelle già presenti nel JRE Java versione 6 sia che a 32 che 64 bit.
+
+Su richiesta di Aci Informatica l’aggiudicatario deve fornire i sorgenti del client per il proprio servizio in
+linguaggio JAVA versione 1.6 o successive.
+
+Qualsiasi software e/o libreria necessario per la realizzazione del client deve essere fornito a titolo
+completamente gratuito senza alcun onere a carico di ACI Informatica.
+
+A titolo esemplificativo e non esaustivo si fornisce la specifica del protocollo per la realizzazione di
+una transazione di pagamento.
+
+L’espletamento di una transazione deve avvenire in rispetto delle seguenti fasi:
+
+   1.   ACI informatica: Apertura Ordine
+   2.   ACI Informatica: redirect sulle pagine di pagamento
+   3.   Aggiudicatario: notifica esito autorizzazione
+   4.   Aggiudicatario: redirect web verso una pagina di ACI Informatica
+   5.   ACI Informatica: verifica stato transazione
+   6.   ACI Informatica: Contabilizzazione
+   7.   ACI Informatica: Storno (opzionale)
+
+Per tutte le fasi del protocollo l’aggiudicatario fornirà tutti e soli i valori restituiti nel campo esito con
+l’indicazione dell’evento occorso.
+Il protocollo deve prevedere lo scambio di un valore nonce o equivalente a garanzia della
+transazione.
+
+                                                     16
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+Descrizione delle fasi:
+
+   1. ACI Informatica: Apertura Ordine
+
+   La funzione è sincrona e costituisce il preambolo alla realizzazione di una transazione. Aci
+   Informatica trasmette l’importo, la valuta dell’importo, la lingua, l’email del soggetto e gli url a cui
+   l’aggiudicatario dovrà reindirizzare la navigazione dell’utente a seconda dell’esito del pagamento.
+
+   Il parametro lingua indica all’aggiudicatario la lingua che dovrà essere utilizzata dall’aggiudicatario
+   e per tutta la durata della transazione per esporre i servizi di pagamento.
+
+   La risposta da parte dell’aggiudicatario deve contenere i seguenti dati minimi: transaction id, term
+   id, url, esito.
+
+   Il transaction id è l’identificativo univoco della transazione, il term id è l’identificativo del terminale
+   virtuale, l’url è l’indirizzo al quale ACI Informatica dovrà indirizzare la navigazione dell’utente
+   affinché avvenga il pagamento. In relazione all’esito restituito Aci Informatica continuerà o meno
+   l’esecuzione del protocollo di pagamento.
+
+   2. ACI Informatica: redirect sulle pagine di pagamento
+
+   Aci Informatica esegue l’indirizzamento della pagina di navigazione dell’utente verso l’url fornito
+   dall’aggiudicatario a fronte della chiamata di apertura ordine.
+
+   3. Aggiudicatario: notifica esito autorizzazione
+
+   L’aggiudicatario infoca il servizio realizzato da ACI Informatica per comunicare l’esito della
+   transazione, trasmettendo i seguenti dati minimi: terminal id, transaction id, esito, codice
+   autorizzazione circuito, data e ora dell’avvenuta autorizzazione, tipo di carta, Importo, valuta, tipo
+   della transazione, continente, stato, tipo di prodotto venduto.
+
+   4. Aggiudicatario: redirect web verso una pagina di ACI Informatica
+
+   L’aggiudicatario a fronte dell’esito della transazione di pagamento (punto 3.) gira la navigazione
+   dell’utente ad uno degli indirizzi forniti da ACI Informatica al momento dell’apertura ordine.
+
+   5. ACI Informatica: Verifica stato transazione
+
+   La funzione è sincrona e permette di verificare lo stato dell’autorizzazione della transazione, a
+   fronte dei seguenti parametri: transaction id, terminal id, codice univoco del protocollo e attesa la
+   riposta contenente i seguenti dati minimi: transaction id, terminal id, esito, importo, valuta, codice
+   autorizzazione, dettaglio delle movimentazioni del transaction ide s. apertura ordine,
+   autorizzazione.
+
+   6. ACI Informatica: Contabilizzazione
+
+   La funzione è sincrona e permette di concludere positivamente o negativamente la transazione
+   precedentemente autorizzata. A fronte dei parametri: terminal id, transaction id l’aggiudicatario
+   effettua la contabilizzazione della transazione restituendo l’esito.
+
+
+
+
+                                                     17
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+   7. ACI Informatica: Storno
+
+   La funzione è sincrona e permette di stornare o annullare una transazione precedentemente
+   autorizzata. A fronte dei parametri: terminal id, transaction id l’aggiudicatario effettua
+   l’annullamento se la transazione non risulta contabilizzata o lo storno se la transazione risulta
+   contabilizzata.
+
+L’aggiudicatario deve consentire l’annullamento dell’operazione di pagamento entro la giornata e
+consentire lo storno dell’operazione di pagamento il giorno successivo alla avvenuta transazione.
+
+L’aggiudicatario offre la gestione di una giornata virtuale in ambito dei singoli term id identificati per le
+operazioni di e-commerce. La giornata virtuale è definita in un arbitrario periodo temporale.
+
+L’aggiudicatario rende disponibili le seguenti funzioni in tal senso.
+
+       a.   Apertura giornata
+       b.   Chiusura giornata
+       c.   Stato della giornata
+       d.   Restituzione totali giornata alla data
+       e.   Lista giornate virtuali
+       f.   Restituzione totale giornata virtuale
+
+Le funzioni sono rese disponibili ad ACI Informatica che utilizzerà in relazione alle proprie esigenze.
+
+L’apertura delle giornata abiliterà il term id alla ricezione del pagamento, la chiusura inibisce il term id
+all’esecuzione del pagamento, la restituzione del totale alla data restituisce l’elenco degli importi per
+stato dal momento dell’apertura della giornata alla data richiesta. La lista di giornate virtuali restituisce
+la lista composta da data apertura e data chiusura delle giornate virtuali comprese nel range di date
+fornito. La restituzione totale giornata virtuale restituisce a fronte di una giornata virtuale indicata
+l’elenco degli importi ordinati per data. Stato della giornata restituisce lo stato apertura o chiusura
+della giornata.
+
+A corredo degli importi restituiti vanno sempre forniti i seguenti dati minimi: importo contabilizzato,
+data, ora, stato, email, circuito, numero transazione, term id.
+
+
+   5. 6        I dispositivi di tipo “mobile”
+L’aggiudicatario è tenuto a erogare il proprio servizio di e-commerce (C2) ottimizzato per l’esecuzione
+via mobile con il mantenimento delle caratteristiche e funzionalità.
+
+E’ consentita la realizzazione di un protocollo semplificato di incasso che preveda un ciclo di
+esecuzione ridotto che a titolo di esempio si riporta:
+
+   •   ACI Informatica trasmette al sistema di pagamento l’importo da contabilizzare
+   •   L’aggiudicatario comunica l’avvenuta o meno contabilizzazione
+   •   ACI Informatica si riserva di stornare la transazione
+
+ACI Informatica si rende disponibile a integrare nelle proprie applicazioni mobile librerie fornite
+dall’aggiudicatario con il vincolo di non dover mai conservare o richiedere dati legati alle carte di
+pagamento che come per l’e-commerce dovranno essere trattati fuori dai sistemi e software di ACI
+Informatica.
+
+
+                                                     18
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+
+ACI Informatica è disponibile a verificare il protocollo di pagamento con l’aggiudicatario al fine di
+migliorare la user experience dell’utente.
+
+La soluzione dovrà essere certificata per quanto previsto dalle attuali normative PCI.
+
+
+
+   5. 7        Livelli di Servizio
+   a. Il servizio di manutenzione dei POS dovrà garantire il ripristino del funzionamento
+      e/sostituzione del POS con i livelli di servizio di seguito indicati.
+      • nei mesi di Gennaio, Febbraio, Maggio e Settembre, entro 48 ore dalla segnalazione
+          ricevuta da ACI Informatica
+      • nei restanti mesi, entro 4 giorni solari dalla segnalazione ricevuta da ACI Informatica.
+
+   b. L’attivazione dei POS dovrà avvenire entro 10 giorni solari dalla ricezione degli atti contrattuali
+      dei punti di servizio.
+
+   c. Per tutte le piattaforme richieste, POS, e.commerce e “mobile”, l’aggiudicatario dovrà mettere
+      a disposizione di ACI Informatica gli appositi strumenti di test:
+      • ambiente di test
+      • carte di test (pagobancomat e carte di credito)
+
+   d. Disponibilità per le piattaforme richieste: POS, e.commerce e “mobile”. L’aggiudicatario dovrà
+      garantire la disponibilità di ciascuna piattaforma per almeno il 99,85% del tempo calcolato su
+      base mensile al netto dei fermi per la manutenzione ordinaria, concordata tra le Parti, e dei
+      fermi per cause di forza maggiore.
+
+
+Nel caso di indisponibilità degli ambienti di test di cui alla precedente lettera c), il Fornitore dovrà
+darne comunicazione scritta ad ACI Informatica con un preavviso minimo di 5 giorni lavorativi,
+comunicando la durata del periodo di indisponibilità che comunque non potrà essere superiore a 10
+giorni lavorativi.
+
+
+   5. 8        Procedura di mantenimento del software
+L’aggiudicatario dovrà realizzare e mantenere un ambiente di collaudo dedicato a disposizione di ACI
+Informatica ed accessibile dalla propria sede, per il test ed evoluzioni delle proprie applicazioni.
+
+Ogni qualvolta l’aggiudicatario manifesti la necessità di aggiornare i propri sistemi sia server che in
+dotazione alle postazioni di pagamento dovrà comunicare tempestivamente ad ACI Informatica le
+proprie necessità e pianificare con quest’ultima gli interventi da effettuare.
+
+L’aggiornamento di qualsiasi componente inerente al sistema di pagamento non potrà essere
+effettuato se non a seguito del collaudo dei medesimi effettuato nel laboratorio che Aci Informatica
+metterà a disposizione, nella propria sede, all’aggiudicatario. Le attività e l’esito del collaudo saranno
+svolte da personale di ACI Informatica o da essa autorizzato.
+
+
+
+                                                   19
+                                ACI INFORMATICA S.p.A.
+            Gara a procedura aperta per l’acquisizione di servizi bancari e finanziari
+__________________________________________________________________________________________
+ACI Informatica si impegna a fornire all’aggiudicatario una o più postazioni a replica delle postazione
+di lavoro su cui l’aggiudicatario andrà ad effettuare gli interventi di aggiornamento.
+
+
+   5. 9        Monitoraggio delle transazioni
+Al fine di monitorare l’andamento delle transazioni effettuate presso la rete dei punti di servizio ACI,
+l’Istituto Bancario deve mettere a disposizione di ACI Informatica un sistema di monitoraggio in tempo
+reale delle transazioni effettuate presso i punti di servizio.
+
+Tale monitoraggio dovrà fornire strumenti di visualizzazione sintetica / statistica e analitica (dettaglio
+delle singole transazioni per punto di servizio).
+
+
+5.9.1 Strumenti di back office
+L’aggiudicatario si impegna a fornire ad Aci Informatica uno strumento in tecnologia http web per la
+gestione e monitoraggio delle transazioni di pagamento di qualsiasi natura. Lo strumento deve
+consentire:
+       • L’ispezione della singola transazione individuata a partire dal term id e numero di
+            transazione, restituendo i seguenti dati minimi: data ordine, tipo di pagamento,
+            autenticazione del cliente, codice autorizzazione, brand, liability, tipo di carta, stato,
+            importo dell’ordine, intestatario, email intestatario, circuito, regione, nazione, utilizzo,
+            indicazione di carta prepagata, importo contabilizzato
+       • Ricevere la lista delle transazioni corrispondenti ad un term id, dalla quale sarà possibile
+            accedere al dettaglio della singola transazione
+       • Ricercare le transazioni ed accedere ad il dettaglio per i seguenti parametri relazionati in
+            ‘OR’ o ‘AND’: codice fiscale, nome e cognome, numero di carta, PAN, intervallo di importi,
+            stato della transazione , intervallo temporale in giorni e ore, circuito di pagamento,
+            modalità di pagamento
+       • Restituire nelle liste di transazioni i seguenti dati minimi: numero transazione, data ordine,
+            stato, importo ordine, circuito utilizzato, nazionalità, importo autorizzato, importo
+            contabilizzato, importo annullato
+       • Effettuare le seguenti operazioni: contabilizzazione, annullamento, storno; nei casi in cui
+            siano ammissibili sulla singola o lista delle transazioni individuate con i criteri di ricerca e
+            modalità indicate precedentemente.
+       • Esportare l’elenco delle transazioni con i relativi dettagli dal risultato dell’interrogazione
+            effettuata con i criteri di ricerca e con le modalità precedentemente indicate in formato txt e
+            csv
+       • Permettere la creazione e cancellazione degli utenti abilitati all’utilizzo del prodotto
+       • Permette l’assegnazione dei seguenti ruoli agli utenti del prodotto: Amministratore, Lettore,
+            Gestore Term Id, con il seguente significato: Amministrare nessuna restrizione sulle
+            funzionalità del sito; Lettore può consultare in sola lettura il sito; Gestore Term Id non ha
+            restrizioni sulle funzionalità relativamente ad un term id.
+       • Le informazioni fornite disponibili e aggiornate in tempo reale.
+
+L’aggiudicatario si impegna a fornire una interfaccia tipo web service soap che esponga tutte le
+funzionalità previste per applicazione web.
+
+
+
+
+                                                    20
+

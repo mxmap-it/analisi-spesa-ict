@@ -1,0 +1,48 @@
+{
+ "cig": "BC6A456E7A",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "28d3f0e21ce99b7ca10a7b5a97586556e57b02be5ff3bdc9ab8739bdda12eebc",
+ "quando": "2026-11-06T13:26:25+00:00",
+ "uscita": {
+  "cig": "BC6A456E7A",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "hardware"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "FORNITURA IN ACQUISTO E/O LOCAZIONE, DI PRODOTTI E SOLUZIONI DI RETE E SICUREZZA, HARDWARE E SOFTWARE E DELLA RELATIVA MANUTENZIONE, NECESSARI ALL'UPGRADE DEGLI APPARATI INFRASTRUTTURALI E NETWORKING"
+   },
+   {
+    "sha256": "dbcbdc0b669feaeb1cd5bcd1026c15e59ee609dbff602f67ab95ce004ad0c70c",
+    "pagina": null,
+    "citazione": "Tipo Appalto: Forniture | Bando Revocato - Fornitura in acquisto e/o locazione, di prodotti e soluzioni di rete e sicurezza, hardware e software"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'appalto è per l'acquisto e/o locazione di prodotti e soluzioni di rete (hardware e software Cisco) da installare presso la Regione Toscana, enti regionali e aziende sanitarie. Non sono servizi cloud (SaaS, IaaS, PaaS, hosting remoto) bensì apparati infrastrutturali di rete on-premise con manutenzione. CPV 32400000-7 (Network). La procedura è stata revocata il 12/10/2026."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true,
+  false
+ ],
+ "valida": false
+}

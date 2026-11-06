@@ -1,0 +1,50 @@
+{
+ "cig": "BB2480578E",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "85b350043b98b5104dd734a6ced650fe5d394ccc7255bb3fb0ac0f40baacbdb6",
+ "quando": "2026-11-06T13:24:02+00:00",
+ "uscita": {
+  "cig": "BB2480578E",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI A PROGETTO PER LO SVILUPPO DEI SISTEMI INFORMATIVI RAI"
+   }
+  ],
+  "deduzioni": [
+   "Il CPV 50300000-8 copre servizi di sviluppo e gestione di sistemi informativi in generale",
+   "«Servizi a progetto» suggerisce servizi professionali (sviluppo, consulenza) più che cloud standard"
+  ],
+  "documenti_non_pertinenti": [
+   "bfe73b98a43b4fc532929ff5c89bf69b29ccfb2b80172e798dac917711be2373 — Gazzetta Ufficiale riferita a CIG diverso (8912749924), proroga tecnica di contratto 1173101349",
+   "d1bea94be86a081eeb603ca53f0a74d7918c39ddbe583848f20bc2f765d63269 — Portale Informatel con lista generica di gare RAI, nessun dettaglio su questo CIG",
+   "83eba74cc5a7d482d984fffff0668b34a329689fa053bd6a6d288e383f52032d — Portale ANAC, pagina non trovata",
+   "19002f5e965cea037eccb654812d00f7cde6e5552854ec13f7f64cdedfca24bc — TED, nessun risultato rilevante"
+  ],
+  "documento_risolutivo": "Capitolato tecnico e piano dei fabbisogni del bando: se specifica servizi cloud (SaaS, IaaS, PaaS, hosting, PSN) con provider nominato; altrimenti allegati del bando che descrivano se si compra sviluppo software on-premise, manutenzione, consulenza, o infrastruttura",
+  "motivazione": "L'oggetto «Servizi a Progetto per lo sviluppo dei Sistemi Informativi RAI» è troppo generico: copre sia sviluppo software, consulenza e assistenza (servizi professionali) che possibili servizi cloud infrastrutturali. Nessun documento fornito chiarisce il tipo esatto di servizio. Il capitolato tecnico del bando è risolutivo."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

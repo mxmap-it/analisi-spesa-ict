@@ -1,0 +1,37 @@
+{
+ "cig": "B3A41F1157",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "7e4fc71f643ffa755972b953cb4f5fbb3d726d47fabc65657615faec508e804a",
+ "quando": "2026-11-06T13:19:44+00:00",
+ "uscita": {
+  "cig": "B3A41F1157",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "?",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignoto",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [],
+  "deduzioni": [
+   "L'oggetto BDNCP menziona 'gestione software' come componente di un general contract per servizi di laboratorio (attrezzature, reagenti, materiale diagnostico, magazzino, forniture, integrazioni con laboratori esterni). La componente software non è esplicitamente identificata come cloud (SaaS) o on-premise.",
+   "Il documento fornito (delibera 231/2026) riguarda un intervento diverso per la Terapia Intensiva 2 (CIG B6EDB246D1), non il CIG B3A41F1157."
+  ],
+  "documenti_non_pertinenti": [
+   "8cf2097ebc8012503c50b727a7b15a00e34603d8d275d5c4e01d42173082b5eb"
+  ],
+  "documento_risolutivo": "Capitolato speciale d'appalto o contratto stipulato che descriva il dettaglio dei servizi software inclusi: se erogati in cloud (SaaS) o come licenza on-premise; provider identificati.",
+  "motivazione": "L'oggetto BDNCP descrive un general contract per servizi di laboratorio che include attrezzature, reagenti, consumibili e 'gestione software', ma non specifica se il software è cloud o installato presso l'ente. Senza il capitolato o il contratto, non è determinabile. Classificazione incerta su entrambi gli assi, confidenza bassa."
+ },
+ "errori_schema": [],
+ "prove_letterali": [],
+ "valida": true
+}
