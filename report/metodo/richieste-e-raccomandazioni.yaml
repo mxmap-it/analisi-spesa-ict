@@ -465,3 +465,17 @@
   perche_serve: "Gli atti di adesione sono l'unica fonte pubblica dell'ordinativo per ente"
   nota: "Da riconfermare a mano prima di qualunque comunicazione (AGENTS.md §3)"
   rif: ["#62"]
+
+- id: R46
+  destinatario: enti aderenti alle convenzioni (università, ASL, società in house), ANAC, DFP
+  tipo: difetto
+  stato: da_verificare
+  titolo: Sezioni «Amministrazione trasparente» di 11 enti aderenti respinte a Chrome headless (HTTP 403/428, verifica bot)
+  carenze: [C4]
+  evidenza: "Il 6/11/2026, visitando 60 enti aderenti (IndicePA → home → AT → Bandi di gara), risposte HTTP 403 (Sogei, Univ. Bologna, Modena e Reggio Emilia, Trento, Torino, Firenze, Politecnico di Milano, ASL Salerno su etrasparenza.it) e HTTP 428 «authentic user check» (trasparenza.uniroma1.it, trasparenza.ispettorato.gov.it, trasparenza.lepida.net), oltre a un challenge perfdrive (Regione Marche, Amministrazione_Trasparente); UA da browser con URL del progetto, ≥ 5,5 s fra richieste; non aggirati"
+  prova: report/convenzioni/blocchi-accesso.csv (righe #62-at, sha256 delle pagine ricevute)
+  richiesta: "Escludere le sezioni AT dai controlli anti-bot dei provider (art. 9 c. 1 d.lgs. 33/2013); i provider comuni (Seeweb, etrasparenza) andrebbero sentiti una volta per tutti i loro enti"
+  politica: "Monitoraggio periodico dell'accessibilità automatica delle sezioni AT, con segnalazione agli RPCT"
+  perche_serve: "Gli atti di adesione/ordinativi per ente sono pubblicati solo nelle sezioni AT"
+  nota: "Alcune righe sono pagine raggiunte seguendo link da home/AT (es. cris.unibo.it, home di unitn/unito/unifi): da riconfermare a mano prima di qualunque comunicazione (AGENTS.md §3)"
+  rif: ["#62", "R45"]
