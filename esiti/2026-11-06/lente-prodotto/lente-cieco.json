@@ -33,12 +33,12 @@
   },
   "S3": {
    "n": 40,
-   "bt_tp": 25,
+   "bt_tp": 37,
    "bt_fp": 0,
-   "bt_fn": 12,
-   "diz_tp": 25,
+   "bt_fn": 0,
+   "diz_tp": 37,
    "diz_fp": 0,
-   "diz_fn": 12
+   "diz_fn": 0
   },
   "S4": {
    "n": 40,
@@ -70,50 +70,50 @@
  },
  "bigtech_usa": {
   "campione": {
-   "tp": 54,
+   "tp": 66,
    "fp": 0,
-   "fn": 13,
+   "fn": 1,
    "precisione": 1.0,
    "precisione_w95": [
-    0.934,
+    0.945,
     1.0
    ],
-   "richiamo": 0.806,
+   "richiamo": 0.985,
    "richiamo_w95": [
-    0.696,
-    0.883
+    0.92,
+    0.997
    ]
   },
   "pesato_universo": {
    "precisione": 1.0,
-   "richiamo": 0.94,
-   "cig_stimati_veri_positivi": 6175,
+   "richiamo": 0.98,
+   "cig_stimati_veri_positivi": 6439,
    "cig_stimati_falsi_positivi": 0,
-   "cig_stimati_mancati": 395
+   "cig_stimati_mancati": 131
   }
  },
  "tutti_i_provider": {
   "campione": {
-   "tp": 64,
+   "tp": 76,
    "fp": 1,
-   "fn": 16,
-   "precisione": 0.985,
+   "fn": 4,
+   "precisione": 0.987,
    "precisione_w95": [
-    0.918,
-    0.997
+    0.93,
+    0.998
    ],
-   "richiamo": 0.8,
+   "richiamo": 0.95,
    "richiamo_w95": [
-    0.7,
-    0.873
+    0.878,
+    0.98
    ]
   },
   "pesato_universo": {
    "precisione": 0.986,
-   "richiamo": 0.594,
-   "cig_stimati_veri_positivi": 9249,
+   "richiamo": 0.611,
+   "cig_stimati_veri_positivi": 9513,
    "cig_stimati_falsi_positivi": 131,
-   "cig_stimati_mancati": 6324
+   "cig_stimati_mancati": 6060
   }
  },
  "errori": [
@@ -144,90 +144,6 @@
    "lente": "",
    "etichetta": "In-house pubblico",
    "testo": "AFFIDAMENTO DIRETTO IN HOUSE PROVIDING ALLA SOCIETÀ LEPIDA S.C.P.A. DEI SERVIZI CNER - GENIO: PER IL PERIODO 2026-2027. | AFFIDAMENTO DIRETTO IN HOUSE PROVIDING ALLA SOCIETÀ LEPIDA S.C.P.A. DEI SERVIZ"
-  },
-  {
-   "cig": "B8CB03FD8B",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ADESIONE CONVENZIONE CONSIP MICROSOFT AGREEMENT | ADESIONE CONVENZIONE CONSIP MICROSOFT AGREEMENT 9 - ASL PESCARA"
-  },
-  {
-   "cig": "B9414C3E63",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "FORNITURA LICENZE SQL - TEAMS | FORNITURA LICENZE PER SERVER DATA CENTER"
-  },
-  {
-   "cig": "BCA9AFCEF5",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Google",
-   "testo": "RDA_10023464_ADESIONE AQ CONSIP LOTTO 2_SERVIZI IAAS E PAAS GOOGLE | RDA_10023464_ADESIONE AQ CONSIP LOTTO 2_SERVIZI IAAS E PAAS GOOGLE"
-  },
-  {
-   "cig": "BA49F58B3A",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ADESIONE CONVENZIONE MS EA8 | ADESIONE CONVENZIONE MS EA8"
-  },
-  {
-   "cig": "B5367F63B7",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ACQUISTO INIZIALE EA8 | ACQUISTO INIZIALE EA8"
-  },
-  {
-   "cig": "B9C15E8057",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "WIN 10 EXTENDED SECURITY 2025 PER DEVICE | WIN 10 EXTENDED SECURITY 2025 PER DEVICE"
-  },
-  {
-   "cig": "B081E13335",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ADESIONE ALLA CONVENZIONE CONSIP MICROSOFT EA8 | ADESIONE ALLA CONVENZIONE CONSIP MICROSOFT EA8"
-  },
-  {
-   "cig": "B7A536BE8B",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "PDS 392 ACQUISTO MATERIALI PER SISTEMI C4ISTAR IN CONSIP-MS_EA9 | PDS 392 ACQUISTO MATERIALE PER SISTEMI C4 ISTAR IN CONSIP - MSEA9"
-  },
-  {
-   "cig": "BBF93741BD",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "AFFIDAMENTO SERVIZI CLOUD IAAS E PAAS 2 MICROSOFT PER UN PERIODO DI 36 MESI | AFFIDAMENTO SERVIZI CLOUD IAAS E PAAS 2 MICROSOFT PER UN PERIODO DI 36 MESI"
-  },
-  {
-   "cig": "B8C1B05843",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "AD. CONV. CONSIP EA9 - LOTTO 1 | ADESIONE CONVENZIONE CONSIP EA9 - AOU CITTA' DELLA SALUTE E DELLA SCIENZA DI TORINO"
-  },
-  {
-   "cig": "B093371735",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ADESIONE ALLA CONVENZIONE CONSIP MICROSOFT EA8 | ADESIONE ALLA CONVENZIONE CONSIP MICROSOFT EA8"
-  },
-  {
-   "cig": "B878CE9A76",
-   "strato": "S3",
-   "lente": "",
-   "etichetta": "Microsoft",
-   "testo": "ADESIONE CONVENZIONE EA9 PER POSTA , OFFICE E TEAMS | ADESIONE CONVENZIONE EA9 PER POSTA , OFFICE E TEAMS"
   },
   {
    "cig": "BCA687088A",

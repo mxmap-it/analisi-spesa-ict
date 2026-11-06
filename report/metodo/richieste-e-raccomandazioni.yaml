@@ -576,3 +576,13 @@
   richiesta: "Denominazione dall'anagrafe operatori a partire dal CF (mai segnaposto) e CF validato con il carattere di controllo (11 cifre, zeri iniziali conservati); correzione retroattiva"
   perche_serve: "Senza l'aggiudicatario non si sa chi intermedia la spesa estera (canale) né la sua giurisdizione"
   rif: ["#41", "P17"]
+- id: R57
+  destinatario: "MEF - Servizio centrale PNRR / Sogei (Italia Domani)"
+  tipo: ostacolo
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Gli open data PNRR di Italia Domani (gare ReGiS, ponte CUP-CIG) respingono l'accesso automatico
+  evidenza: "6/11/2026 dal server: HEAD di https://www.italiadomani.gov.it/content/dam/sogei-ng/opendata/PNRR_Gare.csv → 403 (server AkamaiGHost). La pagina del catalogo indica PNRR_Gare.csv (106 MB), v11, osservazione 13/06/2026, ma il pulsante «Scarica questa versione» punta a «#» (download solo via JavaScript). Senza questo file la catena PNRR CUP → CIG (#43) si controvalida solo con FLAG_PNRR_PNC di ANAC"
+  prova: "config/risorse.yaml (italiadomani/gare-dei-progetti-del-pnrr); tools/verifiche/pnrr_flag.py"
+  richiesta: "URL stabili e scaricabili senza JavaScript né filtri anti-bot per tutti i dataset del catalogo, con versioni storiche e sha256; pubblicazione anche su dati.gov.it"
+  perche_serve: "È la sola fonte ufficiale che collega i progetti PNRR alle gare ReGiS: serve a misurare la quota di fondi PNRR cloud andata a prodotti esteri ogni anno"
+  rif: ["#43", "#26", "R55"]

@@ -35,10 +35,12 @@ def main():
             canale = c.canale(r["provider"], [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()])
             totali[(r["provider"], canale)] += imp
             if canale != "rivenditore": continue
-            for nome in [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]:
+            membri = [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]
+            quota = imp / len(membri)  # #41, 6/11/2026: RTI ripartito in parti uguali (prima l'importo intero andava a ogni membro: +215 M€)
+            for nome in membri:
                 k = normalizza(nome)
                 a = agg[k]
-                a["contratti"] += 1; a["importo"] += imp; a["provider"][r["provider"]] += imp; a["nomi"].add(nome)
+                a["contratti"] += 1; a["importo"] += quota; a["provider"][r["provider"]] += quota; a["nomi"].add(nome)
     righe = sorted(agg.items(), key=lambda kv: -kv[1]["importo"])
     os.makedirs("lavoro/attribuzione", exist_ok=True)
     with open("lavoro/attribuzione/rivenditori.csv", "w", newline="", encoding="utf-8") as fo:
@@ -48,7 +50,7 @@ def main():
             bt = sum(v for p, v in a["provider"].items() if p in BIGTECH)
             w.writerow([k, a["contratti"], round(a["importo"]), round(bt / a["importo"], 3) if a["importo"] else "",
                         " ; ".join(f"{p}={round(v)}" for p, v in a["provider"].most_common()), " | ".join(sorted(a["nomi"])[:5])])
-    sintesi = {"generato": oggi, "regole": "v3", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ e importi da verificare esclusi), anni di pubblicazione 2022-2026; per ogni CIG l’ultima versione pubblicata",
+    sintesi = {"generato": oggi, "regole": "v3", "ripartizione_rti": "parti uguali fra gli aggiudicatari (dal 6/11/2026, #41)", "nota": "importi = importo_lotto dei contratti attuativi (padri di AQ e importi da verificare esclusi), anni di pubblicazione 2022-2026; per ogni CIG l’ultima versione pubblicata",
                "per_provider_e_canale": [{"provider": p, "canale": ch, "importo": round(v)} for (p, ch), v in sorted(totali.items(), key=lambda x: -x[1])],
                "esclusi_importi_da_verificare": {p: round(v) for p, v in da_verificare.most_common()},
                "rivenditori": len(righe),

@@ -1,0 +1,67 @@
+{
+ "ingresso_anac": "229 file cig mensili/delta",
+ "valori_flag": [
+  [
+   "1",
+   11390
+  ],
+  [
+   "0",
+   1070
+  ],
+  [
+   "",
+   15
+  ]
+ ],
+ "catene": {
+  "decreti-1.1": {
+   "cig": 197,
+   "pnrr": {
+    "cig": 136,
+    "importo": 1048136032
+   },
+   "non_pnrr_o_vuoto": {
+    "cig": 26,
+    "importo": 90219927
+   },
+   "assente_nei_file_cig": {
+    "cig": 35,
+    "importo": 42998055
+   },
+   "quota_cig_flag_pnrr": 0.69
+  },
+  "v3-1.1": {
+   "cig": 61,
+   "pnrr": {
+    "cig": 48,
+    "importo": 344103561
+   },
+   "non_pnrr_o_vuoto": {
+    "cig": 10,
+    "importo": 14618761
+   },
+   "assente_nei_file_cig": {
+    "cig": 3,
+    "importo": 19513810
+   },
+   "quota_cig_flag_pnrr": 0.787
+  },
+  "v3-1.2": {
+   "cig": 12504,
+   "non_pnrr_o_vuoto": {
+    "cig": 1064,
+    "importo": 93092899
+   },
+   "pnrr": {
+    "cig": 11306,
+    "importo": 733467228
+   },
+   "assente_nei_file_cig": {
+    "cig": 134,
+    "importo": 13476348
+   },
+   "quota_cig_flag_pnrr": 0.904
+  }
+ }
+}

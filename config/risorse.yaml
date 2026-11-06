@@ -321,3 +321,40 @@ risorse:
     nota: >-
       Risponde 403 alle richieste non-browser. Sondato per documentare
       l'ostacolo; da riprovare quando cambia.
+
+  # ---------------------------------------------------------------- UE (#27)
+  - autorita: ue-ted
+    dataset: avvisi-it-ict
+    url: https://api.ted.europa.eu/v3/notices/search
+    cadenza: giornaliera
+    specchia: false
+    partizione: mensile
+    ict: true
+    nota: >-
+      API v3 anonima, solo POST: la sonda non la interroga. Specchiata da
+      tools/acquisizione/ted_mirror.py (buyer-country=ITA, CPV 72/48/302, dal
+      2024-01), pagine grezze in archivio con --da-file, stato in lavoro/ted/stato.jsonl.
+
+  - autorita: ue-fts
+    dataset: financial-transparency-system
+    url: https://ec.europa.eu/budget/financial-transparency-system/download/{AAAA}_FTS_dataset_en.xlsx
+    modello: annuale
+    da: 2007
+    a: 2025
+    cadenza: annuale
+    specchia: true
+    partizione: annuale
+    ict: false
+    nota: Beneficiari del bilancio UE con partita IVA (gestione diretta). Serve a riconoscere fornitori.
+
+  # ------------------------------------------------------------ Italia Domani (#43)
+  - autorita: italiadomani
+    dataset: gare-dei-progetti-del-pnrr
+    url: https://www.italiadomani.gov.it/content/dam/sogei-ng/opendata/PNRR_Gare.csv
+    cadenza: semestrale
+    specchia: false
+    partizione: nessuna
+    ict: true
+    nota: >-
+      ReGiS, ponte CUP-CIG ufficiale (v11, osservazione 13/06/2026). 403 Akamai
+      dal server il 6/11/2026 (R57); da riprovare.

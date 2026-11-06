@@ -42,6 +42,7 @@
   - sharepoint\s+online
   - dynamics\s*365
   - microsoft\s+teams
+  - iaas\s+e\s+paas.{0,20}microsoft   # #40, 6/11/2026, campione a cieco
   fornitori:
   - ^microsoft\b
 - provider: Amazon Web Services
@@ -63,6 +64,7 @@
   - google\s+cloud
   - \bgcp\b
   - google\s+for\s+education
+  - iaas\s+e\s+paas.{0,20}google   # #40, 6/11/2026, campione a cieco
   escludi:
   - good\s+clinical
   - clinic
@@ -253,6 +255,14 @@
   - windows\s+server
   - sql\s+server
   - \bcal\b.{0,20}microsoft
+  # #40, 6/11/2026: mancati del campione a cieco (report/metodo/lente-cieco/, tools/verifiche/lente_cieco.py)
+  - \bms[\s_-]*ea\s*\d
+  - \bea\s?[89]\b
+  - consip\W+microsoft
+  # «win 10/11» da solo prende 242 CIG di PC con Windows preinstallato (hardware): solo licenze ed ESU
+  - licenz\w*\s+(\w+\s+){0,2}win(dows)?\s*1[01]\b
+  - \bwin(dows)?\s*1[01]\s+extended\s+security
+  - licenz\w*\s+sql\b
   fornitori: []
 - provider: VMware
   giurisdizione: EXTRA-UE

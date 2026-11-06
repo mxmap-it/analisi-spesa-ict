@@ -6,12 +6,13 @@ Ricalcola: per giurisdizione, importo per canale; quota rivenditori sul noto; pr
 Limite: la nazionalità del rivenditore non è nel file (manca il CF): si riporta la quota dei primi 20 per nome,
 la giurisdizione del rivenditore resta da verificare sui CF ANAC.
 
-Uso: python tools/verifiche/rivenditori_esteri.py -> esiti/<oggi>/rivenditori/rivenditori-esteri.json"""
+Uso: python tools/verifiche/rivenditori_esteri.py [v3.1|v3] -> esiti/<oggi>/rivenditori/rivenditori-esteri.json"""
 import csv, json, os, sys, datetime, collections
 from pathlib import Path
 import yaml
 
 R = Path(__file__).resolve().parents[2]
+VER = sys.argv[1] if len(sys.argv) > 1 else "v3.1"  # v3.1 = RTI ripartiti (#41, 6/11/2026); v3 = mappa del 28/10
 NOME = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}
 
 
@@ -19,7 +20,7 @@ def main():
     giur = {NOME.get(m["provider"], m["provider"]): m["giurisdizione"]
             for m in yaml.safe_load(open(R / "config/marchi_cloud.yaml", encoding="utf-8"))}
     giur.setdefault("VMware", "EXTRA-UE")
-    d = json.load(open(R / "report/metodo/rivenditori-v3.json", encoding="utf-8"))
+    d = json.load(open(R / f"report/metodo/rivenditori-{VER}.json", encoding="utf-8"))
     t = collections.defaultdict(collections.Counter)
     for r in d["per_provider_e_canale"]:
         t[giur.get(r["provider"], "?")][r["canale"]] += r["importo"]
@@ -30,7 +31,7 @@ def main():
                        "quota_rivenditore_sul_noto": round(c["rivenditore"] / noto, 3) if noto else None}
     # rivenditori dei prodotti EXTRA-UE, dal csv (provider_rivenduti = "P=importo ; ...")
     riv = []
-    for r in csv.DictReader(open(R / "report/metodo/rivenditori-v3.csv", encoding="utf-8")):
+    for r in csv.DictReader(open(R / f"report/metodo/rivenditori-{VER}.csv", encoding="utf-8")):
         est = 0.0; prod = []
         for p in filter(None, (x.strip() for x in r["provider_rivenduti"].split(";"))):
             n, _, v = p.rpartition("=")
@@ -38,7 +39,7 @@ def main():
         if est: riv.append({"rivenditore": r["rivenditore"], "estero_eur": round(est), "prodotti": prod, "contratti": int(r["contratti"])})
     riv.sort(key=lambda x: -x["estero_eur"])
     tot_riv = sum(x["estero_eur"] for x in riv)
-    out = {"ingresso": ["report/metodo/rivenditori-v3.json", "report/metodo/rivenditori-v3.csv", "config/marchi_cloud.yaml"],
+    out = {"ingresso": [f"report/metodo/rivenditori-{VER}.json", f"report/metodo/rivenditori-{VER}.csv", "config/marchi_cloud.yaml"],
            "per_giurisdizione_prodotto": per_giur,
            "rivenditori_di_prodotti_extra_ue": len(riv), "importo_extra_ue_via_rivenditori_csv": round(tot_riv),
            "quota_primi_5": round(sum(x["estero_eur"] for x in riv[:5]) / tot_riv, 3) if tot_riv else None,
@@ -46,7 +47,7 @@ def main():
            "esclusi_importi_da_verificare": d["esclusi_importi_da_verificare"],
            "nota": "verificato: ricalcolo dalla mappa v3; la nazionalità dei rivenditori non è misurata (manca il CF)"}
     o = R / f"esiti/{datetime.date.today().isoformat()}/rivenditori"; os.makedirs(o, exist_ok=True)
-    json.dump(out, open(o / "rivenditori-esteri.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(out, open(o / f"rivenditori-esteri-{VER}.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({k: out[k] for k in ("per_giurisdizione_prodotto", "rivenditori_di_prodotti_extra_ue",
                                            "importo_extra_ue_via_rivenditori_csv", "quota_primi_5")}, indent=1, ensure_ascii=False))
     for x in riv[:10]: print(x["rivenditore"], x["estero_eur"], x["prodotti"][:4])
