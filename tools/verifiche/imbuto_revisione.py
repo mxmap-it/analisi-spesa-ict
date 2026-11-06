@@ -117,6 +117,13 @@ def main():
     Rj["s3_s6"] ={k: sum(x[k] for x in ict) for k in ("euro_prima", "euro_dopo", "di_cui_incerti_oltre_50M")}
     with open(os.path.join(E, "tetti-cig-v2.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
+    # precisione di E4 (0.5): campione casuale di 15 CIG E4 (seme 20261108) giudicato sul testo; e rapporti potenza di 10
+    if os.path.exists(os.path.join(E, "campione-e4-giudizi.csv")):
+        g = leggi("campione-e4-giudizi.csv"); e4 = [r for r in out if r["via"].startswith("E4")]
+        a = sum(x["dichiarato_errato"] == "si" for x in g); b = sum(x["qe_plausibile"] == "si" for x in g)
+        pw = sum(1 for r in e4 if float(r["euro_netti"]) > 0 and abs(math.log10(float(r["importo"]) / float(r["euro_netti"])) - round(math.log10(float(r["importo"]) / float(r["euro_netti"])))) < 0.005)
+        Rj["precisione_e4"] = {"cig_e4": len(e4), "campione": len(g), "dichiarato_errato": a, "wilson95_dichiarato_errato": wilson(a, len(g)),
+                               "qe_plausibile": b, "wilson95_qe_plausibile": wilson(b, len(g)), "rapporto_esatto_potenza_di_10": pw}
     print(json.dumps(Rj, ensure_ascii=False, indent=1, default=str))
     if "--json" in sys.argv: json.dump(Rj, open(sys.argv[sys.argv.index("--json") + 1], "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
 
