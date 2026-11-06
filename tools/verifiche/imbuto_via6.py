@@ -69,6 +69,13 @@ def main():
                                  "asse_a": {"accordo": pa, "n": na, "wilson95": wilson(pa, na)},
                                  "asse_a_solo_stati_certi": {"accordo": pac, "n": nac, "wilson95": wilson(pac, nac)},
                                  "asse_b": {"accordo": pb, "n": nb, "wilson95": wilson(pb, nb)}, "disaccordi": dis}
+    # ostacoli incontrati (per R51): tipo e dominio
+    ost, dom = collections.Counter(), collections.Counter()
+    for v in ver.values():
+        for o in v.get("ostacoli") or []:
+            if isinstance(o, dict):
+                ost[o.get("tipo", "altro")] += 1; dom[(o.get("url") or "").split("/")[2] if (o.get("url") or "").count("/") >= 2 else ""] += 1
+    T["ostacoli"] = {"cig_con_ostacoli": sum(bool(v.get("ostacoli")) for v in ver.values()), "per_tipo": dict(ost.most_common()), "domini_principali": dict(dom.most_common(15))}
     cons = collections.defaultdict(lambda: [0, 0.0])
     for r in jl(R / "stato/claude-consumi.jsonl"):
         if str(r.get("etichetta", "")).startswith(("imbuto-", "riproduzione-")):
@@ -82,6 +89,7 @@ def main():
         print(f"\n## {g}: {d['cig_classificati']}/{d['cig_totali']} CIG, {fmt(d['euro_classificati'])}/{fmt(d['euro_totali'])} €; confidenza {d['confidenza']}; fonte primaria {d['fonte_primaria']}")
         for k, v in T["spostamenti"][g].items(): print(f"  {k}: {v['cig']} CIG, {fmt(v['euro'])} €")
     print("\n## precisione", {k: v for k, v in T["precisione_controllo"].items() if k != "disaccordi"})
+    print("## ostacoli", T["ostacoli"]["per_tipo"])
     print("## consumo", T["consumo"])
     if "--json" in sys.argv:
         o = Path(sys.argv[sys.argv.index("--json") + 1]); o.parent.mkdir(parents=True, exist_ok=True)

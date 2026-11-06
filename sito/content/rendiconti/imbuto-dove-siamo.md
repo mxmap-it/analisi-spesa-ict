@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.3 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.4 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -225,6 +225,15 @@ Tutti sono archiviati con sha256. `tools/verifiche/pnrr11_decreti.py` legge l'el
 - **Uso nell'imbuto:** il finanziamento PNRR è un tetto forfettario per la migrazione, versato a migrazione completata. È un **minimo** della spesa PSN dell'ente, non il suo contratto di utenza. Il collegamento CUP → CIG (dataset CUP ANAC) è il passo successivo.
 - Raccomandazione R50 (elenco aperto dei finanziamenti con CUP) confermata: oggi lo spoglio richiede quindici PDF con tre impaginazioni diverse.
 
+### 4.3 G1 e primi 1.000 G3 con la via 6 (top-5 punto 4, in corso, nuovo in 0.4)
+
+Decisione di Fabio del 7/11: solo i primi 1.000 CIG di G3 per importo (stima 360 USD-eq, fermarsi oltre +20 %) e tutti i G1, guardati uno per uno.
+
+- **Selezione** (`report/metodo/llm/imbuto-g1g3/selezione.json`): G1 **196 CIG unici** per 4,70 mld; G3 primi 1.000 per 1,55 mld (importo da 598 k€ in su). Il link PVL c'è per 112 G1 e 507 G3. Più 15 CIG del campione 611 che cadono in G1/G3 fuori selezione, classificati alla cieca come controllo.
+- **Doppioni in `ict.csv`:** lo stesso CIG compare in più anni. Sono 13 righe in G1 e 52 in G3, e i 4,88 mld di G1 del § 4 li contano due volte: al netto G1 vale 4,70 mld. Va corretto in imbuto.py (R53).
+- **Metodo:** Claude Sonnet in abbonamento sul server, con le istruzioni p3 (due assi con stato). Il modello apre per primo il link PVL, poi cerca gli atti dell'ente; ogni documento è archiviato con sha256. Una verifica a regole (`tools/llm/verifica_imbuto.py`) riporta a «incerto» ogni stato certo senza prova. Tutto è **proposta da revisionare**; i numeri non entrano nei totali finché non sono rivisti.
+- **Numeri:** `esiti/imbuto-via6/via6-g1g3.json`, rigenerato ogni 30 minuti dal server (`tools/verifiche/imbuto_via6.py`). Contiene CIG ed euro per stato degli assi, gli euro che si spostano di strato (S1 non ICT, S5 ICT non cloud, incluso cloud per giurisdizione, resta S6), la precisione sul controllo e il consumo.
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -328,6 +337,18 @@ Ingressi:
 
 Coerenza controllata: i CIG non esclusi coincidono fra riepilogo e `ict.csv`, 386.911 dal 2024 e 284.629 nel 2020-2023.
 
+## 9.1 Riproducibilità su altri modelli (nuovo in 0.4)
+
+Chiunque può rifare la classificazione documentale con un altro modello, anche open-weight e senza rete:
+
+- **Prompt:** `report/metodo/llm/prompt-analisi-documentale-v1.md`, autosufficiente e con sha256. Contiene i due assi, la tassonomia, i criteri, le prove (citazione letterale, pagina, sha256), 7 esempi dal campione 611 e cosa fare senza documenti.
+- **Schema:** `schemi/analisi-documentale.schema.json`.
+- **Runner neutro:** `tools/llm/analisi_documentale.py`, solo libreria standard. Funziona con qualunque endpoint compatibile OpenAI, con Ollama in locale, oppure stampando il prompt da incollare a mano.
+- **Pacchetto:** `report/metodo/llm/riproduzione/v1/`, con gli ingressi e i loro sha256 e con gli esiti di Claude.
+- **Confronto:** `tools/verifiche/concordanza_llm.py`, che calcola l'accordo per asse, Wilson e kappa.
+
+**Concordanza (in corso):** primo confronto con un modello open-weight già presente sul server, senza installazioni né spese: qwen3-vl:8b via Ollama, solo CPU. È lento (decine di minuti per CIG su un server condiviso), quindi gira in background a bassa priorità sul pacchetto. L’esito andrà in `esiti/imbuto-via6/concordanza-qwen3-vl_8b.json`. Per i modelli in cloud a tier gratuito (DeepSeek, Qwen/DashScope, OpenRouter) serve una chiave che oggi non è configurata: decide Fabio.
+
 ## Limiti
 
 - I numeri sono di imbuto-0.3.1 (3/11), che non tiene conto dei miglioramenti successivi alle convenzioni (#62).
@@ -342,3 +363,4 @@ Coerenza controllata: i CIG non esclusi coincidono fra riepilogo e `ict.csv`, 38
 | 0.1 | 2026-11-06 | prima bozza per Fabio: strati, soglia, gruppi, link PVL per strato, Zenodo/EuroTender, censimento AgID, top-5 |
 | 0.2 | 2026-11-06 | § 2.2: tetti e spesa per i 2.130 CIG sopra 50 M€, con la via di ogni CIG e gli strati ricalcolati; § 4.1: PSN, impegni contro bilanci 2024-2025 e piani dei fabbisogni; top-5 punti 2 e 3 aggiornati; R49 e R50 |
 | 0.3 | 2026-11-06 | § 2.3: precisione di T3 e T4 su un campione stratificato (Wilson) e sul PVL; regole v2 (T3 tondo ristretto, T5/E2 dal PVL); revisione degli incerti ICT (errori d'importo, lotti ripetuti); S3-S6 a 58,2 mld. § 4.2: decreti PNRR 1.1 per ente. R51 |
+| 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli |

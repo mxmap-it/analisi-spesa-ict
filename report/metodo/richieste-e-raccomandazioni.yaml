@@ -535,3 +535,14 @@
   richiesta: "All'acquisizione del CIG: avviso bloccante se l'importo supera di 100 volte la mediana per CPV e tipo di procedura o il bilancio dell'ente; correzione retroattiva dei casi segnalati"
   perche_serve: "Pochi errori pesano miliardi: senza controllo, ogni totale per strato va ripulito a mano"
   rif: ["#66", "R14"]
+
+- id: R53
+  destinatario: enti (stazioni appaltanti), ANAC; interno (imbuto)
+  tipo: ostacolo
+  stato: "in raccolta; conteggio aggiornato in esiti/imbuto-via6/via6-g1g3.json (campo ostacoli); R53 per non collidere con R51-R52 dell agente dei punti 2-3"
+  titolo: "Via 6 su G1/G3: i documenti di gara dei contratti più grandi sono spesso dietro login, WAF o link PVL rotti"
+  evidenza: "6/11/2026, primi pacchetti del giro G1/G3 (istruzioni p3): pagine esito con 403 (es. amaroma.it), portali gare con login (es. seamilano.bravosolution.com), URL che non riguardano il CIG; il link PVL c'è solo per 112 G1 su 196 e 507 G3 su 1.000. Interno: lavoro/imbuto/ict.csv ha CIG ripetuti su più anni (13 righe G1, 52 G3), quindi i totali di G1/G3 nel § 4 del rendiconto contano due volte (G1: 4,88 mld lordi, 4,70 mld netti)"
+  prova: "report/metodo/llm/imbuto-g1g3/verificati.jsonl (campo ostacoli per CIG); report/metodo/llm/imbuto-g1g3/selezione.json"
+  richiesta: "Enti: documenti di gara accessibili senza login e senza blocchi anti-bot (art. 28 d.lgs. 36/2023, art. 9 d.lgs. 33/2013), link PVL stabili e puntuali al CIG. ANAC: controllo di raggiungibilità del link alla pubblicazione. Interno: deduplicare per CIG in tools/analisi/imbuto.py"
+  perche_serve: "Sul residuo S6 la prova primaria (atto che cita il CIG) è ciò che separa un'ipotesi da un fatto; senza atti gli stati restano incerti anche per contratti da centinaia di milioni"
+  rif: ["#66", "#55", "R31", "R32", "R33", "R44"]
