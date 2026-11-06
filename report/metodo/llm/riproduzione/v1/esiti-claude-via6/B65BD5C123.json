@@ -1,0 +1,18 @@
+{
+ "cig": "B65BD5C123",
+ "asse_a": {
+  "stato": "incerto",
+  "e_cloud": "?",
+  "servizio": "?",
+  "ict": "s"
+ },
+ "asse_b": {
+  "stato": "incerto",
+  "provider_prodotto": "Aviation Solutions B.V. (Schiphol Group)",
+  "giurisdizione": "UE"
+ },
+ "confidenza": "bassa",
+ "fonte_primaria": false,
+ "motivazione": "Il testo descrive l'implementazione di una piattaforma software ATAM (Airport Turnaround Management), inequivocabilmente ICT, ma non specifica se il servizio è erogato da infrastruttura del fornitore (SaaS/cloud) o installato on-premise. Aviation Solutions B.V. è una società olandese (UE) con investimento di Schiphol Group; Engineering S.p.A. è co-aggiudicatario implementatore. I documenti di gara SEA non sono accessibili (portale login-required); le pagine prodotto di Aviation Solutions restituiscono 403.",
+ "modello": "claude-sonnet"
+}
