@@ -241,6 +241,7 @@
   stato: in_verifica
   pronto_per_anac: false
   manca: "validazione su campione, norma, controvalidazione"
+  motivo_interno: "Resta interno (verifica del 6/11, #33): l'obbligo di compilare cig_accordo_quadro per ogni derivato non è documentato in una norma o in un atto ANAC che abbiamo letto; il denominatore dipende da una classificazione testuale delle adesioni non validata a mano; gli 11.568 CIG padre inesistenti possono essere CIG di accordi quadro non presenti nel mirror (ante 2007 o SmartCIG). Senza le tre verifiche il rilievo non regge davanti ad ANAC. Il tema prosegue nel lavoro sulle convenzioni (#50, #62)."
 
 
 - id: P16
@@ -269,12 +270,11 @@
     esito: report/anac/integrita-completo-2026-10-27.json
     sintesi: "902 stazioni appaltanti su 39.486 (2,28%) con codice fiscale non valido, fra cui segnaposto CFAVCP-…"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: confronto con il dataset stazioni-appaltanti e con IndicePA"
-  azione_correttiva: "Documentare la convenzione dei segnaposto o sostituirli con il codice fiscale reale"
-  metrica: "Numero di stazioni appaltanti con codice fiscale non valido"
+  controvalidazione: "Seconda via indipendente (6/11): anagrafica stazioni-appaltanti in JSON (sha256 d6cb2e0c…77d8b2), letta con json della libreria standard e un validatore del codice fiscale riscritto (tools/verifiche/cf_segnaposto.py, esito report/anac/verifica-cf-segnaposto-2026-11-06.json): 1.285 stazioni su 48.040 (2,68 %) con codice fiscale non valido, di cui 1.282 segnaposto CFAVCP- (1.191 ATTIVO, 91 CESSATO), tutte con codice AUSA; molte sono centrali uniche di committenza senza codice fiscale proprio"
+  azione_correttiva: "Documentare nei metadati la convenzione dei segnaposto CFAVCP- (a chi si assegnano, per esempio alle centrali uniche di committenza senza codice fiscale proprio) e, dove esiste, sostituirli con il codice fiscale reale o dell'ente capofila"
+  metrica: "Numero di stazioni appaltanti con codice fiscale non valido, in cig_delta e nell'anagrafica stazioni-appaltanti (oggi 902 e 1.285)"
   stato: aperto
-  pronto_per_anac: false
-  manca: "seconda via; documentazione della convenzione"
+  pronto_per_anac: true
 
 - id: P18
   titolo: "Il link ai documenti di gara di ciascun CIG non è negli open data: solo nell'API PVL, dal 2024, e manca per 1 CIG su 3"

@@ -1,0 +1,71 @@
+{
+ "file": "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/stazioni-appaltanti/filesystem/stazioni-appaltanti_json.zip",
+ "sha256": "d6cb2e0c97fb163677c273bbf1a67a2ba42ede899f59dfd7e4fb20cae077d8b2",
+ "righe": 48040,
+ "non_validi": 1285,
+ "pct": 2.675,
+ "motivi": {
+  "segnaposto CFAVCP": 1282,
+  "lunghezza 9": 1,
+  "lunghezza 10": 1,
+  "lunghezza 7": 1
+ },
+ "per_stato": {
+  "segnaposto CFAVCP|CESSATO": 91,
+  "segnaposto CFAVCP|ATTIVO": 1191,
+  "lunghezza 9|ATTIVO": 1,
+  "lunghezza 10|ATTIVO": 1,
+  "lunghezza 7|ATTIVO": 1
+ },
+ "non_validi_con_codice_ausa": 1285,
+ "esempi": {
+  "segnaposto CFAVCP": [
+   [
+    "CFAVCP-0001249",
+    "CENTRALE UNICA DI COMMITTENZA COMUNI DI COLICO E DORIO",
+    "CESSATO"
+   ],
+   [
+    "CFAVCP-0000EBF",
+    "CUC LEFFE-FIORANO",
+    "ATTIVO"
+   ],
+   [
+    "CFAVCP-000200B",
+    "GIANFRANCO AURISICCHIO",
+    "ATTIVO"
+   ],
+   [
+    "CFAVCP-0001036",
+    "CENTRALE UNICA DI COMMITTENZA TRA I COMUNI DI SANTA NINFA E DI VITA",
+    "ATTIVO"
+   ],
+   [
+    "CFAVCP-0000E03",
+    "CENTRALE UNICA DI COMMITTENZA LIMONE PIEMONTE",
+    "ATTIVO"
+   ]
+  ],
+  "lunghezza 9": [
+   [
+    "09335106G",
+    "NEURONUP SL",
+    "ATTIVO"
+   ]
+  ],
+  "lunghezza 10": [
+   [
+    "9788355010",
+    "FORWARD LAND FORCE - HUNGARY",
+    "ATTIVO"
+   ]
+  ],
+  "lunghezza 7": [
+   [
+    "B133753",
+    "INVESCO REAL ESTATE MANAGEMENT S.À R.L.",
+    "ATTIVO"
+   ]
+  ]
+ }
+}
