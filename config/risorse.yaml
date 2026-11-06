@@ -383,12 +383,15 @@ risorse:
 
   - autorita: opencup
     dataset: progetti
-    url: https://www.opencup.gov.it/portale/web/opencup/opendata
+    url: https://www.opencup.gov.it/portale/web/opencup/accesso-agli-open-data
     cadenza: mensile
-    specchia: false
+    specchia: true
     partizione: nessuna
     ict: true
-    nota: L'URL degli open data dà 404 il 6/11/2026; bulk (2,2 GB) da ritrovare (#26).
+    nota: >-
+      Pagine «accesso-agli-open-data» e «dettaglio-opendata-complessivo» (il vecchio
+      /opendata dà 404). OpendataComplessivo.zip 3,4 GB (curl con ripresa), metadati,
+      decodifiche, file CUP PNRR (feb. 2024); URL in config/coda-mirror-2026-11.txt.
 
   - autorita: gleif
     dataset: golden-copy
@@ -409,3 +412,15 @@ risorse:
     partizione: nessuna
     ict: false
     nota: Spesa delle amministrazioni per funzione COFOG, tutti i paesi. Denominatore, non misura (#29).
+
+  - autorita: dpcoe
+    dataset: open-cpt-spese
+    url: https://politichecoesione.governo.it/it/politica-di-coesione/misurazione-valutazione-e-trasparenza/la-misurazione-delle-politiche-di-coesione/conti-pubblici-territoriali-cpt/i-dati/catalogo-open-cpt/
+    cadenza: annuale
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: >-
+      Catalogo Open CPT, 7 pagine (?page=N), file in /media/. Si specchiano solo le
+      spese (sp_*, pa_s*, spa_s*: 36 file il 6/11/2026); le entrate sono fuori
+      perimetro. Denominatore (#29).

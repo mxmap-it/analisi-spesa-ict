@@ -5,6 +5,13 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-06
 
 ## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
+- **Aggiornamento 0.5.1 (6/11, sera):**
+  - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
+  - **CPT:** 36 file di spesa del catalogo Open CPT archiviati.
+  - **ISTAT COFOG:** coperto da Eurostat.
+  - **Consip:** il server taglia i file sopra circa 350 MB, quindi curl con ripresa e poi `archivia.py --da-file`. `cataloghi2024.json` è archiviato, gli altri 6 sono in corso (`lavoro/consip/grandi.log`).
+  - **BDAP:** la pagina `package_search start=1000` cade sempre (il server chiude dopo 120 s), anche in pagine da 250: da riprovare in orari di poco carico.
+  - **Vincitori TED per l'imbuto (#66):** `esiti/2026-11-06/imbuto/ted-vincitori.csv` (`tools/verifiche/ted_imbuto.py`). 84 CIG con vincitore TED e senza aggiudicatari ANAC; 72 nell'imbuto, di cui 7 in S6 (19 M€) e 55 in S5. Da integrare a cura di chi gestisce l'imbuto: il rendiconto imbuto-dove-siamo non è stato toccato.
 - **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.5.
 - **#40:** tre campioni a cieco (`report/metodo/lente-cieco{,-2,-3}/`; `tools/verifiche/lente_cieco.py CARTELLA`). Misure indipendenti big tech: R 81 % → 89 % → 89 %, P 100 % / 95 % / 100 %. Regole v0.5 in `config/marchi_cloud.yaml`; il terzo campione le misura. La lente testuale è al limite: non aggiungere regole senza un quarto campione.
 - **#41 / #43:** invariati rispetto a 0.4 (rivenditori v3.1; FLAG_PNRR_PNC 90 %; R57, R58).

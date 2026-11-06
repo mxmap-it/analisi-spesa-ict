@@ -1,0 +1,35 @@
+{
+ "ingresso": [
+  "/home/mxmap.it/analisi-spesa-ict/esiti/2026-11-06/mirror/ted-esiti.csv",
+  "lavoro/imbuto/ict.csv"
+ ],
+ "cig_con_vincitore_ted": 84,
+ "nell_imbuto": 72,
+ "per_strato_gruppo": {
+  "S5-ict-non-cloud/": {
+   "cig": 55,
+   "importo_anac": 156154311
+  },
+  "fuori ict.csv (escluso S1 o anno < 2020)": {
+   "cig": 12,
+   "importo_anac": 0
+  },
+  "S0-padre-aq/": {
+   "cig": 9,
+   "importo_anac": 15419830
+  },
+  "S6-residuo/G3-incerti-significativi": {
+   "cig": 6,
+   "importo_anac": 8039362
+  },
+  "S4-marchio/": {
+   "cig": 1,
+   "importo_anac": 201512
+  },
+  "S6-residuo/G1-mega": {
+   "cig": 1,
+   "importo_anac": 11004067
+  }
+ },
+ "nota": "esito da integrare nell'imbuto (#66): il vincitore TED colma il campo aggiudicatari mancante in ANAC"
+}

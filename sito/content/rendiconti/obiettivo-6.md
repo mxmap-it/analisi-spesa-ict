@@ -173,6 +173,12 @@ Con gli strumenti esistenti: `tools/archivia.py` (content-addressed, idempotente
   - dei 402 CIG collegati a un esito TED, 310 hanno già gli aggiudicatari in ANAC;
   - per le **112 righe senza aggiudicatari ANAC**, TED dà vincitore e P.IVA in 88 casi e il valore in 99, per **298,3 M€**;
   - elenco in `esiti/2026-11-06/mirror/ted-esiti.csv`: è un'integrazione di dati mancanti in ANAC [V], da segnalare con R59.
+- **Vincitori TED nell'imbuto (v0.5)** (`tools/verifiche/ted_imbuto.py`): 84 CIG distinti con vincitore TED e senza aggiudicatari ANAC; 72 sono nell'imbuto:
+  - 55 in S5, ICT non cloud (156 M€);
+  - 9 in S0, padri di AQ;
+  - **7 in S6, residuo**: 6 in G3 e 1 in G1 (19 M€);
+  - 1 in S4.
+  L'esito è in `esiti/2026-11-06/imbuto/ted-vincitori.csv`. Si integra nell'imbuto a cura di chi lo gestisce (#66); questo rendiconto non modifica quello dell'imbuto.
 - **FTS → P.IVA** (`tools/verifiche/fts_piva.py`, xlsx letti con la sola libreria standard): FTS 2007-2025, 19 file archiviati [V]:
   - dei 1.018 aggiudicatari dei contratti cloud con P.IVA italiana (`rivenditori-cf.csv`), **90 ricevono anche fondi UE in gestione diretta**;
   - i primi 30 sommano 870 M€ nel 2007-2025: Leonardo 318 M€, Engineering 204 M€, Cogea 72 M€, TIM 52 M€, KPMG Advisory 33 M€, TI Sparkle 31 M€, Maggioli 29 M€;
@@ -188,13 +194,14 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 | #13 | PA Digitale 2026 | repository open data intero (zip) | archiviato (17,6 MB) |
 | #13 | IndicePA | catalogo CKAN, tutte le risorse | 54 risorse in coda (`lavoro/indicepa/mirror.log`), in corso al commit |
 | #12 | SIOPE | USCITE 2017-2026 e ANAGRAFICHE (le entrate sono fuori perimetro) | 11/11 archiviati (circa 0,73 GB) |
-| #25 | BDAP | catalogo CKAN (`/SpodCkanApi/api/3`, `/api/3` dà 404): package_list e package_search | 4 pagine su 5 (16 MB), 1 errore da riprovare (start=1000) |
+| #25 | BDAP | catalogo CKAN (`/SpodCkanApi/api/3`, `/api/3` dà 404): package_list e package_search | 4 pagine su 5 (16 MB). La pagina start=1000 cade anche al nuovo tentativo: il server chiude la connessione dopo 120 s; in pagine da 250 righe un primo tentativo fallisce, altri in corso |
 | #29 | Eurostat | COFOG `gov_10a_exp` (TSV) | archiviato (16,9 MB) |
 | #28 | GLEIF | golden copy del 6/11: LEI2, RR, REPEX in CSV | 4/4 archiviati (595 MB) |
 | #26 | OpenCoesione | `progetti_esteso` (circa 270 MB) | archiviato (269,6 MB) |
-| #26 | OpenCUP | bulk da 2,2 GB | non specchiato: l'URL degli open data dà 404, da ritrovare |
+| #26 | OpenCUP | pagine «accesso-agli-open-data» e «dettaglio-opendata-complessivo» (il vecchio `/opendata` dà 404) | metadati, decodifiche e file CUP PNRR archiviati (111 MB); OpendataComplessivo.zip (3,4 GB) in coda con ripresa, la guardia può fermarlo |
 | #26 | Italia Domani | gare ReGiS | 403 Akamai (R57) |
-| #29 | CPT, ISTAT | conti pubblici territoriali, COFOG nazionale | non ancora: URL da individuare |
+| #29 | CPT | catalogo Open CPT, solo le spese (le entrate sono fuori perimetro) | 36/36 archiviati |
+| #29 | ISTAT | COFOG nazionale | non specchiato: coperto da Eurostat `gov_10a_exp` (stessa fonte, trasmessa da ISTAT) |
 | #13 | catalogo ACN | — | escluso (R55, decide Fabio) |
 
 ## 7. Prossimi passi
@@ -210,6 +217,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.5.1 | 2026-11-06 | OpenCUP e CPT trovati e specchiati; vincitori TED nell'imbuto (esito per #66); nuovi tentativi su Consip (curl con ripresa) e BDAP |
 | 0.5 | 2026-11-06 | Regole correttive e terzo campione a cieco (big tech P 100 %, R 89 %); Consip a fine giro 94/50/7; TED come fonte di esiti (88 vincitori, 298 M€); mirror SIOPE, IndicePA, PA Digitale 2026, BDAP, Eurostat, GLEIF, OpenCoesione |
 | 0.4 | 2026-11-06 | Secondo campione a cieco (regole v0.3 misurate: big tech P 95 %, R 89 %); 1.064 CIG senza flag (R58); filtro TED verificato, TED v2 e TED → CIG; FTS → P.IVA; Consip in tutti i formati; correzione 33 → 34 mesi TED |
 | 0.3 | 2026-11-06 | Regole della lente applicate (non misurate); sottocampione sugli atti 1/9; rivenditori v3.1 con RTI ripartiti; FLAG_PNRR_PNC; R57; mirror Consip, TED e FTS |

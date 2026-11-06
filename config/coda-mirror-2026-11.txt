@@ -28,3 +28,14 @@ https://goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297730/202611
 https://goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297775/20261106-0800-gleif-goldencopy-repex-golden-copy.csv.zip
 # #26 OpenCoesione progetti (nazionale, esteso)
 https://opencoesione.gov.it/it/opendata/progetti_esteso.zip
+# #26 OpenCUP (pagine «accesso-agli-open-data» e «dettaglio-opendata-complessivo», trovate il 6/11/2026); file grandi con tools/acquisizione/scarica_ripresa.sh
+https://www.opencup.gov.it/portale/documents/21195/0/Metadati.xlsx/379fbe11-e297-c7a9-ebe9-567d911e12a5
+https://www.opencup.gov.it/portale/documents/21195/0/Tabelle+decodifica+classificazioni+opencup.zip/ab457d6b-ae2c-8aef-697c-9abfd2e5a914
+https://www.opencup.gov.it/portale/documents/21195/0/File+CUP+opencup+pnrr_PNRR+febbraio+2024_1.zip/8592fa4a-7814-60a1-97a2-910add3d4754
+# grande (3,4 GB): https://www.opencup.gov.it/portale/documents/21195/299152/OpendataComplessivo.zip/e2ed40f1-54ef-9a36-6d49-a1349175e500
+# #29 CPT spese: elenco generato dalle 7 pagine del catalogo Open CPT (lavoro/cpt-spese.txt sul server, 36 file sp_*/pa_s*/spa_s*)
+# #25 BDAP: la pagina start=1000 da 1000 righe cade (il server chiude la connessione dopo 120 s): 4 pagine da 250
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=250&start=1000
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=250&start=1250
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=250&start=1500
+https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=250&start=1750
