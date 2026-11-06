@@ -4,7 +4,7 @@ Una riga per decisione, con data, chi l'ha presa e perché. Le decisioni non si 
 un fatto nuovo; se una cambia, si aggiunge una riga nuova che la sostituisce, non si cancella la
 vecchia.
 
-**Ultimo aggiornamento:** 2026-10-26
+**Ultimo aggiornamento:** 2026-11-06
 
 ## Obiettivo e perimetro
 
@@ -162,3 +162,13 @@ vecchia.
 - **Nessun invio:** le istanze le invia Fabio; registro `report/convenzioni/accesso-civico/registro.csv` (preparata / inviata / risposta / esito) mostrato sul sito; formato `spesaict.istanza/1` riusabile dal futuro sistema di invii massivi.
 - **Rimedio strutturale:** una proposta di policy per classe di carenza (R08, R37-R42), così da non dover più ricorrere all'accesso civico.
 - **Criterio del censimento:** iniziative ICT con CIG derivati dal 2024 (o nuove), quote per tipo di soggetto, soglie fuori Consip (3 derivati, 1 M€); storiche segnalate a parte (README della base dati).
+
+## 2026-11-06 — Copie dei documenti delle convenzioni: repository pubblico con GitHub Release, non LFS (Fabio approva il repo; scelta Release verificata da Claude, #62)
+
+- Fabio ha approvato un repository GitHub **pubblico** dedicato, `mxmap-it/convenzioni-ict-documenti`, per le copie dei documenti archiviati (~1.770 file, ~4,7 GB per iniziativa; 1.447 file distinti, 4,1 GB).
+- **Release, non Git LFS.** Fatti dalla documentazione GitHub consultata il 6/11/2026:
+  - LFS (docs.github.com, «About storage and bandwidth usage»): GitHub Free e Free for organizations hanno **10 GiB di spazio e 10 GiB di banda** LFS; la banda dei download, anche di terzi su repo pubblici, **conta sul proprietario**; superata la banda senza metodo di pagamento LFS si **disattiva fino al mese dopo**; superato lo spazio non si possono più caricare file (i cloni ricevono solo i puntatori). Con 4,1 GB, bastano 2-3 download completi al mese per bloccare tutto, oppure si paga.
+  - Release (docs.github.com, «About releases»): ogni file **sotto 2 GiB**, **fino a 1.000 asset per release**, **nessun limite** sulla dimensione totale né sulla banda.
+  - Quindi: una release per iniziativa (max 1.000 file; la più grande ne ha meno), nessun file oltre 2 GiB. GitHub espone il digest sha256 di ogni asset: verifica completa senza riscaricare.
+- Il repo contiene solo README, licenza CC0 del manifest e `manifest.csv/json`; i documenti restano delle amministrazioni (riuso ex art. 7 d.lgs. 33/2013 e art. 52 CAD, citando la fonte). Esclusi: fonti non ufficiali e materiali interni (es. PDF Proteggimi, che comunque non è nell'archivio delle convenzioni).
+- Caricamento dal portatile (il token GitHub non si porta sul server), con i blob copiati dal server.
