@@ -1,0 +1,185 @@
+OGGETTO: GARA A PROCEDURA APERTA SUDDIVISA IN 8 LOTTI PER L’APPALTO DI FORNITURA DI TECNOLOGIE SERVER E DEI
+SERVIZI CONNESSI ED OPZIONALI PER LE PUBBLICHE AMMINISTRAZIONI AI SENSI DELL’ART. 26 LEGGE N. 488/1999 E S.M.I. E
+DELL’ART. 58 LEGGE N. 388/2000 - ID 2878
+
+
+I chiarimenti della gara sono visibili sui siti: www.consip.it , www.acquistinretepa.it e www.mef.gov.it .
+
+
+                                                                                                           ***
+
+
+
+
+ ID                                                           Domanda                                                                                                        Risposta
+
+
+
+      Il Req_2878_L6_6 del Capitolato Tecnico (paragrafo 2.9, pagina 20) sembra identificare come requisito minimo per il
+      Server GPU Prestazionale (sia come GPU installate nella macchina base che come Opzione Aggiuntiva) le schede GPU
+      NVIDIA H100.
+      Si fa presente che le schede NVIDIA H100 sono ormai fuori produzione e non più reperibili e sono state sostituite delle
+  1   schede NVIDIA H200. Le schede NVIDIA H200 hanno però dei consumi energetici significativamente superiori alle H100             Si veda errata corrige del 22/10/2025
+      (600W contro 350-400W) e di conseguenza richiedono una dissipazione termica superiore; ciò le rende inadatte ad
+      essere ospitate in server non specializzati se in numero superiore a due per nodo.
+      Si chiede quindi se, alla luce di questo problema tecnico, il Req_2878_L6_5 del capitolato tecnico (paragrafo 2.9, pagina
+      20, “Numero massimo di slot per alloggiamento elettrico delle Opzioni GPU”) possa essere modificato da “4” a “2”.
+      Nel Capitolato Tecnico, ai paragrafi 2 e 4.2 vengono richiesti per i lotti 1, 2, 3, 4, 5, 6 e 7 sia come “dischi e memorie
+      interne” inclusi nella macchina base che come “Unità Disco/Memoria Interna Aggiuntiva” dischi di varie capacità e di
+      tipologia “SAS” con transfer rate teorico a 6/12Gb.
+      Si fa presente che nelle roadmap dei più grandi produttori mondiali i dischi SAS stanno venendo soppiantati dai dischi
+                                                                                                                                     Non si conferma la possibilità di un generico downgrade architetturale da SAS a
+  2   NVME come opzione prestazionale e dai SATA come opzione entry-level. Ciò significa che forzare l’utilizzo di dischi SAS
+                                                                                                                                     SATA.
+      obbligherebbe i partecipanti ad utilizzare tecnologie server di generazioni obsolescenti.
+      Dato che il Capitolato già prevede ove necessario il possibile utilizzo di dischi NVME come alternativa ai SAS richiesti, si
+      chiede dunque se sia possibile fornire dischi SATA con transfer rate teorico 6Gb e pari caratteristiche di capacità ed
+      endurance ove siano richiesti dischi di tipologia SAS.
+
+
+
+
+Classificazione Consip: Ambito Pubblico                                                                                                                                                                  Pag. 1 a 31
+      Il Req_2878_L5_5 del Capitolato Tecnico (paragrafo 2.8, pagina 18) e il Req_2878_L6_5 del Capitolato Tecnico
+      (paragrafo 2.9, pagina 20) richiedono che i server offerti per i Lotti 5 e 6 siano predisposti per alloggiare fino a quattro
+      GPU.
+      Si fa presente che i server con queste caratteristiche sono solitamente server specializzati che non possono avere le
+      certificazioni energetiche richieste nel paragrafo 2.2 del Capitolato Tecnico (pagine 8-9). Si veda ad esempio il seguente
+      documento Energy Star, pagina 11, paragrafo 2.2.2, che indica le tipologie di server esonerate dalla certificazione
+      Energy Star. Fra queste tipologie, al punto IV troviamo gli “High Performance Computing Systems”, fra i quali ricadono i
+  3                                                                                                                                    Si veda errata corrige del 22/10/2025
+      server ad alte prestazioni specializzati per la densità di GPU:
+      https://www.energystar.gov/sites/default/files/ENERGY%20STAR%20Version%203.0%20Computer%20Servers%20Prog
+      ram%20Requirements.pdf
+      Si richiede quindi se sia corretto considerare questi due lotti (5 e 6) come esentati dalla normativa europea del rispetto
+      dei principi DNSH.
+      In alternativa, al fine di assicurare il rispetto dei principi DNSH, si chiede che il Req_2878_L5_5 e il Req_2878_L6_5 del
+      Paragrafo Tecnico possano essere modificati da “4” a “2”.
+      In relazione alla complessità della gara e dell’analisi della documentazione, al fine di predisporre l’offerta tecnico-
+      economica più vantaggiosa per la stazione appaltante, in relazione al contesto specifico di gara, si ritiene necessario
+      disporre delle medesime informazioni di mercato a disposizione della Stazione Appaltante e degli aggiudicatari della
+      Convenzione Tecnologie server ed.5.
+  4                                                                                                                                    Si veda file Estratto TS5 allegato
+      Pertanto, nel rispetto delle norme per la tutela della concorrenza e del mercato, si chiedono quali siano le quantità e le
+      tipologie di prodotti principali, opzioni e servizi con relativa durata ed importi economici, presenti nel listino della
+      Convenzione Tecnologie Server 5, forniti ed erogati per ciascun Lotto, e per ciascun ordine/amministrazione contraente
+      che abbia sottoscritto la suddetta convenzione. Si chiede cortesemente di fornire il documento anche in formato xls.
+      Relativamente al requisito delle prestazioni della CPU (Req 2878 L7 3): le prestazioni richieste per la CPU (valori
+      indicativi: SPECint 1245 e SPECfp 1445) corrispondono a una classe di processori di fascia alta, il cui costo unitario è
+      superiore al prezzo base fissato per ciascuna CPU nella Gara. Considerando gli ipotetici casi d’uso dei server e con
+  5                                                                                                                                    Si veda errata corrige del 22/10/2025
+      l’obiettivo di mantenere un livello prestazionale adeguato, alla luce di quanto sopra, qualora fosse possibile, chiediamo
+      una riduzione delle prestazioni richieste di almeno il 15%. Tale adeguamento permetterebbe l’inclusione di una famiglia
+      di processori comunque altamente performanti, ma più coerenti con il prezzo base della Gara.
+      Relativamente al requisito della configurazione RAM (Req 2878 L7 5): la quantità minima di RAM indicata per il server
+      base (1,5 TB) comporta un costo stimato non compatibile con il prezzo base complessivo fissato per il server. Una
+      configurazione iniziale di memoria ragionevolmente ridotta su un server a 4 socket potrebbe essere giustificata dal suo
+      ruolo come punto d’ingresso economico in una piattaforma scalabile ad alte prestazioni. Ciò consentirebbe un risparmio
+      sui costi iniziali, mantenendo al contempo un significativo potenziale di espansione, permettendo aggiornamenti di
+  6                                                                                                                                    Si veda errata corrige del 22/10/2025
+      memoria precisi e misurati in risposta alla crescita effettiva del carico di lavoro—soprattutto considerando l’opzione
+      esistente di raddoppiare la capacità computazionale. Alla luce degli ipotetici casi d’uso dei server e al fine di garantire la
+      coerenza economica dell’offerta, qualora fosse possibile, chiediamo una riduzione della quantità minima di RAM, ad
+      esempio di circa il 50%, allineando il requisito tecnico al prezzo base d’asta, pur mantenendo una configurazione
+      adeguata alle esigenze operative previste.
+
+
+
+
+Classificazione Consip: Ambito Pubblico                                                                                                                                        Pag. 2 a 31
+      Capitolato tecnico2.921Req_2878_L6_14Il server dovrà essere meccanicamente contenuto in cabinet da rack 19”, con
+      altezza del cabinet minore o uguale alle unit indicate. Dovrà esser fornito e consegnato con tutti gli accessori (rotaie e
+      guide telescopiche, viti specifiche, dadi, etc.) atti al montaggio dell’apparecchiatura ed alla sua estraibilità da un rack per
+      le opportune attività di ispezione/manutenzione.Considerando che l'architettura dei Sistemi con GPU richiede
+  7                                                                                                                                     Si veda errata corrige del 22/10/2025
+      attualmente una particolare attenzione alla dissipazione del calore e all'ottimizzazione dei consumi energetici, di
+      conseguenza l'ingegnerizzazione dei componenti interni ai sistemi richiede maggiore spazio fisico, al fine di garantire la
+      massima partecipazione alla gara, unitamente alle più recenti tecnologie, si chiede di elevare a 4 Rack Unit le dimensioni
+      massime del cabinet del server.
+      Capitolato tecnico2.818Req_2878_L5_9Il server dovrà essere configurabile con la quantità di dischi interni installabili
+      indicati, compatibili con le architetture nel paragrafo 2.3 lettera f).Considerando che:
+      - l'architettura dei Sistemi con GPU richiede attualmente una particolare attenzione alla dissipazione del calore e
+      all'ottimizzazione dei consumi energetici, di conseguenza l'ingegnerizzazione dei componenti interni ai sistemi richiede
+  8                                                                                                                                     Si veda errata corrige del 03/11/2025
+      maggiore spazio fisico a scapito dell'espandibilità dello Storage interno.
+      - I Sistemi con significativa componente GPU, utilizzano normalmente lo Storage interno per dati temporanei a supporto
+      dell'elaborazione e non per un salvataggio permanente, esigenza soddisfatta sul mercato da 8 slot dischi.
+      Si richiede se è accettabile considerare un limite di 8 dischi interni invece dei 12 richiesti nel requisito.
+      Capitolato tecnico2.920Req_2878_L6_9Il server dovrà essere configurabile con la quantità di dischi interni installabili
+      indicati, compatibili con le architetture nel paragrafo 2.3 lettera f).Considerando che:
+      - l'architettura dei Sistemi con GPU richiede attualmente una particolare attenzione alla dissipazione del calore e
+      all'ottimizzazione dei consumi energetici, di conseguenza l'ingegnerizzazione dei componenti interni ai sistemi richiede
+  9                                                                                                                                     Si veda errata corrige del 03/11/2025
+      maggiore spazio fisico a scapito dell'espandibilità dello Storage interno.
+      - I Sistemi con significativa componente GPU, utilizzano normalmente lo Storage interno per dati temporanei a supporto
+      dell'elaborazione e non per un salvataggio permanente, esigenza soddisfatta sul mercato da 8 slot dischi.
+      Si richiede se è accettabile considerare un limite di 8 dischi interni invece dei 12 richiesti nel requisito.
+
+      Capitolato tecnico2.518Req_2878_L5_6[...]
+                                                                                                                                        Premesso che per un mero refuso le sigle "FP16" sono da intendersi come "FP32",
+      2) Prestazioni computazionali: almeno 5 TFLOPS, espresse in una delle modalità single precision (FP16), oppure double
+                                                                                                                                        in completo accordo con la modalità "single precision" richiesta, il requisito è una
+ 10   precision (FP64)
+                                                                                                                                        richiesta contemporanea di FP32 o FP64 pari almeno a 5 TFLOPS e memoria di
+      [...]Si chiede di precisare il valore prestazionale atteso per ciascuna delle due pipeline (FP16 e FP64) dal momento che
+                                                                                                                                        almeno 48 GB, confermando quindi il requisito "Req_2878_L5_6"
+      l'indicazione di 5 TFLOPS sembra coerente solo in FP64, risultando invece significativamente lontana in FP16
+
+      Capitolato tecnico4.2.545OPZ_2878_L5-39[...]
+                                                                                                                                        Premesso che per un mero refuso le sigle "FP16" sono da intendersi come "FP32",
+      2) Prestazioni computazionali: almeno 5 TFLOPS, espresse in una delle modalità single precision (FP16), oppure double
+                                                                                                                                        in completo accordo con la modalità "single precision" richiesta, il requisito è una
+ 11   precision (FP64)
+                                                                                                                                        richiesta contemporanea di FP32 o FP64 pari almeno a 5 TFLOPS e memoria di
+      [...]Si chiede di precisare il valore prestazionale atteso per ciascuna delle due pipeline (FP16 e FP64) dal momento che
+                                                                                                                                        almeno 48 GB, confermando quindi l'Opzione "OPZ_2878_L5-39"
+      l'indicazione di 5 TFLOPS sembra coerente solo in FP64, risultando invece significativamente lontana in FP16
+
+
+
+
+Classificazione Consip: Ambito Pubblico                                                                                                                                                                      Pag. 3 a 31
+      Capitolato tecnico2.920Req_2878_L6_10Il server dovrà essere equipaggiato con memorie interne di tipo SAS con
+      transfer rate teorico almeno pari a 12 Gb/s, con caratteristiche pari almeno a quelle indicate in tabella. È possibile, in
+      alternativa a quanto indicato in tabella, fornire memorie NVMe con fattore di forma M.2, con capacità almeno pari a
+                                                                                                                                       Si conferma. Fermo restando la completa compatibilità del controller di cui è dotato il
+ 12   quanto indicato.
+                                                                                                                                       server offerto con i dischi/memorie base ed opzionali.
+      [n.2 SSD da 1,92TB “hot swap” con Endurance DWPD >=0.9]
+      Nel rispetto delle caratteristiche del controller di cui al par 2.3.1 Lettera f, nonché in ottica di miglioramento (16 Gb/s vs
+      12 Gb/s), si chiede di confermare la possibilità di fornire unità NVMe con form factor SFF anziché M.2.
+                                                                                                                                       si conferma la possibilità di fornire unità SSD con interfaccia NVMe in alternativa alle
+                                                                                                                                       unità disco HDD aggiuntive con interfaccia SAS previste, purché siano rispettate le
+      Capitolato tecnico4.2.646OPZ_2878_L6-14Unità disco interna aggiuntiva di tipo SAS “hot swap” di 1TB, con transfer
+                                                                                                                                       seguenti condizioni:
+      teorico a 6Gb e velocità di rotazione di almeno 10 krpm.Nel rispetto delle caratteristiche del controller di cui al par 2.3.1
+ 13                                                                                                                                    -La capacità dell’unità SSD NVMe deve essere pari a 1TB, come previsto dal
+      Lettera f, nonché in ottica di miglioramento, si chiede di confermare la possibilità di fornire unità SSD con interfaccia
+                                                                                                                                       requisito originario.
+      NVMe anziché HDD con interfaccia SAS.
+                                                                                                                                       -La proposta deve essere coerente con l’architettura del sistema e non introdurre
+                                                                                                                                       limitazioni rispetto alle funzionalità richieste dal Capitolato.
+                                                                                                                                       si conferma la possibilità di fornire unità SSD con interfaccia NVMe in alternativa alle
+                                                                                                                                       unità disco HDD aggiuntive con interfaccia SAS previste, purché siano rispettate le
+      Capitolato tecnico4.2.646OPZ_2878_L6-15Unità disco interna aggiuntiva di tipo SAS “hot swap” di 2TB, con transfer
+                                                                                                                                       seguenti condizioni:
+      teorico a 6Gb e velocità di rotazione di almeno 10 krpm.Nel rispetto delle caratteristiche del controller di cui al par 2.3.1
+ 14                                                                                                                                    -La capacità dell’unità SSD NVMe deve essere pari a 2TB, come previsto dal
+      Lettera f, nonché in ottica di miglioramento, si chiede di confermare la possibilità di fornire unità SSD con interfaccia
+                                                                                                                                       requisito originario.
+      NVMe anziché HDD con interfaccia SAS.
+                                                                                                                                       -La proposta deve essere coerente con l’architettura del sistema e non introdurre
+                                                                                                                                       limitazioni rispetto alle funzionalità richieste dal Capitolato.
+
+      Capitolato tecnico4.2.646OPZ_2878_L6-20Unità memoria interna aggiuntiva di tipo SAS, con transfer teorico a 6Gb,
+      SSD Mixed Use “hot swap” di 1,6TB. Endurance DWPD >=3.0Nel rispetto delle caratteristiche del controller di cui al par          Si conferma. Fermo restando la completa compatibilità del controller di cui è dotato il
+ 15
+      2.3.1 Lettera f, nonché in ottica di miglioramento, si chiede di confermare la possibilità di fornire unità SSD con interfaccia server offerto con i dischi/memorie base ed opzionali
+      NVMe anziché SAS
+
+
+
+      Capitolato tecnico4.2.646OPZ_2878_L6-21Unità memoria interna aggiuntiva di tipo SAS, con transfer teorico a 6Gb,
+      SSD Read Intensive “hot swap” di 1,92TB. Endurance DWPD >=0.9Nel rispetto delle caratteristiche del controller di cui
+ 16                                                                                                                                    Si conferma. Si veda risposta al chiarimento ID 15
+      al par 2.3.
