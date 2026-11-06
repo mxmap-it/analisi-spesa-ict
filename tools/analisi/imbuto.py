@@ -28,7 +28,7 @@ DA_CATEGORIA = {
     "connettivita": ("S5-ict-non-cloud", "telefonia-connettivita", ""), "hardware": ("S5-ict-non-cloud", "hardware-infrastruttura", ""),
 }
 
-VERSIONE_IMBUTO = "imbuto-0.3.1 (2026-11-03)"  # 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
+VERSIONE_IMBUTO = "imbuto-0.3.2 (2026-11-06)"  # 0.3.2: un CIG ripetuto dentro lo stesso file annuale si conta una volta (11.043 righe, tools/verifiche/imbuto_doppioni.py, R53). 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
 SOGLIA_MIN = 500          # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
@@ -102,8 +102,11 @@ def main(anno0=2020):
                 "cpv_ict", "importo", "importo_da_verificare", "stazione_appaltante", "aggiudicatari", "testo"])
     fonti = sorted(a for a in anni if glob.glob(D + f"cig-{a}/filesystem/cig_csv_*.zip")) + ["delta"]
     for fonte in fonti:
+        visti = set()  # 0.3.2: i doppioni stanno dentro lo stesso file annuale (2024, 2025): set per fonte, memoria contenuta
         for r in righe_cig(fonte):
             if fonte != "delta" and r["cig"] in delta_cig: continue
+            if r["cig"] in visti: continue
+            visti.add(r["cig"])
             anno = (r.get("anno_pubblicazione") or "").strip()
             if anno not in anni: continue
             testo = (r["oggetto_lotto"] or "") + " | " + (r["oggetto_gara"] or "")
