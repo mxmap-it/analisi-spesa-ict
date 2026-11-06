@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.5 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.6 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -32,6 +32,9 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - il quadro economico ANAC conferma gli errori d'importo: 8 CIG dichiarati per 10,1 mld valgono 70.150 €;
   - i SAL certificati sono 0,40 mld;
   - 238 CUP PNRR 1.1 su 312 sono collegati ai CIG: 431 M€ di contributo coprono circa un quinto dei 2,20 mld dei contratti PSN collegati [V] (§ 2.4, § 4.4).
+- **Doppioni e licenze (nuovo in 0.6):**
+  - 11.043 righe erano un CIG ripetuto dentro lo stesso file annuale (2024 o 2025): tolte, gli strati ICT S3-S6 dal 2024 scendono a **55,3 miliardi** [V] (§ 2.6);
+  - fra licenze e marchi, cloud certo 168 M€ (extra-UE 141), non cloud certo 892 M€ (VMware 595), incerto 1,68 mld, quasi tutto EA Microsoft e licenze Oracle senza dettaglio [V] (§ 4.5).
 - **Chiusura del giro sugli incerti (nuovo in 0.5):** le sezioni AT di 40 enti, con 64 dei 79 CIG ICT incerti, non contengono **nessun atto con l'importo**; ci sono 4 blocchi (403 e CAPTCHA), già registrati. I 79 CIG (14,4 mld) restano incerti: l'ordinativo non è raggiungibile da fonti aperte (R54). E4 toglie correttamente l'importo errato in 14 casi su 15 (70-99 %), ma il quadro economico è plausibile solo in 9 su 15 (36-80 %). PNRR chiuso a 16 decreti, 537,6 M€ (§ 2.5).
 - **PNRR 1.1 (nuovo in 0.3):** lo spoglio di 15 decreti di finanziamento dà 524 milioni a 274 enti, cioè il 75 % dei ~700 milioni assegnati dichiarati da PSN [V; riferimento R] (§ 4.2).
 - **PSN (nuovo in 0.2):** al netto dei tetti certi, gli impegni ANAC sono 4,38 miliardi, contro un portafoglio ordini di 3,8 miliardi [R]. I ricavi PSN 2023-2025 sono 0,79 miliardi, circa il 18 % degli impegni [R, bilanci PSN] (§ 4.1).
@@ -209,6 +212,33 @@ Lettura:
 - la Presidenza pubblica solo la prima e la seconda finestra;
 - **chiuso a 16 decreti, 537,6 M€ (77 %)**. Il resto è in R50.
 
+### 2.6 CIG contati due volte (nuovo in 0.6, R53)
+
+`imbuto.py` salta nei file annuali solo i CIG degli aggiornamenti mensili. Un CIG che compare due volte nello stesso file annuale viene quindi contato due volte, in numero e in euro. Succede **solo nei file 2024 (3.773 CIG) e 2025 (4.089)**. `tools/verifiche/imbuto_doppioni.py` ricostruisce le righe contate (stesse fonti, stesso filtro sull'anno, stesso salto del delta) e trova le ripetizioni.
+
+**I conti tornano** [V]:
+- le righe ricostruite sono 5.713.798, uguali al riepilogo;
+- quelle in eccesso sono 11.043;
+- i CIG distinti sono 5.702.755 = righe meno eccesso.
+
+`ict.csv` non è stato riscritto, perché la via 6 in corso lo usa: la correzione è applicata ai totali.
+
+| strato, dal 2024 | righe in eccesso | euro in eccesso | CIG corretti | euro dopo tetti e doppioni |
+|---|---:|---:|---:|---:|
+| S1 escluso non ICT | 8.387 | 7,83 mld | 3.208.146 | 990,2 mld |
+| S3 convenzione o lotto | 4 | **1,22 mld** | 893 | **1,32 mld** |
+| S4 marchio | 33 | 0,005 mld | 8.016 | 3,01 mld |
+| S5 ICT non cloud | 1.744 | 1,47 mld | 226.086 | 40,18 mld |
+| S6 residuo | 312 | 0,30 mld | 55.634 | 10,77 mld |
+| **S3-S6** | 2.093 | 2,99 mld | | **55,3 mld** |
+
+Altri dettagli [V]:
+- nel residuo S6 i doppioni sono G1 16 righe (0,22 mld), G2 12, G3 75, G4 209;
+- nel 2020-2023 non ci sono doppioni;
+- i 4 doppioni di S3 sono grandi CIG di convenzione, già trattati come tetti o incerti in § 2.2-2.4: la seconda copia non era mai stata tolta.
+
+I conteggi per gruppo differiscono da quelli della revisione della via 6 (13 in G1, 52 in G3). Qui si contano tutte le righe in eccesso, comprese le copie oltre la seconda.
+
 ## 3. Distribuzione degli importi e soglia
 
 Il calcolo riguarda i CIG che restano dopo S1: strati S3-S6, dal 2024, in tutto 292.722 CIG [V].
@@ -322,6 +352,35 @@ Decisione di Fabio del 7/11: solo i primi 1.000 CIG di G3 per importo (stima 360
   - il resto lo paga l'ente con fondi propri negli anni del contratto.
 - **Da fare:** confrontare, per gli stessi CIG, il finanziato con il SAL e con i ricavi PSN per ente, che oggi non sono pubblicati (R50).
 
+### 4.5 Licenze e marchi: cloud sì o no (top-5 punto 5, nuovo in 0.6)
+
+Perimetro: i CIG dal 2024 in S3/S4 con licenze, software d'infrastruttura, servizi professionali o telefonia («incerto: marchio o lotto noto»). Ogni CIG conta una volta sola, al netto dei tetti: **3.508 CIG, 5,29 mld dichiarati, 2,76 mld netti**. `tools/verifiche/imbuto_licenze.py` assegna a ogni CIG l'asse A (è cloud?), la via e la giurisdizione del prodotto, cioè la sede del produttore. Esito in `licenze-cig.csv` [V]:
+
+| via | prova | CIG | euro netti | esito |
+|---|---|---:|---:|---|
+| L1 capitolato | Oracle da Licenze multibrand 6: il capitolato prevede solo prodotti on premises, consegnati via edelivery (dossier 9660108D4B) | 7 | 78,7 M€ | non cloud |
+| L2 prodotto | VMware (vSphere/VCF) e Cloudera (CDP Private), software installato presso l'ente, se l'oggetto non dice «cloud» | 669 | 650,4 M€ | non cloud |
+| L3 testo SaaS | l'oggetto nomina un servizio erogato dal produttore (M365/O365, Azure, Dynamics 365, OCI, RISE, SuccessFactors, Workspace, AWS…) | 288 | 168,2 M€ | **cloud** |
+| L4 testo on premises | l'oggetto nomina solo prodotti installati (Windows Server, SQL Server, CAL, perpetue, Oracle Database/WebLogic) | 378 | 41,7 M€ | non cloud |
+| L5 categoria | servizi professionali e telefonia: consulenza e connettività, non servizi cloud | 482 | 120,6 M€ | non cloud |
+| misto esplicito | nomina sia SaaS sia on premises | 15 | 20,2 M€ | misto |
+| **resta incerto** | «licenze Microsoft», adesione EA, «licenze Oracle/SAP» senza dettaglio | **1.669** | **1.680 M€** | incerto |
+
+Lettura:
+- **cloud certo: 168 M€**. Per giurisdizione del prodotto: extra-UE 141 M€ (Microsoft 114, Oracle 22), UE 25 M€ (SAP), IT 0,7 M€ [V-testo].
+- **Non cloud certo: 892 M€.** VMware da solo vale 595 M€: è l'infrastruttura interna su software statunitense (Broadcom), voce «datacenter interni».
+- **Il residuo è 1,68 mld:**
+  - Microsoft 799 M€ (968 CIG);
+  - Oracle 401 M€;
+  - marchio non attribuito 396 M€;
+  - SAP 83 M€.
+
+  Il carrello (SKU) di questi contratti sta solo nell'atto dell'ente o nell'ordinativo, come per gli attuativi (§ 2.5). Per Microsoft la forbice resta quella di `ea-quota-cloud-elaborazione.md`: almeno il 44 % cloud nell'EA6 secondo i pesi di gara, che ne danno solo un limite inferiore; il valore vero sta fra 0 e 100 %.
+- **Atti:**
+  - i link PVL coprono 746 dei 1.682 CIG incerti o misti, ma solo 215 M€;
+  - i primi 30 per importo puntano quasi tutti alla home di una piattaforma di e-procurement (Terna, Cineca, Banca d'Italia, Regione Calabria), non all'atto;
+  - la lettura dei contratti, cioè il censimento dei primi 50 EA con il campione già disegnato, resta da fare e richiede gli atti degli enti (R23, R54).
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -395,7 +454,7 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 | 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT . **0.3** (§ 2.3): precisione di T3 e T4 misurata, regole v2, valori PVL; S3-S6 a 58,2 mld; restano 80 CIG ICT incerti per 14,4 mld (attuativi AQ e adesioni PSN senza avviso PVL) . **0.4** (§ 2.4): secondo campione T4 concessione e regola I6; quadro economico e SAL ANAC; la ricerca degli atti per CIG non rende (0 su 10) | prossimo passo: atti dalle sezioni «Bandi di gara e contratti» delle stazioni appaltanti dei 79 CIG; misurare la precisione di E4 | lettura atti per ente; accesso civico solo con l'ok di Fabio | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
 | 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA . **0.3** (§ 4.2): decreti PNRR 1.1 spogliati, 524 M€ su 274 enti (75 % del riferimento) . **0.4** (§ 4.4): 16 decreti, 537,6 M€; CUP → CIG per 238 CUP | prossimo passo: ~160 M€ di decreti non trovati; PPdF dei 9 CIG PSN incerti | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
 | 4 | **G1 + G3 con la via 6** (12.824 CIG, 7,8 mld) | G1 (209) a mano; G3 in ordine d'importo con il modello e gli atti dal link PVL (73 % raggiungibile) | ~1,8 USD-eq per 5 CIG (giro 2): G3 intero ≈ 4.500 USD-eq, oltre 10 settimane di tetto (400/settimana); i primi 1.000 CIG per importo ≈ 360 USD-eq | noi; **enti** per i link che non funzionano (R31-R33) |
-| 5 | **Licenze e marchi «cloud da accertare»** (3.515 CIG, 6,5 mld) e controprova dal censimento AgID | lettura dei contratti Microsoft (decisione del 3/11) e Oracle; richiesta dei dati del censimento 2026 | lettura, centinaia di USD-eq; accesso civico solo dopo l'ok di Fabio | noi; **AgID** (R48); **ANAC/ACN** per un campo strutturato su prodotto e modalità (R21) |
+| 5 | **Licenze e marchi «cloud da accertare»** (3.515 CIG, 6,5 mld). **0.6** (§ 4.5): cloud certo 168 M€, non cloud certo 892 M€, incerto 1,68 mld (Microsoft 0,80, Oracle 0,40), da leggere negli atti e controprova dal censimento AgID | lettura dei contratti Microsoft (decisione del 3/11) e Oracle; richiesta dei dati del censimento 2026 | lettura, centinaia di USD-eq; accesso civico solo dopo l'ok di Fabio | noi; **AgID** (R48); **ANAC/ACN** per un campo strutturato su prodotto e modalità (R21) |
 
 ## 9. Rifare i numeri
 
@@ -463,3 +522,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.3 | 2026-11-06 | § 2.3: precisione di T3 e T4 su un campione stratificato (Wilson) e sul PVL; regole v2 (T3 tondo ristretto, T5/E2 dal PVL); revisione degli incerti ICT (errori d'importo, lotti ripetuti); S3-S6 a 58,2 mld. § 4.2: decreti PNRR 1.1 per ente. R51 |
 | 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli. § 2.4: secondo campione T4 concessione e regola I6, quadro economico e SAL ANAC (E4), ricerca degli atti degli incerti (esito negativo); § 4.4: decreto PNRR mancante e CUP → CIG; R54 |
 | 0.5 | 2026-11-06 | § 2.5: visita delle sezioni AT di 40 enti per i 79 CIG ICT incerti (0 atti, 4 blocchi in blocchi-accesso.csv), precisione di E4 su campione (Wilson), chiusura del giro PNRR 1.1 |
+| 0.6 | 2026-11-06 | § 2.6: CIG contati due volte (11.043 righe, i conti tornano; S3-S6 dal 2024 a 55,3 mld); § 4.5: licenze e marchi, cloud sì o no con la via di ogni CIG (cloud 168 M€, non cloud 892 M€, incerto 1,68 mld); top-5 punto 5 aggiornato |

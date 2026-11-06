@@ -21,6 +21,10 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.6:**
+  - `imbuto_doppioni.py`: 11.043 righe duplicate nei file annuali 2024/2025 (conti che tornano: 5.713.798 righe − 11.043 = 5.702.755 CIG); correzione sui totali, `ict.csv` non toccato (via 6 in corso). S3-S6 dal 2024 a 55,3 mld.
+  - `imbuto_licenze.py`: 3.508 CIG di licenze/marchi, 2,76 mld netti; cloud 168 M€ (extra-UE 141), non cloud 892 M€, incerto 1,68 mld (MS 799, Oracle 401, ? 396, SAP 83).
+  - Prossimo: censimento SKU dei primi 50 EA (atti), correzione dei doppioni in `imbuto.py` alla prossima rigenerazione, dopo la via 6.
 - **0.5 (chiusura del giro tetti/PNRR):**
   - visita AT dei 79 CIG ICT incerti (`fuori_piattaforma_at.py`, ingresso `lavoro/imbuto/at79/`): 40 enti, 0 atti, fermata per resa zero; 4 blocchi aggiunti a `report/convenzioni/blocchi-accesso.csv` (SOGEI, CINECA 403; UniBa Radware; ASL Pescara → reCAPTCHA ANAC), da validare in R45/R46;
   - E4: dichiarato errato 14/15 (70-99 %), quadro economico plausibile 9/15 (36-80 %), 46/115 rapporti potenza di 10;
