@@ -198,3 +198,6 @@ I RUP servono solo per i CIG da notificare e si raccolgono con due metodi:
 2. analisi degli atti.
 
 Il metodo è in visibilita-pa `METODO-RUP.md`. La bozza `anac-incaricati-bdncp` è annullata e non cancellata. R47 resta come raccomandazione (dato pubblico senza open data e dietro CAPTCHA), non come istanza. Il prototipo si fa con Fabio.
+
+## 2026-11-07 — Via 6 su G1 e G3 «ad oltranza» (Fabio)
+Il giro su G1 (196 CIG) e sui primi 1.000 di G3 continua senza lo stop sul totale, prima fissato a 360 USD-eq +20 %, perché «ci serve conoscenza». Resta il tetto giornaliero del giro. Lo stop si ripristina con `IMBUTO_STOP=1` (`tools/llm/imbuto_budget.py`). Approvato anche il costo di G1, circa 140 USD-eq.
