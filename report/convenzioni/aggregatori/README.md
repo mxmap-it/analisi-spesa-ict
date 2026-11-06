@@ -92,7 +92,7 @@ Elenco dei documenti: `aggregatori-2026-11-07.csv` (239 righe, stesse colonne de
   - Sanzioni 4 (`059f7755…`);
   - Licenza d'uso 2 (`98944639…`);
   - Telefonia 4: listino lotti 1-2 `559dbc81…`, dettaglio prezzi `874898a5…`, servizi aggiuntivi `0bbc517a…`, riscatto `5c5fbbef…`, accessori `2855dbcd…`, lotto 3 `ff8b6ed3…`.
-- **Progetti dei fabbisogni / allegati economici** (V, START 94252656BA): «Piano dei Fabbisogni Servizi SCT» (pdf `2a8c038e…`, xlsx `a2fe7c78…`) e «Dettaglio Economico.ods» (`92 6a8341…`). R: sono **modelli di gara**, non l'offerta né il piano di un ente aderente.
+- **Progetti dei fabbisogni / allegati economici** (V, START 94252656BA): «Piano dei Fabbisogni Servizi SCT» (pdf `2a8c038e…`, xlsx `a2fe7c78…`) e «Dettaglio Economico.ods» (`926a8341…`). R: sono **modelli di gara**, non l'offerta né il piano di un ente aderente.
 - **Offerte tecniche ed economiche degli aggiudicatari, elenco degli ordinativi, transato/erosione**: **non trovati** su nessuna piattaforma (V). L'unico indizio indiretto dell'erosione sono le determine di estensione del quinto e di rinnovo di Intercent-ER (R).
 
 ### Limiti
