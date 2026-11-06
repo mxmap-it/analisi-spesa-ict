@@ -19,6 +19,17 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
 - **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
 ## #57 DOCUMENTI L3 PER IL RESIDUO S6 FUORI DALLA VIA 6 — punto di ripresa 7/11/2026
+- **Stato 7/11 sera e RIPRESA A MANO (Fabio: niente cron).** In corso sul server: L3 (`piattaforme_cig.py`, 3.358 su 12.180 CIG con link), MePA (`mepa_cig.py`, 315 su 591: 0 pagine pubbliche), L4 (`at_cig.py`, 66 enti, 338 CIG trovati per 6,2 mld) e il ripasso AT notturno (`residuo_s6_at.sh`).
+  - Rilancio, ripartibile: `cd ~/analisi-spesa-ict && (HOST_PARALLELI=5 setsid nohup bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1 &) ; (HOST_PARALLELI=4 SPESAICT_BASE=$PWD setsid nohup nice -n 15 .venv/bin/python tools/acquisizione/at_cig.py lavoro/residuo-s6/ingresso.csv lavoro/residuo-s6/l4 >> lavoro/residuo-s6/l4.log 2>&1 &) ; (setsid nohup bash tools/acquisizione/residuo_s6_at.sh >/dev/null 2>&1 &)`.
+  - Ripassi mirati: `RIPASSA=errore SOLO_HOST=ariaspa` (ariaspa: la porta 80 non risponde, ora si passa in https); `RIPASSA=cig-non-trovato` per riprovare con la ricerca interna.
+  - www.difesa.it ed esercito.difesa.it non rispondono dal server (timeout): vanno provati da un'altra origine, con il monitoraggio AT.
+  - Misura: `.venv/bin/python tools/verifiche/residuo_s6_copertura.py <data>`.
+- **Riuso di visibilita-pa (indicazione di Fabio).** at_cig.py importa `visibilita_pa.core.probes`: `locate.link_at` (sezione AT), `extended._cerca` (ricerca con browser), `checks.browser_playwright`.
+  - Doppioni da sostituire in analisi-spesa-ict: `piattaforme_cig.blocco/SEGNI_BLOCCO` → `extended.riconosci_blocco` e `basic.firme`; `robots_ok` → `visibilita_pa.core.robots` (doppio parser); `config/at_robots_esenti.txt` → `platforms.riconosci` più la tabella enti AT.
+  - **Proposte per visibilita-pa (da fare là, non qui):**
+    - rendere pubbliche `_cerca` e `CAMPI_RICERCA`;
+    - aggiungere una ricerca senza browser sui moduli GET (oggi `piattaforme_cig.modelli_ricerca/cerca_cig`), da far importare a noi;
+    - aggiungere una funzione che restituisca la sezione «Bandi di gara e contratti», oltre alla AT.
 - **In corso sul server** (`lavoro/residuo-s6/`, `giro.log`, stato in `out/esiti.jsonl`): `bash tools/acquisizione/residuo_s6.sh` (lock, ripartibile; `FINITO.txt` a fine giro, `STOP-disco.txt` se il disco scende sotto 15 GB, guardia decisa da Fabio il 7/11).
 - **Ripresa automatica, RIGA DA METTERE NEL CRONTAB (Fabio):** `*/30 * * * * cd ~/analisi-spesa-ict && bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1`
 - **Ingresso** `tools/acquisizione/residuo_s6_ingresso.py`: 28.583 CIG (P1 70 ICT incerti, P2 21.525 G3 oltre la via 6, P3 2.395 G2, P4 3.593 nuovi «sw»/«connettività», P5 1.000 G4 a campione); 16.403 senza link PVL (pre-2024).
