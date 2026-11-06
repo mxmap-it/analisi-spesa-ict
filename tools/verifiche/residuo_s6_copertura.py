@@ -12,7 +12,7 @@ R = Path(__file__).resolve().parents[2]
 D = R / "lavoro/residuo-s6"
 csv.field_size_limit(10**9)
 DOC = {"documenti"}
-CIG_TROVATO = {"documenti", "cig-nella-pagina", "cig-in-sottopagina", "cig-nella-home", "cig-nell-elenco"}
+CIG_TROVATO = {"documenti", "cig-nella-pagina", "cig-in-sottopagina", "cig-nella-home", "cig-nell-elenco", "mepa-cig-in-vetrina"}
 
 
 def main():
