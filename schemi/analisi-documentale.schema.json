@@ -15,7 +15,7 @@
   "asse_b": {"type": "object", "required": ["stato", "giurisdizione"], "properties": {
    "stato": {"enum": ["incluso-certo", "incerto", "non-applicabile"]},
    "provider_prodotto": {"type": "string"},
-   "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "ignota", "non-determinabile"]}}},
+   "giurisdizione": {"enum": ["IT", "UE", "EXTRA-UE", "ignota", "non-determinabile", "non-applicabile"]}}},
   "dipendenze_tecnologiche": {"type": "array", "items": {"type": "string"}},
   "confidenza": {"enum": ["alta", "media", "bassa"]},
   "prove": {"type": "array", "items": {"type": "object", "required": ["sha256", "citazione"], "properties": {

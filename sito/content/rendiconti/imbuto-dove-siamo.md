@@ -233,6 +233,12 @@ Decisione di Fabio del 7/11: solo i primi 1.000 CIG di G3 per importo (stima 360
 - **Doppioni in `ict.csv`:** lo stesso CIG compare in più anni. Sono 13 righe in G1 e 52 in G3, e i 4,88 mld di G1 del § 4 li contano due volte: al netto G1 vale 4,70 mld. Va corretto in imbuto.py (R53).
 - **Metodo:** Claude Sonnet in abbonamento sul server, con le istruzioni p3 (due assi con stato). Il modello apre per primo il link PVL, poi cerca gli atti dell'ente; ogni documento è archiviato con sha256. Una verifica a regole (`tools/llm/verifica_imbuto.py`) riporta a «incerto» ogni stato certo senza prova. Tutto è **proposta da revisionare**; i numeri non entrano nei totali finché non sono rivisti.
 - **Numeri:** `esiti/imbuto-via6/via6-g1g3.json`, rigenerato ogni 30 minuti dal server (`tools/verifiche/imbuto_via6.py`). Contiene CIG ed euro per stato degli assi, gli euro che si spostano di strato (S1 non ICT, S5 ICT non cloud, incluso cloud per giurisdizione, resta S6), la precisione sul controllo e il consumo.
+- **Primo parziale (6/11, ore 13:30, [V]):** classificati 28 G1 su 196 (2,75 mld) e 10 G3 su 1.000. Sono proposte da revisionare:
+  - G1: 9 escluse non ICT (0,61 mld, verso S1); 13 ICT non cloud (1,11 mld, verso S5); 1 cloud extra-UE certo (44 M€); 5 restano incerte (0,98 mld);
+  - G3: 1 verso S1, 1 verso S5, 8 restano incerte;
+  - la fonte primaria (un atto che cita il CIG, archiviato) c'è in 8 casi su 38.
+- **Consumo:** G3 a 0,32 USD-eq per CIG, cioè circa 320 sui 1.000 (stima 360, guardia a 432); G1 a circa 0,70 per CIG, cioè circa 140 in tutto. Con il tetto di 100 USD-eq al giorno il giro finisce in circa 5 giorni.
+- **Ostacoli:** in 38 CIG, 16 documenti non pertinenti, 7 errori 404, 4 login, 3 errori 403, 1 PDF illeggibile (R53).
 
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
@@ -346,6 +352,14 @@ Chiunque può rifare la classificazione documentale con un altro modello, anche 
 - **Runner neutro:** `tools/llm/analisi_documentale.py`, solo libreria standard. Funziona con qualunque endpoint compatibile OpenAI, con Ollama in locale, oppure stampando il prompt da incollare a mano.
 - **Pacchetto:** `report/metodo/llm/riproduzione/v1/`, con gli ingressi e i loro sha256 e con gli esiti di Claude.
 - **Confronto:** `tools/verifiche/concordanza_llm.py`, che calcola l'accordo per asse, Wilson e kappa.
+
+**Prova pilota (12 CIG, [V]):** lo stesso prompt portabile, dato a Claude Haiku senza strumenti e con i soli testi archiviati, concorda con la via 6 completa così (`esiti/imbuto-via6/concordanza-haiku-pilota12.json`):
+- stato dell'asse B: 10 su 12 (kappa 0,69);
+- servizio: 8 su 12 (kappa 0,55);
+- stato dell'asse A: 6 su 12 (kappa 0,29);
+- giurisdizione: 4 su 12.
+
+Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, perché per gli esclusi il modello scriveva `non-applicabile` come giurisdizione; lo schema ora lo ammette. Il disaccordo sull'asse A è atteso: la via 6 ha la ricerca web, il prompt portabile ha solo i documenti forniti. Il pacchetto da 50 CIG si congela da solo quando ci sono 50 esiti (`tools/llm/riproduzione.sh`).
 
 **Concordanza (in corso):** primo confronto con un modello open-weight già presente sul server, senza installazioni né spese: qwen3-vl:8b via Ollama, solo CPU. È lento (decine di minuti per CIG su un server condiviso), quindi gira in background a bassa priorità sul pacchetto. L’esito andrà in `esiti/imbuto-via6/concordanza-qwen3-vl_8b.json`. Per i modelli in cloud a tier gratuito (DeepSeek, Qwen/DashScope, OpenRouter) serve una chiave che oggi non è configurata: decide Fabio.
 

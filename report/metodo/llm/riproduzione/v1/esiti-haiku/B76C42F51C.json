@@ -1,0 +1,40 @@
+{
+ "cig": "B76C42F51C",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "1a4a62a1ada9e02b7f19fbe3426f9e41d3722f34b7d4ac0de3e65cac228bbf60",
+ "quando": "2026-11-06T12:24:39+00:00",
+ "uscita": {
+  "cig": "B76C42F51C",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incluso-certo",
+   "provider_prodotto": "IBM",
+   "giurisdizione": "EXTRA-UE"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "ACQUISIZIONE DI SOTTOSCRIZIONI CLOUD IBM PER INAIL ID 2875"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto nomina esplicitamente «sottoscrizioni cloud IBM»: un servizio SaaS erogato dall'infrastruttura di IBM (USA, EXTRA-UE). RICCA IT è il rivenditore italiano, non il provider del prodotto."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

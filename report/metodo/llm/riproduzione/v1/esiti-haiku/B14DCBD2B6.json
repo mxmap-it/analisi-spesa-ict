@@ -1,0 +1,44 @@
+{
+ "cig": "B14DCBD2B6",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "b3d33d40011a25616a32293a92abeecdea035ff2bc62d015554af198ff777663",
+ "quando": "2026-11-06T12:21:34+00:00",
+ "uscita": {
+  "cig": "B14DCBD2B6",
+  "asse_a": {
+   "stato": "incluso-certo",
+   "e_cloud": "s",
+   "ict": "s",
+   "servizio": "cloud"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "ignoto",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "media",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PUBLIC CLOUD IAAS E PAAS | SERVIZI CLOUD IAAS E PAAS – RISORSE ELABORATIVE PER SISTEMI SAP"
+   }
+  ],
+  "deduzioni": [
+   "ALMAVIVA è un system integrator italiano, non provider cloud primario; la piattaforma cloud sottostante (Azure, AWS, Google Cloud, Aruba, PSN, ecc.) non è specificata nell'oggetto né nei documenti forniti"
+  ],
+  "documenti_non_pertinenti": [
+   "38b55e97ce788190c057def27b462c5d0175a57895cc762c1bbb77a2ce0d4aa2"
+  ],
+  "documento_risolutivo": "Determina di affidamento, convenzione Consip, o specifiche tecniche che indichino il provider cloud e l'infrastruttura utilizzata (Microsoft Azure, AWS, Google Cloud, Aruba Cloud, Polo Strategico Nazionale, ecc.)",
+  "motivazione": "L'oggetto esplicita chiaramente «PUBLIC CLOUD IAAS E PAAS» quindi l'asse A è incluso-certo. L'aggiudicatario ALMAVIVA è un integratore, non proprietario dell'infrastruttura; senza documento che specifichi il provider cloud effettivo, la giurisdizione resta indeterminabile."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

@@ -1,0 +1,161 @@
+{
+ "a": "esiti-claude-via6",
+ "b": "esiti-haiku",
+ "cig_comuni": 12,
+ "campi": {
+  "asse_a.stato": {
+   "accordo": 6,
+   "n": 12,
+   "pct": 50.0,
+   "wilson95": [
+    0.254,
+    0.746
+   ],
+   "kappa": 0.294,
+   "disaccordi": [
+    {
+     "cig": "A04CCEA29B",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "A053E6BD30",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B14DCBD2B6",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "B52A158C42",
+     "a": "incerto",
+     "b": "escluso-certo"
+    },
+    {
+     "cig": "B76C42F51C",
+     "a": "incerto",
+     "b": "incluso-certo"
+    },
+    {
+     "cig": "BCE1AC262B",
+     "a": "incerto",
+     "b": "incluso-certo"
+    }
+   ]
+  },
+  "servizio": {
+   "accordo": 8,
+   "n": 12,
+   "pct": 66.7,
+   "wilson95": [
+    0.391,
+    0.862
+   ],
+   "kappa": 0.547,
+   "disaccordi": [
+    {
+     "cig": "A053E6BD30",
+     "a": "servizi-professionali",
+     "b": "cloud"
+    },
+    {
+     "cig": "B0FCC3FC81",
+     "a": "?",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B626B95EF5",
+     "a": "in-house",
+     "b": "servizi-professionali"
+    },
+    {
+     "cig": "B65BD5C123",
+     "a": "?",
+     "b": "servizi-professionali"
+    }
+   ]
+  },
+  "asse_b.stato": {
+   "accordo": 10,
+   "n": 12,
+   "pct": 83.3,
+   "wilson95": [
+    0.552,
+    0.953
+   ],
+   "kappa": 0.692,
+   "disaccordi": [
+    {
+     "cig": "A053E6BD30",
+     "a": "non-applicabile",
+     "b": "incerto"
+    },
+    {
+     "cig": "B76C42F51C",
+     "a": "incerto",
+     "b": "incluso-certo"
+    }
+   ]
+  },
+  "giurisdizione": {
+   "accordo": 4,
+   "n": 12,
+   "pct": 33.3,
+   "wilson95": [
+    0.138,
+    0.609
+   ],
+   "kappa": 0.186,
+   "disaccordi": [
+    {
+     "cig": "A04CCEA29B",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B0FCC3FC81",
+     "a": "IT",
+     "b": "ignota"
+    },
+    {
+     "cig": "B14DCBD2B6",
+     "a": "EXTRA-UE",
+     "b": "ignota"
+    },
+    {
+     "cig": "B33E5F5CCB",
+     "a": "non-determinabile",
+     "b": null
+    },
+    {
+     "cig": "B45EB1C19B",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B52A158C42",
+     "a": "non-determinabile",
+     "b": ""
+    },
+    {
+     "cig": "B65BD5C123",
+     "a": "UE",
+     "b": "ignota"
+    },
+    {
+     "cig": "BD19B3E390",
+     "a": "ignota",
+     "b": ""
+    }
+   ]
+  }
+ },
+ "validita_b": {
+  "uscite": 12,
+  "valide": 7,
+  "citazioni": 10,
+  "citazioni_letterali": 10
+ }
+}

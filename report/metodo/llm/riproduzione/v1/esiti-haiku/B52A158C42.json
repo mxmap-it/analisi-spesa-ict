@@ -1,0 +1,45 @@
+{
+ "cig": "B52A158C42",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "6a59860844b33affded7b715a3de7886c280829fdfd26f7264c3e46fa1bdabe9",
+ "quando": "2026-11-06T12:23:10+00:00",
+ "uscita": {
+  "cig": "B52A158C42",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI PROFESSIONALI TECNICI E DI SUPPORTO ALL'ADOZIONE DEL CLOUD PER LE PUBBLICHE AMMINISTRAZIONI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [
+   "9741678ea6cfadd77278c31d3c3a5057e1357a3442697f446b423293e51e8eef",
+   "b02a2a27fd92cf95499b78c03ec8cfcbb8584966faa985b2057cf73e29f0eaec"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto chiarisce che si tratta di servizi professionali e supporto per l'adozione del cloud, non erogazione di infrastruttura cloud. CPV 72220000-3 (consulenza IT) conferma: è consulenza tecnica e PMO per la migrazione cloud della PA, non cloud stesso."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

@@ -4,6 +4,22 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
+## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
+- **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
+- **Selezione:** `report/metodo/llm/imbuto-g1g3/selezione.json`: G1 196 CIG unici (4,70 mld), G3 1.000 (1,55 mld), CTL 15 dal campione 611. ict.csv ha CIG ripetuti (G1 13, G3 52): R53.
+- **Budget G3:** stima 360, guardia a 432 USD-eq (`tools/llm/imbuto_budget.py`, etichetta `imbuto-g3` in `stato/claude-consumi.jsonl`). Se scatta, scrive `stato/imbuto-g1g3-STOP.txt`, che ferma solo g3: chiedere a Fabio. Misurato: G3 0,32 per CIG (proiezione 320), G1 circa 0,70 per CIG.
+- **Uscite:** proposte da revisionare in `dati/classificazioni/imbuto-g1g3.jsonl` (`spesaict.classificazione/1`) e `report/metodo/llm/imbuto-g1g3/verificati.jsonl`. Rendiconto imbuto 0.4 § 4.3 e § 9.1.
+- **Riproducibilità (richiesta di Fabio):**
+  - prompt portabile `report/metodo/llm/prompt-analisi-documentale-v1.md` (sha256 accanto), schema `schemi/analisi-documentale.schema.json`;
+  - runner neutro `tools/llm/analisi_documentale.py` (stampa / openai / ollama / claude-cli / importa), confronto `tools/verifiche/concordanza_llm.py`;
+  - `tools/llm/riproduzione.sh`, lanciato dal guardiano, congela il pacchetto da 50 CIG, fa girare Haiku e qwen3-vl:8b (Ollama già installato, solo CPU, lento) e scrive le concordanze in `esiti/imbuto-via6/`;
+  - pilota su 12 CIG: asse B 10/12, asse A 6/12.
+- **Al termine:**
+  - rivedere i numeri del § 4.3 dal JSON e aggiornare il rendiconto;
+  - revisione umana a campione delle proposte (tutte le «certo» di G1 e un 10 % di G3);
+  - deduplicare per CIG in `tools/analisi/imbuto.py`;
+  - chiave per un modello cloud gratuito: decide Fabio.
+
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
 - **0.3 (6/11 notte):**
   - `tools/verifiche/imbuto_revisione.py`: precisione sul campione stratificato (15 per gruppo, giudizi sugli atti in `esiti/2026-11-06/imbuto/campione-tetti-giudizi.csv`): T3 tondo 8/15 (53 %, 30-75), T3 non tondo 15/15 (80-100), T4 AQ 15/15 (80-100), T4 concessione 11/15 (73 %, 48-89); T4 su PVL 191/192.

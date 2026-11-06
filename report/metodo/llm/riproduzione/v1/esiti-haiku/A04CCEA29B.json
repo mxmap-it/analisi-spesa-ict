@@ -1,0 +1,42 @@
+{
+ "cig": "A04CCEA29B",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "f7cc0aa3ad9bacc3bd592d4e7040a0e1c5ca551b13a9860207e4681f1d15dc23",
+ "quando": "2026-11-06T12:19:37+00:00",
+ "uscita": {
+  "cig": "A04CCEA29B",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "s",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": null,
+   "giurisdizione": null
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZI A SUPPORTO DELLA TRASFORMAZIONE E MIGRAZIONE DEI SISTEMI ADI DALLE PROCURE AI DATACENTER NAZIONALI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "L'oggetto descrive servizi di migrazione e trasformazione verso datacenter nazionali: sono servizi professionali di consulenza e implementazione, non servizi cloud erogati dall'infrastruttura del fornitore. Non è applicabile l'asse B."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

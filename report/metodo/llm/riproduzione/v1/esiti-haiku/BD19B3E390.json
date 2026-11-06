@@ -1,0 +1,42 @@
+{
+ "cig": "BD19B3E390",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "1404dc1d87d7cf7f236eed4a5b5e24360b78adaba15eba1d22d25ebd0ef3d526",
+ "quando": "2026-11-06T12:25:45+00:00",
+ "uscita": {
+  "cig": "BD19B3E390",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "altro"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "",
+   "giurisdizione": ""
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "CENTRO SERVIZI PER IL CONTRASTO ALLA POVERTÀ E DI DISTRIBUZIONE BENI DI PRIMA NECESSITÀ ED ALTRI BENI MATERIALI CORRELATI A PERCORSI DI AUTONOMIA ED EMANCIPAZIONE PER PERSONE IN CONDIZIONE DI GRAVE MARGINALITÀ E DEL SERVIZIO DI HOUSING TEMPORANEO/HOUSING FIRST IN N.13 ALLOGGI"
+   }
+  ],
+  "deduzioni": [],
+  "documenti_non_pertinenti": [],
+  "documento_risolutivo": "",
+  "motivazione": "Contratto per servizi sociali e housing temporaneo: distribuzione beni di prima necessità e 13 alloggi per persone in marginalità sociale. Non è informatica, cloud o infrastruttura ICT."
+ },
+ "errori_schema": [
+  "asse_b.giurisdizione fuori vocabolario"
+ ],
+ "prove_letterali": [
+  true
+ ],
+ "valida": false
+}

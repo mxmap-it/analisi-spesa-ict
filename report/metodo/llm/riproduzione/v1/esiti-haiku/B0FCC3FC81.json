@@ -1,0 +1,45 @@
+{
+ "cig": "B0FCC3FC81",
+ "modello": "haiku",
+ "fornitore": "claude-cli",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "e7ace65c09fffb47bef803a0d31aeb64295f42e1e4f4b3a6857fada773088680",
+ "quando": "2026-11-06T12:21:02+00:00",
+ "uscita": {
+  "cig": "B0FCC3FC81",
+  "asse_a": {
+   "stato": "incerto",
+   "e_cloud": "?",
+   "ict": "?",
+   "servizio": "servizi-professionali"
+  },
+  "asse_b": {
+   "stato": "incerto",
+   "provider_prodotto": "",
+   "giurisdizione": "ignota"
+  },
+  "dipendenze_tecnologiche": [],
+  "confidenza": "bassa",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "SERVIZIO ASSISTENZA SOFTWARE 2024 2025"
+   }
+  ],
+  "deduzioni": [
+   "Datagraph fornisce portali web ai comuni; potrebbe fornire assistenza SaaS ma non è provato",
+   "L'importo (4,95 M€) su due anni è coerente con un contratto pluriennale di assistenza"
+  ],
+  "documenti_non_pertinenti": [
+   "dd2698738f15f7215c0bb27a57ff063476abb003cd111b8aeb2564da8619863c"
+  ],
+  "documento_risolutivo": "Determina di affidamento o capitolato che specifichi il tipo di servizio: è assistenza a software cloud (SaaS), on-premise, sviluppo o manutenzione?",
+  "motivazione": "L'oggetto 'servizio assistenza software' è generico. Il documento fornito (home page del Comune) non contiene informazioni sul CIG. Serve documentazione che dettagli il servizio."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}

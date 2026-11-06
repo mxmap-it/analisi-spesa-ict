@@ -3,6 +3,8 @@
 cd "$(dirname "$0")/../.." || exit 1
 # a ogni passaggio: verifica a regole e numeri aggiornati (versionati da sync_server.sh)
 .venv/bin/python tools/llm/verifica_imbuto.py >/dev/null 2>&1 && .venv/bin/python tools/verifiche/imbuto_via6.py --json esiti/imbuto-via6/via6-g1g3.json >/dev/null 2>&1
+# riproduzione su altri modelli (prompt portabile), indipendente dal giro
+pgrep -f "[t]ools/llm/riproduzione.sh" >/dev/null || setsid nohup bash tools/llm/riproduzione.sh >> log/imbuto-g1g3/riproduzione.log 2>&1 < /dev/null &
 S=; [ -f stato/imbuto-g1g3-STOP.txt ] && S=1
 pgrep -f "[t]ools/llm/giro_imbuto.sh" >/dev/null && exit 0
 B=report/metodo/llm/imbuto-g1g3
