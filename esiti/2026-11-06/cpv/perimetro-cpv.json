@@ -1,0 +1,749 @@
+{
+ "versione_lista": "perimetro-cpv-0.1 (2026-11-06)",
+ "generato": "2026-11-06",
+ "prefissi": [
+  "50312",
+  "50320",
+  "51611",
+  "64216",
+  "64222",
+  "79342",
+  "3223",
+  "3224",
+  "3225",
+  "3226",
+  "302",
+  "48",
+  "72"
+ ],
+ "allineata_a_classifica_CPV_ICT": true,
+ "solo_in_classifica": [],
+ "solo_in_lista": [],
+ "universo_dal_2024": {
+  "ict_csv_per_prefisso": [
+   [
+    "72",
+    148462,
+    85362.7
+   ],
+   [
+    "(fuori lista, testo ICT)",
+    130848,
+    386066.8
+   ],
+   [
+    "302",
+    50458,
+    6680.2
+   ],
+   [
+    "48",
+    44292,
+    19865.4
+   ],
+   [
+    "79342",
+    5859,
+    567.1
+   ],
+   [
+    "50312",
+    1392,
+    429.0
+   ],
+   [
+    "3223",
+    1301,
+    1172.2
+   ],
+   [
+    "3224",
+    1218,
+    4745.7
+   ],
+   [
+    "64216",
+    866,
+    149.6
+   ],
+   [
+    "3225",
+    489,
+    22.6
+   ],
+   [
+    "3226",
+    252,
+    34.0
+   ],
+   [
+    "51611",
+    144,
+    22.1
+   ],
+   [
+    "50320",
+    78,
+    41.7
+   ]
+  ],
+  "base_cig": {
+   "cig": 3734845,
+   "cpv_99999999_o_vuoto": [
+    309180,
+    0.0828
+   ],
+   "cpv_livello_gruppo_xxx00000": [
+    605763,
+    0.1622
+   ]
+  }
+ },
+ "precisione_lista": {
+  "n": 200,
+  "conteggi": {
+   "s": 166,
+   "n": 14,
+   "dubbio": 20
+  },
+  "stretta": [
+   0.83,
+   0.7718,
+   0.8757
+  ],
+  "dubbi_come_ict": [
+   0.93,
+   0.8859,
+   0.9578
+  ]
+ },
+ "precisione_per_prefisso": {
+  "302": {
+   "s": 42,
+   "dubbio": 2,
+   "n": 2
+  },
+  "3224": {
+   "dubbio": 2
+  },
+  "3225": {
+   "s": 1
+  },
+  "48": {
+   "s": 33,
+   "dubbio": 2
+  },
+  "72": {
+   "s": 90,
+   "dubbio": 12,
+   "n": 9
+  },
+  "79342": {
+   "n": 3,
+   "dubbio": 2
+  }
+ },
+ "lista_non_ict": [
+  {
+   "cig": "B5F21180AF",
+   "cpv": "79342000-3",
+   "descr": "SERVIZI DI MARKETING",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B439B93B21",
+   "cpv": "72322000-8",
+   "descr": "SERVIZI DI GESTIONE DATI",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B680C1D28E",
+   "cpv": "48110000-2",
+   "descr": "PACCHETTI SOFTWARE PER PUNTI VENDITA",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B823C0B48C",
+   "cpv": "72500000-0",
+   "descr": "SERVIZI INFORMATICI",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B4AF6931BC",
+   "cpv": "32240000-7",
+   "descr": "TELECAMERE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B88202C0AC",
+   "cpv": "72267100-0",
+   "descr": "MANUTENZIONE DI SOFTWARE DI TECNOLOGIA DELL'INFORMAZIONE",
+   "etichetta": "n"
+  },
+  {
+   "cig": "BB26689639",
+   "cpv": "72411000-4",
+   "descr": "FORNITORI DI SERVIZI INTERNET (ISP)",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B4F004BEF4",
+   "cpv": "32240000-7",
+   "descr": "TELECAMERE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B4EF8244B8",
+   "cpv": "72266000-7",
+   "descr": "SERVIZI DI CONSULENZA DI SOFTWARE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B825CB269C",
+   "cpv": "72512000-7",
+   "descr": "SERVIZI DI GESTIONE DOCUMENTI",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B48CBD79B7",
+   "cpv": "72200000-7",
+   "descr": "PROGRAMMAZIONE DI SOFTWARE E SERVIZI DI CONSULENZA",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B9FDFA83AB",
+   "cpv": "72611000-6",
+   "descr": "SERVIZI DI ASSISTENZA TECNICA INFORMATICA",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B73AB341BD",
+   "cpv": "48422000-2",
+   "descr": "SUITE DI PACCHETTI SOFTWARE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BC16A02220",
+   "cpv": "30200000-1",
+   "descr": "APPARECCHIATURE INFORMATICHE E FORNITURE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BB3298A257",
+   "cpv": "72312200-7",
+   "descr": "SERVIZI DI RICONOSCIMENTO OTTICO DEI CARATTERI",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BAD36F04C1",
+   "cpv": "72400000-4",
+   "descr": "SERVIZI DI INTERNET",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B247CE3998",
+   "cpv": "30211400-5",
+   "descr": "CONFIGURAZIONI INFORMATICHE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B97DE7455A",
+   "cpv": "72253000-3",
+   "descr": "SERVIZI DI ASSISTENZA INFORMATICA E DI SUPPORTO",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B892F6C85D",
+   "cpv": "72320000-4",
+   "descr": "SERVIZI DI BANCHE DATI",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B521A17ECD",
+   "cpv": "79342000-3",
+   "descr": "SERVIZI DI MARKETING",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BA7E02F338",
+   "cpv": "72267100-0",
+   "descr": "MANUTENZIONE DI SOFTWARE DI TECNOLOGIA DELL'INFORMAZIONE",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B7264207E6",
+   "cpv": "30237000-9",
+   "descr": "PARTI, ACCESSORI E FORNITURE PER COMPUTER",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B5B8CE4D89",
+   "cpv": "79342000-3",
+   "descr": "SERVIZI DI MARKETING",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BC0B2A2EB2",
+   "cpv": "72920000",
+   "descr": "",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B4A35176A1",
+   "cpv": "79342000-3",
+   "descr": "SERVIZI DI MARKETING",
+   "etichetta": "n"
+  },
+  {
+   "cig": "BA235AA189",
+   "cpv": "72512000",
+   "descr": "",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B79FD61E1D",
+   "cpv": "30236200-4",
+   "descr": "DISPOSITIVI PER L'ELABORAZIONE DATI",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B94B322F87",
+   "cpv": "72000000-5",
+   "descr": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B54551A58A",
+   "cpv": "72246000-1",
+   "descr": "SERVIZI DI CONSULENZA DI SISTEMI",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "BA0D39E656",
+   "cpv": "72253000-3",
+   "descr": "SERVIZI DI ASSISTENZA INFORMATICA E DI SUPPORTO",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B7D59010B0",
+   "cpv": "79342000-3",
+   "descr": "SERVIZI DI MARKETING",
+   "etichetta": "n"
+  },
+  {
+   "cig": "B58E9A6350",
+   "cpv": "72000000-5",
+   "descr": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B9C3C36C7E",
+   "cpv": "72252000-6",
+   "descr": "SERVIZI DI ARCHIVIAZIONE DATI",
+   "etichetta": "dubbio"
+  },
+  {
+   "cig": "B4AC1D290C",
+   "cpv": "72500000-0",
+   "descr": "SERVIZI INFORMATICI",
+   "etichetta": "n"
+  }
+ ],
+ "s1": {
+  "n": 200,
+  "conteggi": {
+   "n": 193,
+   "s": 2,
+   "dubbio": 5
+  },
+  "falsi_esclusi": [
+   0.01,
+   0.0027,
+   0.0357
+  ],
+  "con_dubbi": [
+   0.035,
+   0.0171,
+   0.0705
+  ],
+  "casi": [
+   {
+    "cig": "B805814329",
+    "etichetta": "s",
+    "cpv": "50000000-5",
+    "descr": "SERVIZI DI RIPARAZIONE E MANUTENZIONE"
+   },
+   {
+    "cig": "B9C192E3E0",
+    "etichetta": "dubbio",
+    "cpv": "50800000-3",
+    "descr": "SERVIZI DI RIPARAZIONE E MANUTENZIONE VARI"
+   },
+   {
+    "cig": "B011CC6248",
+    "etichetta": "s",
+    "cpv": "99999999",
+    "descr": "Cpv prevalente non disponibile"
+   },
+   {
+    "cig": "B7CACF024D",
+    "etichetta": "dubbio",
+    "cpv": "39155000-3",
+    "descr": "ARREDI PER BIBLIOTECA"
+   },
+   {
+    "cig": "B5A3651A09",
+    "etichetta": "dubbio",
+    "cpv": "50800000-3",
+    "descr": "SERVIZI DI RIPARAZIONE E MANUTENZIONE VARI"
+   },
+   {
+    "cig": "B226FB87B9",
+    "etichetta": "dubbio",
+    "cpv": "71241000-9",
+    "descr": "STUDI DI FATTIBILITÀ, SERVIZI DI CONSULENZA, ANALISI"
+   },
+   {
+    "cig": "B287916EB7",
+    "etichetta": "dubbio",
+    "cpv": "71700000",
+    "descr": "Servizi di monitoraggio e controllo"
+   }
+  ]
+ },
+ "esiti_cpv": {
+  "V3-611-ict": {
+   "n": 543,
+   "specifico": [
+    403,
+    [
+     0.7422,
+     0.7038,
+     0.7772
+    ]
+   ],
+   "generico": [
+    90,
+    [
+     0.1657,
+     0.1368,
+     0.1993
+    ]
+   ],
+   "fuori-lista": [
+    50,
+    [
+     0.0921,
+     0.0705,
+     0.1194
+    ]
+   ],
+   "mancante": [
+    0,
+    [
+     0.0,
+     0.0,
+     0.007
+    ]
+   ],
+   "fuori_lista": [
+    [
+     "99999 ",
+     25
+    ],
+    [
+     "98300 ",
+     4
+    ],
+    [
+     "64220 ",
+     1
+    ],
+    [
+     "50332 ",
+     1
+    ],
+    [
+     "80511 ",
+     1
+    ],
+    [
+     "75200 ",
+     1
+    ],
+    [
+     "32427 ",
+     1
+    ],
+    [
+     "30121 ",
+     1
+    ],
+    [
+     "32424 ",
+     1
+    ],
+    [
+     "51330 ",
+     1
+    ],
+    [
+     "79132 ",
+     1
+    ],
+    [
+     "64212 ",
+     1
+    ],
+    [
+     "98390 ",
+     1
+    ],
+    [
+     "79212 ",
+     1
+    ],
+    [
+     "63110 ",
+     1
+    ],
+    [
+     "79511 ",
+     1
+    ],
+    [
+     "45314 ",
+     1
+    ],
+    [
+     "71311 ",
+     1
+    ],
+    [
+     "32422 ",
+     1
+    ],
+    [
+     "80533 ",
+     1
+    ]
+   ],
+   "per_servizio": {
+    "servizi-professionali": {
+     "specifico": 85,
+     "fuori-lista": 11,
+     "generico": 16
+    },
+    "cloud": {
+     "specifico": 133,
+     "fuori-lista": 10,
+     "generico": 28
+    },
+    "in-house": {
+     "specifico": 54,
+     "fuori-lista": 11,
+     "generico": 10
+    },
+    "licenza": {
+     "specifico": 95,
+     "generico": 19,
+     "fuori-lista": 2
+    },
+    "telefonia": {
+     "generico": 2,
+     "fuori-lista": 8,
+     "specifico": 1
+    },
+    "psn": {
+     "specifico": 35,
+     "fuori-lista": 8,
+     "generico": 15
+    }
+   }
+  },
+  "cieco-prodotto": {
+   "n": 159,
+   "specifico": [
+    117,
+    [
+     0.7358,
+     0.6623,
+     0.7982
+    ]
+   ],
+   "generico": [
+    25,
+    [
+     0.1572,
+     0.1088,
+     0.2218
+    ]
+   ],
+   "fuori-lista": [
+    17,
+    [
+     0.1069,
+     0.0678,
+     0.1646
+    ]
+   ],
+   "mancante": [
+    0,
+    [
+     0.0,
+     -0.0,
+     0.0236
+    ]
+   ],
+   "fuori_lista": [
+    [
+     "99999 Cpv prevalente non disponibile",
+     13
+    ],
+    [
+     "80500 SERVIZI DI FORMAZIONE",
+     2
+    ],
+    [
+     "32413 ROUTER DI RETE",
+     1
+    ],
+    [
+     "64200 SERVIZI DI TELECOMUNICAZIONE",
+     1
+    ]
+   ],
+   "per_servizio": {
+    "-": {
+     "specifico": 117,
+     "generico": 25,
+     "fuori-lista": 17
+    }
+   }
+  },
+  "lista-bianca-ict": {
+   "n": 166,
+   "specifico": [
+    111,
+    [
+     0.6687,
+     0.594,
+     0.7358
+    ]
+   ],
+   "generico": [
+    55,
+    [
+     0.3313,
+     0.2642,
+     0.406
+    ]
+   ],
+   "fuori-lista": [
+    0,
+    [
+     0.0,
+     0.0,
+     0.0226
+    ]
+   ],
+   "mancante": [
+    0,
+    [
+     0.0,
+     0.0,
+     0.0226
+    ]
+   ],
+   "fuori_lista": [],
+   "per_servizio": {
+    "-": {
+     "generico": 55,
+     "specifico": 111
+    }
+   }
+  }
+ },
+ "cloud_v3": {
+  "cloud": 308,
+  "cloud_con_cpv_erogato": [
+   92,
+   [
+    0.2987,
+    0.2503,
+    0.352
+   ]
+  ],
+  "ict_non_cloud": 235,
+  "non_cloud_con_cpv_erogato": [
+   25,
+   [
+    0.1064,
+    0.0731,
+    0.1523
+   ]
+  ],
+  "cpv_dei_cloud": [
+   [
+    "72410000",
+    36
+   ],
+   [
+    "99999999",
+    19
+   ],
+   [
+    "72500000",
+    19
+   ],
+   [
+    "72400000",
+    14
+   ],
+   [
+    "72510000",
+    14
+   ],
+   [
+    "72514000",
+    13
+   ],
+   [
+    "72268000",
+    13
+   ],
+   [
+    "48218000",
+    8
+   ],
+   [
+    "72220000",
+    8
+   ],
+   [
+    "48771000",
+    8
+   ],
+   [
+    "72253000",
+    8
+   ],
+   [
+    "72000000",
+    7
+   ],
+   [
+    "72415000",
+    6
+   ],
+   [
+    "48517000",
+    6
+   ],
+   [
+    "72514200",
+    5
+   ]
+  ]
+ }
+}

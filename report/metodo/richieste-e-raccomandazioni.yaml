@@ -9,11 +9,11 @@
 - id: R01
   destinatario: ANAC
   tipo: difetto
-  stato: verificato
+  stato: "verificato, ridimensionato il 6/11/2026"
   titolo: Il collegamento contratto attuativo → accordo quadro (cig_accordo_quadro) non è compilato
-  evidenza: "Fra i contratti che nel testo dichiarano un'adesione, campo vuoto nel 20% nel 2025 (56% nel 2017); 11.568 CIG padre orfani"
-  prova: tools/verifiche/cig_accordo_quadro.py, report/anac/verifica-cig-accordo-quadro-2026-10-27.json
-  richiesta: Controllo bloccante all'acquisizione del CIG di un contratto attuativo; bonifica dello storico
+  evidenza: "Rimisurato il 6/11/2026: con modalità dichiarata «discendente da AQ/convenzione» il campo è valorizzato nel 98,6 % (2024) e nel 98,9 % (2025): mancano 4.130 e 3.946 CIG. Il 20 % del 27/10 era in gran parte un artefatto dell'espressione sul testo: su un campione di 60, 3 adesioni vere (5 %); il resto sono appalti specifici di sistemi dinamici di acquisizione. Stima: circa 520 adesioni vere del 2025 dichiarate come appalto ordinario"
+  prova: tools/verifiche/cig_aq_modalita.py, esiti/2026-11-06/cig-aq/modalita.json, report/anac/cig-aq/ (campione ed etichette); prima misura tools/verifiche/cig_accordo_quadro.py
+  richiesta: "Controllo bloccante al rilascio del CIG: se la modalità è «discendente», cig_accordo_quadro obbligatorio ed esistente; bonifica dei circa 4.000 CIG l'anno senza collegamento. Chiarire se agli appalti specifici di un SDA va collegato il CIG istitutivo"
   perche_serve: Senza il collegamento il provider di un lotto Consip (es. AQ Cloud IaaS e PaaS 2) non si eredita, e il massimale non si separa dalla spesa
   rif: [P15, "#50", "#54"]
 - id: R02
@@ -197,10 +197,10 @@
 - id: R21
   destinatario: ANAC; Commissione europea (DG GROW, vocabolario CPV); AgID, ACN
   tipo: miglioramento
-  stato: da verificare
+  stato: "verificato sul campione (6/11/2026); proposta"
   titolo: Attendibilità del CPV e campi strutturati su tipologia IT e sovranità negli acquisti ICT
-  evidenza: "Il CPV è scelto dall'ente senza controllo di coerenza con l'oggetto; spesso generico (72000000) o errato; il vocabolario (Reg. 213/2008) non distingue cloud/SaaS/PSN né prodotto, produttore, sede dei dati, giurisdizione. Misura in corso sul campione (report/cpv/PIANO.md)"
-  prova: report/cpv/PIANO.md
+  evidenza: "Misura del 6/11/2026 sui 543 ICT del campione 611: CPV specifico 74 %, generico (gruppo, es. 72000000) 17 %, fuori dalle divisioni ICT 9 % (metà col segnaposto 99999999); solo il 30 % dei 308 cloud ha un codice di servizio erogato (hosting, ASP, storage), contro l'11 % degli ICT non cloud: il CPV non distingue il cloud. Base ANAC dal 2024: 16,2 % dei CIG con codice di livello gruppo. Il vocabolario (Reg. 213/2008) non ha prodotto, produttore, sede dei dati, giurisdizione. Letteratura: Ramboll/BME 2012, 23 % di codici inesatti su 405 avvisi TED"
+  prova: "tools/verifiche/perimetro_cpv.py, esiti/2026-11-06/cpv/perimetro-cpv.json, report/cpv/letteratura.md, rendiconto bozza sito/content/rendiconti/perimetro-cpv.md"
   richiesta: "Controllo di coerenza CPV-oggetto al rilascio del CIG; campi obbligatori per acquisti ICT (tipologia, modello cloud, prodotto e produttore, sede dei dati, operatore e capogruppo, qualificazione ACN); aggiornamento del CPV o vocabolario supplementare ICT"
   perche_serve: Misurare la spesa cloud e la sovranità in modo esatto e deterministico, senza lettura degli atti
   rif: ["#55", "#59"]
@@ -606,3 +606,14 @@
   richiesta: "Valorizzare sempre il CIG di ogni lotto in un campo strutturato dell'avviso eForms (es. BT-22 identificativo interno del lotto con schema «CIG»), trasmesso automaticamente dalle piattaforme certificate"
   perche_serve: "Collegare TED e BDNCP permette la controvalidazione di importi e aggiudicatari dei contratti sopra soglia, che sono la maggior parte della spesa"
   rif: ["#27", "R14"]
+- id: R60
+  destinatario: ANAC
+  tipo: difetto
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "CPV segnaposto 99999999 «Cpv prevalente non disponibile» accettato al rilascio del CIG"
+  evidenza: "Dal 2024 il 8,3 % dei CIG (309.180 su 3.734.845) ha CPV 99999999 o vuoto; fra i 543 contratti ICT accertati del campione 611, 25 (4,6 %) hanno il segnaposto. Un contratto di telefonia e connettività con 99999999 esce dal perimetro ICT se il testo non lo salva"
+  prova: "tools/verifiche/perimetro_cpv.py, esiti/2026-11-06/cpv/perimetro-cpv.json (universo_dal_2024.base_cig)"
+  richiesta: "Non accettare il segnaposto: CPV prevalente obbligatorio e valido (vocabolario Reg. 213/2008) al rilascio del CIG; bonifica dello storico dalle piattaforme"
+  perche_serve: "Il CPV è il primo filtro di perimetro: un codice mancante costringe a leggere il testo di ogni contratto"
+  metrica: "Quota di CIG con CPV 99999999 o vuoto = 0 (oggi 8,3 %)"
+  rif: ["#44", "#59", "R21"]

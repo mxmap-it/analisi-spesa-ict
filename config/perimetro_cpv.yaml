@@ -1,0 +1,50 @@
+# Perimetro ICT per CPV (#44). Lista bianca: un CIG con CPV che inizia con uno di questi prefissi entra nel perimetro ICT
+# (non è escluso in S1). È la stessa lista di CPV_ICT in tools/analisi/classifica.py: se cambia una, cambia l'altra
+# (la verifica tools/verifiche/perimetro_cpv.py controlla che coincidano).
+# Fonte delle denominazioni: vocabolario CPV 2008, Reg. (CE) 213/2008, allegato I, come riportato nel campo descrizione_cpv
+# dei CIG ANAC (BDNCP). Fuori lista un CIG entra lo stesso se il testo ha segnali ICT (RX_ICT in tools/analisi/imbuto.py).
+# La misura per riga sta in esiti/<data>/cpv/perimetro-cpv.json.
+versione: "perimetro-cpv-0.1 (2026-11-06)"
+lista_bianca:
+  - {prefisso: "48",    denominazione: "Pacchetti software e sistemi di informazione", fonte: "Reg. 213/2008, divisione 48"}
+  - {prefisso: "72",    denominazione: "Servizi informatici: consulenza, sviluppo di software, Internet e supporto", fonte: "Reg. 213/2008, divisione 72"}
+  - {prefisso: "302",   denominazione: "Apparecchiature informatiche e forniture", fonte: "Reg. 213/2008, gruppo 302"}
+  - {prefisso: "3223",  denominazione: "Apparecchi trasmittenti radio con apparecchi riceventi", fonte: "Reg. 213/2008, classe 3223"}
+  - {prefisso: "3224",  denominazione: "Trasmettitori per televisione", fonte: "Reg. 213/2008, classe 3224"}
+  - {prefisso: "3225",  denominazione: "Telefoni mobili e accessori", fonte: "Reg. 213/2008, classe 3225"}
+  - {prefisso: "3226",  denominazione: "Apparecchiature per la trasmissione di dati e voce", fonte: "Reg. 213/2008, classe 3226"}
+  - {prefisso: "50312", denominazione: "Manutenzione e riparazione di attrezzature informatiche", fonte: "Reg. 213/2008, categoria 50312"}
+  - {prefisso: "50320", denominazione: "Servizi di riparazione e manutenzione di personal computer", fonte: "Reg. 213/2008, categoria 50320"}
+  - {prefisso: "51611", denominazione: "Servizi di installazione di computer", fonte: "Reg. 213/2008, categoria 51611"}
+  - {prefisso: "64216", denominazione: "Servizi di messaggeria e di informazione elettroniche", fonte: "Reg. 213/2008, categoria 64216"}
+  - {prefisso: "64222", denominazione: "Servizi di telelavoro", fonte: "Reg. 213/2008, categoria 64222"}
+  - {prefisso: "79342", denominazione: "Servizi di marketing", fonte: "Reg. 213/2008, categoria 79342"}
+# CPV che esprimono un servizio ICT erogato da terzi, il più vicino possibile a «cloud» (misura di espressività, #59):
+# 72317 archiviazione dati, 72318 trasmissione dati, 7240x/7241x servizi Internet e provider, 72415 hosting WWW,
+# 72416 fornitori di servizi applicativi (ASP), 72510/72512/72514 gestione e facility management informatico,
+# 72540 aggiornamento informatico, 72590 servizi professionali informatici.
+cpv_servizio_erogato: ["72415", "72416", "72317", "72318", "72400", "72410", "72411", "72412", "72413", "72414", "72510", "72512", "72514", "72540", "72590"]
+# Esiti della misura del 6/11/2026 (esiti/2026-11-06/cpv/perimetro-cpv.json). Le modifiche alla lista sono PROPOSTE:
+# decide Fabio (perimetro). Finché non decide, classifica.py e la lista restano uguali.
+proposte:
+  - prefisso: "79342"
+    proposta: togliere
+    misura: "campione L: 5 CIG con 79342, 0 ICT (3 no, 2 dubbi); universo ict.csv dal 2024: 5.859 CIG, 567 M€ entrano nel perimetro solo per questo codice"
+    nota: "marketing non è ICT; i contratti con testo ICT rientrano comunque per RX_ICT"
+  - prefisso: "3224"
+    proposta: rivedere
+    misura: "campione L: 2 CIG, entrambi telecamere/videosorveglianza (dubbi); universo 1.218 CIG, 4.746 M€ dal 2024 (importi da tetti da controllare)"
+    nota: "videosorveglianza e trasmettitori TV non sono spesa cloud; tenerli separati come sottoclasse o fuori"
+esclusioni_verificate:
+  - codici: "642 (servizi di telecomunicazione, salvo 64216 e 64222)"
+    stato: "fuori lista; entrano per testo (RX_TEL in S5)"
+    misura: "S1: 1 falso escluso su 200 è telefonia fissa e connettività (B011CC6248, CPV 99999999). Fuori lista nel 611: 64220, 64212 una volta ciascuno"
+  - codici: "50000000, 50800000 (manutenzione generica)"
+    stato: fuori lista
+    misura: "S1: 1 falso escluso (B805814329, manutenzione software JIride con codice 50000000) e 2 dubbi su 200"
+  - codici: "99999999 «Cpv prevalente non disponibile»"
+    stato: "segnaposto ANAC, fuori lista; entra solo per testo"
+    misura: "8,3 % dei CIG dal 2024 nella base (99999999 o vuoto); 25 dei 543 ICT del campione 611 (4,6 %), 13 dei 159 ICT dei campioni a cieco"
+  - codici: "30121 (fotocopiatrici), 32323500 (videosorveglianza), 80500 (formazione)"
+    stato: fuori lista
+    misura: "1-2 casi ciascuno fra gli ICT dei campioni; non giustificano l'ingresso (rientrano per testo quando serve)"
