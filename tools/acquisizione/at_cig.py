@@ -34,6 +34,17 @@ RX_CIG = re.compile(r"\b[0-9A-Z]{10}\b")
 csv.field_size_limit(10**9)
 
 
+RX_REFRESH = re.compile(r"http-equiv=[\"']?refresh[\"']?[^>]*url=([^\"'>\s]+)|(?:window\.)?location(?:\.href)?\s*=\s*[\"']([^\"']+)[\"']", re.I)
+
+
+def prendi_seg(s, u, out, salti=3):
+    """Come P.prendi, ma segue i meta refresh e i redirect JavaScript semplici delle pagine quasi vuote."""
+    r, h, t = P.prendi(s, u, out)
+    while salti and len(t) < 3000 and (m := RX_REFRESH.search(r.text)):
+        salti -= 1; r, h, t = P.prendi(s, urljoin(r.url, html.unescape(m.group(1) or m.group(2))), out)
+    return r, h, t
+
+
 def cf_dei_cig(cigs):
     import duckdb
     c = duckdb.connect(); c.execute("set memory_limit='6GB'; set threads=2; set preserve_insertion_order=false")
@@ -90,7 +101,7 @@ def main():
                 else:
                     if not P.robots_ok(u): e["robots_escluso_at"] = P.robots_evidenza(u, out)
                     s = requests.Session(); s.headers["User-Agent"] = P.UA
-                    r, sh, t = P.prendi(s, u, out); e["pagine"].append({"url": r.url, "sha256": sh})
+                    r, sh, t = prendi_seg(s, u, out); e["pagine"].append({"url": r.url, "sha256": sh})
                     if (b := P.blocco(r, t)): e["esito"] = "blocco"; e["blocco"] = b
                     else:
                         coda = []
@@ -102,7 +113,7 @@ def main():
                             v = coda.pop(0)
                             if v in visti or urlsplit(v).netloc.split(".")[-2:] != urlsplit(r.url).netloc.split(".")[-2:]: continue
                             visti.add(v)
-                            try: rr, hh, tt = P.prendi(s, v, out)
+                            try: rr, hh, tt = prendi_seg(s, v, out)
                             except Exception: continue
                             e["pagine"].append({"url": rr.url, "sha256": hh}); pagine.append((rr, tt))
                             if RX_AT.search(rr.url) and not RX_BANDI.search(rr.url): coda = list(link_con(rr, RX_BANDI))[:2] + coda
@@ -112,7 +123,7 @@ def main():
                                 if c in tt and c not in trovati: trovati[c] = rr
                         for c in cigs:
                             if c not in trovati and c in t: trovati[c] = r
-                        e["esito"] = "cig-trovati" if trovati else ("sezione-bandi-raggiunta" if any(RX_BANDI.search(p["url"]) for p in e["pagine"]) else "sezione-bandi-non-trovata")
+                        e["esito"] = "cig-trovati" if trovati else ("pagina-quasi-vuota-js" if len(t) < 1500 and len(e["pagine"]) == 1 else "sezione-bandi-raggiunta" if any(RX_BANDI.search(p["url"]) for p in e["pagine"]) else "sezione-bandi-non-trovata")
                         for c, rr in trovati.items():
                             rec = {"cig": c, "documenti": []}
                             P.documenti_pagina(s, c, rr, out, rec)
