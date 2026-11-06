@@ -4,6 +4,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
+## #40 #41 #43 #45 OBIETTIVO 6 — punto di ripresa 6/11/2026
+- **Fatto:** rendiconto bozza non elencato `sito/content/rendiconti/obiettivo-6.md` v0.1; verifiche `tools/verifiche/lente_prodotto.py`, `rivenditori_esteri.py`, `pnrr_bigtech.py` (esiti in `esiti/2026-11-06/{lente-prodotto,rivenditori,pnrr}/`); fonti di giurisdizione per provider in `config/marchi_cloud_fonti.yaml` (quasi tutte [R]); R55 (catalogo ACN 403 Akamai), R56 (aggiudicatario «IMPRESA INESISTENTE» 46,5 M€ di prodotti esteri).
+- **Numeri:** lente prodotto big tech USA sul campione 611: precisione 96 % (92-98), richiamo 90 % (85-94); tutti i provider 85 % / 63 %. Prodotti extra-UE 2022-26: 2,95 mld, via rivenditori 80 % del noto, 1.180 rivenditori, primi 5 = 66 % (TIM 1,07 mld). PNRR 1.2: big tech 13,6 M€ su 818,9 M€ di contratti collegati (1,7 %; 3,2 % dell'attribuito); 1.1: 0.
+- **Prossimo:** campione a cieco nuovo (#40); CF rivenditori (#41); catena 1.1 dai CUP dei decreti (#43); catalogo ACN a mano con Fabio o R55 (#45).
+
 ## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
 - **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
 - **Selezione:** `report/metodo/llm/imbuto-g1g3/selezione.json`: G1 196 CIG unici (4,70 mld), G3 1.000 (1,55 mld), CTL 15 dal campione 611. ict.csv ha CIG ripetuti (G1 13, G3 52): R53.

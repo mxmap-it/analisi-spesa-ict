@@ -556,3 +556,23 @@
   richiesta: "Link obbligatorio all'atto di adesione/contratto esecutivo anche per i CIG derivati; quadro economico e SAL obbligatori e controllati per i CIG sopra soglia; motore di ricerca per CIG nelle sezioni «Bandi di gara e contratti»"
   perche_serve: "Senza l'atto dell'ente il valore dell'ordinativo non è misurabile per gli attuativi di AQ e PSN, che sono il grosso del residuo ICT"
   rif: ["#66", "R14", "R49", "R51"]
+- id: R55
+  destinatario: ACN
+  tipo: ostacolo
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Il catalogo dei servizi cloud qualificati (catalogocloud.acn.gov.it/opendata) respinge l'accesso automatico
+  evidenza: "6/11/2026 dal server del progetto, User-Agent da browser con URL del progetto: /opendata e /robots.txt rispondono 403 «Access Denied» (Akamai, ref #18.d56bd117.1793973330.aafe7853); / e /api/opendata rispondono 302. Già annotato in config/risorse.yaml (specchia: false). Il catalogo non è nell'archivio: la mappa servizio qualificato → fornitore → giurisdizione (#45) non si può costruire né rifare ogni anno"
+  prova: "config/risorse.yaml (acn/catalogo-cloud); comando curl in sito/content/rendiconti/obiettivo-6.md § 4"
+  richiesta: "Pubblicare il catalogo in open data scaricabile senza filtri anti-bot (CSV/JSON con id servizio, fornitore, CF/P.IVA, tipologia IaaS/PaaS/SaaS, livello QC, infrastruttura sottostante e sua sede/giurisdizione, data di qualifica e scadenza), con storico delle versioni"
+  perche_serve: "È la sola fonte ufficiale che lega un servizio cloud comprato dalla PA al fornitore e all'infrastruttura qualificata: senza, l'incrocio con i CIG (#45) e la lente prodotto (#40) restano senza controprova"
+  rif: ["#45", "#40", "R20"]
+- id: R56
+  destinatario: ANAC
+  tipo: difetto
+  stato: "verificato sulla mappa rivenditori v3 (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Aggiudicatario segnaposto «IMPRESA INESISTENTE» su contratti di prodotti cloud esteri
+  evidenza: "Nella mappa dei rivenditori v3 (contratti attuativi 2022-2026) il nome normalizzato «IMPRESA INESISTENTE» compare come rivenditore di Oracle, Microsoft, IBM, AWS per 46,5 M€: è il 7° «rivenditore» per importo di prodotti extra-UE"
+  prova: "tools/verifiche/rivenditori_esteri.py; esiti/2026-11-06/rivenditori/rivenditori-esteri.json"
+  richiesta: "Vietare segnaposto nel campo aggiudicatario dei CIG aggiudicati; correzione retroattiva con il CF reale"
+  perche_serve: "Senza l'aggiudicatario non si sa chi intermedia la spesa estera (canale) né la sua giurisdizione"
+  rif: ["#41", "P17"]

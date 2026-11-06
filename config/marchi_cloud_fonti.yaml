@@ -1,0 +1,28 @@
+# #40 Fonte della giurisdizione per ogni provider del dizionario dei marchi (config/marchi_cloud.yaml).
+# La giurisdizione è quella della capogruppo che controlla il PRODOTTO (non del rivenditore).
+# stato: R = riferito (sede legale nota, da riscontrare su registro/bilancio della capogruppo); V = verificato da noi.
+# Le regex dei marchi hanno la loro storia in marchi_cloud.yaml (revisioni sul campione v2/v3).
+- {provider: Microsoft, giurisdizione: EXTRA-UE, capogruppo: "Microsoft Corporation, Redmond (WA), USA", fonte: "SEC EDGAR, CIK 0000789019 (10-K)", stato: R}
+- {provider: Amazon Web Services, giurisdizione: EXTRA-UE, capogruppo: "Amazon.com Inc., Seattle (WA), USA", fonte: "SEC EDGAR, CIK 0001018724 (10-K)", stato: R}
+- {provider: Google, giurisdizione: EXTRA-UE, capogruppo: "Alphabet Inc., Mountain View (CA), USA", fonte: "SEC EDGAR, CIK 0001652044 (10-K)", stato: R}
+- {provider: Oracle, giurisdizione: EXTRA-UE, capogruppo: "Oracle Corporation, Austin (TX), USA", fonte: "SEC EDGAR, CIK 0001341439 (10-K)", stato: R}
+- {provider: IBM, giurisdizione: EXTRA-UE, capogruppo: "International Business Machines Corp., Armonk (NY), USA", fonte: "SEC EDGAR, CIK 0000051143 (10-K)", stato: R}
+- {provider: Salesforce, giurisdizione: EXTRA-UE, capogruppo: "Salesforce Inc., San Francisco (CA), USA", fonte: "SEC EDGAR, CIK 0001108524 (10-K)", stato: R}
+- {provider: ServiceNow, giurisdizione: EXTRA-UE, capogruppo: "ServiceNow Inc., Santa Clara (CA), USA", fonte: "SEC EDGAR, 10-K", stato: R}
+- {provider: Adobe, giurisdizione: EXTRA-UE, capogruppo: "Adobe Inc., San Jose (CA), USA", fonte: "SEC EDGAR, 10-K", stato: R}
+- {provider: Zoom, giurisdizione: EXTRA-UE, capogruppo: "Zoom Communications Inc., San Jose (CA), USA", fonte: "SEC EDGAR, 10-K", stato: R}
+- {provider: Cisco Webex, giurisdizione: EXTRA-UE, capogruppo: "Cisco Systems Inc., San Jose (CA), USA", fonte: "SEC EDGAR, 10-K", stato: R}
+- {provider: Cloudera, giurisdizione: EXTRA-UE, capogruppo: "Cloudera Inc., Santa Clara (CA), USA (non quotata dal 2021)", fonte: "sito della società, pagina legale", stato: R}
+- {provider: VMware, giurisdizione: EXTRA-UE, capogruppo: "Broadcom Inc., Palo Alto (CA), USA (acquisizione 2023)", fonte: "SEC EDGAR, 10-K Broadcom", stato: R}
+- {provider: SAP, giurisdizione: UE, capogruppo: "SAP SE, Walldorf, Germania", fonte: "Annual Report SAP SE", stato: R}
+- {provider: Nextcloud, giurisdizione: UE, capogruppo: "Nextcloud GmbH, Stoccarda, Germania", fonte: "impressum nextcloud.com", stato: R}
+- {provider: OVHcloud, giurisdizione: UE, capogruppo: "OVH Groupe SA, Roubaix, Francia", fonte: "Document d'enregistrement universel", stato: R}
+- {provider: Aruba, giurisdizione: IT, capogruppo: "Aruba S.p.A., Ponte San Pietro (BG)", fonte: "registro imprese", stato: R}
+- {provider: Seeweb, giurisdizione: IT, capogruppo: "Seeweb S.r.l., Frosinone (gruppo Dominion Hosting Holding)", fonte: "registro imprese", stato: R}
+- {provider: WIIT, giurisdizione: IT, capogruppo: "WIIT S.p.A., Milano", fonte: "bilancio WIIT (Euronext Milan)", stato: R}
+- {provider: Retelit, giurisdizione: IT, capogruppo: "Retelit S.p.A., Milano", fonte: "registro imprese", stato: R}
+- {provider: TIM, giurisdizione: IT, capogruppo: "TIM S.p.A., Milano", fonte: "bilancio TIM", stato: R}
+- {provider: Fastweb, giurisdizione: IT, capogruppo: "Fastweb S.p.A., Milano (controllata da Swisscom AG, Svizzera)", fonte: "bilancio Swisscom", stato: R, nota: "prodotto IT, controllo extra-UE (CH): da decidere con Fabio come trattarlo nei 4 bucket"}
+- {provider: Polo Strategico Nazionale, giurisdizione: IT, capogruppo: "Polo Strategico Nazionale S.p.A., Roma (TIM, Leonardo, CDP Equity, Sogei)", fonte: "esiti/2026-11-06/psn/bilanci-psn.json (bilanci archiviati, sha256)", stato: V, nota: "la giurisdizione del SERVIZIO dipende dalla tipologia (Secure Public Cloud = tecnologia hyperscaler): #45"}
+- {provider: SPC Cloud lotto 1, giurisdizione: IT, capogruppo: "RTI TIM mandataria (Consip SPC Cloud lotto 1)", fonte: "config/lotti_cloud.yaml", stato: V}
+- {provider: In-house pubblico, giurisdizione: IT, capogruppo: "società in-house regionali (Lepida, CSI Piemonte, Liguria Digitale, Trentino Digitale, INVA, ...)", fonte: "config/marchi_cloud.yaml, fornitori", stato: V}

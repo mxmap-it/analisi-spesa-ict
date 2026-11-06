@@ -1,0 +1,521 @@
+{
+ "riferimento": "dati/classificazioni/campione-v3.jsonl",
+ "testi": "report/metodo/campione-misura-v3-cieco.csv",
+ "dizionario": "config/marchi_cloud.yaml",
+ "n_campione": 611,
+ "riferimento_con_provider_del_dizionario": 455,
+ "riferimento_senza_provider": 76,
+ "riferimento_fuori_dizionario": [
+  [
+   "altro:maggioli",
+   6
+  ],
+  [
+   "altro:check point",
+   2
+  ],
+  [
+   "altro:fortinet",
+   2
+  ],
+  [
+   "altro:dedalus",
+   2
+  ],
+  [
+   "altro:halley informatica",
+   2
+  ],
+  [
+   "altro:vodafone",
+   1
+  ],
+  [
+   "altro:megasp/segec (safety21)",
+   1
+  ],
+  [
+   "altro:bitdefender",
+   1
+  ],
+  [
+   "altro:pa digitale s.p.a.",
+   1
+  ],
+  [
+   "altro:atlassian",
+   1
+  ],
+  [
+   "altro:planet s.r.l. (planetform)",
+   1
+  ],
+  [
+   "altro:momasoft (momapix)",
+   1
+  ],
+  [
+   "altro:contentsquare",
+   1
+  ],
+  [
+   "altro:we-com",
+   1
+  ],
+  [
+   "altro:enerpower s.r.l.",
+   1
+  ],
+  [
+   "altro:pa abs",
+   1
+  ],
+  [
+   "altro:planon",
+   1
+  ],
+  [
+   "altro:maggioli (sicraweb evo)",
+   1
+  ],
+  [
+   "altro:veeam",
+   1
+  ],
+  [
+   "altro:medarchiver",
+   1
+  ],
+  [
+   "altro:dedalus italia (c4h erp)",
+   1
+  ],
+  [
+   "altro:datagraph srl",
+   1
+  ],
+  [
+   "altro:moody's analytics (bureau van dijk)",
+   1
+  ],
+  [
+   "altro:entando",
+   1
+  ],
+  [
+   "altro:gpi s.p.a.",
+   1
+  ],
+  [
+   "altro:pagopa",
+   1
+  ],
+  [
+   "altro:project s.r.l.",
+   1
+  ],
+  [
+   "altro:millennium (dedalus)",
+   1
+  ],
+  [
+   "altro:mondo edp (iriscloudwebapp)",
+   1
+  ],
+  [
+   "altro:dell technologies",
+   1
+  ]
+ ],
+ "predetti": 336,
+ "per_provider": {
+  "Adobe": {
+   "tp": 2,
+   "fp": 0,
+   "fn": 0,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.342,
+    1.0
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.342,
+    1.0
+   ]
+  },
+  "Amazon Web Services": {
+   "tp": 3,
+   "fp": 1,
+   "fn": 0,
+   "precisione": 0.75,
+   "precisione_w95": [
+    0.301,
+    0.954
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.438,
+    1.0
+   ]
+  },
+  "Aruba": {
+   "tp": 3,
+   "fp": 0,
+   "fn": 4,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.438,
+    1.0
+   ],
+   "richiamo": 0.429,
+   "richiamo_w95": [
+    0.158,
+    0.75
+   ]
+  },
+  "Cisco Webex": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 1,
+   "precisione": null,
+   "precisione_w95": null,
+   "richiamo": 0.0,
+   "richiamo_w95": [
+    0.0,
+    0.793
+   ]
+  },
+  "Cloudera": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.207,
+    1.0
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.207,
+    1.0
+   ]
+  },
+  "Fastweb": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 15,
+   "precisione": null,
+   "precisione_w95": null,
+   "richiamo": 0.0,
+   "richiamo_w95": [
+    -0.0,
+    0.204
+   ]
+  },
+  "Google": {
+   "tp": 8,
+   "fp": 1,
+   "fn": 1,
+   "precisione": 0.889,
+   "precisione_w95": [
+    0.565,
+    0.98
+   ],
+   "richiamo": 0.889,
+   "richiamo_w95": [
+    0.565,
+    0.98
+   ]
+  },
+  "IBM": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 4,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.207,
+    1.0
+   ],
+   "richiamo": 0.2,
+   "richiamo_w95": [
+    0.036,
+    0.624
+   ]
+  },
+  "In-house pubblico": {
+   "tp": 27,
+   "fp": 29,
+   "fn": 57,
+   "precisione": 0.482,
+   "precisione_w95": [
+    0.357,
+    0.61
+   ],
+   "richiamo": 0.321,
+   "richiamo_w95": [
+    0.231,
+    0.427
+   ]
+  },
+  "Microsoft": {
+   "tp": 73,
+   "fp": 2,
+   "fn": 5,
+   "precisione": 0.973,
+   "precisione_w95": [
+    0.908,
+    0.993
+   ],
+   "richiamo": 0.936,
+   "richiamo_w95": [
+    0.859,
+    0.972
+   ]
+  },
+  "Nextcloud": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.207,
+    1.0
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.207,
+    1.0
+   ]
+  },
+  "Oracle": {
+   "tp": 19,
+   "fp": 0,
+   "fn": 4,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.832,
+    1.0
+   ],
+   "richiamo": 0.826,
+   "richiamo_w95": [
+    0.629,
+    0.93
+   ]
+  },
+  "Polo Strategico Nazionale": {
+   "tp": 67,
+   "fp": 13,
+   "fn": 2,
+   "precisione": 0.838,
+   "precisione_w95": [
+    0.742,
+    0.903
+   ],
+   "richiamo": 0.971,
+   "richiamo_w95": [
+    0.9,
+    0.992
+   ]
+  },
+  "Retelit": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 1,
+   "precisione": null,
+   "precisione_w95": null,
+   "richiamo": 0.0,
+   "richiamo_w95": [
+    0.0,
+    0.793
+   ]
+  },
+  "SAP": {
+   "tp": 14,
+   "fp": 0,
+   "fn": 5,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.785,
+    1.0
+   ],
+   "richiamo": 0.737,
+   "richiamo_w95": [
+    0.512,
+    0.882
+   ]
+  },
+  "SPC Cloud lotto 1": {
+   "tp": 6,
+   "fp": 1,
+   "fn": 5,
+   "precisione": 0.857,
+   "precisione_w95": [
+    0.487,
+    0.974
+   ],
+   "richiamo": 0.545,
+   "richiamo_w95": [
+    0.28,
+    0.787
+   ]
+  },
+  "Salesforce": {
+   "tp": 7,
+   "fp": 0,
+   "fn": 3,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.646,
+    1.0
+   ],
+   "richiamo": 0.7,
+   "richiamo_w95": [
+    0.397,
+    0.892
+   ]
+  },
+  "ServiceNow": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.207,
+    1.0
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.207,
+    1.0
+   ]
+  },
+  "TIM": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 62,
+   "precisione": null,
+   "precisione_w95": null,
+   "richiamo": 0.0,
+   "richiamo_w95": [
+    -0.0,
+    0.058
+   ]
+  },
+  "VMware": {
+   "tp": 53,
+   "fp": 3,
+   "fn": 0,
+   "precisione": 0.946,
+   "precisione_w95": [
+    0.854,
+    0.982
+   ],
+   "richiamo": 1.0,
+   "richiamo_w95": [
+    0.932,
+    1.0
+   ]
+  }
+ },
+ "estero_extra_ue": {
+  "provider_esatto": {
+   "tp": 168,
+   "fp": 7,
+   "fn": 18,
+   "precisione": 0.96,
+   "precisione_w95": [
+    0.92,
+    0.98
+   ],
+   "richiamo": 0.903,
+   "richiamo_w95": [
+    0.852,
+    0.938
+   ]
+  },
+  "appartenenza_al_gruppo": {
+   "tp": 168,
+   "fp": 7,
+   "fn": 18,
+   "precisione": 0.96,
+   "precisione_w95": [
+    0.92,
+    0.98
+   ],
+   "richiamo": 0.903,
+   "richiamo_w95": [
+    0.852,
+    0.938
+   ]
+  }
+ },
+ "bigtech_usa": {
+  "provider_esatto": {
+   "tp": 168,
+   "fp": 7,
+   "fn": 18,
+   "precisione": 0.96,
+   "precisione_w95": [
+    0.92,
+    0.98
+   ],
+   "richiamo": 0.903,
+   "richiamo_w95": [
+    0.852,
+    0.938
+   ]
+  },
+  "appartenenza_al_gruppo": {
+   "tp": 168,
+   "fp": 7,
+   "fn": 18,
+   "precisione": 0.96,
+   "precisione_w95": [
+    0.92,
+    0.98
+   ],
+   "richiamo": 0.903,
+   "richiamo_w95": [
+    0.852,
+    0.938
+   ]
+  }
+ },
+ "tutti_i_provider_del_dizionario": {
+  "provider_esatto": {
+   "tp": 286,
+   "fp": 50,
+   "fn": 169,
+   "precisione": 0.851,
+   "precisione_w95": [
+    0.809,
+    0.885
+   ],
+   "richiamo": 0.629,
+   "richiamo_w95": [
+    0.583,
+    0.672
+   ]
+  },
+  "appartenenza_al_gruppo": {
+   "tp": 297,
+   "fp": 39,
+   "fn": 158,
+   "precisione": 0.884,
+   "precisione_w95": [
+    0.845,
+    0.914
+   ],
+   "richiamo": 0.653,
+   "richiamo_w95": [
+    0.608,
+    0.695
+   ]
+  }
+ },
+ "errori": 208,
+ "falsi_positivi_con_formula_negativa": 0,
+ "falsi_positivi_con_formula_negativa_cig": [],
+ "nota": "campione stratificato v3, non casuale: precisione/richiamo valgono sul campione; VMware conta come estero (Broadcom, USA)"
+}

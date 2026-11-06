@@ -1,0 +1,79 @@
+{
+ "ingresso": "report/metodo/pnrr-contratti-v3.csv",
+ "misure": {
+  "1.1": {
+   "cig": 59,
+   "importo": 270307530,
+   "bigtech_usa": {
+    "cig": 0,
+    "importo": 0
+   },
+   "EXTRA-UE": {
+    "cig": 0,
+    "importo": 0
+   },
+   "UE": {
+    "cig": 0,
+    "importo": 0
+   },
+   "IT": {
+    "cig": 56,
+    "importo": 261340584
+   },
+   "senza_provider": {
+    "cig": 3,
+    "importo": 8966946
+   },
+   "quota_bigtech_sul_totale": 0.0,
+   "quota_bigtech_sul_attribuito": 0.0,
+   "bigtech_per_provider": {},
+   "bigtech_per_canale": {},
+   "esclusi_padri_o_da_verificare": {
+    "cig": 2,
+    "importo": 107928602
+   }
+  },
+  "1.2": {
+   "cig": 12501,
+   "importo": 818897475,
+   "bigtech_usa": {
+    "cig": 73,
+    "importo": 13595250
+   },
+   "EXTRA-UE": {
+    "cig": 0,
+    "importo": 0
+   },
+   "UE": {
+    "cig": 0,
+    "importo": 0
+   },
+   "IT": {
+    "cig": 257,
+    "importo": 408604564
+   },
+   "senza_provider": {
+    "cig": 12171,
+    "importo": 396697661
+   },
+   "quota_bigtech_sul_totale": 0.0166,
+   "quota_bigtech_sul_attribuito": 0.0322,
+   "bigtech_per_provider": {
+    "Microsoft": 10013989,
+    "Oracle": 2301770,
+    "Amazon Web Services": 454300,
+    "Google": 421890,
+    "Salesforce": 214000,
+    "VMware": 189301
+   },
+   "bigtech_per_canale": {
+    "rivenditore": 6649269,
+    "ignoto": 6945981
+   },
+   "esclusi_padri_o_da_verificare": {
+    "cig": 3,
+    "importo": 21139000
+   }
+  }
+ }
+}
