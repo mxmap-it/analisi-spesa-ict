@@ -235,7 +235,8 @@
     esito: report/anac/verifica-cig-accordo-quadro-2026-10-27.json
     sintesi: "Fra i CIG che nel testo dichiarano un'adesione, cig_accordo_quadro vuoto: 20% nel 2025, 56% nel 2017; 11.568 CIG padre puntati non esistono"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: campione verificato a mano; obbligo normativo e ANAC del campo da documentare"
+  controvalidazione: "Seconda misura del 6/11/2026 (tools/verifiche/cig_aq_modalita.py, esiti/2026-11-06/cig-aq/modalita.json): quando la stazione appaltante dichiara la modalità «discendente da accordo quadro/convenzione», cig_accordo_quadro è valorizzato nel 99,9-100 % dei casi fino al 2023 e nel 98,6 % (2024), 98,9 % (2025), 99,5 % (2026); con «contratto d'appalto» non lo è mai. Il «20 % vuoto» del 27/10 nasce dall'espressione sul testo: su 60 CIG 2025 a caso fra quelli «testo di adesione + contratto d'appalto + campo vuoto», solo 3 sono adesioni vere (5 %, IC 2-14; 55 sono appalti specifici di sistemi dinamici di acquisizione, che non discendono da un AQ). Stima delle adesioni vere senza collegamento nel 2025: circa 520 su 10.202"
+  esito_6_11: "Il rilievo come formulato il 27/10 NON regge e resta interno. Restano due difetti piccoli e misurabili: (a) CIG dichiarati discendenti senza cig_accordo_quadro: 3.946 nel 2025 (1,1 % di 356.322), 4.130 nel 2024; (b) circa 520 adesioni vere dichiarate come appalto ordinario (stima da campione). Per (b) e per gli appalti specifici di SDA serve sapere se ANAC chiede il collegamento al CIG istitutivo (obbligo da documentare)"
   azione_correttiva: "Da definire dopo la verifica dell'obbligo: controllo di compilazione in fase di richiesta del CIG derivato"
   metrica: "Quota di CIG derivati con cig_accordo_quadro valorizzato e esistente"
   stato: in_verifica
