@@ -47,6 +47,11 @@ def main():
         else: d = "non determinabile dal testo"
         dec.append({"cig": r["cig"], "euro": round(float(r["euro_netti"])), "decisione": d, "testo": t[:120]})
     T["oracle_primi_20"] = {"euro": sum(x["euro"] for x in dec), "per_decisione": {d: sum(x["euro"] for x in dec if x["decisione"] == d) for d in {x["decisione"] for x in dec}}, "cig": dec}
+    # 0.8: atti Oracle letti (oracle-campione.csv; uno dei primi 20, CINECA, da PortaleAppalti via piattaforme_cig.py)
+    if os.path.exists(os.path.join(E, "oracle-campione.csv")):
+        O = leggi("oracle-campione.csv"); c = sum(o["cloud"] == "si" for o in O)
+        T["oracle_atti_letti"] = {"atti": len(O), "con_cloud": c, "wilson95_quota_atti_cloud": wilson(c, len(O)),
+                                  "fra_i_primi_20": sum(1 for o in O if o["cig_imbuto"]), "cig": [o["cig_imbuto"] for o in O if o["cig_imbuto"]]}
     print(json.dumps(T, ensure_ascii=False, indent=1))
     if "--json" in sys.argv: json.dump(T, open(sys.argv[sys.argv.index("--json") + 1], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
