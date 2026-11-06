@@ -1,3 +1,5 @@
+# NON INVIARE. ANNULLATA il 7/11/2026 (Fabio): i RUP si raccolgono via web o dagli atti, vedi mxmap-it/monitoraggio-pvl-e-amministrazione-trasparente METODO-RUP.md.
+
 # Istanza di accesso civico generalizzato ad ANAC: estrazione della tabella «Incaricati» (RUP) della BDNCP e sua pubblicazione in formato aperto
 
 **Bozza non inviata** (2026-11-06, ticket #65). Destinatario: Autorità Nazionale Anticorruzione, ufficio che detiene i dati (Ufficio/Area BDNCP) o, in alternativa, ufficio indicato in «Amministrazione trasparente» per l'accesso civico (indirizzo PEC da ricavare dalla sezione AT di anticorruzione.it prima dell'invio). **Approvazione: Fabio.**

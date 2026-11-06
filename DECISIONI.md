@@ -191,3 +191,10 @@ appaltante del CIG padre è l'ente, la pagina con i documenti è su consip.it (C
     listini applicati) → **ente delegante** (bozze `mancanti-agenzia-per-le-erogazioni-in-agricoltura`, `mancanti-istituto-nazionale-…`);
   - nei casi dubbi istanza a Consip con richiesta esplicita di trasmissione all'ente ex art. 5 c. 3 se non detiene il documento.
 - Da decidere: approvare l'instradamento; se inviare a entrambi in parallelo per i documenti dubbi.
+
+## 2026-11-07 — RUP: niente accesso civico ad ANAC (Fabio)
+I RUP servono solo per i CIG da notificare e si raccolgono con due metodi:
+1. navigazione web sulla pagina ANAC che indicherà Fabio, in Chrome vero, a ritmo basso, con gli eventuali CAPTCHA risolti a mano da Fabio;
+2. analisi degli atti.
+
+Il metodo è in visibilita-pa `METODO-RUP.md`. La bozza `anac-incaricati-bdncp` è annullata e non cancellata. R47 resta come raccomandazione (dato pubblico senza open data e dietro CAPTCHA), non come istanza. Il prototipo si fa con Fabio.
