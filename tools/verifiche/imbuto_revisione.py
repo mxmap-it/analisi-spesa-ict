@@ -28,6 +28,7 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 E = os.path.join(RADICE, "esiti/2026-11-06/imbuto")
 RIEP = os.path.join(RADICE, "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json")
+RX_PA_PAGA = __import__("re").compile(r"energ|termic|efficient|trigenera|cogenera|calore|illuminazion|trasporto pubblico|\btpl\b|infrastruttura tecnologica|centro (unico )?di cottura", __import__("re").I)
 leggi = lambda n: list(csv.DictReader(open(os.path.join(E, n), encoding="utf-8")))
 
 
@@ -52,11 +53,17 @@ def main():
         return
     G = leggi("campione-tetti-giudizi.csv"); P = {r["cig"]: r for r in leggi("pvl-percig.csv")}
     REV = {r["cig"]: r for r in leggi("revisione-incerti-ict.csv")}
+    QE = {r["cig"]: r for r in leggi("anac-qe-sal.csv")}
     pop = collections.Counter(strato_c(r) for r in T if strato_c(r))
     prec = []
     for s in ("T3-tondo", "T3-non-tondo", "T4-accordo-quadro", "T4-concessione"):
         g = [x for x in G if x["strato_campione"] == s]; k = sum(x["importo_non_spesa_pa"] == "si" for x in g)
         prec.append({"strato": s, "popolazione": pop[s], "campione": len(g), "confermati": k, "precisione": round(k / len(g), 3), "wilson95": wilson(k, len(g))})
+    # precisione di T4 concessione dopo la regola v3 (sui CIG del campione che la regola lascia tetti)
+    ogg = {r["cig"]: r["oggetto"] for r in T}
+    g = [x for x in G if x["strato_campione"] == "T4-concessione" and not RX_PA_PAGA.search(ogg.get(x["cig"], ""))]
+    k = sum(x["importo_non_spesa_pa"] == "si" for x in g)
+    prec.append({"strato": "T4-concessione dopo regola v3 (I6)", "campione": len(g), "confermati": k, "precisione": round(k / len(g), 3) if g else None, "wilson95": wilson(k, len(g))})
     # controllo esaustivo T4 accordo quadro sul campo PVL accordo_quadro (dove l'avviso c'è)
     t4 = [P[r["cig"]]["aq_pvl"] for r in T if strato_c(r) == "T4-accordo-quadro" and r["cig"] in P and P[r["cig"]]["aq_pvl"] not in ("", "none")]
     k = sum("ccordo quadro" in a or a.startswith("fa-") for a in t4)
@@ -64,17 +71,29 @@ def main():
     # regole v2
     out = []
     for r in T:
-        r = dict(r); imp = float(r["importo"]); p = P.get(r["cig"], {}); aq = p.get("aq_pvl", "")
+        r = dict(r, sal_cumulato=""); imp = float(r["importo"]); p = P.get(r["cig"], {}); aq = p.get("aq_pvl", "")
         if r["via"] == "T3-ripetuto" and round(imp) % 100000 == 0 and "DISCENDENTE" not in r["modalita_realizzazione"].upper():
             r["classe"], r["via"], r["euro_netti"] = "incerto", "I5-tondo-non-confermato", imp
+        # v3 (0.4): concessione con servizi energetici, impianti o TPL -> i canoni li paga di norma la PA: incerto
+        if r["via"] == "T4-modalita" and "CONCESSIONE" in r["modalita_realizzazione"] and RX_PA_PAGA.search(r["oggetto"]):
+            r["classe"], r["via"], r["euro_netti"] = "incerto", "I6-concessione-canoni-pa", imp
         if r["cig"] in REV:
             x = REV[r["cig"]]
             if x["tipo"] == "errore": r["classe"], r["via"], r["euro_netti"] = "errore-importo", "X1-errore", 0.0
+            elif x["tipo"] == "spesa": r["classe"], r["via"], r["euro_netti"] = "spesa-effettiva", "E3-atto", float(x["euro_ordinativo"])
+            elif x["tipo"] == "incerto": r["classe"], r["via"], r["euro_netti"] = "incerto", "I7-atto-non-risolutivo", imp
             else: r["classe"], r["via"], r["euro_netti"] = "tetto", "T6-revisione", 0.0
         elif r["classe"] == "incerto":
             v = max([float(p[c]) for c in ("vincente_max", "affidamento_max") if p.get(c)] or [0])
             if "ccordo quadro" in aq or aq.startswith("fa-"): r["classe"], r["via"], r["euro_netti"] = "tetto", "T5-pvl-aq", 0.0
             elif "Nulla" in aq and 0 < v < imp * 0.999: r["classe"], r["via"], r["euro_netti"] = "spesa-effettiva", "E2-pvl", v
+        # v3 (0.4): quadro economico ANAC (seconda fonte ANAC, imbuto_qe_sal.py). Per un incerto o un errore d'importo
+        # con QE > 0 e < metà dell'importo dichiarato vale il QE; il SAL cumulato si riporta come speso certificato
+        q = QE.get(r["cig"])
+        if q:
+            qv = float(q["qe_ultimo_importo"] or 0); r["sal_cumulato"] = q["sal_cumulato"]
+            if r["classe"] in ("incerto", "errore-importo") and 0 < qv < imp * 0.5:
+                r["classe"], r["via"], r["euro_netti"] = "spesa-effettiva", ("E4-qe-corregge-errore" if r["classe"] == "errore-importo" else "E4-qe"), qv
         out.append(r)
     agg = lambda f: sorted(((k, v) for k, v in _agg(out, f).items()), key=lambda x: str(x[0]))
     Rj = {"precisione_campione": prec, "t4_accordo_quadro_su_pvl": pvl_t4}
@@ -92,7 +111,10 @@ def main():
     Rj["strati_dal_2024_v2"] = [{"strato": s, "euro_prima": round(v), "euro_dopo": round(v - corr[s][0] + corr[s][1]), "di_cui_incerti_oltre_50M": round(corr[s][2])}
                                 for s, v in sorted(st.items()) if s not in ("S0-padre-aq", "S2-sotto-soglia")]
     ict = [x for x in Rj["strati_dal_2024_v2"] if x["strato"] != "S1-escluso-non-ict"]
-    Rj["s3_s6"] = {k: sum(x[k] for x in ict) for k in ("euro_prima", "euro_dopo", "di_cui_incerti_oltre_50M")}
+    Rj["sal_certificato"] = {"cig_con_sal": sum(1 for r in out if r["sal_cumulato"] and float(r["sal_cumulato"]) > 0),
+                             "euro_sal": round(sum(float(r["sal_cumulato"] or 0) for r in out)),
+                             "euro_sal_ict": round(sum(float(r["sal_cumulato"] or 0) for r in out if r["strato"] != "S1-escluso-non-ict"))}
+    Rj["s3_s6"] ={k: sum(x[k] for x in ict) for k in ("euro_prima", "euro_dopo", "di_cui_incerti_oltre_50M")}
     with open(os.path.join(E, "tetti-cig-v2.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
     print(json.dumps(Rj, ensure_ascii=False, indent=1, default=str))
