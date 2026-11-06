@@ -46,7 +46,7 @@ MANIFEST = ROOT / "manifest.jsonl"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/140.0 Safari/537.36 analisi-spesa-ict (+https://github.com/mxmap-it/analisi-spesa-ict)")
 HEADERS = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "it-IT,it;q=0.9"}
-PAUSA_S = 1.0  # una richiesta al secondo: i portali pubblici non dichiarano quote
+PAUSA_S = float(os.environ.get("ARCHIVIA_PAUSA_S", "1.0"))  # una richiesta al secondo (o ARCHIVIA_PAUSA_S): i portali pubblici non dichiarano quote
 CHUNK = 1 << 20
 
 
