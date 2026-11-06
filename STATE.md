@@ -4,6 +4,20 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
+
+## MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
+Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le scelte sullo storage (object storage UE, pulizia degli altri progetti) spettano a Fabio. Tutto il resto del lavoro va avanti.
+- **ANAC:** completo, 1.796 risorse su 1.800 (le altre 4 rispondono 404 alla fonte). Il mirror quotidiano (cron) resta attivo, ma senza spazio la guardia lo ferma.
+- **Consip (#11):** completo, 151 risorse in tutti i formati. I 7 file grandi sono archiviati con scaricamento a riprese (`tools/acquisizione/scarica_ripresa.sh`, log `lavoro/consip/grandi.log`).
+- **OpenCUP (#26):** completo, compreso `OpendataComplessivo.zip` da 3,4 GB (`lavoro/opencup-grande.log`).
+- **TED (#27):** 34 mesi, da 2024-01 a 2026-10. FTS dal 2007 al 2025.
+- **SIOPE (#12), IndicePA e PA Digitale (#13), GLEIF (#28), OpenCoesione (#26), CPT ed Eurostat COFOG (#29):** archiviati.
+- **Da riprendere:**
+  1. BDAP (#25): circa 750 righe di metadati CKAN, `package_search?rows=1000&start=1000`, che cadono sempre. È l'ultima riga di `lavoro/consip/riprova.txt` e va riprovata in orari di poco carico.
+  2. Italia Domani/ReGiS (403, R57) e catalogo ACN (403 Akamai, R55): bloccati, decide Fabio.
+  3. Gli scaricamenti delle prossime annualità.
+- **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
+- **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
 ## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
 - **Aggiornamento 0.5.1 (6/11, sera):**
   - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
