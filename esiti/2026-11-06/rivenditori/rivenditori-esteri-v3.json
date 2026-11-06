@@ -1,0 +1,214 @@
+{
+ "ingresso": [
+  "report/metodo/rivenditori-v3.json",
+  "report/metodo/rivenditori-v3.csv",
+  "config/marchi_cloud.yaml"
+ ],
+ "per_giurisdizione_prodotto": {
+  "EXTRA-UE": {
+   "rivenditore": 1823900810,
+   "diretto": 454178878,
+   "ignoto": 671274030,
+   "totale": 2949353718,
+   "quota_rivenditore_sul_noto": 0.801
+  },
+  "IT": {
+   "diretto": 1525584688,
+   "ignoto": 538726538,
+   "rivenditore": 86428775,
+   "totale": 2150740001,
+   "quota_rivenditore_sul_noto": 0.054
+  },
+  "UE": {
+   "rivenditore": 203479465,
+   "ignoto": 76263565,
+   "diretto": 69508835,
+   "totale": 349251865,
+   "quota_rivenditore_sul_noto": 0.745
+  }
+ },
+ "rivenditori_di_prodotti_extra_ue": 1180,
+ "importo_extra_ue_via_rivenditori_csv": 2038728702,
+ "quota_primi_5": 0.664,
+ "primi_15": [
+  {
+   "rivenditore": "TIM",
+   "estero_eur": 1071903638,
+   "prodotti": [
+    "Microsoft",
+    "Salesforce",
+    "Oracle",
+    "Cloudera",
+    "Google",
+    "ServiceNow",
+    "Amazon Web Services",
+    "IBM",
+    "Cisco Webex"
+   ],
+   "contratti": 1573
+  },
+  {
+   "rivenditore": "EUROLINK SOCIETA A RESPONSABILITA LIMITATA",
+   "estero_eur": 94314354,
+   "prodotti": [
+    "Oracle",
+    "Amazon Web Services",
+    "Microsoft"
+   ],
+   "contratti": 28
+  },
+  {
+   "rivenditore": "FASTWEB",
+   "estero_eur": 77814349,
+   "prodotti": [
+    "Amazon Web Services",
+    "IBM",
+    "Microsoft",
+    "Google",
+    "Cisco Webex"
+   ],
+   "contratti": 90
+  },
+  {
+   "rivenditore": "POSTEL",
+   "estero_eur": 60791877,
+   "prodotti": [
+    "Microsoft"
+   ],
+   "contratti": 149
+  },
+  {
+   "rivenditore": "VAR GROUP",
+   "estero_eur": 48134218,
+   "prodotti": [
+    "Microsoft",
+    "Oracle",
+    "Salesforce",
+    "IBM",
+    "Amazon Web Services",
+    "Adobe",
+    "Cisco Webex"
+   ],
+   "contratti": 179
+  },
+  {
+   "rivenditore": "SOFTWAREONE ITALIA",
+   "estero_eur": 47850520,
+   "prodotti": [
+    "Microsoft"
+   ],
+   "contratti": 85
+  },
+  {
+   "rivenditore": "IMPRESA INESISTENTE",
+   "estero_eur": 46534393,
+   "prodotti": [
+    "Oracle",
+    "Microsoft",
+    "IBM",
+    "Amazon Web Services",
+    "Cisco Webex",
+    "Adobe"
+   ],
+   "contratti": 31
+  },
+  {
+   "rivenditore": "ITD SOLUTIONS",
+   "estero_eur": 36211786,
+   "prodotti": [
+    "IBM",
+    "Cloudera",
+    "Microsoft",
+    "Oracle"
+   ],
+   "contratti": 9
+  },
+  {
+   "rivenditore": "ITALWARE",
+   "estero_eur": 34099532,
+   "prodotti": [
+    "Oracle",
+    "Cloudera",
+    "Adobe",
+    "IBM",
+    "Amazon Web Services",
+    "Microsoft"
+   ],
+   "contratti": 60
+  },
+  {
+   "rivenditore": "PROJECT INFORMATICA",
+   "estero_eur": 30995450,
+   "prodotti": [
+    "Oracle",
+    "Microsoft"
+   ],
+   "contratti": 31
+  },
+  {
+   "rivenditore": "R1",
+   "estero_eur": 22676357,
+   "prodotti": [
+    "Oracle",
+    "Microsoft",
+    "Amazon Web Services",
+    "Adobe",
+    "Cisco Webex"
+   ],
+   "contratti": 131
+  },
+  {
+   "rivenditore": "INFORMATICA ALTO ADIGE",
+   "estero_eur": 20491064,
+   "prodotti": [
+    "Microsoft"
+   ],
+   "contratti": 13
+  },
+  {
+   "rivenditore": "KPMG ADVISORY",
+   "estero_eur": 17435579,
+   "prodotti": [
+    "Amazon Web Services",
+    "ServiceNow",
+    "Oracle"
+   ],
+   "contratti": 8
+  },
+  {
+   "rivenditore": "MATICMIND",
+   "estero_eur": 17425066,
+   "prodotti": [
+    "IBM",
+    "Cisco Webex",
+    "Google",
+    "Microsoft"
+   ],
+   "contratti": 21
+  },
+  {
+   "rivenditore": "LUTECH",
+   "estero_eur": 17280329,
+   "prodotti": [
+    "Salesforce",
+    "Amazon Web Services",
+    "ServiceNow",
+    "Oracle",
+    "Microsoft",
+    "Cisco Webex",
+    "IBM"
+   ],
+   "contratti": 35
+  }
+ ],
+ "esclusi_importi_da_verificare": {
+  "Microsoft": 2500883616,
+  "Polo Strategico Nazionale": 2160673313,
+  "Oracle": 518660375,
+  "SAP": 134462742,
+  "Salesforce": 95883163,
+  "Amazon Web Services": 70000000,
+  "Google": 40000000
+ },
+ "nota": "verificato: ricalcolo dalla mappa v3; la nazionalità dei rivenditori non è misurata (manca il CF)"
+}

@@ -1,0 +1,1205 @@
+{
+ "totale": {
+  "risorse": 2033,
+  "conservate": 2024,
+  "byte_ultime": 134107734561,
+  "byte_storico": 134107734561,
+  "risorse_con_piu_versioni": 0
+ },
+ "per_dataset": [
+  {
+   "autorita": "agid_dtd",
+   "dataset": "avvisi",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 11122,
+   "byte_storico": 11122,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_altrienti_finanziate",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 975187,
+   "byte_storico": 975187,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_comuni_finanziate",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 19982424,
+   "byte_storico": 19982424,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_11",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 126604,
+   "byte_storico": 126604,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_12",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 6770238,
+   "byte_storico": 6770238,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_131",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 3560777,
+   "byte_storico": 3560777,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_141",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 4399287,
+   "byte_storico": 4399287,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_143",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 5532227,
+   "byte_storico": 5532227,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_144",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 4464055,
+   "byte_storico": 4464055,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_finanziate_145",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 2286541,
+   "byte_storico": 2286541,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "candidature_scuole_finanziate",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 5621491,
+   "byte_storico": 5621491,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "aggiudicatari",
+   "risorse": 18,
+   "conservate": 18,
+   "byte": 405482209,
+   "byte_storico": 405482209,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "aggiudicazioni",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 982711263,
+   "byte_storico": 982711263,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "attestazioni-soa-v2",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 160629753,
+   "byte_storico": 160629753,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "avvio-contratto",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 227109135,
+   "byte_storico": 227109135,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "bandi-cig-modalita-realizzazione",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 22229,
+   "byte_storico": 22229,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "bandi-cig-tipo-scelta-contraente",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 25523,
+   "byte_storico": 25523,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "categorie-dpcm-aggregazione",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 98331530,
+   "byte_storico": 98331530,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "categorie-opera",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 380183328,
+   "byte_storico": 380183328,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "centri-di-costo",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 32245620,
+   "byte_storico": 32245620,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "cig",
+   "risorse": 15,
+   "conservate": 15,
+   "byte": 1543360581,
+   "byte_storico": 1543360581,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "cig-annuale",
+   "risorse": 703,
+   "conservate": 703,
+   "byte": 8595451312,
+   "byte_storico": 8595451312,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "collaudo",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 48362547,
+   "byte_storico": 48362547,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "contratti",
+   "risorse": 1,
+   "conservate": 0,
+   "byte": 0,
+   "byte_storico": 0,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/OP"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "cup",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 244013602,
+   "byte_storico": 244013602,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "fine-contratto",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 77458577,
+   "byte_storico": 77458577,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "fonti-finanziamento",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 182757643,
+   "byte_storico": 182757643,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "indicatori-pnrrpnc",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 9831686,
+   "byte_storico": 9831686,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "lavorazioni",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 25041694,
+   "byte_storico": 25041694,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "misurepremiali-pnrrpnc",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 13326,
+   "byte_storico": 13326,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "ocds",
+   "risorse": 96,
+   "conservate": 96,
+   "byte": 73843999833,
+   "byte_storico": 73843999833,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "pagine-cig",
+   "risorse": 10,
+   "conservate": 9,
+   "byte": 52137,
+   "byte_storico": 52137,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/OP",
+    "IT/SU"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "partecipanti",
+   "risorse": 18,
+   "conservate": 18,
+   "byte": 745837063,
+   "byte_storico": 745837063,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "pubblicazioni",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 471144108,
+   "byte_storico": 471144108,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "quadro-economico",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 819051156,
+   "byte_storico": 819051156,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "smartcig",
+   "risorse": 8,
+   "conservate": 8,
+   "byte": 738648831,
+   "byte_storico": 738648831,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "smartcig-annuale",
+   "risorse": 554,
+   "conservate": 554,
+   "byte": 38645803244,
+   "byte_storico": 38645803244,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "smartcig-tipo-fattispecie-contrattuale",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 30926,
+   "byte_storico": 30926,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "sospensioni",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 23534480,
+   "byte_storico": 23534480,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "stati-avanzamento",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 228079369,
+   "byte_storico": 228079369,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "stazioni-appaltanti",
+   "risorse": 4,
+   "conservate": 4,
+   "byte": 11488983,
+   "byte_storico": 11488983,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "subappalti",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 118051318,
+   "byte_storico": 118051318,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "varianti",
+   "risorse": 25,
+   "conservate": 25,
+   "byte": 58775149,
+   "byte_storico": 58775149,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "amministrazioni",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 50621047,
+   "byte_storico": 50621047,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "as-aq-banditi",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 8228750,
+   "byte_storico": 8228750,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "as-sda-banditi",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 380440,
+   "byte_storico": 380440,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "bandi_gare_rdf",
+   "risorse": 3,
+   "conservate": 3,
+   "byte": 27819263,
+   "byte_storico": 27819263,
+   "piu_versioni": 0,
+   "formati": [
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "bandiegare",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 9001631,
+   "byte_storico": 9001631,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "beni-servizi-rdo-td-bandite-mepa",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 627058969,
+   "byte_storico": 627058969,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "beni-servizi-rdo-td-stipulate-mepa",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 753556854,
+   "byte_storico": 753556854,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "cataloghi",
+   "risorse": 9,
+   "conservate": 8,
+   "byte": 954816842,
+   "byte_storico": 954816842,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "consumi-in-convenzione",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 14211983,
+   "byte_storico": 14211983,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "gareasp",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 116670278,
+   "byte_storico": 116670278,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "operatori_economici",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 731536388,
+   "byte_storico": 731536388,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "operatori_economici_rdf",
+   "risorse": 3,
+   "conservate": 0,
+   "byte": 0,
+   "byte_storico": 0,
+   "piu_versioni": 0,
+   "formati": [
+    "TTL"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "ordini-aq",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 31285685,
+   "byte_storico": 31285685,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "ordini-convenzione",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 41006137,
+   "byte_storico": 41006137,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "ordini-mepa",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 254504759,
+   "byte_storico": 254504759,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "partecipazioni",
+   "risorse": 9,
+   "conservate": 6,
+   "byte": 776702633,
+   "byte_storico": 776702633,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "rdo-td-bandite-mepa",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 4997117,
+   "byte_storico": 4997117,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "consip",
+   "dataset": "rdo-td-stipulate-mepa",
+   "risorse": 9,
+   "conservate": 9,
+   "byte": 44795298,
+   "byte_storico": 44795298,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "023f26ad-c7a5-4c0d-8539-7210317f1577",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 1639649,
+   "byte_storico": 1639649,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "04f1f1ce-2277-454a-9252-a69d7e0ad199",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 446750,
+   "byte_storico": 446750,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "057fd0d7-8ba3-485a-8581-52c8237b8d2c",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 5233058,
+   "byte_storico": 5233058,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "0a7670ac-919f-4590-bf28-7cdee278ca1f",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 492308,
+   "byte_storico": 492308,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "159bfeb4-f47d-4fe1-9cd7-47385e9f3976",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 18770270,
+   "byte_storico": 18770270,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "15c8cc52-749a-4f64-9bd1-9c3bb4f6f3df",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 6238935,
+   "byte_storico": 6238935,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "1c7034cd-8514-485d-8ff7-c72b5cb09a07",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 10065,
+   "byte_storico": 10065,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "2cd86ebc-3b55-462f-9aff-2215a65b1664",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 3077699,
+   "byte_storico": 3077699,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "502ff370-1b2c-4310-94c7-f39ceb7500e3",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 8604100,
+   "byte_storico": 8604100,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "5baa3eb8-266e-455a-8de8-b1f434c279b2",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 4192399,
+   "byte_storico": 4192399,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "62189de8-9e52-487b-a053-ec06207bfbde",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 3031786,
+   "byte_storico": 3031786,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "6d82313c-bcdc-4eb3-ba63-7bc6de644726",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 6416065,
+   "byte_storico": 6416065,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "7a2db7d8-4123-41b4-a1d6-d7b712a193f1",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 29343689,
+   "byte_storico": 29343689,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "8655c50e-13ea-447e-8bca-c6e3918bcbc8",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 1182,
+   "byte_storico": 1182,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "8afa9350-34da-4b29-8647-01abcfe9c29c",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 986247,
+   "byte_storico": 986247,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "8f3742ef-6138-4a28-bd87-5712318f2b06",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 798686,
+   "byte_storico": 798686,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "aaf45513-c33d-46eb-9ecd-fe778d267921",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 1473,
+   "byte_storico": 1473,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "ad45db51-fea4-4454-af80-5914e574e7b5",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 22026832,
+   "byte_storico": 22026832,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "afef4784-1e7f-4eaa-8f9f-ad6a0f34689b",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 6155805,
+   "byte_storico": 6155805,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "b0cb03c9-1188-478d-84c0-dc63b20bc4ae",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 10451,
+   "byte_storico": 10451,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "c8d2e2b3-a9f1-4123-bc8b-26315ed20fce",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 15302405,
+   "byte_storico": 15302405,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "d64c149e-a60e-4a10-b9cf-7230b0db8437",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 436053,
+   "byte_storico": 436053,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "d813fced-2e40-43d2-bb51-b393ccb0c714",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 8742623,
+   "byte_storico": 8742623,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "da24b931-6190-46b4-bb49-d9cd38056fc1",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 363820,
+   "byte_storico": 363820,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "db87dbc3-50ea-4b7e-81d7-78ad5e2cbb98",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 1469,
+   "byte_storico": 1469,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "f4f505b7-a86e-44dc-8215-fba0e0c4aac9",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 3146554,
+   "byte_storico": 3146554,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "XLSX"
+   ]
+  },
+  {
+   "autorita": "indicepa",
+   "dataset": "f8a0b6e0-a7a6-4475-8d9c-5ff49cc4dce2",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 7893360,
+   "byte_storico": 7893360,
+   "piu_versioni": 0,
+   "formati": [
+    "JSON",
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "rgs",
+   "dataset": "SIOPE_ANAGRAFICHE",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 860813,
+   "byte_storico": 860813,
+   "piu_versioni": 0,
+   "formati": [
+    "ZIP"
+   ]
+  },
+  {
+   "autorita": "rgs",
+   "dataset": "SIOPE_USCITE",
+   "risorse": 10,
+   "conservate": 10,
+   "byte": 735057833,
+   "byte_storico": 735057833,
+   "piu_versioni": 0,
+   "formati": [
+    "ZIP"
+   ]
+  }
+ ]
+}

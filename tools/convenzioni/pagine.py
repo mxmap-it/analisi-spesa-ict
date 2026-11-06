@@ -18,6 +18,14 @@ TIPI = {"consip": "Consip", "psn": "PSN", "aggregatore-regionale": "Aggregatore 
 STATI = {"archiviato": "archiviato", "pubblicato-non-archiviato": "pubblicato, non archiviato", "non-pubblicato": "non pubblicato", "da-verificare": "da verificare"}
 DATA_FONTI = "05/11/2026"
 DATA_BDNCP = "05/11/2026"
+REPO_DOC = "https://github.com/mxmap-it/convenzioni-ict-documenti"
+# copie pubblicate come asset delle GitHub Release (tools/convenzioni/release_documenti.py, #62)
+COPIE = {}
+if (DB / "documenti-release.csv").exists():
+    import csv as _csv
+    for _r in _csv.DictReader(open(DB / "documenti-release.csv", encoding="utf-8")):
+        if _r["asset_url"]:
+            COPIE[(_r["iniziativa"], _r["sha256"])] = _r["asset_url"]
 AVVISO = "<!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->\n\n"
 
 
@@ -211,12 +219,16 @@ def pagina(v, voci=()):
     docs = [(i["descrizione"], d) for i in v["inventario"] for d in i["documenti"]]
     if docs:
         righe += ["", "## Documenti presenti", "",
-                  "Link all'originale ufficiale; la nostra copia sta nell'archivio content-addressed del progetto (sha256 e data di acquisizione). "
-                  "La pubblicazione delle copie sul sito è in attesa di decisione (dimensione complessiva circa 4,3 GB): nel frattempo la copia si ottiene a richiesta, "
-                  "con lo sha256 per verificarne l'identità.", "",
+                  "Link all'originale ufficiale e alla nostra copia, identica byte per byte a quella dell'archivio content-addressed del progetto "
+                  f"(sha256 e data di acquisizione). Le copie stanno nella release [`{v['id']}`]({REPO_DOC}/releases/tag/{v['id']}) del repository pubblico "
+                  f"[mxmap-it/convenzioni-ict-documenti]({REPO_DOC}), con il manifest di tutti i file; si verificano con `sha256sum`.", "",
                   "| Tipo | Documento | Originale | Copia (sha256) | Acquisita |", "|---|---|---|---|---|"]
         for desc, d in docs:
             sha = f"`{d['sha256'][:16]}…`" if d.get("sha256") else "non archiviato"
+            if d.get("sha256") and COPIE.get((v["id"], d["sha256"])):
+                # un documento dentro uno zip ha lo sha256 dello zip: la copia è lo zip intero
+                etichetta = "copia dello zip" if "#" in d["url"] else "copia"
+                sha = f"[{etichetta}]({COPIE[(v['id'], d['sha256'])]}) {sha}"
             righe.append(f"| {desc} | {esc(d['nome'])[:90]} | [link]({d['url'].replace(' ', '%20')}) | {sha} | {(d.get('data') or '')[:10]} |")
     altrove = [(i["descrizione"], d) for i in v["inventario"] for d in i.get("reperiti_altrove", [])]
     if altrove:

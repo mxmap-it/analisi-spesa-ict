@@ -6,7 +6,7 @@ description: "Come censiamo, file per file, i documenti pubblicati e mancanti de
 weight: 25
 ---
 
-Versione 1.0 del 6/11/2026 (#62). Si applica alla [base dati delle convenzioni](/convenzioni/), al
+Versione 1.1 del 6/11/2026 (#62). Si applica alla [base dati delle convenzioni](/convenzioni/), al
 [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) e all'inventario
 [`documenti-mancanti.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv).
 
@@ -83,6 +83,24 @@ Chi ha uno dei documenti mancanti può segnalarlo sul [gruppo Telegram](https://
 ottenuto) e, se possibile, l'atto che lo accompagna. Verifichiamo l'autenticità (sha256, confronto con la fonte, firma digitale se presente) e lo
 pubblichiamo come «fonte non ufficiale» finché la centrale non lo pubblica.
 
+## Copie pubblicate dei documenti
+
+Le copie dei documenti archiviati stanno nel repository pubblico
+[mxmap-it/convenzioni-ict-documenti](https://github.com/mxmap-it/convenzioni-ict-documenti), **una GitHub Release per iniziativa**
+(tag = identificativo dell'iniziativa, es. `consip-2928`), con i file come asset dal nome leggibile e univoco (prefisso sha256 corto se
+due file hanno lo stesso nome). Il `manifest.csv` del repository (copia in
+[`documenti-release.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-release.csv))
+riporta per ogni file iniziativa, titolo, URL originale, sha256, byte, data di acquisizione e URL dell'asset. Ogni pagina di convenzione
+linka la «copia» accanto all'originale.
+
+- Entrano solo file scaricati senza autenticazione da pagine pubbliche ufficiali; restano fuori i documenti «da fonte non ufficiale» e
+  qualsiasi materiale interno. La fonte autentica resta l'URL originale.
+- Il digest sha256 che GitHub calcola su ogni asset coincide con lo sha256 dell'archivio: `python tools/verifiche/convenzioni_release.py`
+  lo controlla per tutti i file e riscarica un campione.
+- Release e non Git LFS: le release non hanno quote di spazio né di banda (limite 2 GiB per file, 1.000 file per release), mentre LFS
+  gratuito ha 10 GiB di spazio e 10 GiB di banda al mese a carico del proprietario (motivazione in `DECISIONI.md`, 6/11/2026).
+- Caricamento: `tools/convenzioni/release_documenti.py` (piano, carica, manifest), ripartibile: un asset con stesso nome e digest si salta.
+
 ## Revisione delle righe (6/11/2026)
 
 Le regole sul titolo producono rumore. Ogni riga «rimando» e «numerazione» (175) è stata riletta a mano sulla citazione e, dove serviva,
@@ -122,4 +140,5 @@ numerazione per seconda via.
 |---|---|---|
 | 1.3 | 7/11/2026 | zip letti e ricerca fuori piattaforma nel generatore |
 | 1.2 | 6/11/2026 | revisione a mano delle righe rimando/numerazione, allegati dentro i contratti firmati, ricognizione aggregatori nel generatore |
+| 1.1 | 6/11/2026 | copie pubblicate come GitHub Release del repository mxmap-it/convenzioni-ict-documenti, link «copia» nelle pagine |
 | 1.0 | 6/11/2026 | prima versione: tre metodi, criticità, livelli, ricontrollo, blocchi, ciclo dell'accesso civico, contributi |

@@ -82,6 +82,10 @@ def piano(a):
     def aggiungi(ini, s, titolo, url, data=None, byte=None):
         if ini not in nomi:
             return
+        if "#" in url:
+            # documento dentro uno zip: lo sha256 è quello dello zip, quindi l'asset è lo zip e prende il suo nome
+            url = url.split("#", 1)[0]
+            titolo = urllib.parse.unquote(url.split("?")[0].rsplit("/", 1)[-1])
         r = righe[ini].setdefault(s, {"iniziativa": ini, "sha256": s, "titolo": titolo, "url_originale": url,
                                       "byte": byte, "data_acquisizione": data})
         if not r["titolo"] and titolo:
@@ -119,9 +123,11 @@ def piano(a):
             if not p.exists():
                 esclusi.append({**r, "motivo": "blob assente dall'archivio"}); continue
             r["byte"] = p.stat().st_size
+            if r["byte"] == 0:
+                esclusi.append({**r, "motivo": "file vuoto (0 byte) alla fonte: GitHub non accetta asset vuoti"}); continue
             if r["byte"] >= 2 * 1024 ** 3:
                 esclusi.append({**r, "motivo": "oltre 2 GiB (limite asset)"}); continue
-            base = urllib.parse.unquote(r["url_originale"].split("?")[0].rsplit("/", 1)[-1])
+            base = urllib.parse.unquote(r["url_originale"].split("#")[0].split("?")[0].rsplit("/", 1)[-1])
             if "getDocument" in r["url_originale"] or "." not in base or r["url_originale"].startswith("https://ted.europa.eu"):
                 base = (r["titolo"] or base) + estensione(p)
             n = pulisci(base)
@@ -190,11 +196,20 @@ def carica(a):
         per[r["iniziativa"]].append(r)
     for ini in sorted(per):
         rel = release(ini, P["nomi"].get(ini, ini))
-        ci = {x["name"]: x for x in assets(rel["id"])}
+        lista = assets(rel["id"])
+        ci = {x["name"]: x for x in lista}
+        # GitHub ripulisce i nomi (es. «..._» diventa «._»): un asset già caricato si riconosce dal digest, non dal nome.
+        per_digest = {x.get("digest"): x for x in lista if x.get("state") == "uploaded"}
         for r in per[ini]:
-            x = ci.get(r["asset"])
-            if x and x.get("digest") == f"sha256:{r['sha256']}" and x.get("state") == "uploaded":
+            x = per_digest.get(f"sha256:{r['sha256']}")
+            if x:
+                if x["name"] != r["asset"] and r["asset"] not in ci:
+                    # 7/11/2026: gli zip erano stati caricati col nome del primo file contenuto: si rinominano
+                    y = api("PATCH", f"https://api.github.com/repos/{REPO}/releases/assets/{x['id']}", {"name": r["asset"]})
+                    print(ini, "rinominato", x["name"], "->", y["name"] if y else "?", flush=True)
+                    ci[r["asset"]] = x
                 continue
+            x = ci.get(r["asset"])
             if x:   # parziale o diverso: si rifà
                 api("DELETE", f"https://api.github.com/repos/{REPO}/releases/assets/{x['id']}")
             p = blob(a.archivio, r["sha256"])
@@ -202,7 +217,15 @@ def carica(a):
             if hashlib.sha256(dati).hexdigest() != r["sha256"]:
                 print("SHA LOCALE NON COINCIDE", p, file=sys.stderr); continue
             u = (rel["upload_url"].split("{")[0] + "?name=" + urllib.parse.quote(r["asset"]))
-            y = api("POST", u, dati, "application/octet-stream")
+            try:
+                y = api("POST", u, dati, "application/octet-stream")
+            except RuntimeError as e:
+                if "already_exists" not in str(e):
+                    raise
+                # il nome ripulito da GitHub coincide con quello di un altro file: prefisso sha256 corto
+                r["asset"] = f"{r['sha256'][:12]}_{r['asset']}"
+                u = (rel["upload_url"].split("{")[0] + "?name=" + urllib.parse.quote(r["asset"]))
+                y = api("POST", u, dati, "application/octet-stream")
             log.write(json.dumps({"iniziativa": ini, "asset": r["asset"], "sha256": r["sha256"], "digest": y.get("digest"),
                                   "id": y["id"], "t": time.strftime("%Y-%m-%dT%H:%M:%S")}) + "\n"); log.flush()
             print(ini, r["asset"], y.get("digest") == f"sha256:{r['sha256']}", flush=True)
@@ -215,14 +238,14 @@ def manifest(a):
     for ini in sorted({r["iniziativa"] for r in P["righe"]}):
         rel = api("GET", f"https://api.github.com/repos/{REPO}/releases/tags/{ini}")
         for x in assets(rel["id"]) if rel else []:
-            idx[(ini, x["name"])] = x
+            idx[(ini, x.get("digest"))] = x
     righe, mancano = [], 0
     for r in P["righe"]:
-        x = idx.get((r["iniziativa"], r["asset"]))
+        x = idx.get((r["iniziativa"], f"sha256:{r['sha256']}"))
         ok = bool(x) and x.get("digest") == f"sha256:{r['sha256']}"
         mancano += not ok
         righe.append({"iniziativa": r["iniziativa"], "titolo": r["titolo"], "url_originale": r["url_originale"], "sha256": r["sha256"],
-                      "byte": r["byte"], "data_acquisizione": r["data_acquisizione"], "asset": r["asset"],
+                      "byte": r["byte"], "data_acquisizione": r["data_acquisizione"], "asset": x["name"] if ok else r["asset"],
                       "asset_url": x["browser_download_url"] if ok else ""})
     with open(Path(a.out) / "manifest.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(righe[0]))

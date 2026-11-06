@@ -1,0 +1,344 @@
+# Usi dei dataset del mirror rispetto ai progetti dell'osservatorio (#17, #9).
+# Fonte della tabella e delle schede in sito/content/progetto/usi-dei-dataset.md
+# (rigenerate da tools/pagine_mirror.py: non modificare a mano la pagina fra i marcatori).
+#
+# Livelli d'uso per progetto:
+#   C  = certo, diretto: il progetto lo usa già (script e uscita indicati in `certo`)
+#   Ci = certo, indiretto: lo usa già attraverso un altro progetto o un artefatto derivato
+#   P  = potenziale, diretto (ipotesi motivata in `potenziale`)
+#   Pi = potenziale, indiretto
+#   -  = nessun uso ragionevole
+# «Certo» vale solo se lo script esiste nel repository e produce un'uscita versionata: verificato
+# con grep su tools/ il 2026-11-06. Il resto è ipotesi.
+# priorita_conservazione: alta = irrecuperabile se la fonte lo sovrascrive o lo toglie, ed è usato;
+#   media = usato ma ricostruibile o stabile; bassa = contesto.
+
+versione: 1
+aggiornato: 2026-11-06
+
+progetti:
+  ASI: {nome: "analisi-spesa-ict", fine: "spesa ICT cloud della PA per giurisdizione (obiettivo finale) e integrità delle fonti"}
+  MXM: {nome: "mxmap.it", fine: "provider di posta elettronica delle PA per giurisdizione"}
+  PVL: {nome: "Monitoraggio PVL e Amministrazione trasparente", fine: "link ai documenti di gara per CIG; accessibilità e indicizzabilità delle sezioni AT; re-indicizzatore"}
+  ROB: {nome: "Osservatorio robots.txt (#64)", fine: "che cosa escludono i robots.txt/llms.txt delle PA, Italia → UE"}
+  OSS: {nome: "Osservatorio Nazionale Sovranità Digitale", fine: "rapporti e indicatori di sintesi su sovranità digitale della PA, che aggregano i progetti"}
+
+dataset:
+  # ------------------------------------------------------------------ ANAC
+  - id: anac/cig
+    autorita: anac
+    nome: "CIG (file annuali cig-AAAA e delta mensili)"
+    campi: [cig, cig_accordo_quadro, oggetto_gara, oggetto_lotto, cod_cpv, importo_lotto, cf_amministrazione_appaltante, denominazione_amministrazione_appaltante, data_pubblicazione, tipo_scelta_contraente]
+    certo: "Universo dell'imbuto: tools/analisi/imbuto.py e attribuisci_provider.py leggono cig-AAAA e i delta; producono gli strati S1-S6 (cloud certo ~594 M€ 2024-2025, residuo incerto ~6,4 mld, /progetto/imbuto/). Verifiche: cig_accordo_quadro.py (P15), attuativi_s5.py, ted_cig.py; acquisizione/pvl_analisi.py misura il link PVL su 3.734.845 CIG 2024-2026 (P18)."
+    potenziale:
+      PVL: "universo dei CIG contro cui misurare il link PVL (oggi via file di lavoro di ASI): diventa uso diretto quando PVL legge il mirror"
+      OSS: "serie annuale della spesa ICT per giurisdizione, indicatore di testata"
+      MXM: "contratti di posta/collaboration (M365, Google Workspace) per ente: seconda via, indipendente dai record MX, per il provider di posta"
+    usi: {ASI: C, MXM: P, PVL: Ci, ROB: "-", OSS: Ci}
+    limiti: ["P08 delta gennaio-marzo 2026 rimossi", "P15 cig_accordo_quadro vuoto in parte degli attuativi", "P16 righe CSV non conformi nei delta 2026", "R22 importi pari al massimale dell'accordo quadro"]
+    priorita_conservazione: alta
+    perche_priorita: "I delta sono rimossi senza regola (P08): senza mirror lo stato 2026 non è ricostruibile."
+
+  - id: anac/smartcig
+    autorita: anac
+    nome: "SmartCIG (affidamenti semplificati, annuali e delta)"
+    campi: [cig, oggetto, importo, cf_amministrazione_appaltante, tipo_fattispecie_contrattuale, tipo_scelta_contraente, data_pubblicazione]
+    certo: "tools/analisi/smartcig_profilo.py: profilo per fattispecie 2022-2025; metriche_anac.py I5 (mesi mancanti, P09)."
+    potenziale:
+      ASI: "la spesa ICT corrente sotto soglia (licenze, canoni SaaS) passa in gran parte qui: va portata nell'imbuto"
+      MXM: "piccoli affidamenti di caselle/PEC per i comuni"
+      OSS: "quota del sotto soglia nella spesa cloud"
+    usi: {ASI: C, MXM: P, PVL: Pi, ROB: "-", OSS: Pi}
+    limiti: ["P09 giugno e luglio 2026 mancanti, JSON interrotto"]
+    priorita_conservazione: alta
+    perche_priorita: "Mesi già mancanti alla fonte; 38,7 GB, la parte più pesante dopo l'OCDS."
+
+  - id: anac/aggiudicatari
+    autorita: anac
+    nome: "Aggiudicatari"
+    campi: [cig, codice_fiscale, denominazione, ruolo, tipo_soggetto]
+    certo: "Lente fornitore e canale diretto/rivenditore: classifica.py, attribuisci_provider.py, imbuto.py, rivenditori.py, pnrr_cloud.py; controprova di ted_cig.py."
+    potenziale:
+      MXM: "fornitore del servizio di posta per ente (contratto) da confrontare con il provider misurato"
+      OSS: "concentrazione dei fornitori ICT e loro giurisdizione"
+    usi: {ASI: C, MXM: P, PVL: "-", ROB: "-", OSS: Ci}
+    limiti: ["file full fermo al 23/01/2026: lo stato corrente richiede i delta"]
+    priorita_conservazione: alta
+    perche_priorita: "Full non aggiornato e delta mensili soggetti alla stessa rimozione di P08."
+
+  - id: anac/aggiudicazioni
+    autorita: anac
+    nome: "Aggiudicazioni"
+    campi: [cig, data_aggiudicazione_definitiva, importo_aggiudicazione, ribasso, numero_offerte]
+    certo: "verifiche/verifica_38_42.py (copertura OCDS, P05: 67% a marzo 2026), seconde_vie.py, imbuto_tetti.py (tetti d'importo)."
+    potenziale:
+      ASI: "importo aggiudicato come valore alternativo all'importo del lotto"
+      OSS: "ribassi e concorrenza nelle gare cloud"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: ["file full fermo al 15/01/2026"]
+    priorita_conservazione: alta
+    perche_priorita: "Come aggiudicatari: full fermo, stato corrente solo nei delta."
+
+  - id: anac/cup
+    autorita: anac
+    nome: "CUP (ponte CIG-CUP)"
+    campi: [cig, cup]
+    certo: "analisi/pnrr_cloud.py e verifiche/pnrr11_cup_cig.py: catena candidatura PNRR (PA Digitale 2026) → CUP → CIG per le misure 1.1 e 1.2."
+    potenziale:
+      OSS: "quota PNRR della spesa cloud e dove è finita"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Ci}
+    limiti: ["P14 'ND' al posto del CUP in 1.951.844 righe"]
+    priorita_conservazione: media
+    perche_priorita: "Usato, ma file unico rigenerato: conservarne le versioni misura i miglioramenti di P14."
+
+  - id: anac/stazioni-appaltanti
+    autorita: anac
+    nome: "Stazioni appaltanti (anagrafe, AUSA)"
+    campi: [codice_fiscale, denominazione, codice_ausa, natura_giuridica, comune, provincia]
+    certo: "trasparenza/fonti.py (censimento enti del monitor AT: natura giuridica e comune per chi non è in IndicePA); pvl_analisi.py; verifiche/cf_segnaposto.py (P17)."
+    potenziale:
+      MXM: "aggancio CF ente → dominio per gli enti non in IndicePA (partecipate)"
+      ROB: "elenco degli enti e dei loro siti da sondare"
+      OSS: "denominatore comune degli enti fra progetti"
+    usi: {ASI: C, MXM: P, PVL: C, ROB: P, OSS: Ci}
+    limiti: ["P17 codici fiscali segnaposto (902 su 39.486)"]
+    priorita_conservazione: media
+    perche_priorita: "Piccolo (10 MB) e chiave di join fra progetti: costa niente tenerne tutte le versioni."
+
+  - id: anac/ocds
+    autorita: anac
+    nome: "OCDS bulk mensile 2018-2026"
+    campi: [ocid, tender.id (CIG), parties, awards.suppliers, release.date, value]
+    certo: "verifiche/ocds_mesi_duplicati.py (P01: 96 mesi, 80 contenuti distinti), ocds_periodo.py (P02), verifica_38_42.py (P03-P05), metriche I1-I4 del cruscotto."
+    potenziale:
+      OSS: "formato standard internazionale: confronti con altri paesi UE nell'osservatorio"
+      ASI: "non fonte primaria (deciso), resta seconda via"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: P}
+    limiti: ["P01 mesi duplicati", "P02 fermo a marzo 2026", "P03 fornitore assente nell'80% degli award 2026", "P04 date non conformi", "P05 copertura parziale", "P06 API REST non funzionante", "P07 licenza incoerente"]
+    priorita_conservazione: alta
+    perche_priorita: "74 GB; mesi già spariti (2025/12, 2026/01-02 in 404): è la prova di P01-P02 e l'unica copia di quei mesi in forma OCDS."
+
+  - id: anac/quadro-economico
+    autorita: anac
+    nome: "Quadro economico"
+    campi: [cig, tipo_evento, importo_base_asta, importo_consuntivo]
+    certo: "verifiche/imbuto_qe_sal.py: seconda fonte d'importo per gli incerti dell'imbuto (esiti/2026-11-06/imbuto/anac-qe-sal.csv)."
+    potenziale:
+      OSS: "scostamento fra importo bandito e consuntivo nei contratti cloud"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: ["copertura parziale: riguarda soprattutto i lavori"]
+    priorita_conservazione: media
+    perche_priorita: "Unico proxy pubblico del liquidato insieme agli stati di avanzamento."
+
+  - id: anac/stati-avanzamento
+    autorita: anac
+    nome: "Stati di avanzamento (SAL)"
+    campi: [cig, data, importo_sal]
+    certo: "verifiche/imbuto_qe_sal.py (somma dei SAL per CIG)."
+    potenziale:
+      ASI: "spesa effettiva (non solo bandita) per i contratti pluriennali PSN"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: ["poco compilato per servizi e forniture"]
+    priorita_conservazione: media
+    perche_priorita: "Proxy del liquidato; full+delta come gli altri."
+
+  - id: anac/pubblicazioni
+    autorita: anac
+    nome: "Pubblicazioni (avvisi e bandi)"
+    campi: [cig, data_pubblicazione, tipo_pubblicazione]
+    certo: "Solo censimento e controlli (censisci_anac.py); acquisizione/ted_l2.py lo usa per le date di pubblicazione."
+    potenziale:
+      PVL: "data di pubblicazione attesa da confrontare con l'avviso PVL e con la sezione AT"
+    usi: {ASI: C, MXM: "-", PVL: P, ROB: "-", OSS: "-"}
+    limiti: []
+    priorita_conservazione: media
+    perche_priorita: "Serve alla serie temporale della pubblicità legale."
+
+  - id: anac/fonti-finanziamento
+    autorita: anac
+    nome: "Fonti di finanziamento"
+    campi: [cig, fonte_finanziamento, importo]
+    certo: "Solo censimento (censisci_anac.py)."
+    potenziale:
+      ASI: "marca PNRR/fondi UE senza passare dal CUP (seconda via a pnrr_cloud.py, utile con P14)"
+      OSS: "spesa cloud finanziata con fondi UE"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: []
+    priorita_conservazione: media
+    perche_priorita: "Seconda via al CUP, che ha il 27% di ND."
+
+  - id: anac/subappalti
+    autorita: anac
+    nome: "Subappalti"
+    campi: [cig, subappaltatore, importo]
+    certo: "Solo censimento."
+    potenziale:
+      ASI: "chi eroga davvero il servizio cloud quando l'aggiudicatario è un integratore (lente fornitore)"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: []
+    priorita_conservazione: media
+    perche_priorita: "Potenziale alto per la lente fornitore, nessuna copia altrove."
+
+  - id: anac/partecipanti
+    autorita: anac
+    nome: "Partecipanti"
+    campi: [cig, codice_fiscale, denominazione, ruolo]
+    certo: "Solo censimento."
+    potenziale:
+      OSS: "concorrenza nelle gare ICT/cloud (numero di offerenti)"
+    usi: {ASI: Pi, MXM: "-", PVL: "-", ROB: "-", OSS: P}
+    limiti: []
+    priorita_conservazione: bassa
+    perche_priorita: "Contesto."
+
+  - id: anac/avvio-contratto
+    autorita: anac
+    nome: "Avvio contratto"
+    campi: [cig, data_stipula, data_esecutivita]
+    certo: "Solo censimento."
+    potenziale:
+      ASI: "data di stipula per attribuire la spesa all'anno giusto"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: "-"}
+    limiti: []
+    priorita_conservazione: bassa
+    perche_priorita: "Raffinamento temporale."
+
+  - id: anac/fine-contratto
+    autorita: anac
+    nome: "Fine contratto"
+    campi: [cig, data_fine, importo_finale]
+    certo: "Solo censimento."
+    potenziale:
+      ASI: "durata reale e importo finale dei contratti cloud pluriennali"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: "-"}
+    limiti: []
+    priorita_conservazione: bassa
+    perche_priorita: "Raffinamento."
+
+  - id: anac/varianti
+    autorita: anac
+    nome: "Varianti"
+    campi: [cig, motivo, importo]
+    certo: "Solo censimento."
+    potenziale:
+      ASI: "estensioni dei contratti cloud oltre l'importo iniziale"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: "-"}
+    limiti: []
+    priorita_conservazione: bassa
+    perche_priorita: "Contesto."
+
+  - id: anac/minori
+    autorita: anac
+    nome: "Dataset minori: categorie-opera, lavorazioni, sospensioni, collaudo, centri-di-costo, categorie-dpcm-aggregazione, attestazioni-soa, indicatori-pnrrpnc, misurepremiali-pnrrpnc, bandi-cig-*, smartcig-tipo-fattispecie"
+    campi: [cig, codici di classificazione]
+    certo: "Solo censimento e integrità (censisci_anac.py, anac_integrita.py); le tabelle bandi-cig-* e smartcig-tipo-* decodificano i codici."
+    potenziale:
+      ASI: "categorie-dpcm-aggregazione: obbligo di aggregazione per le categorie ICT; indicatori-pnrrpnc: marcatura PNRR"
+    usi: {ASI: Pi, MXM: "-", PVL: "-", ROB: "-", OSS: "-"}
+    limiti: []
+    priorita_conservazione: bassa
+    perche_priorita: "Piccoli; si conservano perché il mirror è completo per costruzione (#9)."
+
+  # ------------------------------------------------------------------ Consip
+  - id: consip/ordini
+    autorita: consip
+    nome: "Ordini MePA, convenzione, accordi quadro (ordini-mepa, ordini-convenzione, ordini-aq, consumi-in-convenzione)"
+    campi: [anno, iniziativa, lotto, tipologia_amministrazione, provincia, importo_ordinato]
+    certo: "convenzioni/consip_opendata.py: seconda via, indipendente da BDNCP, al valore delle iniziative ICT (report/convenzioni/database/consip-ordinato.csv)."
+    potenziale:
+      OSS: "quota della spesa ICT che passa dal canale centralizzato"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Ci}
+    limiti: ["nessun CIG né ente: solo aggregati per anno e lotto", "finestra mobile di tre anni (2022 e 2023 in 404)"]
+    priorita_conservazione: alta
+    perche_priorita: "Consip cancella gli anni oltre la finestra: ogni anno non specchiato è perso."
+
+  - id: consip/gare
+    autorita: consip
+    nome: "Gare e bandi (gareasp, bandiegare, bandi_gare_rdf, as-aq-banditi, as-sda-banditi)"
+    campi: [cig, oggetto, data, importo, strumento]
+    certo: "Nessuno script lo legge ancora; specchiato (#11)."
+    potenziale:
+      ASI: "CIG padre delle iniziative Consip: completa config/iniziative_ict.yaml"
+      PVL: "pagina della gara su consip.it per i CIG su delega"
+    usi: {ASI: P, MXM: "-", PVL: Pi, ROB: "-", OSS: "-"}
+    limiti: ["finestra mobile di tre anni"]
+    priorita_conservazione: alta
+    perche_priorita: "Stessa finestra mobile; hanno il CIG, quindi si legano a ANAC."
+
+  - id: consip/mepa-rdo
+    autorita: consip
+    nome: "RdO e trattative dirette MePA (bandite e stipulate, beni-servizi)"
+    campi: [anno, categoria, importo, tipologia_amministrazione]
+    certo: "Nessuno script."
+    potenziale:
+      ASI: "categorie MePA ICT come controllo dei CPV del sotto soglia"
+    usi: {ASI: P, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: ["finestra mobile di tre anni"]
+    priorita_conservazione: media
+    perche_priorita: "Finestra mobile; uso solo potenziale."
+
+  - id: consip/anagrafiche
+    autorita: consip
+    nome: "Amministrazioni, operatori economici, cataloghi, partecipazioni"
+    campi: [codice_fiscale, denominazione, categoria, abilitazioni]
+    certo: "Il nome «amministrazioni» compare in convenzioni/ e trasparenza/ ma riferito ad altre fonti: nessun uso certo del dataset Consip."
+    potenziale:
+      ASI: "cataloghi MePA: prodotti e marchi cloud offerti (lente prodotto)"
+      MXM: "operatori abilitati alla posta elettronica sul MePA"
+    usi: {ASI: P, MXM: Pi, PVL: "-", ROB: "-", OSS: "-"}
+    limiti: ["alcune distribuzioni JSON/TTL in errore alla fonte (cataloghi 2024, partecipazioni 2024-2026, operatori_economici_rdf)"]
+    priorita_conservazione: media
+    perche_priorita: "Finestra mobile; cataloghi pesanti (~1 GB)."
+
+  # ------------------------------------------------------------------ altre fonti
+  - id: rgs/siope
+    autorita: rgs
+    nome: "SIOPE uscite e anagrafiche"
+    campi: [codice_ente, anno, mese, codice_gestionale, importo]
+    certo: "Specchiato (2017-2026); nessuno script lo legge ancora."
+    potenziale:
+      ASI: "unica misura di cassa per ente: codici gestionali ICT come tetto della spesa ICT e controllo dell'imbuto"
+      OSS: "spesa ICT pagata per ente e territorio"
+    usi: {ASI: P, MXM: Pi, PVL: "-", ROB: "-", OSS: P}
+    limiti: ["cartella open/last: il file dell'anno corrente è sovrascritto a ogni aggiornamento"]
+    priorita_conservazione: alta
+    perche_priorita: "Percorso «last»: le versioni intermedie dell'anno in corso non restano alla fonte."
+
+  - id: agid_dtd/padigitale2026
+    autorita: agid_dtd
+    nome: "PA Digitale 2026 (candidature finanziate, avvisi)"
+    campi: [cup, codice_ipa, misura, importo_finanziamento, stato]
+    certo: "analisi/pnrr_cloud.py (misure 1.1 e 1.2); trasparenza/test_trasparenza.py."
+    potenziale:
+      MXM: "enti finanziati per la migrazione cloud: confronto prima/dopo dei provider"
+      OSS: "esito del PNRR cloud per ente"
+    usi: {ASI: C, MXM: P, PVL: Ci, ROB: "-", OSS: Ci}
+    limiti: []
+    priorita_conservazione: media
+    perche_priorita: "Repository git pubblico: la storia c'è alla fonte, ma il mirror ne fissa gli sha256 usati."
+
+  - id: indicepa/enti
+    autorita: indicepa
+    nome: "IndicePA (enti, unità organizzative, domicili digitali, RTD)"
+    campi: [codice_ipa, codice_fiscale, denominazione, sito_istituzionale, categoria, pec, codice_comune_istat]
+    certo: "trasparenza/fonti.py e sonda.py (censimento enti e siti del monitor AT); convenzioni/fuori_piattaforma_at.py. mxmap.it lo usa come universo degli enti e dei domini."
+    potenziale:
+      ROB: "elenco dei siti istituzionali da sondare per robots.txt"
+      OSS: "anagrafe comune di tutti i progetti"
+    usi: {ASI: C, MXM: C, PVL: C, ROB: P, OSS: Ci}
+    limiti: []
+    priorita_conservazione: alta
+    perche_priorita: "Aggiornato ogni giorno sovrascrivendo: le versioni passate non restano alla fonte, ed è la base di join di tutti i progetti."
+
+  - id: acn/catalogo-cloud
+    autorita: acn
+    nome: "Catalogo dei servizi cloud qualificati ACN"
+    campi: [servizio, fornitore, livello, data_qualifica]
+    certo: "Solo sondato (specchia: false)."
+    potenziale:
+      ASI: "servizio qualificato → fornitore → giurisdizione: via di attribuzione"
+      OSS: "quanti servizi qualificati sono extra-UE"
+    usi: {ASI: P, MXM: Pi, PVL: "-", ROB: "-", OSS: P}
+    limiti: ["non specchiato: da decidere"]
+    priorita_conservazione: media
+    perche_priorita: "Le qualifiche scadono e vengono tolte dal catalogo."

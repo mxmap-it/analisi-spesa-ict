@@ -269,7 +269,7 @@ risorse:
     dataset: siope-uscite
     url: https://www.siope.it/documenti/siope2/open/last/SIOPE_USCITE.{AAAA}.zip
     modello: annuale
-    da: 2024
+    da: 2017  # #12, 6/11/2026: tutti gli anni pubblicati (2017-2026, circa 73 MB l'uno)
     a: 2026
     cadenza: mensile
     specchia: true
@@ -321,3 +321,106 @@ risorse:
     nota: >-
       Risponde 403 alle richieste non-browser. Sondato per documentare
       l'ostacolo; da riprovare quando cambia.
+
+  # ---------------------------------------------------------------- UE (#27)
+  - autorita: ue-ted
+    dataset: avvisi-it-ict
+    url: https://api.ted.europa.eu/v3/notices/search
+    cadenza: giornaliera
+    specchia: false
+    partizione: mensile
+    ict: true
+    nota: >-
+      API v3 anonima, solo POST: la sonda non la interroga. Specchiata da
+      tools/acquisizione/ted_mirror.py (buyer-country=ITA, CPV 72/48/302, dal
+      2024-01), pagine grezze in archivio con --da-file, stato in lavoro/ted/stato.jsonl.
+
+  - autorita: ue-fts
+    dataset: financial-transparency-system
+    url: https://ec.europa.eu/budget/financial-transparency-system/download/{AAAA}_FTS_dataset_en.xlsx
+    modello: annuale
+    da: 2007
+    a: 2025
+    cadenza: annuale
+    specchia: true
+    partizione: annuale
+    ict: false
+    nota: Beneficiari del bilancio UE con partita IVA (gestione diretta). Serve a riconoscere fornitori.
+
+  # ------------------------------------------------------------ Italia Domani (#43)
+  - autorita: italiadomani
+    dataset: gare-dei-progetti-del-pnrr
+    url: https://www.italiadomani.gov.it/content/dam/sogei-ng/opendata/PNRR_Gare.csv
+    cadenza: semestrale
+    specchia: false
+    partizione: nessuna
+    ict: true
+    nota: >-
+      ReGiS, ponte CUP-CIG ufficiale (v11, osservazione 13/06/2026). 403 Akamai
+      dal server il 6/11/2026 (R57); da riprovare.
+
+  # ------------------------------------------------- mirror della roadmap (#25 #26 #28 #29), 6/11/2026
+  - autorita: rgs
+    dataset: bdap-catalogo
+    url: https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_list
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Catalogo CKAN di BDAP (non /api/3, che dà 404): si specchiano package_list
+      e package_search a pagine da 1000 (config/coda-mirror-2026-11.txt); i
+      dataset si scelgono dopo, solo quelli ICT.
+
+  - autorita: opencoesione
+    dataset: progetti-esteso
+    url: https://opencoesione.gov.it/it/opendata/progetti_esteso.zip
+    cadenza: bimestrale
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: Redirect al file datato (progetti_esteso_AAAAMMGG.zip, circa 270 MB il 31/08/2026). Ponte CUP per i fondi di coesione.
+
+  - autorita: opencup
+    dataset: progetti
+    url: https://www.opencup.gov.it/portale/web/opencup/accesso-agli-open-data
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Pagine «accesso-agli-open-data» e «dettaglio-opendata-complessivo» (il vecchio
+      /opendata dà 404). OpendataComplessivo.zip 3,4 GB (curl con ripresa), metadati,
+      decodifiche, file CUP PNRR (feb. 2024); URL in config/coda-mirror-2026-11.txt.
+
+  - autorita: gleif
+    dataset: golden-copy
+    url: https://goldencopy.gleif.org/api/v2/golden-copies/publishes/latest
+    cadenza: giornaliera
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: >-
+      CC0. L'indice dà gli URL datati dei file (LEI2 485 MB, relazioni RR 23 MB,
+      eccezioni REPEX 60 MB in CSV); copia del 6/11/2026 in config/coda-mirror-2026-11.txt.
+
+  - autorita: eurostat
+    dataset: gov_10a_exp
+    url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/gov_10a_exp?format=TSV&compressed=true
+    cadenza: annuale
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: Spesa delle amministrazioni per funzione COFOG, tutti i paesi. Denominatore, non misura (#29).
+
+  - autorita: dpcoe
+    dataset: open-cpt-spese
+    url: https://politichecoesione.governo.it/it/politica-di-coesione/misurazione-valutazione-e-trasparenza/la-misurazione-delle-politiche-di-coesione/conti-pubblici-territoriali-cpt/i-dati/catalogo-open-cpt/
+    cadenza: annuale
+    specchia: true
+    partizione: nessuna
+    ict: false
+    nota: >-
+      Catalogo Open CPT, 7 pagine (?page=N), file in /media/. Si specchiano solo le
+      spese (sp_*, pa_s*, spa_s*: 36 file il 6/11/2026); le entrate sono fuori
+      perimetro. Denominatore (#29).

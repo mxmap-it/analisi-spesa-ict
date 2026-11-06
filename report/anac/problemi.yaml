@@ -60,11 +60,12 @@
   prova:
     script: tools/verifiche/verifica_38_42.py
     esito: report/anac/verifica-38-42-2026-10-27.json
-    sintesi: "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Il difetto è comparso fra il 2021 e il 2023"
+    sintesi: "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Su tutto il mirror (6/11/2026) il difetto parte dal mese 2019/12: da allora 0 date conformi"
     verificato_il: 2026-10-27
   controvalidazione: "Seconda via indipendente (parser di date standard di Python, mese diverso): ottobre 2024, 0 date valide su 117.271 release"
+  misura_mirror: "6/11/2026, tutto il mirror bulk (96 mesi, 2018/01-2026/03; tools/verifiche/ocds_release_date.py, esiti/2026-11-06/ocds/release-date.json): via 1 (espressione RFC 3339 dello schema) e via 2 (datetime.fromisoformat con T e fuso obbligatori) concordano su tutte le 4.751.105 date presenti (0 discordi). Conformi solo 2018/01-2019/11 (556.553, tutte, forma 2021-10-01T12:00:00Z; 2019/06: 24 release senza data). Da 2019/12 a 2026/03 nessuna data conforme: 4.194.552 date nella forma «2021-02-03 02:53:03.297T12:00:00Z»; release senza release.date 3.594.570 (es. 2026/03: 19.829 su 148.369). Esempi con sha256 dal manifest: 2019/11 84158d57c82eb3c3… (conforme), 2019/12 6a6c62742ce99201… (primo mese non conforme), 2026/03 c311a079324f95f863b1d47d9280b3441518cc719939eb918909dbf3d50cd4dc. I totali contano anche i mesi che servono lo stesso contenuto (D14, P-mesi duplicati)"
   azione_correttiva: "Emettere date ISO 8601 / RFC 3339 come richiesto dallo schema OCDS 1.1; valorizzare sempre release.date"
-  metrica: "Quota di release con date valida secondo lo schema = 100% (nuova metrica I11)"
+  metrica: "Quota di release con release.date presente e valida secondo lo schema = 100% (nuova metrica I11; oggi 0 % da 2019/12, misura di tools/verifiche/ocds_release_date.py)"
   stato: aperto
   pronto_per_anac: true
 
@@ -235,7 +236,8 @@
     esito: report/anac/verifica-cig-accordo-quadro-2026-10-27.json
     sintesi: "Fra i CIG che nel testo dichiarano un'adesione, cig_accordo_quadro vuoto: 20% nel 2025, 56% nel 2017; 11.568 CIG padre puntati non esistono"
     verificato_il: 2026-10-27
-  controvalidazione: "Da fare: campione verificato a mano; obbligo normativo e ANAC del campo da documentare"
+  controvalidazione: "Seconda misura del 6/11/2026 (tools/verifiche/cig_aq_modalita.py, esiti/2026-11-06/cig-aq/modalita.json): quando la stazione appaltante dichiara la modalità «discendente da accordo quadro/convenzione», cig_accordo_quadro è valorizzato nel 99,9-100 % dei casi fino al 2023 e nel 98,6 % (2024), 98,9 % (2025), 99,5 % (2026); con «contratto d'appalto» non lo è mai. Il «20 % vuoto» del 27/10 nasce dall'espressione sul testo: su 60 CIG 2025 a caso fra quelli «testo di adesione + contratto d'appalto + campo vuoto», solo 3 sono adesioni vere (5 %, IC 2-14; 55 sono appalti specifici di sistemi dinamici di acquisizione, che non discendono da un AQ). Stima delle adesioni vere senza collegamento nel 2025: circa 520 su 10.202"
+  esito_6_11: "Il rilievo come formulato il 27/10 NON regge e resta interno. Restano due difetti piccoli e misurabili: (a) CIG dichiarati discendenti senza cig_accordo_quadro: 3.946 nel 2025 (1,1 % di 356.322), 4.130 nel 2024; (b) circa 520 adesioni vere dichiarate come appalto ordinario (stima da campione). Per (b) e per gli appalti specifici di SDA serve sapere se ANAC chiede il collegamento al CIG istitutivo (obbligo da documentare)"
   azione_correttiva: "Da definire dopo la verifica dell'obbligo: controllo di compilazione in fase di richiesta del CIG derivato"
   metrica: "Quota di CIG derivati con cig_accordo_quadro valorizzato e esistente"
   stato: in_verifica

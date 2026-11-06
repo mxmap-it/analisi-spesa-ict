@@ -106,6 +106,16 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
 
+**Lente prodotto (via 3 sul solo testo), 6/11/2026, #40:**
+- sul campione v3 (611 CIG), big tech USA: precisione 96 %, richiamo 90 %;
+- su un campione nuovo a cieco di 240 CIG (40 per strato, `report/metodo/lente-cieco/`), prima di ogni modifica: precisione 100 %, richiamo 81 %.
+
+I 13 mancati del campione a cieco hanno portato a regole nuove in `config/marchi_cloud.yaml` (sigle delle convenzioni Consip Microsoft «MS EA8/EA9», licenze SQL, licenze ed ESU di Windows 10/11, IaaS/PaaS Google e Microsoft dell'AQ 2746). La via 6 non legge quel file. Con le regole nuove il richiamo sul campione a cieco sale al 98 %, ma è una misura sullo stesso campione usato per scriverle, quindi **non vale come misura**: quel campione diventa di sviluppo.
+
+Effetto sull'universo dal 2024, verificato a mano su un estratto: le regole nuove aggiungono circa 40 CIG. Si è scartato «win 10/11» da solo perché prendeva 242 CIG di PC con Windows preinstallato. Verifiche: `tools/verifiche/lente_prodotto.py`, `tools/verifiche/lente_cieco.py`.
+
+**v0.5 (6/11/2026):** esclusioni (AWS in corsi e collocation, backup *di* Microsoft 365) e altre regole Microsoft licenza, scritte sugli errori del secondo campione a cieco (`report/metodo/lente-cieco-2/`, big tech P 95 %, R 89 %). Misurate su un **terzo campione a cieco** (`report/metodo/lente-cieco-3/`): big tech P 62/62 = 100 %, R 62/70 = 89 %. I mancati sono testi senza il nome del produttore o con il nome sbagliato.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso

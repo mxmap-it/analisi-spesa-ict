@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.8 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
+**Versione 0.9 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -460,6 +460,18 @@ Esito sui 7 CIG dei primi 50 EA e dei primi 20 Oracle che hanno un link PVL (`pi
 
 **Rigenerazione di imbuto 0.3.2:** non è stata fatta. La via 6 (`giro_imbuto.sh`) è ancora in corso e il suo guardiano la rilancia finché mancano esiti. L'esecuzione automatica a fine via 6 con una regola cron non è stata autorizzata: va lanciata a mano (`python tools/analisi/imbuto.py 2020` sul server) quando `giro_imbuto.sh` ha finito.
 
+### 4.8 TED come seconda fonte degli aggiudicatari (nuovo in 0.9)
+
+**Regola:** se un CIG non ha aggiudicatari in ANAC e il suo avviso di aggiudicazione TED nomina il vincitore con la P.IVA, il vincitore TED entra come aggiudicatario. La via è registrata come «TED» per la lente fornitore.
+
+**Precisione:** dove ci sono entrambe le fonti, la P.IVA TED coincide con quella ANAC nell'**89 %** dei casi. La misura è dell'agente del mirror TED (#27, `tools/verifiche/ted_esiti.py`) e qui non è stata rifatta.
+
+**Esito** (`tools/verifiche/ted_imbuto.py`, `esiti/2026-11-06/imbuto/ted-vincitori.{csv,json}`) [V]:
+- 84 CIG hanno un vincitore TED e nessun aggiudicatario ANAC;
+- 72 sono nell'imbuto: S5 55 CIG per 156 M€, S0 9, S4 1 (Oracle Italia, già attribuito per marchio), S6 7 per 19 M€ (G1 1, G3 6).
+
+**Effetto sugli strati: nessuno.** La giurisdizione si attribuisce al prodotto, non al fornitore (AGENTS.md § 2). I 7 vincitori in S6 sono integratori e rivenditori italiani (N&C, R1, SMITT, Aditinet, Converge, un RTI con Innovery): non sono produttori cloud, quindi non spostano nessun CIG verso S4. Il vincitore TED serve alla lente fornitore e alla via 6, come indizio nella lettura degli atti.
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -604,3 +616,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.6 | 2026-11-06 | § 2.6: CIG contati due volte (11.043 righe, i conti tornano; S3-S6 dal 2024 a 55,3 mld); § 4.5: licenze e marchi, cloud sì o no con la via di ogni CIG (cloud 168 M€, non cloud 892 M€, incerto 1,68 mld); top-5 punto 5 aggiornato |
 | 0.7 | 2026-11-06 | § 4.6: censimento dei prodotti negli EA Microsoft (8 atti, quota cloud pesata 92 %, forbice sul residuo 0,55-0,81 mld) e nei primi 20 Oracle (on premises probabile, 261 M€); imbuto.py 0.3.2 contro i doppioni (non ancora rigenerato) |
 | 0.8 | 2026-11-06 | § 4.7: adattatori per piattaforme di e-procurement (PortaleAppalti, esop, generico); CINECA Oracle raggiunto da anonimo (ULA, nessun cloud); 5 atti Oracle, 0 con cloud; 3 ricerche EA in più (0 atti); rigenerazione 0.3.2 rinviata |
+| 0.9 | 2026-11-06 | § 4.8: TED come seconda fonte degli aggiudicatari (84 CIG, 72 nell'imbuto; precisione P.IVA 89 % riferita da #27); nessun effetto sugli strati |

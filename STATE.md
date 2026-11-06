@@ -4,10 +4,63 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-06
 
-## #40 #41 #43 #45 OBIETTIVO 6 — punto di ripresa 6/11/2026
-- **Fatto:** rendiconto bozza non elencato `sito/content/rendiconti/obiettivo-6.md` v0.1; verifiche `tools/verifiche/lente_prodotto.py`, `rivenditori_esteri.py`, `pnrr_bigtech.py` (esiti in `esiti/2026-11-06/{lente-prodotto,rivenditori,pnrr}/`); fonti di giurisdizione per provider in `config/marchi_cloud_fonti.yaml` (quasi tutte [R]); R55 (catalogo ACN 403 Akamai), R56 (aggiudicatario «IMPRESA INESISTENTE» 46,5 M€ di prodotti esteri).
-- **Numeri:** lente prodotto big tech USA sul campione 611: precisione 96 % (92-98), richiamo 90 % (85-94); tutti i provider 85 % / 63 %. Prodotti extra-UE 2022-26: 2,95 mld, via rivenditori 80 % del noto, 1.180 rivenditori, primi 5 = 66 % (TIM 1,07 mld). PNRR 1.2: big tech 13,6 M€ su 818,9 M€ di contratti collegati (1,7 %; 3,2 % dell'attribuito); 1.1: 0.
-- **Prossimo:** campione a cieco nuovo (#40); CF rivenditori (#41); catena 1.1 dai CUP dei decreti (#43); catalogo ACN a mano con Fabio o R55 (#45).
+## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
+- **Aggiornamento 0.5.1 (6/11, sera):**
+  - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
+  - **CPT:** 36 file di spesa del catalogo Open CPT archiviati.
+  - **ISTAT COFOG:** coperto da Eurostat.
+  - **Consip:** il server taglia i file sopra circa 350 MB, quindi curl con ripresa e poi `archivia.py --da-file`. `cataloghi2024.json` è archiviato, gli altri 6 sono in corso (`lavoro/consip/grandi.log`).
+  - **BDAP:** la pagina `package_search start=1000` cade sempre (il server chiude dopo 120 s), anche in pagine da 250: da riprovare in orari di poco carico.
+  - **Vincitori TED per l'imbuto (#66):** `esiti/2026-11-06/imbuto/ted-vincitori.csv` (`tools/verifiche/ted_imbuto.py`). 84 CIG con vincitore TED e senza aggiudicatari ANAC; 72 nell'imbuto, di cui 7 in S6 (19 M€) e 55 in S5. Da integrare a cura di chi gestisce l'imbuto: il rendiconto imbuto-dove-siamo non è stato toccato.
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.5.
+- **#40:** tre campioni a cieco (`report/metodo/lente-cieco{,-2,-3}/`; `tools/verifiche/lente_cieco.py CARTELLA`). Misure indipendenti big tech: R 81 % → 89 % → 89 %, P 100 % / 95 % / 100 %. Regole v0.5 in `config/marchi_cloud.yaml`; il terzo campione le misura. La lente testuale è al limite: non aggiungere regole senza un quarto campione.
+- **#41 / #43:** invariati rispetto a 0.4 (rivenditori v3.1; FLAG_PNRR_PNC 90 %; R57, R58).
+- **#11 Consip:** 151 risorse, 94 nuove, 50 invariate, 7 errori (JSON e TTL grandi, connessione interrotta). Nuovo tentativo in coda: `lavoro/consip/riprova.txt` (più BDAP start=1000), parte da solo dopo IndicePA.
+- **#27:** TED v2 di 34 mesi, 5.348 avvisi; TED → CIG 6,6 %; TED come fonte di esiti: 112 righe senza aggiudicatari ANAC, 88 con vincitore e P.IVA TED, 298 M€ (`esiti/2026-11-06/mirror/ted-esiti.csv`). R59.
+- **Coda mirror** (`config/coda-mirror-2026-11.txt`, `tools/acquisizione/coda_mirror.sh`, guardia 45 GB). Archiviati: PA Digitale 2026, SIOPE uscite 2017-2026 e anagrafiche, BDAP (4/5 pagine del catalogo), Eurostat COFOG, GLEIF (LEI2, RR, REPEX), OpenCoesione. IndicePA: 54 risorse in corso (`lavoro/indicepa/mirror.log`).
+- **Da fare:** OpenCUP (URL 404, da ritrovare), CPT e ISTAT (URL), ItaliaDomani (R57). Registrazioni in `config/risorse.yaml`. Disco 52 GB liberi.
+## #17 #9 MIRROR PUBBLICO ANAC — punto di ripresa 6/11/2026 (indicazione di Fabio del 7/11)
+- **Stato [V]:** ANAC 1.796/1.800 risorse del catalogo con sha256 (128,7 GB; OCDS 96 file 73,8 GB); le 4 mancanti sono 404 alla fonte (P10). Totale mirror fonti di risorse.yaml 2.024 risorse, 134,1 GB. Nessuna risorsa ha ancora cambiato sha256 dal 26/10. 13 file > 2 GiB (max OCDS 2025/10, 5,25 GB). Server: 51 GB liberi.
+- **Indice:** `tools/indice_mirror.py` (manifest → `report/mirror/indice.{json,csv}`, `sintesi.json`; sul server con `ARCHIVIO_ROOT`), `tools/pagine_mirror.py` (rigenera le tabelle fra i marcatori GEN e copia in `sito/static/dati/mirror/`; serve PyYAML → .venv del server).
+- **Bozze non elencate:** `/progetto/mirror-pubblico/` (requisiti, 7 opzioni di hosting, proposta), `/progetto/perche-un-mirror/` (evidenze [V]/[R]; Consip ordini-mepa 2022 e 2023 → 404 il 6/11), `/progetto/usi-dei-dataset/` (dati in `config/usi-dataset.yaml`, 25 schede × 5 progetti).
+- **DECISIONE A FABIO (#17):** hosting. Proposta: bucket S3-compatibile UE (Hetzner/Scaleway, ~5-10 €/mese [R]) con percorsi originali + frontale nginx su mxmap.it per le risposte CKAN statiche, dominio mirror.mxmap.it; Zenodo per snapshot annuali con DOI; GitHub solo indice/manifest. Nessun GB caricato in pubblico.
+- **Prossimi passi:** archiviare con sha256 la prova Consip 404 nella sonda; confronto sha256 fra versioni come metrica quando ci saranno cambi; SIOPE «last» e IndicePA: verificare la sovrascrittura [R].
+
+## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.4)
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.4. Verifiche in `tools/verifiche/` (lente_prodotto, lente_cieco [arg: cartella del campione], rivenditori_esteri, pnrr_bigtech locali; rivenditori_cf, pnrr11_prodotto, pnrr_flag, ted_cig, fts_piva sul server).
+- **#40:** il secondo campione a cieco (`report/metodo/lente-cieco-2/`, 120 CIG S2-S4) misura le regole v0.3: big tech P 56/59 = 95 %, R 56/63 = 89 %. Falsi positivi: backup di M365, collocation AWS, corso AWS. Mancati: Microsoft senza le parole chiave (EA9, CP-PILOT, Windows XP…). Regole nuove NON applicate: andrebbero misurate su un terzo campione.
+- **#41:** v3.1 con RTI ripartiti (1,824 mld), CF italiani 99,9 %.
+- **#43:** FLAG_PNRR_PNC sul 90 % dei CIG 1.2. Dei 1.064 senza flag, 627 nominano il PNRR nell'oggetto → R58. ReGiS 403 → R57.
+- **#11:** Consip in tutti i formati, `lavoro/consip/specchia-tutti.sh` sul server (in corso al commit, circa 90/151, ripartibile, guardia 45 GB): alla fine contare nuovo/invariato in `lavoro/consip/specchia-tutti.log` e aggiornare il rendiconto § 5.
+- **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
+- **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
+
+## #44 #59 #46 #50 #52 PERIMETRO, CPV, OCDS, AQ, IN-HOUSE — punto di ripresa 6/11/2026
+- **#44 perimetro ICT:**
+  - lista bianca in `config/perimetro_cpv.yaml` (13 prefissi, uguale a `CPV_ICT`, la verifica lo controlla);
+  - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
+  - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
+  - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
+- **#59 CPV:**
+  - sui 543 ICT del campione 611: 74 % specifico, 17 % generico, 9 % fuori lista (25 con il segnaposto 99999999);
+  - cloud con codice di servizio erogato: 30 % (contro l'11 % dei non cloud);
+  - base dal 2024: 99999999 o vuoto 8,3 %, codice di gruppo 16,2 %;
+  - ECA SR 28/2023 aperta e archiviata: **il 49,8 % non c'è** (valori mancanti circa 30 %);
+  - Ramboll/BME 2012 trovato: 405 avvisi, 23 % di codici inesatti;
+  - rendiconto bozza `sito/content/rendiconti/perimetro-cpv.md` (non elencato); R21 aggiornata, R60 nuova (segnaposto).
+  - **Prossimo:** uscita di riclassificazione `dati/classificazioni/cpv-riclassificazione.csv`; etichette umane su L e S1; includere `lente-cieco-3` quando sarà versionato.
+- **#46 OCDS release.date** (`tools/verifiche/ocds_release_date.py`, `esiti/2026-11-06/ocds/`, 96 mesi):
+  - le due vie concordano su 4.751.105 date;
+  - conformi solo 2018/01-2019/11; **da 2019/12 zero conformi** (la scheda P04 diceva «fra il 2021 e il 2023»: corretta);
+  - 3.594.570 release senza data. P04 aggiornata con sha256 e metrica.
+- **#50 cig_accordo_quadro** (`tools/verifiche/cig_aq_modalita.py`, `esiti/2026-11-06/cig-aq/`):
+  - con modalità «discendente» il campo è compilato nel 98,6-100 %: mancano 4.130 CIG nel 2024 e 3.946 nel 2025;
+  - il «20 % vuoto» era l'espressione sul testo: precisione 3/60 (5 %), quasi tutti appalti specifici di SDA;
+  - **decisione:** P15 resta interno (esito nella scheda) e R01 è ridimensionata. Se Fabio vuole, il difetto piccolo («discendente senza CIG padre», circa 4.000 l'anno) può diventare una scheda pronta: è verificato su campo strutturato.
+- **#52 in-house/datacenter** (`tools/verifiche/inhouse_datacenter.py`, `esiti/2026-11-06/inhouse/`), punto aperto:
+  - in-house dal 2024: 943 CIG, 774 M€, 446 enti. La classe è **contaminata da privati** (Accenture 91 M€, HTDI 48, TAI 31, DGS, TIM, Fastweb): va ristretta alle società pubbliche;
+  - SAL su 17 CIG su 943;
+  - infrastruttura propria: hardware 31.677 CIG e 4,5 mld; consulenza su infrastruttura 3.527 e 2,7 mld; software di infrastruttura 663 e 0,8 mld (VMware 651); testo datacenter/CED 10.991 e 3,1 mld (importi del lotto, con i tetti).
 
 ## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
 - **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
@@ -26,6 +79,7 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.9:** § 4.8, vincitori TED (`ted-vincitori.csv`, altro agente) come seconda fonte degli aggiudicatari: 72 CIG nell'imbuto, precisione P.IVA 89 % (riferita da #27); strati invariati (integratori, non produttori).
 - **0.8:**
   - `tools/acquisizione/piattaforme_cig.py`: adattatori portaleappalti/esop/generico; CINECA Oracle B90DB64041 scaricato da anonimo (ULA, nessun cloud); Banca d'Italia non in elenco pubblico; Terna = login (rimando JS non riconosciuto: da correggere); Calabria, CSI, Hera non trovati.
   - Oracle: 5 atti (CINECA, ISTAT, MAECI, Giustizia DIT, Lepida), 0 con cloud (Wilson 0-43 %). EA: 3 ricerche in più, 0 atti.
