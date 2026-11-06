@@ -28,7 +28,7 @@ DA_CATEGORIA = {
     "connettivita": ("S5-ict-non-cloud", "telefonia-connettivita", ""), "hardware": ("S5-ict-non-cloud", "hardware-infrastruttura", ""),
 }
 
-VERSIONE_IMBUTO = "imbuto-0.3.2 (2026-11-06)"  # 0.3.2: un CIG ripetuto dentro lo stesso file annuale si conta una volta (11.043 righe, tools/verifiche/imbuto_doppioni.py, R53). 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
+VERSIONE_IMBUTO = "imbuto-0.3.3 (2026-11-07)"  # 0.3.3: RX_ICT con sw e connettività; 79342 marketing fuori da CPV_ICT (#44, decisione di Fabio del 7/11, tools/verifiche/perimetro_cpv_effetto.py). 0.3.2: un CIG ripetuto dentro lo stesso file annuale si conta una volta (11.043 righe, tools/verifiche/imbuto_doppioni.py, R53). 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
 SOGLIA_MIN = 500          # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
@@ -41,7 +41,7 @@ RX_ICT = re.compile(r"\b(software|informatic\w*|licenz\w+\s+(d'uso|software|micr
                     r"storage|data\s*cent\w*|sistem\w+\s+informativ\w*|servizi\s+applicativ\w*|software\s+applicativ\w*|"
                     r"hardware|personal\s+computer|notebook|stampant\w*|rete\s+(dati|lan|wan)|firewall|"
                     r"cyber\w*|sicurezza\s+informatic\w*|backup|disaster\s+recovery|migrazion\w+\s+(al\s+cloud|dei\s+dati|dei\s+sistemi)|"
-                    r"saas|iaas|paas|sito\s+(web|internet)|database|posta\s+elettronic\w*|microsoft|oracle|vmware)\b", re.I)
+                    r"saas|iaas|paas|sito\s+(web|internet)|database|posta\s+elettronic\w*|microsoft|oracle|vmware|sw|connettivit\w*)\b", re.I)  # 0.3.3: sw e connettività (#44, Fabio 7/11)
 # sottoclassi di S5 (ICT non cloud)
 RX_HW = re.compile(r"hardware|personal\s+computer|\bpc\b|notebook|stampant|monitor|server|storage|apparat|switch|router|tablet|scanner|fotocopiat", re.I)
 RX_TEL = re.compile(r"telefon|fonia|mobile|sim\b|connettivit|fibra|banda\s+larga|centralin", re.I)

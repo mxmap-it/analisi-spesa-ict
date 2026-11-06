@@ -1,0 +1,364 @@
+{
+ "generato": "2026-11-06",
+ "versione_imbuto": "imbuto-0.3.3 (2026-11-07)",
+ "review": {
+  "79342": {
+   "strati": {
+    "a>=1M": {
+     "universo": [
+      57,
+      350.4
+     ],
+     "campione": {
+      "n": 53,
+      "dubbio": 4
+     },
+     "ict_veri": [
+      0.0,
+      0.0,
+      0.0631
+     ]
+    },
+    "b100k-1M": {
+     "universo": [
+      522,
+      98.7
+     ],
+     "campione": {
+      "n": 40
+     },
+     "ict_veri": [
+      0.0,
+      -0.0,
+      0.0876
+     ]
+    },
+    "c10k-100k": {
+     "universo": [
+      3615,
+      107.3
+     ],
+     "campione": {
+      "n": 36,
+      "dubbio": 3,
+      "s": 1
+     },
+     "ict_veri": [
+      0.025,
+      0.0044,
+      0.1288
+     ]
+    },
+    "d<10k": {
+     "universo": [
+      1665,
+      10.6
+     ],
+     "campione": {
+      "dubbio": 1,
+      "n": 37,
+      "s": 2
+     },
+     "ict_veri": [
+      0.05,
+      0.0138,
+      0.165
+     ]
+    }
+   },
+   "stima_pesata_cig": {
+    "n": 5369,
+    "dubbio": 317,
+    "s": 174
+   },
+   "universo_cig": 5859,
+   "recupero_testo_nuovo_rx": {
+    "dubbio_recuperato": 3,
+    "dubbio_perso": 5,
+    "s_recuperato": 3
+   }
+  },
+  "3224": {
+   "strati": {
+    "a>=1M": {
+     "universo": [
+      3,
+      4706.8
+     ],
+     "campione": {
+      "videosorveglianza": 2,
+      "n": 1
+     },
+     "ict_veri": [
+      0.0,
+      0.0,
+      0.5615
+     ]
+    },
+    "b100k-1M": {
+     "universo": [
+      74,
+      16.5
+     ],
+     "campione": {
+      "videosorveglianza": 35,
+      "n": 4,
+      "dubbio": 1
+     },
+     "ict_veri": [
+      0.0,
+      -0.0,
+      0.0876
+     ]
+    },
+    "c10k-100k": {
+     "universo": [
+      708,
+      19.7
+     ],
+     "campione": {
+      "videosorveglianza": 30,
+      "n": 8,
+      "s": 1,
+      "dubbio": 1
+     },
+     "ict_veri": [
+      0.025,
+      0.0044,
+      0.1288
+     ]
+    },
+    "d<10k": {
+     "universo": [
+      433,
+      2.8
+     ],
+     "campione": {
+      "videosorveglianza": 34,
+      "s": 1,
+      "n": 5
+     },
+     "ict_veri": [
+      0.025,
+      0.0044,
+      0.1288
+     ]
+    }
+   },
+   "stima_pesata_cig": {
+    "videosorveglianza": 966,
+    "n": 204,
+    "dubbio": 20,
+    "s": 29
+   },
+   "universo_cig": 1218,
+   "recupero_testo_nuovo_rx": {
+    "dubbio_perso": 2,
+    "s_recuperato": 1,
+    "s_perso": 1
+   },
+   "importo_massimo": {
+    "cig": "B139F77033",
+    "importo": 4703401002.0,
+    "ente": "UNIVERSITA DEGLI STUDI DI PERUGIA",
+    "testo": "TELECAMERA CON ACCESSORI | MATERIALE PER DIPARTIMENTO INGEGNERIA PERUGIA"
+   }
+  }
+ },
+ "nuovo_rx_da_s1": {
+  "s1_dal_2024_in_base": 3207610,
+  "cig_nuovi_nel_residuo": 3593,
+  "importo_meur": 4100.0,
+  "per_gruppo": {
+   "G4-coda": [
+    2709,
+    42.5
+   ],
+   "G3-incerti-significativi": [
+    855,
+    240.6
+   ],
+   "G1-mega": [
+    29,
+    3816.9
+   ]
+  },
+  "per_termine": {
+   "connettivit*": 2791,
+   "sw": 802
+  },
+  "g1_elenco": [
+   [
+    "B67ACDC769",
+    1002.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B67ACDF9E2",
+    588.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B67ACDD83C",
+    420.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B67ACE0AB5",
+    350.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B67ACE2C5B",
+    280.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "BA97067894",
+    244.4,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZIO DI SICUREZZA E SERVIZIO DI SUPPORTO SISTEMISTICO E/O OPERATIVO | ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERV"
+   ],
+   [
+    "B67ACDE90F",
+    180.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B67ACE1B88",
+    175.0,
+    "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SISTEMA PUBBLICO DI CONNETTIVI"
+   ],
+   [
+    "B99D87135E",
+    129.5,
+    "ATTIVITÀ INDUSTRIALI DI FASI B/C/D1 DELLA MISSIONE SAR A BASSA FREQUENZA IN BANDA L | HW/SW BANDA-L"
+   ],
+   [
+    "B7F14197BA",
+    85.1,
+    "RICHIESTA D'OFFERTA PER LE ATTIVITÀ INDUSTRIALI PER LE FASI B/C/D/E1 DELLA MISSIONE PRISMA SECOND GENERATION | HW/SW SISTEMA E PF "
+   ],
+   [
+    "B66FC59DE9",
+    75.0,
+    "DESIGN, MANUFACTURING, TEST E COMMISSIONING DI PAYLOAD IPERSPETTRALE DELLA MISSIONE PRISMA SECOND GENERATION | HW/SW"
+   ],
+   [
+    "B60F0DD7A5",
+    75.0,
+    "DESIGN, MANUFACTURING, TEST E COMMISSIONING DI PAYLOAD IPERSPETTRALE DELLA MISSIONE PRISMA SECOND GENERATION | HW/SW"
+   ],
+   [
+    "BA88CF13AB",
+    26.6,
+    "S-ICT-IT-CONNETT_TELECONTR_IP_BME-E-DISTRIBUZIONE_WIND  | SERVIZI DI CONNETTIVITÀ IP PER IL TELECONTROLLO DI IMPIANTI PRIMARI E BME"
+   ],
+   [
+    "B7DAE7ECBF",
+    26.0,
+    "ATTIVITÀ DI FASE C/D/E1 RELATIVE AL CONTRATTO TRA AGENZIA SPAZIALE ITALIANA E OHB ITALIA S.P.A. N. 2022-38-I.0 SATURN – SYNTHETIC APERTURE RADAR CUBESATS FORMAT"
+   ],
+   [
+    "B8DF534749",
+    20.4,
+    "S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE | LOTTO 1 - AMBITO 1"
+   ],
+   [
+    "B9168D69AE",
+    20.4,
+    "S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE | LOTTO 1 - AMBITO 1"
+   ],
+   [
+    "B711AF0074",
+    15.0,
+    "GARA GP2025038 - FORNITURA APPARATI DI CONNETTIVITÀ CISCO  | FORNITURA APPARATI DI CONNETTIVITÀ CISCO "
+   ],
+   [
+    "B764D5B5BB",
+    11.6,
+    "PROCEDURA APERTA EX ART. 71 D.LGS. N. 36/2023 PER L'AFFIDAMENTO DI SERVIZI DI CONNETTIVITÀ 4G E 5G E DELLA FORNITURA E POSA IN OPERA DI SISTEMI RADIO INDOOR | P"
+   ],
+   [
+    "B8DF5379C2",
+    11.2,
+    "S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE | LOTTO 4 - AMBITI 3 E 7"
+   ],
+   [
+    "B9168D9C27",
+    11.2,
+    "S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE | LOTTO 4 - AMBITI 3 E 7"
+   ],
+   [
+    "BC4C0BA831",
+    10.7,
+    "PROCEDURA APERTA PER LA FORNITURA A NOLEGGIO CON OPZIONE DI ACQUISTO DI AUTOCLAVI E TERMODISINFETTORI PER LE CENTRALI DI STERILIZZAZIONE DELLA ASST, COMPRENSIVO"
+   ],
+   [
+    "BA31D50B15",
+    9.1,
+    " S-ICT-IT-CONNETT_M2M-E-DISTRIB | CONNETTIVITÀ M2M_WIND"
+   ],
+   [
+    "B007E8276A",
+    8.2,
+    "L'APPALTO HA PER OGGETTO LA FORNITURA E POSA DI CONTATORI SMART METER PER ACQUA FREDDA E USO IDROPOTABILE DI TIPO STATICO, COMPLETI DI SISTEMA DI TRASMISSIONE D"
+   ],
+   [
+    "B009C6D7D2",
+    8.2,
+    "L'APPALTO HA PER OGGETTO LA FORNITURA E POSA DI CONTATORI SMART METER PER ACQUA FREDDA E USO IDROPOTABILE DI TIPO STATICO, COMPLETI DI SISTEMA DI TRASMISSIONE D"
+   ],
+   [
+    "B10BBFD3F1",
+    8.1,
+    "P2M_TELECOM ITALIA_NEW | P2M_SERVIZI DI CONNETTIVITÀ NEL PERIMETRO P2M_TELECOM ITALIA"
+   ],
+   [
+    "B0A6E2176C",
+    7.6,
+    "PNRR M2.C4.I4.2_233 - RIDUZIONE DELLE PERDITE NELLE RETI DI DISTRIBUZIONE DELL'ACQUA, COMPRESA LA DIGITALIZZAZIONE E IL MONITORAGGIO DELLE RETI. INTERVENTI PER "
+   ],
+   [
+    "B6B945FA23",
+    7.5,
+    "ATTIVITÀ DI FASE C/D/E1 RELATIVE AL CONTRATTO TRA AGENZIA SPAZIALE ITALIANA E OFFICINA STELLARE S.P.A. N. 2022-14-I.0 EARTHNEXT – CLOSER TO THE EARTH, NEXT TO T"
+   ],
+   [
+    "B24884F68F",
+    6.1,
+    "AFFIDAMENTO DIRETTO | CONNETTIVITA' DELL'ENTE - DAL 01.07.2024 AL 30.06.2026"
+   ],
+   [
+    "BBCCABCA46",
+    5.2,
+    "PROCEDURA APERTA TELEMATICA AI SENSI DELL'ART. 71 DEL D. LGS. 36/2023 PER L'AFFIDAMENTO DELLA FORNITURA, INSTALLAZIONE E CONNETTIVITÀ DI CONTATORI INTELLIGENTI "
+   ]
+  ]
+ },
+ "togliere_79342": {
+  "S0-padre-aq | va in S1": [
+   49,
+   36.1
+  ],
+  "S2-sotto-soglia | resta (testo ICT)": [
+   3,
+   0.0
+  ],
+  "S2-sotto-soglia | va in S1": [
+   32,
+   0.0
+  ],
+  "S5-ict-non-cloud | resta (testo ICT)": [
+   133,
+   27.9
+  ],
+  "S5-ict-non-cloud | va in S1": [
+   5625,
+   502.6
+  ],
+  "S6-residuo | resta (testo ICT)": [
+   17,
+   0.4
+  ]
+ }
+}

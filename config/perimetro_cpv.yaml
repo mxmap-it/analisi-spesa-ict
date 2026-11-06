@@ -4,7 +4,7 @@
 # Fonte delle denominazioni: vocabolario CPV 2008, Reg. (CE) 213/2008, allegato I, come riportato nel campo descrizione_cpv
 # dei CIG ANAC (BDNCP). Fuori lista un CIG entra lo stesso se il testo ha segnali ICT (RX_ICT in tools/analisi/imbuto.py).
 # La misura per riga sta in esiti/<data>/cpv/perimetro-cpv.json.
-versione: "perimetro-cpv-0.1 (2026-11-06)"
+versione: "perimetro-cpv-0.2 (2026-11-07)"  # 0.2: 79342 fuori, RX_ICT con sw e connettività (decisione di Fabio del 7/11)
 lista_bianca:
   - {prefisso: "48",    denominazione: "Pacchetti software e sistemi di informazione", fonte: "Reg. 213/2008, divisione 48"}
   - {prefisso: "72",    denominazione: "Servizi informatici: consulenza, sviluppo di software, Internet e supporto", fonte: "Reg. 213/2008, divisione 72"}
@@ -18,7 +18,6 @@ lista_bianca:
   - {prefisso: "51611", denominazione: "Servizi di installazione di computer", fonte: "Reg. 213/2008, categoria 51611"}
   - {prefisso: "64216", denominazione: "Servizi di messaggeria e di informazione elettroniche", fonte: "Reg. 213/2008, categoria 64216"}
   - {prefisso: "64222", denominazione: "Servizi di telelavoro", fonte: "Reg. 213/2008, categoria 64222"}
-  - {prefisso: "79342", denominazione: "Servizi di marketing", fonte: "Reg. 213/2008, categoria 79342"}
 # CPV che esprimono un servizio ICT erogato da terzi, il più vicino possibile a «cloud» (misura di espressività, #59):
 # 72317 archiviazione dati, 72318 trasmissione dati, 7240x/7241x servizi Internet e provider, 72415 hosting WWW,
 # 72416 fornitori di servizi applicativi (ASP), 72510/72512/72514 gestione e facility management informatico,
@@ -26,7 +25,19 @@ lista_bianca:
 cpv_servizio_erogato: ["72415", "72416", "72317", "72318", "72400", "72410", "72411", "72412", "72413", "72414", "72510", "72512", "72514", "72540", "72590"]
 # Esiti della misura del 6/11/2026 (esiti/2026-11-06/cpv/perimetro-cpv.json). Le modifiche alla lista sono PROPOSTE:
 # decide Fabio (perimetro). Finché non decide, classifica.py e la lista restano uguali.
-proposte:
+decisioni:
+  - prefisso: "79342"
+    esito: "TOLTO il 7/11/2026 (decisione di Fabio, dopo la review)"
+    review: "report/cpv/review-79342-3224/: 177 CIG (tutti i 57 >= 1 M€ + 40 per strato); ICT veri 3, dubbi 8; stima pesata sull'universo 174 ICT veri su 5.859 (3,0 %), concentrati sotto 100 k€ (licenza software, sito web), 0 su 57 sopra 1 M€; i 3 ICT veri tornano tutti dentro col testo (RX_ICT), i dubbi 3 su 8"
+    effetto: "5.706 CIG e 538,7 M€ dal 2024 scendono in S1 (5.625 da S5); 153 restano per il testo (esiti/2026-11-06/cpv/perimetro-effetto.json)"
+  - prefisso: "3224"
+    esito: "IN LISTA, decisione rinviata (review fatta, serve la scelta sulla videosorveglianza)"
+    review: "123 CIG (tutti i 3 >= 1 M€ + 40 per strato): videosorveglianza, ZTL, lettura targhe, fototrappole 101; ICT stretto 2 (software di videosorveglianza, PNRR 1.3 interoperabilità); dubbi 2 (telepresenza, CIS); altro 18 (camere scientifiche e televisive, sensori). Stima pesata: videosorveglianza 966 su 1.218 (79 %), ICT stretto 29 (2,4 %)"
+    nota: "il 4,7 mld del gruppo è un solo CIG, B139F77033 (Università di Perugia, «telecamera con accessori», 4.703.401.002 €): errore d'importo. Proposta: sottoclasse «videosorveglianza» fuori dalla misura cloud, in S5 non in S1"
+  - regola: "RX_ICT + «sw» e «connettività»"
+    esito: "APPLICATA il 7/11/2026 in tools/analisi/imbuto.py (imbuto 0.3.3); ict.csv NON rigenerato (via 6 in corso)"
+    effetto: "3.593 CIG dal 2024 escono da S1 ed entrano nel residuo S6 «cpv-non-ict-testo-ict»: G4 2.709 (42,5 M€), G3 855 (240,6 M€), G1 29 (3.816,9 M€: lotti SPC Connettività 3,2 mld, missioni ASI con «HW/SW», contatori intelligenti). Termine: connettività 2.791, sw 802. Su 40 esempi casuali: 29 ICT, 8 dubbi (IoT, sensori, software medicale), 3 non ICT (codice «SW1.6» di una fognatura, apparecchi di laboratorio, ECG)"
+proposte_7_11_superate:
   - prefisso: "79342"
     proposta: togliere
     misura: "campione L: 5 CIG con 79342, 0 ICT (3 no, 2 dubbi); universo ict.csv dal 2024: 5.859 CIG, 567 M€ entrano nel perimetro solo per questo codice"

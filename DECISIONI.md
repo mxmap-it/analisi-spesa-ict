@@ -201,3 +201,9 @@ Il metodo è in visibilita-pa `METODO-RUP.md`. La bozza `anac-incaricati-bdncp` 
 
 ## 2026-11-07 — Via 6 su G1 e G3 «ad oltranza» (Fabio)
 Il giro su G1 (196 CIG) e sui primi 1.000 di G3 continua senza lo stop sul totale, prima fissato a 360 USD-eq +20 %, perché «ci serve conoscenza». Resta il tetto giornaliero del giro. Lo stop si ripristina con `IMBUTO_STOP=1` (`tools/llm/imbuto_budget.py`). Approvato anche il costo di G1, circa 140 USD-eq.
+
+## 2026-11-07 — Perimetro CPV: 79342 fuori, RX_ICT più largo, 3224 rinviato (Fabio, #44)
+- **79342 marketing:** tolto da `CPV_ICT` (`tools/analisi/classifica.py`) e da `config/perimetro_cpv.yaml`. Prima c'è stata la review delle descrizioni: campione stratificato per importo, con tutti i CIG sopra 1 M€. Risultato: 3,0 % di ICT veri stimati, nessuno sopra 1 M€, tutti recuperati dal testo. Effetto: 5.706 CIG e 539 M€ dal 2024 passano in S1.
+- **3224 telecamere/TV:** resta in lista. La review dà 79 % di videosorveglianza e 2,4 % di ICT stretto. Proposta: una sottoclasse «videosorveglianza» in S5, fuori dalla misura cloud. Decide Fabio.
+- **RX_ICT:** aggiunti «sw» e «connettività» (imbuto 0.3.3). Effetto calcolato a parte: 3.593 CIG in più nel residuo S6, 4,1 mld, di cui 29 G1 per 3,8 mld. `ict.csv` si rigenera quando la via 6 sarà finita.
+- Prove in `tools/verifiche/perimetro_cpv_effetto.py`, `esiti/2026-11-06/cpv/perimetro-effetto.json` e `report/cpv/review-79342-3224/`.

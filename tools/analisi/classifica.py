@@ -15,7 +15,7 @@ import yaml
 
 RADICE = Path(__file__).resolve().parents[2]
 VERSIONE = "v3.1"
-CPV_ICT = re.compile(r"^(48|72|302|3223|3224|3225|3226|50312|50320|51611|64216|64222|79342)")
+CPV_ICT = re.compile(r"^(48|72|302|3223|3224|3225|3226|50312|50320|51611|64216|64222)")  # 79342 marketing tolto il 7/11/2026 (#44, review in report/cpv/review-79342-3224/)
 # via 2: solo riferimenti espliciti alla seconda edizione: "Public Cloud IaaS e PaaS" (ID 2213) ha lotti diversi
 RX_AQ2746 = re.compile(r"2746|iaas\s*(e|/|-)?\s*paas\s*(2|ed\.?\s*2|edizione\s*2)\b", re.I)
 RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)

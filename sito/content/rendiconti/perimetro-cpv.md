@@ -2,7 +2,7 @@
 title: "Perimetro ICT e attendibilità del CPV"
 subtitle: "Lista bianca dei codici CPV misurata sui campioni, falsi esclusi, CPV dichiarato contro classe vera, lacune del vocabolario"
 date: 2026-11-06
-lastmod: 2026-11-06
+lastmod: 2026-11-07
 datiAl: 2026-11-03
 description: "Precisione della lista bianca CPV (83 %, 93 % con i dubbi), falsi esclusi in S1 (1 %), esiti del CPV sugli ICT accertati (74 % specifico, 17 % generico, 9 % fuori lista), cloud esprimibili col CPV (30 %), letteratura verificata (Ramboll 2012: 23 % inesatti), proposte di policy."
 sitemap:
@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.1 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
+**Versione 0.2 del 2026-11-07 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -74,14 +74,31 @@ Ogni CIG ICT già classificato in `dati/classificazioni/` ha la classe spesaict 
 - **R21** (aggiornata con questi numeri): controllo di coerenza CPV-oggetto al rilascio del CIG; campi strutturati per gli acquisti ICT.
 - **R60** (nuova): non accettare il segnaposto 99999999 al rilascio del CIG.
 
-## 6. Proposte interne (decide Fabio)
+## 6. Decisioni del 7/11/2026 (Fabio) e loro effetto
 
-1. Togliere 79342 dalla lista bianca e da `CPV_ICT`.
-2. Rivedere 3224.
-3. `RX_ICT`: aggiungere `\bsw\b` e `connettivit`.
+Comando: `python tools/verifiche/perimetro_cpv_effetto.py` → `esiti/2026-11-06/cpv/perimetro-effetto.json`. L'effetto è calcolato a parte, senza rigenerare `ict.csv`, perché la via 6 è in corso.
 
-Effetto atteso: meno 5.859 CIG nel perimetro e circa 1 % di falsi esclusi recuperati. La misura si rifà con lo stesso comando.
+**1. 79342 marketing: tolto, dopo la review** [V]
+- Campione di 177 CIG: tutti i 57 sopra 1 M€ e 40 per ciascuno degli altri strati d'importo.
+- Sopra 1 M€: 0 ICT (IC 0-6). Sono call center, promozione turistica e acquisto di spazi media.
+- Stima sull'universo: 174 ICT veri su 5.859 (3,0 %), tutti sotto 100 k€ (licenza software, sito web). I 3 del campione tornano dentro col testo.
+- Effetto: **5.706 CIG e 539 M€ dal 2024 passano in S1**.
+
+**2. 3224 telecamere/TV: review fatta, decisione rinviata** [V]
+- Campione di 123 CIG.
+- Videosorveglianza, ZTL, lettura targhe: 79 % stimato. ICT stretto (software di videosorveglianza, interoperabilità PNRR): 2,4 %.
+- I 4,7 mld del gruppo sono un solo CIG, **B139F77033**: Università di Perugia, «telecamera con accessori», 4.703.401.002 €. È un errore d'importo.
+- Proposta: una sottoclasse «videosorveglianza» in S5, fuori dalla misura cloud.
+
+**3. RX_ICT con «sw» e «connettività»: applicato** (imbuto 0.3.3) [V]
+- **3.593 CIG** dal 2024 escono da S1 ed entrano nel residuo S6:
+  - G4: 2.709;
+  - G3: 855 (241 M€);
+  - G1: 29 (3,8 mld: lotti SPC Connettività per 3,2 mld, missioni spaziali ASI con «HW/SW», contatori intelligenti).
+- Su 40 esempi casuali: 29 ICT, 8 dubbi, 3 non ICT.
+- I falsi positivi più grossi stanno in G1, che si rivede a mano.
 
 ## Registro delle revisioni
 
 - 0.1 (2026-11-06): prima misura; letteratura ECA e Ramboll aperte e archiviate (sha256 in `report/cpv/letteratura.md`).
+- 0.2 (2026-11-07): decisioni di Fabio su 79342, 3224 e RX_ICT, con review stratificata ed effetto misurato.

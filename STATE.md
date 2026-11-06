@@ -41,6 +41,12 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
   - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
   - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
+- **#44, decisione di Fabio del 7/11:**
+  - 79342 tolto da CPV_ICT e dal yaml, dopo la review di 177 CIG (3,0 % ICT veri stimati, 0 sopra 1 M€): 5.706 CIG e 539 M€ dal 2024 passano in S1;
+  - 3224 resta in lista: la review dice 79 % videosorveglianza, 2,4 % ICT stretto; una sottoclasse videosorveglianza da decidere. Il CIG B139F77033 ha un importo errato di 4,7 mld;
+  - RX_ICT con sw e connettività (imbuto 0.3.3): 3.593 CIG in più nel residuo S6, di cui G1 29 per 3,8 mld (SPC Connettività, ASI);
+  - prove: tools/verifiche/perimetro_cpv_effetto.py, report/cpv/review-79342-3224/;
+  - **DA FARE a via 6 finita:** rigenerare ict.csv con imbuto 0.3.3 (python tools/analisi/imbuto.py sul server), poi rifare imbuto_strati e perimetro_cpv. Non è stato rigenerato perché la via 6 legge ict.csv.
 - **#59 CPV:**
   - sui 543 ICT del campione 611: 74 % specifico, 17 % generico, 9 % fuori lista (25 con il segnaposto 99999999);
   - cloud con codice di servizio erogato: 30 % (contro l'11 % dei non cloud);
