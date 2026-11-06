@@ -39,3 +39,65 @@ Legenda: **V** = visto (letto da noi sulla pagina o nel documento); **R** = dedo
 - Non abbiamo scaricato le determine di autorizzazione al subappalto di Intercent-ER (circa 120): sono elencate nel CSV come `pubblicato-non-archiviato`.
 - Non abbiamo letto i chiarimenti START (scheda "Chiarimenti" della SPA) né i chiarimenti in testo di SATER, se non dentro la pagina archiviata.
 - Le copie dei file Sintel e START stanno sul server, fuori da `archivio/`. Per portarle nell'archivio content-addressed serve un'estensione di `archivia.py` che accetti file locali.
+
+## Ricontrollo del 7/11
+
+Elenco dei documenti: `aggregatori-2026-11-07.csv` (239 righe, stesse colonne del file del 6/11). Riguarda le 31 iniziative non Consip di `../database/iniziative.json` che il 6/11 non erano state guardate. C'è una riga `(pagina)` per iniziativa, con `dietro_login=sì/no` nelle note. Script, log e copie dei file stanno sul server in `lavoro/convenzioni/aggregatori/r0711/`. Per ricostruire il CSV si lancia `costruisci_csv.py`.
+
+### Metodo
+
+- **Dal CIG alla procedura** (V): prima la ricerca full-text dell'API TED (`api.ted.europa.eu/v3/notices/search`, `FT~"<CIG>"`). Trova 16 CIG su 30. Poi la ricerca della piattaforma, se ne ha una pubblica:
+  - START: `initiatives/list/?keyword=<CIG>`;
+  - Intercent-ER: `++api++/@search` sul titolo, perché i CIG non sono indicizzati. Il CIG l'abbiamo poi verificato nel PDF «Importi e codici CIG» della convenzione;
+  - CSI Piemonte: la pagina «Gare concluse» rimanda a Sintel;
+  - ACP: `bandi-altoadige.it`.
+  Come ultima strada, la ricerca web.
+- **Scaricamento**:
+  - Intercent-ER, ACP e avvisi CSI con `tools/archivia.py`, nell'archivio content-addressed;
+  - START e Sintel con Chrome headless (`start_dl.py`, `sintel_dl.py`), perché gli URL degli allegati valgono una volta sola o sono POST JSF. I file sono in `r0711/<piattaforma>_<cig>_<id>/` con sha256 in `_scaricati.json` e nel CSV.
+  Ritmo: almeno 5 s fra due richieste allo stesso host, al massimo 3 processi insieme. Niente login, registrazioni o CAPTCHA.
+- Le determine di subappalto di Intercent-ER sono elencate ma non scaricate (`pubblicato-non-archiviato`).
+
+### Esiti per iniziativa
+
+| Iniziativa | Pagina | dietro_login | Note |
+|---|---|---|---|
+| cig-9936839AF1 | V Intercent-ER «SIL 3» | no | CIG nel PDF importi; listino |
+| cig-9923894067 | V Intercent-ER «Business Analytics e Data Management 2» | no | 23,66 M€; listino, rinnovo det. 107/2026 |
+| cig-9580558E8E | V Intercent-ER «Sanzioni amministrative 4» | no | listini.zip, rinnovi, revisione prezzi det. 62/2026 |
+| cig-9482392D69 | V Intercent-ER «Applicativi in licenza d'uso AA.SS. – 2ª ed.» | no | listini completi, 3 determine di estensione del quinto |
+| cig-9481064585 | R stessa pagina | no | il CIG non è nel riepilogo: attribuzione dedotta |
+| cig-9016294130 | V Intercent-ER «Telefonia 4», lotto 1 | no | 6 listini e dettagli prezzi |
+| cig-9216207E99 | V START 009511-2022 (ESTAR, conservazione a norma) | no | 7 documenti di gara |
+| cig-9837572D38 | V START 012406-2023 (ESTAR, prescrizioni farmaceutiche) | no | 6 documenti di gara |
+| cig-94252656BA | V START 020546-2022 (Regione Toscana, SaaS su SCT) | no | 39 documenti, contratto quadro compreso |
+| cig-B1FFB3098A | V Sintel 184471406, CSI GA24_006 (fondi SIE) | no | R: CIG attribuito per oggetto; 13 allegati + avviso di aggiudicazione |
+| cig-9769148BF3 | V Sintel 167850541, CSI GA23_006 | no | 19 allegati + 4 avvisi di aggiudicazione |
+| cig-A02B1C8A8A | V Sintel 176835696, CSI GA23_011 | no | 11 allegati + avviso di aggiudicazione |
+| cig-8664818204 | V bandi-altoadige 804135, ACP SF 009/2021 | no | V: il CIG è il **Lotto 1**, mentre iniziative.json scrive «Lotto 2»; bandi, rettifiche ed esiti archiviati; i decreti su acp.provincia.bz.it rispondono HTML |
+| cig-B2FB115279 | V Consip ID 2748 (per INAIL) | no | fuori perimetro: la gara è Consip |
+| cig-95643027B0 | V TED 731004-2022 → `acquistionline.pat.provincia.tn.it/nwbc` | **sì** | maschera SAP «Logon», registrata in `blocchi-accesso.csv` |
+| cig-A0260B3155 | V TED 706023-2023 → portale fornitori HERA | sì (R) | l'elenco pubblico risponde HTTP 500; procedura negoziata |
+| cig-9777818EA8 | TED 661555-2023 (esito) | ? | pagina della Provincia di Brescia non individuata |
+| cig-7930885557, cig-7812108376, cig-759453695C | TED (2018-2019) | ? | la vecchia piattaforma `start.e.toscana.it` non risponde più; la ricerca START non le trova |
+| cig-87332390D0, cig-8716552642, cig-B715929978, cig-9603457F68 | non trovata | ? | ESTAR, procedure negoziate senza bando: R, non sono tra i «Bandi e avvisi» pubblici di START |
+| cig-7246653F38 | TED 426575-2017 (ARCA gara 7/2017/LI) | ? | la ricerca ARIA per CIG non dà risultati |
+| cig-88556834CB, cig-945403654F, cig-99617296D3, cig-B736423C63, cig-949554539F, cig-7991036B82 | non trovata | ? | Masaf, ANAS, Marche, Azienda Zero (2), Trenitalia: nessun avviso TED e nessun risultato web utile |
+
+### Cosa abbiamo trovato di criticità 3
+
+- **Listini** (V, archiviati, sha256 nel CSV), tutti da Intercent-ER:
+  - SIL 3 (`d10115c4…`);
+  - BA&DM 2 (`be1afc72…`);
+  - Sanzioni 4 (`059f7755…`);
+  - Licenza d'uso 2 (`98944639…`);
+  - Telefonia 4: listino lotti 1-2 `559dbc81…`, dettaglio prezzi `874898a5…`, servizi aggiuntivi `0bbc517a…`, riscatto `5c5fbbef…`, accessori `2855dbcd…`, lotto 3 `ff8b6ed3…`.
+- **Progetti dei fabbisogni / allegati economici** (V, START 94252656BA): «Piano dei Fabbisogni Servizi SCT» (pdf `2a8c038e…`, xlsx `a2fe7c78…`) e «Dettaglio Economico.ods» (`92 6a8341…`). R: sono **modelli di gara**, non l'offerta né il piano di un ente aderente.
+- **Offerte tecniche ed economiche degli aggiudicatari, elenco degli ordinativi, transato/erosione**: **non trovati** su nessuna piattaforma (V). L'unico indizio indiretto dell'erosione sono le determine di estensione del quinto e di rinnovo di Intercent-ER (R).
+
+### Limiti
+
+- Non abbiamo ancora cercato i documenti mancanti fuori dalle piattaforme: Amministrazione trasparente delle centrali e degli enti aderenti, delibere di adesione, albi pretori. Resta da fare per le 17 iniziative senza pagina e per le offerte e il transato di tutte.
+- Abbiamo aperto solo il bando e l'esito TED. Non abbiamo esplorato i portali Brescia, SUAM Marche, Azienda Zero, ANAS e FS.
+- Gli zip («Documentazione su Sintel.zip», «listini.zip», ecc.) sono archiviati ma non ancora estratti né letti.
+- Come il 6/11, i file START e Sintel sono sul server fuori da `archivio/`.
