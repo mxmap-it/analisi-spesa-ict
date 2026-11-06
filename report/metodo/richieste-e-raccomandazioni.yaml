@@ -629,3 +629,14 @@
   perche_serve: "Senza count e con pagine instabili non si può verificare che un mirror del catalogo sia completo"
   metrica: "result.count uguale al numero di dataset; zero errori 5xx su un giro completo della paginazione"
   rif: ["#25"]
+- id: R62
+  destinatario: Consip (acquistinretepa / MePA)
+  tipo: lacuna
+  stato: "verificato (7/11/2026) su 85 CIG; proposta, nessuna richiesta inviata"
+  titolo: "Gli acquisti MePA (ODA, trattative dirette, RDO chiuse) non hanno una pagina pubblica per CIG"
+  evidenza: "Per 591 CIG del residuo S6 il link PVL ai documenti di gara punta ad acquistinretepa.it, quasi sempre alla home. Con un browser reale, l'unica ricerca pubblica (vetrina bandi, getBandi, campo idt) trova i bandi per numero (6666984 restituisce Microsoft EA, ID 3048) ma nessuno degli 85 CIG di ordini delle amministrazioni provati finora"
+  prova: "tools/acquisizione/mepa_cig.py; lavoro/residuo-s6/out/esiti.jsonl (esito mepa-nessuna-pagina-pubblica)"
+  richiesta: "Pagina pubblica per CIG con l'oggetto dell'ordine, il prodotto o il listino acquistato e i documenti; oppure un link PVL alla scheda dell'ordine invece della home"
+  perche_serve: "MePA è la piattaforma del 30 % dei CIG con link PVL: senza la scheda dell'ordine il prodotto acquistato (e la sua giurisdizione) non si può leggere"
+  metrica: "Quota di CIG MePA con pagina pubblica raggiungibile dal link PVL (oggi 0 su 85)"
+  rif: ["#57", "R30"]
