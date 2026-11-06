@@ -66,7 +66,7 @@ def main() -> None:
     s = requests.Session()
     s.headers["User-Agent"] = UA
     with OUT.open("a", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, CAMPI)
+        w = csv.DictWriter(f, CAMPI, lineterminator="\n")
         if nuovo:
             w.writeheader()
         for r in scelti:

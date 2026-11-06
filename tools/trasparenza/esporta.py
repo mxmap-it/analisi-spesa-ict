@@ -83,7 +83,7 @@ def _agg(righe, chiave):
 
 def _tabella(path: Path, chiave: str, righe: list[dict]):
     with path.open("w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")  # LF come nel repo: con CRLF il sync del server vede differenze finte
         w.writerow([chiave, "totale"] + ESITI + ["violazioni_art9", "quota_violazioni"])
         for k, c in sorted(_agg(righe, chiave).items(), key=lambda kv: -sum(kv[1].values())):
             tot = sum(c.values())
