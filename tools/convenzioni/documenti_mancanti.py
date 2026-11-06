@@ -327,8 +327,17 @@ def revisiona(righe):
         if a["esito"].startswith("trovato"):
             fp[(a["iniziativa"], a["documento_atteso"])].append(a)
     INV = {v[0]: k for k, v in ATTESI.items()}
+    # verifiche dal vivo (da anonimo) delle righe con dietro_login «ignoto»: (iniziativa, documento_atteso o «*») -> esito
+    dlv = {}
+    fv = DB / "dietro-login-verifiche.csv"
+    for a in (csv.DictReader(open(fv, encoding="utf-8")) if fv.exists() else []):
+        dlv[(a["iniziativa"], a["documento_atteso"])] = a
     tenute, scarti = [], []
     for r in righe:
+        v_dl = dlv.get((r["iniziativa"], r["documento_atteso"])) or dlv.get((r["iniziativa"], "*"))
+        if v_dl and r["dietro_login"] == "ignoto":
+            r = {**r, "dietro_login": v_dl["dietro_login"],
+                 "evidenza": r["evidenza"] + f" | accesso verificato da anonimo il {v_dl['data']}: {v_dl['evidenza']}"}
         if r["iniziativa"] in agg_pag and not r["url_pagina"]:
             u, d, lg = agg_pag[r["iniziativa"]]
             r = {**r, "url_pagina": u, "data_controllo": d, "dietro_login": lg if r["dietro_login"] == "ignoto" or lg == "sì" else r["dietro_login"]}
