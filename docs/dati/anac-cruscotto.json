@@ -1,0 +1,351 @@
+{
+ "generato_da": "tools/cruscotto_anac.py",
+ "primo_giorno": "2026-10-26",
+ "ultimo_giorno": "2026-11-06",
+ "metriche": [
+  {
+   "id": "I1",
+   "controllo": "file OCDS del mese precedente pubblicato dopo il giorno 2",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "rispettato",
+    "2026-11-02": "rispettato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 10,
+   "problemi": [
+    "P02"
+   ]
+  },
+  {
+   "id": "I2",
+   "controllo": "endpoint dell'API REST OCDS raggiungibili e swagger valido",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P06"
+   ]
+  },
+  {
+   "id": "I3",
+   "controllo": "licenza del catalogo uguale a quella nel file OCDS",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P07"
+   ]
+  },
+  {
+   "id": "I4",
+   "controllo": "nessun mese OCDS con contenuto identico a un altro",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P01"
+   ]
+  },
+  {
+   "id": "I5",
+   "controllo": "nessun mese mancante nelle serie di delta",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P09"
+   ]
+  },
+  {
+   "id": "I6",
+   "controllo": "nessuna risorsa delta archiviata sparita dalla fonte",
+   "esiti": {
+    "2026-10-26": "rispettato",
+    "2026-10-27": "rispettato",
+    "2026-10-28": "rispettato",
+    "2026-10-29": "rispettato",
+    "2026-10-30": "rispettato",
+    "2026-10-31": "rispettato",
+    "2026-11-01": "rispettato",
+    "2026-11-02": "rispettato",
+    "2026-11-03": "rispettato",
+    "2026-11-04": "rispettato",
+    "2026-11-05": "rispettato",
+    "2026-11-06": "rispettato"
+   },
+   "ultimo": "rispettato",
+   "giorni": 12,
+   "giorni_violato": 0,
+   "problemi": [
+    "P08"
+   ]
+  },
+  {
+   "id": "I7",
+   "controllo": "dimensione dichiarata entro il 5% di quella servita",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P11"
+   ]
+  },
+  {
+   "id": "I8",
+   "controllo": "nessuna risorsa elencata che risponda 404",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P10"
+   ]
+  },
+  {
+   "id": "I9",
+   "controllo": "nessuna risposta 200 text/html al posto del file o dei suoi metadati, per HEAD e GET",
+   "esiti": {
+    "2026-10-26": "violato",
+    "2026-10-27": "violato",
+    "2026-10-28": "violato",
+    "2026-10-29": "violato",
+    "2026-10-30": "violato",
+    "2026-10-31": "violato",
+    "2026-11-01": "violato",
+    "2026-11-02": "violato",
+    "2026-11-03": "violato",
+    "2026-11-04": "violato",
+    "2026-11-05": "violato",
+    "2026-11-06": "violato"
+   },
+   "ultimo": "violato",
+   "giorni": 12,
+   "giorni_violato": 12,
+   "problemi": [
+    "P12"
+   ]
+  }
+ ],
+ "registro": [
+  {
+   "id": "P01",
+   "titolo": "Mesi OCDS diversi servono lo stesso file, con il solo campo uri riscritto",
+   "gravita": "alta",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P02",
+   "titolo": "OCDS fermo a marzo 2026; del 2026 è pubblicato solo marzo",
+   "gravita": "alta",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P03",
+   "titolo": "OCDS 2026: il fornitore aggiudicatario manca nell'80% degli award, contro il 99% degli anni precedenti",
+   "gravita": "alta",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P04",
+   "titolo": "OCDS: date delle release in formato non conforme in tutte le release",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P05",
+   "titolo": "OCDS: copertura parziale delle aggiudicazioni rispetto ai tabellari",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P06",
+   "titolo": "API REST OCDS dichiarata ma non funzionante",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P07",
+   "titolo": "Licenza dell'OCDS: CC BY 4.0 nel catalogo e nella pagina, CC BY-SA 4.0 nel file",
+   "gravita": "bassa",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P08",
+   "titolo": "Aggiornamenti mensili (delta) rimossi senza regola dichiarata; gennaio-marzo 2026 persi",
+   "gravita": "alta",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P09",
+   "titolo": "Mesi mancanti di smartcig (giugno e luglio 2026) e distribuzione JSON interrotta",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P10",
+   "titolo": "Il catalogo elenca risorse inesistenti",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P11",
+   "titolo": "Dimensioni dichiarate dal catalogo 4,1 volte quelle servite",
+   "gravita": "bassa",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P12",
+   "titolo": "HEAD dei programmi non-browser: risposta 200 text/html invece dei metadati del file",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P13",
+   "titolo": "Nessun ETag sulle risorse",
+   "gravita": "bassa",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P14",
+   "titolo": "CUP 'ND' al posto del codice in 1.951.844 righe",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P15",
+   "titolo": "Contratti attuativi senza collegamento all'accordo quadro o convenzione",
+   "gravita": "da_valutare",
+   "stato": "in_verifica",
+   "pronto_per_anac": false
+  },
+  {
+   "id": "P16",
+   "titolo": "Aggiornamenti mensili 2026 con righe non conformi al formato CSV (escape \\\" invece di \"\")",
+   "gravita": "media",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P17",
+   "titolo": "Codici fiscali segnaposto delle stazioni appaltanti (es. CFAVCP-0001C57)",
+   "gravita": "bassa",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  },
+  {
+   "id": "P18",
+   "titolo": "Il link ai documenti di gara di ciascun CIG non è negli open data: solo nell'API PVL, dal 2024, e manca per 1 CIG su 3",
+   "gravita": "alta",
+   "stato": "aperto",
+   "pronto_per_anac": true
+  }
+ ]
+}

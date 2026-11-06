@@ -9,6 +9,8 @@ description: "Banca Dati Nazionale dei Contratti Pubblici: 70 dataset, 1.801 ris
 [Cruscotto Italia](https://github.com/AgID/cruscotto-italia/blob/main/scripts/anac_archivio_mensile.sh)
 il 18-19 ottobre 2026 e per questo ha smesso di usare l'OCDS di ANAC.
 
+**Cruscotto di disponibilità:** [metriche I1-I9 e registro dei problemi](/enti/anac-cruscotto/).
+
 **Ultimo rendiconto:** [Disponibilità e integrità dei dati aperti ANAC](/rendiconti/anac-2026-10/), 26 ottobre 2026.
 
 | Problema principale | Stato |
