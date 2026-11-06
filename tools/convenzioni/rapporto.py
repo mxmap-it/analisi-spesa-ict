@@ -37,7 +37,7 @@ TIPI = {"consip": "Consip", "psn": "PSN", "aggregatore-regionale": "Aggregatori 
 FUORI_PERIMETRO = {"consip-2638"}
 
 
-DATI_AL = "2026-11-05"  # consultazione più recente delle fonti (pagine Consip, open data, enti campione, ricerca web)
+DATI_AL = "2026-11-06"  # consultazione più recente delle fonti (pagine Consip, open data, enti campione, ricerca web)
 DT = "05/11/2026"
 
 
@@ -253,7 +253,7 @@ def main(versione, data, nota):
                     key=lambda v: -(v["valore_ict_2024_2025"] or 0)):
         o_ = v.get("ordinato_consip") or {}
         ar = v.get("aretepa")
-        res = "sezione presente ma vuota alla consultazione («Nessun risultato»)" if ar and not ar["residuo_pubblico"] else ("dati presenti" if ar else "scheda non individuata da noi")
+        res = "sezione presente, vuota per utente non autenticato" if ar and not ar["residuo_pubblico"] else ("dati presenti" if ar else "scheda non individuata da noi")
         L.append(f"| [{v['nome'][:60]}](/convenzioni/{v['id'].lower()}/) | {meur(v['valore_ict_2024_2025'] or 0)} | "
                  + (f"{meur2(o_.get('2024', 0))} | {meur2(o_.get('2025', 0))} | {meur2(o_.get('2026', 0))}" if o_ else "– | – | –")
                  + f" | {res} | solo aggregato degli AQ |")
@@ -262,8 +262,9 @@ def main(versione, data, nota):
           "con rilancio competitivo) per convenzione o AQ; la Corte dei conti riporta l'erogato complessivo degli accordi quadro, non per iniziativa. "
           "Per alcune iniziative (es. ID 2648 e 2496) l'ordinato supera il dichiarato BDNCP (derivati senza CPV ICT o CIG fuori dal 2024-25): le due "
           "misure non vanno sommate né sottratte. Il massimale residuo, che darebbe l'erosione per lotto, ha una sezione nella scheda pubblica di "
-          "acquistinretepa che il 05/11/2026 risultava vuota («Nessun risultato»); alcune parti della pagina mostravano date segnaposto, quindi la "
-          "resa potrebbe essere stata incompleta: non abbiamo verificato se il dato compaia dopo l'accesso. È nell'[elenco dei blocchi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/blocchi-accesso.csv) "
+          "acquistinretepa che risulta vuota («Nessun risultato»): riprovato il 5-6/11 con attesa esplicita della risposta del servizio e con "
+          "browser visibile (non headless) di notte, il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. "
+          "Non abbiamo verificato se il dato compaia dopo l'accesso. È nell'[elenco dei blocchi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/blocchi-accesso.csv) "
           "da provare a mano.", ""]
     ec, fw = g["enti_campione"], g["fonti_web"]
     L += ["", "## 3. Fonti online consultate prima dell'accesso civico", "",
@@ -271,7 +272,7 @@ def main(versione, data, nota):
           "| Fonte | Esito | Livello |", "|---|---|---|",
           "| Pagine dei bandi su consip.it | documentazione di gara di 44 iniziative; offerte, transato per marchio ed elenco degli ordinativi non individuati | V per la presenza dei file; R per il tipo dedotto dal nome |",
           "| Open data Consip (dati.consip.it) | ordinato per anno, convenzione o AQ e lotto (2024-2025); niente ente, listino, marchio | V |",
-          f"| acquistinretepa (browser reale, Chrome headless) | vetrina: {g['aretepa_vetrina']} iniziative (servizio getIniziative, attive e archivio); schede pubbliche trovate per {g['aretepa_schede']} iniziative del censimento, con {g['aretepa_documenti']} documenti linkati; sezione «Massimale residuo» vuota alla consultazione (resa forse incompleta: date segnaposto); catalogo e acquisto dietro «Accedi»; chiamate JSON registrate con sha256 | V per ciò che è stato visto; da riverificare il residuo |",
+          f"| acquistinretepa (browser reale, Chrome headless) | vetrina: {g['aretepa_vetrina']} iniziative (servizio getIniziative, attive e archivio); schede pubbliche trovate per {g['aretepa_schede']} iniziative del censimento, con {g['aretepa_documenti']} documenti linkati; sezione «Massimale residuo» vuota per utente non autenticato (payload vuoto in tre tentativi, anche con browser visibile); catalogo e acquisto dietro «Accedi»; chiamate JSON registrate con sha256 | V |",
           "| Amministrazione trasparente di Consip | le sottosezioni di «Bandi di gara e contratti» riguardano gli acquisti di Consip per sé; «Controlli e rilievi» rinvia alla Corte dei conti | V (indice delle sezioni) |",
           f"| Campione di enti aderenti | {ec.get('righe', 0)} righe valide (righe di controllo escluse), {ec.get('enti', 0)} enti, {ec.get('iniziative', 0)} iniziative: file nel percorso AT {ec.get('in_at', 0)}, URL esterno al percorso AT {ec.get('fuori_at', 0)} (collegamento dalla sezione AT non verificato), non trovato {ec.get('non_trovato', 0)}, AT non verificabile automaticamente il 5/11 {ec.get('at_irraggiungibile', 0)} (da ripetere); {ec.get('archiviati', 0)} archiviati | V per i documenti letti; R per la posizione rispetto all'AT |",
           "| Piattaforme degli aggregatori (Intercent-ER, EmPULIA, Sintel/NECA, START), parti pubbliche, browser reale | pagine pubbliche per 8 iniziative; documenti di gara, convenzioni e listini archiviati per Intercent-ER ed EmPULIA; su NECA (ARIA) il «residuo del massimale» è consultabile solo con credenziali; su START le schede di aggiudicazione portano al login e i documenti di una gara del 2020 non sono più scaricabili | V |",

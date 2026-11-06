@@ -21,7 +21,7 @@ description: "Iniziativa cig-A008DB40BA: dati, documenti archiviati e mancanti."
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 8 % dei tipi di documento attesi |
+| Copertura documentale | 69 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -50,32 +50,49 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | pagina pubblica dell'iniziativa non ancora individuata |
-| disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
-| capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
-| schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
-| determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
+| disciplinare o condizioni della procedura | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| capitolato tecnico | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
+| schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
+| listini e appendici di prezzo | **archiviato** | consip.it, acquistinretepa (scheda dell'iniziativa) |  |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
+| avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
 
+### Documenti trovati
+
+| Tipo | Documento | Originale | Copia (sha256) |
+|---|---|---|---|
+| bando o avviso di gara (GUUE) | Bando | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=BANDOG~1.PDF*PDF*79450*raa729c627ef4bcf9_20230831161328811*SHA256*F8385E1C770F14AF8A3D382B08C05AC93E9280BA5613EDEF61C61BDC245F6577*2023-08-31T18:13:30) | `f8385e1c770f14af…` |
+| disciplinare o condizioni della procedura | Disciplinare | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=DISCIP~1.PDF*PDF*755509*dec0fa464e8849ce8_20230901095341003*SHA256*D66010A103555B961441C1E8482B90AC10AE91DA61DBCB688CD78067B4D38464*2023-09-01T11:53:42) | `d66010a103555b96…` |
+| capitolato tecnico | Capitolato e allegati | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/capitolato-e-allegato.zip/@@download/file) | `6ce65a81f321d0b3…` |
+| capitolato tecnico | All.4 -Capitolato | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.4%20-%20Capitolato.pdf*pdf*423636*c92e41a907e34d8eb_20230831123455078*SHA256*4C4C61FD0D91CAD598578E2015B1E7292DAFE900C0CB46807AFBCDD851B63990*2023-08-31T14:34:56) | `4c4c61fd0d91cad5…` |
+| capitolato tecnico | All.4A- Caratteristiche dei Profili Professionali | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL4A-~1.PDF*PDF*315289*d21d866b3388412b8_20230831123445413*SHA256*CCD1FC572C64836725B2D3B1B45ACB85EFC3E77327361421C9C559EE2CCA5FDC*2023-08-31T14:34:47) | `ccd1fc572c648367…` |
+| schema di accordo quadro o di convenzione | Convenzione | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/convenzione.zip/@@download/file) | `e6dfedc7a4c6d618…` |
+| schema di accordo quadro o di convenzione | Convenzione_Processo di acquisizione | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/convenzione-intercent-er_processo-acquisizione-v02-5.pdf/@@download/file) | `2086c1d6121c6805…` |
+| schema di accordo quadro o di convenzione | All.5 -Schema di Off. Tecnica | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL5-S~1.PDF*PDF*167475*rf91d6e078254598b_20230831123432909*SHA256*36BBB3432AEE22735932D3AEF8B4056D139281D978D4A5A66A3626DBB2303751*2023-08-31T14:34:34) | `36bbb3432aee2273…` |
+| schema di accordo quadro o di convenzione | All.6 - Schema di Avvalimento | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL6-S~1.DOC*DOC*106938*r02046fb09e84060b_20230831123415599*SHA256*B1E1F4907805C068B77BB9E588AC9A34C66C0B8041E958D88827ECD013EB47F2*2023-08-31T14:34:16) | `b1e1f4907805c068…` |
+| schema di accordo quadro o di convenzione | All.7 - Schema di Convenzione | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL7-S~1.PDF*PDF*404528*b92319c1a4e846fc9_20230901101032287*SHA256*F691CD5D27ABC09AF8CF62B076B95989F416996B042F0D4B9B5C890A97E6AC7A*2023-09-01T12:10:34) | `f691cd5d27abc09a…` |
+| schema di accordo quadro o di convenzione | Convenzione | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Convenzione%20RTI%20Almaviva.pdf*pdf*375384*r574a34c26564cfd8_20250827124826116*SHA256*ECAD0EFEFA3D0EEF0699B4DD4362DFD74711C0FFC083E51E5BB4AA44A5BAD135*2025-08-27T14:48:27) | `ecad0efefa3d0eef…` |
+| schema di accordo quadro o di convenzione | Schema Off-Eco.xlsx | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&FORMAT=N&TECHVALUE=Schema%20Off%2DEco%2Exlsx%2Axlsx%2A12345%2Ac1fdec21e8c4495fb%5F20230923095356457%2ASHA256%2A44F00E68267ECE9CD8079F7FF22E335F9001A49AE5AD6760E34EA998B9176F84%2A2023%2D09%2D23T11%3A53%3A58*Schema%20Off-Eco.xlsx*xlsx*12345*c1fdec21e8c4495fb_20230923095356457*SHA256*44F00E68267ECE9CD8079F7FF22E335F9001A49AE5AD6760E34EA998B9176F84*2023-09-23T11:53:58) | `44f00e68267ece9c…` |
+| schema di accordo quadro o di convenzione | Pagina della convenzione (testo letto via API JSON ++api++) | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2) | non archiviato |
+| listini e appendici di prezzo | Listino | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/listino.xlsx/@@download/file) | `36fc5b2ac4619977…` |
+| listini e appendici di prezzo | Open data: Listino Ordinativi Servizi (tutte le convenzioni) | [link](https://opendata-intercenter.regione.emilia-romagna.it/sater/Listino_Ordinativi_Servizi.csv) | `8b43e71eaaf6f1f3…` |
+| determina o decisione a contrarre | Determina n. 981 del 18 dicembre 2025 | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-981-del-18-12-25-presa-atto-fuisione-e-cambio-denominaz-simaggioli.pdf/@@download/file) | `7341c2fd25cb4aff…` |
+| determina o decisione a contrarre | Det. 771 del 20.10.2025 | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-771-del-20-10-25dinova.pdf/@@download/file) | `a73181223ff0f662…` |
+| determina o decisione a contrarre | Det. 755 del 2026 | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-755-del-23_09_26-presa-datto-fusione-per-incorporazione-di-almawave-in-almaviva.pdf/@@download/file) | `55b88bdb52536e48…` |
+| risposte ai chiarimenti | Pagina bando (HTML, con chiarimenti in testo) | [link](https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-e-procedure-di-gara/bandi-chiusi/BANDO_GARA_PORTALE@7978499) | `4028a05a2288fc14…` |
+| avviso di aggiudicazione o esito | determina di aggiudicazione | [link](https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det%20186%20del%2005_03-24.pdf*pdf*161245*rdc08590de8b4b97b_20240416160423479*SHA256*D902125ECBF7E7298595BE3C097E4FEB22FE7E82AED19A184BFD6451A5DF23AD*2024-04-16T18:04:25) | `d902125ecbf7e729…` |
+
 ## Mancanze e via per colmarle
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
-| disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
-| listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
-| avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
 | transato e monitoraggio per lotto e listino | da verificare | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |

@@ -391,7 +391,7 @@ def main():
                 if k["id"] == "C7":
                     k["stato"] = "verificato"
                     k["nota"] = (f"acquistinretepa, scheda pubblica consultata con browser il {ar['data'][:10]}: la sezione «Massimale residuo» "
-                                 "esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)")
+                                 "esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso")
         for k in car_ini:  # accertamenti a mano (curate.yaml: carenze_verificate {Cn: nota con fonte})
             if k["id"] in (c.get("carenze_verificate") or {}):
                 k["stato"], k["nota"] = "verificato", c["carenze_verificate"][k["id"]]

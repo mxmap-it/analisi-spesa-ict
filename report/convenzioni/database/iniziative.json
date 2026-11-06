@@ -929,7 +929,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -1809,7 +1809,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -2530,7 +2530,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -4281,7 +4281,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -5717,7 +5717,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -8216,7 +8216,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -8843,7 +8843,7 @@
    {
     "carenza": "C3",
     "livello": "V (letto)",
-    "testo": "Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: ente, listino_prodotto, lotto; non trovati: marchio (ricerca per parole nel testo, R)",
+    "testo": "Allegato 18 «Flussi dati per il sistema di monitoraggio delle Convenzioni/AQ» v1.4 del 15/5/2019 (letto per intero il 6/11): il fornitore invia a Consip ogni mese, entro il 15, tramite acquistinretepa (area fornitori, «Gestione flussi»), il flusso «Erogato» con identificativo dell'ordine, codice lotto, codice sede dell'amministrazione beneficiaria, codice prodotto (dal catalogo), anno e mese, voce di spesa, tariffa, quantità e importo erogato IVA esclusa; per questo AQ è richiesto il solo flusso Erogato (non Sedi né Catalogo). Consip riceve quindi il consumato mensile per ordine, lotto e prodotto, con penali in caso di mancato invio; non è pubblicato. Allegati analoghi di monitoraggio risultano anche per ID 2452 (Telefonia mobile 9) e 2648 (SGM 2), da leggere",
     "documento": "ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "url": "https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202275%20AQSM3%20-%20DOC%20UFFICIALE%20NEW.zip#Doc PDF firmati/ID 2275 AQ System Management 3 All. 18 - Flussi dati monitoraggio.pdf.p7m",
     "sha256": "a518a9cdc8e0c61c3758da93bdd9e75c98a611f86b4ed28b1587dbc4bf29a02e"
@@ -10181,7 +10181,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -10866,7 +10866,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -11773,7 +11773,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -12900,7 +12900,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -14794,7 +14794,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -15763,7 +15763,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -16900,7 +16900,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -18911,7 +18911,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -19046,11 +19046,21 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore; TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina procedura ARIA_2023_807 su Sintel",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -19076,11 +19086,21 @@
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Residuo del massimale (erosione): modello della scheda convenzione NECA",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/conventionDetail.xhtml?id=226205620",
+      "dove": "Sintel/NECA (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -19096,31 +19116,79 @@
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o AT dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "ARIA_2023_807_determina_indizione.zip",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205 [allegato JSF POST: ARIA_2023_807_determina_indizione.zip]",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "57b699e46260be11b3115c21dd1c995c21036162ec7660e9bb4ea710454a83f6",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ARIA_2023_807_determina_nomina_commissione.pdf.p7m.p7m",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205 [allegato JSF POST: ARIA_2023_807_determina_nomina_commissione.pdf.p7m.p7m]",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "6adde6d7437ee2c22ac90370df54d054e6b1bd8a813a2086b174f5b926717eae",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "IA.2023.0064430_ARIA_2023_807_chiarimenti.pdf.p7m",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205 [allegato JSF POST: IA.2023.0064430_ARIA_2023_807_chiarimenti.pdf.p7m]",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "1f05d55f2c08ec5d819d03e2e7aee453ec75d41f8904e2ef94213f4d5c7535f9",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "IA.2023.0069508_ARIA_2023_807_chiarimenti_II_tranche.pdf.p7m",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205 [allegato JSF POST: IA.2023.0069508_ARIA_2023_807_chiarimenti_II_tranche.pdf.p7m]",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "4b8084588377f8e499f65e509e8ea6ff00b7604944470e1094b572c31a178dc8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it, TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "ARIA_2023_807_Comunicazione di aggiudicazione.pdf",
+      "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=171039205 [allegato JSF POST: ARIA_2023_807_Comunicazione di aggiudicazione.pdf]",
+      "dove": "Sintel (ARIA)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "70e724a6185f78ba7d052948ad6550c8531f8a1290f004832b60cfe06267c1a9",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -19179,7 +19247,7 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore; TED",
     "via": "scraping TED"
    },
@@ -19200,7 +19268,7 @@
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore",
     "via": "scraping"
    },
@@ -19214,21 +19282,21 @@
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o AT dell'aggregatore",
     "via": "scraping"
    },
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore",
     "via": "scraping"
    },
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it, TED",
     "via": "scraping TED"
    },
@@ -20335,7 +20403,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -22229,7 +22297,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -22355,81 +22423,269 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore; TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Bando",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=BANDOG~1.PDF*PDF*79450*raa729c627ef4bcf9_20230831161328811*SHA256*F8385E1C770F14AF8A3D382B08C05AC93E9280BA5613EDEF61C61BDC245F6577*2023-08-31T18:13:30",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "f8385e1c770f14af8a3d382b08c05ac93e9280ba5613edef61c61bdc245f6577",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "disciplinare",
     "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Disciplinare",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=DISCIP~1.PDF*PDF*755509*dec0fa464e8849ce8_20230901095341003*SHA256*D66010A103555B961441C1E8482B90AC10AE91DA61DBCB688CD78067B4D38464*2023-09-01T11:53:42",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "d66010a103555b961441c1e8482b90ac10ae91da61dbcb688cd78067b4d38464",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Capitolato e allegati",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/capitolato-e-allegato.zip/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "6ce65a81f321d0b3587c28b655a46a203aa9d6e5cbfeef035b3900e6780e6d23",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.4 -Capitolato",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.4 - Capitolato.pdf*pdf*423636*c92e41a907e34d8eb_20230831123455078*SHA256*4C4C61FD0D91CAD598578E2015B1E7292DAFE900C0CB46807AFBCDD851B63990*2023-08-31T14:34:56",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "4c4c61fd0d91cad598578e2015b1e7292dafe900c0cb46807afbcdd851b63990",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.4A- Caratteristiche dei Profili Professionali",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL4A-~1.PDF*PDF*315289*d21d866b3388412b8_20230831123445413*SHA256*CCD1FC572C64836725B2D3B1B45ACB85EFC3E77327361421C9C559EE2CCA5FDC*2023-08-31T14:34:47",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "ccd1fc572c64836725b2d3b1b45acb85efc3e77327361421c9c559ee2cca5fdc",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Convenzione",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/convenzione.zip/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "e6dfedc7a4c6d618c1a08f05dae4eb895b3fb29bee4f3b65a328b36e1a27556f",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Convenzione_Processo di acquisizione",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/convenzione-intercent-er_processo-acquisizione-v02-5.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "2086c1d6121c6805934326590574f76039428ad9a3400b5d81910511e5c618a9",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.5 -Schema di Off. Tecnica",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL5-S~1.PDF*PDF*167475*rf91d6e078254598b_20230831123432909*SHA256*36BBB3432AEE22735932D3AEF8B4056D139281D978D4A5A66A3626DBB2303751*2023-08-31T14:34:34",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "36bbb3432aee22735932d3aef8b4056d139281d978d4a5a66a3626dbb2303751",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.6 - Schema di Avvalimento",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL6-S~1.DOC*DOC*106938*r02046fb09e84060b_20230831123415599*SHA256*B1E1F4907805C068B77BB9E588AC9A34C66C0B8041E958D88827ECD013EB47F2*2023-08-31T14:34:16",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "b1e1f4907805c068b77bb9e588ac9a34c66c0b8041e958d88827ecd013eb47f2",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.7 - Schema di Convenzione",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL7-S~1.PDF*PDF*404528*b92319c1a4e846fc9_20230901101032287*SHA256*F691CD5D27ABC09AF8CF62B076B95989F416996B042F0D4B9B5C890A97E6AC7A*2023-09-01T12:10:34",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "f691cd5d27abc09af8cf62b076b95989f416996b042f0d4b9b5c890a97e6ac7a",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Convenzione",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Convenzione RTI Almaviva.pdf*pdf*375384*r574a34c26564cfd8_20250827124826116*SHA256*ECAD0EFEFA3D0EEF0699B4DD4362DFD74711C0FFC083E51E5BB4AA44A5BAD135*2025-08-27T14:48:27",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "ecad0efefa3d0eef0699b4dd4362dfd74711c0ffc083e51e5bb4aa44a5bad135",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Schema Off-Eco.xlsx",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&FORMAT=N&TECHVALUE=Schema%20Off%2DEco%2Exlsx%2Axlsx%2A12345%2Ac1fdec21e8c4495fb%5F20230923095356457%2ASHA256%2A44F00E68267ECE9CD8079F7FF22E335F9001A49AE5AD6760E34EA998B9176F84%2A2023%2D09%2D23T11%3A53%3A58*Schema Off-Eco.xlsx*xlsx*12345*c1fdec21e8c4495fb_20230923095356457*SHA256*44F00E68267ECE9CD8079F7FF22E335F9001A49AE5AD6760E34EA998B9176F84*2023-09-23T11:53:58",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "44f00e68267ece9cd8079f7ff22e335f9001a49ae5ad6760e34ea998b9176f84",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Pagina della convenzione (testo letto via API JSON ++api++)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Listino",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/allegati/listino.xlsx/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "36fc5b2ac461997735ff6f5b71b940ba4286d4f4a3e0f3d72902c28f4166bec7",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Open data: Listino Ordinativi Servizi (tutte le convenzioni)",
+      "url": "https://opendata-intercenter.regione.emilia-romagna.it/sater/Listino_Ordinativi_Servizi.csv",
+      "dove": "Intercent-ER (open data)",
+      "stato": "archiviato",
+      "sha256": "8b43e71eaaf6f1f38bbbc5bd327994f585bad236824d4e94689d5805ae0acaf8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o AT dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Determina n. 981 del 18 dicembre 2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-981-del-18-12-25-presa-atto-fuisione-e-cambio-denominaz-simaggioli.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "7341c2fd25cb4aff3ca2fe4865bea273cc515c9375330f2ed0a0d7e9f4cc3624",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Det. 771 del 20.10.2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-771-del-20-10-25dinova.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "a73181223ff0f662cfdbf33928af8f21567fb005b3884809ee5bdd3c4625d09a",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Det. 755 del 2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2024/sviluppo-sistemi-informativi-2/det-755-del-23_09_26-presa-datto-fusione-per-incorporazione-di-almawave-in-almaviva.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "55b88bdb52536e48b4e2fe7af450ae5dda561079ce36f2cf9f7e0eacb0a7a8e2",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina bando (HTML, con chiarimenti in testo)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-e-procedure-di-gara/bandi-chiusi/BANDO_GARA_PORTALE@7978499",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "4028a05a2288fc14c7f4d979895885f153153731ac3bb258b83a6433fd18af40",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "determina di aggiudicazione",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det 186 del 05_03-24.pdf*pdf*161245*rdc08590de8b4b97b_20240416160423479*SHA256*D902125ECBF7E7298595BE3C097E4FEB22FE7E82AED19A184BFD6451A5DF23AD*2024-04-16T18:04:25",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "d902125ecbf7e7298595be3c097e4feb22fe7e82aed19a184bfd6451a5df23ad",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -22483,64 +22739,8 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.692,
   "mancanze": [
-   {
-    "tipo": "bando",
-    "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore; TED",
-    "via": "scraping TED"
-   },
-   {
-    "tipo": "disciplinare",
-    "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "capitolato",
-    "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "schema_aq_convenzione",
-    "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
-   },
-   {
-    "tipo": "determina",
-    "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
-    "fonte": "consip.it o AT dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "chiarimenti",
-    "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "aggiudicazione",
-    "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
-    "fonte": "consip.it, TED",
-    "via": "scraping TED"
-   },
    {
     "tipo": "offerta_tecnica",
     "descrizione": "offerta tecnica dell'aggiudicatario",
@@ -22939,7 +23139,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -24393,7 +24593,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -25672,81 +25872,476 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore; TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "BANDO DI GARA",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Bando di gara.pdf*pdf*84938*r8785628b3344a05b_20230321082928434*SHA256*B89809BB34C3C88AB0125922C04EB2A59A133743A9E55C5E4F4C6AEEF7311E16*2023-03-21T09:29:29",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "b89809bb34c3c88ab0125922c04eb2a59a133743a9e55c5e4f4c6aeef7311e16",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "NUOVA RETTIFICA BANDO DI GARA",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Rettifica Bando Guri.pdf*pdf*72285*b2a267d0418342259_20230526111339821*SHA256*1786BFB6ECD01B42DFA6EEA97B7CCFE6EACF66413546E60A2A5270C7898964AB*2023-05-26T13:13:40",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "1786bfb6ecd01b42dfa6eea97b7ccfe6eacf66413546e60a2a5270c7898964ab",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "disciplinare",
     "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "DISCIPLINARE",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Disciplinare.pdf*pdf*654453*rb4de2f653524a27a_20230526111041584*SHA256*9A9B78F4B2845E6223FCAB0A22C738F992947A0301D5640AC3948CCF4740DFBF*2023-05-26T13:10:44",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "9a9b78f4b2845e6223fcab0a22c738f992947a0301d5640ac3948ccf4740dfbf",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Capitolato tecnico",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/allegati/all-3-capitolato-tecnico.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "5ead6bd549cd4195cebdb60b2c57dbd0a6a1e6e721cf759eb456bcac931c5b70",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Profili professionali",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/allegati/all-3a-profili-professionali.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "39739a294425e36c1f6bd64ba7891db590d0ce2740d7d273a574e24d63ed8e22",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ALL3 - CAPITOLATO TECNICO LOTTI 1 E 2",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.3 - Capitolato tecnico.pdf*pdf*788743*a36499a2ac3a42779_20230526111106780*SHA256*F78456758A5A43DEBAF6A108835F3249A69BCFF931544303CBC5DA86EC742AFA*2023-05-26T13:11:08",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "f78456758a5a43debaf6a108835f3249a69bcff931544303cbc5da86ec742afa",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ALL.3a - PROFILI PROFESSIONALI",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.3a - Profili professionali.pdf*pdf*552414*rdaac3d443f9468a9_20230526111116971*SHA256*39739A294425E36C1F6BD64BA7891DB590D0CE2740D7D273A574E24D63ED8E22*2023-05-26T13:11:19",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "39739a294425e36c1f6bd64ba7891db590d0ce2740d7d273a574e24d63ed8e22",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Convenzioni",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/allegati/convenzione.zip/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "b8aa02b4e7e3ffcd2a173f0b63b9261c1b836386f19b3ed713b78fa6b18c9bbd",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ALL.2a - SCHEMA DICHIARAZIONE CONCORDATO PREVENTIVO",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.2a - Schema dich concordato prevent.docx*docx*68758*b4b5e9c78dfb46249_20230320150120748*SHA256*1CFAA2600022502F157C6D084710BAE1F6813C4058B43A7FFE36941A5F5F0431*2023-03-20T16:01:23",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "1cfaa2600022502f157c6d084710bae1f6813c4058b43a7ffe36941a5f5f0431",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ALL.2b - SCHEMA DI AVVALIMENTO",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.2b - Schema dich. avvalimento.docx*docx*70226*r88cd5d781e3476ea_20230320150132842*SHA256*4C06DEAD3734851B0461C3A05C601F42E2EAFC75758522DB78DB86F740D28D75*2023-03-20T16:01:35",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "4c06dead3734851b0461c3a05c601f42e2eafc75758522db78db86f740d28d75",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ALL.6 - SCHEMA DI CONVENZIONE LOTTI 1 e 2",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All.6 - Schema Convenzione.pdf*pdf*454191*re3f16c2d51742598_20230526111051834*SHA256*2C4007E44C7FAA0DFF8797E4C6B62F27B267E670AA0DBF204D74BDDAFC4BFAD8*2023-05-26T13:10:53",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "2c4007e44c7faa0dff8797e4c6b62f27b267e670aa0dbf204d74bddafc4bfad8",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Pagina della convenzione (testo letto via API JSON ++api++)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Listini",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/allegati/listino.xlsx/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "6097c8e26eb200a9e2f43708fd3254b172cc54bdd899f151594e80334c4fdc7c",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Open data: Listino Ordinativi Servizi (tutte le convenzioni)",
+      "url": "https://opendata-intercenter.regione.emilia-romagna.it/sater/Listino_Ordinativi_Servizi.csv",
+      "dove": "Intercent-ER (open data)",
+      "stato": "archiviato",
+      "sha256": "8b43e71eaaf6f1f38bbbc5bd327994f585bad236824d4e94689d5805ae0acaf8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o AT dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Determina n. 468 del 09/06/2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-468-del-09-06-2026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 509 del 22/06/2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-509-del-22062026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 983 del 18/12/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-983-del-18-12-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 987 del 19/12/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-987-del-19-12-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 778 del 22/10/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-778-del-22-10-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 768 del 20/10/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-768-del-20-10-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 767 del 20/10/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-767-del-20-10-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 1- Determina n. 568 del 08/08/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-568-del-08-08-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 1- Determina n. 508 del 14/07/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-508-del-14072025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 1- Determina n. 507 del 14/07/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-507-del-14072025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 1- Determina n. 329 del 08/05/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-329-del-08-05-25.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 2- Determina n. 98 del 17/02/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-98-del-17-02-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 2- Determina n. 32 del 22/01/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-32-del-22-01-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 1 - Determina n. 735 del 30/10/2024",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/aut-sub-d-d-n-735-del-30102024.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 2 - Determina n. 850 del 20/12/2024",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-850-del-20-12-2024.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Lotto 2 - Determina n. 674 del 02/10/2024",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/det-aut-sub-nethive.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Det. 75 del 03.02.206",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/d-d-n-75-del-03-02-2026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "ee0531a8d206c164fdfe2eafebad653dff406c9a2227c6b7df0ad3060c1c009a",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 965 del 15/12/2025",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-965-del-15-12-2025.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Det. 761 del 2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/d-d-n-761-del-24-09-2026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "12d643282de0caa55ac2f2a36daa7fef8be8b8bea5ae71321f77262cd0244a57",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 369 del 27/04/2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/aut-sub-sorint-n-369-del-27042026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 508 del 22/06/2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-508-del-22062026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 515 del 24/06/2026",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-attive/2023/servizi-it-system-management-2/subappalti/d-d-n-515-del-24-06-2026.pdf/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina di nuova rettifica n.366 del 26-05-2023",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Determina di nuova rettifica n.366 del 26-05-2023.pdf*pdf*2602429*rf3d3886df324814a_20230526162951507*SHA256*BCA75C4A7542B9C0FA6C5EB97EE0CDF0FDB59E1D7EDC0DA2AEE581F9706B132F*2023-05-26T18:29:53",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "bca75c4a7542b9c0fa6c5eb97ee0cdf0fdb59e1d7edc0da2aee581f9706b132f",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 200 del 21/03/2023",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=D.D.n.200 del 21-03-2023.pdf*pdf*4456019*rdad91cd8e2246b99_20230327163244819*SHA256*56CB81E399BA055A6129C2BF5F7727352D2EB04FF655E948A92B60D6E3602AE7*2023-03-27T18:32:53",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "56cb81e399ba055a6129c2bf5f7727352d2eb04ff655e948a92b60d6e3602ae7",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n.274 del 21/04/2023 di rettifica e proroga dei termini",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Atto di rettifica e proroga dei termini.pdf*pdf*251588*re57752a245b46ee9_20230421074205772*SHA256*D3C48C269F822B57D62353EE7E1BEEA1E84DE7D486114A92CED35B5E1D617B08*2023-04-21T09:42:07",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "d3c48c269f822b57d62353ee7e1beea1e84de7d486114a92ced35b5e1d617b08",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n. 547 del 01/08/2023 di ammissione (Lotto2).",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=D.D. di ammissione n.547 del 010823.pdf*pdf*134813*r4aa724a53b24ca8b_20230801153631929*SHA256*72811CD14E6776444F6F9035C07AC6C45A49279E4BC518D1880CD07598F73DAE*2023-08-01T17:36:34",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "72811cd14e6776444f6f9035c07ac6c45a49279e4bc518d1880cd07598f73dae",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina bando (HTML, con chiarimenti in testo)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-e-procedure-di-gara/bandi-chiusi/BANDO_GARA_PORTALE@7475885",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "689bc79fb09e883d610dc7604e050dd3ccb0c2d87890e98c098886981d49e95a",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Determina n.650 del 18/09/2023 di aggiudicazione (Lotto 1).",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=D.D.n.650 del 18-09-2023.pdf*pdf*138221*d936836bb4034225b_20230919105737948*SHA256*A2AE2EF5DB32585B27CADDA63F11BCE017BC1584430EDFD975766BFB5329119C*2023-09-19T12:57:41",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "a2ae2ef5db32585b27cadda63f11bce017bc1584430edfd975766bfb5329119c",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina n.774 del 09/11/2023 di aggiudicazione (Lotto 2).",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=D.D.n.774 del 09112023.pdf*pdf*147969*rdccbfbae64346579_20231110131618782*SHA256*9AD99E92733B1236E31EED46928F179020C6DB4C96152A4807F01D0894B7D885*2023-11-10T14:16:33",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "9ad99e92733b1236e31eed46928f179020c6db4c96152a4807f01d0894b7d885",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -25800,64 +26395,8 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.692,
   "mancanze": [
-   {
-    "tipo": "bando",
-    "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore; TED",
-    "via": "scraping TED"
-   },
-   {
-    "tipo": "disciplinare",
-    "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "capitolato",
-    "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "schema_aq_convenzione",
-    "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
-   },
-   {
-    "tipo": "determina",
-    "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
-    "fonte": "consip.it o AT dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "chiarimenti",
-    "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "aggiudicazione",
-    "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
-    "fonte": "consip.it, TED",
-    "via": "scraping TED"
-   },
    {
     "tipo": "offerta_tecnica",
     "descrizione": "offerta tecnica dell'aggiudicatario",
@@ -26008,31 +26547,151 @@
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Capitolato Tecnico",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/PdL%20Telemedicina%20-%20Allegato%202-%20Capitolato%20Tecnico_signed.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "f3364f1cd416cf3efdc7b0336f6b10b4b6a437b5637eceff2ef6f3d5b7c0777b",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina Telemedicina (convenzioni PdL)",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/Telemedicina.aspx",
+      "dove": "EmPULIA",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Convenzione Lotto 1",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/PdL%20Telemedicina%20-%20Convenzione%20LOTTO%201_signed.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "905897b93b66b4acdf9efdc3ad34e2f6f2cb15fa2936ecf9ba2e6878156fa23f",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Convenzione Lotto 2",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/PdL%20Telemedicina%20Convenzione%20LOTTO%202_signed.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "27780e552ed12563cc9d90c139786edc4631ed41a8ba108218e0936fc49d77c9",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Convenzione Lotto 3",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/PdL%20Telemedicina%20-%20Convenzione%20LOTTO%203_signed_signed.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "fd3183754092f23ab159fee0d0e0b8e500f3b8a913d542473b925762c05a4cd0",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Prodotti, corrispettivi e SLA",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "a04044c32cee89e6247f3bfca29f4f59b066e2112bec2acf4a59f490dcac3623",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti, corrispettivi e SLA rev_25_07_2025",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_25_07_2025.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "72e469ff3911edf922fa114c0acc6ca2c942a6e3bc51de8fec4a097d7f675036",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti, corrispettivi e SLA rev_08_09_2025",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_08_09_2025.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "de2f261ca684bc03791931ab46fa42aec01017496141d9498e345bb55dad0ca4",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti, corrispettivi e SLA rev_29_10_2025",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_29_10_2025.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "f817062ea2d7a6fc906bb90524d4f81693886e49ca43b985375b9a4dfc5de09b",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti, corrispettivi e SLA rev_15_01_2026",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_15_01_2026.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "29a275b0348c2806c4bd5b7c60a40514ee587f1b20c5e149aa1c0e9b7c2c04f8",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti Corrispettivi SLA rev_04_05_2026",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Check-List%20DNSH%20Lotto%202%20rev_26_06_2026",
+      "dove": "EmPULIA",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti Corrispettivi SLA rev_26_06_2026",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_26_06_2026.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "e669638521c57bc4b8ec731f65278f83041947d01286d83684e40bee2ce0cd2e",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Prodotti Corrispettivi SLA rev_27_07_2026",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/DocTecnici/Telemedicina/Prodotti%20Corrispettivi%20SLA%20rev_27_07_2026.pdf",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "a888406bb59bab831451bf5f83a8a17b8102c7c285291068371839796861500b",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -26116,7 +26775,7 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.308,
   "mancanze": [
    {
     "tipo": "bando",
@@ -26131,27 +26790,6 @@
     "stato": "da-verificare",
     "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via": "scraping"
-   },
-   {
-    "tipo": "capitolato",
-    "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "schema_aq_convenzione",
-    "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
    },
    {
     "tipo": "determina",
@@ -28627,7 +29265,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -29574,7 +30212,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -30344,7 +30982,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -33919,7 +34557,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -34710,7 +35348,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -34836,11 +35474,21 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore; TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina procedura (SPA Angular, letta con browser)",
+      "url": "https://start.toscana.it/tendering/tenders/015433-2020/view/detail/1",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -34969,7 +35617,7 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore; TED",
     "via": "scraping TED"
    },
@@ -36449,7 +37097,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {
@@ -36575,41 +37223,117 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore; TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina procedura (SPA Angular, letta con browser)",
+      "url": "https://start.toscana.it/tendering/tenders/000275-2020/view/detail/1",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "BANDO GURI (bando GURI COMPLETO.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=be5b2426-0878-4a0e-9234-0ad92d7ccfb9",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "455bdcef5030f491b63f8f1139daf6436acac199270a172ad735e4b85db156c9",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "disciplinare",
     "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "GRIGLIA DI VALUTAZIONE -ALLEGATO AL DISCIPLINARE DI GARA (Allegato L - Griglia di valutazione.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=472cc507-8337-4df7-8b98-b87951d3413e",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "3afbfd2c7bcf71f2e79f425481124d499f93e893cef2d87b818b829d5c9f0c27",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "DISCIPLINARE DI GARA (disciplinare di gara finale.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=0c438dde-6e2f-4b8a-8574-7fdf8eee70aa",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "b478ca05e3667f1cfe6ab25ec22784ead7de9b69b152b980fd1e7c9498d2f5bd",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "CAPITOLATO NORMATIVO (capitolato normativo.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=9ca54d14-b4a4-4679-8acf-e87769a84dd5",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "2af1933cf68dd5db3627624028d0901020b9689416ed6668c91806fe6406ca2e",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "NUOVO CAPITOLATO TECNICO PRESTAZIONALE (Capitolato Tecnico_28022020.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=ff5d7fa5-b891-4848-a7c4-0ec6e4e6114c",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "4627c0c26d6a7878b722594d70cde918a8d0895163404f0d380b7d3730d05d01",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "ELENCO DIPENDENTI -ALLEGATO AL CAPITOLATO NORMATIVO (elenco dipendenti per Clausola salvaguardia.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=0d7d5b1e-33ad-4bd8-865f-431b69d67a48",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "3f57fac411c2817f5692020accbc7cddfae698adf5fbadf0504541a5ab6b09f8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "BOZZA CONTRATTO (Bozza CONVENZIONE.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=f2a96dfe-1d95-4735-bc8b-635ead23fe04",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "fad2e43916132e18b54d5e30dfcf6eb3551e248289800f3e64a07e905d5dbff8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -36625,11 +37349,30 @@
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it o AT dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "DETERMINA DI INDIZIONE (DETERMINA DI INDIZIONE N 1847 DEL 19.12.19)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=16149130-85fa-4cd3-b25e-32099103ed51",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "c9aff54fe72fc93139785f508c1d0d5fd179f9abd8b41d271f7567a06536a115",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "DETERMINA DI RETTIFICA ATTI (Determinazione_322_2020.pdf)",
+      "url": "https://start.toscana.it/documents-api/documents/?access-code=4b88ae43-5f9d-48f4-9837-2c2c8cce1dda",
+      "dove": "START (ESTAR)",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": "3de38cea191a13d84c76f9b4fb677d5a0234c0cc6f28cdbf60ab0f41e10b052f",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -36708,28 +37451,28 @@
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore; TED",
     "via": "scraping TED"
    },
    {
     "tipo": "disciplinare",
     "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via": "scraping"
    },
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via": "scraping"
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o sito dell'aggregatore",
     "via": "scraping"
    },
@@ -36743,7 +37486,7 @@
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it o AT dell'aggregatore",
     "via": "scraping"
    },
@@ -37201,11 +37944,30 @@
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina AQ RUPAR-SPC",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/AQ%20RUPAR-SPC.aspx",
+      "dove": "EmPULIA",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Accordo Quadro RUPAR SPC firmato (.tsd)",
+      "url": "http://www.empulia.it/tno-a/empulia/Empulia/AQ%20RUPAR%20SPC%20%20Documentazione%20di%20gara/Accordo%20Quadro%20RUPAR%20SPC_signed_signed_signed-signed-signed.pdf.tsd",
+      "dove": "EmPULIA",
+      "stato": "archiviato",
+      "sha256": "54cb679b3915692a39a34818c89249ee8c8b7b2b5c06bcd159fa75430095743d",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -37241,11 +38003,21 @@
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "dove_di_norma": "consip.it, TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "News stipula AQ RUPAR-SPC (31/03/2022)",
+      "url": "http://www.empulia.it/tno-a/empulia/Lists/NEWS/DispForm.aspx?ID=2006",
+      "dove": "EmPULIA",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -37299,7 +38071,7 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.154,
   "mancanze": [
    {
     "tipo": "bando",
@@ -37320,13 +38092,6 @@
     "descrizione": "capitolato tecnico",
     "stato": "da-verificare",
     "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "schema_aq_convenzione",
-    "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
     "via": "scraping"
    },
    {
@@ -37353,7 +38118,7 @@
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "pubblicato-non-archiviato",
     "fonte": "consip.it, TED",
     "via": "scraping TED"
    },
@@ -37506,71 +38271,240 @@
    {
     "tipo": "disciplinare",
     "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Disciplinare",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Disciplinare.pdf*pdf*750902*r606d0ad80ac4924a_20230526160219224*SHA256*5CF3A0AA7D8F16589FE242AC74E171E71820E48C917E59D9D2691BC35A1407A3*2023-05-26T18:02:21",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "5cf3a0aa7d8f16589fe242ac74e171e71820e48c917e59d9d2691bc35a1407a3",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "capitolato",
     "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Capitolati",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-scadute-e-o-esaurite/2023/pc-desktop-11/allegati/capitolati.zip/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "20c3d9305b0cbab63e62f18903533a445a17bb651f40203d9dd182e5f8b4310a",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.4A-Capitolato tecnico Desktop 11",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL4A Capitolato Desktop 11.pdf*pdf*466059*rfbf1ef463134e24b_20230526160255694*SHA256*154A9353F9C8F57A589CB89E88BA535106A717CDC35F1E9DAB56F846A4D208B2*2023-05-26T18:02:57",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "154a9353f9c8f57a589cb89e88ba535106a717cdc35f1e9dab56f846a4d208b2",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.4B Capitolato tecnico Notebook 11",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ALL4B Capitolato Notebook 11.pdf*pdf*568716*b44302a3fc774e2da_20230526160309164*SHA256*72F706651034813C0939935F12BE29D97ADB69D28D57FA62E19D0148518E1BA7*2023-05-26T18:03:10",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "72f706651034813c0939935f12be29d97adb69d28d57fa62e19d0148518e1ba7",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "schema_aq_convenzione",
     "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Convenzioni",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-scadute-e-o-esaurite/2023/pc-desktop-11/allegati/convenzione.zip/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "a27b56dbd52abef119a75d2a01f4a0799f0dca6cc9cdac093fee1f4eb718ea19",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All.3- Schema di Dichiarazioni concordato prev.",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All. 3 - Schema dich concord_prevent.docx*docx*71502*fe2aee024f534787b_20230525214751288*SHA256*94848962DA7C24284D5673F63DDCFDA2126DE1F388944DD14181D392ED8A4F2A*2023-05-25T23:47:52",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "94848962da7c24284d5673f63ddcfda2126de1f388944dd14181d392ed8a4f2a",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "All. 6 - Schema di Convenzione",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=All. 6 - Schema Convenzione.pdf*pdf*396390*e78a3a7c412a41619_20230525214824383*SHA256*42680E2BDF3347A4F946CA1C4E9D129046AC80B3682C0E38153076A3F3B6E419*2023-05-25T23:48:26",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "42680e2bdf3347a4f946ca1c4e9d129046ac80b3682c0e38153076a3f3b6e419",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Pagina della convenzione (testo letto via API JSON ++api++)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-scadute-e-o-esaurite/2023/pc-desktop-11",
+      "dove": "Intercent-ER",
+      "stato": "pubblicato-non-archiviato",
+      "sha256": null,
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "listini",
     "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, acquistinretepa (scheda dell'iniziativa)",
     "via_se_manca": "scraping; poi richiesta a Consip o all'aggregatore",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Listini",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni/convenzioni-scadute-e-o-esaurite/2023/pc-desktop-11/allegati/listino-prodotti-20231220.xlsx/@@download/file",
+      "dove": "Intercent-ER",
+      "stato": "archiviato",
+      "sha256": "f0b9afb4f395fb78dc985cf69bdf3a097bc37d5099494d41290122abc167fc19",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Open data: Listino Ordinativi Altri Beni (tutte le convenzioni)",
+      "url": "https://opendata-intercenter.regione.emilia-romagna.it/sater/Listino_Ordinativi_Altri%20Beni.csv",
+      "dove": "Intercent-ER (open data)",
+      "stato": "archiviato",
+      "sha256": "55c79e1b1b2ed31b4dc643809b2d74b045dc7f4839ae94208b578b5f1da56fb8",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "determina",
     "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o AT dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Det. 427 del 21.06.2023.pdf",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det. 427 del 21.06.2023.pdf*pdf*115812*r618e1a5ad32428b8_20230621130522155*SHA256*058686FEDB5B77AE1CCB322DEED1062C127B0A6AF2A1CDBBB060647FEEEDCF48*2023-06-21T15:05:24",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "058686fedb5b77ae1ccb322deed1062c127b0a6af2a1cdbbb060647feeedcf48",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determinazione n. 427 del 21/06/2023",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det. 427 del 21.06.2023.pdf*pdf*115812*de3ab9d5440a4507b_20230621124955161*SHA256*058686FEDB5B77AE1CCB322DEED1062C127B0A6AF2A1CDBBB060647FEEEDCF48*2023-06-21T14:49:56",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "058686fedb5b77ae1ccb322deed1062c127b0a6af2a1cdbbb060647feeedcf48",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determinazione n. 533 del25.07.2023",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det 533 del 25-07-2023.pdf*pdf*118238*r6c79a931cb2440c9_20230725141641420*SHA256*7C9A2A0621A028C269A1F743D8FA9FA22A2F19B5A3249E74E1A0CC4E90038ACA*2023-07-25T16:16:42",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "7c9a2a0621a028c269a1f743d8fa9fa22a2f19b5a3249e74e1a0cc4e90038aca",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determinazione n° 367 del 26/05/2023",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det.367 del 26-05.23.pdf*pdf*5577357*bb1fab94d8664425a_20230825150131895*SHA256*A29E5064E448F83CB5331657C52CE0C70552D8E0FFE4270F2D20A5BB73AA68D5*2023-08-25T17:01:40",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "a29e5064e448f83cb5331657c52ce0c70552d8e0ffe4270f2d20a5bb73aa68d5",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Det. di esclusione concorrente Lotto 1",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det esclusione 114 del 14_02_24.pdf*pdf*130325*r1766e9bb5a340f2b_20240215085622123*SHA256*1AFCCA31ED8F5E8DFA4EBC309EED9D6453A96709B158A3F96CBF5C34EEE00119*2024-02-15T09:56:23",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "1afcca31ed8f5e8dfa4ebc309eed9d6453a96709b158a3f96cbf5c34eee00119",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "chiarimenti",
     "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it o sito dell'aggregatore",
     "via_se_manca": "scraping",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Pagina bando (HTML, con chiarimenti in testo)",
+      "url": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-e-procedure-di-gara/bandi-chiusi/BANDO_GARA_PORTALE@7713630",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "c9918b7ffde490b6141ca48dae29f93d9c2cf75bc7f7e19e76a7764e8a8c09e4",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
     "tipo": "aggiudicazione",
     "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
+    "stato": "archiviato",
     "dove_di_norma": "consip.it, TED",
     "via_se_manca": "scraping TED",
-    "nota": "pagina pubblica dell'iniziativa non ancora individuata",
-    "documenti": [],
+    "nota": "",
+    "documenti": [
+     {
+      "nome": "Determina di aggiudicazione Lotti 2-3,4.",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det 773 del 09-11-2023.pdf*pdf*170504*r64a8f384b1843fdb_20231112173235273*SHA256*F3A8FB8C4A3EF996C4129C9BDD5E23A50A32A90685A36FEDA11810E2286F6470*2023-11-12T18:32:37",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "f3a8fb8c4a3ef996c4129c9bdd5e23a50a32a90685a36feda11810e2286f6470",
+      "data": "2026-11-06",
+      "nota": null
+     },
+     {
+      "nome": "Determina di aggiudicazione Lotto 1",
+      "url": "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=Det n.132 del 19_02_24.pdf*pdf*142863*r541d4639ddc4461b_20240220142038945*SHA256*421377DC07584C62DBD5982BD34B3242E1A4AD7B5F9985B4DA8599FD27BDB2C9*2024-02-20T15:20:40",
+      "dove": "Intercent-ER (SATER)",
+      "stato": "archiviato",
+      "sha256": "421377dc07584c62dbd5982bd34b3242e1a4ad7b5f9985b4da8599fd27bdb2c9",
+      "data": "2026-11-06",
+      "nota": null
+     }
+    ],
     "reperiti_altrove": []
    },
    {
@@ -37624,62 +38558,13 @@
     "reperiti_altrove": []
    }
   ],
-  "copertura": 0.077,
+  "copertura": 0.615,
   "mancanze": [
    {
     "tipo": "bando",
     "descrizione": "bando o avviso di gara (GUUE)",
     "stato": "da-verificare",
     "fonte": "consip.it o sito dell'aggregatore; TED",
-    "via": "scraping TED"
-   },
-   {
-    "tipo": "disciplinare",
-    "descrizione": "disciplinare o condizioni della procedura",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "capitolato",
-    "descrizione": "capitolato tecnico",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore (pacchetto documentazione)",
-    "via": "scraping"
-   },
-   {
-    "tipo": "schema_aq_convenzione",
-    "descrizione": "schema di accordo quadro o di convenzione",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "listini",
-    "descrizione": "listini e appendici di prezzo",
-    "stato": "da-verificare",
-    "fonte": "consip.it, acquistinretepa (scheda dell'iniziativa)",
-    "via": "scraping; poi richiesta a Consip o all'aggregatore"
-   },
-   {
-    "tipo": "determina",
-    "descrizione": "determina o decisione a contrarre",
-    "stato": "da-verificare",
-    "fonte": "consip.it o AT dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "chiarimenti",
-    "descrizione": "risposte ai chiarimenti",
-    "stato": "da-verificare",
-    "fonte": "consip.it o sito dell'aggregatore",
-    "via": "scraping"
-   },
-   {
-    "tipo": "aggiudicazione",
-    "descrizione": "avviso di aggiudicazione o esito",
-    "stato": "da-verificare",
-    "fonte": "consip.it, TED",
     "via": "scraping TED"
    },
    {
@@ -44316,7 +45201,7 @@
     "id": "C7",
     "titolo": "Monitoraggio delle soglie di erosione dei massimali",
     "stato": "verificato",
-    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma alla consultazione risultava «Nessun risultato» (servizio getDettaglioLotti con payload vuoto; resa forse incompleta; non verificato dopo l'accesso)",
+    "nota": "acquistinretepa, scheda pubblica consultata con browser il 2026-11-05: la sezione «Massimale residuo» esiste ma è vuota («Nessun risultato»). Riprovato il 5-6/11 con attesa esplicita della risposta e con browser visibile di notte: il servizio getDettaglioLotti risponde sempre con payload vuoto a un utente non autenticato. Non verificato dopo l'accesso",
     "raccomandazione": "R37"
    },
    {

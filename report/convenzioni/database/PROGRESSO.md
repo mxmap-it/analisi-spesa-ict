@@ -27,3 +27,4 @@ File di ripresa (regola di resilienza): ogni passo chiuso si annota qui, con com
 | 5/11 | job server finito, estratti, open data Consip ordini (20 abbinamenti, 13 per nome V e 7 a mano R), rapporto 0.1 con revisione avversariale (25 punti, i principali recepiti) | fatto | |
 | 5/11 | fonti online (enti campione, centrali, web), flussi dati EA8 letto, mappe V-testo, 19 bozze necessarie, R43-R44, rapporto 0.2 | fatto | |
 | 6/11 | acquistinretepa in browser (vetrina, 26 schede, 259 documenti), flussi dati 36, siti AT in browser, blocchi-accesso.csv, rapporto 0.3 | fatto | |
+| 6/11 | residuo riprovato (vuoto), ID 2275 monitoraggio letto, aggregatori, rapporto 0.4 | fatto | |

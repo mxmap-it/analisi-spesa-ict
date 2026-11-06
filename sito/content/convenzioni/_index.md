@@ -9,7 +9,7 @@ description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, c
 
 **[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola. Rapporto: [Trasparenza delle convenzioni ICT](/rendiconti/convenzioni-trasparenza/) (bozza).
 
-Censimento di **86 iniziative** (82 attive, 4 storiche) con i loro lotti, i documenti pubblici archiviati e quelli che mancano. Copertura documentale media: **34 %** dei tipi di documento attesi.
+Censimento di **86 iniziative** (82 attive, 4 storiche) con i loro lotti, i documenti pubblici archiviati e quelli che mancano. Copertura documentale media: **37 %** dei tipi di documento attesi.
 
 **Criterio.** Un'iniziativa è un ID Sigef Consip, o una gara (CIG padre) di un altro soggetto. È «attiva» se ha CIG derivati con CPV ICT nel 2024-2025 (o è nuova: PRINCO ID 2928, IaaS/PaaS 2 ID 2746). Si prendono le prime per valore dei derivati ICT 2024-2025 in ciascun tipo di soggetto (40 Consip, 25 aggregatori regionali, 15 consorzi o unioni, 10 altri; fuori Consip almeno 3 derivati e 1 M€), più il PSN. Le iniziative della base di conoscenza senza derivati recenti ma con almeno 100 M€ dal 2020 sono elencate a parte come «storiche». Dettagli: [README della base dati](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/README.md).
 
@@ -83,7 +83,7 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 28 | [GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL](/convenzioni/cig-b0da5c472c/) | Consip | 114,2 | 640 | 1 | 12 | 8 % |
 | 29 | [PROCEDURA NEGOZIATA PER L'AFFIDAMENTO DI SERVIZI IN OUTSOURCING DI CUSTOMER CARE (CALL CENTER INBOUND E ATTIVI](/convenzioni/cig-a0260b3155/) | Altro | 100,4 | 21 | 1 | 12 | 8 % |
 | 30 | [AQ PER LA FORNITURA DI PRODOTTI CLOUD IAAS E PAAS - ID 2213 / LOTTO 8 - PAC2 - SERVIZI TECNOLOGICI](/convenzioni/consip-2213/) | Consip | 90,2 | 41 | 10 | 3 | 77 % |
-| 31 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPP](/convenzioni/cig-a008db40ba/) | Aggregatore regionale | 86,4 | 112 | 1 | 12 | 8 % |
+| 31 | [PROCEDURA APERTA PER LA FORNITURA DI SERVIZI DI SVILUPPO, EVOLUZIONE E GESTIONE DEI SISTEMI INFORMATIVI A SUPP](/convenzioni/cig-a008db40ba/) | Aggregatore regionale | 86,4 | 112 | 9 | 4 | 69 % |
 | 32 | [ID 2453 - GARA PUBLIC CLOUD SAAS ITSM](/convenzioni/consip-2453/) | Consip | 83,7 | 16 | 2 | 11 | 15 % |
 | 33 | [L'APPALTO HA AD OGGETTO L'ACQUISIZIONE DI SERVIZI DI SVILUPPO, MANUTENZIONE E SUPPORTO PER INAIL E NELLO SPECI](/convenzioni/cig-b2fb115279/) | Altro | 81,8 | 4 | 6 | 7 | 46 % |
 | 34 | [SERVIZIO DI RACCOLTA, GESTIONE ED ELABORAZIONE DI DATI NEL SETTORE DELLA PESCA, DELLACQUACOLTURA E DELLINDUSTR](/convenzioni/cig-88556834cb/) | Altro | 67,4 | 3 | 1 | 12 | 8 % |
@@ -91,8 +91,8 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 36 | [SERVIZIO DI GESTIONE DEL SISTEMA TELEMATICO ACQUISTI REGIONALE DELLA TOSCANA (START)](/convenzioni/cig-7930885557/) | Altro | 52,1 | 126 | 1 | 12 | 8 % |
 | 37 | [SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556](/convenzioni/consip-2556/) | Consip | 51,5 | 79 | 1 | 12 | 8 % |
 | 38 | [Consip Licenze Microsoft Enterprise Agreement 6, ID 2187](/convenzioni/consip-2187/) | Consip | 49,6 | 54 | 8 | 5 | 62 % |
-| 39 | [PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 / SERVIZI DI ](/convenzioni/cig-97219284c8/) | Aggregatore regionale | 46,5 | 192 | 1 | 12 | 8 % |
-| 40 | [APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZI](/convenzioni/cig-993049146a/) | Aggregatore regionale | 44,7 | 55 | 1 | 12 | 8 % |
+| 39 | [PROCEDURA APERTA PER L'ACQUISIZIONE DI SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA 2 / SERVIZI DI ](/convenzioni/cig-97219284c8/) | Aggregatore regionale | 46,5 | 192 | 9 | 4 | 69 % |
+| 40 | [APPALTO SPECIFICO INDETTO DA INNOVAPUGLIA S.P.A. FINALIZZATO ALLA STIPULA DI PIÙ CONVENZIONI PER LA 'ACQUISIZI](/convenzioni/cig-993049146a/) | Aggregatore regionale | 44,7 | 55 | 4 | 9 | 31 % |
 | 41 | [AOV/SUA SF 009/2021 - CONVENZIONE QUADRO ACP PER SERVIZI ICT / LOTTO 2: : SERVIZI INFORMATICI ICT PER APPLICAZ](/convenzioni/cig-8664818204/) | Altro | 40,5 | 98 | 1 | 12 | 8 % |
 | 42 | [SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE ](/convenzioni/cig-b1ffb3098a/) | Consorzio o unione | 38,1 | 3 | 1 | 12 | 8 % |
 | 43 | [SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALI](/convenzioni/cig-94252656ba/) | Altro | 37,2 | 33 | 1 | 12 | 8 % |
@@ -112,8 +112,8 @@ Valori: BDNCP, derivati ICT 2024-2025 (mirror ANAC, elaborazione del 05/11/2026)
 | 57 | [AQ CENTRALI TELEFONICHE 9 - ID 2496](/convenzioni/consip-2496/) | Consip | 19,3 | 37 | 9 | 4 | 69 % |
 | 58 | [PROCEDURA AOERTA PER LA CONCLUSIONE DI UNA CONVENZIONE DELLA DURATA DI 72 MESI PER IL SERVIZIO DI ASSISTENZA E](/convenzioni/cig-81636687f2/) | Aggregatore regionale | 13,6 | 3 | 1 | 12 | 8 % |
 | 59 | [ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD UN UNICO FORNITORE, DEL SERVIZIO DI SUPPORTO ALLA GE](/convenzioni/cig-9777818ea8/) | Consorzio o unione | 12,6 | 6 | 1 | 12 | 8 % |
-| 60 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENS](/convenzioni/cig-8637686bf8/) | Aggregatore regionale | 11,5 | 5 | 1 | 12 | 8 % |
-| 61 | [APPALTO SPECIFICO (SDA) PER LA FORNITURA IN ACQUISTO E NOLEGGIO DI PC DESKTOP E NOTEBOOK 11 / LOTTO 2 NOLEGGIO](/convenzioni/cig-9845010742/) | Aggregatore regionale | 11,3 | 985 | 1 | 12 | 8 % |
+| 60 | [GARA TELEMATICA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO CON PIÙ OPERATORI ECONOMICI AI SENS](/convenzioni/cig-8637686bf8/) | Aggregatore regionale | 11,5 | 5 | 2 | 11 | 15 % |
+| 61 | [APPALTO SPECIFICO (SDA) PER LA FORNITURA IN ACQUISTO E NOLEGGIO DI PC DESKTOP E NOTEBOOK 11 / LOTTO 2 NOLEGGIO](/convenzioni/cig-9845010742/) | Aggregatore regionale | 11,3 | 985 | 8 | 5 | 62 % |
 | 62 | [PROCEDURA DI AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS. 36/2023, PER LA FORNITURA DI SERVIZI PROFESS](/convenzioni/cig-b736423c63/) | Aggregatore regionale | 10,0 | 12 | 1 | 12 | 8 % |
 | 63 | [APPALTO SPECIFICO PER L’ACQUISIZIONE DEL SERVIZIO DI ASSISTENZA TECNICA AL SISTEMA INFORMATIVO LAVORO DELL'EMI](/convenzioni/cig-9936839af1/) | Aggregatore regionale | 9,6 | 8 | 1 | 12 | 8 % |
 | 64 | [GARA EUROPEA A LOTTI PER L'ACQUISIZIONE, MEDIANTE ACCORDO QUADRO, DI SERVIZI INFORMATICI PER L'EVOLUZIONE DI P](/convenzioni/cig-9769148bf3/) | Consorzio o unione | 9,3 | 3 | 1 | 12 | 8 % |
