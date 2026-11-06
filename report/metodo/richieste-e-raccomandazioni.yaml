@@ -452,3 +452,16 @@
   perche_serve: "Gli atti di adesione sono oggi l'unica fonte pubblica dell'ordinativo per ente"
   nota: "Da riconfermare in un secondo momento e con browser reale prima di qualunque comunicazione (AGENTS.md §3)"
   rif: ["#62", "#61"]
+- id: R45
+  destinatario: enti aderenti (ICE-Agenzia), ANAC
+  tipo: difetto
+  stato: da_verificare
+  titolo: Sezione AT «Bandi di gara e contratti» di ICE dietro un controllo anti-bot (HTTP 428)
+  carenze: [C4]
+  evidenza: "Il 6/11/2026 https://ice.patisweb.it/page/10/bandi-di-gara-e-contratti.html (link PVL del CIG derivato B1A4C88DEF, adesione Consip ID 2297) risponde HTTP 428 con la pagina «Seeweb authentic user check» a Chrome headless con User-Agent dichiarato; non aggirato"
+  prova: report/convenzioni/blocchi-accesso.csv (sha256 cc144422db478476cf3dea8a33d6cd769cf908da0e5850006f36d7b41858891b)
+  richiesta: "Escludere la sezione Amministrazione trasparente dal controllo anti-bot del provider (art. 9 c. 1 d.lgs. 33/2013)"
+  politica: "Come R44: monitoraggio dell'accessibilità delle sezioni AT con segnalazione agli RPCT"
+  perche_serve: "Gli atti di adesione sono l'unica fonte pubblica dell'ordinativo per ente"
+  nota: "Da riconfermare a mano prima di qualunque comunicazione (AGENTS.md §3)"
+  rif: ["#62"]
