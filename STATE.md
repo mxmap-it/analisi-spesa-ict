@@ -21,6 +21,12 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.4, parte tetti/PNRR (6/11 notte):**
+  - secondo campione T4 concessione: 9/15, totale 20/30 (67 %, 49-81); con la regola I6 (concessioni energia/TPL/impianti → incerto) 17/18 (94 %, 74-99);
+  - `imbuto_qe_sal.py`: quadro economico e SAL ANAC per 442 e 41 dei 2.130 CIG; regola E4; gli 8 errori d'importo con QE valgono 70.150 €; SAL 0,40 mld (ICT 0,15);
+  - atti degli incerti: 0 su 10 ricerche, ricerca fermata → R54;
+  - PNRR: decreto fin 3.1 (iss.it), 16 decreti per 537,6 M€; `pnrr11_cup_cig.py`: 238/312 CUP con CIG; 431 M€ finanziati contro 2,20 mld di contratti PSN collegati;
+  - S3-S6 58,3 mld, 14,4 incerti in 79 CIG.
 - **0.3 (6/11 notte):**
   - `tools/verifiche/imbuto_revisione.py`: precisione sul campione stratificato (15 per gruppo, giudizi sugli atti in `esiti/2026-11-06/imbuto/campione-tetti-giudizi.csv`): T3 tondo 8/15 (53 %, 30-75), T3 non tondo 15/15 (80-100), T4 AQ 15/15 (80-100), T4 concessione 11/15 (73 %, 48-89); T4 su PVL 191/192.
   - Regole v2: T3 tondo solo se discendente; T5 e E2 dal PVL (`pvl-percig.csv`); revisione degli incerti ICT con 10 errori d'importo (14,1 mld) e 9 tetti. S3-S6 dal 2024 scende a **58,2 mld** (incerti 14,4 mld in 80 CIG).

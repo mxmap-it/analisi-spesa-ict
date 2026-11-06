@@ -546,3 +546,13 @@
   richiesta: "Enti: documenti di gara accessibili senza login e senza blocchi anti-bot (art. 28 d.lgs. 36/2023, art. 9 d.lgs. 33/2013), link PVL stabili e puntuali al CIG. ANAC: controllo di raggiungibilità del link alla pubblicazione. Interno: deduplicare per CIG in tools/analisi/imbuto.py"
   perche_serve: "Sul residuo S6 la prova primaria (atto che cita il CIG) è ciò che separa un'ipotesi da un fatto; senza atti gli stati restano incerti anche per contratti da centinaia di milioni"
   rif: ["#66", "#55", "R31", "R32", "R33", "R44"]
+- id: R54
+  destinatario: ANAC, stazioni appaltanti
+  tipo: dato-mancante
+  stato: "verificato (6/11/2026); proposta, nessuna richiesta inviata"
+  titolo: Rendere raggiungibili dal CIG gli atti di adesione e i contratti esecutivi (attuativi di AQ e adesioni PSN), e completare quadro economico e SAL
+  evidenza: "79 CIG ICT incerti per 14,4 mld (attuativi AQ, adesioni PSN): né avviso PVL né link ai documenti; 10 ricerche web per CIG o ente/oggetto: 0 atti con l'importo; quadro economico ANAC presente per 442 CIG su 2.130, SAL per 41; dove c'è conferma gli errori d'importo (8 CIG: 10,1 mld dichiarati, 70.150 euro nel QE)"
+  prova: "tools/verifiche/imbuto_qe_sal.py; esiti/2026-11-06/imbuto/anac-qe-sal.csv; rendiconto imbuto § 2.4"
+  richiesta: "Link obbligatorio all'atto di adesione/contratto esecutivo anche per i CIG derivati; quadro economico e SAL obbligatori e controllati per i CIG sopra soglia; motore di ricerca per CIG nelle sezioni «Bandi di gara e contratti»"
+  perche_serve: "Senza l'atto dell'ente il valore dell'ordinativo non è misurabile per gli attuativi di AQ e PSN, che sono il grosso del residuo ICT"
+  rif: ["#66", "R14", "R49", "R51"]

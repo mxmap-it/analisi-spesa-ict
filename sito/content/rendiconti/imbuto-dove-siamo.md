@@ -27,6 +27,11 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **Soglia:** 500 € toglie 147.715 CIG e una quota d'importo trascurabile. Alzarla a 5.000 € toglierebbe un altro 6 % dei CIG ICT per lo 0,04 % degli euro [V]. **Proposta:** tenere 500 € per la misura e usare 40.000 € solo per separare G3 da G4 (§ 3).
 - **Tetti separati dalla spesa (nuovo in 0.2):** dei 2.130 CIG sopra 50 milioni, 781 sono tetti certi per 178 miliardi, 32 sono contratti aggiudicati e 1.317 restano incerti [V]. Negli strati ICT S3-S6 gli euro dal 2024 scendono da **113,3 a 76,5 miliardi**, di cui 33,6 ancora incerti (§ 2.2).
 - **Tetti, precisione e revisione (nuovo in 0.3):** su un campione stratificato giudicato sugli atti, T4 accordo quadro e T3 non tondo risultano precisi al 100 % (intervallo 80-100 %) e T4 concessione al 73 % (48-89 %). T3 con importo tondo si ferma al 53 % ed è ristretto [V]. Con le regole v2, i dati PVL e la revisione degli incerti ICT (10 errori d'importo per 14,1 mld), **S3-S6 dal 2024 scende a 58,2 miliardi**, di cui 14,4 ancora incerti in 80 CIG (§ 2.3).
+- **Concessioni, quadro economico, CUP (nuovo in 0.4):**
+  - con 30 CIG giudicati, T4 concessione è precisa al 67 %; dopo la regola I6 (concessioni con canoni a carico della PA tornano incerte) sale al 94 % (74-99 %);
+  - il quadro economico ANAC conferma gli errori d'importo: 8 CIG dichiarati per 10,1 mld valgono 70.150 €;
+  - i SAL certificati sono 0,40 mld;
+  - 238 CUP PNRR 1.1 su 312 sono collegati ai CIG: 431 M€ di contributo coprono circa un quinto dei 2,20 mld dei contratti PSN collegati [V] (§ 2.4, § 4.4).
 - **PNRR 1.1 (nuovo in 0.3):** lo spoglio di 15 decreti di finanziamento dà 524 milioni a 274 enti, cioè il 75 % dei ~700 milioni assegnati dichiarati da PSN [V; riferimento R] (§ 4.2).
 - **PSN (nuovo in 0.2):** al netto dei tetti certi, gli impegni ANAC sono 4,38 miliardi, contro un portafoglio ordini di 3,8 miliardi [R]. I ricavi PSN 2023-2025 sono 0,79 miliardi, circa il 18 % degli impegni [R, bilanci PSN] (§ 4.1).
 - **Zenodo 10007545:** fuori, con il motivo scritto. **EuroTender:** non testato, fuori per ora (§ 6).
@@ -140,6 +145,36 @@ Lettura:
 | **S3-S6** | **113,3 mld** | 76,5 | **58,2 mld** | **14,4** |
 | S1 escluso non ICT | 1.286,3 mld | 1.140,0 | 1.132,4 mld | 549,1 |
 
+### 2.4 Concessioni, quadro economico ANAC e atti degli incerti (nuovo in 0.4)
+
+**Secondo campione di T4 concessione** (15 CIG in più, seme 20261107, giudizi nello stesso file) [V]:
+- su 30 CIG i confermati sono **20 (67 %, intervallo 49-81 %)**;
+- le 10 eccezioni sono concessioni in cui i canoni li paga la PA: servizi energetici ed efficientamento, impianti termici e trigenerazione, TPL, infrastrutture tecnologiche comunali, centri cottura;
+- **regola v3 (I6):** una concessione il cui oggetto contiene quei termini torna incerta (35 CIG, 3,7 mld);
+- sui 18 CIG del campione che la regola lascia tetti, i confermati sono **17 (94 %, intervallo 74-99 %)**.
+
+**Quadro economico e SAL ANAC** (`tools/verifiche/imbuto_qe_sal.py`, dataset `quadro-economico` e `stati-avanzamento` del mirror) [V]. È una seconda fonte ANAC, indipendente dall'importo del lotto, e copre 442 dei 2.130 CIG.
+- **Conferma gli errori d'importo:**
+  - la telecamera da 4,7 miliardi ha un quadro economico di 10.000 €;
+  - lo School Net da 648 milioni ne ha 10.000;
+  - i ricambi Hytera da 1,03 miliardi ne hanno 20.000.
+
+  Gli 8 errori con quadro economico valgono in tutto **70.150 €**, contro i 10,1 miliardi dichiarati.
+- **Regola E4:** per un incerto o un errore, se il quadro economico è positivo e inferiore alla metà dell'importo dichiarato, vale il quadro economico. Riguarda 107 CIG + 8 errori, quasi tutti in S1.
+  - Per l'ICT, per esempio: adesione ad AQ cybersicurezza di una ASL da 60 milioni a 0,6; supporto Nutanix da 79,5 milioni a 0,79 (consuntivo); sviluppi del Ministero dell'Interno da 63,3 a 7,9.
+  - La precisione di E4 non è misurata: il quadro economico registra spesso la sola base d'asta.
+- **SAL certificati:** 41 CIG, 0,40 miliardi, di cui 0,15 negli strati ICT. È l'unica misura di **spesa effettivamente eseguita** disponibile in open data per questi CIG.
+
+**Atti degli incerti ICT, ricerca sul web** [V, esito negativo]:
+- 6 ricerche per codice CIG hanno dato **0 risultati pertinenti**: il motore non indicizza i codici, come già visto con i codici PPdF;
+- 4 ricerche per ente e oggetto (ASPAL, ENPAIA, ARIA, Careggi) hanno dato 0 determine con l'importo del CIG. Si trovano solo atti di altri enti o del padre;
+- con una resa così bassa, la ricerca uno per uno non è proseguita: costerebbe ~80 ricerche per una resa attesa vicina a zero. La via utile è l'accesso agli atti dell'ente, cioè «Bandi di gara e contratti» o albo, per le stazioni appaltanti dei 79 CIG (R54).
+
+**Strati dal 2024 (v3):**
+- S3-S6 resta a **58,3 miliardi**, di cui 14,4 incerti in 79 CIG ICT;
+- S5 scende a 41,6 miliardi;
+- S1 escluso scende da 1.132 a 998 miliardi, per effetto di E4 sulle forniture non ICT (precisione da misurare).
+
 ## 3. Distribuzione degli importi e soglia
 
 Il calcolo riguarda i CIG che restano dopo S1: strati S3-S6, dal 2024, in tutto 292.722 CIG [V].
@@ -240,6 +275,19 @@ Decisione di Fabio del 7/11: solo i primi 1.000 CIG di G3 per importo (stima 360
 - **Consumo:** G3 a 0,32 USD-eq per CIG, cioè circa 320 sui 1.000 (stima 360, guardia a 432); G1 a circa 0,70 per CIG, cioè circa 140 in tutto. Con il tetto di 100 USD-eq al giorno il giro finisce in circa 5 giorni.
 - **Ostacoli:** in 38 CIG, 16 documenti non pertinenti, 7 errori 404, 4 login, 3 errori 403, 1 PDF illeggibile (R53).
 
+### 4.4 PNRR 1.1: decreto mancante e collegamento CUP → CIG (nuovo in 0.4)
+
+- **Decreto aggiunto:** finestra 3 delle «altre PAC» di giugno 2023, 14 enti per 13,4 M€. L'abbiamo trovato su iss.it, non sulla pagina della Presidenza. I decreti sono ora **16, tutti coerenti** con i totali che dichiarano, per **537,6 M€ su 312 CUP e 288 enti**: il 77 % dei ~700 M€ [R]. Il resto (~160 M€) non è stato trovato in rete (R50).
+- **CUP → CIG** (`tools/verifiche/pnrr11_cup_cig.py`, dataset ANAC `cup` del mirror):
+  - **238 CUP su 312** hanno almeno un CIG, per 435 M€ finanziati (81 %), con 322 CIG;
+  - 284 di quei CIG sono nel residuo S6, quasi tutti PSN;
+  - **231 CUP sono legati a CIG PSN**: finanziati 431 M€, contro **2,20 mld** di importo dei CIG PSN collegati [V].
+- **Lettura:**
+  - il contributo PNRR copre circa **un quinto** del valore dei contratti PSN che finanzia;
+  - in ANAC il valore del CIG è il contratto di utenza pluriennale, oppure, per qualche adesione, il valore della convenzione;
+  - il resto lo paga l'ente con fondi propri negli anni del contratto.
+- **Da fare:** confrontare, per gli stessi CIG, il finanziato con il SAL e con i ricavi PSN per ente, che oggi non sono pubblicati (R50).
+
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
 Dal 2024 [V, `esiti/pvl-link-cig/2026-11-04/`]:
@@ -310,8 +358,8 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 | # | cosa | metodo | costo stimato | chi deve agire |
 |---|---|---|---|---|
 | 1 | **Misurare la precisione di S1** (3,2 M CIG, 85,9 %), che oggi è un'ipotesi | campione casuale di ~400 CIG di S1 annotato (volontari + via 6 a regole); con 0 errori il limite superiore Wilson è ~1 % | ~400 annotazioni, qualche ora di volontari; token trascurabili | noi |
-| 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT . **0.3** (§ 2.3): precisione di T3 e T4 misurata, regole v2, valori PVL; S3-S6 a 58,2 mld; restano 80 CIG ICT incerti per 14,4 mld (attuativi AQ e adesioni PSN senza avviso PVL) | prossimo passo: determina di adesione o contratto esecutivo degli 80, ente per ente; secondo campione per T4 concessione | lettura atti, ~80 ricerche | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
-| 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA . **0.3** (§ 4.2): decreti PNRR 1.1 spogliati, 524 M€ su 274 enti (75 % del riferimento) | prossimo passo: decreti mancanti (~176 M€), collegamento CUP → CIG, PPdF dei 9 CIG PSN incerti | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
+| 2 | **Separare spesa e massimali**. **Fatto in 0.2** (§ 2.2): tolti 781 tetti; S3-S6 scende da 113,3 a 76,5 mld; restano incerti 1.317 CIG per 612,8 mld, di cui 33,6 negli strati ICT . **0.3** (§ 2.3): precisione di T3 e T4 misurata, regole v2, valori PVL; S3-S6 a 58,2 mld; restano 80 CIG ICT incerti per 14,4 mld (attuativi AQ e adesioni PSN senza avviso PVL) . **0.4** (§ 2.4): secondo campione T4 concessione e regola I6; quadro economico e SAL ANAC; la ricerca degli atti per CIG non rende (0 su 10) | prossimo passo: atti dalle sezioni «Bandi di gara e contratti» delle stazioni appaltanti dei 79 CIG; misurare la precisione di E4 | lettura atti per ente; accesso civico solo con l'ok di Fabio | noi; **ANAC/Consip** per l'ordinato per CIG (R14, R37, R49) |
+| 3 | **PSN**. **Fatto in 0.2** (§ 4.1): impegni ANAC 4,38 mld contro un portafoglio di 3,8 [R] e ricavi 2023-2025 di 0,79 [R]; PPdF pubblicati dal 3,2 % delle PA . **0.3** (§ 4.2): decreti PNRR 1.1 spogliati, 524 M€ su 274 enti (75 % del riferimento) . **0.4** (§ 4.4): 16 decreti, 537,6 M€; CUP → CIG per 238 CUP | prossimo passo: ~160 M€ di decreti non trovati; PPdF dei 9 CIG PSN incerti | lettura dei PDF, decine di USD-eq | noi; **DTD/PSN** per piani e consuntivi per ente (R20, R39, R50) |
 | 4 | **G1 + G3 con la via 6** (12.824 CIG, 7,8 mld) | G1 (209) a mano; G3 in ordine d'importo con il modello e gli atti dal link PVL (73 % raggiungibile) | ~1,8 USD-eq per 5 CIG (giro 2): G3 intero ≈ 4.500 USD-eq, oltre 10 settimane di tetto (400/settimana); i primi 1.000 CIG per importo ≈ 360 USD-eq | noi; **enti** per i link che non funzionano (R31-R33) |
 | 5 | **Licenze e marchi «cloud da accertare»** (3.515 CIG, 6,5 mld) e controprova dal censimento AgID | lettura dei contratti Microsoft (decisione del 3/11) e Oracle; richiesta dei dati del censimento 2026 | lettura, centinaia di USD-eq; accesso civico solo dopo l'ok di Fabio | noi; **AgID** (R48); **ANAC/ACN** per un campo strutturato su prodotto e modalità (R21) |
 
@@ -326,6 +374,8 @@ python tools/verifiche/imbuto_tetti.py         # tetti, spesa e incerti sopra 50
 python tools/verifiche/imbuto_psn.py           # PSN: impegni ANAC contro bilanci PSN e piani dei fabbisogni
 python tools/verifiche/imbuto_revisione.py     # precisione T3/T4 (Wilson), regole v2, strati ricalcolati
 python tools/verifiche/pnrr11_decreti.py       # PNRR 1.1: finanziati per ente dai decreti, con controllo interno
+python tools/verifiche/pnrr11_cup_cig.py       # PNRR 1.1: CUP → CIG e confronto con i contratti PSN
+# sul server: imbuto_qe_sal.py (quadro economico e SAL dal mirror) prima di imbuto_revisione.py
 ```
 
 Sul server, `imbuto_tetti.py --rigenera` rilegge il mirror ANAC (righe ≥ 45 M€, aggiudicazioni) e riscrive `tetti-cig.csv`. `imbuto_psn.py --rigenera` ricontrolla gli sha256 dei bilanci PSN e cerca le cifre nel loro testo.
@@ -377,4 +427,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.1 | 2026-11-06 | prima bozza per Fabio: strati, soglia, gruppi, link PVL per strato, Zenodo/EuroTender, censimento AgID, top-5 |
 | 0.2 | 2026-11-06 | § 2.2: tetti e spesa per i 2.130 CIG sopra 50 M€, con la via di ogni CIG e gli strati ricalcolati; § 4.1: PSN, impegni contro bilanci 2024-2025 e piani dei fabbisogni; top-5 punti 2 e 3 aggiornati; R49 e R50 |
 | 0.3 | 2026-11-06 | § 2.3: precisione di T3 e T4 su un campione stratificato (Wilson) e sul PVL; regole v2 (T3 tondo ristretto, T5/E2 dal PVL); revisione degli incerti ICT (errori d'importo, lotti ripetuti); S3-S6 a 58,2 mld. § 4.2: decreti PNRR 1.1 per ente. R51 |
-| 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli |
+| 0.4 | 2026-11-06 | § 4.3: via 6 su G1 (196 CIG unici) e primi 1.000 G3, in corso, proposte da revisionare; doppioni di CIG in ict.csv (R53); § 9.1: prompt portabile e pacchetto di riproduzione su altri modelli. § 2.4: secondo campione T4 concessione e regola I6, quadro economico e SAL ANAC (E4), ricerca degli atti degli incerti (esito negativo); § 4.4: decreto PNRR mancante e CUP → CIG; R54 |
