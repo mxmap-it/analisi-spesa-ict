@@ -617,3 +617,15 @@
   perche_serve: "Il CPV è il primo filtro di perimetro: un codice mancante costringe a leggere il testo di ogni contratto"
   metrica: "Quota di CIG con CPV 99999999 o vuoto = 0 (oggi 8,3 %)"
   rif: ["#44", "#59", "R21"]
+
+- id: R61
+  destinatario: MEF-RGS (BDAP open data)
+  tipo: difetto
+  stato: verificato
+  titolo: Catalogo CKAN di BDAP con count sbagliato e pagine che vanno in timeout a caso
+  evidenza: "Il 7/11/2026 package_search?rows=250&start=N restituisce in result.count la dimensione della pagina (250), non il totale. Le pagine con offset alto falliscono a caso (502, oppure timeout dopo 186-300 s) sia dal server sia da un portatile su un'altra rete, e la stessa pagina riesce al tentativo successivo in circa 33 s: non è un blocco per IP. Il catalogo completo sono 3.684 dataset e 11.025 risorse dichiarate (circa 60 GB). I metadati di package e organization sono stringhe in repr Python, non JSON."
+  prova: "Pagine archiviate con sha256 (archivio, URL package_search?rows=250&start=0..3500, acquisite il 7/11/2026); tools/acquisizione/bdap_metadati.sh"
+  richiesta: "count corretto; paginazione stabile o un dump completo del catalogo (data.json DCAT-AP_IT); metadati in JSON valido"
+  perche_serve: "Senza count e con pagine instabili non si può verificare che un mirror del catalogo sia completo"
+  metrica: "result.count uguale al numero di dataset; zero errori 5xx su un giro completo della paginazione"
+  rif: ["#25"]
