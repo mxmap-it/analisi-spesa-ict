@@ -28,6 +28,11 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 import requests
+# Monitoraggio PVL/AT (clone ~/visibilita-pa): blocchi, firme anti-bot, robots.txt e piattaforme AT si riusano da lì.
+os.environ.setdefault("ARCHIVIO_ROOT", str(Path(os.environ.get("SPESAICT_BASE", Path(__file__).resolve().parents[2])) / "archivio"))
+sys.path.insert(0, os.environ.get("VISIBILITA_PA", str(Path.home() / "visibilita-pa")))
+from visibilita_pa.core import robots as VROBOTS, platforms as VPIATT  # noqa: E402
+from visibilita_pa.core.probes import extended as VEXT  # noqa: E402
 
 RADICE = Path(__file__).resolve().parent.parent.parent
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36 "
@@ -66,12 +71,24 @@ def prendi(s, u, out):
     return r, h, testo
 
 
-def blocco(r, testo):
+def blocco_v1(r, testo):
+    """Regole proprie fino al 7/11/2026, tenute solo per il confronto (tools/verifiche/blocchi_vpa_confronto.py)."""
     if "login" in r.url.lower() and "public" not in r.url.lower(): return "login"
     if r.status_code in (401, 403, 429): return f"HTTP {r.status_code}"
     if re.search(r"login.html", r.text) and len(testo) < 1500: return "login"   # home che rimanda (anche via JS) al login
     # FriendlyCaptcha (frc-*) di PortaleAppalti protegge solo i moduli di accesso: non è un blocco se la pagina ha contenuto
     if SEGNI_BLOCCO.search(testo[:20000]) and not ("frc-" in r.text and len(testo) > 2000): return "anti-bot"
+    return ""
+
+
+def blocco(r, testo):
+    """Login e HTTP come prima; anti-bot con visibilita_pa (extended.riconosci_blocco: firme dei vendor, CAPTCHA,
+    challenge JS, con le stesse esclusioni per i moduli di accesso nelle pagine normali)."""
+    if "login" in r.url.lower() and "public" not in r.url.lower(): return "login"
+    if r.status_code in (401, 403, 429): return f"HTTP {r.status_code}"
+    if re.search(r"login.html", r.text) and len(testo) < 1500: return "login"
+    b = VEXT.riconosci_blocco(r.status_code, dict(r.headers), r.text, [])
+    if b["vendor_blocco"] or b["challenge_js"]: return "anti-bot"
     return ""
 
 
@@ -258,15 +275,26 @@ ROBOTS = {}
 
 def robots_ok(u):
     p = urlsplit(u); k = f"{p.scheme}://{p.netloc}"
+    """robots.txt con il parser del monitoraggio AT (visibilita_pa.core.robots, RFC 9309); agente «analisi-spesa-ict»."""
     if k not in ROBOTS:
-        rp = urllib.robotparser.RobotFileParser()
         try:
             attendi(k + "/robots.txt"); r = requests.get(k + "/robots.txt", headers={"User-Agent": UA}, timeout=20)
-            rp.parse(r.text.splitlines() if r.status_code == 200 else [])
+            ROBOTS[k] = VROBOTS.analizza(r.text if r.status_code == 200 else "")
         except Exception:
-            rp.parse([])
-        ROBOTS[k] = rp
-    return ROBOTS[k].can_fetch(UA, u)
+            ROBOTS[k] = VROBOTS.analizza("")
+    return VROBOTS.consentito(ROBOTS[k], "analisi-spesa-ict", p.path + ("?" + p.query if p.query else "") or "/")[0]
+
+
+def robots_ok_v1(u):
+    """Parser della libreria standard, fino al 7/11/2026: solo per il confronto."""
+    p = urlsplit(u); k = f"{p.scheme}://{p.netloc}"
+    rp = urllib.robotparser.RobotFileParser()
+    try:
+        r = requests.get(k + "/robots.txt", headers={"User-Agent": UA}, timeout=20)
+        rp.parse(r.text.splitlines() if r.status_code == 200 else [])
+    except Exception:
+        rp.parse([])
+    return rp.can_fetch(UA, u)
 
 
 # Eccezione AGENTS.md §3 (Fabio, 3/11/2026): per le sezioni «Amministrazione trasparente» e gli atti obbligatori robots.txt
@@ -280,8 +308,10 @@ SOLO_HOST = os.environ.get("SOLO_HOST", "")   # regex sugli host: limita un ripa
 
 
 def at_esente(u):
+    """Host di software AT: riconoscimento per host di visibilita_pa (platforms.riconosci); in più gli host che le sue
+    regole non coprono ancora (config/at_robots_esenti.txt: cloud.urbi.it, sicopat2; proposta da portare là)."""
     h = urlsplit(u).netloc.lower()
-    return any(h == d or h.endswith("." + d) for d in AT_HOST)
+    return VPIATT.riconosci(h, "", {}).get("prova") == "host" or any(h == d or h.endswith("." + d) for d in AT_HOST)
 
 
 def ora_at():
