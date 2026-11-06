@@ -481,3 +481,16 @@
   nota: "Alcune righe sono pagine raggiunte seguendo link da home/AT (es. cris.unibo.it, home di unitn/unito/unifi): da riconfermare a mano prima di qualunque comunicazione (AGENTS.md §3)"
   verifica: "Da verificare e validare dal Monitoraggio PVL e Amministrazione trasparente (mxmap-it/monitoraggio-pvl-e-amministrazione-trasparente), come R45"
   rif: ["#62", "R45"]
+
+- id: R47
+  destinatario: ANAC
+  tipo: difetto
+  stato: verificato
+  titolo: I nominativi dei RUP («Incaricati» della BDNCP) non sono negli open data e la scheda CIG che li mostra è dietro CAPTCHA
+  evidenza: "Il 6/11/2026 nessuno dei 70 dataset CKAN di dati.anticorruzione.it contiene i RUP (CSV cig, smartcig, aggiudicazioni, stazioni-appaltanti, pubblicazioni, centri-di-costo senza nomi; OCDS bulk senza contactPoint; API PVL senza RUP). La scheda pubblica dettaglio-cig.anticorruzione.it rende la sezione «Incaricati» (NOME, COGNOME, DESCRIZIONE_RUOLO) ma runtime-config.js imposta CAPTCHA_ENABLED: true (mosparo) e l'API consultaCIG richiede il token; non aggirato"
+  prova: report/convenzioni/accesso-civico/prove-anac-incaricati/SHA256SUMS (index-B7M5ZtB7.js 1d737e66…, runtime-config.js 827e4555…)
+  richiesta: "Pubblicare la tabella «Incaricati» (CIG, ruolo, nome, cognome, date) nei dataset aperti BDNCP (art. 28 c. 3 d.lgs. 36/2023; art. 7 d.lgs. 33/2013); togliere il CAPTCHA dalla consultazione di dati pubblici, o offrire un'API/scarico massivo senza CAPTCHA"
+  politica: "Un CAPTCHA sulla consultazione di dati pubblici per legge è un ostacolo al riuso (art. 7 d.lgs. 33/2013) e, per analogia, una «soluzione tecnica» del tipo vietato dall'art. 9 c. 1"
+  perche_serve: "Il RUP (art. 15 c. 3 d.lgs. 36/2023: nominativo nel bando) è il destinatario naturale delle segnalazioni sui link PVL; senza il dato aperto si ricava solo dagli atti o con l'accesso civico"
+  nota: "Istanza di accesso civico preparata, NON inviata: report/convenzioni/accesso-civico/bozze/anac-incaricati-bdncp.md; del. 261/2023 da leggere [R]"
+  rif: ["#65"]
