@@ -54,27 +54,27 @@
   "G3": {
    "cig_totali": 1000,
    "euro_totali": 1546339517,
-   "cig_classificati": 180,
-   "euro_classificati": 614639273,
+   "cig_classificati": 185,
+   "euro_classificati": 626131937,
    "confidenza": {
-    "media": 141,
-    "bassa": 24,
+    "media": 145,
+    "bassa": 25,
     "alta": 15
    },
-   "fonte_primaria": 20,
-   "con_documento_archiviato": 69,
+   "fonte_primaria": 21,
+   "con_documento_archiviato": 72,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 99,
-     "euro": 332924394
+     "cig": 101,
+     "euro": 337516310
     },
     "A:incerto | B:incerto": {
-     "cig": 48,
-     "euro": 167199320
+     "cig": 50,
+     "euro": 171809089
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 27,
-     "euro": 95591196
+     "cig": 28,
+     "euro": 97882176
     },
     "A:incluso-certo | B:incluso-certo": {
      "cig": 6,
@@ -147,8 +147,8 @@
     "euro": 113304253
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 64,
-    "euro": 219620141
+    "cig": 66,
+    "euro": 224212057
    },
    "incluso certo cloud, giurisdizione IT (proposta via 6)": {
     "cig": 3,
@@ -159,8 +159,8 @@
     "euro": 9836664
    },
    "resta incerto (S6)": {
-    "cig": 75,
-    "euro": 262790516
+    "cig": 78,
+    "euro": 269691265
    }
   },
   "CTL": {
@@ -232,9 +232,9 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 168,
+  "cig_con_ostacoli": 169,
   "per_tipo": {
-   "altro": 138,
+   "altro": 139,
    "403": 40,
    "404": 35,
    "login": 31,
@@ -269,8 +269,8 @@
    "usd_eq": 138.17
   },
   "imbuto-g3": {
-   "chiamate": 36,
-   "usd_eq": 61.85
+   "chiamate": 37,
+   "usd_eq": 63.32
   },
   "riproduzione-v1": {
    "chiamate": 62,
@@ -279,8 +279,8 @@
   "g3_stima": {
    "stima_1000": 360,
    "limite_+20%": 432,
-   "per_cig": 0.344,
-   "proiezione_1000": 343.6
+   "per_cig": 0.342,
+   "proiezione_1000": 342.2
   }
  }
 }
