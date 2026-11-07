@@ -1,0 +1,189 @@
+                             CAPITOLATO SPECIALE D’APPALTO
+                               PROCEDURA TELEMATICA APERTA
+                                         APPALTO DI SERVIZI
+                                  ai sensi degli artt. 70, 71 del D.Lgs. 36/2023
+
+
+OGGETTO: Fornitura di una suite applicativa gestionale erogata in modalità Software as a Service
+presente sul Catalogo delle Infrastrutture digitali e dei Servizi cloud dell’Agenzia per la Cybersicurezza
+nazionale per il Comune di Tarquinia (VT) in modalità Cloud – CIG BCBA672633
+CPV 72262000 – Servizi di sviluppo di software
+Sommario
+
+  1. Oggetto dell’appalto................................................................................................................................................ 4
+     1.1 Descrizione generale........................................................................................................................................ 4
+     1.2 Definizioni....................................................................................................................................................... 5
+  2 Contesto di riferimento........................................................................................................................................... 6
+  3 Requisiti generali della soluzione informatica.........................................................................................................6
+     3.1 Modalità di fornitura......................................................................................................................................... 6
+     3.2 Tutela dei dati e Sicurezza...............................................................................................................................7
+         3.2.1 Misure organizzative generali..................................................................................................................... 7
+         3.2.2 Misure tecniche generali............................................................................................................................. 8
+     3.3 Interoperabilità................................................................................................................................................. 8
+     3.4 Integrazione applicativa................................................................................................................................... 8
+     3.5 Firma digitale...................................................................................................................................................9
+     3.6 Accessibilità.....................................................................................................................................................9
+     3.7 Interfaccia Utente........................................................................................................................................... 10
+     3.8 Gestione dei dati.............................................................................................................................................10
+     3.9 Backup e restore.............................................................................................................................................10
+     3.10 Scalabilità...................................................................................................................................................... 11
+     3.11 Usabilità......................................................................................................................................................... 11
+     3.12 Integrazione con le piattaforme di autenticazione utenti................................................................................12
+     3.13 Funzionalità di LOG...................................................................................................................................... 12
+  4 Documentazione a corredo....................................................................................................................................12
+  5 Requisiti funzionali............................................................................................................................................... 13
+  6 Piano delle attività................................................................................................................................................. 13
+  7 Attivazione del servizio e configurazione della soluzione.....................................................................................13
+  8 Recupero, normalizzazione e migrazione dati.........................................................................................................14
+  9 Pre-produzione e test di verifica............................................................................................................................14
+  10 Personalizzazione..................................................................................................................................................14
+  11 Collaudo................................................................................................................................................................15
+  12 Formazione del personale......................................................................................................................................15
+     12.1 Formazione rivolta agli operatori................................................................................................................... 16
+     12.2 Formazione rivolta agli amministratori del sistema........................................................................................16
+  13 Amministratore di sistema....................................................................................................................................17
+  14 Help Desk e Assistenza......................................................................................................................................... 17
+  15 Manutenzione........................................................................................................................................................18
+     15.1 Manutenzione correttiva.................................................................................................................................18
+     15.2 Manutenzione adeguativa...............................................................................................................................18
+     15.3 Manutenzione evolutiva................................................................................................................................. 19
+16 Referente tecnico – Responsabile Esterno al trattamento dei dati personali.........................................................19
+17 Importo posto a base di gara – Modalità di pagamento........................................................................................19
+   17.1 Quadro Economico…………………………………………………………………………………………..20
+18 Cessazione del servizio e attività di fine contratto (Exit Management).................................................................20
+19 Livelli di Servizio..................................................................................................................................................21
+   19.1 Disponibilità del servizio............................................................................................................................... 21
+   19.2 Esclusioni.......................................................................................................................................................22
+   19.3 Penalità.......................................................................................................................................................... 22
+20 Durata................................................................................................................................................................... 23
+21 Recesso anticipato ed e Exit Strategy (Portabilità dei dati)..………………………………………………………23
+22 Risoluzione del Contratto......................................................................................................................................24
+23 Cauzione definitiva............................................................................................................................................... 24
+   23.1 Cauzione ………………………………………………………………………………………………………24
+   23.2 Polizze assicurative e coperture danni…………………………………………………………………………. 25
+24 Divieto di cessione del Contratto-Subappalto-Cessione dei crediti....................................................................... 25
+25 Revisione prezzi e rinegoziazione......................................................................................................................... 26
+26 Proprietà dei dati e della licenza d’uso................................................................................................................... 27
+27 Certificazioni ...……………………………………………………………………………………………………. 27
+28 Tracciabilità dei flussi finanziari........................................................................................................................... 27
+29 Forma della manifestazione della volontà.............................................................................................................. 28
+30 Foro competente....................................................................................................................................................28
+31 Modifica del Contratto in corso di esecuzione....................................................................................................... 28
+32 Norme di rinvio..................................................................................................................................................... 28
+33 Codice di comportamento......................................................................................................................................28
+1.    Oggetto dell’appalto
+1.1       Descrizione generale
+Il presente capitolato ha per oggetto le specifiche tecniche per il Servizio di fornitura di una suite applicativa gestionale erogata in
+modalità Software as a Service censita nel catalogo dei servizi cloud qualificati dell’Agenzia per la Cybersicurezza nazionale (da ora
+ACN) per il Comune di Tarquinia
+La suite dovrà implementare due macro-aspetti:
+        interno, legato ai servizi forniti al personale del Comune, attraverso la piena interoperabilità degli applicativi, la
+         costituzione e la gestione di banche dati, la standardizzazione dei procedimenti, il monitoraggio e la misurazione degli
+         stessi;
+        esterno, legato ai servizi on-line forniti alla cittadinanza, tenendo conto di accessibilità, visibilità e trasparenza dei
+         procedimenti e degli atti.
+La fornitura dovrà essere “chiavi in mano” ossia inclusiva di tutti i servizi riportati nel presente capitolato ed essere pienamente
+compatibile con l’infrastruttura tecnologico-informatica dell’Ente. Dovrà inoltre rispettare quanto disposto sia dal Codice
+dell’Amministrazione Digitale (D.Lgs. 82/2005 aggiornato alla Legge n. 41/2023) sia dalla normativa vigente per le Pubbliche
+Amministrazioni in materia di:
+    a) privacy e trattamento dei dati (Regolamento (UE) 2016/679 e ss.mm.ii e 196/2003 e ss.mm.ii nonché le disposizioni e le
+         direttive del Garante per la Privacy);
+    b) firma digitale, sicurezza informatica, validazione temporale dei documenti informatici;
+    c) riuso e cooperazione applicativa;
+    d) utilizzo di software con codice a sorgente aperto;
+    e) rappresentazione di dati e documenti in formato aperto;
+    f) accessibilità dei dati, delle informazioni e degli strumenti informatici;
+    g) documento informatico, gestione documentale, conservazione digitale a norma e protocollo;
+    h) pagamenti on line, fatturazione informatica, ordinativo informatico e servizi di tesoreria;
+    i) trasparenza e anticorruzione;
+    j) forniture e contratti pubblici, nel rispetto delle direttive, dei vincoli e delle specifiche tecniche fornite dall’Autorità di
+         Vigilanza – ANAC;
+    k) normativa e direttive di riferimento per ciascuna delle aree gestionali di cui all’ALLEGATO A.
+La fornitura di cui al presente capitolato dovrà inoltre rispettare tutte le normative nazionali e comunitarie, nonché le direttive
+regionali in materia di digitalizzazione, semplificazione e informatizzazione di tutti i procedimenti e dei flussi gestionali.
+La fornitura comprende inoltre l’erogazione dei seguenti servizi, senza comportare alcun onere a carico del Comune:
+        Attivazione e configurazione completa delle soluzioni oggetto del presente appalto (Suite applicativa gestionale)
+        L’elenco completo dei servizi attivati e delle customizzazioni è riportato nell’ALLEGATO A.
+        Recupero e normalizzazione dello storico completo dei dati in uso alle procedure attuali e migrazione nei nuovi archivi
+         applicativi;
+        Recupero e normalizzazione dei dati pubblicati all’interno dell’attuale sito Amministrazione Trasparente concordando i
+         contenuti da mantenere;
+         Mantenimento/migrazione sulla nuova piattaforma gestionale, di tutte le procedure attualmente in uso all’Ente, compresi
+          tutti i workflow, i web service per lo scambio di dati con software di terze parti , tutti i servizi di pagamento gestiti con
+          PagoPA, il servizio di Conservazione Sostitutiva a Norma, l’Albo Pretorio on Line, l’Amministrazione Trasparente, i
+          servizi attivati con il PNRR (PDND, SEND, AppIO, ANSC, ANNCSU, ANPR) l’area collaborativa, l’interfaccia con i
+          dispositivi marcatempo, ecc.;
+Tali servizi vengono riassunti in modo puntuale nell’ALLEGATO A.
+         Attivazione e configurazione iniziale della piattaforma del servizio SaaS, nel rispetto dell’organizzazione funzionale
+          dell’Ente, presso la server farm del fornitore qualificata da ACN, preferibilmente insistente in Italia (es. PSN) o
+          comunque soggetto a giurisdizione della Unione Europea;
+                                                                  4
+         Servizi di personalizzazione degli applicativi, quando difformi rispetto ai processi di lavoro dell’Ente;
+         Servizi di formazione del personale dell’Ente all’uso dei nuovi applicativi e dei successivi aggiornamenti;
+         Servizi di Help Desk e Assistenza, manualistica e FAQ online;
+         Servizi di manutenzione correttiva e adeguativa alle nuove normative e/o tecnologie;
+         Servizi di manutenzione evolutiva;
+         Servizi di fornitura, gestione e amministrazione dell’infrastruttura e dei servizi Cloud (comprendendo anche le
+          impostazioni delle politiche di Backup, Disaster Recovery, Business continuity, ecc.);
+         Interfaccia amministrativa semplice, intuitiva ed interattiva che permetta di impostare i privilegi sia a oggetti “utenti” che
+          a oggetti “gruppi di utenti”.
+         Al fine del raggiungimento degli obiettivi dell’Amministrazione aggiudicatrice, dovrà essere garantito che la soluzione
+          proposta sia “WEB oriented”/”WEB based”, erogata in modalità CLOUD computing con accesso diretto alla banca dati
+          solo tramite browser (“any browser” ai sensi anche della L. 4/2004 e ss.mm.ii.) nel rispetto dei requisiti e dei vincoli di
+          compatibilità con l’infrastruttura di rete dell’Amministrazione aggiudicatrice. In tal senso le applicazioni offerte devono
+          garantire un impiego di banda e connettività contenuti. Per soluzione “WEB Oriented”/WEB based”, quindi, s’intende
+          una soluzione completamente fruibile attraverso browser, seppur con eventuali ausili installabili, purché funzionante in
+          qualunque ambiente operativo (any-system).
+
+1.2       Definizioni
+Di seguito si riportano alcune definizioni utili ai fini della lettura del presente documento:
+     CAD: Codice dell’amministrazione digitale, D.Lgs. 82/05 e ss.mm.ii;
+         GDPR: General Data Protection Regulation - Regolamento UE 2016/679;
+         CNS: Carta Nazione dei Servizi;
+         SPID: Sistema Pubblico di Identità Digitale;
+         DPO: Data Protection Officer;
+         CSP: Cloud Service Provider;
+         L.: Legge;
+         D.L.: Decreto Legge;
+         D.Lgs.: Decreto Legislativo;
+         D.P.R: Decreto del Presidente della Repubblica;
+         Codice o Codice dei contratti: il D.Lgs 36/2023;
+         Amministrazione aggiudicatrice, denominata altresì Amministrazione Comunale, Amministrazione, Comune, Ente: il
+          soggetto giuridico che indice la gara e che sottoscriverà il contratto;
+         Operatore Economico (OE) denominato altresì ditta appaltatrice, impresa appaltatrice, ditta aggiudicataria,
+          Aggiudicatario: il soggetto giuridico (singolo, raggruppato o consorziato), comunque denominato ai sensi dell’articolo 45
+          del Codice dei contratti, che si è aggiudicato l’appalto;
+         RUP: Responsabile unico del progetto di cui all’articolo 15, del Codice dei contratti;
+         DEC: Direttore dell’esecuzione, soggetto incaricato dall’Amministrazione aggiudicatrice, ai sensi dell’articolo 114 del
+          Codice, il quale provvede al coordinamento, alla direzione e al controllo tecnico- contabile dell'esecuzione del contratto
+          stipulato dall’Amministrazione aggiudicatrice assicurando la regolare esecuzione;
+         DURC: il Documento unico di regolarità contributiva.
+         Portale Istituzionale: per portale istituzionale, nel presente capitolato, si intende l’attuale portale dei servizi raggiungibile
+          all’URL https://servizionline.comune.tarquinia.vt.it/cmstarquinia/servizionline.aspx con i servizi ivi presenti. È ESCLUSO
+          dall’oggetto del presente capitolato il Sito Istituzionale https://www.comune.tarquinia.vt.it/
+
+
+
+                                                                   5
+2     Contesto di riferimento
+La rete telematica del Comune di Tarquinia è basata su clients fisici con sistema operativo Windows 10 e Windows 11. Le
+postazioni di lavoro totali sono circa 110.
+Il Comune di Tarquinia attualmente utilizza, per gli ambiti rimessi in gara, la suite HyperSIC di APKappa in ambiente Cloud di
+tipo “Software as a Service”, è fruita da circa 150 utenti.
+Per quanto attiene alla infrastruttura tecnologica disponibile presso l’ente richiedente si rimanda all’ALLEGATO B.
+L’applicativo attuale si interfaccia con alcuni sistemi esterni come, a titolo esemplificativo, il software per gare telematiche
+“Acquisti Telematici” della ditta DigitalPA S.r.l., pertanto, dovrà essere garantita la continuità operativa di tutte le
+interoperabilità.
+L’applicativo attuale è anche integrato in PDND con i seguenti servizi: ANPR – ANSC – SEND – ANNCSU,
+Segreteria/Protocollo-Atti Protocollati, Servizi a domanda individuale.
+Il sito internet istituzionale è https://www.comune.tarquinia.vt.it
+
+3     Requisiti generali della soluzione informatica
+Di seguito si definiscono i requisiti generali richiesti per la suite software, comprensiva di tutti i moduli e servizi richiesti
+nell’ALLEGATO A. Tali requisiti sono da intendersi obbligatori.
+
+3.1       Modalità di fornitura
+Il CSP si impegna a fornire i servizi cloud oggetto della presente fornitura nel pieno rispetto della Strategia Cloud Italia e delle
+disposizioni di cui all'art. 33-septies del D.L. n. 179/2012, nonché ai sensi del D.Lgs. n. 82/2005 (CAD) e ss.mm.ii. L’OE garantisce che
+i servizi resi siano conformi al Regolamento dell'Agenzia per la Cybersicurezza Nazionale (ACN) in materia di infrastrutture digitali e
+servizi cloud per la Pubblica Amministrazione. In particolare, i medesimi servizi dovranno risultare regolarmente qua
