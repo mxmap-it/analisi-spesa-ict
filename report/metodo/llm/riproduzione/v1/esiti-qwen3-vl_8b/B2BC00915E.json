@@ -1,0 +1,46 @@
+{
+ "cig": "B2BC00915E",
+ "modello": "qwen3-vl:8b",
+ "fornitore": "ollama",
+ "prompt_sha256": "5c9e606bf474e978c392e7ceaa414bb1ffafe64a1480630d750c97ca99e1a106",
+ "ingresso_sha256": "95723f410db9b3e7003d8b720f47da3ec0de433dbb4a24103c2ac2e637f59a0e",
+ "quando": "2026-11-07T07:52:05+00:00",
+ "uscita": {
+  "cig": "B2BC00915E",
+  "asse_a": {
+   "stato": "escluso-certo",
+   "e_cloud": "n",
+   "ict": "n",
+   "servizio": "lavori-non-ict"
+  },
+  "asse_b": {
+   "stato": "non-applicabile",
+   "provider_prodotto": "COMPAGNIA GENERALE RIPRESEAEREE - S.P.A. ; E-GEOS  -  S.P.A. ; GEOMATICS RESEARCH & DEVELOPMENT S.R.L. ; IRS ITALIAN REMOTE SENSING S.R.L. ; MER MEC ENGINEERING S.R.L.",
+   "giurisdizione": "IT"
+  },
+  "dipendenze_tecnologiche": [
+   ""
+  ],
+  "confidenza": "alta",
+  "prove": [
+   {
+    "sha256": "oggetto-bdncp",
+    "pagina": null,
+    "citazione": "PROCEDURA DI GARA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI REALIZZAZIONE DEL MODELLO DIGITALE DEL TERRENO NAZIONALE DA RILIEVO LIDAR AEREO E DEL DATABASE GRAVIMETRICO E MODELLO DEL CAMPO DELLA GRAVITÀ NAZIONALE"
+   }
+  ],
+  "deduzioni": [
+   "Il servizio richiede rilievi LiDAR aereo e elaborazione di database gravimetrici, attività fisiche di rilevamento geodetico non legate a infrastrutture cloud"
+  ],
+  "documenti_non_pertinenti": [
+   "e22945c018b4ce0d7688371aa147bf5808bb1c0753d790b9974e6602aa453ddb"
+  ],
+  "documento_risolutivo": "",
+  "motivazione": "Il contratto riguarda lavori fisici di rilevamento geodetico (CPV 71354100-5) e non servizi cloud, come confermato dall'oggetto univoco."
+ },
+ "errori_schema": [],
+ "prove_letterali": [
+  true
+ ],
+ "valida": true
+}
