@@ -1,0 +1,2313 @@
+03/09/2020   Manuale Utente SMU
+
+
+
+
+                                  Rev. 3.0
+                                                                      Sommario
+
+
+1.     Introduzione .............................................................................................................................................. 3
+2.     Modalità generali di utilizzo del SMU ...................................................................................................... 4
+     2.1      Gli utenti del SMU ............................................................................................................................. 4
+     2.2      Accesso al sistema ............................................................................................................................ 5
+     2.3      Funzionalità trasversali ..................................................................................................................... 6
+     2.4      Reporting ........................................................................................................................................... 6
+     2.5      Ricerca documentale ........................................................................................................................ 7
+3.     Amministrazione del SMU ........................................................................................................................ 8
+     3.1      Sicurezza ............................................................................................................................................ 8
+       3.1.1          Gestione profili utente.............................................................................................................. 8
+       3.1.2          Gestione organizzativa del PO (Struttura organizzativa, ruolo, profilo, funzione) .............. 12
+     3.2      Tabelle di contesto.......................................................................................................................... 17
+     3.3      Programmazione ............................................................................................................................. 20
+       3.3.1          Gestione Fonti Finanziarie ...................................................................................................... 20
+       3.3.2          Gestione Programma .............................................................................................................. 21
+       3.3.3          Procedura di attivazione ......................................................................................................... 24
+       3.3.4          Strumenti attuativi.................................................................................................................. 25
+4.     Gestione dei progetti .............................................................................................................................. 26
+     4.1      Procedure di selezione.................................................................................................................... 26
+       4.1.1          Creazione di una proposta progettuale ................................................................................. 26
+       4.1.2          Esito proposte ......................................................................................................................... 28
+     4.2      Monitoraggio .................................................................................................................................. 30
+       4.2.1          Caricamento dati di monitoraggio ......................................................................................... 30
+       4.2.2          Validazione progetti................................................................................................................ 45
+       4.2.3          Macro-progetti ........................................................................................................................ 47
+     4.3      Domande di rimborso ..................................................................................................................... 47
+       4.3.1          Presentazione di una nuova domanda di rimborso............................................................... 47
+       4.3.2          Trasmissione Domanda di rimborso ...................................................................................... 50
+5.     Sistema dei controlli e delle certificazioni ............................................................................................. 52
+     5.1      Controlli ........................................................................................................................................... 52
+       5.1.1          Verifiche amministrative ........................................................................................................ 52
+
+
+                                                                                 1
+       5.1.2          Verifiche in loco ...................................................................................................................... 62
+       5.1.3          Controlli AdG ........................................................................................................................... 68
+       5.1.4          Controlli AdC ........................................................................................................................... 70
+       5.1.5          Controlli II livello ..................................................................................................................... 73
+       5.1.6          Controlli II livello di sistema ................................................................................................... 76
+     5.2      Irregolarità e recuperi ..................................................................................................................... 79
+     5.3      Pagamenti ....................................................................................................................................... 82
+       5.3.1          Pagamenti ai beneficiari ......................................................................................................... 82
+       5.3.2          Predisposizione Istanza di pagamento Asse III ...................................................................... 83
+     5.4      Dichiarazioni di spesa ..................................................................................................................... 85
+     5.5      Certificazioni di spesa ..................................................................................................................... 87
+     5.6      Chiusura di conti ............................................................................................................................. 89
+6.     Monitoraggio Ambientale ...................................................................................................................... 92
+     6.1      Le funzioni in SIPONIER................................................................................................................... 92
+     6.2      WebGIS ............................................................................................................................................ 94
+       6.2.1          Accesso al GIS .......................................................................................................................... 94
+       6.2.2 Funzioni Generali ........................................................................................................................... 94
+       6.2.3 Servizi ............................................................................................................................................. 96
+7.     Console SIPONIER ................................................................................................................................... 98
+
+
+
+Allegato I:
+
+- SMU - ELENCO CONTROLLI DI MONITORAGGIO
+- SMU - ELENCO CONTROLLI DI IMPORTAZIONE DATI TRAMITE PROTOCOLLO DI COLLOQUIO
+
+
+
+
+                                                                                 2
+1. Introduzione
+Il presente documento ha l’obiettivo di descrivere le procedure operative che l’utente deve seguire
+per il corretto utilizzo del sistema informativo “Sistema di Monitoraggio Unitario” (S.M.U.) del PON
+Infrastrutture e Reti 2014-2020, del PO Infrastrutture FSC 2014-2020 e del PAC Infrastrutture 2014-
+2020      a     titolarità     del     Ministero    delle     Infrastrutture     e     dei     Trasporti.
+La presente versione del Manuale fa riferimento all’insieme delle funzionalità disponibili per la
+gestione dei singoli Programmi quindi ai processi decritti nei rispettivi documenti Sistemi di gestione
+e controllo (SI.ge.co. e relativi allegati).
+
+Si precisa, con specifico riferimento al PO FSC Infrastrutture 2014 2020 e PAC Infrastrutture 2014
+2020, che la realizzazione del Sistema di Monitoraggio Unitario si sta attuando a seguito di rilasci
+“incrementali” in grado quindi di abilitare ad uno o più processi/macro-funzioni del sistema SMU.
+
+Il sistema ha la finalità prevalente di:
+
+    ➢ supportare l’Autorità di gestione del PON Infrastrutture e Reti 2014-2020, la Struttura di
+        Attuazione del PAC Infrastrutture 2014-2020 e la Struttura di Coordinamento del PO
+        Infrastrutture FSC 2014-2020 e gli altri soggetti istituzionali che con questa collaborano nelle
+        attività di gestione e sorveglianza dei singoli Programmi Operativi, al fine di favorire
+        l’interoperabilità tra soggetti istituzionali e tra questi ed i beneficiari dei Programmi;
+    ➢ privilegiare l’automazione delle procedure previste aumentandone il livello di efficienza ed
+        efficacia;
+    ➢ valorizzare il patrimonio informativo alimentato nel corso del Programma per tutte le finalità
+        di valutazione, comunicazione e futura pianificazione delle risorse.
+
+
+
+
+                                                    3
+2. Modalità generali di utilizzo del SISTEMA Monitoraggio Unitario (SMU)
+2.1 Gli utenti del SMU
+Gli utenti che hanno accesso al sistema sono:
+
+   ➢ Utenti Istituzionali, le amministrazioni coinvolte nella gestione e nella sorveglianza dei
+       diversi Programmi Operativi (PON, PAC, FSC);
+   ➢ Utenti Beneficiari, gli organismi pubblici o privati responsabili dell’avvio o dell’avvio e
+       dell’attuazione delle operazioni;
+   ➢ Utenti Amministratori, coloro che fungono da moderatori del Sistema.
+
+Ogni utente, a seconda del Programma e del relativo ruolo in cui opera, può eseguire differenti
+azioni all’interno del Sistema e inserire, modificare e validare solo i dati di propria competenza.
+
+ UTENTE                               PROCESSI
+ ADMIN                                Amministrazione: gestione delle utenze e delle tabelle di contesto
+                                      del Sistema
+ AUTORITÀ DI AUDIT                    Chiusura dei conti
+                                      Controlli di II livello
+ AUTORITÀ DI CERTIFICAZIONE / Certificazioni di spesa
+ STRUTTURA        DI       GESTIONE Chiusura dei conti
+ FINANZIARIA (PO FSC, PAC)
+ AUTORITÀ       DI        GESTIONE/ Controllo validazione dati RLA
+ STRUTTURA             RESPONSABILE Dichiarazioni di Spesa
+ DELL’ATTUAZIONE
+ STRUTTURA DI COORDINAMENTO           Controllo validazione dati RLA
+ ADG/STC/STA-          RESPONSABILE Validazione proposta progettuale
+ LINEA AZIONE                         Validazione dati di monitoraggio
+ ADG – RESPONSABILE PAGAMENTI         Pagamento beneficiari
+ UCIL – RESPONSABILE                  Domande di Rimborso – controlli amministrativi e in loco
+ UCIL – OPERATORE                     Domande di Rimborso – controlli amministrativi e in loco
+ COORDINATORE BENEFICIARIO            Validazione attività dell’operatore beneficiario
+
+                                                      4
+ UTENTE                               PROCESSI
+ OPERATORE BENEFICIARIO               Presentazione proposta progettuale
+                                      Aggiornamento dati di monitoraggio
+                                      Presentazione Domande di Rimborso
+
+2.2 Accesso al sistema
+
+
+
+
+Il S.I. è accessibile collegandosi al link https://www.siponier1420.it/pages/secure/dashboard.xhtml
+
+Per accedere alle funzionalità del Sistema è necessario possedere un proprio username e
+corrispondente password e scegliere il Programma Operativo di proprio interesse direttamente
+dalla maschera del Login. L’utenza è rilasciata dal soggetto amministratore.
+
+Una volta all’interno del sistema l’applicazione effettuerà:
+
+• Una personalizzazione dei Loghi del Programma / Piano Operativo
+
+• Un filtro sui dati, estraendo solo quelli del PO selezionato
+
+• Una selezione sulle funzionalità, visualizzando solo quelle utilizzabili per il PO.
+
+Ad ogni utente è associato uno o più profili caratterizzato/i da una serie di abilitazioni. Il Sistema
+permette all’utente di accedere solamente alle funzioni cui è abilitato. Una volta effettuato l’acceso,
+l’utente visualizza un menu personalizzato; sulla base della configurazione del proprio profilo
+
+
+                                                    5
+l’utente può accedere a determinate maschere del S.I. in controllo completo dei dati oppure in sola
+lettura.
+
+Per effettuare il logout del sistema cliccare in corrispondenza dello username visualizzabile sopra le
+voci di menu e successivamente cliccare logout.
+
+
+
+
+2.3 Funzionalità trasversali
+I seguenti simboli sono presenti diffusamente all’interno del S.I.; si tratta di comandi di base per
+effettuare operazione di creazione, modifica, visualizzazione, eliminazione di dati oppure di allega
+file.
+
+
+
+
+2.4 Reporting
+Percorso Menu: ‘Reporting’ → ‘Elenco Report’
+
+Il sistema mette a disposizione degli utenti dei report in formato Excel contenenti i dati estratti dal
+Sistema utilizzabili a supporto degli utenti. Gli utenti abilitati all’accesso del menu ‘Reporting’
+
+
+
+                                                  6
+effettuano il download del report interessato selezionando l’apposito record e cliccando il comando
+‘Lancia Report’.
+
+
+
+
+2.5 Ricerca documentale
+Percorso Menu: ‘Ricerca documentale’ → ‘Cerca File’
+Il Sistema consente all’utente di effettuare una ricerca dei file allegati nel sistema, sulla base dei
+filtri impostati all’interno della maschera.
+
+
+
+
+                                                    7
+3. Amministrazione del SMU
+
+
+ UTENTI INTERESSATI                 AZIONI
+ Admin                              Gestione utenze, soggetti anagrafici e tabelle di contesto
+
+
+                                  L’amministrazione del Sistema è             affidata ad un        utente
+                                  amministratore (admin). Tramite la funzione personalizzata
+                                  Amministrazione l’admin ha la possibilità di gestire i profili degli altri
+                                  utenti e le informazioni oggetto di monitoraggio previste dalle
+                                  Tabelle di Contesto.
+
+
+
+
+3.1 Sicurezza
+
+
+3.1.1 Gestione profili utente
+L’admin è il soggetto responsabile della creazione, modifica e cancellazione di un utente.
+Ad ogni utente è associato un ruolo all’interno del sistema; il ruolo è l’associazione di due
+componenti: una struttura organizzativa ed un profilo. La prima rappresenta la funzione di dettaglio
+all’intero del PO (Beneficiario, RLA, UCIL, AdG/STC/STA, AdC, AdA); la seconda è un’aggregazione di
+più funzioni. Queste ultime sono un’aggregazione di risorse, ossia elementi del sistema che l’utente
+ha la possibilità di visualizzare o modificare.
+
+
+
+
+                                                    8
+Creazione nuovo utente
+
+Percorso menu: ‘Amministrazione’ → ‘Sicurezza’ → ‘Utente Applicativo’→ (Crea)
+
+Per creare un nuovo utente è necessario inserire i seguenti dati anagrafici e poi salvare.
+
+ UTENTE                                               Username per effettuare l’accesso
+ COGNOME                                              Cognome del nuovo utente
+ NOME                                                 Nome del nuovo utente
+ EMAIL                                                E-mail del nuovo utente
+ TELEFONO                                             Telefono del nuovo utente
+ DATA INIZIO VALIDITA’                                Data da cui l’utente è attivo
+ DATA FINE VALIDITA’                                  Data di fine attività dell’utente
+ FLAG UTENTE ATTIVO                                   Sì/No
+
+
+
+Modifica utente
+
+Tramite la funzione ‘Modifica’ l’admin può:
+
+   •   aggiornare i dati anagrafici degli utenti del Sistema;
+   •   resettare le password degli utenti del Sistema;
+   •   assegnare ad ogni utente un ruolo o due ruoli a cui sono associate specifiche funzionalità
+       all’interno del Sistema Informativo;
+   •   eliminare/disattivare qualsiasi profilo.
+
+Per salvare le modifiche effettuate per i campi anagrafici cliccare su ‘Salva’, in caso contrario è
+necessario cliccare ‘Annulla’. Per eliminare un utente è necessario eliminare il ruolo assegnatogli e
+premere ‘Elimina da PO corrente’.
+
+
+
+
+                                                  9
+Per resettare la password di un utente generico l’admin deve cliccare sull’etichetta ‘Reset Password’,
+digitare la password di admin all’interno del campo ‘Password di amministrazione’ e cliccare sul
+tasto ‘Reset password’ presente sulla destra. Successivamente si apre un pop-up di conferma e, una
+volta cliccato ‘Sì’, il Sistema invia un messaggio di avvenuto reset.
+
+
+
+
+Per associare un ruolo all’utente è necessario cliccare sull’etichetta ‘Ruoli’, in modo da aprire la
+seguente schermata, e successivamente cliccare su ‘Modifica’.
+
+
+
+
+Automaticamente si apre un pop-up ‘Creazione Ruolo’ in cui l’admin seleziona struttura
+organizzativa, profilo e funzioni da associare all’utente e successivamente ‘Salva’.
+
+
+                                                   10
+Operazioni di modifica profilo effett uabili da ogni utente
+
+Ogni utente può modificare i propri dati anagrafici (tranne lo username) e la propria password,
+cliccando in corrispondenza dello username visualizzabile sopra le voci di menu e successivamente
+cliccare Profile.
+
+
+
+
+Per cambiare la propria password è necessario cliccare sull’etichetta ‘Cambio Password’ ed inserire
+sia la password corrente sia quella nuova. Per salvare le modifiche è necessario cliccare ‘Modifica’.
+
+
+
+
+                                                 11
+Cliccando sull’etichetta ‘Ruoli’ l’utente generico visualizza i ruoli associati alla propria utenza, non
+potendo tuttavia apportare alcuna modifica.
+
+
+
+
+3.1.2 Gestione organizzativa del PO (Struttura organizzativa, ruolo, profilo, funzione)
+Il S.I. permette di informatizzare le strutture coinvolte nei processi del PO. Per ogni utente è
+associato un ruolo caratterizzato da tre componenti: Struttura Organizzativa, Profilo, Funzioni.
+
+
+
+Funzioni
+
+Percorso menu: ‘Amministrazione’ → ‘Sicurezza’ → ‘Funzione’→ (Crea)
+
+Per funzione si intende la possibilità di accedere ad una maschera del Sistema ed eventualmente
+visualizzarla in modalità scrittura o sola lettura.
+
+
+
+
+Per creare una nuova funzione cliccare il comando crea posto in alto rispetto all’elenco delle
+funzioni. La maschera di modifica funzione presenta tre tab: ‘Funzione’, ‘Profili’, ‘Risorse’.
+
+                                                      12
+In corrispondenza del tab ‘Funzione’ l’utente modifica i dati relativi a nome funzione, descrizione
+della funzione ed eventualmente può associare la stessa ad una ‘funzione padre’.
+
+In corrispondenza del tab ‘Profili’ è possibile visualizzare i profili cui è stata associata la funzione
+interessata.
+
+In corrispondenza del tab ‘Risorse’ l’utente seleziona i menu accessibili ed imposta le sezioni
+visualizzabili in controllo completo e quelle in sola lettura. Una volta completato il settaggio è
+necessario cliccare sul comando ‘Modifica’ in modo da salvare le impostazioni.
+
+Terminata la configurazione della funzione l’utente clicca ‘Salva’ per salvare ed uscire dalla
+maschera.
+
+All’interno della maschera ‘Elenco Funzioni’ ogni funzione è affiancata da un comando di creazione
+ed uno di modifica; il primo permette di creare una nuova funzione ‘figlia’; mentre il secondo
+permette la modifica delle configurazioni impostate sulla funzione stessa.
+
+
+
+
+Profilo
+
+Percorso menu: ‘Amministrazione’ → ‘Sicurezza’ → ‘Profilo’→ (Crea)
+
+Per profilo si intende un’aggregazione di autorizzazioni su una o più parti del sistema.
+
+                                                  13
+Per configurare un profilo l’admin inserisce nome e descrizione del profilo e successivamente salva;
+automaticamente viene reindirizzato nella maschera di ‘Modifica Profilo’, in cui può associare ad
+esso più funzioni.
+
+Per aggiungere una funzione è necessario cliccare sull’etichetta ‘Funzioni’ nella maschera ‘Modifica
+Profilo’ ed in seguito su ‘Aggiungi’ ed apre un pop-up con l’elenco delle funzioni presenti a sistema.
+Per uscire dal popup senza fare alcuna modifica premere ‘Annulla’. Per rimuovere una funzione è
+necessario selezionarla e cliccare su elimina.
+
+
+
+
+Struttura organizzativa
+
+Percorso menu: ‘Amministrazione’ → ‘Sicurezza’ → ‘Struttura Organizzativa’→ (Crea)
+
+                                                 14
+Questa sezione permette di inserire a Sistema le varie strutture organizzative in modo da poter
+configurare una gerarchia tra di esse.
+
+Per creare una struttura organizzativa l’admin deve inserire le seguenti informazioni:
+
+ STRUTTURA ORGANIZZATIVA                              Nome della Struttura Organizzativa
+ TIPO RUOLO                                           AdA, AdC, AdG/STC/STA, UCIL, RLA,
+                                                      Beneficiario
+ STRUTTURA DI RIFERIMENTO                             Struttura gerarchicamente superiore
+ UTENTE RESP.LE                                       Utente responsabile della Struttura Org.
+ DATE                                                 Date di validità della struttura organizzativa
+
+
+
+Cliccando su ‘Salva’, l’utente viene reindirizzato nella maschera ‘Modifica Struttura Organizzativa’
+in cui può modificare i campi anagrafici della struttura, visualizzare gli utenti associati alla struttura,
+definire il perimetro di operatività della struttura ed infine eliminarla.
+
+Configurare il perimetro di operatività significa assegnare ad essa lo Strumento Attuativo (PO I&R
+PON - 2014/2020 - PON Infrastrutture e Reti 2014 – 2020; PO FSC 2014-2020) e selezionare
+l’articolazione di riferimento (Assi, Obiettivi e Linee Azione). Questa impostazione è fondamentale
+per gli utenti RLA, dal momento che il sistema permette loro di visualizzare solamente i progetti di
+propria competenza.
+
+Una volta terminata la configurazione dell’articolazione cliccare ‘Modifica’ per salvare le
+impostazioni.
+
+
+
+
+                                                    15
+Ruolo
+
+Percorso menu: ‘Amministrazione’ → ‘Sicurezza’ → ‘Ruolo’→ (Crea)
+
+Per configurare un ruolo l’utente deve selezionare la struttura organizzativa ed il profilo da
+associare. Il Sistema automaticamente collega al ruolo le funzioni relative al profilo selezionato.
+
+
+
+
+                                                16
+3.2 Tabelle di contesto
+Percorso menu: ‘Amministrazione’ → ‘Tabelle di Contesto’
+
+Sotto la voce del menu ‘Tabelle di Contesto’ l’admin può gestire a sistema le informazioni oggetto
+del monitoraggio, tra cui quelle previste dal Protocollo Unico di Colloquio (PUC) redatto dall’IGRUE,
+ed altre anagrafiche generiche di sistema.
+
+
+
+
+Anagrafica
+
+Per ogni etichetta della sezione ‘Anagrafica’ è possibile aggiungere, modificare, visualizzare nel
+dettaglio ed eliminare elementi.
+
+ ELEMENTI MONITORAGGIO          TAB. CONTESTO         ELEMENTI MONITORAGGIO TAB. CONTESTO
+ ATECO                          TC26                  TIPO FASE PROCEDURALE         TC46
+ CAUSALE DISIMPEGNO             TC38                  TIPO FONTE FIN.               TC33
+ CAUSALE PAGAMENTO              TC39                  TIPO FORME FIN.               TC12.2
+ DIMENSIONE IMPRESA             -                     TIPO FREQUENZA                -
+ FORMA GIURIDICA                TC25                  TIPO IMPEGNO                  -
+ GRANDE PROGETTO                TC8                   TIPO INDICATORE RIS           TC42-TC43
+ GRUPPO VULNERABILE             TC13                  TIPO INDICATORE OUTPUT        TC44-TC45
+ LIVELLO ISTITUZIONE            TC9                   TIPO OPERAZIONE               TC5
+ MOTIVO ASSENZA                 TC22                  TIPO MACRO FONTE FIN.         -
+ RUOLO SOGGETTO                 TC24                  TIPO MEC. EROG. TERR.         TC12.4
+ SPECIFICA STATO                TC14                  TIPO NATURA CUP               -
+ STATO DDR                      -                     TIPO NORMA FONTE              TC35
+ TIPO AFFIDAMENTO               -                     TIPO PAGAMENTO                FN06
+
+                                                 17
+ TIPO AIUTO                      TC6                     TIPO PERCETTORE                 TC40
+ TIPO ALTRA CLASS.               TC12.9                  TIPO PROC. ATTIVAZIONE          TC2
+ TIPO ATTIVITÀ ECONOMICA         TC12.5                  TIPO PROCESSO                   -
+ TIPO AVVISO                     -                       TIPO RESPONSABILE PROC.         TC3
+ TIPO AZIONE                     -                       TIPO RISULTATO ATTESO           TC12.7
+ TIPO CAMPO INTERVENTO           TC12.1                  TIPO RUOLO                      -
+ TIPO CATEGORIA REGIONE          -                       TIPO STATO PROGETTO             TC47
+ TIPO COPERTURA FONTE            -                       STATO PROGETTO                  -
+ TIPO CRITICITÀ                  -                       TIPO STRUMENTO ATT.             TC15
+ TIPO CUP                        -                       TIPO TERRITORIO                 TC12.3
+ TIPO DELIBERA CIPE              TC34                    TIPO VOCE SPESA                 TC37
+ TIPO DIM TEM SEC                TC12.6                  TIPO OGGETTO SCOST.             -
+ TIPO DOCUMENTO                  -                       TIPO SCOSTAMENTO                -
+ TIPO EVENTO                     -
+
+
+
+Cliccando su ‘Anagrafica’ si apre un menu a tendina con l’elenco delle tabelle di contesto presenti
+nel sistema. Cliccando su ogni etichetta il Sistema reindirizza l’utente nella maschera ‘Elenco’
+corrispondente in cui può effettuare le funzionalità di creazione, modifica ed eliminazione.
+
+
+
+Localizzazione
+
+L’utente gestisce le località geografiche associate ai progetti. Le informazioni richieste per registrare
+una località sono in ordine: Regione, Provincia, Comune, Indirizzo, Numero Civico, Cap.
+
+
+
+Soggetti Anagrafica
+
+L’utente gestisce nel Sistema i soggetti coinvolti nel processo di gestione dei dati progettuali
+(soggetti correlati, fornitori espressi nei titoli di spesa, percettori). Possono essere persone fisiche o
+persone giuridiche.
+
+
+
+                                                   18
+Per aggiungere un nuovo soggetto anagrafico nel Sistema cliccare su ‘crea’ all’interno della
+maschera ‘Elenco Soggetti’ e compilare i campi anagrafici del soggetto nel pop-up aperto. I campi
+anagrafici obbligatori sono contrassegnati da un asterisco. Il campo ‘Codice Ipa’ diventa obbligatorio
+se il campo “Soggetto pubblico” è flaggato.
+
+È sempre possibile modificare uno dei campi anagrafici dei soggetti.
+
+
+
+
+                                                 19
+3.3 Programmazione
+
+
+                               Il menu di ‘Programmazione’ è gestito dagli utenti istituzionali.
+                               Prevede     quattro     sezioni   (‘Fonti’,   ‘Programma’,   Procedura
+                               attivazione’, ‘Strumenti attuativi’) tramite cui strutturare il PO
+                               all’interno del S.I.
+
+
+
+3.3.1 Gestione Fonti Finanziarie
+
+La maschera elenca le fonti di finanziamento collegate al PO.
+
+
+
+
+Per inserire una nuova fonte finanziaria cliccare sul comando ‘crea’ e compilare i seguenti campi:
+
+ TIPO COPERTURA FONTE                                 Fonte di copertura programma
+ TIPO FONDO                                           TC33
+ TIPO NORMA FONTE                                     TC35
+ TIPO DELIBERA CIPE                                   TC34
+ LOCALIZZAZIONE                                       Localizzazione della fonte
+ DESCRIZIONE                                          Descrizione della fonte
+ IMPORTO                                              Ammontare complessivo della fonte
+ FLAG FONTE ATTIVA                                    Sì/No
+
+
+
+
+                                                  20
+3.3.2 Gestione Programma
+
+Nella sezione ‘Programma’ l’utente gestisce le informazioni del PON riguardanti l’Anagrafica, le
+Articolazioni, il Finanziamento e gli Indicatori.
+
+
+
+
+Anagrafica
+
+Visualizzazione e possibilità di modifica dei principali dati anagrafici del programma.
+
+Articolazioni
+
+In questa sezione l’utente può strutturare il PO in Assi, Obiettivi e Linee d’Azione; ad ogni
+articolazione corrisponde un codice, un nome, una descrizione ed una dotazione finanziaria.
+
+   ▪   Per creare un nuovo asse nel PO, cliccare sul tasto ‘Crea Asse’ presente in alto a sinistra.
+   ▪   Per creare un nuovo obiettivo, cliccare sul tasto ‘Crea’ sulla riga dell’asse di riferimento.
+   ▪   Per creare una linea azione, cliccare sul tasto ‘Crea’ sulla riga dell’obiettivo di riferimento.
+   ▪   A differenza della funzionalità di creazione dell’articolazione, per modificare uno degli
+       elementi, cliccare sul tasto ‘modifica’ in prossimità della riga di riferimento dell’articolazione
+       che si vuole modificare.
+
+
+
+
+                                                    21
+Finanziamento
+
+Nella sezione finanziamento l’utente associa le singole fonti finanziarie ed i rispettivi importi ad ogni
+Asse del PO. Il totale degli importi associati ad ogni Asse non deve essere superiore alle disponibilità
+dell’intero PO.
+
+
+
+
+Indicatori
+
+In questa sezione l’utente configura gli indicatori di risultato e di output da associare ai progetti ai
+fini del monitoraggio fisico dei progetti stessi.
+
+
+
+                                                    22
+All’interno del Sistema si distinguono:
+
+   •   Indicatori di risultato, che forniscono il grado di realizzazione delle condizioni per il
+       raggiungimento degli obiettivi finali.
+   •   Indicatori di output, che consentono di misurare la realizzazione del progetto in termini di
+       monitoraggio fisico; per essi è indicata un’unità di misura.
+
+Sono selezionabili solo gli indicatori presenti nelle Tabelle di Contesto configurate nel menu
+Amministrazione. Ad ogni indicatore sono associabili l’articolazione del PON di riferimento, il valore
+target finale ed il valore target intermedio.
+
+
+
+
+                                                 23
+3.3.3 Procedura di attivazione
+
+
+
+
+   La Procedura di Attivazione rappresenta la modalità procedurale adottata dall’Amministrazione
+   responsabile del Programma per l’individuazione dei progetti da realizzare e dei rispettivi Beneficiari
+   e si concretizza nella pubblicazione/emissione di bandi, circolari, avvisi, manifestazioni di interesse
+
+
+Per registrare una nuova procedura di attivazione, l’utente inserisce i seguenti campi anagrafici.
+
+ CODICE LOCALE                         Codice della Procedura nel S.I.
+ CODICE IGRUE                          Codice della Procedura nel sistema IGRUE
+ DESCRIZIONE                           Informazioni sulla procedura di attivazione
+ TIPO PROCEDURA ATTIVAZIONE            TC2 – Bando, Circolare, Manifestazione di Interesse, etc.
+ TIPO RESPONSABILE                     TC3 – Regione, Provincia, Amministrazione Centrale, etc.
+ CODICE RNA                            Codice RNA (solo in caso di misura di aiuto)
+ DENOMINAZIONE SOGG. RESP.             Nome del soggetto responsabile della nuova procedura
+ FLAG AIUTO                            Sì/No
+ FLAG PROCEDURA ATTIVA                 Sì/No
+ NOTE                                  Eventuali note sulla procedura
+
+
+
+Per gestire le fasi della procedura di attivazione, cliccare sull’etichetta ‘Fasi Procedura’ all’interno
+della maschera ‘Modifica Procedura Attivazione’.
+
+
+
+
+                                                     24
+3.3.4 Strumenti attuativi
+
+
+   Lo Strumento Attuativo rappresenta l’insieme delle modalità operative e procedure in grado
+   di garantire, indipendentemente dalla fonte di finanziamento specifica, le migliori
+   condizioni di efficacia ed efficienza per il perseguimento dei relativi obiettivi per dare
+   attuazione ad una specifica strategia e che attuano un programma.
+
+
+
+
+Per inserire un nuovo strumento attuativo compilare i seguenti campi anagrafici:
+
+ CODICE                                           Codice dello strumento attuativo
+ DESCRIZIONE                                      Descrizione dello Strumento Attuativo
+ FLAG ATTIVO                                      Sì/No
+ DATA STIPULA
+ DENOMINAZIONE RESPONSABILE                       Nome dell’ente/soggetto responsabile
+ STRUMENTO ATTUATIVO (TIPO)                       TC15 – Strumento di attuazione diretta, etc.
+
+
+
+
+                                               25
+4. Gestione dei progetti
+
+
+4.1 Procedure di selezione
+
+
+
+4.1.1 Creazione di una proposta progettuale
+
+Percorso Menu: ‘Procedure di selezione’→ ‘Elenco Proposte progettuali in corso’→ (Crea)
+
+
+
+
+Il Sistema consente all’utente beneficiario di compilare un form informatizzato con i dati relativi alla
+proposta ed allegare ulteriori documenti richiesti. Il beneficiario deve inserire i seguenti dati
+anagrafici:
+
+ PROCEDURA ATTIVAZIONE*                              TC02 – Bando, Manifestazione d’interesse, etc.
+ ASSE-OBIETTIVO-LINEA D’AZIONE*                      Asse, Obiettivo e Linea d’azione del progetto
+ DATA COMPILAZIONE*                                  Data di compilazione del form
+ CODICE LOCALE BENEFICIARIO*                         Codice Locale del beneficiario
+ CODICE FISCALE BENEFICIARIO*                        Codice Fiscale del beneficiario
+ CODICE LOCALE PROGETTO                              Codice Locale del Progetto (rilasciato solo dopo
+                                                     l’esito della valutazione)
+ TITOLO                                              Titolo del progetto
+ SINTESI DEL PROGETTO                                Breve spiegazione del progetto
+ TIPO AIUTO                                          TC06 – Acq. beni, Realizzazione lavori pubblici
+ GENERATORE ENTRATE                                  Flag Sì/No, se il progetto genera entrate al Ben.
+
+
+                                                  26
+ COSTO TOTALE*                                         Costo in fase di manifestazione di interesse
+
+
+
+* I campi contrassegnati da un asterisco non sono modificabili una volta che il progetto passa da
+Proposta progettuale a Stato Attivo.
+
+Il Beneficiario può completare la compilazione delle informazioni relative a:
+
+ LOCALIZZAZIONE                                        Localizzazione Geografica del progetto
+ FINANZIAMENTO                                         Fonti finanziarie del progetto
+ SOGGETTI CORRELATI                                    TC24 – Programmatore, Beneficiario,
+                                                       Attuatore, Realizzatore del progetto
+ QUADRO ECONOMICO                                      TC37 – Tipo voce spesa + importi
+ PREVISIONI DI SPESA                                   Previsione annuale delle spese relative al
+                                                       progetto
+ INDICATORI RISULTATO                                  TC42-TC43
+ INDICATORI OUTPUT                                     TC44-TC45
+
+
+
+Si precisa che le informazioni in tabella rappresentano il set minimo dei dati che consentono la
+corretta acquisizione in DU.
+
+Dopo aver completato l’inserimento ed il salvataggio dei dati, la proposta progettuale risulta in stato
+‘Bozza’.
+
+Utente Beneficiario: ‘Procedure di selezione’→ ‘Elenco Proposte progettuali in corso’→ (Modifica)
+→ Tab “Stato Proposta”
+
+La proposta rimane salvata in stato ‘Bozza’ fino alla verifica di Ammissibilità Specifica effettuata dal
+Coordinatore Beneficiario. Una volta effettuato l’accesso questo può:
+
+- validare la proposta premendo ‘Completa Proposta’. Il Sistema effettua automaticamente dei
+controlli sui dati ed in caso di esito negativo invia degli alert.
+
+
+
+
+                                                    27
+- riportare il processo in carico all’Operatore Beneficiario premendo “Annulla Azione Proposta”.
+L’Operatore beneficiario può apportare le dovute correzione e rimandare il processo al
+Coordinatore premendo ‘Salva in bozza’.
+
+
+
+
+4.1.2 Esito proposte
+
+Percorso menu: ‘Procedure di selezione’→‘Elenco Proposte progettuali in corso’→ (Modifica) →
+Tab ‘Valutazione Proposta’
+
+Il Resp. L.A. effettua l’accesso al Sistema per registrare l’esito della proposta.
+
+L’utente può selezionare tre opzioni:
+
+ ESITO          DESCRIZIONE
+ ATTIVO         Progetto ammissibile
+ LONG LIST      Progetto ammissibile ma non finanziabile
+ NEGATIVO       Progetto rigettato
+ ANNULLATA Proposta annullata
+
+
+
+                                                   28
+Nel primo caso il progetto è spostato tra l’elenco dei progetti con status ‘Attivo’; per gli altri casi il
+progetto rimane tra l’elenco delle proposte progettuali in corso, caratterizzato da esito ‘Long List’,
+‘Esito Negativo’ o ‘Annullato’, quest’ultimo consente di evidenziare da subito – quindi già nell’elenco
+delle proposte progettuali - tutte le proposte progettuali annullate / eliminate di cui si ritenga
+opportuno mantenere traccia. Per i progetti ammessi deve essere indicato l’importo del
+finanziamento ammesso e gli estremi del decreto di ammissione.
+
+
+
+
+                                                   29
+4.2 Monitoraggio
+
+
+
+       I dati oggetto di monitoraggio, i relativi controlli e le modalità di colloquio applicativo sono
+         puntualmente identificati dal PUC e dalla restante documentazione emessa dall’IGRUE.
+
+
+4.2.1 Caricamento dati di monitoraggio
+
+Il caricamento dei dati di monitoraggio può avvenire in modo massivo, tramite il caricamento di un
+file Excel, il cui format è scaricabile a sistema nella maschera di ‘Importazione dati’ o manualmente,
+modificando i dati di ogni singolo progetto nella maschera di ‘Modifica Progetti’.
+
+Importazione Dati mediante file Excel
+
+Percorso Menu: ‘Progetti’ → ‘Importazione dati’
+
+Il caricamento dei dati di monitoraggio può avvenire in modo massivo, tramite il caricamento di un
+file Excel, il cui format è presente a sistema nella maschera di ‘Importazione dati’, o manualmente,
+modificando i dati di ogni singolo progetto nella maschera di ‘Modifica Progetti’.
+
+L’utente può visualizzare i file importati, la data di caricamento del file, lo stato e l’esito dei controlli.
+
+Cliccando sul tasto “Download Modello e Protocollo di Comunicazione”, egli può effettuare il
+download del Template di inserimento dati in formato Excel ed un documento in formato Word
+esplicativo dei campi di inserimento. Concluso il processo di compilazione dei dati fuori sistema,
+l’operatore Beneficiario procede al caricamento del file. Terminato l’upload si potrà visualizzare lo
+stato e l’esito dell’import:
+
+•       In caso positivo, il documento riporta uno stato “Importato e in produzione” ed esito “Ok”;
+
+•       In caso negativo, il sistema fornisce le motivazioni dello scarto; l’utente dovrà selezionare il
+record del documento inserito e cliccare “Visualizza Errori/Segnalazioni”.
+
+
+
+
+                                                      30
+Ad ogni foglio del template corrisponde uno dei tab della maschera “Modifica Progetto”. È
+opportuno rispettare i vincoli per le informazioni obbligatorie. Per i campi codificati dall’IGRUE è
+necessario scrivere il codice stesso (es. cod_tipo_impegno: “I”).
+
+                                                 31
+La prima importazione dei dati crea il record all’interno del sistema; nelle successive importazioni di
+file è possibile modificare, eliminare o creare ulteriori record:
+
+   ✓ Per integrare i dati di monitoraggio con altri record è sufficiente aggiungere e compilare una
+       riga sul file Excel da importare;
+   ✓ Per effettuare modifiche su un record è sufficiente rettificare il dato direttamente all’interno
+       della cella del file;
+   ✓ Per eliminare un elemento è necessario scrivere “S” in corrispondenza della riga del record
+       da eliminare e della colonna “flag cancellazione”.
+
+
+
+
+Caricamento Dati manuale Progetti
+
+Utente Operatore Beneficiario: ‘Progetti’ → ‘Gestione Progetti’ → (Modifica)
+
+Il menu “Gestione progetti” permetta di visualizzare l’elenco dei propri progetti attivati. Utilizzando
+le icone presenti in alto sull’intestazione dell’elenco, l’utente può scaricare l’elenco dei progetti in
+formato Excel, Pdf o Csv. Per modificare i dati di monitoraggio di un progetto è necessario
+selezionarlo e premere “Modifica”.
+
+
+
+
+                                                   32
+Il monitoraggio dei progetti prevede la rilevazione di dati riguardanti le seguenti sezioni:
+
+    •   Anagrafica: Dati Anagrafici; Classificazioni; Localizzazione; Procedure Aggiudicazione;
+        Soggetti Correlati
+    •   Finanziaria: Finanziamento; Quadro Economico; Piano dei Costi; Opere Rendicontate;
+        Previsioni di Spesa; Costo Ammesso; Impegni Progetto; Entrate Merci; Titoli di Spesa;
+        Pagamenti; Percettori; Economie;
+    •   Indicatori: Indicatori di Risultato; Indicatori di output;
+    •   Procedurale: Iter; Scostamenti;
+    •   Stato del progetto nel P.O. (*visualizzazione esclusiva per utente istituzionali)
+
+
+
+Le informazioni modificabili sono:
+   a. Dati anagrafici
+
+ CUP                                    Codice Unico Progetto
+ TITOLO                                 Titolo del progetto
+ SINTESI PROGETTO                       Breve descrizione del progetto
+ STATO DEL PROGETTO                     TC47 – Esecuzione non avviata, In corso, etc.
+ TIPO AIUTO                             TC06
+ DATA INIZIO                            Data di inizio effettiva del progetto
+ DATA FINE PREVISTA                     Data di fine prevista del progetto
+ DATA FINE EFFETTIVA                    Data di fine effettiva del progetto
+ GENERATORE ENTRATE                     Flag Sì/No
+ GENERATORE ENTRATE PERC                Percentuale delle entrate sul progetto
+ TIPO LOCALIZZAZIONE                    TC10 – Areale, Lineare, Puntuale
+ TIPO LIVELLO ISTITUZIONE               TC09 – Livello UE, Livello nazionale, etc.
+ MACROPROGETTO                          Se il progetto è inserito all”interno di un macroprogetto
+
+                                                  33
+ STRUMENTO ATTUATIVO*                  PON IeR 2014-2020, PON ReM 2007-2013
+ TIPO OPERAZIONE*                      TC05 – Acquisto di beni, Realizzazione lavori, etc
+ NOTE PROGETTO                         Eventuali note sul progetto
+ GRUPPO VULNERABILE                    TC13 – Progetto non destinato a gruppi vulnerabili, etc.
+ CATEGORIA REGIONE                     Regioni meno sviluppate, più sviluppate o in transizione
+ NOTE VARIAZIONE*                      Eventuali note su possibili variazioni nel progetto
+*campi di competenza degli utenti istituzionali
+
+
+    b. Classificazioni
+L’alimentazione di questo tab è in carico agli utenti istituzionali.
+
+
+
+
+    c. Localizzazione: Regione, Provincia, Comune, Indirizzo, Numero Civico, Cap.
+In caso di “Tipo Localizzazione: Puntuale” è necessario inserire anche l’indirizzo del progetto.
+
+
+
+
+    d. Procedure di aggiudicazione
+Sono le procedure attraverso le quali si perviene alla selezione dell’offerente. Sono previste
+procedure provviste di CIG e procedura senza CIG. In caso di assenza del CIG è necessario indicarne
+il motivo (rif. TC22) ed implementare il record con tutte le informazioni aggiuntive come importi e
+date. Per il Tipo Procedura Aggiudicazione si fa riferimento alla TC23.
+
+                                                      34
+   e. Soggetti correlati
+Sono i soggetti previsti dalla TC24 (Programmatore, Beneficiario, Attuatore, Realizzatore del
+progetto). Cliccando “Crea”, si apre un pop-up di inserimento in cui è necessario selezionare un tipo
+ruolo soggetto e successivamente premere “Seleziona Soggetto”; se il soggetto è contenuto
+nell’elenco Soggetti è sufficiente premere “seleziona” in corrispondenza della riga dell’elemento da
+inserire, altrimenti è possibile inserirne un nuovo cliccando sul comando “Crea”.
+
+
+
+
+                                                 35
+   f. Finanziamento
+In questa sezione si inseriscono le fonti finanziarie del progetto. In caso di “Tipo Fonte: Risorse dei
+Privati” è opportuno inserire il soggetto che eroga il finanziamento, mentre il campo localizzazione
+è da compilare in caso di fondi regionali, provinciali o comunali (cfr. TC33 – Tipo Fonte Finanziaria).
+
+
+
+
+                                                  36
+   g. Quadro Economico
+Il tab prevede un set di informazioni inerenti la declinazione economica del progetto in termini di
+voci di spesa e relativi importi. Le voci di spesa sono distinte in funzione della rispettiva Natura CUP
+del progetto. È necessario associare una Categoria di spesa ad ogni Tipo Voce Spesa (TC-37).
+
+
+
+
+   h. Piano dei costi
+Questa sezione contiene un set di informazioni inerenti la pianificazione e l’avanzamento del
+progetto in termini economici. Per ciascuna delle annualità di attuazione del progetto è infatti
+richiesto di indicare l’importo da realizzare (inteso come valore previsto delle attività da eseguire) e
+poi, a seguito della conclusione di una singola annualità, l’importo realizzato con riferimento a tale
+ultima annualità conclusa (inteso come valore effettivo delle attività eseguite). A seguito della
+conclusione della singola annualità occorre azzerare l’importo da realizzare ad essa riferito e,
+qualora non fosse stato interamente realizzato quanto previsto nell’annualità appena conclusa,
+rimodulare l’importo da realizzare della/e annualità a venire.
+
+
+
+
+                                                  37
+   i.   Opere Rendicontate
+In questo tab l’utente rendiconta tutte le opere realizzate nel progetto (da compilare su esplicita
+richiesta delle Strutture responsabili di gestione dei Programmi Operativi).
+
+
+
+
+   j.   Previsioni di spesa
+In questo tab il Beneficiario descrive una pianificazione dei pagamenti.
+
+
+
+
+                                                 38
+   k. Costo Ammesso*
+L’alimentazione di questo tab è in carico agli utenti istituzionali.
+
+
+
+
+   l.   Impegni Progetto
+In questo tab l’utente inserisce gli impegni del progetto, gli impegni ammessi e gli atti contratti
+collegati a tali impegni.
+Le informazioni richieste per creare un impegno sono: Codice Impegno, Data, Tipo di Impegno,
+Causale Disimpegno (TC38 – In caso di Tipo Impegno: Disimpegno), Importo, Note, Codice Impegno
+Contabile.
+Una volta creato l’impegno è possibile associargli il relativo impegno ammesso. Per creare l’impegno
+ammesso è necessario premere sul pulsante                 in corrispondenza di ogni singolo record e
+successivamente “Crea”.
+In fase di creazione di un impegno ammesso è necessario associargli preventivamente il relativo
+Atto/Contratto. Ad ogni Atto/Contratto l’utente può allegare la documentazione richiesta.
+Gli impegni, gli impegni ammessi ed i contratti sono sempre modificabili; tuttavia per modificare un
+atto/contratto è necessario selezionare il relativo impegno ammesso e poi cliccare su “Modifica
+Atto/Contratto”. Per eliminare un impegno è necessario preventivamente aver eliminato anche il
+relativo impegno ammesso.
+
+
+
+
+                                                   39
+   m. Entrate merci
+Questo tab prevede l’inserimento di dati relativi alle entrate merci (da compilare su esplicita
+richiesta delle Strutture responsabili di gestione dei Programmi Operativi).
+
+
+
+
+   n. Titoli di Spesa
+In questa tab si visualizza l’elenco dei titoli di spesa del progetto. L’utente può scegliere se inserire
+i titoli di spesa a sistema direttamente da questa maschera cliccando “+” o dal tab “Pagamenti”.
+
+                                                   40
+I titoli creati all’interno di questo tab sono da associare successivamente ai relativi pagamenti. Ad
+ogni titolo di spesa è possibile allegare la relativa documentazione.
+I titoli di spesa inseriti durante il processo di monitoraggio sono gli stessi che l’utente seleziona in
+fase di presentazione di una domanda di rimborso. Pertanto è richiesta particolare attenzione
+durante la compilazione dei dati, specie quelli relativi a Voci e Categoria di spesa e gli Importi.
+La compilazione di alcuni campi (Unità di misura, Costo Unitario, Tasso Forfettario) è subordinata al
+Tipo Rendicontazione del titolo (Costo Effettivo, Costo Unitario, Spese Forfettarie).
+Per associare il fornitore al titolo di spesa l’utente può ricercarlo tra i soggetti anagrafici già presenti
+nel sistema oppure può crearne uno ex-novo con l’apposito comando.
+
+
+
+
+    o. Pagamenti
+Il tab consente di associare al progetto un set di informazioni sui singoli pagamenti sostenuti dal
+beneficiario. Per ogni pagamento è richiesto l’importo complessivo, non suddiviso per fonte. Per
+pagamento ammesso si intende la quota parte che risulta ammissibile a valere sul PO di riferimento.
+La creazione e modifica di pagamenti, pagamenti ammessi e titoli di spesa segue la stessa logica
+vista precedentemente con gli impegni. Per prima cosa si crea il pagamento; poi in fase di creazione
+del pagamento ammesso è necessario associare preventivamente ad esso un titolo di spesa.
+È possibile allegare file a livello di singolo pagamento, pagamento ammesso e titolo di spesa.
+
+
+
+
+                                                    41
+   p. Percettori
+Il tab consente di associare al progetto le informazioni inerenti ai soggetti percettori di risorse
+nell’ambito del progetto (es. le ditte che realizzano i lavori). Possono essere persone fisiche o
+giuridiche. Per collegare un percettore al relativo pagamento l’utente clicca      , “Crea” ed infine
+seleziona il soggetto anagrafico percettore del pagamento tra quelli presenti a sistema.
+
+
+
+
+   q. Economie
+   Le economie rappresentano sostanzialmente l’entità del risparmio che può eventualmente
+   verificarsi rispetto a una precedente previsione del costo del progetto; tali importi rientrano
+   pertanto nelle disponibilità del soggetto competente e, a seconda dei casi e delle modalità
+   previste, possono eventualmente essere riutilizzate per il finanziamento di altri progetti.
+   Questo tab viene alimentato eventualmente al termine dell’attuazione del progetto.
+
+                                                 42
+   r. Dati ambientali (esclusivamente per il PON I&R 2014-2020)
+Per abilitare il Monitoraggio Ambientale del PON I&R 2014-2020, è prevista anche l’elaborazione e
+fornitura dei dati georiferiti dei progetti, secondo un protocollo definito sia in riferimento al formato
+(shapefile) che al tracciato dati che ai contenuti. Questo tab consente il caricamento, entro le
+scadenze previste per il monitoraggio, dei file contenenti questi dati o di altri dati documenti
+rilevanti per il Monitoraggio Ambientale.
+
+
+
+
+                      DatiGeoriferiti
+
+
+
+
+   L’utente seleziona il Monitoraggio per il quale intende caricare il file (Bottone: Monitoraggio) e
+   inserisce una descrizione dei suoi contenuti (Descrizione). Seleziona poi il file (Selezione) e
+   conferma il caricamento (Carica); dopo l’esito positivo del controllo applicativo sul formato del
+   file (che deve essere zip) invia il file (Invia dati). Una volta inviato, il file è disponibile per ulteriori
+   elaborazioni alla Task Force Ambiente TFA (vedi 6. Monitoraggio Ambientale).
+   È possibile inserire file solo per i Monitoraggi aperti e fino a quando il Monitoraggio è aperto è
+   possibile sostituire i file già caricati ricaricandoli. Qualora l’utente necessiti di aggiornare un file
+   inviato in occasione di Monitoraggi già chiusi, può richiedere lo sblocco del file alla TFA e il
+   Monitoraggio riaperto apparirà nella lista (Monitoraggio).
+   s. Indicatori*
+Gli indicatori di risultato sono gestiti dal MIT. Gli indicatori di output consentono di misurare la
+realizzazione del progetto in termini di monitoraggio fisico nell’ambito del PO. Per essi è richiesto il
+valore programmato e realizzato e le note relative alla stima. I valori sono aggiornati nel corso
+dell’attuazione del progetto, finché il valore realizzato pareggia quello programmato.
+
+
+
+
+                                                      43
+   t. Iter
+All’interno del tab l’utente può associare al progetto un set di informazioni inerenti alla tempistica,
+in termini di fasi attuative e di date previste ed effettive. Il monitoraggio procedurale del Progetto
+riguarda quindi l’attuazione in termini temporali del progetto. Mentre i dati previsionali sono
+implementate durante la creazione del record, le date di inizio/fine effettiva di ogni fase sono
+aggiornati nel corso dell’esecuzione del progetto.
+
+
+
+
+   u. Scostamenti
+Questa sezione si alimenta a valle dei monitoraggi, nel caso in cui il Sistema rilevi degli scostamenti
+tra i dati validati nel monitoraggio precedente ed i dati correnti. I dati oggetto di controllo sugli
+scostamenti sono quelli relativi ai tempi, costi, pagamenti ed indicatori.
+In caso di rilevazione di uno scostamento, è compito dell’utente beneficiario inserire le motivazioni
+degli scostamenti rilevati.
+
+
+
+
+                                                  44
+4.2.2 Validazione progetti
+
+Utenti coinvolti: Operatore beneficiario, Coordinatore beneficiario, RLA, AdG/STC/STA.
+
+Dopo aver completato l’inserimento dei dati l’operatore beneficiario può procedere con la
+validazione. Preventivamente può attivare i controlli automatici di sistema sui dati premendo
+“Visualizza Errori/segnalazioni” posizionandosi sul tab ‘Dati anagrafici’; nel caso in cui vengano
+riscontrati errori, l’utente deve necessariamente sanare le segnalazioni visualizzabili dal tab
+“Visualizza Elenco”.
+
+
+
+
+In seguito può validare i dati cliccando “Approvazione” presente all’intero del tab “Dati Anagrafici”
+
+
+
+
+                                                 45
+Dopo aver cliccato “Approvazione” il sistema automaticamente effettua:
+       ▪   la verifica dell’effettivo superamento di tutti i controlli “bloccanti” ai fini della Validazione
+           (se sono presenti degli errori bloccanti il Sistema non consente la validazione dei dati);
+
+       ▪   la segnalazione di eventuali anomalie “non bloccanti” con relativo dettaglio (alert);
+
+       ▪   la copia e la storicizzazione di tutti i dati nella “Versione” oggetto di monitoraggio ed
+           invio di una notifica di completamento caricamento dati di monitoraggio a RLA ed
+           AdG/STC/STA;
+
+Superati i controlli, il processo di monitoraggio va in carico al responsabile beneficiario, il quale può
+validare i dati e passare il processo in capo al corrispondente RLA oppure rigettare i dati e riportare
+il tutto in capo all’operatore. Ogni passaggio effettuato sul workflow – validazione o rigetto – è
+notificato via mail ai rispettivi utenti interessati dal processo.
+
+Il processo termina con la validazione da parte dell’AdG/STC/STA.
+
+Il sistema informativo non prevede delle finestre di chiusura, garantendo la possibilità di effettuare
+un monitoraggio continuo, pertanto, ogni beneficiario può alimentare i dati di rilevazione fin dal
+momento successivo alla validazione dei dati.
+
+
+
+
+Una volta superato il primo step di validazione, il sistema permette di scaricare, tramite il tab
+“Stampa Scheda di Monitoraggio dati versionati” una scheda contenente i dati oggetto di
+monitoraggio “fotografati” dall’operatore per il monitoraggio in corso.
+Tramite il tab “Stampa Scheda di Monitoraggio dati correnti”, è possibile scaricare una scheda
+contenente i dati aggiornati a sistema in “tempo reale”.
+
+
+
+
+                                                    46
+4.2.3 Macro-progetti
+
+Percorso menu: ‘Progetti’ → ‘Macro-progetti’
+La maschera mostra l’elenco dei macro-progetti censiti a Sistema; una volta creati i record a Sistema,
+l’utente associa i macro-progetti all’interno della maschera ‘Modifica progetto’ nella sezione
+‘Anagrafica’.
+
+
+
+4.3 Domande di rimborso
+
+
+
+4.3.1 Presentazione di una nuova domanda di rimborso
+
+Percorso menu: ‘Progetti’ → ‘Gestione Progetti’ → (Modifica)
+
+L’utente beneficiario può presentare una domanda di rimborso per le spese di progetto sostenute
+direttamente dalla maschera “Modifica Progetto” cliccando su “Crea Nuova Domanda di Rimborso”.
+
+Automaticamente l’utente è reindirizzato nella maschera di Modifica Domanda di Rimborso.
+
+
+
+
+Percorso menu: “Progetti” → “Domande di rimborso” → (Modifica)
+
+La domanda di rimborso creata a sistema alimenta l’elenco delle DDR. Per modificare una DDR già
+presente a sistema l’utente deve selezionarla tra l’elenco e cliccare “Modifica”. Le DDR di ogni
+singolo progetto sono numerate progressivamente dal sistema.
+
+
+                                                 47
+Nella maschera “Modifica Domanda Rimborso” il beneficiario opera su tre tab:
+   ✓ DDR: in cui si inseriscono i dati “anagrafici” della DDR tra cui: descrizione (sebbene impostato
+       come campo di inserimento libero, è consigliabile alimentare il dato con codice progetto e
+       n° DDR – es. 11101 DDR n°1), periodo di rendicontazione, eventuali note o relazione di
+       avanzamento e luogo di sottoscrizione. I campi n° e data protocollo sono di competenza MIT.
+       La graffetta in alto permette di allegare e scaricare documenti relativi alla DDR, integrativi a
+       quelli propri di sistema; i comandi di download ed upload di format “Domanda di rimborso”,
+       “Attestazione di spesa” e “Ricevuta della DDR” sono disattivati fino al completamento della
+       presentazione.
+
+
+
+
+   ✓ Titolo di spesa: in cui si selezionano i pagamenti da chiedere a rimborso; per completare la
+       presentazione di una DDR è necessario selezionarne almeno uno.
+
+
+                                                 48
+   In questo elenco sono visualizzabili i pagamenti mai presentati in altre DDR; cliccando su
+   “Pagamenti sospesi”, l’elenco è integrato con i pagamenti già presentati in altre DDR oggetto
+   di sospensione da parte dell’UCIL.
+
+
+
+
+✓ Check-list: in cui si compila la check-list del beneficiario.
+   Cliccando su “Carica Modello”, il sistema carica i quesiti coerenti con l’ultima versione MOP
+
+   e/o SIGECO. Per aprire la check-list e rispondere ai quesiti è necessario premere   . Ad ogni
+   quesito è possibile allegare una nota o un commento. Terminato di dare risposta ai quesiti è
+   opportuno salvare le risposte.
+
+
+
+
+                                               49
+Una volta selezionati i pagamenti da richiedere a rimborso e compilata la check-list, l’operatore
+beneficiario porta il processo in carico al coordinatore beneficiario cliccando “Completa”.
+
+Il sistema effettua automaticamente i controlli sui dati (presenza titoli selezionati e completamento
+check-list) prima di autorizzare l’avanzamento del processo.
+
+
+
+4.3.2 Trasmissione Domanda di rimborso
+
+Una volta completata la presentazione della DDR, è compito del coordinatore beneficiario validare
+e trasmettere la domanda all’UCIL. Il coordinatore beneficiario non può agire in modifica dei dati
+della DDR, dal momento che i campi vengono disattivati per rendere la DDR consistente.
+
+Nel caso in cui riscontri degli errori sui dati presenti nella DDR, il coordinatore beneficiario preme
+“Non validare” e riporta il processo in capo all’operatore beneficiario.
+
+In caso positivo scarica i format presenti in maschera (Domanda di rimborso ed Attestazione di
+spesa, oltre la Ricevuta della DDR la quale viene aggiornata successivamente con i dati di
+protocollazione) li ri-allega firmati digitalmente. Mentre gli altri due sono in formato pdf, il format
+
+                                                  50
+della Domanda di rimborso è modificabile aprendolo come file word, in modo da permettere
+all’utente beneficiario di completare fuori sistema delle informazioni non ricavabili da sistema.
+
+L’utente non può procedere con la validazione senza aver allegato i documenti richiesti. L’utente
+non ha possibilità di allegare file senza firma digitale o file diversi rispetto a quelli scaricati da
+sistema. Il Sistema riconosce automaticamente la presenza della firma digitale.
+
+Terminata l’operazione di validazione, il coordinatore porta il processo in carico agli utenti
+istituzionali cliccando “Trasmetti”.
+
+
+
+
+                                                 51
+5. Sistema dei controlli e delle certificazioni
+5.1 Controlli
+
+
+
+5.1.1 Verifiche amministrative
+
+Percorso Menu: ‘Progetti’ → ‘Domande di Rimborso’ → Tab. ‘Verifiche Amministrative’
+
+La trasmissione della domanda di rimborso da parte del beneficiario è notificata agli utenti
+istituzionali RLA ed UCIL. A valle della trasmissione, all’interno della maschera di modifica della
+domanda di rimborso si abilita il tab ‘Verifiche Amministrative’. Tutti gli utenti abilitati possono
+visionare la documentazione relativa alla domanda di rimborso allegata dal beneficiario tramite il
+comando allega file presente in altro a destra nella maschera.
+
+La sezione dedicata ai controlli amministrativi è composta da 5 sottosezioni:
+
+   ✓ Referente
+
+La sezione ‘Referente’ è accessibile in modalità modifica solamente dal Responsabile UCIL. Per
+associare un RVO alla verifica si clicca ‘Nuovo’ e si seleziona uno o più tra gli operatori UCIL censiti
+nell’anagrafica del Sistema.
+
+
+
+
+                                                  52
+   ✓ Check-list
+
+Una volta acceduto alla maschera il RVO clicca ‘Carica Modelli’ per caricare l’ultima versione della
+check-list amministrativa. Successivamente clicca il comando           per aprire l’elenco dei quesiti e
+rispondere ad essi.
+
+
+
+
+   ✓ Verifica Atti/Contratti
+
+La sezione ‘Verifica Atti/Contratti’ mostra l’elenco dei contratti associati alla domanda di rimborso.
+In questa sezione l’RVO compila le check-list relative ai contratti e definisce l’esito della verifica per
+ogni singolo contratto.
+
+
+
+
+                                                   53
+Per rispondere ai quesiti della check-list relativa agli atti/contratti si clicca sulla lente di
+ingrandimento posta in corrispondenza dei singoli record dell’elenco atti/contratti e
+successivamente ‘Carica Modelli’.
+
+
+
+
+Per registrare l’esito della verifica di ogni singolo contratto si clicca sulla icona a forma di matita
+posta in corrispondenza dei singoli record; successivamente all’interno del pop-up si registrano la
+data del controllo, l’esito della verifica ed eventuali note. Per i contratti già controllati in precedenti
+domande di rimborso non è necessario riavviare il processo di controllo.
+
+
+
+
+                                                    54
+    ✓ Controlli Finanziari
+
+La sezione ‘Controlli Finanziari’ consente di visualizzare l’elenco degli atti/contratti, dei titoli di spesa
+e dei pagamenti associati alla domanda di rimborso e permette al RVO di effettuare eventualmente
+i tagli su singoli pagamenti, titoli di spesa o contratti. La maschera presenta tre ulteriori sottosezioni
+‘Tagli spese generali’, ‘Tagli percentuali’, ‘Taglio Funding Gap’. Di default la maschera presenta
+l’elenco degli atti/contratti collegati alla domanda di rimborso. Premendo            in corrispondenza di
+ogni atto/contratto si apre l’elenco dei titoli di spesa associati; conseguentemente cliccando            in
+corrispondenza del titolo di spesa, l’utente può visualizzare il dettaglio del pagamenti associati al
+titolo di spesa.
+
+
+
+
+Premendo ‘Filtra’ è possibile aggiungere colonne contenenti informazioni aggiuntive in maschera.
+Flaggando ‘Dettagli’ si visualizzano in elenco delle informazioni di dettaglio connesse ai singoli
+record (celle colore verde); flaggando ‘Precedenti certificazioni’ si visualizzano informazioni
+riguardanti certificazioni precedenti (celle colore viola).
+
+Cliccando sul comando blu presente in corrisponde della colonna ‘Quota DdR al netto delle
+rettifiche’, l’utente può visualizzare il dettaglio di tutte le rettifiche effettuate sul singolo contratto,
+titolo di spesa o pagamento.
+
+
+
+
+                                                     55
+Tagli spese generali
+
+Nella sezione ‘Tagli spese generali’ è possibile effettuare i tagli puntuali su ogni singolo pagamento
+ammesso inserito in rendicontazione. Per abilitare la cella relativa al taglio è necessario porre il
+singolo record in stato ‘Oggetto di controllo’ selezionando la ‘X’. Per ogni singolo pagamento è
+possibile apporre i seguenti tagli:
+
+   ▪   Non ammissione totale, flaggando la cella in corrispondenza dell’apposita colonna;
+   ▪   Sospensione totale, flaggando la cella in corrispondenza dell’apposita colonna;
+   ▪   Non ammissione parziale, inserendo un importo nella cella in corrispondenza della colonna
+       ‘Importo non ammesso’ (di colore rosso);
+   ▪   Sospensione parziale, inserendo un importo nella cella in corrispondenza della colonna
+       ‘Importo non ammesso’ (di colore arancione);
+
+   N.B. in caso di rettifica parziale all’interno della cella di input è necessario inserire un importo
+   negativo separando i decimali dalle unita con un punto (es. per un taglio di 12,53 € si deve
+   registrare l’importo 12.53 €).
+
+   Per i singoli atti contratti e titoli di spese è possibile applicare la sospensione totale o la non
+   ammissione totale flaggando la cella in corrispondenza dell’apposita colonna. Il taglio viene
+   automaticamente applicato sui pagamenti associati al contratto o al titolo di spesa.
+
+   Terminati i tagli l’atto contratto deve essere posto in ‘Stato controllo’ - ‘Completato’.
+
+
+
+
+                                                 56
+Tagli percentuali
+
+Nella sezione ‘Tagli percentuali’ è possibile applicare i tagli percentuali sui singoli pagamenti. Per
+effettuare il taglio percentuale è necessario selezionare il record interessato, inserire la data e
+la percentuale della rettifica ed una eventuale note e successivamente cliccare il comando
+‘Taglia’.
+
+
+
+
+Tagli funding gap
+
+Per applicare un taglio di funding gap è sufficiente selezionare l’apposita sottosezione, indicare
+una data ed infine cliccare il comando ‘Taglia’.
+
+
+
+
+                                               57
+   ✓ Esito delle Verifiche
+
+La sezione è dedicata alla registrazione degli esiti relativi alla verifica amministrativa. La maschera
+presenta i comandi per effettuare il download della check-list e successivamente allegare il
+documento firmato digitalmente.
+
+
+
+
+   ✓ Chiarimenti/Integrazioni
+
+La sezione ‘Chiarimenti/Integrazioni’ è accessibile sia da utenti UCIL sia da utenti beneficiari.
+All’interno della maschera viene gestito il processo di richiesta di chiarimenti ed integrazioni da
+parte dell’UCIL nei confronti del beneficiario. Tale attività è fortemente dipendente dallo stato del
+work-flow gestionale del presente processo (vedi approfondimento di seguito).
+
+
+
+
+                                                  58
+Percorso Menu: ‘Progetti’ → ‘Domande di Rimborso’ → Tab. ‘Relazione di esito’
+
+La sezione è dedicata alla registrazione dei dati relativi alla Relazione di esito connessa alla verifica
+amministrativa. La maschera presenta i comandi per effettuare il download della Relazione da
+allegare firmata digitalmente.
+
+
+
+
+Il work-flow di processo connesso alle verifiche amministrative è gestito all’interno della
+sottosezione ‘Chiarimenti/Integrazioni’ del tab. ‘Verifiche amministrative’. Gli attori del processo
+sono il Responsabile UCIL, i singoli referenti per le verifiche (RVO) ed il beneficiario della domanda
+di rimborso.
+
+L’avvio del processo di verifica amministrativa avviene con l’inserimento di data inizio e data fine e
+conseguente clic sul comando ‘Apri Verifica Amministrativa’ da parte del Responsabile UCIL nella
+sottosezione ‘Referente’. Il clic abilita automaticamente tutte le sezioni relative al controllo.
+
+Il RVO associato alla verifica segnala l’inizio delle attività cliccando il comando ‘In lavorazione’.
+
+
+
+
+                                                   59
+Dopo aver preso visione della documentazione allegata alla domanda di rimborso il RVO ha la possibilità di
+richiedere chiarimenti o integrazioni cliccando il comando ‘Richiesta chiarimenti’.
+
+
+
+
+In conseguenza si abilitano i comandi per creare a sistema le richieste di chiarimenti/integrazioni. Una volta
+terminato l’inserimento delle singole richieste il RVO clicca ‘Invia richieste chiarimenti’. L’invio della richiesta
+di chiarimenti/integrazioni stoppa il calcolo del termine per il pagamento della spesa richiesta a rimborso.
+
+
+
+
+Il beneficiario riceve la notifica via e-mail della richiesta chiarimenti e registra a sistema la risposta, allegando
+eventualmente la documentazione richiesta. In seguito clicca su ‘Presentazione chiarimenti’ per notificare
+l’avvenuta risposta al RVO ed il processo passa di nuovo in capo all’UCIL. Di conseguenza riparte il calcolo del
+termine per il pagamento della spesa rendicontata.
+
+
+
+
+                                                         60
+Il processo torna allo stato ‘In lavorazione’; il RVO valuta la documentazione ottenuta in risposta dal
+beneficiario ed in caso positivo completa la verifica amministrativa compilando le check-list ed effettuando
+i tagli finanziari sulla spesa. Una volta inserito l’esito delle verifiche, clicca sul comando ‘Completa’.
+
+
+
+
+Al termine dell’attività del RVO il Responsabile UCIL completa il processo in primo luogo validando i dati
+cliccando il comando ‘Valida’; successivamente scarica ed allega la Relazione di esito firmata digitalmente.
+
+
+
+
+                                                        61
+5.1.2 Verifiche in loco
+
+Percorso menu: ‘Progetti’ → ‘Gestione Progetti’ → ‘Controlli’ → ‘Controlli in loco’
+
+
+
+
+In questa sezione l’utente visualizza l’elenco dei controlli in loco connessi al progetto selezionato.
+La tabella mostra alcuni dati di sintesi relativi ai singoli controlli (Data estrazione, Data Esito
+Provvisorio, Esito Provvisorio, Data esito definitivo, Esito definitivo, Importo Oggetto di controllo,
+Importo non ammesso, Importo sospeso). In questa maschera l’utente può creare o modificare un
+controllo in loco; cliccando il comando ‘Visualizza dati progetto’ l’utente è rinviato nella maschera
+di ‘Modifica Progetto’ del progetto stesso.
+
+Il work-flow di processo connesso ai controlli in loco è gestito interamente dagli utenti UCIL.
+
+La maschera di creazione/modifica del controllo in loco è articolata in undici sezioni:
+
+    ✓ Assegnazione e pianificazione
+
+La sezione contiene i dati relativi alla pianificazione del controllo in loco ed è editabile
+esclusivamente dal Responsabile UCIL. Terminata la compilazione dei dati, cliccando sul comando
+‘Conferma’ l’utente salva il controllo creato ed attiva gli altri tab.
+
+    ✓ Referente
+
+La sezione è editabile esclusivamente dal Responsabile UCIL, il quale seleziona i gli operatori UCIL
+assegnatari del controllo in loco in questione.
+
+
+
+
+                                                    62
+   ✓ DDR Campionate
+
+L’utente seleziona le domande di rimborso da sottoporre al controllo in loco.
+
+
+
+
+   ✓ Check List
+
+La sezione consente all’utente di compilare a Sistema i quesiti relativi alla check-list del controllo in
+loco. Cliccando sul comando ‘Carica Modelli’ il Sistema carica i quesiti relativi all’ultima versione
+dell’allegato MOP.
+
+
+
+
+                                                   63
+    ✓ Controlli finanziari
+
+L’utente deve selezionare la domanda di rimborso cui applicare i tagli; automaticamente il Sistema
+carica all’interno del cruscotto per i controlli finanziari i dati dei contratti, titoli di spesa e pagamenti
+relativi alla domanda di rimborso selezionata. Per la descrizione del funzionamento del cruscotto si
+rimanda al paragrafo 5.1.1 relativo alle verifiche amministrative.
+
+
+
+
+    ✓ Esito provvisorio
+
+L’utente registra all’interno della sezione l’esito provvisorio del controllo in loco. Sono selezionabili
+quattro tipi di esito: conforme, conforme con prescrizioni; conforme con rettifiche; non conforme.
+In caso di presenza di difformità il RVO registra le anomalie emerse e le azioni da porre in essere.
+Per salvare i dati inseriti cliccare il comando ‘Conferma’.
+
+La sezione presenta il comando per scaricare ed allegare il documento relativo alla verifica
+preliminare.
+
+
+
+                                                     64
+   ✓ Controdeduzioni e Follow-Up
+
+Le sezioni permettono di registrare le attività di contraddittorio e follow-up eseguito da RVO e
+beneficiario durante il controllo in loco. Nella sezione ‘Follow Up’ l’utente deve registrare l’esito
+delle verifiche sulle anomalie emerse registrate nella sezione ‘Esito provvisorio’.
+
+
+
+
+                                                  65
+   ✓ Esito definitivo
+
+A valle di controdeduzioni ed eventuale follow-up l’utente registra l’esito definitivo del controllo.
+Per salvare i dati inseriti l’utente clicca il comando ‘Conferma’. Tale sezione prevede i comandi per
+scaricare ed allegare la relazione definitiva del controllo in loco firmata digitalmente.
+
+
+
+
+   ✓ Chiarimenti/Integrazione
+
+L’utente registra i chiarimenti e le integrazioni richieste al beneficiario durante il controllo in loco.
+Rispetto al processo di verifica amministrativa, per i controlli in loco la maschera non è gestita dagli
+utenti beneficiari.
+
+
+
+
+                                                   66
+   ✓ Documentazione Acquisita
+
+L’utente utilizza la sezione per registrare la documentazione acquisita in loco. In fase di creazione
+del record l’utente deve specificare se la documentazione è stato visiona o solamente acquisita e se
+è stata fornita esclusivamente in formato cartaceo.
+
+
+
+
+Il work-flow di processo relativo ai controlli di II livello è interamente gestito dagli utenti UCIL.
+All’avvio del controllo in loco l’utente clicca sul comando ‘In Lavorazione’. Al termine delle attività
+effettuate dall’operatore UCIL, il Responsabile UCIL:
+
+   ▪   in caso di esito provvisorio conforme, conforme con rettifiche o conforme con prescrizioni
+       clicca ‘Approvazione’.
+
+
+
+
+   ▪   in caso di esito non conforme clicca comando ‘Non conforme’.
+
+
+
+
+                                                  67
+5.1.3 Controlli AdG
+
+Percorso menu: ‘Progetti’ → ‘Gestione Progetti’ → ‘Controlli’ → Tab. ‘Controlli AdG’
+
+
+
+
+In questa sezione l’utente visualizza l’elenco dei controlli AdG connessi al progetto selezionato. La
+tabella mostra alcuni dati di sintesi relativi ai singoli controlli (Codice del controllo, Data del
+controllo, Note, Importo oggetto di controllo, Importo non ammesso, Importo sospeso, Importo
+Rettificato). In questa maschera l’utente può creare o modificare un controllo AdG sulle domande
+di rimborso relative al progetto selezionato; cliccando il comando ‘Visualizza dati progetto’ l’utente
+è rinviato nella maschera di ‘Modifica Progetto’ del progetto stesso.
+
+La maschera di creazione/modifica del controllo AdG è articolata in tre sezioni:
+
+   ✓ Sintesi
+La sezione mostra dati di sintesi del controllo AdG.
+
+
+
+
+                                                 68
+    ✓ DdR campionate
+L’utente seleziona le domande di rimborso da sottoporre al controllo.
+
+
+
+
+    ✓ Controlli finanziari
+La sezione si attiva al primo salvataggio del controllo appena creato. L’utente deve selezionare la
+domanda di rimborso cui applicare i tagli; automaticamente il Sistema carica all’interno del
+cruscotto per i controlli finanziari i dati dei contratti, titoli di spesa e pagamenti relativi alla domanda
+di rimborso selezionata. Per la descrizione del funzionamento del cruscotto si rimanda al paragrafo
+5.1.1 relativo alle verifiche amministrative.
+
+
+
+
+                                                    69
+5.1.4 Controlli AdC
+
+Percorso menu: ‘Progetti’ → ‘Gestione Progetti’ → ‘Controlli’ → Tab. ‘Controlli AdC’
+
+
+
+
+In questa sezione l’utente visualizza l’elenco dei controlli AdC connessi al progetto selezionato. La
+tabella mostra alcuni dati di sintesi relativi ai singoli controlli (Codice del controllo, Data del
+controllo, Note, Importo oggetto di controllo, Importo non ammesso, Importo sospeso, Importo
+Rettificato). In questa maschera l’utente può creare o modificare un controllo AdC; cliccando il
+comando ‘Visualizza dati progetto’ l’utente è rinviato nella maschera di ‘Modifica Progetto’ del
+progetto stesso.
+
+La maschera di creazione/modifica del controllo AdG è articolata in quattro sezioni:
+
+   ✓ Sintesi
+
+
+
+
+                                                 70
+La sezione mostra dati di sintesi del controllo AdC.
+
+
+
+
+    ✓ DDR campionata
+L’utente seleziona le domande di rimborso da sottoporre al controllo.
+
+
+
+
+    ✓ Controlli finanziari
+La sezione si attiva al primo salvataggio del controllo appena creato. L’utente deve selezionare la
+domanda di rimborso cui applicare i tagli; automaticamente il Sistema carica all’interno del
+cruscotto per i controlli finanziari i dati dei contratti, titoli di spesa e pagamenti relativi alla domanda
+di rimborso selezionata. Per la descrizione del funzionamento del cruscotto si rimanda al paragrafo
+5.1.1 relativo alle verifiche amministrative.
+
+
+
+
+                                                    71
+   ✓ Check List
+La sezione permette all’utente di compilare la check-list connessa al controllo AdC.
+
+
+
+
+                                                 72
+5.1.5 Controlli II livello
+
+Percorso menu: ‘Progetti’ → ‘Gestione Progetti’ → ‘Controlli’ → Tab. ‘Controlli II Livello’
+
+
+
+
+In questa sezione l’utente visualizza l’elenco dei controlli di II livello connessi al progetto selezionato.
+In questa maschera l’utente può creare o modificare un controllo di II livello; cliccando il comando
+‘Visualizza dati progetto’ l’utente è rinviato nella maschera di ‘Modifica Progetto’ del progetto
+stesso.
+
+La maschera di creazione/modifica del controllo di II livello è articolata in sei sezioni:
+
+    ✓ Pianificazione e rapporto provvisorio
+
+In primo luogo l’utente registra il soggetto responsabile del controllo di II livello. I soggetti
+selezionabili sono: Autorità di audit, Commissione Europea, Corte dei Conti. Terminato di compilare
+i campi, l’utente salva le impostazioni cliccando il comando ‘Valida Dati’; automaticamente il
+Sistema abilita la sezione relativa ai controlli finanziari.
+
+
+
+
+                                                     73
+    ✓ DDR Campionate
+
+L’utente seleziona le domande di rimborso da sottoporre al controllo.
+
+
+
+
+    ✓ Controdeduzioni e Follow Up
+
+Le sezioni permettono di registrare le attività di contraddittorio e follow-up eseguite durante il
+controllo. Per salvare le controdeduzioni inserite cliccare ‘Valida Dati’. Nella sezione ‘Follow Up’
+l’utente deve registrare l’esito delle verifiche sulle anomalie emerse registrate nella sezione
+‘Pianificazione e Rapporto Provvisorio’; per salvare i dati relativi al follow up cliccare ‘Conferma’.
+
+
+
+
+    ✓ Controlli finanziari
+
+L’utente deve selezionare la domanda di rimborso cui applicare i tagli; automaticamente il Sistema
+carica all’interno del cruscotto per i controlli finanziari i dati dei contratti, titoli di spesa e pagamenti
+
+                                                     74
+relativi alla domanda di rimborso selezionata. Per la descrizione del funzionamento del cruscotto si
+rimanda al paragrafo 5.1.1 relativo alle verifiche amministrative.
+
+
+
+
+    ✓ Rapporto definitivo
+
+L’utente registra i dati relativi al Rapporto Definitivo e salva i dati cliccando ‘Valida Dati’.
+
+
+
+
+                                                    75
+5.1.6 Controlli II livello di sistema
+
+Percorso menu: ‘Controlli II Livello di sistema’ → ‘Elenco dei Controlli II Livello di sistema’
+La maschera consente di creare, modificare ed eliminare controlli di II livello di sistema.
+
+
+
+
+La maschera di modifica del controllo di II livello di sistema è articolata in cinque sezioni:
+
+    ✓ Pianificazione e rapporto provvisorio
+
+In primo luogo l’utente registra il soggetto responsabile del controllo di II livello di sistema (i soggetti
+selezionabili sono: Autorità di audit, Commissione Europea, Corte dei Conti. Terminato di compilare
+i campi, l’utente salva le impostazioni cliccando il comando ‘Valida Dati’.
+
+
+
+
+    ✓ DDR Campionate
+
+La sezione mostra l’elenco delle domande di rimborso registrate nel Sistema; l’utente deve
+selezionare le domande di rimborso oggetto del controllo.
+
+
+
+
+                                                    76
+   ✓ Controdeduzioni e Follow Up
+
+Le sezioni permettono di registrare le attività di contraddittorio e follow-up eseguite durante il
+controllo. Per salvare i dati inseriti cliccare ‘Valida Dati’. Nella sezione ‘Follow Up’ l’utente deve
+registrare l’esito delle verifiche sulle anomalie emerse registrate nella sezione ‘Pianificazione e
+Rapporto Provvisorio’.
+
+
+
+
+                                                 77
+   ✓ Rapporto definitivo
+
+L’utente registra le informazioni relativa al rapporto definitivo all’interno della apposita sezione e
+successivamente salva cliccando ‘Valida Dati’.
+
+
+
+
+                                                 78
+5.2 Irregolarità e recuperi
+
+
+
+Percorso Menu: ‘Irregolarità e recuperi → ‘Elenco irregolarità’
+
+La maschera mostra l’elenco delle irregolarità validate dall’AdG/STC/STA. L’utente può scaricare un
+report in formato excel relativo al registro ritiri e recuperi cliccando sul comando ‘Stampa Registro
+Rettifiche e Recuperi’. Per modificare i dati relativi ad una irregolarità è necessario selezionare il
+relativo record e cliccare il comando ‘Aggiorna dati’.
+
+
+
+
+La maschera di gestione delle irregolarità e recuperi è articolata in due sezioni:
+
+   ✓ Informazioni relative agli importi irregolari
+
+La compilazione dei dati relativi alla sezione è automatica, ad eccezione dei seguenti campi:
+
+           ▪   Tipologia irregolarità, in cui l’utente qualifica o motiva l’irregolarità riscontrata;
+           ▪   Segnalazione OLAF, flag attivabile solamente in caso di rettifiche di tipo irregolarità;
+           ▪   Motivo mancata segnalazione OLAF, in cui l’utente descrive le motivazioni che non
+               hanno condotto ad una segnalazione OLAF ed è editabile solo in caso di irregolarità.
+
+
+
+
+                                                   79
+   ✓ Importi irregolari oggetto di recupero
+
+In primo luogo l’utente seleziona il campo in caso di presenza di recupero pendente. Cliccando il
+comando ‘Salva impostazioni sugli importi da recuperare’ il Sistema abilita la modifica dei campi
+sottostanti.
+
+
+
+
+                                               80
+Una volta terminata la compilazione dei campi l’utente clicca ‘Aggiorna dati’; il sistema effettua dei
+controlli automatici ed in caso positivo salva i dati mentre in caso negativo indirizza l’utente fuori
+dalla maschera.
+
+   ✓ Informazioni sulla procedura di notifica delle irregolarità all’OLAF
+
+La sezione si abilita solamente in caso di segnalazione OLAF ed è compilata automaticamente dal
+sistema ad eccezione del campo ‘Contenuto aggiornamenti ex art.5’.
+
+
+
+
+                                                 81
+5.3 Pagamenti
+
+
+5.3.1 Pagamenti ai beneficiari
+
+Percorso Menu: ‘Pagamenti ai beneficiari’ → ‘DdR/Istanze da evadere’
+La maschera visualizza tutte le domande di rimborso aventi il processo di verifica amministrativa
+completata e le Istanze di pagamento per i progetti di Asse III. I record sono ordinati sulla base
+della data di scadenza. Per registrare il pagamento di una domanda di rimborso o di una istanza è
+necessario selezionare il record e cliccare ‘Metti in pagamento ddr/istanze selezionate’.
+
+
+
+
+L’utente è automaticamente reindirizzato nella maschera di modifica del pagamento in cui ha la
+possibilità di registrare i dati relativi al pagamento stesso. Il sistema alimenta in automatico
+l’elenco pagamenti (Percorso menu: ‘Pagamento beneficiari’ →‘Pagamenti al beneficiario’)
+
+
+
+
+                                                  82
+5.3.2 Predisposizione Istanza di pagamento Asse Assistenza Tecnica
+
+Percorso menu: ‘Pagamenti Beneficiari’ → ‘Istanze di Pagamento AT’
+
+La creazione di una istanza di pagamento avviene all’interno della maschera ‘Istanze di Pagamento
+AT’ selezionando il progetto interessato e cliccando il comando ‘Nuova istanza di pagamento’.
+
+
+
+
+L’utente viene automaticamente reindirizzato nella maschera di gestione dell’istanza di pagamento
+dove può selezionare i titoli di spese da associare all’istanza e quelli già associati da rimuovere
+utilizzando i comandi ‘Associa ad istanza’ e ‘Rimuovi istanza’.
+
+
+
+                                                 83
+All’interno della sezione ‘Dati Generali Istanza’ l’utente registra i campi relativi alla data ed al
+numero dell’istanza, allegando eventualmente delle note. Dopo aver salvato i dati dell’istanza
+l’utente può scaricare il documento ‘Nota trasmissione spese Asse Assistenza Tecnica’.
+Contemporaneamente sistema alimenta automaticamente l’elenco DdR/Istanze da evadere con la
+nuova istanza creata.
+
+Lo Stato dell’istanza può risultare: in Bozza (fino al salvataggio); in Pagamento (dal salvataggio al
+pagamento effettivo); Pagata (al momento del pagamento effettivo).
+
+
+
+
+                                                 84
+5.4 Dichiarazioni di spesa
+
+
+Percorso menu: ‘Dichiarazioni di spesa’ → ‘Elenco Dichiarazioni di spesa’
+
+L’utente può generare a sistema una nuova dichiarazione di spesa solamente nel caso in cui l’ultima
+dichiarazione di spesa presente a sistema risulti in stato ‘Presa in carico da AdC’.
+
+
+
+
+La maschera di modifica della dichiarazione di spesa è articolata in tre sezioni:
+
+   ✓ ‘Dati di sintesi’
+
+
+
+
+I campi, eccetto le note, sono valorizzati automaticamente dal Sistema a seconda del passaggio di
+stato della dichiarazione.
+
+La maschera di creazione/modifica dichiarazione di spesa presenta tre tab: ‘Dati di sintesi’, ‘DDR
+Associate’ ed ‘Irregolarità da validare’.
+
+
+                                                  85
+   ✓ DDR Associate
+
+La sezione è mostra tutte le domande di rimborso per cui è terminato il processo di verifica
+amministrativa. L’utente seleziona le domande di rimborso da inserire nella dichiarazione di spesa
+e successivamente salva.
+
+
+
+
+   ✓ Irregolarità da validare
+
+Prima del completamento del processo di dichiarazione di spesa, l’utente procede alla validazione
+delle irregolarità. La validazione può avvenire in maniera massiva selezionando vari elementi
+dell’elenco.
+
+
+
+
+Il work-flow dedicato alle dichiarazioni di spesa è gestito da utenti AdG e AdC. Gli step in carico
+all’Autorità di gestione sono ‘In lavorazione’ e ‘Trasmetti ad AdC’; mentre l’Autorità di certificazione
+ha il compito di registrare la ‘Presa in carico’ cliccando sull’apposito comando. Terminato il processo
+l’utente il documento della Dichiarazione di spesa direttamente all’interno della maschera.
+
+                                                  86
+5.5 Certificazioni di spesa
+
+
+Percorso menu: ‘Certificazione di spesa’ → ‘Elenco Certificazioni di spesa’
+
+Il sistema visualizza l’elenco delle certificazioni di spesa ordinate sulla base del numero progressivo. La
+creazione di una nuova certificazione di spesa è effettuata automaticamente dal Sistema a valle della chiusura
+della certificazione precedente, pertanto dalla maschera ‘Elenco Certificazioni di spesa’ è possibile accedere
+solamente in modifica di una certificazione.
+
+La maschera ‘Crea/modifica certificazione di spesa’ è strutturata in tre sezioni:
+
+    ✓ Dati Generali
+La sezione visualizza le informazioni generali della certificazione. I campi ‘Progressivo’ e ‘Certificazione
+Chiusa’ non sono modificabili manualmente dall’utente. All’interno della maschera l’utente può effettuare il
+download dei seguenti documenti:
+
+                ▪   Domanda di pagamento alla Commissione Europea, mediante il comando
+                    ‘Stampa allegati alla domanda’;
+                ▪   Lettera di accompagnamento (ancora non disponibile);
+                ▪   Report Certificazione sintesi per Asse, in cui l’utente visualizza la sintesi delle
+                    spese certificate classificate per Assi del PO;
+                ▪   Report Certificazione Elenco Progetti, in cui l’utente può visualizzare gli importi
+                    dei singoli progetti classificati per certificazione e conto annuale di riferimento.
+
+
+
+
+                                                      87
+   ✓ Check-list di verifica
+La sezione consente all’utente di compilare i quesiti della check-list di verifica per la domanda di
+pagamento alla CE a Sistema, effettuare il download del documento della verifica stessa ed allegare
+il documento firmato digitalmente.
+
+
+
+
+   ✓ Elenco dichiarazioni di spesa
+La sezione mostra l’elenco delle dichiarazioni di Spesa prese in carico dall’AdC ed associate alla
+certificazione di spesa in oggetto. I valori visualizzabili in corrispondenza delle colonne ‘Importi
+ammesso AdG’ ed ‘Importo ammesso AdC’ sono connessi rispettivamente ai controlli AdG e AdC
+descritti nel paragrafo 5.1.
+
+
+
+
+Terminate le attività l’utente chiude la certificazione utilizzando l’apposito comando.
+
+                                                 88
+5.6 Chiusura di conti (esclusivamente per il PON I&R 2014-2020)
+
+
+Percorso menu: ‘Elenco conti’ → ‘Chiusura dei conti’
+La maschera mostra l’elenco dei conti censiti a Sistema ordinati per periodo contabile. In
+corrispondenza della colonna ‘Stato Conto’ si visualizza se il conto è aperto o chiuso.
+
+
+
+
+La maschera di gestione dei conti è articolata in quattro sezioni:
+
+   ✓ Sintesi
+
+I dati relativi al periodo contabile del conto sono inseriti di default dal Sistema. I campi ‘Verifica
+affidabilità di sistema’ e ‘Verifica conto annuale’ evidenziano lo stato di compilazione delle rispettive
+check-list. In corrispondenza di ogni step di processo l’utente allega l’apposito documento ed il
+Sistema lo classifica automaticamente; successivamente in corrispondenza della colonna ‘Modifica’
+l’utente registra la data step. Cliccando il comando ‘Elaborazione Report’ l’utente effettua il
+download del Modello dei Conti, mentre cliccando ‘Gestisci Scadenze’ l’utente è reindirizzato
+nell’apposita maschera. Per chiudere il conto è necessario utilizzare il comando ‘Chiudi Conto’.
+
+
+
+
+                                                   89
+    ✓ Check List verifiche affidabilità e verifiche sul conto
+
+All’interno delle sezioni l’utente compila rispettivamente la check-list per le verifiche sull’affidabilità
+del Sistema e la check-list per le verifiche sul conto annuale. Per caricare i quesiti cliccare ‘Carica
+Modello’; successivamente scaricare ed allegare firmati digitalmente i documenti relativi alle check-
+list in questione.
+
+
+
+
+    ✓ Rettifiche non incluse in DDP da valutare
+
+L’utente selezione le rettifiche presenti nell’elenco da includere nel conto in chiusura. La tabella
+per ogni record il soggetto responsabile del controllo ed il tipo della rettifica (irregolarità o errore).
+
+
+
+
+                                                    90
+Percorso menu: ‘Elenco conti’ → ‘Gestisci scadenze’
+
+L’utente visualizza le scadenze connesse alla chiusura dei conti e può selezionare un periodo
+temporale entro cui notificare un alter di scadenza verso l’AdG e l’AdA.
+
+
+
+
+                                                 91
+6. Monitoraggio Ambientale (esclusivamente per il PON I&R 2014-2020)
+
+
+Il Sistema dispone di una sezione dedicata al monitoraggio ambientale dei progetti del PO PON I&R.
+Il sistema informativo è collegato all’applicativo Web-GIS tramite cui è possibile visualizzare le
+informazioni relative ai progetti e delle componenti ambientali di riferimento; sulla cartografia di
+base è possibile caricare i layer di riferimento.
+
+
+
+
+6.1 Le funzioni nel Sistema Informativo
+
+
+
+L’amministrazione delle funzionalità connesse al monitoraggio ambientale è affidata ad una task-
+force specializzata. La predisposizione delle schede progetto e delle schede degli indicatori di
+carattere ambientale avviene mediante una console amministrativa collegata ai dati SIPONIER. Gli
+utenti beneficiari cooperano nel processo di monitoraggio caricando nel Sistema i dati ambientali
+riferiti ai singoli progetti (vedi 4.2.1).
+
+Tutti gli altri utenti abilitati possono solamente agire in lettura delle maschere. La componente web-
+GIS è liberamente accessibile da tutti gli stakeholders.
+
+
+
+
+Percorso menu: ‘Monitoraggio Ambientale’ → ‘Monitoraggio Ambientale Programma’
+
+La sezione ‘Monitoraggio Ambientale Programma’ visualizza i dati relativi agli indicatori ed è
+articolata in tre sotto-sezioni: indicatori di contesto, indicatori di contributo, indicatori di processo.
+Per ogni indicatore l’utente può scarica la seguente documentazione: scheda indicatore e report
+dati e grafico dell’indicatore. Inoltre ogni record contiene il link per la visualizzazione dell’indicatore
+nel web-GIS.
+
+
+
+
+                                                    92
+Percorso menu: ‘Monitoraggio Ambientale’ → ‘Monitoraggio Ambientale Progetti’
+
+La sezione ‘Monitoraggio Ambientale Progetti’ visualizza l’elenco dei progetti connessi al processo
+di monitoraggio ambientale. Per ogni progetto la maschera consente di scaricare la seguente
+documentazione: scheda progetto, report dati e grafici degli indicatori associati al singolo progetto.
+Ogni record contiene il link per accedere alla visualizzazione del progetto all’interno del web-GIS.
+
+
+
+
+                                                 93
+6.2 WebGIS
+
+
+6.2.1 Accesso al GIS
+
+Il visualizzatore WebGIS è accessibile dal SIPONIER cliccando in prossimità del comando WebGIS
+presente all’interno dei menu relativi al monitoraggio ambientale oppure all’interno della maschera
+Modifica Progetto.
+
+
+
+
+6.2.2 Funzioni Generali
+
+Sono selezionabili 5 cartografie di base: Google Sat, Google Road, Bing Aerial, Bing Road, Open
+Street. All’accesso è impostato di default Google Road.
+Sulla mappa sono presenti i comandi per attivare le seguenti funzioni cartografiche:
+
+ ICONA                 FUNZIONE
+
+                       ZOOM IN/ZOOM OUT
+                       I comandi consentono di regolare lo zoom sulla mappa.
+                       La stessa funzione è replicabile utilizzando lo scroll del mouse.
+
+
+
+
+                                                   94
+ICONA   FUNZIONE
+
+        INFO
+        Il comando consente all’utente di visualizzare i dati associati ai servizi attivi
+        sulla mappa. Una volta attivato, è sufficiente cliccare sulla mappa in
+        corrispondenza degli elementi relativi ai servizi attivi; sulla mappa si apre un
+        popup che consente la consultazione della tabella dei dati associati.
+
+
+        SERVIZI ESTERNI
+        Cliccando, si attiva un toolbar che permette di caricare un servizio esterno.
+        Dopo aver digitato l’URL, cliccando Carica, la funzione permette di
+        selezionare il servizio da esporre sul visualizzatore.
+        Una volta selezionato lo strato informativo da esporre, cliccare Aggiungi.
+        Il servizio attivato viene inserito all’interno della cartella Servizi Esterni in
+        Catalogo Servizi ed è attivabile/disattivabile sul visualizzatore fino al
+        successivo refresh della maschera.
+
+
+        STRUMENTI DI MISURA
+        Cliccando, si attiva un toolbar che consente all’utente di selezionare il tipo di
+        misura da effettuare sulla mappa: Distanza; Area Poligonale.
+        Una volta attivato il comando l’utente seleziona un punto della mappa in cui
+        iniziare la misurazione e successivamente trascina il cursore; per impostare
+        un punto è necessario cliccare sul punto interessato. Terminata la selezione
+        della distanza o dell’area poligonale da misurare, fare doppio clic.
+        Per rimuovere le misurazioni sulla mappa cliccare l’apposito comando
+        oppure nuovamente il comando Strumenti di Misura.
+
+
+        CATTURA IMMAGINE
+        Cliccando, l’utente salva l’immagine esposta sul visualizzatore in formato
+        .png
+        L’immagine catturata contiene i dati di scala della mappa e la legenda (se
+        attiva).
+
+
+        LEGENDA
+        Cliccando, in basso a destra si apre la legenda degli elementi relativi ai servizi
+        attivi sul visualizzatore. Una volta attivata, la legenda rimane aperta
+        dinamicamente (si aggiorna con eventuali altri strati selezionati) finché
+        l’utente non decida esplicitamente di chiuderla.
+
+
+
+
+                                    95
+ ICONA                 FUNZIONE
+
+                       CERCA LOCALITÀ
+                       Cliccando, si apre una casella di testo dove l’utente può digitare il nome di
+                       una località da ricercare sulla mappa.
+
+
+                       SCHERMO INTERO
+                       Cliccando, l’utente nasconde il Catalogo dei servizi e può visualizzare la
+                       mappa a schermo intero.
+
+
+
+
+6.2.3 Servizi
+
+Sulla destra del visualizzatore sono presenti due sezioni: Catalogo dei servizi e Servizi attivi.
+Catalogo dei servizi
+La sezione mostra l’elenco dei servizi attivabili sulla mappa. L’elenco è suddiviso in 4 macro-cartelle:
+- Interventi: contiene l’elenco degli interventi PON di asse I e asse II. Sono attivabili solamente i
+progetti per cui sono presenti dati georiferiti.
+- Indicatori: contiene l’elenco degli indicatori di tipo ambientale del PON. Ad ogni indicatore
+corrisponde una sotto-cartella contenente gli strati informativi selezionabili.
+- Dati di base: sono strati informativi generali utili per un’ulteriore contestualizzazione (es. Limiti
+regionali, Provinciali, Comunali)
+- Servizi Esterni: contiene gli strati informativi esposti con servizi da provider esterni (es. ISPRA)
+caricati durante la sessione dall’utente mediante l’omonima funzione. La cartella viene svuotata ad
+ogni refresh della pagina.
+
+
+Servizi Attivi
+La sezione mostra i servizi attivati sul visualizzatore dall’utente nel corso della sessione; sono
+ordinati di default in ordine cronologico di attivazione, dal più recente al meno recente.
+In caso di attivazione di più servizi, è possibile che gli strati informativi appaiano sovrapposti sulla
+mappa; i servizi attivati per ultimi hanno in questo caso la precedenza nella visualizzazione.
+L’utente può comunque gestire la visualizzazione di servizi sovrapposti con due differenti modalità:
+- cambiando l’ordine dei servizi attivi, cliccando sul servizio da ordinare e trascinando il cursore fino
+alla posizione desiderata;
+
+                                                   96
+- utilizzando la funzione Visibilità, attivabile cliccando con il tasto destro del mouse in
+corrispondenza del servizio e regolando la trasparenza voluta.
+Il visualizzatore parte con la selezione dell’area del progetto o dell’indicatore selezionato in
+SIPONIER (zoom to layer); l’utente può comunque effettuare uno zoom specifico su un altro servizio
+attivato con queste modalità:
+- facendo doppio clic in corrispondenza del servizio attivo;
+- utilizzando la funzione Zoom, attivabile cliccando con il tasto destro del mouse in corrispondenza
+del servizio.
+
+
+
+
+                                                  97
+7. Consolle SIPONIER
+
+
+L’utente amministratore dispone di un’applicazione per aggiornare le check-list e per configurare il
+format dei documenti scaricabili da Sistema in tempo reale. Il download della console è disponibile
+al link http://test.mit.theorema.it/CONSOLE_SETUP_PREPROD/ .
+
+Per accedere alle funzioni dell’applicazione è necessario possedere un account. All’apertura del
+profilo privato l’utente visualizza l’Homepage della console.
+
+Per modificare un documento è necessario aprire il menu a tendina premendo sul comando in alto
+a sinistra dell’intestazione della console e successivamente cliccare ‘documenti digitali’.
+
+
+
+
+In questa maschera l’utente visualizza l’elenco dei documenti prestampati presenti nel Sistema.
+
+
+
+
+Facendo un doppio click su un documento l’utente accede alla modalità di modifica di questo.
+
+   ➢ All’interno del tab “Generale” si inseriscono i dati anagrafici del documento.
+
+                                                  98
+DESCRIZIONE                        Titolo del documento
+CODICE MANUALE PROCEDURE           Codice del documento all’interno del MOP
+TIPO PROCESSO                      Processo di riferimento del doc. (DdR, Monitoraggio, etc.)
+TIPO DOCUMENTO                     Modello DdR, Check List, Fattura, Sal, etc.
+DOMINIO                            Ambito più specifico del processo
+STRUMENTO ATTUATIVO                Selezionare strumento attuativo di pertinenza del doc.
+ARTICOLAZIONI                      Selezionare le articolazioni del PO di pertinenza del doc.
+
+
+
+
+  ➢ Nel caso in cui il documento preveda una check-list è possibile configurare i quesiti
+     all’interno del tab “Modelli Check List”. Per modificare un quesito è necessario cliccare su
+     esso in prossimità della colonna “Testo /Quesito” e correggere il testo
+
+
+
+
+                                              99
+➢ Cliccando sul tab “Modello Word” l’Utente può modificare la struttura ed il testo del
+   documento. Le funzionalità di questo strumento sono analoghe a quelle di un comune file
+   Word. Nella colonna di sinistra sono presenti i campi delle informazioni che il sistema allega
+   al file in fase di download (es. per inserire la “Tipologia DDR” selezionare sulla sinistra il
+   campo “TIPO DDR (INTERMEDIA/FINALE)).
+
+
+
+
+                                            100
+In caso di presenza di tabelle è necessario inserire dei comandi specifici:
+
+
+
+
+Inizialmente si inserisce il comando iteratore “Inizio” nella prima cella e si impone un filtro (ad
+esempio per il caso degli investimenti infrastrutturali si pone un filtro “Codice Categoria di Spesa”
+pari a 1, in modo che il Sistema associ nella tabella solo recordo con corrispondente codice categoria
+di spesa uguale a 1.
+
+
+
+
+                                                 101
+Successivamente si inseriscono tutti i campi della tabella; in caso di presenza di campi “data” o
+“importi” si deve formattare il valore scegliendo un formato “data” o “monetario”. Infine all’interno
+dell’ultima cella è necessario inserire l’iteratore “Fine”, analogamente a quanto visto in precedenza
+per l’apertura della tabella.
+
+
+
+
+Per le celle relative ai subtotali degli importi è necessario inserire una funzione somma.
+
+
+
+
+Nel caso in cui si voglia controllare formati o filtri è possibile visualizzare il contenuto delle celle
+decodificato cliccando sul tab “Lettere” e premendo “Mostra Tutti i Codici di Campo”.
+
+
+
+
+                                                  102
+Una volta terminate le modifiche sul file Word è possibile visualizzare un’anteprima del documento
+cliccando su “Anteprima Fusione” presente sull’intestazione della maschera. Infine per confermare
+le modifiche premere “Salva”.
+
+
+
+
+                                               103
+
