@@ -1,45 +1,69 @@
 {
  "a": "esiti-haiku",
  "b": "esiti-qwen3-vl_8b",
- "cig_comuni": 0,
+ "cig_comuni": 1,
  "campi": {
   "asse_a.stato": {
-   "accordo": 0,
-   "n": 0,
-   "pct": null,
-   "wilson95": null,
-   "kappa": null,
+   "accordo": 1,
+   "n": 1,
+   "pct": 100.0,
+   "wilson95": [
+    0.207,
+    1.0
+   ],
+   "kappa": 1.0,
    "disaccordi": []
   },
   "servizio": {
    "accordo": 0,
-   "n": 0,
-   "pct": null,
-   "wilson95": null,
-   "kappa": null,
-   "disaccordi": []
+   "n": 1,
+   "pct": 0.0,
+   "wilson95": [
+    0.0,
+    0.793
+   ],
+   "kappa": 0.0,
+   "disaccordi": [
+    {
+     "cig": "B2BC00915E",
+     "a": "servizi-professionali",
+     "b": "lavori-non-ict"
+    }
+   ]
   },
   "asse_b.stato": {
-   "accordo": 0,
-   "n": 0,
-   "pct": null,
-   "wilson95": null,
-   "kappa": null,
+   "accordo": 1,
+   "n": 1,
+   "pct": 100.0,
+   "wilson95": [
+    0.207,
+    1.0
+   ],
+   "kappa": 1.0,
    "disaccordi": []
   },
   "giurisdizione": {
    "accordo": 0,
-   "n": 0,
-   "pct": null,
-   "wilson95": null,
-   "kappa": null,
-   "disaccordi": []
+   "n": 1,
+   "pct": 0.0,
+   "wilson95": [
+    0.0,
+    0.793
+   ],
+   "kappa": 0.0,
+   "disaccordi": [
+    {
+     "cig": "B2BC00915E",
+     "a": null,
+     "b": "IT"
+    }
+   ]
   }
  },
  "validita_b": {
-  "uscite": 0,
-  "valide": 0,
-  "citazioni": 0,
-  "citazioni_letterali": 0
+  "uscite": 1,
+  "valide": 1,
+  "citazioni": 1,
+  "citazioni_letterali": 1
  }
 }
