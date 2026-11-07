@@ -1,0 +1,2757 @@
+      giunta regionale
+
+Allegato B         al Decreto n.    11617   del   14/10/2025                pag. 1 di 46
+
+
+
+
+    DIREZIONE ICT, AGENDA DIGITALE E SOS AFFIDAMENTO SERVIZI E FORNITURE ICT
+
+
+
+
+                              CAPITOLATO SPECIALE D’APPALTO
+
+
+
+    APPALTO SPECIFICO INDETTO DA REGIONE DEL VENETO PER             L’ACQUISIZIONE DI
+    NUOVE       APPARECCHIATURE     HARDWARE,     LICENZE      SOFTWARE,   SERVIZI         DI
+    MANUTENZIONE E SERVIZI CLOUD AVANZATI PER IL POTENZIAMENTO DELLE
+    INFRASTRUTTURE, DELLA CYBERSECURITY E DEI SERVIZI DIGITALI DI REGIONE DEL
+    VENETO       NELL’AMBITO SISTEMA DINAMICO DI ACQUISIZIONE DELLA PUBBLICA
+    AMMINISTRAZIONE PER FORNITURA DI PRODOTTI E SERVIZI PER L'INFORMATICA E
+    LE TELECOMUNICAZIONI. ID 2681.
+
+
+
+    Lotto n. 1 - Fornitura Hardware “Nutanix” CIG n. B8986AFB16
+    Lotto n. 2 - Fornitura Hardware “Dell” CIG n. B8986B0BE9
+    Lotto n. 3 - Fornitura hardware “Rubrik” CIG n. B8986B1CBC
+    Lotto n. 4 - Fornitura licenze “Fortinet” CIG n. B8986B2D8F
+    Lotto n. 5 - Fornitura licenze e apparati Anti DDoS “Radware” CIG n.
+    B8986B3E62
+    Lotto n. 6 - Servizio “Apigee” CIG n. B8986B4F35
+
+
+    CUI n. F80007580279202400004.
+    CUP n. H77H25001620002.
+
+
+
+                                             1
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                           pag. 2 di 46
+
+
+
+
+           PARTE I: PRESTAZIONI OGGETTO DELL’APPALTO
+                          LOTTO N. 1 - Fornitura Hardware “Nutanix”
+                                     ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di apparecchiature hardware e software in tecnologia Nutanix.
+       La soluzione proposta dall’offerente dovrà comprendere espansioni, sia HW che SW, dei cluster costituiti da
+       nodi iperconvergenti, attualmente in esercizio presso il sito primario a Marghera e secondario a Padova,
+       destinati a workload di produzione per la Giunta Regionale e per la convergenza infrastrutturale mediante i
+       servizi messi a disposizione dal Polo Strategico Regionale (PSR).
+                         ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+       Oggetto della procedura di acquisizione è la fornitura di componenti hardware e software con manutenzione
+       per l’ampliamento dell’infrastruttura iperconvergente della Regione del Veneto come indicato nella tabella
+       sottostante di riepilogo e nelle successive quattro di dettaglio tecnico. La fornitura deve rispondere alle
+       caratteristiche, alle condizioni, alle modalità e alla durata descritte.
+
+
+
+                                           Nome Prodotto                     Quantità
+
+                                         Nodi NX-8155-G9                    8
+                                         Nodi NX-8170-G9                    7
+                                        Tabella 1: Elenco Macro-Prodotti HW e SW
+
+
+       Si evidenzia che il presente documento descrive le caratteristiche e i requisiti di conformità cui devono
+       necessariamente rispondere tutti gli elementi hardware e software nella configurazione. I prodotti offerti
+       devono essere nuovi di fabbrica, costruiti utilizzando parti nuove e devono rispondere alle caratteristiche
+       minime di seguito descritte.
+                                  ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       Di seguito si riporta il dettaglio dei nodi iperconvergenti Nutanix
+       Nella tabella riportata di seguito si riportano le caratteristiche di dettaglio della soluzione che comprende 4
+       Nodi NX-8155-G9 presso datacenter di VENEZIA
+
+
+            Codice prodotto                   Descrizione prodotto                Mesi supporto          Quantità
+                                  Subscription, Nutanix Cloud Infrastructure
+             SW-NCI-ULT-PR        (NCI) Ultimate Software License & Production          48                   52
+                                  Software Support Service for 1 CPU Core
+              Term-Months         Term in months                                        48                   48
+
+
+
+
+                                                              2
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                         pag. 3 di 46
+
+
+
+
+                                 Nutanix Hardware Platform
+                                 * NX-8155-G9, 1 Node Configuration
+              NX-8155-G9         Nutanix Software * Foundation - Hypervisor                                4
+                                 Agnostic Installer * Controller VM * Prism
+                                 Management * Starter License Entitlement
+                                 Intel Xeon-Gold 6426Y processor (2.5 GHz/
+              C-CPU-6426Y                                                                                  8
+                                 16-core/ 185W, Sapphire Rapids)
+           C-MEM-64GB-5600       64GB Memory Module (5600MHz DDR5 RDM)                                     96
+            C-HDD-12TB-EA        12TB, 3.5" HDD                                                            32
+            C-NVM-7.68TB-B       7.68 TB NVMe SSD                                                          16
+           C-HBA-3816-1N-A       12Gb/s Gen4 HBA                                                           4
+                                 LOM Module: Broadcom 10GbE, 2-port,
+           C-LOM-10G2D1BT                                                                                  4
+                                 Base-T NIC (BCM 57416)
+                                 SMC 25/10GbE, 2-port, NIC (BCM
+             C-NIC-25G2D1                                                                                  8
+                                 57414);transceiver not included
+           C-PWR-4FC13C14A       C13/C14, 10A, 4ft Power cord                                              8
+                                 24/7 Production Level HW Support for
+               S-HW-PRD                                                                60                  4
+                                 Nutanix HCI appliance
+             Support-Term        Support Term in Months                                60                  60
+                                 SFP+, Short Range, Ethernet, Single Optical
+            C-XCVR-SR-SFP+       Transceiver; up to 10GbE bandwidth per SFP+                               8
+                                 specifications
+          Platform Integration   Platform Integration Fee                                                  1
+                        Tabella 2: Elenco di dettaglio Nodi Nutanix NX-8155-G9 presso VENEZIA
+
+
+       Nella tabella riportata di seguito si elencano le caratteristiche di dettaglio della soluzione che comprende 4
+       Nodi NX-8155-G9 presso Data Center di PADOVA
+
+
+
+            Codice prodotto                  Descrizione prodotto                Mesi supporto          Quantità
+                                 Subscription, Nutanix Cloud Infrastructure
+             SW-NCI-ULT-PR       (NCI) Ultimate Software License & Production          48                  56
+                                 Software Support Service for 1 CPU Core
+             Term-Months         Term in months                                        48                  48
+                                 Nutanix Hardware Platform
+                                 * NX-8155-G9, 1 Node Configuration
+              NX-8155-G9         Nutanix Software * Foundation - Hypervisor                                4
+                                 Agnostic Installer * Controller VM * Prism
+                                 Management * Starter License Entitlement
+                                 Intel Xeon-Gold 6426Y processor (2.5 GHz/
+              C-CPU-6426Y                                                                                  8
+                                 16-core/ 185W, Sapphire Rapids)
+           C-MEM-64GB-5600       64GB Memory Module (5600MHz DDR5 RDM)                                     96
+            C-HDD-12TB-EA        12TB, 3.5" HDD                                                            32
+            C-NVM-7.68TB-B       7.68 TB NVMe SSD                                                          16
+           C-HBA-3816-1N-A       12Gb/s Gen4 HBA                                                           4
+
+
+
+                                                             3
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                          pag. 4 di 46
+
+
+
+
+                                  LOM Module: Broadcom 10GbE, 2-port,
+           C-LOM-10G2D1BT                                                                                   4
+                                  Base-T NIC (BCM 57416)
+                                  SMC 25/10GbE, 2-port, NIC (BCM
+             C-NIC-25G2D1                                                                                   8
+                                  57414);transceiver not included
+           C-PWR-4FC13C14A        C13/C14, 10A, 4ft Power cord                                              8
+                                  24/7 Production Level HW Support for
+               S-HW-PRD                                                                  60                 4
+                                  Nutanix HCI appliance
+             Support-Term         Support Term in Months                                 60                 60
+                                  SFP+, Short Range, Ethernet, Single Optical
+            C-XCVR-SR-SFP+        Transceiver; up to 10GbE bandwidth per SFP+                               8
+                                  specifications
+          Platform Integration    Platform Integration Fee                                                  1
+
+                        Tabella 3: Elenco di dettaglio Nodi Nutanix NX-8155-G9 presso PADOVA
+
+
+       Nella tabella riportata di seguito si riportano le caratteristiche di dettaglio della soluzione che comprende 4
+       Nodi NX-8170-G9 da installare per il datacenter di Venezia.
+
+
+            Codice prodotto                    Descrizione prodotto                 Mesi supporto       Quantità
+                                  Service, NDB Expansion. Includes the
+                                  expansion of an existing NDB deployment.
+                                  The multi-cluster option is enabled on the
+                                  NDB instance to add a new cluster or add an
+          CNS-DBM-A-NDB-EXP                                                                                 1
+                                  additional cluster to an existing multi-cluster
+                                  NDB deployment. For each quantity
+                                  purchased, expansion is limited to one
+                                  on-premises NCI or NC2 cluster.
+                                  Nutanix Hardware Platform
+                                  * NX-8170-G9, 1 Node Configuration
+              NX-8170-G9          Nutanix Software * Foundation - Hypervisor                                4
+                                  Agnostic Installer * Controller VM * Prism
+                                  Management * Starter License Entitlement
+                                  Intel Xeon-Gold 6542Y processor (2.9 GHz/
+              C-CPU-6542Y                                                                                   8
+                                  24-core/ 250W,Emerald Rapids)
+           C-MEM-64GB-5600        64GB Memory Module (5600MHz DDR5 RDM)                                     96
+            C-NVM-7.68TB-B        7.68 TB NVMe SSD                                                          16
+              C-SSD-NONE          No SSD as part of the system configuration                                4
+                                  LOM Module: Broadcom 10GbE, 2-port,
+           C-LOM-10G2D1BT                                                                                   4
+                                  Base-T NIC (BCM 57416)
+                                  SMC 25/10GbE, 2-port, NIC (BCM
+             C-NIC-25G2D1                                                                                   8
+                                  57414);transceiver not included
+           C-PWR-4FC13C14A        C13/C14, 10A, 4ft Power cord                                              8
+                                  SFP+, Short Range, Ethernet, Single Optical
+            C-XCVR-SR-SFP+        Transceiver; up to 10GbE bandwidth per SFP+                               8
+                                  specifications
+                                  24/7 Production Level HW Support for
+               S-HW-PRD                                                                  60                 4
+                                  Nutanix HCI appliance
+                                                                 4
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                          pag. 5 di 46
+
+
+
+
+             Support-Term         Support Term in Months                                60                  60
+                                  Subscription, Nutanix Cloud Infrastructure
+                                  (NCI) Ultimate Software License for Edge sites
+            SW-NCI-E-ULT-MC                                                             36                  25
+                                  & Mission Critical Software Support Service
+                                  for 1 VM
+              Term-Months         Term in months                                        36                  36
+                              Service, Nutanix Professional Services Flex
+                              Credits. Pre-paid fees for Nutanix Professional
+                              Services. Pricing: Per Pre-paid Credit Unit,
+              FLEX-CST-CR                                                               12                 500
+                              $100 USD Face Value. Flex Credits shall expire
+                              twelve (12) months after receipt of the
+                              applicable purchase order.
+                              Service, Database Design Workshop. For each
+                              quantity purchased, database design is limited
+        CNS-DBM-A-WRK-DES-STD                                                                               1
+                              to up to 5 databases of one of the supported
+                              databases.
+                              Subscription, Nutanix Database Service (NDB)
+                              Software License & Mission Critical Software
+                              Support Service per vCPU when deployed as
+                              an add-on to a pre-existing NCI cluster, or per
+              SW-NDB-MC                                                                 36                 200
+                              physical Core when deployed as a full stack
+                              dedicated NDB cluster. Standalone
+                              deployment requires all cores to be licensed
+                              and includes NCI Ultimate features.
+              Term-Months         Term in months                                        36                  36
+
+
+
+
+                                  Subscription, Nutanix Cloud Manager (NCM)
+                                  Ultimate Software License for Edge sites &
+           SW-NCM-E-ULT-MC                                                              36                  25
+                                  Mission Critical Software Support Service for 1
+                                  VM
+
+
+
+
+              Term-Months         Term in months                                        36                  36
+
+                        Tabella 4: Elenco di dettaglio Nodi Nutanix NX-8170-G9 presso VENEZIA
+
+
+
+       Nella tabella riportata di seguito si riportano le caratteristiche di dettaglio della soluzione che comprende 3
+       Nodi NX-8170-G9 da installare per il Data Center di Padova.
+
+
+
+
+                                                                5
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 6 di 46
+
+
+
+
+              Product Code                     Product Description                  Term (Months)          Quantity
+                                  Nutanix Hardware Platform
+                                  * NX-8170-G9, 1 Node Configuration
+              NX-8170-G9          Nutanix Software * Foundation - Hypervisor                                   3
+                                  Agnostic Installer * Controller VM * Prism
+                                  Management * Starter License Entitlement
+                                  Intel Xeon-Gold 6542Y processor (2.9 GHz/
+              C-CPU-6542Y                                                                                      6
+                                  24-core/ 250W,Emerald Rapids)
+           C-MEM-64GB-5600        64GB Memory Module (5600MHz DDR5 RDM)                                        72
+            C-NVM-7.68TB-B        7.68 TB NVMe SSD                                                             12
+              C-SSD-NONE          No SSD as part of the system configuration                                   3
+                                  LOM Module: Broadcom 10GbE, 2-port,
+           C-LOM-10G2D1BT                                                                                      3
+                                  Base-T NIC (BCM 57416)
+                                  SMC 25/10GbE, 2-port, NIC (BCM
+             C-NIC-25G2D1                                                                                      6
+                                  57414);transceiver not included
+           C-PWR-4FC13C14A        C13/C14, 10A, 4ft Power cord                                                 6
+                                  SFP+, Short Range, Ethernet, Single Optical
+            C-XCVR-SR-SFP+        Transceiver; up to 10GbE bandwidth per SFP+                                  6
+                                  specifications
+                                  24/7 Production Level HW Support for
+               S-HW-PRD                                                                   60                   3
+                                  Nutanix HCI appliance
+              Support-Term        Support Term in Months                                  60                   60
+
+                         Tabella 5: Elenco di dettaglio Nodi Nutanix NX-8170-G9 presso PADOVA
+
+       L’importo complessivo a base di gara per il Lotto n. 1 - Fornitura Hardware “Nutanix” ammonta ad
+       Euro 961.000,00 (IVA esclusa), di cui euro 0,00 (zero) per costi di interferenza ed euro 0,00 (zero) per
+       costi di manodopera.
+        Durata: 60 mesi.
+
+
+       3.1. Caratteristiche di equivalenza
+
+
+       I prodotti informatici oggetto dell'offerta devono obbligatoriamente corrispondere a quelli sopraindicati, o
+       equivalenti. L’equivalenza, ai sensi dell’art. 41, comma 5 del D.Lgs n. 36/2023, dovrà garantire:
+       - la presenza di tutte le caratteristiche tecniche dei prodotti indicati;
+       - la loro perfetta integrazione nell’attuale sistema vale a dire che la soluzione proposta deve mantenere la
+       compatibilità e retro-compatibilità con le funzionalità attualmente in esercizio nei sistemi Nutanix
+       attualmente in funzione nel Data Center, nello specifico:
+            ●​ il sistema deve essere resiliente alla perdita di un nodo;
+            ●​ il sistema deve essere resiliente alla rottura di un disco, i dati presenti sul disco rotto debbono essere
+                automaticamente ricostruiti dal sistema e senza intervento operatore. Non debbono essere presenti
+                ritardi nell’inizio della ricostruzione dei dati;
+            ●​ il supporto deve includere l’aggiornamento gratuito del software di infrastruttura
+            ●​ Alimentatori e ventole devono essere ridondanti
+            ●​ Ogni nodo del sistema deve avere 1 porta ILO Ethernet out-of-the-band per l’accesso alla console
+                anche a macchina spenta
+            ●​ Deve essere presente almeno il 100% di disco SSD utile ai dati
+
+                                                                 6
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                         pag. 7 di 46
+
+
+
+
+           ●​ NON debbono essere presenti meccanismi di caching in scrittura dei dati in RAM (volatilità in caso
+              di mancanza improvvisa di energia elettrica)
+           ●​ La soluzione deve essere basata su HW standard (x86)
+           ●​ L’espandibilità della soluzione deve essere a caldo
+           ●​ Presenza di una componente automatica di multipathing per le Virtual Machine al fine di garantire
+              l’accesso ai dati in caso di failure o indisponibilità di elementi della soluzione;
+           ●​ Deve essere possibile, sulla configurazione fornita, attivare funzionalità di compressione dei dati per
+              ottimizzazione dello spazio disco
+           ●​ Deve essere possibile, sulla configurazione fornita, attivare funzionalità di data deduplication per
+              ottimizzazione dello spazio disco
+           ●​ Possibilità di protezione dei dati basata su doppia copia del dato che deve essere sempre su nodi
+              diversi
+           ●​ Debbono essere presenti funzionalità di snapshot delle macchine virtuali con modalità crash
+              consistent (ad esempio mediante integrazioni VSS su piattaforma Microsoft)
+           ●​ Replica asincrona selezionabile a livello di singola VM o gruppi di VM per preservare consistenza
+              applicativa, la licenza di replica deve essere illimitata su numero di VM e TB protetti;
+           ●​ Implementazione di consistency group, ovvero raggruppamenti logici di machine virtuali da
+              proteggere mediante snapshot simultanei
+           ●​ Possibilità di restore dei singoli file a partire dalle snapshot mediante meccanismo di self-service
+           ●​ Self healing, in caso di rottura di un nodo, il ripristino deve avvenire senza intervento umano
+           ●​ Multi-Pathing— accesso trasparente a tutto il file system anche in caso di caduta di un nodo o di altri
+              elementi della soluzione
+           ●​ Aggiornamento a caldo di major e minor release del sistema operativo del fornitore della soluzione
+              attraverso la GUI
+           ●​ Aggiornamento a caldo di major e minor release del sistema operativo del fornitore dell’hypervisor
+              (es. vmware) attraverso la GUI
+           ●​ Ridondanza dei metadati per tollerare rotture dei componenti dell’infrastruttura come ad esempio
+              dischi o nodi senza perdere dati
+           ●​ Deve essere presente un meccanismo di call-home al fine di garantire la manutenzione proattiva e
+              ridurre I tempi di risoluzione di eventuali problemi
+           ●​ Eventuali rotture disco debbono essere immediatamente prese in carico dal Sistema ripristinandone
+              la protezione, non sono ammessi ritardi nella partenza del processo di ricostruzione
+           ●​ La rottura di qualsiasi disco non deve impattare la disponibilità dei dati
+           ●​ vMotion o similare, ovvero la possibilità di spostare una VM da un nodo all’altro con la VM accesa
+           ●​ HA, ovvero la ripartenza delle VM in caso di rottura di un nodo, senza intervento operatore ed in
+              modo automatico
+           ●​ Distribuzione automatica delle VM sull’ambiente per ottimizzare l’utilizzo di CPU/RAM, lo
+              spostamento deve avvenire senza spegnimento delle VM
+           ●​ Affinity rules, ovvero è possibile definire delle policy per cui delle VM debbono essere accese
+              preferibilmente su alcuni nodi, ad esempio macchine appartenenti ad un cluster applicativo debbono
+              essere accese su nodi differenti
+           ●​ Possibilità di implementare VLAN sui vari nodi
+           ●​ Configurazione del gestore della piattaforma in configurazione HA
+           ●​ Possibilità di utilizzare differenti hypervisor tra ESXi, Hyper-V, KVM
+           ●​ Soluzione integrata mono vendor con un unico supporto sia per la parte hardware che per quella
+              software
+           ●​ L’upgrade del software di infrastruttura deve poter essere fatto dal cliente indipendentemente dal
+              supporto e senza disservizio
+           ●​ L’upgrade dell’hypervisor deve essere indipendente dal software di iperconvergenza
+           ●​ Tiering automatico dei dati tra SSD e HDD al fine di avere I dati caldi nella parte SSD e quelli
+              acceduti meno frequentemente nella componente capacitiva (rotativa) del tier dischi
+           ●​ Possibilità di inserire nodi eterogenei nello stesso cluster senza alcun disservizio e dalla console di
+              amministrazione
+           ●​ Deve essere implementata una funzionalità di data locality per avere sempre le massime performance
+              e la scalabilità pressoché lineare della soluzione, ovvero pressoché tutte le richieste di
+
+                                                             7
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                   pag. 8 di 46
+
+
+
+
+                     lettura/scrittura delle machine virtuali debbono essere servite dai dischi locali del server fisico su cui
+                     è accesa la macchina virtuale. La lettura dei dati deve avvenire con latenze inferiori a 3ms. Tale
+                     caratteristica deve permanere anche a valle di spostamento delle macchine virtuali sui nodi del
+                     cluster
+               ●​    Deduplica e compressione debbono essere implementabili indipendentemente e per sotto insiemi dei
+                     dati al fine di garantire le massime performance e l’utilizzo selettivo delle funzionalità dove
+                     applicabili con risultati soddisfacenti
+               ●​    Deduplica e compressione debbono essere disabilitabili senza spostamento dei dati qualora i valori di
+                     ottimizzazione dello storage non siano soddisfacenti
+               ●​    Espansione del cluster a caldo senza installazione di software da parte di operatore
+               ●​    Rimozione di nodi dal cluster a caldo
+               ●​    Non debbono essere presenti plug-in installati sull’hypervisor manager (vCenter) al fine di non
+                     interagire con il suo funzionamento
+               ●​    Tier SSD del file system non limitato ai dischi presenti sul nodo ma comune a tutti i nodi presenti
+                     nell'infrastruttura
+               ●​    La soluzione offerta deve presentare un file server integrato (SMB) accessibile dall’esterno del
+                     sistema su cui verranno implementate le share dipartimentali ed home directory
+               ●​    La soluzione offerta deve poter presentare storage a livello di blocco (iSCSI) accessibile dall’esterno
+                     del sistema
+               ●​    Deve essere presente un sistema di telemetria in grado di correlare tutti i dati dell’infrastruttura
+                     (hardware, Virtual machines, storage, rete, eventi) e fornire informazioni utili al troubleshooting
+                     della soluzione
+               ●​    Possibilità di crescita superiore ad 8 nodi mantenendo un unico file system
+               ●​    La funzionalità di replica delle VM non deve essere limitata a livello di licenza (sia numero di VM,
+                     che di spazio disco)
+
+       Inoltre, l'offerente si dovrà impegnare a produrre in sede di verifica dell’offerta, senza alcun onere per
+       l’Amministrazione regionale, un ambiente di test presso la sede della Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT al fine di dimostrare l’integrazione di funzionamento dei prodotti offerti
+       con i sistemi attualmente in esercizio. Qualora le risultanze dei test non provassero detta integrazione ed
+       equivalenza, l'aggiudicatario dovrà fornire i prodotti indicati nelle tabelle sopra, senza ulteriori oneri per
+       l'Amministrazione, pena l’esclusione. Se l’aggiudicatario offrirà gli specifici prodotti indicati nelle tabelle
+       sopra, non sarà necessario che alleghi alcuna documentazione tecnica, né che allestisca un ambiente di test.
+       Regione del Veneto si riserva, previa valutazione della documentazione di equivalenza presentata,
+       l’accettazione o meno dell’offerta.
+
+                    ARTICOLO 4 - SERVIZI DI INSTALLAZIONE, ASSISTENZA E GARANZIA ON-SITE
+       ​   ​         4.1. Caratteristiche minime della Manutenzione
+       Quale parte integrante dell’offerta è richiesto, pena l’esclusione della soluzione proposta, un servizio di
+       manutenzione per tutta la durata del contratto che preveda almeno le seguenti caratteristiche:
+
+       Quale parte integrante dell’offerta è richiesto, pena l’esclusione della soluzione proposta, un servizio di
+       manutenzione che preveda almeno le seguenti caratteristiche:
+
+               ●​ I servizi di assistenza e consulenza, per la messa a punto della configurazione e per l’analisi del
+                  funzionamento per tutta la durata del contratto;
+               ●​ Una validità di durata non inferiore ai 36 mesi a decorrere dalla data di consegna secondo i dati
+                  riportati nelle relative tabelle;
+               ●​ Una copertura 24x7 per segnalazioni di guasti e anomalie;
+               ●​ La possibilità di una diagnostica remota di secondo livello da parte di tecnici specializzati senza
+                  necessità di ausilio da parte del personale di Regione Veneto (qualsiasi componente hardware e
+                  software necessario per tale servizio, con la sola eccezione del collegamento Internet e del HW/SW
+                  necessario all’erogazione del collegamento, deve essere parte della fornitura in oggetto);
+                                                                 8
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 9 di 46
+
+
+
+
+           ●​ Un SLA di intervento on-site per la risoluzione dell’anomalia segnalata di tipo:
+                  o​ Next Business Day per il sistema del sito secondario, ovvero non superiore a ventiquattro
+                      (24) ore nei giorni lavorativi dal momento in cui è stato individuato il problema hardware;
+                  o​ Next Business Day per il sistema del sito secondario, ovvero non superiore a ventiquattro
+                      (24) ore nei giorni lavorativi dal momento in cui è stato individuato il problema hardware;
+           ●​ Un sistema di allertamento remoto che consenta al sistema e al software diagnostico in esso presente
+              di inviare automaticamente e autonomamente eventuali segnalazioni a un NOC preposto alla
+              ricezione e analisi delle segnalazioni al fine di predisporre eventuali interventi senza la necessità di
+              una preventiva segnalazione da parte del personale IT;
+           ●​ La possibilità di fruire senza limitazioni o costi aggiuntivi di qualsiasi aggiornamento firmware e
+              software necessario sia per eliminare o risolvere anomalie sia per implementare nuove funzionalità.
+
+       Il servizio sopra descritto deve essere applicabile a qualsiasi componente della soluzione proposta.
+       ​       4.2. Caratteristiche minime dei tempi di messa in esercizio
+       Si riporta di seguito il dettaglio dei tempi massimi tollerati per l’espletamento delle singole attività:
+                ●​ Il materiale informatico, entro 30 giorni dalla sottoscrizione del contratto, dovrà essere
+                   consegnato nei Data Center indicati;
+                ●​ Il materiale informatico, entro 10 giorni dall’avvenuta consegna, dovrà essere installato sui rack
+                   dei Data Center indicati;
+                ●​ Il nuovo sistema, entro 5 giorni dall’avvenuta consegna, dovrà essere avviato, aggiornato,
+                   configurato e collaudato;
+       ​       4.3. Luogo di consegna, installazione e collaudo
+
+       I luoghi di consegna e di installazione, sulla base di quanto descritto nel paragrafo precedente, saranno due e
+       dovranno rispettare le ripartizioni previste e dettagliate di seguito:
+
+            ●​ Sito Primario (VENEZIA): Numero quattro (4) Nodi NX-8155-G9 e quattro (4) Nodi
+               NX-8170-G9, nella Sede della Regione del Veneto – Direzione ICT, Agenda Digitale e SOS
+               affidamento servizi e forniture ICT – Palazzo Lybra – Parco Scientifico Tecnologico “Vega” – Via
+               Pacinotti, 4, 20175, Marghera (VE);
+            ●​ Sito Secondario (PADOVA): Numero quattro (4) Nodi NX-8155-G9 e tre (3) Nodi NX-8170-G9
+               nella Sede di Infocamere di Padova – Corso Stati Uniti, 14 – 35127 Padova (PD).
+
+       Nota: per gli articoli software, subscription e service, non è previsto un luogo fisico di consegna.
+
+               4.4. Servizi di installazione e startup
+
+       ​       L’aggiudicatario, dovrà installare a regola d’arte gli apparati oggetto della fornitura in rack
+       individuati dall’Amministrazione e già ospitati presso il sito primario di Marghera (VE) e il sito secondario
+       di Padova (PD) nel rispetto dei tempi massimi indicati sopra e facendosi carico di eventuali trasporti o
+       movimentazioni del materiale necessario fra le due sedi.
+       ​       Inoltre dovrà portare a termine le operazioni di start-up e di configurazione con il sistema che, al
+       termine delle attività, dovrà rispettare i seguenti requisiti di stato:
+                ●​ correttamente collegato alla rete di alimentazione elettrica e la ridondanza di alimentazione
+                   essere stata testata con successo;
+                ●​ correttamente connesso alla rete dati di Regione del Veneto e la ridondanza di connessione
+                   essere stata testata con successo;
+                ●​ ogni componente dovrà essere stata montata, configurata e collaudata;
+                                                                9
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 10 di 46
+
+
+
+
+                ●​ il sistema dovrà essere operativo al 100% delle funzionalità previste e ogni sua eventuale
+                   componente software aggiornata alla versione che verrà ritenuta, dal personale tecnico preposto
+                   alle attività, più idonea al funzionamento in ambiente di produzione;
+
+
+               4.5. Servizi di assistenza e garanzia on-site
+
+
+       ​      La ditta aggiudicataria assicura i servizi di assistenza e consulenza, per la messa a punto della
+       configurazione iniziale e per l’analisi del funzionamento per 30 mesi a decorrere dalla positiva verifica
+       funzionale delle soluzioni tecnologiche installate e configurate.
+
+             ​ Durante tutto il periodo di garanzia l’Amministrazione Regionale avrà il diritto di scaricare
+       direttamente dal portale del produttore Nutanix, tutti gli aggiornamenti SW disponibili all’esercizio stesso.
+
+               Tutti i prodotti devono essere forniti con garanzia di tre anni on-site durante i quali nel caso di guasto
+       di apparato la ditta fornitrice dovrà provvedere ad inviarne in sostituzione uno, od il singolo componente
+       guasto.
+
+                 ​   A tale scopo, in sede di offerta, nell’ambito della documentazione amministrativa, va caricato
+       un documento in cui dovranno essere indicati i riferimenti e le modalità per la comunicazione dei guasti e
+       della relativa richiesta di sostituzione (numeri di telefono, indirizzi email, nominativi di referenti e quant'altro
+       ritenuto utile e necessario).
+
+           ​ Il materiale proposto in sede di offerta alla presente procedura di gara dovrà essere nuovo di fabbrica,
+       consegnato negli imballi originali di fabbricazione, immune da vizi e perfettamente funzionante.
+
+             ​ A tal fine il fornitore è tenuto per tutta la durata del contratto a garantire l'assenza di vizi, la presenza
+       delle qualità promesse ed il buon funzionamento delle stesse ai sensi degli artt. 1490, 1497, 1512 del codice
+       civile. In particolare, in presenza di difetti di conformità, l’amministrazione regionale avrà diritto, per tutta
+       la durata della fornitura, al ripristino senza spese della conformità mediante riparazione o sostituzione delle
+       attrezzature, ovvero ad una riduzione adeguata del prezzo o alla risoluzione del contratto.
+
+
+               4.6. Certificazione
+
+       Al fine di garantire il necessario livello di competenze tecniche e consulenziali, nonché l’accesso ai servizi di
+       supporto, l’aggiudicatario dovrà essere in possesso delle certificazioni ISO 9001 e ISO 27001, nonché
+       l’attestazione “Nutanix Champion”.
+
+       Inoltre dovrà dimostrarne il possesso entro i 10 giorni successivi alla proposta di aggiudicazione, a pena di
+       esclusione dalla gara.
+
+
+
+
+                                                                10
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                           pag. 11 di 46
+
+
+
+
+           PARTE I: PRESTAZIONI OGGETTO DELL’APPALTO
+                             LOTTO N. 2 - Fornitura Hardware “Dell”
+                                     ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di apparecchiature hardware e software in tecnologia Dell.
+       La soluzione proposta dall’offerente dovrà comprendere espansioni, sia HW che SW, dei cluster costituiti da
+       nodi iperconvergenti, attualmente in esercizio presso il sito primario a Marghera e secondario a Padova,
+       destinati a workload di produzione per la Giunta Regionale (quota parte delle manutenzioni) e per la
+       convergenza infrastrutturale (quota parte rimanente delle manutenzioni e nuovi nodi iperconvergenti)
+       mediante i servizi messi a disposizione dal Polo Strategico Regionale (PSR).
+                         ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+       Oggetto della procedura di acquisizione è la fornitura di componenti hardware e software con manutenzione
+       di 30 mesi per l’ampliamento dell’infrastruttura iperconvergente della Regione del Veneto come indicato
+       nella tabella sottostante di riepilogo e nelle successive cinque tabelle di dettaglio tecnico, la quale deve
+       rispondere alle caratteristiche, alle condizioni e modalità di seguito disciplinate.
+       Si evidenzia che il presente documento descrive le caratteristiche e i requisiti di conformità cui devono
+       necessariamente rispondere tutti gli elementi hardware e software nella configurazione. I prodotti offerti
+       devono essere nuovi di fabbrica, costruiti utilizzando parti nuove e devono rispondere alle caratteristiche di
+       seguito descritte.
+
+                                            Nome Prodotto                     Quantità
+
+                                 Nodi Dell VE-660 VE-660                          8
+
+                                 Servizi Professionali (gg)                      10
+
+                                 Rinnovo supporto PowerScale                      -
+
+                                 Rinnovo supporto VxRail                          -
+
+
+                                    Tabella 1: Elenco Macro-Prodotti HW, SW e servizi
+
+
+                                  ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       Si riportano le caratteristiche dell’ampliamento della soluzione relativo ai 8 Nodi Dell VxRail VE-660. Ogni
+       nodo è composto dagli elementi in tabella 2 sotto riportata.
+
+
+                           Product Name                                 Module             Q.ty          SKU
+                                                                                                      210-BHBH,
+       VxRail VE-660                                                      Base               1        329-BDWH,
+                                                                                                       329-BJSM
+       VxRail Hybrid                                               Configuration model       1         379-BFFX
+       vSAN Node                                               Storage Deployment Model      1        379-BENB
+
+                                                              11
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                         pag. 12 di 46
+
+
+
+
+                                                                                                     384-BDWG,
+       VxRail Software 7.0.530 Factory Install                           Operating System       1
+                                                                                                     634-CTWV
+       Bring Your Own Subscription (BYOS) - VCF only                VMWare Subscription         1     634-BSJZ
+                                                                  Are you deploying VCF on
+       NO Deployment of VCF on VxRail                                                           1    379-BEWY
+                                                                    VxRail configuration?
+       2.5" Chassis with up to 10 HDDs (SAS/SATA) including
+                                                                       Chassis Configuration    1    321-BKCY
+       max of 4 Universal Drives, 1 CPU, PERC11
+       VxRail 1U Bezel                                                        Bezel             1    325-BFGZ
+       Intel® Xeon® SIlver 4416+ 2G, 20C/40T, 16GT/s, 38M
+                                                                             Processor          1    338-CHTH
+       Cache, Turbo, HT (165W) DDR5-4000
+       No Additional Processor                                     Additional Processor         1    374-BBBX
+                                                                  Memory DIMM Type and
+       5600MT/s RDIMMs                                                                          1    370-BBRX
+                                                                          Speed
+       64GB RDIMM, 5600MT/s, Dual Rank - HCI                        Memory Capacity             4    370-BCFQ
+       2.4TB Hard Drive SAS ISE 12Gbps 10K 512e 2.5in
+                                                                           Hard Drives          2    161-BCBX
+       Hot-Plug
+       800GB SSD SAS Mixed Use up to 24Gbps 512e 2.5in
+                                                                           Hard Drives          1    345-BEPV
+       Hot-Plug, AG Drive
+       HCI, 660 Riser Config 4, Low Profile, 2x8 LP Slots
+                                                                            PCIe Riser          1    330-BCKG
+       (Gen5) + 1x16 LP Slot (Gen4), 1CPU
+       Intel E810-XXVDA4 Quad Port 10/25GbE SFP28
+                                                                  OCP 3.0 Network Adapters      1    540-BDDU
+       Adapter, OCP NIC 3.0
+       Broadcom 5720 Dual Port 1GbE Optional LOM                  Additional Network Cards      1    540-BDKD
+       Trusted Platform Module 2.0 V3                                 Trusted Platform Module   1    461-AAIG
+       Guide scorrevoli ReadyRails con braccio di gestione dei                                       770-BDMT,
+                                                                            Rack Rails          1
+       cavi                                                                                          770-BECD
+       Dual, Hot-Plug, Power Supply Fault Tolerant Redundant
+                                                                           Power Supply         1    450-AKLF
+       (1+1), 1100W MM (100-240Vac) Titanium, NAF
+       Rack Power Cord 2M (C13/C14 10A)                                    Power Cords          2    450-AADY
+                                                                        Optics & Cables for
+       SFP28 SR Optic, 25GbE, 85C, for all SFP28 ports                                          4    407-BCGJ
+                                                                          Network Cards
+       No GPU Enablement                                               GPU ENABLEMENT           1    379-BDSR
+       VE-660 Luggage Tag                                                  Luggage Tag          1    350-BCRJ
+       ProDeploy Plus Addon VxRail Stretched Cluster New           Infrastructure Additional
+                                                                                                1    519-BDCP
+       Deployments Only                                                Deployment Svcs
+                                                                  Infrastructure Deployment
+       ProDeploy Plus Dell EMC VxRail                                                           1    683-BCXV
+                                                                              Svcs
+       Decline Selection                                                      ECCN              1    817-BBBP
+       Bring Your Own Subscription (BYOS) Info.                       OS Experience Type Info   20   379-BEWY
+       PowerEdge R660 Shipping Material, 10x2.5", 8x2.5"
+                                                                         Shipping Material      1    340-DBYC
+       Smart Flow or 16xEDSFF
+                                                                        VxRail HCI System
+       VxRail HCI System Software, 16G                                                          1    634-CDJM
+                                                                        Software Processor
+                                                                        VxRail HCI System
+       VxRail HCI System Software, Capacity Drive, 2.4TB                                        2    634-BSKO
+                                                                      Software Capacity Drive
+                                                                        VxRail HCI System
+       VxRail HCI System Software Memory, 64GB, 16G                                             4    634-CDJK
+                                                                         Software Memory
+       Parts Only Warranty 36 Months, 36 Mese/i                               Service           1    709-BECW
+       Prosupport Plus and 4Hr Mission Critical VSAN-Hybrid              Extended Service       1    199-BMIR
+
+                                                                 12
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 13 di 46
+
+
+
+
+       ELA, 36 Mese/i
+       PowerEdge R660 CE CCC Marking, No BIS Marking                         Regulatory            1      343-BBUB
+       VxRail VE-660 Shipping, EMEA1                                         SHIPPING              1      340-DLWF
+       10x2.5 Front Storage                                              FRONT STORAGE             1      379-BEID
+       Motherboard MLK supports ALL CPUs and is required
+                                                                            Motherboard            1      329-BKBS
+       for CPUs 250W and above
+       Heatsink for 1 CPU configuration (CPU less than or equal         Processor Thermal
+                                                                                                   1      412-ABCH
+       to 185W)                                                           Configuration
+                                                                       Memory Configuration
+       Performance Optimized                                                                       1      370-AAIP
+                                                                              Type
+       C35, No RAID, VxRail                                                     RAID               1      780-BCQQ
+                                                                       RAID/Internal Storage              405-AAXY,
+       HBA355i with rear load bracket                                                              1
+                                                                             Controllers                   750-ADRI
+                                                                       Boot Optimized Storage             403-BCRZ,
+       BOSS-N1 controller card + with 2 M.2 960GB (RAID 1)                                         1
+                                                                               Cards                      470-AFMG
+                                                                         Embedded Systems
+       iDRAC9, Enterprise 16G                                                                      1      528-CTIC
+                                                                            Management
+       iDRAC Group Manager, Disabled                                       Group Manager           1      379-BCQY
+       iDRAC,Legacy Password                                                  Password             1      379-BCSG
+                                                                         iDRAC Systems
+       DHCP, Zero Touch Configuration                                                              1      379-BCRB
+                                                                        Management Options
+       4 Standard Fans                                                          Fans               1      750-ADST
+       No Quick Sync                                                         Quick Sync            1      350-BBXM
+       No Systems Documentation, No OpenManage DVD Kit                 System Documentation        1      631-AACK
+       UEFI BIOS Boot Mode with GPT Partition, No Energy                  Advanced System                 387-BBEY,
+                                                                                                   1
+       Star                                                                Configurations                 800-BBDM
+                                                                          Advanced System
+       Enable UEFI Secure Boot                                                                     1      800-BBZH
+                                                                           Configurations
+
+                                            Tabella 2: Elenco Dettaglio Nodi Dell
+
+
+
+       Per completare la fornitura è necessario acquisire gli articoli in tabella 3. Si precisa che codesta fornitura è da
+       considerarsi cumulativa per tutti i nodi.
+                   RecoverPoint for VM - Required                              Module              Q.ty      SKU
+       ProSupport Plus RecoverPoint for VMs Software
+                                                                       Sftwr Svcs-Perpetual(VP)     1     487-BIPH
+       Support-Maintanance, 36 Mese/i
+                                                                       RecoverPoint for Virtual
+       RecoverPoint for VMs-SWAAA                                                                   1     210-BBOU
+                                                                             Machines
+       HCIA RecoverPoint for VMs for 1 node                            RecoverPoint for VxRail      1     142-BBNV
+                                                                       Infrastructure Deployment
+       No Field Deployment Customer Install Required                                                1     883-BBFN
+                                                                                  Svcs
+
+                                    Tabella 3: Elenco dettaglio articoli a completamento
+
+
+
+
+                                                                  13
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                        pag. 14 di 46
+
+
+
+
+       In tabella 4 si elencano i servizi professionali:
+
+
+                   Qty                       Sku                                     Description
+                                                                 Custom 10 gg Consult Professional Services VMware for
+                    1                     519-15668
+                                                                                Multi-Cloud FLEXI L
+
+                                          Tabella 4: Elenco dettagli servizi professionali
+
+
+       In tabella 5 si riporta il dettaglio del rinnovo supporto Dell PowerScale
+
+
+                                                                                               Data di
+                                                                             Data di inizio
+                          Modello da        Descrizione del contratto di                       fine del              Quant Tipo di
+           Asset                                                              del nuovo                    Codice
+                          rinnovare                  assistenza                                 nuovo                 ità  prodotto
+                                                                              contratto
+                                                                                              contratto
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                              OneFS Hybrid Software          17/03/2025       28/2/2026   488-BEZC     1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                               Additional Software           17/03/2025       28/2/2026 488-BEWZ       1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                              OneFS Hybrid Software          17/03/2025       28/2/2026   488-BEZC     1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                              OneFS Hybrid Software          17/03/2025       28/2/2026   488-BEZC     1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                               Additional Software           17/03/2025       28/2/2026 488-BEWZ       1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                              OneFS Hybrid Software          17/03/2025       28/2/2026   488-BEZC     1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                               Additional Software           17/03/2025       28/2/2026 488-BEWZ       1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        ISILON SOFTWARE
+                                               Additional Software           17/03/2025       28/2/2026 488-BEWZ       1   Software
+                              ASSET
+                                          Support-Maintenance Reinstate
+
+                                          ProSupport Plus Mission Critical
+                        POWERSCALE MLK
+                                              OneFS Hybrid Software          17/11/2025       28/2/2026   488-BEZB     1   Software
+                        SOFTWARE ASSET
+                                          Support-Maintenance Variable
+
+                                          ProSupport Plus Mission Critical
+                        POWERSCALE MLK
+                                              OneFS Hybrid Software          17/11/2025       28/2/2026   488-BEZB     1   Software
+                        SOFTWARE ASSET
+                                          Support-Maintenance Variable
+
+
+
+
+                                                                    14
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 15 di 46
+
+
+
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          17/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          17/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          23/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          23/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          23/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                        OneFS Hybrid Software          23/11/2025   28/2/2026   488-BEZB    1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                           OneFS Software              22/03/2025   28/2/2026 488-BEWX      1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Reinstate
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                           OneFS Software              22/03/2025   28/2/2026 488-BEWX      1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Reinstate
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                           OneFS Software              22/03/2025   28/2/2026 488-BEWX      1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Reinstate
+
+                                    ProSupport Plus Mission Critical
+                   POWERSCALE MLK
+                                           OneFS Software              22/03/2025   28/2/2026 488-BEWX      1    Software
+                   SOFTWARE ASSET
+                                    Support-Maintenance Reinstate
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           17/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           17/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           17/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           17/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           23/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+                                    ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                         Additional Software           23/11/2025   28/2/2026 488-BEWY      1    Software
+                     ASSET ADDSW
+                                    Support-Maintenance Variable
+
+
+
+
+                                                              15
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 16 di 46
+
+
+
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           23/11/2025   28/2/2026 488-BEWY    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Variable
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           23/11/2025   28/2/2026 488-BEWY    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Variable
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           22/03/2025   28/2/2026 488-BEWZ    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Reinstate
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           22/03/2025   28/2/2026 488-BEWZ    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Reinstate
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           22/03/2025   28/2/2026 488-BEWZ    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Reinstate
+
+                                       ProSupport Plus Mission Critical
+                    PSCALE MLK SW
+                                            Additional Software           22/03/2025   28/2/2026 488-BEWZ    1    Software
+                     ASSET ADDSW
+                                       Support-Maintenance Reinstate
+
+                        ISILON      ProSupport Plus 4HR and Mission
+         3YHX983                                                          18/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   CHASSIS,ICH-NORM        Critical Reinstate
+
+                         ISILON       ProSupport Plus 4HR and Mission
+         4YHX983                                                          18/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   H500,IH500-2T-1.6T        Critical Reinstate
+
+                         ISILON       ProSupport Plus 4HR and Mission
+         5YHX983                                                          18/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   H500,IH500-2T-1.6T        Critical Reinstate
+
+                         ISILON       ProSupport Plus 4HR and Mission
+         6YHX983                                                          18/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   H500,IH500-2T-1.6T        Critical Reinstate
+
+                         ISILON       ProSupport Plus 4HR and Mission
+         7YHX983                                                          18/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   H500,IH500-2T-1.6T        Critical Reinstate
+
+                     POWERSCALE     ProSupport Plus 4HR and Mission
+         G6JX983                                                          23/03/2025   28/2/2026 862-BCOG    1    Hardware
+                   CHASSIS-NORM-PSC        Critical Reinstate
+
+                     POWERSCALE     ProSupport Plus 4HR and Mission
+         J1GGNM3                                                          23/11/2025   28/2/2026 862-BCOC    1    Hardware
+                   CHASSIS-NORM-PSC        Critical Variable
+
+                   PowerScale H700-2T ProSupport Plus 4HR and Mission
+         60FGNM3                                                          17/11/2025   28/2/2026 862-BCOC    1    Hardware
+                      + 800G SSD             Critical Variable
+
+                   PowerScale H700-2T ProSupport Plus 4HR and Mission
+         70FGNM3                                                          17/11/2025   28/2/2026 862-BCOC    1    Hardware
+                      + 800G SSD             Critical Variable
+
+                   PowerScale H700-2T ProSupport Plus 4HR and Mission
+         80FGNM3                                                          17/11/2025   28/2/2026 862-BCOC    1    Hardware
+                      + 800G SSD             Critical Variable
+
+                   PowerScale H700-2T ProSupport Plus 4HR and Mission
+         90FGNM3                                                          17/11/2025   28/2/2026 862-BCOC    1    Hardware
+                      + 800G SSD             Critical Variable
+
+                   POWERSCALE NTW      ProSupport Plus 4HR and Mission
+         38J67C3                                                          11/03/2025   28/2/2026 862-BCOG    1    Hardware
+                    PS S5232F ROW             Critical Reinstate
+
+                   POWERSCALE NTW      ProSupport Plus 4HR and Mission
+         3FP67C3                                                          11/03/2025   28/2/2026 862-BCOG    1    Hardware
+                    PS S5232F ROW             Critical Reinstate
+
+                    PScale A300-2T +   ProSupport Plus 4HR and Mission
+        12GGNM3                                                           23/11/2025   28/2/2026 862-BCOC    1    Hardware
+                      800G SSD-L              Critical Variable
+
+
+
+
+                                                                 16
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                              pag. 17 di 46
+
+
+
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+          17JX983                                                                  23/03/2025       28/2/2026 862-BCOG      1    Hardware
+                          800G SSD-L                 Critical Reinstate
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+         22GGNM3                                                                   23/11/2025       28/2/2026 862-BCOC      1    Hardware
+                          800G SSD-L                 Critical Variable
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+          27JX983                                                                  23/03/2025       28/2/2026 862-BCOG      1    Hardware
+                          800G SSD-L                 Critical Reinstate
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+         32GGNM3                                                                   23/11/2025       28/2/2026 862-BCOC      1    Hardware
+                          800G SSD-L                 Critical Variable
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+         42GGNM3                                                                   23/11/2025       28/2/2026 862-BCOC      1    Hardware
+                          800G SSD-L                 Critical Variable
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+          H6JX983                                                                  23/03/2025       28/2/2026 862-BCOG      1    Hardware
+                          800G SSD-L                 Critical Reinstate
+
+                        PScale A300-2T +      ProSupport Plus 4HR and Mission
+          J6JX983                                                                  23/03/2025       28/2/2026 862-BCOG      1    Hardware
+                          800G SSD-L                 Critical Reinstate
+
+                        PWRSCAL CHASSIS       ProSupport Plus 4HR and Mission
+         50FGNM3                                                                   17/11/2025       28/2/2026 862-BCOC      1    Hardware
+                        ICH-NORM-PSC-H               Critical Variable
+
+                         PWRSCL NTW,PS        ProSupport Plus 4HR and Mission
+         2D1BPK2                                                                   10/03/2025       28/2/2026 862-BCOG      1    Hardware
+                           S4112F TAA                Critical Reinstate
+
+                         PWRSCL NTW,PS        ProSupport Plus 4HR and Mission
+         4D1BPK2                                                                   10/03/2025       28/2/2026 862-BCOG      1    Hardware
+                           S4112F TAA                Critical Reinstate
+
+                           Superna DR                                                               28/02/202
+                                                     Superna DR Renewal            13/05/2025                 AD340326      1    Software
+                            Renewal                                                                     6
+
+
+                                            Tabella 5: Elenco dettagli rinnovo supporto Dell PowerScale
+
+
+
+       In tabella 6 si riporta il dettaglio del rinnovo del supporto Dell VxRail
+
+
+
+                                                                                        Data di
+                                                                                                     Data di fine      Qua
+                          Modello da                                                   inizio del                                 Tipo di
+          Asset                              Descrizione del contratto di assistenza                  del nuovo Codice ntit
+                          rinnovare                                                      nuovo                                   prodotto
+                                                                                                      contratto         à
+                                                                                       contratto
+                     VXRAIL,HORIZO          ProSupport with 4-Hour Onsite Service                                  862-B
+        BNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                 VSAN ELA Reinstate                                             NKL
+                     VXRAIL,HORIZO          ProSupport Hybrid Add-On VSAN ELA                                      862-B
+        BNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                       Reinstate                                                BXK
+                     VXRAIL,HORIZO          ProSupport with 4-Hour Onsite Service                                  862-B
+        DNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                 VSAN ELA Reinstate                                             NKL
+                     VXRAIL,HORIZO          ProSupport Hybrid Add-On VSAN ELA                                      862-B
+        DNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                       Reinstate                                                BXK
+                     VXRAIL,HORIZO          ProSupport with 4-Hour Onsite Service                                  862-B
+        CNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                 VSAN ELA Reinstate                                             NKL
+                     VXRAIL,HORIZO          ProSupport Hybrid Add-On VSAN ELA                                      862-B
+        CNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                       Reinstate                                                BXK
+                     VXRAIL,HORIZO          ProSupport with 4-Hour Onsite Service                                  862-B
+        HNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                 VSAN ELA Reinstate                                             NKL
+                     VXRAIL,HORIZO          ProSupport Hybrid Add-On VSAN ELA                                      862-B
+        HNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                       Reinstate                                                BXK
+                     VXRAIL,HORIZO          ProSupport with 4-Hour Onsite Service                                  862-B
+        GNB6ZP3                                                                        13/05/2025     28/02/2026            1
+                     NXD,VXS570 EMC                 VSAN ELA Reinstate                                             NKL
+
+
+                                                                           17
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 18 di 46
+
+
+
+
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        GNB6ZP3                                                           13/05/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                  VXRAIL,HORIZO ProSupport with 4-Hour Onsite Service                               862-B
+        FNB6ZP3                                                           13/05/2025   28/02/2026            1
+                  NXD,VXS570 EMC          VSAN ELA Reinstate                                        NKL
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        FNB6ZP3                                                           13/05/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                  VXRAIL,HORIZO    Prosupport Plus 4H Mission Critical                              862-B
+        9LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC     VSAN HYBRID ELA Reinstate                                       BCZ
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        9LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                  VXRAIL,HORIZO    Prosupport Plus 4H Mission Critical                              862-B
+        6LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC     VSAN HYBRID ELA Reinstate                                       BCZ
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        6LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                  VXRAIL,HORIZO    Prosupport Plus 4H Mission Critical                              862-B
+        7LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC     VSAN HYBRID ELA Reinstate                                       BCZ
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        7LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                  VXRAIL,HORIZO    Prosupport Plus 4H Mission Critical                              862-B
+        8LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC     VSAN HYBRID ELA Reinstate                                       BCZ
+                  VXRAIL,HORIZO ProSupport Hybrid Add-On VSAN ELA                                   862-B
+        8LV7XF3                                                           01/06/2025   28/02/2026            1
+                  NXD,VXS570 EMC                Reinstate                                           BXK
+                   RECOVERPOINT
+                                  ProSupport Plus RecoverPoint for VMs                              488-B
+                   FOR VM RP4VM                                           01/06/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWR
+                       SWAA
+                   RECOVERPOINT
+                                  ProSupport Plus RecoverPoint for VMs                              488-B
+                   FOR VM RP4VM                                           01/06/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWR
+                       SWAA
+                   RECOVERPOINT
+                                  ProSupport Plus RecoverPoint for VMs                              488-B
+                   FOR VM RP4VM                                           01/06/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWR
+                       SWAA
+                   RECOVERPOINT
+                                  ProSupport Plus RecoverPoint for VMs                              488-B
+                   FOR VM RP4VM                                           01/06/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWR
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+                   RECOVERPOINT
+                                    ProSupport RecoverPoint for VMs                                 488-B
+                   FOR VM RP4VM                                           13/05/2025   28/02/2026            1    Software
+                                 Software Support-Maintanance Reinstate                             MWQ
+                       SWAA
+
+                               Tabella 6: Elenco dettagli del rinnovo supporto Dell VxRail
+
+
+
+
+                                                            18
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 19 di 46
+
+
+
+
+       L’importo complessivo a base di gara per il Lotto n. 2 - Fornitura Hardware “Dell” ammonta ad Euro
+       280.000,00 (IVA esclusa), di cui Euro 0,00 (zero) per costi di interferenza ed Euro 0,00 (zero) per costi
+       di manodopera.
+        Durata: 36 mesi.
+
+       ​   ​       3.1. Caratteristiche di equivalenza
+       I prodotti informatici oggetto dell'offerta devono obbligatoriamente corrispondere a quelli sopraindicati, o
+       equivalenti. L’equivalenza, ai sensi dell’art. 41, comma 5 del D.Lgs n. 36/2023, dovrà garantire:
+       - la presenza di tutte le caratteristiche tecniche dei prodotti indicati.
+       Inoltre, l'offerente si dovrà impegnare a produrre in sede di verifica dell’offerta, senza alcun onere per
+       l’Amministrazione regionale, un ambiente di test presso la sede della Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT al fine di dimostrare l’integrazione di funzionamento dei prodotti offerti
+       con i sistemi attualmente in esercizio. Qualora le risultanze dei test non provassero detta integrazione ed
+       equivalenza, l'aggiudicatario dovrà fornire i prodotti indicati nelle tabelle sopra, senza ulteriori oneri per
+       l'Amministrazione, pena l’esclusione. Se l’aggiudicatario offrirà gli specifici prodotti indicati nelle tabelle
+       sopra, non sarà necessario che alleghi alcuna documentazione tecnica, né che allestisca un ambiente di test.
+       Regione del Veneto si riserva, previa valutazione della documentazione di equivalenza presentata,
+       l’accettazione o meno dell’offerta.
+
+
+                 ARTICOLO 4 - SERVIZI DI INSTALLAZIONE, ASSISTENZA E GARANZIA ON-SITE
+       ​   ​       4.1. Caratteristiche minime della Manutenzione
+       Quale parte integrante dell’offerta è richiesto, pena l’esclusione della soluzione proposta, un servizio di
+       manutenzione per tutta la durata del contratto che preveda almeno le seguenti caratteristiche:
+               ●​ Servizi di assistenza e consulenza, per la messa a punto della configurazione e per l’analisi del
+                  funzionamento per tutta la durata del contratto;
+               ●​ Una validità di durata non inferiore ai 36 mesi a decorrere dalla data di consegna;
+               ●​ Una copertura 24x7 per segnalazioni di guasti e anomalie;
+               ●​ La possibilità di una diagnostica remota di secondo livello da parte di tecnici specializzati senza
+                  necessità di ausilio da parte del personale di Regione Veneto (qualsiasi componente hardware e
+                  software necessario per tale servizio, con la sola eccezione del collegamento Internet e del HW/SW
+                  necessario all’erogazione del collegamento, deve essere parte della fornitura in oggetto);
+               ●​ Un SLA di intervento on-site per la risoluzione dell’anomalia segnalata di tipo Mission Critical per il
+                  sistema del sito primario, ovvero non superiore a quattro (4) ore dal momento in cui è stato
+                  individuato il problema hardware;
+               ●​ La possibilità di fruire senza limitazioni o costi aggiuntivi di qualsiasi aggiornamento firmware e
+                  software necessario sia per eliminare o risolvere anomalie sia per implementare nuove funzionalità;
+               ●​ Il servizio sopradescritto deve essere applicabile a qualsiasi componente della soluzione proposta.
+       ​           4.2. Caratteristiche minime dei tempi di messa in esercizio
+       Si riporta di seguito il dettaglio dei tempi massimi tollerati per l’espletamento delle singole attività:
+                   ●​ Il materiale informatico, entro 30 giorni dalla sottoscrizione del contratto, dovrà essere
+                      consegnato nel Data Center primario;
+                   ●​ Il materiale informatico, entro 10 giorni dall’avvenuta consegna, dovrà essere installato sui rack
+                      nel Data Center primario;
+                   ●​ Il nuovo sistema, entro 5 giorni dall’avvenuta consegna, dovrà essere avviato, aggiornato,
+                      configurato e collaudato;
+
+                                                                 19
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                          pag. 20 di 46
+
+
+
+
+       ​       4.3. Luogo di consegna, installazione e collaudo
+
+       I luoghi di consegna e di installazione, sulla base di quanto descritto nel paragrafo precedente, saranno due e
+       dovranno rispettare le ripartizioni previste e dettagliate di seguito:
+
+           ●​ Sito Primario VENEZIA: Numero quattro (4) Nodi VxRail VE-660 (quota parte di Tabella 2) nella
+              Sede della Regione del Veneto – Direzione ICT, Agenda Digitale e SOS affidamento servizi e
+              forniture ICT – Palazzo Lybra – Parco Scientifico Tecnologico “Vega” – Via Pacinotti, 4, 20175,
+              Marghera (VE);
+           ●​ Sito Secondario PADOVA: Numero quattro (4) Nodi VxRail VE-660 nella Sede di Infocamere di
+              Padova – Corso Stati Uniti, 14 – 35127 Padova (PD).
+
+               4.4. Servizi di installazione e startup
+
+       ​       L’aggiudicatario, dovrà installare a regola d’arte gli apparati oggetto della fornitura in rack
+       individuati dall’Amministrazione e già ospitati presso il sito primario di Marghera (VE) e il sito secondario
+       di Padova (PD) nel rispetto dei tempi massimi indicati sopra e facendosi carico di eventuali trasporti o
+       movimentazioni del materiale necessario fra le due sedi.
+       ​       Inoltre dovrà portare a termine le operazioni di start-up e di configurazione con il sistema che, al
+       termine delle attività, dovrà rispettare i seguenti requisiti di stato:
+               ●​ correttamente collegato alla rete di alimentazione elettrica e la ridondanza di alimentazione
+                  essere stata testata con successo;
+               ●​ correttamente connesso alla rete dati di Regione del Veneto e la ridondanza di connessione
+                  essere stata testata con successo;
+               ●​ ogni componente dovrà essere stata montata, configurata e collaudata;
+               ●​ il sistema dovrà essere operativo al 100% delle funzionalità previste e ogni sua eventuale
+                  componente software aggiornata alla versione che verrà ritenuta, dal personale tecnico preposto
+                  alle attività, più idonea al funzionamento in ambiente di produzione;
+
+
+               4.5. Servizi di assistenza e garanzia on-site
+
+
+       ​      La ditta aggiudicataria assicura i servizi di assistenza e consulenza, per la messa a punto della
+       configurazione iniziale e per l’analisi del funzionamento per 36 mesi a decorrere dalla positiva verifica
+       funzionale delle soluzioni tecnologiche installate e configurate.
+       ​       Durante tutto il periodo di garanzia (36 mesi) l’Amministrazione Regionale avrà il diritto di scaricare
+       direttamente dal portale del produttore Dell-EMC, tutti gli aggiornamenti SW disponibili all’esercizio stesso.
+       Tutti i prodotti devono essere forniti con garanzia di tre anni on-site durante i quali nel caso di guasto di
+       apparato la ditta fornitrice dovrà provvedere ad inviarne in sostituzione uno, od il singolo componente
+       guasto.
+              A tale scopo, in sede di offerta, nell’ambito della documentazione amministrativa, va caricato un
+       documento in cui dovranno essere indicati i riferimenti e le modalità per la comunicazione dei guasti e della
+       relativa richiesta di sostituzione (numeri di telefono, indirizzi email, nominativi di referenti e quant'altro
+       ritenuto utile e necessario).
+       ​      Il materiale proposto in sede di offerta alla presente procedura di gara dovrà essere nuovo di fabbrica,
+       consegnato negli imballi originali di fabbricazione, immune da vizi e perfettamente funzionante.
+
+                                                               20
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 21 di 46
+
+
+
+
+       ​       A tal fine il fornitore è tenuto per tutta la durata del contratto a garantire l'assenza di vizi, la presenza
+       delle qualità promesse ed il buon funzionamento delle stesse ai sensi degli artt. 1490, 1497, 1512 del codice
+       civile. In particolare, in presenza di difetti di conformità, l’amministrazione regionale avrà diritto, per tutta
+       la durata della fornitura, al ripristino senza spese della conformità mediante riparazione o sostituzione delle
+       attrezzature, ovvero ad una riduzione adeguata del prezzo o alla risoluzione del contratto.
+
+
+
+
+               4.6. Certificazione
+
+       Al fine di garantire il necessario livello di competenze tecniche e consulenziali, nonché l’accesso ai servizi di
+       supporto, l’aggiudicatario dovrà essere in possesso delle certificazioni ISO 9001 e ISO 27001, nonché
+       l’attestazione “Dell Titanium Partner”.
+
+       Inoltre dovrà dimostrarne il possesso entro i 10 giorni successivi alla proposta di aggiudicazione, a pena di
+       esclusione dalla gara.
+
+
+
+
+                                                                21
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 22 di 46
+
+
+
+
+           PARTE I: PRESTAZIONI OGGETTO DELL’APPALTO
+                            LOTTO N. 3 - Fornitura hardware “Rubrik”
+                                      ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di apparecchiature hardware e software in tecnologia Rubrik
+       La soluzione proposta dall’offerente si dovrà costituire di espansioni, sia HW che SW, dei cluster costituiti da
+       nodi iperconvergenti destinati al servizio di protezione e backup dei dati per la convergenza infrastrutturale e
+       per Regione Veneto consentendo una ridistribuzione dei nodi iperconvergenti in favore di una separazione
+       fisica dei cluster attraverso la costituzione di uno nuovo dedicato al Polo Strategico Regionale (PSR).
+                             ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+
+       Il sistema, oltre a garantire la piena compatibilità e integrazione con i cluster attualmente in esercizio, dovrà
+       garantire la presenza delle seguenti caratteristiche:
+        ●​ il sistema deve essere resiliente alla perdita di un nodo;
+        ●​ il sistema deve essere resiliente alla rottura di un disco, i dati presenti sul disco rotto debbono essere
+           automaticamente ricostruiti dal sistema e senza intervento operatore. Non debbono essere presenti ritardi
+           nell’inizio della ricostruzione dei dati;
+        ●​ il supporto deve includere l’aggiornamento gratuito del software di infrastruttura;
+        ●​ l’espandibilità della soluzione deve essere a caldo;
+        ●​ deve essere presente un meccanismo di call-home al fine di garantire la manutenzione proattiva e ridurre
+           i tempi di risoluzione di eventuali problemi;
+        ●​ eventuali rotture disco debbono essere immediatamente prese in carico dal Sistema ripristinandone la
+           protezione, non sono ammessi ritardi nella partenza del processo di ricostruzione;
+        ●​ la rottura di qualsiasi disco (compresi SSD) non deve impattare sulla disponibilità dei dati;
+        ●​ l’upgrade del software di infrastruttura deve poter essere fatto dal cliente indipendentemente dal
+           supporto e senza disservizio;
+        ●​ possibilità di inserire nodi eterogenei nello stesso cluster senza alcun disservizio e dalla console di
+           amministrazione;
+        ●​ espansione del cluster a caldo senza installazione di software da parte di operatore;
+        ●​ rimozione di nodi dal cluster a caldo.
+
+
+                                   ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       Nella Tabella riportata di seguito sono descritte le configurazioni e quantità del materiale richiesto.
+          Codice prodotto                              Descrizione prodotto                           Quantità       Terms
+                               Rubrik Universal Cloud License Foundation Edition; per usable BETB;
+         RS-FT-UCL-PE-PP                                                                                 50               36
+                               Premium support; prepay
+          RS-BT-FEPE-PP        Rubrik foundation Edition; per usable BETB; Premium support; prepay       180              36
+         RS-HW-SVCPE- S2       Support for R6000S-2 hardware, prepay; Premium support                     1               36
+            RHA-7424-01        R7424, 288TB raw HDD, 30.7TB NVMe SFP+ Brik Assembly                       1               1
+        RCA-SFP28-TSR-01       25GBase-SR SFP28 Transceiver, pack of 4                                    2               1
+         RCA-F3M-CBL-01        Fiber Optic OM3 LC/LC Cable, 3M, pack of 4                                 2               1
+                               Rubrik foundation Edition; per usable BETB; Premium support;
+          RS-BT-FEPE-PP                                                                                  120              36
+                               prepay
+                                                              22
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                            pag. 23 di 46
+
+
+
+
+           RS-HW-SVCPE- S2        Support for R6000S-2 hardware, prepay; Premium support                 1               36
+                RHA-7416-01       R7416, 192TB raw HDD, 30.7TB NVMe SFP+ Brik Assembly                   1               1
+           RCA-SFP28-TSR-01       25GBase-SR SFP28 Transceiver, pack of 4                                2               1
+           RCA-F3M-CBL-01         Fiber Optic OM3 LC/LC Cable, 3M, pack of 4                             2               1
+           RS-BT-CVB-PE-PP        Rubrik Cloud Vault - Backup; per BETB; Premium support                170              36
+
+                                        Tabella 1: Elenco dettaglio della fornitura Rubrik
+
+       L’importo complessivo a base di gara per il Lotto n. 3 - Fornitura Hardware “Rubrik” ammonta ad
+       Euro 406.000,00 (IVA esclusa), di cui Euro 0,00 (zero) per costi di interferenza ed Euro 0,00 (zero) per
+       costi di manodopera.
+        Durata: 36 mesi.
+
+       ​    ​      3.1. Caratteristiche di equivalenza
+       I prodotti informatici oggetto dell'offerta devono obbligatoriamente corrispondere a quelli sopraindicati, o
+       equivalenti. L’equivalenza, ai sensi dell’art. 41, comma 5 del D.Lgs n. 36/2023, dovrà garantire:
+       - la presenza di tutte le caratteristiche tecniche dei prodotti indicati;
+       - la loro perfetta integrazione nell’attuale sistema vale a dire che la soluzione proposta deve mantenere la
+       compatibilità e retro-compatibilità con le funzionalità attualmente in esercizio nei sistemi Rubrik attualmente
+       in funzione nel Data Center.
+       Inoltre, l'offerente si dovrà impegnare a produrre in sede di verifica dell’offerta, senza alcun onere per
+       l’Amministrazione regionale, un ambiente di test presso la sede della Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT al fine di dimostrare l’integrazione di funzionamento dei prodotti offerti
+       con i sistemi attualmente in esercizio. Qualora le risultanze dei test non provassero detta integrazione ed
+       equivalenza, l'aggiudicatario dovrà fornire i prodotti indicati nelle tabelle sopra, senza ulteriori oneri per
+       l'Amministrazione, pena l’esclusione. Se l’aggiudicatario offrirà gli specifici prodotti indicati nelle tabelle
+       sopra, non sarà necessario che alleghi alcuna documentazione tecnica, né che allestisca un ambiente di test.
+       Regione del Veneto si riserva, previa valutazione della documentazione di equivalenza presentata,
+       l’accettazione o meno dell’offerta.
+
+
+                  ARTICOLO 4 - SERVIZI DI INSTALLAZIONE, ASSISTENZA E GARANZIA ON-SITE
+       ​    ​      4.1. Caratteristiche minime della Manutenzione
+       Quale parte integrante dell’offerta è richiesto un servizio di manutenzione per tutta la durata del contratto che
+       preveda almeno le seguenti caratteristiche:
+                ●​ Servizi di assistenza e consulenza, per la messa a punto della configurazione e per l’analisi del
+                   funzionamento per tutta la durata del contratto;
+                ●​ Una validità di durata complessiva non inferiore ai 36 mesi;
+                ●​ Una copertura 24x7 per segnalazioni di guasti e anomalie;
+                ●​ La possibilità di una diagnostica remota di secondo livello da parte di tecnici specializzati senza
+                   necessità di ausilio da parte del personale di Regione Veneto (qualsiasi componente hardware e
+                   software necessario per tale servizio, con la sola eccezione del collegamento Internet e del HW/SW
+                   necessario all’erogazione del collegamento, deve essere parte della fornitura in oggetto);
+
+
+                                                                 23
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 24 di 46
+
+
+
+
+           ●​ Un SLA di intervento on-site per la risoluzione dell’anomalia segnalata di tipo Mission Critical per il
+              sistema del sito primario, ovvero non superiore a quattro (4) ore dal momento in cui è stato
+              individuato il problema hardware;
+           ●​ La possibilità di fruire senza limitazioni o costi aggiuntivi di qualsiasi aggiornamento firmware e
+              software necessario sia per eliminare o risolvere anomalie sia per implementare nuove funzionalità;
+           ●​ Il servizio sopradescritto deve essere applicabile a qualsiasi componente della soluzione proposta.
+       ​       4.2. Caratteristiche minime dei tempi di messa in esercizio
+       Si riporta di seguito il dettaglio dei tempi massimi tollerati per l’espletamento delle singole attività:
+                ●​ Il materiale informatico, entro 30 giorni dalla sottoscrizione del contratto, dovrà essere
+                   consegnato nel Data Center primario;
+                ●​ Il materiale informatico, entro 10 giorni dall’avvenuta consegna, dovrà essere installato sui rack
+                   nel Data Center primario;
+                ●​ Il nuovo sistema, entro 5 giorni dall’avvenuta consegna, dovrà essere avviato, aggiornato,
+                   configurato e collaudato;
+       ​       4.3. Consegna e luogo di collaudo
+
+       Il luogo di consegna e di installazione, sulla base di quanto descritto nel paragrafo precedente, dovrà essere
+       presso il sito primario, ovvero la sede della Regione del Veneto – Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT – Palazzo Lybra – Parco Scientifico Tecnologico “Vega” – Via Pacinotti,
+       4, 30175, Marghera (VE).
+               4.4. Servizi di installazione e startup
+
+       La Ditta Aggiudicataria, dovrà installare a regola d’arte il sistema sopra descritto in rack ospitati presso il
+       sito primario, ovvero la sede della Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT
+       della Regione del Veneto in Via Pacinotti, 4, Palazzo Lybra del Vega, 30175 Marghera (VE), secondo
+       modalità, anche organizzative, da concordarsi con l’Amministrazione Regionale, ma nel rispetto dei tempi
+       massimi indicati sopra e facendosi carico di eventuali trasporti o movimentazioni del materiale.
+
+       ​          Inoltre dovrà portare a termine le operazioni di start-up e di configurazione con il sistema che, al
+       termine delle attività, dovrà rispettare i seguenti requisiti di stato:
+                  ●​ Correttamente collegato alla rete di alimentazione elettrica e la ridondanza di alimentazione
+                     essere stata testata con successo;
+                  ●​ Correttamente connesso alla rete dati di Regione del Veneto e la ridondanza di connessione
+                     essere stata testata con successo;
+                  ●​ Ogni componente dovrà essere stata montata configurata e collaudata;
+                  ●​ Il sistema dovrà essere operativo al 100% delle funzionalità prevista e ogni sua eventuale
+                     componente software aggiornata alla versione che verrà ritenuta, dal personale tecnico
+                     preposto alle attività, più idoneo al funzionamento in ambiente di produzione;
+                  ●​ Dovrà essere configurato e testato con successo il sistema di allertamento remoto.
+
+
+               4.5. Servizi di assistenza e garanzia on-site
+
+
+       ​        La ditta aggiudicataria assicura i servizi di assistenza e consulenza, per la messa a punto della
+       configurazione iniziale e per l’analisi del funzionamento per i mesi richiesti a decorrere dalla positiva
+       verifica funzionale delle soluzioni tecnologiche installate e configurate.
+       ​       Durante tutto il periodo di garanzia (36 mesi) l’Amministrazione Regionale avrà il diritto di scaricare
+       direttamente dal portale del produttore Rubrik, tutti gli aggiornamenti SW disponibili all’esercizio stesso.
+                                                               24
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 25 di 46
+
+
+
+
+               Tutti i prodotti devono essere forniti con garanzia di tre anni on-site durante i quali nel caso di guasto
+       di apparato la ditta fornitrice dovrà provvedere ad inviarne in sostituzione uno, od il singolo componente
+       guasto.
+
+                    A tale scopo, in sede di offerta, nell’ambito della documentazione amministrativa, va caricato un
+       documento in cui dovranno essere indicati i riferimenti e le modalità per la comunicazione dei guasti e della
+       relativa richiesta di sostituzione (numeri di telefono, indirizzi email, nominativi di referenti e quant'altro
+       ritenuto utile e necessario).
+       ​      Il materiale proposto in sede di offerta alla presente procedura di gara dovrà essere nuovo di fabbrica,
+       consegnato negli imballi originali di fabbricazione, immune da vizi e perfettamente funzionante.
+       ​       A tal fine il fornitore è tenuto per tutta la durata del contratto a garantire l'assenza di vizi, la presenza
+       delle qualità promesse ed il buon funzionamento delle stesse ai sensi degli artt. 1490, 1497, 1512 del codice
+       civile. In particolare, in presenza di difetti di conformità, l’amministrazione regionale avrà diritto, per tutta
+       la durata della fornitura, al ripristino senza spese della conformità mediante riparazione o sostituzione delle
+       attrezzature, ovvero ad una riduzione adeguata del prezzo o alla risoluzione del contratto.
+
+
+                 4.6. Certificazione
+
+       Al fine di garantire il necessario livello di competenze tecniche e consulenziali, nonché l’accesso ai servizi di
+       supporto, l’aggiudicatario dovrà essere in possesso delle certificazioni ISO 9001 e ISO 27001, nonché
+       almeno due delle seguenti certificazioni e/o attestati:
+
+           1.​   Rubrik Certified Implementation Engineer (RCIE)
+           2.​   Rubrik Technical Professional (RTP)
+           3.​   Rubrik Technical Associate (RTA)
+           4.​   Rubrik Elite Partner
+
+       Inoltre dovrà dimostrarne il possesso entro i 10 giorni successivi alla proposta di aggiudicazione, a pena di
+       esclusione dalla gara.
+
+
+
+
+                                                                25
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                 pag. 26 di 46
+
+
+
+
+                              LOTTO N. 4 - Fornitura licenze “Fortinet”
+                                      ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di licenze software in tecnologia Fortinet.
+       La necessità dell’Amministrazione è quella di estendere temporalmente le licenze attualmente in uso per i
+       due Web Application Firewall (WAF) fino alla data del 28/02/2026 al fine di uniformarsi alle altre scadenze
+       Fortinet, di acquisire ulteriori 500 Mobile Token ad uso MFA e ulteriori 30.000 crediti FortiFlex per
+       estendere i servizi di WAF agli enti del Polo Strategico Regionale (PSR).
+
+
+                             ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+
+       La fornitura dovrà garantire la piena compatibilità e integrazione con i sistemi attualmente in esercizio oltre a
+       garantire i seguenti obiettivi:
+           ●​ Estensione della licenza, a parità di servizi, per i Web application Firewall FWEB-3000F di
+              Regione del Veneto in scadenza 11/12/2025 al fine di allineare la stessa al resto del parco installato al
+              28/02/2026;
+           ●​ Fornitura di 500 Token Mobile Fortinet per supportare le crescita delle utenze che utilizzano MFA;
+           ●​ Fornitura di 30.000 Token FortiFlex per permettere agli enti del PSR di poter usufruire dei servizi di
+              Web Application Firewall.
+
+
+                                   ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       Nella Tabella riportata di seguito sono descritte le configurazioni e le quantità di quanto richiesto:
+
+
+                  Codice                                           Descrizione                                      Quantità
+
+                                     COTERM scadenza 28/02/2026, a parità di servizi, dei seguenti seriali:
+                     -                                                                                                  1
+                                     FV-3KFTE22000009 e FV-3KFTE22000003
+
+          SKU: FTM-ELIC-500          Pacchetto di 500 Token Mobile Fortinet - licenza perpetua                          1
+
+
+         SKU: LIC-ELAVM-10K          Pacchetto di 10.000 crediti a consumo                                              3
+
+
+       L’importo complessivo a base di gara per il Lotto n. 4 - Fornitura licenze “Fortinet” ammonta ad
+       Euro 87.000 (IVA esclusa), di cui Euro 0,00 (zero) per costi di interferenza ed Euro 0,00 (zero) per costi
+       di manodopera.
+       Durata: 12 mesi.
+       La modalità di fatturazione dovrà essere posticipata corredata da report controfirmati attestanti la completa
+       fornitura di quanto previsto.
+
+
+
+
+                                                              26
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                            pag. 27 di 46
+
+
+
+
+          LOTTO N. 5 - Fornitura licenze e apparati Anti DDoS “Radware”
+
+                                     ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di apparecchiature e servizi in tecnologia Radware volte al potenziamento dell’attuale
+       sistema AntiDDoS in essere.
+       La soluzione proposta dall’offerente, oltre a garantire la piena compatibilità e integrazione con i sistemi
+       attualmente in esercizio, dovrà garantire i seguenti obiettivi:
+           ●​ aumentare il livello di resistenza agli attacchi DDOS;
+           ●​ aumentare il livello di copertura dagli attacchi attraverso la protezione del sito di disaster recovery
+              situato presso il sito secondario di Padova;
+           ●​ aumentare il livello di resilienza con l’implementazione di soluzioni WAF cloud based con
+              funzionalità AntiDDOS;
+           ●​ aumentare il livello di protezione in caso di attacchi DDOS mediante servizi di supporto dedicati del
+              vendor;
+           ●​ proteggere ulteriori enti in housing ospitati presso il sito primario di Marghera.
+
+
+
+                             ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+
+       L’attuale sistema AntiDDoS in esercizio, garantisce la protezione da attacchi di tipo DDoS solo presso il sito
+       primario di Marghera attraverso l’appliance Radware “Defense Pro 20” con licenza fino a 4 Gbps di traffico
+       legittimo.
+       La nuova soluzione proposta dovrà sostituire l’attuale appliance “Defence Pro 20” con la nuova e più
+       performante “Defence Pro X50” al fine di garantire le seguenti funzionalità:
+           ●​ 50 Gbps attack capacity e 10 Gbps legitimate throughput per permettere la protezione di Regione del
+              Veneto ed ulteriori Enti per un totale di 36 mesi;
+           ●​ nuove funzionalità di sicurezza come “Encrypted Web DDoS Protection, e DNS DDoS Protection”;
+           ●​ 2 moduli NIC con bypass integrato, con 4 porte da 10 Gbps cadauna, necessari sia per intercettare il
+              traffico principale, sia per analizzare il traffico da e verso i nuovi enti che potranno essere collegati.
+
+
+       L’attuale appliance “Defense Pro 20” dovrà essere installata presso il sito secondario di Padova e dovrà
+       essere upgradata ad una licenza per traffico legittimo fino a 10 Gbps per un totale di 36 mesi e corredata di
+       un nuovo Bypass IXIA per garantire la protezione DDoS anche di due link 10 Giga di tipo LR.
+       La soluzione dovrà includere anche i seguenti servizi:
+
+           ●​ servizio Radware Network Protection Gold quale supporto in caso di attacco DDOS (Includes
+              Network Protection Silver Subscription and ERT Under Attack (EUA) Service (durata di 36 mesi);
+           ●​ fornitura e installazione della nuova piattaforma “Cyber Controller Analytics” per la gestione
+              unificata di entrambe le appliances, capace di offrire protezione sia Web DDoS crittografata basata
+              sul comportamento sia del protocollo DNS (durata di 36 mesi);
+
+
+                                                              27
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                      pag. 28 di 46
+
+
+
+
+           ●​ servizio CloudWaf Radware per la protezione delle applicazioni web, con mitigazione integrata dei
+              bot e protezione da attacchi verso API (durata 24 mesi).
+
+
+
+
+                                     ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       Nella Tabella riportata di seguito sono descritte le configurazioni e le quantità del materiale richiesto:
+
+
+       Radware Defence Pro X50 - 10G (sito primario)
+
+                       Codice                                                Descrizione                               Quantità
+                                                  DefensePro X50 - 50Gbps attack capacity, 10Gbps legitimate
+                                                  throughput, 45 MPPS - 4 Available Bays for NICs/TLS
+                                                  acceleration
+                                                  module - Dual AC Power Supply. Includes Advanced Behavioral
+                                                  DoS
+                                                  Protection for network floods, burst attacks, botnet attacks, and
+         1920070511    DefensePro X50 - 10G       DNS                                                                      1
+                                                  floods. 1 module of 2x40G-SR with internal bypass included.
+                                                  Additional
+                                                  bypass or non-bypass NICs and GBICs purchased separately.
+                                                  Additional
+                                                  subscriptions of Network protection and Application protection are
+                                                  purchased separately.
+
+        1920070511S    Support DPX                Standard Support for Defense Pro X50-10G                                 3
+
+                       DefensePro X50 / X50-HP
+                       /                          Network Interface Card (NIC) for DefensePro X50 / X50-HP or
+                       X90 / X90-HP - Pluggable   DefensePro X90 / X90-HP - Pluggable NIC Module - Factory
+         9150000226                                                                                                        2
+                       4x10G-BP SR NIC            Installed.
+                       Module -                   Provides 4x10G SR Optic ports with Internal Bypass.
+                       Factory Installed
+
+        9150000226S    Support Interfaces         Standard Support for NIC                                                 6
+
+                       DefensePro X50 / X50-HP    Network Interface Card (NIC) for DefensePro X50 / X50-HP or
+                       /                          DefensePro X90 / X90-HP - Pluggable NIC Module - Factory
+                       X90 / X90-HP - Pluggable   Installed.
+         9150000227                                                                                                        1
+                       8x10G NIC Module -         Provides 8x10G SR/LR Optic ports. SR/LR GBICs must be
+                       Factory                    purchased
+                       Installed                  separately.
+
+        9150000227S    Support Interfaces         Standard Support for NIC                                                 3
+
+                                                  10GE SR (SFP+) Pluggable Optics for:DefensePro X Platforms:
+                       10Gbps Pluggable Optics    DefensePro X10/X20, DefensePro X40, DefensePro X80,
+         9060000042    Multimode SR for           DefensePro                                                               4
+                       DefensePro                 X100/X200 - LC connectorDefensePro Platforms: DefensePro 20,
+                                                  DefensePro 60, DefensePro 110/220 - LC connector.
+
+        9060000042S    Support Interfaces         Standard Support for NIC                                                12
+
+                       Network Protection Gold    Annual Network Protection Gold subscription for DefensePro X50
+                       Subscription for           -                                                                        3
+        90060000914
+                                                  10G.Includes Network Protection Silver Subscription and ERT
+                       DefensePro                 Under
+
+                                                                 28
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                               pag. 29 di 46
+
+
+
+
+                          X50 - 10G                     Attack (EUA) Service.
+
+                                                        Annual Advance Application Protection Subscription for
+                                                        DefensePro X50.
+                          Advance Application
+           9150000191Y                                  Includes advanced behavioral protection for encrypted floods, TLS
+                          Protection Subscription for                                                                               3
+                1                                       inspection, DNS protection, Advance Application-aware
+                          DefensePro X50
+                                                        protection, and
+                                                        threat intelligence under attack.
+
+                                                        Cyber Controller X - software license providing real time and
+                                                        historical
+                                                        security reporting and analytics for DefensePro version X, Total
+                                                        400
+                                                        Gbps attack capacity - 1-year subscription. Price includes
+                          Cyber Controller X 400
+           9000000324Y                                  support.Includes virtual appliance (VA) running on a customer
+                          Gbps                                                                                                      3
+                1                                       provided
+                          attack capacity
+                                                        server (VMware ESX, KVM or OpenStack).Allows management
+                                                        of 2
+                                                        Radware instances and 10 vADC.The number of managed devices
+                                                        can
+                                                        be extended by purchasing additional Right to Use (RTU) licenses.
+
+
+       ​
+
+           Bypass sede di Padova (sito secondario)
+
+
+
+               Codice                                             Descrizione                                         Quantità
+
+           IBPDUO-2X10-LR        Keysight iBypass DUO 2x10G LR 8.5um (956-0188)                                               1
+
+                                 IXIA iBypass DUO SW License Ixia VS NSW 12 month Standard Product
+               993-0124                                                                                                       1
+                                 Warranty Service
+
+                                 Ixia NVS Essential Technical Support-EMEA/APAC/LAR. Advanced Hardware
+               909-0762          Replacement (RMA). Unlimited software updates Access to Customer Web Portal                  1
+                                 and Technical Support during norma
+
+                                 Ixia NVS Basic to Essential Upgrade-EMEA/APAC/LAR. This upgrade provides
+               909-0764          customers who are under NVS Basic Support level Warranty to upgrade to NVS                   1
+                                 Essential Technical Support for
+
+           SFP-PLUS-SR-XCV       Ixia SFP+ 10GBASE SR pluggable optical transceiver MMF (multimode fiber)                     4
+                  R              850nm 300m reach LC (995-8044)
+
+                                 Ixia NVS Essential Technical Support-EMEA/APAC/LAR. Advanced Hardware
+               909-0762          Replacement (RMA). Unlimited software updates Access to Customer Web Portal                  4
+                                 and Technical Support during norma
+
+                                 Ixia NVS Basic to Essential Upgrade-EMEA/APAC/LAR. This upgrade provides
+               909-0764          customers who are under NVS Basic Support level Warranty to upgrade to NVS                   4
+                                 Essential Technical Support for
+
+              IXBP-CU3           Keysight TAA compliant iBypass copper switch - 10/100/1000 Mbps (956-0074)                   2
+
+                                 Keysight TAA compliant. 1U, 4 slot rack mount for IXTP-CU3, IXTP-CU3, or
+              RK-4IXCU3                                                                                                       1
+                                 IXPR-CU3. (955-8039)
+
+
+
+
+                                                                       29
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                          pag. 30 di 46
+
+
+
+
+       Cloud WAF (incluso 10Gbps Cloud DDoS protection)
+
+
+
+                        Codice                                   Descrizione                  Quantità
+                                                     Cloud Application Protection Complete
+                                                     for 1 Application. Up to 50 Mbps of
+                                                     actual HTTP/S traffic.
+                                                     Web application attack mitigation
+                                                     covering OWASP Top-10, protecting
+                                                     against common Web attacks, Data and
+                                                     Access centric attacks, and Zero Day
+                        Cloud Application
+                                                     attacks. Includes:
+                        Protection - Complete - 50
+                                                     WAF: Negative & Positive Security
+           9998000860   Mbps - 1 Application -                                                    24
+                                                     Model - API Protection & Discovery -
+                        Managed Service -
+                                                     Bot Manager - Access Control & IP
+                        Monthly Fee
+                                                     Geo Rules - Rate Limit - Advanced
+                                                     Rules- ERT Active Attackers Feed
+                                                     (EAAF) - Client-side Protection:
+                                                     Detection & Mitigation - DDoS
+                                                     Protection up to 10 Gbps - Data
+                                                     Retention: 90 Days - Advanced
+                                                     Support.
+
+                        Web DDoS Protection          Web DDoS Protection Add-on for up
+           9998001012   Add-on - 50 Mbps - up to 5   to 50 Mbps of HTTP/S traffic. Include        24
+                        Applications - Monthly fee   up to 5 Applications
+
+                        Cloud Application
+                        Protection -                 5 applications add-on subscription
+           9998000873   Complete - 5                 license for Cloud Application                24
+                        Applications Add-            Protection Complete.
+                        On - Monthly Fee
+
+
+
+
+       L’importo complessivo a base di gara per il Lotto n. 5 - Fornitura licenze e apparati AntiDDoS
+       “Radware” ammonta ad Euro 427.000,00 (IVA esclusa), di cui Euro 0,00 (zero) per costi di
+       interferenza ed Euro 0,00 (zero) per costi di manodopera.
+        Durata: 36 mesi.
+
+
+       ​    3.1. Caratteristiche di equivalenza
+       I prodotti informatici oggetto dell'offerta devono obbligatoriamente corrispondere a quelli sopraindicati, o
+       equivalenti. L’equivalenza, ai sensi dell’art. 41, comma 5 del D.Lgs n. 36/2023, dovrà garantire:
+       - la presenza di tutte le caratteristiche tecniche dei prodotti indicati;
+       - la loro perfetta integrazione nell’attuale sistema vale a dire che la soluzione proposta deve mantenere la
+       compatibilità e retro-compatibilità con le funzionalità attualmente in esercizio nei sistemi Radware
+       attualmente in funzione nel Data Center regionale.
+       Inoltre, l'offerente si dovrà impegnare a produrre in sede di verifica dell’offerta, senza alcun onere per
+       l’Amministrazione regionale, un ambiente di test presso la sede della Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT al fine di dimostrare l’integrazione di funzionamento dei prodotti offerti
+
+                                                                    30
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 31 di 46
+
+
+
+
+       con i sistemi attualmente in esercizio. Qualora le risultanze dei test non provassero detta integrazione ed
+       equivalenza, l'aggiudicatario dovrà fornire i prodotti indicati nelle tabelle sopra, senza ulteriori oneri per
+       l'Amministrazione, pena l’esclusione. Se l’aggiudicatario offrirà gli specifici prodotti indicati nelle tabelle
+       sopra, non sarà necessario che alleghi alcuna documentazione tecnica, né che allestisca un ambiente di test.
+       Regione del Veneto si riserva, previa valutazione della documentazione di equivalenza presentata,
+       l’accettazione o meno dell’offerta.
+
+
+             ARTICOLO 4 - SERVIZI DI INSTALLAZIONE, ASSISTENZA E GARANZIA ON-SITE
+       4.1. Caratteristiche minime della Manutenzione
+       Quale parte integrante dell’offerta è richiesto un servizio di manutenzione per tutta la durata del contratto che
+       preveda almeno le seguenti caratteristiche:
+           ●​ Servizi di assistenza e consulenza, per la messa a punto della configurazione e per l’analisi del
+              funzionamento per tutta la durata del contratto;
+           ●​ Una validità di durata complessiva non inferiore ai 36 mesi sulle componenti HW e SW:
+                       o SLA 8x5xNBD;
+                       o Intervento On-site per HW replacement;
+                       o Problem Determination (relativi al funzionamento del Defense ProX e Cyber Controller);
+           ●​ Una copertura 24x7 per segnalazioni di guasti e anomalie;
+           ●​ La possibilità di una diagnostica remota di secondo livello da parte di tecnici specializzati senza
+              necessità di ausilio da parte del personale di Regione Veneto (qualsiasi componente hardware e
+              software necessario per tale servizio, con la sola eccezione del collegamento Internet e del HW/SW
+              necessario all’erogazione del collegamento, deve essere parte della fornitura in oggetto);
+           ●​ Un servizio di ERT (Emergency Response Team) erogato direttamente dal fornitore in caso di
+              attacchi DDoS disponibile 24 ore su 24, 7 giorni su 7, 365 giorni all'anno con una risposta entro 10
+              minuti da parte dei team di esperti (10-minute SLA)
+           ●​ La possibilità di fruire senza limitazioni o costi aggiuntivi di qualsiasi aggiornamento firmware e
+              software necessario sia per eliminare o risolvere anomalie sia per implementare nuove funzionalità;
+           ●​ Il servizio sopra descritto deve essere applicabile a qualsiasi componente della soluzione proposta.
+
+
+       4.2. Caratteristiche minime dei tempi di messa in esercizio
+       Si riporta di seguito il dettaglio dei tempi massimi tollerati per l’espletamento delle singole attività:
+                ●​ Il materiale informatico, entro 30 giorni dalla sottoscrizione del contratto, dovrà essere
+                   consegnato presso il sito primario;
+                ●​ Il materiale informatico, entro 5 giorni dall’avvenuta consegna, dovrà essere installato sui rack
+                   nel Data Center primario e secondario;
+                ●​ Il nuovo sistema, entro 5 giorni dall’avvenuta consegna, dovrà essere avviato, aggiornato,
+                   configurato e collaudato;
+
+
+       4.3. Consegna e luogo di collaudo
+
+       Il luogo di consegna e di installazione, sulla base di quanto descritto nel paragrafo precedente, dovrà essere
+       presso il sito primario, ovvero la sede della Regione del Veneto – Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT – Palazzo Lybra – Parco Scientifico Tecnologico “Vega” – Via Pacinotti,
+       4, 30175, Marghera (VE).
+
+
+                                                               31
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 32 di 46
+
+
+
+
+       4.4. Servizi di installazione e startup
+
+       La Ditta Aggiudicataria, dovrà installare a regola d’arte le appliance fornite nei rack ospitati presso il sito
+       primario e secondario della Regione del Veneto, secondo modalità, anche organizzative, da concordarsi con
+       l’Amministrazione Regionale, ma nel rispetto dei tempi massimi indicati sopra e facendosi carico di
+       eventuali trasporti o movimentazioni del materiale.
+
+       Inoltre dovrà portare a termine le operazioni di start-up e di configurazione con il sistema che, al termine
+       delle attività, dovrà rispettare i seguenti requisiti di stato:
+                   ●​ Correttamente collegato alla rete di alimentazione elettrica e la ridondanza di alimentazione
+                      essere stata testata con successo;
+                   ●​ Correttamente connesso alla rete dati di Regione del Veneto e la ridondanza di connessione
+                      essere stata testata con successo;
+                   ●​ Ogni componente dovrà essere stata montata configurata e collaudata;
+                   ●​ Il sistema dovrà essere operativo al 100% delle funzionalità prevista e ogni sua eventuale
+                      componente software aggiornata alla versione che verrà ritenuta, dal personale tecnico
+                      preposto alle attività, più idoneo al funzionamento in ambiente di produzione;
+                   ●​ Dovrà essere configurato e testato con successo il sistema di allertamento remoto.
+
+
+       4.5. Servizi di assistenza e garanzia on-site
+
+
+       ​        La ditta aggiudicataria assicura i servizi di assistenza e consulenza, per la messa a punto della
+       configurazione iniziale e per l’analisi del funzionamento per i mesi richiesti a decorrere dalla positiva
+       verifica funzionale delle soluzioni tecnologiche installate e configurate.
+       ​       Durante tutto il periodo di garanzia (36 mesi) l’Amministrazione Regionale avrà il diritto di scaricare
+       direttamente dal portale del produttore Radware, tutti gli aggiornamenti SW disponibili all’esercizio stesso.
+               Tutti i prodotti devono essere forniti con garanzia di tre anni on-site durante i quali nel caso di guasto
+       di apparato la ditta fornitrice dovrà provvedere ad inviarne in sostituzione uno, od il singolo componente
+       guasto.
+                A tale scopo, in sede di offerta, nell’ambito della documentazione amministrativa, va caricato un
+       documento in cui dovranno essere indicati i riferimenti e le modalità per la comunicazione dei guasti e della
+       relativa richiesta di sostituzione (numeri di telefono, indirizzi email, nominativi di referenti e quant'altro
+       ritenuto utile e necessario).
+       ​      Il materiale proposto in sede di offerta alla presente procedura di gara dovrà essere nuovo di fabbrica,
+       consegnato negli imballi originali di fabbricazione, immune da vizi e perfettamente funzionante.
+       ​       A tal fine il fornitore è tenuto per tutta la durata del contratto a garantire l'assenza di vizi, la presenza
+       delle qualità promesse ed il buon funzionamento delle stesse ai sensi degli artt. 1490, 1497, 1512 del codice
+       civile. In particolare, in presenza di difetti di conformità, l’amministrazione regionale avrà diritto, per tutta
+       la durata della fornitura, al ripristino senza spese della conformità mediante riparazione o sostituzione delle
+       attrezzature, ovvero ad una riduzione adeguata del prezzo o alla risoluzione del contratto.
+
+
+               4.6. Certificazione
+
+       Al fine di garantire il necessario livello di competenze tecniche e consulenziali, nonché l’accesso ai servizi di
+       supporto, l’aggiudicatario dovrà essere in possesso delle certificazioni ISO 9001 e ISO 27001, nonché la
+       certificazione “Radware premium Partner”.
+
+                                                                32
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                        pag. 33 di 46
+
+
+
+
+       Inoltre dovrà dimostrarne il possesso entro i 10 giorni successivi alla proposta di aggiudicazione, a pena di
+       esclusione dalla gara.
+
+
+
+
+                                                            33
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                           pag. 34 di 46
+
+
+
+
+                                     LOTTO N. 6 - Servizio “Apigee”
+                                     ARTICOLO 1 - OGGETTO DELL'APPALTO
+       Regione del Veneto nel perseguire l’obiettivo strategico di confermarsi come erogatore di servizi
+       infrastrutturali ed applicativi sia a strutture interne che ad altre Pubbliche Amministrazioni locali, ponendosi
+       quale infrastruttura informatica di riferimento per l’ecosistema della PA regionale di cui fa parte, intende
+       procedere all’acquisto di servizio SaaS Google Apigee (Lotto 6).
+
+
+                             ARTICOLO 2 - DESCRIZIONE DELLA SOLUZIONE RICHIESTA
+
+       La soluzione, oltre a garantire la piena compatibilità e integrazione con i sistemi attualmente in esercizio,
+       dovrà garantire la presenza delle seguenti caratteristiche:
+        ●​ essere prevista la configurazione di tre ambienti logici distinti e funzionalmente isolati, per governare il
+           ciclo di vita dello sviluppo delle API:
+                    o​ Produzione (PROD): Ambiente destinato all'erogazione dei servizi in esercizio. .
+                    o​ UAT (Staging/Transition): Ambiente di collaudo e accettazione utente, con caratteristiche
+                        architetturali e prestazionali speculari a quello di produzione.
+                    o​ Sviluppo (DEV): Ambiente dedicato alle attività di sviluppo e test;
+        ●​ l'architettura della piattaforma dovrà essere implementata come segue:
+                    o​ Ambienti di Produzione (PROD) e UAT: Entrambi gli ambienti dovranno essere
+                        configurati in modalità multi-region, con istanze di runtime attive su almeno due (2) Region
+                        Google Cloud distinte. Questa configurazione è mandatoria per garantire un livello di
+                        servizio (SLA) per il runtime non inferiore al 99,99%.
+                    o​ Ambiente di Sviluppo (DEV): L'ambiente di sviluppo potrà essere configurato su una
+                        singola Region, garantendo un livello di servizio (SLA) non inferiore al 99,90%;
+        ●​ dovrà agevolare e garantire il ciclo di vita della API offrendo:
+                    o​ Sviluppo e Flussi: Capacità di implementare logiche complesse all'interno dei flussi del
+                        proxy (Proxy/Target Endpoints, PreFlow, PostFlow, Flow Hooks).
+                    o​ Policy di Traffic Management: Implementazione e configurazione avanzata delle policy
+                        native di Apigee, quali: Spike Arrest, response Cache / Populate Cache / Invalidate Cache;
+        ●​ l'integrazione della piattaforma Apigee nell'infrastruttura di rete dell'Ente è un requisito mandatorio e
+           dovrà seguire le seguenti direttive:
+                    o​ Connettività Southbound (Apigee verso Backend): il traffico tra il runtime di Apigee e i
+                        servizi di backend dell'Ente deve transitare esclusivamente su rete privata, senza alcuna
+                        esposizione su Internet (VPC Peering, PSC Private Service Connect).
+                    o​ Esposizione Northbound (Client verso Apigee): la piattaforma dovrà supportare sia scenari
+                        di accesso pubblico che privato;
+        ●​ dovrà essere configurata per garantire i massimi livelli di sicurezza, implementando le seguenti
+           funzionalità:
+                    o​ Gestione del Ciclo di Vita dei Token: Configurazione avanzata di protocolli standard come
+                        OAuth v2 e OpenID Connect, con gestione completa del ciclo di vita dei token e
+                        integrazione con gli Identity Provider (IdP) in uso presso l'Ente.
+                    o​ Validazione e Threat Protection: Implementazione di policy per la validazione di API Key,
+                        la validazione e generazione di token JWT, e la mitigazione di attacchi basati sul contenuto
+                        (es. SQL injection, XML/JSON threats).
+                    o​ Gestione Sicura delle Configurazioni: Utilizzo di Key Value Maps (KVMs) cifrate per la
+                        gestione sicura di credenziali, endpoint e altre configurazioni sensibili.
+                    o​ Integrazione con IAM: Gestione degli accessi alla piattaforma e dei ruoli (RBAC) tramite
+                        integrazione nativa con i servizi IAM (Identity and Access Management) e Cloud Identity di
+                        Google Cloud;
+        ●​ dovrà essere integrata nei progetti della console attualmente in uso presso Regione del Veneto;
+        ●​ dovrà prevedere l’integrazione nativa con il Cloud Service Provider Google Cloud;
+
+                                                             34
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                           pag. 35 di 46
+
+
+
+
+           ●​ dovrà prevedere Gestione utenti e RBAC attraverso IAM e Cloud Identity;
+           ●​ dovrà prevedere l’integrazione nativa con Cloud Logging/Cloud Tracing del Cloud Service Provider
+              Google Cloud;
+           ●​ dovrà prevedere la disponibilità di due cloud region sul territorio Italiano, fisicamente distinte, e
+              separate l’una dall’altra da almeno 130 km di distanza. Ogni cloud region deve essere composta da
+              almeno tre zone di disponibilita’ / data center distinti.
+
+
+                                     ARTICOLO 3 - CARATTERISTICHE TECNICHE
+       La sottoscrizione Apigee dovrà essere di tipologia Apigee X Enterprise e dovrà avere una durata di 36 mesi.
+       Nella tabella riportata di seguito sono descritte le configurazioni e quantità richieste.
+
+                   Descrizione                                                    Quantità
+
+           Volume Chiamate API         Capacità di gestire un volume non inferiore a 1,5 miliardi di chiamate a proxy estensibili
+                                       (extensible) e/o 7,5 miliardi di chiamate a proxy standard per l'intero periodo contrattuale di 36
+                                       mesi, includendo sia il traffico di produzione che quello degli ambienti inferiori.
+
+           Ambienti                    Disponibilità di almeno 6 ambienti Apigee X per la segregazione logica dei carichi di lavoro.
+
+           Deployment Units            Un minimo di 500 proxy deployment units, combinabili tra architetture Apigee X e Apigee
+                                       Hybrid.
+
+           Analytics                   Inclusione di capacità di analytics per un volume di almeno 1.5 miliardi di chiamate API.
+
+           Disponibilità (SLA)         Garanzia di un Service Level Agreement (SLA) di base del 99.90% per la disponibilità del
+                                       servizio, con possibilità di innalzamento al 99,99% tramite architettura multi-regionale
+                                       (ambiente distribuito in due (2) o più regioni).
+
+           Funzionalità Aggiuntive     Inclusione nativa di API Monitoring e conformità agli standard PCI e HIPAA.
+
+
+
+       Il canone annuale sarà fatturato dopo tre mesi rispetto all'avvio effettivo del servizio e avrà uguale importo
+       per ciascun anno.
+       Ogni fattura sarà accompagnata da report controfirmati che attestino l'utilizzo dei servizi.
+       L’importo complessivo a base di gara per il Lotto n. 6 - Servizio “Apigee” ammonta ad Euro
+       688.525,00 (IVA esclusa), di cui Euro 0,00 (zero) per costi di interferenza ed Euro 0,00 (zero) per costi
+       di manodopera.
+       Durata: 36 mesi.
+
+
+                 ARTICOLO 4 - SERVIZI DI INSTALLAZIONE, ASSISTENZA E GARANZIA ON-SITE
+       ​     ​
+       ​          4.1. Caratteristiche minime dei tempi di messa in esercizio
+       Il nuovo sistema, entro 5 giorni dovrà essere avviato, aggiornato, configurato e collaudato.
+       ​
+                  4.2. Servizi di installazione e startup
+
+       La Ditta Aggiudicataria, dovrà attivare secondo modalità, anche organizzative, da concordarsi con
+       l’Amministrazione Regionale, ma nel rispetto dei tempi massimi indicati.
+                                                           35
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                            pag. 36 di 46
+
+
+
+
+       Il sistema dovrà essere operativo al 100% delle funzionalità previste e ogni sua componente aggiornata alla
+       versione che verrà ritenuta, dal personale tecnico preposto alle attività, più idoneo al funzionamento in
+       ambiente di produzione.
+
+
+               4.3. Certificazione
+
+       Al fine di garantire il necessario livello di competenze tecniche e consulenziali, il fornitore dovrà dimostrare,
+       entro 10 giorni successivi alla proposta di aggiudicazione, di possedere almeno le seguenti certificazioni e/o
+       attestati nonché competenze tecniche e una comprovata esperienza nell'implementazione della piattaforma
+       Apigee in contesti complessi.
+
+       Livello di Partnership e Specializzazioni
+
+               ● ​ Livello Partner: Il Fornitore dovrà essere Google Cloud Premier Partner.
+               ● ​ Specializzazioni Google: Il Fornitore dovrà possedere le seguenti Specializzazioni ufficiali
+                   Google Cloud:
+                       ○ ​ Infrastructure - Services
+               ● ​ Expertise Google: Il Fornitore dovrà possedere, tra le altre, le seguenti Expertise ufficiali
+                   Google Cloud:
+                           ●​ Government
+                           ●​ Google Cloud Compute
+                           ●​ Apigee
+
+
+
+
+                                                              36
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 37 di 46
+
+
+
+
+                          PARTE II: CLAUSOLE CONTRATTUALI
+
+           1.​ Oggetto
+       Il presente appalto riguarda l’acquisizione di nuove apparecchiature hardware, licenze software, servizi di
+       manutenzione e servizi cloud avanzati per il potenziamento delle infrastrutture, della cybersecurity e dei
+       servizi digitali di regione del veneto
+
+       Si compone di n. 6 Lotti:
+       - Lotto n. 1 - Fornitura Hardware “Nutanix” CIG n. B8986AFB16;
+       - Lotto n. 2 - Fornitura Hardware “Dell” CIG n. B8986B0BE9;
+       - Lotto n. 3 - Fornitura hardware “Rubrik” CIG n. B8986B1CBC;
+       - Lotto n. 4 - Fornitura licenze “Fortinet” CIG n. B8986B2D8F;
+       - Lotto n. 5 - Fornitura licenze e apparati Anti DDoS “Radware” CIG n. B8986B3E62;
+       - Lotto n. 6 - Servizio “Apigee” CIG n. B8986B4F35.
+
+           2.​ Durata
+       In relazione alla durata dei contratti relativi a ciascun lotto vedasi i seguenti paragrafi:
+       -​per il Lotto n. 1 il paragrafo “LOTTO N. 1 - Fornitura Hardware “Nutanix”,
+       -​per il Lotto n. 2 il paragrafo “LOTTO N. 2 - Fornitura Hardware “Dell”,
+       -​per il Lotto n. 3, il paragrafo “LOTTO N. 3 - Fornitura hardware “Rubrik”,
+       -​per il Lotto n. 4, il paragrafo “LOTTO N. 4 - Fornitura licenze “Fortinet”,
+       -​per il Lotto n. 5, il paragrafo “LOTTO N.5 - Fornitura licenze e apparati Anti DDoS “Radware”,
+       -​per il Lotto n. 6, il paragrafo “LOTTO N. 6 - Servizio “Apigee”.
+
+
+        3.   Corrispettivi e modalità di fatturazione
+        3.1 Entità dell’appalto
+
+       L’importo complessivo a base d’asta, per l’intera durata dell’appalto specifico ammonta ad Euro
+       2.849.525,00 (IVA esclusa), suddiviso nei seguenti Lotti:
+
+       -Lotto n. 1 - Fornitura Hardware “Nutanix” 961.000,00 € (IVA esclusa);
+       -Lotto n. 2 - Fornitura Hardware “Dell” 280.000,00 € (IVA esclusa);
+       -Lotto n. 3 - Fornitura hardware “Rubrik” 406.000,00 € (IVA esclusa);
+       -Lotto n. 4 - Fornitura licenze “Fortinet” 87.000,00 € (IVA esclusa);
+       -Lotto n. 5 - Fornitura licenze e apparati Anti DDoS “Radware” 427.000,00 € (IVA esclusa);
+       -Lotto n. 6 - Servizio “Apigee” 688.525,00 € (IVA esclusa).
+
+       Le offerte non potranno superare, a pena di esclusione, i predetti importi massimi.
+       Per l’espletamento della prestazione oggetto di gara di ciascun Lotto sussistano rischi di interferenza che
+       possono pregiudicare la sicurezza dei lavoratori. I costi della sicurezza non soggetti a ribasso d’asta, relativi
+       alle misure di sicurezza necessarie per la eliminazione e, ove non possibile, la riduzione al minimo delle
+       interferenze, sono stati tuttavia valutati pari a € 0,00 (zero), in quanto l’eliminazione e la riduzione dei rischi
+       da interferenze sono ottenute con la sola applicazione delle misure organizzative ed operative individuate
+       nelle normative di riferimento della fornitura oggetto di gara e nel DUVRI generale allegato alla
+       documentazione di gara.
+       L'importo di aggiudicazione si intende onnicomprensivo di tutti i costi ed oneri (generali e particolari) in
+       conformità alle norme ed alle prescrizioni del presente Capitolato speciale.
+
+       3.2 Termini e modalità di fatturazione e di pagamento
+
+
+                                                               37
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 38 di 46
+
+
+
+
+       A seguito della consegna e installazione del materiale previsto nell’ambito di ciascun Lotto, si procederà alla
+       verifica funzionale dello stesso.
+       Il pagamento del corrispettivo sarà effettuato dalla Stazione Appaltante in relazione ai Lotti n. 1, n. 2, n. 3, n.
+       4, n. 5, in un’unica soluzione a seguito della positiva verifica funzionale della soluzione tecnologica
+       implementata. In relazione al Lotto n. 6 il corrispettivo verrà erogato a mezzo canone annuale anticipato con
+       cadenza il 1° febbraio di ogni anno.
+       Il pagamento del corrispettivo sarà effettuato dalla Stazione Appaltante in coerenza con gli obblighi previsti
+       dalla Legge n. 248 del 04/08/06, a mezzo mandato a 30 gg dalla data di ricevimento della fattura che dovrà
+       essere emessa dall’aggiudicatario solo successivamente all’adozione della verifica di conformità, firmata
+       dalle parti ed è in ogni caso subordinato all’esaurimento delle procedure amministrative/contabili proprie
+       dell’Amministrazione regionale. Eventuali contestazioni interromperanno detti termini.
+       Si fa presente che dovrà essere utilizzata la fatturazione elettronica secondo il formato di cui all’allegato A
+       “Formato della fattura elettronica” del Decreto Ministeriale n. 55 del 3 aprile 2013, entrato in vigore il 6
+       giugno 2013.
+       Per il contratto in essere, il Codice Univoco Ufficio da indicare nelle fatture indirizzate a questa struttura è il
+       seguente: K4G5WB.
+       La Stazione Appaltante procederà al pagamento del corrispettivo in coerenza con gli obblighi previsti dalla
+       Legge del 04/08/06, n. 248. Verranno inoltre applicate le nuove regole di contabilità introdotte dal D.Lgs. n.
+       118/11 in vigore dall' 01/01/15. L’oggetto/causale della fattura elettronica dovrà recare a titolo
+       esemplificativo la seguente dicitura: “Lotto n. X - Fornitura XXXXXX – contratto CIG XXXXXX, CUP n.
+       H77H25001620002”. Il pagamento è in ogni caso subordinato alla verifica delle fatture, nonché al regolare
+       svolgimento delle procedure amministrative/contabili proprie dell'Amministrazione regionale nel rispetto
+       della normativa vigente. Eventuali contestazioni interromperanno detti termini. La fattura dovrà essere
+       espressa in lingua italiana. In caso di ritardato pagamento, il saggio degli interessi è determinato secondo
+       quanto previsto dal D.Lgs. n. 231 del 09/10/2002, cosi come modificato dal D.Lgs. n. 192 del 09/11/2012.
+
+       Ai fini del pagamento del corrispettivo l’Amministrazione procederà ad acquisire il documento unico di
+       regolarità contributiva (D.U.R.C.) della Società/delle Società che costituiscono il Raggruppamento attestante
+       la regolarità in ordine al versamento di contributi previdenziali e dei contributi assicurativi per gli infortuni
+       sul lavoro e le malattie professionali dei dipendenti. Il DURC verrà richiesto all’autorità competente al
+       ricevimento della fattura. Il termine di 30 giorni per il pagamento è sospeso dalla data di richiesta del
+       certificato di conformità contributiva fino alla emissione del DURC, pertanto nessuna produzione di interessi
+       moratori potrà essere vantata dalla Società per detto periodo di sospensione dei termini. Qualora dal DURC
+       risulti una inadempienza contributiva, l’Amministrazione segnala alla Direzione Provinciale del Lavoro le
+       irregolarità eventualmente riscontrate. Nel suddetto caso, l’Amministrazione tramite il responsabile del
+       procedimento trattiene dal certificato di pagamento l’importo corrispondente all’inadempienza ed il
+       pagamento di quanto dovuto per le inadempienze, accertate mediante il documento unico di regolarità
+       contributiva, è disposto direttamente agli enti previdenziali e assicurativi.
+       In caso di ritardo nel pagamento delle retribuzioni dovute a uno o più dipendenti della Società/ Società che
+       costituiscono il Raggruppamento o del subappaltatore o dei soggetti titolari di subappalti o cottimi impiegati
+       nell’esecuzione dell’appalto, l’Amministrazione tramite il responsabile del procedimento applica quanto
+       previsto all’art. 30 comma 5 e 6 del D. Lgs. 50/2016.
+       Qualora le fatture pervengano in modalità diversa da quella riportata al presente articolo, le stesse non
+       verranno accettate.
+       L’aggiudicatario sarà tenuto al rispetto della normativa sulla tracciabilità finanziaria di cui alla L. n.
+       136/2010 ss.mm.ii. pena la risoluzione del contratto ai sensi del successivo articolo 6.
+       L’eventuale subappalto è regolato dall’art. 105 del D.Lgs. n. 50/2016.
+
+       3.3 La fatturazione elettronica
+
+       Le fatture emesse dal Fornitore devono essere trasmesse in forma elettronica ai sensi della Legge 244/2007,
+       art.1, commi da 209 a 214, secondo il nuovo formato utilizzato sia per la fatturazione elettronica verso la PA
+       sia per la fatturazione elettronica tra privati, secondo un unico tracciato XML e sempre attraverso il Sistema
+       di Interscambio (SdI) come previsto dal D.lgs. n. 127/2015.Regione del Veneto provvederà a comunicare al
+       Fornitore il Codice Univoco Ufficio che consente al Sistema di Interscambio (SdI), gestito dall’Agenzia delle
+       Entrate, di recapitare correttamente la fattura elettronica all’ufficio destinatario.
+                                                                38
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 39 di 46
+
+
+
+
+       Oltre al Codice Univoco Ufficio, che deve essere inserito obbligatoriamente nell’elemento “Codice
+       Destinatario” del tracciato della fattura elettronica, è necessario altresì indicare nella fattura anche le seguenti
+       informazioni:
+                   a.​ CIG, ossia il Codice Identificativo Gara, codice univoco a livello nazionale che consente di
+                       identificare il contratto di riferimento, già comunicato a codesta impresa al momento del
+                       perfezionamento del contratto stesso;
+                   b.​ CUP, ossi il codice unico progetto
+                   c.​ Estremi dell’impegno contabile, che dovrà essere inserito nel blocco informativo 2.2.1.15
+                       del tracciato fattura elettronica e consentirà a questa Amministrazione di acquisire
+                       automaticamente le fatture elettroniche ed archiviarle correttamente nel sistema di
+                       contabilità, velocizzando in tal modo anche le operazioni di pagamento.
+
+       I soggetti non residenti in Italia che agiscono come fornitori della PA sono esclusi, alla data di pubblicazione
+       del Bando, dall’obbligo di fatturazione elettronica, In tale caso, perdurando l’esclusione la fattura dovrà
+       essere trasmessa alla Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT via pec
+       all’indirizzo ictagendadigitale@pec.regione.veneto.it
+       In ogni caso le fatture:
+                   ●​ dovranno esporre il dettaglio analitico della natura dei singoli servizi prestati, dell’ufficio o
+                        struttura della Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT che
+                        ne abbia beneficiato, dei prezzi unitari per tipologia di servizio, delle quantità erogate (in
+                        termini di movimentazioni effettuate) e del prezzo complessivo per tipologia di servizio;
+                   ●​ dovranno comunque contenere ogni elemento utile all’esatta comprensione dei loro valori
+                        economici di composizione.
+                   ●​ dovranno tassativamente riportare il Codice Univoco Ufficio poiché, tenuto conto della
+                        particolare cogenza della normativa in questione, l’invio di fatture prive di codici
+                        comporterà la restituzione al fornitore della fattura medesima.
+       La Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT potrà richiedere modalità
+       documentative diverse e più dettagliate in ordine al fatturato.
+       Ove corredate dei documenti di cui sopra, il pagamento delle fatture avverrà, presso i recapiti bancari indicati
+       dal Fornitore, entro 30 (trenta) giorni dalla data della loro emissione, previa verifica:
+                   ●​ del D.U.R.C. del Fornitore e degli eventuali subappaltatori in corso di validità acquisito
+                        d’ufficio dalla Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT in
+                        caso di fornitore con sede in Italia;
+                   ●​ della regolarità del Fornitore ai sensi dell’art. 48-bis del D.P.R. 602/1973, e relative
+                        disposizioni di attuazione in caso di fornitore con sede in Italia.
+
+       La Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT potrà compensare, ai sensi
+       dell’articolo 1241 c.c., quanto dovuto al Fornitore a titolo di corrispettivo con gli importi che quest’ultimo
+       sia tenuto a versare alla stessa a titolo di penale o a qualunque altro titolo, nelle ipotesi previste nel presente
+       Capitolato.
+       Non saranno opponibili alla Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT e non
+       produrranno né il decorso dei termini di pagamento né l’esigibilità dei relativi crediti:
+                    ●​ le fatture, espressamente contestate, che non contengano le informazioni di cui al precedente
+                        comma 5° o non siano corredate della documentazione richiesta;
+                    ●​ le fatture espressamente contestate dalla Direzione ICT, Agenda Digitale e SOS affidamento
+                        servizi e forniture ICT, in tutto o in parte per fondate ragioni.
+       La Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT, a garanzia della puntuale
+       osservanza delle clausole contrattuali, può sospendere, ferma restando l’applicazione delle eventuali penalità,
+       i pagamenti all’Appaltatore cui siano state contestate inadempienze nell’esecuzione del servizio fino a che
+       non si sia posto in regola con gli obblighi contrattuali (art. 1460 C.C.). Resta tuttavia espressamente inteso
+       che in nessun caso, ivi compreso il caso di ritardi di pagamento dei corrispettivi dovuti, l’Appaltatore potrà
+       sospendere il relativo servizio.
+
+
+
+                                                               39
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 40 di 46
+
+
+
+
+       3.4 Legge 136/2010 sulla tracciabilità finanziaria
+
+       Ai sensi dell'articolo 3 della legge 13 agosto 2010, n. 136, tutti i movimenti finanziari relativi ai servizi
+       descritti dovranno essere registrati dall'Appaltatore, subappaltatori e subcontraenti della filiera dell'impresa
+       aggiudicataria su conto corrente dedicato alle commesse pubbliche e devono essere effettuati esclusivamente
+       tramite lo strumento del bonifico bancario o postale, salvo le eccezioni previste dal comma 3 dell'articolo 3
+       della medesima Legge 136/2010.
+       Il bonifico bancario o postale dovrà riportare il codice CIG di riferimento.
+       La fattura ed ogni richiesta di pagamento alla Direzione ICT, Agenda Digitale e SOS affidamento servizi e
+       forniture ICT dovranno riportare il codice sopraindicato e l'indicazione del conto corrente dedicato su cui
+       effettuare il bonifico.
+       L'Appaltatore, i subappaltatori e i subcontraenti della filiera dell'impresa aggiudicataria dovranno
+       comunicare alla Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT, prima della
+       stipula del contratto, gli estremi identificativi del conto corrente dedicato alle commesse pubbliche, nonché le
+       generalità ed il codice fiscale delle persone delegate ad operare sugli stessi.
+       L’Appaltatore assumerà l’obbligo di tracciabilità dei flussi finanziari di cui all’articolo 3 della Legge
+       136/2010.
+       Lo stesso si impegna a dare immediata comunicazione alla Direzione ICT, Agenda Digitale e SOS
+       affidamento servizi e forniture ICT ed alla Prefettura–Ufficio Territoriale del Governo della provincia di
+       Venezia della notizia dell’inadempimento della propria controparte (subappaltatore/subcontraente) agli
+       obblighi di tracciabilità finanziaria.
+       Ai sensi dell'articolo 3, comma 9 bis della legge 136/2010 il mancato utilizzo del bonifico bancario o postale
+       ovvero degli altri strumenti idonei a consentire la piena tracciabilità delle operazioni costituisce causa di
+       risoluzione del contratto.
+
+
+       4. Verifica di conformità
+       Il contratto stipulato a seguito dell’aggiudicazione sarà soggetto, ai sensi dell’art. 102 del D.Lgs n. 50 del
+       2016, a verifica di conformità.
+       La verifica di conformità finale è avviata entro 15 giorni dall’ultimazione delle prestazioni dal Direttore
+       dell’Esecuzione in contraddittorio con l’appaltatore.
+       Le attività di verifica di conformità sono dirette a certificare che l’oggetto del contratto in termini di
+       prestazioni, obiettivi e caratteristiche tecniche, economiche e qualitative sia stato realizzato ed eseguito nel
+       rispetto delle previsioni contrattuali e delle pattuizioni concordate in sede di aggiudicazione o affidamento.
+       Le attività di verifica hanno altresì lo scopo di accertare che i dati risultanti dalla contabilità e dai documenti
+       giustificativi corrispondano tra loro e con le risultanze di fatto, fermi restando gli eventuali accertamenti
+       tecnici previsti dalla legge di settore.
+       L’appaltatore deve mettere a disposizione, a propria cura e spese, i mezzi necessari ad eseguire la verifica.
+       Nel caso ciò non dovesse avvenire l’Amministrazione procedente vi provvederà d’ufficio, deducendo la
+       spesa dal corrispettivo dovuto all’appaltatore.
+       La verifica di conformità è conclusa non oltre 30 giorni dall’ultimazione dell’esecuzione delle prestazioni
+       contrattuali di ciascun lotto.
+       Il certificato di verifica di conformità viene trasmesso per accettazione all’Appaltatore, il quale deve firmarlo
+       entro 15 giorni dal ricevimento. All’Atto della firma l’Appaltatore può iscrivere eventuali contestazioni
+       rispetto alle operazioni di verifica di conformità.
+       In ogni caso si riscontrassero irregolarità e/o disservizi nello svolgimento dei servizi, la Ditta aggiudicataria
+       del relativo Lotto dovrà porvi rimedio in modo che ogni inconveniente sia eliminato a giudizio incontestabile
+       della Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT.
+       La verifica di conformità sarà attuata dall’Amministrazione anche in corso di esecuzione.
+       In particolare l’amministrazione effettuerà una verifica di conformità entro 10 giorni dalla messa in esercizio
+       del materiale consegnato e installato, volta a verificare il corretto funzionamento dello stesso in ambiente di
+       esercizio e la disponibilità di tutti i servizi previsti, compresi quelli di manutenzione e assistenza.
+       Nel caso in cui le verifiche di conformità non diano riscontro positivo, l’Amministrazione segnalerà
+       all’Appaltatore le non conformità rilevate e ne chiederà l’immediata rimozione, provvedendo
+
+
+                                                               40
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                                pag. 41 di 46
+
+
+
+
+       successivamente a nuova verifica. La procedura sarà reiterata se necessario sino al pieno soddisfacimento dei
+       requisiti dell’Amministrazione e al completamento dell’intervento a regola d’arte.
+       È fatta salva la responsabilità dell’esecutore per eventuali vizi e/o difetti anche in relazioni a parti,
+       componenti e funzionalità non verificabili in sede di verifica di conformità e la responsabilità e le garanzie
+       che ad esso fanno capo per effetto del contratto e delle leggi in vigore.
+       Rimane salva la facoltà dell’Amministrazione di richiedere ed effettuare i controlli a campione che riterrà
+       necessari per verificare la corretta esecuzione del contratto.
+
+
+       5. Obblighi dell'operatore economico
+       L'operatore economico aggiudicatario è sottoposto a tutti gli obblighi verso i dipendenti risultanti dalle
+       disposizioni legislative e regolamentari vigenti in materia di lavoro, ivi comprese quelle in tema di igiene e
+       sicurezza, previdenza e disciplina infortunistica, e assume a suo carico tutti gli oneri relativi.
+       Il personale addetto alle attività appaltate deve essere assunto dall'impresa, ovvero trovarsi in posizione di
+       rapporto disciplinato da un contratto con l'impresa medesima. L’operatore economico aggiudicatario, inoltre,
+       deve essere in regola con le norme che disciplinano il diritto al lavoro dei disabili ex art. 17 della L. 12/05/99
+       n. 68.
+       In relazione ad ogni singolo lotto, l'operatore economico aggiudicatario si impegna a produrre in fase di
+       stipula contrattuale il listino prezzi dei prodotti offerti.
+       L’operatore economico è altresì obbligato ad attuare nei confronti dei propri dipendenti occupati nelle
+       prestazioni oggetto di contratto, condizioni normative e retributive non inferiori a quelle risultanti dai
+       contratti collettivi di lavoro applicabili alla data del contratto, alla categoria e nella località in cui si svolgono
+       le prestazioni, nonché le condizioni risultanti da successive modifiche ed integrazioni ed, in genere, da ogni
+       altro contratto collettivo successivamente stipulato per la categoria ed applicabile alla località. L'obbligo
+       permane anche dopo la scadenza dei suindicati contratti collettivi e fino alla loro sostituzione.
+       L’operatore economico aggiudicatario si impegna a fornire, a richiesta dell'Amministrazione, la
+       documentazione utile a dimostrare il rispetto e l'adempimento delle normative vigenti e future inerenti il
+       rapporto di lavoro del personale impiegato nel servizio. Il mancato invio comporta la sospensione dei
+       pagamenti fino alla regolarizzazione.
+       In caso di inadempienza contributiva e retributiva nei confronti del personale addetto all’appalto troverà
+       applicazione l’art. 30, commi 5 e 6 del D.Lgs n. 50 del 2016.
+       In caso di instaurato contenzioso dinanzi alla Direzione territoriale del Lavoro, la Direzione ICT, Agenda
+       Digitale e SOS affidamento servizi e forniture ICT si riserva di sospendere i pagamenti per la parte
+       corrispondente alle somme vantate dai lavoratori nei confronti del soggetto aggiudicatario, datore di lavoro.
+       In ogni caso, al verificarsi di gravi ovvero di ripetuti inadempimenti da parte dell’appaltatore nel pagamento
+       delle retribuzioni, la Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT potrà
+       risolvere automaticamente il contratto e riscuotere la cauzione definitiva, con riserva di richiedere il
+       risarcimento dell’eventuale ulteriore danno.
+
+       L’operatore economico aggiudicatario si riterrà sin d'ora responsabile per eventuali danni diretti o indiretti
+       arrecati a persone e/o cose dovute a negligenza e/o colpa dell'impresa stessa o dei suoi dipendenti o
+       collaboratori nell'esecuzione del contratto, sollevando fin da ora l'Amministrazione da qualsiasi
+       responsabilità.
+
+       Sono a carico dell’operatore economico aggiudicatario i rischi di perdite e danni alle apparecchiature ed ai
+       programmi derivanti dall'esecuzione del servizio appaltato. L'Amministrazione si riserva di chiedere il
+       risarcimento dell'eventuale danno patito. Sono fatti salvi i casi di rischi di perdite e danni per fatti imputabili
+       all'Amministrazione.
+
+       Con la stipula del Contratto, l’operatore economico aggiudicatario assume in proprio ogni responsabilità per
+       infortunio o danni eventualmente subiti da parte di persone o di beni cagionati dall’esecuzione delle
+       prestazioni contrattuali riferibili all’operatore stesso, anche se eseguite da parte di terzi, obbligandosi a
+       manlevare e tenere indenne la Stazione appaltante, per quanto di rispettiva competenza, dalle pretese che
+       terzi dovessero avanzare in relazione ai danni derivanti dall’esecuzione delle prestazioni contrattuali.
+
+
+                                                                41
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 42 di 46
+
+
+
+
+       L’affidatario si impegna ad osservare e a far osservare ai propri dipendenti e collaboratori il Codice di
+       comportamento dei dipendenti della Regione del Veneto, approvato con deliberazione n. 1939 del
+       28/1082014, pena la risoluzione del contratto, consultabile sul sito istituzionale al seguente link:
+       https://bur.regione.veneto.it/BurvServices/Pubblica/DettaglioDgr.aspx?id=284742.
+       L’appaltatore si impegna, inoltre, a produrre, durante la fase di esecuzione del contratto ai fini del pagamento
+       degli stati di avanzamento dei lavori/delle prestazioni relative al servizio/alla fornitura oggetto del contratto
+       la documentazione che certifichi la regolarità dei versamenti delle ritenute fiscali sui redditi da lavoro
+       dipendente e dell’IVA dovuta dal subappaltatore in relazione alle prestazioni effettuate nell’ambito del
+       rapporto di appalto – subappalto.
+       L’appaltatore si impegna ad inserire nei contratti di subappalto, la clausola che obbliga il subappaltatore a
+       produrre la documentazione di cui al capoverso precedente.
+
+
+       6. Obblighi in materia di antimafia
+       L'appalto è soggetto alle disposizioni in materia di antimafia di cui alla legge n. 575 del 1965, al DPR n.
+       252/1998 e al D.Lgs n. 159 del 2011 nonché a tutti gli obblighi derivanti dal “Protocollo di legalità ai fini
+       della prevenzione dei tentativi d’infiltrazione della criminalità organizzata nel settore dei contratti pubblici di
+       lavori,       servizi     e     forniture”      Protocollo        di      Legalità    (reperibile      al      link:
+       https://www.regione.veneto.it/web/lavori-pubblici/protocollo-di-legalita), approvato con DGR n. 951 del
+       02/07/2019 e sottoscritto dalla Regione del Veneto in data 17/09/2019.
+       L’appaltatore si impegna a rispettare tutte le clausole pattizie di cui al Protocollo di legalità sottoscritto dalla
+       Regione del Veneto in data 17 settembre 2019 ai fini della prevenzione dei tentativi d’infiltrazione della
+       criminalità organizzata nel settore dei contratti pubblici di lavori, servizi e forniture e di accettarne
+       incondizionatamente il contenuto e gli effetti.
+       Fermo restando l’obbligo di denuncia all’Autorità giudiziaria, l’appaltatore si impegna a riferire
+       tempestivamente alla stazione appaltante ogni illecita richiesta di denaro, prestazione o altra utilità ovvero
+       offerta di protezione, che venga avanzata nel corso dell’esecuzione dei lavori/servizi/forniture nei confronti
+       di un proprio rappresentante, agente o dipendente.
+       L’appaltatore si impegna ad inserire nei contratti di subappalto e nei contratti stipulati con ogni altro soggetto
+       che intervenga a qualunque titolo nella realizzazione dell’opera/ nell’esecuzione dei servizi/delle forniture la
+       clausola che obbliga il subappaltatore o il subcontraente ad assumere l’obbligo di cui sopra.
+       Il contratto sarà risolto immediatamente e automaticamente, qualora dovessero essere comunicate dalla
+       Prefettura, successivamente alla stipula del contratto, informazioni interdittive di cui all’art. 84 del D.Lgs. 6
+       settembre 2011, n. 159. In tal caso, sarà applicata a carico dell’impresa, oggetto dell’informativa interdittiva
+       successiva, anche una penale nella misura del 10% del valore del contratto, salvo il maggior danno. Ove
+       possibile, le penali saranno applicate mediante automatica detrazione, da parte della stazione appaltante, del
+       relativo importo dalle somme dovute in relazione alla prima erogazione utile.
+       L’appaltatore si impegna ad inserire nel contratto di subappalto o in altro subcontratto di cui all’Allegato 1,
+       lett. a) del “Protocollo di legalità”, una clausola risolutiva espressa che preveda la risoluzione immediata ed
+       automatica del contratto di subappalto, previa revoca dell’autorizzazione al subappalto, ovvero la risoluzione
+       del subcontratto, qualora dovessero essere comunicate dalla Prefettura, successivamente alla stipula del
+       subappalto o del subcontratto, informazioni interdittive di cui all’art. 84 del D.Lgs. 6 settembre 2011, n. 159.
+       L’appaltatore si obbliga altresì ad inserire nel contratto di subappalto o nel subcontratto una clausola che
+       preveda l’applicazione a carico dell’impresa, oggetto dell’informativa interdittiva successiva, anche di una
+       penale nella misura del 10% del valore del subappalto o del subcontratto, salvo il maggior danno,
+       specificando che le somme provenienti dall’applicazione delle penali saranno affidate in custodia
+       all’appaltatore e destinate all’attuazione di misure incrementali della sicurezza dell’intervento, secondo le
+       indicazioni che saranno impartite dalla Prefettura.
+       L’appaltatore si impegna a dare comunicazione tempestiva alla stazione appaltante e alla Prefettura, di
+       tentativi di concussione che si siano, in qualsiasi modo, manifestati nei confronti dell’imprenditore, degli
+       organi sociali o dei dirigenti d’impresa. Il predetto adempimento ha natura essenziale ai fini dell’esecuzione
+       del contratto e il relativo inadempimento darà luogo alla risoluzione espressa del presente contratto, ai sensi
+       dell’art. 1456 del c.c., qualora nei confronti di pubblici amministratori della stazione appaltante che abbiano
+       esercitato funzioni relative alla stipula ed esecuzione del contratto, sia stata disposta misura cautelare o sia
+       intervenuto rinvio a giudizio per il delitto previsto dall’art. 317 del c.p..
+                                                               42
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                               pag. 43 di 46
+
+
+
+
+       La stazione appaltante si avvarrà della clausola risolutiva espressa, di cui all’art. 1456 c.c., qualora nei
+       confronti dell’imprenditore o dei componenti la compagine sociale, o dei dirigenti dell’impresa, sia stata
+       disposta misura cautelare o sia intervenuto rinvio a giudizio per taluno dei delitti di cui agli artt. 317 c.p., 318
+       c.p., 319 c.p., 319-bis c.p., 319-ter c.p., 319-quater c.p., 320 c.p., 322 c.p., 322 bis c.p., 346-bis c.p., 353 c.p.
+       e 353-bis c.p.
+
+
+       7. Cessione del contratto
+       È fatto divieto all’Impresa aggiudicataria di cedere, fatte salve le vicende soggettive dell’esecutore del
+       contratto disciplinate all’art. 120, comma 1, lett. d), D. Lgs. 36/2023, il contratto, a pena di nullità della
+       cessione stessa.
+
+
+       8. Garanzia definitiva
+
+       All'atto della stipula del contratto va presentata la garanzia definitiva ai sensi dell’art. 117 del D.Lgs. 36/2023
+       e s.m.i., da calcolare sull’importo contrattuale del singolo Lotto.
+
+       La garanzia opera per tutta la durata del contratto e, comunque, sino alla completa ed esatta esecuzione delle
+       obbligazioni nascenti dal predetto. Essa si intende estesa a tutti gli accessori del debito principale ed è
+       prestata a garanzia dell’esatto e corretto adempimento di tutte le obbligazioni del Fornitore, anche future, ai
+       sensi e per gli effetti dell’art. 1938 Codice Civile nascenti dall’esecuzione del contratto.
+
+       In caso di risoluzione del presente contratto, la cauzione definitiva verrà trattenuta da Regione del Veneto.
+
+       In particolare, la cauzione rilasciata garantisce tutti gli obblighi specifici assunti dal Fornitore, anche quelli a
+       fronte dei quali è prevista l’applicazione di penali e, pertanto, resta espressamente inteso che Regione, fermo
+       restando quanto previsto nel Capitolato speciale relativamente alle penali avrà diritto di rivalersi direttamente
+       sulla cauzione per l’applicazione delle penali.
+
+       La garanzia copre gli oneri per il mancato e inesatto adempimento del contratto e cessa di avere effetto a
+       completa ed esatta esecuzione delle obbligazioni nascenti dal contratto stesso. Pertanto la garanzia sarà
+       svincolata, previa deduzione di eventuali crediti di Regione del Veneto verso l’Appaltatore a seguito della
+       piena ed esatta esecuzione delle obbligazioni contrattuali.
+
+       Qualora l’ammontare della garanzia definitiva si riduca per effetto dell’applicazione di penali, o per qualsiasi
+       altra causa, il Fornitore deve provvedere al reintegro entro il termine di 30 (trenta) giorni dal ricevimento
+       della relativa richiesta.
+
+       La garanzia deve prevedere espressamente: la rinuncia al beneficio della preventiva escussione del debitore
+       principale; la rinuncia all’eccezione di cui all’articolo 1957, comma 2, del codice civile; l’operatività della
+       garanzia medesima entro quindici giorni, a semplice richiesta scritta di Regione del Veneto. Con tale ultima
+       clausola il fideiussore si obbliga, su semplice richiesta di Regione del Veneto, ad effettuare il versamento
+       della somma richiesta anche in caso di opposizione del Fornitore ovvero di terzi aventi causa.
+
+       La garanzia sarà svincolata ai sensi dell’art. 117 comma 8 del D.Lgs. 36/2023 e. s.m.i., previa deduzione di
+       eventuali crediti dell’Amministrazione Contraente per quanto di ragione, verso il Fornitore, a seguito della
+       piena ed esatta esecuzione delle obbligazioni contrattuali.
+
+       In caso di inadempimento delle obbligazioni previste nel presente articolo l’Amministrazione Contraente ha
+       facoltà di dichiarare il contratto risolto ai sensi dell’art. 1456 del Codice Civile.
+
+        9.​ Penali
+
+
+                                                                43
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                              pag. 44 di 46
+
+
+
+
+       Per il maggior tempo impiegato nella consegna, installazione e configurazione del materiale informatico oltre
+       il termine indicato nel presente Capitolato speciale ovvero il termine migliorativo offerto, non imputabile
+       all’Amministrazione contraente ovvero a forza maggiore o caso fortuito, sarà applicata, per ogni giorno di
+       ritardo, una penale pari all’1 per mille dell’ammontare netto contrattuale.
+
+       Gli eventuali inadempimenti contrattuali, riscontrati a seguito delle verifiche svolte nel corso della durata
+       contrattuale, che daranno luogo all’applicazione della penale, saranno contestati dall’Amministrazione al
+       Fornitore per iscritto a mezzo PEC. Quest’ultimo dovrà comunicare attraverso lo stesso mezzo le proprie
+       deduzioni, supportate da una chiara ed esauriente documentazione, all’Amministrazione medesima nel
+       termine massimo di 5 (cinque) giorni lavorativi dalla ricezione della contestazione stessa.
+       Qualora le predette deduzioni non pervengano all’Amministrazione contraente nel termine indicato, ovvero,
+       pur essendo pervenute tempestivamente, non siano idonee, a giudizio della medesima Amministrazione
+       contraente, a giustificare l’inadempienza, potrà essere applicata al Fornitore la penale sopra stabilita a
+       decorrere dall’inizio dell’inadempimento.
+       Le penalità sono notificate all'impresa in via amministrativa, restando escluso qualsiasi avviso di costituzione
+       in mora e ogni atto o procedimento giudiziale; l’appaltatore avrà la facoltà di presentare le proprie
+       controdeduzioni entro e non oltre 8 giorni dalla comunicazione della contestazione inviata
+       dall’Amministrazione.
+       Qualora le predette controdeduzioni non pervengano nel termine indicato, ovvero, pur essendo pervenute
+       tempestivamente, non siano idonee, a giudizio insindacabile dell’Amministrazione procedente, a giustificare
+       l’inadempienza, saranno applicate all’appaltatore le penali a decorrere dall’inizio dell’inadempimento. Ai
+       fini dell’applicazione della penale sarà richiesta l’emissione, in occasione della fatturazione dei servizi che
+       hanno visto l’applicazione della penale, di una nota di credito. Si ricorda che la nota di credito dovrà essere
+       emessa contestualmente all’emissione della fattura o al massimo il giorno successivo lavorativo; in caso
+       contrario la fattura sarà respinta. La nota di credito dovrà specificatamente riferirsi alla fattura dei servizi che
+       hanno visto l’applicazione della penale e dovrà riportare il cig del contratto, gli estremi dell’impegno e i
+       riferimenti della nota di applicazione della penale.
+       A garanzia del pagamento della/e penale/i, l'Amministrazione Regionale si riserva la facoltà di sospendere il
+       pagamento delle fatture fino all’emissione della nota di credito dell'importo della/e penale/i stessa/e.
+       La richiesta e/o il pagamento delle penali non esonera in nessun caso il Fornitore dall’adempimento
+       dell’obbligazione per la quale si è reso inadempiente e che ha fatto sorgere l’obbligo di pagamento della
+       medesima penale.
+       E' comunque fatto salvo il diritto dell'Amministrazione al risarcimento dei maggiori danni, in particolare per
+       le spese sostenute per la fornitura del servizio da parte di altra impresa; l’Amministrazione si riserva altresì,
+       in caso di inadempienza e in presenza di particolari casi di necessità, stabiliti a giudizio insindacabile della
+       stessa, la possibilità di ricorrere a prestazioni di terzi in via d'urgenza, ponendo il relativo onere a carico
+       dell'impresa aggiudicataria.
+
+
+           10.​ Spese di appalto, contratto ed oneri diversi
+       Sono a carico dell'operatore economico aggiudicatario tutti gli oneri diretti ed indiretti necessari per
+       l'esecuzione delle prestazioni richieste, le spese di viaggio e di trasferta di tutto il personale (dipendenti,
+       collaboratori, rappresentanti del titolare etc.) e in generale tutti i mezzi d'opera necessari per l’esecuzione
+       delle attività appaltate.
+       Allo stesso fanno inoltre carico le spese per la stipula del contratto e per la registrazione dello stesso.
+
+
+           11.​ Risoluzione del contratto
+       In caso di inadempienza agli obblighi contrattuali sarà specificatamente contestata a mezzo di comunicazione
+       scritta, inoltrata via PEC al domicilio eletto dall’aggiudicatario.
+       Nella contestazione sarà prefissato un termine non inferiore a 5 giorni lavorativi per la presentazione di
+       eventuali osservazioni; decorso il suddetto termine, l’amministrazione, qualora non ritenga valide le
+       giustificazioni addotte, ha facoltà di risolvere il contratto nei seguenti casi:
+       ● frode nella esecuzione dell’appalto;
+
+                                                               44
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                             pag. 45 di 46
+
+
+
+
+       ● mancato inizio dell’esecuzione dell’appalto nei termini stabiliti dal presente capitolato speciale descrittivo
+       e prestazionale;
+       ● manifesta incapacità nell’esecuzione del servizio appaltato;
+       ● inadempienza accertata alle norme di legge sulla prevenzione degli infortuni e la sicurezza sul lavoro;
+       ● interruzione totale del servizio verificatasi, senza giustificati motivi, per 60 giorni anche non consecutivi
+       nel corso della durata del contratto;
+       ● reiterate e gravi violazioni delle norme di legge e/o delle clausole contrattuali, tali da compromettere la
+       regolarità e la continuità dell’appalto;
+       ● cessione del Contratto, al di fuori delle ipotesi previste;
+       ● utilizzo del personale non adeguato alla peculiarità dell’appalto;
+       concordato preventivo, fallimento, stato di moratoria e conseguenti atti di sequestro o di pignoramento a
+       carico dell’aggiudicatario;
+       ● inottemperanza agli obblighi di tracciabilità dei flussi finanziari di cui alla legge 13 agosto 2010, n. 136;
+       ● ogni altro inadempimento che renda impossibile la prosecuzione dell’appalto, ai sensi dell’art. 1453 del
+       codice civile.
+
+
+
+           12.​ Tutela della privacy e trattamento dei dati personali
+       Ai sensi dell’art. 13 del Regolamento 2016/679/UE, noto come GDPR (General Data Protection Regulation)
+       si informa che il trattamento dei dati personali forniti in sede di partecipazione all’appalto specifico di cui si
+       tratta (ovvero comunque acquisiti a tal fine da parte della Regione del Veneto) è finalizzato unicamente
+       all’espletamento della procedura di gara in oggetto, con utilizzo di procedure prevalentemente informatizzate
+       e nei modi/limiti necessari per perseguire la predetta finalità.
+       Il Titolare del trattamento dei dati è la Regione del Veneto - Giunta Regionale. Il Delegato al trattamento dei
+       dati, ai sensi della DGR n. 596 del 08/05/2018 (pubblicata sul BUR n. 44 del 11/05/2018) è il Direttore della
+       Direzione ICT, Agenda Digitale e SOS affidamento servizi e forniture ICT, con sede in Venezia Marghera,
+       Complesso VEGA, Palazzo Lybra, Via Pacinotti n. 4. Il Responsabile esterno del trattamento dei dati è la
+       Commissione Mista Stato-Regioni.
+       Il conferimento di tali dati è necessario al fine di esperire le procedure di legge per l’affidamento
+       dell’incarico oggetto del presente Capitolato. La loro mancata indicazione può precludere tale attribuzione e,
+       conseguentemente, la partecipazione alla presente procedura. I dati raccolti non saranno pubblicati. I dati
+       raccolti saranno conservati per il tempo necessario alla definizione del procedimento secondo quanto
+       previsto dalla normativa vigente.
+       Ai concorrenti competono i diritti previsti dal Regolamento 2016/679/UE e, in particolare, il diritto a
+       chiedere al delegato al trattamento dei dati l’accesso ai dati medesimi, la rettifica, l’integrazione o,
+       ricorrendone gli estremi, la cancellazione o la limitazione del trattamento, ovvero l’opposizione al loro
+       trattamento.
+       I concorrenti possono, altresì, contattare il Responsabile della Protezione dei dati personali presso la Regione
+       del Veneto, Data Protection Officer, con sede a Cannaregio 168 - 30121 Venezia, per tutte le questioni
+       relative al trattamento dei loro dati. La casella mail, a cui potranno rivolgersi per le questioni relative ai
+       trattamenti di dati che li riguardano è: dpo@regione.veneto.it.
+       I concorrenti hanno in ogni caso il diritto di proporre reclamo, ai sensi dell’art. 77 del Regolamento
+       2016/679/UE, al Garante per la protezione dei dati personali con sede in Piazza di Monte Citorio n. 121,
+       00186 – ROMA (email: garante@gpdp.it; PEC: protocollo@pec.gdpd.it; centralino +39 06.696771).
+
+           13.​ Brevetti industriali e diritti d'autore
+       L’operatore economico aggiudicatario è responsabile per l'uso di dispositivi o per l'adozione di soluzioni
+       tecniche o di altra natura che violino diritti di brevetto, di autore e in genere di privativa altrui.
+       Qualora venisse promossa azione giudiziaria nei confronti dell'Amministrazione Regionale da parte di terzi
+       che vantino diritti a riguardo, l'operatore economico assume a proprio carico tutti gli oneri conseguenti,
+       incluse le spese eventualmente sostenute per la difesa in giudizio.
+
+
+
+                                                              45
+ALLEGATO B al Decreto n. 11617 del 14/10/2025                                                           pag. 46 di 46
+
+
+
+
+       L'aggiudicatario di ciascun lotto si obbliga a dare immediato avviso all'Amministrazione Regionale di
+       qualsiasi azione giudiziaria di rivendicazione o questione promossa da terzi di cui al comma 1, di cui sia
+       venuto a conoscenza.
+       Nell'ipotesi di azione giudiziaria, l'Amministrazione Regionale (fermo restando il diritto al risarcimento del
+       danno nel caso di fondatezza della medesima) ha facoltà di dichiarare risolto il contratto recuperando le
+       somme versate.
+
+           14.​ Termini e comminatorie
+       Tutti i termini e le comminatorie (penalità incluse) contenute nel presente Capitolato speciale e nel contratto
+       da stipulare operano di pieno diritto, senza obbligo per l'Amministrazione della costituzione in mora
+       dell'operatore economico aggiudicatario.
+
+
+           15.​ Foro competente
+       Per tutte le controversie relative ai rapporti con la con la Direzione ICT, Agenda Digitale e SOS affidamento
+       servizi e forniture ICT sarà competente esclusivamente il Foro di Venezia.
+
+
+           16.​ Normativa applicabile
+       Per quanto non previsto nel presente Capitolato speciale si fa espresso rinvio alle disposizioni del D.Lgs. n.
+       36/2023 e s.m.i, alle norme del Codice Civile in materia di obbligazioni e contratti, nonché più in generale
+       alla normativa nazionale vigente in materia.
+       La documentazione non in regola con l'imposta di bollo sarà accettata e ritenuta valida agli effetti giuridici e
+       verrà successivamente regolarizzata ai sensi dell'art. 16 del DPR n. 955/82 e ss.mm.ii.
+
+
+
+
+                                                 Firma BORGO IDELFO
+                                                             46
+                                                 Data 14-10-2025
+

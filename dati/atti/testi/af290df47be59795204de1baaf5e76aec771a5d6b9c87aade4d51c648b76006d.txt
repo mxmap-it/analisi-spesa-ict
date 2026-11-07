@@ -1,0 +1,949 @@
+                                          ALLEGATO_1 IPZS.REGISTRO UFFICIALE.0069233.U.01-08-2025
+
+
+
+
+PNRR
+Missione 1 – Componente 1 – sub investimento 1.4.4
+
+
+Allegato - Piano Operativo
+TITOLO: Rafforzamento infrastruttura organizzativa e tecnologica CIE
+    Sommario
+1       Introduzione                                                                                          4
+
+2       Acronimi e deﬁnizioni                                                                                 4
+
+3       Riferimenti                                                                                           4
+
+4       Descrizione del progetto                                                                              5
+
+4.1     Obiettivi e responsabilità                                                                            5
+
+4.2     Principali milestone                                                                                  5
+
+5       Articolazione del progetto                                                                            7
+
+5.1     Potenziamento tecnologico dell’attuale infrastruttura centrale della Carta d’Identità Elettronica (CIE)
+                                                                                                               7
+
+5.1.1   Perimetro                                                                                             7
+
+5.2     Implementazione di nuove funzionalità volte alla gestione automatica del ciclo di vita della CIE      8
+
+5.2.1   Perimetro                                                                                             8
+
+5.3     Potenziamento e redesign servizi di sicurezza perimetrale                                             9
+
+5.3.1   Perimetro                                                                                             9
+
+5.4     Analisi e realizzazione di procedure di recupero PIN/PUK della CIE                                   10
+
+5.4.1    Perimetro                                                                                           10
+
+5.5     Implementazione della modalità di autenticazione “Entra con CIE Wallet”                              11
+
+5.5.1   Perimetro                                                                                            11
+
+5.6     Implementazione servizio di verifica di autenticità, originalità e validità di una CIE               12
+
+5.6.1   Perimetro                                                                                            12
+
+5.7     Predisposizione nuovo modello di assistenza ai cittadini in ambito CIE                               13
+
+5.7.1   Perimetro                                                                                            13
+
+5.8     Analisi, progettazione e implementazione delle nuove sezioni di assistenza ai cittadini in ambito CIE
+                                                                                                             14
+
+5.8.1   Perimetro                                                                                            14
+
+5.9     Implementazione delle attività di adeguamento tecnologico del data center IPZS finalizzate ad
+        ospitare l’infrastruttura CIE                                                                        15
+
+5.9.1   Perimetro                                                                                            15
+
+5.10    Ampliamento e semplificazione delle modalità di emissione della CIE                                  16
+
+5.10.1 Perimetro                                                                                             16
+
+6       Cronoprogramma                                                                                       16
+
+7       Modello di governance del progetto                                                                   22
+8       Rispetto dei principi trasversali                    24
+
+9       Quadro economico e categorie di costo del progetto   25
+
+9.1     Quadro economico                                     25
+
+9.2     Categorie di costo del progetto                      26
+
+9.2.1   Acquisti di beni e servizi                           26
+
+9.2.2   Spese per lavori                                     27
+
+9.2.3   Costi per canoni e licenze                           27
+
+9.2.4   Personale                                            28
+
+9.2.5   Costi indiretti                                      28
+
+10      Integrazione con altri interventi PNRR               30
+1 Introduzione
+Nell’ambito del Piano Nazionale di Ripresa e Resilienza l’Istituto Poligraﬁco e Zecca dello Stato
+S.p.A. (di seguito indicata come “IPZS S.p.A.” o semplicemente “IPZS”) è soggetto attuatore nello
+sviluppo del sub-investimento “Rafforzamento infrastruttura organizzativa e tecnologica CIE”.
+
+L'Istituto Poligrafico e Zecca dello Stato S.p.A. (IPZS), in qualità di soggetto attuatore, ha il compito
+di potenziare l'infrastruttura tecnica della Carta d'Identità Elettronica (CIE) al fine di sostenere
+l'accelerazione della sua adozione e l'incremento dell'utilizzo previsto nei prossimi anni.
+In merito alla copertura finanziaria, gli oneri derivanti dal “Rafforzamento infrastruttura
+organizzativa e tecnologica CIE” pari a complessivi 17.596.150 € per gli anni 2025 e 2026, a valere
+sulle risorse assegnate per l'Investimento 1.4.4 - Rafforzamento dell'adozione delle piattaforme
+nazionali di identità digitale (SPID, CIE) e dell'Anagrafe nazionale (ANPR) della Missione 1
+“Digitalizzazione, innovazione, competitività e cultura”, Componente 1 “Digitalizzazione,
+innovazione e sicurezza nella PA” del PNRR.
+Il presente piano operativo deﬁnisce le modalità di attuazione, l’organizzazione alla base del
+progetto, la pianiﬁcazione delle attività, i risultati attesi e i costi di allestimento e messa in esercizio
+di competenza di IPZS S.p.A., relativamente al sub-investimento 1.4.4.
+
+
+
+2 Acronimi e deﬁnizioni
+CIE                           Carta d’identità Elettronica
+CieID                         Identità digitale CIE
+CRM                           Customer Relationship Management
+DTD                           La struttura della Presidenza del Consiglio dei ministri competente per
+                              l'innovazione tecnologica e la transizione digitale
+IPZS                          Istituto Poligraﬁco e Zecca dello Stato
+SAML                          Security Assertion Markup Language
+
+
+3 Riferimenti
+[1]       “ACCORDO AI SENSI DELL’ART.7, COMMA 4, DEL DLGS. 36/2023 PER LA
+          REALIZZAZIONE DELLA MISURA 1.4.4 - Rafforzamento dell’adozione delle piattaforme
+          nazionali di Identità Digitale (SPID, CIE) e dell'anagrafe nazionale digitale (ANPR) -
+          INTERVENTO – “Rafforzamento infrastruttura organizzativa e tecnologica CIE”
+4 Descrizione del progetto
+4.1 Obiettivi e responsabilità
+L’iniziativa “Rafforzamento infrastruttura organizzativa e tecnologica della CIE” è volta al
+potenziamento infrastrutturale e alla semplificazione dell’esperienza utente per aumentare la base
+utenti di CieID / IT-Wallet.
+
+IPZS è responsabile della realizzazione del potenziamento dell’infrastruttura CIE e della
+realizzazione delle funzionalità che semplificano l’esperienza utente dei cittadini.
+
+In particolare, il progetto mira a:
+
+   •   Potenziare la capacità elaborativa e la disponibilità dei servizi CIE, anche in previsione
+       dell’integrazione con l’IT Wallet e dell’estensione dei servizi inerenti all’identità;
+
+   •   Semplificare le funzionalità di utilizzo della CIE, attraverso lo sviluppo di nuovi strumenti di
+       assistenza e procedure di recupero PIN/PUK, con l’obiettivo di aumentare l’adozione e
+       l’utilizzo effettivo della CIE come strumento di accesso ai servizi digitali.
+
+Le responsabilità operative sono condivise tra il Dipartimento per la Trasformazione Digitale (DTD),
+titolare della misura PNRR, e IPZS, soggetto attuatore incaricato della progettazione, realizzazione
+e gestione delle attività tecniche. IPZS è inoltre responsabile della predisposizione dei piani
+operativi, della gestione dei fornitori e dell’attuazione delle misure di sicurezza, in coordinamento
+con il Ministero dell’Interno e gli altri stakeholder istituzionali coinvolti.
+
+
+4.2 Principali milestone
+Il progetto prevede il conseguimento delle seguenti principali milestone:
+  1. Potenziamento tecnologico dell’attuale infrastruttura centrale della Carta d’Identità
+     Elettronica (CIE).
+
+  2. Implementazione di nuove funzionalità volte alla gestione automatica del ciclo di vita della
+     CIE.
+
+  3. Potenziamento e redesign servizi di sicurezza perimetrale (protezione attacchi in cloud).
+
+  4. Analisi e realizzazione di procedure di recupero PIN/PUK della CIE.
+
+  5. Implementazione della modalità di autenticazione “Entra con CIE Wallet”.
+
+  6. Implementazione servizio di verifica di autenticità, originalità e validità di una CIE.
+
+  7. Predisposizione nuovo modello di assistenza ai cittadini in ambito CIE.
+
+  8. Analisi, progettazione e implementazione delle nuove sezioni di assistenza ai cittadini in
+     ambito CIE sul portale cartaidentita.interno.gov.it e app CieID, integrate con il CRM, e
+     necessarie evoluzioni del sistema CRM.
+
+  9. Implementazione delle attività di adeguamento tecnologico del data center IPZS finalizzate
+     ad ospitare l’infrastruttura CIE.
+  10. Ampliamento e semplificazione delle modalità di emissione della CIE.
+
+Nel piano operativo in oggetto rientrano attività tecnico-specialistiche ﬁnalizzate al
+completamento dei deliverables previsti per tutte le milestone presentate.
+5 Articolazione del progetto
+ Il progetto si articola in diverse attività, per un arco temporale di 10 mesi, da settembre 2025 a
+ giugno 2026.
+
+
+5.1 Potenziamento tecnologico dell’attuale infrastruttura centrale della
+    Carta d’Identità Elettronica (CIE)
+ L’attività è volta al potenziamento tecnologico dell’attuale infrastruttura centrale della Carta
+ d’Identità Elettronica (CIE).
+
+
+5.1.1 Perimetro
+ Il potenziamento tecnologico dell’attuale infrastruttura centrale della Carta d’Identità Elettronica
+ (CIE) ha lo scopo di garantirne il corretto funzionamento in relazione all’aumento di carico
+ computazionale stimato.
+5.2 Implementazione di nuove funzionalità volte alla gestione automatica
+    del ciclo di vita della CIE
+ L’attività è volta a rendere disponibili:
+
+     •   una procedura automatica di revoca della CIE in caso di decesso del titolare, mediante
+         l'integrazione con il servizio di stato in vita presente su ANPR (Anagrafe Nazionale della
+         Popolazione Residente).
+
+     •   una procedura automatica di revoca della CIE in caso di segnalato furto o smarrimento del
+         documento, mediante l'integrazione con basi dati delle Forze dell'Ordine (es. anagrafe dei
+         furti e smarrimenti).
+
+
+5.2.1 Perimetro
+ Al fine di garantire l'efficacia delle procedure automatiche di revoca della CIE, il circuito di
+ emissione della CIE dovrà prevedere l'integrazione con fonti autoritative (basi dati esterne
+ affidabili):
+
+     •   Forze dell'Ordine: L'integrazione con le basi dati delle Forze dell'Ordine (es. anagrafe dei
+         furti e smarrimenti) è fondamentale per automatizzare la revoca delle CieID in caso di
+         segnalazione di furto o smarrimento. I protocolli di integrazione dovranno garantire la
+         sicurezza, l'integrità e la riservatezza dei dati scambiati.
+
+     •   Anagrafe Nazionale della Popolazione Residente (ANPR): L'integrazione con l'ANPR sarà
+         cruciale per ricevere notifiche di decesso e attivare le conseguenti procedure di revoca
+         automatica della CIE.
+
+     •   Altre Basi Dati: Saranno valutate e definite eventuali altre integrazioni con basi dati esterne
+         che possano migliorare la gestione del ciclo di vita della CIE, nel rispetto della normativa
+         sulla protezione dei dati personali.
+5.3 Potenziamento e redesign servizi di sicurezza perimetrale
+ L’obiettivo di questa attività è quello di progettare e realizzare una serie di iniziative volte da un
+ lato al potenziamento delle misure di sicurezza perimetrale dell’infrastruttura tecnologica CIE e
+ dall’altro alla centralizzazione dei log di sicurezza. Tutte le iniziative mirano a migliorare la difesa
+ contro attacchi informatici e a mitigare il rischio di accessi non autorizzati ai sistemi informatici.
+
+
+5.3.1 Perimetro
+ Il potenziamento della sicurezza perimetrale relativa alle infrastrutture CIE mira a consolidare le
+ misure di sicurezza con tre interventi ad integrazione di quanto già in essere:
+
+    •   La progettazione, l’acquisizione e il roll out di un servizio anti-ddos cloud-based pensato per
+        fornire protezione per le infrastrutture e datacenter contro attacchi DDoS volumetrici e
+        ddos applicativi indirizzati ad applicazioni web e API.
+
+    •   La progettazione, l’acquisizione e l’avvio operativo di un servizio di External Attack Surface
+        Management volto ad avere un migliore visione della superficie d’attacco esterna del
+        perimetro delle infrastrutture e del livello di esposizione.
+
+    •   La definizione e l’acquisizione di un programma di bug bounty finalizzato all’esplorazione
+        del perimetro esterno alla ricerca di vulnerabilità sfruttando una community di ricercatori
+        di sicurezza, con l’obiettivo di consolidare la postura di sicurezza dei servizi.
+
+ La centralizzazione dei log di sicurezza ha l’obiettivo di permettere al Security Operation Center di
+ avere un’unica dashboard dalla quale avere osservabilità su tutte le infrastrutture CIE. A tal fine si
+ rendono necessari i seguenti interventi:
+
+    •   La progettazione, l’acquisizione, l’allestimento e il roll out operativo di una versione evoluta
+        dell’attuale Security Information and Event Management (SIEM), dimensionato
+        opportunamente per accogliere e correlare la maggiore quantità di log provenienti dalla
+        centralizzazione.
+
+    •   La progettazione, l’acquisizione e l’avvio operativo di una soluzione a servizio
+        dell’automazione delle attività del SOC, necessaria per gestire la maggiore mole di eventi
+        sui quali fare ricerche, correlazioni e analisi.
+5.4 Analisi e realizzazione di procedure di recupero PIN/PUK della CIE
+ Analisi, definizione e certificazione di una procedura digitale di recupero PIN/PUK della CIE.
+
+ Implementazione di un processo di recupero PIN/PUK presso i Comuni mediante postazioni
+ presidiate.
+
+
+5.4.1   Perimetro
+ Analisi, definizione e certificazione di una procedura digitale di recupero PIN/PUK della CIE adatta
+ al raggiungimento del livello di garanzia “high” (elevato, il livello massimo di sicurezza e
+ affidabilità) per l'identificazione elettronica e l'autenticazione nell'Unione Europea per la notifica
+ eIDAS.
+
+ Implementazione di un processo di recupero PIN/PUK reso fruibile mediante postazioni di lavoro
+ (pdl) CIE dedicate allo scopo, presso i Comuni, in postazioni presidiate da ufficiali d’anagrafe.
+5.5 Implementazione della modalità di autenticazione “Entra con CIE
+    Wallet”
+ L’attività prevede l’implementazione della modalità di autenticazione ai servizi online della
+ Pubblica Amministrazione con l’identità digitale CieID (“Entra con CIE”, livello 2) anche mediante il
+ sistema IT-Wallet (app IO), in alternativa all’impiego dell’app CieID.
+
+
+5.5.1 Perimetro
+ L’attività ha lo scopo di realizzare una modalità di autenticazione per consentire ai Service Provider
+ (SP) già federati con lo schema “Entra con CIE”, l'integrazione della funzionalità di autenticazione
+ mediante IT-Wallet. Tale modalità agevola l’adozione dell’autenticazione mediante IT-Wallet.
+ L’attività prevede:
+
+    •   Scelta Modalità di Autenticazione: Consolidamento della UX/UI e valutazione degli impatti
+        sul codice per la scelta iniziale della modalità di autenticazione.
+
+    •   Aggiornamento Flusso di Presentazione: Aggiornamento del flusso di presentazione alla
+        release 1.0.0 delle regole tecniche.
+
+    •   Controlli di Validazione: Introduzione di tutti i controlli previsti dalle specifiche dell'RP
+        Solution e adeguamento dei validatori OIDC.
+
+    •   Gestione Scadenza QR Code e Timeout di Sessione: Implementazione della scadenza del QR
+        Code in linea con il flusso "Entra con CIE" di Livello 2 e verifica del comportamento al
+        raggiungimento del timeout di sessione.
+
+    •   Re-factoring e Aggiornamento Codice: Necessario re-factoring e aggiornamento del codice
+        sorgente e delle librerie esterne.
+
+    •   Logging Dedicato: Integrazione dell'attuale processo di logging ai nuovi step e azioni del
+        flusso, e definizione e implementazione dei relativi KPI.
+
+    •   Estensione Scenari: Estensione del flusso di autenticazione "Entra con IT-Wallet" a tutti gli
+        altri scenari, con l'impostazione di controlli e blocchi per evitare "salti di flusso" non
+        consentiti.
+
+    •   Integrazione OIDC: Prevedere l'integrazione di "Entra con IT-Wallet" anche per il protocollo
+        OIDC. Non è prevista la gestione degli errori, ma solo il flusso principale di autenticazione.
+
+    •   Test di Carico: Esecuzione di test di carico per garantire che la soluzione sia in grado di
+        supportare il carico previsto per "Entra con CIE" e quello aggiuntivo del flusso di
+        autenticazione "Entra con IT-Wallet".
+5.6 Implementazione servizio di verifica di autenticità, originalità e validità
+    di una CIE
+ L’attività prevede l’implementazione di un servizio di verifica di autenticità, originalità e validità di
+ una CIE.
+
+5.6.1 Perimetro
+ L’attività ha lo scopo di implementare una funzionalità che consenta di dimostrare il possesso di
+ una CIE (autentica, originale e valida) da remoto, avvalendosi delle informazioni presenti in banca
+ dati CIE. La soluzione sarà funzionale alla sola attivazione di IT-WALLET e non generalizzabile ad
+ altri schemi di autenticazione.
+5.7 Predisposizione nuovo modello di assistenza ai cittadini in ambito CIE
+ L’obiettivo dell’attività è quello di effettuare il disegno e la progettazione del nuovo modello di
+ customer care adatto a gestire l'assistenza in merito all'identità digitale CIE.
+
+5.7.1 Perimetro
+ L’attività ha lo scopo di realizzare le seguenti azioni:
+
+   1. Analisi del modello di assistenza
+      • Analisi quantitativa e qualitativa dei volumi di contatto (attuali e stimati);
+      • Mappatura e analisi dei touchpoint esistenti;
+      • Segmentazione utenti/tipologie di richieste;
+      • Identificazione delle richieste ricorrenti automatizzabili;
+      • Individuazione scenari di gestione delle richieste di assistenza, numero delle risorse necessarie e
+         definizione dei criteri di distribuzione delle richieste di contatto tra i differenti canali di assistenza;
+      • Analisi della Knowledge base attuale.
+
+
+   2. Specifiche funzionali e tecniche del modello di assistenza
+      • Scouting piattaforme di barra telefonica;
+      • Definizione requisiti funzionali relativi alle piattaforme coinvolte (CRM, sistema di risposta
+         telefonica, App, Portali);
+      • Definizione della mappa di processo e customer journey;
+      • Definizione delle integrazioni dei canali, compresi quelli digitali, necessarie a consentire il
+         potenziamento del servizio;
+      • Progettazione dei flussi di assistenza differenziati (self, digitale, umana);
+      • Definizione dei requisiti funzionali per la gestione dei KPI e del modello di monitoraggio;
+      • Revisione e completamento Knowledge base integrata, consultabile da utenti e operatori.
+5.8 Analisi, progettazione e implementazione delle nuove sezioni di
+    assistenza ai cittadini in ambito CIE
+ L’attività ha l’obiettivo di potenziare i canali digitali di assistenza in ambito CIE e potenziare
+ l’infrastruttura su cui si basa l’assistenza sull’identità digitale CIE al fine di ottimizzare la gestione
+ dei contatti, la digitalizzazione dei processi e la qualità ed efficacia del servizio.
+
+
+5.8.1 Perimetro
+ L’attività ha lo scopo di realizzare le nuove sezioni di assistenza ai cittadini in ambito CIE sul portale
+ cartaidentita.interno.gov.it e in app CieID, allo scopo di migliorare il supporto fornito ai cittadini
+ attraverso l’evoluzione e l’integrazione di canali digitali di assistenza, promuovendo l’autonomia
+ dell’utente, la semplificazione dei percorsi di risoluzione e l’ottimizzazione delle risorse operative.
+
+ Le evoluzioni previste sono:
+
+   •   Realizzazione di form strutturati e interattivi, con risposte in modalità self-service e
+       apertura automatica di ticket su CRM (Salesforce) per le esigenze non risolvibili in
+       autonomia.
+
+   •   Realizzazione sezione assistenza su app CIEID, con motore di ricerca e percorsi di
+       navigazione guidata basati su knowledge base aggiornata che prevede:
+
+           o   Disegno UX/UI;
+
+           o   Implementazione nuova UX/UI sull’app
+
+   •   Revisione della sezione assistenza sul portale cartaidentita.it, con motore di ricerca e
+       percorsi di navigazione guidata basati su knowledge base aggiornata che prevede:
+
+           o   Disegno UX/UI
+
+           o   Implementazione nuova UX/UI sul portale
+
+   •   Potenziamento delle piattaforme di barra telefonica e CRM con l’adozione di soluzioni
+       tecnologiche avanzate e integrate, finalizzate a migliorare la gestione multicanale delle
+       richieste di assistenza dei cittadini, attraverso:
+
+           o   Adozione di strumenti di analisi e monitoraggio per migliorare la qualità del servizio;
+
+           o   Introduzione di strumenti di rilevazione della qualità del servizio al fine di migliorare
+               l’esperienza utente;
+
+           o   Configurazione CRM per gestione ticket da gruppi operatori diversi e visibilità per
+               segmenti e per livello.
+
+           o   Adozione di strumenti a supporto della gestione dei dati in compliance alla normativa
+               privacy.
+5.9 Implementazione delle attività di adeguamento tecnologico del data
+    center IPZS finalizzate ad ospitare l’infrastruttura CIE
+ L’attività ha l’obiettivo di potenziare l’infrastruttura fisica del Data Center primario IPZS ed
+ effettuare le attività propedeutiche al potenziamento delle infrastrutture centrali della CIE.
+
+5.9.1 Perimetro
+ L’attività ha lo scopo di realizzare le seguenti misure:
+
+    •   Lavori di ampliamento dell’infrastruttura e adeguamento ai massimi livelli di affidabilità e
+        resilienza: comprende la fornitura e posa in opera di quanto concerne agli impianti elettrici,
+        meccanici, impianti di sicurezza e speciali necessari all’ampliamento del Data Center
+        primario, comprese tutte le opere di cablaggio, passaggio cavi e collegamento
+        all’infrastruttura di rete esistente;
+
+    •   Opere edili e forniture impianti: comprende la realizzazione di opere edili non strutturali
+        necessarie all’ampliamento fisico del Data Center, inclusa la fornitura e installazione degli
+        apparati relativi all’esercizio futuro (macchine frigorifere);
+
+    •   Adeguamento cabina elettrica: prevede la fornitura e posa in opera degli apparati elettrici
+        necessari all’ampliamento tecnologico della cabina elettrica a servizio del Data Center;
+
+    •   Implementazione impianti antincendio: include la fornitura e installazione di sistemi
+        avanzati di rivelazione e spegnimento incendi per garantire la sicurezza dell'infrastruttura;
+
+    •   Potenziamento infrastruttura: comprende la fornitura e posa in opera delle
+        apparecchiature elettriche e meccaniche (gruppi di emergenza e impianti meccanici)
+        necessarie al potenziamento e all’esercizio a pieno carico dell’infrastruttura.
+5.10 Ampliamento e semplificazione delle modalità di emissione della CIE
+    L’attività ha l’obiettivo di ampliare e semplificare le modalità di emissione della CIE.
+
+5.10.1 Perimetro
+    L’attività ha lo scopo di predisporre iniziative volte ad incrementare i punti di emissione del
+    documento (es. uffici postali).
+
+6 Cronoprogramma
+
+    Di seguito si riporta una roadmap che illustra la collocazione temporale delle principali milestone
+    del progetto.
+
+
+    Milestone            ATTIVITÀ                        DELIVERABLE                  DATA INIZIO   DATA FINE
+
+1                Potenziamento                    • Espansione HW                     01/09/2025    30/06/2026
+                 tecnologico dell’attuale             dell’infrastruttura attuale
+                 infrastruttura centrale              mediante predisposizione di
+                 della Carta d’Identità               15 server e relative licenze.
+                 Elettronica (CIE).
+2                Implementazione di nuove funzionalità volte alla gestione
+                 automatica del ciclo di vita della CIE.
+
+2.1                                              •   Avvio operativo del servizio     01/09/2025    30/06/2026
+                                                     di revoca automatica della
+                                                     CIE a fronte del decesso del
+                                                     titolare.
+2.2                                              •   Analisi della disponibilità      01/09/2025    31/10/2025
+                                                     delle fonti autoritative
+                                                     (database delle forze
+                                                     dell’ordine) abilitare il
+                                                     servizio di revoca
+                                                     automatica della CIE a
+                                                     fronte della segnalazione di
+                                                     furto/smarrimento.
+2.3                                              •   Avvio operativo del servizio     31/10/2025    30/06/2026
+                                                     di revoca automatica della
+                                                     CIE a fronte della
+                                                     segnalazione di
+                                                     furto/smarrimento del
+                                                     documento.
+
+                                             Vincolata alla milestone 2.2.
+3                Potenziamento e                 • Avvio operativo del servizio       01/09/2025    30/06/2026
+                 redesign servizi di                 anti-ddos cloud-based a
+                 sicurezza perimetrale.              protezione
+                                                     dell’infrastruttura CIE.
+                                                 • Avvio operativo del servizio
+                                          di External Attack Surface
+                                          Management.
+                                       • Avvio di un programma di
+                                          bug bounty finalizzato.
+                                       • Avvio operativo di una
+                                          versione evoluta dell’attuale
+                                          Security Information and
+                                          Event Management (SIEM),
+                                          dimensionato
+                                          opportunamente per
+                                          accogliere e correlare la
+                                          maggiore quantità di log
+                                          provenienti dalla
+                                          centralizzazione.
+                                       • Avvio operativo di una
+                                          soluzione a servizio
+                                          dell’automazione delle
+                                          attività del SOC, necessaria
+                                          per gestire la maggiore mole
+                                          di eventi sui quali fare
+                                          ricerche, correlazioni e
+                                          analisi.
+4     Analisi e realizzazione di procedure di recupero PIN/PUK della       01/09/2025   30/06/2026
+      CIE.
+
+
+
+4.1                                  •   Analisi, definizione e            01/09/2025   30/06/2026
+                                         certificazione di una
+                                         procedura digitale di
+                                         recupero PIN/PUK della CIE,
+                                         adatta al raggiungimento del
+                                         livello di garanzia “high”
+                                         (elevato, il livello massimo di
+                                         sicurezza e affidabilità) per
+                                         l'identificazione elettronica
+                                         e l'autenticazione
+                                         nell'Unione Europea per la
+                                         notifica eIDAS.
+4.2                                  •   Implementazione sistema           01/09/2025   30/06/2026
+                                         dedicato al recupero dei
+                                         codici PIN/PUK della CIE
+                                         mediante l’impiego delle pdl
+                                         CIE.
+5     Implementazione della          •   Rilascio della modalità di        31/01/2026   30/06/2026
+      modalità di                        autenticazione “Entra con
+      autenticazione “Entra              CIE” mediante IT-Wallet.
+      con CIE Wallet”.
+6     Implementazione                •   Sviluppo APIs e SDK mobile        01/09/2025   31/01/2026
+      servizio di verifica di            per la verifica di autenticità,
+      autenticità, originalità e         originalità e validità di una
+      validità di una CIE.               CIE.
+7   Predisposizione nuovo      •   Analisi del modello di             01/09/2025   30/06/2026
+    modello di assistenza ai       assistenza:
+    cittadini in ambito CIE.           o Analisi quantitativa
+                                            e qualitativa dei
+                                            volumi di contatto
+                                            (attuali e stimati);
+                                       o Mappatura e analisi
+                                            dei touchpoint
+                                            esistenti;
+                                       o Segmentazione
+                                            utenti/tipologie di
+                                            richieste;
+                                       o Identificazione delle
+                                            richieste ricorrenti
+                                            automatizzabili;
+                                       o Individuazione
+                                            scenari di gestione
+                                            delle richieste di
+                                            assistenza, numero
+                                            delle risorse
+                                            necessarie e
+                                            definizione dei
+                                            criteri di
+                                            distribuzione delle
+                                            richieste di contatto
+                                            tra i differenti canali
+                                            di assistenza;
+                                       o Analisi della
+                                            Knowledge base
+                                            attuale.
+                               •   Specifiche funzionali e
+                                   tecniche del modello di
+                                   assistenza:
+                                       o Scouting
+                                            piattaforme di barra
+                                            telefonica;
+                                       o Definizione requisiti
+                                            funzionali relativi
+                                            alle piattaforme
+                                            coinvolte (CRM,
+                                            sistema di risposta
+                                            telefonica, App,
+                                            Portali);
+                                       o Definizione della
+                                            mappa di processo e
+                                            customer journey;
+                                       o Definizione delle
+                                            integrazioni dei
+                                            canali, compresi
+                                            quelli digitali,
+                                            necessarie a
+                                            consentire il
+                                            potenziamento del
+                                             servizio;
+                                         o   Progettazione dei
+                                             flussi di assistenza
+                                             differenziati (self,
+                                             digitale, umana);
+                                         o Definizione dei
+                                             requisiti funzionali
+                                             per la gestione dei
+                                             KPI e del modello di
+                                             monitoraggio;
+                                         o Revisione e
+                                             completamento
+                                             Knowledge base
+                                             integrata,
+                                             consultabile da
+                                             utenti e operatori.
+8   Analisi, progettazione e     •   Realizzazione di form            01/09/2025   30/06/2026
+    implementazione delle            strutturati e interattivi, con
+    nuove sezioni di                 risposte in modalità self-
+    assistenza ai cittadini in       service e apertura
+    ambito CIE sul portale           automatica di ticket su CRM
+    cartaidentita.interno.go         (Salesforce) per le esigenze
+    v.it e app CieID,                non risolvibili in autonomia.
+    integrate con il CRM, e      •   Realizzazione UX/UI della
+    necessarie evoluzioni            nuova sezione assistenza su
+    del sistema CRM.                 app CIEID
+                                 •   Implementazione della
+                                     nuova sezione assistenza su
+                                     app CIEID
+                                 •   Realizzazione UX/UI della
+                                     nuova sezione assistenza su
+                                     portale cartaidentita.it
+                                 •   Implementazione della
+                                     nuova sezione assistenza su
+                                     portale cartaidentita.it
+                                 •   Potenziamento delle
+                                     piattaforme di barra
+                                     telefonica e CRM:
+                                         o Adozione di
+                                             strumenti di analisi
+                                             e monitoraggio per
+                                             migliorare la qualità
+                                             del servizio;
+                                         o Introduzione di
+                                             strumenti di
+                                             rilevazione della
+                                             qualità del servizio
+                                             al fine di migliorare
+                                             l’esperienza utente;
+                                         o Configurazione CRM
+                                             per gestione ticket
+                                             da gruppi operatori
+                                             diversi e visibilità
+                                           per segmenti e per
+                                           livello.
+                                      o Adozione di
+                                           strumenti a
+                                           supporto della
+                                           gestione dei dati in
+                                           compliance alla
+                                           normativa privacy.
+9   Implementazione delle     •   Lavori edili ed impiantistici   31/07/2025   30/06/2026
+    attività di adeguamento       per
+    tecnologico del data          l’ampliamento/potenziamen
+    center IPZS finalizzate       to dell’infrastruttura del
+    ad ospitare                   Data Center primario IPZS:
+    l’infrastruttura CIE.             o Lavori di
+                                           ampliamento
+                                           dell’infrastruttura:
+                                           lavori di
+                                           ampliamento e
+                                           adeguamento, a
+                                           livello tecnologico
+                                           ed impiantistico del
+                                           DC;
+                                      o Opere edili e
+                                           forniture impianti:
+                                           opere edili non
+                                           strutturali e
+                                           fornitura macchine
+                                           frigorifere
+                                           necessarie
+                                           all’ampliamento
+                                           fisico del Data
+                                           Center;
+                                      o Adeguamento
+                                           cabina elettrica:
+                                           fornitura e posa in
+                                           opera degli apparati
+                                           elettrici;
+                                      o Implementazione
+                                           impianti
+                                           antincendio:
+                                           fornitura e
+                                           installazione di
+                                           sistemi avanzati di
+                                           rivelazione e
+                                           spegnimento
+                                           incendi;
+                                      o Potenziamento
+                                           infrastruttura:
+                                           fornitura e posa in
+                                           opera delle
+                                           apparecchiature
+                                           elettriche e
+                                           meccaniche.
+10   Ampliamento e           •   Rilascio dei servizi web       01/09/2025   30/06/2026
+     semplificazione delle       propedeutici
+     modalità di emissione       all’implementazione del
+     della CIE.                  sistema che consentirà ad
+                                 ulteriori enti di gestire le
+                                 richieste di emissione del
+                                 documento e di recupero
+                                 dei codici PIN/PUK.
+7 Modello di governance del progetto
+
+L’attività di indirizzo, controllo e monitoraggio è assicurata dall’azione della Cabina di Regia, la cui
+conformazione e prerogative sono specificate all’articolo 3 (Cabina di Regia) dell’accordo tra DTD e
+Ministero dell’Interno.
+
+Si rappresenta nello schema seguente l’organizzazione definita per la conduzione interna del
+progetto.
+
+
+
+
+Il governo dei vari stream di lavoro IPZS necessari al completamento del progetto è affidato al
+comitato di coordinamento, costituito a sua volta da tre aree di intervento, che costituiscono di
+fatto l’interfaccia verso il Comitato di attuazione sui vari ambiti di lavoro:
+
+  •   Project Management: deﬁnisce il cronoprogramma lavori e ha la governance del progetto,
+      recependo i contributi dai vari referenti degli stream individuati e lo sottopone
+      all’approvazione dello Steering Committee. Coordina l’esecuzione dei lavori in
+      collaborazione con i referenti di ciascuno di essi. Fornisce l’avanzamento lavori
+      rappresentando situazioni di rischio e punti di decisione da prendere.
+•   Solution management: deﬁnisce scenari, requisiti e ha la governance del prodotto, si
+    coordina con il Project Management per l’esecuzione dei lavori dei vari stream. Fornisce la
+    vision del prodotto.
+
+•   Account management: cura, in collaborazione con il Project e Solution Management tutti gli
+    aspetti di indirizzo alla base del progetto (modello di business, contratti PNRR, rapporto con
+    gli enti pubblici e privati, rapporto con le PA centrali).
+8 Rispetto dei principi trasversali
+Nei limiti di quanto applicabile in considerazione della natura speciﬁca del progetto, lo svolgimento
+delle attività alla base del piano lavori presentato avverrà in conformità ai regolamenti e le norme
+UE applicabili, tra cui quelle riguardanti gli obblighi in materia di concorrenza, informazione e
+pubblicità, tutela dell’ambiente e pari opportunità; più nello speciﬁco, con riferimento ai principi
+trasversali del PNRR, è garantita:
+
+   •   l’assenza del doppio ﬁnanziamento, pertanto per le spese previste non sono richiesti
+       ulteriori rimborsi, contributi ed integrazioni a valere su programmi e strumenti dell’Unione;
+
+   •   la conformità al principio del “Do No Signiﬁcat Harm” (DNSH);
+
+   •   la conformità al principio di parità di genere e il rispetto dell’obbligo di protezione e
+       valorizzazione dei giovani.
+
+Il rispetto di tali principi è garantito attraverso le attività di autocontrollo del Poligraﬁco e verranno
+debitamente tracciate e dimostrate secondo le indicazioni di cui alle Linee Guida per i soggetti
+attuatori di Accordi PNRR, approvate dal Dipartimento per la trasformazione digitale.
+     9 Quadro economico e categorie di costo del progetto
+      Il presente paragrafo illustra le tipologie di costi che si prevede di sostenere per la realizzazione del
+      progetto, nonché i criteri secondo cui IPZS, in qualità di Soggetto Attuatore rendiconterà le spese
+      progettuali in coerenza con le disposizioni regolamentari e le Linee Guida applicabili al PNRR.
+
+
+     9.1 Quadro economico
+      La tabella seguente rappresenta i costi stimati per ciascuna delle milestone di progetto descritte
+      nel precedente capitolo 4. Fermo restando l'importo complessivo di euro 17.596.150, le voci di
+      costo potranno essere rimodulate negli importi e/o nella distribuzione cronologica a fronte delle
+      esigenze che potranno sopravvenire in fase attuativa.
+
+N.ro                        ATTIVITÀ                           DATA INIZIO   DATA FINE          COSTO PREVISTO
+1    Potenziamento tecnologico dell’attuale                    01/09/2025    30/06/2026                   1.605.000 €
+     infrastruttura centrale della Carta d’Identità
+     Elettronica (CIE).
+2    Implementazione di nuove funzionalità volte alla          01/09/2025    30/06/2026                        267.500 €
+     gestione automatica del ciclo di vita della CIE.
+3    Potenziamento e redesign servizi di sicurezza             01/09/2025    30/06/2026                      2.348.650 €
+     perimetrale.
+4    Analisi e realizzazione di procedure di recupero          01/09/2025    30/06/2026                        160.500 €
+     PIN/PUK della CIE.                                                                          (analisi e certificazione
+                                                                                          soluzione recupero PUK – 4.1)
+
+                                                                                                            214.000 €
+                                                                                                  (implementazione sw
+                                                                                               recupero PIN/PUK – 4.3)
+
+5     Implementazione della modalità di autenticazione         31/01/2026    30/06/2026                        374.500 €
+      “Entra con CIE Wallet”.
+                                                                                                               107.000 €
+                                                                                                                 (UX/UI)
+6     Implementazione servizio di verifica di autenticità,     01/09/2025    31/01/2026                        214.000 €
+      originalità e validità di una CIE.
+7     Predisposizione nuovo modello di assistenza ai           01/09/2025    30/06/2026                        374.500 €
+      cittadini in ambito CIE.
+8     Analisi, progettazione e implementazione delle           01/09/2025    30/06/2026                        695.500 €
+      nuove sezioni di assistenza ai cittadini in ambito CIE
+      sul portale cartaidentita.interno.gov.it e app CieID,
+      integrate con il CRM, e necessarie evoluzioni del
+      sistema CRM.
+9     Implementazione delle attività di adeguamento            31/07/2025    30/06/2026                      9.630.000 €
+      tecnologico del data center IPZS finalizzate ad
+      ospitare l’infrastruttura CIE.
+10    Ampliamento e semplificazione delle modalità di          01/09/2025    30/06/2026                      1.605.000 €
+      emissione della CIE.
+                                                                                                            17.596.150 €
+ Le spese saranno rendicontate nel rispetto delle regole del PNRR e il periodo di ammissibilità delle
+ spese decorre dal 1° luglio 2025 fino al 30 giugno 2026. La data riportata sulle fatture o documenti
+ contabili comprovanti le spese sostenute potrà essere successiva al 30 giugno 2026 purché le
+ stesse facciano riferimento alle attività concluse entro il termine di ammissibilità delle spese.
+
+
+9.2 Categorie di costo del progetto
+ Il progetto prevede il sostenimento delle seguenti categorie di costi:
+
+     a. acquisti di beni e servizi
+
+     b. spese per lavori
+
+     c. costi per canoni e licenze
+
+     d. personale
+
+     e. costi indiretti
+
+ Le voci da a. a d. sono riferite a costi diretti determinati ai sensi dell’art. 53 comma 1 lettera a) del
+ Reg. UE 2021/1060. I costi sono rendicontati nel rispetto dei requisiti generali riepilogati al punto
+ 5.1 delle “Linee Guida per i Soggetti Attuatori individuati tramite Accordi ai sensi dell’art. 5,
+ comma 6, del D.Lgs. n. 50/2016 – ed. dicembre 2023”.
+
+ La voce e. è riferita a costi indiretti determinati secondo un tasso forfettario pari al 7% dei costi
+ diretti ammissibili conformemente a quanto previsto all’art. 54 lettera a) del Reg. UE 2021/1060 e
+ sono riconosciuti proporzionalmente ai costi diretti ammissibili.
+
+ La tabella seguente rappresenta i costi stimati del progetto classificati secondo categoria di costo.
+
+                          Categoria di costo                Costi previsti
+                          Acquisti di beni e servizi                    5.270.000 €
+                          Spese per lavori                              9.000.000 €
+                          Costi per canoni e licenze                       900.000 €
+                          Personale                                     1.275.000 €
+                          Costi indiretti                               1.151.150 €
+                          TOTALE                                      17.596.150 €
+
+
+ I costi diretti, calcolati come somma delle voci da a. a e. ammontano a euro 16.445.000. I costi
+ indiretti risultano pertanto pari a euro 1.151.150.
+
+ Di seguito si forniscono i dettagli sulle singole voci di costo.
+
+9.2.1 Acquisti di beni e servizi
+ Con tale categoria ci si riferisce ai costi diretti di progetto sostenuti per l’acquisto di beni quali, a
+ titolo esempliﬁcativo non esaustivo, macchine, connettività, apparati e attrezzature necessari alla
+ costruzione/potenziamento dell’infrastruttura IT necessaria all’erogazione del servizio.
+ Gli acquisiti di servizi si riferiscono a prestazioni specialistiche quali ad esempio servizi per la
+ sicurezza e difesa cyber (verifiche di sicurezza, monitoraggio della sicurezza informatica, Security
+ Governance, Risk and Strategy, etc.) e per servizi digitali e IT.
+
+ Con particolare riferimento alla realizzazione delle infrastrutture materiali e beni immateriali, i costi
+ sono riferiti a:
+       i.     Costi di allestimento e messa in esercizio degli asset;
+       ii. Costi di conduzione e mantenimento degli asset per il periodo considerato, in funzione
+              dei vari rilasci previsti nel piano di progetto.
+ Gli acquisti di beni e servizi sono eﬀettuati attraverso procedure di gara ad evidenza pubblica e
+ aﬃdamenti nel rispetto del D. Lgs. 31 marzo 2023, n. 36 (Codice dei contratti pubblici).
+ La rendicontazione di tale voce è eﬀettuata a costi reali sulla base delle spese eﬀettivamente
+ sostenute dal Soggetto Attuatore. La documentazione include:
+
+    •   Documenti inerenti alla selezione e alla contrattualizzazione: documentazione relativa alle
+        procedure di selezione del fornitore; Contratto/ordine di acquisto;
+
+    •   Documentazione attestante la consegna del bene/l’esecuzione della fornitura/la prestazione
+        del servizio;
+
+    •   Documenti di spesa e pagamento: documentazione attestante l'eﬀettiva regolarità della
+        posizione ﬁscale e contributiva; documentazione probatoria dell'avvenuto pagamento del
+        corrispettivo.
+
+
+9.2.2 Spese per lavori
+ La voce si riferisce ai costi diretti di progetto sostenuti per l’eﬀettuazione dei lavori necessari al
+ potenziamento dei data center del Poligraﬁco per l’erogazione del servizio nella fase di regime. Tali
+ spese comprendono, a titolo esempliﬁcativo e non esaustivo, attività di progettazione, esecuzione
+ lavori di ampliamento/costruzione locali, montaggio, conﬁgurazione degli apparati IT, lavori inerenti
+ alla sicurezza perimetrale, logica e ﬁsica ecc.
+ I contratti di lavori saranno aﬃdati nel rispetto del D. Lgs. 31 marzo 2023, n. 36 (Codice dei contratti
+ pubblici).
+ La rendicontazione di tale voce è eﬀettuata a costi reali sulla base delle spese eﬀettivamente
+ sostenute dal Soggetto Attuatore. La documentazione include:
+
+    •   Documenti inerenti alla selezione e alla contrattualizzazione: documentazione relativa alle
+        procedure di selezione del fornitore/esecutore dei lavori; Contratto /ordine di acquisto;
+
+    •   Documentazione attestante l’avvenuta esecuzione delle lavorazioni o forniture (relazioni,
+        progetti, perizie, autorizzazioni, documenti di ﬁne lavori, collaudi, ecc.);
+
+    •   Documenti di spesa e pagamento: documentazione attestante l'eﬀettiva regolarità della
+        posizione ﬁscale e contributiva; documentazione probatoria dell'avvenuto pagamento del
+        corrispettivo.
+
+9.2.3 Costi per canoni e licenze
+ La voce si riferisce ai costi diretti di progetto sostenuti per l’utilizzo di canoni e licenze, così come la
+ loro crescita ﬁsiologica collegata all’utilizzo dei servizi connessi alla CIE, sia in ambito
+ cybersicurezza (suite software e licenze in ambito monitoraggio di sicurezza, vulnerability
+ assessment, penetration test ecc.) che in ambito IT (software di base, sistemi operativi, sistemi
+ middleware, sistemi di backup e recovery ecc).
+
+ La rendicontazione di tale voce è eﬀettuata a costi reali sulla base delle spese eﬀettivamente
+ sostenute dal Soggetto Attuatore. La documentazione include:
+
+     •   Documenti inerenti alla selezione e alla contrattualizzazione: documentazione relativa alle
+         procedure di selezione del fornitore; Contratto/ordine di acquisto;
+
+     •   Documenti di spesa e pagamento: documentazione attestante l'eﬀettiva regolarità della
+         posizione ﬁscale e contributiva; documentazione probatoria dell'avvenuto pagamento del
+         corrispettivo.
+
+
+9.2.4 Personale
+
+ La voce si riferisce ai costi diretti del personale tecnico aziendale dipendente dell’Istituto Poligraﬁco
+ e Zecca dello Stato eﬀettivamente impegnato nelle attività di realizzazione del presente piano. Si
+ speciﬁca che il costo di tale personale, coerentemente con la natura di Società per Azioni
+ dell’Istituto, è integralmente remunerato attraverso i ricavi aziendali derivanti dalla vendita di beni
+ e servizi e non è in alcun modo assimilabile a un costo ricorrente di un’Amministrazione pubblica.
+
+ I costi diretti per il personale di cui alla voce d. sono determinati e rendicontati ai sensi dell’art. 55
+ paragrafo 2 del Reg. UE 2021/1060, calcolando pertanto, sulla base dei più recenti costi del lavoro
+ lordi documentabili, una tariﬀa media oraria per le posizioni organizzative applicate nell’ingaggio del
+ personale tecnico specialistico dedicato alla realizzazione delle attività progettuali.
+
+ In conformità al Regolamento Europeo 2021/1060, i costi del personale saranno rendicontati
+ secondo la modalità semplificata, come da accordi già in essere stipulati con il Dipartimento.
+
+
+9.2.5 Costi indiretti
+
+ I costi indiretti di cui alla voce e. si riferiscono a costi aziendali non direttamente imputabili
+ all’operazione tra cui, a titolo esempliﬁcativo, alcuni costi di gestione (utenze, manutenzioni,
+ pulizie, spese generali).
+
+ Questa voce è determinata in misura forfettaria pari al 7% dei costi diretti ammissibili al
+ ﬁnanziamento, in base a quanto stabilito dall’art. 54, comma 1, lettera a), del Regolamento (UE)
+ 1060/2021, come richiamato dall’art. 10, comma 4, del decreto-legge 10 settembre 2021, n. 121,
+ convertito, con modiﬁcazioni, in legge 9 novembre 2021, n. 156, senza necessità di
+ documentazione probante.
+
+ L’imposta sul valore aggiunto (IVA) è considerato un costo ammissibile solo nei casi in cui questa
+ spesa, realmente e deﬁnitivamente sostenuta, non sia recuperabile da parte di IPZS, nel rispetto
+ della normativa nazionale di riferimento. Tale importo dovrà quindi essere puntualmente tracciato
+per ogni progetto nei relativi sistemi informativi gestionali, come precisato nelle “Istruzioni
+Tecniche per la selezione dei progetti PNRR” allegate alla Circolare MEF-RGS del 14 ottobre 2021,
+n. 21.
+
+Eventuali altri tributi od oneri ﬁscali, previdenziali e assicurativi, direttamente aﬀerenti al progetto
+potranno essere rendicontati nel limite in cui non siano recuperabili dall’Istituto e costituiscano
+dunque un costo eﬀettivamente sostenuto.
+10 Integrazione con altri interventi PNRR
+Nell’ambito del Piano Nazionale di Ripresa e Resilienza IPZS è soggetto attuatore, in collaborazione
+con la società PagoPA S.p.a., nello sviluppo del sub-investimento “Sistema di portafoglio digitale
+italiano”.
+
+L’art. 64-quater, comma 4, del CAD attribuisce ad IPZS e a PagoPA S.p.A. la realizzazione e gestione
+della infrastruttura organizzativa e tecnologica necessaria per l'attuazione del Sistema IT-Wallet.
+
+Le attività descritte ai paragrafi 5.5 e 5.6 del presente piano operativo estendono le funzionalità
+afferenti alla CIE integrando il piano operativo del sistema IT-Wallet.
+
