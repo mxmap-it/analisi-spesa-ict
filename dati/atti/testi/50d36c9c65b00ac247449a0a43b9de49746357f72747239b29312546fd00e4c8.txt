@@ -1,0 +1,929 @@
+       Nell’ambito della CONCESSIONE per la realizzazione e
+gestione di una nuova infrastruttura informatica al servizio della
+Pubblica Amministrazione denominata Polo Strategico Nazionale
+(“PSN”), di cui al comma 1 dell’articolo 33-septies del d.l. n. 179
+                            del 2012.
+
+
+
+
+                   PIANO DEI FABBISOGNI
+
+
+
+
+                                                                      1
+                           Piano dei Fabbisogni
+INDICE
+1         PREMESSA ................................................................................................ 4
+
+2         DATI ANAGRAFICI DELL’AMMINISTRAZIONE .............................................. 5
+
+3         DOCUMENTI DI RIFERIMENTO ................................................................... 6
+    3.1        DOCUMENTI APPLICABILI ................................................................................... 6
+    3.2        ACRONIMI .......................................................................................................... 7
+
+4         DEFINIZIONI.............................................................................................. 8
+
+5         PIANO DI MIGRAZIONE ............................................................................. 9
+    5.1        OBIETTIVI ............................................................................................................. 9
+    5.2        PIANO DI MIGRAZIONE ........................................................................................... 13
+          5.2.1     Tempistiche ....................................................................................................................16
+
+6         DESCRIZIONE DEI FABBISOGNI................................................................. 17
+    6.1        CONTESTO DI RIFERIMENTO .................................................................................... 17
+
+7         Servizi richiesti ....................................................................................... 19
+    7.1        INDUSTRY STANDARD............................................................................................. 20
+          7.1.1     Housing ..........................................................................................................................20
+          7.1.2     Hosting...........................................................................................................................20
+          7.1.3     IaaS ................................................................................................................................20
+          7.1.4     PaaS ...............................................................................................................................20
+          7.1.5     CaaS ...............................................................................................................................21
+    7.2        HYBRID CLOUD ON PSN SITE................................................................................... 21
+    7.3        SECURE PUBLIC CLOUD .......................................................................................... 21
+    7.4        SERVIZIO DI MIGRAZIONE ........................................................................................ 21
+    7.5        SERVIZI PROFESSIONALI .......................................................................................... 22
+          7.5.1     Servizi di evoluzione ........................................................................................................22
+          7.5.2     IT Infrastructure - Service Operations ..............................................................................22
+          7.5.3     Sintesi dei servizi professionali ........................................................................................22
+    7.6        ALTRI SERVIZI A LISTINO.......................................................................................... 23
+
+
+
+                                                                                                                                                         2
+                                                           Piano dei Fabbisogni
+LISTA DELLE TABELLE
+Tabella 1: Dati anagrafici dell’Amministrazione contraente .......................................................................... 5
+Tabella 2: Dati anagrafici del referente tecnico ............................................................................................ 5
+Tabella 3: Documenti di riferimento............................................................................................................. 6
+Tabella 4: Servizi richiesti: quadro di sintesi ................................................................................................19
+Tabella 15: Fabbisogno Servizi Professionali di migrazione ..........................................................................21
+Tabella 16: Fabbisogno Altri Servizi Professionali ........................................................................................22
+Tabella 17: Fabbisogno altri servizi a listino .................................................................................................23
+
+
+
+
+                                                                                                                                                3
+                                                            Piano dei Fabbisogni
+1 PREMESSA
+Il Piano Nazionale di Ripresa e Resilienza ha previsto specifici obiettivi per la transizione digitale con
+particolare riferimento agli “Obiettivi Italia Digitale 2026” – “Obiettivo 3 – Cloud e Infrastrutture Digitali”
+orientato alla migrazione dei dati e degli applicativi informatici delle singole amministrazioni. Per promuovere
+l’innovazione digitale nella Pubblica Amministrazione, l’Agenzia per l’Italia Digitale ha attivato un piano
+complessivo di trasformazione e digitalizzazione, ponendo al centro del modello strategico la componente
+infrastrutturale (come descritto nel Piano Triennale per l’Informatica nella Pubblica Amministrazione 2020-
+2022) con l’obiettivo di governare la trasformazione digitale. Le direttrici evolutive della componente
+infrastrutturale sono rappresentata da:
+     ● Sovranità digitale;
+     ● Sicurezza, assicurare un presidio tecnologico e operativo in grado di garantire i più alti standard di
+         sicurezza:
+        o Fisica (e.g. disaster recovery, business continuity, controllo accessi, etc..);
+        o Informatica (e.g. prevenzione e risposta attacchi cyber, data protection, identity access
+            management, etc.);
+     ● Innovazione, attraverso le migliori soluzioni tecnologiche per le infrastrutture data center, la
+         connettività, le piattaforme e i servizi cloud, garantendo trasferimento tecnologico di esperienze e
+         know how con i leader globali.
+
+In questo contesto, e relativamente alla razionalizzazione ed il consolidamento dei Data Center della Pubblica
+amministrazione, si inserisce la creazione del Polo Strategico Nazionale, una nuova infrastruttura digitale a
+servizio della PA italiana, che la dota di tecnologie e infrastrutture cloud affidabili, resilienti e indipendenti.
+
+
+
+
+                                                                                                                 4
+                                               Piano dei Fabbisogni
+2 DATI ANAGRAFICI DELL’AMMINISTRAZIONE
+Nelle seguenti tabelle si riportano i dati anagrafici dell’Amministrazione contraente e del suo referente.
+
+ Ragione sociale Contraente
+                                              Regione Autonoma della Sardegna - Direzione Generale del lavoro,
+ Ragione sociale
+                                              formazione professionale, cooperazione e sicurezza sociale
+ Codice Fiscale                               80002870923
+ Partita Iva                                  80002870923
+ Indirizzo sede legale                        Viale Trento, 69
+ CAP                                          09100
+ Comune                                       Cagliari
+ Provincia                                    Cagliari
+ Cognome referente Contratto Esecutivo        -
+ Nome referente Contratto Esecutivo           -
+ Indirizzo mail referente Contratto
+                                              -
+ Esecutivo
+ PEC Amministrazione                          lavoro@pec.regione.sardegna.it
+                                 Tabella 1: Dati anagrafici dell’Amministrazione contraente
+
+
+ Riferimento referente tecnico
+ Cognome                                      Cesare
+ Nome                                         Antonello
+ Telefono fisso                               070 606 5562
+ Cellulare                                    -
+ Indirizzo mail                               acesare@regione.sardegna.it
+
+                                      Tabella 2: Dati anagrafici del referente tecnico
+
+
+
+ Data                                         Firma
+
+ 29 Gennaio 2024                              Il referente tecnico - Ing. Antonello Cesare
+
+                                                          Cesare Antonello
+                                                                  2024.01.29 11:38:08
+
+
+                                                          CN=Cesare Antonello
+                                                          C=IT
+                                                          2.5.4.4=Cesare
+                                                          2.5.4.5=TINIT-CSRNNL73L24B354C
+
+
+
+                                                          RSA/2048 bits
+
+
+
+
+                                                                                                                 5
+                                                  Piano dei Fabbisogni
+3 DOCUMENTI DI RIFERIMENTO
+
+Riferimento                                      Codice                    Titolo
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             CONVENZIONE ai sensi degli artt. 164,
+Ministri – Dipartimento per la Trasformazione                              165, 179, 180, comma 3 e 183, comma 15
+Digitale – del 24.08.2022                                                  del d.lgs. 18 aprile 2016, n. 50 e successive
+                                                                           modificazioni o integrazioni avente ad
+                                                                           oggetto l’affidamento in concessione dei
+                                                                           servizi infrastrutturali e applicativi in cloud
+                                                                           per la gestione di dati sensibili - “Polo
+                                                                           Strategico Nazionale”
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             Capitolato Tecnico e relativi annessi –
+Ministri – Dipartimento per la Trasformazione    (Allegato A)              Capitolato Servizi
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             “Offerta Tecnica” e relativi annessi
+Ministri – Dipartimento per la Trasformazione    (Allegato B)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             “Offerta economica del Fornitore –
+Ministri – Dipartimento per la Trasformazione    (Allegato C)              Catalogo dei Servizi” e relativi annessi
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             Schema di Contratto di Utenza
+Ministri – Dipartimento per la Trasformazione    (Allegato D)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             Indicatori di Qualità
+Ministri – Dipartimento per la Trasformazione    (Allegato H)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             Flussi informativi
+Ministri – Dipartimento per la Trasformazione    (Allegato I)
+Digitale – del 24.08.2022
+Convenzione Presidenza del Consiglio dei         CONV-PSN-2022             Elenco dei Servizi Core, no Core e CSP
+Ministri – Dipartimento per la Trasformazione    (Allegato L)
+Digitale – del 24.08.2022
+                                         Tabella 3: Documenti di riferimento
+
+
+
+
+3.1 DOCUMENTI APPLICABILI
+
+Riferimento                            Codice                        Titolo
+Template Piano dei Fabbisogni          PSN- TMPL- PNDF               Piano dei Fabbisogni Template
+
+
+
+
+                                                                                                                             6
+                                                Piano dei Fabbisogni
+3.2 ACRONIMI
+
+Acronimo       Descrizione
+AI             Artificial Intelligence
+CaaS           Container as a Service
+CMP            Cloud Management Platform
+CSP            Cloud Service Provider
+DB             DataBase
+DBaaS          DataBase as a Service
+DR             Disaster Recovery
+GCP            Google Cloud Platform
+HA             High Availability
+IaaS           Infrastructure as a Service
+IAM            Identity and Access Management
+IT             Information Technology
+PA             Pubblica Amministrazione
+PaaS           Platform as a Service
+PSN            Polo Strategico Nazionale
+VM             Virtual Machine
+
+
+
+
+                                                                7
+                                         Piano dei Fabbisogni
+4 DEFINIZIONI
+  •   ACN: l’Agenzia per la cybersicurezza nazionale, di cui al decreto-legge 14 giugno 2021, n. 82,
+      convertito, con modificazioni, dalla legge 4 agosto 2021, n. 109;
+
+  •   DTD: il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri;
+
+  •   Amministrazioni: le amministrazioni individuate dall’articolo 1, comma 3, della legge 31 dicembre
+      2009, n. 196;
+
+  •   Dati dell’amministrazione: le informazioni trattate dall’amministrazione, o da terzi per conto
+      dell’amministrazione;
+
+  •   Regolamento: il Regolamento di cui all’articolo 33-septies, comma 4, del decreto legge 18 ottobre
+      2012, n. 179, convertito, con modificazioni, dalla legge 17 dicembre 2012, n. 221, recante “livelli
+      minimi di sicurezza, capacità elaborativa, risparmio energetico e affidabilità delle infrastrutture
+      digitali per la PA e le caratteristiche di qualità, sicurezza, performance e scalabilità, portabilità dei
+      servizi cloud per la pubblica amministrazione, le modalità di migrazione nonché le modalità di
+      qualificazione dei servizi cloud per la pubblica amministrazione”, adottato dall’Agenzia per l’Italia
+      digitale (AgID), d’intesa con il DTD, con Determinazione n. 628/2021 del 15 dicembre 2021;
+
+  •   Servizi dell’amministrazione: servizi erogati verso terzi o internamente all’amministrazione;
+
+  •   “modalità A - trasferimento in sicurezza dell’infrastruttura IT”: migrazione verso il cloud effettuata
+      secondo la strategia di migrazione Lift&Shift (anche detta Rehost), ovvero la migrazione dell’intero
+      servizio dell’amministrazione, comprensivo di applicazioni e dati su un hosting cloud senza apportare
+      modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud;
+
+  •   “modalità B - aggiornamento in sicurezza di applicazioni in cloud”: migrazione verso il cloud
+      effettuata secondo le seguenti strategie:
+
+      −   repurchase/replace: si intende la migrazione del servizio dell’amministrazione verso una
+          soluzione nativa in cloud, in genere erogata in modalità Software as a Service;
+
+      −   replatform: si intende la riorganizzazione dell’architettura applicativa sostituendo intere
+          componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici
+          dell’infrastruttura Cloud;
+
+      −   re-architect: ha come obiettivo quello di ripensare significativamente l’architettura core di un
+          applicativo in ottica cloud, attraverso un processo di redesign iterativo ed incrementale che miri
+          ad adottare appieno i servizi cloud-native offerti dai cloud service provider per massimizzare i
+          benefici che ne derivano;
+
+  •   Housing: utilizzo delle infrastrutture impiantistiche e di connettività dei Data Center del PSN, dove
+      verranno ospitate apparecchiature delle Amministrazioni;
+
+  •   Hosting: utilizzo delle infrastrutture IT dei Data Center del PSN, dove verranno installate le
+      componenti software e middleware delle Amministrazioni.
+
+
+
+
+                                                                                                             8
+                                            Piano dei Fabbisogni
+5       PIANO DI MIGRAZIONE
+Il presente capitolo rappresenta il piano di migrazione al cloud di dati e servizi dell’Amministrazione, in linea
+con quanto richiesto nella determina del 7 ottobre 2022 del Dipartimento per la trasformazione digitale.
+
+I moduli applicativi da portare su PSN rappresentano l’interezza delle diverse piattaforme che, a vario titolo,
+consentono a Regione Sardegna di gestire il mercato del lavoro regionale e che costituiscono il SIL Sardegna.
+
+
+
+
+5.1          Obiettivi
+L’Assessorato del Lavoro, Formazione Professionale, Cooperazione e Sicurezza Sociale si è dotato dal 2004
+del Sistema informativo del Lavoro “SIL Sardegna”, piattaforma applicativa per la gestione e l’erogazione dei
+servizi pubblici per il lavoro e la formazione professionale, operante su una banca dati unica, accessibile,
+attraverso differenti canali, ai soggetti istituzionali competenti in materia di mercato del lavoro e formazione
+professionale, secondo i rispettivi ruoli, funzioni e compiti.
+
+Il “SIL Sardegna” oggi conta circa 612.000 utenti registrati a vario titolo nel portale SardegnaLavoro e oltre
+2.600.000 anagrafiche di cittadini e di imprese censiti nel portale MonitorWeb dedicato agli operatori della
+Pubblica Amministrazione. A far data da novembre 2022 è disponibile l’App SardegnaLavoro per dispositivi
+mobili che è in grado di raggiungere gli utenti in maniera capillare e offrire servizi innovativi ed efficaci.
+
+Oltre 2.000 operatori dislocati nei 51 uffici territoriali del lavoro dell’Amministrazione, profilati secondo ruoli
+definiti in funzione delle proprie competenze, utilizzano quotidianamente il “SIL Sardegna” per gli
+adempimenti amministrativi.
+
+Grazie ad un costante impegno, la Regione Sardegna, ha perpetuato negli ultimi anni la propria strategia
+digitale, procedendo gradualmente alla digitalizzazione dei processi e delle procedure e tenendo
+costantemente aggiornata la piattaforma ai dettami del quadro normativo vigente, la piattaforma SIL è
+articolata in sottosistemi deputati a compiti di gestione specialistica e al contempo integrati per il
+monitoraggio e la gestione delle misure erogate in ambito di politiche per il lavoro.
+
+Il “SIL Sardegna” rappresenta quindi l’elemento fondamentale su cui si basa la gestione del mercato del
+lavoro di Regione Sardegna, essendo costituito dall’insieme delle infrastrutture e dei servizi in grado di:
+
+    -   Erogare servizi on line per cittadini, enti di formazione, aziende, categorie datoriali, etc.
+
+    -   Fornire funzionalità di back office e di “sportello” dei Centri per l’Impiego
+
+
+
+                                                                                                                 9
+                                               Piano dei Fabbisogni
+    -   Monitorare il mercato del lavoro locale attraverso strumenti di datawarehouse, dashboard,
+        cruscottistica di controllo
+
+    -   Verificare le azioni di politica attiva e promosse sul territorio, seguendone l’evoluzione e garantendo
+        – per i progetti finanziati con fondi pubblici/comunitari – la corretta rendicontazione, il monitoraggio
+        e il completo controllo.
+
+    -   Erogare servizi di supporto alla PA e alla cittadinanza, in termini di miglioramento dell’occupabilità e
+        di occupazione.
+
+    -   Garantire la cooperazione applicativa con i restanti livelli della Rete dei Servizi per il Lavoro operante
+        a livello nazionale (Ministero del Lavoro e delle Politiche Sociali, Altre Regioni, enti previdenziali, etc.)
+
+Obiettivo del passaggio al PSN attraverso il piano di migrazione di seguito proposto è pertanto:
+
+    -   Innalzare il livello di sicurezza dell’intera infrastruttura attraverso un processo di refactoring dei
+        principali moduli funzionali del SIL Sardegna
+
+    -   Dotarsi di una struttura di Public Cloud flessibile adatta all’innalzamento della qualità/quantità di
+        servizi in ambito Lavoro, Formazione e gestione del Fondo Sociale Europeo definiti da Regione
+        Sardegna.
+
+    -   Usufruire dei servizi accessori del PSN al fine di supportare l’amministrazione e l’utenza finale
+        nell’adozione della nuova infrastruttura tecnologica.
+
+Il SIL Sardegna è costituito da moduli funzionali che, a livello logico e funzionale, possono essere suddivisi in:
+
+    •   Sottosistema “Servizi per il Lavoro”: attraverso il sottosistema “Servizi per il Lavoro”, l’ASPAL e i CPI
+        svolgono quotidianamente le loro attività istituzionali, condividendo tutti i dati in modalità
+        telematica, con significativi vantaggi in termini di standardizzazione e snellimento delle procedure
+        amministrative afferenti i servizi pubblici per il lavoro e la formazione professionale. Questo
+        componente recepisce le evoluzioni e modifiche necessarie al funzionamento del Programma GOL
+        anche per quanto attiene agli strumenti messi a disposizione dei soggetti Privati.
+
+    •   Sottosistema “Servizi Specialistici e Politiche Attive del Lavoro”: Attraverso i servizi “on line” del
+        sottosistema in oggetto, i CPI gestiscono telematicamente la programmazione, organizzazione ed
+        erogazione dei servizi di accoglienza, consulenza e orientamento rivolte ai specifici target di utenza,
+        quali ad esempio cittadini con stato occupazionale “Disoccupati” ex D.Lgs. 150/2015. Questo
+        componente recepisce le evoluzioni e modifiche necessarie al funzionamento del Programma GOL
+        anche per quanto attiene agli strumenti messi a disposizione dei soggetti Privati.
+
+
+
+
+                                                                                                                  10
+                                               Piano dei Fabbisogni
+•   Sottosistema “Programmi Comunitari FSE” (SIL FSE). Il “SIL Sardegna” supporta pienamente la
+    gestione e il monitoraggio del POR FSE 2007-2013 e 2014-2020. Attualmente queste funzionalità
+    stanno convergendo verso un nuovo sottosistema più ampio che prende il nome di “Programmi
+    comunitari e cofinanziati PROG.RAS” deputato a gestire in maniera unitaria diversi fondi, in
+    particolare il PO FSE+ 2021-27 e le iniziative a valere sul PNRR (GOL) con l’obiettivo di offrire,
+    strumenti informatici unificati per la gestione di tutti i progetti cofinanziati.
+
+•   Sottosistema “Garanzia Giovani” (SIL SIGMA). Il Programma “Garanzia Giovani” (Youth Guarantee),
+    promosso dalla Comunità Europea con la Raccomandazione del 22 aprile 2013 come risposta alla crisi
+    dell’occupazione giovanile, prevede che ogni Stato Membro assicuri, ad ogni persona al di sotto dei
+    25 anni (fino ai 29 anni secondo quanto previsto dal Piano di attuazione italiano della Garanzia per i
+    Giovani), un'offerta qualitativamente valida di lavoro. Tale sottosistema dovrà essere mantenuto ai
+    soli fini di consultazione delle informazioni storiche, essendo la misura esaurita.
+
+•   Sottosistema “Comunicazioni Obbligatorie e UNIPI”: Il sottosistema “Comunicazione Obbligatorie e
+    UNIPI” rappresenta il Nodo Regionale per la raccolta e l’interscambio con il Ministero del Lavoro e
+    delle Politiche Sociali, delle comunicazioni di assunzione, proroga, trasformazione e cessazione di
+    rapporti di lavoro ai servizi competenti, secondo quanto definito dal Decreto Interministeriale del
+    30 Ottobre 2007 e successivi aggiornamenti e del Prospetto Informativo ai sensi della L. 68/99
+    secondo quanto sancito dall'articolo 40, comma 4, della legge del 6 agosto 2008, n. 133 e Decreto
+    Interministeriale del 2 novembre 2010 e successive modificazioni ed integrazioni.
+
+•   Sottosistema “Incontro domanda/offerta”: rappresenta il “mercato virtuale di incontro” tra la
+    domanda e l’offerta di lavoro in Sardegna. Il SIL Sardegna fa parte del Sistema nazionale “ClicLavoro”,
+    all’interno del quale sono costantemente scambiati CV e richieste di personale, nell’ottica di
+    aumentare l’occupabilità dei cittadini e di favorirne la mobilità su tutto il territorio nazionale.
+
+•   Sottosistema “Politiche per l’Occupazione”: nell’ambito degli interventi Regionali per l'occupazione
+    e per il lavoro, il sottosistema “Politiche per l’Occupazione” consente a tutti gli attori coinvolti
+    (destinatari, beneficiari e Amministrazione Regionale) di svolgere per via telematica gli adempimenti
+    di propria competenza relativi ai programmi attivati dall’Amministrazione e gestiti nella piattaforma
+    applicativa del “SIL Sardegna”.
+
+•   Sottosistema “Tirocini” (SIL TFO): Il sottosistema in oggetto fa riferimento agli interventi evolutivi ed
+    adeguativi che hanno consentito la completa gestione delle procedure per l’attivazione e l’attuazione
+    dei tirocini regionali e dei tirocini afferenti all’Avviso Pubblico per l’attivazione di progetti di tirocinio.
+
+
+
+
+                                                                                                                11
+                                            Piano dei Fabbisogni
+•   Sottosistema “Formazione Professionale”: consente la gestione delle procedure di programmazione,
+    attuazione e monitoraggio da parte dell’Amministrazione Regionale in tema di Accreditamento delle
+    Agenzie e delle sedi Formative, Catalogo dell’Offerta Formativa per il Pacchetto Anticrisi,
+    Apprendistato Professionalizzante, percorsi formativi a finanziamento pubblico e Repertorio
+    Regionale delle Figure Professionali. Attualmente il sistema è in evoluzione per consentire la
+    completa gestione delle iniziative del Programma GOL, con particolare riferimento ai cataloghi e ai
+    servizi relativi all’Individuazione e la Validazione delle Competenze.
+
+•   Sottosistema “Coesione Sociale”: finalizzate a garantire la completa gestione dell’Albo Regionale
+    delle Cooperative Sociali.
+
+•   Sottosistema “Ammortizzatori Sociali (AA.SS.) in deroga”. Il sottosistema “AA.SS. in deroga” gestisce
+    telematicamente l’intero iter procedurale per il riconoscimento degli AA.SS. in deroga e in particolare
+    della CIG in deroga e della Mobilità in deroga.
+
+•   Sottosistema “Osservatorio del Mercato del lavoro” (SIL OML). È uno strumento di analisi statistica e
+    reportistica avanzata (Business Intelligence) che, attraverso un apposito Datawarehouse alimentato
+    con le informazioni gestite dalla banca dati unica regionale, consente di effettuare elaborazioni sui
+    dati in modo aggregato e secondo diverse dimensioni di analisi (geografica, temporale, ecc.).
+
+•   Sottosistema “Accesso ai dati Amministrativi e Reportistica di base” (SIL ADA). Parallelamente
+    all’OML, che consente all’Amministrazione Regionale di svolgere analisi statistiche, si colloca il
+    sottosistema “Accesso ai dati amministrativi” e “Reportistica di base”, che permette agli operatori
+    dell’Amministrazione Regionale la consultazione e la visualizzazione delle informazioni archiviate
+    nella Banca Dati Unica Regionale del “SIL Sardegna”.
+
+•   Sottosistema “E-Learning e Knowledge Sharing” (SIL E-LEARNING): sistema di FAD che comprende
+    due istanze personalizzate della piattaforma Open Source Moodle: “Empowerment” a disposizione
+    degli operatori del Sistema Regione e “Edu” a disposizione dei cittadini.
+
+
+
+
+                                                                                                        12
+                                          Piano dei Fabbisogni
+5.2            Piano di migrazione
+I servizi di Migrazione sono servizi Core del PSN quantificati e valutati economicamente sulla base di specifici
+assessment effettuati in fase di definizione delle esigenze dell’Amministrazione, tenendo conto di eventuali
+vincoli temporali ed architetturali di dettaglio oltre che di specifiche esigenze di customizzazione.
+Al momento l’infrastruttura tecnologica di erogazione è costituita da una soluzione Private Cloud ospitata
+presso il Data Center della Società Fastweb S.p.A., tale infrastruttura è in corso di prima migrazione verso
+Cloud Pubblico del Provider AWS secondo quanto programmato nel Piano di consolidamento del SIL Sardegna
+definito con la Direzione Generale dell’Innovazione e della Sicurezza IT e sarà pienamente operativa dal
+nuovo provider, secondo il piano aggiornato, a far data dal mese di Maggio p.v..
+Allo stato attuale e da piano esecutivo di progetto, l’erogazione dei servizi dal Provider AWS non potrà
+eccedere i 12 mesi. La migrazione verso il PSN rappresenta la seconda e ultima fase del suddetto piano di
+consolidamento, e si considera debba avvenire nella finestra temporale compresa tra maggio e dicembre
+2024.
+Sarà pertanto necessario garantire la migrazione dell’infrastruttura entro tempistiche certe e definite con
+l’Amministrazione al fine di preservare la continuità operativa dei servizi.
+Il Piano di Migrazione è articolato in due macro-fasi:
+    ➢ Fase 1: Migrazione lift and shift verso il Cloud PSN
+    ➢ Fase 2: Replatform dei sottosistemi migrati
+
+
+Ogni fase di progetto si articola su 4 Capitoli descriventi le 4 fasi di Progetto:
+
+
+1) Analisi/Discovery;
+2) Setup;
+3) Migrazione;
+4) Collaudo.
+
+
+
+
+                                                                                                             13
+                                                Piano dei Fabbisogni
+Nel seguito si riporta la tabella che sintetizza gli step di migrazione che coinvolgono tutte le componenti
+Software oggetto del presente Piano. Si precisa che le tempistiche e i Gantt di progetto potranno essere
+dettagliati sono a seguito della fase di Assessment che verrà attivata all’avvio del progetto.
+
+
+
+ ITEM                                  DESCRIZIONE
+                                       StartUp: A valle dell'accettazione del piano esecutivo dei lavori, verrà
+ Start-up contratto
+                                       svolta la riunione di kick-off per dare inizio ai lavori, a cui
+                                       interverranno i referenti di progetto (Responsabile Amministrativo e
+                                       Responsabile Tecnico del Progetto). In questa sede verrà presentato
+                                       il progetto esecutivo di dettaglio e il relativo piano di realizzazione,
+                                       che i partecipanti potranno rivedere e validare.
+                                       Il deliverable della riunione sarà il verbale di inizio lavori, da cui si
+                                       evince “chi fa cosa”.
+                                       Project Management: La gestione del progetto prevede l'adozione di
+ Project Management
+                                       una metodologia agile, che consente il raggiungimento dei risultati
+                                       attraverso task predefiniti, e che evidenzi i tempi e le risorse
+                                       impegnate     per    ogni     task   della   migrazione, oltre   che   la
+                                       interdipendenza dei vari task. L'attività prevede la verifica di
+                                       conformità agli standard di qualità, sicurezza e sostenibilità, in
+                                       coerenza con gli obiettivi, le performance, i costi ed i tempi definiti
+                                       dal progetto. Attraverso stati avanzamento dei lavori, verranno
+                                       presentate progressive rendicontazioni, che consentiranno la
+                                       fatturazione. Per la macroattività in esame, la migrazione in PSN
+                                       prevede un unico Stato Avanzamento Lavori, coincidente con il
+                                       collaudo della migrazione, come riportato di seguito.
+                                       Analisi dell'as-is: verrà svolto uno specifico assessment che definirà
+ Analisi/Discovery
+                                       le esigenze dell’Amministrazione, tenendo conto di eventuali vincoli
+                                       temporali ed architetturali di dettaglio oltre che di specifiche esigenze
+                                       di customizzazione.
+                                       Quest'attività produrrà:
+                                       - la lista dei deliverables di Progetto;
+                                       - la Matrice di Responsabilità;
+                                       - gli exit criteria di ogni fase di progetto;
+
+
+
+                                                                                                              14
+                                              Piano dei Fabbisogni
+                - il Modello di comunicazione tra PSN e PA.
+                Fase 1: Configurazione risorse IaaS: in questa fase verranno
+Setup
+                configurate le VM e lo storage per l'installazione del software
+                migrato. Le risorse computazionali sono quelle già disponibili in PSN
+                Industri Standard dal progetto di migrazione già disponibili.
+                Fase 2: Business Process Reengineering: questa fase del Setup del
+                progetto prevede il ridisegno del processo di gestione della
+                piattaforma applicativa del SIL Sardegna. Verranno pertanto
+                rappresentati i singoli sottosistemi e i loro processi. Il deliverable di
+                tale fase rappresenta il modello organizzativo di riferimento per il
+                disegno della piattaforma migrata.
+                Questa fase dell'attività di Setup prevede la definizione delle
+                specifiche di configurazione e la customizzazione delle funzioni
+                software del Sistema oggetto di analisi, per adeguarlo agli standard
+                cloud-native della piattaforma in PSN Cloud, dove il sistema in
+                oggetto ne rappresenta una componente. Pertanto, si dovrà
+                prevedere la revisione del software ed il suo adeguamento agli
+                standard PSN Industry Standard.
+                Installazione: La configurazione che seguirà consentirà di definire gli
+Installazione
+                utenti del sistema, rappresentati da diverse tipologie: DBA,
+                Amministratore Sistema, Utente. I criteri di accesso, autorizzazione
+                ed accountable verranno definiti di concerto con i responsabili
+                dell’Ente.
+                Supporto al go live: questa fase dell’attività di collaudo consiste nel
+Collaudo
+                supportare l’Amministrazione nella predisposizione del sistema per
+                l’attivazione in esercizio. È in questa fase che vengono svolte le fasi di
+                test e collaudo del sistema, con la gestione di eventuali ricicli dovuti
+                ad errori.
+
+
+
+
+                                                                                        15
+                       Piano dei Fabbisogni
+5.2.1      Tempistiche
+
+
+                T1                    T2                    T3               T4
+Nome servizio
+                Analisi & Discovery   Setup                 Migrazione       Collaudo
+
+SIL SARDEGNA    T0 + 60 giorni        T1 + 60 giorni        T2 + 60 giorni   T3 + 30 giorni
+
+
+
+
+                                                                                              16
+                                           Piano dei Fabbisogni
+6 DESCRIZIONE DEI FABBISOGNI
+
+
+6.1 Contesto di Riferimento
+
+Nella tabella seguente, sono riportate le informazioni che descrivono l’attuale contesto di riferimento
+dell’Amministrazione.
+
+                                                                                                DOC DI DETTAGLIO
+ AMBITO                                                     VALORE
+                                                                                                (SE DISPONIBILE)
+                                                            1 VDC in Housing presso DC          Schemi e dettaglio
+ Numero di Data Center e dislocazione sul territorio
+                                                            Fastweb Caracciolo → Provider       delle risorse e delle
+ nazionale
+                                                            AWS Cloud                           configurazioni
+ Presenza del servizio di Business Continuity               No
+ Presenza del servizio di Disaster Recovery                 No
+                                                            N. 3 Host ESX su elaboratori
+ Quantità e tipologia di sistemi server (divisione tra
+                                                            Blade Cisco B200M3, circa 51 VM
+ sistemi fisici e sistemi dedicati alla farm virtuale)
+                                                            (31 prod, 20 svil)
+                                                            Storage system SAN utilizzato via
+ Quantità e tipologia di Storage (SAN, NAS) (con TB
+                                                            STaaS presso farm Fastweb: 20
+ presenti, occupati e disponibili)
+                                                            TB disponibili, 18 TB utilizzati.
+ Apparti SAN (quantità e caratteristiche della fabric)      N/A (STaaS)                         schema topologico
+                                                            Reverse proxy tramite ISA Server;
+                                                            connettività datacenter offerta
+ Rete (quantità e caratteristiche: Bilanciatori, piano di   da Fastweb in ambiente Housing,
+ indirizzamento, eventuali problemi nel cambio di           probabile accesso switch N x        schema topologico
+ indirizzamento IP)                                         10Gbit. Connettività Internet
+                                                            100Mbit ridondato, MPLS
+                                                            300mbit verso sede amm.ne.
+ Sistemi di sicurezza (quantità e caratteristiche)          N.2 Firewall Fortinet Fortigate
+ (Identity & Access Management, Firewall, Sonde,            200E, probabile utilizzo come L4
+ Waf, Soc, etc.)                                            Firewall
+                                                            Sì, Active Directory su Win srv
+ Servizio di Active Directory
+                                                            2012R2
+ Sistemi di virtualizzazione (VMware, Hyper-V,
+                                                            VMware vSphere
+ RedHat)
+ In caso di presenza di VMWARE specificare: N° di
+                                                            1
+ vCenter e versioni
+ In caso di presenza di VMWARE specificare: Presenza
+                                                            N/A,
+ di prodotti NSX-T, vRNI, vROPS, HCX, etc.
+                                                            RVTools da richiedere. 3 Blade
+ Sistemi fisici dedicati alla farm Vmware (Fornire
+                                                            Cisco B200M3 ciascuno con
+ RVTools)
+                                                            256GB Ram e 16Core 2.1Ghz
+                                                            RVTools da richiedere, storage
+ storage fisici dedicati alla farm Vmware (Fornire
+                                                            SAN offerto in STaaS dal servizio
+ RVTools)
+                                                            Housing Fastweb
+ Presenza di sistemi Iperconvergenti (vSAN, nutanix,
+                                                            NO
+ DELL VxRAIL, tec.)
+
+
+
+
+                                                                                                                        17
+                                                     Piano dei Fabbisogni
+Backup, prodotti utilizzati (fornire schema              Veeam B&R for vSphere.
+topologico se disponibile, N° master e N° media          Topologia non pervenuta (inutile        schema topologico
+server)(N° master e N° media server)                     richiedere)
+                                                         Disponibile, sarà fornito in fase di
+Policy di Backup (TB sottoposti a backup e retention)                                            Backup policy plan
+                                                         progettazione
+                                                         Storage dedicato al Backup
+Librerie e storage dedicati al backup                    offerto in STaaS da 30TB
+                                                         utilizzabili, 28TB occupati.
+Piattaforme middleware (quantità e caratteristiche),
+                                                         N/A
+identificare applicazioni single istance
+Identificazione cluster di sistema operativo             (Windows Failover Cluster per MS
+(Windows, RedHat, Solaris, etc.)                         SQL Server 2008R2)
+                                                         MS SQL Server, n.4 istanze / 4
+Database (quantità e caratteristiche)                    Licenze ver. 2008 R2; n.2 istanze.
+                                                         Postgres SQL 10.0.
+                                                         Solo Postfix smtp server con
+Sistemi di posta elettronica (PEL e PEC)                 mailscanner per mail
+                                                         relay/inoltro da ambiente prod.
+                                                         Siti e portali al cittadino in ambito
+                                                         lavoro e formazione
+                                                         professionale incluso e-learning
+Siti e portali (quantità e caratteristiche)              (moodle)
+                                                         Portale di BackOffice
+                                                         APP per dispositivi Android e
+                                                         Apple
+È presente una stima del capacity? (eventuale            Attualmente allocate: 230 vCPU,
+previsione di crescita) in caso affermativo fornire i    658GB RAM, circa 7TB vdisks +
+dati                                                     15-16TB NAS.
+Presenza di un CMDB accurato del cliente con elenco      N/A (probabilmente non
+delle applicazioni                                       disponibile)
+Il Data Center sorgente è gestito internamente o da
+                                                         Fornitori terze parti
+fornitori terze parti?
+Le applicazioni vengono gestite internamente o da
+                                                         Fornitori terze parti
+fornitori terze parti?
+Sono disponibili strumenti di monitoraggio delle
+                                                         SI
+applicazioni e della rete?
+                                                         Solo 2 firewall fortigate 200E
+Presenza e tipologia di appliance fisiche
+                                                         come riportato sopra
+                                                         Karspesky AV for ISA Server Ent.
+Prodotti Antivirus
+                                                         Ed.
+Sistema di gestione delle password                       N/A
+                                                         Circa 51, in crescita per
+Qual è il numero totale di workloads presi in
+                                                         aggiornamento architetture
+considerazione per questo progetto?
+                                                         applicative.
+Eventuali workload fisici da migrare (tipologia e
+                                                         Nessuno
+quantità) (P2V)
+Tipologie e versioni di sistema operativo (Windows,      Windows Server 2012R2, Ubuntu
+Linux, etc.)                                             22.04 LTS, Centos 7.4
+                                                         Contesto applicativo: sistemi
+                                                         governativi di supporto al lavoro
+Contesto applicativo – numero di applicativi
+                                                         e alla formazione del cittadino.
+                                                         Numero non specificato.
+
+
+
+
+                                                                                                                      18
+                                                  Piano dei Fabbisogni
+7 Servizi richiesti
+
+SERVIZIO                                                                         Richiesto   Ipotesi Budget (€)
+Industry standard – Hosting
+
+Industry standard - Housing
+
+Industry standard – IaaS                                                              X
+
+Industry standard – PaaS                                                              X
+
+Industry standard – CaaS
+
+Hybrid Cloud on PSN site
+
+Secure Public Cloud on Microsoft Azure
+
+Secure Public Cloud on Google GCP
+
+Public Cloud PSN Managed
+
+Servizi di migrazione                                                                 X
+
+Servizi professionali - Servizio Re-Architect                                         X
+
+Servizi professionali - Servizio Re-Platform                                          X
+
+Servizi professionali - Security Professional Services                                X
+
+Servizi professionali - IT Infrastructure - Service Operations                        X
+
+Servizi professionali - Business and culture enablement
+
+Altri servizi a listino>                                                              X
+
+                                        Tabella 4: Servizi richiesti: quadro di sintesi
+
+
+
+
+                                                                                                                  19
+                                                  Piano dei Fabbisogni
+7.1 Industry standard
+
+
+7.1.1 Housing
+Non previsto nell’ambito del progetto
+
+
+
+7.1.2 Hosting
+Il servizio Industry Standard Hosting consiste nel rendere disponibile una infrastruttura fisica e dedicata nei
+Data Center del PSN. A differenza del servizio Housing si ha la possibilità di noleggiare i server di proprietà
+del provider. Le modalità di erogazione del servizio sono:
+     ● Hosting su rack condivisi, nel caso di porzioni dedicate di rack condivisi con altre Amministrazioni;
+     ● Hosting su rack dedicati, nel caso di rack esclusivi/segregati per la singola Amministrazione.
+
+I dettagli sul dimensionamento del servizio dovranno essere definiti in fase di progettazione
+
+
+7.1.3 IaaS
+Il servizio IaaS consiste nel rendere disponibile delle risorse infrastrutturali virtualizzate ed è suddiviso in IaaS
+Private e IaaS Shared:
+IaaS Private
+     ● Infrastruttura virtualizzata e dedicata;
+     ● Server fisici con a bordo il virtualizzatore Vmware su cui possono essere attivate solamente VM della
+          Amministrazione (cluster dedicato);
+IaaS Shared
+     ● Porzione di infrastruttura virtualizzata all’interno di una piattaforma condivisa;
+     ● Si acquisista un pool di risorse virtuali (vCPU, vGB di RAM, vGB di Storage) e il PSN è responsabile
+          della gestione completa dell’infrastruttura sottesa, comprensiva degli strumenti di automation e
+          orchestration.
+
+
+7.1.4 PaaS
+Il servizio Industry Standard PaaS mette a disposizione una piattaforma in grado di erogare componenti di
+middleware secondo un modello a servizio (ad esempio Data Base) astraendo l’infrastruttura sottostante.
+Il PSN è responsabile dell’infrastruttura sottostante comprensiva degli strumenti di automation e
+orchestration e si compone dei seguenti sottoservizi:
+DBaaS
+   ● Consente di configurare e gestire database utilizzando un servizio senza preoccuparsi
+      dell’infrastruttura sottostante
+
+I dettagli sul dimensionamento del servizio dovranno essere definiti in fase di progettazione
+
+
+
+
+                                                                                                                  20
+                                                Piano dei Fabbisogni
+7.1.5 CaaS
+Non previsto nell’ambito del progetto
+
+
+
+7.2 Hybrid Cloud on PSN site
+Non previsto nell’ambito del progetto
+
+
+7.3 Secure Public Cloud
+Non previsto nell’ambito del progetto
+
+
+
+7.4 Servizio di migrazione
+Servizio di migrazione end-to-end chiavi in mano sia fisica (housing) che virtuale (dall’analisi degli applicativi
+al test sui nuovi ambienti e messa in produzione) dell’infrastruttura IT dell’Amministrazione verso
+l’infrastruttura PSN.
+
+Da definire e dettagliare in fase di progettazione.
+
+
+Figura                                                                                               Quantità
+Cloud Application Architect                                                                            TBD
+
+Database Specialist and Administrator                                                                  TBD
+
+System Integrator & Testing Specialist                                                                 TBD
+
+Cloud Application Specialist                                                                           TBD
+
+Cloud Security Specialist                                                                              TBD
+
+Enterprise Architect                                                                                   TBD
+
+                                         Tabella 5: Fabbisogno Servizi Professionali di migrazione
+
+
+
+
+                                                                                                                21
+                                                         Piano dei Fabbisogni
+7.5 Servizi professionali
+L’Amministrazione richiede i seguenti ulteriori servizi professionali:
+
+    ●       Servizi di evoluzione
+    ●       IT Infrastructure - Service Operations
+
+
+
+7.5.1 Servizi di evoluzione
+I servizi di evoluzione comprendono:
+     ● Servizio Re-Architect
+     ● Servizio Re-Platform
+
+
+
+7.5.2 IT Infrastructure - Service Operations
+Servizi specialistici on demand a supporto delle Operations per la gestione dell’infrastruttura e del parco
+applicativo cliente.
+
+Da definire e dettagliare in fase di progettazione.
+
+
+7.5.3 Sintesi dei servizi professionali
+Di seguito è riportato il prospetto riassuntivo delle richieste da parte dell’Amministrazione relative al par. 5.6
+“Servizi professionali”.
+
+Tipologia                  Figura                                                Contesto                                  Quantità
+Figura professionale       Project Manager                                       Rearch&Replat, Profess Serv                TBD
+Figura professionale       Cloud Application Architect                           Rearch&Replat, Profess Serv                TBD
+Figura professionale       Business Analyst                                      Rearch&Replat                              TBD
+                                                                                 Rearch&Replat, IT Infrastructur-service
+Figura professionale       Database Specialist and Administrator                                                            TBD
+                                                                                 operation
+Figura professionale       System Integrator & Testing Specialist                                                           TBD
+                                                                                 Rearch&Replat, IT Infrastructur-service
+Figura professionale       System and Network Administrator                                                                 TBD
+                                                                                 operation
+Figura professionale       Cloud Application Specialist                          Rearch&Replat, Profess Serv                TBD
+                                                                                 Rearch&Replat, IT Infrastructur-service
+Figura professionale       Cloud Security Specialist                                                                        TBD
+                                                                                 operation
+Figura professionale       Enterprise Architect                                  Rearch&Replat                              TBD
+
+                                              Tabella 6: Fabbisogno Altri Servizi Professionali
+
+
+
+
+                                                                                                                                      22
+                                                             Piano dei Fabbisogni
+7.6 Altri servizi a listino
+Da definire e dettagliare in fase di progettazione.
+
+
+   Tipologia        Elemento                  CORE      RAM     vCPU     vRAM    Storage   Caratteristiche tecniche minime           Quantità   Durata
+                                               [Q]      [GB]     [Q]      [GB]     [GB]                                                         (mesi)
+                    Windows Server STD CORE                                                Licenza Microsoft Server. Ultima
+Sistemi operativi                                                                                                                      TBD
+                    (2 core)                                                               release disponibile
+                                                                                           Licenza Red Hat per singola VM.
+Sistemi operativi   Red Hat per VM                                                                                                     TBD
+                                                                                           Ultima release disponibile.
+                                                                                           Licenza per due socket. Ultima release
+Sistemi operativi   Red Hat per Bare Metal                                                                                             TBD
+                                                                                           disponibile.
+Data Protection     Opzione DR                                                             Replica su altra region                     TBD
+                                                                                           Gestione delle policy in modalità self-
+                                                                                           managed; cifratura dei dati; ripristino
+Data Protection     Backup                                                                 granulare dei dati in modalità “a caldo     TBD
+                                                                                           e out-of-place”; seconda copia intra-
+                                                                                           region; GDPR compliant
+                                                                                           Protezione antivirus, antimalware e
+                                                                                           anti-ramsonware proattivo; WORM
+Data Protection     Golden copy                                                            copy; archiviazione in ambiente             TBD
+                                                                                           protetto privo di ogni accesso fisico e
+                                                                                           logico
+                    Connessione dedicata 1                                                 Tecnologia Gbe MPLS, profilo Silver
+Connettività                                                                                                                           TBD
+                    Gbps                                                                   1000, TIR L2/L3 e outsourcing
+
+                                                     Tabella 7: Fabbisogno altri servizi a listino
+
+
+
+
+                                                                                                                                                         23
+                                                               Piano dei Fabbisogni
+

@@ -1,0 +1,1158 @@
+            Capitolato tecnico di Gara – n. 2501
+        Affidamento del servizio di housing di apparati informatici e di
+           telecomunicazioni e relativa fornitura di energia elettrica
+
+                                Direzione Consortium GARR
+
+
+
+
+                                                                           Firmato da CLAUDIA
+                                                                           BATTISTA
+                                                                           Data: 11/09/2025
+                                                                           15:49:57 CEST
+
+
+
+
+Questo documento descrive le specifiche tecniche richieste per la fornitura dei servizi di
+housing degli apparati trasmissivi, a pacchetto e datacenter della rete GARR-T da installare
+presso il POP GARR di RM02
+Sommario
+Introduzione ................................................................................................................................................................ 3
+1      Oggetto della fornitura e Procedura di Gara ....................................................................................................... 4
+    1.1        Oggetto della Fornitura ............................................................................................................................... 4
+    1.2        Procedura di gara......................................................................................................................................... 4
+    1.3        Documenti Allegati ...................................................................................................................................... 5
+    1.4        Definizioni .................................................................................................................................................... 5
+    1.5        Anagrafica dei siti......................................................................................................................................... 6
+2      Attuale infrastruttura del pop RM02-Tizii e sua evoluzione................................................................................ 7
+    2.1        Descrizione dell’attuale infrastruttura ........................................................................................................ 7
+    2.2        Vantaggi dell’attuale ubicazione del POP .................................................................................................... 9
+3      Specifiche della fornitura ................................................................................................................................... 10
+    3.1        Caratteristiche generali della fornitura richiesta....................................................................................... 10
+       3.1.1          Requisiti di sito................................................................................................................................... 10
+       3.1.2          Vincolo di doppio ingresso ................................................................................................................. 12
+       3.1.3          Requisiti ambientali ........................................................................................................................... 12
+       3.1.4          Gestione dei guasti ............................................................................................................................ 14
+    3.2        Requisiti di Spazio e specifiche dei rack..................................................................................................... 15
+    3.3        Requisiti per l’Alimentazione elettrica ...................................................................................................... 16
+    3.4        Requisiti per i Cablaggi............................................................................................................................... 17
+       3.4.1          Attestazione dei rilasci ....................................................................................................................... 17
+4      Schema di Presentazione delle Offerte ............................................................................................................. 20
+    4.1        Modalità di risposta al capitolato di Gara.................................................................................................. 20
+    4.2        Schema di redazione dell’Offerta Tecnica ................................................................................................. 20
+    4.3        Guida alla compilazione dell’Allegato Tecnico .......................................................................................... 20
+    4.4        Schema di presentazione dell’Offerta Economica ..................................................................................... 21
+5      Criteri di Valutazione delle Offerte .................................................................................................................... 24
+    5.1        Punteggio Tecnico...................................................................................................................................... 24
+    5.2        Il Punteggio Economico ............................................................................................................................. 24
+    5.3        Valutazione Offerta.................................................................................................................................... 25
+Allegato 1.           2501 – Consistenza delle connessioni in ingresso al POP .................................................................. 26
+Allegato 2.           2501 – Schema presentazione Offerta Tecnica ................................................................................. 27
+Allegato 3.           2501 - Schema presentazione Offerta Economica............................................................................. 28
+
+
+
+                     Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+     1 di 28
+                     telecomunicazioni e relativa fornitura di energia elettrica
+INDICE TABELLE
+Tabella 1: Valore della Base d'Asta per 60 mesi di durata del Contratto .................................................................... 4
+Tabella 2: Valori di soglia dei livelli di servizio di Housing ......................................................................................... 15
+Tabella 3: Identificativi, tipologia d’uso, alimentazioni e dimensioni di 8 rack contigui protetti da Cage ................ 15
+Tabella 4: Identificativi, tipologia d’uso e alimentazione e dimensione di rack aggiuntivi ....................................... 16
+Tabella 5: Potenza dei rack ........................................................................................................................................ 16
+Tabella 6: Lista dei collegamenti afferenti al POP RM02 ........................................................................................... 17
+Tabella 7: Infrastrutture in fibra ottica richieste per RM02 ...................................................................................... 18
+Tabella 8: Schema offerta tecnica Spazio ed Energia ................................................................................................ 21
+Tabella 9: Schema offerta tecnica Connessioni al POP.............................................................................................. 21
+Tabella 10: Schema offerta tecnica – SLA .................................................................................................................. 21
+Tabella 11: Schema di presentazione dell'Offerta Economica - Housing ed Energia ................................................ 22
+Tabella 12: Schema di presentazione dell'Offerta Economica-Cablaggi ................................................................... 22
+Tabella 13: Schema di presentazione dell'Offerta Economica-Costi Aggiuntivi ........................................................ 23
+Tabella 14: Schema di presentazione dell'Offerta Economica-Totale ....................................................................... 23
+
+
+
+
+                    Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+     2 di 28
+                    telecomunicazioni e relativa fornitura di energia elettrica
+INTRODUZIONE
+Questo documento descrive i requisiti per il sito di Housing del POP GARR denominato RM02 attualmente colocato
+presso i locali di NAMEX s.r.l. Sede di Roma (di seguito NAMEX). Si descrivono i requisiti tecnici, impiantistici e di
+SLA necessari per l’installazione e l’operatività degli apparati trasmissivi, a pacchetto e ICT di nuova generazione
+del progetto GARR-T.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   3 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+1 OGGETTO DELLA FORNITURA E PROCEDURA DI GARA
+
+1.1 Oggetto della Fornitura
+L’oggetto della presente procedura di gara è la fornitura di spazio rack, energia e cablaggi necessari per l’esercizio
+della nuova infrastruttura di rete denominata GARR-T nel punto di presenza (POP) denominato RM02. Sono inoltre
+richiesti energia elettrica e cablaggi per garantire un’operatività equivalente all’attuale e l’evoluzione futura della
+rete. Si richiede il Servizio di Gestione e Manutenzione del sito per assicurare la continuità operativa degli apparati
+installati nel POP GARR.
+
+La fornitura è richiesta per la durata di 60 (sessanta) mesi, con la possibilità per il GARR di prorogare la scadenza
+per un periodo massimo di ulteriori 36 (trentasei) mesi.
+
+1.2 Procedura di gara
+La Procedura di gara adottata, nell’ambito di applicazione dell’art. 56, comma 1 – lett. b) del d.lgs. 36 del 2023 (c.d.
+“Codice degli Appalti”) e s.m.i., e le modalità di partecipazione da parte degli Operatori Economici (nel seguito
+identificati con Fornitori o Operatori) sono descritte nel documento “DISCIPLINARE DI GARA – n. 2501 – Procedura
+aperta per affidamento del servizio di housing di apparati informatici e di telecomunicazioni e relativa fornitura di
+energia elettrica”.
+Per rispondere alla presente Procedura di Gara, i Fornitori dovranno presentare un’Offerta Tecnica ed Economica
+con le modalità previste dall’Avviso di Gara seguendo, per la loro redazione, le indicazioni specificate nel presente
+documento al Capitolo 4.
+
+La Procedura di Gara si compone di un unico lotto e prevede l’aggiudicazione ad un unico Fornitore, poiché le varie
+prestazioni oggetto dell’appalto fanno parte di un’unica tipologia di acquisto e sono funzionalmente connesse da
+un punto di vista tecnico. Non sussistono dunque i presupposti per la divisione in Lotti funzionali.
+
+La Base d’Asta (BdA), al netto dell’IVA, per la durata del contratto di 60 mesi è riportata in Tabella 1.
+
+                                                         BdA
+                                                     900.000,00 €
+
+                         Tabella 1: Valore della Base d'Asta per 60 mesi di durata del Contratto
+
+
+
+La fornitura sarà affidata con il criterio dell’offerta economicamente più vantaggiosa, in base ai seguenti parametri
+e pesi:
+
+                •   qualità      70%
+                •   prezzo       30%
+
+Per una descrizione più puntuale delle modalità di assegnazione dei punteggi e dei parametri tecnici premianti, si
+rimanda al Capitolo 5.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   4 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+La fornitura sarà regolata dal Contratto di Fornitura, che costituisce parte integrante e sostanziale della
+documentazione di gara.
+
+1.3 Documenti Allegati
+Si elencano di seguito gli allegati al documento Capitolato tecnico di Gara che costituiscono parte integrante e
+sostanziale della documentazione di gara:
+
+      •   Allegato 1 2501 – Consistenza delle connessioni in ingresso al POP;
+      •   Allegato 2 2501 – Schema presentazione Offerta Tecnica;
+      •   Allegato 3 2501 - Schema presentazione Offerta Economica;
+
+1.4 Definizioni
+Di seguito vengono elencate le definizioni di alcuni termini o acronimi utilizzati nel presente documento.
+
+ Termine                        Definizione
+
+ NREN                           National Research & Education Network. GARR è la NREN italiana.
+
+ Fornitore                      Organizzazione responsabile della fornitura oggetto della presente procedura di
+                                gara.
+
+ Utilizzatore/Utente            Istituzione afferente alla comunità accademica e di ricerca italiana, le cui sedi sono
+                                collegate alla rete GARR e alle quali GARR fornisce i servizi di connettività e
+                                trasporto
+
+ POP                            Punto di presenza. Sito che, nei punti di terminazione delle tratte in fibra ottica,
+                                presenta condizioni ambientali (alimentazione, condizionamento dell’aria, accesso
+                                ai rack, ecc.) idonee ad ospitare gli apparati di trasmissione della rete GARR-X.
+
+ NOC (Network Operation Struttura operante presso la direzione del Consortium GARR in grado di gestire,
+ Center)                controllare e supervisionare l’infrastruttura IP/MPLS e trasmissiva della rete GARR.
+
+ SLA                            Service Level Agreement
+
+ TT                             Trouble Ticket
+
+ TTS                            Trouble Ticket System
+
+
+
+
+               Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   5 di 28
+               telecomunicazioni e relativa fornitura di energia elettrica
+1.5 Anagrafica dei siti
+Si elencano di seguito gli indirizzi delle sedi la cui esatta localizzazione potrebbe essere rilevante ai fini della risposta
+di Gara.
+
+  Sede                            Indirizzo attuale
+
+    Attuale POP RM02-Tizii        via dei Tizii, 6B 00185 Roma - Italia
+
+                                  INFN presso Dip.to Fisica- Edificio Marconi, Università di Roma La Sapienza
+      POP RM01-Sapienza
+                                  P.le Aldo Moro, 2 00185 Roma - Italia
+
+  Namex S.r. l. Sede di Roma      via dei Tizii 2C 00185 Roma - Italia
+
+     Direzione Consortium
+                                  via dei Tizii, 6 00185 Roma - Italia
+             GARR
+
+
+
+
+               Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   6 di 28
+               telecomunicazioni e relativa fornitura di energia elettrica
+2    ATTUALE INFRASTRUTTURA DEL POP RM02-TIZII E SUA EVOLUZIONE
+
+Attualmente il POP GARR RM02-Tizii è colocato presso i locali del NAMEX s.r.l. Sede di Roma, al piano interrato
+dell’edificio che ospita gli uffici della Direzione del Consortium GARR, dove lavora il personale GARR amministrativo,
+il NOC e i gruppi tecnici che pianificano e gestiscono la rete nazionale GARR dell’Istruzione e della Ricerca.
+
+
+2.1 Descrizione dell’attuale infrastruttura
+
+Il POP RM02-Tizii ha un ruolo funzionale strategico per GARR; è un POP della dorsale nazionale che garantisce
+l’interconnessione di rete a lunga distanza verso NORD – in direzione Firenze, verso SUD – in direzione Napoli, verso
+OVEST – nella direzione del cavo sottomarino per interconnessione della Sardegna e verso EST – in direzione Aquila/
+Pescara. RM02 partecipa inoltre all’anello metropolitano romano. In Figura 1 è mostrato il ruolo dello snodo di
+Roma nel disegno complessivo della rete GARR, mentre nella successiva Figura 2 è rappresentato il dettaglio del
+ruolo del POP di RM02 che, con le sue sei direzioni, è fra i più complessi dell’intera rete.
+
+
+
+
+                                   Figura 1: Disegno della dorsale della rete GARR
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+    7 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+                         Figura 2: Dettaglio del disegno di rete nell’area metropolitana romana
+
+
+
+Il POP di RM02 è anche un nodo di accesso dove vengono interconnessi alla rete, tramite circuiti diretti o in
+aggregazione, oltre 170 sedi di enti, utenti GARR, presenti nell’area romana.
+
+Il punto di presenza GARR è equipaggiato con apparati di rete ottici che implementano il livello trasmissivo di
+trasporto dei dati, con apparati di rete a pacchetto che implementano il livello di routing IP e con apparati ICT che
+forniscono i servizi applicativi e permettono la gestione dell’infrastruttura di rete.
+
+Le modalità di collegamento sono la fibra ottica, acquisita da GARR, oppure, in numero ridotto, i circuiti forniti da
+operatori TLC. La connessione con gli apparati GARR avviene con due modalità differenti: per gli operatori TLC che
+realizzano le tratte di dorsale e il maggior numero di collegamenti di accesso in fibra degli utenti GARR, si è ritenuto
+opportuno realizzare un’infrastruttura con cavo multifibra, in doppia via, che dall’infrastruttura operatore
+raggiunge direttamente, nei locali del POP, i rack dedicati al GARR. Per gli operatori che realizzano un numero
+contenuto di collegamenti di accesso o per esigenze specifiche i rilasci vengono consegnati presso un’infrastruttura
+gestita da NAMEX, presente all’interno della sala Carrier (sala 1), e attraverso una meet-me-room vengono estesi
+fino a raggiungere i pannelli di rilascio presso il POP GARR.
+
+Attualmente il POP RM02 del progetto GARR-T si compone di un’installazione principale all’interno della sala 2 del
+NAMEX. Essa si sviluppa in uno spazio (cage) segregato e completamente dedicato a GARR in cui sono installati 8
+rack che ospitano apparati trasmissivi, di routing e di gestione della rete di dorsale del GARR. Completano la
+presenza di GARR nel sito NAMEX, in sala 1, l’installazione di un rack denominato B23 dedicato alla funzionalità ICT
+di GARR e un rack denominato A26 dedicato a dispositivi per la trasmissione di tempo e frequenza che GARR ospita
+per conto di un suo utente.
+
+L’attuale colocazione del POP presso NAMEX è vantaggiosa perché l’IXP fornisce a GARR punti di interscambio
+pubblici, privati e anche quello dedicato alla pubblica amministrazione (SPC) noto con il nome di QXN. Questo
+consente alla rete GARR di accedere all’internet commerciale e garantisce la comunicazione con le pubbliche
+amministrazioni senza dover sostenere costi aggiuntivi. Il collegamento verso il Global Internet avviene mediante
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   8 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+il collegamento con l’Operatore Cogent (Internet-Tier1), anche in questo caso senza dover sostenere costi
+d’interconnessione. Sono inoltre presenti collegamenti peering diretti con Microsoft, Amazon e verso Registro.it.
+La presenza di tanti significativi soggetti di mercato nello stesso sito ha fatto sì che questo fosse realizzato
+prestando particolare attenzione alla sua resilienza e affidabilità, inoltre è gestito secondo i livelli di servizio
+h24x7x365.
+
+L’ubicazione del POP nello stesso edificio degli uffici della Direzione del GARR è particolarmente vantaggiosa per
+svolgere attività sugli apparati di rete, i sistemi di gestione (Network Managment System) e su alcuni servizi della
+Direzione GARR presenti al POP. Inoltre un laboratorio per il test e la validazione di nuove tecnologie di rete è
+presente nei locali della Direzione ed è strutturalmente connesso al POP mediante un cablaggio diretto per
+permettere l’erogazione dei servizi sperimentali e l’esecuzione di test anche direttamente sulla rete di produzione.
+
+
+2.2 Vantaggi dell’attuale ubicazione del POP
+
+Il POP di RM02 è destinato a mantenere anche nel futuro il ruolo di snodo tra le diverse aree della rete nazionale
+GARR con un numero di direzioni geografiche, oggi presenti e realizzate in modo da preservare la resilienza a singoli
+guasti, che si prevede rimangano costanti o possano addirittura aumentare nei prossimi 5 anni.
+
+Anche il ruolo funzionale di POP di accesso rimarrà invariato nel prossimo futuro, con un probabile incremento del
+numero di circuiti di accesso utente connessi alla rete. L’ubicazione del punto di presenza in un’area centrale di
+Roma, baricentrico rispetto all’elevato numero di sedi connesse, lo rendono particolarmente vantaggioso per
+attuare in modo economicamente efficiente i vari collegamenti in fibra. La vicinanza dei POP GARR di RM02, RM01
+e della Direzione GARR è stata sfruttata per la realizzazione della replica in alta affidabilità di alcuni sistemi ICT e
+una connessione strutturata, in fibra e rame, tra il POP e gli uffici tecnici rende efficiente ed agevole l’operatività
+sui sistemi ICT e di rete. Un’infrastruttura con cavi multifibra per la connessione diretta degli utenti al POP realizzata
+con alcuni operatori di telecomunicazioni e potenzialmente estendibile anche ad altri soggetti, suggerisce di
+preservare per quanto possibile l’investimento effettuato, non traslocando il sito.
+
+La presenza del POP nello stesso edificio che ospita gli uffici della Direzione del GARR e il laboratorio di test degli
+apparati è risultato portare notevoli vantaggi in termini di efficienza nell’esercizio dell’operatività di rete e nella
+validazione delle soluzioni tecnologiche. Inoltre non va sottovalutato il vantaggio offerto dalla colocazione con il
+NAMEX per i servizi di IXP che offre.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   9 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+ 3 SPECIFICHE DELLA FORNITURA
+ Nel seguito i capoversi indicati da un numero con il prefisso "R" e evidenziati in grassetto identificano i requisiti
+ posti da GARR. Dopo il numero, un'etichetta tra parentesi distingue requisiti vincolanti e premianti.
+
+ Si richiede che il Fornitore non descriva direttamente come la soluzione proposta soddisfi i requisiti, bensì risponda
+ alle domande, numerate ed aventi il prefisso "Q", che GARR ha redatto per richiedere i chiarimenti necessari alla
+ valutazione del requisito corrispondente.
+
+ 3.1 Caratteristiche generali della fornitura richiesta
+ Al Fornitore sarà richiesto di allocare, all’interno della propria sede, spazio in housing per ospitare gli apparati GARR
+ (apparati non oggetto della presente fornitura di Gara). In particolare sarà richiesto:
+
+      •     spazio per l’installazione degli apparati di rete e ICT GARR;
+
+      •     fornitura di potenza elettrica per l’alimentazione degli apparati di rete e ICT e condizioni ambientali
+            adatte al loro funzionamento ottimale;
+      •     fornitura di cablaggio per la terminazione dei circuiti in fibra.
+ La fornitura del servizio di housing presso locali del Fornitore, dovrà essere garantita per la durata prevista dal
+ Contratto e con i livelli di servizio specificati nel paragrafo 3.1.4 o migliorativi, se offerti.
+
+ 3.1.1      Requisiti di sito
+ R1       [vincolante] Si richiede che ci sia evidenza pubblica dell’esistenza e piena operatività del sito di housing
+          offerto dal Fornitore.
+
+  Q1 - Si richiede di dimostrare l’evidenza pubblica dell’esistenza del sito e della sua piena operatività alla data di
+       pubblicazione del presente Bando di Gara.
+ R2       [vincolante] Si richiede che il sito offerto disponga di certificazione ISO/IEC 27001 – Sistema di gestione per
+          la sicurezza delle Informazioni (SGSI), per l’ambito di applicazione riguardante l’housing di apparati di rete
+          e ICT.
+
+Q2 - Si richiede di dare evidenza del possesso della certificazione richiesta nel requisito R2, in corso di validità.
+
+
+ R3       [premiante] Una soluzione che prevede che il sito di housing sia ospitato dove sono presenti, con
+          infrastruttura dedicata, operatori di rete e servizi IT, sia pubblici che privati, sarà premiata in funzione della
+          numerosità delle diverse entità.
+
+Q3 - Si richiede di indicare il numero di operatori di rete e servizi IT con infrastruttura proprietaria afferenti al sito.
+
+
+ Un eventuale trasloco del POP di RM02-Tizii in altra posizione geografica rispetto all’attuale comporterebbe una
+ notevole complessità tecnica che, a seconda della distanza, potrebbe comportare la necessità di riprogettare su
+ scala nazionale i circuiti della rete ottico-trasmissiva passanti dal POP. Inoltre per un trasloco e la conseguente
+ migrazione dei servizi di connettività offerti da GARR, sarà necessario programmare un periodo di sospensione
+
+
+                   Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   10 di 28
+                   telecomunicazioni e relativa fornitura di energia elettrica
+ dell’operatività del POP con ripercussioni su tutta la rete e con lunghi disservizi per gli utenti GARR collegati. È
+ prevedibile un peggioramento dell’attuale possibilità di rapido intervento da parte dei tecnici GARR nei locali del
+ POP che non sarebbero più colocati nello stesso edificio degli uffici della Direzione GARR. Per queste ragioni si
+ richiede quanto segue:
+
+
+ R4    [premiante] Sarà premiata una soluzione che preveda di non traslocare gli apparati e le terminazioni del
+       POP GARR di RM02-Tizii dall’attuale sito di housing presso i locali del NAMEX.
+
+Q4 - Si richiede di indicare le coordinate geografiche e l’indirizzo del sito di housing offerto.
+
+
+ Se il sito di housing offerto prevede lo spostamento geografico del POP RM02 si richiede quanto segue:
+ R5    [vincolante] Si chiede di dichiarare che tutti i costi di trasloco degli apparati e di migrazione delle
+       connessioni al POP saranno inclusi nell’Offerta Economica da allegare nella presente risposta di Gara e che
+       nessun contributo aggiuntivo sarà richiesto a GARR successivamente per queste voci di costo.
+
+Q5 - Si richiede di dichiarare che non sarà richiesto a GARR, per il trasloco di apparati e per la migrazione dei circuiti
+     in altro sito, nessun contributo aggiuntivo rispetto a quanto dichiarato nell’Offerta Economica in risposta a
+     questo Bando di Gara.
+
+
+ Poiché gli enti GARR che accedono attualmente e/o che potrebbero accedere in futuro al POP sono nella maggior
+ parte dei casi situati a Roma in posizione centrale, per minimizzare il costo economico della realizzazione e della
+ manutenzione delle connessioni in fibra per l’accesso è conveniente che il POP di RM02 sia anch’esso situato in
+ una posizione centrale.
+ R6    [premiante] Sarà premiata una soluzione che preveda che il sito offerto per l’housing di RM02 sia situato
+       in una zona centrale di Roma, all’interno dell’area delimitata dall’anello ferroviario.
+
+Q6 - Si richiede di dare evidenza che il sito offerto sia ubicato a Roma all’interno dell’anello ferroviario.
+
+
+ I POP di RM01-Sapienza e di POP di RM02 sono i siti dell’infrastruttura di alta affidabilità dei sistemi di gestione
+ della rete GARR. È fondamentale ai fini dell’esercizio dei sistemi di gestione e servizi applicativi che il tempo di
+ Round Trip Time (RTT) tra le due sedi sia minimo per permettere la corretta sincronizzazione dei sistemi.
+
+
+ R7    [premiante] Sarà premiata una soluzione per cui il Tempo di RTT per un circuito dati a 10Gbps tra il sito
+       housing offerto per il POP di RM02 e il sito di RM01-Sapienza sia minore di 200 usec.
+
+Q7 - Si richiede di indicare la distanza fisica dal sito offerto e il pop di RM01 (indirizzo riportato in paragrafo 1.5).
+
+
+ Il laboratorio di rete GARR, ospitato negli uffici della Direzione e il POP di RM02 sono attualmente connessi mediate
+ un cablaggio strutturato che permette di estendere i test di sperimentazione delle nuove tecnologie anche alla rete
+ di produzione. La distanza ottica tra gli apparati di test e il punto di ingresso dei segnali nella rete di produzione,
+
+
+                Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   11 di 28
+                telecomunicazioni e relativa fornitura di energia elettrica
+ ovvero la distanza nel percorso delle fibre tra il laboratorio e il PoP di RM02 può essere dirimente per lo svolgimento
+ di alcune sperimentazioni, per questo motivo è preferibile mantenere minima questa distanza.
+
+
+ R8      [premiante] Sarà premiata una soluzione che minimizza la distanza tra gli uffici della Direzione GARR e il
+         pop di RM02.
+
+Q8 - Si richiede di indicare la distanza fisica dal sito offerto e gli uffici della Direzione GARR (indirizzo riportato in
+     paragrafo 1.5).
+
+
+
+ 3.1.2 Vincolo di doppio ingresso
+ Tutti i POP GARR sono collegati alla rete mediante un doppio punto di ingresso delle fibre ottiche nei siti che li
+ ospitano, in diversità di percorso, con l’unica eccezione nel caso in cui sia presente un’infrastruttura di adduzione
+ in cemento per la posa dei cavi in entrata al sito tale da garantire un’adeguata protezione delle fibre. L’assenza
+ totale di sovrapposizione tra le tratte di dorsale è garantita anche alle porzioni di rete interne alle proprietà che
+ ospitano i POP. A tale proposito si richiede quanto segue:
+
+ R9      [vincolante] Si richiede che il sito offerto per ospitare il POP di RM02 sia dotato di almeno due passaggi
+         differenziati per le fibre ottiche in ingresso o, in alternativa, di infrastruttura di adduzione in cemento per
+         la posa dei cavi tale da garantire un’adeguata protezione delle fibre. Il Fornitore deve garantire la possibilità
+         di realizzare due percorsi in assenza totale di sovrapposizione anche nelle porzioni di rete interne alla
+         proprietà che ospita il POP.
+
+Q9 - Si chiede di indicare le posizioni di ingresso delle fibre ottiche all’interno della proprietà del sito di housing
+     offerto e di dare evidenza dei percorsi differenziati fino allo spazio dedicato al POP GARR, da cui sia evidente
+     la possibilità di realizzare un’infrastruttura senza singoli punti di fallimento per le fibre in ingresso.
+
+ 3.1.3     Requisiti ambientali
+R10 [vincolante] Si richiede che il sito di housing messo a disposizione dal Fornitore soddisfi i requisiti di seguito
+         indicati:
+
+          a) Accesso ai locali. L’accesso dovrà essere assicurato h24x7x365 sia al personale GARR, sia al personale
+              incaricato da GARR per lo svolgimento di attività di installazione, controllo, collaudo, manutenzione
+              (ordinaria e straordinaria), gestione dei guasti e gestione in loco degli apparati ospitati. In sede di Offerta
+              Tecnica dovranno essere precisate le modalità e le condizioni previste per l’accesso. La protezione, la
+              regolamentazione e le modalità di accesso ai locali saranno oggetto di valutazione tecnica. In ogni caso,
+              si richiede che l’accesso ai locali debba essere assicurato in un tempo massimo di 2 ore dalla richiesta
+              da parte di GARR;
+
+          b) Spazio rack. Si richiede l’allocazione di una superficie su pavimento tale da consentire l’installazione di
+              rack accessibili fronte e retro in numero e dimensioni come specificato in seguito (paragrafo 3.2). Lo
+
+
+
+                     Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   12 di 28
+                     telecomunicazioni e relativa fornitura di energia elettrica
+           spazio totale allocato dovrà essere incrementato della quantità necessaria a consentire le normali
+           manovre di accesso e manutenzione degli apparati;
+
+    c) Alimentazione. Si richiede la disponibilità di linee di alimentazione 230V AC rispondenti ai requisiti di
+           protezione specificati al punto successivo;
+
+    d) Alimentazione Protetta. Negli spazi messi a disposizione dovrà essere reso disponibile il servizio di
+           alimentazione elettrica con garanzia di continuità non inferiore al 99.9% semestrale. Pertanto si richiede
+           la presenza di impianti (UPS, gruppo elettrogeno) tali da garantire continuità elettrica anche in caso di
+           prolungate interruzioni. Requisito importante è che non vi siano single point of failure nella
+           alimentazione degli apparati. A tal fine si richiede la disponibilità di quadri elettrici separati, dai quali
+           derivare linee elettriche indipendenti, sezionabili attraverso interruttori magnetotermici e dedicate
+           esclusivamente all’alimentazione degli apparati GARR. Nelle sole aree messe a disposizione, la
+           realizzazione degli impianti elettrici secondo le specifiche GARR è a cura del Fornitore;
+
+    e) Condizionamento. Il sistema di condizionamento dovrà essere conforme ai requisiti di legge. Saranno
+           considerati preferenziali sistemi di condizionamento tali da garantire valori della temperatura e del
+           tasso di umidità più stringenti rispetto ai limiti di legge: preferibilmente la temperatura ambientale
+           dovrà quindi mantenersi tra i 20 e i 25 ºC (gradi centigradi) e il tasso di umidità dovrà attestarsi tra il
+           30% e il 43%;
+
+    f)     Monitoraggio ambientale. Dovranno essere implementati, mantenuti e adottati, all'interno del sito, i
+           sistemi di controllo ambientale al fine di monitorare e testare l'adeguatezza delle temperature e le
+           condizioni di umidità all'interno dell'area.
+
+    g) Sistema antincendio. Il sito dovrà essere dotato di un sistema antincendio con caratteristiche conformi
+           alle norme vigenti;
+
+    h) Sistema anti-allagamento. Il sito dovrà essere dotato di un sistema anti-allagamento per aree con
+           presenza di apparati attivi;
+
+    i)     Dotazioni accessorie. Si richiede che il sito sia fornito di strutture accessorie (canalizzazioni aeree,
+           pavimento flottante, strutture di permute, ecc.) che consentano la realizzazione di permute ottiche
+           eseguite a regola d’arte, nel caso in cui GARR ne ravvisi la necessità;
+
+    j)     Cabling. Il cablaggio interno al sito di housing dai punti di terminazione delle fibre ottiche agli apparati
+           GARR deve essere fornito e manutenuto dal Fornitore, fanno eccezione i cavi multifibra dedicati, stesi a
+           cura di GARR o di operatori di Telecomunicazioni, che sono attestati direttamente sui rack GARR,
+           nell’area dedicata al PoP (si veda R16);
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+13 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+         k) Traslochi. Saranno a carico del Fornitore tutti gli oneri che dovessero derivare da eventuali futuri
+                traslochi del sito ospitante che, in ogni caso, dovrà avvenire senza alterare in maniera peggiorativa le
+                caratteristiche tecniche dell’installazione interessata;
+
+         l)     Gestione e Manutenzione. Il Fornitore dovrà provvedere alla fornitura dei servizi di gestione ordinaria
+                e straordinaria dei siti quali pulizia, manutenzione delle opere edili e degli impianti. Nei siti dovrà essere
+                garantito il rispetto delle norme vigenti in materia di sicurezza nei luoghi di lavoro;
+
+         m) Gestione Guasti. La gestione dei guasti infrastrutturali o ambientali dovrà essere in modalità
+                h24x7x365, tramite NOC del Fornitore (Presidio Operativo). Il ripristino dei guasti bloccanti (interruzione
+                corrente, allagamento, ecc.) deve essere assicurato entro le 6 ore;
+
+         n) Servizio di vigilanza. Dovrà essere garantito un servizio di vigilanza h24x7x365;
+
+         o) Controllo accessi. Si richiede che l’accesso al sito sia autorizzata previa identificazione personale. Dovrà
+                essere garantito il controllo e la registrazione (log) degli accessi.
+
+         p) Esclusione di estranei. Dovrà essere presente un sistema anti intrusione, un allarme porta/finestra
+                aperta. Dovranno essere definite ed attuate misure al fine di escludere interventi da parte di estranei
+                sugli apparati installati da GARR;
+
+         q) Videosorveglianza. Tutte le aree ad accesso controllato e i varchi devono essere sorvegliate con sistemi
+                TVCC.
+
+
+
+Q10 - Si richiede di confermare per il sito offerto l’aderenza alle richieste formulate in R10 (dal punto a) al punto q))
+      descrivendone modalità e caratteristiche.
+
+ 3.1.4 Gestione dei guasti
+ La gestione dei guasti ambientali di sito dovrà essere garantita in modalità h24x7x365 tramite Centro di gestione
+ del Fornitore che si interfaccerà con il personale tecnico di sito incaricato di provvedere alla riparazione. Per guasti
+ ambientali si intendono tutti i guasti che comportino il venire meno, totale o parziale, dei requisiti riportati in 3.1.3.
+
+ I guasti ambientali possono essere così classificati:
+
+ •    Guasti bloccanti (o con disservizio): sono considerati tali i guasti che rendono di fatto indisponibile il servizio
+      di Housing nel sito o non consentono il corretto funzionamento degli apparati GARR installati compromettendo
+      l’erogazione di uno o più servizi di connettività realizzati attraverso di essi (es. interruzione corrente,
+      allagamento, condizioni ambientali anomale, ecc.);
+ •    Guasti non bloccanti (o senza disservizio): sono considerati tali i guasti che comportino il venire meno di uno
+      o più requisiti di Housing e comportino un funzionamento non ottimale degli apparati GARR, senza tuttavia
+      compromettere l’erogazione di alcuno dei servizi di connettività realizzati su di essi.
+
+
+
+
+                   Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+     14 di 28
+                   telecomunicazioni e relativa fornitura di energia elettrica
+ Un guasto, sia bloccante che non bloccante, dovrà essere in ogni caso ripristinato secondo gli SLA dichiarati dal
+ Fornitore. Un ritardo nel ripristino della funzionalità del sito di Housing determinerà l’applicazione di penali, così
+ come descritto nel Contratto.
+
+ Per disponibilità del sito di Housing, si intende l’assenza di guasti ambientali di tipo bloccante (es. guasti
+ dell’alimentazione che determinano lo spegnimento degli apparati attivi del GARR ivi ospitati, allagamenti, ecc.).
+ Anche il mancato accesso al sito di Housing da parte del personale GARR o autorizzato da GARR entro i tempi
+ massimi dichiarati dal Fornitore, in caso di guasti agli apparati di competenza GARR ivi ospitati, inciderà sul computo
+ della disponibilità complessiva del sito. Il sito infatti verrà considerato indisponibile per tutto il tempo di
+ inaccessibilità del sito a partire dal tempo massimo di accesso dichiarato dal Fornitore.
+
+ Nel caso in cui la disponibilità semestrale del sito di Housing risulti inferiore a quanto dichiarato dal Fornitore, è
+ prevista l’applicazione di penali secondo quanto specificato nel Contratto. Si riportano in Tabella 2 gli SLA minimi
+ che il Fornitore è tenuto a soddisfare. Ogni aspetto migliorativo sarà premiato in sede di valutazione tecnica.
+
+        Livello di servizio Housing                                                                   Valore di soglia
+        Disponibilità semestrale                                                                      ≥ 99.4%
+        Tempo di intervento e ripristino per guasto ambientale bloccante                              Entro 6 ore
+        Tempo di intervento e ripristino guasto ambientale non bloccante                              Entro 15 giorni
+        Tempo massimo per l’accesso ai siti di Housing del personale GARR                             Entro 6 ore
+
+                                      Tabella 2: Valori di soglia dei livelli di servizio di Housing
+ R11 [vincolante] Si richiede che gli SLA offerti soddisfino la richiesta minima riportata in Tabella 2.
+
+ R12 [premiante] Saranno premiati SLA offerti migliorativi rispetto a quelli minimi riportati in Tabella 2.
+
+Q11 - Si richiede di indicare gli SLA offerti, che potranno essere pari alla soglia minima riportata o migliorativi (vedi
+      Tabella 2).
+
+ 3.2 Requisiti di Spazio e specifiche dei rack
+ Si richiede la disponibilità di spazio protetto da Cage, necessario ad ospitare 8 rack adiacenti le cui caratteristiche
+ di dimensione e alimentazione sono riportate in Tabella 3.
+
+        ID Rack GARR           Tipologia utilizzo                      Linee di alimentazione                           Spazio
+                                                                                                                                 2
+       RM02_1          Apparati di gestione                          2 Linee (A+B) monofase da 16A                  80x80 cm
+       RM02_2          ODF / patch-panel                             2 Linee(A+B) monofase da 16A                   80x80 cm2
+       RM02_3          Apparati a pacchetto                          2 linee (A+B) monofase da 32A                  80x80 cm2
+                                                                                                                                 2
+       RM02_4          Apparati trasmissivi e a pacchetto           8 Linee (4A+4B) monofase da 32A                 80x80 cm
+                                                                                                                                 2
+       RM02_5          Apparati trasmissivi                          2 linee (A+B) monofase da 32A                  80x80 cm
+                                                                                                                                 2
+       RM02_6          Apparati ICT                                  2 linee (A+B) monofase da 32A                  60x100 cm
+       RM02_7          Gestione e servizi                            2 linee (A+B) monofase da 32A                  60x100 cm2
+       RM02_8          Apparati ICT                                   2 linee (A+B) trifase da 32A                  80x120 cm2
+
+
+            Tabella 3: Identificativi, tipologia d’uso, alimentazioni e dimensioni di 8 rack contigui protetti da Cage
+
+  Inoltre è richiesto spazio rack, anche non necessariamente interno alla Cage per ospitare altri 2 rack le cui
+ caratteristiche di alimentazione e dimensioni sono riportate in Tabella 4.
+
+
+
+
+                Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+    15 di 28
+                telecomunicazioni e relativa fornitura di energia elettrica
+  ID Rack GARR           Tipologia utilizzo                   Linee di alimentazione                   Spazio
+RM02-B23          Apparati Datacenter GARR                   2 Linee (A+B) trifase da 32A             60x120 cm2
+RM02-A26          Apparati Tempo&Freq.                      2 linee (A+B) monofase da 16A             60x30 cm2
+
+
+                   Tabella 4: Identificativi, tipologia d’uso e alimentazione e dimensione di rack aggiuntivi
+
+
+R13 [vincolante] Si richiede la fornitura di spazio per l’installazione di 10 rack, di cui almeno 8 contigui e protetti
+      da cage, secondo le specifiche riportate in Tabella 3 e Tabella 4.
+
+Q12 - Si richiede di fornire la pianta della sala dove sarà ospitato il POP GARR, con evidenziata l’area dedicata ad
+      ospitare i rack del POP GARR.
+Q13 - Si richiede di fornire una descrizione delle caratteristiche sostanziali dell’area dedicata: dimensioni, presenza
+      della struttura di separazione di tipo cage, disponibilità di spazio per gli otto rack contigui richiesti e posizione
+      degli altri due, evidenza che lo spazio sia sufficiente a ospitare i rack secondo le dimensioni previste e
+      disponibilità delle linee di alimentazione secondo le specifiche riportate in Tabella 3 e Tabella 4.
+
+
+
+3.3 Requisiti per l’Alimentazione elettrica
+I rack dovranno essere alimentati in AC a 230V secondo le specifiche precedentemente riportare nelle tabelle 3 e
+4, la potenza attualmente assorbita, divisa per rack, viene riportata in Tabella 5.
+
+                                                                                            Potenza
+                             ID Rack GARR                          Descrizione
+                                                                                             (kW)
+                             RM02_1                  Apparati di gestione                     0.2
+                             RM02_2                  ODF / patch-panel                         0
+                             RM02_3                  Apparati di routing                      5.2
+                             RM02_4                  Apparati DCI e a pacchetto                6
+                             RM02_5                  Apparati trasmissivi                      4
+                             RM02_6                  Apparati Infra                            2
+                             RM02_7                  Gestione e servizi                       2.3
+                             RM02_8                  Apparati Infra                            0
+                             RM02_B23                Apparati Datacenter GARR                  9
+                             RM02_A26                Apparati Tempo&Freq.                     0.1
+                             Totale                                                          28.8
+
+                                                  Tabella 5: Potenza dei rack
+
+Si stima che il consumo di energia che inizialmente dovrà essere soddisfatto dalla fornitura sia dell’ordine di circa
+30kW/h, tuttavia GARR richiede che il Fornitore riservi ulteriori 5kW di potenza aggiuntiva per garantire evoluzione
+delle funzionalità del POP e per affrontare un’eventuale rotazione tecnologica degli apparati nel corso del Contratto
+di Fornitura. I dettagli su tempi e modalità di erogazione della potenza aggiuntiva verranno concordate con il
+Fornitore qualora GARR ne avesse la necessità.
+
+R14 [vincolante] Si richiede che la potenza elettrica offerta sia pari a 30kW con un possibile incremento di 5kW
+      da erogare sulla base di tempi e modalità da concordare con GARR.
+
+Q14 - Si richiede di indicare le potenze offerte per i singoli rack (vedi Tabella 5).
+
+
+
+
+                 Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+   16 di 28
+                 telecomunicazioni e relativa fornitura di energia elettrica
+Q15 - Si richiede di dichiarare che, nel caso fosse necessario, sarà possibile incrementare la potenza erogata fino a
+      5kW, sulla base di accordi da prendere con GARR su tempi e modalità di erogazione.
+Q16 - Si richiede di confermare che in fase di rilascio della fornitura sarà fornita una mappa dettagliata
+      dell’associazione tra rack, linee elettriche e interruttori sul quadro elettrico.
+
+
+
+3.4 Requisiti per i Cablaggi
+3.4.1 Attestazione dei rilasci
+In Tabella 6 e nell’Allegato 1 2501 – Consistenza delle connessioni in ingresso al POP sono elencate le connessioni
+attualmente afferenti al POP RM02-Tizii della dorsale della rete GARR, della dorsale della rete metrologica, un cui
+punto di presenza è ospitato nel POP GARR e degli accessi degli enti della comunità accademica e della ricerca
+italiana.
+
+                                  Collegamenti dorsali geografiche rete GARR
+                                  attestazione rack ODF/patch-panel RM02_2
+                     direzione Aquila
+                     direzione Firenze
+                     direzione RM01
+                     direzione RM06
+                     direzione Napoli
+                     direzione Sardegna
+
+
+                              Collegamenti dorsali geografiche rete metrologica
+                                       attestazione rack RM02-A26
+                     rete metrologica direttrice Nord
+                     rete metrologica direttrice Sud
+
+
+                                            Collegamenti di accesso
+                                  attestazione rack ODF/patch-panel RM02_2
+                     174 collegamenti di accesso
+
+                                 Tabella 6: Lista dei collegamenti afferenti al POP RM02
+
+
+
+L’alto numero di rilasci in fibra di operatori di telecomunicazione per soddisfare le esigenze del POP per le dorsali
+di rete e gli accessi degli utenti GARR ha suggerito l’opportunità di far realizzare agli operatori una struttura di
+cablaggio, dedicata, direttamente attestata su un rack del POP GARR. Nel POP di RM02-Tizii attualmente in housing
+presso NAMEX, GARR ha già fatto investimenti per creare questo genere di infrastrutture con gli operatori TIM e
+Fastweb (si veda Tabella 7 e Allegato 1 2501 – Consistenza delle connessioni in ingresso al POP).
+
+Sono state inoltre realizzate le seguenti infrastrutture:
+
+    •   cavo multifibra dedicato tra il POP di RM02 e il POP RM01-Sapienza (Par.1.5),
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  17 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+      •     cablaggio strutturato tra il POP e il laboratorio GARR presente al quarto piano dell’edificio della Direzione
+            GARR.
+      •     un cablaggio interno al POP tra i vari rack.
+
+ Le caratteristiche delle varie realizzazioni infrastrutturali sono riportate in Tabella 8 e Allegato 1 2501 –
+ Consistenza delle connessioni in ingresso al POP.
+
+
+
+
+                                  Infrastruttura geografica diretta tra Operatore TNC e POP RM02 (Cage)
+  cavo multifibra - 96 f.o.                        prima via - operatore TIM
+  cavo multifibra - 96 f.o.                        seconda via - operatore TIM
+  cavo multifibra - 96 f.o.                        prima via - operatore Fastweb
+  cavo multifibra - 96 f.o.                        seconda via - operatore Fastweb
+
+           Infrastruttura geografica di collegamento tra PoP GARR RM01-Sapienza (Edificio Marconi) - POP RM02 (Cage)
+
+  cavo multifibra - 48 f.o.                        singola via da RM01 a RM02 (terminata sul rack RM02_2)
+
+                                     Infrastruttura di collegamento Direzione GARR - Pop RM02 (Cage)
+
+  cavo multifibra - 96 f.o.                        connessioni dirette tra Laboratorio GARR e RM02 (terminata su rack RM02_2)
+
+                                 Infrastruttura di collegamenti locale sala Fornitore verso POP RM02 (Cage)
+
+                                                   collegamenti da rilascio operatore presso struttura del Fornitore di housing verso la Cage
+  48 cross-connessioni verso il PoP GARR
+                                                   GARR (terminata su rack RM02_2)
+
+                              Infrastruttura di collegamenti locale tra i rack GARR RM02_B23 e RM02_2 (Cage)
+
+  24 connessioni full duplex LC dirette            24 connessioni tra i rack B23 e il rack RM02_2
+
+                        Infrastruttura di collegamento interna alla cage verso il rack RM02_2 ODF/patch-panel
+  144 full duplex LC SM                            dal rack RM02_2 al rack RM02_3
+  144 full duplex LC SM                            dal rack RM02_2 al rack RM02_4
+  48 full duplex LC SM                             dal rack RM02_2 al rack RM02_8
+  24 cavi UTP rame cat 6                           dal rack RM02_2 al rack RM02_8
+
+                                          Tabella 7: Infrastrutture in fibra ottica richieste per RM02
+
+
+
+ Per non compromettere gli investimenti effettuati, GARR chiede che strutture analoghe a quelle attualmente
+ disponibili al POP di RM02-Tizii siano presenti nel sito di housing offerto in gara, senza costi aggiuntivi per GARR se
+ non quelli inclusi nell’Offerta Economica della presente Procedura di Gara.
+
+ R15 [vincolante] Nel sito offerto, si richiede la realizzazione di infrastrutture di collegamento in fibra del tipo e
+          numerosità di quelle specificate in Tabella 7.
+
+Q17 - Si richiede di descrivere le infrastrutture per la connessione del nuovo POP RM02 nel sito offerto secondo le
+      specifiche riportate in Tabella 7 e di specificare i tempi e i modi per la loro realizzazione. Il piano di
+      realizzazione esecutivo della suddetta infrastruttura sarà richiesto in fase di sottoscrizione del Contratto di
+      Fornitura.
+
+
+
+                   Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+    18 di 28
+                   telecomunicazioni e relativa fornitura di energia elettrica
+ Inoltre, si richiede che il Fornitore acconsenta alla richiesta di creazione di infrastrutture dedicate direttamente
+ connesse al POP GARR per i rilasci di Operatore TLC e ne permetta la manutenzione.
+
+ R16 [vincolante] Si richiede che i rilasci in fibra degli Operatori TLC con numerosità maggiore di 5 possano essere
+       direttamente attestati su un rack GARR (ODF/patch-panel) mediante una coppia di cavi multifibra realizzati
+       in diversità di percorso sulla base di accordi diretti tra GARR e Operatore TLC. Si precisa che tali
+       infrastrutture sono intese ad uso esclusivo di GARR e non comportano oneri economici a carico del
+       Fornitore di housing. Inoltre si richiede che la realizzazione di queste infrastrutture, la cui esecuzione verrà
+       debitamente comunicata al Fornitore di housing, non debba comportare alcuna richiesta economica da
+       parte del Fornitore di housing.
+
+Q18 - Si richiede di confermare quanto richiesto al punto R16.
+ R17 [vincolante] Si richiede la possibilità di manutenere con accordi diretti tra GARR e Operatore TLC le
+       infrastrutture descritte al punto R16 per gli anni di durata del contratto di housing.
+
+Q19 - Si richiede di confermare quanto richiesto al punto R17.
+
+
+
+
+               Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+    19 di 28
+               telecomunicazioni e relativa fornitura di energia elettrica
+4 SCHEMA DI PRESENTAZIONE DELLE OFFERTE
+L’Offerta Tecnica e l’Offerta Economica dovranno essere strutturate secondo gli schemi illustrati di seguito e
+saranno valutate complessivamente secondo il criterio dell’Offerta economicamente più vantaggiosa.
+
+4.1 Modalità di risposta al capitolato di Gara
+Il Fornitore è tenuto a presentare:
+
+    •   L’Offerta Tecnica
+    •   L’Offerta Economica
+
+4.2 Schema di redazione dell’Offerta Tecnica
+Nel presentare l’Offerta Tecnica, il Fornitore dovrà redigere un proprio Progetto Tecnico, dove descriverà i dettagli
+dell’infrastruttura e dei servizi offerti. Il Progetto Tecnico dovrà contenere nel dettaglio almeno le seguenti
+informazioni:
+
+    • Descrizione delle caratteristiche e delle modalità di accesso al PoP della rete di dorsale GARR. Il Fornitore
+      è tenuto alla descrizione dei sistemi di sicurezza e delle modalità di accesso ai locali (paragrafo 3.1.1 - a),
+      o), p), q)).
+    • Descrizione dell’organizzazione preposta alla gestione delle problematiche tecniche. Il Fornitore dovrà
+      specificare l’organizzazione interna preposta alla gestione delle problematiche tecniche (Centro di
+      Gestione) descrivendo tra l’altro quali livelli di escalation e quali figure professionali di riferimento sono
+      previsti. I singoli nominativi potranno essere specificati in un secondo momento, in fase di sottoscrizione
+      del Contratto (paragrafo 3.1.1 - f), g), h), k), l), m), n)).
+    • Caratteristiche generali degli impianti di alimentazione elettrica e condizionamento (paragrafi 3.1.1 - b),
+      c), d), e), i), j)).
+    • Evidenza della rispondenza della fornitura alle richieste espresse nel Capitolo 3, mediante
+           o la risposta, completa e pertinente, a ciascuna delle domande numerate presenti nel Capitolato di
+                 Gara
+           o la compilazione del foglio elettronico come da template riportato nello Allegato 2 2501 – Schema
+                presentazione Offerta Tecnica e descritto nelle tabelle successive.
+
+4.3 Guida alla compilazione dell’Allegato Tecnico
+
+
+L’Allegato tecnico si compone di tre fogli contenenti le tabelle relative rispettivamente a Spazio ed Energia,
+Connessione del POP e SLA. Al Fornitore è richiesto di compilare le tabelle con le caratteristiche tecniche che
+descrivono l’offerta proposta, avendo cura di soddisfare i criteri vincolanti delle richieste GARR e di evidenziare
+eventuali offerte relative a richieste premianti. Le seguenti Tabella 8, Tabella 9 e Tabella 10 riproducono lo schema
+dell’Allegato 2 - 2501 – Schema presentazione Offerta Tecnica.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  20 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+                                                                                                              Linee di alimentazione
+                                                ID rack GARR                      Misure                                                          Potenza offerta (kW)
+                                                                                                                      offerte
+                                        RM02_1
+                                        RM02_2
+                                        RM02_3
+                                        RM02_4
+                                        RM02_5
+                                        RM02_6
+                                        RM02_7
+                                        RM02_8
+                                        RM02_B23
+                                        RM02_A26
+
+                                                                  Tabella 8: Schema offerta tecnica Spazio ed Energia
+
+
+
+                                                                                                                                                                       numerosità connessioni    numerosità connessioni
+                      Infrastruttura geografica                                              Da                                    A (Sito POP RM02 offerto)
+                                                                                                                                                                             richieste                  offerte
+Infrastruttura geografica diretta operatore TIM - prima via        infrastruttura TIM                                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)                48
+
+Infrastruttura geografica diretta operatore TIM - seconda via      infrastruttura TIM                                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)                48
+
+Infrastruttura geografica diretta operatore Fastweb - prima via    infrastruttura Fastweb                             PoP RM02 - rack ODF/patch-panel (RM02_2 new)                48
+
+Infrastruttura geografica diretta operatore Fastweb - seconda via infrastruttura Fastweb                              PoP RM02 - rack ODF/patch-panel (RM02_2 new)                48
+
+Infrastruttura geografica di collegamento con il pop RM01          PoP RM01 - Edificio Marconi presso sezione INFN    PoP RM02 - rack ODF/patch-panel (RM02_2 new)                24
+
+Infrastruttura diretta di collegamento con Lab Direzione GARR      Lab Direzione GARR - via dei Tizii 6, 4o piano     PoP RM02 - rack ODF/patch-panel (RM02_2 new)                48
+
+
+
+
+                                                                                                                                                                       numerosità connessioni    numerosità connessioni
+                        Infrastruttura locale                                                Da                                               A
+                                                                                                                                                                             richieste                  offerte
+connessione area Fornitore - PoP GARR                              rilascio operatiri presso il Fornitore             PoP RM02 - rack ODF/patch-panel (RM02_2 new)       48 full duplex LC SM
+connessioni interne rack GARR                                      PoP RM02 offerto - rack B23 new                    PoP RM02 - rack ODF/patch-panel (RM02_2 new)       24 full duplex LC SM
+connessioni interne rack GARR                                      PoP RM02 offerto - rack RM02_3 new                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)       144 full duplex LC SM
+connessioni interne rack GARR                                      PoP RM02 offerto - rack RM02_4 new                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)       144 full duplex LC SM
+connessioni interne rack GARR                                      PoP RM02 offerto - rack RM02_8 new                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)       48 full duplex LC SM
+connessioni interne rack GARR                                      PoP RM02 offerto - rack RM02_8 new                 PoP RM02 - rack ODF/patch-panel (RM02_2 new)      24 cavi UTP rame cat 6
+
+
+
+
+                                                                  Tabella 9: Schema offerta tecnica Connessioni al POP
+
+
+
+            Livello di servizio Housing                                                                                         Valore di soglia                     SLA offerto
+            Disponibilità semestrale                                                                                            ≥ 99.4%
+            Tempo di intervento e ripristino per guasto ambientale bloccante                                                    Entro 6 ore
+            Tempo di intervento e ripristino guasto ambientale non bloccante                                                    Entro 15 giorni
+            Tempo massimo per l’accesso ai siti di Housing del personale GARR                                                   Entro 6 ore
+
+                                                                           Tabella 10: Schema offerta tecnica – SLA
+
+4.4 Schema di presentazione dell’Offerta Economica
+Il Fornitore dovrà presentare l’Offerta Economica compilando le colonne del foglio elettronico in Allegato 3 2501 -
+Schema presentazione Offerta Economica.
+
+L’Offerta Economica sarà valutata secondo i criteri descritti nel paragrafo 5.2. Come specificato nell’Avviso di gara,
+le forniture saranno affidate con il criterio dell’Offerta economicamente più vantaggiosa e saranno regolate da un
+contratto di fornitura conforme allo Schema di Contratto che costituisce parte integrante della documentazione
+della presente Procedura di gara.
+
+In Tabella 11 è mostrato il template della tabella da compilare relativa ai costi di Housing ed Energia.
+
+
+                            Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+    21 di 28
+                            telecomunicazioni e relativa fornitura di energia elettrica
+                                                        Costo                Costi ricorrenti
+                            Voce di costo                                                            Costo Totale [€]
+                                                   Una Tantum [€]             60 mesi [€]
+                      Housing
+
+                      Energia
+
+                      Totale
+
+                         Tabella 11: Schema di presentazione dell'Offerta Economica - Housing ed Energia
+
+
+
+Di seguito sono elencate le informazioni richieste:
+
+    •     Costo una tantum [€]: dichiarare separatamente per Housing ed Energia il costo Una Tantum, eseguire la
+          somma totale delle due voci di costo;
+    •     Costi ricorrenti 60 mesi [€]: dichiarare separatamente per Housing ed Energia il costo ricorrente nei 60
+          mesi di fornitura ed eseguire la somma totale delle due voci di costo;
+    •     Eseguire la somma totale dei costi relativi rispettivamente ad Housing e a Energia;
+    •     Evidenziare il costo totale delle voci Housing ed Energia.
+
+Nella Tabella 12 è riportato il template dei costi relativi ai cablaggi richiesti secondo le categorie definite:
+
+    •     Costo una tantum [€]: dichiarare il costo Una Tantum relativo alla fornitura delle diverse tipologie di
+          cablaggi offerti, eseguire la somma;
+    •     Costo ricorrente 60 mesi [€]: dichiarare il costo ricorrente totale su 60 mesi relativo alla fornitura, eseguire
+          la somma.
+    •     Costo totale cablaggi Una Tantum e Ricorrente per 60 mesi;
+    •     Costo totale fornitura cablaggi.
+
+                      Infrastruttura geografica                     Costo Una Tantum [€]        Costo ricorrente 60 mesi [€]   Costo Totale [€]
+
+Infrastruttura geografica diretta operatore TIM - prima via
+
+Infrastruttura geografica diretta operatore TIM - seconda via
+
+Infrastruttura geografica diretta operatore Fastweb - prima via
+
+Infrastruttura geografica diretta operatore Fastweb - seconda via
+
+Infrastruttura geografica di collegamento con il pop RM01
+
+Infrastruttura diretta di collegamento con Lab Direzione GARR
+
+connessione area Fornitore - PoP GARR
+
+connessioni interne tra i rack GARR
+
+Totale
+
+
+                                Tabella 12: Schema di presentazione dell'Offerta Economica-Cablaggi
+
+
+
+
+                  Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  22 di 28
+                  telecomunicazioni e relativa fornitura di energia elettrica
+Si richiede inoltre la compilazione secondo il template raffigurato in Tabella 13 dei Costi Aggiuntivi:
+
+    •    Costo una tantum [€]: dichiarare il costo Una Tantum relativo ai Costi Aggiuntivi della fornitura, eseguire
+         la somma;
+    •    Costo ricorrente 60 mesi [€]: dichiarare il costo ricorrente totale su 60 mesi relativo ai Costi Aggiuntivi,
+         eseguire la somma.
+    •    Costi Aggiuntivi totali Una Tantum e Ricorrente per 60 mesi;
+    •    Totale Costi Aggiuntivi.
+
+                                         Costo                      Costi ricorrenti
+Voce di costo aggiuntiva (*)                                                                           Costo Totale [€]
+                                    Una Tantum [€]                   60 mesi [€]
+
+
+
+
+Totale
+
+
+                         Tabella 13: Schema di presentazione dell'Offerta Economica-Costi Aggiuntivi
+
+
+
+Nella tabella riepilogativa dei costi Tabella 14, si richiede di compilare i costi di Una Tantum e ricorrenti totali per
+la voce Housing, Energia, Cablaggi e Costi Aggiuntivi. Riportare il costo dell’intera fornitura per la voce di costo
+ricorrente, non ricorrente e per il totale.
+
+
+
+                                                                          Costi ricorrenti
+              Voce di costo               Costo Una Tantum [€]                                        Costo Totale Fornitura [€]
+                                                                           60 mesi [€]
+  Housing                                                  0.00 €                            0.00 €                       0.00 €
+
+  Energia                                                  0.00 €                            0.00 €                       0.00 €
+
+  Cablaggi                                                 0.00 €                            0.00 €                       0.00 €
+
+  Costi aggiuntivi                                         0.00 €                            0.00 €                       0.00 €
+
+  Totale
+
+
+                               Tabella 14: Schema di presentazione dell'Offerta Economica-Totale
+
+
+
+La Tabella 14 deve essere fornita sia in formato pdf che xls. La somma dei costi delle voci presenti deve
+corrispondere al valore del costo totale della Fornitura richiesta. Il documento in formato pdf farà fede per
+l’aggiudicazione del punteggio economico.
+
+
+
+
+               Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  23 di 28
+               telecomunicazioni e relativa fornitura di energia elettrica
+5 CRITERI DI VALUTAZIONE DELLE OFFERTE
+     L’aggiudicazione sarà effettuata con il criterio dell’offerta economicamente più vantaggiosa, attribuendo a
+ciascun concorrente un punteggio tecnico fino ad un massimo di 70 punti ed un punteggio economico fino ad un
+massimo di 30 punti.
+
+Risulterà aggiudicatario il Fornitore che, sommando i punti della Offerta Tecnica all'Offerta Economica, avrà
+ottenuto il valore massimo.
+
+5.1 Punteggio Tecnico
+L’assegnazione del punteggio tecnico complessivo si ottiene dalla valutazione degli elementi premianti, giudicati
+sulla base delle risposte alle domande da Q1 - a Q19 -relative ai requisiti tecnici da R1 a R17 e dal Progetto Tecnico
+che descrive le caratteristiche di erogazione del servizio di housing.
+
+Per completezza sono stati elencati tutti i requisiti, siano essi premianti o vincolanti. Resta inteso che solo i requisiti
+etichettati come premianti partecipano alla somma del punteggio. I requisiti vincolanti devono essere soddisfatti
+pena l’esclusione.
+
+Il punteggio tecnico (PT) per dell’offerta (𝒂) sarà così calcolato:
+                                                        𝒏
+
+                                            𝑷𝑻 (𝒂) = ∑ 𝑬𝑷𝒊 × 𝑽𝒊 (𝒂)
+                                                       𝒊=𝟏
+
+Dove:
+
+        •    𝑷𝑻(𝒂) è il punteggio attribuito all’offerta (𝒂);
+        •    𝑬𝑷𝒊 è il peso, ovvero il punteggio attribuito all’elemento premiante (𝑖);
+        •    𝒏 = 𝟕 è il numero totale degli elementi premianti (Progetto tecnico e requisiti premianti);
+        •    𝑽𝒊 (𝒂) è il coefficiente di prestazione dell’offerta (𝑎) rispetto all’elemento premiante (𝑖) variabile tra
+             zero e uno, ovvero,
+
+                                                               𝑷𝑻𝒊 (𝒂)
+                                         𝑽𝒊 (𝒂) =
+                                                    𝑴𝑨𝑿[𝑷𝑻𝒊 (𝒂), 𝑷𝑻𝒊 (𝒃), … , 𝑷𝑻𝒊 (𝒌)]
+
+dove si sono indicati con 𝑷𝑻𝒊 (𝒂) il punteggio ottenuto per l’elemento premiante i-esimo dall’offerta (𝒂), e
+𝑴𝑨𝑿[𝑷𝑻𝒊 (𝒂), 𝑷𝑻𝒊 (𝒃), … , 𝑷𝑻𝒊 (𝒌)] il massimo valore ottenuto per il medesimo elemento premiante i-esimo fra
+tutte le offerte.
+
+5.2 Il Punteggio Economico
+Il punteggio economico viene calcolato sulla base dell’Offerta Economica.
+
+I 30 punti economici totali saranno assegnati nel seguente modo:
+
+        •    30 punti per spesa complessiva (𝑷𝑬 = 𝟑𝟎)
+
+Il calcolo del punteggio economico complessivo 𝑷𝑬(𝒂) dell’offerta a-esima, relativo al costo del servizio di housing
+per l’intera durata del contratto, sarà calcolato secondo la formula:
+
+
+
+               Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  24 di 28
+               telecomunicazioni e relativa fornitura di energia elettrica
+                                                       𝑪𝒎𝒊𝒏
+                                               𝑷𝑬(𝒂) =      × 𝑷𝑬
+                                                       𝑪(𝒂)
+
+    dove con 𝑪 si indica il costo complessivo relativo all’intera durata del contratto. 𝑪𝒎𝒊𝒏 è il costo complessivo
+    minimo tra tutte le offerte, e 𝑪(𝒂) il costo complessivo dell’offerta a-sima, che deve essere pari o inferiore
+    alla Base d’Asta riportata in Tabella 1:
+
+                                                  𝑪(𝒂) ≤ 𝑩𝒅𝑨
+
+5.3 Valutazione Offerta
+Il punteggio complessivo per ogni offerta verrà assegnato in base alle formule riportate nei paragrafi 5.1, 5.2 e ai
+documenti Tecnici e Economici presentati dai Fornitori.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  25 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+    Allegato 1.        2501 – CONSISTENZA DELLE CONNESSIONI IN INGRESSO AL POP
+Il file Allegato 11-2501 – Consistenza delle connessioni in ingresso al POP contiene l’informazione relativa alla
+consistenza degli accessi utente presso il pop di RM02.
+
+
+
+
+             Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  26 di 28
+             telecomunicazioni e relativa fornitura di energia elettrica
+    Allegato 2.         2501 – SCHEMA PRESENTAZIONE OFFERTA TECNICA
+Il file Allegato 22-2501 – Schema presentazione Offerta Tecnica contiene il template per fornire i dettagli da allegare
+al Progetto Tecnico.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  27 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+    Allegato 3.         2501 - SCHEMA PRESENTAZIONE OFFERTA ECONOMICA
+
+
+Il file Allegato 33-2501 - Schema presentazione Offerta Economica .xlsx contiene il template per fornire i dettagli
+da allegare all’Offerta Economica.
+
+
+
+
+              Capitolato tecnico di Gara n. 2501 – Affidamento del servizio di housing di apparati informatici e di
+  28 di 28
+              telecomunicazioni e relativa fornitura di energia elettrica
+

@@ -1,0 +1,723 @@
++-
+
+
+
+                                                          ID 2610
+
+
+
+
+CONSIP
+ACCORDI QUADRO AVENTI AD OGGETTO SERVIZI
+APPLICATIVI IN OTTICA CLOUD E SERVIZI DI DEMAND
+E PMO PER LE PUBBLICHE AMMINISTRAZIONI LOCALI
+TERZA EDIZIONE
+Realizzazione dell'Osservatorio Regionale dei Trasporti
+
+
+ LOTTO 1
+
+
+
+
+PIANO OPERATIVO
+ODA NR. 8983494
+
+
+
+
+           RTI ENGINEERING
+    Regione Sardegna                         ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+
+
+    SOMMARIO
+
+
+    DATI ANAGRAFICI AMMINISTRAZIONE RICHIEDENTE ........................................................................... 1
+    INTRODUZIONE .................................................................................................................................... 2
+       CONTESTO ..................................................................................................................................................... 2
+       SCOPO.......................................................................................................................................................... 2
+       CAMPO DI APPLICAZIONE .................................................................................................................................. 2
+       ACRONIMI E GLOSSARIO ................................................................................................................................... 3
+    ORGANIZZAZIONE DEL CONTRATTO ESECUTIVO................................................................................... 4
+    IMPORTO CONTRATTUALE E QUANTITÀ PREVISTE PER I SERVIZI OGGETTO DI FORNITURA .................. 9
+       SERVIZI REALIZZATIVI ....................................................................................................................................... 9
+       SERVIZI DI SUPPORTO TECNICO-SPECIALISTICO ICT .................................................................................................. 9
+    DELIVERABLE DELLA FORNITURA........................................................................................................ 10
+    SERVIZI DI FORNITURA ....................................................................................................................... 11
+       SVILUPPO E MANUTENZIONE EVOLUTIVA DEL SOFTWARE (SVI) ................................................................................ 11
+       SERVIZI DI CONFIGURAZIONE E/O PERSONALIZZAZIONE DI SOFTWARE DI TERZE PARTI, OPEN SOURCE O RIUSO (CF) ................ 11
+       SUPPORTO TECNICO-SPECIALISTICO ICT (SS) ....................................................................................................... 11
+    ATTIVITÀ IN CARICO ALLE AZIENDE E QUOTE DI RTI............................................................................ 13
+    QUOTA E PRESTAZIONI IN SUBAPPALTO ............................................................................................ 14
+    CV DELLE RISORSE PROFESSIONALI..................................................................................................... 14
+       RESPONSABILI E FIGURE DI RIFERIMENTO DEL FORNITORE. ....................................................................................... 14
+
+
+
+
+RTI ENGINEERING                                                                                                                                                       2
+Regione Sardegna       ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+DATI ANAGRAFICI AMMINISTRAZIONE RICHIEDENTE
+
+
+     DENOMINAZIONE
+                           REGIONE AUTONOMA DELLA SARDEGNA-Assessorato dei Trasporti
+     AMMINISTRAZIONE
+
+     INDIRIZZO             Via XXIX NOVEMBRE 1847, n. 41
+
+     CAP                   09123
+
+     COMUNE                Cagliari
+
+     PROVINCIA             Cagliari
+
+     REGIONE               Sardegna
+
+     CODICE FISCALE        80002870923
+
+     CODICE IPA            5DAGSS
+
+     INDIRIZZO MAIL        azanda@regione.sardegna.it
+
+     PEC                   trasporti@pec.regione.sardegna.it
+
+
+
+     REFERENTE
+                           Antonello Zanda
+     AMMINISTRAZIONE
+     RUOLO                 Servizio per gli affari comunitari, rapporti istituzionali, sistema informativo bilancio e controllo
+
+
+     TELEFONO              0706067355
+
+     INDIRIZZO MAIL
+
+     MAIL PEC
+
+
+
+
+RTI ENGINEERING                                                                                      PIANO OPERATIVO | PAG. 1 di 14
+Regione Sardegna                ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+INTRODUZIONE
+CONTESTO
+
+   Il Responsabile del Procedimento è il Direttore del Servizio per gli affari comunitari, rapporti istituzionali, sistema
+   informativo, bilancio e controllo;
+
+   L’Assessorato dei Trasporti della Regione Sardegna è la struttura regionale che programma, coordina e
+   supervisiona le politiche dei trasporti sull’Isola, con competenze che spaziano dal trasporto pubblico locale su
+   gomma e ferro alla mobilità marittima e aerea. Si occupa della pianificazione dei servizi, della gestione dei contratti
+   con le aziende che erogano il servizio di trasporto, dell’allocazione delle risorse finanziarie, del monitoraggio della
+   qualità e dell’efficienza del trasporto, oltre che del supporto alla realizzazione di infrastrutture e interventi per
+   migliorare la mobilità regionale. Svolge inoltre attività di indirizzo e controllo, garantendo che i servizi rispondano
+   ai bisogni dei cittadini e siano coerenti con le normative nazionali e regionali.
+
+   Il contratto è finanziato con risorse FSC 2021-2027 per un importo complessivo di € 1.000.000, comprensivo
+   dell’IVA, dei contributi ANAC, CONSIP e degli incentivi tecnici in carico all’amministrazione.
+
+
+
+   L’attuale sistema informativo (AS-IS) dell'Assessorato è ospitato sull'infrastruttura di virtualizzazione regionale,
+   configurato in ambienti separati di Sviluppo, Pre-produzione e Produzione dotati di sistemi di bilanciamento del
+   carico e backup. L'architettura logica e applicativa si articola nelle seguenti componenti principali:
+
+    •    Livello Dati e Integrazione: un database centralizzato PostgreSQL funge da collettore dati. L'alimentazione
+         avviene tramite procedure ETL (Extract-Transform-Load) basate su Pentaho e script personalizzati (in
+         linguaggi Python, Java, Javascript) che acquisiscono flussi da fonti esterne eterogenee (PMIS, Aziende TPL,
+         Aeroporti) attraverso modalità miste (API, GTFS, scambio file);
+
+    •    Applicativi di Back-office: sono presenti diversi applicativi verticali, sviluppati prevalentemente in PHP,
+         dedicati alla gestione operativa dei singoli domini di trasporto (Trasporto Aereo, Marittimo, TPL, Registro
+         NCC, gestione orari e fermate);
+
+    •    Analisi Dati: per la reportistica interna e la visualizzazione dei dati è in uso la soluzione open source Metabase;
+
+    •    Frontend e Servizi all'Utenza: il punto di accesso pubblico è il portale "Sardegna Mobilità", basato su CMS
+         Drupal. Il portale integra servizi di infomobilità dinamici, tra cui il Travel Planner ("Muoversi in Sardegna"), il
+         calcolo tariffe, i monitoraggi real-time dei mezzi e la sezione per la pubblicazione degli Open Data.
+
+
+
+SCOPO
+
+   Obiettivo del presente documento è la descrizione dei servizi volti a soddisfare le esigenze definite dalla Regione
+   Sardegna nel piano dei fabbisogni relative alla realizzazione degli sviluppi necessari per la realizzazione
+   dell’Osservatorio Regionale dei Trasporti.
+
+
+
+CAMPO DI APPLICAZIONE
+
+   Il documento si applica al progetto Servizi Applicativi in ottica Cloud e servizi PMO – ed. III - Lotto 1 (SAC3 PAL).
+   In particolare, ai seguenti servizi:
+
+   -     Servizio di Sviluppo e Manutenzione Evolutiva del Software;
+
+   -     Servizi di Configurazione e/o Personalizzazione di Software di terze parti, open source o riuso;
+
+   -     Servizi di Supporto Tecnico-Specialistico ICT.
+
+
+
+RTI ENGINEERING                                                                                  PIANO OPERATIVO | PAG. 2 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+ACRONIMI E GLOSSARIO
+
+   Indicare le definizioni rilevanti per la fornitura e l’ambito di riferimento delle stesse
+
+      DEFINIZIONE/ACRONIMO                    DESCRIZIONE ESTESA
+
+      AQ                                  Accordo Quadro
+
+      CE                                  Contratto Esecutivo
+
+      GG/PP                               Giorni Persona
+
+      ICT, IT                             Information and Communication Technology, Information Technology
+
+      OT                                  Offerta Tecnica
+
+      PA, PPAA                            Pubblica Amministrazione, Pubbliche Amministrazioni
+
+      RTI                                 Raggruppamento Temporaneo di Imprese
+
+      RUAC del CE                         Responsabile Unico delle attività contrattuali relativo al Contratto Esecutivo
+
+      AMS                                 Application Maintenance Services (servizi di manutenzione applicativa)
+
+      CE                                  Client Executive
+
+      CDE                                 Client Delivery Executive
+
+      Steering Committee                  Comitato di governance composto da rappresentanti di Amministrazione e Fornitore
+
+
+
+
+RTI ENGINEERING                                                                                     PIANO OPERATIVO | PAG. 3 di 14
+Regione Sardegna                ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+ORGANIZZAZIONE DEL CONTRATTO ESECUTIVO
+   Per i servizi in ambito al presente Piano Operativo, il Fornitore propone un approccio ibrido a rilasci incrementali,
+   in cui gli avanzamenti di progetto saranno scanditi dai rilasci secondo quanto verrà pianificato ed espresso
+   all’interno del Piano di Lavoro Generale e dei singoli Piani di Lavoro di Obiettivo, da definirsi a valle di un primo
+   incontro di kick-off tra Fornitore e Amministrazione. Il kick-off è la sede in cui identificare nominativamente i
+   rispettivi referenti sia a livello di governo che a livello tecnico, definire la periodicità degli incontri e dei SAL e le
+   modalità di interazione sia per quanto riguarda i momenti formali (SAL, collaudi, etc.), sia per quanto riguarda le
+   necessità puntuali di “day by day” fondamentali per l’operatività, così da permettere al Cliente di raggiungere gli
+   obiettivi prefissati con il minor livello di rischio di progetto. Le interazioni potranno avvenire su diversi livelli, da
+   quello concettualmente più alto di governance generale del progetto fino a quello più tecnico-operativo, e
+   attraverso canali, strumenti e modalità che cambieranno a seconda della fase progettuale e della necessità di
+   formalità. A titolo di esempio:
+
+   -    Meeting di individuazione di requisiti di progetto: sarà opportuno formalizzare questo tipo di meeting dai
+        quali necessariamente scaturiranno documenti che il Fornitore proporrà e il Cliente approverà (se necessario
+        a seguito di iterazioni successive) così da cristallizzarne il contenuto che rappresenterà la base per lo sviluppo
+        di ciascun modulo/funzionalità.
+
+   -    Confronti puntuali e veloci su aspetti di dettaglio: interazioni one-to-one tra personale dell’Amministrazione
+        e del Fornitore (sviluppatori, esperti di UX, esperti di BI, etc.) saranno sempre possibili attraverso gli strumenti
+        proposti più avanti (o eventuali alternative, qualora l’Amministrazione volesse proporle) così da mantenere
+        fluide le attività. Se da tali confronti scaturisse necessità di maggiore approfondimento – ad esempio – per la
+        modifica di un requisito – si opererà integrando la documentazione e prevedendo i passaggi approvativi
+        formali del caso.
+
+   Il modello che il Fornitore propone per il governo e l’esecuzione delle attività si fonda, oltre che sulla teoria, su
+   numerose esperienze maturate in numerosi nell’ambito di progetti di sviluppo Waterfall/Agile e DevOps, portati
+   a termine, e garantisce la copertura dell’intero ciclo di vita del software, a partire dalla raccolta dei requisiti fino
+   alla delivery.
+
+   Nell’ambito dell’organizzazione proposta, il governo complessivo dei servizi è assicurato dal livello “Governance”,
+   che ha la responsabilità della gestione contrattuale per l’intera fornitura e rappresenta l’interfaccia ufficiale verso
+   il Cliente. Tale livello ha una visione complessiva del progetto e, coordinandosi con i relativi responsabili, tiene
+   costantemente aggiornato il quadro di tutte le attività erogate nell’ambito della fornitura. Il livello di Governance
+   è garantito dalla diade composta dal Client Executive e dal Client Delivery Executive, i cui rispettivi ruoli e compiti
+   sono descritti nel seguito.
+
+   Di seguito riportiamo un esempio di team di progetto che il Fornitore è capace di mobilizzare per rispondere ai
+   bisogni di Regione Sardegna. Il team effettivo di progetto sarà definito in fase di pianificazione operativa di
+   dettaglio, anche individuando l’esperienza minima da prevedere per ciascuna risorsa.
+
+    1. Steering Committee
+      Lo Steering Committee, come anticipato poco sopra e come rappresentato in figura di seguito, è l’organo
+      responsabile della Governance dell’intero progetto. È composto da figure in capo all’Amministrazione e al
+      Fornitore, si riunisce con una periodicità che verrà concordata in sede di primo kick-off, la cui frequenza potrà
+      essere modulata di comune accordo in base alle fasi del progetto, con l’obiettivo di presidiare opportunamente
+      i momenti cruciali (es. raccolta e validazione dei requisiti, collaudi, SAL). Le responsabilità in capo a questa
+      struttura saranno quelle di controllo generale sul progetto, sia relativamente agli aspetti amministrativi che per
+      quanto concerne quelli più operativi, il rispetto del cronoprogramma e le tempistiche di rilascio. La
+      composizione nominale del team, così come il cronoprogramma stesso, verrà formalizzata successivamente
+      nei Piani di Lavoro di Obiettivo.
+
+
+       1.1. CE (Client Executive) e CDE (Client Delivery Executive)
+RTI ENGINEERING                                                                                  PIANO OPERATIVO | PAG. 4 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+          •   Il Client Executive è l’interfaccia commerciale che cura la relazione Fornitore/Amministrazione e che
+              è intervenuta attivamente durante le fasi iniziali di valutazione delle necessità dell’Amministrazione
+              supportandola nel valutare l’opportunità di ricorrere all’AQ CONSIP SAC3. Il CE continua ad affiancare
+              l’Amministrazione anche durante lo svolgimento delle attività rappresentate nel Piano dei Fabbisogni
+              assicurandosi che i livelli di comunicazione e interazione siano ottimali affinché i risultati aspettati
+              possano essere raggiunti con piena efficienza.
+         •    Il Client Delivery Executive è responsabile dell'esecuzione del contratto e delle fasi di delivery. Si
+              occupa principalmente della gestione e pianificazione delle attività contrattuali dall'avvio nel kickoff
+              alla fatturazione ed al monitoraggio degli stati di avanzamento. Primo riferimento per il cliente
+              nell'escalation path per valutare azioni di mitigazione dei rischi e piani di rientro. Interloquisce con RUP
+              e DEC ed è responsabile dello staffing della fornitura.
+      1.2. Project Manager
+        Figura operativa per la gestione del progetto.
+         •    Pianifica attività, milestone interne;
+         •    Coordina analisti e sviluppatori;
+         •    Produce report di avanzamento e monitoraggio.
+      1.3. Cloud Application Architect
+         •    Responsabile dell’architettura logica e applicativa e della relativa documentazione;
+         •    Guida tecnica complessiva delle attività.
+    2. Area Analisi Funzionale e di Processo
+      2.1. Business Analyst / Analista dei Requisiti
+         •    Figura trasversale per raccolta, formalizzazione e gestione dei requisiti.
+      2.2. Cloud Application Architect
+         •    Responsabile dell’architettura logica e applicativa e della relativa documentazione;
+         •    Guida tecnica complessiva delle attività.
+    3. Area Architetture, Dati e Integrazione
+      3.1. Database Administrator
+         •    Cura qualità, normalizzazione e orchestrazione dei flussi dati;
+         •    Ottimizza prestazioni, replica, backup.
+      3.2. Cloud Application Architect (Integration Specialist / API Specialist)
+         •    È responsabile del disegno architetturale della piattaforma che verrà sviluppata;
+         •    Garantisce integrazione continua dei sistemi.
+    4. Area Sviluppo Software
+      4.1. Full Stack Developer
+         •    Sviluppa funzionalità applicative;
+         •    Collabora nei test e nelle manutenzioni evolutive.
+      4.2. Backend Developer
+         •    Sviluppo di logiche applicative server-side;
+         •    Integrazione con DB, ETL, API esterne.
+      4.3. Frontend Developer
+         •    Cura interfacce, User Experience.
+      4.4. Data Scientist/Business Information Manager
+         •    Progetta dashboard;
+         •    Modella KPI, indicatori di servizio, matrici di mobilità;
+         •    Supporta reportistica direzionale.
+      4.5. Test Specialist
+         •    Si occupa di definire ed eseguire le attività di test Unitari/Funzionali/di carico)
+
+
+    5. Area Supporto Tecnico Specialistico
+      5.1. DevOps Engineer
+RTI ENGINEERING                                                                                PIANO OPERATIVO | PAG. 5 di 14
+Regione Sardegna                          ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+         •    Gestisce deploy, container, orchestrazione, monitoring;
+         •    Supporta versioning, rilasci, build dei diversi moduli.
+    6. Area Formazione e Comunicazione
+      6.1. E-Learning Specialist
+         •    Produce materiali di formazione;
+         •    Supporta workshop, webinar e trasferimento conoscenze.
+      6.2. UX Designer / Digital Media Specialist / Mobile Media Specialist
+         •    Cura comunicazioni, manualistica, guide utente.
+
+   I flussi di comunicazione tra tutte le risorse impiegate sul progetto, compresi i membri dello Steering Committee,
+   saranno possibili secondo le modalità più o meno strutturate descritte sopra, da dettagliarsi puntualmente nel
+   Piano di Lavoro Generale e negli specifici Piani di Lavoro degli Obiettivi.
+
+   La struttura organizzativa proposta è rappresentata nel seguente schema:
+
+
+
+
+                  LEGENDA                                                  STEERING COMMITTEE
+                     Fornitore                         DEC        RUP                           CDE                    CE
+
+                                                                                                                 Cloud Application
+                  Amministrazione                      Project manager                     Project Manager
+                                                                                                                     architect
+
+
+
+                      AREA FUNZIONALE            AREA DATI          AREA SVILUPPO                AREA SUPPORTO      AREA FORMAZIONE
+                                                                          Full Stack                                   Trainer / esperto
+                             Business                                     Developer                   DevOps
+                                                Database admin                                                          di formazione
+                              analyst                                                                 Engineer
+                                                                                                                            digitale
+                                                                           Backend
+                                                                          Developer
+                              Cloud                                                                                      UX writer /
+                                                  Integration
+                            Application                                   Frontend                                     communication
+                                                   specialist
+                             architect                                    Developer                                      specialist
+                                                                         BI Specialist /
+                                                                         Data analyst
+
+                                                                     Test Specialist
+
+
+
+
+   In merito agli strumenti per la gestione del progetto e delle attività correlate, il fornitore propone l’utilizzo delle
+   soluzioni incluse nella suite Microsoft 365, in particolare:
+
+        •   Microsoft Teams, quale piattaforma di collaborazione:
+                o Canali dedicati a sprint e a team di lavoro;
+                o Riunioni, chat, messaggistica;
+                o Integrazione con gli altri strumenti direttamente all’interno di Teams.
+        •   Microsoft Planner per la gestione AGILE del progetto, grazie al supporto per:
+                o board Kanban con bucket (To do / Doing / Done);
+                o gestione task con assegnazione;
+                o checklist e allegati;
+                o commenti e collaborazione;
+                o dashboard con grafici di stato;
+                o integrazione con Teams.
+        •   , Microsoft To-Do
+                o Liste personali;
+                o Priorità giornaliere.
+        •   Microsoft SharePoint per la condivisione dei documenti.
+
+
+RTI ENGINEERING                                                                                                   PIANO OPERATIVO | PAG. 6 di 14
+Regione Sardegna                ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+   Si ritiene la suite idonea a garantire flussi di comunicazione continuativi sia all’interno del team di lavoro sia con
+   il personale dell’Amministrazione, nonché per gestire e monitorare l’avanzamento delle diverse fasi progettuali e
+   favorire la condivisione della documentazione. Qualora l’Amministrazione disponga già di strumenti alternativi, il
+   fornitore si rende disponibile ad adottarli e integrarli nelle modalità operative del progetto.
+   Per quanto concerne la gestione del codice sorgente e le attività di rilascio nei diversi ambienti, il fornitore utilizza
+   abitualmente GitHub, unitamente a strumenti dedicati alla definizione e all’automazione delle pipeline di build,
+   test e distribuzione del software. Tali strumenti consentono di implementare processi di integrazione e rilascio
+   continui, favorendo cicli di sviluppo e validazione rapidi ed efficienti, articolati secondo il seguente schema:
+   •     check-in del codice;
+   •     build dei pacchetti applicativi;
+   •     rilascio in ambiente di test;
+   •     unit test automatici;
+   •     rilascio in ambiente di stage.
+
+   Fino a questo punto della catena, fatta eccezione per eventuali interventi di fix, tutte le operazioni sono
+   automatizzate. A seguire:
+   •     test di integrazione (automatici);
+   •     test di acceptance (manuali).
+
+   A esito positivo dei test, a seguito di eventuali azioni di fix, si procede con il rilascio in produzione con azione
+   manuale, ferma restando la possibilità di introdurre anche qui un certo grado di automazione, se richiesto.
+
+   La figura seguente schematizza il modello appena descritto.
+
+
+
+
+   La definizione puntuale degli strumenti idonei a implementare le pipeline di rilascio è rimandata a valle del kick-
+   off tecnico, quando il Fornitore sarà in grado di proporre i più adeguati sulla base delle reali necessità operative.
+
+   Il codice prodotto dal Fornitore verrà consegnato all’Amministrazione, che ne deterrà la proprietà, e potrà
+   accedervi in qualunque momento attraverso il repository scelto.
+
+   Per quanto riguarda l’eventuale integrazione di componenti software in riuso o open-source, che in ogni caso
+   dovrà essere concordata con l’Amministrazione, andranno verificate di volta in volta le condizioni di titolarità.
+
+
+
+   Relativamente alle tempistiche di progetto, si recepiscono le esigenze dell’Ente, definendo conseguentemente
+   priorità e fasi; in particolare i primi due ambiti da indirizzare saranno:
+RTI ENGINEERING                                                                                  PIANO OPERATIVO | PAG. 7 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+   1) Sistema di accreditamento digitale, costituito dalle componenti necessarie alla gestione della comunità di
+      operatori ed utenti che interagiscono a vario titolo con l’Assessorato, configurata in fase di avvio sulle esigenze
+      della continuità territoriale aerea. Le tempistiche di rilascio di tale componente saranno definite in modo
+      puntuale a valle della prima fase di raccolta e analisi dei requisiti. In ogni caso, dovrà essere garantita la piena
+      disponibilità del sistema in ambiente di produzione entro il 24 ottobre 2026, comprensiva delle integrazioni
+      che i vettori dovranno implementare sui propri sistemi per l’interoperabilità con quelli della RAS. Di
+      conseguenza, il rilascio dovrà avvenire entro e non oltre il mese di settembre 2026.
+
+   2) manutenzione          evolutiva       del       sistema       di      gestione       degli      aiuti      sociali
+      (https://sardegnatrasporti.regione.sardegna.it/), col preciso obiettivo di modificarne gli attuali processi di
+      funzionamento attraverso l’introduzione di automazioni e meccanismi supportati da AI in ottica di scalabilità
+      e miglioramento della qualità del servizio, che attualmente è legato al disbrigo manuale delle pratiche da
+      parte di personale comunale. Si lavorerà quindi nell’ottica di ridurre al minimo gli interventi manuali,
+      riducendo così l’effetto “collo di bottiglia”, destinando agli operatori esclusivamente le pratiche che avranno
+      presentato criticità tali da rendere necessario l’intervento umano. Inoltre, dovrà essere possibile destinare una
+      minima quota percentuale di pratiche agli operatori per l’esecuzione di controlli a campione.
+
+   3) sviluppo di un “Osservatorio delle merci”, al fine di conoscere, governare e orientare in modo efficace l’intero
+      sistema del trasporto merci da e per l’isola, sia per quanto attiene ai flussi via mare che aereo.
+
+   Le attività restanti saranno oggetto di pianificazione successiva.
+
+   Resta inteso che sarà facoltà dell’Ente adeguare il piano di lavoro rispetto alle esigenze, che potranno anche
+   cambiare nel corso del tempo. Questo avverrà grazie alla produzione dei Piani Operativi di Obiettivo, che saranno
+   oggetto di discussione in seno allo Steering Committee, a valle della quale scaturirà un documento aggiornato
+   che il Fornitore proporrà e l’Amministrazione accetterà se rispondente alle necessità emerse.
+
+
+
+
+RTI ENGINEERING                                                                                PIANO OPERATIVO | PAG. 8 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+IMPORTO CONTRATTUALE E QUANTITÀ PREVISTE PER I SERVIZI OGGETTO DI FORNITURA
+   L’importo contrattuale è pari a € 799.875,00 (euro settecentonovantanoveottocentosettantacinque/00 euro) IVA
+   esclusa. Le tabelle seguenti riportano le quantità previste per i servizi oggetto di fornitura, comprensive delle
+   relative metriche, al netto di eventuali successive rimodulazioni:
+SERVIZI REALIZZATIVI
+  Servizio                     Modalità           Metrica                Quantità          Tariffa         Importo
+                               Progettuale a
+  Sviluppo e                                      Giorno Team
+                               corpo per
+  Manutenzione Evolutiva                          ottimale Sviluppo      2.850           € 140,00          € 399.000
+                               ciascun
+  del Software (SVI)                              e MEV
+                               intervento
+  Configurazione e             Progettuale a      Giorno Team
+  Personalizzazione di         corpo per          ottimale di
+  Soluzioni di terze           ciascun            Configurazione e       2.250           € 141,50          € 318.375
+  parti/open source/riuso      intervento         Personalizzazione
+  (CF)
+SERVIZI DI SUPPORTO TECNICO-SPECIALISTICO ICT
+  Servizio                     Modalità           Metrica                Quantità          Tariffa         Importo
+                               Progettuale a      Giorno Team
+  Supporto Tecnico-            corpo per          ottimale di
+                                                                          550            € 150,00           € 82.500
+  Specialistico ICT (SS)       ciascun            Supporto Tecnico-
+                               intervento         Specialistico ICT
+
+
+
+   Si precisa che le somme a disposizione comprensive di iva, contributo CONSIP, contributo ANAC e incentivi tecnici
+   a carico dell’Amministrazione ammontano a Euro 1.000.000, così suddivise nelle seguenti annualità:
+
+                              TOTALE           2026           2027        2028           2029
+
+                            1.000.000 €        100.000 €     300.000 €   400.000 €      200.000 €
+
+
+
+
+RTI ENGINEERING                                                                           PIANO OPERATIVO | PAG. 9 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+DELIVERABLE DELLA FORNITURA
+Il fornitore provvederà alla produzione di deliverable di fornitura relativamente agli ambiti obiettivo indicati nel piano
+dei fabbisogni. Il set minimo di deliverable che verranno prodotti è il seguente:
+        •    Piano di Lavoro Generale e Piano di Lavoro dell’Obiettivo;
+        •    Piano della Qualità Generale;
+        •    Piano di Qualità Specifico, anche dell’obiettivo;
+        •    attività di misurazione dell’impegno in giorni persona dei profili impiegati e misurazione in metriche di
+             prodotto;
+        •    la gestione del progetto, della pianificazione delle risorse/attività, della misurazione della qualità
+             interna-esterna ed in uso supportata da specifici strumenti di testing e controllo, delle review
+             (deliverable dei requisiti, di analisi e progettazione, implementativi);
+        •    la gestione dei rischi e delle comunicazioni interne ed esterne con l’Amministrazione, la misurazione dei
+             dati di produttività, la consuntivazione delle risorse per fase/sprint e per attività, per componente;
+        •    la qualità della documentazione a corredo dell’attività di realizzazione/modifica software
+        •    Piano di Trasferimento di Know how;
+        •    Report Indicatori di qualità
+
+Si rimanda al primo kick-off la discussione puntuale di quanti e quali – e in quale forma - deliverable sarà necessario
+produrre, così da interpretare in maniera corretta le esigenze di progetto e le richieste dell’Amministrazione.
+
+Relativamente al Piano di Lavoro Generale, come previsto da capitolato dell’accordo quadro CONSIP, la trasmissione
+avverrà entro 10 giorni lavorativi dalla stipula del Contratto Esecutivo, unitamente al Piano della Qualità Generale e
+ai CV delle risorse professionali.
+
+
+
+
+RTI ENGINEERING                                                                               PIANO OPERATIVO | PAG. 10 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+SERVIZI DI FORNITURA
+   I servizi di fornitura saranno attivati, come specificato nel Piano dei Fabbisogni, secondo le seguenti tempistiche
+   ed indicazioni organizzative di ogni specifico servizio di seguito riportate:
+SVILUPPO E MANUTENZIONE EVOLUTIVA DEL SOFTWARE (SVI)
+   Attivazione del Servizio
+   L’attivazione del servizio di “Sviluppo e Manutenzione Evolutiva del Software” è prevista indicativamente nel mese
+   di aprile 2026 e comunque in seguito alla riunione di kick-off.
+   Vincoli Temporali
+   Sviluppo prioritario del Sistema di Accreditamento Digitale finalizzato, in particolare per quanto attiene alla
+   gestione della nuova Continuità Territoriale Aerea, entro settembre 2026.
+   Erogazione e Consuntivazione
+   Il servizio è finalizzato al raggiungimento del risultato specifico. Il Fornitore organizza autonomamente le risorse
+   e i tempi nel rispetto delle milestone concordate. La consuntivazione avviene per obiettivi, al raggiungimento di
+   milestone pianificate e condivise. Le figure professionali del team dell’Aggiudicatario opereranno presso la propria
+   sede, in stretto coordinamento operativo con i referenti dell’Appaltatore.
+   Cronoprogramma
+   Dal momento che la presente iniziativa è costituita da una pluralità di interventi, i singoli interventi verranno
+   puntualmente qualificati e pianificati temporalmente. Il cronoprogramma verrà pertanto prodotto in base alle
+   esigenze di attivazione concertate con Regione Sardegna.
+
+
+
+SERVIZI DI CONFIGURAZIONE E/O PERSONALIZZAZIONE DI SOFTWARE DI TERZE PARTI, OPEN SOURCE O RIUSO (CF)
+   Attivazione del Servizio
+   L’attivazione del servizio di “Configurazione e/o personalizzazione di sw di terze parti, open source o riuso” è
+   prevista indicativamente nel mese di giugno 2026 e comunque in seguito alla riunione di kick-off.
+   Vincoli Temporali
+   Sviluppo evolutivo prioritario del sistema per gli aiuti sociali (https://sardegnatrasporti.regione.sardegna.it/), entro
+   ottobre 2026.
+   Erogazione e Consuntivazione
+   Il servizio è finalizzato al raggiungimento del risultato specifico. Il Fornitore organizza autonomamente le risorse
+   e i tempi nel rispetto delle milestone concordate. La consuntivazione avviene per obiettivi, al raggiungimento di
+   milestone pianificate e condivise. Le figure professionali del team dell’Aggiudicatario opereranno presso la propria
+   sede, in stretto coordinamento operativo con i referenti dell’Appaltatore.
+   Cronoprogramma
+   Dal momento che la presente iniziativa è costituita da una pluralità di interventi, i singoli interventi verranno
+   puntualmente qualificati e pianificati temporalmente. Il cronoprogramma verrà pertanto prodotto in base alle
+   esigenze di attivazione concertate con Regione Sardegna.
+SUPPORTO TECNICO-SPECIALISTICO ICT (SS)
+   Attivazione del Servizio
+   L’attivazione del servizio di “Supporto Tecnico-Specialistico ICT” è prevista indicativamente nel mese di aprile 2026
+   e comunque in seguito alla riunione di kick-off.
+   Vincoli Temporali
+   In coerenza con le priorità precedentemente indicate.
+
+
+
+RTI ENGINEERING                                                                                PIANO OPERATIVO | PAG. 11 di 14
+Regione Sardegna              ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+   Erogazione e Consuntivazione
+   Le prestazioni contrattuali dovranno essere svolte presso la sede del fornitore. Il luogo di erogazione dei servizi
+   potrà essere modificato anche durante la vigenza del contratto. La consuntivazione delle attività svolte sarà
+   regolata secondo quanto previsto nel “Piano di Lavoro del servizio di Supporto Tecnico-Specialistico ICT” del
+   Fornitore.
+   Cronoprogramma
+   Dal momento che la presente iniziativa è costituita da una pluralità di interventi, i singoli interventi verranno
+   puntualmente qualificati e pianificati temporalmente. Il cronoprogramma verrà pertanto prodotto in base alle
+   esigenze di attivazione concertate con Regione Sardegna.
+
+
+
+
+RTI ENGINEERING                                                                            PIANO OPERATIVO | PAG. 12 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+ATTIVITÀ IN CARICO ALLE AZIENDE E QUOTE DI RTI
+Di seguito le aziende del RTI di AQ coinvolte nelle varie attività richieste nel piano dei fabbisogni.
+
+                                                                  SERVIZI
+                                                                                                Supp.                     Contact
+                                                                                                       Acq. e E-learn.
+                                                                MAD-                  Gestione Gest.ID                    Center
+                  SVI   MI      CF      CW     MAD      MAC              SS      GA                    Classif. e Assist.
+                                                                MAC                    Oper. e Acc.                        e Help
+                                                                                                        Dati Virtuale
+AZIENDE                                                                                        Utente                       Desk
+Engineering
+NTT Data
+Gov/&Tech
+Schema31
+Eustema           X              X                                       X
+Perfexia
+HSPI
+Consis
+ICS 4
+DGS
+RPCNET
+XD Speed
+Solution
+Advantech
+Medas
+Esri Italia
+Società
+Gruppo ISC
+Progesi
+IFM
+EDP La
+Traccia
+
+Di seguito lo schema riepilogativo delle percentuali di RTI delle aziende coinvolte nelle attività previste e le relative
+quote dell’ordine.
+AZIENDE                        % RTI             Quota Ordine
+Engineering
+NTT Data Gov/&Tech
+Schema31
+Eustema                      100,00%               € 799.875,00
+Perfexia
+HSPI
+Consis
+ICS 4
+DGS
+RPCNET
+XD Speed Solution
+Advantech
+Medas
+Esri Italia
+Società Gruppo ISC
+Progesi
+IFM
+EDP La Traccia
+
+
+
+
+RTI ENGINEERING                                                                               PIANO OPERATIVO | PAG. 13 di 14
+Regione Sardegna               ID 2610 – AQ SAC 3- LOTTO 1 – Piano Operativo
+
+
+QUOTA E PRESTAZIONI IN SUBAPPALTO
+   Il Fornitore si riserva di affidare in subappalto, previa autorizzazione dell’Amministrazione, i servizi oggetto del
+   presente Piano Operativo entro i limiti concessi dalla normativa. Il Fornitore allo scopo ha dichiarato in fase di
+   Accordo Quadro che intende subappaltare quota parte di tutti i servizi oggetto della fornitura nei limiti di legge
+
+
+
+CV DELLE RISORSE PROFESSIONALI
+   Sono presentati, allegati al presente Piano Operativo, i CV del RUAC del Contratto Esecutivo e il Referente Tecnico
+   per i servizi oggetto di fornitura. Il Fornitore garantisce inoltre che tutte le risorse che impiegherà per l’erogazione
+   dei servizi oggetto della fornitura rispondono ai requisiti minimi espressi nell’ “Appendice 1 al CTS del Lotto 1 -
+   Profili Professionali” dell’AQ.
+
+
+
+RESPONSABILI E FIGURE DI RIFERIMENTO DEL FORNITORE.
+
+   Di seguito, si riporta l’elenco delle persone incaricate dal Fornitore per la conduzione dei vari servizi richiesti
+   indicati nel paragrafo “SERVIZIO DI FORNITURA”, indicandone ruoli e responsabilità. Tali figure sono tutte
+   espressione del presente RTI.
+
+
+
+          Nominativo                            Ruolo                                         Profilo
+
+                                                                          Rif. par.§ 7.2.1. Allegato 12- Capitolato
+    Gaetano Rizzo              RUAC del CE
+                                                                          Tecnico Generale
+    Fabio Perrone              Referente Tecnico per i Servizi             Rif. par.§ 7.2.2. Allegato 12- Capitolato
+                               (CDE)                                       Tecnico Generale
+    Giuseppe Musu              Referente Commerciale (CE)                  -
+
+
+
+
+     Firmato digitalmente da:
+     Andrea Gabardo
+     Data: 30/03/2026 15:08:39
+
+
+
+
+RTI ENGINEERING                                                                                PIANO OPERATIVO | PAG. 14 di 14
+
