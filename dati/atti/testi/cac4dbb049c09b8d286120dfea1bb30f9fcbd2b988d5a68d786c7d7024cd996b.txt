@@ -1,0 +1,692 @@
+                            PR25INF015
+
+
+
+ PROCEDURA DI GARA APERTA PER L’AFFIDAMENTO DEL SERVIZIO DI NOLEGGIO
+     OPERATIVO DI TECNOLOGIE DI VIRTUALIZZAZIONE COMPRENSIVO DI
+  MANUTENZIONE E ASSISTENZA FULL RISK PER 60 MESI PER LE NECESSITA’ DI
+GESTIONE DELLA CONTINUITA’ OPERATIVA DELL’INFRASTRUTTURA DI DATACENTER
+         DELL’AZIENDA SANITARIA UNIVERSITARIA FRIULI CENTRALE
+
+
+
+
+                            RdO : rfq_103303
+
+
+
+
+                         CAPITOLATO TECNICO
+
+
+
+
+                                         Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                  Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                 CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                Pagina 1 di 13
+Sommario
+1.      OGGETTO DEL CAPITOLATO ................................................................................................................................ 3
+2.      OBIETTIVI ........................................................................................................................................................... 3
+3.      STATO DELL’ARTE DELL’INFRASTRUTTURA ESISTENTE ........................................................................................ 3
+4.      CARATTERISTICHE DELL’INFRASTRUTTURA RICHIESTA A NOLEGGIO................................................................... 3
+5.      SERVIZI RICHIESTI ............................................................................................................................................... 7
+     SERVIZIO DI INSTALLAZIONE, MIGRAZIONE, DOCUMENTAZIONE E FORMAZIONE ............................................................................... 7
+     SERVIZIO DI MANUTENZIONE E ASSISTENZA .............................................................................................................................. 7
+     MANUTENZIONE CORRETTIVA ................................................................................................................................................ 7
+     MANUTENZIONE PREVENTIVA ................................................................................................................................................ 8
+     REPORTISTICA ..................................................................................................................................................................... 8
+6.      CLASSIFICAZIONE DELLE PRIORITA’ E SLA ............................................................................................................ 9
+7.      PIANO ESECUTIVO E CRONOPROGRAMMA ........................................................................................................10
+8.      COLLAUDO ........................................................................................................................................................10
+9.      FORMAZIONE E AVVIAMENTO ...........................................................................................................................11
+10. PENALI ...............................................................................................................................................................12
+11. GARANZIA ASSICURATIVA ..................................................................................................................................13
+
+
+
+
+                                                                                                Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                                                         Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                                                        CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                                                                   Pagina 2 di 13
+1. OGGETTO DEL CAPITOLATO
+
+Oggetto del presente appalto è l’erogazione di un servizio di noleggio operativo all inclusive,
+caratterizzato da installazione, configurazione, attivazione, delle tecnologie di virtualizzazione
+comprensivo di manutenzione e assistenza full risk per 60 mesi, per le necessità di continuità
+operativa all’interno dei servizi erogati in favore dell’Azienda Sanitaria Universitaria Friuli
+Centrale.
+
+2. OBIETTIVI
+
+All’interno di un percorso di miglioramento e analisi dei processi aziendali, ed in ottemperanza a
+direttive e normative nazionali ed europee in materia di cybersecurity, data protection e cloud
+migration, l’Azienda Sanitaria Universitaria Friuli Centrale (di seguito ASU FC) si pone i seguenti
+obiettivi:
+ 1.   messa in sicurezza delle infrastrutture ancora on-premises destinate ad ospitare i servizi
+      attualmente in uso, anche di carattere clinico, al fine di garantire una sempre maggiore
+      protezione di dati e sistemi, con l’adozione di soluzioni moderne di business continuity e
+      disaster recovery;
+ 2.   disporre di un sistema per garantire l'immutabilità dei backup per assicurare una maggiore
+      sicurezza e resilienza dell’infrastruttura IT in caso di necessità di ripristino dei sistemi.
+ 3.   ridimensionare l’architettura complessiva on-premises mediante strumenti flessibili in grado
+      di accomodare il calo delle necessità di computing e storage.
+
+3. STATO DELL’ARTE DELL’INFRASTRUTTURA ESISTENTE
+ 1.
+Allo stato dell’arte l’infrastruttura IT di ASU FC che ospita l’impianto di virtualizzazione è
+installata, dal punto di vista logistico, presso:
+ •    due Data Center, siti in padiglioni diversi del P.O. S. Maria della Misericordia di Udine (di
+      seguito SMM), presso i quali è installato l'impianto di virtualizzazione, configurato in Alta
+      Affidabilità, basato su tecnologie:
+        o    Dell (per quanto riguarda l’hardware);
+        o    VMware (per quanto riguarda il sistema di gestione dei server virtuali);
+ •    un vano tecnico evoluto in cui sono mantenuti gli storage e vengono salvate le copie di
+      backup delle macchine virtuali;
+ •    dodici vani tecnici, uno per ognuna delle dodici sedi periferiche presso le quali è installato
+      un impianto di virtualizzazione (di seguito anche “infrastruttura di prossimità”), costituito
+      di fatto da un server VMware Esx implementato con delle licenze VMware di tipo ROBO.
+
+4. CARATTERISTICHE DELL’INFRASTRUTTURA RICHIESTA A NOLEGGIO
+
+Il servizio richiesto comprende le attività descritte nel presente capitolato e la messa a
+disposizione, di ASU FC e della SOC Tecnologie Informatiche, della Comunicazione e Agenda
+Digitale (di seguito SOC TICeAD), di un’infrastruttura nuova di fabbrica basata su sistemi
+hardware prodotti da un unico produttore. Si richiede un unico punto di contatto per il servizio di
+supporto     fornito   direttamente   dal   fornitore     per    garantire     una     maggiore       coerenza
+nell’integrazione delle componenti hardware e un’efficienza maggiore per i servizi di assistenza
+post vendita.
+
+
+                                                        Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                 Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                              Pagina 3 di 13
+Per il sito di SMM (nodo centrale dell’infrastruttura) deve essere messa a disposizione una
+soluzione in Business Continuity che include le tre componenti Server, Storage e Network. Essa
+deve prevedere l'utilizzo di apparati di calcolo, di storage esterni dedicati, e una configurazione
+dell’hypervisor che dovrà garantire l’alta affidabilità (HA), con uno schema architetturale dello
+storage di tipo "Metro Cluster" e di tipologia attivo-attivo che deve poter supportare
+l’indisponibilità programmata e/o non programmata di uno dei 2 datacenter di questo sito in
+modo che i servizi applicativi erogati non risentano di ritardi.
+Si richiede la seguente tipologia di infrastruttura, che si intende aggiornata allo stato dell’arte al
+momento della consegna:
+   •   infrastruttura    composta da apparecchiature DELL Technologies con le seguenti
+       caratteristiche minime:
+         o   nr. 4+4 Nodi (server esx) DELL R660, divisi nei due datacenter, ognuno con le
+             seguenti caratteristiche:
+                  ▪     CPU Intel Gold 6542Y da 2.9 Ghz con 24 core l’una;
+                  ▪     768 GB RAM;
+                  ▪     2x Broadcom 57414 Dual Port 10/25GbE SFP28;
+                  ▪     1x Broadcom 5720 Dual Port 1GbE;
+                  ▪     2x 480GB SSD per Hypervisor;
+                  ▪     iDrac9 Enterprise 16G;
+                  ▪     Dual, Hot-Plug, Power Supply Redundant (1+1), 1100W MM Titanium;
+         o   nr 1+1 Dell EMC - Storage PowerStore 500T – drive Full Flash NVMe configurato in
+             metro cluster:
+                  ▪     connettività: 4 x 25GbE Optical e 4 x 25GbE TwinAX;
+                  ▪     doppia alimentazione;
+                  ▪     array configurato con 80 TiB (base 2) di capacità disponibile per l’ambiente
+                        VMware ed erogare non meno di 50K IOPS;
+                  ▪     tecnologia All-Flash NVMe end-to-end: controller, cassetti di espansione e
+                        dischi devono comunicare utilizzando esclusivamente il protocollo NVMe;
+                         ▪   la   soluzione   proposta     deve    avere     due    controller    storage     in
+                             configurazione Active/Active e funzionalità NAS completamente
+                             integrate all’interno del controller. Il funzionamento dei controller deve
+                             essere Active/Active sia sul Front-End che sul Back-End e non sono
+                             consentite soluzioni con NAS Gateway esterni;
+                         ▪   la soluzione proposta deve permettere l’aggregazione di tutto lo spazio
+                             offerto da supporti di memorizzazione di capacità diversa in un singolo
+                             pool esposto a entrambi i controller;
+                         ▪   la soluzione proposta deve gestire tipologie di protezione moderne
+                             basate di parità e hot spare distribuiti, non sono accettate soluzioni con
+                             array basati su protezioni RAID tradizionali;
+                         ▪   la soluzione proposta deve includere meccanismi di data reduction
+                             always-on con compressione e deduplica in-line sull’intera capacità
+                             richiesta e su tutte le tipologie di dato esportato (blocco, file, vVol), la
+                             compressione deve essere gestita da hardware dedicato e non
+                             impattare sulle prestazioni del sistema;
+
+
+
+                                                        Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                 Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                               Pagina 4 di 13
+                        ▪   la soluzione proposta deve supportare l’architettura vSphere Metro
+                            Storage Cluster;
+         o   infrastruttura di hardened backup composta da:
+                   ▪   nr. 1 server DELL R760xd2 con:
+                        ▪   2x Intel® Xeon® Silver4410Y 2G;
+                        ▪   128 GB Ram;
+                        ▪   2*480GB RAID1 SSD per il sistema operativo;
+                        ▪   120 TB effective capacity - SAS in RAID 6;
+                        ▪   Dual, Hot-Plug, Power Supply Redundant (1+1), 1100W MM Titanium;
+                        ▪   iDrac9 Enterprise 16G;
+                        ▪   Broadcom 5720 Dual Port 1Gb On-Board LOM, ROW;
+                        ▪   Broadcom 57414 Dual Port 10/25GbE SFP28, OCP NIC 3.0;
+         o   infrastruttura di networking:
+                   ▪   nr. 2+2 Dell EMC - Switch S5248F-ON per la connessione interna ed esterna
+                       dell’infrastruttura;
+                   ▪   ogni switch deve essere fornito con alimentatori e ventole ridondati
+                       sostituibili a caldo;
+                   ▪   ogni switch deve supportare il routing e il bridging VXLAN per reti di overlay
+                       virtualizzate e non virtualizzate;
+   •   server di Witness:
+         o   1 server della stessa tipologia del sito SMM (DELL R660);
+                   ▪   CPU Intel Gold minimo 16 core da 2.8 Ghz;
+                   ▪   128GB RAM;
+                   ▪   2*960GB RAID1 SSD per il sistema operativo;
+                   ▪   doppia scheda di rete per almeno 4 porte Gbit Ethernet;
+                   ▪   Broadcom 57414 Dual Port 10/25GbE SFP28, OCP NIC 3.0;
+                   ▪   Dual, Hot-Plug, Power Supply Redundant (1+1);
+                   ▪   iDrac9 Enterprise 16G;
+   •   server di prossimità:
+         o   12 server della stessa tipologia del sito SMM (DELL R660);
+                   ▪   CPU Intel Gold minimo 16 core da 2.8 Ghz;
+                   ▪   128GB RAM;
+                   ▪   2*960GB RAID1 SSD per il sistema operativo;
+                   ▪   Almeno 10TB di spazio di storage per le VM con dischi SSD;
+                   ▪   almeno 8 porte Gbit Ethernet;
+                   ▪   Dual, Hot-Plug, Power Supply Redundant (1+1);
+                   ▪   iDrac9 Enterprise 16G;
+
+L'offerta deve comprendere tutta la cablatura necessaria per il corretto funzionamento
+dell'infrastruttura oggetto di fornitura, inclusi cavi in fibra ottica, connettori SFP e tutti gli altri
+componenti di cablaggio indispensabili per garantire la piena operatività della piattaforma.
+Per la sola componente dell’infrastruttura di prossimità, si richiede la predisposizione hardware
+e software del server, integrato nell’infrastruttura messa a disposizione, presso il sito di SMM,
+mentre l’installazione fisica sarà eseguita a cura di ASU FC.
+
+
+
+                                                        Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                 Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                               Pagina 5 di 13
+A livello software, si richiede la messa a disposizione di tecnologie e relative licenze (ultima
+versione disponibile) correttamente dimensionate per:
+       •    la piattaforma di virtualizzazione del sito SMM:
+                 o   Nr. 192 VMware vSphere Foundation - 5 years;
+                 o   5 anni maintenance 4h Mission Critical (Servizi Gestiti, Monitoraggio e gestione);
+                 o   VMware licenze VMware vSphere Foundation per i 16 core del server Witness;
+       •    la piattaforma di virtualizzazione delle sedi di prossimità:
+                 o   Nr. 192 VMware vSphere Foundation - 5 years per i 12 server di prossimità
+                     con 16 core ciascuno;
+       •    la piattaforma di hardened backup:
+                 o   Veeam Data Platform Advanced Edition (soluzione per la protezione dei dati,
+                     monitoraggio e allarmistica) dimensionato per la piattaforma di virtualizzazione
+                     del sito SMM, per circa 160 VM, comprendente 5 anni assistenza.
+
+
+La soluzione garantirà la resilienza rispetto alla perdita di un intero sito e, contemporaneamente,
+di uno dei server del datacenter residuo, limitatamente al cluster VMware.
+La soluzione proposta deve comprendere la fornitura, installazione e configurazione di tutti i
+componenti hardware e software necessari, assicurando la completa ridondanza delle principali
+componenti per garantire l'affidabilità e la continuità operativa. Si deve garantire la continuità e
+interoperabilità con l'ambiente applicativo esistente, senza richiedere alcuna reingegnerizzazione
+e deve essere assicurata la scalabilità dell'infrastruttura, permettendo l'aumento delle risorse
+computazionali, di storage e di networking semplicemente aggiungendo ulteriori nodi fisici o
+singoli componenti sui rispettivi nodi e/o storage.
+Con riferimento all’infrastruttura sopra descritta, si precisa che, al fine di:
+   •       permettere la migrazione a caldo delle macchine virtuali (oggi ospitate su VMware) e
+           agevolare lo spostamento dei dati;
+   •       garantire la compatibilità nel transitorio con l’impianto esistente;
+   •       permettere un unico punto di gestione centralizzato di                   tutta l’infrastruttura       di
+           virtualizzazione di ASU FC (sedi periferiche incluse);
+   •       valorizzare e impiegare al meglio la conoscenza tecnica e professionale del personale di ASU
+           FC;
+le marche e i modelli degli elementi sopra specificati sono da intendersi con prescrizioni in quanto:
+   •       legate a prodotti che soddisfano pienamente le esigenze aziendali della Stazione
+           Appaltante;
+   •       indispensabili per garantire la realizzabilità dell’intero progetto;
+   •       assicurano la spendibilità del know-how aziendale acquisito.
+
+
+La soluzione deve garantire prestazioni affidabili e performanti, rispondenti ai seguenti parametri
+in termini di Uptime e Disponibilità:
+       •    l'Uptime hardware deve essere almeno del 99,99%;
+            per i sistemi storage, i valori di RPO (Recovery Point Objective) e RTO (Recovery Time
+            Objective) devono essere pari a zero;
+       •    per i sistemi server l'RTO deve essere inferiore a 5 minuti.
+
+
+
+
+                                                          Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                   Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                  CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                                 Pagina 6 di 13
+La soluzione deve disporre di un sistema di backup dell’infrastruttura che deve garantire
+l’immutabilità dei dati di backup con retention configurabile: la funzione di Immutability protegge
+i backup contro sovrascrittura, cancellazioni accidentali, attacchi ransomware e malintenzionati
+interni. La funzione è richiesta dalle principali normative nazionali ed europee in ambito di cyber
+security.
+Dal punto di vista logistico il cluster esteso deve essere realizzato in un campus con due sale
+server distinte (Sala A e Sala B), distanti c.ca 500 metri; i due siti del data center devono essere
+simmetrici in termini di numero, tipologia e marca degli apparati, con l'unica eccezione dell'unità
+di Data Protection e il server Witness, che saranno installati in una terza Sala del campus, ed
+ogni nodo deve avere risorse sufficienti per operare autonomamente in caso di guasto o
+manutenzione di un intero sito.
+
+5. SERVIZI RICHIESTI
+Servizio di Installazione, Migrazione, Documentazione e Formazione
+
+Nell’ambito dell’installazione e migrazione del sistema sono richiesti i seguenti sevizi:
+   •   configurazione della rete sia per la parte LAN che per quella iSCSI, assicurando la
+       continuità del servizio e minimizzando l'impatto operativo durante il processo;
+   •   configurazione dei dispositivi storage per iSCSI e per la replica metro, inclusi i volumi e
+       gli host in configurazione metro, oltre ai path degli host verso i dispositivi di archiviazione;
+   •   dopo l'installazione del nuovo sistema di gestione centrale, questo dovrà essere collegato
+       ai dispositivi storage;
+   •   migrazione dell'attuale cluster verso il nuovo metrocluster senza interruzioni, garantendo
+       la continuità del servizio. La migrazione delle macchine virtuali e dei dati dovrà essere
+       effettuata garantendo la continuità del servizio e minimizzando l'impatto operativo, il
+       piano di migrazione sarà dettagliato nel piano esecutivo;
+   •   installazione e configurazione di un server come repository per backup sicuri e
+       riconfigurazione del software di backup per garantire backup immutabili;
+   •   fornitura della documentazione tecnica as built, completa di schemi funzionali, schede
+       tecniche, manuali d'uso, istruzioni operative per la protezione dei dati e dei sistemi, inclusi
+       il disaster recovery ed il recupero da ransomware specifici per l’infrastruttura oggetto del
+       noleggio e documentazione di collaudo e training on the job per assicurare una perfetta
+       integrazione e gestione delle nuove soluzioni.
+
+Servizio di Manutenzione e assistenza
+
+Si richiede un servizio di assistenza e manutenzione esteso per tutto il periodo di noleggio
+dell’infrastruttura. Questo servizio dovrà includere tutte le attività necessarie per garantire la
+continuità operativa e l'affidabilità del sistema.
+Si richiede un servizio completo che includa monitoraggio proattivo, manutenzione e assistenza
+per tutti gli apparati hardware e software forniti. Il servizio dovrà coprire tutta l'infrastruttura,
+comprese le macchine virtuali (VM). In caso di guasti hardware o software, il fornitore si impegna
+ad aprire una richiesta di supporto con i fornitori delle soluzioni installate e a gestirne la
+risoluzione per conto del cliente.
+
+Manutenzione correttiva
+
+
+                                                       Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                               CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                              Pagina 7 di 13
+La richiesta di assistenza in caso di necessità dovrà potersi effettuare via sistema di ticket o via
+help desk disponibile come di seguito:
+
+         Servizi                                      Copertura
+
+         Help Desk telefonico                         Da lunedì a venerdì        6:00-22:00
+
+
+Qualora l’operatore economico intenda offrire un servizio anche al di fuori della fascia oraria
+sopra indicata (ad esempio notti e fine settimana) tale fattispecie dovrà essere espressamente
+indicata ed esaurientemente descritta nell’offerta tecnica, e sarà oggetto di valutazione premiale.
+Il servizio include la messa a disposizione di una piattaforma di Trouble Ticketing che dovrà
+consentire le seguenti funzioni:
+     •   accesso indipendente alla piattaforma da parte del cliente;
+     •   notifiche di tipo Push, E-Mail e Teams verso il richiedente;
+     •   ricezione e classificazione delle richieste, siano esse Incident (anche derivanti dal sistema
+         di monitoraggio) o Request da parte del cliente;
+     •   gestione delle priorità, classificazione e assegnazione dei ticket. Tracciamento di ogni
+         richiesta, anche se in arrivo da più canali, attraverso un unico strumento. Possibilità di
+         effettuare una prima analisi all'apertura del ticket per qualificare al meglio il problema,
+         sia per una risoluzione immediata, sia per le eventuali fasi successive di intervento;
+     •   creazione di una knowledge-base per garantire efficacia e rapidità di gestione e chiusura
+         dei ticket con tematiche ricorrenti o già risolte;
+     •   gestione del flusso di ogni ticket fino alla chiusura, inclusa l'eventuale escalation verso
+         altri team, interni o esterni;
+     •   garanzia di tracciabilità di ogni attività svolta da ogni tecnico;
+     •   misurazione delle performance del servizio, inclusa la customer satisfaction degli utenti;
+     •   monitoraggio costante dell'andamento dei ticket aperti, in gestione e chiusi, con focus su
+         tempi e rispetto degli SLA.
+
+
+In aggiunta, si dovrà predisporre un automatismo di monitoraggio e allarmistica H24
+dell’infrastruttura.
+
+Manutenzione preventiva
+
+Si chiede:
+     •   applicazione, ove disponibili, di minor o major release VMware (cadenza almeno
+         annuale);
+     •   aggiornamento dei firmware dei server e dischi dell’impianto (cadenza almeno annuale).
+
+Reportistica
+
+Si richiede la disponibilità di una reportistica periodica che contenga tutte le informazioni
+necessarie a valutare il servizio erogato e la rispondenza alle esigenze di ASU FC e consentire
+anche la verifica dei Livelli di Servizio. Il report dovrà includere (a titolo esemplificativo e non
+esaustivo):
+     •   time-stamp delle richieste aperte;
+     •   soggetto richiedente (utente, team, monitoraggio, etc.) e indicazione della tipologia
+
+
+                                                       Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                               CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                              Pagina 8 di 13
+            (Incident/Request).
+       •    descrizione del problema;
+       •    azioni avviate e indicazioni dei flussi seguiti in caso di escalation verso altri livelli e
+            supporti (interni o esterni), con dettaglio sulla priorità, modalità di intervento e tempi
+            stimati;
+       •    time-stamp delle richieste chiuse con indicazioni di dettaglio sulla risoluzione;
+       •    dettagli delle attività di manutenzione preventiva effettuata.
+
+
+I servizi dovranno essere erogati on-site o da remoto da parte di figure professionali specializzate
+sui vari ambienti operativi e di prodotto, delle reti dati, di gestione sistemistica e dei sistemi di
+backup.
+
+
+I servizi di assistenza richiesti dovranno coprire tutti i prodotti offerti fino al livello della macchina
+virtuale (VM). Questo significa che ogni problema riscontrato sull'infrastruttura dovrà essere
+risolto dall’operatore economico, garantendo così un’assistenza completa per l'intera durata del
+contratto.
+
+
+È richiesto altresì un servizio di cancellazione certificata dei dati nei casi di necessità.
+
+
+I servizi tecnici per l’installazione delle tecnologie offerte comprendono tutte le attività necessarie
+per installare le tecnologie (server, software di base e d’ambiente, dispositivi, ecc..) al fine di
+mettere in funzione l’intero sistema entro i tempi previsti.
+
+
+
+6. CLASSIFICAZIONE DELLE PRIORITA’ e SLA
+
+L’operatore economico dovrà garantire un servizio di assistenza tecnica e manutenzione
+comprendente le attività ed avente le caratteristiche descritte nel precedente capitolo, secondo
+i livelli di servizio (SLA) dettagliati nel prosieguo. Con riferimento alla tabella sottostante, per:
+   •       “tempo di intervento” si intende la presa in carico e la prima analisi del problema o
+           malfunzionamento da parte dell’operatore economico;
+   •       “tempo di ripristino” si intende il tempo massimo concesso, dopo la presa in carico del
+           problema, per la risoluzione definitiva o temporanea dello stesso.
+Ricordato che l’urgenza è valutata ed attribuita, sulla base della criticità del componente e sul
+livello gravità del blocco delle funzionalità del sistema e del disagio recato all’organizzazione, a
+insindacabile giudizio, da parte del personale ASU FC, di seguito sono riportati i tempi massimi di
+intervento e di ripristino ammessi contrattualmente che saranno impiegati per la valutazione
+degli SLA specificate per grado di urgenza:
+
+                                                                          Tempo di ripristino o di
+              Grado di urgenza                    Tempo di               applicazione di soluzione
+                                                 intervento                    temporanea
+
+ Critico mancato funzionamento di uno
+ dei due datacenter in HA o blocco                   1 ora                             4 ore
+ dell’intera infrastruttura
+
+
+
+                                                         Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                  Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                                 CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                                Pagina 9 di 13
+ Medio (problema non bloccante):
+ l’infrastruttura eroga tutti i servizi, ma        4 ore                             8 ore
+ in modalità degradata.
+ Basso (problema non bloccante): il
+ problema non impatta sull’erogazione              8 ore                            16 ore
+ dei servizi
+All’interno della fascia oraria di copertura del servizio (da lunedì a venerdì 6:00-22:00), i tempi
+di intervento e ripristino indicati in tabella devono intendersi come ore lavorative.
+
+Qualora l’operatore economico intenda offrire un servizio migliorativo rispetto ai tempi di
+intervento e di risoluzione di cui alla tabella soprastante, tale fattispecie dovrà essere
+espressamente indicata ed esaurientemente descritta nell’offerta tecnica, e sarà oggetto di
+valutazione premiale.
+Al termine di ogni intervento il fornitore dovrà presentare un “incident report” indicante gli estremi
+di chiamata (codice identificativo, data, ora, unità organizzativa ed utente coinvolto), la
+descrizione del problema con grado di urgenza, tempo di intervento, tempo di ripristino e
+tipologia di risoluzione.
+Gli interventi saranno oggetto di monitoraggio da parte della Stazione Appaltante al fine di
+vigilare sul corretto rispetto degli SLA e sulle eventuali migliorie offerte.
+
+7. PIANO ESECUTIVO E CRONOPROGRAMMA
+
+È richiesto all’operatore economico di produrre e presentare un progetto contenente un
+cronoprogramma (diagramma di Gantt) da allegare in “Offerta Tecnica” dettagliato per le attività
+necessarie ad implementare, configurare, installare, testare, collaudare ed avviare il nuovo
+Sistema, “chiavi in mano” a beneficio di ASU FC e dell’ufficio competente.
+Il cronoprogramma dovrà tener conto delle seguenti fasi:
+
+
+Fase 1 – Approvvigionamento ed Installazione
+
+
+Fase 2 – Avvio dell’operatività
+
+
+Fase 3 – Collaudo in contraddittorio col personale della SOC TIC & AD
+
+
+Fase 4 - Formazione del personale della SOC TIC & AD
+
+
+Fase 5 – Messa in produzione della nuova piattaforma
+
+
+Il progetto, oltre ad una esaustiva e completa analisi dell’esecuzione del servizio, dovrà
+contenere inoltre l’indicazione delle risorse umane impiegate, in termini di quantità, profili
+professionali ed anzianità nel ruolo.
+
+
+
+8. COLLAUDO
+
+L'Aggiudicatario acquisirà diritto al pagamento del canone a partire dal collaudo esperito con
+
+
+
+                                                       Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                                Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                               CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                              Pagina 10 di 13
+esito positivo.
+In fase di collaudo dell'infrastruttura dovranno essere eseguite tutte le verifiche necessarie ad
+appurare il pieno e corretto funzionamento di tutti i componenti e dell’infrastruttura nel suo
+complesso, nonché la relativa conformità alle specifiche contrattuali. In particolare, si richiede:
+   •   il test di spegnimento dello storage e di tutti i nodi di uno dei due siti, per accertare la
+       corretta operatività del servizio Metro Cluster e garantire la continuità del sistema anche
+       in caso di guasto;
+   •   l'esecuzione dei job di backup e il ripristino di un file, per assicurare che i dati siano
+       protetti e recuperabili;
+   •   migrazione di un gruppo di macchine rappresentative, utile a definire e testare una
+       procedura operativa che comprenda tutte le azioni necessarie per trasferire le VM nel
+       nuovo ambiente.
+
+Solo al superamento di tutte le fasi di collaudo previste, la piattaforma oggetto di fornitura sarà
+considerata collaudata con esito positivo.
+In caso di esito negativo, anche parziale, del collaudo, l’Aggiudicatario ha l’onere di sostituire
+quanto non perfettamente funzionante e integrare quanto eventualmente mancante e di
+procedere al nuovo collaudo che, in ogni caso, dovrà concludersi positivamente entro il termine
+perentorio di 15 giorni naturali dalla data di comunicazione del mancato collaudo, pena
+l’applicazione delle penali descritte nell’articolo 10 del presente Capitolato. L’esito positivo del
+collaudo non esonera il fornitore da responsabilità per difetti e/o imperfezioni non emerse al
+momento del collaudo.
+La stazione appaltante si riserva, in sede di effettivo utilizzo, di procedere ad una verifica sulla
+corrispondenza    delle   caratteristiche   della   fornitura    con    quanto     dichiarato     e   offerto
+dall’Aggiudicatario, con riferimento alla documentazione tecnica prodotta e alle prestazioni
+richieste e dichiarate. Le eventuali spese per le analisi e le verifiche qualitative saranno a carico
+dell’Aggiudicatario qualora le caratteristiche rilevate risultassero difformi da quelle dichiarate.
+
+9. FORMAZIONE E AVVIAMENTO
+
+L’operatore economico dovrà allegare in Offerta Tecnica il documento di formazione e
+avviamento che dettagli le fasi del cronoprogramma del presente Capitolato e comprenda
+l’elenco dettagliato delle attività necessarie alla messa in esercizio del sistema, dall’installazione
+delle apparecchiature hardware e software necessarie, all’erogazione dei servizi di supporto
+all’avvio. Parte integrante del documento è la formazione del personale dell’ufficio competente di
+ASU FC e l’affiancamento in fase di avvio. In particolare l’attività di formazione dovrà essere
+erogata on site in orari che non pregiudichino l’attività del servizio. Tale documento dovrà
+contenere inoltre l’indicazione delle risorse umane impiegate, in termini di quantità, profili
+professionali, anzianità nel ruolo ed il relativo impegno in termini di giorni/uomo.
+Tutte le figure di ASU FC coinvolte dovranno essere formate sui principi di funzionamento del
+sistema e sul corretto utilizzo di tutti i dispositivi. L’operatore economico dovrà quindi prevedere
+specifiche sessioni di formazione tenute da personale specializzato sul sistema fornito e sui
+processi supportati, con rilascio di certificazioni e/o attestati sulla attività formativa eseguita.
+Per la fase di avvio del sistema dovranno essere forniti servizi di affiancamento, della durata
+minima di 5 giorni, anche non consecutivi, in grado di completare la fase di formazione degli
+
+
+
+                                                      Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                               Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                              CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                             Pagina 11 di 13
+operatori e garantire il successo dell’operazione.
+
+10.     PENALI
+Ogni eventuale mancato rispetto delle condizioni contrattuali e/o disservizio verrà segnalato
+formalmente da ASU FC al Fornitore che, entro e non oltre 10 giorni naturali consecutivi dal
+ricevimento della contestazione, dovrà comunicare formalmente ad ASU FC le proprie eventuali
+controdeduzioni. Trascorso inutilmente tale termine, le contestazioni mosse da ASU FC si
+intenderanno accettate e si procederà all’applicazione delle relative penali, calcolate come di
+seguito specificate, mediante la decurtazione dell’importo delle penali dal canone di noleggio del
+periodo in cui sono avvenute le inosservanze contrattuali o, in alternativa, dal canone di noleggio
+del primo periodo utile. Analogamente, nel caso in cui le controdeduzioni addotte dal Fornitore
+fossero ritenute da ASU FC, sulla base di motivate ragioni, non sufficienti e non accettabili a
+giustificazione del mancato rispetto delle condizioni contrattuali, ASU FC procederà con
+l’applicazione delle penali con le medesime modalità di cui sopra, dandone formale
+comunicazione al Fornitore.
+Fatti salvi gli impedimenti dovuti a forza maggiore o caso fortuito (eventi imprevedibili o
+eccezionali per i quali l’aggiudicatario non abbia trascurato le normali precauzioni in rapporto
+alla delicatezza e alla specificità delle prestazioni, non abbia omesso di trasmettere tempestiva
+comunicazione all’ASU FC, o imputabili all’ASU FC), qualora l’appaltatore non ottemperi ad uno
+qualsiasi degli obblighi assunti con l’aggiudicazione del contratto, l’ASU FC potrà applicare, per
+ogni infrazione rilevata, una penale compresa da un minimo dello 0,5 per mille ad un massimo
+di 1,5 per mille dell’ammontare netto contrattuale secondo la gravità della stessa, con particolare
+riferimento al danno subito e/o al disservizio provocato.
+Le inadempienze che potranno essere riscontrate sono indicate di seguito:
+   •   mancato rispetto delle direttive definite dal RUP o suo assistente, durante il corso della
+       gara o post aggiudicazione, riguardante aspetti generali attinenti all’organizzazione
+       dell’attività, procedure da rispettare, richiamo alle norme igieniche e di sicurezza e tutto
+       quanto non contemplato ai punti sottoelencati. In tal caso l’ASU FC si riserva la facoltà di
+       applicare una penale minima dello 0,5 per mille dell’ammontare netto contrattuale per
+       ogni inadempienza, da commisurare comunque alla gravità dell’inadempienza, per giorno
+       solare di ritardo o di mancato rispetto del cronoprogramma;
+   •   presentazione del progetto, inizio attività / avvio cantiere / consegna della fornitura,
+       tempi di installazione, messa in funzione e collaudo, in tempi superiori rispetto a quelli
+       indicati nel cronoprogramma presentato in offerta tecnica. In tal caso ASU FC si riserva
+       la facoltà di applicare una penale pari all’ 0,5 per mille dell’ammontare netto contrattuale
+       per ogni giorno solare di ritardo o di mancato rispetto del cronoprogramma;
+   •   non rispondenza all’attività di assistenza tecnica, rispetto a quanto richiesto ai paragrafi
+       5 “SERVIZI RICHIESTI” e 6 “CLASSIFICAZIONE DELLE PRIORITA’ e SLA” ed in
+       particolare:
+           o   in caso di guasto critico, penale dell’0,5 per mille dell’ammontare netto
+               contrattuale per ogni ora di ritardo eccedente il tempo massimo di ripristino del
+               corretto funzionamento dell’intera piattaforma (5 ore o inferiore nel caso di offerta
+               tecnica migliorativa);
+Le penali potranno essere applicate singolarmente o cumulativamente, laddove se ne dovessero
+
+
+
+                                                     Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                              Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                             CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                            Pagina 12 di 13
+riscontrare le condizioni, in riferimento a quanto sopra scritto.
+L’importo delle penali non può, pena la risoluzione del contratto per grave inadempimento,
+superare il limite del 10% dell’importo della fornitura.
+La Ditta Aggiudicataria prende atto che l’applicazione delle penali previste dal presente articolo
+non preclude il diritto ASU FC a richiedere il risarcimento degli eventuali maggiori danni.
+
+11.     GARANZIA ASSICURATIVA
+
+L’Appaltatore dovrà adottare ogni precauzione e ogni mezzo necessario a evitare danni alle
+persone e alle cose durante l’esecuzione del servizio/fornitura, ed è tenuto al risarcimento degli
+eventuali danni arrecati all’ASU FC e/o a terzi. L’Appaltatore ha la piena responsabilità, nei
+confronti dell’ASU FC, dei suoi dipendenti e dei terzi, per tutti gli infortuni e/o i danni derivanti
+da dolo, o colpa anche lieve, che fossero causati da manchevolezze o negligenze. L’accertamento
+degli eventuali danni subiti dall’Amministrazione o da terzi sarà effettuato in contraddittorio con
+il fornitore.
+A tale scopo ASU FC comunicherà il giorno e l’ora in cui si valuterà lo stato dei danni, in modo
+da consentire la partecipazione del fornitore o di un suo delegato.
+In caso di assenza del fornitore, ASU FC procederà autonomamente all’accertamento alla
+presenza di due testimoni. A seguito dell’accertamento verrà redatto apposito verbale per la
+constatazione e la quantificazione del danno.
+ASU FC a suo insindacabile giudizio, sulla base dell’accertamento effettuato e delle indicazioni
+del RUP potrà optare alternativamente per:
+    a) il ripristino dei luoghi e dei beni danneggiati, tramite l’esecuzione diretta dei lavori e/o
+        forniture necessarie da parte del fornitore a suo totale carico, entro un termine congruo;
+    b) il risarcimento del danno quantificato.
+A garanzia del risarcimento del danno di cui alla lettera b) all’atto della stipula del contratto, il
+fornitore dovrà consegnare, in originale o in copia resa conforme, una polizza assicurativa per
+responsabilità civile terzi (RCT) e della Responsabilità Civile verso prestatori di lavoro (RCO) con
+esclusivo riferimento alle attività previste nell’ambito del presente documento con un massimale
+non inferiore a Euro 5.000.000,00 per sinistro ed un massimale per ciascun anno non inferiore
+al triplo di quello per sinistro (D.M. 15 dicembre 2023, n. 232 art. 4 co.1 c). La suddetta
+copertura assicurativa potrà essere rappresentata da una nuova polizza oppure da una appendice
+a polizza preesistente, dovrà avere una durata non inferiore a quella del contratto, coprire tutti
+i rischi connessi con lo svolgimento delle prestazioni previste dal contratto.
+
+
+
+
+                                                     Azienda sanitaria universitaria Friuli Centrale – ASU FC
+                                                              Sede Legale: Via Pozzuolo 330 – 33100 Udine UD
+                                                             CF e PI 02985660303 – PEC asufc@certsanita.fvg.it
+
+
+
+                                            Pagina 13 di 13
+                                       Elenco firmatari
+ATTO SOTTOSCRITTO DIGITALMENTE AI SENSI DEL D.P.R. 445/2000 E DEL D.LGS. 82/2005 E SUCCESSIVE MODIFICHE E
+INTEGRAZIONI
+
+
+
+
+Questo documento è stato firmato da:
+
+
+NOME: LADI DE CET
+CODICE FISCALE: DCTLDA72M10D530W
+DATA FIRMA: 23/10/2025 17:46:25
+IMPRONTA: 0DD0C53A560F0825E113983934D2629B04227CE110B8AF5530C854E3ED8412C2
+          04227CE110B8AF5530C854E3ED8412C209C373146B5320B04146B4A3B095F613
+          09C373146B5320B04146B4A3B095F613E954F4AF3F42149369F07AAA25038C93
+          E954F4AF3F42149369F07AAA25038C936AFCEB04F5D4ADF152AC1735D178763E
+
+
+
+
+                                             Atto n. 1773 del 23/10/2025
+
