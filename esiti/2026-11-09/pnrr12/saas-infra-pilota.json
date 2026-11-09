@@ -1,0 +1,489 @@
+{
+ "data": "2026-11-09",
+ "metodo": "#43 pilota: su quale infrastruttura girano i SaaS dei fornitori PA (strato sotto S2/S3 della Misura 1.2).\n\nMetodo (ripetibile, poche richieste, nessun aggiramento):\n1. domini di secondo livello delle piattaforme SaaS già nell'archivio (archivio/mirror/<host>), con almeno MIN_HOST host\n   (= una piattaforma multi-ente: ogni ente ha il suo sottodominio sul SaaS del fornitore);\n2. per ogni dominio, fino a 3 host: record A (dig) e AS di origine dell'IP (DNS TXT origin.asn.cymru.com, Team Cymru);\n3. intestatario del dominio .it dal whois del Registro .it (whois.nic.it, porta 43, una richiesta per dominio);\n4. classe dell'AS: hyperscaler extra-UE (Amazon, Microsoft, Google, Oracle, Cloudflare, Akamai, Fastly = CDN), altro.\nLimite: si vede dove risponde il servizio pubblico (front-end o CDN), non dove stanno i dati; un CDN nasconde l'origine.\nUso: python tools/verifiche/saas_infra_pilota.py [--data AAAA-MM-GG] -> esiti/<data>/pnrr12/saas-infra-pilota.json",
+ "riepilogo_per_dominio": {
+  "altro (verificare: IT/UE?)": 11,
+  "Amazon (EXTRA-UE)": 2,
+  "Oracle (EXTRA-UE)": 2,
+  "Cloudflare CDN (EXTRA-UE)": 1,
+  "Microsoft (EXTRA-UE)": 1
+ },
+ "domini": [
+  {
+   "dominio": "trasparenza-valutazione-merito.it",
+   "host_in_archivio": 367,
+   "intestatario_whois": "Maggioli S.p.a.",
+   "prove": [
+    {
+     "host": "abbiategrasso.trasparenza-valutazione-merito.it",
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acicastello.trasparenza-valutazione-merito.it",
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acireale.trasparenza-valutazione-merito.it",
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "traspare.com",
+   "host_in_archivio": 167,
+   "intestatario_whois": null,
+   "prove": [
+    {
+     "host": "5t.traspare.com",
+     "ip": "15.161.163.114",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    },
+    {
+     "host": "acapescara.traspare.com",
+     "ip": "35.152.167.21",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    },
+    {
+     "host": "accademiacarrara.traspare.com",
+     "ip": "15.161.163.114",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "acquistitelematici.it",
+   "host_in_archivio": 161,
+   "intestatario_whois": "DigitalPA s.r.l.",
+   "prove": [
+    {
+     "host": "aceapinerolese.acquistitelematici.it",
+     "ip": "158.180.237.130",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    },
+    {
+     "host": "acquebresciane.acquistitelematici.it",
+     "ip": "158.180.237.130",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    },
+    {
+     "host": "adir.acquistitelematici.it",
+     "ip": "158.180.237.130",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "tuttogare.it",
+   "host_in_archivio": 152,
+   "intestatario_whois": "Studio Amica S.r.l.u",
+   "prove": [
+    {
+     "host": "acqualatina.tuttogare.it",
+     "ip": "95.174.19.99",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acquambientemarche.tuttogare.it",
+     "ip": "95.174.19.99",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acquapubblicasabina.tuttogare.it",
+     "ip": "95.174.19.99",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "maggiolicloud.it",
+   "host_in_archivio": 123,
+   "intestatario_whois": "Maggioli S.p.a.",
+   "prove": [
+    {
+     "host": "acamir-appalti.maggiolicloud.it",
+     "ip": "185.146.160.196",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acquerisorgive-appalti.maggiolicloud.it",
+     "ip": "185.146.160.77",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acselspa-appalti.maggiolicloud.it",
+     "ip": "185.146.160.216",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "portaletrasparenza.net",
+   "host_in_archivio": 75,
+   "intestatario_whois": null,
+   "prove": [
+    {
+     "host": "1000miglia.portaletrasparenza.net",
+     "ip": "129.152.18.174",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    },
+    {
+     "host": "acoset.portaletrasparenza.net",
+     "ip": "129.152.18.174",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    },
+    {
+     "host": "acquanovaravco.portaletrasparenza.net",
+     "ip": "129.152.18.174",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "portaleamministrazionetrasparente.it",
+   "host_in_archivio": 47,
+   "intestatario_whois": "Internet Soluzioni S.r.l.",
+   "prove": [
+    {
+     "host": "aciglobal.portaleamministrazionetrasparente.it",
+     "ip": "213.171.161.193",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "acinfomobility.portaleamministrazionetrasparente.it",
+     "ip": "213.171.161.193",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "aciservicemodena.portaleamministrazionetrasparente.it",
+     "ip": "213.171.161.193",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "cineca.it",
+   "host_in_archivio": 41,
+   "intestatario_whois": "CINECA Consorzio Interuniversitario",
+   "prove": [
+    {
+     "host": "areasciencepark.amministrazionetrasparente.cineca.it",
+     "ip": "141.101.90.105",
+     "as": 13335,
+     "as_nome": "CLOUDFLARENET - Cloudflare, Inc., US",
+     "classe": "Cloudflare CDN (EXTRA-UE)"
+    },
+    {
+     "host": "cinecaerp.ubuy.cineca.it",
+     "ip": "16.22.50.99",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    },
+    {
+     "host": "cnhpc.ubuy.cineca.it",
+     "ip": "16.22.57.13",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "etrasparenza.it",
+   "host_in_archivio": 33,
+   "intestatario_whois": "Internet Soluzioni Srl",
+   "prove": [
+    {
+     "host": "adspmam.etrasparenza.it",
+     "ip": "213.171.161.192",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "anzio.etrasparenza.it",
+     "ip": "213.171.161.192",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "ariano.etrasparenza.it",
+     "ip": "213.171.161.192",
+     "as": 12637,
+     "as_nome": "SEEWEB - SEEWEB s.r.l., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "asmenet.it",
+   "host_in_archivio": 33,
+   "intestatario_whois": "Asmenet Soc. Cons. a r.l.",
+   "prove": [
+    {
+     "host": "albocuringa.asmenet.it",
+     "ip": "156.54.202.243",
+     "as": 20746,
+     "as_nome": "ASN-IDC - Telecom Italia S.p.A., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "albofagnanocastello.asmenet.it",
+     "ip": "156.54.202.237",
+     "as": 20746,
+     "as_nome": "ASN-IDC - Telecom Italia S.p.A., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "albomaierato.asmenet.it",
+     "ip": "156.54.202.243",
+     "as": 20746,
+     "as_nome": "ASN-IDC - Telecom Italia S.p.A., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "toscana.it",
+   "host_in_archivio": 22,
+   "intestatario_whois": "(nessun intestatario pubblico)",
+   "prove": [
+    {
+     "host": "arti.toscana.it",
+     "ip": "159.213.168.97",
+     "as": 6882,
+     "as_nome": "RTRT-PEGASO - Regione Toscana, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "dekreti.arpat.toscana.it",
+     "ip": "159.213.168.195",
+     "as": 6882,
+     "as_nome": "RTRT-PEGASO - Regione Toscana, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "sanita.start.toscana.it",
+     "ip": "159.213.189.66",
+     "as": 6882,
+     "as_nome": "RTRT-PEGASO - Regione Toscana, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "veneto.it",
+   "host_in_archivio": 21,
+   "intestatario_whois": "(nessun intestatario pubblico)",
+   "prove": [
+    {
+     "host": "albi.azero.veneto.it",
+     "ip": "3.67.162.62",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)"
+    },
+    {
+     "host": "appaltitelematici.regione.veneto.it",
+     "ip": "89.17.161.119",
+     "as": 41651,
+     "as_nome": "ASN-RVE - Regione Veneto, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "at.aovr.veneto.it",
+     "ip": "93.57.32.100",
+     "as": 12874,
+     "as_nome": "FASTWEB - Fastweb SpA, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "soluzionipa.it",
+   "host_in_archivio": 20,
+   "intestatario_whois": "DEDAGROUP SPA",
+   "prove": [
+    {
+     "host": "asstbgest.soluzionipa.it",
+     "ip": "150.171.110.119",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)"
+    },
+    {
+     "host": "baiano.soluzionipa.it",
+     "ip": "150.171.110.119",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)"
+    },
+    {
+     "host": "battipaglia.soluzionipa.it",
+     "ip": "150.171.110.119",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "camcom.it",
+   "host_in_archivio": 18,
+   "intestatario_whois": "Camera Di Commercio Di Milano",
+   "prove": [
+    {
+     "host": "amministrazione-trasparente.rm.camcom.it",
+     "ip": "80.82.9.2",
+     "as": 25569,
+     "as_nome": "INFOCAMERE-AS - InfoCamere SCpA, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "tno.camcom.it",
+     "ip": "89.105.65.212",
+     "as": 41381,
+     "as_nome": "lucense-asn - Lucense SCaRL, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "www.ba.camcom.it",
+     "ip": "62.149.172.216",
+     "as": 31034,
+     "as_nome": "ARUBA-ASN - Aruba S.p.A., IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "fvg.it",
+   "host_in_archivio": 16,
+   "intestatario_whois": "(nessun intestatario pubblico)",
+   "prove": [
+    {
+     "host": "albopretorio.regione.fvg.it",
+     "ip": "193.43.177.49",
+     "as": 44831,
+     "as_nome": "INSIEL-AS - Insiel- Informatica per il sistema degli enti locali S.p.A, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "amministrazionetrasparente.regione.fvg.it",
+     "ip": "193.43.177.49",
+     "as": 44831,
+     "as_nome": "INSIEL-AS - Insiel- Informatica per il sistema degli enti locali S.p.A, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "arcs.sanita.fvg.it",
+     "ip": "193.43.173.91",
+     "as": 44831,
+     "as_nome": "INSIEL-AS - Insiel- Informatica per il sistema degli enti locali S.p.A, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  },
+  {
+   "dominio": "sicilia.it",
+   "host_in_archivio": 15,
+   "intestatario_whois": "(nessun intestatario pubblico)",
+   "prove": [
+    {
+     "host": "amministrazionetrasparente.regione.sicilia.it",
+     "ip": "93.45.16.216",
+     "as": 12874,
+     "as_nome": "FASTWEB - Fastweb SpA, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "appalti.adrano.lavoripubblici.sicilia.it",
+     "ip": "89.168.31.49",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    },
+    {
+     "host": "appalti.agrigento.lavoripubblici.sicilia.it",
+     "ip": "89.168.31.49",
+     "as": 31898,
+     "as_nome": "ORACLE-BMC-31898 - Oracle Corporation, US",
+     "classe": "Oracle (EXTRA-UE)"
+    }
+   ]
+  },
+  {
+   "dominio": "marche.it",
+   "host_in_archivio": 15,
+   "intestatario_whois": "(nessun intestatario pubblico)",
+   "prove": [
+    {
+     "host": "appalti-ast2an.sanita.marche.it",
+     "ip": "84.38.48.113",
+     "as": 41325,
+     "as_nome": "REGIONEMARCHE-BKB-AS - REGIONE MARCHE, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "appalti-usr.regione.marche.it",
+     "ip": "84.38.48.113",
+     "as": 41325,
+     "as_nome": "REGIONEMARCHE-BKB-AS - REGIONE MARCHE, IT",
+     "classe": "altro (verificare: IT/UE?)"
+    },
+    {
+     "host": "bandi.regione.marche.it",
+     "ip": "176.100.173.88",
+     "as": 48851,
+     "as_nome": "radware - Radware Ltd, IL",
+     "classe": "altro (verificare: IT/UE?)"
+    }
+   ]
+  }
+ ]
+}

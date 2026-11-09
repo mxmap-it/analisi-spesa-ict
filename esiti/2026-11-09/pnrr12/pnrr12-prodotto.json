@@ -281,6 +281,183 @@
    }
   ]
  },
+ "ocds": {
+  "cig_1_2_in_ocds": 5565,
+  "s6_in_ocds_senza_fornitori": 3445,
+  "con_fornitori": 1374,
+  "precisione_vs_anac": {
+   "casi": 1374,
+   "corretti": 1269,
+   "pct": 92.4,
+   "errori_esempi": [
+    {
+     "cig": "9274318154",
+     "anac": "SINERGIS S.R.L.",
+     "ocds": [
+      "DEDAGROUP PUBLIC SERVICE SRL"
+     ]
+    },
+    {
+     "cig": "9443593B77",
+     "anac": "TIM S.P.A.",
+     "ocds": [
+      "TELECOM ITALIA S.PA"
+     ]
+    },
+    {
+     "cig": "9447348632",
+     "anac": "KIBERNETES S.R.L.",
+     "ocds": [
+      "KIBERNETS"
+     ]
+    },
+    {
+     "cig": "9457353695",
+     "anac": "GT SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
+     "ocds": [
+      "GT S.R.L.S. - CONCESSIONARIA ARGO"
+     ]
+    },
+    {
+     "cig": "9459610D1C",
+     "anac": "DINOVA S.R.L.",
+     "ocds": [
+      "INJENIA S.R.L."
+     ]
+    },
+    {
+     "cig": "9467132C76",
+     "anac": "EDS S.R.L.",
+     "ocds": [
+      "EDS S.R.L."
+     ]
+    },
+    {
+     "cig": "9493332166",
+     "anac": "WIN X PAL S.R.L.",
+     "ocds": [
+      "WINXPAL"
+     ]
+    },
+    {
+     "cig": "9499833630",
+     "anac": "INVA SPA",
+     "ocds": [
+      "IN.VA. SPA"
+     ]
+    },
+    {
+     "cig": "9501118A99",
+     "anac": "WE-COM S.R.L.",
+     "ocds": [
+      "WECOM SRL"
+     ]
+    },
+    {
+     "cig": "9502461EDF",
+     "anac": "TIM S.P.A.",
+     "ocds": [
+      "TELECOM ITALIA S.P.A."
+     ]
+    },
+    {
+     "cig": "9505130968",
+     "anac": "LTA S.R.L.",
+     "ocds": [
+      "LTA S.R.L."
+     ]
+    },
+    {
+     "cig": "9508955DE4",
+     "anac": "WIN X PAL S.R.L.",
+     "ocds": [
+      "WINXPAL"
+     ]
+    },
+    {
+     "cig": "9511892597",
+     "anac": "GRUPPO SE.CO.GES. S.R.L.",
+     "ocds": [
+      "SE.CO.GES S.R.L."
+     ]
+    },
+    {
+     "cig": "9516666937",
+     "anac": "SINERGIS S.R.L.",
+     "ocds": [
+      "DEDAGROUP PUBLIC SERVICE SRL"
+     ]
+    },
+    {
+     "cig": "9520477229",
+     "anac": "TIM S.P.A.",
+     "ocds": [
+      "TELECOM ITALIA S.P.A."
+     ]
+    },
+    {
+     "cig": "9528058233",
+     "anac": "GRUPPO SE.CO.GES. S.R.L.",
+     "ocds": [
+      "SE.CO.GES S.R.L."
+     ]
+    },
+    {
+     "cig": "952811513D",
+     "anac": "LTA S.R.L.",
+     "ocds": [
+      "LTA S.R.L."
+     ]
+    },
+    {
+     "cig": "95463991AC",
+     "anac": "GIS & WEB S.A.S. DI STARNINI ROBERTO & C.",
+     "ocds": [
+      "GIS & WEB SRL"
+     ]
+    },
+    {
+     "cig": "9551643926",
+     "anac": "ASMENET AMBIENTE S.R.L.",
+     "ocds": [
+      "05424691219"
+     ]
+    },
+    {
+     "cig": "9552174F56",
+     "anac": "DEDA NEXT S.R.L.",
+     "ocds": [
+      "DEDAGROUP PUBLIC SERVICES SRL"
+     ]
+    }
+   ]
+  }
+ },
+ "scheda_acn_dal_testo": {
+  "cig_s2": 3145.7,
+  "eur_s2": 150213652,
+  "cig_con_scheda": 84.0,
+  "eur_con_scheda": 2199996,
+  "campione": "campione-scheda.csv (40, seme 4343)"
+ },
+ "pilota_infra_eur_s2_s3": {
+  "maggioli → AS208761 Maggioli (IT)": {
+   "cig": 572.0,
+   "eur": 37914832
+  },
+  "dedagroup → AS8075 Microsoft (EXTRA-UE)": {
+   "cig": 1.0,
+   "eur": 180769
+  },
+  "digitalpa → AS31898 Oracle (EXTRA-UE)": {
+   "cig": 2.0,
+   "eur": 7546
+  },
+  "studio amica → AS12637 Seeweb (IT)": {
+   "cig": 4.0,
+   "eur": 37165
+  }
+ },
  "token_s4_candidati": 85,
  "token_s4_tenuti": 8
 }

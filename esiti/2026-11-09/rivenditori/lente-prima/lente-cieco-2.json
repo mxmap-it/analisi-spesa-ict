@@ -1,0 +1,106 @@
+{
+ "disegno": {
+  "universo": "lavoro/imbuto/ict.csv, anno>=2024, strati S2-S4, esclusi v3 e primo campione a cieco",
+  "seme": 20261107,
+  "per_strato": 40,
+  "dimensione_strati": {
+   "S2": 5197,
+   "S3": 840,
+   "S4": 7719
+  }
+ },
+ "per_strato": {
+  "S2": {
+   "n": 40,
+   "bt_tp": 1,
+   "bt_fp": 0,
+   "bt_fn": 1,
+   "diz_tp": 2,
+   "diz_fp": 0,
+   "diz_fn": 1
+  },
+  "S3": {
+   "n": 40,
+   "bt_tp": 38,
+   "bt_fp": 0,
+   "bt_fn": 0,
+   "diz_tp": 38,
+   "diz_fp": 0,
+   "diz_fn": 0
+  },
+  "S4": {
+   "n": 40,
+   "bt_tp": 23,
+   "bt_fp": 0,
+   "bt_fn": 0,
+   "diz_tp": 29,
+   "diz_fp": 1,
+   "diz_fn": 0
+  }
+ },
+ "bigtech_usa": {
+  "campione": {
+   "tp": 62,
+   "fp": 0,
+   "fn": 1,
+   "precisione": 1.0,
+   "precisione_w95": [
+    0.942,
+    1.0
+   ],
+   "richiamo": 0.984,
+   "richiamo_w95": [
+    0.915,
+    0.997
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 1.0,
+   "richiamo": 0.976,
+   "cig_stimati_veri_positivi": 5366,
+   "cig_stimati_falsi_positivi": 0,
+   "cig_stimati_mancati": 130
+  }
+ },
+ "tutti_i_provider": {
+  "campione": {
+   "tp": 69,
+   "fp": 1,
+   "fn": 1,
+   "precisione": 0.986,
+   "precisione_w95": [
+    0.923,
+    0.997
+   ],
+   "richiamo": 0.986,
+   "richiamo_w95": [
+    0.923,
+    0.997
+   ]
+  },
+  "pesato_universo": {
+   "precisione": 0.972,
+   "richiamo": 0.981,
+   "cig_stimati_veri_positivi": 6654,
+   "cig_stimati_falsi_positivi": 193,
+   "cig_stimati_mancati": 130
+  }
+ },
+ "errori": [
+  {
+   "cig": "B3DB05611C",
+   "strato": "S2",
+   "lente": "",
+   "etichetta": "Microsoft",
+   "testo": "FORNITURA NR. 10 PC, NR. 1 SERVER E RELATIVE LICENZE OFFICE, DISPOSITIVO RILEVAMENTO PRESENZE E MONITOR INTERATTIVO | SVILUPPO DEL SISTEMA INFORMATIVO COMUNALE"
+  },
+  {
+   "cig": "BCC1005596",
+   "strato": "S4",
+   "lente": "In-house pubblico",
+   "etichetta": "",
+   "testo": "PREV26_042SA SUPPORTO NELL'ANALISI DELL'ARCHITETTURA INFRASTRUTTURALE CLOUD DI LEPIDA SCPA | PREV26_042SA SUPPORTO NELL'ANALISI DELL'ARCHITETTURA INFRASTRUTTURALE CLOUD DI LEPIDA SCPA"
+  }
+ ],
+ "nota": "riferimento = lettura umana del solo oggetto; negli strati S0/S5 (314 mila CIG) 0 menzioni su 80: il richiamo pesato ha incertezza alta"
+}
