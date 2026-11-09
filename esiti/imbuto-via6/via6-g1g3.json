@@ -54,31 +54,31 @@
   "G3": {
    "cig_totali": 1000,
    "euro_totali": 1546339517,
-   "cig_classificati": 574,
-   "euro_classificati": 1209198882,
+   "cig_classificati": 634,
+   "euro_classificati": 1268462724,
    "confidenza": {
-    "media": 472,
-    "bassa": 66,
-    "alta": 36
+    "media": 515,
+    "bassa": 74,
+    "alta": 45
    },
-   "fonte_primaria": 56,
-   "con_documento_archiviato": 196,
+   "fonte_primaria": 67,
+   "con_documento_archiviato": 221,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 298,
-     "euro": 635708038
+     "cig": 335,
+     "euro": 672093739
     },
     "A:incerto | B:incerto": {
-     "cig": 147,
-     "euro": 315581717
+     "cig": 164,
+     "euro": 332482871
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 121,
-     "euro": 235511904
+     "cig": 126,
+     "euro": 240485166
     },
     "A:incluso-certo | B:incluso-certo": {
-     "cig": 8,
-     "euro": 22397223
+     "cig": 9,
+     "euro": 23400948
     }
    }
   },
@@ -143,28 +143,28 @@
   },
   "G3": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 103,
-    "euro": 215844926
+    "cig": 115,
+    "euro": 227672191
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 195,
-    "euro": 419863113
+    "cig": 220,
+    "euro": 444421547
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
     "cig": 1,
     "euro": 1699969
    },
    "incluso certo cloud, giurisdizione IT (proposta via 6)": {
-    "cig": 4,
-    "euro": 10860590
+    "cig": 5,
+    "euro": 11864315
    },
    "incluso certo cloud, giurisdizione UE (proposta via 6)": {
     "cig": 3,
     "euro": 9836664
    },
    "resta incerto (S6)": {
-    "cig": 268,
-    "euro": 551093621
+    "cig": 290,
+    "euro": 572968037
    }
   },
   "CTL": {
@@ -236,31 +236,31 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 293,
+  "cig_con_ostacoli": 308,
   "per_tipo": {
-   "altro": 236,
-   "403": 57,
-   "404": 54,
-   "login": 49,
+   "altro": 251,
+   "403": 59,
+   "404": 56,
+   "login": 52,
    "pdf-illeggibile": 11,
    "link-pvl-rotto": 10
   },
   "domini_principali": {
-   "dati.anticorruzione.it": 18,
+   "dati.anticorruzione.it": 19,
    "www.sintel.regione.lombardia.it": 12,
    "piattaformaacquisti.rai.it": 10,
-   "www.difesa.it": 9,
+   "www.difesa.it": 10,
    "www.acquistinretepa.it": 8,
    "www.anticorruzione.it": 7,
-   "": 6,
+   "gareappalti.bancaditalia.it": 7,
+   "": 7,
+   "www.stradeanas.it": 6,
    "sisgap.regione.calabria.it": 5,
    "www.ariaspa.it": 5,
    "pubblicitalegale.anticorruzione.it": 4,
    "op.europa.eu": 4,
-   "gareappalti.bancaditalia.it": 4,
    "portalebandi.regione.basilicata.it": 4,
-   "portaleacquisti.aci.it": 4,
-   "portaleappalti.sace.it": 4
+   "portaleacquisti.aci.it": 4
   }
  },
  "consumo": {
@@ -273,8 +273,8 @@
    "usd_eq": 138.17
   },
   "imbuto-g3": {
-   "chiamate": 115,
-   "usd_eq": 185.94
+   "chiamate": 126,
+   "usd_eq": 206.52
   },
   "imbuto-revisione": {
    "chiamate": 30,
@@ -287,8 +287,8 @@
   "g3_stima": {
    "stima_1000": 360,
    "limite_+20%": 432,
-   "per_cig": 0.324,
-   "proiezione_1000": 323.9
+   "per_cig": 0.326,
+   "proiezione_1000": 325.7
   }
  }
 }
