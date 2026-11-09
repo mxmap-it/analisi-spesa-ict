@@ -4,7 +4,7 @@
 # Fonte delle denominazioni: vocabolario CPV 2008, Reg. (CE) 213/2008, allegato I, come riportato nel campo descrizione_cpv
 # dei CIG ANAC (BDNCP). Fuori lista un CIG entra lo stesso se il testo ha segnali ICT (RX_ICT in tools/analisi/imbuto.py).
 # La misura per riga sta in esiti/<data>/cpv/perimetro-cpv.json.
-versione: "perimetro-cpv-0.2 (2026-11-07)"  # 0.2: 79342 fuori, RX_ICT con sw e connettività (decisione di Fabio del 7/11)
+versione: "perimetro-cpv-0.3 (2026-11-09)"  # 0.3: lacune del vocabolario, sottoclasse videosorveglianza proposta, raccomandazioni (#59). 0.2: 79342 fuori, RX_ICT con sw e connettività (decisione di Fabio del 7/11)
 lista_bianca:
   - {prefisso: "48",    denominazione: "Pacchetti software e sistemi di informazione", fonte: "Reg. 213/2008, divisione 48"}
   - {prefisso: "72",    denominazione: "Servizi informatici: consulenza, sviluppo di software, Internet e supporto", fonte: "Reg. 213/2008, divisione 72"}
@@ -59,3 +59,31 @@ esclusioni_verificate:
   - codici: "30121 (fotocopiatrici), 32323500 (videosorveglianza), 80500 (formazione)"
     stato: fuori lista
     misura: "1-2 casi ciascuno fra gli ICT dei campioni; non giustificano l'ingresso (rientrano per testo quando serve)"
+# --- 9/11/2026 (#59): lacune del vocabolario CPV 2008 per il cloud e raccomandazioni (misura: esiti/2026-11-09/cpv/rapporto-cpv.json)
+lacune_vocabolario_cloud:
+  - lacuna: "nessun codice per IaaS, PaaS e SaaS distinti"
+    codici_vicini: ["72415000 hosting WWW", "72416000 fornitori di servizi applicativi (ASP)", "72317000 archiviazione dati", "72410000 provider"]
+    misura: "su 171 cloud del campione 611 solo 26 hanno un CPV di servizio erogato coerente; 135 hanno un codice ICT generico (72000000, 72500000, 48xxxxxx), 10 un codice fuori lista o il segnaposto"
+  - lacuna: "abbonamento SaaS e licenza perpetua indistinti"
+    codici_vicini: ["48xxxxxx (pacchetti per funzione)", "72268000 fornitura di software"]
+    misura: "licenze del 611: 76 coerenti, 38 parziali (codice di gruppo), 2 fuori lista"
+  - lacuna: "nessun codice per cloud privato in-house, PSN, community cloud, colocation"
+    codici_vicini: ["72510000 gestione informatica", "72514000 facility management"]
+    misura: "PSN del 611: 45 su 58 con codice di gestione o hosting, indistinguibili dagli altri servizi gestiti"
+  - lacuna: "nessun attributo di modello di servizio, modello di erogazione, prodotto, produttore, sede dei dati, giurisdizione, qualificazione ACN"
+    codici_vicini: []
+    misura: "nessuno: il vocabolario descrive l oggetto merceologico, non l architettura né la sovranità"
+  - lacuna: "nessun codice per backup, disaster recovery e continuità operativa come servizio"
+    codici_vicini: ["72251000 servizi di disaster recovery (software)", "72317000 archiviazione dati"]
+    misura: "non misurata a parte (pochi casi nel 611)"
+sottoclassi_proposte:
+  - prefisso: "3224"
+    sottoclasse: "videosorveglianza"
+    regola: "RX_VIDEO in tools/verifiche/cpv_rapporto.py (videosorveglianza, telecamere, ZTL, targhe, fototrappole, TVCC)"
+    stato: "PROPOSTA, decide Fabio (scheda report/cpv/decisione-3224-videosorveglianza.md)"
+    misura: "dal 2024: 996 CIG su 1.218 (82 %), 35,9 M€ senza l errore B139F77033; ICT stretto 14 CIG (0,3 M€); regola contro la review: precisione 89 %, richiamo 91 %"
+raccomandazioni:
+  - {id: R21, sintesi: "controllo di coerenza CPV-oggetto al rilascio del CIG; campi strutturati ICT", misura_9_11: "CPV in lista su oggetto non ICT 6,5 % (IC 4,9-8,6, n 705); oggetto ICT con CPV fuori lista 9,2 % (7,1-11,9, n 543); scuole 32 % di CPV ICT su oggetti non ICT (n 22)"}
+  - {id: R60, sintesi: "non accettare il segnaposto 99999999"}
+  - {id: R79, sintesi: "codici o attributi CPV per IaaS/PaaS/SaaS, modello di erogazione e sede dei dati nella revisione del vocabolario (DG GROW)"}
+  - {id: R80, sintesi: "riclassificazione pubblica del CPV ex post per i contratti ICT, con tabella di corrispondenza versionata (dati/classificazioni/cpv-riclassificazione.csv)"}

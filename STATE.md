@@ -131,6 +131,13 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
   - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
   - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
   - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
+- **#44 #59, 9/11/2026 (rapporto CPV 0.3, verifica `tools/verifiche/cpv_rapporto.py` → `esiti/2026-11-09/cpv/rapporto-cpv.json`):**
+  - CPV ICT su oggetto non ICT 6,5 % (46/705; scuole 32 %); oggetto ICT con CPV non ICT 9,2 % (50/543; 2024 20 %); universo dal 2024: 130.678 CIG entrano solo per testo;
+  - cloud: 26/171 (15 %) con codice di servizio erogato; lacune in `config/perimetro_cpv.yaml` (0.3), R79 e R80 nuove;
+  - riclassificazione `dati/classificazioni/cpv-riclassificazione.csv` (611);
+  - effetto 0.3.3 vs 0.3.2 con R53: 385.249 → 383.148 CIG (−5.694 di 79342, +3.593 RX), 502,5 → 506,0 mld dichiarati;
+  - **ATTESA Fabio:** scheda `report/cpv/decisione-3224-videosorveglianza.md` (996/1.218 videosorveglianza, 35,9 M€ senza B139F77033; proposta A sottoclasse in S5);
+  - pagina `sito/content/progetto/perimetro-ict.md` (0.3, registro revisioni); rendiconto bozza `perimetro-cpv.md` 0.3 non annunciato.
 - **#44, decisione di Fabio del 7/11:**
   - 79342 tolto da CPV_ICT e dal yaml, dopo la review di 177 CIG (3,0 % ICT veri stimati, 0 sopra 1 M€): 5.706 CIG e 539 M€ dal 2024 passano in S1;
   - 3224 resta in lista: la review dice 79 % videosorveglianza, 2,4 % ICT stretto; una sottoclasse videosorveglianza da decidere. Il CIG B139F77033 ha un importo errato di 4,7 mld;

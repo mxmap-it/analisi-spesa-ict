@@ -1,0 +1,684 @@
+{
+ "generato": "2026-11-09",
+ "versione_lista": "perimetro-cpv-0.2 (2026-11-07)",
+ "versione_imbuto": "imbuto-0.3.4 (2026-11-09)",
+ "A_attendibilita": {
+  "n_righe": 1011,
+  "anni_campioni": {
+   "L|2024": 55,
+   "L|2026": 62,
+   "L|2025": 83,
+   "S1|2025": 110,
+   "S1|2024": 90,
+   "V3|2025": 165,
+   "V3|2024": 153,
+   "V3|2023": 112,
+   "V3|2026": 102,
+   "V3|2022": 79
+  },
+  "cpv_ict_oggetto_non_ict": {
+   "per_anno": {
+    "2019-2023": [
+     16,
+     169,
+     0.0947,
+     0.0591,
+     0.1483
+    ],
+    "2024": [
+     4,
+     164,
+     0.0244,
+     0.0095,
+     0.061
+    ],
+    "2025": [
+     17,
+     223,
+     0.0762,
+     0.0481,
+     0.1187
+    ],
+    "2026": [
+     9,
+     149,
+     0.0604,
+     0.0321,
+     0.1108
+    ],
+    "tutti": [
+     46,
+     705,
+     0.0652,
+     0.0493,
+     0.0859
+    ]
+   },
+   "per_tipo": {
+    "altro": [
+     12,
+     174,
+     0.069,
+     0.0399,
+     0.1167
+    ],
+    "comune": [
+     12,
+     149,
+     0.0805,
+     0.0467,
+     0.1355
+    ],
+    "regione-provincia": [
+     1,
+     50,
+     0.02,
+     0.0035,
+     0.105
+    ],
+    "sanita": [
+     3,
+     85,
+     0.0353,
+     0.0121,
+     0.0987
+    ],
+    "scuola": [
+     7,
+     22,
+     0.3182,
+     0.1636,
+     0.5268
+    ],
+    "societa-partecipata": [
+     5,
+     137,
+     0.0365,
+     0.0157,
+     0.0826
+    ],
+    "stato-centrale": [
+     4,
+     39,
+     0.1026,
+     0.0406,
+     0.2358
+    ],
+    "tutti": [
+     46,
+     705,
+     0.0652,
+     0.0493,
+     0.0859
+    ],
+    "universita-ricerca": [
+     2,
+     49,
+     0.0408,
+     0.0113,
+     0.1371
+    ]
+   },
+   "solo_L_per_anno": {
+    "2024": [
+     2,
+     49,
+     0.0408,
+     0.0113,
+     0.1371
+    ],
+    "2025": [
+     9,
+     75,
+     0.12,
+     0.0644,
+     0.2126
+    ],
+    "2026": [
+     3,
+     56,
+     0.0536,
+     0.0184,
+     0.1461
+    ],
+    "tutti": [
+     14,
+     180,
+     0.0778,
+     0.0469,
+     0.1263
+    ]
+   }
+  },
+  "oggetto_ict_cpv_non_ict": {
+   "per_anno": {
+    "2019-2023": [
+     5,
+     158,
+     0.0316,
+     0.0136,
+     0.0719
+    ],
+    "2024": [
+     29,
+     142,
+     0.2042,
+     0.1461,
+     0.2779
+    ],
+    "2025": [
+     11,
+     151,
+     0.0728,
+     0.0412,
+     0.1257
+    ],
+    "2026": [
+     5,
+     92,
+     0.0543,
+     0.0234,
+     0.121
+    ],
+    "tutti": [
+     50,
+     543,
+     0.0921,
+     0.0705,
+     0.1194
+    ]
+   },
+   "per_tipo": {
+    "altro": [
+     13,
+     141,
+     0.0922,
+     0.0547,
+     0.1514
+    ],
+    "comune": [
+     8,
+     102,
+     0.0784,
+     0.0403,
+     0.1472
+    ],
+    "regione-provincia": [
+     7,
+     45,
+     0.1556,
+     0.0775,
+     0.2878
+    ],
+    "sanita": [
+     10,
+     77,
+     0.1299,
+     0.0721,
+     0.2228
+    ],
+    "scuola": [
+     1,
+     4,
+     0.25,
+     0.0456,
+     0.6994
+    ],
+    "societa-partecipata": [
+     7,
+     113,
+     0.0619,
+     0.0303,
+     0.1224
+    ],
+    "stato-centrale": [
+     1,
+     29,
+     0.0345,
+     0.0061,
+     0.1718
+    ],
+    "tutti": [
+     50,
+     543,
+     0.0921,
+     0.0705,
+     0.1194
+    ],
+    "universita-ricerca": [
+     3,
+     32,
+     0.0938,
+     0.0324,
+     0.2422
+    ]
+   }
+  },
+  "s1_falsi_esclusi": {
+   "per_tipo": {
+    "altro": [
+     0,
+     51,
+     0.0,
+     0,
+     0.07
+    ],
+    "comune": [
+     2,
+     55,
+     0.0364,
+     0.01,
+     0.1232
+    ],
+    "regione-provincia": [
+     0,
+     14,
+     0.0,
+     0,
+     0.2153
+    ],
+    "sanita": [
+     0,
+     40,
+     0.0,
+     0,
+     0.0876
+    ],
+    "scuola": [
+     0,
+     9,
+     0.0,
+     0,
+     0.2992
+    ],
+    "societa-partecipata": [
+     0,
+     18,
+     0.0,
+     0,
+     0.1759
+    ],
+    "stato-centrale": [
+     0,
+     9,
+     0.0,
+     0,
+     0.2992
+    ],
+    "tutti": [
+     2,
+     200,
+     0.01,
+     0.0027,
+     0.0357
+    ],
+    "universita-ricerca": [
+     0,
+     4,
+     0.0,
+     0,
+     0.4899
+    ]
+   }
+  },
+  "universo_ict_csv_dal_2024_fuori_lista_per_testo": {
+   "2024": {
+    "cig": 121313,
+    "fuori_lista": 55236,
+    "quota": 0.4553,
+    "meur_fuori_lista": 153382.6
+   },
+   "2025": {
+    "cig": 157029,
+    "fuori_lista": 46962,
+    "quota": 0.2991,
+    "meur_fuori_lista": 129592.2
+   },
+   "2026": {
+    "cig": 106907,
+    "fuori_lista": 28480,
+    "quota": 0.2664,
+    "meur_fuori_lista": 102456.1
+   },
+   "altro": {
+    "cig": 86096,
+    "fuori_lista": 26295,
+    "quota": 0.3054,
+    "meur_fuori_lista": 97168.0
+   },
+   "comune": {
+    "cig": 101015,
+    "fuori_lista": 20223,
+    "quota": 0.2002,
+    "meur_fuori_lista": 10249.2
+   },
+   "ignoto": {
+    "cig": 8,
+    "fuori_lista": 2,
+    "quota": 0.25,
+    "meur_fuori_lista": 14.2
+   },
+   "regione-provincia": {
+    "cig": 25400,
+    "fuori_lista": 16869,
+    "quota": 0.6641,
+    "meur_fuori_lista": 55368.3
+   },
+   "sanita": {
+    "cig": 42368,
+    "fuori_lista": 25287,
+    "quota": 0.5968,
+    "meur_fuori_lista": 39704.2
+   },
+   "scuola": {
+    "cig": 13125,
+    "fuori_lista": 2495,
+    "quota": 0.1901,
+    "meur_fuori_lista": 74.1
+   },
+   "societa-partecipata": {
+    "cig": 66680,
+    "fuori_lista": 27656,
+    "quota": 0.4148,
+    "meur_fuori_lista": 114744.2
+   },
+   "stato-centrale": {
+    "cig": 15291,
+    "fuori_lista": 4790,
+    "quota": 0.3133,
+    "meur_fuori_lista": 66437.8
+   },
+   "universita-ricerca": {
+    "cig": 35266,
+    "fuori_lista": 7061,
+    "quota": 0.2002,
+    "meur_fuori_lista": 1671.0
+   }
+  },
+  "regole_tipo_ente": {
+   "comune": "^COMUNE\\b|\\bCOMUNE DI\\b|^CITTA'? DI\\b|ROMA CAPITALE",
+   "regione-provincia": "^REGIONE\\b|^PROVINCIA\\b|PROVINCIA AUTONOMA|CITTA'? METROPOLITANA|GIUNTA REGIONALE|CONSIGLIO REGIONALE",
+   "sanita": "\\bA\\.?S\\.?L\\b|\\bASL\\b|AZIENDA SANITARIA|AZIENDA OSPEDALIER|OSPEDAL|\\bASST\\b|\\bATS\\b|\\bAUSL\\b|\\bULSS\\b|\\bASP\\b|IRCCS|AZIENDA U(NITA|SL)|\\bESTAR\\b|AZIENDA ZERO|SO\\.?RE\\.?SA",
+   "universita-ricerca": "UNIVERSIT|POLITECNICO|CONSIGLIO NAZIONALE DELLE RICERCHE|\\bCNR\\b|ISTITUTO NAZIONALE DI|\\bINFN\\b|\\bINAF\\b|\\bINGV\\b|\\bENEA\\b|SCUOLA NORMALE|\\bSISSA\\b|AGENZIA SPAZIALE",
+   "scuola": "ISTITUTO COMPRENSIVO|ISTITUTO DI ISTRUZIONE|LICEO|CIRCOLO DIDATTICO|SCUOLA (PRIMARIA|SECONDARIA|MEDIA)|ISTITUTO TECNICO|ISTITUTO PROFESSIONALE|CONSERVATORIO|ACCADEMIA DI BELLE",
+   "stato-centrale": "MINISTERO|PRESIDENZA DEL CONSIGLIO|AGENZIA (DELLE|DEL|PER)|COMANDO|\\bINPS\\b|\\bINAIL\\b|\\bISTAT\\b|\\bCONSIP\\b|CORTE DEI CONTI|PREFETTURA|QUESTURA|CARABINIERI|GUARDIA DI FINANZA|POLIZIA DI STATO|AERONAUTICA|ESERCITO|MARINA MILITARE|AVVOCATURA|SOGEI|DIFESA",
+   "societa-partecipata": "S\\.?P\\.?A\\.?\\b|S\\.?R\\.?L\\.?\\b|SOCIETA'|S\\.?C\\.?A\\.?R\\.?L|SPA$|SRL$",
+   "altro": "."
+  }
+ },
+ "D_riclassificazione": {
+  "file": "dati/classificazioni/cpv-riclassificazione.csv",
+  "per_servizio_coerenza": {
+   "altro|n": 35,
+   "altro|s": 33,
+   "cloud|n": 10,
+   "cloud|parziale": 135,
+   "cloud|s": 26,
+   "in-house|n": 11,
+   "in-house|parziale": 7,
+   "in-house|s": 57,
+   "licenza|n": 2,
+   "licenza|parziale": 38,
+   "licenza|s": 76,
+   "psn|n": 8,
+   "psn|parziale": 5,
+   "psn|s": 45,
+   "servizi-professionali|n": 11,
+   "servizi-professionali|parziale": 12,
+   "servizi-professionali|s": 89,
+   "telefonia|n": 8,
+   "telefonia|parziale": 3
+  }
+ },
+ "C_videosorveglianza_3224": {
+  "universo_dal_2024": {
+   "videosorveglianza": {
+    "cig": 996,
+    "meur": 4739.3,
+    "meur_senza_B139F77033": 35.9,
+    "per_strato": {
+     "S5-ict-non-cloud": 981,
+     "S2-sotto-soglia": 12,
+     "S0-padre-aq": 2,
+     "S6-residuo": 1
+    },
+    "per_tipo_ente": {
+     "comune": 571,
+     "societa-partecipata": 192,
+     "altro": 123,
+     "universita-ricerca": 54,
+     "stato-centrale": 44,
+     "regione-provincia": 6,
+     "sanita": 4,
+     "scuola": 2
+    }
+   },
+   "altro": {
+    "cig": 208,
+    "meur": 6.2,
+    "meur_senza_B139F77033": 6.2,
+    "per_strato": {
+     "S5-ict-non-cloud": 203,
+     "S2-sotto-soglia": 5
+    },
+    "per_tipo_ente": {
+     "comune": 66,
+     "societa-partecipata": 61,
+     "altro": 32,
+     "universita-ricerca": 28,
+     "stato-centrale": 8,
+     "regione-provincia": 6,
+     "sanita": 4,
+     "scuola": 3
+    }
+   },
+   "ict-stretto": {
+    "cig": 14,
+    "meur": 0.3,
+    "meur_senza_B139F77033": 0.3,
+    "per_strato": {
+     "S5-ict-non-cloud": 14
+    },
+    "per_tipo_ente": {
+     "altro": 6,
+     "societa-partecipata": 5,
+     "regione-provincia": 1,
+     "stato-centrale": 1,
+     "scuola": 1
+    }
+   }
+  },
+  "esempi_maggiori": {
+   "videosorveglianza": [
+    [
+     1.94,
+     "B4460262FE",
+     "COMUNE DI ARONA",
+     "NUOVE TELECAMERE | AMPLIAMENTO SISTEMA DI VIDEOSORVEGLIANZA"
+    ],
+    [
+     1.41,
+     "B42B6169EC",
+     "COMUNE DI MONTECCHIO PRECALCINO",
+     "ATTIVAZIONE PUNTI DI VIDEOSORVEGLIANZA PER CONTROLLO ABBANDONO RIFIUTI | ATTIVAZIONE PUNTI DI VIDEOSORVEGLIANZA PER CONTROLLO ABBANDONO RIFI"
+    ],
+    [
+     0.99,
+     "B3EBE009C2",
+     "AUTOSTRADA BRESCIA VERONA VICENZA PADOVA S.P.A.",
+     "FORNITURA DI N.3 PMV IN ITINERE LUNGO LA A31 SUD, DI N.2 POSTAZIONI TELECAMERE SU TORRI E N.2 PMV SULLA VIABILITÀ ESTERNA IN A4. | FORNITURA"
+    ],
+    [
+     0.82,
+     "B6B906E97C",
+     "COMANDO GENERALE ARMA CARABINIERI CENTRO UNICO CONTRATTUALE",
+     "CONVENZIONE CONSIP SISTEMA INFORMATIVO C CAM  | ADESIONE CONV CONSIP SISTEMA INFORMATIVO C CAM 224 TELECAMERE 112 VIDEO RECORDER 56 SERVER 3"
+    ],
+    [
+     0.8,
+     "BAA0509071",
+     "AZIENDA NAPOLETANA MOBILITA S.P.A. IN SIGLA ANM S.P.A.",
+     "FORNITURA E POSA IN OPERA NUOVI IMPIANTI DI VIDEOSORVEGLIANZA AD IMPLEMENTAZIONE ED AFFIANCAMENTO DEGLI IMPIANTI ESISTENTI PRESSO ALCUNI SIT"
+    ]
+   ],
+   "altro": [
+    [
+     0.91,
+     "B124A3B7BD",
+     "MILANO SERRAVALLE - MILANO TANGENZIALI S.P.A.",
+     "GF 3 2024 - PROCEDURA TELEMATICA APERTA AI SENSI DELL'ART. 71 DEL D.LGS. 36/2023 PER LA FORNITURA E POSA DI SISTEMI DI CONTROLLO DEL TRAFFIC"
+    ],
+    [
+     0.28,
+     "B917CAC82E",
+     "AUTOSTRADE PER L ITALIA S.P.A.",
+     "TES_UPGRADE DEL MEZZO ALTO RENDIMENTO DENOMINATO IRIS 1 (INTERGRATED ROAD IMAGING SYSTEM) | TES_UPGRADE DEL MEZZO ALTO RENDIMENTO DENOMINATO"
+    ],
+    [
+     0.24,
+     "A068916D67",
+     "ROMA CAPITALE",
+     "LAVORI DI MANUTENZIONE, ORDINARIA, ESERCIZIO E MODIFICA DEGLI IMPIANTI DI SICUREZZA DI NOTEVOLE CONTENUTO TECNOLOGICO, INSTALLATI PRESSO IL "
+    ],
+    [
+     0.23,
+     "B90E2FA2D7",
+     "AZIENDA TRASPORTI MILANESI S.P.A.",
+     "T28 - FORNITURA IN OPERA DI SISTEMA DI PROTEZIONE PERIMETRALE PRESSO IL DEPOSITO SAN CRISTOFORO | T28 - FORNITURA IN OPERA DI SISTEMA DI PRO"
+    ],
+    [
+     0.16,
+     "BC0485777A",
+     "RAI RADIOTELEVISIONE ITALIANA S.P.A.",
+     "RICHIESTA DI ESECUZIONE PER L'ACCORDO QUADRO 1259200024 - FORNITURA A LISTINO DI APPARATI ED ACCESSORI PER LA RIPRESA PER ENG, VIDEOMAKING E"
+    ],
+    [
+     0.13,
+     "BAFA648B07",
+     "AUTOSTRADE PER L ITALIA S.P.A.",
+     "MOVYON SPA - FORNITURA CON POSA IN OPERA PER INSTALLAZIONE, MANUTENZIONE DI FOTOCAMERE PER IL MONITORAGGIO REMOTO DEL CANTIERE DURANTE I LAV"
+    ]
+   ],
+   "ict-stretto": [
+    [
+     0.06,
+     "B94704B718",
+     "TOSCANA AEROPORTI S.P.A.",
+     "FORNITURA SOFTWARE LLM | FORNITURA SOFTWARE LLM"
+    ],
+    [
+     0.05,
+     "B3F975B7D1",
+     "GE.S.A.C. S.P.A.-SOCIETA GESTIONE SERVIZI AEROPORTI CAMPANI",
+     "RDO/SA0009/026-PROGETTAZIONE, FORNITURA E CONFIGURAZIONE E MASSA IN SERVIZIO DEL PRIMO STEP DELLA SOLUZIONE DI PROTEZIONE PERIMETRALE, CON I"
+    ],
+    [
+     0.03,
+     "B90A6C96ED",
+     "AGENZIA REGIONALE PROTEZIONE AMBIENTE VALLE D'AOSTA",
+     "FORNITURA DELL'IMPIANTO CONTROLLO ACCESSI PER LA SEDE DELL'AGENZIA REGIONALE PROTEZIONE DELL'AMBIENTE DELLA VALLE D'AOSTA, NELL'AMBITO DEL P"
+    ],
+    [
+     0.03,
+     "B5BA711762",
+     "REGIONE AUTONOMA FRIULI-VENEZIA GIULIA",
+     "FORNITURA DI HW/SW PER SISTEMA DI PRE-ALLERTAMENTO INCENDI BOSCHIVI EFLAME (PROGETTO LIGNANO) | FORNITURA DI HW/SW PER SISTEMA DI PRE-ALLERT"
+    ],
+    [
+     0.02,
+     "B70954C7CF",
+     "ACCADEMIA DI BELLE ARTI",
+     "FORNITURA MATERIALE INFORMATICO, AUDIO E VIDEO | FORNITURA MATERIALE AUDIO, VIDEO E INFORMATICO"
+    ],
+    [
+     0.02,
+     "B7903FE138",
+     "MUNICIPIO DI FORIO D'ISCHIA",
+     "FORNITURE INFORMATICHE | AFFIDAMENTO DIRETTO"
+    ]
+   ]
+  },
+  "regola_video": "videosorv|video.sorv|telecamer|\\bztl\\b|targh|fototrappol|\\btvcc\\b|\\bcctv\\b|varch|lettura\\s+targ|sorveglianza|foto.?trapp|dash.?cam|body.?cam|bodycam|videocontrollo|video\\s*control",
+  "controllo_regola_su_review": {
+   "matrice_etichetta_regola": {
+    "dubbio->videosorveglianza": 2,
+    "n->altro": 10,
+    "n->videosorveglianza": 8,
+    "s->altro": 1,
+    "s->videosorveglianza": 1,
+    "videosorveglianza->altro": 8,
+    "videosorveglianza->ict-stretto": 1,
+    "videosorveglianza->videosorveglianza": 92
+   },
+   "precisione_regola": [
+    92,
+    103,
+    0.8932,
+    0.8188,
+    0.9393
+   ],
+   "richiamo_regola": [
+    92,
+    101,
+    0.9109,
+    0.8393,
+    0.9524
+   ]
+  }
+ },
+ "B_effetto_perimetro": {
+  "0.3.2_righe": {
+   "righe": 386911,
+   "meur": 505159.1
+  },
+  "0.3.2_con_R53": {
+   "cig": 385249,
+   "meur": 502469.5,
+   "doppioni_tolti": 1662,
+   "meur_tolti": 2689.6
+  },
+  "79342_uscite": {
+   "esce in S1": [
+    5694,
+    538.2
+   ],
+   "resta: testo ICT": [
+    152,
+    28.2
+   ],
+   "resta: altro CPV in lista (R53)": [
+    13,
+    0.6
+   ]
+  },
+  "79342_uscite_per_strato": {
+   "S5-ict-non-cloud": 5614,
+   "S2-sotto-soglia": 31,
+   "S0-padre-aq": 49
+  },
+  "rx_0.3.3_entrate": {
+   "cig": 3593,
+   "meur": 4100.0,
+   "per_gruppo": {
+    "G4-coda": [
+     2709,
+     42.5
+    ],
+    "G3-incerti-significativi": [
+     855,
+     240.6
+    ],
+    "G1-mega": [
+     29,
+     3816.9
+    ]
+   }
+  },
+  "0.3.3_con_R53": {
+   "cig": 383148,
+   "meur": 506031.3,
+   "saldo_cig": -2101,
+   "saldo_meur": 3561.8
+  }
+ }
+}

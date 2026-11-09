@@ -71,6 +71,8 @@ verifica vengono da documentazione di terzi e vanno ricontrollate prima dell'uso
 
 ### Il perimetro ICT sui CPV
 
+La lista bianca in uso, le esclusioni verificate e il loro effetto sono nella pagina [Perimetro ICT](/progetto/perimetro-ict/).
+
 Divisioni di riferimento: **48** software e sistemi, **72** servizi IT, **30** macchine per ufficio
 e computer, **32** apparecchiature TLC, **64** servizi di telecomunicazione.
 

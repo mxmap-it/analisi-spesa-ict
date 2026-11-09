@@ -204,7 +204,8 @@
   prova: "tools/verifiche/perimetro_cpv.py, esiti/2026-11-06/cpv/perimetro-cpv.json, report/cpv/letteratura.md, rendiconto bozza sito/content/rendiconti/perimetro-cpv.md"
   richiesta: "Controllo di coerenza CPV-oggetto al rilascio del CIG; campi obbligatori per acquisti ICT (tipologia, modello cloud, prodotto e produttore, sede dei dati, operatore e capogruppo, qualificazione ACN); aggiornamento del CPV o vocabolario supplementare ICT"
   perche_serve: Misurare la spesa cloud e la sovranità in modo esatto e deterministico, senza lettura degli atti
-  rif: ["#55", "#59"]
+  misura_9_11: "tools/verifiche/cpv_rapporto.py, esiti/2026-11-09/cpv/rapporto-cpv.json: CPV in lista su oggetto non ICT 6,5 % (46/705, IC 4,9-8,6; scuole 32 %); oggetto ICT con CPV fuori lista 9,2 % (50/543; 2024 20,4 %); servizi cloud con codice di servizio erogato 26/171 (15 %). Seguiti: R79 (vocabolario cloud), R80 (coerenza e correzione ex post)"
+  rif: ["#55", "#59", "R79", "R80"]
 - id: R22
   destinatario: ANAC; Consip
   tipo: miglioramento
@@ -806,7 +807,7 @@
   perche_serve: "La giurisdizione del fornitore (es. controllate svizzere o extra-UE di rivenditori italiani) non si può misurare senza visure a pagamento"
   metrica: "Quota della spesa aggiudicata a imprese con capogruppo in dati aperti"
   rif: ["#41", "R76"]
-- id: R76
+- id: R79
   destinatario: "Commissione europea (DG GROW, revisione del vocabolario CPV); ANAC; AgID, ACN"
   tipo: lacuna
   stato: "verificato sul campione (9/11/2026); proposta, nessuna richiesta inviata"
@@ -817,7 +818,7 @@
   perche_serve: "Con il vocabolario attuale la spesa cloud non si misura dal CPV: serve leggere il testo e gli atti di ogni contratto"
   metrica: "Quota dei contratti cloud del campione di riferimento con un codice o attributo che li identifica come cloud (oggi 15 %, 26 su 171)"
   rif: ["#59", "#44", "R21"]
-- id: R77
+- id: R80
   destinatario: "ANAC (BDNCP); AgID"
   tipo: miglioramento
   stato: "proposta (9/11/2026), nessuna richiesta inviata"
@@ -827,7 +828,7 @@
   richiesta: "Controllo automatico CPV-oggetto alla pubblicazione con segnalazione al RUP; possibilità di correggere il CPV dopo il rilascio del CIG con traccia della correzione; formazione mirata per scuole e piccoli enti"
   perche_serve: "Il CPV è il primo filtro di perimetro per chiunque misuri la spesa ICT: errori sistematici per tipo di ente distorcono i confronti"
   metrica: "Quota di CPV ICT su oggetto non ICT e di oggetto ICT con CPV non ICT, rimisurate ogni anno con tools/verifiche/cpv_rapporto.py"
-  rif: ["#59", "#44", "R21", "R60"]
+  rif: ["#59", "#44", "R21", "R60", "R79"]
 - id: R78
   destinatario: "ACN, DTD (PA Digitale 2026), fornitori SaaS qualificati, PSN S.p.A."
   tipo: dato-mancante
