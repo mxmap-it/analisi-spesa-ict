@@ -1,0 +1,797 @@
+{
+ "versione": "bdap-ict-stato 0.1 (2026-11-09)",
+ "ingressi": {
+  "pg-2024": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d73a538b-5652-463f-8c97-b09b3ec818cd.csv",
+   "sha256": "ac2abef4cab81a33539dc2400e94f4256a8977363fc24f79c3af2da3019a9216"
+  },
+  "cap-2019": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/6ec860e9-5583-478d-b203-a7ad87a463f8.csv",
+   "sha256": "88c920fa1b75a37c8efd55a692e84735d2184eea9a816ed0a3c333eb0735b849"
+  },
+  "cap-2020": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e008e761-e602-4277-b619-d3e3a45fe8e3.csv",
+   "sha256": "429b6d3f5d3d649b308393d32acb47494949f8f0b66cbeead1531f8e1137e99b"
+  },
+  "cap-2021": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e7a17214-3b88-451e-a411-26d1d6691efc.csv",
+   "sha256": "be0ffc12c462a00c255ef43009f7dc447dd64b0d4a03b7ec4e0303533b2f9be8"
+  },
+  "cap-2022": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c72b5f41-8de9-45b4-b2b4-21fab3f4ba57.csv",
+   "sha256": "687010913f5aec59b15fac4dedf5c3f64a9c70787f6681e08ef74b5bf087727d"
+  },
+  "cap-2023": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/57ef91e8-960f-4937-8669-e30998e69bff.csv",
+   "sha256": "c062dd3eb6d9a843afed57cc80c3d957065284040ca1a6788759009e4b3688be"
+  },
+  "cap-2024": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/940dd84e-6b32-4286-a3a3-2bbd74d96c4e.csv",
+   "sha256": "2d9ab9fe3eed87ea6f6a6d53fa583fd36fbd8f47ce8c76250945482715ca2980"
+  },
+  "micgs-2022": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/92d90dbc-465c-4aa8-8766-021668dbb41d.csv",
+   "sha256": "c5db28bfbe6bad83a211165a3f869ae0a635d222b0bb24bdc2dd66dcbd539c47"
+  },
+  "micgs-2023": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c5a04b27-6fa2-40d0-9516-f3d5f1f9fd55.csv",
+   "sha256": "01e846269a3138190e412b25ba00d3f59a258e0916c912260a7f6c008a88cdee"
+  },
+  "micgs-2024": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f945fcf7-580c-4d25-b309-68f4c7a5f45f.csv",
+   "sha256": "5ffece7ddec89ec0aaa3a678702cb2741a9c9db738a34ab6642d657e2f1b366d"
+  },
+  "micgs-2025": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9c17c64c-bb7d-40b5-84c7-3e39f1cb7727.csv",
+   "sha256": "4095f7b38b13164f10b16134141e8b153adc35a35ffd131e9085f4c55331a6e2"
+  }
+ },
+ "regole": {
+  "ce_ict": [
+   "2.2.19",
+   "21.1.1",
+   "21.1.2",
+   "21.2.19",
+   "21.2.5"
+  ],
+  "gestionali_ict": [
+   "032",
+   "036",
+   "051",
+   "052",
+   "056",
+   "206",
+   "233",
+   "276",
+   "277",
+   "289",
+   "290"
+  ],
+  "nome": "informatic|telematic|sistem\\w*\\s+informativ|software|hardware|elaborazion\\w*\\s+(automatica\\s+)?(dei\\s+)?dati|\\bcloud\\b|data\\s*cent|cybersicurezza|sicurezza\\s+informatica|meccanizzazion|automazione\\s+(degli\\s+)?uffici|transizione\\s+digitale|digitalizzazion"
+ },
+ "pg_2024": {
+  "pg_totali": 13066,
+  "per_classe": {
+   "solo-nome": {
+    "pg": 687,
+    "pagato_cs": 1642491048
+   },
+   "ce+nome": {
+    "pg": 377,
+    "pagato_cs": 934217740
+   },
+   "solo-ce": {
+    "pg": 38,
+    "pagato_cs": 44455688
+   }
+  }
+ },
+ "capitoli_serie": {
+  "2019": {
+   "capitoli": 4638,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 335,
+     "pagato_cs": 821891129
+    },
+    "ce": {
+     "capitoli": 252,
+     "pagato_cs": 529234603
+    }
+   },
+   "ce_per_ministero": {
+    "INTERNO": 247277849,
+    "ECONOMIA E FINANZE": 186190808,
+    "GIUSTIZIA": 62778796,
+    "INFRASTRUTTURE": 19559908,
+    "IMPRESE": 5908072,
+    "AMBIENTE": 3058091,
+    "DIFESA": 1364973,
+    "ESTERI": 1360310,
+    "AGRICOLTURA": 481356,
+    "ISTRUZIONE": 452964,
+    "ALTRO": 438982,
+    "SALUTE": 353869,
+    "LAVORO": 8626
+   }
+  },
+  "2020": {
+   "capitoli": 4847,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 335,
+     "pagato_cs": 1144199797
+    },
+    "ce": {
+     "capitoli": 280,
+     "pagato_cs": 795899332
+    }
+   },
+   "ce_per_ministero": {
+    "INTERNO": 241858888,
+    "DIFESA": 170369998,
+    "ECONOMIA E FINANZE": 162651532,
+    "INFRASTRUTTURE": 133320583,
+    "GIUSTIZIA": 76507828,
+    "IMPRESE": 5350859,
+    "AMBIENTE": 1995289,
+    "ALTRO": 1631917,
+    "AGRICOLTURA": 740446,
+    "ESTERI": 673567,
+    "ISTRUZIONE": 564515,
+    "SALUTE": 202836,
+    "LAVORO": 31074
+   }
+  },
+  "2021": {
+   "capitoli": 5210,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 363,
+     "pagato_cs": 1132290799
+    },
+    "ce": {
+     "capitoli": 294,
+     "pagato_cs": 730717554
+    }
+   },
+   "ce_per_ministero": {
+    "INTERNO": 305157265,
+    "ECONOMIA E FINANZE": 157090980,
+    "DIFESA": 135169879,
+    "GIUSTIZIA": 72919959,
+    "INFRASTRUTTURE": 44418802,
+    "ISTRUZIONE": 6364797,
+    "IMPRESE": 5445758,
+    "AGRICOLTURA": 1040394,
+    "AMBIENTE": 987786,
+    "CULTURA": 940217,
+    "ESTERI": 921410,
+    "SALUTE": 222406,
+    "LAVORO": 16151,
+    "UNIVERSITA": 11749,
+    "TURISMO": 10000
+   }
+  },
+  "2022": {
+   "capitoli": 5290,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 359,
+     "pagato_cs": 1329077192
+    },
+    "ce": {
+     "capitoli": 301,
+     "pagato_cs": 680196207
+    }
+   },
+   "ce_per_ministero": {
+    "INTERNO": 379536454,
+    "DIFESA": 129952057,
+    "GIUSTIZIA": 122153371,
+    "INFRASTRUTTURE": 22487898,
+    "ECONOMIA E FINANZE": 17204225,
+    "IMPRESE": 4756453,
+    "ESTERI": 940074,
+    "CULTURA": 856339,
+    "AGRICOLTURA": 781787,
+    "SALUTE": 662606,
+    "ISTRUZIONE": 363200,
+    "UNIVERSITA": 361328,
+    "AMBIENTE": 109925,
+    "LAVORO": 20022,
+    "TURISMO": 10468
+   }
+  },
+  "2023": {
+   "capitoli": 5331,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 375,
+     "pagato_cs": 735823669
+    },
+    "ce": {
+     "capitoli": 218,
+     "pagato_cs": 1077436043
+    }
+   },
+   "ce_per_ministero": {
+    "GIUSTIZIA": 286117895,
+    "ECONOMIA E FINANZE": 285235931,
+    "INTERNO": 249814673,
+    "DIFESA": 93511217,
+    "INFRASTRUTTURE": 29780478,
+    "LAVORO": 26493617,
+    "AGRICOLTURA": 20355399,
+    "CULTURA": 19663713,
+    "ISTRUZIONE": 17926150,
+    "ESTERI": 14517851,
+    "IMPRESE": 12114261,
+    "AMBIENTE": 10789126,
+    "TURISMO": 9674195,
+    "SALUTE": 988295,
+    "UNIVERSITA": 453242
+   }
+  },
+  "2024": {
+   "capitoli": 5362,
+   "per_classe": {
+    "solo-nome": {
+     "capitoli": 383,
+     "pagato_cs": 759331103
+    },
+    "ce": {
+     "capitoli": 226,
+     "pagato_cs": 1013357876
+    }
+   },
+   "ce_per_ministero": {
+    "GIUSTIZIA": 316003780,
+    "ECONOMIA E FINANZE": 289454065,
+    "INTERNO": 156519041,
+    "DIFESA": 86844153,
+    "INFRASTRUTTURE": 31825556,
+    "ISTRUZIONE": 26510696,
+    "AGRICOLTURA": 25437640,
+    "LAVORO": 22692615,
+    "ESTERI": 21655566,
+    "CULTURA": 18090334,
+    "AMBIENTE": 8338838,
+    "TURISMO": 6260595,
+    "IMPRESE": 1831951,
+    "SALUTE": 1018797,
+    "UNIVERSITA": 874249
+   }
+  }
+ },
+ "gestionali_ict": {
+  "2022": {
+   "op_ict": 987051717,
+   "op_totale": 661833249053,
+   "per_gestionale": {
+    "206 - OPERE DELL'INGEGNO -SOFTWARE PRODOTTO": 469370466,
+    "052 - MANUTENZIONE ORDINARIA DI SOFTWARE": 161192770,
+    "036 - CONSULENZA INFORMATICA": 134214617,
+    "233 - HARDWARE": 91301666,
+    "277 - MANUTENZIONE STRAORDINARIA DI SOFTWARE": 70676104,
+    "051 - MANUTENZIONE ORDINARIA DI HARDWARE": 22217670,
+    "276 - MANUTENZIONE STRAORDINARIA DI HARDWARE": 20708465,
+    "032 - MATERIALE INFORMATICO": 11966040,
+    "056 - NOLEGGI, LOCAZIONI E LEASING DI HARDWARE": 5403918
+   },
+   "per_ministero": {
+    "ECONOMIA E FINANZE": 448691874,
+    "GIUSTIZIA": 218997805,
+    "INTERNO": 100807050,
+    "DIFESA": 66696959,
+    "LAVORO": 45544298,
+    "INFRASTRUTTURE": 41779790,
+    "ESTERI": 19822791,
+    "SALUTE": 16205660,
+    "CULTURA": 12187159,
+    "AGRICOLTURA": 6953343,
+    "IMPRESE": 6534723,
+    "AMBIENTE": 1785872,
+    "TURISMO": 814996,
+    "ISTRUZIONE": 182257,
+    "UNIVERSITA": 47140
+   }
+  },
+  "2023": {
+   "op_ict": 1198920638,
+   "op_totale": 680840631642,
+   "per_gestionale": {
+    "206 - OPERE DELL'INGEGNO -SOFTWARE PRODOTTO": 287032174,
+    "277 - MANUTENZIONE STRAORDINARIA DI SOFTWARE": 263913355,
+    "290 - SVILUPPO SOFTWARE": 196738692,
+    "036 - CONSULENZA INFORMATICA": 146618556,
+    "052 - MANUTENZIONE ORDINARIA DI SOFTWARE": 122977505,
+    "289 - SOFTWARE (LICENZE)": 86511583,
+    "051 - MANUTENZIONE ORDINARIA DI HARDWARE": 37292124,
+    "233 - HARDWARE": 25855069,
+    "032 - MATERIALE INFORMATICO": 25214594,
+    "056 - NOLEGGI, LOCAZIONI E LEASING DI HARDWARE": 5160284,
+    "276 - MANUTENZIONE STRAORDINARIA DI HARDWARE": 1606702
+   },
+   "per_ministero": {
+    "ECONOMIA E FINANZE": 422384210,
+    "GIUSTIZIA": 282569893,
+    "INTERNO": 256495970,
+    "DIFESA": 55386969,
+    "LAVORO": 31779201,
+    "INFRASTRUTTURE": 27115067,
+    "ESTERI": 24112344,
+    "AGRICOLTURA": 22979479,
+    "IMPRESE": 21124018,
+    "CULTURA": 16843972,
+    "SALUTE": 15713234,
+    "TURISMO": 9987819,
+    "AMBIENTE": 7988426,
+    "UNIVERSITA": 4114958,
+    "ISTRUZIONE": 325079
+   }
+  },
+  "2024": {
+   "op_ict": 1140977879,
+   "op_totale": 700678860826,
+   "per_gestionale": {
+    "277 - MANUTENZIONE STRAORDINARIA DI SOFTWARE": 335586865,
+    "206 - OPERE DELL'INGEGNO -SOFTWARE PRODOTTO": 240623430,
+    "290 - SVILUPPO SOFTWARE": 151889551,
+    "052 - MANUTENZIONE ORDINARIA DI SOFTWARE": 128672008,
+    "036 - CONSULENZA INFORMATICA": 107318438,
+    "289 - SOFTWARE (LICENZE)": 73170777,
+    "233 - HARDWARE": 35351002,
+    "051 - MANUTENZIONE ORDINARIA DI HARDWARE": 34967218,
+    "032 - MATERIALE INFORMATICO": 25031431,
+    "276 - MANUTENZIONE STRAORDINARIA DI HARDWARE": 4875542,
+    "056 - NOLEGGI, LOCAZIONI E LEASING DI HARDWARE": 3491618
+   },
+   "per_ministero": {
+    "ECONOMIA E FINANZE": 387922484,
+    "GIUSTIZIA": 315414350,
+    "INTERNO": 193612816,
+    "INFRASTRUTTURE": 54592982,
+    "DIFESA": 47793680,
+    "ESTERI": 28330558,
+    "AGRICOLTURA": 24635545,
+    "LAVORO": 23082814,
+    "CULTURA": 15668224,
+    "SALUTE": 14279581,
+    "IMPRESE": 11251498,
+    "UNIVERSITA": 10324530,
+    "AMBIENTE": 7571954,
+    "TURISMO": 6286548,
+    "ISTRUZIONE": 210314
+   }
+  },
+  "2025": {
+   "op_ict": 1286338305,
+   "op_totale": 693932737511,
+   "per_gestionale": {
+    "277 - MANUTENZIONE STRAORDINARIA DI SOFTWARE": 343220611,
+    "290 - SVILUPPO SOFTWARE": 314431124,
+    "052 - MANUTENZIONE ORDINARIA DI SOFTWARE": 186350723,
+    "206 - OPERE DELL'INGEGNO -SOFTWARE PRODOTTO": 139817741,
+    "036 - CONSULENZA INFORMATICA": 117859013,
+    "289 - SOFTWARE (LICENZE)": 75809021,
+    "051 - MANUTENZIONE ORDINARIA DI HARDWARE": 47363898,
+    "233 - HARDWARE": 35116552,
+    "032 - MATERIALE INFORMATICO": 24647953,
+    "056 - NOLEGGI, LOCAZIONI E LEASING DI HARDWARE": 1397964,
+    "276 - MANUTENZIONE STRAORDINARIA DI HARDWARE": 323704
+   },
+   "per_ministero": {
+    "ECONOMIA E FINANZE": 424689715,
+    "GIUSTIZIA": 306205639,
+    "INTERNO": 235950417,
+    "DIFESA": 75183610,
+    "INFRASTRUTTURE": 56994642,
+    "AGRICOLTURA": 30062858,
+    "IMPRESE": 28233504,
+    "ESTERI": 25271552,
+    "AMBIENTE": 24896164,
+    "LAVORO": 19913431,
+    "UNIVERSITA": 17504023,
+    "SALUTE": 16915227,
+    "CULTURA": 16580268,
+    "ISTRUZIONE": 4043639,
+    "TURISMO": 3893619
+   }
+  }
+ },
+ "copertura_cig": {
+  "2022": {
+   "AGRICOLTURA": {
+    "cig_ict_n": 10,
+    "cig_ict_importo": 32075386,
+    "bdap_op_ict": 6953343,
+    "rapporto": 4.61
+   },
+   "ALTRO": {
+    "cig_ict_n": 3,
+    "cig_ict_importo": 50400,
+    "bdap_op_ict": 0,
+    "rapporto": null
+   },
+   "AMBIENTE": {
+    "cig_ict_n": 17,
+    "cig_ict_importo": 3960641,
+    "bdap_op_ict": 1785872,
+    "rapporto": 2.22
+   },
+   "CULTURA": {
+    "cig_ict_n": 31,
+    "cig_ict_importo": 18880007,
+    "bdap_op_ict": 12187159,
+    "rapporto": 1.55
+   },
+   "DIFESA": {
+    "cig_ict_n": 182,
+    "cig_ict_importo": 67956276,
+    "bdap_op_ict": 66696959,
+    "rapporto": 1.02
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_ict_n": 124,
+    "cig_ict_importo": 30356741,
+    "bdap_op_ict": 448691874,
+    "rapporto": 0.07
+   },
+   "ESTERI": {
+    "cig_ict_n": 64,
+    "cig_ict_importo": 45386354,
+    "bdap_op_ict": 19822791,
+    "rapporto": 2.29
+   },
+   "GIUSTIZIA": {
+    "cig_ict_n": 85,
+    "cig_ict_importo": 162942902,
+    "bdap_op_ict": 218997805,
+    "rapporto": 0.74
+   },
+   "IMPRESE": {
+    "cig_ict_n": 38,
+    "cig_ict_importo": 25895780,
+    "bdap_op_ict": 6534723,
+    "rapporto": 3.96
+   },
+   "INFRASTRUTTURE": {
+    "cig_ict_n": 47,
+    "cig_ict_importo": 98874010,
+    "bdap_op_ict": 41779790,
+    "rapporto": 2.37
+   },
+   "INTERNO": {
+    "cig_ict_n": 213,
+    "cig_ict_importo": 121614077,
+    "bdap_op_ict": 100807050,
+    "rapporto": 1.21
+   },
+   "ISTRUZIONE": {
+    "cig_ict_n": 9,
+    "cig_ict_importo": 12682918,
+    "bdap_op_ict": 182257,
+    "rapporto": 69.59
+   },
+   "LAVORO": {
+    "cig_ict_n": 0,
+    "cig_ict_importo": 0,
+    "bdap_op_ict": 45544298,
+    "rapporto": 0.0
+   },
+   "SALUTE": {
+    "cig_ict_n": 2,
+    "cig_ict_importo": 111034,
+    "bdap_op_ict": 16205660,
+    "rapporto": 0.01
+   },
+   "TURISMO": {
+    "cig_ict_n": 55,
+    "cig_ict_importo": 67547685,
+    "bdap_op_ict": 814996,
+    "rapporto": 82.88
+   },
+   "UNIVERSITA": {
+    "cig_ict_n": 6,
+    "cig_ict_importo": 2967407,
+    "bdap_op_ict": 47140,
+    "rapporto": 62.95
+   }
+  },
+  "2023": {
+   "AGRICOLTURA": {
+    "cig_ict_n": 17,
+    "cig_ict_importo": 72664675,
+    "bdap_op_ict": 22979479,
+    "rapporto": 3.16
+   },
+   "ALTRO": {
+    "cig_ict_n": 1,
+    "cig_ict_importo": 1750,
+    "bdap_op_ict": 0,
+    "rapporto": null
+   },
+   "AMBIENTE": {
+    "cig_ict_n": 22,
+    "cig_ict_importo": 50284150,
+    "bdap_op_ict": 7988426,
+    "rapporto": 6.29
+   },
+   "CULTURA": {
+    "cig_ict_n": 29,
+    "cig_ict_importo": 35636661,
+    "bdap_op_ict": 16843972,
+    "rapporto": 2.12
+   },
+   "DIFESA": {
+    "cig_ict_n": 188,
+    "cig_ict_importo": 80731270,
+    "bdap_op_ict": 55386969,
+    "rapporto": 1.46
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_ict_n": 143,
+    "cig_ict_importo": 56665358,
+    "bdap_op_ict": 422384210,
+    "rapporto": 0.13
+   },
+   "ESTERI": {
+    "cig_ict_n": 70,
+    "cig_ict_importo": 14421262,
+    "bdap_op_ict": 24112344,
+    "rapporto": 0.6
+   },
+   "GIUSTIZIA": {
+    "cig_ict_n": 71,
+    "cig_ict_importo": 93751364,
+    "bdap_op_ict": 282569893,
+    "rapporto": 0.33
+   },
+   "IMPRESE": {
+    "cig_ict_n": 49,
+    "cig_ict_importo": 28184619,
+    "bdap_op_ict": 21124018,
+    "rapporto": 1.33
+   },
+   "INFRASTRUTTURE": {
+    "cig_ict_n": 84,
+    "cig_ict_importo": 58039455,
+    "bdap_op_ict": 27115067,
+    "rapporto": 2.14
+   },
+   "INTERNO": {
+    "cig_ict_n": 241,
+    "cig_ict_importo": 324543344,
+    "bdap_op_ict": 256495970,
+    "rapporto": 1.27
+   },
+   "ISTRUZIONE": {
+    "cig_ict_n": 11,
+    "cig_ict_importo": 1235682,
+    "bdap_op_ict": 325079,
+    "rapporto": 3.8
+   },
+   "LAVORO": {
+    "cig_ict_n": 0,
+    "cig_ict_importo": 0,
+    "bdap_op_ict": 31779201,
+    "rapporto": 0.0
+   },
+   "SALUTE": {
+    "cig_ict_n": 6,
+    "cig_ict_importo": 1337430,
+    "bdap_op_ict": 15713234,
+    "rapporto": 0.09
+   },
+   "TURISMO": {
+    "cig_ict_n": 17,
+    "cig_ict_importo": 9685891,
+    "bdap_op_ict": 9987819,
+    "rapporto": 0.97
+   },
+   "UNIVERSITA": {
+    "cig_ict_n": 4,
+    "cig_ict_importo": 5863283,
+    "bdap_op_ict": 4114958,
+    "rapporto": 1.42
+   }
+  },
+  "2024": {
+   "AGRICOLTURA": {
+    "cig_ict_n": 14,
+    "cig_ict_importo": 56544633,
+    "bdap_op_ict": 24635545,
+    "rapporto": 2.3
+   },
+   "ALTRO": {
+    "cig_ict_n": 20,
+    "cig_ict_importo": 229798,
+    "bdap_op_ict": 0,
+    "rapporto": null
+   },
+   "AMBIENTE": {
+    "cig_ict_n": 31,
+    "cig_ict_importo": 40049639,
+    "bdap_op_ict": 7571954,
+    "rapporto": 5.29
+   },
+   "CULTURA": {
+    "cig_ict_n": 47,
+    "cig_ict_importo": 23414573,
+    "bdap_op_ict": 15668224,
+    "rapporto": 1.49
+   },
+   "DIFESA": {
+    "cig_ict_n": 804,
+    "cig_ict_importo": 167589966,
+    "bdap_op_ict": 47793680,
+    "rapporto": 3.51
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_ict_n": 325,
+    "cig_ict_importo": 67498260,
+    "bdap_op_ict": 387922484,
+    "rapporto": 0.17
+   },
+   "ESTERI": {
+    "cig_ict_n": 168,
+    "cig_ict_importo": 10839389,
+    "bdap_op_ict": 28330558,
+    "rapporto": 0.38
+   },
+   "GIUSTIZIA": {
+    "cig_ict_n": 13,
+    "cig_ict_importo": 9298406,
+    "bdap_op_ict": 315414350,
+    "rapporto": 0.03
+   },
+   "IMPRESE": {
+    "cig_ict_n": 58,
+    "cig_ict_importo": 16670168,
+    "bdap_op_ict": 11251498,
+    "rapporto": 1.48
+   },
+   "INFRASTRUTTURE": {
+    "cig_ict_n": 149,
+    "cig_ict_importo": 121431139,
+    "bdap_op_ict": 54592982,
+    "rapporto": 2.22
+   },
+   "INTERNO": {
+    "cig_ict_n": 920,
+    "cig_ict_importo": 384427129,
+    "bdap_op_ict": 193612816,
+    "rapporto": 1.99
+   },
+   "ISTRUZIONE": {
+    "cig_ict_n": 13,
+    "cig_ict_importo": 68884243,
+    "bdap_op_ict": 210314,
+    "rapporto": 327.53
+   },
+   "LAVORO": {
+    "cig_ict_n": 0,
+    "cig_ict_importo": 0,
+    "bdap_op_ict": 23082814,
+    "rapporto": 0.0
+   },
+   "SALUTE": {
+    "cig_ict_n": 6,
+    "cig_ict_importo": 1058155,
+    "bdap_op_ict": 14279581,
+    "rapporto": 0.07
+   },
+   "TURISMO": {
+    "cig_ict_n": 19,
+    "cig_ict_importo": 12511779,
+    "bdap_op_ict": 6286548,
+    "rapporto": 1.99
+   },
+   "UNIVERSITA": {
+    "cig_ict_n": 19,
+    "cig_ict_importo": 30043755,
+    "bdap_op_ict": 10324530,
+    "rapporto": 2.91
+   }
+  },
+  "2025": {
+   "AGRICOLTURA": {
+    "cig_ict_n": 40,
+    "cig_ict_importo": 41915581,
+    "bdap_op_ict": 30062858,
+    "rapporto": 1.39
+   },
+   "ALTRO": {
+    "cig_ict_n": 31,
+    "cig_ict_importo": 646027,
+    "bdap_op_ict": 0,
+    "rapporto": null
+   },
+   "AMBIENTE": {
+    "cig_ict_n": 36,
+    "cig_ict_importo": 14397185,
+    "bdap_op_ict": 24896164,
+    "rapporto": 0.58
+   },
+   "CULTURA": {
+    "cig_ict_n": 55,
+    "cig_ict_importo": 12451732,
+    "bdap_op_ict": 16580268,
+    "rapporto": 0.75
+   },
+   "DIFESA": {
+    "cig_ict_n": 908,
+    "cig_ict_importo": 57299190,
+    "bdap_op_ict": 75183610,
+    "rapporto": 0.76
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_ict_n": 393,
+    "cig_ict_importo": 93103120,
+    "bdap_op_ict": 424689715,
+    "rapporto": 0.22
+   },
+   "ESTERI": {
+    "cig_ict_n": 317,
+    "cig_ict_importo": 87961730,
+    "bdap_op_ict": 25271552,
+    "rapporto": 3.48
+   },
+   "GIUSTIZIA": {
+    "cig_ict_n": 27,
+    "cig_ict_importo": 52548312,
+    "bdap_op_ict": 306205639,
+    "rapporto": 0.17
+   },
+   "IMPRESE": {
+    "cig_ict_n": 66,
+    "cig_ict_importo": 30583124,
+    "bdap_op_ict": 28233504,
+    "rapporto": 1.08
+   },
+   "INFRASTRUTTURE": {
+    "cig_ict_n": 182,
+    "cig_ict_importo": 84710139,
+    "bdap_op_ict": 56994642,
+    "rapporto": 1.49
+   },
+   "INTERNO": {
+    "cig_ict_n": 889,
+    "cig_ict_importo": 302738907,
+    "bdap_op_ict": 235950417,
+    "rapporto": 1.28
+   },
+   "ISTRUZIONE": {
+    "cig_ict_n": 19,
+    "cig_ict_importo": 26723517,
+    "bdap_op_ict": 4043639,
+    "rapporto": 6.61
+   },
+   "LAVORO": {
+    "cig_ict_n": 0,
+    "cig_ict_importo": 0,
+    "bdap_op_ict": 19913431,
+    "rapporto": 0.0
+   },
+   "SALUTE": {
+    "cig_ict_n": 8,
+    "cig_ict_importo": 1103315,
+    "bdap_op_ict": 16915227,
+    "rapporto": 0.07
+   },
+   "TURISMO": {
+    "cig_ict_n": 44,
+    "cig_ict_importo": 79214331,
+    "bdap_op_ict": 3893619,
+    "rapporto": 20.34
+   },
+   "UNIVERSITA": {
+    "cig_ict_n": 19,
+    "cig_ict_importo": 17874786,
+    "bdap_op_ict": 17504023,
+    "rapporto": 1.02
+   }
+  }
+ }
+}
