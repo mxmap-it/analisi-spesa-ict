@@ -1,0 +1,521 @@
+{
+ "disegno": {
+  "universo": "lavoro/attribuzione/2024-2026.csv, CIG distinti, regole correnti (dopo 9ba5ad88)",
+  "seme": 20261110,
+  "quote": {
+   "M": 40,
+   "R": 50,
+   "E": 50,
+   "N": 43
+  },
+  "esclusi_gia_visti": 15115,
+  "dimensione_strati": {
+   "E": 555,
+   "M": 7,
+   "N": 237499,
+   "R": 5477
+  }
+ },
+ "etichette_sha256": "23738e20a71353314f3205eb08f2feda1e8ab0c65fa5c261ffa89ffe390cfd66",
+ "n_per_strato": {
+  "N": 43,
+  "R": 50,
+  "E": 50,
+  "M": 7
+ },
+ "bigtech_usa": {
+  "per_strato": {
+   "E": {
+    "tp": 48,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.96,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.865,
+     0.989
+    ],
+    "richiamo_w95": [
+     0.926,
+     1.0
+    ],
+    "euro": {
+     "tp": 30998228,
+     "fp": 182000,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.667,
+    "precisione_w95": [
+     0.342,
+     1.0
+    ],
+    "richiamo_w95": [
+     0.208,
+     0.939
+    ],
+    "euro": {
+     "tp": 517272,
+     "fp": 0,
+     "fn": 21600,
+     "precisione": 1.0,
+     "richiamo": 0.96
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "R": {
+    "tp": 44,
+    "fp": 6,
+    "fn": 0,
+    "precisione": 0.88,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.762,
+     0.944
+    ],
+    "richiamo_w95": [
+     0.92,
+     1.0
+    ],
+    "euro": {
+     "tp": 6611743,
+     "fp": 194416,
+     "fn": 0,
+     "precisione": 0.971,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 94,
+   "fp": 8,
+   "fn": 1,
+   "precisione": 0.922,
+   "richiamo": 0.989,
+   "precisione_w95": [
+    0.853,
+    0.96
+   ],
+   "richiamo_w95": [
+    0.943,
+    0.998
+   ],
+   "euro": {
+    "tp": 38127243,
+    "fp": 376416,
+    "fn": 21600,
+    "precisione": 0.99,
+    "richiamo": 0.999
+   }
+  },
+  "pesato_universo": {
+   "tp": 5355,
+   "fp": 679,
+   "fn": 1,
+   "precisione": 0.887,
+   "richiamo": 1.0,
+   "euro": {
+    "tp": 1068847910,
+    "fp": 23316551,
+    "fn": 21600,
+    "precisione": 0.979,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "extra_ue": {
+  "per_strato": {
+   "E": {
+    "tp": 48,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.96,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.865,
+     0.989
+    ],
+    "richiamo_w95": [
+     0.926,
+     1.0
+    ],
+    "euro": {
+     "tp": 30998228,
+     "fp": 182000,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.667,
+    "precisione_w95": [
+     0.342,
+     1.0
+    ],
+    "richiamo_w95": [
+     0.208,
+     0.939
+    ],
+    "euro": {
+     "tp": 517272,
+     "fp": 0,
+     "fn": 21600,
+     "precisione": 1.0,
+     "richiamo": 0.96
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "R": {
+    "tp": 44,
+    "fp": 6,
+    "fn": 0,
+    "precisione": 0.88,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.762,
+     0.944
+    ],
+    "richiamo_w95": [
+     0.92,
+     1.0
+    ],
+    "euro": {
+     "tp": 6611743,
+     "fp": 194416,
+     "fn": 0,
+     "precisione": 0.971,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 94,
+   "fp": 8,
+   "fn": 1,
+   "precisione": 0.922,
+   "richiamo": 0.989,
+   "precisione_w95": [
+    0.853,
+    0.96
+   ],
+   "richiamo_w95": [
+    0.943,
+    0.998
+   ],
+   "euro": {
+    "tp": 38127243,
+    "fp": 376416,
+    "fn": 21600,
+    "precisione": 0.99,
+    "richiamo": 0.999
+   }
+  },
+  "pesato_universo": {
+   "tp": 5355,
+   "fp": 679,
+   "fn": 1,
+   "precisione": 0.887,
+   "richiamo": 1.0,
+   "euro": {
+    "tp": 1068847910,
+    "fp": 23316551,
+    "fn": 21600,
+    "precisione": 0.979,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "tutti_i_provider": {
+  "per_strato": {
+   "E": {
+    "tp": 48,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.96,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.865,
+     0.989
+    ],
+    "richiamo_w95": [
+     0.926,
+     1.0
+    ],
+    "euro": {
+     "tp": 30998228,
+     "fp": 182000,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.75,
+    "precisione_w95": [
+     0.438,
+     1.0
+    ],
+    "richiamo_w95": [
+     0.301,
+     0.954
+    ],
+    "euro": {
+     "tp": 5042841,
+     "fp": 0,
+     "fn": 21600,
+     "precisione": 1.0,
+     "richiamo": 0.996
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "precisione": null,
+    "richiamo": 0.0,
+    "precisione_w95": null,
+    "richiamo_w95": [
+     0.0,
+     0.793
+    ],
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 16500,
+     "precisione": null,
+     "richiamo": 0.0
+    }
+   },
+   "R": {
+    "tp": 44,
+    "fp": 6,
+    "fn": 0,
+    "precisione": 0.88,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.762,
+     0.944
+    ],
+    "richiamo_w95": [
+     0.92,
+     1.0
+    ],
+    "euro": {
+     "tp": 6611743,
+     "fp": 194416,
+     "fn": 0,
+     "precisione": 0.971,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 95,
+   "fp": 8,
+   "fn": 2,
+   "precisione": 0.922,
+   "richiamo": 0.979,
+   "precisione_w95": [
+    0.854,
+    0.96
+   ],
+   "richiamo_w95": [
+    0.928,
+    0.994
+   ],
+   "euro": {
+    "tp": 42652812,
+    "fp": 376416,
+    "fn": 38100,
+    "precisione": 0.991,
+    "richiamo": 0.999
+   }
+  },
+  "pesato_universo": {
+   "tp": 5356,
+   "fp": 679,
+   "fn": 5524,
+   "precisione": 0.887,
+   "richiamo": 0.492,
+   "euro": {
+    "tp": 1073373479,
+    "fp": 23316551,
+    "fn": 91154937,
+    "precisione": 0.979,
+    "richiamo": 0.922
+   }
+  }
+ },
+ "errori_per_classe": {
+  "marchio senza prodotto del dizionario": 8,
+  "mancato": 2
+ },
+ "errori": [
+  {
+   "cig": "B53D34A5A0",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bm365\\b",
+   "etichetta": "altro:veeam",
+   "nota_etichetta": "prodotto di terzi (Veeam Data Cloud) per M365",
+   "importo": 37696.5,
+   "testo": "AFFIDAMENTO DIRETTO, AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 DELLA FORNITURA TRIENNALE DEL SERVIZIO VEEAM DATA CLOUD PER MICROSOFT M365  | AFFIDAMENTO DIRETTO, AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 DELLA FORNITURA TRIENNALE DEL SERVIZIO VEEAM DATA CLOUD "
+  },
+  {
+   "cig": "B9F4F30B7F",
+   "strato": "N",
+   "classe": "mancato",
+   "lente": "",
+   "via": "0-ict-non-cloud",
+   "regola": "",
+   "etichetta": "Aruba",
+   "nota_etichetta": "PEC Aruba",
+   "importo": 16500.0,
+   "testo": "RINNOVO ANNUALE DELLE CASELLE PEC E SERVIZIO DI INVIO MASSIVO DI POSTA ELETTRONICA CERTIFICATA | RINNOVO ANNUALE DELLE CASELLE PEC E SERVIZIO DI INVIO MASSIVO DI POSTA ELETTRONICA CERTIFICATA"
+  },
+  {
+   "cig": "BC18D50484",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "microsoft\\s+teams",
+   "etichetta": "",
+   "nota_etichetta": "formazione su Teams/Planner: nessun prodotto acquistato",
+   "importo": 25000.0,
+   "testo": "AFFIDAMENTO DIRETTO, AI SENSI DELL'ART. 50, COMMA 1, LETT. B) DEL D.LGS. 36/2023 E S.M.I., PER UN PERCORSO DI FORMAZIONE AZIENDALE IN OTTIMIZZAZIONE DELLA PRODUTTIVITÀ DEL LAVORO CON MICROSOFT TEAMS E PLANNER. | AFFIDAMENTO DIRETTO, AI SENSI DELL'ART. 50, COMMA 1, LETT. B) DEL D.LGS. 36/2023 E S.M.I"
+  },
+  {
+   "cig": "B18C9891F9",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "microsoft\\s*365",
+   "etichetta": "",
+   "nota_etichetta": "supporto sistemistico/helpdesk; M365 e cloud come contesto",
+   "importo": 17160.0,
+   "testo": "SUPPORTO PROGETTUALE EVOLUTIVO E SISTEMISTICO INERENTE GLI AMBIENTI CLOUD, MICROSOFT 365 E NETWORKING. SUPPORTO ONSITE ALLA STRUTTURA ICT INTERNA E SERVIZIO DI HELPDESK REMOTO ON DEMAND - PERIODO 03/05/2024 - 31/12/2024 | SUPPORTO PROGETTUALE EVOLUTIVO E SISTEMISTICO INERENTE GLI AMBIENTI CLOUD, MIC"
+  },
+  {
+   "cig": "BBF39CE6CB",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "oracle\\s+cloud",
+   "etichetta": "altro:windtre",
+   "nota_etichetta": "connettivita verso OCI: il prodotto e la connettivita, non Oracle",
+   "importo": 83999.7,
+   "testo": "RIF AD 109/2026 AFFIDAMENTO DIRETTO, AI SENSI DELL'ARTICOLO 50 CO.1 LETTERA B) DEL D.LGS. N. 36/2023, DEI SERVIZI DI CONNETTIVITÀ PER LA RAGGIUNGIBILITÀ DELLE PIATTAFORME DI GESTIONE DEL CICLO ATTIVO E PASSIVO E DI WORKFORCE MANAGEMENT SU ORACLE CLOUD INFRASTRUCTURE DELLA DURATA DI 36 MESI. | RIF AD"
+  },
+  {
+   "cig": "B21C2D07EA",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "microsoft\\s*365",
+   "etichetta": "altro:commvault",
+   "nota_etichetta": "backup di M365 con prodotto di terzi (CV-BKRC = Commvault)",
+   "importo": 140000.0,
+   "testo": "BACKUP IN HOUSE 36 MESI | ACQUISTO 14.500 MILA LICENZE PER BACKUP IN HOUSE DELLA POSTA ISTITUZIONALE IN CLOUD MICROSOFT 365 CON UPDATE PER 36 MESI CODICE RIFERIMENTO PRODUTTORE CV-BKRC-MB-31"
+  },
+  {
+   "cig": "B1E6C7E604",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "",
+   "nota_etichetta": "IaaS per ambienti VMware: provider non detto",
+   "importo": 42000.0,
+   "testo": "SERVIZI DI GESTIONE IAAS IN CLOUD PER AMBIENTI VMWARE - SERVIZI DI HOSTING | SERVIZI DI GESTIONE IAAS IN CLOUD PER AMBIENTI VMWARE - SERVIZI DI HOSTING"
+  },
+  {
+   "cig": "B274BC9A8E",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Google",
+   "via": "3-marchio",
+   "regola": "google\\s+workspace",
+   "etichetta": "",
+   "nota_etichetta": "formazione su LibreOffice e Google Workspace",
+   "importo": 10560.0,
+   "testo": "AFFIDAMENTO AL CONSORZIO DEI COMUNI TRENTINI DELL'INCARICO DI PROGETTAZIONE,ORGANIZZAZIONE EREALIZZAZIONE DELLA FORMAZIONE SU LIBREOFFICE E GOOGLE WORKSPACE | AFFIDAMENTO AL CONSORZIO DEI COMUNI TRENTINI DELL'INCARICO DI PROGETTAZIONE,ORGANIZZAZIONE EREALIZZAZIONE DELLA FORMAZIONE SU LIBREOFFICE E G"
+  },
+  {
+   "cig": "BC9A54F207",
+   "strato": "M",
+   "classe": "mancato",
+   "lente": "",
+   "via": "0-ict-non-cloud",
+   "regola": "",
+   "etichetta": "Adobe",
+   "nota_etichetta": "lotto 3 licenze Adobe",
+   "importo": 21600.0,
+   "testo": "PROCEDURA APERTA PER L'AFFIDAMENTO DELLA FORNITURA DI LICENZE SOFTWARE ANNUALI (LOTTO 3 LICENZE ADOBE) PER LA DURATA DI N. 36 MESI IN FAVORE DI A.F.O.L. MONZA E BRIANZA, ESPLETATA TRAMITE PIATTAFORMA TELEMATICA ACQUISTI TELEMATICI DI DIGITALPA S.R.L., CON IL CRITERIO DEL MINOR PREZZO | PROCEDURA APE"
+  },
+  {
+   "cig": "B9B3C71B2A",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "sql\\s+server",
+   "etichetta": "",
+   "nota_etichetta": "supporto sistemistico su SQL Server",
+   "importo": 20000.0,
+   "testo": "AFFIDAMENTO DI UN SERVIZIO DI SUPPORTO INFORMATICO PER ATTIVITÀ DA SISTEMISTA, ANALISI DATI E QUERY ATTRAVERSO L'UTILIZZO DI SQL SERVER E TICKETING PERIODO DAL 01/01/2026 AL 30/04/2026 | AFFIDAMENTO DI UN SERVIZIO DI SUPPORTO INFORMATICO PER ATTIVITÀ DA SISTEMISTA, ANALISI DATI E QUERY ATTRAVERSO L'"
+  }
+ ]
+}
