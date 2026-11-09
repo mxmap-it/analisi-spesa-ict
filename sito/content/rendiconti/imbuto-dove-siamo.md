@@ -11,18 +11,17 @@ build:
   list: never
 ---
 
-**Versione 0.10 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
+**Versione 0.11 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
 ## 1. Sintesi
 
-**Nuovo in 0.10 (9/11/2026):**
+**Nuovo in 0.10 e 0.11 (9/11/2026):**
 - **Via 6, a oggi e parziale** (§ 4.3.1): G1 classificato per intero (196 CIG, 4,70 mld), G3 a metà (514 dei primi 1.000 CIG, 1,15 dei 1,55 mld). In G1 la via 6 propone 1,21 mld non ICT (verso S1), 1,77 mld ICT non cloud (verso S5), 83 M€ cloud certo, 1,64 mld ancora incerti [V; **proposte da revisionare**, fuori dai totali].
 - **CIG derivati da accordo quadro non collegabili** (§ 4.9, #50): dei 55.114 CIG ICT discendenti da AQ o convenzione (89,2 mld), 1.666 non si collegano a un padre esistente, per **734 M€, lo 0,82 %**. Il prodotto ereditato dall'AQ manca quindi per una quota trascurabile [V].
-- **Denominatore BDAP dello Stato centrale** (§ 4.10, #67): pagato ICT 2024 **1.141 M€** sui codici gestionali ICT, **979 M€** per la seconda via (classificazione economica) [V]. I rapporti CIG/pagato per ministero sono una **stima** di dove l'imbuto è cieco, non una percentuale di copertura.
+- **Denominatore BDAP dello Stato centrale** (§ 4.10, #67): pagato ICT 2024 **1.141 M€** sui codici gestionali ICT, **979 M€** per la seconda via (classificazione economica) [V]. I rapporti CIG/pagato per ministero sono una **stima** di dove l'imbuto è cieco, non una percentuale di copertura. Con l'abbinamento per codice fiscale (0.11, § 4.12) il buco della Giustizia si rivela un artefatto della regola sul nome (0,96 nel 2024); resta il **MEF** (0,25 nel 2024), circa **0,3 miliardi l'anno** [V sui conteggi, stima sull'interpretazione].
 - **Residuo S6, documenti** (§ 4.11, #57): 532 CIG per 304,5 M€ hanno un documento che cita il CIG e possono passare da incerto a leggibile; in S6/G3 sono il 2,1 % dei CIG. L4 è ancora parziale (1.901 enti su 4.352) [V].
-- **In attesa** (segnaposto § 4.12): BDAP fase 2.
 
 - **Universo:** CIG ANAC pubblicati dal 2020 (file annuali 2020-2025 + aggiornamenti mensili), SmartCIG esclusi. Dal 2024: **3.745.883 CIG**; 2020-2023: **1.967.915 CIG** [V].
 - **Esclusione certa (non ICT):** dal 2024 **3.216.533 CIG (85,9 %)**. Il 2020-2023 dà l'**82,8 %** [V]. Per escludere servono tre segnali concordi: CPV non ICT, nessun termine ICT nell'oggetto, nessun lotto o convenzione ICT. La precisione di questo strato **non è ancora misurata** (punto 1 della top-5).
@@ -510,7 +509,7 @@ Dalla pagina [BDAP](/progetto/bdap/) (versione 0.1, 9/11/2026). Verifica `tools/
 - **Via 1, pagamenti per codice gestionale ICT (11 codici):** 987 M€ nel 2022, 1.199 nel 2023, **1.141 nel 2024**, 1.286 nel 2025 [V].
 - **Via 2, controvalidazione per classificazione economica di 3° livello** (rendiconto 2024 per piano di gestione): **979 M€** [V]. Le due vie differiscono del 14 %.
 - **Sanità:** voce BA1620 del CE SSN 2023 (servizi di assistenza informatica), 604 M€, denominatore minimo [V].
-- **Rapporto CIG ICT / pagato ICT 2024, per ministero:** Interno 2,0; Difesa 3,5; Infrastrutture 2,2; MEF 0,17; Giustizia 0,03 [V sui conteggi, **stima** sull'interpretazione]. Un CIG vale il contratto pluriennale e il pagato è la cassa di un anno: il rapporto non è una copertura. Segnala però che MEF e Giustizia spendono in ICT soprattutto fuori dai CIG che vediamo (Sogei in-house, contratti Consip), da verificare caso per caso.
+- **Rapporto CIG ICT / pagato ICT 2024, per ministero (abbinamento per nome, superato in 0.11):** Interno 2,0; Difesa 3,5; Infrastrutture 2,2; MEF 0,17; Giustizia 0,03 [V sui conteggi, **stima** sull'interpretazione]. Per codice fiscale e con la quota annua dei contratti (§ 4.12): Giustizia 0,96 (artefatto del nome), MEF 0,25; il buco residuo è il MEF, circa 0,3 miliardi l'anno. Un CIG vale il contratto pluriennale e il pagato è la cassa di un anno: il rapporto non è una copertura. Il buco residuo è del MEF (Sogei in-house senza CIG per Ragioneria, Tesoro e Amministrazione generale, R71).
 
 ### 4.11 Riepilogo del residuo S6: documenti dai livelli L3, MePA, L4 (#57, nuovo in 0.10)
 
@@ -527,9 +526,38 @@ Per il residuo S6 si cercano gli atti che dicono il prodotto, livello per livell
 - **Costo:** L3 33.826 richieste, L4 10.460 finora; nessun token.
 - **L4 è parziale:** le cifre L4 cresceranno; la fotografia è quella del 9/11.
 
-### 4.12 BDAP fase 2 — SEGNAPOSTO
+### 4.12 BDAP fase 2: codice fiscale, quota annua, Sogei, SIOPE (#67, #30, nuovo in 0.11)
 
-> **Da inserire quando la sezione BDAP fase 2 è pronta e verificata** (file a parte, #67). Contenuto atteso: le cifre nuove con la verifica che le produce in `tools/verifiche/` e l'esito datato, ciascuna marcata [V] o [R]. Poi aggiornare § 1 e § 4.10. In questa versione non è usata nessuna cifra della fase 2.
+Dalla pagina [BDAP](/progetto/bdap/) (versione 0.2, 9/11/2026). Verifiche, dal mirror: `tools/verifiche/bdap_ict_stato.py`
+(esito `esiti/2026-11-09/bdap/ict-stato.json`), `tools/verifiche/bdap_cig_ministeri_cf.py` (`esiti/2026-11-09/bdap/cig-ministeri-cf.json`),
+`tools/verifiche/siope_bdap_vs_diretto.py 2024` e `2025` (`esiti/2026-11-09/siope/bdap-vs-diretto-<anno>.json`), tutte con lo sha256 dei file.
+
+- **Stazione appaltante → ministero per codice fiscale** (IndicePA: CF degli enti e degli uffici di fatturazione,
+  2.661 CF ministeriali) invece che per nome: i CIG ICT ministeriali 2020-2026 passano da 10.758 a 23.644, da 5,0 a
+  8,2 miliardi [V]. Per nome se ne perdevano 13.007 per 3,24 miliardi.
+- **Giustizia:** il buco era un artefatto della regola sul nome. Nel 2024 i CIG ICT sono 359 per 213 M€ (erano 13 per
+  9); la quota 2024 dei contratti attivi vale **0,96** volte il pagato ICT (304 contro 315 M€) [V sui conteggi, stima
+  sull'interpretazione].
+- **MEF:** il buco resta. Nel 2024 quota dei CIG attivi 97 M€ contro 388 pagati (**0,25**); 0,36 nel 2025 [V]. I
+  contratti in-house con Sogei che hanno un CIG con SA del MEF (Dipartimento delle finanze 77 M€ sul triennio
+  2024-2026, Giustizia tributaria 47 M€) spiegano circa 26 M€ l'anno [stima]. Ragioneria, Tesoro e Amministrazione
+  generale non hanno contratti Sogei con CIG in ANAC [V sull'assenza nei dati] (R71). Peso della criticità 9 ridotto
+  da circa 0,7 a circa **0,3 miliardi l'anno**.
+- **Sogei come stazione appaltante:** quota 2024 dei suoi CIG ICT attivi circa 0,69 miliardi [V sui conteggi]. Sono
+  acquisti per tutti i committenti (MEF e agenzie fiscali), non attribuibili a un ministero, e non vanno sommati al
+  pagato del MEF: sarebbe un doppio conteggio della stessa catena in-house.
+- **Quota annua dei contratti pluriennali:** ogni CIG si ripartisce sulla durata prevista ANAC. Dal 2024 la durata
+  manca nel **90 % dei CIG** (0,1 % nel 2022) [V]: per i contratti 2024-2025 la quota è l'importo intero (R69).
+  Rapporti sopra 1 (Difesa 9,1, Cultura 11,5) non sono coperture: per CF entrano uffici con bilancio proprio (musei e
+  parchi autonomi, Agenzia industrie difesa).
+- **Seconda via per anno** (rendiconto per piano di gestione, CE di 3° livello): 492, 740, 675, 452, 1.007, 979 M€ dal
+  2019 al 2024 [V]. Il salto del 2023 è una riclassificazione (MEF da 18 a 297 M€): la controvalidazione vale dal 2023
+  (84-86 % della via per gestionali), non prima.
+- **SIOPE via BDAP contro SIOPE diretto** (#30; Lazio, Umbria, Basilicata, Molise, Liguria): sui codici ICT 99,4 %
+  (2024) e 99,5 % (2025) delle coppie ente × codice uguali all'euro, totali 473,35 contro 473,36 M€ [V]; sul totale
+  BDAP è più basso dello 0,7 % (2024) per i pagamenti da regolarizzare. Il **troncamento del 2025 a marzo** riferito da
+  AgID [R] non si ripresenta sui file attuali di queste regioni: tutti i 1.507 enti abbinati arrivano a dicembre [V].
+  Le altre 15 regioni non sono misurate. BDAP non ha il codice ente (R70): resta la fonte diretta.
 
 ## 5. Puntatori ai documenti prima e dopo il 2024 (#57, esiti del 4/11 riusati)
 
@@ -619,7 +647,12 @@ python tools/verifiche/imbuto_revisione.py     # precisione T3/T4 (Wilson), rego
 python tools/verifiche/pnrr11_decreti.py       # PNRR 1.1: finanziati per ente dai decreti, con controllo interno
 python tools/verifiche/pnrr11_cup_cig.py       # PNRR 1.1: CUP → CIG e confronto con i contratti PSN
 python tools/verifiche/imbuto_via6.py --json esiti/<data>/imbuto/via6-g1g3.json   # via 6 su G1/G3 (§ 4.3.1)
-# sul server, dal mirror: cig_aq_tipo.py (§ 4.9) e bdap_ict_stato.py (§ 4.10)
+# sul server, dal mirror: cig_aq_tipo.py (§ 4.9)
+# sul server, dal mirror (giro 0.2 di BDAP, § 4.10 e § 4.12)
+nice .venv/bin/python tools/verifiche/bdap_ict_stato.py
+nice .venv/bin/python tools/verifiche/bdap_cig_ministeri_cf.py
+nice .venv/bin/python tools/verifiche/siope_bdap_vs_diretto.py 2024
+nice .venv/bin/python tools/verifiche/siope_bdap_vs_diretto.py 2025
 # sul server: imbuto_qe_sal.py (quadro economico e SAL dal mirror) prima di imbuto_revisione.py
 ```
 
@@ -665,7 +698,8 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 - Gli euro includono gli importi negativi della fonte.
 - L'asse B è riportato solo per gli inclusi certi.
 - La via 6 su G3 è parziale (§ 4.3.1) e i suoi esiti sono proposte non revisionate.
-- L4 del residuo S6 è parziale (§ 4.11); manca BDAP fase 2 (§ 4.12).
+- L4 del residuo S6 è parziale (§ 4.11).
+- SIOPE via BDAP è confrontato con la fonte diretta solo per 5 regioni su 20 (§ 4.12).
 
 ## Registro delle revisioni
 
@@ -681,3 +715,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.8 | 2026-11-06 | § 4.7: adattatori per piattaforme di e-procurement (PortaleAppalti, esop, generico); CINECA Oracle raggiunto da anonimo (ULA, nessun cloud); 5 atti Oracle, 0 con cloud; 3 ricerche EA in più (0 atti); rigenerazione 0.3.2 rinviata |
 | 0.9 | 2026-11-06 | § 4.8: TED come seconda fonte degli aggiudicatari (84 CIG, 72 nell'imbuto; precisione P.IVA 89 % riferita da #27); nessun effetto sugli strati |
 | 0.10 | 2026-11-09 | § 4.3.1: via 6 al 9/11 (G1 196/196, G3 514/1.000, parziale e da revisionare); § 4.9: CIG derivati da AQ non collegabili, 0,82 % / 734 M€ (#50), conteggi di aq_pmod.py portati in cig_aq_tipo.py; § 4.10: BDAP 0.1, pagato ICT Stato 1.141 M€ 2024 e controvalidazione 979 M€, rapporti CIG/pagato come stima; § 4.11: riepilogo del residuo S6 (#57: L3 453 CIG/262,1 M€, MePA 0, L4 parziale 79/42,4 M€, potenziale 532 CIG/304,5 M€); correzioni della verifica a regole (604 su 725); segnaposto § 4.12 (BDAP fase 2); § 9 e limiti aggiornati |
+| 0.11 | 2026-11-09 | § 4.12 BDAP fase 2: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua e durata mancante dal 2024 (R69), Sogei (R71), seconda via 2019-2024, SIOPE BDAP contro diretto (#30, R70); criticità 9 a circa 0,3 miliardi; § 1, § 4.10 e § 9 aggiornati |
