@@ -1,0 +1,85 @@
+Return-Path: <posta-certificata@pec.gestore-ente.invalid>
+Message-ID: <opec20261120093000.busta@pec.gestore-ente.invalid>
+Date: Fri, 20 Nov 2026 09:30:00 +0100
+From: "Per conto di: protocollo@pec.ente-prova.invalid" <posta-certificata@pec.gestore-ente.invalid>
+To: richiedente@pec.richiedente.invalid
+Reply-To: protocollo@pec.ente-prova.invalid
+Subject: POSTA CERTIFICATA: Risposta a istanza di accesso civico prot. n. 12345 del 20/11/2026
+X-Trasporto: posta-certificata
+X-Riferimento-Message-ID: <risposta-ente-20261120@pec.ente-prova.invalid>
+X-Verificasicurezza: normale
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-256; boundary="----firma-busta"
+
+This is an S/MIME signed message
+
+------firma-busta
+Content-Type: multipart/mixed; boundary="----corpo-busta"
+
+------corpo-busta
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Messaggio di posta certificata
+Il giorno 20/11/2026 alle ore 09:30:00 (+0100) il messaggio
+"Risposta a istanza di accesso civico prot. n. 12345 del 20/11/2026" è stato inviato da "protocollo@pec.ente-prova.invalid"
+indirizzato a:
+richiedente@pec.richiedente.invalid
+Il messaggio originale è incluso in allegato.
+Identificativo messaggio: opec20261120093000.busta@pec.gestore-ente.invalid
+
+------corpo-busta
+Content-Type: application/xml; name="daticert.xml"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="daticert.xml"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<postacert tipo="posta-certificata" errore="nessuno">
+  <intestazione>
+    <mittente>protocollo@pec.ente-prova.invalid</mittente>
+    <destinatari tipo="certificato">richiedente@pec.richiedente.invalid</destinatari>
+    <risposte>protocollo@pec.ente-prova.invalid</risposte>
+    <oggetto>Risposta a istanza di accesso civico prot. n. 12345 del 20/11/2026</oggetto>
+  </intestazione>
+  <dati>
+    <gestore-emittente>GESTORE PEC DELL'ENTE DI PROVA</gestore-emittente>
+    <data zona="+0100">
+      <giorno>20/11/2026</giorno>
+      <ora>09:30:00</ora>
+    </data>
+    <identificativo>opec20261120093000.busta@pec.gestore-ente.invalid</identificativo>
+    <msgid>&lt;risposta-ente-20261120@pec.ente-prova.invalid&gt;</msgid>
+  </dati>
+</postacert>
+
+------corpo-busta
+Content-Type: message/rfc822; name="postacert.eml"
+Content-Disposition: inline; filename="postacert.eml"
+
+Message-ID: <risposta-ente-20261120@pec.ente-prova.invalid>
+Date: Fri, 20 Nov 2026 09:29:55 +0100
+From: Ente di prova - Protocollo <protocollo@pec.ente-prova.invalid>
+To: richiedente@pec.richiedente.invalid
+Subject: Risposta a istanza di accesso civico prot. n. 12345 del 20/11/2026
+In-Reply-To: <ac-prova-12345678901-1.20261112101500@pec.richiedente.invalid>
+References: <ac-prova-12345678901-1.20261112101500@pec.richiedente.invalid>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+In riscontro alla Sua istanza (rif. ac-prova-12345678901-1) si trasmettono in allegato
+i documenti richiesti, ad eccezione del contratto relativo al CIG B000000000 per il quale
+è in corso la comunicazione ai controinteressati (art. 5 c. 5 d.lgs. 33/2013).
+
+Il Responsabile del procedimento
+
+------corpo-busta--
+
+------firma-busta
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+RklSTUEgUy9NSU1FIEZJVFRJWklBIERJIFBST1ZBOiBOT04gVkVSSUZJQ0FCSUxF
+
+------firma-busta--

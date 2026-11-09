@@ -1,6 +1,6 @@
 # Accesso civico massivo (L7): elenco dei mancanti, piattaforme riusabili, punti normativi
 
-**Bozza 0.2 del 9/11/2026 (#58).** Documento preparatorio. **Nessuna richiesta è stata inviata (le bozze dell'ondata 0 sono solo generate, § 3bis);
+**Bozza 0.3 del 9/11/2026 (#58).** Documento preparatorio. **Nessuna richiesta è stata inviata (le bozze dell'ondata 0 sono solo generate, § 3bis; l'adattatore PEC, § 3ter, è stato provato solo in modalità secca su messaggi di esempio);
 nessun contatto con enti o terzi; nessuna registrazione o login.**
 
 **Legenda.** **[V]** = verificato da noi sulla fonte primaria (testo archiviato in
@@ -130,7 +130,7 @@ Verifiche del 9/11/2026 da API GitHub e dal codice sorgente [V]; il resto [R].
    registro (già impostato in `tools/trasparenza/pec.py`, registro append-only).
 2. **Calendario dei termini:** 30 giorni dalla ricezione (data della ricevuta di consegna, circ. 2/2017 § 5.1);
    sospensione fino a 10 giorni per controinteressati; riesame da chiedere entro 30 giorni (circ. 1/2019 § 7) e da
-   decidere in 20; difensore civico 30; TAR 30 giorni (art. 116 c.p.a. [R per il termine, da archiviare]).
+   decidere in 20; difensore civico 30; TAR 30 giorni (art. 116 c. 1 c.p.a. [V], § 3ter).
 3. **Destinatari:** enti da IndicePA (CF, codice IPA, PEC), RPCT e ufficio indicato in AT, difensore civico
    territoriale per regioni ed enti locali.
 4. **Riservatezza:** il nostro uso è interno finché Fabio non decide; Froide va configurato senza pubblicazione.
@@ -154,7 +154,7 @@ provenienza da confrontare con la GU o il sito della Funzione Pubblica.
 | 3.2 | Termine: provvedimento espresso e motivato entro 30 giorni dalla presentazione (art. 5 c. 6); non ammesso il silenzio-diniego (circ. 2/2017 § 5); il termine decorre dalla ricezione, non dal protocollo (§ 5.1) | [V] |
 | 3.3 | Controinteressati: comunicazione; opposizione motivata entro 10 giorni; termine sospeso (art. 5 c. 5); se accolto nonostante l'opposizione, consegna non prima di 15 giorni (c. 6) | [V] |
 | 3.4 | Riesame al RPCT su diniego o mancata risposta, decisione entro 20 giorni; sentito il Garante (10 giorni) per i dati personali (art. 5 c. 7); da proporre entro 30 giorni dalla decisione (circ. 1/2019 § 7, interpretazione, non norma) | [V] |
-| 3.5 | Difensore civico per regioni ed enti locali, territoriale o di ambito superiore; si pronuncia in 30 giorni; se l'ente non conferma il diniego entro 30 giorni, l'accesso è consentito (art. 5 c. 8). TAR ex art. 116 c.p.a. contro la decisione (art. 5 c. 7) | [V]; termine di 30 giorni per il ricorso al TAR [R, da archiviare l'art. 116] |
+| 3.5 | Difensore civico per regioni ed enti locali, territoriale o di ambito superiore; si pronuncia in 30 giorni; se l'ente non conferma il diniego entro 30 giorni, l'accesso è consentito (art. 5 c. 8). TAR ex art. 116 c.p.a. contro la decisione (art. 5 c. 7) | [V]; termine di 30 giorni per il ricorso al TAR [V] (`cpa-art116.html`, § 3ter) |
 | 3.6 | Richieste massive: accolte anche per un numero cospicuo di documenti, salvo manifesta irragionevolezza (carico che compromette il buon andamento), da provare e motivare; prima la PA deve aiutare a ridefinire la domanda; può valutare l'impatto cumulativo di più domande dello stesso soggetto in un periodo limitato; può non rispondere a una richiesta identica già soddisfatta (circ. 2/2017 § 7 lett. d, § 8) | [V] |
 | 3.7 | Limiti: interessi economici e commerciali, inclusi proprietà intellettuale, diritto d'autore e segreti commerciali (art. 5-bis c. 2 lett. c): pertinente per offerte tecniche e listini; accesso parziale e differimento obbligatori se bastano (c. 4-5) | [V] |
 | 3.8 | Identificazione: istanza valida se inviata dal proprio domicilio digitale iscritto (INI-PEC/INAD) o, in mancanza, da una PEC, che vale come elezione di domicilio digitale speciale (art. 65 c. 1 lett. c-bis CAD, vigente). La circ. 2/2017 § 3.3 cita la versione precedente («propria casella PEC») | [V] |
@@ -171,8 +171,8 @@ i valori usati sono **proposte** in `config/accesso-civico/parametri.yaml`.
 - **Modelli** (`config/accesso-civico/modelli/`, Markdown con variabili `{{ }}` compatibili Jinja; Jinja non è
   installato, il riempimento è in `bozze.py`): `istanza.md`, `sollecito.md`, `chiarimento.md`, `riesame-diniego.md`,
   `riesame-silenzio.md`, `difensore-civico.md`. Ogni modello elenca in testa le norme citate e il file di
-  `prove-normativa/` su cui sono state verificate [V]; restano [R] solo il principio di proroga dei termini festivi
-  (art. 2963 c.c., non archiviato), il 4 ottobre festivo dal 2026 e l'art. 116 c.p.a.
+  `prove-normativa/` su cui sono state verificate [V]; i tre punti allora [R] (proroga dei termini festivi, 4 ottobre,
+  art. 116 c.p.a.) sono stati verificati nella 0.3 (§ 3ter)
 - **Registro** append-only (`schemi/accesso-civico-richiesta.schema.json`, `schemi/accesso-civico-evento.schema.json`)
   e macchina a stati `tools/accesso_civico/stati.py`: stati bozza, approvata, inviata, consegnata,
   sospesa-controinteressati, chiarimento, accolta, parziale, diniego, silenzio, riesame, difensore,
@@ -192,12 +192,67 @@ i valori usati sono **proposte** in `config/accesso-civico/parametri.yaml`.
   in IPA) + 24 dal residuo, a turno per tipologia (massimo 3 per tipologia). Escluse società e gestori (ambito
   dell'art. 2-bis da verificare caso per caso). Elenco in `esiti/2026-11-09/accesso-civico/ondata-0/riepilogo.md`.
 
+## 3ter. Punti normativi chiusi e adattatore PEC (0.3, 9/11/2026) — NESSUN INVIO
+
+### 3ter.1 Tre punti verificati su fonte primaria [V]
+
+Testi archiviati il 9/11/2026 da Normattiva (testo vigente, articolo singolo) e GU, in `prove-normativa/` con
+`SHA256SUMS` e nell'archivio content-addressed (`tools/archivia.py --da-file … --url …`):
+`cc-art2963.html`, `cpc-art155.html`, `cpa-art52.html`, `cpa-art116.html`, `l241-art2.html`, `l260-1949-art1.html`,
+`l260-1949-art2.html`, `l151-2025.html`, `gu-l151-2025.html`.
+
+| # | Punto | Esito |
+|---|---|---|
+| 3ter.a | **Proroga dei termini che scadono in giorno festivo** | Art. 2963 c. 3 c.c. (termini di prescrizione): «prorogato di diritto al giorno seguente non festivo» [V]. Art. 155 c. 4 c.p.c.: stessa regola; c. 5: anche il **sabato**, ma solo per gli atti processuali fuori udienza [V]. Art. 52 c. 3 e 5 c.p.a.: stessa regola per i termini del processo amministrativo, sabato compreso [V]. **L. 241/1990 e d.lgs. 33/2013 non contengono una regola propria** (art. 2 L. 241 archiviato: fissa i termini, non il computo) [V]: l'applicazione al procedimento amministrativo è un principio generale di origine giurisprudenziale [interpretazione, non norma]. Scelta in `stati.py`: proroga applicata a tutti i termini, sabato non festivo (tranne il ricorso al TAR); per prudenza i nostri atti (riesame) vanno fatti entro la data non prorogata. |
+| 3ter.b | **4 ottobre festivo dal 2026** | L. 8 ottobre 2025, n. 151, «Istituzione della festa nazionale di San Francesco d'Assisi», GU SG n. 236 del 10/10/2025, **in vigore dal 1/1/2026** [V, Normattiva e GU]; inserisce il 4 ottobre nell'art. 2 della L. 260/1949 (testo vigente archiviato) [V]. Il 2 giugno è festa nazionale per l'art. 1 L. 260/1949 [V]. Il 4 novembre resta nel testo dell'art. 2 ma non è festivo dalla L. 54/1977 [R, non archiviata]. Calendario di `stati.py` invariato nei valori, fonti ora [V]. |
+| 3ter.c | **Art. 116 c.p.a., termine per il ricorso** | Testo vigente (dal 20/4/2013): ricorso «entro trenta giorni dalla conoscenza della determinazione impugnata o dalla formazione del silenzio», esteso dal d.lgs. 33/2013 alla «tutela del diritto di accesso civico» [V]. `stati.py` 0.2: termine `ricorso_tar` = 30 gg, funzione `termine_tar` (proroga anche del sabato, art. 52 c. 5), indicato nella prossima azione dopo il riesame/difensore. |
+
+Test: 19 su `stati.py` (3 nuovi sulle fonti verificate: 4 ottobre dal 2026, 2 giugno/1 novembre/4 novembre, TAR).
+
+### 3ter.2 Adattatore PEC `tools/accesso_civico/pec.py` 0.1 (solo libreria standard)
+
+- **Modalità secca di default**: nessuna connessione. La modalità reale richiede insieme `--reale` e `PEC_REALE=1`;
+  credenziali **solo** da variabili d'ambiente (`PEC_UTENTE`, `PEC_PASSWORD`, `PEC_MITTENTE`, `PEC_SMTP_HOST`,
+  `PEC_IMAP_HOST`, porte 465/993). In secca il registro vero non si tocca: gli eventi vanno in `eventi-secca.jsonl`.
+- **`invia <cartella-bozze>`**: solo richieste nello stato «approvata» (evento di Fabio); oggetto e testo dalla bozza
+  `<id>.md` (l'oggetto deve contenere il codice `rif. ac-…`, che serve all'abbinamento); **allegato obbligatorio**
+  `<id>.pdf.p7m` (firmato) o `<id>.pdf`, altrimenti la richiesta è saltata; Message-ID con il codice della
+  richiesta; SMTP-SSL; ogni messaggio archiviato come `.eml` con sha256; evento «invio» con sha256, percorso e
+  Message-ID. **Tetto giornaliero** (contato dagli «invio» già registrati nel giorno) e **intervallo** fra due invii
+  parametrici (`parametri.yaml`, sezione `pec`: proposte 20/giorno e 120 s).
+- **`leggi <cartella-bozze>`**: in secca solo da file `.eml` (`--da-cartella`); in reale IMAP-SSL in sola lettura
+  (EXAMINE e `BODY.PEEK`: nessun flag, nessuna cancellazione), ripartibile dall'ultimo UID. Riconosce le ricevute
+  secondo le regole tecniche (DM 2/11/2005, allegato al DPR 68/2005): header `X-Ricevuta`,
+  `X-Riferimento-Message-ID`, allegato `daticert.xml` (tipo, errore, giorno/ora/zona, identificativo, msgid,
+  consegna, errore-esteso), controllando che header e `daticert.xml` coincidano; riconosce le buste di trasporto
+  (`X-Trasporto: posta-certificata`) e ne apre il `postacert.eml`. Abbinamento: Message-ID dell'invio
+  (`X-Riferimento-Message-ID`, `In-Reply-To`, `References`), poi codice `ac-…` nell'oggetto o nel testo.
+- **Eventi registrati**: avvenuta-consegna -> «consegna» con la data di `daticert.xml` (da qui partono i 30 giorni);
+  errore-consegna e preavviso di mancata consegna -> «mancata-consegna» (la richiesta torna «approvata»);
+  accettazione/presa in carico -> solo giornale. **Le risposte degli enti non generano eventi**: vanno nella coda
+  «da-esaminare» del giornale, perché l'esito (accolta/parziale/diniego) va letto da una persona. Ricevute
+  incoerenti, non abbinate o in uno stato inatteso: nessun evento, «da esaminare». Idempotente (sha256).
+- **Limite dichiarato**: la firma S/MIME delle ricevute **non è verificata** (la libreria standard non lo consente):
+  annotato in ogni riga del giornale. Prima dell'uso reale: verifica con `openssl smime -verify` sui `.eml`
+  archiviati, se Fabio lo ritiene necessario.
+- **Archivio** (non in git, dati personali): `lavoro/accesso-civico/pec/{secca,reale}/blobs/<aa>/<sha256>.eml`
+  e `giornale.jsonl`.
+- **Test** (`.venv/bin/python -m unittest tests/test_accesso_civico_pec.py`, 8 test, nessuna connessione): sette
+  messaggi costruiti a mano in `tests/dati/pec/` (accettazione, avvenuta consegna, busta con risposta dell'ente,
+  errore di consegna, ricevuta con `daticert.xml` incoerente, busta abbinata solo per codice, messaggio estraneo);
+  SMTP finto per tetto, intervallo, allegato e Message-ID; secca che non tocca il registro; `--reale` rifiutato
+  senza `PEC_REALE=1`.
+- Rispetto a `tools/trasparenza/pec.py` (registro manuale degli invii art. 9): stesso schema di eventi; il
+  riconoscimento delle ricevute di `pec.py` (#58) potrebbe essere riusato là (proposta, non fatto).
+
 ## 4. Prossimi passi (proposti, non avviati)
 
 1. Fabio: richiedente e casella PEC, tetto per richiesta (proposta 20), cadenza delle ondate, approvazione (o modifica) dei 30 enti dell'ondata 0 e dei modelli, scelta Froide o registro nostro (il registro nostro, § 3bis, basta per l'ondata 0).
 2. RPCT e ufficio competente per i primi enti (da AT); ricerca della PEC per i 775 enti senza.
 3. Limiti della casella PEC che si userà (contratto del gestore).
-4. Archiviare l'art. 116 c.p.a. e la circolare 2/2017 dalla GU.
+4. Archiviare la circolare 2/2017 dalla GU (l'art. 116 c.p.a. è archiviato, § 3ter).
+5. Fabio: casella PEC e suoi limiti, credenziali in ambiente sul server, tetto giornaliero e intervallo dell'adattatore
+   (`parametri.yaml`, sezione `pec`), firma digitale dell'istanza (allegato `<id>.pdf.p7m`), poi approvazione per richiesta.
 
 ## Registro revisioni
 
@@ -205,3 +260,4 @@ i valori usati sono **proposte** in `config/accesso-civico/parametri.yaml`.
 |---|---|---|---|
 | 0.1 bozza | 9/11/2026 | Claude (agente) | Prima stesura: elenco unico (28.807 voci, 6.626 enti), confronto Froide/Alaveteli/progetti italiani, punti normativi su fonti archiviate. |
 | 0.2 bozza | 9/11/2026 | Claude (agente) | § 3bis: sei modelli con norme verificate, schemi e macchina a stati con scadenze e test, generatore di bozze, ondata 0 di prova (30 enti, 501 voci), nessun invio. |
+| 0.3 bozza | 9/11/2026 | Claude (agente) | § 3ter: proroga dei termini festivi, 4 ottobre (L. 151/2025) e art. 116 c.p.a. verificati su Normattiva/GU (9 testi archiviati); `stati.py` 0.2 con termine TAR e 19 test; adattatore PEC `pec.py` 0.1 (secca di default, solo libreria standard, 8 test su .eml di esempio), nessun invio. |

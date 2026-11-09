@@ -3,7 +3,7 @@ modello: ricorso al difensore civico, versione 0.1, 9/11/2026, #58
 norme citate, verificate in report/metodo/prove-normativa/:
 - art. 5 c. 8 d.lgs. 33/2013 (solo atti di regioni ed enti locali; difensore civico territoriale o di ambito superiore; ricorso notificato anche all'amministrazione; pronuncia entro 30 giorni; se l'ente non conferma il diniego entro 30 giorni dalla comunicazione del difensore, l'accesso è consentito) -> dlgs33-art5.html [V]
 - art. 5 c. 7 (decisione dell'amministrazione o del RPCT impugnabile) -> dlgs33-art5.html [V]
-- termine di 30 giorni per il ricorso: circ. FP 1/2019 § 7 lo indica come termine di decadenza dei rimedi (difensore civico e giudice) [V, copia di terzi]; art. 116 c.p.a. da archiviare [R]
+- termine di 30 giorni per il ricorso: circ. FP 1/2019 § 7 lo indica come termine di decadenza dei rimedi (difensore civico e giudice) [V, copia di terzi]; art. 116 c. 1 c.p.a.: 30 giorni -> prove-normativa/cpa-art116.html [V]
 ambito: SOLO enti regionali e locali (regioni, province, città metropolitane, comuni, unioni, loro enti); per gli altri enti il rimedio è il TAR (art. 116 c.p.a.), decisione di Fabio.
 il ricorso va inviato al difensore civico E notificato all'ente (due invii, o un invio con l'ente in copia).
 #}

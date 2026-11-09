@@ -40,6 +40,29 @@ class Termini(unittest.TestCase):
         self.assertEqual(stati.termine(D(2026, 11, 25), 30), D(2026, 12, 28))  # 25/12 + slitta oltre 26 e 27 (domenica)
 
 
+class FontiVerificate(unittest.TestCase):
+    """Punti verificati su Normattiva/GU il 9/11/2026 (report/metodo/prove-normativa/)."""
+
+    def test_quattro_ottobre_dal_2026(self):           # L. 151/2025, in vigore 1/1/2026
+        self.assertFalse(stati.festivo(D(2025, 10, 4)))  # sabato 2025, legge non ancora in vigore
+        self.assertTrue(stati.festivo(D(2027, 10, 4)))  # lunedì
+        self.assertEqual(stati.termine(D(2027, 9, 4), 30), D(2027, 10, 5))
+        self.assertEqual(stati.termine(D(2025, 9, 3), 30), D(2025, 10, 3))
+
+    def test_due_giugno_e_ognissanti(self):           # L. 260/1949 artt. 1-2
+        self.assertTrue(stati.festivo(D(2027, 6, 2)))
+        self.assertTrue(stati.festivo(D(2027, 11, 1)))
+        self.assertFalse(stati.festivo(D(2027, 11, 4)))  # soppresso dal 1977
+
+    def test_ricorso_tar_116_cpa(self):               # 30 gg, sabato prorogato (art. 52 c. 5 c.p.a.)
+        self.assertEqual(stati.TERMINI["ricorso_tar"], 30)
+        self.assertEqual(stati.termine_tar(D(2026, 11, 2)), D(2026, 12, 2))
+        self.assertEqual(stati.termine_tar(D(2026, 11, 12)), D(2026, 12, 14))  # 12/12 sabato -> lunedì 14
+        s = stati.ricostruisci(BASE + [ev("risposta", "2026-12-01", esito="diniego"), ev("riesame", "2026-12-03"),
+                                       ev("risposta", "2026-12-20", esito="diniego")])
+        self.assertIn("TAR entro il 2027-01-19", stati.alla_data(s, "2026-12-21")["prossima_azione"])
+
+
 class Macchina(unittest.TestCase):
     def test_flusso_base_e_scadenza(self):
         s = stati.ricostruisci(BASE)

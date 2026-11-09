@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Macchina a stati e scadenze delle richieste di accesso civico (#58, versione 0.1, 9/11/2026).
+"""Macchina a stati e scadenze delle richieste di accesso civico (#58, versione 0.2, 9/11/2026).
 
 Registro append-only: un file JSONL di eventi (`spesaict.accesso-civico-evento/1`, schemi/accesso-civico-evento.schema.json).
 Lo stato di una richiesta NON si salva: si ricalcola sempre dagli eventi (`ricostruisci`), alla data voluta
@@ -13,7 +13,19 @@ Termini (giorni di calendario, verificati sul testo archiviato in report/metodo/
 - presentazione del riesame entro 30 gg dalla decisione: circ. FP 1/2019 § 7 (interpretazione, non norma) [V copia];
 - difensore civico: pronuncia entro 30 gg; se ritiene illegittimo il diniego, l'ente ha 30 gg per confermarlo,
   altrimenti l'accesso è consentito (art. 5 c. 8) [V]; solo atti di regioni ed enti locali.
-- scadenza in giorno festivo: slitta al primo giorno non festivo (art. 2963 c.c., principio generale) [R, da archiviare].
+- scadenza in giorno festivo: slitta al primo giorno seguente non festivo. Testi [V] archiviati in prove-normativa/:
+  art. 2963 c. 3 c.c. (prescrizione), art. 155 c. 4 c.p.c. (processo civile; c. 5: anche il sabato, solo atti
+  processuali), art. 52 c. 3 e 5 c.p.a. (processo amministrativo, anche il sabato). Per il procedimento amministrativo
+  (L. 241/1990, d.lgs. 33/2013) NESSUNA norma lo dice espressamente (art. 2 L. 241 archiviato: tace); l'estensione è un
+  principio generale di origine giurisprudenziale [interpretazione]. Si applica a tutti i termini (`proroga=True`):
+  per i termini dell'ente evita di dichiarare un silenzio un giorno prima; per i nostri (riesame) conviene comunque
+  agire entro la data non prorogata. Il sabato non è festivo, tranne per il ricorso al TAR (art. 52 c. 5 c.p.a.).
+- festività: L. 260/1949 art. 1 (2 giugno) e art. 2 [V]; 4 ottobre festivo dal 1/1/2026 per L. 8/10/2025 n. 151
+  (GU SG n. 236 del 10/10/2025, entrata in vigore 1/1/2026) [V, Normattiva + GU]. Il 4 novembre e le feste religiose
+  soppresse restano nel testo dell'art. 2 ma non sono festive dalla L. 54/1977 (Epifania ripristinata con DPR 792/1985)
+  [R, non archiviate]. Il santo patrono locale non è festività nazionale: non conta.
+- ricorso al TAR in materia di accesso civico: 30 gg dalla conoscenza della decisione o dalla formazione del silenzio
+  (art. 116 c. 1 c.p.a., testo vigente: «tutela del diritto di accesso civico») [V].
 - il chiarimento NON riavvia né sospende il termine: la norma non lo prevede (scelta prudente, [R]).
 
 Uso: stati.py <eventi.jsonl> [AAAA-MM-GG]  -> stato di ogni richiesta alla data (default oggi).
@@ -25,7 +37,8 @@ from pathlib import Path
 
 FORMATO = "spesaict.accesso-civico-evento/1"
 TERMINI = {"risposta": 30, "controinteressati": 10, "consegna_dopo_opposizione": 15, "riesame_decisione": 20,
-           "garante": 10, "riesame_presentazione": 30, "difensore_decisione": 30, "difensore_conferma_ente": 30}
+           "garante": 10, "riesame_presentazione": 30, "difensore_decisione": 30, "difensore_conferma_ente": 30,
+           "ricorso_tar": 30}
 
 STATI = ["bozza", "approvata", "inviata", "consegnata", "sospesa-controinteressati", "chiarimento", "accolta",
          "parziale", "diniego", "silenzio", "riesame", "difensore", "difensore-conferma", "chiusa", "annullata"]
@@ -57,7 +70,7 @@ TRANSIZIONI = {
     "chiusura": (set(STATI) - FINALI, "chiusa"),
 }
 
-# festività nazionali fisse (L. 260/1949 e succ.); il 4 ottobre (San Francesco) dal 2026 [R, da verificare in GU]
+# festività nazionali fisse (L. 260/1949 artt. 1-2 [V]); il 4 ottobre (San Francesco) dal 2026: L. 151/2025 [V]
 FESTIVI_FISSI = {(1, 1), (1, 6), (4, 25), (5, 1), (6, 2), (8, 15), (11, 1), (12, 8), (12, 25), (12, 26)}
 FESTIVI_DAL = {(10, 4): 2026}
 
@@ -96,6 +109,11 @@ def termine(inizio, giorni, proroga=True, sabato=False):
     while proroga and festivo(d, sabato):
         d += dt.timedelta(days=1)
     return d
+
+
+def termine_tar(inizio, giorni=None):
+    """Ricorso al TAR (art. 116 c. 1 c.p.a.): 30 gg, prorogati se festivi o sabato (art. 52 c. 3 e 5 c.p.a.)."""
+    return termine(inizio, giorni or TERMINI["ricorso_tar"], proroga=True, sabato=True)
 
 
 def data(s):
@@ -187,11 +205,11 @@ def alla_data(s, oggi):
     if st == "silenzio" and s["fase"] == "istanza":
         r["prossima_azione"] = "sollecito" if s["solleciti"] == 0 else "riesame-silenzio"
     elif st == "silenzio":
-        r["prossima_azione"] = "difensore o TAR (decisione Fabio)"
+        r["prossima_azione"] = f"difensore o TAR entro il {termine_tar(s['scadenza'])} (decisione Fabio)"
     elif st in ("parziale", "diniego") and s["fase"] == "istanza":
         r["prossima_azione"] = f"riesame-diniego entro il {r['termine_riesame']}"
     elif st in ("parziale", "diniego"):
-        r["prossima_azione"] = "difensore (enti regionali/locali) o TAR (decisione Fabio)"
+        r["prossima_azione"] = f"difensore (enti regionali/locali) o TAR entro il {termine_tar(s['decisione'])} (decisione Fabio)"
     elif st == "chiarimento":
         r["prossima_azione"] = "chiarimento"
     elif st == "accolta":

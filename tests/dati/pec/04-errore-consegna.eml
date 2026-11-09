@@ -1,0 +1,58 @@
+Return-Path: <posta-certificata@pec.gestore-prova.invalid>
+Message-ID: <opec2026111210101740.errore-consegna@pec.gestore-prova.invalid>
+Date: Thu, 12 Nov 2026 10:17:40 +0100
+From: "Per conto di: richiedente@pec.richiedente.invalid" <posta-certificata@pec.gestore-prova.invalid>
+To: richiedente@pec.richiedente.invalid
+Subject: AVVISO DI MANCATA CONSEGNA: Istanza di accesso civico generalizzato (art. 5, c. 2, d.lgs. 33/2013) - documenti relativi a 2 affidamenti ICT - rif. ac-prova-98765432109-1
+X-Ricevuta: errore-consegna
+X-Riferimento-Message-ID: <ac-prova-98765432109-1.20261112101700@pec.richiedente.invalid>
+X-Verificasicurezza: normale
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-256; boundary="----firma-errore-consegna"
+
+This is an S/MIME signed message
+
+------firma-errore-consegna
+Content-Type: multipart/mixed; boundary="----corpo-errore-consegna"
+
+------corpo-errore-consegna
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+04-errore-consegna.eml0
+
+------corpo-errore-consegna
+Content-Type: application/xml; name="daticert.xml"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="daticert.xml"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<postacert tipo="errore-consegna" errore="no-dest">
+  <intestazione>
+    <mittente>richiedente@pec.richiedente.invalid</mittente>
+    <destinatari tipo="certificato">protocollo@pec.ente-inesistente.invalid</destinatari>
+    <risposte>richiedente@pec.richiedente.invalid</risposte>
+    <oggetto>Istanza di accesso civico generalizzato (art. 5, c. 2, d.lgs. 33/2013) - documenti relativi a 2 affidamenti ICT - rif. ac-prova-98765432109-1</oggetto>
+  </intestazione>
+  <dati>
+    <gestore-emittente>GESTORE PEC DI PROVA S.p.A.</gestore-emittente>
+    <data zona="+0100">
+      <giorno>12/11/2026</giorno>
+      <ora>10:17:40</ora>
+    </data>
+    <identificativo>opec2026111210101740.errore-consegna@pec.gestore-prova.invalid</identificativo>
+    <msgid>&lt;ac-prova-98765432109-1.20261112101700@pec.richiedente.invalid&gt;</msgid>
+    <errore-esteso>04-errore-consegna.eml1</errore-esteso><consegna>protocollo@pec.ente-inesistente.invalid</consegna>
+  </dati>
+</postacert>
+
+------corpo-errore-consegna--
+
+------firma-errore-consegna
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+RklSTUEgUy9NSU1FIEZJVFRJWklBIERJIFBST1ZBOiBOT04gVkVSSUZJQ0FCSUxF
+
+------firma-errore-consegna--

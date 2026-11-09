@@ -30,5 +30,12 @@ termini:                         # giorni di calendario; fonti in tools/accesso_
   difensore_decisione: 30        # art. 5 c. 8 [V]
   difensore_conferma_ente: 30    # art. 5 c. 8 [V]
   sollecito_dopo: 30             # proposta: sollecito il giorno dopo la scadenza
-  proroga_festivi: true          # scadenza in giorno festivo -> primo giorno non festivo (art. 2963 c.c., [R] da archiviare)
+  proroga_festivi: true          # festivo -> primo giorno non festivo: art. 2963 c.c., 155 c.p.c., 52 c.p.a. [V]; per la L. 241 principio giurisprudenziale [interpretazione]
+  ricorso_tar: 30                # art. 116 c. 1 c.p.a. [V]; sabato prorogato (art. 52 c. 5 c.p.a.) [V]
   sabato_festivo: false
+
+pec:                             # tools/accesso_civico/pec.py; PROPOSTE, la casella e i suoi limiti li decide Fabio
+  tetto_giorno: 20               # invii al giorno (contati dagli eventi «invio» del registro); limiti del gestore § 3.11 [R]
+  intervallo_secondi: 120        # pausa fra due invii
+  # credenziali SOLO da ambiente: PEC_UTENTE, PEC_PASSWORD, PEC_MITTENTE, PEC_SMTP_HOST, PEC_IMAP_HOST (+ porte)
+  # invio reale solo con --reale E PEC_REALE=1; default: modalità secca, nessuna connessione
