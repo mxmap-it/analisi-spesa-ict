@@ -1,6 +1,26 @@
 {
- "versione": "bdap-ict-stato 0.1 (2026-11-09)",
+ "versione": "bdap-ict-stato 0.2 (2026-11-09)",
  "ingressi": {
+  "pg-2019": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3d71a658-a9a0-4b1c-a210-2c1b0a2a6878.csv",
+   "sha256": "72dbdb1336f27174e0046ce439f132c338173b8b6afe3991b22dfb6e25242080"
+  },
+  "pg-2020": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/658002af-c4ee-4731-8daf-8dfa4f64567f.csv",
+   "sha256": "8dcbbb14d9197edb7a171df5e47228fb74150925b885cbf235a0570de09589dc"
+  },
+  "pg-2021": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/aedc9cb7-e787-450c-8034-f2fb417d2367.csv",
+   "sha256": "dd53177c7ba4282cd7faa166e6e25f51d2f4f6bc17d487907bd8dd233bb2753c"
+  },
+  "pg-2022": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/56e43168-0527-47be-aecb-769c721f7ed7.csv",
+   "sha256": "67db008090d6d08c841ee56cdd3a72ba7f9fe983bd2e9bc925552a8aa95e5cc4"
+  },
+  "pg-2023": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/587d1a31-4ff0-457b-9b94-da58a658b063.csv",
+   "sha256": "98195aa73f7a19c70b1641685da641f56bbae324350e708c2760aff47f4c9e20"
+  },
   "pg-2024": {
    "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d73a538b-5652-463f-8c97-b09b3ec818cd.csv",
    "sha256": "ac2abef4cab81a33539dc2400e94f4256a8977363fc24f79c3af2da3019a9216"
@@ -69,6 +89,214 @@
   ],
   "nome": "informatic|telematic|sistem\\w*\\s+informativ|software|hardware|elaborazion\\w*\\s+(automatica\\s+)?(dei\\s+)?dati|\\bcloud\\b|data\\s*cent|cybersicurezza|sicurezza\\s+informatica|meccanizzazion|automazione\\s+(degli\\s+)?uffici|transizione\\s+digitale|digitalizzazion"
  },
+ "pg_serie": {
+  "2019": {
+   "pg_totali": 11487,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 682,
+     "pagato_cs": 1231769813
+    },
+    "solo-ce": {
+     "pg": 113,
+     "pagato_cs": 363626146
+    },
+    "ce+nome": {
+     "pg": 217,
+     "pagato_cs": 128520438
+    }
+   },
+   "ce_pagato_cs": 492146583,
+   "ce_per_ministero": {
+    "INTERNO": 211678997,
+    "ECONOMIA E FINANZE": 188038857,
+    "GIUSTIZIA": 59280279,
+    "INFRASTRUTTURE": 19559908,
+    "IMPRESE": 5808822,
+    "AMBIENTE": 3058091,
+    "ESTERI": 1360310,
+    "DIFESA": 1029774,
+    "AGRICOLTURA": 923241,
+    "ALTRO": 592845,
+    "ISTRUZIONE": 452964,
+    "SALUTE": 353869,
+    "LAVORO": 8626
+   }
+  },
+  "2020": {
+   "pg_totali": 11677,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 684,
+     "pagato_cs": 1807786962
+    },
+    "solo-ce": {
+     "pg": 150,
+     "pagato_cs": 646442246
+    },
+    "ce+nome": {
+     "pg": 211,
+     "pagato_cs": 93215653
+    }
+   },
+   "ce_pagato_cs": 739657899,
+   "ce_per_ministero": {
+    "INTERNO": 195722896,
+    "DIFESA": 170247760,
+    "ECONOMIA E FINANZE": 159705291,
+    "INFRASTRUTTURE": 132340872,
+    "GIUSTIZIA": 69347222,
+    "IMPRESE": 3933607,
+    "AGRICOLTURA": 3086315,
+    "AMBIENTE": 1995289,
+    "ALTRO": 1806653,
+    "ESTERI": 673567,
+    "ISTRUZIONE": 564515,
+    "SALUTE": 202836,
+    "LAVORO": 31074
+   }
+  },
+  "2021": {
+   "pg_totali": 12557,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 764,
+     "pagato_cs": 1827444950
+    },
+    "solo-ce": {
+     "pg": 162,
+     "pagato_cs": 600838498
+    },
+    "ce+nome": {
+     "pg": 214,
+     "pagato_cs": 74319139
+    }
+   },
+   "ce_pagato_cs": 675157637,
+   "ce_per_ministero": {
+    "INTERNO": 253688248,
+    "ECONOMIA E FINANZE": 156877584,
+    "DIFESA": 134955660,
+    "GIUSTIZIA": 69737430,
+    "INFRASTRUTTURE": 43873542,
+    "ISTRUZIONE": 6364797,
+    "IMPRESE": 3530862,
+    "AGRICOLTURA": 2914222,
+    "CULTURA": 1045788,
+    "AMBIENTE": 987786,
+    "ESTERI": 921410,
+    "SALUTE": 222406,
+    "LAVORO": 16151,
+    "UNIVERSITA": 11749,
+    "TURISMO": 10000
+   }
+  },
+  "2022": {
+   "pg_totali": 12968,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 771,
+     "pagato_cs": 1876216231
+    },
+    "solo-ce": {
+     "pg": 162,
+     "pagato_cs": 402833391
+    },
+    "ce+nome": {
+     "pg": 214,
+     "pagato_cs": 49208885
+    }
+   },
+   "ce_pagato_cs": 452042276,
+   "ce_per_ministero": {
+    "INTERNO": 174690926,
+    "DIFESA": 129289869,
+    "GIUSTIZIA": 99239645,
+    "INFRASTRUTTURE": 22487898,
+    "ECONOMIA E FINANZE": 17585061,
+    "IMPRESE": 3885820,
+    "AGRICOLTURA": 1392462,
+    "CULTURA": 1002972,
+    "ESTERI": 940074,
+    "SALUTE": 662606,
+    "ISTRUZIONE": 363200,
+    "UNIVERSITA": 361328,
+    "AMBIENTE": 109925,
+    "LAVORO": 20022,
+    "TURISMO": 10468
+   }
+  },
+  "2023": {
+   "pg_totali": 13082,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 655,
+     "pagato_cs": 1626262037
+    },
+    "ce+nome": {
+     "pg": 386,
+     "pagato_cs": 932660977
+    },
+    "solo-ce": {
+     "pg": 32,
+     "pagato_cs": 74552294
+    }
+   },
+   "ce_pagato_cs": 1007213271,
+   "ce_per_ministero": {
+    "ECONOMIA E FINANZE": 297326059,
+    "GIUSTIZIA": 283719070,
+    "INTERNO": 173705336,
+    "DIFESA": 88119569,
+    "INFRASTRUTTURE": 29794386,
+    "LAVORO": 26493617,
+    "AGRICOLTURA": 22284554,
+    "CULTURA": 19307562,
+    "ISTRUZIONE": 17926150,
+    "ESTERI": 14517851,
+    "IMPRESE": 12114261,
+    "AMBIENTE": 10789126,
+    "TURISMO": 9674195,
+    "SALUTE": 988295,
+    "UNIVERSITA": 453242
+   }
+  },
+  "2024": {
+   "pg_totali": 13066,
+   "per_classe": {
+    "solo-nome": {
+     "pg": 687,
+     "pagato_cs": 1642491048
+    },
+    "ce+nome": {
+     "pg": 377,
+     "pagato_cs": 934217740
+    },
+    "solo-ce": {
+     "pg": 38,
+     "pagato_cs": 44455688
+    }
+   },
+   "ce_pagato_cs": 978673428,
+   "ce_per_ministero": {
+    "GIUSTIZIA": 318081438,
+    "ECONOMIA E FINANZE": 303528285,
+    "INTERNO": 111736938,
+    "DIFESA": 81354933,
+    "INFRASTRUTTURE": 31829033,
+    "ISTRUZIONE": 26510696,
+    "AGRICOLTURA": 26315607,
+    "LAVORO": 22692615,
+    "ESTERI": 21655566,
+    "CULTURA": 16366353,
+    "AMBIENTE": 8624464,
+    "TURISMO": 6252504,
+    "IMPRESE": 1831951,
+    "SALUTE": 1018797,
+    "UNIVERSITA": 874249
+   }
+  }
+ },
  "pg_2024": {
   "pg_totali": 13066,
   "per_classe": {
@@ -84,6 +312,24 @@
     "pg": 38,
     "pagato_cs": 44455688
    }
+  },
+  "ce_pagato_cs": 978673428,
+  "ce_per_ministero": {
+   "GIUSTIZIA": 318081438,
+   "ECONOMIA E FINANZE": 303528285,
+   "INTERNO": 111736938,
+   "DIFESA": 81354933,
+   "INFRASTRUTTURE": 31829033,
+   "ISTRUZIONE": 26510696,
+   "AGRICOLTURA": 26315607,
+   "LAVORO": 22692615,
+   "ESTERI": 21655566,
+   "CULTURA": 16366353,
+   "AMBIENTE": 8624464,
+   "TURISMO": 6252504,
+   "IMPRESE": 1831951,
+   "SALUTE": 1018797,
+   "UNIVERSITA": 874249
   }
  },
  "capitoli_serie": {

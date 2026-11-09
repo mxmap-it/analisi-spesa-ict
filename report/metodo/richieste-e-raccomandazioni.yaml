@@ -668,7 +668,7 @@
   tipo: lacuna
   stato: "verificato (9/11/2026) sul campione di 20 PG; proposta, nessuna richiesta inviata"
   titolo: "La spesa ICT fatta per trasferimento o in-house non è marcata come ICT nel bilancio dello Stato"
-  evidenza: "Nel rendiconto 2024 per PG, 5 dei 20 PG «solo nome» con più pagato sono trasferimenti a ACN, fondo per l innovazione tecnologica della Presidenza del Consiglio, strategia cyber del DIS, classificati come contributi (CE 4.1.1, 22.1.1, 26.1.1), non come ICT. MEF e Giustizia pagano 388 e 315 M€ su gestionali ICT ma i loro CIG ICT 2024 valgono 67 e 9 M€: la differenza è compatibile con affidamenti in-house (Sogei) senza CIG nell imbuto [stima]"
+  evidenza: "Nel rendiconto 2024 per PG, 5 dei 20 PG «solo nome» con più pagato sono trasferimenti a ACN, fondo per l innovazione tecnologica della Presidenza del Consiglio, strategia cyber del DIS, classificati come contributi (CE 4.1.1, 22.1.1, 26.1.1), non come ICT. MEF e Giustizia pagano 388 e 315 M€ su gestionali ICT ma i loro CIG ICT 2024 valgono 67 e 9 M€: la differenza è compatibile con affidamenti in-house (Sogei) senza CIG nell imbuto [stima]. Aggiornamento 9/11/2026 (giro 0.2, abbinamento per codice fiscale): la Giustizia si chiude (quota 2024 dei CIG attivi 304 M€ contro 315 pagati), il MEF no (97 contro 388); vedi R71"
   prova: "esiti/2026-11-09/bdap/pg-ict-2024.csv; esiti/2026-11-09/bdap/ict-stato.json (copertura_cig)"
   richiesta: "Un attributo ICT (o la missione/programma di destinazione) sui trasferimenti; rendiconto annuale pubblico dei corrispettivi Sogei per amministrazione e servizio"
   perche_serve: "Senza, la spesa ICT di Stato e agenzie non si somma senza doppi conteggi né si attribuisce al servizio (cloud, PSN, applicativi)"
@@ -707,3 +707,36 @@
   perche_serve: "La pubblicità degli atti di gara passa dalle piattaforme dal 2024: se non sono leggibili da programma, la verifica civica non scala"
   metrica: "Quota di host certificati con robots.txt che consente le pagine di procedura"
   rif: ["#57", "R44"]
+- id: R69
+  destinatario: ANAC (BDNCP, dataset CIG)
+  tipo: qualità del dato
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "DURATA_PREVISTA vuota nel 90 % dei CIG dal 2024"
+  evidenza: "Su un file mensile CIG 2024 (cig_csv_2024_06) 97.611 righe su 104.587 hanno DURATA_PREVISTA vuota o zero; nel file corrispondente del 2022 sono 37 su 39.754. Anche i grandi affidamenti in-house a Sogei del 2024-2025 (es. 981 M€ dell Agenzia delle entrate) hanno durata 0"
+  prova: "esiti/2026-11-09/bdap/cig-ministeri-cf.json (sogei.elenco_aggiudicataria, campo durata); tools/verifiche/bdap_cig_ministeri_cf.py"
+  richiesta: "Ripristinare la durata prevista (o data inizio e fine) nei CIG pubblicati con eForms dal 2024"
+  perche_serve: "Senza durata un contratto pluriennale non si ripartisce sugli anni: il confronto con la cassa annua (BDAP, SIOPE) è falsato"
+  metrica: "Quota di CIG per anno con durata prevista > 0"
+  rif: ["#67"]
+- id: R70
+  destinatario: MEF-RGS (BDAP, SIOPE regionale)
+  tipo: lacuna
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "SIOPE via BDAP senza codice ente SIOPE né codice fiscale"
+  evidenza: "I file «SIOPE Movimenti cumulati mensili di Spesa» per regione identificano l ente solo con nome, provincia e comune ISTAT; nel 2024, cinque regioni, 45 enti su 1.473 non si abbinano all anagrafica SIOPE per nome. Sugli enti abbinati gli importi ICT coincidono al 99,4 % con il SIOPE diretto"
+  prova: "esiti/2026-11-09/siope/bdap-vs-diretto-2024.json e -2025.json; tools/verifiche/siope_bdap_vs_diretto.py"
+  richiesta: "Aggiungere codice ente SIOPE e codice fiscale ai file SIOPE di BDAP"
+  perche_serve: "Con il codice l abbinamento con SIOPE, IndicePA e ANAC è certo e non dipende dal nome"
+  metrica: "Quota di righe SIOPE BDAP con codice ente"
+  rif: ["#30", "#67", "R63"]
+- id: R71
+  destinatario: MEF (Ragioneria, Tesoro, Amministrazione generale); Sogei; ANAC
+  tipo: trasparenza
+  stato: "verificato sui dati ANAC (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Contratti in-house fra MEF e Sogei senza CIG in ANAC"
+  evidenza: "Nei dati ANAC Sogei è aggiudicataria di 26 CIG; con SA del MEF solo Dipartimento delle finanze (77 M€, 2024), Giustizia tributaria (47 M€, 2025) e Guardia di finanza (4 M€). Il MEF paga 388 M€ su gestionali ICT nel 2024 contro 97 M€ di quota dei CIG ICT attivi: circa 290 M€ senza contratto visibile, compatibili con corrispettivi Sogei di Ragioneria, Tesoro e Amministrazione generale [stima]"
+  prova: "esiti/2026-11-09/bdap/cig-ministeri-cf.json (sogei, per_ministero_anno); tools/verifiche/bdap_cig_ministeri_cf.py"
+  richiesta: "CIG (o registrazione equivalente) per ogni contratto esecutivo in-house con Sogei e pubblicazione dei corrispettivi annui per committente"
+  perche_serve: "Senza, la spesa ICT del MEF non si collega a un contratto né si attribuisce al servizio; e gli acquisti di Sogei sul mercato non si separano da quelli del committente (rischio di doppio conteggio)"
+  metrica: "Euro dei pagamenti ICT del MEF coperti da contratti con CIG"
+  rif: ["#67", "R65"]

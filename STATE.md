@@ -5,7 +5,16 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-09
 
 
-## #67 BDAP NELL IMBUTO — punto di ripresa 9/11/2026
+## #67 BDAP NELL IMBUTO — giro 0.2 fatto 9/11/2026 (pagina v0.2)
+- **Verifiche nuove** [V]: `tools/verifiche/bdap_cig_ministeri_cf.py` (SA→ministero per CF IndicePA, quota annua, Sogei) e `tools/verifiche/siope_bdap_vs_diretto.py 2024|2025` (#30); `bdap_ict_stato.py` 0.2 con PG 2019-2024 (archiviati con archivia.py). Esiti `esiti/2026-11-09/bdap/` e `esiti/2026-11-09/siope/`.
+- **Per CF:** CIG ICT ministeriali 10.758 → 23.644 (5,0 → 8,2 mld 2020-26). **Giustizia** 2024 quota CIG attivi/pagato **0,96** (era 0,03: artefatto del nome); **MEF 0,25** (97 vs 388 M€), resta il solo buco (~0,3 mld/anno).
+- **Sogei:** CIG in-house con SA MEF ~26 M€/anno [stima] (DF 77 M€ triennio, Giustizia tributaria 47); agenzie fiscali 981/381/298 M€ (fuori dai gestionali MEF); Sogei come SA ~0,69 mld di quota 2024 (non attribuibile, doppio conteggio). R71.
+- **Durata ANAC** vuota nel 90 % dei CIG dal 2024 (R69). **Seconda via PG** 492/740/675/452/1.007/979 M€ 2019-24, discontinuità 2023 (MEF 18→297).
+- **#30 SIOPE** BDAP vs diretto (5 regioni): ICT 99,4 % coppie uguali, totale −0,7 % (2024); troncamento 2025 riferito da AgID non riprodotto (tutti a dicembre). R70.
+- **Rendiconto #66:** sezione § 4.12 pronta in `report/imbuto/sezione-4.12-bdap-fase2.md` (non inserita nel rendiconto).
+- **Prossimi:** altre 15 regioni SIOPE per #30; codice IPA dell'Università (manca `m_ur`); corrispettivi Sogei per committente (fonte da trovare, R65/R71).
+
+## #67 BDAP NELL IMBUTO — punto di ripresa giro 0.1, 9/11/2026
 - **Pagina** `/progetto/bdap/` (v0.1): famiglie, campi, difetti (R61, R63-R65), cosa usiamo e cosa no. Ripresa: `lavoro/bdap-imbuto/STATO.md`.
 - **Verifica** `tools/verifiche/bdap_ict_stato.py` -> `esiti/2026-11-09/bdap/` [V]: pagato ICT Stato per gestionali ICT 987 / 1.199 / 1.141 / 1.286 M€ (2022-2025); seconda via CE3 rendiconto PG 2024: 415 PG, 979 M€ (scarto 14 %). Regola sul nome: rumorosa (7/20 acquisti ICT veri), solo per trovare capitoli.
 - **Copertura CIG/pagato 2024** (indicatore, non percentuale): MEF 0,17, Giustizia 0,03, Salute 0,07, Lavoro 0; Interno 2,0, Difesa 3,5. Imbuto cieco su in-house Sogei e stazioni appaltanti non riconosciute (criticità 9 di imbuto.md).

@@ -1,7 +1,7 @@
 """#67 BDAP nell'imbuto: spesa ICT del Bilancio dello Stato per ministero e anno, e copertura dei CIG ICT.
 
 Tre misure, tutte da file BDAP archiviati (archivio/mirror/bdap-opendata.rgs.mef.gov.it/..., sha256 nell'esito):
- 1. Rendiconto per Piano di gestione (PG, 2024): PG ICT per classificazione economica di 3° livello
+ 1. Rendiconto per Piano di gestione (PG, serie 2019-2024): PG ICT per classificazione economica di 3° livello
     (CE 2.2.19 servizi informatici e TLC, 21.1.1 licenze, 21.1.2 sviluppo software, 21.2.5 infrastrutture telematiche,
     21.2.19 hardware) e, separatamente, per regola sul nome del capitolo/PG. Euro = Pagato CS (cassa, competenza + residui).
  2. Rendiconto per Capitolo (serie 2019-2024): lo stesso sul «Codice Puntato CE» del capitolo.
@@ -21,7 +21,9 @@ R = Path(__file__).resolve().parents[2]
 ARC = Path(os.environ.get("ARCHIVIO_ROOT", R / "archivio"))
 DUMP = ARC / "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump"
 # risorse CKAN (datastore/dump/<id>.csv), dai metadati in lavoro/bdap-pagine (tools/acquisizione/bdap_metadati.sh)
-PG = {2024: "d73a538b-5652-463f-8c97-b09b3ec818cd"}
+PG = {2019: "3d71a658-a9a0-4b1c-a210-2c1b0a2a6878", 2020: "658002af-c4ee-4731-8daf-8dfa4f64567f",
+      2021: "aedc9cb7-e787-450c-8034-f2fb417d2367", 2022: "56e43168-0527-47be-aecb-769c721f7ed7",
+      2023: "587d1a31-4ff0-457b-9b94-da58a658b063", 2024: "d73a538b-5652-463f-8c97-b09b3ec818cd"}
 CAP = {2019: "6ec860e9-5583-478d-b203-a7ad87a463f8", 2020: "e008e761-e602-4277-b619-d3e3a45fe8e3",
        2021: "e7a17214-3b88-451e-a411-26d1d6691efc", 2022: "c72b5f41-8de9-45b4-b2b4-21fab3f4ba57",
        2023: "57ef91e8-960f-4937-8669-e30998e69bff", 2024: "940dd84e-6b32-4286-a3a3-2bbd74d96c4e"}
@@ -67,21 +69,29 @@ def num(x):
 
 def main():
     csv.field_size_limit(10 ** 8)
-    out = {"versione": "bdap-ict-stato 0.1 (2026-11-09)", "ingressi": {}, "regole": {"ce_ict": sorted(CE_ICT),
+    out = {"versione": "bdap-ict-stato 0.2 (2026-11-09)", "ingressi": {}, "regole": {"ce_ict": sorted(CE_ICT),
            "gestionali_ict": sorted(GEST_ICT), "nome": RX_NOME.pattern}}
-    # 1. PG 2024
-    righe, meta = leggi(PG[2024]); out["ingressi"]["pg-2024"] = meta
-    pg = collections.Counter(); pge = collections.Counter(); campione = []
-    for x in righe:
-        ce = f'{x["Codice Categoria"]}.{x["Codice CE 2° Livello"]}.{x["Codice CE 3° Livello"]}'
-        a, b = ce in CE_ICT, bool(RX_NOME.search(x["Capitolo di Spesa"] + " " + x["Piano di Gestione"]))
-        k = "ce+nome" if a and b else "solo-ce" if a else "solo-nome" if b else None
-        if not k: continue
-        pg[k] += 1; pge[k] += num(x["Pagato CS"])
-        campione.append({"anno": 2024, "amministrazione": x["Amministrazione"], "capitolo": x["Numero Capitolo di Spesa"],
-                         "pg": x["Numero Piano di Gestione"], "ce3": ce, "ce3_nome": x["CE 3° Livello"], "classe": k,
-                         "nome": (x["Capitolo di Spesa"] + " | " + x["Piano di Gestione"])[:300], "pagato_cs": num(x["Pagato CS"])})
-    out["pg_2024"] = {"pg_totali": len(righe), "per_classe": {k: {"pg": pg[k], "pagato_cs": round(pge[k])} for k in pg}}
+    # 1. PG, serie 2019-2024 (giro 0.2: la seconda via per anno, non solo il 2024)
+    campione = []; out["pg_serie"] = {}
+    for y, rid in PG.items():
+        righe, meta = leggi(rid)
+        if righe is None: continue
+        out["ingressi"][f"pg-{y}"] = meta
+        pg = collections.Counter(); pge = collections.Counter(); mce = collections.Counter()
+        for x in righe:
+            ce = f'{x["Codice Categoria"]}.{x["Codice CE 2° Livello"]}.{x["Codice CE 3° Livello"]}'
+            a, b = ce in CE_ICT, bool(RX_NOME.search(x["Capitolo di Spesa"] + " " + x["Piano di Gestione"]))
+            k = "ce+nome" if a and b else "solo-ce" if a else "solo-nome" if b else None
+            if not k: continue
+            pg[k] += 1; pge[k] += num(x["Pagato CS"])
+            if a: mce[ministero(x["Amministrazione"])] += num(x["Pagato CS"])
+            campione.append({"anno": y, "amministrazione": x["Amministrazione"], "capitolo": x["Numero Capitolo di Spesa"],
+                             "pg": x["Numero Piano di Gestione"], "ce3": ce, "ce3_nome": x["CE 3° Livello"], "classe": k,
+                             "nome": (x["Capitolo di Spesa"] + " | " + x["Piano di Gestione"])[:300], "pagato_cs": num(x["Pagato CS"])})
+        out["pg_serie"][y] = {"pg_totali": len(righe), "per_classe": {k: {"pg": pg[k], "pagato_cs": round(pge[k])} for k in pg},
+                              "ce_pagato_cs": round(pge["ce+nome"] + pge["solo-ce"]),
+                              "ce_per_ministero": {k: round(v) for k, v in mce.most_common()}}
+    out["pg_2024"] = out["pg_serie"][2024]
     # 2. Capitoli, serie
     serie = {}
     for y, rid in CAP.items():
@@ -126,9 +136,9 @@ def main():
     out["copertura_cig"] = cop
     o = R / f"esiti/{datetime.date.today().isoformat()}/bdap"; os.makedirs(o, exist_ok=True)
     json.dump(out, open(o / "ict-stato.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-    with open(o / "pg-ict-2024.csv", "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(campione[0])); w.writeheader(); w.writerows(sorted(campione, key=lambda r: -r["pagato_cs"]))
-    print(json.dumps({k: out[k] for k in ("pg_2024", "gestionali_ict")}, indent=1, ensure_ascii=False)[:6000])
+    with open(o / "pg-ict.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(campione[0])); w.writeheader(); w.writerows(sorted(campione, key=lambda r: (r["anno"], -r["pagato_cs"])))
+    print(json.dumps({k: out[k] for k in ("pg_serie", "gestionali_ict")}, indent=1, ensure_ascii=False)[:6000])
 
 
 if __name__ == "__main__":

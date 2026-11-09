@@ -1,0 +1,1678 @@
+{
+ "versione": "bdap-cig-ministeri-cf 0.2 (2026-11-09)",
+ "ingressi": {
+  "amministrazioni.txt": {
+   "file": "mirror/indicepa.gov.it/ipa-dati/dataset/502ff370-1b2c-4310-94c7-f39ceb7500e3/resource/3ed63523-ff9c-41f6-a6fe-980f3d9e501f/download/amministrazioni.txt",
+   "sha256": "b9597ea1f9a4310c7ee00e86bc018a1dc6a78868b086111d96f56ea7f8055063"
+  },
+  "servizi-fatturazione-elettronica.txt": {
+   "file": "mirror/indicepa.gov.it/ipa-dati/dataset/f8a0b6e0-a7a6-4475-8d9c-5ff49cc4dce2/resource/af0b8c06-7ff0-4779-8e1f-be0e8169795a/download/servizi-fatturazione-elettronica.txt",
+   "sha256": "d9d6df3b7cfd52b52b39753c1088467a8a6f59074b1bc9e1ca0f84dfec7700ca"
+  },
+  "ict.csv": {
+   "file": "lavoro/imbuto/ict.csv",
+   "sha256": "a814e318e9dc65839877a19ec482c446f37017e59e9373a1f1852c9467716bd4",
+   "cig_s3_s6": 445709
+  },
+  "aggiudicatari": {
+   "file": "mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip",
+   "sha256": "6908a361f581824ce144414116301234fc113230230634b0942b988f9173d60f"
+  },
+  "cig_anac": {
+   "file": [
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260401-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260501-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260601-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260701-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260801-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260901-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20261001-cig_csv.zip"
+   ],
+   "nota": "sha256 nel manifest dell'archivio"
+  },
+  "micgs-2022": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/92d90dbc-465c-4aa8-8766-021668dbb41d.csv",
+   "sha256": "c5db28bfbe6bad83a211165a3f869ae0a635d222b0bb24bdc2dd66dcbd539c47"
+  },
+  "micgs-2023": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c5a04b27-6fa2-40d0-9516-f3d5f1f9fd55.csv",
+   "sha256": "01e846269a3138190e412b25ba00d3f59a258e0916c912260a7f6c008a88cdee"
+  },
+  "micgs-2024": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f945fcf7-580c-4d25-b309-68f4c7a5f45f.csv",
+   "sha256": "5ffece7ddec89ec0aaa3a678702cb2741a9c9db738a34ab6642d657e2f1b366d"
+  },
+  "micgs-2025": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9c17c64c-bb7d-40b5-84c7-3e39f1cb7727.csv",
+   "sha256": "4095f7b38b13164f10b16134141e8b153adc35a35ffd131e9085f4c55331a6e2"
+  }
+ },
+ "cf_ministeriali_ipa": 2661,
+ "abbinamento_cf_vs_nome": {
+  "cig": {
+   "uguale": 10609,
+   "solo-cf": 13007,
+   "solo-nome": 121,
+   "diverso": 28
+  },
+  "importo": {
+   "uguale": 4857105052,
+   "solo-cf": 3243861576,
+   "solo-nome": 67833426,
+   "diverso": 58490809
+  },
+  "esempi": {
+   "solo-cf": [
+    {
+     "cig": "8184059323",
+     "sa": "STATO MAGGIORE ESERCITO",
+     "cf": "80419490588",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 21148
+    },
+    {
+     "cig": "81178494EA",
+     "sa": "PARCO ARCHEOLOGICO DI ERCOLANO",
+     "cf": "95234870632",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": null,
+     "importo": 140000
+    },
+    {
+     "cig": "8282475297",
+     "sa": "AGENZIA INDUSTRIE DIFESA",
+     "cf": "97254170588",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 87000
+    },
+    {
+     "cig": "8182019FA9",
+     "sa": "SEGRETARIATO REGIONALE DEL MINISTERO DEI BENI E DELLE ATTIVITA CULTURALI DEL TURISMO DEL LAZIO",
+     "cf": "97261890582",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": null,
+     "importo": 48918
+    },
+    {
+     "cig": "819011263A",
+     "sa": "COMANDO BRIGATA CORAZZATA PINEROLO",
+     "cf": "80009280720",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 25993
+    },
+    {
+     "cig": "8160387462",
+     "sa": "DIP.TO POLITICHE PERS. AMM.NE CIV. E RIS. STRUM.LI E FIN.",
+     "cf": "97420690584",
+     "cf_del": "",
+     "min_cf": "INTERNO",
+     "min_nome": null,
+     "importo": 660000
+    },
+    {
+     "cig": "81861039E4",
+     "sa": "DIP.TO POLITICHE PERS. AMM.NE CIV. E RIS. STRUM.LI E FIN.",
+     "cf": "97420690584",
+     "cf_del": "",
+     "min_cf": "INTERNO",
+     "min_nome": null,
+     "importo": 9000
+    },
+    {
+     "cig": "81764869B1",
+     "sa": "AGENZIA INDUSTRIE DIFESA",
+     "cf": "97254170588",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 50270
+    },
+    {
+     "cig": "8185750697",
+     "sa": "DIP.TO POLITICHE PERS. AMM.NE CIV. E RIS. STRUM.LI E FIN.",
+     "cf": "97420690584",
+     "cf_del": "",
+     "min_cf": "INTERNO",
+     "min_nome": null,
+     "importo": 84000
+    },
+    {
+     "cig": "81827001A8",
+     "sa": "DIP.TO POLITICHE PERS. AMM.NE CIV. E RIS. STRUM.LI E FIN.",
+     "cf": "97420690584",
+     "cf_del": "",
+     "min_cf": "INTERNO",
+     "min_nome": null,
+     "importo": 66500
+    },
+    {
+     "cig": "81688636FF",
+     "sa": "DIREZIONE GENERALE BIBLIOTECHE E ISTITUTI CULTURALI",
+     "cf": "80205730585",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": null,
+     "importo": 109000
+    },
+    {
+     "cig": "819001997A",
+     "sa": "STATO MAGGIORE DIFESA CENTRO INTELLIGENCE INTERFORZE",
+     "cf": "97150140586",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 81960
+    },
+    {
+     "cig": "8176586C36",
+     "sa": "PARCO ARCHEOLOGICO DI POMPEI",
+     "cf": "90083400631",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": null,
+     "importo": 367513
+    },
+    {
+     "cig": "817650488C",
+     "sa": "AGENZIA INDUSTRIE DIFESA",
+     "cf": "97254170588",
+     "cf_del": "",
+     "min_cf": "DIFESA",
+     "min_nome": null,
+     "importo": 158997
+    },
+    {
+     "cig": "81745414A2",
+     "sa": "ISTITUTO CENTRALE PER GLI ARCHIVI",
+     "cf": "97528810589",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": null,
+     "importo": 400000
+    }
+   ],
+   "solo-nome": [
+    {
+     "cig": "83852932B0",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 109745
+    },
+    {
+     "cig": "84620955B3",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 96600
+    },
+    {
+     "cig": "8766754A41",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 108780
+    },
+    {
+     "cig": "8862225B6A",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 76480
+    },
+    {
+     "cig": "8996705BD2",
+     "sa": "MINISTERO DELL'UNIVERSITA' E DELLA RICERCA",
+     "cf": "96446770586",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "UNIVERSITA",
+     "importo": 319800
+    },
+    {
+     "cig": "9222020BA4",
+     "sa": "MINISTERO DELL'UNIVERSITA' E DELLA RICERCA",
+     "cf": "96446770586",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "UNIVERSITA",
+     "importo": 263777
+    },
+    {
+     "cig": "933223973E",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 51000
+    },
+    {
+     "cig": "93634871EA",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 72840
+    },
+    {
+     "cig": "9390783F45",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 138882
+    },
+    {
+     "cig": "9512056CEB",
+     "sa": "MINISTERO DELL'UNIVERSITA' E DELLA RICERCA",
+     "cf": "96446770586",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "UNIVERSITA",
+     "importo": 52850
+    },
+    {
+     "cig": "9476466322",
+     "sa": "CASSA UFFICIALI DELLA GUARDIA DI FINANZA",
+     "cf": "80094130582",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "ECONOMIA E FINANZE",
+     "importo": 940
+    },
+    {
+     "cig": "9476437B31",
+     "sa": "CASSA UFFICIALI DELLA GUARDIA DI FINANZA",
+     "cf": "80094130582",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "ECONOMIA E FINANZE",
+     "importo": 3510
+    },
+    {
+     "cig": "956796567E",
+     "sa": "MINISTERO DELL'UNIVERSITA' E DELLA RICERCA",
+     "cf": "96446770586",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "UNIVERSITA",
+     "importo": 52115
+    },
+    {
+     "cig": "9980549196",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 139024
+    },
+    {
+     "cig": "A01EB2A31A",
+     "sa": "PREFETTURA ZONA TELECOMUNICAZIONI",
+     "cf": "80090690019",
+     "cf_del": "",
+     "min_cf": null,
+     "min_nome": "INTERNO",
+     "importo": 70000
+    }
+   ],
+   "diverso": [
+    {
+     "cig": "B0435D23AF",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 14360
+    },
+    {
+     "cig": "B224DFF38D",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 10041
+    },
+    {
+     "cig": "B4930A37DA",
+     "sa": "MINISTERO ECONOMIA E FINANZE DIPARTIMENTO DELLA GIUSTIZIA TRIBUTARIA",
+     "cf": "96581610589",
+     "cf_del": "96581610589",
+     "min_cf": "ECONOMIA E FINANZE",
+     "min_nome": "GIUSTIZIA",
+     "importo": 8468600
+    },
+    {
+     "cig": "B8DA59D94D",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 20516
+    },
+    {
+     "cig": "B8EA00B28E",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 19028
+    },
+    {
+     "cig": "B8EA8A7D57",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 39960
+    },
+    {
+     "cig": "B8E4550307",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 37829
+    },
+    {
+     "cig": "BAF9230612",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "92035850467",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 25920
+    },
+    {
+     "cig": "B36718F4C5",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 35220
+    },
+    {
+     "cig": "BB4B4255DA",
+     "sa": "MINISTERO ECONOMIA E FINANZE DIPARTIMENTO DELLA GIUSTIZIA TRIBUTARIA",
+     "cf": "96581610589",
+     "cf_del": "96581610589",
+     "min_cf": "ECONOMIA E FINANZE",
+     "min_nome": "GIUSTIZIA",
+     "importo": 2071887
+    },
+    {
+     "cig": "B35776EB0F",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "92035850467",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 5817
+    },
+    {
+     "cig": "B772EBC2CE",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "92035850467",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 5490
+    },
+    {
+     "cig": "B6407ED5D6",
+     "sa": "MINISTERO BENI E ATTIVITA' CULTURALI SOPRINTENDENZA B.A.P.P.S.A.E. PER LE PROVINCE DI LUCCA E MASSA CARRARA",
+     "cf": "92035850467",
+     "cf_del": "92035850467",
+     "min_cf": "CULTURA",
+     "min_nome": "INTERNO",
+     "importo": 25920
+    },
+    {
+     "cig": "B45D08B53D",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 39216
+    },
+    {
+     "cig": "B85F5FFEA7",
+     "sa": "DIREZIONE GENERALE COMANDO CARABINIERI TUTELA PATRIMONIO CULTURALE",
+     "cf": "96443990583",
+     "cf_del": "96443990583",
+     "min_cf": "CULTURA",
+     "min_nome": "DIFESA",
+     "importo": 39900
+    }
+   ]
+  }
+ },
+ "per_ministero_anno": {
+  "2022": {
+   "AGRICOLTURA": {
+    "cig_n": 10,
+    "cig_importo": 32075386,
+    "cig_plur_n": 6,
+    "cig_plur_importo": 30809022,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 4282427,
+    "cig_attivi_n": 13,
+    "bdap_pagato_ict": 6953343,
+    "rapporto_importo": 4.61,
+    "rapporto_quota": 0.62
+   },
+   "AMBIENTE": {
+    "cig_n": 17,
+    "cig_importo": 3960641,
+    "cig_plur_n": 6,
+    "cig_plur_importo": 2024930,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 2658625,
+    "cig_attivi_n": 24,
+    "bdap_pagato_ict": 1785872,
+    "rapporto_importo": 2.22,
+    "rapporto_quota": 1.49
+   },
+   "CULTURA": {
+    "cig_n": 207,
+    "cig_importo": 97034651,
+    "cig_plur_n": 55,
+    "cig_plur_importo": 60922633,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 47684437,
+    "cig_attivi_n": 269,
+    "bdap_pagato_ict": 12187159,
+    "rapporto_importo": 7.96,
+    "rapporto_quota": 3.91
+   },
+   "DIFESA": {
+    "cig_n": 783,
+    "cig_importo": 166916678,
+    "cig_plur_n": 81,
+    "cig_plur_importo": 64593447,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 118236602,
+    "cig_attivi_n": 944,
+    "bdap_pagato_ict": 66696959,
+    "rapporto_importo": 2.5,
+    "rapporto_quota": 1.77
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_n": 136,
+    "cig_importo": 31974397,
+    "cig_plur_n": 33,
+    "cig_plur_importo": 21012442,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 19495216,
+    "cig_attivi_n": 158,
+    "bdap_pagato_ict": 448691874,
+    "rapporto_importo": 0.07,
+    "rapporto_quota": 0.04
+   },
+   "ESTERI": {
+    "cig_n": 64,
+    "cig_importo": 45386354,
+    "cig_plur_n": 24,
+    "cig_plur_importo": 39704955,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 10506612,
+    "cig_attivi_n": 87,
+    "bdap_pagato_ict": 19822791,
+    "rapporto_importo": 2.29,
+    "rapporto_quota": 0.53
+   },
+   "GIUSTIZIA": {
+    "cig_n": 124,
+    "cig_importo": 199411777,
+    "cig_plur_n": 57,
+    "cig_plur_importo": 160557856,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 84444961,
+    "cig_attivi_n": 185,
+    "bdap_pagato_ict": 218997805,
+    "rapporto_importo": 0.91,
+    "rapporto_quota": 0.39
+   },
+   "IMPRESE": {
+    "cig_n": 40,
+    "cig_importo": 25940780,
+    "cig_plur_n": 13,
+    "cig_plur_importo": 20938535,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 7877981,
+    "cig_attivi_n": 59,
+    "bdap_pagato_ict": 6534723,
+    "rapporto_importo": 3.97,
+    "rapporto_quota": 1.21
+   },
+   "INFRASTRUTTURE": {
+    "cig_n": 65,
+    "cig_importo": 102322734,
+    "cig_plur_n": 24,
+    "cig_plur_importo": 60846720,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 58527660,
+    "cig_attivi_n": 93,
+    "bdap_pagato_ict": 41779790,
+    "rapporto_importo": 2.45,
+    "rapporto_quota": 1.4
+   },
+   "INTERNO": {
+    "cig_n": 272,
+    "cig_importo": 134710761,
+    "cig_plur_n": 76,
+    "cig_plur_importo": 82567691,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 73253932,
+    "cig_attivi_n": 391,
+    "bdap_pagato_ict": 100807050,
+    "rapporto_importo": 1.34,
+    "rapporto_quota": 0.73
+   },
+   "ISTRUZIONE": {
+    "cig_n": 10,
+    "cig_importo": 12742918,
+    "cig_plur_n": 3,
+    "cig_plur_importo": 9356967,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 10777681,
+    "cig_attivi_n": 15,
+    "bdap_pagato_ict": 182257,
+    "rapporto_importo": 69.92,
+    "rapporto_quota": 59.13
+   },
+   "LAVORO": {
+    "cig_n": 44,
+    "cig_importo": 25822374,
+    "cig_plur_n": 9,
+    "cig_plur_importo": 11029848,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 20913941,
+    "cig_attivi_n": 66,
+    "bdap_pagato_ict": 45544298,
+    "rapporto_importo": 0.57,
+    "rapporto_quota": 0.46
+   },
+   "SALUTE": {
+    "cig_n": 46,
+    "cig_importo": 20717039,
+    "cig_plur_n": 6,
+    "cig_plur_importo": 9527224,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 43495236,
+    "cig_attivi_n": 84,
+    "bdap_pagato_ict": 16205660,
+    "rapporto_importo": 1.28,
+    "rapporto_quota": 2.68
+   },
+   "TURISMO": {
+    "cig_n": 64,
+    "cig_importo": 69551505,
+    "cig_plur_n": 48,
+    "cig_plur_importo": 68133547,
+    "cig_delega_n": 9,
+    "cig_delega_importo": 2003820,
+    "quota_anno_cig_attivi": 23105075,
+    "cig_attivi_n": 70,
+    "bdap_pagato_ict": 814996,
+    "rapporto_importo": 85.34,
+    "rapporto_quota": 28.35
+   },
+   "UNIVERSITA": {
+    "cig_n": 0,
+    "cig_importo": 0,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 0,
+    "cig_attivi_n": 0,
+    "bdap_pagato_ict": 47140,
+    "rapporto_importo": 0.0,
+    "rapporto_quota": 0.0
+   }
+  },
+  "2023": {
+   "AGRICOLTURA": {
+    "cig_n": 18,
+    "cig_importo": 72683575,
+    "cig_plur_n": 8,
+    "cig_plur_importo": 69996519,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 21442272,
+    "cig_attivi_n": 29,
+    "bdap_pagato_ict": 22979479,
+    "rapporto_importo": 3.16,
+    "rapporto_quota": 0.93
+   },
+   "AMBIENTE": {
+    "cig_n": 22,
+    "cig_importo": 50284150,
+    "cig_plur_n": 4,
+    "cig_plur_importo": 46626337,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 12053570,
+    "cig_attivi_n": 39,
+    "bdap_pagato_ict": 7988426,
+    "rapporto_importo": 6.29,
+    "rapporto_quota": 1.51
+   },
+   "CULTURA": {
+    "cig_n": 265,
+    "cig_importo": 119446967,
+    "cig_plur_n": 76,
+    "cig_plur_importo": 99792667,
+    "cig_delega_n": 1,
+    "cig_delega_importo": 1136744,
+    "quota_anno_cig_attivi": 56871961,
+    "cig_attivi_n": 432,
+    "bdap_pagato_ict": 16843972,
+    "rapporto_importo": 7.09,
+    "rapporto_quota": 3.38
+   },
+   "DIFESA": {
+    "cig_n": 743,
+    "cig_importo": 166659880,
+    "cig_plur_n": 59,
+    "cig_plur_importo": 32403882,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 162564753,
+    "cig_attivi_n": 1069,
+    "bdap_pagato_ict": 55386969,
+    "rapporto_importo": 3.01,
+    "rapporto_quota": 2.94
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_n": 152,
+    "cig_importo": 57519877,
+    "cig_plur_n": 23,
+    "cig_plur_importo": 40292413,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 35152847,
+    "cig_attivi_n": 221,
+    "bdap_pagato_ict": 422384210,
+    "rapporto_importo": 0.14,
+    "rapporto_quota": 0.08
+   },
+   "ESTERI": {
+    "cig_n": 70,
+    "cig_importo": 14421262,
+    "cig_plur_n": 24,
+    "cig_plur_importo": 8639779,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 19822853,
+    "cig_attivi_n": 130,
+    "bdap_pagato_ict": 24112344,
+    "rapporto_importo": 0.6,
+    "rapporto_quota": 0.82
+   },
+   "GIUSTIZIA": {
+    "cig_n": 140,
+    "cig_importo": 153191776,
+    "cig_plur_n": 54,
+    "cig_plur_importo": 120031855,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 152917320,
+    "cig_attivi_n": 260,
+    "bdap_pagato_ict": 282569893,
+    "rapporto_importo": 0.54,
+    "rapporto_quota": 0.54
+   },
+   "IMPRESE": {
+    "cig_n": 49,
+    "cig_importo": 28184619,
+    "cig_plur_n": 13,
+    "cig_plur_importo": 21151860,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 15064534,
+    "cig_attivi_n": 82,
+    "bdap_pagato_ict": 21124018,
+    "rapporto_importo": 1.33,
+    "rapporto_quota": 0.71
+   },
+   "INFRASTRUTTURE": {
+    "cig_n": 110,
+    "cig_importo": 64082457,
+    "cig_plur_n": 38,
+    "cig_plur_importo": 45787163,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 49231081,
+    "cig_attivi_n": 159,
+    "bdap_pagato_ict": 27115067,
+    "rapporto_importo": 2.36,
+    "rapporto_quota": 1.82
+   },
+   "INTERNO": {
+    "cig_n": 303,
+    "cig_importo": 351032212,
+    "cig_plur_n": 107,
+    "cig_plur_importo": 260105601,
+    "cig_delega_n": 1,
+    "cig_delega_importo": 3113500,
+    "quota_anno_cig_attivi": 138102962,
+    "cig_attivi_n": 545,
+    "bdap_pagato_ict": 256495970,
+    "rapporto_importo": 1.37,
+    "rapporto_quota": 0.54
+   },
+   "ISTRUZIONE": {
+    "cig_n": 13,
+    "cig_importo": 1297983,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 554446,
+    "cig_delega_n": 1,
+    "cig_delega_importo": 7301,
+    "quota_anno_cig_attivi": 4545788,
+    "cig_attivi_n": 20,
+    "bdap_pagato_ict": 325079,
+    "rapporto_importo": 3.99,
+    "rapporto_quota": 13.98
+   },
+   "LAVORO": {
+    "cig_n": 50,
+    "cig_importo": 92879853,
+    "cig_plur_n": 19,
+    "cig_plur_importo": 80193836,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 34109455,
+    "cig_attivi_n": 86,
+    "bdap_pagato_ict": 31779201,
+    "rapporto_importo": 2.92,
+    "rapporto_quota": 1.07
+   },
+   "SALUTE": {
+    "cig_n": 40,
+    "cig_importo": 35612426,
+    "cig_plur_n": 11,
+    "cig_plur_importo": 26059595,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 34958454,
+    "cig_attivi_n": 87,
+    "bdap_pagato_ict": 15713234,
+    "rapporto_importo": 2.27,
+    "rapporto_quota": 2.22
+   },
+   "TURISMO": {
+    "cig_n": 17,
+    "cig_importo": 9685891,
+    "cig_plur_n": 12,
+    "cig_plur_importo": 8006992,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 36912998,
+    "cig_attivi_n": 75,
+    "bdap_pagato_ict": 9987819,
+    "rapporto_importo": 0.97,
+    "rapporto_quota": 3.7
+   },
+   "UNIVERSITA": {
+    "cig_n": 0,
+    "cig_importo": 0,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 0,
+    "cig_attivi_n": 0,
+    "bdap_pagato_ict": 4114958,
+    "rapporto_importo": 0.0,
+    "rapporto_quota": 0.0
+   }
+  },
+  "2024": {
+   "AGRICOLTURA": {
+    "cig_n": 23,
+    "cig_importo": 56628790,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 81666515,
+    "cig_attivi_n": 43,
+    "bdap_pagato_ict": 24635545,
+    "rapporto_importo": 2.3,
+    "rapporto_quota": 3.31
+   },
+   "AMBIENTE": {
+    "cig_n": 31,
+    "cig_importo": 40049639,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 58446477,
+    "cig_attivi_n": 54,
+    "bdap_pagato_ict": 7571954,
+    "rapporto_importo": 5.29,
+    "rapporto_quota": 7.72
+   },
+   "CULTURA": {
+    "cig_n": 898,
+    "cig_importo": 161411545,
+    "cig_plur_n": 42,
+    "cig_plur_importo": 52742448,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 180507945,
+    "cig_attivi_n": 1134,
+    "bdap_pagato_ict": 15668224,
+    "rapporto_importo": 10.3,
+    "rapporto_quota": 11.52
+   },
+   "DIFESA": {
+    "cig_n": 2297,
+    "cig_importo": 382264490,
+    "cig_plur_n": 4,
+    "cig_plur_importo": 3811166,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 434022374,
+    "cig_attivi_n": 2620,
+    "bdap_pagato_ict": 47793680,
+    "rapporto_importo": 8.0,
+    "rapporto_quota": 9.08
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_n": 375,
+    "cig_importo": 77294038,
+    "cig_plur_n": 1,
+    "cig_plur_importo": 374508,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 97294863,
+    "cig_attivi_n": 458,
+    "bdap_pagato_ict": 387922484,
+    "rapporto_importo": 0.2,
+    "rapporto_quota": 0.25
+   },
+   "ESTERI": {
+    "cig_n": 168,
+    "cig_importo": 10839389,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 29444510,
+    "cig_attivi_n": 245,
+    "bdap_pagato_ict": 28330558,
+    "rapporto_importo": 0.38,
+    "rapporto_quota": 1.04
+   },
+   "GIUSTIZIA": {
+    "cig_n": 359,
+    "cig_importo": 212549512,
+    "cig_plur_n": 7,
+    "cig_plur_importo": 23237735,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 304118628,
+    "cig_attivi_n": 527,
+    "bdap_pagato_ict": 315414350,
+    "rapporto_importo": 0.67,
+    "rapporto_quota": 0.96
+   },
+   "IMPRESE": {
+    "cig_n": 62,
+    "cig_importo": 16707298,
+    "cig_plur_n": 5,
+    "cig_plur_importo": 5139932,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 28927905,
+    "cig_attivi_n": 118,
+    "bdap_pagato_ict": 11251498,
+    "rapporto_importo": 1.48,
+    "rapporto_quota": 2.57
+   },
+   "INFRASTRUTTURE": {
+    "cig_n": 241,
+    "cig_importo": 125465426,
+    "cig_plur_n": 1,
+    "cig_plur_importo": 27795724,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 154284994,
+    "cig_attivi_n": 353,
+    "bdap_pagato_ict": 54592982,
+    "rapporto_importo": 2.3,
+    "rapporto_quota": 2.83
+   },
+   "INTERNO": {
+    "cig_n": 1048,
+    "cig_importo": 423486828,
+    "cig_plur_n": 25,
+    "cig_plur_importo": 94270733,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 498135682,
+    "cig_attivi_n": 1378,
+    "bdap_pagato_ict": 193612816,
+    "rapporto_importo": 2.19,
+    "rapporto_quota": 2.57
+   },
+   "ISTRUZIONE": {
+    "cig_n": 19,
+    "cig_importo": 69042021,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 23185201,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 51358198,
+    "cig_attivi_n": 30,
+    "bdap_pagato_ict": 210314,
+    "rapporto_importo": 328.28,
+    "rapporto_quota": 244.2
+   },
+   "LAVORO": {
+    "cig_n": 35,
+    "cig_importo": 36624777,
+    "cig_plur_n": 1,
+    "cig_plur_importo": 11626038,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 55762588,
+    "cig_attivi_n": 85,
+    "bdap_pagato_ict": 23082814,
+    "rapporto_importo": 1.59,
+    "rapporto_quota": 2.42
+   },
+   "SALUTE": {
+    "cig_n": 88,
+    "cig_importo": 65215509,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 5107620,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 94659548,
+    "cig_attivi_n": 136,
+    "bdap_pagato_ict": 14279581,
+    "rapporto_importo": 4.57,
+    "rapporto_quota": 6.63
+   },
+   "TURISMO": {
+    "cig_n": 19,
+    "cig_importo": 12511779,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 7263300,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 39428410,
+    "cig_attivi_n": 82,
+    "bdap_pagato_ict": 6286548,
+    "rapporto_importo": 1.99,
+    "rapporto_quota": 6.27
+   },
+   "UNIVERSITA": {
+    "cig_n": 0,
+    "cig_importo": 0,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 0,
+    "cig_attivi_n": 0,
+    "bdap_pagato_ict": 10324530,
+    "rapporto_importo": 0.0,
+    "rapporto_quota": 0.0
+   }
+  },
+  "2025": {
+   "AGRICOLTURA": {
+    "cig_n": 48,
+    "cig_importo": 41988842,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 53902588,
+    "cig_attivi_n": 60,
+    "bdap_pagato_ict": 30062858,
+    "rapporto_importo": 1.4,
+    "rapporto_quota": 1.79
+   },
+   "AMBIENTE": {
+    "cig_n": 36,
+    "cig_importo": 14397185,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 30028899,
+    "cig_attivi_n": 44,
+    "bdap_pagato_ict": 24896164,
+    "rapporto_importo": 0.58,
+    "rapporto_quota": 1.21
+   },
+   "CULTURA": {
+    "cig_n": 1188,
+    "cig_importo": 157588105,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 213640973,
+    "cig_attivi_n": 1340,
+    "bdap_pagato_ict": 16580268,
+    "rapporto_importo": 9.5,
+    "rapporto_quota": 12.89
+   },
+   "DIFESA": {
+    "cig_n": 2836,
+    "cig_importo": 299305077,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 46912600,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 280164808,
+    "cig_attivi_n": 2946,
+    "bdap_pagato_ict": 75183610,
+    "rapporto_importo": 3.98,
+    "rapporto_quota": 3.73
+   },
+   "ECONOMIA E FINANZE": {
+    "cig_n": 452,
+    "cig_importo": 141570948,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 152128370,
+    "cig_attivi_n": 498,
+    "bdap_pagato_ict": 424689715,
+    "rapporto_importo": 0.33,
+    "rapporto_quota": 0.36
+   },
+   "ESTERI": {
+    "cig_n": 315,
+    "cig_importo": 87925110,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 99800628,
+    "cig_attivi_n": 354,
+    "bdap_pagato_ict": 25271552,
+    "rapporto_importo": 3.48,
+    "rapporto_quota": 3.95
+   },
+   "GIUSTIZIA": {
+    "cig_n": 391,
+    "cig_importo": 252388053,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 358600938,
+    "cig_attivi_n": 498,
+    "bdap_pagato_ict": 306205639,
+    "rapporto_importo": 0.82,
+    "rapporto_quota": 1.17
+   },
+   "IMPRESE": {
+    "cig_n": 73,
+    "cig_importo": 30763634,
+    "cig_plur_n": 3,
+    "cig_plur_importo": 19056223,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 21959572,
+    "cig_attivi_n": 105,
+    "bdap_pagato_ict": 28233504,
+    "rapporto_importo": 1.09,
+    "rapporto_quota": 0.78
+   },
+   "INFRASTRUTTURE": {
+    "cig_n": 283,
+    "cig_importo": 89394193,
+    "cig_plur_n": 1,
+    "cig_plur_importo": 583500,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 123055830,
+    "cig_attivi_n": 334,
+    "bdap_pagato_ict": 56994642,
+    "rapporto_importo": 1.57,
+    "rapporto_quota": 2.16
+   },
+   "INTERNO": {
+    "cig_n": 1061,
+    "cig_importo": 333017811,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 30657003,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 429300273,
+    "cig_attivi_n": 1248,
+    "bdap_pagato_ict": 235950417,
+    "rapporto_importo": 1.41,
+    "rapporto_quota": 1.82
+   },
+   "ISTRUZIONE": {
+    "cig_n": 27,
+    "cig_importo": 26805050,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 30784430,
+    "cig_attivi_n": 33,
+    "bdap_pagato_ict": 4043639,
+    "rapporto_importo": 6.63,
+    "rapporto_quota": 7.61
+   },
+   "LAVORO": {
+    "cig_n": 44,
+    "cig_importo": 123899962,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 147231327,
+    "cig_attivi_n": 69,
+    "bdap_pagato_ict": 19913431,
+    "rapporto_importo": 6.22,
+    "rapporto_quota": 7.39
+   },
+   "SALUTE": {
+    "cig_n": 83,
+    "cig_importo": 34508450,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 55936242,
+    "cig_attivi_n": 101,
+    "bdap_pagato_ict": 16915227,
+    "rapporto_importo": 2.04,
+    "rapporto_quota": 3.31
+   },
+   "TURISMO": {
+    "cig_n": 44,
+    "cig_importo": 79214331,
+    "cig_plur_n": 2,
+    "cig_plur_importo": 70871654,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 26844099,
+    "cig_attivi_n": 100,
+    "bdap_pagato_ict": 3893619,
+    "rapporto_importo": 20.34,
+    "rapporto_quota": 6.89
+   },
+   "UNIVERSITA": {
+    "cig_n": 0,
+    "cig_importo": 0,
+    "cig_plur_n": 0,
+    "cig_plur_importo": 0,
+    "cig_delega_n": 0,
+    "cig_delega_importo": 0,
+    "quota_anno_cig_attivi": 0,
+    "cig_attivi_n": 0,
+    "bdap_pagato_ict": 17504023,
+    "rapporto_importo": 0.0,
+    "rapporto_quota": 0.0
+   }
+  }
+ },
+ "sogei": {
+  "aggiudicataria": {
+   "2026|ECONOMIA E FINANZE": {
+    "n": 1,
+    "importo": 276778
+   },
+   "2025|ALTRO": {
+    "n": 5,
+    "importo": 411260333
+   },
+   "2026|ALTRO": {
+    "n": 4,
+    "importo": 14643006
+   },
+   "2024|ALTRO": {
+    "n": 6,
+    "importo": 1308630975
+   },
+   "2025|ECONOMIA E FINANZE": {
+    "n": 2,
+    "importo": 50824348
+   },
+   "senza-cig-anac": {
+    "n": 6
+   },
+   "2024|ECONOMIA E FINANZE": {
+    "n": 1,
+    "importo": 76971974
+   },
+   "2021|ALTRO": {
+    "n": 1,
+    "importo": 220000
+   }
+  },
+  "sa": {
+   "2020": {
+    "n": 145,
+    "importo": 298564260,
+    "quota_2020": 298564260
+   },
+   "2021": {
+    "n": 145,
+    "importo": 405950331,
+    "quota_2021": 163766007,
+    "quota_2022": 97079256,
+    "n_plur": 46,
+    "imp_plur": 213513013,
+    "quota_2023": 54084119,
+    "quota_2024": 45885797,
+    "quota_2025": 33141128,
+    "quota_2026": 6901164,
+    "quota_2027": 1095801,
+    "quota_2028": 1014511,
+    "quota_2029": 1011739,
+    "quota_2030": 1011739,
+    "quota_2031": 959073
+   },
+   "2022": {
+    "n": 155,
+    "importo": 668047495,
+    "n_plur": 115,
+    "imp_plur": 573184823,
+    "quota_2022": 177933892,
+    "quota_2023": 184060902,
+    "quota_2024": 161103932,
+    "quota_2025": 113467721,
+    "quota_2026": 30196800,
+    "quota_2027": 1284250
+   },
+   "2023": {
+    "n": 138,
+    "importo": 464415117,
+    "n_plur": 105,
+    "imp_plur": 440555516,
+    "quota_2023": 68993518,
+    "quota_2024": 157471546,
+    "quota_2025": 117717824,
+    "quota_2026": 77480193,
+    "quota_2027": 28847733,
+    "quota_2028": 5922389,
+    "quota_2029": 1684997,
+    "quota_2030": 1683789,
+    "quota_2031": 1683789,
+    "quota_2032": 1688402,
+    "quota_2033": 1240929
+   },
+   "2024": {
+    "n": 69,
+    "importo": 465811117,
+    "quota_2024": 328747611,
+    "n_plur": 15,
+    "imp_plur": 174779912,
+    "quota_2025": 49997898,
+    "quota_2026": 45622963,
+    "quota_2027": 24905033,
+    "quota_2028": 14646264,
+    "quota_2029": 1891347
+   },
+   "2025": {
+    "n": 125,
+    "importo": 488696769,
+    "quota_2025": 486151732,
+    "n_plur": 2,
+    "imp_plur": 4083420,
+    "quota_2026": 1704433,
+    "quota_2027": 513054,
+    "quota_2028": 279449,
+    "quota_2029": 48102
+   },
+   "2026": {
+    "n": 96,
+    "importo": 298395207,
+    "quota_2026": 298395207
+   }
+  },
+  "elenco_aggiudicataria": [
+   {
+    "cig": "B270BB7B32",
+    "anno": "2024",
+    "sa": "AGENZIA DELLE ENTRATE",
+    "ministero": "ALTRO",
+    "importo": 981100000,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "DD.CC- SERVIZI DI CONDUZIONE, MANUTENZIONE ED EVOLUZIONE DEL SISTEMA INFORMATIVO DELLA FISCALITA DI ADE",
+    "in_ict_csv": false
+   },
+   {
+    "cig": "B5A573A293",
+    "anno": "2025",
+    "sa": "AGENZIA DELLE DOGANE E DEI MONOPOLI",
+    "ministero": "ALTRO",
+    "importo": 380965129,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO ESECUTIVO DELL'ATTO REGOLATIVO PER LA GESTIONE DEL SISTEMA INFORMATIVO DELLA FISCALITÀ (TRIENNIO 2024-2026)",
+    "in_ict_csv": false
+   },
+   {
+    "cig": "B27E6D90BE",
+    "anno": "2024",
+    "sa": "AGENZIA DELLE ENTRATE - RISCOSSIONE",
+    "ministero": "ALTRO",
+    "importo": 297747782,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO ESECUTIVO DELL'ATTO REGOLATIVO PER LA GESTIONE DEL SISTEMA INFORMATIVO DELLA FISCALITÀ 2024-2026",
+    "in_ict_csv": false
+   },
+   {
+    "cig": "B26FE48540",
+    "anno": "2024",
+    "sa": "MINISTERO DELL' ECONOMIA E DELLE FINANZE - DIPARTIMENTO DELLE FINANZE",
+    "ministero": "ECONOMIA E FINANZE",
+    "importo": 76971974,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO ESECUTIVO DELL'ATTO REGOLATIVO PER LA GESTIONE DEL SISTEMA INFORMATIVO DELLA FISCALITÀ",
+    "in_ict_csv": false
+   },
+   {
+    "cig": "B82C9EFC0D",
+    "anno": "2025",
+    "sa": "MINISTERO ECONOMIA E FINANZE DIPARTIMENTO DELLA GIUSTIZIA TRIBUTARIA",
+    "ministero": "ECONOMIA E FINANZE",
+    "importo": 46824348,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO PER LA GESTIONE DEL SISTEMA INFORMATIVO DELLA GIUSTIZIA TRIBUTARIA",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B44C067164",
+    "anno": "2024",
+    "sa": "AGENZIA DEL DEMANIO",
+    "ministero": "ALTRO",
+    "importo": 29500949,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO ESECUTIVO CON LA SOGEI S.P.A. PER IL TRIENNIO 1° GENNAIO 2024 – 31 DICEMBRE 2026",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B51E954185",
+    "anno": "2025",
+    "sa": "AGENZIA DELLE ENTRATE",
+    "ministero": "ALTRO",
+    "importo": 14188925,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "VII ATTO ESECUTIVO CONVENZIONE QUADRO N. 10170-2020 - ELABORAZIONE ED AGGIORNAMENTO INDICATORI SINTETICI DI AFFIDABILITA' FISCALE (ISA) 2025 E ATTUAZIONE DEL CONCORDATO PREVENTIVO BIENNALE 2025 ",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "BB82540255",
+    "anno": "2026",
+    "sa": "AGENZIA DELLE ENTRATE",
+    "ministero": "ALTRO",
+    "importo": 13948712,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "X ATTO ESECUTIVO CONVENZIONE QUADRO DF-SOSE PROT. 10170 DEL 28 MAGGIO 2020 - ELABORAZIONE ED AGGIORNAMENTO ISA 2026 E ATTUAZIONE CONCORDATO PREVENTIVO BIENNALE 2026",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B7E307F51B",
+    "anno": "2025",
+    "sa": "PRESIDENZA DEL CONSIGLIO DEI MINISTRI",
+    "ministero": "ALTRO",
+    "importo": 13701587,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "ACCORDO ESECUTIVO PER LO SVILUPPO E CONDUZIONE DEI SITI, SUPPORTO PER LEVOLUZIONE DELLA DIGITALIZZAZIONE E PER LE ATTIVITÀ DI CONDUZIONE DEI SISTEMI ICT DELLA PRESIDENZA DEL CONSIGLIO DEI MINISTRI",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B88FDD8E96",
+    "anno": "2025",
+    "sa": "COMANDO GENERALE DELLA GUARDIA DI FINANZA",
+    "ministero": "ECONOMIA E FINANZE",
+    "importo": 4000000,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "GESTIONE DEL SISTEMA INFORMATIVO DELLA FISCALITA'",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B6992578FC",
+    "anno": "2025",
+    "sa": "ENTE REGIONE MARCHE",
+    "ministero": "ALTRO",
+    "importo": 2404692,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "ADESIONE ALLA CONVENZIONE DENOMINATA POLO STRATEGICO NAZIONALE (PSN), DI CUI AL COMMA 1 DELL'ARTICOLO 33-SEPTIES DEL D.L. N. 179 DEL 2012, PER LA REALIZZAZIONE DEL'LINTERVENTO FASCICOLO DELLEDIFICIO D",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "BBD0CB6C57",
+    "anno": "2026",
+    "sa": "MINISTERO DELL'UNIVERSITA' E DELLA RICERCA",
+    "ministero": "ALTRO",
+    "importo": 612530,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "EVOLUZIONE E LA CONDUZIONE DEL SISTEMA INFORMATIVO DELL'ANIS E PER LO SVILUPPO, L'EVOLUZIONE E LA MANUTENZIONE DEI SERVIZI DIGITALI",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "BA26084E40",
+    "anno": "2026",
+    "sa": "CONSIGLIO DI PRESIDENZA DELLA GIUSTIZIA TRIBUTARIA",
+    "ministero": "ECONOMIA E FINANZE",
+    "importo": 276778,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "CONTRATTO PER LA SICUREZZA, CONDUZIONE E MANUTENZIONE DEGLI APPLICATIVI DEL GOVERNO AUTONOMO DELLA MAGISTRATURA TRIBUTARIA DEL CONSIGLIO DI PRESIDENZA DELLA GIUSTIZIA TRIBUTARIA.",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "879358149A",
+    "anno": "2021",
+    "sa": "PRESIDENZA DEL CONSIGLIO DEI MINISTRI",
+    "ministero": "ALTRO",
+    "importo": 220000,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "ACCORDO ESECUTIVO CON SOGEI-SOCIETÀ GENERALE D'INFORMATICA S.P.A. PER LA MANUTENZIONE DEL PARCO APPLICATIVO ESISTENTE E DI ASSISTENZA UTENTI SPECIALISTICA DI II LIVELLO",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B280949BEC",
+    "anno": "2024",
+    "sa": "CONSIP SPA UNIP.",
+    "ministero": "ALTRO",
+    "importo": 133636,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "ACQUISIZIONE LICENZE SW AUTOCAD FULL SINGLE USER E REVIT",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B20F79410F",
+    "anno": "2024",
+    "sa": "COMUNE DI CHIERI",
+    "ministero": "ALTRO",
+    "importo": 93368,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "CANONI ANNUALI INFRASTRUTTURA INFORMATICA AL SERVIZIO DELLA PUBBLICA AMMINISTRAZIONE DENOMINATA POLO STRATEGICO NAZIONALE. CONTRATTO UTENZA N. 55/2023. ANNI 2024 E 2025. ",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B0DCA4BBDB",
+    "anno": "2024",
+    "sa": "CONSIP SPA UNIP.",
+    "ministero": "ALTRO",
+    "importo": 55240,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "ACQUISTO SUBSCRIPTION WEMODI",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "BB97A63626",
+    "anno": "2026",
+    "sa": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO",
+    "ministero": "ALTRO",
+    "importo": 48395,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+    "oggetto": "SOGEI INTEGRAZIONE",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "BCF8B8ED68",
+    "anno": "2026",
+    "sa": "COMUNE DI CHIERI",
+    "ministero": "ALTRO",
+    "importo": 33369,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "CANONI INFRASTRUTTURA INFORMATICA AL SERVIZIO DELLA PUBBLICA AMMINISTRAZIONE DENOMINATA POLO STRATEGICO NAZIONALE- IMPEGNO DI SPESA PERIODO: APRILE 2026 - OTTOBRE 2026",
+    "in_ict_csv": true
+   },
+   {
+    "cig": "B981D70F49",
+    "anno": "2025",
+    "sa": "COMUNE DI CHIERI",
+    "ministero": "ALTRO",
+    "importo": 0,
+    "durata": 0.0,
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "oggetto": "CANONI INFRASTRUTTURA INFORMATICA AL SERVIZIO DELLA PUBBLICA AMMINISTRAZIONE DENOMINATA POLO STRATEGICO NAZIONALE - PERIODO: GIUGNO 2025 - MARZO 2026",
+    "in_ict_csv": false
+   }
+  ]
+ }
+}

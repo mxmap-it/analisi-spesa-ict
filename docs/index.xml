@@ -130,7 +130,7 @@ I file e il contenuto degli zip si archiviano nell&amp;rsquo;archivio content-ad
 &lt;li&gt;&lt;strong&gt;Fonti non ufficiali&lt;/strong&gt; (atti di enti aderenti, ricerca web): mostrate a parte, non cancellano la mancanza.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Accesso civico generalizzato&lt;/strong&gt; (art. 5 c. 2 d.lgs. 33/2013): ultima risorsa.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.1 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
+&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.2 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
 Legenda: &lt;strong&gt;[V]&lt;/strong&gt; verificato da noi su file archiviati con sha256; &lt;strong&gt;[R]&lt;/strong&gt; riferito da altri o dalla
 documentazione della fonte, non riprodotto.&lt;/p&gt;
 &lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
@@ -140,9 +140,19 @@ ministero, con un codice di spesa specifico per l&amp;rsquo;ICT. Nel 2024: &lt;s
 mandati informatici sugli 11 codici gestionali ICT [V].&lt;/li&gt;
 &lt;li&gt;Una seconda via indipendente, la classificazione economica di 3° livello del rendiconto per piano
 di gestione, dà &lt;strong&gt;0,98 miliardi&lt;/strong&gt; per il 2024 [V]. Le due vie differiscono del 14 %.&lt;/li&gt;
-&lt;li&gt;I nostri CIG ICT dei ministeri non sono una misura della stessa grandezza (valore del contratto
-contro cassa dell&amp;rsquo;anno), ma il confronto mostra dove mancano: MEF e Giustizia hanno pagamenti ICT
-molto maggiori dei CIG che vediamo (in-house Sogei, acquisti Consip per conto loro).&lt;/li&gt;
+&lt;li&gt;La seconda via per anno, 2019-2024: 492, 740, 675, 452, 1.007, 979 M€ [V]. Il salto del 2023 è
+soprattutto una riclassificazione dei piani di gestione del MEF (18 M€ nel 2022, 297 nel 2023) [V
+sui numeri, interpretazione da verificare]: prima del 2023 la seconda via non è confrontabile.&lt;/li&gt;
+&lt;li&gt;Abbinando stazione appaltante e ministero per &lt;strong&gt;codice fiscale&lt;/strong&gt; (IndicePA) invece che per nome,
+i CIG ICT ministeriali passano da 10.758 a 23.644 (da 5,0 a 8,2 miliardi, 2020-2026) [V]. Il buco
+della &lt;strong&gt;Giustizia era quasi tutto un artefatto&lt;/strong&gt; della regola sul nome: nel 2024 i suoi CIG ICT sono
+359 per 213 M€, non 13 per 9, e la quota 2024 dei contratti attivi vale 0,96 volte il pagato [V].&lt;/li&gt;
+&lt;li&gt;Il buco del &lt;strong&gt;MEF resta&lt;/strong&gt;: quota 2024 dei CIG attivi 97 M€ contro 388 pagati (0,25) [V]. I
+contratti in-house con Sogei che hanno un CIG ANAC ne spiegano poco (circa 26 M€ l&amp;rsquo;anno, [stima]);
+il resto non ha un CIG che vediamo (§ Sogei).&lt;/li&gt;
+&lt;li&gt;SIOPE via BDAP e SIOPE diretto coincidono sull&amp;rsquo;ICT (99,4 % delle coppie ente × codice uguali al
+euro, 2024, cinque regioni) e differiscono dello 0,7 % sul totale, per i pagamenti da
+regolarizzare [V]. Il troncamento a marzo 2025 riferito da AgID non si ripresenta sul file attuale [V].&lt;/li&gt;
 &lt;li&gt;Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, &lt;strong&gt;servizi di
 assistenza informatica: 604 milioni nel 2023&lt;/strong&gt; [V].&lt;/li&gt;
 &lt;/ul&gt;

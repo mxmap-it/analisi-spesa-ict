@@ -1,0 +1,430 @@
+{
+ "versione": "siope-bdap-vs-diretto 0.1 (2026-11-09)",
+ "anno": 2025,
+ "regioni": [
+  "LAZIO",
+  "UMBRIA",
+  "BASILICATA",
+  "MOLISE",
+  "LIGURIA"
+ ],
+ "ingressi": {
+  "SIOPE_ANAGRAFICHE.zip": "44ea0b5347da787b985611bd2df1c03e7965d13100a1d923108bfde65303d990",
+  "SIOPE_USCITE.2025.zip": "054e3392fcd4d1c7f8da59d2b9eff290cb6bb43d54d9674dc7940c9e939b1621",
+  "bdap-LAZIO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/33d82c62-46d3-4194-9484-1fb710cfef88.csv",
+   "sha256": "89a6095544c3a76ed311af73ffe565962c7532aa95c6e6fd15d605370fa5f054"
+  },
+  "bdap-UMBRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/327259cc-9b32-4247-9611-3766815d8a58.csv",
+   "sha256": "0668eebe8d01d330bfb05a990cf767d2876844cb9a21fd253a9b720538d3f976"
+  },
+  "bdap-BASILICATA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a0987ac6-d2e4-4de3-b068-ffcfa553f731.csv",
+   "sha256": "686ece91e09ece295b74eb75a99dd2cb51b6ea90f1274e71bf2e6059dc61bab4"
+  },
+  "bdap-MOLISE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fe81de16-1502-4e1f-b0ec-adecc324c1d7.csv",
+   "sha256": "5f8c8ebd9088043f81911ccf0ec61a8aec17685fb0169bccf194f12b5bcf0b2e"
+  },
+  "bdap-LIGURIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/afeb3b7f-b1c0-426c-b862-6f29af0a0358.csv",
+   "sha256": "a78a1d5a12fd09ce14cbdb0f63abd45fb6e4460dda842d07b28cb20a3d1e7e60"
+  }
+ },
+ "enti": {
+  "bdap": 1535,
+  "diretto_univoci": 2657,
+  "diretto_ambigui": 8,
+  "abbinati": 1507,
+  "solo_bdap": 28,
+  "esempi_solo_bdap": [
+   [
+    "008",
+    "029",
+    "COMUNITA MONTANA INTEMELIA IN LIQUIDAZIONE"
+   ],
+   [
+    "008",
+    "042",
+    "UNIONE DEI COMUNI DELLA ALTA VALLE ARROSCIA"
+   ],
+   [
+    "008",
+    "059",
+    "COMUNITA MONTANA ARGENTINA ARMEA"
+   ],
+   [
+    "008",
+    "063",
+    "COMUNE DI VALLECROSIA"
+   ],
+   [
+    "009",
+    "038",
+    "COMUNITA MONTANA ALTA VAL BORMIDA"
+   ],
+   [
+    "009",
+    "056",
+    "COMUNITA MONTANA DEL GIOVO"
+   ],
+   [
+    "010",
+    "016",
+    "COMUNITA MONTANA FONTANABUONA"
+   ],
+   [
+    "054",
+    "035",
+    "COMUNITA MONTANA VALNERINA"
+   ],
+   [
+    "054",
+    "039",
+    "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DELL UMBRIA"
+   ],
+   [
+    "057",
+    "053",
+    "UNIONE DI COMUNI DELLA BASSA SABINA"
+   ],
+   [
+    "057",
+    "073",
+    "ENTE RISERVA NATURALE REGIONALE MONTE NAVEGNA E MONTE CERVIA"
+   ],
+   [
+    "058",
+    "038",
+    "CONSORZIO INTERCOMUNALE DEI SEREVIZI E INTERVENTI SOCIALI VALLE DEL TEVERE"
+   ],
+   [
+    "058",
+    "091",
+    "AZIENDA OSPEDALIERA UNIVERSITARIA POLICLINICO TOR VERGATA"
+   ],
+   [
+    "058",
+    "091",
+    "ISPETTORATO NAZIONALE DEL LAVORO"
+   ],
+   [
+    "058",
+    "091",
+    "ISPETTORATO NAZIONALE PER LA SICUREZZA NUCLEARE E LA RADIOPROTEZIONE"
+   ],
+   [
+    "058",
+    "091",
+    "ISTITUTO NAZIONALE DELLA PREVIDENZA SOCIALE INPS"
+   ],
+   [
+    "058",
+    "091",
+    "ISTITUTO NAZIONALE PER L ASSICURAZIONE CONTRO GLI INFORTUNI SUL LAVORO INAIL"
+   ],
+   [
+    "060",
+    "038",
+    "GESTIONE COMMISSARIALE COMUNE DI ARPINO"
+   ],
+   [
+    "070",
+    "006",
+    "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DEL MOLISE"
+   ],
+   [
+    "070",
+    "023",
+    "COMUNITA MONTANA DEL MATESE 5 ZONA OMOGENEA BOIANO"
+   ]
+  ]
+ },
+ "ultimo_mese": {
+  "uguale": 1507,
+  "distribuzione_bdap": {
+   "12": 1507
+  },
+  "distribuzione_diretto": {
+   "12": 1507
+  },
+  "esempi": []
+ },
+ "tutti": {
+  "euro_bdap": 92815919068,
+  "euro_diretto": 92974022086,
+  "uguali": 107644,
+  "diverse": 996,
+  "euro_diff_assoluta": 570535167,
+  "solo_diretto": 299,
+  "euro_solo_diretto": 44291543,
+  "solo_bdap": 1,
+  "euro_solo_bdap": 122100,
+  "coppie": 108940,
+  "esempi_diverse": [
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U9999",
+    "bdap": 97783685.76,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "010",
+     "025",
+     "FONDAZIONE ISTITUTO ITALIANO DI TECNOLOGIA IIT"
+    ],
+    "codice": "U7019999999",
+    "bdap": 21977354.08,
+    "diretto": 109799018.48
+   },
+   {
+    "ente": [
+     "060",
+     "038",
+     "AZIENDA SANITARIA LOCALE FROSINONE"
+    ],
+    "codice": "U9999",
+    "bdap": 72254939.24,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
+    ],
+    "codice": "U1010101002",
+    "bdap": 269046146.18,
+    "diretto": 313310478.81
+   },
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U1103",
+    "bdap": 87171631.9,
+    "diretto": 114980348.75
+   },
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U1204",
+    "bdap": 7094393.7,
+    "diretto": 28640081.57
+   },
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U1304",
+    "bdap": 18152313.98,
+    "diretto": 38419623.97
+   },
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U1205",
+    "bdap": 21368949.41,
+    "diretto": 41453790.16
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
+    ],
+    "codice": "U1010201001",
+    "bdap": 87908742.8,
+    "diretto": 101014785.91
+   },
+   {
+    "ente": [
+     "058",
+     "039",
+     "ISTITUTO NAZIONALE DI FISICA NUCLEARE INFN"
+    ],
+    "codice": "U1010101002",
+    "bdap": 80755149.73,
+    "diretto": 93398071.59
+   },
+   {
+    "ente": [
+     "060",
+     "038",
+     "AZIENDA SANITARIA LOCALE FROSINONE"
+    ],
+    "codice": "U1103",
+    "bdap": 109981347.73,
+    "diretto": 120803165.4
+   },
+   {
+    "ente": [
+     "060",
+     "038",
+     "AZIENDA SANITARIA LOCALE FROSINONE"
+    ],
+    "codice": "U1305",
+    "bdap": 8985024.51,
+    "diretto": 16739741.93
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
+    ],
+    "codice": "U1040203002",
+    "bdap": 68083771.78,
+    "diretto": 75753258.45
+   },
+   {
+    "ente": [
+     "060",
+     "038",
+     "AZIENDA SANITARIA LOCALE FROSINONE"
+    ],
+    "codice": "U1205",
+    "bdap": 33579804.67,
+    "diretto": 39957514.83
+   },
+   {
+    "ente": [
+     "058",
+     "003",
+     "AZIENDA SANITARIA LOCALE ROMA 6"
+    ],
+    "codice": "U5401",
+    "bdap": 10410525.61,
+    "diretto": 16629649.2
+   }
+  ]
+ },
+ "ict": {
+  "euro_bdap": 470359249,
+  "euro_diretto": 470375721,
+  "uguali": 3746,
+  "solo_diretto": 7,
+  "euro_solo_diretto": 375,
+  "diverse": 10,
+  "euro_diff_assoluta": 40003,
+  "coppie": 3763,
+  "esempi_diverse": [
+   {
+    "ente": [
+     "054",
+     "013",
+     "COMUNE DI CITTA DI CASTELLO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 61651.87,
+    "diretto": 50671.87
+   },
+   {
+    "ente": [
+     "057",
+     "020",
+     "COMUNE DI COLLEGIOVE"
+    ],
+    "codice": "U1030219001",
+    "bdap": 561.0,
+    "diretto": 6564.0
+   },
+   {
+    "ente": [
+     "060",
+     "079",
+     "COMUNE DI TORRICE"
+    ],
+    "codice": "U1030219005",
+    "bdap": 18762.16,
+    "diretto": 24762.16
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "CONSIGLIO NAZIONALE DELLE RICERCHE CNR"
+    ],
+    "codice": "U2020107002",
+    "bdap": 3574656.12,
+    "diretto": 3579855.12
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "CONSIGLIO NAZIONALE DELLE RICERCHE CNR"
+    ],
+    "codice": "U1030219004",
+    "bdap": 711722.97,
+    "diretto": 716528.94
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "CONSIGLIO NAZIONALE DELLE RICERCHE CNR"
+    ],
+    "codice": "U2020107001",
+    "bdap": 17005826.22,
+    "diretto": 17008482.65
+   },
+   {
+    "ente": [
+     "058",
+     "108",
+     "COMUNE DI VALLEPIETRA"
+    ],
+    "codice": "U1030219001",
+    "bdap": 11028.23,
+    "diretto": 13632.23
+   },
+   {
+    "ente": [
+     "058",
+     "042",
+     "COMUNE DI GENAZZANO"
+    ],
+    "codice": "U1030219009",
+    "bdap": 2734.8,
+    "diretto": 3668.84
+   },
+   {
+    "ente": [
+     "057",
+     "030",
+     "COMUNE DI FRASSO SABINO"
+    ],
+    "codice": "U1030219007",
+    "bdap": 785.8,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "009",
+     "055",
+     "UNIONI DEI COMUNI DEL BEIGUA"
+    ],
+    "codice": "U1030219001",
+    "bdap": 52988.14,
+    "diretto": 53023.14
+   }
+  ]
+ }
+}

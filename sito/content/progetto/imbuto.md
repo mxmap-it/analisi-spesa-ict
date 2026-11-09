@@ -117,7 +117,7 @@ Intervalli di Wilson al 95 %. Il campione è stratificato: la precisione vale pe
 | 6 | Oggetto ICT con CPV non ICT | 3,5 miliardi | vaglio a campione | da avviare |
 | 7 | SmartCIG (indispensabile per il 2020-2023) | — | aggiunta all'imbuto | da avviare |
 | 8 | Affidamenti intragruppo (es. Trenitalia → FSTechnology) | caso per caso | sapere come eroga l'affidatario | incerto |
-| 9 | Stato centrale: pagato ICT molto sopra i CIG (MEF 388 M€ contro 67, Giustizia 315 contro 9, nel 2024) | circa 0,7 miliardi l'anno | **denominatore BDAP** per ministero ([pagina BDAP](../bdap/), `tools/verifiche/bdap_ict_stato.py`): copertura CIG/pagato per ministero ogni anno; caccia ai contratti mancanti (in-house Sogei, stazioni appaltanti non riconosciute) | proposta (#67) |
+| 9 | Stato centrale: pagato ICT sopra i CIG. Con l'abbinamento per **codice fiscale** (giro 0.2) resta solo il **MEF**: 2024, quota dei CIG attivi 97 M€ contro 388 pagati; la Giustizia (315 pagati) era un artefatto della regola sul nome, ora 0,96 | circa 0,3 miliardi l'anno (MEF) | **denominatore BDAP** per ministero ([pagina BDAP](../bdap/), `tools/verifiche/bdap_ict_stato.py`, `bdap_cig_ministeri_cf.py`): rapporto quota/pagato per ministero ogni anno; per il MEF corrispettivi Sogei per committente (R65, R71): i CIG in-house Sogei con SA del MEF spiegano circa 26 M€ l'anno [stima], gli acquisti di Sogei come SA (circa 0,7 miliardi di quota 2024) non si attribuiscono e vanno tenuti fuori per non contare due volte | in corso (#67) |
 
 Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [`richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml). Nessuna è stata inviata.
 
@@ -130,3 +130,4 @@ Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [`richieste-e-
 | 2026-11-03 | criteri di sovranità semplificati applicati alla base di conoscenza (sicurezza da remoto ID 2296 sovrana, SPC Cloud lotto 1 italiano) |
 | 2026-11-03 | imbuto 0.3.1: il PSN con servizio non noto è «incerto», non più «Italia»; licenze da convenzione 539 M€; sintesi con grafici, campione dei progetti PSN, elaborazione sulle licenze Microsoft, criticità e azioni |
 | 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (gestionali ICT 1,14 mld nel 2024, seconda via CE3 0,98 mld) e copertura CIG per ministero (#67) |
+| 2026-11-09 | criticità 9 aggiornata col giro 0.2 di BDAP: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua dei contratti, Sogei; peso ridotto a circa 0,3 miliardi (#67) |
