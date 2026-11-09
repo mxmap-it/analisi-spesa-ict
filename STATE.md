@@ -5,6 +5,13 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-06
 
 
+## #67 BDAP NELL IMBUTO — punto di ripresa 9/11/2026
+- **Pagina** `/progetto/bdap/` (v0.1): famiglie, campi, difetti (R61, R63-R65), cosa usiamo e cosa no. Ripresa: `lavoro/bdap-imbuto/STATO.md`.
+- **Verifica** `tools/verifiche/bdap_ict_stato.py` -> `esiti/2026-11-09/bdap/` [V]: pagato ICT Stato per gestionali ICT 987 / 1.199 / 1.141 / 1.286 M€ (2022-2025); seconda via CE3 rendiconto PG 2024: 415 PG, 979 M€ (scarto 14 %). Regola sul nome: rumorosa (7/20 acquisti ICT veri), solo per trovare capitoli.
+- **Copertura CIG/pagato 2024** (indicatore, non percentuale): MEF 0,17, Giustizia 0,03, Salute 0,07, Lavoro 0; Interno 2,0, Difesa 3,5. Imbuto cieco su in-house Sogei e stazioni appaltanti non riconosciute (criticità 9 di imbuto.md).
+- **Sanità:** CE SSN 2023 BA1620 servizi di assistenza informatica 604 M€ = denominatore minimo. **SIOPE via BDAP:** stessa base per ente + anagrafica; importi da confrontare (#30).
+- **Proposta per Fabio:** BDAP entra come denominatore/controvalidazione (non come strato): riga annuale «pagato ICT per ministero» accanto all imbuto; nessuna modifica a imbuto.py.
+
 ## MIRROR RIPRESI il 9/11/2026 (spazio liberato da Fabio: 398 GB liberi): `coda_mirror.sh config/coda-mirror-2026-11.txt` rilanciato, log `lavoro/coda-mirror-ripresa-20261109.log`
 ## (storico) MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
 Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le scelte sullo storage (object storage UE, pulizia degli altri progetti) spettano a Fabio. Tutto il resto del lavoro va avanti.
