@@ -86,30 +86,30 @@ Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-2`.
 
 - **Gli 8 mancati big tech** sono testi che non nominano il produttore o lo scrivono male: «licenze server Windows», «licenze Office» senza versione, «licenze Copilot», «MIRCOSOFT», «enterprice agreement», «licenze Dynamics», «MySQL» (Oracle).
 - Dai tre campioni il richiamo indipendente si assesta fra 81 % e 89 %, la precisione fra 95 % e 100 %. Per il resto servono gli atti o una via diversa dal testo: lotti, convenzioni, fornitore.
-- Le regole per questi 8 non sono applicate: si misurerebbero solo su un quarto campione.
+- Le regole per questi 8 non sono applicate: si misurerebbero solo su un quarto campione. (v0.10: il quarto campione è stato fatto e poi usato per le regole v4.3, § 2; la misura indipendente è rinviata al quinto.)
 
 Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-3`.
 
 ## 2. Rivenditori dei prodotti esteri (#41)
 
-### 2.1 Mappa v4.2 (v0.8): chi rivende cosa, a chi, con quale capogruppo
+### 2.1 Mappa v4.3 (v0.10; v4.2 in v0.8): chi rivende cosa, a chi, con quale capogruppo
 
 Per ogni rivenditore (CF/P.IVA): capogruppo e suo paese, prodotti cloud venduti (marchio → giurisdizione del **prodotto**, `config/marchi_cloud.yaml`), CIG, euro, enti. Stesso perimetro della v3.1 (contratti attuativi 2022-2026, padri di AQ e importi da verificare esclusi, RTI alla mandataria o in parti uguali), ma ogni riga è riclassificata con le regole **correnti** della lente (comprese le correzioni del § 2.3).
 
-Rifare (server; circa 6 minuti, cache GLEIF in `lavoro/rivenditori/`): `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py v4.2` → `esiti/2026-11-09/rivenditori/` (`mappa-v4.2.json`; `mappa-v4.2.csv` per rivenditore, con la fonte del capogruppo; `cig-rivenditore-v4.2.csv` per CIG). Con l'argomento `v4` si ottiene la mappa con il provider congelato al 28/10.
+Rifare (server; circa 6 minuti, cache GLEIF in `lavoro/rivenditori/`): `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py v4.3` → `esiti/2026-11-09/rivenditori/` (`mappa-v4.3.json`; `mappa-v4.3.csv` per rivenditore, con la fonte del capogruppo; `cig-rivenditore-v4.3.csv` per CIG; restano i file v4.2 per il confronto). Con l'argomento `v4` si ottiene la mappa con il provider congelato al 28/10.
 
-| Prodotti extra-UE [V] | v4 (regole 28/10) | v4.2 (regole correnti) |
-|---|---|---|
-| Totale | 2,949 mld | 3,024 mld |
-| Canale noto (diretto + rivenditore) | 2,278 mld | 2,336 mld |
-| Via rivenditore | 1,824 mld | 1,870 mld |
-| Via rivenditore con **CF italiano** (la lente fornitore li direbbe IT) | 1,797 mld | **1,844 mld** |
-| … sul totale / sul noto | 60,9 % / 78,9 % | **61,0 % / 78,9 %** |
-| … CF italiano e capogruppo italiano o non trovato, sul totale | 56,2 % | 57,2 % |
+| Prodotti extra-UE [V] | v4 (regole 28/10) | v4.2 | v4.3 (regole correnti) |
+|---|---|---|---|
+| Totale | 2,949 mld | 3,024 mld | 3,046 mld |
+| Canale noto (diretto + rivenditore) | 2,278 mld | 2,336 mld | 2,355 mld |
+| Via rivenditore | 1,824 mld | 1,870 mld | 1,890 mld |
+| Via rivenditore con **CF italiano** (la lente fornitore li direbbe IT) | 1,797 mld | 1,844 mld | **1,863 mld** |
+| … sul totale / sul noto | 60,9 % / 78,9 % | 61,0 % / 78,9 % | **61,2 % / 79,1 %** |
+| … CF italiano e capogruppo italiano o non trovato, sul totale | 56,2 % | 57,2 % | 57,4 % |
 
-- **La lente fornitore sbaglia sei euro su dieci** della spesa in prodotti extra-UE. Anche risalendo al capogruppo il 57 % resta IT: il problema è il canale di rivendita, non la proprietà del rivenditore [V].
-- Capogruppo dei rivenditori con CF italiano: IT 1,577 mld; non trovato 0,152 mld; **CH 0,099 mld** (Fastweb → Swisscom 51 M€, SoftwareOne Italia → SoftwareOne Holding 48 M€); UE 11,5 M€ (es. Accenture → Accenture plc, IE); extra-UE 3,9 M€ (NTT Data Italia → NTT DATA, JP, riga curata [R]). CF assente 25,9 M€, CF estero 1,0 M€ [V].
-- 1.394 rivenditori, 1.257 con prodotti extra-UE, 6.609 CIG; i prodotti extra-UE rivenduti vanno a **2.182 enti** (primi: INPS 96 M€, ANAS 61 M€, ACI Informatica 55 M€, DTD Giustizia 54 M€, Sogei 51 M€) [V].
+- **La lente fornitore sbaglia sei euro su dieci** della spesa in prodotti extra-UE. Anche risalendo al capogruppo il 57,4 % resta IT (v4.3): il problema è il canale di rivendita, non la proprietà del rivenditore [V].
+- Capogruppo dei rivenditori con CF italiano (v4.3): IT 1,595 mld; non trovato 0,153 mld; **CH 0,099 mld** (Fastweb → Swisscom 51 M€, SoftwareOne Italia → SoftwareOne Holding 48 M€); UE 11,6 M€ (es. Accenture → Accenture plc, IE); extra-UE 3,7 M€ (NTT Data Italia → NTT DATA, JP, riga curata [R]). CF assente 26,4 M€, CF estero 0,9 M€ [V].
+- v4.3: 1.402 rivenditori, 1.268 con prodotti extra-UE, 6.932 CIG (v4.2: 1.394, 1.257, 6.609). In v4.2 i prodotti extra-UE rivenduti andavano a **2.182 enti** (primi: INPS 96 M€, ANAS 61 M€, ACI Informatica 55 M€, DTD Giustizia 54 M€, Sogei 51 M€) [V].
 
 | Rivenditore (CF) | Capogruppo (paese, fonte) | Prodotti extra-UE | Marchi principali |
 |---|---|---|---|
@@ -162,6 +162,13 @@ Un'etichetta del campione v4 era sbagliata (BC1296935C comprende davvero una lic
 Effetto sulla mappa [V]: le correzioni dei 9 falsi positivi tolgono 26 CIG e 3,5 M€ di prodotti extra-UE; quelle per multi-lotto e prodotti di terzi tolgono altri 41 M€ (Dell APEX 25 M€, Cisco 16 M€, apparati di rete Cisco/Aruba, Check Point) e tengono l'AWS di CRUI (15 M€, prima attribuito per errore a Oracle). La crescita da 2,949 a 3,024 mld rispetto alla v4 viene dalle regole aggiunte dopo il 28/10 (§ 1.2-1.3), non da queste.
 
 Il campione v4 di comodo (45 CIG con atti, `etichette-campione*.csv`) dava 30/39 = 77 % con le regole del 28/10. È il campione su cui sono state scritte le correzioni e non vale più come misura.
+
+**Regole v4.3 (v0.10, #40) e cambio di criterio.** Il quarto campione a cieco (150 CIG nuovi, `report/metodo/lente-cieco-4/`, etichette committate prima del confronto) ha misurato le regole v4.2: big tech P **94/102 = 92,2 %** (Wilson 85,3-96,0), R 94/95 = 98,9 % [V]. Gli 8 falsi positivi erano tutti testi che nominano un marchio senza comprarne il prodotto: formazione e supporto su Microsoft/Google, prodotti di terzi per Microsoft 365 (Veeam, Commvault), connettività verso Oracle Cloud, IaaS «per ambienti VMware»; mancato il lotto «licenze Adobe». Le regole v4.3 (`config/marchi_cloud.yaml`, 101/101 casi in `tests/casi_classifica.yaml`) li correggono, salvo che il testo compri anche il prodotto.
+
+- **Criterio: prodotto comprato, non prodotto nominato.** I primi tre campioni a cieco etichettavano «quale prodotto nomina il testo»; dal quarto l'etichetta è «quale prodotto si compra». Un corso su Office 365 nominava Microsoft ma non compra Microsoft. Per questo nel cieco 1 la v4.3 perde 2 CIG (corsi su Google Workspace e Office 365: big tech 66/0/1 → 64/0/3): non è una regressione ma il cambio di criterio, fissato con due casi di test.
+- Prima/dopo su tutti i campioni (`tools/verifiche/regole_v43_confronto.py`, `esiti/2026-11-09/regole-v4.3/`), big tech TP/FP/FN: cieco 2 62/0/1 e cieco 3 62/0/8 invariati; top-20 rivenditori 58/0/0 invariato; cieco 4 94/8/1 → 95/0/0 [V].
+- **Il cieco 4 non è più indipendente** per queste regole: è stato letto per scriverle ed è ora campione di sviluppo, quindi il 100 % su quel campione non è una misura. La misura indipendente della v4.3 richiede un **quinto campione a cieco** (in corso, altro agente). Fino ad allora la precisione di riferimento della lente resta 92,2 % (v4.2, cieco 4).
+- Effetto sulla mappa (v4.3 contro v4.2) [V]: +427 CIG Adobe (22,9 M€), +7 Microsoft (licenze M365 con backup, prima escluse a torto), −87 Microsoft (2,6 M€: formazione, supporto, backup di terzi), −17 Google (0,24 M€), −7 Oracle (0,66 M€: connettività verso OCI). La quota con CF italiano passa da 61,0 % a **61,2 %** del totale extra-UE (79,1 % del noto): la conclusione del § 2 non cambia.
 
 ### 2.4 Chi sono «IMPRESA INESISTENTE», Eurolink e Arslogica (v0.8) [V]
 
@@ -473,6 +480,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.10 | 2026-11-09 | § 2 allineato alle regole v4.3 (#40, #41): mappa v4.3, prodotti extra-UE 3,046 mld, rivenditori con CF italiano 61,2 % del totale (79,1 % del noto), 57,4 % col capogruppo; criterio «prodotto comprato» al posto di «prodotto nominato» (cieco 1 −2 corsi); quarto campione a cieco (P big tech 92,2 % sulle regole v4.2) diventato campione di sviluppo, misura indipendente rinviata al quinto |
 | 0.9 | 2026-11-09 | § 3.3 terzo asse «infrastruttura» (#43, #45): Libro PSN 2025 (hyperscaler 5,4 % dei ricavi), piani dei fabbisogni PSN di 9 enti sanitari in 6 regioni (23,3 % dei canoni per produttore/gestione, 7,4 % per localizzazione), SaaS con prove per 122,9 M€ (Datamanagement AWS, Deda Next Azure, Maggioli misto); Misura 1.2 su infrastruttura extra-UE 30,6 % (produttore/gestione) e 21,5 % (localizzazione), forbice 3,0-62,2 %; § 4 aggiornato; R78 |
 | 0.8 | 2026-11-09 | § 2 rivenditori v4.2 (#41): mappa per CF con capogruppo GLEIF ed enti; prodotti extra-UE rivenduti da CF italiani 61,0 % del totale (78,9 % del noto), 57,2 % anche col capogruppo; campione casuale top-20 96,7 %; correzioni della lente (via 2 «2746», multi-lotto, prodotti di terzi, omonimi), cieco invariato; «IMPRESA INESISTENTE» = Italware (VIES), R56 aggiornata, R76-R77 |
 | 0.7 | 2026-11-09 | § 3.2: residuo S6 non riducibile con OCDS (3.445 CIG senza award), partecipanti, L3/L4 e atti; stima per imputazione 2,0 %; precisione OCDS 92,4 %; scheda ACN comprata 84 CIG (40/40); pilota DNS/AS sull'infrastruttura dei SaaS (4 domini su 10 su hyperscaler USA) |
