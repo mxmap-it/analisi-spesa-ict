@@ -1,0 +1,114 @@
+{
+ "data": "2026-11-09",
+ "voci": 28807,
+ "voci_A": 756,
+ "voci_B": 28051,
+ "esclusi": {
+  "B: documento che cita il CIG già trovato": 532
+ },
+ "euro_B": 25334820814,
+ "enti": 6626,
+ "enti_senza_cf": 2,
+ "enti_senza_pec": 775,
+ "voci_senza_pec": 3485,
+ "distribuzione_voci_per_ente": {
+  "1": 3261,
+  "2-5": 2394,
+  "21-100": 242,
+  "6-20": 716,
+  ">100": 13
+ },
+ "max_voci_ente": 520,
+ "primi_10_enti": [
+  {
+   "ente": "Consip Spa",
+   "cf": "05359681003",
+   "voci": 419,
+   "euro": 3357408687
+  },
+  {
+   "ente": "TRENITALIA SPA",
+   "cf": "05403151003",
+   "voci": 520,
+   "euro": 380763245
+  },
+  {
+   "ente": "Estar Ente di Supporto Tecnico Amministrativo Regionale",
+   "cf": "06485540485",
+   "voci": 148,
+   "euro": 26124123
+  },
+  {
+   "ente": "Azienda Sanitaria dell'Alto Adige - Suedtiroler Sanitaetsbetrieb",
+   "cf": "00773750211",
+   "voci": 240,
+   "euro": 62845513
+  },
+  {
+   "ente": "Asst Fatebenefratelli Sacco",
+   "cf": "09319690963",
+   "voci": 213,
+   "euro": 54565989
+  },
+  {
+   "ente": "Azienda Ospedaliero Universitaria Consorziale Policlinico di Bari",
+   "cf": "04846410720",
+   "voci": 159,
+   "euro": 286369692
+  },
+  {
+   "ente": "Rete Ferroviaria Italiana ",
+   "cf": "01585570581",
+   "voci": 145,
+   "euro": 126845358
+  },
+  {
+   "ente": "Consiglio Nazionale delle Ricerche - CNR",
+   "cf": "80054330586",
+   "voci": 197,
+   "euro": 48066871
+  },
+  {
+   "ente": "AZIENDA UNITA SANITARIA LOCALE N. 5 SPEZZINO ",
+   "cf": "00962520110",
+   "voci": 141,
+   "euro": 57046300
+  },
+  {
+   "ente": "Intercent-er Agenzia Regionale per Lo Sviluppo Dei Mercati Telematici",
+   "cf": "91252510374",
+   "voci": 65,
+   "euro": 0
+  }
+ ],
+ "ondate": {
+  "tetto_5": {
+   "richieste_totali": 9879,
+   "ondate_per_esaurire": 104,
+   "richieste_ondata_1": 6626,
+   "richieste_ondata_2": 971,
+   "richieste_ondata_3": 521
+  },
+  "tetto_10": {
+   "richieste_totali": 7932,
+   "ondate_per_esaurire": 52,
+   "richieste_ondata_1": 6626,
+   "richieste_ondata_2": 521,
+   "richieste_ondata_3": 255
+  },
+  "tetto_20": {
+   "richieste_totali": 7103,
+   "ondate_per_esaurire": 26,
+   "richieste_ondata_1": 6626,
+   "richieste_ondata_2": 255,
+   "richieste_ondata_3": 90
+  },
+  "tetto_50": {
+   "richieste_totali": 6719,
+   "ondate_per_esaurire": 11,
+   "richieste_ondata_1": 6626,
+   "richieste_ondata_2": 60,
+   "richieste_ondata_3": 13
+  }
+ }
+}
