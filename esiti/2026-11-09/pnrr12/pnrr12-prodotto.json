@@ -1,0 +1,286 @@
+{
+ "data": "2026-11-09",
+ "universo": {
+  "avvisi_1_2": 14,
+  "stanziato_avvisi_eur": 1401459776,
+  "cup_finanziati": 20855,
+  "importo_finanziato_eur": 1263393329,
+  "cup_con_almeno_un_cig": 11566,
+  "copertura_pct": 55.5,
+  "cig_collegati": 17973,
+  "cig_nel_perimetro_v3": 12504,
+  "per_tipologia": {
+   "Comuni": {
+    "cup": 10122,
+    "finanziato_eur": 920279849,
+    "cup_con_cig": 6594,
+    "copertura_pct": 65.1
+   },
+   "ASL": {
+    "cup": 225,
+    "finanziato_eur": 195815526,
+    "cup_con_cig": 166,
+    "copertura_pct": 73.8
+   },
+   "Altri Enti": {
+    "cup": 102,
+    "finanziato_eur": 90513702,
+    "cup_con_cig": 56,
+    "copertura_pct": 54.9
+   },
+   "Scuole": {
+    "cup": 10406,
+    "finanziato_eur": 56784252,
+    "cup_con_cig": 4750,
+    "copertura_pct": 45.6
+   }
+  }
+ },
+ "contratti_contati": {
+  "cig": 12501,
+  "eur": 818897475
+ },
+ "esclusi_padri_o_da_verificare": {
+  "cig": 3,
+  "eur": 21139000
+ },
+ "per_strato": {
+  "S1 marchio v3 | EXTRA-UE big tech": {
+   "cig": 73.0,
+   "eur": 13595250,
+   "quota_eur_pct": 1.7,
+   "quota_cig_pct": 0.6
+  },
+  "S1 marchio v3 | IT": {
+   "cig": 257.0,
+   "eur": 408604564,
+   "quota_eur_pct": 49.9,
+   "quota_cig_pct": 2.1
+  },
+  "S2 servizio qualificato ACN del fornitore | IT": {
+   "cig": 3145.7,
+   "eur": 150213652,
+   "quota_eur_pct": 18.3,
+   "quota_cig_pct": 25.2
+  },
+  "S3 fornitore italiano fuori elenco ACN | IT (fornitore)": {
+   "cig": 1212.1,
+   "eur": 52976692,
+   "quota_eur_pct": 6.5,
+   "quota_cig_pct": 9.7
+  },
+  "S4 fornitore riconosciuto nel testo | IT (fornitore)": {
+   "cig": 132.0,
+   "eur": 2727404,
+   "quota_eur_pct": 0.3,
+   "quota_cig_pct": 1.1
+  },
+  "S5 fornitore a controllo extra-UE (non prodotto) | fornitore EXTRA-UE": {
+   "cig": 9.2,
+   "eur": 28509748,
+   "quota_eur_pct": 3.5,
+   "quota_cig_pct": 0.1
+  },
+  "S6 residuo | ignoto": {
+   "cig": 7672.0,
+   "eur": 162270165,
+   "quota_eur_pct": 19.8,
+   "quota_cig_pct": 61.4
+  }
+ },
+ "big_tech_per_provider_eur": {
+  "Microsoft": 10013989,
+  "Oracle": 2301770,
+  "Amazon Web Services": 454300,
+  "Google": 421890,
+  "Salesforce": 214000,
+  "VMware": 189301
+ },
+ "quota_big_tech": {
+  "eur": 13595250,
+  "cig": 73,
+  "punto_pct_eur": 1.7,
+  "punto_pct_cig": 0.6,
+  "limite_alto_pct_eur": 21.5,
+  "nota": "limite alto = tutto il residuo S6 come big tech (caso peggiore); l'infrastruttura sotto i SaaS S2/S3 non è misurabile (R55, R73)"
+ },
+ "per_tipologia_eur": {
+  "Comuni": {
+   "IT (fornitore)": 36596729,
+   "ignoto": 141775128,
+   "IT": 139387295,
+   "EXTRA-UE big tech": 5955550,
+   "fornitore EXTRA-UE": 11475760
+  },
+  "Scuole": {
+   "ignoto": 7129186,
+   "IT": 912811,
+   "IT (fornitore)": 538428,
+   "EXTRA-UE big tech": 2375
+  },
+  "ASL": {
+   "IT": 407560948,
+   "IT (fornitore)": 13967209,
+   "fornitore EXTRA-UE": 16364894,
+   "ignoto": 11789202,
+   "EXTRA-UE big tech": 7507077
+  },
+  "più tipologie": {
+   "IT": 2799966,
+   "IT (fornitore)": 4199950
+  },
+  "Altri Enti": {
+   "ignoto": 1576649,
+   "fornitore EXTRA-UE": 669094,
+   "IT": 8157196,
+   "IT (fornitore)": 401780,
+   "EXTRA-UE big tech": 130248
+  }
+ },
+ "precisione_s4_censimento": {
+  "metodo": "token scelti su metà sviluppo (sha256(CIG) pari, precisione >= 90 %, >= 3 casi), misurati sulla metà prova (dispari)",
+  "token_tenuti": [
+   "APKAPPA",
+   "DEDALUS",
+   "HALLEY",
+   "MAGGIOLI",
+   "SISCOM",
+   "SPAGGIARI",
+   "TRENTINO",
+   "VERBATEL"
+  ],
+  "vincitori_con_token_nella_prova": 1016,
+  "casi": 89,
+  "corretti": 86,
+  "precisione_pct": 96.6,
+  "errori_esempi": [
+   {
+    "cig": "B07A5F5381",
+    "token": "HALLEY",
+    "aggiudicatari": "SVIC S.R.L."
+   },
+   {
+    "cig": "B4558A53C0",
+    "token": "HALLEY",
+    "aggiudicatari": "PALITALSOFT SRL"
+   },
+   {
+    "cig": "B47277F8C9",
+    "token": "SISCOM",
+    "aggiudicatari": "LOGICA S.R.L."
+   }
+  ]
+ },
+ "s2_eur": 150213652,
+ "acn_schede": 2342,
+ "acn_fornitori": 902,
+ "via_atti": {
+  "cig_con_atti": 36,
+  "cig_con_testo": 36,
+  "menzioni": {
+   "polo strategico": 8,
+   "aws": 4,
+   "aruba": 4,
+   "google cloud": 3,
+   "microsoft azure": 2,
+   "oracle cloud": 2,
+   "polo\nstrategico": 1,
+   "tim enterprise": 1,
+   "amazon web services": 1,
+   "azure": 1,
+   "ovh": 1
+  },
+  "esempi": [
+   {
+    "cig": "A05E1A4F42",
+    "menzioni": [
+     "microsoft azure",
+     "polo strategico"
+    ],
+    "strato": "S1 marchio v3:IT:Polo Strategico Nazionale"
+   },
+   {
+    "cig": "B055AAAD39",
+    "menzioni": [
+     "aws",
+     "google cloud",
+     "oracle cloud",
+     "polo\nstrategico",
+     "polo strategico"
+    ],
+    "strato": "S1 marchio v3:IT:Polo Strategico Nazionale"
+   },
+   {
+    "cig": "B2298FA3C4",
+    "menzioni": [
+     "aruba"
+    ],
+    "strato": "S1 marchio v3:IT:Polo Strategico Nazionale"
+   },
+   {
+    "cig": "A043ACBD5C",
+    "menzioni": [
+     "aws",
+     "google cloud",
+     "polo strategico"
+    ],
+    "strato": "S1 marchio v3:IT:In-house pubblico"
+   },
+   {
+    "cig": "B13BD88FF2",
+    "menzioni": [
+     "polo strategico"
+    ],
+    "strato": "S1 marchio v3:IT:TIM"
+   },
+   {
+    "cig": "983428872F",
+    "menzioni": [
+     "aruba"
+    ],
+    "strato": "S2 servizio qualificato ACN del fornitore:IT:Maggioli Spa"
+   },
+   {
+    "cig": "B2BB4110E0",
+    "menzioni": [
+     "polo strategico",
+     "tim enterprise"
+    ],
+    "strato": "S1 marchio v3:IT:TIM"
+   },
+   {
+    "cig": "B22C787DF9",
+    "menzioni": [
+     "amazon web services",
+     "aruba",
+     "aws",
+     "azure",
+     "google cloud",
+     "microsoft azure",
+     "oracle cloud",
+     "ovh",
+     "polo strategico"
+    ],
+    "strato": "S2 servizio qualificato ACN del fornitore:IT:svic srl"
+   },
+   {
+    "cig": "A04D55DB8F",
+    "menzioni": [
+     "aws",
+     "polo strategico"
+    ],
+    "strato": "S5 fornitore a controllo extra-UE (non prodotto):fornitore EXTRA-UE:ENTERPRISE SERVICES ITALIA S.R.L."
+   },
+   {
+    "cig": "B021A6C383",
+    "menzioni": [
+     "aruba",
+     "polo strategico"
+    ],
+    "strato": "S1 marchio v3:IT:Polo Strategico Nazionale"
+   }
+  ]
+ },
+ "token_s4_candidati": 85,
+ "token_s4_tenuti": 8
+}

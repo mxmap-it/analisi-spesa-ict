@@ -751,3 +751,25 @@
   perche_serve: "Senza recapito certo le richieste di accesso civico vanno alla PEC generale e i termini decorrono male; i blocchi impediscono di verificare la pubblicazione prima di chiedere"
   metrica: "Quota di enti con RPCT e casella accesso civico in IndicePA; quota di sezioni AT raggiungibili senza blocco"
   rif: ["#58"]
+- id: R73
+  destinatario: ACN
+  tipo: dato-mancante
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Elenco dei servizi cloud qualificati senza l'infrastruttura su cui gira ogni SaaS né la P.IVA del fornitore"
+  evidenza: "Il CSV ACN schede_qualificate_tipo_servizi_cloud_csv (2.342 schede, 902 fornitori, archiviato il 6/11/2026, sha256 8559a074…) ha solo Id, nome, tipologia, fornitore, livello e date. Nella Misura PNRR 1.2 i SaaS qualificati di fornitori italiani valgono 150,2 M€ su 818,9 M€ di contratti collegati: su quale IaaS (italiano o hyperscaler extra-UE) girino non si può sapere"
+  prova: "tools/verifiche/pnrr12_prodotto.py; esiti/2026-11-09/pnrr12/pnrr12-prodotto.json; rendiconto obiettivo-6 § 3.1"
+  richiesta: "Aggiungere al CSV aperto: Id della scheda IaaS/PaaS qualificata su cui poggia il servizio (e il suo fornitore), P.IVA del fornitore, sede e controllo (CLOUD Act sì/no); versione storica con data di pubblicazione"
+  perche_serve: "Senza questo la dipendenza tecnologica dagli hyperscaler sotto i SaaS finanziati dal PNRR resta invisibile, e la quota big tech misurata (1,7 %) è solo un limite basso sul livello prodotto"
+  metrica: "Quota di schede SaaS con infrastruttura sottostante dichiarata"
+  rif: ["#43", "#45", "R55", "R50"]
+- id: R74
+  destinatario: "DTD (PA Digitale 2026), ANAC, enti beneficiari"
+  tipo: dato-mancante
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Misura 1.2: candidature senza elenco dei servizi migrati e CIG senza aggiudicatario"
+  evidenza: "Dei 20.855 CUP finanziati dalla Misura 1.2 (1.263,4 M€) 9.289 (44,5 %) non portano ad alcun CIG nel dataset ANAC cup (scuole 54,4 %); dei CIG collegati, 7.804 (165 M€) non hanno aggiudicatario. Gli open data di PA Digitale 2026 non riportano quali servizi sono stati migrati né la scheda ACN di destinazione: il 19,8 % della spesa contrattuale collegata resta senza prodotto né fornitore"
+  prova: "tools/verifiche/pnrr12_prodotto.py; esiti/2026-11-09/pnrr12/pnrr12-prodotto.json e pnrr12-dettaglio.csv"
+  richiesta: "Pubblicare per candidatura 1.2: servizi migrati con Id della scheda ACN di destinazione, modalità (SaaS / IaaS / PSN) e CIG del contratto; controllo ANAC sulla comunicazione dell'aggiudicatario per i CIG con CUP PNRR"
+  perche_serve: "È l'unico modo di misurare per giurisdizione dove sono finiti i fondi della migrazione al cloud senza ricostruire la catena CUP → CIG → prodotto a mano"
+  metrica: "Quota di CUP 1.2 con almeno un CIG; quota di CIG con CUP PNRR e aggiudicatario; quota di candidature con scheda ACN"
+  rif: ["#43", "R57", "R58"]

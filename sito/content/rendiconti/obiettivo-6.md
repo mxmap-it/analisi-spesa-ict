@@ -2,7 +2,7 @@
 title: "Obiettivo 6: prodotti, rivenditori, PNRR, PSN"
 subtitle: "Lente prodotto misurata sul campione, chi rivende i prodotti esteri, quota big tech nei contratti PNRR, catalogo ACN"
 date: 2026-11-06
-lastmod: 2026-11-06
+lastmod: 2026-11-09
 datiAl: 2026-10-28
 description: "Precisione e richiamo del dizionario dei marchi cloud sul campione di 611 CIG; quota della spesa in prodotti extra-UE intermediata da rivenditori; quota dei prodotti delle big tech USA nei contratti collegati alle Misure PNRR 1.1 e 1.2; stato del catalogo ACN dei servizi qualificati."
 sitemap:
@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.5 del 2026-11-06 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.6 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -149,6 +149,43 @@ Catena PA Digitale 2026 → CUP → dataset ANAC cup → CIG → attribuzione v3
 
 Rifare: `python tools/verifiche/pnrr_bigtech.py` → `esiti/2026-11-06/pnrr/pnrr-bigtech.json`.
 
+### 3.1 Misura 1.2 per prodotto: i 396,7 M€ senza provider (v0.6)
+
+Domanda: quanta parte della Misura 1.2 (migrazione al cloud di Comuni, ASL, scuole e altri enti) è andata a prodotti delle big tech statunitensi. Verifica `python tools/verifiche/pnrr12_prodotto.py --data 2026-11-09` → `esiti/2026-11-09/pnrr12/` (nessuna rete, nessun LLM).
+
+**Universo** [V] (PA Digitale 2026, dataset ANAC `cup`, attribuzione v3):
+
+| Tipologia | CUP finanziati | Finanziato | CUP con almeno un CIG |
+|---|---|---|---|
+| Comuni | 10.122 | 920,3 M€ | 6.594 (65,1 %) |
+| ASL | 225 | 195,8 M€ | 166 (73,8 %) |
+| Altri enti | 102 | 90,5 M€ | 56 (54,9 %) |
+| Scuole | 10.406 | 56,8 M€ | 4.750 (45,6 %) |
+| **Totale** | **20.855** | **1.263,4 M€** | **11.566 (55,5 %)** |
+
+14 avvisi 1.2 (1.401,5 M€ stanziati). I CUP portano a 17.973 CIG; 12.504 sono nel perimetro ICT attribuito, 12.501 contati per 818,9 M€ (3 padri o importi da verificare, 21,1 M€, fuori).
+
+**Strati di attribuzione del prodotto** (vince il primo; RTI divisi in parti uguali):
+
+| Strato | Giurisdizione | CIG | Importo | Quota € | Quota CIG | Precisione |
+|---|---|---|---|---|---|---|
+| S1 marchio v3 (dizionario, lotti, convenzioni) | **big tech USA** | 73 | **13,6 M€** | **1,7 %** | **0,6 %** | P 100 %, R 89 % (terzo campione a cieco, § 1.3) |
+| S1 marchio v3 | IT (PSN 389,2 M€, in-house 12,5, TIM, Fastweb) | 257 | 408,6 M€ | 49,9 % | 2,1 % | idem |
+| S2 aggiudicatario con servizio qualificato ACN | IT (SaaS del fornitore) | 3.146 | 150,2 M€ | 18,3 % | 25,2 % | abbinamento nome 60/60 (campione, seme 43) |
+| S3 aggiudicatario italiano fuori elenco ACN | IT (fornitore) | 1.212 | 53,0 M€ | 6,5 % | 9,7 % | regola, non misurata |
+| S4 aggiudicatario assente, fornitore nel testo | IT (fornitore) | 132 | 2,7 M€ | 0,3 % | 1,1 % | 86/89 = 96,6 % (metà prova) |
+| S5 aggiudicatario a controllo extra-UE, nessun marchio | fornitore extra-UE (non prodotto) | 9 | 28,5 M€ | 3,5 % | 0,1 % | lente fornitore |
+| S6 residuo: nessun marchio, nessun aggiudicatario | ignota | 7.672 | 162,3 M€ | 19,8 % | 61,4 % | — |
+
+- **Risposta** [V]: prodotti delle big tech USA **13,6 M€ su 818,9 M€ di contratti collegati (1,7 %), 73 CIG su 12.501 (0,6 %)**: Microsoft 10,0; Oracle 2,3; AWS 0,45; Google 0,42; Salesforce 0,21; VMware 0,19. Nessun prodotto UE non italiano attribuito.
+- **Incertezza esplicita**: limite basso 1,7 %; se il residuo S6 avesse la stessa quota dell'attribuito, circa **2,1 %**; caso peggiore (tutto S6 big tech) 21,5 %, 25,0 % contando anche S5. Il caso peggiore non è plausibile: S6 sono quasi tutti affidamenti piccoli dei Comuni (141,8 M€ dei 162,3) con oggetto «migrazione al cloud» senza marchio, ma **non è escluso** dai dati.
+- **Dove sta la big tech**: ASL 7,5 M€, Comuni 6,0 M€, altri enti 0,13 M€, scuole 2 mila €.
+- **S2 è nuovo**: l'elenco ACN dei servizi qualificati (CSV `schede_qualificate_tipo_servizi_cloud_csv`, 2.342 schede, 902 fornitori, archiviato il 6/11/2026, sha256 8559a074…) [R, dato ACN]; l'abbinamento all'aggiudicatario è nostro [V]. Il campione verifica che l'aggiudicatario **sia** il fornitore qualificato, non che il CIG abbia comprato **quella** scheda: la precisione del prodotto per CIG non è misurata.
+- **Limite che resta**: l'elenco ACN non dice su quale infrastruttura (IaaS) gira ciascun SaaS. I 150,2 M€ di S2 e i 55,7 M€ di S3-S4 sono prodotti di software house italiane, ma la loro infrastruttura può essere di un hyperscaler: è **dipendenza tecnologica**, non misurabile con i dati pubblici. Nuova **R73**. Lo stesso vale per il PSN (R50).
+- **Seconda via sugli atti** [V]: dei 131 atti archiviati, 36 CIG 1.2 hanno testo; 5 nominano AWS, Azure, Google Cloud od Oracle Cloud (2 PSN, 1 in-house, 1 SaaS qualificato, 1 S5). Sono menzioni, non prodotti comprati. Base troppo piccola per stimare l'infrastruttura sotto i SaaS.
+- **S6 nasce da un dato mancante**: 7.804 CIG collegati (165 M€) senza aggiudicatario nel dataset ANAC; la candidatura PA Digitale 2026 non dice quali servizi sono stati migrati né su quale scheda ACN. Nuova **R74**.
+- Correzione al § 4: l'elenco ACN dei servizi qualificati **in CSV** è nell'archivio; resta non specchiabile il portale `catalogocloud.acn.gov.it` (R55), che ha le schede complete.
+
 ## 4. PSN e catalogo ACN (#45)
 
 - **Catalogo ACN non specchiabile:** `catalogocloud.acn.gov.it/opendata` e `/robots.txt` rispondono **403** (Akamai) anche con User-Agent da browser e URL del progetto, dal server, il 6/11/2026 [V]. Non è una sezione di Amministrazione trasparente: vale la regola generale, non si aggira. Nuova **R55**: pubblicazione in open data scaricabile.
@@ -208,7 +245,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 1. #40: la lente testuale è al suo limite (81-89 % di richiamo). Il resto passa da lotti e convenzioni (vie 1 e 2) e dagli atti.
 2. #41: aggiudicatari dei 0,41 mld senza righe ANAC.
-3. #43: i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
+3. #43: residuo S6 (7.672 CIG, 162,3 M€) dagli atti della via 6 e dagli esiti PVL; giudizio per CIG sulla scheda ACN comprata (campione S2); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
 4. #27: integrare nell'imbuto i 88 vincitori TED dei CIG senza aggiudicatari ANAC.
 5. #26 e #29: URL di OpenCUP, CPT e ISTAT; nuovo tentativo sui 7 file Consip.
 4. #45: catalogo ACN a mano con Fabio (consultazione da browser, non automatica) o richiesta ad ACN (R55).
@@ -217,6 +254,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.6 | 2026-11-09 | § 3.1 Misura 1.2 per prodotto: universo per tipologia, strati S1-S6 con elenco ACN dei servizi qualificati e fornitore nel testo (precisione misurata), big tech 1,7 % (73 CIG, 0,6 %) con limiti 2,1-25 %; seconda via sugli atti; R73-R74; correzione § 4 (CSV ACN archiviato) |
 | 0.5.1 | 2026-11-06 | OpenCUP e CPT trovati e specchiati; vincitori TED nell'imbuto (esito per #66); nuovi tentativi su Consip (curl con ripresa) e BDAP |
 | 0.5 | 2026-11-06 | Regole correttive e terzo campione a cieco (big tech P 100 %, R 89 %); Consip a fine giro 94/50/7; TED come fonte di esiti (88 vincitori, 298 M€); mirror SIOPE, IndicePA, PA Digitale 2026, BDAP, Eurostat, GLEIF, OpenCoesione |
 | 0.4 | 2026-11-06 | Secondo campione a cieco (regole v0.3 misurate: big tech P 95 %, R 89 %); 1.064 CIG senza flag (R58); filtro TED verificato, TED v2 e TED → CIG; FTS → P.IVA; Consip in tutti i formati; correzione 33 → 34 mesi TED |

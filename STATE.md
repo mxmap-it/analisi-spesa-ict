@@ -70,6 +70,15 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **Misure parziali** (2.093 CIG con link su 12.180): CIG citato 137, con documenti 62, con documento che cita il CIG 20; robots 317, blocchi 19. Documenti che citano il CIG in `dati/atti/atti-server.jsonl` (livello L3): la via 6 li trova per CIG. Rimisurare con `tools/verifiche/residuo_s6_copertura.py <data>` e aggiornare `acquisizione-documenti.md`.
 - **Aggiornamento 7/11 (decisioni già in AGENTS §3):** host AT esclusi da robots.txt ripassati di notte (`tools/acquisizione/residuo_s6_at.sh` in attesa delle 21, `config/at_robots_esenti.txt`, robots.txt archiviato come evidenza). MePA con Playwright (`mepa_cig.py`): 0 su 85 CIG con pagina pubblica, R62. L4 avviato (`at_cig.py`, `lavoro/residuo-s6/l4/`): 79 enti e 3 CIG trovati. `residuo_s6.sh` concatena L3, poi MePA, poi L4 (la riga cron è sopra). **Prossimo:** adattatori per i software AT (ricerca interna per CIG o elenchi per anno), poi Playwright per le pagine AT in JavaScript.
 
+## #43 PNRR 1.2 PER PRODOTTO — punto di ripresa 9/11/2026 (rendiconto obiettivo 6 v0.6, § 3.1)
+
+- **Fatto:** `tools/verifiche/pnrr12_prodotto.py --data 2026-11-09` → `esiti/2026-11-09/pnrr12/` (json, dettaglio per CIG, campione S2). Nessun LLM.
+- **Universo:** 20.855 CUP 1.2, 1.263,4 M€ (Comuni 10.122/920,3; ASL 225/195,8; altri 102/90,5; scuole 10.406/56,8); 11.566 CUP con CIG (55,5 %); 17.973 CIG, 12.501 contati per 818,9 M€.
+- **Big tech USA:** 13,6 M€ (1,7 %), 73 CIG (0,6 %); con il residuo alla stessa quota circa 2,1 %; caso peggiore 21,5 % (25,0 % con S5). IT prodotto (S1 IT + S2 SaaS qualificato ACN) 558,8 M€ (68,2 %); IT fornitore (S3+S4) 55,7 M€; fornitore extra-UE senza marchio 28,5 M€; ignoto 162,3 M€ (19,8 %, 7.672 CIG senza aggiudicatario).
+- **Precisione:** S2 abbinamento nome 60/60; S4 (fornitore nel testo) 86/89 sulla metà prova. Precisione per CIG della scheda ACN comprata NON misurata.
+- **Nuovo ingresso:** CSV ACN delle schede qualificate (`archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv`, 2.342 schede). R73 (infrastruttura sotto i SaaS), R74 (servizi migrati e CIG senza aggiudicatario).
+- **Prossimo:** residuo S6 dagli atti della via 6 / esiti PVL; giudizio per CIG sulla scheda comprata.
+
 ## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
 - **Aggiornamento 0.5.1 (6/11, sera):**
   - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
