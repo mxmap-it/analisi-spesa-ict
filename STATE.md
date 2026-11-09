@@ -6,6 +6,10 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 
 
+## #50 P15: NORMA E ANOMALIA DEI PADRI «CONTRATTO D'APPALTO» — 9/11/2026
+- **Norma:** scheda PCP AD4 (adesione AQ/convenzione) con «CIG accordo quadro» OBBLIGATORIO (copia secondaria schede-anac.pdf sha256 d0712b89…; manca l'originale ANAC); comunicato del Presidente 5/6/2024 (CIG derivato per ogni contratto applicativo); adesioni con bando entro il 31/12/2023 restano su SIMOG.
+- **Anomalia spiegata** (`tools/verifiche/cig_aq_padre_appalto.py`, `esiti/2026-11-09/cig-aq/padre-appalto.json`): 169.705 derivati 2025 con padre «contratto d'appalto» = convenzioni/AQ (Consip 44.105, ARIA 39.152, Sicilia 21.107; padre aperta/ristretta, SDA 8); dal 2024 «CONVENZIONE» sparisce dall'open data (22.970 -> 0) e STRUMENTO_SVOLGIMENTO è vuoto al 98,7 %. P15 aggiornata (norma_9_11, anomalia_padre_appalto_9_11), **R81** nuova. P15 resta interna: mancano l'originale ANAC delle schede e il campione dei 3.944 vuoti 2025.
+
 ## #43/#45 INFRASTRUTTURA SOTTOSTANTE MISURA 1.2 — 9/11/2026
 - Verifica `tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` -> `esiti/2026-11-09/infrastruttura-sottostante/` (infrastruttura.json; sezione.md da integrare in obiettivo-6 § 3.1, NON inserita). Tabella `config/saas_infrastruttura.yaml` (21 fornitori).
 - PSN [V, Libro PSN 2025 sha256 b8fe9ec1]: SPC+Managed 5,4 % ricavi 2025 (27,3 % dell'infrastruttura); canoni SPC 15 % (PAL 6, ASL 7). PSN 1.2 su hyperscaler 25-130 M€ (centrale 56).

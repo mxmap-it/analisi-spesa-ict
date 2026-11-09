@@ -818,6 +818,17 @@
   perche_serve: "Con il vocabolario attuale la spesa cloud non si misura dal CPV: serve leggere il testo e gli atti di ogni contratto"
   metrica: "Quota dei contratti cloud del campione di riferimento con un codice o attributo che li identifica come cloud (oggi 15 %, 26 su 171)"
   rif: ["#59", "#44", "R21"]
+- id: R81
+  destinatario: "ANAC (BDNCP, PCP)"
+  tipo: miglioramento
+  stato: "proposta (9/11/2026), nessuna richiesta inviata"
+  titolo: "Natura del CIG padre (convenzione, accordo quadro, SDA) persa nell'open data dal 2024; CIG accordo quadro da rendere bloccante"
+  evidenza: "Modalità «CONVENZIONE» 22.970 CIG nel 2023, 0 nel 2024-2026; STRUMENTO_SVOLGIMENTO vuoto nel 98,7 % dei CIG 2025 (0,01 % nel 2023); 169.705 derivati 2025 puntano a padri «contratto d'appalto» che sono convenzioni Consip/ARIA e AQ regionali (es. B2B780C944 energia elettrica Consip, 2.181 derivati). Il campo CIG accordo quadro è obbligatorio nella scheda AD4, eppure nel 2025 3.944 derivati lo hanno vuoto e 14.267 puntano a padri assenti (10.993 «B…», 882 in minuscolo)"
+  prova: "tools/verifiche/cig_aq_padre_appalto.py (esiti/2026-11-09/cig-aq/padre-appalto.json); tools/verifiche/cig_aq_tipo.py (esiti/2026-11-09/cig-aq/tipo.json); schede PCP AD4 (copia sha256 d0712b8978639107ffd06a88ba4eb5b60e29f4c58516cee4584a003e8074ef74)"
+  richiesta: "Ripristinare nell'open data CIG la natura del contratto padre ricavandola dalle schede PCP; rendere bloccante e verificato (esistenza, maiuscolo) il CIG accordo quadro nelle schede di adesione; pubblicare i CIG padre PCP mancanti"
+  perche_serve: "Senza la natura del padre non si separa la spesa che passa da convenzioni e accordi quadro centralizzati (Consip, soggetti aggregatori) da quella in appalto autonomo"
+  metrica: "Quota di derivati con padre esistente e di natura AQ/convenzione/SDA (tools/verifiche/cig_aq_padre_appalto.py) = 100 %"
+  rif: ["#50", "P15", "R01"]
 - id: R80
   destinatario: "ANAC (BDNCP); AgID"
   tipo: miglioramento
