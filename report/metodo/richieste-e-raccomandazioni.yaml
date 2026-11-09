@@ -640,3 +640,36 @@
   perche_serve: "MePA è la piattaforma del 30 % dei CIG con link PVL: senza la scheda dell'ordine il prodotto acquistato (e la sua giurisdizione) non si può leggere"
   metrica: "Quota di CIG MePA con pagina pubblica raggiungibile dal link PVL (oggi 0 su 85)"
   rif: ["#57", "R30"]
+- id: R63
+  destinatario: MEF-RGS (BDAP open data)
+  tipo: difetto
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "URL delle risorse CKAN in http:// che non rispondono; CSV in Windows-1252 non dichiarato"
+  evidenza: "Le risorse datastore/dump dei metadati CKAN sono in http://bdap-opendata.rgs.mef.gov.it/...: il 9/11/2026 la porta 80 va in ConnectTimeout (manifest dell archivio, esito errore), la stessa risorsa in https:// risponde 200. I CSV sono codificati Windows-1252 (caratteri «Unità», «2° Livello») senza charset nell intestazione HTTP (text/html; charset=iso-8859-1)"
+  prova: "archivio/manifest.jsonl (URL datastore/dump/940dd84e-...csv, 9/11/2026, errore in http e nuovo in https); tools/verifiche/bdap_ict_stato.py"
+  richiesta: "URL https nei metadati (o redirect da http); CSV in UTF-8 o Content-Type con il charset reale"
+  perche_serve: "Chi usa i link del catalogo così come sono non scarica nulla; senza charset i nomi di capitoli e campi si corrompono"
+  metrica: "Quota di risorse CKAN con URL che risponde 200 così com è; Content-Type dei CSV con charset corretto"
+  rif: ["#67", "#25", "R61"]
+- id: R64
+  destinatario: MEF-RGS (BDAP, Bilancio dello Stato)
+  tipo: lacuna
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Pagamenti dello Stato per codice gestionale senza capitolo né CIG"
+  evidenza: "La vista Pagamenti con mandati informatici per amministrazione, missione, CE e gestionale ha 11 gestionali ICT (1,14 mld nel 2024) ma non il capitolo/PG né il CIG; il rendiconto per PG ha capitolo e CE di 3° livello ma non il gestionale. Il pagato ICT dello Stato non si collega a nessun contratto, mentre SIOPE+ per gli enti territoriali porta il CIG sull ordinativo"
+  prova: "esiti/2026-11-09/bdap/ict-stato.json (sha256 dei file); tools/verifiche/bdap_ict_stato.py"
+  richiesta: "Pubblicare i pagamenti per capitolo × PG × gestionale e, per gli ordinativi su contratti, il CIG (come SIOPE+)"
+  perche_serve: "Con il CIG il pagato ICT di ogni ministero si confronta contratto per contratto con ANAC; oggi solo per ordine di grandezza"
+  metrica: "Quota dei pagamenti su gestionali ICT con CIG pubblicato"
+  rif: ["#67"]
+- id: R65
+  destinatario: MEF-RGS; AgID; Sogei
+  tipo: lacuna
+  stato: "verificato (9/11/2026) sul campione di 20 PG; proposta, nessuna richiesta inviata"
+  titolo: "La spesa ICT fatta per trasferimento o in-house non è marcata come ICT nel bilancio dello Stato"
+  evidenza: "Nel rendiconto 2024 per PG, 5 dei 20 PG «solo nome» con più pagato sono trasferimenti a ACN, fondo per l innovazione tecnologica della Presidenza del Consiglio, strategia cyber del DIS, classificati come contributi (CE 4.1.1, 22.1.1, 26.1.1), non come ICT. MEF e Giustizia pagano 388 e 315 M€ su gestionali ICT ma i loro CIG ICT 2024 valgono 67 e 9 M€: la differenza è compatibile con affidamenti in-house (Sogei) senza CIG nell imbuto [stima]"
+  prova: "esiti/2026-11-09/bdap/pg-ict-2024.csv; esiti/2026-11-09/bdap/ict-stato.json (copertura_cig)"
+  richiesta: "Un attributo ICT (o la missione/programma di destinazione) sui trasferimenti; rendiconto annuale pubblico dei corrispettivi Sogei per amministrazione e servizio"
+  perche_serve: "Senza, la spesa ICT di Stato e agenzie non si somma senza doppi conteggi né si attribuisce al servizio (cloud, PSN, applicativi)"
+  metrica: "Euro di trasferimenti ICT identificabili nel rendiconto; corrispettivi Sogei pubblicati per amministrazione"
+  rif: ["#67"]
