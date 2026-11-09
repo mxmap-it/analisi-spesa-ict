@@ -1,0 +1,32 @@
+# Infrastruttura sottostante dei SaaS qualificati ACN dei primi 20 fornitori S2 della Misura PNRR 1.2 (#43, #45)
+# classe: proprio-IT | provider-IT-UE:<nome> | hyperscaler:<nome> | misto:<dettaglio> | ignoto
+# attendibilita: A dichiarazione specifica al servizio; B documento ufficiale indiretto (fornitore o ACN, non per singolo SaaS); C indizio/terzi
+# Ricerca web 9/11/2026, nessun contatto. importo_s2_meur da esiti/2026-11-09/pnrr12/pnrr12-dettaglio.csv
+# ACN = CSV schede_qualificate_tipo_servizi_cloud_csv sha256 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96
+versione: 0.1
+data: 2026-11-09
+fornitori:
+- {nome: "Maggioli Spa", importo_s2_meur: 37.91, classe: "misto:proprio-IT (DC Cornaredo, campus DATA4) + provider-IT-UE:Retelit (Bologna)", attendibilita: B, fonti: [{url: "https://www.maggioli.com/en-us/cloud-solutions-pa-data-center", sha256: 487d93179a4cfa1f6438e8e5f134dc166bb91f1256587066ba4a4b7c9738ce78}, {url: "https://lineaedp.it/news/un-nuovo-data-center-100-di-proprieta-per-gruppo-maggioli", sha256: 8654397807daab8a6460f042a581e499eaa77ff9a9c85447ea45a504d1a52c63}], note: "pagina di gruppo, non per singolo SaaS; accordo CSI Piemonte (Nivola) riferito, non archiviato"}
+- {nome: "Datamanagement Italia s.r.l.", importo_s2_meur: 15.11, classe: ignoto, attendibilita: "-", note: "appartenenza al gruppo Maggioli riferita da ricerca, non verificata"}
+- {nome: "svic srl", importo_s2_meur: 8.63, classe: ignoto, attendibilita: "-"}
+- {nome: "APKAPPA SRL", importo_s2_meur: 7.06, classe: ignoto, attendibilita: "-"}
+- {nome: "Halley Informatica Srl", importo_s2_meur: 6.58, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-7879 Halley Cloud IaaS"}], note: "IaaS qualificato proprio; che i SaaS poggino su di esso è inferenza"}
+- {nome: "Deda Next S.r.l.", importo_s2_meur: 4.73, classe: ignoto, attendibilita: C, note: "indizio provider-IT-UE (Aruba Arezzo / Deda Tech) da case study di gruppo, pagina 404, non archiviata"}
+- {nome: "Fastweb S.p.A.", importo_s2_meur: 4.52, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-93, IA-2271 FASTcloud"}], note: "controllo Swisscom (CH): extra-UE per lente fornitore (#41)"}
+- {nome: "TIM S.p.A.", importo_s2_meur: 4.44, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-3695, IA-3696, IA-8477 TIM Cloud"}]}
+- {nome: "Almaviva S.p.A.", importo_s2_meur: 4.12, classe: ignoto, attendibilita: C, note: "3 DC propri e rapporto Aruba (comunicato 2021, non archiviato); anche partner AWS MSP"}
+- {nome: "SISCOM SPA", importo_s2_meur: 4.11, classe: ignoto, attendibilita: "-"}
+- {nome: "We-Com s.r.l.", importo_s2_meur: 3.79, classe: ignoto, attendibilita: "-", note: "registrata come ISP"}
+- {nome: "PA Digitale S.p.A.", importo_s2_meur: 3.45, classe: ignoto, attendibilita: "-"}
+- {nome: "Kibernetes s.r.l.", importo_s2_meur: 3.11, classe: ignoto, attendibilita: C, note: "indizio provider-IT-UE:Aruba (case study Aruba, oggi 404, non archiviato)"}
+- {nome: "ADS automated data systems S.p.A.", importo_s2_meur: 2.44, classe: ignoto, attendibilita: "-"}
+- {nome: "Boxxapps S.r.l.", importo_s2_meur: 2.42, classe: ignoto, attendibilita: C, note: "certificato CSQA come CSP IaaS/PaaS/SaaS, non archiviato"}
+- {nome: "Municipia SPA", importo_s2_meur: 1.98, classe: ignoto, attendibilita: C, note: "gruppo Engineering; brochure jEnte: SaaS su piattaforme qualificate, IaaS non nominato"}
+- {nome: "Parsec 3.26 S.r.l.", importo_s2_meur: 1.97, classe: ignoto, attendibilita: "-"}
+- {nome: "Informatica Alto Adige Spa", importo_s2_meur: 1.73, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-8425, IA-8426, IA-8429 DCAA"}], note: "in-house provinciale"}
+- {nome: "3PItalia SpA", importo_s2_meur: 1.61, classe: ignoto, attendibilita: "-"}
+- {nome: "BUSINESS INTEGRATION PARTNERS S.P.A.", importo_s2_meur: 1.61, classe: ignoto, attendibilita: "-"}
+- {nome: "Engineering D.HUB SPA", importo_s2_meur: 1.60, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-136 CLOUDENG IaaS"}]}
+# Nessun fornitore con hyperscaler accertato; nessuna classe A: nessuna pagina trust/DPA pubblica trovata per singolo SaaS.
+# Fonte migliore non accessibile: schede del catalogo ACN (catalogocloud.acn.gov.it, 403 Akamai, R55).
+psn_libro_2025: {url: "https://www.polostrategiconazionale.it/app/uploads/2026/07/Libro-PSN-2025.pdf", sha256: b8fe9ec1b4becdbf07cf837cac4f5ef26621bda85c7bfa1162773bf9a7ed64ed, attendibilita: "A (bilancio integrato del concessionario)", pagine: "p.71-72 mix canoni; p.106 ricavi per servizio"}

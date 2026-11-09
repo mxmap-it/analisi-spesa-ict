@@ -806,3 +806,36 @@
   perche_serve: "La giurisdizione del fornitore (es. controllate svizzere o extra-UE di rivenditori italiani) non si può misurare senza visure a pagamento"
   metrica: "Quota della spesa aggiudicata a imprese con capogruppo in dati aperti"
   rif: ["#41", "R76"]
+- id: R76
+  destinatario: "Commissione europea (DG GROW, revisione del vocabolario CPV); ANAC; AgID, ACN"
+  tipo: lacuna
+  stato: "verificato sul campione (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Il vocabolario CPV 2008 non distingue il cloud: nessun codice per IaaS, PaaS, SaaS, modello di erogazione, sede dei dati"
+  evidenza: "Sui 171 contratti cloud del campione 611 (via 6, con atti) solo 26 portano un CPV di servizio erogato coerente (hosting 72415000, ASP 72416000, archiviazione 72317000, provider 7241xxxx); 135 hanno un codice ICT generico o di sviluppo (72000000, 72500000, 48xxxxxx), 10 un codice fuori lista o il segnaposto. Abbonamento SaaS e licenza perpetua stanno entrambi in 48; PSN, in-house e hyperscaler stanno tutti in 72510000/72415000"
+  prova: "tools/verifiche/cpv_rapporto.py, esiti/2026-11-09/cpv/rapporto-cpv.json (D_riclassificazione), dati/classificazioni/cpv-riclassificazione.csv, config/perimetro_cpv.yaml (lacune_vocabolario_cloud)"
+  richiesta: "Nella revisione del CPV: codici distinti per IaaS, PaaS, SaaS e per servizi gestiti di infrastruttura; in attesa, attributi supplementari obbligatori negli acquisti ICT (modello di servizio, modello di erogazione pubblico/privato/ibrido/PSN, sede dei dati, qualificazione ACN)"
+  perche_serve: "Con il vocabolario attuale la spesa cloud non si misura dal CPV: serve leggere il testo e gli atti di ogni contratto"
+  metrica: "Quota dei contratti cloud del campione di riferimento con un codice o attributo che li identifica come cloud (oggi 15 %, 26 su 171)"
+  rif: ["#59", "#44", "R21"]
+- id: R77
+  destinatario: "ANAC (BDNCP); AgID"
+  tipo: miglioramento
+  stato: "proposta (9/11/2026), nessuna richiesta inviata"
+  titolo: "Correzione ex post del CPV dei contratti ICT e coerenza CPV-oggetto per tipo di ente"
+  evidenza: "CPV ICT su oggetto non ICT nel 6,5 % dei CIG con CPV in lista (46 su 705, IC 4,9-8,6), 32 % nelle scuole (7 su 22); oggetto ICT con CPV non ICT nel 9,2 % degli ICT accertati (50 su 543), 20 % nel 2024 (29 su 142). Nell universo ict.csv dal 2024, 130.678 CIG entrano solo per il testo (CPV fuori lista): 66 % nelle regioni e province, 60 % nella sanità"
+  prova: "tools/verifiche/cpv_rapporto.py, esiti/2026-11-09/cpv/rapporto-cpv.json (A_attendibilita)"
+  richiesta: "Controllo automatico CPV-oggetto alla pubblicazione con segnalazione al RUP; possibilità di correggere il CPV dopo il rilascio del CIG con traccia della correzione; formazione mirata per scuole e piccoli enti"
+  perche_serve: "Il CPV è il primo filtro di perimetro per chiunque misuri la spesa ICT: errori sistematici per tipo di ente distorcono i confronti"
+  metrica: "Quota di CPV ICT su oggetto non ICT e di oggetto ICT con CPV non ICT, rimisurate ogni anno con tools/verifiche/cpv_rapporto.py"
+  rif: ["#59", "#44", "R21", "R60"]
+- id: R78
+  destinatario: "ACN, DTD (PA Digitale 2026), fornitori SaaS qualificati, PSN S.p.A."
+  tipo: dato-mancante
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Infrastruttura sottostante dei SaaS e ripartizione PSN per famiglia non pubbliche per contratto"
+  evidenza: "Dei primi 20 fornitori SaaS della Misura 1.2 (130,4 M€) nessuno pubblica l'IaaS sotto ciascun SaaS né l'elenco dei sub-responsabili: infrastruttura nota solo per 56,8 M€ [B], ignota 93,4. Il PSN pubblica il mix solo in aggregato (Libro PSN 2025: SPC 15 % dei canoni, 6-7 % per PAL/ASL; SPC+Managed 5,4 % dei ricavi 2025)"
+  prova: "tools/verifiche/infrastruttura_sottostante.py; config/saas_infrastruttura.yaml; esiti/2026-11-09/infrastruttura-sottostante/"
+  richiesta: "Nella scheda ACN di ogni SaaS: Id IaaS sottostante, region e sub-responsabili; in PA Digitale 2026: scheda ACN e infrastruttura per ogni servizio migrato; PSN: Riepilogo prezzi del Configuratore per Contratto di Utenza in open data (famiglia, UT, canone)"
+  perche_serve: "La quota big tech della Misura 1.2 va da 4,7 % a 59 % a seconda di ciò che non è pubblico"
+  metrica: "Quota del finanziato 1.2 con infrastruttura dichiarata per servizio"
+  rif: ["#43", "#45", "R50", "R55", "R73", "R74"]

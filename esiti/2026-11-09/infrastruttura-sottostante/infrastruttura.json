@@ -1,0 +1,105 @@
+{
+ "data": "2026-11-09",
+ "versione": "0.1",
+ "psn_libro_2025": {
+  "ricavi_2025": 454328062,
+  "ricavi_2024": 255534885,
+  "hyperscaler_ricavi_2025_pct": 5.4,
+  "hyperscaler_su_infrastruttura_2025_pct": 27.3,
+  "hyperscaler_ricavi_2024_pct": 2.6,
+  "hyperscaler_su_infrastruttura_2024_pct": 16.8,
+  "managed_su_oracle_psn_stima": 0.36,
+  "mix_canoni": {
+   "Soluzioni Oracle PSN": {
+    "PAC": 5,
+    "PAL": 20,
+    "ASL": 24,
+    "Tot": 14
+   },
+   "Secure Public Cloud": {
+    "PAC": 24,
+    "PAL": 6,
+    "ASL": 7,
+    "Tot": 15
+   },
+   "Housing & Hosting": {
+    "PAC": 15,
+    "PAL": 20,
+    "ASL": 5,
+    "Tot": 13
+   },
+   "Servizi di Backup": {
+    "PAC": 10,
+    "PAL": 15,
+    "ASL": 16,
+    "Tot": 13
+   },
+   "PaaS": {
+    "PAC": 5,
+    "PAL": 3,
+    "ASL": 3,
+    "Tot": 4
+   }
+  }
+ },
+ "misura_12_strati_meur": {
+  "S3": 52.98,
+  "S6": 162.27,
+  "S2 infra ignota": 93.43,
+  "S4": 2.73,
+  "S2 infra IT nota": 56.78,
+  "S1 IT altro": 19.4,
+  "S1 big tech": 13.6,
+  "S1 PSN": 389.2,
+  "S5": 28.51
+ },
+ "totale_meur": 818.9,
+ "saas_ignoti_meur": 149.1,
+ "scenari": {
+  "basso": {
+   "psn_hyperscaler_pct_canoni": 6.5,
+   "psn_lettura_stretta_meur": 5.1,
+   "psn_lettura_destinazione_meur": 25.3,
+   "saas_s3_s4_ignoti_meur": 0.0,
+   "s5_meur": 0,
+   "s6_meur": 0,
+   "totale_extraue_infra_meur": 38.9,
+   "quota_pct": 4.7
+  },
+  "centrale": {
+   "psn_hyperscaler_pct_canoni": 14.4,
+   "psn_lettura_stretta_meur": 22.4,
+   "psn_lettura_destinazione_meur": 56.1,
+   "saas_s3_s4_ignoti_meur": 37.3,
+   "s5_meur": 28.5,
+   "s6_meur": 33.5,
+   "totale_extraue_infra_meur": 169.0,
+   "quota_pct": 20.6
+  },
+  "alto": {
+   "psn_hyperscaler_pct_canoni": 33.5,
+   "psn_lettura_stretta_meur": 78.2,
+   "psn_lettura_destinazione_meur": 130.4,
+   "saas_s3_s4_ignoti_meur": 149.1,
+   "s5_meur": 28.5,
+   "s6_meur": 162.3,
+   "totale_extraue_infra_meur": 483.9,
+   "quota_pct": 59.1
+  }
+ },
+ "assunzioni": {
+  "peso_canoni": {
+   "basso": 0.2,
+   "centrale": 0.4,
+   "alto": 0.6
+  },
+  "quota_hyperscaler_saas_ignoti": {
+   "basso": 0,
+   "centrale": 0.25,
+   "alto": 1
+  },
+  "canone_pal_asl": "media semplice PAL e ASL/AO del Libro PSN 2025; Managed = quota k di Oracle PSN da ricavi 2025",
+  "S5": "controllo extra-UE del fornitore = giurisdizione extra-UE sull infrastruttura che gestisce (centrale)",
+  "S6": "centrale: stessa quota dell attribuito; alto: tutto"
+ }
+}

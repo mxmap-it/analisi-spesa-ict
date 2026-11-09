@@ -5,6 +5,14 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-09
 
 
+
+## #43/#45 INFRASTRUTTURA SOTTOSTANTE MISURA 1.2 — 9/11/2026
+- Verifica `tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` -> `esiti/2026-11-09/infrastruttura-sottostante/` (infrastruttura.json; sezione.md da integrare in obiettivo-6 § 3.1, NON inserita). Tabella `config/saas_infrastruttura.yaml` (21 fornitori).
+- PSN [V, Libro PSN 2025 sha256 b8fe9ec1]: SPC+Managed 5,4 % ricavi 2025 (27,3 % dell'infrastruttura); canoni SPC 15 % (PAL 6, ASL 7). PSN 1.2 su hyperscaler 25-130 M€ (centrale 56).
+- SaaS: nessun hyperscaler accertato; IT nota 56,8 M€ [B], ignota 93,4.
+- Misura 1.2 terzo asse: 4,7 % accertato / 20,6 % centrale (ipotesi 25 % sui SaaS ignoti) / 59,1 % alto. R78.
+- Prossimo: atti/DPA dei fornitori ignoti (Datamanagement, svic, APKappa); Riepilogo prezzi dei PPdF PAL/ASL.
+
 ## #41 RIVENDITORI v4 — 9/11/2026 (sezione a parte, da integrare nel rendiconto obiettivo 6)
 - **Verifica** `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py` -> `esiti/2026-11-09/rivenditori/` (mappa-v4.json/csv, cig-rivenditore.csv, campione-precisione.csv); testo in `esiti/2026-11-09/rivenditori/sezione-41.md` (NON ancora nel rendiconto: lo integra chi chiude la versione dopo #43). Cache GLEIF `lavoro/rivenditori/gleif-it.json` (rigenerabile dal mirror).
 - **Numeri [V]:** prodotti extra-UE 2,949 mld; via rivenditore 1,824; con CF italiano 1,797 = **60,9 % del totale, 78,9 % del noto** (lente fornitore = IT a torto); anche col capogruppo resta IT/ignoto 1,658 (56,2 %); CH 124 M (Fastweb->Swisscom, SoftwareOne), UE 11,5 M, extra-UE 3,9 M. 1.375 rivenditori, 6.470 CIG, 2.121 enti.
