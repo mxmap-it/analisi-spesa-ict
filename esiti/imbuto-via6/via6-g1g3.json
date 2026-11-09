@@ -54,27 +54,27 @@
   "G3": {
    "cig_totali": 1000,
    "euro_totali": 1546339517,
-   "cig_classificati": 749,
-   "euro_classificati": 1370008178,
+   "cig_classificati": 764,
+   "euro_classificati": 1382103739,
    "confidenza": {
-    "media": 614,
-    "bassa": 85,
-    "alta": 50
+    "media": 627,
+    "bassa": 86,
+    "alta": 51
    },
-   "fonte_primaria": 79,
-   "con_documento_archiviato": 254,
+   "fonte_primaria": 80,
+   "con_documento_archiviato": 258,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 393,
-     "euro": 722959156
+     "cig": 401,
+     "euro": 729415745
     },
     "A:incerto | B:incerto": {
-     "cig": 200,
-     "euro": 364491812
+     "cig": 203,
+     "euro": 366910674
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 146,
-     "euro": 258256262
+     "cig": 150,
+     "euro": 261476373
     },
     "A:incluso-certo | B:incluso-certo": {
      "cig": 10,
@@ -143,12 +143,12 @@
   },
   "G3": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 128,
-    "euro": 239009854
+    "cig": 130,
+    "euro": 240623081
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 265,
-    "euro": 483949302
+    "cig": 271,
+    "euro": 488792663
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
     "cig": 2,
@@ -163,8 +163,8 @@
     "euro": 9836664
    },
    "resta incerto (S6)": {
-    "cig": 346,
-    "euro": 622748073
+    "cig": 353,
+    "euro": 628387046
    }
   },
   "CTL": {
@@ -236,20 +236,20 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 346,
+  "cig_con_ostacoli": 352,
   "per_tipo": {
-   "altro": 277,
-   "403": 69,
-   "404": 61,
+   "altro": 285,
+   "403": 71,
+   "404": 63,
    "login": 56,
    "pdf-illeggibile": 12,
    "link-pvl-rotto": 12
   },
   "domini_principali": {
    "dati.anticorruzione.it": 19,
+   "www.difesa.it": 13,
    "www.sintel.regione.lombardia.it": 12,
-   "www.difesa.it": 12,
-   "piattaformaacquisti.rai.it": 11,
+   "piattaformaacquisti.rai.it": 12,
    "www.acquistinretepa.it": 9,
    "gareappalti.bancaditalia.it": 8,
    "www.anticorruzione.it": 7,
@@ -273,8 +273,8 @@
    "usd_eq": 138.17
   },
   "imbuto-g3": {
-   "chiamate": 150,
-   "usd_eq": 246.96
+   "chiamate": 153,
+   "usd_eq": 251.47
   },
   "imbuto-revisione": {
    "chiamate": 30,
@@ -287,8 +287,8 @@
   "g3_stima": {
    "stima_1000": 360,
    "limite_+20%": 432,
-   "per_cig": 0.33,
-   "proiezione_1000": 329.7
+   "per_cig": 0.329,
+   "proiezione_1000": 329.1
   }
  }
 }
