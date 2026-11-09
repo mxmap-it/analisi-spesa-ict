@@ -1,0 +1,547 @@
+{
+ "data": "2026-11-09",
+ "metodo": "#43 estensione del pilota DNS/AS (saas_infra_pilota.py) ai fornitori SaaS S2 della Misura 1.2.\n\nPer ogni dominio di config/saas_host.yaml: fino a 5 host per ente presi dall'archivio (archivio/mirror), CNAME (per\nriconoscere i CDN), record A, AS di origine (Team Cymru), whois .it dell'intestatario. Riusa dig/asn/whois_it del pilota.\nAttendibilità B per «dove risponde il servizio pubblico», NON per dove stanno i dati (back-office, DB, backup).\nUn CDN (Cloudflare, Akamai, Fastly) è marcato: nasconde l'origine.\nUso: nice .venv/bin/python tools/verifiche/saas_infra_fornitori.py --data 2026-11-09\n   -> esiti/<data>/infrastruttura-sottostante/saas-infra-dns.json",
+ "domini": [
+  {
+   "dominio": "maggiolicloud.it",
+   "fornitore": "Maggioli Spa",
+   "prodotto": "servizi cloud Maggioli (Sicraweb/J-Serfin)",
+   "intestatario_whois": "Maggioli S.p.a.",
+   "host_provati": 5,
+   "classi": {
+    "Dinova (IT)": 5
+   },
+   "prove": [
+    {
+     "host": "acamir-appalti.maggiolicloud.it",
+     "cname": [
+      "elda-md-acamir.elogicfarm.it."
+     ],
+     "ip": "185.146.160.196",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    },
+    {
+     "host": "acquerisorgive-appalti.maggiolicloud.it",
+     "cname": [],
+     "ip": "185.146.160.77",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    },
+    {
+     "host": "acselspa-appalti.maggiolicloud.it",
+     "cname": [],
+     "ip": "185.146.160.216",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    },
+    {
+     "host": "adepp-appalti.maggiolicloud.it",
+     "cname": [],
+     "ip": "185.146.160.151",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    },
+    {
+     "host": "adspauctgare.maggiolicloud.it",
+     "cname": [
+      "elda-d-mar-sicilia-est.elogicfarm.it."
+     ],
+     "ip": "185.168.33.202",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "trasparenza-valutazione-merito.it",
+   "fornitore": "Maggioli Spa",
+   "prodotto": "Amministrazione trasparente Maggioli",
+   "intestatario_whois": "Maggioli S.p.a.",
+   "host_provati": 5,
+   "classi": {
+    "Maggioli (rete propria, IT)": 5
+   },
+   "prove": [
+    {
+     "host": "abbiategrasso.trasparenza-valutazione-merito.it",
+     "cname": [
+      "mda-jcitygov-albo02.mdafarm.it."
+     ],
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "Maggioli (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "acicastello.trasparenza-valutazione-merito.it",
+     "cname": [
+      "mda-jcitygov-albo08.mdafarm.it."
+     ],
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "Maggioli (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "acireale.trasparenza-valutazione-merito.it",
+     "cname": [
+      "mda-jcitygov-albo06.mdafarm.it."
+     ],
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "Maggioli (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "acquapendente.trasparenza-valutazione-merito.it",
+     "cname": [
+      "mda-jcitygov-albo02.mdafarm.it."
+     ],
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "Maggioli (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "adria.trasparenza-valutazione-merito.it",
+     "cname": [
+      "mda-jcitygov-albo05.mdafarm.it."
+     ],
+     "ip": "5.180.68.29",
+     "as": 208761,
+     "as_nome": "Maggioli - Maggioli S.p.a., IT",
+     "classe": "Maggioli (rete propria, IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "akropolis.cloud",
+   "fornitore": "Datamanagement Italia s.r.l.",
+   "prodotto": "@kropolis (albo, trasparenza)",
+   "intestatario_whois": null,
+   "host_provati": 3,
+   "classi": {
+    "Amazon (EXTRA-UE)": 3
+   },
+   "prove": [
+    {
+     "host": "albo-pontebuggianese-pt.akropolis.cloud",
+     "cname": [],
+     "ip": "15.161.129.123",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "trasparenza-amelia-tr.akropolis.cloud",
+     "cname": [],
+     "ip": "15.160.238.67",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "trasparenza-capurso-ba.akropolis.cloud",
+     "cname": [],
+     "ip": "15.161.94.59",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "hypersic.net",
+   "fornitore": "APKAPPA SRL",
+   "prodotto": "hyperSIC servizi online",
+   "intestatario_whois": null,
+   "host_provati": 1,
+   "classi": {
+    "Fastweb (IT, controllo CH)": 1
+   },
+   "prove": [
+    {
+     "host": "servizionline.hypersic.net",
+     "cname": [],
+     "ip": "93.62.144.82",
+     "as": 12874,
+     "as_nome": "FASTWEB - Fastweb SpA, IT",
+     "classe": "Fastweb (IT, controllo CH)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "hypersicapp.net",
+   "fornitore": "APKAPPA SRL",
+   "prodotto": "hyperSIC servizi online",
+   "intestatario_whois": null,
+   "host_provati": 1,
+   "classi": {
+    "Amazon (EXTRA-UE)": 1
+   },
+   "prove": [
+    {
+     "host": "servizionline.hspromilaprod.hypersicapp.net",
+     "cname": [],
+     "ip": "15.160.31.243",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "apkappa.it",
+   "fornitore": "APKAPPA SRL",
+   "prodotto": "albo/trasparenza APKappa",
+   "intestatario_whois": "A.P.Systems srl",
+   "host_provati": 2,
+   "classi": {
+    "Dinova (IT)": 2
+   },
+   "prove": [
+    {
+     "host": "albo.apkappa.it",
+     "cname": [],
+     "ip": "185.68.190.3",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    },
+    {
+     "host": "www.apkappa.it",
+     "cname": [],
+     "ip": "185.96.204.251",
+     "as": 200760,
+     "as_nome": "ELOGIC-AS - Dinova Srl, IT",
+     "classe": "Dinova (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "halleyweb.it",
+   "fornitore": "Halley Informatica Srl",
+   "prodotto": "portali comunali Halley",
+   "intestatario_whois": "HALLEY INFORMATICA SNC DI CICCOLINI G. & C.",
+   "host_provati": 5,
+   "classi": {
+    "Retelit (IT)": 5
+   },
+   "prove": [
+    {
+     "host": "castelgiorgio.halleyweb.it",
+     "cname": [],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    },
+    {
+     "host": "cerignola.halleyweb.it",
+     "cname": [],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    },
+    {
+     "host": "cisterna-di-latina.halleyweb.it",
+     "cname": [],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    },
+    {
+     "host": "civitanovadelsannio.halleyweb.it",
+     "cname": [],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    },
+    {
+     "host": "crevacuore.halleyweb.it",
+     "cname": [],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "halleyegov.it",
+   "fornitore": "Halley Informatica Srl",
+   "prodotto": "servizi e-gov Halley",
+   "intestatario_whois": "Halley Informatica Srl",
+   "host_provati": 4,
+   "classi": {
+    "Halley (rete propria, IT)": 3,
+    "Retelit (IT)": 1
+   },
+   "prove": [
+    {
+     "host": "corteolonaegenzone.halleyegov.it",
+     "cname": [],
+     "ip": "185.199.48.101",
+     "as": 205985,
+     "as_nome": "halleyinformatica - Halley Informatica srl, IT",
+     "classe": "Halley (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "lucera.halleyegov.it",
+     "cname": [],
+     "ip": "185.199.48.163",
+     "as": 205985,
+     "as_nome": "halleyinformatica - Halley Informatica srl, IT",
+     "classe": "Halley (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "urbino.halleyegov.it",
+     "cname": [],
+     "ip": "185.199.48.163",
+     "as": 205985,
+     "as_nome": "halleyinformatica - Halley Informatica srl, IT",
+     "classe": "Halley (rete propria, IT)",
+     "cdn": false
+    },
+    {
+     "host": "www.halleyegov.it",
+     "cname": [
+      "halleyegov.it."
+     ],
+     "ip": "195.78.210.236",
+     "as": 3302,
+     "as_nome": "AS-RETELIT-IRIDEOS - Retelit Digital Services S.p.A., IT",
+     "classe": "Retelit (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "soluzionipa.it",
+   "fornitore": "Deda Next S.r.l.",
+   "prodotto": "Civilia / portali Dedagroup PA",
+   "intestatario_whois": "DEDAGROUP SPA",
+   "host_provati": 5,
+   "classi": {
+    "Microsoft (EXTRA-UE)": 5
+   },
+   "prove": [
+    {
+     "host": "asstbgest.soluzionipa.it",
+     "cname": [
+      "azwafni5.soluzionipa.it."
+     ],
+     "ip": "150.171.110.120",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "baiano.soluzionipa.it",
+     "cname": [
+      "azwafni2.soluzionipa.it."
+     ],
+     "ip": "150.171.110.121",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "battipaglia.soluzionipa.it",
+     "cname": [
+      "azwafni2.soluzionipa.it."
+     ],
+     "ip": "150.171.110.121",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "caltagirone.soluzionipa.it",
+     "cname": [
+      "prod.soluzionipa.it."
+     ],
+     "ip": "150.171.110.121",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "campobello.soluzionipa.it",
+     "cname": [
+      "owfrontdoor2.soluzionipa.it."
+     ],
+     "ip": "150.171.110.119",
+     "as": 8075,
+     "as_nome": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+     "classe": "Microsoft (EXTRA-UE)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "urbi.it",
+   "fornitore": "PA Digitale S.p.A.",
+   "prodotto": "Urbi Smart",
+   "intestatario_whois": "Pa Digitale Spa",
+   "host_provati": 2,
+   "classi": {
+    "TIM (IT)": 2
+   },
+   "prove": [
+    {
+     "host": "asp.urbi.it",
+     "cname": [],
+     "ip": "89.31.52.104",
+     "as": 20746,
+     "as_nome": "ASN-IDC - Telecom Italia S.p.A., IT",
+     "classe": "TIM (IT)",
+     "cdn": false
+    },
+    {
+     "host": "cloud.urbi.it",
+     "cname": [],
+     "ip": "89.31.52.104",
+     "as": 20746,
+     "as_nome": "ASN-IDC - Telecom Italia S.p.A., IT",
+     "classe": "TIM (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "jentecloud.net",
+   "fornitore": "Municipia SPA",
+   "prodotto": "jEnte cloud",
+   "intestatario_whois": null,
+   "host_provati": 1,
+   "classi": {
+    "Cloudflare CDN (EXTRA-UE)": 1
+   },
+   "prove": [
+    {
+     "host": "egovjesolo.jentecloud.net",
+     "cname": [],
+     "ip": "104.18.16.180",
+     "as": 13335,
+     "as_nome": "CLOUDFLARENET - Cloudflare, Inc., US",
+     "classe": "Cloudflare CDN (EXTRA-UE)",
+     "cdn": true
+    }
+   ]
+  },
+  {
+   "dominio": "parsec326.it",
+   "fornitore": "Parsec 3.26 S.r.l.",
+   "prodotto": "trasparenza Parsec",
+   "intestatario_whois": "parsec 3.26 Srl",
+   "host_provati": 2,
+   "classi": {
+    "Amazon (EXTRA-UE)": 2
+   },
+   "prove": [
+    {
+     "host": "trasparenza.parsec326.it",
+     "cname": [],
+     "ip": "54.72.113.180",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    },
+    {
+     "host": "www.parsec326.it",
+     "cname": [
+      "parsec326.it."
+     ],
+     "ip": "54.77.233.13",
+     "as": 16509,
+     "as_nome": "AMAZON-02 - Amazon.com, Inc., US",
+     "classe": "Amazon (EXTRA-UE)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "siscom.eu",
+   "fornitore": "SISCOM SPA",
+   "prodotto": "sito/servizi Siscom",
+   "intestatario_whois": null,
+   "host_provati": 1,
+   "classi": {
+    "Si.TEK (IT)": 1
+   },
+   "prove": [
+    {
+     "host": "www.siscom.eu",
+     "cname": [
+      "weblp04.si-tek.net."
+     ],
+     "ip": "185.77.32.46",
+     "as": 44920,
+     "as_nome": "SiTEK - Si.TEK Informatica Srl, IT",
+     "classe": "Si.TEK (IT)",
+     "cdn": false
+    }
+   ]
+  },
+  {
+   "dominio": "svic.it",
+   "fornitore": "svic srl",
+   "prodotto": "sito/servizi svic",
+   "intestatario_whois": "Svic Srl",
+   "host_provati": 1,
+   "classi": {
+    "Aruba (IT)": 1
+   },
+   "prove": [
+    {
+     "host": "www.svic.it",
+     "cname": [],
+     "ip": "185.205.41.143",
+     "as": 31034,
+     "as_nome": "ARUBA-ASN - Aruba S.p.A., IT",
+     "classe": "Aruba (IT)",
+     "cdn": false
+    }
+   ]
+  }
+ ]
+}

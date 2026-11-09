@@ -1,0 +1,516 @@
+{
+ "versione": "v4.2",
+ "campione_top20": {
+  "si": 16,
+  "eur_si": 25985433,
+  "cig": 60,
+  "seme": 20261109,
+  "precisione_decisi": 1.0,
+  "precisione_minima": 1.0,
+  "precisione_eur_decisi": 1.0
+ },
+ "generato": "2026-11-09",
+ "seme_campione": 20261109,
+ "cig_attribuiti": 9714,
+ "cig_rivenditore": 6606,
+ "per_giurisdizione_e_canale": {
+  "EXTRA-UE|diretto": 465569361,
+  "EXTRA-UE|ignoto": 688380376,
+  "EXTRA-UE|rivenditore": 1855132845,
+  "IT|diretto": 1544659337,
+  "IT|ignoto": 537999070,
+  "IT|rivenditore": 85894125,
+  "UE|diretto": 69508835,
+  "UE|ignoto": 76263565,
+  "UE|rivenditore": 208043019
+ },
+ "fonte_cf_cig": {
+  "anac-aggiudicatari": 4880,
+  "nome->cf-anac": 1559,
+  "solo-nome": 167
+ },
+ "fonte_cf_eur": {
+  "EXTRA-UE|anac-aggiudicatari": 1420670156,
+  "EXTRA-UE|nome->cf-anac": 425490132,
+  "EXTRA-UE|solo-nome": 8972557,
+  "IT|anac-aggiudicatari": 81868183,
+  "IT|nome->cf-anac": 3785281,
+  "IT|solo-nome": 240661,
+  "UE|anac-aggiudicatari": 150758286,
+  "UE|nome->cf-anac": 56571942,
+  "UE|solo-nome": 712791
+ },
+ "rivenditori": 1393,
+ "rivenditori_con_prodotti_extra_ue": 1256,
+ "extra_ue": {
+  "totale": 3009082581,
+  "noto": 2320702205,
+  "via_rivenditore": 1855132845,
+  "via_rivenditore_cf_it": 1828258774,
+  "via_rivenditore_cf_it_capogruppo_it": 1729080579,
+  "quota_cf_it_sul_totale": 0.608,
+  "quota_cf_it_sul_noto": 0.788,
+  "quota_cf_it_capogruppo_it_sul_totale": 0.575,
+  "per_naz_cf_e_capogruppo": {
+   "IT|IT": 1576858857,
+   "IT|IT?": 152221721,
+   "IT|CH": 83770331,
+   "ignota|?": 25913322,
+   "IT|UE": 11538668,
+   "IT|EXTRA-UE": 3869196,
+   "estero|?": 960749
+  }
+ },
+ "capogruppo_copertura_eur_extra_ue": {
+  "curato": 63439583,
+  "GLEIF": 1612597469,
+  "nessun": 152221721,
+  "cf": 26874071
+ },
+ "gleif": {
+  "piva_it_con_lei": 249738,
+  "fonte": [
+   "archivio/mirror/goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297730/20261106-0800-gleif-goldencopy-rr-golden-copy.csv.zip",
+   "archivio/mirror/goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/1297685/20261106-0800-gleif-goldencopy-lei2-golden-copy.csv.zip"
+  ]
+ },
+ "precisione_atti_automatica": {
+  "campione": 39,
+  "atto_pertinente": 8,
+  "pertinente_prodotto_nell_atto": 8,
+  "pertinente_rivenditore_nell_atto": 4
+ },
+ "precisione_etichette": {
+  "si": 30,
+  "eur_si": 13107115,
+  "fonte_atto": 9,
+  "incerto": 6,
+  "eur_incerto": 1471749,
+  "no": 2,
+  "eur_no": 30457,
+  "precisione_decisi": 0.938,
+  "precisione_minima_incerti_errati": 0.789,
+  "precisione_eur_decisi": 0.998
+ },
+ "cig_rivenditore_con_atti": 39,
+ "precisione_lotti_consip": {
+  "cig": 48,
+  "coincide": 48
+ },
+ "primi_25": [
+  {
+   "cf": "00488410010",
+   "denominazione": "TIM S.P.A.",
+   "capogruppo": "TELECOM ITALIA SPA O TIM S.P.A. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 549300W384M3RI3VXU42 senza RR",
+   "cig": 1673,
+   "eur": 1183226079,
+   "eur_extra_ue": 1133324114,
+   "enti": 670,
+   "prodotti": {
+    "Microsoft": 939444159,
+    "Salesforce": 66671806,
+    "SPC Cloud lotto 1": 48910462,
+    "Cloudera": 44043455,
+    "Oracle": 42055289,
+    "Google": 27626088
+   }
+  },
+  {
+   "cf": "08619670584",
+   "denominazione": "ITALWARE - S.R.L.",
+   "capogruppo": "DIGITAL VALUE S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 894500VW6HBRAY4QRX68->81560096F26ACF910809",
+   "cig": 82,
+   "eur": 131515314,
+   "eur_extra_ue": 74526113,
+   "enti": 49,
+   "prodotti": {
+    "Oracle": 57548677,
+    "SAP": 56989201,
+    "Microsoft": 9831303,
+    "IBM": 5354348,
+    "Cloudera": 941822,
+    "Adobe": 849963
+   }
+  },
+  {
+   "cf": "01973270604",
+   "denominazione": "EUROLINK SOCIETA' A RESPONSABILITA' LIMITATA",
+   "capogruppo": "",
+   "paese": "",
+   "fonte_capogruppo": "nessun LEI",
+   "cig": 22,
+   "eur": 69237998,
+   "eur_extra_ue": 69076498,
+   "enti": 18,
+   "prodotti": {
+    "Oracle": 69071394,
+    "Polo Strategico Nazionale": 139000,
+    "SAP": 22500,
+    "Microsoft": 5103
+   }
+  },
+  {
+   "cf": "06169220966",
+   "denominazione": "SOFTWAREONE ITALIA S.R.L.",
+   "capogruppo": "SoftwareOne Holding AG",
+   "paese": "CH",
+   "fonte_capogruppo": "GLEIF RR 5299007295KBJB33GV48->529900GBI88JKWXLGI05",
+   "cig": 85,
+   "eur": 47661381,
+   "eur_extra_ue": 47661381,
+   "enti": 69,
+   "prodotti": {
+    "Microsoft": 47661381
+   }
+  },
+  {
+   "cf": "12878470157",
+   "denominazione": "FASTWEB SPA",
+   "capogruppo": "Swisscom AG",
+   "paese": "CH",
+   "fonte_capogruppo": "GLEIF RR 549300YFSXCV1SKICL21->5493005SL9HHOXS3B739",
+   "cig": 86,
+   "eur": 45796288,
+   "eur_extra_ue": 36108951,
+   "enti": 65,
+   "prodotti": {
+    "Amazon Web Services": 34751776,
+    "Polo Strategico Nazionale": 9547486,
+    "Microsoft": 792175,
+    "Google": 560000,
+    "Aruba": 139851,
+    "Cisco Webex": 5000
+   }
+  },
+  {
+   "cf": "03301640482",
+   "denominazione": "VAR GROUP S.P.A.",
+   "capogruppo": "SESA HOLDING S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 8156007D836BCA911890->815600E265C6316AF282",
+   "cig": 175,
+   "eur": 42940573,
+   "eur_extra_ue": 42801504,
+   "enti": 113,
+   "prodotti": {
+    "Microsoft": 25914807,
+    "Oracle": 8361658,
+    "Salesforce": 8015328,
+    "Amazon Web Services": 289580,
+    "Adobe": 140284,
+    "SAP": 125160
+   }
+  },
+  {
+   "cf": "01468500218",
+   "denominazione": "INFORMATICA ALTO ADIGE SPA",
+   "capogruppo": "Provincia autonoma di Bolzano (società in-house)",
+   "paese": "IT",
+   "fonte_capogruppo": "curato: statuto e Società trasparente di Informatica Alto Adige (socio di maggioranza Provincia autonoma di Bolzano)",
+   "cig": 14,
+   "eur": 42258689,
+   "eur_extra_ue": 20596115,
+   "enti": 3,
+   "prodotti": {
+    "SAP": 21662575,
+    "Microsoft": 20596115
+   }
+  },
+  {
+   "cf": "02006010165",
+   "denominazione": "PROJECT INFORMATICA S.R.L.",
+   "capogruppo": "PROJECT INFORMATICA S.R.L. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 8156004F0A103DD3F104 senza RR",
+   "cig": 29,
+   "eur": 30893126,
+   "eur_extra_ue": 30893126,
+   "enti": 10,
+   "prodotti": {
+    "Oracle": 30318452,
+    "Microsoft": 574674
+   }
+  },
+  {
+   "cf": "02824320176",
+   "denominazione": "LUTECH S.P.A.",
+   "capogruppo": "LUTECH S.P.A. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 8156009352E1EEBFDA50 senza RR",
+   "cig": 35,
+   "eur": 26725096,
+   "eur_extra_ue": 16706895,
+   "enti": 27,
+   "prodotti": {
+    "Salesforce": 14789514,
+    "SAP": 10018202,
+    "Amazon Web Services": 1131220,
+    "ServiceNow": 220000,
+    "Microsoft": 178904,
+    "Oracle": 166447
+   }
+  },
+  {
+   "cf": "05231661009",
+   "denominazione": "R1 S.P.A.",
+   "capogruppo": "R1 S.P.A. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 81560069D85BF0EACE27 senza RR",
+   "cig": 135,
+   "eur": 25699100,
+   "eur_extra_ue": 24340001,
+   "enti": 103,
+   "prodotti": {
+    "Oracle": 17423763,
+    "Microsoft": 6680952,
+    "Aruba": 1285495,
+    "Amazon Web Services": 200000,
+    "Polo Strategico Nazionale": 73605,
+    "Adobe": 27338
+   }
+  },
+  {
+   "cf": "08825020723",
+   "denominazione": "ABACO3 S.P.A.",
+   "capogruppo": "ABACO INNOVAZIONE S.P.A. IN SIGLA (\"ABACO S.P.A.\")",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 8156000303EC868C5C10->81560003C84648198654",
+   "cig": 23,
+   "eur": 22876761,
+   "eur_extra_ue": 146370,
+   "enti": 18,
+   "prodotti": {
+    "SAP": 22730391,
+    "ServiceNow": 90345,
+    "Adobe": 56025
+   }
+  },
+  {
+   "cf": "",
+   "denominazione": "POSTEL S.P.A.",
+   "capogruppo": "",
+   "paese": "",
+   "fonte_capogruppo": "cf non italiano/assente",
+   "cig": 36,
+   "eur": 20957161,
+   "eur_extra_ue": 20957161,
+   "enti": 32,
+   "prodotti": {
+    "Microsoft": 20957161
+   }
+  },
+  {
+   "cf": "02690660309",
+   "denominazione": "P.A. A.B.S. SRL - PARTNERS ASSOCIATES ADVANCED BUSINESS SOLUTIONS",
+   "capogruppo": "ALVEO S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 984500CED9DF9B7TEA57->9845005E5A3A37BB2E22",
+   "cig": 25,
+   "eur": 17346693,
+   "eur_extra_ue": 78080,
+   "enti": 19,
+   "prodotti": {
+    "SAP": 17247963,
+    "Microsoft": 78080,
+    "Retelit": 20650
+   }
+  },
+  {
+   "cf": "08164230156",
+   "denominazione": "H.T. HIGH TECHNOLOGY S.R.L.",
+   "capogruppo": "SEIDOR CONSULTING ITALIA S.R.L. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 815600A31B333D067B51 senza RR",
+   "cig": 4,
+   "eur": 17296340,
+   "eur_extra_ue": 0,
+   "enti": 3,
+   "prodotti": {
+    "SAP": 17296340
+   }
+  },
+  {
+   "cf": "04662680158",
+   "denominazione": "KPMG ADVISORY S.P.A.",
+   "capogruppo": "KPMG ADVISORY S.P.A. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 815600EEEAD599BAF857 senza RR",
+   "cig": 5,
+   "eur": 17125277,
+   "eur_extra_ue": 16968676,
+   "enti": 5,
+   "prodotti": {
+    "Oracle": 15120000,
+    "ServiceNow": 1848676,
+    "SAP": 156601
+   }
+  },
+  {
+   "cf": "04108030281",
+   "denominazione": "ARSLOGICA SISTEMI S.R.L.",
+   "capogruppo": "",
+   "paese": "",
+   "fonte_capogruppo": "nessun LEI",
+   "cig": 41,
+   "eur": 16265063,
+   "eur_extra_ue": 16265063,
+   "enti": 33,
+   "prodotti": {
+    "Oracle": 16225295,
+    "Microsoft": 31300,
+    "Adobe": 8468
+   }
+  },
+  {
+   "cf": "11673301005",
+   "denominazione": "GWAY S.R.L.",
+   "capogruppo": "R1 S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 8156003BBE7D3D7BB208->81560069D85BF0EACE27",
+   "cig": 18,
+   "eur": 15917824,
+   "eur_extra_ue": 15917824,
+   "enti": 15,
+   "prodotti": {
+    "Oracle": 15423515,
+    "Adobe": 431257,
+    "Microsoft": 63052
+   }
+  },
+  {
+   "cf": "02770891204",
+   "denominazione": "LEPIDA S.C.P.A.",
+   "capogruppo": "Regione Emilia-Romagna (società in-house)",
+   "paese": "IT",
+   "fonte_capogruppo": "curato: statuto di Lepida ScpA (in-house della Regione Emilia-Romagna e degli enti soci)",
+   "cig": 52,
+   "eur": 14923404,
+   "eur_extra_ue": 14921766,
+   "enti": 37,
+   "prodotti": {
+    "Google": 14089560,
+    "Oracle": 822162,
+    "Microsoft": 10044,
+    "Aruba": 1638
+   }
+  },
+  {
+   "cf": "13454210157",
+   "denominazione": "ACCENTURE S.P.A.",
+   "capogruppo": "ACCENTURE PUBLIC LIMITED COMPANY",
+   "paese": "IE",
+   "fonte_capogruppo": "GLEIF RR 8156007FC053A5A7EB71->5493000EWHDSR3MZWH98",
+   "cig": 22,
+   "eur": 14735354,
+   "eur_extra_ue": 5290085,
+   "enti": 10,
+   "prodotti": {
+    "SAP": 8945598,
+    "Salesforce": 4900000,
+    "Polo Strategico Nazionale": 499670,
+    "Amazon Web Services": 181800,
+    "ServiceNow": 140145,
+    "Microsoft": 68140
+   }
+  },
+  {
+   "cf": "04839740489",
+   "denominazione": "POSTEL S.P.A.",
+   "capogruppo": "Poste Italiane S.p.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "curato: Poste Italiane, Relazione finanziaria annuale (Postel controllata al 100 %)",
+   "cig": 46,
+   "eur": 13028767,
+   "eur_extra_ue": 13028767,
+   "enti": 37,
+   "prodotti": {
+    "Microsoft": 13028767
+   }
+  },
+  {
+   "cf": "08450891000",
+   "denominazione": "ALMAVIVA - THE ITALIAN INNOVATION COMPANY S.P.A. IN BREVE ALMAVIVA S.P.A.",
+   "capogruppo": "ALMAVIVA TECHNOLOGIES S.R.L.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 815600A862DA4DD9E211->81560012CF26B149B685",
+   "cig": 24,
+   "eur": 11881013,
+   "eur_extra_ue": 6964834,
+   "enti": 19,
+   "prodotti": {
+    "SAP": 4916180,
+    "Salesforce": 2988067,
+    "Oracle": 2959287,
+    "Amazon Web Services": 948436,
+    "Microsoft": 69043
+   }
+  },
+  {
+   "cf": "05692591000",
+   "denominazione": "POSTEL SPA",
+   "capogruppo": "Poste Italiane S.p.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "curato: Poste Italiane, Relazione finanziaria annuale (Postel controllata al 100 %)",
+   "cig": 33,
+   "eur": 11264595,
+   "eur_extra_ue": 11264595,
+   "enti": 28,
+   "prodotti": {
+    "Microsoft": 11264595
+   }
+  },
+  {
+   "cf": "05773090013",
+   "denominazione": "ITD SOLUTIONS S.P.A.",
+   "capogruppo": "DIGITAL VALUE S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 815600DAA040DFDCA480->81560096F26ACF910809",
+   "cig": 4,
+   "eur": 10778920,
+   "eur_extra_ue": 10778920,
+   "enti": 3,
+   "prodotti": {
+    "Cloudera": 6496000,
+    "Microsoft": 3102920,
+    "Oracle": 1180000
+   }
+  },
+  {
+   "cf": "03008670360",
+   "denominazione": "DINOVA S.R.L.",
+   "capogruppo": "DINOVA S.R.L. (nessun capogruppo dichiarato)",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF LEI 815600A2F4DEE57D7B98 senza RR",
+   "cig": 54,
+   "eur": 9589670,
+   "eur_extra_ue": 9589670,
+   "enti": 38,
+   "prodotti": {
+    "Google": 9570597,
+    "Microsoft": 19073
+   }
+  },
+  {
+   "cf": "00967720285",
+   "denominazione": "ENGINEERING - INGEGNERIA INFORMATICA - S.P.A.",
+   "capogruppo": "CENTURION NEWCO S.P.A.",
+   "paese": "IT",
+   "fonte_capogruppo": "GLEIF RR 81560042F5E23EE61346->81560009B4C5D585C496",
+   "cig": 29,
+   "eur": 8976397,
+   "eur_extra_ue": 2256877,
+   "enti": 22,
+   "prodotti": {
+    "SAP": 6719520,
+    "Salesforce": 1467690,
+    "Oracle": 642828,
+    "Amazon Web Services": 80000,
+    "Microsoft": 66359
+   }
+  }
+ ]
+}
