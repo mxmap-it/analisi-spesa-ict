@@ -43,9 +43,29 @@
   }
  },
  "psn_ppdf": {
-  "schede": 12,
-  "asl_canone_hyperscaler_misurato_pct": 34.9,
-  "asl_max_pct": 43.3
+  "enti": 9,
+  "regioni": [
+   "Campania",
+   "Lazio",
+   "Lombardia",
+   "Marche",
+   "Piemonte",
+   "Sardegna"
+  ],
+  "asl_canone_hyperscaler_misurato_pct": 23.3,
+  "asl_canone_localizzazione_pct": 7.4,
+  "asl_max_pct": 37.7,
+  "per_ente_pct": {
+   "ARES-TOTALE (8.14)": 34.4,
+   "AIC3 Piemonte (AOU Novara, ASL NO/BI/VC/VCO)": 37.7,
+   "ASL Latina": 17.0,
+   "ASL Roma 3": 15.5,
+   "AO Ordine Mauriziano Torino": 0.0,
+   "AORN Cardarelli Napoli": 10.5,
+   "AST Pesaro e Urbino": 0.0,
+   "ATS Brescia": 0.0,
+   "AORN Santobono (P6R2 + P9R1)": 68.0
+  }
  },
  "psn_12_per_tipologia_meur": {
   "altri": 20.6,
@@ -62,17 +82,17 @@
   "S5": 28.51
  },
  "totale_meur": 818.9,
- "saas_con_prove_meur": 101.2,
- "saas_con_prove_quota_centrale": 0.239,
- "saas_s2_senza_prove_meur": 49.0,
- "saas_senza_prove_e_s3_s4_meur": 104.7,
+ "saas_con_prove_meur": 122.9,
+ "saas_con_prove_quota_centrale": 0.343,
+ "saas_s2_senza_prove_meur": 27.3,
+ "saas_senza_prove_e_s3_s4_meur": 83.0,
  "saas_per_fornitore": {
   "Maggioli Spa": {
    "meur": 37.91,
    "quota": [
     0,
-    0,
-    0.5
+    0.36,
+    0.75
    ]
   },
   "Datamanagement Italia s.r.l.": {
@@ -81,6 +101,14 @@
     0.5,
     1,
     1
+   ]
+  },
+  "svic srl": {
+   "meur": 8.63,
+   "quota": [
+    0,
+    0.05,
+    0.2
    ]
   },
   "APKAPPA SRL": {
@@ -123,12 +151,28 @@
     0.25
    ]
   },
+  "Almaviva S.p.A.": {
+   "meur": 4.12,
+   "quota": [
+    0.3,
+    0.6,
+    0.9
+   ]
+  },
   "SISCOM SPA": {
    "meur": 4.11,
    "quota": [
     0,
     0,
     0.25
+   ]
+  },
+  "We-Com s.r.l.": {
+   "meur": 3.79,
+   "quota": [
+    0,
+    0.05,
+    0.3
    ]
   },
   "PA Digitale S.p.A.": {
@@ -163,6 +207,14 @@
     0.25
    ]
   },
+  "Municipia SPA": {
+   "meur": 1.98,
+   "quota": [
+    0.1,
+    0.3,
+    0.7
+   ]
+  },
   "Parsec 3.26 S.r.l.": {
    "meur": 1.97,
    "quota": [
@@ -179,6 +231,22 @@
     0.25
    ]
   },
+  "3PItalia SpA": {
+   "meur": 1.61,
+   "quota": [
+    0,
+    0.1,
+    0.4
+   ]
+  },
+  "BUSINESS INTEGRATION PARTNERS S.P.A.": {
+   "meur": 1.61,
+   "quota": [
+    0,
+    0.3,
+    0.8
+   ]
+  },
   "Engineering D.HUB SPA": {
    "meur": 1.6,
    "quota": [
@@ -190,46 +258,61 @@
  },
  "scenari": {
   "basso": {
+   "lettura_localizzazione": {
+    "psn_meur": 0.0,
+    "totale_meur": 24.9,
+    "quota_pct": 3.0
+   },
    "psn_canone_hyperscaler_pct": {
     "ASL": 7,
     "altri": 6
    },
    "psn_lettura_stretta_meur": 5.4,
    "psn_lettura_destinazione_meur": 27.0,
-   "saas_con_prove_meur": 9.9,
+   "saas_con_prove_meur": 11.4,
    "saas_senza_prove_e_s3_s4_meur": 0.0,
    "s5_meur": 0,
    "s6_meur": 0,
-   "totale_extraue_infra_meur": 50.6,
-   "quota_pct": 6.2
+   "totale_extraue_infra_meur": 52.0,
+   "quota_pct": 6.3
   },
   "centrale": {
+   "lettura_localizzazione": {
+    "psn_meur": 28.5,
+    "totale_meur": 176.1,
+    "quota_pct": 21.5
+   },
    "psn_canone_hyperscaler_pct": {
-    "ASL": 34.9,
+    "ASL": 23.3,
     "altri": 13.2
    },
-   "psn_lettura_stretta_meur": 52.6,
-   "psn_lettura_destinazione_meur": 131.5,
-   "saas_con_prove_meur": 24.1,
-   "saas_senza_prove_e_s3_s4_meur": 25.0,
+   "psn_lettura_stretta_meur": 35.4,
+   "psn_lettura_destinazione_meur": 88.5,
+   "saas_con_prove_meur": 42.1,
+   "saas_senza_prove_e_s3_s4_meur": 28.4,
    "s5_meur": 28.5,
-   "s6_meur": 55.0,
-   "totale_extraue_infra_meur": 277.8,
-   "quota_pct": 33.9
+   "s6_meur": 49.7,
+   "totale_extraue_infra_meur": 250.9,
+   "quota_pct": 30.6
   },
   "alto": {
+   "lettura_localizzazione": {
+    "psn_meur": 53.9,
+    "totale_meur": 417.8,
+    "quota_pct": 51.0
+   },
    "psn_canone_hyperscaler_pct": {
-    "ASL": 43.3,
+    "ASL": 37.7,
     "altri": 31
    },
-   "psn_lettura_stretta_meur": 99.5,
-   "psn_lettura_destinazione_meur": 165.9,
-   "saas_con_prove_meur": 57.2,
-   "saas_senza_prove_e_s3_s4_meur": 104.7,
+   "psn_lettura_stretta_meur": 87.3,
+   "psn_lettura_destinazione_meur": 145.5,
+   "saas_con_prove_meur": 76.6,
+   "saas_senza_prove_e_s3_s4_meur": 83.0,
    "s5_meur": 28.5,
    "s6_meur": 162.3,
-   "totale_extraue_infra_meur": 532.2,
-   "quota_pct": 65.0
+   "totale_extraue_infra_meur": 509.4,
+   "quota_pct": 62.2
   }
  },
  "assunzioni": {
@@ -240,7 +323,7 @@
   },
   "quota_saas_senza_prove": {
    "basso": 0,
-   "centrale": 0.23856782426845827,
+   "centrale": 0.3426695860943058,
    "alto": 1
   },
   "psn": "ASL: centrale misurata sui PPdF (ARES); altri: Libro PAL con Managed = k x Oracle PSN",

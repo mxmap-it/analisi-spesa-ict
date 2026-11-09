@@ -1,5 +1,8 @@
-"""Misura 1.2: giurisdizione dell infrastruttura come terzo asse (#43, #45). Versione 0.2.
+"""Misura 1.2: giurisdizione dell infrastruttura come terzo asse (#43, #45). Versione 0.3.
 
+v0.3: piani dei fabbisogni PSN di 9 enti sanitari in 6 regioni (ARES contato come un ente, colonna conta=1);
+seconda lettura «localizzazione dei dati» (conta solo il Secure Public Cloud nelle region hyperscaler, non Oracle
+Exadata Cloud@Customer nei DC PSN); i dati SaaS per fornitore restano su region hyperscaler in entrambe le letture.
 v0.2: ASL/AO con la quota misurata sui Progetti dei piani dei fabbisogni PSN (psn-ppdf.csv); SaaS con quota per fornitore
 da config/saas_infrastruttura.yaml (atti, schede ACN, DNS/AS); i fornitori senza prove prendono la media in euro di quelli
 con prove (non piu l ipotesi fissa del 25 % della v0.1).
@@ -56,12 +59,17 @@ def main():
     # Comuni e altri: Libro PAL (SPC; centrale + Managed = k x Oracle PSN; alto tutto Oracle + 5 di Hybrid).
     pp = list(csv.DictReader(open(R / f"esiti/{d}/infrastruttura-sottostante/psn-ppdf.csv", encoding="utf-8"), delimiter=";"))
     hs_pp = lambda r: float(r["spc"]) + float(r["managed_canone"]) + float(r["hybrid"])
-    asl = [r for r in pp if r["ente"].startswith("ARES-")]  # schede del SSR sardo (ASL, AO, AREUS)
-    asl_mis = 100 * sum(map(hs_pp, asl)) / sum(float(r["tot_canone"]) for r in asl)
-    asl_max = max(100 * hs_pp(r) / float(r["tot_canone"]) for r in asl)
+    asl = [r for r in pp if r["conta"] == "1" and r["tipo"] != "altro"]  # un ente per riga (ARES = totale)
+    can_asl = sum(float(r["tot_canone"]) for r in asl)
+    asl_mis = 100 * sum(map(hs_pp, asl)) / can_asl
+    asl_loc = 100 * sum(float(r["localizzazione_hyperscaler"]) for r in asl) / can_asl
+    asl_max = max(100 * hs_pp(r) / float(r["tot_canone"]) for r in asl if float(r["tot_canone"]) > 100000)
+    per_ente = {r["ente"]: round(100 * hs_pp(r) / float(r["tot_canone"]), 1) for r in asl}
     pal, ora_pal = mix["Secure Public Cloud"]["PAL"], mix["Soluzioni Oracle PSN"]["PAL"]
     canone = {"ASL": dict(zip(SCENARI, (mix["Secure Public Cloud"]["ASL"], asl_mis, asl_max))),
               "altri": dict(zip(SCENARI, (pal, pal + k * ora_pal, pal + ora_pal + 5)))}
+    canone_loc = {"ASL": dict(zip(SCENARI, (0, asl_loc, mix["Secure Public Cloud"]["ASL"] * 2))),
+                  "altri": dict(zip(SCENARI, (0, pal, pal + 5)))}
     peso_canoni = dict(zip(SCENARI, (0.2, 0.4, 0.6)))
     # Misura 1.2
     yml = yaml.safe_load(open(R / "config/saas_infrastruttura.yaml", encoding="utf-8"))
@@ -90,14 +98,19 @@ def main():
         s5 = {"basso": 0, "centrale": s["S5"], "alto": s["S5"]}[sc]
         base = s["S1 big tech"] + psn_dest + saas_q[sc] + ign * quota_ign[sc] + s5
         s6 = {"basso": 0, "centrale": s["S6"] * base / (tot - s["S6"]), "alto": s["S6"]}[sc]
-        out[sc] = {"psn_canone_hyperscaler_pct": {t: round(canone[t][sc], 1) for t in canone},
+        psn_loc = sum(psn_t[t] * canone_loc[t][sc] / 100 for t in psn_t)
+        base_loc = base - psn_dest + psn_loc
+        s6_loc = {"basso": 0, "centrale": s["S6"] * base_loc / (tot - s["S6"]), "alto": s["S6"]}[sc]
+        out[sc] = {"lettura_localizzazione": {"psn_meur": round(psn_loc, 1), "totale_meur": round(base_loc + s6_loc, 1),
+                                              "quota_pct": round(100 * (base_loc + s6_loc) / tot, 1)},"psn_canone_hyperscaler_pct": {t: round(canone[t][sc], 1) for t in canone},
                    "psn_lettura_stretta_meur": round(psn_dest * peso_canoni[sc], 1),
                    "psn_lettura_destinazione_meur": round(psn_dest, 1),
                    "saas_con_prove_meur": round(saas_q[sc], 1), "saas_senza_prove_e_s3_s4_meur": round(ign * quota_ign[sc], 1),
                    "s5_meur": round(s5, 1), "s6_meur": round(s6, 1), "totale_extraue_infra_meur": round(base + s6, 1),
                    "quota_pct": round(100 * (base + s6) / tot, 1)}
     res = {"data": d, "versione": "0.2", "psn_libro_2025": psn,
-           "psn_ppdf": {"schede": len(asl), "asl_canone_hyperscaler_misurato_pct": round(asl_mis, 1), "asl_max_pct": round(asl_max, 1)},
+           "psn_ppdf": {"enti": len(asl), "regioni": sorted({r["regione"] for r in asl}), "asl_canone_hyperscaler_misurato_pct": round(asl_mis, 1),
+                        "asl_canone_localizzazione_pct": round(asl_loc, 1), "asl_max_pct": round(asl_max, 1), "per_ente_pct": per_ente},
            "psn_12_per_tipologia_meur": {t: round(v, 1) for t, v in psn_t.items()},
            "misura_12_strati_meur": {k2: round(v, 2) for k2, v in s.items()}, "totale_meur": round(tot, 1),
            "saas_con_prove_meur": round(nota_eur, 1), "saas_con_prove_quota_centrale": round(p_noti, 3),
