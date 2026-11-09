@@ -57,6 +57,8 @@ Residuo S6 L3/MePA (`residuo_s6.sh`): finiti il 7/11. Rilancio completo (L3+MePA
 
 # SEZIONI PER TICKET (dalla più recente)
 
+- **Ricerca mirata atti C1 (9/11 sera, #55 #66):** 100 CIG via 6 fermi a C1 (41 concordi, 59 non confermati >= 1 M€; 1.263 M€). Ingresso `tools/acquisizione/c1_mirata_ingresso.py`, giro `tools/acquisizione/c1_mirata.sh` (piattaforme_cig L3 su 17 link PVL; TED L2: pagine anti-bot, API v3 `c1_ted_documenti.py` -> BT-15 solo 2/12; at_cig L4 su 83 CIG/55 enti: CIG nella pagina 9, documenti 4 ma solo «contesto»). **Trovato 1 atto che cita il CIG** (B8863BC1C8, non confermato: non entra). **€ entrati in più: 0** (entra C1-C4 resta 21 CIG / 422,0 M€). Residuo 99 CIG / 1.262,9 M€ -> `esiti/2026-11-09/imbuto/c1-senza-atto.csv` (priorità alta accesso civico, da passare all elenco unico). Lavoro in `lavoro/c1-mirata/`.
+
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
 - **0.12 (9/11):** § 2.6 R53: S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4, imbuto_cig_ripetuti.py); limiti aggiornati.
 - **0.11 (9/11):** § 4.12 BDAP fase 2 inserito da report/imbuto/sezione-4.12-bdap-fase2.md (CF: Giustizia 0,96 artefatto del nome, MEF 0,25 = buco ~0,3 mld/anno; R69-R71; SIOPE 5 regioni). § 4.11 #57 riempito, L4 parziale (#68). Per il 12/11 restano: chiusura L4, cifre finali G3 via 6, ricalcolo sintesi/top-5, revisione proposte via 6, decisione di Fabio sulla pubblicazione.
