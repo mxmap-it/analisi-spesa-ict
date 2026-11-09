@@ -102,6 +102,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 |---|---|---|---|---|---|
 | v2 (27/10) | misura, 437 righe | Claude, **non cieca** | 94,6% | 86,6% | 20 su 124 non attribuiti |
 | v3 (28/10) | nuovo campione | persone, alla cieca | da misurare | da misurare | da misurare |
+| lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
 
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
@@ -115,6 +116,23 @@ I 13 mancati del campione a cieco hanno portato a regole nuove in `config/marchi
 Effetto sull'universo dal 2024, verificato a mano su un estratto: le regole nuove aggiungono circa 40 CIG. Si è scartato «win 10/11» da solo perché prendeva 242 CIG di PC con Windows preinstallato. Verifiche: `tools/verifiche/lente_prodotto.py`, `tools/verifiche/lente_cieco.py`.
 
 **v0.5 (6/11/2026):** esclusioni (AWS in corsi e collocation, backup *di* Microsoft 365) e altre regole Microsoft licenza, scritte sugli errori del secondo campione a cieco (`report/metodo/lente-cieco-2/`, big tech P 95 %, R 89 %). Misurate su un **terzo campione a cieco** (`report/metodo/lente-cieco-3/`): big tech P 62/62 = 100 %, R 62/70 = 89 %. I mancati sono testi senza il nome del produttore o con il nome sbagliato.
+
+**Quarto campione a cieco, regole del 9/11/2026 (#40).** Misura indipendente delle regole del commit 9ba5ad88 (marchio di un altro lotto, prodotti di terzi col nome del marchio, formazione AWS). Campione nuovo di 150 CIG 2024-2026 (`report/metodo/lente-cieco-4/`, seme 20261110), esclusi i 15.115 CIG già usati in campioni e test, in quattro strati: marchio extra-UE via rivenditore (R, 50 su 5.477), marchio extra-UE diretto (E, 50 su 555), gare multilotto con un marchio nel testo (M, 7: lo strato ha solo 7 CIG), ICT senza provider attribuito (N, 43 su 237.499). Il file per l'annotatore è mescolato e non ha né lo strato né l'uscita del classificatore; le etichette (prodotto dal testo ANAC e dall'aggiudicatario; nessuno di questi CIG ha un atto in `dati/atti/`) sono state committate col loro sha256 (0818f6fb, `23738e20…`) **prima** del confronto. Verifica `tools/verifiche/lente_cieco4.py`, esiti in `esiti/2026-11-09/lente-cieco-4/`.
+
+| Strato | Big tech USA: precisione | Richiamo | Precisione in euro |
+|---|---|---|---|
+| R rivenditore | 44/50 = 88 % (76,2-94,4) | 44/44 | 97,1 % |
+| E diretto | 48/50 = 96 % (86,5-98,9) | 48/48 | 99,4 % |
+| M multilotto | 2/2 | 2/3 (Adobe lotto 3) | 100 % (richiamo 96 % in euro) |
+| N senza provider | — | nessun big tech mancato su 43 | — |
+| **Totale** | **94/102 = 92,2 % (85,3-96,0)** | **94/95 = 98,9 % (94,3-99,8)** | **99,0 %**, richiamo 99,9 % |
+
+Pesata sull'universo: precisione 88,7 % (97,9 % in euro). Nessun errore di marchio sbagliato: gli 8 falsi positivi sono testi che nominano un marchio senza comprarne il prodotto, da trattare in un giro successivo (non corretti in questo):
+- formazione e supporto sistemistico su prodotti Microsoft o Google (corso Teams/Planner, corso LibreOffice e Google Workspace, supporto «ambienti cloud, Microsoft 365», supporto «SQL Server»): 4 casi; l'esclusione della formazione oggi vale solo per AWS;
+- prodotti di terzi per Microsoft 365 (Veeam Data Cloud, licenze di backup Commvault): 2 casi; l'esclusione del 9/11 copre solo «365 Protection» e Harmony Email;
+- connettività verso Oracle Cloud Infrastructure (Wind Tre) e IaaS «per ambienti VMware» di provider non detto: 2 casi.
+
+Mancati: lotto 3 «licenze Adobe» di una gara multilotto (il dizionario Adobe non prende «licenze Adobe» da sole) e caselle PEC Aruba (perimetro discutibile, provider IT). La regola multilotto non ha prodotto errori nei 7 CIG dello strato M. Limiti: un solo annotatore (Claude), niente kappa; lo strato M è troppo piccolo per misurare la regola multilotto; il richiamo nello strato N (0 big tech mancati su 43) ha un limite superiore di Wilson del 8 % su 237 mila CIG, quindi il richiamo pesato non è stimabile con precisione.
 
 ## Test automatici
 
@@ -192,3 +210,9 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 ## Cloud sovrano e dipendenze tecnologiche (29/10/2026)
 
 La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Data center in Italia + operatore italiano a controllo italiano non soggetto al CLOUD Act (immunità giuridica sul modello SecNumCloud 3.2) = **cloud sovrano (IT)**, anche con software extra-UE, che si registra come *dipendenza tecnologica* separata. Esempio: Sistema Cloud Toscana. Ogni classificazione è documentata nel [registro di classificazione](../formato-classificazione/).
+
+## Registro delle revisioni
+
+| Data | Revisione | Riferimento |
+|---|---|---|
+| 9/11/2026 | Quarto campione a cieco delle regole del 9/11 (150 CIG): big tech P 92,2 %, R 98,9 %; 8 falsi positivi e 2 mancati elencati come casi da trattare, regole non modificate | #40, `esiti/2026-11-09/lente-cieco-4/` |
