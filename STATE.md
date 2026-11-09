@@ -5,7 +5,8 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-06
 
 
-## MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
+## MIRROR RIPRESI il 9/11/2026 (spazio liberato da Fabio: 398 GB liberi): `coda_mirror.sh config/coda-mirror-2026-11.txt` rilanciato, log `lavoro/coda-mirror-ripresa-20261109.log`
+## (storico) MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
 Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le scelte sullo storage (object storage UE, pulizia degli altri progetti) spettano a Fabio. Tutto il resto del lavoro va avanti.
 - **ANAC:** completo, 1.796 risorse su 1.800 (le altre 4 rispondono 404 alla fonte). Il mirror quotidiano (cron) resta attivo, ma senza spazio la guardia lo ferma.
 - **Consip (#11):** completo, 151 risorse in tutti i formati. I 7 file grandi sono archiviati con scaricamento a riprese (`tools/acquisizione/scarica_ripresa.sh`, log `lavoro/consip/grandi.log`).
