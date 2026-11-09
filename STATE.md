@@ -480,6 +480,8 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
   - con modalità «discendente» il campo è compilato nel 98,6-100 %: mancano 4.130 CIG nel 2024 e 3.946 nel 2025;
   - il «20 % vuoto» era l'espressione sul testo: precisione 3/60 (5 %), quasi tutti appalti specifici di SDA;
   - **decisione:** P15 resta interno (esito nella scheda) e R01 è ridimensionata. Se Fabio vuole, il difetto piccolo («discendente senza CIG padre», circa 4.000 l'anno) può diventare una scheda pronta: è verificato su campo strutturato.
+- **#50, terza misura 9/11 (chiusa la verifica)** (`tools/verifiche/cig_aq_tipo.py`, `esiti/2026-11-09/cig-aq/tipo.json`): discendenti con padre esistente 99,9 % nel 2023, **92,4 % 2024, 94,9 % 2025**, 96,8 % 2026 (2025: 3.944 vuoti, 14.267 padri inesistenti, di cui 882 solo minuscoli e 289 smartcig); tipo 2025: Consip 70.238, aggregatori 90.749, consorzi 3.551, altri 173.563; 170.759 derivati 2025 puntano a un padre «contratto d'appalto» (SDA?). Imbuto: 734 M€ su 89,2 mld ICT discendente (0,82 %) non collegabile. P15 resta interno (manca la norma sull'obbligo); R01 aggiornata.
+- **#46 chiuso il 9/11** (misura del 6/11 completa: P04 pronta, metrica I11).
 - **#52 in-house/datacenter** (`tools/verifiche/inhouse_datacenter.py`, `esiti/2026-11-06/inhouse/`), punto aperto:
   - in-house dal 2024: 943 CIG, 774 M€, 446 enti. La classe è **contaminata da privati** (Accenture 91 M€, HTDI 48, TAI 31, DGS, TIM, Fastweb): va ristretta alle società pubbliche;
   - SAL su 17 CIG su 943;

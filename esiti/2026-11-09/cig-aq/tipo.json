@@ -1,0 +1,601 @@
+{
+ "generato": "2026-11-09",
+ "file": 235,
+ "cig_base": 12059349,
+ "sintesi_per_anno": {
+  "2016": {
+   "discendenti": 70540,
+   "vuoto": 73,
+   "padre_esistente": 68964,
+   "padre_inesistente": 1503,
+   "quota_collegabile": 0.9777,
+   "padre_esistente_ma_non_AQ_conv": 308
+  },
+  "2017": {
+   "discendenti": 82497,
+   "vuoto": 51,
+   "padre_esistente": 81238,
+   "padre_inesistente": 1208,
+   "quota_collegabile": 0.9847,
+   "padre_esistente_ma_non_AQ_conv": 162
+  },
+  "2018": {
+   "discendenti": 101586,
+   "vuoto": 38,
+   "padre_esistente": 100344,
+   "padre_inesistente": 1204,
+   "quota_collegabile": 0.9878,
+   "padre_esistente_ma_non_AQ_conv": 573
+  },
+  "2019": {
+   "discendenti": 85169,
+   "vuoto": 33,
+   "padre_esistente": 84558,
+   "padre_inesistente": 578,
+   "quota_collegabile": 0.9928,
+   "padre_esistente_ma_non_AQ_conv": 119
+  },
+  "2020": {
+   "discendenti": 101927,
+   "vuoto": 19,
+   "padre_esistente": 101639,
+   "padre_inesistente": 269,
+   "quota_collegabile": 0.9972,
+   "padre_esistente_ma_non_AQ_conv": 45
+  },
+  "2021": {
+   "discendenti": 92320,
+   "vuoto": 2,
+   "padre_esistente": 92165,
+   "padre_inesistente": 153,
+   "quota_collegabile": 0.9983,
+   "padre_esistente_ma_non_AQ_conv": 36
+  },
+  "2022": {
+   "discendenti": 117188,
+   "vuoto": 1,
+   "padre_esistente": 117045,
+   "padre_inesistente": 142,
+   "quota_collegabile": 0.9988,
+   "padre_esistente_ma_non_AQ_conv": 53
+  },
+  "2023": {
+   "discendenti": 126113,
+   "vuoto": 2,
+   "padre_esistente": 125993,
+   "padre_inesistente": 118,
+   "quota_collegabile": 0.999,
+   "padre_esistente_ma_non_AQ_conv": 211
+  },
+  "2024": {
+   "discendenti": 296092,
+   "vuoto": 4129,
+   "padre_esistente": 273446,
+   "padre_inesistente": 18517,
+   "quota_collegabile": 0.9235,
+   "padre_esistente_ma_non_AQ_conv": 22595
+  },
+  "2025": {
+   "discendenti": 356312,
+   "vuoto": 3944,
+   "padre_esistente": 338101,
+   "padre_inesistente": 14267,
+   "quota_collegabile": 0.9489,
+   "padre_esistente_ma_non_AQ_conv": 171072
+  },
+  "2026": {
+   "discendenti": 263947,
+   "vuoto": 1407,
+   "padre_esistente": 255545,
+   "padre_inesistente": 6995,
+   "quota_collegabile": 0.9682,
+   "padre_esistente_ma_non_AQ_conv": 105942
+  }
+ },
+ "per_anno_esito_tipo": {
+  "2016": {
+   "padre-esistente": {
+    "aggregatore-regionale": 9161,
+    "altro": 47570,
+    "consip": 10469,
+    "consorzio-unione": 1764
+   },
+   "padre-inesistente": {
+    "-": 1503
+   },
+   "vuoto": {
+    "-": 73
+   }
+  },
+  "2017": {
+   "padre-esistente": {
+    "aggregatore-regionale": 8429,
+    "altro": 60870,
+    "consip": 9749,
+    "consorzio-unione": 2190
+   },
+   "padre-inesistente": {
+    "-": 1208
+   },
+   "vuoto": {
+    "-": 51
+   }
+  },
+  "2018": {
+   "padre-esistente": {
+    "aggregatore-regionale": 32380,
+    "altro": 52959,
+    "consip": 12748,
+    "consorzio-unione": 2257
+   },
+   "padre-inesistente": {
+    "-": 1204
+   },
+   "vuoto": {
+    "-": 38
+   }
+  },
+  "2019": {
+   "padre-esistente": {
+    "aggregatore-regionale": 20499,
+    "altro": 47682,
+    "consip": 13880,
+    "consorzio-unione": 2497
+   },
+   "padre-inesistente": {
+    "-": 578
+   },
+   "vuoto": {
+    "-": 33
+   }
+  },
+  "2020": {
+   "padre-esistente": {
+    "aggregatore-regionale": 22873,
+    "altro": 65356,
+    "consip": 11658,
+    "consorzio-unione": 1752
+   },
+   "padre-inesistente": {
+    "-": 269
+   },
+   "vuoto": {
+    "-": 19
+   }
+  },
+  "2021": {
+   "padre-esistente": {
+    "aggregatore-regionale": 19210,
+    "altro": 57107,
+    "consip": 14372,
+    "consorzio-unione": 1476
+   },
+   "padre-inesistente": {
+    "-": 153
+   },
+   "vuoto": {
+    "-": 2
+   }
+  },
+  "2022": {
+   "padre-esistente": {
+    "aggregatore-regionale": 25505,
+    "altro": 73057,
+    "consip": 17136,
+    "consorzio-unione": 1347
+   },
+   "padre-inesistente": {
+    "-": 142
+   },
+   "vuoto": {
+    "-": 1
+   }
+  },
+  "2023": {
+   "padre-esistente": {
+    "aggregatore-regionale": 25399,
+    "altro": 81688,
+    "consip": 17091,
+    "consorzio-unione": 1815
+   },
+   "padre-inesistente": {
+    "-": 118
+   },
+   "vuoto": {
+    "-": 2
+   }
+  },
+  "2024": {
+   "padre-esistente": {
+    "aggregatore-regionale": 48451,
+    "altro": 154877,
+    "consip": 67028,
+    "consorzio-unione": 3090
+   },
+   "padre-inesistente": {
+    "-": 18517
+   },
+   "vuoto": {
+    "-": 4129
+   }
+  },
+  "2025": {
+   "padre-esistente": {
+    "aggregatore-regionale": 90749,
+    "altro": 173563,
+    "consip": 70238,
+    "consorzio-unione": 3551
+   },
+   "padre-inesistente": {
+    "-": 14267
+   },
+   "vuoto": {
+    "-": 3944
+   }
+  },
+  "2026": {
+   "padre-esistente": {
+    "aggregatore-regionale": 61959,
+    "altro": 136436,
+    "consip": 53816,
+    "consorzio-unione": 3334
+   },
+   "padre-inesistente": {
+    "-": 6995
+   },
+   "vuoto": {
+    "-": 1407
+   }
+  }
+ },
+ "tipo_padre_totale": {
+  "altro": {
+   "n": 951165,
+   "padre_inesistente": 0
+  },
+  "aggregatore-regionale": {
+   "n": 364615,
+   "padre_inesistente": 0
+  },
+  "consip": {
+   "n": 298185,
+   "padre_inesistente": 0
+  },
+  "(vuoto o padre inesistente)": {
+   "n": 54653,
+   "padre_inesistente": 0
+  },
+  "consorzio-unione": {
+   "n": 25073,
+   "padre_inesistente": 0
+  }
+ },
+ "imbuto": {
+  "file": "lavoro/imbuto/ict.csv",
+  "ict_discendenti": 55114,
+  "importo": 89199350334.0,
+  "non_collegabili": 1666,
+  "importo_non_collegabile": 734421760.0,
+  "quota_importo_non_collegabile": 0.0082,
+  "per_anno": {
+   "2020": {
+    "discendenti": 3571,
+    "importo": 2094293774.0,
+    "non_collegabili": 76,
+    "importo_non_collegabile": 44202023.0
+   },
+   "2021": {
+    "discendenti": 3696,
+    "importo": 3527717204.0,
+    "non_collegabili": 61,
+    "importo_non_collegabile": 7834934.0
+   },
+   "2022": {
+    "discendenti": 4454,
+    "importo": 5199997278.0,
+    "non_collegabili": 24,
+    "importo_non_collegabile": 1426894.0
+   },
+   "2023": {
+    "discendenti": 6652,
+    "importo": 6487299705.0,
+    "non_collegabili": 3,
+    "importo_non_collegabile": 1088706.0
+   },
+   "2024": {
+    "discendenti": 12889,
+    "importo": 43846126735.0,
+    "non_collegabili": 592,
+    "importo_non_collegabile": 432421901.0
+   },
+   "2025": {
+    "discendenti": 14942,
+    "importo": 22523100929.0,
+    "non_collegabili": 688,
+    "importo_non_collegabile": 222837702.0
+   },
+   "2026": {
+    "discendenti": 8910,
+    "importo": 5520814710.0,
+    "non_collegabili": 222,
+    "importo_non_collegabile": 24609601.0
+   }
+  },
+  "per_strato": {
+   "S0-padre-aq": {
+    "non-discendente": {
+     "-": {
+      "cig": 212434,
+      "importo": 801831617079.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 402,
+      "importo": 500623238.0
+     },
+     "altro": {
+      "cig": 756,
+      "importo": 1564519910.0
+     },
+     "consip": {
+      "cig": 1838,
+      "importo": 2926213441.0
+     },
+     "consorzio-unione": {
+      "cig": 28,
+      "importo": 159992567.0
+     }
+    },
+    "padre-inesistente": {
+     "-": {
+      "cig": 139,
+      "importo": 44458688.0
+     }
+    },
+    "vuoto": {
+     "-": {
+      "cig": 99,
+      "importo": 18179806.0
+     }
+    }
+   },
+   "S2-sotto-soglia": {
+    "non-discendente": {
+     "-": {
+      "cig": 5914,
+      "importo": 1202017.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 345,
+      "importo": 92688.0
+     },
+     "altro": {
+      "cig": 749,
+      "importo": 155197.0
+     },
+     "consip": {
+      "cig": 1125,
+      "importo": 260400.0
+     },
+     "consorzio-unione": {
+      "cig": 12,
+      "importo": 3327.0
+     }
+    },
+    "padre-inesistente": {
+     "-": {
+      "cig": 78,
+      "importo": 18020.0
+     }
+    },
+    "vuoto": {
+     "-": {
+      "cig": 22,
+      "importo": 4507.0
+     }
+    }
+   },
+   "S3-convenzione-lotto": {
+    "non-discendente": {
+     "-": {
+      "cig": 3,
+      "importo": 460255.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 1,
+      "importo": 880324.0
+     },
+     "altro": {
+      "cig": 6,
+      "importo": 2103339.0
+     },
+     "consip": {
+      "cig": 924,
+      "importo": 3859283598.0
+     }
+    }
+   },
+   "S4-marchio": {
+    "non-discendente": {
+     "-": {
+      "cig": 9731,
+      "importo": 4261143094.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 115,
+      "importo": 21787617.0
+     },
+     "altro": {
+      "cig": 443,
+      "importo": 344651561.0
+     },
+     "consip": {
+      "cig": 1421,
+      "importo": 1590462210.0
+     },
+     "consorzio-unione": {
+      "cig": 7,
+      "importo": 14958677.0
+     }
+    },
+    "padre-inesistente": {
+     "-": {
+      "cig": 102,
+      "importo": 32896057.0
+     }
+    },
+    "vuoto": {
+     "-": {
+      "cig": 25,
+      "importo": 13355895.0
+     }
+    }
+   },
+   "S5-ict-non-cloud": {
+    "non-discendente": {
+     "-": {
+      "cig": 317297,
+      "importo": 57371374268.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 5139,
+      "importo": 1816115335.0
+     },
+     "altro": {
+      "cig": 8318,
+      "importo": 3478423880.0
+     },
+     "consip": {
+      "cig": 21235,
+      "importo": 62529652040.0
+     },
+     "consorzio-unione": {
+      "cig": 585,
+      "importo": 211479980.0
+     }
+    },
+    "padre-inesistente": {
+     "-": {
+      "cig": 558,
+      "importo": 201689538.0
+     }
+    },
+    "vuoto": {
+     "-": {
+      "cig": 241,
+      "importo": 347219303.0
+     }
+    }
+   },
+   "S6-residuo": {
+    "non-discendente": {
+     "-": {
+      "cig": 69385,
+      "importo": 9921832847.0
+     }
+    },
+    "padre-esistente": {
+     "aggregatore-regionale": {
+      "cig": 857,
+      "importo": 114799889.0
+     },
+     "altro": {
+      "cig": 4033,
+      "importo": 5965910982.0
+     },
+     "consip": {
+      "cig": 5020,
+      "importo": 3324569765.0
+     },
+     "consorzio-unione": {
+      "cig": 89,
+      "importo": 37988609.0
+     }
+    },
+    "padre-inesistente": {
+     "-": {
+      "cig": 321,
+      "importo": 31292722.0
+     }
+    },
+    "vuoto": {
+     "-": {
+      "cig": 81,
+      "importo": 45307224.0
+     }
+    }
+   }
+  }
+ },
+ "esempi_2025_non_collegabili": [
+  {
+   "anno": "2025",
+   "cig": "B780EE6F37",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B6E4CDDD99"
+  },
+  {
+   "anno": "2025",
+   "cig": "B98EB8B4B4",
+   "esito": "vuoto",
+   "cig_accordo_quadro": ""
+  },
+  {
+   "anno": "2025",
+   "cig": "B7D7746B5A",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B37C986E0B"
+  },
+  {
+   "anno": "2025",
+   "cig": "B8B1255AF0",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B07746A12A"
+  },
+  {
+   "anno": "2025",
+   "cig": "B88D943E58",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B5F275AAAF"
+  },
+  {
+   "anno": "2025",
+   "cig": "B706F2AFF1",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B7044E4D59"
+  },
+  {
+   "anno": "2025",
+   "cig": "B862E02794",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "96327436FZ"
+  },
+  {
+   "anno": "2025",
+   "cig": "B9C8654657",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B1F4F92A0E"
+  },
+  {
+   "anno": "2025",
+   "cig": "B89FC02CC0",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "9756209658"
+  },
+  {
+   "anno": "2025",
+   "cig": "B83701DED1",
+   "esito": "padre-inesistente",
+   "cig_accordo_quadro": "B61C6987E4"
+  }
+ ]
+}

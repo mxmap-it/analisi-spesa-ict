@@ -12,8 +12,9 @@
   stato: "verificato, ridimensionato il 6/11/2026"
   titolo: Il collegamento contratto attuativo → accordo quadro (cig_accordo_quadro) non è compilato
   evidenza: "Rimisurato il 6/11/2026: con modalità dichiarata «discendente da AQ/convenzione» il campo è valorizzato nel 98,6 % (2024) e nel 98,9 % (2025): mancano 4.130 e 3.946 CIG. Il 20 % del 27/10 era in gran parte un artefatto dell'espressione sul testo: su un campione di 60, 3 adesioni vere (5 %); il resto sono appalti specifici di sistemi dinamici di acquisizione. Stima: circa 520 adesioni vere del 2025 dichiarate come appalto ordinario"
+  misura_9_11: "Con la validità del padre (tools/verifiche/cig_aq_tipo.py, esiti/2026-11-09/cig-aq/tipo.json) i discendenti collegabili scendono al 92,4 % (2024) e 94,9 % (2025): oltre ai vuoti, 18.517 e 14.267 CIG padre non esistono nella base (882 nel 2025 solo perché scritti in minuscolo; 289 smartcig). Nel 2025 170.759 derivati puntano a un padre dichiarato contratto d'appalto. Impatto sull'imbuto ICT: 734 M€ su 89,2 mld (0,82 %) di spesa ICT discendente senza prodotto dell'AQ ereditabile"
   prova: tools/verifiche/cig_aq_modalita.py, esiti/2026-11-06/cig-aq/modalita.json, report/anac/cig-aq/ (campione ed etichette); prima misura tools/verifiche/cig_accordo_quadro.py
-  richiesta: "Controllo bloccante al rilascio del CIG: se la modalità è «discendente», cig_accordo_quadro obbligatorio ed esistente; bonifica dei circa 4.000 CIG l'anno senza collegamento. Chiarire se agli appalti specifici di un SDA va collegato il CIG istitutivo"
+  richiesta: "Controllo bloccante al rilascio del CIG: se la modalità è «discendente», cig_accordo_quadro obbligatorio ed esistente; bonifica dei circa 4.000 CIG l'anno senza collegamento. Chiarire se agli appalti specifici di un SDA va collegato il CIG istitutivo; normalizzare il CIG in maiuscolo; pubblicare gli smartcig padre nello stesso dataset; rendere coerente la modalità del CIG padre (AQ, convenzione o SDA)"
   perche_serve: Senza il collegamento il provider di un lotto Consip (es. AQ Cloud IaaS e PaaS 2) non si eredita, e il massimale non si separa dalla spesa
   rif: [P15, "#50", "#54"]
 - id: R02
