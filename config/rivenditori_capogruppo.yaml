@@ -1,0 +1,40 @@
+# Capogruppo dei rivenditori di prodotti cloud (#41, v4 del 9/11/2026). Prevale su GLEIF (tools/verifiche/rivenditori_mappa.py).
+# Solo per rivenditori senza LEI o senza relazione di consolidamento in GLEIF (golden copy 6/11/2026).
+# Ogni riga: cf, capogruppo, paese_capogruppo (ISO), fonte, stato (V = verificato su fonte primaria da noi; R = riferito, da verificare).
+# Nessuna riga per Eurolink, Arslogica, Open 1, «IMPRESA INESISTENTE» (02102821002): capogruppo non trovato, restano «IT?».
+- cf: "04839740489"
+  denominazione: POSTEL S.P.A.
+  capogruppo: Poste Italiane S.p.A.
+  paese_capogruppo: IT
+  fonte: "Poste Italiane, Relazione finanziaria annuale (Postel controllata al 100 %)"
+  stato: R
+- cf: "05692591000"
+  denominazione: POSTEL SPA
+  capogruppo: Poste Italiane S.p.A.
+  paese_capogruppo: IT
+  fonte: "Poste Italiane, Relazione finanziaria annuale (Postel controllata al 100 %)"
+  stato: R
+- cf: "01468500218"
+  denominazione: INFORMATICA ALTO ADIGE SPA
+  capogruppo: Provincia autonoma di Bolzano (società in-house)
+  paese_capogruppo: IT
+  fonte: "statuto e Società trasparente di Informatica Alto Adige (socio di maggioranza Provincia autonoma di Bolzano)"
+  stato: R
+- cf: "02770891204"
+  denominazione: LEPIDA S.C.P.A.
+  capogruppo: Regione Emilia-Romagna (società in-house)
+  paese_capogruppo: IT
+  fonte: "statuto di Lepida ScpA (in-house della Regione Emilia-Romagna e degli enti soci)"
+  stato: R
+- cf: "02994540108"
+  denominazione: LIGURIA DIGITALE
+  capogruppo: Regione Liguria (società in-house)
+  paese_capogruppo: IT
+  fonte: "statuto di Liguria Digitale S.p.A. (in-house della Regione Liguria)"
+  stato: R
+- cf: "00513990010"
+  denominazione: NTT DATA ITALIA S.P.A.
+  capogruppo: NTT DATA Group Corporation
+  paese_capogruppo: JP
+  fonte: "NTT DATA Group, elenco delle controllate (NTT DATA Italia)"
+  stato: R

@@ -784,3 +784,25 @@
   perche_serve: "Chi usa BDAP per il 2025 perde l 80 % della spesa di Lombardia e FVG (412 M€ di ICT) senza saperlo; la fonte non segnala che il file è parziale"
   metrica: "Regioni-anno SIOPE BDAP con 12 mesi e lo stesso numero di comuni del SIOPE diretto"
   rif: ["#30", "#67", "R70", "R63"]
+- id: R76
+  destinatario: ANAC (BDNCP)
+  tipo: dato-mancante
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Prodotti cloud rivenduti: manca il marchio del produttore, e 1.530 CIG non hanno righe nel dataset aggiudicatari"
+  evidenza: "Dei 2,95 mld di contratti 2022-2026 per prodotti cloud extra-UE, 1,80 mld (60,9 %, il 78,9 % del canale noto) sono incassati da rivenditori con CF italiano: una lente sul fornitore li classifica IT. Il marchio del prodotto si ricava solo dall'oggetto libero (precisione 77 % su 45 CIG con atto, falsi positivi in gare non ICT). 1.530 CIG via rivenditore non hanno righe nel dataset aggiudicatari: il CF si ricostruisce dal nome (405 M€ di prodotti extra-UE)"
+  prova: "tools/verifiche/rivenditori_mappa.py; esiti/2026-11-09/rivenditori/mappa-v4.json; report/metodo/rivenditori-v4/etichette-campione.csv"
+  richiesta: "Per le forniture di licenze e sottoscrizioni cloud: campo strutturato «produttore/marchio» (con P.IVA o LEI del produttore) accanto all'aggiudicatario; righe nel dataset aggiudicatari per ogni CIG aggiudicato, con CF e ruolo"
+  perche_serve: "Senza il produttore la spesa in prodotti extra-UE rivenduti da imprese italiane appare italiana; la misura per giurisdizione dipende da regole sul testo libero"
+  metrica: "Quota di CIG di licenze/cloud con produttore dichiarato; quota di CIG aggiudicati con righe nel dataset aggiudicatari"
+  rif: ["#41", "#40", "R56", "R59"]
+- id: R77
+  destinatario: "InfoCamere / Registro imprese, GLEIF (LOU italiane), ANAC"
+  tipo: dato-mancante
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Capogruppo dei fornitori della PA non ricavabile da dati aperti"
+  evidenza: "Dei 1,82 mld di prodotti extra-UE via rivenditore, GLEIF (golden copy 6/11/2026) dà il capogruppo per 1,54 mld; 0,19 mld vanno a rivenditori senza LEI (Eurolink, Arslogica, «IMPRESA INESISTENTE», Postel) e molti LEI italiani non hanno relazioni di consolidamento (TIM, R1, Lutech, Project Informatica). Le righe curate a mano (6) sono solo riferite"
+  prova: "tools/verifiche/rivenditori_mappa.py; config/rivenditori_capogruppo.yaml; esiti/2026-11-09/rivenditori/mappa-v4.csv (colonna fonte_capogruppo)"
+  richiesta: "Dato aperto del socio di controllo/capogruppo per le imprese iscritte (Registro imprese), o LEI e relazioni di controllo obbligatori per gli aggiudicatari di contratti pubblici sopra soglia, riportati nel dataset aggiudicatari"
+  perche_serve: "La giurisdizione del fornitore (es. controllate svizzere o extra-UE di rivenditori italiani) non si può misurare senza visure a pagamento"
+  metrica: "Quota della spesa aggiudicata a imprese con capogruppo in dati aperti"
+  rif: ["#41", "R76"]

@@ -5,6 +5,13 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-09
 
 
+## #41 RIVENDITORI v4 — 9/11/2026 (sezione a parte, da integrare nel rendiconto obiettivo 6)
+- **Verifica** `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py` -> `esiti/2026-11-09/rivenditori/` (mappa-v4.json/csv, cig-rivenditore.csv, campione-precisione.csv); testo in `esiti/2026-11-09/rivenditori/sezione-41.md` (NON ancora nel rendiconto: lo integra chi chiude la versione dopo #43). Cache GLEIF `lavoro/rivenditori/gleif-it.json` (rigenerabile dal mirror).
+- **Numeri [V]:** prodotti extra-UE 2,949 mld; via rivenditore 1,824; con CF italiano 1,797 = **60,9 % del totale, 78,9 % del noto** (lente fornitore = IT a torto); anche col capogruppo resta IT/ignoto 1,658 (56,2 %); CH 124 M (Fastweb->Swisscom, SoftwareOne), UE 11,5 M, extra-UE 3,9 M. 1.375 rivenditori, 6.470 CIG, 2.121 enti.
+- **Fonti nuove:** CF dal nome per i 1.530 CIG senza righe ANAC (405 M extra-UE); TED 0 CIG utili; GLEIF capogruppo su 1,54/1,82 mld; `config/rivenditori_capogruppo.yaml` 6 righe [R]; lotti Consip 48/48 coincidenti; atti #57: 45 CIG, 8 pertinenti.
+- **Precisione** (45 CIG con atto, etichette `report/metodo/rivenditori-v4/etichette-campione.csv`): prodotto giusto 30/39 = 77 % (Wilson 62-87), 88 % in euro; 9 falsi positivi in gare non ICT -> casi di test per #40. R76, R77.
+- **Prossimo:** campione casuale con atti per i primi 20 rivenditori; visure per Eurolink/Arslogica/IMPRESA INESISTENTE e le 6 righe [R].
+
 ## R53 CIG RIPETUTI NELL IMBUTO — 9/11/2026
 - Causa: nei file ANAC 2024 e 2025 c'è una riga per ogni CPV (7.862 CIG, 510 con CPV ICT e non ICT insieme). In `ict.csv` 1.016 CIG sono ripetuti e 152 stanno insieme in S5 e S6. Il 55,3 mld S3-S6 dal 2024 è sottostimato di circa 0,43 mld (circa 55,7), perché `imbuto_doppioni.py` ha tolto anche righe che stavano in S1. Dettagli in `report/metodo/imbuto.md` § Criticità, verifica in `tools/verifiche/imbuto_cig_ripetuti.py`.
 - Patch pronta in `imbuto.py` 0.3.4 (`DEDUP_CPV`): **NON applicata**, `ict.csv` resta quello del 3/11 fino alla rigenerazione dopo la via 6. Alla rigenerazione: rifare `imbuto_cig_ripetuti.py` (dovrà dare 0 CIG ripetuti), rivedere le priorità P2/P5 delle 32 voci segnalate nell'elenco #58 e aggiornare il 55,3 nel rendiconto.
