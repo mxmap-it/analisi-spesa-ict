@@ -212,3 +212,6 @@ Il giro su G1 (196 CIG) e sui primi 1.000 di G3 continua senza lo stop sul total
 **Chi:** Fabio. **Decisione:** le istanze di accesso civico generalizzato si inviano via PEC alla casella istituzionale dell ente (protocollo informatico / URP, da IndicePA), indirizzandole nel testo all ufficio preposto (ufficio che detiene i dati, art. 5 c. 3 d.lgs. 33/2013). Non serve individuare la PEC dedicata né il nome dell RPCT per l invio.
 **Perché:** semplicità e robustezza: la PEC istituzionale è sempre presente in IndicePA ed è canale valido di presentazione; lo smistamento interno spetta all ente.
 **Effetti:** il giro rpct_destinatari.py serve solo per (a) i 434 enti senza PEC in IndicePA, (b) RPCT come destinatario del riesame, (c) registro degli accessi e moduli online come contesto. Il nome RPCT resta campo C, non usato per l invio.
+
+### Nota di correzione (9/11/2026, sera) alla decisione «Accesso civico: destinatario = PEC istituzionale»
+Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul file finale (esiti/2026-11-09/accesso-civico/destinatari.csv.gz, giro concluso su 6.626 enti) gli enti senza PEC IndicePA per quel CF sono **775**; ne sono stati risolti 347 (338 via CF delle unità IndicePA, 7 dalla pagina AT, 2 per nome), ne restano **428**. La decisione non cambia.
