@@ -103,6 +103,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 | v2 (27/10) | misura, 437 righe | Claude, **non cieca** | 94,6% | 86,6% | 20 su 124 non attribuiti |
 | v3 (28/10) | nuovo campione | persone, alla cieca | da misurare | da misurare | da misurare |
 | lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
+| regole v4.3 (9/11) | quinto campione a cieco, 238 CIG | Claude, alla cieca, un annotatore | big tech 86,2 % (Wilson 79,7-90,9), 80,8 % in euro; pesata 93,9 % | — | big tech: 0 mancati su 125 (R Wilson 97,0-100) |
 
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
@@ -156,6 +157,26 @@ I due CIG cambiati nel cieco 1 (B40B947819, B33B9DC8D2) sono corsi di formazione
 **Il quarto campione a cieco non è più indipendente per queste regole**: è stato letto per scriverle ed è ora campione di sviluppo; P 100 % e R 100 % sul cieco 4 non sono una misura. Serve un quinto campione a cieco.
 
 Effetto sulla mappa dei rivenditori (`rivenditori_mappa.py v4.3`, contro v4.2): +427 CIG Adobe (22,9 M€), +7 Microsoft (contratti con licenze Microsoft 365 e backup, prima esclusi perché la finestra «backup … 365» attraversava il « | » fra oggetto del lotto e della gara), −87 Microsoft (2,6 M€), −17 Google (0,24 M€), −7 Oracle (0,66 M€: connettività verso OCI). Extra-UE 3,046 mld (era 3,024), via rivenditore con CF italiano 1,863 mld = **61,2 % del totale, 79,1 % del noto** (erano 61,0 % e 78,9 %), 57,4 % col capogruppo italiano.
+
+**Quinto campione a cieco, regole v4.3 (9/11/2026, #40).** Misura indipendente delle regole v4.3 (commit 08c99907) col criterio «prodotto che si compra». Campione nuovo di 238 CIG 2024-2026 (`report/metodo/lente-cieco-5/`, seme 20261111, `tools/verifiche/lente_cieco5_campione.py`), esclusi i 15.312 CIG già usati in campioni, errori dei ciechi e test, in cinque strati disgiunti: multilotto con un marchio nel testo (M, 48: tutti; la regola multilotto ora guarda tutto il testo, non solo la gara), marchio + formazione/supporto/assistenza/backup/connettività (F, 40 su 916), marchio extra-UE via rivenditore (R, 35 su 5.091), diretto (E, 35 su 398), ICT senza provider (N, 80 su 237.074). Etichette dal testo ANAC (nessun CIG ha un atto in `dati/atti/`), committate con sha256 `284ef7c6…` in 9bb18871 **prima** del confronto (`tools/verifiche/lente_cieco5.py`, esiti in `esiti/2026-11-09/lente-cieco-5/`).
+
+| Strato | Big tech USA: precisione | Richiamo | Precisione in euro |
+|---|---|---|---|
+| R rivenditore | 34/35 = 97,1 % (85,5-99,5) | 34/34 | 99,6 % |
+| E diretto | 33/35 = 94,3 % (81,4-98,4) | 33/33 | 95,1 % |
+| M multilotto | 34/42 = 81,0 % (66,7-90,0) | 34/34 | 91,3 % |
+| F servizi accessori | 24/33 = 72,7 % (55,8-84,9) | 24/24 | 28,6 % |
+| N senza provider | — | 0 big tech mancati su 80 (quota mancata ≤ 4,6 %, Wilson) | — |
+| **Totale** | **125/145 = 86,2 % (79,7-90,9)** | **125/125 = 100 % (97,0-100)** | **80,8 %**, richiamo 100 % |
+
+Pesata sull'universo (N_h/n_h): precisione big tech 93,9 %, 82,0 % in euro; richiamo 100 % (lo strato N non ha positivi: il richiamo pesato non è stimabile meglio del limite sopra). Tutti i provider del dizionario: 127/158 = 80,4 % (73,5-85,8), pesata 92,2 %. **Nessun mancato e nessun marchio sbagliato**: i 31 errori sono tutti «marchio nominato senza prodotto comprato», per classe (regole NON corrette, casi in `esiti/2026-11-09/lente-cieco-5/errori.csv`):
+- **omonimia**: «Azure» di Medtronic è un pacemaker (lotti di gare sanitarie), 7 CIG Microsoft, 0,24 M€; controller Wi-Fi «Aruba» (HPE Aruba Networks, non Aruba S.p.A.), 1;
+- **servizi professionali su una piattaforma** (sviluppo, assistenza, manutenzione applicativa, migrazione, consulenza sulle licenze), 10: Salesforce (Deloitte 6,14 M€, Almaviva AQ 2610 2,50 M€), Oracle ERP Cloud/OCI (2), Dynamics 365 e M365 (2), consulenza licenze Microsoft, SAP Analytics Cloud, assistenza VMware, servizio gestito su AWS (caso ambiguo); da sola questa classe vale circa l'87 % degli euro in errore;
+- **formazione e supporto a gare o POC** su marchi non coperti dalla regola di formazione (Cloudera, AWS «supporto gestione gara», POC IBM Cloud), 3;
+- **connettività o hardware verso un data center** (fibra e IP transit Fastweb attribuiti a in-house, MPLS verso il PSN, transceiver per Exadata), 4;
+- **da rivedere, non necessariamente errori della lente**: 4 «SPC Cloud lotto 1» etichettati `altro:tim-spc-cloud` (stesso prodotto con altro nome: disaccordo di vocabolario dell'annotatore, che non conosceva i nomi canonici), conduzione dei data center Lepida (DGS) e piattaforma gestita del gruppo Retelit, 6.
+
+Lettura: sui contratti di licenza e sottoscrizione (R, E) la lente tiene (P 94-97 %); scende dove il testo nomina il marchio come oggetto di un servizio (strato F, 28,6 % in euro) o come omonimo. Limiti: un solo annotatore (Claude), niente kappa; strati M e F sovra-campionati di proposito; il vocabolario delle etichette non coincide del tutto coi nomi canonici del dizionario (SPC Cloud). **Il quinto campione ora è letto**: correggere queste classi lo rende di sviluppo e richiede un sesto campione.
 
 ## Test automatici
 
@@ -241,3 +262,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 |---|---|---|
 | 9/11/2026 | Quarto campione a cieco delle regole del 9/11 (150 CIG): big tech P 92,2 %, R 98,9 %; 8 falsi positivi e 2 mancati elencati come casi da trattare, regole non modificate | #40, `esiti/2026-11-09/lente-cieco-4/` |
 | 9/11/2026 | Regole v4.3: formazione/supporto Microsoft e Google, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe; cieco 4 big tech da P 92,2 % a 100 % (ora campione di sviluppo, non più indipendente), ciechi 2-3 e top-20 invariati, cieco 1 −2 per cambio di criterio; mappa rivenditori v4.3 (CF IT 61,2 % dell'extra-UE) | #40, `esiti/2026-11-09/regole-v4.3/` |
+| 9/11/2026 | Quinto campione a cieco delle regole v4.3 (238 CIG, 5 strati): big tech P 86,2 % (79,7-90,9), 80,8 % in euro, pesata 93,9 %; R 100 % (97,0-100); 31 errori tutti «marchio senza prodotto» (omonimia Medtronic Azure, servizi professionali su piattaforma, formazione/gare, connettività, vocabolario SPC Cloud), regole non modificate | #40, `esiti/2026-11-09/lente-cieco-5/` |

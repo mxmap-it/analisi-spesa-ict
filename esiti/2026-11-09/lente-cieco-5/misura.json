@@ -1,0 +1,838 @@
+{
+ "disegno": {
+  "universo": "lavoro/attribuzione/2024-2026.csv, CIG distinti, regole v4.3 (08c99907)",
+  "seme": 20261111,
+  "quote": {
+   "M": "tutti",
+   "F": 40,
+   "R": 35,
+   "E": 35,
+   "N": 80
+  },
+  "esclusi_gia_visti": 15312,
+  "dimensione_strati": {
+   "E": 398,
+   "F": 916,
+   "M": 48,
+   "N": 237074,
+   "R": 5091
+  }
+ },
+ "etichette_sha256": "284ef7c6671af79f8fcf76934097caef7964000ddc6105001c1203f16bdc6882",
+ "n_per_strato": {
+  "M": 48,
+  "N": 80,
+  "R": 35,
+  "E": 35,
+  "F": 40
+ },
+ "bigtech_usa": {
+  "per_strato": {
+   "E": {
+    "tp": 33,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.943,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.814,
+     0.984
+    ],
+    "richiamo_w95": [
+     0.896,
+     1.0
+    ],
+    "euro": {
+     "tp": 4548105,
+     "fp": 234881,
+     "fn": 0,
+     "precisione": 0.951,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 24,
+    "fp": 9,
+    "fn": 0,
+    "precisione": 0.727,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.558,
+     0.849
+    ],
+    "richiamo_w95": [
+     0.862,
+     1.0
+    ],
+    "euro": {
+     "tp": 2572490,
+     "fp": 6421212,
+     "fn": 0,
+     "precisione": 0.286,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 34,
+    "fp": 8,
+    "fn": 0,
+    "precisione": 0.81,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.667,
+     0.9
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 28571782,
+     "fp": 2736328,
+     "fn": 0,
+     "precisione": 0.913,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "R": {
+    "tp": 34,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.971,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.855,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 3908011,
+     "fp": 16800,
+     "fn": 0,
+     "precisione": 0.996,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 125,
+   "fp": 20,
+   "fn": 0,
+   "precisione": 0.862,
+   "richiamo": 1.0,
+   "precisione_w95": [
+    0.797,
+    0.909
+   ],
+   "richiamo_w95": [
+    0.97,
+    1.0
+   ],
+   "euro": {
+    "tp": 39600389,
+    "fp": 9409221,
+    "fn": 0,
+    "precisione": 0.808,
+    "richiamo": 1.0
+   }
+  },
+  "pesato_universo": {
+   "tp": 5904,
+   "fp": 382,
+   "fn": 0,
+   "precisione": 0.939,
+   "richiamo": 1.0,
+   "euro": {
+    "tp": 707648410,
+    "fp": 154896702,
+    "fn": 0,
+    "precisione": 0.82,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "extra_ue": {
+  "per_strato": {
+   "E": {
+    "tp": 33,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.943,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.814,
+     0.984
+    ],
+    "richiamo_w95": [
+     0.896,
+     1.0
+    ],
+    "euro": {
+     "tp": 4548105,
+     "fp": 234881,
+     "fn": 0,
+     "precisione": 0.951,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 24,
+    "fp": 9,
+    "fn": 0,
+    "precisione": 0.727,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.558,
+     0.849
+    ],
+    "richiamo_w95": [
+     0.862,
+     1.0
+    ],
+    "euro": {
+     "tp": 2572490,
+     "fp": 6421212,
+     "fn": 0,
+     "precisione": 0.286,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 34,
+    "fp": 8,
+    "fn": 0,
+    "precisione": 0.81,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.667,
+     0.9
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 28571782,
+     "fp": 2736328,
+     "fn": 0,
+     "precisione": 0.913,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "R": {
+    "tp": 34,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.971,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.855,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 3908011,
+     "fp": 16800,
+     "fn": 0,
+     "precisione": 0.996,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 125,
+   "fp": 20,
+   "fn": 0,
+   "precisione": 0.862,
+   "richiamo": 1.0,
+   "precisione_w95": [
+    0.797,
+    0.909
+   ],
+   "richiamo_w95": [
+    0.97,
+    1.0
+   ],
+   "euro": {
+    "tp": 39600389,
+    "fp": 9409221,
+    "fn": 0,
+    "precisione": 0.808,
+    "richiamo": 1.0
+   }
+  },
+  "pesato_universo": {
+   "tp": 5904,
+   "fp": 382,
+   "fn": 0,
+   "precisione": 0.939,
+   "richiamo": 1.0,
+   "euro": {
+    "tp": 707648410,
+    "fp": 154896702,
+    "fn": 0,
+    "precisione": 0.82,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "tutti_i_provider": {
+  "per_strato": {
+   "E": {
+    "tp": 33,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.943,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.814,
+     0.984
+    ],
+    "richiamo_w95": [
+     0.896,
+     1.0
+    ],
+    "euro": {
+     "tp": 4548105,
+     "fp": 234881,
+     "fn": 0,
+     "precisione": 0.951,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 26,
+    "fp": 14,
+    "fn": 0,
+    "precisione": 0.65,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.495,
+     0.779
+    ],
+    "richiamo_w95": [
+     0.871,
+     1.0
+    ],
+    "euro": {
+     "tp": 3235990,
+     "fp": 6519018,
+     "fn": 0,
+     "precisione": 0.332,
+     "richiamo": 1.0
+    }
+   },
+   "M": {
+    "tp": 34,
+    "fp": 14,
+    "fn": 0,
+    "precisione": 0.708,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.568,
+     0.818
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 28571782,
+     "fp": 4137951,
+     "fn": 0,
+     "precisione": 0.873,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "R": {
+    "tp": 34,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.971,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.855,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.898,
+     1.0
+    ],
+    "euro": {
+     "tp": 3908011,
+     "fp": 16800,
+     "fn": 0,
+     "precisione": 0.996,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 127,
+   "fp": 31,
+   "fn": 0,
+   "precisione": 0.804,
+   "richiamo": 1.0,
+   "precisione_w95": [
+    0.735,
+    0.858
+   ],
+   "richiamo_w95": [
+    0.971,
+    1.0
+   ],
+   "euro": {
+    "tp": 40263889,
+    "fp": 10908650,
+    "fn": 0,
+    "precisione": 0.787,
+    "richiamo": 1.0
+   }
+  },
+  "pesato_universo": {
+   "tp": 5950,
+   "fp": 503,
+   "fn": 0,
+   "precisione": 0.922,
+   "richiamo": 1.0,
+   "euro": {
+    "tp": 722842563,
+    "fp": 158538072,
+    "fn": 0,
+    "precisione": 0.82,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "errori_per_classe": {
+  "marchio senza prodotto del dizionario": 31
+ },
+ "errori": [
+  {
+   "cig": "B9909FD484",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker Medtronic, non Microsoft",
+   "importo": 113817.6,
+   "testo": "LOTTO 5 MEDTRONIC AZURE | LOTTO 5 MEDTRONIC AZURE"
+  },
+  {
+   "cig": "B9B97821AC",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker Medtronic",
+   "importo": 34320.0,
+   "testo": "ODA LOTTO 2 - AZURE - MEDTRONIC | ODA LOTTO 2 - AZURE - MEDTRONIC"
+  },
+  {
+   "cig": "B1DC2A3AB4",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "IBM",
+   "via": "3-marchio",
+   "regola": "ibm\\s+cloud",
+   "etichetta": "altro:studio81",
+   "nota_etichetta": "servizi sistemistici per una POC, non acquisto di IBM Cloud",
+   "importo": 6000.0,
+   "testo": "PREDISPOSIZIONE POC IBM CLOUD | SERVIZI SISTEMISTICI PREDISPOSIZIONE POC IBM CLOUD"
+  },
+  {
+   "cig": "B69DE3762E",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bm365\\b",
+   "etichetta": "altro:4ward",
+   "nota_etichetta": "supporto tecnico su M365, nessun acquisto del prodotto",
+   "importo": 5495.48,
+   "testo": "SUPPORTO TECNICO REACTIVE PER M365 FINO AL 31/12/2025 | SUPPORTO TECNICO REACTIVE PER M365 FINO AL 31/12/2025"
+  },
+  {
+   "cig": "B069D2B0BB",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure XT = pacemaker",
+   "importo": 18120.0,
+   "testo": "LOTTO 5 MEDTRONIK AZURE XT | LOTTO 5 MEDTRONIK AZURE XT"
+  },
+  {
+   "cig": "BC0DE65BB5",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:dgs-engineering",
+   "nota_etichetta": "conduzione data center Lepida",
+   "importo": 989748.0,
+   "testo": "ADESIONE A CONVENZIONE INTERCENTER SERVIZI DI IT SYSTEM MANAGEMENT 2 – LOTTO 1 PER L'AFFIDAMENTO DEI SERVIZI DI CONDUZIONE DEI DATA CENTER DI LEPIDA | ADESIONE A CONVENZIONE INTERCENTER SERVIZI DI IT SYSTEM MANAGEMENT 2 – LOTTO 1 PER L'AFFIDAMENTO DEI SERVIZI DI CONDUZIONE DEI DATA CENTER DI LEPIDA"
+  },
+  {
+   "cig": "BBBA2CC327",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Salesforce",
+   "via": "3-marchio",
+   "regola": "salesforce",
+   "etichetta": "altro:almaviva",
+   "nota_etichetta": "ambiguo: servizi applicativi AQ 2610 per CRM su Salesforce; si comprano servizi, non le licenze",
+   "importo": 2500097.26,
+   "testo": "ADESIONE ALL'ACCORDO QUADRO CONSIP PER L'AFFIDAMENTO DEI SERVIZI APPLICATIVI IN OTTICA CLOUD PER LE PUBBLICHE AMMINISTRAZIONI LOCALI ID 2610 - LOTTO 1, PER LA REALIZZAZIONE DEL NUOVO SISTEMA CRM AZIENDALE BASATO SU PIATTAFORMA SALESFORCE, PER UNA DURATA COMPLESSIVA DI 21 MESI | ADESIONE ALL'ACCORDO "
+  },
+  {
+   "cig": "B17EBB0EE4",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SPC Cloud lotto 1",
+   "via": "3-marchio",
+   "regola": "spc\\s*cloud\\W*\\s*lotto\\s*1\\b",
+   "etichetta": "altro:tim-spc-cloud",
+   "nota_etichetta": "",
+   "importo": 135028.58,
+   "testo": "LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.824/2022 | LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.824/2022"
+  },
+  {
+   "cig": "B994BE039B",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker",
+   "importo": 13728.0,
+   "testo": "LOTTO 2 MEDTRONIC AZURE | LOTTO 2 MEDTRONIC AZURE"
+  },
+  {
+   "cig": "B456FE6452",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SPC Cloud lotto 1",
+   "via": "3-marchio",
+   "regola": "spc\\s*cloud\\W*\\s*lotto\\s*1\\b",
+   "etichetta": "altro:tim-spc-cloud",
+   "nota_etichetta": "",
+   "importo": 161460.05,
+   "testo": "PROVV84_2023 PROROGA AL 31 03 2025 SERVIZIO CLOUD SPC CLOUD LOTTO 1 | PROVV84_2023 PROROGA AL 31 03 2025 SERVIZIO CLOUD SPC CLOUD LOTTO 1"
+  },
+  {
+   "cig": "B2BD6EA2B7",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Salesforce",
+   "via": "3-marchio",
+   "regola": "salesforce",
+   "etichetta": "altro:deloitte",
+   "nota_etichetta": "servizi e supporto specialistico sulla piattaforma Salesforce, non licenze",
+   "importo": 6140000.0,
+   "testo": "DGACQ 40-24 SERVIZI E SUPPORTO SPECIALISTICO DELLA PIATTAFORMA SALESFORCE, IN REGIME DI ACCORDO QUADRO | DGACQ 40-24 SERVIZI E SUPPORTO SPECIALISTICO DELLA PIATTAFORMA SALESFORCE, IN REGIME DI ACCORDO QUADRO"
+  },
+  {
+   "cig": "BC9EB296B7",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Cloudera",
+   "via": "3-marchio",
+   "regola": "cloudera",
+   "etichetta": "",
+   "nota_etichetta": "formazione Cloudera",
+   "importo": 33903.0,
+   "testo": "PR2600405-FORMAZIONE CLOUDERA ADMIN-230, DOPS-242, DSCI-272 | PR2600405-FORMAZIONE CLOUDERA ADMIN-230, DOPS-242, DSCI-272"
+  },
+  {
+   "cig": "B994284A5B",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker",
+   "importo": 9484.8,
+   "testo": "LOTTO 4 MEDTRONIC AZURE | LOTTO 4 MEDTRONIC AZURE"
+  },
+  {
+   "cig": "B45D02838B",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Aruba",
+   "via": "3-marchio",
+   "regola": "\\baruba\\b",
+   "etichetta": "altro:hpe-aruba-networks",
+   "nota_etichetta": "controller WiFi Aruba (HPE), non Aruba S.p.A.",
+   "importo": 8239.74,
+   "testo": "ADESIONE A CONVENZIONE CONSIP RETI LOCALI 8 -LOTTO 2 PER ACQUISTO DI N°2 CONTROLLER WIFI ARUBA | ADESIONE A CONVENZIONE RETI LOCALI 8 -LOTTO 2 PER L'ACQUISTO DI N°2 CONTROLLER WIFI ARUBA"
+  },
+  {
+   "cig": "B0A5729319",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "altro:advenias",
+   "nota_etichetta": "ambiguo: servizio gestito «Advenias Care» sulla piattaforma AWS",
+   "importo": 30000.0,
+   "testo": "AFFIDAMENTO SERVIZIO, ASSISTENZA E SUPPORTO PIATTAFORMA AWS ADVENIAS CARE 2022 ANNO 2024 | AFFIDAMENTO SERVIZIO, ASSISTENZA E SUPPORTO PIATTAFORMA ÂAWS ADVENIAS CARE 2022 ANNO 2024"
+  },
+  {
+   "cig": "B069EEC341",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker",
+   "importo": 9760.0,
+   "testo": "LOTTO 2 MEDTROMIK AZURE | LOTTO 2 MEDTROMIK AZURE"
+  },
+  {
+   "cig": "B35C8EEC93",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:fastweb",
+   "nota_etichetta": "",
+   "importo": 12000.0,
+   "testo": "FORNITURA IN IRU DEL COLLEGAMENTO IN FIBRA OTTICA SPENTA TRA LA SEDE DEL MUNICIPIO DEL COMUNE DI MONCALIERI E LA SEDE DEL NODO WI-PIE DI TORINO PRESSO IL DATA CENTER DEL CSI PIEMONTE | FORNITURA IN IRU DEL COLLEGAMENTO IN FIBRA OTTICA SPENTA TRA LA SEDE DEL MUNICIPIO DEL COMUNE DI MONCALIERI E LA SE"
+  },
+  {
+   "cig": "BB71C192CF",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Polo Strategico Nazionale",
+   "via": "3-marchio",
+   "regola": "polo\\s+strategico\\s+nazionale",
+   "etichetta": "altro:tim",
+   "nota_etichetta": "collegamento MPLS al PSN",
+   "importo": 27760.02,
+   "testo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50 COMMA 1, LETT. B) DEL D.LGS 36/2023 E DEL R.A.N. AZIENDALE, PER IL COLLEGAMENTO RETE MPLS DI ACQUA PUBBLICA SABINA SPA AL DATA CENTER DEL POLO STRATEGICO NAZIONALE (PSN) | AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50 COMMA 1, LETT. B) DEL D.LGS 36/2023 E DEL R."
+  },
+  {
+   "cig": "B24E4E5E0F",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "",
+   "nota_etichetta": "supporto gara",
+   "importo": 35000.0,
+   "testo": "SUPPORTO GESTIONE GARA MANUTENZIONE APPLICATIVI MIDDLEWARE E CLOUD AWS | SUPPORTO GESTIONE GARA MANUTENZIONE APPLICATIVI MIDDLEWARE E CLOUD AWS"
+  },
+  {
+   "cig": "BA477DD6AC",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:fastweb",
+   "nota_etichetta": "",
+   "importo": 3235.5,
+   "testo": "PROROGA SERVIZI DI CONNETTIVITÀ INTERNET PER IP TRANSIT SU PORTA 10GBIT DAL DATA CENTER DI LIGURIA DIGITALE - GENNAIO 2026 | PROROGA SERVIZI DI CONNETTIVITÀ INTERNET PER IP TRANSIT SU PORTA 10GBIT DAL DATA CENTER DI LIGURIA DIGITALE - GENNAIO 2026"
+  },
+  {
+   "cig": "BC342A063A",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "\\boci\\b",
+   "etichetta": "altro:nbs",
+   "nota_etichetta": "manutenzione e migrazione su OCI: servizio, non acquisto OCI",
+   "importo": 132849.69,
+   "testo": "REVOCA DETERMINAZIONE DIRIGENZIALE N. 897 DEL 31/03/2026 E CONTRATTO PONTE PER LA PROSECUZIONE DEL SERVIZIO DI MANUTENZIONE E ASSISTENZA IT DELLE COMPONENTI E DEI MODULI SOFTWARE CON RELATIVO SUPPORTO SPECIALISTICO DEL SISTEMA REGIONALE DI GESTIONE ECM, INTEGRATO ANCHE CON IL SISTEMA NAZIONALE AGENA"
+  },
+  {
+   "cig": "B6553CC439",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "licenz\\w*\\s+(\\w+\\s+){0,2}microsoft",
+   "etichetta": "altro:insight",
+   "nota_etichetta": "consulenza sulle licenze Microsoft",
+   "importo": 16800.0,
+   "testo": "#FORNITURA CONSULENZA PER ASSESSMENT LICENZE MICROSOFT ED OTTIMIZZAZIONE CONTRATTO | #FORNITURA CONSULENZA PER ASSESSMENT LICENZE MICROSOFT ED OTTIMIZZAZIONE CONTRATTO"
+  },
+  {
+   "cig": "B6B3B3DC20",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Retelit",
+   "via": "3-marchio",
+   "regola": "retelit",
+   "etichetta": "altro:pa-abs",
+   "nota_etichetta": "",
+   "importo": 15650.0,
+   "testo": "AFFIDAMENTASSISTENZA, MANUTENZIONE E SLA DELLA PIATTAFORMA VBG GESTITA DALLA DITTA PA A.B.S. S.R.L. - RETELIT GROUP | AFFIDAMENTO DI UN CONTRATTO DI ASSISTENZA, MANUTENZIONE E SLA DELLA PIATTAFORMA VBG GESTITA DALLA DITTA PA A.B.S. S.R.L. - RETELIT GROUP"
+  },
+  {
+   "cig": "B5BA2246C6",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "altro:personal-data",
+   "nota_etichetta": "assistenza hardware e VMware",
+   "importo": 13464.0,
+   "testo": "ASSISTENZA HW PER DISK ARRAY E SERVER E VMWARE | ASSISTENZA HW PER DISK ARRAY E SERVER E VMWARE"
+  },
+  {
+   "cig": "BC6A49FAB9",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:medtronic",
+   "nota_etichetta": "Azure = pacemaker",
+   "importo": 37000.0,
+   "testo": "2026_SIC_ADESIONE LOTTO 4_DITTA MEDTRONIC_MOD. AZURE | 2026_SIC_ADESIONE LOTTO 4_DITTA MEDTRONIC_MOD. AZURE"
+  },
+  {
+   "cig": "BCA70CCE84",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "oracle\\s+cloud",
+   "etichetta": "altro:am-oracle-erp",
+   "nota_etichetta": "application maintenance su Oracle ERP Cloud e OCI: servizio",
+   "importo": 209250.0,
+   "testo": "PROCEDURA NEGOZIATA TELEMATICA SENZA BANDO AI SENSI DELL'ART. 50, COMMA 1, LETT. E) DEL D.LGS. N. 36/2023 E S.M.I., PER L'AFFIDAMENTO DEL SERVIZIO DI APPLICATION MAINTENANCE ORACLE ERP CLOUD (FUSION FINANCIALS + PROCUREMENT) E ORACLE CLOUD INFRASTRUCTURE (OCI) | PROCEDURA NEGOZIATA TELEMATICA SENZA "
+  },
+  {
+   "cig": "B3136CAB25",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SAP",
+   "via": "3-marchio",
+   "regola": "s/?4\\s*hana.{0,40}(cloud|sottoscrizion)",
+   "etichetta": "altro:horsa",
+   "nota_etichetta": "evolutive su SAP Analytics Cloud: servizi",
+   "importo": 39160.0,
+   "testo": "EVOLUTIVE SU SAP ANALYTICS CLOUD 2024 - T01 - EVOLUZIONE DEL REGOLATORIOEVOLUTIVE SU SAP ANALYTICS CLOUD 2024 T02 REPORTING CONTABILITÀ SU SAC / DATASPHEREEVOLUTIVE SU SAP ANALYTICS CLOUD 2024 T03 SUPPORTO TRANSIZIONE A S/4 HANAEVOLUTIVE SU SAP ANALYTICS CLOUD 2024 FORMAZIONE SPECIALISTICA SU SQL, D"
+  },
+  {
+   "cig": "B7B82E6F2F",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "dynamics\\s*365",
+   "etichetta": "altro:alten",
+   "nota_etichetta": "assistenza e personalizzazione Dynamics 365",
+   "importo": 24500.0,
+   "testo": "ORDINE 2 - ASSISTENZA E PERSONALIZZAZIONE DEL SOFTWARE CRM MICROSOFT DYNAMICS 365 PER START UP DI SISTEMA | ORDINE 2 - ASSISTENZA E PERSONALIZZAZIONE DEL SOFTWARE CRM MICROSOFT DYNAMICS 365 PER START UP DI SISTEMA"
+  },
+  {
+   "cig": "B17E726FFA",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SPC Cloud lotto 1",
+   "via": "3-marchio",
+   "regola": "spc\\s*cloud\\W*\\s*lotto\\s*1\\b",
+   "etichetta": "altro:tim-spc-cloud",
+   "nota_etichetta": "",
+   "importo": 16825.0,
+   "testo": "LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.821/2022 | LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.821/2022"
+  },
+  {
+   "cig": "B7FE685D00",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "\\bexadata\\b",
+   "etichetta": "",
+   "nota_etichetta": "connessioni e transceiver per Exadata",
+   "importo": 25631.28,
+   "testo": "ID 7643 - FORNITURA CONNESSIONI MPO E TRANSCEIVER FP28 PER EXADATA. | ID 7643 - FORNITURA CONNESSIONI MPO E TRANSCEIVER FP28 PER EXADATA"
+  },
+  {
+   "cig": "B17EAF43C3",
+   "strato": "M",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SPC Cloud lotto 1",
+   "via": "3-marchio",
+   "regola": "spc\\s*cloud\\W*\\s*lotto\\s*1\\b",
+   "etichetta": "altro:tim-spc-cloud",
+   "nota_etichetta": "",
+   "importo": 90321.93,
+   "testo": "LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.823/2022 | LIQUIDAZIONE SPETTANZE TELECOM ITALIA S.P.A. GIUSTA ADESIONE A CONVENZIONE CONSIP SPC CLOUD - LOTTO 1 EX DELIBERAZIONE N.823/2022"
+  }
+ ]
+}
