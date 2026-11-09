@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.12 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
+**Versione 0.13 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -500,6 +500,43 @@ Esito sui 7 CIG dei primi 50 EA e dei primi 20 Oracle che hanno un link PVL (`pi
 - **Ostacoli:** 54 errori 403, 52 errori 404, 45 login, 10 PDF illeggibili, 8 link PVL rotti, 220 altri (soprattutto documenti non pertinenti).
 - **Consumo reale:** G1 138 USD-eq; G3 167 USD-eq per 514 CIG, cioè 0,33 per CIG. La proiezione sui 1.000 è 326, sotto la stima di 360 e la guardia di 432.
 
+### 4.3.2 Revisione delle proposte della via 6 (#55, #66, nuovo in 0.13)
+
+**Cosa.** Le proposte della via 6 di passaggio a «certo» (verso S5, ICT non cloud, e verso cloud certo; S1 escluso) entrano nei totali solo se reggono a quattro criteri (`tools/verifiche/imbuto_via6_revisione.py`, docstring):
+
+- **C1**, una fonte primaria: un atto archiviato con sha256 il cui testo cita il CIG;
+- **C2**, le regole di `verifica_imbuto.py` rieseguite danno lo stesso esito, con campi coerenti con lo stato;
+- **C3**, per il cloud, il prodotto porta alla giurisdizione del dizionario dei marchi (`config/marchi_cloud.yaml`);
+- **C4**, una seconda lettura cieca (Claude Opus, istruzioni diverse, solo gli estratti degli atti archiviati, niente web) dice la stessa cosa con certezza alta.
+
+**Stato al 9/11/2026, sera [V].** La seconda lettura delle 176 proposte del primo `prepara` è finita (30 pacchetti su 30): **175 lette**, 1 rimasta senza lettura (G1, 13,1 M€). Nel frattempo il giro G3 è salito a 765 CIG su 1.000 e ha prodotto **38 proposte nuove** (36 S5, 2 cloud): sono in lettura in 7 pacchetti aggiuntivi (r031-r037) sotto il tetto condiviso e fino ad allora restano «da leggere», fuori dai totali. Esito: `esiti/2026-11-09/imbuto/revisione-via6.json`, coda `revisione-coda-discordi.csv`.
+
+**Concordanza della seconda lettura** (CIG e M€; «non confermato» vuol dire che la seconda lettura non dà la stessa risposta con certezza alta, senza contraddirla):
+
+| gruppo e strato proposto | concorde | non confermato | discorde | da leggere |
+|---|---:|---:|---:|---:|
+| G1 verso S5 (65) | 24, 963,5 | 30, 651,5 | 10, 143,8 | 1, 13,1 |
+| G1 cloud certo (5) | 3, 31,6 | 1, 43,5 | 1, 8,0 | 0 |
+| G3 verso S5 (130) | 28, 60,5 | 41, 92,5 | 25, 53,2 | 36, 34,4 |
+| G3 cloud certo (10) | 4, 12,8 | 4, 9,6 | 0 | 2, 1,9 |
+| CTL, controllo (4) | 3, 0,7 | 0 | 1, 0,1 | 0 |
+| **tutti (214)** | **62** | **76** | **37** | **39** |
+
+Sui 99 casi letti con certezza da entrambe le parti l'accordo è 62 su 99.
+
+**Quanto entra nei totali** (tutti e quattro i criteri; CTL compreso: 1 CIG S5 e 2 cloud IT, 0,8 M€):
+
+| destinazione | proposti | C1 fonte primaria | C1+C2+C3 | entra (C1-C4) |
+|---|---:|---:|---:|---:|
+| verso S5 (ICT non cloud) | 197 CIG, 2,01 mld | 49 CIG, 640,4 M€ | 47 CIG, 573,3 M€ | **15 CIG, 397,4 M€** |
+| cloud certo, IT | 9 CIG, 27,2 M€ | 5 CIG, 11,8 M€ | 5 CIG, 11,8 M€ | **2 CIG, 0,4 M€** (entrambi CTL) |
+| cloud certo, UE | 4 CIG, 24,2 M€ | 4 CIG, 24,2 M€ | 4 CIG, 24,2 M€ | **4 CIG, 24,2 M€** |
+| cloud certo, extra-UE | 4 CIG, 56,4 M€ | 2 CIG, 2,6 M€ | 2 CIG, 2,6 M€ | **0** |
+
+- **Cosa vuol dire:** delle proposte via 6 regge il 20 % degli euro verso S5 e nessun euro di cloud extra-UE. Il filtro più severo è C1: 1.024 M€ di S5 hanno una seconda lettura concorde ma nessun atto che citi il CIG, e restano proposte.
+- **I discordi (37, in coda per Fabio):** 33 sono proposte S5 che la seconda lettura dice **non ICT** (stampanti a noleggio, consumabili, cablaggio e lavori di rete, scuolabus, apparecchiature sanitarie): se Fabio conferma, vanno verso S1. 3 S5 sono **cloud** per la seconda lettura (A038DA0645 e B22FF5E298, adesioni agli AQ Consip Public Cloud IaaS/PaaS; B2B394AF2D, migrazione in cloud, 18,9 M€). 1 cloud IT (BC74911F16, Aruba, 8,0 M€) è **non cloud** per la seconda lettura.
+- **Effetto sui § 1-2:** nessuno per ora. Lo spostamento da S6 a S5 non cambia il totale S3-S6; i 24,6 M€ di cloud certo (IT 0,4, UE 24,2) entreranno nella superficie del § 1 alla rigenerazione dell'imbuto, insieme alle decisioni sulla coda.
+
 ### 4.9 CIG derivati da accordo quadro senza padre (#50, nuovo in 0.10)
 
 Un CIG discendente da AQ o convenzione eredita il prodotto dal padre. Se il campo `cig_accordo_quadro` è vuoto o punta a un CIG inesistente, l'eredità si perde. Verifica `tools/verifiche/cig_aq_tipo.py`, esito `esiti/2026-11-09/cig-aq/tipo.json` (commit 794e84c1) [V].
@@ -654,6 +691,7 @@ python tools/verifiche/imbuto_revisione.py     # precisione T3/T4 (Wilson), rego
 python tools/verifiche/pnrr11_decreti.py       # PNRR 1.1: finanziati per ente dai decreti, con controllo interno
 python tools/verifiche/pnrr11_cup_cig.py       # PNRR 1.1: CUP → CIG e confronto con i contratti PSN
 python tools/verifiche/imbuto_via6.py --json esiti/<data>/imbuto/via6-g1g3.json   # via 6 su G1/G3 (§ 4.3.1)
+python tools/verifiche/imbuto_via6_revisione.py esito <data>   # revisione C1-C4 delle proposte via 6 (§ 4.3.2)
 # sul server, dal mirror: cig_aq_tipo.py (§ 4.9)
 # sul server, dal mirror (giro 0.2 di BDAP, § 4.10 e § 4.12)
 nice .venv/bin/python tools/verifiche/bdap_ict_stato.py
@@ -725,3 +763,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.10 | 2026-11-09 | § 4.3.1: via 6 al 9/11 (G1 196/196, G3 514/1.000, parziale e da revisionare); § 4.9: CIG derivati da AQ non collegabili, 0,82 % / 734 M€ (#50), conteggi di aq_pmod.py portati in cig_aq_tipo.py; § 4.10: BDAP 0.1, pagato ICT Stato 1.141 M€ 2024 e controvalidazione 979 M€, rapporti CIG/pagato come stima; § 4.11: riepilogo del residuo S6 (#57: L3 453 CIG/262,1 M€, MePA 0, L4 parziale 79/42,4 M€, potenziale 532 CIG/304,5 M€); correzioni della verifica a regole (604 su 725); segnaposto § 4.12 (BDAP fase 2); § 9 e limiti aggiornati |
 | 0.11 | 2026-11-09 | § 4.12 BDAP fase 2: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua e durata mancante dal 2024 (R69), Sogei (R71), seconda via 2019-2024, SIOPE BDAP contro diretto (#30, R70); criticità 9 a circa 0,3 miliardi; § 1, § 4.10 e § 9 aggiornati |
 | 0.12 | 2026-11-09 | § 2.6 e § 1: CIG ripetuti (R53, `imbuto_cig_ripetuti.py`): eccesso vero 2,565 mld invece di 2,99, S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4); criticità nei limiti |
+| 0.13 | 2026-11-09 | § 4.3.2: revisione delle proposte via 6 con i criteri C1-C4 (175 su 214 lette; 62 concordi, 76 non confermate, 37 discordi in coda per Fabio; entrano 15 CIG/397,4 M€ verso S5 e 6 CIG/24,6 M€ di cloud certo, 0 extra-UE); 38 proposte nuove del G3 in lettura; § 1-2 invariati |

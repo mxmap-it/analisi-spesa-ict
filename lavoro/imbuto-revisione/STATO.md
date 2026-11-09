@@ -22,3 +22,8 @@ criteri C1-C4 in `tools/verifiche/imbuto_via6_revisione.py` (docstring). Seconda
 2. avanzamento: `ls report/metodo/llm/imbuto-revisione/esiti/ | wc -l` (30 = finito); pacchetti con 2 tentativi incompleti: `lavoro/imbuto-revisione/log/*.tentativi`
 3. a fine giro: `python tools/verifiche/imbuto_via6_revisione.py esito <data>`, commit di esiti/<data>/imbuto/revisione-*, report/metodo/llm/imbuto-revisione/esiti, dati/classificazioni/imbuto-revisione.jsonl; commento su #55 e #66 coi numeri.
 4. se il giro G3 aggiunge proposte: rieseguire `prepara` (i pacchetti cambiano: ripartire con esiti vuoti o tenere quelli fatti, i CIG sono la chiave).
+
+## Aggiornamento 2026-11-09 sera
+- Seconda lettura 30/30 finita: esito 2026-11-09 committato (3136409b). 175/214 letti: 62 concordi, 76 non confermati, 37 discordi.
+- G3 a 765/1000: 38 proposte nuove. NON rieseguito prepara (rimescolerebbe r001-r030): `lavoro/imbuto-revisione/script/prepara_nuove.py` ha scritto solo i nuovi CIG in r031-r037; guardiano rilanciato (stesso tetto condiviso), a fine giro riscrive esito.
+- Rendiconto 0.13 § 4.3.2 scritto. Alla fine dei r031-r037: aggiornare § 4.3.2 e commentare #55 #66.
