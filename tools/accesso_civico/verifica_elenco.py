@@ -19,9 +19,13 @@ conv = list(csv.DictReader(open(R / "report/convenzioni/database/documenti-manca
 ing = [r for r in csv.DictReader(open(R / "lavoro/residuo-s6/ingresso.csv", encoding="utf-8")) if (r.get("priorita") or "").startswith("P")]
 cita = {r["cig"] for r in csv.DictReader(open(R / f"esiti/{d66}/imbuto/residuo-s6-per-66.csv", encoding="utf-8"))
         if r["materiale"] == "documento-cita-cig"}
+pc1 = R / f"esiti/{d66}/imbuto/c1-senza-atto.csv"
+C1 = ({r["cig"] for r in csv.DictReader(open(pc1, encoding="utf-8"))} - {r["cig"] for r in ing}) if pc1.exists() else set()
+C = [r for r in el if r["fonte"].startswith("C")]
 A = [r for r in el if r["fonte"].startswith("A")]; B = [r for r in el if r["fonte"].startswith("B")]
 esito = {
     "V1_voci_A": (len(A), len(conv), len(A) == len(conv)),
+    "V2c_voci_C_c1": (len(C), len(C1), {r["cig"] for r in C} == C1 and all(r["criticita"] == "3" for r in C)),
     "V2_voci_B": (len(B), len({r["cig"] for r in ing} - cita), len(B) == len({r["cig"] for r in ing} - cita)),
     "V3_esclusi_assenti": sum(r["cig"] in cita for r in B) == 0,
     "V4_id_univoci": len({r["id"] for r in el}) == len(el),

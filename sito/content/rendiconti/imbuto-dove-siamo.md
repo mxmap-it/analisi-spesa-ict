@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.14 del 2026-11-09, per la consegna del 12/11 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)
+**Versione 0.15 del 2026-11-09, per la consegna del 12/11 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -573,9 +573,17 @@ Sui 99 casi letti con certezza da entrambe le parti l'accordo è 62 su 99.
 - **I discordi (37, in coda per Fabio):** 33 sono proposte S5 che la seconda lettura dice **non ICT** (stampanti a noleggio, consumabili, cablaggio e lavori di rete, scuolabus, apparecchiature sanitarie): se Fabio conferma, vanno verso S1. 3 S5 sono **cloud** per la seconda lettura (A038DA0645 e B22FF5E298, adesioni agli AQ Consip Public Cloud IaaS/PaaS; B2B394AF2D, migrazione in cloud, 18,9 M€). 1 cloud IT (BC74911F16, Aruba, 8,0 M€) è **non cloud** per la seconda lettura.
 - **Effetto sui § 1-2:** nessuno per ora. Lo spostamento da S6 a S5 non cambia il totale S3-S6; i 24,6 M€ di cloud certo (IT 0,4, UE 24,2) entreranno nella superficie del § 1 alla rigenerazione dell'imbuto, insieme alle decisioni sulla coda.
 
-### 4.3.3 Ricerca mirata degli atti per il criterio C1 (#66, segnaposto 0.14)
+### 4.3.3 Ricerca mirata degli atti per il criterio C1 (#66, nuovo in 0.15)
 
-*Segnaposto.* Un'altra linea di lavoro cerca in modo mirato l'atto che cita il CIG per le proposte via 6 che oggi falliscono solo C1 (esiti attesi in `esiti/<data>/imbuto/c1-*`). L'esito si inserisce qui alla consegna; fino ad allora valgono le cifre del § 4.3.2.
+**Esito: 100 CIG cercati, 1 atto trovato, 0 € in più nei totali; 99 CIG per 1.262,9 M€ vanno all’accesso civico con priorità alta** [V].
+
+- **Quali CIG.** Le proposte via 6 che falliscono solo C1 (nessun atto archiviato che citi il CIG): 41 con seconda lettura concorde e 59 «non confermate» da almeno 1 M€, in tutto 1.263 M€, quasi tutte G1/G3 verso S5. Ingresso `tools/acquisizione/c1_mirata_ingresso.py`, giro `tools/acquisizione/c1_mirata.sh` (riusa `piattaforme_cig.py` e `at_cig.py`), lavoro in `lavoro/c1-mirata/`.
+- **L3, link PVL:** solo 17 CIG su 100 ne hanno uno; documenti scaricati per 3, CIG non trovato 4, robots 3, blocchi 3.
+- **L2, TED:** le pagine degli avvisi rispondono con una verifica anti-bot (12 su 12); con l’API v3 anonima (`c1_ted_documenti.py`) il link ai documenti (BT-15) c’è in 2 avvisi su 12, e non porta ad atti che citano il CIG.
+- **L4, sezioni «Bandi di gara e contratti»:** 83 CIG di 55 enti; CIG presente nella pagina di ricerca per 9, documenti per 4 (Regione Lazio due CIG, ASL TO4, BIM Porlezza). Verificati a mano: sono la programmazione triennale degli acquisti della Regione Lazio (DGR 162/2026 e 712/2026, senza il CIG; la commessa ERPBI8 vi compare come voce di programma, non come procedura), un piano di comunicazione aziendale e fogli di stile del sito. Nessuno cita il CIG né identifica la procedura senza ambiguità: non sono registrati come atti. Il riconoscimento del CIG di `at_cig.py` non è in difetto (il CIG nei testi semplicemente non c’è).
+- **Atto trovato:** lo schema di contratto di B8863BC1C8 (L3, `snie.acquistitelematici.it`, registrato in `dati/atti/atti-server.jsonl`); la seconda lettura su quel CIG è «non confermata», quindi non entra.
+- **Effetto:** rilanciato `imbuto_via6_revisione.py esito 2026-11-09`, entrano (C1-C4) 21 CIG per 422,0 M€, come prima della ricerca.
+- **Residuo:** 99 CIG / 1.262,9 M€ in `esiti/2026-11-09/imbuto/c1-senza-atto.csv`, uniti all elenco unico dell’accesso civico (#58) come fonte C con criticità 3 (`elenco_mancanti.py`, verifica `verifica_elenco.py` V2c superata; CF per 99, PEC IndicePA per 78).
 
 ### 4.9 CIG derivati da accordo quadro senza padre (#50, nuovo in 0.10)
 
@@ -806,3 +814,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.12 | 2026-11-09 | § 2.6 e § 1: CIG ripetuti (R53, `imbuto_cig_ripetuti.py`): eccesso vero 2,565 mld invece di 2,99, S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4); criticità nei limiti |
 | 0.13 | 2026-11-09 | § 4.3.2: revisione delle proposte via 6 con i criteri C1-C4 (175 su 214 lette; 62 concordi, 76 non confermate, 37 discordi in coda per Fabio; entrano 15 CIG/397,4 M€ verso S5 e 6 CIG/24,6 M€ di cloud certo, 0 extra-UE); 38 proposte nuove del G3 in lettura; § 1-2 invariati |
 | 0.14 | 2026-11-09 | Per la consegna del 12/11. § 1: sintesi riscritta per un lettore esterno (cosa misuriamo, numeri verificati, stime, cosa manca e perché, rimando a Obiettivo 6). § 2.7: anteprima della rigenerazione 0.3.4 (prova a secco, #71): S3-S6 dal 2024 56,06 mld contro 55,70, effetti R53 +0,064, perimetro +0,479, lente +0,004; 0 CIG ripetuti; 29 G1 nuovi e proposta P1 (decisione aperta). § 4.11: L4 finito (#68), 535 CIG / 304,7 M€, ripasso #73 in corso. § 4.3.3 segnaposto C1 |
+| 0.15 | 2026-11-09 | § 4.3.3: esito della ricerca mirata degli atti C1 (L2 TED, L3 PVL, L4 AT): 100 CIG cercati, 1 atto, 0 € in più nei totali; 99 CIG / 1.262,9 M€ all’accesso civico con priorità alta (#58). |

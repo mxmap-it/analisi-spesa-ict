@@ -5,7 +5,9 @@ Unisce due fonti:
   A) convenzioni (#62): report/convenzioni/database/documenti-mancanti.csv (una riga = iniziativa x documento atteso);
   B) residuo imbuto (#57): lavoro/residuo-s6/ingresso.csv (CIG S6 e affini, priorità P1-P5) dopo i livelli L0-L6,
      con esito da esiti/<DATA_66>/imbuto/residuo-s6-per-66.csv (materiale), lavoro/residuo-s6/out/esiti.jsonl (L3/MePA),
-     lavoro/residuo-s6/l4/esiti.jsonl (L4) e strato/sottoclasse da lavoro/imbuto/ict.csv.
+     lavoro/residuo-s6/l4/esiti.jsonl (L4) e strato/sottoclasse da lavoro/imbuto/ict.csv;
+  C) via 6 ferma a C1 (#55 #66): esiti/<DATA_66>/imbuto/c1-senza-atto.csv (CIG con proposta via 6 senza atto archiviato
+     che citi il CIG dopo la ricerca mirata L2-L4 di lavoro/c1-mirata/): criticità 3 (priorità alta).
 Esclude ciò che risulta pubblicato: per B i CIG con «documento-cita-cig» (il documento c'è, va solo letto);
 per A le voci già scartate stanno in documenti-mancanti-scartati.csv e non sono nell'inventario.
 Ente: codice fiscale dall'ANAC (cf_amministrazione_appaltante del CIG; per le iniziative senza CIG, dal nome della
@@ -116,10 +118,15 @@ def main():
     from attribuisci_provider import righe_cig
     conv = list(csv.DictReader(open(R / "report/convenzioni/database/documenti-mancanti.csv", encoding="utf-8")))
     ini = {i["id"]: i for i in json.load(open(R / "report/convenzioni/database/iniziative.json", encoding="utf-8"))}
-    serve = set(ing) | {c["iniziativa"][4:].upper() for c in conv if c["iniziativa"].startswith("cig-")}
+    c1 = {}
+    pc1 = R / f"esiti/{d66}/imbuto/c1-senza-atto.csv"
+    if pc1.exists():
+        anni_c1 = {r["cig"]: r.get("anno", "") for r in csv.DictReader(open(R / "lavoro/c1-mirata/ingresso.csv", encoding="utf-8"))}
+        c1 = {r["cig"]: dict(r, anno=anni_c1.get(r["cig"], "")) for r in csv.DictReader(open(pc1, encoding="utf-8")) if r["cig"] not in ing}
+    serve = set(ing) | set(c1) | {c["iniziativa"][4:].upper() for c in conv if c["iniziativa"].startswith("cig-")}
     nomi_sa = {norm(i.get("stazione_appaltante")) for i in ini.values()}
     cf_cig, cf_nome = {}, {}
-    anni = sorted({(r.get("anno") or "").strip() for r in ing.values()} - {""}) + ["delta"]
+    anni = sorted({(r.get("anno") or "").strip() for r in list(ing.values()) + list(c1.values())} - {""}) + ["delta"]
     for fonte in anni:
         try:
             for r in righe_cig(fonte):
@@ -151,6 +158,24 @@ def main():
                       "criticita": cr, "peso_valore": peso(imp), "priorita": round(cr * peso(imp), 3),
                       "livelli_tentati": " ; ".join(tent), "esito_livelli": " ; ".join(esi),
                       "note": nota_strato(c, r["priorita"], ict, nrig, strati)})
+
+    # --- C: via 6 ferma a C1 (priorità alta) ---
+    Dc = R / "lavoro/c1-mirata"
+    l3c, l4c = {r["cig"]: r for r in jl(Dc / "l3/esiti.jsonl")}, {r["cig"]: r for r in jl(Dc / "l4/esiti.jsonl")}
+    for c, r in c1.items():
+        imp = float(r.get("importo") or 0)
+        cf, nome = cf_cig.get(c, ("", r["stazione_appaltante"]))
+        e = ipa.get(cf, {})
+        esi = [f"via6:{r["seconda_lettura"]}->{r["strato_proposto"]}"]
+        if c in l3c: esi.append(f"L3:{l3c[c].get("esito")}")
+        if c in l4c: esi.append(f"L4:{l4c[c].get("esito")}")
+        righe.append({"fonte": "C-via6-c1", "id": f"C1:{c}", "cig": c, "cf": cf, "codice_ipa": e.get("codice_ipa", ""),
+                      "ente": e.get("ente") or nome, "pec": e.get("pec", ""), "pec_fonte": "IndicePA" if e.get("pec") else "",
+                      "rpct": "", "oggetto": (r.get("oggetto") or "")[:300],
+                      "documento_atteso": "determina di aggiudicazione o adesione e contratto che citano il CIG",
+                      "importo": imp, "anno": r.get("anno", ""), "criticita": 3, "peso_valore": peso(imp), "priorita": round(3 * peso(imp), 3),
+                      "livelli_tentati": "L0-L2 via 6 ; L2 TED ; L3 PVL ; L4 AT (ricerca mirata C1 9/11)", "esito_livelli": " ; ".join(esi),
+                      "note": r.get("motivo", "")})
 
     # --- A: convenzioni ---
     for x in conv:
