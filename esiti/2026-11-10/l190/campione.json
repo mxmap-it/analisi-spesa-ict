@@ -1,0 +1,104 @@
+{
+ "registro": {
+  "2015": {
+   "righe": 18030,
+   "enti": 18030,
+   "esito_anac_successo": 8823
+  },
+  "2016": {
+   "righe": 17534,
+   "enti": 17534,
+   "esito_anac_successo": 12014
+  },
+  "2017": {
+   "righe": 18093,
+   "enti": 18093,
+   "esito_anac_successo": 13709
+  },
+  "2018": {
+   "righe": 19031,
+   "enti": 19031,
+   "esito_anac_successo": 15141
+  },
+  "2019": {
+   "righe": 19349,
+   "enti": 19349,
+   "esito_anac_successo": 15726
+  },
+  "2020": {
+   "righe": 19024,
+   "enti": 19024,
+   "esito_anac_successo": 15248
+  },
+  "2021": {
+   "righe": 19807,
+   "enti": 19807,
+   "esito_anac_successo": 16569
+  },
+  "2022": {
+   "righe": 20204,
+   "enti": 20204,
+   "esito_anac_successo": 17131
+  },
+  "2023": {
+   "righe": 19889,
+   "enti": 19889,
+   "esito_anac_successo": 16897
+  }
+ },
+ "registro_enti_distinti": 27045,
+ "registro_campi": [
+  "_anno",
+  "codiceFiscale",
+  "dataUltimoTentativoAccessoUrl",
+  "esitoUltimoTentativoAccessoUrl",
+  "identificativoPEC",
+  "ragioneSociale",
+  "url"
+ ],
+ "campione": {
+  "enti": 33,
+  "host_distinti": 25,
+  "conteggi": {
+   "enti": 33,
+   "indice_nuovo": 20,
+   "indice_tipo_dataset": 16,
+   "enti_con_lotti": 18,
+   "indice_assente": 5,
+   "indice_errore": 6,
+   "indice_tipo_non-xml": 4,
+   "indice_invariato": 2,
+   "indice_tipo_indice": 2,
+   "dataset_scaricati": 6,
+   "dataset_tipo_dataset": 6
+  },
+  "lotti": {
+   "lotti": 11781,
+   "cig_valorizzato": 11720,
+   "cig_ict": 57,
+   "con_agg": 11781,
+   "somma_agg": 2168195274.04,
+   "con_liq": 11781,
+   "somma_liq": 498801105.0,
+   "liq_pos": 9065,
+   "coppie": 11496,
+   "coppie_agg": 2168195274.04,
+   "coppie_liq": 388854399.71,
+   "liq_gt_agg": 2258,
+   "ict_agg": 6481203.24,
+   "ict_liq": 4831674.06
+  },
+  "anni_riferimento": {
+   "2022": 22
+  },
+  "dimensione_file_dataset_byte": {
+   "n": 22,
+   "somma": 14454165,
+   "mediana": 110274,
+   "max": 5115712
+  },
+  "n_link_per_indice": {
+   "0": 33
+  }
+ }
+}
