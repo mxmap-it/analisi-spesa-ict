@@ -361,7 +361,7 @@ def main(versione, data, nota):
          'description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."',
          "---", "",
          "<!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->", "",
-         f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**", "",
+         f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **Bozza work in progress**", "",
          "Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.", "",
          ] + sintesi(g, m) + ["## 1. Sintesi", "",
          "*Cosa non diciamo:* che un dato non individuato sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la "

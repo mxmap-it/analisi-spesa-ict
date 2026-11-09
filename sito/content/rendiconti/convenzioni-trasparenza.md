@@ -9,7 +9,7 @@ description: "Stato della trasparenza delle principali convenzioni e accordi qua
 
 <!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->
 
-**Versione 0.11 del 2026-11-09** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**
+**Versione 0.11 del 2026-11-09** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **Bozza work in progress**
 
 Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.
 
