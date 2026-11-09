@@ -7,7 +7,7 @@
     -> {"via": "3-marchio", "provider": "Microsoft", "giurisdizione": "EXTRA-UE", "servizio": "cloud",
         "canale": "rivenditore", "regola": "microsoft\\s*365"}
 
-Regole v3 (28/10/2026), ultima revisione v4.4 (9/11/2026, #40: classi d'errore del quinto campione a cieco). Vie: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider,
+Regole v3 (28/10/2026), ultima revisione v4.5 (9/11/2026, #40/#72: classi d'errore del sesto campione a cieco). Vie: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider,
 7 indeterminato. Le vie 4 (PSN voce per voce) e 6 (modello linguistico) non sono ancora implementate."""
 import re
 from pathlib import Path
@@ -35,7 +35,21 @@ RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|sv
 # v4.4 #40 cieco 5: formazione, POC e supporto a una gara non comprano il prodotto (vale anche per i marchi di licenza: Cloudera)
 RX_SUPPORTO_NON_PRODOTTO = re.compile(r"\bpoc\b|proof\s+of\s+concept|supporto\s+(\w+\s+){0,2}gara|\bformazion|\bcors[oi]\b|docenz", re.I)
 # v4.4 #40 cieco 5: consulenza sulle licenze (assessment, licensing advisory) è un servizio anche se il testo dice «licenze»
-RX_CONSULENZA_LICENZE = re.compile(r"(consulenz|assessment|advisory)\w*\s+(\w+\s+){0,3}licenz|licensing\s+advisory|ottimizzazione\s+(del\s+)?contratt", re.I)
+RX_CONSULENZA_LICENZE = re.compile(r"(consulenz|assessment|advisory)\w*\s+(\w+\s+){0,3}licenz|licensing\s+advisory|ottimizzazione\s+(del\s+)?contratt|"
+                                   r"(formazion|cors[oi])[^|]{0,30}(utilizzo|uso)\W+(\w+\W+){0,2}licenz", re.I)  # v4.5 cieco 6: corso «per l'utilizzo di licenze» Power BI
+# v4.5 #40 cieco 6: «assistenza/supporto/migrazione» DAVANTI al marchio (nella stessa parte del testo, entro 150 caratteri) =
+# servizio sulla piattaforma, salvo che il testo compri licenze, sottoscrizioni, crediti, servizi cloud o un canone annuale.
+# Marchi cloud e PSN: basta «assistenza/supporto/migrazione/configurazione/affiancamento/backlog/manutenzione ed aggiornamenti».
+# Marchi di licenza e VMware: il «supporto tecnico per il prodotto Oracle», «assistenza e manutenzione database Oracle»,
+# «rinnovo supporto VMware» sono il supporto del produttore, cioe acquisto del prodotto (ciechi 4-6): conta solo il lavoro
+# sistemistico di un terzo (assistenza sistemistica/su/ai sistemi, supporto specialistico, servizi professionali, giornate,
+# migrazione, configurazione, system architect/administrator) e mai se il testo parla di prodotti, rinnovo o fornitura.
+RX_SERV_PRIMA_CLOUD = re.compile(r"assistenz|supporto|migrazion|servizi\s+professional|configurazion|affiancamento|backlog|manutenzione\s+ed?\s+aggiornament", re.I)
+RX_SERV_PRIMA_LICENZA = re.compile(r"assistenza\s+(sistemistic|su\b|tecnica\s+ed?\s+informatica)|assistenza\s+e\s+supporto\s+ai\s+sistemi|supporto\s+specialistic|"
+                                   r"servizi?\s+professional|giornate|migrazion|configurazion|system\s+(architect|administrator)", re.I)
+RX_ACQUISTO = re.compile(r"licenz|sottoscrizion|crediti|subscription|abbonament|canone\s+annual|servizi\s+(cloud|iaas|paas|saas)\b|fornitura\s+(\w+\s+){0,2}prodott", re.I)
+RX_ACQUISTO_LICENZA = re.compile(r"prodott|rinnov|fornitura|\bcanone\s+di\s+manutenzione", re.I)
+RX_CANONE_ASSISTENZA = re.compile(r"canone\s+(di\s+)?assistenz", re.I)  # «canone assistenza» di un partner (Fastweb su AWS)
 # un contratto misto (abbonamento + servizi) resta abbonamento: è la voce di costo principale e la dipendenza da misurare
 RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|canone|servizi\s+(cloud|iaas|paas|saas)\b|(acquisizione|fornitura)\s+di\s+prodotti|"
                             r"adesion\w*\s+(\w+\s+){0,3}(polo\s+strategico|psn)|contratto\s+di\s+utenza|infrastruttura\s+cloud\s+in\s+adesione", re.I)
@@ -97,10 +111,32 @@ class Classificatore:
         return sorted({NOME_CANONICO.get(m["provider"], m["provider"]) for m in self.marchi
                        if any(r.search(testo) for r in m["rx"]) and not any(e.search(testo) for e in m["ex"])})
 
-    def _servizio(self, serv, testo, provider=""):
+    def _servizio_davanti(self, serv, testo, rx):
+        """v4.5: servizio nominato davanti al marchio, senza acquisto di licenze/sottoscrizioni/crediti."""
+        if serv not in ("cloud", "psn", "licenza", "software-infrastruttura") or not rx:
+            return False
+        if RX_CANONE_ASSISTENZA.search(testo):
+            return True
+        if RX_ACQUISTO.search(testo):
+            return False
+        if serv in ("licenza", "software-infrastruttura"):
+            if RX_ACQUISTO_LICENZA.search(testo):
+                return False
+            rxp = RX_SERV_PRIMA_LICENZA
+        else:
+            rxp = RX_SERV_PRIMA_CLOUD
+        for parte in testo.split(" | "):
+            for r in rx:
+                if (mm := r.search(parte)) and rxp.search(parte[max(0, mm.start() - 150):mm.start()]):
+                    return True
+        return False
+
+    def _servizio(self, serv, testo, provider="", rx=None):
         if serv in ("cloud", "psn", "") and RX_TELEFONIA.search(testo) and not RX_ALTRO_CLOUD.search(testo) \
                 and (provider in MARCHI_COMUNICAZIONE or provider not in self.piattaforme):
             return "telefonia"
+        if self._servizio_davanti(serv, testo, rx):
+            return "servizi-professionali"
         if serv in ("cloud", "psn", "licenza") and RX_CONSULENZA_LICENZE.search(testo):
             return "servizi-professionali"
         if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
@@ -130,7 +166,7 @@ class Classificatore:
         else:
             m, regola = self.marchio(testo)
             if m:
-                via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo, m["provider"])
+                via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo, m["provider"], m["rx"])
             elif self._e_cloud(testo) and not RX_NON_CLOUD.search(testo) \
                     and not (RX_CONNETTIVITA.search(testo) and not RX_ANCHE_CLOUD.search(testo)):
                 # via 5 solo se TUTTI gli aggiudicatari sono il provider: in un RTI la mandante (es. TIM con GPI) non dice il prodotto
@@ -145,5 +181,9 @@ class Classificatore:
             via = "7-indeterminato-cloud" if self._e_cloud(testo) else "0-ict-non-cloud"
             if via[0] == "7": serv = self._servizio("", testo)
         prov = NOME_CANONICO.get(prov, prov)
+        canale = self.canale(prov, aggiudicatari) if prov else ""
+        # v4.5 #40 cieco 6: migrazione/sviluppo di un terzo (non l'in-house) verso il data center in-house = servizio del terzo
+        if serv == "in-house" and canale == "rivenditore" and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
+            serv = "servizi-professionali"
         return {"via": via, "provider": prov, "giurisdizione": self.giur.get(prov, ""), "servizio": serv,
-                "canale": self.canale(prov, aggiudicatari) if prov else "", "regola": regola}
+                "canale": canale, "regola": regola}

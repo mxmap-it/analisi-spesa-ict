@@ -105,6 +105,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 | lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
 | regole v4.3 (9/11) | quinto campione a cieco, 238 CIG | Claude, alla cieca, un annotatore | big tech 86,2 % (Wilson 79,7-90,9), 80,8 % in euro; pesata 93,9 % | — | big tech: 0 mancati su 125 (R Wilson 97,0-100) |
 | regole v4.4 (9/11) | sesto campione a cieco, 250 CIG | Claude, alla cieca, un annotatore | big tech 80,7 % (Wilson 73,4-86,4), 98,1 % in euro; pesata 89,4 % (99,0 % in euro) | — | big tech: 3 mancati su 116 (R 97,4 %, Wilson 92,7-99,1); nello strato N 3 su 80 |
+| regole v4.5 (9/11) | da misurare: settimo cieco una sola volta, prima del rendiconto finale | — | sul cieco 6 (ora di sviluppo) 113/4/3, 99,8 % in euro: non è una misura | — | — |
 
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
@@ -224,6 +225,32 @@ Errori per classe (regole NON corrette; il criterio delle etichette è quello de
 
 Lettura: sui contratti di licenza e sottoscrizione (R, E) la lente tiene (P 95-97 %, 99,8 % in euro); negli strati di servizi la precisione in numero è 58-62 % ma in euro 94-98 %, perché i servizi sbagliati sono piccoli rispetto alle licenze dello stesso strato. Il richiamo non è più 100 %: tre sigle di prodotto (ServiceNow staccato, «MS SQLSRV», «Google Suite») sfuggono al dizionario. Limiti: un solo annotatore (Claude), niente kappa; strati P e F sovra-campionati di proposito; alcuni casi di confine (servizio gestito AWS, canone Office 365 di Halley, Google Workspace con formazione) etichettati come prodotto e annotati in `etichette.csv`. **Le regole non sono state corrette**: correggendole il sesto campione diventa di sviluppo.
 
+**Regole v4.5, correzione delle classi del sesto campione (9/11/2026, #40, #72).** Correzioni in `tools/analisi/classifica.py` e `config/marchi_cloud.yaml`, senza inseguire i singoli CIG:
+- **servizio davanti al marchio**: «assistenza», «supporto», «migrazione», «configurazione», «affiancamento», «backlog», «manutenzione ed aggiornamenti» nei 150 caratteri prima del marchio (stessa parte del testo) = `servizi-professionali`, salvo che il testo compri licenze, sottoscrizioni, crediti, servizi cloud o un canone annuale; «canone (di) assistenza» è sempre servizio (Fastweb per AWS). Vale per i marchi cloud e il PSN (Azure, M365, Salesforce, add-on di Dynamics, AWS, Nextcloud). **Cambio di criterio dichiarato** per i marchi di licenza e VMware (SQL Server, Windows Server, VMware, SAP S/4HANA): conta solo il lavoro sistemistico di un terzo («assistenza sistemistica/su/ai sistemi», «supporto specialistico», servizi professionali, giornate, migrazione, configurazione, *system architect/administrator*) e mai se il testo parla di prodotti, rinnovo o fornitura: il «supporto tecnico per il prodotto Oracle Database», l'«assistenza e manutenzione database Oracle» e il «canone di manutenzione e supporto VMware» sono il supporto del produttore, cioè acquisto del prodotto, come li etichettano i ciechi 4-6 (una prima versione senza questa distinzione peggiorava 9 CIG dei ciechi 4-6: scartata);
+- **in-house**: migrazione o sviluppo di un terzo (non l'in-house) verso il data center in-house = servizio del terzo;
+- **omonimie e prodotti di terzi**: «GCP auditor» (*Good Clinical Practice*), «software Next Cloud» di Deda, backup AFI per G Suite;
+- **formazione**: corso «per l'utilizzo di licenze» (Power BI) = servizio anche se il testo dice «licenze»; il supporto al RUP della concessione PSN era già servizio con la v4.4 (ora caso di test);
+- **mancati**: «SERVICE NOW» staccato quando è l'intero oggetto, «MS SQLSRV», «Google Suite»;
+- **vocabolario in-house** (nel confronto, non nelle etichette): le etichette col nome di una in-house del dizionario (`altro:csi-piemonte`, `altro:lepida`, `altro:trentino-digitale`, `altro:cineca`…) valgono «In-house pubblico», come l'alias SPC Cloud della v4.4.
+
+**Confine dichiarato, non corretto**: il cloud AWS/Azure come hosting dentro il servizio di un terzo («manutenzione del sito comprensiva di hosting su AWS», «spostamento del software nell'ambiente Azure») resta attribuito al marchio: è il tema dell'infrastruttura sottostante (#70), non una regola testuale.
+
+Prima/dopo (`tools/verifiche/regole_v45_confronto.py`, che riusa `regole_v44_confronto.py`; `esiti/2026-11-09/regole-v4.5/`). Criterio della lente come per i ciechi 4-5 (provider salvo `servizi-professionali`) e alias in-house già nel «prima», quindi i numeri «prima» del cieco 6 differiscono dalla misura grezza di `lente_cieco6.py` (113/27/3). Big tech TP/FP/FN:
+
+| Campione | Prima (v4.4) | Dopo (v4.5) | Tutti i provider prima → dopo | Big tech in euro: precisione prima → dopo |
+|---|---|---|---|---|
+| cieco 1 | 64/0/3 | 64/0/3 | 73/1/7 → invariato | — |
+| cieco 2 | 62/0/1 | 62/0/1 | 69/1/1 → invariato | — |
+| cieco 3 | 62/0/8 | 62/0/8 | 69/2/10 → invariato | — |
+| cieco 4 | 88/0/7 | 88/0/7 | 89/0/8 → invariato | 100 % → 100 % |
+| cieco 5 | 125/0/0 | 125/0/0 | 130/0/4 → invariato | 100 % → 100 % |
+| top-20 | 57/0/1 | 57/0/1 | 57/0/1 → invariato | — |
+| **cieco 6** | **110/20/6** (P 84,6 %) | **113/4/3** (P 96,6 %) | 125/29/7 → 128/7/4 (P 81,2 → 94,8 %) | **98,3 % → 99,8 %** (tutti: 97,9 → 99,5 %) |
+
+25 CIG del cieco 6 corretti, **nessuna regressione** su ciechi 1-5 e top-20; 162/162 casi di test (33 nuovi, fra cui 7 casi che non devono rompersi: supporto del produttore Oracle/VMware, canone annuale Office 365, affidamento in house al CSI Piemonte). Restano nel cieco 6: big tech FP 4 (hosting dentro il servizio di un terzo 2, aggiornamento di un modulo WMS «del cloud AWS in uso», IaaS gestita «(VMware)» di un provider locale) e FN 3 (contratti misti «fornitura, attivazione, migrazione» di Google Workspace e «AQ per AWS cloud e servizi di manutenzione», che le regole v4.4 dei servizi tolgono e le etichette contano come prodotto); fuori dalle big tech, migrazione dentro la convenzione PSN, backup di un terzo sul DC Lepida, assistenza e hosting SAP di Ricca IT, SaaS di un terzo su Cloud Toscana.
+
+**Il sesto campione è ora di sviluppo**: i numeri «dopo» non sono una misura. **Conclusione**: la precisione **in euro**, pesata sull'universo, era già ~99 % con le regole v4.4 (cieco 6: 99,0 %, 98,1 % nel campione); gli errori residui sono contratti piccoli di servizi e di confine, che pesano poco sulla spesa. Rincorrerli con nuove regole a ogni ritocco produce sovra-adattamento e consuma campioni. **Da qui in poi un nuovo campione a cieco (il settimo) si fa una sola volta, prima della pubblicazione del rendiconto finale**, sulle regole congelate a quel momento, e non dopo ogni ritocco. **La mappa dei rivenditori va rifatta con le regole v4.5** (`rivenditori_mappa.py`, job pesante) solo dopo la fine della prova imbuto (#71, AGENTS.md § 4): sostituisce la rigenerazione v4.4 rimasta in sospeso.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
@@ -234,7 +261,7 @@ classificatore è una funzione pura che non legge i dati ANAC
 quindi si usa anche su OCDS, TED o registri regionali.
 
 ```bash
-python tests/test_classifica.py      # 129/129 casi superati, regole v4.4 (9/11/2026)
+python tests/test_classifica.py      # 162/162 casi superati, regole v4.5 (9/11/2026)
 ```
 
 ## Errori trovati e come sono corretti
@@ -255,6 +282,7 @@ python tests/test_classifica.py      # 129/129 casi superati, regole v4.4 (9/11/
 | Omonimi e marchi come oggetto di altro (9/11/2026, #41) | pacemaker «Azure S DR», «hardware rete PSN», «affiancamento» su PSN | Esclusioni; «affiancamento» = servizi professionali. Prima e dopo sui tre campioni a cieco: invariati (esiti/2026-11-09/rivenditori/lente-prima e lente-dopo) |
 | Marchio senza acquisto del prodotto (9/11/2026, v4.3, #40) | corso Teams/Planner, supporto «SQL Server», Veeam Data Cloud per M365, connettività verso Oracle Cloud, IaaS «per ambienti VMware» | Esclusioni sul contesto se il testo non compra anche il prodotto; «licenze Adobe» aggiunte |
 | Marchio nominato, prodotto non comprato (9/11/2026, v4.4, #40, cieco 5) | Azure Medtronic (pacemaker), controller Wi-Fi Aruba HPE, manutenzione/consulenza su Salesforce, Oracle ERP Cloud, Dynamics/M365, SAP Analytics Cloud, POC e formazione, collegamenti verso data center | Esclusioni per omonimia e connettività, servizi professionali estesi, formazione/POC/gara per tutti i marchi, niente via 5 per i collegamenti |
+| Servizio davanti al marchio (9/11/2026, v4.5, #40/#72, cieco 6) | «supporto su ambiente Azure», «assistenza sistemistica SQL Server», «giornate di supporto specialistico VMware», «canone assistenza» per AWS, «GCP auditor», «Next Cloud» Deda, backup AFI per G Suite; mancati «SERVICE NOW», «MS SQLSRV», «Google Suite» | Servizio davanti al marchio = servizi professionali salvo acquisto; per licenze e VMware solo lavoro sistemistico di terzi (il supporto del produttore resta prodotto); esclusioni e sigle aggiunte; alias in-house nel confronto |
 
 ## Raccomandazioni per semplificare il monitoraggio
 
@@ -312,3 +340,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Quinto campione a cieco delle regole v4.3 (238 CIG, 5 strati): big tech P 86,2 % (79,7-90,9), 80,8 % in euro, pesata 93,9 %; R 100 % (97,0-100); 31 errori tutti «marchio senza prodotto» (omonimia Medtronic Azure, servizi professionali su piattaforma, formazione/gare, connettività, vocabolario SPC Cloud), regole non modificate | #40, `esiti/2026-11-09/lente-cieco-5/` |
 | 9/11/2026 | Regole v4.4 dalle classi d'errore del cieco 5 (omonimie, servizi su piattaforma, formazione/POC/gara, connettività, nome canonico SPC Cloud): cieco 5 big tech 125/17/0 → 125/0/0 (ora di sviluppo), ciechi 2-3 invariati, 3 cambi di criterio (cieco 1, cieco 4, top-20); 129/129 casi; mappa rivenditori da rifare (v4.4) dopo la prova imbuto | #40, `esiti/2026-11-09/regole-v4.4/` |
 | 9/11/2026 | Sesto campione a cieco (250 CIG, seme 20261112, strato nuovo «servizi su piattaforma»): regole v4.4 big tech P 113/140 = 80,7 % (73,4-86,4), 98,1 % in euro, pesata 89,4 %; R 113/116 = 97,4 % (3 mancati nello strato N); 46 errori per classe, regole non corrette | #40, #72, `esiti/2026-11-09/lente-cieco-6/` |
+| 9/11/2026 | Regole v4.5 dalle classi del cieco 6 (servizio davanti al marchio, supporto del produttore = prodotto per licenze e VMware, omonimie GCP/Next Cloud/AFI, mancati ServiceNow/SQLSRV/Google Suite, alias in-house nel confronto): cieco 6 big tech 110/20/6 → 113/4/3, in euro 98,3 → 99,8 % (ora di sviluppo); ciechi 1-5 e top-20 invariati; 162/162 casi; hosting dentro il servizio di un terzo lasciato come confine (#70). Conclusione: precisione in euro pesata ~99 % già con v4.4; il settimo cieco si fa una sola volta prima del rendiconto finale. Mappa rivenditori da rifare (v4.5) dopo la prova imbuto | #40, #72, `esiti/2026-11-09/regole-v4.5/` |

@@ -79,6 +79,7 @@
   - google\s+cloud
   - \bgcp\b
   - google\s+for\s+education
+  - google\s+suite  # v4.5 #40 cieco 6: «GOOGLE SUITE ENTERPRISE STARTER» (B5D87FA373)
   - iaas\s+e\s+paas.{0,20}google   # #40, 6/11/2026, campione a cieco
   escludi:
   - ^(?!.*(servizi\s+cloud|licenz|sottoscrizion|abbonament|subscription|crediti|canone|fornitura\s+di\s+prodotti|attivazion|posta\s+elettronica|pacchetto\s+formazione|\be\s+formazione\s*(\||$)))(?=.*(docenz|\bcors[oi]\b|\bformazion|supporto\s+(\w+\s+){0,2}(sistemistic|informatic|progettual)|help\s*desk|sistemista))  # v4.3 #40 cieco 4: formazione/supporto sul prodotto senza acquisto del prodotto
@@ -87,6 +88,8 @@
   - clinic
   - \bgxp\b
   - auditing\s+gcp
+  - \bgcp\s+audit  # v4.5 #40 cieco 6: «GCP AUDITOR» = Good Clinical Practice (BA3160AA83)
+  - \bafi\b[^|]{0,20}g\s*suite|(g\s*suite|google\s+workspace)\s+backup  # v4.5 #40 cieco 6: backup di terzi (AFI) per G Suite (B48E90A24A)
   fornitori:
   - ^google\b
 - provider: Oracle
@@ -121,6 +124,7 @@
   servizio: cloud
   regex:
   - servicenow
+  - (^|\|)\s*service\s+now\s*(\||$)  # v4.5 #40 cieco 6: «SERVICE NOW» staccato e da solo come oggetto (BC7C6DDEAB)
   fornitori:
   - ^servicenow
 - provider: Zoom
@@ -210,6 +214,8 @@
   regex:
   - next\s*cloud
   fornitori: []
+  escludi:
+  - software\s+next\s+cloud|\bdeda\b  # v4.5 #40 cieco 6: «Next Cloud» di Deda Next (gestionale), non Nextcloud (B1FB8A824C)
 - provider: SPC Cloud lotto 1
   giurisdizione: IT
   servizio: cloud
@@ -287,6 +293,7 @@
   - licenz\w*\s+(\w+\s+){0,2}win(dows)?\s*1[01]\b
   - \bwin(dows)?\s*1[01]\s+extended\s+security
   - licenz\w*\s+sql\b
+  - \b(ms\s*)?sql\s*srv  # v4.5 #40 cieco 6: «CAL + SERVER MS SQLSRV2022» (B3096EDEC3)
   # #40 v0.5: mancati del secondo campione a cieco (report/metodo/lente-cieco-2/)
   - (licenz|subscription|software\s+assurance|enterprise\s+agreement)\w*\W+(\w+\W+){0,5}microsoft
   - microsoft\W+(\w+\W+){0,3}(licenz|subscription|software\s+assurance)

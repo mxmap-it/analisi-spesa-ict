@@ -1,0 +1,646 @@
+{
+ "campioni": {
+  "lente-cieco": {
+   "prima_grezza_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "prima_grezza_tutti": {
+    "tp": 73,
+    "fp": 1,
+    "fn": 7,
+    "precisione": 0.986,
+    "richiamo": 0.912
+   },
+   "prima_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "prima_tutti": {
+    "tp": 73,
+    "fp": 1,
+    "fn": 7,
+    "precisione": 0.986,
+    "richiamo": 0.912
+   },
+   "dopo_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "dopo_tutti": {
+    "tp": 73,
+    "fp": 1,
+    "fn": 7,
+    "precisione": 0.986,
+    "richiamo": 0.912
+   }
+  },
+  "lente-cieco-2": {
+   "prima_grezza_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "prima_grezza_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   },
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   }
+  },
+  "lente-cieco-3": {
+   "prima_grezza_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "prima_grezza_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   },
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   }
+  },
+  "lente-cieco-4": {
+   "prima_grezza_bigtech": {
+    "tp": 95,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 96,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.99
+   },
+   "prima_bigtech": {
+    "tp": 88,
+    "fp": 0,
+    "fn": 7,
+    "precisione": 1.0,
+    "richiamo": 0.926
+   },
+   "prima_tutti": {
+    "tp": 89,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.918
+   },
+   "dopo_bigtech": {
+    "tp": 88,
+    "fp": 0,
+    "fn": 7,
+    "precisione": 1.0,
+    "richiamo": 0.926
+   },
+   "dopo_tutti": {
+    "tp": 89,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.918
+   },
+   "euro": {
+    "prima_grezza_bigtech": {
+     "tp": 38148843,
+     "fp": 0,
+     "fn": 0,
+     "precisione": 1.0,
+     "richiamo": 1.0
+    },
+    "prima_grezza_tutti": {
+     "tp": 42674412,
+     "fp": 0,
+     "fn": 16500,
+     "precisione": 1.0,
+     "richiamo": 0.9996
+    },
+    "prima_bigtech": {
+     "tp": 34995203,
+     "fp": 0,
+     "fn": 3153640,
+     "precisione": 1.0,
+     "richiamo": 0.9173
+    },
+    "prima_tutti": {
+     "tp": 39520772,
+     "fp": 0,
+     "fn": 3170140,
+     "precisione": 1.0,
+     "richiamo": 0.9257
+    },
+    "dopo_bigtech": {
+     "tp": 34995203,
+     "fp": 0,
+     "fn": 3153640,
+     "precisione": 1.0,
+     "richiamo": 0.9173
+    },
+    "dopo_tutti": {
+     "tp": 39520772,
+     "fp": 0,
+     "fn": 3170140,
+     "precisione": 1.0,
+     "richiamo": 0.9257
+    }
+   }
+  },
+  "lente-cieco-5": {
+   "prima_grezza_bigtech": {
+    "tp": 125,
+    "fp": 11,
+    "fn": 0,
+    "precisione": 0.919,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 131,
+    "fp": 13,
+    "fn": 3,
+    "precisione": 0.91,
+    "richiamo": 0.978
+   },
+   "prima_bigtech": {
+    "tp": 125,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_tutti": {
+    "tp": 130,
+    "fp": 0,
+    "fn": 4,
+    "precisione": 1.0,
+    "richiamo": 0.97
+   },
+   "dopo_bigtech": {
+    "tp": 125,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_tutti": {
+    "tp": 130,
+    "fp": 0,
+    "fn": 4,
+    "precisione": 1.0,
+    "richiamo": 0.97
+   },
+   "euro": {
+    "prima_grezza_bigtech": {
+     "tp": 39600389,
+     "fp": 9133895,
+     "fn": 0,
+     "precisione": 0.8126,
+     "richiamo": 1.0
+    },
+    "prima_grezza_tutti": {
+     "tp": 40667524,
+     "fp": 9188705,
+     "fn": 184116,
+     "precisione": 0.8157,
+     "richiamo": 0.9955
+    },
+    "prima_bigtech": {
+     "tp": 39600389,
+     "fp": 0,
+     "fn": 0,
+     "precisione": 1.0,
+     "richiamo": 1.0
+    },
+    "prima_tutti": {
+     "tp": 40648688,
+     "fp": 0,
+     "fn": 202952,
+     "precisione": 1.0,
+     "richiamo": 0.995
+    },
+    "dopo_bigtech": {
+     "tp": 39600389,
+     "fp": 0,
+     "fn": 0,
+     "precisione": 1.0,
+     "richiamo": 1.0
+    },
+    "dopo_tutti": {
+     "tp": 40648688,
+     "fp": 0,
+     "fn": 202952,
+     "precisione": 1.0,
+     "richiamo": 0.995
+    }
+   }
+  },
+  "top20": {
+   "prima_grezza_bigtech": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_bigtech": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   },
+   "prima_tutti": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   },
+   "dopo_bigtech": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   },
+   "dopo_tutti": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   }
+  },
+  "lente-cieco-6": {
+   "prima_grezza_bigtech": {
+    "tp": 113,
+    "fp": 27,
+    "fn": 3,
+    "precisione": 0.807,
+    "richiamo": 0.974
+   },
+   "prima_grezza_tutti": {
+    "tp": 129,
+    "fp": 41,
+    "fn": 3,
+    "precisione": 0.759,
+    "richiamo": 0.977
+   },
+   "prima_bigtech": {
+    "tp": 110,
+    "fp": 20,
+    "fn": 6,
+    "precisione": 0.846,
+    "richiamo": 0.948
+   },
+   "prima_tutti": {
+    "tp": 125,
+    "fp": 29,
+    "fn": 7,
+    "precisione": 0.812,
+    "richiamo": 0.947
+   },
+   "dopo_bigtech": {
+    "tp": 113,
+    "fp": 4,
+    "fn": 3,
+    "precisione": 0.966,
+    "richiamo": 0.974
+   },
+   "dopo_tutti": {
+    "tp": 128,
+    "fp": 7,
+    "fn": 4,
+    "precisione": 0.948,
+    "richiamo": 0.97
+   },
+   "euro": {
+    "prima_grezza_bigtech": {
+     "tp": 58994987,
+     "fp": 1113547,
+     "fn": 125539,
+     "precisione": 0.9815,
+     "richiamo": 0.9979
+    },
+    "prima_grezza_tutti": {
+     "tp": 77773843,
+     "fp": 1837328,
+     "fn": 125539,
+     "precisione": 0.9769,
+     "richiamo": 0.9984
+    },
+    "prima_bigtech": {
+     "tp": 58928855,
+     "fp": 1009282,
+     "fn": 191671,
+     "precisione": 0.9832,
+     "richiamo": 0.9968
+    },
+    "prima_tutti": {
+     "tp": 74479123,
+     "fp": 1611903,
+     "fn": 3420259,
+     "precisione": 0.9788,
+     "richiamo": 0.9561
+    },
+    "dopo_bigtech": {
+     "tp": 59054394,
+     "fp": 109050,
+     "fn": 66132,
+     "precisione": 0.9982,
+     "richiamo": 0.9989
+    },
+    "dopo_tutti": {
+     "tp": 74604663,
+     "fp": 387370,
+     "fn": 3294720,
+     "precisione": 0.9948,
+     "richiamo": 0.9577
+    }
+   }
+  }
+ },
+ "cambiati": [
+  {
+   "campione": "lente-cieco-6",
+   "cig": "BC7C6DDEAB",
+   "etichetta": "ServiceNow",
+   "prima": "",
+   "dopo": "ServiceNow",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "BAE2F0A22B",
+   "etichetta": "altro:dev4side",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B5C8BA5850",
+   "etichetta": "",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B9B6A90A9C",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B3657474A6",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B3096EDEC3",
+   "etichetta": "Microsoft",
+   "prima": "",
+   "dopo": "Microsoft",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B0DD3A96C1",
+   "etichetta": "altro:log80",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B110E1FB23",
+   "etichetta": "",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B10B011D57",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B9B3F52B5B",
+   "etichetta": "",
+   "prima": "Nextcloud",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "BC8B899AF7",
+   "etichetta": "",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B233CEDF51",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B29081609C",
+   "etichetta": "altro:qintesi",
+   "prima": "SAP",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B4700F06FB",
+   "etichetta": "altro:valyrian",
+   "prima": "Salesforce",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B7CE7FAAC2",
+   "etichetta": "altro:palitalsoft",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B7B82319D3",
+   "etichetta": "altro:cpl-concordia",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B9DAE0E0EA",
+   "etichetta": "",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "BA3160AA83",
+   "etichetta": "",
+   "prima": "Google",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B5D87FA373",
+   "etichetta": "Google",
+   "prima": "",
+   "dopo": "Google",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B78B9A99FB",
+   "etichetta": "",
+   "prima": "Amazon Web Services",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B514851286",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B1FB8A824C",
+   "etichetta": "altro:deda-next",
+   "prima": "Nextcloud",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "BC6891A503",
+   "etichetta": "",
+   "prima": "Nextcloud",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B48E90A24A",
+   "etichetta": "altro:afi",
+   "prima": "Google",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-6",
+   "cig": "B2C59B843C",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  }
+ ]
+}
