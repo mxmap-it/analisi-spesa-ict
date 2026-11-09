@@ -327,8 +327,8 @@ def main():
     cens, arch, kb, cur = carica()
     global CAR, ORDINATO, ALTROVE, ALTROVE_EXTRA, FLUSSI, ARETEPA, AGGREGATORI
     AGGREGATORI = defaultdict(list)
-    pa = R / "report/convenzioni/aggregatori/aggregatori-2026-11-06.csv"
-    if pa.exists():
+    # tutti i registri degli aggregatori (6/11, ricerca senza pagina, ricerca Consip, ricontrollo 7/11, ...): stesso tracciato
+    for pa in sorted((R / "report/convenzioni/aggregatori").glob("aggregatori-*.csv")):
         for r in csv.DictReader(open(pa, encoding="utf-8")):
             if r["esito"] not in ("archiviato", "pubblicato-non-archiviato"):
                 continue

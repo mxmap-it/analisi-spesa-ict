@@ -106,6 +106,13 @@ def piano(a):
                 s = u2s.get(d["url"])
                 if s:
                     aggiungi(j["iniziativa"], s, d.get("nome") or d.get("testo"), d["url"], arch[s]["data"], arch[s]["byte"])
+    # documenti archiviati fuori dal giro di archivia_documenti.py (archivia.py --da-file, ricerche per altre vie):
+    # registri aggregatori/aggregatori-*.csv, con lo sha256 riga per riga
+    for f in sorted(glob.glob(str(R / "aggregatori/aggregatori-*.csv"))):
+        for d in csv.DictReader(open(f, encoding="utf-8")):
+            if d["esito"] == "archiviato" and re.fullmatch(r"[0-9a-f]{64}", d["sha256"] or "") and d["url_documento"]:
+                x = arch.get(d["sha256"], {})
+                aggiungi(d["iniziativa"], d["sha256"], d["documento"], d["url_documento"], x.get("data") or d["data"], x.get("byte"))
     for f in sorted(glob.glob(str(R / "aretepa/schede/*.json"))):
         j = json.load(open(f, encoding="utf-8"))
         for d in j.get("documenti", []):
