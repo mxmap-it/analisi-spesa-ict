@@ -130,67 +130,19 @@ I file e il contenuto degli zip si archiviano nell&amp;rsquo;archivio content-ad
 &lt;li&gt;&lt;strong&gt;Fonti non ufficiali&lt;/strong&gt; (atti di enti aderenti, ricerca web): mostrate a parte, non cancellano la mancanza.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Accesso civico generalizzato&lt;/strong&gt; (art. 5 c. 2 d.lgs. 33/2013): ultima risorsa.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.3 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
+&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.4 del 10/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
 Legenda: &lt;strong&gt;[V]&lt;/strong&gt; verificato da noi su file archiviati con sha256; &lt;strong&gt;[R]&lt;/strong&gt; riferito da altri o dalla
 documentazione della fonte, non riprodotto.&lt;/p&gt;
 &lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;BDAP è l&amp;rsquo;unica fonte aperta che misura la &lt;strong&gt;spesa ICT pagata dallo Stato centrale&lt;/strong&gt;, ministero per
+&lt;li&gt;
+&lt;p&gt;BDAP è l&amp;rsquo;unica fonte aperta che misura la &lt;strong&gt;spesa ICT pagata dallo Stato centrale&lt;/strong&gt;, ministero per
 ministero, con un codice di spesa specifico per l&amp;rsquo;ICT. Nel 2024: &lt;strong&gt;1,14 miliardi&lt;/strong&gt; pagati con
-mandati informatici sugli 11 codici gestionali ICT [V].&lt;/li&gt;
-&lt;li&gt;Una seconda via indipendente, la classificazione economica di 3° livello del rendiconto per piano
-di gestione, dà &lt;strong&gt;0,98 miliardi&lt;/strong&gt; per il 2024 [V]. Le due vie differiscono del 14 %.&lt;/li&gt;
-&lt;li&gt;La seconda via per anno, 2019-2024: 492, 740, 675, 452, 1.007, 979 M€ [V]. Il salto del 2023 è
-soprattutto una riclassificazione dei piani di gestione del MEF (18 M€ nel 2022, 297 nel 2023) [V
-sui numeri, interpretazione da verificare]: prima del 2023 la seconda via non è confrontabile.&lt;/li&gt;
-&lt;li&gt;Abbinando stazione appaltante e ministero per &lt;strong&gt;codice fiscale&lt;/strong&gt; (IndicePA) invece che per nome,
-i CIG ICT ministeriali passano da 10.758 a 23.644 (da 5,0 a 8,2 miliardi, 2020-2026) [V]. Il buco
-della &lt;strong&gt;Giustizia era quasi tutto un artefatto&lt;/strong&gt; della regola sul nome: nel 2024 i suoi CIG ICT sono
-359 per 213 M€, non 13 per 9, e la quota 2024 dei contratti attivi vale 0,96 volte il pagato [V].&lt;/li&gt;
-&lt;li&gt;Il buco del &lt;strong&gt;MEF resta&lt;/strong&gt;: quota 2024 dei CIG attivi 97 M€ contro 388 pagati (0,25) [V]. I
-contratti in-house con Sogei che hanno un CIG ANAC ne spiegano poco (circa 26 M€ l&amp;rsquo;anno, [stima]);
-il resto non ha un CIG che vediamo (§ Sogei).&lt;/li&gt;
-&lt;li&gt;SIOPE via BDAP e SIOPE diretto coincidono sull&amp;rsquo;ICT dove BDAP è completo (99,5-100 % delle coppie
-ente × codice uguali all&amp;rsquo;euro, 20 regioni, 2023-2025) e differiscono dello 0,7 % sul totale, per i pagamenti da
-regolarizzare [V]. Il &lt;strong&gt;difetto riferito da AgID si riproduce&lt;/strong&gt; su tutte le 20 regioni [V]: nel 2025
-Lombardia e Friuli-Venezia Giulia si fermano a marzo (1.717 comuni) e mancano 84 comuni di Trento;
-2023 e 2024 sono completi (§ SIOPE via BDAP, R75).&lt;/li&gt;
-&lt;li&gt;Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, &lt;strong&gt;servizi di
-assistenza informatica: 604 milioni nel 2023&lt;/strong&gt; [V].&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="ente-portale-accesso"&gt;Ente, portale, accesso&lt;/h2&gt;
-&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;&lt;/th&gt;
-					&lt;th&gt;&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Ente&lt;/td&gt;
-					&lt;td&gt;Ministero dell&amp;rsquo;economia e delle finanze, Ragioneria generale dello Stato (RGS)&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Portale&lt;/td&gt;
-					&lt;td&gt;&lt;a href="https://bdap-opendata.rgs.mef.gov.it/"&gt;https://bdap-opendata.rgs.mef.gov.it/&lt;/a&gt; (CKAN; API su &lt;code&gt;/SpodCkanApi/api/3/action/&lt;/code&gt;)&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Formati&lt;/td&gt;
-					&lt;td&gt;CSV (&lt;code&gt;datastore/dump/&amp;lt;id&amp;gt;.csv&lt;/code&gt;, separatore &lt;code&gt;;&lt;/code&gt;, &lt;strong&gt;codifica Windows-1252&lt;/strong&gt;), XML OData (&lt;code&gt;/ODataProxy/MdData('&amp;lt;id&amp;gt;@rgs')/DataRows&lt;/code&gt;), PDF di metadati per famiglia [V]&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Licenza&lt;/td&gt;
-					&lt;td&gt;Creative Commons Attribution (&lt;code&gt;license_id&lt;/code&gt; cc-by su tutti i 3.684 dataset) [V sui metadati; versione della licenza non indicata]&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Catalogo&lt;/td&gt;
-					&lt;td&gt;3.684 dataset, 11.025 risorse, circa 60 GB (raccolti il 7/11/2026, &lt;code&gt;tools/acquisizione/bdap_metadati.sh&lt;/code&gt;) [V]&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Gli URL dei file che CKAN pubblica sono in &lt;code&gt;http://&lt;/code&gt;: sulla porta 80 il server non risponde (timeout
-il 9/11/2026), in &lt;code&gt;https://&lt;/code&gt; sì [V]. &lt;code&gt;tools/archivia.py&lt;/code&gt; va chiamato con gli URL riscritti in https.&lt;/p&gt;</description></item><item><title>Perimetro ICT: lista bianca dei CPV</title><link>https://analisi-spesa-ict.mxmap.it/progetto/perimetro-ict/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/perimetro-ict/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.3 del 2026-11-09&lt;/strong&gt; · configurazione &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/perimetro_cpv.yaml"&gt;&lt;code&gt;config/perimetro_cpv.yaml&lt;/code&gt;&lt;/a&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/44"&gt;#44&lt;/a&gt; · misure nel rendiconto &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/perimetro-cpv/"&gt;Perimetro ICT e attendibilità del CPV&lt;/a&gt; (bozza)&lt;/p&gt;
+mandati informatici sugli 11 codici gestionali ICT [V].&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Una seconda via indipendente, la classificazione economica di 3° livello del rendiconto per piano
+di gestione, dà &lt;strong&gt;0,98 miliardi&lt;/strong&gt; per il 2024 [V]. Le due vie differiscono del 14 %.&lt;/p&gt;</description></item><item><title>Perimetro ICT: lista bianca dei CPV</title><link>https://analisi-spesa-ict.mxmap.it/progetto/perimetro-ict/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/perimetro-ict/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.3 del 2026-11-09&lt;/strong&gt; · configurazione &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/perimetro_cpv.yaml"&gt;&lt;code&gt;config/perimetro_cpv.yaml&lt;/code&gt;&lt;/a&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/44"&gt;#44&lt;/a&gt; · misure nel rendiconto &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/perimetro-cpv/"&gt;Perimetro ICT e attendibilità del CPV&lt;/a&gt; (bozza)&lt;/p&gt;
 &lt;p&gt;Un CIG entra nel perimetro ICT se &lt;strong&gt;almeno uno&lt;/strong&gt; dei suoi CPV comincia con un prefisso della lista, oppure se il testo dell&amp;rsquo;oggetto ha segnali ICT (&lt;code&gt;RX_ICT&lt;/code&gt; in &lt;code&gt;tools/analisi/imbuto.py&lt;/code&gt;). Gli altri vanno in S1 (esclusi). La lista è la stessa di &lt;code&gt;CPV_ICT&lt;/code&gt; in &lt;code&gt;tools/analisi/classifica.py&lt;/code&gt;: la verifica &lt;code&gt;tools/verifiche/perimetro_cpv.py&lt;/code&gt; controlla che coincidano.&lt;/p&gt;
 &lt;h2 id="lista-bianca-12-prefissi"&gt;Lista bianca (12 prefissi)&lt;/h2&gt;
 &lt;table&gt;
@@ -261,7 +213,64 @@ il 9/11/2026), in &lt;code&gt;https://&lt;/code&gt; sì [V]. &lt;code&gt;tools/a
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Proposte di lavoro.&lt;/strong&gt; Sono le richieste e raccomandazioni annotate durante l&amp;rsquo;analisi per rendere misurabile la spesa ICT della PA. &lt;strong&gt;Nulla è stato inviato agli enti&lt;/strong&gt;, salvo quanto indicato nella colonna «inviata» (oggi: nessuna). Ogni invio richiede l&amp;rsquo;approvazione di Fabio Pietrosanti e, per i difetti, evidenza riproducibile con sha256, azione correttiva e metrica (AGENTS.md §3).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Voci:&lt;/strong&gt; 81 · verificate 43 · da verificare 5 · proposte 33 · inviate 0.&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
+&lt;p&gt;&lt;strong&gt;Voci:&lt;/strong&gt; 82 · verificate 44 · da verificare 5 · proposte 33 · inviate 0.&lt;/p&gt;</description></item><item><title>SIOPE, la spesa ICT pagata per ente</title><link>https://analisi-spesa-ict.mxmap.it/progetto/siope/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/siope/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.1 del 10/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/12"&gt;#12&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
+Legenda: &lt;strong&gt;[V]&lt;/strong&gt; verificato da noi su file archiviati con sha256; &lt;strong&gt;[R]&lt;/strong&gt; riferito da altri o dalla
+documentazione della fonte; &lt;strong&gt;stima&lt;/strong&gt; quando c&amp;rsquo;è un&amp;rsquo;ipotesi in mezzo.&lt;/p&gt;
+&lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gli enti non statali (regioni, sanità, comuni, università, enti di ricerca, scuole&amp;hellip;) hanno
+pagato in ICT 3,97 miliardi nel 2024&lt;/strong&gt; (2,99 nel 2022, 3,30 nel 2023, 4,62 nel 2025), più
+0,35 miliardi di telefonia [V]. Con lo Stato centrale da BDAP (1,14 miliardi) la &lt;strong&gt;spesa ICT
+pubblica pagata nel 2024 è circa 5,1 miliardi&lt;/strong&gt; (5,5 con la telefonia) [V sulle due fonti, somma
+nostra].&lt;/li&gt;
+&lt;li&gt;Gli stessi enti, abbinati per &lt;strong&gt;codice fiscale&lt;/strong&gt; alle stazioni appaltanti ANAC, hanno pubblicato nel
+2024 CIG ICT (strati S3-S6) per &lt;strong&gt;6,67 miliardi&lt;/strong&gt;: &lt;strong&gt;1,68 euro di CIG per ogni euro pagato&lt;/strong&gt;; la
+quota 2024 dei contratti attivi (dal 2020) vale 8,79 miliardi, 2,2 volte il pagato [V].&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L&amp;rsquo;imbuto non perde enti, sopravvaluta gli importi.&lt;/strong&gt; Degli enti con pagamenti ICT nel 2024, 740 su
+10.180 non hanno alcun CIG ICT: 16,8 milioni, lo 0,4 % del pagato [V]. Il rapporto CIG/pagato va da
+0,98 nei comuni sotto i 5.000 abitanti a 4 nella sanità.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dove l&amp;rsquo;imbuto è cieco&lt;/strong&gt; (molto pagato, pochi CIG): la &lt;strong&gt;Regione Lombardia&lt;/strong&gt; (gestione sanitaria
+accentrata) paga in ICT circa 300 milioni l&amp;rsquo;anno contro 7-14 milioni di CIG suoi: è la spesa verso la
+società in-house regionale, senza CIG proprio [V sui numeri, interpretazione da verificare]; poi
+Comune di Venezia, ARPAL Umbria, ARPEA Piemonte.&lt;/li&gt;
+&lt;li&gt;La sanità SIOPE torna con il Conto economico SSN: assistenza informatica pagata 674 milioni nel
+2024 contro 720 milioni di costo (voce BA1620) [V].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ente-portale-accesso"&gt;Ente, portale, accesso&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ente&lt;/td&gt;
+					&lt;td&gt;Ragioneria generale dello Stato e Banca d&amp;rsquo;Italia (SIOPE, art. 14 l. 196/2009; SIOPE+ dal 2018)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Portale&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://www.siope.it/"&gt;https://www.siope.it/&lt;/a&gt; (open data in &lt;code&gt;documenti/siope2/open/last/&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;File&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;SIOPE_USCITE.&amp;lt;anno&amp;gt;.zip&lt;/code&gt; (2017-2026, 70-77 MB ciascuno, CSV di 400 MB: codice ente, anno, mese, codice gestionale, importo in &lt;strong&gt;centesimi&lt;/strong&gt;), &lt;code&gt;SIOPE_ANAGRAFICHE.zip&lt;/code&gt; (enti con codice fiscale, comparti e sottocomparti, codici gestionali con descrizione) [V]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Archivio&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;archivio/mirror/www.siope.it/documenti/siope2/open/last/&lt;/code&gt; (11 file, 702 MB, 6/11/2026; file del 5/11/2026) [V]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Natura&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;cassa&lt;/strong&gt; (pagamenti per mese), non competenza; tutti gli enti della PA tranne lo Stato centrale, che è in BDAP&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Il mirror è &lt;strong&gt;completo&lt;/strong&gt; per quel che serve: tutte le annualità 2017-2026 e le anagrafiche. Il nome
+&lt;code&gt;last&lt;/code&gt; si sovrascrive alla fonte: le versioni restano nei blob dell&amp;rsquo;archivio (sha256 nell&amp;rsquo;esito).
+SIOPE via BDAP (per regione) e diretto coincidono sull&amp;rsquo;ICT, ma BDAP &lt;strong&gt;tronca il 2025&lt;/strong&gt; di Lombardia e
+Friuli-Venezia Giulia a marzo (§ SIOPE via BDAP in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/bdap/"&gt;BDAP&lt;/a&gt;, R75): si usa il diretto.&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
 strade abbiamo scartato e perché, quali strumenti riusiamo e come è fatta la pipeline. Le
 decisioni prese sono nel &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/DECISIONI.md"&gt;registro delle decisioni&lt;/a&gt;;
 i problemi trovati nei dati sono nei &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/"&gt;rendiconti&lt;/a&gt;.&lt;/p&gt;

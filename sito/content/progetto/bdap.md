@@ -4,7 +4,7 @@ date: 2026-11-09
 description: "Che cosa c'è in BDAP (MEF-RGS), come si scarica, che difetti ha, e come entra nell'imbuto della spesa ICT come denominatore dello Stato centrale e della sanità."
 ---
 
-**Versione 0.3 del 9/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
+**Versione 0.4 del 10/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
 Legenda: **[V]** verificato da noi su file archiviati con sha256; **[R]** riferito da altri o dalla
 documentazione della fonte, non riprodotto.
 
@@ -32,6 +32,12 @@ documentazione della fonte, non riprodotto.
   2023 e 2024 sono completi (§ SIOPE via BDAP, R75).
 - Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, **servizi di
   assistenza informatica: 604 milioni nel 2023** [V].
+
+- **Giro 0.4 (10/11):** archiviati i CE SSN annuali per ente 2022 e 2024 e il IV trimestre 2025 (prima
+  c'era solo il 2023). BA1620, consolidato regionale «999»: **530, 604, 720 M€** nel 2022-2024 [V]. Con
+  SIOPE (pagina [SIOPE](/progetto/siope/)) lo Stato BDAP si somma agli enti non statali: **spesa ICT
+  pubblica pagata circa 5,1 miliardi nel 2024** (1,14 Stato + 3,97 SIOPE), contro 14,0 miliardi di CIG ICT
+  pubblicati nell'anno [V].
 
 ## Ente, portale, accesso
 
@@ -287,6 +293,27 @@ telefoniche 161 M€. Manutenzioni (BA1910 e seguenti) e noleggi (BA2010) non ha
 ICT. Gli investimenti in hardware e software stanno nello stato patrimoniale, non nel CE. BA1620 è
 quindi un **denominatore minimo** dei servizi ICT della sanità, per ente e per anno.
 
+## Sanità, serie 2022-2024 (giro 0.4)
+
+Voce BA1620, righe «999» (consolidato regionale = enti + gestione sanitaria accentrata «000»; sommare
+tutte le righe conta due volte) [V]: 2022 530 M€, 2023 604 M€, 2024 720 M€. SIOPE, codice 3212
+«assistenza informatica e manutenzione software» sugli enti sanitari, 2024: 674 M€ di cassa, il 94 %
+del costo CE [V]. File: `datastore/dump/5afc4cf8-….csv` (2022), `57bb2cce-….csv` (2023),
+`94083af2-….csv` (2024), sha256 in `esiti/2026-11-10/siope/ict-enti.json`. Mancano ancora in archivio
+i CE trimestrali 2012-2025 (salvo IV 2025) e gli stati patrimoniali SSN, che per l'ICT non servono.
+
+## Stato più territori: il totale pagato (giro 0.4)
+
+| Anno | Stato (BDAP, gestionali ICT) | Enti non statali (SIOPE) | Totale | CIG ICT S3-S6 pubblicati |
+|---|---:|---:|---:|---:|
+| 2022 | 987 M€ | 2.993 | 3.980 | 9.470 |
+| 2023 | 1.199 | 3.297 | 4.496 | 12.160 |
+| 2024 | 1.141 | 3.975 | 5.116 | 14.024 |
+| 2025 | 1.286 | 4.618 | 5.904 | 15.308 |
+
+Telefonia esclusa (0,3-0,4 mld l'anno negli enti SIOPE). Dettaglio, avvertenze e abbinamento per
+ente in [SIOPE](/progetto/siope/) [V].
+
 ## SIOPE via BDAP
 
 Il file regionale (Lazio 2024, 435.707 righe) ha per ogni ente il codice gestionale e l'importo
@@ -337,4 +364,5 @@ la via principale.
 |---|---|
 | 2026-11-09 | prima versione: famiglie, campi, misure 2019-2025, copertura CIG per ministero, CE SSN, SIOPE via BDAP, R63-R65 |
 | 2026-11-09 | 0.2: seconda via per PG 2019-2024 (discontinuità 2023); abbinamento SA→ministero per codice fiscale IndicePA (`bdap_cig_ministeri_cf.py`): Giustizia 0,96, MEF 0,25 nel 2024; quota annua dei CIG pluriennali e limite della durata mancante dal 2024; Sogei aggiudicataria e stazione appaltante; SIOPE via BDAP contro diretto 2024-2025 su cinque regioni (`siope_bdap_vs_diretto.py`, #30); R69-R71 |
+| 2026-11-10 | 0.4: CE SSN 2022 e 2024 archiviati (BA1620 530/604/720 M€, righe 999); totale pagato Stato + SIOPE 2022-2025 (5,1 mld nel 2024) contro i CIG ICT; rimando alla pagina SIOPE (`siope_ict_enti.py`, #12); R83 |
 | 2026-11-09 | 0.3: #30 chiuso. SIOPE via BDAP contro diretto su tutte le 20 regioni, 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2 con abbinamento a tre livelli): il difetto riferito da AgID **si riproduce** [R → V] — 2025 di Lombardia e FVG fermo a marzo (1.717 comuni), 84 comuni di Trento assenti; 2023 e 2024 completi; R75 |

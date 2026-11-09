@@ -862,3 +862,14 @@
   perche_serve: "Chi cerca gli atti di gara di un ente (cittadini, giornalisti, ricerca) parte da quell'URL: se è errato la sezione AT sembra vuota o assente e gli atti non si trovano senza cercare a mano il sito"
   metrica: "Quota di URL AT in IndicePA che rispondono 200 con la pagina AT dell'ente (rimisurabile con tools/verifiche/l4js_url_at.py esteso a tutti gli enti)"
   rif: ["#73", "#57", "#68", "R66", "R67"]
+- id: R83
+  destinatario: "RGS (SIOPE, BDAP); Banca d'Italia; ANAC (BDNCP); AgID"
+  tipo: dato-mancante
+  stato: "verificato (10/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Legare pagamenti SIOPE/BDAP e CIG: codice CIG nei dati SIOPE aperti, codici hardware ICT nel piano dei conti sanitario, pagamenti alle in-house"
+  evidenza: "Enti non statali: 3,97 mld pagati in ICT nel 2024 (SIOPE) contro 6,67 mld di CIG ICT pubblicati dagli stessi enti per CF (1,68 €/€; quota annua dei contratti 2,2). 740 enti su 10.180 con pagato ICT e nessun CIG (0,4 %). Regione Lombardia (gestione sanitaria) 297-332 M€ pagati in ICT nel 2023-24 contro 7-14 M€ di quota CIG; 192 enti, quasi tutti sanitari, con quota CIG oltre 5 volte il pagato. Il piano dei conti SIOPE sanità non ha un codice hardware ICT. Gli ordinativi SIOPE+ contengono il CIG, ma l'open data SIOPE è aggregato per ente, mese e codice gestionale"
+  prova: "tools/verifiche/siope_ict_enti.py; esiti/2026-11-10/siope/ict-enti.json, ict-enti.csv, ict-enti-scarti.csv; tools/verifiche/bdap_cig_ministeri_cf.py"
+  richiesta: "Pubblicare in open data i pagamenti SIOPE+ aggregati per ente, anno e CIG (il CIG è già obbligatorio negli ordinativi); aggiungere al piano dei conti SIOPE sanità codici distinti per hardware e software ICT; pubblicare per ente i pagamenti verso società in-house con il loro CF"
+  perche_serve: "Senza il CIG nei pagamenti il valore dei contratti (CIG) e la spesa effettiva (cassa) si confrontano solo per ente e per anno; l'abbinamento CIG-pagamento direbbe quanta parte di ogni contratto ICT è stata davvero pagata e farebbe emergere la spesa in-house senza CIG"
+  metrica: "Quota del pagato ICT SIOPE abbinabile a un CIG; numero di enti con indicatore quota CIG / pagato < 0,2 o > 5 (tools/verifiche/siope_ict_enti.py)"
+  rif: ["#12", "#67", "#30", "R70", "R75"]
