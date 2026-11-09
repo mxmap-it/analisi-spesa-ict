@@ -15,9 +15,9 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - **Per CF:** CIG ICT ministeriali 10.758 → 23.644 (5,0 → 8,2 mld 2020-26). **Giustizia** 2024 quota CIG attivi/pagato **0,96** (era 0,03: artefatto del nome); **MEF 0,25** (97 vs 388 M€), resta il solo buco (~0,3 mld/anno).
 - **Sogei:** CIG in-house con SA MEF ~26 M€/anno [stima] (DF 77 M€ triennio, Giustizia tributaria 47); agenzie fiscali 981/381/298 M€ (fuori dai gestionali MEF); Sogei come SA ~0,69 mld di quota 2024 (non attribuibile, doppio conteggio). R71.
 - **Durata ANAC** vuota nel 90 % dei CIG dal 2024 (R69). **Seconda via PG** 492/740/675/452/1.007/979 M€ 2019-24, discontinuità 2023 (MEF 18→297).
-- **#30 SIOPE** BDAP vs diretto (5 regioni): ICT 99,4 % coppie uguali, totale −0,7 % (2024); troncamento 2025 riferito da AgID non riprodotto (tutti a dicembre). R70.
+- **#30 SIOPE CHIUSO** (giro 0.3, 9/11): BDAP vs diretto su 20 regioni 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2, abbinamento a 3 livelli, 2025: 11.362/11.432 enti). **Difetto AgID riprodotto** [V]: 2025 Lombardia + FVG fermi a marzo = 1.717 comuni (BDAP 19,5 vs 92,7 mld Lombardia; ICT −412 M€), 84 comuni di Trento assenti; risorse caricate 6/3/2026, ancora così. 2023/2024 completi; ICT uguali 100 % / 99,5 % (2025 senza LOM/FVG 99,8 %). R70, **R75**.
 - **Rendiconto #66:** sezione § 4.12 pronta in `report/imbuto/sezione-4.12-bdap-fase2.md` (non inserita nel rendiconto).
-- **Prossimi:** altre 15 regioni SIOPE per #30; codice IPA dell'Università (manca `m_ur`); corrispettivi Sogei per committente (fonte da trovare, R65/R71).
+- **Prossimi:** codice IPA dell'Università (manca `m_ur`); corrispettivi Sogei per committente (fonte da trovare, R65/R71).
 
 ## #67 BDAP NELL IMBUTO — punto di ripresa giro 0.1, 9/11/2026
 - **Pagina** `/progetto/bdap/` (v0.1): famiglie, campi, difetti (R61, R63-R65), cosa usiamo e cosa no. Ripresa: `lavoro/bdap-imbuto/STATO.md`.

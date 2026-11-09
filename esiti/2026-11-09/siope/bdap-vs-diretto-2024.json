@@ -1,53 +1,285 @@
 {
- "versione": "siope-bdap-vs-diretto 0.1 (2026-11-09)",
+ "versione": "siope-bdap-vs-diretto 0.2 (2026-11-09)",
  "anno": 2024,
  "regioni": [
-  "LAZIO",
-  "UMBRIA",
+  "ABRUZZO",
   "BASILICATA",
+  "CALABRIA",
+  "CAMPANIA",
+  "EMILIA-ROMAGNA",
+  "FRIULI-VENEZIA GIULIA",
+  "LAZIO",
+  "LIGURIA",
+  "LOMBARDIA",
+  "MARCHE",
   "MOLISE",
-  "LIGURIA"
+  "PIEMONTE",
+  "PUGLIA",
+  "SARDEGNA",
+  "SICILIA",
+  "TOSCANA",
+  "TRENTINO-ALTO ADIGE",
+  "UMBRIA",
+  "VALLE D'AOSTA",
+  "VENETO"
  ],
  "ingressi": {
   "SIOPE_ANAGRAFICHE.zip": "44ea0b5347da787b985611bd2df1c03e7965d13100a1d923108bfde65303d990",
-  "SIOPE_USCITE.2024.zip": "dc0715d090a008a09844c5e50f5918b18b6f9ccec23407aa911aa663b56c1cf8",
-  "bdap-LAZIO": {
-   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7db1ef58-43c0-4f75-b6cc-b73f982c930c.csv",
-   "sha256": "212f30ed7c7c1cd9959254d7bd9802a440e276bcbabc68e5735ec5215a62dcaf"
-  },
-  "bdap-UMBRIA": {
-   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fb4ba0a9-3caa-4053-a594-3d4d2d5f003a.csv",
-   "sha256": "07d64ef13bfe1cfd100fb47172eb8a0c160a4dc577c0cb157f7bed0fd14ec451"
+  "bdap-ABRUZZO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f5c66962-4993-4782-ad68-6b9730fcbaa0.csv",
+   "sha256": "5ecac3356afff5484dfdbe118a18ef8327249b4a917515943c4a1712e410df21",
+   "metadata_modified": "2025-01-23T12:54:21.000000",
+   "risorsa_creata": "2025-01-23T12:54:21.000000"
   },
   "bdap-BASILICATA": {
    "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9fe0c5ec-ee29-464a-bfe5-2b7ae62ab800.csv",
-   "sha256": "251209bb5f7a9c4b120f32f2844d77b883ee026157724c56cf34f2d833be1519"
+   "sha256": "251209bb5f7a9c4b120f32f2844d77b883ee026157724c56cf34f2d833be1519",
+   "metadata_modified": "2025-02-19T10:28:16.000000",
+   "risorsa_creata": "2025-02-19T10:28:17.000000"
   },
-  "bdap-MOLISE": {
-   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2f93d1d1-2878-4060-9cf2-f322834c44ae.csv",
-   "sha256": "706f9344ca1cac2ee81fbed6b3301cf5ebf1c517dff89a57d9ca4fb4bf7b77d9"
+  "bdap-CALABRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b18068ba-de00-425b-b4ff-014781b72b1c.csv",
+   "sha256": "f814ae2f29c9af7c0c70ec3a8374b8a711036cef16543386ece3556af421761f",
+   "metadata_modified": "2025-01-23T13:04:16.000000",
+   "risorsa_creata": "2025-01-23T13:04:17.000000"
+  },
+  "bdap-CAMPANIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4e1df419-8415-4615-bf04-f079dc7c3df3.csv",
+   "sha256": "04bfc9a6f509461ff6f71a30e9689b1460e4e9fda814f7d023c4e3f5f7181922",
+   "metadata_modified": "2025-02-18T10:41:52.000000",
+   "risorsa_creata": "2025-02-18T10:41:52.000000"
+  },
+  "bdap-EMILIA-ROMAGNA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3b0a7a89-a4ce-4025-a0e5-64f9a1c9b45e.csv",
+   "sha256": "9c05ae4f106102fa4e48f8af6b94f8d2691bf234fc83255ed3c7319187bf7715",
+   "metadata_modified": "2025-02-19T10:33:34.000000",
+   "risorsa_creata": "2025-02-19T10:33:34.000000"
+  },
+  "bdap-FRIULI-VENEZIA GIULIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/0bf47423-5d96-4d7e-89d5-446c9f8d7296.csv",
+   "sha256": "746b43feec050d9bda12b9e5291c8ca5c34c06af31b2db2ce3148d103199c603",
+   "metadata_modified": "2025-01-23T13:07:11.000000",
+   "risorsa_creata": "2025-01-23T13:07:12.000000"
+  },
+  "bdap-LAZIO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7db1ef58-43c0-4f75-b6cc-b73f982c930c.csv",
+   "sha256": "212f30ed7c7c1cd9959254d7bd9802a440e276bcbabc68e5735ec5215a62dcaf",
+   "metadata_modified": "2025-02-19T10:45:28.000000",
+   "risorsa_creata": "2025-02-19T10:45:28.000000"
   },
   "bdap-LIGURIA": {
    "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/03686c85-97ad-4e3b-916b-cb771e5e08fc.csv",
-   "sha256": "3d6b79d5b7ca21b83751917477232c167508621d1b16efbec9c6d4a52ccbfcd9"
-  }
+   "sha256": "3d6b79d5b7ca21b83751917477232c167508621d1b16efbec9c6d4a52ccbfcd9",
+   "metadata_modified": "2025-01-23T13:15:06.000000",
+   "risorsa_creata": "2025-01-23T13:15:07.000000"
+  },
+  "bdap-LOMBARDIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/197e7b2e-4447-4ccd-8209-9f3206e4e0c7.csv",
+   "sha256": "7d248b5295153416ce3c9e28792e21495014247373b87b428f0a34b630e41f8e",
+   "metadata_modified": "2025-02-19T09:47:39.000000",
+   "risorsa_creata": "2025-02-19T09:47:39.000000"
+  },
+  "bdap-MARCHE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b52020a2-7738-4f54-9d74-54c783f597d9.csv",
+   "sha256": "55741408b9cebe61d2ceee9a4443849a967942c327400d08479228094ed1f743",
+   "metadata_modified": "2025-01-23T13:21:34.000000",
+   "risorsa_creata": "2025-01-23T13:21:35.000000"
+  },
+  "bdap-MOLISE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2f93d1d1-2878-4060-9cf2-f322834c44ae.csv",
+   "sha256": "706f9344ca1cac2ee81fbed6b3301cf5ebf1c517dff89a57d9ca4fb4bf7b77d9",
+   "metadata_modified": "2025-01-23T13:01:06.000000",
+   "risorsa_creata": "2025-01-23T13:01:06.000000"
+  },
+  "bdap-PIEMONTE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/42f61eb2-5475-4de2-8d58-34f9a2340608.csv",
+   "sha256": "011ce657cbee70ba8f79054921c6ac8573ebd7fcbad82a6a6c29f04c4f1740c6",
+   "metadata_modified": "2025-02-18T11:23:24.000000",
+   "risorsa_creata": "2025-02-18T11:23:25.000000"
+  },
+  "bdap-PUGLIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1a0ea594-ae26-433e-87cf-e4a891e0f897.csv",
+   "sha256": "67ebaa72e9ea8b4534659e478d81a6948d23a74f463a44cf7db7eb8c05627761",
+   "metadata_modified": "2025-02-19T10:36:15.000000",
+   "risorsa_creata": "2025-02-19T10:36:16.000000"
+  },
+  "bdap-SARDEGNA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c1dc46bb-6767-49d3-a315-c12e50e18803.csv",
+   "sha256": "9451b71827475b5490853bb9bd33b50a763e414d8985562eb6259ee0e6dae89c",
+   "metadata_modified": "2025-01-23T13:27:18.000000",
+   "risorsa_creata": "2025-01-23T13:27:18.000000"
+  },
+  "bdap-SICILIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2302c726-a0f3-4c24-bb09-369e7cd8f5c5.csv",
+   "sha256": "e37fd310dbd27e4bb506e7937f6031cfc1298848feb8c85ca4f600a9741f0e36",
+   "metadata_modified": "2025-01-23T13:11:36.000000",
+   "risorsa_creata": "2025-01-23T13:11:37.000000"
+  },
+  "bdap-TOSCANA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/5604bf94-08db-40ec-a5f9-403687f4576a.csv",
+   "sha256": "09b7ba535d379b0b5c3728f44ef0cb15dc23bb0f5aa4aa78b1fb338426cb2a61",
+   "metadata_modified": "2025-02-19T10:40:44.000000",
+   "risorsa_creata": "2025-02-19T10:40:44.000000"
+  },
+  "bdap-TRENTINO-ALTO ADIGE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ba8e498f-bcc9-4a46-bb0c-76ec35537c40.csv",
+   "sha256": "25924acfc672755b7ba7f7e8e6bc19f1ccd927a1c17fa11fd661a0a0b8045d63",
+   "metadata_modified": "2025-02-19T10:21:08.000000",
+   "risorsa_creata": "2025-02-19T10:21:09.000000"
+  },
+  "bdap-UMBRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fb4ba0a9-3caa-4053-a594-3d4d2d5f003a.csv",
+   "sha256": "07d64ef13bfe1cfd100fb47172eb8a0c160a4dc577c0cb157f7bed0fd14ec451",
+   "metadata_modified": "2025-01-23T12:59:54.000000",
+   "risorsa_creata": "2025-01-23T12:59:55.000000"
+  },
+  "bdap-VALLE D'AOSTA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/93f6455d-b22e-4c63-b67b-35dd79c13d4e.csv",
+   "sha256": "ae1b5b611ad5f3aad01f7785231607f9e5afa4324dbee1b50fe860e8a8efa443",
+   "metadata_modified": "2025-01-23T13:22:34.000000",
+   "risorsa_creata": "2025-01-23T13:22:35.000000"
+  },
+  "bdap-VENETO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/5c3ac132-4279-4f06-bb75-1d590ddda1b3.csv",
+   "sha256": "98ad3b882986c13fb28f043d47702c59b19e45f18d1e702d0e16bab9f7d04e09",
+   "metadata_modified": "2025-02-19T10:28:42.000000",
+   "risorsa_creata": "2025-02-19T10:28:42.000000"
+  },
+  "SIOPE_USCITE.2024.zip": "dc0715d090a008a09844c5e50f5918b18b6f9ccec23407aa911aa663b56c1cf8",
+  "SIOPE_USCITE.2024.zip:interno": "USCITE_2024.D261105.H2058.csv"
  },
  "enti": {
-  "bdap": 1473,
-  "diretto_univoci": 2657,
-  "diretto_ambigui": 8,
-  "abbinati": 1428,
-  "solo_bdap": 45,
-  "esempi_solo_bdap": [
+  "bdap": 11161,
+  "diretto_univoci": 18027,
+  "diretto_ambigui": 69,
+  "abbinati": 10545,
+  "per_livello": {
+   "L1": 10499,
+   "L2": 36,
+   "L3": 10
+  },
+  "solo_bdap": 616,
+  "solo_bdap_per_tipo": {
+   "C1": 9,
+   "CO": 381,
+   "CC": 14,
+   "IS": 32,
+   "UC": 48,
+   "UN": 6,
+   "08": 6,
+   "04": 5,
+   "AS": 24,
+   "PN": 4,
+   "CM": 13,
+   "RO": 7,
+   "AG": 3,
+   "05": 2,
+   "AU": 1,
+   "IZ": 1,
+   "EP": 4,
+   "01": 3,
+   "PE": 2,
+   "EB": 3,
+   "EL": 3,
+   "CA": 3,
+   "RE": 3,
+   "AP": 3,
+   "AO": 11,
+   "03": 1,
+   "ES": 1,
+   "MZ": 1,
+   "06": 1,
+   "IR": 3,
+   "02": 1,
+   "ER": 2,
+   "PR": 4,
+   "RC": 2,
+   "OP": 1,
+   "07": 1,
+   "EU": 1,
+   "EO": 2,
+   "FL": 1,
+   "CG": 1,
+   "IC": 1,
+   "VE": 1
+  },
+  "esempi_l2": [
    [
-    "008",
-    "003",
-    "COMUNE DI AQUILA DI ARROSCIA"
+    "CONSORZIO INTERCOMUNALE DI SERVIZI",
+    "CONSORZIO INTERCOMUNALE DI SERVIZI CIDIS",
+    0.919
    ],
    [
-    "008",
-    "023",
-    "COMUNE DI COSIO DI ARROSCIA"
+    "CONSORZIO INTECOMUNALE DEI SERVIZI SOCIALI CISS DI PINEROLO",
+    "CONSORZIO INTERCOMUNALE DEI SERVIZI SOCIALI CISS DEL PINEROLESE",
+    0.934
+   ],
+   [
+    "CONSORZIO INTERCOMUNALE PER LA GESTIONE DEI SERVIZI SOCIO ASSISTENZIALI",
+    "CONSORZIO INTERCOMUNALE PER LA GESTIONE DEI SERVIZI SOCIO ASSISTENZIALI DI BORGOMANERO",
+    0.904
+   ],
+   [
+    "UNIONE DEI COMUNI COMUNITA COLLINARE MONFERRATO VALLE VERSA",
+    "UNIONE DEI COMUNI DELLA COMUNITA COLLINARE MONFERRATO VALLE VERSA",
+    0.952
+   ],
+   [
+    "ISTITUTO ISTRUZIONE SUPERIORE VINCI NERVI FERMI",
+    "ISTITUTO DI ISTRUZIONE SUPERIORE VINCI NERVI FERMI",
+    0.969
+   ],
+   [
+    "COMUNE DI AQUILA DI ARROSCIA",
+    "COMUNE DI AQUILA D ARROSCIA",
+    0.982
+   ],
+   [
+    "COMUNE DI COSIO DI ARROSCIA",
+    "COMUNE DI COSIO D ARROSCIA",
+    0.981
+   ],
+   [
+    "UNIONE DEI COMUNI DELLA ALTA VALLE ARROSCIA",
+    "UNIONE DEI COMUNI DELL ALTA VALLE ARROSCIA",
+    0.988
+   ],
+   [
+    "FONDAZIONE IRCCS ISTITUTO NAZIONALE NEUROLOGICO CARLO BESTA",
+    "FONDAZIONE IRCCS ISTITUTO NEUROLOGICO CARLO BESTA",
+    0.907
+   ],
+   [
+    "UNIVERSITA DEGLI STUDI MILANO BICOCCA",
+    "UNIVERSITA DEGLI STUDI DI MILANO BICOCCA",
+    0.961
+   ]
+  ],
+  "esempi_solo_bdap": [
+   [
+    "001",
+    "078",
+    "AZIENDA SANITARIA LOCALE TO5"
+   ],
+   [
+    "005",
+    "002",
+    "COMUNITA COLLINARE ALTO ASTIGIANO"
+   ],
+   [
+    "006",
+    "003",
+    "AZIENDA OSPEDALIERO UNIVERSITARIA SS ANTONIO E BIAGIO E C ARRIGO ALESSANDRIA"
+   ],
+   [
+    "006",
+    "114",
+    "CONSORZIO INTERCOMUNALE DEL NOVESE DEI SERVIZI ALLA PERSONA"
+   ],
+   [
+    "007",
+    "036",
+    "UNITE DES COMMUNES VALDOTAINES WALSER"
    ],
    [
     "008",
@@ -56,18 +288,8 @@
    ],
    [
     "008",
-    "042",
-    "UNIONE DEI COMUNI DELLA ALTA VALLE ARROSCIA"
-   ],
-   [
-    "008",
     "059",
     "COMUNITA MONTANA ARGENTINA ARMEA"
-   ],
-   [
-    "008",
-    "063",
-    "COMUNE DI VALLECROSIA"
    ],
    [
     "009",
@@ -100,69 +322,488 @@
     "IRCCS OSPEDALE POLICLINICO SAN MARTINO"
    ],
    [
-    "054",
-    "023",
-    "ISTITUTO COMPRENSIVO GUALDO TADINO"
+    "015",
+    "146",
+    "AGENZIA PER IL TRASPORTO PUBBLICO LOCALE DEL BACINO DI MILANO MONZA E BRIANZA LODI E PAVIA"
    ],
    [
-    "054",
-    "035",
-    "COMUNITA MONTANA VALNERINA"
+    "018",
+    "016",
+    "UNIONE DEI COMUNI LOMBARDA BORGHI E VALLI D OLTREPO"
    ],
    [
-    "054",
-    "039",
-    "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DELL UMBRIA"
+    "018",
+    "082",
+    "COMUNE DI LIRIO"
    ],
    [
-    "057",
-    "053",
-    "UNIONE DI COMUNI DELLA BASSA SABINA"
+    "021",
+    "008",
+    "CONSIGLIO REGIONALE DELLA REGIONE AUTONOMA TRENTINO ALTO ADIGE SUDTIROL"
    ],
    [
-    "057",
-    "073",
-    "ENTE RISERVA NATURALE REGIONALE MONTE NAVEGNA E MONTE CERVIA"
+    "022",
+    "116",
+    "ISTITUTO COMPRENSIVO DI SCUOLA PRIMARIA E SECONDARIA DI PRIMO GRADO MEZZOCORONA"
    ],
    [
-    "058",
-    "003",
-    "ASL ROMA 6"
+    "022",
+    "205",
+    "AZIENDA PROVINCIALE PER I SERVIZI SANITARI DELLA PROVINCIA AUTONOMA DI TRENTO"
    ],
    [
-    "058",
-    "004",
-    "COMUNITA MONTANA MONTI DELLA TOLFA"
-   ],
-   [
-    "058",
-    "038",
-    "CONSORZIO INTERCOMUNALE DEI SEREVIZI E INTERVENTI SOCIALI VALLE DEL TEVERE"
+    "022",
+    "205",
+    "MUSEO DELLE SCIENZE"
    ]
   ]
  },
  "ultimo_mese": {
-  "uguale": 1428,
-  "distribuzione_bdap": {
-   "12": 1428
+  "uguale": 10538,
+  "bdap_dopo": 7,
+  "bdap_comuni_tutti": {
+   "12": 7903
   },
-  "distribuzione_diretto": {
-   "12": 1428
+  "diretto_comuni_italia": {
+   "12": 7903
   },
-  "esempi": []
+  "diretto_comuni_italia_senza_movimenti": 322,
+  "per_regione": {
+   "ABRUZZO": {
+    "enti": 398,
+    "comuni": 305,
+    "comuni_ultimo_mese": {
+     "12": 305
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "BASILICATA": {
+    "enti": 185,
+    "comuni": 131,
+    "comuni_ultimo_mese": {
+     "12": 131
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "CALABRIA": {
+    "enti": 538,
+    "comuni": 404,
+    "comuni_ultimo_mese": {
+     "12": 404
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "CAMPANIA": {
+    "enti": 766,
+    "comuni": 550,
+    "comuni_ultimo_mese": {
+     "12": 550
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "EMILIA-ROMAGNA": {
+    "enti": 577,
+    "comuni": 330,
+    "comuni_ultimo_mese": {
+     "12": 330
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "enti": 299,
+    "comuni": 215,
+    "comuni_ultimo_mese": {
+     "12": 215
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LAZIO": {
+    "enti": 618,
+    "comuni": 378,
+    "comuni_ultimo_mese": {
+     "12": 378
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LIGURIA": {
+    "enti": 331,
+    "comuni": 234,
+    "comuni_ultimo_mese": {
+     "12": 234
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LOMBARDIA": {
+    "enti": 2056,
+    "comuni": 1504,
+    "comuni_ultimo_mese": {
+     "12": 1504
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "MARCHE": {
+    "enti": 319,
+    "comuni": 225,
+    "comuni_ultimo_mese": {
+     "12": 225
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "MOLISE": {
+    "enti": 196,
+    "comuni": 136,
+    "comuni_ultimo_mese": {
+     "12": 136
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "PIEMONTE": {
+    "enti": 1476,
+    "comuni": 1180,
+    "comuni_ultimo_mese": {
+     "12": 1180
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "PUGLIA": {
+    "enti": 382,
+    "comuni": 257,
+    "comuni_ultimo_mese": {
+     "12": 257
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "SARDEGNA": {
+    "enti": 503,
+    "comuni": 377,
+    "comuni_ultimo_mese": {
+     "12": 377
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "SICILIA": {
+    "enti": 645,
+    "comuni": 391,
+    "comuni_ultimo_mese": {
+     "12": 391
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "TOSCANA": {
+    "enti": 384,
+    "comuni": 273,
+    "comuni_ultimo_mese": {
+     "12": 273
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "enti": 423,
+    "comuni": 282,
+    "comuni_ultimo_mese": {
+     "12": 282
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "UMBRIA": {
+    "enti": 143,
+    "comuni": 92,
+    "comuni_ultimo_mese": {
+     "12": 92
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "VALLE D'AOSTA": {
+    "enti": 99,
+    "comuni": 74,
+    "comuni_ultimo_mese": {
+     "12": 74
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "VENETO": {
+    "enti": 823,
+    "comuni": 565,
+    "comuni_ultimo_mese": {
+     "12": 565
+    },
+    "enti_ultimo_mese_lt12": 0
+   }
+  },
+  "esempi_differenti": [
+   {
+    "ente": [
+     "025",
+     "071",
+     "COMUNE DI LONGARONE"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "006",
+     "191",
+     "COMUNE DI CASSANO SPINOLA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "051",
+     "002",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DI AREZZO SIENA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "070",
+     "006",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DEL MOLISE"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "052",
+     "037",
+     "COMUNE DI MONTALCINO"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "016",
+     "252",
+     "COMUNE DI SANT OMOBONO TERME"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "054",
+     "039",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DELL UMBRIA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   }
+  ]
  },
  "tutti": {
-  "euro_bdap": 84430117028,
-  "euro_diretto": 85004313869,
-  "uguali": 101838,
-  "diverse": 3045,
-  "euro_diff_assoluta": 2254141717,
-  "solo_diretto": 570,
-  "euro_solo_diretto": 163931492,
-  "solo_bdap": 6,
-  "euro_solo_bdap": 23891,
-  "coppie": 105459,
+  "euro_bdap": 545634724777,
+  "euro_diretto": 552967643655,
+  "uguali": 816274,
+  "diverse": 18073,
+  "euro_diff_assoluta": 14065142736,
+  "solo_diretto": 3040,
+  "euro_solo_diretto": 2141506453,
+  "solo_bdap": 650,
+  "euro_solo_bdap": 64399750,
+  "coppie": 838037,
+  "quota_uguali_su_entrambe": 0.9783,
+  "per_regione": {
+   "ABRUZZO": {
+    "euro_bdap": 12728411564,
+    "euro_diretto": 12737687072,
+    "coppie": 28539,
+    "uguali": 27764,
+    "quota_uguali": 0.9728
+   },
+   "BASILICATA": {
+    "euro_bdap": 5407746656,
+    "euro_diretto": 5443929017,
+    "coppie": 12493,
+    "uguali": 12255,
+    "quota_uguali": 0.9809
+   },
+   "CALABRIA": {
+    "euro_bdap": 17747774260,
+    "euro_diretto": 17263138810,
+    "coppie": 31965,
+    "uguali": 30617,
+    "quota_uguali": 0.9578
+   },
+   "CAMPANIA": {
+    "euro_bdap": 55161638618,
+    "euro_diretto": 57854957938,
+    "coppie": 48949,
+    "uguali": 46681,
+    "quota_uguali": 0.9537
+   },
+   "EMILIA-ROMAGNA": {
+    "euro_bdap": 39979902497,
+    "euro_diretto": 40017271804,
+    "coppie": 49408,
+    "uguali": 48860,
+    "quota_uguali": 0.9889
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "euro_bdap": 8939954111,
+    "euro_diretto": 8950534757,
+    "coppie": 27879,
+    "uguali": 27374,
+    "quota_uguali": 0.9819
+   },
+   "LAZIO": {
+    "euro_bdap": 54586566585,
+    "euro_diretto": 55019963198,
+    "coppie": 43841,
+    "uguali": 41958,
+    "quota_uguali": 0.957
+   },
+   "LIGURIA": {
+    "euro_bdap": 14277640586,
+    "euro_diretto": 14381433454,
+    "coppie": 25133,
+    "uguali": 24522,
+    "quota_uguali": 0.9757
+   },
+   "LOMBARDIA": {
+    "euro_bdap": 88801849782,
+    "euro_diretto": 88786319424,
+    "coppie": 166402,
+    "uguali": 164475,
+    "quota_uguali": 0.9884
+   },
+   "MARCHE": {
+    "euro_bdap": 13170759990,
+    "euro_diretto": 13543705462,
+    "coppie": 28530,
+    "uguali": 28128,
+    "quota_uguali": 0.9859
+   },
+   "MOLISE": {
+    "euro_bdap": 3137488748,
+    "euro_diretto": 3139165218,
+    "coppie": 11660,
+    "uguali": 11454,
+    "quota_uguali": 0.9823
+   },
+   "PIEMONTE": {
+    "euro_bdap": 38176563284,
+    "euro_diretto": 38188753468,
+    "coppie": 113889,
+    "uguali": 111504,
+    "quota_uguali": 0.9791
+   },
+   "PUGLIA": {
+    "euro_bdap": 29807305348,
+    "euro_diretto": 30738821573,
+    "coppie": 31592,
+    "uguali": 30827,
+    "quota_uguali": 0.9758
+   },
+   "SICILIA": {
+    "euro_bdap": 51138692192,
+    "euro_diretto": 54082828868,
+    "coppie": 42399,
+    "uguali": 40510,
+    "quota_uguali": 0.9554
+   },
+   "TOSCANA": {
+    "euro_bdap": 36208749142,
+    "euro_diretto": 36435368506,
+    "coppie": 39976,
+    "uguali": 39641,
+    "quota_uguali": 0.9916
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "euro_bdap": 14654624093,
+    "euro_diretto": 14657257759,
+    "coppie": 38830,
+    "uguali": 38025,
+    "quota_uguali": 0.9793
+   },
+   "UMBRIA": {
+    "euro_bdap": 7533177280,
+    "euro_diretto": 7532160508,
+    "coppie": 12276,
+    "uguali": 12145,
+    "quota_uguali": 0.9893
+   },
+   "VALLE D'AOSTA": {
+    "euro_bdap": 2722346560,
+    "euro_diretto": 2723539817,
+    "coppie": 9287,
+    "uguali": 9108,
+    "quota_uguali": 0.9807
+   },
+   "VENETO": {
+    "euro_bdap": 51453533481,
+    "euro_diretto": 51470807003,
+    "coppie": 71299,
+    "uguali": 70426,
+    "quota_uguali": 0.9878
+   }
+  },
   "esempi_diverse": [
+   {
+    "ente": [
+     "082",
+     "053",
+     "GESTIONE SANITARIA REGIONE SICILIANA"
+    ],
+    "codice": "U7019902001",
+    "bdap": 108031882.15,
+    "diretto": 2985963367.15
+   },
+   {
+    "ente": [
+     "063",
+     "049",
+     "GESTIONE SANITARIA REGIONE CAMPANIA"
+    ],
+    "codice": "U1040102020",
+    "bdap": 7285896093.24,
+    "diretto": 9351964698.54
+   },
+   {
+    "ente": [
+     "072",
+     "006",
+     "GESTIONE SANITARIA REGIONE PUGLIA"
+    ],
+    "codice": "U7019902001",
+    "bdap": 104382968.85,
+    "diretto": 1044568025.9
+   },
+   {
+    "ente": [
+     "063",
+     "049",
+     "GESTIONE SANITARIA REGIONE CAMPANIA"
+    ],
+    "codice": "U1040102025",
+    "bdap": 2257041694.74,
+    "diretto": 2775489513.94
+   },
+   {
+    "ente": [
+     "079",
+     "023",
+     "REGIONE CALABRIA"
+    ],
+    "codice": "U0000099999",
+    "bdap": 422106978.11,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "042",
+     "002",
+     "GESTIONE SANITARIA REGIONE MARCHE"
+    ],
+    "codice": "U7019902001",
+    "bdap": 67402352.53,
+    "diretto": 432146884.41
+   },
    {
     "ente": [
      "058",
@@ -172,6 +813,16 @@
     "codice": "U0000099999",
     "bdap": 298225209.5,
     "diretto": 0.0
+   },
+   {
+    "ente": [
+     "048",
+     "017",
+     "GESTIONE SANITARIA REGIONE TOSCANA"
+    ],
+    "codice": "U7019902001",
+    "bdap": 1025667063.76,
+    "diretto": 1248380527.58
    },
    {
     "ente": [
@@ -185,6 +836,16 @@
    },
    {
     "ente": [
+     "079",
+     "023",
+     "AZIENDA OSPEDALIERO UNIVERSITARIA RENATO DULBECCO"
+    ],
+    "codice": "U9999",
+    "bdap": 165762835.43,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
      "058",
      "091",
      "ROMA CAPITALE"
@@ -192,6 +853,26 @@
     "codice": "U3040701001",
     "bdap": 129686015.34,
     "diretto": 292547570.23
+   },
+   {
+    "ente": [
+     "085",
+     "004",
+     "AZIENDA SANITARIA PROVINCIALE DI CALTANISSETTA"
+    ],
+    "codice": "U9999",
+    "bdap": 142734082.71,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "072",
+     "006",
+     "UNIVERSITA DEGLI STUDI DI BARI ALDO MORO"
+    ],
+    "codice": "U0000099999",
+    "bdap": 115465911.71,
+    "diretto": 0.0
    },
    {
     "ente": [
@@ -205,275 +886,313 @@
    },
    {
     "ente": [
-     "060",
-     "038",
-     "AZIENDA SANITARIA LOCALE FROSINONE"
+     "082",
+     "053",
+     "REGIONE SICILIANA"
     ],
-    "codice": "U9999",
-    "bdap": 83205236.78,
-    "diretto": 0.0
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
-    ],
-    "codice": "U1010101002",
-    "bdap": 233844485.98,
-    "diretto": 302126971.3
-   },
-   {
-    "ente": [
-     "058",
-     "039",
-     "ISTITUTO NAZIONALE DI FISICA NUCLEARE INFN"
-    ],
-    "codice": "U0000099999",
-    "bdap": 61108532.43,
-    "diretto": 0.0
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "GESTIONE COMMISSARIALE COMUNE ROMA"
-    ],
-    "codice": "U0000099999",
-    "bdap": 56143843.36,
-    "diretto": 0.0
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "ROMA CAPITALE"
-    ],
-    "codice": "U7010201001",
-    "bdap": 158061173.31,
-    "diretto": 203273304.52
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "ROMA CAPITALE"
-    ],
-    "codice": "U1010201001",
-    "bdap": 181254644.53,
-    "diretto": 223098214.66
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "ROMA CAPITALE"
-    ],
-    "codice": "U7020102001",
-    "bdap": 266378364.48,
-    "diretto": 306408976.0
-   },
-   {
-    "ente": [
-     "076",
-     "063",
-     "GESTIONE SANITARIA REGIONE BASILICATA"
-    ],
-    "codice": "U7019902001",
-    "bdap": 173091450.15,
-    "diretto": 211130005.28
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "GESTIONE COMMISSARIALE COMUNE ROMA"
-    ],
-    "codice": "U4030104999",
-    "bdap": 38916558.47,
-    "diretto": 72324374.06
-   },
-   {
-    "ente": [
-     "058",
-     "039",
-     "ISTITUTO NAZIONALE DI FISICA NUCLEARE INFN"
-    ],
-    "codice": "U1010101002",
-    "bdap": 63659449.56,
-    "diretto": 93783703.88
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "ROMA CAPITALE"
-    ],
-    "codice": "U4030104003",
-    "bdap": 8329485.13,
-    "diretto": 38028322.28
+    "codice": "U1090201001",
+    "bdap": 323313698.13,
+    "diretto": 426449923.98
    }
   ]
  },
  "ict": {
-  "euro_bdap": 473348048,
-  "euro_diretto": 473361129,
-  "uguali": 3537,
-  "diverse": 16,
-  "euro_diff_assoluta": 61175,
-  "solo_diretto": 5,
-  "euro_solo_diretto": 1337,
-  "coppie": 3558,
+  "euro_bdap": 2180273713,
+  "euro_diretto": 2180753260,
+  "uguali": 29104,
+  "diverse": 139,
+  "euro_diff_assoluta": 2580951,
+  "solo_diretto": 40,
+  "euro_solo_diretto": 171298,
+  "solo_bdap": 14,
+  "euro_solo_bdap": 160065,
+  "coppie": 29297,
+  "quota_uguali_su_entrambe": 0.9952,
+  "per_regione": {
+   "ABRUZZO": {
+    "euro_bdap": 44733043,
+    "euro_diretto": 44731930,
+    "coppie": 933,
+    "uguali": 931,
+    "quota_uguali": 0.9979
+   },
+   "BASILICATA": {
+    "euro_bdap": 13271018,
+    "euro_diretto": 13271020,
+    "coppie": 329,
+    "uguali": 328,
+    "quota_uguali": 0.997
+   },
+   "CALABRIA": {
+    "euro_bdap": 40138910,
+    "euro_diretto": 40139710,
+    "coppie": 715,
+    "uguali": 714,
+    "quota_uguali": 0.9986
+   },
+   "CAMPANIA": {
+    "euro_bdap": 130996837,
+    "euro_diretto": 131010385,
+    "coppie": 1269,
+    "uguali": 1259,
+    "quota_uguali": 0.9921
+   },
+   "EMILIA-ROMAGNA": {
+    "euro_bdap": 134415016,
+    "euro_diretto": 134423439,
+    "coppie": 1410,
+    "uguali": 1404,
+    "quota_uguali": 0.9957
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "euro_bdap": 23734981,
+    "euro_diretto": 24139525,
+    "coppie": 889,
+    "uguali": 878,
+    "quota_uguali": 0.9876
+   },
+   "LAZIO": {
+    "euro_bdap": 372777684,
+    "euro_diretto": 372765379,
+    "coppie": 1540,
+    "uguali": 1532,
+    "quota_uguali": 0.9948
+   },
+   "LIGURIA": {
+    "euro_bdap": 60295073,
+    "euro_diretto": 60322135,
+    "coppie": 911,
+    "uguali": 907,
+    "quota_uguali": 0.9956
+   },
+   "LOMBARDIA": {
+    "euro_bdap": 498243016,
+    "euro_diretto": 498425972,
+    "coppie": 6189,
+    "uguali": 6174,
+    "quota_uguali": 0.9976
+   },
+   "MARCHE": {
+    "euro_bdap": 53080902,
+    "euro_diretto": 52309457,
+    "coppie": 1013,
+    "uguali": 1007,
+    "quota_uguali": 0.9941
+   },
+   "MOLISE": {
+    "euro_bdap": 18654994,
+    "euro_diretto": 18656262,
+    "coppie": 337,
+    "uguali": 336,
+    "quota_uguali": 0.997
+   },
+   "PIEMONTE": {
+    "euro_bdap": 189763249,
+    "euro_diretto": 189780786,
+    "coppie": 4473,
+    "uguali": 4448,
+    "quota_uguali": 0.9944
+   },
+   "PUGLIA": {
+    "euro_bdap": 111404339,
+    "euro_diretto": 111342917,
+    "coppie": 1164,
+    "uguali": 1157,
+    "quota_uguali": 0.994
+   },
+   "SICILIA": {
+    "euro_bdap": 86068704,
+    "euro_diretto": 86125525,
+    "coppie": 1231,
+    "uguali": 1218,
+    "quota_uguali": 0.9894
+   },
+   "TOSCANA": {
+    "euro_bdap": 111676238,
+    "euro_diretto": 111677261,
+    "coppie": 1557,
+    "uguali": 1553,
+    "quota_uguali": 0.9974
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "euro_bdap": 89508569,
+    "euro_diretto": 90088244,
+    "coppie": 1394,
+    "uguali": 1376,
+    "quota_uguali": 0.9871
+   },
+   "UMBRIA": {
+    "euro_bdap": 24204308,
+    "euro_diretto": 24201363,
+    "coppie": 458,
+    "uguali": 456,
+    "quota_uguali": 0.9956
+   },
+   "VALLE D'AOSTA": {
+    "euro_bdap": 22511899,
+    "euro_diretto": 22546466,
+    "coppie": 447,
+    "uguali": 444,
+    "quota_uguali": 0.9933
+   },
+   "VENETO": {
+    "euro_bdap": 154794933,
+    "euro_diretto": 154795484,
+    "coppie": 2984,
+    "uguali": 2982,
+    "quota_uguali": 0.9993
+   }
+  },
   "esempi_diverse": [
    {
     "ente": [
-     "010",
-     "025",
-     "FONDAZIONE ISTITUTO ITALIANO DI TECNOLOGIA IIT"
+     "042",
+     "002",
+     "UNIVERSITA POLITECNICA DELLE MARCHE DI ANCONA"
     ],
     "codice": "U1030219999",
-    "bdap": 2097764.79,
-    "diretto": 2124153.0
+    "bdap": 1889152.45,
+    "diretto": 1098925.57
    },
    {
     "ente": [
-     "059",
-     "011",
-     "LICEO STATALE ALESSANDRO MANZONI"
+     "032",
+     "005",
+     "ISTITUTO NAZIONALE DI OCEANOGRAFIA E GEOFISICA SPERIMENTALE OGS"
     ],
     "codice": "U2020107999",
-    "bdap": 109100.3,
-    "diretto": 89426.48
+    "bdap": 1603761.08,
+    "diretto": 1956440.16
    },
    {
     "ente": [
-     "054",
-     "013",
-     "COMUNE DI CITTA DI CASTELLO"
+     "072",
+     "027",
+     "COMUNE DI MODUGNO"
+    ],
+    "codice": "U1030219999",
+    "bdap": 313535.09,
+    "diretto": 114715.99
+   },
+   {
+    "ente": [
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
     ],
     "codice": "U1030219001",
-    "bdap": 14458.4,
-    "diretto": 10085.4
+    "bdap": 753806.69,
+    "diretto": 921654.51
    },
    {
     "ente": [
-     "060",
-     "048",
-     "COMUNE DI PATRICA"
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
+    ],
+    "codice": "U2020107002",
+    "bdap": 781061.63,
+    "diretto": 936545.72
+   },
+   {
+    "ente": [
+     "072",
+     "027",
+     "COMUNE DI MODUGNO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 4473.33,
+    "diretto": 126410.38
+   },
+   {
+    "ente": [
+     "012",
+     "003",
+     "ISTITUTO COMPRENSIVO DANTE ALIGHIERI DI ANGERA"
+    ],
+    "codice": "U2020107999",
+    "bdap": 131232.0,
+    "diretto": 244371.0
+   },
+   {
+    "ente": [
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
+    ],
+    "codice": "U1030219005",
+    "bdap": 390809.93,
+    "diretto": 437544.23
+   },
+   {
+    "ente": [
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
+    ],
+    "codice": "U1030219004",
+    "bdap": 189058.0,
+    "diretto": 230650.76
+   },
+   {
+    "ente": [
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
+    ],
+    "codice": "U2020107001",
+    "bdap": 137444.89,
+    "diretto": 175590.87
+   },
+   {
+    "ente": [
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
+    ],
+    "codice": "U2020107004",
+    "bdap": 216848.37,
+    "diretto": 254450.11
+   },
+   {
+    "ente": [
+     "082",
+     "053",
+     "UNIVERSITA DEGLI STUDI DI PALERMO"
     ],
     "codice": "U1030219010",
-    "bdap": 21448.05,
-    "diretto": 24634.4
+    "bdap": 95136.68,
+    "diretto": 132036.68
    },
    {
     "ente": [
-     "058",
-     "091",
-     "ENTE REGIONALE PER IL DIRITTO ALLO STUDIO E LA PROMOZIONE DELLA CONOSCENZA DISCO"
-    ],
-    "codice": "U1030219001",
-    "bdap": 675135.87,
-    "diretto": 677435.87
-   },
-   {
-    "ente": [
-     "055",
-     "014",
-     "COMUNE DI GIOVE"
-    ],
-    "codice": "U1030219001",
-    "bdap": 54127.52,
-    "diretto": 55556.29
-   },
-   {
-    "ente": [
-     "070",
-     "006",
-     "AZIENDA SPECIALE REGIONALE MOLISE ACQUE"
-    ],
-    "codice": "U1030219001",
-    "bdap": 55091.46,
-    "diretto": 56359.28
-   },
-   {
-    "ente": [
-     "058",
-     "042",
-     "COMUNE DI GENAZZANO"
-    ],
-    "codice": "U1030219009",
-    "bdap": 3065.96,
-    "diretto": 4065.96
-   },
-   {
-    "ente": [
-     "057",
-     "030",
-     "COMUNE DI FRASSO SABINO"
+     "007",
+     "003",
+     "REGIONE AUTONOMA VALLE D AOSTA"
     ],
     "codice": "U1030219999",
-    "bdap": 6241.52,
-    "diretto": 6790.52
+    "bdap": 1704865.12,
+    "diretto": 1739213.61
    },
    {
     "ente": [
-     "010",
-     "025",
-     "UNIVERSITA DEGLI STUDI DI GENOVA"
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
     ],
-    "codice": "U1030219999",
-    "bdap": 1786344.89,
-    "diretto": 1786667.37
+    "codice": "U2020107003",
+    "bdap": 184393.86,
+    "diretto": 216926.95
    },
    {
     "ente": [
-     "008",
-     "042",
-     "COMUNE DI PIEVE DI TECO"
+     "022",
+     "205",
+     "UNIVERSITA DEGLI STUDI DI TRENTO"
     ],
-    "codice": "U1030219001",
-    "bdap": 21814.85,
-    "diretto": 22046.43
-   },
-   {
-    "ente": [
-     "058",
-     "091",
-     "CONSIGLIO PER LA RICERCA IN AGRICOLTURA E L ANALISI DELL ECONOMIA AGRARIA CREA"
-    ],
-    "codice": "U1030219003",
-    "bdap": 18061.72,
-    "diretto": 18210.72
-   },
-   {
-    "ente": [
-     "010",
-     "025",
-     "UNIVERSITA DEGLI STUDI DI GENOVA"
-    ],
-    "codice": "U1030219007",
-    "bdap": 29522.0,
-    "diretto": 29641.0
-   },
-   {
-    "ente": [
-     "059",
-     "014",
-     "COMUNE DI MINTURNO"
-    ],
-    "codice": "U1030219001",
-    "bdap": 119575.91,
-    "diretto": 119690.17
-   },
-   {
-    "ente": [
-     "056",
-     "059",
-     "AMMINISTRAZIONE PROVINCIALE DI VITERBO"
-    ],
-    "codice": "U1030219001",
-    "bdap": 188751.57,
-    "diretto": 188821.57
+    "codice": "U2020107999",
+    "bdap": 146798.54,
+    "diretto": 176453.73
    }
   ]
  }

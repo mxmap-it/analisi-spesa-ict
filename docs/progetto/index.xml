@@ -130,7 +130,7 @@ I file e il contenuto degli zip si archiviano nell&amp;rsquo;archivio content-ad
 &lt;li&gt;&lt;strong&gt;Fonti non ufficiali&lt;/strong&gt; (atti di enti aderenti, ricerca web): mostrate a parte, non cancellano la mancanza.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Accesso civico generalizzato&lt;/strong&gt; (art. 5 c. 2 d.lgs. 33/2013): ultima risorsa.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.2 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
+&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.3 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
 Legenda: &lt;strong&gt;[V]&lt;/strong&gt; verificato da noi su file archiviati con sha256; &lt;strong&gt;[R]&lt;/strong&gt; riferito da altri o dalla
 documentazione della fonte, non riprodotto.&lt;/p&gt;
 &lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
@@ -150,9 +150,11 @@ della &lt;strong&gt;Giustizia era quasi tutto un artefatto&lt;/strong&gt; della 
 &lt;li&gt;Il buco del &lt;strong&gt;MEF resta&lt;/strong&gt;: quota 2024 dei CIG attivi 97 M€ contro 388 pagati (0,25) [V]. I
 contratti in-house con Sogei che hanno un CIG ANAC ne spiegano poco (circa 26 M€ l&amp;rsquo;anno, [stima]);
 il resto non ha un CIG che vediamo (§ Sogei).&lt;/li&gt;
-&lt;li&gt;SIOPE via BDAP e SIOPE diretto coincidono sull&amp;rsquo;ICT (99,4 % delle coppie ente × codice uguali al
-euro, 2024, cinque regioni) e differiscono dello 0,7 % sul totale, per i pagamenti da
-regolarizzare [V]. Il troncamento a marzo 2025 riferito da AgID non si ripresenta sul file attuale [V].&lt;/li&gt;
+&lt;li&gt;SIOPE via BDAP e SIOPE diretto coincidono sull&amp;rsquo;ICT dove BDAP è completo (99,5-100 % delle coppie
+ente × codice uguali all&amp;rsquo;euro, 20 regioni, 2023-2025) e differiscono dello 0,7 % sul totale, per i pagamenti da
+regolarizzare [V]. Il &lt;strong&gt;difetto riferito da AgID si riproduce&lt;/strong&gt; su tutte le 20 regioni [V]: nel 2025
+Lombardia e Friuli-Venezia Giulia si fermano a marzo (1.717 comuni) e mancano 84 comuni di Trento;
+2023 e 2024 sono completi (§ SIOPE via BDAP, R75).&lt;/li&gt;
 &lt;li&gt;Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, &lt;strong&gt;servizi di
 assistenza informatica: 604 milioni nel 2023&lt;/strong&gt; [V].&lt;/li&gt;
 &lt;/ul&gt;

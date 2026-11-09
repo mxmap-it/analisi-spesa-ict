@@ -773,3 +773,14 @@
   perche_serve: "È l'unico modo di misurare per giurisdizione dove sono finiti i fondi della migrazione al cloud senza ricostruire la catena CUP → CIG → prodotto a mano"
   metrica: "Quota di CUP 1.2 con almeno un CIG; quota di CIG con CUP PNRR e aggiudicatario; quota di candidature con scheda ACN"
   rif: ["#43", "R57", "R58"]
+- id: R75
+  destinatario: MEF-RGS (BDAP, SIOPE regionale)
+  tipo: qualità
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "SIOPE via BDAP 2025 parziale e non segnalato (Lombardia, Friuli-Venezia Giulia, Trento)"
+  evidenza: "I file BDAP «2025 - Lombardia» e «2025 - Friuli-Venezia Giulia - SIOPE Movimenti cumulati mensili di Spesa» contengono solo i mesi 2025/01-03 per tutti gli enti (1.502 + 215 = 1.717 comuni; 19,54 contro 92,67 mld e 1,53 contro 8,60 mld del SIOPE diretto; ICT 135 contro 547 M€); il file del Trentino-Alto Adige ha 82 comuni della provincia di Trento contro 166 con movimenti nel diretto (84 assenti). Risorse caricate il 6/3/2026 (le altre 18 l 11/3/2026), ancora così il 9/11/2026; nessun campo o nota segnala la parzialità. Le altre regioni 2025 e tutte quelle 2023-2024 sono complete. Difetto già riferito da AgID (Cruscotto Italia, etl/sources/siope.py), ora riprodotto"
+  prova: "esiti/2026-11-09/siope/bdap-vs-diretto-2025.json (ultimo_mese.per_regione, ingressi con sha256: Lombardia 10e716cec0ff8ff69f95138a7844dac0fa4c0d7c57d327de5f02e5b9df13d812, FVG 2daebadc70a1680e6f14c100a69ec510f0d14eab61f03adce97f878e03225870, Trentino-AA aa875c9b89890e6c3130bcf437c474ad538add4c5714ceaab9aefba831f3e1d8); -2023.json e -2024.json; tools/verifiche/siope_bdap_vs_diretto.py 0.2"
+  richiesta: "Ricaricare i file 2025 di Lombardia, Friuli-Venezia Giulia e Trentino-Alto Adige con 12 mesi e tutti i comuni; dichiarare nei metadati della risorsa il periodo coperto e la data di estrazione, e un controllo di completezza (enti e mesi) prima della pubblicazione"
+  perche_serve: "Chi usa BDAP per il 2025 perde l 80 % della spesa di Lombardia e FVG (412 M€ di ICT) senza saperlo; la fonte non segnala che il file è parziale"
+  metrica: "Regioni-anno SIOPE BDAP con 12 mesi e lo stesso numero di comuni del SIOPE diretto"
+  rif: ["#30", "#67", "R70", "R63"]

@@ -4,7 +4,7 @@ date: 2026-11-09
 description: "Che cosa c'è in BDAP (MEF-RGS), come si scarica, che difetti ha, e come entra nell'imbuto della spesa ICT come denominatore dello Stato centrale e della sanità."
 ---
 
-**Versione 0.2 del 9/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
+**Versione 0.3 del 9/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
 Legenda: **[V]** verificato da noi su file archiviati con sha256; **[R]** riferito da altri o dalla
 documentazione della fonte, non riprodotto.
 
@@ -25,9 +25,11 @@ documentazione della fonte, non riprodotto.
 - Il buco del **MEF resta**: quota 2024 dei CIG attivi 97 M€ contro 388 pagati (0,25) [V]. I
   contratti in-house con Sogei che hanno un CIG ANAC ne spiegano poco (circa 26 M€ l'anno, [stima]);
   il resto non ha un CIG che vediamo (§ Sogei).
-- SIOPE via BDAP e SIOPE diretto coincidono sull'ICT (99,4 % delle coppie ente × codice uguali al
-  euro, 2024, cinque regioni) e differiscono dello 0,7 % sul totale, per i pagamenti da
-  regolarizzare [V]. Il troncamento a marzo 2025 riferito da AgID non si ripresenta sul file attuale [V].
+- SIOPE via BDAP e SIOPE diretto coincidono sull'ICT dove BDAP è completo (99,5-100 % delle coppie
+  ente × codice uguali all'euro, 20 regioni, 2023-2025) e differiscono dello 0,7 % sul totale, per i pagamenti da
+  regolarizzare [V]. Il **difetto riferito da AgID si riproduce** su tutte le 20 regioni [V]: nel 2025
+  Lombardia e Friuli-Venezia Giulia si fermano a marzo (1.717 comuni) e mancano 84 comuni di Trento;
+  2023 e 2024 sono completi (§ SIOPE via BDAP, R75).
 - Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, **servizi di
   assistenza informatica: 604 milioni nel 2023** [V].
 
@@ -225,33 +227,57 @@ Dallo stesso esito, campo `sogei` [V]:
   Sogei compra sul mercato con un CIG proprio. Sommare le due cose sarebbe un **doppio conteggio**;
   separarle richiede i corrispettivi di Sogei per committente (R65).
 
-## SIOPE via BDAP contro SIOPE diretto (#30, giro 0.2)
+## SIOPE via BDAP contro SIOPE diretto (#30, giro 0.3)
 
-Verifica `tools/verifiche/siope_bdap_vs_diretto.py 2024` e `... 2025`, esiti
-`esiti/2026-11-09/siope/bdap-vs-diretto-<anno>.json`. Cinque regioni (Lazio, Umbria, Basilicata,
-Molise, Liguria), file BDAP archiviati il 9/11/2026; SIOPE diretto `SIOPE_USCITE.<anno>.zip` del
-6/11/2026. BDAP non ha il codice ente SIOPE né il CF: gli enti si abbinano per provincia, comune e
-nome (R70). Cumulato di dicembre in BDAP contro somma dei mesi nel diretto [V]:
+Verifica `tools/verifiche/siope_bdap_vs_diretto.py 2023|2024|2025` (0.2), esiti
+`esiti/2026-11-09/siope/bdap-vs-diretto-<anno>.json`, elenco delle 60 risorse in
+`esiti/2026-11-09/siope/risorse-bdap-siope-spesa.txt`. **Tutte le 20 regioni, 2023-2025**: file BDAP
+«SIOPE Movimenti cumulati mensili di Spesa» archiviati il 9/11/2026 con `archivia.py` (pausa 5 s fra
+le richieste); SIOPE diretto `SIOPE_USCITE.<anno>.zip` del 6/11/2026. BDAP non ha il codice ente
+SIOPE né il CF: gli enti si abbinano per provincia, comune e nome (R70), a tre livelli (nome
+identico; nome simile ≥ 0,90 nello stesso comune; comune BDAP con un solo «COMUNE DI» non abbinato
+nello stesso comune). Cumulato dell'ultimo mese in BDAP contro somma dei mesi nel diretto [V]:
 
-| | 2024 | 2025 |
-|---|---|---|
-| enti BDAP / abbinati | 1.473 / 1.428 | 1.535 / 1.507 |
-| coppie ente × codice uguali (±1 €) | 101.838 su 105.459 (96,6 %) | 107.644 su 108.940 (98,8 %) |
-| totale BDAP / diretto | 84,43 / 85,00 mld (−0,7 %) | 92,82 / 92,97 mld (−0,2 %) |
-| coppie solo nel diretto | 570 (164 M€) | 299 (44 M€) |
-| **codici ICT** (U1030219, U2020107, U2020301): uguali | 3.537 su 3.558 (99,4 %) | 3.746 su 3.763 (99,5 %) |
-| codici ICT: totale BDAP / diretto | 473,35 / 473,36 M€ | 470,36 / 470,38 M€ |
-| ultimo mese per ente | dicembre per tutti | dicembre per tutti |
+| | 2023 | 2024 | 2025 | 2025 senza Lombardia e FVG |
+|---|---|---|---|---|
+| enti BDAP / abbinati | 10.441 / 9.825 | 11.161 / 10.545 | 11.432 / 11.362 | |
+| coppie ente × codice uguali (±1 €) | 99,9 % | 97,8 % | **86,0 %** | 99,2 % |
+| totale BDAP / diretto (mld) | 509,63 / 509,63 | 545,63 / 552,97 (−1,3 %) | **510,40 / 593,04 (−13,9 %)** | 489,33 / 491,77 (−0,5 %) |
+| **codici ICT** (U1030219, U2020107, U2020301): uguali | 100,0 % | 99,5 % | **88,9 %** | 99,8 % |
+| codici ICT: totale BDAP / diretto (M€) | 1.854,33 / 1.854,35 | 2.180,27 / 2.180,75 | **1.998,14 / 2.410,04 (−17,1 %)** | 1.863,00 / 1.863,11 |
+| comuni BDAP per ultimo mese | 7.902 a dicembre | 7.903 a dicembre | **1.717 a marzo**, 6.095 a dicembre | |
+| comuni con movimenti nel diretto | 7.524 (anagrafica 2026) | 7.903 | 7.895, tutti a dicembre | |
 
-Le differenze maggiori sono pagamenti «da regolarizzare» (U0000099999) che BDAP mostra e il diretto
-ha già attribuito ai codici veri, e voci di personale di Roma Capitale e della Sapienza: BDAP è una
-fotografia meno aggiornata della stessa base. Il **troncamento del 2025 a marzo** per 1.717 comuni,
-riferito da AgID [R], **non si ripresenta** sui file BDAP attuali di queste cinque regioni: tutti gli
-enti abbinati arrivano a dicembre in entrambe le fonti [V]. Può essere stato corretto dopo la
-segnalazione; le altre 15 regioni non sono state misurate.
+**Il difetto riferito da AgID si riproduce, esattamente [V].** Nei file BDAP 2025 attuali:
 
-Conclusione per l'imbuto: sull'ICT le due vie danno gli stessi importi; resta la fonte diretta,
-che ha il codice ente e il CF.
+- **Lombardia** (risorsa `54644001-abb4-4b21-ba8b-5a39622f6ecd`, sha256 `10e716cec0ff8ff6…`) e
+  **Friuli-Venezia Giulia** (`1c572f0e-f80b-4ad7-902b-ebe492ec56dc`, sha256 `2daebadc70a1680e…`)
+  contengono **solo i mesi 2025/01-2025/03**, per tutti gli enti (2.056 e 295): 1.502 + 215 =
+  **1.717 comuni troncati a marzo**, il numero di AgID. In Lombardia BDAP somma 19,54 mld contro i
+  92,67 del diretto; in FVG 1,53 contro 8,60. ICT: 124,7 contro 519,5 M€ (Lombardia), 10,5 contro
+  27,4 (FVG).
+- **Trentino-Alto Adige** (`e833081d-3f79-4d34-b921-6c38d956e4eb`, sha256 `aa875c9b89890e6c…`): 12
+  mesi, ma solo **82 comuni della provincia di Trento**, contro 166 con movimenti 2025 nel diretto:
+  **84 comuni assenti**, ancora il numero di AgID.
+- Le altre 17 regioni 2025 e tutte le regioni 2023 e 2024 sono complete a dicembre [V].
+
+Le due risorse difettose sono state caricate il **6/3/2026**, cinque giorni prima delle altre 18
+(11/3/2026), con `metadata_modified` 11/3/2026 [V, dal catalogo `package_search` archiviato]: è un
+caricamento parziale rimasto pubblicato, non un artefatto della cache di AgID. Gli identificativi di
+risorsa sono quelli cablati da AgID in `etl/sources/siope.py` prima della migrazione (commit
+`dce6351`, archiviato, sha256 `c0713419…`); il commento della versione attuale (commit `7f91f35`,
+sha256 `b96c03f7…`) riferisce il difetto [R → ora V]. Il 9/11/2026, otto mesi dopo, il difetto è
+ancora lì.
+
+Le altre differenze sono pagamenti «da regolarizzare» (U0000099999) che BDAP mostra e il diretto ha
+già attribuito ai codici veri, e voci di personale (2024, Lazio, Campania, Sicilia, Calabria): BDAP è
+una fotografia meno aggiornata della stessa base. Gli enti non abbinati del 2023-2024 (circa 600)
+sono soprattutto enti rinominati o fusi rispetto all'anagrafica SIOPE del 2026.
+
+Conclusione per l'imbuto: dove BDAP è completo le due vie danno gli stessi importi ICT (99,5-100 %);
+ma BDAP **non segnala** i file parziali (nessun campo, nessuna nota), e chi lo usa per il 2025 perde
+412 M€ di spesa ICT dei comuni lombardi e friulani. Resta la fonte diretta, che ha il codice ente, il
+CF e i 12 mesi (R75).
 
 ## Sanità
 
@@ -266,7 +292,7 @@ quindi un **denominatore minimo** dei servizi ICT della sanità, per ente e per 
 Il file regionale (Lazio 2024, 435.707 righe) ha per ogni ente il codice gestionale e l'importo
 **cumulato** mese per mese, con provincia, comune ISTAT, tipologia ente e popolazione [V]. Rispetto
 alla fonte SIOPE diretta aggiunge l'anagrafica dell'ente, non nuovi importi [V sulla struttura;
-l'uguaglianza degli importi resta da misurare, #30]. Per l'imbuto non serve: la fonte diretta resta
+importi uguali dove il file è completo, § SIOPE via BDAP contro SIOPE diretto, #30]. Per l'imbuto non serve: la fonte diretta resta
 la via principale.
 
 ## Difetti noti
@@ -281,7 +307,11 @@ la via principale.
 - **R69** [V]: dal 2024 `DURATA_PREVISTA` manca nel 90 % dei CIG ANAC; senza durata un contratto
   pluriennale non si ripartisce sugli anni (richiesta ad ANAC).
 - **R70** [V]: SIOPE via BDAP non ha il codice ente SIOPE né il codice fiscale: l'ente si riconosce
-  solo per nome e comune (45 enti su 1.473 non abbinati nel 2024).
+  solo per nome e comune (70 enti su 11.432 non abbinati nel 2025, circa 600 su 10-11 mila nel 2023-2024, con
+  l'anagrafica SIOPE del 2026).
+- **R75** [V]: SIOPE via BDAP 2025 parziale e non segnalato: Lombardia e Friuli-Venezia Giulia fermi a
+  marzo (1.717 comuni), 84 comuni di Trento assenti; caricamento del 6/3/2026 ancora pubblicato il
+  9/11/2026.
 - **R71** [proposta]: i contratti in-house fra MEF (Ragioneria, Tesoro, Amministrazione generale) e
   Sogei non compaiono in ANAC con un CIG; quelli delle agenzie fiscali e del Dipartimento delle
   finanze sì, dal 2024.
@@ -297,7 +327,7 @@ la via principale.
 | Non usiamo | Perché |
 |---|---|
 | Leggi di bilancio, assestamenti, note di variazione | sono previsioni, non spesa |
-| SIOPE via BDAP | stessi importi della fonte diretta sull'ICT (99,4 % delle coppie uguali, misurato), senza codice ente |
+| SIOPE via BDAP | stessi importi della fonte diretta sull'ICT dove è completo, ma il 2025 è parziale (Lombardia, FVG, Trento: R75) e non ha codice ente |
 | Pagamenti mensili | il consuntivo li somma; i mensili servono solo a vedere la stagionalità |
 | Spesa regionalizzata, dipendenti, mutui | nessun dettaglio ICT, fuori perimetro |
 
@@ -307,3 +337,4 @@ la via principale.
 |---|---|
 | 2026-11-09 | prima versione: famiglie, campi, misure 2019-2025, copertura CIG per ministero, CE SSN, SIOPE via BDAP, R63-R65 |
 | 2026-11-09 | 0.2: seconda via per PG 2019-2024 (discontinuità 2023); abbinamento SA→ministero per codice fiscale IndicePA (`bdap_cig_ministeri_cf.py`): Giustizia 0,96, MEF 0,25 nel 2024; quota annua dei CIG pluriennali e limite della durata mancante dal 2024; Sogei aggiudicataria e stazione appaltante; SIOPE via BDAP contro diretto 2024-2025 su cinque regioni (`siope_bdap_vs_diretto.py`, #30); R69-R71 |
+| 2026-11-09 | 0.3: #30 chiuso. SIOPE via BDAP contro diretto su tutte le 20 regioni, 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2 con abbinamento a tre livelli): il difetto riferito da AgID **si riproduce** [R → V] — 2025 di Lombardia e FVG fermo a marzo (1.717 comuni), 84 comuni di Trento assenti; 2023 e 2024 completi; R75 |

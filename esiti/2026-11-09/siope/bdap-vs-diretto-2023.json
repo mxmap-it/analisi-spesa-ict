@@ -1,0 +1,1156 @@
+{
+ "versione": "siope-bdap-vs-diretto 0.2 (2026-11-09)",
+ "anno": 2023,
+ "regioni": [
+  "ABRUZZO",
+  "BASILICATA",
+  "CALABRIA",
+  "CAMPANIA",
+  "EMILIA-ROMAGNA",
+  "FRIULI-VENEZIA GIULIA",
+  "LAZIO",
+  "LIGURIA",
+  "LOMBARDIA",
+  "MARCHE",
+  "MOLISE",
+  "PIEMONTE",
+  "PUGLIA",
+  "SARDEGNA",
+  "SICILIA",
+  "TOSCANA",
+  "TRENTINO-ALTO ADIGE",
+  "UMBRIA",
+  "VALLE D'AOSTA",
+  "VENETO"
+ ],
+ "ingressi": {
+  "SIOPE_ANAGRAFICHE.zip": "44ea0b5347da787b985611bd2df1c03e7965d13100a1d923108bfde65303d990",
+  "bdap-ABRUZZO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4f14958d-3408-48e5-be5e-0830532ea01c.csv",
+   "sha256": "69d2fb3155d3c9971df8c3efaf67d9970a5cdceeba505c23dd05187be82de432",
+   "metadata_modified": "2024-07-23T12:38:31.000000",
+   "risorsa_creata": "2024-07-23T12:38:31.000000"
+  },
+  "bdap-BASILICATA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/cdfafb36-e610-41bb-a699-08996ed370ac.csv",
+   "sha256": "96c91a7bc69ab6f68b48a1f849fc97a1b7d18942a5b53f97015fbaae8c1f6dd6",
+   "metadata_modified": "2024-07-23T12:42:59.000000",
+   "risorsa_creata": "2024-07-23T12:42:59.000000"
+  },
+  "bdap-CALABRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f1abdfcb-fc2f-4a6c-a27c-cd7fc6b4ef9d.csv",
+   "sha256": "1e728a7ea683d5423a48ad9ee68f766aa1c365aafc26b8d3acf2e1eecb7836f3",
+   "metadata_modified": "2024-07-23T12:41:42.000000",
+   "risorsa_creata": "2024-07-23T12:41:43.000000"
+  },
+  "bdap-CAMPANIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7358edfc-8cd0-4d5b-8e8a-478e61f12169.csv",
+   "sha256": "9b21dd1561394eb8a2202b4913872843ed136c567851904a3127dc952f21564f",
+   "metadata_modified": "2024-07-23T13:18:22.000000",
+   "risorsa_creata": "2024-07-23T13:18:23.000000"
+  },
+  "bdap-EMILIA-ROMAGNA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d24dee55-eb34-473e-8990-348c2db009b3.csv",
+   "sha256": "66811913573d010c2db6534c5736742e90cc79a62539e555078efaac33c89288",
+   "metadata_modified": "2024-07-23T13:38:20.000000",
+   "risorsa_creata": "2024-07-23T13:38:21.000000"
+  },
+  "bdap-FRIULI-VENEZIA GIULIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a0776d43-27d7-476f-83e1-13c7e3d0be53.csv",
+   "sha256": "0f0f5cd85860edddff789439f939fb04a7cc38a79db36d6ba5dc2515ed6c402b",
+   "metadata_modified": "2024-07-23T12:53:34.000000",
+   "risorsa_creata": "2024-07-23T12:53:35.000000"
+  },
+  "bdap-LAZIO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/15d60390-8fe5-44d8-b6c3-532949387505.csv",
+   "sha256": "e5fd45a46e9d3fc32fc5117820edcfea0b11c1cbfea9616d560653d80aebeb00",
+   "metadata_modified": "2024-07-23T13:33:45.000000",
+   "risorsa_creata": "2024-07-23T13:33:45.000000"
+  },
+  "bdap-LIGURIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/dcef94ff-1bdb-4498-b306-4be3098a73b4.csv",
+   "sha256": "844199523a5fad23690c28b43d9ad4d15c6dfc18e2c69e622847f86dbb9ae678",
+   "metadata_modified": "2024-07-23T12:50:37.000000",
+   "risorsa_creata": "2024-07-23T12:50:38.000000"
+  },
+  "bdap-LOMBARDIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/caf9be99-10dc-4002-a87f-ce34fad70f88.csv",
+   "sha256": "d1d00ca0f43383db8bf8373809c7ee2a279ae03ecc0cb458b4f1cc163d8bc82b",
+   "metadata_modified": "2024-07-23T13:17:51.000000",
+   "risorsa_creata": "2024-07-23T13:17:52.000000"
+  },
+  "bdap-MARCHE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f23ae419-6b90-4dd8-88ab-2eb53ca08615.csv",
+   "sha256": "fd5dcd978ad01eeb39eaf13db914e30388baa507f00007dd36eb956ed5c5f7fe",
+   "metadata_modified": "2024-07-23T12:48:05.000000",
+   "risorsa_creata": "2024-07-23T12:48:06.000000"
+  },
+  "bdap-MOLISE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/20f21f3a-9029-4e1f-bad0-787d55870b51.csv",
+   "sha256": "6957046c014057fa88b5f6dc573a74720ad4a5fc529b00003329fc191e18866f",
+   "metadata_modified": "2024-07-23T12:45:12.000000",
+   "risorsa_creata": "2024-07-23T12:45:12.000000"
+  },
+  "bdap-PIEMONTE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/cf75322c-9c90-4bb2-844e-0a877cb6d795.csv",
+   "sha256": "461eb8172486f3a6623509099f64e42b44ee1875fd5c103afece71e0cbfb0799",
+   "metadata_modified": "2024-07-23T13:48:58.000000",
+   "risorsa_creata": "2024-07-23T13:48:59.000000"
+  },
+  "bdap-PUGLIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/dc3a835e-afd9-4600-85e2-6a4288c607ec.csv",
+   "sha256": "24f5552d49abc6cc25757f81ac0d29bd9c2d38ad4e0ab0c73e87583d3f290890",
+   "metadata_modified": "2024-07-23T13:25:12.000000",
+   "risorsa_creata": "2024-07-23T13:25:12.000000"
+  },
+  "bdap-SARDEGNA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/15baf11f-7798-400b-b428-edc185c33253.csv",
+   "sha256": "a4371acd86c28e46e39565fd7090c60b3d95294e9007610384de51ca9ffeaf6b",
+   "metadata_modified": "2024-07-23T13:13:33.000000",
+   "risorsa_creata": "2024-07-23T13:13:33.000000"
+  },
+  "bdap-SICILIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/016dd5a5-c8ce-45cf-a1e8-3b6b43fd9bb2.csv",
+   "sha256": "44b11b240987ae304d54209c0ca06843e504ad1df04257fb700664105c75b0bb",
+   "metadata_modified": "2024-07-23T13:09:45.000000",
+   "risorsa_creata": "2024-07-23T13:09:46.000000"
+  },
+  "bdap-TOSCANA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/21c5bf70-8495-47e8-8419-310f7b776f0e.csv",
+   "sha256": "f146c763ea6905616376fff6a2638731703171b26a0b42ffd64ece6c197e1800",
+   "metadata_modified": "2024-07-23T13:00:54.000000",
+   "risorsa_creata": "2024-07-23T13:00:54.000000"
+  },
+  "bdap-TRENTINO-ALTO ADIGE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/44854a96-cff5-4537-8232-68f42b964eed.csv",
+   "sha256": "e34670e5162824f8da2ac62bd46c3734ab288c1fa674feaa9317492c098653c9",
+   "metadata_modified": "2024-07-23T13:29:15.000000",
+   "risorsa_creata": "2024-07-23T13:29:16.000000"
+  },
+  "bdap-UMBRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/0c0e48b6-9108-4fcc-a580-d5736431a281.csv",
+   "sha256": "104a998a04fba87e691129bdb1fa0c0af9d5196af59ef958a70c2d2dcee4bf2e",
+   "metadata_modified": "2024-07-23T12:35:42.000000",
+   "risorsa_creata": "2024-07-23T12:35:42.000000"
+  },
+  "bdap-VALLE D'AOSTA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/604b1b2c-e846-44bd-80da-25f0ac2910a3.csv",
+   "sha256": "9e8508e7c490a18ca05bad2958412de1cb8d7abcad560f656349f703b5b050dd",
+   "metadata_modified": "2024-07-23T12:44:02.000000",
+   "risorsa_creata": "2024-07-23T12:44:02.000000"
+  },
+  "bdap-VENETO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/78d35040-9f94-46c3-a713-0c5b75853599.csv",
+   "sha256": "b7b74fba93b93b5301f94bb69a7a5209901808fd45762d5a5591fbc0888fc4fc",
+   "metadata_modified": "2024-07-23T13:25:09.000000",
+   "risorsa_creata": "2024-07-23T13:25:10.000000"
+  },
+  "SIOPE_USCITE.2023.zip": "b0eb1573aeecd8f1ef775e066f4f783abe4b1575f4dbda0b4bc294260ad25462",
+  "SIOPE_USCITE.2023.zip:interno": "USCITE_2023.D251231.H2142.csv"
+ },
+ "enti": {
+  "bdap": 10441,
+  "diretto_univoci": 18027,
+  "diretto_ambigui": 69,
+  "abbinati": 9825,
+  "per_livello": {
+   "L1": 9770,
+   "L2": 45,
+   "L3": 10
+  },
+  "solo_bdap": 616,
+  "solo_bdap_per_tipo": {
+   "CO": 381,
+   "RC": 2,
+   "EB": 3,
+   "PR": 4,
+   "AS": 36,
+   "UC": 51,
+   "CC": 13,
+   "IS": 15,
+   "AO": 15,
+   "UN": 6,
+   "04": 5,
+   "AG": 4,
+   "CM": 13,
+   "C1": 9,
+   "AP": 3,
+   "08": 6,
+   "IR": 4,
+   "MZ": 1,
+   "AU": 1,
+   "RO": 5,
+   "05": 2,
+   "PE": 2,
+   "ER": 1,
+   "EP": 4,
+   "CA": 5,
+   "RE": 3,
+   "06": 1,
+   "02": 1,
+   "03": 1,
+   "PN": 4,
+   "EU": 1,
+   "CG": 1,
+   "ES": 1,
+   "EL": 3,
+   "EO": 2,
+   "01": 3,
+   "FL": 1,
+   "07": 1,
+   "IZ": 1,
+   "IC": 1
+  },
+  "esempi_l2": [
+   [
+    "CONSORZIO INTERCOMUNALE DI SERVIZI",
+    "CONSORZIO INTERCOMUNALE DI SERVIZI CIDIS",
+    0.919
+   ],
+   [
+    "CONSORZIO INTECOMUNALE DEI SERVIZI SOCIALI CISS DI PINEROLO",
+    "CONSORZIO INTERCOMUNALE DEI SERVIZI SOCIALI CISS DEL PINEROLESE",
+    0.934
+   ],
+   [
+    "CONSORZIO INTERCOMUNALE PER LA GESTIONE DEI SERVIZI SOCIO ASSISTENZIALI",
+    "CONSORZIO INTERCOMUNALE PER LA GESTIONE DEI SERVIZI SOCIO ASSISTENZIALI DI BORGOMANERO",
+    0.904
+   ],
+   [
+    "AZIENDA SANITARIA LOCALE NOVARA",
+    "AZIENDA SANITARIA LOCALE NO DI NOVARA",
+    0.912
+   ],
+   [
+    "UNIONE DEI COMUNI COMUNITA COLLINARE MONFERRATO VALLE VERSA",
+    "UNIONE DEI COMUNI DELLA COMUNITA COLLINARE MONFERRATO VALLE VERSA",
+    0.952
+   ],
+   [
+    "ISTITUTO ISTRUZIONE SUPERIORE VINCI NERVI FERMI",
+    "ISTITUTO DI ISTRUZIONE SUPERIORE VINCI NERVI FERMI",
+    0.969
+   ],
+   [
+    "COMUNE DI AQUILA DI ARROSCIA",
+    "COMUNE DI AQUILA D ARROSCIA",
+    0.982
+   ],
+   [
+    "COMUNE DI COSIO DI ARROSCIA",
+    "COMUNE DI COSIO D ARROSCIA",
+    0.981
+   ],
+   [
+    "UNIONE DEI COMUNI DELLA ALTA VALLE ARROSCIA",
+    "UNIONE DEI COMUNI DELL ALTA VALLE ARROSCIA",
+    0.988
+   ],
+   [
+    "FONDAZIONE IRCCS ISTITUTO NAZIONALE NEUROLOGICO CARLO BESTA",
+    "FONDAZIONE IRCCS ISTITUTO NEUROLOGICO CARLO BESTA",
+    0.907
+   ]
+  ],
+  "esempi_solo_bdap": [
+   [
+    "001",
+    "078",
+    "AZIENDA SANITARIA LOCALE TO5"
+   ],
+   [
+    "001",
+    "082",
+    "AZIENDA SANITARIA LOCALE TO4 CIRIE CHIVASSO IVREA"
+   ],
+   [
+    "001",
+    "090",
+    "AZIENDA SANITARIA LOCALE TO3 RIVOLI PINEROLO"
+   ],
+   [
+    "001",
+    "272",
+    "AZIENDA ZERO"
+   ],
+   [
+    "002",
+    "158",
+    "AZIENDA SANITARIA LOCALE VC"
+   ],
+   [
+    "004",
+    "078",
+    "AZIENDA OSPEDALIERA S CROCE E CARLE"
+   ],
+   [
+    "004",
+    "095",
+    "UNIONE MONTANA ALTA VAL TANARO"
+   ],
+   [
+    "005",
+    "002",
+    "COMUNITA COLLINARE ALTO ASTIGIANO"
+   ],
+   [
+    "006",
+    "003",
+    "AZIENDA OSPEDALIERO UNIVERSITARIA SS ANTONIO E BIAGIO E C ARRIGO ALESSANDRIA"
+   ],
+   [
+    "006",
+    "114",
+    "CONSORZIO INTERCOMUNALE DEL NOVESE DEI SERVIZI ALLA PERSONA"
+   ],
+   [
+    "007",
+    "036",
+    "UNITE DES COMMUNES VALDOTAINES WALSER"
+   ],
+   [
+    "008",
+    "029",
+    "COMUNITA MONTANA INTEMELIA IN LIQUIDAZIONE"
+   ],
+   [
+    "008",
+    "059",
+    "COMUNITA MONTANA ARGENTINA ARMEA"
+   ],
+   [
+    "009",
+    "038",
+    "COMUNITA MONTANA ALTA VAL BORMIDA"
+   ],
+   [
+    "009",
+    "056",
+    "AZIENDA SOCIOSANITARIA LIGURE 2"
+   ],
+   [
+    "009",
+    "056",
+    "COMUNITA MONTANA DEL GIOVO"
+   ],
+   [
+    "010",
+    "016",
+    "COMUNITA MONTANA FONTANABUONA"
+   ],
+   [
+    "010",
+    "025",
+    "AZIENDA LIGURE SANITARIA A LI SA"
+   ],
+   [
+    "010",
+    "025",
+    "IRCCS OSPEDALE POLICLINICO SAN MARTINO"
+   ],
+   [
+    "011",
+    "023",
+    "ISTITUTO COMPRENSIVO FALCONE BORSELLINO ISA 19"
+   ]
+  ]
+ },
+ "ultimo_mese": {
+  "uguale": 9817,
+  "bdap_dopo": 8,
+  "bdap_comuni_tutti": {
+   "12": 7902
+  },
+  "diretto_comuni_italia": {
+   "12": 7524
+  },
+  "diretto_comuni_italia_senza_movimenti": 701,
+  "per_regione": {
+   "ABRUZZO": {
+    "enti": 387,
+    "comuni": 305,
+    "comuni_ultimo_mese": {
+     "12": 305
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "BASILICATA": {
+    "enti": 180,
+    "comuni": 131,
+    "comuni_ultimo_mese": {
+     "12": 131
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "CALABRIA": {
+    "enti": 518,
+    "comuni": 404,
+    "comuni_ultimo_mese": {
+     "12": 404
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "CAMPANIA": {
+    "enti": 722,
+    "comuni": 550,
+    "comuni_ultimo_mese": {
+     "12": 550
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "EMILIA-ROMAGNA": {
+    "enti": 480,
+    "comuni": 330,
+    "comuni_ultimo_mese": {
+     "12": 330
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "enti": 287,
+    "comuni": 215,
+    "comuni_ultimo_mese": {
+     "12": 215
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LAZIO": {
+    "enti": 561,
+    "comuni": 378,
+    "comuni_ultimo_mese": {
+     "12": 378
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LIGURIA": {
+    "enti": 307,
+    "comuni": 234,
+    "comuni_ultimo_mese": {
+     "12": 234
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "LOMBARDIA": {
+    "enti": 1860,
+    "comuni": 1504,
+    "comuni_ultimo_mese": {
+     "12": 1504
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "MARCHE": {
+    "enti": 297,
+    "comuni": 225,
+    "comuni_ultimo_mese": {
+     "12": 225
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "MOLISE": {
+    "enti": 181,
+    "comuni": 136,
+    "comuni_ultimo_mese": {
+     "12": 136
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "PIEMONTE": {
+    "enti": 1438,
+    "comuni": 1181,
+    "comuni_ultimo_mese": {
+     "12": 1181
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "PUGLIA": {
+    "enti": 370,
+    "comuni": 257,
+    "comuni_ultimo_mese": {
+     "12": 257
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "SARDEGNA": {
+    "enti": 499,
+    "comuni": 377,
+    "comuni_ultimo_mese": {
+     "12": 377
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "SICILIA": {
+    "enti": 606,
+    "comuni": 391,
+    "comuni_ultimo_mese": {
+     "12": 391
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "TOSCANA": {
+    "enti": 355,
+    "comuni": 273,
+    "comuni_ultimo_mese": {
+     "12": 273
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "enti": 423,
+    "comuni": 282,
+    "comuni_ultimo_mese": {
+     "12": 282
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "UMBRIA": {
+    "enti": 133,
+    "comuni": 92,
+    "comuni_ultimo_mese": {
+     "12": 92
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "VALLE D'AOSTA": {
+    "enti": 98,
+    "comuni": 74,
+    "comuni_ultimo_mese": {
+     "12": 74
+    },
+    "enti_ultimo_mese_lt12": 0
+   },
+   "VENETO": {
+    "enti": 739,
+    "comuni": 563,
+    "comuni_ultimo_mese": {
+     "12": 563
+    },
+    "enti_ultimo_mese_lt12": 0
+   }
+  },
+  "esempi_differenti": [
+   {
+    "ente": [
+     "083",
+     "048",
+     "AZIENDA OSPEDALIERA PAPARDO"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "052",
+     "037",
+     "COMUNE DI MONTALCINO"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "051",
+     "002",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DI AREZZO SIENA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "054",
+     "039",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DELL UMBRIA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "025",
+     "071",
+     "COMUNE DI LONGARONE"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "016",
+     "252",
+     "COMUNE DI SANT OMOBONO TERME"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "006",
+     "191",
+     "COMUNE DI CASSANO SPINOLA"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   },
+   {
+    "ente": [
+     "070",
+     "006",
+     "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DEL MOLISE"
+    ],
+    "ultimo_mese_bdap": 12,
+    "ultimo_mese_diretto": 0
+   }
+  ]
+ },
+ "tutti": {
+  "euro_bdap": 509634656055,
+  "euro_diretto": 509626200499,
+  "uguali": 798892,
+  "diverse": 955,
+  "euro_diff_assoluta": 152318240,
+  "solo_bdap": 689,
+  "euro_solo_bdap": 259006889,
+  "solo_diretto": 976,
+  "euro_solo_diretto": 42892844,
+  "coppie": 801512,
+  "quota_uguali_su_entrambe": 0.9988,
+  "per_regione": {
+   "ABRUZZO": {
+    "euro_bdap": 11154074837,
+    "euro_diretto": 11153797475,
+    "coppie": 27565,
+    "uguali": 27560,
+    "quota_uguali": 0.9998
+   },
+   "BASILICATA": {
+    "euro_bdap": 5191337421,
+    "euro_diretto": 5191337421,
+    "coppie": 12050,
+    "uguali": 12044,
+    "quota_uguali": 0.9995
+   },
+   "CALABRIA": {
+    "euro_bdap": 18301969987,
+    "euro_diretto": 18300928902,
+    "coppie": 31110,
+    "uguali": 31074,
+    "quota_uguali": 0.9988
+   },
+   "CAMPANIA": {
+    "euro_bdap": 52809167409,
+    "euro_diretto": 52817112989,
+    "coppie": 47438,
+    "uguali": 47245,
+    "quota_uguali": 0.9959
+   },
+   "EMILIA-ROMAGNA": {
+    "euro_bdap": 30969294377,
+    "euro_diretto": 30969296377,
+    "coppie": 45153,
+    "uguali": 45148,
+    "quota_uguali": 0.9999
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "euro_bdap": 7971177451,
+    "euro_diretto": 7971179184,
+    "coppie": 27218,
+    "uguali": 27207,
+    "quota_uguali": 0.9996
+   },
+   "LAZIO": {
+    "euro_bdap": 49255492656,
+    "euro_diretto": 49253747903,
+    "coppie": 41501,
+    "uguali": 41467,
+    "quota_uguali": 0.9992
+   },
+   "LIGURIA": {
+    "euro_bdap": 12806914733,
+    "euro_diretto": 12806915710,
+    "coppie": 23883,
+    "uguali": 23875,
+    "quota_uguali": 0.9997
+   },
+   "LOMBARDIA": {
+    "euro_bdap": 86094811031,
+    "euro_diretto": 86094258154,
+    "coppie": 158599,
+    "uguali": 158489,
+    "quota_uguali": 0.9993
+   },
+   "MARCHE": {
+    "euro_bdap": 12777578948,
+    "euro_diretto": 12777581832,
+    "coppie": 27266,
+    "uguali": 27262,
+    "quota_uguali": 0.9999
+   },
+   "MOLISE": {
+    "euro_bdap": 2981837313,
+    "euro_diretto": 2981708424,
+    "coppie": 11308,
+    "uguali": 11303,
+    "quota_uguali": 0.9996
+   },
+   "PIEMONTE": {
+    "euro_bdap": 34960470021,
+    "euro_diretto": 34960579881,
+    "coppie": 108896,
+    "uguali": 108876,
+    "quota_uguali": 0.9998
+   },
+   "PUGLIA": {
+    "euro_bdap": 31414781798,
+    "euro_diretto": 31410489541,
+    "coppie": 30777,
+    "uguali": 30763,
+    "quota_uguali": 0.9995
+   },
+   "SICILIA": {
+    "euro_bdap": 40857804773,
+    "euro_diretto": 40847136627,
+    "coppie": 40623,
+    "uguali": 40423,
+    "quota_uguali": 0.9951
+   },
+   "TOSCANA": {
+    "euro_bdap": 39188664074,
+    "euro_diretto": 39189203543,
+    "coppie": 38456,
+    "uguali": 38445,
+    "quota_uguali": 0.9997
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "euro_bdap": 13999455173,
+    "euro_diretto": 14001120066,
+    "coppie": 38826,
+    "uguali": 38554,
+    "quota_uguali": 0.993
+   },
+   "UMBRIA": {
+    "euro_bdap": 7144933796,
+    "euro_diretto": 7144940833,
+    "coppie": 11810,
+    "uguali": 11807,
+    "quota_uguali": 0.9997
+   },
+   "VALLE D'AOSTA": {
+    "euro_bdap": 2550200915,
+    "euro_diretto": 2550174279,
+    "coppie": 9345,
+    "uguali": 9343,
+    "quota_uguali": 0.9998
+   },
+   "VENETO": {
+    "euro_bdap": 49204689343,
+    "euro_diretto": 49204691359,
+    "coppie": 68023,
+    "uguali": 68007,
+    "quota_uguali": 0.9998
+   }
+  },
+  "esempi_diverse": [
+   {
+    "ente": [
+     "084",
+     "017",
+     "COMUNE DI FAVARA"
+    ],
+    "codice": "U7019906001",
+    "bdap": 457907.44,
+    "diretto": 13693195.85
+   },
+   {
+    "ente": [
+     "084",
+     "017",
+     "COMUNE DI FAVARA"
+    ],
+    "codice": "U0000099995",
+    "bdap": 13235288.41,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "063",
+     "049",
+     "SOCIETA REGIONALE PER LA SANITA S P A SO RE SA S P A GESTIONE INCASSI PER CENTRALE PAGAMENTI SANITA"
+    ],
+    "codice": "U7500",
+    "bdap": 52267396.64,
+    "diretto": 62083556.44
+   },
+   {
+    "ente": [
+     "063",
+     "049",
+     "SOCIETA REGIONALE PER LA SANITA S P A SO RE SA S P A GESTIONE INCASSI PER CENTRALE PAGAMENTI SANITA"
+    ],
+    "codice": "U9999",
+    "bdap": 9790049.67,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "072",
+     "006",
+     "FONDAZIONE LIRICO SINFONICA PETRUZZELLI E TEATRI DI BARI"
+    ],
+    "codice": "U0000099999",
+    "bdap": 9737322.92,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "087",
+     "036",
+     "COMUNE DI RADDUSA"
+    ],
+    "codice": "U0000099995",
+    "bdap": 7490855.69,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "087",
+     "036",
+     "COMUNE DI RADDUSA"
+    ],
+    "codice": "U7019906001",
+    "bdap": 85000.0,
+    "diretto": 7575855.69
+   },
+   {
+    "ente": [
+     "087",
+     "036",
+     "COMUNE DI RADDUSA"
+    ],
+    "codice": "U0000099996",
+    "bdap": 6993509.06,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "072",
+     "006",
+     "FONDAZIONE LIRICO SINFONICA PETRUZZELLI E TEATRI DI BARI"
+    ],
+    "codice": "U7019999999",
+    "bdap": 101051.0,
+    "diretto": 4480905.5
+   },
+   {
+    "ente": [
+     "084",
+     "017",
+     "COMUNE DI FAVARA"
+    ],
+    "codice": "U5010101001",
+    "bdap": 2958754.07,
+    "diretto": 6590889.3
+   },
+   {
+    "ente": [
+     "084",
+     "017",
+     "COMUNE DI FAVARA"
+    ],
+    "codice": "U0000099998",
+    "bdap": 3632135.23,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "087",
+     "039",
+     "COMUNE DI RIPOSTO"
+    ],
+    "codice": "U0000099998",
+    "bdap": 2715017.94,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "085",
+     "007",
+     "COMUNE DI GELA"
+    ],
+    "codice": "U2059999999",
+    "bdap": 2737196.66,
+    "diretto": 5005661.79
+   },
+   {
+    "ente": [
+     "085",
+     "007",
+     "COMUNE DI GELA"
+    ],
+    "codice": "U0000099999",
+    "bdap": 2223157.41,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "063",
+     "068",
+     "COMUNE DI SAN GIUSEPPE VESUVIANO"
+    ],
+    "codice": "U1040399999",
+    "bdap": 2899129.8,
+    "diretto": 4662671.9
+   }
+  ]
+ },
+ "ict": {
+  "euro_bdap": 1854332049,
+  "euro_diretto": 1854347742,
+  "uguali": 27199,
+  "solo_bdap": 13,
+  "euro_solo_bdap": 133280,
+  "solo_diretto": 25,
+  "euro_solo_diretto": 0,
+  "diverse": 10,
+  "euro_diff_assoluta": 16223,
+  "coppie": 27247,
+  "quota_uguali_su_entrambe": 0.9996,
+  "per_regione": {
+   "ABRUZZO": {
+    "euro_bdap": 27300113,
+    "euro_diretto": 27300113,
+    "coppie": 856,
+    "uguali": 856,
+    "quota_uguali": 1.0
+   },
+   "BASILICATA": {
+    "euro_bdap": 13310744,
+    "euro_diretto": 13310742,
+    "coppie": 298,
+    "uguali": 297,
+    "quota_uguali": 0.9966
+   },
+   "CALABRIA": {
+    "euro_bdap": 66815236,
+    "euro_diretto": 66815236,
+    "coppie": 616,
+    "uguali": 616,
+    "quota_uguali": 1.0
+   },
+   "CAMPANIA": {
+    "euro_bdap": 81646475,
+    "euro_diretto": 81651222,
+    "coppie": 1178,
+    "uguali": 1175,
+    "quota_uguali": 0.9975
+   },
+   "EMILIA-ROMAGNA": {
+    "euro_bdap": 119307260,
+    "euro_diretto": 119307260,
+    "coppie": 1272,
+    "uguali": 1272,
+    "quota_uguali": 1.0
+   },
+   "FRIULI-VENEZIA GIULIA": {
+    "euro_bdap": 18817749,
+    "euro_diretto": 18817749,
+    "coppie": 862,
+    "uguali": 862,
+    "quota_uguali": 1.0
+   },
+   "LAZIO": {
+    "euro_bdap": 285592301,
+    "euro_diretto": 285592301,
+    "coppie": 1377,
+    "uguali": 1377,
+    "quota_uguali": 1.0
+   },
+   "LIGURIA": {
+    "euro_bdap": 51503000,
+    "euro_diretto": 51503000,
+    "coppie": 859,
+    "uguali": 859,
+    "quota_uguali": 1.0
+   },
+   "LOMBARDIA": {
+    "euro_bdap": 433160970,
+    "euro_diretto": 433160706,
+    "coppie": 5652,
+    "uguali": 5651,
+    "quota_uguali": 0.9998
+   },
+   "MARCHE": {
+    "euro_bdap": 39590581,
+    "euro_diretto": 39590581,
+    "coppie": 970,
+    "uguali": 970,
+    "quota_uguali": 1.0
+   },
+   "MOLISE": {
+    "euro_bdap": 19067484,
+    "euro_diretto": 19067484,
+    "coppie": 281,
+    "uguali": 281,
+    "quota_uguali": 1.0
+   },
+   "PIEMONTE": {
+    "euro_bdap": 154943907,
+    "euro_diretto": 154943907,
+    "coppie": 4158,
+    "uguali": 4158,
+    "quota_uguali": 1.0
+   },
+   "PUGLIA": {
+    "euro_bdap": 103235390,
+    "euro_diretto": 103235390,
+    "coppie": 1089,
+    "uguali": 1089,
+    "quota_uguali": 1.0
+   },
+   "SICILIA": {
+    "euro_bdap": 100208274,
+    "euro_diretto": 100208303,
+    "coppie": 1115,
+    "uguali": 1114,
+    "quota_uguali": 0.9991
+   },
+   "TOSCANA": {
+    "euro_bdap": 98869649,
+    "euro_diretto": 98869649,
+    "coppie": 1537,
+    "uguali": 1537,
+    "quota_uguali": 1.0
+   },
+   "TRENTINO-ALTO ADIGE": {
+    "euro_bdap": 70727684,
+    "euro_diretto": 70738867,
+    "coppie": 1384,
+    "uguali": 1380,
+    "quota_uguali": 0.9971
+   },
+   "UMBRIA": {
+    "euro_bdap": 22818304,
+    "euro_diretto": 22818304,
+    "coppie": 436,
+    "uguali": 436,
+    "quota_uguali": 1.0
+   },
+   "VALLE D'AOSTA": {
+    "euro_bdap": 19754991,
+    "euro_diretto": 19754991,
+    "coppie": 463,
+    "uguali": 463,
+    "quota_uguali": 1.0
+   },
+   "VENETO": {
+    "euro_bdap": 127661934,
+    "euro_diretto": 127661934,
+    "coppie": 2806,
+    "uguali": 2806,
+    "quota_uguali": 1.0
+   }
+  },
+  "esempi_diverse": [
+   {
+    "ente": [
+     "021",
+     "038",
+     "COMUNE DI LAGUNDO"
+    ],
+    "codice": "U1030219005",
+    "bdap": 658.8,
+    "diretto": 5902.19
+   },
+   {
+    "ente": [
+     "021",
+     "052",
+     "COMUNE DI MONGUELFO TESIDO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 16437.53,
+    "diretto": 20329.82
+   },
+   {
+    "ente": [
+     "063",
+     "068",
+     "COMUNE DI SAN GIUSEPPE VESUVIANO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 18030.7,
+    "diretto": 20983.7
+   },
+   {
+    "ente": [
+     "021",
+     "118",
+     "COMUNE DI SENALE SAN FELICE"
+    ],
+    "codice": "U2020107999",
+    "bdap": 5636.4,
+    "diretto": 7017.44
+   },
+   {
+    "ente": [
+     "063",
+     "068",
+     "COMUNE DI SAN GIUSEPPE VESUVIANO"
+    ],
+    "codice": "U1030219005",
+    "bdap": 23280.63,
+    "diretto": 24600.42
+   },
+   {
+    "ente": [
+     "021",
+     "048",
+     "COMUNE DI MARLENGO"
+    ],
+    "codice": "U2020107999",
+    "bdap": 2793.56,
+    "diretto": 3459.68
+   },
+   {
+    "ente": [
+     "063",
+     "068",
+     "COMUNE DI SAN GIUSEPPE VESUVIANO"
+    ],
+    "codice": "U1030219004",
+    "bdap": 3126.81,
+    "diretto": 3600.39
+   },
+   {
+    "ente": [
+     "108",
+     "029",
+     "COMUNE DI MACHERIO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 41852.04,
+    "diretto": 41588.04
+   },
+   {
+    "ente": [
+     "083",
+     "035",
+     "COMUNE DI GUALTIERI SICAMINO"
+    ],
+    "codice": "U1030219005",
+    "bdap": 21597.06,
+    "diretto": 21625.67
+   },
+   {
+    "ente": [
+     "076",
+     "084",
+     "COMUNITA MONTANA MELANDRO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 3.0,
+    "diretto": 1.5
+   }
+  ]
+ }
+}

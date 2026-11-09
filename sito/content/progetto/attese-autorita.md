@@ -123,7 +123,7 @@ agganciabile ad ANAC.
 |---|---|
 | Disponibilità del catalogo open data | **`smentito`** — al 2026-10-26 in "manutenzione straordinaria", segnalata con **HTTP 200** e una pagina HTML invece che con un errore |
 | Download diretto e ripetibile | `atteso` — **AgID riferisce** dump generati a richiesta, tetto di 400 secondi e 503 ricorrenti. Non verificato da noi |
-| Annualità complete | `atteso` — **AgID riferisce** il 2025 di SIOPE troncato a marzo per 1.717 comuni e assente per 84 comuni di Trento. Da verificare confrontando con il bulk di `siope.it` |
+| Annualità complete | **`smentito`** — **verificato il 9/11/2026** (#30, R75): nel SIOPE 2025 di BDAP Lombardia e Friuli-Venezia Giulia si fermano a marzo (1.717 comuni) e mancano 84 comuni di Trento, come riferito da AgID; 2023 e 2024 completi. Il bulk di `siope.it` ha tutti i 12 mesi |
 | `Last-Modified` utilizzabile per la cache | `atteso` — riferito da AgID, non verificato |
 | Licenza | `confermato` — CC BY |
 

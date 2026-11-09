@@ -40,7 +40,9 @@ JSON valido</strong>. → Usiamo l&rsquo;<strong>API CKAN</strong>, che funziona
 Cruscotto Italia, scrive di aver abbandonato BDAP perché <strong>genera i dump a richiesta</strong> con un tetto
 di 400 secondi lato server e 503 ricorrenti, i <code>resource_id</code> sono cablati per regione e anno, e
 <strong>il 2025 era troncato a marzo per 1.717 comuni</strong> fra Lombardia e Friuli e assente per 84 comuni di
-Trento. <strong>Non l&rsquo;abbiamo verificato noi.</strong></p><p>E al 26 ottobre 2026 non si può verificare: il catalogo open data di BDAP è in <strong>manutenzione
+Trento. <strong>Verificato il 9/11/2026</strong> (#30, <a href=/progetto/bdap/>BDAP</a>, R75): i file BDAP 2025 di Lombardia e
+Friuli-Venezia Giulia hanno solo gennaio-marzo (1.502 + 215 = 1.717 comuni) e quello del
+Trentino-Alto Adige ha 82 comuni di Trento su 166; 2023 e 2024 sono completi su tutte le 20 regioni.</p><p>E al 26 ottobre 2026 non si può verificare: il catalogo open data di BDAP è in <strong>manutenzione
 straordinaria</strong>, e lo comunica rispondendo <strong>HTTP 200</strong> con una pagina HTML invece che con un
 errore — chi lo interroga in automatico crede che vada tutto bene.</p><p>→ <strong>Usiamo come via principale il bulk nazionale di <code>siope.it</code></strong>, che espone <code>Last-Modified</code> e
 <code>Accept-Ranges</code>. Ma <strong>specchiamo anche la via BDAP</strong> appena torna disponibile, e confrontiamo le due

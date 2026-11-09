@@ -126,7 +126,9 @@ JSON valido**. → Usiamo l'**API CKAN**, che funziona e che sul portale ANAC no
 Cruscotto Italia, scrive di aver abbandonato BDAP perché **genera i dump a richiesta** con un tetto
 di 400 secondi lato server e 503 ricorrenti, i `resource_id` sono cablati per regione e anno, e
 **il 2025 era troncato a marzo per 1.717 comuni** fra Lombardia e Friuli e assente per 84 comuni di
-Trento. **Non l'abbiamo verificato noi.**
+Trento. **Verificato il 9/11/2026** (#30, [BDAP](/progetto/bdap/), R75): i file BDAP 2025 di Lombardia e
+Friuli-Venezia Giulia hanno solo gennaio-marzo (1.502 + 215 = 1.717 comuni) e quello del
+Trentino-Alto Adige ha 82 comuni di Trento su 166; 2023 e 2024 sono completi su tutte le 20 regioni.
 
 E al 26 ottobre 2026 non si può verificare: il catalogo open data di BDAP è in **manutenzione
 straordinaria**, e lo comunica rispondendo **HTTP 200** con una pagina HTML invece che con un
