@@ -1,0 +1,1702 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Homepage | Acquisti in rete 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ Vai al menu
+ 
+ 
+ Contenuto principale
+ 
+ 
+ Vai al footer
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Vai al menu
+ 
+ 
+ Contenuto principale
+ 
+ 
+ Vai al footer
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ente appartenenza 
+ 
+ 
+ 
+ 
+ 
+ Consip 
+ 
+ 
+ Ministero dell'Economia e delle Finanze
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ ITA 
+ 
+ 
+ 
+ 
+ ITALIANO 
+ 
+ 
+ ENGLISH 
+ 
+ 
+ 
+
+ 
+ 
+ ENG 
+ 
+ 
+ 
+ 
+ ITALIANO 
+ 
+ 
+ ENGLISH 
+ 
+ 
+ 
+ 
+
+ {{ language === 'en' ? 'Sign in' : 'Accedi' }} -->
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0}"
+ data-cg-busy="{promise:detailPromiseMessaggi,templateUrl:'/opencms/opencms/system/modules/my.template/resources/busyTemplate_small.html'}"
+ >
+ 
+ 
+ {{model.numMessaggi}} 
+ Messaggi 
+ 
+ 
+ 
+ 
+ 
+ {{ model.personalInfoSession.personalInfo.nome | limitTo : 1 }}{{ model.personalInfoSession.personalInfo.cognome | limitTo : 1 }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ model.personalInfoSession.personalInfo.nome | limitTo : 1 }}{{ model.personalInfoSession.personalInfo.cognome | limitTo : 1 }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ model.userInfoSession.utente.email }} 
+ 
+ 
+ 
+ Stai operando come: 
+ {{ model.personalInfoSession.loginInfoBean.denominazioneRuolo }} 
+ 
+ 
+ 
+ 1">
+ 
+ 
+ Cambia profilo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cruscotto 
+ 
+ 
+ 
+ 
+ 
+ Carrello 
+ 
+ 
+ 
+ 
+ 
+ Liste MePA 
+ 
+ 
+ 
+ 
+ 
+ 
+ Esci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ SU 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Espandi barra di navigazione 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ APRI 
+ 
+ 
+ 
+ {{ model.user.personalInfo.nome | limitTo:1}}{{model.user.personalInfo.cognome | limitTo:1 }}
+ 
+ 
+
+ 
+
+
+ 
+
+
+
+
+ 
+ 
+ -->
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acquista 
+ 
+ 
+ 
+ Naviga per strumento
+ 
+ 
+ Consulta l'elenco delle iniziative e scopri se sono già
+ attive o se lo saranno a breve. Dalla scheda delle
+ iniziative puoi accedere al catalogo o avviare una
+ negoziazione.
+ 
+ 
+ 
+ Mercato elettronico 
+ 
+ 
+ MePALight 
+ 
+ 
+ Convenzioni 
+ 
+ 
+ Sistema dinamico 
+ 
+ 
+ Accordi quadro 
+ 
+ 
+ 
+ Tutte le iniziative d'acquisto 
+ 
+ 
+ 
+ Scopri come acquistare 
+ 
+
+ Come Acquistare -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Naviga per area merceologica
+ 
+ 
+ 
+ Consulta la nostra offerta per le diverse aree merceologiche.
+ 
+ 
+ Scopri 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acquisti in rete per te
+ 
+ 
+ 
+ 
+ Scopri le iniziative più adatte alla tua Amministrazione.
+ 
+ Scopri le iniziative 
+ 
+ 
+ 
+ 
+ 
+ 
+ Piano gare
+ 
+ 
+ 
+ 
+ Consulta il Piano gare per conoscere la pianificazione dell’anno.
+ 
+ Scopri tutte le gare pianificate 
+ 
+ 
+ 
+ 
+ 
+ 
+ Questionari
+ 
+ 
+ 
+ 
+ 
+ Partecipa alle indagini rivolte alle Pubbliche Amministrazioni.
+ 
+ 
+ Partecipa 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Vendi 
+ 
+ 
+ 
+ Naviga per strumento
+ 
+ 
+ Consulta l'elenco dei bandi. 
+ Dalle schede puoi avviare, a seconda dello strumento, la procedura di partecipazione alla gara o di abilitazione al bando. 
+ Puoi consultare anche le gare pubblicate da altre PA - Altri bandi - o le Richieste di offerta del MePA aperte a tutti gli operatori economici.
+ 
+ 
+ 
+ Abilitati al Mercato elettronico 
+ 
+ 
+ 
+ Abilitati al Sistema dinamico
+ 
+ 
+ 
+ Partecipa alle gare delle Convenzioni 
+ 
+ 
+ Partecipa alle gare degli Accordi quadro 
+ 
+ 
+ Partecipa agli Altri bandi 
+ 
+ 
+ Se sei abilitato al MePA, rispondi alle RDO APERTE 
+ 
+ 
+ Tutti i bandi
+ 
+ 
+ 
+ Scopri come vendere
+ 
+ 
+
+ Come Vendere -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Naviga per area merceologica
+ 
+ 
+ 
+ Consulta la nostra offerta per le diverse aree merceologiche.
+ 
+ 
+ Scopri 
+ 
+ 
+ 
+ 
+ 
+ 
+ Avvisi di preinformazione 
+ 
+ 
+ 
+ 
+ Consulta gli avvisi di preinformazione pubblicati.
+ 
+ Scopri tutte le preinformative 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Consultazioni del mercato
+ 
+ 
+ 
+ 
+ 
+ Scopri le consultazioni del mercato attive nel tuo settore.
+ 
+ Scopri le consultazioni 
+ 
+ 
+ 
+ 
+ 
+ 
+ Piano gare 
+ 
+ 
+ 
+ 
+ 
+ Consulta il Piano gare per conoscere la pianificazione delle gare in pubblicazione nell'anno.
+ 
+ Scopri tutte le gare pianificate 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Media 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Notizie
+ 
+ 
+ 
+ 
+ 
+ Rimani aggiornato sulle novità, i progetti e le opportunità del mondo di Acquisti in rete.
+ 
+ 
+ Vedi tutte le notizie 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Contenuti informativi
+ 
+ 
+ Uno spazio pensato per saperne di più: leggi gli approfondimenti, ascolta la voce degli utenti e consulta le newsletter per restare sempre aggiornato su novità e buone pratiche.
+ 
+ 
+
+ 
+ Approfondimenti 
+ 
+ 
+ Testimonianze 
+ 
+ 
+ Newsletter 
+ 
+ 
+ 
+ 
+ Chi siamo 
+ 
+ 
+ 
+ Acquisti in rete
+ 
+ 
+ Scopri i valori che ci guidano, gli strumenti che rendiamo disponibili e i numeri che raccontano la nostra storia.
+ 
+ 
+
+ 
+ 
+ Missione
+ 
+ 
+ 
+ 
+ Strumenti
+ 
+ 
+ 
+ 
+ I numeri
+ 
+ 
+
+ 
+ 
+ Progetti e servizi
+ 
+ 
+ Esplora i progetti e i servizi che accompagnano le attività di Acquisti in rete per un procurement più efficiente.
+ 
+ 
+ 
+ 
+ Iniziative per il PNRR
+ 
+ 
+ 
+ 
+ Risorse in Comune
+ 
+ 
+ 
+ 
+ Verifica inadempimenti
+ 
+ 
+ 
+ 
+ Scopri tutti i progetti
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Catalogo 
+ 
+ Tutte le aree merceologiche 
+ 
+ -->
+
+ 
+ Supporto 
+ 
+ 
+ 
+ Siamo qui per aiutarti
+ 
+ 
+ Scegli la modalità di supporto che preferisci
+ 
+ 
+ 
+ Wiki 
+ 
+ 
+ Modulistica
+ 
+ 
+ 
+ 
+ Sportelli in Rete
+ 
+ 
+ 
+ 
+ Domande frequenti
+ 
+ -->
+ 
+ Contatti 
+ 
+ 
+ 
+ Tutti gli strumenti di supporto
+ 
+ -->
+ 
+ 
+ Eventi e formazione
+ 
+ 
+ Scopri gli strumenti di formazione e gli eventi più adatti alle tue esigenze.
+ 
+ 
+ 
+ 
+ Eventi e webinar
+ 
+ 
+
+ 
+ Filmati 
+ 
+ 
+ Demo interattive
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Supporto e info per strumento
+ 
+ 
+ 
+ 
+ Scegli lo strumento di tuo interesse e consulta le informazioni e i materiali che lo riguardano.
+ 
+ Mercato elettronico 
+ MePALight Convenzioni 
+ Sistema dinamico 
+ Accordi quadro 
+ Gare in ASP 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cruscotto 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Gestione Profilo 
+ 
+ 
+ 
+
+ 1">
+ 
+ 
+ 
+ 
+ 
+ Cambia organizzazione 
+ 
+ 
+ 
+
+ 
+ 
+ Esci 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Ricerca: 
+
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Prodotti 
+ 
+
+ 
+ 
+ 
+ Codici Prodotto 
+ 
+
+ 
+ 
+ 
+ Informazioni 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Acquista
+ 
+ 
+ 
+ 
+ 
+ Vendi
+ 
+ 
+ 
+ 
+ 
+ Media
+ 
+ 
+ 
+ 
+ 
+ Chi siamo
+ 
+ 
+ 
+
+ 
+ Aree merceologiche 
+ -->
+
+ 
+ 
+ Supporto
+ 
+ 
+ 
+ 
+
+ 
+ Cerca 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Ricerca: 
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+ 
+ --#>
+ 
+
+ = 2 && showTypeahead">
+ 
+ dropdown-menu headerdropdown --#>
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in informazioni 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in prodotti 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in codici prodotto 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ricerca: 
+ 
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = 2 && showTypeahead">
+ 
+ dropdown-menu headerdropdown -->
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in informazioni 
+ 
+ 
+ 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in prodotti 
+ 
+ 
+ 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in codici prodotto 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Prodotti Prodotti
+ Codici Prodotto Codici Prodotto 
+ Informazioni Informazioni
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Acquisti in Rete PA 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MePALight, nasce il mercato digitale per gli affidamenti diretti 
+ 
+ Il nuovo strumento semplifica la gestione degli affidamenti diretti sotto i 5.000 euro, integrando adempimenti, documenti e comunicazioni in un unico percorso digitale, assistito dall'intelligenza artificiale. 
+ Approfondisci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Connettività, dispositivi e sicurezza per le PA con la nuova Convenzione per la telefonia mobile 
+ 
+ L’iniziativa supporta l'evoluzione delle comunicazioni mobili nella PA con servizi avanzati per la gestione delle utenze e dei dispositivi. 
+ Approfondisci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Esecuzione contrattuale digitale: online il nuovo modulo di Acquisti in rete 
+ 
+ Un unico ambiente digitale per seguire la fase di esecuzione del contratto, monitorare attività ed eventi e gestire in modo integrato documenti, comunicazioni e adempimenti. 
+ Approfondisci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Sono a disposizione delle scuole i servizi per l’organizzazione dei viaggi di istruzione 
+ 
+ Il nuovo Accordo quadro supporta gli istituti scolastici nell’affidamento dei servizi per viaggi di istruzione e stage linguistici, grazie a uno strumento rapido, trasparente e facile da utilizzare. 
+ Approfondisci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ La missione di Acquisti in rete: semplificare, connettere, innovare 
+ 
+ Razionalizziamo gli acquisti pubblici con strumenti digitali semplici ed evoluti, per una PA sempre più efficace e trasparente e imprese sempre più competitive. 
+ Approfondisci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Sei una Pubblica Amministrazione? 
+ 
+ Consulta le modalità operative per effettuare i tuoi acquisti. 
+ Scopri come acquistare 
+ 
+ 
+ 
+ 
+ 
+ Sei un operatore economico? 
+
+ Verifica i passi per diventare fornitore della Pubblica Amministrazione. 
+ Scopri come vendere 
+ 
+ 
+ 
+ 
+ Conosci gli strumenti di Acquisti in rete? 
+
+ Scopri e confronta le soluzioni di acquisto o vendita più adatte alle tue esigenze. 
+ Scopri tutti gli strumenti 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ultime notizie 
+ Consulta le ultime notizie sulle iniziative e i progetti di Acquisti in rete. 
+ 
+ 
+ Tutte le notizie 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Strumento: 
+ 
+ {{ mapInstrumentLabel(etichetta) }}
+ 
+ 
+
+ 150"
+ title="{{content.titolo}}"
+ >
+ {{troncaNotizieTitoli(content.titolo, 150)}}
+ 
+ 
+ {{troncaNotizieTitoli(content.titolo)}}
+ 
+ 
+
+ 150"
+ title="{{pulisciTesto(content.testoCompletoPulito)}}"
+ >
+ {{troncaNotizieTitoli(content.testoCompletoPulito, 150)}}
+ 
+ 
+ {{troncaNotizieTitoli(content.testoCompletoPulito)}}
+ 
+
+ 
+ {{content.data | date:'dd MMMM yyyy'}} 
+ 
+ Vai alla notizia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ mapInstrumentLabel(etichetta) }}
+ 
+ 
+
+ 150"
+ title="{{content.titolo}}"
+ >
+ {{troncaNotizieTitoli(content.titolo, 150)}}
+ 
+ 
+ {{content.titolo}}
+ 
+
+ 150"
+ title="{{pulisciTesto(content.testoCompletoPulito)}}"
+ >
+ {{troncaNotizieTitoli(content.testoCompletoPulito, 150)}}
+ 
+ 
+ {{troncaNotizieTitoli(content.testoCompletoPulito, 150)}}
+ 
+
+ 
+ {{content.data | date:'dd MMMM yyyy'}} 
+ Vai alla notizia 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 0}"
+ />
+ 
+ 
+ 
+ Strumento: 
+ 
+ {{ mapInstrumentLabel(etichetta) }}
+ 
+ 
+
+ 150"
+ title="{{content.titolo}}"
+ >
+ {{troncaNotizieTitoli(content.titolo, (hasValidImage(content.immagine) ? 150 : 63))}}
+ 
+ 
+ {{content.titolo}}
+ 
+
+ 150"
+ >
+ {{troncaNotizieTitoli(content.testoCompletoPulito, 150)}}
+ 
+ 
+ {{troncaNotizieTitoli(content.testoCompletoPulito, 150)}}
+ 
+ {{content.data | date:'dd MMMM yyyy'}} 
+ 
+ Vai alla notizia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ Iniziative 
+
+ 
+ Se sei una PA , scopri le ultime iniziative attivate, consulta la documentazione ed effettua i tuoi acquisti.
+ 
+ 
+ 
+ 
+ Tutte le iniziative 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Strumento: {{getTipologiaLabel(inBa.tipologia)}}
+
+ 
+
+ 
+ 
+ 65">... -->
+ {{inBa.titolo | limitTo: 28}} 28">... 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{inBa.descrizione}} 
+ 
+
+ 
+
+
+ -->
+
+ 
+ Scopri di più 
+ 
+ 
+ Scopri di più 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Bandi 
+ Se sei un operatore economico , accedi agli ultimi bandi pubblicati, per partecipare alle gare o richiedere l'abilitazione. 
+ 
+ 
+ 
+ Tutti i bandi 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Strumento: 
+
+ 
+
+ 
+
+
+ 
+ 
+ {{ba.titolo | limitTo: 28}} 28">... 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ba.descrizione }}
+ 
+ 
+ 
+ 
+
+ -->
+
+ 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 0"
+ >
+ 
+ 
+ 
+ 
+ 
+ Eventi e formazione 
+
+ Scopri e partecipa agli eventi e ai corsi di formazione disponibili. 
+
+ 
+ Scopri tutti gli eventi 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+ 110"
+ title="{{content.titolo}}"
+ >
+ {{troncaNotizieTitoli(content.titolo, 110)}}
+ 
+ 
+ {{content.titolo}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{content.dataInizioEvento | date:'dd/MM/yyyy'}} 
+ 
+ 
+
+ 
+ 
+ {{content.dataInizioEvento | date:'HH:mm'}} 
+ 
+
+ 20 || content.indirizzo.length>10"
+ >
+ 
+ 
+ 
+ 
+ {{content.cittaSedeEvento | limitTo:20}} 20">... 
+ {{content.nomeSedeEvento | limitTo:20}} 10">... 
+ 
+ 
+ 
+ Formazione Online 
+ 
+ 
+ 
+ 
+ Scopri l’evento 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ Scopri anche
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Iniziative per il PNRR 
+ Scopri le soluzioni e le iniziative messe a disposizione da Acquisti in rete per supportare i progetti del Piano nazionale di ripresa e resilienza. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ Avviso CSE 2025 
+
+ Richiedi il contributo CSE 2025 per riqualificare gli edifici comunali tramite il Mercato elettronico della PA. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ eDGUE 
+
+ Utilizza il servizio per creare, salvare e condividere il tuo Documento di Gara Unico Europeo in formato digitale. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ Soggetti aggregatori 
+ Visita il sito dei Soggetti aggregatori che raccoglie le informazioni sui singoli soggetti e sulle relative iniziative d'acquisto. 
+ Scopri di più 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acquisti in rete per te 
+ Consulta le iniziative ideate da Acquisti in rete per soddisfare esigenze specifiche, dalla sanità alla difesa, fino all'efficientamento energetico. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ Verifica inadempimenti 
+ Utilizza il servizio che consente di verificare l’assenza di inadempimenti fiscali prima di effettuare un pagamento. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ Prezzi benchmark 
+ Scopri l'elenco delle Convenzioni, oggetto di benchmark, per le quali sono state indentificate le prestazioni principali e le relative caratteristiche. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ Open data 
+ Consulta i dati aperti sulle attività di Acquisti in rete, condivisi in un'ottica di trasparenza e partecipazione. 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+ 

@@ -1,14 +1,17 @@
 {
  "data": "2026-11-09",
  "strumento": "tools/verifiche/imbuto_via6_revisione.py",
- "candidati": 176,
- "letti": 0,
+ "candidati": 178,
+ "letti": 175,
  "concordanza": {
-  "da-leggere": 176
+  "concorde": 62,
+  "non-confermato": 76,
+  "discorde": 37,
+  "da-leggere": 3
  },
  "accordo_sui_letti_certi": {
-  "concordi": 0,
-  "discordi": 0
+  "concordi": 62,
+  "discordi": 37
  },
  "per_strato": {
   "CTL CC-IT": {
@@ -25,6 +28,10 @@
     "euro": 420296
    },
    "C1+C2+C3": {
+    "cig": 2,
+    "euro": 420296
+   },
+   "entra (C1-C4)": {
     "cig": 2,
     "euro": 420296
    }
@@ -45,6 +52,10 @@
    "C1+C2+C3": {
     "cig": 2,
     "euro": 430000
+   },
+   "entra (C1-C4)": {
+    "cig": 1,
+    "euro": 350000
    }
   },
   "G1 CC-EXTRA-UE": {
@@ -87,6 +98,10 @@
    "C1+C2+C3": {
     "cig": 1,
     "euro": 14400000
+   },
+   "entra (C1-C4)": {
+    "cig": 1,
+    "euro": 14400000
    }
   },
   "G1 S5": {
@@ -105,6 +120,10 @@
    "C1+C2+C3": {
     "cig": 22,
     "euro": 532106673
+   },
+   "entra (C1-C4)": {
+    "cig": 9,
+    "euro": 386991134
    }
   },
   "G3 CC-EXTRA-UE": {
@@ -159,12 +178,16 @@
    "C1+C2+C3": {
     "cig": 3,
     "euro": 9836664
+   },
+   "entra (C1-C4)": {
+    "cig": 3,
+    "euro": 9836664
    }
   },
   "G3 S5": {
    "proposti": {
-    "cig": 94,
-    "euro": 206231877
+    "cig": 96,
+    "euro": 208433208
    },
    "C1": {
     "cig": 14,
@@ -177,6 +200,10 @@
    "C1+C2+C3": {
     "cig": 13,
     "euro": 30751684
+   },
+   "entra (C1-C4)": {
+    "cig": 5,
+    "euro": 10025944
    }
   },
   "tutti CC-EXTRA-UE": {
@@ -213,6 +240,10 @@
    "C1+C2+C3": {
     "cig": 4,
     "euro": 10767654
+   },
+   "entra (C1-C4)": {
+    "cig": 2,
+    "euro": 420296
    }
   },
   "tutti CC-UE": {
@@ -231,12 +262,16 @@
    "C1+C2+C3": {
     "cig": 4,
     "euro": 24236664
+   },
+   "entra (C1-C4)": {
+    "cig": 4,
+    "euro": 24236664
    }
   },
   "tutti S5": {
    "proposti": {
-    "cig": 161,
-    "euro": 1978524556
+    "cig": 163,
+    "euro": 1980725887
    },
    "C1": {
     "cig": 39,
@@ -249,10 +284,14 @@
    "C1+C2+C3": {
     "cig": 37,
     "euro": 563288358
+   },
+   "entra (C1-C4)": {
+    "cig": 15,
+    "euro": 397367078
    }
   }
  },
- "coda_discordi": 0,
+ "coda_discordi": 37,
  "righe": [
   {
    "cig": "B45EB1C19B",
@@ -264,11 +303,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B45EB1C19B",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Adesione convenzione Consip \"Reti Locali 8\" in favore di Vodafone; APPARATI DI RETE LOCALE | FIREWALL: hardware di rete, non cloud",
+    "sha256": "080413f5b8fa4cf047a88eb1e703b932622d4c0d1b87d457c0d708a63f403d43",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2D75214DD",
@@ -280,11 +331,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2D75214DD",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI MATERIALE INFORMATICO PER LA REALIZZAZIONE DELLA SALA SERVER: hardware on-premise, non servizio cloud",
+    "sha256": "c440753420f01c53858b06ba9968b917152d32314ab5cc0d31803a83064a9d7a",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2CE5700ED",
@@ -296,11 +359,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2CE5700ED",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "IMPIANTI RETE LAN, ampliamenti e messa in sicurezza rete ASL; apparati di rete, nessun servizio cloud negli atti",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B179EF4C27",
@@ -312,11 +387,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B179EF4C27",
+    "ict": "s",
+    "e_cloud": "?",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SANITÀ DIGITALE - SISTEMI INFORMATIVI GESTIONALI, Accordo Quadro Sanità Digitale 3; gli estratti non precisano se erogato in cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCD3FF8940",
@@ -328,11 +415,23 @@
    "C2_nota": "campi incoerenti con lo stato",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BCD3FF8940",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI AMMINISTRATIVI, INFORMATICI E POSTALI a supporto gestione tassa auto; servizio misto a prevalenza amministrativa, CPV 75110000",
+    "sha256": "093f684bdd3182b249f37437c9cf3ee0877e88cc0a8a39a639b5c56a7d1811f2",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B12A574F3C",
@@ -344,11 +443,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "Fortinet (NGFW, da delibera)",
-   "lettura": null
+   "lettura": {
+    "cig": "B12A574F3C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Cybersecurity 2: fornitura prodotti sicurezza perimetrale, protezione endpoint e anti-APT, supporto e manutenzione; prodotti on-premise multibrand",
+    "sha256": "cf80d7edbd4f9cb0dddf3a95a0c37ab58afc591c7e1e890a2a0579e3ac758547",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B233B996C0",
@@ -360,11 +471,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B233B996C0",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Adesione convenzione Consip PC Desktop, Workstation e Monitor 3: fornitura di Personal Computer Desktop LOTTO 2",
+    "sha256": "5f6d32df333860049afdc2b9e47a65072523a14569fc9a1afc9aa09fef41df8c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B126DC292B",
@@ -376,11 +499,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B126DC292B",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "STAMPANTI - ADESIONE CONVENZIONE STAMPANTI 20 LOTTO 3 (hardware periferico, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B634C5CCF2",
@@ -392,11 +527,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B634C5CCF2",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizi di manutenzione di apparecchiature hardware multibrand fuori garanzia per Sogei (manutenzione, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BAB681708B",
@@ -408,11 +555,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: ibm -> EXTRA-UE",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "IBM",
-   "lettura": null
+   "lettura": {
+    "cig": "BAB681708B",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "IBM",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "Fornitura di licenze, manutenzione software, servizi cloud e servizi professionali di tecnologie IBM",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A458025",
@@ -424,11 +583,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A458025",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Fortinet",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "LOTTO 3 PRODOTTI SOLUZIONI E SERVIZI FORTIGATE: prodotti/soluzioni di rete e sicurezza, hardware e software, upgrade apparati",
+    "sha256": "b29697c2217736581b1d2b15d44bfaae1c22b8c5094b1ca6e557002577367f74",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BB0F081D2A",
@@ -440,11 +611,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BB0F081D2A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Evoluzione della rete di server farm dell'Istituto (Banca d'Italia): infrastruttura/networking propria, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B71EF4CF07",
@@ -456,11 +639,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B71EF4CF07",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "RINNOVO SERVER FARM (CPV 32580000-2): rinnovo di server farm, tipicamente hardware/infrastruttura propria, non acquisto di cloud; nessun atto",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1CE78AC98",
@@ -472,11 +667,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1CE78AC98",
+    "ict": "s",
+    "e_cloud": "?",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "adesione all'Accordo Quadro per Servizi applicativi in ottica cloud e PMO ed. 2 per le PAC - Lotto 1: servizi applicativi, non prova l'acquisto di un servizio cloud",
+    "sha256": "7663167ece0b80136133923100f3cf0a1c36ee8e0efa71a7cf69c7ae99da577f",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A456E7A",
@@ -488,11 +695,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A456E7A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Cisco",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "LOTTO 1 PRODOTTI SOLUZIONI E SERVIZI CISCO; hardware e software e relativa manutenzione per upgrade apparati di rete e networking",
+    "sha256": "dbcbdc0b669feaeb1cd5bcd1026c15e59ee609dbff602f67ab95ce004ad0c70c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B10A6B541C",
@@ -504,11 +723,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B10A6B541C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI MANUTENZIONE HARDWARE DELLE APPARECCHIATURE ELETTRONICHE DEL SISTEMA INFORMATICO INPS: manutenzione hardware, non cloud",
+    "sha256": "463bd6d1e4bdc0d985195f8a1b1319fe9d07470b9acda606c36a4956448170b7",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B6F0825A3E",
@@ -520,11 +751,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B6F0825A3E",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "prestazione principale: supporto amministrativo/operativo alla riscossione tramite applicativi in uso; IT solo come prestazione secondaria",
+    "sha256": "5a8661720ebf128835e484e439b354ed5a80a737087367bf626095c827247417",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B554BE2C04",
@@ -536,11 +779,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): NOLEGGIO DI 2 STAMPANTI MULTIFUNZIONE: noleggio di apparecchiature d'ufficio, non bene/servizio informatico ne cloud",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B554BE2C04",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "Canon",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "NOLEGGIO DI 2 STAMPANTI MULTIFUNZIONE: noleggio di apparecchiature d'ufficio, non bene/servizio informatico ne cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B764427D7D",
@@ -552,11 +807,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE ... PER SCANSIONE, COPIA E STAMPA",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B764427D7D",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "Canon",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "FORNITURA IN NOLEGGIO DI APPARECCHIATURE MULTIFUNZIONE ... PER SCANSIONE, COPIA E STAMPA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BB57EC8E72",
@@ -568,11 +835,23 @@
    "C2_nota": "campi incoerenti con lo stato",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): SCUOLABUS ... AD ALIMENTAZIONE IBRIDA/MILD-HYBRID ED ELETTRICA ... TRASPORTO STUDENTI; totem/sistemi informativi lotto minore",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BB57EC8E72",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SCUOLABUS ... AD ALIMENTAZIONE IBRIDA/MILD-HYBRID ED ELETTRICA ... TRASPORTO STUDENTI; totem/sistemi informativi lotto minore",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B41170C9A6",
@@ -584,11 +863,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B41170C9A6",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ADESIONE A CONVENZIONE CONSIP RETE LAN 8 (infrastruttura di rete locale), nessun estratto che indichi erogazione in cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B420408A77",
@@ -600,11 +891,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B420408A77",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ADESIONE A CONVENZIONE CONSIP RETE LAN 8, CPV 32410000-0 rete locale; infrastruttura LAN, non cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B89F79DC5F",
@@ -616,11 +919,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B89F79DC5F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI APPARATI DI SICUREZZA INFORMATICA ... FIREWALL; apparati on-premise, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2B394AF2D",
@@ -632,11 +947,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "la seconda lettura dice cloud: MIGRAZIONE IN CLOUD E RE-ARCHITECT ... Gestione della piattaforma in Cloud; provider cloud non indicato, aggiudicatari integratori",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2B394AF2D",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "MIGRAZIONE IN CLOUD E RE-ARCHITECT ... Gestione della piattaforma in Cloud; provider cloud non indicato, aggiudicatari integratori",
+    "sha256": "c48faa3bd9a4cd4ca074e141cdd8c54a44632d1253010fb3dba35b8065495a39",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B761714B35",
@@ -648,11 +975,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B761714B35",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI NOTEBOOK E WORKSTATION MOBILE ... COMPRENSIVA DELL'ASSISTENZA E MANUTENZIONE POST-VENDITA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B06B262288",
@@ -664,11 +1003,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B06B262288",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI INFORMATICI PER L'EVOLUZIONE DI PIATTAFORME TECNOLOGICHE PER LA DIGITAL INNOVATION (LOTTO 2); accordo quadro di servizi di sviluppo, non cloud",
+    "sha256": "db740e497141e100260a3f782ea136fa442ca42ddcdd667685c5132b4362e727",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1D7E93FF5",
@@ -680,11 +1031,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1D7E93FF5",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Broadcom",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "RINNOVO E ACQUISIZIONE DI NUOVE LICENZE SOFTWARE BROADCOM; rinnovo licenze in scadenza e manutenzione, non cloud",
+    "sha256": "152b7aa6ceb1fe00c42f8f78191fba46d48e6afcc50fb98c10e11c6670c4a62b",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B4A9195A54",
@@ -696,11 +1059,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B4A9195A54",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "STORAGE: FORNITURA DI SISTEMI DI ARCHIVIAZIONE DATI ... upgrade e rinnovo infrastrutture datacenter + licenze ArcGIS; fornitura hardware/licenze, non servizio cloud",
+    "sha256": "3986bdcc34b0085d6c744e9deda3c0d177801adbb1baf4699cbe46ff8a2e5aa5",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A45A1CB",
@@ -712,11 +1087,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A45A1CB",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Trend Micro",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "LOTTO 5 PRODOTTI SOLUZIONI E SERVIZI TREND MICRO; fornitura prodotti rete/sicurezza hardware e software e manutenzione, non cloud",
+    "sha256": "024f8a29d80927297520f756f7ddf2979382a6fb34dd2745f41228d875f5ec7f",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BB204F60E8",
@@ -728,11 +1115,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BB204F60E8",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Diebold Nixdorf",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "GARA ATM POLIS FORNITURA DI 700 (ATM), SOFTWARE E RELATIVI SERVIZI E OPERE; fornitura hardware ATM, non cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B33B44D288",
@@ -744,11 +1143,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: sap -> UE",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "SAP SE",
-   "lettura": null
+   "lettura": {
+    "cig": "B33B44D288",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "SAP",
+    "giurisdizione": "UE",
+    "certezza": "alta",
+    "evidenza": "fornitura in modalità cloud di soluzioni CRM e Marketing... servizi SaaS; Lotto 4 – SAP",
+    "sha256": "1d330cf19c817c7b4f9608a193d68a7396eb8514ac3b7090ac7c28911cba990c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B28545AE4A",
@@ -760,11 +1171,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B28545AE4A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Approvvigionamento hardware e servizi in convenzione Consip LAN 8 (apparati di rete locale)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9CE70512B",
@@ -776,11 +1199,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9CE70512B",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizi di manutenzione hardware fuori garanzia per gli uffici del sistema informativo della fiscalità",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B079D68515",
@@ -792,11 +1227,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B079D68515",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Servizi informatici per l'evoluzione di piattaforme di ALM/DevOps e supporto all'enterprise architecture",
+    "sha256": "db740e497141e100260a3f782ea136fa442ca42ddcdd667685c5132b4362e727",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC3A65B314",
@@ -824,11 +1271,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B06C68830C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Manutenzione evolutiva e ampliamento dei servizi applicativi in ambito sanità digitale - sistemi informativi gestionali",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A4590F8",
@@ -840,11 +1299,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "Dell Technologies",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A4590F8",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Dell",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "LOTTO 4 PRODOTTI SOLUZIONI E SERVIZI DELL — hardware e software e relativa manutenzione, upgrade apparati infrastrutturali e networking",
+    "sha256": "ca86fe497c685c7f511552edadd7ea8ae3cbed1846d731b57b38563aabfd29a8",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A457F4D",
@@ -856,11 +1327,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A457F4D",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "HPE Aruba",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "LOTTO 2 PRODOTTI SOLUZIONI E SERVIZI HPE ARUBA — hardware e software e relativa manutenzione, upgrade apparati infrastrutturali e networking",
+    "sha256": "5149f50c04c58a4bdf601abd63025dd699c41f2b2bffeece7c5aca2d92bd828d",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B4EA367716",
@@ -872,11 +1355,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B4EA367716",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "attività di ricerca e sviluppo di un dimostratore di bordo di Quantum Cyber Security, comprensivo della fase di In-Orbit Validation (IOV)",
+    "sha256": "5fcc86539eb788df49f4d3c5778652d21d044aa3dfd56ece413fc75425f2c89c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B634C5DDC5",
@@ -888,11 +1383,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B634C5DDC5",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "servizi di manutenzione di apparecchiature hardware multibrand fuori garanzia per Sogei",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B927677AE9",
@@ -904,11 +1411,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B927677AE9",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "fornitura e servizi connessi finalizzati alla realizzazione delle infrastrutture centrali di rete presso i siti primario, di business continuity e di disaster recovery",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B348693872",
@@ -920,11 +1439,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): acquisizione di servizi di connettività per lo sviluppo della rete telematica del sistema informativo ospedaliero",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B348693872",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "acquisizione di servizi di connettività per lo sviluppo della rete telematica del sistema informativo ospedaliero",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B459D5E9F2",
@@ -936,11 +1467,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B459D5E9F2",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Fornitura di un data center multipiattaforma e dei relativi servizi di assistenza tecnica e di manutenzione — acquisto di infrastruttura, non servizio cloud",
+    "sha256": "0dc163c37674fc1fae1a70933e00ac47180bfad83ef37f917bbe0515decb7c58",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "A038DA0645",
@@ -952,11 +1495,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "la seconda lettura dice cloud: Adesione all'Accordo Quadro Consip 'Public Cloud IaaS e PaaS - Lotto 8'",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "A038DA0645",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Adesione all'Accordo Quadro Consip 'Public Cloud IaaS e PaaS - Lotto 8'",
+    "sha256": "463bd6d1e4bdc0d985195f8a1b1319fe9d07470b9acda606c36a4956448170b7",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B4166A0529",
@@ -968,11 +1523,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B4166A0529",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Supporto alle operazioni radar per la SSA e al MCO/MCE del software ISOC — misto radar militare e manutenzione software",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCBB9E74A7",
@@ -984,11 +1551,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: oracle -> EXTRA-UE",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "Oracle Corporation",
-   "lettura": null
+   "lettura": {
+    "cig": "BCBB9E74A7",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Oracle",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "ORACLE FUSION SAAS",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7A4678EEB",
@@ -1000,11 +1579,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Manutenzione hardware apparati di vendita e convalida",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7A4678EEB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Manutenzione hardware apparati di vendita e convalida",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B368BF90F4",
@@ -1016,11 +1607,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "Dell Technologies",
-   "lettura": null
+   "lettura": {
+    "cig": "B368BF90F4",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Dell Technologies",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "Sistemi storage e backup del produttore Dell Technologies — apparati, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0D5CEB987",
@@ -1032,11 +1635,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0D5CEB987",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Servizi di gestione, manutenzione e reingegnerizzazione dell'architettura del sistema informativo sanitario integrato regionale (SISAR) e acquisizione dell'infrastruttura di integrazione",
+    "sha256": "8ccf0d7e033a05d42395a72c4c0bd39c9ddb2c6b208b1ae93a670918a6bd790b",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1B7996E1C",
@@ -1048,11 +1663,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "Citrix",
-   "lettura": null
+   "lettura": {
+    "cig": "B1B7996E1C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Citrix",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "rinnovo delle licenze software “citrix”... mediante adesione alla Convenzione Consip “Licenze Software Multibrand 6 - Lotto 11”",
+    "sha256": "ca2ada56e8814627c217765e39fdc3a42f7fa5fb01faab8fc446344779b84568",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8C0CE82BA",
@@ -1064,11 +1691,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B8C0CE82BA",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "fornitura di prodotti per la sicurezza perimetrale, protezione degli endpoint e anti-apt ed erogazione di servizi connessi",
+    "sha256": "fadc7c6150bd8c18d251e641a0f89400f01214dc3f2bdaef4ade42accecfcc41",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC74911F16",
@@ -1080,11 +1719,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: aruba -> IT",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "la seconda lettura dice non cloud: servizio di conduzione, manutenzione e supporto specialistico per la gestione e l'evoluzione del sistema informativo del Fondo For.Te.",
    "entra_nei_totali": false,
    "provider_proposto": "Aruba",
-   "lettura": null
+   "lettura": {
+    "cig": "BC74911F16",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "servizio di conduzione, manutenzione e supporto specialistico per la gestione e l'evoluzione del sistema informativo del Fondo For.Te.",
+    "sha256": "74bb1f7b0867a76474263211788f196cd1d22a97bbc0fbd8f8d6b24a749a78fc",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B06E8B7898",
@@ -1096,11 +1747,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B06E8B7898",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "Affidamento di servizi applicativi e servizi di supporto in ambito 'Sanità Digitale'... servizi di supporto all'attuazione degli interventi PNRR su FSE2.0",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0E206055F",
@@ -1112,11 +1775,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0E206055F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Vertiv",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "affidamento della fornitura di una soluzione Data Center modulare prefabbricata da installarsi presso la Fondazione Human Technopole",
+    "sha256": "32401faf463da324452654b38a33c7d8d4bb33e908b1133206455078b651948c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B221023744",
@@ -1128,11 +1803,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "AlmaViva (MOOVA)",
-   "lettura": null
+   "lettura": {
+    "cig": "B221023744",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Almaviva (piattaforma MOOVA)",
+    "giurisdizione": "IT",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI LICENZE SAAS ... PER LA PIATTAFORMA MOOVA; MoovA Seamless Mobility Platform by Almaviva SpA",
+    "sha256": "801b08021edeba4d858a97014c9227a9cb964aba923b8591751a3406e9650027",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA75F34314",
@@ -1144,11 +1831,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA75F34314",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZIO DI AGGIORNAMENTO DELLE BANCHE DATI DEL SITR - SISTEMA INFORMATIVO TERRITORIALE REGIONALE; aggiudicato a RTI di remote sensing/ESRI, nessun cenno a cloud",
+    "sha256": "a8539bde11e57ecf53d803efcdedd3f1adb572e8f7a691997a5086c52242142b",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9AFF6F2CB",
@@ -1160,11 +1859,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9AFF6F2CB",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI APPLICATIVI ACCENTURE; servizi di sviluppo frontend, backend e devops, nessuna erogazione cloud dichiarata",
+    "sha256": "d085138b18fa28a6d26527a9fec3873779425ebb1de43bdb79fe7dab0a2a2b38",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1903AED73",
@@ -1176,11 +1887,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1903AED73",
+    "ict": "s",
+    "e_cloud": "?",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "SERVIZI IN CONTINUITA' OUTSOURCING DEL SISTEMA INFORMATIVO DELLA CITTA' - AFFIDAMENTO CTE DEI SERVIZI APPLICATIVI 2024; outsourcing in house, modalità di erogazione non specificata",
+    "sha256": "b912823fd3b1b8e77aa107121306759393c15a7cb5f65b4947a9f79cc8e26bcf",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7EAA4745B",
@@ -1192,11 +1915,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): ACQUISTO APPARECCHIATURE DI RETE CON TECNOLOGIA SD WAN; apparati per rete SD-WAN (connettività), acquisto hardware",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7EAA4745B",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISTO APPARECCHIATURE DI RETE CON TECNOLOGIA SD WAN; apparati per rete SD-WAN (connettività), acquisto hardware",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B634C5BC1F",
@@ -1208,11 +1943,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B634C5BC1F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI MANUTENZIONE DI APPARECCHIATURE HARDWARE MULTIBRAND FUORI GARANZIA PER SOGEI",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCA10E7C0B",
@@ -1224,11 +1971,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BCA10E7C0B",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "F5",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "SERVIZIO DI MANUTENZIONE E ASSISTENZA TECNICA E FORNITURA DI BILANCIATORI, GSLB E WAF... SU TECNOLOGIA F5",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8AED303DF",
@@ -1240,11 +1999,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B8AED303DF",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI DI ASSISTENZA TECNICA, AGGIORNAMENTO HARDWARE E SOFTWARE E GESTIONE SISTEMISTICA DEGLI APPLICATIVI PACS-RIS-CIS",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B86FFEAFEB",
@@ -1256,11 +2027,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): APPALTO DI LAVORI DI CABLAGGIO STRUTTURATO RETE DATI E FONIA IMBARCHI A1-A10 DELL'AEROPORTO",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B86FFEAFEB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "APPALTO DI LAVORI DI CABLAGGIO STRUTTURATO RETE DATI E FONIA IMBARCHI A1-A10 DELL'AEROPORTO",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B354FC508D",
@@ -1272,11 +2055,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "Cisco Systems, IBM e altri brand on-premise (Citrix, Checkpoint, Radware, Juniper)",
-   "lettura": null
+   "lettura": {
+    "cig": "B354FC508D",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "aggiornamento apparati di rete in End of Support, licenze software e codici prodotto di manutenzione dei Brand Cisco, Citrix, Checkpoint, Radware, Juniper",
+    "sha256": "e07eb770b4790f40cfdca66fcbaa6acbd90013a823e460ddf3f2efca8ca2cbee",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9EB461AF6",
@@ -1288,11 +2083,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): LAVORI: impianti fotovoltaici, storage, impianti elettrici e tecnologici, potenziamento rete dati e connettività Internet a banda larga",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9EB461AF6",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "LAVORI: impianti fotovoltaici, storage, impianti elettrici e tecnologici, potenziamento rete dati e connettività Internet a banda larga",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B5C1EFFF77",
@@ -1304,11 +2111,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B5C1EFFF77",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ASSISTENZA TECNICA... PRESA IN CARICO, GESTIONE E MANUTENZIONE ORDINARIA ED EVOLUTIVA DEL SISTEMA INFORMATIVO SMUCUP",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B36CB58C95",
@@ -1320,11 +2139,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B36CB58C95",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Acquisto switch e apparati di rete per manutenzione/aggiornamento LAN comunale: fornitura hardware di rete, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBFDDEC5D8",
@@ -1336,11 +2167,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBFDDEC5D8",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizio di assistenza tecnica e manutenzione hardware e software di storage per le infrastrutture centrali: manutenzione, non acquisto cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9CE704058",
@@ -1352,11 +2195,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9CE704058",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizi di manutenzione hardware fuori garanzia per il sistema informativo della fiscalità: manutenzione hardware, non cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC04CB848F",
@@ -1368,11 +2223,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC04CB848F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizio di assistenza tecnica e manutenzione hardware e software di apparati di rete per le infrastrutture centrali IPZS: manutenzione, non cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B33E5F5CCB",
@@ -1384,11 +2251,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B33E5F5CCB",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Sviluppo e realizzazione del Centro Operativo di Cybersecurity (C-SOC) dell'ASI: sviluppo/realizzazione SOC, non acquisto di servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9A3CEF123",
@@ -1400,11 +2279,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9A3CEF123",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Fornitura di access point, monitor, firewall e switch: fornitura di hardware di rete, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B5E6493E6E",
@@ -1416,11 +2307,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B5E6493E6E",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI UN SOFTWARE DI MERCATO IN LICENZA D'USO ED IL SUO SVILUPPO per la gestione integrata del CdG e della VdP; servizi informatici di supporto",
+    "sha256": "a95fad1afc435de9a0d94e253beba3f5f05dc30bdc627c615d0591052422dc17",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA0B66DF69",
@@ -1432,11 +2335,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA E MESSA IN OPERA DI ARREDI D'UFFICIO, ARREDI SANITARI E APPARECCHIATURE INFORMATICHE (oggetto principale arredi, CPV 33192000-2)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA0B66DF69",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA E MESSA IN OPERA DI ARREDI D'UFFICIO, ARREDI SANITARI E APPARECCHIATURE INFORMATICHE (oggetto principale arredi, CPV 33192000-2)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BB5A289FBD",
@@ -1448,11 +2363,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): CONTRATTO QUADRO PER LAVORI DI CABLAGGIO DELLA RETE DATI E FONIA (lavori/connettività pura, CPV 32421000-0)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BB5A289FBD",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "CONTRATTO QUADRO PER LAVORI DI CABLAGGIO DELLA RETE DATI E FONIA (lavori/connettività pura, CPV 32421000-0)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA94761E0C",
@@ -1464,11 +2391,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA94761E0C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISTO HARDWARE E SOFTWARE PER ADEGUAMENTO INFRASTRUTTURA BACKUP (acquisto hardware on-premise, nessun cenno a cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0D105DCBE",
@@ -1480,11 +2419,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0D105DCBE",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "ACQUISTO PERSONAL COMPUTER DESKTOP E MONITOR (hardware, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9E4EE0777",
@@ -1496,11 +2447,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9E4EE0777",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Siemens",
+    "giurisdizione": "UE",
+    "certezza": "media",
+    "evidenza": "MANUTENZIONE HARDWARE E SOFTWARE DEI SISTEMI PACS E RIS AZIENDALI DI PRODUZIONE/FORNITURA SIEMENS (manutenzione, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8710D3456",
@@ -1512,11 +2475,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: sap -> UE",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "SAP SE",
-   "lettura": null
+   "lettura": {
+    "cig": "B8710D3456",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "SAP",
+    "giurisdizione": "UE",
+    "certezza": "alta",
+    "evidenza": "Acquisizione di servizi Cloud SAP in modalità SaaS. Adesione all'Accordo Quadro Funzionalità BI SaaS 2 - Lotto 5 «Servizi BI SaaS» SAP",
+    "sha256": "008969f20cd21429001e7f829decc6101df008240a67928fc8331bfecece258e",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9B5D78C73",
@@ -1528,11 +2503,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9B5D78C73",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Manutenzione correttiva ed evolutiva, sviluppo software e consulenza specialistica per la gestione real time del sistema elettrico nazionale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBA30AD427",
@@ -1544,11 +2531,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBA30AD427",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Fornitura con posa in opera per la realizzazione del progetto di digitalizzazione delle torrette di rilevamento incendi; categoria 323235 Sistema di videosorveglianza",
+    "sha256": "54ed02567b119e0c6d690d80cd5c4bb3bdc4ce1ef60e954f9f68c9a2225ad79e",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B103DE98F0",
@@ -1560,11 +2559,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "PA Digitale S.p.A.",
-   "lettura": null
+   "lettura": {
+    "cig": "B103DE98F0",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "PA Digitale",
+    "giurisdizione": "IT",
+    "certezza": "media",
+    "evidenza": "Canone generale servizio in ASP fornitura piattaforma informatica applicativi in uso all'ente e servizio di storage e conservazione digitale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA7AAA8724",
@@ -1576,11 +2587,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA7AAA8724",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Studio di fattibilità per la continuità operativa del sistema informativo contabile della Regione Lazio e dei sottosistemi correlati",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9F34ECEAC",
@@ -1592,11 +2615,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9F34ECEAC",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "Ammodernamento e potenziamento tecnologico della rete idrometeorologica di monitoraggio e integrazione con dorsale a microonde; hardware e software del centro funzionale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCF08D6E0A",
@@ -1608,11 +2643,23 @@
    "C2_nota": "campi incoerenti con lo stato",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Servizio triennale di presa in carico, custodia, gestione archivistica e digitalizzazione delle cartelle cliniche (CPV 92512000-3)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BCF08D6E0A",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Servizio triennale di presa in carico, custodia, gestione archivistica e digitalizzazione delle cartelle cliniche (CPV 92512000-3)",
+    "sha256": "f17aa56cadd01d21a13160ad51aa17bc012dc63a1c6ec0fa2d3bd9f13ec97631",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8E3DDEE22",
@@ -1624,11 +2671,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B8E3DDEE22",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Servizio di noleggio, acquisto e assistenza device (personal computer e tablet)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2608321A9",
@@ -1640,11 +2699,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2608321A9",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Fornitura di una infrastruttura network e di sicurezza informatica, con servizi di installazione, configurazione e manutenzione",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0497FE743",
@@ -1656,11 +2727,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0497FE743",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Nutanix",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "Acquisizione licenze software per server Nutanix in convenzione Consip",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B061D17F33",
@@ -1672,11 +2755,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B061D17F33",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Nutanix",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "Acquisizione licenze software per server Nutanix in convenzione Consip",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC6A45B29E",
@@ -1688,11 +2783,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC6A45B29E",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Fornitura in acquisto e/o locazione di prodotti e soluzioni di rete e sicurezza, hardware e software e relativa manutenzione; lotto «produttori vari»",
+    "sha256": "966a507b4da59ba7c10895bb9c704d8a12916bd0c111a93d75b7238a37468c25",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B29A594811",
@@ -1704,11 +2811,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B29A594811",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "FORNITURA SOTTOSCRIZIONI SOFTWARE RED HAT ALL'INTERNO DEL PROGRAMMA RED HAT CCSP: sottoscrizioni software, non acquisto di servizio cloud",
+    "sha256": "025fc8034d841918c7b0e7061b0aba499354cb6aa89615bc70b33fb772fd7192",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8EF6E5E9E",
@@ -1720,11 +2839,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "dizionario marchi: sap -> UE",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "SAP SE",
-   "lettura": null
+   "lettura": {
+    "cig": "B8EF6E5E9E",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "SAP",
+    "giurisdizione": "UE",
+    "certezza": "alta",
+    "evidenza": "Acquisizione di SAP CLOUD per 39 mesi",
+    "sha256": "c6982ed01b1616a5d615582f0d400419e3959692d493e03c16a6d514179853af",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B99FFB8D01",
@@ -1736,11 +2867,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "Studio Storti srl / DPM",
-   "lettura": null
+   "lettura": {
+    "cig": "B99FFB8D01",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Studio Storti (DPM)",
+    "giurisdizione": "IT",
+    "certezza": "alta",
+    "evidenza": "SOFTWARE GESTIONE TRATTAMENTO DATI PERSONALI DATA PROTECTION MANAGER (DPM) SAAS",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7116D7EC6",
@@ -1752,11 +2895,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): SERVIZIO DI TELECARDIOLOGIA per la gestione della sindrome coronarica acuta; CPV 85100000 (sanità), noleggio postazioni",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7116D7EC6",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZIO DI TELECARDIOLOGIA per la gestione della sindrome coronarica acuta; CPV 85100000 (sanità), noleggio postazioni",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B158A89EA8",
@@ -1768,11 +2923,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B158A89EA8",
+    "ict": "s",
+    "e_cloud": "?",
+    "provider_prodotto": "Adobe",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "Acquisizione di licenze in sottoscrizione \"Adobe\" e servizi di supporto; non dice che il servizio sia erogato in cloud",
+    "sha256": "2b0fc820b314fbaa04a0845424192de2027f91caf2464d932fbaafa00591324d",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B6379EE80A",
@@ -1784,11 +2951,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B6379EE80A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Extreme Networks",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "MANUTENZIONE HARDWARE E AGGIORNAMENTO SOFTWARE DEGLI APPARATI EXTREME, assistenza sistemistica networking",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCA02C30BD",
@@ -1800,11 +2979,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "Celonis",
-   "lettura": null
+   "lettura": {
+    "cig": "BCA02C30BD",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Celonis",
+    "giurisdizione": "UE",
+    "certezza": "alta",
+    "evidenza": "SERVIZIO DI PROCESS MINING TRAMITE IL TOOL CELONIS IN MODALITA' SaaS",
+    "sha256": "b249d4a25e4a87bb9c15d64fb4fd89437c5a06e169df96d1139b6b448f6e8ac5",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B357C7F961",
@@ -1816,11 +3007,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): T08 - Lavori di realizzazione dei centri di controllo del nuovo sito ATM di Disaster Recovery; Tipologia Lavori",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B357C7F961",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "T08 - Lavori di realizzazione dei centri di controllo del nuovo sito ATM di Disaster Recovery; Tipologia Lavori",
+    "sha256": "b425ff59c6dd0ace3117d0ca382be409048d8574846a29c89f9decead3ab0c83",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0BFAB5BAC",
@@ -1832,11 +3035,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0BFAB5BAC",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Fornitura del servizio di assistenza hardware, per 24 mesi; canone assistenza hardware e software",
+    "sha256": "65d4f556757ea9413df7a0cfd1e64d1d9da1b1fecf814811c21ec77d08db8f10",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B634C5FF6B",
@@ -1848,11 +3063,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B634C5FF6B",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI MANUTENZIONE DI APPARECCHIATURE HARDWARE MULTIBRAND FUORI GARANZIA PER SOGEI",
+    "sha256": "8e57d64d426dae8e7583cd5b497cf45cf61313b5d31f6ec47602728ce208fb4b",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B74162E95F",
@@ -1864,11 +3091,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B74162E95F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI DI ASSISTENZA TECNICA E MANUTENZIONE HARDWARE E SOFTWARE DELL'INFRASTRUTTURA CENTRALE CIE",
+    "sha256": "af290df47be59795204de1baaf5e76aec771a5d6b9c87aade4d51c648b76006d",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B34C72D809",
@@ -1880,11 +3119,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B34C72D809",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "FORNITURA MATERIALE DI CONSUMO, INFORMATICO E TELEFONIA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BABC0C5ECF",
@@ -1896,11 +3147,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Fornitura dispositivi medici, apparecchiature diagnostiche e sistema informativo sanitario per poliambulatorio in Niger",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BABC0C5ECF",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Fornitura dispositivi medici, apparecchiature diagnostiche e sistema informativo sanitario per poliambulatorio in Niger",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B64760E76F",
@@ -1912,11 +3175,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B64760E76F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "Affidamento infrastruttura di comunicazione per le Centrali Operative NEA 116117, nessuna prova di servizio cloud",
+    "sha256": "893781692561cc83e5ffc3a2c62a393a80e4caa62b0dceb76314f6cc1b033c0d",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0B6925C72",
@@ -1928,11 +3203,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0B6925C72",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Acquisto notebook, tablet e accessori (hardware)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBD2B9ED87",
@@ -1944,11 +3231,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Fornitura materiale di consumo per apparecchiature informatiche (consumabili, non bene/servizio informatico)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBD2B9ED87",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Fornitura materiale di consumo per apparecchiature informatiche (consumabili, non bene/servizio informatico)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B52B544CE9",
@@ -1960,11 +3259,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "InfoCert S.p.A.",
-   "lettura": null
+   "lettura": {
+    "cig": "B52B544CE9",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "InfoCert",
+    "giurisdizione": "IT",
+    "certezza": "media",
+    "evidenza": "erogazione di un servizio di posta elettronica certificata con supporto operativo, adesione Convenzione Consip PEC",
+    "sha256": "34f930482c36d23e7264fe71eb334b04e5ba71558763d849b527b83ba1e59783",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3341D5C18",
@@ -1976,11 +3287,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3341D5C18",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Cisco",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "Affidamento di apparati di rete Cisco in convenzione Reti Locali 8 lotto 2, apparati LAN (hardware on-premise)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1054CBB1C",
@@ -1992,11 +3315,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1054CBB1C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "ACQUISTO DI LICENZE RED HAT ENTERPRISE; manutenzione software",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3057D5DB6",
@@ -2008,11 +3343,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3057D5DB6",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI MATERIALE INFORMATICO (CPV 39134000-0)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B79B5BE04F",
@@ -2024,11 +3371,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B79B5BE04F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "REVAMPING DEI FIREWALL PERIFERICI... adeguamento cybersicurezza NIS2",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8863BC1C8",
@@ -2040,11 +3399,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B8863BC1C8",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "Schneider Electric",
+    "giurisdizione": "UE",
+    "certezza": "bassa",
+    "evidenza": "FORNITURA DEL SOFTWARE DI ANALISI ADMS E DEI QUADRI DI MEDIA TENSIONE ISOLATI IN ARIA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBD2BA0F2D",
@@ -2056,11 +3427,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA DI MATERIALE DI CONSUMO... PER LE APPARECCHIATURE INFORMATICHE",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBD2BA0F2D",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI MATERIALE DI CONSUMO... PER LE APPARECCHIATURE INFORMATICHE",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B4D7765413",
@@ -2072,11 +3455,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B4D7765413",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Veritas",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "ASSISTENZA E MANUTENZIONE DEI PRODOTTI VERITAS NETBACKUP... SOTTOSCRIZIONI SOFTWARE",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B57DE42AED",
@@ -2088,11 +3483,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): LAVORI DI CABLAGGIO STRUTTURATO RETE DATI-FONIA PRESSO I LOCALI... (lavori/connettività fisica, non ICT né cloud)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B57DE42AED",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "LAVORI DI CABLAGGIO STRUTTURATO RETE DATI-FONIA PRESSO I LOCALI... (lavori/connettività fisica, non ICT né cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B634C5EE98",
@@ -2104,11 +3511,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B634C5EE98",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI MANUTENZIONE DI APPARECCHIATURE HARDWARE MULTIBRAND FUORI GARANZIA PER SOGEI (manutenzione hardware, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B326B6CC42",
@@ -2120,11 +3539,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): INTEGRAZIONE IMPIANTO DI RETE DATI E TELEFONICO... CONSIP RETI LOCALI LAN 8 (rete/connettività, non cloud)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B326B6CC42",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "INTEGRAZIONE IMPIANTO DI RETE DATI E TELEFONICO... CONSIP RETI LOCALI LAN 8 (rete/connettività, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B29D40C0F7",
@@ -2136,11 +3567,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B29D40C0F7",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI PMO E DI SUPPORTO SPECIALISTICO PER LA TRASFORMAZIONE DIGITALE DELLA PA (servizi professionali, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B32322799F",
@@ -2152,11 +3595,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B32322799F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA, A NOLEGGIO, DI UNA INFRASTRUTTURA DI STORAGE AREA NETWORK (SAN) (hardware a noleggio on-premise, non cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7E3D492E6",
@@ -2168,11 +3623,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7E3D492E6",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "COMPONENTI HARDWARE E SOFTWARE... APPARECCHIATURE E MATERIALI ESAZIONE PEDAGGIO (impianto esazione pedaggio, ICT non principale)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9BD748250",
@@ -2184,11 +3651,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9BD748250",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Realizzazione regia di backup con automazione; ACQUISTO DI APPARATI HARDWARE E LICENZE SOFTWARE + servizi professionali",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B5708977E3",
@@ -2200,11 +3679,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): NOLEGGIO STAMPANTI (CPV 30120000-6 stampanti/fotocopiatrici)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B5708977E3",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "NOLEGGIO STAMPANTI (CPV 30120000-6 stampanti/fotocopiatrici)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBD2BA1005",
@@ -2216,11 +3707,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili, non ICT)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBD2BA1005",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili, non ICT)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B37EC1EA40",
@@ -2232,11 +3735,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B37EC1EA40",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "MANUTENZIONE CON AGGIORNAMENTO INTEGRATO DEL SOFTWARE PER IL SUPPORTO DELLA RETE RADIO DIGITALE (TETRA)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BBD2BA20D8",
@@ -2248,11 +3763,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili rigenerati, non ICT)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BBD2BA20D8",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili rigenerati, non ICT)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BCF13BDD3F",
@@ -2264,11 +3791,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BCF13BDD3F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZIO DI TRACCIAMENTO/TRASMISSIONE DATI CON NOLEGGIO DI APPARATI HARDWARE E SOFTWARE E LICENZA CLIENT/SERVER",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B842AF2C8F",
@@ -2280,11 +3819,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B842AF2C8F",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "servizio di housing degli apparati trasmissivi, a pacchetto e datacenter della rete GARR-T; relativa fornitura di energia elettrica",
+    "sha256": "d2fbb0337c0838219b57b10b702e297a7ac6e25104afdd938bfcc97868941e3c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B01FF1863A",
@@ -2296,11 +3847,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B01FF1863A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "MATERIALE INFORMATICO VARIO - DIPARTIMENTO",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B16E68F15E",
@@ -2312,11 +3875,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "PA Digitale S.p.A.",
-   "lettura": null
+   "lettura": {
+    "cig": "B16E68F15E",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "PA Digitale (URBI)",
+    "giurisdizione": "IT",
+    "certezza": "media",
+    "evidenza": "canoni e assistenza URBI SMART: conservazione digitale a norma, gestione documentale, gestione spazio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B88169AADB",
@@ -2328,11 +3903,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): servizio di assistenza tecnica manutentiva full risk per la PET/CT Siemens e software elaborazione immagini PET",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B88169AADB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "Siemens Healthcare",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "servizio di assistenza tecnica manutentiva full risk per la PET/CT Siemens e software elaborazione immagini PET",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B869FBF3B1",
@@ -2344,11 +3931,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B869FBF3B1",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "potenziamento dell'infrastruttura di New Generation Firewall (NGFW) afferente alla RID; CPV 32420000-3",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B101AD5669",
@@ -2360,11 +3959,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B101AD5669",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "adesione convenzione Consip Licenze Software Multibrand 6 per acquisizione di sottoscrizioni Red Hat open source",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B10AEECB8D",
@@ -2376,11 +3987,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B10AEECB8D",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "ACQUISIZIONE DI SOTTOSCRIZIONI RED HAT OPEN SOURCE (sottoscrizioni/licenze open source, non detto che siano in cloud)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2336C391E",
@@ -2392,11 +4015,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "cloud confermato, giurisdizione non confermata",
    "entra_nei_totali": false,
    "provider_proposto": "Kyndryl",
-   "lettura": null
+   "lettura": {
+    "cig": "B2336C391E",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI SERVIZI CLOUD IAAS E PAAS; Kyndryl è l'integratore, il produttore cloud non è nominato",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B5CD98F447",
@@ -2408,11 +4043,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA DI HARDWARE PER L'EQUIPAGGIAMENTO DI UN DRONE DJI MATRICE E DELLE IMBARCAZIONI, monitoraggio ambientale",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B5CD98F447",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI HARDWARE PER L'EQUIPAGGIAMENTO DI UN DRONE DJI MATRICE E DELLE IMBARCAZIONI, monitoraggio ambientale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC5AB6E714",
@@ -2424,11 +4071,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili, non bene/servizio informatico)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC5AB6E714",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI MATERIALE DI CONSUMO ... PER LE APPARECCHIATURE INFORMATICHE (consumabili, non bene/servizio informatico)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3EC0ABD62",
@@ -2440,11 +4099,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3EC0ABD62",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "STAMPANTI MULTIFUNZIONE (hardware); MEDILIFE è il fornitore, non il produttore",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9FE956095",
@@ -2456,11 +4127,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): FORNITURA TONER, DRUM E RICAMBI VARI - BROTHER (materiale di consumo per apparecchiature informatiche)",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9FE956095",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "Brother",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "FORNITURA TONER, DRUM E RICAMBI VARI - BROTHER (materiale di consumo per apparecchiature informatiche)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC5AB6D641",
@@ -2472,11 +4155,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): fornitura di materiale di consumo a minore impatto ambientale per le apparecchiature informatiche",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC5AB6D641",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "fornitura di materiale di consumo a minore impatto ambientale per le apparecchiature informatiche",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B51262A392",
@@ -2488,11 +4183,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B51262A392",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "affidamento dei servizi di assistenza e manutenzione delle apparecchiature informatiche di AST Pesaro e Urbino",
+    "sha256": "e235635005d8a812abf1d8293e57b9dba3a3987ca8c981893ad48d2c85d54e71",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B6F72CBC90",
@@ -2504,11 +4211,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): carrelli informatizzati e software; CPV 33192000-2 (arredi medici), oggetto principale attrezzatura sanitaria",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B6F72CBC90",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "carrelli informatizzati e software; CPV 33192000-2 (arredi medici), oggetto principale attrezzatura sanitaria",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B754A9E13C",
@@ -2520,11 +4239,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): servizi di formazione e affiancamento a supporto della diffusione degli aggiornamenti software; CATEGORIE MERCEOLOGICHE: servizi di formazione",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B754A9E13C",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "servizi di formazione e affiancamento a supporto della diffusione degli aggiornamenti software; CATEGORIE MERCEOLOGICHE: servizi di formazione",
+    "sha256": "aac4939e6a4310fd2861c4fac76c160d671525d45911d9a87822a1792c7d28b4",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0D0E1C09A",
@@ -2536,11 +4267,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0D0E1C09A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "Convenzione Multibrand 6 Lotto 4 per fornitura Subscrition RedHat; acquisizione di licenze software Red Hat per 12 mesi",
+    "sha256": "cbf3738da32ed7f300b25f4f28f7919771ab651779d6f1dfa565d62047e5cc40",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B316A84ACA",
@@ -2552,11 +4295,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B316A84ACA",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "fornitura di apparati di networking in tecnologia aperta e di firewall-sicurezza perimetrale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B6509A9641",
@@ -2568,11 +4323,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Noleggio e manutenzione di dispositivi di rilevazione velocità e gestione del processo sanzionatorio; hw/sw strumentali, non oggetto principale",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B6509A9641",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "Noleggio e manutenzione di dispositivi di rilevazione velocità e gestione del processo sanzionatorio; hw/sw strumentali, non oggetto principale",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3125CA3C5",
@@ -2584,11 +4351,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3125CA3C5",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "RIQUALIFICAZIONE RETE LAN MUNICIPIO (CPV 50711000-2 manutenzione impianti); rete fisica, non si distingue ICT da connettività",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2310BA5E5",
@@ -2600,11 +4379,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2310BA5E5",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI APPARATI DI NETWORKING IN TECNOLOGIA APERTA E DI FIREWALL-SICUREZZA PERIMETRALE; hardware, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7AD3363D4",
@@ -2616,11 +4407,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): MATERIALE DI CONSUMO (CATETERE) PER ICE INTRACARDIAC ECHO...ECOGRAFO; fornitura sanitaria, sw integrato al dispositivo",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7AD3363D4",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "MATERIALE DI CONSUMO (CATETERE) PER ICE INTRACARDIAC ECHO...ECOGRAFO; fornitura sanitaria, sw integrato al dispositivo",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B90CAB8E2C",
@@ -2632,11 +4435,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): GESTIONE DELLE AREE DI SOSTA...MANUTENZIONE FULL-RISK DI 47 PARCOMETRI...SEGNALETICA; hw/sw abbonamenti accessorio",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B90CAB8E2C",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "GESTIONE DELLE AREE DI SOSTA...MANUTENZIONE FULL-RISK DI 47 PARCOMETRI...SEGNALETICA; hw/sw abbonamenti accessorio",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC0A31F1BD",
@@ -2648,11 +4463,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): SISTEMA ANALITICO AUTOMATIZZATO...SISTEMI DIAGNOSTICI...TEST DI AUTOIMMUNITA; fornitura diagnostica, sw gestionale di settore",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC0A31F1BD",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SISTEMA ANALITICO AUTOMATIZZATO...SISTEMI DIAGNOSTICI...TEST DI AUTOIMMUNITA; fornitura diagnostica, sw gestionale di settore",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B2072DDBFD",
@@ -2664,11 +4491,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B2072DDBFD",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "FORNITURA DI N. 2.500 NOTEBOOK",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B96BEB4FE2",
@@ -2680,11 +4519,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B96BEB4FE2",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "FORNITURA IN SERVICE DI STAMPANTI B/N E A COLORI A BASSO IMPATTO AMBIENTALE",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BC90B5D7DC",
@@ -2696,11 +4547,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BC90B5D7DC",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Veeam Kasten",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "media",
+    "evidenza": "FORNITURA DI LICENZE VEEAM KASTEN PER IL BACKUP DEGLI AMBIENTI OCP ON-PREMISE E CLOUD",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B25418C39C",
@@ -2712,11 +4575,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B25418C39C",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "TRANSIZIONE DIGITALE E CERTIFICAZIONI INFORMATICHE (CPV 80500000-9 servizi di formazione), ente scolastico",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B374B7BA7A",
@@ -2728,11 +4603,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B374B7BA7A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "MANUTENZIONE CORRENTE ED EVOLUTIVA DEI SERVER DI TELEDIAGNOSTICA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BB4D6E423E",
@@ -2744,11 +4631,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BB4D6E423E",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "MANUTENZIONE PER L'IMPIANTO DI COMUNICAZIONE DELLA CENTRALE PROVINCIALE D'EMERGENZA (impianto di comunicazione/telecom)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1380DE034",
@@ -2760,11 +4659,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1380DE034",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISTO STAMPANTI USO UFFICIO - hardware/periferiche, nessun servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3454A4396",
@@ -2776,11 +4687,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3454A4396",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "APPARATI ATTIVI DI RETE LAN DI SCORTA/MULETTI - hardware di rete, CPV 32420000-3",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3471107ED",
@@ -2792,11 +4715,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3471107ED",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "APPARATI ATTIVI DI RETE LAN adesione Convenzione Consip Reti Locali 8 - hardware di rete",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B14B7BC956",
@@ -2808,11 +4743,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B14B7BC956",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Gara Sicurezza on Premises - Protezione perimetrale, endpoint e anti-apt per le PA",
+    "sha256": "cb69f9dc6fde5cb7872d7cd3e30803847ab2e23641ea2b48501b18cee3f348ec",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B6488713C7",
@@ -2824,11 +4771,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B6488713C7",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "servizi professionali tecnici e di supporto all'adozione del cloud e PMO - consulenza, non acquisto di cloud",
+    "sha256": "aaa3a3edf2d6efb0435a9ba230d070bb17d8c84c4c54ae12bfefc046ece38613",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1694D8276",
@@ -2840,11 +4799,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1694D8276",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "RIFACIMENTO RETE LAN P.O. MATERA - cablaggio/lavori di rete, confine fra infrastruttura ICT e lavori",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B7C646CACB",
@@ -2856,11 +4827,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): AGGIORNAMENTO RETE LAN E DEL CABLAGGIO STRUTTURATO DI 125 UFFICI DELLA POLIZIA FERROVIARIA",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B7C646CACB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "AGGIORNAMENTO RETE LAN E DEL CABLAGGIO STRUTTURATO DI 125 UFFICI DELLA POLIZIA FERROVIARIA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B1A6F2B33A",
@@ -2872,11 +4855,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B1A6F2B33A",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "APPROVVIGIONAMENTO DI N. 2450 PERSONAL COMPUTER",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B8A3BD25A7",
@@ -2888,11 +4883,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B8A3BD25A7",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI DI SICUREZZA INFORMATICA DELLE INFRASTRUTTURE IT DI LEPIDA",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA85A6908C",
@@ -2904,11 +4911,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA85A6908C",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Fortinet",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "ASSISTENZA TECNICA E MANUTENZIONE HARDWARE E SOFTWARE DEGLI APPARATI FIREWALL FORTINET",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "BA8E81ADF5",
@@ -2920,11 +4939,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "BA8E81ADF5",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Fortinet",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "ASSISTENZA TECNICA E MANUTENZIONE HARDWARE E SOFTWARE DEGLI APPARATI FIREWALL FORTINET",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B9179CFB49",
@@ -2936,11 +4967,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B9179CFB49",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "bassa",
+    "evidenza": "AFFIDAMENTO FORNITURA ED INSTALLAZIONE HARDWARE. PROGETTO DIGITALIZZAZIONE DEL MERCATO",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B0DD659E80",
@@ -2952,11 +4995,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B0DD659E80",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Red Hat",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "LICENZE RED HAT | FORNITURA LICENZE SOFTWARE REDHAT: licenze software, non servizio cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B3FB811643",
@@ -2968,17 +5023,85 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B3FB811643",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "AMMODERNAMENTO APPARATI ATTIVI RETE LAN AZIENDALE: hardware di rete, non cloud",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B161EE6D92",
    "gruppo": "G3",
    "strato_proposto": "S5",
    "importo": 1126227.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B161EE6D92",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "SERVIZI DI IT SYSTEM MANAGEMENT E SICUREZZA INFORMATICA ... CONDUZIONE OPERATIVA DEI SISTEMI: servizio gestito, non cloud dichiarato",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "B76BE6916E",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1111573.5,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "non-confermato",
+   "C4_nota": "seconda lettura non certa",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B76BE6916E",
+    "ict": "?",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "APPROVVIGIONAMENTO DI N. 150 STAMPANTI MULTIFUNZIONE A COLORI... TONER: hardware di stampa",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "B414D042FB",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1101667.0,
    "C1_fonte_primaria": false,
    "C2_regole": true,
    "C2_nota": "ok",
@@ -2991,10 +5114,10 @@
    "lettura": null
   },
   {
-   "cig": "B76BE6916E",
+   "cig": "B21FF47D95",
    "gruppo": "G3",
    "strato_proposto": "S5",
-   "importo": 1111573.5,
+   "importo": 1099663.52,
    "C1_fonte_primaria": false,
    "C2_regole": true,
    "C2_nota": "ok",
@@ -3016,11 +5139,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B06D447B02",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Atlassian",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "FORNITURA SUBSCRIPTIONS LICENZE DATACENTER SUITE ATLASSIAN: linea Data Center = self-hosted on-premise, non cloud",
+    "sha256": "2e5a0f3d30403a22b0378cc5682ce4ecda694bc4378be6de8377a1943d2f2659",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B95E019CBA",
@@ -3032,11 +5167,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "Dedalus Italia S.p.A.",
-   "lettura": null
+   "lettura": {
+    "cig": "B95E019CBA",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Dedalus (ERP C4H)",
+    "giurisdizione": "IT",
+    "certezza": "alta",
+    "evidenza": "Sistema amministrativo contabile-C4h, da erogarsi modalita in SaaS",
+    "sha256": "cbff14ceae93f3332932e3e3f0b5285f8afc831ed8171260ad60b29271d9dc2c",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B66464192D",
@@ -3048,11 +5195,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
-   "entra_nei_totali": false,
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": true,
    "provider_proposto": "Maggioli S.p.A.",
-   "lettura": null
+   "lettura": {
+    "cig": "B66464192D",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "Maggioli (Sicraweb EVO)",
+    "giurisdizione": "IT",
+    "certezza": "alta",
+    "evidenza": "upgrade alla nuova soluzione Sicraweb Evo in modalità SaaS - migrazione al Cloud per le PA Locali (PNRR Inv. 1.2)",
+    "sha256": "88fc64d16367643263999838a6c374536ee329f0c675b41c02524e0494995f9b",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   },
   {
    "cig": "B22FF5E298",
@@ -3064,11 +5223,23 @@
    "C2_nota": "ok",
    "C3_giurisdizione": true,
    "C3_nota": "non applicabile",
-   "C4_seconda_lettura": "da-leggere",
-   "C4_nota": "seconda lettura non ancora fatta",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "la seconda lettura dice cloud: Adesione all'ACCORDO QUADRO PER LA FORNITURA DI SERVIZI CLOUD IAAS E PAAS IN UN MODELLO DI EROGAZIONE PUBBLICO - ID 2213 Lotto 9",
    "entra_nei_totali": false,
    "provider_proposto": "",
-   "lettura": null
+   "lettura": {
+    "cig": "B22FF5E298",
+    "ict": "s",
+    "e_cloud": "s",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Adesione all'ACCORDO QUADRO PER LA FORNITURA DI SERVIZI CLOUD IAAS E PAAS IN UN MODELLO DI EROGAZIONE PUBBLICO - ID 2213 Lotto 9",
+    "sha256": "d0995e367806bbfe5eb47384f45a799d4b8d982a4a63a0f63cd698fe44662b10",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-09"
+   }
   }
  ]
 }
