@@ -1,0 +1,244 @@
+{
+ "campioni": {
+  "lente-cieco": {
+   "prima_bigtech": {
+    "tp": 66,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.985
+   },
+   "prima_tutti": {
+    "tp": 76,
+    "fp": 1,
+    "fn": 4,
+    "precisione": 0.987,
+    "richiamo": 0.95
+   },
+   "dopo_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "dopo_tutti": {
+    "tp": 74,
+    "fp": 1,
+    "fn": 6,
+    "precisione": 0.987,
+    "richiamo": 0.925
+   }
+  },
+  "lente-cieco-2": {
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   }
+  },
+  "lente-cieco-3": {
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   }
+  },
+  "lente-cieco-4": {
+   "prima_bigtech": {
+    "tp": 94,
+    "fp": 8,
+    "fn": 1,
+    "precisione": 0.922,
+    "richiamo": 0.989
+   },
+   "prima_tutti": {
+    "tp": 95,
+    "fp": 8,
+    "fn": 2,
+    "precisione": 0.922,
+    "richiamo": 0.979
+   },
+   "dopo_bigtech": {
+    "tp": 95,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_tutti": {
+    "tp": 96,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.99
+   }
+  },
+  "top20": {
+   "prima_bigtech": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_tutti": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_bigtech": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_tutti": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "cambiati": [
+  {
+   "campione": "lente-cieco",
+   "cig": "B40B947819",
+   "etichetta": "Google",
+   "prima": "Google",
+   "dopo": "",
+   "esito": "regressione"
+  },
+  {
+   "campione": "lente-cieco",
+   "cig": "B33B9DC8D2",
+   "etichetta": "Microsoft",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "regressione"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B53D34A5A0",
+   "etichetta": "altro:veeam",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "BC18D50484",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B18C9891F9",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "BBF39CE6CB",
+   "etichetta": "altro:windtre",
+   "prima": "Oracle",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B21C2D07EA",
+   "etichetta": "altro:commvault",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B1E6C7E604",
+   "etichetta": "",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B274BC9A8E",
+   "etichetta": "",
+   "prima": "Google",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "BC9A54F207",
+   "etichetta": "Adobe",
+   "prima": "",
+   "dopo": "Adobe",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "B9B3C71B2A",
+   "etichetta": "",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  }
+ ]
+}

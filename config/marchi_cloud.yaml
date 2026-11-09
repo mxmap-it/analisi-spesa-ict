@@ -46,7 +46,10 @@
   - iaas\s+e\s+paas.{0,20}microsoft   # #40, 6/11/2026, campione a cieco
   # #40 v0.5: il marchio come oggetto di un servizio altrui (secondo campione a cieco)
   escludi:
-  - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
+  - backup[^|]{0,80}?\b(microsoft|m|office)\s*365  # v4.3: backup DI M365 nella stessa parte del testo (non oltre « | »), fino a 80 caratteri (Commvault B21C2D07EA)
+  - (veeam|commvault|acronis|keepit|avepoint|hornetsecurity|n-?able)\W+(\w+\W+){0,4}(per|for)\s+(microsoft\s+)?(m|office|microsoft)\s*365|\bcv-bkrc  # v4.3 #40 cieco 4: prodotti di terzi PER M365 (con M365 comprato a parte resta Microsoft, BC7810F3E4)
+  - ^(?!.*(servizi\s+cloud|licenz|sottoscrizion|abbonament|subscription|crediti|canone|fornitura\s+di\s+prodotti|attivazion|posta\s+elettronica|pacchetto\s+formazione|\be\s+formazione\s*(\||$)))(?=.*(docenz|\bcors[oi]\b|\bformazion|supporto\s+(\w+\s+){0,2}(sistemistic|informatic|progettual)|help\s*desk|sistemista))  # v4.3 #40 cieco 4: formazione/supporto sul prodotto senza acquisto del prodotto
+  - ^(?!.*(licenz|crediti|sottoscrizion|abbonament|subscription|universal\s+credit))(?=.*connettivit)  # v4.3 #40 cieco 4: connettivita verso il cloud (BBF39CE6CB) non e acquisto del cloud
   - azure\s+(s|xt)\s*(dr|sr)\b|impiantabil|pacemaker  # #41 9/11/2026: pacemaker Medtronic «AZURE S DR» (9134580DDE)
   - (office|microsoft|m)\s*365\s+protection|harmony\s+email  # #40 9/11/2026: prodotto di terzi col nome del marchio (Check Point, B273B14113)
   fornitori:
@@ -77,6 +80,8 @@
   - google\s+for\s+education
   - iaas\s+e\s+paas.{0,20}google   # #40, 6/11/2026, campione a cieco
   escludi:
+  - ^(?!.*(servizi\s+cloud|licenz|sottoscrizion|abbonament|subscription|crediti|canone|fornitura\s+di\s+prodotti|attivazion|posta\s+elettronica|pacchetto\s+formazione|\be\s+formazione\s*(\||$)))(?=.*(docenz|\bcors[oi]\b|\bformazion|supporto\s+(\w+\s+){0,2}(sistemistic|informatic|progettual)|help\s*desk|sistemista))  # v4.3 #40 cieco 4: formazione/supporto sul prodotto senza acquisto del prodotto
+  - ^(?!.*(licenz|crediti|sottoscrizion|abbonament|subscription|universal\s+credit))(?=.*connettivit)  # v4.3 #40 cieco 4: connettivita verso il cloud (BBF39CE6CB) non e acquisto del cloud
   - good\s+clinical
   - clinic
   - \bgxp\b
@@ -93,6 +98,8 @@
   - cloud\s*@\s*customer
   - oracle\s+(paas|iaas)
   - universal\s+credits?
+  escludi:
+  - ^(?!.*(licenz|crediti|sottoscrizion|abbonament|subscription|universal\s+credit))(?=.*connettivit)  # v4.3 #40 cieco 4: connettivita verso il cloud (BBF39CE6CB) non e acquisto del cloud
   fornitori:
   - ^oracle\s+italia
 - provider: IBM
@@ -134,6 +141,8 @@
   - adobe\s+creative\s+cloud
   - adobe\s+acrobat
   - adobe\s+sign
+  - licenz\w*\s+adobe  # v4.3 #40 cieco 4: «licenze Adobe» (BC9A54F207)
+  - adobe\s+(creative|acrobat|photoshop|illustrator|indesign|premiere|stock|express|cc\b|pro\b|licen)
   - document\s+cloud
   fornitori: []
 - provider: Aruba
@@ -284,6 +293,7 @@
   # «licenze … office» da solo prende 254 CIG, fra cui Solibri Office: solo con versione o edizione Microsoft
   - licenz\w*\s+(\w+\s+){0,2}(ms\s+|microsoft\s+)?office\s+(20[12]\d|pro|standard|ltsc|professional|home)\b
   escludi:
+  - ^(?!.*(servizi\s+cloud|licenz|sottoscrizion|abbonament|subscription|crediti|canone|fornitura\s+di\s+prodotti|attivazion|posta\s+elettronica|pacchetto\s+formazione|\be\s+formazione\s*(\||$)))(?=.*(docenz|\bcors[oi]\b|\bformazion|supporto\s+(\w+\s+){0,2}(sistemistic|informatic|progettual)|help\s*desk|sistemista))  # v4.3 #40 cieco 4: formazione/supporto sul prodotto senza acquisto del prodotto
   - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
   fornitori: []
 - provider: VMware
@@ -295,6 +305,7 @@
   fornitori: []
   escludi:
   - \bserver\b.*\bstorage\b|nodi\s+server
+  - (iaas|cloud|hosting).{0,60}ambient\w*\s+vmware  # v4.3 #40 cieco 4: IaaS «per ambienti VMware», provider non detto (B1E6C7E604)
 - provider: Oracle
   giurisdizione: EXTRA-UE
   servizio: licenza

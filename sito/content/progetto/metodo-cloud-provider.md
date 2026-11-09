@@ -134,6 +134,29 @@ Pesata sull'universo: precisione 88,7 % (97,9 % in euro). Nessun errore di march
 
 Mancati: lotto 3 «licenze Adobe» di una gara multilotto (il dizionario Adobe non prende «licenze Adobe» da sole) e caselle PEC Aruba (perimetro discutibile, provider IT). La regola multilotto non ha prodotto errori nei 7 CIG dello strato M. Limiti: un solo annotatore (Claude), niente kappa; lo strato M è troppo piccolo per misurare la regola multilotto; il richiamo nello strato N (0 big tech mancati su 43) ha un limite superiore di Wilson del 8 % su 237 mila CIG, quindi il richiamo pesato non è stimabile con precisione.
 
+**Regole v4.3, correzione degli errori del quarto campione (9/11/2026, #40).** Le cinque classi d'errore del quarto campione sono corrette in `config/marchi_cloud.yaml`:
+- formazione e supporto (corso, docenza, «formazione», supporto sistemistico/informatico/progettuale, help desk, sistemista) su prodotti Microsoft (cloud e licenze) e Google non sono acquisto del prodotto, salvo che il testo compri anche il servizio (licenze, sottoscrizione, canone, crediti, servizi cloud, attivazione, posta elettronica, «e relativo pacchetto formazione», «X e formazione»). Prima valeva solo per AWS;
+- prodotti di terzi *per* Microsoft 365 (Veeam, Commvault, Acronis, Keepit, AvePoint, Hornetsecurity, N-able, «backup … Microsoft 365» nella stessa parte del testo, fino a 80 caratteri): esclusi; se il testo compra anche gli utenti Microsoft 365 resta Microsoft;
+- connettività verso un cloud (Wind Tre → Oracle Cloud Infrastructure, ExpressRoute, FastConnect) non è acquisto del cloud, salvo licenze o crediti nello stesso testo (Oracle, Microsoft, Google);
+- IaaS/cloud/hosting «per ambienti VMware» non è un prodotto VMware;
+- «licenze Adobe» e i nomi dei prodotti Adobe (Photoshop, Acrobat, Creative, Stock…) entrano nel dizionario.
+
+Prima e dopo su tutti i campioni etichettati (`tools/verifiche/regole_v43_confronto.py`, `esiti/2026-11-09/regole-v4.3/`):
+
+| Campione | Big tech prima (TP/FP/FN) | Big tech dopo | Tutti i provider prima | Tutti dopo |
+|---|---|---|---|---|
+| cieco 1 (240) | 66/0/1 | 64/0/3 | 76/1/4 | 74/1/6 |
+| cieco 2 | 62/0/1 | 62/0/1 | 69/1/1 | 69/1/1 |
+| cieco 3 | 62/0/8 | 62/0/8 | 69/2/10 | 69/2/10 |
+| cieco 4 (150) | 94/8/1 (P 92,2 %) | 95/0/0 (P 100 %, R 100 %) | 95/8/2 | 96/0/1 |
+| top-20 rivenditori (60) | 58/0/0 | 58/0/0 | 58/0/0 | 58/0/0 |
+
+I due CIG cambiati nel cieco 1 (B40B947819, B33B9DC8D2) sono corsi di formazione su Google Workspace e Office 365: nel cieco 1 l'etichetta era «quale prodotto nomina il testo», dal cieco 4 è «quale prodotto si compra». Non è una regressione ma un **cambio di criterio**, fissato con due casi di test. Due regressioni vere trovate in sviluppo sono state corrette prima del commit (Veeam con 100 utenti Microsoft 365, cieco 2; «licenze Microsoft … Adobe», cieco 3). Restano non correggibili dal testo il mancato PEC (il testo non nomina Aruba) e, per il cieco 4, i casi «altro:» (Veeam, Commvault, Wind Tre), ora correttamente senza provider del dizionario.
+
+**Il quarto campione a cieco non è più indipendente per queste regole**: è stato letto per scriverle ed è ora campione di sviluppo; P 100 % e R 100 % sul cieco 4 non sono una misura. Serve un quinto campione a cieco.
+
+Effetto sulla mappa dei rivenditori (`rivenditori_mappa.py v4.3`, contro v4.2): +427 CIG Adobe (22,9 M€), +7 Microsoft (contratti con licenze Microsoft 365 e backup, prima esclusi perché la finestra «backup … 365» attraversava il « | » fra oggetto del lotto e della gara), −87 Microsoft (2,6 M€), −17 Google (0,24 M€), −7 Oracle (0,66 M€: connettività verso OCI). Extra-UE 3,046 mld (era 3,024), via rivenditore con CF italiano 1,863 mld = **61,2 % del totale, 79,1 % del noto** (erano 61,0 % e 78,9 %), 57,4 % col capogruppo italiano.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
@@ -144,7 +167,7 @@ classificatore è una funzione pura che non legge i dati ANAC
 quindi si usa anche su OCDS, TED o registri regionali.
 
 ```bash
-python tests/test_classifica.py      # 48/48 casi superati, regole v3
+python tests/test_classifica.py      # 101/101 casi superati, regole v4.3 (9/11/2026)
 ```
 
 ## Errori trovati e come sono corretti
@@ -163,6 +186,7 @@ python tests/test_classifica.py      # 48/48 casi superati, regole v3
 | Provider italiani assenti | TIM cloud, Fastweb hosting, SPC Cloud lotto 1, in-house pubblici | Aggiunti come provider IT o in-house |
 | Numero dell'AQ dentro altri numeri (9/11/2026, #41) | «2746» in «GARA ANAC 9127462» o «ACTC227464»: antisettici e reti idriche attribuiti ad AWS e Microsoft | Via 2: numero a sé e contesto cloud/Consip/AQ obbligatorio |
 | Omonimi e marchi come oggetto di altro (9/11/2026, #41) | pacemaker «Azure S DR», «hardware rete PSN», «affiancamento» su PSN | Esclusioni; «affiancamento» = servizi professionali. Prima e dopo sui tre campioni a cieco: invariati (esiti/2026-11-09/rivenditori/lente-prima e lente-dopo) |
+| Marchio senza acquisto del prodotto (9/11/2026, v4.3, #40) | corso Teams/Planner, supporto «SQL Server», Veeam Data Cloud per M365, connettività verso Oracle Cloud, IaaS «per ambienti VMware» | Esclusioni sul contesto se il testo non compra anche il prodotto; «licenze Adobe» aggiunte |
 
 ## Raccomandazioni per semplificare il monitoraggio
 
@@ -216,3 +240,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | Data | Revisione | Riferimento |
 |---|---|---|
 | 9/11/2026 | Quarto campione a cieco delle regole del 9/11 (150 CIG): big tech P 92,2 %, R 98,9 %; 8 falsi positivi e 2 mancati elencati come casi da trattare, regole non modificate | #40, `esiti/2026-11-09/lente-cieco-4/` |
+| 9/11/2026 | Regole v4.3: formazione/supporto Microsoft e Google, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe; cieco 4 big tech da P 92,2 % a 100 % (ora campione di sviluppo, non più indipendente), ciechi 2-3 e top-20 invariati, cieco 1 −2 per cambio di criterio; mappa rivenditori v4.3 (CF IT 61,2 % dell'extra-UE) | #40, `esiti/2026-11-09/regole-v4.3/` |
