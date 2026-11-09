@@ -848,6 +848,6 @@
   evidenza: "Dei primi 20 fornitori SaaS della Misura 1.2 (130,4 M€) nessuno pubblica l'IaaS sotto ciascun SaaS né l'elenco dei sub-responsabili: infrastruttura nota solo per 56,8 M€ [B], ignota 93,4. Il PSN pubblica il mix solo in aggregato (Libro PSN 2025: SPC 15 % dei canoni, 6-7 % per PAL/ASL; SPC+Managed 5,4 % dei ricavi 2025)"
   prova: "tools/verifiche/infrastruttura_sottostante.py; config/saas_infrastruttura.yaml; esiti/2026-11-09/infrastruttura-sottostante/"
   richiesta: "Nella scheda ACN di ogni SaaS: Id IaaS sottostante, region e sub-responsabili; in PA Digitale 2026: scheda ACN e infrastruttura per ogni servizio migrato; PSN: Riepilogo prezzi del Configuratore per Contratto di Utenza in open data (famiglia, UT, canone)"
-  perche_serve: "La quota big tech della Misura 1.2 va da 4,7 % a 59 % a seconda di ciò che non è pubblico"
+  perche_serve: "La quota su infrastruttura extra-UE della Misura 1.2 va da 6,2 % a 65 % (centrale 33,9 %, v0.2) a seconda di ciò che non è pubblico; i casi accertati (Datamanagement su AWS, Deda Next su Azure, Oracle Managed nelle ASL sarde) sono emersi solo da offerte e piani dei fabbisogni pubblicati da singoli enti"
   metrica: "Quota del finanziato 1.2 con infrastruttura dichiarata per servizio"
   rif: ["#43", "#45", "R50", "R55", "R73", "R74"]

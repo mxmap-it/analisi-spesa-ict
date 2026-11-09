@@ -1,28 +1,96 @@
-### Misura 1.2: su quale infrastruttura girano i «prodotti italiani» (v0.1, 9/11/2026, #43 #45)
+### Misura 1.2: su quale infrastruttura girano i «prodotti italiani» (v0.2, 9/11/2026, #43 #45)
 
-Verifica `nice .venv/bin/python tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` → `esiti/2026-11-09/infrastruttura-sottostante/infrastruttura.json` (nessuna rete). Tabella dei fornitori: `config/saas_infrastruttura.yaml`.
+**Verifiche** (nessuna rete; la seconda solo DNS):
+- `nice .venv/bin/python tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` → `esiti/2026-11-09/infrastruttura-sottostante/infrastruttura.json`;
+- `tools/verifiche/saas_infra_fornitori.py`, che estende il pilota DNS/AS `saas_infra_pilota.py`.
 
-**Terzo asse.** Accanto a prodotto e fornitore, la giurisdizione di **chi gestisce l'infrastruttura** su cui il servizio gira (DC proprio in Italia, provider IT-UE, hyperscaler extra-UE).
+**Tabelle:** `config/saas_infrastruttura.yaml` (fornitori, v0.2), `config/saas_host.yaml` (domini dei servizi), `psn-ppdf.csv` (riepiloghi dei piani dei fabbisogni PSN).
 
-**1. PSN (389,2 M€ della 1.2).** Fonte nuova [V, A]: *Libro PSN 2025* (bilancio integrato, sha256 b8fe9ec1…; p. 71-72 e 106).
-- Ricavi 2025 454,3 M€: migrazione e servizi professionali 360,7 M€ (79 %); **Secure Public Cloud (Azure, Google, AWS) 19,9 M€ + Public Cloud PSN Managed (Oracle Alloy) 4,5 M€ = 5,4 % dei ricavi, 27,3 % dei ricavi infrastrutturali** (2024: 2,6 % e 16,8 %).
-- Contratti dall'inizio (3.853 M€): 60 % servizi professionali, 40 % canoni. Canoni: SPC 15 % (PA centrali 24 %, **PA locali 6 %, ASL/AO 7 %**); «Soluzioni Oracle PSN» 14 % (PAL 20 %, ASL 24 %), che mescolano Oracle su Industry Standard e PSN Managed; Hybrid dentro «altri» (< 5 %).
-- Per la 1.2 (enti locali e ASL) quota hyperscaler sui canoni: **6,5 % basso (solo SPC), 14,4 % centrale (SPC + Managed stimato al 36 % di Oracle PSN dai ricavi), 33,5 % alto (tutto Oracle PSN + 5 % Hybrid)**.
-- Due letture: *stretta* (la migrazione è servizio PSN, IT): 5,1 / 22,4 / 78,2 M€; *destinazione* (la migrazione segue l'infrastruttura, R-S1): **25,3 / 56,1 / 130,4 M€** su 389,2.
-- PSN in generale (#45): sui contratti ~6 % SPC (15 % × 40 %) + ~2 % Managed ≈ **8 % del valore ordinato (~0,3 mld su 3,85)**, 5,4 % dei ricavi 2025, ~27 % dell'infrastruttura venduta nel 2025, in crescita. Incertezza: il Libro è del concessionario (fonte unica), la base del 60/40 non è dichiarata, i Contratti di Utenza per ente restano non pubblici (R50).
+**Terzo asse.** Accanto a prodotto e fornitore conta la giurisdizione di **chi gestisce l'infrastruttura** su cui gira il servizio: DC proprio in Italia, provider IT-UE oppure hyperscaler extra-UE.
 
-**2. SaaS dei primi 20 fornitori S2 (130,4 dei 150,2 M€).** Ricerca su siti, DPA, schede, atti (nessun contatto).
-- **Nessun hyperscaler accertato.** Infrastruttura IT nota per 56,8 M€ [B]: Maggioli 37,9 (DC proprio Cornaredo + Retelit Bologna, pagina di gruppo), Halley 6,6, Fastweb 4,5, TIM 4,4, Informatica Alto Adige 1,7, Engineering D.HUB 1,6 (IaaS qualificato ACN proprio: inferenza, non dichiarazione per SaaS).
-- **Ignota per 93,4 M€ di S2** (Datamanagement 15,1, svic 8,6, APKappa 7,1, Deda Next, Almaviva, Siscom, We-Com, PA Digitale, Kibernetes…), più S3-S4 55,7 M€. Indizi C (Aruba per Kibernetes e Deda; AWS MSP Almaviva) non archiviabili.
-- Nessuna classe A: nessun fornitore pubblica l'elenco dei sub-responsabili o l'IaaS sotto ciascun SaaS; la scheda ACN che lo direbbe non è specchiabile (R55). Nuova **R78**.
+#### 1. PSN (389,2 M€ della 1.2, di cui 368,6 M€ di ASL/AO)
 
-**3. Misura 1.2 con il terzo asse** (818,9 M€):
+**Fonte aggregata** [V, A]: *Libro PSN 2025*, bilancio integrato, sha256 b8fe9ec1…, p. 71-72 e 106.
+- **Ricavi 2025:** 454,3 M€, di cui 360,7 M€ (79 %) da migrazione e servizi professionali.
+- **Hyperscaler:** Secure Public Cloud (Azure, Google, AWS) 19,9 M€ + PSN Managed (Oracle Alloy / Exadata Cloud@Customer nei DC PSN) 4,5 M€. Insieme fanno **5,4 % dei ricavi e 27,3 % dei ricavi infrastrutturali** (2024: 2,6 % e 16,8 %).
+- **Contratti firmati:** 3.853 M€, 60 % servizi professionali e 40 % canoni.
+  - Il Secure Public Cloud è il 15 % dei canoni: PA centrali 24 %, PA locali 6 %, ASL/AO 7 %.
+  - Le «Soluzioni Oracle PSN» sono il 14 % dei canoni, PA locali 20 %, ASL 24 %.
 
-| Scenario | big tech prodotto | PSN su hyperscaler | SaaS/S3-S4 ignoti | S5 | S6 | **Totale infra extra-UE** |
-|---|---|---|---|---|---|---|
-| basso (accertato) | 13,6 | 25,3 | 0 | 0 | 0 | **38,9 M€ (4,7 %)** |
-| centrale | 13,6 | 56,1 | 37,3 (25 %, ipotesi) | 28,5 | 33,5 | **169,0 M€ (20,6 %)** |
-| alto | 13,6 | 130,4 | 149,1 | 28,5 | 162,3 | **483,9 M€ (59,1 %)** |
+**Fonte per ente** [V, lettura visiva del Configuratore]: 12 schede del piano dei fabbisogni di ARES Sardegna (PDF sha256 524b568a…, p. 155-179) e USR Lazio (fef2aea8…).
+- **Nessun Secure Public Cloud e nessun Hybrid.**
+- In 11 ASL/AO su 12 c'è **Public Cloud PSN Managed Oracle** (Exadata Cloud@Customer, licenze BYOL): **34,9 % dei canoni** del SSR sardo, da 38 a 43 % per scheda.
+- AREUS e USR Lazio sono a 0 %.
+- È coerente con il Libro per le ASL: 7 % di SPC più 24 % di Oracle PSN fa 31 %.
+- Contando la una tantum, l'hyperscaler pesa il 2,6 % del contratto ARES: la spesa è dominata dai servizi professionali.
 
-- Rispetto alla lente prodotto (1,7 %) la soglia accertata sale a **4,7 %** per il solo PSN su hyperscaler [V, lettura destinazione]. La stima centrale (~21 %) **dipende da un'ipotesi non misurata** (25 % dei SaaS ignoti su hyperscaler) e dal residuo S6: è un ordine di grandezza, non un fatto. L'intervallo 4,7-59 % misura quanto poco si sa.
-- L'infrastruttura italiana dei SaaS noti è [B], non [A].
+**Quota hyperscaler sui canoni:**
+
+| Enti | Basso | Centrale | Alto |
+|---|---|---|---|
+| ASL | 7 % (solo SPC, Libro) | **34,9 %** (misurata su ARES) | 43,3 % (scheda più alta) |
+| Comuni e altri | 6 % | 13,2 % | 31 % |
+
+**PSN 1.2 su hyperscaler:**
+- se la migrazione segue l'infrastruttura (R-S1): **27 / 131 / 166 M€** (basso / centrale / alto);
+- se la migrazione conta come servizio italiano: 5 / 53 / 99 M€.
+
+**Avvertenze:**
+- Il centrale estende **una sola regione (ARES, 12 schede)** a tutte le ASL.
+- Il Managed Oracle gira **nei DC PSN in Italia**: è extra-UE per produttore e gestione (software, aggiornamenti, supporto Oracle), non per la collocazione dei dati.
+
+**PSN in generale (#45):**
+- circa **8 % del valore ordinato** su hyperscaler (~0,3 mld su 3,85);
+- 5,4 % dei ricavi 2025 e 27 % dell'infrastruttura venduta nel 2025, in crescita.
+
+#### 2. SaaS dei fornitori S2
+
+**Prove per 101,2 dei 150,2 M€ di S2.** Le fonti sono atti e offerte pubblicati dagli enti, schede ACN e DNS/AS. Il DNS/AS dice dove **risponde** il servizio pubblico, non dove stanno i dati; i CDN sono marcati.
+
+**Hyperscaler extra-UE accertato** [A + B]:
+- **Datamanagement Italia, 15,1 M€: AWS Milano.**
+  - Relazione tecnica, Comune di Firenze, CIG B519664052: «Il provider … è Amazon AWS».
+  - akropolis.cloud: 3 host su 3 in AWS.
+  - Esiste anche una variante su Unimatica (IT).
+- **Deda Next, 4,7 M€: Microsoft Azure.**
+  - Offerta Avviso 1.2 al Comune di Tramonti.
+  - soluzionipa.it: 5 host su 5 in Microsoft.
+- **Parsec 3.26, 2,0 M€: AWS** (front-end) [B].
+
+**Misto: APKappa, 7,1 M€.**
+- DC proprio a Magenta più Aruba (IN-54).
+- Varianti qualificate su **AWS** (SA-1740) e su Liguria Digitale.
+- hypersicapp.net risponde da AWS, hypersic.net da Fastweb.
+
+**Infrastruttura italiana:**
+- **Maggioli, 37,9 M€**: DNS 10/10 host su reti Maggioli e Dinova [B]. Ma l'offerta PNRR (Ferno) lascia la scelta «private cloud (Data Center Maggioli, DATA4) oppure public cloud (Google, Microsoft o AWS)» [A].
+- **PA Digitale: DC TIM** di Acilia e Pomezia [A].
+- **Halley**: rete propria e Retelit [B].
+- Siscom, ADS e Boxxapps con DC proprio [B]; Kibernetes su Aruba [B]; TIM, Fastweb, IAA ed Engineering D.HUB con IaaS proprio [B].
+
+**Senza prove: 49,0 M€** (svic 8,6, Almaviva 4,1, We-Com 3,8, Municipia dietro Cloudflare, 3PItalia, BIP, coda S2), più S3-S4 55,7 M€.
+- Prendono la **quota media dei fornitori con prove: 23,9 % in euro**.
+- È un dato misurato, al posto dell'ipotesi fissa del 25 % della v0.1.
+
+#### 3. Misura 1.2 con il terzo asse (818,9 M€; lettura «la migrazione segue la destinazione»)
+
+| Scenario | Big tech prodotto | PSN su hyperscaler | SaaS con prove | SaaS senza prove + S3-S4 | S5 | S6 | **Totale infra extra-UE** |
+|---|---|---|---|---|---|---|---|
+| basso | 13,6 | 27,0 | 9,9 | 0 | 0 | 0 | **50,6 M€ (6,2 %)** |
+| centrale | 13,6 | 131,5 | 24,1 | 25,0 | 28,5 | 55,0 | **277,8 M€ (33,9 %)** |
+| alto | 13,6 | 165,9 | 57,2 | 104,7 | 28,5 | 162,3 | **532,2 M€ (65,0 %)** |
+
+- **Lettura stretta** (migrazione PSN = servizio italiano): centrale circa **180 M€ (22 %)**.
+- **La soglia basso sale** da 4,7 % a **6,2 %**, perché sono accertati AWS (Datamanagement) e Azure (Deda Next).
+- **Lo scenario centrale sale** da 20,6 % a **33,9 %**, perché i dati sostituiscono le ipotesi.
+  - Il peso maggiore è il PSN delle ASL: Oracle Managed misurato in Sardegna, 131,5 M€ di cui ~124 sulle ASL.
+  - Seguono i SaaS: AWS e Azure documentati, 24 M€.
+- **Incertezze principali:**
+  - un solo SSR misurato nei piani dei fabbisogni PSN;
+  - Oracle Managed è in DC italiani;
+  - DNS ≠ collocazione dei dati;
+  - Maggioli: 37,9 M€ con la scelta lasciata all'ente;
+  - S6 (162 M€) resta senza aggiudicatario.
+- **Prossime prove utili:**
+  - piani dei fabbisogni PSN di ASL di altre regioni (Azienda Zero Veneto, Lazio, Campania);
+  - quante adesioni Maggioli hanno scelto il public cloud.

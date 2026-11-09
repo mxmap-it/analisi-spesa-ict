@@ -1,6 +1,6 @@
 {
  "data": "2026-11-09",
- "versione": "0.1",
+ "versione": "0.2",
  "psn_libro_2025": {
   "ricavi_2025": 454328062,
   "ricavi_2024": 255534885,
@@ -42,63 +42,209 @@
    }
   }
  },
+ "psn_ppdf": {
+  "schede": 12,
+  "asl_canone_hyperscaler_misurato_pct": 34.9,
+  "asl_max_pct": 43.3
+ },
+ "psn_12_per_tipologia_meur": {
+  "altri": 20.6,
+  "ASL": 368.6
+ },
  "misura_12_strati_meur": {
   "S3": 52.98,
   "S6": 162.27,
-  "S2 infra ignota": 93.43,
+  "S2": 150.21,
   "S4": 2.73,
-  "S2 infra IT nota": 56.78,
   "S1 IT altro": 19.4,
   "S1 big tech": 13.6,
   "S1 PSN": 389.2,
   "S5": 28.51
  },
  "totale_meur": 818.9,
- "saas_ignoti_meur": 149.1,
+ "saas_con_prove_meur": 101.2,
+ "saas_con_prove_quota_centrale": 0.239,
+ "saas_s2_senza_prove_meur": 49.0,
+ "saas_senza_prove_e_s3_s4_meur": 104.7,
+ "saas_per_fornitore": {
+  "Maggioli Spa": {
+   "meur": 37.91,
+   "quota": [
+    0,
+    0,
+    0.5
+   ]
+  },
+  "Datamanagement Italia s.r.l.": {
+   "meur": 15.11,
+   "quota": [
+    0.5,
+    1,
+    1
+   ]
+  },
+  "APKAPPA SRL": {
+   "meur": 7.06,
+   "quota": [
+    0,
+    0.33,
+    1
+   ]
+  },
+  "Halley Informatica Srl": {
+   "meur": 6.58,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "Deda Next S.r.l.": {
+   "meur": 4.73,
+   "quota": [
+    0.5,
+    1,
+    1
+   ]
+  },
+  "Fastweb S.p.A.": {
+   "meur": 4.52,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "TIM S.p.A.": {
+   "meur": 4.44,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "SISCOM SPA": {
+   "meur": 4.11,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "PA Digitale S.p.A.": {
+   "meur": 3.45,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "Kibernetes s.r.l.": {
+   "meur": 3.11,
+   "quota": [
+    0,
+    0,
+    0.5
+   ]
+  },
+  "ADS automated data systems S.p.A.": {
+   "meur": 2.44,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "Boxxapps S.r.l.": {
+   "meur": 2.42,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "Parsec 3.26 S.r.l.": {
+   "meur": 1.97,
+   "quota": [
+    0,
+    1,
+    1
+   ]
+  },
+  "Informatica Alto Adige Spa": {
+   "meur": 1.73,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  },
+  "Engineering D.HUB SPA": {
+   "meur": 1.6,
+   "quota": [
+    0,
+    0,
+    0.25
+   ]
+  }
+ },
  "scenari": {
   "basso": {
-   "psn_hyperscaler_pct_canoni": 6.5,
-   "psn_lettura_stretta_meur": 5.1,
-   "psn_lettura_destinazione_meur": 25.3,
-   "saas_s3_s4_ignoti_meur": 0.0,
+   "psn_canone_hyperscaler_pct": {
+    "ASL": 7,
+    "altri": 6
+   },
+   "psn_lettura_stretta_meur": 5.4,
+   "psn_lettura_destinazione_meur": 27.0,
+   "saas_con_prove_meur": 9.9,
+   "saas_senza_prove_e_s3_s4_meur": 0.0,
    "s5_meur": 0,
    "s6_meur": 0,
-   "totale_extraue_infra_meur": 38.9,
-   "quota_pct": 4.7
+   "totale_extraue_infra_meur": 50.6,
+   "quota_pct": 6.2
   },
   "centrale": {
-   "psn_hyperscaler_pct_canoni": 14.4,
-   "psn_lettura_stretta_meur": 22.4,
-   "psn_lettura_destinazione_meur": 56.1,
-   "saas_s3_s4_ignoti_meur": 37.3,
+   "psn_canone_hyperscaler_pct": {
+    "ASL": 34.9,
+    "altri": 13.2
+   },
+   "psn_lettura_stretta_meur": 52.6,
+   "psn_lettura_destinazione_meur": 131.5,
+   "saas_con_prove_meur": 24.1,
+   "saas_senza_prove_e_s3_s4_meur": 25.0,
    "s5_meur": 28.5,
-   "s6_meur": 33.5,
-   "totale_extraue_infra_meur": 169.0,
-   "quota_pct": 20.6
+   "s6_meur": 55.0,
+   "totale_extraue_infra_meur": 277.8,
+   "quota_pct": 33.9
   },
   "alto": {
-   "psn_hyperscaler_pct_canoni": 33.5,
-   "psn_lettura_stretta_meur": 78.2,
-   "psn_lettura_destinazione_meur": 130.4,
-   "saas_s3_s4_ignoti_meur": 149.1,
+   "psn_canone_hyperscaler_pct": {
+    "ASL": 43.3,
+    "altri": 31
+   },
+   "psn_lettura_stretta_meur": 99.5,
+   "psn_lettura_destinazione_meur": 165.9,
+   "saas_con_prove_meur": 57.2,
+   "saas_senza_prove_e_s3_s4_meur": 104.7,
    "s5_meur": 28.5,
    "s6_meur": 162.3,
-   "totale_extraue_infra_meur": 483.9,
-   "quota_pct": 59.1
+   "totale_extraue_infra_meur": 532.2,
+   "quota_pct": 65.0
   }
  },
  "assunzioni": {
-  "peso_canoni": {
+  "peso_canoni_lettura_stretta": {
    "basso": 0.2,
    "centrale": 0.4,
    "alto": 0.6
   },
-  "quota_hyperscaler_saas_ignoti": {
+  "quota_saas_senza_prove": {
    "basso": 0,
-   "centrale": 0.25,
+   "centrale": 0.23856782426845827,
    "alto": 1
   },
-  "canone_pal_asl": "media semplice PAL e ASL/AO del Libro PSN 2025; Managed = quota k di Oracle PSN da ricavi 2025",
+  "psn": "ASL: centrale misurata sui PPdF (ARES); altri: Libro PAL con Managed = k x Oracle PSN",
+  "saas": "quota per fornitore da config/saas_infrastruttura.yaml; senza prove = media in euro dei fornitori con prove",
   "S5": "controllo extra-UE del fornitore = giurisdizione extra-UE sull infrastruttura che gestisce (centrale)",
   "S6": "centrale: stessa quota dell attribuito; alto: tutto"
  }

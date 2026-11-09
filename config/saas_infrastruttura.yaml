@@ -1,32 +1,104 @@
-# Infrastruttura sottostante dei SaaS qualificati ACN dei primi 20 fornitori S2 della Misura PNRR 1.2 (#43, #45)
+# Infrastruttura sottostante dei SaaS qualificati ACN dei primi fornitori S2 della Misura PNRR 1.2 (#43, #45)
 # classe: proprio-IT | provider-IT-UE:<nome> | hyperscaler:<nome> | misto:<dettaglio> | ignoto
-# attendibilita: A dichiarazione specifica al servizio; B documento ufficiale indiretto (fornitore o ACN, non per singolo SaaS); C indizio/terzi
-# Ricerca web 9/11/2026, nessun contatto. importo_s2_meur da esiti/2026-11-09/pnrr12/pnrr12-dettaglio.csv
+# attendibilita: A = atto/offerta con l'ente o dichiarazione specifica del servizio; B = documento del fornitore o scheda ACN
+#   non per singolo contratto, oppure DNS/AS (= dove RISPONDE il servizio pubblico, non dove stanno i dati); C = indizio
+# quota_hyperscaler [basso, centrale, alto]: frazione dell'importo S2 del fornitore stimata su hyperscaler extra-UE.
+#   Regola: prova A di hyperscaler -> centrale 1; misto con varianti -> quota delle varianti osservate;
+#   prove A/B solo IT -> 0/0/0,25 (i dati potrebbero stare altrove); ignoto -> null (prende la quota media, pesata in euro, dei noti).
+# DNS/AS: tools/verifiche/saas_infra_fornitori.py (config/saas_host.yaml) -> esiti/2026-11-09/infrastruttura-sottostante/saas-infra-dns.json
 # ACN = CSV schede_qualificate_tipo_servizi_cloud_csv sha256 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96
-versione: 0.1
+versione: 0.2
 data: 2026-11-09
 fornitori:
-- {nome: "Maggioli Spa", importo_s2_meur: 37.91, classe: "misto:proprio-IT (DC Cornaredo, campus DATA4) + provider-IT-UE:Retelit (Bologna)", attendibilita: B, fonti: [{url: "https://www.maggioli.com/en-us/cloud-solutions-pa-data-center", sha256: 487d93179a4cfa1f6438e8e5f134dc166bb91f1256587066ba4a4b7c9738ce78}, {url: "https://lineaedp.it/news/un-nuovo-data-center-100-di-proprieta-per-gruppo-maggioli", sha256: 8654397807daab8a6460f042a581e499eaa77ff9a9c85447ea45a504d1a52c63}], note: "pagina di gruppo, non per singolo SaaS; accordo CSI Piemonte (Nivola) riferito, non archiviato"}
-- {nome: "Datamanagement Italia s.r.l.", importo_s2_meur: 15.11, classe: ignoto, attendibilita: "-", note: "appartenenza al gruppo Maggioli riferita da ricerca, non verificata"}
-- {nome: "svic srl", importo_s2_meur: 8.63, classe: ignoto, attendibilita: "-"}
-- {nome: "APKAPPA SRL", importo_s2_meur: 7.06, classe: ignoto, attendibilita: "-"}
-- {nome: "Halley Informatica Srl", importo_s2_meur: 6.58, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-7879 Halley Cloud IaaS"}], note: "IaaS qualificato proprio; che i SaaS poggino su di esso è inferenza"}
-- {nome: "Deda Next S.r.l.", importo_s2_meur: 4.73, classe: ignoto, attendibilita: C, note: "indizio provider-IT-UE (Aruba Arezzo / Deda Tech) da case study di gruppo, pagina 404, non archiviata"}
-- {nome: "Fastweb S.p.A.", importo_s2_meur: 4.52, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-93, IA-2271 FASTcloud"}], note: "controllo Swisscom (CH): extra-UE per lente fornitore (#41)"}
-- {nome: "TIM S.p.A.", importo_s2_meur: 4.44, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-3695, IA-3696, IA-8477 TIM Cloud"}]}
-- {nome: "Almaviva S.p.A.", importo_s2_meur: 4.12, classe: ignoto, attendibilita: C, note: "3 DC propri e rapporto Aruba (comunicato 2021, non archiviato); anche partner AWS MSP"}
-- {nome: "SISCOM SPA", importo_s2_meur: 4.11, classe: ignoto, attendibilita: "-"}
-- {nome: "We-Com s.r.l.", importo_s2_meur: 3.79, classe: ignoto, attendibilita: "-", note: "registrata come ISP"}
-- {nome: "PA Digitale S.p.A.", importo_s2_meur: 3.45, classe: ignoto, attendibilita: "-"}
-- {nome: "Kibernetes s.r.l.", importo_s2_meur: 3.11, classe: ignoto, attendibilita: C, note: "indizio provider-IT-UE:Aruba (case study Aruba, oggi 404, non archiviato)"}
-- {nome: "ADS automated data systems S.p.A.", importo_s2_meur: 2.44, classe: ignoto, attendibilita: "-"}
-- {nome: "Boxxapps S.r.l.", importo_s2_meur: 2.42, classe: ignoto, attendibilita: C, note: "certificato CSQA come CSP IaaS/PaaS/SaaS, non archiviato"}
-- {nome: "Municipia SPA", importo_s2_meur: 1.98, classe: ignoto, attendibilita: C, note: "gruppo Engineering; brochure jEnte: SaaS su piattaforme qualificate, IaaS non nominato"}
-- {nome: "Parsec 3.26 S.r.l.", importo_s2_meur: 1.97, classe: ignoto, attendibilita: "-"}
-- {nome: "Informatica Alto Adige Spa", importo_s2_meur: 1.73, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-8425, IA-8426, IA-8429 DCAA"}], note: "in-house provinciale"}
-- {nome: "3PItalia SpA", importo_s2_meur: 1.61, classe: ignoto, attendibilita: "-"}
-- {nome: "BUSINESS INTEGRATION PARTNERS S.P.A.", importo_s2_meur: 1.61, classe: ignoto, attendibilita: "-"}
-- {nome: "Engineering D.HUB SPA", importo_s2_meur: 1.60, classe: proprio-IT, attendibilita: B, fonti: [{url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: "IA-136 CLOUDENG IaaS"}]}
-# Nessun fornitore con hyperscaler accertato; nessuna classe A: nessuna pagina trust/DPA pubblica trovata per singolo SaaS.
-# Fonte migliore non accessibile: schede del catalogo ACN (catalogocloud.acn.gov.it, 403 Akamai, R55).
+- nome: "Maggioli Spa"
+  importo_s2_meur: 37.91
+  classe: "proprio-IT (DC Maggioli/DATA4 Cornaredo, rete AS208761 e Dinova AS200760); l'offerta PNRR lascia aperto il public cloud"
+  quota_hyperscaler: [0, 0, 0.5]
+  attendibilita: "A (offerta all'ente: scelta private/public aperta) + B (DNS: 10/10 host su reti IT)"
+  fonti:
+  - {url: "https://www.archivio-comune-ferno-va.it/wp-content/uploads/2023/07/Offerta-Migrazione-al-Cloud-PNRR-_1_.pdf", sha256: ab71cde8c5847f740510d32dac2c543d7bf9e50d1d99650108a458364de71c18, cita: "private cloud (Data Center Maggioli, DATA4 di Milano) oppure public cloud (Google, Microsoft o AWS)"}
+  - {url: "https://www.maggioli.com/en-us/cloud-solutions-pa-data-center", sha256: 487d93179a4cfa1f6438e8e5f134dc166bb91f1256587066ba4a4b7c9738ce78}
+  - {url: "https://lineaedp.it/news/un-nuovo-data-center-100-di-proprieta-per-gruppo-maggioli", sha256: 8654397807daab8a6460f042a581e499eaa77ff9a9c85447ea45a504d1a52c63}
+  - {dns: "maggiolicloud.it, trasparenza-valutazione-merito.it"}
+- nome: "Datamanagement Italia s.r.l."
+  importo_s2_meur: 15.11
+  classe: "hyperscaler:AWS (region Milano); variante @kropolis su Unimatica (IT) qualificata"
+  quota_hyperscaler: [0.5, 1, 1]
+  attendibilita: "A (relazione tecnica, Comune di Firenze, CIG B519664052) + B (DNS akropolis.cloud: 3/3 host AWS)"
+  fonti:
+  - {url: "https://affidamenti.comune.fi.it/sites/affidamenti.comune.fi.it/files/profilo/aggiudicazione-definitiva/20250217/Relazione%20Tecnica.pdf.p7m", sha256: df8629ba77f593c1220ba3284ed10d117b85e64ae358f6f9a9256c95d63c4a44, cita: "Il provider che verrà utilizzato per il servizio cloud è Amazon AWS"}
+  - {url: "https://www.acn.gov.it/portale/en/w/sa-6552", sha256_prefisso: 660ea3a23ebf, nota: "@kropolis su Unimatica"}
+  - {dns: akropolis.cloud}
+- nome: "svic srl"
+  importo_s2_meur: 8.63
+  classe: ignoto
+  quota_hyperscaler: null
+  attendibilita: "C (solo il sito aziendale, su Aruba)"
+- nome: "APKAPPA SRL"
+  importo_s2_meur: 7.06
+  classe: "misto: DC proprio Magenta + Aruba Arezzo (IN-54), varianti qualificate su AWS (SA-1740) e Liguria Digitale (SA-3734)"
+  quota_hyperscaler: [0, 0.33, 1]
+  attendibilita: "B (schede ACN) + A pre-PNRR (Barletta 2020, DC APKappa) + B (DNS: hypersic.net Fastweb, hypersicapp.net AWS)"
+  fonti:
+  - {url: "https://www.acn.gov.it/portale/en/w/in-54", sha256: 217046512e97884b9873c5bd973b353ea57599b2f130aa24690306678b29222e}
+  - {url: "https://www.acn.gov.it/portale/en/w/sa-1740", sha256: d55ed24e3e662da545375f41eb7b0310a4b7c11830cc5dcc23be214a7fa152fc, cita: "hyperSIC Cloud su AWS"}
+  - {url: "https://www.acn.gov.it/portale/en/w/sa-3734", sha256_prefisso: 0ba15c141b9b}
+  - {url: "www3.comune.barletta.bt.it/retecivica/ammtrasp/dd/2020/210201_DD_1924_16_12_2020_trattativa_diretta.pdf", sha256_prefisso: bb8a4b4ccba0}
+  - {dns: "hypersic.net, hypersicapp.net, apkappa.it"}
+- nome: "Halley Informatica Srl"
+  importo_s2_meur: 6.58
+  classe: "proprio-IT (IaaS ACN IA-7879/IN-224, infrastruttura proprietaria in Italia; rete AS205985) + Retelit"
+  quota_hyperscaler: [0, 0, 0.25]
+  attendibilita: "B (scheda ACN + DNS: halleyweb.it 5/5 Retelit, halleyegov.it 3/4 rete Halley)"
+  fonti:
+  - {url: "https://www.acn.gov.it/portale/en/w/in-224", sha256: 84c8f5c53552439f35877a21baebfbbfc15bbba6194eba42635900e3def9b9bc}
+  - {url: ACN, sha256: 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96, scheda: IA-7879}
+  - {dns: "halleyweb.it, halleyegov.it"}
+- nome: "Deda Next S.r.l."
+  importo_s2_meur: 4.73
+  classe: "hyperscaler:Microsoft Azure"
+  quota_hyperscaler: [0.5, 1, 1]
+  attendibilita: "A (offerta Avviso 1.2 al Comune di Tramonti, Civilia Next) + B (DNS soluzionipa.it: 5/5 host Microsoft)"
+  fonti:
+  - {url: "https://www.comune.tramonti.sa.it/download/2f24966a58ae42c58344055e9c2b96d9/offerta_avviso_1_2_pnrr_dedagroup.pdf", sha256: 4e2ef76add5fb8c887f46acdb77fd74a1332ed7ac522752e801f747e8321fd4c, cita: "Piattaforma Cloud Microsoft Azure messa a disposizione da Deda Next"}
+  - {dns: soluzionipa.it}
+- {nome: "Fastweb S.p.A.", importo_s2_meur: 4.52, classe: proprio-IT, quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: ACN, scheda: "IA-93, IA-2271"}], note: "controllo Swisscom (CH)"}
+- {nome: "TIM S.p.A.", importo_s2_meur: 4.44, classe: proprio-IT, quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: ACN, scheda: "IA-3695, IA-3696, IA-8477"}]}
+- {nome: "Almaviva S.p.A.", importo_s2_meur: 4.12, classe: ignoto, quota_hyperscaler: null, attendibilita: C, note: "3 DC propri e Aruba; partner AWS MSP (fonti non archiviate)"}
+- nome: "SISCOM SPA"
+  importo_s2_meur: 4.11
+  classe: "proprio-IT (CSP qualificato) con opzione CSI Piemonte Nivola"
+  quota_hyperscaler: [0, 0, 0.25]
+  attendibilita: B
+  fonti:
+  - {url: "https://s3.eu-south-1.amazonaws.com/assets.h2o.cloudsinet/assets.borghettosantospirito/uploads/2023/08/foglio-doneri-cloud-siscom.pdf", sha256: b88f83bb952603c512c5ab2afd3e8f7f72f949ed7eb01505457aad00ed20e163}
+  - {url: "csipiemonte.it/it/comunicato-stampa/cloud-csi-firmato-un-importante-accordo-consorzio-siscom", sha256_prefisso: 737329e7ec9c}
+- {nome: "We-Com s.r.l.", importo_s2_meur: 3.79, classe: ignoto, quota_hyperscaler: null, attendibilita: C, note: "indizio: Urbi Smart di PA Digitale (TIM), fonte non archiviata"}
+- nome: "PA Digitale S.p.A."
+  importo_s2_meur: 3.45
+  classe: "provider-IT:TIM (Acilia, Pomezia)"
+  quota_hyperscaler: [0, 0, 0.25]
+  attendibilita: "A (allegato tecnico pubblicato dal Comune di Anzola d'Ossola, rev. 2.02 del 15/5/2025) + B (DNS urbi.it: TIM)"
+  fonti:
+  - {url: "https://www.comune.anzoladossola.vb.it/it-it/download/allegato-9-449930-31-173-622328d5415c76dda47e1c9d7dc135a5", sha256: afa8ffbeebd65133a740ce52002907bddf87abfb8e3d0ebb472d0906edbffd45, cita: "Il sito primario di erogazione servizi Cloud è presso il Data Center di TIM S.p.A."}
+  - {dns: urbi.it}
+- {nome: "Kibernetes s.r.l.", importo_s2_meur: 3.11, classe: "provider-IT-UE:Aruba (Virtual Private Cloud)", quota_hyperscaler: [0, 0, 0.5], attendibilita: "B (case study Aruba, promozionale)", fonti: [{url: "https://enterprise.aruba.it/case-study/kibernetes.aspx", sha256: 7b4e566a9b34478261fd3ea853fb3a7f23c66b7142131947b8ec54a636cb87c8}], note: "sito aziendale su Google (C)"}
+- {nome: "ADS automated data systems S.p.A.", importo_s2_meur: 2.44, classe: "proprio-IT (ADSCloud IN-58, Padova e Bologna)", quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: "https://www.acn.gov.it/portale/en/w/in-58", sha256: c9ef69bafc641e306af714fb5d2fb750f461ea5b0a048ee8b66080a322a47474}]}
+- {nome: "Boxxapps S.r.l.", importo_s2_meur: 2.42, classe: "proprio-IT (Internet Data Center Boxxapps, IN-55)", quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-488", sha256: a323ed04f49b168453718db5249ea1f504585a003d86e4251d685e84beb50f93}]}
+- {nome: "Municipia SPA", importo_s2_meur: 1.98, classe: ignoto, quota_hyperscaler: null, attendibilita: C, note: "jentecloud.net dietro CDN Cloudflare: origine nascosta"}
+- nome: "Parsec 3.26 S.r.l."
+  importo_s2_meur: 1.97
+  classe: "hyperscaler:AWS (front-end); le condizioni dicono CSP qualificati in UE, senza nomi"
+  quota_hyperscaler: [0, 1, 1]
+  attendibilita: "B (DNS trasparenza.parsec326.it: AWS) + B (termini e condizioni)"
+  fonti:
+  - {url: "https://www.parsec326.it/termini-e-condizioni-cloud/", sha256: a695007c92e7ca9e129a86d57652e3cc4a6aba156e51ecbd7258baf6ba8e0276}
+  - {dns: parsec326.it}
+- {nome: "Informatica Alto Adige Spa", importo_s2_meur: 1.73, classe: proprio-IT, quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: ACN, scheda: "IA-8425, IA-8426, IA-8429"}]}
+- {nome: "3PItalia SpA", importo_s2_meur: 1.61, classe: ignoto, quota_hyperscaler: null, attendibilita: "-"}
+- {nome: "BUSINESS INTEGRATION PARTNERS S.P.A.", importo_s2_meur: 1.61, classe: ignoto, quota_hyperscaler: null, attendibilita: "-"}
+- {nome: "Engineering D.HUB SPA", importo_s2_meur: 1.60, classe: proprio-IT, quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: ACN, scheda: IA-136}]}
 psn_libro_2025: {url: "https://www.polostrategiconazionale.it/app/uploads/2026/07/Libro-PSN-2025.pdf", sha256: b8fe9ec1b4becdbf07cf837cac4f5ef26621bda85c7bfa1162773bf9a7ed64ed, attendibilita: "A (bilancio integrato del concessionario)", pagine: "p.71-72 mix canoni; p.106 ricavi per servizio"}
+# PPdF PSN letti per ente (Riepilogo prezzi del Configuratore, lettura visiva): ARES Sardegna 12 schede (PDF sha256
+# 524b568aebbf59b79d79faef32dcc02e6badfd868b54d2f155edfd66c9199231, p. 155-179), USR Lazio (fef2aea8...).
+# Tabella: esiti/2026-11-09/infrastruttura-sottostante/psn-ppdf.csv
