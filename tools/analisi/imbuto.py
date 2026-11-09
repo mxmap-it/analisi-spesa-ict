@@ -28,8 +28,13 @@ DA_CATEGORIA = {
     "connettivita": ("S5-ict-non-cloud", "telefonia-connettivita", ""), "hardware": ("S5-ict-non-cloud", "hardware-infrastruttura", ""),
 }
 
-VERSIONE_IMBUTO = "imbuto-0.3.3 (2026-11-07)"  # 0.3.3: RX_ICT con sw e connettività; 79342 marketing fuori da CPV_ICT (#44, decisione di Fabio del 7/11, tools/verifiche/perimetro_cpv_effetto.py). 0.3.2: un CIG ripetuto dentro lo stesso file annuale si conta una volta (11.043 righe, tools/verifiche/imbuto_doppioni.py, R53). 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
-SOGLIA_MIN = 500          # S2, Fabio 2/11
+VERSIONE_IMBUTO = "imbuto-0.3.4 (2026-11-09)"  # 0.3.4: una riga per CIG scelta per CPV ICT (DEDUP_CPV, R53). 0.3.3: RX_ICT con sw e connettività; 79342 marketing fuori da CPV_ICT (#44, decisione di Fabio del 7/11, tools/verifiche/perimetro_cpv_effetto.py). 0.3.2: un CIG ripetuto dentro lo stesso file annuale si conta una volta (11.043 righe, tools/verifiche/imbuto_doppioni.py, R53). 0.3.1: PSN con servizio non noto = incerto-servizio-psn, non IT. 0.3: base di conoscenza delle iniziative (config/iniziative_ict.yaml) in S3, S5, S6
+# 0.3.4 (R53, #66, #58; NON ancora applicata: ict.csv è del 3/11, 0.3.1, e si rigenera dopo la via 6): nei file 2024 e 2025
+# un CIG ha una riga per ogni CPV; la 0.3.2 tiene la prima letta, quindi lo strato dipende dall'ordine del file (152 CIG
+# ripetuti in ict.csv stanno insieme in S5 e S6). Con DEDUP_CPV si classifica con il più basso dei CPV ICT del CIG, se ne
+# ha uno, altrimenti con la prima riga. Effetto stimato: tools/verifiche/imbuto_cig_ripetuti.py
+DEDUP_CPV = True
+SOGLIA_MIN = 500         # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
 SOGLIA_DA_VERIFICARE = 50e6  # importo probabilmente massimale, non spesa
@@ -103,9 +108,15 @@ def main(anno0=2020):
     fonti = sorted(a for a in anni if glob.glob(D + f"cig-{a}/filesystem/cig_csv_*.zip")) + ["delta"]
     for fonte in fonti:
         visti = set()  # 0.3.2: i doppioni stanno dentro lo stesso file annuale (2024, 2025): set per fonte, memoria contenuta
+        cpv_scelto = {}  # 0.3.4: cig -> CPV ICT minimo fra le sue righe nella fonte (solo CIG con almeno un CPV ICT)
+        if DEDUP_CPV:
+            for r in righe_cig(fonte):
+                cp = r["cod_cpv"] or ""
+                if CPV_ICT.match(cp) and (r["cig"] not in cpv_scelto or cp < cpv_scelto[r["cig"]]): cpv_scelto[r["cig"]] = cp
         for r in righe_cig(fonte):
             if fonte != "delta" and r["cig"] in delta_cig: continue
             if r["cig"] in visti: continue
+            if r["cig"] in cpv_scelto and (r["cod_cpv"] or "") != cpv_scelto[r["cig"]]: continue  # 0.3.4: la riga del CPV scelto
             visti.add(r["cig"])
             anno = (r.get("anno_pubblicazione") or "").strip()
             if anno not in anni: continue

@@ -25,8 +25,8 @@
   "2025": 511
  },
  "causa": {
-  "cpv-diversi": 982,
-  "righe-identiche": 34
+  "righe-identiche": 34,
+  "cpv-diversi": 982
  },
  "cig_con_campo_diverso_fra_le_righe": {
   "anno": 0,
@@ -245,5 +245,26 @@
    "euro": 62592.0
   }
  ],
- "parte_b": null
+ "parte_b": {
+  "mirror_2024_2025": {
+   "cig_con_piu_righe": 7862,
+   "righe": 18905,
+   "cig_in_due_file_annuali": 0,
+   "cig_con_cpv_ict_e_non_ict": 510
+  },
+  "stima_cig_che_0.3.2_porterebbe_in_S1": {
+   "S2-sotto-soglia": {
+    "cig": 5,
+    "euro": 1298
+   },
+   "S4-marchio": {
+    "cig": 1,
+    "euro": 70560
+   },
+   "S5-ict-non-cloud": {
+    "cig": 162,
+    "euro": 344943790
+   }
+  }
+ }
 }

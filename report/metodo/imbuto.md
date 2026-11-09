@@ -60,3 +60,15 @@ Effetti sull'imbuto:
 - il 2020-2023 senza SmartCIG non è confrontabile con il 2024 e oltre.
 
 Profilo: `esiti/2026-11-03/smartcig/profilo.json`.
+
+## Criticità: CIG ripetuti con strati diversi (R53, 9/11/2026)
+
+Verifica ripetibile: `tools/verifiche/imbuto_cig_ripetuti.py` (`--mirror` sul server), esiti in `esiti/2026-11-09/imbuto/cig-ripetuti.json` e `cig-ripetuti.csv`. Dati [V].
+- **Causa.** Nei file annuali ANAC 2024 e 2025 un CIG ha una riga per ogni CPV. Nel mirror 7.862 CIG hanno più righe (18.905 righe), nessuno sta in due file annuali, 510 hanno insieme un CPV ICT e uno non ICT. Non sono lotti né un join: anno, importo e testo sono identici fra le righe, cambia solo il CPV (982 CIG su 1.016 in `ict.csv`; gli altri 34 sono righe identiche).
+- **In `ict.csv` (0.3.1, 3/11).** 671.540 righe, 669.878 CIG: 1.016 CIG ripetuti, 1.662 righe in eccesso. Dal 2024 in S3-S6 l'eccesso è di 1.509 righe e 2,565 mld (S3 1,216, S4 0,005, S5 1,065, S6 0,278).
+- **Strati incoerenti.** 152 CIG ripetuti stanno insieme in S5 e in S6 «cpv-non-ict-testo-ict»: lo strato dipende dal CPV della riga tenuta, cioè dall'ordine del file. Con la prima riga (0.3.2) o con l'ultima (`imbuto_doppioni.py`) il risultato cambia.
+- **Il 55,3 mld va corretto.** `imbuto_doppioni.py` ha tolto da S3-S6 2,99 mld invece di 2,565. Ha contato come eccesso anche le righe che la 0.3.1 metteva in S1 (285 CIG con una sola riga in `ict.csv`, 0,267 mld) e le copie in più di 87 CIG (0,159 mld). Il totale S3-S6 dal 2024 una riga per CIG è quindi **circa 55,7 mld** (+0,43 mld, quasi tutto S5). La cifra esatta si avrà alla rigenerazione, perché c'è da tener conto dei tetti.
+- **La 0.3.2 perderebbe CIG ICT.** Tenendo la prima riga, 162 CIG oggi in S5 (0,345 mld) finirebbero in S1, perché la loro prima riga ha un CPV non ICT e il testo non ha segnali ICT (stima).
+- **Regola (imbuto 0.3.4, `DEDUP_CPV` in `tools/analisi/imbuto.py`, si applica alla prossima rigenerazione, dopo la via 6).** Una riga per CIG e per fonte. Se il CIG ha almeno un CPV ICT, si classifica con il più basso dei suoi CPV ICT; altrimenti con la prima riga. Il risultato non dipende più dall'ordine del file, e un CIG che ha un CPV ICT resta nel perimetro.
+- **Effetto stimato oggi sugli strati dal 2024**, rispetto all'ultima riga. In S3-S6 i CIG (291.213) e gli euro (110,77 mld lordi, prima dei tetti) non cambiano. Fra S6 e S5 si spostano 47 CIG e 23,2 M€. Rispetto alla 0.3.2 si spostano 84 CIG, più i 162 CIG recuperati da S1.
+- **Elenco accesso civico (#58).** `elenco_mancanti.py` ora usa la stessa regola, mentre prima prendeva l'ultima riga. 65 CIG dell'elenco sono ripetuti. Per 32 (P2-g3 30, P5 2; 4,2 M€) con la regola 0.3.4 lo strato diventa S5: la nota della voce lo segnala, la priorità si rivede alla rigenerazione.

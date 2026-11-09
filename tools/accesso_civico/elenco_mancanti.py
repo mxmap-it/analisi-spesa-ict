@@ -74,6 +74,22 @@ def dettagli_documento(sottoclasse, materiale, cig, oggetto):
     return f"{base}, {extra}"
 
 
+ATTESO = {"P2-g3": "S6", "P3-g2": "S6", "P5-g4-campione": "S6"}  # P1: incerti S3-S6; P4: S1 in ict.csv 0.3.1 (RX 0.3.3)
+
+
+def nota_strato(c, prio, ict, nrig, strati):
+    """Strato coerente per CIG (regola 0.3.4) e segnalazione dei casi in cui la priorità non torna con lo strato."""
+    r = ict.get(c)
+    if r is None:
+        return "strato S1 in ict.csv 0.3.1 (entra nel residuo con RX_ICT 0.3.3)" if prio == "P4-nuovi-rx" else "strato ? (CIG non in ict.csv)"
+    n = f"strato {r['strato']} {r['sottoclasse']}".strip()
+    if nrig[c] > 1:
+        n += f"; CIG ripetuto in ict.csv ({nrig[c]} righe, strati {'+'.join(sorted(strati[c]))}, regola 0.3.4, R53)"
+    if prio in ATTESO and not r["strato"].startswith(ATTESO[prio]):
+        n += f"; con la regola 0.3.4 esce da {ATTESO[prio]}: priorità {prio} da rivedere alla rigenerazione dell'imbuto"
+    return n
+
+
 def main():
     a = [x for x in sys.argv[1:] if not x.startswith("--")]
     data = a[0] if a else str(datetime.date.today())
@@ -87,9 +103,15 @@ def main():
     p66 = {r["cig"]: r for r in csv.DictReader(open(R / f"esiti/{d66}/imbuto/residuo-s6-per-66.csv", encoding="utf-8"))}
     l3 = {r["cig"]: r for r in jl(D / "out/esiti.jsonl")}
     l4 = {r["cig"]: r for r in jl(D / "l4/esiti.jsonl")}
-    ict = {}
+    # R53: in ict.csv (0.3.1) un CIG può avere più righe (una per CPV) con strati diversi; si tiene una riga per CIG con
+    # la regola di imbuto 0.3.4 (DEDUP_CPV): CPV ICT minimo se c'è, altrimenti la prima. Prima si teneva l'ultima.
+    ict, nrig, strati = {}, collections.Counter(), collections.defaultdict(set)
+    chiave = lambda r: (r["cpv_ict"] != "1", r["cod_cpv"])
     for r in csv.DictReader(open(R / "lavoro/imbuto/ict.csv", encoding="utf-8")):
-        if r["cig"] in ing: ict[r["cig"]] = r
+        c = r["cig"]
+        if c not in ing: continue
+        nrig[c] += 1; strati[c].add(r["strato"])
+        if c not in ict or chiave(r) < chiave(ict[c]): ict[c] = r
     # CF dal dataset ANAC dei CIG (anni del residuo + delta) e mappa nome -> CF per le convenzioni
     from attribuisci_provider import righe_cig
     conv = list(csv.DictReader(open(R / "report/convenzioni/database/documenti-mancanti.csv", encoding="utf-8")))
@@ -128,7 +150,7 @@ def main():
                       "documento_atteso": dettagli_documento(sc, m, c, r.get("oggetto")), "importo": imp, "anno": r.get("anno", ""),
                       "criticita": cr, "peso_valore": peso(imp), "priorita": round(cr * peso(imp), 3),
                       "livelli_tentati": " ; ".join(tent), "esito_livelli": " ; ".join(esi),
-                      "note": f"strato {(ict.get(c) or {}).get('strato', '?')} {sc}".strip()})
+                      "note": nota_strato(c, r["priorita"], ict, nrig, strati)})
 
     # --- A: convenzioni ---
     for x in conv:

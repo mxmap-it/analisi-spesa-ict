@@ -5,6 +5,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 **Ultimo aggiornamento:** 2026-11-09
 
 
+## R53 CIG RIPETUTI NELL IMBUTO — 9/11/2026
+- Causa: nei file ANAC 2024 e 2025 c'è una riga per ogni CPV (7.862 CIG, 510 con CPV ICT e non ICT insieme). In `ict.csv` 1.016 CIG sono ripetuti e 152 stanno insieme in S5 e S6. Il 55,3 mld S3-S6 dal 2024 è sottostimato di circa 0,43 mld (circa 55,7), perché `imbuto_doppioni.py` ha tolto anche righe che stavano in S1. Dettagli in `report/metodo/imbuto.md` § Criticità, verifica in `tools/verifiche/imbuto_cig_ripetuti.py`.
+- Patch pronta in `imbuto.py` 0.3.4 (`DEDUP_CPV`): **NON applicata**, `ict.csv` resta quello del 3/11 fino alla rigenerazione dopo la via 6. Alla rigenerazione: rifare `imbuto_cig_ripetuti.py` (dovrà dare 0 CIG ripetuti), rivedere le priorità P2/P5 delle 32 voci segnalate nell'elenco #58 e aggiornare il 55,3 nel rendiconto.
+- `elenco_mancanti.py` prende uno strato coerente per CIG (regola 0.3.4). Elenco `esiti/2026-11-09/accesso-civico/` rigenerato: 28.807 voci, invariate, V1-V7 ok.
+
 ## #67 BDAP NELL IMBUTO — giro 0.2 fatto 9/11/2026 (pagina v0.2)
 - **Verifiche nuove** [V]: `tools/verifiche/bdap_cig_ministeri_cf.py` (SA→ministero per CF IndicePA, quota annua, Sogei) e `tools/verifiche/siope_bdap_vs_diretto.py 2024|2025` (#30); `bdap_ict_stato.py` 0.2 con PG 2019-2024 (archiviati con archivia.py). Esiti `esiti/2026-11-09/bdap/` e `esiti/2026-11-09/siope/`.
 - **Per CF:** CIG ICT ministeriali 10.758 → 23.644 (5,0 → 8,2 mld 2020-26). **Giustizia** 2024 quota CIG attivi/pagato **0,96** (era 0,03: artefatto del nome); **MEF 0,25** (97 vs 388 M€), resta il solo buco (~0,3 mld/anno).
@@ -162,7 +167,7 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **0.6:**
   - `imbuto_doppioni.py`: 11.043 righe duplicate nei file annuali 2024/2025 (conti che tornano: 5.713.798 righe − 11.043 = 5.702.755 CIG); correzione sui totali, `ict.csv` non toccato (via 6 in corso). S3-S6 dal 2024 a 55,3 mld.
   - `imbuto_licenze.py`: 3.508 CIG di licenze/marchi, 2,76 mld netti; cloud 168 M€ (extra-UE 141), non cloud 892 M€, incerto 1,68 mld (MS 799, Oracle 401, ? 396, SAP 83).
-  - Prossimo: censimento SKU dei primi 50 EA (atti), correzione dei doppioni in `imbuto.py` alla prossima rigenerazione, dopo la via 6.
+  - Prossimo: censimento SKU dei primi 50 EA (atti), correzione dei doppioni in `imbuto.py` alla prossima rigenerazione, dopo la via 6 (patch 0.3.4 pronta, vedi R53 9/11).
 - **0.5 (chiusura del giro tetti/PNRR):**
   - visita AT dei 79 CIG ICT incerti (`fuori_piattaforma_at.py`, ingresso `lavoro/imbuto/at79/`): 40 enti, 0 atti, fermata per resa zero; 4 blocchi aggiunti a `report/convenzioni/blocchi-accesso.csv` (SOGEI, CINECA 403; UniBa Radware; ASL Pescara → reCAPTCHA ANAC), da validare in R45/R46;
   - E4: dichiarato errato 14/15 (70-99 %), quadro economico plausibile 9/15 (36-80 %), 46/115 rapporti potenza di 10;
