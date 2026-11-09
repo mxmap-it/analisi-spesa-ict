@@ -104,6 +104,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 | v3 (28/10) | nuovo campione | persone, alla cieca | da misurare | da misurare | da misurare |
 | lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
 | regole v4.3 (9/11) | quinto campione a cieco, 238 CIG | Claude, alla cieca, un annotatore | big tech 86,2 % (Wilson 79,7-90,9), 80,8 % in euro; pesata 93,9 % | — | big tech: 0 mancati su 125 (R Wilson 97,0-100) |
+| regole v4.4 (9/11) | sesto campione a cieco, 250 CIG | Claude, alla cieca, un annotatore | big tech 80,7 % (Wilson 73,4-86,4), 98,1 % in euro; pesata 89,4 % (99,0 % in euro) | — | big tech: 3 mancati su 116 (R 97,4 %, Wilson 92,7-99,1); nello strato N 3 su 80 |
 
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
@@ -200,6 +201,29 @@ Valutazione: per ciechi 4-5 la lente conta il provider salvo `servizi-profession
 
 **Il quinto campione è ora di sviluppo**: P 100 % sul cieco 5 non è una misura. La misura indipendente delle v4.4 richiede un sesto campione a cieco. **La mappa dei rivenditori va rifatta con le regole v4.4** (`rivenditori_mappa.py`, job pesante): rinviata a quando la prova imbuto (#71) è finita (AGENTS.md § 4).
 
+**Sesto campione a cieco, regole v4.4 (9/11/2026, #40, #72).** Misura indipendente delle regole v4.4 (commit e3c0d197) col criterio «prodotto comprato». Campione nuovo di 250 CIG 2024-2026 (`report/metodo/lente-cieco-6/`, seme 20261112, `tools/verifiche/lente_cieco6_campione.py`), esclusi i 15.560 CIG già usati (ciechi 1-5, campioni rivenditori, esiti delle regole v4.3 e v4.4, test). Strati disgiunti: multilotto M (vuoto: il cieco 5 li aveva presi tutti), **servizi su piattaforma P** (nuovo: marchio del dizionario e consulenza, manutenzione, migrazione, sviluppo, *system integration*, servizi professionali; 50 su 926), servizi accessori F (40 su 575), rivenditore R (40 su 4.716), diretto E (40 su 294), senza provider N (80 su 237.024). Etichette (nomi canonici dell'elenco pubblicato, `altro:` per il resto) committate prima del confronto in 799f2ecc, sha256 eba03237; confronto con `tools/verifiche/lente_cieco6.py`, esiti in `esiti/2026-11-09/lente-cieco-6/` (`misura.json`, `errori.csv`, `classi-errori.csv`).
+
+| Strato | Big tech USA: precisione | Richiamo | Precisione in euro |
+|---|---|---|---|
+| R rivenditore | 38/40 = 95,0 % (83,5-98,6) | 38/38 | 99,8 % |
+| E diretto | 39/40 = 97,5 % (87,1-99,6) | 39/39 | 99,8 % |
+| P servizi su piattaforma | 18/29 = 62,1 % (44,0-77,3) | 18/18 | 98,2 % |
+| F servizi accessori | 18/31 = 58,1 % (40,8-73,6) | 18/18 | 93,6 % |
+| N senza provider | — | **3 big tech mancati su 80** (3,8 %, Wilson 1,3-10,5) | — |
+| **Totale** | **113/140 = 80,7 % (73,4-86,4)** | **113/116 = 97,4 % (92,7-99,1)** | **98,1 %**, richiamo 99,8 % |
+
+Pesata sull'universo (N_h/n_h): precisione big tech 89,4 % (99,0 % in euro). Il richiamo pesato in numero scende al 37,6 % (84,9 % in euro) perché i 3 mancati dello strato N, moltiplicati per 237.024/80, valgono circa 8.900 CIG stimati contro 5.359 trovati: la stima è molto incerta (la quota dei mancati nello strato N va da 1,3 a 10,5 %, cioè da circa 3.000 a 25.000 CIG) e riguarda contratti piccoli (0,13 M€ nel campione). Nel cieco 5 lo stesso strato aveva 0 mancati su 80: le due misure insieme danno 3 su 160 (1,9 %). Tutti i provider del dizionario: 124/170 = 72,9 % (65,8-79,1), 97,4 % in euro, pesata 85,2 %.
+
+Errori per classe (regole NON corrette; il criterio delle etichette è quello del cieco 5):
+- **servizi professionali su piattaforma** ancora presi come prodotto: 20 big tech (0,94 M€: assistenza/supporto «su ambiente Azure», «in ambito Microsoft 365», «su infrastruttura VMware», «assistenza sistemistica SQL Server», migrazioni a M365/OneDrive/Office 365, migrazione da Azure Data Factory, attività Salesforce, manutenzione di un add-on di Dynamics 365, canone di assistenza Fastweb per l'abilitazione al cloud AWS) e 12 di altri provider (Nextcloud 3, PSN 2 migrazioni di terzi, SAP 2, in-house 4, ex SPC Cloud 1). Le regole v4.4 coprono i servizi solo con alcune parole («servizi professionali», manutenzione applicativa): «assistenza», «supporto», «migrazione» davanti al marchio restano scoperti;
+- **cloud come hosting dentro il servizio di un terzo** (manutenzione di un applicativo «comprensiva di hosting su Azure/AWS»): 3, casi di confine;
+- **omonimie**: «GCP» = *Good Clinical Practice*, «Next Cloud» di Deda: 2;
+- **formazione** (corso Power BI) 1; **IaaS gestita «(VMware)»** di un provider locale (variante non presa da «per ambienti VMware») 1; **prodotto di terzi per Google Workspace** (backup AFI) 1; supporto al RUP della concessione PSN 1;
+- **vocabolario, non errori della lente**: 5 contratti in-house (CSI Piemonte Nivola, Lepida, Trentino Digitale) etichettati col nome dell'ente invece di «In-house pubblico»;
+- **mancati** (3, strato N, via «ict-non-cloud»): «SERVICE NOW» da solo, «CAL + SERVER MS SQLSRV2022», «Google Suite Enterprise Starter».
+
+Lettura: sui contratti di licenza e sottoscrizione (R, E) la lente tiene (P 95-97 %, 99,8 % in euro); negli strati di servizi la precisione in numero è 58-62 % ma in euro 94-98 %, perché i servizi sbagliati sono piccoli rispetto alle licenze dello stesso strato. Il richiamo non è più 100 %: tre sigle di prodotto (ServiceNow staccato, «MS SQLSRV», «Google Suite») sfuggono al dizionario. Limiti: un solo annotatore (Claude), niente kappa; strati P e F sovra-campionati di proposito; alcuni casi di confine (servizio gestito AWS, canone Office 365 di Halley, Google Workspace con formazione) etichettati come prodotto e annotati in `etichette.csv`. **Le regole non sono state corrette**: correggendole il sesto campione diventa di sviluppo.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
@@ -287,3 +311,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Regole v4.3: formazione/supporto Microsoft e Google, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe; cieco 4 big tech da P 92,2 % a 100 % (ora campione di sviluppo, non più indipendente), ciechi 2-3 e top-20 invariati, cieco 1 −2 per cambio di criterio; mappa rivenditori v4.3 (CF IT 61,2 % dell'extra-UE) | #40, `esiti/2026-11-09/regole-v4.3/` |
 | 9/11/2026 | Quinto campione a cieco delle regole v4.3 (238 CIG, 5 strati): big tech P 86,2 % (79,7-90,9), 80,8 % in euro, pesata 93,9 %; R 100 % (97,0-100); 31 errori tutti «marchio senza prodotto» (omonimia Medtronic Azure, servizi professionali su piattaforma, formazione/gare, connettività, vocabolario SPC Cloud), regole non modificate | #40, `esiti/2026-11-09/lente-cieco-5/` |
 | 9/11/2026 | Regole v4.4 dalle classi d'errore del cieco 5 (omonimie, servizi su piattaforma, formazione/POC/gara, connettività, nome canonico SPC Cloud): cieco 5 big tech 125/17/0 → 125/0/0 (ora di sviluppo), ciechi 2-3 invariati, 3 cambi di criterio (cieco 1, cieco 4, top-20); 129/129 casi; mappa rivenditori da rifare (v4.4) dopo la prova imbuto | #40, `esiti/2026-11-09/regole-v4.4/` |
+| 9/11/2026 | Sesto campione a cieco (250 CIG, seme 20261112, strato nuovo «servizi su piattaforma»): regole v4.4 big tech P 113/140 = 80,7 % (73,4-86,4), 98,1 % in euro, pesata 89,4 %; R 113/116 = 97,4 % (3 mancati nello strato N); 46 errori per classe, regole non corrette | #40, #72, `esiti/2026-11-09/lente-cieco-6/` |

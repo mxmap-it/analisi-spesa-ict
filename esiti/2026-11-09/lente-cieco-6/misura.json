@@ -1,0 +1,1066 @@
+{
+ "disegno": {
+  "universo": "lavoro/attribuzione/2024-2026.csv, CIG distinti, regole v4.4 (e3c0d197)",
+  "seme": 20261112,
+  "quote": {
+   "M": "tutti",
+   "P": 50,
+   "F": 40,
+   "R": 40,
+   "E": 40,
+   "N": 80
+  },
+  "esclusi_gia_visti": 15560,
+  "dimensione_strati": {
+   "E": 294,
+   "F": 575,
+   "M": 0,
+   "N": 237024,
+   "P": 926,
+   "R": 4716
+  }
+ },
+ "etichette_sha256": "eba032374bf5230679371411d0ec3c488d68618b0ecd1f80829f64fc36f97366",
+ "n_per_strato": {
+  "R": 40,
+  "N": 80,
+  "P": 50,
+  "F": 40,
+  "E": 40
+ },
+ "bigtech_usa": {
+  "per_strato": {
+   "E": {
+    "tp": 39,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.975,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.871,
+     0.996
+    ],
+    "richiamo_w95": [
+     0.91,
+     1.0
+    ],
+    "euro": {
+     "tp": 14308356,
+     "fp": 32800,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 18,
+    "fp": 13,
+    "fn": 0,
+    "precisione": 0.581,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.408,
+     0.736
+    ],
+    "richiamo_w95": [
+     0.824,
+     1.0
+    ],
+    "euro": {
+     "tp": 8797587,
+     "fp": 602802,
+     "fn": 0,
+     "precisione": 0.936,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 3,
+    "precisione": null,
+    "richiamo": 0.0,
+    "precisione_w95": null,
+    "richiamo_w95": [
+     0.0,
+     0.562
+    ],
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 125539,
+     "precisione": null,
+     "richiamo": 0.0
+    }
+   },
+   "P": {
+    "tp": 18,
+    "fp": 11,
+    "fn": 0,
+    "precisione": 0.621,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.44,
+     0.773
+    ],
+    "richiamo_w95": [
+     0.824,
+     1.0
+    ],
+    "euro": {
+     "tp": 23839890,
+     "fp": 448045,
+     "fn": 0,
+     "precisione": 0.982,
+     "richiamo": 1.0
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 12049154,
+     "fp": 29900,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 113,
+   "fp": 27,
+   "fn": 3,
+   "precisione": 0.807,
+   "richiamo": 0.974,
+   "precisione_w95": [
+    0.734,
+    0.864
+   ],
+   "richiamo_w95": [
+    0.927,
+    0.991
+   ],
+   "euro": {
+    "tp": 58994987,
+    "fp": 1113547,
+    "fn": 125539,
+    "precisione": 0.981,
+    "richiamo": 0.998
+   }
+  },
+  "pesato_universo": {
+   "tp": 5359,
+   "fp": 634,
+   "fn": 8888,
+   "precisione": 0.894,
+   "richiamo": 0.376,
+   "euro": {
+    "tp": 2093741713,
+    "fp": 20729371,
+    "fn": 371948371,
+    "precisione": 0.99,
+    "richiamo": 0.849
+   }
+  }
+ },
+ "extra_ue": {
+  "per_strato": {
+   "E": {
+    "tp": 39,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.975,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.871,
+     0.996
+    ],
+    "richiamo_w95": [
+     0.91,
+     1.0
+    ],
+    "euro": {
+     "tp": 14308356,
+     "fp": 32800,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 18,
+    "fp": 13,
+    "fn": 0,
+    "precisione": 0.581,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.408,
+     0.736
+    ],
+    "richiamo_w95": [
+     0.824,
+     1.0
+    ],
+    "euro": {
+     "tp": 8797587,
+     "fp": 602802,
+     "fn": 0,
+     "precisione": 0.936,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 3,
+    "precisione": null,
+    "richiamo": 0.0,
+    "precisione_w95": null,
+    "richiamo_w95": [
+     0.0,
+     0.562
+    ],
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 125539,
+     "precisione": null,
+     "richiamo": 0.0
+    }
+   },
+   "P": {
+    "tp": 18,
+    "fp": 11,
+    "fn": 0,
+    "precisione": 0.621,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.44,
+     0.773
+    ],
+    "richiamo_w95": [
+     0.824,
+     1.0
+    ],
+    "euro": {
+     "tp": 23839890,
+     "fp": 448045,
+     "fn": 0,
+     "precisione": 0.982,
+     "richiamo": 1.0
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 12049154,
+     "fp": 29900,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 113,
+   "fp": 27,
+   "fn": 3,
+   "precisione": 0.807,
+   "richiamo": 0.974,
+   "precisione_w95": [
+    0.734,
+    0.864
+   ],
+   "richiamo_w95": [
+    0.927,
+    0.991
+   ],
+   "euro": {
+    "tp": 58994987,
+    "fp": 1113547,
+    "fn": 125539,
+    "precisione": 0.981,
+    "richiamo": 0.998
+   }
+  },
+  "pesato_universo": {
+   "tp": 5359,
+   "fp": 634,
+   "fn": 8888,
+   "precisione": 0.894,
+   "richiamo": 0.376,
+   "euro": {
+    "tp": 2093741713,
+    "fp": 20729371,
+    "fn": 371948371,
+    "precisione": 0.99,
+    "richiamo": 0.849
+   }
+  }
+ },
+ "tutti_i_provider": {
+  "per_strato": {
+   "E": {
+    "tp": 39,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.975,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.871,
+     0.996
+    ],
+    "richiamo_w95": [
+     0.91,
+     1.0
+    ],
+    "euro": {
+     "tp": 14308356,
+     "fp": 32800,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 21,
+    "fp": 19,
+    "fn": 0,
+    "precisione": 0.525,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.375,
+     0.671
+    ],
+    "richiamo_w95": [
+     0.845,
+     1.0
+    ],
+    "euro": {
+     "tp": 10393962,
+     "fp": 871400,
+     "fn": 0,
+     "precisione": 0.923,
+     "richiamo": 1.0
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 3,
+    "precisione": null,
+    "richiamo": 0.0,
+    "precisione_w95": null,
+    "richiamo_w95": [
+     0.0,
+     0.562
+    ],
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 125539,
+     "precisione": null,
+     "richiamo": 0.0
+    }
+   },
+   "P": {
+    "tp": 26,
+    "fp": 24,
+    "fn": 0,
+    "precisione": 0.52,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.385,
+     0.652
+    ],
+    "richiamo_w95": [
+     0.871,
+     1.0
+    ],
+    "euro": {
+     "tp": 40754823,
+     "fp": 1170776,
+     "fn": 0,
+     "precisione": 0.972,
+     "richiamo": 1.0
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 12049154,
+     "fp": 29900,
+     "fn": 0,
+     "precisione": 0.998,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 124,
+   "fp": 46,
+   "fn": 3,
+   "precisione": 0.729,
+   "richiamo": 0.976,
+   "precisione_w95": [
+    0.658,
+    0.791
+   ],
+   "richiamo_w95": [
+    0.933,
+    0.992
+   ],
+   "euro": {
+    "tp": 77506295,
+    "fp": 2104877,
+    "fn": 125539,
+    "precisione": 0.974,
+    "richiamo": 0.998
+   }
+  },
+  "pesato_universo": {
+   "tp": 5550,
+   "fp": 961,
+   "fn": 8888,
+   "precisione": 0.852,
+   "richiamo": 0.384,
+   "euro": {
+    "tp": 2429954160,
+    "fp": 37975448,
+    "fn": 371948371,
+    "precisione": 0.985,
+    "richiamo": 0.867
+   }
+  }
+ },
+ "errori_per_classe": {
+  "marchio senza prodotto del dizionario": 46,
+  "mancato": 3
+ },
+ "errori": [
+  {
+   "cig": "B9A25EA214",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "microsoft\\s*365",
+   "etichetta": "",
+   "nota_etichetta": "affiancamento/assistenza su M365: servizio, nessuna licenza",
+   "importo": 7200.0,
+   "testo": "AFFIANCAMENTO E ASSISTENZA ON THE JOB IN AMBITO MICROSOFT365 | ASSISTENZA ON THE JOB MICROSOFT"
+  },
+  {
+   "cig": "BCC158B475",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "",
+   "nota_etichetta": "migrazione su Azure: servizi su piattaforma",
+   "importo": 9120.0,
+   "testo": "SERVIZI E MIGRAZIONE COLUD PIATTAFORMA AZURE | SERVIZI E MIGRAZIONE COLUD PIATTAFORMA AZURE"
+  },
+  {
+   "cig": "BC7C6DDEAB",
+   "strato": "N",
+   "classe": "mancato",
+   "lente": "",
+   "via": "0-ict-non-cloud",
+   "regola": "",
+   "etichetta": "ServiceNow",
+   "nota_etichetta": "solo «SERVICE NOW», probabile sottoscrizione via rivenditore",
+   "importo": 116479.92,
+   "testo": "SERVICE NOW | SERVICE NOW"
+  },
+  {
+   "cig": "BAE2F0A22B",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "office\\s*365",
+   "etichetta": "altro:dev4side",
+   "nota_etichetta": "WAF e supporto Azure/O365: servizio",
+   "importo": 48800.0,
+   "testo": "FORNITURA DI SERVIZI DI PROTEZIONE PERIMETRALE PER APPLICAZIONI WEB E SUPPORTO ALL'AMBIENTE AZURE - OFFICE 365 | FORNITURA DI SERVIZI DI PROTEZIONE PERIMETRALE PER APPLICAZIONI WEB E SUPPORTO ALL'AMBIENTE AZURE - OFFICE 365"
+  },
+  {
+   "cig": "B5C8BA5850",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "",
+   "nota_etichetta": "assistenza su VMware: servizio",
+   "importo": 45000.0,
+   "testo": "SERVIZIO PROFESSIONALE SPECIALISTICO CERTIFICATO PER ASSISTENZA SU INFRASTRUTTURA VMWARE E VEEAM BACKUP - | SERVIZIO PROFESSIONALE SPECIALISTICO CERTIFICATO PER ASSISTENZA SU INFRASTRUTTURA VMWARE E VEEAM BACKUP -"
+  },
+  {
+   "cig": "BAD512FD70",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "altro:laser-romae",
+   "nota_etichetta": "IaaS gestita «(VMware)» di un provider locale: non prodotto VMware",
+   "importo": 55650.0,
+   "testo": "OFFERTA PER SERVIZI DI GESTIONE IAAS IN CLOUD (VMWARE), DISASTER RECOVERY, AGGIORNAMENTO SISTEMI, SEGMENTAZIONE RETE E CONNETTIVITÀ SD-WAN – DURATA 60 MESI | RICHIESTA DI OFFERTA PER SERVIZI DI GESTIONE IAAS IN CLOUD (VMWARE), DISASTER RECOVERY, AGGIORNAMENTO SISTEMI, SEGMENTAZIONE RETE E CONNETTIVI"
+  },
+  {
+   "cig": "B9B6A90A9C",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "",
+   "nota_etichetta": "supporto su Azure: servizio",
+   "importo": 139000.0,
+   "testo": "SERVIZIO DI SUPPORTO SU AMBIENTE CLOUD MICROSOFT AZURE ANNO 2026 | SERVIZIO DI SUPPORTO SU AMBIENTE CLOUD MICROSOFT AZURE ANNO 2026"
+  },
+  {
+   "cig": "BC2F629C6B",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Polo Strategico Nazionale",
+   "via": "3-marchio",
+   "regola": "\\bpsn\\b",
+   "etichetta": "",
+   "nota_etichetta": "supporto al RUP della concessione PSN",
+   "importo": 39000.0,
+   "testo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ARTICOLO 50, COMMA 1, LETTERA B), DEL DECRETO LEGISLATIVO N. 36/2023, E DELL'ARTICOLO 33, COMMA 2, LETTERA A), DEL D.P.C.M. 10 APRILE 2024, DEI SERVIZI DI SUPPORTO SPECIALISTICO AL RUP DELLA CONCESSIONE PSN PER LO SVOLGIMENTO DELLE ATTIVITÀ OPERATIVE E AMMINISTRATIV"
+  },
+  {
+   "cig": "B4DE328197",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "altro:greenext",
+   "nota_etichetta": "aggiornamento modulo WMS su AWS: servizio",
+   "importo": 8400.0,
+   "testo": "AGGIORNAMENTO MODULO WMS RENTRI DELLA PIATTAFORMA WMS E DEL CLOUD AWS IN USO PRESSO L'IMPIANTO DI DEPURAZIONE SITO IN C.DA PADULA – MONTENERO DI BISACCIA (CB). | AGGIORNAMENTO MODULO WMS RENTRI DELLA PIATTAFORMA WMS E DEL CLOUD AWS IN USO PRESSO L'IMPIANTO DI DEPURAZIONE SITO IN C.DA PADULA – MONTEN"
+  },
+  {
+   "cig": "B3657474A6",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "windows\\s+server",
+   "etichetta": "",
+   "nota_etichetta": "",
+   "importo": 25000.0,
+   "testo": "ASSISTENZA E SUPPORTO AI SISTEMI WINDOWS SERVER E AI SISTEMI CITRIX  | ASSISTENZA E SUPPORTO AI SISTEMI WINDOWS SERVER E AI SISTEMI CITRIX "
+  },
+  {
+   "cig": "B7E0FE6E95",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bm365\\b",
+   "etichetta": "",
+   "nota_etichetta": "migrazione a M365: servizio",
+   "importo": 16621.77,
+   "testo": "MIGRAZIONE AI SERVIZI M365 | MIGRAZIONE AI SERVIZI M365"
+  },
+  {
+   "cig": "B3096EDEC3",
+   "strato": "N",
+   "classe": "mancato",
+   "lente": "",
+   "via": "0-ict-non-cloud",
+   "regola": "",
+   "etichetta": "Microsoft",
+   "nota_etichetta": "",
+   "importo": 225.0,
+   "testo": "ACQUISTO CAL + SERVER MS SQLSRV2022 | ACQUISTO CAL + SERVER MS SQLSRV2022"
+  },
+  {
+   "cig": "B1E96006DE",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Nextcloud",
+   "via": "3-marchio",
+   "regola": "next\\s*cloud",
+   "etichetta": "altro:alfabitomega",
+   "nota_etichetta": "migrazione in cloud, Nextcloud come software: servizio",
+   "importo": 21660.0,
+   "testo": "SERVIZIO DI ASSISTENZA SISTEMISTICA, AGGIORNAMENTO, BACKUP E GESTIONE DELLA SICUREZZA. MIGRAZIONE IN CLOUD DEI SERVER FISICI -CLOUD VDI/GESTIONE DOCUMENTALE (NEXTCLOUD)/APPLICATIVI IN USO | SERVIZIO MIGRAZIONE IN CLOUD DEI SERVER FISICI CLOUD VDI/GESTIONE DOCUMENTALE (NEXTCLOUD)/APPLICATIVI IN USO D"
+  },
+  {
+   "cig": "B0DD3A96C1",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:log80",
+   "nota_etichetta": "migrazione su DC Lepida",
+   "importo": 30500.0,
+   "testo": "PROCEDURA DI AFFIDAMENTO DIRETTO PER L'ACQUISTI DELLE ATTIVITÀ DI MIGRAZIONE SU DATA CENTER QUALIFICATO LEPIDA COMPRENSIVO DI AGGIORNAMENTO DI VERSIONE E SERVIZI CONNESSI (MIGRAZIONE INTEGRAZIONI, FORMAZIONE, AFFIANCAMENTO). | PROCEDURA DI AFFIDAMENTO DIRETTO PER L'ACQUISTI DELLE ATTIVITÀ DI MIGRAZI"
+  },
+  {
+   "cig": "B110E1FB23",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "",
+   "nota_etichetta": "servizi professionali su VMware/Microsoft",
+   "importo": 142880.0,
+   "testo": "SERVIZI PROFESSIONALI DI:SYSTEM ARCHITECT PER LE INSTALLAZIONI AIX, VMWARE, LINUX;SYSTEM ADMINISTRATOR SENIOR PER LA MANUTENZIONE E GESTIONE AMBIENTI MICROSOFT. | SERVIZI PROFESSIONALI DI:SYSTEM ARCHITECT PER LE INSTALLAZIONI AIX, VMWARE, LINUX;SYSTEM ADMINISTRATOR SENIOR PER LA MANUTENZIONE E GESTI"
+  },
+  {
+   "cig": "B7825978F6",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Polo Strategico Nazionale",
+   "via": "3-marchio",
+   "regola": "\\bpsn\\b",
+   "etichetta": "altro:ads",
+   "nota_etichetta": "migrazione su PSN da terzi: servizio",
+   "importo": 6500.0,
+   "testo": "ACQUISIZIONE SERVIZIO MIGRAZIONE SUITE SMART*GOV SU PSN | ACQUISIZIONE SERVIZIO DI MIGRAZIONE DELLA SUITE SMART*GOV SU PSN"
+  },
+  {
+   "cig": "B10B011D57",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "microsoft\\s*365",
+   "etichetta": "",
+   "nota_etichetta": "supporto e conduzione Azure/M365: servizio",
+   "importo": 131500.0,
+   "testo": "SUPPORTO REATTIVO, DEL MONITORAGGIO SICUREZZA | SUPPORTO REATTIVO, DEL MONITORAGGIO SICUREZZA, DEL SUPPORTO EVOLUTIVO E CONDUZIONE OPERATIVA E ARCHITETTURE MICROSOFT AZURE E MICROSOFT 365"
+  },
+  {
+   "cig": "B54AE185D7",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:3cime",
+   "nota_etichetta": "backup nel DC Lepida",
+   "importo": 15750.0,
+   "testo": "SERVIZIO DI BACKUP DELLE MACCHINE VIRTUALI E DELLO STORAGE CIFS PRESENTE NEL DATA CENTER LEPIDA - ANNO 2025 | SERVIZIO DI BACKUP DELLE MACCHINE VIRTUALI E DELLO STORAGE CIFS PRESENTE NEL DATA CENTER LEPIDA - ANNO 2025"
+  },
+  {
+   "cig": "B9B3F52B5B",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Nextcloud",
+   "via": "3-marchio",
+   "regola": "next\\s*cloud",
+   "etichetta": "",
+   "nota_etichetta": "supporto per Nextcloud open source: servizio, non sottoscrizione detta",
+   "importo": 138750.0,
+   "testo": "SERVIZI DI SUPPORTO PER LA SOLUZIONE OPEN SOURCE NEXTCLOUD | SERVIZI DI SUPPORTO PER LA SOLUZIONE OPEN SOURCE NEXTCLOUD"
+  },
+  {
+   "cig": "BC8B899AF7",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "",
+   "nota_etichetta": "",
+   "importo": 20000.0,
+   "testo": "GIORNATE DI SUPPORTO SPECIALISTICO AVANZATO IN AMBITO CISCO, NETAPP E VMWARE | GIORNATE DI SUPPORTO SPECIALISTICO AVANZATO IN AMBITO CISCO, NETAPP E VMWARE"
+  },
+  {
+   "cig": "B57EF6D5CD",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a).{0,80}(cloud|data\\s*cent|hosting|housing)",
+   "etichetta": "altro:csi-piemonte",
+   "nota_etichetta": "",
+   "importo": 16772.31,
+   "testo": "AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7 DEL D.LGS 36/2023 AL CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE) PER LA FORNITURA DI SERVIZI CLOUD PER LA PIATTAFORMA DI FORMAZIONE DOCENTI DEL PROGETTO: LA FILIERA FORMATIVA TECNOLOGICO PROFESSIONALE (4+2) | AFFIDAMENTO IN HOUSE AI SENSI DELL'ART. 7"
+  },
+  {
+   "cig": "BC6745621D",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:iconsulting",
+   "nota_etichetta": "migrazione da Azure Data Factory a Databricks",
+   "importo": 39800.0,
+   "testo": "SERVIZIO DI MIGRAZIONE DEI FLUSSI DI INTEGRAZIONE DATI ATTUALMENTE ORCHESTRATI TRAMITE AZURE DATA FACTORY (ADF) VERSO LA PIATTAFORMA DATABRICKS, ADOTTANDO LAKEFLOW DESIGNER COME STRUMENTO NATIVO PER LA PROGETTAZIONE E L'ESECUZIONE DELLE PIPELINE. | SERVIZIO DI MIGRAZIONE DEI FLUSSI DI INTEGRAZIONE D"
+  },
+  {
+   "cig": "B2348B79DB",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Polo Strategico Nazionale",
+   "via": "3-marchio",
+   "regola": "polo\\s+strategico\\s+nazionale",
+   "etichetta": "altro:ciditech",
+   "nota_etichetta": "migrazione su PSN da terzi: servizio",
+   "importo": 12000.0,
+   "testo": "PNRR M1C1_1.1 E 1.2 - ATTIVITÀ DI MIGRAZIONE DEL SISTEMA POINT SU INFRASTRUTTURA CLOUD DEL POLO STRATEGICO NAZIONALE (PSN). | PNRR M1C1_1.1 E 1.2 - ATTIVITÃ  DI MIGRAZIONE DEL SISTEMA ÂPOINTÂ SU INFRASTRUTTURA CLOUD DEL POLO STRATEGICO NAZIONALE (PSN)."
+  },
+  {
+   "cig": "BA18EA5D54",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SAP",
+   "via": "3-marchio",
+   "regola": "s/?4\\s*hana",
+   "etichetta": "altro:ricca-it",
+   "nota_etichetta": "gestionale su SAP S/4HANA con hosting, servizi: licenza SAP non detta",
+   "importo": 122600.0,
+   "testo": "PROCEDURA DI AFFIDAMENTO DIRETTO EX ARTICOLO 50, COMMA 1 LETTERA B) DEL D. LGS. N.36/2023, PER L'AFFIDAMENTO BIENNALE DI SERVIZI DI ASSISTENZA/MANUTENZIONE, HOSTING E CONDUZIONE DEI SISTEMI PER LE ATTIVITÀ INERENTI LA FORNITURA DI UN SOFTWARE GESTIONALE DI CONTABILITÀ INTEGRATO E MODULARE SU PIATTAF"
+  },
+  {
+   "cig": "B233CEDF51",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "licenz\\w*\\s+(\\w+\\s+){0,2}microsoft",
+   "etichetta": "",
+   "nota_etichetta": "corso Power BI: formazione",
+   "importo": 10000.0,
+   "testo": "ACQUISTO DI SERVIZI DI ASSISTENZA E FORMAZIONE UTILIZZO LICENZE SOFTWARE | PROCEDURA SELETTIVA APERTA ESPLETATA TRAMITE R.D.O. ID 4457823 DEL 21.06.2024, FINALIZZATA ALLA FORNITURA DI N. 1 CORSO DI FORMAZIONE PER LÂUTILIZZO DI LICENZE SW MICROSOFT POWER BI PRO"
+  },
+  {
+   "cig": "B9AD648D06",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "office\\s*365",
+   "etichetta": "",
+   "nota_etichetta": "migrazione posta a Office 365: servizio",
+   "importo": 5277.72,
+   "testo": "SERVIZI FINALIZZATTI ALLA MIGRAZIONE DEL SISTEMA DI POSTA ELETTRONICA COMUNALE IN AMBIENTE OFFICE 365 - DIFFERIMENTO E CONSEGUENTE VARIAZIONE DI ESIGIBILITA' ED INTEGRAZIONE DELLA SPESA PER LA PROSECUZIONE DELLE ATTIVITA' | SERVIZI FINALIZZATTI ALLA MIGRAZIONE DEL SISTEMA DI POSTA ELETTRONICA COMUNA"
+  },
+  {
+   "cig": "B29081609C",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SAP",
+   "via": "3-marchio",
+   "regola": "s/?4\\s*hana",
+   "etichetta": "altro:qintesi",
+   "nota_etichetta": "configurazione e migrazione SAP: servizio",
+   "importo": 130000.0,
+   "testo": "AFFIDAMENTO DEL SERVIZIO DI CONFIGURAZIONE E MIGRAZIONE DATI PER IL SOFTWARE SAP S4HANA | AFFIDAMENTO DEL SERVIZIO DI CONFIGURAZIONE E MIGRAZIONE DATI PER IL SOFTWARE SAP S4HANA"
+  },
+  {
+   "cig": "B4700F06FB",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Salesforce",
+   "via": "3-marchio",
+   "regola": "salesforce",
+   "etichetta": "altro:valyrian",
+   "nota_etichetta": "backlog attività Salesforce: servizi",
+   "importo": 21500.0,
+   "testo": "BACKLOG ATTIVITA' SALESFORCE PER COMPASSION | BACKLOG ATTIVITA' SALESFORCE PER COMPASSION"
+  },
+  {
+   "cig": "B7CE7FAAC2",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(cloud|data\\s*cent|hosting|housing).{0,80}(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a)",
+   "etichetta": "altro:palitalsoft",
+   "nota_etichetta": "migrazione su DC Lepida",
+   "importo": 10650.0,
+   "testo": "SERVIZIO DI MIGRAZIONE SOFTWARE TRIBUTI CITYWARE COMUNE DI ZOLA PREDOSA INSTALLATA IN MODALITÀ CLIENT SERVER VERSO NUOVO SOFTWARE CITYWARE ONLINE INSTALLATO SU DATACENTER LEPIDA IN MODALITÀ (IAAS) | SERVIZIO DI MIGRAZIONE SOFTWARE TRIBUTI CITYWARE COMUNE DI ZOLA PREDOSA INSTALLATA IN MODALITÀ CLIENT"
+  },
+  {
+   "cig": "BC4D71E265",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a).{0,80}(cloud|data\\s*cent|hosting|housing)",
+   "etichetta": "altro:trentino-digitale",
+   "nota_etichetta": "",
+   "importo": 5860.0,
+   "testo": "MIGRAZIONE DEI DATI IN CLOUD PRESSO TRENTINO DIGITALE E CANONE PER IL SERVIZIO FINO AL 31/12/2027. | MIGRAZIONE DEI DATI IN CLOUD PRESSO TRENTINO DIGITALE E CANONE PER IL SERVIZIO FINO AL 31/12/2027."
+  },
+  {
+   "cig": "B7B82319D3",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "dynamics\\s*365",
+   "etichetta": "altro:cpl-concordia",
+   "nota_etichetta": "manutenzione add-on DINETWORK su Dynamics BC: servizio",
+   "importo": 23100.0,
+   "testo": "SERVIZIO DI MANUTENZIONE DINETWORK 2025 | SERVIZIO DI MANUTENZIONE ED AGGIORNAMENTI SOFTWARE DINETWORK MICROSOFT DYNAMICS 365 BUSINESS CENTRAL."
+  },
+  {
+   "cig": "B9DAE0E0EA",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "VMware",
+   "via": "3-marchio",
+   "regola": "vmware",
+   "etichetta": "",
+   "nota_etichetta": "assistenza informatica su più prodotti",
+   "importo": 5833.0,
+   "testo": "ASSISTENZA TECNICA ED INFORMATICA ANNO 2026 RELATIVA A DOMINIO PORTALI, CANONE SITO E BACKOFFICE, PEC, CLIENT, VMWARE, VEEAM, FIREWALL, ANTIVIRUS, ASSISTENZA INFORMATICA SISTEMI PER GESTIONE LINEA BACKUP | ASSISTENZA TECNICA ED INFORMATICA ANNO 2026 RELATIVA A DOMINIO PORTALI, CANONE SITO E BACKOFFI"
+  },
+  {
+   "cig": "BA3160AA83",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Google",
+   "via": "3-marchio",
+   "regola": "\\bgcp\\b",
+   "etichetta": "",
+   "nota_etichetta": "GCP = Good Clinical Practice, omonimia",
+   "importo": 32800.0,
+   "testo": "GCP AUDITOR E QA 2026 | ACQUISTI VARI"
+  },
+  {
+   "cig": "B433A8C957",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:berenice",
+   "nota_etichetta": "manutenzione applicativo con hosting su Azure incluso",
+   "importo": 18050.0,
+   "testo": "MANUTENZIONE E SUPPORTO TECNICO APPLICATIVO GEO.WORKS COMPRENSIVO DI HOSTING SU PIATTAFORMA CLOUD AZURE ANNO 2025 | MANUTENZIONE E SUPPORTO TECNICO APPLICATIVO GEO.WORKS COMPRENSIVO DI HOSTING SU PIATTAFORMA CLOUD AZURE ANNO 2025"
+  },
+  {
+   "cig": "B5D87FA373",
+   "strato": "N",
+   "classe": "mancato",
+   "lente": "",
+   "via": "0-ict-non-cloud",
+   "regola": "",
+   "etichetta": "Google",
+   "nota_etichetta": "",
+   "importo": 8834.56,
+   "testo": "ORDINE N. 10- ACCORDO QUADRO PER LA FORNITURA DEL PRODOTTO GOOGLE SUITE ENTERPRISE STARTER | ORDINE N. 10- ACCORDO QUADRO PER LA FORNITURA DEL PRODOTTO GOOGLE SUITE ENTERPRISE STARTER"
+  },
+  {
+   "cig": "BC333EB341",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "altro:mvc",
+   "nota_etichetta": "manutenzione sito con spostamento in Azure dell'ente",
+   "importo": 39500.0,
+   "testo": "MANUTENZIONE ADATTIVA, CORRETTIVA ED EVOLUTIVA PER IL SITO WEB MORGANA FIELD, COMPRENSIVA DELLO SPOSTAMENTO DEL SOFTWARE NELL'AMBIENTE AZURE DI CREA 12 MESI | MANUTENZIONE ADATTIVA, CORRETTIVA ED EVOLUTIVA PER IL SITO WEB MORGANA FIELD, COMPRENSIVA DELLO SPOSTAMENTO DEL SOFTWARE NELL'AMBIENTE AZURE "
+  },
+  {
+   "cig": "B586969FF3",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SPC Cloud lotto 1",
+   "via": "3-marchio",
+   "regola": "spc\\s*cloud\\W*\\s*lotto\\s*1\\b",
+   "etichetta": "altro:flagmii",
+   "nota_etichetta": "assistenza procedura ex SPC Cloud lotto 1: non SPC Cloud",
+   "importo": 42000.0,
+   "testo": "SERVIZI DI ASSISTENZA RELATIVI ALLA PROCEDURA FLAGMII | AFFIDAMENTO AI SENSI DELL'ART. 76 COMMA 2 LETT. B NUMERO 2 DEL D.LGS. N. 36/2023 RELATIVO A SERVIZI DI ASSISTENZA E MANUTENZIONE PER LA PROCEDURA FLAGMII EX SPC CLOUD LOTTO 1 "
+  },
+  {
+   "cig": "B78B9A99FB",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "",
+   "nota_etichetta": "canone di assistenza Fastweb per abilitazione al cloud AWS: servizio (ambiguo)",
+   "importo": 56499.0,
+   "testo": "ABILITAZIONE AL CLOUD AWS: CANONE ASSISTENZA TRIENNIO 2025/2027 | ABILITAZIONE AL CLOUD AWS: CANONE ASSISTENZA TRIENNIO 2025/2027"
+  },
+  {
+   "cig": "B7D2BFA84C",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "office\\s*365",
+   "etichetta": "",
+   "nota_etichetta": "migrazione a OneDrive: servizio",
+   "importo": 8196.0,
+   "testo": "ATTIVITA' DI PROGETTO MIGRAZIONE FILE SERVER - ONE DRIVE SU OFFICE 365 | ATTIVITA' DI PROGETTO MIGRAZIONE FILE SERVER - ONE DRIVE SU OFFICE 365"
+  },
+  {
+   "cig": "B514851286",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bazure\\b",
+   "etichetta": "",
+   "nota_etichetta": "assistenza tecnica su Azure: servizio",
+   "importo": 139999.99,
+   "testo": "SERVIZIO DI ASSISTENZA TECNICA SU MICROSOFT AZURE, MICROSOFT ACTIVE DIRECTORY E CITRIX DAAS, NONCHÉ DI SVILUPPO DI PROGETTI NELL'AMBITO DELLA DIGITALIZZAZIONE DEI PROCESSI E DELLA SICUREZZA INFORMATICA | SERVIZIO DI ASSISTENZA TECNICA SU MICROSOFT AZURE, MICROSOFT ACTIVE DIRECTORY E CITRIX DAAS, NON"
+  },
+  {
+   "cig": "BC9797520A",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "\\bnivola\\b",
+   "etichetta": "altro:csi-piemonte",
+   "nota_etichetta": "",
+   "importo": 56534.99,
+   "testo": "AFFIDAMENTO IN HOUSE AL CSI PIEMONTE PER IMPLEMENTAZIONE NUOVI SERVIZI CLOUD – SERVIZI CLOUD NIVOLA E PROGETTAZIONE INFRASTRUTTURALE/MIGRAZIONE – ANNUALITÀ 2026 | AFFIDAMENTO IN HOUSE AL CSI PIEMONTE PER IMPLEMENTAZIONE NUOVI SERVIZI CLOUD – SERVIZI CLOUD NIVOLA E PROGETTAZIONE INFRASTRUTTURALE/MIGR"
+  },
+  {
+   "cig": "B1FB8A824C",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Nextcloud",
+   "via": "3-marchio",
+   "regola": "next\\s*cloud",
+   "etichetta": "altro:deda-next",
+   "nota_etichetta": "«Next Cloud» di Deda, omonimia con Nextcloud",
+   "importo": 5160.0,
+   "testo": "ASSISTENZA SOFTWARE CLOUD ANNO 2024 | MANUTENZIONE SOFTWARE NEXT CLOUD 2024"
+  },
+  {
+   "cig": "BAEC6788E0",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "(lepida|cineca|csi[\\s-]+piemonte|liguria\\s+digitale|\\binva\\b|trentino\\s+digitale|insiel|sogei|aria\\s+s\\.?p\\.?a).{0,80}(cloud|data\\s*cent|hosting|housing)",
+   "etichetta": "altro:lepida",
+   "nota_etichetta": "",
+   "importo": 49085.0,
+   "testo": "SERVIZI DI DATA CENTER VBG E DEI SISTEMI DI BACKUP REMOTO SU DISCO DELLE BANCHE DATI DELL'ENTE - RINNOVO FORNITURA ANNI 2026-2028 A LEPIDA S.C.P.A. | SERVIZI DI DATA CENTER VBG E DEI SISTEMI DI BACKUP REMOTO SU DISCO DELLE BANCHE DATI DELL'ENTE - RINNOVO FORNITURA ANNI 2026-2028 A LEPIDA S.C.P.A."
+  },
+  {
+   "cig": "B1197B87BB",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "cloud\\s+toscana",
+   "etichetta": "altro:tai",
+   "nota_etichetta": "",
+   "importo": 139970.0,
+   "testo": "SERVIZI E PRESTAZIONI INERENTI LA PROGETTAZIONE, SVILUPPO, CONFIGURAZIONE, POPOLAMENTO ED EROGAZIONE IN MODALITÀ SAAS TRAMITE SISTEMA CLOUD TOSCANA – SCT, DEL FRONT END DIGITALE OVVERO DEI SITI, PORTALI, CANALI WEB E WEBAPP, DI REGIONE TOSCANA – GIUNTA REGIONALE E DEGLI ENTI DEL TERRITORIO REGIONALE"
+  },
+  {
+   "cig": "BC6891A503",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Nextcloud",
+   "via": "3-marchio",
+   "regola": "next\\s*cloud",
+   "etichetta": "",
+   "nota_etichetta": "assistenza Nextcloud/Wazuh: servizio",
+   "importo": 9241.0,
+   "testo": "AFFIDAMENTO SERVIZIO DI ASSISTENZA NEXTCLOUD, WAZUH, ROUTER TELTONIKA | AFFIDAMENTO SERVIZIO DI ASSISTENZA NEXTCLOUD, WAZUH, ROUTER TELTONIKA"
+  },
+  {
+   "cig": "B955CD7B7B",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "In-house pubblico",
+   "via": "3-marchio",
+   "regola": "\\bnivola\\b",
+   "etichetta": "altro:csi-piemonte",
+   "nota_etichetta": "",
+   "importo": 139295.92,
+   "testo": "MANUTENZIONE, ASSISTENZA E AGGIORNAMENTO SISTEMA INFORMATIVO COMUNALE IN CLOUD NIVOLA E SERVIZI IN CONTINUITA' ANNO 2026 | MANUTENZIONE, ASSISTENZA E AGGIORNAMENTO SISTEMA INFORMATIVO COMUNALE IN CLOUD NIVOLA E SERVIZI IN CONTINUITA' ANNO 2026"
+  },
+  {
+   "cig": "B78464941C",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "altro:deda-digital",
+   "nota_etichetta": "manutenzione sito con hosting in AWS incluso",
+   "importo": 5500.0,
+   "testo": "SERVIZIO DI AGGIORNAMENTO, MANUTENZIONE ORDINARIA, HELP DESK, HOSTING IN AWS DEL SITO WEB ISTITUZIONALE DELLA PROVINCIA DI LATINA. ANNO 2024 | SERVIZIO DI AGGIORNAMENTO, MANUTENZIONE ORDINARIA, HELP DESK, HOSTING IN AWS DEL SITO WEB ISTITUZIONALE DELLA PROVINCIA DI LATINA ANNO 2025"
+  },
+  {
+   "cig": "B48E90A24A",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Google",
+   "via": "3-marchio",
+   "regola": "\\bg\\s*suite\\b",
+   "etichetta": "altro:afi",
+   "nota_etichetta": "backup di terzi per G Suite",
+   "importo": 14520.0,
+   "testo": "AFI G SUITE BACKUP PER 550 USERS | AFI G SUITE BACKUP PER 550 USERS"
+  },
+  {
+   "cig": "B2C59B843C",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "sql\\s+server",
+   "etichetta": "",
+   "nota_etichetta": "assistenza sistemistica SQL Server: servizio",
+   "importo": 43800.0,
+   "testo": "SERVIZIO ASSISTENZA SISTEMISTICA MICROSOFT SQL SERVER | SERVIZIO DI ASSISTENZA SISTEMISTICA MICROSOFT SQL SERVER, PER LE ESIGENZE DEL POLO DI TELEMATICA DEL CNA"
+  }
+ ]
+}
