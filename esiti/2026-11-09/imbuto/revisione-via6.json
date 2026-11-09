@@ -1,13 +1,13 @@
 {
  "data": "2026-11-09",
  "strumento": "tools/verifiche/imbuto_via6_revisione.py",
- "candidati": 178,
+ "candidati": 214,
  "letti": 175,
  "concordanza": {
   "concorde": 62,
   "non-confermato": 76,
   "discorde": 37,
-  "da-leggere": 3
+  "da-leggere": 39
  },
  "accordo_sui_letti_certi": {
   "concordi": 62,
@@ -128,38 +128,38 @@
   },
   "G3 CC-EXTRA-UE": {
    "proposti": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    },
    "C1": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    },
    "C1+C2": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    },
    "C1+C2+C3": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    }
   },
   "G3 CC-IT": {
    "proposti": {
-    "cig": 4,
-    "euro": 10860590
+    "cig": 5,
+    "euro": 11864315
    },
    "C1": {
-    "cig": 1,
-    "euro": 2383358
+    "cig": 2,
+    "euro": 3387083
    },
    "C1+C2": {
-    "cig": 1,
-    "euro": 2383358
+    "cig": 2,
+    "euro": 3387083
    },
    "C1+C2+C3": {
-    "cig": 1,
-    "euro": 2383358
+    "cig": 2,
+    "euro": 3387083
    }
   },
   "G3 CC-UE": {
@@ -186,20 +186,20 @@
   },
   "G3 S5": {
    "proposti": {
-    "cig": 96,
-    "euro": 208433208
+    "cig": 130,
+    "euro": 240623081
    },
    "C1": {
-    "cig": 14,
-    "euro": 33959684
+    "cig": 24,
+    "euro": 43939366
    },
    "C1+C2": {
-    "cig": 13,
-    "euro": 30751684
+    "cig": 23,
+    "euro": 40731366
    },
    "C1+C2+C3": {
-    "cig": 13,
-    "euro": 30751684
+    "cig": 23,
+    "euro": 40731366
    },
    "entra (C1-C4)": {
     "cig": 5,
@@ -208,38 +208,38 @@
   },
   "tutti CC-EXTRA-UE": {
    "proposti": {
-    "cig": 3,
-    "euro": 55458905
+    "cig": 4,
+    "euro": 56358905
    },
    "C1": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    },
    "C1+C2": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    },
    "C1+C2+C3": {
-    "cig": 1,
-    "euro": 1699969
+    "cig": 2,
+    "euro": 2599969
    }
   },
   "tutti CC-IT": {
    "proposti": {
-    "cig": 8,
-    "euro": 26216989
+    "cig": 9,
+    "euro": 27220714
    },
    "C1": {
-    "cig": 4,
-    "euro": 10767654
+    "cig": 5,
+    "euro": 11771379
    },
    "C1+C2": {
-    "cig": 4,
-    "euro": 10767654
+    "cig": 5,
+    "euro": 11771379
    },
    "C1+C2+C3": {
-    "cig": 4,
-    "euro": 10767654
+    "cig": 5,
+    "euro": 11771379
    },
    "entra (C1-C4)": {
     "cig": 2,
@@ -270,20 +270,20 @@
   },
   "tutti S5": {
    "proposti": {
-    "cig": 163,
-    "euro": 1980725887
+    "cig": 197,
+    "euro": 2012915760
    },
    "C1": {
-    "cig": 39,
-    "euro": 630414598
+    "cig": 49,
+    "euro": 640394280
    },
    "C1+C2": {
-    "cig": 37,
-    "euro": 563288358
+    "cig": 47,
+    "euro": 573268040
    },
    "C1+C2+C3": {
-    "cig": 37,
-    "euro": 563288358
+    "cig": 47,
+    "euro": 573268040
    },
    "entra (C1-C4)": {
     "cig": 15,
@@ -5098,6 +5098,22 @@
    }
   },
   {
+   "cig": "B0A7F3B444",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1106883.36,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
    "cig": "B414D042FB",
    "gruppo": "G3",
    "strato_proposto": "S5",
@@ -5118,6 +5134,566 @@
    "gruppo": "G3",
    "strato_proposto": "S5",
    "importo": 1099663.52,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "BD04E6460B",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1073930.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B3F44BDA48",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1055734.5,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B0E26A0DB9",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1050280.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B58A2EA41E",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1048035.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B8BBE755B5",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1038511.12,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B8ECED3D73",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1038343.64,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B6FF220079",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1018099.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "BA99776405",
+   "gruppo": "G3",
+   "strato_proposto": "CC-IT",
+   "importo": 1003725.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "Advanced Systems SpA (PRUNES++)",
+   "lettura": null
+  },
+  {
+   "cig": "B29A2CFEF9",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1000000.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B94C6CB8E6",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 1000000.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B21CE1EC1D",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 999997.52,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B267922498",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 999997.52,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "BB3E933C0C",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 993123.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B3F8DCC47E",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 991885.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "BC43CA04B3",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 979300.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": false,
+   "C2_nota": "campi incoerenti con lo stato",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B84CCB5A00",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 976317.2,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B0FE7EE4E4",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 961556.6,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B8986AFB16",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 961000.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B754A9F20F",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 945990.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B367C6AA11",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 907209.36,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B368E60C74",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 907209.36,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B36C0C41E2",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 907209.36,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B9459FDF0B",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 901863.04,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B47AB4247E",
+   "gruppo": "G3",
+   "strato_proposto": "CC-EXTRA-UE",
+   "importo": 900000.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "provider fuori dal dizionario marchi: giurisdizione dalla sola proposta, decide C4",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "JAGGAER (BravoSolution S.p.A.)",
+   "lettura": null
+  },
+  {
+   "cig": "B57E671BC6",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 900000.0,
+   "C1_fonte_primaria": true,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B5185648ED",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 898320.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B5CCA9CE20",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 876153.95,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B2906C7C25",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 869635.8,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B79364F6F3",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 859874.28,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B1B8231817",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 852500.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B4311ED3D2",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 824488.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B2077AC3DA",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 820000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B22A582B15",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 813200.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B29A784163",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 809417.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "da-leggere",
+   "C4_nota": "seconda lettura non ancora fatta",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": null
+  },
+  {
+   "cig": "B17E616F84",
+   "gruppo": "G3",
+   "strato_proposto": "S5",
+   "importo": 803810.0,
    "C1_fonte_primaria": false,
    "C2_regole": true,
    "C2_nota": "ok",
