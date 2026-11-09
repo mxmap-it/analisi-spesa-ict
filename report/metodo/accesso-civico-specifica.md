@@ -63,8 +63,8 @@ Documenti collegati: `report/metodo/accesso-civico-piattaforma.md` 0.3 (elenco d
 
 | Componente | Stato [C] | File |
 |---|---|---|
-| Elenco unico dei mancanti (28.807 voci, 6.626 enti) | **esiste**, V1-V7 ok | `tools/accesso_civico/elenco_mancanti.py`, `esiti/2026-11-09/accesso-civico/elenco-mancanti.csv.gz` |
-| Destinatari (PEC IndicePA, RPCT, attendibilità A/B/C) | **in corso** sul server | `tools/accesso_civico/rpct_destinatari.py`, `destinatari.csv` |
+| Elenco unico dei mancanti (28.804 voci, 6.624 enti; rigenerato il 9/11 sera dopo L4 finito) | **esiste**, V1-V7 ok | `tools/accesso_civico/elenco_mancanti.py`, `esiti/2026-11-09/accesso-civico/elenco-mancanti.csv.gz` |
+| Destinatari (PEC IndicePA, RPCT, attendibilità A/B/C) | **esiste** (giro finito 9/11 su 6.626 enti: pagina accesso civico 2.784, email/PEC dedicata 1.164, registro accessi 1.339, modulo online 648, nome RPCT 256 [C], blocchi 326; senza PEC IndicePA 775, risolti 347). Invio via PEC istituzionale (decisione 9/11): questi dati servono per riesame, enti senza PEC e contesto. Residui: 525 errori e 490 rinviati robots da ripassare | `tools/accesso_civico/rpct_destinatari.py`, `destinatari.csv.gz` (in git solo il .gz; il .csv in chiaro solo sul server, decisione finale di Fabio) |
 | Modelli (istanza, sollecito, chiarimento, riesame ×2, difensore civico) | **esiste** (Markdown con segnaposti) | `config/accesso-civico/modelli/` |
 | Parametri (tetto 20, ondata 0, termini, PEC) | **esiste, PROPOSTI** | `config/accesso-civico/parametri.yaml` |
 | Schemi richiesta ed evento | **esiste** | `schemi/accesso-civico-{richiesta,evento}.schema.json` |

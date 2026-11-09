@@ -30,19 +30,20 @@ Usiamo **più modalità di acquisizione**, in ordine di complessità e costo cre
 
 ## Residuo S6: misure finali (9/11/2026, #57)
 
-Giro L3 + MePA finito il 7/11 (37.780 righe di esito, 28.583 CIG); L4 fermato dalla guardia disco il 7/11 alle 06:29 dopo 1.854 enti su 4.352 (13.380 dei 16.403 CIG senza link, i più grandi), **ripreso il 9/11** (ripartibile). Verifica ripetibile: `tools/verifiche/residuo_s6_riepilogo.py 2026-11-09` → `esiti/2026-11-09/acquisizione/residuo-s6-riepilogo.json`, `residuo-s6-piattaforme.csv`, blocchi in `residuo-s6-blocchi.csv` (`residuo_s6_copertura.py`). Ogni atto registra il livello che l'ha trovato (`dati/atti/atti-server.jsonl`, `trovato_con.livello`).
+Giro L3 + MePA finito il 7/11 (37.780 righe di esito, 28.583 CIG); L4 fermato dalla guardia disco il 7/11, ripreso e **finito il 9/11 alle 19:45**: 4.007 enti su 4.352 elaborati (16.127 dei 16.403 CIG senza link); 345 enti con robots.txt che esclude la sezione sono rinviati alla fascia notturna (ORE_AT 21-7). Dal 9/11 sera è in corso il **ripasso dei 436 enti in errore di rete** con lo stesso strumento (#73). Verifica ripetibile: `tools/verifiche/residuo_s6_riepilogo.py 2026-11-09` → `esiti/2026-11-09/acquisizione/residuo-s6-riepilogo.json`, `residuo-s6-piattaforme.csv`, blocchi in `residuo-s6-blocchi.csv` (`residuo_s6_copertura.py`). Ogni atto registra il livello che l'ha trovato (`dati/atti/atti-server.jsonl`, `trovato_con.livello`).
 
 | livello | CIG provati | CIG trovati | con documento | con documento che cita il CIG | euro (doc. che cita) | atti registrati |
 |---|---:|---:|---:|---:|---:|---:|
 | L3 link PVL | 11.589 | 2.483 (21,4 %) | 1.076 (9,3 %) | **453 (3,9 %)** | 262,1 M€ | 453 CIG |
 | MePA (vetrina pubblica) | 591 | 0 | 0 | 0 | 0 | — |
-| L4 «Bandi di gara e contratti» (parziale) | 13.380 (1.854 enti) | 3.487 (7,3 mld) | 869 | **79** | 42,4 M€ | 79 CIG |
+| L4 «Bandi di gara e contratti» | 16.127 (4.007 enti) | 4.393 (7,36 mld) | 981 | **82** | 42,6 M€ | 82 CIG |
 
-- **Costo:** zero token. L3 33.826 richieste, 68 ore-CIG di orologio (10 host in parallelo, ≥ 5 s per host: circa 14 ore reali); MePA 2 ore con Playwright; L4 10.311 richieste, 35 ore-ente.
-- **Esiti degli enti L4:** CIG trovati 621, sezione raggiunta senza CIG 204, sezione non trovata 320, errore 230, sito ignoto 217, blocco 174, pagina in JavaScript 88.
+- **Costo:** zero token. L3 33.826 richieste, 68 ore-CIG di orologio (10 host in parallelo, ≥ 5 s per host: circa 14 ore reali); MePA 2 ore con Playwright; L4 21.885 richieste, 67 ore-ente.
+- **Esiti degli enti L4 (4.007):** CIG trovati 1.319, sezione raggiunta senza CIG 520, sezione non trovata 901, errore di rete 436 (di cui 41 della Difesa: difesa.it ed esercito.difesa.it in timeout), sito ignoto 394, blocco 261 (HTTP 403 237, anti-bot 15, login 5, HTTP 401 3, HTTP 429 1), pagina in JavaScript quasi vuota 176.
+- **Residui L4 (#73):** ripasso dei 436 errori di rete (in corso), 345 enti rinviati per robots.txt (fascia notturna, stesso giro), 176 pagine in JavaScript (serve un rendering dedicato), Difesa (48 enti, 41 in errore: candidati ad altra origine o all'accesso civico).
 - **Blocchi L3 (CIG / host):** robots.txt 1.126 / 381, HTTP 403 641 / 197, anti-bot 115 / 30, login 115 / 36, HTTP 429 2 / 1. Errori di rete 1.445.
 - **Per piattaforma (L3):** generico 7.092 CIG su 2.447 host, 402 con documento che cita il CIG; PortaleAppalti (Maggioli) 1.180 CIG, 681 bloccati (quasi tutti robots.txt), 51 con documento che cita; link alla sola home 3.292 CIG, nessun esito; esop 25, nessun esito; 234 link PVL puntano al cruscotto ANAC stesso (`dati.anticorruzione.it`). Migliori: urp.cnr.it 22, trasparenza.aci.it 17, piattaforma.asmecomm.it 12, montedoro.traspare.com 11 CIG con documento che cita il CIG. Peggiore: Intercent-ER, 109 CIG su 119 esclusi da robots.txt.
-- **Cosa sposta nell'imbuto** (input per #66, `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`, un CIG per riga): con un documento che cita il CIG, leggibile dalla via 6, **532 CIG per 304,5 M€**; di questi **S6/G3 451 CIG su 21.525 (2,1 %), 81,4 M€ su 3,84 mld (2,1 %)**; ICT incerti 2 su 70 (191,7 M€); G2 11 (24,3 M€); nuovi da RX 55 (6,8 M€); G4 13. Materiale più debole (documento senza il CIG, o solo pagina che cita il CIG): G3 1.129 + 3.083 CIG (953 M€). Il ricalcolo non è fatto qui: spetta a #66.
+- **Cosa sposta nell'imbuto** (input per #66, `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`, un CIG per riga): con un documento che cita il CIG, leggibile dalla via 6, **535 CIG per 304,7 M€**; di questi **S6/G3 454 CIG su 21.525 (2,1 %), 81,6 M€ su 3,84 mld (2,1 %)**; ICT incerti 2 su 70 (191,7 M€); G2 11 (24,3 M€); nuovi da RX 55 (6,8 M€); G4 13. Materiale più debole (documento senza il CIG, o solo pagina che cita il CIG): G3 1.214 + 3.687 CIG (997 M€). Il ricalcolo non è fatto qui: spetta a #66.
 - **Raccomandazioni nuove:** R66 (link PVL generici), R67 (atti AT senza CIG), R68 (robots.txt delle piattaforme certificate).
 
 ## Misure L3 sul residuo S6 (7/11/2026, parziali)
@@ -93,7 +94,7 @@ Dettaglio e percorso multi-livello in [prima-e-dopo-2024.md](https://github.com/
 
 | data | modifica |
 |---|---|
-| 2026-11-09 | misure finali L3, MePA e L4 (parziale) sul residuo S6, input per l'imbuto (#57, #66) |
+| 2026-11-09 | L4 finito (4.007 enti, residui in #73); misure finali L3, MePA e L4 sul residuo S6, input per l'imbuto (#57, #66) |
 | 2026-11-07 | misure L3 sul residuo S6 della via 6 (#57) |
 | 2026-10-31 | prima e dopo il 2024: puntatori ai documenti nella BDNCP, misura in programma, percorso multi-livello |
 | 2026-10-29 | prima versione: livelli L0-L7, principi, prime misure |
