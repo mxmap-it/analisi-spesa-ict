@@ -33,7 +33,8 @@ VERSIONE_IMBUTO = "imbuto-0.3.4 (2026-11-09)"  # 0.3.4: una riga per CIG scelta 
 # un CIG ha una riga per ogni CPV; la 0.3.2 tiene la prima letta, quindi lo strato dipende dall'ordine del file (152 CIG
 # ripetuti in ict.csv stanno insieme in S5 e S6). Con DEDUP_CPV si classifica con il più basso dei CPV ICT del CIG, se ne
 # ha uno, altrimenti con la prima riga. Effetto stimato: tools/verifiche/imbuto_cig_ripetuti.py
-DEDUP_CPV = True
+DEDUP_CPV = os.environ.get("IMBUTO_DEDUP_CPV", "1") != "0"  # prova a secco: tools/verifiche/imbuto_prova_034.py
+OUT = os.environ.get("IMBUTO_OUT", "lavoro/imbuto")  # prova a secco in cartella separata, default invariato
 SOGLIA_MIN = 500         # S2, Fabio 2/11
 SOGLIA_MEGA = 5e6         # G1: a mano
 SOGLIA_G3 = 40e3          # G3 incerti significativi / G4 coda
@@ -91,17 +92,24 @@ def gruppo(imp, testo):
     return "G4-coda"
 
 
-def main(anno0=2020):
-    os.makedirs("lavoro/imbuto", exist_ok=True)
-    anni = {str(a) for a in range(anno0, 2027)}
-    c = Classificatore()
+def basi():
+    """Aggiudicatari per CIG, CIG del delta, CIG padri di accordo quadro. Sostituibile (prova a secco a basso consumo di
+    memoria: tools/verifiche/imbuto_prova_034.py)."""
     agg = aggiudicatari()
     delta_cig = {r["cig"] for r in righe_cig("delta")}
     padri = set()
     for a in [p[-4:] for p in glob.glob(D + "cig-20*")] + ["delta"]:
         padri |= {r["cig_accordo_quadro"] for r in righe_cig(a) if r["cig_accordo_quadro"]}
+    return agg, delta_cig, padri
+
+
+def main(anno0=2020):
+    os.makedirs(OUT, exist_ok=True)
+    anni = {str(a) for a in range(anno0, 2027)}
+    c = Classificatore()
+    agg, delta_cig, padri = basi()
     n = collections.Counter(); eur = collections.Counter()
-    out = open("lavoro/imbuto/ict.csv", "w", newline="", encoding="utf-8")
+    out = open(os.path.join(OUT, "ict.csv"), "w", newline="", encoding="utf-8")
     w = csv.writer(out)
     w.writerow(["anno", "cig", "strato", "sottoclasse", "gruppo", "via", "provider", "giurisdizione", "servizio", "cod_cpv",
                 "cpv_ict", "importo", "importo_da_verificare", "stazione_appaltante", "aggiudicatari", "testo"])
@@ -144,7 +152,7 @@ def main(anno0=2020):
               "cig": n[k], "euro": round(eur[k])} for k in sorted(n) for (a, s, sc, g, gi, dv) in [k]]
     json.dump({"versione": VERSIONE_IMBUTO, "regole": VERSIONE, "soglie": {"min": SOGLIA_MIN, "mega": SOGLIA_MEGA, "g3": SOGLIA_G3,
                "da_verificare": SOGLIA_DA_VERIFICARE}, "fonti": fonti, "righe": righe},
-              open("lavoro/imbuto/riepilogo.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+              open(os.path.join(OUT, "riepilogo.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(len(righe), "righe di riepilogo")
 
 

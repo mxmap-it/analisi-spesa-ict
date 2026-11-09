@@ -24,7 +24,7 @@ Residuo S6 L3/MePA (`residuo_s6.sh`): finiti il 7/11. Rilancio completo (L3+MePA
 
 ### Prossimi passi (in ordine)
 
-1. **12/11, consegna #66:** rendiconto «Imbuto: dove siamo» (oggi 0.12 bozza) con: chiusura L4 (#68), cifre finali G3 via 6, revisione delle proposte via 6, **rigenerazione imbuto 0.3.4 con DEDUP_CPV** (#71: solo a via 6 finita), top-5.
+1. **12/11, consegna #66:** rendiconto «Imbuto: dove siamo» (oggi 0.12 bozza) con: chiusura L4 (#68), cifre finali G3 via 6, revisione delle proposte via 6, **rigenerazione imbuto 0.3.4 con DEDUP_CPV** (#71: solo a via 6 finita; prova a secco FATTA 9/11: 56,06 mld, sezione pronta in esiti/2026-11-09/imbuto-prova/), top-5.
 2. **#40/#72:** regole v4.5 fatte (cieco 6 ora di sviluppo: big tech 110/20/6 -> 113/4/3, 99,8 % in euro; ciechi 1-5 e top-20 invariati; 162/162 casi). **Dopo la prova imbuto: rigenerare la mappa rivenditori con le regole v4.5** (`rivenditori_mappa.py`, sostituisce la v4.4 in sospeso); poi obiettivo-6 § 2. Precisione in euro pesata ~99 % già con v4.4: **il settimo cieco si fa una sola volta, prima della pubblicazione del rendiconto finale**, non a ogni ritocco.
 3. **#70:** infrastruttura sottostante — PPdF PSN di Veneto/Lombardia/Puglia/Toscana, Comuni Maggioli public/private.
 4. **#41:** atti per i 60 CIG del top-20, capogruppo Eurolink/Arslogica e delle 6 righe [R].
@@ -119,6 +119,15 @@ Residuo S6 L3/MePA (`residuo_s6.sh`): finiti il 7/11. Rilancio completo (L3+MePA
 - Causa: nei file ANAC 2024 e 2025 c'è una riga per ogni CPV (7.862 CIG, 510 con CPV ICT e non ICT insieme). In `ict.csv` 1.016 CIG sono ripetuti e 152 stanno insieme in S5 e S6. Il 55,3 mld S3-S6 dal 2024 è sottostimato di circa 0,43 mld (circa 55,7), perché `imbuto_doppioni.py` ha tolto anche righe che stavano in S1. Dettagli in `report/metodo/imbuto.md` § Criticità, verifica in `tools/verifiche/imbuto_cig_ripetuti.py`.
 - Patch pronta in `imbuto.py` 0.3.4 (`DEDUP_CPV`): **NON applicata**, `ict.csv` resta quello del 3/11 fino alla rigenerazione dopo la via 6. Alla rigenerazione: rifare `imbuto_cig_ripetuti.py` (dovrà dare 0 CIG ripetuti), rivedere le priorità P2/P5 delle 32 voci segnalate nell'elenco #58 e aggiornare il 55,3 nel rendiconto.
 - `elenco_mancanti.py` prende uno strato coerente per CIG (regola 0.3.4). Elenco `esiti/2026-11-09/accesso-civico/` rigenerato: 28.807 voci, invariate, V1-V7 ok.
+
+## #71 PROVA A SECCO IMBUTO 0.3.4 — fatta 9/11/2026 (non applicata)
+- **Esito** (`esiti/2026-11-09/imbuto-prova/sezione-per-66.md`, pronta per il § 2.6 di #66; rendiconto NON toccato, `lavoro/imbuto/ict.csv` NON toccato):
+  - S3-S6 dal 2024 netti tetti **56,06 mld** con 0.3.4 (base 0.3.1 una riga per CIG 55,70 = la stima 0.12 «circa 55,7» era giusta);
+  - effetti: R53 +0,064 (161 CIG S1->S5), perimetro 0.3.3 +0,479 (S6 G1 +32 CIG/+3,84 mld dichiarati), lente v4.3 +0,004 (354 CIG S5->S4);
+  - CIG ripetuti 1.016 -> **0**; 29 G1 nuovi dal 2024 (3,82 mld: 8 Consip SPC, 6 ASI, 11 multiutility probabili falsi ICT) da mettere in coda via 6;
+  - selezione via 6 (1.196): cambiano strato solo 5 CIG (S6->S5, 27 M€).
+- **Come** (dopo l incidente 9/11): `tools/verifiche/imbuto_prova_034.py tutto` = una variante alla volta (A,B,C,D), duckdb su disco per aggiudicatari/delta/padri (`lavoro/imbuto-prova-0.3.4/base.duckdb`), RSS ~0,8-1,8 GB invece di ~7 GB, nice 19 + ionice -c3, RLIMIT_AS 8 GB, guardia RAM/carico; ~40-55 min a variante. Confronto: `tools/verifiche/imbuto_prova_034_confronto.py 2026-11-09`. `imbuto.py`: `basi()` estratta, uscita e DEDUP_CPV da ambiente (default invariati).
+- **Alla rigenerazione vera** (dopo la via 6): usare lo stesso schema a basso consumo (o `imbuto_prova_034.py A` e copiare A/ in lavoro/imbuto/), poi `imbuto_cig_ripetuti.py` (0 attesi).
 
 ## #57 RESIDUO S6: RIEPILOGO FINALE 9/11/2026
 - **L3+MePA finiti il 7/11**; L4 si era fermato per la guardia disco (7/11 06:29, 1.854/4.352 enti) ed è **ripreso il 9/11** (at_cig.py in background, ripartibile; ticket per il residuo L4).
