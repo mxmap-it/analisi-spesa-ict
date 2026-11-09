@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/</link><description>Recent content on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Metodologia sperimentale in corso</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodologia-sperimentale/</link><pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodologia-sperimentale/</guid><description>&lt;p&gt;Questa pagina descrive &lt;strong&gt;il lavoro in corso&lt;/strong&gt;: metodi in sperimentazione, cosa abbiamo misurato finora e cosa resta da decidere. I numeri pubblicati nei rendiconti usano solo i metodi già consolidati (&lt;a href="../metodo-cloud-provider/"&gt;metodo di attribuzione&lt;/a&gt;). Si aggiorna a ogni passo, con il registro delle revisioni in fondo.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/</link><description>Recent content on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Metodologia sperimentale in corso</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodologia-sperimentale/</link><pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodologia-sperimentale/</guid><description>&lt;p&gt;Questa pagina descrive &lt;strong&gt;il lavoro in corso&lt;/strong&gt;: metodi in sperimentazione, cosa abbiamo misurato finora e cosa resta da decidere. I numeri pubblicati nei rendiconti usano solo i metodi già consolidati (&lt;a href="../metodo-cloud-provider/"&gt;metodo di attribuzione&lt;/a&gt;). Si aggiorna a ogni passo, con il registro delle revisioni in fondo.&lt;/p&gt;
 &lt;h2 id="1-il-problema"&gt;1. Il problema&lt;/h2&gt;
 &lt;p&gt;Vogliamo sapere, contratto per contratto (CIG), se si compra cloud, quale &lt;strong&gt;prodotto&lt;/strong&gt; e sotto quale &lt;strong&gt;giurisdizione&lt;/strong&gt; (IT, UE, extra-UE). Detta così sembra una domanda semplice. Non lo è, e conviene dire perché.&lt;/p&gt;</description></item><item><title>Come si riconosce il cloud provider in un contratto</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-cloud-provider/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: bozza in validazione, regole v3 del 28 ottobre 2026&lt;/strong&gt;
 (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/48"&gt;#48&lt;/a&gt;). Le precisioni citate sono
@@ -130,7 +130,55 @@ I file e il contenuto degli zip si archiviano nell&amp;rsquo;archivio content-ad
 &lt;li&gt;&lt;strong&gt;Fonti non ufficiali&lt;/strong&gt; (atti di enti aderenti, ricerca web): mostrate a parte, non cancellano la mancanza.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Accesso civico generalizzato&lt;/strong&gt; (art. 5 c. 2 d.lgs. 33/2013): ultima risorsa.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>ANAC: cruscotto di disponibilità</title><link>https://analisi-spesa-ict.mxmap.it/enti/anac-cruscotto/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/enti/anac-cruscotto/</guid><description>&lt;p&gt;Ogni mattina alle 06:40 la sonda misura dal vivo il portale &lt;code&gt;dati.anticorruzione.it&lt;/code&gt;. &lt;strong&gt;Ultima misura: 2026-11-06: 8 metriche violate su 9.&lt;/strong&gt; Quando ANAC corregge un problema la sua metrica passa a &lt;em&gt;rispettata&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I livelli L0-L7 dell&amp;rsquo;acquisizione sono descritti in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/acquisizione-documenti/"&gt;Acquisizione dei documenti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>BDAP, la Banca dati delle amministrazioni pubbliche</title><link>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</link><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/bdap/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.1 del 9/11/2026&lt;/strong&gt; (&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/67"&gt;#67&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/25"&gt;#25&lt;/a&gt;, &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/30"&gt;#30&lt;/a&gt;).
+Legenda: &lt;strong&gt;[V]&lt;/strong&gt; verificato da noi su file archiviati con sha256; &lt;strong&gt;[R]&lt;/strong&gt; riferito da altri o dalla
+documentazione della fonte, non riprodotto.&lt;/p&gt;
+&lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;BDAP è l&amp;rsquo;unica fonte aperta che misura la &lt;strong&gt;spesa ICT pagata dallo Stato centrale&lt;/strong&gt;, ministero per
+ministero, con un codice di spesa specifico per l&amp;rsquo;ICT. Nel 2024: &lt;strong&gt;1,14 miliardi&lt;/strong&gt; pagati con
+mandati informatici sugli 11 codici gestionali ICT [V].&lt;/li&gt;
+&lt;li&gt;Una seconda via indipendente, la classificazione economica di 3° livello del rendiconto per piano
+di gestione, dà &lt;strong&gt;0,98 miliardi&lt;/strong&gt; per il 2024 [V]. Le due vie differiscono del 14 %.&lt;/li&gt;
+&lt;li&gt;I nostri CIG ICT dei ministeri non sono una misura della stessa grandezza (valore del contratto
+contro cassa dell&amp;rsquo;anno), ma il confronto mostra dove mancano: MEF e Giustizia hanno pagamenti ICT
+molto maggiori dei CIG che vediamo (in-house Sogei, acquisti Consip per conto loro).&lt;/li&gt;
+&lt;li&gt;Per la sanità il Conto economico degli enti del SSN ha una voce esplicita, &lt;strong&gt;servizi di
+assistenza informatica: 604 milioni nel 2023&lt;/strong&gt; [V].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ente-portale-accesso"&gt;Ente, portale, accesso&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ente&lt;/td&gt;
+					&lt;td&gt;Ministero dell&amp;rsquo;economia e delle finanze, Ragioneria generale dello Stato (RGS)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Portale&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://bdap-opendata.rgs.mef.gov.it/"&gt;https://bdap-opendata.rgs.mef.gov.it/&lt;/a&gt; (CKAN; API su &lt;code&gt;/SpodCkanApi/api/3/action/&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Formati&lt;/td&gt;
+					&lt;td&gt;CSV (&lt;code&gt;datastore/dump/&amp;lt;id&amp;gt;.csv&lt;/code&gt;, separatore &lt;code&gt;;&lt;/code&gt;, &lt;strong&gt;codifica Windows-1252&lt;/strong&gt;), XML OData (&lt;code&gt;/ODataProxy/MdData('&amp;lt;id&amp;gt;@rgs')/DataRows&lt;/code&gt;), PDF di metadati per famiglia [V]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Licenza&lt;/td&gt;
+					&lt;td&gt;Creative Commons Attribution (&lt;code&gt;license_id&lt;/code&gt; cc-by su tutti i 3.684 dataset) [V sui metadati; versione della licenza non indicata]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Catalogo&lt;/td&gt;
+					&lt;td&gt;3.684 dataset, 11.025 risorse, circa 60 GB (raccolti il 7/11/2026, &lt;code&gt;tools/acquisizione/bdap_metadati.sh&lt;/code&gt;) [V]&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Gli URL dei file che CKAN pubblica sono in &lt;code&gt;http://&lt;/code&gt;: sulla porta 80 il server non risponde (timeout
+il 9/11/2026), in &lt;code&gt;https://&lt;/code&gt; sì [V]. &lt;code&gt;tools/archivia.py&lt;/code&gt; va chiamato con gli URL riscritti in https.&lt;/p&gt;</description></item><item><title>ANAC: cruscotto di disponibilità</title><link>https://analisi-spesa-ict.mxmap.it/enti/anac-cruscotto/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/enti/anac-cruscotto/</guid><description>&lt;p&gt;Ogni mattina alle 06:40 la sonda misura dal vivo il portale &lt;code&gt;dati.anticorruzione.it&lt;/code&gt;. &lt;strong&gt;Ultima misura: 2026-11-06: 8 metriche violate su 9.&lt;/strong&gt; Quando ANAC corregge un problema la sua metrica passa a &lt;em&gt;rispettata&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Dati aperti: &lt;a href="https://analisi-spesa-ict.mxmap.it/dati/anac-cruscotto.json"&gt;anac-cruscotto.json&lt;/a&gt;. Metodo: &lt;code&gt;tools/metriche_anac.py&lt;/code&gt;, pagina generata da &lt;code&gt;tools/cruscotto_anac.py&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="metriche-di-non-ricorrenza"&gt;Metriche di non ricorrenza&lt;/h2&gt;
 &lt;table&gt;
