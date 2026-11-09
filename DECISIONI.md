@@ -207,3 +207,8 @@ Il giro su G1 (196 CIG) e sui primi 1.000 di G3 continua senza lo stop sul total
 - **3224 telecamere/TV:** resta in lista. La review dà 79 % di videosorveglianza e 2,4 % di ICT stretto. Proposta: una sottoclasse «videosorveglianza» in S5, fuori dalla misura cloud. Decide Fabio.
 - **RX_ICT:** aggiunti «sw» e «connettività» (imbuto 0.3.3). Effetto calcolato a parte: 3.593 CIG in più nel residuo S6, 4,1 mld, di cui 29 G1 per 3,8 mld. `ict.csv` si rigenera quando la via 6 sarà finita.
 - Prove in `tools/verifiche/perimetro_cpv_effetto.py`, `esiti/2026-11-06/cpv/perimetro-effetto.json` e `report/cpv/review-79342-3224/`.
+
+## 2026-11-09 — Accesso civico: destinatario = PEC istituzionale (protocollo)
+**Chi:** Fabio. **Decisione:** le istanze di accesso civico generalizzato si inviano via PEC alla casella istituzionale dell ente (protocollo informatico / URP, da IndicePA), indirizzandole nel testo all ufficio preposto (ufficio che detiene i dati, art. 5 c. 3 d.lgs. 33/2013). Non serve individuare la PEC dedicata né il nome dell RPCT per l invio.
+**Perché:** semplicità e robustezza: la PEC istituzionale è sempre presente in IndicePA ed è canale valido di presentazione; lo smistamento interno spetta all ente.
+**Effetti:** il giro rpct_destinatari.py serve solo per (a) i 434 enti senza PEC in IndicePA, (b) RPCT come destinatario del riesame, (c) registro degli accessi e moduli online come contesto. Il nome RPCT resta campo C, non usato per l invio.
