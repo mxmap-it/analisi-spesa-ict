@@ -54,27 +54,27 @@
   "G3": {
    "cig_totali": 1000,
    "euro_totali": 1546339517,
-   "cig_classificati": 634,
-   "euro_classificati": 1268462724,
+   "cig_classificati": 644,
+   "euro_classificati": 1277906289,
    "confidenza": {
-    "media": 515,
-    "bassa": 74,
+    "media": 524,
+    "bassa": 75,
     "alta": 45
    },
    "fonte_primaria": 67,
-   "con_documento_archiviato": 221,
+   "con_documento_archiviato": 225,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 335,
-     "euro": 672093739
+     "cig": 338,
+     "euro": 674910647
     },
     "A:incerto | B:incerto": {
-     "cig": 164,
-     "euro": 332482871
+     "cig": 169,
+     "euro": 337210527
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 126,
-     "euro": 240485166
+     "cig": 128,
+     "euro": 242384166
     },
     "A:incluso-certo | B:incluso-certo": {
      "cig": 9,
@@ -147,8 +147,8 @@
     "euro": 227672191
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 220,
-    "euro": 444421547
+    "cig": 223,
+    "euro": 447238456
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
     "cig": 1,
@@ -163,8 +163,8 @@
     "euro": 9836664
    },
    "resta incerto (S6)": {
-    "cig": 290,
-    "euro": 572968037
+    "cig": 297,
+    "euro": 579594693
    }
   },
   "CTL": {
@@ -236,20 +236,20 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 308,
+  "cig_con_ostacoli": 315,
   "per_tipo": {
-   "altro": 251,
-   "403": 59,
-   "404": 56,
+   "altro": 255,
+   "403": 62,
+   "404": 57,
    "login": 52,
    "pdf-illeggibile": 11,
-   "link-pvl-rotto": 10
+   "link-pvl-rotto": 11
   },
   "domini_principali": {
    "dati.anticorruzione.it": 19,
    "www.sintel.regione.lombardia.it": 12,
+   "www.difesa.it": 12,
    "piattaformaacquisti.rai.it": 10,
-   "www.difesa.it": 10,
    "www.acquistinretepa.it": 8,
    "www.anticorruzione.it": 7,
    "gareappalti.bancaditalia.it": 7,
@@ -273,8 +273,8 @@
    "usd_eq": 138.17
   },
   "imbuto-g3": {
-   "chiamate": 126,
-   "usd_eq": 206.52
+   "chiamate": 129,
+   "usd_eq": 211.18
   },
   "imbuto-revisione": {
    "chiamate": 30,
@@ -287,8 +287,8 @@
   "g3_stima": {
    "stima_1000": 360,
    "limite_+20%": 432,
-   "per_cig": 0.326,
-   "proiezione_1000": 325.7
+   "per_cig": 0.328,
+   "proiezione_1000": 327.9
   }
  }
 }

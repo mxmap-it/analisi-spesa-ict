@@ -1,0 +1,304 @@
+ID 2365
+
+GARA A PROCEDURA APERTA PER LA CONCLUSIONE DI UN ACCORDO QUADRO, AI SENSI
+DEL D.LGS. 50/2016 E S.M.I., AVENTE AD OGGETTO L’AFFIDAMENTO DI SERVIZI APPLICATIVI
+E L’AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO «SANITA’ DIGITALE - Sistemi
+Informativi Sanitari e servizi al Cittadino» PER LE PUBBLICHE AMMINISTRAZIONI DEL SSN
+APPENDICE 9
+
+BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+
+Classificazione del documento: CONSIP PUBLIC
+                                                                     INDICE
+INDICE .............................................................................................................................................. 2
+1      SCHEDE BUSINESS CASES LOTTI APPLICATIVI 1-2 ...................................................................... 4
+1.1                 Area Tematica CUP E INTEROPERABILITA’ DATI SANITARI ............................................. 4
+        1.1.1       Scheda Business case N. 1 – Lotto 1 NORD ................................................................ 4
+        1.1.2       Scheda Business case N. 2 – Lotto 1 NORD ................................................................ 4
+        1.1.3       Scheda Business case N. 1 – Lotto 2 CENTRO-SUD..................................................... 5
+        1.1.4       Scheda Business case N. 2 – Lotto 2 CENTRO-SUD..................................................... 5
+2      SCHEDE BUSINESS CASES LOTTI APPLICATIVI 3-4 ...................................................................... 6
+2.1                 Area Tematica PIATTAFORME APPLICATIVE, PORTALI E APP ......................................... 6
+        2.1.1       Scheda Business case N. 1 – Lotto 3 NORD ................................................................ 6
+        2.1.2       Scheda Business case N. 2 – Lotto 3 NORD ................................................................ 6
+        2.1.3       Scheda Business case N. 1 – Lotto 4 CENTRO-SUD..................................................... 7
+        2.1.4       Scheda Business case N. 2 – Lotto 4 CENTRO-SUD..................................................... 7
+3      LAYOUT DELLE SCHEDE PROGETTO ........................................................................................... 9
+
+
+
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                                                                      2 di 9
+INTRODUZIONE
+In relazione ai criteri tecnici di valutazione “SCHEDA BUSINESS CASE”, di ciascun lotto
+applicativo, presenti nel Capitolato d’Oneri al capitolo 17.1, il concorrente dovrà compilare
+le singole schede elaborando specifiche proposte progettuali e fornendo tutti gli elementi di
+potenziale interesse sui temi proposti.
+I “Business Case” vanno intesi come casi di studio che esprimono esigenze potenziali da parte
+delle Amministrazioni del SSN e che potranno presentarsi come iniziative progettuali nel
+corso del periodo di fornitura.
+In ogni caso il Fornitore dovrà essere in grado, in caso di stipula dell’Accordo Quadro del lotto
+di gara corrispondente, di progettare e realizzare tali iniziative progettuali all’interno dei
+servizi di gara, in funzione di quanto riportato nella scheda.
+Inoltre il Fornitore si impegna fin d’ora a rendere disponibili senza oneri aggiuntivi per l’Ente,
+le soluzioni e gli strumenti tecnologici da lui proposti nonché ad attuare il valore aggiunto per
+l’Amministrazione derivanti dall'adozione della soluzione proposta, in termini di riuso
+applicativo e innovazione.
+
+
+
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                 3 di 9
+1     Schede Business Cases Lotti Applicativi 1-2
+1.1 Area Tematica CUP E INTEROPERABILITA’ DATI SANITARI
+Area tematica di riferimento: CUP E INTEROPERABILITA’ DATI SANITARI (CFR par. 3.1 del CT
+Speciale Lotti Applicativi 1-2-3-4).
+1.1.1     Scheda Business case N. 1 – Lotto 1 NORD
+CUP Unificato basato su una soluzione in Cloud
+L’Amministrazione ha l’esigenza di migrare la propria piattaforma CUP Integrata verso una
+soluzione in Cloud, che comprende a titolo indicativo ma non esaustivo le seguenti
+funzionalità:
+     Front-end (prenotazione);
+     Back-office (gestione delle agende e del catalogo delle prestazioni).
+Dimensione territoriale di riferimento
+Regione di medie dimensioni (popolazione > 1,5 e < 4 milioni di abitanti).
+Esempio di riferimento: Qualsiasi soluzione Cloud attinente al Business case.
+Oggetto del Business Case
+Descrivere una proposta progettuale di migrazione Cloud della Piattaforma CUP Unificato,
+comprensiva delle attività di interventi di natura applicativa, di migrazione dei dati e di
+integrazione e/o validazione funzionale.
+     Funzionalità: Integrazione con eventuali sistemi di Anagrafe Sanitaria Regionale o
+        territoriale (Assistiti, Prodotti, Strutture, …), FSE, dando evidenza di tutti i processi
+        relativi alla gestione\certificazione\allineamento delle informazioni e degli standard
+        dei profili di interoperabilità utilizzati (Hl7, FHIR, IHE, …);
+     Servizi: Servizio di Migrazione Applicativa al Cloud (CFR par. 4.1.3 del CT Speciale Lotti
+        Applicativi 1-2-3-4).
+
+1.1.2 Scheda Business case N. 2 – Lotto 1 NORD
+Interoperabilità Dati Sanitari basata su soluzione in Riuso
+L’Amministrazione ha l’esigenza di implementare la propria piattaforma dedicata all’
+Interoperabilità dati sanitari e socio-sanitari, basandosi sul riuso di una piattaforma di
+un’altra Amministrazione, comprensiva delle seguenti componenti software:
+         Interfacce Applicative.
+         Client per l’integrazione e la gestione interfacce applicative.
+         Message Broker (Publish/Subscribe, Queuing e Store/Forward).
+         Orchestrazione.
+
+Dimensione territoriale di riferimento
+Regione o provincia autonoma di piccole (popolazione < 2 milione di abitanti).
+Oggetto del Business Case
+Descrivere una proposta progettuale per l’implementazione della piattaforma di
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                4 di 9
+Interoperabilità dati sanitari e socio-sanitari basata su una soluzione in Riuso.
+         Funzionalità: Integrazione dei domini applicativi Regionali (es. FSE) e Nazionali.
+          Gestione certificazione dei dati, meta-dati e documenti sanitari, con evidenza degli
+          standard e dei profili di interoperabilità utilizzati (Hl7, FHIR, IHE, DICOM, …).
+         Servizi: Servizio di Parametrizzazione e Personalizzazione di Soluzioni di terze
+          parti/open source/riuso (CFR par. 4.1.4 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+1.1.3     Scheda Business case N. 1 – Lotto 2 CENTRO-SUD
+Cup Aziendale basato su una soluzione proprietaria
+L’Amministrazione ha l’esigenza di evolvere la propria piattaforma CUP proprietaria, che
+comprende a titolo indicativo ma non esaustivo le seguenti funzionalità:
+    integrazione con CUP Regionale, per la gestione delle prenotazioni di prestazioni
+       sanitarie, la gestione delle agende e del catalogo delle prestazioni;
+    gestione Aziendale delle agende;
+    monitoraggio delle performance Aziendali.
+Dimensione territoriale di riferimento: Azienda Sanitaria\Ospedaliera di medie dimensioni
+(popolazione > 300.000 e < 600.000 abitanti)
+Oggetto del Business Case
+Descrivere una proposta progettuale di evoluzione di una piattaforma CUP proprietaria di un
+Sistema Informativo Aziendale (ASL, ATS, AO, …), dando evidenza dell’integrazione con il
+Fascicolo Sanitario Elettronico (gestione delle prenotazioni) e della realizzazione di un
+servizio on-line che visualizzi in tempo reale dell’attesa relativa a prestazioni sanitarie
+Aziendali erogate.
+
+         Funzionalità: integrazione con il Fascicolo Sanitario Elettronico e realizzazione di un
+          servizio on-line liste d’attesa;
+         Servizi: Servizio di Manutenzione Evolutiva di Applicazioni Esistenti (CFR par. 4.1.2
+          del CT Speciale Lotti Applicativi 1-2-3-4).
+
+1.1.4     Scheda Business case N. 2 – Lotto 2 CENTRO-SUD
+Interoperabilità Dati Sanitari basata su una piattaforma di mercato
+L’Amministrazione, ha la necessità di migrare la propria piattaforma di Interoperabilità dati
+sanitari e socio-sanitari, verso una soluzione unica di mercato, che comprende a titolo
+indicativo ma non esaustivo le seguenti componenti software:
+
+         Interfacce Applicative.
+         Client per l’integrazione e la gestione interfacce applicative.
+         Message Broker (Publish/Subscribe, Queuing e Store/Forward).
+         Orchestrazione.
+Esempio di riferimento: Qualsiasi soluzione di mercato attinente al Business case.
+Dimensione territoriale di riferimento
+Regione di grandi dimensioni (popolazione > 4 milioni di abitanti)
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                5 di 9
+Oggetto del Business Case
+Descrivere una proposta progettuale di migrazione della piattaforma di Interoperabilità dati
+sanitari e socio-sanitari verso una soluzione di mercato, comprensiva anche delle attività di
+parametrizzazione del prodotto software adottato e, se necessario, di personalizzazione di
+ulteriori moduli in esso contenuti.
+         Funzionalità: Integrazione Anagrafe Sanitaria Regionale con Infrastrutture\Anagrafi
+          a livello Nazionale e con FSE. Gestione certificazione dei dati, meta-dati e documenti
+          sanitari, con evidenza degli standard e dei profili di interoperabilità utilizzati (Hl7,
+          FHIR, IHE, DICOM, …).
+         Servizi: Servizio di Parametrizzazione e Personalizzazione di Soluzioni di terze
+          parti/open source/riuso (CFR par. 4.1.4 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+2     Schede Business Cases Lotti Applicativi 3-4
+2.1 Area Tematica PIATTAFORME APPLICATIVE, PORTALI E APP
+Area tematica di riferimento: PIATTAFORME APPLICATIVE, PORTALI E APP (CFR par. 3.2 del
+CT Speciale Lotti Applicativi 1-2-3-4).
+2.1.1     Scheda Business case N. 1 – Lotto 3 NORD
+Sorveglianza epidemiologica
+L’Amministrazione, ha l’esigenza di implementare ex-novo una piattaforma dedicata alla
+Sorveglianza epidemiologica, che comprende a titolo indicativo ma non esaustivo le seguenti
+funzionalità:
+
+         Implementazione automatica della gestione dei rischi con alert automatici;
+         implementazione automatizzata della pianificazione e valutazione delle politiche di
+          intervento sanitario;
+         monitoraggio dei programmi di contrasto.
+Dimensione territoriale di riferimento: Regione o provincia autonoma di piccole dimensioni
+(popolazione < 1,5 milioni di abitanti)
+Oggetto del Business Case
+Descrivere una proposta progettuale di implementazione ex-novo di una piattaforma di
+Sorveglianza     epidemiologica,      dando       evidenza   delle   integrazioni con    le
+Infrastrutture\Anagrafi a livello Regionale e Nazionale (INI, SistemaTS, ANA, …).
+     Funzionalità: Integrazione e gestione certificazione dei dati, meta-dati;
+     Servizi: Servizio di Sviluppo di Applicazioni Software Ex-novo- Green Field (CFR par.
+         4.1.1 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+2.1.2     Scheda Business case N. 2 – Lotto 3 NORD
+
+Servizi al cittadino assistente virtuale multilingua (chatbot\videobot) basata su una
+soluzione di mercato in Cloud
+
+
+
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                 6 di 9
+L’Amministrazione, ha l’esigenza di realizzare un Servizio al cittadino di assistenza virtuale
+multilingua (chatbot\videobot), basato su una soluzione di mercato in Cloud, che
+comprende a titolo indicativo ma non esaustivo le seguenti funzionalità:
+    supporto all’accesso delle informazioni ed all’utilizzo dei servizi sanitari offerti;
+    supporto alla raccolta di informazioni dei pazienti cronici e non, sia tramite
+        questionari sanitari sia per la descrizione di sintomi e stato generale di salute;
+    supporto di contact-center: con possibilità di iterazione con operatori dedicati che
+        possono subentrare in chat col paziente.
+Dimensione territoriale di riferimento: Regione di grandi dimensioni (popolazione > 4 milioni
+di abitanti).
+Oggetto del Business Case
+Descrivere una proposta progettuale di integrazione di un servizio di mercato in cloud di
+assistenza virtuale multilingua (chatbot\videobot), con il Portale Sanitario Regionale e con
+l’APP Sanitaria Regionale.
+
+         Funzionalità: Integrazione con il Portale Sanitario Regionale e con l’APP Sanitaria
+          Regionale.
+         Servizi: Servizio di Parametrizzazione e Personalizzazione di Soluzioni di terze
+          parti/open source/riuso (CFR par. 4.1.4 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+2.1.3     Scheda Business case N. 1 – Lotto 4 CENTRO-SUD
+Sistema per l’Assistenza Territoriale
+L’Amministrazione ha l’esigenza di realizzare il proprio Sistema per l’Assistenza Territoriale,
+finalizzato alla gestione dell’intero processo di definizione, erogazione e monitoraggio di un
+progetto assistenziale (domiciliare, residenziale e semi-residenziale non autosufficienza e
+riabilitativo).
+Dimensione territoriale di riferimento: Regione di grandi dimensioni (popolazione > 4 milioni
+di abitanti).
+
+Oggetto del Business Case
+Descrivere una proposta progettuale di realizzazione del Sistema per l’Assistenza Territoriale,
+dando evidenza dell’integrazione con il Fascicolo Sanitario Elettronico e con la “Casa della
+Comunità”.
+    Funzionalità: gestione della presa in carico del paziente attraverso valutazioni
+        multidimensionali e Piani di Assistenza Individuali ed integrazione con la “Casa della
+        Comunità” (progetto della Missione 6 “Salute” del PNRR).
+    Servizi: Servizio di Sviluppo di Applicazioni Software Ex-novo- Green Field (CFR par.
+        4.1.1 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+2.1.4     Scheda Business case N. 2 – Lotto 4 CENTRO-SUD
+Portale Sanitario Regionale basato su soluzione Open-Source
+L’Amministrazione ha l’esigenza di realizzare un nuovo Portale Sanitario Regionale, basato su
+una soluzione Open-Source, che comprende a titolo indicativo ma non esaustivo le seguenti
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                 7 di 9
+funzionalità:
+     gestione dell’accesso tramite identità digitale (SPID, TS-CNS, CIE);
+     utilizzo delle Linee guida di design per i servizi digitali della PA – AgID.
+Dimensione territoriale di riferimento: Regione di medie dimensioni (popolazione > 1,5 e <
+4 milioni di abitanti).
+Oggetto del Business Case
+Descrivere una proposta progettuale di migrazione ed evoluzione del Portale Sanitario
+Regionale verso una soluzione Portal-Server Open-Source.
+
+         Funzionalità: Integrazione dei servizi e contenuti di carattere sanitario provenienti
+          da un patrimonio informativo eterogeneo (CUP, FSE, Referti on-line, PagoPA, …), con
+          un unico layout grafico;
+         Servizi: Servizio di Parametrizzazione e Personalizzazione di Soluzioni di terze
+          parti/open source/riuso (CFR par. 4.1.4 del CT Speciale Lotti Applicativi 1-2-3-4).
+
+
+
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                              8 di 9
+3     LAYOUT DELLE SCHEDE PROGETTO
+In relazione ai temi, di cui al precedente capitolo, il concorrente è tenuto a compilare le
+Schede secondo quanto di seguito riportato. In caso di mancata presentazione della scheda,
+verrà attribuito un punteggio pari a 0 per ciascuna scheda non presentata.
+Ogni Scheda dovrà avere una lunghezza massima pari a 7 (pagine) pagine (formato carattere
+e foglio come da indicazione dello Schema di Offerta Tecnica dei Lotti Applicativi) e dovrà
+essere sottoscritta dai soggetti con le modalità di cui al paragrafo 15 del Capitolato d’Oneri.
+Eventuali pagine eccedenti il numero di pagine indicato, nonché eventuale documentazione
+aggiuntiva prodotta dal concorrente, non verranno valutate dalla Commissione.
+Ciascuna Scheda deve contenere almeno gli elementi descritti di seguito, tenendo conto delle
+indicazioni riportate accanto a ciascuno di essi:
+
+                                              Scheda numero X – Lotto X
+                                 Titolo della Scheda: (cfr. capitolo precedente)
+           Concorrente               Indicare il concorrente
+
+                                     Descrivere il caso proposto con particolare riferimento a:
+           Descrizione                         obiettivi progettuali;
+                                               modalità di erogazione dei servizi di gara.
+
+     Standard e direttive di         Indicare il livello di aderenza agli standard di riferimento ed ai profili
+           riferimento               di interoperabilità utilizzati (Hl7, FHIR, IHE, DICOM, …). Accessibilità ..
+
+            Strumenti                Indicare le soluzioni e gli strumenti tecnologici proposti.
+
+
+                                     Descrivere il beneficio ed il valore aggiunto per l’Amministrazione
+         Valore Aggiunto             derivanti dall'adozione della soluzione proposta, in termini di riuso
+                                     applicativo e innovazione.
+
+
+
+
+Classificazione del documento: Consip Public
+Gara Sanità Digitale – 2365
+Appendice 9 – BUSINESS CASE LOTTI APPLICATIVI 1-2-3-4
+                                                                                                               9 di 9
+
