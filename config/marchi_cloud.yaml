@@ -48,6 +48,7 @@
   escludi:
   - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
   - azure\s+(s|xt)\s*(dr|sr)\b|impiantabil|pacemaker  # #41 9/11/2026: pacemaker Medtronic «AZURE S DR» (9134580DDE)
+  - (office|microsoft|m)\s*365\s+protection|harmony\s+email  # #40 9/11/2026: prodotto di terzi col nome del marchio (Check Point, B273B14113)
   fornitori:
   - ^microsoft\b
 - provider: Amazon Web Services
@@ -58,7 +59,8 @@
   - amazon\s+web\s+services
   # #40 v0.5: corsi e collocation presso il punto di interscambio non sono il prodotto AWS
   escludi:
-  - docenz|\bcors[oi]\b|formazion
+  # #40 9/11/2026: la formazione esclude solo se il testo non compra anche servizi cloud (CRUI 93147506DD)
+  - ^(?!.*servizi\s+cloud)(?=.*(docenz|\bcors[oi]\b|formazion))
   - collocation|interscambio
   fornitori:
   - ^amazon\s+web\s+services

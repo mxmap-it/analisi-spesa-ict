@@ -133,3 +133,7 @@ Primi rivenditori di prodotti extra-UE in v4.1: TIM 1.133 M€, Fastweb 76,1 M�
 1. Classe «marchio di un altro lotto» (gare multi-lotto con testo della procedura): regola da scrivere e misurare (#40).
 2. Atti pertinenti per i 60 CIG del campione top-20 (oggi 0).
 3. Capogruppo di Eurolink e Arslogica e verifica delle 6 righe [R]: solo con fonti gratuite (bilanci depositati pubblicati dalle società, siti istituzionali).
+
+## 2ter. v4.2 (9/11/2026, sera)
+
+Integrata nel rendiconto obiettivo 6 v0.8, § 2 (testo di riferimento da ora). Regole nuove: marchio di un altro lotto nelle gare multi-lotto, prodotti di terzi col nome del marchio, formazione AWS. Mappa: `rivenditori_mappa.py v4.2`; extra-UE 3,024 mld, CF italiano 1,844 mld = 61,0 % del totale, 78,9 % del noto.

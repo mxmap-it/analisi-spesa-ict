@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.7 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.8 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -91,6 +91,94 @@ Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-2`.
 Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-3`.
 
 ## 2. Rivenditori dei prodotti esteri (#41)
+
+### 2.1 Mappa v4.2 (v0.8): chi rivende cosa, a chi, con quale capogruppo
+
+Per ogni rivenditore (CF/P.IVA): capogruppo e suo paese, prodotti cloud venduti (marchio → giurisdizione del **prodotto**, `config/marchi_cloud.yaml`), CIG, euro, enti. Stesso perimetro della v3.1 (contratti attuativi 2022-2026, padri di AQ e importi da verificare esclusi, RTI alla mandataria o in parti uguali), ma ogni riga è riclassificata con le regole **correnti** della lente (comprese le correzioni del § 2.3).
+
+Rifare (server; circa 6 minuti, cache GLEIF in `lavoro/rivenditori/`): `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py v4.2` → `esiti/2026-11-09/rivenditori/` (`mappa-v4.2.json`; `mappa-v4.2.csv` per rivenditore, con la fonte del capogruppo; `cig-rivenditore-v4.2.csv` per CIG). Con l'argomento `v4` si ottiene la mappa con il provider congelato al 28/10.
+
+| Prodotti extra-UE [V] | v4 (regole 28/10) | v4.2 (regole correnti) |
+|---|---|---|
+| Totale | 2,949 mld | 3,024 mld |
+| Canale noto (diretto + rivenditore) | 2,278 mld | 2,336 mld |
+| Via rivenditore | 1,824 mld | 1,870 mld |
+| Via rivenditore con **CF italiano** (la lente fornitore li direbbe IT) | 1,797 mld | **1,844 mld** |
+| … sul totale / sul noto | 60,9 % / 78,9 % | **61,0 % / 78,9 %** |
+| … CF italiano e capogruppo italiano o non trovato, sul totale | 56,2 % | 57,2 % |
+
+- **La lente fornitore sbaglia sei euro su dieci** della spesa in prodotti extra-UE. Anche risalendo al capogruppo il 57 % resta IT: il problema è il canale di rivendita, non la proprietà del rivenditore [V].
+- Capogruppo dei rivenditori con CF italiano: IT 1,577 mld; non trovato 0,152 mld; **CH 0,099 mld** (Fastweb → Swisscom 51 M€, SoftwareOne Italia → SoftwareOne Holding 48 M€); UE 11,5 M€ (es. Accenture → Accenture plc, IE); extra-UE 3,9 M€ (NTT Data Italia → NTT DATA, JP, riga curata [R]). CF assente 25,9 M€, CF estero 1,0 M€ [V].
+- 1.394 rivenditori, 1.257 con prodotti extra-UE, 6.609 CIG; i prodotti extra-UE rivenduti vanno a **2.182 enti** (primi: INPS 96 M€, ANAS 61 M€, ACI Informatica 55 M€, DTD Giustizia 54 M€, Sogei 51 M€) [V].
+
+| Rivenditore (CF) | Capogruppo (paese, fonte) | Prodotti extra-UE | Marchi principali |
+|---|---|---|---|
+| TIM 00488410010 | nessuna controllante in GLEIF (IT) | 1.133 M€ | Microsoft, Salesforce, Cloudera, Oracle |
+| Italware 08619670584 / 02102821002 (§ 2.4) | Digital Value (IT, GLEIF) | 74,5 M€ | Oracle, Microsoft, IBM |
+| Eurolink 01973270604 | non trovato (nessun LEI) | 69,1 M€ | Oracle, Microsoft |
+| Fastweb 12878470157 | Swisscom AG (CH, GLEIF) | 51,1 M€ | AWS, Microsoft, Google |
+| SoftwareOne Italia 06169220966 | SoftwareOne Holding AG (CH, GLEIF) | 47,7 M€ | Microsoft |
+| Var Group 03301640482 | Sesa (IT, GLEIF) | 42,8 M€ | Microsoft, Oracle, Salesforce, AWS |
+| Project Informatica 02006010165 | nessuna controllante (IT) | 30,9 M€ | Oracle, Microsoft |
+| R1 05231661009 | nessuna controllante (IT) | 24,3 M€ | Oracle, Microsoft, AWS |
+| Postel (3 CF/nomi) | Poste Italiane (IT, curato [R]) | 45 M€ in tutto | Microsoft (Azure, licenze) |
+
+### 2.2 Fonti nuove e loro resa (v0.8) [V]
+
+- **CF dei 1.530 CIG senza righe nel dataset aggiudicatari** (il punto aperto della 0.5): ricavati dal nome con il dizionario nome → CF dello stesso dataset, accettato solo se un CF copre ≥ 90 % delle occorrenze. Hanno ora un CF 425 M€ di prodotti extra-UE; restano 9,0 M€ con il solo nome.
+- **Vincitori TED** come seconda fonte: 0 CIG utili in questo canale (servono all'imbuto, non qui).
+- **GLEIF** (golden copy 6/11/2026, LEI2 + RR del mirror): 249.738 identificativi italiani con LEI. Il capogruppo viene da GLEIF per 1,628 mld su 1,870, da `config/rivenditori_capogruppo.yaml` per 63 M€ (6 righe [R] con fonte per riga, 1 [V]); non trovato per 152 M€.
+- **Convenzioni Consip**: nei 48 CIG dei lotti con aggiudicatario dichiarato (`config/lotti_cloud.yaml`) il rivenditore ANAC coincide in **48/48**.
+- **Atti (#57)**: solo 45 CIG via rivenditore hanno un atto archiviato, e solo 8 citano il CIG. In questi 8 il prodotto c'è sempre (8/8); il rivenditore è nominato in 4/8.
+
+### 2.3 Precisione del prodotto nel canale rivenditore e correzioni della lente (#40)
+
+**Campione casuale (v0.8)**: 60 CIG di prodotti extra-UE, tre per ciascuno dei primi 20 rivenditori, estratti con seme 20261109 fra **tutti** i loro CIG (`esiti/2026-11-09/rivenditori/campione-top20-v4.1.csv`; etichette in `report/metodo/rivenditori-v4/etichette-top20.csv`, date sull'oggetto ANAC perché nessuno dei 60 ha un atto pertinente archiviato). Un solo etichettatore (Claude), non a cieco rispetto all'uscita [V, con questo limite].
+
+| Regole | Prodotto corretto | Precisione | In euro |
+|---|---|---|---|
+| v4.1 (prima) | 58/60 | **96,7 %** (Wilson 88,6-99,1 %) | 76,2 % |
+| v4.2 (dopo) | 58/58 attribuiti; i 2 errori tolti, nessun giusto perso | 100 % sul campione usato per correggere le regole: non è una misura indipendente | 100 % |
+
+Misura prima/dopo: `python tools/verifiche/lente_top20.py <etichetta>` → `esiti/2026-11-09/rivenditori/lente-top20-*.json`.
+
+**Correzioni della lente**, ognuna con un caso in `tests/casi_classifica.yaml` (81/81 superati):
+
+| Errore | Esempio | Correzione |
+|---|---|---|
+| Numero dell'AQ dentro altri numeri | «2746» in «GARA ANAC 9127462» e «ACTC227464»: antisettici e reti idriche attribuiti ad AWS e Microsoft | via 2: numero a sé e contesto cloud/Consip/AQ |
+| Omonimi | pacemaker Medtronic «AZURE S DR» | esclusione |
+| Rete, non servizio | «hardware speciale rete PSN» | esclusione |
+| Marchio non riconosciuto | «licenze Microsoft Business 365 … nel PSN» attribuito al PSN | regex `microsoft (business/office) 365` |
+| Servizio professionale | «affiancamento … spostamento contenuti su PSN» | «affiancamento» fra i servizi professionali |
+| **Marchio di un altro lotto** | CRUI 92870750BD, 16 M€: lotto Cisco attribuito a IBM Cloud perché la gara nomina IBM Cloud nei lotti 3-4; 9287118438, 25 M€: lotto Dell APEX attribuito a IBM | se il testo è «oggetto del lotto · oggetto della gara» e la gara elenca più lotti, il marchio si cerca solo nell'oggetto del lotto |
+| **Prodotto di terzi col nome del marchio** | Check Point «Harmony Email and Office365 Protection» | esclusione |
+| Esclusione troppo larga | CRUI 93147506DD, 15 M€: «servizi cloud AWS, servizi professionali e formazione» escluso come corso | la formazione esclude AWS solo se il testo non compra anche servizi cloud |
+
+Un'etichetta del campione v4 era sbagliata (BC1296935C comprende davvero una licenza Microsoft SQL Server): corretta in `etichette-campione-v4.1.csv`.
+
+**Nessuna regressione sui tre campioni a cieco** (`lente_cieco.py`; esiti in `esiti/2026-11-09/rivenditori/lente-prima/`, `lente-dopo/`, `lente-dopo-multilotto/`): big tech TP/FP/FN 66/0/1, 62/0/1 e 62/0/8, tutti i provider 76/1/4, 69/1/1 e 69/2/10, **identici** prima e dopo. Le regole nuove non toccano quei 600 CIG: non migliorano né peggiorano la misura a cieco [V].
+
+Effetto sulla mappa [V]: le correzioni dei 9 falsi positivi tolgono 26 CIG e 3,5 M€ di prodotti extra-UE; quelle per multi-lotto e prodotti di terzi tolgono altri 41 M€ (Dell APEX 25 M€, Cisco 16 M€, apparati di rete Cisco/Aruba, Check Point) e tengono l'AWS di CRUI (15 M€, prima attribuito per errore a Oracle). La crescita da 2,949 a 3,024 mld rispetto alla v4 viene dalle regole aggiunte dopo il 28/10 (§ 1.2-1.3), non da queste.
+
+Il campione v4 di comodo (45 CIG con atti, `etichette-campione*.csv`) dava 30/39 = 77 % con le regole del 28/10. È il campione su cui sono state scritte le correzioni e non vale più come misura.
+
+### 2.4 Chi sono «IMPRESA INESISTENTE», Eurolink e Arslogica (v0.8) [V]
+
+Fonti gratuite e senza login: dataset ANAC aggiudicatari e CIG, GLEIF, **VIES** della Commissione europea (risposte del 9/11/2026 archiviate in `report/metodo/rivenditori-v4/vies/` con `SHA256SUMS`).
+
+- **«IMPRESA INESISTENTE» (02102821002) è Italware S.r.l.** Per VIES la P.IVA è valida e intestata a «ITALWARE - S.R.L.», Roma. In ANAC quel CF ha 1.520 CIG: 1.516 righe «IMPRESA INESISTENTE», 4 «ITALWARE»; dei 473 CIG derivati da AQ, 398 hanno il padre aggiudicato a Italware. Il CF 08619670584 (LEI GLEIF, capogruppo Digital Value S.p.A.) non è una P.IVA in VIES: è il codice fiscale della stessa società. In ANAC la società ha quindi due identificativi, uno col nome segnaposto. Uniti (`stesso_soggetto` in `config/rivenditori_capogruppo.yaml`, stato V), Italware è il **2° rivenditore di prodotti extra-UE** (74,5 M€, 82 CIG, 49 enti). R56 aggiornata.
+- **Eurolink S.r.l. (01973270604)**: P.IVA valida (VIES), Roma; 110 CIG sempre con la stessa denominazione; rivenditore Oracle degli enti centrali (Consip, Sogei, INAIL, IPZS, ANAS, DTD Giustizia), indicata in ANAC come aggiudicataria del lotto Oracle di Licenze software multibrand 6 (ID 2599). Nessun LEI: capogruppo non ricavabile da fonti gratuite.
+- **Arslogica Sistemi S.r.l. (04108030281)**: P.IVA valida (VIES), Padova; 255 CIG; rivenditore Oracle (licenze, Exadata, Oracle Cloud IaaS/PaaS e SaaS) per la sanità veneta e lombarda e per Informatica Alto Adige. Nessun LEI: capogruppo non ricavabile da fonti gratuite.
+
+### 2.5 Raccomandazioni
+
+- **R56** (aggiornata): segnaposto «IMPRESA INESISTENTE» sulla P.IVA di Italware; un identificativo per operatore, o una tabella CF/P.IVA pubblica.
+- **R76**: marchio del produttore come campo strutturato e righe nel dataset aggiudicatari per ogni CIG.
+- **R77**: capogruppo dei fornitori in dati aperti (LEI e relazioni di controllo).
+
+### 2.6 Storico: mappa v3 e v3.1 (v0.1-v0.5)
+
 
 Dalla mappa v3 (`report/metodo/rivenditori-v3.*`, contratti attuativi 2022-2026, padri di AQ e importi da verificare esclusi) [V]:
 
@@ -296,7 +384,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 ## 7. Prossimi passi
 
 1. #40: la lente testuale è al suo limite (81-89 % di richiamo). Il resto passa da lotti e convenzioni (vie 1 e 2) e dagli atti.
-2. #41: aggiudicatari dei 0,41 mld senza righe ANAC.
+2. #41: atti pertinenti per i 60 CIG del campione top-20 (oggi 0); capogruppo di Eurolink e Arslogica e verifica delle 6 righe [R] da fonti gratuite; un campione a cieco nuovo per misurare le regole del § 2.3 fuori dal campione su cui sono state scritte.
 3. #43: residuo S6 solo con atti nuovi (via 6 sui CIG S6) o accesso civico; pilota infrastruttura esteso ai primi 30 fornitori S2 (§ 3.2, da decidere); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
 4. #27: integrare nell'imbuto i 88 vincitori TED dei CIG senza aggiudicatari ANAC.
 5. #26 e #29: URL di OpenCUP, CPT e ISTAT; nuovo tentativo sui 7 file Consip.
@@ -306,6 +394,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.8 | 2026-11-09 | § 2 rivenditori v4.2 (#41): mappa per CF con capogruppo GLEIF ed enti; prodotti extra-UE rivenduti da CF italiani 61,0 % del totale (78,9 % del noto), 57,2 % anche col capogruppo; campione casuale top-20 96,7 %; correzioni della lente (via 2 «2746», multi-lotto, prodotti di terzi, omonimi), cieco invariato; «IMPRESA INESISTENTE» = Italware (VIES), R56 aggiornata, R76-R77 |
 | 0.7 | 2026-11-09 | § 3.2: residuo S6 non riducibile con OCDS (3.445 CIG senza award), partecipanti, L3/L4 e atti; stima per imputazione 2,0 %; precisione OCDS 92,4 %; scheda ACN comprata 84 CIG (40/40); pilota DNS/AS sull'infrastruttura dei SaaS (4 domini su 10 su hyperscaler USA) |
 | 0.6 | 2026-11-09 | § 3.1 Misura 1.2 per prodotto: universo per tipologia, strati S1-S6 con elenco ACN dei servizi qualificati e fornitore nel testo (precisione misurata), big tech 1,7 % (73 CIG, 0,6 %) con limiti 2,1-25 %; seconda via sugli atti; R73-R74; correzione § 4 (CSV ACN archiviato) |
 | 0.5.1 | 2026-11-06 | OpenCUP e CPT trovati e specchiati; vincitori TED nell'imbuto (esito per #66); nuovi tentativi su Consip (curl con ripresa) e BDAP |

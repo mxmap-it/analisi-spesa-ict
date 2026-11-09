@@ -571,11 +571,11 @@
 - id: R56
   destinatario: ANAC
   tipo: difetto
-  stato: "verificato sulla mappa rivenditori v3 (6/11/2026); proposta, nessuna richiesta inviata"
-  titolo: Aggiudicatario segnaposto «IMPRESA INESISTENTE» su CF validi, e CF senza zero iniziale
-  evidenza: "Nella mappa dei rivenditori v3 (contratti attuativi 2022-2026) il nome normalizzato «IMPRESA INESISTENTE» compare come rivenditore di Oracle, Microsoft, IBM, AWS per 46,5 M€: è il 7° «rivenditore» per importo di prodotti extra-UE. Dal dataset aggiudicatari: il nome segnaposto sta su CF validi (02102821002: 24 CIG, 74,8 M€; altri 4 CF con 1 CIG). Inoltre CF italiani con lo zero iniziale perso (es. 1682521008 per P.S.N. S.p.A.)"
-  prova: "tools/verifiche/rivenditori_esteri.py, tools/verifiche/rivenditori_cf.py; esiti/2026-11-06/rivenditori/rivenditori-cf.json"
-  richiesta: "Denominazione dall'anagrafe operatori a partire dal CF (mai segnaposto) e CF validato con il carattere di controllo (11 cifre, zeri iniziali conservati); correzione retroattiva"
+  stato: "verificato sulla mappa rivenditori v3 (6/11/2026); identità accertata 9/11/2026 (VIES + padri AQ, #41 v4.1); proposta, nessuna richiesta inviata"
+  titolo: Aggiudicatario segnaposto «IMPRESA INESISTENTE» sulla P.IVA di un'impresa reale e attiva (Italware S.r.l.), e CF senza zero iniziale
+  evidenza: "Nella mappa dei rivenditori v3 (contratti attuativi 2022-2026) «IMPRESA INESISTENTE» era il 7° «rivenditore» di prodotti extra-UE (46,5 M€). Il nome segnaposto sta su CF validi; il principale è 02102821002 (1.520 CIG nel dataset aggiudicatari, 1.516 righe «IMPRESA INESISTENTE», 4 «ITALWARE»). Aggiornamento 9/11/2026: VIES (Commissione europea) dà per la P.IVA 02102821002 «ITALWARE - S.R.L.», via della Maglianella 65/E, Roma, valida; dei 473 CIG derivati da AQ con quel CF, 398 hanno il padre aggiudicato a Italware. Il CF 08619670584 (con LEI GLEIF, capogruppo Digital Value) non è una P.IVA in VIES: è il codice fiscale della stessa società, che in ANAC compare quindi con due identificativi, uno dei quali col nome segnaposto. Uniti, Italware è il 2° rivenditore di prodotti extra-UE (74,5 M€, 82 CIG, 49 enti). Inoltre CF italiani con lo zero iniziale perso (es. 1682521008 per P.S.N. S.p.A.)"
+  prova: "tools/verifiche/rivenditori_cf.py, tools/verifiche/rivenditori_mappa.py v4.2; esiti/2026-11-09/rivenditori/mappa-v4.2.json; report/metodo/rivenditori-v4/vies/02102821002.json e 08619670584.json (SHA256SUMS); config/rivenditori_capogruppo.yaml (riga stesso_soggetto)"
+  richiesta: "Denominazione dall'anagrafe operatori a partire dal CF (mai segnaposto); un solo identificativo per operatore (CF) con la P.IVA come attributo, oppure tabella pubblica di corrispondenza CF/P.IVA; CF validato con il carattere di controllo (11 cifre, zeri iniziali conservati); correzione retroattiva dei 1.516 CIG"
   perche_serve: "Senza l'aggiudicatario non si sa chi intermedia la spesa estera (canale) né la sua giurisdizione"
   rif: ["#41", "P17"]
 - id: R57

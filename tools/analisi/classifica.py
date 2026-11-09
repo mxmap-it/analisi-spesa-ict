@@ -20,6 +20,7 @@ CPV_ICT = re.compile(r"^(48|72|302|3223|3224|3225|3226|50312|50320|51611|64216|6
 # #41/#40 9/11/2026: "2746" solo come numero a sé (prima colpiva "GARA ANAC 9127462", "ACTC227464") e solo con contesto cloud/Consip
 RX_AQ2746 = re.compile(r"(?<!\d)2746(?!\d)|iaas\s*(e|/|-)?\s*paas\s*(2|ed\.?\s*2|edizione\s*2)\b", re.I)
 RX_CONTESTO_AQ = re.compile(r"\b(iaas|paas|cloud|consip|accordo\s+quadro|aq)\b", re.I)
+RX_MULTILOTTO = re.compile(r"\blott[oi]\s*(n\.?\s*)?\d.{0,400}?\blott[oi]\s*(n\.?\s*)?\d", re.I)
 RX_LOTTO = re.compile(r"\blott?o\s*n?\.?\s*(\d)\b", re.I)
 RX_CLOUD = re.compile(r"\bcloud\b|\bsaas\b|\biaas\b|\bpaas\b|\bhosting\b|data\s*cent(er|re)|\bhousing\b", re.I)
 # "servizi applicativi in ottica cloud" (AQ Consip) è sviluppo applicativo, non servizio cloud
@@ -66,6 +67,15 @@ class Classificatore:
 
     def marchio(self, testo):
         """Primo marchio del dizionario che compare nel testo e non è escluso; restituisce (voce, regola)."""
+        # #40/#41 9/11/2026, «marchio di un altro lotto»: il testo è «oggetto del lotto | oggetto della gara». Se la gara
+        # elenca più lotti e l'oggetto del lotto non nomina marchi del dizionario, il marchio nella gara è di un altro lotto.
+        parti = testo.split(" | ", 1)
+        if len(parti) == 2 and parti[0].strip() and RX_MULTILOTTO.search(parti[1]):
+            m, r = self._marchio(parti[0])
+            return (m, r) if m else (None, "")
+        return self._marchio(testo)
+
+    def _marchio(self, testo):
         for m in self.marchi:
             for r in m["rx"]:
                 if r.search(testo) and not any(e.search(testo) for e in m["ex"]):

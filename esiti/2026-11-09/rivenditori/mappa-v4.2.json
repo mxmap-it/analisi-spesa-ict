@@ -1,8 +1,8 @@
 {
  "versione": "v4.2",
  "campione_top20": {
-  "si": 16,
-  "eur_si": 25985433,
+  "si": 17,
+  "eur_si": 27637248,
   "cig": 60,
   "seme": 20261109,
   "precisione_decisi": 1.0,
@@ -11,13 +11,13 @@
  },
  "generato": "2026-11-09",
  "seme_campione": 20261109,
- "cig_attribuiti": 9714,
- "cig_rivenditore": 6606,
+ "cig_attribuiti": 9716,
+ "cig_rivenditore": 6609,
  "per_giurisdizione_e_canale": {
   "EXTRA-UE|diretto": 465569361,
   "EXTRA-UE|ignoto": 688380376,
-  "EXTRA-UE|rivenditore": 1855132845,
-  "IT|diretto": 1544659337,
+  "EXTRA-UE|rivenditore": 1870410845,
+  "IT|diretto": 1529659337,
   "IT|ignoto": 537999070,
   "IT|rivenditore": 85894125,
   "UE|diretto": 69508835,
@@ -25,13 +25,13 @@
   "UE|rivenditore": 208043019
  },
  "fonte_cf_cig": {
-  "anac-aggiudicatari": 4880,
-  "nome->cf-anac": 1559,
+  "anac-aggiudicatari": 4882,
+  "nome->cf-anac": 1560,
   "solo-nome": 167
  },
  "fonte_cf_eur": {
-  "EXTRA-UE|anac-aggiudicatari": 1420670156,
-  "EXTRA-UE|nome->cf-anac": 425490132,
+  "EXTRA-UE|anac-aggiudicatari": 1435809156,
+  "EXTRA-UE|nome->cf-anac": 425629132,
   "EXTRA-UE|solo-nome": 8972557,
   "IT|anac-aggiudicatari": 81868183,
   "IT|nome->cf-anac": 3785281,
@@ -40,21 +40,21 @@
   "UE|nome->cf-anac": 56571942,
   "UE|solo-nome": 712791
  },
- "rivenditori": 1393,
- "rivenditori_con_prodotti_extra_ue": 1256,
+ "rivenditori": 1394,
+ "rivenditori_con_prodotti_extra_ue": 1257,
  "extra_ue": {
-  "totale": 3009082581,
-  "noto": 2320702205,
-  "via_rivenditore": 1855132845,
-  "via_rivenditore_cf_it": 1828258774,
-  "via_rivenditore_cf_it_capogruppo_it": 1729080579,
-  "quota_cf_it_sul_totale": 0.608,
-  "quota_cf_it_sul_noto": 0.788,
-  "quota_cf_it_capogruppo_it_sul_totale": 0.575,
+  "totale": 3024360581,
+  "noto": 2335980205,
+  "via_rivenditore": 1870410845,
+  "via_rivenditore_cf_it": 1843536774,
+  "via_rivenditore_cf_it_capogruppo_it": 1729358579,
+  "quota_cf_it_sul_totale": 0.61,
+  "quota_cf_it_sul_noto": 0.789,
+  "quota_cf_it_capogruppo_it_sul_totale": 0.572,
   "per_naz_cf_e_capogruppo": {
-   "IT|IT": 1576858857,
-   "IT|IT?": 152221721,
-   "IT|CH": 83770331,
+   "IT|IT": 1576997857,
+   "IT|IT?": 152360721,
+   "IT|CH": 98770331,
    "ignota|?": 25913322,
    "IT|UE": 11538668,
    "IT|EXTRA-UE": 3869196,
@@ -63,8 +63,8 @@
  },
  "capogruppo_copertura_eur_extra_ue": {
   "curato": 63439583,
-  "GLEIF": 1612597469,
-  "nessun": 152221721,
+  "GLEIF": 1627736469,
+  "nessun": 152360721,
   "cf": 26874071
  },
  "gleif": {
@@ -154,6 +154,25 @@
    }
   },
   {
+   "cf": "12878470157",
+   "denominazione": "FASTWEB SPA",
+   "capogruppo": "Swisscom AG",
+   "paese": "CH",
+   "fonte_capogruppo": "GLEIF RR 549300YFSXCV1SKICL21->5493005SL9HHOXS3B739",
+   "cig": 87,
+   "eur": 60796288,
+   "eur_extra_ue": 51108951,
+   "enti": 66,
+   "prodotti": {
+    "Amazon Web Services": 49751776,
+    "Polo Strategico Nazionale": 9547486,
+    "Microsoft": 792175,
+    "Google": 560000,
+    "Aruba": 139851,
+    "Cisco Webex": 5000
+   }
+  },
+  {
    "cf": "06169220966",
    "denominazione": "SOFTWAREONE ITALIA S.R.L.",
    "capogruppo": "SoftwareOne Holding AG",
@@ -165,25 +184,6 @@
    "enti": 69,
    "prodotti": {
     "Microsoft": 47661381
-   }
-  },
-  {
-   "cf": "12878470157",
-   "denominazione": "FASTWEB SPA",
-   "capogruppo": "Swisscom AG",
-   "paese": "CH",
-   "fonte_capogruppo": "GLEIF RR 549300YFSXCV1SKICL21->5493005SL9HHOXS3B739",
-   "cig": 86,
-   "eur": 45796288,
-   "eur_extra_ue": 36108951,
-   "enti": 65,
-   "prodotti": {
-    "Amazon Web Services": 34751776,
-    "Polo Strategico Nazionale": 9547486,
-    "Microsoft": 792175,
-    "Google": 560000,
-    "Aruba": 139851,
-    "Cisco Webex": 5000
    }
   },
   {
