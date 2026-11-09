@@ -2,7 +2,7 @@
 title: 'SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GES… (CIG B1FFB3098A): documenti pubblicati e mancanti'
 date: '2026-11-05'
 lastmod: '2026-11-07'
-description: 'CIG B1FFB3098A, CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE), CIG B1FFB3098A, B1FFB31A5D, B1FFB32B30: 0 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+description: 'CIG B1FFB3098A, CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE), CIG B1FFB3098A, B1FFB31A5D, B1FFB32B30: 9 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
 keywords:
 - CIG B1FFB3098A
 - CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)
@@ -19,13 +19,13 @@ breadcrumb:
   url: /
 - nome: Convenzioni ICT
   url: /convenzioni/
-jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  / SERVIZI INFORMATICI DI PROGETTAZIONE,… (CIG B1FFB3098A)", "description": "CIG B1FFB3098A, CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE), CIG B1FFB3098A, B1FFB31A5D, B1FFB32B30: 0 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b1ffb3098a/", "identifier": ["CIG B1FFB3098A", "B1FFB3098A", "B1FFB31A5D", "B1FFB32B30"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-07", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  / SERVIZI INFORMATICI DI PROGETTAZIONE,…", "provider": {"@type": "GovernmentOrganization", "name": "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG B1FFB3098A", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b1ffb3098a/"}]}]}'
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  / SERVIZI INFORMATICI DI PROGETTAZIONE,… (CIG B1FFB3098A)", "description": "CIG B1FFB3098A, CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE), CIG B1FFB3098A, B1FFB31A5D, B1FFB32B30: 9 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b1ffb3098a/", "identifier": ["CIG B1FFB3098A", "B1FFB3098A", "B1FFB31A5D", "B1FFB32B30"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-07", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "SERVIZI INFORMATICI PER L EVOLUZIONE DEI SISTEMI INFORMATIVI DEGLI ENTI NELL AMBITO DI GESTIONE DEI FONDI SIE  / SERVIZI INFORMATICI DI PROGETTAZIONE,…", "provider": {"@type": "GovernmentOrganization", "name": "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG B1FFB3098A", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b1ffb3098a/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 0 documenti pubblicati e archiviati; **7 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-07. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 9 documenti pubblicati e archiviati; **7 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-07. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -45,7 +45,7 @@ Iniziative correlate: [ACCORDO QUADRO PER L'AFFIDAMENTO, IN FORMA AGGREGATA E AD
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 8 % dei tipi di documento attesi |
+| Copertura documentale | 23 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -76,19 +76,35 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | pagina pubblica dell'iniziativa non ancora individuata |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
 | disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
 | determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
 | avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
+
+## Documenti presenti
+
+Link all'originale ufficiale e alla nostra copia, identica byte per byte a quella dell'archivio content-addressed del progetto (sha256 e data di acquisizione). Le copie stanno nella release [`cig-B1FFB3098A`](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/tag/cig-B1FFB3098A) del repository pubblico [mxmap-it/convenzioni-ict-documenti](https://github.com/mxmap-it/convenzioni-ict-documenti), con il manifest di tutti i file; si verificano con `sha256sum`.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | 2024-OJS136-00422083-it.pdf | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%202024-OJS136-00422083-it.pdf]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/auctionDetail.xhtml) `1639a76339b55084…` | 2026-11-07 |
+| bando o avviso di gara (GUUE) | 2025-OJS088-00291113-it.pdf | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%202025-OJS088-00291113-it.pdf]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/fed7dcaeee57_auctionDetail.xhtml) `fed7dcaeee57dccf…` | 2026-11-07 |
+| bando o avviso di gara (GUUE) | 2025-OJS088-00291113-it.pdf | [link](https://www.csipiemonte.it/sites/default/files/inline_download/gare/archivio/2025/GA24_006/2025-OJS088-00291113-it.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/fed7dcaeee57_auctionDetail.xhtml) `fed7dcaeee57dccf…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari ed ERRATA CORRIGE_20_06_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari%20ed%20ERRATA%20CORRIGE_20_06_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/c979ab18cb5d_auctionDetail.xhtml) `c979ab18cb5deb54…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari_27_06_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari_27_06_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/15174db3a60f_auctionDetail.xhtml) `15174db3a60fb7d3…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari_11_07_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari_11_07_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/914894eeb56b_auctionDetail.xhtml) `914894eeb56b7491…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari_17_07_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari_17_07_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/0a20a9058c07_auctionDetail.xhtml) `0a20a9058c07b21f…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari_24_07_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari_24_07_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/1c1702cc6839_auctionDetail.xhtml) `1c1702cc6839e682…` | 2026-11-07 |
+| risposte ai chiarimenti | GA24_006_SE_ICO_Informazioni complementari_25_07_2024.pdf.p7m | [link](https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=184471406%20[allegato%20via%20browser:%20GA24_006_SE_ICO_Informazioni%20complementari_25_07_2024.pdf.p7m]) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B1FFB3098A/31174e572794_auctionDetail.xhtml) `31174e57279410ba…` | 2026-11-07 |
 
 ## Documenti mancanti
 
@@ -113,13 +129,11 @@ Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o 
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
 | disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
 | determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
 | avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |

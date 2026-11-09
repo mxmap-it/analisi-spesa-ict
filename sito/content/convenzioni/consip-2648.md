@@ -159,7 +159,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2648%20-%20PDF%20-%20NEW%20UFF.zip#ID2648%20-%20PDF%20-%20NEW%20UFF/ID2648%20-%20Gara%20AQ%20SGM%20ed.2%20-%20Allegato%201%20Schema%20AQ%20-%20Flussi%20dati.pdf.p7m), sha256 `29ccd0091efab433…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2648 - Gara AQ SGM ed.2 - Allegato 1 Schema AQ - Flussi dati.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID2648%20-%20PDF%20-%20NEW%20UFF.zip#ID2648%20-%20PDF%20-%20NEW%20UFF/ID2648%20-%20Gara%20AQ%20SGM%20ed.2%20-%20Allegato%201%20Schema%20AQ%20-%20Flussi%20dati.pdf.p7m), sha256 `29ccd0091efab433…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

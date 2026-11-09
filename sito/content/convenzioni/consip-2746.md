@@ -148,7 +148,7 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202746%20DOC%20UFF.zip#ID%202746%20-%20AQ%20IaaS%20e%20PaaS%202%20-%20Allegato%201%20AQ%20-%20Flussi%20dati%20commissioni.pdf.p7m), sha256 `e53bfe539c042b18…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2746 - AQ IaaS e PaaS 2 - Allegato 1 AQ - Flussi dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202746%20DOC%20UFF.zip#ID%202746%20-%20AQ%20IaaS%20e%20PaaS%202%20-%20Allegato%201%20AQ%20-%20Flussi%20dati%20commissioni.pdf.p7m), sha256 `e53bfe539c042b18…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

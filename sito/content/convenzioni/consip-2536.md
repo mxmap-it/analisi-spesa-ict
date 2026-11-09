@@ -157,7 +157,7 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202536%20-%20DOC%20NON%20UFF.zip#ID%202536%20-%20AQ%20Digital%20Transformation%202%20-%20documentazione%20PDF/ID2536%20-%20Digital%20Transformation%202%20-%20All%20A%20-%20Flusso%20dati%20commissioni.pdf), sha256 `6cfb1539f4b173d8…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2536 - Digital Transformation 2 - All A - Flusso dati commissioni.pdf](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202536%20-%20DOC%20NON%20UFF.zip#ID%202536%20-%20AQ%20Digital%20Transformation%202%20-%20documentazione%20PDF/ID2536%20-%20Digital%20Transformation%202%20-%20All%20A%20-%20Flusso%20dati%20commissioni.pdf), sha256 `6cfb1539f4b173d8…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

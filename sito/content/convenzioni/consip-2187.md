@@ -130,7 +130,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pd](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%2012%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `093fbd50bd255220…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2187 - MS EA - 6 - Allegato 12 Flusso dati per le commissioni a carico del fornitore.pd](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/Doc%20firmati_ID%202187.zip#Doc%20firmati_ID%202187/ID%202187%20-%20MS%20EA%20-%206%20-%20Allegato%2012%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `093fbd50bd255220…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

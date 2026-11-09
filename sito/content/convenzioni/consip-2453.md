@@ -2,7 +2,7 @@
 title: 'ID 2453 - GARA PUBLIC CLOUD SAAS ITSM: documenti pubblicati e mancanti'
 date: '2026-11-05'
 lastmod: '2026-11-06'
-description: 'ID 2453, Consip, CIG 942570737B: 4 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+description: 'ID 2453, Consip, CIG 942570737B: 14 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
 keywords:
 - ID 2453
 - Consip
@@ -17,13 +17,13 @@ breadcrumb:
   url: /
 - nome: Convenzioni ICT
   url: /convenzioni/
-jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "description": "ID 2453, Consip, CIG 942570737B: 4 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/", "identifier": ["ID 2453", "942570737B"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2453", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/"}]}]}'
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "description": "ID 2453, Consip, CIG 942570737B: 14 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/", "identifier": ["ID 2453", "942570737B"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "ID 2453 - GARA PUBLIC CLOUD SAAS ITSM", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2453", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2453/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 4 documenti pubblicati e archiviati; **8 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 14 documenti pubblicati e archiviati; **8 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -43,7 +43,7 @@ Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PM
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 15 % dei tipi di documento attesi |
+| Copertura documentale | 38 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -73,14 +73,14 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | pagina pubblica dell'iniziativa non ancora individuata |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
 | disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
-| determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
 | risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
-| avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
+| avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
@@ -93,10 +93,20 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 | Tipo | Documento | Originale | Copia (sha256) | Acquisita |
 |---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2453 - Public Cloud SaaS Princo - Avviso di rettifica_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20Princo%20-%20Avviso%20di%20rettifica_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Public_Cloud_SaaS_Princo_-_Avviso_di_rettifica_signed.pdf) `cd7b0a81a0c03af2…` | 2026-11-06 |
+| bando o avviso di gara (GUUE) | ID 2453 - Public Cloud SaaS Princo - Avviso di rettifica.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20Princo%20-%20Avviso%20di%20rettifica.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Public_Cloud_SaaS_Princo_-_Avviso_di_rettifica.pdf) `2a46647902587ef0…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2453 - Public cloud SaaS ITSM - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202453%20-%20Public%20cloud%20SaaS%20ITSM%20-%20Determina%20a%20contrarre_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Public_cloud_SaaS_ITSM_-_Determina_a_contrarre_signed.pdf) `add86a33c5fbed09…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2453 - Public cloud SaaS ITSM - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202453%20-%20Public%20cloud%20SaaS%20ITSM%20-%20Determina%20a%20contrarre.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Public_cloud_SaaS_ITSM_-_Determina_a_contrarre.pdf) `73a20f89fd0bc5b5…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2453 - Public Cloud SaaS ITSM - Chiarimenti 2_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20ITSM%20-%20Chiarimenti%202_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Chiarimenti_II_tranche_firmato.pdf) `692b0b48fc5d7534…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2453 - Public Cloud SaaS ITSM - Errata Corrige n. 1 Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20ITSM%20-%20Errata%20Corrige%20n.%201%20Chiarimenti_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Errata_Corrige_n._1_Chiarimenti_firmato.pdf) `f3e2956aec0c5dc9…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2453 - Public Cloud SaaS ITSM - Chiarimenti 2.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20ITSM%20-%20Chiarimenti%202.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Chiarimenti_II_tranche.pdf) `55504d2e471dd95c…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2453 - Public Cloud SaaS ITSM - Errata Corrige n. 1 Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202453%20-%20Public%20Cloud%20SaaS%20ITSM%20-%20Errata%20Corrige%20n.%201%20Chiarimenti.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Errata_Corrige_n._1_Chiarimenti.pdf) `90d868361c455ac5…` | 2026-11-06 |
 | risposte ai chiarimenti | Chiarimenti II tranche firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=70f3818b67e08f52) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Chiarimenti_II_tranche_firmato.pdf) `692b0b48fc5d7534…` | 2026-11-05 |
 | risposte ai chiarimenti | Chiarimenti II tranche | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=087398e9d52af6f9) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Chiarimenti_II_tranche.pdf) `55504d2e471dd95c…` | 2026-11-05 |
 | risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=4e55b0258da689b1) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Errata_Corrige_n._1_Chiarimenti.pdf) `90d868361c455ac5…` | 2026-11-05 |
 | risposte ai chiarimenti | Errata Corrige n. 1 Chiarimenti firmato | [link](https://www.acquistinretepa.it/downloadservices/getDocument?id=a38df10a95bd0fba) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/Errata_Corrige_n._1_Chiarimenti_firmato.pdf) `f3e2956aec0c5dc9…` | 2026-11-05 |
+| avviso di aggiudicazione o esito | ID 2453 - Servizi SaaS ITSM ed.1 - Avviso di Aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202453%20-%20Servizi%20SaaS%20ITSM%20ed.1%20-%20Avviso%20di%20Aggiudicazione_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Servizi_SaaS_ITSM_ed.1_-_Avviso_di_Aggiudicazione_signed.pdf) `88159ae967443804…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ID 2453 - Servizi SaaS ITSM ed.1 - Avviso di Aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202453%20-%20Servizi%20SaaS%20ITSM%20ed.1%20-%20Avviso%20di%20Aggiudicazione.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2453/ID_2453_-_Servizi_SaaS_ITSM_ed.1_-_Avviso_di_Aggiudicazione.pdf) `743eb8378d40552e…` | 2026-11-06 |
 
 ## Documenti mancanti
 
@@ -122,13 +132,10 @@ Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o 
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
 | disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
 | transato e monitoraggio per lotto e listino | da verificare | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |

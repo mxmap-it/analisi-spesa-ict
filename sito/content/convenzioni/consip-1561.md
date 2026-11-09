@@ -151,7 +151,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-1561-Documentazione-UFFICIALE.zip#FirmDig_ID%201561/Allegato%20G%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20dei%20fornitori.pdf.p7m), sha256 `e1985d41140b5b1d…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [Allegato G Flusso dati per le commissioni a carico dei fornitori.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID-1561-Documentazione-UFFICIALE.zip#FirmDig_ID%201561/Allegato%20G%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20dei%20fornitori.pdf.p7m), sha256 `e1985d41140b5b1d…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

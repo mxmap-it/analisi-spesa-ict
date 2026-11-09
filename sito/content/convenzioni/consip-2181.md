@@ -158,7 +158,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.15%20-%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `75b744bba0de48e7…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID2181 - Gara AQ SGM ed.1 - All.15 - Flusso per le commissioni a carico del Fornitore.pdf.](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20ID2181%20-%20NEW.zip#ID2181%20-%20Gara%20AQ%20SGM%20ed.1%20-%20All.15%20-%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `75b744bba0de48e7…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

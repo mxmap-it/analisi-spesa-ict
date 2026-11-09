@@ -115,7 +115,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID%202223%20-%20Reti%20locali%208%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5114570701b5f7ec…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2223 - Reti locali 8 - Allegato A - Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202223%20-%20DOC%20UFF_0.zip#ID%202223%20-%20Reti%20locali%208%20-%20Allegato%20A%20-%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5114570701b5f7ec…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

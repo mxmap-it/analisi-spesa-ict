@@ -184,7 +184,7 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202425%20DOCUMENTAZIONE%20UFF%20NEW.zip#ID%202425%20documentazione%20NEW%20pdf_firmata/ID%202425%20-%20Allegato%2017%20–%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5f002865a2e68673…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2425 - Allegato 17 – Flusso dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202425%20DOCUMENTAZIONE%20UFF%20NEW.zip#ID%202425%20documentazione%20NEW%20pdf_firmata/ID%202425%20-%20Allegato%2017%20–%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `5f002865a2e68673…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

@@ -2,7 +2,7 @@
 title: 'Polo Strategico Nazionale (PPP, Presidenza del Consiglio) (CIG 9066973ECE): documenti pubblicati e mancanti'
 date: '2026-11-05'
 lastmod: '2026-11-06'
-description: 'CIG 9066973ECE, PRESIDENZA DEL CONSIGLIO DEI MINISTRI, CIG 9066973ECE: 45 documenti pubblicati e archiviati con sha256, 6 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+description: 'CIG 9066973ECE, PRESIDENZA DEL CONSIGLIO DEI MINISTRI, CIG 9066973ECE: 51 documenti pubblicati e archiviati con sha256, 6 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
 keywords:
 - CIG 9066973ECE
 - PRESIDENZA DEL CONSIGLIO DEI MINISTRI
@@ -17,13 +17,13 @@ breadcrumb:
   url: /
 - nome: Convenzioni ICT
   url: /convenzioni/
-jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Polo Strategico Nazionale (PPP, Presidenza del Consiglio) (CIG 9066973ECE)", "description": "CIG 9066973ECE, PRESIDENZA DEL CONSIGLIO DEI MINISTRI, CIG 9066973ECE: 45 documenti pubblicati e archiviati con sha256, 6 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/psn/", "identifier": ["CIG 9066973ECE", "9066973ECE"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Polo Strategico Nazionale (PPP, Presidenza del Consiglio)", "provider": {"@type": "GovernmentOrganization", "name": "PRESIDENZA DEL CONSIGLIO DEI MINISTRI"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG 9066973ECE", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/psn/"}]}]}'
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa Polo Strategico Nazionale (PPP, Presidenza del Consiglio) (CIG 9066973ECE)", "description": "CIG 9066973ECE, PRESIDENZA DEL CONSIGLIO DEI MINISTRI, CIG 9066973ECE: 51 documenti pubblicati e archiviati con sha256, 6 mancanti (3 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/psn/", "identifier": ["CIG 9066973ECE", "9066973ECE"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "Polo Strategico Nazionale (PPP, Presidenza del Consiglio)", "provider": {"@type": "GovernmentOrganization", "name": "PRESIDENZA DEL CONSIGLIO DEI MINISTRI"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG 9066973ECE", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/psn/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 45 documenti pubblicati e archiviati; **6 mancanti**: 3 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 2 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 51 documenti pubblicati e archiviati; **6 mancanti**: 3 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 2 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -41,7 +41,7 @@ Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza
 | Durata | Durata: 13 anni (3 di allestimento + 10 di esercizio); Contratti di Utenza fino a 10 anni (fonte: Guida; livello V; da 9066973ECE-polo-strategico-nazionale.md) |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | Secure Public Cloud (Azure, Google, AWS), PSN Managed (Oracle Alloy), Hybrid (Azure Stack) = extra-UE; Industry Standard erogato in proprio = IT (criteri-sovranita 3/11) |
-| Copertura documentale | 36 % dei tipi di documento attesi |
+| Copertura documentale | 57 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -75,10 +75,10 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
 | bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
-| disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
+| disciplinare o condizioni della procedura | **archiviato** | consip.it o sito dell'aggregatore (pacchetto documentazione) |  |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
-| schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
+| schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
+| listini e appendici di prezzo | **archiviato** | consip.it, acquistinretepa (scheda dell'iniziativa) |  |
 | determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
@@ -96,6 +96,12 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 | Tipo | Documento | Originale | Copia (sha256) | Acquisita |
 |---|---|---|---|---|
 | bando o avviso di gara (GUUE) | bando TED Difesa Servizi: PPP realizzazione e gestione del Polo Strategico Nazionale, CIG  | [link](https://ted.europa.eu/it/notice/57802-2022/xml) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/bando_TED_Difesa_Servizi_PPP_realizzazione_e_gestione_del_Polo_Strategico_Nazionale_CIG_9066973ECE.xml) `05c72e72723c6256…` |  |
+| bando o avviso di gara (GUUE) | Avviso di proroga gara PSN.pdf | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Avviso%20di%20proroga%20gara%20PSN.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Avviso_di_proroga_gara_PSN.pdf) `2f08709cea88c307…` | 2026-11-06 |
+| bando o avviso di gara (GUUE) | Bando_di_Gara (5).pdf | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Bando_di_Gara%20(5).pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Bando_di_Gara_5_.pdf) `763b0a32f00a69f1…` | 2026-11-06 |
+| disciplinare o condizioni della procedura | Disciplinare_di_gara_PSN___1__signed (1).pdf | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Disciplinare_di_gara_PSN___1__signed%20(1).pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Disciplinare_di_gara_PSN_1_signed_1_.pdf) `48726eabaeba6ba0…` | 2026-11-06 |
+| schema di accordo quadro o di convenzione | Allegato_10___Addendum_Schema_di_Convenzione_in_Allegato_3___sub_6.pdf | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Allegato_10___Addendum_Schema_di_Convenzione_in_Allegato_3___sub_6.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Allegato_10_Addendum_Schema_di_Convenzione_in_Allegato_3_sub_6.pdf) `69025cde8c5cdb4f…` | 2026-11-06 |
+| schema di accordo quadro o di convenzione | Allegato_3___sub_6___Bozza_di_Convenzione_con_allegati.pdf | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Allegato_3___sub_6___Bozza_di_Convenzione_con_allegati.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Allegato_3_sub_6_Bozza_di_Convenzione_con_allegati.pdf) `df9b2e5b3e4750b0…` | 2026-11-06 |
+| listini e appendici di prezzo | Allegato_8___Listino_servizi.xlsx | [link](https://presidenza.governo.it/AmministrazioneTrasparente/BandiContratti/Procedure_LavoriFornitureServizi/AvvisiBandiInviti/PoloStrategicoNazionale/Allegato_8___Listino_servizi.xlsx) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/Allegato_8_Listino_servizi.xlsx) `5448c04d861793ae…` | 2026-11-06 |
 | avviso di aggiudicazione o esito | aggiudicazione TED, stesso CIG | [link](https://ted.europa.eu/it/notice/492519-2022/xml) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/aggiudicazione_TED_stesso_CIG.xml) `aec5af83743e3e08…` |  |
 | ordinativi e contratti attuativi delle PA | D02 Ministero della Difesa (Stato Maggiore) 2023-0000080248290589-PPdF-P1R2M1 | [link](https://www.difesa.it/assets/allegati/87186/lettera_attivazione_servizi.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/lettera_attivazione_servizi.pdf) `5538351b3c703889…` |  |
 | ordinativi e contratti attuativi delle PA | D03 Ministero della Difesa | [link](https://www.difesa.it/assets/allegati/57142/determinapsn.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/psn/determinapsn.pdf) `91b85db46e3e1db4…` |  |
@@ -174,10 +180,7 @@ Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o 
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
-| listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
 | determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
 | risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |

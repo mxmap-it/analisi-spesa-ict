@@ -2,7 +2,7 @@
 title: 'SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556: documenti pubblicati e mancanti'
 date: '2026-11-05'
 lastmod: '2026-11-06'
-description: 'ID 2556, Consip, CIG 9774270EC1: 0 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+description: 'ID 2556, Consip, CIG 9774270EC1: 8 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
 keywords:
 - ID 2556
 - Consip
@@ -17,13 +17,13 @@ breadcrumb:
   url: /
 - nome: Convenzioni ICT
   url: /convenzioni/
-jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556", "description": "ID 2556, Consip, CIG 9774270EC1: 0 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2556/", "identifier": ["ID 2556", "9774270EC1"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2556", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2556/"}]}]}'
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556", "description": "ID 2556, Consip, CIG 9774270EC1: 8 documenti pubblicati e archiviati con sha256, 8 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2556/", "identifier": ["ID 2556", "9774270EC1"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "SERVIZI DI POSTA ELETTRONICA CERTIFICATA (PEC) 2 - ID 2556", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "ID 2556", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/consip-2556/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 0 documenti pubblicati e archiviati; **8 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 8 documenti pubblicati e archiviati; **8 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 2 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -43,7 +43,7 @@ Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PM
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 8 % dei tipi di documento attesi |
+| Copertura documentale | 38 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -73,19 +73,34 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | pagina pubblica dell'iniziativa non ancora individuata |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
 | disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
-| determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
+| avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
+
+## Documenti presenti
+
+Link all'originale ufficiale e alla nostra copia, identica byte per byte a quella dell'archivio content-addressed del progetto (sha256 e data di acquisizione). Le copie stanno nella release [`consip-2556`](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/tag/consip-2556) del repository pubblico [mxmap-it/convenzioni-ict-documenti](https://github.com/mxmap-it/convenzioni-ict-documenti), con il manifest di tutti i file; si verificano con `sha256sum`.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2556 - Servizi PEC - REM 2 - Avviso di rettifica e proroga dei termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Avviso_di_rettifica_e_proroga_dei_termini_signed.pdf) `031540168eb0c653…` | 2026-11-06 |
+| bando o avviso di gara (GUUE) | ID 2556 - Servizi PEC - REM 2 - Avviso di rettifica e proroga dei termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Avviso%20di%20rettifica%20e%20proroga%20dei%20termini.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Avviso_di_rettifica_e_proroga_dei_termini.pdf) `100fe0078d5f02cc…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2556 - Servizi PEC - REM 2 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Determina%20a%20contrarre_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Determina_a_contrarre_signed.pdf) `9dbe4f67d31f402c…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2556 - Servizi PEC - REM 2 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Determina%20a%20contrarre.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Determina_a_contrarre.pdf) `c5548f820862605f…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2556 - Servizi PEC - REM 2 - Risposte ai Chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Risposte%20ai%20Chiarimenti_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Risposte_ai_Chiarimenti_signed.pdf) `4e71742a11f11fb5…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2556 - Servizi PEC - REM 2 - Risposte ai Chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Risposte%20ai%20Chiarimenti.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Risposte_ai_Chiarimenti.pdf) `362de38b44eafc79…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ID 2556 - Servizi PEC - REM 2 - Avviso Aggiudicazione_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Avviso%20Aggiudicazione_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Avviso_Aggiudicazione_signed.pdf) `8b30ff7f8703b97d…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ID 2556 - Servizi PEC - REM 2 - Avviso Aggiudicazione.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202556%20-%20Servizi%20PEC%20-%20REM%202%20-%20Avviso%20Aggiudicazione.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/consip-2556/ID_2556_-_Servizi_PEC_-_REM_2_-_Avviso_Aggiudicazione.pdf) `c89365fcbd4cbc10…` | 2026-11-06 |
 
 ## Documenti mancanti
 
@@ -111,14 +126,10 @@ Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o 
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
 | disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
-| avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
 | transato e monitoraggio per lotto e listino | da verificare | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |

@@ -143,7 +143,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2014%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `3fdc3e62bb253b84…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2631 - PC Desktop, Workstation e Monitor ed 3 - Allegato 14 Flusso dati commissioni.pdf](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202631%20-%20DOC%20UFF.zip#Doc%20firmati/ID%202631%20-%20PC%20Desktop,%20Workstation%20e%20Monitor%20ed%203%20-%20Allegato%2014%20Flusso%20dati%20commissioni.pdf.p7m), sha256 `3fdc3e62bb253b84…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

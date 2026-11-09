@@ -200,7 +200,7 @@ Documenti che la centrale non pubblica, trovati con la ricerca online complement
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202366%20DOC%20UFF%20NEW%202.zip#ID%202366%20%20PDF-firmati/ID%202366%20All.%2017%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `c9ee5cbb8443d5c3…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2366 All. 17 Flusso per le commissioni a carico del Fornitore.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202366%20DOC%20UFF%20NEW%202.zip#ID%202366%20%20PDF-firmati/ID%202366%20All.%2017%20Flusso%20per%20le%20commissioni%20a%20carico%20del%20Fornitore.pdf.p7m), sha256 `c9ee5cbb8443d5c3…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

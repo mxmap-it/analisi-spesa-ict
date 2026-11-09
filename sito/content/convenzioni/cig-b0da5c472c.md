@@ -2,7 +2,7 @@
 title: 'GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI … (CIG B0DA5C8A78): documenti pubblicati e mancanti'
 date: '2026-11-05'
 lastmod: '2026-11-06'
-description: 'CIG B0DA5C8A78, Consip, CIG B0DA5C8A78, B0DA5C9B4B, B0DA5C472C e altri: 0 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
+description: 'CIG B0DA5C8A78, Consip, CIG B0DA5C8A78, B0DA5C9B4B, B0DA5C472C e altri: 23 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.'
 keywords:
 - CIG B0DA5C8A78
 - Consip
@@ -21,13 +21,13 @@ breadcrumb:
   url: /
 - nome: Convenzioni ICT
   url: /convenzioni/
-jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL’ART.… (CIG B0DA5C8A78)", "description": "CIG B0DA5C8A78, Consip, CIG B0DA5C8A78, B0DA5C9B4B, B0DA5C472C e altri: 0 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b0da5c472c/", "identifier": ["CIG B0DA5C8A78", "B0DA5C8A78", "B0DA5C9B4B", "B0DA5C472C", "B0DA5C79A5", "B0DA5C68D2", "B0DA5CBCF1", "B0DA5CAC1E", "B0DA5C57FF"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL’ART.…", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG B0DA5C8A78", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b0da5c472c/"}]}]}'
+jsonld: '{"@context": "https://schema.org", "@graph": [{"@type": "Dataset", "name": "Documenti dell''iniziativa GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL’ART.… (CIG B0DA5C8A78)", "description": "CIG B0DA5C8A78, Consip, CIG B0DA5C8A78, B0DA5C9B4B, B0DA5C472C e altri: 23 documenti pubblicati e archiviati con sha256, 7 mancanti (5 decisivi per giurisdizione o spesa). Stato dell''accesso civico.", "url": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b0da5c472c/", "identifier": ["CIG B0DA5C8A78", "B0DA5C8A78", "B0DA5C9B4B", "B0DA5C472C", "B0DA5C79A5", "B0DA5C68D2", "B0DA5CBCF1", "B0DA5CAC1E", "B0DA5C57FF"], "inLanguage": "it-IT", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": "2026-11-06", "creator": {"@type": "Organization", "name": "MxMap Italia - Analisi spesa ICT", "url": "https://analisi-spesa-ict.mxmap.it/"}, "about": {"@type": "GovernmentService", "name": "GARA A PROCEDURA APERTA, SUDDIVISA IN 8 LOTTI, PER LA STIPULA DI UNA CONVENZIONE PER OGNI LOTTO, AI SENSI DELL’ART. 26 L. N. 488 DEL 1999 E S.M.I. E DELL’ART.…", "provider": {"@type": "GovernmentOrganization", "name": "Consip"}}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://analisi-spesa-ict.mxmap.it/"}, {"@type": "ListItem", "position": 2, "name": "Convenzioni ICT", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/"}, {"@type": "ListItem", "position": 3, "name": "CIG B0DA5C8A78", "item": "https://analisi-spesa-ict.mxmap.it/convenzioni/cig-b0da5c472c/"}]}]}'
 ---
 
 <!-- Generata da tools/convenzioni/pagine.py dalla base dati report/convenzioni/database/: non modificare a mano. -->
 
 
-**In sintesi.** 0 documenti pubblicati e archiviati; **7 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
+**In sintesi.** 23 documenti pubblicati e archiviati; **7 mancanti**: 5 di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), 1 di criticità 2, 1 di criticità 1. Pagina ufficiale ricontrollata dal vivo il 2026-11-06. Accesso civico: 1 istanza in preparazione.
 
 Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)
 
@@ -47,7 +47,7 @@ Iniziative correlate: [Consip AQ Servizi applicativi in ottica cloud e Demand/PM
 | Durata | da ricavare dai documenti |
 | Listini, marchi e prodotti | da ricavare dai documenti |
 | Regola di giurisdizione | da ricavare dai documenti |
-| Copertura documentale | 8 % dei tipi di documento attesi |
+| Copertura documentale | 46 % dei tipi di documento attesi |
 
 ## Carenze di trasparenza di questa iniziativa
 
@@ -84,19 +84,49 @@ Gli importi sono la somma dell'importo dichiarato in BDNCP per i CIG derivati co
 
 | Documento | Stato | Dove | Nota |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | **da verificare** | consip.it o sito dell'aggregatore; TED | pagina pubblica dell'iniziativa non ancora individuata |
+| bando o avviso di gara (GUUE) | **archiviato** | consip.it o sito dell'aggregatore; TED |  |
 | disciplinare o condizioni della procedura | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
 | capitolato tecnico | **da verificare** | consip.it o sito dell'aggregatore (pacchetto documentazione) | pagina pubblica dell'iniziativa non ancora individuata |
-| schema di accordo quadro o di convenzione | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
+| schema di accordo quadro o di convenzione | **archiviato** | consip.it o sito dell'aggregatore |  |
 | listini e appendici di prezzo | **da verificare** | consip.it, acquistinretepa (scheda dell'iniziativa) | pagina pubblica dell'iniziativa non ancora individuata |
-| determina o decisione a contrarre | **da verificare** | consip.it o AT dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| risposte ai chiarimenti | **da verificare** | consip.it o sito dell'aggregatore | pagina pubblica dell'iniziativa non ancora individuata |
-| avviso di aggiudicazione o esito | **da verificare** | consip.it, TED | pagina pubblica dell'iniziativa non ancora individuata |
+| determina o decisione a contrarre | **archiviato** | consip.it o AT dell'aggregatore |  |
+| risposte ai chiarimenti | **archiviato** | consip.it o sito dell'aggregatore |  |
+| avviso di aggiudicazione o esito | **archiviato** | consip.it, TED |  |
 | offerta tecnica dell'aggiudicatario | **da verificare** | di norma non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | offerta economica e listino offerto | **da verificare** | acquistinretepa (catalogo) o non pubblicata | pagina pubblica dell'iniziativa non ancora individuata |
 | transato e monitoraggio per lotto e listino | **da verificare** | open data Consip (aggregato), relazioni al MEF | pagina pubblica dell'iniziativa non ancora individuata |
 | ordinativi e contratti attuativi delle PA | **da verificare** | AT degli enti; PVL (link ai documenti dal 2024) | pagina pubblica dell'iniziativa non ancora individuata |
 | CIG derivati e importi | **archiviato** | BDNCP ANAC (nostro mirror) | BDNCP ANAC, verificato (tools/analisi/padri_ict.py) |
+
+## Documenti presenti
+
+Link all'originale ufficiale e alla nostra copia, identica byte per byte a quella dell'archivio content-addressed del progetto (sha256 e data di acquisizione). Le copie stanno nella release [`cig-B0DA5C472C`](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/tag/cig-B0DA5C472C) del repository pubblico [mxmap-it/convenzioni-ict-documenti](https://github.com/mxmap-it/convenzioni-ict-documenti), con il manifest di tutti i file; si verificano con `sha256sum`.
+
+| Tipo | Documento | Originale | Copia (sha256) | Acquisita |
+|---|---|---|---|---|
+| bando o avviso di gara (GUUE) | ID 2714 - Avviso di proroga dei termini_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-%20Avviso%20di%20proroga%20dei%20termini_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_Avviso_di_proroga_dei_termini_signed.pdf) `d1707d4ceff1f4dd…` | 2026-11-06 |
+| bando o avviso di gara (GUUE) | ID 2714 - Avviso di proroga dei termini.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20Avviso%20di%20proroga%20dei%20termini.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_Avviso_di_proroga_dei_termini.pdf) `0f14ef5c250cb94a…` | 2026-11-06 |
+| schema di accordo quadro o di convenzione | ID 2714 - TS5 - Convenzione (Lotti 4 e 5).zip | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20TS5%20-%20Convenzione%20%28Lotti%204%20e%205%29.zip) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Convenzione_Lotti_4_e_5_.zip) `4df2ad2670f33262…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2714 - Determina a contrarre_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-%20Determina%20a%20contrarre_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_Determina_a_contrarre_signed.pdf) `6ea9035d6da4c25a…` | 2026-11-06 |
+| determina o decisione a contrarre | ID 2714 - Determina a contrarre.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20Determina%20a%20contrarre.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_Determina_a_contrarre.pdf) `798780ba5b92db71…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche_Allegato 1 NEW.xlsx.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche_Allegato%201%20NEW.xlsx.p7m) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche_Allegato_1_NEW.xlsx.p7m) `801ecc5e42687788…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche_Allegato 1.xlsx.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche_Allegato%201.xlsx.p7m) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche_Allegato_1.xlsx.p7m) `30670224f3607065…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche_signed.pdf) `fb3b9557f1e65d91…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - I Tranche chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-TS5%20-%20I%20Tranche%20chiarimenti_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_I_Tranche_chiarimenti_signed.pdf) `65de7bdd19fedc3e…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - III Tranche chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-TS5%20-%20III%20Tranche%20chiarimenti_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_III_Tranche_chiarimenti_signed.pdf) `6d5b07da866f051e…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - IV Tranche chiarimenti_signed.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202714%20-TS5%20-%20IV%20Tranche%20chiarimenti_signed.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_IV_Tranche_chiarimenti_signed.pdf) `7743d4cba0c5df16…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche.pdf) `c4f47e5d88105a6a…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche_Allegato 1 NEW.xlsx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche_Allegato%201%20NEW.xlsx) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche_Allegato_1_NEW.xlsx) `83aab120364a3d7a…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 - TS5 - Errata corrige e chiarimenti II Tranche_Allegato 1.xlsx | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-%20TS5%20-%20Errata%20corrige%20e%20chiarimenti%20II%20Tranche_Allegato%201.xlsx) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-_TS5_-_Errata_corrige_e_chiarimenti_II_Tranche_Allegato_1.xlsx) `f478afdf38c1d02c…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - I Tranche chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-TS5%20-%20I%20Tranche%20chiarimenti.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_I_Tranche_chiarimenti.pdf) `922c1ccf63a84a53…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - III Tranche chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-TS5%20-%20III%20Tranche%20chiarimenti.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_III_Tranche_chiarimenti.pdf) `7f90ad8992feb28b…` | 2026-11-06 |
+| risposte ai chiarimenti | ID 2714 -TS5 - IV Tranche chiarimenti.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ID%202714%20-TS5%20-%20IV%20Tranche%20chiarimenti.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ID_2714_-TS5_-_IV_Tranche_chiarimenti.pdf) `fe8b674294f0b992…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2714 L. 4-5.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/AVVISO%20DI%20ESITO%20ID%202714%20L.%204-5.pdf.p7m) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/AVVISO_DI_ESITO_ID_2714_L._4-5.pdf.p7m) `0366450a2698da24…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ESITO ID 2714 L.1-2-3 GUUE DEL 06-12-2024 S 238.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ESITO%20ID%202714%20L.1-2-3%20GUUE%20DEL%2006-12-2024%20S%20238.pdf.p7m) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ESITO_ID_2714_L.1-2-3_GUUE_DEL_06-12-2024_S_238.pdf.p7m) `490748f45be3665a…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ESITO ID 2714 L.6-7-8 GUUE DEL 06-12-2024 S 238.pdf.p7m | [link](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ESITO%20ID%202714%20L.6-7-8%20GUUE%20DEL%2006-12-2024%20S%20238.pdf.p7m) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ESITO_ID_2714_L.6-7-8_GUUE_DEL_06-12-2024_S_238.pdf.p7m) `971e7b1df94d509e…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | AVVISO DI ESITO ID 2714 L. 4-5.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/AVVISO%20DI%20ESITO%20ID%202714%20L.%204-5.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/AVVISO_DI_ESITO_ID_2714_L._4-5.pdf) `094058319da25a88…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ESITO ID 2714 L.1-2-3 GUUE DEL 06-12-2024 S 238.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ESITO%20ID%202714%20L.1-2-3%20GUUE%20DEL%2006-12-2024%20S%20238.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ESITO_ID_2714_L.1-2-3_GUUE_DEL_06-12-2024_S_238.pdf) `9eca865dc37c9659…` | 2026-11-06 |
+| avviso di aggiudicazione o esito | ESITO ID 2714 L.6-7-8 GUUE DEL 06-12-2024 S 238.pdf | [link](https://www.consip.it/sites/default/files/bandi/documentazione_non_firmata/ESITO%20ID%202714%20L.6-7-8%20GUUE%20DEL%2006-12-2024%20S%20238.pdf) | [copia](https://github.com/mxmap-it/convenzioni-ict-documenti/releases/download/cig-B0DA5C472C/ESITO_ID_2714_L.6-7-8_GUUE_DEL_06-12-2024_S_238.pdf) `9ce96e8db1dda68f…` | 2026-11-06 |
 
 ## Documenti mancanti
 
@@ -121,14 +151,9 @@ Se hai un documento dell'elenco (ad esempio l'hai ricevuto come ente aderente o 
 
 | Documento | Stato | Fonte possibile | Via |
 |---|---|---|---|
-| bando o avviso di gara (GUUE) | da verificare | consip.it o sito dell'aggregatore; TED | scraping TED |
 | disciplinare o condizioni della procedura | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
 | capitolato tecnico | da verificare | consip.it o sito dell'aggregatore (pacchetto documentazione) | scraping |
-| schema di accordo quadro o di convenzione | da verificare | consip.it o sito dell'aggregatore | scraping |
 | listini e appendici di prezzo | da verificare | consip.it, acquistinretepa (scheda dell'iniziativa) | scraping; poi richiesta a Consip o all'aggregatore |
-| determina o decisione a contrarre | da verificare | consip.it o AT dell'aggregatore | scraping |
-| risposte ai chiarimenti | da verificare | consip.it o sito dell'aggregatore | scraping |
-| avviso di aggiudicazione o esito | da verificare | consip.it, TED | scraping TED |
 | offerta tecnica dell'aggiudicatario | da verificare | di norma non pubblicata | richiesta a Consip o all'aggregatore; accesso civico generalizzato come ultima risorsa (art. 5 c. 2 d.lgs. 33/2013, limiti dell'art. 5-bis per i segreti commerciali) |
 | offerta economica e listino offerto | da verificare | acquistinretepa (catalogo) o non pubblicata | scraping di acquistinretepa senza login; poi richiesta a Consip |
 | transato e monitoraggio per lotto e listino | da verificare | open data Consip (aggregato), relazioni al MEF | richiesta a Consip del transato per lotto e listino |

@@ -152,7 +152,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fo](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202638%20-%20DOC%20UFF.zip#EE21%20-%20Allegato%204%20-%20Schema%20di%20convenzione%20-%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `2a11713c91207c37…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [EE21 - Allegato 4 - Schema di convenzione - Flusso dati per le commissioni a carico del fo](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/ID%202638%20-%20DOC%20UFF.zip#EE21%20-%20Allegato%204%20-%20Schema%20di%20convenzione%20-%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `2a11713c91207c37…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

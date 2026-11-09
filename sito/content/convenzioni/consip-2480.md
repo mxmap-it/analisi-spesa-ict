@@ -198,7 +198,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitor](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202480.zip#Doc%20firmati_ID%202480/ID%202480%20-%20Multibrand%205%20-%20Allegato%209%20-%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `fdb18188e89b4c45…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2480 - Multibrand 5 - Allegato 9 - Flusso dati per le commissioni a carico del fornitor](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202480.zip#Doc%20firmati_ID%202480/ID%202480%20-%20Multibrand%205%20-%20Allegato%209%20-%20Flusso%20dati%20per%20le%20commissioni%20a%20carico%20del%20fornitore.pdf.p7m), sha256 `fdb18188e89b4c45…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 

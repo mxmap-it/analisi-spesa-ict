@@ -137,7 +137,7 @@ Link all'originale ufficiale e alla nostra copia, identica byte per byte a quell
 
 ### Il dato esiste, ma non è pubblico
 
-- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile a Consip; campi del tracciato trovati: fattura, ordine, lotto, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202700.zip#ID%202700_AQ%20CRM%202_Doc.firm.digit/ID%202700_AQ%20CRM%202_Allegato%203a_Flussi%20dati%20commissioni.pdf.p7m), sha256 `8045472924d192d8…`.
+- **C3** (V (letto)): Allegato «flussi dati» letto il 5/11 (tools/convenzioni/leggi_flussi.py): invio mensile e semestrale a Consip; campi del tracciato trovati: fattura, ordine, imponibile; non trovati: ente, listino_prodotto, marchio (ricerca per parole nel testo, R). Documento: [ID 2700_AQ CRM 2_Allegato 3a_Flussi dati commissioni.pdf.p7m](https://www.consip.it/sites/default/files/bandi/documentazione_firmata/DOC%20UFF%20-%20ID%202700.zip#ID%202700_AQ%20CRM%202_Doc.firm.digit/ID%202700_AQ%20CRM%202_Allegato%203a_Flussi%20dati%20commissioni.pdf.p7m), sha256 `8045472924d192d8…`.
 
 ## Estratti dai documenti (automatici, da leggere)
 
