@@ -11,7 +11,7 @@ build:
   list: never
 ---
 
-**Versione 0.6 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.7 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -186,6 +186,58 @@ Domanda: quanta parte della Misura 1.2 (migrazione al cloud di Comuni, ASL, scuo
 - **S6 nasce da un dato mancante**: 7.804 CIG collegati (165 M€) senza aggiudicatario nel dataset ANAC; la candidatura PA Digitale 2026 non dice quali servizi sono stati migrati né su quale scheda ACN. Nuova **R74**.
 - Correzione al § 4: l'elenco ACN dei servizi qualificati **in CSV** è nell'archivio; resta non specchiabile il portale `catalogocloud.acn.gov.it` (R55), che ha le schede complete.
 
+### 3.2 Residuo S6, scheda comprata, infrastruttura sotto i SaaS (v0.7)
+
+Verifiche: `python tools/verifiche/pnrr12_ocds.py` (OCDS bulk ANAC → `lavoro/pnrr12/ocds-1.2.jsonl`), poi `python tools/verifiche/pnrr12_prodotto.py --data 2026-11-09`; pilota `python tools/verifiche/saas_infra_pilota.py --data 2026-11-09`. Nessun LLM.
+
+**Il residuo S6 non si riduce con le fonti archiviate** [V]. Abbiamo provato quattro vie:
+
+| Via | CIG S6 trovati (su 7.672) | Con aggiudicatario |
+|---|---|---|
+| OCDS bulk ANAC 2018-2026 (5.565 CIG 1.2 presenti) | 3.445 | **0**: solo bando, nessun award |
+| Dataset ANAC `partecipanti` | 5 | 4 con un solo partecipante |
+| Residuo S6 L3 (esiti PVL) | 977 | 0 (967 senza link) |
+| Residuo S6 L4 (pagine AT) | 114 | 0 (102 «CIG nella pagina», testo non salvato; 12 con documenti non pertinenti) |
+| Atti archiviati (`dati/atti/`) | fino a 13 | non estratto |
+
+- La catena TED, OpenCUP e PA Digitale 2026 non ha aggiudicatari per questi CIG: TED non pubblica affidamenti sotto soglia, OpenCUP e PA Digitale 2026 non riportano il fornitore.
+- **Cosa sono i CIG S6** [V]:
+  - 6.868 su 7.672 sono del 2023;
+  - mediana dell'importo 6.100 €, 6.704 sotto 40 mila €, 7.618 sotto 140 mila €;
+  - nell'oggetto, 6.757 hanno «cloud», 4.813 «1.2», 2.042 «migrazione»;
+  - sono gli affidamenti diretti dei Comuni sui pacchetti dell'avviso, registrati in ANAC senza esito.
+- **Stima per imputazione** [V, modello]: ai CIG S6 si applica la quota di big tech dei CIG attribuiti della stessa tipologia di ente e dello stesso anno, sotto 140 mila €. Risultato: +2,6 M€, quota big tech **2,0 %**. È una stima, non una misura.
+- **Precisione dell'OCDS come seconda fonte di aggiudicatari**, misurata sui 1.374 CIG che hanno sia ANAC sia OCDS: 1.269 coincidono (92,4 %). Gli scarti di quasi tutti gli esempi sono varianti del nome («TELECOM ITALIA» per TIM, «WINXPAL», «DEDAGROUP PUBLIC SERVICES» per Deda Next). La via è affidabile, ma per S6 è vuota.
+
+**Quale scheda ACN è stata comprata** [V]:
+- su 3.146 CIG S2 (150,2 M€), in **84 CIG (2,2 M€)** il nome di una scheda qualificata del fornitore compare nell'oggetto ANAC o nel lotto OCDS. Esempi: Civilia Next (Deda Next), GisMaster (Technical Design), NUVOLAcomuni (Siscom), BabylonWeb (GIES);
+- campione di 40 casi (seme 4343): **40/40 coerenti** con l'oggetto;
+- negli altri CIG S2 l'oggetto dice «migrazione al cloud» o il nome del modulo, non quello della scheda. Che il servizio comprato sia proprio una scheda qualificata resta una regola, non una misura.
+
+**Pilota sull'infrastruttura sotto i SaaS** [V, 9/11/2026]. Metodo:
+- domini delle piattaforme SaaS multi-ente già nell'archivio (≥ 15 sottodomini di enti);
+- per ciascun dominio: record A, AS di origine (Team Cymru, via DNS) e intestatario dal whois del Registro .it;
+- una richiesta per host, nessun aggiramento.
+
+| Piattaforma | Intestatario (whois) | AS che risponde |
+|---|---|---|
+| trasparenza-valutazione-merito.it, maggiolicloud.it | Maggioli S.p.A. | AS208761 Maggioli; AS200760 Dinova (IT) |
+| tuttogare.it | Studio Amica S.r.l.u. | AS12637 Seeweb (IT) |
+| portaleamministrazionetrasparente.it, etrasparenza.it | Internet Soluzioni S.r.l. | AS12637 Seeweb (IT) |
+| asmenet.it | Asmenet Soc. Cons. | AS20746 Telecom Italia (IT) |
+| acquistitelematici.it | DigitalPA s.r.l. | **AS31898 Oracle Cloud (EXTRA-UE)** |
+| soluzionipa.it | Dedagroup S.p.A. | **AS8075 Microsoft (EXTRA-UE)** |
+| traspare.com | non pubblico (.com) | **AS16509 Amazon (EXTRA-UE)** |
+| portaletrasparenza.net | non pubblico (.net) | **AS31898 Oracle Cloud (EXTRA-UE)** |
+
+- Su 10 domini di piattaforme di fornitori, **4 rispondono da un hyperscaler USA** (Oracle 2, Microsoft 1, Amazon 1) e 6 da operatori italiani. I domini regionali (toscana.it, veneto.it, sicilia.it, ecc.) non sono SaaS di fornitori e restano fuori.
+- Legati ai contratti 1.2 (S2+S3): Maggioli 572 CIG, 37,9 M€, su infrastruttura italiana. DigitalPA, Dedagroup e Studio Amica pesano poco nella 1.2 (meno di 0,2 M€ in tutto).
+- **Limiti**:
+  - si vede dove risponde il servizio pubblico (front-end), non dove stanno i dati né i backup;
+  - un CDN nasconde l'origine;
+  - l'intestatario del dominio non coincide per forza con il gestore del servizio (Deda Next ≠ Dedagroup, stesso gruppo [R]).
+- **Proposta** (da decidere): estendere il pilota ai primi 30 fornitori S2 per euro. Gli host si prendono dal servizio di ciascun ente (link della scheda ACN, link PVL e AT), con controprova sulle pagine pubbliche «sub-processor» o «trust» dei fornitori, archiviate con sha256 [R finché non coincidono con la misura DNS/AS]. Costo: poche centinaia di query DNS e una pagina per fornitore. L'evidenza va ad aggiornare **R73**.
+
 ## 4. PSN e catalogo ACN (#45)
 
 - **Catalogo ACN non specchiabile:** `catalogocloud.acn.gov.it/opendata` e `/robots.txt` rispondono **403** (Akamai) anche con User-Agent da browser e URL del progetto, dal server, il 6/11/2026 [V]. Non è una sezione di Amministrazione trasparente: vale la regola generale, non si aggira. Nuova **R55**: pubblicazione in open data scaricabile.
@@ -245,7 +297,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 1. #40: la lente testuale è al suo limite (81-89 % di richiamo). Il resto passa da lotti e convenzioni (vie 1 e 2) e dagli atti.
 2. #41: aggiudicatari dei 0,41 mld senza righe ANAC.
-3. #43: residuo S6 (7.672 CIG, 162,3 M€) dagli atti della via 6 e dagli esiti PVL; giudizio per CIG sulla scheda ACN comprata (campione S2); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
+3. #43: residuo S6 solo con atti nuovi (via 6 sui CIG S6) o accesso civico; pilota infrastruttura esteso ai primi 30 fornitori S2 (§ 3.2, da decidere); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
 4. #27: integrare nell'imbuto i 88 vincitori TED dei CIG senza aggiudicatari ANAC.
 5. #26 e #29: URL di OpenCUP, CPT e ISTAT; nuovo tentativo sui 7 file Consip.
 4. #45: catalogo ACN a mano con Fabio (consultazione da browser, non automatica) o richiesta ad ACN (R55).
@@ -254,6 +306,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.7 | 2026-11-09 | § 3.2: residuo S6 non riducibile con OCDS (3.445 CIG senza award), partecipanti, L3/L4 e atti; stima per imputazione 2,0 %; precisione OCDS 92,4 %; scheda ACN comprata 84 CIG (40/40); pilota DNS/AS sull'infrastruttura dei SaaS (4 domini su 10 su hyperscaler USA) |
 | 0.6 | 2026-11-09 | § 3.1 Misura 1.2 per prodotto: universo per tipologia, strati S1-S6 con elenco ACN dei servizi qualificati e fornitore nel testo (precisione misurata), big tech 1,7 % (73 CIG, 0,6 %) con limiti 2,1-25 %; seconda via sugli atti; R73-R74; correzione § 4 (CSV ACN archiviato) |
 | 0.5.1 | 2026-11-06 | OpenCUP e CPT trovati e specchiati; vincitori TED nell'imbuto (esito per #66); nuovi tentativi su Consip (curl con ripresa) e BDAP |
 | 0.5 | 2026-11-06 | Regole correttive e terzo campione a cieco (big tech P 100 %, R 89 %); Consip a fine giro 94/50/7; TED come fonte di esiti (88 vincitori, 298 M€); mirror SIOPE, IndicePA, PA Digitale 2026, BDAP, Eurostat, GLEIF, OpenCoesione |

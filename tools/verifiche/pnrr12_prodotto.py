@@ -28,6 +28,7 @@ PAD = R / "archivio/mirror/raw.githubusercontent.com/teamdigitale/padigitale2026
 CUP = R / "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cup/filesystem/cup_csv.zip"
 ACN = R / "archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv"
 V3 = R / "report/metodo/pnrr-contratti-v3.csv"
+OCDS = R / "lavoro/pnrr12/ocds-1.2.jsonl"
 BIGTECH = {"Microsoft", "Amazon Web Services", "Google", "Oracle", "IBM", "Salesforce", "ServiceNow", "Adobe", "Zoom",
            "Cisco Webex", "Cloudera", "VMware"}
 # controllo extra-UE noto (lente fornitore, secondaria): gruppo USA/UK/CH
@@ -69,8 +70,10 @@ def main():
     # --- elenco ACN
     acn = collections.defaultdict(lambda: collections.Counter())
     acn_nomi = {}
+    acn_schede = collections.defaultdict(list)
     for r in csv.DictReader(open(ACN, encoding="utf-8-sig"), delimiter=";"):
         k = norm(r["Nome Fornitore"]); acn[k][r["Tipologia"]] += 1; acn_nomi[k] = r["Nome Fornitore"]
+        acn_schede[k].append((r["Id Scheda"], r["Nome"], r["Tipologia"]))
     acn_keys = [k for k in acn if len(k) >= 4]
 
     def in_acn(den):
@@ -81,6 +84,15 @@ def main():
             if len(min(a, k, key=len)) >= 8 and (a.startswith(k + " ") or k.startswith(a + " ")): return a
         return None
 
+    # --- aggiudicatari dall'OCDS bulk ANAC (tools/verifiche/pnrr12_ocds.py), dove il dataset aggiudicatari manca
+    ocds_sup, ocds_lot = {}, {}
+    if OCDS.exists():
+        for l in open(OCDS, encoding="utf-8"):
+            d = json.loads(l)
+            nomi = [x["name"] for x in d["suppliers"] if x.get("name")]
+            if nomi: ocds_sup[d["cig"]] = nomi
+            t = d.get("tender") or {}
+            ocds_lot[d["cig"]] = " ".join(filter(None, (t.get("title"), t.get("lot"), t.get("description"))))
     # --- contratti v3
     rows = [r for r in csv.DictReader(open(V3, encoding="utf-8")) if r["misura"] == "1.2"]
     # token distintivi dei fornitori (per S4)
@@ -117,6 +129,21 @@ def main():
         s4_tot += 1
         if giusto(r, t): s4_ok += 1
         elif len(s4_err) < 25: s4_err.append({"cig": r["cig"], "token": t, "aggiudicatari": r["aggiudicatari"][:120]})
+    oc_ok = oc_tot = 0; oc_err = []
+    for r in rows:
+        if r["aggiudicatari"].strip() and r["cig"] in ocds_sup:
+            oc_tot += 1
+            anac = {w for a in r["aggiudicatari"].split(";") for w in norm(a).split() if len(w) >= 4}
+            if any(set(w for w in norm(n).split() if len(w) >= 4) & anac for n in ocds_sup[r["cig"]]): oc_ok += 1
+            elif len(oc_err) < 20: oc_err.append({"cig": r["cig"], "anac": r["aggiudicatari"][:100], "ocds": ocds_sup[r["cig"]][:3]})
+
+    def scheda(k, testo):
+        t = " " + norm(testo) + " "
+        for sid, nome, tip in acn_schede.get(k, []):
+            n = norm(nome)
+            if len(n) >= 6 and n != k and n.upper() not in GENERICI and f" {n} " in t: return f"{sid} {nome} ({tip})"
+        return None
+    camp_scheda = []; scheda_tot = collections.Counter()
     est = [re.compile(x, re.I) for x in GRUPPI_ESTERI]
 
     tot = collections.defaultdict(lambda: {"cig": 0, "eur": 0.0}); per_tip = collections.defaultdict(lambda: collections.defaultdict(float))
@@ -127,7 +154,8 @@ def main():
             esclusi["cig"] += 1; esclusi["eur"] += imp; continue
         tips = {cand[c]["tip"] for c in cig_cup.get(r["cig"], ()) if c in cand} or {"?"}
         tip = sorted(tips)[0] if len(tips) == 1 else "più tipologie"
-        aggs = [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]
+        aggs = [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]; fonte = ""
+        if not aggs and not r["provider"] and r["cig"] in ocds_sup: aggs = ocds_sup[r["cig"]]; fonte = " (aggiudicatario da OCDS)"
         quote = []  # (strato, giurisdizione, chi, quota)
         if r["provider"]:
             g = "EXTRA-UE big tech" if r["provider"] in BIGTECH else r["giurisdizione"]
@@ -135,12 +163,17 @@ def main():
         elif aggs:
             q = imp / len(aggs)  # RTI: parti uguali, come rivenditori v3.1
             for a in aggs:
-                if any(x.search(a) for x in est): quote.append(("S5 fornitore a controllo extra-UE (non prodotto)", "fornitore EXTRA-UE", a, q))
+                if any(x.search(a) for x in est): quote.append(("S5 fornitore a controllo extra-UE (non prodotto)" + fonte, "fornitore EXTRA-UE", a, q))
                 elif (k := in_acn(a)):
-                    quote.append(("S2 servizio qualificato ACN del fornitore", "IT", acn_nomi[k], q))
-                    if len(camp_s2) < 100000: camp_s2.append({"cig": r["cig"], "aggiudicatario": a, "fornitore_acn": acn_nomi[k], "schede": dict(acn[k])})
-                else: quote.append(("S3 fornitore italiano fuori elenco ACN", "IT (fornitore)", a, q))
-        elif (t := da_testo(r["testo"])):
+                    quote.append(("S2 servizio qualificato ACN del fornitore" + fonte, "IT", acn_nomi[k], q))
+                    if not fonte: camp_s2.append({"cig": r["cig"], "aggiudicatario": a, "fornitore_acn": acn_nomi[k], "schede": dict(acn[k])})
+                    sc_ = scheda(k, r["testo"] + " " + ocds_lot.get(r["cig"], ""))
+                    scheda_tot["cig"] += 1 / len(aggs); scheda_tot["eur"] += q
+                    if sc_:
+                        scheda_tot["cig_con_scheda"] += 1 / len(aggs); scheda_tot["eur_con_scheda"] += q
+                        camp_scheda.append({"cig": r["cig"], "fornitore": acn_nomi[k], "scheda": sc_, "testo": (r["testo"] + " | " + ocds_lot.get(r["cig"], ""))[:300]})
+                else: quote.append(("S3 fornitore italiano fuori elenco ACN" + fonte, "IT (fornitore)", a, q))
+        elif (t := da_testo(r["testo"] + " " + ocds_lot.get(r["cig"], ""))):
             quote = [("S4 fornitore riconosciuto nel testo", "IT (fornitore)", t, imp)]
         else:
             quote = [("S6 residuo", "ignoto", "", imp)]
@@ -169,12 +202,34 @@ def main():
         for x in m: via_atti["menzioni"][x] += 1
         if m and len(via_atti["esempi"]) < 30: via_atti["esempi"].append({"cig": cig, "menzioni": m, "strato": strato_cig[cig][:160]})
     via_atti["menzioni"] = dict(via_atti["menzioni"].most_common())
+    # stima del residuo S6 per imputazione: quota big tech nei CIG confrontabili attribuiti (stessa tipologia e anno, importo < 140 mila)
+    anno = {r["cig"]: r["anno"] for r in rows}
+    cfr = collections.defaultdict(lambda: [0.0, 0.0]); s6g = collections.defaultdict(float)
+    for d_ in dett:
+        imp_ = float(d_[2]); k_ = (d_[1], anno.get(d_[0]))
+        if "S6 residuo" in d_[3]: s6g[k_] += imp_
+        elif imp_ < 140000: cfr[k_][0] += imp_; cfr[k_][1] += imp_ if "EXTRA-UE big tech" in d_[3] else 0
+    s6_imp = sum(v * (cfr[k][1] / cfr[k][0] if cfr[k][0] else 0) for k, v in s6g.items())
     T = sum(v["eur"] for v in tot.values()); N = sum(v["cig"] for v in tot.values())
     bt = sum(v["eur"] for (s, g), v in tot.items() if g == "EXTRA-UE big tech")
     bt_n = sum(v["cig"] for (s, g), v in tot.items() if g == "EXTRA-UE big tech")
     res = sum(v["eur"] for (s, g), v in tot.items() if s.startswith("S6"))
     s2 = sum(v["eur"] for (s, g), v in tot.items() if s.startswith("S2"))
     random.seed(43); campione = random.sample(camp_s2, min(60, len(camp_s2)))
+    random.seed(4343); camp_sc = random.sample(camp_scheda, min(40, len(camp_scheda)))
+    with open(out_dir / "campione-scheda.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, ["cig", "fornitore", "scheda", "testo", "giudizio"]); w.writeheader()
+        for x in camp_sc: w.writerow({**x, "giudizio": ""})
+    # pilota infrastruttura (esiti/<data>/pnrr12/saas-infra-pilota.json): euro S2/S3 dei fornitori misurati
+    PIL = {"maggioli": "AS208761 Maggioli (IT)", "digitalpa": "AS31898 Oracle (EXTRA-UE)", "dedagroup": "AS8075 Microsoft (EXTRA-UE)",
+           "studio amica": "AS12637 Seeweb (IT)", "internet soluzioni": "AS12637 Seeweb (IT)"}
+    pil = collections.defaultdict(lambda: {"cig": 0.0, "eur": 0.0})
+    for d_ in dett:
+        for part in d_[3].split(" | "):
+            st, g, chi = (part.split(":", 2) + ["", ""])[:3]
+            if not (st.startswith("S2") or st.startswith("S3")): continue
+            for k_, v_ in PIL.items():
+                if norm(chi).startswith(k_): pil[f"{k_} → {v_}"]["cig"] += 1; pil[f"{k_} → {v_}"]["eur"] += float(d_[2]) / len(d_[3].split(" | "))
     with open(out_dir / "campione-s2.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, ["cig", "aggiudicatario", "fornitore_acn", "schede", "giudizio"]); w.writeheader()
         for x in campione: w.writerow({**x, "schede": json.dumps(x["schede"]), "giudizio": ""})
@@ -201,11 +256,16 @@ def main():
             "eur": round(bt), "cig": round(bt_n),
             "punto_pct_eur": pct(bt, T), "punto_pct_cig": pct(bt_n, N),
             "limite_alto_pct_eur": pct(bt + res, T),
+            "stima_s6_imputata_eur": round(s6_imp), "stima_pct_eur_con_imputazione": pct(bt + s6_imp, T),
             "nota": "limite alto = tutto il residuo S6 come big tech (caso peggiore); l'infrastruttura sotto i SaaS S2/S3 non è misurabile (R55, R73)"},
         "per_tipologia_eur": {t: {g: round(v) for g, v in d.items()} for t, d in per_tip.items()},
         "precisione_s4_censimento": {"metodo": "token scelti su metà sviluppo (sha256(CIG) pari, precisione >= 90 %, >= 3 casi), misurati sulla metà prova (dispari)", "token_tenuti": sorted(tok_re), "vincitori_con_token_nella_prova": s4_rich, "casi": s4_tot, "corretti": s4_ok, "precisione_pct": pct(s4_ok, s4_tot), "errori_esempi": s4_err},
         "s2_eur": round(s2), "acn_schede": sum(sum(c.values()) for c in acn.values()), "acn_fornitori": len(acn),
         "via_atti": via_atti,
+        "ocds": {"cig_1_2_in_ocds": len(ocds_lot), "s6_in_ocds_senza_fornitori": sum(1 for d_ in dett if "S6 residuo" in d_[3] and d_[0] in ocds_lot), "con_fornitori": len(ocds_sup), "precisione_vs_anac": {"casi": oc_tot, "corretti": oc_ok, "pct": pct(oc_ok, oc_tot), "errori_esempi": oc_err}},
+        "scheda_acn_dal_testo": {"cig_s2": round(scheda_tot["cig"], 1), "eur_s2": round(scheda_tot["eur"]), "cig_con_scheda": round(scheda_tot["cig_con_scheda"], 1),
+                                 "eur_con_scheda": round(scheda_tot["eur_con_scheda"]), "campione": "campione-scheda.csv (40, seme 4343)"},
+        "pilota_infra_eur_s2_s3": {k: {"cig": round(v["cig"], 1), "eur": round(v["eur"])} for k, v in pil.items()},
         "token_s4_candidati": len(tok), "token_s4_tenuti": len(tok_re)}
     json.dump(out, open(out_dir / "pnrr12-prodotto.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({k: v for k, v in out.items() if k != "precisione_s4_censimento"} | {"precisione_s4": {k: out["precisione_s4_censimento"][k] for k in ("casi", "corretti", "precisione_pct")}}, indent=1, ensure_ascii=False))

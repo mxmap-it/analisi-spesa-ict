@@ -92,7 +92,8 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **Big tech USA:** 13,6 M€ (1,7 %), 73 CIG (0,6 %); con il residuo alla stessa quota circa 2,1 %; caso peggiore 21,5 % (25,0 % con S5). IT prodotto (S1 IT + S2 SaaS qualificato ACN) 558,8 M€ (68,2 %); IT fornitore (S3+S4) 55,7 M€; fornitore extra-UE senza marchio 28,5 M€; ignoto 162,3 M€ (19,8 %, 7.672 CIG senza aggiudicatario).
 - **Precisione:** S2 abbinamento nome 60/60; S4 (fornitore nel testo) 86/89 sulla metà prova. Precisione per CIG della scheda ACN comprata NON misurata.
 - **Nuovo ingresso:** CSV ACN delle schede qualificate (`archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv`, 2.342 schede). R73 (infrastruttura sotto i SaaS), R74 (servizi migrati e CIG senza aggiudicatario).
-- **Prossimo:** residuo S6 dagli atti della via 6 / esiti PVL; giudizio per CIG sulla scheda comprata.
+- **v0.7 (§ 3.2):** S6 NON riducibile con le fonti archiviate: OCDS bulk (`tools/verifiche/pnrr12_ocds.py` → `lavoro/pnrr12/ocds-1.2.jsonl`) ha 3.445 CIG S6 ma senza award; partecipanti 5; L3/L4 0 aggiudicatari. S6 = affidamenti diretti 2023 dei Comuni (mediana 6.100 €). Imputazione per tipologia/anno: big tech 2,0 %. OCDS vs ANAC 92,4 % (1.269/1.374). Scheda ACN nell'oggetto: 84 CIG, 2,2 M€, 40/40 a campione. Pilota infrastruttura `tools/verifiche/saas_infra_pilota.py`: 4 domini su 10 su hyperscaler USA (DigitalPA e portaletrasparenza.net Oracle, Dedagroup Azure, traspare.com AWS); Maggioli (37,9 M€ in 1.2) su AS proprio IT; evidenza aggiunta a R73.
+- **Prossimo (da decidere con Fabio):** pilota infrastruttura esteso ai primi 30 fornitori S2 (host per ente + pagine sub-processor archiviate); S6 solo con atti nuovi o accesso civico.
 
 ## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
 - **Aggiornamento 0.5.1 (6/11, sera):**
