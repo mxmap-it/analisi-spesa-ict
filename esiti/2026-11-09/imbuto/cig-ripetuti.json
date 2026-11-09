@@ -1,0 +1,249 @@
+{
+ "ict_csv": {
+  "righe": 671540,
+  "cig_distinti": 669878,
+  "righe_in_eccesso": 1662
+ },
+ "cig_ripetuti": 1016,
+ "righe_dei_cig_ripetuti": 2678,
+ "righe_per_cig": {
+  "2": 731,
+  "3": 148,
+  "4": 66,
+  "5": 24,
+  "6": 15,
+  "7": 8,
+  "8": 6,
+  "9": 4,
+  "10": 8,
+  "11": 2,
+  "13": 2,
+  "15": 2
+ },
+ "anni": {
+  "2024": 505,
+  "2025": 511
+ },
+ "causa": {
+  "cpv-diversi": 982,
+  "righe-identiche": 34
+ },
+ "cig_con_campo_diverso_fra_le_righe": {
+  "anno": 0,
+  "importo": 0,
+  "testo": 0,
+  "cod_cpv": 982,
+  "via": 167,
+  "strato": 152,
+  "sottoclasse": 156,
+  "gruppo": 152
+ },
+ "strati_misti": {
+  "S5-ict-non-cloud+S6-residuo": 152
+ },
+ "eccesso_dal_2024_per_strato": {
+  "S0-padre-aq": {
+   "righe": 121,
+   "euro": 124803752
+  },
+  "S2-sotto-soglia": {
+   "righe": 32,
+   "euro": 4500
+  },
+  "S3-convenzione-lotto": {
+   "righe": 4,
+   "euro": 1216249802
+  },
+  "S4-marchio": {
+   "righe": 33,
+   "euro": 4862602
+  },
+  "S5-ict-non-cloud": {
+   "righe": 1099,
+   "euro": 1065269803
+  },
+  "S6-residuo": {
+   "righe": 373,
+   "euro": 278418961
+  },
+  "S3-S6": {
+   "righe": 1509,
+   "euro": 2564801168
+  }
+ },
+ "totali_dal_2024_per_regola": {
+  "tutte-le-righe-0.3.1": {
+   "S0-padre-aq": {
+    "cig": 88913,
+    "euro": 391819914807
+   },
+   "S2-sotto-soglia": {
+    "cig": 5276,
+    "euro": 937238
+   },
+   "S3-convenzione-lotto": {
+    "cig": 897,
+    "euro": 4829931823
+   },
+   "S4-marchio": {
+    "cig": 8049,
+    "euro": 3609535789
+   },
+   "S5-ict-non-cloud": {
+    "cig": 227830,
+    "euro": 92394654919
+   },
+   "S6-residuo": {
+    "cig": 55946,
+    "euro": 12504173754
+   },
+   "S3-S6": {
+    "cig": 292722,
+    "euro": 113338296285
+   }
+  },
+  "prima-riga-0.3.2": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5244,
+    "euro": 932738
+   },
+   "S3-convenzione-lotto": {
+    "cig": 893,
+    "euro": 3613682021
+   },
+   "S4-marchio": {
+    "cig": 8016,
+    "euro": 3604673187
+   },
+   "S5-ict-non-cloud": {
+    "cig": 226650,
+    "euro": 91306635677
+   },
+   "S6-residuo": {
+    "cig": 55654,
+    "euro": 12248504233
+   },
+   "S3-S6": {
+    "cig": 291213,
+    "euro": 110773495118
+   }
+  },
+  "ultima-riga-base-55.3": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5244,
+    "euro": 932738
+   },
+   "S3-convenzione-lotto": {
+    "cig": 893,
+    "euro": 3613682021
+   },
+   "S4-marchio": {
+    "cig": 8016,
+    "euro": 3604673187
+   },
+   "S5-ict-non-cloud": {
+    "cig": 226684,
+    "euro": 91306188256
+   },
+   "S6-residuo": {
+    "cig": 55620,
+    "euro": 12248951654
+   },
+   "S3-S6": {
+    "cig": 291213,
+    "euro": 110773495118
+   }
+  },
+  "cpv-ict-0.3.4": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5244,
+    "euro": 932738
+   },
+   "S3-convenzione-lotto": {
+    "cig": 893,
+    "euro": 3613682021
+   },
+   "S4-marchio": {
+    "cig": 8016,
+    "euro": 3604673187
+   },
+   "S5-ict-non-cloud": {
+    "cig": 226731,
+    "euro": 91329385116
+   },
+   "S6-residuo": {
+    "cig": 55573,
+    "euro": 12225754793
+   },
+   "S3-S6": {
+    "cig": 291213,
+    "euro": 110773495117
+   }
+  }
+ },
+ "spostamenti_ultima_riga_vs_0.3.4": [
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/hardware-infrastruttura",
+   "cig": 20,
+   "euro": 15548984.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/ict-altro",
+   "cig": 26,
+   "euro": 5611447.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/consulenza-it-altra",
+   "cig": 1,
+   "euro": 2036429.0
+  }
+ ],
+ "spostamenti_prima_riga_0.3.2_vs_0.3.4": [
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/hardware-infrastruttura",
+   "cig": 46,
+   "euro": 15411536.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/ict-altro",
+   "cig": 30,
+   "euro": 6638932.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/telefonia-connettivita",
+   "cig": 1,
+   "euro": 523932.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S5-ict-non-cloud/consulenza-it-altra",
+   "cig": 4,
+   "euro": 175039.0
+  },
+  {
+   "da": "S6-residuo/cpv-non-ict-testo-ict",
+   "a": "S6-residuo/cloud-provider-indeterminato",
+   "cig": 3,
+   "euro": 62592.0
+  }
+ ],
+ "parte_b": null
+}
