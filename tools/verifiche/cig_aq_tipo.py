@@ -5,6 +5,8 @@ Dopo tools/verifiche/cig_aq_modalita.py (6/11, per modalità). Qui:
      CIG 2007-oggi, padre assente; il tipo di adesione è il tipo di soggetto della stazione appaltante del CIG padre
      (regole di config/tipi_soggetto.yaml: consip, psn, aggregatore-regionale, consorzio-unione, altro);
   2. padre puntato che non è a sua volta un AQ/convenzione (modalità del padre), come controllo di coerenza;
+  2bis. (ex lavoro/aq_pmod.py, regola #47) per anno: modalità dei padri esistenti (quanti «contratto d'appalto»
+     invece di AQ/convenzione) e forma dei padri inesistenti (primo carattere e lunghezza del CIG puntato);
   3. imbuto (lavoro/imbuto/ict.csv): spesa ICT dei CIG discendenti per strato, collegata a un padre esistente oppure
      non collegabile (campo vuoto o padre inesistente), quindi senza il prodotto dell'AQ da ereditare.
 Base: lavoro/cig_completo (file ANAC archiviati). duckdb memory_limit 6 GB, 2 thread, temp su disco in lavoro/.
@@ -47,6 +49,13 @@ def main():
                    "quota_collegabile": round(ok / n, 4), "padre_esistente_ma_non_AQ_conv": ppn}
     tipo_tot = {tp: {"n": n, "padre_inesistente": ino} for tp, n, ino in c.execute(
         "select coalesce(ptipo,'(vuoto o padre inesistente)'), count(*), 0 from d group by 1 order by 2 desc").fetchall()}
+    pmod = collections.defaultdict(dict)
+    for a, m, n in c.execute("select anno, coalesce(pmod,''), count(*) from d where esito='padre-esistente' group by all order by 1, 3 desc").fetchall():
+        pmod[a][m or "(vuota)"] = n
+    forme = collections.defaultdict(dict)
+    for a, f, n in c.execute("""select anno, substr(aq,1,1)||':'||length(aq), count(*) from d where esito='padre-inesistente'
+            group by all order by 1, 3 desc""").fetchall():
+        forme[a][f] = n
     ict = BASE / "lavoro/imbuto/ict.csv"
     c.execute(f"""create temp table i as select distinct on (cig) cig, anno, strato, try_cast(importo as double) imp
         from read_csv('{ict}', header=true, all_varchar=true)""")
@@ -64,6 +73,7 @@ def main():
             order by hash(cig||'20261109') limit 10""").fetchall()
     out = {"generato": str(datetime.date.today()), "file": len(fs), "cig_base": c.execute("select count(*) from t").fetchone()[0],
            "sintesi_per_anno": sint, "per_anno_esito_tipo": per, "tipo_padre_totale": tipo_tot,
+           "modalita_padre_per_anno": pmod, "forma_padre_inesistente_per_anno": forme,
            "imbuto": {"file": str(ict.relative_to(BASE)), "ict_discendenti": tot[0], "importo": tot[1],
                       "non_collegabili": tot[2], "importo_non_collegabile": tot[3],
                       "quota_importo_non_collegabile": round(tot[3] / tot[1], 4) if tot[1] else None,
@@ -72,6 +82,8 @@ def main():
     o = R / "esiti" / str(datetime.date.today()) / "cig-aq"; o.mkdir(parents=True, exist_ok=True)
     json.dump(out, open(o / "tipo.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({k: out[k] for k in ("cig_base", "sintesi_per_anno", "tipo_padre_totale")}, ensure_ascii=False))
+    print(json.dumps({"modalita_padre_2025": dict(list(pmod.get("2025", {}).items())[:8]),
+                      "forma_padre_inesistente_2025": dict(list(forme.get("2025", {}).items())[:6])}, ensure_ascii=False))
     print(json.dumps({k: v for k, v in out["imbuto"].items() if k != "per_strato"}, ensure_ascii=False))
 
 

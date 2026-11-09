@@ -134,6 +134,7 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
   - chiave per un modello cloud gratuito: decide Fabio.
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
+- **0.10 (9/11):** § 4.3.1 via 6 al 9/11 (G1 196/196, G3 514/1.000, PARZIALE, proposte da revisionare; esito congelato `esiti/2026-11-09/imbuto/via6-g1g3.json`); § 4.9 #50 (0,82 % / 734 M€ CIG ICT derivati non collegabili; conteggi di lavoro/aq_pmod.py portati in `tools/verifiche/cig_aq_tipo.py`, campi modalita_padre_per_anno e forma_padre_inesistente_per_anno); § 4.10 BDAP 0.1 (1.141 M€ 2024, controvalidazione 979 M€, rapporti CIG/pagato = stima); **segnaposti § 4.11 (#57) e § 4.12 (BDAP fase 2)** da riempire quando arrivano. Per il 12/11 mancano: #57, BDAP fase 2, aggiornamento finale via 6 G3, top-5 e sintesi ricalcolate, revisione delle proposte via 6, decisione di Fabio sulla pubblicazione.
 - **0.9:** § 4.8, vincitori TED (`ted-vincitori.csv`, altro agente) come seconda fonte degli aggiudicatari: 72 CIG nell'imbuto, precisione P.IVA 89 % (riferita da #27); strati invariati (integratori, non produttori).
 - **0.8:**
   - `tools/acquisizione/piattaforme_cig.py`: adattatori portaleappalti/esop/generico; CINECA Oracle B90DB64041 scaricato da anonimo (ULA, nessun cloud); Banca d'Italia non in elenco pubblico; Terna = login (rimando JS non riconosciuto: da correggere); Calabria, CSI, Hera non trovati.
