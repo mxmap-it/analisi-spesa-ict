@@ -14,7 +14,7 @@ Usiamo **più modalità di acquisizione**, in ordine di complessità e costo cre
 | **L0** | Testo del contratto | oggetto, CPV, aggiudicatari, importo in BDNCP/ANAC | nullo | in uso |
 | **L1** | Dati strutturati collegati | collegamento all'accordo quadro (`cig_accordo_quadro`), base di conoscenza delle iniziative (Consip, PSN, regionali), dati aperti PNRR (CUP), catalogo ACN | nullo, deterministico | in uso; dipende dalla qualità dei collegamenti ANAC (R01) |
 | **L2** | Avvisi europei (TED) | per le gare sopra soglia, gli avvisi eForms contengono l'indirizzo dei documenti di gara (BT-15) | basso, deterministico | da sperimentare |
-| **L3** | Piattaforme di e-procurement | dal 2024 ogni gara passa da una piattaforma certificata (MePA, Sintel, START, piattaforme commerciali) che pubblica la documentazione | basso-medio; il link per CIG viene dalla PVL (campo `documenti_di_gara_link`, dal 2024; vedi `report/metodo/acquisizione/dettaglio-cig.md`) | basso-medio | in corso sul residuo S6 (#57, misure sotto) |
+| **L3** | Piattaforme di e-procurement | dal 2024 ogni gara passa da una piattaforma certificata (MePA, Sintel, START, piattaforme commerciali) che pubblica la documentazione | basso-medio; il link per CIG viene dalla PVL (campo `documenti_di_gara_link`, dal 2024; vedi `report/metodo/acquisizione/dettaglio-cig.md`) | basso-medio | residuo S6 finito il 7/11 (#57, misure sotto) |
 | **L4** | Crawling mirato di Amministrazione trasparente | sito dell'ente da IndicePA → sezione «Bandi di gara e contratti» → riconoscimento del software di trasparenza (pochi fornitori coprono la maggior parte degli enti) → ricerca per CIG → scaricamento | medio, deterministico e ripetibile | da sviluppare |
 | **L5** | Ricerca assistita da modello linguistico | per i casi che L1-L4 non chiudono: l'agente cerca sul web e nei siti degli enti, scarica con lo strumento di archiviazione, legge il testo estratto | alto (token) | in sperimentazione (via 6, giro 2) |
 | **L6** | Segnalazione umana | gli annotatori indicano quale documento esterno servirebbe (determina, piano dei fabbisogni, contratto, convenzione, scheda prodotto); le richieste alimentano una coda (`dati/annotazioni/documenti-da-cercare.jsonl`) per L2-L5 | tempo dei volontari | in uso ([annotazioni](../../annotazioni/)) |
@@ -27,6 +27,23 @@ Usiamo **più modalità di acquisizione**, in ordine di complessità e costo cre
 - **Una volta per sempre.** Un documento trovato resta nel dataset CIG → atti, con sha256: non si cerca più ed è riutilizzabile da chiunque.
 - **Ogni modalità è misurata.** Per ciascun livello pubblichiamo la quota di contratti chiusi, il costo e i blocchi incontrati (siti irraggiungibili, scansioni, CAPTCHA che non aggiriamo).
 - **Ogni ostacolo diventa una richiesta di policy.** Se un documento dovuto non è raggiungibile, lo segnaliamo (R16-R20): il link CIG → atto in BDNCP renderebbe superflui i livelli L4-L7.
+
+## Residuo S6: misure finali (9/11/2026, #57)
+
+Giro L3 + MePA finito il 7/11 (37.780 righe di esito, 28.583 CIG); L4 fermato dalla guardia disco il 7/11 alle 06:29 dopo 1.854 enti su 4.352 (13.380 dei 16.403 CIG senza link, i più grandi), **ripreso il 9/11** (ripartibile). Verifica ripetibile: `tools/verifiche/residuo_s6_riepilogo.py 2026-11-09` → `esiti/2026-11-09/acquisizione/residuo-s6-riepilogo.json`, `residuo-s6-piattaforme.csv`, blocchi in `residuo-s6-blocchi.csv` (`residuo_s6_copertura.py`). Ogni atto registra il livello che l'ha trovato (`dati/atti/atti-server.jsonl`, `trovato_con.livello`).
+
+| livello | CIG provati | CIG trovati | con documento | con documento che cita il CIG | euro (doc. che cita) | atti registrati |
+|---|---:|---:|---:|---:|---:|---:|
+| L3 link PVL | 11.589 | 2.483 (21,4 %) | 1.076 (9,3 %) | **453 (3,9 %)** | 262,1 M€ | 453 CIG |
+| MePA (vetrina pubblica) | 591 | 0 | 0 | 0 | 0 | — |
+| L4 «Bandi di gara e contratti» (parziale) | 13.380 (1.854 enti) | 3.487 (7,3 mld) | 869 | **79** | 42,4 M€ | 79 CIG |
+
+- **Costo:** zero token. L3 33.826 richieste, 68 ore-CIG di orologio (10 host in parallelo, ≥ 5 s per host: circa 14 ore reali); MePA 2 ore con Playwright; L4 10.311 richieste, 35 ore-ente.
+- **Esiti degli enti L4:** CIG trovati 621, sezione raggiunta senza CIG 204, sezione non trovata 320, errore 230, sito ignoto 217, blocco 174, pagina in JavaScript 88.
+- **Blocchi L3 (CIG / host):** robots.txt 1.126 / 381, HTTP 403 641 / 197, anti-bot 115 / 30, login 115 / 36, HTTP 429 2 / 1. Errori di rete 1.445.
+- **Per piattaforma (L3):** generico 7.092 CIG su 2.447 host, 402 con documento che cita il CIG; PortaleAppalti (Maggioli) 1.180 CIG, 681 bloccati (quasi tutti robots.txt), 51 con documento che cita; link alla sola home 3.292 CIG, nessun esito; esop 25, nessun esito; 234 link PVL puntano al cruscotto ANAC stesso (`dati.anticorruzione.it`). Migliori: urp.cnr.it 22, trasparenza.aci.it 17, piattaforma.asmecomm.it 12, montedoro.traspare.com 11 CIG con documento che cita il CIG. Peggiore: Intercent-ER, 109 CIG su 119 esclusi da robots.txt.
+- **Cosa sposta nell'imbuto** (input per #66, `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`, un CIG per riga): con un documento che cita il CIG, leggibile dalla via 6, **532 CIG per 304,5 M€**; di questi **S6/G3 451 CIG su 21.525 (2,1 %), 81,4 M€ su 3,84 mld (2,1 %)**; ICT incerti 2 su 70 (191,7 M€); G2 11 (24,3 M€); nuovi da RX 55 (6,8 M€); G4 13. Materiale più debole (documento senza il CIG, o solo pagina che cita il CIG): G3 1.129 + 3.083 CIG (953 M€). Il ricalcolo non è fatto qui: spetta a #66.
+- **Raccomandazioni nuove:** R66 (link PVL generici), R67 (atti AT senza CIG), R68 (robots.txt delle piattaforme certificate).
 
 ## Misure L3 sul residuo S6 (7/11/2026, parziali)
 
@@ -76,6 +93,7 @@ Dettaglio e percorso multi-livello in [prima-e-dopo-2024.md](https://github.com/
 
 | data | modifica |
 |---|---|
+| 2026-11-09 | misure finali L3, MePA e L4 (parziale) sul residuo S6, input per l'imbuto (#57, #66) |
 | 2026-11-07 | misure L3 sul residuo S6 della via 6 (#57) |
 | 2026-10-31 | prima e dopo il 2024: puntatori ai documenti nella BDNCP, misura in programma, percorso multi-livello |
 | 2026-10-29 | prima versione: livelli L0-L7, principi, prime misure |

@@ -673,3 +673,36 @@
   perche_serve: "Senza, la spesa ICT di Stato e agenzie non si somma senza doppi conteggi né si attribuisce al servizio (cloud, PSN, applicativi)"
   metrica: "Euro di trasferimenti ICT identificabili nel rendiconto; corrispettivi Sogei pubblicati per amministrazione"
   rif: ["#67"]
+- id: R66
+  destinatario: ANAC (PVL / BDNCP)
+  tipo: qualità del dato
+  stato: "verificato (9/11/2026) su 11.589 CIG con link; proposta, nessuna richiesta inviata"
+  titolo: "Il link ai documenti di gara della PVL punta spesso alla home della piattaforma o al cruscotto ANAC"
+  evidenza: "Nel residuo S6 3.292 link PVL portano alla sola home di una piattaforma e 234 al cruscotto dati.anticorruzione.it (dettaglio della stazione appaltante): per questi 3.526 CIG (30 %) nessun documento è raggiungibile"
+  prova: "esiti/2026-11-09/acquisizione/residuo-s6-piattaforme.csv; tools/verifiche/residuo_s6_riepilogo.py"
+  richiesta: "Validare in PVL che documenti_di_gara_link punti alla pagina della procedura (URL diverso dalla home, contenente o risolvente il CIG)"
+  perche_serve: "Il link per CIG è la via più economica (L3, zero token) ai documenti che dicono il prodotto acquistato"
+  metrica: "Quota di link PVL che portano a una pagina che cita il CIG (oggi 21,4 % dei CIG provati)"
+  rif: ["#57", "R30"]
+- id: R67
+  destinatario: ANAC; enti (RPCT)
+  tipo: lacuna
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Gli atti pubblicati in «Bandi di gara e contratti» spesso non riportano il CIG"
+  evidenza: "L4: degli 869 CIG trovati nelle sezioni AT con documenti collegati, solo 79 hanno un documento il cui testo contiene il CIG; L3: 1.076 con documenti, 453 con il CIG nel testo"
+  prova: "esiti/2026-11-09/acquisizione/residuo-s6-riepilogo.json"
+  richiesta: "CIG obbligatorio nel testo e nei metadati di ogni atto pubblicato ex art. 28 d.lgs. 36/2023 e art. 37 d.lgs. 33/2013"
+  perche_serve: "Senza il CIG l'atto non si collega al contratto con certezza e il contratto resta incerto nell'imbuto"
+  metrica: "Quota di documenti collegati a un CIG che contengono il CIG"
+  rif: ["#57", "#66"]
+- id: R68
+  destinatario: AgID (certificazione piattaforme); gestori delle piattaforme di e-procurement
+  tipo: accessibilità
+  stato: "verificato (9/11/2026) su 381 host; proposta, nessuna richiesta inviata"
+  titolo: "robots.txt delle piattaforme di e-procurement esclude le pagine pubbliche delle procedure"
+  evidenza: "1.126 CIG su 381 host esclusi da robots.txt (es. Intercent-ER 109 su 119, molte istanze PortaleAppalti); in più 641 CIG con HTTP 403, 115 anti-bot, 115 login"
+  prova: "esiti/2026-11-09/acquisizione/residuo-s6-blocchi.csv (sha256 e data per host)"
+  richiesta: "Fra i requisiti di certificazione, pagine di procedura e documenti pubblici indicizzabili e accessibili senza login"
+  perche_serve: "La pubblicità degli atti di gara passa dalle piattaforme dal 2024: se non sono leggibili da programma, la verifica civica non scala"
+  metrica: "Quota di host certificati con robots.txt che consente le pagine di procedura"
+  rif: ["#57", "R44"]
