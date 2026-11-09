@@ -8,6 +8,7 @@
   "properties": {
     "formato": {"const": "spesaict.accesso-civico-richiesta/1"},
     "id": {"type": "string", "pattern": "^ac-[0-9a-z-]+$", "description": "ac-<ondata>-<cf ente>-<n>"},
+    "campagna": {"type": "string", "pattern": "^cmp-[0-9a-z-]+$", "description": "id della campagna (spesaict.accesso-civico-campagna/1); facoltativo per retrocompatibilità con le bozze anteriori al 9/11/2026"},
     "ondata": {"type": "string"},
     "ente": {
       "type": "object",

@@ -1,6 +1,6 @@
 # Piattaforma di accesso civico generalizzato massivo: specifica e workflow (#58)
 
-**Versione 0.1 bozza, 9/11/2026.** Documento da rileggere con Fabio: nulla di quanto qui descritto come «da costruire» è avviato. **Nessun invio**, nessun contatto esterno.
+**Versione 0.2 bozza, 9/11/2026.** Documento da rileggere con Fabio. Costruiti (0.2) i pezzi che non dipendono dalle sue decisioni: campagna, redazione, generatore pubblico in sola anteprima (§ 2). **Nessun invio**, nessun contatto esterno.
 
 Legenda delle affermazioni: **[V]** verificato da noi su fonte primaria archiviata in `report/metodo/prove-normativa/` (con SHA256SUMS); **[R]** riferito da terzi o da memoria, non verificato; **[I]** nostra interpretazione o proposta; **[C]** stato del codice verificato nel repository il 9/11/2026.
 
@@ -10,6 +10,7 @@ Documenti collegati: `report/metodo/accesso-civico-piattaforma.md` 0.3 (elenco d
 
 | Versione | Data | Autore | Modifiche |
 |---|---|---|---|
+| 0.2 bozza | 9/11/2026 | Claude (agente) | § 2 aggiornato: costruiti schema e config della campagna (`campagna.py`, campagna 0 `cmp-spesa-ict-2026` in stato «proposta»), campo `campagna` in richiesta/evento (+ `blob_sha256`, `pubblico`, `motivo_non_pubblico` nell'evento, retrocompatibili), `bozze.py` 0.2 legato alla campagna, `redazione.py` (pezzo 9, parte a regole), `pubblica.py` (pezzi 5, 10, 11 senza job notturno, DCAT e pubblicazione) solo in anteprima con dati sintetici; 23 test. |
 | 0.1 bozza | 9/11/2026 | Claude (agente) | Prima stesura: requisiti 1-10 di Fabio, modello dati campagna, workflow, pubblicazione, dataset e mirror, template, richiedente e firma, ruoli/sicurezza/GDPR, separazione del repository, decisioni aperte, piano di costruzione. |
 
 ## Indice
@@ -69,12 +70,12 @@ Documenti collegati: `report/metodo/accesso-civico-piattaforma.md` 0.3 (elenco d
 | Macchina a stati, scadenze, festivi, termine TAR | **esiste**, 19 test | `tools/accesso_civico/stati.py` |
 | Generatore di bozze + registro `eventi.jsonl` | **esiste** (ondata 0: 30 enti, 501 voci) | `tools/accesso_civico/bozze.py`, `lavoro/accesso-civico/ondata-0-bozze/` (non in git) |
 | Adattatore PEC (invio secco di default, lettura IMAP, ricevute `daticert.xml`) | **esiste** 0.1, 8 test; firma S/MIME delle ricevute non verificata | `tools/accesso_civico/pec.py` |
-| Entità **campagna** e schema | **manca** | da fare: `schemi/accesso-civico-campagna.schema.json` |
+| Entità **campagna** e schema | **esiste** 0.1 (9/11): campagna 0 `cmp-spesa-ict-2026` in stato **«proposta»**, modelli con sha256 bloccabili; stato oltre «proposta» solo con riferimento a DECISIONI.md; `bozze.py` 0.2 la usa (`--campagna`, parametri sovrapposti a `parametri.yaml`, rifiuta modelli con sha256 diverso) | `schemi/accesso-civico-campagna.schema.json`, `config/accesso-civico/campagne/cmp-spesa-ict-2026.json`, `tools/accesso_civico/campagna.py` |
 | PDF dell'istanza con firma calligrafa o digitale | **manca** (pec.py esige `<id>.pdf` o `.pdf.p7m` già pronto) | da fare |
 | Archiviazione blob di .eml, ricevute, allegati | **parziale** (pec.py calcola sha256 dei .eml) | da collegare a `archivio/blobs/sha256/` o a un archivio dedicato |
 | Interpretazione risposte (LLM + revisione) | **manca** (oggi: coda «da-esaminare») | da fare, formato `spesaict.classificazione/1` esistente |
-| Redazione dei dati personali | **manca** | da fare |
-| Pagine pubbliche, dashboard, dataset, manifest | **manca** | da fare (Hugo in `sito/`, uscita `docs/`) |
+| Redazione dei dati personali | **esiste** 0.1 a regole (9/11): richiedente (firma, documento, CF, PEC personale salvo `template.pec_richiedente_pubblica`), CF di persona fisica, IBAN (con controllo mod 97), email non istituzionali, telefoni; eventi senza percorsi privati e senza testo dei controinteressati; `residui()` come controllo finale. **Manca**: nomi di persone fisiche di terzi (LLM + revisione, § 5.5 p. 1) e redazione distruttiva dei PDF (§ 5.5 p. 2) | `tools/accesso_civico/redazione.py` |
+| Pagine pubbliche, dashboard, dataset, manifest | **esiste in anteprima** 0.1 (9/11): pagine Hugo (panoramica, campagne, richieste, enti, dati), `dashboard.json` (totali e per campagna: stati, tempi mediana/p90, esiti, dinieghi per motivo, seguiti), dataset `dati/v/<data>/` + `ultima/` con `manifest.json`, `SHA256SUMS`, dizionario, licenza **segnaposto**; si ferma se `residui()` trova dati personali; uscita in `docs/` o `sito/` vietata. Anteprima con dati SINTETICI in `lavoro/accesso-civico/anteprima-pubblico/` sul server (non in git). Provato anche sulle 30 bozze reali dell'ondata 0 (nessun residuo). **Manca**: integrazione in `sito/` e pubblicazione (dec. Fabio), job notturno, DCAT-AP_IT, pagine documento | `tools/accesso_civico/pubblica.py` |
 | Code di lavoro per Fabio | **manca** (solo stati) | da fare |
 
 ## 3. Modello dei dati
@@ -520,5 +521,7 @@ Credenziali solo in ambiente; segreti cifrati; utente dedicato sul server; backu
 | 13 | Estrazione dati per voce (`spesaict.classificazione/1`) e ritorno all'analisi | 8 | 2 g |
 | 14 | Separazione nel repository dedicato | 1-6, dec. 9 | 1 g |
 | 15 | Informativa privacy, DPIA (bozza per Fabio) | dec. 15 | 0,5 g |
+
+**Avanzamento 0.2 (9/11):** fatti 1 (senza migrazione dell'ondata 0, che si rigenera con `bozze.py --campagna` quando Fabio decide), 9 in parte (regole, senza LLM né PDF), 5/10/11 in anteprima (senza pubblicazione, job notturno, DCAT). Test: `.venv/bin/python -m unittest tests/test_accesso_civico_pubblico.py`.
 
 Totale indicativo ≈ 18 giorni-agente; il minimo per un primo invio pubblicamente tracciato è 1-6 (≈ 6,5 g).

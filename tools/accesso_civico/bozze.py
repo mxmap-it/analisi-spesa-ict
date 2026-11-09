@@ -12,8 +12,10 @@ Uscite:
 - esiti/<data>/accesso-civico/<ondata>/riepilogo.{csv,json,md}: riepilogo committato (solo dati pubblici degli enti).
 
 Uso:
-  bozze.py <data> --ondata ondata-0 [--tetto 20] [--proponi 30 | --enti cf1,cf2,...]
-Parametri di default in config/accesso-civico/parametri.yaml (proposte, non decisioni).
+  bozze.py <data> --ondata ondata-0 [--campagna cmp-spesa-ict-2026] [--tetto 20] [--proponi 30 | --enti cf1,cf2,...]
+Parametri di default in config/accesso-civico/parametri.yaml (proposte, non decisioni), sovrascritti da quelli della
+campagna (config/accesso-civico/campagne/<id>.json, campagna.py): tetto, PEC, sollecito. Versione 0.2: campo
+«campagna» in richieste ed eventi; i modelli devono avere lo sha256 registrato nella campagna.
 """
 import argparse
 import collections
@@ -29,10 +31,11 @@ import yaml
 
 R = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import campagna as cmp  # noqa: E402
 import stati  # noqa: E402
 
 csv.field_size_limit(10**9)
-VERSIONE = "0.1"
+VERSIONE = "0.2"
 IPA = R / ("archivio/mirror/indicepa.gov.it/ipa-dati/dataset/502ff370-1b2c-4310-94c7-f39ceb7500e3/resource/"
            "3ed63523-ff9c-41f6-a6fe-980f3d9e501f/download/amministrazioni.txt")
 MODELLI = R / "config/accesso-civico/modelli"
@@ -159,11 +162,16 @@ def main():
     ap.add_argument("data")
     ap.add_argument("--ondata", default="ondata-0")
     ap.add_argument("--tetto", type=int)
+    ap.add_argument("--campagna", default="cmp-spesa-ict-2026")
     g = ap.add_mutually_exclusive_group()
     g.add_argument("--proponi", type=int, default=30)
     g.add_argument("--enti", help="codici fiscali separati da virgola")
     a = ap.parse_args()
-    p = yaml.safe_load(open(R / "config/accesso-civico/parametri.yaml", encoding="utf-8"))
+    camp = cmp.carica(a.campagna)
+    err = cmp.verifica_modelli(camp)
+    if err:
+        raise SystemExit(f"campagna {camp['id']}: modelli diversi da quelli registrati: {err}")
+    p = cmp.parametri(camp, yaml.safe_load(open(R / "config/accesso-civico/parametri.yaml", encoding="utf-8")))
     tetto = a.tetto or p["tetto_voci_per_richiesta"]
     d_es = R / "esiti" / a.data / "accesso-civico"
     f_elenco = d_es / "elenco-mancanti.csv"
@@ -214,7 +222,7 @@ def main():
             "id_richiesta": rid, "elenco_documenti": elenco_documenti(prime),
             "luogo_data": f"{rich['luogo']}, [DATA DI INVIO]"})
         locale = any(info.get("tipologia_istat", "").startswith(x) for x in LOCALI)
-        rec = {"formato": "spesaict.accesso-civico-richiesta/1", "id": rid, "ondata": a.ondata,
+        rec = {"formato": "spesaict.accesso-civico-richiesta/1", "id": rid, "campagna": camp["id"], "ondata": a.ondata,
                "ente": {"cf": cf, "nome": e["ente"], "codice_ipa": e["codice_ipa"],
                         "tipologia_istat": info.get("tipologia_istat", ""), "regione": info.get("regione", ""),
                         "difensore_civico_competente": locale},
@@ -229,7 +237,7 @@ def main():
         (out / f"{rid}.md").write_text(testo, encoding="utf-8")
         (out / f"{rid}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
         if rid not in gia:
-            stati.aggiungi(f_ev, {"id_richiesta": rid, "tipo": "creazione", "data": ora[:10], "chi": "bozze.py",
+            stati.aggiungi(f_ev, {"id_richiesta": rid, "campagna": camp["id"], "tipo": "creazione", "data": ora[:10], "chi": "bozze.py",
                                   "note": f"bozza generata, testo sha256 {sha(testo)}"})
         riepilogo.append({"id": rid, "ente": e["ente"], "cf": cf, "codice_ipa": e["codice_ipa"],
                           "tipologia_istat": info.get("tipologia_istat", ""), "regione": info.get("regione", ""),
@@ -244,7 +252,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(riepilogo[0]))
         w.writeheader()
         w.writerows(riepilogo)
-    sintesi = {"data": a.data, "ondata": a.ondata, "generato": ora, "versione": VERSIONE, "tetto": tetto,
+    sintesi = {"data": a.data, "campagna": camp["id"], "campagna_stato": camp["stato"], "ondata": a.ondata, "generato": ora, "versione": VERSIONE, "tetto": tetto,
                "enti": len(riepilogo), "voci": sum(r["voci_richiesta"] for r in riepilogo),
                "voci_A": sum(r["voci_A"] for r in riepilogo),
                "voci_rinviate": sum(r["voci_rinviate"] for r in riepilogo),

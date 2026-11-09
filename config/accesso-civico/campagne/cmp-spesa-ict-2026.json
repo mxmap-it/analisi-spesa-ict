@@ -1,0 +1,97 @@
+{
+ "formato": "spesaict.accesso-civico-campagna/1",
+ "id": "cmp-spesa-ict-2026",
+ "versione": "0.1",
+ "titolo": "Documenti mancanti della spesa ICT della PA (campagna 0, PROPOSTA)",
+ "scopo": "Ottenere i documenti (contratti, convenzioni, determine) degli affidamenti ICT che l'analisi della spesa non trova pubblicati, per completare la misura della spesa per fornitore e la sua attendibilità.",
+ "progetto": {
+  "nome": "analisi-spesa-ict",
+  "url": "https://analisi-spesa-ict.mxmap.it/",
+  "issue": "#58"
+ },
+ "responsabile": {
+  "nome": "Fabio Pietrosanti",
+  "ruolo": "responsabile della campagna"
+ },
+ "richiedente_id": null,
+ "perimetro": {
+  "enti": "Pubbliche Amministrazioni (tipologia_amm IndicePA) con voci nell'elenco unico dei mancanti; società e gestori esclusi (art. 2-bis da verificare caso per caso)",
+  "documenti": "A: convenzioni e accordi quadro con documenti mancanti; B: CIG ICT del residuo dell'imbuto senza atto pubblicato che citi il CIG",
+  "periodo": "CIG 2020-2026 dell'elenco unico del 9/11/2026"
+ },
+ "criteri": [
+  "una richiesta per ente, al massimo tetto_voci voci in ordine di priorità decrescente, poi importo",
+  "ondata 0: 30 enti, 8 con convenzioni (A), il resto dal residuo (B) a rotazione fra tipologie ISTAT, al massimo 3 per tipologia",
+  "esclusi gli enti con bozza «mancanti-*» già preparata in report/convenzioni/accesso-civico/bozze",
+  "destinatario: PEC istituzionale IndicePA (protocollo/URP), indirizzata nel testo all'ufficio che detiene i dati (DECISIONI.md 2026-11-09)"
+ ],
+ "selezione": {
+  "sorgente": "esiti/2026-11-09/accesso-civico/elenco-mancanti.csv",
+  "sorgente_sha256": null,
+  "filtri": [
+   "tipologia_amm = Pubbliche Amministrazioni",
+   "PEC presente (IndicePA o destinatari.csv)"
+  ],
+  "ordine": "priorità decrescente, poi importo",
+  "comando": "tools/accesso_civico/bozze.py 2026-11-09 --ondata ondata-0 --campagna cmp-spesa-ict-2026"
+ },
+ "parametri": {
+  "tetto_voci": 20,
+  "max_enti_ondata": 30,
+  "cadenza_giorni": 14,
+  "tetto_pec_giorno": 20,
+  "intervallo_secondi": 120,
+  "sollecito_dopo": 30
+ },
+ "modelli": {
+  "istanza": {
+   "path": "config/accesso-civico/modelli/istanza.md",
+   "sha256": "8e5d53d3d399cf5914c2b129c9596567e00cd27406571a2c91ce172f42e03ddc",
+   "versione": "0.1"
+  },
+  "sollecito": {
+   "path": "config/accesso-civico/modelli/sollecito.md",
+   "sha256": "62fd38bbbc231cf16ecde97c3800325c5d37f3f84ed8d7d23b989b3b4490becf",
+   "versione": "0.1"
+  },
+  "chiarimento": {
+   "path": "config/accesso-civico/modelli/chiarimento.md",
+   "sha256": "16e44377248ae2042293b5d61d656f73913534bc72c34b490601f436583c0afa",
+   "versione": "0.1"
+  },
+  "riesame-diniego": {
+   "path": "config/accesso-civico/modelli/riesame-diniego.md",
+   "sha256": "0843bf0e8409a0a33613e12164fca3e9510dc02c30c91f1628d83438510e52b8",
+   "versione": "0.1"
+  },
+  "riesame-silenzio": {
+   "path": "config/accesso-civico/modelli/riesame-silenzio.md",
+   "sha256": "39d0acf2eaf20aeb2660a5218fa5d2fa07e3228da88b8c9fe07f1d2bcc4e91f1",
+   "versione": "0.1"
+  },
+  "difensore-civico": {
+   "path": "config/accesso-civico/modelli/difensore-civico.md",
+   "sha256": "1d36c31699a0c3c8962d0ac90a23579ce6aeac3ab2d21f432f073c8e6cfb6045",
+   "versione": "0.1"
+  }
+ },
+ "template": {
+  "scopo_nell_istanza": false,
+  "link_pubblico": true,
+  "allegati": [],
+  "pec_richiedente_pubblica": false,
+  "nota": "opzioni § 8 della specifica: tutte PROPOSTE, da decidere con Fabio (decisioni § 15)"
+ },
+ "ondate": [
+  {
+   "id": "ondata-0",
+   "enti": 30,
+   "approvazione": null
+  }
+ ],
+ "licenza_dati": "[LICENZA: da decidere, proposta CC-BY-4.0]",
+ "stato": "proposta",
+ "creata": "2026-11-09",
+ "approvata": null,
+ "note": "Campagna 0 di prova. Richiedente, casella PEC, tetto, cadenza, licenza e approvazione dei modelli spettano a Fabio (specifica § 15). Nessun invio."
+}

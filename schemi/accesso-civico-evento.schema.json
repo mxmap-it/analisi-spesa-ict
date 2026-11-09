@@ -8,6 +8,10 @@
   "additionalProperties": false,
   "properties": {
     "formato": {"const": "spesaict.accesso-civico-evento/1"},
+    "campagna": {"type": "string", "pattern": "^cmp-[0-9a-z-]+$", "description": "id della campagna; facoltativo (retrocompatibile), altrimenti si ricava dalla richiesta"},
+    "blob_sha256": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "description": "blob citati (eml, ricevute, allegati) nell'archivio content-addressed"},
+    "pubblico": {"type": "boolean", "description": "default true; false = evento escluso dalla versione pubblica (redazione.py)"},
+    "motivo_non_pubblico": {"type": "string", "description": "da indicare se pubblico=false (specifica § 5.4)"},
     "id_richiesta": {"type": "string", "description": "id della richiesta (spesaict.accesso-civico-richiesta/1)"},
     "tipo": {"enum": ["creazione", "approvazione", "annullamento", "invio", "mancata-consegna", "consegna",
                       "richiesta-chiarimento", "invio-chiarimento", "comunicazione-controinteressati",
