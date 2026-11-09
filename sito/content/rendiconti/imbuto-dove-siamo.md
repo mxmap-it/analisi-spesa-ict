@@ -21,7 +21,8 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **Via 6, a oggi e parziale** (§ 4.3.1): G1 classificato per intero (196 CIG, 4,70 mld), G3 a metà (514 dei primi 1.000 CIG, 1,15 dei 1,55 mld). In G1 la via 6 propone 1,21 mld non ICT (verso S1), 1,77 mld ICT non cloud (verso S5), 83 M€ cloud certo, 1,64 mld ancora incerti [V; **proposte da revisionare**, fuori dai totali].
 - **CIG derivati da accordo quadro non collegabili** (§ 4.9, #50): dei 55.114 CIG ICT discendenti da AQ o convenzione (89,2 mld), 1.666 non si collegano a un padre esistente, per **734 M€, lo 0,82 %**. Il prodotto ereditato dall'AQ manca quindi per una quota trascurabile [V].
 - **Denominatore BDAP dello Stato centrale** (§ 4.10, #67): pagato ICT 2024 **1.141 M€** sui codici gestionali ICT, **979 M€** per la seconda via (classificazione economica) [V]. I rapporti CIG/pagato per ministero sono una **stima** di dove l'imbuto è cieco, non una percentuale di copertura.
-- **In attesa** (segnaposti § 4.11 e § 4.12): il riepilogo del residuo S6 (#57) e BDAP fase 2.
+- **Residuo S6, documenti** (§ 4.11, #57): 532 CIG per 304,5 M€ hanno un documento che cita il CIG e possono passare da incerto a leggibile; in S6/G3 sono il 2,1 % dei CIG. L4 è ancora parziale (1.901 enti su 4.352) [V].
+- **In attesa** (segnaposto § 4.12): BDAP fase 2.
 
 - **Universo:** CIG ANAC pubblicati dal 2020 (file annuali 2020-2025 + aggiornamenti mensili), SmartCIG esclusi. Dal 2024: **3.745.883 CIG**; 2020-2023: **1.967.915 CIG** [V].
 - **Esclusione certa (non ICT):** dal 2024 **3.216.533 CIG (85,9 %)**. Il 2020-2023 dà l'**82,8 %** [V]. Per escludere servono tre segnali concordi: CPV non ICT, nessun termine ICT nell'oggetto, nessun lotto o convenzione ICT. La precisione di questo strato **non è ancora misurata** (punto 1 della top-5).
@@ -61,7 +62,7 @@ Gli euro sono l'importo dichiarato (aggiudicazione, altrimenti base d'asta) e **
 | **incluso certo: cloud** (S3 + S4) | **4.537** | **1,21 mld** | 1.561 | 0,83 mld |
 | **incluso certo: infrastruttura in-house** (S4) | **894** | **0,72 mld** | 161 | 0,06 mld |
 | incerto: marchio o lotto noto, cloud da accertare (licenze, software, servizi, PSN) | 3.515 | 6,51 mld | 2.147 | 2,03 mld |
-| incerto: residuo S6 | 55.946 | 12,50 mld | 24.132 | 7,19 mld |
+| incerto: residuo S6 (di cui con documento che cita il CIG: 532 CIG, 304,5 M€, potenziale, § 4.11) | 55.946 | 12,50 mld | 24.132 | 7,19 mld |
 | **totale** | **3.745.883** | **1.399,7 mld** | **1.967.915** | **966,6 mld** |
 
 ¹ Somma negativa (-1,7 milioni): ci sono importi negativi nella fonte, da segnalare con il problema degli importi.
@@ -480,7 +481,7 @@ Esito sui 7 CIG dei primi 50 EA e dei primi 20 Oracle che hanno un link PVL (`pi
 
 ### 4.3.1 Via 6 al 9/11/2026: G1 completo, G3 parziale (nuovo in 0.10)
 
-**Parzialità dichiarata.** Fotografia del 9/11/2026, ore 12 circa: 725 CIG con esito in `report/metodo/llm/imbuto-g1g3/verificati.jsonl` (196 G1, 514 G3, 15 di controllo). G3 è al 51 % dei CIG e al 74 % degli euro della selezione; il giro continua sul server e i numeri cambieranno. Tutto è **proposta della via 6 da revisionare**: non entra nei totali dei § 1-4 finché non è rivisto. Esito congelato: `esiti/2026-11-09/imbuto/via6-g1g3.json` [V].
+**Parzialità dichiarata.** Fotografia del 9/11/2026, ore 12 circa: 725 CIG con esito in `report/metodo/llm/imbuto-g1g3/verificati.jsonl` (196 G1, 514 G3, 15 di controllo). G3 è al 51 % dei CIG e al 74 % degli euro della selezione; il giro continua sul server e i numeri cambieranno. La verifica a regole (`tools/llm/verifica_imbuto.py`, regole R1-R2, A1-A2, B1) ha corretto almeno un campo in **604 dei 725 esiti**, quasi sempre abbassando la confidenza senza fonte primaria (R2, 443 casi) o riportando un asse a «incerto» (A1 115, A2 109, B1 40) [V, dal log della verifica]. Tutto è **proposta della via 6 da revisionare**: non entra nei totali dei § 1-4 finché non è rivisto. Esito congelato: `esiti/2026-11-09/imbuto/via6-g1g3.json` [V].
 
 | gruppo | verso S1 (non ICT) | verso S5 (ICT non cloud) | cloud certo | resta incerto (S6) |
 |---|---:|---:|---:|---:|
@@ -511,9 +512,20 @@ Dalla pagina [BDAP](/progetto/bdap/) (versione 0.1, 9/11/2026). Verifica `tools/
 - **Sanità:** voce BA1620 del CE SSN 2023 (servizi di assistenza informatica), 604 M€, denominatore minimo [V].
 - **Rapporto CIG ICT / pagato ICT 2024, per ministero:** Interno 2,0; Difesa 3,5; Infrastrutture 2,2; MEF 0,17; Giustizia 0,03 [V sui conteggi, **stima** sull'interpretazione]. Un CIG vale il contratto pluriennale e il pagato è la cassa di un anno: il rapporto non è una copertura. Segnala però che MEF e Giustizia spendono in ICT soprattutto fuori dai CIG che vediamo (Sogei in-house, contratti Consip), da verificare caso per caso.
 
-### 4.11 Riepilogo del residuo S6 (#57) — SEGNAPOSTO
+### 4.11 Riepilogo del residuo S6: documenti dai livelli L3, MePA, L4 (#57, nuovo in 0.10)
 
-> **Da inserire quando il riepilogo di #57 è pronto e verificato.** Contenuto atteso: copertura L3/MePA/L4 del residuo S6, CIG ed euro che escono dall'incerto, verifica in `tools/verifiche/residuo_s6_riepilogo.py` con esito datato in `esiti/`. Poi aggiornare § 1, § 2 (riga «incerto: residuo S6»), la top-5 e il § 9. In questa versione non è usata nessuna cifra di #57.
+Per il residuo S6 si cercano gli atti che dicono il prodotto, livello per livello ([acquisizione dei documenti](/progetto/acquisizione-documenti/)). Verifica `python tools/verifiche/residuo_s6_riepilogo.py 2026-11-09`, esiti `esiti/2026-11-09/acquisizione/residuo-s6-riepilogo.json` e `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`, rieseguita il 9/11/2026 [V]. In ingresso 28.583 CIG del residuo, di cui 16.403 senza link PVL (4.352 enti).
+
+| livello | CIG provati | CIG trovati | con documenti | documento che cita il CIG | stato |
+|---|---:|---:|---:|---:|---|
+| L3, link PVL | 11.589 (2,31 mld) | 2.483 (906 M€) | 1.076 (783 M€) | **453 (262,1 M€)** | finito |
+| MePA, vetrina pubblica | 591 (419 M€) | 0 | 0 | 0 | finito: nessuna pagina pubblica |
+| L4, sezione «Bandi di gara e contratti» | 1.901 enti su 4.352 | 3.514 (7,32 mld) | 871 (644 M€) | **79 (42,4 M€)** | **PARZIALE**, in corso (#68) |
+
+- **Passaggio potenziale da incerto a leggibile:** 532 CIG per 304,5 M€ hanno un documento archiviato che cita il CIG. Nel gruppo S6/G3 sono 451 su 21.525 CIG (2,1 %), cioè 81,4 M€ su 3,84 mld [V]. È un potenziale: gli strati **non sono ricalcolati** finché quei documenti non sono letti e classificati (via 6).
+- **Perché così poco:** in L3 3.292 link portano alla sola home della piattaforma (R66); 1.126 CIG su 381 host sono esclusi da robots.txt, 641 danno 403, 115 anti-bot, 115 login (R68); gli atti trovati spesso non riportano il CIG (L3: 453 su 1.076; L4: 79 su 871, R67). In L4, 174 enti finora hanno un blocco.
+- **Costo:** L3 33.826 richieste, L4 10.460 finora; nessun token.
+- **L4 è parziale:** le cifre L4 cresceranno; la fotografia è quella del 9/11.
 
 ### 4.12 BDAP fase 2 — SEGNAPOSTO
 
@@ -653,7 +665,7 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 - Gli euro includono gli importi negativi della fonte.
 - L'asse B è riportato solo per gli inclusi certi.
 - La via 6 su G3 è parziale (§ 4.3.1) e i suoi esiti sono proposte non revisionate.
-- Mancano ancora il riepilogo #57 e BDAP fase 2 (§ 4.11, § 4.12).
+- L4 del residuo S6 è parziale (§ 4.11); manca BDAP fase 2 (§ 4.12).
 
 ## Registro delle revisioni
 
@@ -668,4 +680,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.7 | 2026-11-06 | § 4.6: censimento dei prodotti negli EA Microsoft (8 atti, quota cloud pesata 92 %, forbice sul residuo 0,55-0,81 mld) e nei primi 20 Oracle (on premises probabile, 261 M€); imbuto.py 0.3.2 contro i doppioni (non ancora rigenerato) |
 | 0.8 | 2026-11-06 | § 4.7: adattatori per piattaforme di e-procurement (PortaleAppalti, esop, generico); CINECA Oracle raggiunto da anonimo (ULA, nessun cloud); 5 atti Oracle, 0 con cloud; 3 ricerche EA in più (0 atti); rigenerazione 0.3.2 rinviata |
 | 0.9 | 2026-11-06 | § 4.8: TED come seconda fonte degli aggiudicatari (84 CIG, 72 nell'imbuto; precisione P.IVA 89 % riferita da #27); nessun effetto sugli strati |
-| 0.10 | 2026-11-09 | § 4.3.1: via 6 al 9/11 (G1 196/196, G3 514/1.000, parziale e da revisionare); § 4.9: CIG derivati da AQ non collegabili, 0,82 % / 734 M€ (#50), conteggi di aq_pmod.py portati in cig_aq_tipo.py; § 4.10: BDAP 0.1, pagato ICT Stato 1.141 M€ 2024 e controvalidazione 979 M€, rapporti CIG/pagato come stima; segnaposti § 4.11 (#57) e § 4.12 (BDAP fase 2); § 9 e limiti aggiornati |
+| 0.10 | 2026-11-09 | § 4.3.1: via 6 al 9/11 (G1 196/196, G3 514/1.000, parziale e da revisionare); § 4.9: CIG derivati da AQ non collegabili, 0,82 % / 734 M€ (#50), conteggi di aq_pmod.py portati in cig_aq_tipo.py; § 4.10: BDAP 0.1, pagato ICT Stato 1.141 M€ 2024 e controvalidazione 979 M€, rapporti CIG/pagato come stima; § 4.11: riepilogo del residuo S6 (#57: L3 453 CIG/262,1 M€, MePA 0, L4 parziale 79/42,4 M€, potenziale 532 CIG/304,5 M€); correzioni della verifica a regole (604 su 725); segnaposto § 4.12 (BDAP fase 2); § 9 e limiti aggiornati |
