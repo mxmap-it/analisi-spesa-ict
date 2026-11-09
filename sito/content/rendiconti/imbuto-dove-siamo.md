@@ -11,13 +11,14 @@ build:
   list: never
 ---
 
-**Versione 0.11 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
+**Versione 0.12 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
 ## 1. Sintesi
 
-**Nuovo in 0.10 e 0.11 (9/11/2026):**
+**Nuovo in 0.10-0.12 (9/11/2026):**
+- **CIG ripetuti, correzione del totale** (§ 2.6, R53, 0.12): il 55,3 mld di S3-S6 dal 2024 era sottostimato di circa 0,43 mld, quasi tutto S5. Con una riga per CIG il totale è **circa 55,7 mld**: è una **stima** fino alla rigenerazione con la regola imbuto 0.3.4 (`tools/verifiche/imbuto_cig_ripetuti.py`) [V sui conteggi].
 - **Via 6, a oggi e parziale** (§ 4.3.1): G1 classificato per intero (196 CIG, 4,70 mld), G3 a metà (514 dei primi 1.000 CIG, 1,15 dei 1,55 mld). In G1 la via 6 propone 1,21 mld non ICT (verso S1), 1,77 mld ICT non cloud (verso S5), 83 M€ cloud certo, 1,64 mld ancora incerti [V; **proposte da revisionare**, fuori dai totali].
 - **CIG derivati da accordo quadro non collegabili** (§ 4.9, #50): dei 55.114 CIG ICT discendenti da AQ o convenzione (89,2 mld), 1.666 non si collegano a un padre esistente, per **734 M€, lo 0,82 %**. Il prodotto ereditato dall'AQ manca quindi per una quota trascurabile [V].
 - **Denominatore BDAP dello Stato centrale** (§ 4.10, #67): pagato ICT 2024 **1.141 M€** sui codici gestionali ICT, **979 M€** per la seconda via (classificazione economica) [V]. I rapporti CIG/pagato per ministero sono una **stima** di dove l'imbuto è cieco, non una percentuale di copertura. Con l'abbinamento per codice fiscale (0.11, § 4.12) il buco della Giustizia si rivela un artefatto della regola sul nome (0,96 nel 2024); resta il **MEF** (0,25 nel 2024), circa **0,3 miliardi l'anno** [V sui conteggi, stima sull'interpretazione].
@@ -41,7 +42,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **Piattaforme e Oracle (nuovo in 0.8):** l'adattatore per PortaleAppalti ha scaricato da anonimo l'aggiudicazione Oracle di CINECA: ULA, nessun cloud. Nessuno dei 5 atti Oracle letti contiene servizi cloud (0-43 %). Per gli EA Microsoft la ricerca per ente non rende: 1 atto su 50 (§ 4.7).
 - **EA Microsoft e Oracle (nuovo in 0.7):** negli 8 atti di adesione agli EA letti la quota cloud pesata è il 92 % (8 su 8 a prevalenza cloud, 68-100 %). Sul residuo Microsoft di 819 M€ la forbice cloud passa a 0,55-0,81 mld, con un campione non casuale. I primi 20 Oracle (261 M€) sono supporto e rinnovi: on premises probabile (§ 4.6).
 - **Doppioni e licenze (nuovo in 0.6):**
-  - 11.043 righe erano un CIG ripetuto dentro lo stesso file annuale (2024 o 2025): tolte, gli strati ICT S3-S6 dal 2024 scendono a **55,3 miliardi** [V] (§ 2.6);
+  - 11.043 righe erano un CIG ripetuto dentro lo stesso file annuale (2024 o 2025): tolte, gli strati ICT S3-S6 dal 2024 scendono a **circa 55,7 miliardi** (stima corretta in 0.12, era 55,3; valore esatto alla rigenerazione 0.3.4) (§ 2.6);
   - fra licenze e marchi, cloud certo 168 M€ (extra-UE 141), non cloud certo 892 M€ (VMware 595), incerto 1,68 mld, quasi tutto EA Microsoft e licenze Oracle senza dettaglio [V] (§ 4.5).
 - **Chiusura del giro sugli incerti (nuovo in 0.5):** le sezioni AT di 40 enti, con 64 dei 79 CIG ICT incerti, non contengono **nessun atto con l'importo**; ci sono 4 blocchi (403 e CAPTCHA), già registrati. I 79 CIG (14,4 mld) restano incerti: l'ordinativo non è raggiungibile da fonti aperte (R54). E4 toglie correttamente l'importo errato in 14 casi su 15 (70-99 %), ma il quadro economico è plausibile solo in 9 su 15 (36-80 %). PNRR chiuso a 16 decreti, 537,6 M€ (§ 2.5).
 - **PNRR 1.1 (nuovo in 0.3):** lo spoglio di 15 decreti di finanziamento dà 524 milioni a 274 enti, cioè il 75 % dei ~700 milioni assegnati dichiarati da PSN [V; riferimento R] (§ 4.2).
@@ -238,7 +239,7 @@ Lettura:
 | S4 marchio | 33 | 0,005 mld | 8.016 | 3,01 mld |
 | S5 ICT non cloud | 1.744 | 1,47 mld | 226.086 | 40,18 mld |
 | S6 residuo | 312 | 0,30 mld | 55.634 | 10,77 mld |
-| **S3-S6** | 2.093 | 2,99 mld | | **55,3 mld** |
+| **S3-S6** | 2.093 | 2,99 mld | | ~~55,3 mld~~ **circa 55,7 mld** (stima 0.12) |
 
 Altri dettagli [V]:
 - nel residuo S6 i doppioni sono G1 16 righe (0,22 mld), G2 12, G3 75, G4 209;
@@ -246,6 +247,12 @@ Altri dettagli [V]:
 - i 4 doppioni di S3 sono grandi CIG di convenzione, già trattati come tetti o incerti in § 2.2-2.4: la seconda copia non era mai stata tolta.
 
 I conteggi per gruppo differiscono da quelli della revisione della via 6 (13 in G1, 52 in G3). Qui si contano tutte le righe in eccesso, comprese le copie oltre la seconda.
+
+**Correzione in 0.12 (R53, 9/11/2026).** Verifica `tools/verifiche/imbuto_cig_ripetuti.py` (`--mirror` sul server), esito `esiti/2026-11-09/imbuto/cig-ripetuti.json`; dettagli in `report/metodo/imbuto.md`, criticità «CIG ripetuti con strati diversi» [V].
+- **Causa:** nei file annuali 2024 e 2025 un CIG ha una riga per ogni CPV. Anno, importo e testo sono identici fra le righe e cambia solo il CPV (982 dei 1.016 CIG ripetuti in `ict.csv`; gli altri 34 hanno righe identiche).
+- **Eccesso vero dal 2024 in S3-S6:** 1.509 righe e 2,565 mld (S3 1,216, S4 0,005, S5 1,065, S6 0,278), non 2,99. `imbuto_doppioni.py` toglieva anche righe che la 0.3.1 metteva in S1 (285 CIG, 0,267 mld) e copie in più di 87 CIG (0,159 mld).
+- **Totale S3-S6 dal 2024, una riga per CIG:** circa **55,7 mld** (+0,43 mld, quasi tutto S5). È una **stima**: il valore esatto si avrà alla rigenerazione con la regola imbuto 0.3.4 (`DEDUP_CPV`), dopo la via 6, perché va combinato con i tetti.
+- **Strati incoerenti:** 152 CIG ripetuti stanno insieme in S5 e in S6, e lo strato dipende dalla riga tenuta. La regola 0.3.4 classifica con il più basso dei CPV ICT del CIG; l'effetto stimato fra S6 e S5 è di 47 CIG e 23,2 M€.
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -699,6 +706,7 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 - L'asse B è riportato solo per gli inclusi certi.
 - La via 6 su G3 è parziale (§ 4.3.1) e i suoi esiti sono proposte non revisionate.
 - L4 del residuo S6 è parziale (§ 4.11).
+- **CIG ripetuti (R53):** nei file ANAC 2024-2025 un CIG ha una riga per CPV; finché `ict.csv` non è rigenerato con la regola 0.3.4 il totale S3-S6 dal 2024 (circa 55,7 mld) è una stima e 152 CIG hanno lo strato S5/S6 dipendente dall'ordine del file (§ 2.6).
 - SIOPE via BDAP è confrontato con la fonte diretta solo per 5 regioni su 20 (§ 4.12).
 
 ## Registro delle revisioni
@@ -716,3 +724,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.9 | 2026-11-06 | § 4.8: TED come seconda fonte degli aggiudicatari (84 CIG, 72 nell'imbuto; precisione P.IVA 89 % riferita da #27); nessun effetto sugli strati |
 | 0.10 | 2026-11-09 | § 4.3.1: via 6 al 9/11 (G1 196/196, G3 514/1.000, parziale e da revisionare); § 4.9: CIG derivati da AQ non collegabili, 0,82 % / 734 M€ (#50), conteggi di aq_pmod.py portati in cig_aq_tipo.py; § 4.10: BDAP 0.1, pagato ICT Stato 1.141 M€ 2024 e controvalidazione 979 M€, rapporti CIG/pagato come stima; § 4.11: riepilogo del residuo S6 (#57: L3 453 CIG/262,1 M€, MePA 0, L4 parziale 79/42,4 M€, potenziale 532 CIG/304,5 M€); correzioni della verifica a regole (604 su 725); segnaposto § 4.12 (BDAP fase 2); § 9 e limiti aggiornati |
 | 0.11 | 2026-11-09 | § 4.12 BDAP fase 2: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua e durata mancante dal 2024 (R69), Sogei (R71), seconda via 2019-2024, SIOPE BDAP contro diretto (#30, R70); criticità 9 a circa 0,3 miliardi; § 1, § 4.10 e § 9 aggiornati |
+| 0.12 | 2026-11-09 | § 2.6 e § 1: CIG ripetuti (R53, `imbuto_cig_ripetuti.py`): eccesso vero 2,565 mld invece di 2,99, S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4); criticità nei limiti |
