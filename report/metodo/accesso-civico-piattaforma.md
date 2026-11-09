@@ -1,6 +1,6 @@
 # Accesso civico massivo (L7): elenco dei mancanti, piattaforme riusabili, punti normativi
 
-**Bozza 0.1 del 9/11/2026 (#58).** Documento preparatorio. **Nessuna richiesta è stata generata né inviata;
+**Bozza 0.2 del 9/11/2026 (#58).** Documento preparatorio. **Nessuna richiesta è stata inviata (le bozze dell'ondata 0 sono solo generate, § 3bis);
 nessun contatto con enti o terzi; nessuna registrazione o login.**
 
 **Legenda.** **[V]** = verificato da noi sulla fonte primaria (testo archiviato in
@@ -162,9 +162,39 @@ provenienza da confrontare con la GU o il sito della Funzione Pubblica.
 | 3.10 | Registro degli accessi pubblico, preferibilmente trimestrale (circ. 2/2017 § 9) | [V]: utile per verificare che le nostre istanze siano registrate |
 | 3.11 | Limiti di invio dei gestori PEC: policy Aruba citata da terzi con 250 destinatari per messaggi di contenuto analogo; altre fonti 500 destinatari per invio, Poste 200 invii al giorno | [R]: non verificato (la copia della policy non è scaricabile); da verificare sul contratto della casella di Fabio prima di qualunque invio |
 
+## 3bis. Modelli, registro e ondata 0 (0.2, 9/11/2026) — NESSUN INVIO
+
+Invio deciso da Fabio (DECISIONI.md 2026-11-09): PEC istituzionale IndicePA (protocollo/URP), testo indirizzato
+all'ufficio che detiene i dati (art. 5 c. 3 lett. a). Richiedente, casella PEC, tetto e ondate restano da decidere:
+i valori usati sono **proposte** in `config/accesso-civico/parametri.yaml`.
+
+- **Modelli** (`config/accesso-civico/modelli/`, Markdown con variabili `{{ }}` compatibili Jinja; Jinja non è
+  installato, il riempimento è in `bozze.py`): `istanza.md`, `sollecito.md`, `chiarimento.md`, `riesame-diniego.md`,
+  `riesame-silenzio.md`, `difensore-civico.md`. Ogni modello elenca in testa le norme citate e il file di
+  `prove-normativa/` su cui sono state verificate [V]; restano [R] solo il principio di proroga dei termini festivi
+  (art. 2963 c.c., non archiviato), il 4 ottobre festivo dal 2026 e l'art. 116 c.p.a.
+- **Registro** append-only (`schemi/accesso-civico-richiesta.schema.json`, `schemi/accesso-civico-evento.schema.json`)
+  e macchina a stati `tools/accesso_civico/stati.py`: stati bozza, approvata, inviata, consegnata,
+  sospesa-controinteressati, chiarimento, accolta, parziale, diniego, silenzio, riesame, difensore,
+  difensore-conferma, chiusa, annullata. Lo stato si ricalcola dagli eventi; silenzio e «accesso consentito» dopo il
+  difensore (art. 5 c. 8) sono derivati dalla data. Termini: 30 gg dalla consegna PEC (+ giorni di sospensione per i
+  controinteressati), riesame 20 gg (+10 Garante), presentazione del riesame 30 gg (circ. 1/2019, interpretazione),
+  difensore 30 + 30 gg. Scelte prudenti: il chiarimento **non** riavvia il termine; un solo riesame. 16 test
+  (`.venv/bin/python -m unittest tests/test_accesso_civico_stati.py`).
+- **Generatore** `tools/accesso_civico/bozze.py <data> --ondata <nome> [--tetto N] [--proponi N | --enti cf,...]`:
+  una richiesta per ente, voci in ordine di priorità fino al tetto, PEC IndicePA (ripiego su `destinatari.csv` con
+  attendibilità); testi e JSON in `lavoro/accesso-civico/<ondata>-bozze/` (non in git), evento «creazione»
+  nel registro, riepilogo committato in `esiti/<data>/accesso-civico/<ondata>/`. Le note di lavoro dell'elenco
+  («i documenti pubblicati trovati non citano il CIG» ecc.) non passano nel testo.
+- **Ondata 0 di prova [V, misurato]:** 30 enti, 501 voci (70 di convenzioni), 4,15 mld € di importi ANAC, 1.049 voci
+  oltre il tetto rinviate; 24 tipologie IPA, 12 regioni; difensore civico competente per 13 enti. Selezione proposta:
+  6 enti con convenzioni (quota 8: gli altri hanno già una bozza «mancanti-*» o non sono «Pubbliche Amministrazioni»
+  in IPA) + 24 dal residuo, a turno per tipologia (massimo 3 per tipologia). Escluse società e gestori (ambito
+  dell'art. 2-bis da verificare caso per caso). Elenco in `esiti/2026-11-09/accesso-civico/ondata-0/riepilogo.md`.
+
 ## 4. Prossimi passi (proposti, non avviati)
 
-1. Fabio: tetto per richiesta (proposta 20), cadenza delle ondate, ondata 0 di prova, scelta Froide o registro nostro.
+1. Fabio: richiedente e casella PEC, tetto per richiesta (proposta 20), cadenza delle ondate, approvazione (o modifica) dei 30 enti dell'ondata 0 e dei modelli, scelta Froide o registro nostro (il registro nostro, § 3bis, basta per l'ondata 0).
 2. RPCT e ufficio competente per i primi enti (da AT); ricerca della PEC per i 775 enti senza.
 3. Limiti della casella PEC che si userà (contratto del gestore).
 4. Archiviare l'art. 116 c.p.a. e la circolare 2/2017 dalla GU.
@@ -174,3 +204,4 @@ provenienza da confrontare con la GU o il sito della Funzione Pubblica.
 | Versione | Data | Autore | Modifiche |
 |---|---|---|---|
 | 0.1 bozza | 9/11/2026 | Claude (agente) | Prima stesura: elenco unico (28.807 voci, 6.626 enti), confronto Froide/Alaveteli/progetti italiani, punti normativi su fonti archiviate. |
+| 0.2 bozza | 9/11/2026 | Claude (agente) | § 3bis: sei modelli con norme verificate, schemi e macchina a stati con scadenze e test, generatore di bozze, ondata 0 di prova (30 enti, 501 voci), nessun invio. |

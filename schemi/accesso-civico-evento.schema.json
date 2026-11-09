@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spesaict.accesso-civico-evento/1",
+  "title": "Evento di una richiesta di accesso civico (registro append-only, #58)",
+  "description": "Una riga JSONL per evento, mai modificata né cancellata. Lo stato si ricalcola dagli eventi con tools/accesso_civico/stati.py (transizioni ammesse in TRANSIZIONI). Una correzione si fa con un evento nuovo, non riscrivendo il registro.",
+  "type": "object",
+  "required": ["formato", "id_richiesta", "tipo", "data", "registrato"],
+  "additionalProperties": false,
+  "properties": {
+    "formato": {"const": "spesaict.accesso-civico-evento/1"},
+    "id_richiesta": {"type": "string", "description": "id della richiesta (spesaict.accesso-civico-richiesta/1)"},
+    "tipo": {"enum": ["creazione", "approvazione", "annullamento", "invio", "mancata-consegna", "consegna",
+                      "richiesta-chiarimento", "invio-chiarimento", "comunicazione-controinteressati",
+                      "fine-sospensione", "sollecito", "silenzio", "risposta", "riesame", "richiesta-garante",
+                      "difensore", "pronuncia-difensore", "conferma-diniego", "chiusura"]},
+    "data": {"type": "string", "format": "date", "description": "data giuridicamente rilevante (per la consegna: data della ricevuta di avvenuta consegna PEC)"},
+    "registrato": {"type": "string", "format": "date-time", "description": "quando l'evento è stato scritto nel registro (UTC)"},
+    "chi": {"type": "string", "description": "chi registra: persona o agente; l'approvazione è solo di Fabio"},
+    "documento": {
+      "type": "object",
+      "description": "messaggio o atto che prova l'evento (PEC inviata/ricevuta, ricevuta di consegna, provvedimento)",
+      "properties": {
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "percorso": {"type": "string", "description": "percorso nell'archivio content-addressed, mai in git se contiene dati personali"},
+        "message_id": {"type": "string"},
+        "protocollo": {"type": "string", "description": "numero di protocollo dell'ente, se comunicato"}
+      }
+    },
+    "dati": {
+      "type": "object",
+      "description": "risposta: esito (accolta|parziale|diniego), voci_rilasciate, voci_negate, limite_5bis; pronuncia-difensore: esito (illegittimo|legittimo|inammissibile); fine-sospensione: opposizione (bool)",
+      "properties": {
+        "esito": {"enum": ["accolta", "parziale", "diniego", "illegittimo", "legittimo", "inammissibile"]},
+        "voci_rilasciate": {"type": "array", "items": {"type": "string"}},
+        "voci_negate": {"type": "array", "items": {"type": "string"}},
+        "limite_5bis": {"type": "string"},
+        "opposizione": {"type": "boolean"}
+      }
+    },
+    "note": {"type": "string"}
+  }
+}

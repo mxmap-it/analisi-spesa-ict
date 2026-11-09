@@ -1,0 +1,34 @@
+# Parametri dell'accesso civico massivo (#58). DEFAULT PROPOSTI, non decisi:
+# richiedente, casella PEC, tetto e ondate spettano a Fabio (decisione-fabio).
+versione: 0.1
+data: 2026-11-09
+stato: proposta  # diventa "approvata" solo con decisione di Fabio in DECISIONI.md
+
+richiedente:
+  nome: "[RICHIEDENTE: da decidere, Fabio]"
+  pec: "[CASELLA PEC DEL RICHIEDENTE: da decidere, Fabio]"
+  firma: ""
+  luogo: "[LUOGO]"
+
+tetto_voci_per_richiesta: 20     # proposta del rapporto § 4; parametrico (--tetto)
+ordine_voci: priorita            # dentro l'ente: priorità decrescente, poi importo
+
+ondata_0:
+  enti: 30
+  quota_convenzioni: 8           # enti con voci A (convenzioni), senza bozza «mancanti-*» già pronta
+  tipologia_amm: "Pubbliche Amministrazioni"   # niente società/gestori: ambito soggettivo art. 2-bis da verificare caso per caso
+  max_per_tipologia: 3
+  escludi_bozze_esistenti: report/convenzioni/accesso-civico/bozze  # enti con bozza «mancanti-*» già preparata (#58 convenzioni)
+
+termini:                         # giorni di calendario; fonti in tools/accesso_civico/stati.py
+  risposta: 30                   # art. 5 c. 6 [V]
+  controinteressati: 10          # art. 5 c. 5 [V]
+  consegna_dopo_opposizione: 15  # art. 5 c. 6 [V]
+  riesame_decisione: 20          # art. 5 c. 7 [V]
+  garante: 10                    # art. 5 c. 7 e c. 8 [V]
+  riesame_presentazione: 30      # circ. FP 1/2019 § 7 [interpretazione]
+  difensore_decisione: 30        # art. 5 c. 8 [V]
+  difensore_conferma_ente: 30    # art. 5 c. 8 [V]
+  sollecito_dopo: 30             # proposta: sollecito il giorno dopo la scadenza
+  proroga_festivi: true          # scadenza in giorno festivo -> primo giorno non festivo (art. 2963 c.c., [R] da archiviare)
+  sabato_festivo: false

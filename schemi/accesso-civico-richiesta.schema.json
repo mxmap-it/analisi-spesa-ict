@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spesaict.accesso-civico-richiesta/1",
+  "title": "Richiesta di accesso civico generalizzato a un ente (#58)",
+  "description": "Una richiesta = un ente, una PEC, al massimo `tetto` voci dell'elenco unico (esiti/<data>/accesso-civico/elenco-mancanti.csv). Immutabile dopo l'approvazione: il ciclo di vita sta negli eventi (spesaict.accesso-civico-evento/1). Stati possibili: bozza, approvata, inviata, consegnata, sospesa-controinteressati, chiarimento, accolta, parziale, diniego, silenzio, riesame, difensore, difensore-conferma, chiusa, annullata.",
+  "type": "object",
+  "required": ["formato", "id", "ondata", "ente", "destinatario", "voci", "modello", "testo_sha256", "generata"],
+  "properties": {
+    "formato": {"const": "spesaict.accesso-civico-richiesta/1"},
+    "id": {"type": "string", "pattern": "^ac-[0-9a-z-]+$", "description": "ac-<ondata>-<cf ente>-<n>"},
+    "ondata": {"type": "string"},
+    "ente": {
+      "type": "object",
+      "required": ["cf", "nome"],
+      "properties": {
+        "cf": {"type": "string"}, "nome": {"type": "string"}, "codice_ipa": {"type": "string"},
+        "tipologia_istat": {"type": "string"}, "regione": {"type": "string"},
+        "difensore_civico_competente": {"type": "boolean", "description": "atti di regioni o enti locali (art. 5 c. 8)"}
+      }
+    },
+    "destinatario": {
+      "type": "object",
+      "required": ["pec", "fonte", "attendibilita"],
+      "properties": {
+        "pec": {"type": "string"},
+        "fonte": {"type": "string", "description": "IndicePA (amministrazioni.txt, sha256) o destinatari.csv"},
+        "attendibilita": {"enum": ["A", "B", "C"]},
+        "ufficio": {"const": "ufficio che detiene i dati (art. 5 c. 3 lett. a), per il tramite del protocollo/URP"},
+        "pec_rpct": {"type": "string", "description": "solo per il riesame, se nota"}
+      }
+    },
+    "voci": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "documento_atteso"],
+        "properties": {
+          "id": {"type": "string", "description": "id della voce nell'elenco unico"},
+          "fonte": {"enum": ["A-convenzioni", "B-residuo-imbuto"]},
+          "cig": {"type": "string"}, "oggetto": {"type": "string"}, "documento_atteso": {"type": "string"},
+          "importo": {"type": ["number", "null"]}, "anno": {"type": ["string", "integer", "null"]},
+          "priorita": {"type": ["number", "null"]}
+        }
+      }
+    },
+    "voci_rinviate": {"type": "integer", "description": "voci dell'ente oltre il tetto, per le ondate successive"},
+    "tetto": {"type": "integer"},
+    "modello": {"type": "string", "description": "config/accesso-civico/modelli/<nome>.md e sua versione"},
+    "modello_sha256": {"type": "string"},
+    "testo_sha256": {"type": "string", "description": "sha256 del testo generato (il testo non va in git se contiene dati personali)"},
+    "elenco_sha256": {"type": "string", "description": "sha256 dell'elenco unico usato"},
+    "generata": {"type": "string", "format": "date-time"},
+    "approvazione": {"type": ["string", "null"], "description": "null finché Fabio non approva (evento approvazione)"}
+  }
+}
