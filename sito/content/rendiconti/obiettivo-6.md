@@ -92,33 +92,34 @@ Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-3`.
 
 ## 2. Rivenditori dei prodotti esteri (#41)
 
-### 2.1 Mappa v4.3 (v0.10; v4.2 in v0.8): chi rivende cosa, a chi, con quale capogruppo
+### 2.1 Mappa v4.5 (v0.11; v4.3 in v0.10, v4.2 in v0.8): chi rivende cosa, a chi, con quale capogruppo
 
 Per ogni rivenditore (CF/P.IVA): capogruppo e suo paese, prodotti cloud venduti (marchio → giurisdizione del **prodotto**, `config/marchi_cloud.yaml`), CIG, euro, enti. Stesso perimetro della v3.1 (contratti attuativi 2022-2026, padri di AQ e importi da verificare esclusi, RTI alla mandataria o in parti uguali), ma ogni riga è riclassificata con le regole **correnti** della lente (comprese le correzioni del § 2.3).
 
-Rifare (server; circa 6 minuti, cache GLEIF in `lavoro/rivenditori/`): `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py v4.3` → `esiti/2026-11-09/rivenditori/` (`mappa-v4.3.json`; `mappa-v4.3.csv` per rivenditore, con la fonte del capogruppo; `cig-rivenditore-v4.3.csv` per CIG; restano i file v4.2 per il confronto). Con l'argomento `v4` si ottiene la mappa con il provider congelato al 28/10.
+Rifare (server; circa 6 minuti, cache GLEIF in `lavoro/rivenditori/`): `nice -n 19 ionice -c3 .venv/bin/python tools/verifiche/rivenditori_mappa.py v4.5` → `esiti/2026-11-09/rivenditori/` (`mappa-v4.5.json`; `mappa-v4.5.csv` per rivenditore, con la fonte del capogruppo; `cig-rivenditore-v4.5.csv` per CIG; restano i file v4.2 e v4.3 per il confronto). Confronto fra versioni (leggero): `python tools/verifiche/rivenditori_confronto.py v4.3 v4.5 esiti/2026-11-09/rivenditori v4.2` → `confronto-v4.3-v4.5.json`. Con l'argomento `v4` si ottiene la mappa con il provider congelato al 28/10.
 
-| Prodotti extra-UE [V] | v4 (regole 28/10) | v4.2 | v4.3 (regole correnti) |
-|---|---|---|---|
-| Totale | 2,949 mld | 3,024 mld | 3,046 mld |
-| Canale noto (diretto + rivenditore) | 2,278 mld | 2,336 mld | 2,355 mld |
-| Via rivenditore | 1,824 mld | 1,870 mld | 1,890 mld |
-| Via rivenditore con **CF italiano** (la lente fornitore li direbbe IT) | 1,797 mld | 1,844 mld | **1,863 mld** |
-| … sul totale / sul noto | 60,9 % / 78,9 % | 61,0 % / 78,9 % | **61,2 % / 79,1 %** |
-| … CF italiano e capogruppo italiano o non trovato, sul totale | 56,2 % | 57,2 % | 57,4 % |
+| Prodotti extra-UE [V] | v4 (regole 28/10) | v4.2 | v4.3 | v4.5 (regole correnti) |
+|---|---|---|---|---|
+| Totale | 2,949 mld | 3,024 mld | 3,046 mld | 3,023 mld |
+| Canale noto (diretto + rivenditore) | 2,278 mld | 2,336 mld | 2,355 mld | 2,336 mld |
+| Via rivenditore | 1,824 mld | 1,870 mld | 1,890 mld | 1,879 mld |
+| Via rivenditore con **CF italiano** (la lente fornitore li direbbe IT) | 1,797 mld | 1,844 mld | 1,863 mld | **1,851 mld** |
+| … sul totale / sul noto | 60,9 % / 78,9 % | 61,0 % / 78,9 % | 61,2 % / 79,1 % | **61,2 % / 79,3 %** |
+| … CF italiano e capogruppo italiano o non trovato, sul totale | 56,2 % | 57,2 % | 57,4 % | 57,5 % |
 
-- **La lente fornitore sbaglia sei euro su dieci** della spesa in prodotti extra-UE. Anche risalendo al capogruppo il 57,4 % resta IT (v4.3): il problema è il canale di rivendita, non la proprietà del rivenditore [V].
-- Capogruppo dei rivenditori con CF italiano (v4.3): IT 1,595 mld; non trovato 0,153 mld; **CH 0,099 mld** (Fastweb → Swisscom 51 M€, SoftwareOne Italia → SoftwareOne Holding 48 M€); UE 11,6 M€ (es. Accenture → Accenture plc, IE); extra-UE 3,7 M€ (NTT Data Italia → NTT DATA, JP, riga curata [R]). CF assente 26,4 M€, CF estero 0,9 M€ [V].
-- v4.3: 1.402 rivenditori, 1.268 con prodotti extra-UE, 6.932 CIG (v4.2: 1.394, 1.257, 6.609). In v4.2 i prodotti extra-UE rivenduti andavano a **2.182 enti** (primi: INPS 96 M€, ANAS 61 M€, ACI Informatica 55 M€, DTD Giustizia 54 M€, Sogei 51 M€) [V].
+- **La lente fornitore sbaglia sei euro su dieci** della spesa in prodotti extra-UE. Anche risalendo al capogruppo il 57,5 % resta IT (v4.5): il problema è il canale di rivendita, non la proprietà del rivenditore [V].
+- Capogruppo dei rivenditori con CF italiano (v4.5): IT 1,589 mld; non trovato 0,149 mld; **CH 0,098 mld** (Fastweb → Swisscom 51 M€, SoftwareOne Italia → SoftwareOne Holding 48 M€); UE 11,5 M€ (es. Accenture → Accenture plc, IE); extra-UE 3,4 M€ (NTT Data Italia → NTT DATA, JP, riga curata [R]). CF assente 26,3 M€, CF estero 0,8 M€ [V].
+- v4.5: 1.348 rivenditori, 1.230 con prodotti extra-UE, 6.723 CIG (v4.3: 1.402, 1.268, 6.932; v4.2: 1.394, 1.257, 6.609). I prodotti extra-UE rivenduti vanno a **2.205 enti** (v4.3: 2.230; v4.2: 2.182, ricalcolato identico dalla verifica di confronto); primi: INPS 96 M€, ANAS 61 M€, DTD Giustizia 55 M€, ACI Informatica 55 M€, Sogei 51 M€, Informatica Alto Adige 48 M€, ANCI 46 M€ (primi 10 invariati da v4.3) [V].
+- **v4.3 → v4.5** (regole del cieco 6: servizi professionali davanti al marchio, migrazioni verso DC in-house, omonimie) [V]: escono 227 CIG ed entrano 18; prodotti extra-UE −22,1 M€ (−0,7 %), le quote si muovono di 0,1-0,2 punti. Per marchio: PSN −14 CIG / −8,0 M€, Salesforce −23 / −7,0 M€, SAP −22 / −5,1 M€, Microsoft −71 +2 / −4,7 M€, Oracle −10 / −2,7 M€, AWS −21 / −0,7 M€, Nextcloud −13, Aruba −13; Google −22 +15 / **+4,2 M€** (mancati «Google Suite» ora presi). Enti: 28 escono, 3 entrano. Campione casuale top-20 (59 CIG): 100 % dei decisi; campione con atto: 93,5 % dei decisi (93,8 % in v4.3) [V].
 
 | Rivenditore (CF) | Capogruppo (paese, fonte) | Prodotti extra-UE | Marchi principali |
 |---|---|---|---|
-| TIM 00488410010 | nessuna controllante in GLEIF (IT) | 1.133 M€ | Microsoft, Salesforce, Cloudera, Oracle |
-| Italware 08619670584 / 02102821002 (§ 2.4) | Digital Value (IT, GLEIF) | 74,5 M€ | Oracle, Microsoft, IBM |
+| TIM 00488410010 | nessuna controllante in GLEIF (IT) | 1.135 M€ | Microsoft, Salesforce, Cloudera, Oracle |
+| Italware 08619670584 / 02102821002 (§ 2.4) | Digital Value (IT, GLEIF) | 85,5 M€ | Oracle, Microsoft, IBM |
 | Eurolink 01973270604 | non trovato (nessun LEI) | 69,1 M€ | Oracle, Microsoft |
 | Fastweb 12878470157 | Swisscom AG (CH, GLEIF) | 51,1 M€ | AWS, Microsoft, Google |
-| SoftwareOne Italia 06169220966 | SoftwareOne Holding AG (CH, GLEIF) | 47,7 M€ | Microsoft |
-| Var Group 03301640482 | Sesa (IT, GLEIF) | 42,8 M€ | Microsoft, Oracle, Salesforce, AWS |
+| SoftwareOne Italia 06169220966 | SoftwareOne Holding AG (CH, GLEIF) | 47,5 M€ | Microsoft |
+| Var Group 03301640482 | Sesa (IT, GLEIF) | 41,2 M€ | Microsoft, Oracle, Salesforce, AWS |
 | Project Informatica 02006010165 | nessuna controllante (IT) | 30,9 M€ | Oracle, Microsoft |
 | R1 05231661009 | nessuna controllante (IT) | 24,3 M€ | Oracle, Microsoft, AWS |
 | Postel (3 CF/nomi) | Poste Italiane (IT, curato [R]) | 45 M€ in tutto | Microsoft (Azure, licenze) |
@@ -480,6 +481,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.11 | 2026-11-09 | § 2.1 mappa rivenditori v4.5 (regole del cieco 6, #40/#72, #41): prodotti extra-UE 3,023 mld, CF italiano 61,2 % del totale (79,3 % del noto), 57,5 % col capogruppo; enti ricalcolati (2.205; erano 2.182 in v4.2) e classifica; confronto per marchio v4.3 → v4.5 (−227/+18 CIG, −22,1 M€); verifica `rivenditori_confronto.py` |
 | 0.10 | 2026-11-09 | § 2 allineato alle regole v4.3 (#40, #41): mappa v4.3, prodotti extra-UE 3,046 mld, rivenditori con CF italiano 61,2 % del totale (79,1 % del noto), 57,4 % col capogruppo; criterio «prodotto comprato» al posto di «prodotto nominato» (cieco 1 −2 corsi); quarto campione a cieco (P big tech 92,2 % sulle regole v4.2) diventato campione di sviluppo, misura indipendente rinviata al quinto |
 | 0.9 | 2026-11-09 | § 3.3 terzo asse «infrastruttura» (#43, #45): Libro PSN 2025 (hyperscaler 5,4 % dei ricavi), piani dei fabbisogni PSN di 9 enti sanitari in 6 regioni (23,3 % dei canoni per produttore/gestione, 7,4 % per localizzazione), SaaS con prove per 122,9 M€ (Datamanagement AWS, Deda Next Azure, Maggioli misto); Misura 1.2 su infrastruttura extra-UE 30,6 % (produttore/gestione) e 21,5 % (localizzazione), forbice 3,0-62,2 %; § 4 aggiornato; R78 |
 | 0.8 | 2026-11-09 | § 2 rivenditori v4.2 (#41): mappa per CF con capogruppo GLEIF ed enti; prodotti extra-UE rivenduti da CF italiani 61,0 % del totale (78,9 % del noto), 57,2 % anche col capogruppo; campione casuale top-20 96,7 %; correzioni della lente (via 2 «2746», multi-lotto, prodotti di terzi, omonimi), cieco invariato; «IMPRESA INESISTENTE» = Italware (VIES), R56 aggiornata, R76-R77 |
