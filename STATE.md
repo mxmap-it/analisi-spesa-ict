@@ -35,6 +35,10 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
   3. Gli scaricamenti delle prossime annualità.
 - **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
 - **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
+## #58 ACCESSO CIVICO MASSIVO (L7): PREPARAZIONE — punto di ripresa 9/11/2026
+- **Fatto:** elenco unico dei mancanti (`tools/accesso_civico/elenco_mancanti.py`, verifica `verifica_elenco.py` V1-V7 ok): 28.807 voci (756 convenzioni + 28.051 CIG residuo, esclusi 532 con documento che cita il CIG), 6.626 enti, 775 senza PEC. Esiti `esiti/2026-11-09/accesso-civico/` (CSV in chiaro solo sul server, versionato il .gz). Rapporto `report/metodo/accesso-civico-piattaforma.md` 0.1 bozza: Froide raccomandata + adattatore PEC; norme verificate (fonti in `prove-normativa/`).
+- **NESSUN INVIO.** Decisioni per Fabio nel § 4 del rapporto (tetto per richiesta, cadenza ondate, ondata 0, Froide o registro nostro, limiti casella PEC).
+
 ## #57 RESIDUO S6: RIEPILOGO FINALE 9/11/2026
 - **L3+MePA finiti il 7/11**; L4 si era fermato per la guardia disco (7/11 06:29, 1.854/4.352 enti) ed è **ripreso il 9/11** (at_cig.py in background, ripartibile; ticket per il residuo L4).
 - **Misure** (`tools/verifiche/residuo_s6_riepilogo.py 2026-11-09`): L3 11.589 CIG, trovati 2.483, con documento 1.076, documento che cita il CIG 453 (262 M€); MePA 591, 0; L4 parziale 3.487 trovati, 869 con documento, 79 che citano (42 M€). Atti già tutti registrati (L3/L4). Zero token.
