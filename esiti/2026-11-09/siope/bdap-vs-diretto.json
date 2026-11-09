@@ -1,0 +1,470 @@
+{
+ "versione": "siope-bdap-vs-diretto 0.1 (2026-11-09)",
+ "anno": 2024,
+ "regioni": [
+  "LAZIO",
+  "UMBRIA",
+  "BASILICATA",
+  "MOLISE",
+  "LIGURIA"
+ ],
+ "ingressi": {
+  "SIOPE_ANAGRAFICHE.zip": "44ea0b5347da787b985611bd2df1c03e7965d13100a1d923108bfde65303d990",
+  "SIOPE_USCITE.2024.zip": "dc0715d090a008a09844c5e50f5918b18b6f9ccec23407aa911aa663b56c1cf8",
+  "bdap-LAZIO": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7db1ef58-43c0-4f75-b6cc-b73f982c930c.csv",
+   "sha256": "212f30ed7c7c1cd9959254d7bd9802a440e276bcbabc68e5735ec5215a62dcaf"
+  },
+  "bdap-UMBRIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fb4ba0a9-3caa-4053-a594-3d4d2d5f003a.csv",
+   "sha256": "07d64ef13bfe1cfd100fb47172eb8a0c160a4dc577c0cb157f7bed0fd14ec451"
+  },
+  "bdap-BASILICATA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9fe0c5ec-ee29-464a-bfe5-2b7ae62ab800.csv",
+   "sha256": "251209bb5f7a9c4b120f32f2844d77b883ee026157724c56cf34f2d833be1519"
+  },
+  "bdap-MOLISE": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2f93d1d1-2878-4060-9cf2-f322834c44ae.csv",
+   "sha256": "706f9344ca1cac2ee81fbed6b3301cf5ebf1c517dff89a57d9ca4fb4bf7b77d9"
+  },
+  "bdap-LIGURIA": {
+   "file": "mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/03686c85-97ad-4e3b-916b-cb771e5e08fc.csv",
+   "sha256": "3d6b79d5b7ca21b83751917477232c167508621d1b16efbec9c6d4a52ccbfcd9"
+  }
+ },
+ "enti": {
+  "bdap": 1473,
+  "diretto_univoci": 2657,
+  "diretto_ambigui": 8,
+  "abbinati": 1428,
+  "solo_bdap": 45,
+  "esempi_solo_bdap": [
+   [
+    "008",
+    "003",
+    "COMUNE DI AQUILA DI ARROSCIA"
+   ],
+   [
+    "008",
+    "023",
+    "COMUNE DI COSIO DI ARROSCIA"
+   ],
+   [
+    "008",
+    "029",
+    "COMUNITA MONTANA INTEMELIA IN LIQUIDAZIONE"
+   ],
+   [
+    "008",
+    "042",
+    "UNIONE DEI COMUNI DELLA ALTA VALLE ARROSCIA"
+   ],
+   [
+    "008",
+    "059",
+    "COMUNITA MONTANA ARGENTINA ARMEA"
+   ],
+   [
+    "008",
+    "063",
+    "COMUNE DI VALLECROSIA"
+   ],
+   [
+    "009",
+    "038",
+    "COMUNITA MONTANA ALTA VAL BORMIDA"
+   ],
+   [
+    "009",
+    "056",
+    "AZIENDA SOCIOSANITARIA LIGURE 2"
+   ],
+   [
+    "009",
+    "056",
+    "COMUNITA MONTANA DEL GIOVO"
+   ],
+   [
+    "010",
+    "016",
+    "COMUNITA MONTANA FONTANABUONA"
+   ],
+   [
+    "010",
+    "025",
+    "AZIENDA LIGURE SANITARIA DELLA REGIONE LIGURIA A LI SA"
+   ],
+   [
+    "010",
+    "025",
+    "IRCCS OSPEDALE POLICLINICO SAN MARTINO"
+   ],
+   [
+    "054",
+    "023",
+    "ISTITUTO COMPRENSIVO GUALDO TADINO"
+   ],
+   [
+    "054",
+    "035",
+    "COMUNITA MONTANA VALNERINA"
+   ],
+   [
+    "054",
+    "039",
+    "CAMERA DI COMMERCIO INDUSTRIA ARTIGIANATO E AGRICOLTURA DELL UMBRIA"
+   ],
+   [
+    "057",
+    "053",
+    "UNIONE DI COMUNI DELLA BASSA SABINA"
+   ],
+   [
+    "057",
+    "073",
+    "ENTE RISERVA NATURALE REGIONALE MONTE NAVEGNA E MONTE CERVIA"
+   ],
+   [
+    "058",
+    "003",
+    "ASL ROMA 6"
+   ],
+   [
+    "058",
+    "004",
+    "COMUNITA MONTANA MONTI DELLA TOLFA"
+   ],
+   [
+    "058",
+    "038",
+    "CONSORZIO INTERCOMUNALE DEI SEREVIZI E INTERVENTI SOCIALI VALLE DEL TEVERE"
+   ]
+  ]
+ },
+ "tutti": {
+  "euro_bdap": 84430117028,
+  "euro_diretto": 85004313869,
+  "uguali": 101838,
+  "solo_diretto": 570,
+  "euro_solo_diretto": 163931492,
+  "diverse": 3045,
+  "euro_diff_assoluta": 2254141717,
+  "solo_bdap": 6,
+  "euro_solo_bdap": 23891,
+  "coppie": 105459,
+  "esempi_diverse": [
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U0000099999",
+    "bdap": 298225209.5,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U1010101002",
+    "bdap": 387500217.52,
+    "diretto": 554889009.43
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U3040701001",
+    "bdap": 129686015.34,
+    "diretto": 292547570.23
+   },
+   {
+    "ente": [
+     "010",
+     "025",
+     "FONDAZIONE ISTITUTO ITALIANO DI TECNOLOGIA IIT"
+    ],
+    "codice": "U7019999999",
+    "bdap": 21381415.72,
+    "diretto": 124998460.27
+   },
+   {
+    "ente": [
+     "060",
+     "038",
+     "AZIENDA SANITARIA LOCALE FROSINONE"
+    ],
+    "codice": "U9999",
+    "bdap": 83205236.78,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
+    ],
+    "codice": "U1010101002",
+    "bdap": 233844485.98,
+    "diretto": 302126971.3
+   },
+   {
+    "ente": [
+     "058",
+     "039",
+     "ISTITUTO NAZIONALE DI FISICA NUCLEARE INFN"
+    ],
+    "codice": "U0000099999",
+    "bdap": 61108532.43,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "GESTIONE COMMISSARIALE COMUNE ROMA"
+    ],
+    "codice": "U0000099999",
+    "bdap": 56143843.36,
+    "diretto": 0.0
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U7010201001",
+    "bdap": 158061173.31,
+    "diretto": 203273304.52
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U1010201001",
+    "bdap": 181254644.53,
+    "diretto": 223098214.66
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U7020102001",
+    "bdap": 266378364.48,
+    "diretto": 306408976.0
+   },
+   {
+    "ente": [
+     "076",
+     "063",
+     "GESTIONE SANITARIA REGIONE BASILICATA"
+    ],
+    "codice": "U7019902001",
+    "bdap": 173091450.15,
+    "diretto": 211130005.28
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "GESTIONE COMMISSARIALE COMUNE ROMA"
+    ],
+    "codice": "U4030104999",
+    "bdap": 38916558.47,
+    "diretto": 72324374.06
+   },
+   {
+    "ente": [
+     "058",
+     "039",
+     "ISTITUTO NAZIONALE DI FISICA NUCLEARE INFN"
+    ],
+    "codice": "U1010101002",
+    "bdap": 63659449.56,
+    "diretto": 93783703.88
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ROMA CAPITALE"
+    ],
+    "codice": "U4030104003",
+    "bdap": 8329485.13,
+    "diretto": 38028322.28
+   }
+  ]
+ },
+ "ict": {
+  "euro_bdap": 473348048,
+  "euro_diretto": 473361129,
+  "uguali": 3537,
+  "diverse": 16,
+  "euro_diff_assoluta": 61175,
+  "solo_diretto": 5,
+  "euro_solo_diretto": 1337,
+  "coppie": 3558,
+  "esempi_diverse": [
+   {
+    "ente": [
+     "010",
+     "025",
+     "FONDAZIONE ISTITUTO ITALIANO DI TECNOLOGIA IIT"
+    ],
+    "codice": "U1030219999",
+    "bdap": 2097764.79,
+    "diretto": 2124153.0
+   },
+   {
+    "ente": [
+     "059",
+     "011",
+     "LICEO STATALE ALESSANDRO MANZONI"
+    ],
+    "codice": "U2020107999",
+    "bdap": 109100.3,
+    "diretto": 89426.48
+   },
+   {
+    "ente": [
+     "054",
+     "013",
+     "COMUNE DI CITTA DI CASTELLO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 14458.4,
+    "diretto": 10085.4
+   },
+   {
+    "ente": [
+     "060",
+     "048",
+     "COMUNE DI PATRICA"
+    ],
+    "codice": "U1030219010",
+    "bdap": 21448.05,
+    "diretto": 24634.4
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "ENTE REGIONALE PER IL DIRITTO ALLO STUDIO E LA PROMOZIONE DELLA CONOSCENZA DISCO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 675135.87,
+    "diretto": 677435.87
+   },
+   {
+    "ente": [
+     "055",
+     "014",
+     "COMUNE DI GIOVE"
+    ],
+    "codice": "U1030219001",
+    "bdap": 54127.52,
+    "diretto": 55556.29
+   },
+   {
+    "ente": [
+     "070",
+     "006",
+     "AZIENDA SPECIALE REGIONALE MOLISE ACQUE"
+    ],
+    "codice": "U1030219001",
+    "bdap": 55091.46,
+    "diretto": 56359.28
+   },
+   {
+    "ente": [
+     "058",
+     "042",
+     "COMUNE DI GENAZZANO"
+    ],
+    "codice": "U1030219009",
+    "bdap": 3065.96,
+    "diretto": 4065.96
+   },
+   {
+    "ente": [
+     "057",
+     "030",
+     "COMUNE DI FRASSO SABINO"
+    ],
+    "codice": "U1030219999",
+    "bdap": 6241.52,
+    "diretto": 6790.52
+   },
+   {
+    "ente": [
+     "010",
+     "025",
+     "UNIVERSITA DEGLI STUDI DI GENOVA"
+    ],
+    "codice": "U1030219999",
+    "bdap": 1786344.89,
+    "diretto": 1786667.37
+   },
+   {
+    "ente": [
+     "008",
+     "042",
+     "COMUNE DI PIEVE DI TECO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 21814.85,
+    "diretto": 22046.43
+   },
+   {
+    "ente": [
+     "058",
+     "091",
+     "CONSIGLIO PER LA RICERCA IN AGRICOLTURA E L ANALISI DELL ECONOMIA AGRARIA CREA"
+    ],
+    "codice": "U1030219003",
+    "bdap": 18061.72,
+    "diretto": 18210.72
+   },
+   {
+    "ente": [
+     "010",
+     "025",
+     "UNIVERSITA DEGLI STUDI DI GENOVA"
+    ],
+    "codice": "U1030219007",
+    "bdap": 29522.0,
+    "diretto": 29641.0
+   },
+   {
+    "ente": [
+     "059",
+     "014",
+     "COMUNE DI MINTURNO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 119575.91,
+    "diretto": 119690.17
+   },
+   {
+    "ente": [
+     "056",
+     "059",
+     "AMMINISTRAZIONE PROVINCIALE DI VITERBO"
+    ],
+    "codice": "U1030219001",
+    "bdap": 188751.57,
+    "diretto": 188821.57
+   }
+  ]
+ }
+}
