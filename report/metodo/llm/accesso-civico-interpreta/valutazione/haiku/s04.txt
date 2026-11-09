@@ -1,0 +1,25 @@
+```json
+{
+  "esito": "parziale",
+  "motivi": ["5bis-c1-a", "inesistente"],
+  "motivo_testo": "Oscuramento del capitolato tecnico per sicurezza pubblica (architettura di sicurezza dei sistemi); documenti non forniti senza motivazione esplicita",
+  "voci_fornite": [
+    {"voce": "v1", "documenti": ["contratto_oscurato.pdf"], "oscurato": true},
+    {"voce": "v2", "documenti": ["determina_45.pdf"], "oscurato": false}
+  ],
+  "voci_non_fornite": [
+    {"voce": "v1", "motivo": "inesistente"},
+    {"voce": "v2", "motivo": "inesistente"}
+  ],
+  "link_pubblicazioni": [],
+  "scadenze": [],
+  "richieste_all_interessato": [],
+  "confidenza": "media",
+  "citazioni": [
+    "Si accoglie parzialmente la richiesta.",
+    "Il capitolato tecnico relativo al CIG Z1A2B3C4D5 viene trasmesso con l'oscuramento delle parti contenenti l'architettura di sicurezza dei sistemi, ai sensi dell'art. 5-bis, comma 1, lett. a) del d.lgs. 33/2013",
+    "Si trasmette integralmente la determina di affidamento."
+  ],
+  "note": "Per v1 (CIG Z1A2B3C4D5), il documento trasmesso è il capitolato tecnico (allegato contratto_oscurato.pdf), non il contratto richiesto; il nome dell'allegato suggerisce il contratto ma la risposta menziona specificamente il capitolato. Per v2 (CIG 9A8B7C6D5E), la determina di affidamento è trasmessa, ma l'ordine di acquisto richiesto non è menzionato nella risposta. Non è chiaro se i documenti non forniti siano inesistenti o semplicemente omessi; la risposta non fornisce una motivazione esplicita."
+}
+```

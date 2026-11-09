@@ -22,7 +22,7 @@
     },
     "esito": {
       "type": "object",
-      "required": ["e_cloud", "servizio", "giurisdizione", "confidenza"],
+      "anyOf": [{"required": ["e_cloud", "servizio", "giurisdizione", "confidenza"]}, {"required": ["accesso_civico", "confidenza"]}],
       "properties": {
         "e_cloud": {"enum": ["s", "n"]},
         "servizio": {"enum": ["cloud", "licenza", "servizi-professionali", "psn", "in-house", "telefonia", "connettivita", "hardware", "altro"]},
@@ -33,7 +33,8 @@
         "via": {"type": "string", "description": "1-lotto, 2-lotto-nel-testo, 3-marchio, 4-psn, 5-fornitore, 6-modello, 7-indeterminato, 0-ict-non-cloud, U-revisione-umana"},
         "confidenza": {"enum": ["alta", "media", "bassa"]},
         "fonte_primaria": {"type": "boolean", "description": "true se un atto dell'ente sul contratto conferma l'esito"},
-        "motivazione": {"type": "string"}
+        "motivazione": {"type": "string"},
+        "accesso_civico": {"type": "object", "description": "Interpretazione della risposta di un ente a una richiesta di accesso civico (#58, tools/accesso_civico/interpreta.py): un record per voce con CIG; gli assi cloud/giurisdizione non si applicano", "required": ["id_richiesta", "voce", "esito", "fonte", "prompt_versione", "input_sha256"], "properties": {"id_richiesta": {"type": "string"}, "voce": {"type": "string"}, "esito": {"enum": ["accolta", "parziale", "diniego", "differimento", "chiarimento", "controinteressati", "rinvio-altro-ufficio", "già-pubblicato", "non-pertinente", null]}, "esito_voce": {"enum": ["fornita", "non-fornita", "non-determinata"]}, "motivi": {"type": "array", "items": {"type": "string"}, "description": "limiti art. 5-bis (5bis-c1-a..g, 5bis-c2-a..c, 5bis-c3) o massiva/inesistente/generica/interesse/altro/non-motivato"}, "fonte": {"enum": ["regole", "modello", "nessuna"]}, "modello": {"type": ["string", "null"]}, "prompt_versione": {"type": "string"}, "prompt_sha256": {"type": "string"}, "input_sha256": {"type": "string"}, "output_sha256": {"type": ["string", "null"]}}}
       }
     },
     "passaggi": {

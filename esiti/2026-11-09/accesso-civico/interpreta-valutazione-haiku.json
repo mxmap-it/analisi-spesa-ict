@@ -1,0 +1,367 @@
+{
+ "set": "report/metodo/llm/accesso-civico-interpreta/set-sintetico-v1.jsonl",
+ "set_sha256": "d43ecba711a3be8c91843775fb20409e02087428d094e6ecbf26105f5e769a74",
+ "n": 28,
+ "modello": "haiku",
+ "istruzioni": "v1",
+ "regole": "regole-0.1",
+ "quando": "2026-11-09T14:19:47+00:00",
+ "regole_copertura": "23/28",
+ "regole_accuratezza": 1.0,
+ "llm_valutati": 5,
+ "llm": {
+  "n": 5,
+  "accordo": 1.0,
+  "kappa": 1.0,
+  "jaccard_motivi": 0.625,
+  "n_motivi": 4,
+  "confusione_umano_x_proposto": {
+   "parziale": {
+    "parziale": 4
+   },
+   "non-pertinente": {
+    "non-pertinente": 1
+   }
+  }
+ },
+ "pipeline": {
+  "n": 28,
+  "accordo": 1.0,
+  "kappa": 1.0,
+  "jaccard_motivi": null,
+  "n_motivi": 0,
+  "confusione_umano_x_proposto": {
+   "accolta": {
+    "accolta": 5
+   },
+   "parziale": {
+    "parziale": 4
+   },
+   "diniego": {
+    "diniego": 8
+   },
+   "differimento": {
+    "differimento": 1
+   },
+   "chiarimento": {
+    "chiarimento": 3
+   },
+   "controinteressati": {
+    "controinteressati": 1
+   },
+   "rinvio-altro-ufficio": {
+    "rinvio-altro-ufficio": 2
+   },
+   "già-pubblicato": {
+    "già-pubblicato": 1
+   },
+   "non-pertinente": {
+    "non-pertinente": 3
+   }
+  }
+ },
+ "pipeline_valutati": 28,
+ "fermato_dal_tetto": null,
+ "righe": [
+  {
+   "id": "s01",
+   "atteso": "accolta",
+   "motivi_attesi": [],
+   "regole": "accolta",
+   "motivi_regole": [],
+   "finale": "accolta"
+  },
+  {
+   "id": "s02",
+   "atteso": "accolta",
+   "motivi_attesi": [],
+   "regole": "accolta",
+   "motivi_regole": [],
+   "finale": "accolta"
+  },
+  {
+   "id": "s03",
+   "atteso": "parziale",
+   "motivi_attesi": [
+    "inesistente"
+   ],
+   "regole": null,
+   "motivi_regole": null,
+   "llm": "parziale",
+   "motivi_llm": [
+    "inesistente"
+   ],
+   "confidenza_llm": "alta",
+   "errori_llm": [],
+   "output_sha256": "807aeac55b3063053608316668f5223b726cdae7d047882cf241ec71d9edc369",
+   "finale": "parziale"
+  },
+  {
+   "id": "s04",
+   "atteso": "parziale",
+   "motivi_attesi": [
+    "5bis-c1-a"
+   ],
+   "regole": null,
+   "motivi_regole": null,
+   "llm": "parziale",
+   "motivi_llm": [
+    "5bis-c1-a",
+    "inesistente"
+   ],
+   "confidenza_llm": "media",
+   "errori_llm": [],
+   "output_sha256": "1d4009f3752d8bf10f6047b0ca17e92b2d518caaa4c6f3407561a208c9de7410",
+   "finale": "parziale"
+  },
+  {
+   "id": "s05",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "5bis-c2-c"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "5bis-c2-c"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s06",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "massiva"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "massiva"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s07",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "interesse"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "interesse"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s08",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "non-motivato"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "non-motivato"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s09",
+   "atteso": "differimento",
+   "motivi_attesi": [
+    "5bis-c1-g"
+   ],
+   "regole": "differimento",
+   "motivi_regole": [
+    "5bis-c1-g"
+   ],
+   "finale": "differimento"
+  },
+  {
+   "id": "s10",
+   "atteso": "chiarimento",
+   "motivi_attesi": [],
+   "regole": "chiarimento",
+   "motivi_regole": [],
+   "finale": "chiarimento"
+  },
+  {
+   "id": "s11",
+   "atteso": "chiarimento",
+   "motivi_attesi": [],
+   "regole": "chiarimento",
+   "motivi_regole": [],
+   "finale": "chiarimento"
+  },
+  {
+   "id": "s12",
+   "atteso": "controinteressati",
+   "motivi_attesi": [],
+   "regole": "controinteressati",
+   "motivi_regole": [],
+   "finale": "controinteressati"
+  },
+  {
+   "id": "s13",
+   "atteso": "rinvio-altro-ufficio",
+   "motivi_attesi": [],
+   "regole": "rinvio-altro-ufficio",
+   "motivi_regole": [],
+   "finale": "rinvio-altro-ufficio"
+  },
+  {
+   "id": "s14",
+   "atteso": "rinvio-altro-ufficio",
+   "motivi_attesi": [],
+   "regole": "rinvio-altro-ufficio",
+   "motivi_regole": [],
+   "finale": "rinvio-altro-ufficio"
+  },
+  {
+   "id": "s15",
+   "atteso": "già-pubblicato",
+   "motivi_attesi": [],
+   "regole": "già-pubblicato",
+   "motivi_regole": [],
+   "finale": "già-pubblicato"
+  },
+  {
+   "id": "s16",
+   "atteso": "accolta",
+   "motivi_attesi": [],
+   "regole": "accolta",
+   "motivi_regole": [],
+   "finale": "accolta"
+  },
+  {
+   "id": "s17",
+   "atteso": "non-pertinente",
+   "motivi_attesi": [],
+   "regole": "non-pertinente",
+   "motivi_regole": [],
+   "finale": "non-pertinente"
+  },
+  {
+   "id": "s18",
+   "atteso": "non-pertinente",
+   "motivi_attesi": [],
+   "regole": "non-pertinente",
+   "motivi_regole": [],
+   "finale": "non-pertinente"
+  },
+  {
+   "id": "s19",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "5bis-c3"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "5bis-c3"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s20",
+   "atteso": "parziale",
+   "motivi_attesi": [
+    "5bis-c1-b"
+   ],
+   "regole": null,
+   "motivi_regole": null,
+   "llm": "parziale",
+   "motivi_llm": [
+    "5bis-c1-b"
+   ],
+   "confidenza_llm": "media",
+   "errori_llm": [],
+   "output_sha256": "6c92e2b1bbb533334154e09b92c9537224bf3b4c787e9e3e10499635870ed70a",
+   "finale": "parziale"
+  },
+  {
+   "id": "s21",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "5bis-c2-a"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "5bis-c2-a"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s22",
+   "atteso": "accolta",
+   "motivi_attesi": [],
+   "regole": "accolta",
+   "motivi_regole": [],
+   "finale": "accolta"
+  },
+  {
+   "id": "s23",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "generica"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "generica"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s24",
+   "atteso": "parziale",
+   "motivi_attesi": [],
+   "regole": null,
+   "motivi_regole": null,
+   "llm": "parziale",
+   "motivi_llm": [
+    "5bis-c2-c"
+   ],
+   "confidenza_llm": "media",
+   "errori_llm": [],
+   "output_sha256": "6c447496fa1eeca64a719f5fd76ca32c8840f149b9749f6bc6e5a475f803380f",
+   "finale": "parziale"
+  },
+  {
+   "id": "s25",
+   "atteso": "non-pertinente",
+   "motivi_attesi": [],
+   "regole": null,
+   "motivi_regole": null,
+   "llm": "non-pertinente",
+   "motivi_llm": [],
+   "confidenza_llm": "alta",
+   "errori_llm": [],
+   "output_sha256": "bd2d35b2c86aca9b9232ba29b10ace88957a7682fb02e3de25a1a006bc564c62",
+   "finale": "non-pertinente"
+  },
+  {
+   "id": "s26",
+   "atteso": "diniego",
+   "motivi_attesi": [
+    "inesistente"
+   ],
+   "regole": "diniego",
+   "motivi_regole": [
+    "inesistente"
+   ],
+   "finale": "diniego"
+  },
+  {
+   "id": "s27",
+   "atteso": "accolta",
+   "motivi_attesi": [],
+   "regole": "accolta",
+   "motivi_regole": [],
+   "finale": "accolta"
+  },
+  {
+   "id": "s28",
+   "atteso": "chiarimento",
+   "motivi_attesi": [],
+   "regole": "chiarimento",
+   "motivi_regole": [],
+   "finale": "chiarimento"
+  }
+ ]
+}

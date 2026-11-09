@@ -1,0 +1,23 @@
+```json
+{
+  "esito": "parziale",
+  "motivi": ["5bis-c1-b"],
+  "motivo_testo": "Piano dei fabbisogni del PSN negato per sicurezza nazionale e cybersicurezza delle infrastrutture",
+  "voci_fornite": [
+    {"voce": "v1", "documenti": ["contratto_hosting.pdf"], "oscurato": false},
+    {"voce": "v2", "documenti": ["ordine_m365.pdf"], "oscurato": false}
+  ],
+  "voci_non_fornite": [
+    {"voce": "v3", "motivo": "5bis-c1-b"}
+  ],
+  "link_pubblicazioni": [],
+  "scadenze": [],
+  "richieste_all_interessato": [],
+  "confidenza": "media",
+  "citazioni": [
+    "si trasmettono i documenti relativi ai CIG Z1A2B3C4D5 e 9A8B7C6D5E",
+    "Per il CIG B12C34D56E il piano dei fabbisogni non può essere ostensibile ai sensi dell'art. 5-bis, comma 1, lett. b), trattandosi di informazioni attinenti alla sicurezza nazionale e alla cybersicurezza delle infrastrutture"
+  ],
+  "note": "Per v3, il contratto di utenza richiesto non è menzionato nella risposta: incertezza se negato insieme al piano o omesso involontariamente. Per v1 e v2, i nomi dei file allegati (contratto_hosting.pdf, ordine_m365.pdf) suggeriscono l'invio dei documenti principali, ma l'ente non specifica esplicitamente se i capitolati tecnici e le determine di affidamento sono inclusi o allegati separatamente."
+}
+```
