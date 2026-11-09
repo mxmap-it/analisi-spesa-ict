@@ -143,6 +143,8 @@ python tests/test_classifica.py      # 48/48 casi superati, regole v3
 | Marchi mancanti | SAP S/4HANA e R/3, Exchange 365, "MO 365", Oracle ULA ed Exadata, Nextcloud | Aggiunti |
 | Ordine dei marchi | SAP Fiori attribuito a Salesforce; VMware per Lepida attribuito all'in-house | Il primo marchio vince: prodotti prima, in-house in fondo |
 | Provider italiani assenti | TIM cloud, Fastweb hosting, SPC Cloud lotto 1, in-house pubblici | Aggiunti come provider IT o in-house |
+| Numero dell'AQ dentro altri numeri (9/11/2026, #41) | «2746» in «GARA ANAC 9127462» o «ACTC227464»: antisettici e reti idriche attribuiti ad AWS e Microsoft | Via 2: numero a sé e contesto cloud/Consip/AQ obbligatorio |
+| Omonimi e marchi come oggetto di altro (9/11/2026, #41) | pacemaker «Azure S DR», «hardware rete PSN», «affiancamento» su PSN | Esclusioni; «affiancamento» = servizi professionali. Prima e dopo sui tre campioni a cieco: invariati (esiti/2026-11-09/rivenditori/lente-prima e lente-dopo) |
 
 ## Raccomandazioni per semplificare il monitoraggio
 

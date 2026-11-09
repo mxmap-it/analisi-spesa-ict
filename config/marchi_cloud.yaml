@@ -32,6 +32,7 @@
   servizio: cloud
   regex:
   - microsoft\s*365
+  - microsoft\s+(business|office)\s+365  # #41 9/11/2026: B374A4175C
   - office\s*365
   - \bo365\b
   - \bm365\b
@@ -46,6 +47,7 @@
   # #40 v0.5: il marchio come oggetto di un servizio altrui (secondo campione a cieco)
   escludi:
   - backup\W+(\w+\W+){0,4}(microsoft|m|office)\s*365
+  - azure\s+(s|xt)\s*(dr|sr)\b|impiantabil|pacemaker  # #41 9/11/2026: pacemaker Medtronic «AZURE S DR» (9134580DDE)
   fornitori:
   - ^microsoft\b
 - provider: Amazon Web Services
@@ -252,6 +254,7 @@
   - connettivit
   - firewall
   - sicurezza\s+perimetrale
+  - hardware\s+(\w+\s+){0,2}rete\s+psn  # #41 9/11/2026: A069537FBA
 - provider: Microsoft
   giurisdizione: EXTRA-UE
   servizio: licenza

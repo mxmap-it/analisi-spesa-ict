@@ -38,3 +38,12 @@
   paese_capogruppo: JP
   fonte: "NTT DATA Group, elenco delle controllate (NTT DATA Italia)"
   stato: R
+# Stesso soggetto, due identificativi: in ANAC la P.IVA di Italware compare come «IMPRESA INESISTENTE» (1.516 righe su 1.520).
+# VIES (ec.europa.eu, 9/11/2026, risposta in report/metodo/rivenditori-v4/vies/02102821002.json): P.IVA 02102821002 valida, «ITALWARE - S.R.L.», Roma.
+# Il CF 08619670584 (quello con LEI GLEIF 894500VW6HBRAY4QRX68, capogruppo Digital Value) non è una P.IVA valida in VIES: è il codice fiscale.
+# Indizi concordi: 398 dei 473 CIG derivati da AQ con questo CF hanno il padre aggiudicato a Italware; 4 righe ANAC lo chiamano Italware.
+- cf: "02102821002"
+  denominazione: ITALWARE - S.R.L. (in ANAC «IMPRESA INESISTENTE»)
+  stesso_soggetto: "08619670584"
+  fonte: "VIES 9/11/2026 (P.IVA 02102821002 = ITALWARE - S.R.L.); aggiudicatari ANAC dei padri AQ"
+  stato: V

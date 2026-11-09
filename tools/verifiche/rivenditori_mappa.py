@@ -34,6 +34,10 @@ UE27 = set("AT BE BG HR CY CZ DK EE FI FR DE GR IE IT LV LT LU MT NL PL PT RO SK
 NOME = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}
 RX_IT = re.compile(r"^(\d{11}|[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z])$")
 SEME = 20261109
+# v4 = provider congelato nei file di attribuzione (regole v3); v4.1 = riclassificati con le regole correnti (classifica.py)
+VER = sys.argv[1] if len(sys.argv) > 1 else "v4.1"
+RICLASSIFICA = VER != "v4"
+SUF = "" if VER == "v4" else "-" + VER
 
 
 def cf_norm(cf):
@@ -98,6 +102,10 @@ def main():
     cig = {}
     for f in sorted(glob.glob(str(R / "lavoro/attribuzione/[0-9]*.csv"))):
         for r in csv.DictReader(open(f, encoding="utf-8")):
+            if RICLASSIFICA and r["e_padre"] != "1":  # v4.1: regole correnti del classificatore sullo stesso testo
+                ag0 = [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]
+                k0 = c.classifica(r["testo"], r["cig_accordo_quadro"], ag0, r["cod_cpv"]) or {"provider": "", "servizio": ""}
+                r = dict(r, provider=k0["provider"], servizio=k0["servizio"])
             if r["e_padre"] == "1" or not r["provider"] or r["servizio"] in ("servizi-professionali", "in-house", "software-infrastruttura"): continue
             if r.get("importo_da_verificare"): continue
             ag = [a.strip() for a in r["aggiudicatari"].split(";") if a.strip()]
@@ -142,7 +150,7 @@ def main():
     cur = {cf_norm(str(x["cf"])): x for x in (yaml.safe_load(open(R / "config/rivenditori_capogruppo.yaml", encoding="utf-8")) or [])}
 
     def capogruppo(cf):
-        if cf in cur:
+        if cf in cur and cur[cf].get("capogruppo"):
             x = cur[cf]; return x["capogruppo"], x["paese_capogruppo"], "curato: " + x["fonte"]
         lei = gl["piva_lei"].get(cf)
         if not lei: return "", "", "nessun LEI" if RX_IT.match(cf or "") else "cf non italiano/assente"
@@ -155,7 +163,10 @@ def main():
     for k, qs in quote.items():
         v = cig[k]
         for cf, den, imp, src in qs:
-            key = cf or "NOME:" + normalizza(den)
+            # stesso soggetto con P.IVA e CF diversi (es. Italware: P.IVA 02102821002 registrata in ANAC come «IMPRESA INESISTENTE»)
+            if not RICLASSIFICA or cf not in cur or not cur[cf].get("stesso_soggetto"): key = cf or "NOME:" + normalizza(den)
+            else: den, key = cur[cf]["denominazione"], cf_norm(str(cur[cf]["stesso_soggetto"])); cf = key
+            if key in per and ("INESISTENTE" in per[key]["denominazione"] or not per[key]["denominazione"]): per[key]["denominazione"] = den
             p = per.setdefault(key, {"cf": cf, "denominazione": den, "cig": set(), "eur": 0.0, "eur_extra_ue": 0.0,
                                      "prodotti": collections.Counter(), "enti": collections.Counter(), "fonti": collections.Counter()})
             p["cig"].add(k); p["eur"] += imp; p["prodotti"][v["provider"]] += imp; p["enti"][v["ente"]] += imp; p["fonti"][src] += 1
@@ -194,7 +205,8 @@ def main():
         righe_c.append([k, v["provider"], v["g"], " | ".join(f"{cf} {den}" for cf, den, _, _ in quote[k]), round(v["imp"]), int(pert), int(prod), int(vend), " ".join(atti[k])])
     # etichette manuali del campione (oggetto ANAC + atto quando pertinente): precisione della lente prodotto nel canale rivenditore
     et = {}
-    fe = R / "report/metodo/rivenditori-v4/etichette-campione.csv"
+    fe = R / f"report/metodo/rivenditori-v4/etichette-campione{SUF}.csv"
+    if not fe.exists(): fe = R / "report/metodo/rivenditori-v4/etichette-campione.csv"
     if fe.exists():
         for r in csv.DictReader(open(fe, encoding="utf-8")): et[r["cig"]] = r
     prec = collections.Counter()
@@ -217,10 +229,33 @@ def main():
             att = normalizza(lotti[v["aq"]][0]).split()[0]
             nomi_k = [normalizza(d) for _, d, _, _ in quote.get(k, [])] or [normalizza(a) for a in v["ag"]]
             lotti_chk["cig"] += 1; lotti_chk["coincide"] += any(att in n.split() for n in nomi_k)
-    # 8. uscite
+    # 7bis. campione casuale (seme fisso) sui primi 20 rivenditori per prodotti extra-UE: 3 CIG extra-UE ciascuno,
+    # estratti fra TUTTI i loro CIG (non solo quelli con atti), con l'atto quando esiste. Etichette in etichette-top20.csv.
     oggi = datetime.date.today().isoformat(); o = R / f"esiti/{oggi}/rivenditori"; os.makedirs(o, exist_ok=True)
+    primi20 = sorted(per.items(), key=lambda kv: -kv[1]["eur_extra_ue"])[:20]
+    rng = random.Random(SEME); t20 = []
+    for key, p in primi20:
+        cc = sorted(k for k in p["cig"] if cig[k]["g"] == "EXTRA-UE"); rng.shuffle(cc)
+        for k in cc[:3]: t20.append((key, p["denominazione"], k))
+    et20 = {}
+    fe20 = R / "report/metodo/rivenditori-v4/etichette-top20.csv"
+    if fe20.exists():
+        for r in csv.DictReader(open(fe20, encoding="utf-8")): et20[r["cig"]] = r
+    p20 = collections.Counter()
+    with open(o / f"campione-top20{SUF}.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f); w.writerow(["rivenditore", "denominazione", "cig", "provider", "eur", "ente", "atto_pertinente", "testo"])
+        for key, den, k in t20:
+            pert = any(k in open(R / f"dati/atti/testi/{s}.txt", encoding="utf-8", errors="replace").read() for s in atti.get(k, []))
+            w.writerow([key, den, k, cig[k]["provider"], round(cig[k]["imp"]), cig[k]["ente"], int(pert), cig[k]["testo"][:300]])
+            if k in et20:
+                e = et20[k]["prodotto_corretto"]; p20[e] += 1; p20["eur_" + e] += cig[k]["imp"]
+    d20 = p20["si"] + p20["no"]
+    top20_out = {k: (round(v) if k.startswith("eur") else v) for k, v in p20.items()} | {"cig": len(t20), "seme": SEME}
+    if d20: top20_out |= {"precisione_decisi": round(p20["si"] / d20, 3), "precisione_minima": round(p20["si"] / (d20 + p20["incerto"]), 3),
+                          "precisione_eur_decisi": round(p20["eur_si"] / (p20["eur_si"] + p20["eur_no"]), 3)}
+    # 8. uscite
     top = sorted(per.values(), key=lambda p: -p["eur"])
-    with open(o / "mappa-v4.csv", "w", encoding="utf-8", newline="") as f:
+    with open(o / f"mappa-{VER}.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["cf", "denominazione", "naz_cf", "capogruppo", "paese_capogruppo", "bucket_capogruppo", "fonte_capogruppo",
                     "cig", "eur", "eur_prodotti_extra_ue", "enti", "prodotti (marchio:giurisdizione=eur)", "primi_enti", "fonte_cf"])
@@ -229,15 +264,15 @@ def main():
                         len(p["cig"]), round(p["eur"]), round(p["eur_extra_ue"]), len(p["enti"]),
                         " ; ".join(f"{m}:{giur.get(m, '?')}={round(x)}" for m, x in p["prodotti"].most_common()),
                         " ; ".join(f"{e}={round(x)}" for e, x in p["enti"].most_common(5)), " ; ".join(f"{a}={b}" for a, b in p["fonti"].items())])
-    with open(o / "cig-rivenditore.csv", "w", encoding="utf-8", newline="") as f:
+    with open(o / f"cig-rivenditore{SUF}.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f); w.writerow(["cig", "provider", "giurisdizione_prodotto", "ente", "cf", "denominazione", "quota_eur", "fonte_cf"])
         for k in sorted(quote):
             for cf, den, imp, src in quote[k]: w.writerow([k, cig[k]["provider"], cig[k]["g"], cig[k]["ente"], cf, den, round(imp), src])
-    with open(o / "campione-precisione.csv", "w", encoding="utf-8", newline="") as f:
+    with open(o / f"campione-precisione{SUF}.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f); w.writerow(["cig", "provider", "giurisdizione_prodotto", "rivenditori", "eur", "atto_pertinente", "prodotto_nell_atto", "rivenditore_nell_atto", "sha256_atti"])
         w.writerows(righe_c)
     rr = lambda x: round(x)
-    out = {"versione": "v4", "generato": oggi, "seme_campione": SEME,
+    out = {"versione": VER, "campione_top20": top20_out, "generato": oggi, "seme_campione": SEME,
            "cig_attribuiti": len(cig), "cig_rivenditore": len(riv),
            "per_giurisdizione_e_canale": {f"{g}|{ch}": rr(x) for (g, ch), x in sorted(tot.items())},
            "fonte_cf_cig": dict(fonte_cnt), "fonte_cf_eur": {f"{g}|{s}": rr(x) for (g, s), x in sorted(fonte_eur.items())},
@@ -255,7 +290,7 @@ def main():
            "primi_25": [{"cf": p["cf"], "denominazione": p["denominazione"], "capogruppo": p["capogruppo"], "paese": p["paese_capogruppo"],
                          "fonte_capogruppo": p["fonte_capogruppo"], "cig": len(p["cig"]), "eur": rr(p["eur"]), "eur_extra_ue": rr(p["eur_extra_ue"]),
                          "enti": len(p["enti"]), "prodotti": {m: rr(x) for m, x in p["prodotti"].most_common(6)}} for p in top[:25]]}
-    json.dump(out, open(o / "mappa-v4.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(out, open(o / f"mappa-{VER}.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({k: v for k, v in out.items() if k != "primi_25"}, indent=1, ensure_ascii=False))
     for p in out["primi_25"]: print(p["cf"], p["denominazione"][:30], "|", p["capogruppo"][:40], p["paese"], p["eur_extra_ue"], p["fonte_capogruppo"][:40])
 

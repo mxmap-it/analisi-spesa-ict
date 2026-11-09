@@ -1,8 +1,15 @@
 {
  "versione": "v4.1",
  "campione_top20": {
+  "si": 58,
+  "eur_si": 51322260,
+  "no": 2,
+  "eur_no": 16034200,
   "cig": 60,
-  "seme": 20261109
+  "seme": 20261109,
+  "precisione_decisi": 0.967,
+  "precisione_minima": 0.967,
+  "precisione_eur_decisi": 0.762
  },
  "generato": "2026-11-09",
  "seme_campione": 20261109,
@@ -76,16 +83,14 @@
   "pertinente_rivenditore_nell_atto": 4
  },
  "precisione_etichette": {
-  "si": 30,
-  "eur_si": 13107115,
+  "si": 32,
+  "eur_si": 13137572,
   "fonte_atto": 9,
   "incerto": 6,
   "eur_incerto": 1471749,
-  "no": 2,
-  "eur_no": 30457,
-  "precisione_decisi": 0.938,
-  "precisione_minima_incerti_errati": 0.789,
-  "precisione_eur_decisi": 0.998
+  "precisione_decisi": 1.0,
+  "precisione_minima_incerti_errati": 0.842,
+  "precisione_eur_decisi": 1.0
  },
  "cig_rivenditore_con_atti": 39,
  "precisione_lotti_consip": {
