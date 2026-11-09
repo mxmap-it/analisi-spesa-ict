@@ -91,6 +91,33 @@ def aggiorna_vista(url: str, sha: str) -> None:
     os.replace(tmp, dest)
 
 
+# URL che promettono un file: se arriva HTML è il WAF (es. ANAC risponde 200 con una pagina). Comportamento storico.
+ESTENSIONI_FILE = (".csv", ".json", ".jsonl", ".zip", ".gz", ".xlsx", ".xls", ".ods", ".pdf", ".xml", ".ttl",
+                   ".parquet", ".7z", ".rar", ".p7m", ".doc", ".docx", ".odt", ".txt")
+
+
+def html_rifiutato(url: str, status: int, intestazioni: dict, file: Path) -> str | None:
+    """Motivo per scartare una risposta HTML, None se è una pagina web legittima (#43, 9/11/2026).
+
+    - URL di un file (estensione o percorso CKAN /download/): HTML = blocco, come prima.
+    - Altrimenti si riusa visibilita_pa extended.riconosci_blocco (firme di vendor WAF/challenge nel corpo e
+      nelle intestazioni) invece dell'euristica «HTML = WAF», che scartava le pagine vere.
+    """
+    perc = urlsplit(url).path.lower()
+    if perc.endswith(ESTENSIONI_FILE) or "/download/" in perc:
+        return "risposta HTML al posto del file: probabile blocco WAF"
+    corpo = file.read_bytes()[:262144].decode("utf-8", "replace")
+    try:
+        sys.path.insert(0, os.environ.get("VISIBILITA_PA", str(Path.home() / "visibilita-pa")))
+        from visibilita_pa.core.probes.extended import riconosci_blocco
+    except Exception:  # noqa: BLE001  senza visibilita-pa si torna alla regola prudente
+        return "risposta HTML (visibilita_pa non disponibile per riconoscere il blocco)"
+    d = riconosci_blocco(status, {k.lower(): v for k, v in intestazioni.items()}, corpo, [])
+    if d.get("vendor_blocco"):
+        return "pagina di blocco: " + ", ".join(d["vendor_blocco"])
+    return None
+
+
 def archivia(sess: requests.Session, url: str, accetta_html: bool = False) -> dict:
     """accetta_html=True per pagine web vere (es. Amministrazione trasparente, tools/llm/atti.py)."""
     rec = {"acquisito": adesso(), "url": url}
@@ -132,11 +159,12 @@ def archivia(sess: requests.Session, url: str, accetta_html: bool = False) -> di
                     sha.update(blocco)
                     n += len(blocco)
         digest = sha.hexdigest()
-        if "text/html" in ctype and not accetta_html and not url.endswith((".html", ".htm")):
-            part.unlink(missing_ok=True)
-            rec.update(esito="errore", errore="risposta HTML al posto del file: probabile blocco WAF",
-                       dimensione=n, secondi=round(time.monotonic() - t0, 2))
-            return rec
+        if "text/html" in ctype and not accetta_html:
+            motivo = html_rifiutato(url, r.status_code, dict(r.headers), part)
+            if motivo:
+                part.unlink(missing_ok=True)
+                rec.update(esito="errore", errore=motivo, dimensione=n, secondi=round(time.monotonic() - t0, 2))
+                return rec
 
         # Uno zip è valido solo se ha la firma PK e supera il test di integrità
         # (pratica ripresa da scripts/anac_archivio_mensile.sh di Cruscotto Italia).
@@ -222,7 +250,7 @@ def main() -> int:
     ap.add_argument("urls", nargs="*", metavar="url")
     ap.add_argument("--lista", type=Path, help="file con un URL per riga")
     ap.add_argument("--da-file", type=Path, help="copia locale già scaricata da archiviare")
-    ap.add_argument("--url", help="con --da-file: URL originale (o pagina + #nome per URL monouso)")
+    ap.add_argument("--url", help="URL da archiviare; con --da-file: URL originale (o pagina + #nome per URL monouso)")
     ap.add_argument("--data", help="con --da-file: data ISO dello scaricamento originale")
     ap.add_argument("--nota", help="con --da-file: annotazione nel manifest")
     a = ap.parse_args()
@@ -234,6 +262,8 @@ def main() -> int:
         print(f"{rec['esito']:9s} {rec['sha256']}  {a.url}")
         return 0
     urls = list(a.urls)
+    if a.url:  # --url da solo: è l URL da archiviare (prima dava «nessun URL»)
+        urls.append(a.url)
     if a.lista:
         urls += [u.strip() for u in a.lista.read_text(encoding="utf-8").splitlines()
                  if u.strip() and not u.startswith("#")]
