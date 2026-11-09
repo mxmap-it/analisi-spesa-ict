@@ -1,6 +1,19 @@
 {
- "data": "2026-11-06",
- "registro_sha256": "fbdc85fb0329f8c9f0e052d4233811dc3594a4ce47a423502c16d1425bfa3721",
+ "data": "2026-11-09",
+ "versione": "1.1",
+ "revisioni": [
+  {
+   "versione": "1.0",
+   "data": "2026-11-06",
+   "nota": "Prima impaginazione typst dal registro: 17 problemi pronti, P15 in appendice come interno."
+  },
+  {
+   "versione": "1.1",
+   "data": "2026-11-09",
+   "nota": "P15 (contratti attuativi senza collegamento all'accordo quadro) pronta e inserita fra le schede: misure su campi strutturati (cig_aq_tipo.py, cig_aq_padre_appalto.py), originali ANAC archiviati (scheda AD4 nel modello dati github.com/anticorruzione/npa, comunicato del Presidente 5/6/2024), campione di 30 vuoti 2025; raccomandazione R81. P04 aggiornata con la misura su tutto il mirror OCDS (96 mesi, 0 date conformi da 2019/12, 3,59 milioni di release senza data). Le schede riportano ora anche le misure successive alla prima. 18 problemi pronti su 18."
+  }
+ ],
+ "registro_sha256": "a546c4bc27150769aa1ed32c1db492f418b8e6d33a884442ac9d75c6377c4ed1",
  "pronti": [
   {
    "id": "P01",
@@ -18,7 +31,8 @@
    "azione_correttiva": "Rigenerare i mesi duplicati dal loro contenuto reale; aggiungere al processo di generazione un controllo che rifiuti un mese identico a un altro",
    "metrica": "I4: nessuna coppia di mesi con stessa dimensione e stessi blocchi interni (sonda giornaliera)",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P02",
@@ -36,7 +50,8 @@
    "azione_correttiva": "Pubblicare i mesi mancanti, oppure dichiarare sulla pagina OCDS la sospensione con la data di ripresa",
    "metrica": "I1: esiste il file del mese precedente dopo il giorno 2 di ogni mese",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P03",
@@ -54,7 +69,8 @@
    "azione_correttiva": "Ripristinare nella generazione dell'OCDS l'esportazione di awards.suppliers e parties con ruolo supplier, come negli anni precedenti, e rigenerare il 2026",
    "metrica": "Quota di award OCDS con fornitore, per mese (nuova metrica I10, da aggiungere alla sonda)",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P08",
@@ -72,7 +88,8 @@
    "azione_correttiva": "Conservare i delta fino al full successivo, o pubblicare il full dell'anno in corso; dichiarare la politica di conservazione",
    "metrica": "I6: nessun delta presente nel nostro archivio sparisce dal server prima del full successivo",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P18",
@@ -90,7 +107,8 @@
    "azione_correttiva": "Pubblicare in bulk (CSV/JSON) un dataset cig -> link ai documenti di gara, con lo storico pre-2024. Rendere obbligatorio il link anche per adesioni a convenzioni/AQ e affidamenti in house. Dichiarare licenza e termini d'uso dell'API PVL.",
    "metrica": "Quota di CIG BDNCP con link nei dataset bulk (oggi 0 %; nell'API PVL 65,1 %), per anno e per tipo di procedura",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P04",
@@ -101,14 +119,21 @@
    "prova": {
     "script": "tools/verifiche/verifica_38_42.py",
     "esito": "report/anac/verifica-38-42-2026-10-27.json",
-    "sintesi": "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Il difetto è comparso fra il 2021 e il 2023",
+    "sintesi": "Formato di release.date non conforme a RFC 3339 in tutte le release di marzo 2026 ('2026-03-13 17:30:20.636T12:00:00Z'; 13,4% vuote), di ottobre 2024 e di giugno 2022; conforme nel 2019 ('2021-12-02T12:00:00Z'). Su tutto il mirror (6/11/2026) il difetto parte dal mese 2019/12: da allora 0 date conformi",
     "verificato_il": "2026-10-27"
    },
    "controvalidazione": "Seconda via indipendente (parser di date standard di Python, mese diverso): ottobre 2024, 0 date valide su 117.271 release",
+   "misura_mirror": "6/11/2026, tutto il mirror bulk (96 mesi, 2018/01-2026/03; tools/verifiche/ocds_release_date.py, esiti/2026-11-06/ocds/release-date.json): via 1 (espressione RFC 3339 dello schema) e via 2 (datetime.fromisoformat con T e fuso obbligatori) concordano su tutte le 4.751.105 date presenti (0 discordi). Conformi solo 2018/01-2019/11 (556.553, tutte, forma 2021-10-01T12:00:00Z; 2019/06: 24 release senza data). Da 2019/12 a 2026/03 nessuna data conforme: 4.194.552 date nella forma «2021-02-03 02:53:03.297T12:00:00Z»; release senza release.date 3.594.570 (es. 2026/03: 19.829 su 148.369). Esempi con sha256 dal manifest: 2019/11 84158d57c82eb3c3… (conforme), 2019/12 6a6c62742ce99201… (primo mese non conforme), 2026/03 c311a079324f95f863b1d47d9280b3441518cc719939eb918909dbf3d50cd4dc. I totali contano anche i mesi che servono lo stesso contenuto (D14, P-mesi duplicati)",
    "azione_correttiva": "Emettere date ISO 8601 / RFC 3339 come richiesto dallo schema OCDS 1.1; valorizzare sempre release.date",
-   "metrica": "Quota di release con date valida secondo lo schema = 100% (nuova metrica I11)",
+   "metrica": "Quota di release con release.date presente e valida secondo lo schema = 100% (nuova metrica I11; oggi 0 % da 2019/12, misura di tools/verifiche/ocds_release_date.py)",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": [
+    {
+     "etichetta": "Misura su tutto il mirror",
+     "testo": "6/11/2026, tutto il mirror bulk (96 mesi, 2018/01-2026/03; tools/verifiche/ocds_release_date.py, esiti/2026-11-06/ocds/release-date.json): via 1 (espressione RFC 3339 dello schema) e via 2 (datetime.fromisoformat con T e fuso obbligatori) concordano su tutte le 4.751.105 date presenti (0 discordi). Conformi solo 2018/01-2019/11 (556.553, tutte, forma 2021-10-01T12:00:00Z; 2019/06: 24 release senza data). Da 2019/12 a 2026/03 nessuna data conforme: 4.194.552 date nella forma «2021-02-03 02:53:03.297T12:00:00Z»; release senza release.date 3.594.570 (es. 2026/03: 19.829 su 148.369). Esempi con sha256 dal manifest: 2019/11 84158d57c82eb3c3… (conforme), 2019/12 6a6c62742ce99201… (primo mese non conforme), 2026/03 c311a079324f95f863b1d47d9280b3441518cc719939eb918909dbf3d50cd4dc. I totali contano anche i mesi che servono lo stesso contenuto (D14, P-mesi duplicati)"
+    }
+   ]
   },
   {
    "id": "P05",
@@ -126,7 +151,8 @@
    "azione_correttiva": "Includere nell'OCDS tutte le aggiudicazioni della BDNCP, o documentare il criterio di esclusione",
    "metrica": "Rapporto mensile OCDS/tabellari per data di aggiudicazione",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P06",
@@ -144,7 +170,8 @@
    "azione_correttiva": "Ripristinare l'API o rimuoverla dalla pagina; pubblicare uno swagger.json valido",
    "metrica": "I2",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P09",
@@ -161,7 +188,8 @@
    "azione_correttiva": "Pubblicare giugno e luglio 2026; riprendere la distribuzione JSON o dichiararne la cessazione",
    "metrica": "I5: continuità di ogni serie mensile dichiarata",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P10",
@@ -179,7 +207,8 @@
    "azione_correttiva": "Togliere dal catalogo le risorse inesistenti, o pubblicarle",
    "metrica": "I8",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P12",
@@ -198,7 +227,8 @@
    "metrica": "I9: HEAD e GET con più user-agent, stesso Content-Type",
    "stato": "aperto",
    "pronto_per_anac": true,
-   "storia": "Fino alla versione 1.5 del rendiconto scritto come 'pagina HTML al posto del file': per il GET non c'erano prove archiviate e il 27/10 non si riproduce; corretto nella 1.6"
+   "storia": "Fino alla versione 1.5 del rendiconto scritto come 'pagina HTML al posto del file': per il GET non c'erano prove archiviate e il 27/10 non si riproduce; corretto nella 1.6",
+   "altre_misure": []
   },
   {
    "id": "P14",
@@ -215,7 +245,8 @@
    "azione_correttiva": "Lasciare vuoto il campo quando il CUP non c'è, e documentare la convenzione",
    "metrica": "Numero di righe con CUP = 'ND'",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P16",
@@ -233,7 +264,8 @@
    "azione_correttiva": "Esportare i CSV secondo RFC 4180 (virgolette raddoppiate), come nei file annuali",
    "metrica": "Righe rifiutate da un lettore CSV rigoroso in ogni nuovo file = 0",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P07",
@@ -250,7 +282,8 @@
    "azione_correttiva": "Allineare la licenza di catalogo, pagina e file",
    "metrica": "I3",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P11",
@@ -268,7 +301,8 @@
    "azione_correttiva": "Valorizzare size con la dimensione della distribuzione servita",
    "metrica": "I7",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P13",
@@ -285,7 +319,8 @@
    "azione_correttiva": "Esporre ETag (e mantenere Last-Modified) per permettere download condizionali",
    "metrica": "Quota di risorse con ETag (sonda)",
    "stato": "aperto",
-   "pronto_per_anac": true
+   "pronto_per_anac": true,
+   "altre_misure": []
   },
   {
    "id": "P17",
@@ -303,36 +338,65 @@
    "azione_correttiva": "Documentare nei metadati la convenzione dei segnaposto CFAVCP- (a chi si assegnano, per esempio alle centrali uniche di committenza senza codice fiscale proprio) e, dove esiste, sostituirli con il codice fiscale reale o dell'ente capofila",
    "metrica": "Numero di stazioni appaltanti con codice fiscale non valido, in cig_delta e nell'anagrafica stazioni-appaltanti (oggi 902 e 1.285)",
    "stato": "aperto",
-   "pronto_per_anac": true
-  }
- ],
- "interni": [
+   "pronto_per_anac": true,
+   "altre_misure": []
+  },
   {
    "id": "P15",
    "titolo": "Contratti attuativi senza collegamento all'accordo quadro o convenzione",
    "conseguenza": "Non si sa da quale accordo quadro o convenzione nasce un acquisto: la spesa fatta tramite i grandi contratti centralizzati, come il cloud comprato tramite Consip, non si attribuisce.",
-   "rif": "#50",
+   "rif": "#50, R81",
    "gravita": "da_valutare",
    "prova": {
-    "script": "tools/verifiche/cig_accordo_quadro.py",
-    "esito": "report/anac/verifica-cig-accordo-quadro-2026-10-27.json",
-    "sintesi": "Fra i CIG che nel testo dichiarano un'adesione, cig_accordo_quadro vuoto: 20% nel 2025, 56% nel 2017; 11.568 CIG padre puntati non esistono",
-    "verificato_il": "2026-10-27"
+    "script": "tools/verifiche/cig_aq_tipo.py",
+    "esito": "esiti/2026-11-09/cig-aq/tipo.json",
+    "sintesi": "Base di 12.059.349 CIG 2007-2026. Nel 2025, su 356.312 CIG dichiarati discendenti da accordo quadro o convenzione, 3.944 hanno cig_accordo_quadro vuoto e 14.267 puntano a un CIG padre che non esiste nell'open data (10.993 della serie PCP «B…», 882 scritti in minuscolo): padre collegabile nel 94,9 % dei casi, contro il 99,9 % del 2023. Inoltre 169.705 derivati 2025 puntano a un padre registrato come «contratto d'appalto» (Consip 44.105, ARIA 39.152, Regione Siciliana 21.107: convenzioni e accordi quadro noti), perché dal 2024 la modalità «CONVENZIONE» sparisce dall'open data (22.970 CIG nel 2023, 0 nel 2024-2026) e STRUMENTO_SVOLGIMENTO è vuoto nel 98,7 % dei CIG 2025 (tools/verifiche/cig_aq_padre_appalto.py, esiti/2026-11-09/cig-aq/padre-appalto.json). Il campo è obbligatorio nella scheda PCP AD4 (modello dati ANAC github.com/anticorruzione/npa; comunicato del Presidente 5/6/2024), ma lo schema non ne valida forma né esistenza",
+    "verificato_il": "2026-11-09"
    },
-   "controvalidazione": "Da fare: campione verificato a mano; obbligo normativo e ANAC del campo da documentare",
-   "azione_correttiva": "Da definire dopo la verifica dell'obbligo: controllo di compilazione in fase di richiesta del CIG derivato",
-   "metrica": "Quota di CIG derivati con cig_accordo_quadro valorizzato e esistente",
-   "stato": "in_verifica",
-   "pronto_per_anac": false,
-   "manca": "validazione su campione, norma, controvalidazione",
-   "motivo_interno": "Resta interno (verifica del 6/11, #33): l'obbligo di compilare cig_accordo_quadro per ogni derivato non è documentato in una norma o in un atto ANAC che abbiamo letto; il denominatore dipende da una classificazione testuale delle adesioni non validata a mano; gli 11.568 CIG padre inesistenti possono essere CIG di accordi quadro non presenti nel mirror (ante 2007 o SmartCIG). Senza le tre verifiche il rilievo non regge davanti ad ANAC. Il tema prosegue nel lavoro sulle convenzioni (#50, #62)."
+   "controvalidazione": "Seconda misura del 6/11/2026 (tools/verifiche/cig_aq_modalita.py, esiti/2026-11-06/cig-aq/modalita.json): quando la stazione appaltante dichiara la modalità «discendente da accordo quadro/convenzione», cig_accordo_quadro è valorizzato nel 99,9-100 % dei casi fino al 2023 e nel 98,6 % (2024), 98,9 % (2025), 99,5 % (2026); con «contratto d'appalto» non lo è mai. Il «20 % vuoto» del 27/10 nasce dall'espressione sul testo: su 60 CIG 2025 a caso fra quelli «testo di adesione + contratto d'appalto + campo vuoto», solo 3 sono adesioni vere (5 %, IC 2-14; 55 sono appalti specifici di sistemi dinamici di acquisizione, che non discendono da un AQ). Stima delle adesioni vere senza collegamento nel 2025: circa 520 su 10.202",
+   "esito_6_11": "Il rilievo come formulato il 27/10 NON regge e resta interno. Restano due difetti piccoli e misurabili: (a) CIG dichiarati discendenti senza cig_accordo_quadro: 3.946 nel 2025 (1,1 % di 356.322), 4.130 nel 2024; (b) circa 520 adesioni vere dichiarate come appalto ordinario (stima da campione). Per (b) e per gli appalti specifici di SDA serve sapere se ANAC chiede il collegamento al CIG istitutivo (obbligo da documentare)",
+   "misura_9_11": "Terza misura (9/11/2026, tools/verifiche/cig_aq_tipo.py, esiti/2026-11-09/cig-aq/tipo.json; base 12.059.349 CIG 2007-2026). CIG discendenti con padre ESISTENTE nella base: 97,8 % (2016) → 99,9 % (2023), poi 92,4 % (2024: 4.129 vuoti + 18.517 padri inesistenti su 296.092), 94,9 % (2025: 3.944 + 14.267 su 356.312), 96,8 % (2026). Padri inesistenti 2025 per forma: 10.993 «B…» a 10 caratteri, 882 con la b minuscola (stesso CIG scritto in minuscolo: difetto di normalizzazione), 289 «Z…» (smartcig, fuori dalla base). Tipo di adesione (soggetto del padre, config/tipi_soggetto.yaml) nel 2025: Consip 70.238, aggregatori regionali 90.749, consorzi/unioni 3.551, altre stazioni 173.563. Coerenza: nel 2025 170.759 derivati puntano a un padre dichiarato «CONTRATTO D'APPALTO» (non AQ né convenzione; 22.595 nel 2024, ≤ 573 fino al 2023), da ricondurre agli SDA/nuova piattaforma 2024. Imbuto (lavoro/imbuto/ict.csv): 55.114 CIG ICT discendenti per 89,2 mld (importi di lotto, con i massimali); non collegabili al prodotto dell'AQ 1.666 CIG e 734 M€ (0,82 %), di cui 432 M€ nel 2024 e 223 M€ nel 2025. Esempi 2025: B780EE6F37 → B6E4CDDD99 e B7D7746B5A → B37C986E0B (padre inesistente), B98EB8B4B4 (vuoto)",
+   "norma_9_11": "Obbligo documentato (fonti archiviate con tools/archivia.py). (1) Schede PCP dei dati da trasmettere alla BDNCP (art. 23 c. 5 d.lgs. 36/2023, delibera ANAC 261/2023 e aggiornamenti): nella scheda AD4 «Adesione ad accordo quadro/convenzione senza successivo confronto competitivo» (art. 59 c. 4 lett. a) il campo «CIG accordo quadro - CIG relativo all'accordo quadro/convenzione cui si aderisce» è OBBLIGATORIO; lo è anche nelle schede di adesione con successivo confronto (P6.1/P6.2, appalti specifici). Copia letta: lentepubblica.it/wp-content/uploads/2024/01/schede-anac.pdf, sha256 d0712b8978639107ffd06a88ba4eb5b60e29f4c58516cee4584a003e8074ef74 (copia secondaria del documento ANAC: l'originale su anticorruzione.it non è stato trovato, da sostituire appena reperito). (2) Comunicato del Presidente ANAC 5/6/2024 sull'affidamento diretto di accordi quadro: CIG padre per l'AQ e nuovo CIG derivato per ciascun contratto applicativo, scheda AD4 (letto tramite traspare.com sha256 efe966e0f8b962d0a93a2823f6cd9a6e852a9428eb734833f73e92a756b2c7af e lavoripubblici.it sha256 76e6db898984fb88ae4b1978c5c4eff71cc5193441b7ad22672e9aab423260c5; testo ANAC originale da archiviare). (3) Istruzioni ANAC sulla digitalizzazione dal 1/1/2024 (copia ediltecnico.it, sha256 69e0600ca516e267ef70917e82471d68fb2db7c577455c0e9418b1e9f9aa7681): le adesioni ad AQ/convenzioni con bando pubblicato entro il 31/12/2023 restano su SIMOG (regime transitorio), le successive passano dalla PCP. (4) Art. 59 d.lgs. 36/2023 (codiceappalti.it sha256 1eec720bcec5df0ffac3aef372c97a42460f1bd270e1c3d8af7b3fc256d5d30a). (5) Prassi: Provincia di Trento, «Affidamenti diretti su Accordo Quadro, trasmissione scheda AD4 e acquisizione CIG derivato» (sha256 3759c050af51cc7ab82444ac3d5e085d4ec7fd7db0b90532710675f27087af88). Conseguenza: per i derivati PCP il campo vuoto non dovrebbe esistere; i 3.944 vuoti 2025 e i 4.130 del 2024 sono CIG del regime transitorio SIMOG o un difetto dell'esportazione open data, da distinguere con un campione",
+   "anomalia_padre_appalto_9_11": "Quarta misura (tools/verifiche/cig_aq_padre_appalto.py, esiti/2026-11-09/cig-aq/padre-appalto.json, sha256 87306f8afb9db3a0a8d34fd634fa778f9d57b5100a1cccc9db6faf740a1f3702). Escludendo i padri a loro volta discendenti: 169.705 derivati 2025 (25.599 padri distinti) e 22.267 nel 2024 puntano a un padre «CONTRATTO D'APPALTO». Non sono SDA in prevalenza: scelta del padre 2025 procedura aperta 79.461, ristretta 70.544 (forma tipica di AQ multi-fornitore e SDA regionali), negoziata 9.923, affidamento diretto 7.478, «sistema dinamico» 8; i figli sono affidamenti diretti (ordinativi) in 169.624 casi su 169.705. Padri per stazione: Consip 44.105, ARIA 39.152, Regione Siciliana 21.107, AST Ancona 5.272, Regione Lazio 4.970, Sardegna 3.931, Intercent-ER 3.826, Azienda Zero 3.541, InnovaPuglia 3.408; anno del padre 2024 107.671, 2025 43.551, 2023 17.971; CPV del padre 33 (sanitario) 105.644, 09 (energia, carburanti) 35.326, 30 (macchine per ufficio e IT) 9.453. Padri con più derivati: Consip B2B780C944 «quantitativo massimo globale 1.500 GWh» (energia elettrica, 2.181), A030E34F62 carburanti extrarete lotto 2 (1.850), B1457D87B0 multifunzione A3 lotto 5 (1.638): convenzioni note, registrate come contratto d'appalto. Causa: dal 2024 la modalità «CONVENZIONE» scompare dall'open data (22.970 CIG nel 2023, 0 nel 2024-2026) e STRUMENTO_SVOLGIMENTO è vuoto nel 93,7 % (2024) e 98,7 % (2025) dei CIG (0,01 % nel 2023): con la PCP la natura di convenzione/AQ del padre non è più leggibile in modalita_realizzazione. Difetto di rappresentazione dei padri, non dei derivati: il collegamento figlio-padre c'è, si perde la tipologia del padre. Esempi 2025: B8E120E668 -> B2B780C944 (Consip, energia), B6C946C6E3 -> B5CCD68CFD (Intercent-ER, ristretta), B84B685AB7 -> B4D1DB1D92 (ARIA, aperta), B8362E23CA -> B530B0511D (InnovaPuglia, ristretta)",
+   "originali_9_11": "Originali ANAC archiviati (9/11/2026). (1) Comunicato del Presidente ANAC 5/6/2024 «Chiarimenti in merito all'affidamento diretto di un accordo quadro», § 4: CIG padre per l'AQ, nuovo CIG derivato per ciascun contratto applicativo, per i contratti applicativi «dovrà essere compilata la scheda AD4»; https://www.anticorruzione.it/documents/91439/7b3b9d00-aaed-3238-d5e1-5a618adf5d24, sha256 bd47852c4fbe8da82bdc2f45765463e5fbadc11cec5dbeb6131aa4a44a25ed4e. (2) Modello dati ufficiale delle schede PCP nel repository ANAC github.com/anticorruzione/npa: docs/modello-dati/schede/modello-dati-schede-AD4.yaml, AppaltoAD4Type, required: [cig, dataAdesione, ...], cig = «CIG relativo all'accordo quadro/convenzione cui si aderisce» (sha256 7075b644e3e2cda8bc29b40411b60d5d672fab223ec8b46778f07c3fbbff479e); regole docs/modello-dati/regole/AD4.dmn (sha256 3efde6c6f40c0db47c572dca380f3aedeb044c7fece6bc207c62bba78715ffec), nessuna regola sul cig. Nel modello il cig è solo type: string, senza minLength né pattern: un valore vuoto o in minuscolo supera la validazione di schema. Le copie secondarie (lentepubblica, traspare, lavoripubblici) restano come riscontro",
+   "campione_vuoti_9_11": "Campione di 30 su 3.950 CIG 2025 discendenti con cig_accordo_quadro vuoto (tools/verifiche/cig_aq_vuoti_campione.py, seme p15-campione-20261109, esiti/2026-11-09/cig-aq/vuoti-2025-campione.json sha256 c3f898a8eef85b8f5e897fe44b2c45b0ececc722e9006227286bd1b8a89f9d42 e .csv). Universo: 3.950 su 3.950 sono CIG della serie PCP «B» con STRUMENTO_SVOLGIMENTO vuoto, 3.892 affidamenti diretti: nessuno è del regime transitorio SIMOG. Lettura a mano dell'oggetto: 12 adesioni esplicite (es. B59039BEED «adesione alla convenzione ARIA_2023_011.3 lotto 30», B5F39CF5E2 «adesione accordo quadro carburanti», B6142F027A «CA in emissione su AQ 4489/2024», B8CF918B30 «primo contratto applicativo lotto 4»), 13 probabili (carburanti, energia, gas, farmaci, lotti di gare regionali), 5 non determinabili; in nessun oggetto compare il CIG del padre. Conclusione: i vuoti sono CIG PCP per cui la scheda AD4 imporrebbe il campo; dal mirror non si distingue se la PCP li abbia accettati vuoti (lo schema lo consente) o se il valore si perda nell'esportazione: la domanda va posta così ad ANAC",
+   "azione_correttiva": "(a) In PCP rendere bloccante (minLength 10, pattern [0-9A-Z]{10} e verifica di esistenza nel modello dati AD4, oggi solo type: string) il CIG accordo quadro nelle schede di adesione (già obbligatorio in AD4) con verifica di esistenza del padre e normalizzazione in maiuscolo; (b) pubblicare nell'open data CIG la natura del padre (accordo quadro, convenzione, SDA) ricavata dalle schede PCP, ripristinando «CONVENZIONE» e STRUMENTO_SVOLGIMENTO; (c) pubblicare i CIG padre PCP assenti dal dataset (10.993 «B…» nel 2025)",
+   "metrica": "Quota di derivati con padre esistente di natura AQ/convenzione/SDA nell'open data (2025: 169.705 puntano a un «contratto d'appalto», tools/verifiche/cig_aq_padre_appalto.py) = 100 %; quota di CIG discendenti con cig_accordo_quadro valorizzato, in maiuscolo ed esistente nella base CIG (oggi 94,9 % nel 2025, tools/verifiche/cig_aq_tipo.py) = 100 %; quota di padri con modalità AQ/convenzione o SDA",
+   "stato": "aperto",
+   "pronto_per_anac": true,
+   "storia": "Prima formulazione del 27/10/2026 (tools/verifiche/cig_accordo_quadro.py, report/anac/verifica-cig-accordo-quadro-2026-10-27.json: cig_accordo_quadro vuoto nel 20 % dei CIG 2025 che nel testo dichiarano un'adesione) ritirata il 6/11: era un artefatto della classificazione sul testo (precisione 5 % su 60). Scheda rifatta su campi strutturati il 9/11 e dichiarata pronta (documento per ANAC v1.1)",
+   "manca": "nulla di sostanziale: originali ANAC archiviati e campione chiuso; resta la decisione di Fabio sulla formulazione (vuoti PCP 2025: 3.950, 1,1 %; padri inesistenti 14.267; natura del padre persa, R81)",
+   "motivo_interno": "Secondo aggiornamento 9/11: originali ANAC archiviati (comunicato 5/6/2024, modello dati AD4 su github.com/anticorruzione/npa) e campione dei vuoti chiuso (tutti CIG PCP, nessun SIMOG): le tre condizioni che tenevano P15 interna sono soddisfatte; la scheda è pronta nel merito, in attesa della decisione di Fabio. Primo aggiornamento 9/11: la norma è documentata (scheda AD4, campo obbligatorio; comunicato 5/6/2024) e l'anomalia dei padri «contratto d'appalto» è spiegata (scomparsa di «CONVENZIONE» e STRUMENTO_SVOLGIMENTO vuoto dal 2024). Resta interno solo finché non si archivia l'originale ANAC delle schede e non si chiude il campione dei vuoti; la parte (b) dell'azione correttiva è già robusta su campi strutturati (candidata a R81). Storico: Resta interno (verifica del 6/11, #33): l'obbligo di compilare cig_accordo_quadro per ogni derivato non è documentato in una norma o in un atto ANAC che abbiamo letto; il denominatore dipende da una classificazione testuale delle adesioni non validata a mano; gli 11.568 CIG padre inesistenti possono essere CIG di accordi quadro non presenti nel mirror (ante 2007 o SmartCIG). Senza le tre verifiche il rilievo non regge davanti ad ANAC. Il tema prosegue nel lavoro sulle convenzioni (#50, #62).",
+   "altre_misure": [
+    {
+     "etichetta": "Misura per tipo di adesione (9/11/2026)",
+     "testo": "Terza misura (9/11/2026, tools/verifiche/cig_aq_tipo.py, esiti/2026-11-09/cig-aq/tipo.json; base 12.059.349 CIG 2007-2026). CIG discendenti con padre ESISTENTE nella base: 97,8 % (2016) → 99,9 % (2023), poi 92,4 % (2024: 4.129 vuoti + 18.517 padri inesistenti su 296.092), 94,9 % (2025: 3.944 + 14.267 su 356.312), 96,8 % (2026). Padri inesistenti 2025 per forma: 10.993 «B…» a 10 caratteri, 882 con la b minuscola (stesso CIG scritto in minuscolo: difetto di normalizzazione), 289 «Z…» (smartcig, fuori dalla base). Tipo di adesione (soggetto del padre, config/tipi_soggetto.yaml) nel 2025: Consip 70.238, aggregatori regionali 90.749, consorzi/unioni 3.551, altre stazioni 173.563. Coerenza: nel 2025 170.759 derivati puntano a un padre dichiarato «CONTRATTO D'APPALTO» (non AQ né convenzione; 22.595 nel 2024, ≤ 573 fino al 2023), da ricondurre agli SDA/nuova piattaforma 2024. Imbuto (lavoro/imbuto/ict.csv): 55.114 CIG ICT discendenti per 89,2 mld (importi di lotto, con i massimali); non collegabili al prodotto dell'AQ 1.666 CIG e 734 M€ (0,82 %), di cui 432 M€ nel 2024 e 223 M€ nel 2025. Esempi 2025: B780EE6F37 → B6E4CDDD99 e B7D7746B5A → B37C986E0B (padre inesistente), B98EB8B4B4 (vuoto)"
+    },
+    {
+     "etichetta": "Natura del padre persa (9/11/2026)",
+     "testo": "Quarta misura (tools/verifiche/cig_aq_padre_appalto.py, esiti/2026-11-09/cig-aq/padre-appalto.json, sha256 87306f8afb9db3a0a8d34fd634fa778f9d57b5100a1cccc9db6faf740a1f3702). Escludendo i padri a loro volta discendenti: 169.705 derivati 2025 (25.599 padri distinti) e 22.267 nel 2024 puntano a un padre «CONTRATTO D'APPALTO». Non sono SDA in prevalenza: scelta del padre 2025 procedura aperta 79.461, ristretta 70.544 (forma tipica di AQ multi-fornitore e SDA regionali), negoziata 9.923, affidamento diretto 7.478, «sistema dinamico» 8; i figli sono affidamenti diretti (ordinativi) in 169.624 casi su 169.705. Padri per stazione: Consip 44.105, ARIA 39.152, Regione Siciliana 21.107, AST Ancona 5.272, Regione Lazio 4.970, Sardegna 3.931, Intercent-ER 3.826, Azienda Zero 3.541, InnovaPuglia 3.408; anno del padre 2024 107.671, 2025 43.551, 2023 17.971; CPV del padre 33 (sanitario) 105.644, 09 (energia, carburanti) 35.326, 30 (macchine per ufficio e IT) 9.453. Padri con più derivati: Consip B2B780C944 «quantitativo massimo globale 1.500 GWh» (energia elettrica, 2.181), A030E34F62 carburanti extrarete lotto 2 (1.850), B1457D87B0 multifunzione A3 lotto 5 (1.638): convenzioni note, registrate come contratto d'appalto. Causa: dal 2024 la modalità «CONVENZIONE» scompare dall'open data (22.970 CIG nel 2023, 0 nel 2024-2026) e STRUMENTO_SVOLGIMENTO è vuoto nel 93,7 % (2024) e 98,7 % (2025) dei CIG (0,01 % nel 2023): con la PCP la natura di convenzione/AQ del padre non è più leggibile in modalita_realizzazione. Difetto di rappresentazione dei padri, non dei derivati: il collegamento figlio-padre c'è, si perde la tipologia del padre. Esempi 2025: B8E120E668 -> B2B780C944 (Consip, energia), B6C946C6E3 -> B5CCD68CFD (Intercent-ER, ristretta), B84B685AB7 -> B4D1DB1D92 (ARIA, aperta), B8362E23CA -> B530B0511D (InnovaPuglia, ristretta)"
+    },
+    {
+     "etichetta": "Obbligo normativo",
+     "testo": "Obbligo documentato (fonti archiviate con tools/archivia.py). (1) Schede PCP dei dati da trasmettere alla BDNCP (art. 23 c. 5 d.lgs. 36/2023, delibera ANAC 261/2023 e aggiornamenti): nella scheda AD4 «Adesione ad accordo quadro/convenzione senza successivo confronto competitivo» (art. 59 c. 4 lett. a) il campo «CIG accordo quadro - CIG relativo all'accordo quadro/convenzione cui si aderisce» è OBBLIGATORIO; lo è anche nelle schede di adesione con successivo confronto (P6.1/P6.2, appalti specifici). Copia letta: lentepubblica.it/wp-content/uploads/2024/01/schede-anac.pdf, sha256 d0712b8978639107ffd06a88ba4eb5b60e29f4c58516cee4584a003e8074ef74 (copia secondaria del documento ANAC: l'originale su anticorruzione.it non è stato trovato, da sostituire appena reperito). (2) Comunicato del Presidente ANAC 5/6/2024 sull'affidamento diretto di accordi quadro: CIG padre per l'AQ e nuovo CIG derivato per ciascun contratto applicativo, scheda AD4 (letto tramite traspare.com sha256 efe966e0f8b962d0a93a2823f6cd9a6e852a9428eb734833f73e92a756b2c7af e lavoripubblici.it sha256 76e6db898984fb88ae4b1978c5c4eff71cc5193441b7ad22672e9aab423260c5; testo ANAC originale da archiviare). (3) Istruzioni ANAC sulla digitalizzazione dal 1/1/2024 (copia ediltecnico.it, sha256 69e0600ca516e267ef70917e82471d68fb2db7c577455c0e9418b1e9f9aa7681): le adesioni ad AQ/convenzioni con bando pubblicato entro il 31/12/2023 restano su SIMOG (regime transitorio), le successive passano dalla PCP. (4) Art. 59 d.lgs. 36/2023 (codiceappalti.it sha256 1eec720bcec5df0ffac3aef372c97a42460f1bd270e1c3d8af7b3fc256d5d30a). (5) Prassi: Provincia di Trento, «Affidamenti diretti su Accordo Quadro, trasmissione scheda AD4 e acquisizione CIG derivato» (sha256 3759c050af51cc7ab82444ac3d5e085d4ec7fd7db0b90532710675f27087af88). Conseguenza: per i derivati PCP il campo vuoto non dovrebbe esistere; i 3.944 vuoti 2025 e i 4.130 del 2024 sono CIG del regime transitorio SIMOG o un difetto dell'esportazione open data, da distinguere con un campione"
+    },
+    {
+     "etichetta": "Originali ANAC archiviati",
+     "testo": "Originali ANAC archiviati (9/11/2026). (1) Comunicato del Presidente ANAC 5/6/2024 «Chiarimenti in merito all'affidamento diretto di un accordo quadro», § 4: CIG padre per l'AQ, nuovo CIG derivato per ciascun contratto applicativo, per i contratti applicativi «dovrà essere compilata la scheda AD4»; https://www.anticorruzione.it/documents/91439/7b3b9d00-aaed-3238-d5e1-5a618adf5d24, sha256 bd47852c4fbe8da82bdc2f45765463e5fbadc11cec5dbeb6131aa4a44a25ed4e. (2) Modello dati ufficiale delle schede PCP nel repository ANAC github.com/anticorruzione/npa: docs/modello-dati/schede/modello-dati-schede-AD4.yaml, AppaltoAD4Type, required: [cig, dataAdesione, ...], cig = «CIG relativo all'accordo quadro/convenzione cui si aderisce» (sha256 7075b644e3e2cda8bc29b40411b60d5d672fab223ec8b46778f07c3fbbff479e); regole docs/modello-dati/regole/AD4.dmn (sha256 3efde6c6f40c0db47c572dca380f3aedeb044c7fece6bc207c62bba78715ffec), nessuna regola sul cig. Nel modello il cig è solo type: string, senza minLength né pattern: un valore vuoto o in minuscolo supera la validazione di schema. Le copie secondarie (lentepubblica, traspare, lavoripubblici) restano come riscontro"
+    },
+    {
+     "etichetta": "Campione dei campi vuoti",
+     "testo": "Campione di 30 su 3.950 CIG 2025 discendenti con cig_accordo_quadro vuoto (tools/verifiche/cig_aq_vuoti_campione.py, seme p15-campione-20261109, esiti/2026-11-09/cig-aq/vuoti-2025-campione.json sha256 c3f898a8eef85b8f5e897fe44b2c45b0ececc722e9006227286bd1b8a89f9d42 e .csv). Universo: 3.950 su 3.950 sono CIG della serie PCP «B» con STRUMENTO_SVOLGIMENTO vuoto, 3.892 affidamenti diretti: nessuno è del regime transitorio SIMOG. Lettura a mano dell'oggetto: 12 adesioni esplicite (es. B59039BEED «adesione alla convenzione ARIA_2023_011.3 lotto 30», B5F39CF5E2 «adesione accordo quadro carburanti», B6142F027A «CA in emissione su AQ 4489/2024», B8CF918B30 «primo contratto applicativo lotto 4»), 13 probabili (carburanti, energia, gas, farmaci, lotti di gare regionali), 5 non determinabili; in nessun oggetto compare il CIG del padre. Conclusione: i vuoti sono CIG PCP per cui la scheda AD4 imporrebbe il campo; dal mirror non si distingue se la PCP li abbia accettati vuoti (lo schema lo consente) o se il valore si perda nell'esportazione: la domanda va posta così ad ANAC"
+    }
+   ]
   }
  ],
+ "interni": [],
  "totale": 18,
  "gravita": {
   "alta": 5,
   "media": 8,
   "bassa": 4,
-  "da_valutare": 0
+  "da_valutare": 1
  }
 }

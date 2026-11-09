@@ -16,7 +16,7 @@ const BREVE = {
   P02: { t: "OCDS fermo a marzo 2026", cosa: "Del 2026 è pubblicato solo marzo. Da aprile lo standard internazionale non riceve dati.", cons: "Per chi usa lo standard internazionale, in Europa e nel mondo, gli appalti italiani si fermano a marzo.", rim: "Pubblicare i mesi mancanti, o dichiarare sulla pagina la sospensione e la data di ripresa.", ver: "Ogni mese, dopo il giorno 2: il mese precedente è pubblicato." },
   P03: { t: "Il vincitore manca negli appalti 2026", cosa: "Nel 2026 il fornitore manca in 4 aggiudicazioni su 5. Negli anni precedenti c'era nel 99% dei casi.", cons: "Nello standard internazionale non si sa chi vince gli appalti dell'anno in corso.", rim: "Ripristinare l'esportazione del fornitore, che ANAC già possiede, e rigenerare il 2026.", ver: "Ogni mese: quota di aggiudicazioni con fornitore." },
   P08: { t: "Aggiornamenti mensili cancellati", cosa: "Gennaio, febbraio e marzo 2026 non sono più scaricabili, e non esiste un file completo dell'anno.", cons: "Per chi non li ha archiviati in tempo, quei tre mesi di contratti sono persi.", rim: "Conservare gli aggiornamenti fino al file annuale e dichiarare la regola di conservazione.", ver: "Ogni giorno: nessun file sparisce prima del file completo successivo." },
-  P04: { t: "Date non leggibili dagli strumenti", cosa: "Dal 2022 le date sono in un formato non standard; nel 2026 il 13% non ha data.", cons: "Gli strumenti standard non riescono a collocare gli appalti nel tempo senza correzioni manuali.", rim: "Date nel formato standard internazionale (ISO 8601), sempre valorizzate.", ver: "100% di date valide in ogni file." },
+  P04: { t: "Date non leggibili dagli strumenti", cosa: "Da dicembre 2019 nessuna data OCDS è nel formato standard (4,19 milioni); 3,59 milioni di release non hanno data.", cons: "Gli strumenti standard non riescono a collocare gli appalti nel tempo senza correzioni manuali.", rim: "Date nel formato standard internazionale (ISO 8601), sempre valorizzate.", ver: "100% di date valide in ogni file." },
   P05: { t: "Aggiudicazioni assenti dall'OCDS", cosa: "Fra il 22% e il 33% delle aggiudicazioni presenti nella banca dati non arriva nell'OCDS.", cons: "Chi usa solo lo standard internazionale sottostima appalti e spesa.", rim: "Includere tutte le aggiudicazioni, o dichiarare il criterio di esclusione.", ver: "Ogni mese: rapporto fra OCDS e dati tabellari." },
   P06: { t: "Interfaccia per programmi non funzionante", cosa: "L'interfaccia per l'accesso ai dati in tempo reale, descritta sul portale, risponde «non trovato».", cons: "Chi segue la documentazione ufficiale non ottiene nulla.", rim: "Ripristinare l'interfaccia, o toglierla dalla documentazione.", ver: "Ogni giorno: prova degli indirizzi documentati." },
   P09: { t: "Affidamenti sotto soglia mancanti", cosa: "Mancano giugno e luglio 2026 degli affidamenti sotto soglia; il formato JSON si è fermato a maggio.", cons: "Mancano proprio gli affidamenti diretti, quelli a più alto rischio.", rim: "Pubblicare i mesi mancanti; riprendere il JSON o dichiararne la fine.", ver: "Ogni giorno: continuità di ogni serie mensile." },
@@ -24,11 +24,13 @@ const BREVE = {
   P12: { t: "Informazioni false ai programmi", cosa: "A una richiesta automatica il server risponde «tutto bene» ma con una pagina web al posto dei dati del file.", cons: "I controlli automatici vengono ingannati senza alcun errore: aggiornamenti non rilevati.", rim: "Stessa risposta a browser e programmi, oppure un errore esplicito.", ver: "Ogni giorno: confronto fra browser e programma." },
   P14: { t: "Contratti scollegati dai progetti finanziati", cosa: "1,95 milioni di righe riportano «ND» al posto del codice del progetto (CUP).", cons: "Non si segue il denaro pubblico, PNRR compreso, dal finanziamento al contratto.", rim: "Lasciare il campo vuoto quando il codice manca, e documentare la convenzione.", ver: "Numero di righe con «ND»." },
   P16: { t: "File 2026 non conformi allo standard", cosa: "Da quest'anno alcune righe usano virgolette fuori standard; fino al 2025 no.", cons: "Gli strumenti standard scartano o leggono male quelle righe.", rim: "Esportare secondo lo standard CSV, come negli anni precedenti.", ver: "Zero righe rifiutate in ogni nuovo file." },
+  P15: { t: "Acquisti scollegati dalla convenzione d'origine", cosa: "Nel 2025 il 5,1 % dei contratti attuativi non porta a un padre esistente; 169.705 puntano a convenzioni Consip e regionali registrate come semplici appalti.", cons: "Non si attribuisce la spesa fatta tramite le convenzioni e gli accordi quadro, cloud Consip compreso.", rim: "CIG dell'accordo quadro bloccante e verificato nella PCP; natura del padre (convenzione, AQ, SDA) di nuovo nell'open data.", ver: "Ogni mese: quota di derivati con padre esistente e di natura AQ/convenzione (oggi 94,9 %)." },
   P07: { t: "Due licenze diverse per gli stessi dati", rim: "Una sola licenza in catalogo, pagina e file." },
   P11: { t: "Dimensioni dichiarate 4 volte quelle reali", rim: "Dichiarare la dimensione del file servito." },
   P13: { t: "Nessuna impronta per sapere se un file è cambiato", rim: "Esporre l'ETag, per scaricare solo ciò che cambia." },
   P17: { t: "Stazioni appaltanti con codice fiscale segnaposto", rim: "Documentare i segnaposto CFAVCP- (1.282 in anagrafica) o usare il codice fiscale reale." },
 };
+for (const p of reg) if (p.pronto_per_anac && !BREVE[p.id]) throw new Error(`${p.id} pronto ma senza testo breve`);
 for (const id of Object.keys(BREVE)) if (!byId[id] || !byId[id].pronto_per_anac) throw new Error(`${id} non è pronto nel registro`);
 
 const THEME = {
@@ -38,7 +40,9 @@ const THEME = {
   colors: { dk1: "1B2631", lt1: "FFFFFF", dk2: "17324D", lt2: "EEF3F8", accent1: "0066CC", accent2: "A61919", accent3: "A66300", accent4: "5C6F82", accent5: "008758", accent6: "CFE0F3", hlink: "0066CC", folHlink: "17324D" },
 };
 const HEX = { navy: "17324D", blu: "0066CC", rosso: "A61919", ambra: "A66300", ardesia: "5C6F82", tenue: "EEF3F8", bianco: "FFFFFF", testo: "1B2631" };
-const GRAV = { alta: { c: HEX.rosso, l: "Gravità alta" }, media: { c: HEX.ambra, l: "Gravità media" }, bassa: { c: HEX.ardesia, l: "Gravità bassa" } };
+const GRAV = { alta: { c: HEX.rosso, l: "Gravità alta" }, media: { c: HEX.ambra, l: "Gravità media" }, bassa: { c: HEX.ardesia, l: "Gravità bassa" }, da_valutare: { c: HEX.blu, l: "Gravità da valutare con ANAC" } };
+const VERSIONE = "1.1 del 9/11/2026";
+// Revisioni: 1.0 (6/11/2026) 17 problemi, P15 interno; 1.1 (9/11/2026) P15 pronta (R81), P04 misurata su tutto il mirror OCDS.
 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.33 x 7.5
@@ -60,7 +64,7 @@ pres.defineSlideMaster({
   margin: [0.5, 0.6, 0.6, 0.6],
   objects: [
     { placeholder: { options: { name: "title", type: "title", x: 0.6, y: 0.35, w: 12.1, h: 0.9, fontSize: 30, bold: true, color: HEX.navy, valign: "middle" }, text: "" } },
-    { text: { text: "Osservatorio Nazionale Sovranità Digitale · I dati aperti di ANAC: problemi e rimedi · ottobre 2026", options: { x: 0.6, y: 7.0, w: 10, h: 0.3, fontSize: 10, color: HEX.ardesia } } },
+    { text: { text: "Osservatorio Nazionale Sovranità Digitale · I dati aperti di ANAC: problemi e rimedi · versione ${VERSIONE} · bozza", options: { x: 0.6, y: 7.0, w: 10, h: 0.3, fontSize: 10, color: HEX.ardesia } } },
   ],
   slideNumber: { x: 12.2, y: 7.0, w: 0.5, h: 0.3, fontSize: 10, color: HEX.ardesia },
 });
@@ -77,7 +81,7 @@ const pronti = reg.filter((p) => p.pronto_per_anac);
 const conta = (g) => pronti.filter((p) => p.gravita === g).length;
 let s = pres.addSlide({ masterName: "COPERTINA", sectionTitle: "Apertura" });
 s.addText(`I dati aperti di ANAC: ${pronti.length} problemi, ${pronti.length} rimedi`, { placeholder: "title" });
-s.addText("Rilevazione di ottobre 2026 sulla Banca Dati Nazionale dei Contratti Pubblici\nOsservatorio Nazionale Sovranità Digitale", { placeholder: "body" });
+s.addText(`Rilevazione di ottobre-novembre 2026 sulla Banca Dati Nazionale dei Contratti Pubblici\nOsservatorio Nazionale Sovranità Digitale · versione ${VERSIONE} · bozza, non inviata`, { placeholder: "body" });
 s.addNotes("Obiettivo dell'incontro: concordare con ANAC le correzioni e il modo di verificarle. Non è una valutazione del lavoro di ANAC: il patrimonio di dati è tra i più ampi d'Europa.");
 
 // 2. Il messaggio
@@ -99,7 +103,7 @@ s.addNotes("Messaggio chiave: i dati ci sono e sono preziosi; i difetti sono nel
 // 3. Sintesi: griglia dei 15 problemi per gravità
 s = pres.addSlide({ masterName: "CONTENUTO", sectionTitle: "Apertura" });
 s.addText(`Sintesi: ${pronti.length} problemi, in ordine di gravità`, { placeholder: "title" });
-const ordine = ["alta", "media", "bassa"];
+const ordine = ["alta", "media", "bassa", "da_valutare"];
 const elenco = ordine.flatMap((g) => pronti.filter((p) => p.gravita === g));
 elenco.forEach((p, i) => {
   const nc = elenco.length > 15 ? 4 : 3, cw = 12.3 / nc;
@@ -109,12 +113,12 @@ elenco.forEach((p, i) => {
   badge(s, x + 0.15, y + 0.17, p.id, GRAV[p.gravita].c, 0.58);
   t(s, BREVE[p.id].t, { x: x + 0.9, y: y + 0.12, w: cw - 1.25, h: 0.7, fontSize: 14, bold: true, valign: "middle", color: HEX.navy });
 });
-t(s, [{ text: "● ", options: { color: HEX.rosso } }, { text: "alta   " }, { text: "● ", options: { color: HEX.ambra } }, { text: "media   " }, { text: "● ", options: { color: HEX.ardesia } }, { text: "bassa" }], { x: 0.6, y: 6.5, w: 6, h: 0.3, fontSize: 12, color: HEX.ardesia });
+t(s, [{ text: "● ", options: { color: HEX.rosso } }, { text: "alta   " }, { text: "● ", options: { color: HEX.ambra } }, { text: "media   " }, { text: "● ", options: { color: HEX.ardesia } }, { text: "bassa   " }, { text: "● ", options: { color: HEX.blu } }, { text: "da valutare" }], { x: 0.6, y: 6.5, w: 6, h: 0.3, fontSize: 12, color: HEX.ardesia });
 
 // 4. Una slide per problema (alta e media)
 function problema(id) {
   const p = byId[id], b = BREVE[id], g = GRAV[p.gravita];
-  const sl = pres.addSlide({ masterName: "CONTENUTO", sectionTitle: p.gravita === "alta" ? "Problemi gravi" : "Problemi di gravità media" });
+  const sl = pres.addSlide({ masterName: "CONTENUTO", sectionTitle: p.gravita === "alta" ? "Problemi gravi" : p.gravita === "media" ? "Problemi di gravità media" : "Da valutare insieme" });
   sl.addText(b.t, { placeholder: "title" });
   badge(sl, 0.6, 1.4, id, g.c, 0.75);
   t(sl, g.l, { x: 1.55, y: 1.57, w: 3, h: 0.4, fontSize: 14, bold: true, color: g.c, valign: "middle" });
@@ -133,6 +137,8 @@ pres.addSection({ title: "Problemi gravi" });
 ["P01", "P02", "P03", "P08"].forEach(problema);
 pres.addSection({ title: "Problemi di gravità media" });
 ["P04", "P05", "P06", "P09", "P10", "P12", "P14", "P16"].forEach(problema);
+pres.addSection({ title: "Da valutare insieme" });
+["P15"].forEach(problema);
 
 // 5. Le correzioni semplici (gravità bassa)
 pres.addSection({ title: "Correzioni semplici" });

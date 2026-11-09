@@ -1,7 +1,7 @@
 {
  "generato_da": "tools/cruscotto_anac.py",
  "primo_giorno": "2026-10-26",
- "ultimo_giorno": "2026-11-06",
+ "ultimo_giorno": "2026-11-09",
  "metriche": [
   {
    "id": "I1",
@@ -18,11 +18,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 10,
+   "giorni": 15,
+   "giorni_violato": 13,
    "problemi": [
     "P02"
    ]
@@ -42,11 +45,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P06"
    ]
@@ -66,11 +72,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P07"
    ]
@@ -90,11 +99,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P01"
    ]
@@ -114,11 +126,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P09"
    ]
@@ -138,10 +153,13 @@
     "2026-11-03": "rispettato",
     "2026-11-04": "rispettato",
     "2026-11-05": "rispettato",
-    "2026-11-06": "rispettato"
+    "2026-11-06": "rispettato",
+    "2026-11-07": "rispettato",
+    "2026-11-08": "rispettato",
+    "2026-11-09": "rispettato"
    },
    "ultimo": "rispettato",
-   "giorni": 12,
+   "giorni": 15,
    "giorni_violato": 0,
    "problemi": [
     "P08"
@@ -162,11 +180,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P11"
    ]
@@ -186,11 +207,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P10"
    ]
@@ -210,11 +234,14 @@
     "2026-11-03": "violato",
     "2026-11-04": "violato",
     "2026-11-05": "violato",
-    "2026-11-06": "violato"
+    "2026-11-06": "violato",
+    "2026-11-07": "violato",
+    "2026-11-08": "violato",
+    "2026-11-09": "violato"
    },
    "ultimo": "violato",
-   "giorni": 12,
-   "giorni_violato": 12,
+   "giorni": 15,
+   "giorni_violato": 15,
    "problemi": [
     "P12"
    ]
@@ -323,8 +350,8 @@
    "id": "P15",
    "titolo": "Contratti attuativi senza collegamento all'accordo quadro o convenzione",
    "gravita": "da_valutare",
-   "stato": "in_verifica",
-   "pronto_per_anac": false
+   "stato": "aperto",
+   "pronto_per_anac": true
   },
   {
    "id": "P16",

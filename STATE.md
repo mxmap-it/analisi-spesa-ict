@@ -236,9 +236,9 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 
 ## ANAC (macro-obiettivo §8quater) — punto di ripresa 6/11/2026
 - **Chiusi:** #31 (riconfermato), #32, #33, #18, #16, #47. **Aperti in attesa di Fabio:** #34 documento, #35 presentazione, #36 sito.
-- **Registro:** 18 problemi, **17 pronti**; P17 controvalidato sull'anagrafica stazioni-appaltanti JSON (`tools/verifiche/cf_segnaposto.py`: 1.282 segnaposto CFAVCP-); **P15 resta interno** (`motivo_interno` nel registro).
+- **Registro (9/11):** 18 problemi, **18 pronti** (P15 pronta il 9/11, commit 137fc230, #50 chiuso; prova ora su `cig_aq_tipo.py`, prima formulazione in `storia`, rif. R81). P17 controvalidato (`tools/verifiche/cf_segnaposto.py`: 1.282 segnaposto CFAVCP-).
 - **Pipeline da clone pulito** (server, `lavoro/clone-pulito-2026-11-06`): snapshot 349/349 identici, **335 numeri uguali, 0 diversi** (i 3 «MANCA cloud/*» sono di `misura_cloud.sh`, #48).
-- **PDF per ANAC** con typst: `python tools/documento_anac/genera.py` → `sito/static/pdf/anac-problemi-e-rimedi-2026-10.pdf` (11 pagine). Presentazione: `node tools/presentazione/build.js`. Bozze, NESSUN INVIO.
+- **PDF per ANAC v1.1 (9/11)** con typst (in .venv sul server: typst 0.15.2): `.venv/bin/python tools/documento_anac/genera.py` → `sito/static/pdf/anac-problemi-e-rimedi-2026-10.pdf` (14 pagine, 18 schede, appendice vuota, registro delle revisioni; controlla che script ed esito di ogni scheda esistano). Presentazione: `npm install` in tools/presentazione, poi `node tools/presentazione/build.js` (P15 in sezione «Da valutare insieme»). Bozze, NESSUN INVIO.
 - **Cruscotto:** `/enti/anac-cruscotto/` da `tools/cruscotto_anac.py` (sul server, dopo le metriche). Cron `55 6 * * *` da aggiungere (non aggiunto: permessi).
 - **Build:** errore da `sito/content/rendiconti/imbuto-dove-siamo.md` non committato (altro lavoro, `_build` → `build`).
 

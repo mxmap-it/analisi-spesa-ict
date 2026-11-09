@@ -7,7 +7,7 @@ pdf: /pdf/anac-problemi-e-rimedi-2026-10.pdf
 description: "I problemi dei dati aperti della Banca Dati Nazionale dei Contratti Pubblici, ciascuno con prova riproducibile, conferma indipendente, rimedio atteso da ANAC e metrica di non ricorrenza."
 ---
 **Osservatorio Nazionale Sovranità Digitale** · progetto
-[analisi-spesa-ict](https://github.com/mxmap-it/analisi-spesa-ict) · versione del 27 ottobre 2026, aggiornata il 6 novembre 2026 (P18 link ai documenti di gara; P17 controvalidato; P15 resta interno) · bozza, non inviata
+[analisi-spesa-ict](https://github.com/mxmap-it/analisi-spesa-ict) · versione 1.1 del 9 novembre 2026 (1.0 del 6 novembre: P18 link ai documenti di gara, P17 controvalidato; 1.1: P15 pronta con R81, P04 misurata su tutto il mirror OCDS; 18 problemi su 18 pronti) · bozza, non inviata
 
 ## Perché questo documento
 

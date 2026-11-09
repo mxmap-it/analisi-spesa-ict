@@ -34,13 +34,13 @@
     ..((str(d.pronti.len()), "problemi documentati"), (str(d.gravita.alta), "di gravità alta"), ("1.797", "risorse del portale verificate")).map(((n, t)) =>
       block(fill: chiaro, inset: 10pt, radius: 3pt, width: 100%)[#text(size: 22pt, weight: "bold", fill: blu, n)\ #text(size: 9pt, fill: grigio, t)]))
   #v(1fr)
-  #text(size: 9pt, fill: grigio)[Rilevazione di ottobre-novembre 2026 · versione del #d.data · *bozza, non inviata* \
+  #text(size: 9pt, fill: grigio)[Rilevazione di ottobre-novembre 2026 · versione #d.versione del #d.data · *bozza, non inviata* \
   Registro dei problemi: `report/anac/problemi.yaml`, sha256 #raw(d.registro_sha256.slice(0, 16))… \
   Ogni numero è riproducibile: #link("https://github.com/mxmap-it/analisi-spesa-ict")[github.com/mxmap-it/analisi-spesa-ict]]
 ]
 
 #set page(paper: "a4", margin: (x: 2.2cm, top: 2.4cm, bottom: 2.2cm),
-  header: [#set text(size: 8pt, fill: grigio, font: sans); I dati aperti di ANAC: problemi e rimedi #h(1fr) bozza del #d.data],
+  header: [#set text(size: 8pt, fill: grigio, font: sans); I dati aperti di ANAC: problemi e rimedi #h(1fr) versione #d.versione · bozza del #d.data],
   footer: context [#set text(size: 8pt, fill: grigio); #h(1fr) #counter(page).display("1") #h(1fr)])
 
 = Perché questo documento
@@ -90,15 +90,23 @@ tools/verifica_anac.sh confronta   # ogni numero contro quelli pubblicati
     #etich("Cosa abbiamo misurato") \ #p.prova.at("sintesi", default: "") \
     #text(size: 8.5pt, fill: grigio)[Script #raw(p.prova.at("script", default: "")) · esito #raw(p.prova.at("esito", default: "")) · verificato il #p.prova.at("verificato_il", default: "")]
 
+    #for m in p.at("altre_misure", default: ()) [
+      #etich(m.etichetta) \ #text(size: 9.5pt, m.testo)
+
+    ]
     #etich("Conferma indipendente") \ #p.controvalidazione
 
     #etich("Rimedio atteso") \ #p.azione_correttiva
 
     #etich("Metrica di non ricorrenza") \ #p.metrica
+    #if p.at("storia", default: none) != none [
+
+      #etich("Correzioni") \ #text(size: 9pt, fill: grigio, p.storia)]
   ]
 ]
 
 = Appendice: problemi che restano interni
+#if d.interni.len() == 0 [Nessuno: in questa versione tutti i #d.totale problemi del registro hanno i quattro requisiti.]
 #for p in d.interni [
   == #p.id · #p.titolo
   #p.at("motivo_interno", default: "Manca: " + p.at("manca", default: ""))
@@ -106,3 +114,9 @@ tools/verifica_anac.sh confronta   # ogni numero contro quelli pubblicati
 
 == Il nostro impegno
 Se un nostro numero è sbagliato lo correggiamo e lo registriamo, come abbiamo già fatto più volte nel registro delle revisioni del rendiconto tecnico (#link("https://analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10/")[analisi-spesa-ict.mxmap.it/rendiconti/anac-2026-10]). Le segnalazioni si aprono su GitHub.
+
+== Registro delle revisioni
+#table(columns: (auto, auto, 1fr), stroke: none, inset: (x: 5pt, y: 5pt),
+  fill: (_, y) => if y == 0 { blu } else if calc.odd(y) { chiaro } else { none },
+  table.header(..("Versione", "Data", "Modifiche").map(t => text(font: sans, fill: white, weight: "bold", size: 9pt, t))),
+  ..d.revisioni.map(r => (text(size: 9pt, r.versione), text(size: 9pt, r.data), [#set text(size: 9pt); #set par(justify: false); #r.nota])).flatten())
