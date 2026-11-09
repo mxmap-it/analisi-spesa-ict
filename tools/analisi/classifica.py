@@ -7,7 +7,7 @@
     -> {"via": "3-marchio", "provider": "Microsoft", "giurisdizione": "EXTRA-UE", "servizio": "cloud",
         "canale": "rivenditore", "regola": "microsoft\\s*365"}
 
-Regole v3 (28/10/2026). Vie: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider,
+Regole v3 (28/10/2026), ultima revisione v4.4 (9/11/2026, #40: classi d'errore del quinto campione a cieco). Vie: 1 lotto di AQ/convenzione, 2 lotto dichiarato nel testo, 3 marchio, 5 fornitore = provider,
 7 indeterminato. Le vie 4 (PSN voce per voce) e 6 (modello linguistico) non sono ancora implementate."""
 import re
 from pathlib import Path
@@ -29,7 +29,13 @@ RX_NON_CLOUD = re.compile(r"in\s+ottica\s+cloud|cloud\s+native\s+development|clo
 # v3: "ambienti di sviluppo" e "sandbox" sono abbonamento; i contratti misti (licenze + servizi) restano abbonamento
 RX_SERVIZI = re.compile(r"sviluppo\s+(evolutiv|applicativ|software|di\s+nuov)|sviluppo\s*,?\s*e?\s*(manutenzione|assistenza)|manutenzione\s+(evolutiva|correttiva|applicativa|di\s+base|base)|manutenzione\s+e\s+supporto|\bams\b|"
                         r"implementazion|integrazion|change\s+request|personalizzazion|migrazion|assistenza\s+(specialistica|sistemistica)|supporto\s+(specialistico|all.adoption)|"
-                        r"servizi\s+(professionali|specialistici)|affiancamento|conduzione\s+sistemistica|attivit\w+\s+sistemistic|consulenz|\bbasis\b|unified\s+support", re.I)
+                        r"servizi\s+(professionali|specialistici)|affiancamento|conduzione\s+sistemistica|attivit\w+\s+sistemistic|consulenz|\bbasis\b|unified\s+support|"
+                        # v4.4 #40 cieco 5: supporto tecnico, application maintenance, evolutive, servizi applicativi (AQ 2610), assistenza e supporto/manutenzione
+                        r"supporto\s+tecnico|application\s+maintenance|\bevolutiv[ea]\s+su\b|servizi\s+applicativi|assistenza\s*(,|e)\s*(manutenzione|supporto)|manutenzione\s+e\s+assistenza", re.I)
+# v4.4 #40 cieco 5: formazione, POC e supporto a una gara non comprano il prodotto (vale anche per i marchi di licenza: Cloudera)
+RX_SUPPORTO_NON_PRODOTTO = re.compile(r"\bpoc\b|proof\s+of\s+concept|supporto\s+(\w+\s+){0,2}gara|\bformazion|\bcors[oi]\b|docenz", re.I)
+# v4.4 #40 cieco 5: consulenza sulle licenze (assessment, licensing advisory) è un servizio anche se il testo dice «licenze»
+RX_CONSULENZA_LICENZE = re.compile(r"(consulenz|assessment|advisory)\w*\s+(\w+\s+){0,3}licenz|licensing\s+advisory|ottimizzazione\s+(del\s+)?contratt", re.I)
 # un contratto misto (abbonamento + servizi) resta abbonamento: è la voce di costo principale e la dipendenza da misurare
 RX_ABBONAMENTO = re.compile(r"licenz|crediti|sottoscrizion|abbonament|subscription|canone|servizi\s+(cloud|iaas|paas|saas)\b|(acquisizione|fornitura)\s+di\s+prodotti|"
                             r"adesion\w*\s+(\w+\s+){0,3}(polo\s+strategico|psn)|contratto\s+di\s+utenza|infrastruttura\s+cloud\s+in\s+adesione", re.I)
@@ -40,6 +46,10 @@ RX_TELEFONIA = re.compile(r"voip|voice\s+over\s+ip|centralin|pbx\b|\bucaas\b|uni
 # centralino ospitato dal fornitore: è cloud anche se il testo non dice "cloud"
 RX_TELEFONIA_CLOUD = re.compile(r"centralin\w*\s+(telefonic\w+\s+)?(virtual|in\s+cloud|cloud|hosted|ospitat)|virtual\s*(ip\s*)?pbx|(cloud|hosted)\s*pbx|pbx\s+(virtual|hosted|in\s+cloud)|\bucaas\b|voip\s+in\s+cloud", re.I)
 RX_ALTRO_CLOUD = re.compile(r"\b(iaas|paas|saas)\b|data\s*cent|server\s+virtual|macchine\s+virtual|backup|storage|cloud\s+computing|hosting\s+(web|sito|siti)", re.I)
+# v4.4 #40 cieco 5: un collegamento (fibra, IP transit, MPLS) verso un data center non è acquisto di cloud: niente via 5
+# per la telco (Fastweb, TIM) salvo che il testo compri anche hosting/IaaS/servizi cloud
+RX_CONNETTIVITA = re.compile(r"fibra\s+ottica|ip\s+transit|connettivit|\bmpls\b|collegament", re.I)
+RX_ANCHE_CLOUD = re.compile(r"\b(iaas|paas|saas)\b|hosting|housing|servizi\s+cloud|server\s+virtual|macchine\s+virtual", re.I)
 MARCHI_COMUNICAZIONE = {"Cisco Webex", "Zoom"}
 NOME_CANONICO = {"AWS": "Amazon Web Services", "Google Cloud": "Google", "Microsoft Azure": "Microsoft", "Oracle Cloud": "Oracle", "IBM Cloud": "IBM"}
 
@@ -91,7 +101,11 @@ class Classificatore:
         if serv in ("cloud", "psn", "") and RX_TELEFONIA.search(testo) and not RX_ALTRO_CLOUD.search(testo) \
                 and (provider in MARCHI_COMUNICAZIONE or provider not in self.piattaforme):
             return "telefonia"
+        if serv in ("cloud", "psn", "licenza") and RX_CONSULENZA_LICENZE.search(testo):
+            return "servizi-professionali"
         if serv in ("cloud", "psn") and RX_SERVIZI.search(testo) and not RX_ABBONAMENTO.search(testo):
+            return "servizi-professionali"
+        if serv in ("cloud", "psn", "licenza") and RX_SUPPORTO_NON_PRODOTTO.search(testo) and not RX_ABBONAMENTO.search(testo):
             return "servizi-professionali"
         return serv
 
@@ -117,7 +131,8 @@ class Classificatore:
             m, regola = self.marchio(testo)
             if m:
                 via, prov, serv = "3-marchio", m["provider"], self._servizio(m["servizio"], testo, m["provider"])
-            elif self._e_cloud(testo) and not RX_NON_CLOUD.search(testo):
+            elif self._e_cloud(testo) and not RX_NON_CLOUD.search(testo) \
+                    and not (RX_CONNETTIVITA.search(testo) and not RX_ANCHE_CLOUD.search(testo)):
                 # via 5 solo se TUTTI gli aggiudicatari sono il provider: in un RTI la mandante (es. TIM con GPI) non dice il prodotto
                 for m in self.marchi:
                     if m["servizio"] != "licenza" and m["fx"] and aggiudicatari and all(any(f.search(n) for f in m["fx"]) for n in aggiudicatari) \

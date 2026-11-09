@@ -1,0 +1,486 @@
+{
+ "campioni": {
+  "lente-cieco": {
+   "prima_grezza_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "prima_grezza_tutti": {
+    "tp": 74,
+    "fp": 1,
+    "fn": 6,
+    "precisione": 0.987,
+    "richiamo": 0.925
+   },
+   "prima_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "prima_tutti": {
+    "tp": 74,
+    "fp": 1,
+    "fn": 6,
+    "precisione": 0.987,
+    "richiamo": 0.925
+   },
+   "dopo_bigtech": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 3,
+    "precisione": 1.0,
+    "richiamo": 0.955
+   },
+   "dopo_tutti": {
+    "tp": 73,
+    "fp": 1,
+    "fn": 7,
+    "precisione": 0.986,
+    "richiamo": 0.912
+   }
+  },
+  "lente-cieco-2": {
+   "prima_grezza_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "prima_grezza_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   },
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.984
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "precisione": 0.986,
+    "richiamo": 0.986
+   }
+  },
+  "lente-cieco-3": {
+   "prima_grezza_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "prima_grezza_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   },
+   "prima_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "prima_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   },
+   "dopo_bigtech": {
+    "tp": 62,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.886
+   },
+   "dopo_tutti": {
+    "tp": 69,
+    "fp": 2,
+    "fn": 10,
+    "precisione": 0.972,
+    "richiamo": 0.873
+   }
+  },
+  "lente-cieco-4": {
+   "prima_grezza_bigtech": {
+    "tp": 95,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 96,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.99
+   },
+   "prima_bigtech": {
+    "tp": 89,
+    "fp": 0,
+    "fn": 6,
+    "precisione": 1.0,
+    "richiamo": 0.937
+   },
+   "prima_tutti": {
+    "tp": 90,
+    "fp": 0,
+    "fn": 7,
+    "precisione": 1.0,
+    "richiamo": 0.928
+   },
+   "dopo_bigtech": {
+    "tp": 88,
+    "fp": 0,
+    "fn": 7,
+    "precisione": 1.0,
+    "richiamo": 0.926
+   },
+   "dopo_tutti": {
+    "tp": 89,
+    "fp": 0,
+    "fn": 8,
+    "precisione": 1.0,
+    "richiamo": 0.918
+   }
+  },
+  "lente-cieco-5": {
+   "prima_grezza_bigtech": {
+    "tp": 125,
+    "fp": 20,
+    "fn": 0,
+    "precisione": 0.862,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 131,
+    "fp": 27,
+    "fn": 0,
+    "precisione": 0.829,
+    "richiamo": 1.0
+   },
+   "prima_bigtech": {
+    "tp": 125,
+    "fp": 17,
+    "fn": 0,
+    "precisione": 0.88,
+    "richiamo": 1.0
+   },
+   "prima_tutti": {
+    "tp": 130,
+    "fp": 24,
+    "fn": 1,
+    "precisione": 0.844,
+    "richiamo": 0.992
+   },
+   "dopo_bigtech": {
+    "tp": 125,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_tutti": {
+    "tp": 130,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.992
+   }
+  },
+  "top20": {
+   "prima_grezza_bigtech": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_grezza_tutti": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_bigtech": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "prima_tutti": {
+    "tp": 58,
+    "fp": 0,
+    "fn": 0,
+    "precisione": 1.0,
+    "richiamo": 1.0
+   },
+   "dopo_bigtech": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   },
+   "dopo_tutti": {
+    "tp": 57,
+    "fp": 0,
+    "fn": 1,
+    "precisione": 1.0,
+    "richiamo": 0.983
+   }
+  }
+ },
+ "cambiati": [
+  {
+   "campione": "lente-cieco",
+   "cig": "B8587E9624",
+   "etichetta": "In-house pubblico",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "regressione"
+  },
+  {
+   "campione": "lente-cieco-4",
+   "cig": "BD26C6E412",
+   "etichetta": "Salesforce",
+   "prima": "Salesforce",
+   "dopo": "",
+   "esito": "regressione"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B9909FD484",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B9B97821AC",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B1DC2A3AB4",
+   "etichetta": "altro:studio81",
+   "prima": "IBM",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B69DE3762E",
+   "etichetta": "altro:4ward",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B069D2B0BB",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BC0DE65BB5",
+   "etichetta": "altro:dgs-engineering",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BBBA2CC327",
+   "etichetta": "altro:almaviva",
+   "prima": "Salesforce",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B994BE039B",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BC9EB296B7",
+   "etichetta": "",
+   "prima": "Cloudera",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B994284A5B",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B45D02838B",
+   "etichetta": "altro:hpe-aruba-networks",
+   "prima": "Aruba",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B0A5729319",
+   "etichetta": "altro:advenias",
+   "prima": "Amazon Web Services",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B069EEC341",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B35C8EEC93",
+   "etichetta": "altro:fastweb",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BB71C192CF",
+   "etichetta": "altro:tim",
+   "prima": "Polo Strategico Nazionale",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B24E4E5E0F",
+   "etichetta": "",
+   "prima": "Amazon Web Services",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BA477DD6AC",
+   "etichetta": "altro:fastweb",
+   "prima": "In-house pubblico",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B6553CC439",
+   "etichetta": "altro:insight",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B6B3B3DC20",
+   "etichetta": "altro:pa-abs",
+   "prima": "Retelit",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B5BA2246C6",
+   "etichetta": "altro:personal-data",
+   "prima": "VMware",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BC6A49FAB9",
+   "etichetta": "altro:medtronic",
+   "prima": "Microsoft",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "BCA70CCE84",
+   "etichetta": "altro:am-oracle-erp",
+   "prima": "Oracle",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B3136CAB25",
+   "etichetta": "altro:horsa",
+   "prima": "SAP",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "lente-cieco-5",
+   "cig": "B7FE685D00",
+   "etichetta": "",
+   "prima": "Oracle",
+   "dopo": "",
+   "esito": "corretto"
+  },
+  {
+   "campione": "top20",
+   "cig": "BAC86C865B",
+   "etichetta": "Oracle",
+   "prima": "Oracle",
+   "dopo": "",
+   "esito": "regressione"
+  }
+ ]
+}

@@ -178,6 +178,28 @@ Pesata sull'universo (N_h/n_h): precisione big tech 93,9 %, 82,0 % in euro; rich
 
 Lettura: sui contratti di licenza e sottoscrizione (R, E) la lente tiene (P 94-97 %); scende dove il testo nomina il marchio come oggetto di un servizio (strato F, 28,6 % in euro) o come omonimo. Limiti: un solo annotatore (Claude), niente kappa; strati M e F sovra-campionati di proposito; il vocabolario delle etichette non coincide del tutto coi nomi canonici del dizionario (SPC Cloud). **Il quinto campione ora è letto**: correggere queste classi lo rende di sviluppo e richiede un sesto campione.
 
+**Regole v4.4, correzione degli errori del quinto campione (9/11/2026, #40).** Criterio «prodotto comprato» (lo stesso delle etichette del cieco 5). Correzioni in `tools/analisi/classifica.py` e `config/marchi_cloud.yaml`:
+- **omonimie**: «Azure» con Medtronic (anche MEDTRONIK/MEDTROMIK) è un pacemaker, non Microsoft; «Aruba» con Wi-Fi o «reti locali» (controller HPE Aruba Networks, Consip Reti locali) non è Aruba S.p.A.;
+- **servizi professionali su una piattaforma**: entrano fra i servizi (servizio = `servizi-professionali`, escluso dalla mappa dei rivenditori come prima) supporto tecnico, *application maintenance*, «evolutive su», servizi applicativi (AQ Consip 2610), «assistenza e supporto», «assistenza, manutenzione», «manutenzione e assistenza»; la consulenza sulle licenze (assessment, *licensing advisory*, ottimizzazione del contratto) è un servizio anche se il testo dice «licenze». Resta prodotto se il testo compra anche licenze, sottoscrizione, canone o crediti. **Servizio gestito su AWS** (Advenias Care): si compra il servizio del fornitore, AWS è l'infrastruttura sottostante (tema di #70), quindi servizio professionale, non acquisto AWS;
+- **formazione, POC e supporto a una gara** sono servizio per tutti i marchi, anche quelli di licenza (Cloudera), salvo acquisto del prodotto nello stesso testo;
+- **connettività e hardware verso un data center**: niente via 5 per la telco se il testo è un collegamento (fibra, IP transit, MPLS, connettività) senza hosting/IaaS/servizi cloud; MPLS esclude il PSN; fibra, IP transit, connettività e «conduzione dei data center» escludono l'in-house; transceiver e connessioni MPO escludono Exadata; «assistenza HW» esclude VMware;
+- **nome canonico SPC Cloud lotto 1**: la lente usa già il nome del dizionario; le 4 etichette `altro:tim-spc-cloud` sono lo stesso prodotto con un altro nome e nel confronto valgono «SPC Cloud lotto 1» (alias in `tools/verifiche/regole_v44_confronto.py`, etichette non modificate, sha256 invariato).
+
+Valutazione: per ciechi 4-5 la lente conta il provider salvo `servizi-professionali` (VMware e in-house sono prodotti comprati, anche se la mappa li esclude per perimetro); top-20 col filtro della mappa; ciechi 1-3 primo marchio. «Prima grezza» = come lo misurava `lente_cieco5.py` (senza filtro). Prima/dopo (`esiti/2026-11-09/regole-v4.4/`), big tech TP/FP/FN:
+
+| Campione | Prima grezza | Prima (v4.3) | Dopo (v4.4) | Tutti i provider prima → dopo |
+|---|---|---|---|---|
+| cieco 1 | 64/0/3 | 64/0/3 | 64/0/3 | 74/1/6 → 73/1/7 |
+| cieco 2 | 62/0/1 | 62/0/1 | 62/0/1 | 69/1/1 → 69/1/1 |
+| cieco 3 | 62/0/8 | 62/0/8 | 62/0/8 | 69/2/10 → 69/2/10 |
+| cieco 4 | 95/0/0 | 89/0/6 | 88/0/7 | 90/0/7 → 89/0/8 |
+| cieco 5 (238) | 125/20/0 (P 86,2 %) | 125/17/0 (P 88,0 %) | **125/0/0** | 130/24/1 → 130/0/1 |
+| top-20 (60) | 58/0/0 | 58/0/0 | 57/0/1 | 58/0/0 → 57/0/1 |
+
+24 CIG del cieco 5 corretti, nessuno peggiorato. **Tre cambi, tutti cambi di criterio e non errori nuovi delle regole**: cieco 1 B8587E9624 (IP transit dal data center di Liguria Digitale: nel cieco 1 l'etichetta era «chi nomina il testo», qui «chi vende»; lo stesso testo nel cieco 5, BA477DD6AC, è etichettato Fastweb); cieco 4 BD26C6E412 (*application maintenance* su Salesforce) e top-20 BAC86C865B (manutenzione evolutiva su Oracle Cloud): le etichette del cieco 4 e della top-20 contano come prodotto anche i servizi sulla piattaforma, quelle del cieco 5 no. È la stessa divergenza che già c'era nel cieco 4 con le regole v4.3 (6 CIG: manutenzione Salesforce, servizi professionali ServiceNow, migrazione Office 365 e Dynamics 365, *system integration* Salesforce, manutenzione su AWS), visibile solo ora che il cieco 4 si misura col filtro dei servizi. Si adotta il criterio del cieco 5 (il prodotto si conta quando si compra la licenza o la sottoscrizione, non i servizi su di essa); i servizi restano nel dato con servizio `servizi-professionali`. Restano: Aruba BB1804D765 (migrazione a cloud Aruba con assistenza, prodotto comprato ma il testo non lo dice) e il mancato PEC del cieco 4.
+
+**Il quinto campione è ora di sviluppo**: P 100 % sul cieco 5 non è una misura. La misura indipendente delle v4.4 richiede un sesto campione a cieco. **La mappa dei rivenditori va rifatta con le regole v4.4** (`rivenditori_mappa.py`, job pesante): rinviata a quando la prova imbuto (#71) è finita (AGENTS.md § 4).
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
@@ -188,7 +210,7 @@ classificatore è una funzione pura che non legge i dati ANAC
 quindi si usa anche su OCDS, TED o registri regionali.
 
 ```bash
-python tests/test_classifica.py      # 101/101 casi superati, regole v4.3 (9/11/2026)
+python tests/test_classifica.py      # 129/129 casi superati, regole v4.4 (9/11/2026)
 ```
 
 ## Errori trovati e come sono corretti
@@ -208,6 +230,7 @@ python tests/test_classifica.py      # 101/101 casi superati, regole v4.3 (9/11/
 | Numero dell'AQ dentro altri numeri (9/11/2026, #41) | «2746» in «GARA ANAC 9127462» o «ACTC227464»: antisettici e reti idriche attribuiti ad AWS e Microsoft | Via 2: numero a sé e contesto cloud/Consip/AQ obbligatorio |
 | Omonimi e marchi come oggetto di altro (9/11/2026, #41) | pacemaker «Azure S DR», «hardware rete PSN», «affiancamento» su PSN | Esclusioni; «affiancamento» = servizi professionali. Prima e dopo sui tre campioni a cieco: invariati (esiti/2026-11-09/rivenditori/lente-prima e lente-dopo) |
 | Marchio senza acquisto del prodotto (9/11/2026, v4.3, #40) | corso Teams/Planner, supporto «SQL Server», Veeam Data Cloud per M365, connettività verso Oracle Cloud, IaaS «per ambienti VMware» | Esclusioni sul contesto se il testo non compra anche il prodotto; «licenze Adobe» aggiunte |
+| Marchio nominato, prodotto non comprato (9/11/2026, v4.4, #40, cieco 5) | Azure Medtronic (pacemaker), controller Wi-Fi Aruba HPE, manutenzione/consulenza su Salesforce, Oracle ERP Cloud, Dynamics/M365, SAP Analytics Cloud, POC e formazione, collegamenti verso data center | Esclusioni per omonimia e connettività, servizi professionali estesi, formazione/POC/gara per tutti i marchi, niente via 5 per i collegamenti |
 
 ## Raccomandazioni per semplificare il monitoraggio
 
@@ -263,3 +286,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Quarto campione a cieco delle regole del 9/11 (150 CIG): big tech P 92,2 %, R 98,9 %; 8 falsi positivi e 2 mancati elencati come casi da trattare, regole non modificate | #40, `esiti/2026-11-09/lente-cieco-4/` |
 | 9/11/2026 | Regole v4.3: formazione/supporto Microsoft e Google, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe; cieco 4 big tech da P 92,2 % a 100 % (ora campione di sviluppo, non più indipendente), ciechi 2-3 e top-20 invariati, cieco 1 −2 per cambio di criterio; mappa rivenditori v4.3 (CF IT 61,2 % dell'extra-UE) | #40, `esiti/2026-11-09/regole-v4.3/` |
 | 9/11/2026 | Quinto campione a cieco delle regole v4.3 (238 CIG, 5 strati): big tech P 86,2 % (79,7-90,9), 80,8 % in euro, pesata 93,9 %; R 100 % (97,0-100); 31 errori tutti «marchio senza prodotto» (omonimia Medtronic Azure, servizi professionali su piattaforma, formazione/gare, connettività, vocabolario SPC Cloud), regole non modificate | #40, `esiti/2026-11-09/lente-cieco-5/` |
+| 9/11/2026 | Regole v4.4 dalle classi d'errore del cieco 5 (omonimie, servizi su piattaforma, formazione/POC/gara, connettività, nome canonico SPC Cloud): cieco 5 big tech 125/17/0 → 125/0/0 (ora di sviluppo), ciechi 2-3 invariati, 3 cambi di criterio (cieco 1, cieco 4, top-20); 129/129 casi; mappa rivenditori da rifare (v4.4) dopo la prova imbuto | #40, `esiti/2026-11-09/regole-v4.4/` |

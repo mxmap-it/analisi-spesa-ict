@@ -51,6 +51,7 @@
   - ^(?!.*(servizi\s+cloud|licenz|sottoscrizion|abbonament|subscription|crediti|canone|fornitura\s+di\s+prodotti|attivazion|posta\s+elettronica|pacchetto\s+formazione|\be\s+formazione\s*(\||$)))(?=.*(docenz|\bcors[oi]\b|\bformazion|supporto\s+(\w+\s+){0,2}(sistemistic|informatic|progettual)|help\s*desk|sistemista))  # v4.3 #40 cieco 4: formazione/supporto sul prodotto senza acquisto del prodotto
   - ^(?!.*(licenz|crediti|sottoscrizion|abbonament|subscription|universal\s+credit))(?=.*connettivit)  # v4.3 #40 cieco 4: connettivita verso il cloud (BBF39CE6CB) non e acquisto del cloud
   - azure\s+(s|xt)\s*(dr|sr)\b|impiantabil|pacemaker  # #41 9/11/2026: pacemaker Medtronic «AZURE S DR» (9134580DDE)
+  - medtroni|medtromik  # v4.4 #40 cieco 5: «AZURE» di Medtronic (anche scritto MEDTRONIK/MEDTROMIK) e un pacemaker, 7 CIG
   - (office|microsoft|m)\s*365\s+protection|harmony\s+email  # #40 9/11/2026: prodotto di terzi col nome del marchio (Check Point, B273B14113)
   fornitori:
   - ^microsoft\b
@@ -166,6 +167,7 @@
   - hewlett
   - gbic
   - \bsfp\b
+  - wi-?fi|reti\s+locali  # v4.4 #40 cieco 5: controller Wi-Fi Aruba (HPE Aruba Networks, Consip Reti locali), B45D02838B
   fornitori:
   - ^aruba\s+s\.?p\.?a
 - provider: Seeweb
@@ -266,6 +268,7 @@
   - firewall
   - sicurezza\s+perimetrale
   - hardware\s+(\w+\s+){0,2}rete\s+psn  # #41 9/11/2026: A069537FBA
+  - \bmpls\b  # v4.4 #40 cieco 5: collegamento MPLS al data center del PSN (BB71C192CF)
 - provider: Microsoft
   giurisdizione: EXTRA-UE
   servizio: licenza
@@ -306,6 +309,7 @@
   escludi:
   - \bserver\b.*\bstorage\b|nodi\s+server
   - (iaas|cloud|hosting).{0,60}ambient\w*\s+vmware  # v4.3 #40 cieco 4: IaaS «per ambienti VMware», provider non detto (B1E6C7E604)
+  - assistenza\s+(hw|hardware)\b  # v4.4 #40 cieco 5: assistenza hardware su server/storage con VMware (B5BA2246C6), non acquisto di VMware
 - provider: Oracle
   giurisdizione: EXTRA-UE
   servizio: licenza
@@ -319,6 +323,7 @@
   fornitori: []
   escludi:
   - appliance
+  - transceiver|connession\w*\s+mpo  # v4.4 #40 cieco 5: cavi e transceiver per Exadata (B7FE685D00)
 # Cloud e datacenter pubblici in-house (IT), fonte: siti istituzionali delle società. In fondo al dizionario: se il testo
 # nomina un prodotto (VMware, Oracle...) vince il prodotto; il nome dell'in-house conta solo con un contesto cloud/datacenter.
 # Fuori dalla misura cloud: punto aperto #52 (acquisti in-house e datacenter propri).
@@ -342,3 +347,4 @@
   escludi:
   - in\s+ottica\s+cloud
   - servizi\s+applicativi
+  - fibra\s+ottica|ip\s+transit|connettivit|conduzione\s+dei\s+data\s*cent  # v4.4 #40 cieco 5: fibra/IP transit Fastweb e conduzione dei DC Lepida (DGS), non acquisti dall'in-house
