@@ -2,198 +2,59 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-09
+**Ultimo aggiornamento:** 2026-11-09 (sera, consolidamento dopo la giornata del 9/11)
+
+**Come è fatto questo file:** 1) *Punto di ripresa* (questa sezione, breve); 2) sezioni per ticket, dalla più recente; 3) *Riferimenti* (dove sta cosa, vincoli); 4) *Storico* (sezioni superate fino al 4/11, conservate senza tagli). Le righe superate restano nello storico, non si cancellano.
+
+## PUNTO DI RIPRESA (9/11/2026, sera)
+
+### Cosa gira sul server e come rilanciarlo
+
+Tutto in `mxmap.it@51.158.36.151:~/analisi-spesa-ict`, ripartibile e idempotente. **Nota:** alle 9/11 sera il server non rispondeva in ssh (timeout sul banner): al ritorno controllare prima i job qui sotto con `pgrep -af '[t]ools/'` e `df -h ~`.
+
+| Job | Ticket | Stato al 9/11 | Rilancio |
+|---|---|---|---|
+| Coda dei mirror | #11 #25 #26 #29 | ripresa il 9/11 (398 GB liberi), log `lavoro/coda-mirror-ripresa-20261109.log` | `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` e `tools/archivia.py --lista lavoro/consip/riprova.txt` (BDAP `start=1000` in orari di poco carico) |
+| L4 «Amministrazione trasparente» del residuo S6 (`at_cig.py`) | #68 | ripreso il 9/11, 1.901/4.352 enti | `(HOST_PARALLELI=4 SPESAICT_BASE=$PWD setsid nohup nice -n 15 .venv/bin/python tools/acquisizione/at_cig.py lavoro/residuo-s6/ingresso.csv lavoro/residuo-s6/l4 >> lavoro/residuo-s6/l4.log 2>&1 &)`; misura `tools/verifiche/residuo_s6_riepilogo.py <data>` |
+| RPCT e destinatari accesso civico (`rpct_destinatari.py`) | #58 | in corso, ~9-10 h | comando in `lavoro/accesso-civico-rpct/STATO.md` (ripartibile da `enti.jsonl`) |
+| Via 6 su G1+G3 (`tools/llm/giro_imbuto.sh`, Sonnet) | #55 #66 | G1 196/196, G3 514/1.000; «ad oltranza» (decisione 7/11) | cron `tools/llm/giro_imbuto_guardiano.sh` ogni 30 min; stop con `IMBUTO_STOP=1` |
+| Cron fissi | — | guardiano 15 min, sonda 06:10, metriche 06:40, `sync_server.sh` orario | — |
+
+Residuo S6 L3/MePA (`residuo_s6.sh`): finiti il 7/11. Rilancio completo (L3+MePA+L4+ripasso AT notturno) nella sezione #57 sotto.
+
+### Prossimi passi (in ordine)
+
+1. **12/11, consegna #66:** rendiconto «Imbuto: dove siamo» (oggi 0.12 bozza) con: chiusura L4 (#68), cifre finali G3 via 6, revisione delle proposte via 6, **rigenerazione imbuto 0.3.4 con DEDUP_CPV** (#71: solo a via 6 finita), top-5.
+2. **#40/#72:** quinto campione a cieco per le regole v4.3; poi obiettivo-6 § 2 e `metodo-cloud-provider.md`.
+3. **#70:** infrastruttura sottostante — PPdF PSN di Veneto/Lombardia/Puglia/Toscana, Comuni Maggioli public/private.
+4. **#41:** atti per i 60 CIG del top-20, capogruppo Eurolink/Arslogica e delle 6 righe [R].
+5. **#67:** codice IPA dell'Università (`m_ur`); corrispettivi Sogei per committente (R65/R71).
+6. **#58/#69:** adattatore PEC — firma S/MIME delle ricevute, prova su casella reale dopo la decisione 1.
+7. **#62:** ricerca fuori piattaforma per i criticità 3; copie START/Sintel in `archivio/`.
+8. Allineamento del server a origin (mai `stash -u`/`clean`).
+
+### Decisioni attese da Fabio
+
+1. **#58 accesso civico (L7):** richiedente, casella PEC e suoi limiti, tetto per richiesta, cadenza delle ondate, approvazione dell'ondata 0 (30 enti, 501 voci, 4,15 mld) e dei 6 modelli, Froide o registro nostro (rapporto `accesso-civico-piattaforma.md` 0.3 § 4). Destinatario già deciso il 9/11: PEC istituzionale.
+2. **#34 #35 #36 ANAC:** formulazione e invio del documento v1.1 e della presentazione (18/18 problemi pronti, P15 compresa); aggiornamento del sito a chiusura.
+3. **#66:** pubblicazione del rendiconto imbuto (oggi non elencato) e chi fa la revisione umana delle proposte via 6 (tutte le «certo» di G1, 10 % di G3).
+4. **#44 CPV 3224:** sottoclasse «videosorveglianza» in S5 (scheda `report/cpv/decisione-3224-videosorveglianza.md`, proposta A).
+5. **#67 BDAP:** entra come denominatore/controvalidazione (riga annuale «pagato ICT per ministero»), non come strato dell'imbuto.
+6. **#17 mirror pubblico:** hosting (proposta: bucket S3 UE + nginx su mxmap.it, Zenodo per gli snapshot).
+7. **#62 convenzioni:** dove ospitare le copie (~4,3 GB); invio delle 19 istanze; giro assistito per i login (acquistinretepa, SAP PAT, HERA).
+8. **#43/#70:** estendere il pilota infrastruttura ai primi 30 fornitori S2.
+9. **#55:** chiave per un modello cloud gratuito (riproducibilità).
+10. **Cron:** riga di ripresa `residuo_s6.sh` (Fabio il 7/11: niente cron) e cruscotto ANAC `55 6 * * *`.
+11. **Annotazione cieca** del campione v3 (#48): chi la fa.
+12. **ReGiS/Italia Domani (R57) e catalogo ACN (R55):** 403, come procedere.
+13. **#64:** approvazione della specifica «Visibilità PA» 0.2 (§ 10).
+14. **#54:** richieste ad ANAC per la capacità analitica (nessun invio fatto).
+
+### Ticket nuovi del 9/11 (consolidamento)
+#69 adattatore PEC (sotto #58), #70 infrastruttura sottostante SaaS/PSN (da #43/#45), #71 rigenerazione imbuto 0.3.4 (R53), #72 quinto cieco (da #40). Chiusi il 9/11: #30, #46, #50, #57.
 
 
-
-## #50 P15: NORMA E ANOMALIA DEI PADRI «CONTRATTO D'APPALTO» — 9/11/2026
-- **Norma:** scheda PCP AD4 (adesione AQ/convenzione) con «CIG accordo quadro» OBBLIGATORIO (copia secondaria schede-anac.pdf sha256 d0712b89…; manca l'originale ANAC); comunicato del Presidente 5/6/2024 (CIG derivato per ogni contratto applicativo); adesioni con bando entro il 31/12/2023 restano su SIMOG.
-- **Anomalia spiegata** (`tools/verifiche/cig_aq_padre_appalto.py`, `esiti/2026-11-09/cig-aq/padre-appalto.json`): 169.705 derivati 2025 con padre «contratto d'appalto» = convenzioni/AQ (Consip 44.105, ARIA 39.152, Sicilia 21.107; padre aperta/ristretta, SDA 8); dal 2024 «CONVENZIONE» sparisce dall'open data (22.970 -> 0) e STRUMENTO_SVOLGIMENTO è vuoto al 98,7 %. P15 aggiornata (norma_9_11, anomalia_padre_appalto_9_11), **R81** nuova. P15 resta interna: mancano l'originale ANAC delle schede e il campione dei 3.944 vuoti 2025.
-- **Chiusura (9/11, seconda parte):** originali ANAC archiviati: comunicato 5/6/2024 (anticorruzione.it, sha256 bd47852c…) e modello dati AD4 su github.com/anticorruzione/npa (cig in required ma solo type: string). Campione `tools/verifiche/cig_aq_vuoti_campione.py` (`esiti/2026-11-09/cig-aq/vuoti-2025-campione.*`): i 3.950 vuoti 2025 sono tutti CIG PCP serie B, nessuno SIMOG; su 30: 12 adesioni esplicite, 13 probabili, 5 non determinabili. **P15 pronto_per_anac: true** (nel merito; formulazione e invio solo su decisione di Fabio, nessun invio fatto). R81 aggiornata.
-
-## #43/#45 INFRASTRUTTURA SOTTOSTANTE MISURA 1.2 — v0.3, integrata in obiettivo-6 § 3.3 (v0.9), 9/11/2026
-- Verifiche `tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` (v0.3) e `tools/verifiche/saas_infra_fornitori.py` (DNS/AS) -> `esiti/2026-11-09/infrastruttura-sottostante/`. Tabelle `config/saas_infrastruttura.yaml` v0.3, `config/saas_host.yaml`, `psn-ppdf.csv` (9 enti sanitari, 6 regioni; colonna conta=1 = un ente; ARES come totale).
-- PSN [V]: Libro PSN 2025 SPC+Managed 5,4 % ricavi; PPdF: 23,3 % canoni ASL per produttore/gestione (Oracle C@C nei DC PSN), 7,4 % per localizzazione (solo Azure AIC3 Piemonte).
-- SaaS: prove per 122,9/150,2 M€; AWS Datamanagement (A), Azure Deda Next (A), AWS Parsec/Almaviva (B), Maggioli misto (12/33 varianti ACN su hyperscaler; atti comunali: 1 Lepida, 3 non indicati). Quota media 34,3 % ai 83 M€ senza prove.
-- Misura 1.2 terzo asse: produttore/gestione 6,3 / 30,6 / 62,2 %; localizzazione 3,0 / 21,5 / 51,0 %. R78.
-- archivia.py corretto (--url da solo; HTML legittime), test `tests/test_archivia.py`.
-- Prossimo: PPdF PSN di Veneto/Lombardia/Puglia/Toscana (AULSS 9 non scaricabile, Puglia 404); scelta public/private dei Comuni Maggioli (serve offerta o asseverazione PA Digitale 2026); ASL VCO non archiviabile (ConnectTimeout).
-## #41 RIVENDITORI v4 — 9/11/2026 (sezione a parte, da integrare nel rendiconto obiettivo 6)
-- **Verifica** `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py` -> `esiti/2026-11-09/rivenditori/` (mappa-v4.json/csv, cig-rivenditore.csv, campione-precisione.csv); testo in `esiti/2026-11-09/rivenditori/sezione-41.md` (NON ancora nel rendiconto: lo integra chi chiude la versione dopo #43). Cache GLEIF `lavoro/rivenditori/gleif-it.json` (rigenerabile dal mirror).
-- **Numeri [V]:** prodotti extra-UE 2,949 mld; via rivenditore 1,824; con CF italiano 1,797 = **60,9 % del totale, 78,9 % del noto** (lente fornitore = IT a torto); anche col capogruppo resta IT/ignoto 1,658 (56,2 %); CH 124 M (Fastweb->Swisscom, SoftwareOne), UE 11,5 M, extra-UE 3,9 M. 1.375 rivenditori, 6.470 CIG, 2.121 enti.
-- **Fonti nuove:** CF dal nome per i 1.530 CIG senza righe ANAC (405 M extra-UE); TED 0 CIG utili; GLEIF capogruppo su 1,54/1,82 mld; `config/rivenditori_capogruppo.yaml` 6 righe [R]; lotti Consip 48/48 coincidenti; atti #57: 45 CIG, 8 pertinenti.
-- **Precisione** (45 CIG con atto, etichette `report/metodo/rivenditori-v4/etichette-campione.csv`): prodotto giusto 30/39 = 77 % (Wilson 62-87), 88 % in euro; 9 falsi positivi in gare non ICT -> casi di test per #40. R76, R77.
-- **v4.1 (pomeriggio):** `rivenditori_mappa.py v4.1` riclassifica con le regole correnti. 9 falsi positivi -> casi di test (76/76); correzioni via 2 «2746» e esclusioni (Azure S DR, hardware rete PSN, affiancamento); campioni a cieco invariati prima/dopo. Extra-UE 3,065 mld, CF IT 1,884 = **61,5 % / 79,3 % del noto**. Campione casuale top-20 (60 CIG, seme 20261109): **58/60 = 96,7 %** (Wilson 88,6-99,1), 76 % in euro (CRUI 16 M€ Cisco/IBM multi-lotto). **«IMPRESA INESISTENTE» 02102821002 = Italware** (VIES + 398/473 padri AQ Italware): unita al CF 08619670584, 74,5 M€. Eurolink e Arslogica: P.IVA valide (VIES), nessun LEI, capogruppo non trovato. Testo in `sezione-41.md` § 2bis.
-- **v4.2 + rendiconto 0.8 (sera):** regole multi-lotto (`RX_MULTILOTTO` in `marchio()`), prodotti di terzi (Office365 Protection), formazione AWS non esclude se compra servizi cloud; 81/81 casi; cieco invariato; top-20 2 errori tolti, 0 giusti persi (`tools/verifiche/lente_top20.py`). Mappa v4.2: extra-UE 3,024 mld, CF IT 1,844 = **61,0 % / 78,9 % del noto**, 57,2 % col capogruppo; Italware 2° rivenditore (74,5 M€). R56 aggiornata. § 2 di `obiettivo-6.md` integrato (v0.8), docs/ ricostruito.
-- **Prossimo:** atti per i 60 CIG del top-20; capogruppo Eurolink/Arslogica e 6 righe [R] da fonti gratuite; campione a cieco nuovo per le regole del 9/11.
-- **#40 quarto campione a cieco (9/11, sera):** regole del 9/11 misurate su 150 CIG nuovi (`tools/verifiche/lente_cieco4_campione.py` + `lente_cieco4.py`, `report/metodo/lente-cieco-4/`, etichette committate prima del confronto in 0818f6fb, sha256 23738e20). Big tech P **94/102 = 92,2 %** (Wilson 85,3-96,0), 99,0 % in euro; R **94/95 = 98,9 %**. Per strato: rivenditore P 88 %, diretto 96 %, multilotto 2/2 (solo 7 CIG nello strato), N 0 big tech mancati su 43. 8 FP tutti «marchio senza prodotto» (formazione/supporto Microsoft e Google 4, prodotti di terzi per M365 Veeam/Commvault 2, connettività verso OCI 1, IaaS per ambienti VMware 1), 2 mancati (Adobe lotto 3, PEC Aruba). Regole NON corrette: casi da trattare in `esiti/2026-11-09/lente-cieco-4/errori.csv`. metodo-cloud-provider.md aggiornato (docs/ da ricostruire).
-- **#40 regole v4.3 (9/11, sera):** corrette le 5 classi del cieco 4 in `config/marchi_cloud.yaml` (formazione/supporto Microsoft e Google salvo acquisto, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe); 101/101 casi. Prima/dopo (`tools/verifiche/regole_v43_confronto.py`, `esiti/2026-11-09/regole-v4.3/`): cieco 4 big tech 94/8/1 -> 95/0/0, ciechi 2-3 e top-20 invariati, cieco 1 64/0/3 (2 corsi: cambio di criterio, non regressione). **Cieco 4 ora campione di sviluppo**: serve un quinto cieco. Mappa v4.3: +427 Adobe, −87 Microsoft, −17 Google, −7 Oracle; CF IT 1,863 mld = 61,2 % dell'extra-UE (79,1 % del noto). obiettivo-6.md NON aggiornato (altro agente).
-
-## R53 CIG RIPETUTI NELL IMBUTO — 9/11/2026
-- Causa: nei file ANAC 2024 e 2025 c'è una riga per ogni CPV (7.862 CIG, 510 con CPV ICT e non ICT insieme). In `ict.csv` 1.016 CIG sono ripetuti e 152 stanno insieme in S5 e S6. Il 55,3 mld S3-S6 dal 2024 è sottostimato di circa 0,43 mld (circa 55,7), perché `imbuto_doppioni.py` ha tolto anche righe che stavano in S1. Dettagli in `report/metodo/imbuto.md` § Criticità, verifica in `tools/verifiche/imbuto_cig_ripetuti.py`.
-- Patch pronta in `imbuto.py` 0.3.4 (`DEDUP_CPV`): **NON applicata**, `ict.csv` resta quello del 3/11 fino alla rigenerazione dopo la via 6. Alla rigenerazione: rifare `imbuto_cig_ripetuti.py` (dovrà dare 0 CIG ripetuti), rivedere le priorità P2/P5 delle 32 voci segnalate nell'elenco #58 e aggiornare il 55,3 nel rendiconto.
-- `elenco_mancanti.py` prende uno strato coerente per CIG (regola 0.3.4). Elenco `esiti/2026-11-09/accesso-civico/` rigenerato: 28.807 voci, invariate, V1-V7 ok.
-
-## #67 BDAP NELL IMBUTO — giro 0.2 fatto 9/11/2026 (pagina v0.2)
-- **Verifiche nuove** [V]: `tools/verifiche/bdap_cig_ministeri_cf.py` (SA→ministero per CF IndicePA, quota annua, Sogei) e `tools/verifiche/siope_bdap_vs_diretto.py 2024|2025` (#30); `bdap_ict_stato.py` 0.2 con PG 2019-2024 (archiviati con archivia.py). Esiti `esiti/2026-11-09/bdap/` e `esiti/2026-11-09/siope/`.
-- **Per CF:** CIG ICT ministeriali 10.758 → 23.644 (5,0 → 8,2 mld 2020-26). **Giustizia** 2024 quota CIG attivi/pagato **0,96** (era 0,03: artefatto del nome); **MEF 0,25** (97 vs 388 M€), resta il solo buco (~0,3 mld/anno).
-- **Sogei:** CIG in-house con SA MEF ~26 M€/anno [stima] (DF 77 M€ triennio, Giustizia tributaria 47); agenzie fiscali 981/381/298 M€ (fuori dai gestionali MEF); Sogei come SA ~0,69 mld di quota 2024 (non attribuibile, doppio conteggio). R71.
-- **Durata ANAC** vuota nel 90 % dei CIG dal 2024 (R69). **Seconda via PG** 492/740/675/452/1.007/979 M€ 2019-24, discontinuità 2023 (MEF 18→297).
-- **#30 SIOPE CHIUSO** (giro 0.3, 9/11): BDAP vs diretto su 20 regioni 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2, abbinamento a 3 livelli, 2025: 11.362/11.432 enti). **Difetto AgID riprodotto** [V]: 2025 Lombardia + FVG fermi a marzo = 1.717 comuni (BDAP 19,5 vs 92,7 mld Lombardia; ICT −412 M€), 84 comuni di Trento assenti; risorse caricate 6/3/2026, ancora così. 2023/2024 completi; ICT uguali 100 % / 99,5 % (2025 senza LOM/FVG 99,8 %). R70, **R75**.
-- **Rendiconto #66:** sezione § 4.12 pronta in `report/imbuto/sezione-4.12-bdap-fase2.md` (non inserita nel rendiconto).
-- **Prossimi:** codice IPA dell'Università (manca `m_ur`); corrispettivi Sogei per committente (fonte da trovare, R65/R71).
-
-## #67 BDAP NELL IMBUTO — punto di ripresa giro 0.1, 9/11/2026
-- **Pagina** `/progetto/bdap/` (v0.1): famiglie, campi, difetti (R61, R63-R65), cosa usiamo e cosa no. Ripresa: `lavoro/bdap-imbuto/STATO.md`.
-- **Verifica** `tools/verifiche/bdap_ict_stato.py` -> `esiti/2026-11-09/bdap/` [V]: pagato ICT Stato per gestionali ICT 987 / 1.199 / 1.141 / 1.286 M€ (2022-2025); seconda via CE3 rendiconto PG 2024: 415 PG, 979 M€ (scarto 14 %). Regola sul nome: rumorosa (7/20 acquisti ICT veri), solo per trovare capitoli.
-- **Copertura CIG/pagato 2024** (indicatore, non percentuale): MEF 0,17, Giustizia 0,03, Salute 0,07, Lavoro 0; Interno 2,0, Difesa 3,5. Imbuto cieco su in-house Sogei e stazioni appaltanti non riconosciute (criticità 9 di imbuto.md).
-- **Sanità:** CE SSN 2023 BA1620 servizi di assistenza informatica 604 M€ = denominatore minimo. **SIOPE via BDAP:** stessa base per ente + anagrafica; importi da confrontare (#30).
-- **Proposta per Fabio:** BDAP entra come denominatore/controvalidazione (non come strato): riga annuale «pagato ICT per ministero» accanto all imbuto; nessuna modifica a imbuto.py.
-
-## MIRROR RIPRESI il 9/11/2026 (spazio liberato da Fabio: 398 GB liberi): `coda_mirror.sh config/coda-mirror-2026-11.txt` rilanciato, log `lavoro/coda-mirror-ripresa-20261109.log`
-## (storico) MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
-Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le scelte sullo storage (object storage UE, pulizia degli altri progetti) spettano a Fabio. Tutto il resto del lavoro va avanti.
-- **ANAC:** completo, 1.796 risorse su 1.800 (le altre 4 rispondono 404 alla fonte). Il mirror quotidiano (cron) resta attivo, ma senza spazio la guardia lo ferma.
-- **Consip (#11):** completo, 151 risorse in tutti i formati. I 7 file grandi sono archiviati con scaricamento a riprese (`tools/acquisizione/scarica_ripresa.sh`, log `lavoro/consip/grandi.log`).
-- **OpenCUP (#26):** completo, compreso `OpendataComplessivo.zip` da 3,4 GB (`lavoro/opencup-grande.log`).
-- **TED (#27):** 34 mesi, da 2024-01 a 2026-10. FTS dal 2007 al 2025.
-- **SIOPE (#12), IndicePA e PA Digitale (#13), GLEIF (#28), OpenCoesione (#26), CPT ed Eurostat COFOG (#29):** archiviati.
-- **Da riprendere:**
-  1. BDAP (#25): circa 750 righe di metadati CKAN, `package_search?rows=1000&start=1000`, che cadono sempre. È l'ultima riga di `lavoro/consip/riprova.txt` e va riprovata in orari di poco carico.
-  2. Italia Domani/ReGiS (403, R57) e catalogo ACN (403 Akamai, R55): bloccati, decide Fabio.
-  3. Gli scaricamenti delle prossime annualità.
-- **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
-- **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
-## #58 ACCESSO CIVICO MASSIVO (L7): PREPARAZIONE — punto di ripresa 9/11/2026
-- **Fatto:** elenco unico dei mancanti (`tools/accesso_civico/elenco_mancanti.py`, verifica `verifica_elenco.py` V1-V7 ok): 28.807 voci (756 convenzioni + 28.051 CIG residuo, esclusi 532 con documento che cita il CIG), 6.626 enti, 775 senza PEC. Esiti `esiti/2026-11-09/accesso-civico/` (CSV in chiaro solo sul server, versionato il .gz). Rapporto `report/metodo/accesso-civico-piattaforma.md` 0.1 bozza: Froide raccomandata + adattatore PEC; norme verificate (fonti in `prove-normativa/`).
-- **Modelli, registro, ondata 0 (9/11, rapporto 0.2 § 3bis):** 6 modelli in `config/accesso-civico/modelli/` (istanza, sollecito, chiarimento, riesame diniego/silenzio, difensore civico; norme verificate su `prove-normativa/`); parametri PROPOSTI in `config/accesso-civico/parametri.yaml`; schemi `schemi/accesso-civico-{richiesta,evento}.schema.json`; macchina a stati e scadenze `tools/accesso_civico/stati.py` (16 test: `.venv/bin/python -m unittest tests/test_accesso_civico_stati.py`); generatore `tools/accesso_civico/bozze.py 2026-11-09 --ondata ondata-0` -> testi in `lavoro/accesso-civico/ondata-0-bozze/` (non in git, registro eventi.jsonl), riepilogo `esiti/2026-11-09/accesso-civico/ondata-0/` (30 enti, 501 voci, 4,15 mld). **Da Fabio:** richiedente, casella PEC (e suoi limiti), tetto, cadenza, approvazione dei 30 enti e dei modelli. Poi: evento «approvazione» per richiesta, invio a mano o adattatore PEC (da scrivere).
-- **Norme chiuse + adattatore PEC (9/11, rapporto 0.3 § 3ter):** proroga festivi (art. 2963 c.c., 155 c.p.c., 52 c.p.a. [V]; per L. 241 principio giurisprudenziale), 4 ottobre festivo dal 1/1/2026 (L. 151/2025, GU 236/2025 [V]), art. 116 c.p.a. 30 gg [V]: 9 testi in `prove-normativa/` + SHA256SUMS + archivia.py. `stati.py` 0.2 (`termine_tar`, 19 test). `tools/accesso_civico/pec.py` 0.1 (solo stdlib, **secca di default**, reale solo con `--reale` + `PEC_REALE=1`, credenziali da ambiente): `invia` (solo «approvata», allegato `<id>.pdf.p7m`/`.pdf` obbligatorio, tetto giornaliero e intervallo in `parametri.yaml` `pec`), `leggi` (IMAP sola lettura; ricevute X-Ricevuta/daticert.xml -> eventi consegna/mancata-consegna; risposte enti -> coda da-esaminare, mai esito automatico; .eml archiviati con sha256). 8 test su .eml a mano in `tests/dati/pec/`. Firma S/MIME delle ricevute non verificata.
-- **NESSUN INVIO.** Decisioni per Fabio nel § 4 del rapporto (tetto per richiesta, cadenza ondate, ondata 0, Froide o registro nostro, limiti casella PEC).
-- **RPCT e destinatari (9/11, in corso sul server):** `tools/accesso_civico/rpct_destinatari.py 2026-11-09` (riusa at_cig/piattaforme_cig/visibilita_pa; ripartibile da `lavoro/accesso-civico-rpct/enti.jsonl`, stato in `lavoro/accesso-civico-rpct/STATO.md`, ~9-10 h). Uscita `esiti/2026-11-09/accesso-civico/destinatari.csv` con fonte/sha256/attendibilità A-B-C per campo. Primi 100: accesso civico 35, recapito 25, blocchi 24 (R72). Senza PEC: 338/775 risolti via CF unità IndicePA (B), 2 per nome (C). Ripresa: comando in STATO.md.
-
-## #57 RESIDUO S6: RIEPILOGO FINALE 9/11/2026
-- **L3+MePA finiti il 7/11**; L4 si era fermato per la guardia disco (7/11 06:29, 1.854/4.352 enti) ed è **ripreso il 9/11** (at_cig.py in background, ripartibile; ticket per il residuo L4).
-- **Misure** (`tools/verifiche/residuo_s6_riepilogo.py 2026-11-09`): L3 11.589 CIG, trovati 2.483, con documento 1.076, documento che cita il CIG 453 (262 M€); MePA 591, 0; L4 parziale 3.487 trovati, 869 con documento, 79 che citano (42 M€). Atti già tutti registrati (L3/L4). Zero token.
-- **Per #66** (consegna 12/11, NON ricalcolato): `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`: 532 CIG / 304,5 M€ con documento che cita il CIG; S6/G3 451 su 21.525 (81,4 M€, 2,1 %). Nuove R66-R68. Pagina acquisizione-documenti aggiornata.
-- Nota: `residuo_s6_copertura.py` non conta «cig-con-ricerca» fra i trovati; il riepilogo sì.
-
-## #57 DOCUMENTI L3 PER IL RESIDUO S6 FUORI DALLA VIA 6 — punto di ripresa 7/11/2026
-- **7/11 notte:** L4 181 enti, 735 CIG trovati (6,7 mld); L3 4.075/12.180; MePA finito (582, 0 pagine pubbliche); blocchi/robots/piattaforme da visibilita_pa (confronto: 44 differenze, tutte falsi blocchi delle regole vecchie, ripassati); ariaspa ripassato. Proposta per visibilita-pa: CAPTCHA nell'URL (pagina-cancello ANAC /superset/recaptcha/) in riconosci_blocco; host cloud.urbi.it e sicopat2 nelle REGOLE delle piattaforme.
-- **Stato 7/11 sera e RIPRESA A MANO (Fabio: niente cron).** In corso sul server: L3 (`piattaforme_cig.py`, 3.358 su 12.180 CIG con link), MePA (`mepa_cig.py`, 315 su 591: 0 pagine pubbliche), L4 (`at_cig.py`, 66 enti, 338 CIG trovati per 6,2 mld) e il ripasso AT notturno (`residuo_s6_at.sh`).
-  - Rilancio, ripartibile: `cd ~/analisi-spesa-ict && (HOST_PARALLELI=5 setsid nohup bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1 &) ; (HOST_PARALLELI=4 SPESAICT_BASE=$PWD setsid nohup nice -n 15 .venv/bin/python tools/acquisizione/at_cig.py lavoro/residuo-s6/ingresso.csv lavoro/residuo-s6/l4 >> lavoro/residuo-s6/l4.log 2>&1 &) ; (setsid nohup bash tools/acquisizione/residuo_s6_at.sh >/dev/null 2>&1 &)`.
-  - Ripassi mirati: `RIPASSA=errore SOLO_HOST=ariaspa` (ariaspa: la porta 80 non risponde, ora si passa in https); `RIPASSA=cig-non-trovato` per riprovare con la ricerca interna.
-  - www.difesa.it ed esercito.difesa.it non rispondono dal server (timeout): vanno provati da un'altra origine, con il monitoraggio AT.
-  - Misura: `.venv/bin/python tools/verifiche/residuo_s6_copertura.py <data>`.
-- **Riuso di visibilita-pa (indicazione di Fabio).** at_cig.py importa `visibilita_pa.core.probes`: `locate.link_at` (sezione AT), `extended._cerca` (ricerca con browser), `checks.browser_playwright`.
-  - Doppioni da sostituire in analisi-spesa-ict: `piattaforme_cig.blocco/SEGNI_BLOCCO` → `extended.riconosci_blocco` e `basic.firme`; `robots_ok` → `visibilita_pa.core.robots` (doppio parser); `config/at_robots_esenti.txt` → `platforms.riconosci` più la tabella enti AT.
-  - **Proposte per visibilita-pa (da fare là, non qui):**
-    - rendere pubbliche `_cerca` e `CAMPI_RICERCA`;
-    - aggiungere una ricerca senza browser sui moduli GET (oggi `piattaforme_cig.modelli_ricerca/cerca_cig`), da far importare a noi;
-    - aggiungere una funzione che restituisca la sezione «Bandi di gara e contratti», oltre alla AT.
-- **In corso sul server** (`lavoro/residuo-s6/`, `giro.log`, stato in `out/esiti.jsonl`): `bash tools/acquisizione/residuo_s6.sh` (lock, ripartibile; `FINITO.txt` a fine giro, `STOP-disco.txt` se il disco scende sotto 15 GB, guardia decisa da Fabio il 7/11).
-- **Ripresa automatica, RIGA DA METTERE NEL CRONTAB (Fabio):** `*/30 * * * * cd ~/analisi-spesa-ict && bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1`
-- **Ingresso** `tools/acquisizione/residuo_s6_ingresso.py`: 28.583 CIG (P1 70 ICT incerti, P2 21.525 G3 oltre la via 6, P3 2.395 G2, P4 3.593 nuovi «sw»/«connettività», P5 1.000 G4 a campione); 16.403 senza link PVL (pre-2024).
-- **Misure parziali** (2.093 CIG con link su 12.180): CIG citato 137, con documenti 62, con documento che cita il CIG 20; robots 317, blocchi 19. Documenti che citano il CIG in `dati/atti/atti-server.jsonl` (livello L3): la via 6 li trova per CIG. Rimisurare con `tools/verifiche/residuo_s6_copertura.py <data>` e aggiornare `acquisizione-documenti.md`.
-- **Aggiornamento 7/11 (decisioni già in AGENTS §3):** host AT esclusi da robots.txt ripassati di notte (`tools/acquisizione/residuo_s6_at.sh` in attesa delle 21, `config/at_robots_esenti.txt`, robots.txt archiviato come evidenza). MePA con Playwright (`mepa_cig.py`): 0 su 85 CIG con pagina pubblica, R62. L4 avviato (`at_cig.py`, `lavoro/residuo-s6/l4/`): 79 enti e 3 CIG trovati. `residuo_s6.sh` concatena L3, poi MePA, poi L4 (la riga cron è sopra). **Prossimo:** adattatori per i software AT (ricerca interna per CIG o elenchi per anno), poi Playwright per le pagine AT in JavaScript.
-
-## #43 PNRR 1.2 PER PRODOTTO — punto di ripresa 9/11/2026 (rendiconto obiettivo 6 v0.6, § 3.1)
-
-- **Fatto:** `tools/verifiche/pnrr12_prodotto.py --data 2026-11-09` → `esiti/2026-11-09/pnrr12/` (json, dettaglio per CIG, campione S2). Nessun LLM.
-- **Universo:** 20.855 CUP 1.2, 1.263,4 M€ (Comuni 10.122/920,3; ASL 225/195,8; altri 102/90,5; scuole 10.406/56,8); 11.566 CUP con CIG (55,5 %); 17.973 CIG, 12.501 contati per 818,9 M€.
-- **Big tech USA:** 13,6 M€ (1,7 %), 73 CIG (0,6 %); con il residuo alla stessa quota circa 2,1 %; caso peggiore 21,5 % (25,0 % con S5). IT prodotto (S1 IT + S2 SaaS qualificato ACN) 558,8 M€ (68,2 %); IT fornitore (S3+S4) 55,7 M€; fornitore extra-UE senza marchio 28,5 M€; ignoto 162,3 M€ (19,8 %, 7.672 CIG senza aggiudicatario).
-- **Precisione:** S2 abbinamento nome 60/60; S4 (fornitore nel testo) 86/89 sulla metà prova. Precisione per CIG della scheda ACN comprata NON misurata.
-- **Nuovo ingresso:** CSV ACN delle schede qualificate (`archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv`, 2.342 schede). R73 (infrastruttura sotto i SaaS), R74 (servizi migrati e CIG senza aggiudicatario).
-- **v0.7 (§ 3.2):** S6 NON riducibile con le fonti archiviate: OCDS bulk (`tools/verifiche/pnrr12_ocds.py` → `lavoro/pnrr12/ocds-1.2.jsonl`) ha 3.445 CIG S6 ma senza award; partecipanti 5; L3/L4 0 aggiudicatari. S6 = affidamenti diretti 2023 dei Comuni (mediana 6.100 €). Imputazione per tipologia/anno: big tech 2,0 %. OCDS vs ANAC 92,4 % (1.269/1.374). Scheda ACN nell'oggetto: 84 CIG, 2,2 M€, 40/40 a campione. Pilota infrastruttura `tools/verifiche/saas_infra_pilota.py`: 4 domini su 10 su hyperscaler USA (DigitalPA e portaletrasparenza.net Oracle, Dedagroup Azure, traspare.com AWS); Maggioli (37,9 M€ in 1.2) su AS proprio IT; evidenza aggiunta a R73.
-- **Prossimo (da decidere con Fabio):** pilota infrastruttura esteso ai primi 30 fornitori S2 (host per ente + pagine sub-processor archiviate); S6 solo con atti nuovi o accesso civico.
-
-## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
-- **Aggiornamento 0.5.1 (6/11, sera):**
-  - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
-  - **CPT:** 36 file di spesa del catalogo Open CPT archiviati.
-  - **ISTAT COFOG:** coperto da Eurostat.
-  - **Consip:** il server taglia i file sopra circa 350 MB, quindi curl con ripresa e poi `archivia.py --da-file`. `cataloghi2024.json` è archiviato, gli altri 6 sono in corso (`lavoro/consip/grandi.log`).
-  - **BDAP:** la pagina `package_search start=1000` cade sempre (il server chiude dopo 120 s), anche in pagine da 250: da riprovare in orari di poco carico.
-  - **Vincitori TED per l'imbuto (#66):** `esiti/2026-11-06/imbuto/ted-vincitori.csv` (`tools/verifiche/ted_imbuto.py`). 84 CIG con vincitore TED e senza aggiudicatari ANAC; 72 nell'imbuto, di cui 7 in S6 (19 M€) e 55 in S5. Da integrare a cura di chi gestisce l'imbuto: il rendiconto imbuto-dove-siamo non è stato toccato.
-- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.5.
-- **#40:** tre campioni a cieco (`report/metodo/lente-cieco{,-2,-3}/`; `tools/verifiche/lente_cieco.py CARTELLA`). Misure indipendenti big tech: R 81 % → 89 % → 89 %, P 100 % / 95 % / 100 %. Regole v0.5 in `config/marchi_cloud.yaml`; il terzo campione le misura. La lente testuale è al limite: non aggiungere regole senza un quarto campione.
-- **#41 / #43:** invariati rispetto a 0.4 (rivenditori v3.1; FLAG_PNRR_PNC 90 %; R57, R58).
-- **#11 Consip:** 151 risorse, 94 nuove, 50 invariate, 7 errori (JSON e TTL grandi, connessione interrotta). Nuovo tentativo in coda: `lavoro/consip/riprova.txt` (più BDAP start=1000), parte da solo dopo IndicePA.
-- **#27:** TED v2 di 34 mesi, 5.348 avvisi; TED → CIG 6,6 %; TED come fonte di esiti: 112 righe senza aggiudicatari ANAC, 88 con vincitore e P.IVA TED, 298 M€ (`esiti/2026-11-06/mirror/ted-esiti.csv`). R59.
-- **Coda mirror** (`config/coda-mirror-2026-11.txt`, `tools/acquisizione/coda_mirror.sh`, guardia 45 GB). Archiviati: PA Digitale 2026, SIOPE uscite 2017-2026 e anagrafiche, BDAP (4/5 pagine del catalogo), Eurostat COFOG, GLEIF (LEI2, RR, REPEX), OpenCoesione. IndicePA: 54 risorse in corso (`lavoro/indicepa/mirror.log`).
-- **Da fare:** OpenCUP (URL 404, da ritrovare), CPT e ISTAT (URL), ItaliaDomani (R57). Registrazioni in `config/risorse.yaml`. Disco 52 GB liberi.
-## #17 #9 MIRROR PUBBLICO ANAC — punto di ripresa 6/11/2026 (indicazione di Fabio del 7/11)
-- **Stato [V]:** ANAC 1.796/1.800 risorse del catalogo con sha256 (128,7 GB; OCDS 96 file 73,8 GB); le 4 mancanti sono 404 alla fonte (P10). Totale mirror fonti di risorse.yaml 2.024 risorse, 134,1 GB. Nessuna risorsa ha ancora cambiato sha256 dal 26/10. 13 file > 2 GiB (max OCDS 2025/10, 5,25 GB). Server: 51 GB liberi.
-- **Indice:** `tools/indice_mirror.py` (manifest → `report/mirror/indice.{json,csv}`, `sintesi.json`; sul server con `ARCHIVIO_ROOT`), `tools/pagine_mirror.py` (rigenera le tabelle fra i marcatori GEN e copia in `sito/static/dati/mirror/`; serve PyYAML → .venv del server).
-- **Bozze non elencate:** `/progetto/mirror-pubblico/` (requisiti, 7 opzioni di hosting, proposta), `/progetto/perche-un-mirror/` (evidenze [V]/[R]; Consip ordini-mepa 2022 e 2023 → 404 il 6/11), `/progetto/usi-dei-dataset/` (dati in `config/usi-dataset.yaml`, 25 schede × 5 progetti).
-- **DECISIONE A FABIO (#17):** hosting. Proposta: bucket S3-compatibile UE (Hetzner/Scaleway, ~5-10 €/mese [R]) con percorsi originali + frontale nginx su mxmap.it per le risposte CKAN statiche, dominio mirror.mxmap.it; Zenodo per snapshot annuali con DOI; GitHub solo indice/manifest. Nessun GB caricato in pubblico.
-- **Prossimi passi:** archiviare con sha256 la prova Consip 404 nella sonda; confronto sha256 fra versioni come metrica quando ci saranno cambi; SIOPE «last» e IndicePA: verificare la sovrascrittura [R].
-
-## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.4)
-- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.4. Verifiche in `tools/verifiche/` (lente_prodotto, lente_cieco [arg: cartella del campione], rivenditori_esteri, pnrr_bigtech locali; rivenditori_cf, pnrr11_prodotto, pnrr_flag, ted_cig, fts_piva sul server).
-- **#40:** il secondo campione a cieco (`report/metodo/lente-cieco-2/`, 120 CIG S2-S4) misura le regole v0.3: big tech P 56/59 = 95 %, R 56/63 = 89 %. Falsi positivi: backup di M365, collocation AWS, corso AWS. Mancati: Microsoft senza le parole chiave (EA9, CP-PILOT, Windows XP…). Regole nuove NON applicate: andrebbero misurate su un terzo campione.
-- **#41:** v3.1 con RTI ripartiti (1,824 mld), CF italiani 99,9 %.
-- **#43:** FLAG_PNRR_PNC sul 90 % dei CIG 1.2. Dei 1.064 senza flag, 627 nominano il PNRR nell'oggetto → R58. ReGiS 403 → R57.
-- **#11:** Consip in tutti i formati, `lavoro/consip/specchia-tutti.sh` sul server (in corso al commit, circa 90/151, ripartibile, guardia 45 GB): alla fine contare nuovo/invariato in `lavoro/consip/specchia-tutti.log` e aggiornare il rendiconto § 5.
-- **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
-- **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
-
-## #44 #59 #46 #50 #52 PERIMETRO, CPV, OCDS, AQ, IN-HOUSE — punto di ripresa 6/11/2026
-- **#44 perimetro ICT:**
-  - lista bianca in `config/perimetro_cpv.yaml` (13 prefissi, uguale a `CPV_ICT`, la verifica lo controlla);
-  - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
-  - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
-  - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
-- **#44 #59, 9/11/2026 (rapporto CPV 0.3, verifica `tools/verifiche/cpv_rapporto.py` → `esiti/2026-11-09/cpv/rapporto-cpv.json`):**
-  - CPV ICT su oggetto non ICT 6,5 % (46/705; scuole 32 %); oggetto ICT con CPV non ICT 9,2 % (50/543; 2024 20 %); universo dal 2024: 130.678 CIG entrano solo per testo;
-  - cloud: 26/171 (15 %) con codice di servizio erogato; lacune in `config/perimetro_cpv.yaml` (0.3), R79 e R80 nuove;
-  - riclassificazione `dati/classificazioni/cpv-riclassificazione.csv` (611);
-  - effetto 0.3.3 vs 0.3.2 con R53: 385.249 → 383.148 CIG (−5.694 di 79342, +3.593 RX), 502,5 → 506,0 mld dichiarati;
-  - **ATTESA Fabio:** scheda `report/cpv/decisione-3224-videosorveglianza.md` (996/1.218 videosorveglianza, 35,9 M€ senza B139F77033; proposta A sottoclasse in S5);
-  - pagina `sito/content/progetto/perimetro-ict.md` (0.3, registro revisioni); rendiconto bozza `perimetro-cpv.md` 0.3 non annunciato.
-- **#44, decisione di Fabio del 7/11:**
-  - 79342 tolto da CPV_ICT e dal yaml, dopo la review di 177 CIG (3,0 % ICT veri stimati, 0 sopra 1 M€): 5.706 CIG e 539 M€ dal 2024 passano in S1;
-  - 3224 resta in lista: la review dice 79 % videosorveglianza, 2,4 % ICT stretto; una sottoclasse videosorveglianza da decidere. Il CIG B139F77033 ha un importo errato di 4,7 mld;
-  - RX_ICT con sw e connettività (imbuto 0.3.3): 3.593 CIG in più nel residuo S6, di cui G1 29 per 3,8 mld (SPC Connettività, ASI);
-  - prove: tools/verifiche/perimetro_cpv_effetto.py, report/cpv/review-79342-3224/;
-  - **DA FARE a via 6 finita:** rigenerare ict.csv con imbuto 0.3.3 (python tools/analisi/imbuto.py sul server), poi rifare imbuto_strati e perimetro_cpv. Non è stato rigenerato perché la via 6 legge ict.csv.
-- **#59 CPV:**
-  - sui 543 ICT del campione 611: 74 % specifico, 17 % generico, 9 % fuori lista (25 con il segnaposto 99999999);
-  - cloud con codice di servizio erogato: 30 % (contro l'11 % dei non cloud);
-  - base dal 2024: 99999999 o vuoto 8,3 %, codice di gruppo 16,2 %;
-  - ECA SR 28/2023 aperta e archiviata: **il 49,8 % non c'è** (valori mancanti circa 30 %);
-  - Ramboll/BME 2012 trovato: 405 avvisi, 23 % di codici inesatti;
-  - rendiconto bozza `sito/content/rendiconti/perimetro-cpv.md` (non elencato); R21 aggiornata, R60 nuova (segnaposto).
-  - **Prossimo:** uscita di riclassificazione `dati/classificazioni/cpv-riclassificazione.csv`; etichette umane su L e S1; includere `lente-cieco-3` quando sarà versionato.
-- **#46 OCDS release.date** (`tools/verifiche/ocds_release_date.py`, `esiti/2026-11-06/ocds/`, 96 mesi):
-  - le due vie concordano su 4.751.105 date;
-  - conformi solo 2018/01-2019/11; **da 2019/12 zero conformi** (la scheda P04 diceva «fra il 2021 e il 2023»: corretta);
-  - 3.594.570 release senza data. P04 aggiornata con sha256 e metrica.
-- **#50 cig_accordo_quadro** (`tools/verifiche/cig_aq_modalita.py`, `esiti/2026-11-06/cig-aq/`):
-  - con modalità «discendente» il campo è compilato nel 98,6-100 %: mancano 4.130 CIG nel 2024 e 3.946 nel 2025;
-  - il «20 % vuoto» era l'espressione sul testo: precisione 3/60 (5 %), quasi tutti appalti specifici di SDA;
-  - **decisione:** P15 resta interno (esito nella scheda) e R01 è ridimensionata. Se Fabio vuole, il difetto piccolo («discendente senza CIG padre», circa 4.000 l'anno) può diventare una scheda pronta: è verificato su campo strutturato.
-- **#50, terza misura 9/11 (chiusa la verifica)** (`tools/verifiche/cig_aq_tipo.py`, `esiti/2026-11-09/cig-aq/tipo.json`): discendenti con padre esistente 99,9 % nel 2023, **92,4 % 2024, 94,9 % 2025**, 96,8 % 2026 (2025: 3.944 vuoti, 14.267 padri inesistenti, di cui 882 solo minuscoli e 289 smartcig); tipo 2025: Consip 70.238, aggregatori 90.749, consorzi 3.551, altri 173.563; 170.759 derivati 2025 puntano a un padre «contratto d'appalto» (SDA?). Imbuto: 734 M€ su 89,2 mld ICT discendente (0,82 %) non collegabile. P15 resta interno (manca la norma sull'obbligo); R01 aggiornata.
-- **#46 chiuso il 9/11** (misura del 6/11 completa: P04 pronta, metrica I11).
-- **#52 in-house/datacenter** (`tools/verifiche/inhouse_datacenter.py`, `esiti/2026-11-06/inhouse/`), punto aperto:
-  - in-house dal 2024: 943 CIG, 774 M€, 446 enti. La classe è **contaminata da privati** (Accenture 91 M€, HTDI 48, TAI 31, DGS, TIM, Fastweb): va ristretta alle società pubbliche;
-  - SAL su 17 CIG su 943;
-  - infrastruttura propria: hardware 31.677 CIG e 4,5 mld; consulenza su infrastruttura 3.527 e 2,7 mld; software di infrastruttura 663 e 0,8 mld (VMware 651); testo datacenter/CED 10.991 e 3,1 mld (importi del lotto, con i tetti).
-
-## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
-- **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
-- **Selezione:** `report/metodo/llm/imbuto-g1g3/selezione.json`: G1 196 CIG unici (4,70 mld), G3 1.000 (1,55 mld), CTL 15 dal campione 611. ict.csv ha CIG ripetuti (G1 13, G3 52): R53.
-- **Budget G3:** stima 360, guardia a 432 USD-eq (`tools/llm/imbuto_budget.py`, etichetta `imbuto-g3` in `stato/claude-consumi.jsonl`). Se scatta, scrive `stato/imbuto-g1g3-STOP.txt`, che ferma solo g3: chiedere a Fabio. Misurato: G3 0,32 per CIG (proiezione 320), G1 circa 0,70 per CIG.
-- **Uscite:** proposte da revisionare in `dati/classificazioni/imbuto-g1g3.jsonl` (`spesaict.classificazione/1`) e `report/metodo/llm/imbuto-g1g3/verificati.jsonl`. Rendiconto imbuto 0.4 § 4.3 e § 9.1.
-- **Riproducibilità (richiesta di Fabio):**
-  - prompt portabile `report/metodo/llm/prompt-analisi-documentale-v1.md` (sha256 accanto), schema `schemi/analisi-documentale.schema.json`;
-  - runner neutro `tools/llm/analisi_documentale.py` (stampa / openai / ollama / claude-cli / importa), confronto `tools/verifiche/concordanza_llm.py`;
-  - `tools/llm/riproduzione.sh`, lanciato dal guardiano, congela il pacchetto da 50 CIG, fa girare Haiku e qwen3-vl:8b (Ollama già installato, solo CPU, lento) e scrive le concordanze in `esiti/imbuto-via6/`;
-  - pilota su 12 CIG: asse B 10/12, asse A 6/12.
-- **Al termine:**
-  - rivedere i numeri del § 4.3 dal JSON e aggiornare il rendiconto;
-  - revisione umana a campione delle proposte (tutte le «certo» di G1 e un 10 % di G3);
-  - deduplicare per CIG in `tools/analisi/imbuto.py`;
-  - chiave per un modello cloud gratuito: decide Fabio.
+# SEZIONI PER TICKET (dalla più recente)
 
 ## #66 IMBUTO: DOVE SIAMO — punto di ripresa 6/11/2026 (consegna del 12/11)
 - **0.12 (9/11):** § 2.6 R53: S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4, imbuto_cig_ripetuti.py); limiti aggiornati.
@@ -238,6 +99,151 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **#59:** Zenodo fuori (+245 CIG S6, 0,44 %, stessa fonte ANAC); EuroTender non testato (installazione del pacchetto negata dal permesso), fuori per ora; clone in `lavoro/eurotender/repo`.
 - **#60:** ricerca fatta (§7 del rendiconto), nessun contatto. **Prossimo:** top-5 del rendiconto §8 (primo: precisione di S1 su campione casuale).
 
+## #66 #55 VIA 6 SU G1 + PRIMI 1.000 G3 (top-5 punto 4) — punto di ripresa 6/11/2026 (decisione di Fabio)
+- **Gira sul server, da solo:** `tools/llm/giro_imbuto.sh` (Sonnet in abbonamento, istruzioni `tools/llm/istruzioni-p3.md`, due assi con stato; PAR 4; ordine g1 → ctl → g3), rilanciato ogni 30 min dal cron `tools/llm/giro_imbuto_guardiano.sh`, che a ogni passaggio rifà la verifica (`tools/llm/verifica_imbuto.py`) e i numeri (`esiti/imbuto-via6/via6-g1g3.json`, da `tools/verifiche/imbuto_via6.py`). Il tetto di 100 USD-eq al giorno ferma e riprende da sé (codice 75).
+- **Selezione:** `report/metodo/llm/imbuto-g1g3/selezione.json`: G1 196 CIG unici (4,70 mld), G3 1.000 (1,55 mld), CTL 15 dal campione 611. ict.csv ha CIG ripetuti (G1 13, G3 52): R53.
+- **Budget G3:** stima 360, guardia a 432 USD-eq (`tools/llm/imbuto_budget.py`, etichetta `imbuto-g3` in `stato/claude-consumi.jsonl`). Se scatta, scrive `stato/imbuto-g1g3-STOP.txt`, che ferma solo g3: chiedere a Fabio. Misurato: G3 0,32 per CIG (proiezione 320), G1 circa 0,70 per CIG.
+- **Uscite:** proposte da revisionare in `dati/classificazioni/imbuto-g1g3.jsonl` (`spesaict.classificazione/1`) e `report/metodo/llm/imbuto-g1g3/verificati.jsonl`. Rendiconto imbuto 0.4 § 4.3 e § 9.1.
+- **Riproducibilità (richiesta di Fabio):**
+  - prompt portabile `report/metodo/llm/prompt-analisi-documentale-v1.md` (sha256 accanto), schema `schemi/analisi-documentale.schema.json`;
+  - runner neutro `tools/llm/analisi_documentale.py` (stampa / openai / ollama / claude-cli / importa), confronto `tools/verifiche/concordanza_llm.py`;
+  - `tools/llm/riproduzione.sh`, lanciato dal guardiano, congela il pacchetto da 50 CIG, fa girare Haiku e qwen3-vl:8b (Ollama già installato, solo CPU, lento) e scrive le concordanze in `esiti/imbuto-via6/`;
+  - pilota su 12 CIG: asse B 10/12, asse A 6/12.
+- **Al termine:**
+  - rivedere i numeri del § 4.3 dal JSON e aggiornare il rendiconto;
+  - revisione umana a campione delle proposte (tutte le «certo» di G1 e un 10 % di G3);
+  - deduplicare per CIG in `tools/analisi/imbuto.py`;
+  - chiave per un modello cloud gratuito: decide Fabio.
+
+## R53 CIG RIPETUTI NELL IMBUTO — 9/11/2026
+- Causa: nei file ANAC 2024 e 2025 c'è una riga per ogni CPV (7.862 CIG, 510 con CPV ICT e non ICT insieme). In `ict.csv` 1.016 CIG sono ripetuti e 152 stanno insieme in S5 e S6. Il 55,3 mld S3-S6 dal 2024 è sottostimato di circa 0,43 mld (circa 55,7), perché `imbuto_doppioni.py` ha tolto anche righe che stavano in S1. Dettagli in `report/metodo/imbuto.md` § Criticità, verifica in `tools/verifiche/imbuto_cig_ripetuti.py`.
+- Patch pronta in `imbuto.py` 0.3.4 (`DEDUP_CPV`): **NON applicata**, `ict.csv` resta quello del 3/11 fino alla rigenerazione dopo la via 6. Alla rigenerazione: rifare `imbuto_cig_ripetuti.py` (dovrà dare 0 CIG ripetuti), rivedere le priorità P2/P5 delle 32 voci segnalate nell'elenco #58 e aggiornare il 55,3 nel rendiconto.
+- `elenco_mancanti.py` prende uno strato coerente per CIG (regola 0.3.4). Elenco `esiti/2026-11-09/accesso-civico/` rigenerato: 28.807 voci, invariate, V1-V7 ok.
+
+## #57 RESIDUO S6: RIEPILOGO FINALE 9/11/2026
+- **L3+MePA finiti il 7/11**; L4 si era fermato per la guardia disco (7/11 06:29, 1.854/4.352 enti) ed è **ripreso il 9/11** (at_cig.py in background, ripartibile; ticket per il residuo L4).
+- **Misure** (`tools/verifiche/residuo_s6_riepilogo.py 2026-11-09`): L3 11.589 CIG, trovati 2.483, con documento 1.076, documento che cita il CIG 453 (262 M€); MePA 591, 0; L4 parziale 3.487 trovati, 869 con documento, 79 che citano (42 M€). Atti già tutti registrati (L3/L4). Zero token.
+- **Per #66** (consegna 12/11, NON ricalcolato): `esiti/2026-11-09/imbuto/residuo-s6-per-66.csv`: 532 CIG / 304,5 M€ con documento che cita il CIG; S6/G3 451 su 21.525 (81,4 M€, 2,1 %). Nuove R66-R68. Pagina acquisizione-documenti aggiornata.
+- Nota: `residuo_s6_copertura.py` non conta «cig-con-ricerca» fra i trovati; il riepilogo sì.
+
+## #57 DOCUMENTI L3 PER IL RESIDUO S6 FUORI DALLA VIA 6 — punto di ripresa 7/11/2026
+- **7/11 notte:** L4 181 enti, 735 CIG trovati (6,7 mld); L3 4.075/12.180; MePA finito (582, 0 pagine pubbliche); blocchi/robots/piattaforme da visibilita_pa (confronto: 44 differenze, tutte falsi blocchi delle regole vecchie, ripassati); ariaspa ripassato. Proposta per visibilita-pa: CAPTCHA nell'URL (pagina-cancello ANAC /superset/recaptcha/) in riconosci_blocco; host cloud.urbi.it e sicopat2 nelle REGOLE delle piattaforme.
+- **Stato 7/11 sera e RIPRESA A MANO (Fabio: niente cron).** In corso sul server: L3 (`piattaforme_cig.py`, 3.358 su 12.180 CIG con link), MePA (`mepa_cig.py`, 315 su 591: 0 pagine pubbliche), L4 (`at_cig.py`, 66 enti, 338 CIG trovati per 6,2 mld) e il ripasso AT notturno (`residuo_s6_at.sh`).
+  - Rilancio, ripartibile: `cd ~/analisi-spesa-ict && (HOST_PARALLELI=5 setsid nohup bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1 &) ; (HOST_PARALLELI=4 SPESAICT_BASE=$PWD setsid nohup nice -n 15 .venv/bin/python tools/acquisizione/at_cig.py lavoro/residuo-s6/ingresso.csv lavoro/residuo-s6/l4 >> lavoro/residuo-s6/l4.log 2>&1 &) ; (setsid nohup bash tools/acquisizione/residuo_s6_at.sh >/dev/null 2>&1 &)`.
+  - Ripassi mirati: `RIPASSA=errore SOLO_HOST=ariaspa` (ariaspa: la porta 80 non risponde, ora si passa in https); `RIPASSA=cig-non-trovato` per riprovare con la ricerca interna.
+  - www.difesa.it ed esercito.difesa.it non rispondono dal server (timeout): vanno provati da un'altra origine, con il monitoraggio AT.
+  - Misura: `.venv/bin/python tools/verifiche/residuo_s6_copertura.py <data>`.
+- **Riuso di visibilita-pa (indicazione di Fabio).** at_cig.py importa `visibilita_pa.core.probes`: `locate.link_at` (sezione AT), `extended._cerca` (ricerca con browser), `checks.browser_playwright`.
+  - Doppioni da sostituire in analisi-spesa-ict: `piattaforme_cig.blocco/SEGNI_BLOCCO` → `extended.riconosci_blocco` e `basic.firme`; `robots_ok` → `visibilita_pa.core.robots` (doppio parser); `config/at_robots_esenti.txt` → `platforms.riconosci` più la tabella enti AT.
+  - **Proposte per visibilita-pa (da fare là, non qui):**
+    - rendere pubbliche `_cerca` e `CAMPI_RICERCA`;
+    - aggiungere una ricerca senza browser sui moduli GET (oggi `piattaforme_cig.modelli_ricerca/cerca_cig`), da far importare a noi;
+    - aggiungere una funzione che restituisca la sezione «Bandi di gara e contratti», oltre alla AT.
+- **In corso sul server** (`lavoro/residuo-s6/`, `giro.log`, stato in `out/esiti.jsonl`): `bash tools/acquisizione/residuo_s6.sh` (lock, ripartibile; `FINITO.txt` a fine giro, `STOP-disco.txt` se il disco scende sotto 15 GB, guardia decisa da Fabio il 7/11).
+- **Ripresa automatica, RIGA DA METTERE NEL CRONTAB (Fabio):** `*/30 * * * * cd ~/analisi-spesa-ict && bash tools/acquisizione/residuo_s6.sh >/dev/null 2>&1`
+- **Ingresso** `tools/acquisizione/residuo_s6_ingresso.py`: 28.583 CIG (P1 70 ICT incerti, P2 21.525 G3 oltre la via 6, P3 2.395 G2, P4 3.593 nuovi «sw»/«connettività», P5 1.000 G4 a campione); 16.403 senza link PVL (pre-2024).
+- **Misure parziali** (2.093 CIG con link su 12.180): CIG citato 137, con documenti 62, con documento che cita il CIG 20; robots 317, blocchi 19. Documenti che citano il CIG in `dati/atti/atti-server.jsonl` (livello L3): la via 6 li trova per CIG. Rimisurare con `tools/verifiche/residuo_s6_copertura.py <data>` e aggiornare `acquisizione-documenti.md`.
+- **Aggiornamento 7/11 (decisioni già in AGENTS §3):** host AT esclusi da robots.txt ripassati di notte (`tools/acquisizione/residuo_s6_at.sh` in attesa delle 21, `config/at_robots_esenti.txt`, robots.txt archiviato come evidenza). MePA con Playwright (`mepa_cig.py`): 0 su 85 CIG con pagina pubblica, R62. L4 avviato (`at_cig.py`, `lavoro/residuo-s6/l4/`): 79 enti e 3 CIG trovati. `residuo_s6.sh` concatena L3, poi MePA, poi L4 (la riga cron è sopra). **Prossimo:** adattatori per i software AT (ricerca interna per CIG o elenchi per anno), poi Playwright per le pagine AT in JavaScript.
+
+## #58 ACCESSO CIVICO MASSIVO (L7): PREPARAZIONE — punto di ripresa 9/11/2026
+- **Fatto:** elenco unico dei mancanti (`tools/accesso_civico/elenco_mancanti.py`, verifica `verifica_elenco.py` V1-V7 ok): 28.807 voci (756 convenzioni + 28.051 CIG residuo, esclusi 532 con documento che cita il CIG), 6.626 enti, 775 senza PEC. Esiti `esiti/2026-11-09/accesso-civico/` (CSV in chiaro solo sul server, versionato il .gz). Rapporto `report/metodo/accesso-civico-piattaforma.md` 0.1 bozza: Froide raccomandata + adattatore PEC; norme verificate (fonti in `prove-normativa/`).
+- **Modelli, registro, ondata 0 (9/11, rapporto 0.2 § 3bis):** 6 modelli in `config/accesso-civico/modelli/` (istanza, sollecito, chiarimento, riesame diniego/silenzio, difensore civico; norme verificate su `prove-normativa/`); parametri PROPOSTI in `config/accesso-civico/parametri.yaml`; schemi `schemi/accesso-civico-{richiesta,evento}.schema.json`; macchina a stati e scadenze `tools/accesso_civico/stati.py` (16 test: `.venv/bin/python -m unittest tests/test_accesso_civico_stati.py`); generatore `tools/accesso_civico/bozze.py 2026-11-09 --ondata ondata-0` -> testi in `lavoro/accesso-civico/ondata-0-bozze/` (non in git, registro eventi.jsonl), riepilogo `esiti/2026-11-09/accesso-civico/ondata-0/` (30 enti, 501 voci, 4,15 mld). **Da Fabio:** richiedente, casella PEC (e suoi limiti), tetto, cadenza, approvazione dei 30 enti e dei modelli. Poi: evento «approvazione» per richiesta, invio a mano o adattatore PEC (da scrivere).
+- **Norme chiuse + adattatore PEC (9/11, rapporto 0.3 § 3ter):** proroga festivi (art. 2963 c.c., 155 c.p.c., 52 c.p.a. [V]; per L. 241 principio giurisprudenziale), 4 ottobre festivo dal 1/1/2026 (L. 151/2025, GU 236/2025 [V]), art. 116 c.p.a. 30 gg [V]: 9 testi in `prove-normativa/` + SHA256SUMS + archivia.py. `stati.py` 0.2 (`termine_tar`, 19 test). `tools/accesso_civico/pec.py` 0.1 (solo stdlib, **secca di default**, reale solo con `--reale` + `PEC_REALE=1`, credenziali da ambiente): `invia` (solo «approvata», allegato `<id>.pdf.p7m`/`.pdf` obbligatorio, tetto giornaliero e intervallo in `parametri.yaml` `pec`), `leggi` (IMAP sola lettura; ricevute X-Ricevuta/daticert.xml -> eventi consegna/mancata-consegna; risposte enti -> coda da-esaminare, mai esito automatico; .eml archiviati con sha256). 8 test su .eml a mano in `tests/dati/pec/`. Firma S/MIME delle ricevute non verificata.
+- **NESSUN INVIO.** Decisioni per Fabio nel § 4 del rapporto (tetto per richiesta, cadenza ondate, ondata 0, Froide o registro nostro, limiti casella PEC).
+- **RPCT e destinatari (9/11, in corso sul server):** `tools/accesso_civico/rpct_destinatari.py 2026-11-09` (riusa at_cig/piattaforme_cig/visibilita_pa; ripartibile da `lavoro/accesso-civico-rpct/enti.jsonl`, stato in `lavoro/accesso-civico-rpct/STATO.md`, ~9-10 h). Uscita `esiti/2026-11-09/accesso-civico/destinatari.csv` con fonte/sha256/attendibilità A-B-C per campo. Primi 100: accesso civico 35, recapito 25, blocchi 24 (R72). Senza PEC: 338/775 risolti via CF unità IndicePA (B), 2 per nome (C). Ripresa: comando in STATO.md.
+
+## #67 BDAP NELL IMBUTO — giro 0.2 fatto 9/11/2026 (pagina v0.2)
+- **Verifiche nuove** [V]: `tools/verifiche/bdap_cig_ministeri_cf.py` (SA→ministero per CF IndicePA, quota annua, Sogei) e `tools/verifiche/siope_bdap_vs_diretto.py 2024|2025` (#30); `bdap_ict_stato.py` 0.2 con PG 2019-2024 (archiviati con archivia.py). Esiti `esiti/2026-11-09/bdap/` e `esiti/2026-11-09/siope/`.
+- **Per CF:** CIG ICT ministeriali 10.758 → 23.644 (5,0 → 8,2 mld 2020-26). **Giustizia** 2024 quota CIG attivi/pagato **0,96** (era 0,03: artefatto del nome); **MEF 0,25** (97 vs 388 M€), resta il solo buco (~0,3 mld/anno).
+- **Sogei:** CIG in-house con SA MEF ~26 M€/anno [stima] (DF 77 M€ triennio, Giustizia tributaria 47); agenzie fiscali 981/381/298 M€ (fuori dai gestionali MEF); Sogei come SA ~0,69 mld di quota 2024 (non attribuibile, doppio conteggio). R71.
+- **Durata ANAC** vuota nel 90 % dei CIG dal 2024 (R69). **Seconda via PG** 492/740/675/452/1.007/979 M€ 2019-24, discontinuità 2023 (MEF 18→297).
+- **#30 SIOPE CHIUSO** (giro 0.3, 9/11): BDAP vs diretto su 20 regioni 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2, abbinamento a 3 livelli, 2025: 11.362/11.432 enti). **Difetto AgID riprodotto** [V]: 2025 Lombardia + FVG fermi a marzo = 1.717 comuni (BDAP 19,5 vs 92,7 mld Lombardia; ICT −412 M€), 84 comuni di Trento assenti; risorse caricate 6/3/2026, ancora così. 2023/2024 completi; ICT uguali 100 % / 99,5 % (2025 senza LOM/FVG 99,8 %). R70, **R75**.
+- **Rendiconto #66:** sezione § 4.12 pronta in `report/imbuto/sezione-4.12-bdap-fase2.md` (non inserita nel rendiconto).
+- **Prossimi:** codice IPA dell'Università (manca `m_ur`); corrispettivi Sogei per committente (fonte da trovare, R65/R71).
+
+## #67 BDAP NELL IMBUTO — punto di ripresa giro 0.1, 9/11/2026
+- **Pagina** `/progetto/bdap/` (v0.1): famiglie, campi, difetti (R61, R63-R65), cosa usiamo e cosa no. Ripresa: `lavoro/bdap-imbuto/STATO.md`.
+- **Verifica** `tools/verifiche/bdap_ict_stato.py` -> `esiti/2026-11-09/bdap/` [V]: pagato ICT Stato per gestionali ICT 987 / 1.199 / 1.141 / 1.286 M€ (2022-2025); seconda via CE3 rendiconto PG 2024: 415 PG, 979 M€ (scarto 14 %). Regola sul nome: rumorosa (7/20 acquisti ICT veri), solo per trovare capitoli.
+- **Copertura CIG/pagato 2024** (indicatore, non percentuale): MEF 0,17, Giustizia 0,03, Salute 0,07, Lavoro 0; Interno 2,0, Difesa 3,5. Imbuto cieco su in-house Sogei e stazioni appaltanti non riconosciute (criticità 9 di imbuto.md).
+- **Sanità:** CE SSN 2023 BA1620 servizi di assistenza informatica 604 M€ = denominatore minimo. **SIOPE via BDAP:** stessa base per ente + anagrafica; importi da confrontare (#30).
+- **Proposta per Fabio:** BDAP entra come denominatore/controvalidazione (non come strato): riga annuale «pagato ICT per ministero» accanto all imbuto; nessuna modifica a imbuto.py.
+
+## #50 P15: NORMA E ANOMALIA DEI PADRI «CONTRATTO D'APPALTO» — 9/11/2026
+- **Norma:** scheda PCP AD4 (adesione AQ/convenzione) con «CIG accordo quadro» OBBLIGATORIO (copia secondaria schede-anac.pdf sha256 d0712b89…; manca l'originale ANAC); comunicato del Presidente 5/6/2024 (CIG derivato per ogni contratto applicativo); adesioni con bando entro il 31/12/2023 restano su SIMOG.
+- **Anomalia spiegata** (`tools/verifiche/cig_aq_padre_appalto.py`, `esiti/2026-11-09/cig-aq/padre-appalto.json`): 169.705 derivati 2025 con padre «contratto d'appalto» = convenzioni/AQ (Consip 44.105, ARIA 39.152, Sicilia 21.107; padre aperta/ristretta, SDA 8); dal 2024 «CONVENZIONE» sparisce dall'open data (22.970 -> 0) e STRUMENTO_SVOLGIMENTO è vuoto al 98,7 %. P15 aggiornata (norma_9_11, anomalia_padre_appalto_9_11), **R81** nuova. P15 resta interna: mancano l'originale ANAC delle schede e il campione dei 3.944 vuoti 2025.
+- **Chiusura (9/11, seconda parte):** originali ANAC archiviati: comunicato 5/6/2024 (anticorruzione.it, sha256 bd47852c…) e modello dati AD4 su github.com/anticorruzione/npa (cig in required ma solo type: string). Campione `tools/verifiche/cig_aq_vuoti_campione.py` (`esiti/2026-11-09/cig-aq/vuoti-2025-campione.*`): i 3.950 vuoti 2025 sono tutti CIG PCP serie B, nessuno SIMOG; su 30: 12 adesioni esplicite, 13 probabili, 5 non determinabili. **P15 pronto_per_anac: true** (nel merito; formulazione e invio solo su decisione di Fabio, nessun invio fatto). R81 aggiornata.
+
+## #43/#45 INFRASTRUTTURA SOTTOSTANTE MISURA 1.2 — v0.3, integrata in obiettivo-6 § 3.3 (v0.9), 9/11/2026
+- Verifiche `tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` (v0.3) e `tools/verifiche/saas_infra_fornitori.py` (DNS/AS) -> `esiti/2026-11-09/infrastruttura-sottostante/`. Tabelle `config/saas_infrastruttura.yaml` v0.3, `config/saas_host.yaml`, `psn-ppdf.csv` (9 enti sanitari, 6 regioni; colonna conta=1 = un ente; ARES come totale).
+- PSN [V]: Libro PSN 2025 SPC+Managed 5,4 % ricavi; PPdF: 23,3 % canoni ASL per produttore/gestione (Oracle C@C nei DC PSN), 7,4 % per localizzazione (solo Azure AIC3 Piemonte).
+- SaaS: prove per 122,9/150,2 M€; AWS Datamanagement (A), Azure Deda Next (A), AWS Parsec/Almaviva (B), Maggioli misto (12/33 varianti ACN su hyperscaler; atti comunali: 1 Lepida, 3 non indicati). Quota media 34,3 % ai 83 M€ senza prove.
+- Misura 1.2 terzo asse: produttore/gestione 6,3 / 30,6 / 62,2 %; localizzazione 3,0 / 21,5 / 51,0 %. R78.
+- archivia.py corretto (--url da solo; HTML legittime), test `tests/test_archivia.py`.
+- Prossimo: PPdF PSN di Veneto/Lombardia/Puglia/Toscana (AULSS 9 non scaricabile, Puglia 404); scelta public/private dei Comuni Maggioli (serve offerta o asseverazione PA Digitale 2026); ASL VCO non archiviabile (ConnectTimeout).
+
+## #43 PNRR 1.2 PER PRODOTTO — punto di ripresa 9/11/2026 (rendiconto obiettivo 6 v0.6, § 3.1)
+
+- **Fatto:** `tools/verifiche/pnrr12_prodotto.py --data 2026-11-09` → `esiti/2026-11-09/pnrr12/` (json, dettaglio per CIG, campione S2). Nessun LLM.
+- **Universo:** 20.855 CUP 1.2, 1.263,4 M€ (Comuni 10.122/920,3; ASL 225/195,8; altri 102/90,5; scuole 10.406/56,8); 11.566 CUP con CIG (55,5 %); 17.973 CIG, 12.501 contati per 818,9 M€.
+- **Big tech USA:** 13,6 M€ (1,7 %), 73 CIG (0,6 %); con il residuo alla stessa quota circa 2,1 %; caso peggiore 21,5 % (25,0 % con S5). IT prodotto (S1 IT + S2 SaaS qualificato ACN) 558,8 M€ (68,2 %); IT fornitore (S3+S4) 55,7 M€; fornitore extra-UE senza marchio 28,5 M€; ignoto 162,3 M€ (19,8 %, 7.672 CIG senza aggiudicatario).
+- **Precisione:** S2 abbinamento nome 60/60; S4 (fornitore nel testo) 86/89 sulla metà prova. Precisione per CIG della scheda ACN comprata NON misurata.
+- **Nuovo ingresso:** CSV ACN delle schede qualificate (`archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv`, 2.342 schede). R73 (infrastruttura sotto i SaaS), R74 (servizi migrati e CIG senza aggiudicatario).
+- **v0.7 (§ 3.2):** S6 NON riducibile con le fonti archiviate: OCDS bulk (`tools/verifiche/pnrr12_ocds.py` → `lavoro/pnrr12/ocds-1.2.jsonl`) ha 3.445 CIG S6 ma senza award; partecipanti 5; L3/L4 0 aggiudicatari. S6 = affidamenti diretti 2023 dei Comuni (mediana 6.100 €). Imputazione per tipologia/anno: big tech 2,0 %. OCDS vs ANAC 92,4 % (1.269/1.374). Scheda ACN nell'oggetto: 84 CIG, 2,2 M€, 40/40 a campione. Pilota infrastruttura `tools/verifiche/saas_infra_pilota.py`: 4 domini su 10 su hyperscaler USA (DigitalPA e portaletrasparenza.net Oracle, Dedagroup Azure, traspare.com AWS); Maggioli (37,9 M€ in 1.2) su AS proprio IT; evidenza aggiunta a R73.
+- **Prossimo (da decidere con Fabio):** pilota infrastruttura esteso ai primi 30 fornitori S2 (host per ente + pagine sub-processor archiviate); S6 solo con atti nuovi o accesso civico.
+
+## #41 RIVENDITORI v4 — 9/11/2026 (sezione a parte, da integrare nel rendiconto obiettivo 6)
+- **Verifica** `nice .venv/bin/python tools/verifiche/rivenditori_mappa.py` -> `esiti/2026-11-09/rivenditori/` (mappa-v4.json/csv, cig-rivenditore.csv, campione-precisione.csv); testo in `esiti/2026-11-09/rivenditori/sezione-41.md` (NON ancora nel rendiconto: lo integra chi chiude la versione dopo #43). Cache GLEIF `lavoro/rivenditori/gleif-it.json` (rigenerabile dal mirror).
+- **Numeri [V]:** prodotti extra-UE 2,949 mld; via rivenditore 1,824; con CF italiano 1,797 = **60,9 % del totale, 78,9 % del noto** (lente fornitore = IT a torto); anche col capogruppo resta IT/ignoto 1,658 (56,2 %); CH 124 M (Fastweb->Swisscom, SoftwareOne), UE 11,5 M, extra-UE 3,9 M. 1.375 rivenditori, 6.470 CIG, 2.121 enti.
+- **Fonti nuove:** CF dal nome per i 1.530 CIG senza righe ANAC (405 M extra-UE); TED 0 CIG utili; GLEIF capogruppo su 1,54/1,82 mld; `config/rivenditori_capogruppo.yaml` 6 righe [R]; lotti Consip 48/48 coincidenti; atti #57: 45 CIG, 8 pertinenti.
+- **Precisione** (45 CIG con atto, etichette `report/metodo/rivenditori-v4/etichette-campione.csv`): prodotto giusto 30/39 = 77 % (Wilson 62-87), 88 % in euro; 9 falsi positivi in gare non ICT -> casi di test per #40. R76, R77.
+- **v4.1 (pomeriggio):** `rivenditori_mappa.py v4.1` riclassifica con le regole correnti. 9 falsi positivi -> casi di test (76/76); correzioni via 2 «2746» e esclusioni (Azure S DR, hardware rete PSN, affiancamento); campioni a cieco invariati prima/dopo. Extra-UE 3,065 mld, CF IT 1,884 = **61,5 % / 79,3 % del noto**. Campione casuale top-20 (60 CIG, seme 20261109): **58/60 = 96,7 %** (Wilson 88,6-99,1), 76 % in euro (CRUI 16 M€ Cisco/IBM multi-lotto). **«IMPRESA INESISTENTE» 02102821002 = Italware** (VIES + 398/473 padri AQ Italware): unita al CF 08619670584, 74,5 M€. Eurolink e Arslogica: P.IVA valide (VIES), nessun LEI, capogruppo non trovato. Testo in `sezione-41.md` § 2bis.
+- **v4.2 + rendiconto 0.8 (sera):** regole multi-lotto (`RX_MULTILOTTO` in `marchio()`), prodotti di terzi (Office365 Protection), formazione AWS non esclude se compra servizi cloud; 81/81 casi; cieco invariato; top-20 2 errori tolti, 0 giusti persi (`tools/verifiche/lente_top20.py`). Mappa v4.2: extra-UE 3,024 mld, CF IT 1,844 = **61,0 % / 78,9 % del noto**, 57,2 % col capogruppo; Italware 2° rivenditore (74,5 M€). R56 aggiornata. § 2 di `obiettivo-6.md` integrato (v0.8), docs/ ricostruito.
+- **Prossimo:** atti per i 60 CIG del top-20; capogruppo Eurolink/Arslogica e 6 righe [R] da fonti gratuite; campione a cieco nuovo per le regole del 9/11.
+- **#40 quarto campione a cieco (9/11, sera):** regole del 9/11 misurate su 150 CIG nuovi (`tools/verifiche/lente_cieco4_campione.py` + `lente_cieco4.py`, `report/metodo/lente-cieco-4/`, etichette committate prima del confronto in 0818f6fb, sha256 23738e20). Big tech P **94/102 = 92,2 %** (Wilson 85,3-96,0), 99,0 % in euro; R **94/95 = 98,9 %**. Per strato: rivenditore P 88 %, diretto 96 %, multilotto 2/2 (solo 7 CIG nello strato), N 0 big tech mancati su 43. 8 FP tutti «marchio senza prodotto» (formazione/supporto Microsoft e Google 4, prodotti di terzi per M365 Veeam/Commvault 2, connettività verso OCI 1, IaaS per ambienti VMware 1), 2 mancati (Adobe lotto 3, PEC Aruba). Regole NON corrette: casi da trattare in `esiti/2026-11-09/lente-cieco-4/errori.csv`. metodo-cloud-provider.md aggiornato (docs/ da ricostruire).
+- **#40 regole v4.3 (9/11, sera):** corrette le 5 classi del cieco 4 in `config/marchi_cloud.yaml` (formazione/supporto Microsoft e Google salvo acquisto, prodotti di terzi per M365, connettività verso un cloud, «ambienti VMware», licenze Adobe); 101/101 casi. Prima/dopo (`tools/verifiche/regole_v43_confronto.py`, `esiti/2026-11-09/regole-v4.3/`): cieco 4 big tech 94/8/1 -> 95/0/0, ciechi 2-3 e top-20 invariati, cieco 1 64/0/3 (2 corsi: cambio di criterio, non regressione). **Cieco 4 ora campione di sviluppo**: serve un quinto cieco. Mappa v4.3: +427 Adobe, −87 Microsoft, −17 Google, −7 Oracle; CF IT 1,863 mld = 61,2 % dell'extra-UE (79,1 % del noto). obiettivo-6.md NON aggiornato (altro agente).
+
+## #44 #59 #46 #50 #52 PERIMETRO, CPV, OCDS, AQ, IN-HOUSE — punto di ripresa 6/11/2026
+- **#44 perimetro ICT:**
+  - lista bianca in `config/perimetro_cpv.yaml` (13 prefissi, uguale a `CPV_ICT`, la verifica lo controlla);
+  - verifica `tools/verifiche/perimetro_cpv.py` (campioni da `perimetro_cpv_campiona.py`, etichette in `report/cpv/campione-*/`) → `esiti/2026-11-06/cpv/perimetro-cpv.json`;
+  - precisione **83 %** (93 % con i dubbi) su 200; falsi esclusi in S1 **1,0 %** (2/200, 3,5 % con i dubbi);
+  - **proposte per Fabio:** togliere 79342 marketing (0/5 ICT, 5.859 CIG e 567 M€ dal 2024); rivedere 3224; aggiungere `\bsw\b` e `connettivit` a `RX_ICT`. Non applicate.
+- **#44 #59, 9/11/2026 (rapporto CPV 0.3, verifica `tools/verifiche/cpv_rapporto.py` → `esiti/2026-11-09/cpv/rapporto-cpv.json`):**
+  - CPV ICT su oggetto non ICT 6,5 % (46/705; scuole 32 %); oggetto ICT con CPV non ICT 9,2 % (50/543; 2024 20 %); universo dal 2024: 130.678 CIG entrano solo per testo;
+  - cloud: 26/171 (15 %) con codice di servizio erogato; lacune in `config/perimetro_cpv.yaml` (0.3), R79 e R80 nuove;
+  - riclassificazione `dati/classificazioni/cpv-riclassificazione.csv` (611);
+  - effetto 0.3.3 vs 0.3.2 con R53: 385.249 → 383.148 CIG (−5.694 di 79342, +3.593 RX), 502,5 → 506,0 mld dichiarati;
+  - **ATTESA Fabio:** scheda `report/cpv/decisione-3224-videosorveglianza.md` (996/1.218 videosorveglianza, 35,9 M€ senza B139F77033; proposta A sottoclasse in S5);
+  - pagina `sito/content/progetto/perimetro-ict.md` (0.3, registro revisioni); rendiconto bozza `perimetro-cpv.md` 0.3 non annunciato.
+- **#44, decisione di Fabio del 7/11:**
+  - 79342 tolto da CPV_ICT e dal yaml, dopo la review di 177 CIG (3,0 % ICT veri stimati, 0 sopra 1 M€): 5.706 CIG e 539 M€ dal 2024 passano in S1;
+  - 3224 resta in lista: la review dice 79 % videosorveglianza, 2,4 % ICT stretto; una sottoclasse videosorveglianza da decidere. Il CIG B139F77033 ha un importo errato di 4,7 mld;
+  - RX_ICT con sw e connettività (imbuto 0.3.3): 3.593 CIG in più nel residuo S6, di cui G1 29 per 3,8 mld (SPC Connettività, ASI);
+  - prove: tools/verifiche/perimetro_cpv_effetto.py, report/cpv/review-79342-3224/;
+  - **DA FARE a via 6 finita:** rigenerare ict.csv con imbuto 0.3.3 (python tools/analisi/imbuto.py sul server), poi rifare imbuto_strati e perimetro_cpv. Non è stato rigenerato perché la via 6 legge ict.csv.
+- **#59 CPV:**
+  - sui 543 ICT del campione 611: 74 % specifico, 17 % generico, 9 % fuori lista (25 con il segnaposto 99999999);
+  - cloud con codice di servizio erogato: 30 % (contro l'11 % dei non cloud);
+  - base dal 2024: 99999999 o vuoto 8,3 %, codice di gruppo 16,2 %;
+  - ECA SR 28/2023 aperta e archiviata: **il 49,8 % non c'è** (valori mancanti circa 30 %);
+  - Ramboll/BME 2012 trovato: 405 avvisi, 23 % di codici inesatti;
+  - rendiconto bozza `sito/content/rendiconti/perimetro-cpv.md` (non elencato); R21 aggiornata, R60 nuova (segnaposto).
+  - **Prossimo:** uscita di riclassificazione `dati/classificazioni/cpv-riclassificazione.csv`; etichette umane su L e S1; includere `lente-cieco-3` quando sarà versionato.
+- **#46 OCDS release.date** (`tools/verifiche/ocds_release_date.py`, `esiti/2026-11-06/ocds/`, 96 mesi):
+  - le due vie concordano su 4.751.105 date;
+  - conformi solo 2018/01-2019/11; **da 2019/12 zero conformi** (la scheda P04 diceva «fra il 2021 e il 2023»: corretta);
+  - 3.594.570 release senza data. P04 aggiornata con sha256 e metrica.
+- **#50 cig_accordo_quadro** (`tools/verifiche/cig_aq_modalita.py`, `esiti/2026-11-06/cig-aq/`):
+  - con modalità «discendente» il campo è compilato nel 98,6-100 %: mancano 4.130 CIG nel 2024 e 3.946 nel 2025;
+  - il «20 % vuoto» era l'espressione sul testo: precisione 3/60 (5 %), quasi tutti appalti specifici di SDA;
+  - **decisione:** P15 resta interno (esito nella scheda) e R01 è ridimensionata. Se Fabio vuole, il difetto piccolo («discendente senza CIG padre», circa 4.000 l'anno) può diventare una scheda pronta: è verificato su campo strutturato.
+- **#50, terza misura 9/11 (chiusa la verifica)** (`tools/verifiche/cig_aq_tipo.py`, `esiti/2026-11-09/cig-aq/tipo.json`): discendenti con padre esistente 99,9 % nel 2023, **92,4 % 2024, 94,9 % 2025**, 96,8 % 2026 (2025: 3.944 vuoti, 14.267 padri inesistenti, di cui 882 solo minuscoli e 289 smartcig); tipo 2025: Consip 70.238, aggregatori 90.749, consorzi 3.551, altri 173.563; 170.759 derivati 2025 puntano a un padre «contratto d'appalto» (SDA?). Imbuto: 734 M€ su 89,2 mld ICT discendente (0,82 %) non collegabile. P15 resta interno (manca la norma sull'obbligo); R01 aggiornata.
+- **#46 chiuso il 9/11** (misura del 6/11 completa: P04 pronta, metrica I11).
+- **#52 in-house/datacenter** (`tools/verifiche/inhouse_datacenter.py`, `esiti/2026-11-06/inhouse/`), punto aperto:
+  - in-house dal 2024: 943 CIG, 774 M€, 446 enti. La classe è **contaminata da privati** (Accenture 91 M€, HTDI 48, TAI 31, DGS, TIM, Fastweb): va ristretta alle società pubbliche;
+  - SAL su 17 CIG su 943;
+  - infrastruttura propria: hardware 31.677 CIG e 4,5 mld; consulenza su infrastruttura 3.527 e 2,7 mld; software di infrastruttura 663 e 0,8 mld (VMware 651); testo datacenter/CED 10.991 e 3,1 mld (importi del lotto, con i tetti).
+
 ## ANAC (macro-obiettivo §8quater) — punto di ripresa 6/11/2026
 - **Chiusi:** #31 (riconfermato), #32, #33, #18, #16, #47. **Aperti in attesa di Fabio:** #34 documento, #35 presentazione, #36 sito.
 - **Registro (9/11):** 18 problemi, **18 pronti** (P15 pronta il 9/11, commit 137fc230, #50 chiuso; prova ora su `cig_aq_tipo.py`, prima formulazione in `storia`, rif. R81). P17 controvalidato (`tools/verifiche/cf_segnaposto.py`: 1.282 segnaposto CFAVCP-).
@@ -276,6 +282,117 @@ Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le s
 - **In attesa di Fabio:** invio delle 19 istanze e ripresa di acquistinretepa con browser reale (non avviare senza sua decisione).
 - **Da fare:** acquistinretepa con browser reale (su decisione di Fabio) (schede in JS, listini; prima di inviare C1/C3); ripetere e documentare i blocchi AT (R44) prima di ogni rilievo; aggregatori regionali e consorzi via mappa piattaforme #57 (inventario oggi «da verificare»); controvalidare `config/tipi_soggetto.yaml` con l'elenco ANAC dei soggetti aggregatori (la pagina anticorruzione.it/-/soggetti-aggregatori non espone un file scaricabile: cercarlo fra i documenti ANAC); curare aggiudicatari/massimali/durata in `curate.yaml` partendo dai rendiconti; rileggere gli atti PRINCO archiviati per passare da R a V; ricostruire tutto `docs/` per il menu «Convenzioni» (le altre pagine di docs/ hanno modifiche non nostre, non committate).
 
+## #40 #41 #43 #45 #11 #27 #12 #13 #25 #26 #28 #29 OBIETTIVO 6 E MIRROR — punto di ripresa 6/11/2026 (rendiconto 0.5)
+- **Aggiornamento 0.5.1 (6/11, sera):**
+  - **OpenCUP:** il bulk sta su `/portale/web/opencup/accesso-agli-open-data` e `dettaglio-opendata-complessivo`. Archiviati metadati, decodifiche e file CUP PNRR; `OpendataComplessivo.zip` (3,4 GB) in coda con `tools/acquisizione/scarica_ripresa.sh` dopo i file grandi di Consip. La guardia a 45 GB può fermarlo: con circa 50 GB liberi e circa 3 GB di Consip prima, controllare `lavoro/opencup-grande.log`.
+  - **CPT:** 36 file di spesa del catalogo Open CPT archiviati.
+  - **ISTAT COFOG:** coperto da Eurostat.
+  - **Consip:** il server taglia i file sopra circa 350 MB, quindi curl con ripresa e poi `archivia.py --da-file`. `cataloghi2024.json` è archiviato, gli altri 6 sono in corso (`lavoro/consip/grandi.log`).
+  - **BDAP:** la pagina `package_search start=1000` cade sempre (il server chiude dopo 120 s), anche in pagine da 250: da riprovare in orari di poco carico.
+  - **Vincitori TED per l'imbuto (#66):** `esiti/2026-11-06/imbuto/ted-vincitori.csv` (`tools/verifiche/ted_imbuto.py`). 84 CIG con vincitore TED e senza aggiudicatari ANAC; 72 nell'imbuto, di cui 7 in S6 (19 M€) e 55 in S5. Da integrare a cura di chi gestisce l'imbuto: il rendiconto imbuto-dove-siamo non è stato toccato.
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.5.
+- **#40:** tre campioni a cieco (`report/metodo/lente-cieco{,-2,-3}/`; `tools/verifiche/lente_cieco.py CARTELLA`). Misure indipendenti big tech: R 81 % → 89 % → 89 %, P 100 % / 95 % / 100 %. Regole v0.5 in `config/marchi_cloud.yaml`; il terzo campione le misura. La lente testuale è al limite: non aggiungere regole senza un quarto campione.
+- **#41 / #43:** invariati rispetto a 0.4 (rivenditori v3.1; FLAG_PNRR_PNC 90 %; R57, R58).
+- **#11 Consip:** 151 risorse, 94 nuove, 50 invariate, 7 errori (JSON e TTL grandi, connessione interrotta). Nuovo tentativo in coda: `lavoro/consip/riprova.txt` (più BDAP start=1000), parte da solo dopo IndicePA.
+- **#27:** TED v2 di 34 mesi, 5.348 avvisi; TED → CIG 6,6 %; TED come fonte di esiti: 112 righe senza aggiudicatari ANAC, 88 con vincitore e P.IVA TED, 298 M€ (`esiti/2026-11-06/mirror/ted-esiti.csv`). R59.
+- **Coda mirror** (`config/coda-mirror-2026-11.txt`, `tools/acquisizione/coda_mirror.sh`, guardia 45 GB). Archiviati: PA Digitale 2026, SIOPE uscite 2017-2026 e anagrafiche, BDAP (4/5 pagine del catalogo), Eurostat COFOG, GLEIF (LEI2, RR, REPEX), OpenCoesione. IndicePA: 54 risorse in corso (`lavoro/indicepa/mirror.log`).
+- **Da fare:** OpenCUP (URL 404, da ritrovare), CPT e ISTAT (URL), ItaliaDomani (R57). Registrazioni in `config/risorse.yaml`. Disco 52 GB liberi.
+
+## #40 #41 #43 #45 #11 #27 OBIETTIVO 6 — punto di ripresa 6/11/2026 (rendiconto 0.4)
+- **Rendiconto** bozza non elencata `sito/content/rendiconti/obiettivo-6.md` v0.4. Verifiche in `tools/verifiche/` (lente_prodotto, lente_cieco [arg: cartella del campione], rivenditori_esteri, pnrr_bigtech locali; rivenditori_cf, pnrr11_prodotto, pnrr_flag, ted_cig, fts_piva sul server).
+- **#40:** il secondo campione a cieco (`report/metodo/lente-cieco-2/`, 120 CIG S2-S4) misura le regole v0.3: big tech P 56/59 = 95 %, R 56/63 = 89 %. Falsi positivi: backup di M365, collocation AWS, corso AWS. Mancati: Microsoft senza le parole chiave (EA9, CP-PILOT, Windows XP…). Regole nuove NON applicate: andrebbero misurate su un terzo campione.
+- **#41:** v3.1 con RTI ripartiti (1,824 mld), CF italiani 99,9 %.
+- **#43:** FLAG_PNRR_PNC sul 90 % dei CIG 1.2. Dei 1.064 senza flag, 627 nominano il PNRR nell'oggetto → R58. ReGiS 403 → R57.
+- **#11:** Consip in tutti i formati, `lavoro/consip/specchia-tutti.sh` sul server (in corso al commit, circa 90/151, ripartibile, guardia 45 GB): alla fine contare nuovo/invariato in `lavoro/consip/specchia-tutti.log` e aggiornare il rendiconto § 5.
+- **#27:** filtro TED verificato (classification-cpv = tutti i CPV, 143 contro 132 del solo principale sul marzo 2024). TED v2 (`lavoro/ted-v2/`): 34 mesi, 5.348 avvisi (la v0.3 diceva 33/5.254: corretto). TED → CIG 355/5.348 (6,6 %), P.IVA coincidente 157/177 → R59. FTS: 90 aggiudicatari cloud su 1.018 ricevono fondi UE diretti.
+- **Prossimo:** terzo campione a cieco per esclusioni e regole Microsoft; chiusura del mirror Consip; TED come fonte di esiti per i CIG ANAC senza aggiudicazione; catalogo ACN (Fabio).
+
+## #17 #9 MIRROR PUBBLICO ANAC — punto di ripresa 6/11/2026 (indicazione di Fabio del 7/11)
+- **Stato [V]:** ANAC 1.796/1.800 risorse del catalogo con sha256 (128,7 GB; OCDS 96 file 73,8 GB); le 4 mancanti sono 404 alla fonte (P10). Totale mirror fonti di risorse.yaml 2.024 risorse, 134,1 GB. Nessuna risorsa ha ancora cambiato sha256 dal 26/10. 13 file > 2 GiB (max OCDS 2025/10, 5,25 GB). Server: 51 GB liberi.
+- **Indice:** `tools/indice_mirror.py` (manifest → `report/mirror/indice.{json,csv}`, `sintesi.json`; sul server con `ARCHIVIO_ROOT`), `tools/pagine_mirror.py` (rigenera le tabelle fra i marcatori GEN e copia in `sito/static/dati/mirror/`; serve PyYAML → .venv del server).
+- **Bozze non elencate:** `/progetto/mirror-pubblico/` (requisiti, 7 opzioni di hosting, proposta), `/progetto/perche-un-mirror/` (evidenze [V]/[R]; Consip ordini-mepa 2022 e 2023 → 404 il 6/11), `/progetto/usi-dei-dataset/` (dati in `config/usi-dataset.yaml`, 25 schede × 5 progetti).
+- **DECISIONE A FABIO (#17):** hosting. Proposta: bucket S3-compatibile UE (Hetzner/Scaleway, ~5-10 €/mese [R]) con percorsi originali + frontale nginx su mxmap.it per le risposte CKAN statiche, dominio mirror.mxmap.it; Zenodo per snapshot annuali con DOI; GitHub solo indice/manifest. Nessun GB caricato in pubblico.
+- **Prossimi passi:** archiviare con sha256 la prova Consip 404 nella sonda; confronto sha256 fra versioni come metrica quando ci saranno cambi; SIOPE «last» e IndicePA: verificare la sovrascrittura [R].
+
+## MIRROR RIPRESI il 9/11/2026 (spazio liberato da Fabio: 398 GB liberi): `coda_mirror.sh config/coda-mirror-2026-11.txt` rilanciato, log `lavoro/coda-mirror-ripresa-20261109.log`
+
+## (storico) MIRROR CONGELATI il 7/11/2026 (Fabio): punto di ripresa
+Si fermano per il disco: 44 GB liberi, sotto la soglia di 45 della guardia. Le scelte sullo storage (object storage UE, pulizia degli altri progetti) spettano a Fabio. Tutto il resto del lavoro va avanti.
+- **ANAC:** completo, 1.796 risorse su 1.800 (le altre 4 rispondono 404 alla fonte). Il mirror quotidiano (cron) resta attivo, ma senza spazio la guardia lo ferma.
+- **Consip (#11):** completo, 151 risorse in tutti i formati. I 7 file grandi sono archiviati con scaricamento a riprese (`tools/acquisizione/scarica_ripresa.sh`, log `lavoro/consip/grandi.log`).
+- **OpenCUP (#26):** completo, compreso `OpendataComplessivo.zip` da 3,4 GB (`lavoro/opencup-grande.log`).
+- **TED (#27):** 34 mesi, da 2024-01 a 2026-10. FTS dal 2007 al 2025.
+- **SIOPE (#12), IndicePA e PA Digitale (#13), GLEIF (#28), OpenCoesione (#26), CPT ed Eurostat COFOG (#29):** archiviati.
+- **Da riprendere:**
+  1. BDAP (#25): circa 750 righe di metadati CKAN, `package_search?rows=1000&start=1000`, che cadono sempre. È l'ultima riga di `lavoro/consip/riprova.txt` e va riprovata in orari di poco carico.
+  2. Italia Domani/ReGiS (403, R57) e catalogo ACN (403 Akamai, R55): bloccati, decide Fabio.
+  3. Gli scaricamenti delle prossime annualità.
+- **Come riprendere:** liberare spazio, cioè avere almeno 45 GB liberi, poi `bash tools/acquisizione/coda_mirror.sh config/coda-mirror-2026-11.txt` (ripartibile: `archivia.py` salta ciò che è invariato) e `tools/archivia.py --lista lavoro/consip/riprova.txt`.
+- **Scaricamenti propedeutici all'analisi** (atti, documenti dietro i link PVL, pagine AT): continuano, piccoli e con una guardia propria a 40 GB.
+
+## Aggiornamento 4/11/2026 — Monitor trasparenza 1.1.0-beta (#61) — verso la beta
+
+**Aggiornamento 4/11, 15:00 UTC — beta completa pubblicata.** Fase 2 finita sul server (giro 2 di conferma su 3.459 enti, 12:52 UTC); pacchetto desktop b importato (3.213 tentativi); export finale con `--forza`. Numeri: 30.701 enti; violazioni art. 9: 5.546 (robots 4.592, WAF/anti-bot 759, noindex 195); accessibili 14.327; accesso negato a tutti 439; blocchi confermati in due giri 1.786. Il cron `riprendi-fase2.sh` non ha più nulla da fare (fase 2 finita) e si può togliere. Open data ~150 MB (prove 73 MB): da spostare in un repository dati per la stabile.
+
+**Stato esatto (4/11, 11:30 UTC):**
+- FATTO: giro 2026-11 (sonda 1.0.0) su 30.701 enti; diagnosi estesa giro 1 su 6.543 dubbi (max 25 per host); caratterizzazione di 300 enti; controllo falsi positivi (53 enti); **beta pubblicata** (commit 3e989b9: open data in `sito/static/dati/trasparenza/`, pagina `/progetto/trasparenza-accessibilita/`).
+- IN CORSO sul server: `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) sta facendo la **diagnosi giro 2** (conferma), poi farà da solo `esporta --run 2026-11 --forza` e scriverà «fase 2 finita».
+- IN CORSO sul portatile: diagnosi desktop dei WAF restanti (`lavoro/trasparenza-desktop-waf-b.log`, pacchetto `lavoro/trasparenza-fp/pacchetto-waf-b`).
+- PROSSIMO PASSO: a «fase 2 finita» → (facoltativo) `tar czf` del pacchetto desktop, copia sul server, `TRASPARENZA_RADICE=$PWD .venv/bin/python lavoro/trasparenza/fase2-codice/censimento.py importa --pacchetto <dir>` ed `esporta --run 2026-11 --forza`; poi dal portatile: `rm -rf sito/static/dati/trasparenza; ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tar czf - sito/static/dati/trasparenza esiti/2026-11-03/trasparenza' | tar xzf -`, `hugo --source sito --minify --cleanDestinationDir` (con il server di anteprima Hugo fermo), commit solo di `tools/trasparenza sito/content/progetto/trasparenza-accessibilita.md esiti/2026-11-03/trasparenza sito/static/dati/trasparenza docs/dati/trasparenza docs/progetto/trasparenza-accessibilita`, push.
+- RIPRESA se il job sul server si ferma: rilanciare `nohup lavoro/trasparenza/fase2-dopo-giro.sh >> log/trasparenza-fase2-2026-11.log 2>&1 &` (ripartibile: salta ciò che è nel database, il sorvegliante esce con codice 3 sugli enti bloccati e il ciclo riparte); un cron ogni 30 minuti lo rilancia se non gira e non è finito (`lavoro/trasparenza/riprendi-fase2.sh`).
+- Allineamento del server a origin: NON fatto. Il rebase si ferma su un conflitto in `esiti/pvl-link-cig/2026-11-04/verifica-link.csv` (file della sessione #57: commit locale del server contro origin). Va risolto da chi segue #57; i file PSN/PVL sono salvati in `lavoro/backup-psn/<data>/`.
+- Da fare per la stabile: repository dati dedicato (l'open data pesa ~100 MB a giro, raddoppiato in docs/), desktop su tutti i dubbi, caratterizzazione su tutti, PEC da preparare dopo il giro 2 (`pec-prepara --giro 2026-11-03`).
+- Codice 1.1.0-beta in `tools/trasparenza/` (commit 1eca969 e successivi): identità oneste, tassonomia, due giri di conferma, curl, origine desktop, schede, cambiamenti, catalogo con test, aggancio PVL (#57: `lavoro/pvl/*.csv`, non nostri).
+- Sul server il giro 2026-11 gira ancora con il codice 1.0.0 (`tools/trasparenza/giro.sh`, non toccare). La fase 2 gira da una copia: `lavoro/trasparenza/fase2-codice/` con `TRASPARENZA_RADICE=$PWD`, stesso database.
+  - diagnosi giro 1 sui dubbi già sondati: `log/trasparenza-diagnosi-2026-11-g1a.log` (`--solo-host-completati`); da rilanciare a sonda finita per gli host mancanti, poi giro 2 a ≥ 60 min (`--giro-conferma 2`), poi `caratterizza --campione 300`, poi `esporta --run 2026-11 --forza` (correzione documentata: aggiunta della diagnostica 1.1.0-beta sul giro pubblicato dalla 1.0.0).
+  - desktop: `lavoro/trasparenza-desktop/` sul portatile (pilota2 in corso); per il giro: `elenco` sul server → `diagnosi --origine desktop` sul portatile → rsync del pacchetto → `importa`.
+- A giro finito: backup `tools/psn_*.py` in `lavoro/backup-psn/`, spostarli, `git pull --rebase` (mai stash -u/clean); `lavoro/trasparenza/fase2-codice/` allora non serve più.
+- Controllo dei falsi positivi FATTO (53 enti dal portatile): `report/metodo/trasparenza-falsi-positivi.md` (robots 15/15, noindex 8/8, WAF 13/30 → regole corrette).
+- **Catena automatica sul server:** `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) aspetta la fine di `giro.sh`, poi diagnosi giro 1 (solo WAF, irraggiungibili, TLS), elenco per il desktop, caratterizzazione di 300 enti, giro 2 di conferma, `esporta --forza`. Se si interrompe: rilanciarlo (è ripartibile).
+- Poi: dal portatile `diagnosi --origine desktop --elenco elenco-2026-11.json` (attenzione: Bitdefender intercetta HTTPS), `importa`, `esporta --forza`; copia dell'open data dal server, build Hugo, commit e push.
+
+## Aggiornamento 3/11/2026 — Monitor «Amministrazione trasparente» (#61)
+
+Modulo autonomo `tools/trasparenza/` (README, METODO 1.0.0, schema, test, EUPL-1.2). Fonte degli URL: registro ANAC L.190 art. 1 c. 32 (API `dati.anticorruzione.it/rest/legge190`, anni 2015-2023) + IndicePA (CKAN JSON) + anagrafica ANAC; 30.701 enti, 27.045 con URL L.190.
+
+- **Giro completo 2026-11 in corso sul server** (lanciato 3/11 20:44 UTC): `tools/trasparenza/giro.sh 2026-11` → fonti, sonda (24 host in parallelo, 1 richiesta/host ogni 5 s), browser (Chromium headless sui bloccati), esporta. Log: `log/trasparenza-giro-2026-11.log`. Stima 8-12 h, collo di bottiglia avcp.trasparenza-pa.net (2.834 enti in serie).
+- **Ripresa:** se si interrompe, rilanciare `nohup tools/trasparenza/giro.sh 2026-11 > log/trasparenza-giro-2026-11.log 2>&1 &`: riprende dagli enti mancanti (stato in `lavoro/trasparenza/stato.sqlite`).
+- **Dopo il giro:** (il clone sul server è indietro e ha file non tracciati di altre sessioni — tools/psn_*.py — quindi non fare git pull lì finché non sono sistemati; pubblicare dal portatile: `rsync -a mxmap.it@51.158.36.151:analisi-spesa-ict/sito/static/dati/trasparenza/ sito/static/dati/trasparenza/` e `rsync -a ...:analisi-spesa-ict/esiti/<data>/trasparenza/ esiti/<data>/trasparenza/`). l'open data finisce in `sito/static/dati/trasparenza/giri/<data>/` + `ultimo/`, `indice.json`, `storico.json`, `invii.json`; aggregati in `esiti/<data>/trasparenza/`. Poi `hugo --source sito --minify --cleanDestinationDir`, commit, push. La pagina `/progetto/trasparenza-accessibilita/` legge i JSON (senza dati mostra «primo giro in corso»).
+- **Pilota:** `lavoro/trasparenza/pilota/pilota2-2026-11-03/` (200 enti: 99 accessibili, 18 robots, 4 WAF, 29 sezione non individuata, 25 irraggiungibili, 22 URL non validi, 3 TLS).
+- **PEC:** `censimento.py pec-prepara --run 2026-11 --giro <data>` → `lavoro/trasparenza/pec/<giro>/<cf>/`; invii registrati con `pec-registra` in `dati/trasparenza/invii.csv`. **Nessun invio fatto; li fa Fabio.**
+- **Cron proposto (da attivare):** mensile, `0 1 2 * * cd ~/analisi-spesa-ict && tools/trasparenza/giro.sh >> log/trasparenza-giro-$(date +\%Y-\%m).log 2>&1`.
+- **Fase 2 sospesa (3/11, priorità a #57):** requisiti futuri di Fabio elencati in `tools/trasparenza/README.md` §«Requisiti futuri» (progetto e repo autonomi con GitHub Pages, giri mensili o quotidiani con log dei cambiamenti, resilienza con backoff e conferma dei blocchi in momenti diversi, tassonomia dei blocchi per identità del client, due origini server/desktop, diagnostica estesa con log grezzi, doppio accesso ANAC/home, test di ricerca CIG, catalogo delle problematiche, mirror opzionale). Codice sperimentale già scritto (`diagnosi.py`, comandi `diagnosi/elenco/importa/caratterizza/indice-cig`), non usato nel giro. Lasciati in esecuzione sul pilota: diagnosi server (`log/trasparenza-diagnosi-pilota2.log`, copia del codice in `lavoro/trasparenza/fase2-codice/`), indice CIG (`log/trasparenza-indice-cig.log`), diagnosi desktop sul portatile (`lavoro/trasparenza-desktop.log`, pacchetto `lavoro/trasparenza-desktop/pacchetto-pilota2` da importare con `importa`).
+- **Allineamento del server a origin solo a giro finito:** prima copiare `tools/psn_configuratore.py` e `tools/psn_documenti.py` in `lavoro/backup-psn/`, poi spostarli e `git pull --rebase`; mai `git stash -u` né `git clean`.
+
+# RIFERIMENTI
+
+## Dove sta cosa
+
+| Cosa | Dove |
+|---|---|
+| Repository | `mxmap-it/analisi-spesa-ict`, pubblico |
+| Sito | https://analisi-spesa-ict.mxmap.it/ — sorgenti Hugo in `sito/`, build in `docs/`: `hugo --source sito --minify --cleanDestinationDir` |
+| Server | `mxmap.it@51.158.36.151`, cartella `~/analisi-spesa-ict` (clone del repo, push con la deploy key `~/.ssh/id_ed25519_spesaict`, alias `github-spesaict`) |
+| Archivio | `~/analisi-spesa-ict/archivio/` sul server, fuori da git: `blobs/` per contenuto, `mirror/` con i percorsi originali, `manifest.jsonl` |
+| Clone locale | `C:\Users\admin\Claude\analisi-spesa-ict` |
+| Decisioni | [DECISIONI.md](DECISIONI.md) |
+| Analisi tecnica | [sito/content/progetto/analisi-tecnica.md](sito/content/progetto/analisi-tecnica.md) |
+| Ticket | https://github.com/mxmap-it/analisi-spesa-ict/issues |
+
+## Vincoli da ricordare
+
+- **ANAC respinge gli user-agent non-browser** rispondendo 200 con una pagina HTML: `archivia.py`
+  lo riconosce e non lo salva come file. Il blocco degli IP cloud è riferito da altri, non verificato.
+- **Il catalogo dichiara dimensioni 4,1 volte quelle vere**: per lo spazio contano gli `HEAD`.
+- **I delta ANAC spariscono** senza regola; il file annuale dell'anno in corso non esiste.
+- **Consip cancella oltre i tre anni**: il 2023 è già perso.
+- **BDAP** in manutenzione straordinaria, segnalata con HTTP 200.
+- Importi **SIOPE** in centesimi e mensili puri; join per codice fiscale.
+- Sul server **non usare `/tmp`** per file di lavoro: è condiviso con altri progetti. E un `pkill -f`
+  con un pattern presente nel proprio comando uccide la propria sessione: usare `tools/avvia.sh`.
+- Distinguere sempre **verificato da noi** e **riferito da altri**.
+
+# STORICO (sezioni superate fino al 4/11/2026, conservate integralmente)
 
 ## PUNTO DI RIPRESA 4/11/2026 (sessione principale; scritto prima di un possibile stop per i limiti dei token)
 Per riprendere: leggi questa sezione, poi i ticket citati. Nulla gira in locale; i job lunghi sono sul server.
@@ -311,40 +428,6 @@ Per riprendere: leggi questa sezione, poi i ticket citati. Nulla gira in locale;
 - **Convenzioni (#62):** database delle principali convenzioni, documenti mancanti tramite accesso civico, una mini-sezione con l'analisi di ogni documento.
   - Prima convenzione: Consip **PRINCO** ID 2928 (CIG BAFCF54A81, 105 M€). Listini: Microsoft/Postel, Google/TIM, Open Source/Converge.
   - Tetto di ~62 M€ per marchio; requisito ACN QC1; trasferimenti fuori SEE ammessi.
-
-## Aggiornamento 4/11/2026 — Monitor trasparenza 1.1.0-beta (#61) — verso la beta
-
-**Aggiornamento 4/11, 15:00 UTC — beta completa pubblicata.** Fase 2 finita sul server (giro 2 di conferma su 3.459 enti, 12:52 UTC); pacchetto desktop b importato (3.213 tentativi); export finale con `--forza`. Numeri: 30.701 enti; violazioni art. 9: 5.546 (robots 4.592, WAF/anti-bot 759, noindex 195); accessibili 14.327; accesso negato a tutti 439; blocchi confermati in due giri 1.786. Il cron `riprendi-fase2.sh` non ha più nulla da fare (fase 2 finita) e si può togliere. Open data ~150 MB (prove 73 MB): da spostare in un repository dati per la stabile.
-
-**Stato esatto (4/11, 11:30 UTC):**
-- FATTO: giro 2026-11 (sonda 1.0.0) su 30.701 enti; diagnosi estesa giro 1 su 6.543 dubbi (max 25 per host); caratterizzazione di 300 enti; controllo falsi positivi (53 enti); **beta pubblicata** (commit 3e989b9: open data in `sito/static/dati/trasparenza/`, pagina `/progetto/trasparenza-accessibilita/`).
-- IN CORSO sul server: `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) sta facendo la **diagnosi giro 2** (conferma), poi farà da solo `esporta --run 2026-11 --forza` e scriverà «fase 2 finita».
-- IN CORSO sul portatile: diagnosi desktop dei WAF restanti (`lavoro/trasparenza-desktop-waf-b.log`, pacchetto `lavoro/trasparenza-fp/pacchetto-waf-b`).
-- PROSSIMO PASSO: a «fase 2 finita» → (facoltativo) `tar czf` del pacchetto desktop, copia sul server, `TRASPARENZA_RADICE=$PWD .venv/bin/python lavoro/trasparenza/fase2-codice/censimento.py importa --pacchetto <dir>` ed `esporta --run 2026-11 --forza`; poi dal portatile: `rm -rf sito/static/dati/trasparenza; ssh mxmap.it@51.158.36.151 'cd ~/analisi-spesa-ict && tar czf - sito/static/dati/trasparenza esiti/2026-11-03/trasparenza' | tar xzf -`, `hugo --source sito --minify --cleanDestinationDir` (con il server di anteprima Hugo fermo), commit solo di `tools/trasparenza sito/content/progetto/trasparenza-accessibilita.md esiti/2026-11-03/trasparenza sito/static/dati/trasparenza docs/dati/trasparenza docs/progetto/trasparenza-accessibilita`, push.
-- RIPRESA se il job sul server si ferma: rilanciare `nohup lavoro/trasparenza/fase2-dopo-giro.sh >> log/trasparenza-fase2-2026-11.log 2>&1 &` (ripartibile: salta ciò che è nel database, il sorvegliante esce con codice 3 sugli enti bloccati e il ciclo riparte); un cron ogni 30 minuti lo rilancia se non gira e non è finito (`lavoro/trasparenza/riprendi-fase2.sh`).
-- Allineamento del server a origin: NON fatto. Il rebase si ferma su un conflitto in `esiti/pvl-link-cig/2026-11-04/verifica-link.csv` (file della sessione #57: commit locale del server contro origin). Va risolto da chi segue #57; i file PSN/PVL sono salvati in `lavoro/backup-psn/<data>/`.
-- Da fare per la stabile: repository dati dedicato (l'open data pesa ~100 MB a giro, raddoppiato in docs/), desktop su tutti i dubbi, caratterizzazione su tutti, PEC da preparare dopo il giro 2 (`pec-prepara --giro 2026-11-03`).
-- Codice 1.1.0-beta in `tools/trasparenza/` (commit 1eca969 e successivi): identità oneste, tassonomia, due giri di conferma, curl, origine desktop, schede, cambiamenti, catalogo con test, aggancio PVL (#57: `lavoro/pvl/*.csv`, non nostri).
-- Sul server il giro 2026-11 gira ancora con il codice 1.0.0 (`tools/trasparenza/giro.sh`, non toccare). La fase 2 gira da una copia: `lavoro/trasparenza/fase2-codice/` con `TRASPARENZA_RADICE=$PWD`, stesso database.
-  - diagnosi giro 1 sui dubbi già sondati: `log/trasparenza-diagnosi-2026-11-g1a.log` (`--solo-host-completati`); da rilanciare a sonda finita per gli host mancanti, poi giro 2 a ≥ 60 min (`--giro-conferma 2`), poi `caratterizza --campione 300`, poi `esporta --run 2026-11 --forza` (correzione documentata: aggiunta della diagnostica 1.1.0-beta sul giro pubblicato dalla 1.0.0).
-  - desktop: `lavoro/trasparenza-desktop/` sul portatile (pilota2 in corso); per il giro: `elenco` sul server → `diagnosi --origine desktop` sul portatile → rsync del pacchetto → `importa`.
-- A giro finito: backup `tools/psn_*.py` in `lavoro/backup-psn/`, spostarli, `git pull --rebase` (mai stash -u/clean); `lavoro/trasparenza/fase2-codice/` allora non serve più.
-- Controllo dei falsi positivi FATTO (53 enti dal portatile): `report/metodo/trasparenza-falsi-positivi.md` (robots 15/15, noindex 8/8, WAF 13/30 → regole corrette).
-- **Catena automatica sul server:** `lavoro/trasparenza/fase2-dopo-giro.sh` (log `log/trasparenza-fase2-2026-11.log`) aspetta la fine di `giro.sh`, poi diagnosi giro 1 (solo WAF, irraggiungibili, TLS), elenco per il desktop, caratterizzazione di 300 enti, giro 2 di conferma, `esporta --forza`. Se si interrompe: rilanciarlo (è ripartibile).
-- Poi: dal portatile `diagnosi --origine desktop --elenco elenco-2026-11.json` (attenzione: Bitdefender intercetta HTTPS), `importa`, `esporta --forza`; copia dell'open data dal server, build Hugo, commit e push.
-
-## Aggiornamento 3/11/2026 — Monitor «Amministrazione trasparente» (#61)
-
-Modulo autonomo `tools/trasparenza/` (README, METODO 1.0.0, schema, test, EUPL-1.2). Fonte degli URL: registro ANAC L.190 art. 1 c. 32 (API `dati.anticorruzione.it/rest/legge190`, anni 2015-2023) + IndicePA (CKAN JSON) + anagrafica ANAC; 30.701 enti, 27.045 con URL L.190.
-
-- **Giro completo 2026-11 in corso sul server** (lanciato 3/11 20:44 UTC): `tools/trasparenza/giro.sh 2026-11` → fonti, sonda (24 host in parallelo, 1 richiesta/host ogni 5 s), browser (Chromium headless sui bloccati), esporta. Log: `log/trasparenza-giro-2026-11.log`. Stima 8-12 h, collo di bottiglia avcp.trasparenza-pa.net (2.834 enti in serie).
-- **Ripresa:** se si interrompe, rilanciare `nohup tools/trasparenza/giro.sh 2026-11 > log/trasparenza-giro-2026-11.log 2>&1 &`: riprende dagli enti mancanti (stato in `lavoro/trasparenza/stato.sqlite`).
-- **Dopo il giro:** (il clone sul server è indietro e ha file non tracciati di altre sessioni — tools/psn_*.py — quindi non fare git pull lì finché non sono sistemati; pubblicare dal portatile: `rsync -a mxmap.it@51.158.36.151:analisi-spesa-ict/sito/static/dati/trasparenza/ sito/static/dati/trasparenza/` e `rsync -a ...:analisi-spesa-ict/esiti/<data>/trasparenza/ esiti/<data>/trasparenza/`). l'open data finisce in `sito/static/dati/trasparenza/giri/<data>/` + `ultimo/`, `indice.json`, `storico.json`, `invii.json`; aggregati in `esiti/<data>/trasparenza/`. Poi `hugo --source sito --minify --cleanDestinationDir`, commit, push. La pagina `/progetto/trasparenza-accessibilita/` legge i JSON (senza dati mostra «primo giro in corso»).
-- **Pilota:** `lavoro/trasparenza/pilota/pilota2-2026-11-03/` (200 enti: 99 accessibili, 18 robots, 4 WAF, 29 sezione non individuata, 25 irraggiungibili, 22 URL non validi, 3 TLS).
-- **PEC:** `censimento.py pec-prepara --run 2026-11 --giro <data>` → `lavoro/trasparenza/pec/<giro>/<cf>/`; invii registrati con `pec-registra` in `dati/trasparenza/invii.csv`. **Nessun invio fatto; li fa Fabio.**
-- **Cron proposto (da attivare):** mensile, `0 1 2 * * cd ~/analisi-spesa-ict && tools/trasparenza/giro.sh >> log/trasparenza-giro-$(date +\%Y-\%m).log 2>&1`.
-- **Fase 2 sospesa (3/11, priorità a #57):** requisiti futuri di Fabio elencati in `tools/trasparenza/README.md` §«Requisiti futuri» (progetto e repo autonomi con GitHub Pages, giri mensili o quotidiani con log dei cambiamenti, resilienza con backoff e conferma dei blocchi in momenti diversi, tassonomia dei blocchi per identità del client, due origini server/desktop, diagnostica estesa con log grezzi, doppio accesso ANAC/home, test di ricerca CIG, catalogo delle problematiche, mirror opzionale). Codice sperimentale già scritto (`diagnosi.py`, comandi `diagnosi/elenco/importa/caratterizza/indice-cig`), non usato nel giro. Lasciati in esecuzione sul pilota: diagnosi server (`log/trasparenza-diagnosi-pilota2.log`, copia del codice in `lavoro/trasparenza/fase2-codice/`), indice CIG (`log/trasparenza-indice-cig.log`), diagnosi desktop sul portatile (`lavoro/trasparenza-desktop.log`, pacchetto `lavoro/trasparenza-desktop/pacchetto-pilota2` da importare con `importa`).
-- **Allineamento del server a origin solo a giro finito:** prima copiare `tools/psn_configuratore.py` e `tools/psn_documenti.py` in `lavoro/backup-psn/`, poi spostarli e `git pull --rebase`; mai `git stash -u` né `git clean`.
 
 ## Aggiornamento 29/10/2026 — via 6, classificazione con modello e fonti (#55) — PUNTO DI RIPRESA
 
@@ -397,19 +480,6 @@ Indicazione di Fabio (29/10): la classificazione va portata avanti **costi quel 
 - **Server condiviso**: duckdb con memory_limit 6 GB e nice (il 27/10 un job ha reso il server irraggiungibile).
 
 Prossimi passi ANAC: seconde vie per le 11 schede non pronte (#33), controlli su smartcig, poi documento, presentazione e sito (#34-#36) con la sezione «Come riprodurre tutto» (#47).
-
-## Dove sta cosa
-
-| Cosa | Dove |
-|---|---|
-| Repository | `mxmap-it/analisi-spesa-ict`, pubblico |
-| Sito | https://analisi-spesa-ict.mxmap.it/ — sorgenti Hugo in `sito/`, build in `docs/`: `hugo --source sito --minify --cleanDestinationDir` |
-| Server | `mxmap.it@51.158.36.151`, cartella `~/analisi-spesa-ict` (clone del repo, push con la deploy key `~/.ssh/id_ed25519_spesaict`, alias `github-spesaict`) |
-| Archivio | `~/analisi-spesa-ict/archivio/` sul server, fuori da git: `blobs/` per contenuto, `mirror/` con i percorsi originali, `manifest.jsonl` |
-| Clone locale | `C:\Users\admin\Claude\analisi-spesa-ict` |
-| Decisioni | [DECISIONI.md](DECISIONI.md) |
-| Analisi tecnica | [sito/content/progetto/analisi-tecnica.md](sito/content/progetto/analisi-tecnica.md) |
-| Ticket | https://github.com/mxmap-it/analisi-spesa-ict/issues |
 
 ## In esecuzione sul server
 
@@ -535,16 +605,3 @@ Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e 
 
 - ~~**Board di progetto**~~ creata: https://github.com/orgs/mxmap-it/projects/1
 - **Tetto**: 20% del limite settimanale su 7 giorni, 2,86% al giorno (`config/budget.yaml`). Da tarare la conversione in token prima di avviare compiti automatici (#20).
-
-## Vincoli da ricordare
-
-- **ANAC respinge gli user-agent non-browser** rispondendo 200 con una pagina HTML: `archivia.py`
-  lo riconosce e non lo salva come file. Il blocco degli IP cloud è riferito da altri, non verificato.
-- **Il catalogo dichiara dimensioni 4,1 volte quelle vere**: per lo spazio contano gli `HEAD`.
-- **I delta ANAC spariscono** senza regola; il file annuale dell'anno in corso non esiste.
-- **Consip cancella oltre i tre anni**: il 2023 è già perso.
-- **BDAP** in manutenzione straordinaria, segnalata con HTTP 200.
-- Importi **SIOPE** in centesimi e mensili puri; join per codice fiscale.
-- Sul server **non usare `/tmp`** per file di lavoro: è condiviso con altri progetti. E un `pkill -f`
-  con un pattern presente nel proprio comando uccide la propria sessione: usare `tools/avvia.sh`.
-- Distinguere sempre **verificato da noi** e **riferito da altri**.

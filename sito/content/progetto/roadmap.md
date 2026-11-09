@@ -4,7 +4,7 @@ date: 2026-10-26
 ---
 
 
-**Stato:** proposta · **Ultimo aggiornamento:** 2026-10-26
+**Stato:** proposta · **Ultimo aggiornamento:** 2026-11-09 · versione 1.1
 
 Lo scopo del progetto è uno: misurare **verso quale giurisdizione va l'euro speso in digitale
 dalla PA italiana**. Tutto il resto è strumentale, e va tenuto strumentale.
@@ -314,3 +314,33 @@ via BDAP, i ventitré portali regionali, i documenti di gara in massa, il CUP co
 della Legge 190, un aggregatore generalista della spesa pubblica, la normalizzazione di tutto in un
 unico schema, l'attribuzione esaustiva della capogruppo, i classificatori autoalimentati e
 opentender come fonte corrente.
+
+## 10. Dove siamo al 9 novembre 2026 e prossime tappe
+
+Numeri verificati da noi [V] salvo dove indicato; ogni cifra ha la sua verifica in `tools/verifiche/` ed esito in `esiti/2026-11-09/`.
+
+| Tema | Risultato del 9/11 | Ticket |
+|---|---|---|
+| **BDAP nell'imbuto** | Pagina [BDAP](../bdap/) v0.2. Abbinamento stazioni appaltanti → ministero per codice fiscale: CIG ICT ministeriali 2020-26 da 10.758 a 23.644 (8,2 mld). Il «buco» della Giustizia era un artefatto del nome (quota CIG/pagato 2024: 0,96); resta il MEF (0,25, circa 0,3 mld/anno). Proposta: BDAP come denominatore, non come strato. R69-R71 | [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67) |
+| **SIOPE via BDAP** | Chiuso. 20 regioni, 2023-2025: BDAP uguale al diretto (ICT 100 % / 99,5 %); nel 2025 Lombardia e Friuli Venezia Giulia ferme a marzo (1.717 comuni) e 84 comuni di Trento assenti: il difetto riferito da AgID si riproduce. R75 | [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30) |
+| **Residuo S6, documenti** | Chiuso. L3 (link PVL) 11.589 CIG provati, 453 con documento che cita il CIG (262 M€); MePA 0 pagine pubbliche; L4 «Amministrazione trasparente» parziale, ripreso il 9/11 | [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68) |
+| **Adesioni ad AQ e convenzioni (P15)** | Chiuso. Norma verificata (scheda PCP AD4, comunicato ANAC 5/6/2024, originali archiviati); padri «contratto d'appalto» spiegati; 0,82 % dei CIG ICT derivati non collegabili. P15 pronta: registro ANAC 18/18. R81 | [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50) |
+| **CPV** | Rapporto 0.3: CPV ICT su oggetto non ICT 6,5 %, oggetto ICT con CPV non ICT 9,2 % (20 % nel 2024); 130.678 CIG entrano solo per testo. Perimetro 0.3.3: 383.148 CIG dal 2024. R79, R80; 3224 videosorveglianza in attesa di decisione | [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44) |
+| **PNRR Misura 1.2 per prodotto** | 818,9 M€ contati: big tech USA 1,7 % (caso peggiore 21,5 %); prodotto italiano 68,2 %; residuo S6 non riducibile con le fonti archiviate | [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43) |
+| **Infrastruttura sottostante** | Terzo asse: per produttore/gestione 6,3 / 30,6 / 62,2 %, per localizzazione 3,0 / 21,5 / 51,0 %; PSN: Secure Public Cloud + Managed 5,4 % dei ricavi 2025 [fonte del concessionario]; piani dei fabbisogni di 9 enti sanitari; SaaS con prove per 122,9 M€. R73, R78 | [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), [#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70) |
+| **Rivenditori** | Mappa v4.3: dei prodotti cloud extra-UE (3,05 mld) il 61,2 % passa da rivenditori con codice fiscale italiano (79,1 % del canale noto): la lente fornitore li conterebbe come italiani | [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41) |
+| **Lente prodotto** | Quarto campione a cieco (150 CIG): big tech precisione 92,2 %, richiamo 98,9 %. Le regole v4.3 correggono i 5 tipi d'errore, quindi il quarto campione non è più indipendente: serve un quinto | [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72) |
+| **Accesso civico massivo (L7)** | Elenco unico di 28.807 voci (6.626 enti); 6 modelli, macchina a stati con scadenze (norme verificate su fonte primaria), adattatore PEC secco; ondata 0 di prova (30 enti, 501 voci) **non inviata**. Destinatario deciso: PEC istituzionale | [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#69](https://github.com/mxmap-it/analisi-spesa-ict/issues/69) |
+| **CIG ripetuti nell'imbuto (R53)** | Una riga per CPV nei file ANAC 2024-2025: S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4) | [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71) |
+
+**Prossime tappe**
+
+- **12/11/2026:** rendiconto «Imbuto: dove siamo» con top-5 delle cose da fare per la completezza ([#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66)): chiusura L4, cifre finali della via 6 su G3, rigenerazione 0.3.4.
+- Poi: quinto campione a cieco ([#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72)), infrastruttura sottostante estesa ([#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70)), documento e presentazione per ANAC (v1.1 pronti, invio su decisione di Fabio: [#34](https://github.com/mxmap-it/analisi-spesa-ict/issues/34), [#35](https://github.com/mxmap-it/analisi-spesa-ict/issues/35)), accesso civico solo dopo le decisioni di Fabio su richiedente, casella PEC, tetto e cadenza ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)).
+
+## Registro delle revisioni
+
+| Versione | Data | Cosa cambia |
+|---|---|---|
+| 1.1 | 2026-11-09 | § 10: risultati del 9/11 (BDAP, SIOPE, residuo S6, P15, CPV, PNRR 1.2, infrastruttura sottostante, rivenditori v4.3, lente cieco 4/5, accesso civico, R53) e prossime tappe |
+| 1.0 | 2026-10-26 | Prima versione (ANAC fino in fondo, ordine dei dataset) |
