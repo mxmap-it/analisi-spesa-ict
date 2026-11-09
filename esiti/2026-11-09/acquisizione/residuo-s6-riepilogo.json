@@ -5,6 +5,24 @@
  "cig_elaborati_l3": 28583,
  "finito_l3": true,
  "finito_l4": true,
+ "finito_l4js_fase1": true,
+ "finito_l4js_difesa": false,
+ "l4js_sovrapposti_l4": 0,
+ "filtro_non_documenti": {
+  "L4": {
+   "righe_con_documento_prima": 983,
+   "righe_con_documento_dopo": 844,
+   "righe_cambiate": 217,
+   "documenti_scartati": 356,
+   "righe_documento_diventano_senza_documento": 139
+  },
+  "L4-js": {
+   "righe_cambiate": 12,
+   "documenti_scartati": 12,
+   "righe_con_documento_prima": 19,
+   "righe_con_documento_dopo": 19
+  }
+ },
  "cig_senza_link": 16403,
  "enti_senza_link": 4352,
  "livelli": [
@@ -112,13 +130,13 @@
   },
   {
    "livello": "L4 sezione Bandi di gara e contratti",
-   "cig": 4393,
-   "euro": 7362663314.71,
-   "cig_trovati": 4393,
-   "euro_trovati": 7362663314.71,
-   "cig_con_documento": 981,
-   "euro_con_documento": 650029069.73,
-   "documenti": 3075,
+   "cig": 4430,
+   "euro": 7369809719.61,
+   "cig_trovati": 4430,
+   "euro_trovati": 7369809719.61,
+   "cig_con_documento": 844,
+   "euro_con_documento": 606315119.72,
+   "documenti": 2722,
    "cig_documento_cita_cig": 82,
    "euro_documento_cita_cig": 42608054.98,
    "cig_con_atto_registrato": 82,
@@ -133,25 +151,25 @@
      "documenti": 12
     },
     "P2-g3": {
-     "cig": 3502,
-     "euro": 854573087.79,
-     "cig_trovati": 3502,
-     "euro_trovati": 854573087.79,
-     "cig_con_documento": 803,
-     "euro_con_documento": 218491105.01,
-     "documenti": 2621,
+     "cig": 3532,
+     "euro": 861190093.37,
+     "cig_trovati": 3532,
+     "euro_trovati": 861190093.37,
+     "cig_con_documento": 701,
+     "euro_con_documento": 206023269.56,
+     "documenti": 2359,
      "cig_documento_cita_cig": 74,
      "euro_documento_cita_cig": 18470990.24,
      "cig_con_atto_registrato": 74
     },
     "P3-g2": {
-     "cig": 526,
-     "euro": 971296923.66,
-     "cig_trovati": 526,
-     "euro_trovati": 971296923.66,
-     "cig_con_documento": 127,
-     "euro_con_documento": 346528159.97,
-     "documenti": 304,
+     "cig": 532,
+     "euro": 971824355.77,
+     "cig_trovati": 532,
+     "euro_trovati": 971824355.77,
+     "cig_con_documento": 100,
+     "euro_con_documento": 315446458.35,
+     "documenti": 245,
      "cig_documento_cita_cig": 7,
      "euro_documento_cita_cig": 23317392.61,
      "cig_con_atto_registrato": 7
@@ -161,25 +179,113 @@
      "euro": 3278730776.82,
      "cig_trovati": 256,
      "euro_trovati": 3278730776.82,
-     "cig_con_documento": 37,
-     "euro_con_documento": 10526925.31,
-     "documenti": 90,
+     "cig_con_documento": 31,
+     "euro_con_documento": 10371355.07,
+     "documenti": 62,
      "cig_documento_cita_cig": 1,
      "euro_documento_cita_cig": 819672.13,
      "cig_con_atto_registrato": 1
     },
     "P5-g4-campione": {
-     "cig": 98,
-     "euro": 949595.02,
-     "cig_trovati": 98,
-     "euro_trovati": 949595.02,
-     "cig_con_documento": 13,
-     "euro_con_documento": 190591.48,
-     "documenti": 48
+     "cig": 99,
+     "euro": 951562.23,
+     "cig_trovati": 99,
+     "euro_trovati": 951562.23,
+     "cig_con_documento": 11,
+     "euro_con_documento": 181748.78,
+     "documenti": 44
+    }
+   }
+  },
+  {
+   "livello": "L4-js pagine AT rese con browser headless",
+   "cig": 187,
+   "euro": 230335951.61,
+   "cig_trovati": 187,
+   "euro_trovati": 230335951.61,
+   "cig_con_documento": 19,
+   "euro_con_documento": 3073126.03,
+   "documenti": 81,
+   "cig_documento_cita_cig": 1,
+   "euro_documento_cita_cig": 70000.0,
+   "cig_con_atto_registrato": 1,
+   "per_priorita": {
+    "P1-incerti-ict": {
+     "cig": 1,
+     "euro": 118239235.93,
+     "cig_trovati": 1,
+     "euro_trovati": 118239235.93
+    },
+    "P2-g3": {
+     "cig": 151,
+     "euro": 38223762.55,
+     "cig_trovati": 151,
+     "euro_trovati": 38223762.55,
+     "cig_con_documento": 16,
+     "euro_con_documento": 2890199.27,
+     "documenti": 67,
+     "cig_documento_cita_cig": 1,
+     "euro_documento_cita_cig": 70000.0,
+     "cig_con_atto_registrato": 1
+    },
+    "P3-g2": {
+     "cig": 28,
+     "euro": 73653111.53,
+     "cig_trovati": 28,
+     "euro_trovati": 73653111.53,
+     "cig_con_documento": 1,
+     "euro_con_documento": 147709.16,
+     "documenti": 12
+    },
+    "P4-nuovi-rx": {
+     "cig": 3,
+     "euro": 172641.6,
+     "cig_trovati": 3,
+     "euro_trovati": 172641.6,
+     "cig_con_documento": 2,
+     "euro_con_documento": 35217.6,
+     "documenti": 2
+    },
+    "P5-g4-campione": {
+     "cig": 4,
+     "euro": 47200.0,
+     "cig_trovati": 4,
+     "euro_trovati": 47200.0
     }
    }
   }
  ],
+ "l4js_url_at": {
+  "generato": "2026-11-09",
+  "enti": 152,
+  "classi": {
+   "risposta-errore": 57,
+   "radice-piattaforma": 53,
+   "cartella-file": 15,
+   "pagina-vuota": 15,
+   "senza-url-at": 10,
+   "pagina-ok": 2
+  },
+  "url_at_errati": 125,
+  "http": {
+   "200": 69,
+   "404": 41,
+   "500": 20,
+   "503": 5,
+   "400": 2,
+   "403": 2,
+   "301": 2,
+   "None": 1
+  },
+  "errati_per_esito_l4js": {
+   "sezione-bandi-non-trovata": 44,
+   "cig-trovati": 31,
+   "pagina-quasi-vuota-js": 29,
+   "sezione-bandi-raggiunta": 20,
+   "errore": 1
+  },
+  "errati_con_cig_trovati_l4js": 31
+ },
  "costi": {
   "L3": {
    "richieste": 33826,
@@ -190,17 +296,29 @@
    "ore_orologio_somma_cig": 2.0
   },
   "L4": {
-   "enti_elaborati": 4007,
-   "richieste": 21885,
-   "ore_orologio_somma_enti": 66.8,
+   "enti_elaborati": 4174,
+   "richieste": 22665,
+   "ore_orologio_somma_enti": 68.3,
    "esiti_enti": {
-    "cig-trovati": 1319,
-    "sezione-bandi-non-trovata": 901,
-    "sezione-bandi-raggiunta": 520,
-    "errore": 436,
-    "sito-ignoto": 394,
-    "blocco": 261,
-    "pagina-quasi-vuota-js": 176
+    "cig-trovati": 1346,
+    "sezione-bandi-non-trovata": 927,
+    "sezione-bandi-raggiunta": 540,
+    "errore": 396,
+    "sito-ignoto": 395,
+    "pagina-quasi-vuota-js": 285,
+    "blocco": 285
+   }
+  },
+  "L4-js": {
+   "enti_elaborati": 152,
+   "richieste": 1229,
+   "ore_orologio_somma_enti": 6.6,
+   "esiti_enti": {
+    "sezione-bandi-non-trovata": 48,
+    "cig-trovati": 46,
+    "pagina-quasi-vuota-js": 32,
+    "sezione-bandi-raggiunta": 25,
+    "errore": 1
    }
   },
   "token": 0
@@ -243,7 +361,7 @@
    "host": 1
   }
  },
- "blocchi_l4_enti": 261,
+ "blocchi_l4_enti": 285,
  "per_famiglia_l3": {
   "generico": {
    "cig": 7092,
@@ -463,76 +581,76 @@
    "euro": 527262322.15
   },
   "P1-incerti-ict|nulla": {
-   "cig": 52,
-   "euro": 9919304240.92
+   "cig": 51,
+   "euro": 9801065004.99
   },
   "P1-incerti-ict|solo-pagina-con-cig": {
-   "cig": 10,
-   "euro": 2182820643.46
+   "cig": 11,
+   "euro": 2301059879.39
   },
   "P2-g3|documento-cita-cig": {
-   "cig": 454,
-   "euro": 81587279.52
+   "cig": 455,
+   "euro": 81657279.52
   },
   "P2-g3|documento-senza-cig": {
-   "cig": 1214,
-   "euro": 262766890.99
+   "cig": 1127,
+   "euro": 253119254.81
   },
   "P2-g3|nulla": {
-   "cig": 16170,
-   "euro": 2765545176.67
+   "cig": 15989,
+   "euro": 2720704408.54
   },
   "P2-g3|solo-pagina-con-cig": {
-   "cig": 3687,
-   "euro": 734176363.79
+   "cig": 3954,
+   "euro": 788594768.1
   },
   "P3-g2|documento-cita-cig": {
    "cig": 11,
    "euro": 24277430.45
   },
   "P3-g2|documento-senza-cig": {
-   "cig": 122,
-   "euro": 323261110.38
+   "cig": 96,
+   "euro": 292327117.92
   },
   "P3-g2|nulla": {
-   "cig": 1831,
-   "euro": 3882282592.12
+   "cig": 1797,
+   "euro": 3808102048.48
   },
   "P3-g2|solo-pagina-con-cig": {
-   "cig": 431,
-   "euro": 630295390.7
+   "cig": 491,
+   "euro": 735409926.8
   },
   "P4-nuovi-rx|documento-cita-cig": {
    "cig": 55,
    "euro": 6844083.68
   },
   "P4-nuovi-rx|documento-senza-cig": {
-   "cig": 144,
-   "euro": 14216539.88
+   "cig": 140,
+   "euro": 14096187.24
   },
   "P4-nuovi-rx|nulla": {
-   "cig": 2871,
-   "euro": 791769220.2
+   "cig": 2868,
+   "euro": 791596578.6
   },
   "P4-nuovi-rx|solo-pagina-con-cig": {
-   "cig": 523,
-   "euro": 3287129070.09
+   "cig": 530,
+   "euro": 3287422064.33
   },
   "P5-g4-campione|documento-cita-cig": {
    "cig": 13,
    "euro": 258029.9
   },
   "P5-g4-campione|documento-senza-cig": {
-   "cig": 36,
-   "euro": 528849.98
+   "cig": 34,
+   "euro": 520007.28
   },
   "P5-g4-campione|nulla": {
-   "cig": 783,
-   "euro": 11278933.09
+   "cig": 778,
+   "euro": 11229765.88
   },
   "P5-g4-campione|solo-pagina-con-cig": {
-   "cig": 168,
-   "euro": 1993220.3
+   "cig": 175,
+   "euro": 2051230.21
   }
  }
 }

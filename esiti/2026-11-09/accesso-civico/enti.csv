@@ -11,11 +11,11 @@ cf,ente,codice_ipa,pec,voci,voci_A,voci_B,euro,priorita_somma,priorita_max
 00962520110,AZIENDA UNITA SANITARIA LOCALE N. 5 SPEZZINO ,,,141,0,141,57046300,423.69,5.41
 91252510374,Intercent-er Agenzia Regionale per Lo Sviluppo Dei Mercati Telematici,iarls,PEIIntercenter@postacert.regione.emilia-romagna.it,65,65,0,0,408.59,11.811
 05017630152,Azienda Regionale per l'Innovazione egli Acquisti - ARIA SpA,lispa,protocollo@pec.ariaspa.it,66,20,46,848654681,347.13,14.292
-02438750586,ROMA CAPITALE,c_h501,protocollo.segretariato@pec.comune.roma.it,111,0,111,48315998,331.63,8.793
 06382641006,RAI - RADIOTELEVISIONE ITALIANA S.P.A.,BGK42KE5,raispa@postacertificata.rai.it,101,0,99,30207659,306.95,6.639
 80208450587,Anas Spa,as,anas@postacert.stradeanas.it,74,12,62,86426958,304.89,11.085
 00876220633,Universita' degli Studi di Napoli Federico II,uni_na,ateneo@pec.unina.it,110,0,110,15964943,287.52,4.762
 00405030586,ACI Informatica,JBQHBQLP,aci_informatica@pec.informatica.aci.it,121,0,121,33265993,283.33,4.146
+02438750586,ROMA CAPITALE,c_h501,protocollo.segretariato@pec.comune.roma.it,111,0,111,48315998,283.15,5.862
 00399810589,Istituto Poligrafico e Zecca dello Stato S.P.A.,ipzsspa,protocollo@pec.ipzs.it,79,0,69,26295643,281.5,9.189
 80006480281,Universita' degli Studi di Padova,uni_pd,amministrazione.centrale@pec.unipd.it,106,0,106,11688481,272.93,4.425
 01199250158,Comune di Milano,c_f205,protocollo@postacert.comune.milano.it,78,0,77,43832139,265.2,10.224
@@ -62,7 +62,6 @@ cf,ente,codice_ipa,pec,voci,voci_A,voci_B,euro,priorita_somma,priorita_max
 02205340793,Regione Calabria,regcal,capogabinettopresidenza@pec.regione.calabria.it,27,0,27,105292227,157.42,10.665
 13032990155,Aeroporti di Roma S.p.A.,EBB7K9F4,aeroportidiromaspa@pec.adr.it,72,0,72,14539916,157.02,4.602
 00379980709,Molise Dati Societa' Informatica Molisana Spa,mdsim,molisedati@cert.molisedati.it,30,0,30,26506697,154.57,8.355
-80213750583,Universita' degli Studi di Roma 'Tor Vergata',uni_rm2,direzione.generale@pec.torvergata.it,55,0,55,8605573,150.45,7.194
 01320740580,"Enea Agenzia Nazionale per Le Nuove Tecnologie, L'Energia e Lo Sviluppo Economico Sostenibile",eanln_rm,enea@cert.enea.it,61,0,61,9347047,149.34,4.444
 00349040287,Azienda Ospedale - Universita' Padova,azosp_PD,protocollo.aopd@pecveneto.it,50,0,50,9890876,145.45,4.983
 80012650158,Universita Degli Studi di Milano,udsm_mi,unimi@postecert.it,57,0,57,9076794,144.82,4.088
@@ -86,6 +85,7 @@ cf,ente,codice_ipa,pec,voci,voci_A,voci_B,euro,priorita_somma,priorita_max
 97099470581,"Ministero dell'agricoltura, della sovranità alimentare e delle foreste",m_paf,ministro@pec.masaf.gov.it,18,12,6,64528102,126.66,11.487
 12621570154,Universita' degli Studi di Milano - Bicocca,unimib,ateneo.bicocca@pec.unimib.it,49,0,48,6234004,125.45,6.825
 80415130584,AERONAUTICA MILITARE REPARTO SISTEMI INFORMATIVI AUTOMATIZZATI,,,41,0,41,9574394,120.93,3.628
+80213750583,Universita' degli Studi di Roma 'Tor Vergata',uni_rm2,direzione.generale@pec.torvergata.it,55,0,55,8605573,120.48,4.796
 06363391001,Agenzia delle Entrate,age,agenziaentratepec@pce.agenziaentrate.it,40,0,40,986880271,120.46,14.976
 80213330584,Ministero degli Affari Esteri e della Cooperazione Internazionale,m_ae,ministero.affariesteri@cert.esteri.it,44,0,44,98827840,119.66,11.196
 01429410226,Azienda sanitaria universitaria integrata del Trentino ,apss,asuit@pec.asuit.tn.it,42,0,42,50758985,118.37,6.716
@@ -140,7 +140,6 @@ cf,ente,codice_ipa,pec,voci,voci_A,voci_B,euro,priorita_somma,priorita_max
 13187590156,Cap Holding S.P.A.,chspa,qualificazione.capholding@legalmail.it,31,0,31,7905822,87.14,4.648
 00292210630,Ente Autonomo Volturno Srl,eavs,enteautonomovolturno@legalmail.it,23,0,23,18533586,86.81,8.508
 80034840167,Comune di Bergamo,c_a794,protocollo@cert.comune.bergamo.it,32,0,32,4432523,86.38,3.314
-02483810392,Azienda Usl della Romagna,auslra,azienda@pec.auslromagna.it,28,0,28,10934537,85.95,4.744
 01810260024,Azienda Sanitaria Locale della Provincia di Biella,asl_bi,ufficio.protocollo@cert.aslbi.piemonte.it,24,0,24,10355529,85.85,7.683
 00518460019,Politecnico di Torino,PT,politecnicoditorino@pec.polito.it,52,0,52,5818660,85.3,2.756
 01426410880,Azienda Sanitaria Provinciale Ragusa,a_088,protocollo@pec.asp.rg.it,21,0,21,64824587,85.05,11.112
@@ -222,7 +221,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00300650256,Azienda ULSS n. 1 Dolomiti,a1_025,protocollo.aulss1@pecveneto.it,24,0,24,3306334,63.37,3.424
 01009680628,Azienda Sanitaria Locale Benevento 1,asl1_bn,direzione.generale@pec.aslbenevento.it,22,0,22,7402081,62.87,7.869
 97231970589,Consiglio per la ricerca in agricoltura e l'analisi dell'economia agraria,CRSA,crea@pec.crea.gov.it,21,0,21,9043472,62.55,8.421
-97047140583,Ministero dell'Ambiente e della Sicurezza Energetica,m_amte,MASE@pec.mase.gov.it,15,0,15,161770861,62.04,12.219
 97103490583,COMANDO UNITA MOBILI E SPECIALIZZATE CARABINIERI PALIDORO,,,24,0,24,2794791,61.73,3.266
 00215150236,Comune di Verona,c_l781,protocollo.informatico@pec.comune.verona.it,39,0,39,5197387,61.55,3.476
 80427570587,Uffici Amministrativi del Consiglio di Stato e dei Tribunali Amministrativi Regionali 'non abilitato a ricevere atti giurisdizionali e ricorsi straordinari al Presidente della Repubblica',cds,giustizia-amministrativa@ga-cert.it,15,0,13,2040149,61.44,10.104
@@ -251,6 +249,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00239740905,Comune di Sassari,c_i452,protocollo@pec.comune.sassari.it,22,0,22,2338070,54.97,2.838
 97929470587,COMANDO TRASMISSIONI,,,23,0,23,1961745,54.94,3.47
 01151150867,Azienda Sanitaria Provinciale di Enna,aspe,protocollo.generale@pec.asp.enna.it,15,0,15,5364916,54.32,6.615
+02483810392,Azienda Usl della Romagna,auslra,azienda@pec.auslromagna.it,28,0,28,10934537,54.19,3.002
 02938930423,AZIENDA SANITARIA TERRITORIALE DI ANCONA,KHS8BAX6,ast.ancona@emarche.it,18,0,18,7982056,54.13,7.161
 91002500337,Azienda USL Piacenza,as_PC,protocollounico@pec.ausl.pc.it,19,0,18,2184329,53.66,6.267
 06341981006,Atac Spa Azienda per La Mobilita',asalm,protocollo@cert2.atac.roma.it,19,0,19,7148955,53.34,4.982
@@ -261,7 +260,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00229010442,Comune di Ascoli Piceno,c_a462,comune.ap@pec.it,19,0,19,3746610,52.56,3.896
 06705490966,TRENORD S.R.L.,,,21,0,21,1641953,52.08,2.83
 97889240582,Agenzia Nazionale per Le Politiche Attive del Lavoro,anlpa,,8,0,8,51726826,52.06,10.845
-02315520920,ARNAS G. Brotzu,092,protocollo.generale@pec.aobrotzu.it,21,0,21,3200851,52.06,3.57
 80014930327,Regione Autonoma Friuli-Venezia Giulia,r_friuve,regione.friuliveneziagiulia@certregione.fvg.it,28,0,28,57366239,51.82,7.46
 08173691000,Azienda Regionale Emergenza Sanitaria - ARES 118,ares_058,PROTOCOLLO.GENERALE@PEC.ARES118.IT,13,0,13,50934867,51.73,11.058
 94250200485,ITS TURISMO ARTE E BENI CULTURALI -TAB,,,20,0,20,2000234,51.6,2.982
@@ -306,10 +304,10 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00210880225,Autostrada del Brennero Spa,abs,a22@pec.autobrennero.it,17,0,17,2697866,44.18,3.68
 04400441004,Universita' degli Studi Roma Tre,uni_rm3,amministrazione@ateneo.uniroma3.it,22,0,22,3486010,44.02,3.624
 00761890177,Comune di Brescia,c_b157,protocollogenerale@pec.comune.brescia.it,18,0,18,1416941,43.61,2.996
+97047140583,Ministero dell'Ambiente e della Sicurezza Energetica,m_amte,MASE@pec.mase.gov.it,15,0,15,161770861,43.53,8.146
 01464630423,Azienda ospedaliero-universitaria delle Marche,aouora,aou.ancona@emarche.it,15,0,15,3256858,43.46,6.777
 00237090162,S.A.C.B.O. S.P.A.,,,16,0,16,6416305,43.32,5.38
 02481840201,Azienda Socio Sanitaria Territoriale di Mantova,asstm,protocollogenerale@pec.asst-mantova.it,26,0,26,4991195,43.17,4.334
-80008510754,Comune di Lecce,c_e506,protocollo@pec.comune.lecce.it,13,0,13,1982244,43.02,5.487
 80111810588,Istituto Nazionale di Statistica - ISTAT,ISTAT,protocollo@postacert.istat.it,14,0,14,18336134,42.88,5.382
 00303490189,FONDAZIONE IRCCS POLICLINICO 'S.MATTEO',irpsm_pv,protocollo@pec.smatteo.pv.it,22,0,22,4030194,42.79,3.16
 01629350198,Azienda Socio Sanitaria Territoriale di Crema,asstc,protocollo@pec.asst-crema.it,28,0,28,2296785,42.56,2.728
@@ -363,7 +361,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 80194230589,Guardia di Finanza,gdf,comando.generale@pec.gdf.it,10,0,10,7814327,38.48,4.862
 80013370210,Agenzia per la protezione civile,assapcbz,bevoelkerungsschutz.protezionecivile@pec.prov.bz.it,11,0,9,1614080,38.3,6.96
 02985660303,Azienda Sanitaria Universitaria Friuli Centrale,asufc,asufc@certsanita.fvg.it,20,0,20,3221281,38.27,3.112
-03341820276,Veneziana Energia Risorse Idriche Territorio Ambiente Servizi S.P.A.,veritas,protocollo@cert.gruppoveritas.it,14,0,14,2098671,38.17,3.556
 97735020584,Agenzia per L'Italia Digitale,agid,protocollo@pec.agid.gov.it,16,0,16,7971001,38.14,4.812
 91144560355,Unione Val D'Enza,uvde_035,segreteria.unionevaldenza@pec.it,15,0,15,1587453,37.89,2.96
 80005370137,Comune di Como,C_C933,protocollo@comune.pec.como.it,15,0,15,1835021,37.86,3.708
@@ -406,9 +403,9 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 97086740582,Comune di Fiumicino,c_m297,protocollo.generale@pec.comune.fiumicino.rm.it,18,0,18,1995761,34.95,2.76
 00516890241,Comune di Vicenza,c_l840,vicenza@cert.comune.vicenza.it,19,0,19,2682333,34.62,3.296
 80111170587,Istituto Nazionale per l'Analisi delle Politiche Pubbliche (INAPP),isfol,protocolloinapp@pec.it,11,0,11,4372022,34.26,5.034
-01310860505,Azienda Ospedaliero - Universitaria Pisana,aou_pisa,pec-aoupisana@legalmail.it,13,0,13,1836983,34.2,3.422
 96404830588,DIREZIONE DI INTENDENZA DEL COMANDO LOGISTICO DELL ESERCITO,,,13,0,13,1532693,34.07,3.258
 09320420962,Azienda Socio Sanitaria Territoriale Nord Milano,asstnm,protocollo@pec.asst-nordmilano.it,14,0,14,928085,34.01,3.468
+02315520920,ARNAS G. Brotzu,092,protocollo.generale@pec.aobrotzu.it,21,0,21,3200851,33.48,3.57
 01807370224,Trentino Trasporti Spa,ttspa,pec@pec.trentinotrasporti.it,13,0,13,1143667,33.38,3.726
 00139550818,Comune di Marsala,c_e974,protocollo@pec.comune.marsala.tp.it,15,0,15,2435716,33.37,2.922
 90098670277,Agenzia veneta per i pagamenti - AVEPA,AVEPA,protocollo@cert.avepa.it,7,0,7,25192080,33.15,9.855
@@ -463,6 +460,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 80417530583,COMANDO GENERALE CORPO CAPITANERIE DI PORTO MINISTERO TRASPORTI,,,10,0,10,4103796,29.29,4.954
 13015060158,Agenzia Regionale per la Protezione dell'Ambiente della Lombardia,arpa_mi,arpa@pec.regione.lombardia.it,11,0,11,630088,29.22,3.408
 09320650964,Azienda Socio Sanitaria Territoriale Melegnano e della Martesana,asstmm,protocollo@pec.asst-melegnano-martesana.it,17,0,17,1647412,29.14,3.05
+80008510754,Comune di Lecce,c_e506,protocollo@pec.comune.lecce.it,13,0,13,1982244,29.11,3.658
 02443420985,Secoval Srl,ss,protocollo@pec.secoval.it,12,0,12,840651,29.09,2.954
 00623530136,Comune di Lecco,c_e507,comune@pec.comunedilecco.it,12,0,11,1752354,29.07,8.058
 90048270731,AUTORITA' DI SISTEMA PORTUALE DEL MAR IONIO,apt,protocollo.autportta@postecert.it,11,0,11,24028035,29.07,6.214
@@ -495,9 +493,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00849050109,Regione Liguria,r_liguri,protocollo@pec.regione.liguria.it,10,0,10,4598886,27.59,5.122
 82000210011,Comune di Chieri,c_c627,protocollo.chieri@pcert.it,7,0,7,1535305,27.55,5.55
 02307130696,Azienda Sanitaria Locale 2 Lanciano Vasto Chieti,asl_2lvc,info@pec.asl2abruzzo.it,14,0,14,5600761,27.55,4.226
-85001870188,Comune di Vigevano,c_l872,protocollovigevano@pec.it,11,0,11,909462,27.48,2.886
 02934390929,Abbanoa S.P.A.,abspa,protocollo@pec.abbanoa.it,13,0,13,3230282,27.44,3.586
-00194510277,Comune di Cavarzere,c_c383,comune@pec.comune.cavarzere.ve.it,10,0,10,4018892,27.37,4.798
 00210240321,Comune di Trieste,c_l424,comune.trieste@certgov.fvg.it,15,0,15,2467644,27.21,3.39
 80001070673,Provincia di Teramo,p_TE,protocollo@pec.provincia.teramo.it,14,0,14,1431706,27.21,2.974
 00093910420,Autorita' di Sistema Portuale del Mare Adriatico Centrale,apa_042,segreteria@pec.porto.ancona.it,7,0,7,2933903,27.18,6.825
@@ -583,6 +579,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00117040824,Autorita di sistema portuale del Mare di Sicilia Occidentale,app_082,info@pec.portpalermo.it,11,0,11,2514391,23.03,6.645
 03154520401,ISTITUTO SCIENTIFICO ROMAGNOLO PER LO STUDIO E LA CURA DEI TUMORI,,,10,0,10,1013774,23.02,2.744
 80001650433,Comune di Macerata,c_e783,comune.macerata@legalmail.it,10,0,10,1312181,22.96,3.38
+00194510277,Comune di Cavarzere,c_c383,comune@pec.comune.cavarzere.ve.it,10,0,10,4018892,22.91,2.75
 92085010095,FONDAZIONE CIMA,,,8,0,8,1194270,22.84,5.739
 80021670585,Cassa Nazionale di Previdenza e Assistenza a favore Dei Dottori Commercialisti,cnpaf,Amministrazione@pec.cnpadc.it,7,0,7,2318758,22.82,6.654
 94164020482,Azienda Regionale per il Diritto allo Studio Universitario,ardsu_to,dsutoscana@postacert.toscana.it,7,0,7,3643474,22.75,5.0
@@ -622,7 +619,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 08123891007,DiSCo - Ente regionale per il diritto allo studio e la promozione della conoscenza,leida_rm,protocollo@pec.laziodisco.it,11,0,11,1388912,21.63,3.528
 00111080099,AUTOSTRADA DEI FIORI SPA,,,9,0,9,804304,21.54,2.992
 04355020266,Consorzio di bonifica Piave,1MF1PZD3,consorziopiave@pec.it,9,0,9,577356,21.54,2.76
-92137340920,Agenzia Regionale per la Protezione dell'Ambiente della Sardegna,arpas_ca,arpas@pec.arpa.sardegna.it,7,0,7,609825,21.51,4.104
 93005430256,Provincia di Belluno,p_bl,provincia.belluno@pecveneto.it,9,0,9,792133,21.51,2.924
 80006510806,Universita' Mediterranea di Reggio Calabria,unim_rc,amministrazione@pec.unirc.it,9,0,9,744441,21.49,2.758
 80003090604,Comune di Alatri,c_a123,protocollo.comunealatri@pec.it,10,0,10,1348177,21.47,2.602
@@ -698,6 +694,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 01472860012,Comune di Grugliasco,c_e216,grugliasco@cert.ruparpiemonte.it,8,0,8,511497,19.16,2.756
 80003630664,Consiglio Regionale dell'Abruzzo,cr_abbru,protocollo@pec.crabruzzo.it,8,0,8,1505736,19.11,2.862
 80100100637,Comune di Bacoli,c_a535,ufficioprotocollo@pec.comune.bacoli.na.it,7,0,7,740621,19.09,3.543
+03341820276,Veneziana Energia Risorse Idriche Territorio Ambiente Servizi S.P.A.,veritas,protocollo@cert.gruppoveritas.it,14,0,14,2098671,19.08,1.778
 93008800505,SCUOLA SUP. STUDI UNIV. E PERFEZIONAMENTO 'S.ANNA',ss_sanna,protocollo@sssup.legalmailpa.it,7,0,7,993946,19.05,3.036
 02026560157,Comune di Vimercate,c_m052,vimercate@pec.comune.vimercate.mb.it,8,0,8,2149255,19.02,4.492
 05216080829,Siciliacque S.p.A.,L5W3VYCZ,siciliacque@pec.siciliacque.it,11,0,11,388383,18.99,2.352
@@ -720,6 +717,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 80119170589,Ente Nazionale di Previdenza e Assistenza per I Consulenti del Lavoro,enpai_,info@enpacl-pec.it,7,0,7,5147084,18.29,5.292
 00372420547,Comune di Citta' di Castello,c_c745,comune.cittadicastello@postacert.umbria.it,7,0,7,452871,18.28,4.356
 00168480242,Comune di Bassano del Grappa,C_A703,protocollo.comune.bassanodelgrappa@pecveneto.it,7,0,7,841014,18.28,3.272
+01310860505,Azienda Ospedaliero - Universitaria Pisana,aou_pisa,pec-aoupisana@legalmail.it,13,0,13,1836983,18.25,2.29
 80032380653,AUSINO S.P.A.  SERVIZI IDRICI INTEGRATI,446W9J1Y,protocollo@pec.ausino.it,9,0,9,963769,18.21,3.288
 80013370277,Actv Spa,as_027,protocollo@pec.actv.it,9,0,9,1801603,18.21,3.286
 03299640163,Uniacque,uspa,info@pec.uniacque.bg.it,8,0,8,885769,18.18,3.384
@@ -736,7 +734,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 82001410818,Comune di Mazara del Vallo,c_f061,protocollo@pec.comune.mazaradelvallo.tp.it,9,0,9,291282,17.87,2.632
 09261710017,Istituto Nazionale di Ricerca Metrologica - INRIM,inrm,inrim@pec.it,8,0,8,2525218,17.84,3.86
 02569060540,Valle Umbra Servizi S.P.A.,vussp,vusspa@pec.it,5,0,5,2114288,17.79,6.276
-83000130159,Comune di Cesano Maderno,c_c566,protocollo@pec.comune.cesano-maderno.mb.it,8,0,8,429167,17.77,2.69
 13226890153,Milano Ristorazione,miris,presidenza.milanoristorazione@pec.it,7,0,7,643090,17.73,3.04
 80002130195,Provincia di Cremona,p_cr,protocollo@provincia.cr.it,8,0,8,676549,17.68,2.762
 80001010893,Comune di Siracusa,c_i754,protocollo@comune.siracusa.legalmail.it,10,0,10,995151,17.62,2.76
@@ -745,7 +742,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 80004070837,Universita' degli Studi di Messina,udsm_me,protocollo@pec.unime.it,12,0,12,1171126,17.57,2.558
 00053070918,Comune di Nuoro,c_f979,protocollo@pec.comune.nuoro.it,6,0,6,2584194,17.53,4.584
 96003410766,Universita Degli Studi della Basilicata,udsb_pz,protocollo@pec.unibas.it,7,0,7,598309,17.49,2.992
-97124370582,Commissione di Vigilanza Sui Fondi Pensione,cvfp,protocollo@pec.covip.it,6,0,6,3890329,17.48,7.704
 00397470873,Citta' Metropolitana di Catania,cmct,protocollo@pec.cittametropolitana.ct.it,5,0,5,946978,17.48,5.064
 97026980793,Universita' degli Studi Magna Graecia di Catanzaro,uni_cz,protocollo@cert.unicz.it,9,0,9,712037,17.46,2.76
 97315390589,UFFICIO NAZIONALE PER IL SERVIZIO CIVILE,,,5,0,5,5077881,17.45,8.088
@@ -761,6 +757,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 80026440281,LEGIONE CARABINIERI VENETO,,,7,0,7,524182,17.33,2.672
 80246030581,DIREZIONE GENIO MILITARE-MIN DIFESA,,,5,0,5,4746475,17.32,4.802
 80000840753,Provincia di Lecce,p_LE,protocollo@cert.provincia.le.it,8,0,8,1123181,17.31,3.124
+85001870188,Comune di Vigevano,c_l872,protocollovigevano@pec.it,11,0,11,909462,17.3,2.404
 00124430323,IRCCS Burlo Garofolo di Trieste,irccs_bg,oiburlots.protgen@certsanita.fvg.it,13,0,13,981650,17.27,2.664
 01960070926,SOCIETA' GESTIONE AEROPORTO S.P.A.,LPO96CVT,sogaer.spa@legalmail.it,7,0,7,1226024,17.25,3.394
 00988090148,Azienda Socio Sanitaria Territoriale della Valtellina e dell'Alto Lario,asstvdal,protocollo@pec.asst-val.it,9,0,9,1103900,17.2,2.684
@@ -788,7 +785,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 97888590581,DIREZIONE GENERALE ARCHEOLOGIA BELLE ARTI E PAESAGGIO,,,6,0,6,572147,16.73,4.581
 83004000135,SILEA S.p.A. - Società Benefit,sssil,segreteria.sileaspa@pec.it,8,0,8,1183002,16.73,3.22
 08558150150,Autostrada Pedemontana Lombarda Spa,apls,pedemontana@pec.it,8,0,8,831427,16.71,2.878
-00321280273,Comune di Caorle,c_b642,comune.caorle.ve@pecveneto.it,7,0,7,423203,16.7,2.83
 03991350376,ECOCERVED SCARL,,,8,0,8,773611,16.68,3.204
 00671800878,Comune di Piedimonte Etneo,c_g597,comune.piedimonte-etneo@pec.it,7,0,7,380800,16.64,2.424
 93078000663,SCUOLA ISPETTORI E SOVRINTENDENTI GUARDIA DI FINANZA UFFICIO AMMINISTRAZIONE,,,5,0,4,325842,16.54,6.483
@@ -807,7 +803,6 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00804510584,SERVIZI FONDO BOMBOLE METANO,MXP7BAE8,sfbm@pec.it,5,0,5,3538287,16.15,4.402
 01999900044,AZIENDA CONSORTILE MERCATO ORTOFRUTTICOLO DEL ROERO,XSUIG654,mercato.roero@pec.it,6,0,6,732030,16.15,2.754
 00152550208,Comune di Castiglione delle Stiviere,c_c312,protocollo@pec.comune.castiglione.mn.it,7,0,7,1207607,16.14,3.916
-80001350802,Consiglio regionale della Calabria,r_calabr,consiglioregionale@pec.consrc.it,6,0,6,759982,16.14,2.872
 03122360153,Comune di Corbetta,c_c986,comune.corbetta@postemailcertificata.it,5,0,5,421093,16.11,4.572
 01218220323,Promoturismofvg,promotur,promoturismo.fvg@certregione.fvg.it,8,0,8,434995,16.08,2.756
 00297960197,Comune di Cremona,c_d150,protocollo@comunedicremona.legalmail.it,6,0,6,1232031,15.99,4.022
@@ -839,6 +834,7 @@ senza-cf:PRESIDENZA DEL CONSIGLIO DEI MINISTRI,PRESIDENZA DEL CONSIGLIO DEI MINI
 00233930130,Comune di Cantu',c_b639,comune.cantu@pec.regione.lombardia.it,9,0,9,484033,15.36,2.456
 01452670290,Ecoambiente Srl,es,ecoambiente.rovigo@legalmail.it,8,0,8,535105,15.35,2.704
 02102310345,It.City Spa,icy,itcity@pec.itcity.it,12,0,12,697193,15.33,2.264
+00321280273,Comune di Caorle,c_b642,comune.caorle.ve@pecveneto.it,7,0,7,423203,15.29,2.44
 01305930107,Agenzia Regionale per la Protezione dell'Ambiente Ligure,arlpa_ge,arpal@pec.arpal.liguria.it,5,0,5,872629,15.25,4.224
 92000020245,Viambiente SpA,Y0RXY2FL,protocollo@pec.viambiente.it,7,0,7,353575,15.25,2.664
 02829620307,CONSORZIO DI BONIFICA PIANURA FRIULANA,QZ4X0P9P,info@pec.bonificafriulana.it,9,0,9,820570,15.23,2.756
@@ -904,6 +900,7 @@ CFAVCP-0000DE3,CENTRALE UNICA DI COMMITTENZA VELLETRI - LARIANO- VELLETRI SERVIZ
 00221900020,Comune di Biella,c_a859,protocollo@cert.comune.biella.it,7,0,7,784399,14.21,3.38
 92033190395,Autorita' di Sistema portuale del Mare Adriatico centro-settentrionale,apr_ra,port.ravenna@legalmail.it,5,0,5,2716953,14.17,4.742
 97928840582,DIREZIONE DI INTENDENZA - ROMA,,,6,0,6,760530,14.17,3.58
+83000130159,Comune di Cesano Maderno,c_c566,protocollo@pec.comune.cesano-maderno.mb.it,8,0,8,429167,14.17,2.69
 00182790659,Consac Gestioni Idriche Spa,consac,consacgestioniidriche@arubapec.it,5,0,5,432541,14.14,4.326
 81000590893,Comune di Melilli,c_f107,protocollo@pec.comune.melilli.sr.it,6,0,6,316471,14.14,2.636
 02231010212,Seab servizi energia ambiente Bolzano S.p.A.,3FZOB8MI,seab@cert.seab.bz.it,6,0,6,1596875,14.13,4.192
@@ -914,6 +911,7 @@ CFAVCP-0000DE3,CENTRALE UNICA DI COMMITTENZA VELLETRI - LARIANO- VELLETRI SERVIZ
 00125390229,Comune di Rovereto,c_h612,comunerovereto.tn@legalmail.it,9,0,9,787971,13.98,2.7
 00117770776,Comune di Irsina,c_e326,comune.irsina@pec.comune.irsina.mt.it,6,0,6,284354,13.98,2.432
 01225340585,Autorita' di sistema portuale del Mar Tirreno centro-settentrionale,APCFG,protocollo@portidiroma.legalmailpa.it,6,0,6,540760,13.92,2.744
+92137340920,Agenzia Regionale per la Protezione dell'Ambiente della Sardegna,arpas_ca,arpas@pec.arpa.sardegna.it,7,0,7,609825,13.84,2.736
 05848061007,Acea Ato 2 s.p.a.,EK7JBB69,acea.ato2@pec.aceaspa.it,5,0,5,917638,13.82,3.398
 92065320522,VITA - Istituto Tecnico Superiore Nuove Tecnologie per la Vita,ULXT07HJ,itsvita@legalmail.it,8,0,8,1281256,13.8,2.63
 91028310588,CENTRO SIMULAZIONE E VALIDAZIONE DELL ESERCITO,,,6,0,6,498827,13.78,3.05
@@ -928,7 +926,6 @@ CFAVCP-0000DE3,CENTRALE UNICA DI COMMITTENZA VELLETRI - LARIANO- VELLETRI SERVIZ
 80002760835,Citta' Metropolitana di Messina,cm_me,protocollo@pec.prov.me.it,4,0,4,490645,13.52,4.449
 04544550827,ISMETT s.r.l.,R59GN7IO,dg.ismett@postecert.it,5,0,5,708752,13.5,3.204
 81002910669,Comune di Avezzano,c_a515,comune.avezzano.aq@postecert.it,4,0,4,1281038,13.49,4.977
-93076450381,Consorzio di Bonifica Pianura di Ferrara,cbpf,posta.certificata@pec.bonificaferrara.it,6,0,6,402945,13.49,2.676
 01083060085,REGIONE LIGURIA - UNITA' SANITARIA LOCALE N. 1 IMPERIESE,,,5,0,5,1145291,13.44,3.472
 90161460325,Ente di Decentramento Regionale di Trieste,edrts,edr.trieste@certregione.fvg.it,5,0,5,622483,13.42,2.792
 80001070202,Provincia di Mantova,p_mn,provinciadimantova@legalmail.it,7,0,7,496363,13.42,2.592
@@ -938,6 +935,7 @@ CFAVCP-0000DE3,CENTRALE UNICA DI COMMITTENZA VELLETRI - LARIANO- VELLETRI SERVIZ
 15483121008,ANCI DIGITALE SPA,Q9O3Y14I,ancidigitale@pec.ancidigitale.it,5,0,5,601000,13.34,2.906
 02868170792,Agenzia della Regione Calabria per le Erogazioni in Agricoltura,arcea_cz,protocollo@pec.arcea.it,5,0,5,627687,13.32,3.082
 00807960158,Comune di Legnano,c_e514,comune.legnano@cert.legalmail.it,6,0,6,358806,13.32,2.572
+80001350802,Consiglio regionale della Calabria,r_calabr,consiglioregionale@pec.consrc.it,6,0,6,759982,13.31,2.872
 96452070582,ISTITUTO CENTRALE PER LA DIGITALIZZAZIONE DEL PATRIMONIO CULTURALE -DIGITAL LIBRARY,,,5,0,5,634267,13.29,3.194
 01608900039,Consorzio Intercomunale Servizi Socio Assistenziali - Zona Cusio,cissa_1,ciss-cusio@pec.it,5,0,5,588444,13.29,2.876
 80014700738,DIREZIONE DI COMMISSARIATO MARINA MILITARE - TARANTO,,,5,0,5,606701,13.28,3.01
@@ -960,7 +958,6 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 00218930113,Provincia di La Spezia,p_sp,protocollo.provincia.laspezia@legalmail.it,5,0,5,474886,13.01,4.332
 83000770715,Comune di Vieste,c_l858,protocollo@pec.comune.vieste.fg.it,5,0,5,503064,12.99,2.724
 80185110584,UFFICIO CENTRALE ARCHIVI NOTARILI,,,5,0,5,503947,12.97,2.724
-03564090656,CST SISTEMISUD ,6CSCG00Q,protocollo@pec.cstsistemisud.it,4,0,4,253555,12.93,4.338
 00051390318,Azienda Territoriale per l'Edilizia Residenziale di Gorizia,UNJWGWK4,info@cert.atergorizia.it,5,0,5,504050,12.93,2.754
 91149320359,Consorzio di Bonifica dell'Emilia Centrale,cbec_,protocollo@pec.emiliacentrale.it,5,0,5,526196,12.92,3.062
 05468660484,FONDAZIONE SISTEMA TOSCANA,,,6,0,6,306282,12.9,2.742
@@ -995,6 +992,7 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 80000980625,Comune di Montesarchio,c_f636,protocollo@pec.comune.montesarchio.bn.it,5,0,5,377725,12.41,2.622
 10203811004,Innova Camera,OOIL1IO1,fatture.innovacamera@legalmail.it,5,0,5,384000,12.4,2.754
 01743420158,Comune di Rozzano,c_h623,protocollo@pec.comune.rozzano.mi.it,6,0,6,458679,12.39,2.644
+97124370582,Commissione di Vigilanza Sui Fondi Pensione,cvfp,protocollo@pec.covip.it,6,0,6,3890329,12.38,5.136
 00180270886,Comune di Ragusa,c_h163,protocollo@pec.comune.ragusa.it,5,0,5,379774,12.38,2.756
 01565960588,POLICLINICO MILITARE DI ROMA,,,5,0,5,375376,12.36,2.672
 00316740547,Comune di Todi,c_l188,comune.todi@postacert.umbria.it,5,0,5,385000,12.34,2.754
@@ -1036,7 +1034,6 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 03600140713,SANITASERVICE SRL,,,5,0,5,306920,11.88,2.714
 00068560911,Comune di Tortoli,c_a355,protocollo@pec.comuneditortoli.it,5,0,5,288447,11.87,2.718
 00448590588,Fondazione Teatro dell'Opera di Roma,ftodr,sovrintendenza.operaroma@pec.it,5,0,5,281306,11.87,2.512
-00279480099,Comune di Albenga,c_a145,protocollo@pec.comune.albenga.sv.it,4,0,4,553784,11.86,3.624
 81000970616,Comune di Aversa,c_a512,protocollo@pec.comune.aversa.ce.it,5,0,5,566991,11.85,2.756
 96069530580,COMANDO REPARTO TECNICO LOGISTICO AMMINISTRATIVO PER I REPARTI SPECIALI DELLA GUARDIA DI FINANZA,,,5,0,5,266285,11.85,2.46
 93000030754,Comune di Calimera,c_b413,protocollocalimera@pec.rupar.puglia.it,5,0,5,518285,11.84,2.79
@@ -1110,7 +1107,6 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 97442830580,COFS SERVIZIO AMMINISTRATIVO,,,4,0,4,553085,10.99,2.92
 02968150157,Comune di Lissone,c_e617,pec@comunedilissone.it,6,0,6,420838,10.96,2.598
 01123290312,ISONTINA AMBIENTE SRL,16IODWCU,ISONTINAMBIENTE@LEGALMAIL.IT,5,0,5,370080,10.95,2.758
-00453460545,Agenzia per il Diritto allo Studio Universitario dell'Umbria,adsu_pg,adisu@pec.it,4,0,4,551276,10.94,2.844
 01811110020,Azienda Sanitaria Locale Vercelli,asl_vc,aslvercelli@pec.aslvc.piemonte.it,5,0,5,390000,10.93,3.603
 00225430164,AZIENDA LOMBARDA PER L'EDILIZIA RESIDENZIALE DI BERGAMO - LECCO - SONDRIO,,,4,0,4,646338,10.92,4.794
 95230880635,AGENZIA REGIONALE UNIVERSIADI PER LO SPORT,aru2019,aru2019@pec.regione.campania.it,4,0,4,528680,10.92,2.756
@@ -1140,7 +1136,6 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 00264180100,ISTITUTO IDROGRAFICO DELLA MARINA,,,4,0,4,468208,10.6,2.92
 80005970670,Comune di Campli,c_b515,postacert@pec.comune.campli.te.it,5,0,5,257682,10.6,2.706
 84000830269,Comune di Miane,c_f190,segreteria@comunedimiane.legalmail.it,5,0,5,80600,10.6,2.38
-80002950147,Provincia di Sondrio,p_so,protocollo@cert.provincia.so.it,6,0,6,346929,10.59,2.348
 11513540960,Agenzia Regionale Emergenza Urgenza,areu,protocollo@pec.areu.lombardia.it,4,0,4,6778731,10.58,5.39
 80007050240,Comune di Camisano Vicentino,c_b485,comune.camisanovicentino@halleycert.it,5,0,5,70182,10.57,2.118
 03475190272,Piave Servizi S.p.A.,pssrl,piaveservizi@legalmail.it,6,0,6,2456530,10.55,2.086
@@ -1161,7 +1156,6 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 02884000908,AZIENDA SOCIO SANITARIA LOCALE N. 1 DI SASSARI,5DNNOS0T,protocollo@pec.aslsassari.it,4,0,4,414170,10.41,2.76
 03178060236,MEGARETI SPA,,,4,0,4,523586,10.39,3.326
 00385230545,Comune di Bastia Umbra,c_a710,comune.bastiaumbra@postacert.umbria.it,3,0,3,6261386,10.37,5.592
-00340950096,Comune di Albisola Superiore,c_a166,protocollo@pec.albisup.it,3,0,3,309929,10.37,3.966
 00207290933,Comune di Spilimbergo,c_i904,comune.spilimbergo@certgov.fvg.it,5,0,5,202602,10.37,2.402
 00448170548,Comune di Piegaro,c_g601,comune.piegaro@postacert.umbria.it,4,0,4,438968,10.36,3.05
 80000710923,Consorzio di Bonifica della Sardegna Meridionale,cbsm,cbsm@pec.cbsm.it,4,0,4,392412,10.35,2.752
@@ -1172,6 +1166,7 @@ CFAVCP-0000DB1,STAZIONE APPALTANTE PROVINCIALE DI COMO,,,5,0,5,1855676,13.26,3.6
 00634260079,Agenzia Regionale per la Protezione dell'Ambiente della Valle D'Aosta,arpa_09,arpavda@cert.legalmail.it,4,0,4,392176,10.32,2.728
 00127440410,Comune di Fano,c_d488,comune.fano@emarche.it,6,0,6,1447907,10.31,4.148
 92010680921,Comune di Pula,c_h088,protocollo@pec.comune.pula.ca.it,4,0,4,385695,10.31,2.76
+03564090656,CST SISTEMISUD ,6CSCG00Q,protocollo@pec.cstsistemisud.it,4,0,4,253555,10.28,3.105
 00114510571,Provincia di Rieti,p_ri,urp.provinciarieti@pec.it,4,0,4,920362,10.27,3.662
 03243880154,Comune di Brugherio,c_b212,protocollo.brugherio@legalmail.it,4,0,4,375499,10.27,3.651
 00606620409,Comune di Forli',c_d704,comune.forli@pec.comune.forli.fc.it,4,0,4,384203,10.27,2.76
@@ -1213,7 +1208,6 @@ CFAVCP-000105E,CENTRALE UNICA DI COMMITTENZA TRINAKRIA SUD,,,2,0,2,798458,10.02,
 80185690585,MINISTERO DELL INTERNO-DIPARTIMENTO PER GLI AFFARI INTERNI E TERRITORIALI,,,2,0,2,3625864,10.01,7.698
 80003750819,Comune di Favignana,c_d518,comune.favignana.tp@pec.it,4,0,4,736296,10.01,3.362
 80020550481,BIBLIOTECA NAZIONALE CENTRALE,,,4,0,4,326385,10.01,2.754
-94031420014,Comune di Nichelino,c_f889,protocollo@cert.comune.nichelino.to.it,4,0,4,360040,10.0,2.952
 03029240151,Comune di Trezzano Sul Naviglio,c_l409,comune.trezzanosulnaviglio@legalmail.it,5,0,5,391127,9.99,2.864
 01838280202,TERRITORIO ENERGIA AMBIENTE SPA MANTOVA,,,4,0,4,316000,9.99,2.704
 01567890080,RIVIERACQUA SPA,AYT9NTUP,rivieracqua@legalmail.it,6,0,6,454898,9.98,2.584
@@ -1236,9 +1230,9 @@ CFAVCP-000105E,CENTRALE UNICA DI COMMITTENZA TRINAKRIA SUD,,,2,0,2,798458,10.02,
 80000810863,Libero Consorzio Comunale di Enna,p_EN,protocollo@pec.provincia.enna.it,5,0,5,367849,9.85,2.642
 00453120040,Comune di Ostana,c_g183,comune.ostana@pec.it,4,0,4,289397,9.84,2.712
 02971380130,Azienda Territoriale per i Servizi alla Persona,atisp_co,tecumserviziallapersona@twtcert.it,4,0,4,282000,9.83,2.61
+93076450381,Consorzio di Bonifica Pianura di Ferrara,cbpf,posta.certificata@pec.bonificaferrara.it,6,0,6,402945,9.82,2.54
 01142420056,Asti Servizi Pubblici S.P.A.,aspat,asp.asti@pec.it,8,0,8,586483,9.81,1.371
 80016750483,Comune di Campi Bisenzio,c_b507,comune.campi-bisenzio@postacert.toscana.it,4,0,4,280772,9.8,2.676
-05040110487,Publiacqua SpA,GNAREC9U,protocollo@cert.publiacqua.it,5,0,5,695593,9.79,3.204
 02977850649,AIR CAMPANIA S.P.A.,5A0F9XHL,air@pec.aircampania.it,4,0,4,356160,9.79,3.032
 87007530170,Garda Uno Spa,guspa,protocollo@pec.gardauno.it,6,0,6,437325,9.78,2.624
 80004610236,AZIENDA TRASPORTI FUNICOLARI MALCESINE MONTE BALDO,E0VH55CA,amministrazione@pec.funiviedelbaldo.it,4,0,4,269000,9.77,2.51
@@ -1272,6 +1266,7 @@ CFAVCP-000105E,CENTRALE UNICA DI COMMITTENZA TRINAKRIA SUD,,,2,0,2,798458,10.02,
 90036770379,Nuovo Circondario Imolese,nucir_im,circondario.imola@cert.provincia.bo.it,5,0,5,266549,9.56,2.698
 00360090393,Comune di Cervia,c_c553,comune.cervia@legalmail.it,4,0,4,249950,9.54,2.756
 00112740824,Istituto Zooprofilattico Sperimentale della Sicilia,izss_pa,protocollogenerale.izssicilia@legalmail.it,4,0,4,235067,9.53,3.342
+00453460545,Agenzia per il Diritto allo Studio Universitario dell'Umbria,adsu_pg,adisu@pec.it,4,0,4,551276,9.53,2.844
 CFAVCP-0000E35,"ACCORDO CONVENZIONALE CONSORTILE PER L'ISTITUZIONE DELLA CENTRALE UNICA DI COMMITTENZA COMUNI DI CAMPOMARINO, GUGLIONESI E TERMOLI",,,4,0,4,220837,9.52,2.486
 80070890373,COMANDO LEGIONE CARABINIERI EMILIA ROMAGNA,,,4,0,4,221786,9.52,2.46
 97139590588,Garante per la protezione dei dati personali - GP,gpdp,protocollo@pec.gpdp.it,5,0,5,1859000,9.51,4.408
@@ -1281,7 +1276,6 @@ CFAVCP-0000E35,"ACCORDO CONVENZIONALE CONSORTILE PER L'ISTITUZIONE DELLA CENTRAL
 02613260187,Agenzia di Tutela della Salute di Pavia,atspv,protocollo@pec.ats-pavia.it,6,0,6,303455,9.49,2.552
 83007340157,Comune di Triuggio,c_l434,comune.triuggio@legalmail.it,6,0,6,332450,9.49,2.542
 02511960342,Unione Pedemontana Parmense,c_c852xf,protocollo@postacert.unionepedemontana.pr.it,4,0,4,234299,9.48,2.694
-00244360046,Comune di Saluzzo,c_h727,protocollo@pec.comune.saluzzo.cn.it,4,0,4,244000,9.48,2.644
 91006900806,Istituto  a Istruzione Superiore Oppido,istsc_rcis02200t,rcis02200t@pec.istruzione.it,4,0,4,213918,9.47,2.5
 03674570159,Comune di Cassano d'Adda,c_c003,protocollo@comune.cassanodadda.mi.legalmail.it,5,0,5,680273,9.46,2.922
 00821390176,Comune di Coccaglio,c_c806,protocollo@pec.comune.coccaglio.bs.it,5,0,5,270106,9.46,2.51
@@ -1292,8 +1286,8 @@ CFAVCP-0000E35,"ACCORDO CONVENZIONALE CONSORTILE PER L'ISTITUZIONE DELLA CENTRAL
 80018760829,Comune di Trappeto,c_l332,comunetrappeto@pec.it,4,0,4,1146060,9.45,4.162
 81002570927,Comune di Sant'Antioco,c_i294,protocollo@comune.santantioco.legalmail.it,4,0,4,217563,9.44,2.628
 91278030373,Agenzia Regionale per La Sicurezza Territoriale e La Protezione Civile,arlst,peiarpciv@postacert.regione.emilia-romagna.it,4,0,4,218388,9.44,2.51
+80002950147,Provincia di Sondrio,p_so,protocollo@cert.provincia.so.it,6,0,6,346929,9.44,2.348
 86003150017,Comune di Alpignano,c_a222,protocollo.alpignano@cert.legalmail.it,4,0,4,569069,9.4,3.364
-80053570158,Consiglio Regionale della Lombardia,r_lomb,protocollo.generale@pec.consiglio.regione.lombardia.it,4,0,4,465044,9.4,2.84
 92054820094,C.I.R.A. SRL,cira_,consorziocirasu@pcert.postecert.it,4,0,4,221298,9.4,2.692
 00318330099,Comune di Finale Ligure,c_d600,comunefinaleligure@legalmail.it,4,0,4,210123,9.39,2.52
 94158910482,"Istituto per lo Studio, la Prevenzione e la Rete Oncologica (ISPRO)",ilslp_,ispro@postacert.toscana.it,6,0,6,724081,9.38,3.448
@@ -1451,6 +1445,7 @@ CFAVCP-0000C2A,ASSOCIAZIONE DI COMUNI,,,3,0,3,505448,8.51,3.09
 82002020871,Comune di Vizzini,c_m100,protocollo@pec.comune.vizzini.ct.it,5,0,5,301282,8.23,2.378
 00339190225,Comune di Pergine Valsugana,c_g452,protocollo@pec.comune.pergine.tn.it,4,0,4,232125,8.22,3.249
 82000010726,Comune di Gioia del Colle,c_e038,protocollogenerale.gioiadelcolle@pec.rupar.puglia.it,3,0,3,464521,8.22,3.224
+05040110487,Publiacqua SpA,GNAREC9U,protocollo@cert.publiacqua.it,5,0,5,695593,8.22,3.204
 00369930425,Provincia di Ancona,p_AN,provincia.ancona@cert.provincia.ancona.it,3,0,3,410875,8.22,2.924
 00081030744,Comune di Mesagne,c_f152,info@pec.comune.mesagne.br.it,4,0,4,185141,8.22,2.54
 01346480625,Centro Regionale Information Communication Technology,GXHKLN14,cerict@pec.it,3,0,3,577500,8.21,3.48
@@ -1507,6 +1502,7 @@ CFAVCP-0000EBD,"CENTRALE UNICA DI COMMITTENZA DEI COMUNI DI VILLAFRANCA PIEMONTE
 84003010638,Comune di Ottaviano,c_g190,protocollo.ottaviano@pec.it,3,0,3,312910,7.85,2.748
 01733310013,Comune di Trofarello,c_l445,protocollo.trofarello@cert.legalmail.it,3,0,3,354040,7.84,3.072
 06365770723,Agenzia Regionale per La Tecnologia e L'Innovazione della Regione Puglia,arltl_0,arti@pec.rupar.puglia.it,4,0,4,448434,7.84,2.75
+00340950096,Comune di Albisola Superiore,c_a166,protocollo@pec.albisup.it,3,0,3,309929,7.83,2.732
 00468980875,Comune di Giarre,c_e017,protocollo@pec.comune.giarre.ct.it,4,0,4,123629,7.83,2.482
 83504710159,Comune di Vignate,c_l883,protocollo@pec.comune.vignate.mi.it,6,0,6,174565,7.83,2.468
 02481970206,Agenzia di Tutela della Salute della Val Padana,astvp,protocollo@pec.ats-valpadana.it,3,0,3,856021,7.82,3.606
@@ -1529,7 +1525,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 81001790740,Comune di Carovigno,c_b809,protocollo.comune.carovigno@pec.rupar.puglia.it,3,0,3,291453,7.76,2.634
 07329610013,Consorzio Intercomunale dei Servizi Sociali CISS del Pinerolese,cisspito,cisspinerolo@cert.dag.it,2,0,2,814746,7.75,3.936
 00356680397,Provincia di Ravenna,p_ra,provra@cert.provincia.ra.it,3,0,3,300400,7.75,2.76
-00343940839,Comune di Giardini Naxos,c_e014,protocollogiardininaxos@pec.it,3,0,3,309800,7.75,2.756
 91056070120,FONDAZIONE ISTITUTO TECNICO SUPERIORE PER LA FILIERA DEI TRASPORTI E DELLA LOGISTICA INTERMODALE ,EVIFVO83,fondazioneits.va@pec.it,3,0,3,293141,7.75,2.722
 03981670163,FONDAZIONE ITS MOBILITA' SOSTENIBILE,D87BEJVP,fondazioneitsms@pec-legal.it,4,0,4,981047,7.74,3.64
 03337111201,ASP Citta' di Bologna,aspcb,asp@pec.aspbologna.it,3,0,3,339897,7.74,3.048
@@ -1540,6 +1535,7 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 80118510587,Associazione Nazionale Dei Comuni Italiani,anci,amministrazione@pec.anci.it,3,0,3,312807,7.7,2.982
 81002050896,Comune di Augusta,c_a494,protocollocomunediaugusta@pointpec.it,3,0,3,301064,7.7,2.756
 81002190601,Comune di Sant'Elia Fiumerapido,c_i321,protocollo@pec.comune.santeliafiumerapido.fr.it,3,0,3,279410,7.68,2.66
+00279480099,Comune di Albenga,c_a145,protocollo@pec.comune.albenga.sv.it,4,0,4,553784,7.68,2.416
 07026760723,Agenzia Regionale Attivita Irrigue e Forestali,ar_072,protocollo@pec.arifpuglia.it,4,0,4,1080643,7.67,3.426
 81000110767,Comune di Spinoso,c_i917,comune.spinoso@cert.ruparbasilicata.it,3,0,3,421644,7.67,3.37
 80009690753,Comune di San Cesario di Lecce,c_h793,protocollo.comune.sancesariodilecce@pec.rupar.puglia.it,3,0,3,274989,7.67,2.722
@@ -1581,7 +1577,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 01633080153,Comune di Rescaldina,c_h240,comune.rescaldina@pec.regione.lombardia.it,3,0,3,241320,7.54,2.572
 01017000488,Comune di Borgo San Lorenzo,c_b036,comune.borgo-san-lorenzo@postacert.toscana.it,3,0,3,248402,7.53,2.732
 97094440589,DIREZIONE NAZIONALE ANTIMAFIA,,,3,0,3,250456,7.52,2.756
-00214810046,Comune di Fossano,c_d742,fossano@cert.ruparpiemonte.it,3,0,3,243000,7.52,2.624
 01147380487,Comune di Signa,c_i728,comune.signa@postacert.toscana.it,3,0,3,240644,7.52,2.574
 00259850121,Comune di Gavirate,c_d946,info.comune.gavirate@pec.regione.lombardia.it,4,0,4,81528,7.52,2.294
 01689990016,Comune di Roletto,c_h498,protocollo@pec.comune.roletto.to.it,3,0,3,824930,7.51,3.798
@@ -1610,7 +1605,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 00334280310,SDAG SPA A SOCIO UNICO,K0TJGFT9,SDAG@PEC.SDAG.IT,3,0,3,234204,7.44,2.742
 02169270200,SEI SERVIZI ENERGETICI INTEGRATI SRL,,,3,0,3,237120,7.44,2.724
 00559860630,Comune di Agerola,C_A068,protocollo.agerola@asmepec.it,3,0,3,230473,7.44,2.692
-80012690758,Comune di Secli',c_i559,protocollo.comune.secli@pec.rupar.puglia.it,3,0,3,224830,7.44,2.628
 01252100480,Comune di Fucecchio,c_d815,comune.fucecchio@postacert.toscana.it,5,0,5,357294,7.44,2.562
 00319830428,Comune di Loreto,c_e690,comune.loreto@emarche.it,3,0,3,223600,7.44,2.548
 80012470177,Comune di Montirone,c_f680,protocollo@pec.comune.montirone.bs.it,4,0,4,312659,7.43,2.54
@@ -1682,10 +1676,10 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 92229660920,Cpia 1 Cagliari,cpiaca,CAMM202003@PEC.ISTRUZIONE.IT,1,0,0,0,7.21,7.212
 00455600171,Comune di Passirano,c_g361,protocollo@pec.comune.passirano.bs.it,3,0,3,198870,7.21,2.756
 01864440019,Comune di Rivalta di Torino,c_h335,protocollo.rivalta@cert.legalmail.it,4,0,4,261064,7.21,2.736
+94031420014,Comune di Nichelino,c_f889,protocollo@cert.comune.nichelino.to.it,4,0,4,360040,7.21,2.26
 00160490918,Comune di Seulo,c_i707,protocollo@pec.comune.seulo.ca.it,4,0,4,29112,7.21,2.066
 03547030126,Fondazione I.T.S. per l'Informazione e la Comunicazione,COYUR7EZ,cert@pec.itsincom.it,3,0,3,652213,7.2,3.53
 09982061005,Equitalia Giustizia S.P.A.,egspa,legalesocietario@pec.equitaliagiustizia.it,3,0,3,519170,7.2,3.204
-92027670923,Comune di Elmas,c_d399,protocollo@pec.comune.elmas.ca.it,3,0,3,249550,7.2,3.038
 95220960637,PALAZZO REALE DI NAPOLI,,,3,0,3,183036,7.2,2.56
 00310910229,Comune di Villa Lagarina,c_xz49,villalagarina@legalmail.it,3,0,3,177753,7.2,2.494
 95001680834,Comune di Torrenova,c_m286,protocollo@pec.comune.torrenova.me.it,3,0,3,175850,7.2,2.428
@@ -1693,7 +1687,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 00330380163,Comune di Ranica,c_h176,comune.ranica@pec.regione.lombardia.it,3,0,3,176532,7.19,2.534
 01107670638,Comune di Frattaminore,c_d790,lavoripubblici.frattaminore@asmepec.it,4,0,4,213575,7.19,2.516
 00100750538,Comune di Gavorrano,c_d948,comune.gavorrano@postecert.it,3,0,3,173290,7.19,2.434
-81000570283,Comune di Tombolo,c_l199,comunetombolo.pd@legalmailpa.it,3,0,3,173390,7.19,2.41
 02180620987,Unione dei Comuni dell'Alta Valle Camonica,uc_clavc,protocollo@pec.unionealtavallecamonica.bs.it,3,0,3,529007,7.18,3.306
 90051070408,Unione Rubicone e Mare,urm_040,protocollo@pec.unionerubiconemare.it,3,0,3,869675,7.18,3.098
 80009620834,ISTRUZIONE SECONDARIA SUPERIORE - IST.ISTR.SUP. 'ANTONELLO' MESSINA,istsc_meis019009,meis019009@pec.istruzione.it,3,0,3,193342,7.18,2.662
@@ -1740,7 +1733,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 00179650221,Comune di Lavis,c_e500,pec.comunelavis@legalmail.it,3,0,3,161335,7.07,2.488
 80000540627,Comune di Sant'Angelo a Cupolo,c_i277,protocollo@pec.comunesantangelo.it,3,0,3,155742,7.06,2.5
 01670240496,FONDAZIONE ISTITUTO TECNICO SUPERIORE PRIME,,,3,0,3,150000,7.06,2.352
-03033500277,Jtaca S.R.L. Con Socio Unico,jsrlc,jtacadirezione@legalmail.it,3,0,3,484184,7.05,3.302
 01683140931,HYDROGEA SPA,,,3,0,3,156242,7.05,2.544
 00176620748,Comune di Francavilla Fontana,c_d761,comune.francavillafontana@pec.it,2,0,2,1535100,7.04,4.362
 80021560653,Comune di Castel San Giorgio,c_c259,amministrazione@pec.comune.castelsangiorgio.sa.it,3,0,3,146642,7.04,2.364
@@ -1790,6 +1782,7 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 93058170197,Unione di Comuni Lombarda Unione del Delmona,uclud,unione.delmona@pec.regione.lombardia.it,3,0,3,120077,6.85,2.4
 00330220161,Comune di Treviolo,c_l404,comune.treviolo@legalmail.it,3,0,3,117107,6.84,2.392
 00246880397,Comune di Russi,c_h642,pg.comune.russi.ra.it@legalmail.it,3,0,3,117906,6.84,2.374
+00244360046,Comune di Saluzzo,c_h727,protocollo@pec.comune.saluzzo.cn.it,4,0,4,244000,6.84,2.128
 05410091002,Fondazione Ente Nazionale di Previdenza Ed Assistenza per gli Psicologi,fenpe,segreteriagenerale@pec.enpap.it,3,0,3,1966425,6.83,4.602
 84000930135,Consorzio Bacino Imbrifero Montano del Ticino in Provincia di Como,cbimtc,bimporlezza@pec.it,1,0,0,0,6.82,6.819
 00914920673,TE.AM. TERAMO AMBIENTE S.P.A.,X3IIM6ZV,teramoambiente@postcert.it,2,0,2,275699,6.81,4.662
@@ -1809,6 +1802,7 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 80007570106,Comune di Cogoleto,c_c823,protocollo@pec.comune.cogoleto.ge.it,3,0,3,102457,6.74,2.354
 01270510660,Consorzio Acquedottistico Marsicano S.P.A.,camspa,cam@pec.cam-spa.net,1,0,1,1653618,6.73,6.732
 00388490039,Comune di Baveno,c_a725,baveno@pec.it,3,0,3,392372,6.73,3.178
+80053570158,Consiglio Regionale della Lombardia,r_lomb,protocollo.generale@pec.consiglio.regione.lombardia.it,4,0,4,465044,6.73,2.84
 92067690054,Unione Terre del Tartufo,utdt,terredeltartufo@cert.ruparpiemonte.it,3,0,3,109522,6.72,2.548
 00366940799,Comune di Martirano,c_e990,segreteria.martirano@asmepec.it,2,0,2,978420,6.7,3.946
 84005130632,Comune di Brusciano,c_b227,protocollo@pec.comune.brusciano.na.it,3,0,3,93428,6.7,2.326
@@ -1849,7 +1843,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 00775690019,Comune di Castiglione Torinese,c_c307,comune.castiglionetorinese.to@cert.legalmail.it,3,0,3,74227,6.53,2.406
 01482570155,Comune di Usmate Velate,c_l511,protocollo.comuneusmatevelate@postecert.it,2,0,2,194313,6.52,4.134
 00197620461,Comune di Montecarlo,c_f452,comune.montecarlo@postacert.toscana.it,3,0,3,67909,6.52,2.266
-00597030238,Comune di Legnago,c_e512,legnago.vr@cert.ip-veneto.net,2,0,2,231598,6.5,3.651
 01021090319,G.I.T. GRADO IMPIANTI TURISTICI S.P.A.,,,3,0,3,63000,6.5,2.194
 93056590776,POLO MUSEALE REGIONALE DELLA BASILICATA MATERA,,,2,0,2,1145998,6.49,4.158
 04992010480,Agenzia Regionale di Sanita della Toscana,ars_tosc,ars@postacert.toscana.it,3,0,3,322665,6.49,2.696
@@ -1863,7 +1856,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 90007190342,ISTITUTO COMPRENSIVO - DI BEDONIA,istsc_pric817009,pric817009@pec.istruzione.it,1,0,0,0,6.44,6.444
 80094250158,Comune di Lacchiarella,c_e395,protocollo@pec.comune.lacchiarella.mi.it,3,0,3,284107,6.44,2.744
 80112430584,Istituto Romano di San Michele di Roma,irsm_rm,istitutoromanosanmichele@pcert.postecert.it,3,0,3,269700,6.44,2.696
-02270290907,Agenzia Regionale per La Ricerca in Agricoltura - Agris,arlra_sa,protocollo@pec.agrisricerca.it,3,0,3,269628,6.43,2.914
 00080450562,Comune di Acquapendente,c_a040,comuneacquapendente@legalmail.it,3,0,3,303139,6.43,2.724
 80001050758,Comune di Squinzano,c_i930,comunesquinzano@pec.rupar.puglia.it,3,0,3,332598,6.43,2.602
 00192320117,Comune di Sarzana,c_i449,protocollo.comune.sarzana@postecert.it,4,0,4,379000,6.42,2.754
@@ -1947,6 +1939,7 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 02788420152,Comune di Albiate,c_a159,comune.albiate@legalmail.it,3,0,3,198541,6.12,2.602
 00188530562,Comune di Vetralla,c_l814,comune.vetralla@legalmail.it,3,0,3,197113,6.12,2.594
 00196160881,Comune di Santa Croce Camerina,c_i178,protocollo@pec.comune.santa-croce-camerina.rg.it,3,0,3,201000,6.12,2.558
+80012690758,Comune di Secli',c_i559,protocollo.comune.secli@pec.rupar.puglia.it,3,0,3,224830,6.12,2.44
 81004890596,Comune di Ponza,c_g871,ufficiosegreteriaponza@pec.it,3,0,3,197984,6.11,2.456
 01866890021,Cordar S.P.A. Biella Servizi,cspab,amministrazione@pec.cordarbiella.it,2,0,2,470656,6.1,3.066
 88001410179,Comune di Leno,c_e526,protocollo@pec.comune.leno.bs.it,4,0,4,369530,6.1,2.08
@@ -1955,7 +1948,6 @@ CFAVCP-0000E51,CENTRALE UNICA DI COMMITTENZA DEL TAVOLIERE,,,3,0,3,837673,7.78,3
 80000190647,Provincia di Avellino,p_av,info@pec.provincia.avellino.it,3,0,3,239010,6.09,2.4
 80009610280,Comune di Noventa Padovana,c_f962,noventapadovana.pd@cert.ip-veneto.net,2,0,2,121680,6.08,3.876
 04207001001,FERSERVIZI SPA,,,2,0,2,497110,6.08,3.326
-01808020356,Trasporti Integrati e Logistica Srl,FY220OIG,til@pec.til.it,3,0,3,183810,6.08,2.476
 02166820510,CENTRIA SRL ,GEAFLAFK,centria.pec@cert.centria.it,4,0,4,247538,6.07,2.516
 01741410490,SCAPIGLIATO SRL,V1L5XJ8Z,segreteria@pec.scapigliato.it,5,0,5,371600,6.07,1.496
 90010080290,Consorzio Isola di Ariano per I Servizi Sociali,ciais,protocollo.ciass@legalmail.it,2,0,2,770012,6.06,3.85
@@ -1981,6 +1973,7 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 90060110476,Comune di San Marcello Piteglio,cdsmpi,comunedisanmarcellopiteglio@pec.it,3,0,3,161690,5.99,2.602
 81001290758,Comune di Racale,c_h147,affarigenerali.comune.racale@pec.rupar.puglia.it,3,0,3,188406,5.99,2.426
 00300810793,Comune di Sersale,c_i671,serviziofinanziario.sersale@asmepec.it,3,0,3,162766,5.98,2.428
+81000570283,Comune di Tombolo,c_l199,comunetombolo.pd@legalmailpa.it,3,0,3,173390,5.98,2.41
 00647320282,Comune di Este,c_d442,este.pd@legalmailpa.it,3,0,3,195610,5.98,2.368
 80008790174,Comune di Nave,c_f851,protocollo@pec.comune.nave.bs.it,3,0,3,208250,5.98,2.344
 03021250844,A.I.C.A. - AZIENDA IDRICA COMUNI AGRIGENTINI,UFUOTOVI,PEC.AICA@PEC.IT,4,0,4,236654,5.98,2.344
@@ -1990,7 +1983,6 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 01924950304,Sistema Sosta e Mobilità SpA,FOKRBVR0,ssm@legalmail.it,2,0,2,430000,5.93,3.204
 01531400339,Unione Valnure e Valchero,uvv_033,unionevalnure@legalmail.it,3,0,3,159331,5.93,2.378
 8003170661,REGIONE ABRUZZO - GIUNTA REGIONALE,,,1,0,1,843945,5.92,5.925
-84000470835,Comune di Sant'Agata di Militello,c_i199,protocollocomune.santagatadimilitello@pec.it,2,0,2,587754,5.92,3.622
 01939640015,Comune di Volvera,c_m133,comune.volvera.to@legalmail.it,3,0,3,151571,5.92,2.604
 00637560632,Comune di Massa Lubrense,c_f030,protocollo.massalubrense@pec.it,4,0,4,189225,5.92,2.572
 81000410282,Comune di Carmignano di Brenta,c_b795,carmignanodibrenta.pd@cert.ip-veneto.net,3,0,3,142700,5.92,2.428
@@ -2005,7 +1997,6 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 95140520107,FONDAZIONE ITS PER LE TECNOLOG IE DELL'INFORMAZ. E DELLA COM,RO0RVP5Z,its-ict@pec.accademiadigitaleliguria.it,5,0,5,268656,5.9,1.27
 84000730261,Comune di Cappella Maggiore,c_b678,protocollo.comune.cappellamaggiore.tv@pecveneto.it,3,0,3,152227,5.89,2.734
 93065160777,MUSEO NAZIONALE DI MATERA,,,3,0,3,149900,5.89,2.414
-95005290820,ISTRUZIONE SECONDARIA SUPERIORE - 'G. SALERNO',istsc_pais01700b,pais01700b@pec.istruzione.it,2,0,2,542153,5.88,3.55
 81003110756,Comune di Castrignano Del Capo,c_c336,protocollo.castrignanodelcapo@pec.rupar.puglia.it,3,0,3,147399,5.88,2.496
 81002850618,Comune di Casaluce,c_b9,protocollo@pec.comune.casaluce.ce.it,3,0,3,147800,5.88,2.422
 80242290585,DIREZIONE GENERALE DELLA PREVENZIONE SANITARIA MINISTERO DELLA SALUTE,,,1,0,1,807463,5.87,5.874
@@ -2037,7 +2028,7 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 00108980830,Comune di Sant'Angelo di Brolo,c_i283,comunedisantangelodibrolo@pec.it,2,0,2,380434,5.75,3.174
 84001590367,Comune di Fiorano Modenese,c_d607,comunefiorano@cert.fiorano.it,2,0,2,431177,5.74,3.352
 00297640633,Universita' degli Studi di Napoli - L'Orientale,uni_orie,ateneo@pec.unior.it,2,0,2,345225,5.74,2.926
-01608070643,Comune di Sant'Angelo Dei Lombardi,c_i281,segretario.santangelodeilombardi@asmepec.it,2,0,2,412062,5.73,3.302
+03033500277,Jtaca S.R.L. Con Socio Unico,jsrlc,jtacadirezione@legalmail.it,3,0,3,484184,5.72,3.302
 00084640838,Comune di Barcellona Pozzo di Gotto,c_a638,comunebarcellonapdg@postecert.it,3,0,3,105480,5.72,2.352
 09564630961,Agenzia del Trasporto Pubblico Locale del Bacino della Citta' Metropolitana di Milano Monza e Brianza Lodi e Pavia,agetpl,protocollo@pec.agenziatpl.it,1,0,1,700893,5.71,5.712
 97167190582,Commissione di Garanzia dell'Attuazione della Legge sullo Sciopero nei Servizi Pubblici Essenziali - CGS,cgds,segreteria@pec.commissionegaranziasciopero.it,1,0,1,697508,5.71,5.706
@@ -2046,6 +2037,7 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 80002210955,Comune di Cabras,c_b314,protocollo@pec.comune.cabras.or.it,3,0,3,101150,5.7,2.37
 03032720157,Comune di Concorezzo,c_c952,protocollo@comune.concorezzo.mb.legalmail.it,3,0,3,115474,5.69,2.294
 97653310587,Agenzia Nazionale di Valutazione del Sistema Universitario e della Ricerca,anvsu_rm,anvur@pec.anvur.it,2,0,2,262427,5.68,4.632
+92027670923,Comune di Elmas,c_d399,protocollo@pec.comune.elmas.ca.it,3,0,3,249550,5.68,2.106
 87004180581,I? RGT. ALLIEVI MARESCIALLI BRIGADIERI DEI CC - VELLETRI,,,4,0,4,188878,5.68,2.076
 97855270589,GALLERIA BORGHESE,,,5,0,5,197616,5.68,1.225
 82008410639,Comune di Boscoreale,c_b076,protocollo@pec.comune.boscoreale.na.it,2,0,2,263959,5.66,4.461
@@ -2072,7 +2064,6 @@ CFAVCP-0000D34,STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI LECCO,,,2,0,2,468295
 05397401000,Roma Metropolitane Srl,metro_rm,protocollo@pec.romametropolitane.it,3,0,3,92100,5.54,2.314
 00259290518,Comune di Civitella In Val di Chiana,c_c774,civichiana@postacert.toscana.it,2,0,2,330887,5.53,3.146
 83000990750,Comune di Otranto,c_g188,protocollo.comune.otranto@pec.rupar.puglia.it,3,0,3,81524,5.53,2.39
-97364220158,Fondazione Biblioteca Europea di Informazione e Cultura,fbeic,beic@pcert.postecert.it,2,0,2,267709,5.52,4.182
 02349420980,VALLE CAMONICA SERVIZI VENDITE S.P.A.,,,2,0,2,278800,5.52,2.76
 80034510414,Istruzione Secondaria Superiore - I.S.I.S.S. 'Tonino Guerra' Polo S. Novafeltria,istsc_rnis00300d,rnis00300d@pec.istruzione.it,2,0,2,277800,5.51,2.756
 93109350616,Autorita' di Bacino Distrettuale dell'Appennino Meridionale,abdam,protocollo@pec.distrettoappenninomeridionale.it,2,0,2,1440301,5.5,4.35
@@ -2108,7 +2099,6 @@ CFAVCP-000085B,ASSOCIAZIONE CONSORTILE TRA I COMUNI DI LOMBARDORE FELETTO FOGLIZ
 04450090966,AZIENDA SPECIALE CONSORTILE COMUNI INSIEME PER LO SVILUPPO SOCIALE,IE61ZZIA,comuni-insieme@pec.it,4,0,4,69025,5.42,2.322
 00318100096,Comune di Varazze,c_l675,protocollo.comune.varazze@pec.it,3,0,3,118933,5.42,2.056
 91017490144,Is Saraceno-romegialli,isarome,SOIS01300L@PEC.ISTRUZIONE.IT,3,0,3,121280,5.42,2.052
-00252900659,Comune di Agropoli,c_a091,protocollo@pec.comune.agropoli.sa.it,2,0,2,271654,5.41,2.974
 00343840401,Comune di Cattolica,c_c357,protocollo@comunecattolica.legalmailpa.it,2,0,2,269000,5.41,2.954
 97113430793,CONSORZIO DI BONIFICA DELLA CALABRIA,DB5H2LR5,commissariocbcalabria@pec.it,2,0,2,249912,5.41,2.742
 02918510427,ATIM - Agenzia per il Turismo e l'Internazionalizzazione delle Marche,GMXNO8SD,atim@emarche.it,2,0,2,250010,5.41,2.722
@@ -2151,6 +2141,7 @@ CFAVCP-00007DA,ASSOCIAZIONE CONSORTILE COLLINA MATERANA,,,2,0,2,261000,5.4,2.91
 02805390214,Alto Adige Riscossioni Spa,aarspa,se.aar.bz@legalmail.it,3,0,3,328971,5.3,2.714
 96532150586,Fondazione ITS Information and Communications Technology Academy,YXPSR8HK,its_ictacademy@pec.it,4,0,4,455086,5.3,1.38
 92027370755,Consorzio per L'Integrazione e L'Inclusione Sociale dell'Ambito di Maglie,clili,ambitosociale.comunemaglie@pec.rupar.puglia.it,2,0,2,252000,5.29,2.982
+00597030238,Comune di Legnago,c_e512,legnago.vr@cert.ip-veneto.net,2,0,2,231598,5.29,2.852
 82005610272,Comune di Spinea,c_i908,protocollo.comune.spinea.ve@pecveneto.it,2,0,2,226000,5.29,2.796
 82002610721,Comune di Alberobello,c_a149,protocollo@mailcert.comune.alberobello.ba.it,2,0,2,223040,5.29,2.752
 93050030910,Istituto Istruzione Superiore Satta,iissa,NUIS01900A@PEC.ISTRUZIONE.IT,2,0,2,223266,5.29,2.746
@@ -2276,7 +2267,6 @@ CFAVCP-0001289,CENTRALE UNICA DI COMMITTENZA DEL SARONNESE,,,2,0,2,220500,5.29,2
 04114400163,Agenzia di Tutela della Salute di Bergamo,atsb,protocollo@pec.ats-bg.it,2,0,2,170034,5.05,2.638
 00225910686,Comune di Pianella,c_g555,protocollo@pec.comune.pianella.pe.it,2,0,2,166742,5.05,2.602
 17840221000,ACEA ACQUA SPA,,,2,0,2,167075,5.05,2.574
-00082410812,Comune di Castellammare del Golfo,c_c130,comune.castellammare.tp@pec.it,2,0,2,166895,5.05,2.566
 00493110928,Comune di Guspini,c_e270,protocollo@pec.comune.guspini.su.it,2,0,2,166170,5.05,2.55
 02637140423,EDMA RETI GAS SRL,7OGVI29G,edmaretigas@cert.edmaretigas.it,3,0,3,247600,5.05,2.536
 00451610547,Comune di Citta' della Pieve,c_c744,comune.cittadellapieve@postacert.umbria.it,2,0,2,166957,5.05,2.53
@@ -2313,6 +2303,7 @@ CFAVCP-0001289,CENTRALE UNICA DI COMMITTENZA DEL SARONNESE,,,2,0,2,220500,5.29,2
 00145100830,Comune di Roccalumera,c_h418,protocollo@pec.comune.roccalumera.me.it,3,0,3,213924,5.0,2.62
 80016790489,Istituto Degli Innocenti di Firenze,idi_fi,istitutodeglinnocenti@pec.it,2,0,2,157339,5.0,2.594
 80004010874,Comune di Sant'Agata Li Battiati,c_i202,protocollo@pec.comune.sant-agata-li-battiati.ct.it,2,0,2,157000,5.0,2.588
+00343940839,Comune di Giardini Naxos,c_e014,protocollogiardininaxos@pec.it,3,0,3,309800,5.0,2.242
 82000670800,Comune di Taurianova,c_l063,protocollo@pec.comune.taurianova.rc.it,2,0,2,700103,4.99,3.69
 82000990919,Comune di Arzana,c_a454,comunearzana@pec.it,2,0,2,173935,4.99,2.788
 00243770872,Comune di Paterno',c_g371,ass.segreteria@cert.comune.paterno.ct.it,2,0,2,163215,4.99,2.704
@@ -2348,8 +2339,6 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 92026180791,Associazione Sistema Bibliotecario Territoriale Lametino,sbl,sblametino@pec.it,2,0,2,145000,4.95,2.474
 02481950984,CENTRO FORMATIVO PROVINCIALE GIUSEPPE ZANARDELLI,,,4,0,4,303724,4.95,1.365
 00311260095,Provincia di Savona,p_sv,protocollo@pec.provincia.savona.it,2,0,2,1578000,4.94,2.754
-93034790845,Parco Archeologico e Paesaggistico della Valle Dei Templi di Agrigento,papvta,parcovalledeitempli@pec.it,2,0,2,149500,4.94,2.63
-84004890830,Comune di Tortorici,c_l308,comune.tortorici@pec.tortorici.eu,2,0,2,147993,4.94,2.602
 02020330342,FORMA FUTURO SOCIETA' CONSORTILE A RESPONSABILITA' LIMITATA,,,2,0,2,146360,4.94,2.586
 01225000254,Comune di Borgo Valbelluna,c_m421,borgovalbelluna.bl@cert.ip-veneto.net,2,0,2,143548,4.94,2.526
 80003670561,Comune di Caprarola,c_b691,comune.caprarola@anutelpec.it,2,0,2,144250,4.94,2.518
@@ -2363,13 +2352,11 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 00294190616,Comune di San Nicola La Strada,c_i056,protocollo@pec.comune.sannicolalastrada.ce.it,2,0,2,152245,4.93,2.684
 00250930161,Comune di Gazzaniga,c_d952,protocollo@pec.comune.gazzaniga.bg.it,2,0,2,148115,4.93,2.634
 00277920096,Comune di Alassio,c_a122,comune.alassio@legalmail.it,2,0,2,143950,4.93,2.58
-12620491006,SISTEMA CAMERALE SERVIZI SOCIETA A RESPONSABILITA LIMITATA,UHDL2U81,procurement.sicamera@legalmail.it,2,0,2,145000,4.93,2.58
 80005990611,Comune di Teano,c_l083,protocollo.teano@asmepec.it,2,0,2,142645,4.93,2.506
 00056590896,Comune di Rosolini,c_h574,protocollo@pec.comune.rosolini.sr.it,2,0,2,141600,4.93,2.486
 00267790657,Comune di Fisciano,c_d615,protocollo@comunefisciano.legalmailpa.it,2,0,2,142424,4.93,2.468
 03237330232,UNI.CO.G.E. S.R.L.,,,1,0,1,2800000,4.92,4.924
 97104250580,Agenzia per la Rappresentanza Negoziale delle Pubbliche Amministrazioni - ARAN,ARNPA,protocollo@pec.aranagenzia.it,2,0,2,688835,4.92,3.734
-00659830236,Comune di Castel D'Azzano,C_C078,casteldazzano@legalmail.it,2,0,2,142948,4.92,2.594
 02156160125,COINGER SRL,MTAD8L03,COINGER@PEC.IT,2,0,2,142200,4.92,2.568
 80000270944,Comune di Venafro,c_l725,protocollo@pec.comune.venafro.is.it,2,0,2,141000,4.92,2.5
 80001990201,Comune di Schivenoglia,c_i532,comune.schivenoglia@pec.regione.lombardia.it,2,0,2,140000,4.92,2.46
@@ -2390,7 +2377,6 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 03792380283,Infrastrutture Venete S.R.L.,ivsrl,info@pec.infrastrutturevenete.it,2,0,2,135827,4.9,2.48
 80002150623,Comune di Foglianise,c_d644,protocollo@pec.comune.foglianise.bn.it,2,0,2,135280,4.9,2.468
 93062360842,ISTITUTO COMPRENSIVO - I. C. GAETANO GUARINO,istsc_agic85900b,agic85900b@pec.istruzione.it,2,0,2,136708,4.9,2.452
-00512430307,Opera Pia Coianiz,coianiz,operapiacoianiz@pec.it,2,0,2,169419,4.89,2.842
 91068360907,PROVINCIA GALLURA NORD EST SARDEGNA,WBMNADVC,protocollo@pec.provincia.galluranordestsardegna.it,2,0,2,155991,4.89,2.756
 00198010746,COMUNE DI SAN PANCRAZIO SALENTINO,,,2,0,2,138315,4.89,2.578
 01110410196,AZIENDA FARMACEUTICA MUNICIPALE SRL IN ACRONIMO A.F.M. S.R.L.,,,2,0,2,137320,4.89,2.576
@@ -2414,7 +2400,6 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 83003380157,Comune di Veduggio Con Colzano,c_l709,comune.veduggio@legalmail.it,2,0,2,132227,4.88,2.506
 80001380866,Comune di Catenanuova,c_c353,info@pec.comune.catenanuova.en.it,2,0,2,131897,4.88,2.5
 93003530750,Comune di Monteroni di Lecce,c_f604,protocollogenerale.comune.monteroni@pec.rupar.puglia.it,2,0,2,133500,4.88,2.498
-83010560155,ISTRUZIONE SECONDARIA SUPERIORE - CARLO EMILIO GADDA,istsc_miis04100t,miis04100t@pec.istruzione.it,2,0,2,133390,4.88,2.49
 01014880296,Comune di Porto Viro,c_g926,comune.portoviro@cert.legalmail.it,2,0,2,132000,4.88,2.472
 80003450592,Comune di Aprilia,c_a341,protocollogenerale@pec.comune.aprilia.lt.it,2,0,2,2562950,4.88,2.466
 01573560016,Comune di Volpiano,c_m122,protocollo@pec.comune.volpiano.to.it,2,0,2,132450,4.88,2.444
@@ -2439,6 +2424,7 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 00414200238,Comune di Caprino Veronese,c_b709,comune.caprinoveronese.vr@pecveneto.it,2,0,2,130306,4.86,2.51
 00792090524,SI.GE.RI.CO. - S.p.A.,sipspa,segreteria@pec.sigericospa.it,3,0,3,178699,4.86,2.506
 80003190073,Unione Dei Comuni Valdostani Grand Combin,ucgc,protocollo@pec.cm-grandcombin.vda.it,2,0,2,128277,4.86,2.478
+01808020356,Trasporti Integrati e Logistica Srl,FY220OIG,til@pec.til.it,3,0,3,183810,4.86,2.476
 80025760820,Comune di San Giuseppe Jato,c_h933,comunesangiuseppejato@pec.it,2,0,2,128904,4.86,2.47
 00333890093,Comune di Albissola Marina,c_a165,comunealbissolamarina@legalmail.it,2,0,2,127240,4.86,2.44
 00420010480,Comune di Sesto Fiorentino,c_i684,protocollo@pec.sesto-fiorentino.net,3,0,3,236909,4.86,2.272
@@ -2581,6 +2567,7 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 97914140583,COMMISSARIO STRAORDINARIO DI GOVERNO RICOSTRUZIONE SISMA 24 AGOSTO 2016,,,2,0,2,104116,4.73,2.388
 81002970754,Comune di Alessano,c_a184,comune.alessano.le@pec.rupar.puglia.it,2,0,2,104800,4.73,2.368
 00905560728,Comune di Locorotondo,c_e645,protocollo.comune.locorotondo@pec.rupar.puglia.it,2,0,2,104860,4.73,2.366
+95005290820,ISTRUZIONE SECONDARIA SUPERIORE - 'G. SALERNO',istsc_pais01700b,pais01700b@pec.istruzione.it,2,0,2,542153,4.72,3.55
 00545580268,Comune di San Pietro di Feletto,c_i103,segreteria.comune.sanpietrodifeletto.tv@pecveneto.it,2,0,2,114153,4.72,2.602
 04672600659,Comunita' Montana Bussento - Lambro e Mingardo,cmbl_065,info@pec.cmbussento.it,2,0,2,103385,4.72,2.426
 00210430021,Comune di Borgosesia,c_b041,protocollo.borgosesia@cert.ruparpiemonte.it,2,0,2,102836,4.72,2.418
@@ -2633,7 +2620,6 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 02216751202,UNIFLOTTE SRL,,,2,0,2,97200,4.69,2.348
 00472320654,Comune di Amalfi,C_A251,amalfi@asmepec.it,2,0,2,97745,4.69,2.348
 01153330509,Geofor Spa,geofor,geofor@legalmail.it,4,0,4,228282,4.69,1.378
-00555180652,Comune di Montecorvino Pugliano,c_f480,protocollo.montecorvinopugliano@pec.it,2,0,2,96040,4.68,2.38
 00620980656,Comune di Giffoni Valle Piana,c_e027,protocollogiffonivallepiana@pec.it,2,0,2,95276,4.68,2.376
 82002850285,Comune di Sant'Elena,c_i319,santelena.pd@cert.ip-veneto.net,2,0,2,96450,4.68,2.364
 84503780151,Comune di Casalmaiocco,c_b899,comune.casalmaiocco@pec.it,3,0,3,143000,4.68,2.352
@@ -2665,7 +2651,6 @@ CFAVCP-0001CC2,CUC DELLA MEDIA VALLE CRATI,,,2,0,2,155534,4.99,2.602
 82000950715,Comune di Lucera,c_e716,comune.lucera@anutelpec.it,2,0,2,91389,4.65,2.35
 03216400212,Multiservizi Vipiteno Srl.,VPYML80H,multiservizivipiteno@pec.it,2,0,2,90074,4.65,2.35
 81005970215,Comune di Vipiteno,c_m067,sterzing.vipiteno@legalmail.it,2,0,2,90073,4.65,2.35
-00548040302,Comune di Manzano,c_e899,comune.manzano@certgov.fvg.it,2,0,2,98884,4.64,2.552
 85001150821,Comune di Prizzi,c_h070,comunediprizzi.protocollo@certificata.com,2,0,2,90960,4.64,2.424
 91031030199,FORMAZIENDA - FONDO PARITETICO INTERPROFESSIONALE,,,2,0,2,91320,4.64,2.422
 93216480231,Consorzio di Bonifica Veronese,Z6I5EVZ8,consorzio@pec.bonificaveronese.it,2,0,2,88965,4.64,2.346
@@ -2911,6 +2896,7 @@ CFAVCP-00007C5,"ASSOCIAZIONE CONSORTILE TRA I COMUNI DI LAGO, AIELLO CALABRO, SE
 90017990160,Unione Comuni della Presolana,uc_preso,unionecomuni.presolana@pec.regione.lombardia.it,2,0,2,16330,4.14,2.072
 01511410019,Comune di Druento,c_kz5n,comune.druento.to@legalmail.it,2,0,2,16584,4.14,2.07
 81000570192,Comune di Calvatone,c_b439,comune.calvatone@pec.regione.lombardia.it,3,0,3,28277,4.14,2.054
+97364220158,Fondazione Biblioteca Europea di Informazione e Cultura,fbeic,beic@pcert.postecert.it,2,0,2,267709,4.13,2.788
 80006830873,Comune di Gravina di Catania,c_e156,comune.gravina-di-catania@legalmail.it,2,0,2,277000,4.13,2.756
 80203690583,CONSERVATORIO DI MUSICA S. CECILIA di Roma,csm_058,conservatorioroma@postecert.it,2,0,2,15568,4.13,2.08
 84005780543,Consorzio B.I.M. Nera e Velino,cbim,postacertificata@pec-bimcascia.com,2,0,2,15660,4.13,2.078
@@ -2923,6 +2909,7 @@ CFAVCP-00007C5,"ASSOCIAZIONE CONSORTILE TRA I COMUNI DI LAGO, AIELLO CALABRO, SE
 91139640592,Liceo Artistico Statale,larts,LTSL02000C@PEC.ISTRUZIONE.IT,2,0,2,13828,4.12,2.058
 08462090013,CONSORZIO PIEMONTESE PER LA PREVENZIONE E REPRESSIONE DEL DOPING,,,2,0,2,243000,4.11,2.954
 00243280120,Comune di Malnate,c_e863,comune.malnate@legalmail.it,2,0,2,262455,4.11,2.76
+84000470835,Comune di Sant'Agata di Militello,c_i199,protocollocomune.santagatadimilitello@pec.it,2,0,2,587754,4.11,2.298
 80004030070,Unione dei Comuni Valdostani Valdigne-Mont-Blanc,udcvvmb,protocollo@pec.cm-valdigne.vda.it,2,0,2,13520,4.11,2.078
 80003060797,Convitto Nazionale Galluppi - Catanzaro,istsc_czvc01000a,czvc01000a@pec.istruzione.it,2,0,2,13032,4.11,2.062
 80030320958,Comune di Pau,c_g379,protocollo.pau@legalmail.it,2,0,2,12936,4.11,2.062
@@ -2934,6 +2921,7 @@ CFAVCP-00007C5,"ASSOCIAZIONE CONSORTILE TRA I COMUNI DI LAGO, AIELLO CALABRO, SE
 93122280428,ISTRUZIONE SECONDARIA SUPERIORE - L.DI SAVOIA - G. BENINCASA,istsc_anis01200g,anis01200g@pec.istruzione.it,2,0,2,12600,4.11,2.054
 93222570231,AREA TECNOLOGICA DELLA MOBILIT A' SOST LOG E SERV INNOV,,,3,0,3,437154,4.11,1.485
 00328710025,Comune di Valduggia,c_l566,valduggia@cert.ruparpiemonte.it,2,0,2,11324,4.1,2.05
+01608070643,Comune di Sant'Angelo Dei Lombardi,c_i281,segretario.santangelodeilombardi@asmepec.it,2,0,2,412062,4.08,2.428
 00398190249,Comune di Valli del Pasubio,c_l624,vallidelpasubio.vi@cert.ip-veneto.net,2,0,2,9987,4.08,2.07
 03436480127,AGESP ATTIVITA' STRUMENTALI S.R.L.,,,2,0,2,9054,4.08,2.07
 90089480322,ISTITUTO COMPRENSIVO - IST.COMPR. 'DANTE ALIGHIERI',istsc_tsic80800l,tsic80800l@pec.istruzione.it,3,0,3,10438,4.08,2.07
@@ -2962,12 +2950,12 @@ CFAVCP-00007C5,"ASSOCIAZIONE CONSORTILE TRA I COMUNI DI LAGO, AIELLO CALABRO, SE
 06888240725,Agenzia per Il Diritto allo Studio Universitario di Puglia,adisu,direzionegenerale@pec.adisupuglia.it,1,0,1,850000,3.96,3.956
 00276370244,Comune di Rosa',c_h556,protocollo.comune.rosa.vi@pecveneto.it,2,0,2,202296,3.96,2.724
 87000270584,Comune di Lariano,c_h432,protocollo@pec.comune.lariano.rm.it,2,0,2,196704,3.95,2.746
-92024600923,Sardegna Ricerche,sr_,protocollo@cert.sardegnaricerche.it,1,0,1,105300,3.94,3.936
 91031610925,Provincia del Medio Campidano,K8OW8ODY,protocollo@cert.provincia.mediocampidano.it,2,0,2,189520,3.93,2.72
 80003770049,Comune di Limone Piemonte,C_E597,comune.limonepiemonte.cn@legalmail.it,3,0,3,316523,3.93,1.372
 80047410107,ISTITUTO COMPRENSIVO - I.C. SESTRI,istsc_geic83900x,geic83900x@pec.istruzione.it,1,0,1,812874,3.92,3.92
 93112080663,Agenzia Regionale di Protezione Civile Regione Abruzzo,JZXL7734,apc@pec.regione.abruzzo.it,2,0,2,187000,3.92,2.742
 91133270156,FONDAZIONE ISTITUTO TECNICO SUPERIORE PER LO SVILUPPO DEL SISTEMA CASA NEL MADE IN ITALY ROSARIO MESSINA,4C88A8DV,fondazioneits.legnoarredo@pec.it,2,0,2,204340,3.92,2.608
+00252900659,Comune di Agropoli,c_a091,protocollo@pec.comune.agropoli.sa.it,2,0,2,271654,3.92,2.434
 03351920156,Comune di Vanzago,c_l665,comune.vanzago@pec.regione.lombardia.it,2,0,2,190320,3.91,2.676
 00466330305,Comune di Aiello del Friuli,c_a103,comune.aiellodelfriuli@certgov.fvg.it,1,0,1,794000,3.9,3.902
 CFAVCP-0001028,C.U.C. RHO,,,1,0,1,789000,3.9,3.898
@@ -2982,7 +2970,6 @@ CFAVCP-0001028,C.U.C. RHO,,,1,0,1,789000,3.9,3.898
 80009280720,COMANDO BRIGATA MECCANIZZATA PINEROLO,,,2,0,2,168970,3.87,2.826
 00299340174,BANCO NAZIONALE DI PROVA PER LE ARMI DA FUOCO PORT. E PER LE MUNIZ. C.,,,2,0,2,186000,3.87,2.602
 83001630728,Comune di Bisceglie,c_a883,protocollogenerale@cert.comune.bisceglie.bt.it,3,0,3,285528,3.87,1.31
-80010170266,Comune di Preganziol,c_h022,protocollo.comune.preganziol.tv@pecveneto.it,1,0,1,92978,3.86,3.858
 00325950020,Comune di Santhia',c_i337,protocollo@pec.comune.santhia.vc.it,2,0,2,166546,3.86,2.786
 02517840399,Asp della Romagna Faentina,adrf,aspromagnafaentina@pec.it,3,0,3,301461,3.86,1.434
 80032710651,Comune di Baronissi,c_a674,prot.comune.baronissi.sa@pec.it,2,0,2,164560,3.85,2.686
@@ -2999,6 +2986,7 @@ CFAVCP-0001297,CUC MONOPOLI - FASANO,,,1,0,1,728000,3.84,3.836
 00098290323,S.P.A. Autovie Venete,avspa,protocollo@pec.autovie.it,3,0,3,265800,3.82,1.295
 02021620063,AZIENDA RIFIUTI ALESSANDRINA SPA,2YOQHVIP,aral-spa@legalmail.it,2,0,2,151500,3.81,2.748
 03074540927,ITS Città Metropolitana S.c. a r.l.,TFVPU31K,itscittametropolitana@legalmail.it,2,0,2,150958,3.81,2.742
+00082410812,Comune di Castellammare del Golfo,c_c130,comune.castellammare.tp@pec.it,2,0,2,166895,3.81,2.566
 86000590785,Comune di San Pietro in Amantea,c_i108,sindaco.sanpietroinamantea@asmepec.it,2,0,2,188292,3.81,2.484
 80000030900,Consorzio di Bonifica della Nurra - Sassari,cbns_ss,consorzio.nurra@tiscalipec.it,2,0,2,423322,3.81,2.104
 00867240145,CENTRO DI FORMAZIONE PROFESSIONALE,,,2,0,2,152370,3.8,2.676
@@ -3007,6 +2995,7 @@ CFAVCP-0001297,CUC MONOPOLI - FASANO,,,1,0,1,728000,3.84,3.836
 80006770871,Regione Siciliana Ersu Universita Degli Studi di Catania,rseu_087,protocollo@pec.ersucatania.it,2,0,2,239978,3.8,2.334
 82003650486,Comune di Cerreto Guidi,c_c529,comune.cerreto-guidi@postacert.toscana.it,3,0,3,262382,3.8,1.353
 00119580439,Comune di San Severino Marche,c_i158,protocollo.comune.sanseverinomarche@pec.it,2,0,2,151524,3.79,2.63
+93034790845,Parco Archeologico e Paesaggistico della Valle Dei Templi di Agrigento,papvta,parcovalledeitempli@pec.it,2,0,2,149500,3.79,2.63
 00397740879,Comune di Zafferana Etnea,c_m139,protocollo@pec.comune.zafferana-etnea.ct.it,2,0,2,167700,3.79,2.532
 83001710173,Comunita' Montana di Valle Trompia,cm_vatro,protocollo@pec.cm.valletrompia.it,3,0,3,255957,3.79,1.312
 00337870406,ROMAGNA ACQUE - SOCIETA' DELLE FONTI SPA,NNGPJP3R,mail@pec.romagnacque.it,2,0,2,147920,3.78,2.628
@@ -3016,6 +3005,7 @@ CFAVCP-00010C3,CENTRALE UNICA DI COMMITTENZA - COMUNI ASSOCIATI ACRI - BISIGNANO
 80000930901,"Camera di  Commercio, Industria, Artigianato e Agricoltura Nord Sardegna  ",cciaa_ss,cciaa@ss.legalmail.camcom.it,2,0,2,141989,3.77,2.696
 10811500155,Amga Legnano S.P.A.,alspa,info@pec.amga.it,2,0,2,172000,3.77,2.472
 10319310016,Infratrasporti.To S.r.l.,BMY560IX,INFRATRASPORTITOSRL@LEGALMAIL.IT,2,0,2,182768,3.77,2.424
+00214810046,Comune di Fossano,c_d742,fossano@cert.ruparpiemonte.it,3,0,3,243000,3.76,1.312
 00376610929,Comune di Iglesias,c_e281,protocollo.comune.iglesias@pec.it,2,0,2,136965,3.75,2.742
 80004060812,Comune di Buseto Palizzolo,c_b288,comunebusetopalizzolo@legalmailpa.it,2,0,2,140021,3.75,2.614
 00681530168,Comune di Azzano San Paolo,C_A528,comuneazzanosanpaolo@pec.it,2,0,2,141100,3.75,2.598
@@ -3029,6 +3019,7 @@ CFAVCP-00010C3,CENTRALE UNICA DI COMMITTENZA - COMUNI ASSOCIATI ACRI - BISIGNANO
 83003560154,Comune di Renate,c_h233,comune.renate@legalmail.it,2,0,2,153357,3.74,2.494
 82001410164,Comune di Brembate di Sopra,c_b138,pec@pec.comune.brembatedisopra.bg.it,2,0,2,170828,3.74,2.428
 80062130010,"Camera di Commercio, Industria, Artigianato e Agricoltura di Torino",cciaa_to,protocollo.generale@to.legalmail.camcom.it,2,0,2,204692,3.74,2.332
+02270290907,Agenzia Regionale per La Ricerca in Agricoltura - Agris,arlra_sa,protocollo@pec.agrisricerca.it,3,0,3,269628,3.74,1.457
 97151870587,Ente Nazionale di Previdenza e Assistenza della Professione Infermieristica - ENPAPI,enpapi,info@pec.enpapi.it,3,0,3,237000,3.74,1.33
 00260880224,Civica di Trento,ct,amministrazione@pec.civicatnapsp.it,1,0,1,75927,3.73,3.735
 82000870889,Comune di Comiso,C_C927,protocollo@pec.comune.comiso.rg.it,2,0,2,142259,3.73,2.534
@@ -3053,7 +3044,6 @@ CFAVCP-00010C3,CENTRALE UNICA DI COMMITTENZA - COMUNI ASSOCIATI ACRI - BISIGNANO
 00309310126,Comune di Ispra,c_e367,protocollo.ispra@pec.it,2,0,2,136880,3.68,2.452
 01790440885,IBLEA ACQUE SPA SOCIETA' PER AZIONI IN HOUSE  ,R19165TC,iblea.acque@pec.it,3,0,3,218233,3.68,1.36
 00387320443,"Consorzio di Sviluppo Industriale Delle Valli del Tronto, dell'Aso e del Tesino",csidv_44,info@pec.picenoconsind.com,3,0,3,207128,3.68,1.247
-80125290157,ISTITUTO COMPRENSIVO - RICCARDO MASSA,istsc_miic8c300p,miic8c300p@pec.istruzione.it,2,0,2,116735,3.67,2.658
 01875940023,Consorzio per La Attivita Socio Assistenziale,clasa,segreteria@pec.consorziocasa.it,2,0,2,113071,3.66,2.64
 00135350197,Comune di Pandino,c_g306,protocollo.comune.pandino@pec.it,2,0,2,115203,3.66,2.558
 03959000278,CONSORZIO DI BONIFICA VENETO ORIENTALE,8JIS2RBA,consorzio@pec.bonificavenetorientale.it,2,0,2,135000,3.66,2.434
@@ -3069,6 +3059,7 @@ CFAVCP-00010C3,CENTRALE UNICA DI COMMITTENZA - COMUNI ASSOCIATI ACRI - BISIGNANO
 00348990789,Comune di Montalto Uffugo,c_f416,protocollo.montaltouffugo@certificatamail.it,2,0,2,115800,3.64,2.494
 00395920788,Comune di Celico,c_c430,postmaster@pec.comunedicelico.it,2,0,2,126211,3.64,2.428
 00227400124,Comune di Caravate,c_b732,comunecaravate@legalmail.it,2,0,2,126624,3.64,2.424
+84004890830,Comune di Tortorici,c_l308,comune.tortorici@pec.tortorici.eu,2,0,2,147993,3.64,2.34
 80010090282,Comune di Saonara,c_i418,protocollo@pec.comune.saonara.pd.it,2,0,2,109972,3.63,2.532
 81000160465,Comune di Gallicano,c_d874,comunegallicano@postacert.toscana.it,2,0,2,118600,3.63,2.464
 84503820155,Comune di San Colombano al Lambro,c_h803,comune.sancolombano@cert.saga.it,2,0,2,125000,3.63,2.42
@@ -3080,6 +3071,7 @@ CFAVCP-00010C3,CENTRALE UNICA DI COMMITTENZA - COMUNI ASSOCIATI ACRI - BISIGNANO
 CFAVCP-0000DAE,CENTRALE UNICA DI COMMITTENZA DEI COMUNI DI TORRE DEL GRECO E TRECASE,,,1,0,1,61432,3.62,3.624
 00901220723,Comune di Sammichele di Bari,c_fu3v,protocollo.sammichele@pec.egovba.it,2,0,2,105223,3.62,2.586
 00033120437,Comune di Matelica,c_f051,protocollo.comunematelica@pec.it,2,0,2,107950,3.62,2.54
+00659830236,Comune di Castel D'Azzano,C_C078,casteldazzano@legalmail.it,2,0,2,142948,3.62,2.322
 03453020657,Sistemi Salerno - Servizi Idrici S.p.A.,FWSG90QR,segreteria.serviziidrici@pec.grupposistemisalerno.it,3,0,3,204172,3.62,1.351
 80238390589,SEGRETARIATO GENERALE DELLA DIFESA -DIREZIONE NAZIONALE ARMAMENTI-DIREZIONE ARMAMENTI AERONAUTICI,,,1,0,1,539931,3.61,3.612
 00361970833,Comune di Furci Siculo,c_d824,protocollo@pec.comune.furcisiculo.me.it,2,0,2,121650,3.61,2.396
@@ -3103,7 +3095,6 @@ CFAVCP-0000DAE,CENTRALE UNICA DI COMMITTENZA DEI COMUNI DI TORRE DEL GRECO E TRE
 01007980079,TRAFORO DEL MONTE BIANCO - GEIE ,Q0BPQMCH,geie-tmb@pec.tunnelmb.com,2,0,2,111492,3.58,2.384
 80009830730,Comune di Laterza,c_e469,comunelaterza@pec.rupar.puglia.it,2,0,2,119000,3.58,2.352
 02278540428,ANCONA ENTRATE SRL,JLZC54RX,anconaentrate@pec.anconaentrate.it,1,0,1,510000,3.57,3.57
-80001490871,Comune di Adrano,c_a056,protocollo@pec.comune.adrano.ct.it,2,0,2,95100,3.57,2.508
 85003190015,Comune di None,c_f931,protocollo@pec.comune.none.to.it,2,0,2,96978,3.57,2.468
 09854681005,ASA SERVIZI S.R.L.,,,2,0,2,109000,3.57,2.386
 90013810818,Comune di Gibellina,c_e023,protocollo@pec.comune.gibellina.tp.it,2,0,2,117180,3.57,2.348
@@ -3119,6 +3110,7 @@ CFAVCP-0000DAE,CENTRALE UNICA DI COMMITTENZA DEI COMUNI DI TORRE DEL GRECO E TRE
 00338010127,Comune di Besozzo,c_a826,comune.besozzo.va@halleycert.it,2,0,2,90000,3.54,2.464
 82000370013,Comune di Pino Torinese,c_g678,protocollo@cert.comune.pinotorinese.to.it,2,0,2,107342,3.54,2.344
 80002210070,Ente Parco Nazionale Gran Paradiso,pr_grpan,fatturazione@pec.pngp.it,2,0,2,86800,3.53,2.488
+00555180652,Comune di Montecorvino Pugliano,c_f480,protocollo.montecorvinopugliano@pec.it,2,0,2,96040,3.53,2.38
 96013940224,UNIVERSITA' POPOLARE TRENTINA - SCUOLA DELLE PROFESSIONI PER IL TERZIARIO,,,2,0,2,97000,3.53,2.38
 80004430569,Comune di Bassano Romano,c_a704,bassanoromano@legalmail.it,2,0,2,98800,3.53,2.366
 82001290756,Comune di Galatone,c_d863,protocollo.comune.galatone@pec.rupar.puglia.it,2,0,2,99908,3.53,2.354
@@ -3156,6 +3148,7 @@ CFAVCP-0000944,CENTRALE DI COMMITTENZA VALLE SPOLETANA E VALNERINA,,,1,0,1,45000
 88000590179,Comune di Dello,c_d270,protocollo@pec.comune.dello.bs.it,2,0,2,88164,3.47,2.308
 00853850105,Comune di Serra Ricco,c_jz4m,comune.serraricco.ge@pec.it,2,0,2,137257,3.47,2.124
 92002770623,Provincia di Benevento,p_bn,protocollo.generale@pec.provincia.benevento.it,2,0,2,149181,3.47,2.092
+00512430307,Opera Pia Coianiz,coianiz,operapiacoianiz@pec.it,2,0,2,169419,3.47,2.05
 00308110139,Comune di Fino Mornasco,c_d605,comune.finomornasco.co@halleycert.it,1,0,1,42694,3.46,3.462
 83503550150,Comune di Rodano,c_h470,comune.rodano@pec.regione.lombardia.it,1,0,1,42045,3.46,3.456
 00698340288,Comune di Bagnoli di Sopra,C_A568,comune@pec.comune.bagnoli.pd.it,2,0,2,72049,3.46,2.436
@@ -3225,9 +3218,9 @@ CFAVCP-0000F0C,CENTRALE UNICA DI COMMITTENZA COMUNI DI BUSTO ARSIZIO E GALLARATE
 CFAVCP-000101D,CUC DEI COMUNI DI CAROLEI CASTROLIBERO CERISANO DOMANICO DIPIGNANO MARANO MARCHESATO MARANO PRINCIPATO MENDICINO PATERNO CALABRO,,,1,0,1,376517,3.36,3.356
 01875020016,Comune di San Benigno Canavese,c_h775,sanbenigno@pec.comune.sanbenignocanavese.to.it,2,0,2,52500,3.36,2.332
 81000510206,Comune di Casaloldo,c_b907,comune.casaloldo@pec.regione.lombardia.it,2,0,2,86340,3.36,2.132
+00548040302,Comune di Manzano,c_e899,comune.manzano@certgov.fvg.it,2,0,2,98884,3.36,2.084
 82007910639,Comune di Pimonte,c_g670,protocollo.pimonte@asmepec.it,1,0,1,373802,3.35,3.352
 00255510901,Comune di Aglientu,c_h848,protocollo@pec.comune.aglientu.ot.it,2,0,2,52683,3.35,2.32
-80013870177,"Camera di Commercio, Industria, Artigianato e Agricoltura di Brescia",cciaa_bs,camera.brescia@bs.legalmail.camcom.it,2,0,2,52851,3.35,2.306
 80094490150,COMANDO REGIONE CARABINIERI LOMBARDIA,,,2,0,2,55069,3.35,2.298
 80000110439,Comune di Appignano,c_a334,comune.appignano@emarche.it,2,0,2,84550,3.35,2.122
 00832210173,Comune di Lonato del Garda,c_e667,protocollo@pec.comune.lonato.bs.it,2,0,2,103500,3.35,2.054
@@ -3488,7 +3481,6 @@ CFAVCP-0001332,CENTRALE UNICA DI COMMITTENZA CAPOFILA COMUNE DI VIZZINI,,,1,0,1,
 00436640205,Comune di Castellucchio,c_c195,comune.castellucchio@pec.regione.lombardia.it,1,0,1,121992,2.69,2.692
 00417290038,Comune di Gozzano,c_e120,comune@cert.comune.gozzano.no.it,1,0,1,121992,2.69,2.692
 CFAVCP-00010D1,"CENTRALE UNICA DI COMMITTENZA FRA I COMUNI DI RUTIGLIANO, NOICATTARO E MOLA DI BARI",,,1,0,1,121992,2.69,2.692
-00278200795,Comune di Serra San Bruno,c_l639,info@pec.comune.serrasanbruno.vv.it,1,0,1,121992,2.69,2.692
 82002660676,Comune di Sant'Omero,c_067039,protocollo@pec.comune.santomero.te.it,1,0,1,121992,2.69,2.692
 80006290607,Comune di Serrone,c_i669,info@pec.comune.serrone.fr.it,1,0,1,121893,2.69,2.692
 80010070284,Comune di Sant'Angelo di Piove di Sacco,c_i275,santangelodipiovedisacco.pd@cert.ip-veneto.net,1,0,1,121728,2.69,2.692
@@ -3564,7 +3556,6 @@ CFAVCP-0000F4A,CENTRALE UNICA DI COMMITTENZA COMUNE DI VILLAFRANCA DI VERONA E C
 97336280157,MINISTERO DELLO SVILUPPO ECONOMICO-COMUNICAZIONI ISPETTORATO TERRITORIALE LOMBARDIA,,,1,0,1,109000,2.64,2.64
 91224620376,MINISTERO SVILUPPO ECONOMICO - DIP.COMUNICAZIONI-ISPETTORATO TERR.LE EMILIA ROMAGNA,,,1,0,1,109000,2.64,2.64
 01087440192,REI - REINDUSTRIA INNOVAZIONE S.C.R.L.,,,1,0,1,108995,2.64,2.64
-01526860281,Comune di Campo San Martino,c_b564,camposanmartino.pd@cert.ip-veneto.net,1,0,1,108136,2.64,2.636
 92088920282,Fondazione S.S.P. - Scuola Sanità Pubblica,VP2BPLBA,fondazionessp@legalmail.it,1,0,1,108000,2.64,2.636
 81000470690,Comune di Atessa,c_a485,comunediatessa@pec.it,1,0,1,108000,2.64,2.636
 80010200758,Comune di Lizzanello,c_e629,protocollo.lizzanello@pec.rupar.puglia.it,1,0,1,107840,2.64,2.636
@@ -3585,10 +3576,10 @@ CFAVCP-0000F4A,CENTRALE UNICA DI COMMITTENZA COMUNE DI VILLAFRANCA DI VERONA E C
 96020670822,Unione 'Madonie',udpdis,unionemadonie@pec.comeg.it,1,0,1,105000,2.62,2.624
 00605540103,Comune di Recco,c_h212,protocollo@pec.comune.recco.ge.it,1,0,1,105000,2.62,2.624
 02910070164,Agenzia per Lo Sviluppo e La Promozione Turistica della Provincia di Bergamo Scrl,alslptpb,turismobergamo@registerpec.it,1,0,1,104959,2.62,2.624
+92024600923,Sardegna Ricerche,sr_,protocollo@cert.sardegnaricerche.it,1,0,1,105300,2.62,2.624
 80004610202,Comune di San Giorgio Bigarello,c_h883,comune.sangiorgio-bigarello@pec.regione.lombardia.it,1,0,1,105303,2.62,2.624
 82003170279,Comune di Martellago,c_e980,comune.martellago.ve@pecveneto.it,1,0,1,104851,2.62,2.622
 01912970389,Comune di Fiscaglia,c_m323,COMUNE.FISCAGLIA@CERT.COMUNE.FISCAGLIA.FE.IT,1,0,1,104800,2.62,2.622
-97196850586,ISTRUZIONE SECONDARIA SUPERIORE - CARLO URBANI,istsc_rmis03300b,rmis03300b@pec.istruzione.it,1,0,1,104750,2.62,2.622
 84000580187,ISTRUZIONE SECONDARIA SUPERIORE - FARAVELLI - STRADELLA,istsc_pvis007004,pvis007004@pec.istruzione.it,1,0,1,104741,2.62,2.622
 05166621218,Asmenet Soc. Cons. Arl,asca,asmecam@asmepec.it,1,0,1,104805,2.62,2.622
 01476930548,So.Ge.Pu. Spa,sgps,fatturazione@sogepu.it,1,0,1,104400,2.62,2.62
@@ -3626,7 +3617,6 @@ CFAVCP-0000F4A,CENTRALE UNICA DI COMMITTENZA COMUNE DI VILLAFRANCA DI VERONA E C
 81001410281,ISTRUZIONE SECONDARIA SUPERIORE - IIS MEUCCI-CITTADELLA,istsc_pdis018003,pdis018003@pec.istruzione.it,1,0,1,100000,2.6,2.602
 00356080440,Comune di Acquasanta Terme,c_a044,comune.acquasantaterme@anutelpec.it,1,0,1,100000,2.6,2.602
 97639830013,Agenzia della mobilita' Piemontese,amm_to,mtm.torino@cert.ruparpiemonte.it,1,0,1,100000,2.6,2.602
-00658760236,Comune di Povegliano Veronese,c_g945,poveglianoveronese.vr@cert.ip-veneto.net,1,0,1,99993,2.6,2.602
 04110220409,Comune di Poggio Torriana,c_m324,comune.poggiotorriana@legalmail.it,1,0,1,99993,2.6,2.602
 82001130770,Comune di Nova Siri,c_a942,comune.novasiri@cert.ruparbasilicata.it,1,0,1,99993,2.6,2.602
 00318760246,Comune di Brendola,c_b143,comune.brendola.vi@pecveneto.it,1,0,1,99993,2.6,2.602
@@ -3715,6 +3705,7 @@ CFAVCP-0000E83,CUC DI PIETRAPERZIA E VALGUARNERA,,,1,0,1,94000,2.58,2.576
 00462070871,Comune di Calatabiano,c_b384,protocollo@pec.comune.calatabiano.ct.it,1,0,1,93152,2.57,2.572
 00088870563,Comune di Montefiascone,c_f499,protocollo@pec.comune.montefiascone.vt.it,1,0,1,93152,2.57,2.572
 91091240118,Autorita' di Sistema Portuale del Mar Ligure Orientale,aspmlo,protocollo@pec.adspmarligureorientale.it,1,0,1,93000,2.57,2.572
+80010170266,Comune di Preganziol,c_h022,protocollo.comune.preganziol.tv@pecveneto.it,1,0,1,92978,2.57,2.572
 07239020014,Consorzio Intercomunale Servizi Socio Assistenziali di Pianezza,cissa_pi,protocollo.cissa@pec.it,1,0,1,92900,2.57,2.57
 94000290166,Comune di Zogno,c_m184,info@pec.comune.zogno.bg.it,1,0,1,92420,2.57,2.568
 00221880651,Comune di Nocera Inferiore,c_f912,protocollo@pec.comune.nocera-inferiore.sa.it,1,0,1,92376,2.57,2.568
@@ -3737,7 +3728,6 @@ CFAVCP-0000E83,CUC DI PIETRAPERZIA E VALGUARNERA,,,1,0,1,94000,2.58,2.576
 80005080769,ISTITUTO PROFESSIONALE INDUSTRIA E ARTIGIANATO - POTENZA,istsc_pzri04000c,pzri04000c@pec.istruzione.it,1,0,1,90900,2.56,2.562
 96104100589,LICEO SCIENTIFICO - PRIMO LEVI,istsc_rmps520003,rmps520003@pec.istruzione.it,1,0,1,90621,2.56,2.56
 81001870617,Comune di Teverola,c_l155,protocollo.teverola@pec.it,1,0,1,90616,2.56,2.56
-82000390292,Comune di Badia Polesine,c_a539,segreteria.comune.badiapolesine.ro@pecveneto.it,1,0,1,90500,2.56,2.56
 80001890740,ISTITUTO PROFESSIONALE PER I SERVIZI SOCIALI - IPSSS -MORVILLO FALCONE-BR,istsc_brrf010008,brrf010008@pec.istruzione.it,1,0,1,90422,2.56,2.56
 00348260167,Comune di Parre,c_g346,comune.parre.bg@halleycert.it,1,0,1,90340,2.56,2.56
 80005630902,Comune di Castelsardo,c_c272,protocollo@pec.comune.castelsardo.ss.it,1,0,1,90720,2.56,2.56
@@ -3945,12 +3935,10 @@ CFAVCP-0000E74,"CENTRALE UNICA DI COMMITTENZA TRA I COMUNI DI LEGNANO, NERVIANO,
 05122030280,Comune di Borgo Veneto,c_m402,protocollo@pec.comune.borgoveneto.pd.it,1,0,1,74000,2.48,2.482
 00283550127,Comune di Taino,c_l032,comune.taino@pec.it,1,0,1,73993,2.48,2.482
 01218810461,FONDAZIONE CARNEVALE DI VIAREGGIO,,,1,0,1,73841,2.48,2.48
-82005850811,ISTITUTO COMPRENSIVO - 'G.NOSENGO' PETROSINO,istsc_tpic806008,tpic806008@pec.istruzione.it,1,0,1,73806,2.48,2.48
 80027890484,PROVVEDITORATO INTERREGIONALE ALLE OO. PP. TOSCANA-UMBRIA,,,1,0,1,73800,2.48,2.48
 83000490751,Comune di Minervino di Lecce,c_f221,protocollo.comuneminervino.le@pec.rupar.puglia.it,1,0,1,73500,2.48,2.478
 81000930800,Comune di Gioiosa Jonica,c_e044,protocollo.gioiosa@asmepec.it,1,0,1,73200,2.48,2.478
 00263860785,Comune di Fagnano Castello,c_d464,protocollo@pec.comune.fagnanocastello.cs.it,1,0,1,73200,2.48,2.478
-80014170924,Comune di Villasimius,c_b738,protocollo.comunevillasimius@legalmail.it,1,0,1,73115,2.48,2.476
 00237790126,Comune di Ferno,c_d543,comune@ferno.legalmailpa.it,1,0,1,73000,2.48,2.476
 82007990128,ISTRUZIONE SECONDARIA SUPERIORE - ISIS ANDREA PONTI,istsc_vais008004,vais008004@pec.istruzione.it,1,0,1,73000,2.48,2.476
 02098700418,PESARO PARCHEGGI S.P.A.,,,1,0,1,72984,2.48,2.476
@@ -3981,6 +3969,7 @@ CFAVCP-0001D1D,CENTRALE UNICA COMMITTENZA SVILUPPO SALENTO,,,1,0,1,71735,2.47,2.
 85001790188,Comune di Cassolnovo,c_c038,comune.cassolnovo@pec.regione.lombardia.it,1,0,1,71397,2.47,2.468
 02525260069,Unione Terre di Fiume,utdfiu,unioneterredifiume@legalmail.it,1,0,1,71000,2.47,2.466
 01938560222,Patrimonio del Trentino Spa,pdtspa,pec@pec.patrimoniotn.it,1,0,1,71000,2.47,2.466
+12620491006,SISTEMA CAMERALE SERVIZI SOCIETA A RESPONSABILITA LIMITATA,UHDL2U81,procurement.sicamera@legalmail.it,2,0,2,145000,2.47,1.29
 80101670638,Comune di Calvizzano,c_b452,comune@calvizzano.telecompost.it,2,0,2,143729,2.47,1.262
 81001470749,Comune di Cisternino,c_c741,comune@pec.comune.cisternino.br.it,2,0,2,141905,2.47,1.247
 03166750921,Unione Dei Comuni I Nuraghi di Monte Idda e Fanaris,udcin,u.d.c.inuraghidimonteiddaefanaris@pec.it,1,0,1,70776,2.46,2.464
@@ -3996,11 +3985,9 @@ CFAVCP-0001D1D,CENTRALE UNICA COMMITTENZA SVILUPPO SALENTO,,,1,0,1,71735,2.47,2.
 80093100016,LICEO SCIENTIFICO - G. FERRARIS,istsc_tops04000b,tops04000b@pec.istruzione.it,1,0,1,70129,2.46,2.462
 01857340549,TRASIMENO SERVIZI AMBIENTALI (T.S.A.) S.P.A.,,,1,0,1,70000,2.46,2.46
 00050020320,Fondazione Teatro Lirico Giuseppe Verdi di Trieste,ftlgv,teatroverdi@legalmail.it,1,0,1,70000,2.46,2.46
-01266130994,JOB CENTRE S.R.L.,YBX4U0OI,jobcentre@pec.it,1,0,1,70000,2.46,2.46
 92049140707,AGENZIA REGIONALE MOLISE LAVORO,,,1,0,1,70000,2.46,2.46
 07401840017,Turismo Torino e Provincia S.C.R.L,aapl_001,amministrazione@pec.turismotorino.org,1,0,1,70000,2.46,2.46
 80003490713,Comune di Troia,c_l447,protocollo@pec.comune.troia.fg.it,1,0,1,70000,2.46,2.46
-00661770230,Comune di Pescantina,c_g481,pescantina.vr@cert.ip-veneto.net,1,0,1,70000,2.46,2.46
 06550970013,Ivrea Parcheggi srl,ipspa,ivreaparcheggi@legal.email.it,1,0,1,70000,2.46,2.46
 80006330387,Asp Centro Servizi alla Persona,acsp_038,pec.info@pec.aspfe.it,1,0,1,70000,2.46,2.46
 80007530738,Comune di Ginosa,c_e036,comune.ginosa@pec.rupar.puglia.it,1,0,1,70000,2.46,2.46
@@ -4085,6 +4072,7 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 00172550501,Comune di Castelfranco di Sotto,c_c113,comune.castelfrancodisotto@postacert.toscana.it,1,0,1,65100,2.44,2.436
 84001250301,Comune di Ampezzo,c_a267,comune.ampezzo@certgov.fvg.it,1,0,1,65011,2.44,2.436
 01620480911,AZIENDA SOCIO SANITARIA LOCALE N. 3 DI NUORO,7T093CG4,protocollo@pec.aslnuoro.it,2,0,2,136930,2.44,1.292
+83010560155,ISTRUZIONE SECONDARIA SUPERIORE - CARLO EMILIO GADDA,istsc_miis04100t,miis04100t@pec.istruzione.it,2,0,2,133390,2.44,1.245
 00093580561,Comune di Ronciglione,c_h534,comuneronciglione@legalmail.it,2,0,2,131970,2.44,1.243
 00441360351,Comune di Vezzano Sul Crostolo,c_l820,vezzanosulcrostolo@cert.provincia.re.it,2,0,2,133800,2.44,1.222
 91040750076,Isit Innocent Manzetti,isitc_s,is-itcgeometri@pec.regione.vda.it,2,0,2,132800,2.44,1.221
@@ -4116,7 +4104,6 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 01466170014,Comune di Luserna San Giovanni,c_e758,protocollo@pec.comune.luserna.to.it,1,0,1,63926,2.43,2.43
 80008930283,Comune di Campodoro,c_b531,campodoro.pd@legalmailpa.it,1,0,1,63850,2.43,2.428
 80004600625,Comune di Morcone,c_f717,protocollo.morcone.bn@asmepec.it,1,0,1,63850,2.43,2.428
-82001170289,Comune di Vo',c_m103,comune.vo.pd@pecveneto.it,1,0,1,63850,2.43,2.428
 93005530873,Comune di Maniace,c_m283,comunedimaniacect@legalmail.it,1,0,1,63850,2.43,2.428
 84000880587,Comune di Colonna,c_c900,info@pec.comunedicolonna.it,1,0,1,63850,2.43,2.428
 80005590064,Comune di San Salvatore Monferrato,c_i144,segreteriasansalvatoremonferrato@pcert.postecert.it,1,0,1,63850,2.43,2.428
@@ -4282,7 +4269,6 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 80023260633,ISTITUTO TECNICO INDUSTRIALE - ITI E. MAJORANA SOMMA VESUVIANA,istsc_natf15000e,natf15000e@pec.istruzione.it,1,0,1,59020,2.4,2.402
 92012570757,ISTITUTO COMPRENSIVO - MAGLIE,istsc_leic82100g,leic82100g@pec.istruzione.it,1,0,1,59016,2.4,2.402
 00443430350,Comune di Luzzara,c_e772,segreteria@comune.luzzara.re.legalmail.it,1,0,1,59000,2.4,2.402
-92247480921,Agenzia Sarda Delle Entrate,asde,agenziasardaentrate@pec.regione.sardegna.it,1,0,1,58840,2.4,2.402
 80009330285,Comune di Conselve,c_c964,affari.generali@pec.comune.conselve.pd.it,1,0,1,58600,2.4,2.4
 00563890102,Comune di Isola del Cantone,c_e341,protocollo@pec.comune.isoladelcantone.ge.it,1,0,1,58560,2.4,2.4
 00341480184,Comune di Val di Nizza,c_l562,comune.valdinizza@legalpec.it,1,0,1,58560,2.4,2.4
@@ -4319,7 +4305,6 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 97629700010,FONDAZIONE TORINO MUSEI,,,1,0,1,57200,2.39,2.392
 00341300127,Comune di Cuasso al Monte,c_d192,comune@pec.comune.cuassoalmonte.va.it,1,0,1,57180,2.39,2.392
 93198050879,I.I.S. Marconi Mangano,itigm,CTIS04300B@pec.istruzione.it,1,0,1,57120,2.39,2.392
-00223640129,Comune di Solbiate Olona,c_i794,protocollo@comune.solbiateolona.va.legalmail.it,1,0,1,57100,2.39,2.392
 04983000284,UNISMART - FONDAZIONE UNIVERSI TA' DEGLI STUDI DI PADOVA,,,1,0,1,57000,2.39,2.392
 00099190530,Comune di Sorano,c_i841,comune.sorano@cert.legalmail.it,1,0,1,57000,2.39,2.392
 80007890785,Comune di Luzzi,c_e773,protocollo@pec.comunediluzzi.it,1,0,1,57000,2.39,2.392
@@ -4331,7 +4316,6 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 82002360848,Comune di Racalmuto,c_h148,comunediracalmuto.ag@pec.it,1,0,1,56910,2.39,2.392
 83000070231,Comune di Soave,c_i775,soave.vr@cert.ip-veneto.net,1,0,1,56879,2.39,2.392
 91020960042,ISTITUTO COMPRENSIVO - SOMMARIVA PERNO,istsc_cnic818004,cnic818004@pec.istruzione.it,1,0,1,56830,2.39,2.39
-04956380960,Azienda Speciale Consortile Servizi alla Persona,N2TPQAGX,ascsp@legalmail.it,1,0,1,56797,2.39,2.39
 92056500462,ISTITUTO ISTRUZIONE SUPERIORE FRANCESCO CARRARA,iisfc,luis01700t@PEC.ISTRUZIONE.IT,1,0,1,56792,2.39,2.39
 80000470940,Comune di Sant'Elena Sannita,c_b466,comsantelena@pec.it,1,0,1,56749,2.39,2.39
 00122230196,Comune di Vaiano Cremasco,c_l535,comune.vaianocremasco@pec.regione.lombardia.it,1,0,1,56598,2.39,2.39
@@ -4361,7 +4345,6 @@ CFAVCP-0001ACE,CENTRALE UNICA DI COMMITTENZA TERRE DEL GIOIELLO,,,1,0,1,66248,2.
 80015950928,Comune di San Nicolo' Gerrei,c_g383,sngerreiufficioprotocollo@pec.it,1,0,1,55750,2.38,2.384
 83000870713,Comune di Monte Sant'Angelo,c_f631,protocollo@montesantangelo.it,1,0,1,55738,2.38,2.384
 84000620223,A.P.S.P. Giacomo Cis Azienda Pubblica di Servizi alla Persona,apspg,amministrazione@pec.apspgiacomocis.it,1,0,1,55644,2.38,2.384
-91007440497,Parco Nazionale Arcipelago Toscano,pn_artos,pnarcipelago@postacert.toscana.it,1,0,1,55602,2.38,2.384
 00413950205,Comune di Castel D'Ario,c_c076,comune.casteldario@pec.regione.lombardia.it,1,0,1,55550,2.38,2.384
 83008920155,Comune di Correzzana,c_d038,comune.correzzana@pec.regione.lombardia.it,1,0,1,55544,2.38,2.384
 00330820838,Comune di Nizza di Sicilia,c_f901,comune.nizzadisicilia@pec.it,1,0,1,55540,2.38,2.384
@@ -4670,7 +4653,6 @@ CFAVCP-000173D,CENTRALE UNICA DI COMMITTENZA TRA I COMUNI DI LAINATE E MALGESSO,
 01399810017,Comune di Vallo Torinese,c_l629,vallo.torinese@cert.ruparpiemonte.it,1,0,1,47427,2.34,2.338
 00117330530,Comune di Roccalbegna,c_h417,Comune.roccalbegna@postacert.toscana.it,1,0,1,47427,2.34,2.338
 00374900165,Comune di Aviatico,c_a517,comune.aviatico@pec.regione.lombardia.it,1,0,1,47427,2.34,2.338
-00263100125,Comune di Varano Borghi,c_l671,protocollo@pec.comune.varano-borghi.va.it,1,0,1,47427,2.34,2.338
 00207210253,Comune di San Tomaso Agordino,c_i347,protocollo.comune.santomaso.bl@pecveneto.it,1,0,1,47427,2.34,2.338
 00197950116,Comune di Varese Ligure,c_l681,protocollo.vareseligure@legalmail.it,1,0,1,47427,2.34,2.338
 00417230034,Comune di Bannio Anzino,c_a610,comune.bannioanzino@legalmail.it,1,0,1,47427,2.34,2.338
@@ -4733,6 +4715,7 @@ CFAVCP-0000A28,ASSOCIAZIONE CONSORTILE PICCIANO/SANT'EUFEMIA A MAIELLA,,,1,0,1,4
 90009410102,Consorzio Intercomunale di Rio Marsiglia,cirm,riomarsiglia@pec.it,1,0,1,47104,2.34,2.336
 00086680253,Comune di Limana,c_e588,limana.bl@cert.ip-veneto.net,1,0,1,47100,2.34,2.336
 80003570795,Comune di Miglierina,c_f200,comune.miglierina@asmepec.it,1,0,1,47228,2.34,2.336
+80125290157,ISTITUTO COMPRENSIVO - RICCARDO MASSA,istsc_miic8c300p,miic8c300p@pec.istruzione.it,2,0,2,116735,2.34,1.329
 83003130263,Comune di San Zenone degli Ezzelini,c_i417,protocollo.comune.sanzenonede.tv@pecveneto.it,2,0,2,97060,2.34,1.19
 93028760143,FONDAZIONE ISTITUTO TECNICO SUPERIORE PER L'INNOVAZIONE DEL SISTEMA AGROALIMENTARE,B12K1R5Q,FONDAZIONEAGROALIMENTAREITS@ENETPEC.IT,2,0,2,95392,2.34,1.188
 00417870540,Comune di Nocera Umbra,c_f911,comune.noceraumbra@postacert.umbria.it,1,0,1,47023,2.33,2.334
@@ -4749,7 +4732,6 @@ CFAVCP-0000A28,ASSOCIAZIONE CONSORTILE PICCIANO/SANT'EUFEMIA A MAIELLA,,,1,0,1,4
 03749850966,Gestione Servizi Municipali Nord Milano Srl,gesem,gesem@legalmail.it,1,0,1,46800,2.33,2.334
 01413790666,AZIENDA FARMACEUTICA MUNICIPALIZZATA SPA,B4C67ARV,afmspalaquila@pec.it,1,0,1,46770,2.33,2.334
 80007660436,LICEO CLASSICO - 'GIACOMO LEOPARDI',istsc_mcpc04000q,mcpc04000q@pec.istruzione.it,1,0,1,47055,2.33,2.334
-01343680912,"ISTITUTO STATALE DI ISTRUZIONE SUPERIORE ""G. A. PISCHEDDA""",istsc_oris00800b,oris00800b@pec.istruzione.it,1,0,1,46706,2.33,2.332
 80003910900,Comune di Sennori,c_i614,protocollo.sennori@pec.comunas.it,1,0,1,46667,2.33,2.332
 80000150849,"Camera di Commercio, Industria, Artigianato e Agricoltura di Agrigento",cciaa_ag,camera.commercio.agrigento@ag.legalmail.camcom.it,1,0,1,46652,2.33,2.332
 00079950564,Comune di Vignanello,c_L882,protocollo@pec.comunevignanello.eu,1,0,1,46500,2.33,2.332
@@ -4856,13 +4838,13 @@ CFAVCP-0000A28,ASSOCIAZIONE CONSORTILE PICCIANO/SANT'EUFEMIA A MAIELLA,,,1,0,1,4
 00806650255,SERVIZI AMPEZZO S.R.L.,,,1,0,1,43983,2.32,2.316
 00187490503,Comune di Monteverdi Marittimo,C_f661,comune.monteverdi.m@postacert.toscana.it,1,0,1,43954,2.32,2.316
 85501270012,Comune di Feletto,c_d524,protocollo.feletto@pec.it,1,0,1,43920,2.32,2.316
-90015850747,ISTRUZIONE SECONDARIA SUPERIORE - IS- AGOSTINELLI -CEGLIE M.,istsc_bris006001,bris006001@pec.istruzione.it,1,0,1,43839,2.32,2.316
 80004730075,Comune di Valpelline,c_l643,protocollo@pec.comune.valpelline.ao.it,1,0,1,43820,2.32,2.316
 03901620017,Comune di Buttigliera Alta,c_b305,comune@pec.comune.buttiglieraalta.to.it,1,0,1,43800,2.32,2.316
 00074180951,Comune di Siris,c_i757,protocollo@pec.comune-siris-or.it,1,0,1,43800,2.32,2.316
 00223910365,Comune di Pavullo Nel Frignano,c_g393,comune.pavullo@cert.comune.pavullo-nel-frignano.mo.it,1,0,1,43794,2.32,2.316
 97529770154,Azienda Sociale Sud Est Milano,assemi,assemi@legalmail.it,1,0,1,43790,2.32,2.316
 97028270789,ISTITUTO SUPERIORE - IIS CARIATI 'LS-IPSC',istsc_csis06800l,csis06800l@pec.istruzione.it,1,0,1,43775,2.32,2.316
+80001490871,Comune di Adrano,c_a056,protocollo@pec.comune.adrano.ct.it,2,0,2,95100,2.32,1.254
 00307790048,Comune di Neive,c_f863,neive@pec.comune.neive.cn.it,2,0,2,96230,2.32,1.25
 00463030650,Comune di San Cipriano Picentino,c_m800,protocollo@pec.comune.sanciprianopicentino.sa.it,2,0,2,91590,2.32,1.225
 80004890929,Comune di Sestu,c_i695,protocollo.sestu@pec.it,2,0,2,90000,2.32,1.215
@@ -5159,6 +5141,7 @@ CFAVCP-0000A28,ASSOCIAZIONE CONSORTILE PICCIANO/SANT'EUFEMIA A MAIELLA,,,1,0,1,4
 00102530862,Comune di Centuripe,c_c471,comunecenturipe@pec.it,1,0,1,25180,2.2,2.196
 00215880048,Comune di Savigliano,c_i470,comune.savigliano@legalmail.it,2,0,2,55396,2.2,1.168
 06483450968,Aemme Linea Ambiente S.R.L.,alasr,info@pec.aemmelineaambiente.it,2,0,2,53770,2.2,1.161
+80013870177,"Camera di Commercio, Industria, Artigianato e Agricoltura di Brescia",cciaa_bs,camera.brescia@bs.legalmail.camcom.it,2,0,2,52851,2.2,1.153
 80002990853,Comune di Resuttano,c_h245,protocollo@pec.comune.resuttano.cl.it,1,0,1,24900,2.19,2.194
 80002070672,Comune di Montorio Al Vomano,c_f690,postacert@pec.comune.montorio.te.it,1,0,1,24760,2.19,2.192
 90023880595,Ente Regionale Parco dei Monti Aurunci,erpdm,parcomontiaurunci@pec.regione.lazio.it,1,0,1,24750,2.19,2.192
@@ -5767,6 +5750,7 @@ CFAVCP-00010B6,CENTRALE UNICA DI COMMITTENZA DELL'AREA SELE-PICENTINI,,,1,0,1,29
 80002910448,Consorzio Universitario Piceno,co_unap,cup@postcert.it,1,0,1,122352,1.35,1.347
 82001390150,Comune di Gaggiano,c_d845,comune.gaggiano@pec.regione.lombardia.it,1,0,1,121992,1.35,1.346
 82000610152,Comune di Rosate,c_h560,comune.rosate@pec.regione.lombardia.it,1,0,1,121992,1.35,1.346
+00278200795,Comune di Serra San Bruno,c_l639,info@pec.comune.serrasanbruno.vv.it,1,0,1,121992,1.35,1.346
 00412580243,Comune di Lonigo,c_e682,segreteria.comune.lonigo.vi@pecveneto.it,1,0,1,121992,1.35,1.346
 80000590721,CONVITTO NAZIONALE - D. CIRILLO,istsc_bavc010004,BAVC010004@pec.istruzione.it,1,0,1,120900,1.34,1.344
 00855610176,Comune di Mazzano,c_f063,protocollo@pec.comune.mazzano.bs.it,1,0,1,119350,1.34,1.341
@@ -5785,10 +5769,12 @@ CFAVCP-00010B6,CENTRALE UNICA DI COMMITTENZA DELL'AREA SELE-PICENTINI,,,1,0,1,29
 95070780127,Istituto Comprensivo Varese 5 - Dante Alighieri,istsc_vaic87400v,vaic87400v@pec.istruzione.it,1,0,1,113599,1.33,1.33
 CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 02710760980,CIVITAS S.R.L.,TA1QS54B,segreteria@pec.civitas.valletrompia.it,1,0,1,108374,1.32,1.319
+01526860281,Comune di Campo San Martino,c_b564,camposanmartino.pd@cert.ip-veneto.net,1,0,1,108136,1.32,1.318
 80001790940,Comune di Monteroduni,c_f601,comune.monteroduni@pec.it,1,0,1,107716,1.32,1.317
 03764550541,Camera di Commercio dell'Umbria,cciaapg,CCIAA@PEC.UMBRIA.CAMCOM.IT,1,0,1,107550,1.32,1.317
 05400281217,FONDAZIONE C.I.V.E.S.,,,1,0,1,106166,1.31,1.314
 90032230600,ISTITUTO COMPRENSIVO  PONTECORVO II,istsc_fric85200t,fric85200t@pec.istruzione.it,1,0,1,105923,1.31,1.314
+97196850586,ISTRUZIONE SECONDARIA SUPERIORE - CARLO URBANI,istsc_rmis03300b,rmis03300b@pec.istruzione.it,1,0,1,104750,1.31,1.311
 00211890330,Comune di Pontenure,c_g852,comune.pontenure@sintranet.legalmail.it,1,0,1,104200,1.31,1.31
 00109960112,Comune di Vezzano Ligure,c_l819,protocollo.comunevezzanoligure@pec.it,1,0,1,104400,1.31,1.31
 80106520614,LICEO SCIENTIFICO - A. DIAZ CASERTA,istsc_ceps010007,ceps010007@pec.istruzione.it,1,0,1,103667,1.31,1.309
@@ -5802,6 +5788,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 02996810046,S.T.R. SOCIETA' TRATTAMENTO RIFIUTI SRL,CFGIBIIR,str@pec.it,1,0,1,100000,1.3,1.301
 92067000346,CNIT - Consorzio Nazionale Interuniversitario per le Telecomunicazioni,cnit,cnit@pec.it,1,0,1,100000,1.3,1.301
 01039930589,Comune di Castel Gandolfo,c_c116,protocollocastelgandolfo@pec.it,1,0,1,99994,1.3,1.301
+00658760236,Comune di Povegliano Veronese,c_g945,poveglianoveronese.vr@cert.ip-veneto.net,1,0,1,99993,1.3,1.301
 06407440012,MUSEO NAZIONALE DEL CINEMA - FONDAZIONE MARIA ADRIANA PROLO,,,1,0,1,99780,1.3,1.301
 00147070874,Comune di Nicolosi,c_f890,protocollo@pec.comunenicolosi.it,1,0,1,99409,1.3,1.3
 90044710631,ISTITUTO SUPERIORE - IST. SUPERIORE -I.T.G. VITRUVIO-,istsc_nais00900g,nais00900g@pec.istruzione.it,1,0,1,99098,1.3,1.299
@@ -5822,6 +5809,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 00520110131,Comune di Turate,c_l470,comune.turate@pec.provincia.como.it,1,0,1,93000,1.29,1.286
 07698630725,Servizi Ambientali per il Nord Barese Società per Azioni,X6X93KKE,SANB@PEC.IT,1,0,1,92000,1.28,1.283
 80000360844,Comune di Aragona,c_a351,protocollo@pec.comune.aragona.ag.it,1,0,1,92000,1.28,1.283
+82000390292,Comune di Badia Polesine,c_a539,segreteria.comune.badiapolesine.ro@pecveneto.it,1,0,1,90500,1.28,1.28
 02516430150,Comune di Cambiago,c_b461,protocollo@pec.comunecambiago.com,1,0,1,90321,1.28,1.279
 03980970481,Firenze Parcheggi S.P.A.,fpspa,firenzeparcheggispa@legalmail.it,1,0,1,89824,1.28,1.278
 91034120807,Fondazione MASK ITS Academy,JAXKJS94,fondazionemask@pec.it,1,0,1,89494,1.28,1.278
@@ -5869,6 +5857,8 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 80008470595,ISTITUTO COMPRENSIVO - IST. COMPR. ROCCAGORGA-MAENZA,istsc_ltic80800b,ltic80800b@pec.istruzione.it,1,0,1,74000,1.24,1.241
 00440760353,Comune di Reggiolo,c_h225,comunereggiolo@postecert.it,1,0,1,74000,1.24,1.241
 00595740820,Comune di Aliminusa,c_a203,comunedialiminusa@pec.it,1,0,1,73953,1.24,1.24
+82005850811,ISTITUTO COMPRENSIVO - 'G.NOSENGO' PETROSINO,istsc_tpic806008,tpic806008@pec.istruzione.it,1,0,1,73806,1.24,1.24
+80014170924,Comune di Villasimius,c_b738,protocollo.comunevillasimius@legalmail.it,1,0,1,73115,1.24,1.238
 84000500037,ISTITUTO SUPERIORE - IS 'L. COBIANCHI',istsc_vbis00700v,vbis00700v@pec.istruzione.it,1,0,1,73089,1.24,1.238
 01540820444,Picenambiente S.P.A.,picespa,picenambiente@pcert.it,1,0,1,73000,1.24,1.238
 01258180957,AZIENDA SOCIO SANITARIA LOCALE N. 5 DI ORISTANO,3EYJH0BU,protocollo@pec.asloristano.it,1,0,1,73000,1.24,1.238
@@ -5883,6 +5873,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 00830780177,Comune di Monte Isola,c_f532,protocollo@cert.comune.monteisola.bs.it,1,0,1,70491,1.23,1.232
 00566690137,Comune di Oggiono,c_g009,protocollo@pec.comune.oggiono.lc.it,1,0,1,70400,1.23,1.231
 00031500945,Comune di Colli a Volturno,c_c878,colliavolturno@pec.it,1,0,1,70000,1.23,1.23
+00661770230,Comune di Pescantina,c_g481,pescantina.vr@cert.ip-veneto.net,1,0,1,70000,1.23,1.23
 00223660127,Comune di Tradate,c_l319,comune.tradate@pec.regione.lombardia.it,1,0,1,70000,1.23,1.23
 00206010928,Società Finanziaria Regione Sardegna SpA,AOSF1DQL,sfirs@legalmail.it,1,0,1,70000,1.23,1.23
 05814551213,FONDAZIONE CAMPANIA DEI FESTIVAL,,,1,0,1,70000,1.23,1.23
@@ -5913,6 +5904,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 94032510581,ISTITUTO COMPRENSIVO - TIVOLI BAGNI,istsc_rmic89000b,rmic89000b@pec.istruzione.it,1,0,1,64595,1.22,1.216
 94131860267,ISTITUTO COMPRENSIVO - I.C. PAESE,istsc_tvic868002,tvic868002@pec.istruzione.it,1,0,1,64500,1.22,1.216
 81000350603,Comune di Cervaro,c_c545,comune.cervaro.fr@cert-posta.it,1,0,1,64500,1.22,1.216
+82001170289,Comune di Vo',c_m103,comune.vo.pd@pecveneto.it,1,0,1,63850,1.21,1.214
 00376350781,Comune di Marano Principato,c_e915,protocollo.maranoprincipato@pec.it,1,0,1,63850,1.21,1.214
 82004450282,Comune di Baone,c_a613,baone.pd@cert.ip-veneto.net,1,0,1,63850,1.21,1.214
 00139430714,Comune di Bovino,c_b104,comune.bovino.fg@halleycert.it,1,0,1,63850,1.21,1.214
@@ -5964,6 +5956,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 80010250282,Comune di Trebaseleghe,c_l349,comune.trebaseleghe@postecert.it,1,0,1,59000,1.2,1.201
 80004280840,Comune di Lampedusa e Linosa,c_e431,protocollo@pec.comune.lampedusaelinosa.ag.it,1,0,1,58987,1.2,1.201
 02659680926,Unione Dei Comuni del Parteolla e Basso Campidano,ucpbcdol,segreteria.parteolla@pec.it,1,0,1,58942,1.2,1.201
+92247480921,Agenzia Sarda Delle Entrate,asde,agenziasardaentrate@pec.regione.sardegna.it,1,0,1,58840,1.2,1.201
 90033060048,ISTITUTO COMPRENSIVO - GOVONE,istsc_cnic82300g,cnic82300g@pec.istruzione.it,1,0,1,58564,1.2,1.2
 91168510351,Istituto Professionale Servizi Sociali Galvani Iodi,ipssg,RERI090008@PEC.ISTRUZIONE.IT,1,0,1,58550,1.2,1.2
 90016920317,ISTRUZIONE SECONDARIA SUPERIORE - I.S.I.S. 'S. PERTINI' MONFALCONE,istsc_gois01100r,gois01100r@pec.istruzione.it,1,0,1,58500,1.2,1.2
@@ -5973,10 +5966,12 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 80005740925,Comune di Decimoputzu,c_d260,protocollo.decimoputzu@legalmail.it,1,0,1,57600,1.2,1.198
 00351640172,Comune di Villa Carcina,c_l919,comunevillacarcina@legal.intred.it,1,0,1,57500,1.2,1.197
 00268450426,Comune di Sirolo,c_i758,comune.sirolo@pec.it,1,0,1,57465,1.2,1.197
+00223640129,Comune di Solbiate Olona,c_i794,protocollo@comune.solbiateolona.va.legalmail.it,1,0,1,57100,1.2,1.196
 84002200651,ISTITUTO SUPERIORE - LEONARDO DA VINCI,istsc_SAIS037006,SAIS037006@pec.istruzione.it,1,0,1,57020,1.2,1.196
 90000700949,Comune di Castelpizzuto,c_c247,comune.castelpizzuto@pec.it,1,0,1,56937,1.2,1.196
 01747910188,Asm Pavia Spa,asmpv,segreteria.asm@cert.asm.pv.it,1,0,1,56916,1.2,1.196
 92012600752,ISTITUTO COMPRENSIVO - SCORRANO,istsc_leic85400v,leic85400v@pec.istruzione.it,1,0,1,56843,1.2,1.195
+04956380960,Azienda Speciale Consortile Servizi alla Persona,N2TPQAGX,ascsp@legalmail.it,1,0,1,56797,1.2,1.195
 00322990128,Comune di Origgio,c_g103,segreteria@pec.comune.origgio.va.it,1,0,1,56300,1.19,1.194
 00139600704,Provincia di Campobasso,p_cb,provincia.campobasso@legalmail.it,1,0,1,56208,1.19,1.194
 81003050606,Comune di Pignataro Interamna,c_g662,comune.pignataroint.servizigenerali@certipec.it,1,0,1,56091,1.19,1.193
@@ -5988,6 +5983,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 81002190718,Comune di Ordona,c_m266,comune@pec.comune.ordona.fg.it,1,0,1,55926,1.19,1.193
 98040560785,Comune di Dipignano,c_d304,protocollo.dipignano@asmepec.it,1,0,1,55759,1.19,1.192
 80002630624,Comune di Vitulano,c_m093,vitulano@pec.cstsannio.it,1,0,1,55720,1.19,1.192
+91007440497,Parco Nazionale Arcipelago Toscano,pn_artos,pnarcipelago@postacert.toscana.it,1,0,1,55602,1.19,1.192
 83030250837,Comune di Tripi,c_l431,protocollo@pec.comune.tripi.me.it,1,0,1,55500,1.19,1.192
 00088940564,Comune di Nepi,c_f868,comune.nepi.vt@legalmailpa.it,1,0,1,55467,1.19,1.192
 81003630134,Comune di Carimate,c_b778,comune.carimate@pec.regione.lombardia.it,1,0,1,55400,1.19,1.191
@@ -6064,6 +6060,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 84001390651,Comune di Sacco,c_h654,tributisacco@legalmail.it,1,0,1,47427,1.17,1.169
 00270830227,Comune di Trambileno,c_l322,posta@pec.comune.trambileno.tn.it,1,0,1,47427,1.17,1.169
 84000940654,Comune di Valle dell'Angelo,c_g540,ragioneria@pec.comune.valledellangelo.sa.it,1,0,1,47427,1.17,1.169
+00263100125,Comune di Varano Borghi,c_l671,protocollo@pec.comune.varano-borghi.va.it,1,0,1,47427,1.17,1.169
 92009700904,Comune di Santa Maria Coghinas,c_m284,protocollo@pec.comune.santamariacoghinas.ss.it,1,0,1,47427,1.17,1.169
 80002310946,Comune di Rocchetta a Volturno,c_h458,protocollo.rocchettaavolturno@pec.it,1,0,1,47427,1.17,1.169
 00066290701,Comune di San Massimo,c_i023,comune.sanmassimo@pec.it,1,0,1,47427,1.17,1.169
@@ -6078,6 +6075,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 06806680010,R.S.A. SRL ,4VSXCZLC,rsa@pec.rsa-srl.it,1,0,1,47000,1.17,1.167
 83001630843,Comune di Santa Margherita di Belice,c_i224,santamargheritadibelice.protocollo@pec.it,1,0,1,46926,1.17,1.167
 00230250334,Comune di Castell'Arquato,c_c145,comune.castellarquato@sintranet.legalmail.it,1,0,1,46780,1.17,1.167
+01343680912,"ISTITUTO STATALE DI ISTRUZIONE SUPERIORE ""G. A. PISCHEDDA""",istsc_oris00800b,oris00800b@pec.istruzione.it,1,0,1,46706,1.17,1.166
 85006960224,Istituto Comprensivo Rovereto Nord,icrn_tn,ic.roveretonord@pec.provincia.tn.it,1,0,1,46608,1.17,1.166
 92053060601,ISTITUTO COMPRENSIVO - I. C. SUPINO,istsc_fric830001,fric830001@pec.istruzione.it,1,0,1,46607,1.17,1.166
 00091850073,Comune di Sarre,c_i442,protocollo@pec.comune.sarre.ao.it,1,0,1,46524,1.17,1.166
@@ -6111,6 +6109,7 @@ CFAVCP-0001F32,CONSORZIO POLO UNIVERSITARIO OLBIA,,,1,0,1,113365,1.33,1.329
 00510420656,Comune di Caggiano,c_b351,segreteria.caggiano@asmepec.it,1,0,1,44000,1.16,1.158
 82001370228,Casa di Riposo Giovanelli,crg_022,cdr.giovanelli@legalmail.it,1,0,1,43983,1.16,1.158
 00431620350,Comune di Villa Minozzo,c_l969,comune.villaminozzo@legalmail.it,1,0,1,43913,1.16,1.158
+90015850747,ISTRUZIONE SECONDARIA SUPERIORE - IS- AGOSTINELLI -CEGLIE M.,istsc_bris006001,bris006001@pec.istruzione.it,1,0,1,43839,1.16,1.158
 80001890948,Comune di Cerro al Volturno,c_c534,contabile@pec.comune.cerroalvolturno.is.it,1,0,1,43595,1.16,1.157
 83000470910,Comune di Noragugume,c_f933,protocollo@pec.comune.noragugume.nu.it,1,0,1,43576,1.16,1.157
 00449500107,Comune di Arenzano,c_a388,info@pec.comune.arenzano.ge.it,1,0,1,43513,1.16,1.157

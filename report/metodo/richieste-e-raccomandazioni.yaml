@@ -851,3 +851,14 @@
   perche_serve: "La quota su infrastruttura extra-UE della Misura 1.2 va da 6,2 % a 65 % (centrale 33,9 %, v0.2) a seconda di ciò che non è pubblico; i casi accertati (Datamanagement su AWS, Deda Next su Azure, Oracle Managed nelle ASL sarde) sono emersi solo da offerte e piani dei fabbisogni pubblicati da singoli enti"
   metrica: "Quota del finanziato 1.2 con infrastruttura dichiarata per servizio"
   rif: ["#43", "#45", "R50", "R55", "R73", "R74"]
+- id: R82
+  destinatario: "AgID (IndicePA); ANAC (registro L.190, comunicazioni dei RPCT); enti con URL AT errato"
+  tipo: qualità del dato
+  stato: "verificato (9/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "URL della sezione Amministrazione trasparente dichiarato in IndicePA/registro L.190 spesso errato: 404, radici di piattaforma, cartelle di file"
+  evidenza: "Dei 152 enti del residuo S6 la cui pagina AT dichiarata risultava «quasi vuota» (L4, #73), riletti uno per uno il 9/11/2026: 125 (82 %) hanno un URL AT errato, 53 radici di piattaforma condivise da più enti (es. datitrasparenti.it, sitod.regione.sardegna.it/web/amministrazione_trasparente/), 15 cartelle di file statici (/sites/default/files/, /content/dam/, /images/stories/: MASE, Trenitalia, RFI, COVIP, Comune di Lecce), 57 risposte d'errore (HTTP 404 41, 500 20, 503 5 sui 142 con URL); solo 2 sono pagine AT davvero scritte in JavaScript. 31 di questi enti hanno comunque dato CIG nel ripasso, ripartendo dal sito istituzionale o seguendo il redirect"
+  prova: "tools/verifiche/l4js_url_at.py; esiti/2026-11-09/acquisizione/l4js-url-at.csv (ente, URL dichiarato, HTTP, URL finale, sha256 della risposta archiviata) e l4js-url-at.json; tools/acquisizione/at_cig_js.py, lavoro/residuo-s6/l4-js/enti.jsonl"
+  richiesta: "Campo «URL sezione Amministrazione trasparente» in IndicePA validato alla compilazione e verificato periodicamente (risposta 200, pagina dell'ente e non radice di piattaforma o cartella di file, coerente con il dominio del sito istituzionale), con segnalazione al referente IPA; stesso controllo sull'URL comunicato ad ANAC nel registro L.190"
+  perche_serve: "Chi cerca gli atti di gara di un ente (cittadini, giornalisti, ricerca) parte da quell'URL: se è errato la sezione AT sembra vuota o assente e gli atti non si trovano senza cercare a mano il sito"
+  metrica: "Quota di URL AT in IndicePA che rispondono 200 con la pagina AT dell'ente (rimisurabile con tools/verifiche/l4js_url_at.py esteso a tutti gli enti)"
+  rif: ["#73", "#57", "#68", "R66", "R67"]

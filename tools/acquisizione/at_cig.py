@@ -7,7 +7,8 @@ Per i CIG del residuo S6 senza link PVL (quasi tutti precedenti al 2024), a part
    IndicePA da CKAN JSON, tools/trasparenza/fonti.py); in mancanza il sito istituzionale IndicePA;
 3. un giro per ENTE (non per CIG): pagina AT -> link «Bandi di gara e contratti» -> fino a MAX_SOTTO sottopagine
    pertinenti (gare, bandi, contratti, affidamenti, esiti, determine, anni); su ogni pagina si cercano TUTTI i CIG
-   dell'ente; per i CIG trovati si scaricano i documenti collegati (piattaforme_cig.documenti_pagina);
+   dell'ente; per i CIG trovati si scaricano i documenti collegati (piattaforme_cig.documenti_pagina), scartando
+   fogli di stile, script, font e immagini (filtra_documenti: estensione, tipo MIME, primi byte);
 4. robots.txt: le sezioni AT sono esenti (AGENTS.md §3, art. 9 d.lgs. 33/2013); se robots.txt le esclude si passa
    solo in orari di poco carico (ORE_AT) e robots.txt si archivia come evidenza. >= 5 s per host, 10 host insieme,
    mai login/CAPTCHA, blocchi registrati come esito.
@@ -114,6 +115,43 @@ def cf_dei_cig(cigs):
         all_varchar=true, ignore_errors=true, union_by_name=true) where cig in (select cig from t)""").fetchall())
 
 
+# Non sono documenti (#73): fogli di stile, script, font e immagini raccolti dai link della pagina (es. href dei <link>)
+RX_NON_DOC = re.compile(r"\.(css|js|mjs|map|woff2?|ttf|otf|eot|png|jpe?g|gif|svg|ico|webp|bmp|avif|tiff?)$", re.I)
+MIME_NON_DOC = ("text/css", "text/javascript", "application/javascript", "application/x-javascript", "font/",
+                "application/font", "application/x-font", "image/")
+SNIFF_BIN = (b"\x89PNG", b"\xff\xd8\xff", b"GIF8", b"wOFF", b"wOF2", b"OTTO", b"\x00\x01\x00\x00", b"\x00\x00\x01\x00")
+RX_SNIFF_TXT = re.compile(rb"^\s*(<\?xml[^>]*>\s*)?<svg\b|^\s*(@charset|@import|@font-face|@media|:root\b)|"
+                          rb"^\s*(\"use strict\"|'use strict'|!function|\(function|var |let |const |function |window\.|document\.|jQuery)", re.I)
+
+
+def non_documento(url, ctype="", testa=b""):
+    """True per css/js/font/immagini: estensione dell'URL, tipo MIME dichiarato o primi byte del contenuto."""
+    from urllib.parse import unquote
+    if RX_NON_DOC.search(unquote(urlsplit(url).path)): return True
+    ct = (ctype or "").split(";")[0].strip().lower()
+    if ct and ct.startswith(MIME_NON_DOC): return True
+    if testa and not testa.startswith((b"%PDF", b"PK", b"\xd0\xcf\x11\xe0")):
+        if testa.startswith(SNIFF_BIN) or (testa[:4] == b"RIFF" and testa[8:12] == b"WEBP"): return True
+        if RX_SNIFF_TXT.search(testa[:512].lstrip(b"\xef\xbb\xbf")): return True
+    return False
+
+
+def testa_blob(sha):
+    """Primi 512 byte del blob nell'archivio content-addressed (vuoto se assente)."""
+    p = Path(os.environ["ARCHIVIO_ROOT"]) / "blobs/sha256" / sha[:2] / sha[2:4] / sha
+    try:
+        with open(p, "rb") as f: return f.read(512)
+    except OSError:
+        return b""
+
+
+def filtra_documenti(docs):
+    """(documenti veri, numero di scarti css/js/font/immagini)."""
+    tenuti = [d for d in docs if not non_documento(d.get("url", ""), d.get("content_type", ""),
+                                                   testa_blob(d["sha256"]) if d.get("sha256") else b"")]
+    return tenuti, len(docs) - len(tenuti)
+
+
 def link_con(r, rx):
     for m in re.finditer(r"<a\s[^>]*href=[\"']([^\"'#]+)[\"'][^>]*>(.*?)</a>", r.text, re.I | re.S):
         if rx.search(re.sub(r"<[^>]+>", " ", m.group(2))) or rx.search(m.group(1)):
@@ -198,10 +236,12 @@ def main():
                         for c, rr in trovati.items():
                             rec = {"cig": c, "documenti": []}
                             P.documenti_pagina(s, c, rr, out, rec)
+                            rec["documenti"], scarti = filtra_documenti(rec["documenti"])
                             for d in rec["documenti"]:
                                 if d.get("cig_presente") and d.get("testo"): P.registra_atto(c, d, "L4", den)
                             scrivi("esiti.jsonl", {"cig": c, "cf": k, "priorita": cigs[c]["priorita"], "importo": cigs[c]["importo"], "pagina": rr.url,
-                                                   "documenti": [{**d, "testo": d.get("testo", "")[:500]} for d in rec["documenti"]], "esito": "documenti" if rec["documenti"] else "cig-nella-pagina"})
+                                                   "documenti": [{**d, "testo": d.get("testo", "")[:500]} for d in rec["documenti"]], "esito": "documenti" if rec["documenti"] else "cig-nella-pagina",
+                                                   **({"scartati_non_documenti": scarti} if scarti else {})})
             except Exception as x:
                 e["esito"] = "errore"; e["errore"] = str(x)[:200]
         e["cig_trovati"] = len(trovati); e["secondi"] = round(time.time() - t0, 1)
