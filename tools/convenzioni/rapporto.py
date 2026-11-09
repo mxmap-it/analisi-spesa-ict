@@ -37,7 +37,7 @@ TIPI = {"consip": "Consip", "psn": "PSN", "aggregatore-regionale": "Aggregatori 
 FUORI_PERIMETRO = {"consip-2638"}
 
 
-DATI_AL = "2026-11-06"  # consultazione più recente delle fonti (pagine Consip, open data, enti campione, ricerca web)
+DATI_AL = "2026-11-09"  # consultazione più recente delle fonti (pagine Consip, open data, enti campione, ricerca web)
 DT = "05/11/2026"
 
 
@@ -119,6 +119,8 @@ def metriche(voci, reg):
          "flusso_dati": sum(1 for v in voci if v.get("evidenze_dato_esistente")),
          "flusso_letti": sum(1 for v in voci for e in v.get("evidenze_dato_esistente", []) if e["livello"].startswith("V")),
          "istanze_ritirate": sum(1 for r in reg if r["stato"] == "ritirata"),
+         "istanze_preparate_consip": sum(1 for r in reg if r["stato"] == "preparata" and r["destinatario"].lower().startswith("consip")),
+         **copie_pubbliche(),
          "aretepa_vetrina": len(json.loads((R / "report/convenzioni/aretepa/vetrina-sintesi.json").read_text(encoding="utf-8"))) if (R / "report/convenzioni/aretepa/vetrina-sintesi.json").exists() else 0,
          "aretepa_schede": sum(1 for v in voci if v.get("aretepa")),
          "aretepa_documenti": sum((v.get("aretepa") or {}).get("documenti", 0) for v in voci),
@@ -133,6 +135,105 @@ def metriche(voci, reg):
             pt[t] = {"iniziative": len(x), "valore": sum(p["valore"] for p in x), "indice_medio": round(sum(p["indice"] for p in x) / len(x), 3),
                      "ben_visibili": sum(1 for p in x if p["ben_visibile"]), "ignoti": sum(p["ignoto"] for p in x), "assenti": sum(p["assente"] for p in x)}
     return {"globali": g, "per_tipo": pt, "per_iniziativa": per}
+
+
+REPO_COPIE = "mxmap-it/convenzioni-ict-documenti"
+ELENCO = R / "esiti/2026-11-09/accesso-civico/elenco-mancanti.csv"  # elenco unico #58 (CSV in chiaro solo sul server)
+STIMA = R / "esiti/2026-11-09/accesso-civico/stima-ondate.json"
+TETTO_VOCI = 20  # voci per richiesta (proposta, config/accesso-civico/parametri.yaml)
+FAMIGLIE = [("offerte tecniche/economiche", ("offerta",)), ("listini e prezzi", ("listino", "prezz", "catalog")),
+            ("transato, monitoraggio e flussi", ("transat", "monitor", "fluss", "erogat", "fattur")),
+            ("ordinativi e contratti attuativi", ("ordinativ", "attuativ", "adesion", "ordin")),
+            ("region e data center", ("region", "data center", "datacenter", "localizz"))]
+
+
+def copie_pubbliche():
+    """Copie pubbliche dei documenti archiviati: release GitHub di REPO_COPIE (documenti-release.csv = manifest)."""
+    f = DB / "documenti-release.csv"
+    if not f.exists():
+        return {"copie_file": 0, "copie_release": 0, "copie_byte": 0, "copie_sha256": 0}
+    rr = list(csv.DictReader(open(f, encoding="utf-8")))
+    return {"copie_file": len(rr), "copie_release": len({r["iniziativa"] for r in rr}),
+            "copie_byte": sum(int(r["byte"] or 0) for r in rr), "copie_sha256": sum(1 for r in rr if len(r["sha256"]) == 64)}
+
+
+def famiglia(t):
+    t = t.lower()
+    for n, kk in FAMIGLIE:
+        if any(k in t for k in kk):
+            return n
+    return "altri allegati e atti"
+
+
+def accesso_civico_a():
+    """Parte A dell'elenco unico #58 (convenzioni): enti, voci, richieste con il tetto di TETTO_VOCI voci."""
+    import math
+    if not ELENCO.exists():
+        return {}
+    rr = list(csv.DictReader(open(ELENCO, encoding="utf-8")))
+    a = [r for r in rr if r["fonte"].startswith("A")]
+    pr = [r for r in a if r["criticita"] == "3"]
+
+    def ric(x):
+        c = Counter(r["cf"] or r["ente"] for r in x)
+        return len(c), sum(math.ceil(v / TETTO_VOCI) for v in c.values())
+    ea, ra = ric(a)
+    ep, rp = ric(pr)
+    et, rt = ric(rr)
+    top = Counter(r["ente"].strip() for r in a).most_common(3)
+    return {"voci": len(a), "enti": ea, "richieste": ra, "voci_p": len(pr), "enti_p": ep, "richieste_p": rp,
+            "voci_tot": len(rr), "enti_tot": et, "richieste_tot": rt, "top": top}
+
+
+def sintesi(g, m):
+    """Sintesi in cima (richiesta di Fabio, 0.11): situazione, impatto sulla misura della sovranità, accesso civico."""
+    rr = list(csv.DictReader(open(DB / "documenti-mancanti.csv", encoding="utf-8")))
+    fam = Counter(famiglia(r["documento_atteso"] + " " + r["contenuto_presunto"]) for r in rr if r["criticita"] == "3")
+    mc = m["mancanti"]
+    ac = accesso_civico_a()
+    c = g["celle"]
+    tot = sum(c.values())
+    fb = R / "report/convenzioni/blocchi-accesso.csv"
+    blocchi = sum(1 for _ in csv.DictReader(open(fb, encoding="utf-8"))) if fb.exists() else 0
+    L = ["## In breve", "",
+         f"**Situazione.** {g['iniziative']} convenzioni e accordi quadro ICT ({g['attive']} attive), {meur(g['valore_2024_2025'])} M€ dichiarati "
+         f"in BDNCP sui derivati 2024-2025 (ordine di grandezza, non spesa). Dei {tot} dati attesi (iniziativa × tipo) {c.get('pubblico', 0)} sono pubblici, "
+         f"{c.get('assente', 0)} non individuati, {c.get('ignoto', 0)} da verificare. Archiviati e ripubblicati {g['copie_file']} documenti (§ 5ter). "
+         f"Mancano **{mc['righe']} documenti** individuati file per file, {mc['criticita'].get('3', 0)} di criticità 3; {mc['dietro_login'].get('sì', 0)} "
+         f"stanno in aree riservate (login SPID/CNS di acquistinretepa e piattaforme), {mc['dietro_login'].get('ignoto', 0)} forse; {blocchi} blocchi "
+         "(403, CAPTCHA) registrati [V sui conteggi; criticità per regole sul titolo, R]. "
+         f"Nessuna iniziativa ha pubblici insieme offerte, transato, ordinativi ({g['iniziative_ben_visibili']} «ben visibili»).", "",
+         "**Impatto sulla misura della sovranità.** Senza questi documenti non si chiudono tre domande dell'imbuto: quale **prodotto e marchio** sta "
+         "dietro ogni lotto e listino (giurisdizione del provider), quanto è stato **transato per ente e per marchio**, quali **region e data center** "
+         "sono usati. I CIG ICT derivati da AQ o convenzione sono 55.114 per 89,2 mld [V, #50; tetti e massimali inclusi]; ereditano la giurisdizione "
+         "solo dove l'iniziativa è decifrata. Restano non attribuibili per mancanza di documenti, fra l'altro: licenze e marchi incerti per 1,68 mld, "
+         "quasi tutto EA Microsoft e licenze Oracle senza dettaglio [V]; sul residuo Microsoft di 819 M€ la quota cloud è 0,55-0,81 mld [stima, campione "
+         "non casuale] ([imbuto](/rendiconti/imbuto-dove-siamo/) § 4.5-4.6). Il valore BDNCP delle iniziative non «ben visibili» è "
+         f"{meur(g['valore_non_ben_visibile'])} M€ [V sui conteggi, stima come spesa].", ""]
+    if ac:
+        L += [f"**Accesso civico (proposta, [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)).** Per le convenzioni il destinatario è la "
+              f"centrale, non i singoli enti: la parte A dell'elenco unico ha {ac['voci']} voci verso **{ac['enti']} enti** "
+              f"({', '.join(f'{n} {v}' for n, v in ac['top'])}); con un tetto di {TETTO_VOCI} voci per richiesta sono **{ac['richieste']} richieste**, "
+              f"di cui {ac['richieste_p']} per le {ac['voci_p']} voci prioritarie (criticità 3, {ac['enti_p']} enti). L'elenco complessivo, con i CIG del "
+              f"residuo, ha {ac['voci_tot']} voci, {ac['enti_tot']} enti, circa {ac['richieste_tot']} richieste (`esiti/2026-11-09/accesso-civico/`, "
+              "[specifica](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/accesso-civico-specifica.md)). **Nessuna inviata.**", ""]
+    L += ["| Documenti mancanti di criticità 3, per famiglia | Numero |", "|---|---|"]
+    for n, v in fam.most_common():
+        L.append(f"| {n} | {v} |")
+    L += ["", "Famiglie per parole chiave sul titolo e sul contenuto presunto (`tools/convenzioni/rapporto.py`), da leggere come ordine di grandezza.", ""]
+    return L
+
+
+def sezione_copie(g):
+    u = f"https://github.com/{REPO_COPIE}"
+    gb = f"{g['copie_byte'] / 1e9:.1f}".replace(".", ",")
+    return ["## 5ter. Copie pubbliche dei documenti", "",
+            f"I documenti archiviati dalle fonti ufficiali sono ripubblicati nel repository pubblico [{REPO_COPIE}]({u}): "
+            f"**{g['copie_file']} file** in **{g['copie_release']} release** (una per iniziativa, tag = identificativo usato in queste pagine), {gb} GB. "
+            f"Il [manifest]({u}/blob/main/manifest.csv) ([JSON]({u}/blob/main/manifest.json)) riporta per ogni file iniziativa, titolo, URL originale, "
+            f"**sha256** ({g['copie_sha256']} su {g['copie_file']}), dimensione, data di acquisizione e indirizzo della copia; lo sha256 coincide con il digest "
+            "dell'asset mostrato da GitHub e con la copia nell'archivio del progetto. La fonte autentica resta l'URL originale. "
+            "Nelle pagine per convenzione (/convenzioni/…) ogni documento ha il link «copia».", ""]
 
 
 def carica():
@@ -153,7 +254,14 @@ def pct(a, b):
 def differenze(prima, ora):
     if not prima:
         return ["prima versione"]
-    out = []
+    out, testa = [], []
+    pc, oc = prima["globali"]["celle"], ora["globali"]["celle"]
+    if pc != oc:
+        testa.append("celle " + ", ".join(f"{k} {pc.get(k, 0)}→{oc.get(k, 0)}" for k in ("pubblico", "altrove", "assente", "ignoto") if pc.get(k, 0) != oc.get(k, 0)))
+    if prima["globali"]["indice_medio"] != ora["globali"]["indice_medio"]:
+        testa.append(f"indice medio {round(100 * prima['globali']['indice_medio'])}→{round(100 * ora['globali']['indice_medio'])} %")
+    if prima["globali"]["documenti_ufficiali"] != ora["globali"]["documenti_ufficiali"]:
+        testa.append(f"documenti ufficiali {prima['globali']['documenti_ufficiali']}→{ora['globali']['documenti_ufficiali']}")
     pi, oi = prima["per_iniziativa"], ora["per_iniziativa"]
     for k, o in oi.items():
         p = pi.get(k)
@@ -170,10 +278,16 @@ def differenze(prima, ora):
     if ora.get("mancanti") and ora["mancanti"] != prima.get("mancanti"):
         out.append(f"documenti mancanti per file: {ora['mancanti']['righe']} (criticità 3: {ora['mancanti']['criticita'].get('3', 0)})"
                    + (f", prima {prima['mancanti']['righe']}" if prima.get("mancanti") else " (nuovo inventario)"))
+    if ora["globali"].get("copie_file") != prima["globali"].get("copie_file"):
+        out.append(f"copie pubbliche nel repository {REPO_COPIE}: {ora['globali'].get('copie_file')} file in {ora['globali'].get('copie_release')} release"
+                   + (f", prima {prima['globali']['copie_file']}" if prima["globali"].get("copie_file") else " (prima non citate nel rapporto)"))
     for k in ("istanze_preparate", "istanze_inviate", "istanze_con_risposta"):
         if ora["globali"][k] != prima["globali"][k]:
             out.append(f"{k.replace('_', ' ')}: da {prima['globali'][k]} a {ora['globali'][k]}")
-    return out or ["nessuna variazione nei dati"]
+    # i numeri globali in testa: il registro delle revisioni tronca a 600 caratteri
+    glob = [x for x in out if not re.match(r"^[\w-]+: ", x) or x.startswith(("documenti mancanti", "copie pubbliche"))]
+    per = [x for x in out if x not in glob]
+    return (testa + glob + per) or ["nessuna variazione nei dati"]
 
 
 def sezione_mancanti(nomi):
@@ -249,7 +363,7 @@ def main(versione, data, nota):
          "<!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->", "",
          f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **bozza da presentare a Fabio Pietrosanti prima di ogni diffusione esterna**", "",
          "Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.", "",
-         "## 1. Sintesi", "",
+         ] + sintesi(g, m) + ["## 1. Sintesi", "",
          "*Cosa non diciamo:* che un dato non individuato sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la "
          "convenzione; che le somme BDNCP siano spesa. Molte carenze riguardano dati che oggi nessuna norma obbliga a pubblicare.", "",
          f"- **Perimetro.** {g['iniziative']} iniziative ICT ({g['attive']} attive): Consip, PSN, soggetti aggregatori regionali, consorzi e altre "
@@ -282,8 +396,9 @@ def main(versione, data, nota):
          "allegati di monitoraggio non abbiamo letto; non abbiamo verificato l'invio dei flussi né come Consip li conservi. Nessuna norma, a nostra "
          "conoscenza, ne impone la pubblicazione, che proponiamo in R37.",
          f"- **Rimedi.** Dopo le fonti online del § 3 (acquistinretepa ancora parziale), {g['istanze_preparate']} bozze di accesso civico generalizzato, "
-         f"tutte verso Consip, restano utili all'analisi; {g['istanze_ritirate']} sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 "
-         "perché questi dati diventino pubblici senza bisogno di chiederli.", "",
+         f"{g['istanze_preparate_consip']} verso Consip e le altre verso altre centrali e amministrazioni, restano utili all'analisi; {g['istanze_ritirate']} sono ritirate, con il motivo di ciascuna nel registro; **nessuna inviata**; proposte di policy R08 e R37-R44 "
+         "perché questi dati diventino pubblici senza bisogno di chiederli. Le richieste vere e proprie passano dall'accesso civico "
+         "massivo ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), § 8).", "",
          "## 2. Due misure del valore", "",
          f"Per {g['od_iniziative']} iniziative Consip esiste una seconda misura: gli **open data Consip** degli ordini diretti "
          f"(dati.consip.it, 2024 e 2025, file archiviati con sha256): **{meur(g['od_ordinato'])} M€** ordinati. Le stesse iniziative dichiarano "
@@ -359,7 +474,7 @@ def main(versione, data, nota):
         L.append(f"| [{nomi[k][:70]}](/convenzioni/{k.lower()}/) | {TIPI[p['tipo']]} | {meur(p['valore'])} | {p['pubblico']} | {p['altrove']} | {p['assente']} | "
                  f"{p['ignoto']} | {round(100 * p['indice'])} % | {', '.join(p['carenze_verificate']) or '–'} |")
     L += ["", f"Le altre {len(pi) - len(princ)} iniziative sono nell'[indice](/convenzioni/) e nella [griglia](/convenzioni/griglia/).", "",
-          ] + sez_manc + [
+          ] + sez_manc + sezione_copie(g) + [
           "## 6. Per tipo di soggetto", "",
           f"Fonti consultate il {DT}.", "",
           "| Soggetto | Iniziative | M€ 2024-25 | Indice medio | Non individuati | Non verificati |", "|---|---|---|---|---|---|"]
@@ -393,6 +508,11 @@ def main(versione, data, nota):
           f"{g['istanze_preparate']} bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, "
           f"ordinativi delle più grandi, region e data center, erosione), {g['istanze_ritirate']} ritirate, {g['istanze_inviate']} inviate. [Registro](/convenzioni/accesso-civico/) e "
           "[analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).",
+          f"- **Accesso civico massivo** ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), in preparazione al {DATI_AL}): i "
+          f"{m['mancanti'].get('righe', 0)} documenti mancanti di questo inventario sono la parte A dell'elenco unico delle richieste (con i CIG senza "
+          "documento del residuo), con 6 modelli (istanza, sollecito, chiarimento, riesame, difensore civico), specifica di metodo e registro degli eventi; "
+          "deciso l'invio dalla PEC istituzionale del progetto. **Nessuna istanza inviata**: mancano le decisioni su richiedente, tetto e cadenza delle "
+          "ondate e l'approvazione della prima ondata.",
           "- **Proposte di policy** (stato «proposta», nessuna inviata):"]
     for c in car:
         L.append(f"  - {c['id']} {c['titolo']} → {c['raccomandazione']}")
