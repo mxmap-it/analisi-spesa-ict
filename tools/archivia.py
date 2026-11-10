@@ -81,14 +81,47 @@ def percorso_mirror(url: str) -> Path:
     return ROOT / "mirror" / p.netloc / p.path.lstrip("/")
 
 
-def aggiorna_vista(url: str, sha: str) -> None:
-    dest = percorso_mirror(url)
+# Collisioni di prefisso (#12, 10/11/2026): un URL può essere prefisso di un altro
+# (…/connect e …/connect/pagina). Nella vista il primo è un file e il secondo
+# chiede una cartella con lo stesso nome, o viceversa. Regola, retrocompatibile
+# (un percorso libero da collisioni resta quello naturale; nulla di esistente si
+# sposta, i blob non si toccano):
+#   - un componente intermedio occupato da un FILE diventa `<nome>__d/`;
+#   - una foglia occupata da una CARTELLA diventa `<nome>/__index__`
+#     (vale anche per gli URL che finiscono con «/» o senza percorso).
+# Il percorso effettivo si registra nel manifest (campo `mirror`).
+SUFFISSO_CARTELLA = "__d"
+FOGLIA_INDICE = "__index__"
+
+
+def risolvi_vista(dest: Path) -> Path:
+    base = ROOT / "mirror"
+    parti = dest.relative_to(base).parts
+    cur = base
+    for comp in parti[:-1]:
+        cand = cur / comp
+        while cand.exists() and not cand.is_dir():
+            cand = cur / (cand.name + SUFFISSO_CARTELLA)
+        cur = cand
+    foglia = cur / parti[-1]
+    if foglia.is_dir():
+        foglia = foglia / FOGLIA_INDICE
+    return foglia
+
+
+def collega_vista(blob: Path, dest: Path) -> Path:
+    dest = risolvi_vista(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".link")
     if tmp.exists():
         tmp.unlink()
-    os.link(percorso_blob(sha), tmp)
+    os.link(blob, tmp)
     os.replace(tmp, dest)
+    return dest
+
+
+def aggiorna_vista(url: str, sha: str) -> Path:
+    return collega_vista(percorso_blob(sha), percorso_mirror(url))
 
 
 # URL che promettono un file: se arriva HTML è il WAF (es. ANAC risponde 200 con una pagina). Comportamento storico.
@@ -189,8 +222,8 @@ def archivia(sess: requests.Session, url: str, accetta_html: bool = False) -> di
             blob.parent.mkdir(parents=True, exist_ok=True)
             os.replace(part, blob)
             esito = "nuovo"
-        aggiorna_vista(url, digest)
-        rec.update(esito=esito, sha256=digest, dimensione=n, verifica="hash",
+        vista = aggiorna_vista(url, digest)
+        rec.update(esito=esito, sha256=digest, dimensione=n, verifica="hash", mirror=str(vista.relative_to(ROOT)),
                    secondi=round(time.monotonic() - t0, 2))
         return rec
     except requests.RequestException as e:
@@ -233,13 +266,7 @@ def archivia_file(sorgente: Path, url: str, data: str, via: str = "browser-headl
         blob.parent.mkdir(parents=True, exist_ok=True)
         os.replace(part, blob)
         esito = "nuovo"
-    dest = percorso_mirror_file(url)
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    tmp = dest.with_name(dest.name + ".link")
-    if tmp.exists():
-        tmp.unlink()
-    os.link(blob, tmp)
-    os.replace(tmp, dest)
+    dest = collega_vista(blob, percorso_mirror_file(url))
     rec.update(esito=esito, sha256=digest, dimensione=blob.stat().st_size, verifica="hash",
                mirror=str(dest.relative_to(ROOT)))
     return rec

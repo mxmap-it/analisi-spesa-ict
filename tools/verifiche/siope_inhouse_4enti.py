@@ -1,10 +1,11 @@
 """#12 Verifica dell'ipotesi in-house sui 4 enti SIOPE «molto pagato ICT, pochi CIG» (siope_ict_enti.py, esiti 2026-11-10).
 
-Enti (CF SIOPE) e in-house candidate (regex sul nome dell'aggiudicatario ANAC):
-  Regione Lombardia / gestione sanitaria (80050050154)  -> ARIA S.p.A. (ex Lombardia Informatica)
-  Comune di Venezia (00339370272)                        -> Venis S.p.A.
-  ARPAL Umbria (03630270548)                             -> Umbria Digitale S.c.a r.l. (ora PuntoZero)
-  ARPEA Piemonte (97694170016)                           -> CSI-Piemonte
+Enti (CF SIOPE) e in-house, abbinate per CODICE FISCALE/P.IVA dell'in-house (0.2; la 0.1 usava una regex sul nome,
+e `ARIA` prendeva IM.I.S.C.A., un'onlus e altre ditte con «aria» nel nome; `PUNTO ?ZERO` prendeva omonime):
+  Regione Lombardia / gestione sanitaria (80050050154)  -> ARIA S.p.A. (ex Lombardia Informatica), CF 05017630152
+  Comune di Venezia (00339370272)                        -> Venis S.p.A., CF 02396850279
+  ARPAL Umbria (03630270548)                             -> PuntoZero S.c.a r.l. (ex Umbria Digitale), CF 02915750547
+  ARPEA Piemonte (97694170016)                           -> CSI-Piemonte, CF 01995120019
 Misure, dai CIG ANAC 2020-2025 + delta (ultima versione) e dagli aggiudicatari ANAC:
   a) tutti i CIG con SA = ente (ICT o no, per anno): quanti e quanto verso l'in-house come aggiudicataria;
   b) tutti i CIG con aggiudicataria = in-house: per stazione appaltante (quanto viene dall'ente, quanto da altri);
@@ -18,28 +19,32 @@ sys.path.insert(0, str(R / "tools/verifiche")); sys.path.insert(0, str(R / "tool
 import bdap_cig_ministeri_cf as M  # noqa: E402
 
 D = M.D
-ENTI = {"80050050154": ("REGIONE LOMBARDIA", r"\bARIA\b|AZIENDA REGIONALE PER L.INNOVAZIONE E GLI ACQUISTI|LOMBARDIA INFORMATICA"),
-        "00339370272": ("COMUNE DI VENEZIA", r"\bVENIS\b|VENEZIA INFORMATICA"),
-        "03630270548": ("ARPAL UMBRIA", r"UMBRIA DIGITALE|PUNTO ?ZERO"),
-        "97694170016": ("ARPEA PIEMONTE", r"\bCSI.?PIEMONTE\b|CONSORZIO PER IL SISTEMA INFORMATIVO")}
+ENTI = {"80050050154": ("REGIONE LOMBARDIA", {"05017630152"}),
+        "00339370272": ("COMUNE DI VENEZIA", {"02396850279"}),
+        "03630270548": ("ARPAL UMBRIA", {"02915750547"}),
+        "97694170016": ("ARPEA PIEMONTE", {"01995120019"})}
+
+
+def norm_cf(x):
+    """CF/P.IVA numerici normalizzati a 11 cifre (ANAC ha anche '1995120019' e '001995120019')."""
+    x = (x or "").strip().upper()
+    return x.lstrip("0").zfill(11) if x.isdigit() else x
 
 
 def main():
     csv.field_size_limit(10 ** 8)
-    rx = {cf: re.compile(p, re.I) for cf, (_, p) in ENTI.items()}
+    per_cf = {c: cf for cf, (_, cs) in ENTI.items() for c in cs}
     agg = collections.defaultdict(set); cf_inh = collections.defaultdict(collections.Counter)
     z = sorted(glob.glob(str(D / "aggiudicatari/filesystem/aggiudicatari_csv.zip")))[0]
     ing = {"aggiudicatari": {"file": os.path.relpath(z, M.ARC), "sha256": M.sha(z)}}
     zf = zipfile.ZipFile(z); m = next(i for i in zf.namelist() if i.endswith(".csv"))
     for r in csv.DictReader(io.TextIOWrapper(zf.open(m), encoding="utf-8-sig", errors="replace"), delimiter=";"):
-        n = r.get("denominazione") or ""
-        for cf, x in rx.items():
-            if x.search(n): agg[r["cig"]].add(cf); cf_inh[cf][(n.strip()[:80], (r["codice_fiscale"] or "").strip())] += 1
+        cf = per_cf.get(norm_cf(r["codice_fiscale"]))
+        if cf: agg[r["cig"]].add(cf); cf_inh[cf][((r.get("denominazione") or "").strip()[:80], (r["codice_fiscale"] or "").strip())] += 1
     print("aggiudicatari", len(agg), flush=True)
     ict = set()
     for r in csv.DictReader(open(R / "lavoro/imbuto/ict.csv", encoding="utf-8")): ict.add(r["cig"])
-    # CF delle in-house come SA: i CF più frequenti fra gli aggiudicatari trovati
-    inh_cf = {cf: {k[1] for k, v in c.most_common(3) if k[1]} for cf, c in cf_inh.items()}
+    inh_cf = {cf: cs for cf, (_, cs) in ENTI.items()}  # CF delle in-house come SA: quelli dichiarati, non indovinati
     cig = {}; files = []
     zz = [z for a in range(2020, 2026) for z in sorted(glob.glob(str(D / f"cig-{a}/filesystem/cig_csv_*.zip")))]
     zz += sorted(glob.glob(str(D / "cig/filesystem/*-cig_csv.zip")))
@@ -48,13 +53,13 @@ def main():
         files.append(os.path.relpath(z, M.ARC)); zf = zipfile.ZipFile(z)
         m = next(i for i in zf.namelist() if i.endswith(".csv"))
         for r in csv.DictReader(io.TextIOWrapper(zf.open(m), encoding="utf-8-sig", errors="replace"), delimiter=";"):
-            cf = (r["cf_amministrazione_appaltante"] or "").strip()
+            cf = norm_cf(r["cf_amministrazione_appaltante"])
             if r["cig"] in agg or cf in ENTI or cf in tutti_inh:
                 cig[r["cig"]] = {"cf": cf, "sa": r["denominazione_amministrazione_appaltante"], "anno": r["data_pubblicazione"][:4],
                                  "importo": M.B.num(r["importo_lotto"]), "oggetto": r["oggetto_lotto"][:150], "cpv": r["cod_cpv"],
                                  "scelta": r["tipo_scelta_contraente"], "durata": M.B.num(r.get("DURATA_PREVISTA"))}
     ing["cig_anac"] = {"file": files}
-    out = {"versione": "siope-inhouse-4enti 0.1 (2026-11-10)", "ingressi": ing, "enti": {}}
+    out = {"versione": "siope-inhouse-4enti 0.2 (2026-11-10, abbinamento per CF)", "ingressi": ing, "enti": {}}
     for cf, (nome, _) in ENTI.items():
         a = collections.defaultdict(collections.Counter); b = collections.defaultdict(collections.Counter); c = collections.defaultdict(collections.Counter)
         el = []

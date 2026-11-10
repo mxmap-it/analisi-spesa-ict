@@ -35,6 +35,32 @@ def test_url_da_solo_non_da_errore():
     assert "nessun URL" not in r.stderr
 
 
+def _vista(tmp_path, url, testo):
+    A.ROOT = tmp_path  # senza pytest: niente monkeypatch
+    b = tmp_path / "blob" / testo; b.parent.mkdir(parents=True, exist_ok=True); b.write_text(testo)
+    return A.collega_vista(b, A.percorso_mirror(url))
+
+
+def test_prefisso_prima_il_corto(tmp_path):  # #12: c'è un file dove servirebbe una cartella
+    a = _vista(tmp_path, "https://h.it/x/connect", "A")
+    b = _vista(tmp_path, "https://h.it/x/connect/pagina", "B")
+    assert a == tmp_path / "mirror/h.it/x/connect" and a.read_text() == "A"
+    assert b == tmp_path / "mirror/h.it/x/connect__d/pagina" and b.read_text() == "B"
+    assert _vista(tmp_path, "https://h.it/x/connect/pagina", "B2") == b  # deterministico
+
+
+def test_prefisso_prima_il_lungo(tmp_path):  # #12: c'è una cartella dove servirebbe un file
+    b = _vista(tmp_path, "https://h.it/x/connect/pagina", "B")
+    a = _vista(tmp_path, "https://h.it/x/connect", "A")
+    assert b == tmp_path / "mirror/h.it/x/connect/pagina" and b.read_text() == "B"
+    assert a == tmp_path / "mirror/h.it/x/connect/__index__" and a.read_text() == "A"
+    assert _vista(tmp_path, "https://h.it/x/connect/", "C") == a  # URL con «/» finale
+
+
+def test_senza_collisione_percorso_naturale(tmp_path):  # retrocompatibilità
+    assert _vista(tmp_path, "https://h.it/a/b.csv", "A") == tmp_path / "mirror/h.it/a/b.csv"
+
+
 if __name__ == "__main__":  # uso: python tests/test_archivia.py (senza pytest)
     import tempfile
     for n, f in sorted(globals().items()):

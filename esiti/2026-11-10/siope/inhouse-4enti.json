@@ -1,5 +1,5 @@
 {
- "versione": "siope-inhouse-4enti 0.1 (2026-11-10)",
+ "versione": "siope-inhouse-4enti 0.2 (2026-11-10, abbinamento per CF)",
  "ingressi": {
   "aggiudicatari": {
    "file": "mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip",
@@ -99,35 +99,13 @@
      219
     ],
     [
-     "IM.I.S.C.A. IMPIANTI IDROTERMICI SANITARI CONDIZIONAMENTO ARIA CALDA - S.R.L.",
-     "00283140697",
-     38
-    ],
-    [
-     "ARCISOLIDARIETA' ORA D'ARIA ONLUS",
-     "94044890542",
-     37
-    ],
-    [
-     "ACQUA SUOLO ARIA A.S.A. -S.R.L.",
-     "05016070152",
-     37
-    ],
-    [
-     "ARIA SRL",
-     "04465070243",
-     16
-    ],
-    [
-     "DAL POS ARIA COMPRESSA SRL",
-     "02170160267",
-     15
+     "RECORDATI RARE DISEASES ITALY SRL",
+     "5017630152",
+     1
     ]
    ],
    "cf_inhouse_usati_come_sa": [
-    "00283140697",
-    "05017630152",
-    "94044890542"
+    "05017630152"
    ],
    "a_cig_ente": {
     "2020": {
@@ -174,33 +152,21 @@
     }
    },
    "b_cig_aggiudicati_inhouse": {
-    "2020": {
-     "n_altri": 14,
-     "imp_altri": 9931841
-    },
-    "2021": {
-     "n_altri": 9,
-     "imp_altri": 4010790
-    },
     "2022": {
-     "n_altri": 17,
-     "imp_altri": 65370211
+     "n_altri": 2,
+     "imp_altri": 741238
     },
     "2023": {
-     "n_altri": 24,
-     "imp_altri": 45383448
+     "n_altri": 7,
+     "imp_altri": 5724337
     },
     "2024": {
-     "n_altri": 202,
-     "imp_altri": 43311691
+     "n_altri": 133,
+     "imp_altri": 37031744
     },
     "2025": {
-     "n_altri": 154,
-     "imp_altri": 384456542
-    },
-    "2026": {
-     "n_altri": 1,
-     "imp_altri": 8500
+     "n_altri": 72,
+     "imp_altri": 5231038
     }
    },
    "c_cig_sa_inhouse": {
@@ -552,36 +518,9 @@
      "PUNTOZERO S.C.A R.L.",
      "02915750547",
      316
-    ],
-    [
-     "AULETREPUNTOZERO-SPAZI INNOVATIVI PER LA SCUOLA SOCIETA' A RESPONSABILITA' LIMIT",
-     "02585460690",
-     43
-    ],
-    [
-     "DUEPUNTOZERO S.A.S. DI CACCIANI FEDERICO & C. ENUNCIABILE ANCHE 2PUNTO0 S.A.S. D",
-     "02757200346",
-     26
-    ],
-    [
-     "RADIO PUNTO ZERO - SOCIETA' A RESPONSABILITA' LIMITATA",
-     "00676280324",
-     14
-    ],
-    [
-     "MODENA VOLLEY PUNTO ZERO SOCIETA' SPORTIVA DILETTANTISTICA A RESPONSABILITA' LIM",
-     "03520410360",
-     14
-    ],
-    [
-     "PUNTOZERO - SOCIETA' COOPERATIVA",
-     "02661810305",
-     7
     ]
    ],
    "cf_inhouse_usati_come_sa": [
-    "02585460690",
-    "02757200346",
     "02915750547"
    ],
    "a_cig_ente": {
@@ -629,37 +568,29 @@
     }
    },
    "b_cig_aggiudicati_inhouse": {
-    "2020": {
-     "n_altri": 6,
-     "imp_altri": 645904
-    },
-    "2021": {
-     "n_altri": 5,
-     "imp_altri": 436823
-    },
     "2022": {
-     "n_altri": 8,
-     "imp_altri": 541834
+     "n_altri": 2,
+     "imp_altri": 48925
     },
     "2023": {
-     "n_altri": 23,
-     "imp_altri": 780958
+     "n_altri": 7,
+     "imp_altri": 113753
     },
     "2024": {
-     "n_altri": 187,
-     "imp_altri": 29926701,
+     "n_altri": 141,
+     "imp_altri": 25304053,
      "n_ente": 2,
      "imp_ente": 909164
     },
     "2025": {
-     "n_altri": 194,
-     "imp_altri": 27730704,
+     "n_altri": 153,
+     "imp_altri": 26399969,
      "n_ente": 5,
      "imp_ente": 3864258
     },
     "2026": {
-     "n_altri": 4,
-     "imp_altri": 40294,
+     "n_altri": 2,
+     "imp_altri": 17961,
      "n_ente": 1,
      "imp_ente": 28043
     }
@@ -812,14 +743,13 @@
      1
     ],
     [
-     "CSI PIEMONTE",
-     "001995120019",
+     "",
+     "01995120019",
      1
     ]
    ],
    "cf_inhouse_usati_come_sa": [
-    "01995120019",
-    "1995120019"
+    "01995120019"
    ],
    "a_cig_ente": {
     "2020": {
@@ -886,7 +816,7 @@
     },
     "2025": {
      "n_altri": 380,
-     "imp_altri": 220417328,
+     "imp_altri": 221509558,
      "n_ente": 2,
      "imp_ente": 1168592
     },

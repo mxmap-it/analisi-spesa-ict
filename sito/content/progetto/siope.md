@@ -174,4 +174,4 @@ Proposta nel rendiconto imbuto (`report/imbuto/sezione-siope-copertura.md`) e R8
 
   Lettura: la spesa passa da ARIA in due livelli, in-house senza CIG verso la Regione e stazione appaltante verso il mercato. Nell'imbuto i CIG ARIA si collegano alla Regione nello strato R; il pagato SIOPE non si somma.
 
-  Correzione della 0.2: il «≈ 300 M€ della GSA» era la somma dei due enti. Il conteggio dei CIG con «SA in-house» di `inhouse-4enti.json` per la Lombardia era gonfiato da una regex troppo larga (IM.I.S.C.A., un'onlus).
+  Correzione della 0.2: il «≈ 300 M€ della GSA» era la somma dei due enti. `siope_inhouse_4enti.py` 0.2 abbina le in-house per codice fiscale, non per nome: Venezia, ARPEA e la colonna «CIG ente → in-house» di tutti e 4 gli enti non cambiano; cambiano solo i CIG aggiudicati alle in-house da altri enti per Lombardia e ARPAL (tolte le omonime) [V]. I CIG con SA = ARIA vanno letti sugli strati S3-S6 (`lombardia-gsa.md`).
