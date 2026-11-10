@@ -11,7 +11,8 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - **Fatto** [V]: `tools/verifiche/siope_ict_enti.py` 0.1.1 (≈10 min, streaming, nice/ionice), esiti `esiti/2026-11-10/siope/` (`ict-enti.json`, `ict-enti.csv` per CF, `ict-enti-scarti.csv`). Pagina nuova `sito/content/progetto/siope.md`, `bdap.md` 0.4, sezione per il rendiconto imbuto `report/imbuto/sezione-siope-copertura.md` (§ 4.13, da inserire), **R83**.
 - **Mirror:** SIOPE diretto completo (USCITE 2017-2026 + anagrafiche, 702 MB). BDAP: archiviati 10/11 i CE SSN annuali 2022 e 2024 e IV trim. 2025 (prima solo 2023).
 - **Numeri:** pagato ICT enti non statali 2,99/3,30/3,97/4,62 mld (2022-25, senza telefonia 0,3-0,4); + Stato BDAP → **5,1 mld nel 2024**. CIG ICT S3-S6 pubblicati 2024 14,02 mld (6,71 enti SIOPE, 1,69 Stato, 5,62 fuori SIOPE). Stessi enti: CIG/pagato 1,68, quota annua/pagato 2,2. Enti con pagato ICT e zero CIG 2024: 740/10.180, 16,8 M€ (0,4 %). Lombardia GSA ≈300 M€/anno pagati vs quota CIG 0,03 (in-house, da verificare). Sanità: 3212 674 M€ vs CE BA1620 720 M€ (2024).
-- **Prossimi passi:** inserire § 4.13 nel rendiconto imbuto (decide Fabio); strato di riscontro R per ente nell'imbuto; verificare in-house Lombardia (ARIA) e Venezia (Venis) sui bilanci; codici sanitari 6103/6104 per l'hardware.
+- **Giro 2 (10/11):** § 4.13 inserito nel rendiconto imbuto 0.16 + sintesi («valore dei contratti ~3,5× il pagato; 5,1 mld pagati 2024»). In-house (`siope_inhouse_4enti.py`, `inhouse-4enti.json`): Venezia/Venis, ARPAL/PuntoZero, ARPEA/CSI con CIG in-house solo dal 2024-25 [V]; Regione Lombardia → ARIA nessun CIG 2020-26 [V]. R83 aggiornata.
+- **Prossimi passi:** strato di riscontro R per ente nell'imbuto; verificare in-house Lombardia (ARIA) e Venezia (Venis) sui bilanci; codici sanitari 6103/6104 per l'hardware.
 
 ## PUNTO DI RIPRESA (9/11/2026, sera)
 
