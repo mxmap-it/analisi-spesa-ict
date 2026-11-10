@@ -4,7 +4,7 @@ date: 2026-11-09
 description: "Che cosa c'è in SIOPE, quali codici gestionali sono ICT, quanto pagano in ICT gli enti non statali 2022-2025 e quanto dei loro pagamenti vedono i CIG ICT dell'imbuto."
 ---
 
-**Versione 0.2 del 10/11/2026** ([#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
+**Versione 0.3 del 10/11/2026** ([#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
 Legenda: **[V]** verificato da noi su file archiviati con sha256; **[R]** riferito da altri o dalla
 documentazione della fonte; **stima** quando c'è un'ipotesi in mezzo.
 
@@ -132,7 +132,7 @@ con SA = in-house):
 
 | Ente (CF SIOPE) | In-house (CF) | CIG ente → in-house | Lettura |
 |---|---|---|---|
-| Regione Lombardia, gestione sanitaria (80050050154) | ARIA S.p.A. (05017630152) | **nessuno, 2020-2026** [V] | ARIA riceve CIG solo da altri enti (202 nel 2024, 154 nel 2025); la Regione le affida senza CIG o con un CF diverso. Che i ≈ 300 M€ ICT pagati vadano ad ARIA è **ipotesi** [R, non verificata: bilancio ARIA non archiviato] |
+| Regione Lombardia, ordinaria + gestione sanitaria (80050050154) | ARIA S.p.A. (05017630152) | **nessuno, 2020-2026** [V] | Il CF somma due enti SIOPE: GSA 164-257 M€ e Regione ordinaria 99-138 M€ di ICT l'anno (2022-25) [V]. ARIA fattura alla Regione circa 189 M€ l'anno di ICT su incarichi in-house (convenzione quadro, DGR XI/7409/2022) [R, bilancio ARIA 2023 archiviato] e compra sul mercato con CIG propri (SA = ARIA: 455/331/1.068/543 M€ di ICT pubblicati 2022-25) [V]. Vedi `esiti/2026-11-10/siope/lombardia-gsa.md` |
 | Comune di Venezia (00339370272) | Venis S.p.A. (02396850279) | 0 fino al 2023; 1 nel 2024 (27 k€); **17 nel 2025 per 42,7 M€** [V] | Il contratto di servizio 2024-2027 per il sistema informativo comunale (CIG B5F1633320, 27,2 M€, «affidamento diretto a società in house») ha il CIG solo dal 2025: **ipotesi confermata** [V] |
 | ARPAL Umbria (03630270548) | PuntoZero S.c.a r.l., ex Umbria Digitale (02915750547) | 2 nel 2024 (0,9 M€), 5 nel 2025 (3,9 M€) [V] | piano d'esercizio e SIL affidati in-house; prima del 2024 nessun CIG: **confermata** [V] |
 | ARPEA Piemonte (97694170016) | CSI-Piemonte (01995120019) | 2 nel 2025 (1,2 M€) [V] | servizi applicativi in convenzione in-house; prima del 2025 nessun CIG: **confermata** [V]. Il CSI lavora per gli enti consorziati con convenzioni in esenzione IVA [R, determina ARPA Piemonte 2026] |
@@ -162,3 +162,16 @@ si pubblica il pagato ICT SIOPE dell'anno e l'indicatore di copertura *quota ann
 con soglie: < 0,2 «contratti mancanti» (in-house, convenzioni intestate ad altri, affidamenti senza
 CIG), > 5 «CIG da rivedere» (importi a base d'asta, hardware fuori codici ICT, pagamenti accentrati).
 Proposta nel rendiconto imbuto (`report/imbuto/sezione-siope-copertura.md`) e R83.
+
+## Registro
+
+- **0.3 (10/11/2026), Regione Lombardia e GSA** (`tools/verifiche/siope_lombardia_gsa.py`, `esiti/2026-11-10/siope/lombardia-gsa.*`):
+  - il CF 80050050154 riunisce due enti SIOPE: GSA (800000616), con ICT 163,8/181,7/204,5/256,8 M€ nel 2022-2025 (2025 senza dicembre), e Regione ordinaria (000713218), con 99,3/115,4/127,6/137,8 M€ [V];
+  - la GSA usa solo i codici 1.03.02.19.999 e .001 (servizi), con pagamenti mensili a blocchi [V];
+  - nessun CIG Regione → ARIA [V];
+  - ARIA fattura alla Regione circa 189 M€ l'anno di ICT, su incarichi in-house previsti dalla convenzione quadro DGR XI/7409/2022 [R, bilancio ARIA 2023, sha256 187211c3…];
+  - ARIA compra con CIG propri: 2,4 mld di ICT nel 2022-2025 [V].
+
+  Lettura: la spesa passa da ARIA in due livelli, in-house senza CIG verso la Regione e stazione appaltante verso il mercato. Nell'imbuto i CIG ARIA si collegano alla Regione nello strato R; il pagato SIOPE non si somma.
+
+  Correzione della 0.2: il «≈ 300 M€ della GSA» era la somma dei due enti. Il conteggio dei CIG con «SA in-house» di `inhouse-4enti.json` per la Lombardia era gonfiato da una regex troppo larga (IM.I.S.C.A., un'onlus).

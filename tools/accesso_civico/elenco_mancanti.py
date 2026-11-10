@@ -177,6 +177,15 @@ def main():
                       "livelli_tentati": "L0-L2 via 6 ; L2 TED ; L3 PVL ; L4 AT (ricerca mirata C1 9/11)", "esito_livelli": " ; ".join(esi),
                       "note": r.get("motivo", "")})
 
+    # --- C: voci manuali (documenti senza CIG, es. pagamenti/incarichi in-house; config/accesso-civico/voci-manuali.csv) ---
+    vm = R / "config/accesso-civico/voci-manuali.csv"
+    if vm.exists():
+        for r in csv.DictReader(open(vm, encoding="utf-8")):
+            e = ipa.get(r["cf"], {}); imp = float(r.get("importo") or 0); cr = int(r.get("criticita") or 3)
+            righe.append({k: r.get(k, "") for k in CAMPI} | {"codice_ipa": e.get("codice_ipa", ""), "ente": e.get("ente") or r["ente"],
+                         "pec": e.get("pec", ""), "pec_fonte": "IndicePA" if e.get("pec") else "", "importo": imp, "criticita": cr,
+                         "peso_valore": peso(imp), "priorita": round(cr * peso(imp), 3)})
+
     # --- A: convenzioni ---
     for x in conv:
         i = ini.get(x["iniziativa"], {})

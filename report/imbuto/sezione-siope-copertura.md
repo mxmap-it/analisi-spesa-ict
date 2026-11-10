@@ -34,8 +34,9 @@ valore stimato con opzioni, pluriennali), il pagato è cassa dell'anno: il rappo
    ICT, per 16,8 M€ (0,4 % del pagato) [V].
 2. *Gli importi CIG sono spesa?* No: sovrastimano la spesa annua da 1 (comuni < 5.000 abitanti, CIG/pagato
    0,98) a 4 volte (sanità); le cifre in euro dell'imbuto vanno dette «valore dei contratti», non «spesa».
-3. *Dove l'imbuto è cieco?* Dove la spesa va a in-house senza CIG: Regione Lombardia (≈ 300 M€ l'anno
-   pagati, quota CIG 0,03, nessun CIG verso ARIA), MEF e Sogei per lo Stato (BDAP: quota 0,25); per
+3. *Dove l'imbuto è cieco?* Dove la spesa va a in-house senza CIG: Regione Lombardia (263-395 M€ l'anno
+   pagati fra GSA e bilancio ordinario, quota CIG 0,03, nessun CIG verso ARIA; la spesa di mercato è nei CIG intestati ad
+   ARIA, da collegare all'ente con lo strato R, vedi `lombardia-gsa.md`), MEF e Sogei per lo Stato (BDAP: quota 0,25); per
    Venezia, ARPAL Umbria e ARPEA gli affidamenti in-house hanno CIG solo dal 2024-2025 (sotto) [V].
 4. *Dove l'imbuto gonfia?* Sanità: 192 enti (quasi tutti ASL e AO) con quota CIG oltre 5 volte il
    pagato ICT; parte è hardware pagato su codici sanitari non ICT [stima].
@@ -48,7 +49,7 @@ con SA = in-house):
 
 | Ente (CF SIOPE) | In-house (CF) | CIG ente → in-house | Lettura |
 |---|---|---|---|
-| Regione Lombardia, gestione sanitaria (80050050154) | ARIA S.p.A. (05017630152) | **nessuno, 2020-2026** [V] | ARIA riceve CIG solo da altri enti (202 nel 2024, 154 nel 2025); la Regione le affida senza CIG o con un CF diverso. Che i ≈ 300 M€ ICT pagati vadano ad ARIA è **ipotesi** [R, non verificata: bilancio ARIA non archiviato] |
+| Regione Lombardia, ordinaria + gestione sanitaria (80050050154) | ARIA S.p.A. (05017630152) | **nessuno, 2020-2026** [V] | Il CF somma due enti SIOPE: GSA 164-257 M€ e Regione ordinaria 99-138 M€ di ICT l'anno (2022-25) [V]. ARIA fattura alla Regione circa 189 M€ l'anno di ICT su incarichi in-house (convenzione quadro, DGR XI/7409/2022) [R, bilancio ARIA 2023 archiviato] e compra sul mercato con CIG propri (SA = ARIA: 455/331/1.068/543 M€ di ICT pubblicati 2022-25) [V]. Vedi `esiti/2026-11-10/siope/lombardia-gsa.md` |
 | Comune di Venezia (00339370272) | Venis S.p.A. (02396850279) | 0 fino al 2023; 1 nel 2024 (27 k€); **17 nel 2025 per 42,7 M€** [V] | Il contratto di servizio 2024-2027 per il sistema informativo comunale (CIG B5F1633320, 27,2 M€, «affidamento diretto a società in house») ha il CIG solo dal 2025: **ipotesi confermata** [V] |
 | ARPAL Umbria (03630270548) | PuntoZero S.c.a r.l., ex Umbria Digitale (02915750547) | 2 nel 2024 (0,9 M€), 5 nel 2025 (3,9 M€) [V] | piano d'esercizio e SIL affidati in-house; prima del 2024 nessun CIG: **confermata** [V] |
 | ARPEA Piemonte (97694170016) | CSI-Piemonte (01995120019) | 2 nel 2025 (1,2 M€) [V] | servizi applicativi in convenzione in-house; prima del 2025 nessun CIG: **confermata** [V]. Il CSI lavora per gli enti consorziati con convenzioni in esenzione IVA [R, determina ARPA Piemonte 2026] |
