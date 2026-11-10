@@ -1,0 +1,1412 @@
+{
+ "versione": "siope-lombardia-gsa 0.1 (2026-11-10)",
+ "ingressi": {
+  "SIOPE_ANAGRAFICHE.zip": "44ea0b5347da787b985611bd2df1c03e7965d13100a1d923108bfde65303d990",
+  "SIOPE_USCITE.2022.zip": "ba5ca033f2836e819b95a55eac87c753e96b932c6491dd0a07d4ad81c08ee4f4",
+  "SIOPE_USCITE.2023.zip": "b0eb1573aeecd8f1ef775e066f4f783abe4b1575f4dbda0b4bc294260ad25462",
+  "SIOPE_USCITE.2024.zip": "dc0715d090a008a09844c5e50f5918b18b6f9ccec23407aa911aa663b56c1cf8",
+  "SIOPE_USCITE.2025.zip": "054e3392fcd4d1c7f8da59d2b9eff290cb6bb43d54d9674dc7940c9e939b1621",
+  "aggiudicatari": {
+   "file": "mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip",
+   "sha256": "6908a361f581824ce144414116301234fc113230230634b0942b988f9173d60f"
+  },
+  "cig_anac": {
+   "n_file": 79,
+   "nota": "cig-2020..2026 + delta, ultima versione per CIG; sha256 nel manifest dell'archivio"
+  }
+ },
+ "codici_ente": {
+  "000713218": {
+   "nome": "REGIONE LOMBARDIA",
+   "sottocomparto": "REGIONE",
+   "san": false,
+   "riga": [
+    "000713218",
+    "2005-01-01",
+    "9999-12-31",
+    "80050050154",
+    "REGIONE LOMBARDIA",
+    "146",
+    "015",
+    "N.A.",
+    "REGIONE"
+   ]
+  },
+  "800000616": {
+   "nome": "GESTIONE SANITARIA REGIONE LOMBARDIA",
+   "sottocomparto": "REG_GEST_SAN",
+   "san": false,
+   "riga": [
+    "800000616",
+    "2012-01-01",
+    "9999-12-31",
+    "80050050154",
+    "GESTIONE SANITARIA REGIONE LOMBARDIA",
+    "146",
+    "015",
+    "N.A.",
+    "REG_GEST_SAN"
+   ]
+  }
+ },
+ "siope": {
+  "2022": {
+   "000713218": {
+    "tot": 6133937977,
+    "ict": 99325052,
+    "categorie": {
+     "software": 33475386,
+     "servizi": 64451727,
+     "licenze": 1169759,
+     "noleggi": 177656,
+     "materiale": 475,
+     "telefonia": 200188,
+     "hardware": 50050
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      43776322
+     ],
+     [
+      "2.02.03.02.001",
+      "Sviluppo software e manutenzione evolutiva",
+      33266917
+     ],
+     [
+      "1.03.02.19.004",
+      "Servizi di rete per trasmissione dati e VoIP e relativa manutenzione",
+      10439479
+     ],
+     [
+      "1.03.02.19.009",
+      "Servizi per le postazioni di lavoro e relativa manutenzione",
+      5445711
+     ],
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      2310659
+     ],
+     [
+      "1.03.02.19.005",
+      "Servizi per i sistemi e relativa manutenzione",
+      1227923
+     ],
+     [
+      "1.03.02.07.006",
+      "Licenze d'uso per software",
+      1169759
+     ],
+     [
+      "1.03.02.19.003",
+      "Servizi per l'interoperabilita' e la cooperazione",
+      607710
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      359363
+     ],
+     [
+      "1.03.02.19.002",
+      "Assistenza all'utente e formazione",
+      249200
+     ],
+     [
+      "2.02.03.02.002",
+      "Acquisto software",
+      208468
+     ],
+     [
+      "1.03.02.07.004",
+      "Noleggi di hardware",
+      177656
+     ],
+     [
+      "1.03.02.05.001",
+      "Telefonia fissa",
+      114811
+     ],
+     [
+      "1.03.02.05.002",
+      "Telefonia mobile",
+      85377
+     ],
+     [
+      "2.02.01.07.999",
+      "Hardware n.a.c.",
+      50050
+     ],
+     [
+      "1.03.02.19.007",
+      "Servizi di gestione documentale",
+      35361
+     ],
+     [
+      "1.03.01.02.006",
+      "Materiale informatico",
+      475
+     ]
+    ],
+    "mesi_ict": {
+     "01": 9267270,
+     "02": 51166191,
+     "03": 457502,
+     "04": 2499787,
+     "05": 1089565,
+     "06": 45860,
+     "07": 4817263,
+     "08": 428802,
+     "09": 769159,
+     "10": 10365853,
+     "11": 7218690,
+     "12": 11199111
+    },
+    "trasferimenti_top": [
+     [
+      "2.03.03.01.001",
+      "Contributi agli investimenti a imprese controllate",
+      484970765
+     ],
+     [
+      "2.03.03.02.001",
+      "Contributi agli investimenti a altre imprese partecipate",
+      212016702
+     ],
+     [
+      "2.03.03.03.999",
+      "Contributi agli investimenti a altre Imprese",
+      100819699
+     ],
+     [
+      "1.04.03.02.001",
+      "Trasferimenti correnti a altre imprese partecipate",
+      96882697
+     ],
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      66547056
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      56991357
+     ]
+    ]
+   },
+   "800000616": {
+    "tot": 24031619489,
+    "ict": 163846758,
+    "categorie": {
+     "servizi": 163846758
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      87046718
+     ],
+     [
+      "1.03.02.19.011",
+      "Processi trasversali alle classi di servizio",
+      44835636
+     ],
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      29300342
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      1693960
+     ],
+     [
+      "1.03.02.19.007",
+      "Servizi di gestione documentale",
+      524986
+     ],
+     [
+      "1.03.02.19.006",
+      "Servizi di sicurezza",
+      445115
+     ]
+    ],
+    "mesi_ict": {
+     "03": 4545299,
+     "04": 40391955,
+     "05": 51398287,
+     "06": 961692,
+     "07": 2010011,
+     "08": 14268258,
+     "09": 8834925,
+     "10": 3088343,
+     "11": 20782877,
+     "12": 17565111
+    },
+    "trasferimenti_top": [
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      54847067
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      7261917
+     ]
+    ]
+   }
+  },
+  "2023": {
+   "800000616": {
+    "tot": 27907386913,
+    "ict": 181749169,
+    "categorie": {
+     "servizi": 181749169
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      125206761
+     ],
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      42904205
+     ],
+     [
+      "1.03.02.19.011",
+      "Processi trasversali alle classi di servizio",
+      7684260
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      2818099
+     ],
+     [
+      "1.03.02.19.009",
+      "Servizi per le postazioni di lavoro e relativa manutenzione",
+      2585844
+     ],
+     [
+      "1.03.02.19.006",
+      "Servizi di sicurezza",
+      550000
+     ]
+    ],
+    "mesi_ict": {
+     "01": 19487,
+     "02": 819876,
+     "03": 7827061,
+     "04": 15729284,
+     "05": 52288336,
+     "06": 6374511,
+     "07": 26204853,
+     "08": 3517480,
+     "09": 19858362,
+     "10": 1885332,
+     "11": 32113223,
+     "12": 15111365
+    },
+    "trasferimenti_top": [
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      46703594
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      6011027
+     ],
+     [
+      "2.03.03.03.999",
+      "Contributi agli investimenti a altre Imprese",
+      451896
+     ]
+    ]
+   },
+   "000713218": {
+    "tot": 5738391020,
+    "ict": 115445602,
+    "categorie": {
+     "hardware": 218451,
+     "servizi": 73445001,
+     "telefonia": 202801,
+     "licenze": 1335831,
+     "noleggi": 116968,
+     "software": 40328877,
+     "materiale": 474
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      53738063
+     ],
+     [
+      "2.02.03.02.001",
+      "Sviluppo software e manutenzione evolutiva",
+      40077204
+     ],
+     [
+      "1.03.02.19.004",
+      "Servizi di rete per trasmissione dati e VoIP e relativa manutenzione",
+      10861994
+     ],
+     [
+      "1.03.02.19.009",
+      "Servizi per le postazioni di lavoro e relativa manutenzione",
+      4027470
+     ],
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      3480785
+     ],
+     [
+      "1.03.02.07.006",
+      "Licenze d'uso per software",
+      1335831
+     ],
+     [
+      "1.03.02.19.005",
+      "Servizi per i sistemi e relativa manutenzione",
+      627276
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      568576
+     ],
+     [
+      "2.02.03.02.002",
+      "Acquisto software",
+      251674
+     ],
+     [
+      "2.02.01.07.002",
+      "Postazioni di lavoro",
+      180483
+     ],
+     [
+      "1.03.02.07.004",
+      "Noleggi di hardware",
+      116968
+     ],
+     [
+      "1.03.02.05.001",
+      "Telefonia fissa",
+      110156
+     ],
+     [
+      "1.03.02.19.002",
+      "Assistenza all'utente e formazione",
+      108550
+     ],
+     [
+      "1.03.02.05.002",
+      "Telefonia mobile",
+      92645
+     ],
+     [
+      "1.03.02.19.007",
+      "Servizi di gestione documentale",
+      31945
+     ],
+     [
+      "2.02.01.07.999",
+      "Hardware n.a.c.",
+      18852
+     ],
+     [
+      "2.02.01.07.003",
+      "Periferiche",
+      14164
+     ],
+     [
+      "2.02.01.07.005",
+      "Tablet e dispositivi di telefonia fissa e mobile",
+      4953
+     ],
+     [
+      "1.03.01.02.006",
+      "Materiale informatico",
+      474
+     ],
+     [
+      "1.03.02.19.011",
+      "Processi trasversali alle classi di servizio",
+      344
+     ],
+     [
+      "1.03.02.19.006",
+      "Servizi di sicurezza",
+      0
+     ]
+    ],
+    "mesi_ict": {
+     "01": 20748274,
+     "02": 53939708,
+     "03": 708356,
+     "04": 2752770,
+     "05": 76502,
+     "06": 674267,
+     "07": 2523141,
+     "08": 520415,
+     "09": 603753,
+     "10": 11973409,
+     "11": 8374445,
+     "12": 12550563
+    },
+    "trasferimenti_top": [
+     [
+      "2.03.03.01.001",
+      "Contributi agli investimenti a imprese controllate",
+      742364586
+     ],
+     [
+      "2.03.03.03.999",
+      "Contributi agli investimenti a altre Imprese",
+      130396787
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      67720528
+     ],
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      59090079
+     ],
+     [
+      "2.03.03.02.001",
+      "Contributi agli investimenti a altre imprese partecipate",
+      29311335
+     ]
+    ]
+   }
+  },
+  "2024": {
+   "800000616": {
+    "tot": 26608706550,
+    "ict": 204536986,
+    "categorie": {
+     "servizi": 204536986
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      138422328
+     ],
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      66114657
+     ]
+    ],
+    "mesi_ict": {
+     "02": 16721208,
+     "03": 11145083,
+     "04": 18145024,
+     "05": 49029198,
+     "06": 26003403,
+     "07": 11890729,
+     "08": 1208961,
+     "09": 11710379,
+     "10": 29290281,
+     "11": 8212849,
+     "12": 21179871
+    },
+    "trasferimenti_top": [
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      48888115
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      2325478
+     ]
+    ]
+   },
+   "000713218": {
+    "tot": 6035619890,
+    "ict": 127585013,
+    "categorie": {
+     "servizi": 88681391,
+     "hardware": 138330,
+     "licenze": 1811515,
+     "telefonia": 192216,
+     "software": 36948279,
+     "noleggi": 4714,
+     "materiale": 783
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      66132447
+     ],
+     [
+      "2.02.03.02.001",
+      "Sviluppo software e manutenzione evolutiva",
+      36948279
+     ],
+     [
+      "1.03.02.19.004",
+      "Servizi di rete per trasmissione dati e VoIP e relativa manutenzione",
+      11260984
+     ],
+     [
+      "1.03.02.19.009",
+      "Servizi per le postazioni di lavoro e relativa manutenzione",
+      4000725
+     ],
+     [
+      "1.03.02.19.002",
+      "Assistenza all'utente e formazione",
+      2782710
+     ],
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      2306795
+     ],
+     [
+      "1.03.02.07.006",
+      "Licenze d'uso per software",
+      1811515
+     ],
+     [
+      "1.03.02.19.005",
+      "Servizi per i sistemi e relativa manutenzione",
+      954548
+     ],
+     [
+      "1.03.02.19.007",
+      "Servizi di gestione documentale",
+      701575
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      441606
+     ],
+     [
+      "1.03.02.05.001",
+      "Telefonia fissa",
+      102139
+     ],
+     [
+      "1.03.02.19.003",
+      "Servizi per l'interoperabilita' e la cooperazione",
+      100000
+     ],
+     [
+      "1.03.02.05.002",
+      "Telefonia mobile",
+      90078
+     ],
+     [
+      "2.02.01.07.999",
+      "Hardware n.a.c.",
+      80520
+     ],
+     [
+      "2.02.01.07.004",
+      "Apparati di telecomunicazione",
+      45926
+     ],
+     [
+      "2.02.01.07.003",
+      "Periferiche",
+      11884
+     ],
+     [
+      "1.03.02.07.004",
+      "Noleggi di hardware",
+      4714
+     ],
+     [
+      "1.03.01.02.006",
+      "Materiale informatico",
+      783
+     ]
+    ],
+    "mesi_ict": {
+     "02": 65796416,
+     "03": 8776936,
+     "04": 2876016,
+     "05": 1270959,
+     "06": 55772,
+     "07": 2914294,
+     "08": 1207688,
+     "09": 6501833,
+     "10": 9905620,
+     "11": 4420230,
+     "12": 23859251
+    },
+    "trasferimenti_top": [
+     [
+      "2.03.03.01.001",
+      "Contributi agli investimenti a imprese controllate",
+      684589888
+     ],
+     [
+      "2.03.03.03.999",
+      "Contributi agli investimenti a altre Imprese",
+      95790264
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      53899590
+     ],
+     [
+      "1.04.03.02.001",
+      "Trasferimenti correnti a altre imprese partecipate",
+      47089147
+     ],
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      32102569
+     ],
+     [
+      "2.03.03.02.001",
+      "Contributi agli investimenti a altre imprese partecipate",
+      278274
+     ]
+    ]
+   }
+  },
+  "2025": {
+   "800000616": {
+    "tot": 31779831344,
+    "ict": 256760523,
+    "categorie": {
+     "servizi": 256760523
+    },
+    "codici_ict": [
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      159251304
+     ],
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      97509218
+     ]
+    ],
+    "mesi_ict": {
+     "01": 1200104,
+     "02": 32487166,
+     "03": 6417731,
+     "04": 42207928,
+     "05": 10895014,
+     "06": 70140908,
+     "07": 4514333,
+     "08": 96666,
+     "09": 2113427,
+     "10": 33701115,
+     "11": 52986129,
+     "12": 0
+    },
+    "trasferimenti_top": [
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      53783602
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      1460847
+     ]
+    ]
+   },
+   "000713218": {
+    "tot": 8477482678,
+    "ict": 137791945,
+    "categorie": {
+     "servizi": 84332276,
+     "hardware": 10000,
+     "telefonia": 186547,
+     "software": 51561017,
+     "licenze": 1888653
+    },
+    "codici_ict": [
+     [
+      "2.02.03.02.001",
+      "Sviluppo software e manutenzione evolutiva",
+      51561017
+     ],
+     [
+      "1.03.02.19.001",
+      "Gestione e manutenzione applicazioni",
+      47930217
+     ],
+     [
+      "1.03.02.19.999",
+      "Altri servizi informatici e di telecomunicazioni n.a.c.",
+      12473794
+     ],
+     [
+      "1.03.02.19.004",
+      "Servizi di rete per trasmissione dati e VoIP e relativa manutenzione",
+      11520064
+     ],
+     [
+      "1.03.02.19.002",
+      "Assistenza all'utente e formazione",
+      3946602
+     ],
+     [
+      "1.03.02.19.009",
+      "Servizi per le postazioni di lavoro e relativa manutenzione",
+      3928867
+     ],
+     [
+      "1.03.02.19.005",
+      "Servizi per i sistemi e relativa manutenzione",
+      2671831
+     ],
+     [
+      "1.03.02.07.006",
+      "Licenze d'uso per software",
+      1888653
+     ],
+     [
+      "1.03.02.19.007",
+      "Servizi di gestione documentale",
+      1399774
+     ],
+     [
+      "1.03.02.19.010",
+      "Servizi di consulenza e prestazioni professionali ICT",
+      284230
+     ],
+     [
+      "1.03.02.19.003",
+      "Servizi per l'interoperabilita' e la cooperazione",
+      150000
+     ],
+     [
+      "1.03.02.05.001",
+      "Telefonia fissa",
+      98771
+     ],
+     [
+      "1.03.02.05.002",
+      "Telefonia mobile",
+      87776
+     ],
+     [
+      "1.03.02.19.006",
+      "Servizi di sicurezza",
+      26898
+     ],
+     [
+      "2.02.01.07.999",
+      "Hardware n.a.c.",
+      10000
+     ]
+    ],
+    "mesi_ict": {
+     "01": 12861257,
+     "02": 83002836,
+     "03": 204583,
+     "04": 3419646,
+     "05": 497247,
+     "06": 176142,
+     "07": 9141634,
+     "08": 2154336,
+     "09": 6418030,
+     "10": 11179025,
+     "11": 2785683,
+     "12": 5951526
+    },
+    "trasferimenti_top": [
+     [
+      "2.03.03.01.001",
+      "Contributi agli investimenti a imprese controllate",
+      719747072
+     ],
+     [
+      "1.04.03.99.999",
+      "Trasferimenti correnti a altre imprese",
+      81716341
+     ],
+     [
+      "2.03.03.03.999",
+      "Contributi agli investimenti a altre Imprese",
+      46453150
+     ],
+     [
+      "1.04.03.01.001",
+      "Trasferimenti correnti a imprese controllate",
+      32162457
+     ],
+     [
+      "1.04.03.02.001",
+      "Trasferimenti correnti a altre imprese partecipate",
+      15869559
+     ]
+    ]
+   }
+  }
+ },
+ "anac": {
+  "cig_sa_aria": {
+   "2020": {
+    "n": 2723,
+    "imp": 10452601847,
+    "n_ict": 311,
+    "imp_ict": 76393577
+   },
+   "2021": {
+    "n": 3358,
+    "imp": 11194398609,
+    "n_ict": 67,
+    "imp_ict": 24563949
+   },
+   "2022": {
+    "n": 6484,
+    "imp": 25774746207,
+    "n_ict": 118,
+    "imp_ict": 455228604
+   },
+   "2023": {
+    "n": 2384,
+    "imp": 12558138970,
+    "n_ict": 134,
+    "imp_ict": 330570898
+   },
+   "2024": {
+    "n": 5431,
+    "imp": 47137226590,
+    "n_ict": 85,
+    "imp_ict": 1068230698
+   },
+   "2025": {
+    "n": 2219,
+    "imp": 18445360181,
+    "n_ict": 134,
+    "imp_ict": 542738806
+   },
+   "2026": {
+    "n": 1053,
+    "imp": 12734648048,
+    "n_ict": 82,
+    "imp_ict": 664476983
+   }
+  },
+  "cig_sa_aria_per_strato": {
+   "2020|S0": 8446168343,
+   "2020|S2": 414,
+   "2020|S4": 4495452,
+   "2020|S5": 43949114,
+   "2020|S6": 27949012,
+   "2021|S0": 9052319567,
+   "2021|S4": 803409,
+   "2021|S5": 22369258,
+   "2021|S6": 1391281,
+   "2022|S0": 21732337090,
+   "2022|S4": 3000280,
+   "2022|S5": 449539966,
+   "2022|S6": 2688358,
+   "2023|S0": 9740938306,
+   "2023|S3": 2498953,
+   "2023|S4": 20568264,
+   "2023|S5": 172800772,
+   "2023|S6": 134702909,
+   "2024|S0": 36527815549,
+   "2024|S3": 33983,
+   "2024|S4": 16918100,
+   "2024|S5": 1049712630,
+   "2024|S6": 1565985,
+   "2025|S0": 15122799363,
+   "2025|S3": 533988,
+   "2025|S4": 49363527,
+   "2025|S5": 391871414,
+   "2025|S6": 100969877,
+   "2026|S0": 5295890673,
+   "2026|S4": 965505,
+   "2026|S5": 82694939,
+   "2026|S6": 580816539
+  },
+  "cig_aggiudicati_ad_aria": {
+   "2022": {
+    "n_altri": 2,
+    "imp_altri": 741238
+   },
+   "2023": {
+    "n_altri": 7,
+    "imp_altri": 5724337
+   },
+   "2024": {
+    "n_altri": 132,
+    "imp_altri": 37015793
+   },
+   "2025": {
+    "n_altri": 70,
+    "imp_altri": 5187176,
+    "n_aria": 2,
+    "imp_aria": 43862
+   }
+  },
+  "top_ict_sa_aria": [
+   {
+    "cig": "BAFE270F81",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2026",
+    "imp": 580384123.84,
+    "ogg": "MESSA A DISPOSIZIONE DELLE RISORSE CLOUD E DELLA GESTIONE INFRASTRUTTURALE (C.D. SERVIZI DI OUTSOURCING INFRASTRUTTURALE)",
+    "cpv": "72260000-5",
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031AADD9",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 137661030.46,
+    "ogg": "ATTIVITÀ DI SVILUPPO, MANUTENZIONE E GESTIONE INERENTI AL SISTEMA INFORMATIVO REGIONALE DI REGIONE LOMBARDIA (SIR)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031A8C33",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 131550897.87,
+    "ogg": "ATTIVITÀ DI SVILUPPO, MANUTENZIONE E GESTIONE INERENTI AL SISTEMA INFORMATIVO REGIONALE DI REGIONE LOMBARDIA (SIR)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B313D081DE",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 113300000.0,
+    "ogg": "ATTIVITÀ DI SVILUPPO, GESTIONE E MANUTENZIONE RELATIVE AL SOTTO PERIMETRO A (SI VEDA LA DOCUMENTAZIONE DI GARA)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B313D092B1",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 107120000.0,
+    "ogg": "ATTIVITÀ DI SVILUPPO, GESTIONE E MANUTENZIONE RELATIVE AL SOTTO PERIMETRO B (SI VEDA LA DOCUMENTAZIONE DI GARA)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031A6A8D",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 93539503.76,
+    "ogg": "ATTIVITÀ DI SVILUPPO, MANUTENZIONE E GESTIONE INERENTI AL SISTEMA INFORMATIVO REGIONALE DI REGIONE LOMBARDIA (SIR)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B7DF25AC93",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 77831923.38,
+    "ogg": "SERVIZI INFRASTRUTTURALI ICT PER CUP REGIONALE",
+    "cpv": "72260000-5",
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B313D06038",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 72100000.0,
+    "ogg": "ATTIVITÀ DI DEMAND E PROJECT MANAGEMENT RELATIVE AL SOTTO PERIMETRO A (SI VEDA LA DOCUMENTAZIONE DI GARA)",
+    "cpv": "72222100-8",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "93207405F8",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 66480000.0,
+    "ogg": "LOTTO 1A SVILUPPO, MANUTENZIONE E GESTIONE DEI SERVIZI DELLA PIATTAFORMA BANDO ONLINE E CONFIGURAZIONE DEI PROCEDIMENTI",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B313D0710B",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 65920000.0,
+    "ogg": "ATTIVITÀ DI DEMAND E PROJECT MANAGEMENT RELATIVE AL SOTTO PERIMETRO B (SI VEDA LA DOCUMENTAZIONE DI GARA)",
+    "cpv": "72222100-8",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "9350644B86",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 61557412.8,
+    "ogg": "PROCEDURA APERTA AI SENSI DELL'ART. 60 DEL D.LGS. 50/2016 PER L'AFFIDAMENTO DEI SERVIZI DI ASSISTENZA DEI SISTEMI INFORMATIVI REGIONALI E DI",
+    "cpv": "72253000-3",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "9320794289",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 56796480.0,
+    "ogg": "LOTTO 1B GOVERNANCE DEL SISTEMA INFORMATIVO DELL'AGRICOLTURA, SVILUPPO, MANUTENZIONE E GESTIONE DEL PORTFOLIO SERVIZI.",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A495C22E",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 53632821.2,
+    "ogg": "SERVIZI DI GESTIONE DEL CAPITALE UMANO PRESSO GLI ENTI SANITARI LOMBARDI",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "A02216FBF5",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2023",
+    "imp": 52370386.85,
+    "ogg": "ARIA_2023_097_F - ADESIONE ALLA 'CONVENZIONE DEL POLO STRATEGICO NAZIONALE' PER HOSTING E DATA PROTECTION (BACKUP) RELATIVI AI SERVIZI INFRA",
+    "cpv": "72410000-7",
+    "scelta": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "933914496D",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 48412987.0,
+    "ogg": "ARIA_2022_012 - APPALTO SPECIFICO AI SENSI DELL'ART. 54 COMMA 4, LETT. B) DEL D.LGS. N. 50/2016 PER LA REALIZZAZIONE DELLA CARTELLA CLINICA ",
+    "cpv": "72211000-7",
+    "scelta": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B22118C12E",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 43823067.44,
+    "ogg": "SERVIZI DI ASSISTENZA DEI SISTEMI INFORMATIVI REGIONALI E DI GESTIONE DELLE CAMPAGNE VACCINALIED AMBITI EMERGENZIALI",
+    "cpv": "72253000-3",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031A9D06",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 42929418.78,
+    "ogg": "ATTIVITÀ DI DEMAND MANAGEMENT, QUALITY ASSURANCE E SUPPORTO AL MONITORAGGIO E ALLA GESTIONE DELL'AVANZAMENTO DELLE ATTIVITÀ SVOLTE DAL FORNI",
+    "cpv": "72222100-8",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "9987788764",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2023",
+    "imp": 41245566.52,
+    "ogg": "ARIA_2023_082_F - ADESIONE ADESIONE ALLA 'CONVENZIONE DEL POLO STRATEGICO NAZIONALE' PER I SERVIZI DI COLOCATION DEI DATA CENTER DI ARIA S.P",
+    "cpv": "72410000-7",
+    "scelta": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B0EEA148BE",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 37700000.0,
+    "ogg": "REALIZZAZIONE DEL SERVIZIO DI GESTIONE DIGITALE CENTRALIZZATA DELLE IMMAGINI E DEGLI STUDI DICOM, CARATTERIZZATO DA UNA SOLUZIONE DI VENDOR ",
+    "cpv": "72266000-7",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9C588E059",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 37000000.0,
+    "ogg": "SERVIZI DI MANUTENZIONE, GESTIONE, ASSISTENZA ED EVOLUZIONE PER LA NUOVA PIATTAFORMA REGIONALE DI INTEGRAZIONE (NPRI)",
+    "cpv": "72500000-0",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A7273AB9",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 32725119.0,
+    "ogg": "ORACLE",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A7274B8C",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 32177393.0,
+    "ogg": "RUBRIK",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A7279FAB",
+    "strato": "S4",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 31564658.0,
+    "ogg": "SERVICENOW",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B313D0A384",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 30900000.0,
+    "ogg": "ATTIVITÀ DI DIFFUSIONE SUL TERRITORIO RELATIVE AI SOTTO PERIMETRI A E B (SI VEDA LA DOCUMENTAZIONE DI GARA)",
+    "cpv": "72222000-7",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A7264E57",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 29108041.0,
+    "ogg": "CHECKPOINT",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "A00E8F5ED1",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2023",
+    "imp": 28158447.8,
+    "ogg": "ARIA_2023_116_F – APPALTO SPECIFICO AI SENSI DELL’ART. 54 COMMA 4, LETT. B) DEL D.LGS. N. 50/2016 PER LA REALIZZAZIONE DEL SERVIZIO DI CUP U",
+    "cpv": "72211000-7",
+    "scelta": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031ABEAC",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 27265023.17,
+    "ogg": "ATTIVITÀ DI SVILUPPO, MANUTENZIONE, GESTIONE E SUPPORTO SPECIALISTICO, INERENTI AL SISTEMA INFORMATIVO REGIONALE DI REGIONE LOMBARDIA (SIR)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031ACF7F",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 26048537.6,
+    "ogg": "ATTIVITÀ DI SVILUPPO E SUPPORTO SPECIALISTICO, INERENTI AL SISTEMA INFORMATIVO REGIONALE DI REGIONE LOMBARDIA (SIR)",
+    "cpv": "72262000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "8823420486",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 23296659.33,
+    "ogg": "LOTTO 1 ",
+    "cpv": "72252000-6",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A7266002",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 23205001.0,
+    "ogg": "COMMVAULT",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "9320812164",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 22704960.0,
+    "ogg": "LOTTO 2B SUPPORTO ALLE ATTIVITÀ DI INDIRIZZO EVOLUTIVO, DI PRESIDIO DEL CICLO DI VITA DEI SERVIZI, DI QUALITY ASSURANCE E DI ACCETTAZIONE",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "9527863148",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2023",
+    "imp": 22397859.44,
+    "ogg": "ATTIVITÀ DI TRASFORMAZIONE ED EVOLUZIONE DEI SISTEMI DI COMUNICAZIONE IN LOGICA DI ESTERNALIZZAZIONE DI TECNOLOGIE E INFRASTRUTTURE SU CLOUD",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "8823450D45",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 21821222.02,
+    "ogg": "LOTTO 3 ",
+    "cpv": "72252000-6",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031A59BA",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 21761967.22,
+    "ogg": "ATTIVITÀ DI DEMAND MANAGEMENT, QUALITY ASSURANCE E SUPPORTO AL MONITORAGGIO E ALLA GESTIONE DELL'AVANZAMENTO DELLE ATTIVITÀ SVOLTE DAL FORNI",
+    "cpv": "72222100-8",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B9A727A083",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 21420000.0,
+    "ogg": "DYNATRACE",
+    "cpv": "48218000-9",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B1031A7B60",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2024",
+    "imp": 20660729.52,
+    "ogg": "ATTIVITÀ DI DEMAND MANAGEMENT, QUALITY ASSURANCE E SUPPORTO AL MONITORAGGIO E ALLA GESTIONE DELL'AVANZAMENTO DELLE ATTIVITÀ SVOLTE DAL FORNI",
+    "cpv": "72222100-8",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "8823432E6A",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 20239830.79,
+    "ogg": "LOTTO 2 ",
+    "cpv": "72252000-6",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "B67E2F18AA",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2025",
+    "imp": 19999260.0,
+    "ogg": "SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI",
+    "cpv": "72510000-3",
+    "scelta": "AFFIDAMENTO DIRETTO",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "932076174C",
+    "strato": "S5",
+    "cf": "05017630152",
+    "anno": "2022",
+    "imp": 19200000.0,
+    "ogg": "LOTTO 2A SUPPORTO ALL'ATTIVITÀ DI RACCOLTA E ANALISI DEI REQUISITI, ALLA GESTIONE DEL CICLO DI VITA E ALLA GESTIONE DELL'EVOLUZIONE DEI SERV",
+    "cpv": "72260000-5",
+    "scelta": "PROCEDURA APERTA",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   },
+   {
+    "cig": "A01037E497",
+    "strato": "S6",
+    "cf": "05017630152",
+    "anno": "2023",
+    "imp": 18543388.6,
+    "ogg": "ARIA_2023_096_F - ADESIONE ADESIONE ALLA 'CONVENZIONE DEL POLO STRATEGICO NAZIONALE' PER LA MIGRAZIONE DEI SERVIZI APPLICATIVI DI ARIA S.P.A",
+    "cpv": "72410000-7",
+    "scelta": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+    "sa": "AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A."
+   }
+  ]
+ }
+}

@@ -57,48 +57,52 @@
   "url"
  ],
  "campione": {
-  "enti": 33,
-  "host_distinti": 25,
+  "enti": 200,
+  "host_distinti": 122,
   "conteggi": {
-   "enti": 33,
-   "indice_nuovo": 20,
-   "indice_tipo_dataset": 16,
-   "enti_con_lotti": 18,
-   "indice_assente": 5,
-   "indice_errore": 6,
-   "indice_tipo_non-xml": 4,
-   "indice_invariato": 2,
-   "indice_tipo_indice": 2,
-   "dataset_scaricati": 6,
-   "dataset_tipo_dataset": 6
+   "enti": 200,
+   "indice_nuovo": 111,
+   "indice_tipo_dataset": 89,
+   "enti_con_lotti": 97,
+   "indice_assente": 26,
+   "indice_errore": 53,
+   "indice_tipo_non-xml": 24,
+   "indice_invariato": 10,
+   "indice_tipo_indice": 8,
+   "dataset_scaricati": 18,
+   "dataset_tipo_dataset": 18
   },
   "lotti": {
-   "lotti": 11781,
-   "cig_valorizzato": 11720,
-   "cig_ict": 57,
-   "con_agg": 11781,
-   "somma_agg": 2168195274.04,
-   "con_liq": 11781,
-   "somma_liq": 498801105.0,
-   "liq_pos": 9065,
-   "coppie": 11496,
-   "coppie_agg": 2168195274.04,
-   "coppie_liq": 388854399.71,
-   "liq_gt_agg": 2258,
-   "ict_agg": 6481203.24,
-   "ict_liq": 4831674.06
+   "lotti": 34592,
+   "cig_valorizzato": 34419,
+   "cig_ict": 294,
+   "con_agg": 34520,
+   "somma_agg": 8154344676.69,
+   "con_liq": 34543,
+   "somma_liq": 943548677.56,
+   "liq_pos": 27311,
+   "coppie": 32987,
+   "coppie_agg": 8154207528.55,
+   "coppie_liq": 811780537.29,
+   "liq_gt_agg": 2800,
+   "ict_agg": 153225276.47,
+   "ict_liq": 20938125.06
   },
   "anni_riferimento": {
-   "2022": 22
+   "2022": 104,
+   "01/26/2022 00:00:00": 1,
+   "2021": 1,
+   "2013": 1
   },
   "dimensione_file_dataset_byte": {
-   "n": 22,
-   "somma": 14454165,
-   "mediana": 110274,
-   "max": 5115712
+   "n": 107,
+   "somma": 40790733,
+   "mediana": 119708,
+   "max": 5155554
   },
   "n_link_per_indice": {
-   "0": 33
+   "0": 198,
+   "50": 2
   }
  }
 }
