@@ -1,0 +1,964 @@
+{
+ "versione": "siope-inhouse-4enti 0.1 (2026-11-10)",
+ "ingressi": {
+  "aggiudicatari": {
+   "file": "mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip",
+   "sha256": "6908a361f581824ce144414116301234fc113230230634b0942b988f9173d60f"
+  },
+  "cig_anac": {
+   "file": [
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_01.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_02.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_03.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_04.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_05.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_06.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_07.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_08.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_09.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_10.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_11.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_12.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260401-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260501-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260601-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260701-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260801-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260901-cig_csv.zip",
+    "mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20261001-cig_csv.zip"
+   ]
+  }
+ },
+ "enti": {
+  "80050050154": {
+   "nome": "REGIONE LOMBARDIA",
+   "inhouse_denominazioni_cf": [
+    [
+     "ARIA SPA",
+     "05017630152",
+     219
+    ],
+    [
+     "IM.I.S.C.A. IMPIANTI IDROTERMICI SANITARI CONDIZIONAMENTO ARIA CALDA - S.R.L.",
+     "00283140697",
+     38
+    ],
+    [
+     "ARCISOLIDARIETA' ORA D'ARIA ONLUS",
+     "94044890542",
+     37
+    ],
+    [
+     "ACQUA SUOLO ARIA A.S.A. -S.R.L.",
+     "05016070152",
+     37
+    ],
+    [
+     "ARIA SRL",
+     "04465070243",
+     16
+    ],
+    [
+     "DAL POS ARIA COMPRESSA SRL",
+     "02170160267",
+     15
+    ]
+   ],
+   "cf_inhouse_usati_come_sa": [
+    "00283140697",
+    "05017630152",
+    "94044890542"
+   ],
+   "a_cig_ente": {
+    "2020": {
+     "n": 110,
+     "importo": 18786521,
+     "n_ict": 5,
+     "imp_ict": 467506
+    },
+    "2021": {
+     "n": 163,
+     "importo": 32909009,
+     "n_ict": 10,
+     "imp_ict": 5265349
+    },
+    "2022": {
+     "n": 246,
+     "importo": 407530314,
+     "n_ict": 13,
+     "imp_ict": 26480888
+    },
+    "2023": {
+     "n": 174,
+     "importo": 5432960131,
+     "n_ict": 7,
+     "imp_ict": 2331000
+    },
+    "2024": {
+     "n": 336,
+     "importo": 766999120,
+     "n_ict": 18,
+     "imp_ict": 10841200
+    },
+    "2025": {
+     "n": 366,
+     "importo": 1049489487,
+     "n_ict": 13,
+     "imp_ict": 632861
+    },
+    "2026": {
+     "n": 236,
+     "importo": 133828422,
+     "n_ict": 7,
+     "imp_ict": 397977
+    }
+   },
+   "b_cig_aggiudicati_inhouse": {
+    "2020": {
+     "n_altri": 14,
+     "imp_altri": 9931841
+    },
+    "2021": {
+     "n_altri": 9,
+     "imp_altri": 4010790
+    },
+    "2022": {
+     "n_altri": 17,
+     "imp_altri": 65370211
+    },
+    "2023": {
+     "n_altri": 24,
+     "imp_altri": 45383448
+    },
+    "2024": {
+     "n_altri": 202,
+     "imp_altri": 43311691
+    },
+    "2025": {
+     "n_altri": 154,
+     "imp_altri": 384456542
+    },
+    "2026": {
+     "n_altri": 1,
+     "imp_altri": 8500
+    }
+   },
+   "c_cig_sa_inhouse": {
+    "2020": {
+     "n": 2723,
+     "importo": 10452601847,
+     "n_ict": 1026,
+     "imp_ict": 8522562334
+    },
+    "2021": {
+     "n": 3358,
+     "importo": 11194398609,
+     "n_ict": 1081,
+     "imp_ict": 9076883515
+    },
+    "2022": {
+     "n": 6484,
+     "importo": 25774746207,
+     "n_ict": 3666,
+     "imp_ict": 22187565694
+    },
+    "2023": {
+     "n": 2384,
+     "importo": 12558138970,
+     "n_ict": 1408,
+     "imp_ict": 10071509204
+    },
+    "2024": {
+     "n": 5431,
+     "importo": 47137226590,
+     "n_ict": 3551,
+     "imp_ict": 37596046247
+    },
+    "2025": {
+     "n": 2219,
+     "importo": 18445360181,
+     "n_ict": 982,
+     "imp_ict": 15665538169
+    },
+    "2026": {
+     "n": 1053,
+     "importo": 12734648048,
+     "n_ict": 422,
+     "imp_ict": 5960367656
+    }
+   },
+   "elenco_ente_a_inhouse": []
+  },
+  "00339370272": {
+   "nome": "COMUNE DI VENEZIA",
+   "inhouse_denominazioni_cf": [
+    [
+     "VENIS - VENEZIA INFORMATICA E SISTEMI S.P.A.",
+     "02396850279",
+     33
+    ],
+    [
+     "VENIS VENEZIA INFORMATICA E SISTEMI S.P.A.",
+     "02396850279",
+     1
+    ]
+   ],
+   "cf_inhouse_usati_come_sa": [
+    "02396850279"
+   ],
+   "a_cig_ente": {
+    "2020": {
+     "n": 228,
+     "importo": 84866152,
+     "n_ict": 6,
+     "imp_ict": 3483778
+    },
+    "2021": {
+     "n": 250,
+     "importo": 297658636,
+     "n_ict": 7,
+     "imp_ict": 1259986
+    },
+    "2022": {
+     "n": 298,
+     "importo": 338906191,
+     "n_ict": 10,
+     "imp_ict": 556043
+    },
+    "2023": {
+     "n": 323,
+     "importo": 305182597,
+     "n_ict": 11,
+     "imp_ict": 5768908
+    },
+    "2024": {
+     "n": 567,
+     "importo": 170327560,
+     "n_ict": 26,
+     "imp_ict": 1392028,
+     "n_inhouse": 1,
+     "imp_inhouse": 27430
+    },
+    "2025": {
+     "n": 780,
+     "importo": 2658910018,
+     "n_ict": 32,
+     "imp_ict": 46135077,
+     "n_inhouse": 17,
+     "imp_inhouse": 42687404
+    },
+    "2026": {
+     "n": 533,
+     "importo": 166198962,
+     "n_ict": 36,
+     "imp_ict": 14434202
+    }
+   },
+   "b_cig_aggiudicati_inhouse": {
+    "2022": {
+     "n_altri": 1,
+     "imp_altri": 54522
+    },
+    "2023": {
+     "n_altri": 1,
+     "imp_altri": 29200
+    },
+    "2024": {
+     "n_altri": 8,
+     "imp_altri": 1672274,
+     "n_ente": 1,
+     "imp_ente": 27430
+    },
+    "2025": {
+     "n_altri": 3,
+     "imp_altri": 271100,
+     "n_ente": 17,
+     "imp_ente": 42687404
+    }
+   },
+   "c_cig_sa_inhouse": {
+    "2020": {
+     "n": 46,
+     "importo": 5600169,
+     "n_ict": 25,
+     "imp_ict": 2534930
+    },
+    "2021": {
+     "n": 51,
+     "importo": 9092296,
+     "n_ict": 34,
+     "imp_ict": 7841579
+    },
+    "2022": {
+     "n": 49,
+     "importo": 6373117,
+     "n_ict": 36,
+     "imp_ict": 4764769
+    },
+    "2023": {
+     "n": 55,
+     "importo": 7740714,
+     "n_ict": 37,
+     "imp_ict": 4638121
+    },
+    "2024": {
+     "n": 169,
+     "importo": 16923898,
+     "n_ict": 112,
+     "imp_ict": 12687701
+    },
+    "2025": {
+     "n": 170,
+     "importo": 15701695,
+     "n_ict": 124,
+     "imp_ict": 14010048
+    },
+    "2026": {
+     "n": 118,
+     "importo": 12612387,
+     "n_ict": 83,
+     "imp_ict": 11482202
+    }
+   },
+   "elenco_ente_a_inhouse": [
+    {
+     "cig": "B5F1633320",
+     "anno": "2025",
+     "importo": 27168349.0,
+     "oggetto": "CONTRATTO DI SERVIZIO TRA COMUNE DI VENEZIA E VENIS S.P.A. SERVIZIO DI GESTIONE DEL SISTEMA INFORMATIVO COMUNALE 2024 -2027",
+     "cpv": "72500000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B81BFD5402",
+     "anno": "2025",
+     "importo": 6646721.31,
+     "oggetto": "CONVENZIONE TRA COMUNE DI VENEZIA E VENIS S.P.A. PER LA PROGETTAZIONE E REALIZZAZIONE PROGETTI NELL'AMBITO DEL PN METRO PLUS",
+     "cpv": "48000000-8",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B60CE6128E",
+     "anno": "2025",
+     "importo": 6228799.2,
+     "oggetto": "CONTRATTO DI SERVIZIO TRA IL COMUNE DI VENEZIA E VENIS S.P.A. PER LA GESTIONE DEL SISTEMA INFORMATIVO COMUNALE, ART. 18, COMMA 3 - IMPEGNI DI SPESA CO",
+     "cpv": "72500000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9AD064099",
+     "anno": "2025",
+     "importo": 1418000.0,
+     "oggetto": "NO25070/000 - ACQUISTO BENI DATA CENTER – VENIS S.P.A. – MIGRAZIONE AL POLO STRATEGICO REGIONALE DELLA REGIONE DEL VENETO – APPROVAZIONE PROGETTO – AV",
+     "cpv": "32520000-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B7DAEE7368",
+     "anno": "2025",
+     "importo": 344825.0,
+     "oggetto": "NO25092 - PNRR M1C1 - MISURA 2.2.3 DIGITALIZZAZIONE E SEMPLIFICAZIONE DELLE PROCEDURE (SUAP E SUE) ENTI TERZI - COMUNI",
+     "cpv": "48000000-8",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B6E2725D37",
+     "anno": "2025",
+     "importo": 163720.0,
+     "oggetto": "NO25057/000 - CONTRATTO ICT CON VENIS S.P.A. - ACQUISTO NUOVE POSTAZIONI DI LAVORO E ATTREZZATURE CORRELATE E AGGIORNAMENTO SISTEMI OPERATIVI ",
+     "cpv": "30230000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B89FA393A2",
+     "anno": "2025",
+     "importo": 147690.0,
+     "oggetto": "NO25057/000 - CONTRATTO ICT CON VENIS S.P.A. - ACQUISTO NUOVE POSTAZIONI DI LAVORO E ATTREZZATURE CORRELATE E AGGIORNAMENTO SISTEMI OPERATIVI, DATA CE",
+     "cpv": "30200000-1",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B8F7692B23",
+     "anno": "2025",
+     "importo": 130936.21,
+     "oggetto": "NO25127/000 - PIANO NAZIONALE DI RIPRESA E RESILIENZA M1C1 MISURA 1.3.1 PIATTAFORMA DIGITALE NAZIONALE DATI, ARCHIVIO NAZIONALE DEI NUMERI CIVICI DELL",
+     "cpv": "48000000-8",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B81C13AA9B",
+     "anno": "2025",
+     "importo": 122950.82,
+     "oggetto": "NO25056 – CONTRATTO ICT CON VENIS S.P.A. - RINNOVAMENTO DEL SISTEMA INFORMATIVO COMUNALE – SOSTITUZIONE SOFTWARE OBSOLETI - SVILUPPO DI SOFTWARE",
+     "cpv": "48000000-8",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B6F2EAD647",
+     "anno": "2025",
+     "importo": 80350.0,
+     "oggetto": "ENTE.GEDI.289 USO DI APPLICATIVI SOFTWARE - POC METRO 14-20 - OPERAZIONE POC_VE_IV.4.1.A ASSISTENZA TECNICA A SUPPORTO DELL'AUTORITÀ URBANA- CUP F79I2",
+     "cpv": "48771000-3",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B7DAF06CFA",
+     "anno": "2025",
+     "importo": 61465.63,
+     "oggetto": "NO25058 - CONTRATTO ICT CON VENIS S.P.A. - INTERVENTI DI MANUTENZIONE SVILUPPO DELLA RETE IN FIBRA OTTICA, WIFI E VOIP TELEFONIA, RETE E RILEVAZIONE P",
+     "cpv": "32000000-3",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B91909CC21",
+     "anno": "2025",
+     "importo": 60786.71,
+     "oggetto": "NO25058/000 - CONTRATTO ICT CON VENIS S.P.A. - INTERVENTI DI MANUTENZIONE SVILUPPO DELLA RETE IN FIBRA OTTICA, WIFI E VOIP TELEFONIA, RETE E RILEVAZIO",
+     "cpv": "32000000-3",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B61023145A",
+     "anno": "2025",
+     "importo": 60275.0,
+     "oggetto": "PNRR M1C1 - MISURA 1.4.2 CITIZEN INCLUSION - MIGLIORAMENTO DELL'ACCESSIBILITÀ DEI SERVIZI PUBBLICI DIGITALI INTERVENTO 1 – APPROVAZIONE OFFERTA TECNIC",
+     "cpv": "30210000-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B4C445B3A7",
+     "anno": "2024",
+     "importo": 27430.0,
+     "oggetto": "FORNITURA MATERIALE HARDWARE PER PROGETTO PNRR RETE DI SERVIZI DI FACILITAZIONE DIGITALE",
+     "cpv": "30210000-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B676C1D949",
+     "anno": "2025",
+     "importo": 18500.0,
+     "oggetto": "ASSISTENZA E CONSULENZA INFORMATICA IN OCCASIONE DEI REFERENDUM 08-09 GIUGNO 2025",
+     "cpv": "72511000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B88D27834A",
+     "anno": "2025",
+     "importo": 16730.0,
+     "oggetto": "SERVIZIO DI GESTIONE DEL SERVIZIO INFORMATIVO COMUNALE - ELEZIONI REGIONALI DEL VENETO 23-24/11/2025",
+     "cpv": "72611000-6",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B7DAE6474C",
+     "anno": "2025",
+     "importo": 16200.0,
+     "oggetto": "NO25057/000 - CONTRATTO ICT CON VENIS S.P.A. - ACQUISTO NUOVE POSTAZIONI DI LAVORO E ATTREZZATURE CORRELATE E AGGIORNAMENTO SISTEMI OPERATIVI, DATA CE",
+     "cpv": "30210000-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9871D6522",
+     "anno": "2025",
+     "importo": 1105.0,
+     "oggetto": "NO25138 - CONTRATTO ICT CON VENIS S.P.A. - ACQUISTO HARDWARE (PC) PER IL PERSONALE DEL SERVIZIO COMUNICAZIONE ISTITUZIONALE",
+     "cpv": "30210000-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    }
+   ]
+  },
+  "03630270548": {
+   "nome": "ARPAL UMBRIA",
+   "inhouse_denominazioni_cf": [
+    [
+     "PUNTOZERO S.C.A R.L.",
+     "02915750547",
+     316
+    ],
+    [
+     "AULETREPUNTOZERO-SPAZI INNOVATIVI PER LA SCUOLA SOCIETA' A RESPONSABILITA' LIMIT",
+     "02585460690",
+     43
+    ],
+    [
+     "DUEPUNTOZERO S.A.S. DI CACCIANI FEDERICO & C. ENUNCIABILE ANCHE 2PUNTO0 S.A.S. D",
+     "02757200346",
+     26
+    ],
+    [
+     "RADIO PUNTO ZERO - SOCIETA' A RESPONSABILITA' LIMITATA",
+     "00676280324",
+     14
+    ],
+    [
+     "MODENA VOLLEY PUNTO ZERO SOCIETA' SPORTIVA DILETTANTISTICA A RESPONSABILITA' LIM",
+     "03520410360",
+     14
+    ],
+    [
+     "PUNTOZERO - SOCIETA' COOPERATIVA",
+     "02661810305",
+     7
+    ]
+   ],
+   "cf_inhouse_usati_come_sa": [
+    "02585460690",
+    "02757200346",
+    "02915750547"
+   ],
+   "a_cig_ente": {
+    "2020": {
+     "n": 16,
+     "importo": 520072,
+     "n_ict": 2,
+     "imp_ict": 99550
+    },
+    "2021": {
+     "n": 2,
+     "importo": 242221
+    },
+    "2022": {
+     "n": 10,
+     "importo": 3030482,
+     "n_ict": 4,
+     "imp_ict": 1230711
+    },
+    "2023": {
+     "n": 1,
+     "importo": 139376
+    },
+    "2024": {
+     "n": 19,
+     "importo": 2205391,
+     "n_inhouse": 2,
+     "imp_inhouse": 909164
+    },
+    "2025": {
+     "n": 29,
+     "importo": 4833055,
+     "n_ict": 14,
+     "imp_ict": 4061158,
+     "n_inhouse": 5,
+     "imp_inhouse": 3864258
+    },
+    "2026": {
+     "n": 27,
+     "importo": 2380155,
+     "n_ict": 8,
+     "imp_ict": 1560913,
+     "n_inhouse": 1,
+     "imp_inhouse": 28043
+    }
+   },
+   "b_cig_aggiudicati_inhouse": {
+    "2020": {
+     "n_altri": 6,
+     "imp_altri": 645904
+    },
+    "2021": {
+     "n_altri": 5,
+     "imp_altri": 436823
+    },
+    "2022": {
+     "n_altri": 8,
+     "imp_altri": 541834
+    },
+    "2023": {
+     "n_altri": 23,
+     "imp_altri": 780958
+    },
+    "2024": {
+     "n_altri": 187,
+     "imp_altri": 29926701,
+     "n_ente": 2,
+     "imp_ente": 909164
+    },
+    "2025": {
+     "n_altri": 194,
+     "imp_altri": 27730704,
+     "n_ente": 5,
+     "imp_ente": 3864258
+    },
+    "2026": {
+     "n_altri": 4,
+     "imp_altri": 40294,
+     "n_ente": 1,
+     "imp_ente": 28043
+    }
+   },
+   "c_cig_sa_inhouse": {
+    "2020": {
+     "n": 499,
+     "importo": 384499838,
+     "n_ict": 288,
+     "imp_ict": 351543262
+    },
+    "2021": {
+     "n": 533,
+     "importo": 458826799,
+     "n_ict": 312,
+     "imp_ict": 391319119
+    },
+    "2022": {
+     "n": 3028,
+     "importo": 1021767007,
+     "n_ict": 1007,
+     "imp_ict": 787775837
+    },
+    "2023": {
+     "n": 1714,
+     "importo": 907965036,
+     "n_ict": 1158,
+     "imp_ict": 770639913
+    },
+    "2024": {
+     "n": 1497,
+     "importo": 930456378,
+     "n_ict": 1287,
+     "imp_ict": 840282931
+    },
+    "2025": {
+     "n": 1911,
+     "importo": 2769392766,
+     "n_ict": 1172,
+     "imp_ict": 2486470724
+    },
+    "2026": {
+     "n": 1604,
+     "importo": 782684383,
+     "n_ict": 936,
+     "imp_ict": 366349109
+    }
+   },
+   "elenco_ente_a_inhouse": [
+    {
+     "cig": "B892B21D6F",
+     "anno": "2025",
+     "importo": 2024866.27,
+     "oggetto": "AFFIDAMENTO REALIZZAZIONE SISTEMA INFORMATIVO PER LA FORMAZIONE",
+     "cpv": "72230000-6",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9BA338BB0",
+     "anno": "2025",
+     "importo": 1448665.15,
+     "oggetto": "AFFIDAMENTO CONDUZIONE APPLICATIVA E MANUTENZIONE EVOLUTIVA SIL",
+     "cpv": "72222300-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B169DB52E6",
+     "anno": "2024",
+     "importo": 814164.0,
+     "oggetto": "PIANO D'ESERCIZIO 2024",
+     "cpv": "99999999",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B84D180E8C",
+     "anno": "2025",
+     "importo": 349780.33,
+     "oggetto": "AFFIDAMENTO GESTIONE PIANO DI ESERCIZIO 2025",
+     "cpv": "50312610-4",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B0CBC3386D",
+     "anno": "2024",
+     "importo": 95000.0,
+     "oggetto": "CREAZIONE NUOVO DOMINIO E SCORPORO POSTAZIONI DI LAVORO DALLA RETE REGIONALE",
+     "cpv": "99999999",
+     "scelta": "ALTRA PROCEDURA A FASE UNICA",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9DB20FEC1",
+     "anno": "2026",
+     "importo": 28042.77,
+     "oggetto": "CONNETTIVITÀ SEDI ARPAL 2026",
+     "cpv": "72500000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9B8DD5595",
+     "anno": "2025",
+     "importo": 25876.86,
+     "oggetto": "AFFIDAMENTO SERVIZIO DI CONNETTIVITÀ DELLE SEDI ARPAL",
+     "cpv": "72222300-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B9B9BA9EDF",
+     "anno": "2025",
+     "importo": 15069.11,
+     "oggetto": "SERVIZI DI MANUTENZIONE EVOLUTIVA SIL RELATIVI AD OTTIMIZZAZIONI DEL SISTEMA PER MIGLIORARE L'ESPERIENZA UTENTE.",
+     "cpv": "72222300-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    }
+   ]
+  },
+  "97694170016": {
+   "nome": "ARPEA PIEMONTE",
+   "inhouse_denominazioni_cf": [
+    [
+     "CONSORZIO PER IL SISTEMA INFORMATIVO*(CSI PIEMONTE)",
+     "01995120019",
+     711
+    ],
+    [
+     "CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
+     "01995120019",
+     2
+    ],
+    [
+     "CSI PIEMONTE",
+     "1995120019",
+     1
+    ],
+    [
+     "CSI-PIEMONTE",
+     "1995120019",
+     1
+    ],
+    [
+     "CSI PIEMONTE CONSORZIO PER IL SISTEMA INFORMATIVO",
+     "01995120019",
+     1
+    ],
+    [
+     "CSI PIEMONTE",
+     "001995120019",
+     1
+    ]
+   ],
+   "cf_inhouse_usati_come_sa": [
+    "01995120019",
+    "1995120019"
+   ],
+   "a_cig_ente": {
+    "2020": {
+     "n": 2,
+     "importo": 172530,
+     "n_ict": 1,
+     "imp_ict": 100130
+    },
+    "2021": {
+     "n": 4,
+     "importo": 360296
+    },
+    "2022": {
+     "n": 2,
+     "importo": 158000,
+     "n_ict": 1,
+     "imp_ict": 93000
+    },
+    "2023": {
+     "n": 1,
+     "importo": 211848
+    },
+    "2024": {
+     "n": 18,
+     "importo": 1997421,
+     "n_ict": 2,
+     "imp_ict": 14590
+    },
+    "2025": {
+     "n": 16,
+     "importo": 1924995,
+     "n_ict": 4,
+     "imp_ict": 1192311,
+     "n_inhouse": 2,
+     "imp_inhouse": 1168592
+    },
+    "2026": {
+     "n": 8,
+     "importo": 1815508,
+     "n_ict": 4,
+     "imp_ict": 728415
+    }
+   },
+   "b_cig_aggiudicati_inhouse": {
+    "2020": {
+     "n_altri": 4,
+     "imp_altri": 289184
+    },
+    "2021": {
+     "n_altri": 2,
+     "imp_altri": 149500
+    },
+    "2022": {
+     "n_altri": 3,
+     "imp_altri": 290916
+    },
+    "2023": {
+     "n_altri": 13,
+     "imp_altri": 1381901
+    },
+    "2024": {
+     "n_altri": 257,
+     "imp_altri": 134716344
+    },
+    "2025": {
+     "n_altri": 380,
+     "imp_altri": 220417328,
+     "n_ente": 2,
+     "imp_ente": 1168592
+    },
+    "2026": {
+     "n_altri": 4,
+     "imp_altri": 2342037
+    }
+   },
+   "c_cig_sa_inhouse": {
+    "2020": {
+     "n": 97,
+     "importo": 64278767,
+     "n_ict": 69,
+     "imp_ict": 56236673
+    },
+    "2021": {
+     "n": 123,
+     "importo": 158813495,
+     "n_ict": 82,
+     "imp_ict": 145851452
+    },
+    "2022": {
+     "n": 124,
+     "importo": 152068124,
+     "n_ict": 92,
+     "imp_ict": 136096771
+    },
+    "2023": {
+     "n": 109,
+     "importo": 103915762,
+     "n_ict": 72,
+     "imp_ict": 94117012
+    },
+    "2024": {
+     "n": 148,
+     "importo": 172280924,
+     "n_ict": 79,
+     "imp_ict": 151901212
+    },
+    "2025": {
+     "n": 159,
+     "importo": 141083551,
+     "n_ict": 98,
+     "imp_ict": 121569269
+    },
+    "2026": {
+     "n": 130,
+     "importo": 145796064,
+     "n_ict": 91,
+     "imp_ict": 139506381
+    }
+   },
+   "elenco_ente_a_inhouse": [
+    {
+     "cig": "B84F23F46E",
+     "anno": "2025",
+     "importo": 604855.94,
+     "oggetto": "PTE DOMANDA UNICA, API, VINO, ORTOFRUTTA",
+     "cpv": "72500000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    },
+    {
+     "cig": "B5D577594F",
+     "anno": "2025",
+     "importo": 563736.32,
+     "oggetto": "SERVIZI IN CONTINUITÀ ANNO 2025",
+     "cpv": "72500000-0",
+     "scelta": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+     "durata": 0.0
+    }
+   ]
+  }
+ }
+}
