@@ -61,7 +61,14 @@ risorse:
     specchia: true
     partizione: nessuna
     ict: true
-    nota: Anagrafe delle stazioni appaltanti, con codice AUSA.
+    nota: >-
+      Export dell'AUSA, l'Anagrafe Unica delle Stazioni Appaltanti (art. 33-ter
+      D.L. 179/2012): il registro ANAC a cui ogni stazione appaltante DEVE
+      iscriversi (e aggiornarsi almeno una volta l'anno) per poter acquisire CIG.
+      Per CF: denominazione, codice AUSA, natura giuridica, indirizzo completo,
+      flag inHouse/partecipata, stato e date. Verificato 11/11/2026 (download
+      reale): 48.040 CF, aggiornato al 3/11/2026. Il WAF blocca i path API e di
+      ricerca ma non questi download diretti.
 
   - autorita: anac
     dataset: cup
