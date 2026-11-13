@@ -1,0 +1,971 @@
+FORNITURA DI SISTEMI PER LA BANCA DATI
+        NAZIONALE DEL DNA –
+
+
+
+
+         Capitolato Tecnico
+                                 UFFICIO TECNICO ED ANALISI DI MERCATO
+              Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+Sommario
+1.   Oggetto della fornitura ................................................................................................................. 4
+2.   REQUISITI DI CONFORMITÀ ................................................................................................. 5
+3.   Ambiente di produzione in alta affidabilità e ambiente di disaster recovery............................... 6
+4.   AFIS ............................................................................................................................................. 6
+  4.1      Esigenza AFIS : realizzazione di una Certification Autority (PKI) privata per l‟emissione
+  di certificati a protezione dei LIMS sui laboratori: .......................................................................... 9
+5. Servizi .......................................................................................................................................... 9
+6. Console di sistema ....................................................................................................................... 9
+7. Workstation .................................................................................................................................. 9
+8. Notebook .................................................................................................................................... 11
+9. iPad............................................................................................................................................. 11
+10. Apparati di rete........................................................................................................................... 12
+11. Sistema di Policy per il Controllo degli Accessi....................................................................... 12
+12. Apparati Firewall: ...................................................................................................................... 13
+13. Infrastruttura per la realizzazione per l‟ambiente di auditing ed il controllo del ciclo di vita del
+campione biologico. ........................................................................................................................... 14
+14. Prodotti per lo sviluppo di sistemi di Extract, Transform, Load (ETL) .................................... 14
+15. Token per l‟accesso alla Strong Autentication: ......................................................................... 15
+16. Lettori codice a barre con cavo .................................................................................................. 17
+17. Prodotti software ........................................................................................................................ 18
+18. Collaudo ..................................................................................................................................... 18
+19. Servizi di consegna, installazione, configurazione ................................................................... 19
+20. Servizi di Garanzia e Manutenzione Hardware ......................................................................... 19
+21. Modalità di presentazione delle offerte tecniche ....................................................................... 20
+22. Modalità di presentazione delle offerte economiche ................................................................. 21
+23. Criteri di valutazione delle offerte ............................................................................................. 22
+24. Prezzo A Base D‟asta ................................................................................................................. 23
+
+
+
+
+                                                                           2
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+IL CONTESTO
+
+Il Trattato di Prüm è stato siglato il 27 Maggio 2005 da 7 paesi europei: Belgio, Germania, Spagna,
+Francia, Lussemburgo, Olanda ed Austria. Esso prevede lo scambio transfrontaliero di informazioni
+(DNA, Dattiloscopici ed altro) per prevenire e contrastare fenomeni criminali transfrontalieri,
+immigrazione illegale e terrorismo.
+
+Con la Legge n. 85 del 30 Giugno 2009 l‟Italia ha aderito al trattato, stabilito l‟istituzione della
+Banca dati nazionale del DNA e del Laboratorio Centrale per la Banca dati del DNA, dando altresì
+delega al Governo per l‟istituzione dei ruoli tecnici del Corpo di polizia penitenziaria; la medesima
+legge ha introdotto modifiche al codice di procedura penale in materia di accertamenti tecnici idonei
+ad incidere sulla libertà personale.
+
+La normativa relativa alla creazione della Banca Dati DNA ed al Laboratorio Centrale per la Banca
+Dati Nazionale del DNA, è contenuta nella Legge 30 Giugno 2009, n. 85. Di particolare interesse è
+l‟Art. 5 che stabilisce l‟istituzione della Banca Dati nazionale del DNA presso il Ministero
+dell‟Interno – Dipartimento della Pubblica Sicurezza.
+
+È opportuno segnalare che la Legge n. 85 del 30 Giugno 2009 riguarda lo scambio informativo,
+oltre che del DNA anche di altri dati, in particolare quelli relativi alle impronte digitali. Allo scopo
+di razionalizzare ed ottimizzare aspetti tecnici ed operativi, gli organi interessati hanno convenuto
+sull‟opportunità di realizzare un unico portale di comunicazione da/per l‟estero per la gestione dello
+scambio dati (ricevimento, inoltro, risposta) da installarsi presso il Servizio per il Sistema
+Informativo Interforze. Tale portale dovrà essere in identità federata con quello del Sistema
+Informativo Interforze in modo da garantire la separazione logica e fisica dei sistemi e, al
+contempo, minimizzare gli impatti tecnico-organizzativi sulle Forze di polizia.
+
+Dal punto di vista del networking, a livello nazionale è utilizzata la c.d. VPN del Ministero
+dell‟Interno, già capillarmente diffusa a tutti i livelli delle Forze di polizia, mentre a livello
+internazionale verrà utilizzata la rete sTesta, tramite un collegamento via SPC al nodo nazionale
+sTesta gestito da DigitPA (già Cnipa).
+
+La Banca Dati è stata istituita durante l‟ultimo anno tramite delle opportune gare e licitazioni.
+
+
+
+
+                                                    3
+                            UFFICIO TECNICO ED ANALISI DI MERCATO
+         Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+            1. Oggetto della fornitura
+Sulla base della soluzione individuata vengono di seguito riportati i componenti hardware e
+software richiesti.
+      Nr. 12 Server per DNA
+      Nr. 2 Server per Afis
+      Nr. 2 Server per la Certification Autority (PKI) privata
+      Nr. 30 Workstation
+      Nr. 5 Notebook
+      Nr. 5 Ipad
+      Apparati di rete
+      Sistema di Policy per il Controllo degli Accessi
+      Apparati Firewall
+      Database solution per auditing.
+      Prodotti per ETL
+      Nr. 400 Token per l‟accesso alla Strong Autentication
+      Nr. 50 lettori codici a barre
+      Prodotti software
+      Servizi
+
+
+
+
+                                                   4
+                          UFFICIO TECNICO ED ANALISI DI MERCATO
+       Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+          2. REQUISITI DI CONFORMITÀ
+Le apparecchiature fornite devono essere munite dei marchi di certificazione riconosciuti da tutti
+i paesi dell‟Unione Europea e devono essere conformi alle norme relative alla compatibilità
+elettromagnetica
+Il Fornitore dovrà garantire la conformità delle apparecchiature alle normative CEI o ad altre
+disposizioni internazionali riconosciute e, in generale, alle vigenti norme legislative,
+regolamentari e tecniche disciplinanti i componenti e le modalità di impiego delle
+apparecchiature medesime ai fini della sicurezza degli utilizzatori.
+A titolo esemplificativo e non esaustivo, le apparecchiature fornite dovranno rispettare:
+   i requisiti stabiliti nel D.Lgs. 19 settembre 1994, n. 626;
+   i requisiti di ergonomia stabiliti nella Direttiva CEE 90/270 recepita dalla legislazione
+    italiana con Legge 19 febbraio 1992, n. 142;
+   i requisiti di sicurezza (es. IMQ) e di emissione elettromagnetica (es. FCC) certificati da Enti
+    riconosciuti a livello europeo;
+Le parti elettriche delle apparecchiature dovranno essere conformi allo standard EPA ENERGY
+STAR.
+
+
+
+
+                                                 5
+                                 UFFICIO TECNICO ED ANALISI DI MERCATO
+              Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+                 3. Ambiente di produzione in alta affidabilità e ambiente di
+                    disaster recovery
+Dovranno essere forniti 12 Server, con le seguenti caratteristiche minime. Per ogni caratteristica è
+obbligatorio dichiarare il valore:
+
+                                                                                                 VALORE
+      CARATTERISTICHE MINIME                                   VALORE RICHIESTO
+                                                                                                 OFFERTO
+ Marca/Modello                                   Dichiarare il valore
+ Fattore di forma                                Rack Mountable
+ Architettura Processore                         Extended 64bit
+ Numero di CPUs                                  4 CPUs 10-Core @2.00 GHz - 24MB L3 cache
+ CPUs scalability                                4 CPU
+ RAM                                             384GB
+ SPECint_rate_base2006          (valori     in
+                                                 >= 1700
+ configurazione massima)
+ SPECfp_rate_base2006           (valori     in
+                                                 >= 1100
+ configurazione massima)
+ Memory protection system                        Advanced ECC
+ RAM scalability                                 4TB
+                                                 SAS 256 MB Cache protection and RAID
+ Controller
+                                                 0,1,5 capability
+ Local storage                                   2 HD 146 GB 15K SAS hot plug
+ Local storage scalabity                         8 HD SAS hot plug
+ I/O slots scalability                           10 slots PCIe.
+ Optical drive                                   DVD-ROM
+                                                 4 Gigabit Ethernet NIC with TCP/IP Offload
+ Network interface cards
+                                                 Engine
+ FC Interfaces                                   3 FC 4/8 Gbps autosensing single port
+ Power supply and fan                            Redundant and hot-plug components
+                                                 Microsoft     Windows    Server,    Microsoft
+                                                 Windows Server Hyper V, Red Hat Enterprise
+ Sistemi operativi supportati
+                                                 Linux (RHEL), SUSE Linux Enterprise Server
+                                                 (SLES), VMware
+
+
+
+
+4. AFIS
+Dovranno essere forniti 2 Server configurati come di seguito riportato:
+
+                                                                                                 VALORE
+      CARATTERISTICHE MINIME                                   VALORE RICHIESTO
+                                                                                                 OFFERTO
+ Marca/Modello                                   Dichiarare il valore
+ Fattore di forma                                Rack Mountable
+ Architettura Processore                         Extended 64bit
+ Numero di CPUs                                  4 CPUs 10-Core @2.00 GHz - 24MB L3 cache
+ CPUs scalability                                4 CPU
+ RAM                                             96 Gb
+ SPECint_rate_base2006          (valori     in
+                                                 >= 1700
+ configurazione massima)
+ SPECfp_rate_base2006           (valori     in
+                                                 >= 1100
+ configurazione massima)
+
+                                                           6
+                                 UFFICIO TECNICO ED ANALISI DI MERCATO
+              Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+                                                                                                 VALORE
+      CARATTERISTICHE MINIME                                  VALORE RICHIESTO
+                                                                                                 OFFERTO
+ Memory protection system                        Advanced ECC
+ RAM scalability                                 4TB or more
+                                                 SAS 256 Mb Cache pretection and RAID 0,1,5
+ Controller                                      capability
+ Local storage                                   4 HD 146 GB 15K SAS hot plug
+ Local storage scalability                       8 HD SAS hot plug or more
+ I/O slots scalability                           10 slots PCIe.
+ Optical drive                                   DVD-ROM
+                                                 4 Gigabit Ethernet NIC witch TCP/IP Offload
+ Network interface cards                         Engine
+ FC Interfaces                                   2 FC 4/8 Gbps Gbps autosensing single port
+ Power supply and fan                            Redundant and hot-plug components
+ Sistemi operativi supportati                    RHEV 8 Socket – RHEL + Cluster
+
+
+
+Dovrà essere fornito nr 1 (uno) sistema di storage condiviso, con le caratteristiche minimali di
+seguito descritte:
+
+       CARATTERISTICHE                             VALORE RICHIESTO                        VALORE OFFERTO
+
+ Marca / Modello
+                                        Dichiarare il valore
+ Tipologia                              Il Disk Array Storage dovrà essere
+                                        realizzato/allogiato in un rack standard da 19”
+ Rack Unit
+                                        Max 2U
+ RAID supportati                        Il sistema deve supportare le seguenti tipologie
+                                        di RAID 0, 1, 3, 5, 6, 10, 50
+ Controller
+                                        >2
+ Cache
+                                        > 2GB per controller
+ DISCHI
+ Capacità singolo disco                 Il sistema deve supportare le seguenti tipologie
+                                        di dischi: 72 GB 6G 15K SAS; 146 GB 6G 10K
+                                        SAS: 300 GB 6G 10K SAS; 146 GB 6G 15K
+                                        SAS; 500 GB 6G 7.2K.
+ Numero di alloggiamenti HD
+                                        > 12 per unità
+ Capacità richiesta                     24TB RAW realizzati mediante dischi SAS da
+                                        500GB
+ Capacità massima (numero          di
+ dischi)                                > 2GB per controller
+ SOTTOSISTEMA I/O
+ Connettività
+                               Minimo 2 porte 8Gbps per controller
+ ALIMENTAZIONE/RAFFREDDAMENTO
+ Alimentazione
+                               Ridondata
+ Raffreddamento
+                               Ridondato
+ SISTEMA OPERATIVO
+ Supporto dei seguenti Sistemi Microsoft Windows Server 2008; Microsoft
+ Operativi                     Windows 2003; Microsoft Windows Hyper-V;
+                               HP-UX; Red Hat Linux; SUSE Linux; VMware;
+                               Solaris; HP OpenVMS; Apple OS X
+ Cluster                       Il sistema deve garantire, al minimo, il supporto
+                               dei seguenti Cluster: Windows, Linux, HP-UX,
+
+                                                          7
+                          UFFICIO TECNICO ED ANALISI DI MERCATO
+       Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+    CARATTERISTICHE                        VALORE RICHIESTO                      VALORE OFFERTO
+
+                                 OpenVMS
+ECO SOSTENIBILITA‟
+Consumo energetico               Dichiarare il consumo energetico annuo in
+                                 KW/h
+
+
+
+
+                                                 8
+                              UFFICIO TECNICO ED ANALISI DI MERCATO
+           Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+4.1 Esigenza AFIS : realizzazione di una Certification Autority (PKI) privata per l’emissione
+    di certificati a protezione dei LIMS sui laboratori:
+Realizzazione di una Certification Autority (PKI) privata per l‟emissione di certificati a protezione
+dei LIMS sui laboratori, deve essere costituita da 2 server configurati come di seguito riportato:
+
+                                                                                              VALORE
+      CARATTERISTICHE MINIME                               VALORE RICHIESTO
+                                                                                              OFFERTO
+ Fattore di forma                            Rack Mountable
+ Architettura Processore                     Extended 64bit
+ Numero di CPUs                              4 CPUs 10-Core @2.00 GHz - 24MB L3 cache
+ CPUs scalability                            4 CPU
+ RAM                                         96 Gb
+ SPECint_rate_base2006 (valori in
+                                             >= 1700
+ configurazione massimo)
+ SPECfp_rate_base2006 (valori in
+                                             >= 1100
+ configurazione massimo)
+ Memory protection system                    Advanced ECC
+ RAM scalability                             4TB or more
+                                             SAS 256 Mb Cache pretection and RAID 0,1,5
+ Controller                                  capability
+ Local storage                               4 HD 146 GB 15K SAS hot plug
+ Local storage scalability                   8 HD SAS hot plug or more
+ I/O slots scalability                       10 slots PCIe.
+ Optical drive                               DVD-ROM
+                                             4 Gigabit Ethernet NIC witch TCP/IP Offload
+ Network interface cards                     Engine
+ FC Interfaces                               2 FC 4/8 Gbps Gbps autosensing single port
+ Power supply and fan                        Redundant and hot-plug components
+
+
+
+5. Servizi
+Il Fornitore dovrà prevedere i servizi relativi allo sviluppo per la realizzazione della PKI pubblica e
+della PKI privata.
+
+6. Console di sistema
+Il sistema dovrà avere le caratteristiche di seguito descritte:
+Console grafica composta da tastiera, monitor da rack con switch KVM da 16 porte
+
+
+
+7. Workstation
+Si prevede che per la fase di sviluppo/test/utilizzo, saranno necessarie 30 workstation che dovranno
+avere la seguente configurazione minima, per ogni caratteristica è obbligatorio dichiarare il valore:
+
+                                                                                              VALORE
+      CARATTERISTICHE MINIME                               VALORE RICHIESTO
+                                                                                              OFFERTO
+ Fattore di forma                            Tower
+                                             Quad Core Intel Xeon E5-2643 processor
+ Processore                                  (3,3Ghz) o equivalente con supporto per il
+                                                       9
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+                                                                                             VALORE
+     CARATTERISTICHE MINIME                           VALORE RICHIESTO
+                                                                                             OFFERTO
+                                            secondo processore
+                                            2 PCIe x16 Gen3 Slots, 1 PCIe x8 Gen3, 1
+                                            PCIe x8(x4) Gen2, 1 PCIe x4(x1) Gen2, 1 PCI
+Slot PCI                                    Slot
+Porte USB                                   6 Interne USB 2.0
+Porte SATA                                  5 Porte
+                                            2 PS/2, 1 1394a, 4 USB 2.0, 2 USB 3.0, 2 RJ-
+                                            45 GbE, 1 Audio Line In, 1 Audio Line Out, 1
+I/O Posteriore Indicative                   Microfono
+                                            1 USB 2.0, 2 USB 3.0, 1 Cuffia, 1 Microfono,
+I/O Frontale Indicative                     1 1394a
+Memoria Ram                                 DDR3 ECC
+Memoria Ram installata                      16 GB - DDR3 1600
+Tipologia Controller                        S-ATA
+Hard Disk #1                                250GB in tecnologia SSD opzionale
+Hard Disk #2                                1 TB
+DVD                                         DVD-RW 24x
+                                            NVIDIA modello Quadro con memoria video
+Scheda Video
+                                            > 1GB
+Sistema Operativo fornito                   Microsoft Windows 7Pro – 64 bit
+                                             Genuine Windows 7® Ultimate 64-bit
+                                             Genuine Windows 7® Professional 64-bit
+Sistema Operativi supportati                 Genuine Windows 7® Professional 32-bit
+                                             Red Hat Enterprise Linux Desktop
+                                             Genuine Windows® 7 Enterprise 32/64
+                                             SUSE Linux Enterprise Desktop 11
+Monitor                                     24”
+Tastiera e Mouse                            Wireless
+Alimentatore                                Dichiarare il valore
+
+
+
+
+                                                    10
+                              UFFICIO TECNICO ED ANALISI DI MERCATO
+           Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+8. Notebook
+Si richiedono 5 notebook, che dovranno avere la seguente configurazione minimale, per ogni
+caratteristica è obbligatorio dichiarare il valore:
+
+                                                                                              VALORE
+     CARATTERISTICHE MINIME                            VALORE RICHIESTO
+                                                                                              OFFERTO
+                                             3rd Generation Intel® Core™ i7-3720QM (2.6
+                                             GHz, 6 MB L3 cache, 4 cores) Up to 3.60 GHz
+ Processore                                  with Intel Turbo Boost Technology
+ Memoria Ram installata                      4 GB
+ Hard Disk                                   750GB
+                                             HSPA, Wi-Fi 802.11b/g/n, Ethernet, Bluetooth
+ Connettività                                3.0+HS
+ DVD                                         Lettore Blu-ray
+ Scheda Video                                NVIDIA Quadro K1000M
+ Sistema Operativo fornito                   Windows 7 Pro a 64bit
+ Display                                     15,6" wide con Webcam integrata
+
+9. iPad
+Si richiede la fornitura di Nr 5 iPad ultima versione 64 GB.
+
+
+
+
+                                                     11
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+10. Apparati di rete
+La predisposizione della sala CED che ospiterà l‟infrastruttura della Banca Dati DNA dovrà tenere
+conto delle necessità di apparati attivi di rete, necessari al fine di collegarla al centro stella della
+rete, rendendola quindi raggiungibile dai client remoti. Inoltre la Banca Dati è opportunamente
+protetta da firewall e l‟intera infrastruttura di rete dovrà essere fault tolerant.
+Per i motivi esposti, quindi, l‟architettura di rete che dovrà essere realizzata include i seguenti
+dispositivi:
+     n.4 schede dual HBA
+     n. 2 switch con 48 porte 10/100/1000 BaseT completo di GBIC
+     n. 3 switch con 24 porte 10/100 completo di GBIC
+Tali dispositivi dovranno essere connessi al CISCO ASA550.
+
+
+11. Sistema di Policy per il Controllo degli Accessi
+Inoltre si dovrà fornire anche un Sistema di Policy per il Controllo degli Accessi alle risorse di Rete
+che consiste nella fornitura di una piattaforma applicativa, in ambiente virtuale, per il controllo di
+circa 500 endpoint:
+       delle policy per l‟accesso alle risorse di rete e alle applicazioni;
+       delle credenziali (identità) degli utenti e degli apparati che si connettono alla rete (wireless e
+        wired);
+Il sistema deve permettere la raccolta in tempo reale di informazioni sulle credenziali degli utenti e
+sulle caratteristiche dei terminali che si connettono alle rete gestendo le politiche di sicurezza e
+accesso a switch di rete, wireless LAN controllers, virtual private network (VPN) gateways, e data
+center switches.
+Il sistema deve permettere la gestione degli accessi alle risorse di rete in base all‟identità
+dell‟utente e su base contestuale controllando da dove l‟utente sta accedendo alla rete, da quale
+terminale autorizzato e se esso è conforme alle policy di sicurezza. Inoltre deve permettere e
+restringere l‟accesso a specifici segmenti di rete, applicazioni e l‟assegnazione dei servizi fruibili
+dall‟utente su base ruolo, gruppo, tipo di terminale, locazione dell„utente.
+Tutte le informazioni e attività svolte e raccolte dal sistema devono poter essere tracciate in real
+time, storicizzate e analizzabili tramite un cruscotto che visualizzi le metriche relative agli utenti e
+ai terminali connessi alla rete e tramite la generazioni di appositi report .
+In particolare devono essere supportate le seguenti funzionalità e protocolli:
+   autenticazione, autorizzazione e accounting (AAA) standard RADIUS;
+   autenticazionetramiteprotolli PAP, MS-CHAP, Extensible Authentication Protocol (EAP)-
+    MD5, Protected EAP (PEAP), EAP-Flexible Authentication via Secure Tunneling (FAST) e
+    EAP-Transport Layer Security (TLS).
+   Meccanismi di controllo alle risorse basati su:downloadableaccess control lists (dACLs),
+    assegnazione a VLAN, URL redirect e marchiatura del traffico di rete (a livello 2) su base
+    utente/gruppo di appartenenza(SGA).
+   posture assessmentdei terminali (C e terminali mobili) sia tramite agent persistente da
+    installare sul client siatramite web agent temporaneo.Il posture assessment deve permetterela
+
+                                                    12
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+    validazione dello stato dell terminalein conformità alle policy di sicurezza decise dal SSII. In
+    particolare la funzionalità deve permettere:
+         il controllo della presenza di patches del Sistema Operativo, di versioni specifiche di
+          antivirus eantispyware, di entries particolari nel registro di configurazione (key, value,
+          etc) e di applicazioni.
+         auto-remediation dei PC clients;
+         reassessment periodici.
+   Modelli di Policybasati su regole o attributi per la creazione di regole di accesso flessibili che
+    utilizzino attributi da dizionari predefiniti che includono informazioni sull'identità dell'utente e
+    del endpoint, lo stato della Posture, protocolli di autenticazione, profilazione di identità o altre
+    fonti esterne di attributi.
+   gestione degli accessi “guest”tramite portale web personalizzabile o ” tramite “amministratori
+    sponsor” che gestiscano la configurazione delle credenziali dell‟ospite e il periodo di accesso
+    alle risorse di rete;
+   portale per il device on-boarding: per permettere agli utenti di auto registrare i propri terminali,
+    ricevere il supplicant e l‟ enrollment dei certificati.
+   Servizi per la protezione degli Endpoint: per permettere agli ammistratori di prendere azioni
+    correttive (Quarantine, Un-Quarantine, oShutdown ) su endpoint compromessi o che
+    rappresentino rischi per la sicurezza all‟interno della rete.
+
+
+Requisiti SW: virtualappliance per ambiente VMware ESX/ESXi 4.x o 5.x
+Certificazioni di sicurezza dei moduli di cifratura : FIPS 140-2 Level 1.
+Sistemi Operativi che devono essere supportati dall’Agent persistente per il posture
+assestment :Microsoft Windows Vista, Windows 7, Windows XP, Windows XP Tablet PC,
+Windows 2000, Windows SE; Mac OS X (v10.5.x, v10.6.x).
+
+
+
+12. Apparati Firewall:
+Dovranno essere forniti i seguenti apparati:
+
+ Nr. 2 Cisco serie ASA 5500 in failover, comprensivo di servizio di integrazione ed assistenza
+  per 3 anni.
+ Nr. 2 Cisco serie ASA 5500, comprensivo di servizio di integrazione ed assistenza per 3 anni.
+
+
+
+
+                                                    13
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+13. Infrastruttura per la realizzazione per l’ambiente di auditing ed il
+   controllo del ciclo di vita del campione biologico.
+Si richiede una piattaforma integrata High Performance Database Solution per Oracle che possa
+offrire prestazioni di alto livello sia per il data warehouse sia per le applicazioni di elaborazione di
+transazioni online (OLTP), rappresentando così la piattaforma ideale per l‟infrastruttura per la
+realizzazione per l‟ambiente di auditing ed il controllo del ciclo di vita del campione biologico. Il
+sistema offerto deve essere una soluzione integrata, formata da server, storage, networking e
+software, altamente scalabile, sicuro e ridondante. Particolare attenzione dovrà essere data
+all‟attività di business intelligence e di analisi, attraverso l‟implementazione del sistema di seguito
+descritto e che dovrà essere progettato per l'esecuzione analitica di analisi visuali, per venire
+incontro alle esigenze di auditing e controllo del ciclo di vita dei campioni biologici. Le
+caratteristiche minime che la piattaforma dovrà soddisfare sono le seguenti :
+
+                                                                                             VALORE
+     CARATTERISTICHE MINIME                           VALORE RICHIESTO
+                                                                                             OFFERTO
+ Uncompressed disk bandwidth                > 5.4 GB/second
+ Uncompressed Flash data bandwidth          >16 GB/second
+ Database Disk                              >10.800 IOPS
+ Database Flash                             > 375.000 IOPS
+ Disk data capacity                         > 21.6 TB RAW
+ Capacità usabile non compressa             > 9.5 TB
+ Data Load Rate                             > 3 TB/hour
+
+Il Fornitore dovrà garantire le performance dell‟infrastruttura per la realizzazione per l‟ambiente di
+auditing ed il controllo del ciclo di vita del campione biologico attraverso una capacità elaborativa
+ottenuta almeno attraverso una coppia di server per assicurare l‟alta affidabilità. Le suddette
+macchine debbono essere           upgradabili e complete delle licenze software necessarie al
+funzionamento della macchina. Si deve prestare particolare attenzione alle attività di business
+intelligence e di analisi, attraverso l‟acquisizione di un sistema hardware e software "in-memory"
+progettato per l'esecuzione di analitiche e analisi visuali, per venire incontro alle esigenze di
+auditing e controllo del ciclo di vita dei campioni biologici.
+Inoltre, il Fornitore dovrà descrivere tutto quanto necessario (switch di rete, storage, server e
+software di orchestrazione) per la realizzazione dell‟infrastruttura richiesta che garantiscano le
+performance richieste.
+
+
+14. Prodotti per lo sviluppo di sistemi di Extract, Transform, Load (ETL)
+Si richiede la fornitura dei prodotti necessari al processo di estrazione, trasformazione e
+caricamento dei dati in un sistema di sintesi (data warehouse, data mart...). I dati dovranno essere
+estratti da sistemi sorgenti quali database transazionali (OLTP), comuni file di testo o da altri
+sistemi informatici (ad esempio, sistemi ERP o CRM). Subiranno quindi un processo di
+trasformazione, che consiste ad esempio nel:
+     Selezionare solo quelli che sono di interesse per il sistema
+     Normalizzare i dati (per esempio eliminando i duplicati)
+     Tradurre dati codificati
+     Derivare nuovi dati calcolati
+     Eseguire accoppiamenti (join) tra dati recuperati da differenti tabelle
+     Raggruppare i dati
+
+                                                    14
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+Tale trasformazione avrà lo scopo di consolidare i dati (cioè rendere omogenei dati provenienti da sorgenti
+diverse) e di fare in modo che siano più aderenti alla logica di business del sistema di analisi per cui viene
+sviluppato. Dovranno successivamente essere memorizzati nelle tabelle del sistema di sintesi (load) per
+l‟ambiente di auditing ed il controllo del ciclo di vita del campione biologico.
+
+15. Token per l’accesso alla Strong Autentication:
+Fornitura di n. 400 lettori USB Shell Token v2, con le seguenti caratteristiche:
+
+   CARATTERISTICHE                                                                             VALORE
+                                                 VALORE RICHIESTO
+       MINIME                                                                                  OFFERTO
+                                PC Connection port
+                                USB Shell Token v2
+        Host Interface
+                                Plug and Play
+                                USB 2.0 full speed (12 Mbps)
+                               PC Core hardware and firmware architecture
+                                Supports ISO 7816 Class A, B and C cards (5 V, 3 V, 1.8 V)
+                                Supports up to TA1 =96 ISO7816 parameters (500 Kbps
+    Smart Card Interface         with a 4Mhz reader clock)
+                                Reads from and writes to all ISO 7816-1,2,3,4
+                                 microprocessor cards, T=0 and T=1 protocols
+                                Supports memory cards using "Synchronous Card API"
+                                 Short circuit detection
+                                ISO/IEC 7816-1,2,3,4: IC Cards with contacts
+                                EMV Terminal Level 1 version 4.0 (GemCore Pro IFM)
+                                Mondex ChipSafe Plus Purse 2 (PC USB TR)
+  Standards / Certifications    Microsoft Windows Hardware Quality Labs (WHQL),
+                                 Windows Logo Program WLP 2.0
+                                USB 2.0 Full speed certified
+                                 CCID - Chip Card Interface Device 1.0 (USB &
+                                 ExpressCard readers)
+                                Microsoft PC/SC environment with associated drivers
+             API                CT-API
+                                Synchronous Card API for support of memory cards
+                                Windows 95OSR2, NT4.00 for PC Twin in serial mode
+                                Windows 98, 98SE, Me, 2000, XP, Server 2003, x64
+                                 editions, Vista 32, 64 bits, Seven, Server 2008R2
+                                Win CE 4.1, 4.2, 5.0, 6.0 (USB readers)
+     Operating Systems
+                                Linux Kernel 2.6 and higher
+                                Mac OS X Panther, Tiger, Leopard 32 editions (USB
+                                 readers)
+                                Support for Solaris, XP embedded (USB readers)
+                                CE, FCC part 15 Class B
+                                VCCI, c-Tick, BSMI
+                                EN 60950 / UL 950 / CSA 950
+       Environmental
+                                Operating: +0°C / +55°C
+                                Storage: -20°C / +65°C
+                                ROHS compliant , WEEE marking
+
+
+
+
+I predetti token dovranno essere corredati di SIM .Net IM v2+ aventi le seguenti caratteristiche:
+     Caratteristiche principali
+             Supporto protocollo PC/SC
+             ISO 7816 1-2-3-4 (parziale), T=0
+             Supporto per Int-64
+
+     File System
+                                                      15
+                        UFFICIO TECNICO ED ANALISI DI MERCATO
+     Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+        Memorizzazione dati sicura
+        Controllo di accesso basato su file
+             Permette la separazione degli “assembly” (programmi .NET memorizzabili sulla
+                 carta) e dei dati
+        Possibilità di aggiornamento degli “assembly” con la loro personalizzazione
+
+ Sviluppo applicazioni
+        Visual Studio .NET Add-In per sviluppo in ambiente integrato
+        Sviluppo applicazioni .NET mediante utilizzo del .NET Remoting
+        Preprocessore XML presente sulla carta
+
+ Capacità crittografiche
+        Firma e verifica RSA con chiavi di massimo 2048 bit
+        DES, 3DES (CBC, ECB), AES, H MAC, SHA1, SHA2 e MD5
+        Infrastruttura di autenticazione personalizzabile e capacità di utilizzare canali di
+         comunicazione sicuri (Secure Channel)
+
+ Sicurezza
+        Verifica esterna delle applicazioni integrata negli strumenti esterni
+        Verifica sulla carta per l‟integrità strutturale e sicurezza delle applicazioni
+        Solo assembly con nomi forti possono essere caricati per assicurare integrità ed autenticità
+
+ Comunicazione
+        .NET Remoting
+        ISO 7816-2: contatti fisici (ISO-8)
+        ISO 78 16-3
+
+ Velocità di trasferimento standard fino a 224 KBPS
+ PPS (Protocol Parameter Switching) negoziabile
+        ISO 78 16-4:
+
+ Supportato protocollo T=0
+ Caratteristiche del chip
+          80KB di memoria disponibile per gli “assembly”.
+          Smart card basata su potente Microcontrollore CMOS avanzano a 32 bit
+          Temperatura di funzionamento tra –25°C e +85°C
+          Tensione di alimentazione singola di 3V o 5V
+          500K cicli di scrittura/cancellazione della EEPROM
+          Ritenzione dei dati pari a 10 anni (a temperatura ambiente)
+          Coprocessore crittografico per algoritmi RSA e 3DES più performanti
+          Generatore hardware di numeri casuali
+          Chip certificato Common Criteria EAL 5+
+
+ Capacità di pre-personalizzazione
+        Possibilità di aggiunta applicazioni in fabbrica
+        File proprietà della carta basati sullo standard XML
+        Numero Seriale della carta unico
+
+
+
+
+                                                16
+                            UFFICIO TECNICO ED ANALISI DI MERCATO
+         Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+16. Lettori codice a barre con cavo
+
+ Fornitura di lettori di codice a barre con le seguenti caratteristiche :
+
+     Quantità 50
+     Tipologia Lettore mobile da appoggio
+     Tecnologia imaging si
+     Funzione di lettura omnidirezionale dei codici in grado di acquisire l‟immagine intera di un
+      oggetto da identificare a prescindere dal suo orientamento funzione stand by in caso di
+      inattività e relativa riattivazione si
+     Rilevazione codici di tipo 1D e 2D/
+     Range di lettura:
+        o 1D:da 1.5 a 22.0 cm
+        o 2D: da1.5 a 14.0 cm
+     Risoluzione per codici 1D 4 mils
+     Sensore 752 x 480
+     Interfacce: multi-interfaccia integrata per la connessione al PC via PS2 e USB
+     Indicatori di Lettura: presenza di segnali (sonori e luminosi) che indichino l‟ esito della
+      lettura
+     Caratteristiche fisiche / ottiche /elettriche
+        o Corpo del lettore in plastica antiurto, chiuso ermeticamente Resistente all‟acqua e alla
+             polvere
+        o Resistenza agli urti: resistenza a cadute ripetute da un‟altezza di ~150 cm su superficie
+             di cemento
+        o Peso <=200g
+        o Illuminamento ambientale: fino a 100.000 lux
+        o Accessori cavo di collegamento USB di almeno 2 metri
+        o Certificazioni Direttiva RoHS, , Sicurezza laser IEC 60825-1
+
+
+
+
+                                                   17
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+17. Prodotti software
+L'offerta dovrà prevedere anche la fornitura del seguente software
+
+Sistema Operativo             RH0133325F3 - Red Hat Enterprise Linux Server,
+                              Premium (2 sockets) (Unlimited guests – Assistenza x 3
+                              anni)
+Software di clustering        RH1173900F3 – High-Availability (2 sockets) (Assistenza
+                              x 3 anni)
+Software di                   RV0112483F3 - Red Hat Enterprise Virtualization for
+virtualizzazione              Servers (1 Socket), Premium (Assistenza x 3 anni)
+Altro Software                Tomcat 6 – Mysql 5.1.39 o successive
+
+
+
+18. Collaudo
+Il collaudo è inteso a verificare la conformità degli apparati installati e dei prodotti software, alle
+specifiche e alle indicazioni del presente documento, a quanto specificato nei documenti piano di
+collaudo che il fornitore dovrà redigere, nonché alla verifica del corretto funzionamento degli
+apparati oggetto della presente fornitura.
+
+L‟impresa, entro 35 giorni dalla data inizio attività dovrà presentare un “Piano di Collaudo” con
+l‟indicazione di un efficiente programma di test e dettagliate procedure per controllare la perfetta
+funzionalità di tutte le parti del sistema .
+
+I collaudi verranno eseguiti con le modalità previste nel piano di collaudo, fatta salva la facoltà
+della Commissione di richiedere ulteriori motivate verifiche da pianificare con il fornitore.
+
+La Commissione di Collaudo potrà richiedere, a propria discrezione, l‟effettuazione di test a
+campione sulle forniture e l‟appaltatore dovrà mettere a disposizione quanto necessario per
+l‟esecuzione di tali prove.
+L‟esito favorevole del collaudo non esonera l‟appaltatore da vizi o difetti non riscontrati durante le
+operazioni di collaudo.
+Qualora nell‟accertamento, risultasse la necessità di provvedere alla sostituzione parziale o totale
+della merce pervenuta danneggiata e/o resa inservibile durante il trasporto, l‟appaltatore dovrà
+effettuare la sostituzione del materiale, nel più breve tempo possibile; tale periodo verrà considerato
+- agli effetti di eventuali ritardi - come tempo impiegato per la fornitura.
+
+
+
+
+                                                    18
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+
+
+
+             19.       Servizi di consegna, installazione, configurazione
+Il Fornitore dovrà garantire tutti i servizi di consegna ed installazione di tutte le apparecchiature
+oggetto di fornitura. Si precisa che per l‟attività di consegna e installazione si intende comprensiva
+di ogni onere relativo a: imballaggio, trasporto, facchinaggio, consegna “al piano”, posa in opera,
+installazione, asporto dell‟imballaggio.
+.
+
+             20.       Servizi di Garanzia e Manutenzione Hardware
+La garanzia manutentiva del Sistema Hardware ha come obiettivo quello di preservare nel tempo
+la piena funzionalità degli apparati. Il Fornitore dovrà assicurare la manutenzione dell‟intera
+fornitura hardware per un periodo non inferiore a 36 mesi “On Site. con copertura oraria 09:00-
+17:00, 5 giorni su 7 .
+Il Fornitore dovrà garantire il perfetto stato di funzionamento gli apparati oggetto della fornitura,
+provvedendo a richiedere ai fornitori Hardware e su richiesta dell‟Amministrazione l‟assistenza
+tecnica, ponendo in essere ogni attività necessaria per il funzionamento e per la risoluzione dei
+malfunzionamenti per tutto il periodo della durata della manutenzione.
+
+     LIVELLI DI SERVIZIO (SLA)
+I tempi di risoluzione delle criticità sono riferiti alla presa in carico del problema segnalato al Call
+Center e sono di seguito indicati su base annua:
+disservizi di tipo “bloccante”:
+8 h di tempo di ripristino
+disservizi di tipo “non bloccante”:
+16 h di tempo di ripristino ;
+disservizi di tipo “anomalia”:
+32 h di tempo di ripristino ;
+
+    CALL CENTER
+Per la gestione di tutte le chiamate di assistenza deve essere previsto un unico punto di accesso
+(CALL CENTER) per le segnalazioni degli eventuali malfunzionamenti
+
+Dovranno essere garantiti i seguenti livelli minimi di servizio:
+1) Risposta entro 30”, per l‟80% delle chiamate ricevute.
+2) Percentuale di chiamate perdute non superiore al 4%.
+Le Richieste devono poter essere inoltrate con le seguenti modalità:
+     Numeri Telefonici (numeri gratuiti)
+     E-Mail
+     Fax (numeri gratuiti)
+
+
+
+
+                                                    19
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+             21.       Modalità di presentazione delle offerte tecniche
+
+L‟offerta tecnica dovrà contenere un indice completo del proprio contenuto, nonché, a pena di
+esclusione della gara una relazione tecnica redatta in lingua italiana priva di qualsiasi indicazione
+diretta o indiretta di carattere economico.
+
+La relazione tecnica dovrà contenere una descrizione completa e dettagliata dei prodotti e dei
+servizi offerti, che dovranno essere conformi ai requisiti indicati nel Capitolato Tecnico e dovrà
+illustrare i contenuti e le modalità di fornitura e e la descrizione puntuale di tutti gli apparati
+hardware.
+
+La relazione tecnica dovrà essere redatta in modo da porre in evidenza gli elementi necessari alla
+Commissione giudicatrice per l‟attribuzione dei punteggi.
+
+La relazione tecnica dovrà essere priva di qualsiasi indicazione (diretta o indiretta) di carattere
+economico. La relazione tecnica dovrà essere firmata siglata in ogni pagina e sottoscritta per esteso
+all‟ultima pagina dal legale rappresentante del concorrente (o da persona munita da comprovati
+poteri di firma).
+
+Le brouchure dei prodtti, da fornire in lingua italiana, potranno essere messe in allegato
+
+In particolare, l‟offerta tecnica, in premessa, dovrà esplicitamente attestare la rispondenza della
+fornitura ai seguenti requisiti e vincoli, pena l‟esclusione dalla gara:
+
+La disponibilità da parte della Ditta Aggiudicataria di un‟adeguata struttura in grado di eseguire i
+servizi previsti;
+L‟impegno a fornire la documentazione tecnica, d‟installazione e d‟uso in lingua italiana;
+L‟impegno a fornire i prodotti software (comprese le utility) in lingua italiana, completi di
+documentazione e dell‟ultima versione commercializzata;
+L‟impegno ad eseguire la fornitura in conformità alle classi di fornitura descritte nel capitolato.
+
+
+
+
+                                                    20
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+             22.       Modalità di presentazione delle offerte economiche
+
+Nell‟offerta oltre al costo globale della fornitura, dovranno essere forniti i costi distinti per le
+singole voci ed attività come di seguito indicato. Si precisa che devono essere inserite tutte le righe
+relative alle singole voci di costo non esplicitamente indicate ma che concorrono al valore
+complessivo della fornitura.
+Tutti gli importi dovranno essere espressi in Euro e si intendono al netto dell‟IVA.
+Non sono ammesse offerte in aumento rispetto al prezzo complessivo a base d‟asta.
+Inoltre, l‟offerta economica non dovrà contenere riserve di sorta, né essere condizionata.
+L‟Offerta economica, a pena di esclusione, dovrà essere firmata o siglata in ogni pagina e
+sottoscritta per esteso nell‟ultima pagina dal legale rappresentante dell‟offerente o da persona
+munita da comprovati poteri di firma.
+
+
+
+
+                                                    21
+                                 UFFICIO TECNICO ED ANALISI DI MERCATO
+              Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+                 23.       Criteri di valutazione delle offerte
+        La fornitura sarà aggiudicata, a favore del concorrente che avrà presentato l‟offerta più
+ vantaggiosa sotto il profilo tecnico economico, da individuare sulla base dei parametri e con i pesi
+ di seguito elencati:
+     a) Prezzo                               70%
+     b)     Caratteristiche tecniche                   30%
+         Il punteggio sarà determinato dalla somma algebrica del punteggio tecnico e del punteggio
+ dell‟offerta economica calcolato applicando la seguente formula:
+                                                          Y = P1 + P2
+     I punti relativi all‟offerta tecnica (P1) saranno attribuiti secondo il criterio di seguito specificato:
+
+
+                                              DATABASE SOLUTION
+ Componente                          Caratteristica tecnica                    Punteggio attribuitoPunteggio Max
+                                     migliorativa
+Uncompressed Disk bandwidth          Per ogni 0,5 GB/s in più                           1                    5
+
+Database Disk                        Per ogni 3000 IOPS in più                          1                    5
+
+Disk data capacity                   Per ogni 5 TB IOPS in più                         0,5                   3
+
+Capacità usabile non compressa       Per ogni TB in più                                                      4
+                                                                                        1
+
+Single point of Failure              Il sistema non presenta single point of                                 5
+                                                                                        5
+                                     Failure
+                                                                                                        22
+SUBTOTALE
+
+                                                      SERVER
+
+          SPECint_rate_2006                       Per ogni 10 in più                   0,5                   3
+
+          SPECfp_rate_2006:                       Per ogni 10 in più                   0,5                   3
+
+     Espandabilità Nr. Lame:                     Per ogni lama in più                  0,5                   2
+
+                                            SUBTOTALE                                                     8
+
+
+TOTALE TECNICO                                                                                          30
+    I punti relativi all‟offerta economica (P2) saranno attribuiti secondo il criterio di seguito
+ specificato:
+                                                     P2 = 30* Pmin/P
+    Legenda:
+    Y = punteggio totale ottenuto;
+    P1 = punteggio ottenuto a seguito della valutazione tecnica;
+    P2 = punteggio dell’offerta economica;
+    Pmin = prezzo dell’offerta più bassa;
+     P = prezzo dell’offerta dell’Impresa oggetto di valutazione
+                                                             22
+                             UFFICIO TECNICO ED ANALISI DI MERCATO
+          Capitolato Tecnico Banca Dati Nazionale DNA – Forniture di Hardware, software e servizi
+
+Saranno, inoltre, esclusi dalla gara i concorrenti che presentino:
+
+   Offerte nelle quali fossero sollevate eccezioni e/o riserve di qualsiasi natura alle condizioni di
+    fornitura specificate nel Capitolato Tecnico e relative appendici;
+
+   Offerte che siano sottoposte a condizione;
+
+   Offerte che sostituiscano, modifichino e/o integrino le predette condizioni di fornitura;
+
+   Offerte incomplete e/o parziali;
+
+   Offerte di servizi che non possiedano le caratteristiche minime stabilite nel Capitolato Tecnico,
+    ovvero proposte con modalità difformi, in senso peggiorativo, da quanto stabilito nel Capitolato
+    Tecnico.
+
+             24.       Prezzo A Base D’asta
+
+Per tutte le attività sopra indicate il prezzo a base d‟asta è pari ad € 1.180.000,00 compreso IVA
+
+
+
+
+                                                    23
+
