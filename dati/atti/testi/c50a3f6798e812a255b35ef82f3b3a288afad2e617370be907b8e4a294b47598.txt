@@ -1,0 +1,1334 @@
+                                                                         www.etvilloresi.it
+                                                                            Via Ariosto, 30
+                                                                             20145 Milano
+                                                                         +39 02 485 613 01
+                                                                          info@etvilloresi.it
+                                                                          etvilloresi@pec.it
+
+
+
+
+                            Consorzio di Bonifica Est Ticino Villoresi
+                            Via Ariosto 30 - 20151 MILANO (MI)
+
+
+
+
+                           CAPITOLATO TECNICO
+
+OGGETTO
+Capitolato Tecnico per l’affidamento dei servizi di cloud pubblico Microsoft
+Azure, servizi office automation e servizi professionali connessi
+
+
+DATI APPALTO
+   Codice Identificativo   A00B8CC09F
+            Gara (CIG)
+               Contratto   A misura
+     Importo base gara     € 300.000,00 (36 mesi)
+        Importo rinnovo    € 200.000,00 (rinnovo 24 mesi)
+         Importo quinto    € 100.000,00
+             d’obbligo
+         Importo totale
+                           € 600.000,00 (36 mesi + 24 mesi)
+
+
+   Oneri della Sicurezza   €      0,00
+
+
+
+
+                                                                                                1
+                                                                                                                                    www.etvilloresi.it
+                                                                                                                                       Via Ariosto, 30
+                                                                                                                                        20145 Milano
+                                                                                                                                    +39 02 485 613 01
+                                                                                                                                     info@etvilloresi.it
+                                                                                                                                     etvilloresi@pec.it
+
+
+
+
+Sommario
+
+1.   Premessa ............................................................................................................................................. 3
+2.   Importo a base gara, durata dell’appalto e criterio di aggiudicazione .............................. 4
+3.   Oggetto dell’appalto ...................................................................................................................... 4
+  a. Servizi del cloud pubblico Microsoft Azure ...................................................................................... 4
+  b. Servizi professionali ............................................................................................................................ 6
+  c. Figure Professionali ............................................................................................................................ 6
+4. CERTIFICAZIONI .................................................................................................................................. 9
+5. STIMA SUPPORTO.............................................................................................................................. 10
+6. SERVIZI DI BACKUP ........................................................................................................................... 10
+7. SERVIZI DI MANUTENZIONE E ASSISTENZA TECNICA .................................................................... 10
+8. ATTIVITÀ DI START UP ........................................................................................................................ 11
+9. ATTIVITÀ EVOLUTIVE ......................................................................................................................... 11
+10. ATTIVITÀ RICORSIVE ......................................................................................................................... 11
+11. SUPPORTO E LIVELLI DI SERVIZIO .................................................................................................... 12
+12. STRUTTURE E RUOLO DI GESTIONE NEL RAPPORTO CONTRATTUALE ......................................... 13
+13. COLLAUDO DI START UP E AVVIO DEL SERVIZIO .......................................................................... 14
+14. RITARDI E PENALI .............................................................................................................................. 14
+15. Corrispettivi ....................................................................................................................................... 16
+16. Modalità di pagamento del servizio e di fatturazione ............................................................ 16
+17. Obbligo dell’affidatario ................................................................................................................. 17
+18. Verifica dell’attività ........................................................................................................................ 17
+19. Garanzia definitiva ......................................................................................................................... 17
+20. Responsabilità civile e polizza assicurativa ............................................................................... 18
+21. Subappalto e cessione del contratto ......................................................................................... 18
+22. Obblighi del Fornitore art 1664 cc ............................................................................................... 19
+23. Variazioni dell’entità dell’appalto ............................................................................................... 19
+24. Responsabilità .................................................................................................................................. 19
+25. Clausola risolutiva espressa .......................................................................................................... 20
+26. Esecuzione in danno ...................................................................................................................... 20
+27. Obblighi dell'Aggiudicatario e delle filiere dei subcontraenti .............................................. 21
+28. Verifiche dell'Amministrazione aggiudicatrice ......................................................................... 21
+29. Informazioni da inserire nella scheda T&T .................................................................................. 22
+30. Tempi e Modalità di trasmissione ................................................................................................. 22
+31. Sanzioni e penali ............................................................................................................................. 22
+32. Trattamento dei dati - privacy ..................................................................................................... 22
+33. Codice etico e modello 231 ......................................................................................................... 23
+34. Compliance privacy e nomina a responsabile del trattamento ............................................... 23
+35. Proprietà dei dati/documenti e diritti d’autore ............................................................................ 24
+36. Domicilio legale - Controversie e Foro competente ............................................................... 24
+
+
+
+
+                                                                                                                                                                2
+                                                                                  www.etvilloresi.it
+                                                                                     Via Ariosto, 30
+                                                                                      20145 Milano
+                                                                                   +39 02 485 613 01
+                                                                                    info@etvilloresi.it
+                                                                                    etvilloresi@pec.it
+
+
+
+
+      1. Premessa
+Il Consorzio Est Ticino Villoresi, con il presente appalto, intende proseguire l’attività di
+esternalizzazione dei servizi di infrastruttura IT attraverso sia un consolidamento delle soluzioni
+già implementate sia attraverso un percorso di aggiornamento costante delle infrastrutture
+esistenti.
+Elemento centrale della presente procedura è l’individuazione di un fornitore in grado di
+garantire, oltre all’infrastruttura tecnica di seguito descritta, anche un importante contributo
+nell’ambito della consulenza IT nei diversi settori di attività.
+Il Fornitore dovrà instaurare rapporti di positiva collaborazione sia verso l’Ente, ma anche
+verso i consulenti IT nominati dal Consorzio e dal fornitore del servizio di connettività, in
+quanto tali attività risultano strettamente collegati e complementari al corretto
+funzionamento e sviluppo dell’intera infrastruttura IT.
+Nel dettaglio, l’appalto prevederà le seguenti attività:
+  -     Gestione dell’attuale infrastruttura Datacenter basata su tecnologia di virtualizzazione
+        Microsoft e costituita da un server Windows e da relativo storage;
+  -     Presa in carico e gestione dell’attuale infrastruttura Microsoft Azure, su cui sono
+        presenti i servizi di Active Directory, ADConnect, File Server, Backup, VPN verso le sedi
+        consortili periferiche;
+  -     Gestione dell’attuale infrastruttura Microsoft 365 su cui sono presenti i servizi di posta
+        elettronica, condivisione files, videoconferenza, chat e meeting, e i servizi di
+        produttività Office 365;
+  -     Gestione dei sistemi di videoconferenza presenti nelle sale riunioni della sede
+        principale del Consorzio, basati su tecnologia Microsoft Teams Rooms;
+  -     Gestione dei backup, verifica ed eventuali ripristini dei sistemi indicati ai punti
+        precedenti;
+  -     Migrazione nel cloud pubblico di eventuali rimanenti applicazioni e dei servizi che il
+        Consorzio riterrà opportuno migrare nel corso del presente contratto;
+  -     Razionalizzazione delle applicazioni e servizi con dismissione di quelli non più in uso;
+  -     Consulenza generale in ambito di aggiornamento dei sistemi, applicazioni e servizi
+        attualmente in uso;
+  -     Messa in sicurezza di dati, applicazioni e servizi aziendali successivamente alla loro
+        migrazione nel cloud pubblico;
+  -     Realizzazione di sessioni di analisi volte alla valutazione dello stato di protezione dei
+        sistemi attualmente in uso, allo scopo di innalzare il livello di sicurezza degli stessi
+        (Security Assesment) e comunque in linea con eventuali aggiornamenti normativi che
+        vengano modificati/introdotti durante l’intera durata contrattuale;
+  -     avviamento di un ciclo di rinnovamento tecnologico da effettuarsi durante il periodo
+        di affidamento del contratto.
+
+                                                                                                          3
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                 +39 02 485 613 01
+                                                                                  info@etvilloresi.it
+                                                                                  etvilloresi@pec.it
+
+
+
+
+    2. Importo a base gara, durata dell’appalto e criterio di aggiudicazione
+L’appalto avrà decorrenza dalla sottoscrizione del verbale di avvio del servizio e terminerà
+dopo 36 mesi o al raggiungimento dell’importo massimo contrattuale pari a € 300.000,00 IVA
+esclusa.
+L’appalto verrà pertanto remunerato a misura sulla base dei costi unitari offerti
+dall’Appaltatore in sede di gara e dei listini ufficiali Microsoft Azure; si precisa che l’importo
+massimo contrattuale non è da intendersi quale minimo garantito bensì quale importo
+massimo erogabile per tutta la durata del contratto.
+Si precisa, altresì, che la stazione appaltante si riserva di attivare l’opzione di rinnovo di 24
+mesi al verificarsi delle condizioni previste dal Disciplinare di gara.
+L’importo a base gara è calcolato come da Quadro Economico messo a disposizione tra la
+documentazione di gara;.
+Si precisa che le risorse Azure necessarie all’esecuzione del contratto non sono soggette ad
+offerte economiche migliorative; il Consorzio procederà, pertanto, a liquidare
+all’Appaltatore i prezzi posti a base di gara senza per tutta la durata del contratto fatte salve
+eventuali aggiornamenti del listino Microsoft che l’Appaltatore dovrà comunicare al
+Consorzio in occasione del primo SAL disponibile.
+In considerazione del servizio richiesto, il presente appalto viene aggiudicato attraverso
+procedura aperta ai sensi dell’art. 71 D.lgs. 36/2023 del secondo il criterio dell’offerta
+economicamente più vantaggiosa ai sensi dell’art. 108 comma 1 del D.lgs. 36/2023.
+
+
+    3. Oggetto dell’appalto
+               a. Servizi del cloud pubblico Microsoft Azure
+Il Consorzio intende adottare i servizi cloud Microsoft Azure, secondo le specifiche di seguito
+indicate e secondo il dimensionamento previsto al momento della presa in carico
+dell’infrastruttura:
+
+                                      GRUPPO
+                                                   LOCALI     SISTEMA
+       NOME               TIPO           DI                                  DIMENSIONI
+                                                     TÀ      OPERATIVO
+                                      RISORSE
+                      Macchina       az-weu-      West
+az-weu-adcon-vm                                              Windows       Standard_B2ms
+                      virtuale       dc-rg        Europe
+az-weu-adcon-
+                                                                           SSD Standard
+vm_disk1_6d034a5                     az-weu-      West
+                      Disk                                                 con ridondanza
+b937b4c9f86bf8d9                     dc-rg        Europe
+                                                                           locale
+b6babaa2c
+                      Macchina       az-weu-      West
+az-weu-dc01-vm                                               Windows       Standard_B2ms
+                      virtuale       dc-rg        Europe
+az-weu-dc01-
+                                                                           SSD Standard
+vm_disk1_e78c8c94                    az-weu-      West
+                      Disk                                                 con ridondanza
+e958414bbcc23782                     dc-rg        Europe
+                                                                           locale
+d60a7c89
+                                                                                                        4
+                                                                        www.etvilloresi.it
+                                                                           Via Ariosto, 30
+                                                                            20145 Milano
+                                                                        +39 02 485 613 01
+                                                                         info@etvilloresi.it
+                                                                         etvilloresi@pec.it
+
+
+
+
+                   Public IP    az-weu-   West
+az-weu-dc01-pip
+                   address      dc-rg     Europe
+                   Macchina     az-weu-   West                  Standard_D8s_v
+az-weu-dc02-vm                                     Windows
+                   virtuale     dc-rg     Europe                3
+az-weu-dc02-
+                                                                SSD Premium
+vm_OsDisk_1_21ab                az-weu-   West
+                   Disk                                         con ridondanza
+b62460644a0e96b8                dc-rg     Europe
+                                                                locale
+7b1a23421de1
+                                                                SSD Standard
+                                az-weu-   West
+data01             Disk                                         con ridondanza
+                                dc-rg     Europe
+                                                                locale
+                                                                HDD Standard
+                                az-weu-   West
+data02_veeam       Disk                                         con ridondanza
+                                dc-rg     Europe
+                                                                locale
+                   Public IP    az-weu-   West
+az-weu-dc02-pip
+                   address      dc-rg     Europe
+                                az-weu-
+az-weu-            Backup                 West     3 VM sotto
+                                backup-
+backupvault-rsv    Vault                  Europe   backup
+                                mrg
+                                                                VPN High
+                   VPN          az-weu-   West
+az-weu-hubgw-gw                                                 Performance
+                   Gateway      hub-rg    Europe
+                                                                Gateway
+                   Public IP    az-weu-   West
+az-weu-hubgw-pip                                                Basic
+                   address      hub-rg    Europe
+az-weu-                                                         az-weu-
+                   VPN          az-weu-   West     az-weu-
+azabbiategrasso-                                                abbiategrasso-
+                   Connection   hub-rg    Europe   hubgw-gw
+con                                                             lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-
+azarconate-con     Connection   hub-rg    Europe   hubgw-gw     arconate-lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-
+azcaponago-con     Connection   hub-rg    Europe   hubgw-gw     caponago-lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-
+azchignolo-con     Connection   hub-rg    Europe   hubgw-gw     chignolo-lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-
+azgarbagnate-con   Connection   hub-rg    Europe   hubgw-gw     garbagnate-lng
+az-weu-azmilano-   VPN          az-weu-   West     az-weu-      az-weu-sophos-
+con                Connection   hub-rg    Europe   hubgw-gw     lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-eolo-
+azmilanoEolo-con   Connection   hub-rg    Europe   hubgw-gw     lng
+az-weu-            VPN          az-weu-   West     az-weu-      az-weu-
+azparabiago-con    Connection   hub-rg    Europe   hubgw-gw     parabiago-lng
+az-weu-azpavia-    VPN          az-weu-   West     az-weu-      az-weu-pavia-
+con                Connection   hub-rg    Europe   hubgw-gw     lng
+                                                                az-weu-
+az-weu-            VPN          az-weu-   West     az-weu-
+                                                                sommalomb-
+azsommalomb-con    Connection   hub-rg    Europe   hubgw-gw
+                                                                lng
+
+
+                                                                                               5
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+             b. Servizi professionali
+L’Appaltatore garantisce all’Ente il supporto consulenziale specialistico sui servizi di cui al
+Paragrafo 1 al fine di massimizzare i benefici derivanti dall’utilizzo degli stessi.
+In particolare, la consulenza specialistica sarà utilizzata per supportare l’Ente nella
+progettazione, manutenzione, realizzazione, nonché formazione del personale Consortile
+circa la funzionalità e servizi elencati al medesimo paragrafo 1.
+
+             c. Figure Professionali
+Il Consorzio, al fine della corretta realizzazione del presente Appalto, ha individuato le i
+seguenti profili professionali che l’Appaltatore dovrà mettere a disposizione del Consorzio
+secondo le modalità successivamente indicate.
+Le figure professionali individuate sono le seguenti:
+
+            Responsabile di progetto
+Il Responsabile di Progetto è una figura professionale con competenze e conoscenze
+approfondite nel settore IT, in particolare nell'ambito delle tecnologie cloud di Microsoft
+come Azure, Office 365 e Power Platform.
+
+Il Responsabile di Progetto ha la responsabilità di guidare e gestire l'intero progetto di
+consulenza IT, dallo sviluppo del piano di progetto alla sua implementazione e consegna al
+cliente. A tal fine, dovrà coordinare e supervisionare il lavoro del team, assicurandosi che i
+requisiti del cliente siano soddisfatti, il progetto sia consegnato nelle tempistiche indicate dal
+presente Capitolato e che le risorse messe a disposizione siano utilizzate in modo efficiente.
+
+Tra le principali attività del Responsabile di Progetto, si annoverano:
+   -   Definire gli obiettivi del progetto, il piano di lavoro e i tempi di consegna, in
+       collaborazione con il Consorzio e con il supporto del team di consulenti IT;
+   -   Coordinare e gestire il team di consulenti IT, assegnando le attività in modo
+       appropriato, monitorando il lavoro svolto e fornendo supporto e orientamento ai
+       membri del team;
+   -   Gestire le risorse del progetto, compreso il budget, le tempistiche e le attività di
+       pianificazione e controllo;
+   -   Comunicare regolarmente con il cliente e mantenere una buona relazione con il
+       cliente durante tutto il corso del progetto;
+   -   Assicurarsi che il progetto rispetti gli standard di qualità richiesti e che siano soddisfatte
+       tutte le esigenze del cliente;
+   -   Identificare e gestire i rischi del progetto, sviluppando e implementando strategie di
+       mitigazione dei rischi;
+   -   Fornire al cliente report periodici sull'avanzamento del progetto.
+
+In sintesi, il Responsabile di Progetto è una figura fondamentale per il successo di un progetto
+di consulenza IT in ambito Microsoft cloud. Dovrà dimostrare una solida esperienza nel settore
+
+                                                                                                           6
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                 +39 02 485 613 01
+                                                                                  info@etvilloresi.it
+                                                                                  etvilloresi@pec.it
+
+
+
+
+IT, abilità di gestione e coordinamento del team, buone capacità di comunicazione e di
+gestione dei rapporti con il cliente.
+
+             Solution Architect
+Solution Architect è la figura tecnica più alta all'interno di un progetto di tecnologia
+dell'informazione. È responsabile della gestione tecnica dell'intero progetto, dalla fase di
+pianificazione alla fase di implementazione.
+Il Solution Architect può anche essere responsabile della progettazione di soluzioni
+tecnologiche complesse e dell'architettura dei sistemi.
+
+Le principali mansioni del Solution Architect includono le seguenti attività:
+-   Pianificazione del progetto: Il Solution Architect si occupa della definizione degli obiettivi
+    del progetto insieme al Responsabile di Progetto, della pianificazione delle attività e del
+    budget e della definizione dei tempi e delle scadenze.
+-   Progettazione della soluzione: Il Solution Architect progetta soluzioni tecnologiche
+    complesse e architettura dei sistemi, tenendo conto delle esigenze dell'organizzazione,
+    dei requisiti di sicurezza, delle esigenze di scalabilità e delle ultime tendenze
+    tecnologiche.
+-   Gestione del progetto: Il Solution Architect si occupa della gestione del progetto, dalla
+    definizione delle priorità alle attività di coordinamento tra le diverse parti interessate.
+    Questo professionista può anche essere responsabile della selezione e della gestione del
+    team di sviluppo e di supporto.
+-   Monitoraggio e controllo: Il Solution Architect monitora costantemente e riporta al
+    Responsabile di Progetto l'avanzamento del progetto, verifica che il lavoro sia eseguito in
+    conformità con le specifiche del progetto e che il budget sia rispettato.
+-   Gestione dei rischi: Il Solution Architect identifica e gestisce insieme al Responsabile di
+    Progetto i rischi del progetto stesso, e adotta le misure necessarie per mitigare i rischi.
+-   Comunicazione: Il Solution Architect comunica con il Responsabile, con il personale di
+    gestione, gli utenti e altri membri del team per assicurare che tutti i soggetti coinvolti
+    siano sempre aggiornati sull'avanzamento del progetto.
+
+In generale, il Solution Architect è responsabile tecnico dell'intero progetto, dalla definizione
+degli obiettivi alla gestione delle risorse e alla progettazione di soluzioni complesse. Questo
+professionista dovrà essere in grado di gestire il team di tecnici a lui assegnato, e in grado di
+mantenere tutti i soggetti coinvolti informati sull'avanzamento del progetto.
+
+            System Engineer
+Consultant, anche chiamato System Engineer, è una figura professionale che lavora a stretto
+contatto con gli utenti, i tecnici di supporto e il personale di gestione per progettare,
+implementare e gestire soluzioni di infrastruttura e tecnologia dell'informazione all'interno di
+un'organizzazione. Questo professionista è responsabile della pianificazione,
+
+                                                                                                        7
+                                                                                    www.etvilloresi.it
+                                                                                       Via Ariosto, 30
+                                                                                        20145 Milano
+                                                                                     +39 02 485 613 01
+                                                                                      info@etvilloresi.it
+                                                                                      etvilloresi@pec.it
+
+
+
+
+dell'implementazione e della gestione di soluzioni tecnologiche complesse e può anche
+supervisionare il lavoro di altri tecnici.
+Le principali mansioni di un System Engineer possono includere:
+    − Progettazione e implementazione di soluzioni: il System Engineer si occupa di
+        progettare e implementare soluzioni di infrastruttura e tecnologia dell'informazione
+        all'interno dell'organizzazione. Ciò può includere la progettazione e l'implementazione
+        di reti, la selezione e l'installazione di hardware e software, la definizione di politiche di
+        sicurezza e la gestione di sistemi di backup e di ripristino.
+   −   Monitoraggio e manutenzione: il System Engineer monitora e mantiene i sistemi e
+       l'infrastruttura dell'organizzazione. Ciò può includere il monitoraggio delle prestazioni
+       dei sistemi, la risoluzione di problemi tecnici, la gestione dei conflitti di rete, la
+       manutenzione dei server e la gestione delle patch di sicurezza.
+   −   Gestione del progetto: il System Engineer (su assegnazione del Project Manager) può
+       essere responsabile della gestione di progetti di tecnologia dell'informazione
+       all'interno dell'organizzazione. Ciò può includere il conseguimento degli obiettivi del
+       progetto, la gestione del budget, la supervisione del lavoro dei tecnici di supporto e
+       la comunicazione con gli utenti e il personale di gestione.
+   −   Formazione e supporto: il System Engineer può fornire formazione e supporto ai tecnici
+       di supporto e agli utenti dell'organizzazione su questioni di tecnologia
+       dell'informazione e di sicurezza.
+   −   Ricerca e sviluppo: il System Engineer può condurre ricerche sulla tecnologia
+       dell'informazione e sugli sviluppi del settore per mantenere l'organizzazione al passo
+       con le ultime tendenze tecnologiche.
+
+In generale, il System Engineer è corresponsabile della progettazione, implementazione e
+gestione di soluzioni tecnologiche complesse all'interno di un'organizzazione. Questo
+professionista è anche corresponsabile della gestione dei progetti, della formazione e
+supporto agli utenti e della risoluzione di problemi tecnici complessi.
+
+              Junior consultant
+La figura si occuperà di fornire supporto tecnico di primo livello agli utenti che utilizzano il
+sistema informatico e i vari applicativi. Dovrà fornire un supporto base all'interno
+dell’organizzazione e opererà sotto la supervisione di un responsabile tecnico di livello
+superiore.
+Le principali mansioni del Junior Consultant comprendono:
+     − Fornire supporto tecnico di primo livello: risponderà alle chiamate, alle e-mail o alle
+        richieste di supporto da parte del Consorzio, fornendo assistenza su questioni di base
+        relative all'utilizzo di un determinato sistema informatico o applicativo.
+   −   Identificare e risolvere i problemi: il Junior Consultant dovrà essere in grado di
+       identificare i problemi degli utenti se necessario anche attraverso una serie di
+       domande per capire il problema e risolverlo. Qualora non sia in grado di risolvere il
+       problema, il tecnico di helpdesk junior lo segnala a un tecnico di livello superiore.
+
+                                                                                                            8
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+   −     Documentare i problemi: il Junior Consultant dovrà tenere traccia di tutti i problemi
+         risolti e non risolti e aggiornare un apposito database di helpdesk con le informazioni
+         pertinenti. L’attività sarà volta ad aiutare a identificare le tendenze e le aree
+         problematiche ricorrenti.
+   −     Installazione e configurazione: il Junior Consultant sarà responsabile dell'installazione e
+         della configurazione di software e hardware di base, come ad esempio stampanti o
+         software per l'ufficio.
+   −     Collaborazione con altri tecnici: il Junior Consultant collaborerà con altri tecnici di
+         supporto per risolvere i problemi più complessi e per garantire agli utenti del Consorzio
+         un'assistenza completa.
+In generale, il Junior Consultant sarà responsabile di fornire un supporto tecnico di base agli
+utenti del sistema informatico o degli applicativi in uso, risponderà alle richieste di supporto,
+identificherà e risolverà i problemi di base, documenterà le attività di supporto e collaborerà
+con altri tecnici di supporto per risolvere problemi più complessi.
+
+       4. CERTIFICAZIONI
+Considerata la natura tecnica dell’appalto, per premiare l’adeguato livello di competenza
+dei concorrenti in ambito tecnologico, il Consorzio assegnerà, in fase di valutazione delle
+offerte tecniche, i seguenti punteggi ai concorrenti che avranno ottenuto le certificazioni
+tecniche di seguito indicate:
+
+   -     MS-900 (Microsoft 365 Fundamentals) ………………………………..……..2 Punti;
+   -     MS-700 (Managing Microsoft Teams) ………………………………….....…5 Punti;
+   -     MS-500 (Microsoft 365 Security Administration) ……………………………5 Punti;
+   -     MS – 10*(Microsoft 365 Certified: Enterprise Administrator Expert)….….8 Punti;
+
+Si precisa che, al fine dell’attribuzione del relativo punteggio, il possesso delle certificazioni di
+cui all’elenco precedente deve essere in capo a uno o più soggetti ricompresi all’interno del
+gruppo di lavoro offerto per l’esecuzione della commessa.
+
+Si precisa che:
+
+   - In caso di partecipazione alla procedura in forma aggregata, il punteggio relativo al
+     criterio B verrà attribuito anche nel caso in cui un solo componente del raggruppamento
+     sia in possesso di una o più certificazioni;
+   - In caso di presenza di due o più dipendenti del concorrente o del RTI in possesso della
+     medesima certificazione, la stazione appaltante attribuirà il relativo punteggio una sola
+     volta;
+   - Nel caso in cui, nel corso dello svolgimento del servizio, venga meno il rapporto di lavoro
+     con il soggetto in possesso della certificazione, l’Appaltatore è tenuto alla sostituzione
+     con un soggetto in possesso della medesima certificazione entro 30 (trenta) giorni
+     naturali e consecutivi dalla data di cessazione del rapporto lavorativo
+
+
+                                                                                                           9
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                 +39 02 485 613 01
+                                                                                  info@etvilloresi.it
+                                                                                  etvilloresi@pec.it
+
+
+
+
+A livello aziendale, per la partecipazione alla procedura, il concorrente dovrà essere
+certificato ISO/27001.
+
+      5. STIMA SUPPORTO
+In riferimento all’attività di consulenza/supporto specialistico per tutte le attività sopra
+riportate che si rendano necessarie durante il periodo di vigenza del contratto, è stato
+stimato un massimo di n. di 540 giornate/uomo suddivise tra le seguenti figure professionali
+secondo il seguente schema:
+
+                                                           QUANTITA'
+          SERVIZI PROFESSIONALI
+                                     ANNO 1    ANNO 2    ANNO 3 ANNO 4       ANNO 5     TOTALE
+      Responsabile di Progetto         10        10        10     10           10         50
+      Solution Architect               18        18        18     18           18         90
+      System Engineer                  32        32        32     32           32        160
+      Junior consultant                48        48        48     48           48        240
+
+Fermo restando quanto previsto dall’articolo 11, la giornata s’intende di n. 8 ore e, all’avvio
+del contratto, saranno stabiliti e calendarizzati insieme all’Appaltatore i giorni della settimana
+in cui indicativamente saranno previste le attività di consulenza.
+Resta inteso che il calendario sarà meramente indicativo e le giornate potranno essere
+modificate secondo le contingenti esigenze del Consorzio.
+
+      6. SERVIZI DI BACKUP
+L’appaltatore dovrà provvedere all’attivazione di Licenze Veeam secondo la stima di
+seguito indicata:
+
+  -      n. 140 licenze corrispondenti a ciascuna postazione utente;
+  -    Possibilità di adeguamento dello spazio disco (storage) disponibile su cloud secondo
+bisogno, a supporto di volumi crescenti di informazioni da proteggere tramite backup stesso
+(stima costi al momento in cui è redatta la presente offerta: 40€ / TB / mese).
+
+      7. SERVIZI DI MANUTENZIONE E ASSISTENZA TECNICA
+L’Appaltatore garantisce il servizio di manutenzione e assistenza tecnica dei servizi offerti per
+l’intera durata contrattuale nelle modalità e tempistiche indicate all’art. 3;
+DIMENSIONAMENTO:
+I servizi e le giornate di supporto sopra indicati rappresentano una stima basata sulle
+esigenze dell’Ente alla luce dell’attuale organizzazione e della sua possibile futura modifica.
+Resta salvo che, come verrà indicato in seguito, tutti i servizi di cui sopra sono remunerati “a
+consumo” sulla base di quelli effettivamente richiesti e attivati.
+
+
+
+
+                                                                                                   10
+                                                                                www.etvilloresi.it
+                                                                                   Via Ariosto, 30
+                                                                                    20145 Milano
+                                                                                 +39 02 485 613 01
+                                                                                  info@etvilloresi.it
+                                                                                  etvilloresi@pec.it
+
+
+
+
+    8. ATTIVITÀ DI START UP
+Le attività di start up vengono indicate qui di seguito con le relative tempistiche:
+
+
+
+
+I termini di cui sopra (da intendersi “da calendario”) decorrono dalla richiesta dell’Ente,
+posto la sottoscrizione del contratto da parte di entrambe le parti o del verbale di avvio del
+servizio sotto riserva, ai sensi dell’art. 50, c. 6 del d. lgs. 36/2023 e fatto salvo la messa a
+disposizione da parte dell’Ente delle informazioni e dati necessari all’attivazione dei servizi.
+
+    9. ATTIVITÀ EVOLUTIVE
+Sulla base delle necessità del Consorzio dovute alla naturale evoluzione dello stesso, sia in
+termini di risorse IT che di evoluzione dei processi e procedure, si ipotizza che periodo
+successivo alle attività di start-up, il progetto possa evolversi nelle seguenti macro-aree, qui
+indicate a puro titolo esemplificativo.
+
+  - Erogazione di training specifici per funzionalità avanzate Premium (sicurezza, gestione
+    avanzata dispositivi mobili, ecc)
+  - Consolidamento documentazione aziendale in cloud IaaS / SaaS
+  - Verifica ed archiviazione dei documenti presenti su File Server ed eventuale migrazione
+    su piattaforma MS365 (quali ad es. Teams, Sharepoint)
+
+I tempi di espletamento dell’attività evolutiva richiesta verranno concordati in accordo con
+l’Appaltatore.
+
+    10. ATTIVITÀ RICORSIVE
+Le attività ricorsive riguardano la gestione della normale operatività dei servizi attivi in
+ambiente di produzione quali, in via esemplificativa ma non esaustiva:
+
+  - Attivazione/disattivazione di caselle e-mail;
+                                                                                                   11
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                  +39 02 485 613 01
+                                                                                   info@etvilloresi.it
+                                                                                   etvilloresi@pec.it
+
+
+
+
+  - Attivazione/disattivazione di licenze MS 365;
+  - Modifica dei parametri cloud IaaS;
+  - Training MS-Office e MS-Teams.
+
+I tempi di svolgimento hanno riguardo alle tempistiche di livello di servizio indicate all’art. 3
+per quanto concerne le attivazioni, disattivazioni e/o modifiche sopra indicate mentre per le
+attività di training verranno concordate in accordo con l’Appaltatore.
+
+    11. SUPPORTO E LIVELLI DI SERVIZIO
+L’Appaltatore deve garantire adeguato supporto tecnico tramite un sistema di ticketing
+messo a disposizione dallo stesso ed accessibile tramite WEB. Il portale dovrà essere
+disponibile in modalità 24 ore x 7 giorni x 365 giorni/anno. Qualora il sistema di ticketing non
+dovesse essere disponibile, per ragioni eccezionali, l’Appaltatore garantisce il supporto per
+via telefonica.
+In base alla segnalazione di disservizio operata a cura del personale Consortile, il Fornitore
+dovrà garantire i corrispondenti tempi di presa in carico fatto salve offerte migliorative
+presentate in sede di gara:
+
+    Priorità                            Descrizione                                Tempo di
+                                                                                presa in carico
+
+      Alta      Errore bloccante / perdita del servizio che richiede                  3 ore
+                intervento urgente
+
+    Media       Errore non bloccante che permette una risoluzione tramite             4 ore
+                workaround / Riduzione delle performance
+
+     Bassa      Errore non bloccante a basso impatto sui livelli di servizio,         8 ore
+                attivazione/disattivazione     di     caselle        e-mail,
+                attivazione/disattivazione di licenze MS 365, modifica
+                parametri cloud IaaS
+
+
+
+Il tempo di presa in carico è da intendersi riferito all’interno della fascia oraria 8.30 - 12:30 e
+13:30 - 18:00.
+In seguito alla presa in carico da parte dell’Appaltatore, si rimanda qui di seguito ai livelli di
+servizio del Produttore:
+       -     Cloud IaaS Microsoft Azure: https://azure.microsoft.com/en-us/support/legal/sla/
+       -     Cloud SaaS Microsoft 365: https://wwlpdocumentsearch.blob.core.windows.net
+
+
+
+
+                                                                                                    12
+                                                                                  www.etvilloresi.it
+                                                                                     Via Ariosto, 30
+                                                                                      20145 Milano
+                                                                                   +39 02 485 613 01
+                                                                                    info@etvilloresi.it
+                                                                                    etvilloresi@pec.it
+
+
+
+
+    12. STRUTTURE E RUOLO DI GESTIONE NEL RAPPORTO CONTRATTUALE
+L’Appaltatore deve provvedere ad indicare alla Stazione Appaltante un proprio
+Responsabile di Progetto che si interfaccerà con il Direttore dell’Esecuzione del Contratto ed
+i tecnici consortili per lo svolgimento dei servizi richiesti.
+Il Responsabile del Progetto dell’Appaltatore ha la responsabilità di garantire che il progetto
+produca i risultati stabiliti dal Contratto. Costituisce l’unica interfaccia tecnico-organizzativa
+dell’Appaltatore verso il Consorzio.
+I soggetti sopra indicati si riuniranno con periodicità mensile (in via ordinaria) per verificare lo
+stato di avanzamento lavori o su convocazione straordinaria di una delle due parti.
+Durante le riunioni di SAL si procederà ad esaminare l’aderenza dei servizi erogati a quanto
+prescritto nel Contratto e dove fosse necessario, all’applicazione di eventuali azioni
+correttive.
+
+In occasione delle riunioni di SAL, l’Appaltatore dovrà produrre al Direttore dell’Esecuzione
+del Contratto la seguente documentazione, a supporto del contraddittorio tra le parti:
+
+   -   Saldo aggiornato dell’ultimo mese di consumi Azure, e totale storico dei consumi
+       Azure dall’avvio del contratto fino al momento in cui si svolge la riunione. Tale saldo
+       dovrà riportare le quantità di risorse computazionali impiegate e i relativi costi tariffati
+       secondo il listino Microsoft Azure vigente al momento dell’estrazione dati;
+
+   -   Resoconto aggiornato dei backup svolti con successo, ed eventuali punti di
+       attenzione;
+
+   -   Resoconto aggiornato dei ticket di assistenza tecnica aperti, in corso e chiusi con
+       successo, con evidenza di eventuali criticità;
+
+   -   Resoconto aggiornato delle giornate di consulenza utilizzate, e relativa giustificazione;
+
+
+In contraddittorio tra le parti, si provvederà a:
+
+   1. esaminare l’andamento delle attività nel corso del periodo precedente e verificare lo
+      stato di avanzamento rispetto alle pianificazioni formulate;
+
+   2. determinare i livelli di criticità e individuare di volta in volta la scala di priorità delle
+      attività;
+
+   3. pianificare le attività del periodo successivo;
+
+   4. esaminare e definire eventuali azioni volte al perfezionamento delle attività in corso.
+
+Lo Stato di Avanzamento Lavori dovrà riportare: le attività pianificate; le attività in corso; le
+attività svolte; i risultati ottenuti; i tempi; le milestones; gli scostamenti; le ragioni degli
+
+
+                                                                                                     13
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+scostamenti; la tipologia criticità; le azioni correttive; i deliverable legati all’attività; i costi
+consuntivi in termini di utilizzo di servizi che di giorni/uomo di consulenza.
+
+      13. COLLAUDO DI START UP E AVVIO DEL SERVIZIO
+Il presente paragrafo descrive il piano di avvio del servizio e le procedure da seguire,
+necessarie per la validazione e accettazione del nuovo sistema informativo (nuova
+infrastruttura) definito nell’ambito del progetto ed oggetto di questo capitolato.
+
+La validazione ha come scopo quello di verificare che l’infrastruttura hardware e software, i
+servizi richiesti e le applicazioni siano funzionanti e operative.
+In particolare, l’esecuzione del servizio e il rilascio dei servizi, sono azioni necessarie per la
+corretta chiusura della fase di predisposizione del sistema secondo quanto rilevato dalle
+specifiche modalità di gestione del progetto.
+Il collaudo o i collaudi saranno effettuati presso la sede del Consorzio alla presenza di tutte le
+persone incaricate di ogni specifica attività.
+A seguito dell’esecuzione del collaudo, secondo le modalità ed i tempi concordati e
+descritti in uno specifico documento denominato “Documento di collaudo”, verrà prodotto il
+documento “Verbale di Collaudo”, che riporterà gli esiti ufficiali delle singole operazioni di
+collaudo. A seguito del verbale di collaudo si procederà con la messa in produzione del
+componente oggetto del collaudo.
+Per la verifica ed il collaudo delle funzionalità dell’intera infrastruttura predisposta, vengono
+utilizzati test di verifica e di validazione, definiti dai casi di prova illustrati nel documento di
+collaudo.
+I test di verifica accertano che quanto predisposto funzioni nel modo corretto ovvero che la
+configurazione e la costruzione dei servizi siano rispondente alle specifiche definite nella
+documentazione.
+Obiettivo delle attività di collaudo è:
+
+     - garantire la corrispondenza dei requisiti del sistema offerto con quanto effettivamente
+       fornito;
+     - individuare eventuali errori presenti nella predisposizione o configurazione del sistema o
+       nei suoi componenti (hardware e software).
+
+Durante il collaudo saranno testate le funzionalità inerenti l’efficienza del sistema e dei suoi
+componenti, sia hardware che software, con particolare attenzione rispetto alle funzionalità
+di gestione e controllo della fruizione operativa quotidiana del sistema da parte degli utenti
+interni o esterni (accessi utente, sicurezza, utilizzo delle procedure web, ecc.)
+
+      14. RITARDI E PENALI
+1.    L’Appaltatore deve eseguire le prestazioni secondo la tempistica descritta nel capitolato
+      posto a base dell’affidamento.
+
+
+                                                                                                      14
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                 +39 02 485 613 01
+                                                                                  info@etvilloresi.it
+                                                                                  etvilloresi@pec.it
+
+
+
+
+2.   Nel caso si verifichi un ritardo nello svolgimento delle attività di start up di cui al
+     precedente paragrafo n. 8, salvo i casi di forza maggiore, il Consorzio procederà
+     all’applicazione di una penale giornaliera pari al 1,00 ‰ (uno per mille) dell’importo
+     massimo contrattuale.
+
+3.   La medesima penale verrà applicata, salvo i casi di forza maggiore, in caso di mancato
+     rispetto dei termini delle SLA di cui al precedente paragrafo n. 11 o come offerti in sede
+     di gara.
+
+4.   In relazione al precedente punto 3, si precisa che il Consorzio procederà alla trasmissione
+     di formale contestazione da parte del Responsabile del Progetto, sentito il Direttore
+     dell’esecuzione del contratto, al terzo mancato rispetto delle SLA. Si precisa, inoltre, che
+     alla terza contestazione trasmessa il Consorzio si riserva di risolvere il contratto ai sensi
+     dell’art. 122 del D.lgs. 36/2023.
+
+5.   L’applicazione delle penali per eventuali ritardi sarà preceduta da regolare
+     contestazione dell’inadempienza effettuata via mail dalla Stazione Appaltante al
+     referente dell’Appaltatore, alla quale l’appaltatore avrà la facoltà di presentare
+     eventuali controdeduzioni entro 5 giorni dalla data di notifica della contestazione.
+
+6.   L’ammontare complessivo delle penali per ritardi non potrà, in ogni caso, superare il
+     10,00% dell’importo contrattuale, fatta salva la facoltà, per il Consorzio, di richiedere
+     all’Appaltatore gli eventuali danni patiti per la realizzazione tardiva delle attività
+     oggetto del presente contratto.
+
+7.   La penale è disposta dal Responsabile del Progetto, sentito il Direttore dell’esecuzione
+     del contratto.
+
+8.   Nessuna controversia potrà in alcun caso, per qualsivoglia motivo o fatto, determinare la
+     sospensione neppure parziale o temporanea del contratto, fatta salva la facoltà per
+     l’appaltatore di chiedere il rimborso della penale ad esito inoppugnabile del giudizio.
+
+9.   L’ammontare delle penali verrà dedotto dal corrispettivo                  di competenza
+     dell’Appaltatore. Nell’ultimo mese di servizio, l’ammontare delle           penali verrà
+     corrisposto direttamente dall’appaltatore alla Stazione Appaltante.
+
+10. In ogni caso, il Consorzio potrà operare dette detrazioni senza bisogno di diffida o
+    procedimento giudiziario, nonché compensare in credito con quanto dovuto
+    all’Appaltatore a qualsiasi titolo.
+
+11. L’applicazione delle penali di cui non pregiudica il diritto del Consorzio di richiedere il
+    risarcimento di eventuali maggiori danni ai sensi dell’art. 1382 del codice civile e di
+    intimare la risoluzione del contratto per inadempimento.
+
+                                                                                                   15
+                                                                                       www.etvilloresi.it
+                                                                                          Via Ariosto, 30
+                                                                                           20145 Milano
+                                                                                        +39 02 485 613 01
+                                                                                         info@etvilloresi.it
+                                                                                         etvilloresi@pec.it
+
+
+
+
+     15. Corrispettivi
+I corrispettivi contrattuali sono comprensivi di ogni attività necessaria alla prestazione del
+servizio.
+Tutti i corrispettivi di seguito indicati sono determinati a proprio rischio dall’affidatario in base
+ai propri calcoli, alle proprie indagini, alle proprie stime, e sono, pertanto, fissi ed invariabili,
+per l’intera durata del contratto, ivi l’ipotesi di proroga.
+Costituiscono eccezioni a quanto indicato al precedente comma:
+        -   eventuali modifiche del listino determinate da un incremento dei costi applicati
+            dal listino Microsoft;
+        -   al verificarsi di particolari condizioni di natura oggettiva, che determinano una
+            variazione del costo del servizio, in aumento o in diminuzione, superiore al 5,00%
+            dell’importo contrattuale complessivo; in tali casi è ammessa la revisione dei prezzi
+            nella misura dell’80 per cento della variazione stessa, in relazione alle prestazioni
+            ancora da eseguire, ai sensi dell’art. 60 del d. lgs. 36/2023.
+
+     16. Modalità di pagamento del servizio e di fatturazione
+1.   Il corrispettivo per l’esecuzione dell’appalto verrà erogato secondo le seguenti modalità:
+     a. Per i servizi del cloud pubblico Microsoft Azure/hosting web, effettuerà il pagamento
+         mensilmente, sulla base dei servizi effettivamente erogati dall’Appaltatore e dei prezzi
+         delle licenze e dei servizi operati dal provider (sulla scorta di listini ufficiali);
+     b. Per i servizi professionali, il Consorzio effettuerà il pagamento mensilmente sulla base
+         dei costi a giornata offerti dall’Appaltatore in sede di gara e delle giornate
+         effettivamente erogate.
+2.    Il pagamento del corrispettivo è subordinato alla positiva verifica d’ufficio del
+     Documento Unico di Regolarità Contributiva o documento equivalente, che attesti che
+     l’Appaltatore è in regola con i pagamenti previdenziali.
+3.   L’Appaltatore assume tutti gli obblighi di tracciabilità dei flussi finanziari previsti dall’art. 3
+     della Legge 136/10, impegnandosi a dare immediata comunicazione alla stazione
+     appaltante ed alla Prefettura-Ufficio Territoriale del Governo della provincia di Milano
+     della      notizia     dell’eventuale     inadempimento        della       propria        controparte
+     (subappaltatore/subcontraente) agli obblighi di tracciabilità finanziaria.
+4.   Ciascuna fattura dovrà riportare l’indicazione del regime di split payment cui il Consorzio
+     è soggetto e dovrà essere emessa secondo le indicazioni impartite dal Direttore
+     dell’Esecuzione del Contratto o dagli uffici competenti; in particolare, prima
+     dell’emissione della fattura, l’Appaltatore dovrà presentare un resoconto delle attività
+     svolte, che verrà verificato dagli uffici consortili; a seguito di approvazione di tale
+     resoconto, l’Appaltatore potrà emettere fattura.
+5.   Per ciascuna fattura emessa dall’Appaltatore, il Consorzio applicherà la trattenuta pari
+     allo 0,5% dell’importo della fattura ai sensi dell’art. 11 comma 6 del D.lgs. 36/2023.
+
+
+
+                                                                                                          16
+                                                                                         www.etvilloresi.it
+                                                                                            Via Ariosto, 30
+                                                                                             20145 Milano
+                                                                                         +39 02 485 613 01
+                                                                                          info@etvilloresi.it
+                                                                                          etvilloresi@pec.it
+
+
+
+
+      17.    Obbligo dell’affidatario
+   L’Affidatario è obbligato a:
+a.Provvedere ad adottare tutte le misure organizzative necessarie ad organizzare un servizio
+   adeguato, garantendo su richiesta del Consorzio, la presenza di personale presso i suoi uffici
+   o quelli del Consorzio;
+b.Collaborare alle attività di verifica disposte dal Consorzio fornendo i dati e gli elementi
+   occorrenti per l’acquisizione di notizie sul servizio svolto;
+c.Fornire tutte le prestazioni connesse all’oggetto del rapporto che non comportino ulteriori
+   aggravi degli adempimenti, dietro semplice richiesta del Consorzio, qualora se ne ravvisi la
+   necessità, per assicurare economici, efficienza e funzionalità dei servizi;
+d.Assumere tutti gli obblighi di tracciabilità dei flussi finanziari di cui all’art. 3, della L. 136/2010 e
+   ss.mm.ii.;
+e.Trattare i dati forniti per le finalità connesse esclusivamente alle obbligazioni derivanti dal
+   presente affidamento, in modo lecito e secondo correttezza, mediante strumenti idonei a
+   garantire la sicurezza e la riservatezza, nel rispetto delle norme previste dal D.Lgs. n. 196/2003
+   e ss.mm.ii.;
+ f.Osservare, e far osservare ai propri dipendenti, incaricati e collaboratori, la più assoluta
+   riservatezza rispetto a tutti i dati e le informazioni di cui avranno conoscenza nello
+   svolgimento del servizio, nonché l’obbligo di non divulgarli e di non farne oggetto di
+   utilizzazione a qualsiasi titolo, se non dietro preventivo consenso del Consorzio;
+g.Impegnarsi a rispettare tutti gli obblighi derivanti da leggi, regolamenti, contratti collettivi ed
+   integrativi aziendali in materia di rapporti di lavoro, in relazione a tutte le persone che
+   esplicano attività a favore dello stesso, in qualsivoglia regime, ed assume ogni responsabilità
+   per danni o infortuni che possano essere cagionati da dette persone nell’esecuzione di ogni
+   attività, direttamente o indirettamente inerente alle prestazioni oggetto dell’affidamento;
+h.Impegnarsi a mantenere indenne il Consorzio in relazione ad ogni qualsivoglia pretesa
+   avanzata da terzi, direttamente o indirettamente derivante dall’espletamento dei servizi o
+   dai suoi risultati; a tal fine l’Affidatario dovrà possedere idonea copertura assicurativa
+   secondo quanto previsto dall’art. 20 del presente Capitolato Tecnico;
+ i.Comunicare tempestivamente al Consorzio ogni modificazione intervenuta negli assetti
+   societari, nella struttura d’impresa e negli organismi tecnici ed amministrativi.
+
+      18.    Verifica dell’attività
+  Il Consorzio si riserva di verificare, in qualsiasi momento, l’andamento dell’attività
+  dell’Affidatario e l’esatta applicazione delle norme descritte da presente Capitolato
+  Tecnico, negli atti di gara, nell’Offerta tecnica, nel contratto e in tutti gli atti e la normativa
+  richiamati da tali documenti.
+  Di ogni verifica o controllo verrà steso apposito verbale che sarà trasmessa all’Affidatario.
+
+      19.    Garanzia definitiva
+  Ai fini della stipula del contratto, l’Affidatario dovrà presentare idoneo documento
+  comprovante la prestazione di una garanzia definitiva in favore del Consorzio, a garanzia
+  degli impegni contrattuali, secondo le modalità e condizioni indicate nel Disciplinare di gara.
+  La cauzione garantisce tutti gli obblighi specifici assunti dall’Affidatario, anche quelli a fronte
+  dei quali è prevista l’applicazione di penali, nei confronti del Consorzio e pertanto resta
+  espressamente inteso che il Consorzio ha diritto di rivalersi direttamente sulla cauzione
+  prestata per l’applicazione delle penali previste dal presente Capitolato Tecnico.
+                                                                                                           17
+                                                                                 www.etvilloresi.it
+                                                                                    Via Ariosto, 30
+                                                                                     20145 Milano
+                                                                                  +39 02 485 613 01
+                                                                                   info@etvilloresi.it
+                                                                                   etvilloresi@pec.it
+
+
+
+
+La garanzia opera per tutta la durata dell’affidamento, e comunque, sino alla completa ed
+esatta esecuzione delle obbligazioni nascenti dallo stesso. Pertanto, la garanzia sarà
+svincolata, secondo le modalità ed alle condizioni di seguito indicate, previa deduzione di
+eventuali crediti del Consorzio verso l’Affidatario, a seguito della piena ed esatta esecuzione
+delle obbligazioni contrattuali.
+Qualora l’ammontare della cauzione definitiva dovesse ridursi per effetto dell’applicazione
+di penali, o per qualsiasi altra causa, l’Affidatario dovrà provvedere al reintegro entro il
+termine di 10 (dieci) giorni lavorativi decorrenti dal ricevimento della relativa richiesta
+effettuata dal Consorzio.
+
+    20.   Responsabilità civile e polizza assicurativa
+Con la stipula del contratto, l’Affidatario assume in proprio ogni responsabilità per infortunio o
+danni eventualmente subiti da parte di persone o di beni cagionati dall’esecuzione delle
+prestazioni contrattuali riferibili all’Affidatario stesso, anche se eseguite da parte di terzi.
+L’Affidatario si obbliga a manlevare e tenere indenne il Consorzio, per quanto di rispettiva
+competenza, dalle pretese che terzi dovessero avanzare in relazione ai danni derivanti
+dall’esecuzione delle prestazioni contrattuali.
+Anche a tal fine, l’Affidatario dichiara di essere in possesso di un’adeguata copertura
+assicurativa a garanzia di responsabilità civile per danni a terzi nell’esecuzione delle
+prestazioni contrattuali.
+La durata della copertura assicurativa richiesta deve essere almeno pari a tutta la durata del
+contratto, anche rinnovabile, e comunque sino alla completa ed esatta esecuzione delle
+obbligazioni nascenti dal predetto Contratto.
+Per la stipula del contratto, l’Affidatario dovrà far pervenire al Consorzio copia integrale della
+polizza; il massimale annuo della garanzia RC non dovrà essere inferiore a € 500.000,00.
+Resta comunque ferma la totale responsabilità dell’Affidatario riguardo il risarcimento di
+eventuali maggiori danni eccedenti i massimali di garanzia ovvero esclusi dalle condizioni
+contrattuali di polizza.
+Tutta la documentazione sopra citata dovrà essere obbligatoriamente fornita in lingua
+italiana.
+
+    21.   Subappalto e cessione del contratto
+L'Aggiudicatario del contratto, nonché le filiere dei subcontraenti coinvolti nella esecuzione,
+saranno tenuti al pieno rispetto di quanto previsto dall'articolo 119 del Dlgs 36/2023, dal
+comma 1 dell'articolo 3 della legge 136/2010. Le informazioni non sensibili trasmesse alla
+Amministrazione aggiudicatrice in applicazione delle suddette norme saranno pubblicate sul
+profilo committente della stessa e rese accessibili al pubblico per tutta la durata del
+contratto ed almeno fino al collaudo definitivo dello stesso. La mancata trasmissione delle
+informazioni di cui alle norme richiamate sarà sanzionata con il divieto, per l’Affidatario, di
+entrare a far parte del processo produttivo originato dal contratto, secondo quanto
+specificato nella “norma di contratto T&T - Trasparenza e Tracciabilità”. L'amministrazione, ai
+sensi del comma 9 dell'articolo 3 della legge 136/2010 verificherà che nei contratti sottoscritti
+dall'Aggiudicatario e dai sub contraenti a qualsiasi livello della filiera dei subcontratti, a pena
+di nullità assoluta, sia inclusa la norma di contratto T&T-Trasparenza e Tracciabilità con la
+quale ciascuno di essi assume gli obblighi di tracciabilità dei flussi finanziari di cui alla Legge
+n. 136/2010.
+
+
+                                                                                                    18
+                                                                                  www.etvilloresi.it
+                                                                                     Via Ariosto, 30
+                                                                                      20145 Milano
+                                                                                   +39 02 485 613 01
+                                                                                    info@etvilloresi.it
+                                                                                    etvilloresi@pec.it
+
+
+
+
+    22.   Obblighi del Fornitore art 1664 cc
+Il Fornitore si obbliga ad eseguire le prestazioni richieste nel rispetto dei tempi previsti, con la
+massima accuratezza ed a perfetta regola d’arte.
+Il Fornitore dovrà assicurare l’esecuzione del servizio con proprio personale specializzato
+dotato di quanto è idoneo allo svolgimento della mansione conferita.
+Il Fornitore dovrà osservare nei confronti dei propri dipendenti le leggi, i regolamenti e le
+disposizioni normative in materia di rapporto di lavoro, di previdenza e assistenza sociale e di
+sicurezza ed igiene del lavoro.
+Il Fornitore s’impegna a osservare e applicare integralmente tutte le norme contenute nel
+contratto collettivo nazionale di lavoro per i dipendenti delle imprese del settore e negli
+accordi integrativi dello stesso, anche dopo la scadenza dei contratti collettivi fino alla loro
+sostituzione.
+
+    23.   Variazioni dell’entità dell’appalto
+Il Consorzio potrà richiedere al Fornitore, nei casi previsti dal comma 9 dell’art. 120 del D.Lgs.
+36/2023, variazioni in aumento o in diminuzione delle prestazioni fino a concorrenza di un
+quinto dell’importo dell’appalto, agli stessi patti, prezzi e condizioni del contratto originario
+senza diritto ad alcuna indennità ad eccezione del corrispettivo relativo alle nuove
+prestazioni in base ai criteri sopraindicati. In caso di diminuzione delle prestazioni fino alla
+concorrenza di un quinto in meno del corrispettivo complessivo dell’appalto, il Fornitore non
+avrà diritto ad alcun compenso o indennità oltre al corrispettivo maturato per le prestazioni
+effettivamente eseguite, calcolato sulla base dei criteri sopraindicati.
+Nessuna variazione o modifica al contratto potrà essere introdotta del Fornitore se non è
+stata approvata dal Consorzio.
+La richiesta del Consorzio, nel caso intenda avvalersi del presente articolo, sarà formalizzata
+al Fornitore mediante comunicazione ufficiale e trasmissione di una relazione di variante da
+restituirsi firmata per adesione dal Fornitore.
+
+    24.   Responsabilità
+L’Ente sarà sollevato da qualsiasi responsabilità derivante da difetti di produzione, guasti a
+questi riconducibili, malfunzionamenti ed altri vizi occulti o palesi.
+Il Fornitore assume in proprio ogni responsabilità per qualsiasi danno causato a persone o
+beni, tanto del Fornitore stesso quanto dell’Ente e/o di terzi, in dipendenza di omissioni,
+negligenze o altre inadempienze relative all’esecuzione delle prestazioni contrattuali ad esso
+riferibili, anche se eseguite da parte di terzi.
+Il Fornitore assume ogni responsabilità conseguente all’uso di dispositivi o all’adozione di
+soluzioni tecniche o di altra natura che violino diritti di brevetto, di autore ed in genere di
+privativa altrui; il Fornitore, pertanto, si obbliga a manlevare l’Ente per quanto di propria
+competenza, dalle pretese che terzi dovessero avanzare in relazione a diritti di privativa
+vantati da terzi.
+Qualora venga promossa nei confronti dell’Ente azione giudiziaria da parte di terzi che
+vantino diritti sulle prestazioni contrattuali, il Fornitore assume a proprio carico tutti gli oneri
+conseguenti, incluse le spese eventualmente sostenute per la difesa in giudizio. In questa
+ipotesi, l’Ente è tenuto ad informare prontamente per iscritto al Fornitore delle suddette
+iniziative giudiziarie.
+
+
+                                                                                                     19
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+Nell’ipotesi di azione giudiziaria per le violazioni di cui al comma precedente tentata nei
+confronti dell’Ente questo, fermo restando il diritto al risarcimento del danno nel caso in cui la
+pretesa azionata sia fondata, ha facoltà di dichiarare la risoluzione di diritto del rapporto
+contrattuale recuperando e/o ripetendo il corrispettivo versato, detratto un equo compenso
+per i servizi e/o le forniture erogati.
+
+
+    25.   Clausola risolutiva espressa
+1. Ferme restando le ipotesi di risoluzione previste dalla normativa appalti si conviene che, in
+    ogni caso, l’Ente, senza bisogno di assegnare previamente alcun termine per
+    l’adempimento, potrà risolvere di diritto il contratto ai sensi dell’art. 1456 cod. civ.,
+    nonché ai sensi dell’art. 1360 cod. civ., previa dichiarazione da comunicarsi
+    all’Appaltatore con raccomandata AR, nei seguenti casi:
+   a) Qualora fosse accertata la non sussistenza ovvero il venir meno di uno o più dei
+        requisiti richiesti per la partecipazione alla procedura nonché per la stipula del
+        contratto e per lo svolgimento delle attività ivi previste;
+   b) Conoscenza, da parte del Consorzio, del manifestarsi, in capo all’Appaltatore, di una
+        delle ipotesi di cui agli art. 94 e 95 del d. lgs. 36/2023;
+   c) Ritardo ingiustificato superiore a 30 giorni nell’avvio del servizio;
+   d) Subappalto abusivo, associazione in partecipazione;
+   e) Mancato rispetto delle norme contenute dal “Patto di integrità in materia di contratti
+        pubblici regionali” approvato con D.G.R. 17 giugno 2019 – n. 1751 e dal “Codice
+        Etico” del Consorzio di Bonifica Est Ticino Villoresi approvato con deliberazione del
+        Consiglio di Amministrazione n. 166 del 31 gennaio 2022 che, anche se non
+        materialmente allegati al presente Capitolato Tecnico, ne forma parte integrante;
+   f) Violazione degli obblighi previsti dalla L. n. 136/2010 in ordine alla tracciabilità dei flussi
+        finanziari;
+   g) Verificarsi di situazioni di conflitto di interesse dell’affidatario e valutate come tali e
+        adeguatamente motivate dal Consorzio;
+   h) Danno all’immagine;
+   i) Motivi di interesse pubblico;
+   j) Ogni altra ipotesi prevista dal presente Capitolato Tecnico e dagli atti ivi richiamati;
+   k) Trasmissione da parte del Consorzio di 3 contestazioni formali a seguito di applicazione
+        delle relative penali;
+   l) Manifesta inadeguatezza dell’Appaltatore nell’esecuzione del contratto.
+2. Non potranno essere intese quale rinuncia ad avvalersi della clausola di cui al presente
+    articolo eventuali mancate contestazioni e/o precedenti inadempimenti per i quali il
+    Consorzio non abbia ritenuto di avvalersi della clausola medesima e/o atti di mera
+    tolleranza a fronte di pregressi inadempimenti dell’Affidatario di qualsivoglia natura.
+
+    26.   Esecuzione in danno
+Indipendentemente da quanto previsto dall’articolo precedente, qualora l’Appaltatore
+ometta di eseguire, anche parzialmente, il servizio indicato nel presente Capitolato Tecnico,
+il Consorzio potrà incaricare altro operatore, previa comunicazione all’affidatario,
+dell’esecuzione parziale o totale delle attività omesse da quest’ultimo.
+I relativi costi ed i danni eventualmente derivanti al Consorzio saranno addebitati
+all’Appaltatore.
+                                                                                                      20
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+Per l’esecuzione di tali prestazioni il Consorzio si rivale, a sua scelta, sulla garanzia definitiva
+presentata dall’Appaltatore o mediante trattenute sui crediti dell’Appaltatore.
+In caso di decurtazione dalla garanzia la stessa dovrà essere integrata entro 10 (dieci) giorni
+naturali e consecutivi, senza bisogno di diffida e procedimento giudiziale.
+
+    27.   Obblighi dell'Aggiudicatario e delle filiere dei subcontraenti
+L'Aggiudicatario del Contratto ed i subcontraenti, a qualunque titolo coinvolti nella
+esecuzione del contratto, sono tenuti al rispetto della presente norma. Al fine di garantire la
+tracciabilità e la trasparenza della esecuzione del contratto, l'Aggiudicatario ed i
+subcontraenti, sono tenuti, nei modi e tempi di seguito specificati, a trasmettere alla
+Amministrazione aggiudicatrice, per ogni subcontratto affidato, le informazioni di cui all’art.
+119 del D.lgs. 36/2023, quelle di cui al comma 1 dell'articolo 3 della legge 136/2010 e quelle
+di cui all'articolo 17 della legge 55/1990 e di seguito trascritte.
+Comma 2 art. 105, Dlgs 50/2016: << L'affidatario comunica alla stazione appaltante, prima
+dell'inizio della prestazione, per tutti i sub-contratti che non sono subappalti, stipulati per
+l'esecuzione dell'appalto, il nome del sub-contraente, l'importo del subcontratto, l'oggetto
+del lavoro, servizio o fornitura affidati>>.
+Comma 1, art.3, l. 136/2010: <<Per assicurare la tracciabilità dei flussi finanziari finalizzata a
+prevenire infiltrazioni criminali, gli appaltatori, i subappaltatori e i subcontraenti della filiera
+delle imprese nonché i concessionari di finanziamenti pubblici anche europei a qualsiasi
+titolo interessati ai lavori, ai servizi e alle forniture pubblici devono utilizzare uno o più conti
+correnti bancari o postali, accesi presso banche o presso la società Poste Italiane Spa,
+dedicati, anche non in via esclusiva, (…)>>.
+Comma 5, lettera h, art. 80, Dlgs 50/2016: <<Le stazioni appaltanti escludono dalla
+partecipazione alla procedura d'appalto un operatore economico in una delle seguenti
+situazioni, anche riferita a un suo subappaltatore nei casi di cui all'articolo 105, comma 6,
+qualora: (…) h) l'operatore economico abbia violato il divieto di intestazione fiduciaria di cui
+all'articolo 17 della legge 19 marzo 1990, n. 55>>.
+
+    28.   Verifiche dell'Amministrazione aggiudicatrice
+L'Amministrazione aggiudicatrice, l'operatore economico Aggiudicatario e gli operatori
+economici coinvolti a qualsiasi livello della filiera dei subcontratti, sono tenuti al pieno rispetto
+di quanto previsto dal comma 9 dell'articolo 3 della legge n. 136/2010 e di seguito trascritto.
+Comma 9, art.3, l. 136/2010: <<<La stazione appaltante verifica che nei contratti sottoscritti
+con i subappaltatori e i subcontraenti della filiera delle imprese a qualsiasi titolo interessate ai
+lavori, ai servizi e alle forniture di cui al comma 1 sia inserita, a pena di nullità assoluta,
+un'apposita clausola con la quale ciascuno di essi assume gli obblighi di tracciabilità dei flussi
+finanziari di cui alla presente legge.>>
+Nell'affidamento in qualunque forma dei subcontratti, a qualsiasi livello della filiera, il rispetto
+della norma è attuato con la trascrizione della presente NORMA DI CONTRATTO T&T nel
+subcontratto o con il suo richiamo esplicito da parte dell'Affidatario.
+L'Amministrazione aggiudicatrice si riserva, in modi e tempi autonomamente definiti, di
+esercitare le verifiche previste sia nei subcontratti affidati dall'Aggiudicatario che in quelli
+affidati da altri operatori economici a qualsiasi livello della filiera dei subcontratti.
+
+
+
+
+                                                                                                      21
+                                                                                  www.etvilloresi.it
+                                                                                     Via Ariosto, 30
+                                                                                      20145 Milano
+                                                                                   +39 02 485 613 01
+                                                                                    info@etvilloresi.it
+                                                                                    etvilloresi@pec.it
+
+
+
+
+    29.   Informazioni da inserire nella scheda T&T
+Il soggetto abilitato ad operare sulla piattaforma T&T mediante autenticazione tramite SPID
+e/o CNS è il soggetto indicato a tal fine dall’Aggiudicatario. Tale autenticazione permette di
+identificare univocamente il soggetto. L’obbligo di raccogliere i dati riferiti a ciascun
+subcontratto mediante la compilazione della scheda T&T (rinvenibile in piattaforma) è in
+capo all’aggiudicatario.
+
+    30.   Tempi e Modalità di trasmissione
+La compilazione della scheda T&T a cura dell’Aggiudicatario avviene contestualmente con
+la trasmissione alla SA della documentazione relativa ai subcontratti (per finalità autorizzativa
+o di mera comunicazione).
+La pubblicazione della scheda sulla piattaforma avviene a seguito di validazione da parte
+del RUP, in esito all’istruttoria compiuta
+
+    31.   Sanzioni e penali
+A norma di quanto previsto dall’art. 3 comma 9 della Legge n. 136/10, la mancata
+previsione – all’interno di qualsiasi tipologia di Subcontratto – della clausola con la quale
+Affidante e Affidatario assumono gli obblighi della tracciabilità dei flussi finanziari rende il
+subcontratto nullo.
+La mancata compilazione della SCHEDA T&T da parte dell’Aggiudicatario, è causa ostativa
+all’ingresso in cantiere del Subcontraente. È equiparato al caso dell’omessa trasmissione
+della SCHEDA T&T quello della trasmissione all’ Amministrazione di informazioni non
+corrispondenti al vero.
+In tal caso, l’Amministrazione si riserva di darne notizia alle autorità competenti. Nel caso
+l'Amministrazione accerti che la presente norma non sia stata esplicitamente richiamata o
+trascritta in un subcontratto, ferma restando, ai sensi del comma 9, articolo 3 della legge
+136/2010, la sua nullità, l'Affidante del subcontratto è sottoposto al pagamento di una
+penale pari al 10% del valore del subcontratto affidato, e comunque non inferiore a 500
+euro.
+Nel caso l'Amministrazione accerti un ritardato invio della SCHEDA T&T, l'Affidante e
+l'Affidatario saranno ciascuno tenuti a pagare una penale pari all’ 1 per mille del valore del
+subcontratto per ogni giorno di ritardo, fino alla concorrenza del 5% del subcontratto stesso.
+Nel caso l'Amministrazione aggiudicatrice accerti che la SCHEDA T&T contiene informazioni
+che non corrispondono al vero, oltre alla trasmissione della notizia alle competenti Autorità, si
+riserva il diritto di applicare nei confronti dell'Affidante e dell'Affidatario una penale ciascuno,
+da un minimo del 5% ad un massimo del 10% del subcontratto in relazione alla gravità della
+non correttezza delle informazioni fornite.
+
+    32.   Trattamento dei dati - privacy
+I dati personali acquisiti verranno trattati dal Consorzio di Bonifica Est Ticino Villoresi con sede
+legale in Milano, Via Lodovico Ariosto n. 30, nella persona del legale rappresentante pro-
+tempore - Titolare del trattamento – nell’ambito di un contratto o ai fini della conclusione di
+un contratto e attività amministrativo contabili e pre-contrattuali correlate. Il Trattamento è
+svolto sulla base di norme di legge che consentono al Consorzio di Bonifica il trattamento dei
+dati per l’esecuzione di un compito di interesse pubblico o connesso all’esercizio di pubblici
+poteri inclusa la stipula di contratti e attività connesse. Il conferimento dei dati è necessario
+                                                                                                     22
+                                                                                    www.etvilloresi.it
+                                                                                       Via Ariosto, 30
+                                                                                        20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+al fine della stipula del contratto tra le parti e al fine della gestione dell’adempimento di
+obblighi amministrativo/contabili sempre rispetto al contratto in essere. Il mancato
+conferimento comporterà l’impossibilità di dare esecuzione al contratto. Il trattamento verrà
+effettuato in modalità informatica e manuale anche tramite soggetti esterni e verranno
+conservati nel rispetto dell’art. 5.1. del Reg. UE 2016/679. I dati personali dell’Appaltatore
+saranno diffusi tramite la pubblicazione sul sito internet dell’Ente per ottemperare ad obblighi
+di legge che sussistono in capo all’Ente; potranno altresì essere condivisi con destinatari che
+tratteranno i dati in qualità di responsabili (art. 28 del Reg. UE 2016/679) e/o in qualità di
+persone fisiche che agiscono sotto l’autorità del Titolare e del Responsabile (art. 29 del Reg.
+UE 2016/679), per le finalità indicate. All’Appaltatore vengono riconosciuti in qualità di
+interessato i diritti di cui agli artt. 15 e ss. del Reg. UE 2016/679 e potrà esercitarli inviando una
+mail all’indirizzo privacy@etvilloresi.it. L’indirizzo di contatto del Responsabile della protezione
+dei dati (DPO) è dpo.estvilloresi@dpoprofessionalservice.it. L’informativa estesa “Privacy
+fornitori” ex art. 13 del Reg. UE 2016/679 (GDPR) è disponibile a richiesta o sul sito web
+www.etvilloresi.it – sezione Privacy.
+
+    33.   Codice etico e modello 231
+Il Fornitore si impegna, per sé e anche per i propri collaboratori, i propri amministratori,
+sindaci, dipendenti e/o rappresentanti, ai sensi e per gli effetti dell'art. 1381 del codice civile,
+a non commettere azioni od omissioni che possano comportare la commissione anche di
+uno solo degli illeciti rilevanti ai sensi del Decreto 231, a rispettare tutte le normative di legge
+applicabili e vigenti nello svolgimento della propria attività, nonché a rispettare i precetti di
+cui al medesimo Decreto 231/2001 e alle sue eventuali successive modifiche ed integrazioni
+secondo quanto previsto dal Codice Etico e dal Modello, adottato dal Consorzio di Bonifica
+con deliberazione del Consiglio di Amministrazione n. 166 del 31 gennaio 2022, nonché a
+rispettare tutti gli altri precetti del medesimo Modello, di cui l’Appaltatore dichiara di essere a
+conoscenza con la partecipazione alla presente procedura. Resta ferma l’esclusiva
+responsabilità a tutti gli effetti penali e civili, della società o e/o del suo personale in relazione
+a tale inadempimento/inosservanza.
+
+    34.   Compliance privacy e nomina a responsabile del trattamento
+In ragione dell’esecuzione del servizio l’Appaltatore potrebbe svolgere, per conto del
+Consorzio, operazioni di trattamento di dati personali, anche nel caso in cui consista nella
+mera custodia o attività di controllo dei dati.
+L’Appaltatore garantisce di essere in grado di assicurare le idonee ed adeguate garanzie in
+termini di conoscenza specialistica, affidabilità, risorse anche in ordine all’adozione di misure
+tecniche e organizzative per assicurare che l’esecuzione dell’affidamento sia conforme alle
+norme in materia di protezione dei dati personali vigenti.
+L’Appaltatore accetta, ricorrendone le condizioni in ragione dell’oggetto dell’affidamento,
+di essere designato, con atto separato da sottoscriversi unitamente al contratto di appalto,
+quale Responsabile primario o Sub Responsabile del Trattamento dei dati ex art. 28 del
+Regolamento UE 679/2016, fatto salvo che lo stesso Appaltatore non sia da qualificarsi quale
+Titolare autonomo del trattamento.
+L’Appaltatore deve altresì garantire quando ne ricorrano i presupposti per la sua
+applicazione, il rispetto del provvedimento a carattere generale sugli amministratori di
+sistema dell’Autorità Garante per la protezione dei dati.
+
+
+                                                                                                      23
+                                                                                   www.etvilloresi.it
+                                                                                      Via Ariosto, 30
+                                                                                       20145 Milano
+                                                                                    +39 02 485 613 01
+                                                                                     info@etvilloresi.it
+                                                                                     etvilloresi@pec.it
+
+
+
+
+La designazione a Responsabile/Sub Responsabile del trattamento non comporterà in capo
+all’Appaltatore il riconoscimento di ulteriori compensi o rimborsi rispetto a quanto previsto
+per l’esecuzione dell’affidamento
+
+
+    35.   Proprietà dei dati/documenti e diritti d’autore
+
+Tutte le informazioni inserite e gestite dalla soluzione software fornita sono da ritenersi
+patrimonio dell’Ente, devono quindi essere garantite l’accessibilità e la semplicità della loro
+consultazione e, ove, necessario, la modificabilità anche con strumenti differenti dallo stesso
+gestionale.
+Tutti i prodotti e l’ulteriore documentazione creata o predisposta dall’Appaltatore per conto
+dell’Ente nell’esecuzione del contratto non potranno essere, in alcun modo, comunicati o
+diffusi a terzi senza la preventiva approvazione espressa da parte dell’Ente.
+L’Appaltatore assume ogni responsabilità per l’uso di dispositivi o per l’adozione di soluzioni
+tecniche o di altra natura che violino il diritto di brevetto, d’autore ed in genere di privativa
+altrui.
+L’Appaltatore assume l’obbligo di tenere indenne l’Ente da tutte le rivendicazioni, le
+responsabilità, perdite e danni pretesi da chiunque nonché da tutti i costi, le spese e le
+responsabilità ad essi relativi a seguito di qualsiasi rivendicazione di violazione di diritti
+d’autore o di qualsiasi marchio, italiano o straniero, derivante o che si pretenda derivare
+dalla prestazione.
+Ciascuna parte si obbliga a dare immediatamente avviso all’altra di qualsiasi azione di
+rivendicazione o contestazione di terzi di cui al comma precedente della quale sia venuta a
+conoscenza
+
+    36.   Domicilio legale - Controversie e Foro competente
+Per tutte le controversie che dovessero insorgere tra le Parti, in relazione alla interpretazione,
+esecuzione e risoluzione del contratto sarà competente in via esclusiva il Foro di Milano.
+Qualsiasi controversia o contestazione comunque relativa all’esecuzione del servizio non
+consentirà all’affidatario di sospendere la prestazione, né di rifiutarsi di eseguire le disposizioni
+ricevute.
+A tutti gli effetti amministrativi e giudiziari del presente atto, l’Affidatario elegge domicilio
+presso la propria sede legale.
+
+
+
+
+                                                                                                      24
+

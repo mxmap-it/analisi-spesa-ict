@@ -1,0 +1,2326 @@
+CAPITOLATO TECNICO GARA EUROPEA A PROCEDURA APERTA
+    PER MANUTENZIONE PIATTAFORME INFORMATICHE
+
+                  CIG 89432256BC
+
+
+
+
+                                                     1
+                                                                        Sommario
+1. PREMESSA...................................................................................................................................................... 4
+
+   1.1 - Attività di FONDIR ................................................................................................................................... 4
+
+   1.2 - Introduzione alle piattaforme .................................................................................................................. 5
+
+   1.3 - Obiettivi e benefici attesi ......................................................................................................................... 5
+
+2. OGGETTO DEL CAPITOLATO ............................................................................................................................. 6
+
+   2.1 - Manutenzione adeguativa-correttiva (MAC) e assistenza ........................................................................... 6
+
+   2.2 - Sviluppo software e manutenzione evolutiva (MEV) .................................................................................. 6
+
+   2.3 - Servizio di hosting ................................................................................................................................... 6
+
+   2.4 - Servizio di Help-Desk ............................................................................................................................... 6
+
+3. RESPONSABILE DI PROGETTO E GRUPPO DI PROGETTO ..................................................................................... 6
+
+4. DESCRIZIONE DEL SISTEMA INFORMATIVO ....................................................................................................... 8
+
+   4.1 - UNICAFONDIR......................................................................................................................................... 8
+
+   4.2 - UNICAFONDIR2.0 .................................................................................................................................. 11
+
+   4.3 - APP – VISITE IN ITINERE ......................................................................................................................... 15
+
+   4.4 – SITO ISTITUZIONALE ............................................................................................................................. 17
+
+   4.5 – Procedure flussi XML ............................................................................................................................ 19
+
+   4.6 - Architettura del sistema in hosting ......................................................................................................... 22
+
+5. OBIETTIVI PREVISTI ....................................................................................................................................... 26
+
+   5.1 - Servizio MEV - Business Intelligence Object per l’analisi dei dati. .............................................................. 26
+
+   5.2 – Servizio MEV - Sincronizzazione ed integrazione dati in sistema Office 365 ............................................... 26
+
+   5.3 - Servizio MEV - Gestione rinnovata del sito web istituzionale.................................................................... 26
+
+   5.4 - Servizio MEV - Integrazione App di controllo in itinere ............................................................................. 26
+
+   5.5 - Servizio MEV - Miglioramento della interfaccia utente (UI/UX) dei Piani formativi, Iniziative formative, Bacheca
+   sul sito......................................................................................................................................................... 27
+
+   5.6 – Servizio MAC – Adeguamento applicazione “Iniziative Comparti” ............................................................. 27
+
+   5.7 – Servizio MAC – Adeguamento sezione “Evidenza Contabile” .................................................................... 27
+
+   5.8 – Servizio MEV – Evoluzione sezione “Evidenza Contabile” e sviluppo gestione “Conto Individuale” .............. 28
+
+   5.9 - Servizio MAC – Adeguamento dei livelli di sicurezza e privatezza delle piattaforme applicative .................. 28
+
+
+
+                                                                                                                                                                     2
+   5.10 - Servizio Hosting – Attivazione di un servizio di backup offline ................................................................. 28
+
+6. SERVIZI E MODALITA DI ESECUZIONE .............................................................................................................. 29
+
+   6.1 - Servizio di Sviluppo Software e Manutenzione Evolutiva .......................................................................... 29
+
+   6.2 - Servizio di Manutenzione Adeguativa e Correttiva (MAC) ......................................................................... 31
+
+   6.3 - Servizio di Hosting ................................................................................................................................. 33
+
+   6.4 - Servizio di HELP-DESK ............................................................................................................................ 33
+
+7. FIGURE PROFESSIONALI E GRUPPO DI LAVORO ............................................................................................... 35
+
+   7.1 - Gruppo di progetto ............................................................................................................................... 35
+
+   7.2 - Profili professionali richiesti ................................................................................................................... 35
+
+8. SUBENTRO, RILASCIO A TERMINE SERVIZIO E AFFIANCAMENTO ....................................................................... 45
+
+   8.1 - Subentro .............................................................................................................................................. 45
+
+   8.2 - Rilascio (Termine del servizio) ................................................................................................................ 45
+
+9. CONDIZIONI E TERMINI DI ESPLETAMENTO DELLE ATTIVITA’ ............................................................................ 46
+
+10. DOCUMENTAZIONE DI PROGETTO E DI UTENTE ............................................................................................ 47
+
+11. PIANO DELLA QUALITA’ ............................................................................................................................... 47
+
+12. LIVELLI DI SERVIZIO E PENALI ....................................................................................................................... 49
+
+   12.1 - Servizio MAC....................................................................................................................................... 49
+
+   12.2 - Servizio MEV ....................................................................................................................................... 50
+
+   12.3 - Servizio Help Desk ............................................................................................................................... 51
+
+   12.4 - Servizio Hosting .................................................................................................................................. 52
+
+13. STRUTTURA DELL’OFFERTA TECNICA ............................................................................................................ 53
+
+   13.1 - Indice dell’offerta ................................................................................................................................ 53
+
+   13.2 - Limiti di pagina e di formattazione........................................................................................................ 53
+
+
+
+
+                                                                                                                                                                 3
+1. PREMESSA
+Definizioni:
+Per Fondo si intende il Fondo Paritetico Interprofessionale nazionale per la Formazione Continua dei dirigenti de
+Terziario, FONDIR, stazione appaltante.
+
+Per Affidatario e Aggiudicatario si intende l’operatore economico partecipante alla gara, candidato ad aggiudicarsi la
+presente commessa oggetto del seguente capitolato.
+
+1.1 - Attività di FONDIR
+
+FONDIR è il Fondo Paritetico Interprofessionale nazionale per la Formazione Continua dei dirigenti del Terziario
+riconosciuto a seguito dell’accordo interconfederale del 18 luglio 2002 con D.M. 18/3/2003 del Ministero del Lavoro
+e delle Politiche Sociali, ai sensi dell’art. 118, Legge N. 388, e s.m.
+
+
+FONDIR non ha fini di lucro ed opera sotto il controllo dell’ANPAL, promuovendo la formazione continua dei dirigenti
+per ed a favore di tutte le aziende che decidano di aderire, versando al Fondo il contributo dello 0,30% istituito
+dall’articolo 25, quarto comma, della legge 21 dicembre 1978, n.845, e s.m.i..
+
+Missione, statuto, regolamento, accordo istitutivo, normative di riferimento, organi e struttura di FONDIR sono
+pubblicati sul sito Web: www.fondir.it
+
+L’attività del Fondo si esplica attraverso procedure di finanziamento di piani formativi, individuali (anche attraverso
+voucher), aziendali, settoriali, territoriali, presentati dalle imprese iscritte a FONDIR.
+
+Questi piani sono presentati su formulario elettronico, con accesso riservato alla Piattaforma UNICAFONDIR, che
+comprende anche lo schema finanziario.
+
+Annualmente FONDIR pubblica uno o più avvisi nei quali definisce le regole e le modalità di presentazione dei piani
+formativi e le procedure di accesso ai finanziamenti. Al fine di fornire una statistica utile a comprendere la dimensione
+delle attività svolte dal Fondo, si riporta qui di seguito un riepilogo degli avvisi pubblicati e dei piani finanziati
+nell’ultimo triennio:
+
+                                                                                               Finanziamenti
+          Anno         Aziende         Dirigenti          N. piani e voucher finanziati
+                                                                                                  concessi
+
+                                                    Piani 403
+          2018           5.743          28.737      Richieste bacheca 162                       € 8.666.521
+                                                    (totale 565 piani)
+
+                                                    Piani 475
+          2019           5.936          29.420      Richieste bacheca 248                       € 11.621.227
+                                                    (totale 723)
+
+                                                    Piani 481
+          2020           6.037          29.739      Richieste bacheca 132                       €8.942.436
+                                                    (totale 613 piani)
+
+
+
+È possibile consultare i diversi Avvisi e la documentazione agli stessi attinente, sul sito di FONDIR, www.fondir.it
+
+
+
+
+                                                                                                                       4
+1.2 - Introduzione alle piattaforme
+A supporto della gestione dei processi connessi all’erogazione dei finanziamenti, a partire dalla presentazione dei
+Piani/Progetti formativi, passando attraverso il monitoraggio dei finanziamenti concessi, fino alla rendicontazione
+finale delle spese sostenute, FONDIR si è dotato dalla sua costituzione ad oggi, di applicazioni informatiche dedicate.
+Il Fondo si è inoltre attrezzato con adeguati strumenti e procedure informatiche utilizzate per:
+
+        la verifica dei contributi versati dalle imprese all’INPS;
+        la verifica, l’inoltro e l’archiviazione del flusso delle informazioni di monitoraggio da inviare semestralmente
+         al Ministero;
+        la comunicazione dei finanziamenti erogati al Registro Nazionale Aiuti.
+
+Tali applicazioni e procedure concorrono nel loro insieme a formare un unico sistema che permette l’ordinata, efficace
+ed efficiente gestione delle attività sopra sinteticamente elencate.
+
+Uno dei principali obiettivi del Fondo è quello di unificare in una singola piattaforma gestionale le diverse procedure
+e applicazioni coinvolte nei processi di gestione dei piani formativi e a supporto delle attività espletate dagli operatori
+interni. Tale processo, avviato fin dal 2018 con la piattaforma UNICAFONDIR, ha trovato come sua naturale evoluzione
+l’ultima piattaforma realizzata nel 2021, frutto di un adeguamento ai più recenti standard tecnologici:
+UNICAFONDIR2.0
+
+Al momento sono quindi in uso 2 piattaforme: UNICAFONDIR, con la quale sono gestiti i piani formativi relativi agli
+avvisi emanati fino al 2020 e UNICAFONDIR2.0 che ha in gestione i successivi Avvisi emanati a partire dal 2021.
+
+La stretta interdipendenza funzionale e tecnologica che lega i componenti applicativi determina, da un lato, l’esigenza
+di garantire il corretto funzionamento in esercizio delle piattaforme attraverso un servizio di manutenzione correttiva
+(MAC) dei sistemi, dall’altro impone a FONDIR la necessità di predisporre un servizio di manutenzione evolutiva
+(MEV), che garantisca l’adattamento delle piattaforme alle emergenti e mutevoli esigenze connesse alle evoluzioni (in
+quantità e qualità) della gestione delle attività formative destinate ai dirigenti delle aziende associate.
+
+Le applicazioni costituenti la piattaforma sono prevalentemente di tipo Web application, parte delle quali in
+evoluzione verso versione app per dispositivi mobili. E’ richiesto all’Affidatario il mantenimento in opera di lunga
+durata dell’esistente, ma anche la fornitura, la predisposizione, la configurazione e la gestione dell’eco-sistema HW e
+SW necessario alla loro corretta e affidabile esecuzione.
+
+1.3 - Obiettivi e benefici attesi
+Nel prossimo triennio il Fondo proseguirà nell’attività di correzione e manutenzione della infrastruttura del proprio
+eco-sistema informativo e si propone i seguenti obiettivi:
+
+        adeguare, dove necessario, le prestazioni dei sistemi esistenti al fine di ottenere un continuo miglioramento
+         dei servizi erogati;
+
+        individuare i colli di bottiglia nelle prestazioni delle varie parti del sistema. Questo consisterà principalmente
+         in una prima fase di diagnosi ed audit per l’individuazione qualitativa e quantitativa dei problemi;
+
+        identificare ed attuare un piano di manutenzione reattiva, preventiva e predittiva sui sistemi;
+
+        introdurre migliorie ed adeguamenti anche in termini di sicurezza, privacy, robustezza, ed usabilità;
+
+        gestire e manutenere il sito web istituzionale del Fondo.
+
+
+
+
+                                                                                                                         5
+2. OGGETTO DEL CAPITOLATO
+Il presente capitolato tecnico si articola nei seguenti gruppi di attività che dovranno essere svolte dall’Affidatario per
+36 mesi, successivamente al periodo di subentro, con decorrenza dalla data di inizio dell’attività indicata in un apposito
+verbale, fatta salva l’eventuale attivazione dell’opzione di proroga prevista nel Disciplinare di Gara.
+
+2.1 - Manutenzione adeguativa-correttiva (MAC) e assistenza
+Il servizio di manutenzione adeguativa e correttiva, come dettagliato al paragrafo 6.2, è definito dalle prestazioni da
+erogare ogni qualvolta se ne presenti la necessità e con continuità di presidio per tutta la durata del contratto, ed è
+finalizzato:
+
+        alla proattiva analisi e previsione e quindi alla rimozione delle cause e degli effetti dei malfunzionamenti delle
+         procedure e dei programmi in esercizio;
+        ad assicurare il funzionamento del sistema secondo i livelli di servizio ed i requisiti richiesti;
+        ad assicurare la costante aderenza degli applicativi all’evoluzione dell’ambiente tecnologico del sistema
+         informativo;
+        a garantire l’adeguamento del software a seguito di modifiche di norme o disposizioni di legge, modifiche
+         organizzative, amministrative, dei processi interni o delle esigenze funzionali.
+Tali attività dovranno essere erogate, per l’intero patrimonio di software applicativi, composto da quelli esistenti e da
+quelli che saranno realizzati nel corso dell’affidamento oggetto del presente capitolato.
+
+2.2 - Sviluppo software e manutenzione evolutiva (MEV)
+Lo sviluppo di software ad hoc e la manutenzione evolutiva (entrambe di seguito indicate anche solo con MEV), come
+descritte in dettaglio al paragrafo 6.1, comprendono gli interventi volti ad arricchire il sistema informativo di nuove
+funzionalità o comunque a modificare o integrare le funzionalità dello stesso, ad evolverlo tecnologicamente,
+aumentandone le performance.
+
+2.3 - Servizio di hosting
+Il servizio richiesto consiste nella fornitura e nella conduzione tecnica di infrastrutture ICT (Information and
+Communications Technology) dislocate presso siti remoti, all’interno dell’Unione Europea, in grado di ospitare in
+esecuzione le piattaforme in uso al Fondo rendendole pienamente raggiungibili e fruibile via Internet. Dovrà
+permettere la corretta esecuzione dei componenti e garantire la piena disponibilità dei servizi da essa offerti ai diversi
+tipi di utenza.
+
+L’infrastruttura proposta dovrà prevedere capacità di High Availability e Disaster Recovery.
+
+
+2.4 - Servizio di Help-Desk
+Il servizio richiesto, dettagliato al paragrafo 6.4, consta di un sistema di assistenza tecnica destinato agli operatori del
+Fondo per la gestione delle richieste di assistenza tecnica relativa al servizio di Manutenzione Adeguativa e Correttiva
+e al servizio di Hosting. Il servizio dovrà prevedere un sistema di trouble ticketing destinato alla gestione delle richieste.
+
+
+
+
+3. RESPONSABILE DI PROGETTO E GRUPPO DI PROGETTO
+L’Affidatario dovrà nominare un proprio Responsabile di Progetto al quale verranno affidate le mansioni di
+supervisione e coordinamento delle attività svolte dall’Affidatario stesso nell’esecuzione del contratto.
+
+
+
+
+                                                                                                                            6
+Il Responsabile di Progetto dell’Affidatario (Capo Progetto) rappresenterà il referente unico del Direttore
+dell’esecuzione nominato dal Fondo ed assicurerà, tra l’altro, la necessaria assistenza consulenziale al Fondo, anche al
+fine di definire le interazioni con sistemi di organizzazioni sociali, enti ed istituzioni.
+
+Inoltre, per tutte le attività di gestione e conduzione del progetto, dovrà essere operativo, per l’intera durata
+dell’affidamento, un gruppo di progetto misto, composto dal Responsabile di Progetto dell’Affidatario, supportato
+adeguatamente dai referenti tecnici coinvolti nel progetto, secondo il mix di professionalità richiesto (come definito
+dalla Tabella 7.1 per il servizio MEV), dal Direttore dell’Esecuzione nominato dal Fondo, coadiuvato eventualmente
+dai referenti delle varie aree operative.
+
+Tale gruppo dovrà coordinare tutte le attività oggetto del presente Capitolato verificandone lo stato di avanzamento
+e l’adeguatezza delle soluzioni tecniche implementate e valuterà l’esigenza di eventuali modifiche o variazioni rispetto
+alle specifiche tecniche contrattuali. Inoltre, il gruppo, nella fase di analisi dei requisiti, dovrà presentare le
+caratteristiche del progetto e le sue specifiche funzionali in modo comprensibile, intuitivo, ma non ambiguo,
+avvalendosi di strumenti di prototipazione e/o mockup dinamici (tipo Moqups, Mockingbird o equivalenti). Tale
+gruppo di lavoro potrà riunirsi, a discrezione del Fondo o su richiesta formale dell’Aggiudicatario, presso la sede
+indicata dal Fondo.
+L’Affidatario dovrà predisporre, concordandolo con il gruppo di progetto, un repository digitale, interrogabile tramite
+interfaccia web, in cui rendere disponibile tutta la documentazione di progetto e di utente.
+
+Per le attività di gestione del gruppo di progetto non vi sarà alcun tipo di compenso aggiuntivo rispetto a quanto
+previsto per i singoli servizi dell’affidamento.
+
+
+
+
+                                                                                                                      7
+4. DESCRIZIONE DEL SISTEMA INFORMATIVO
+Il sistema informativo è costituito da un eco-sistema di applicazioni prevalentemente web che si appoggiano su due
+infrastrutture distinte:
+
+UNICAFONDIR, con la quale sono gestiti i piani formativi relativi agli avvisi emanati fino all’anno 2020; soluzione
+costituita da diverse applicazioni web basate sulla piattaforma MS Windows
+
+UNICAFONDIR2.0, che gestisce i dati relativi gli avvisi pubblicati a partire dall’anno 2021, è una soluzione basata sul
+Java 2 Enterprise Edition e prodotti open source. Mentre la UNICAFONDIR è mantenuta per una fase transitoria, essa
+è destinata alla sola manutenzione per continuità di accesso ai dati ed informazioni storiche; i futuri sviluppi devono
+prevedere una migrazione definitiva verso la soluzione UNICAFONDIR2.0.
+
+Inoltre, FONDIR è dotata di un’app dedicata per sistemi mobili che consente di gestire le attività relative al sistema di
+controllo in-itinere. Tale applicazione (di seguito APP FONDIR) è dedicata ai dispositivi di tipo mobile, quali smartphone
+o tablet, al fine di garantire una rilevazione “a distanza” degli eventi e dei dati procedurali di rilevanza.
+
+Il SITO WEB ISTITUZIONALE, basato sul sistema CMS Drupal, oltre ai contenuti descrittivi le attività e le iniziative del
+Fondo, offre il front-end ed accesso per gli utenti esterni alle sopra citate piattaforme e relative applicazioni.
+
+Completano il sistema le procedure di integrazione con i sistemi esterni relative allo scambio dei FLUSSI XML con i siti
+ministeriali (ANPAL, CIPE e RNA).
+
+Nei seguenti sotto-capitoli viene fornita una descrizione dettagliata dei componenti:
+
+4.1 - UNICAFONDIR
+Di seguito uno schema riassuntivo dell’architettura applicativa UNICAFONDIR:
+
+
+
+
+                                                                                                                        8
+L’accesso al sistema è consentito, con ruoli diversi, sia agli utenti esterni (enti formatori, aziende e/o eventuali
+delegati, consulenti aziendali) che al personale del Fondo: in linea generale i primi accedono esclusivamente ai dati di
+propria competenza (anagrafiche, piani formativi…), mentre i secondi hanno il completo accesso a tutti i dati,
+“impersonando”, per alcune funzionalità, le stesse aziende.
+
+Le funzionalità e le risorse pubblicate dalle diverse applicazioni sono protette e l’autenticazione viene richiesta una
+sola volta accedendo all’applicazione “PIATTAFORMA UNICA”: specifiche funzionalità di SSO (Single Sign On)
+implementate tramite la persistenza di cookies e lo scambio di token criptati garantiscono il corretto accesso alle
+specifiche applicazioni.
+
+Un ulteriore accesso è riservato ad alcune procedure ETL che acquisiscono e sincronizzano i dati disponibili nella
+piattaforma UNICAFONDIR con il CMS ad uso interno degli uffici del Fondo (Microsoft SharePoint). Questo
+sottosistema rimarrà solo per recupero dello storico.
+
+L’applicazione web PIATTAFORMA UNICA, accessibile da un link pubblicato sul sito web istituzionale, rappresenta il
+punto di ingresso principale ad UNICAFONDIR da parte di tutti gli attori coinvolti (aziende, enti formatori e personale
+interno) e gestisce una parte dei dati condivisi tra le altre applicazioni (ad esempio i dati anagrafici delle aziende, dei
+dirigenti e degli enti formatori).
+
+Una sezione dedicata gestisce la registrazione di una nuova azienda, l’autenticazione, e l’eventuale recupero delle
+credenziali di accesso.
+
+Effettuata l’autenticazione, l’applicazione propone un pannello di controllo attraverso il quale è possibile accedere
+alle diverse funzioni e applicazioni componenti. Le funzionalità disponibili dipendono dal ruolo assunto dall’utente: le
+funzioni amministrative sono riservate al personale del Fondo, le funzioni per gestire i piani formativi e i dati anagrafici
+di propria competenza sono riservate alle aziende e/o ai relativi delegati.
+
+La suddetta applicazione rappresenta un unico punto di accesso per le altre applicazioni componenti la piattaforma:
+
+        CATALOGO ONLINE/ RICHIESTE CATALOGO: un gruppo di applicazioni orientate alla gestione dei corsi a
+         catalogo fino al 2020;
+
+        PIANI FORMATIVI: un gruppo di applicazioni utilizzate per la gestione dei piani formativi relativi agli Avvisi
+         pubblicati nel triennio 2018-2020.
+
+        EVIDENZA CONTABILE: applicazione ad esclusivo uso interno degli operatori del Fondo che offre le
+         funzionalità necessarie alla gestione e alla rendicontazione dei dati contabili relativi sia ai versamenti
+         effettuati dalle aziende che ai finanziamenti a queste concessi.
+
+
+Altra componente importante della piattaforma è “INIZIATIVE COMPARTI”, una applicazione web dedicata alla
+gestione dei “progetti di comparto”, una serie di iniziative extra formative svolte fino al 2015. Per ogni progetto
+vengono gestiti:
+
+        i dati che descrivono il contesto, la motivazione, gli obiettivi, le attività previste e le figure responsabili;
+        dati economici che costituiscono il piano finanziario definendo il dettaglio di diverse voci di spesa;
+        una sezione di monitoraggio dove è possibile definire i costi e caricare i relativi documenti giustificativi;
+
+
+
+
+                                                                                                                            9
+Di seguito i dettagli implementativi comuni delle applicazioni web della piattaforma UNICAFONDIR:
+
+S.O.:                             MS Windows 2008
+WEB SERVER:                       IIS
+Framework Applicativo:            .NET Framework 2.0 / 4.0
+Linguaggio:                       C#
+Tipo applicazione:                ASP.NET – WebForm / MVC
+DBMS:                             MS Sql Server 2008
+
+
+
+
+                                                                                                    10
+4.2 - UNICAFONDIR2.0
+UNICAFONDIR2.0 è basata su una soluzione architetturale coerente, robusta, modulare e scalabile su tecnologia Java
+2 Enterprise Edition e prodotti open-source. La coesione e l’integrazione tra i vari componenti tra loro eterogenei, è
+garantita dalla peculiarità, trasversale a tutti, di essere compatibili con i più diffusi protocolli di interoperabilità e
+comunicazione, sia sincroni che asincroni, consentendo di scegliere la migliore integrazione tra sistemi a seconda delle
+esigenze specifiche.
+
+L’architettura prevede un alto livello di modularità nel quale il componente UNICAFONDIR2.0 (dettagliatamente
+descritto sotto l’aspetto funzionale e di processo) rappresenta il “core” del modello architetturale.
+
+UNICAFONDIR2.0 ha come obiettivo anche quello di poter gestire a livello applicativo, in maniera dinamica, flessibile
+ed autonoma, tramite una piattaforma unica, tutte le tipologie di finanziamento per la formazione continua (Avvisi
+Pubblici che comprendono Avvisi Piani formativi e Avvisi per accedere alle iniziative Bacheca FONDIR) con la possibilità
+di personalizzazione per ogni strumento di finanziamento. La soluzione consente di usufruire di uno strumento
+altamente flessibile che è in grado di adattarsi in maniera veloce ed efficiente al cambiare delle normative ed
+all’inserimento e la gestione di nuove possibili forme di finanziamento che possono essere definite dal Fondo per
+aumentare la propria offerta in base al trend della formazione. L'architettura applicativa prevede la realizzazione di
+uno strato di persistenza tramite JPA, garantendo così la piena portabilità su qualsiasi RDBMS. Dal lato client sono
+utilizzati Bootstrap ed HTML 5, che, grazie alla caratteristica responsive, garantiscono la fruibilità dell’applicativo
+tramite Computer Desktop, Tablet e Cellulari.
+
+Lo stack software di riferimento è composto da quanto presente nella seguente tabella:
+
+
+
+ Categoria           Tecnologia             Versione
+
+ S.O.                CentOS                 7
+
+ APP                 J2EE                   1.7
+
+ APP                 Hibernate              4
+
+ APP                 JSF                    2
+
+ APP                 Pentaho                8
+
+ APP                 NGINX                  1.21
+
+ APP                 WildFly                8
+
+ APP                 jQuery                 1.11
+
+ APP                 Bootstrap              4
+
+ DBMS                MySQL                  5.1
+
+
+
+
+L’architettura software, basata sul modello three-tier application è rappresentata dal seguente schema:
+
+
+
+
+                                                                                                                       11
+Gli strati applicativi formano l’applicazione UNICAFONDIR2.0 che contiene al suo interno, completamente integrate,
+le seguenti sezioni funzionali:
+
+    -   Registrazione: riservata ad Enti di Formazione, Imprese Aderenti, Società di revisione;
+    -   Anagrafica: consente di gestire i dati caratteristici di enti, imprese, e docenti; nel caso delle imprese aderenti
+        consente di censire i dirigenti ad esse associati;
+    -   Docenti: attraverso questa sezione il docente viene associato al parco docenti dell’Ente di Formazione e viene
+        creato un account di accesso alla piattaforma per il docente stesso;
+    -   Consultazione Elenco Avvisi: gestisce il ciclo di vita dell’avviso, dalla fase di creazione a quella di
+        pubblicazione;
+    -   Configurazione: consente la costruzione di formulari ad hoc per i piani formativi e le iniziative in bacheca;
+    -   Bacheca: gestisce il ciclo di vita delle iniziative formative associate ad enti di formazione;
+    -   Richieste Iniziative In Bacheca: consente alle imprese aderenti di presentare e monitorare piani formativi;
+        consente all’operatore del Fondo di gestire l’ammissibilità dei piani, la richiesta di COR e CUP, l’approvazione
+        dei piani. Dunque, questa macro-funzionalità consente la gestione dell’intero ciclo di vita di un piano bacheca;
+    -   Piani Avviso: consente alle imprese aderenti di presentare e monitorare piani formativi contenenti progetti
+        formativi ad hoc; consente all’operatore del Fondo di gestire l’ammissibilità, la valutazione, la richiesta di COR
+        e CUP, l’approvazione dei piani. Dunque, questa macro-funzionalità consente la gestione dell’intero ciclo di
+        vita di un piano avviso;
+    -   Gruppi: consente la creazione di gruppi di imprese;
+    -   Gestione Profili: gestisce la creazione di utenze con ruoli specifici che non rientrano nel canonico flusso di
+        registrazione, es. consulente aziendale;
+
+
+                                                                                                                       12
+    -    Gestione Registrazioni: consente di verificare le registrazioni ed approvarle/rigettarle;
+    -    Evidenza contabile: consente all’operatore del Fondo di verificare statistiche, importare file INPS, visualizzare
+         report;
+    -    Report: permette estrapolazione dei dati aggiornati in piattaforma, per la gestione aggregata da parte del
+         Fondo dei Piani e dei dati delle aziende aderenti;
+    -    Verifiche in itinere tramite app mobile.
+
+
+
+4.2.1 - Funzionalità gestionali
+Gestione Utenti e Profili
+
+Per poter accedere al Sistema, un utente deve essere in possesso delle credenziali di accesso valide e ruoli associati
+attivi. Le credenziali sono assegnate alla Persona Fisica così come regolamentato dal GDPR il quale non contempla la
+gestione delle credenziali alle Persone Giuridiche. Gli utenti non più autorizzati possono essere disattivati attraverso
+la funzionalità applicativa specifica. Il Sistema implementa la funzionalità che permette di inserire nuovi utenti ed
+associare profili. Ogni utente può avere uno o più profili all'interno della piattaforma. Per profilo si intende la coppia
+persona giuridica e ruolo applicativo. L'utente quindi per poter operare deve aver associato almeno un ruolo
+applicativo attivo per almeno una Persona Giuridica.
+
+Gestione Avviso Piani e Avviso per accedere alle iniziative presenti nella Bacheca FONDIR
+
+L'utilizzo delle risorse per la formazione dei dirigenti delle imprese avviene attraverso richieste presentate a seguito
+di Avvisi pubblici del Fondo pubblicati sul sito e gestiti tramite la piattaforma UNICAFONDIR2.0. Tali Avvisi possono
+differenziarsi di anno in anno e/o a seconda delle specifiche esigenze o tematiche definite dal Fondo.
+
+In un’ottica di flessibilità e parametrizzazione della definizione delle linee guida per la formazione, l’Avviso è elemento
+basilare che guida l’intero ciclo di vita dei piani formativi ad esso afferenti, definendone gli elementi costitutivi, le
+logiche di approvazione ed i vincoli.
+
+Bacheca FONDIR
+
+Bacheca FONDIR è un’area messa a disposizione sul sito di FONDIR ove è possibile visionare dell’offerta formativa
+preventivamente valutata e qualificata, proposta dalle strutture formative. Gli enti di formazione possono proporre
+loro cataloghi formativi per la pubblicazione e imprese interessate, iscritte al Fondo, possono richiedere un contributo
+alla partecipazione alle iniziative formative pubblicate.
+
+Presentazione Piano Formativo o di Iniziativa Bacheca
+
+UNICAFONDIR2.0 consente attraverso il modulo in oggetto di procedere con la fase di presentazione del Piano per un
+determinato Avviso, Avviso Piani, Avviso per accedere alle iniziative Bacheca FONDIR o Avviso che regolamenta
+modalità e requisiti per proporre le iniziative formative in Bacheca, con la compilazione delle schede del formulario
+on line configurato. Il formulario proposto al momento della presentazione della domanda sarà formato dalle schede
+e dai dati impostati in maniera dinamica dal Fondo, al momento della definizione dell'avviso di presentazione del Piano
+o iniziativa Bacheca. Durante tutto il processo di valorizzazione, saranno eseguiti, in modalità “background”, una serie
+di controlli semantici e strutturali al fine di controllare la correttezza e la coerenza dei dati inseriti. L'utente può
+accedere ad una scheda alla volta e imputare i dati nelle varie sezioni. Il sistema consente l'acquisizione parziale dei
+dati in momenti diversi, la visualizzazione degli stessi una volta che sono stati inseriti nel sistema e la possibilità di
+modificarli entro i termini previsti dalla scadenza nel caso di presentazione in relazione ad un Avviso o alla Bacheca
+FONDIR. Una volta inviato il formulario on-line vengono visualizzati dei modelli dinamici precompilati.
+
+
+
+
+                                                                                                                        13
+Ammissibilità
+
+Le voci della scheda di ammissibilità sono caricate in seguito per ogni Piano o per ogni iniziativa presentati sull’ Avviso
+e/o iniziativa formativa proposta sulla Bacheca FONDIR e l'operatore del Fondo può indicare per ogni criterio
+soggettivo se questo è soddisfatto o meno. Le voci oggettive configurate nella griglia dell’Avviso o della Bacheca sono
+compilate in maniera automatica dal Sistema. Anche la scheda di ammissibilità è configurabile, avviso per avviso, da
+parte del Fondo.
+
+Valutazione
+
+I piani formativi e iniziative Bacheca conformi accedono alla fase di valutazione di merito accessibile agli utenti
+Valutatori. Gli utenti dispongono della griglia di valutazione personalizzata e caricata in ogni tipo dell’Avviso di
+presentazione del piano formativo o iniziativa formativa. Per ogni proposta/domanda, gli utenti assegnati alla
+valutazione debbono assegnare il punteggio in corrispondenza della voce di valutazione soggettiva riportata nella
+scheda; per le voci oggettive è riportato il punteggio determinato in automatico dal Sistema. La modalità di lavoro
+della commissione di valutazione consente di lavorare in maniera asincrona. Per ogni Piano/iniziativa, gli utenti abilitati
+alla valutazione potranno procedere con la consultazione delle domande, ossia con la visualizzazione dei dati di
+dettaglio inseriti in fase di presentazione direttamente dalla sezione di Valutazione. L'operatore del Fondo potrà
+lavorare le schede di valutazione dei vari Piani/iniziative fintanto che la stessa consolidata/approvata e quindi chiusa.
+In questo modo l'operatore non è vincolato ad esprimere e chiudere la valutazione in un'unica sessione di lavoro, ma
+può accedere e lavorare in momenti diversi la medesima scheda.
+
+Graduatoria
+
+Tramite l'apposita funzionalità il sistema consente di attivare la generazione automatica della graduatoria per ogni
+Avviso, elaborata in base ai punteggi elaborati per ogni Piano/iniziativa, dopo la chiusura della valutazione. Il Sistema
+effettua l’assegnazione delle risorse disponibili e genera la graduatoria che dovrà essere sottoposta all’approvazione
+del CDA. Il sistema permette di registrare nella graduatoria tutti i Piani/iniziative e di definire lo status es.
+finanziato/qualificata, non finanziato/non qualificata, ecc.
+
+Approvazione
+
+La graduatoria è sottoposta ad approvazione e i dati di questa fase possono essere opportunamente registrati sul
+UNICAFONDIR2.0; subito dopo l’approvazione il sistema permetterà di comunicare tramite mail, generata in
+automatico, ad ogni singolo proponente l’esito (es. approvato, non approvato, …) per il piano di propria competenza.
+
+Gestione e Monitoraggio
+
+A seguito dalla presentazione formale del Piano attraverso UNICAFONDIR2.0 il sistema apre al Proponente le
+funzionalità per la gestione del piano formativo stesso. In questa fase l’Attuatore può procedere con la gestione del
+Piano attraverso una sezione specifica nella quale poter caricare tutti i dati richiesti: Calendario Attività con il relativo
+dettaglio; Schede partecipanti e interventi formativi attesi; Relazione finale.
+
+UNICAFONDIR2.0 consente attraverso il modulo applicativo specifico di inserire le Persone Fisiche coinvolte nel Piano
+quali partecipanti e altro personale impegnato sia attraverso un form applicativo che in maniera massiva tramite
+acquisizione di un file CSV o XLS. Durante la raccolta dei dati dei singoli partecipanti, è fatto riferimento ai dati richiesti
+dal sistema di Monitoraggio del Ministero per la completezza dei dati anagrafici dei lavoratori. Per ogni attività di
+calendario potranno essere indicati gli orari di svolgimento, associare i docenti/codocenti/tutor e riportare il dettaglio
+delle attività svolte. Sarà predisposto un modulo funzionale specifico attivo per ogni Piano, “Verifiche” attraverso il
+quale il Fondo potrà registrare eventuali verifiche effettuate sul Piano in questa fase. Quando attivata una verifica su
+un Piano, è possibile assegnare la verifica ad un’utente incaricato del Fondo il quale potrà accedere ai dati del piano
+formativo oggetto dell’ispezione ed effettuare il sopralluogo in itinere presso la sede dell’attività indicata. L’esito delle
+
+
+
+
+                                                                                                                           14
+verifiche è inserito nel sistema attraverso una specifica funzionalità che permette di creare il documento di verbale
+visita ispettiva, e di ricercare verbali precedentemente emessi o predisposti.
+
+Rendicontazione
+
+Nella fase di caricamento della rendicontazione sul Sistema, il Soggetto Attuatore dovrà inserire, per ogni documento
+di spesa sostenute, i relativi giustificativi indicandone un numero identificativo, la tipologia di giustificativo il
+nominativo del fornitore e l'importo dello stesso. Durante tale attività sono verificate la correttezza e la completezza
+delle informazioni inserite nel rispetto di quanto programmato in Fase di Presentazione e conforme a quanto definito
+nell’Avviso o Catalogo. Anche per questa funzionalità l'utente ha la possibilità di effettuare salvataggi parziali in modo
+da poter effettuare la rendicontazione in più sedute.
+
+Liquidazione e Chiusura Piano
+
+Per tutti i piani per cui si sono concluse le fasi di verifica della rendicontazione sarà disponibile la funzionalità che
+permette di visualizzare l’elenco con evidenza dei piani per cui è possibile emettere il pagamento, nonché i piani per
+cui è stato emesso. La funzionalità permetterà, nel caso di possibilità di erogazione della liquidazione, di generare il
+documento di ordine di pagamento e la lettera accompagnatoria e inviare il Piano in pagamento. Verrà generato e
+registrato il pagamento con il relativo importo e l’ordine di pagamento. Dopo l’elaborazione della liquidazione il Piano
+potrà essere chiuso.
+
+Evidenza contabile
+
+L’area applicativa deriva dall’evoluzione delle funzionalità già realizzate nella piattaforma UNICAFONDIR.
+
+Vengono offerte le funzionalità necessarie alla gestione e alla rendicontazione dei dati contabili relativi sia ai
+versamenti effettuati dalle aziende che ai finanziamenti a queste concessi.
+
+In quest’area sono presenti le funzionalità per la gestione delle adesioni e dei contributi trasmessi periodicamente
+dall’Inps e quelle per il trattamento dei dati connessi, garantendone la loro corretta e completa archiviazione nonché
+l’efficiente consultazione attraverso la reportistica dedicata. Nello specifico i dati trattati si riferiscono a:
+
+        le società aderenti ed ai relativi dipendenti;
+        le revoche con o senza portabilità;
+        le cessazioni preliminari e definitive;
+        i tentativi falliti di adesione.
+
+I dati sono strutturati in modo da essere consultabili e modificabili per area geografica, settore di attività, classe
+dimensionale delle aziende.
+
+
+
+
+4.3 - APP – VISITE IN ITINERE
+
+FONDIR ha realizzato un sistema di controllo in-itinere, attraverso una apposita applicazione mobile (di seguito APP
+FONDIR) dedicata ai dispositivi di tipo mobile, quali smartphone o tablet. che garantisce una rilevazione “a distanza”
+dell’attività formativa.
+
+Il controllo dei dati avviene attraverso l’APP “Fondir – Controlli a distanza”, inserendo un codice di accesso creato da
+piattaforma, che raccoglie una serie di informazioni in tempo reale circa il progetto in corso e che rileva, nel rispetto
+del Regolamento Ue sulla privacy, la presenza dei discenti e dei docenti anche attraverso foto e/o short video a bassa
+definizione.
+
+Il controllo è finalizzato a verificare:
+
+                                                                                                                       15
+       che l’attività sia documentata nelle modalità previste da FONDIR (registri) e che ci sia coerenza con il
+        percorso didattico approvato;
+       l’effettiva realizzazione delle attività previste, la rilevazione di dati circa la partecipazione.
+
+Al termine del controllo i dati raccolti vengono trasmessi dalla APP FONDIR alla piattaforma dove vengono archiviati
+in automatico per la consultazione.
+
+
+
+
+                                                                                                                   16
+4.4 – SITO ISTITUZIONALE
+Il sito web di FONDIR è sviluppato con il CMS Drupal, un sistema open source, scritto in linguaggio PHP, che offre ampia
+autonomia al personale del Fondo nella gestione dei contenuti pubblicati. Si rimanda al sito https://www.drupal.org
+per i dettagli e gli approfondimenti tecnici sulla specifica versione utilizzata.
+
+La struttura del portale favorisce una consultazione rapida delle informazioni di interesse per i principali interlocutori
+del Fondo (le aziende aderenti e gli enti di formazione) e può essere suddivisa, dal punto di vista funzionale, nelle
+seguenti aree:
+
+        una serie di sezioni con contenuti statici che includono informazioni sulle finalità e sulle attività del Fondo,
+         l’organizzazione, i contatti, i riferimenti legislativi e i regolamenti;
+        una sezione dinamica contenente news, avvisi e informazioni generiche che il personale di FONDIR aggiorna
+         costantemente e che vengono proposte sia in home page che in un’area interna dedicata.
+
+Il template utilizzato evidenzia sia in home page che nelle pagine interne i collegamenti verso i diversi canali social
+attivati dal Fondo: Facebook, LinkedIn, YouTube, Twitter. Di seguito alcune aree di particolare interesse:
+
+   Chi siamo / Struttura Fondir / Normativa
+    Una raccolta di contenuti utili a descrivere il Fondo, la propria struttura organizzativa e le attività svolte. In questa
+    sezione è inoltre presente un’area riservata nella quale sono pubblicati i contenuti per i componenti del CdA del
+    Fondo;
+
+   Fondo Trasparente
+    Un’area in cui il Fondo pubblica diverse sezioni utili a documentare le proprie attività e ad interagire con i
+    soggetti terzi (elenco fornitori, bandi di gara per beni e servizi, bilanci, programmazione degli acquisti…);
+
+   Come aderire
+    Area in cui vengono fornite le informazioni per accedere alle procedure di adesione al Fondo;
+
+   Opportunità per le imprese
+    Sezione dedicata alla pubblicazione degli Avvisi e relativo materiale informativo, al catalogo delle iniziative
+    presenti nella bacheca e all’accesso per gli utenti esterni alle piattaforme gestionali (UNICAFONDIR e
+    UNICAFONDIR2.0);
+
+   Fondir Comunica
+    Area in cui vengono promossi eventi e iniziative tramite materiale multimediale (slide on line, webinar…); è inoltre
+    presente un punto di accesso per la partecipazione alla COMMUNITY DI FONDIR, un forum specializzato sulle
+    tematiche del Fondo.
+
+
+
+
+                                                                                                                          17
+Di seguito sono riportati i dettagli implementativi più rilevanti:
+
+S.O.:                       Linux
+WEB SERVER:                 Apache
+CMS:                        Drupal 8.9
+Linguaggio:                 PHP 7.3.28
+DBMS:                       MySql 5.0.70
+Framewwork:                 Bootstrap 1.9 (date picker)
+Tema Bootstrap:             Barrio 4.22
+
+
+
+I moduli principali utilizzati nel CMS:
+
+ CK Editor                                Contact                     Contextual
+
+ Custom Block                             Custom Menù                 Field
+
+ Filter                                   Internal Page Cache         Path
+
+ Search                                   User                        Views
+
+ Views UI
+
+
+
+
+I moduli aggiuntivi (tutti in versione 8) sono:
+
+ Admin Content Notification               Admin Login Path            Advanced Link
+
+ Backup and Migrate                       Link attributes             Pathauto
+
+ Scheduler                                Block Content Permissions   Views Year Filter
+
+ Year only                                Conditional Fields          Field Group
+
+ File download formatter                  Redirect After Login        SMTP Authentication Support
+
+ Entity Browser                           Imce File Manager           Rebuild Cache Access
+
+ Webform                                  Webform Bootstrap           Webform UI
+
+
+
+
+                                                                                                    18
+4.5 – Procedure flussi XML
+Di seguito un dettaglio sui flussi XML di integrazione con i sistemi esterni.
+
+Applicazione UnicaFondir
+
+La sezione “Esportazione XML” offre funzionalità dedicate l’esportazione dei dati in formato XML destinati al
+monitoraggio semestrale da parte dell’ANPAL. Ad oggi tale sezione è implementata solo parzialmente
+nell’applicazione, pertanto le attività di produzione dei flussi così come quelle per la produzione dei flussi per il CIPE e
+per il registro RNA, attività obbligatorie e comuni a tutti i fondi interprofessionali, sono gestite dall’attuale fornitore
+che produce i file necessari su richiesta del Fondo.
+
+Applicazione UnicaFondir2.0
+
+Le funzionalità di integrazione con il sistema ANPAL, CIPE ed RNA sono parzialmente integrate nella piattaforma ed
+attivate in cicli di vita del piano differenti. Le stesse attività, di seguito descritte, dovranno essere prese in carico e
+svolte dall’Affidatario:
+
+4.5.1 - Procedura flussi XML per monitoraggio semestrale dell’ANPAL
+L’interfacciamento con il Sistema di Monitoraggio dell’ANPAL prevede la rilevazione dei dati da parte dei Fondi
+Interprofessionali per la formazione continua in due diversi momenti (che corrispondono alle fasi in cui i Fondi stessi
+trattano le informazioni rilevanti per il monitoraggio):
+
+   a) dopo la fase di approvazione dei Piani formativi, che coincide con la decisione di finanziamento sulla base delle
+       procedure previste da ciascun Fondo, e riguarda le informazioni relative ai piani e ai progetti formativi
+       finanziati;
+
+   b) dopo la fase di conclusione delle attività formative, che riguarda anche le informazioni relative alle
+      caratteristiche dei lavoratori e delle imprese coinvolte.
+
+Ogni singolo invio semestrale (scadenze 31 luglio e 31 gennaio) contiene:
+
+        l’approvato del semestre precedente;
+        il concluso del semestre precedente;
+        le eventuali rettifiche di informazioni inviate in precedenza.
+
+Ogni invio semestrale è composto da singoli flussi in formato XML, ognuno dei quali identifica un singolo Piano
+formativo (con il dettaglio di tutte le informazioni previste) nei due momenti considerati (approvazione o conclusione).
+
+Di seguito alcuni dei dati presenti in un flusso:
+
+        codice piano
+        tipologia piano
+        data di approvazione
+        data di fine attuazione
+        totale ore
+        dimensione finanziaria
+        totale contributo fondo
+        numero totale di imprese coinvolte
+        numero totale di lavoratori.
+
+Per i dettagli implementativi delle procedure di trasmissione dei flussi si rimanda al “Protocollo tecnico per la
+trasmissione dei dati di monitoraggio” pubblicato sul sito dell’ANPAL.
+
+
+                                                                                                                         19
+4.5.2 - Sistema di comunicazione con CIPE e RNA
+Il CIPE (Comitato Interministeriale per la Programmazione Economica) è un organo collegiale del Governo che svolge
+funzioni di coordinamento in materia di programmazione della politica economica. Per ogni piano formativo finanziato
+dal Fondo deve essere rilasciato, dallo stesso organismo, un codice unico di progetto (CUP): un'etichetta stabile, che
+si presenta come una stringa alfanumerica di 15 caratteri e che identifica univocamente i progetti di investimento
+pubblico semplificando l'attività amministrativa degli stessi su tutti i sistemi di monitoraggio.
+
+Applicazione UnicaFondir
+
+La richiesta dei codici CUP e la relativa associazione con i piani formativi gestiti nella piattaforma è eseguita dall’attuale
+fornitore che, su richiesta del Fondo:
+
+        estrae i dati necessari in un file XML
+        comunica attraverso un portale dedicate del CIPE il flusso
+        segnala al fondo eventuali anomalie riscontrate
+        aggiorna la base dati con i CUP
+
+Applicazione UnicaFondir2.0
+
+Durante la fase di istruttoria, l’Operatore Fondo può selezionare i piani di suo interesse e, tramite apposito bottone,
+eseguire la generazione automatica dell’XML che poi provvederà a caricare manualmente sul sistema CIPE. Una volta
+ottenuti i CUP e gestito eventuali errori, l’Operatore Fondo provvederà a caricare un file Excel per l’aggiornamento
+della base di dati.
+
+Si rimanda al sito del CIPE per la documentazione tecnica relativa i formati e protocolli utilizzati:
+http://www.programmazioneeconomica.gov.it/sistema-mipcup/
+
+
+
+Il RNA (Registro Nazionale Aiuti) (https://www.rna.gov.it), operativo dal 12 Agosto 2017, è uno strumento attivato
+dal Ministero dello Sviluppo Economico e permette di verificare che le agevolazioni pubbliche siano concesse nel
+rispetto delle disposizioni previste dalla normativa comunitaria, specie al fine di evitare il cumulo dei benefici e, nel
+caso degli aiuti de minimis, il superamento del massimale di aiuto concedibile imposto dall’Unione europea.
+
+Per ogni piano approvato è necessaria la comunicazione, presso l’RNA, dei finanziamenti previsti per ogni azienda. Alla
+conferma di tale comunicazione, che richiede la specifica del codice CUP assegnato al piano e descritto nei paragrafi
+precedenti, per ogni azienda beneficiaria viene rilasciato un codice COR univoco attestante la registrazione presso
+l’RNA del finanziamento concesso.
+
+Applicazione UnicaFondir
+
+Su richiesta del Fondo il fornitore esegue la registrazione dei piani approvati presso l’RNA e provvede all’assegnazione
+dei codici COR alle rispettive aziende. In particolare, le operazioni si riferiscono a:
+
+        verifica Massimale de Minimis e Deggendorf - effettuate alla chiusura delle fasi di presentazione degli avvisi;
+         per ciascuna operazione viene archiviato l’esito fornito da RNA;
+        invio dati sugli aiuti concessi - effettuate a seguito di approvazione ufficiale dei piani;
+        invio degli annullamenti - effettuate al verificarsi di revoche e rinunce sui piani.
+
+Applicazione UnicaFondir2.0
+
+Le funzionalità di registrazione e conferma sono gestite tramite l’integrazione con il Web Service fornito da RNA. Una
+volta caricato l’Excel dei CUP, il sistema genera automaticamente, per le beneficiarie dei piani per cui il CUP è stato
+definito, delle richieste di registrazione di aiuto indirizzate al sistema RNA di collaudo. Una volta verificati i dati,
+
+
+                                                                                                                           20
+l’Operatore Fondo, tramite specifica funzionalità fornita dal sistema, esegue le richieste sul sistema di produzione per
+l’effettiva assegnazione dei COR ad ogni beneficiaria del piano. In un secondo momento, prima che siano trascorsi 20
+gg dalla richiesta di registrazione, l’Operatore Fondo potrà confermare o annullare i COR utilizzando la specifica
+funzionalità fornita dal sistema. E’ sempre possibile intervenire in caso di malfunzionamenti o errori tramite editing
+manuale dei COR.
+
+Si rimanda al sito del RNA per la documentazione tecnica relativa i formati e protocolli utilizzati:
+
+https://www.rna.gov.it/sites/PortaleRNA/it_IT/documentazione_tecnica
+
+
+
+
+                                                                                                                     21
+4.6 - Architettura del sistema in hosting
+L’erogazione dei servizi in hosting attualmente è effettuata da un’infrastruttura di Datacenter che consta di 3 siti fisici
+distribuiti sul territorio nazionale, collegati tra loro da un anello a larga banda di grande capacità.
+
+Al fine di garantire alti livelli di sicurezza, affidabilità e continuità del servizio in riferimento alle best practices ITIL,
+sono implementati servizi di monitoraggio avanzati volti a monitorare la disponibilità e le performance dei servizi IT e
+di tutte le componenti dell’infrastruttura.
+
+L’infrastruttura Dedicated Cloud oggi si basa su tecnologia VMWare con risorse fisicamente dedicate e completamente
+gestite dal fornitore ed erogate in modalità “as a service”: si basa su una architettura completamente ridondata, sia
+in termini di infrastruttura fisica che di rete, oltre che basata su un hypervisor con servizi di alta affidabilità.
+
+L’utilizzo dell’hypervisor VMware garantisce completa ridondanza fisica e possibilità di failover, eliminando di fatto la
+possibilità di downtime per fault hardware. Sono oggi previsti, quindi, meccanismi di continuità operativa che hanno
+come obiettivo quello di garantire alta disponibilità dei sistemi ospitati.
+
+4.6.1 - Infrastruttura di rete
+Tutti i data Center sono tra loro interconnessi attraverso la VDCN (Virtual Data Center Network) al fine di garantire
+massimi livelli di affidabilità e grandi performance grazie anche alle linee ad alta capacità (10 Gbps) per il collegamento
+agli snodi con maggior traffico.
+
+L’attuale fornitore utilizza il Datacenter di proprietà per gli ambienti di Collaudo/Test e Pre Esercizio; il sito è connesso
+ad Internet tramite link in fibra a 200 Mbps e tramite link MPLS in fibra a 50 Mbps ai DataCenter che ospitano, invece,
+i servizi di produzione. Questi sono ospitati all’interno di un’infrastruttura cloud con una banda complessiva di
+20Gbit/s. In particolare, i servizi in oggetto avranno a disposizione una banda internet in uscita e in ingresso superiore
+ad 1Gbps.
+
+Di seguito, il layout dell’infrastruttura di rete utilizzata per l’erogazione dei servizi:
+
+
+
+
+4.6.2 - Sicurezza Fisica
+Per quanto riguarda la sicurezza fisica, sono presenti all’interno dei Datacenter principali:
+
+   Sistema di rivelazione fumi e spegnimento incendi
+
+                                                                                                                            22
+   Sistema antiallagamento
+   Sistema antintrusione
+   Telecamere a circuito chiuso
+   Sistema di condizionamento
+   Sistema continuità ed emergenza
+   Controllo degli accessi fisici al Datacenter
+   Monitoraggio impianti industriali
+
+
+4.6.3 - Sicurezza Logica
+Vulnerability Assessment e Penetration Test
+
+La sicurezza informatica, le attività di prevenzione e di contrasto degli attacchi informatici vengono gestite da due
+centri operativi dedicati: il Security Lab e il Security Operation Center (SOC) nei quali sono impegnati esperti nel campo
+della cybersecurity. Il Security Lab studia le minacce della cybersecurity, analizza i nuovi scenari di rischio, cerca e
+sviluppa soluzioni e strumenti innovativi, li sperimenta e testa nei suoi laboratori per individuare soluzioni preventive
+a possibili focolai di emergenza, collegati per esempio allo sviluppo di nuove tecnologie. Il Security Operation Center
+(SOC) è il centro di monitoraggio vero e proprio, che gestisce gli allarmi di sicurezza provenienti dalle reti di
+telecomunicazione e dai Datacenter che ospitano le applicazioni nei siti di produzione.
+Un ulteriore livello di sicurezza informatica è costituito dalla continua analisi delle vulnerabilità e, successivamente,
+dalla predisposizione delle attività di mitigazione e prevenzione dei rischi di sicurezza.
+
+
+Servizio di firewall in High Availability
+
+Per garantire la sicurezza logica dei sistemi ospitati nei Datacenter di produzione è presente un servizio di firewall in
+configurazione High Availability, con accessi ridondati alla rete Internet e con sistema di controllo Intrusion Prevention
+e Intrusion Detection.
+
+Servizio di gestione delle identità, di controllo degli accessi e dei collegamenti VPN
+
+È attivo un sistema di gestione delle identità e di controllo degli accessi per proteggere, gestire, monitorare e tracciare
+gli stessi in modo che nessun percorso di accesso ai dati sia lasciato non gestito, sconosciuto o non monitorato. Il
+processo di gestione dei collegamenti prevede le seguenti principali attività:
+
+    Memorizzare e organizzare tutte le identità privilegiate in un archivio protetto centralizzato;
+    Fornire, a conclusione dell’iter autorizzativo con esito positivo, accesso protetto alle risorse IT e ai dati tramite
+     canale protetto VPN;
+ Reimpostare periodicamente e in modo automatico le password di server, database, dispositivi di rete e altre
+     risorse;
+ Controllare gli accessi alle risorse IT e alle applicazioni in base a ruoli e responsabilità di lavoro;
+ Registrare gli accessi (se necessario anche video) ed eseguire funzioni di controllo (auditing) su tutti gli accessi
+     privilegiati, creando un record completo di tutte le azioni.
+Per quanto riguarda i collegamenti in VPN, l’infrastruttura utilizza la componente FortiAuthenticator di FORTINET per
+la gestione degli accessi.
+
+
+SIEM (Security Information and Event Management)
+
+Il sistema si avvale di soluzioni SIEM (Security Information and Event Management) in grado di operare auditing e
+monitoring di ogni azione eseguita nell’infrastruttura aziendale ed intercettare eventi classificabili come violazioni, da
+cui far scaturire automaticamente azioni di sicurezza nei confronti degli asset aziendali da preservare.
+
+
+                                                                                                                        23
+Le registrazioni degli eventi (log) relative alle basi dati, agli application server, alle applicazioni e alla gestione operativa
+saranno raccolte attraverso il sistema automatizzato Splunk Enterprise Security. Tale software consente raccogliere e
+indicizzare in tempo reale qualsiasi dato macchina, praticamente da qualsiasi sorgente, formato o posizione: da
+applicazioni, server web, database, reti, macchine virtuali, etc.
+
+Backup e Restore dei dati
+
+La soluzione di Backup e Restore utilizzata è Veeam Backup & Replication che offre funzionalità potenti e scalabili per
+il backup ed il ripristino dei dati e delle applicazioni su piattaforme virtualizzate. Per ciascuna macchina virtuale
+presente nell’infrastruttura Cloud proposta è disponibile un servizio di backup continuo ed integrato completamente
+con l’infrastruttura VMware.
+Veeam Backup & Replication permette backup e ripristini transazionalmente consistenti, nonché il ripristino
+“granulare” dal backup senza dover installare o manutenere qualsiasi agente all’interno delle VM. Consente di
+recuperare rapidamente un singolo file direttamente da un backup a livello immagine, indipendentemente dal sistema
+operativo o dal filesystem originario.
+Sono, inoltre, previste una serie di funzionalità di monitoraggio avanzato, reportistica dettagliata e capacity planning
+che consentono di identificare facilmente le VM non protette, ottimizzare le risorse di backup, documentare
+automaticamente lo stato dei backup.
+
+Disaster Recovery
+
+Il sistema è in grado di offrire servizi di Disaster Recovery. La strategia adottata ha come obiettivo quello di replicare
+le Virtual Machine che ospitano i servizi erogati dal DataCenter di produzione, in seguito al verificarsi di un evento
+disastroso, all’interno di una infrastruttura tecnologica alternativa ospitata presso un secondo Data Center,
+permettendo il ripristino dell’operatività in breve tempo.
+L’infrastruttura ospitante il sito secondario di Disaster Recovery è basata su una architettura completamente
+ridondata, sia in termini di infrastruttura fisica che di rete, oltre che basata su un hypervisor VMware con servizi di
+alta affidabilità e fault tolerance.
+La soluzione individuata prevede di sfruttare le potenzialità offerte dall’infrastruttura telematica gigabit tra il primo
+sito e il sito secondario. L’infrastruttura di rete garantisce la massima affidabilità e sicurezza ed i Firewall perimetrali
+consentono il traffico verso la piattaforma applicativa del primo e secondo sito e garantiscono alta protezione e
+sicurezza dei dati.
+Per la replica delle VM è utilizzato il software Veeam Backup & Replication per VMware nella versione Enterprise plus
+che consente il ripristino efficace, semplice e accessibile delle applicazioni virtualizzate. L’approccio di Veeam Backup
+& Replication, basato sulla virtualizzazione, garantisce una soluzione efficace che include le caratteristiche di deduplica
+integrata, di compressione e di scalabilità su larga scala, pur mantenendo la visibilità dell’intero ambiente virtuale.
+
+
+
+
+                                                                                                                             24
+4.6.4 - Dettaglio delle risorse infrastrutturali
+
+
+Di seguito il dettaglio delle risorse attualmente allocate per il servizio di hosting:
+
+Piattaforma        VM         Descrizione           S.O.                        Vcpu         RAM        Storage
+                                                                                             (GB)       (GB)
+UNICAFONDIR        A1         App server            Windows Server 2008
+                                                                                         2          8             280
+                   A2         DB server             Windows Server 2008
+                                                    MS SQL Server 2008                   2          8             280
+                   A3         Web site              Linux
+                                                                                         2          8             280
+UNICAFONDIR        B1         App server            Linux
+2.0                                                                                      4          8             200
+                   B2         DB server             Linux
+                                                                                         4          8             200
+
+                                                                                     14         40            1.240
+
+
+I costi delle infrastrutture e della loro gestione, delle licenze commerciali relative a sistemi operativi,
+database, connettività e sistemi di sicurezza saranno interamente a carico dell’Affidatario.
+
+
+
+
+                                                                                                                  25
+5. OBIETTIVI PREVISTI
+Nelle seguenti sezioni vengono fornite indicazioni relative le attività già individuate dal Fondo, per le quali,
+nell’offerta tecnica, si richiede di una sintetica proposta progettuale indicando metodologie e tecnologie
+applicate.
+
+5.1 - Servizio MEV - Business Intelligence Object per l’analisi dei dati.
+È richiesta, come integrazione e/o estensione dell’evidenza contabile, l’implementazione di una piattaforma di
+Business Intelligence che offra al personale del Fondo la possibilità di analizzare i dati e generare report in
+maniera autonoma, semplice e flessibile.
+
+Le funzionalità di Business Intelligence devono consentire di definire e produrre report statistici relativi
+all’andamento del Fondo e finalizzati ad analizzarne le varie attività svolte nel corso delle sue operazioni. I dati
+devono essere visualizzati nella modalità preferita sia sotto forma di tabelle che di grafici (tipi standard: a barre,
+torta, ecc.), con possibilità di scelta tra rappresentazioni 2D o 3D. I dati cui fare riferimento sono quelli che
+caratterizzano le principali attività del Fondo
+
+5.2 – Servizio MEV - Sincronizzazione ed integrazione dati in sistema Office 365
+Prevedere un sistema di sincronizzazione ed integrazione dei dati di contatto (es., nominativi, e-mail, recapiti
+telefonici) presenti in piattaforma con il sistema di rubricazione di Office 365 del Fondo (in particolare nella
+rubrica di posta elettronica aziendale). Il sistema deve prevedere un aggiornamento costante (almeno con
+cadenza giornaliera). Deve essere prevista la possibilità di esportazione dei dati (selettiva) in maniera
+strutturata per la condivisione con altri sistemi esterni di aziende ed enti di formazione.
+
+5.3 - Servizio MEV - Gestione rinnovata del sito web istituzionale
+Il sito Web di Fondir dovrà essere rinnovato con migliorie tecniche e grafiche mantenendo in ogni caso le
+funzioni attuali, che continueranno ad essere implementate.
+
+Inoltre si prevede un potenziamento dell’esistente Chat-bot, presente sul sito del Fondo, che attualmente
+permette un’integrazione dell’assistenza agli utenti attraverso l’interrogazione del Chat-bot stesso,
+denominato FODI, che risponde alle domande pertinenti che riguardano informazioni di carattere generale
+relative alla presentazione, gestione, rendicontazione dei Piani e modalità di adesione al Fondo. Si richiede una
+miglior integrazione delle informazioni aziendali, con l’obiettivo principale di una più efficace personalizzazione
+e consistenza delle informazioni fornite all’utente.
+
+5.4 - Servizio MEV - Integrazione App di controllo in itinere
+
+FONDIR ha realizzato un sistema di controllo in-itinere, attraverso una apposita applicazione mobile (di seguito
+APP FONDIR) dedicata ai dispositivi di tipo mobile, quali smartphone o tablet, che garantisce una rilevazione “a
+distanza” dell’attività formativa per permettere:
+
+        il riconoscimento esclusivo con un referente del Piano;
+        la geolocalizzazione dell’evento formativo;
+        il collegamento vocale e video con il referente del Piano e/o docente;
+        la registrazione delle visita “virtuale”;
+        il caricamento delle foto;
+        l’archiviazione della registrazione dell’ispezione;
+
+
+26
+        il trasferimento dei materiali audio-video raccolti ad un database collegato con la Piattaforma
+         UNICAFONDIR.
+
+Il controllo dei dati avviene attraverso l’APP “Fondir – Controlli a distanza” che raccoglie una serie di
+informazioni in tempo reale circa il progetto in corso e che rileva, nei rispetto del Regolamento UE sulla privacy,
+la presenza dei discenti e dei docenti, anche attraverso foto e/o short video a bassa definizione.
+
+Il controllo è finalizzato a verificare:
+
+        che l’attività sia documentata nelle modalità previste da Fondir (registri) e che ci sia coerenza con il
+         percorso didattico approvato;
+        l’effettiva realizzazione delle attività previste, la rilevazione di dati circa la partecipazione.
+
+Rispetto a quanto descritto sopra, relativamente alle attività di controllo della APP, devono essere previste
+funzioni aggiuntive integrate e di integrazione con il sistema esistente per lo sviluppo di soluzioni per la
+verifica/tracciamento delle presenze alle attività formative, e opportune proposte migliorative. Tali nuove
+funzioni dovranno essere opportunamente armonizzate ed integrate con l’infrastruttura informativa esistente,
+permettendo un trasferimento di informazioni con il database del Fondo.
+
+5.5 - Servizio MEV - Miglioramento della interfaccia utente (UI/UX) dei Piani formativi,
+Iniziative formative, Bacheca sul sito
+La interfaccia web esistente deve essere sottoposta ad un audit di usabilità e di esperienza utente, da cui
+dovranno risultare proposte di miglioramento del layout, della accessibilità, su tutti i tipi di dispositivi di accesso
+comunemente in uso da parte degli utenti.
+
+L’audit può riguardare le principali aree presenti in piattaforma: Anagrafiche degli utenti, Piani Avviso, Richieste
+iniziative in Bacheca, Docenti, Sistema di registrazione e visualizzazione dei versamenti INPS, Bacheca (Sistema
+di presentazione e gestione delle iniziative formative e la visualizzazione dell’offerta sul sito), Reportistica e
+altre funzioni collegate. Lo studio potrà prevedere anche eventuali altre funzionalità che andranno integrate
+nel sistema unico.
+
+5.6 – Servizio MAC – Adeguamento applicazione “Iniziative Comparti”
+Con riferimento all’applicazione web “Iniziative Comparti”, descritta alla sezione 4.1, è richiesto l’adeguamento
+nella piattaforma UNICAFONDIR2.0 alle funzionalità necessarie.
+
+5.7 – Servizio MAC – Adeguamento sezione “Evidenza Contabile”
+Con riferimento all’area “Evidenza Contabile” descritta alla sezione 4.2.1, è richiesto l’adeguamento nella
+piattaforma UNICAFONDIR2.0 alle funzionalità necessarie per:
+
+        rilevare i contributi ricevuti periodicamente dall’Inps, procedere al calcolo interessi e alla ripartizione
+         tra le varie voci di spesa;
+        provvedere alla gestione dei versamenti delle imprese aderenti e dei finanziamenti accordati dal
+         Fondo sulla base della contabilizzazione delle risorse;
+        provvedere alla ripartizione mensile, per ogni annualità, dei contributi versati da ogni singola azienda
+         aderente al Fondo;
+        provvedere alla ripartizione dei versamenti, tenendo conto delle trattenute effettuate dal Fondo nel
+         caso di richiesta di trasferimento di risorse ad altro fondo;
+        rilevare, per natura e destinazione, i costi totali sostenuti da Fondir, sia in fase di preventivo che di
+         consuntivo, evidenziando i valori riferiti alle poste del bilancio preventivo e consuntivo Fondir ed ai
+
+27
+         finanziamenti approvati dal CdA e riconosciuti in sede di rendicontazione, gestendo la liquidazione di
+         saldi e conguagli (Inps e Fondir);
+        ottenere, per ogni azienda, una scheda di sintesi in cui vengono riepilogati i dati caratteristici di ogni
+         piano formativo finanziato;
+         generare i report in formato Excel, raggruppati per diverse tipologie (ad esempio: Estrazione Generale,
+         Aziende che non hanno chiesto finanziamenti, Aziende aderenti, etc.) e per ogni tipologia rendere
+         disponibili i dati generali e quelli specifici di un determinato settore economico e/o comparto.
+
+5.8 – Servizio MEV – Evoluzione sezione “Evidenza Contabile” e sviluppo “Gestione Conto
+Individuale”
+Le funzionalità sviluppate in questa area dovranno permettere e/o prevedere:
+
+        l’Integrazione con software di Contabilità e Flusso Finanziario;
+        un sistema di calcolo per la suddivisione del versato di ogni singola azienda tra il Conto Generale e il
+         Conto Individuale;
+        un sistema di calcolo delle risorse disponibili per richiedere i contributi tramite, eventualmente, il
+         Conto Individuale;
+        la possibilità di compilare il Formulario per la richiesta di contributi anche sul Conto Individuale;
+        l’ampliamento e sviluppo del sistema di presentazione, gestione e rendicontazione dei Piani formativi
+         con gestione delle richieste di finanziamento tramite Conto Individuale.
+
+
+
+
+5.9 - Servizio MAC – Adeguamento dei livelli di sicurezza e privatezza delle piattaforme
+applicative
+Ad oggi tutte le piattaforme gestiscono i dati personali in modo adeguato alle policy di accountability adottate
+secondo quanto previsto dal Reg UE 679/2016, e dal d.lgs. 101/2018, ma in un’ottica di miglioramento continuo
+viene richiesto di proporre soluzioni che garantiscano al minimo le seguenti funzionalità di sicurezza:
+
+        implementazione della crittografia di tipo AT Rest di tutte le informazioni personali presenti su tutti i
+         database interni;
+
+        sistemi di autenticazione multifattore alle interfacce;
+
+        Implementazioni di procedure interne di Vulnerability Assessment e Penetration Test (V.A.P.T) mensili
+         con la produzione dei relativi report;
+
+        Audit di enti esterni di Vulnerability Assessment e Penetration Test (V.A.P.T) su richiesta e comunque
+         al rilascio per ogni major release evolutiva.
+
+
+
+
+5.10 - Servizio Hosting – Attivazione di un servizio di backup offline
+Visti i continui attacchi con vari tipi di ransomware (CryptoLocker, Reveton, Prison Locker, Locky ed altri), dal
+momento che ad oggi i vari software antivirus non riescono a bloccare tutti i ransomware, si impone una
+continua verifica ed aggiornamento delle politiche di backup che evitino tale problema di sicurezza.
+
+Pertanto, viene richiesto di descrivere nel dettaglio soluzioni proposte al fine di garantire l’impossibilità di
+corruzione dei backup dei dati del Fondo.
+
+28
+La soluzione minima richiesta è quella di adottare delle policy di backup offline, ovvero una policy di gestione
+dei backup che preveda una copia fisica dei dati isolati dalla propria rete locale e che tale copia non possa
+essere modificata o eliminata per un tempo congruo predeterminato.
+
+
+
+
+6. SERVIZI E MODALITA DI ESECUZIONE
+I servizi oggetto del presente capitolato devono essere svolti nel rispetto delle norme relative le misure di
+sicurezza del REGOLAMENTO UE GDPR 2016/279 e alle eventuali normative o regolamenti nazionali che
+dovessero essere emanati.
+
+6.1 - Servizio di Sviluppo Software e Manutenzione Evolutiva
+Il servizio MEV è attivato quando si verifica la necessità di intervenire sul patrimonio applicativo con interventi
+di manutenzione evolutiva che modificano sostanzialmente il patrimonio software del Fondo. Comprende le
+azioni inerenti interventi di revisione, finalizzati a migliorare il valore o la prestazione di un sistema o di una
+parte di esso. L'azione manutentiva è programmabile e subordinata alle esigenze di miglioramento espresse
+dal Fondo, eventualmente anche su proposta del Fornitore.
+
+Con riferimento alle attività MEV, è richiesta la redazione di un “Piano di gestione del ciclo di vita del software”
+che costituirà parte integrante dell’offerta tecnica. I suddetti documenti dovranno contenere una descrizione
+dettagliata delle metodologie di sviluppo adottate, con particolare riferimento a:
+
+        gestione complessiva del ciclo di vita del software;
+        metodologie e strumenti adottati per garantire la qualità del software rilasciato;
+        processo di certificazione, test e passaggio in produzione del software;
+        descrizione quantitativa e qualitativa (curricula) delle figure professionali coinvolte;
+        metodi di misurazione degli interventi;
+        metodi di gestione della qualità, dei test e del collaudo;
+        produzione e manutenzione della documentazione di progetto e di utente;
+
+
+Nell'ambito del servizio MEV si possono già individuare i seguenti sotto-servizi:
+
+        analisi, progettazione, implementazione, testing e deployment di nuove funzionalità e/o moduli
+         applicativi;
+        analisi, progettazione, implementazione, testing e deployment per la modifica di funzionalità già
+         esistenti;
+        formazione del personale del Fondo sulle nuove funzionalità e sulle modifiche;
+        documentazione tecnica di progetto e manualistica d’utente.
+
+
+I servizi realizzativi dovranno assicurare il supporto al collaudo, la migrazione dei dati e il supporto all'avvio in
+esercizio del software realizzato, nonché il supporto all'esecuzione dei test automatizzati previsti dalle
+procedure attualmente in uso.
+
+Le attività, svolte su richiesta del Fondo, saranno raggruppate in progetti e, per ciascuno di essi, andrà realizzato
+un ciclo completo di sviluppo in conformità alle indicazioni definite più avanti.
+
+
+
+29
+La metrica utilizzata per definire le attività svolte dovrà essere espressa in gg/uomo, documentando la
+previsione con un dettagliato piano di lavoro che descriva le attività (task) necessarie e le figure professionali
+impegnate con il relativo effort.
+
+Per la realizzazione del servizio l’Affidatario dovrà:
+
+        utilizzare, per tutte le attività di sviluppo software, metodologie documentate, sistematiche ed efficaci
+         che devono essere descritte nel suddetto "Piano di gestione del ciclo di vita del software";
+
+        utilizzare un proprio ambiente di sviluppo e di testing conforme all’architettura di esercizio
+         dell’applicazione (anche mediante meccanismi di virtualizzazione delle risorse);
+
+        garantire l’impiego di figure professionali adeguate in termini di competenze e numerosità per la
+         realizzazione delle attività progettuali come indicato al successivo capitolo 7;
+
+        consentire l’accesso, da parte del FONDO o a personale da questa espressamente autorizzato, al
+         sistema di gestione, monitoraggio e controllo del servizio utilizzato dall’Affidatario;
+
+        garantire che tutte le attività di sviluppo software siano effettuate rispettando i seguenti standard
+         generali che dovranno essere documentati da opportune linee guida:
+
+              o    Standard di programmazione che dovranno assicurare, tra le altre cose, regole precise per la
+                   scrittura e documentazione dei moduli software realizzati e modificati, anche in merito al
+                   rispetto di specifiche e opportune metriche statiche. Quando applicabile, gli standard
+                   dovranno fare riferimento anche a standard già esistenti in letteratura per linguaggi specifici;
+
+              o    Standard di interfaccia utente (orientati all’usabilità, accessibilità, ecc.). Quando applicabile,
+                   gli standard dovranno fare riferimento anche a standard già esistenti in letteratura per
+                   linguaggi/ambienti specifici;
+
+              o    Standard di nomenclatura degli item software;
+
+              o    Standard di documentazione tecnica del software applicativo;
+
+Gli interventi di manutenzione evolutiva di dimensione inferiore o uguale a 3 gg/uomo rientrano nel servizio di
+manutenzione adeguativa e correttiva (MAC) e non in quello MEV.
+
+La discriminazione tra la natura evolutiva e adeguativa di un intervento di manutenzione verrà fatta dal Fondo,
+congiuntamente con il fornitore (Affidatario), secondo regole di correttezza, buona fede e ragionevolezza
+tecnica e, in nessun caso, l’onerosità della soluzione potrà essere valutata quale discriminante. Il servizio che
+non porta miglioramenti funzionali, in cui le funzionalità non sono incrementate ma equiparate alle precedenti,
+pur con miglioramenti prestazionali, non può essere compreso in ambito MEV.
+
+Per ogni attività MEV (progetto) il Fornitore dovrà quindi produrre i documenti di specifica tecnico-funzionale
+che conterranno anche la stima dell’impegno previsto in gg/uomo, i tempi di realizzazione, sviluppo e test, la
+data prevista di collaudo da parte del Fondo, con evidenza dei casi di test da seguire per il collaudo, la data
+prevista di rilascio in produzione, previa autorizzazione di FONDIR e la durata dell’eventuale follow-up.
+
+Solo a seguito della espressa approvazione da parte di FONDIR del documento di specifica tecnico-funzionale il
+Fornitore darà avvio alle attività di manutenzione evolutiva.
+
+
+
+
+30
+6.2 - Servizio di Manutenzione Adeguativa e Correttiva (MAC)
+Il servizio qui descritto si applica all’intero patrimonio applicativo compreso quello sviluppato
+precedentemente al previsto contratto e ad ogni sua successiva modificazione dovuta alle attività svolte per
+questo e per qualsiasi altro servizio del previsto contratto, senza che ciò comporti, per questo servizio, alcuna
+variazione nel corrispettivo economico riconosciuto all’Affidatario che si considera invariabile e
+omnicomprensivo.
+
+La manutenzione correttiva ha la finalità di mantenere la piattaforma costantemente funzionante rimuovendo
+le cause di malfunzionamento connesse a bug informatici: prevede quindi la diagnosi e la rimozione delle cause
+e degli effetti, sia sulle interfacce utente sia sulle basi dati, dei malfunzionamenti delle procedure, dei
+programmi in esercizio e delle infrastrutture.
+
+La manutenzione adeguativa comprende le attività volte ad assicurare la costante aderenza alle procedure e
+dei programmi alla evoluzione dell’ecosistema tecnologico del sistema informativo ed al cambiamento dei
+requisiti (organizzativi, normativi e di contesto).
+
+Il servizio è normalmente attivato attraverso una segnalazione di impedimento all’esecuzione
+dell’applicazione/funzione o dal riscontro di differenze fra l’effettivo funzionamento del software applicativo
+da quello atteso e desiderato, come previsto dalla relativa documentazione o comunque determinato dai
+controlli che vengono svolti durante l’attività dell’utente. La manutenzione correttiva è rivolta anche alla
+risoluzione dei difetti presenti nel codice sorgente, o nelle specifiche di formato o di base dati, non rilevati a
+suo tempo durante il ciclo di sviluppo o il collaudo.
+
+Le attività seguono quindi una modalità di erogazione di tipo ad evento e non hanno una suddivisione in fasi,
+né è possibile prevedere a priori prodotti specifici. Sono caratterizzate da una non continuità tra una richiesta
+e la successiva e non sono sempre pianificabili.
+
+Nell’ambito del servizio rientrano gli interventi che tipicamente non variano la consistenza del parco applicativo
+quali:
+
+        adeguamenti dovuti a seguito di cambiamenti di condizioni al contorno (ad esempio per variazioni al
+         numero utenti, per migliorie di performance, per aumento delle dimensioni delle basi dati, variazioni
+         normative, ecc.);
+        adeguamenti necessari per innalzamento di versioni del software di base;
+        adeguamenti necessari per innalzamento dei livelli di sicurezza e privatezza;
+        adeguamenti intesi all’introduzione di nuovi prodotti o modalità di gestione del sistema;
+        migrazioni di piattaforma;
+        modifiche, anche massive, non a carattere funzionale, alle applicazioni.
+
+
+Rientrano inoltre nel servizio anche gli interventi di assistenza al personale del Fondo svolti da parte di risorse
+professionali dell’Affidatario; sono comprese nell’ambito di questo servizio le seguenti attività indicate a titolo
+esemplificativo e non esaustivo:
+
+        supporto all’avviamento in esercizio (training on the job, etc.);
+        assistenza durante il periodo iniziale di esercizio delle applicazioni;
+        assistenza operativa agli utenti per l’uso appropriato delle funzioni secondo le modalità previste nei
+         manuali d’uso o help on line;
+
+
+
+31
+        assistenza specialistica agli utenti su tematiche funzionali/amministrative per la risoluzione di
+         problemi;
+        assistenza nell’interpretazione delle norme d’uso, attivando se necessario i progettisti del sistema o
+         gli esperti sulla tematica;
+        supporto specialistico di assistenza per le applicazioni in esercizio;
+        interrogazioni delle basi di dati.
+
+Le attività di manutenzione correttiva, svolte in periodo di validità della garanzia, sono da intendersi a totale
+carico dell’Affidatario, compresi gli interventi di aggiornamento e di allineamento della documentazione e delle
+componenti a corredo impattate dall’intervento. In tutti i casi, la garanzia deve comprendere almeno
+l’intervento on site e la manodopera.
+
+Nel dimensionamento del servizio MAC l’Affidatario dovrà prevedere:
+
+        la predisposizione mensile di report statistici finalizzati ad evidenziare:
+              o   l'elenco delle inoperatività/malfunzionamenti riscontrati;
+              o   traffico di utilizzo della piattaforma con i tempi di permanenza nelle singole sezioni (usabilità
+                  dello strumento);
+              o la rilevazione analitica dell'attività di manutenzione effettuata (sia ordinaria che
+                  straordinaria), con l'evidenza dei tempi di intervento e di ripristino dei malfunzionamenti;
+              o l'esecuzione periodica degli interventi di manutenzione ordinaria riguardanti tutte le
+                  componenti del sistema precedentemente elencate;
+        la predisposizione mensile, di "note evolutive" attraverso le quali dovranno essere illustrati gli
+         interventi da apportare al software applicativo ed alle eventuali espansioni hardware che allo scopo si
+         ritenessero necessarie;
+        l'esecuzione degli interventi di manutenzione straordinaria, da attivarsi a seguito di richieste utente
+         ricevute e gestite dal sistema di Help-Desk.
+
+Il servizio dovrà essere espletato in accordo con un "Piano di Manutenzione adeguativa e correttiva" da
+prodursi come parte integrante dell'offerta tecnica fornendo i relativi curricula professionali, il numero di
+risorse professionali che compongono il team dedicato, fermo restando che tali risorse possono essere
+impiegate in tutto o in parte in relazione alle esigenze di manutenzione ed alla pianificazione condivisa con il
+Fondo.
+
+Il "Piano di Manutenzione adeguativa e correttiva" deve contenere almeno:
+
+        la descrizione delle attività di manutenzione ordinaria, con l'indicazione analitica delle operazioni
+         previste per ciascuna delle componenti indicate e della periodicità di esecuzione di tali operazioni;
+        la descrizione delle modalità di gestione delle chiamate di assistenza per interventi di manutenzione
+         straordinaria, nonché gli accorgimenti che l’Affidatario intende adottare per garantire i livelli di
+         servizio indicati nel prosieguo del presente Capitolato;
+        la struttura dei reports statistici finalizzati a facilitare il controllo e la verifica, da parte del Fondo, delle
+         attività svolte dall’Affidatario nonché dei livelli di servizio erogati dal sistema;
+        i livelli di servizio offerti.
+
+
+
+
+32
+6.3 - Servizio di Hosting
+Il servizio richiesto dovrà assicurare la completa realizzazione e gestione dell’infrastruttura HW (hardware) su
+cui sono implementate la piattaforme UNICAFONDIR e UNICAFONDIR2.0. Dovrà garantire le caratteristiche
+dell’attuale servizio (descritte al paragrafo 4.6), prevedere e tollerare gli eventuali upgrade delle risorse
+necessarie a supportare le implementazioni derivanti dalle attività MEV e MAC.
+
+È inoltre richiesto un servizio di conduzione tecnica, riguardante la gestione operativa dei sistemi, delle
+applicazioni installate, degli application server e delle basi di dati e di tutti gli ambienti software installati
+nell’ambiente di hosting.
+
+Nel “Piano di Subentro” è richiesto di dettagliare le modalità e i tempi di realizzazione e di acquisizione
+dell’ambiente virtuale e del sistema complessivamente.
+
+6.4 - Servizio di HELP-DESK
+Il servizio di Help Desk (HD) è destinato al personale del Fondo per la segnalazione di anomalie e la richiesta di
+interventi correttivi al sistema informativo.
+
+Il servizio deve essere configurato (risorse umane, tecniche e tecnologiche) secondo le normative vigenti in
+materia di lavoro e sicurezza. Devono inoltre essere previsti backup periodici delle informazioni raccolte, per il
+ripristino in caso di guasti o malfunzionamenti della strumentazione di supporto.
+
+Il sistema di HD dovrà utilizzare un sistema di Trouble Ticketing, la cui implementazione è a carico dell’offerente,
+costituito da un software gestionale predisposto per la registrazione degli eventi di contatto (ticket e e-mail) e
+la costruzione di un database con le domande e le risposte più frequenti.
+
+Al fine di razionalizzare l’utilizzo del sistema di Help Desk è fondamentale adottare strategie utili a formare ed
+informare preventivamente gli utenti sulle funzionalità delle procedure realizzate, in particolare:
+
+        integrare nei prodotti adeguata manualistica che deve essere facilmente accessibile;
+        creare un’area di FAQ (Frequently Asked Questions) in cui l’utente può autonomamente trovare
+         risposte e soluzioni alle domande più frequenti;
+        includere materiale formativo, anche multimediale (video, tutorial, slides…), che descriva in maniera
+         esaustiva le funzionalità dei prodotti;
+
+Le modalità di accesso al servizio help desk sono:
+        invio di richiesta di assistenza tramite email generata da form presente su un sistema di ticketing;
+        account e-mail dedicato (es: assistenzafondir@XXXX.it).
+
+Il servizio deve prevedere anche la disponibilità di un presidio tecnico sistemistico di primo livello per un
+impegno pari a 1 FTE settimanale ripartito in 0.5 FTE in sede, presso il Fondo, e 0.5 FTE in remoto, per tutta
+la durata del contratto di affidamento.
+
+Il suddetto presidio tecnico sistemistico si occuperà di:
+        gestire il sistema informativo interno e documentale CMS su piattaforma Microsoft SharePoint, ivi
+         compresa attività di integrazione con la Piattaforma UNICAFONDIR;
+        risolvere le problematiche anche intervenendo se necessario da remoto tramite connessione VPN;
+        assistere gli uffici relativamente alla configurazione e gestione del sistema informatico;
+
+
+
+
+33
+        fornire contributo tecnico agli acquisti IT del Fondo e, su richiesta del Fondo, interfacciarsi con i
+         fornitori per la parte IT;
+        fornire supporto per l’elaborazione di reportistica anche attraverso la creazione ed integrazione dei
+         collegamenti ETL informativi tra piattaforme esistenti;
+        gestire e verificare la corretta creazione dei backup dei dati, sia della parte LAN che in cloud;
+        governare il sistema telefonico PBX;
+        partecipare ad incontri e gruppi di lavoro per il relativo contributo tecnico sistemistico, ove richiesto
+         dal Fondo.
+
+
+Sono quindi richieste le seguenti esperienze consolidate:
+        esperienza su processi di finanziamento e rendicontazione dei progetti finanziati da Autorità di
+         gestione e/o fondi interprofessionali;
+        esperienza di System e Network Engineer per la gestione/manutenzione correttiva ed evolutiva
+         relativamente alla configurazione e gestione dei backup aziendali del sistema informatico aziendale;
+        esperienza su configurazione e gestione di basi dati e hosting nell’ambito di sistemi complessi;
+        comprovata esperienza su gestione/manutenzione sia correttiva che evolutiva sul sistema informativo
+         documentale basata su piattaforma Microsoft SharePoint;
+        Programmazione/Gestione/manutenzione di specifici software in ambiente Microsoft;
+        Gestione/manutenzione di System e Network Engineer per la gestione/manutenzione correttiva ed
+         evolutiva relativamente alla configurazione e gestione dei backup aziendali del sistema informatico.
+
+
+
+
+34
+7. FIGURE PROFESSIONALI E GRUPPO DI LAVORO
+
+7.1 - Gruppo di progetto
+Per tutte le attività previste oggetto della presente procedura dovranno essere impiegate figure professionali
+adeguate in termini di competenze e numerosità per la realizzazione delle attività progettuali. Tali figure
+devono far parte di uno o più gruppi di lavoro di cui l’Affidatario si impegna a fornire i profili professionali,
+documentati dai curricula da allegare all’offerta tecnica, con l’indicazione del numero di unità impiegate per
+ciascuno di essi.
+
+Essendo opportuna la presenza continuativa dello stesso personale per tutta la durata della fornitura, le
+eventuali sostituzioni di personale durante l’esecuzione della medesima dovranno essere concordate
+preventivamente con il Direttore dell’esecuzione, dietro presentazione ed approvazione dei curricula, nel
+rispetto dei requisiti indicati per ciascuna figura professionale. La sostituzione richiederà un adeguato periodo
+di affiancamento per la risorsa entrante, il cui costo sarà interamente a carico dell’Affidatario.
+
+Come parte integrante dell’offerta tecnica deve essere fornita, nel “Piano dell’organizzazione dei gruppi di
+lavoro”, contenente un’accurata descrizione dell’organizzazione delle risorse umane in relazione ai singoli
+servizi ed alla gestione complessiva del progetto, corredata dai curricula delle risorse messe a disposizione.
+
+Eventuali sostituzioni di risorse dovranno essere preventivamente autorizzate dal Fondo e comunque sostituite
+con profili professionali uguali o superiori.
+
+7.2 - Profili professionali richiesti
+Le figure professionali necessarie per lo svolgimento dei servizi applicativi dovranno aderire ai profili di seguito
+descritti. I curricula delle figure professionali da impiegare nei vari servizi dovranno essere resi disponibili al
+Committente secondo quanto previsto dal capitolato e dal contratto, rispettando lo schema di CV Europeo. In
+ogni caso, dovranno essere particolarmente dettagliate le competenze, conoscenze, esperienze tecniche al fine
+di verificare la corrispondenza con il livello di approfondimento richiesto.
+
+7.2.1 - REQUISITI GENERALI.
+Di seguito si riporta un elenco non esaustivo delle competenze tecniche e le principali competenze trasversali
+e normative. Il livello di conoscenza per ogni figura professionale richiesta è riportato nelle relative schede che
+compaiono nei paragrafi successivi.
+
+METODOLOGIA E TECNICHE:
+
+        Analisi, Disegno e Programmazione ad Oggetti (OOA);
+        Analisi, Disegno e Programmazione per Servizi (SOA);
+        Analisi, Disegno e Programmazione per basi di dati e flussi transazionali;
+        Analisi, Disegno e Progettazione Web;
+        Testing del software prodotto (test unitari, test di integrazione e test di sistema) per garantire gli
+         aspetti funzionali, qualitativi del codice, di efficienza (prestazione e carico), di accessibilità, di usabilità
+         e di sicurezza.
+
+
+TECNOLOGIE E STRUMENTI:
+
+        Piattaforme e strumenti di sviluppo e testing del software;
+        Sistemi di configuration e versioning di programmazione;
+
+
+35
+        DBMS relazionali;
+        Piattaforma Microsoft;
+        Piattaforma Linux;
+        Strumenti di modellazione dati;
+        Sistemi di Business Intelligence, OLAP e ROLAP, e processi ETL;
+        Prodotti per analisi e statistiche e data mining;
+        Sistemi Documentali;
+        Web server e Application server;
+        Sistemi di CMS;
+        Prodotti di Office Automation;
+        Prodotti di grafica e grafica Web;
+        Tecnologie di virtualizzazione;
+        Sistemi di cloud computing;
+        Sistemi di Identity and Access Management;
+        Strumenti di crittografia, firma digitale, firma digitale remota, firma elettronica, firma elettronica
+         avanzata, marche temporali, e sicurezza.
+LINGUAGGI, FRAMEWORK ED AMBIENTI DI PROGRAMMAZIONE:
+
+        J2EE, JAVA;
+        ASP, ASP.NET, VB.Net, C#;
+        SQL Server, MySql, SQL;
+        PHP, Access, CGI, PERL;
+        Html, CSS;
+        XML / WSDL / WSS / XSLT;
+        Javascript, Ajax, jQuery, Bootstrap.
+COMPETENZE TRASVERSALI:
+
+        Conoscenza della disciplina IT Service Management in generale;
+        Tecniche e metodi di gestione e controllo dei progetti informatici.
+
+7.2.2 - PIANO DI IMPIEGO DELLE FIGURE PROFESSIONALI
+L’Affidatario dovrà garantire l’impiego di figure professionali adeguate in termini di competenze e numerosità.
+Il gruppo di lavoro dovrà comprendere necessariamente almeno una figura per ognuno dei seguenti profili
+professionali:
+
+        Capo progetto
+        Analista funzionale
+        Programmatore senior
+        Programmatore junior
+        Visual Web Designer
+        Database and System Administrator
+        Presidio tecnico sistemistico Help Desk
+
+Le conoscenze indicate nei prospetti delle diverse figure professionali devono essere presenti nel complesso
+delle risorse professionali richieste dal Committente sulle diverse attività e/o servizi e non in un’unica persona.
+Si precisa inoltre che:
+
+
+
+36
+        per cultura equivalente si considerano generalmente 5 anni aggiuntivi di esperienza professionale
+         nell’ambito dei servizi applicativi di cui almeno 2 aggiuntivi nel ruolo specifico;
+        per laurea si intende la laurea specialistica/magistrale o quella vecchio ordinamento a ciclo unico (od
+         equivalenti titoli, anche stranieri);
+        in caso di laurea triennale, occorre considerare almeno 2 anni aggiuntivi di esperienza lavorativa;
+        le certificazioni, ove richieste, sono da intendersi in corso di validità alla data di presentazione dei
+         profili professionali;
+        per tutti i profili professionali, è richiesta un’ottima conoscenza della lingua italiana e la conoscenza di
+         strumenti di Office Automation.
+
+Si precisa che le risorse che saranno effettivamente poste a disposizione dovranno essere le medesime a cui si
+riferiscono i curricula proposti nell’Offerta Tecnica, salvo sopravvenute cause di forza maggiore, che dovranno
+essere tempestivamente comunicate.
+
+Le prestazioni dovranno essere erogate da figure professionali competenti e formate in materia, esperte in
+ambito ICT, datacom e a livello applicativo. Nell’offerta tecnica è richiesto di indicare, se presente, la
+numerosità di personale certificato e i relativi dettagli sulle certificazioni.
+
+Al fine di dimensionare la composizione delle risorse dei gruppi di lavoro e la qualità del mix di profili, è richiesto
+di indicare nell’offerta tecnica la stima delle giornate di utilizzo nel triennio dei singoli profili professionali per
+ciascun servizio.
+
+Nell’ambito del servizio MEV, i gruppi di lavoro messi a disposizione dovranno prevedere un organico minimo
+di 6 persone ed è richiesto di rispettare i limiti % massimi e minimi di seguito indicati:
+
+                                            Tabella 7.1
+
+                             Profilo                                  Percentuale utilizzo
+                                                             Minimo                   Massimo
+           Capo progetto                                        5%                       10%
+           Analista funzionale                                 15%                       35%
+           Programmatore senior                                20%                       40%
+           Programmatore junior                                20%                       30%
+           Visual Web Designer                                  5%                       10%
+           Database and System Administrator                    5%                       10%
+
+
+
+
+Le caratteristiche e i requisiti dei suddetti profili sono elencate nelle seguenti tabelle:
+
+
+
+
+37
+Capo progetto
+      Titolo di studio   Laurea in discipline tecniche o cultura equivalente
+
+
+      Ruolo              Gestisce e coordina le risorse che lavorano sul progetto (di cui conosce skills,
+                         specializzazioni ed attitudini), assicurandone il committment e la condivisione
+                         degli obiettivi; svolge attività di program management affiancandosi ad una
+                         risorsa del Fondo e fornendo stati di avanzamento delle attività progettuali.
+
+                         Si fa portatore delle problematiche rilevate nel corso del progetto, propone
+                         opportune soluzioni e intraprende, d’accordo con il Fondo le necessarie azioni
+                         correttive anche per quanto riguarda gli aspetti connessi al sistema informatico.
+                         Sarà inoltre il referente per tutti gli aspetti contrattuali.
+
+
+      Anzianità          Almeno 10 anni nella funzione o come responsabile di progetti complessi.
+      lavorativa         È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+      Esperienze                Comprovata esperienza nella gestione della relazione istituzionale,
+      consolidate                organizzativa e contrattuale;
+                                Esperienza nella gestione di progetti complessi in area IT;
+                                Comprovata esperienza nella gestione e nel coordinamento di risorse
+                                 umane;
+                                Comprovata esperienza nella stima delle risorse per la realizzazione di
+                                 attività;
+                                Comprovata esperienza nell’uso di metodologie e strumenti di project e
+                                 program management e nella redazione della documentazione di
+                                 progetto in realtà di grandi dimensioni;
+                                capacità di redazione di diagrammi di Gantt.
+
+      Conoscenze,               Spiccate capacità relazionali, capacità di gestione del cliente e di risorse
+      competenze e               umane, facilità di comunicazione per poter gestire attività caratterizzate
+      capacità                   dalla continua interazione con il personale e con la dirigenza;
+                                Conoscenze approfondite di metodologie e tecniche di project e risk
+                                 management;
+                                Conoscenze approfondite di standard e tecniche per la gestione della
+                                 qualità di progetto;
+                                Autorevolezza e comprovata esperienza in progetti di grandi dimensioni;
+                                Ottima conoscenza dei processi di change management.
+
+      Certificazioni     PRINCE2 o PMI o IPMA
+
+      (requisito
+      opzionale)
+
+
+
+
+38
+Analista funzionale
+       Titolo di studio   Laurea in discipline tecniche o cultura equivalente
+
+
+       Ruolo              Si fa portatore della propria conoscenza relativamente a:
+
+                                 Metodologie di analisi dei processi
+                                 Metodologie di analisi e disegno di prodotti SW
+                                 Metodologie di analisi e disegno dati
+                                 Tecniche di controllo di progetto e di programmazione strutturata
+                                 Tematiche applicative amministrativo-contabili
+                                 Tecniche di modellazione dati
+
+       Anzianità          Minimo 10 anni di cui almeno 7 nella funzione.
+       lavorativa         È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+       Esperienze                Esperienza nella gestione di progetti in area IT; comprovata esperienza
+       consolidate                nell’analisi, progettazione e reingegnerizzazione di processi e modalità di
+                                  erogazione del servizio;
+                                  Comprovata esperienza nell’analisi e disegno dei dati;
+                                 Comprovata esperienza nella gestione e coordinamento di gruppi di
+                                  lavoro.
+
+       Conoscenze,               Tecniche di modellazione e integrazione dati;
+       competenze e              Capacità di comprendere i processi di business e proporre soluzioni
+       capacità                   innovative;
+                                 Capacità di lavorare in modo efficace in tutti i livelli e di ottenere
+                                  consenso;
+                                 Capacità a delineare la migliore strategia di azione, individuando i rischi e
+                                  superando le criticità;
+                                 Capacità di gestire le diverse fasi del ciclo di vita dello sviluppo software
+                                  di sistemi;
+                                 Capacità di raccogliere e sistematizzare i requisiti di progetto e/o di
+                                  Obiettivo, producendo analisi di dettaglio formalizzate in documenti e
+                                  rapporti scritti di elevata qualità, tenendo conto di metodologie standard
+                                  (UML, etc.);
+                                 Capacità ed esperienze di formazione e comunicazione;
+                                 Ottima conoscenza delle tematiche legate ad architetture complesse, con
+                                  particolare riguardo alle soluzioni di integrazione tra tecnologie legacy e
+                                  tecnologie open.
+
+
+
+
+39
+Programmatore senior
+      Titolo di studio   Laurea in discipline tecniche o cultura equivalente.
+
+
+      Ruolo              È in grado di avere una completa autonomia nello sviluppo, nella preparazione ed
+                         esecuzione di casi di test di unità, nella preparazione di documentazione di
+                         programmi.
+
+                         Partecipa alla stesura di specifiche tecniche. Partecipa a gruppi di progetto di
+                         medie dimensioni.
+
+
+      Anzianità          Minimo 10 anni di cui almeno 7 nella funzione.
+      lavorativa
+                         È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+      Esperienze                 Esperienza di analisi, disegno e, Object Oriented e Service Oriented; J2EE
+      consolidate                 /JAP
+                                 Qualifica professionale Analista Programmatore;
+                                 Redazione di documentazione di progetto;
+                                 Verifica della corretta applicazione di metodi e standard e nell’accurata
+                                  documentazione di procedure;
+                                 Esperienza nella programmazione e nella preparazione, esecuzione di
+                                  test;
+                                 Partecipazione a gruppi di progetto di medie/grandi dimensioni.
+
+      Conoscenze,                Tecniche di programmazione Object Oriented e Service Oriented;
+      competenze e               Metodologie di disegno di prodotti software;
+      capacità                   Ottima conoscenza dei sistemi operativi Windows e Unix;
+                                 Capacità di progettare l'accessibilità, l'usabilità, e la coerenza grafica del
+                                  prodotto realizzato; capacità di organizzare l'esecuzione di test di
+                                  usabilità del prodotto;
+                                 Tecniche di realizzazione di Applicazioni Web, Web Services;
+                                 Conoscenza di: Java, HTML/XHTML, XML, XSL, SQL, JavaScript;
+                                 Installazione e personalizzazione di sistemi anche complessi;
+                                 Progettazione ed integrazione di sistemi;
+                                 Ottima conoscenza di SQL, e dei principali RDBMS in uso: e MySql;
+                                 Scrittura di documentazione, manualistica e procedure operative relative
+                                  alla soluzione sviluppata;
+                                 capacità di redazione di documentazione tecnica del software sviluppato;
+                                 Strumenti di Office automation.
+
+
+
+
+40
+Programmatore junior
+      Titolo di studio   Diploma in discipline tecniche.
+
+
+      Ruolo              È in grado di sviluppare nei linguaggi di programmazione richiesti. Partecipa a
+                         gruppi di progetto di medie dimensioni.
+
+
+      Anzianità          Minimo 3 anni.
+      lavorativa
+                         È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+      Esperienze                 Esperienza di analisi, disegno e programmazione Object Oriented e
+      consolidate                 Service Oriented;
+                                 Verifica della corretta applicazione di metodi e standard e nell’accurata
+                                  documentazione di procedure;
+                                 Esperienza nella programmazione;
+                                 Partecipazione a gruppi di progetto di medie/grandi dimensioni.
+
+      Conoscenze,                Tecniche di programmazione Object Oriented e Service Oriented;
+      competenze e               Ottima conoscenza dei sistemi operativi Windows e Unix;
+      capacità
+                                 Tecniche di realizzazione di Applicazioni Web, Web Services;
+                                 Conoscenza di: Java, HTML/XHTML, XML, XSL, SQL, JavaScript;
+                                 Ottima conoscenza di SQL, e dei principali RDBMS in uso: MS SQL Server
+                                  e MySql;
+                                 Strumenti di Office Automation.
+
+
+
+
+41
+Visual Web Designer
+
+      Titolo di studio       Laurea in discipline tecniche o cultura equivalente.
+
+
+      Ruolo                  Esperto di applicazioni web, multimediali e mobile, con particolare attenzione alla
+                             comunicazione web.
+
+                             Progetta e definisce le specifiche per lo sviluppo e la gestione di siti ed applicazioni
+                             multimediali; responsabile del disegno creativo (scelta immagini ed animazioni) e delle
+                             valutazioni di usabilità e accessibilità, oltre che da un approccio strutturato
+                             all'amministrazione e alla pubblicazione.
+
+
+      Anzianità lavorativa   Minimo 6 anni di cui almeno 2 nella funzione.
+
+                             È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+      Esperienze                     Responsabilità di iniziative per definire ex-novo il “concept” e la digital identity
+      consolidate                     (grafica) di portali/siti web;
+                                     Coordinamento risorse, in progetti di medie/grandi dimensioni, coinvolte nella
+                                      gestione delle tappe creative di un progetto multi/piattaforma;
+                                     Analisi, disegno, progettazione in ambito di layout grafico di siti web usabili e
+                                      accessibili, architettura dell’informazione, comunicazione web, approccio web 2.0;
+                                     Predisposizione di piani di comunicazione per lancio e la gestione di portali/siti web
+                                      e per specifici eventi;
+                                     Coordinamento di produzioni audio, video ed editing multimediale.
+
+      Conoscenze,                    una profonda conoscenza delle tecnologie e dei sistemi web;
+      competenze e                   Ottima conoscenza nel disegno dell’architettura dell’informazione e nella creazione
+      capacità                        della struttura generale di un sito;
+                                     Buone capacità nel controllare l'aspetto visivo di un sito web, valorizzando l'identità
+                                      del marchio e coniugando aspetto estetico ad agibilità di navigazione;
+                                     Buona conoscenza dei linguaggi ed ambienti di editing per il supporto nella
+                                      pubblicazione: in particolare HTML/XHTML, CSS, Ajax, Javascript, bootstrap, jQuery;
+                                     Ottima conoscenza di pacchetti grafici;
+                                     Ottima conoscenza, a livello operativo, delle metodologie e tecniche per la verifica
+                                      e la misura di usabilità e accessibilità;
+                                     Buona conoscenza ambienti operativi Windows e Mac;
+                                     Ottima conoscenza delle tecniche di intervento per l’implementazione, la
+                                      ristrutturazione e l’ottimizzazione grafica di siti, portali od applicazioni web
+                                      preesistenti.
+
+
+
+
+42
+Database e System Administrator
+      Titolo di studio       Laurea in discipline tecnico-scientifiche o cultura equivalente.
+
+
+      Ruolo                  È responsabile della progettazione, creazione, implementazione, gestione, manutenzione e
+                             supporto di basi di dati complesse.
+
+                             Relativamente alla componente DATI, possiede la capacità di analizzare i requisiti tecnici
+                             richiesti, di scegliere ed integrare le architetture più idonee, di configurare ed ottimizzare i
+                             sistemi, di implementare la strategia di sicurezza e recovery per i dati, di realizzare tutta la
+                             documentazione tecnica di supporto.
+
+                             Coordina tutte le attività di progettazione, design ed amministrazione di hosting e database,
+                             compreso estrapolazione e trattamento dei dati, disaster recovery e ottimizzazione delle
+                             performances.
+
+
+      Anzianità lavorativa   Minimo 10 anni, di cui almeno 5 nella funzione.
+
+                             È apprezzata la conoscenza del contesto operativo dei fondi interprofessionali.
+
+
+      Esperienze                     Partecipazione a gruppi di progetto di medie/grandi dimensioni
+      consolidate                    Analisi, progettazione, configurazione e gestione di basi dati e hosting nell’ambito
+                                      di sistemi complessi
+                                     Monitoraggio e tuning di basi dati
+                                     Analisi impatti attività di business per definire/modificare basi dati
+                                     Identificazione con i gruppi di gestione applicativa delle più appropriate strategie di
+                                      uso di dati e data base
+                                     Realizzazione e controllo di procedure complesse
+                                     Progettazione e conduzione di test integrati
+                                     Redazione di specifiche di progetto
+
+      Conoscenze,                    Gestione, ottimizzazione e progettazione di RDBMS
+      competenze e                   Concetti, tecniche, sistemi e prodotti per la gestione dei dati e dei data-base fisici
+      capacità                       Architetture di Data Base in ambiente eterogenei
+                                     Architetture dati complesse (distribuzione e replicazione a livello locale e
+                                      geografico)
+                                     Data modeling
+                                     Tecniche di disegno di DB applicativi e DB conoscitivi
+                                     Tecniche di gestione di dizionari dati aziendali e, più in generale, delle informazioni
+                                      aziendali
+                                     Tecniche di Integrazione di dati provenienti da sistemi diversi
+                                     Data quality measurement and assessment
+                                     Buona conoscenza dei principali WEB server e Application Server
+                                     Ottima conoscenza di MySQL e MS Sql Server
+
+
+
+
+43
+44
+8. SUBENTRO, RILASCIO A TERMINE SERVIZIO E AFFIANCAMENTO
+
+8.1 - Subentro
+Il subentro consiste nella presa in carico del software di base e applicativo del sistema informativo nonché del
+servizio di manutenzione correttiva, di implementazione e conduzione del servizio di hosting. Le attività di
+subentro devono partire alla stipula del contratto, devono durare al massimo due mesi e devono essere svolte
+secondo un dettagliato “Piano di subentro” fornito come parte integrante dell’offerta tecnica.
+
+Per favorire la continuità del servizio sarà disponibile, per un periodo massimo di due mesi un servizio di
+affiancamento per subentro da parte del precedente Affidatario che, in tal caso, assicura il supporto per
+garantire, per tale periodo, i servizi di conduzione del sistema, di manutenzione correttiva e di hosting,
+affiancando con proprio personale le risorse professionali dell’aggiudicatario (nuovo Affidatario) per consentire
+l’acquisizione delle informazioni tecniche ed operative necessarie per realizzare al meglio il subentro nella
+conduzione dei servizi.
+
+8.2 - Rilascio (Termine del servizio)
+Il Rilascio al termine del servizio comprende tutte le attività necessarie per trasmettere al personale del Fondo
+(o al personale di altro Affidatario subentrante) tutte le informazioni acquisite nel corso dell'esecuzione del
+servizio, nonché quant'altro, anche a livello documentale, risulti necessario per garantire la regolare
+prosecuzione dei servizi.
+
+L’Aggiudicatario (nuovo Affidatario entrante) si impegna a prestare il massimo supporto e collaborazione per
+consentire al Fondo o a terzi di subentrare all’Aggiudicatario stesso nell’appalto del servizio di implementazione
+ed evoluzione del sistema informativo.
+
+L’Aggiudicatario si impegna inoltre a consegnare in modo collaborativo i codici sorgente, i dati e le procedure
+e tutta la documentazione di progetto e delle applicazioni oggetto del passaggio di consegne in formato
+pienamente utilizzabile, nonché le conoscenze maturate e le informazioni necessarie o utili a tale scopo,
+mettendo a disposizione del Fondo, e/o a terzi da questo designati, il proprio personale incaricato della
+gestione nel mese di rilascio, al fine di consentire al subentrante il mantenimento dei livelli di servizio richiesti
+dal presente capitolato.
+
+Tutte le attività che saranno svolte in questa fase non dovranno in alcun modo gravare sull’operatività delle
+risorse umane e tecnologiche impiegate, né sui livelli di servizio. Inoltre, tale fase non comporterà ulteriori
+oneri economici per il Fondo.
+
+In particolare, l’Aggiudicatario, per un periodo di due mesi dalla fine della durata contrattuale, si impegna a:
+
+        affiancare il personale della nuova gestione;
+        rendere disponibili tutte le risorse professionali, di adeguato profilo ed esperienza, necessarie a
+         garantire il predetto affiancamento ed il completo passaggio di consegne;
+        trasferire eventuali servizi ricevuti da terzi per consentire lo svolgimento delle attività;
+        trasferire i codici sorgente, il disegno dei database e degli applicativi modificati, i diagrammi entità
+         relazioni aggiornati, le modiche effettuate al disegno dei dati, i dati in formato pienamente utilizzabile,
+         tutti gli allegati utilizzati o riferiti dall’attività in carico, le procedure e la documentazione prodotta e/o
+         gestita nel corso dell’appalto.
+
+
+
+
+45
+Le suddette attività devono essere svolte secondo un dettagliato “Piano di affiancamento a fine contratto”
+fornito come parte integrante dell’offerta tecnica.
+
+
+
+9. CONDIZIONI E TERMINI DI ESPLETAMENTO DELLE ATTIVITA’
+Tutti i servizi dovranno essere svolti dall’Aggiudicatario della gara in stretto collegamento con i funzionari
+indicati dal Fondo che dovranno essere messi in grado di seguire i lavori in modo puntuale. In particolare, tutte
+le attività̀ da realizzare e relative tempistiche dovranno essere concordate con il Committente.
+
+La determinazione dei corrispettivi prevede le seguenti modalità di valorizzazione contrattuale:
+
+          a canone, con corrispettivo fisso a fronte di una prestazione definita e nel rispetto di un altrettanto
+           predefinito livello di servizio;
+          a consumo, con individuazione di task realizzativi soggetti a specifica valutazione di impegno
+           professionale ed economica, a scalare da una disponibilità budgetaria predefinita.
+
+
+Di seguito la modalità adottata in funzione del tipo di servizio:
+
+
+                                                               Tipo            Importo          Importo massimo a
+                             Servizio                      corrispettivo      massimo (*)         base d’asta (*)
+
+
+     Sviluppo e Manutenzione Evolutiva (MEV)                 Consumo              350.000 €
+
+     Manutenzione Adeguativa e Correttiva (MAC)               Canone              120.000 €
+                                                                                                     585.000 €
+     Servizio di Help Desk                                    Canone               80.000 €
+
+     Servizio di Hosting                                      Canone               35.000 €
+
+
+
+(*) Gli importi sono riferiti ai primi 36 mesi di contratto, rinnovabili per ulteriori 24 mesi alle stesse condizioni
+economiche
+
+Per i servizi MAC e HOSTING, i corrispettivi a canone verranno remunerati trimestralmente, posticipatamente
+all’esito delle verifiche condotte da parte del Fondo, secondo le modalità previste dallo schema di contratto
+allegato al Disciplinare di gara.
+
+Per il servizio di Help Desk deve essere prevista la disponibilità di un presidio tecnico sistemistico di primo
+livello per un impegno pari a 1 FTE settimanale ripartito in 0.5 FTE in sede presso il Fondo e 0.5 FTE in remoto,
+per tutta la durata del contratto di affidamento.
+
+Per il servizio MEV i corrispettivi a consumo verranno remunerati sulla base delle giornate effettivamente
+erogate dall’Affidatario, che deve fornire al Fondo, con cadenza trimestrale, una Relazione di Avanzamento
+contenente il rapporto sulle attività̀ svolte, i vincoli/criticità rispetto all’andamento delle attività, le risorse
+impiegate per profilo e le relative giornate svolte, al fine di consentire un puntuale monitoraggio
+dell’andamento delle attività e della commessa. I corrispettivi contrattuali saranno calcolati applicando il prezzo
+giornaliero offerto dall’Affidatario per ciascuna figura professionale, come indicato nel modello di offerta
+economica, con il numero di giornate/uomo effettivamente erogate.
+
+
+46
+Per il servizio MEV, la composizione dei gruppi di lavoro, specifica per ogni progetto MEV, dovrà essere
+conforme con le possibili ripartizioni e limiti regolati dalla Tabella 7.1. Si precisa inoltre che per il servizio
+MEV, è stabilita una quota di spesa complessiva resa equivalente a 778 FTE-ref nei 36 mesi del contratto, con
+un utilizzo mensile massimo pari a 22 FTE-ref. L’unità FTE-ref (FTE di riferimento) viene fatta corrispondere
+ad un valore tipico di riferimento per gli FTE del gruppo lavoro, rispetto alle possibili e specifiche
+composizioni dello stesso, che dipendono dalla natura variabile delle attività.
+
+
+
+
+10. DOCUMENTAZIONE DI PROGETTO E DI UTENTE
+Deve essere fornita copia dei sorgenti relativi alle personalizzazioni ed al software applicativo sviluppato. Si
+precisa che il software sviluppato deve contenere un’adeguata documentazione interna, sotto forma di
+commenti.
+
+Deve essere fornita una completa manualistica d’uso personalizzata per ruolo e/o categoria di utenti ed una
+completa guida all’installazione ed alla configurazione; le evoluzioni del sistema comportano l’obbligo di
+adeguare la manualistica.
+
+Tale documentazione deve essere fornita anche in formato elettronico nel repository di progetto predisposto
+dall’Affidatario.
+
+La documentazione dovrà essere relativa all’intero sistema e quindi anche alle parti precedentemente
+implementate pertanto l’Affidatario potrà alternativamente decidere di mantenere lo standard di
+documentazione preesistente o di migrare tutta la documentazione in altri formati e standard che verranno
+successivamente utilizzati durante tutta la durata del contratto.
+
+
+
+
+11. PIANO DELLA QUALITA’
+Come parte integrante dell’offerta tecnica l’Affidatario deve presentare in apposito capitolo il Piano della
+qualità da esso adottato che comprenda ognuno dei servizi oggetto del presente Capitolato con particolare
+riferimento all’organizzazione del processo e del lavoro.
+
+Nella redazione del Piano della Qualità l’Affidatario terrà come guida lo schema di riferimento di seguito
+descritto.
+
+Si chiede di indicare:
+
+        il campo di applicazione (comprese le limitazioni, cioè i casi in cui questo piano non verrà applicato);
+        il Sistema di Gestione della Qualità (SGQ) usato, ad esempio, per la tenuta sotto controllo dei
+         documenti, tenuta sotto controllo delle registrazioni della qualità, le azioni correttive, le azioni
+         preventive, gli audit, altri piani pertinenti (ad esempio: piani di progetto, piani di gestione ambientale,
+         di salute e sicurezza sul lavoro, di sicurezza e di gestione delle informazioni).
+
+Si chiede di indicare i documenti che costituiscono un riferimento per quanto esposto nel Piano della Qualità,
+e le abbreviazioni, acronimi, definizioni che sono utilizzate all'interno del Piano della Qualità.
+
+
+
+
+47
+Si chiede di definire l'organigramma del gruppo di lavoro impegnato nell’espletamento del contratto, di
+indicare i ruoli e le responsabilità di ciascun elemento nell'organigramma mediante una matrice delle
+responsabilità; di descrivere le attività di formazione necessarie per l'espletamento delle attività contrattuali a
+cui l’Affidatario sottoporrà le proprie risorse.
+
+Si chiede di descrivere, da parte dell’Affidatario, gli strumenti per la gestione delle attività progettuali; gli
+strumenti per l'analisi, la progettazione, sviluppo, creazione e generazione del codice; gli strumenti per la
+gestione della configurazione e della documentazione; gli strumenti per la progettazione ed esecuzione delle
+prove del software; gli strumenti per le reti, compreso quelli per la riservatezza, la protezione dai virus, i
+firewall, per le copie di salvataggio; gli strumenti di prima assistenza e di manutenzione.
+
+
+
+
+48
+12. LIVELLI DI SERVIZIO E PENALI
+L'Affidatario deve rendere disponibili al Fondo strumenti idonei all'autonoma rilevazione e verifica dei
+parametri oggetto dei livelli di servizio della fornitura. La rilevazione e la valorizzazione degli indicatori dovrà
+essere effettuata dall'Affidatario e approvata dal Fondo attraverso una costante e puntuale attività di
+monitoraggio dei livelli quantitativi e qualitativi dei servizi erogati.
+
+12.1 - Servizio MAC
+
+
+12.1.1 - Rispetto dei tempi di consegna
+Livello di servizio:   Rispetto dei tempi impiegati dal fornitore nella consegna delle implementazioni
+                       richieste. Il ritardo nella consegna è il tempo in eccedenza rispetto alla data di consegna
+                       concordata tra il Fondo e l’Affidatario.
+
+Unità di misura:       Giorni solari.
+
+Dato rilevato:         Numero di giorni solari o sue frazioni eccedenti necessari al raggiungimento della
+                       consegna di un’implementazione conforme.
+
+Frequenza:             Ad ogni implementazione MAC
+
+Penale prevista:       500 € per ogni giorno di ritardo.
+
+
+
+12.1.2 – Efficacia nell’erogazione del servizio
+Livello di servizio:   Qualità delle consegne delle implementazioni richieste al fornitore.
+
+Unità di misura:       Numero consegne.
+
+Dato rilevato:         Numero di consegne con non conformità bloccanti.
+
+Frequenza:             Ad ogni implementazione MAC.
+
+Penale prevista:       500 € per ogni consegna nella quale viene rilevata almeno una non conformità
+                       bloccante.
+
+
+
+
+49
+12.2 - Servizio MEV
+
+
+12.2.1 – Rispetto dei tempi di consegna
+Livello di servizio:   Rispetto dei tempi impiegati dal fornitore nella consegna delle implementazioni
+                       richieste. Il ritardo nella consegna è il tempo in eccedenza rispetto alla data di consegna
+                       concordata tra il Fondo e l’Affidataria.
+
+Unità di misura:       Giorni solari.
+
+Dato rilevato:         Numero di giorni solari o sue frazioni eccedenti necessari al raggiungimento della
+                       consegna di un’implementazione completamente conforme, al netto dei tempi di
+                       verifica da parte del Fondo.
+
+Frequenza:             Ad ogni implementazione MEV.
+
+Penale prevista:       Il 2% dell’importo pattuito per l’implementazione della MEV per ogni giorno di ritardo,
+                       con un valore minimo di 500 €.
+
+
+
+12.2.2 – Efficacia nell’erogazione del servizio
+Livello di servizio:   Qualità delle consegne delle implementazioni richieste al fornitore.
+
+Unità di misura:       Numero consegne.
+
+Dato rilevato:         Consegna con almeno una non conformità.
+
+Frequenza:             Ad ogni implementazione MEV.
+
+Penale prevista:       5% dell’importo della MEV per ogni consegna sulla quale viene rilevata dal Fondo
+                       almeno una non conformità, con un valore minimo della penale pari a 500 €.
+
+
+
+
+50
+12.3 - Servizio Help Desk
+
+
+12.3.2 – Presa in carico delle segnalazioni
+Livello di servizio:   Rispetto delle tempistiche per la presa in carico delle segnalazioni.
+
+Unità di misura:       Ore solari.
+
+Dato rilevato:         Numero di ore solari o sue frazioni che intercorrono tra l’invio della segnalazione da
+                       parte del Fondo e la ricezione della conferma di presa in carico.
+
+Frequenza:             Ad evento.
+
+Penale prevista:       50 € per ogni ora o frazione di ora superiore alle 2 ore.
+
+
+
+12.3.2 – Rispetto delle tempistiche di risoluzione delle segnalazioni riferibili ai servizi MAC e
+Hosting
+Livello di servizio: Rispetto delle tempistiche per la risoluzione delle problematiche in base alla classificazione
+                         di seguito definita:
+
+                          Classificazione malfunzionamento         Tempo massimo di
+                          (*)                                      intervento/ripristino
+                          Bloccante                                      4 ore solari
+                          Non bloccante critico                          8 ore solari
+                          Non bloccante non critico                   16 ore lavorative
+
+
+Il tempo di risoluzione viene calcolato a partire dalla data e ora di presa in carico della segnalazione.
+
+Unità di misura:       Ore solari / lavorative
+
+Dato rilevato:         Numero di ore solari/lavorative eccedenti le soglie temporali sopra definite
+
+Frequenza:             Ad evento
+
+Penale prevista:       Per i malfunzionamenti bloccanti 500 € per ogni ora solare eccedente le 4 ore
+
+                       Per i malfunzionamenti non bloccanti critici 200€ per ogni ora solare eccedente le 8 ore
+
+                       Per i malfunzionamenti non bloccanti non critici 20 € per ogni ora lavorativa eccedente
+                       le 16 ore
+
+(*)Con il termine “Bloccante” si identificano tutte le eventuali anomalie che direttamente o indirettamente
+comportano il blocco o la non disponibilità di una o più funzionalità o servizi rispetto alle esigenze di una
+qualsiasi delle categorie di utenti.
+
+Con il termine “Non Bloccante Critico” si identificano tutte le eventuali anomalie che comportano la
+disponibilità parziale e/o con prestazioni degradate di una o più funzionalità o servizi in alcune componenti
+ritenute critiche dal Fondo
+
+Con il termine “Non Bloccante non Critico” si identificano, per esclusione, tutte le eventuali anomalie che non
+rientrano nelle precedenti categorie.
+
+
+
+
+51
+12.4 - Servizio Hosting
+
+
+12.4.1 – Uptime dell’infrastruttura
+Livello di servizio:   Questo indicatore viene utilizzato per valutare la disponibilità generale di tutti i servizi
+                       di hosting a livello di infrastruttura
+
+Unità di misura:       Ore solari
+
+Dato rilevato:         Numero di ore o frazioni di queste nelle quali i servizi di hosting non sono disponibili.
+                       Sarà considerata condizione di indisponibilità il verificarsi di almeno una delle seguenti
+                       condizioni:
+
+                        Indisponibilità delle risorse di rete, sia pubbliche che private, alle VM o ai servizi
+                         PaaS;
+                        Indisponibilità delle risorse computazionali alle VM o dei servizi PaaS;
+                        Indisponibilità dello storage su cui sono istanziate le VM o utilizzato dalle VM.
+
+Frequenza:             Mensile
+
+Penale prevista:       Per ogni ora solare o frazione di questa di indisponibilità saranno corrisposti 500 €
+
+
+
+12.4.2 –Backup dei dati
+Livello di servizio:   Questo indicatore viene utilizzato per valutare l'efficacia della soluzione di backup
+                       proposta nell’Offerta tecnica
+
+Unità di misura:       Errori nei backup dei dati
+
+Dato rilevato:         Numero di giorni solari, compatibilmente con le politiche di ritenzione, per i quali le
+                       copie di backup non sono reperibili o ripristinabili completamente
+
+Frequenza:             Trimestrale
+
+Penale prevista:       10.000 € per ogni giorno solare o sua frazione per il quale le copie di backup non sono
+                       reperibili o completamente rispristinabili
+
+
+
+
+52
+13. STRUTTURA DELL’OFFERTA TECNICA
+L’offerta tecnica dovrà essere redatta secondo l’indice indicato e deve rispettare i vincoli qui imposti in termini
+di dimensione.
+
+13.1 - Indice dell’offerta
+Di seguito si riportano i capitoli costituenti l’offerta tecnica:
+
+     1.   PRESENTAZIONE GENERALE DELL’OFFERTA E DEL PROPONENTE
+     2.   ORGANIZZAZIONE DEL GRUPPO DI LAVORO E METODOLOGIE ADOTTATE
+     3.   PIANO DI MANUTENZIONE ADEGUATIVA E CORRETTIVA
+     4.   PIANO DI GESTIONE DEL CICLO DI VITA DEL SOFTWARE
+     5.   PIANO DI EROGAZIONE HOSTING
+     6.   PIANO DI EROGAZIONE DEL SERVIZIO DI HELP DESK
+     7.   PIANO DELLA QUALITA
+     8.   PIANO DI SUBENTRO
+     9.   PIANO DI AFFIANCAMENTO A FINE CONTRATTO
+
+
+L’Affidatario dovrà dimostrare, in una sezione dedicata dal titolo “Sensibilità tecnica, Risk Management e
+flessibilità organizzativa” nel capitolo 2 dell’offerta (ORGANIZZAZIONE DEL GRUPPO DI LAVORO E
+METODOLOGIE ADOTTATE), la sua esperienza e dare prova della sensibilità tecnica rispetto alle tecnologie
+adottate attualmente dal sistema informativo del Fondo, come descritte al capitolo 4 del presente capitolato.
+In particolare, a seguito di un preambolo generale riassuntivo sulla esperienza pregressa su applicazioni, sistemi
+e processi gestionali affini a quelli usati dal Fondo, si richiede un elenco, in forma tabellare, di almeno 7
+problematiche e rischi comuni e ricorrenti che normalmente o previsionalmente affliggono le tecnologie
+attualmente impiegate.
+
+Alla descrizione dei rischi e delle debolezze attese, si associ la descrizione della modalità di riduzione del rischio
+o la metodologia per la rilevazione e risoluzione dei problemi.
+
+13.2 - Limiti di pagina e di formattazione
+L’offerta tecnica, inclusa la copertina e tutte le sezioni di seguito indicate, non deve superare le 70 pagine.
+Devono essere incluse nel conteggio tutte le tabelle, figure, riferimenti e qualsiasi altro elemento che si ritiene
+essenziale e parte integrante di queste sezioni. Unica esclusione sono i curricula delle figure professionali
+impiegate dal Fornitore, che vanno presentati in apposita appendice.
+
+Il limite di pagina verrà applicato automaticamente; pertanto eventuali proposte più lunghe del limite
+specificato, determineranno automaticamente l’esclusione del proponente dalla procedura. Per il conteggio
+del limite delle 70 pagine, valgono le seguenti condizioni di formattazione del documento:
+
+         Il font di riferimento per il testo è Times New Roman (piattaforme Windows), Times/Times New
+          Roman (piattaforme Apple) o Nimbus Roman No. 9 L (distribuzioni Linux).
+
+         L'uso di un carattere diverso per il corpo del testo non è consigliabile ed è soggetto alle condizioni
+          cumulative che il carattere sia leggibile e che il suo utilizzo non riduca significativamente la
+          rappresentazione della proposta in numero di pagine rispetto all'utilizzo del font di riferimento (ad
+          esempio in modo da ignorare il limite delle 70 pagine).
+
+
+
+
+53
+        La dimensione minima consentita (per qualsiasi tipo di font) è di 11 punti. Deve essere usata la
+         spaziatura standard tra i caratteri e la minima interlinea deve essere quella singola (non inferiore).
+
+         Gli elementi di testo diversi dal corpo del testo, ad esempio le intestazioni, le note a piè di pagina/note
+         finali, le didascalie, le formule, possono deviare dal vincolo degli 11 punti di font, ma devono essere
+         leggibili.
+
+        La dimensione della pagina è A4 e tutti i margini (in alto, in basso, a sinistra, a destra) devono essere
+         di almeno 15 mm (non inclusive di intestazioni in alto/basso).
+
+
+
+
+54
+

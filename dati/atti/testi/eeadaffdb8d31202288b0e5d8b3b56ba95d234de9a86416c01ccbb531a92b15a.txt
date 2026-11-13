@@ -1,0 +1,389 @@
+Procedura aperta per la fornitura e posa in opera di una infrastruttura IT decentralizzata in grado di aggiungere
+alle peculiarità tipiche di una soluzione “On Premise”, in termini, di gestione sicura dei dati e ridotta latenza di
+reperimento dei data alle fonti dati, la flessibilità e la scalabilità di una architettura basata sul paradigma cloud
+                       con adeguati servizi di manutenzione per tutta la durata contrattuale
+
+
+
+
+                                CAPITOLATO SPECIALE D’APPALTO
+
+
+
+                       Criterio di aggiudicazione: offerta economicamente più vantaggiosa
+
+    Valore complessivo presunto delle forniture e dei servizi
+                  euro 796.195,08 oltre IVA
+                                                              INDICE
+
+1.    Oggetto, importo a base d’asta e durata della fornitura ................................................................ 3
+
+2.    Descrizione della fornitura richiesta (“TO-BE”) .............................................................................. 3
+
+3.    Requisiti generali dell’hardware ................................................................................................... 5
+
+4.    Requisiti generali per il software .................................................................................................. 5
+
+5.    Requisiti generali per i concorrenti ............................................................................................... 6
+
+6.    Servizi professionali ..................................................................................................................... 6
+
+7.    Help Desk di Primo Livello ............................................................................................................ 8
+
+8.    Collaudo ...................................................................................................................................... 8
+
+9.    Assistenza e manutenzione .......................................................................................................... 8
+
+10.   Rapporti contrattuali ................................................................................................................... 9
+
+11.   Tempi di esecuzione e penali ...................................................................................................... 10
+
+12.   Garanzia definitiva ..................................................................................................................... 10
+
+13.   Modalità di pagamento .............................................................................................................. 10
+
+14.   Anticipazione ............................................................................................................................. 11
+   1.   Oggetto, importo a base d’asta e durata della fornitura
+Premessa:
+Il Politecnico di Bari partecipa a un progetto per il potenziamento di una infrastruttura di ricerca di rilevanza
+regionale chiamata “Airport Test Bed di Grottaglie”, finanziato con fondi stanziati dall’Avviso pubblico emanato in
+attuazione del POR Puglia 2014-2020 (Fondo FESR), Asse I “Ricerca Sviluppo tecnologico ed Innovazione”, Azione
+1.7 “Interventi di sostegno alle infrastrutture della ricerca del sistema regionale” – Progetto Grottaglie Airport Test
+Bed, acronimo “GATB” – Codice A0107.2 – CIG B15D28BAE1 - CUP B37H22006160009
+Obiettivo:
+Il Politecnico di Bari intende dotarsi di una infrastruttura IT in grado di supportare i laboratori che saranno realizzati
+nell’ambito del Progetto, atti alla gestione di soluzioni IT mission critical per il monitoraggio di droni in volo anche
+Unmanned.
+Oggetto:
+L’oggetto della presente offerta è la fornitura e posa in opera di una infrastruttura IT decentralizzata in grado di
+aggiungere alle peculiarità tipiche di una soluzione “On Premise” in termini, in particolare, di gestione sicura dei
+dati e ridotta latenza di reperimento del data dalle fonti dati, la flessibilità e la scalabilità di una architettura basata
+sul paradigma cloud con adeguati servizi di manutenzione per tutta la durata contrattuale fissata in 36 mesi a partire
+dalla data di ultimazione del collaudo. L’offerta include un servizio di Help Desk di Primo Livello per la gestione delle
+richieste di supporto riguardanti i sistemi oggetto di fornitura. Le informazioni di dettaglio relative alla richiesta
+d’offerta sono riportate nei paragrafi seguenti.
+Importo stimato:
+L’importo stimato a base d’asta è pari a € 796.195,08 IVA esclusa di cui € 16.000,00 quali costi della sicurezza
+connessi alla gestione dei rischi non soggetti a ribasso.
+Sede:
+La fornitura e posa in opera sarà effettuata presso la sede dell’Aeroporto di Taranto Grottaglie sito in Strada
+Provinciale 83 - 74023 Grottaglie (TA).
+
+
+   2.   Descrizione della fornitura richiesta (“TO-BE”)
+Si richiede la fornitura e posa in opera di una infrastruttura IT basata su AWS Outpost, servizi AWS Cloud, servizi di
+gestione e di manutenzione.
+Di seguito il dettaglio della fornitura e posa in opera richiesta:
+                                                                                                                          3
+                                            Descrizione                                           Unità di misura   Quantità
+      1.   Cluster VMWare (N° 2 server con 512 GB di RAM complessiva quali nodi del cluster
+           VMware - Licenze Vmware Vsphere e Vsan per il sistema hypervisor)
+                                                                                                     A corpo           1
+      2.   Servizi inerenti la fornitura e posa in opera di una infrastruttura IT basata su AWS
+           Outpost, compresi servizi di gestione e di manutenzione
+
+
+
+Di seguito le caratteristiche di dettaglio del cluster Vmware:
+
+                                                               Componente                                                  QTA'
+
+PowerEdge R650                                                                                                                 2
+Componenti per singolo server
+
+1x PowerEdge R650 Server
+
+1x 10x2.5 Front Storage
+
+1x Trusted Platform Module 2.0 V3
+1x 2.5 Chassis with up to 10 Hard Drives (SAS/SATA), 1 PCIe Slot, 1 CPU
+1x Intel Xeon Gold 5318Y 2.1G, 24C/48T, 11.2GT/s, 36M Cache, Turbo, HT (165W) DDR4-2933
+
+1x Std Heatsink 165W 1CPU
+
+1x Performance Optimized
+
+1x 3200MT/s RDIMMs
+
+8x 32GB RDIMM, 3200MT/s, Dual Rank 16Gb BASE
+
+1x RAID 1 + Unconfigured RAID
+
+1x PERC H755 SAS Front
+
+1x Front PERC Mechanical Parts, rear load
+
+2x 480GB SSD SATA Read Intensive 6Gbps 512 2.5in Hot-plug AG Drive, 1 DWPD
+
+7x 1.2TB Hard Drive SAS ISE 12Gbps 10k 512n 2.5in Hot-Plug
+
+1x 3 High Performance Fans for 1 CPU (more than 165W)
+
+1x Dual, Hot-plug, PSU (1+1), 800, Mixed Mode, NAF
+
+2x C13 to C14, PDU Style, 10 AMP, 6.5 Feet (2m), Power Cord
+
+1x Riser C0-1, 1x16 LP, HL
+
+1x PowerEdge R650 Motherboard with Broadcom 5720 Dual Port 1Gb On-Board LOM
+
+1x iDRAC9, Enterprise 15G
+
+1x Standard Bezel
+
+1x MOD, TRAY, LGG, TAG, X8/10HDD, R650
+
+1x iDRAC, Factory Generated Password
+
+1x iDRAC Group Manager, Disabled
+
+1x ReadyRails Sliding Rails Without Cable Management Arm or Strain Relief Bar
+
+1x PowerEdge R650 Non BIS Marking
+
+                                                                                                                                   4
+1x PowerEdge R650 CE, CCC, Marking
+
+1x Intended for EMBEDDED or SERVER APPLIANCE Applications Only
+
+Software
+
+1x Power Saving BIOS Settings
+
+1x PowerEdge R650 Shipping EMEA1 (English/French/German/Spanish/Russian/Hebrew)
+
+1x R650 Ship 4x3.5, 10x2.5
+
+Services
+
+1x Next Business Day 36MONTHS
+
+1x ProSupport 4HR Mission Critical Initial, 36 Mese/i
+
+Licenze di Virtualizzazione
+
+VMware vSphere 7 Essentials Plus Kit for 3 hosts (Max 2 processors per host) -supporto 3 anni a copertura server
+
+VMWARE vSAN 7 Std. - supporto 3 anni a copertura server
+
+
+
+Di seguito le caratteristiche di dettaglio del sistema AWS Outpost:
+                                                                    Caratteristiche
+        •    2 x C5.24Xlarge (192 vCPU, 384GiB RAM)
+        •    2 x G4dn.12xlarge (8 GPUs, 96 vCPU, 384GiB RAM) - (#8 GPU NVIDIA T4 Tensor Core GPUs)
+        •    11TB EBS (Gp2)
+        •    Enterprise On-Ramp Support: 24x7 remote support within 30 minutes for critical events
+
+
+
+   3.       Requisiti generali dell’hardware
+Tutto l’hardware offerto dovrà avere le seguenti caratteristiche, pena l’esclusione dalla gara:
+             •       essere nuovo di fabbrica (e recare il marchio di fabbrica del costruttore), di provenienza legale e
+                     conservato nel packaging originale (non usato né rigenerato);
+             •       rispettare le prescrizioni della normativa vigente di riferimento (ambientale, inquinamento
+                     acustico, ecc.);
+             •       essere dotato di manuali, cavi di alimentazione e di collegamento con le periferiche, driver ed ogni
+                     altro componente indispensabile per il corretto funzionamento.
+Il Politecnico di Bari non dovrà sostenere alcun costo aggiuntivo per l’eventuale mancanza di hardware necessario
+al funzionamento del sistema o necessario all’interoperabilità del sistema con il resto dell’infrastruttura tecnologica
+oggi esistente.
+
+
+   4.       Requisiti generali per il software
+La fornitura dovrà necessariamente prevedere (pena esclusione):
+
+                                                                                                                       5
+          •       le licenze del software di base per la gestione del sistema fornito;
+          •       l’installazione e la configurazione del software di base, del firmware, dei driver e quant’altro
+                  necessario a far funzionare correttamente l’hardware fornito;
+          •       la manutenzione delle licenze di base, del firmware, dei driver di cui ai punti precedenti per tutta la
+                  durata contrattuale.
+Il Politecnico di Bari non dovrà sostenere alcun costo aggiuntivo per l’eventuale mancanza di software necessario
+al funzionamento del sistema o necessario all’interoperabilità del sistema con il resto dell’infrastruttura tecnologica
+oggi esistente.
+
+
+   5.   Requisiti generali per i concorrenti
+I servizi professionali necessari all’esecuzione della prestazione richiesta dovranno essere garantiti da personale
+con documentata competenza ed esperienza specifica su tutti i prodotti e dispositivi oggetto della presente gara.
+In particolare, si richiede che la società concorrente sia in possesso della partnership AWS “Premiere”, alla data di
+pubblicazione del bando di gara, ed abbia nel proprio organico personale qualificato con le seguenti certificazioni
+individuali:
+          •       certificazioni AWS Certified Cloud Practitioner;
+          •       certificazione AWS Certified Data Analytics – Specialty;
+          •       certificazioni AWS Certified Developer – Associate;
+          •       certificazioni AWS Certified Solutions Architect – Associate;
+          •       certificazione AWS Certified Solutions Architect – Professional;
+          •       certificazione AWS Certified SysOps Administrator – Associate.
+È requisito preferenziale che il personale qualificato in possesso delle certificazioni menzionate sia operativo presso
+sede dell’Aggiudicatario sita in territorio Pugliese e/o distante al massimo 200 km dalla sede in cui sarà installata la
+fornitura.
+
+
+   6.   Servizi professionali
+La fornitura dovrà essere comprensiva dei seguenti servizi, senza ulteriori oneri per il Politecnico di Bari, pena
+esclusione:
+          •       trasporto, consegna, disimballo, posizionamento in sala CED (presso la sede precedentemente
+
+                                                                                                                       6
+                indicata), rimozione materiale imballaggio residuo, posa in opera, installazione, configurazione,
+                personalizzazione e attivazione di tutte le forniture: tali attività andranno concordate con il
+                referente della Stazione Appaltante e potranno prevedere la presenza di personale interno del
+                Politecnico di Bari;
+         •      test della funzionalità di ciascun prodotto fornito tale da rendere perfettamente funzionanti tutte
+                le parti oggetto di fornitura;
+         •      consegna della documentazione tecnica e utente;
+         •      consegna dei software per l’aggiornamento dei firmware e delle patches (ove previsti) a corredo
+                delle apparecchiature fornite;
+         •      documentazione tecnica che descrive a fine installazione quanto attivato, ivi inclusi i serial number
+                degli apparati e i livelli dei prodotti del software.
+Si riportano di seguito, a titolo esemplificativo e non esaustivo, le principali attività specialistiche previste per
+l’installazione e configurazione della nuova infrastruttura da considerarsi nel perimetro della fornitura:
+         •      Assessment;
+         •      Check infrastrutturale del datacenter atto ad ospitare le infrastrutture ed elencazione degli
+                interventi di predisposizione necessari;
+         •      Project Management;
+         •      Riunioni e kick-off;
+         •      Progettazione di dettaglio (Piano Esecutivo di Dettaglio);
+         •      Installazione apparati e supporto on site durante le fasi progettuali ed avvio dei sistemi;
+         •      Configurazione base;
+         •      Configurazione avanzata (comprese le configurazioni di rete quali a titolo esemplificativo e non
+                esaustivo creazione della Gateway Route Table locale, associazione del VPC e del VIF group, ecc.)
+         •      Training alla gestione ordinaria dell’Outpost tramite console AWS;
+         •      Supporto al lancio delle istanze attraverso la console AWS, per l’intero periodo contrattuale;
+         •      Test;
+         •      Collaudo;
+         •      Migrazioni (se previste);
+         •      Go-Live;
+
+                                                                                                                    7
+          •      Help Desk di primo livello per l’intera durata contrattuale.
+Tutte le attività prevedranno dei deliverables che saranno individuati e descritti nella progettazione di dettaglio.
+
+
+   7.   Help Desk di Primo Livello
+È richiesto un servizio di Help Desk di primo livello per tutta la durata contrattuale. Il servizio avrà i seguenti orari:
+                                         LUN-VEN 9:00-18:00 nei giorni feriali
+Il servizio, che si configura quale SPOC (Single-Point-of-Contact), si occuperà, a titolo esemplificativo e non
+esaustivo, di:
+          •      ricevere e registrare le richieste di supporto;
+          •      verificare la possibilità di risoluzione al primo livello per mezzo di procedure note;
+          •      smistare la richiesta di intervento al secondo livello in caso di anomalia non gestibile;
+          •      interagire coi fornitori del sistema;
+          •      programmare e gestire gli interventi on-site;
+          •      chiudere le richieste di supporto e comunicare l’avvenuta soluzione.
+
+
+   8.   Collaudo
+Completate tutte le attività di installazione e configurazione il fornitore si impegna a monitorare per 15 giorni il
+corretto funzionamento degli apparati forniti, individuare eventuali anomalie in proattività o su segnalazione della
+Stazione Appaltante ed intervenire per la immediata soluzione sia on site che da remoto.
+Il collaudo si riterrà superato positivamente dopo i 15 giorni di monitoraggio previsti e in assenza di anomalie di
+funzionamento ancora insolute.
+Al termine del collaudo verrà redatto un verbale controfirmato dal responsabile dell’Aggiudicatario e dalla Stazione
+Appaltante o dal responsabile incaricato (“Verbale di collaudo”).
+L’intero collaudo non dovrà superare in ogni caso i 30 giorni (solari) dalla data di inizio del monitoraggio del
+funzionamento dei nuovi apparati.
+
+
+   9.   Assistenza e manutenzione
+Il servizio di assistenza e manutenzione delle apparecchiature avrà una durata di 36 (trentasei) mesi a partire dalla
+data di ultimazione del collaudo e consiste nel porre in essere ogni attività necessaria alla risoluzione dei guasti
+
+                                                                                                                         8
+e dei malfunzionamenti delle apparecchiature (siano essi di natura hardware che di natura software). Attraverso
+l’erogazione dei servizi di manutenzione l’aggiudicatario dovrà garantire la piena funzionalità di tutte le
+apparecchiature oggetto della fornitura, ivi compreso il software fornito.
+I servizi di manutenzione dovranno essere erogati dalle strutture di assistenza tecnica del Fornitore per tutta la
+durata del contratto con SLA HH24 su tutta l’infrastruttura oggetto di fornitura.
+Ai fini della sostituzione delle componenti hardware delle apparecchiature fornite, si intende che siano utilizzati
+ricambi originali e pienamente compatibili con le altre componenti hardware dell’apparecchiatura.
+L’assistenza e manutenzione, ossia la gestione complessiva dell’infrastruttura, prevedono l’implementazione di un
+servizio di Help Desk di I° Livello (Single-Point-Of-Contact) con le seguenti caratteristiche:
+          •      Orario del servizio: H24;
+          •      Presa in carico della segnalazione: 30 minuti dall’apertura del ticket;
+          •      Intervento ONSITE: 2 ore dalla presa in carico;
+          •      Risoluzione anomalia (indipendentemente se da remoto o on site):
+                 o        anomalia bloccante (severità 1) – 4 ore;
+                 o        anomalia critica (severità 2) – 8 ore;
+                 o        anomalia non bloccante (severità 3) – 24 ore.
+
+
+   10. Rapporti contrattuali
+L’Aggiudicatario dovrà fare in modo che all’interno della propria organizzazione vi sia un unico centro di riferimento
+(SPOC) al quale il Politecnico di Bari possa rivolgersi per le richieste, le informazioni, le segnalazioni di disservizi o di
+anomalie e ogni altra comunicazione relativa al rapporto contrattuale. In tal senso, l’Aggiudicatario si impegna a
+designare, a suo totale carico e onere, una persona responsabile della esecuzione del contratto, costantemente
+reperibile, il cui nominativo sarà indicato al Politecnico di Bari per iscritto all'atto della firma del contratto. Il
+responsabile della esecuzione del contratto provvederà a vigilare affinché ogni fase dell'appalto risponda a quanto
+stabilito dai documenti contrattuali e sarà la prima interfaccia verso il Responsabile designato dal Politecnico di Bari.
+L’Operatore economico aggiudicatario dovrà prestare idonea garanzia della durata di 12 mesi decorrenti dalla data
+del collaudo. Pertanto, fino al termine di tale periodo, l’Operatore Economico deve intervenire, tempestivamente
+e a sue spese, al fine di rimediare ai guasti e alle imperfezioni che dovessero verificarsi alle macchine, escluse
+soltanto le riparazioni dei danni che non possono attribuirsi al normale utilizzo delle stesse macchine ed anche
+evidente imperizia o negligenza degli utenti.
+                                                                                                                           9
+L’Operatore Economico rimane comunque responsabile della fornitura eseguita nei modi, termini ed entro i limiti
+previsti dal Codice Civile.
+Il Fornitore al momento della presentazione dell’offerta dovrà garantire la conformità delle apparecchiature alle
+normative CE o ad altre disposizioni internazionali riconosciute e in generale alle vigenti norme legislative,
+regolamentari e tecniche disciplinanti i componenti e le modalità di impiego delle apparecchiature medesime ai fini
+della sicurezza degli utilizzatori.
+
+
+   11. Tempi di esecuzione e penali
+L’esecuzione del contratto dovrà essere effettuata nel termine di 45 giorni naturali e consecutivi decorrenti dalla
+data di sottoscrizione del verbale di avvio dell’esecuzione del contratto.
+La penale pecuniaria, per ogni giorno di ritardo sui termini come sopra stabiliti, è fissata nella misura del 2 ‰ (due
+per mille) dell’importo contrattuale. La suddetta penale, in ogni caso, non potrà sup
+erare la misura di 1/10 dell’importo contrattuale. Nel caso in cui il ritardo superi il periodo di giorni 45
+(quaratacinque) sul termine di ultimazione, il Politecnico di Bari si riserva la facoltà di risolvere il Contratto,
+adottando ogni provvedimento necessario per il risarcimento di eventuali danni. La stazione appaltante si riserva di
+sospendere il pagamento della penale nel caso di motivi ostativi alla consegna o alla installazione del sistema in
+oggetto non imputabili all’Operatore Economico, tali per cui la stazione appaltante richieda di posticipare la
+consegna e installazione del sistema stesso oltre i 150 giorni, naturali e consecutivi, suindicati.
+L’appalto potrà terminare anticipatamente:
+          •      per ripetute negligenze, inadempienze o inefficienze del fornitore rilevate dal Politecnico di Bari
+                 durante i controlli e le verifiche;
+          •      per danni procurati ai locali e a terzi dai macchinari forniti o da azioni degli incaricati dei
+                 fornitori.
+
+
+   12. Garanzia definitiva
+All’atto della stipulazione del contratto, l’aggiudicatario deve presentare la garanzia definitiva da calcolare
+sull’importo contrattuale, secondo le misure e le modalità previste dall’articolo 117 del D.Lgs. 36/2023.
+
+
+   13. Modalità di pagamento
+Il pagamento verrà corrisposto in un’unica soluzione, all’emissione del certificato collaudo. Ai sensi dell’art. 117, co.
+                                                                                                                      10
+9 del Codice, il pagamento è subordinato alla costituzione di una cauzione o di una garanzia fideiussoria bancaria o
+assicurativa pari all'importo della medesima rata di saldo maggiorato del tasso di interesse legale applicato per il
+periodo intercorrente tra la data di emissione della verifica di conformità nel caso di appalti di servizi o forniture e
+l'assunzione del carattere di definitività dei medesimi. Le fatture dovranno essere intestate a: Politecnico di Bari,
+Via Amendola 126/b – Bari (Codice Fiscale: 93051590722 – P. IVA: 04301530723). Ai sensi dell’art. art. 17 ter, D.P.R.
+n. 633/1972, si applica lo split payment, in base al quale l’IVA sarà versata direttamente all’Erario e non pagata
+all’Impresa, a cui verrà pertanto erogato il corrispettivo indicato in fattura al netto dell’IVA. La fattura dovrà essere
+emessa, secondo quanto previsto dall’art. 2, comma 1 del D.M. 23 gennaio 2015, con l’annotazione “scissione dei
+pagamenti”, nonché relativi CIG e CUP.
+
+
+   14. Anticipazione
+Trova applicazione quanto stabilito dall’art. 125 del d.lgs. n. 36/2023 in materia di anticipazione del prezzo nella
+misura del 20% incrementabile fino al 30% secondo le modalità ivi previste. L'erogazione dell'anticipazione è
+subordinata alla costituzione di garanzia fideiussoria bancaria o assicurativa di importo pari all'anticipazione
+maggiorato del tasso di interesse legale applicato al periodo necessario al recupero dell'anticipazione stessa. La
+predetta garanzia è rilasciata da imprese bancarie autorizzate ai sensi del decreto legislativo 1° Settembre 1993, n.
+385, o assicurative autorizzate alla copertura dei rischi ai quali si riferisce l'assicurazione e che rispondano ai requisiti
+di solvibilità previsti dalle leggi che ne disciplinano la rispettiva attività. La garanzia può essere, altresì, rilasciata
+dagli intermediari finanziali iscritti nell'albo degli intermediari finanziari di cui all'articolo 106 del decreto legislativo
+1° settembre 1993, n. 385. L'importo della garanzia viene gradualmente ed automaticamente ridotto nel corso
+dell’esecuzione della prestazione, in rapporto al progressivo recupero dell'anticipazione da parte della stazione
+appaltante.
+
+
+
+
+                                                                                                                          11
+

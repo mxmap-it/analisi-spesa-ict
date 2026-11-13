@@ -1,0 +1,893 @@
+E-HEALTH-2020 - SIWE - Servizio di contact center in outsourcing rivolto agli
+      utenti dei sistemi informativi sanitari della Regione Sardegna
+                             Procedura Aperta
+
+                                                      CIG: come indicato in piattaforma
+
+
+ALLEGATO 1 - CAPITOLATO TECNICO E PRESTAZIONALE
+
+
+
+
+               Stazione Sardegna IT S.r.l.
+             appaltante: Società in house della Regione Autonoma della Sardegna
+                               Viale dei Giornalisti 6 – 09122 CAGLIARI – CA
+                               Tel. (+39) 070.6069015 - Fax. (+39) 070.6069016
+                               e-mail: info@sardegnait.it
+
+
+
+
+                                                                                          Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                                    sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                          Pagina 1 di 16
+Indice
+
+          1.        Premesse ............................................................................................................................................................... 3
+          1.1            Scopo del documento ........................................................................................................................3
+          1.2            Dati identificativi ................................................................................................................................3
+          1.3            Acronimi e definizioni.........................................................................................................................3
+          2.        Premessa ............................................................................................................................................................... 4
+          2.1            Contesto tecnologico ed applicativo del sistema informativo regionale .............................................4
+          3.        Oggetto dell’appalto .............................................................................................................................................. 4
+          3.1       Specifiche del servizio .......................................................................................................................................... 5
+          3.2       Giorni ed orari del servizio.................................................................................................................................... 7
+          3.3       Dimensionamento del servizio ............................................................................................................................. 7
+          4.        Decorrenza, durata di esecuzione del servizio .................................................................................................... 8
+          5.        Formazione per l’avviamento al servizio.............................................................................................................. 8
+          6.        Processo di assistenza ......................................................................................................................................... 8
+          7.        Importo massimo contrattuale e base d’asta unitaria ......................................................................................... 9
+          8.        Livelli di servizio (SLA) e penali ........................................................................................................................... 9
+          9.        Oneri delle parti ................................................................................................................................................... 11
+          10.       Gruppo di lavoro – profili professionali ............................................................................................................. 11
+          11.       Sede e Organizzazione ........................................................................................................................................ 12
+          12.       Riscontri di approvazione, verifiche di conformità e accettazione .................................................................. 12
+          13.       Corrispettivo, stati di avanzamento e pagamenti .............................................................................................. 13
+          13.1           Importo contrattuale.........................................................................................................................13
+          13.2           Contabilità e stati di avanzamento ...................................................................................................13
+          14.       Certificato di verifica di conformità .................................................................................................................... 15
+          15.       Responsabilità ed obblighi derivanti dai rapporti di lavoro .............................................................................. 15
+          16.       Risoluzione e recesso ......................................................................................................................................... 15
+          17.       Direttore dell’Esecuzione del Contratto (DEC) .................................................................................................. 16
+          18.       Cessione del contratto e dei crediti.................................................................................................................... 16
+          19.       Foro competente a conoscere il contratto ......................................................................................................... 16
+          20.       Rinvio ................................................................................................................................................................... 16
+
+
+
+
+                                                                                                                                 Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                                                                           sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                                                                     Pagina 2 di 16
+1. Premesse
+
+1.1 Scopo del documento
+Il presente documento costituisce CAPITOLATO TECNICO e PRESTAZIONALE atto a specificare in dettaglio
+l’oggetto dell’appalto e tutte le condizioni e modalità di esecuzione del servizio richiesto, e costituisce
+documento correlato e complementare al Disciplinare di gara.
+
+
+1.2       Dati identificativi
+ Oggetto:                Servizio di contact center in outsourcing rivolto agli utenti dei sistemi informativi sanitari della Regione
+                         Sardegna.
+ Durata                  20 mesi
+ contrattuale
+ Base d'asta:            360.000,00 euro IVA esclusa da aggiudicarsi in funzione del canone mensile offerto
+ Tipologia:              Procedura aperta da assegnare con il criterio dell’offerta economicamente più vantaggiosa 80/20
+                         (80 tecnico e 20 economico)
+
+
+
+
+1.3       Acronimi e definizioni
+ Acronimo                        Descrizione
+ ACN                             Accordo collettivo Nazionale
+ AnagS                           Anagrafe assistibili della Regione Sardegna
+ ASL                             Azienda Sanitaria Locale
+ ASSL                            Area Socio-Sanitaria Locale
+ ATS                             Azienda per la Tutela della Salute
+ CNS                             Carta Nazionale dei Servizi
+ CO                              Carta Operatore
+ ESE                             Esenzioni
+ AFT                             Aggregazione funzionale territoriale
+ UCCP                            Unità complessa di cure primarie
+ MMG                             Medico di Medicina Generale
+ PLS                             Pediatra di Libera Scelta
+ PF                              Persona Fisica
+ CF                              Codice Fiscale
+ DB                              Database
+ S/R                             Scelte e revoche
+ SPID                            Sistema Pubblico di Identità Digitale
+ SR-Web                          Scelta del medico via web
+ SSN                             Servizio Sanitario Nazionale
+ SSR                             Servizio Sanitario Regionale
+ TS                              Tessera Sanitaria
+ SEE                             Spazio Economico Europeo
+ COSSI                           Centro di Orientamento ai Servizi Sanitari per gli Immigrati
+
+
+
+
+                                                                                                   Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                                             sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                                   Pagina 3 di 16
+2. Premessa
+
+2.1        Contesto tecnologico ed applicativo del sistema informativo regionale
+Il sistema informativo sanitario regionale della Regione Sardegna è costituito da un insieme di sistemi
+informativi integrati acquisiti e gestiti dall’Amministrazione regionale a beneficio delle Aziende Sanitarie e
+dell’Assessorato dell’Igiene e Sanità e dell’Assistenza Sociale, tra cui si citano, in particolare, i sistemi SISaR
+(sistema informativo sanitario integrato regionale), MEDIR (sistema Medici in Rete e Fascicolo Sanitario
+Elettronico), ANAGS (Anagrafe Sanitaria) prossimamente sostituito dal sistema Zente, SILUS (Sistema
+Informativo Laboratorio Unico d’analisi), SISM (Sistema informativo Salute Mentale), mFP (Sistema
+Informativo dipendenze), AVACS (Sistema Vaccinale), AVACS (Anagrafe Vaccinale).
+La pandemia COVID-19 ha portato la Pubblica Amministrazione ad accelerare l’incremento dei servizi on-line
+anche di tipo sanitario a vantaggio dei cittadini. Il Piano Nazionale di Ripresa e Resilienza ha inoltre stabilito
+nella missione 6 l’obiettivo di favorire l’utilizzo del Fascicolo Sanitario Elettronico a tutti i cittadini e l’attivazione
+fondamentale della Telemedicina. Per tutte queste ragioni si rende necessario assicurare un efficiente servizio
+di assistenza rivolta agli utenti cittadini fruitori di questi servizi e agli operatori sanitari.
+
+
+
+
+                                     Figura 1 Sistema Informativo Sanitario Regionale
+
+
+
+
+3. Oggetto dell’appalto
+Oggetto dell’appalto di cui alla presente gara è l’erogazione di servizi di assistenza con supporto telefonico e
+via mail agli utenti privati ed operatori sanitari dei sistemi informativi della Regione Sardegna, meglio descritti
+nei paragrafi che seguono. Per il servizio sarà corrisposto un canone mensile secondo quanto oltre specificato.
+L’aggiudicatario del servizio dovrà utilizzare proprio personale e propri mezzi produttivi per l’erogazione dei
+servizi richiesti riguardanti l’esecuzione delle attività tipiche di assistenza di primo livello quali: supporto per il
+corretto utilizzo delle procedure informatiche/ installazione di driver; erogazione di informazione generiche;
+assistenza nell’utilizzo di servizi informativi; supporto nella configurazione dei sistemi locali; impiego di work
+around per superare eventuali problemi applicativi; gestione di dati memorizzati su database (gestione delle
+segnalazioni di problemi o malfunzionamenti); raccolta di suggerimenti di modifiche e migliorie; inoltro ad un
+supporto specialistico (II livello) delle problematiche non codificate o non risolvibili; registrazione su Trouble
+Ticketing del resoconto dell’attività effettuata.
+
+                                                                                Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                   sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                Pagina 4 di 16
+Il servizio di help desk tecnico di I (primo) livello dovrà fornire supporto sull’utilizzo dei sistemi informativi
+regionali della Regione Sardegna tra i quali:
+     • ANAGS: http://www.sardegnasalute.it/index.php?xsl=313&s=187126&v=2&c=3436. È previsto che il
+         sistema sia sostituito nell’anno 2024 dal sistema Zente che metterà a disposizione del cittadino e degli
+         operatori sanitari le stesse funzionalità rese dal sistema ANAGS con qualche ulteriore servizio (Scelta
+         e Revoca dei PLS).
+      •     Scelta e revoca del medico via web: http://www.sardegnasalute.it/sceltamedico/
+      •     Fascicolo Sanitario Elettronico: https://fse20.sardegnasalute.it/
+CUPWEB: https://cupweb.sardegnasalute.it/
+      •     SIWE: Sistema informativo Welfare-Sistema Informativo delle Politiche Sociali:
+             www.sardegnaewelfare.it/servizi/sipso - http://www.sardegnasociale.it/sipso/
+      •     Tessera Sanitaria-Carta Nazionale dei Servizi: http://www.regione.sardegna.it/tscns/
+      •     Intranet Operatori Sanitari – MEDIR: https://medir.sardegnasalute.it/
+      •     Notifica Preliminare Cantieri Sardegna Salute› area operatori› notifica preliminare cantieri
+      •     Portale Amianto Sardegna Salute› area operatori› portale amianto
+      •     Sistema vaccinale AVACS (registrazione delle vaccinazioni nel sistema AVACS Access Manager
+            (sistema di autenticazione regionale)
+      •     Access Manager (sistema di autenticazione regionale)
+Gli utenti interessati dall’attività sono:
+      •     Medici \ Operatori Sanitari
+      •     Operatori e referenti per le aziende sanitarie
+      •     Operatori e referenti per i comuni
+      •     Utenti regionali e cittadini
+      •     Cittadini
+      •     Aziende private
+Il canale di accesso al servizio da parte degli utenti potrà avvenire sia tramite telefono, sia da rete fissa sia da
+rete mobile che tramite posta elettronica.
+Nel periodo del contratto (20 mesi) si prevede possa essere necessario attivare il servizio di assistenza di
+primo livello per nuovi servizi. L’aggiudicatario dovrà prendere in carico il nuovo servizio, previa formazione,
+per il quale verrà riconosciuto un importo pari all’offerta economica (canone mensile) / numero dei ticket mensili
+previsto (pari a circa 2900) per ogni ticket aperto riferito al nuovo servizio. L’aggiudicatario potrà presentare,
+dopo l’avvio del servizio, alla stazione appaltante proposte atte all’ottimizzazione del servizio, quali ad esempio
+l’introduzione dell’IVR (interactive voice response, ossia risposta vocale interattiva) che potrebbe fornire
+risposte automatiche su problematiche standard. La stazione appaltante potrà procedere o meno
+all’approvazione delle proposte con relativa motivazione. Specifiche del servizio
+Il servizio verso l’utenza deve essere erogato attraverso una condotta gradevole, chiara, cordiale, efficace ed
+efficiente. Si specifica che, anche se di norma le interazioni con l’utente avvengono in lingua italiana, in alcuni
+rari casi può essere necessario interagire in lingua inglese.
+Considerato che il servizio richiesto consiste nel risolvere problemi di natura tecnica sugli applicativi sotto
+descritti e su configurazioni dei driver delle TS-CNS, SPiD e CIE, compatibilità con antivirus, configurazioni
+utenze sui sistemi, regolamenti sull’assistenza sanitaria di base dei cittadini, si richiede all’aggiudicatario
+un’ottima capacità nell’utilizzo del personal computer, collegamento ad Internet, uso di Sistemi Operativi,
+Windows, MAC OS x, Sistemi Operativi Open source linux, pacchetti di produttività individuale (quali a titolo
+esemplificativo e non esaustivo: openoffice, word, excel etc.), funzionamento delle CNS e installazione dei
+driver. Inoltre, considerato che i cittadini raggiungono i servizi online anche da cellulare, è necessario che
+l’aggiudicatario sia in grado di risolvere le corrispondenti problematiche che possono insorgere sui sistemi
+operativi android e iOS.
+L’aggiudicatario dovrà interagire con la stazione appaltante mediante un soggetto incaricato della gestione
+della commessa (project manager) che si farà carico di supervisionare gli operatori eroganti il servizio.
+
+                                                                                Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                   sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                Pagina 5 di 16
+Le principali informazioni che l’appaltatore dovrà fornire agli utenti dei sistemi oggetto dell’assistenza sono le
+seguenti:
+A. Servizio di gestione del call center
+      a. Informare e supportare cittadini e operatori sanitari nell’utilizzo del Fascicolo Sanitario Elettronico;
+      b. Informare e supportare gli operatori sanitari nell’attivazione e utilizzo della Carta Operatore - Carta
+         Nazionale dei Servizi (CO-CNS);
+      c.    Fornire informazioni e supporto tecnico ai cittadini per la fruibilità del portale CUPWEB e dei suoi
+            contenuti (consultazione, disponibilità, prenotazione, pagamento etc.). Fornire informazioni sui servizi
+            messi a disposizione dalla RAS finalizzati alla dematerializzazione di processi sociosanitari;
+      d. Informare e supportare cittadini, professionisti e operatori sanitari sull’attivazione e l’utilizzo della
+         Tessera Sanitaria - Carta Nazionale dei Servizi (TS-CNS);
+      e. Supportare gli utenti nelle procedure di utilizzo degli applicativi e degli strumenti e/o servizi associati,
+         finalizzati alla dematerializzazione dei processi (prescrittivi/erogativi) sanitari;
+      f.    Fornire supporto tecnico per le attività di installazione e configurazione dei gestionali di cartella clinica
+            e dei software applicativi in generale, necessari alla dematerializzazione dei processi sociosanitari;
+      g. Assistere gli utenti del sistema di gestione dell’Anagrafe Sanitaria regionale ANAGS\“ZENTE”;
+      h. Supportare gli assistiti nella scelta e revoca del medico di famiglia e del pediatra di libera scelta via
+         web;
+      i.    Supportare i medici nell’utilizzo del sistema vaccinale (AVACS);
+      j.    Supportare gli utenti del Sistema Informativo delle Politiche Sociali nella profilazione, autenticazione
+            e accesso al sistema, nella compilazione e trasmissione delle schede e degli allegati delle domande
+            di sussidio a favore delle categorie svantaggiate;
+      k.    Supportare le imprese nella compilazione online e trasmissione al Servizio Prevenzione e Sicurezza
+            degli Ambienti di Lavoro (SPreSAL) delle Aree Socio-Sanitarie Locali (ASSL) e alle Direzioni
+            Territoriali competenti del Lavoro (DTL), la notifica preliminare di apertura del cantiere edile;
+      l.    Fornire supporto tecnico per la gestione delle domande e procedimenti amministrativi dei comuni o
+            dei soggetti gestori delle strutture Sociali Sociosanitarie della Regione Sardegna (SIWE Strutture);
+      m. Assistere e supportare gli utenti dei comuni al fine della compilazione e trasmissione delle schede e
+         degli allegati delle domande di sussidio a favore delle categorie svantaggiate;
+      n. Creazione e gestione delle credenziali di accesso ai sistemi informatici per gli utenti regionali e
+         comunali, in particolare per l’accesso al Sistema delle Politiche Sociali (Sipso);
+      o. Individuare, analizzare e risolvere le problematiche segnalate dagli utenti dei sistemi sopra indicati
+         secondo gli SLA definiti e interagendo con i diversi attori dei processi;
+      p. Tracciare e censire le attività svolte nell’ambito dell’erogazione del servizio di assistenza, secondo
+         modalità messi a disposizione dalla stazione appaltante;
+      q. Rispondere alle segnalazioni che arrivano via mail sui diversi sistemi informativi (che in automatico
+         aprono un ticket) utilizzando risposte standard per problematiche note o risposte specifiche dopo che
+         l’operatore ha individuato e risolto la problematica segnalata via mail dall’utente;
+      r.    Monitorare lo stato di lavorazione delle segnalazioni censite sui ticket aperti per anomalie riconducibili
+            ai servizi di dematerializzazione dei processi in ambito sociosanitario, fino alla risoluzione delle stesse
+            e alla conseguente chiusura dei ticket;
+      s.    Contattare proattivamente gli utenti nelle casistiche di anomalie di utilizzo dei servizi rilevate
+            nell’ambito del monitoraggio e dell’elaborazione dei dati di utilizzo dei servizi di dematerializzazione
+            dei processi in ambito sociosanitario;
+      t.    Fornire assistenza tecnica agli utenti a seguito di contatto inbound;
+      u. Interagire con tutti gli attori del processo nel rispetto delle procedure definite;
+
+
+
+
+                                                                                Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                   sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                Pagina 6 di 16
+      v.    Per ogni ticket in risposta a richieste di assistenza inviate via e-mail o telefono dagli utenti, dovrà
+            essere attivata una istanza di customer satisfaction con una decina di domande da sottoporre
+            all’Utente
+      w. Aggiornare costantemente i referenti della stazione appaltante;
+      x.    Produrre periodicamente (bimestralmente) deliverable e SAL delle attività svolte.
+B. Servizi di monitoraggio, reporting
+Tutte le richieste di assistenza dovranno essere registrate con cura sul sistema di trouble ticketing utilizzato
+dall’aggiudicatario, pertanto, l’aggiudicatario dovrà rendere il servizio dotandosi, oltreché di connessione ad
+Internet, del sistema di trouble ticketing Atlassian JIRA server 8.13.9, Jira Cloud o di sistema equiparabile che
+possa integrarsi con il trouble ticketing Atlassian Jira.
+Il sistema di Trouble ticketing utilizzato dovrà in particolare:
+      •     Consentire l’accesso a Sardegna IT per il monitoraggio continuo dell’andamento delle segnalazioni,
+      •     Fornire delle estrazioni configurabili per intervalli di tempo per il calcolo degli SLA.
+      •     Consentire l’identificazione uno ad uno delle telefonate ed e-mail da parte degli utenti e tracciare per
+            ciascuna di esse:
+                   o      Il tempo che intercorre tra la segnalazione e la sua presa in carico,
+                   o      Il tempo che intercorre tra la presa in carico e la soluzione della problematica,
+                   o      Tracciare le interlocuzioni via e-mail tra l’utente che segnala la problematica e la risposta da
+                          parte dell’assistenza.
+Si precisa che per alcuni sistemi (Scelta e revoca del medico via web, Tessera Sanitaria-Carta nazionale dei
+servizi ecc.) è attivo il sistema IVR che fornisce risposte immediate ai cittadini su problematiche standard
+previa condivisione e approvazione della Stazione Appaltante.
+
+
+Per ogni ticket in risposta a richieste di assistenza inviate via e-mail o telefono dagli utenti, l'aggiudicatario
+dovrà attivare una customer satisfaction attraverso la proposta di un questionario da sottoporre agli utenti che
+rilevi la soddisfazione del servizio erogato composto, al massimo, da una decina di domande. L'aggiudicatario
+è tenuto a consegnare alla stazione appaltante bimestralmente il report della customer satisfaction rilevata.
+
+
+Barra telefonica, Jira o sistema di trouble ticketing su cui l’aggiudicatario registrerà i ticket non saranno messi
+a disposizione della stazione appaltante. È necessario l’utilizzo di un sistema di trouble ticketing che possa
+integrarsi con Jira, condizione indispensabile per l’escalation delle problematiche di competenza del secondo
+livello in capo alla stazione appaltante.
+Attualmente i numeri di telefono dell’assistenza sono attestati presso il centralino di Sardegna IT. Si prevede
+di effettuare un inoltro delle chiamate in ingresso sui numeri di telefono attestati sul centralino di Sardegna IT
+verso altrettanti numeri attestati sul centralino dell’Aggiudicatario. In questa maniera si rende trasparente per
+l’utente il passaggio del servizio al fornitore esterno. Il fornitore aggiudicatario dovrà quindi essere in grado di
+fornire un centralino con almeno 5 numeri e 15 linee, con le relative configurazioni.
+
+
+
+
+3.2        Giorni ed orari del servizio
+Si richiede che il servizio venga effettuato in un arco temporale compreso nella fascia lunedì-venerdì dalle
+9.00 alle 18.00, esclusi i giorni di festività nazionale.
+Si rinvia al par. 17.1 per le eventuali proposte migliorative.
+
+
+3.3        Dimensionamento del servizio
+Ai fini del dimensionamento del servizio si prevede che debbano essere evase circa 1.100 chiamate/mese e
+circa 1.800 e-mail/mese. Sulla base dei dati a disposizione il tempo medio di gestione dei contatti stimato per
+
+
+                                                                                   Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                      sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                   Pagina 7 di 16
+il canale sincrono è di circa 5 minuti, il tempo medio di gestione stimato per il canale asincrono è di circa 6
+minuti.
+
+
+4. Decorrenza, durata di esecuzione del servizio
+Si prevede che il servizio verrà avviato non prima del 01.08.2024.
+Considerato che il servizio verrà aggiudicato secondo il valore del canone mensile, il servizio dovrà essere
+erogato per un numero minimo di 20 mesi e un numero massimo, intero, di mesi rientranti nella capienza
+dell’importo massimo contrattuale.
+Se nel giorno fissato e comunicato all’Aggiudicatario per la sottoscrizione questi non si presenta, la Stazione
+Appaltante ha facoltà di risolvere il contratto e di incamerare la cauzione definitiva. È ammessa l’esecuzione
+d’urgenza qualora ricorrano i presupposti di cui all’art. 17, commi 8 e 9, del Codice. In tali casi l’aggiudicatario
+dovrà prestare cauzione definitiva ed ogni altra garanzia richiesta dalla stazione appaltante per l’esecuzione
+dei servizi. Qualora l’aggiudicatario avesse partecipato nella forma di RTI non ancora costituito, prima
+dell’avvio dell’esecuzione dovrà costituirsi formalmente e presentare alla stazione appaltante regolare atto
+costitutivo di RTI.
+Avvio dell’esecuzione in pendenza della stipula del contratto
+La Stazione Appaltante, fermo restando quanto previsto dall’art. 17 del Codice, si riserva di richiedere l’avvio
+della prestazione contrattuale con apposito verbale di avvio dell’esecuzione a firma del DEC e dell’appaltatore
+anche in pendenza della stipula del contratto, previa costituzione del deposito cauzionale definitivo di cui al
+successivo art. 24. In tal caso il verbale indicherà le prestazioni che l’Aggiudicatario sarà tenuto ad eseguire
+immediatamente.
+Modifiche della durata del contratto
+Il Committente, ai sensi dell’art. 120, si riserva la facoltà di prorogare la durata del contratto. Entro il termine
+di cui all’art. 76, comma 6, del Codice, la stazione appaltante si riserva la facoltà di affidare all’aggiudicatario
+nuovi servizi consistenti nella ripetizione di servizi analoghi a quelli oggetto dell'appalto.
+
+
+5. Formazione per l’avviamento al servizio
+La Stazione Appaltante provvederà ad erogare all’incirca 11 mezze giornate/persona di formazione per i
+servizi oggetto della presente procedura al referente (o ai referenti) per sistema indicato dall’aggiudicatario, in
+un periodo massimo di 15 giorni lavorativi consecutivi.
+Tale referente provvederà a formare a cascata il personale dell’aggiudicatario che dovrà erogare il servizio.
+Allo scopo, previa idonea designazione al trattamento dei dati come responsabile o sub-responsabile, verrà
+fornito un vademecum con le problematiche principali
+La formazione verrà erogata dal giorno successivo alla contrattualizzazione, ovvero dall’avvio anticipato
+dell’esecuzione del contratto.
+Dopo la conclusione del periodo di formazione, l’aggiudicatario avrà a disposizione un ulteriore periodo di
+massimo 12/15 giorni lavorativi consecutivi prima dell’avvio del servizio.
+
+
+6. Processo di assistenza
+Il servizio dovrà assicurare il primo livello di assistenza verso il cliente e, se necessario, innescare il processo
+di escalation verso i livelli di assistenza superiori. Il servizio dovrà analizzare e risolvere le problematiche
+segnalate dagli utenti dei sistemi tramite mail e telefono secondo gli SLA definiti e interagendo con i diversi
+attori dei processi.
+Il processo operativo previsto di una richiesta è il seguente:
+    1.      l’utente telefona o invia una e-mail alle caselle preposte per richiedere assistenza;
+    2.      il contatto viene instradato alla prima risorsa disponibile;
+    3.      l’utente viene identificato attraverso la richiesta dei dati anagrafici;
+    4.      la richiesta viene classificata associando le dichiarazioni dell’utente sul motivo del contatto alle
+            tipologie di richiesta previste dal servizio; nel caso la richiesta non sia pertinente con i servizi erogati
+            dal Contact Center, viene rigettata con una dichiarazione di non rilevanza del problema per il servizio;
+
+                                                                                 Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                    sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                 Pagina 8 di 16
+    5.      la segnalazione viene gestita da un operatore di I livello (apertura ticket su sistema di trouble ticketing);
+    6.      l'operatore fornisce un primo livello di assistenza: individuando, analizzando e risolvendo le
+            problematiche segnalate dagli utenti secondo gli SLA definiti; fornisce inoltre le informazioni sui
+            problemi già in corso di risoluzione. Se la richiesta rientra fra quelle riconosciute come standard (entro
+            i limiti di competenza del I livello), fornito il supporto per la relativa soluzione il caso viene chiuso
+            attraverso la telefonata o attraverso una e-mail;
+    7.      qualora il I livello non riesca a risolvere in autonomia la richiesta, la segnalazione viene scalata al II
+            livello;
+    8.      il II livello attribuisce una priorità al caso sulla base delle regole di classificazione e, se il problema è
+            di competenza di terze parti, provvede ad attivarle (inoltro al fornitore esterno);
+    9.      il II livello fornisce le informazioni necessarie per la determinazione della soluzione al I livello che avrà
+            il compito di comunicarle all'utente e chiudere la segnalazione.
+
+
+7. Importo massimo contrattuale e base d’asta unitaria
+L’importo massimo contrattuale della presente procedura (salvo rinnovi, proroghe ed estensioni come
+specificati nel disciplinare) è stabilito in euro 360.000,00 (18.000,00 euro\mese*20 mesi)
+(trecentosessantamila/00) omnicomprensivo di tutti gli oneri, con la sola esclusione dell’IVA di legge.
+L’importo del canone mensile, da porre a base d’asta soggetto a ribasso, è stabilito in euro 18.000,00
+(diciottomila/00) IVA esclusa.
+Il canone mensile offerto si intende omnicomprensivo e coprirà anche le spese sostenute dall’aggiudicatario
+nel periodo di formazione di pre-avvio del servizio.
+Per i dettagli si rinvia al par. 3 del disciplinare di gara.
+
+
+8. Livelli di servizio (SLA) e penali
+Nel periodo di erogazione del servizio di assistenza, la stazione appaltante verificherà la corretta esecuzione
+dei lavori affidati nel rispetto dei livelli come di seguito indicati, o nel rispetto dei livelli contrattualizzati laddove
+migliorativi, riservandosi il diritto di applicare, nei casi di mancato rispetto, le penali come successivamente o
+contrattualmente (laddove definite per livelli migliorativi) previste:
+
+
+
+
+                                                                                 Tempo* massimo di
+                                                                  Tempo*
+                                                                                    evasione con
+                 Tipo di richiesta di                           massimo di
+    Liv.                                Canale    Modalità                          risoluzione o                                Penale
+                     assistenza                                   presa in
+                                                                                 eventuale escalation
+                                                               carico/Soglia1
+                                                                                       /Soglia2
+                                                                                                                      1 per mille dell’importo
+                                                                   30” dalla
+                                                                                                                         complessivo del
+                                                                ricezione nel    20’ nel 90% del preso
+                     Richiesta                                                                                       contratto per ogni punto
+   SL1a                                 Inbound   Telefonica       90% del         in carico su base
+                assistenza generica                                                                                     % di scostamento
+                                                                pervenuto su           bimestrale
+                                                                                                                       negativo rispetto alla
+                                                               base bimestrale
+                                                                                                                              soglia
+
+                                                                                                                      1 per mille dell’importo
+                                                                   1g dalla                                              complessivo del
+                                                                                 2gg nel 90% del preso
+                     Richiesta                                  ricezione nel                                        contratto per ogni punto
+   SL1b                                 Inbound    E-mail                          in carico su base
+                assistenza generica                             90% su base                                             % di scostamento
+                                                                                       bimestrale
+                                                                  bimestrale                                           negativo rispetto alla
+                                                                                                                              soglia
+
+
+
+
+                                                                                 Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                    sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                 Pagina 9 di 16
+                                                                                                                              1 per mille dell’importo
+                                                                       30” dalla
+               Richiesta di supporto                                                                                             complessivo del
+                                                                    ricezione nel        20’ nel 95% del preso
+               all’esecuzione di una                                                                                         contratto per ogni punto
+   SL2a                                   Inbound   Telefonica         90% del             in carico su base
+               o più funzionalità del                                                                                           % di scostamento
+                                                                    pervenuto su               bimestrale
+                      sistema                                                                                                  negativo rispetto alla
+                                                                   base bimestrale
+                                                                                                                                      soglia
+
+
+
+                                                                                                                              1 per mille dell’importo
+                                                                       1g dalla
+               Richiesta di supporto                                                                                             complessivo del
+                                                                    ricezione nel       2gg nel 95% del preso
+               all’esecuzione di una                                                                                         contratto per ogni punto
+   SL2b                                   Inbound     Email            90% del            in carico su base
+               o più funzionalità del                                                                                           % di scostamento
+                                                                    pervenuto su              bimestrale
+                      sistema                                                                                                  negativo rispetto alla
+                                                                   base bimestrale
+                                                                                                                                      soglia
+
+
+
+               Rilevazione/segnalazi                                                                                          1 per mille dell’importo
+                                                                       30” dalla
+                one di anomalia del                                                                                              complessivo del
+                                                                    ricezione nel        15’ nel 90% del preso
+                sistema utilizzato o                                                                                         contratto per ogni punto
+   SL3a                                   Inbound   Telefonica         90% del             in carico su base
+               che si vuole utilizzare                                                                                          % di scostamento
+                                                                    pervenuto su               bimestrale
+                   con richiesta di                                                                                            negativo rispetto alla
+                                                                   base bimestrale
+                     risoluzione                                                                                                      soglia
+
+
+               Rilevazione/segnalazi                                                                                          1 per mille dell’importo
+                                                                       1g dalla
+                one di anomalia del                                                                                              complessivo del
+                                                                    ricezione nel       2gg nel 90% del preso
+                sistema utilizzato o                                                                                         contratto per ogni punto
+   SL3b                                   Inbound     Email            90% del            in carico su base
+               che si vuole utilizzare                                                                                          % di scostamento
+                                                                    pervenuto su              bimestrale
+                   con richiesta di                                                                                            negativo rispetto alla
+                                                                   base bimestrale
+                     risoluzione                                                                                                      soglia
+                                                                                         9gg dalla data di fine
+                                                                                         bimestre (compresi i
+                   Produzione e                                                            giorni necessari a                1 per mille dell’importo
+                  consegna delle                                                             rielaborazione                      complessivo del
+                                                                   1g dalla data di
+    SL4        relazioni bimestrali di        -       PEC                                documentale nei casi                   contratto per ogni
+                                                                    fine bimestre
+                Stato Avanzamento                                                         eventuali di rigetto               giorno di ritardo rispetto
+                       Lavori                                                                    SAL per                            alla soglia
+                                                                                        incompletezza e/o non
+                                                                                               correttezza)
+
+
+* Tempo* massimo di presa in carico/Soglia: valutato su base temporale variabile secondo lo specifico SLA
+indicato in tabella (minuti [’]/ore[h]/giorni[g])
+
+
+
+
+  Liv.         Tipo di richiesta di      Canale        Modalità           Soglia                                                        Penale
+                   assistenza
+
+
+
+
+ INO 1               Numero di           Inbound      Trouble TIcketing   10% massimo                                        1 per mille dell’importo
+                     richieste inoltrate                                  rispetto al                                        complessivo del
+                     al Secondo Livello                                   totale di ticket                                   contratto per ogni punto
+                                                                          gestiti                                            percentuale oltre la
+                                                                                                                             soglia
+
+
+Oltre alle ipotesi indicate nelle tabelle che precedono, in caso di interruzione del servizio imputabile a
+responsabilità dell’Aggiudicatario potrà essere irrogata una penale pari ad:
+a) 0,4 per mille dell’importo complessivo contrattuale per ogni ora di interruzione inferiore o pari ad un’ora;
+b) somma dell’importo a) + 0,2 per mille dell’importo complessivo contrattuale per ogni ora di interruzione
+compresa tra una e tre ore;
+c) somma dell’importo b) + 0,01 per mille dell’importo complessivo contrattuale per ogni ora di interruzione
+superiore alle tre ore.
+
+
+
+
+                                                                                         Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                            sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                        Pagina 10 di 16
+Le somme dovute a titolo di penale potranno essere trattenute sugli importi dovuti. In ogni caso la penale potrà
+essere irrogata, previa comunicazione scritta, sino ad un importo massimo del 10% (dieci per cento) del
+corrispettivo contrattuale, al netto dell’IVA. La Stazione Appaltante ha diritto al risarcimento del danno ulteriore,
+ai sensi dell’art. 1382, comma 1, del Codice civile.
+Entro 10 giorni dalla contestazione della penale, l’esecutore del contratto può proporre istanza motivata di
+disapplicazione o riduzione della stessa. Sull'istanza di disapplicazione delle penali decide la Stazione
+appaltante su proposta del Responsabile del procedimento, sentito il Direttore dell’esecuzione.
+L'addebito dell’importo delle penali sarà effettuato con detrazione sull'importo della fattura relativa al periodo
+di competenza.
+In caso di violazioni che generano una o più penali per un importo complessivo superiore al 10% dell’importo
+contrattuale, la Stazione appaltante ha facoltà di dichiarare risolto di diritto il contratto, con le conseguenze
+previste dalla legge.
+Gli SLA saranno valutati fino alla concorrenza del 110% della stima dei ticket incoming sopra rappresentata
+(1800+1100), ovvero fino alla concorrenza delle eventuali proposte migliorative offerte se superiori al 110%
+della stima sopra rappresentata. Le eventuali eccedenze rispetto a tali parametri non concorreranno
+all'applicazione automatica di eventuali penali.
+La Stazione Appaltante si riserva il diritto di verificare in ogni momento l’adeguatezza del servizio prestato
+dall’Aggiudicatario. Ai sensi dell’art. 122 del Codice, in caso di esecuzione irregolare o di insufficiente
+prestazione di servizio, la Stazione Appaltante fisserà un termine entro cui l’Aggiudicatario dovrà adempiere
+a quanto necessario per il rispetto delle specifiche norme contrattuali. Qualora l’Aggiudicatario non provveda
+all’adempimento, la Stazione Appaltante avrà facoltà di risolvere il contratto e di procedere all’esecuzione in
+danno delle prestazioni non effettuate. La risoluzione del contratto darà diritto alla Stazione Appaltante di
+rivalersi, anche mediante compensazione, su eventuali crediti dell’Aggiudicatario, nonché sulla garanzia
+prestata.
+
+
+9. Oneri delle parti
+Sono a carico dell’Aggiudicatario tutte le prestazioni previste dal presente capitolato. Per l’esecuzione delle
+prestazioni a suo carico l’Aggiudicatario dovrà dotarsi di una sede adeguata, di adeguate attrezzature, di
+personale qualificato e sopportarne i relativi oneri quali, a titolo esemplificativo e non esaustivo:
+• i costi della manutenzione delle strumentazioni software e hardware di competenza del Gestore a supporto
+dell’operatività del servizio di call center e attività connesse;
+• i costi della sede;
+• ogni costo connesso agli adempimenti di competenza dell’Aggiudicatario previsti nel presente capitolato,
+nell’offerta tecnica e nei documenti contrattuali;
+• i costi relativi alla formazione del proprio personale adibito all’espletamento del servizio, nonché il costo del
+personale medesimo;
+• i costi per la gestione – ivi compresi i costi di manutenzione - dell’infrastruttura tecnologica.
+Ogni costo e onere non previsto espressamente a carico della Stazione Appaltante sarà di competenza
+esclusiva dell’Aggiudicatario, tenuto a disporre dell’organizzazione e dei mezzi necessari per l’esecuzione
+delle prestazioni previste nel presente capitolato.
+
+
+10. Gruppo di lavoro – profili professionali
+La composizione e l’organizzazione del gruppo di lavoro dovrà essere coerente con le esigenze espresse nel
+presente capitolato tecnico e prestazionale. Nel gruppo di lavoro dovrà essere assicurata la presenza di
+competenze idonee a garantire la qualità del servizio richiesto, con professionalità che dovranno essere
+individuate nel settore dell’Informatica, alla luce delle specifiche tecniche delineate al paragrafo 3.1.
+
+Configurazione minima del team per la realizzazione del servizio:
+      •     1 esperto/a senior, in qualità di Coordinatore responsabile della gestione dei servizi, con esperienza
+            almeno quinquennale nell’area tematica dell’Informatica e IT;
+      •     3 operatori/operatrici telefonici/telefoniche, esclusivamente dedicati/e al servizio telefonico, in
+            contemporanea per ogni turno, in numero non inferiore a due – specializzati/e ed adeguatamente
+            formati/e, anche negli orari che statisticamente segnalano punte maggiori di flusso telefonico.
+
+
+                                                                            Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                               sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                           Pagina 11 di 16
+Per la massima fluidità ed efficacia dei rapporti reciproci nell’esecuzione del presente affidamento,
+l’Aggiudicatario indicherà un proprio rappresentante, definito Referente responsabile dei servizi, che
+comunicherà a Sardegna IT i propri recapiti di cellulare ed e-mail ove si renderà reperibile. Il Referente
+responsabile della gestione dei servizi è preposto alla supervisione ed al coordinamento delle attività del
+servizio previste nel capitolato tecnico e prestazionale e dovrà essere in grado di rispondere tempestivamente
+ad ogni richiesta della Stazione Appaltante in merito ai servizi oggetto dell’affidamento, ivi compresi quelli
+tecnici/informatici. Il Referente responsabile dei servizi rappresenta il principale interlocutore in merito ai
+risultati e alla funzionalità complessiva dei servizi.
+Qualora l’Aggiudicatario, durante lo svolgimento delle prestazioni, si trovasse nella necessità di dover
+sostituire uno o più componenti del gruppo di lavoro, dovrà formulare specifica e motivata richiesta formale,
+indicando i nominativi e le referenze delle/dei sostitute/i che intende proporre alla Stazione Appaltante, che
+dovranno comunque vantare requisiti equivalenti, o superiori, a quelli posseduti dalle/dai componenti da
+sostituire. L’eventuale sostituzione non potrà in alcun modo incidere sulla qualità e sulla continuità dei servizi.
+Contestualmente all’inizio delle attività, l’Aggiudicatario dovrà fornire alla Stazione Appaltante l’elenco di tutto
+il personale adibito al servizio accompagnato dai curricula. Ogni richiesta di variazione/sostituzione, dovrà
+essere accompagnata dai rispettivi curricula.
+
+
+11. Sede e Organizzazione
+Il servizio dovrà essere erogato presso un centro operativo in cui saranno collocate le risorse umane e
+strumentali, ubicato nel territorio nazionale e dovrà essere inoltre organizzato con le seguenti modalità:
+a. Fase di implementazione
+L’aggiudicatario deve prevedere la configurazione e la messa in esercizio della propria dotazione ICT
+hardware e software e garantire il funzionamento di tutta l’infrastruttura tecnologica senza soluzione di
+continuità e si impegna a collaborare con il precedente gestore per la presa in carico e la continuità dei servizi.
+b. Fase di avvio - collaudo – penali
+I servizi oggetto del presente appalto saranno sottoposti a collaudo da parte di personale all’uopo incaricato
+dalla Stazione Appaltante. Si procederà ad un test funzionale di collaudo della dotazione ICT hardware e
+software dell’Aggiudicatario necessarie per supportare l’erogazione del servizio del call center e di raccolta ed
+aggiornamento dei dati, onde verificarne la conformità e l’adeguatezza rispetto a quanto richiesto nel presente
+capitolato. Tale collaudo dovrà essere esperito, con personale individuato dalla Stazione Appaltante, in tempo
+utile per dare continuità al servizio. In sede di collaudo l’Aggiudicatario dovrà garantire la presenza del
+Referente responsabile dei servizi e di un adeguato numero di operatori/operatrici. Nel caso di esito negativo
+del collaudo, la Stazione Appaltante applicherà una penale pari ad € 1 per mille dell’importo contrattuale per
+ogni giorno di ritardo rispetto al corretto avvio dei servizi, fermo il risarcimento dei danni ulteriori e la risoluzione
+del contratto ove la correzione dell’anomalia non avvenga entro un massimo di 10 (dieci) giorni lavorativi dalla
+data del collaudo e in ogni altro caso in cui l’anomalia sia rilevante al punto da incidere sulla corretta
+esecuzione del contratto.
+c. Fase di rilascio e passaggio ad altro gestore
+Negli ultimi 60 (sessanta) giorni solari di validità del Contratto, o nel caso di cessazione anticipata del rapporto
+contrattuale per qualsiasi causa o motivo, l’Aggiudicatario dovrà fornire al personale della Stazione Appaltante,
+o a terzi da esso designati, il supporto necessario per consentire la prosecuzione delle attività senza soluzione
+di continuità. Il periodo di affiancamento sarà organizzato secondo modalità comunicate dalla Stazione
+Appaltante e potrà prevedere sessioni di lavoro congiunto con l’Aggiudicatario subentrante.
+
+
+
+
+12. Riscontri di approvazione, verifiche di conformità e accettazione
+In linea generale, i riscontri di approvazione e le verifiche effettuate in corso d’opera sulla fornitura sono tesi
+ad accertare la conformità del servizio nel rispetto delle modalità e specifiche indicate contrattualmente.
+La verifica di conformità finale è, invece, tesa ad accertare la regolare esecuzione e l’accettazione delle
+forniture e servizi nel rispetto delle condizioni definite contrattualmente.
+I riscontri di approvazione saranno rilasciati sui documenti e prodotti intermedi (deliverable intermedi rilasciati)
+secondo le modalità e le tempistiche indicate in appalto.
+
+
+
+                                                                               Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                  sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                              Pagina 12 di 16
+Le verifiche di conformità della fornitura saranno effettuate - in corso d’opera e allo stato finale – nei termini
+previsti dal Dlgs n. 36/2023.
+Le verifiche sono, nello specifico, tese ad accertare:
+      - (solo nel caso della verifica per approvazione dello stato di avanzamento finale) la regolare esecuzione
+        del servizio nel rispetto delle modalità e specifiche indicate dal presente capitolato, ed eventualmente
+        riferite alle condizioni migliorative, se proposte in offerta
+    - il rispetto dei termini di scadenza, sia intermedi che finali di completamento (con anche riferimento alle
+        condizioni migliorative di offerta se proposte)
+    - il rispetto dei livelli di servizio contrattuali (SLA)
+    - l'avvenuto rilascio di tutta la documentazione e i prodotti richiesti
+    - l’assenza di danni
+L’impresa aggiudicataria deve garantire il presidio e l’assistenza necessaria all’effettuazione delle verifiche
+di conformità e all’analisi di eventuali anomalie riscontrate.
+Nel caso in cui, in sede di verifica, la fornitura non superi in tutto od in parte l'esame di conformità,
+l’aggiudicatario è obbligato a provvedere in merito alla risoluzione delle difformità riscontrate e a stabilire le
+condizioni di verificabilità e corretto funzionamento della fornitura entro 5 (cinque) giorni solari, periodo al
+termine del quale Sardegna IT provvederà all’esecuzione di nuovo esame di conformità.
+L’esecuzione di interventi correttivi, necessari a garantire la verificabilità ed il regolare funzionamento della
+fornitura, non interrompe i tempi richiesti contrattualmente per il completamento e regolare esecuzione della
+fornitura e darà comunque adito all’applicazione delle penali. Nel caso di terzo esito negativo, conseguente
+alle verifiche di conformità e regolare funzionamento, Sardegna IT ha facoltà di dichiarare la risoluzione di
+diritto del contratto.
+Al termine delle sessioni di verifica sarà redatto, in contraddittorio con i rappresentanti dell'affidatario, apposito
+verbale che conterrà l’esito delle verifiche svolte e, laddove rilevate, delle eventuali prescrizioni necessarie
+alla risoluzione delle non conformità e delle relative tempistiche di esecuzione.
+Il verbale di verifica finale di conformità (di regolare esecuzione e accettazione della fornitura), con esito
+positivo, determina l’accettazione definitiva di tutte le prestazioni rese e il diritto al pagamento totale del
+corrispettivo dovuto, come risultante dallo stato finale della contabilità, a meno di importi eventualmente
+trattenuti per penali e/o rivalse su danni.
+La verifica di conformità finale è, invece, tesa ad accertare la regolare esecuzione e l’accettazione dei servizi
+nel rispetto delle condizioni definite contrattualmente prevede la verbalizzazione di regolare esecuzione e
+accettazione della fornitura, che dovrà essere redatta nei termini previsti dal Dlgs n. 36/2023.
+
+
+13. Corrispettivo, stati di avanzamento e pagamenti
+
+ 13.1 Importo contrattuale
+Il corrispettivo complessivo e omnicomprensivo spettante a fronte della piena e corretta esecuzione
+dell’appalto sarà pari a quanto indicato nell’offerta economica presentata dall’aggiudicatario e, comunque, nel
+contratto.
+Il corrispettivo sarà sempre riferito a prestazioni realizzate a perfetta regola d’arte e nel pieno rispetto ed
+adempimento delle modalità, delle prescrizioni e delle specifiche indicate nel presente capitolato, nell’offerta
+presentata e, comunque, nel contratto.
+Tutte le spese e oneri derivanti all’aggiudicatario per la corretta esecuzione del contratto, saranno considerati
+remunerati dal prezzo offerto. Il corrispettivo sarà pertanto determinato dall’aggiudicatario, in base ai propri
+calcoli, alle proprie indagini, alle proprie stime, e comprensivo di ogni relativo rischio e/o alea.
+
+
+ 13.2 Contabilità e stati di avanzamento
+Il corrispettivo sarà riconosciuto ogni bimestre previa verbalizzazione degli esiti e per gli importi contabilizzati
+dal Direttore dell’Esecuzione del Contratto (DEC) e autorizzati a fatturazione previa deduzione delle garanzie
+che saranno svincolate a saldo (a avvenuta verifica finale e certificazione della regolare esecuzione).
+L’aggiudicatario provvederà ad emettere le relative fatture su preventiva autorizzazione da parte della stazione
+appaltante e per i soli importi contabilizzati dal Direttore dell’Esecuzione del Contratto (DEC).
+
+
+                                                                             Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                            Pagina 13 di 16
+Ciascuna fattura emessa dovrà riportare i chiari riferimenti al contratto, all’avvenuta approvazione formale
+emessa da Sardegna IT ad esito delle verifiche intermedie e/o di regolare esecuzione e accettazione della
+fornitura (es. Verbale del gg/mm/aaaa, o Nota autorizzazione Vs. prot. xxx del gg/mm/aaaa) e gli importi come
+autorizzati.
+La fattura dovrà essere intestata a:
+         Sardegna IT S.r.l. c.s.u.
+         Via dei Giornalisti, 6
+         09122 CAGLIARI - CA
+         Cod. Fisc. e P.IVA 03074520929
+Le fatture dovranno altresì riportare espressamente:
+-     il chiaro riferimento alla presente procedura come indicato in piattaforma
+-     il Codice Identificativo della Gara (CIG) come indicato in piattaforma
+-     Il Codice Univoco              di   Progetto   (CUP)   riferito   all’intervento     principale           E-HEALTH-2020                      è:
+      E71B17000160009;
+-     Il Codice Univoco di Progetto (CUP) riferito all’intervento secondario SIWE è: E71C17000060009.
+
+
+Si precisa che è ammessa solo la fatturazione elettronica ai sensi del DM n. 55 del 3 aprile 2013.
+Il Codice Univoco al quale dovranno essere indirizzate le fatture elettroniche verso Sardegna IT è UFUSG2.
+Le fatture verso Sardegna IT dovranno essere emesse con la dicitura "Operazione assoggettata alla scissione
+dei pagamenti (split payment) ai sensi dell'art.17-ter del DPR 633/1972" e verrà corrisposto il solo imponibile.
+Per maggiori dettagli in merito alla fatturazione elettronica verso Sardegna IT si rinvia al link:
+https://www.sardegnait.it/documenti/36_231_20170630110835.pdf
+Il pagamento della fattura, previa verifica di regolare emissione della fattura, avverrà a 30 giorni data
+ricevimento fattura fine mese.
+Detto termine è sospeso nel caso di contestazione di qualsiasi irregolarità riscontrata nella esecuzione delle
+prestazioni affidate, dalla richiesta di chiarimenti in ordine alla fattura prodotta, dalla riscontrata irregolare
+fatturazione, anche ai sensi della L. 136/2010, ed inizia a decorrere nuovamente dal momento dell’accertata
+eliminazione delle inadempienze riscontrate dalla regolarizzazione delle fatture, o dal ricevimento dei
+chiarimenti richiesti.
+In ottemperanza all’obbligo di tracciabilità dei flussi finanziari di cui all’art. 3 della L. 136/2010 il pagamento
+sarà eseguito mediante bonifico su conto corrente bancario o postale, utilizzato, anche promiscuamente e in
+via non esclusiva per i movimenti finanziari relativi all’appalto.
+La comunicazione delle generalità e del codice fiscale dei soggetti delegati a operare su detto conto corrente
+deve avvenire entro 7 giorni dalla sua accensione o dalla sua prima utilizzazione per movimentare i flussi
+finanziari derivanti dalla presente commessa pubblica e dovranno essere altresì comunicate tutte le
+modificazioni intervenute in corso d’esecuzione.
+L’aggiudicatario, pertanto, sarà tenuto a rendere tempestivamente note eventuali variazioni relative ai dati utili
+per il pagamento; in mancanza di detta comunicazione la stazione appaltante resta esonerata da qualsiasi
+responsabilità e conseguenza per l'eventuale inesattezza o illiceità dei pagamenti stessi.
+Il mancato utilizzo del bonifico bancario o postale costituirà, ai sensi dell’art. 3, comma 9-bis della L.136/2010,
+causa di risoluzione del contratto che si stipulerà ad esito della presente procedura (salvo si utilizzino altri
+strumenti comunque idonei, ai fini della citata L. 136/2010, a consentire la piena tracciabilità delle operazioni
+finanziarie).
+L’aggiudicatario sarà tenuto ad assolvere a tutti gli obblighi previsti dall’art. 3 della L. 136/2010 al fine di
+assicurare la piena tracciabilità dei flussi finanziari relativi all’appalto e la stazione appaltante verificherà in
+occasione del pagamento e con interventi di controllo ulteriori, l’assolvimento di detti obblighi.
+Sarà in capo a entrambe le parti l’obbligo di segnalare alla Prefettura UTG competente, il mancato rispetto
+degli obblighi di tracciabilità dei flussi finanziari di cui all’art. 3 della L. 136/2010, da parte dell’altro contraente.
+
+
+
+
+                                                                                    Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                       sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                                   Pagina 14 di 16
+14. Certificato di verifica di conformità
+Le attività di verifica di conformità che si svolgeranno a chiusura del contratto e nei termini prescritti dalla
+normativa vigente (cfr. art. 116 D.lgs. 36/2023), laddove di seguito non diversamente disciplinati, sono dirette
+a certificare che l’oggetto del contratto in termini di prestazioni, obiettivi e caratteristiche tecniche, economiche
+e qualitative sia stato realizzato ed eseguito nel rispetto delle previsioni e delle pattuizioni contrattuali, nonché
+nel rispetto delle eventuali normative di settore. L’Aggiudicatario deve mettere a disposizione, a propria cura
+e spese, i mezzi necessari ad eseguire la verifica. Nel caso ciò non dovesse avvenire, il DEC dispone che sia
+provveduto d’ufficio, deducendo la spesa dal corrispettivo dovuto all’appaltatore. La verifica di conformità è
+conclusa non oltre 2 (due) mesi dall’ultimazione dell’esecuzione delle prestazioni contrattuali. Il certificato di
+verifica viene trasmesso per accettazione all’appaltatore, che entro 15 giorni dovrà restituirlo firmato
+digitalmente. Successivamente all’emissione di tale certificato la Stazione Appaltante procederà al pagamento
+del saldo finale e allo svincolo della cauzione definitiva.
+
+
+15. Responsabilità ed obblighi derivanti dai rapporti di lavoro
+L’Aggiudicatario è tenuto ad ottemperare a tutti gli obblighi verso i propri dipendenti occupati nei lavori di cui
+al presente capitolato tecnico e prestazionale e al disciplinare di gara, in base alle disposizioni legislative ed
+ai regolamenti vigenti in materia di lavoro e di assicurazioni sociali, assumendo a proprio carico i relativi
+obblighi. Conseguentemente ogni eventuale responsabilità, per quanto riguarda la sicurezza infortunistica,
+sarà a carico dell’Aggiudicatario che dovrà quindi provvedere, ai fini della prevenzione degli infortuni sul lavoro
+e delle malattie professionali, ed a sua cura e spese, a tutti gli obblighi che gli derivano dall'esecuzione del
+servizio affidato in gestione.
+
+
+16. Risoluzione e recesso
+
+Oltre alle cause di risoluzione previste dall’art. 122 del D.lgs. 36/2023, la Stazione Appaltante potrà risolvere
+di diritto il contratto nelle forme previste dalla legge – art. 1456 c.c. - ove si verifichi uno dei seguenti
+inadempimenti:
+1. mancato o intempestivo adeguamento ai rilievi formulati dal DPO in sede di collaudo dei servizi o di
+esecuzione del contratto;
+2. interruzione o sospensione del servizio;
+3. inosservanza dei tempi di risposta;
+4. omessa comunicazione della sostituzione o assunzione di nuove operatrici e/o esperti;
+
+Recesso
+Ai sensi dell’art. 123 del Codice, considerate la natura e le finalità del servizio, la Stazione Appaltante si riserva
+di recedere in qualsiasi momento, per motivi di interesse pubblico – o per il venir meno del rapporto di fiducia
+con l’Aggiudicatario del servizio – dal contratto in essere. Il recesso della Stazione Appaltante dal contratto,
+qualora non imputabile in alcun modo all’appaltatore, potrà dare luogo all’erogazione di un indennizzo a favore
+dello stesso.
+Liquidazione giudiziale e procedure concorsuali in corso di contratto
+In caso di liquidazione giudiziale, di liquidazione coatta e concordato preventivo, oppure di risoluzione del
+contratto ai sensi dell’articolo 122 del Codice o di recesso dal contratto ai sensi dell'articolo 88, comma 4-ter,
+del codice delle leggi antimafia e delle misure di prevenzione, di cui al decreto legislativo 6 settembre 2011,
+n. 159, oppure in caso di dichiarazione giudiziale di inefficacia del contratto, si applica l’art. 124 del Codice.
+Diritti di proprietà e utilizzo di ogni prodotto
+La proprietà dei dati, dei back-up, delle applicazioni e dei report effettuati. L’aggiudicatario si obbliga, nel caso
+di risoluzione per qualsiasi causa del contratto o non riassegnazione dell’appalto trascorsi i termini contrattuali,
+a garantire un efficace ed integrale trasferimento dei dati e quant’altro necessario in favore della Stazione
+Appaltante o nuovo gestore, onde garantire il funzionamento del servizio di pubblica utilità senza soluzione di
+continuità.
+Riservatezza delle informazioni e accesso agli atti
+L’Aggiudicatario deve assicurare la totale riservatezza dei contenuti delle segnalazioni che pervengono e dei
+dati che vengono elaborati nei report. È fatto divieto di utilizzare i dati e la reportistica, senza previa
+
+                                                                             Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                                sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                            Pagina 15 di 16
+autorizzazione della Stazione Appaltante. In materia di accesso agli atti di gara trovano applicazione le
+disposizioni di cui agli artt. 35 e 36 del Codice, dagli artt. 22 e ss. della legge 7 agosto 1990, n. 241 e dagli
+artt. 5 e 5-bis del decreto legislativo 14 marzo 2013, n. 33.
+
+
+17. Direttore dell’Esecuzione del Contratto (DEC)
+La Stazione Appaltante verificherà il regolare andamento dell’esecuzione del contratto da parte del gestore
+attraverso all’uopo nominato Direttore dell’esecuzione del contratto. Ai sensi degli artt. 115 del codice, il
+direttore dell’esecuzione del contratto provvede al coordinamento, alla direzione ed al controllo tecnico-
+contabile dell’esecuzione del contratto stipulato dalla Stazione Appaltante; assicura la regolare esecuzione
+del contratto da parte dell’Aggiudicatario, verificando che le attività e le prestazioni contrattuali siano eseguite
+in conformità ai documenti contrattuali. A tale fine, il direttore dell’esecuzione del contratto svolge tutte le
+attività allo stesso espressamente demandate dalla legge, nonché tutte le attività che si rendano opportune
+per assicurare il perseguimento dei compiti a questo assegnati.
+
+
+18. Cessione del contratto e dei crediti
+Ai sensi dell’art. 119 del Codice è vietata la cessione di contratto anche parziale da parte dell’appaltatore, fatto
+salvo quanto previsto all’art. 120, comma 1, lett. d), del Codice. Per la cessione di crediti trova applicazione
+l’art. 120 comma 12 del Codice.
+
+
+19. Foro competente a conoscere il contratto
+Per qualsiasi controversia che dovesse sorgere tra le parti in relazione all’interpretazione, all’esecuzione e/o
+validità del contratto, il Foro competente è quello di Cagliari.
+
+
+20. Rinvio
+Per tutto quanto non espressamente contemplato nel presente capitolato tecnico e prestazionale e nel
+disciplinare di gara, si fa espresso riferimento a quanto previsto in materia dalla vigente legislazione nazionale
+e comunitaria.
+
+
+
+
+                                                                            Servizio di contact center in outsourcing rivolto agli utenti dei
+[E-HEALTH-2020] [SIWE]
+                                                                               sistemi informativi sanitari della Regione Sardegna
+Capitolato tecnico e prestazionale                                                                                           Pagina 16 di 16
+
