@@ -54,31 +54,31 @@
   "G3": {
    "cig_totali": 1000,
    "euro_totali": 1546339517,
-   "cig_classificati": 949,
-   "euro_classificati": 1514133699,
+   "cig_classificati": 999,
+   "euro_classificati": 1544839664,
    "confidenza": {
-    "media": 789,
-    "bassa": 99,
-    "alta": 61
+    "media": 833,
+    "bassa": 103,
+    "alta": 63
    },
-   "fonte_primaria": 94,
-   "con_documento_archiviato": 310,
+   "fonte_primaria": 97,
+   "con_documento_archiviato": 326,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 506,
-     "euro": 804064877
+     "cig": 534,
+     "euro": 821280622
     },
     "A:incerto | B:incerto": {
-     "cig": 234,
-     "euro": 388768672
+     "cig": 247,
+     "euro": 396814994
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 196,
-     "euro": 294818022
+     "cig": 204,
+     "euro": 299645920
     },
     "A:incluso-certo | B:incluso-certo": {
-     "cig": 13,
-     "euro": 26482128
+     "cig": 14,
+     "euro": 27098128
     }
    }
   },
@@ -143,16 +143,16 @@
   },
   "G3": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 173,
-    "euro": 271254156
+    "cig": 177,
+    "euro": 273752891
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 333,
-    "euro": 532810720
+    "cig": 357,
+    "euro": 547527732
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
-    "cig": 4,
-    "euro": 4038494
+    "cig": 5,
+    "euro": 4654494
    },
    "incluso certo cloud, giurisdizione IT (proposta via 6)": {
     "cig": 6,
@@ -163,8 +163,8 @@
     "euro": 9836664
    },
    "resta incerto (S6)": {
-    "cig": 430,
-    "euro": 683586694
+    "cig": 451,
+    "euro": 696460914
    }
   },
   "CTL": {
@@ -236,30 +236,30 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 393,
+  "cig_con_ostacoli": 413,
   "per_tipo": {
-   "altro": 314,
-   "403": 77,
-   "404": 74,
-   "login": 61,
-   "link-pvl-rotto": 13,
-   "pdf-illeggibile": 12
+   "altro": 327,
+   "403": 82,
+   "404": 80,
+   "login": 63,
+   "link-pvl-rotto": 16,
+   "pdf-illeggibile": 13
   },
   "domini_principali": {
    "dati.anticorruzione.it": 20,
-   "www.difesa.it": 15,
-   "www.sintel.regione.lombardia.it": 13,
+   "www.difesa.it": 19,
+   "www.sintel.regione.lombardia.it": 14,
    "piattaformaacquisti.rai.it": 12,
-   "www.acquistinretepa.it": 9,
+   "www.acquistinretepa.it": 12,
+   "www.stradeanas.it": 10,
    "www.anticorruzione.it": 8,
    "gareappalti.bancaditalia.it": 8,
-   "www.stradeanas.it": 8,
    "": 7,
+   "www.ariaspa.it": 7,
+   "app.albofornitori.it": 7,
    "portaleappalti.gesap.it": 6,
-   "www.ariaspa.it": 6,
    "pubblicitalegale.anticorruzione.it": 5,
    "sisgap.regione.calabria.it": 5,
-   "app.albofornitori.it": 5,
    "www.empulia.it": 5
   }
  },
@@ -273,8 +273,8 @@
    "usd_eq": 138.17
   },
   "imbuto-g3": {
-   "chiamate": 190,
-   "usd_eq": 304.84
+   "chiamate": 200,
+   "usd_eq": 320.27
   },
   "imbuto-revisione": {
    "chiamate": 38,
@@ -288,7 +288,7 @@
    "stima_1000": 360,
    "limite_+20%": 432,
    "per_cig": 0.321,
-   "proiezione_1000": 321.2
+   "proiezione_1000": 320.6
   }
  }
 }
