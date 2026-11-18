@@ -1,0 +1,147 @@
+{
+ "data": "2026-11-18",
+ "imbuto": "0.3.4",
+ "regola": "P1: solo segnali deboli (connettività, sw) e CPV 33/38/41-45/73 -> fuori",
+ "ict_csv_sha256": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+ "s6": [
+  {
+   "periodo": "2020-2023",
+   "gruppo": "G1",
+   "cig": 140,
+   "euro": 4052721516,
+   "p1_esce_cig": 2,
+   "p1_esce_euro": 28971843,
+   "p1r_esce_cig": 2,
+   "p1r_esce_euro": 28971843
+  },
+  {
+   "periodo": "2020-2023",
+   "gruppo": "G2",
+   "cig": 1532,
+   "euro": 2047865352,
+   "p1_esce_cig": 0,
+   "p1_esce_euro": 0,
+   "p1r_esce_cig": 0,
+   "p1r_esce_euro": 0
+  },
+  {
+   "periodo": "2020-2023",
+   "gruppo": "G3",
+   "cig": 10794,
+   "euro": 2669686989,
+   "p1_esce_cig": 90,
+   "p1_esce_euro": 31131545,
+   "p1r_esce_cig": 59,
+   "p1r_esce_euro": 15772164
+  },
+  {
+   "periodo": "2020-2023",
+   "gruppo": "G4",
+   "cig": 12779,
+   "euro": 147357510,
+   "p1_esce_cig": 36,
+   "p1_esce_euro": 505889,
+   "p1r_esce_cig": 29,
+   "p1r_esce_euro": 406116
+  },
+  {
+   "periodo": "2020-2023",
+   "gruppo": "tutti",
+   "cig": 25245,
+   "euro": 8917631367,
+   "p1_esce_cig": 128,
+   "p1_esce_euro": 60609277,
+   "p1r_esce_cig": 90,
+   "p1r_esce_euro": 45150124
+  },
+  {
+   "periodo": "dal-2024",
+   "gruppo": "G1",
+   "cig": 227,
+   "euro": 8531304789,
+   "p1_esce_cig": 11,
+   "p1_esce_euro": 437956669,
+   "p1r_esce_cig": 10,
+   "p1r_esce_euro": 430371669
+  },
+  {
+   "periodo": "dal-2024",
+   "gruppo": "G2",
+   "cig": 867,
+   "euro": 4030846327,
+   "p1_esce_cig": 0,
+   "p1_esce_euro": 0,
+   "p1r_esce_cig": 0,
+   "p1r_esce_euro": 0
+  },
+  {
+   "periodo": "dal-2024",
+   "gruppo": "G3",
+   "cig": 13437,
+   "euro": 3158942097,
+   "p1_esce_cig": 113,
+   "p1_esce_euro": 53379736,
+   "p1r_esce_cig": 82,
+   "p1r_esce_euro": 42259490
+  },
+  {
+   "periodo": "dal-2024",
+   "gruppo": "G4",
+   "cig": 44875,
+   "euro": 648617287,
+   "p1_esce_cig": 143,
+   "p1_esce_euro": 2505808,
+   "p1r_esce_cig": 97,
+   "p1r_esce_euro": 1718225
+  },
+  {
+   "periodo": "dal-2024",
+   "gruppo": "tutti",
+   "cig": 59406,
+   "euro": 16369710501,
+   "p1_esce_cig": 267,
+   "p1_esce_euro": 493842213,
+   "p1r_esce_cig": 189,
+   "p1r_esce_euro": 474349383
+  }
+ ],
+ "dal_2024_cpv_divisione": {
+  "33": 95,
+  "38": 76,
+  "45": 60,
+  "73": 18,
+  "44": 11,
+  "42": 6,
+  "41": 1
+ },
+ "dal_2024_segnali": {
+  "sw": 164,
+  "connettivita": 100,
+  "connettivit": 3
+ },
+ "campione": {
+  "seme": "p1-20261118",
+  "n": 40,
+  "file": "esiti/2026-11-18/imbuto/p1-campione.csv",
+  "precisione": {
+   "P1": {
+    "campione": 40,
+    "giudizi": {
+     "non-ict": 29,
+     "ict": 8,
+     "dubbio": 3
+    },
+    "euro_ict_persi": 324539
+   },
+   "P1r": {
+    "campione": 26,
+    "giudizi": {
+     "ict": 2,
+     "non-ict": 23,
+     "dubbio": 1
+    },
+    "euro_ict_persi": 90904
+   }
+  }
+ }
+}
