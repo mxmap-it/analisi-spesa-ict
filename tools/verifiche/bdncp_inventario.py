@@ -35,7 +35,7 @@ def main():
     ict = set()
     with open(BASE / "lavoro/imbuto/ict.csv", encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
-            if not r["strato"].startswith(("S1", "S2")):
+            if r["strato"].startswith(("S3", "S4", "S5", "S6")):  # 18/11: prima escludeva solo S1-S2, contando i padri AQ (S0)
                 ict.add(r["cig"])
     uso = {}
     sorgenti = [p for p in glob.glob(str(BASE / "tools/**/*.py"), recursive=True) + glob.glob(str(BASE / "tools/**/*.sh"), recursive=True)

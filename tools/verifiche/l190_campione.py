@@ -148,7 +148,7 @@ def misura(n):
     ict = set()
     with open(BASE / "lavoro" / "imbuto" / "ict.csv", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            if not r["strato"].startswith(("S1", "S2")):
+            if r["strato"].startswith(("S3", "S4", "S5", "S6")):  # 18/11: prima escludeva solo S1-S2, contando i padri AQ (S0)
                 ict.add(r["cig"])
     ents = [json.loads(l) for l in (OUT / "stato.jsonl").open(encoding="utf-8")][:n]
     c = collections.Counter()

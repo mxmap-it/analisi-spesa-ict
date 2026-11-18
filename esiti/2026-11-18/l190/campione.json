@@ -1,0 +1,108 @@
+{
+ "registro": {
+  "2015": {
+   "righe": 18030,
+   "enti": 18030,
+   "esito_anac_successo": 8823
+  },
+  "2016": {
+   "righe": 17534,
+   "enti": 17534,
+   "esito_anac_successo": 12014
+  },
+  "2017": {
+   "righe": 18093,
+   "enti": 18093,
+   "esito_anac_successo": 13709
+  },
+  "2018": {
+   "righe": 19031,
+   "enti": 19031,
+   "esito_anac_successo": 15141
+  },
+  "2019": {
+   "righe": 19349,
+   "enti": 19349,
+   "esito_anac_successo": 15726
+  },
+  "2020": {
+   "righe": 19024,
+   "enti": 19024,
+   "esito_anac_successo": 15248
+  },
+  "2021": {
+   "righe": 19807,
+   "enti": 19807,
+   "esito_anac_successo": 16569
+  },
+  "2022": {
+   "righe": 20204,
+   "enti": 20204,
+   "esito_anac_successo": 17131
+  },
+  "2023": {
+   "righe": 19889,
+   "enti": 19889,
+   "esito_anac_successo": 16897
+  }
+ },
+ "registro_enti_distinti": 27045,
+ "registro_campi": [
+  "_anno",
+  "codiceFiscale",
+  "dataUltimoTentativoAccessoUrl",
+  "esitoUltimoTentativoAccessoUrl",
+  "identificativoPEC",
+  "ragioneSociale",
+  "url"
+ ],
+ "campione": {
+  "enti": 200,
+  "host_distinti": 122,
+  "conteggi": {
+   "enti": 200,
+   "indice_nuovo": 111,
+   "indice_tipo_dataset": 89,
+   "enti_con_lotti": 97,
+   "indice_assente": 26,
+   "indice_errore": 53,
+   "indice_tipo_non-xml": 24,
+   "indice_invariato": 10,
+   "indice_tipo_indice": 8,
+   "dataset_scaricati": 18,
+   "dataset_tipo_dataset": 18
+  },
+  "lotti": {
+   "lotti": 34592,
+   "cig_valorizzato": 34419,
+   "cig_ict": 198,
+   "con_agg": 34520,
+   "somma_agg": 8154344676.69,
+   "con_liq": 34543,
+   "somma_liq": 943548677.56,
+   "liq_pos": 27311,
+   "coppie": 32987,
+   "coppie_agg": 8154207528.55,
+   "coppie_liq": 811780537.29,
+   "liq_gt_agg": 2800,
+   "ict_agg": 103411209.04,
+   "ict_liq": 20556878.54
+  },
+  "anni_riferimento": {
+   "2022": 104,
+   "01/26/2022 00:00:00": 1,
+   "2021": 1,
+   "2013": 1
+  },
+  "dimensione_file_dataset_byte": {
+   "n": 107,
+   "somma": 40790733,
+   "mediana": 119708,
+   "max": 5155554
+  },
+  "n_link_per_indice": {
+   "0": 198,
+   "50": 2
+  }
+ }
+}
