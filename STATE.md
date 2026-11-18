@@ -6,7 +6,7 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 ## PUNTO DI RIPRESA 18/11/2026
 
-**Server:** sd-172212 (migrazione del 17/11). Il progetto resta in `/home/mxmap.it/analisi-spesa-ict`, utente `mxmap.it`; Claude gira come `ubuntu` con ACL e fa git/processi lunghi con `sudo -u mxmap.it -H bash -lc '...'`. **Cron tutti sospesi** (`#MIGRAZIONE-SOSPESO#` in `crontab -u mxmap.it`): guardiano, sonda 06:10, metriche 06:40, `sync_server.sh`, guardiani via 6: si riattivano solo con l'ok di Fabio. Il `gh` di ubuntu non ha lo scope `project`: `tools/stato_ticket.sh` non funziona finché non si fa `gh auth refresh -s project`. 365 GB liberi, 24 GB RAM disponibili.
+**Server:** sd-172212 (migrazione del 17/11). Il progetto resta in `/home/mxmap.it/analisi-spesa-ict`, utente `mxmap.it`; Claude gira come `ubuntu` con ACL e fa git/processi lunghi con `sudo -u mxmap.it -H bash -lc '...'`. **Cron tutti sospesi** (`#MIGRAZIONE-SOSPESO#` in `crontab -u mxmap.it`): guardiano, sonda 06:10, metriche 06:40, `sync_server.sh`, guardiani via 6: si riattivano solo con l'ok di Fabio. Il `gh` di ubuntu ha lo scope `project` dal 18/11: `tools/stato_ticket.sh` funziona. 365 GB liberi, 24 GB RAM disponibili.
 
 **Fatto il 18/11:**
 - **#71 imbuto 0.3.4 applicato** (d2dcb2d8): `lavoro/imbuto/ict.csv` = variante A della prova del 9/11 (lente v4.5); 0.3.1 conservata in `lavoro/imbuto/versioni/0.3.1-20261103/` con SHA256SUMS. 0 CIG ripetuti; S3-S6 dal 2024 netti tetti **56,06 mld**; `IMBUTO_VERSIONE=0.3.4` per `imbuto_strati.py`, `imbuto_tetti.py`, `imbuto_revisione.py` (esiti in `esiti/2026-11-18/imbuto/`), `IMBUTO_ESITI` per `imbuto_cig_ripetuti.py`. P1 non applicata.
