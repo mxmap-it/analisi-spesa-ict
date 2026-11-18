@@ -1,17 +1,17 @@
 {
  "data": "2026-11-18",
  "strumento": "tools/verifiche/imbuto_via6_revisione.py",
- "candidati": 265,
- "letti": 264,
+ "candidati": 272,
+ "letti": 271,
  "concordanza": {
+  "discorde": 56,
   "concorde": 89,
   "non-confermato": 126,
-  "discorde": 49,
   "da-leggere": 1
  },
  "accordo_sui_letti_certi": {
   "concordi": 89,
-  "discordi": 49
+  "discordi": 56
  },
  "per_strato": {
   "CTL CC-IT": {
@@ -106,8 +106,8 @@
   },
   "G1 S5": {
    "proposti": {
-    "cig": 65,
-    "euro": 1771862679
+    "cig": 72,
+    "euro": 3766229042
    },
    "C1": {
     "cig": 23,
@@ -282,8 +282,8 @@
   },
   "tutti S5": {
    "proposti": {
-    "cig": 244,
-    "euro": 2046045570
+    "cig": 251,
+    "euro": 4040411933
    },
    "C1": {
     "cig": 55,
@@ -303,8 +303,64 @@
    }
   }
  },
- "coda_discordi": 50,
+ "coda_discordi": 57,
  "righe": [
+  {
+   "cig": "B67ACDC769",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 1002000000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): Accordo Quadro per ogni lotto avente ad oggetto servizi di connettività, servizi di telefonia fissa, servizi di sicurezza e servizi professionali nell'ambito de",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B67ACDC769",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "Accordo Quadro per ogni lotto avente ad oggetto servizi di connettività, servizi di telefonia fissa, servizi di sicurezza e servizi professionali nell'ambito del SPC; CPV 64210000 Servizi telefonici e di trasmissione dati",
+    "sha256": "508f5ca806a2c96ed2523fe7f543ed6d9299bfe64548953588e025280a357b59",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
+   }
+  },
+  {
+   "cig": "B67ACDF9E2",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 588000000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B67ACDF9E2",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto del singolo lotto ignoto)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
+   }
+  },
   {
    "cig": "B45EB1C19B",
    "gruppo": "G1",
@@ -359,6 +415,62 @@
     "modello": "claude-opus",
     "istruzioni": "revisione-1",
     "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "B67ACDE90F",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 180000000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B67ACDE90F",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto del singolo lotto ignoto)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
+   }
+  },
+  {
+   "cig": "B67ACE1B88",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 175000000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B67ACE1B88",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "media",
+    "evidenza": "ACQUISIZIONE DI SERVIZI DI CONNETTIVITÀ, SERVIZI DI TELEFONIA FISSA, SERVIZI DI SICUREZZA E SERVIZI PROFESSIONALI NELL'AMBITO DEL SPC; CPV 64210000-1 (contenuto del singolo lotto ignoto)",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
    }
   },
   {
@@ -723,6 +835,34 @@
     "modello": "claude-opus",
     "istruzioni": "revisione-1",
     "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "BA88CF13AB",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 26648039.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): SERVIZI DI CONNETTIVITÀ IP PER IL TELECONTROLLO DI IMPIANTI PRIMARI E BME; CPV 64210000-1",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "BA88CF13AB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "SERVIZI DI CONNETTIVITÀ IP PER IL TELECONTROLLO DI IMPIANTI PRIMARI E BME; CPV 64210000-1",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
    }
   },
   {
@@ -1386,6 +1526,34 @@
    }
   },
   {
+   "cig": "B764D5B5BB",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 11560000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): AFFIDAMENTO DI SERVIZI DI CONNETTIVITÀ 4G E 5G E DELLA FORNITURA E POSA IN OPERA DI SISTEMI RADIO INDOOR; CPV 64210000-1",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B764D5B5BB",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "AFFIDAMENTO DI SERVIZI DI CONNETTIVITÀ 4G E 5G E DELLA FORNITURA E POSA IN OPERA DI SISTEMI RADIO INDOOR; CPV 64210000-1",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
+   }
+  },
+  {
    "cig": "B634C5DDC5",
    "gruppo": "G1",
    "strato_proposto": "S5",
@@ -1467,6 +1635,34 @@
     "modello": "claude-opus",
     "istruzioni": "revisione-1",
     "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "B8DF5379C2",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 11158324.49,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "discorde",
+   "C4_nota": "seconda lettura: non ICT (S1, non S5): LOTTO 4 - AMBITI 3 E 7 | S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE (CPV 64200000-8 servizi di telecomunicazione): connettività pura",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B8DF5379C2",
+    "ict": "n",
+    "e_cloud": "n",
+    "provider_prodotto": "",
+    "giurisdizione": "ignota",
+    "certezza": "alta",
+    "evidenza": "LOTTO 4 - AMBITI 3 E 7 | S-ICT-IT-GARA CONNETTIVITA' E-DISTRIBUZIONE (CPV 64200000-8 servizi di telecomunicazione): connettività pura",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
    }
   },
   {

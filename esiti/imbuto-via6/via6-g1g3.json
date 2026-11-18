@@ -23,27 +23,27 @@
   "G1": {
    "cig_totali": 228,
    "euro_totali": 8545685166,
-   "cig_classificati": 196,
-   "euro_classificati": 4704781208,
+   "cig_classificati": 226,
+   "euro_classificati": 8517584496,
    "confidenza": {
-    "media": 133,
+    "media": 160,
     "alta": 45,
-    "bassa": 18
+    "bassa": 21
    },
-   "fonte_primaria": 55,
-   "con_documento_archiviato": 131,
+   "fonte_primaria": 57,
+   "con_documento_archiviato": 137,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 127,
-     "euro": 2977114125
+     "cig": 144,
+     "euro": 5401069297
     },
     "A:incerto | B:incerto": {
-     "cig": 40,
-     "euro": 1252743696
+     "cig": 43,
+     "euro": 1271825621
     },
     "A:incerto | B:non-applicabile": {
-     "cig": 24,
-     "euro": 391828348
+     "cig": 34,
+     "euro": 1761594539
     },
     "A:incluso-certo | B:incluso-certo": {
      "cig": 5,
@@ -117,12 +117,12 @@
  "spostamenti": {
   "G1": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 65,
-    "euro": 1771862679
+    "cig": 72,
+    "euro": 3766229042
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
-    "cig": 62,
-    "euro": 1205251446
+    "cig": 72,
+    "euro": 1634840255
    },
    "incluso certo cloud, giurisdizione EXTRA-UE (proposta via 6)": {
     "cig": 2,
@@ -137,8 +137,8 @@
     "euro": 14400000
    },
    "resta incerto (S6)": {
-    "cig": 64,
-    "euro": 1644572044
+    "cig": 77,
+    "euro": 3033420160
    }
   },
   "G3": {
@@ -236,27 +236,27 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 413,
+  "cig_con_ostacoli": 430,
   "per_tipo": {
-   "altro": 327,
+   "altro": 340,
    "403": 82,
    "404": 80,
-   "login": 63,
-   "link-pvl-rotto": 16,
+   "login": 65,
+   "link-pvl-rotto": 18,
    "pdf-illeggibile": 13
   },
   "domini_principali": {
    "dati.anticorruzione.it": 20,
    "www.difesa.it": 19,
+   "": 17,
    "www.sintel.regione.lombardia.it": 14,
    "piattaformaacquisti.rai.it": 12,
    "www.acquistinretepa.it": 12,
    "www.stradeanas.it": 10,
    "www.anticorruzione.it": 8,
    "gareappalti.bancaditalia.it": 8,
-   "": 7,
-   "www.ariaspa.it": 7,
-   "app.albofornitori.it": 7,
+   "www.ariaspa.it": 8,
+   "app.albofornitori.it": 8,
    "portaleappalti.gesap.it": 6,
    "pubblicitalegale.anticorruzione.it": 5,
    "sisgap.regione.calabria.it": 5,
@@ -269,16 +269,16 @@
    "usd_eq": 5.09
   },
   "imbuto-g1": {
-   "chiamate": 98,
-   "usd_eq": 138.17
+   "chiamate": 114,
+   "usd_eq": 141.58
   },
   "imbuto-g3": {
    "chiamate": 200,
    "usd_eq": 320.27
   },
   "imbuto-revisione": {
-   "chiamate": 47,
-   "usd_eq": 10.04
+   "chiamate": 49,
+   "usd_eq": 10.34
   },
   "riproduzione-v1": {
    "chiamate": 62,
