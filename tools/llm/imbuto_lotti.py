@@ -9,6 +9,10 @@ Selezione (dal 2024, imbuto-0.3.1, lavoro/imbuto/ict.csv):
 Ogni riga porta il link ai documenti dall'API PVL (lavoro/pvl/cig_link.csv, 4/11) e il flag `controllo` se il CIG è nel campione 611.
 Scrive report/metodo/llm/imbuto-g1g3/lotti/{g1,g3,ctl}-NNN.jsonl e selezione.json (con sha256 degli ingressi). Idempotente.
 Uso (sul server): nice .venv/bin/python tools/llm/imbuto_lotti.py
+       nice .venv/bin/python tools/llm/imbuto_lotti.py --aggiungi-g1
+  --aggiungi-g1 (#71, 18/11/2026, imbuto 0.3.4): NON tocca i pacchetti né gli esiti esistenti; scrive pacchetti g1 nuovi,
+  numerati dopo l'ultimo, per i CIG G1 dell'ict.csv attuale che non sono in nessun pacchetto (i G1 entrati con il perimetro
+  0.3.3). La selezione G3 resta quella del 7/11 (primi 1.000 della 0.3.1). Annota l'aggiunta in selezione.json.
 """
 import hashlib, json, os
 from pathlib import Path
@@ -54,6 +58,18 @@ def main():
                 "regole_v31": {"via": r["via"], "provider": r["provider"], "giurisdizione": r["giurisdizione"], "servizio": r["servizio"]},
                 "controllo": r["cig"] in rif}
     d = OUT / "lotti"; d.mkdir(parents=True, exist_ok=True)
+    if "--aggiungi-g1" in __import__("sys").argv:
+        gia = {json.loads(l)["cig"] for f in d.glob("*.jsonl") for l in f.read_text(encoding="utf-8").splitlines() if l.strip()}
+        nuovi = [r for r in g1 if r["cig"] not in gia]
+        n0 = max(int(f.stem.split("-")[1]) for f in d.glob("g1-*.jsonl"))
+        for i in range(0, len(nuovi), 2):
+            (d / f"g1-{n0 + i // 2 + 1:03d}.jsonl").write_text("".join(json.dumps(riga(r, "G1"), ensure_ascii=False) + "\n" for r in nuovi[i:i + 2]), encoding="utf-8")
+        info = json.loads((OUT / "selezione.json").read_text(encoding="utf-8"))
+        info.setdefault("aggiunte", []).append({"data": __import__("datetime").date.today().isoformat(), "versione_imbuto": "imbuto-0.3.4",
+            "ict.csv": sha(ICT), "g1_nuovi": len(nuovi), "euro": sum(r["importo"] for r in nuovi),
+            "con_link": sum(bool(r["link"]) for r in nuovi), "pacchetti": f"g1-{n0 + 1:03d}..g1-{n0 + (len(nuovi) + 1) // 2:03d}"})
+        (OUT / "selezione.json").write_text(json.dumps(info, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(json.dumps(info["aggiunte"][-1], ensure_ascii=False)); return
     # gli esiti già scritti si ridistribuiscono per CIG nei nuovi pacchetti (ripartibile anche se la selezione cambia)
     E = OUT / "esiti"; vecchi = {}
     for f in sorted(E.glob("*.jsonl")) if E.exists() else []:
