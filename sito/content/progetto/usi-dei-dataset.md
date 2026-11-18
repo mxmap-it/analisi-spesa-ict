@@ -2,8 +2,7 @@
 title: "Usi dei dataset (bozza)"
 date: 2026-11-06
 description: "A che cosa servono, con certezza e potenzialmente, i dataset del mirror per i progetti dell'Osservatorio Nazionale Sovranità Digitale."
-build:
-  list: never
+
 ---
 
 **Bozza 0.1 del 6/11/2026, non elencata (#17, #9).** Tabella e schede sono generate da

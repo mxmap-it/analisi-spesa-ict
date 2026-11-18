@@ -62,6 +62,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Hugo in `sito/`, build in `docs/` (GitHub Pages da `main`), dominio analisi-spesa-ict.mxmap.it. Stesso tema di osservatorio.mxmap.it (Bootstrap Italia, Titillium).
 - Comando di build: `hugo --source sito --minify --cleanDestinationDir`; committa insieme sorgente e `docs/`.
 - Stile: conciso, in italiano, home centrata sulla spesa ICT. I rendiconti hanno versione e registro delle revisioni.
+- **Tutto pubblicato e sempre aggiornato** (Fabio, 18/11/2026): rendiconti e pagine di progetto sono pubblici e elencati, niente bozze nascoste (`build.list: never`, `sitemap.disable`). A ogni avanzamento si aggiornano pagina, versione e registro delle revisioni, si ricostruisce il sito e si pusha subito. Ciò che è stima o proposta resta marcato come tale nel testo ([S], «proposta per Fabio»). Restano fuori solo i materiali riservati del § 3 (Proteggimi, AppaltIntel) e i dati personali.
 
 ## 7. Coordinamento e budget
 

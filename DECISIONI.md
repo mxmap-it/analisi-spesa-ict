@@ -215,3 +215,8 @@ Il giro su G1 (196 CIG) e sui primi 1.000 di G3 continua senza lo stop sul total
 
 ### Nota di correzione (9/11/2026, sera) alla decisione «Accesso civico: destinatario = PEC istituzionale»
 Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul file finale (esiti/2026-11-09/accesso-civico/destinatari.csv.gz, giro concluso su 6.626 enti) gli enti senza PEC IndicePA per quel CF sono **775**; ne sono stati risolti 347 (338 via CF delle unità IndicePA, 7 dalla pagina AT, 2 per nome), ne restano **428**. La decisione non cambia.
+
+## 2026-11-18 — Tutto pubblicato e sempre aggiornato (Fabio)
+**Chi:** Fabio. **Decisione:** «tieni sempre tutto pubblicamente aggiornato e pubblicato». Le pagine nascoste del sito (rendiconti imbuto, obiettivo 6, perimetro CPV; pagine di progetto usi dei dataset, mirror pubblico, perché un mirror) sono state rese pubbliche ed elencate il 18/11; il rendiconto BDNCP e L. 190 (#74) è sul sito. Da ora ogni avanzamento si pubblica subito (regola in AGENTS.md § 6).
+**Perché:** il lavoro deve essere consultabile da chiunque mentre procede, non solo a consegna.
+**Limiti:** restano esclusi i materiali riservati (AGENTS.md § 3); stime e proposte restano marcate come tali. Le comunicazioni verso enti e terzi (email, PR, post) restano soggette ad approvazione caso per caso.

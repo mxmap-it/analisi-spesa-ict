@@ -2,8 +2,7 @@
 title: "Mirror pubblico ANAC: progetto (bozza)"
 date: 2026-11-06
 description: "Stato del mirror sul server, requisiti per renderlo usabile da terzi, opzioni di hosting con costi e limiti, scelta proposta. Decisione a Fabio."
-build:
-  list: never
+
 ---
 
 **Bozza 0.1 del 6/11/2026, non elencata (#17).** Nessun dato è stato caricato in pubblico: l'hosting lo

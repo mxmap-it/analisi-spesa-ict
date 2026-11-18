@@ -270,7 +270,29 @@ Comune di Venezia, ARPAL Umbria, ARPEA Piemonte.&lt;/li&gt;
 &lt;p&gt;Il mirror è &lt;strong&gt;completo&lt;/strong&gt; per quel che serve: tutte le annualità 2017-2026 e le anagrafiche. Il nome
 &lt;code&gt;last&lt;/code&gt; si sovrascrive alla fonte: le versioni restano nei blob dell&amp;rsquo;archivio (sha256 nell&amp;rsquo;esito).
 SIOPE via BDAP (per regione) e diretto coincidono sull&amp;rsquo;ICT, ma BDAP &lt;strong&gt;tronca il 2025&lt;/strong&gt; di Lombardia e
-Friuli-Venezia Giulia a marzo (§ SIOPE via BDAP in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/bdap/"&gt;BDAP&lt;/a&gt;, R75): si usa il diretto.&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
+Friuli-Venezia Giulia a marzo (§ SIOPE via BDAP in &lt;a href="https://analisi-spesa-ict.mxmap.it/progetto/bdap/"&gt;BDAP&lt;/a&gt;, R75): si usa il diretto.&lt;/p&gt;</description></item><item><title>Mirror pubblico ANAC: progetto (bozza)</title><link>https://analisi-spesa-ict.mxmap.it/progetto/mirror-pubblico/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/mirror-pubblico/</guid><description>&lt;p&gt;&lt;strong&gt;Bozza 0.1 del 6/11/2026, non elencata (#17).&lt;/strong&gt; Nessun dato è stato caricato in pubblico: l&amp;rsquo;hosting lo
+decide Fabio. Perché serve un mirror: &lt;a href="../perche-un-mirror/"&gt;Perché un mirror&lt;/a&gt;. A che cosa servono i
+dataset: &lt;a href="../usi-dei-dataset/"&gt;Usi dei dataset&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="1-stato-del-mirror-misurato-il-6112026-dal-manifest-reale"&gt;1. Stato del mirror (misurato il 6/11/2026 dal manifest reale)&lt;/h2&gt;
+&lt;p&gt;Archivio append-only e indirizzato per contenuto sul server di mxmap.it (&lt;code&gt;archivio/blobs/sha256/…&lt;/code&gt;,
+vista per percorso originale &lt;code&gt;archivio/mirror/&amp;lt;host&amp;gt;/&amp;lt;path&amp;gt;&lt;/code&gt;). Indice generato da
+&lt;code&gt;tools/indice_mirror.py&lt;/code&gt; dal &lt;code&gt;manifest.jsonl&lt;/code&gt;: &lt;a href="https://analisi-spesa-ict.mxmap.it/dati/mirror/indice.csv"&gt;indice.csv&lt;/a&gt; (una riga per
+risorsa: URL originale, sha256, byte, Last-Modified, prima e ultima acquisizione, numero di versioni) e
+&lt;a href="https://analisi-spesa-ict.mxmap.it/dati/mirror/sintesi.json"&gt;sintesi.json&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Perché un mirror (bozza)</title><link>https://analisi-spesa-ict.mxmap.it/progetto/perche-un-mirror/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/perche-un-mirror/</guid><description>&lt;p&gt;&lt;strong&gt;Bozza 0.1 del 6/11/2026, non elencata (#17).&lt;/strong&gt; &lt;strong&gt;[V]&lt;/strong&gt; = verificato da noi, con prova nel repository;
+&lt;strong&gt;[R]&lt;/strong&gt; = riferito o dedotto, da verificare. Progetto tecnico: &lt;a href="../mirror-pubblico/"&gt;Mirror pubblico&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="in-breve"&gt;In breve&lt;/h2&gt;
+&lt;p&gt;Una misura ripetibile ogni anno (l&amp;rsquo;obiettivo del progetto) richiede che i dati misurati restino
+disponibili e identici. Per le fonti principali oggi non è così: file rimossi senza regola, file fermi a
+mesi fa, finestre mobili che cancellano gli anni vecchi, mesi serviti con il contenuto di un altro mese.
+Nessuna delle fonti dichiara una politica di conservazione.&lt;/p&gt;</description></item><item><title>Usi dei dataset (bozza)</title><link>https://analisi-spesa-ict.mxmap.it/progetto/usi-dei-dataset/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/usi-dei-dataset/</guid><description>&lt;p&gt;&lt;strong&gt;Bozza 0.1 del 6/11/2026, non elencata (#17, #9).&lt;/strong&gt; Tabella e schede sono generate da
+&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/usi-dataset.yaml"&gt;&lt;code&gt;config/usi-dataset.yaml&lt;/code&gt;&lt;/a&gt;
+con &lt;code&gt;tools/pagine_mirror.py&lt;/code&gt;: si aggiorna il file dati, non la pagina.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Progetti:&lt;/strong&gt; ASI = analisi-spesa-ict (spesa ICT cloud per giurisdizione); MXM = mxmap.it (provider di
+posta delle PA); PVL = Monitoraggio PVL e Amministrazione trasparente; ROB = osservatorio robots.txt
+(#64); OSS = Osservatorio Nazionale Sovranità Digitale (rapporti di sintesi).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Legenda:&lt;/strong&gt; &lt;strong&gt;C&lt;/strong&gt; uso certo e diretto (script nel repository con uscita versionata, verificato il
+6/11/2026); C·i certo ma indiretto (attraverso un altro progetto o un derivato); P potenziale diretto;
+P·i potenziale indiretto (ipotesi motivate nelle schede); – nessuno.&lt;/p&gt;</description></item><item><title>Analisi tecnica: fonti, accesso, strumenti</title><link>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</link><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/analisi-tecnica/</guid><description>&lt;p&gt;L&amp;rsquo;analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali
 strade abbiamo scartato e perché, quali strumenti riusiamo e come è fatta la pipeline. Le
 decisioni prese sono nel &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/DECISIONI.md"&gt;registro delle decisioni&lt;/a&gt;;
 i problemi trovati nei dati sono nei &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/"&gt;rendiconti&lt;/a&gt;.&lt;/p&gt;

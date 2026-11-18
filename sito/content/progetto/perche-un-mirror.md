@@ -2,8 +2,7 @@
 title: "Perché un mirror (bozza)"
 date: 2026-11-06
 description: "Le ragioni, con evidenze datate, per cui teniamo e proponiamo di rendere pubblica una copia integrale e versionata dei dati aperti di ANAC, Consip e delle altre fonti."
-build:
-  list: never
+
 ---
 
 **Bozza 0.1 del 6/11/2026, non elencata (#17).** **[V]** = verificato da noi, con prova nel repository;

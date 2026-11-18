@@ -5,13 +5,10 @@ date: 2026-11-06
 lastmod: 2026-11-09
 datiAl: 2026-11-03
 description: "Precisione della lista bianca CPV (83 %, 93 % con i dubbi), falsi esclusi in S1 (1 %), esiti del CPV sugli ICT accertati (74 % specifico, 17 % generico, 9 % fuori lista), cloud esprimibili col CPV (30 %), letteratura verificata (Ramboll 2012: 23 % inesatti), proposte di policy."
-sitemap:
-  disable: true
-build:
-  list: never
+
 ---
 
-**Versione 0.3 del 2026-11-09 · BOZZA non annunciata: la pubblicazione la decide Fabio Pietrosanti** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
+**Versione 0.3 del 2026-11-09 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 

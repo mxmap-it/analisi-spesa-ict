@@ -1,6 +1,6 @@
 # BDNCP e dataset L. 190/2012: inventario e utilità per la spesa ICT
 
-Versione 0.2, 18/11/2026 (#74). Bozza interna, scritta solo dagli esiti già versionati. I numeri «ICT» vengono dagli esiti del 18/11/2026 sull'imbuto 0.3.4, con il filtro corretto (strati S3-S6); gli altri numeri sono gli stessi del 10/11. Nessuno scaricamento.
+Versione 0.2, 18/11/2026 (#74), pubblicata il 18/11/2026. Scritta solo dagli esiti già versionati. I numeri «ICT» vengono dagli esiti del 18/11/2026 sull'imbuto 0.3.4, con il filtro corretto (strati S3-S6); gli altri numeri sono gli stessi del 10/11. Nessuno scaricamento.
 
 Domanda di Fabio (10/11): «la banca dati contratti pubblici come dataset è clonata e l'abbiamo analizzata per trovarne utilità?»
 
