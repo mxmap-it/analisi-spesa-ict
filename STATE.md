@@ -2,7 +2,23 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-09 (sera, consolidamento dopo la giornata del 9/11)
+**Ultimo aggiornamento:** 2026-11-18 (ripresa dopo la migrazione del server del 17/11)
+
+## PUNTO DI RIPRESA 18/11/2026
+
+**Server:** sd-172212 (migrazione del 17/11). Il progetto resta in `/home/mxmap.it/analisi-spesa-ict`, utente `mxmap.it`; Claude gira come `ubuntu` con ACL e fa git/processi lunghi con `sudo -u mxmap.it -H bash -lc '...'`. **Cron tutti sospesi** (`#MIGRAZIONE-SOSPESO#` in `crontab -u mxmap.it`): guardiano, sonda 06:10, metriche 06:40, `sync_server.sh`, guardiani via 6: si riattivano solo con l'ok di Fabio. Il `gh` di ubuntu non ha lo scope `project`: `tools/stato_ticket.sh` non funziona finché non si fa `gh auth refresh -s project`. 365 GB liberi, 24 GB RAM disponibili.
+
+**Fatto il 18/11:**
+- **#71 imbuto 0.3.4 applicato** (d2dcb2d8): `lavoro/imbuto/ict.csv` = variante A della prova del 9/11 (lente v4.5); 0.3.1 conservata in `lavoro/imbuto/versioni/0.3.1-20261103/` con SHA256SUMS. 0 CIG ripetuti; S3-S6 dal 2024 netti tetti **56,06 mld**; `IMBUTO_VERSIONE=0.3.4` per `imbuto_strati.py`, `imbuto_tetti.py`, `imbuto_revisione.py` (esiti in `esiti/2026-11-18/imbuto/`), `IMBUTO_ESITI` per `imbuto_cig_ripetuti.py`. P1 non applicata.
+- **#55 via 6 finita il 13/11** (G1 196, G3 999/1.000). Revisione C1-C4 su 265 proposte (r038-r046 letti il 18/11): entrano 22 CIG / 403,6 M€ verso S5, 9 CIG / 27,2 M€ cloud certo (extra-UE 1,6 M€); coda per Fabio 50 casi.
+- **Rendiconto imbuto 0.17** (§ 1, § 2, § 2.1, § 2.7, § 4.3.1, § 4.3.2, limiti). Restano sulla 0.3.1: § 2.2-2.5, § 4.5, § 4.11.
+- Committati gli strumenti rimasti fuori da git dopo il 10/11: `bdncp_inventario.py`, `l190_campione.py` (#74, esiti 2026-11-10 già in git).
+- Uccisi 10 vecchi cicli `while pgrep -f ...` di inizio novembre che si tenevano vivi a vicenda (nessun lavoro perso).
+- **#73 ripasso L4 rilanciato** (si era fermato il 9/11 22:05 a 4.174 enti su ~4.790): stesso comando della tabella sotto, log `lavoro/residuo-s6/l4-ripasso.log`.
+
+**Prossimi passi (senza decisioni di Fabio):** rifare sulla 0.3.4 § 2.2-2.5 (tetti per CIG), § 4.5 (licenze), § 4.11 (residuo S6 con documenti); mettere in coda via 6 i 29 G1 nuovi della 0.3.4; misura P1 su tutto S6 (job pesante, uno alla volta); #74 BDNCP/L.190 (esiti del 10/11 da scrivere in pagina); #73 a fine ripasso `residuo_s6_riepilogo.py` + `elenco_mancanti.py`; L4-js fase 2 Difesa (ore 1-5).
+
+**Decisioni attese da Fabio (nuove):** riattivazione dei cron dopo la migrazione; P1 (#71); coda dei 50 discordi via 6 (#66); pubblicazione del rendiconto imbuto 0.17. Le altre restano quelle elencate sotto (9/11).
 
 **Come è fatto questo file:** 1) *Punto di ripresa* (questa sezione, breve); 2) sezioni per ticket, dalla più recente; 3) *Riferimenti* (dove sta cosa, vincoli); 4) *Storico* (sezioni superate fino al 4/11, conservate senza tagli). Le righe superate restano nello storico, non si cancellano.
 
