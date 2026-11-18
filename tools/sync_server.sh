@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.." || exit 1
 git add -A report/metodo/llm/giro2 report/metodo/llm/imbuto-g1g3 report/metodo/llm/riproduzione dati esiti 2>/dev/null; git add -f stato/claude-consumi.jsonl 2>/dev/null
 git diff --cached --quiet || git commit -qm "Server: output dei job in corso (#55)"
 git diff --quiet || { git stash -q; S=1; }
-if git pull -q --rebase && git push -q; then
+if git pull -q --rebase --autostash && git push -q; then  # autostash (18/11): solo file tracciati, mai -u
   rm -f stato/sync-ERRORE.txt
 else
   # 7/11/2026: per giorni il rebase falliva (file non tracciati sul server già committati altrove) e il clone divergeva in silenzio.
