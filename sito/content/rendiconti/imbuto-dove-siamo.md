@@ -281,6 +281,8 @@ I conteggi per gruppo differiscono da quelli della revisione della via 6 (13 in 
 
 **Applicata il 18/11/2026 [V].** La via 6 è finita il 13/11, quindi `ict.csv` si poteva rigenerare. L'imbuto ufficiale è ora la variante A della prova del 9/11 (partita alle 16:43, dopo il commit della lente v4.5; nessun cambiamento a `config/` o `tools/analisi/` da allora che tocchi l'imbuto, dati del mirror invariati). La 0.3.1 resta conservata con sha256 in `lavoro/imbuto/versioni/0.3.1-20261103/`. Controlli, tutti da `esiti/2026-11-18/imbuto/`: `IMBUTO_ESITI=esiti/2026-11-18/imbuto python tools/verifiche/imbuto_cig_ripetuti.py` dà **0 CIG ripetuti** (le quattro regole di deduplica danno lo stesso totale); `IMBUTO_VERSIONE=0.3.4` davanti a `imbuto_strati.py`, `imbuto_tetti.py --rigenera` e `imbuto_revisione.py` ricalcola strati, tetti v1 e v2 e riproduce **56,06 mld** S3-S6 dal 2024 al netto dei tetti (S3 1,32, S4 3,03, S5 40,01, S6 11,70); la stessa catena senza variabile riproduce identico il `tetti-cig-v2.csv` della 0.3.1. Coerenza dei tetti: sui CIG da 50 M€ in su gli strati S3-S6 coincidono (9, 12, 115, 38); 4 CIG di differenza, tutti in S1. **La proposta P1 non è applicata** (decisione di Fabio, sotto). Restano da rifare sulla 0.3.4 le misure di dettaglio che dipendono dal singolo CIG (§ 2.2-2.5, § 4.5, § 4.11): i numeri lì sono della 0.3.1.
 
+**Effetto sui tetti (§ 2.2-2.5) [V].** La classe dei 2.130 CIG sopra 50 M€ non cambia (stesse vie, stessi euro); cambia lo strato di 12 CIG, che con il perimetro 0.3.3 passano da S1 a S6: 8 tetti Consip SPC/connettività (3,24 mld dichiarati, 0 netti) e **4 incerti dell'Agenzia Spaziale Italiana** (payload e missioni «HW/SW», 365 M€). Regole v1 (§ 2.2): S3-S6 dal 2024 da 114,4 a **74,2 mld** al netto dei tetti certi (0.3.1: da 113,3 a 76,5), incerti 33,8 mld. Regole v2 (§ 2.3): **56,06 mld**, incerti negli strati ICT **83 CIG / 14,78 mld** (0.3.1: 79 / 14,42), tetti ICT 60 CIG / 43,3 mld dichiarati. I 4 CIG ASI non erano nel giro delle sezioni AT del § 2.5 (fatto sui 79) e sono gli stessi che la proposta P1 toglierebbe: con P1 gli incerti ICT tornano a 79 / 14,42 mld. Esiti `esiti/2026-11-18/imbuto/tetti.json`, `revisione.json`, `tetti-cig-v2.csv`.
+
 **Com'era la prova (9/11).** La prova calcola sul mirror ANAC quattro varianti, cambiando una cosa alla volta: A = 0.3.4 (R53 «una riga per CIG col CPV ICT minimo», perimetro CPV 0.3.3, lente v4.3), B senza R53, C col perimetro del 3/11, D con la lente del 3/11. Verifica `tools/verifiche/imbuto_prova_034.py tutto` (sul server, circa 2,5 h, un job alla volta) e `tools/verifiche/imbuto_prova_034_confronto.py 2026-11-09`; esiti `esiti/2026-11-09/imbuto-prova/` (`confronto.json`, `sezione-per-66.md`) [V].
 
 **S3-S6 dal 2024 al netto dei tetti: 56,06 mld** (289.192 CIG, 114,38 mld dichiarati), contro 55,70 della base 0.3.1 contata una riga per CIG. La stima «circa 55,7» della 0.12 era quindi giusta per la base; lo scarto di +0,36 mld viene dai cambiamenti di regola. Netti per strato: S3 1,32, S4 3,03, S5 40,01, S6 11,70 mld [V].
@@ -442,6 +444,8 @@ Lettura:
   - i link PVL coprono 746 dei 1.682 CIG incerti o misti, ma solo 215 M€;
   - i primi 30 per importo puntano quasi tutti alla home di una piattaforma di e-procurement (Terna, Cineca, Banca d'Italia, Regione Calabria), non all'atto;
   - la lettura dei contratti, cioè il censimento dei primi 50 EA con il campione già disegnato, resta da fare e richiede gli atti degli enti (R23, R54).
+
+**Aggiornamento 0.17 sull'imbuto 0.3.4 [V].** `IMBUTO_VERSIONE=0.3.4 python tools/verifiche/imbuto_licenze.py`, esito `esiti/2026-11-18/imbuto/licenze.json`. Perimetro **3.889 CIG, 5,37 mld dichiarati, 2,85 mld netti** (0.3.1: 3.508 / 5,29 / 2,76). Cloud certo **304 CIG, 159,9 M€** (extra-UE 134,4, UE 24,4, IT 0,7; 0.3.1: 288 / 168,2); non cloud 1.758 CIG, 968,0 M€ (L5 categoria sale da 482 a 720 CIG, 198,2 M€); incerto 1.812 CIG, 1.698 M€. Il cloud scende di 8,3 M€ perché la lente v4.5 mette il servizio davanti al marchio: escono 3 CIG per 10,8 M€ (Oracle «unlimited deployment» con servizi professionali 7,8 M€; migrazione SAP HANA su AWS dal lotto 8 dell'AQ IaaS/PaaS, 3,0 M€, servizio di migrazione; gestione IaaS per ambienti VMware, fuori da S3/S4) ed entrano 19 CIG piccoli per 2,5 M€. La migrazione SAP su AWS è un caso da rivedere: il servizio è di migrazione, ma la destinazione è un hyperscaler extra-UE.
 
 ### 4.6 Censimento dei prodotti negli EA Microsoft e nelle licenze Oracle (nuovo in 0.7)
 
@@ -656,6 +660,17 @@ Per il residuo S6 si cercano gli atti che dicono il prodotto, livello per livell
 - **Costo:** L3 33.826 richieste, L4 21.885; nessun token.
 - **Ripasso in corso (#73):** i 436 enti in errore di rete e 345 rinviati per robots.txt (notte), e i 176 enti con pagina quasi vuota più 41 della Difesa con browser headless (L4-js). Parziale alle 20:12 del 9/11: 9 enti su 217, 34 CIG trovati, 0 documenti che citano il CIG. Le cifre si aggiornano a fine giro con la stessa verifica.
 - **Dopo L4, accesso civico (#58):** l'elenco unico rigenerato a L4 finito ha 28.804 voci (756 convenzioni + 28.048 CIG del residuo, esclusi i 535 sopra), 6.624 enti, 775 senza PEC [V, `tools/accesso_civico/elenco_mancanti.py`]. L'invio è una decisione di Fabio.
+
+**Aggiornamento 0.17: copertura sull'imbuto 0.3.4 [V, conteggio di `lavoro/imbuto/ict.csv` contro `lavoro/residuo-s6/ingresso.csv` e i lotti della via 6].** L'ingresso dell'acquisizione era già costruito con il perimetro 0.3.3 (priorità P4), quindi copre quasi tutto il residuo S6 dal 2024 della 0.3.4:
+
+| gruppo | CIG S6 0.3.4 | mld | nell'ingresso | nella via 6 | fuori da entrambi |
+|---|---:|---:|---:|---:|---:|
+| G1 | 227 | 8,53 | 29 (3,82 mld) | 195 | 3 CIG, 24 M€ |
+| G2 | 867 | 4,03 | 867 | 0 | 0 |
+| G3 | 13.437 | 3,16 | 12.370 (1,60 mld) | 1.011 | 56 CIG, 18 M€ |
+| G4 | 44.875 | 0,65 | 3.489 (campione e incerti) | 0 | 41.386 per scelta (campione) |
+
+I 32 G1 che la via 6 non ha letto (29 nuovi del perimetro 0.3.3 più 3) sono la prossima coda della via 6. I 535 CIG con documento del § 4.11 restano validi: nessuno esce dal residuo.
 
 ### 4.12 BDAP fase 2: codice fiscale, quota annua, Sogei, SIOPE (#67, #30, nuovo in 0.11)
 

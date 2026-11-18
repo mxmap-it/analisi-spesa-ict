@@ -1,0 +1,268 @@
+{
+ "cig": 3889,
+ "euro_dichiarati": 5371595265,
+ "euro_netti": 2846266771,
+ "per_asse_a": [
+  {
+   "chiave": "incerto",
+   "cig": 1812,
+   "euro_netti": 1698221068
+  },
+  {
+   "chiave": "non-cloud",
+   "cig": 1758,
+   "euro_netti": 967975885
+  },
+  {
+   "chiave": "cloud",
+   "cig": 304,
+   "euro_netti": 159875088
+  },
+  {
+   "chiave": "misto",
+   "cig": 15,
+   "euro_netti": 20194729
+  }
+ ],
+ "per_via": [
+  {
+   "chiave": "incerto / I-misto",
+   "cig": 1812,
+   "euro_netti": 1698221068
+  },
+  {
+   "chiave": "non-cloud / L2-prodotto",
+   "cig": 651,
+   "euro_netti": 649750199
+  },
+  {
+   "chiave": "non-cloud / L5-categoria",
+   "cig": 720,
+   "euro_netti": 198167558
+  },
+  {
+   "chiave": "cloud / L3-testo-saas",
+   "cig": 304,
+   "euro_netti": 159875088
+  },
+  {
+   "chiave": "non-cloud / L1-capitolato",
+   "cig": 7,
+   "euro_netti": 78743275
+  },
+  {
+   "chiave": "non-cloud / L4-testo-onprem",
+   "cig": 380,
+   "euro_netti": 41314853
+  },
+  {
+   "chiave": "misto / I-misto-esplicito",
+   "cig": 15,
+   "euro_netti": 20194729
+  }
+ ],
+ "per_provider_asse_a": [
+  {
+   "chiave": "Microsoft / incerto",
+   "cig": 1192,
+   "euro_netti": 861969923
+  },
+  {
+   "chiave": "VMware / non-cloud",
+   "cig": 646,
+   "euro_netti": 595412556
+  },
+  {
+   "chiave": "Oracle / incerto",
+   "cig": 338,
+   "euro_netti": 399378789
+  },
+  {
+   "chiave": "? / incerto",
+   "cig": 111,
+   "euro_netti": 354233007
+  },
+  {
+   "chiave": "Oracle / non-cloud",
+   "cig": 100,
+   "euro_netti": 131801501
+  },
+  {
+   "chiave": "Microsoft / cloud",
+   "cig": 231,
+   "euro_netti": 115019452
+  },
+  {
+   "chiave": "SAP / incerto",
+   "cig": 168,
+   "euro_netti": 81952500
+  },
+  {
+   "chiave": "Cloudera / non-cloud",
+   "cig": 24,
+   "euro_netti": 55011970
+  },
+  {
+   "chiave": "In-house pubblico / non-cloud",
+   "cig": 54,
+   "euro_netti": 54027661
+  },
+  {
+   "chiave": "Microsoft / non-cloud",
+   "cig": 548,
+   "euro_netti": 44972338
+  },
+  {
+   "chiave": "SAP / non-cloud",
+   "cig": 47,
+   "euro_netti": 34828437
+  },
+  {
+   "chiave": "Salesforce / non-cloud",
+   "cig": 62,
+   "euro_netti": 31371628
+  },
+  {
+   "chiave": "SAP / cloud",
+   "cig": 28,
+   "euro_netti": 24366156
+  },
+  {
+   "chiave": "Microsoft / misto",
+   "cig": 12,
+   "euro_netti": 20010760
+  },
+  {
+   "chiave": "Oracle / cloud",
+   "cig": 19,
+   "euro_netti": 14192189
+  },
+  {
+   "chiave": "TIM / non-cloud",
+   "cig": 84,
+   "euro_netti": 8920138
+  },
+  {
+   "chiave": "VMware / cloud",
+   "cig": 15,
+   "euro_netti": 4925196
+  },
+  {
+   "chiave": "Retelit / non-cloud",
+   "cig": 10,
+   "euro_netti": 3008871
+  },
+  {
+   "chiave": "Google / non-cloud",
+   "cig": 43,
+   "euro_netti": 1902795
+  },
+  {
+   "chiave": "Fastweb / non-cloud",
+   "cig": 23,
+   "euro_netti": 1701931
+  },
+  {
+   "chiave": "Amazon Web Services / non-cloud",
+   "cig": 51,
+   "euro_netti": 1626301
+  },
+  {
+   "chiave": "Aruba / non-cloud",
+   "cig": 23,
+   "euro_netti": 1248438
+  },
+  {
+   "chiave": "Nextcloud / non-cloud",
+   "cig": 15,
+   "euro_netti": 717144
+  },
+  {
+   "chiave": "TIM / incerto",
+   "cig": 3,
+   "euro_netti": 686849
+  },
+  {
+   "chiave": "TIM / cloud",
+   "cig": 2,
+   "euro_netti": 658390
+  },
+  {
+   "chiave": "Cisco Webex / non-cloud",
+   "cig": 8,
+   "euro_netti": 607348
+  },
+  {
+   "chiave": "ServiceNow / non-cloud",
+   "cig": 7,
+   "euro_netti": 571200
+  },
+  {
+   "chiave": "Polo Strategico Nazionale / cloud",
+   "cig": 2,
+   "euro_netti": 425837
+  },
+  {
+   "chiave": "Cloudera / cloud",
+   "cig": 1,
+   "euro_netti": 250000
+  },
+  {
+   "chiave": "VMware / misto",
+   "cig": 3,
+   "euro_netti": 183970
+  },
+  {
+   "chiave": "Adobe / non-cloud",
+   "cig": 6,
+   "euro_netti": 90215
+  },
+  {
+   "chiave": "WIIT / non-cloud",
+   "cig": 1,
+   "euro_netti": 74420
+  },
+  {
+   "chiave": "SPC Cloud lotto 1 / non-cloud",
+   "cig": 4,
+   "euro_netti": 67309
+  },
+  {
+   "chiave": "? / cloud",
+   "cig": 6,
+   "euro_netti": 37869
+  },
+  {
+   "chiave": "Zoom / non-cloud",
+   "cig": 1,
+   "euro_netti": 7684
+  },
+  {
+   "chiave": "IBM / non-cloud",
+   "cig": 1,
+   "euro_netti": 6000
+  }
+ ],
+ "cloud_per_giurisdizione": [
+  {
+   "chiave": "extra-UE",
+   "cig": 266,
+   "euro_netti": 134386836
+  },
+  {
+   "chiave": "UE",
+   "cig": 28,
+   "euro_netti": 24366156
+  },
+  {
+   "chiave": "IT",
+   "cig": 2,
+   "euro_netti": 658390
+  },
+  {
+   "chiave": "non determinata",
+   "cig": 8,
+   "euro_netti": 463706
+  }
+ ]
+}

@@ -21,6 +21,7 @@ Giurisdizione del prodotto: sede del produttore (Microsoft, Oracle, VMware/Broad
 AWS, ServiceNow, Cisco: USA -> extra-UE; SAP: DE -> UE; TIM, Fastweb, Retelit, Aruba, WIIT, PSN: IT).
 
 Uso:
+  IMBUTO_VERSIONE=0.3.4 davanti a ogni comando: imbuto rigenerato (#71, esiti/2026-11-18/imbuto/)
   python tools/verifiche/imbuto_licenze.py             # da un clone: legge esiti/2026-11-06/imbuto/licenze-cig.csv
   python tools/verifiche/imbuto_licenze.py --rigenera  # SUL SERVER: rilegge lavoro/imbuto/ict.csv (sola lettura)
 """
@@ -28,7 +29,9 @@ import csv, collections, json, os, re, sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
-E = os.path.join(RADICE, "esiti/2026-11-06/imbuto")
+# IMBUTO_VERSIONE=0.3.4 (#71): legge e scrive in esiti/2026-11-18/imbuto/ (tetti-cig-v2.csv della 0.3.4); default 0.3.1
+VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
+E = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
 OUT = os.path.join(E, "licenze-cig.csv")
 ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
 GIUR = {"Microsoft": "extra-UE", "Oracle": "extra-UE", "VMware": "extra-UE", "Cloudera": "extra-UE", "Salesforce": "extra-UE",
