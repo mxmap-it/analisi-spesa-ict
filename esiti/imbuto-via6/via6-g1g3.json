@@ -23,23 +23,23 @@
   "G1": {
    "cig_totali": 228,
    "euro_totali": 8545685166,
-   "cig_classificati": 226,
-   "euro_classificati": 8517584496,
+   "cig_classificati": 228,
+   "euro_classificati": 8545685166,
    "confidenza": {
-    "media": 160,
+    "media": 161,
     "alta": 45,
-    "bassa": 21
+    "bassa": 22
    },
    "fonte_primaria": 57,
-   "con_documento_archiviato": 137,
+   "con_documento_archiviato": 138,
    "stati": {
     "A:escluso-certo | B:non-applicabile": {
-     "cig": 144,
-     "euro": 5401069297
+     "cig": 145,
+     "euro": 5416069297
     },
     "A:incerto | B:incerto": {
-     "cig": 43,
-     "euro": 1271825621
+     "cig": 44,
+     "euro": 1284926291
     },
     "A:incerto | B:non-applicabile": {
      "cig": 34,
@@ -117,8 +117,8 @@
  "spostamenti": {
   "G1": {
    "escluso certo dal cloud, ICT -> S5 (proposta via 6)": {
-    "cig": 72,
-    "euro": 3766229042
+    "cig": 73,
+    "euro": 3781229042
    },
    "escluso certo non ICT -> S1 (proposta via 6)": {
     "cig": 72,
@@ -137,8 +137,8 @@
     "euro": 14400000
    },
    "resta incerto (S6)": {
-    "cig": 77,
-    "euro": 3033420160
+    "cig": 78,
+    "euro": 3046520830
    }
   },
   "G3": {
@@ -236,13 +236,13 @@
   ]
  },
  "ostacoli": {
-  "cig_con_ostacoli": 430,
+  "cig_con_ostacoli": 432,
   "per_tipo": {
-   "altro": 340,
+   "altro": 341,
    "403": 82,
    "404": 80,
    "login": 65,
-   "link-pvl-rotto": 18,
+   "link-pvl-rotto": 19,
    "pdf-illeggibile": 13
   },
   "domini_principali": {
@@ -269,16 +269,20 @@
    "usd_eq": 5.09
   },
   "imbuto-g1": {
-   "chiamate": 114,
-   "usd_eq": 141.58
+   "chiamate": 115,
+   "usd_eq": 141.82
   },
   "imbuto-g3": {
    "chiamate": 200,
    "usd_eq": 320.27
   },
+  "imbuto-l4": {
+   "chiamate": 3,
+   "usd_eq": 4.69
+  },
   "imbuto-revisione": {
-   "chiamate": 49,
-   "usd_eq": 10.34
+   "chiamate": 50,
+   "usd_eq": 10.46
   },
   "riproduzione-v1": {
    "chiamate": 62,
