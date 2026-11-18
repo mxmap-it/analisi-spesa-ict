@@ -7,6 +7,7 @@ Ingressi versionati (riproducibile da un clone pulito, nessun dato grezzo):
   esiti/2026-11-06/imbuto/distribuzione.json     (prodotto da questo script con --rigenera, sul server)
 
 Uso:
+  IMBUTO_VERSIONE=0.3.4 davanti a ogni comando: imbuto rigenerato (#71, esiti/2026-11-18/imbuto/)
   python tools/verifiche/imbuto_strati.py              # stampa le tabelle e controlla la coerenza
   python tools/verifiche/imbuto_strati.py --json OUT   # scrive anche le tabelle in JSON (per il rendiconto)
   python tools/verifiche/imbuto_strati.py --rigenera   # SUL SERVER: rilegge lavoro/imbuto/ict.csv con DuckDB su disco
@@ -17,8 +18,11 @@ import json, os, sys, collections, hashlib
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
-RIEP = os.path.join(RADICE, "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json")
-DISTR = os.path.join(RADICE, "esiti/2026-11-06/imbuto/distribuzione.json")
+# IMBUTO_VERSIONE=0.3.4 (#71): imbuto rigenerato il 18/11/2026 (prova A del 9/11 promossa); default 0.3.1 (3/11)
+VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
+RIEP, DISTR = {"0.3.1": ("esiti/2026-11-03/imbuto/riepilogo-0.3.1.json", "esiti/2026-11-06/imbuto/distribuzione.json"),
+               "0.3.4": ("esiti/2026-11-18/imbuto/riepilogo-0.3.4.json", "esiti/2026-11-18/imbuto/distribuzione.json")}[VERSIONE]
+RIEP, DISTR = os.path.join(RADICE, RIEP), os.path.join(RADICE, DISTR)
 ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
 CLASSI = [0, 500, 1000, 5000, 40000, 140000, 1e6, 5e6, 50e6, float("inf")]
 
@@ -59,7 +63,7 @@ def rigenera():
         FROM i LEFT JOIN l USING (cig) GROUP BY ALL ORDER BY ALL"""
     link_strati = [dict(zip(["strato", "gruppo", "n", "n_link", "euro", "euro_link"], r)) for r in con.execute(q2).fetchall()]
     h = hashlib.sha256(open(ICT, "rb").read()).hexdigest()
-    out = {"fonte": "lavoro/imbuto/ict.csv", "sha256": h, "versione_imbuto": "imbuto-0.3.1",
+    out = {"fonte": "lavoro/imbuto/ict.csv", "sha256": h, "versione_imbuto": "imbuto-" + VERSIONE,
            "classi_euro": [c if c != float("inf") else None for c in CLASSI], "righe": righe,
            "link_pvl_per_strato_dal_2024": link_strati, "fonte_link": "lavoro/pvl/cig_link.csv (API PVL, scaricamento del 4/11/2026)",
            "nota": "solo i CIG non esclusi in S1/S2 (ict.csv); S1 è nel riepilogo, senza distribuzione"}

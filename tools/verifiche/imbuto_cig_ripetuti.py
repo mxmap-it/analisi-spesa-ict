@@ -19,12 +19,13 @@ Questa verifica non tocca ict.csv:
      (prima riga del file con CPV non ICT e testo senza RX_ICT).
 Uscita: esiti/2026-11-09/imbuto/cig-ripetuti.json e cig-ripetuti.csv (un CIG ripetuto per riga, con lo strato 0.3.4).
 Uso: nice .venv/bin/python tools/verifiche/imbuto_cig_ripetuti.py [--mirror]
+     IMBUTO_ESITI=esiti/<data>/imbuto per scrivere altrove (default: il 9/11, prima della rigenerazione)
 """
 import csv, json, os, sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
-OUT = os.path.join(RADICE, "esiti/2026-11-09/imbuto")
+OUT = os.path.join(RADICE, os.environ.get("IMBUTO_ESITI", "esiti/2026-11-09/imbuto"))  # IMBUTO_ESITI: cartella di uscita (dopo la rigenerazione)
 W = os.path.join(RADICE, "lavoro/imbuto/ripetuti")
 ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
 S36 = ("S3-convenzione-lotto", "S4-marchio", "S5-ict-non-cloud", "S6-residuo")

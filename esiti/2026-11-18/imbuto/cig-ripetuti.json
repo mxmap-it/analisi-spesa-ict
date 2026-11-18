@@ -1,0 +1,178 @@
+{
+ "ict_csv": {
+  "righe": 667303,
+  "cig_distinti": 667303,
+  "righe_in_eccesso": 0
+ },
+ "cig_ripetuti": 0,
+ "righe_dei_cig_ripetuti": 0,
+ "righe_per_cig": {},
+ "anni": {},
+ "causa": {},
+ "cig_con_campo_diverso_fra_le_righe": {
+  "anno": 0,
+  "importo": 0,
+  "testo": 0,
+  "cod_cpv": 0,
+  "via": 0,
+  "strato": 0,
+  "sottoclasse": 0,
+  "gruppo": 0
+ },
+ "strati_misti": {},
+ "eccesso_dal_2024_per_strato": {
+  "S0-padre-aq": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S2-sotto-soglia": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S3-convenzione-lotto": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S4-marchio": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S5-ict-non-cloud": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S6-residuo": {
+   "righe": 0,
+   "euro": 0
+  },
+  "S3-S6": {
+   "righe": 0,
+   "euro": 0
+  }
+ },
+ "totali_dal_2024_per_regola": {
+  "tutte-le-righe-0.3.1": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5269,
+    "euro": 938426
+   },
+   "S3-convenzione-lotto": {
+    "cig": 891,
+    "euro": 3613260230
+   },
+   "S4-marchio": {
+    "cig": 8370,
+    "euro": 3630154140
+   },
+   "S5-ict-non-cloud": {
+    "cig": 220525,
+    "euro": 90762889154
+   },
+   "S6-residuo": {
+    "cig": 59406,
+    "euro": 16369710501
+   },
+   "S3-S6": {
+    "cig": 289192,
+    "euro": 114376014025
+   }
+  },
+  "prima-riga-0.3.2": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5269,
+    "euro": 938426
+   },
+   "S3-convenzione-lotto": {
+    "cig": 891,
+    "euro": 3613260230
+   },
+   "S4-marchio": {
+    "cig": 8370,
+    "euro": 3630154140
+   },
+   "S5-ict-non-cloud": {
+    "cig": 220525,
+    "euro": 90762889154
+   },
+   "S6-residuo": {
+    "cig": 59406,
+    "euro": 16369710501
+   },
+   "S3-S6": {
+    "cig": 289192,
+    "euro": 114376014025
+   }
+  },
+  "ultima-riga-base-55.3": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5269,
+    "euro": 938426
+   },
+   "S3-convenzione-lotto": {
+    "cig": 891,
+    "euro": 3613260230
+   },
+   "S4-marchio": {
+    "cig": 8370,
+    "euro": 3630154140
+   },
+   "S5-ict-non-cloud": {
+    "cig": 220525,
+    "euro": 90762889154
+   },
+   "S6-residuo": {
+    "cig": 59406,
+    "euro": 16369710501
+   },
+   "S3-S6": {
+    "cig": 289192,
+    "euro": 114376014025
+   }
+  },
+  "cpv-ict-0.3.4": {
+   "S0-padre-aq": {
+    "cig": 88792,
+    "euro": 391695111055
+   },
+   "S2-sotto-soglia": {
+    "cig": 5269,
+    "euro": 938426
+   },
+   "S3-convenzione-lotto": {
+    "cig": 891,
+    "euro": 3613260230
+   },
+   "S4-marchio": {
+    "cig": 8370,
+    "euro": 3630154140
+   },
+   "S5-ict-non-cloud": {
+    "cig": 220525,
+    "euro": 90762889154
+   },
+   "S6-residuo": {
+    "cig": 59406,
+    "euro": 16369710501
+   },
+   "S3-S6": {
+    "cig": 289192,
+    "euro": 114376014025
+   }
+  }
+ },
+ "spostamenti_ultima_riga_vs_0.3.4": [],
+ "spostamenti_prima_riga_0.3.2_vs_0.3.4": [],
+ "parte_b": null
+}

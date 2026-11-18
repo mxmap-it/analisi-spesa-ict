@@ -19,7 +19,7 @@ Regole v2 (a valle del campione):
                   -> spesa effettiva, euro = valore PVL
   T6-revisione    tetto dalla revisione a mano (lotto ripetuto, valore di convenzione)
   X1-errore       errore d'importo evidente dalla revisione a mano -> fuori dai totali (né spesa né tetto)
-Uso:  python tools/verifiche/imbuto_revisione.py [--json OUT]
+Uso:  python tools/verifiche/imbuto_revisione.py [--json OUT]     (IMBUTO_VERSIONE=0.3.4 davanti: imbuto rigenerato, #71)
       python tools/verifiche/imbuto_revisione.py --campione   # SUL SERVER: rifà l'estrazione del campione
 """
 import csv, collections, json, math, os, random, sys
@@ -27,7 +27,12 @@ import csv, collections, json, math, os, random, sys
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 E = os.path.join(RADICE, "esiti/2026-11-06/imbuto")
-RIEP = os.path.join(RADICE, "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json")
+# IMBUTO_VERSIONE=0.3.4 (#71): tetti-cig.csv e riepilogo dell'imbuto rigenerato il 18/11/2026 (esiti/2026-11-18/imbuto/),
+# dove si scrive anche tetti-cig-v2.csv; campione, giudizi, PVL, revisione e QE restano quelli del 6/11. Default 0.3.1.
+VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
+E_OUT = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
+RIEP = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json",
+                             "0.3.4": "esiti/2026-11-18/imbuto/riepilogo-0.3.4.json"}[VERSIONE])
 RX_PA_PAGA = __import__("re").compile(r"energ|termic|efficient|trigenera|cogenera|calore|illuminazion|trasporto pubblico|\btpl\b|infrastruttura tecnologica|centro (unico )?di cottura", __import__("re").I)
 leggi = lambda n: list(csv.DictReader(open(os.path.join(E, n), encoding="utf-8")))
 
@@ -44,7 +49,7 @@ def wilson(k, n, z=1.96):
 
 
 def main():
-    T = leggi("tetti-cig.csv")
+    T = list(csv.DictReader(open(os.path.join(E_OUT, "tetti-cig.csv"), encoding="utf-8")))
     if "--campione" in sys.argv:
         rnd = random.Random(20261106)
         for s in ("T3-tondo", "T3-non-tondo", "T4-accordo-quadro", "T4-concessione"):
@@ -115,7 +120,7 @@ def main():
                              "euro_sal": round(sum(float(r["sal_cumulato"] or 0) for r in out)),
                              "euro_sal_ict": round(sum(float(r["sal_cumulato"] or 0) for r in out if r["strato"] != "S1-escluso-non-ict"))}
     Rj["s3_s6"] ={k: sum(x[k] for x in ict) for k in ("euro_prima", "euro_dopo", "di_cui_incerti_oltre_50M")}
-    with open(os.path.join(E, "tetti-cig-v2.csv"), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(E_OUT, "tetti-cig-v2.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
     # precisione di E4 (0.5): campione casuale di 15 CIG E4 (seme 20261108) giudicato sul testo; e rapporti potenza di 10
     if os.path.exists(os.path.join(E, "campione-e4-giudizi.csv")):

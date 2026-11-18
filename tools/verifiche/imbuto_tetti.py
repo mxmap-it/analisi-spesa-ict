@@ -17,6 +17,7 @@ Vie, in ordine (la prima che scatta decide):
                      massimale, I3 senza aggiudicazione)
 
 Uso:
+  IMBUTO_VERSIONE=0.3.4 davanti a ogni comando: imbuto rigenerato (#71, esiti/2026-11-18/imbuto/)
   python tools/verifiche/imbuto_tetti.py            # da un clone: legge esiti/2026-11-06/imbuto/tetti-cig.csv, stampa e controlla
   python tools/verifiche/imbuto_tetti.py --rigenera # SUL SERVER (nice): rilegge il mirror ANAC e ict.csv, riscrive tetti-cig.csv
   ... --json OUT                                     # tabelle in JSON per il rendiconto
@@ -25,12 +26,15 @@ import csv, collections, glob, hashlib, io, json, os, re, sys, zipfile
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
-ESITI = os.path.join(RADICE, "esiti/2026-11-06/imbuto")
+# IMBUTO_VERSIONE=0.3.4 (#71): imbuto rigenerato il 18/11/2026; default 0.3.1 (3/11)
+VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
+ESITI = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
 OUT = os.path.join(ESITI, "tetti-cig.csv")
 ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
 INIZ = os.path.join(RADICE, "report/convenzioni/database/iniziative.json")
 YAML_INIZ = os.path.join(RADICE, "config/iniziative_ict.yaml")
-RIEP = os.path.join(RADICE, "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json")
+RIEP = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json",
+                             "0.3.4": "esiti/2026-11-18/imbuto/riepilogo-0.3.4.json"}[VERSIONE])
 SOGLIA = 50e6
 RX_TESTO = re.compile(r"accordo\s+quadro|convenzion|massimal|concession|\bpsn\b|polo\s+strategico", re.I)
 CAMPI = ["cig", "anno", "strato", "sottoclasse", "gruppo", "importo", "classe", "via", "euro_netti", "cig_accordo_quadro",
@@ -141,7 +145,16 @@ def main():
     attesi = sum(r["cig"] for r in P["righe"] if int(r["anno"]) >= 2024 and r["importo_da_verificare"] and r["strato"] != "S0-padre-aq")
     # il riepilogo conta RIGHE: 30 righe sono CIG ripetuti nei file annuali ANAC (per la parte ict.csv: 167 righe = 162 CIG,
     # nessun CIG mancante, controllato il 6/11). Qui si contano CIG distinti.
-    T["coerenza"] = {"righe_riepilogo": attesi, "cig_distinti": len(R), "righe_duplicate": attesi - len(R), "ok": 0 <= attesi - len(R) <= 30}
+    # 0.3.4 (#71): il riepilogo ha una riga per CIG, quindi non ci sono più duplicati; restano scarti di pochi CIG in S1
+    # (qui S1 = «non in ict.csv», nel riepilogo la riga tenuta può avere anno o importo diversi). Sugli strati ICT
+    # S3-S6 i conteggi devono coincidere.
+    ict_r = collections.Counter(); ict_t = collections.Counter(r["strato"] for r in R if r["strato"] not in ("S1-escluso-non-ict",))
+    for r in P["righe"]:
+        if int(r["anno"]) >= 2024 and r["importo_da_verificare"] and r["strato"] not in ("S0-padre-aq", "S1-escluso-non-ict"):
+            ict_r[r["strato"]] += r["cig"]
+    ok = (0 <= attesi - len(R) <= 30) if VERSIONE == "0.3.1" else (ict_r == ict_t and abs(attesi - len(R)) <= 30)
+    T["coerenza"] = {"righe_riepilogo": attesi, "cig_distinti": len(R), "righe_duplicate": attesi - len(R),
+                     "ict_s3_s6_riepilogo": dict(ict_r), "ict_s3_s6_tetti": dict(ict_t), "ok": ok}
     print("\n## coerenza", T["coerenza"])
     if "--json" in sys.argv:
         json.dump(T, open(sys.argv[sys.argv.index("--json") + 1], "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)

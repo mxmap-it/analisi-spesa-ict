@@ -1,0 +1,274 @@
+{
+ "precisione_campione": [
+  {
+   "strato": "T3-tondo",
+   "popolazione": 103,
+   "campione": 15,
+   "confermati": 8,
+   "precisione": 0.533,
+   "wilson95": [
+    0.301,
+    0.752
+   ]
+  },
+  {
+   "strato": "T3-non-tondo",
+   "popolazione": 84,
+   "campione": 15,
+   "confermati": 15,
+   "precisione": 1.0,
+   "wilson95": [
+    0.796,
+    1.0
+   ]
+  },
+  {
+   "strato": "T4-accordo-quadro",
+   "popolazione": 368,
+   "campione": 15,
+   "confermati": 15,
+   "precisione": 1.0,
+   "wilson95": [
+    0.796,
+    1.0
+   ]
+  },
+  {
+   "strato": "T4-concessione",
+   "popolazione": 134,
+   "campione": 30,
+   "confermati": 20,
+   "precisione": 0.667,
+   "wilson95": [
+    0.488,
+    0.808
+   ]
+  },
+  {
+   "strato": "T4-concessione dopo regola v3 (I6)",
+   "campione": 18,
+   "confermati": 17,
+   "precisione": 0.944,
+   "wilson95": [
+    0.742,
+    0.99
+   ]
+  }
+ ],
+ "t4_accordo_quadro_su_pvl": {
+  "con_campo_pvl": 192,
+  "accordo_quadro_pvl": 191,
+  "precisione": 0.995,
+  "wilson95": [
+   0.971,
+   0.999
+  ]
+ },
+ "per_classe_v2": [
+  {
+   "chiave": "errore-importo",
+   "cig": 2,
+   "euro_dichiarati": 3950217274,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "incerto",
+   "cig": 1082,
+   "euro_dichiarati": 427943260465,
+   "euro_netti": 427943260465
+  },
+  {
+   "chiave": "spesa-effettiva",
+   "cig": 335,
+   "euro_dichiarati": 194126228782,
+   "euro_netti": 29352128955
+  },
+  {
+   "chiave": "tetto",
+   "cig": 711,
+   "euro_dichiarati": 174613908347,
+   "euro_netti": 0
+  }
+ ],
+ "per_via_v2": [
+  {
+   "chiave": "errore-importo / X1-errore",
+   "cig": 2,
+   "euro_dichiarati": 3950217274,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "incerto / I1-derivato-senza-riscontro",
+   "cig": 405,
+   "euro_dichiarati": 263461517355,
+   "euro_netti": 263461517355
+  },
+  {
+   "chiave": "incerto / I2-testo-aq-convenzione",
+   "cig": 72,
+   "euro_dichiarati": 10516216889,
+   "euro_netti": 10516216889
+  },
+  {
+   "chiave": "incerto / I3-senza-aggiudicazione",
+   "cig": 523,
+   "euro_dichiarati": 146127630479,
+   "euro_netti": 146127630479
+  },
+  {
+   "chiave": "incerto / I5-tondo-non-confermato",
+   "cig": 47,
+   "euro_dichiarati": 4154600000,
+   "euro_netti": 4154600000
+  },
+  {
+   "chiave": "incerto / I6-concessione-canoni-pa",
+   "cig": 35,
+   "euro_dichiarati": 3683295743,
+   "euro_netti": 3683295743
+  },
+  {
+   "chiave": "spesa-effettiva / E1-aggiudicato",
+   "cig": 32,
+   "euro_dichiarati": 9780780983,
+   "euro_netti": 4675199137
+  },
+  {
+   "chiave": "spesa-effettiva / E2-pvl",
+   "cig": 188,
+   "euro_dichiarati": 34939501932,
+   "euro_netti": 23381256167
+  },
+  {
+   "chiave": "spesa-effettiva / E4-qe",
+   "cig": 107,
+   "euro_dichiarati": 139258519883,
+   "euro_netti": 1295603500
+  },
+  {
+   "chiave": "spesa-effettiva / E4-qe-corregge-errore",
+   "cig": 8,
+   "euro_dichiarati": 10147425984,
+   "euro_netti": 70150
+  },
+  {
+   "chiave": "tetto / T1-padre-copiato",
+   "cig": 78,
+   "euro_dichiarati": 14747739124,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "tetto / T2-oltre-ordinato",
+   "cig": 14,
+   "euro_dichiarati": 31855497548,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "tetto / T3-ripetuto",
+   "cig": 113,
+   "euro_dichiarati": 31381830392,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "tetto / T4-modalita",
+   "cig": 467,
+   "euro_dichiarati": 89535546651,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "tetto / T5-pvl-aq",
+   "cig": 30,
+   "euro_dichiarati": 3364467636,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "tetto / T6-revisione",
+   "cig": 9,
+   "euro_dichiarati": 3728826996,
+   "euro_netti": 0
+  }
+ ],
+ "ict_per_classe_v2": [
+  {
+   "chiave": "errore-importo",
+   "cig": 2,
+   "euro_dichiarati": 3950217274,
+   "euro_netti": 0
+  },
+  {
+   "chiave": "incerto",
+   "cig": 83,
+   "euro_dichiarati": 14783554921,
+   "euro_netti": 14783554921
+  },
+  {
+   "chiave": "spesa-effettiva",
+   "cig": 29,
+   "euro_dichiarati": 12025696222,
+   "euro_netti": 948633903
+  },
+  {
+   "chiave": "tetto",
+   "cig": 60,
+   "euro_dichiarati": 43289628862,
+   "euro_netti": 0
+  }
+ ],
+ "strati_dal_2024_v2": [
+  {
+   "strato": "S1-escluso-non-ict",
+   "euro_prima": 1274462432046,
+   "euro_dopo": 989441115052,
+   "di_cui_incerti_oltre_50M": 413159705544
+  },
+  {
+   "strato": "S3-convenzione-lotto",
+   "euro_prima": 3613260230,
+   "euro_dopo": 1317762682,
+   "di_cui_incerti_oltre_50M": 585188247
+  },
+  {
+   "strato": "S4-marchio",
+   "euro_prima": 3630154140,
+   "euro_dopo": 3030722481,
+   "di_cui_incerti_oltre_50M": 181137347
+  },
+  {
+   "strato": "S5-ict-non-cloud",
+   "euro_prima": 90762889153,
+   "euro_dopo": 40011982636,
+   "di_cui_incerti_oltre_50M": 10835547845
+  },
+  {
+   "strato": "S6-residuo",
+   "euro_prima": 16369710499,
+   "euro_dopo": 11698637768,
+   "di_cui_incerti_oltre_50M": 3181681482
+  }
+ ],
+ "sal_certificato": {
+  "cig_con_sal": 41,
+  "euro_sal": 397557417,
+  "euro_sal_ict": 147254860
+ },
+ "s3_s6": {
+  "euro_prima": 114376014022,
+  "euro_dopo": 56059105567,
+  "di_cui_incerti_oltre_50M": 14783554921
+ },
+ "precisione_e4": {
+  "cig_e4": 115,
+  "campione": 15,
+  "dichiarato_errato": 14,
+  "wilson95_dichiarato_errato": [
+   0.702,
+   0.988
+  ],
+  "qe_plausibile": 9,
+  "wilson95_qe_plausibile": [
+   0.357,
+   0.802
+  ],
+  "rapporto_esatto_potenza_di_10": 46
+ }
+}

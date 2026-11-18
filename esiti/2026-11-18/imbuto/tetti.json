@@ -1,0 +1,278 @@
+{
+ "cig": 2130,
+ "euro_dichiarati": 800633614868,
+ "euro_netti": 617473523565,
+ "per_classe": [
+  {
+   "chiave": "incerto",
+   "cig": 1317,
+   "euro_dichiarati": 612798324427,
+   "euro_netti": 612798324427
+  },
+  {
+   "chiave": "spesa-effettiva",
+   "cig": 32,
+   "euro_dichiarati": 9780780983,
+   "euro_netti": 4675199137
+  },
+  {
+   "chiave": "tetto",
+   "cig": 781,
+   "euro_dichiarati": 178054509458,
+   "euro_netti": 0
+  }
+ ],
+ "per_via": [
+  {
+   "chiave": [
+    "incerto",
+    "I1-derivato-senza-riscontro"
+   ],
+   "cig": 477,
+   "euro_dichiarati": 313941591959,
+   "euro_netti": 313941591959
+  },
+  {
+   "chiave": [
+    "incerto",
+    "I2-testo-aq-convenzione"
+   ],
+   "cig": 79,
+   "euro_dichiarati": 11555700505,
+   "euro_netti": 11555700505
+  },
+  {
+   "chiave": [
+    "incerto",
+    "I3-senza-aggiudicazione"
+   ],
+   "cig": 761,
+   "euro_dichiarati": 287301031963,
+   "euro_netti": 287301031963
+  },
+  {
+   "chiave": [
+    "spesa-effettiva",
+    "E1-aggiudicato"
+   ],
+   "cig": 32,
+   "euro_dichiarati": 9780780983,
+   "euro_netti": 4675199137
+  },
+  {
+   "chiave": [
+    "tetto",
+    "T1-padre-copiato"
+   ],
+   "cig": 78,
+   "euro_dichiarati": 14747739124,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "tetto",
+    "T2-oltre-ordinato"
+   ],
+   "cig": 14,
+   "euro_dichiarati": 31855497548,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "tetto",
+    "T3-ripetuto"
+   ],
+   "cig": 187,
+   "euro_dichiarati": 38232430392,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "tetto",
+    "T4-modalita"
+   ],
+   "cig": 502,
+   "euro_dichiarati": 93218842393,
+   "euro_netti": 0
+  }
+ ],
+ "per_strato_classe": [
+  {
+   "chiave": [
+    "S1-escluso-non-ict",
+    "incerto"
+   ],
+   "cig": 1201,
+   "euro_dichiarati": 578981498963,
+   "euro_netti": 578981498963
+  },
+  {
+   "chiave": [
+    "S1-escluso-non-ict",
+    "spesa-effettiva"
+   ],
+   "cig": 31,
+   "euro_dichiarati": 9716800035,
+   "euro_netti": 4635814017
+  },
+  {
+   "chiave": [
+    "S1-escluso-non-ict",
+    "tetto"
+   ],
+   "cig": 724,
+   "euro_dichiarati": 137886218592,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "S3-convenzione-lotto",
+    "incerto"
+   ],
+   "cig": 4,
+   "euro_dichiarati": 585188247,
+   "euro_netti": 585188247
+  },
+  {
+   "chiave": [
+    "S3-convenzione-lotto",
+    "tetto"
+   ],
+   "cig": 5,
+   "euro_dichiarati": 2295497548,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "S4-marchio",
+    "incerto"
+   ],
+   "cig": 7,
+   "euro_dichiarati": 540515555,
+   "euro_netti": 540515555
+  },
+  {
+   "chiave": [
+    "S4-marchio",
+    "tetto"
+   ],
+   "cig": 5,
+   "euro_dichiarati": 558400000,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "S5-ict-non-cloud",
+    "incerto"
+   ],
+   "cig": 84,
+   "euro_dichiarati": 29653905355,
+   "euro_netti": 29653905355
+  },
+  {
+   "chiave": [
+    "S5-ict-non-cloud",
+    "spesa-effettiva"
+   ],
+   "cig": 1,
+   "euro_dichiarati": 63980948,
+   "euro_netti": 39385121
+  },
+  {
+   "chiave": [
+    "S5-ict-non-cloud",
+    "tetto"
+   ],
+   "cig": 30,
+   "euro_dichiarati": 32498243098,
+   "euro_netti": 0
+  },
+  {
+   "chiave": [
+    "S6-residuo",
+    "incerto"
+   ],
+   "cig": 21,
+   "euro_dichiarati": 3037216308,
+   "euro_netti": 3037216308
+  },
+  {
+   "chiave": [
+    "S6-residuo",
+    "tetto"
+   ],
+   "cig": 17,
+   "euro_dichiarati": 4816150221,
+   "euro_netti": 0
+  }
+ ],
+ "strati_dal_2024": [
+  {
+   "strato": "S0-padre-aq",
+   "cig": 88792,
+   "euro_prima": 0,
+   "euro_dopo": 0,
+   "di_cui_incerti_oltre_50M": 0
+  },
+  {
+   "strato": "S1-escluso-non-ict",
+   "cig": 3209583,
+   "euro_prima": 1274462432046,
+   "euro_dopo": 1131495227436,
+   "di_cui_incerti_oltre_50M": 578981498963
+  },
+  {
+   "strato": "S2-sotto-soglia",
+   "cig": 147273,
+   "euro_prima": -1830321,
+   "euro_dopo": -1830321,
+   "di_cui_incerti_oltre_50M": 0
+  },
+  {
+   "strato": "S3-convenzione-lotto",
+   "cig": 891,
+   "euro_prima": 3613260230,
+   "euro_dopo": 1317762682,
+   "di_cui_incerti_oltre_50M": 585188247
+  },
+  {
+   "strato": "S4-marchio",
+   "cig": 8370,
+   "euro_prima": 3630154140,
+   "euro_dopo": 3071754140,
+   "di_cui_incerti_oltre_50M": 540515555
+  },
+  {
+   "strato": "S5-ict-non-cloud",
+   "cig": 220525,
+   "euro_prima": 90762889153,
+   "euro_dopo": 58240050228,
+   "di_cui_incerti_oltre_50M": 29653905355
+  },
+  {
+   "strato": "S6-residuo",
+   "cig": 59406,
+   "euro_prima": 16369710499,
+   "euro_dopo": 11553560278,
+   "di_cui_incerti_oltre_50M": 3037216308
+  }
+ ],
+ "coerenza": {
+  "righe_riepilogo": 2126,
+  "cig_distinti": 2130,
+  "righe_duplicate": -4,
+  "ict_s3_s6_riepilogo": {
+   "S3-convenzione-lotto": 9,
+   "S4-marchio": 12,
+   "S5-ict-non-cloud": 115,
+   "S6-residuo": 38
+  },
+  "ict_s3_s6_tetti": {
+   "S6-residuo": 38,
+   "S5-ict-non-cloud": 115,
+   "S3-convenzione-lotto": 9,
+   "S4-marchio": 12
+  },
+  "ok": true
+ }
+}

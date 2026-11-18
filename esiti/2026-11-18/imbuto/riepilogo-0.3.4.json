@@ -1,0 +1,3641 @@
+{
+ "versione": "imbuto-0.3.4 (2026-11-09) PROVA-A",
+ "regole": "v3.1",
+ "soglie": {
+  "min": 500,
+  "mega": 5000000.0,
+  "g3": 40000.0,
+  "da_verificare": 50000000.0
+ },
+ "fonti": [
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "delta"
+ ],
+ "righe": [
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 26907,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 190,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2020",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 327604,
+   "euro": 118692102195
+  },
+  {
+   "anno": "2020",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 267,
+   "euro": 43502614081
+  },
+  {
+   "anno": "2020",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 426,
+   "euro": 101231
+  },
+  {
+   "anno": "2020",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 1450
+  },
+  {
+   "anno": "2020",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 558
+  },
+  {
+   "anno": "2020",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 15196,
+   "euro": 2959716
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 225,
+   "euro": 63645690
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 9482137
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 722434
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 4679364
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 341,
+   "euro": 257025872
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 57,
+   "euro": 28716448
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 27,
+   "euro": 12439694
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 6,
+   "euro": 6108581
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 15400
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 93,
+   "euro": 52371599
+  },
+  {
+   "anno": "2020",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 106792
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 243,
+   "euro": 156704316
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 943,
+   "euro": 418237929
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 187,
+   "euro": 218468262
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 7,
+   "euro": 5659120
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2598,
+   "euro": 511733312
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 9840,
+   "euro": 2811882217
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 6,
+   "euro": 526213460
+  },
+  {
+   "anno": "2020",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 375,
+   "euro": 181727757
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 151,
+   "euro": 110580202
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 657375
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 107,
+   "euro": 59021640
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 7,
+   "euro": 60325839
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 442,
+   "euro": 142105418
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 86,
+   "euro": 1348603
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 21,
+   "euro": 433348746
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1264,
+   "euro": 342053930
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 609,
+   "euro": 8278690
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 288,
+   "euro": 62631992
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 558125
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 2857264
+  },
+  {
+   "anno": "2020",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 9,
+   "euro": 5441358
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 29705,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 277,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 11,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2021",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 370422,
+   "euro": 138467529757
+  },
+  {
+   "anno": "2021",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 280,
+   "euro": 49409892969
+  },
+  {
+   "anno": "2021",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 434,
+   "euro": 105603
+  },
+  {
+   "anno": "2021",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 12,
+   "euro": 2828
+  },
+  {
+   "anno": "2021",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 199
+  },
+  {
+   "anno": "2021",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 10604,
+   "euro": 2168229
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 277,
+   "euro": 103097288
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 46,
+   "euro": 14345923
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 9,
+   "euro": 8190876
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 18,
+   "euro": 5881231
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 372,
+   "euro": 287861455
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 69,
+   "euro": 33381781
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 34,
+   "euro": 15114940
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 9,
+   "euro": 14556365
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 6,
+   "euro": 6592848
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 96,
+   "euro": 59251742
+  },
+  {
+   "anno": "2021",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 204500
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 318,
+   "euro": 261917653
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 209665213
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1086,
+   "euro": 492791469
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 585103400
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 228,
+   "euro": 948840197
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 142730457
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 17,
+   "euro": 3641267
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2785,
+   "euro": 489886673
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 10578,
+   "euro": 3102650752
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 11,
+   "euro": 2027168424
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 397,
+   "euro": 149739352
+  },
+  {
+   "anno": "2021",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 4,
+   "euro": 45174523
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 165,
+   "euro": 138983442
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 188,
+   "euro": 151707864
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 10,
+   "euro": 141443981
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 1200200000
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 557,
+   "euro": 168969200
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 99,
+   "euro": 1750586
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 10,
+   "euro": 102862291
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 64060893
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1488,
+   "euro": 378143738
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 614,
+   "euro": 8048929
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 190,
+   "euro": 39016745
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 265653473
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 3582293
+  },
+  {
+   "anno": "2021",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 6,
+   "euro": 955400
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 31320,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 379,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 0
+  },
+  {
+   "anno": "2022",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 414873,
+   "euro": 162484915698
+  },
+  {
+   "anno": "2022",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 452,
+   "euro": 130585537741
+  },
+  {
+   "anno": "2022",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 431,
+   "euro": 106755
+  },
+  {
+   "anno": "2022",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 9,
+   "euro": 2619
+  },
+  {
+   "anno": "2022",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 720
+  },
+  {
+   "anno": "2022",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 13388,
+   "euro": 2671318
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 333,
+   "euro": 211422568
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 88,
+   "euro": 27969082
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 14,
+   "euro": 5250158
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 30,
+   "euro": 20531462
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 340,
+   "euro": 343335302
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 73,
+   "euro": 43041520
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 52,
+   "euro": 12304002
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 13,
+   "euro": 2017624
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 6,
+   "euro": 6513406
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 89,
+   "euro": 97225933
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 56421787
+  },
+  {
+   "anno": "2022",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 326373
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 361,
+   "euro": 361487724
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1215,
+   "euro": 592507455
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 552281572
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 346,
+   "euro": 842949903
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 57349991
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 32529343
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 14,
+   "euro": 2952299
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 3976,
+   "euro": 586876695
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 150792898
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 18399,
+   "euro": 4744317215
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 10,
+   "euro": 1155665652
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 35,
+   "euro": 64838244
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 498,
+   "euro": 217364058
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 85000
+  },
+  {
+   "anno": "2022",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 312259
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 89,
+   "euro": 104184392
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 107,
+   "euro": 79056722
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 14,
+   "euro": 142749461
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 62929849
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 813,
+   "euro": 229694484
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 893,
+   "euro": 10993570
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 26,
+   "euro": 488812310
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 210778350
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1826,
+   "euro": 489443686
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 735,
+   "euro": 9895566
+  },
+  {
+   "anno": "2022",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 18,
+   "euro": 35284170
+  },
+  {
+   "anno": "2023",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 37673,
+   "euro": 0
+  },
+  {
+   "anno": "2023",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 387,
+   "euro": 0
+  },
+  {
+   "anno": "2023",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 21,
+   "euro": 0
+  },
+  {
+   "anno": "2023",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 0
+  },
+  {
+   "anno": "2023",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 0
+  },
+  {
+   "anno": "2023",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 515542,
+   "euro": 181808531483
+  },
+  {
+   "anno": "2023",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 449,
+   "euro": 95609811116
+  },
+  {
+   "anno": "2023",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1645,
+   "euro": 477527
+  },
+  {
+   "anno": "2023",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 18,
+   "euro": 5377
+  },
+  {
+   "anno": "2023",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 18,
+   "euro": 1806
+  },
+  {
+   "anno": "2023",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 14788,
+   "euro": 3431079
+  },
+  {
+   "anno": "2023",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 128629450
+  },
+  {
+   "anno": "2023",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 117393918
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 418,
+   "euro": 280981583
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 92,
+   "euro": 18710004
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 15,
+   "euro": 14811365
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 66,
+   "euro": 21812293
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 330,
+   "euro": 238570250
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 143625235
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 75,
+   "euro": 33183277
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 69,
+   "euro": 21836200
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 14,
+   "euro": 24883331
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 13077997
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 129,
+   "euro": 78993406
+  },
+  {
+   "anno": "2023",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 7,
+   "euro": 4325300
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 417,
+   "euro": 233739173
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 500001
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1821,
+   "euro": 498552013
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 86800000
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 193,
+   "euro": 914537003
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 198098590
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 25,
+   "euro": 7083370
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 6741,
+   "euro": 714854364
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 60062,
+   "euro": 5985384901
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 8,
+   "euro": 2260375888
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 168,
+   "euro": 257744776
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 910,
+   "euro": 356231425
+  },
+  {
+   "anno": "2023",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 80803
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 138763
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 1609742
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 11,
+   "euro": 183737175
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2025,
+   "euro": 347072035
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 7128,
+   "euro": 76812358
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 28,
+   "euro": 279739120
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 681733501
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2379,
+   "euro": 572204499
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2615,
+   "euro": 30229207
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 200,
+   "euro": 840074002
+  },
+  {
+   "anno": "2023",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 145870387
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 33579,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 565,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 28,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2024",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1053935,
+   "euro": 180894491112
+  },
+  {
+   "anno": "2024",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 749,
+   "euro": 309580568130
+  },
+  {
+   "anno": "2024",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2105,
+   "euro": 295786
+  },
+  {
+   "anno": "2024",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 56,
+   "euro": 6735
+  },
+  {
+   "anno": "2024",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 43,
+   "euro": 8181
+  },
+  {
+   "anno": "2024",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 48796,
+   "euro": -12543641
+  },
+  {
+   "anno": "2024",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 287,
+   "euro": 326380320
+  },
+  {
+   "anno": "2024",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 8,
+   "euro": 2450685795
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1243,
+   "euro": 164963464
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 121883163
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 208,
+   "euro": 20933102
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 26,
+   "euro": 45519660
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 69240000
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 316,
+   "euro": 140985208
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 242400000
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 506,
+   "euro": 149100804
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 77,
+   "euro": 38963157
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 141,
+   "euro": 29672625
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 60,
+   "euro": 5862980
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 23,
+   "euro": 23200520
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 213,
+   "euro": 145646262
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 140000000
+  },
+  {
+   "anno": "2024",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 23,
+   "euro": 1503982
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 944,
+   "euro": 342600126
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 7,
+   "euro": 1181209700
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 12122043
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2774,
+   "euro": 872279364
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 8,
+   "euro": 3264477986
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 197,
+   "euro": 885814385
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 10,
+   "euro": 18260045323
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 4,
+   "euro": 4246176
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 2556574
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 8859,
+   "euro": 834285712
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 6,
+   "euro": 1508072720
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 41716,
+   "euro": 5633570092
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 26,
+   "euro": 13646968950
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 161,
+   "euro": 218620654
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 117000000
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1939,
+   "euro": 367546075
+  },
+  {
+   "anno": "2024",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 5,
+   "euro": 3397774684
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 2515182
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 684735
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 24,
+   "euro": 286058765
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 928,
+   "euro": 249579575
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2692,
+   "euro": 42246176
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 54,
+   "euro": 730144515
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 11,
+   "euro": 1968360262
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 4421,
+   "euro": 993227141
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 16704,
+   "euro": 231349201
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "iniziativa-da-decifrare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 11,
+   "euro": 2087542
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 341,
+   "euro": 1164669243
+  },
+  {
+   "anno": "2024",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 885027632
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 34362,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 491,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 21,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 5,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2025",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1244531,
+   "euro": 205179783666
+  },
+  {
+   "anno": "2025",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 596,
+   "euro": 241700445675
+  },
+  {
+   "anno": "2025",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1922,
+   "euro": 366653
+  },
+  {
+   "anno": "2025",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 45,
+   "euro": 9107
+  },
+  {
+   "anno": "2025",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 35,
+   "euro": 5852
+  },
+  {
+   "anno": "2025",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 119
+  },
+  {
+   "anno": "2025",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 59787,
+   "euro": 3279167
+  },
+  {
+   "anno": "2025",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 277,
+   "euro": 211498128
+  },
+  {
+   "anno": "2025",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 430000000
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1502,
+   "euro": 311350842
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 57500000
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 191,
+   "euro": 21513554
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 36608242
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 335,
+   "euro": 108135146
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 618,
+   "euro": 353120490
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 97,
+   "euro": 51999000
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "psn",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 425837
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 181,
+   "euro": 35213193
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 43,
+   "euro": 55899920
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 13,
+   "euro": 1112100
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 276,
+   "euro": 159677236
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 176000000
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 135138
+  },
+  {
+   "anno": "2025",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 32,
+   "euro": 1087669
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1490,
+   "euro": 278413933
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 4,
+   "euro": 17027120
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 4644,
+   "euro": 969217545
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 581182413
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 496,
+   "euro": 1668563673
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 13,
+   "euro": 13403115238
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 6848675
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 7724180
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 5,
+   "euro": 9116642
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 59,
+   "euro": 20668370
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 13824,
+   "euro": 1009606497
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 7,
+   "euro": 465918450
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 71468,
+   "euro": 6645741118
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 13,
+   "euro": 1522666369
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 106,
+   "euro": 153679181
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 280800000
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2938,
+   "euro": 370506281
+  },
+  {
+   "anno": "2025",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 28000
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-multi-provider-iniziativa",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 18195
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 8,
+   "euro": 71871764
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1589,
+   "euro": 289978990
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 5343,
+   "euro": 85265576
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 52,
+   "euro": 678498090
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 13,
+   "euro": 3488198155
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 3212,
+   "euro": 851945161
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 9844,
+   "euro": 136768900
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 334,
+   "euro": 706348244
+  },
+  {
+   "anno": "2025",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 402839181
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 19469,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 245,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 9,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S0-padre-aq",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 1,
+   "euro": 0
+  },
+  {
+   "anno": "2026",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 909165,
+   "euro": 166069236891
+  },
+  {
+   "anno": "2026",
+   "strato": "S1-escluso-non-ict",
+   "sottoclasse": "",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 607,
+   "euro": 171037906572
+  },
+  {
+   "anno": "2026",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1017,
+   "euro": 236554
+  },
+  {
+   "anno": "2026",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 38,
+   "euro": 8475
+  },
+  {
+   "anno": "2026",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "ict",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 7,
+   "euro": 964
+  },
+  {
+   "anno": "2026",
+   "strato": "S2-sotto-soglia",
+   "sottoclasse": "non-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 33421,
+   "euro": 6495727
+  },
+  {
+   "anno": "2026",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 140,
+   "euro": 106067693
+  },
+  {
+   "anno": "2026",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 8,
+   "euro": 1275091
+  },
+  {
+   "anno": "2026",
+   "strato": "S3-convenzione-lotto",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 170,
+   "euro": 87353203
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 1051,
+   "euro": 124883179
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 122,
+   "euro": 23452977
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 28,
+   "euro": 51227669
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "cloud",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 57222742
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 163,
+   "euro": 49403190
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "in-house",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 117254184
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 446,
+   "euro": 225558622
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "licenza",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 33,
+   "euro": 18574284
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 145,
+   "euro": 31344439
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 21,
+   "euro": 4075304
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "servizi-professionali",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 15,
+   "euro": 8015176
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 153,
+   "euro": 91029103
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "software-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 1,
+   "cig": 1,
+   "euro": 117415465
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 425600
+  },
+  {
+   "anno": "2026",
+   "strato": "S4-marchio",
+   "sottoclasse": "telefonia",
+   "gruppo": "",
+   "giurisdizione": "IT",
+   "importo_da_verificare": 0,
+   "cig": 20,
+   "euro": 618912
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1061,
+   "euro": 393992120
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-infrastruttura-in-house",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 479874707
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 3241,
+   "euro": 540774296
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-altra",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 3,
+   "euro": 226789834
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 394,
+   "euro": 936261107
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 141602611
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "EXTRA-UE",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 3460222
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-it-applicativa",
+   "gruppo": "",
+   "giurisdizione": "UE",
+   "importo_da_verificare": 0,
+   "cig": 2,
+   "euro": 1552032
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "consulenza-migrazione-cloud",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 42,
+   "euro": 3763851
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "hardware-infrastruttura",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 8939,
+   "euro": 699916436
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 52808,
+   "euro": 5298819666
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "ict-altro",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 7,
+   "euro": 3738630416
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "sicurezza-ict",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 3,
+   "euro": 778010
+  },
+  {
+   "anno": "2026",
+   "strato": "S5-ict-non-cloud",
+   "sottoclasse": "telefonia-connettivita",
+   "gruppo": "",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2245,
+   "euro": 336659596
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 10,
+   "euro": 133640068
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 1045,
+   "euro": 207552654
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cloud-provider-indeterminato",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 3274,
+   "euro": 52493154
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 51,
+   "euro": 720268284
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G1-mega",
+   "giurisdizione": "",
+   "importo_da_verificare": 1,
+   "cig": 4,
+   "euro": 454264886
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G3-incerti-significativi",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 2242,
+   "euro": 566658575
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "cpv-non-ict-testo-ict",
+   "gruppo": "G4-coda",
+   "giurisdizione": "",
+   "importo_da_verificare": 0,
+   "cig": 7018,
+   "euro": 100494279
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 0,
+   "cig": 162,
+   "euro": 211979962
+  },
+  {
+   "anno": "2026",
+   "strato": "S6-residuo",
+   "sottoclasse": "psn-servizio-da-determinare",
+   "gruppo": "G2-informazione-mancante",
+   "giurisdizione": "incerto-servizio-psn",
+   "importo_da_verificare": 1,
+   "cig": 2,
+   "euro": 654676412
+  }
+ ]
+}
