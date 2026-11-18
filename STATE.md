@@ -26,6 +26,10 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - `sync_server.sh` ora fa `pull --rebase --autostash`: prima falliva se un job scriveva durante il sync.
 - Via 6 G1 nuovi: partiti dal guardiano alle 16:30; g1-107 da ripetere (permesso di scrittura negato, il guardiano lo riprova). Catena in attesa: a fine giro `verifica_imbuto.py`, `prepara_nuove.py`, `giro_revisione_guardiano.sh` (log `lavoro/imbuto-revisione/log/catena-g1-nuovi.log`); poi aggiornare il rendiconto § 4.3.1-4.3.2.
 
+**Sera 18/11 — decisione di Fabio: niente P1, imbuto largo con raffinamento a livelli** (DECISIONI.md, rendiconto imbuto 0.18 § 2.8):
+- `tools/llm/raffinamento.py`: L2 regole (stampanti, consumabili, cablaggio: 6.980 CIG / 470 M€ fuori dal cloud), L3 Opus sul testo (G3 843 CIG, poi G4), L4 via 6 con Opus (`GIRO_DIR=report/metodo/llm/raffinamento-l4`). Catena automatica `tools/llm/raffinamento_catena.sh` (log `lavoro/raffinamento/log/catena.log`). A fine catena: aggiornare § 2.8 con gli esiti `esiti/<data>/imbuto/raffinamento-l3.*` e gli esiti L4.
+- Revisione C1-C4 su 273 proposte; 57 discordi, di cui 52 non cloud per entrambe le letture; 5 all'arbitro L4.
+
 **Prossimi passi (senza decisioni di Fabio):** rifare sulla 0.3.4 § 2.2-2.5 (tetti per CIG), § 4.5 (licenze), § 4.11 (residuo S6 con documenti); mettere in coda via 6 i 29 G1 nuovi della 0.3.4; misura P1 su tutto S6 (job pesante, uno alla volta); #74 BDNCP/L.190 (esiti del 10/11 da scrivere in pagina); #73 a fine ripasso `residuo_s6_riepilogo.py` + `elenco_mancanti.py`; L4-js fase 2 Difesa (ore 1-5).
 
 **Decisioni attese da Fabio (nuove):** P1 o P1r (#71); coda dei 50 discordi via 6 (#66); pubblicazione del rendiconto imbuto 0.17. Le altre restano quelle elencate sotto (9/11).
