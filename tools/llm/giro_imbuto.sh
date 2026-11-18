@@ -7,11 +7,12 @@
 set -u
 cd "$(dirname "$0")/../.."
 unset CLAUDE_CODE_OAUTH_TOKEN
-PAR=${PAR:-4}; MODELLO=${MODELLO:-sonnet}; B=report/metodo/llm/imbuto-g1g3
-mkdir -p log/imbuto-g1g3 $B/esiti
+# GIRO_DIR/GIRO_LOG (18/11, #71): stessa via 6 su un'altra cartella di lotti, es. il livello L4 del raffinamento con MODELLO=opus
+PAR=${PAR:-4}; MODELLO=${MODELLO:-sonnet}; B=${GIRO_DIR:-report/metodo/llm/imbuto-g1g3}; L=${GIRO_LOG:-log/imbuto-g1g3}
+mkdir -p $L $B/esiti
 # lo STOP (stato/imbuto-g1g3-STOP.txt) ferma solo i pacchetti g3
 pacchetti=("$@")
-[ ${#pacchetti[@]} -eq 0 ] && pacchetti=($(ls $B/lotti | sed 's/\.jsonl$//' | sort -t- -k1,1 -s | awk '/^g1/{a=a" "$0} /^ctl/{b=b" "$0} /^g3/{c=c" "$0} END{print a,b,c}'))
+[ ${#pacchetti[@]} -eq 0 ] && pacchetti=($(ls $B/lotti | sed 's/\.jsonl$//' | sort -t- -k1,1 -s | awk '/^g1/{a=a" "$0} /^ctl/{b=b" "$0} /^g3/{c=c" "$0} !/^(g1|ctl|g3)/{d=d" "$0} END{print a,b,c,d}'))
 
 uno() {
   p=$1; e=$B/esiti/$p.jsonl; g=${p%%-*}
@@ -19,7 +20,7 @@ uno() {
   n=$( [ -f "$e" ] && grep -c . "$e" || echo 0 ); t=$(grep -c . $B/lotti/$p.jsonl)
   [ "$n" -ge "$t" ] && return 0
   if [ "$g" = g3 ]; then .venv/bin/python tools/llm/imbuto_budget.py || return 0; fi
-  cat > "log/imbuto-g1g3/$p.prompt" <<PROMPT
+  cat > "$L/$p.prompt" <<PROMPT
 Sei un analista del progetto analisi-spesa-ict. Leggi e segui alla lettera tools/llm/istruzioni-p3.md (e, da lì, istruzioni.md e istruzioni-p2.md); leggi report/metodo/llm/conoscenza-iniziative.yaml.
 Pacchetto: $B/lotti/$p.jsonl. Uscita: $e (una riga JSON per contratto, su UNA riga, aggiunta appena finito il contratto; salta i CIG già presenti). modello "claude-$MODELLO", data "$(date +%F)".
 WebFetch non legge i PDF: per ogni documento candidato (link PVL, determina, capitolato, contratto) usa
@@ -29,11 +30,11 @@ PROMPT
   TETTO_ETICHETTA=imbuto-$g nice -n 15 timeout 36000 .venv/bin/python tools/llm/claude_tetto.py --progetto analisi-spesa-ict -- \
     claude -p --model "$MODELLO" \
     --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Bash(.venv/bin/python tools/llm/atti.py:*),Bash(grep:*),Bash(head:*)" \
-    < "log/imbuto-g1g3/$p.prompt" > "log/imbuto-g1g3/$p.log" 2>&1
+    < "$L/$p.prompt" > "$L/$p.log" 2>&1
   c=$?
-  [ $c -eq 75 ] && { echo "$(date -Is) $p TETTO" >> log/imbuto-g1g3/avanzamento.log; return 0; }
+  [ $c -eq 75 ] && { echo "$(date -Is) $p TETTO" >> $L/avanzamento.log; return 0; }
   .venv/bin/python tools/llm/normalizza_jsonl.py "$e" >/dev/null 2>&1
-  echo "$(date -Is) $p codice=$c esiti=$( [ -f "$e" ] && grep -c . "$e" || echo 0 )/$t" >> log/imbuto-g1g3/avanzamento.log
+  echo "$(date -Is) $p codice=$c esiti=$( [ -f "$e" ] && grep -c . "$e" || echo 0 )/$t" >> $L/avanzamento.log
 }
-export -f uno; export MODELLO B
+export -f uno; export MODELLO B L
 printf '%s\n' "${pacchetti[@]}" | xargs -P "$PAR" -I{} bash -c 'uno {}'

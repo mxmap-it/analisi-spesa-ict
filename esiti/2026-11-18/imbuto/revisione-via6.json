@@ -1,16 +1,16 @@
 {
  "data": "2026-11-18",
  "strumento": "tools/verifiche/imbuto_via6_revisione.py",
- "candidati": 272,
- "letti": 271,
+ "candidati": 273,
+ "letti": 272,
  "concordanza": {
   "discorde": 56,
-  "concorde": 89,
+  "concorde": 90,
   "non-confermato": 126,
   "da-leggere": 1
  },
  "accordo_sui_letti_certi": {
-  "concordi": 89,
+  "concordi": 90,
   "discordi": 56
  },
  "per_strato": {
@@ -106,8 +106,8 @@
   },
   "G1 S5": {
    "proposti": {
-    "cig": 72,
-    "euro": 3766229042
+    "cig": 73,
+    "euro": 3781229042
    },
    "C1": {
     "cig": 23,
@@ -282,8 +282,8 @@
   },
   "tutti S5": {
    "proposti": {
-    "cig": 251,
-    "euro": 4040411933
+    "cig": 252,
+    "euro": 4055411933
    },
    "C1": {
     "cig": 55,
@@ -1255,6 +1255,34 @@
     "modello": "claude-opus",
     "istruzioni": "revisione-1",
     "data": "2026-11-09"
+   }
+  },
+  {
+   "cig": "B711AF0074",
+   "gruppo": "G1",
+   "strato_proposto": "S5",
+   "importo": 15000000.0,
+   "C1_fonte_primaria": false,
+   "C2_regole": true,
+   "C2_nota": "ok",
+   "C3_giurisdizione": true,
+   "C3_nota": "non applicabile",
+   "C4_seconda_lettura": "concorde",
+   "C4_nota": "",
+   "entra_nei_totali": false,
+   "provider_proposto": "",
+   "lettura": {
+    "cig": "B711AF0074",
+    "ict": "s",
+    "e_cloud": "n",
+    "provider_prodotto": "Cisco Systems",
+    "giurisdizione": "EXTRA-UE",
+    "certezza": "alta",
+    "evidenza": "FORNITURA APPARATI DI CONNETTIVITÀ CISCO (CPV 32420000-3 apparecchiature di rete): hardware di rete, non servizio cloud; prodotto Cisco (USA), Italtel è integratore",
+    "sha256": "",
+    "modello": "claude-opus",
+    "istruzioni": "revisione-1",
+    "data": "2026-11-18"
    }
   },
   {

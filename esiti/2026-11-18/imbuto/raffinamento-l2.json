@@ -1,0 +1,58 @@
+{
+ "data": "2026-11-18",
+ "imbuto": "0.3.4",
+ "ict_csv_sha256": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+ "regola": "L2: RX_PERIF (stampanti, consumabili, cablaggio) e non RX_CLOUD -> fuori dalla misura cloud (decisione di Fabio 18/11)",
+ "rx_perif": "stampant|multifunzion|fotocopiat|\\btoner|cartucc|consumabil|materiale\\s+di\\s+consumo|cablaggi|rete\\s+dati\\s+e\\s+fonia|plotter",
+ "rx_cloud": "cloud|saas|iaas|paas|hosting|data\\s*cent|datacent|piattaforma\\s+(?:web|online)|in\\s+remoto|\\bpsn\\b",
+ "per_gruppo": [
+  {
+   "livello": "L2",
+   "gruppo": "G1",
+   "cig": 9,
+   "euro": 166897353
+  },
+  {
+   "livello": "L2",
+   "gruppo": "G3",
+   "cig": 1013,
+   "euro": 239287710
+  },
+  {
+   "livello": "L2",
+   "gruppo": "G4",
+   "cig": 5958,
+   "euro": 63986784
+  },
+  {
+   "livello": "S6",
+   "gruppo": "G1",
+   "cig": 227,
+   "euro": 8531304789
+  },
+  {
+   "livello": "S6",
+   "gruppo": "G2",
+   "cig": 867,
+   "euro": 4030846327
+  },
+  {
+   "livello": "S6",
+   "gruppo": "G3",
+   "cig": 13437,
+   "euro": 3158942097
+  },
+  {
+   "livello": "S6",
+   "gruppo": "G4",
+   "cig": 44875,
+   "euro": 648617287
+  }
+ ],
+ "campione": {
+  "n": 40,
+  "giudizi": {
+   "giusto": 40
+  }
+ }
+}
