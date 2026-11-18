@@ -16,9 +16,17 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - Uccisi 10 vecchi cicli `while pgrep -f ...` di inizio novembre che si tenevano vivi a vicenda (nessun lavoro perso).
 - **#73 ripasso L4 rilanciato** (si era fermato il 9/11 22:05 a 4.174 enti su ~4.790): stesso comando della tabella sotto, log `lavoro/residuo-s6/l4-ripasso.log`.
 
+**Pomeriggio 18/11 («riattiva tutto e sistema tutto», Fabio):**
+- **Cron riattivati tutti** (copie in `lavoro/crontab-prima-20261118.txt` e `-dopo-`), dopo una prova a mano di ognuno (sync con push, guardiano, venv, ollama, ooni).
+- Rendiconto imbuto 0.17 completato sulla 0.3.4: tetti (12 CIG da S1 a S6: 8 tetti SPC e 4 incerti ASI), licenze (`imbuto_licenze.py` con `IMBUTO_VERSIONE`, cloud 159,9 M€), copertura del residuo S6 (fuori da ingresso e via 6 solo 3 G1 e 56 G3).
+- **P1 su tutto S6** (`tools/verifiche/imbuto_p1_misura.py`): 267 CIG / 0,494 mld, 8 ICT veri su 40 nel campione; **P1r** (CPV 33/38/73) 189 / 0,474, 2 su 26. Proposta P1r in #71 (etichetta decisione-fabio).
+- **Via 6: 32 G1 nuovi in coda** (g1-099..g1-114, `imbuto_lotti.py --aggiungi-g1`): li prende il guardiano via 6 (cron */30). A fine giro: `verifica_imbuto.py`, `prepara_nuove.py`, `giro_revisione_guardiano.sh`, poi § 4.3.1-4.3.2.
+- **#73:** il ripasso L4 di mezzogiorno ha finito subito rinviando gli enti con robots.txt restrittivo (orario 21-7): rilancio programmato stasera alle 21:05 (processo `sleep` di mxmap.it). L4-js rilanciato (fase 2 Difesa nelle ore 1-5).
+- **#74:** rendiconto `report/metodo/bdncp-e-l190-inventario.md` in scrittura dagli esiti del 10/11.
+
 **Prossimi passi (senza decisioni di Fabio):** rifare sulla 0.3.4 § 2.2-2.5 (tetti per CIG), § 4.5 (licenze), § 4.11 (residuo S6 con documenti); mettere in coda via 6 i 29 G1 nuovi della 0.3.4; misura P1 su tutto S6 (job pesante, uno alla volta); #74 BDNCP/L.190 (esiti del 10/11 da scrivere in pagina); #73 a fine ripasso `residuo_s6_riepilogo.py` + `elenco_mancanti.py`; L4-js fase 2 Difesa (ore 1-5).
 
-**Decisioni attese da Fabio (nuove):** riattivazione dei cron dopo la migrazione; P1 (#71); coda dei 50 discordi via 6 (#66); pubblicazione del rendiconto imbuto 0.17. Le altre restano quelle elencate sotto (9/11).
+**Decisioni attese da Fabio (nuove):** P1 o P1r (#71); coda dei 50 discordi via 6 (#66); pubblicazione del rendiconto imbuto 0.17. Le altre restano quelle elencate sotto (9/11).
 
 **Come è fatto questo file:** 1) *Punto di ripresa* (questa sezione, breve); 2) sezioni per ticket, dalla più recente; 3) *Riferimenti* (dove sta cosa, vincoli); 4) *Storico* (sezioni superate fino al 4/11, conservate senza tagli). Le righe superate restano nello storico, non si cancellano.
 
