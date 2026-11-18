@@ -22,7 +22,9 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 - **P1 su tutto S6** (`tools/verifiche/imbuto_p1_misura.py`): 267 CIG / 0,494 mld, 8 ICT veri su 40 nel campione; **P1r** (CPV 33/38/73) 189 / 0,474, 2 su 26. Proposta P1r in #71 (etichetta decisione-fabio).
 - **Via 6: 32 G1 nuovi in coda** (g1-099..g1-114, `imbuto_lotti.py --aggiungi-g1`): li prende il guardiano via 6 (cron */30). A fine giro: `verifica_imbuto.py`, `prepara_nuove.py`, `giro_revisione_guardiano.sh`, poi § 4.3.1-4.3.2.
 - **#73:** il ripasso L4 di mezzogiorno ha finito subito rinviando gli enti con robots.txt restrittivo (orario 21-7): rilancio programmato stasera alle 21:05 (processo `sleep` di mxmap.it). L4-js rilanciato (fase 2 Difesa nelle ore 1-5).
-- **#74:** rendiconto `report/metodo/bdncp-e-l190-inventario.md` in scrittura dagli esiti del 10/11.
+- **#74:** rendiconto `report/metodo/bdncp-e-l190-inventario.md` 0.2 (f252123e). Le due verifiche contavano i padri AQ S0 come ICT (661.633 invece di 443.331 CIG): corrette e rieseguite sull'imbuto 0.3.4 (`esiti/2026-11-18/bdncp`, `l190`). Aperti: somme SAL forse progressive, somme del quadro economico non calcolate.
+- `sync_server.sh` ora fa `pull --rebase --autostash`: prima falliva se un job scriveva durante il sync.
+- Via 6 G1 nuovi: partiti dal guardiano alle 16:30; g1-107 da ripetere (permesso di scrittura negato, il guardiano lo riprova). Catena in attesa: a fine giro `verifica_imbuto.py`, `prepara_nuove.py`, `giro_revisione_guardiano.sh` (log `lavoro/imbuto-revisione/log/catena-g1-nuovi.log`); poi aggiornare il rendiconto § 4.3.1-4.3.2.
 
 **Prossimi passi (senza decisioni di Fabio):** rifare sulla 0.3.4 § 2.2-2.5 (tetti per CIG), § 4.5 (licenze), § 4.11 (residuo S6 con documenti); mettere in coda via 6 i 29 G1 nuovi della 0.3.4; misura P1 su tutto S6 (job pesante, uno alla volta); #74 BDNCP/L.190 (esiti del 10/11 da scrivere in pagina); #73 a fine ripasso `residuo_s6_riepilogo.py` + `elenco_mancanti.py`; L4-js fase 2 Difesa (ore 1-5).
 
