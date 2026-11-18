@@ -1,0 +1,782 @@
+Unità Tecnica Antartide
+Servizio Logistica
+
+
+
+
+                                    Procedura di gara U-Buy G02398
+
+
+                                           SPECIFICHE TECNICHE
+                                                  Lotto 1
+
+    Servizi di connessione satellitare a banda larga per le Stazioni
+ antartiche del Programma Nazionale di Ricerche in Antartide (PNRA)
+
+
+
+                                                      Edizione febbraio 2026
+
+
+
+
+  Unità Tecnica Antartide                           Centro Ricerche Casaccia                         Tel. +39-06-30486303
+  UTA-LOG                                              Via Anguillarese 301                          rocco.ascione@enea.it
+                                                00123 Santa Maria di Galeria (Roma)                  enea@cert.enea.it
+
+                            Sede Legale - Lungotevere Thaon di Revel, 76 - 00196 Roma - Italia – Tel. +39-06-36271
+                                 Partita IVA 00985801000 - Codice Fiscale 01320740580 - www.enea.it
+Sommario
+PREMESSE .................................................................................................................................................................. 4
+1    OGGETTO DELL’APPALTO .................................................................................................................................... 5
+2    GENERALITÀ SULLA STAZIONE “CONCORDIA” (DC) ............................................................................................. 6
+  2.1    Hardware dedicato al sistema Starlink ............................................................................................................... 6
+  2.2    Hardware dedicato al sistema VSAT ................................................................................................................... 6
+3    GENERALITÀ SULLA STAZIONE “MARIO ZUCCHELLI” (MZS) ................................................................................. 7
+  3.1    Hardware dedicato al sistema Starlink ............................................................................................................... 7
+  3.2    Hardware dedicato al sistema di emergenza...................................................................................................... 7
+  3.3    Hardware GSM.................................................................................................................................................... 8
+4    OBBLIGHI DELLE PARTI ........................................................................................................................................ 8
+5    THROUGHPUT ..................................................................................................................................................... 8
+  5.1    Throughput (per la Stazione DC) ......................................................................................................................... 8
+  5.2    Variazione del periodo (per la Stazione DC) ........................................................................................................ 9
+  5.3    Affidabilità del servizio ed eventuali interruzioni (per la Stazione DC) ............................................................... 9
+6    TUNNELLING (per la Stazione DC) ....................................................................................................................... 9
+7    GSM (per le Stazioni DC ed MZS) ......................................................................................................................... 9
+8    MONITORING (DC) ............................................................................................................................................. 9
+  8.1    Descrizione del sistema di monitoraggio per la VSat ........................................................................................ 10
+  8.2    Monitoraggio della connettività IP ................................................................................................................... 11
+9    SUBNET ..............................................................................................................................................................11
+  9.1    IP Richiesti - DC ................................................................................................................................................. 11
+  9.2    IP Richiesti - MZS ............................................................................................................................................... 11
+  9.3    Filtraggio del traffico (DC)................................................................................................................................. 11
+10     HELP DESK (DC) ..............................................................................................................................................12
+11     SECURITY (DC) ................................................................................................................................................12
+  11.1 Firewall per il traffico dati Vsat ......................................................................................................................... 12
+  11.2 Protezione dispositivi VSAT ............................................................................................................................... 12
+12     HARDWARE DA FORNIRE UNA TANTUM ........................................................................................................13
+  12.1 Hardware dedicato al sistema Starlink per DC ed MZS ..................................................................................... 13
+  12.2 Hardware dedicato al sistema Certus di emergenza per MZS .......................................................................... 13
+  12.3 Hardware GSM per DC ...................................................................................................................................... 13
+13     PENALI ...........................................................................................................................................................13
+  13.1 Penale per ridotta capacità del canale ............................................................................................................. 13
+  13.2 Penale per mancato servizio ............................................................................................................................. 13
+  13.3 Penale per ritardo o mancata verifica .............................................................................................................. 14
+  13.4 Penale per interruzione del servizio di Help Desk.............................................................................................. 14
+  13.5 Penale per ritardo o mancata installazione dell’hardware richiesto ................................................................ 14
+  13.6 Penale per ritardo o mancata installazione del software richiesto................................................................... 14
+14     GARANZIE SUL FAULT RECOVERY ...................................................................................................................14
+15     UPGRADE TECNOLOGICO ...............................................................................................................................15
+16     DURATA DELL’APPALTO E DIRITTO DI RECESSO ..............................................................................................15
+17     RESPONSABILE DI PROGETTO E DIRETTORE DELL’ESECUZIONE DEL CONTRATTO ...........................................16
+18     RISERVATEZZA ................................................................................................................................................16
+
+   SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                                                                                  2
+   satellitare a banda larga per le Stazioni antartiche del Programma
+   Nazionale di Ricerche in Antartide (PNRA)
+19        REVISIONE PREZZI ..........................................................................................................................................16
+20        FATTURAZIONE ..............................................................................................................................................16
+21        INDICAZIONI PER LA FORMULAZIONE DELL’OFFERTA ECONOMICA ................................................................17
+
+
+
+
+     SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                                                                        3
+     satellitare a banda larga per le Stazioni antartiche del Programma
+     Nazionale di Ricerche in Antartide (PNRA)
+PREMESSE
+L'ENEA, in ottemperanza al Decreto del MUR del 20 luglio 2022 n. 170, ha il compito dell’attuazione del Programma
+Nazionale di Ricerche in Antartide (PNRA) in cooperazione con il CNR e OGS secondo modalità e termini stabiliti
+da un’apposita convenzione sottoscritta dai tre soggetti attuatori.
+In tale ambito, uno dei compiti affidati ad ENEA è quello di garantire la continuità delle telecomunicazioni da e per
+le Stazioni italiane in Antartide che sono fondamentali per la ricerca scientifica, per la sicurezza del personale in
+spedizione e per tutte le operazioni logistiche che si svolgono nell’intero continente antartico.
+Fin dalle prime spedizioni, tutti i servizi di telecomunicazione utilizzati in Antartide si basavano sull’utilizzo di
+connessioni satellitari, come Iridium e Inmarsat, che, con il passare degli anni, sono cominciati a risultare troppo
+onerosi e non più adeguati a soddisfare le esigenze di connettività dati e voce, se confrontati con le emergenti
+tecnologie. Pertanto, a partire dalla XXIV spedizione (2009/2010) e facendo seguito a una forte richiesta da parte
+di tutta la comunità scientifica è stato avviato un processo di ammodernamento dell’intero comparto di
+telecomunicazioni di entrambe le Stazioni antartiche (“Mario Zucchelli” -MZS- e “Concordia” -DC-), mediante la
+progettazione e la realizzazione di una piattaforma basata su tecnologia “VSAT” (Very Small Aperture Terminal),
+per ogni Stazione. La nuova tecnologia ha consentito di disporre di una banda dati molto più ampia (banda larga),
+con costi nettamente inferiori. Ancora oggi i sistemi Inmarsat e Iridium sono attivi in entrambe le Stazioni italiane
+in Antartide e restano un valido sistema per la comunicazione voce e per l’invio dati in caso d’emergenza.
+Con lo scopo di efficientare i servizi resi sia al personale scientifico che logistico, ENEA-UTA da sempre segue
+l’evoluzione delle tecnologie per la connettività satellitari in un continuo processo di ammodernamento delle
+Stazioni del PNRA. In questa progressione tecnologica, nel corso della XXXIX Spedizione è stato sperimentato il
+servizio “Starlink” che riesce a offrire un buon servizio nelle zone antartiche dove sono ubicate le Basi italiane.
+I risultati ottenuti a DC e a MZS dimostrano la praticabilità e l’affidabilità del servizio Starlink con prestazioni
+ottimali in termini di latenza, banda e affidabilità sia per la connettività dedicata alla scienza che a quella per le
+comunicazioni personali.
+Al fine di proseguire l’indispensabile fornitura del servizio di connessione satellitare a banda larga, nonché il
+servizio basato su terminali satellitari legati alle costellazioni Inmarsat e Iridium, in continuità con il contratto in
+essere che è prossimo alla scadenza, è stata indetta la presente gara d’appalto, suddivisa in n.2 lotti:
+     1) Lotto 1: Servizi di connessione satellitare permanente a banda larga e servizio GSM per le Stazioni
+          antartiche del PNRA Concordia e Mario Zucchelli.
+     2) Lotto 2: Gestione del traffico dei terminali satellitari Inmarsat e Iridium in uso al PNRA.
+La suddivisione in due lotti e l’istituzione di contratti di ridotta durata, consente ad ENEA-UTA di poter seguire le
+evoluzioni tecnologiche e offrire a entrambe le Stazioni, una connettività dati affidabile e in linea con i moderni
+standard.
+
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            4
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+   1     OGGETTO DELL’APPALTO
+Oggetto del presente documento è definire le Specifiche Tecniche essenziali minime relative al Lotto 1 – Servizi
+di connessione satellitare permanente a banda larga per le Stazioni antartiche del PNRA, “Concordia” (di seguito
+DC) e “Mario Zucchelli Station” (di seguito MZS).
+Per entrambe le Basi è stato stabilito che il sistema di comunicazione a banda larga primario sia affidato al
+servizio Starlink, mentre il servizio secondario, da usare per esigenze specifiche o quando il primario non è
+disponibile venga affidato al sistema VSAT.
+Di seguito sono riassunte le specifiche dei servizi richiesti, che verranno dettagliati meglio nel proseguo del
+documento:
+
+    1.   STARLINK (MZS e DC). Servizio di connettività tramite costellazione STARLINK con 5TB/mese di traffico
+         estate/inverno incluso in priorità (per MZS inverno 500GB/mese) al termine del quale il servizio non si
+         deve interrompere ma passare in regime di “best effort”.
+             a. Subnet. Per entrambe le stazioni è richiesta la fornitura di almeno un indirizzo IP pubblico statico
+                 per connettere i server dedicati a determinati Servizi Informatici della Stazione direttamente ad
+                 Internet.
+
+    2. VSAT (DC). Servizio con le seguenti caratteristiche (per la sola Stazione DC):
+          a. Throughput:
+              Per la Stazione italo-francese Concordia, che è occupata da massimo 70 persone durante i
+              quattro mesi di estate antartica e dalla squadra cosiddetta “winter-over”, composta in genere da
+              13 persone, durante gli otto mesi dell’inverno antartico, si propone di adottare una banda
+              bidirezionale e simmetrica di 1024 Kbps.
+          b. Tunneling. è richiesto l’accesso al “backbone Internet” in Italia, che dovrà essere raggiunto
+              direttamente dal teleporto d’afferenza (TA). Le caratteristiche di questo servizio, in termini di
+              banda e latenza dovranno essere tali da garantire il corretto sfruttamento del canale satellitare.
+          c. Subnet. è richiesta la fornitura di indirizzi IP pubblici statici per connettere i server dedicati a
+              determinati Servizi Informatici della Stazione, direttamente ad Internet e di una subnet con
+              indirizzi IP pubblici statici, protetta dal “firewall” della Stazione.
+
+    3.   MONITORING (DC). È richiesto il servizio di monitoraggio costante delle caratteristiche del link satellitare,
+         VSAT, STARLINK e del “tunneling” in modo tale che, qualora ci fossero dei problemi di connettività, si
+         possa rapidamente identificare l’origine del problema e intervenire sulla tratta e/o sull’apparato
+         danneggiato. Il sistema di monitoraggio dovrà essere raggiungibile sia da indirizzi IP interni alla rete del
+         provider che da una classe di indirizzi esterni, che verranno comunicati da ENEA in un secondo momento.
+
+    4. GSM (MZS e DC). L’attivazione di questo servizio è determinata dal fatto che molte applicazioni, come la
+       posta istituzionale di alcuni enti di ricerca o l’home banking di diverse banche italiane prevedono un
+       sistema di autenticazione con doppia chiave, di cui una è l’invio di messaggi SMS (Short Message Service).
+       Detto servizio dovrà essere implementato sulla piattaforma VSAT per DC, con un proprio canale dati per
+       evitare il consumo di capacità dati destinata ai servizi strategici/d’emergenza, mentre per MZS dovrà
+       essere implementato sul sistema Starlink.
+
+    5.   HELP DESK (DC) È richiesta l’assistenza telefonica in lingua italiana, garantita nell’arco delle 24 ore
+         giornaliere e per 365 giorni all’anno. È richiesto di indicare un numero telefonico dedicato alle Stazioni su
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                          5
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+            cui sia possibile, oltre che ricevere e fare telefonate, scambiare, via applicazioni dedicate, anche
+            materiale utile all’assistenza come foto e file.
+
+      6.    SECURITY (DC). È richiesta la protezione degli apparati che costituiscono il sistema VSAT delle Stazioni
+            in modo che siano inibite alcune porte di accesso e che siano raggiungibili solamente da indirizzi IP ben
+            identificati e comunicati da ENEA al provider. In aggiunta, si richiede di proteggere il traffico in ingresso
+            verso la Stazione antartica installando un “firewall” (FW) in ingresso al “tunneling” in Italia o nel teleporto
+            d’afferenza. La configurazione del FW sarà eseguita solamente dal personale accreditato da ENEA e
+            dovrà consentire il pieno controllo di tutto il traffico Internet in ingresso alla Stazione.
+
+      7.    HARDWARE STARLINK (UNA TANTUM). E’ richiesta la fornitura di hardware per l’implementazione di
+            antenna di backup per Starlink per entrambe le stazioni più l’hardware per l’implementazione della
+            connettività GSM anche nella Stazione Concordia.
+
+
+   2 GENERALITÀ SULLA STAZIONE “CONCORDIA” (DC)
+La Stazione italo-francese “Concordia” (DC) si trova a 3233 m s.l.m. alle coordinate 75° 06’ S - 123° 20’ E, da cui
+sono visibili i segnali provenienti dai satelliti geostazionari in orbita sulla regione del Pacifico.
+Attualmente il sito è connesso alla rete Internet sia mediante la piattaforma VSAT che attraverso un terminale
+Starlink. Il collegamento VSAT è bidirezionale e simmetrico realizzato tramite il satellite geostazionario “IS-19”
+posto alla longitudine di 166° E. Il sistema di protezione dagli agenti atmosferici dei dispositivi VSAT è stato
+progettato per garantire il puntamento dei satelliti geostazionari posti alla longitudine di 166° E (tolleranza +/- 2°).
+Di seguito i dispositivi HW presenti presso la base Concordia.
+
+2.1        Hardware dedicato al sistema Starlink
+Il dispositivo hardware relativo al sistema Starlink è contenuto all’interno di un’idonea struttura termicamente
+isolante. Il sistema è composto da:
+      n.1 Starlink Flat High Performance (o Kit Performance – Gen2);
+      n.1 cavo da 25m proprietario;
+      n.1 router Starlink;
+      n.1 alimentatore Starlink;
+      n.1 interfaccia Ethernet Adapter per Starlink.
+
+2.2        Hardware dedicato al sistema VSAT
+Il sistema hardware per la connessione satellitare di DC è contenuto all’interno di un’idonea struttura metallica
+(shelter) a forma di parallelepipedo avente un lato trasparente alla radiazione elettromagnetica. Detta finestra è
+composta da una parete esterna in policarbonato alveolare da 50 mm e da una parete interna in pannelli di
+aerogel, per uno spessore totale di 90 mm. Per aumentare la resistenza meccanica della finestra è stato inserito
+internamente e parallelamente al pavimento (a metà della parete in aerogel) un morale in legno di sezione
+rettangolare (70 x 50 mm) della lunghezza di 5 m. Lo shelter garantisce ai dispositivi VSAT ivi contenuti, una
+temperatura di funzionamento che ricade nei range operativi definiti dal costruttore.
+Di seguito sono elencate le apparecchiature VSAT installate a DC:
+       n.1 Antenna Prodelin serie 1385-415 3.8m C-Band;
+       n.1 illuminatore in polarizzazione lineare che, su richiesta, può montare un polarizzatore circolare;
+       n.2 modem Comtech CDM-625A, ciascuno avente:
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                               6
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+                o ACM VersaFEC-2 16-ARY;
+                o Header Compression;
+                o Payload Compression;
+                o Advanced Quality of Service;
+                o FW Base Modem: F0020731G_V142;
+                o FW Packet Processor: F0000342T_V149;
+          n.2 LNB Norsat 3020XN,
+          n.2 Outdoor Amplifier Block Up Converter (BUC) Comtech LPOD PS-2, con le seguenti caratteristiche:
+                o Power: 125W (P1dB);
+                o FW: F0000078U_V157;
+          n.1 modulo Comtech CRS-170A,
+          n.2 switch a guida d’onda
+          n.6 metri di guida d’onda tra l’uscita del BUC e la porta TX dell’illuminatore.
+
+
+
+      3 GENERALITÀ SULLA STAZIONE “MARIO ZUCCHELLI” (MZS)
+La Stazione antartica “Mario Zucchelli” (MZS) si trova a 10 m s.l.m. alle coordinate 74° 42’ S - 164° 07’ E, da cui sono
+visibili i segnali provenienti da satelliti geostazionari in orbita sulla regione del Pacifico.
+Attualmente il sito è connesso alla rete Internet attraverso un terminale Starlink. Quest’anno è stato appurato che
+il precedente collegamento satellitare bidirezionale simmetrico realizzato tramite il satellite geostazionario NSS-
+9, posto alla longitudine di 177° O, non è più in grado di offrire la capacità dati richiesta. Per lunghi periodi
+giornalieri, il collegamento dati è rimasto molto al di sotto di quello contrattuale rendendo spesso impossibile
+connettersi alla rete globale. Durante la 41° Campagna antartica, consigliati anche dal precedente provider, si è
+tentato il puntamento verso il satellite IS-18, ma la presenza del monte Melbourne lungo la direzione MZS/IS-18 e
+la presenza di numerose fonti di disturbo in banda C sulla sommità di questo monte hanno impedito la visibilità
+del satellite. Non avendo avuto il tempo per testare una valida alternativa al satellite NSS-9, la Stazione di MZS,
+per questo contratto, preferisce fare uso del sistema Iridium Certus per gestire le situazioni di fault del sistema
+principale di connettività dati affidato a Starlink. Il sistema Certus si basa su di una costellazione costituita da 66
+satelliti in orbita LEO (Low-Earth Orbit) che garantisce una copertura globale del 100% e una bassa latenza.
+Di seguito i dispositivi HW presenti presso la base MZS.
+
+3.1       Hardware dedicato al sistema Starlink
+Il dispositivo hardware relativo al sistema Starlink è contenuto all’interno di un radome. Il sistema è composto da:
+       n.1 Starlink Flat High Performance (o Kit Performance – Gen2);
+       n.1 cavo da 25m proprietario;
+       n.1 router Starlink;
+       n.1 alimentatore Starlink;
+       n.1 interfaccia Ethernet Adapter per Starlink.
+
+3.2       Hardware dedicato al sistema di emergenza
+Nel sito di MZS è presente un sistema Certus, marca Thales, modello VesseLINK costituito da:
+     N.1 Antenna ADU (Above Deck Unit);
+     N.1 BDU (Below Deck Unit);
+     15 m di cavo coassiale per il collegamento tra BDU e ADU;
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            7
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+          N.1 alimentatore 24V/6A.
+
+3.3       Hardware GSM
+Attualmente l’hardware elencato di seguito è stato fatto rientrare in Italia, con lo scopo di riconfigurare i
+dispositivi per il servizio GSM, in funzione delle esigenze del nuovo Operatore Economico. Al termine di questa
+operazione verranno riportati a MZS, per ripristinare il servizio.
+Dispositivi impiegati:
+     server NCA-1513E
+     server Supermicro E50-40
+     antenna GSM IP access nano3G 239A
+     switch CISCO
+     aggregatore Peplink B one
+
+
+
+      4 OBBLIGHI DELLE PARTI
+L’ENEA garantisce la capacità da parte dei dispositivi satellitari presenti nelle Stazioni antartiche del PNRA di
+gestire tutte le peculiarità tecniche legate alle citate velocità di cifra, sia per quanto riguarda la ricezione che la
+trasmissione del segnale satellitare.
+L’OE dovrà:
+     garantire che il TA faccia uso degli stessi modem descritti nei precedenti paragrafi 2 e 3 e corredati dei
+         medesimi firmware e optional al fine di assicurare la corretta erogazione del servizio;
+     sottoporre un’offerta facendo riferimento esclusivamente ai satelliti dichiarati nei paragrafi 2 e 3. Dovrà
+         fornire per ciascuna Stazione antartica una banda satellitare completamente dedicata alle esigenze di
+         servizio oggetto del contratto e non potrà pertanto essere condivisa con altri utenti satellitari e/o
+         terrestri. Dovrà essere garantito un canale satellitare con capacità dati bidirezionali e simmetrici come
+         definito nel successivo paragrafo 5;
+     dovrà essere garantito il Tunneling su rete pubblica dal TA al primo punto d’accesso al backbone Internet
+         in Italia. Come descritto nel paragrafo 2, nel TA dovrà essere presente un modem Comtech CDM-625A;
+     dovrà garantire il corretto funzionamento del servizio GSM mediante l’uso dello hardware riportato al
+         paragrafo 3.3. Qualora decidesse di adoperare differenti dispositivi dovrà dimostrare la loro necessità o
+         il loro vantaggio economico. Per la sola Stazione di DC potrà scegliere se adoperare un hardware identico
+         a quello di MZS o differente.
+
+
+
+   5 THROUGHPUT
+Si richiede un canale dati con una capacità minima garantita, avente dimensioni definite di seguito. Alla
+definizione della capacità dati non dovranno concorrere i dati necessari per il corretto funzionamento del link
+satellitare.
+
+5.1       Throughput (per la Stazione DC)
+Per la Stazione DC, il servizio di connettività dati a banda larga dovrà garantire un throughput bidirezionale e
+simmetrico in modalità SCPC (Single Channel Per Carrier) di 1024/1024 Kbps sia durante la Campagna invernale,
+per il periodo indicativo compreso tra il 10 febbraio e il 14 ottobre che durante la Campagna estiva, per il periodo
+indicativo compreso tra il 15 ottobre e il 14 febbraio.
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                           8
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+5.2    Variazione del periodo (per la Stazione DC)
+Poiché le date di inizio e fine della campagna estiva e invernale di entrambe le Stazioni sono variabili in funzione
+delle esigenze delle Spedizioni del PNRA, il Responsabile di Progetto (RUP) provvederà a comunicare all’OE le date
+d’inizio e di fine della Campagna, con un preavviso non inferiore a 10 giorni solari.
+
+5.3    Affidabilità del servizio ed eventuali interruzioni (per la Stazione DC)
+L’affidabilità del servizio offerto alla Stazione DC non dovrà risultare inferiore al 99% su base annua,
+corrispondente a un numero massimo complessivo di ore di disservizio ammissibile pari a 88, con un numero
+massimo di ore consecutive non superiore a 24.
+I periodi di malfunzionamento eccedenti un totale di 88 ore, anche non consecutive, non verranno contabilizzati
+come servizio effettuato. Sarà cura del RUP ENEA inviare entro 60 giorni dalla data del disservizio, una
+comunicazione scritta che documenti i giorni di mancato funzionamento.
+Sarà cura dell’OE avvisare con un anticipo di almeno 30 giorni lavorativi il DEC ENEA, mediante posta elettronica,
+di eventuali interruzioni o limitazioni di servizio, prevedibili o programmate, lungo la tratta che va dal trasponder
+del satellite al backbone Internet italiano (ad esempio per interventi di manutenzione e/o sostituzione di
+dispositivi).
+Qualora le interruzioni o limitazioni del servizio fossero di natura accidentale, con durata superiore a 10 minuti,
+l’OE dovrà comunicare immediatamente al DEC ENEA, mediante posta elettronica, l’avvenuta manifestazione di
+dette circostanze e contestualmente adoperarsi per il ripristino del normale funzionamento del sistema.
+
+
+   6     TUNNELLING (per la Stazione DC)
+Sarà cura dell’OE predisporre tutte le necessarie azioni e gli accordi finalizzati a definire l’Anchoring all’altro capo
+del collegamento satellitare presso un Teleporto, affinché sia implementato il richiesto accesso al Tunneling e al
+backbone Internet in Italia.
+L’OE dovrà garantire l’affidabilità e la ridondanza del Tunneling scelto per la connessione dati dal TA verso l’Italia
+(e viceversa) e dovrà assicurare che il throughput del Tunneling offerto non risulti inferiore a quello necessario
+per garantire alla Stazione DC, la massima capacità dati richiesta durante la Campagna estiva
+Sarà cura dell’OE realizzare e garantire l’affidabilità del Tunnel su rete pubblica usato, per la connessione dati tra
+il TA e il backbone internet italiano. Sempre l’OE dovrà garantire che il throughput del Tunnel offerto risulti di
+dimensioni tali da garantire il corretto transito di tutti i protocolli noti, in special modo TCP, SSH, IP, ICMP, UDP,
+PPP, TELNET, SSH, FTP, http, SMTP, POP, IMAP, SNMP, DNS.
+
+
+   7     GSM (per le Stazioni DC ed MZS)
+Per entrambe le Stazioni dovrà essere garantito un servizio GSM di elevata qualità, privo d’interruzioni e
+funzionante almeno con i principali gestori di telefonia (TIM, Vodafone, 3Wind, Iliad).
+Qualora l’OE desiderasse fornire un HW diverso da quello di cui è dotata MZS, questo dovrà avere costi analoghi a
+quello già presente e caratteristiche analoghe o superiori.
+
+
+   8 MONITORING (DC)
+Sarà cura dell’OE, in accordo con ENEA, monitorare costantemente il link satellitare e il Tunnel mediante
+protocollo SNMP, con una cadenza minima di 120 secondi.
+
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            9
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+8.1    Descrizione del sistema di monitoraggio per la VSat
+Il sistema di monitoraggio dovrà essere formato da 3 (tre) Personal Computer (PC) fisici, dello stesso tipo e con
+installato e configurato il software riportato di seguito. In fig.1 viene riportato lo schema a blocchi semplificato
+delle connessioni richieste per ogni singola Stazione. Solo la macchina fisica PC3 potrà essere in comune con le
+due Stazioni.
+
+
+
+
+                         Lato provider                                               SAT     Lato Antartide
+                                                                       Lato TA
+                            (Italia)                                                          (DC o MZS)
+                                                    Tunnel
+              Internet                   PC3                      PC2        Modem         Modem    PC1
+
+
+
+
+                                                                 Fig.1
+Il PC3 dovrà essere connesso con la scheda di rete in corrispondenza dell’accesso al tunnel sullo switch/router
+del provider OE, in Italia; la scheda di rete di PC2 dovrà essere connessa, dopo l’uscita dal tunnel, sullo
+switch/router lato TA, mentre la scheda di rete del PC1 sarà connessa allo switch presente nel sito antartico (DC),
+sul quale risulterà connesso anche il modem Comtech CDM625A. I PC 1, 2 e 3 dovranno avere le seguenti
+caratteristiche tecniche minime:
+       - Montaggio a rack
+       - CPU i7 (o superiore)
+       - RAM 8GB (o superiore)
+       - HDD 512GB (o superiore)
+       - Sistema Operativo Windows 11 (o superiore)
+Per il monitoraggio tramite il protocollo SNMP, la OE provvederà all’acquisto dei PC 1, 2, 3 e dell’applicativo
+“Paessler PRTG”, nella versione più idonea per garantire la visualizzazione e il salvataggio almeno dei parametri
+riportati in tabella 1. Sui PC dovrà essere installato e correttamente configurato, l’applicativo iPerf (anche nella
+versione non licenziata) per la misura della banda e delle performance di rete. La OE, in accordo con ENEA, potrà
+istallare ulteriori applicativi per il monitoraggio della rete e dei dispositivi.
+
+                                               Tabella 1: Parametri da monitorare
+                 Dispositivo       Parametri
+                 CDM625A           SNR, ping, temperatura, uptime, throughput, online
+                 LPOD              Pout, ping, uptime, temperatura, online
+                 Tunnel            throughput (letto sulla porta in ingresso e in uscita al tunnel)
+Essendo i dispositivi del sistema VSAT ridondati, l’OE dovrà provvedere a monitorare, tramite l’applicativo
+Paessler PRTG, anche i dispositivi della ridondanza (modem, LPOD) che non contribuiscono all’invio e alla
+recezione del dato (offline).
+L’OE dovrà garantire al personale ENEA libero accesso ai PC 1, 2 e 3 e garantire la possibilità d’installare applicativi
+e dati e/o di rimuovere programmi/dati. Se necessario, l’OE dovrà supportare l’ENEA per il ripristino del corretto
+funzionamento dei PC senza oneri aggiuntivi.
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            10
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+L’OE dovrà installare e configurare l’applicativo “Paessler PRTG” sui PC 1 e 3. Qualora l’ENEA dovesse decidere di
+aggiungere/togliere dei parametri, l’OE dovrà provvedere a eseguire l’azione richiesta entro 7 (sette) giorni
+lavorativi, senza oneri aggiuntivi. Tutti i parametri acquisiti dall’applicativo dovranno essere memorizzati sul PC
+che li ha ottenuti, per un tempo non inferiore a 365 giorni e resi disponibili per una rapida consultazione da parte
+di ENEA.
+L’OE dovrà provvedere all’installazione dei sistemi di monitoraggio e dei relativi PC, entro 5 giorni lavorativi dalla
+data di attivazione del servizio.
+Il Sistema di monitoraggio dovrà avere accesso in lettura alle public SNMP dei dispositivi satellitari interessati alla
+tratta satellitare, e agli apparati di rete specifici per la connessione.
+I sistemi PRTG devono poter accedere in lettura al modem lato teleporto, e, se possibile, al router dedicato alla
+connessione sempre nel teleporto.
+La OE dovrà garantire l’accesso al sistema di monitoraggio PRTG al personale ENEA indicato dal RUP tramite
+account, al fine di visualizzare in qualsiasi momento i parametri monitorati.
+Per motivi di sicurezza, gli account del sistema di monitoraggio verranno comunicati alle persone indicate dal
+RUP all’OE mediante e-mail. L’ENEA potrà scaricare i log su un proprio PC in qualsiasi momento. Entrambe le parti
+(ENEA e OE) reputeranno validi i dati contenuti nei log, al fine di quantizzare la durata di un’eventuale interruzione
+del servizio. L’applicativo che gestisce il protocollo SNMP dovrà provvedere, in modo automatico, a inviare una e-
+mail al DEC ogni qualvolta il servizio s’interrompa per più di 5 minuti consecutivi e, sempre con la medesima
+modalità, avvisare il DEC del suo ripristino.
+
+8.2    Monitoraggio della connettività IP
+Il canale dati offerto dall’OE risulterà costantemente monitorato dall’applicativo presente sui PC. Le verifiche
+potranno essere richieste in qualsiasi momento dall’ENEA e sia l’OE che il TA non potranno negarle o ritardarle per
+più di 24 ore.
+Il throughput letto dal sistema di monitoraggio tramite l’applicativo Paessler PRTG non dovrà risultare inferiore al
+100% della capacità di banda richiesta da contratto. I test potranno essere eseguiti in qualunque momento da
+ENEA.
+Per le verifiche di connettività, l’ENEA non riconoscerà nessun costo aggiuntivo.
+
+
+   9     SUBNET
+9.1    IP Richiesti - DC
+Per la Stazione DC dovrà essere fornita una subnet da 16 indirizzi IP pubblici statici, per connettere i server
+dedicati a opportuni servizi informatici sulla WAN e una seconda subnet da 16 indirizzi IP pubblici statici, ruotati
+sul gateway della prima, per consentire alle macchine protette dal Firewall di DC di essere visibili su internet.
+Per il sistema Starlink dovrà essere garantita la fornitura di almeno un indirizzo IP pubblico statico, per garantire
+la visibilità su Internet di opportuni dispositivi informatici.
+
+9.2    IP Richiesti - MZS
+Per il sistema Starlink dovrà essere garantita la fornitura di almeno un indirizzo IP pubblico statico, per garantire
+la visibilità su Internet di opportuni dispositivi informatici.
+
+9.3    Filtraggio del traffico (DC)
+Per la Stazione DC dovrà essere garantito, sull’intera tratta satellitare fino al backbone Internet italiano e
+viceversa, il transito di tutto il traffico IP senza esclusioni di porte e protocolli.
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                           11
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+Non deve essere inserito nessun tipo di QoS al traffico in transito in entrata o uscita.
+
+
+   10 HELP DESK (DC)
+L’OE dovrà fornire un servizio di Help Desk telefonico in lingua italiana per la risoluzione dei problemi tecnici che
+dovessero sopravvenire. Tale servizio deve essere garantito nell’arco delle 24 ore giornaliere e per 365 giorni
+all’anno (24/7).
+È richiesto inoltre che l’OE dedichi un numero telefonico a uso esclusivo di ENEA, mediante il quale inoltrare e
+ricevere le telefonate, scambiare applicazioni e/o documenti utili all’assistenza tecnica (foto, dati, applicativi,
+ecc.). Al numero dovrà rispondere sempre una persona 24/7 esperta di piattaforme VSAT e capace di fornire
+indicazioni preliminari per la risoluzione del problema comunicato telefonicamente. Qualora la soluzione del
+disservizio richiedesse l’intervento di altre persone/società, il tempo d’attesa massimo per l’inizio della
+discussione del problema segnalato, non dovrà superare i 60 minuti. Al fine di evitare inutili attese e/o controlli
+già eseguiti, l’ENEA s’impegna a chiamare solo dopo avere verificato i seguenti parametri (relativi al sistema
+VSAT):
+       -    Presenza alimentazione ai dispositivi VSAT;
+       -    Presenza connessione dati tra i dispositivi VSAT e quelli posti all’interno della LAN;
+       -    Presenza connessione dati tra i dispositivi VSAT e quelli della Sala Radio, tramite VLAN (solo DC);
+       -    Correttezza delle frequenze in banda L sui modem VSAT sia in Rx che in Tx;
+       -    LPOD in trasmissione;
+       -    Verifica puntamento antenna;
+       -    Switch a guida d’onda nella posizione corretta;
+       -    Lettura del valore del SNR del segnale ricevuto;
+       -    Lettura della potenza in uscita al LPOD.
+
+L’OE dovrà scorporare il valore del servizio di Help Desk dal canone dati mensile.
+
+
+   11 SECURITY (DC)
+11.1       Firewall per il traffico dati Vsat
+L’OE dovrà fornire in ingresso al Tunneling lato italiano una coppia di firewall (FW) Paloalto PA-1410, o con
+caratteristiche superiori, in configurazione HA, al fine di controllare il traffico dati verso la Stazione. I FW
+dovranno essere interamente dedicati a ENEA, la quale potrà configurarli e accenderli/spegnerli a sua
+insindacabile discrezione. L’OE dovrà fornire a ENEA due apparati FW funzionanti e configurati “senza regole”, in
+modo da consentire un funzionamento della struttura di rete simile a quella che avrebbe avuto in sua assenza;
+dovrà garantire l’accesso al personale ENEA per la configurazione di start up e/o modifiche successive; dovrà
+essere garantito un Contratto di Assistenza fulltime 24/7 da parte del distributore ufficiale Palo Alto in Italia. L’OE
+dovrà provvedere all’installazione del FW entro 5 giorni lavorativi dalla data di attivazione del servizio, all’ingresso
+del Tunnel lato italiano.
+Il FW dovrà essere correttamente connesso sia alla subnet dedicata alla Stazione antartica (DC), che alla rete
+globale. Se necessario, l’OE dovrà supportare ENEA per il ripristino del corretto funzionamento del FW.
+
+11.2 Protezione dispositivi VSAT
+L’OE dovrà garantire la protezione delle porte 23 e 80 dei dispositivi VSAT di DC consentendo il loro
+raggiungimento solo mediante VPN e credenziali comunicate al RUP mediante PEC.
+
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            12
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+   12 HARDWARE DA FORNIRE UNA TANTUM
+12.1 Hardware dedicato al sistema Starlink per DC ed MZS
+Dispositivi richiesti:
+      • n.2 Starlink Flat High Performance (o Kit Performance – Gen2);
+      • n.2 cavo da 25m proprietario;
+      • n.2 router Starlink;
+      • n.2 alimentatore Starlink;
+      • n.2 interfaccia Ethernet Adapter per Starlink.
+
+12.2 Hardware dedicato al sistema Certus di emergenza per MZS
+Dispositivi richiesti (equivalenti o superiori)
+      • N.1 Antenna ADU (Above Deck Unit);
+      • N.1 BDU (Below Deck Unit);
+      • N. 2 15 m di cavo coassiale per il collegamento tra BDU e ADU;
+      • N.1 alimentatore 24V/6A.
+
+12.3 Hardware GSM per DC
+Dispositivi richiesti (equivalenti o superiori):
+      • N.1 server NCA-1513E
+      • N.1 server Supermicro E50-40
+      • N.1 antenna GSM IP access nano3G 239A
+      • N.1 switch CISCO
+      • N.1 aggregatore Peplink B one
+
+
+   13 PENALI
+Oltre a quanto riportato all’art. 6 del contratto di appalto, il RUP si riserva la possibilità di applicare le penali
+descritte di seguito fino a un massimo del 10% del valore del contratto.
+
+13.1 Penale per ridotta capacità del canale
+La mancata osservanza della capacità del canale dati richiesta comporterà una penale pari al doppio del “costo al
+minuto” del servizio. Per determinare il valore in Euro che l’OE dovrà corrispondere all’ ENEA verrà adoperata la
+seguente formula:
+                                                                               €
+                                      𝑐𝑜𝑠𝑡𝑜 𝑖𝑛 € 𝑎𝑙 𝑚𝑖𝑛𝑢𝑡𝑜 =           ∙   ∙
+                                                                                   x2
+moltiplicato per gli intervalli temporali superiori a 5 minuti aventi throughput inferiore a quello contrattuale.
+
+13.2 Penale per mancato servizio
+Il mancato servizio comporterà una penale pari a € 1,6 per ogni minuto di disservizio, per un tempo di disservizio
+uguale o maggiore ad una ora. Per il calcolo degli intervalli di mancato servizio verranno considerati solo quelli
+presenti nel log del PRTG. Gli intervalli considerati dovranno avere una durata non inferiore a 5 minuti. Qualora
+dovessero essere presenti più di 10 interruzioni consecutive con intervalli inferiori a 5 minuti, dall’undicesimo in
+poi, gli intervalli inferiori a 5 minuti concorreranno comunque al calcolo del mancato servizio. Detti minuti
+verranno detratti dall'importo mensile dovuto all’OE secondo la formula:
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                         13
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+                                                                       𝑐𝑎𝑛𝑜𝑛𝑒 𝑚𝑒𝑛𝑠𝑖𝑙𝑒 𝑖𝑛 €
+                                    𝑝𝑒𝑛𝑎𝑙𝑒 𝑎𝑙 𝑚𝑖𝑛𝑢𝑡𝑜 𝑖𝑛 € = 1,15 ∙
+                                                                        30𝑔𝑔 ∙ 24ℎ ∙ 60𝑚𝑖𝑛
+
+13.3 Penale per ritardo o mancata verifica
+La mancata osservanza di quanto menzionato al punto 8.2 comporterà una penale pari a €100,00 per ogni ora di
+ritardo dei test. Il valore in euro dovuto all’ ENEA dall’OE verrà calcolato con la seguente formula:
+                                                            𝑀𝑇 − 60𝑚𝑖𝑛
+                                               𝐸 = 𝐶𝑀 ∙
+                                                         30𝑔𝑔 ∙ 24ℎ ∙ 60𝑚𝑖𝑛
+Dove:
+E = l’importo in € della penale
+CM = canone mensile
+ MT = minuti totali di attesa per i test richiesti, calcolati dal momento in cui ENEA invia tramite e-mail la richiesta
+e quando il NOC del teleporto risponde sempre con e-mail.
+Qualora E dovesse risultare negativo, non verrà applicata nessuna penale.
+
+13.4 Penale per interruzione del servizio di Help Desk
+La mancata osservanza di quanto previsto al paragrafo 8 comporterà l’applicazione di una penale pari al 10% del
+valore mensile del servizio di Help Desk quotato dall’OE, per ogni ora di ritardo nella risposta da parte del Help
+Desk. Per il calcolo del tempo trascorso farà fede la data e ora UTC prodotta dalla e-mail o telefonata inviata al
+servizio di Help Desk del NOC da parte della Stazione antartica e data e ora UTC fornita dalla e-mail del supporto
+tecnico dell’OE.
+
+13.5 Penale per ritardo o mancata installazione dell’hardware richiesto
+Per il monitoraggio, la mancata installazione nei tempi definiti dei dispositivi PC1, PC2, PC3 e FW comporterà una
+penale pari al 10% del valore mensile del solo canone dati, moltiplicato per i giorni di ritardo nel fornire e rendere
+operativi e connessi in rete i dispositivi hardware richiesti. Per il calcolo del tempo trascorso farà fede data e ora
+UTC prodotta dalla e-mail inviata al servizio di Help Desk dalla Stazione antartica e data e ora UTC fornita dalla e-
+mail del supporto tecnico dell’OE, dopo reale verifica del funzionamento dei dispositivi. La penale potrà essere
+applicata anche alla mancata installazione/funzionalità di un solo dispositivo.
+
+13.6 Penale per ritardo o mancata installazione del software richiesto
+Il ritardo o la mancata installazione del software definito al paragrafo 6 comporterà una penale pari al 10% del
+valore mensile del solo canone dati, moltiplicato per i giorni di ritardo nel rendere operativi e connessi in rete i
+dispositivi hardware richiesti. Per il calcolo del tempo trascorso farà fede l’ora e la data UTC prodotta dalla e-mail
+inviata al servizio di Help Desk dalla Stazione antartica e l’ora e la data UTC fornita dalla e-mail del supporto
+tecnico dell’OE, dopo reale verifica del funzionamento dei software. La penale potrà essere applicata anche alla
+mancata installazione o funzionalità di un solo software.
+
+
+
+   14 GARANZIE SUL FAULT RECOVERY
+Le garanzie previste per la conduzione e la manutenzione dei dispositivi installati presso la Stazione DC è
+assicurato dalla presenza di un sistema di ridondanza automatica e dal personale tecnico avente le competenze
+necessarie per intervenire sui dispositivi VSAT.
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                           14
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+   15 UPGRADE TECNOLOGICO
+Al momento della stesura delle seguenti specifiche tecniche, diversi progetti di connettività dati satellitare sono
+in fase di ampliamento, ultimazione o inizio. Alla OE si chiede di garantire la possibilità di sperimentare,
+nell’intervallo temporale e nei modi definiti da ENEA, la connessione con uno o più delle piattaforme elencate di
+seguito:
+       OneWeb
+       Project Kuiper
+       IRIS²
+L’ENEA si riserva la possibilità di utilizzare le migliorie tecnologiche che dovessero rendersi disponibili nel corso
+di validità del contratto. A tal fine, l’OE è tenuto a renderle note al RUP e l’ENEA si riserverà la possibilità di
+usufruirne nella modalità e nei tempi che verranno successivamente concordati tra le parti.
+L’ENEA si riserva la possibilità di richiedere all’OE l’attivazione dei servizi opzionali previsti sui modem lato ENEA
+e TA (Payload compression, Header compression, Quality of Service) e per questa richiesta la SA non potrà
+richiedere alcun indennizzo economico.
+
+
+   16 DURATA DELL’APPALTO E DIRITTO DI RECESSO
+Il contratto avrà la durata di 36 (trentasei) mesi a partire dalla data della sua sottoscrizione (o del verbale di avvio
+delle attività) e potrà essere riaffidato in caso di esercizio delle opzioni previste dagli artt. 120, comma 10 (proroga
+contrattuale) per un successivo periodo di 24 (ventiquattro) mesi e 120, comma 11 (proroga tecnica) del D.Lgs. n.
+36/2023 e smi (di seguito “Codice”).
+Il materiale da fornire “UNA TANTUM” dovrà essere consegnato entro il 15/10/2026 presso l’Ufficio ENEA di
+Christchurch c/o - US Cargo Yard, Gate 1, 45 Orchard Road - Christchurch 8053.
+
+
+Il contratto, se possibile, verrà avviato all’inizio della prossima 42^ Campagna antartica 2026/27,
+orientativamente intorno ai primi giorni di novembre 2026, quando il personale esperto in sistemi di
+telecomunicazione potrà essere presente presso le Stazioni antartiche e fare le dovute azioni d’inizializzazione
+degli apparati.
+L’ENEA ha il diritto di recedere dal presente appalto in qualsiasi momento, con un preavviso di almeno 3 (tre) mesi,
+da comunicarsi all’OE aggiudicatario con lettera raccomandata A/R.
+L’OE dovrà cessare tutte le prestazioni, alla data di efficacia del recesso, assicurando, tuttavia che tale
+cessazione non comporti danno alcuno all’ENEA. In caso di recesso da parte dell’ENEA, all’OE ha diritto al
+pagamento dei servizi prestati correttamente e a regola d’arte, secondo il corrispettivo e le condizioni previste
+nell’appalto rinunciando espressamente a qualsiasi ulteriore eventuale pretesa, anche di natura risarcitoria e a
+ogni ulteriore compenso o indennizzo e/o rimborso delle spese, anche in deroga a quanto previsto dall’Art. 1671
+cod. civ.
+L’OE aggiudicatario prende atto che la prosecuzione delle attività oltre il primo anno sarà subordinata
+all’assegnazione all’ENEA dei fondi previsti delle Azioni Esecutive Annuali (AEA) del Ministro dell’Università e della
+Ricerca (MUR) per gli esercizi di competenza.
+In caso di mancata erogazione da parte del MUR dei finanziamenti per l’attuazione delle campagne antartiche
+successive alla 42^, le attività non saranno avviate e l’ENEA è esonerata da qualsiasi responsabilità nei confronti
+dell’aggiudicatario.
+La mancata esecutività del contratto per una annualità non sarà causa di risoluzione dello stesso per nessuna
+delle Parti.
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            15
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+   17 RESPONSABILE DI PROGETTO E DIRETTORE DELL’ESECUZIONE DEL
+      CONTRATTO
+L’ENEA, a norma dell’art.15 del Codice, ha designato l’Ing. Rocco Ascione quale Responsabile di Progetto (RUP).
+Il compito di vigilare sull’esecuzione del contratto e di assicurare il rispetto delle norme e delle procedure previste
+dalle presenti “Specifiche tecniche” verrà eseguito dal Direttore dell’esecuzione del Contratto (DEC), che l’ENEA,
+ha individuato nella persona di Sig. Giacomo Bonanno.
+
+
+   18 RISERVATEZZA
+L’OE è tenuto ad osservare rigorosamente le regole del segreto professionale a proposito di fatti, informazioni,
+conoscenze, documenti o altro di cui verrà a conoscenza nello svolgimento del servizio oggetto del contratto. Tali
+informazioni non potranno in nessun modo essere cedute a terzi.
+Ai sensi delle vigenti norme, i dati personali dei soggetti interessati al servizio prestato possono essere trattati
+dalla OE esclusivamente per i fini indicati nel presente contratto. Il presente articolo ha per l’ENEA carattere
+essenziale; la sua violazione dà luogo alla risoluzione di diritto del contratto.
+A tal fine, le comunicazioni tra l’ENEA e la OE, qualora contenenti dati personali avverranno tramite l’invio di file
+protetti.
+
+
+   19 REVISIONE PREZZI
+Qualora, nel corso di esecuzione del contratto, al verificarsi di particolari condizioni di natura oggettiva, si
+determini una variazione, in aumento o in diminuzione, del costo dei servizi superiore al cinque per cento (5%)
+dell’importo complessivo, i prezzi contrattuali sono aggiornati, nella misura dell’ottanta per cento della variazione
+eccedente, in relazione alle prestazioni da eseguire.
+Ai fini del calcolo della variazione dei prezzi si utilizza l’indice sintetico della produzione dei servizi (PPS) associati
+alla CPV di riferimento sulla base delle tabelle D1 e D2 dell’allegato II.2 bis del Codice.
+                                                        Indice     Tabell   [ATECO/ECOICOP]     ATECO
+       CPV                Descrizione CPV                                                                      TITOLO ATECO
+                                                       sintetico     a        INDICE ISTAT       2025
+                   Servizi di telecomunicazione,
+                                                                                  61 -                          Altre attività di
+   64220000-4       esclusi i servizi telefonici e i     PPS        D1                          61.90.90
+                                                                            Telecomunicazioni              telecomunicazioni n.c.a.
+                    servizi di trasmissione dati
+
+I prezzi dei servizi verranno monitorati trimestralmente dal RUP, coerentemente con la periodicità di
+aggiornamento del suddetto indice. L’eventuale adeguamento delle tariffe, in aumento o in diminuzione, nella
+misura dell’80% della variazione sarà comunicato dal RUP all’Operatore Economico che lo dovrà applicare ai
+servizi richiesti successivamente alla data della loro adozione.
+La variazione dei prezzi in diminuzione può essere effettuata d’ufficio a cura del RUP.
+Qualora le condizioni per la revisione dei prezzi si verifichino più volte nel corso della vigenza contrattuale, ciascun
+aggiornamento dei prezzi terrà conto degli incrementi e/o decrementi già applicati per le revisioni precedenti.
+
+   20 FATTURAZIONE
+Ai fini del pagamento, l’OE emetterà i seguenti documenti:
+     1) Fatture pro-forma bimestrali contenenti i seguenti dati:
+              a. Base antartica di riferimento (MZS e Concordia);
+              b. Codici CIG e CUP
+              c. descrizione dei servizi erogati nel bimestre
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                                       16
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+             d. IVA;
+             e. Totale fattura pro-forma.
+    2)   Fatture bimestrali intestate all’ENEA contenenti i medesimi dati delle fatture pro-forma autorizzate.
+Prima dell’emissione delle fatture, l’OE invierà per posta elettronica al RUP (rocco.ascione @enea.it) le fatture
+pro-forma relative ai servizi erogati nel bimestre di riferimento.
+Entro un massimo di 5 giorni lavorativi dal ricevimento delle fatture pro-forma, il RUP effettuerà il controllo delle
+somme da corrispondere ed autorizzerà per iscritto l’OE ad inviare la relativa fattura tramite l’emissione
+dell’Autorizzazione alla Fatturazione.
+Le fatture pertanto potranno essere emesse solo dopo tale Autorizzazione scritta.
+La liquidazione delle fatture avverrà entro 30 giorni dalla data di ricevimento delle stesse mediante bonifico
+bancario sul conto corrente dedicato ai sensi della L. 136/2010; per la data di ricezione farà fede la data di
+acquisizione del documento sulla piattaforma SDI relativa alla fatturazione PA. Il pagamento delle fatture sarà
+altresì subordinato all’accertamento d’ufficio, da parte dell’ENEA, della regolarità contributiva.
+Scaduti i termini per il pagamento, in ottemperanza dell’art. 5 del D.Lgs n. 231/2002, l’OE ha diritto al
+riconoscimento degli interessi Legali, al saggio di cui all’art. 1284 del c.c., fino alla data di emissione del mandato.
+
+
+
+   21 INDICAZIONI PER LA FORMULAZIONE DELL’OFFERTA ECONOMICA
+L’offerta economica dovrà essere formulata sui documenti Allegato _____ “Dichiarazione di offerta economica”,
+____ “Prospetto-offerta Lotto 1” e _____ “Dettaglio manodopera” forniti dall’ENEA in allegato al disciplinare di gara,
+distinto per basi DC e MZS
+L’OE dovrà infine inserire negli appositi campi degli Allegati ____ “Prospetto-Offerta Lotto 1” e _____ “Dettaglio
+manodopera”, i propri costi della manodopera (in euro), ed indicare nell’Allegato ____ “Dichiarazione di offerta
+economica” i propri costi della sicurezza afferenti le attività svolte dall’OE.
+
+L'offerta dovrà essere riferita al servizio di connettività satellitare a banda larga prestato per i siti delle stazioni
+DC e MZS tramite sistemi Starlink e VSAT, sulla base di quanto previsto ai precedenti punti della presente
+Specifica Tecnica.
+In particolare, attraverso l’apposito “Prospetto-Offerta Lotto 1”, dovranno essere specificati in dettaglio i canoni
+mensili per il servizio di connettività dati, il canone mensile per il servizio d'assistenza remota (help desk), il
+canone mensile per il servizio di Tunneling e il canone mensile per il servizio di monitoraggio, oltre che il canone
+per il servizio di messaggistica GSM.
+Dovrà altresì essere quotato il costo del materiale Hardware previsto “UNA TANTUM” per i sistemi Starlink, Certus
+e GSM.
+
+La graduatoria di aggiudicazione della gara sarà redatta sulla base del costo complessivo triennale offerto da
+ciascun concorrente, risultante dall’applicazione delle tariffe unitarie e dei canoni offerti dall’OE all’ipotesi
+temporale contemplata dal “Prospetto-Offerta Lotto 1”.
+
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 1 – Servizi di connessione                                                            17
+  satellitare a banda larga per le Stazioni antartiche del Programma
+  Nazionale di Ricerche in Antartide (PNRA)
+

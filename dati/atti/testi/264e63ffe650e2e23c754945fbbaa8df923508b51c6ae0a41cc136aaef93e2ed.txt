@@ -1,0 +1,406 @@
+Unità Tecnica Antartide
+Servizio Logistica
+
+
+
+
+                               Procedura di gara U-Buy G02398
+
+
+                                          SPECIFICHE TECNICHE
+                                                 Lotto 2
+
+
+
+        Servizi di gestione del traffico dei terminali satellitari
+    Inmarsat e Iridium in uso al Programma Nazionale di Ricerche In
+                            Antartide (PNRA)
+
+
+                                                      Edizione febbraio 2026
+
+
+
+
+  Unità Tecnica Antartide                           Centro Ricerche Casaccia                         Tel. +39-06-30486303
+  UTA-LOG                                              Via Anguillarese 301                          rocco.ascione@enea.it
+                                                00123 Santa Maria di Galeria (Roma)                  enea@cert.enea.it
+                            Sede Legale - Lungotevere Thaon di Revel, 76 - 00196 Roma - Italia – Tel. +39-06-36271
+                                 Partita IVA 00985801000 - Codice Fiscale 01320740580 - www.enea.it
+SOMMARIO
+PREMESSE................................................................................................................................................................... 3
+1)         OGGETTO DELL’APPALTO................................................................................................................................... 3
+     1.1        Terminali satellitari (IRD-BGAN) ............................................................................................................... 4
+     1.2        Tracking .................................................................................................................................................... 4
+     1.3        Iridium Certus........................................................................................................................................... 5
+     1.4        Help Desk ................................................................................................................................................. 5
+2)         PENALI ............................................................................................................................................................... 5
+     2.1        Penale per interruzioni o limitazione del servizio voce/dati ..................................................................... 5
+     2.2        Penale per interruzione del servizio di Help Desk ..................................................................................... 6
+     2.3        Penale per mancata portabilità delle numerazioni/SIM card .................................................................... 6
+     2.4        Penale per ritardo nell’attivazione di una numerazione/SIM card o indirizzo IP ....................................... 6
+     2.5        Penale per mancata decommissioning ..................................................................................................... 6
+     2.6        Penale per bassa qualità del servizio dati ................................................................................................. 6
+3)         DURATA DELL’APPALTO E DIRITTO DI RECESSO ................................................................................................. 6
+4)         RESPONSABILE DI PROGETTO E DIRETTORE DELL’ESECUZIONE DEL CONTRATTO ............................................... 7
+5)         RISERVATEZZA ................................................................................................................................................... 7
+6)         REVISIONE PREZZI.............................................................................................................................................. 7
+7)         FATTURAZIONE.................................................................................................................................................. 7
+8)         INDICAZIONI PER LA FORMULAZIONE DELL’OFFERTA ECONOMICA.................................................................... 8
+
+
+
+
+     SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                                                                                     2
+     dei terminali satellitari Inmarsat e Iridium in uso al Programma
+     Nazionale di Ricerche in Antartide (PNRA).”
+PREMESSE
+L’ENEA, in ottemperanza al Decreto Interministeriale del 30 settembre 2010 (GURI n. 27 del 3.2.2011) ha il compito
+dell’attuazione del Programma Nazionale di Ricerche in Antartide e la responsabilità dell’organizzazione delle
+Spedizioni in Antartide.
+In tale ambito, tra i compiti affidati a ENEA, c’è quello di garantire la continuità dei collegamenti di
+telecomunicazione da e per le Basi italiane in Antartide, sia per necessità legate alla ricerca scientifica presso le
+Basi, che per la salvaguardia del personale impegnato nelle spedizioni e la sicurezza delle operazioni aeree,
+marittime e terrestri che si svolgono nell’intero continente antartico.
+Fin dalle prime spedizioni, tutti i servizi di telecomunicazione utilizzati in Antartide si basavano sull’utilizzo di
+connessioni satellitari Iridium e Inmarsat. Con il passare degli anni, detti sistemi sono diventati sia onerosi che
+poco adeguati a soddisfare le esigenze di connettività dati e voce. A partire dalla XXIV spedizione (2009/2010)
+approfittando di una forte richiesta giunta dalla comunità scientifica è stato avviato un processo di
+ammodernamento dell’intero comparto di telecomunicazioni delle due Stazioni antartiche “Mario Zucchelli” (MZS)
+e “Concordia” (DC), mediante l’adozione di sistemi di trasmissione dati basati sulla tecnologia “VSAT” (Very Small
+Aperture Terminal) e Starlink.
+Al fine di proseguire l’indispensabile fornitura del servizio di connessione satellitare a banda stretta, nonché il
+servizio di connessione satellitare a banda larga, in continuità con il contratto in essere che è prossimo alla
+scadenza, è stata indetta la presente gara d’appalto, suddivisa in n.2 lotti:
+     1) Lotto 1: Servizi di connessione satellitare permanente a banda larga e servizio GSM per le Stazioni
+         antartiche del PNRA “Concordia” e “Mario Zucchelli Station”.
+     2) Lotto 2: Gestione del traffico dei terminali satellitari Inmarsat e Iridium in uso al PNRA.
+La suddivisione in due lotti e l’istituzione di contratti di ridotta durata, consente ad ENEA-UTA di poter seguire le
+evoluzioni tecnologiche e offrire a entrambe le Stazioni, una connettività dati affidabile e in linea con i moderni
+standard.
+
+
+
+    1) OGGETTO DELL’APPALTO
+Oggetto del presente documento è definire le Specifiche Tecniche essenziali minime relative al Lotto 2 “Gestione
+del traffico dei terminali satellitari Inmarsat e Iridium in uso al Programma Nazionale di Ricerche in Antartide
+(PNRA)” e garantire un’affidabile connettività satellitare presso le Stazioni Mario Zucchelli (MZS) e Concordia (DC),
+entrambe dotate di terminali satellitari idonei a sfruttare le costellazioni satellitari Inmarsat e Iridium. Tali sistemi
+sono utilizzati sia per fornire un servizio di back-up in caso di anomalia dei sistemi impiegati (Starlink e VSAT), sia
+come ausilio ai sistemi radio HF e VHF impiegati per le comunicazioni nelle operazioni aeree, terrestri, marittime
+e per le comunicazioni tra le Stazioni e il personale operante nei campi remoti (luoghi operativi lontani diversi km
+dalle Stazioni). Per entrambe le Stazioni è necessario mantenere attivi i servizi e le numerazioni elencate in tabella
+1, per motivi operativi e di sicurezza.
+Per i motivi appena menzionati l’Operatore Economico, di seguito definito OE, dovrà provvedere alla portabilità
+delle SIM card/numerazioni elencate in tabella 1 e 2. Le spese saranno interamente a carico della OE, così come
+l’onere di attuare quanto necessario per garantire il corretto passaggio delle numerazioni di tabella 1 e 2 dal
+vecchio al nuovo OE. Tutte le numerazioni presenti in Tabella 1 e 2 dovranno essere presenti nel nuovo contratto
+entro 30 (trenta) giorni solari dalla firma del verbale d’inizio attività.
+L’OE dovrà quotare il valore del servizio di portabilità della numerazione/SIM card Inmarsat e Iridium nel
+“Prospetto Offerta Lotto 2”.
+Le specifiche tecniche dei servizi sono descritte dettagliatamente negli articoli del presente documento.
+    1. “Terminali satellitari (IRD-INM)”. Servizio di gestione e contabilizzazione del traffico, dati e voce, di n.8
+       terminali “Iridium” (IRD), di n.2 terminali “Inmarsat” (BGAN) e di n.2 terminali Iridium SBD (Short Burst
+       Data) .
+    2. “Tracking”. Servizio di tracking della posizione per n.4 terminali SBD dotati di GPS su portale dedicato
+       fornito dal provider (Iridium SBD- Tracking).
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                              3
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+      3. “Iridium Certus”. Servizio di gestione e contabilizzazione del traffico dati di n.1 terminale Iridium “Certus
+         700” (2 GB/mese) , per la Stazione MZS, che consenta di avere una forfettizzazione del traffico Internet in
+         caso di avaria del sistema principale
+      4. “Help Desk”. Servizio di assistenza telefonica in lingua italiana, garantito 24 ore giornaliere per 365 giorni
+         all’anno (24/7).
+
+1.1         Terminali satellitari (IRD-BGAN)
+L’OE dovrà garantire la gestione contabile del traffico di n.8 terminali “Iridium” (IRD), di n.2 terminali “Inmarsat”
+(BGAN), di n.2 terminali Iridium “Short Burst Data” (SBD) in uso al PNRA e di eventuali altre utenze che l’ENEA
+vorrà aggiungere successivamente. Nella tabella riportata di seguito sono elencate le numerazioni dei
+terminali/tessere per i quali si chiede il servizio.
+               Tabella 1: Elenco numerazioni IRDIUM, INMARSAT e SHORT BURST DATA in uso al PNRA.
+           Descrizione                                               S/N   msisdn           imsi
+           INMARSAT - BGAN SIM                                       n.a   870772367122 901112112543758
+           INMARSAT - BGAN SIM                                       n.a   870772367038 901112112543757
+           IRIDIUM SIM                                               n.a   881623468387 901032340061087
+           IRIDIUM SIM                                               n.a   881623468388     901032340061084
+           IRIDIUM SIM                                               n.a   881623468389     901032340061083
+           IRIDIUM SIM                                               n.a   881623468390     901032340061082
+           IRIDIUM SIM                                               n.a   881623411216     901032340061086
+           IRIDIUM SIM                                               n.a   881621429146     901032340061085
+           IRIDIUM SIM                                               n.a   881621429350     901032340061080
+           IRIDIUM SIM                                               n.a   881621429471     901032340061078
+           IRIDIUM SBD                                               n.a   881611100147     300234063891110
+           IRIDIUM SBD                                               n.a   881611100149     300234063898110
+Per ogni SIM card appartenente ad apparati BGAN potranno essere richieste una o più numerazioni IP pubbliche
+statiche.
+
+1.2         Tracking
+Durante la permanenza in Antartide, il personale tecnico e scientifico è frequentemente impegnato in attività che
+vengono svolte lontano dalle Stazioni. Al fine di aumentare la sicurezza del personale coinvolto, il PNRA si è dotato
+di n. 4 terminali portatili Iridium “RockStar PRO” che provvedono a inviare automaticamente la loro posizione
+tramite messaggistica SBD. Normalmente questi dispositivi vengono adoperati solamente nel periodo estivo
+della Spedizione antartica del PNRA, per una durata indicativa di 5 mesi (da ottobre a febbraio circa). L’OE dovrà
+indicare, nell’apposito prospetto offerta, il costo del canone dei dispositivi attivi e quello dei medesimi quando
+sono in “sospensione”, con la relativa durata minima della attivazione/sospensione. Nella tabella 2 sono elencate
+le numerazioni SBD attualmente attive.
+                 Tabella 2: Elenco numerazioni SBD per il tracking di personale e mezzi.
+       Descrizione                               S/N             msisdn         imsi
+
+       IRIDIUM SBD X TRACKING                                    24664     881680191278 300234068487660
+       IRIDIUM SBD X TRACKING                                    24665     881680191276 300234068486660
+       IRIDIUM SBD X TRACKING                                    24666     881680191275 300234068486690
+       IRIDIUM SBD X TRACKING                                    24662     881680191274 300234068488940
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                            4
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+Inoltre, si richiede che l’OE fornisca a ENEA un servizio di tracking dei dispositivi elencati nella tabella 2 su un
+dedicato portale web, in modo che solo il personale con idonee credenziali possa controllare in qualsiasi momento
+e autonomamente, la posizione e lo storico dei terminali “RockStar PRO”.
+
+1.3       Iridium Certus
+Attualmente, in caso di malfunzionamento o fault del sistema a banda larga presso la base MZS, il collegamento a
+Internet verrebbe garantito dai soli terminali satellitari BGAN. Purtroppo, questi dispositivi dispongono di una
+ridotta velocità dati e di un costo del traffico dati “a consumo” (il costo è funzione dei dati (in MB) che transitano
+attraverso il terminale attivo). Con la spesa di un solo giorno di traffico dati di una delle due Stazioni, effettuato
+con un terminale BGAN è possibile arrivare a eguagliare, o superare, il canone mensile del sistema principale
+Starlink.
+Al fine di disporre di dispositivi capaci di connettersi a Internet in caso di avaria del sistema principale a basso
+costo è intenzione di ENEA dotare la Stazione MZS di un terminale Iridium “Certus 700”. Con questo terminale è
+possibile stipulare un contratto che comprende un quantitativo di traffico dati minimo già compreso
+nell’abbonamento, mentre i dati che superano questo quantitativo minimo verrebbero conteggiati a un prezzo
+nettamente inferiore a quello pagato attualmente con il terminale BGAN.
+Per la Stazione MZS si stima un traffico dati pari a circa 2 GB/mese per 12 mesi all’anno.
+Il terminale Iridium Certus 700 idoneo a questo scopo e presente ad MZS ha le caratteristiche descritte di seguito:
+      -   Standard IP, fino a 352 kbps in upload e 704 kbps in download;
+      -   Streaming dati da 14,4 kbps a 256 kbps;
+      -   3 linee vocali simultanee anche quando è attiva la connessione dati;
+      -   Terminale ottimizzato per l’uso con sistemi VSAT;
+      -   WiFi per un minimo di 4 dispositivi, con portata minima di 10 m.
+
+1.4       Help Desk
+L’OE dovrà fornire un servizio di Help Desk telefonico in lingua italiana per la risoluzione dei problemi tecnici che
+dovessero sopravvenire. Tale servizio deve essere garantito 24/7.
+L’OE dovrà scorporare il valore del servizio di Help Desk dal canone dati mensile.
+
+
+
+      2) PENALI
+Oltre a quanto riportato all’art. 6 del contratto di appalto, il RUP si riserva la possibilità di applicare le penali
+descritte di seguito fino a un massimo del 10% del valore del contratto.
+
+2.1       Penale per interruzioni o limitazione del servizio voce/dati
+Sarà cura dell’OE avvisare con cinque giorni di anticipo il DEC, mediante posta elettronica, di eventuali interruzioni
+(prevedibili) di servizi INMARSAT e IRIDIUM (interventi di manutenzione, sostituzioni di dispositivi, ecc.).
+Qualora le interruzioni o limitazioni del servizio fossero di natura accidentale, l’OE dovrà comunicare al DEC,
+mediante posta elettronica, l’avvenuta manifestazione di dette circostanze entro 8 (otto) ore dall’inizio
+dell’evento.
+Qualora l’OE si trovasse nelle condizioni di non potere assicurare il servizio di una particolare tipologia di terminale
+per cause dipese dal gestore stesso del satellite dovrà comunicare al DEC, mediante posta elettronica, l’avvenuta
+manifestazione di dette circostanze con un preavviso di almeno 30 (trenta) giorni solari.
+Per questa eventualità l’ENEA non attribuirà alcuna penale all’OE, a patto che sia stata inviata la comunicazione
+prevista nei tempi su indicati.
+La mancata osservanza di quanto su menzionato comporterà il pagamento di una penale di €100,00 per ogni ora
+di ritardo nella comunicazione.
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                             5
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+2.2      Penale per interruzione del servizio di Help Desk
+La mancata osservanza di quanto previsto all’Art. 4 – comporterà l’applicazione di una penale pari al 10% del valore
+mensile del servizio di Help Desk quotato dall’OE, per ogni ora di ritardo nella risposta da parte del Help Desk. Per
+il calcolo del tempo trascorso farà fede la data e l’ora UTC prodotta dalla e-mail o telefonata inviata al servizio di
+Help Desk da parte della Stazione antartica la data e l’ora UTC fornita dalla e-mail del supporto tecnico dell’OE.
+2.3      Penale per mancata portabilità delle numerazioni/SIM card
+La OE s’impegna a gestire tutte le numerazioni presenti in tabella 1 e 2. La mancata presenza di una sola
+numerazione/SIM card comporterà il pagamento di €200 per ogni numerazione/SIM card non portata nel nuovo
+contratto (NU) moltiplicata per i giorni (gg) di ritardo, secondo la seguente formula:
+                                         € da pagare dalla OE a ENEA = 200 * NU * gg
+2.4      Penale per ritardo nell’attivazione di una numerazione/SIM card o indirizzo IP
+Il ritardo nella attivazione di una numerazione/SIM card o indirizzo IP, secondo le modalità descritte all’art. 1,
+comporterà una penale di €200 per ogni giorno di ritardo.
+2.5      Penale per mancata decommissioning
+La mancata decommissioning di una o più numerazione/SIM card, come descritto all’art. 6 comporterà una penale
+di €200 per ogni giorno di ritardo e per ogni numerazione/SIM card.
+2.6      Penale per bassa qualità del servizio dati
+Qualora il servizio dati non consentisse il passaggio di tutti i protocolli Internet, il throughput massimo definito
+nelle specifiche tecniche dei terminali adoperati e non fornisse la possibilità di connettersi a un GW VoIP
+italiano verrà applicata una penale pari a €200 per ogni giorno di assenza di uno degli elementi elencati a inizio
+paragrafo (protocolli, throughput, VoIP). Il giorno d’inizio del disservizio sarà definito dalla e-mail inviata dal RUP
+all’OE per bassa qualità del servizio e il giorno di fine disservizio verrà definito dalla e-mail inviata dall’OE al RUP,
+per la conferma del ripristino del servizio secondo quanto definito nel contratto.
+
+
+
+      3) DURATA DELL’APPALTO E DIRITTO DI RECESSO
+Il contratto avrà la durata di 36 (trentasei) mesi a partire dalla data della sua sottoscrizione o quella del verbale di
+avvio delle attività, e potrà essere riaffidato in caso di esercizio delle opzioni previste dagli artt. 120, comma 10
+(proroga contrattuale) per un successivo periodo di 24 (ventiquattro) mesi e 120, comma 11 (proroga tecnica) del
+D.Lgs. n. 36/2023 e smi (di seguito “Codice”).
+Il contratto, se possibile, verrà avviato all’inizio della prossima 42^ Campagna antartica 2026/27,
+orientativamente intorno ai primi giorni di novembre 2026, quando il personale esperto in sistemi di
+telecomunicazione potrà essere presente presso le Stazioni antartiche e fare le dovute azioni d’inizializzazione
+degli apparati.
+L’ENEA ha il diritto di recedere dal presente appalto in qualsiasi momento, con un preavviso di almeno 3 (tre) mesi,
+da comunicarsi all’OE aggiudicatario con lettera raccomandata A/R.
+L’OE dovrà cessare tutte le prestazioni, alla data di efficacia del recesso, assicurando, tuttavia che tale
+cessazione non comporti danno alcuno all’ENEA. In caso di recesso da parte dell’ENEA, all’OE ha diritto al
+pagamento dei servizi prestati correttamente e a regola d’arte, secondo il corrispettivo e le condizioni previste
+nell’appalto rinunciando espressamente a qualsiasi ulteriore eventuale pretesa, anche di natura risarcitoria e a
+ogni ulteriore compenso o indennizzo e/o rimborso delle spese, anche in deroga a quanto previsto dall’Art. 1671
+cod. civ.
+L’OE aggiudicatario prende atto che la prosecuzione delle attività oltre il primo anno sarà subordinata
+all’assegnazione all’ENEA dei fondi previsti delle Azioni Esecutive Annuali (AEA) del Ministro dell’Università e della
+Ricerca (MUR) per gli esercizi di competenza.
+In caso di mancata erogazione da parte del MUR dei finanziamenti per l’attuazione delle campagne antartiche
+successive alla 42^, le attività non saranno avviate e l’ENEA è esonerata da qualsiasi responsabilità nei confronti
+dell’aggiudicatario.
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                              6
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+La mancata esecutività del contratto per una annualità non sarà causa di risoluzione dello stesso per nessuna
+delle Parti.
+
+
+
+    4) RESPONSABILE DI PROGETTO E DIRETTORE DELL’ESECUZIONE DEL
+       CONTRATTO
+L’ENEA, a norma dell’art.15 del Codice, ha designato l’Ing. Rocco Ascione quale Responsabile di Progetto (RUP).
+Il compito di vigilare sull’esecuzione del contratto e di assicurare il rispetto delle norme e delle procedure
+previste dalle presenti “Specifiche tecniche” verrà eseguito dal Direttore dell’esecuzione del Contratto (DEC),
+che l’ENEA, ha individuato nella persona di Sig. Giacomo Bonanno.
+
+    5) RISERVATEZZA
+L’OE è tenuto ad osservare rigorosamente le regole del segreto professionale a proposito di fatti, informazioni,
+conoscenze, documenti o altro di cui verrà a conoscenza nello svolgimento del servizio oggetto del contratto. Tali
+informazioni non potranno in nessun modo essere cedute a terzi.
+Ai sensi delle vigenti norme, i dati personali dei soggetti interessati al servizio prestato possono essere trattati
+dalla OE esclusivamente per i fini indicati nel presente contratto. Il presente articolo ha per l’ENEA carattere
+essenziale; la sua violazione dà luogo alla risoluzione di diritto del contratto.
+A tal fine, le comunicazioni tra l’ENEA e la OE, qualora contenenti dati personali avverranno tramite l’invio di file
+protetti.
+
+    6) REVISIONE PREZZI
+Qualora, nel corso di esecuzione del contratto, al verificarsi di particolari condizioni di natura oggettiva, si
+determini una variazione, in aumento o in diminuzione, del costo dei servizi superiore al cinque per cento (5%)
+dell’importo complessivo, i prezzi contrattuali sono aggiornati, nella misura dell’ottanta per cento della variazione
+eccedente, in relazione alle prestazioni da eseguire.
+Ai fini del calcolo della variazione dei prezzi si utilizza l’indice sintetico della produzione dei servizi (PPS) associati
+alla CPV di riferimento sulla base delle tabelle D1 e D2 dell’allegato II.2 bis del Codice.
+                                                       Indice               [ATECO/ECOICOP]     ATECO
+       CPV                Descrizione CPV                         Tabella                                       TITOLO ATECO
+                                                      sintetico               INDICE ISTAT       2025
+                   Servizi di telecomunicazione,
+                                                                                   61 -                         Altre attività di
+   64220000-4      esclusi i servizi telefonici e i     PPS          D1                         61.90.90
+                                                                            Telecomunicazioni              telecomunicazioni n.c.a.
+                    servizi di trasmissione dati
+
+I prezzi dei servizi verranno monitorati trimestralmente dal RUP, coerentemente con la periodicità di
+aggiornamento del suddetto indice. L’eventuale adeguamento delle tariffe, in aumento o in diminuzione, nella
+misura dell’80% della variazione sarà comunicato dal RUP all’Operatore Economico che lo dovrà applicare ai
+servizi richiesti successivamente alla data della loro adozione.
+La variazione dei prezzi in diminuzione può essere effettuata d’ufficio a cura del RUP.
+Qualora le condizioni per la revisione dei prezzi si verifichino più volte nel corso della vigenza contrattuale, ciascun
+aggiornamento dei prezzi terrà conto degli incrementi e/o decrementi già applicati per le revisioni precedenti.
+Qualora le condizioni per la revisione dei prezzi si verifichino più volte nel corso della vigenza contrattuale, ciascun
+aggiornamento dei prezzi terrà conto degli incrementi e/o decrementi già applicati per le revisioni precedenti.
+
+
+
+    7) Fatturazione
+Ai fini del pagamento, l’OE emetterà i seguenti documenti:
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                                        7
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+    1)   Call list bimestrali in formato excell (estratti conto) per ciascun terminale contenenti, per ogni chiamata,
+         almeno i seguenti dati:
+              a. Operatore
+              b. LES
+              c. data
+              d. ora
+              e. durata della chiamata
+              f. numero chiamato con le ultime 3 (tre) cifre oscurate nel rispetto della normativa sulla privacy
+              g. tariffa
+              h. costo
+              i. tipo chiamata (Tel/Fax/HSD/Traffico IP)
+     2) Fatture bimestrali intestate all’ENEA contenenti i seguenti dati:
+              a. Codici CIG e CUP
+              b. descrizione dei servizi erogati nel bimestre
+              c. IVA;
+              d. Totale fattura
+L’OE dovrà provvedere alla liquidazione contabile del traffico effettuato dai terminali INMARSAT e IRIDIUM in uso
+al PNRA con il/i gestore/i del servizio.
+Prima dell’emissione delle fatture, l’OE invierà per posta elettronica al Direttore dell’esecuzione del contratto e
+al RUP (agli indirizzi giacomo.bonanno@enea.it e rocco.ascione@enea.it) gli estratti conto di cui al precedente
+punto 1) relativi al traffico satellitare contabilizzato nel bimestre di riferimento.
+Entro un massimo di 5 giorni lavorativi dal ricevimento degli estratti conto, il RUP/DEC effettuerà il controllo delle
+somme da corrispondere e autorizzerà per iscritto l’OE ad inviare la relativa fattura tramite l’emissione
+dell’Autorizzazione alla Fatturazione.
+Le fatture potranno essere emesse solo dopo tale Autorizzazione scritta.
+La liquidazione delle fatture avverrà entro 30 giorni dalla data di ricevimento delle stesse mediante bonifico
+bancario sul conto corrente dedicato ai sensi della L. 136/2010; per la data di ricezione farà fede la data di
+acquisizione del documento sulla piattaforma SDI relativa alla fatturazione PA. Il pagamento delle fatture sarà
+altresì subordinato all’accertamento d’ufficio da parte dell’ENEA della regolarità contributiva.
+Scaduti i termini per il pagamento, in ottemperanza dell’art. 5 del D.Lgs n. 231/2002, l’OE ha diritto al
+riconoscimento degli interessi Legali, al saggio di cui all’art. 1284 del c.c., fino alla data di emissione del mandato.
+
+    8) INDICAZIONI PER LA FORMULAZIONE DELL’OFFERTA ECONOMICA
+L’offerta dovrà quotare le direttrici di traffico satellitare in grado di garantire la migliore copertura nell’area
+antartica di nostro interesse, con particolare riguardo alle Stazioni antartiche “Mario Zucchelli Station” (MZS) e
+“Concordia” (DC) aventi rispettivamente coordinate WGS 84 74°42’S - 164°07’E e 75°06’S – 123°20’E.
+Dall’esperienza PNRA, gli operatori in grado di garantire quanto su esposto risultano essere VIZADA (per
+INMARSAT) e STRATOS (per IRIDIUM).
+L’uso di altre direttrici di traffico sarà preso in considerazione solo se in linea con gli standard di qualità garantiti
+dagli operatori sopra menzionati. Nella formulazione dell’offerta la ditta dovrà dichiarare detta equivalenza con
+le direttrici di traffico satellitare VIZADA e STRATOS.
+Per i servizi dati si richiede un APN (Access Point Name) italiano, in modo da garantire un corretto uso di tutti i
+servizi dati che le Stazioni antartiche (MZS, DC) faranno transitare su Internet mediante i loro terminali o una
+connessione diretta tra il provider che fornirà il servizio e il gateway (GW) di terra appartenente al gestore della
+costellazione satellitare. Qualora non fosse possibile disporre di un APN italiano, l’OE sarà tenuta a garantire un
+servizio identico a quello che ENEA avrebbe ricevuto con APN italiano e/o interconnessione diretta con il GW del
+gestore della costellazione.
+
+L’offerta economica dovrà essere formulata sui documenti Allegato _____ “Dichiarazione di offerta economica”,
+____ “Prospetto-offerta Lotto 2” e _____ “Dettaglio manodopera” forniti dall’ENEA in allegato al disciplinare di gara.
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                              8
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+L’OE dovrà infine inserire negli appositi campi degli Allegati ____ “Prospetto-Offerta Lotto 2” e _____ “Dettaglio
+manodopera”, i propri costi della manodopera (in euro), ed indicare nell’Allegato ____ “Dichiarazione di offerta
+economica” i costi della sicurezza afferenti le attività svolte dall’OE.
+
+Nel documento Allegato ____ “Prospetto-Offerta Lotto 2”, l’OE dovrà formulare per ciascun terminale indicato le
+tariffe unitarie per le relative unità di misura come desumibile dalla stima di consumo triennale previsto nel
+prospetto stesso.
+Analogamente l’OE dovrà indicare il canone triennale di abbonamento che sarà applicato a ciascuna delle SIM
+CARD dei terminali satellitari riportati nelle precedenti Tabelle 1 e 2.
+Nell’ipotesi in cui il canone di abbonamento includa anche una quota di traffico a consumo, l’OE dovrà indicare
+nell’apposita casella del prospetto (con il segno meno), l’importo corrispondente al traffico già incluso.
+
+La graduatoria di aggiudicazione della gara sarà redatta sulla base del costo complessivo triennale offerto da
+ciascun concorrente, risultante dall’applicazione delle tariffe unitarie e dei canoni offerti dall’OE alle quantità e
+volumi di traffico stimati nel Prospetto-Offerta.
+Per le procedure di “commissioning” e di “decommissioning” dei terminali INMARSAT ed IRIDIUM, l’ENEA non
+riconoscerà alcun costo aggiuntivo.
+
+
+
+
+  SPECIFICHE TECNICHE G02398 – LOTTO 2 - Gestione del traffico                                                          9
+  dei terminali satellitari Inmarsat e Iridium in uso al Programma
+  Nazionale di Ricerche in Antartide (PNRA).”
+
