@@ -8,7 +8,7 @@ description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numer
 
 ---
 
-**Versione 0.20 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
+**Versione 0.20.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -20,7 +20,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **Numeri chiave verificati, dal 2024** [V, imbuto 0.3.4 rigenerato il 18/11/2026: una riga per CIG, perimetro CPV 0.3.3, lente v4.5]:
   - universo 3.734.840 CIG; esclusi con certezza come non ICT l'85,9 %;
   - spesa ICT (strati S3-S6) al netto dei tetti di accordo quadro: **56,06 mld** (con la 0.3.1 erano 55,70 con la stessa misura) (§ 2.7);
-  - cloud certo dall'imbuto: 4.556 CIG per 1,21 mld, più 0,66 mld di infrastruttura in-house; **dopo i livelli di raffinamento (§ 2.10, tabella unica per CIG)**: cloud certo **4.871 CIG, 1,28 mld netti massimali**, in-house certo 0,08 mld; giurisdizione sul cloud certo extra-UE 75,6 %, UE 18,8 %, IT 5,5 % (la vecchia ripartizione 47/39/14 contava l'in-house non confermato);
+  - cloud certo dall'imbuto: 4.556 CIG per 1,21 mld, più 0,66 mld di infrastruttura in-house; **dopo i livelli di raffinamento (§ 2.10, tabella unica per CIG)**: cloud certo **5.035 CIG, 1,29 mld netti massimali**, in-house certo 0,08 mld; giurisdizione sul cloud certo extra-UE 74,8 %, UE 18,6 %, IT 6,4 % (la vecchia ripartizione 47/39/14 contava l'in-house non confermato);
   - residuo incerto S6: 59.406 CIG per 16,37 mld dichiarati.
 - **Valore dei contratti, non spesa** [V, § 4.13]: l'imbuto misura il **valore dei contratti** (importo dei CIG), circa **3,5 volte il pagato annuo**. Accanto mettiamo il **pagato ICT: 5,1 mld nel 2024** (Stato da BDAP 1,14 + enti non statali da SIOPE 3,97, telefonia esclusa), contro 14,0 mld di CIG ICT pubblicati nell'anno. Per ogni ente abbinato per codice fiscale c'è un indicatore di copertura (quota annua dei CIG / pagato ICT) in uno **strato di riscontro R**, che non si somma alla spesa: solo lo 0,4 % del pagato è di enti senza alcun CIG ICT; i buchi veri sono le in-house senza CIG (Regione Lombardia → ARIA, Stato → Sogei).
 - **Cosa è stima, non misura.** I rapporti fra CIG e pagato BDAP per ministero (§ 4.10-4.12: buco MEF circa 0,3 mld l'anno); la forbice cloud degli EA Microsoft (0,55-0,81 mld, campione non casuale, § 4.6); le proposte della via 6 (lettura degli atti con modello linguistico) finché non superano la revisione C1-C4 (§ 4.3.2); la giurisdizione degli inclusi certi, perché la precisione di S3-S4 è misurata solo su campione.
@@ -358,12 +358,12 @@ Una quota cloud scritta negli atti (L4) si applica come frazione dell'importo.
 
 | stato | CIG prima | CIG dopo | mld prima | mld dopo |
 |---|---:|---:|---:|---:|
-| incluso certo: cloud | 4.556 | 4.871 | 1,09 | **1,28** |
+| incluso certo: cloud | 4.556 | 5.035 | 1,09 | **1,29** |
 | incluso certo: infrastruttura in-house | 816 | 438 | 0,42 | **0,08** |
-| incerto: marchio o lotto noto, da attribuire | 3.889 | 2.205 | 2,85 | 2,06 |
-| incerto: residuo S6 | 59.406 | 48.968 | 11,70 | **10,67** |
-| ICT non cloud | 220.525 | 231.131 | 40,01 | 41,78 |
-| tolto dall'ICT dai livelli (lavori, non ICT) | — | 1.579 | — | 0,19 |
+| incerto: marchio o lotto noto, da attribuire | 3.889 | 2.039 | 2,85 | 1,80 |
+| incerto: residuo S6 | 59.406 | 48.964 | 11,70 | **10,67** |
+| ICT non cloud | 220.525 | 231.137 | 40,01 | 41,90 |
+| tolto dall'ICT dai livelli (lavori, non ICT) | — | 1.578 | — | 0,19 |
 
 Il totale S3-S6 resta 56,06 mld: i livelli spostano, non tolgono.
 
@@ -371,30 +371,30 @@ Il totale S3-S6 resta 56,06 mld: i livelli spostano, non tolgono.
 - **Verso il cloud certo:**
   - regole delle licenze: 304 CIG, 159,9 M€;
   - via 6 controvalidata: 9 CIG, 27,2 M€;
-  - L4: 2 CIG con la sola quota cloud, 1,6 M€.
+  - L4: 2 CIG con la sola quota cloud, 1,6 M€;
+  - verifica a mano: 164 adesioni al Sistema Cloud Toscana (accordo quadro aperto al mercato, giurisdizione IT), 13,3 M€ netti; nove adesioni di enti piccoli con importo che sembra il massimale copiato contano 0 finché un atto non dà l'importo vero.
 - **Dall'incerto all'ICT non cloud:**
   - L2: 6.913 CIG, 466,3 M€;
   - L3: 2.259 CIG, 112,4 M€;
-  - L4: 71 CIG, 92,9 M€;
+  - L4: 76 CIG, 93,6 M€;
   - via 6: 22 CIG, 152,5 M€;
   - licenze: 1.758 CIG, 968,0 M€.
 - **Fuori dall'ICT:**
-  - B1, lavori: 1.280 CIG, 131,4 M€;
+  - B1, lavori: 1.279 CIG, 131,3 M€;
   - L3, non ICT: 297 CIG, 53,3 M€;
   - L4: 2 CIG, 7,3 M€.
-- **Dall'in-house certo al da attribuire:** B2, 378 CIG, 338,2 M€. Comprende i due grandi affidamenti con importo da verificare (Cloud Toscana e l'impianto CINECA), da rivedere a mano.
+- **Dall'in-house certo:** B2 rimanda al da attribuire 212 CIG, 84,6 M€ (aggiudicatari privati o mancanti). La verifica a mano sugli atti (`esiti/2026-11-19/imbuto/inhouse-verifica/`, #52) ha risolto i due grandi affidamenti: **Cloud Toscana** (B33988ECF0, 242,4 M€) è l'accordo quadro aperto al mercato, cioè un massimale, e passa fra i padri di accordo quadro; l'impianto **CINECA** (BCA58C49BB, 117,3 M€) è una fornitura di celle a combustibile comprata da CINECA per il proprio data center, ICT non cloud (datacenter propri).
 
-**Disaccordi fra livelli: 69 CIG**, tutti su «ICT non cloud» contro «non ICT»:
-- 67 B1 contro L2;
-- 1 B1 contro L3;
-- 1 B1 contro L4.
+**Disaccordi fra livelli: 236 CIG.**
+- 70 su «ICT non cloud» contro «non ICT»: 67 B1 contro L2, 1 B1 contro L3, 2 B1 contro L4.
+- 166 fra B2 e la verifica a mano dell'in-house, e vince la verifica a mano. Sono le 164 adesioni a Cloud Toscana, Cloud Toscana stesso e CINECA.
 
-Nessun disaccordo riguarda il cloud.
+Fra le regole automatiche nessun disaccordo riguarda il cloud.
 
-**Giurisdizione del prodotto sul cloud certo dopo i livelli** (netti), su 1,28 mld:
-- extra-UE 964,4 M€ (75,6 %);
-- UE 239,5 M€ (18,8 %);
-- Italia 69,7 M€ (5,5 %);
+**Giurisdizione del prodotto sul cloud certo dopo i livelli** (netti), su 1,29 mld:
+- extra-UE 964,4 M€ (74,8 %);
+- UE 239,5 M€ (18,6 %);
+- Italia 83,0 M€ (6,4 %);
 - non determinata 1,6 M€.
 
 L'infrastruttura in-house certa (77,6 M€) è italiana ed è contata a parte. Le percentuali del § 1 (extra-UE 47 %, Italia 39 %, UE 14 %) erano lorde e contavano 0,66 mld di in-house che B2 non conferma: da questa versione vale la tabella unica.
@@ -402,7 +402,7 @@ L'infrastruttura in-house certa (77,6 M€) è italiana ed è contata a parte. L
 **Limiti:**
 - vale sui certi;
 - l'incerto (12,7 mld netti) vale ancora dieci volte il cloud certo;
-- L4 è a 99 CIG su 972, e la tabella si ricalcola a ogni avanzamento.
+- L4 non ha finito di leggere i 972 CIG, e la tabella si ricalcola a ogni avanzamento.
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -1051,3 +1051,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.19 | 2026-11-19 | § 2.8 aggiornato: L3 finito (3.540 CIG: 2.260 ICT non cloud, 308 non ICT, 972 a L4), arbitro L4 sui 5 disaccordi cloud (3 non cloud, 2 con quota cloud), L4 in corso; § 2.9 nuovo, livello B BDNCP (decisione di Fabio 19/11): quadro economico 1.281 CIG / 131,9 M€ fuori dalla misura cloud (campione 37/40), in-house ristretta con l'Indice PA (438 / 77,6 M€; 137 / 150,4 M€ privati, campione 40/40), durate effettive (quota 2024 −30 % sugli stessi CIG), PNRR (indicatori = flag, una sola via); R84 |
 | 0.19.1 | 2026-11-19 | revisione di coerenza: sintesi 0.1-0.8 e tabelle 0.3.1 (§ 3, § 4, § 8) marcate come superate; accesso civico «solo alla fine» (#78) al posto di «decisione di Fabio» (§ 1, § 4.3.3, § 4.11); P1 marcata decisa; 532 → 535 CIG in § 2; § 4.3 e rigenerazione 0.3.2 marcate concluse; limiti aggiornati (via 6 e L4 finiti, livelli non ancora uniti); registro in ordine |
 | 0.20 | 2026-11-19 | § 2.10 nuovo: tabella unica degli spostamenti per CIG fra tutti i livelli (#71), con priorità per forza della prova; dal 2024 netti massimali cloud certo 1,28 mld (era 1,09), in-house certo 0,08 (era 0,42), residuo S6 10,67 (era 11,70); 69 disaccordi, nessuno sul cloud; giurisdizione sul cloud certo extra-UE 75,6 %, UE 18,8 %, IT 5,5 % |
+| 0.20.1 | 2026-11-19 | § 2.10 ricalcolato con la verifica a mano dell'in-house (#52): Cloud Toscana è un accordo quadro aperto al mercato, CINECA un impianto per il proprio data center; 164 adesioni a Cloud Toscana nel cloud certo IT; cloud certo 1,29 mld netti, extra-UE 74,8 %, UE 18,6 %, IT 6,4 % |
