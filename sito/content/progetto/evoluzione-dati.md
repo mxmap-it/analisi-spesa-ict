@@ -2,7 +2,8 @@
 title: "Come cambiano i dati negli anni, e con loro l'attendibilità"
 date: 2026-11-03
 description: "Dal 2020 a oggi i dati ANAC sugli acquisti cambiano struttura: due dataset (CIG e SmartCIG) fino al 2023, il ciclo digitale dal 2024. Cosa c'è in ogni anno, cosa manca e quale attendibilità si può raggiungere."
-weight: 17
+weight: 26
+gruppo: misura
 ---
 
 La misura della spesa cloud parte dai contratti pubblici registrati presso ANAC. **Quei dati non sono uguali in tutti gli anni.** Cambiano i dataset, i campi disponibili e la possibilità di arrivare ai documenti. Di conseguenza cambia l'attendibilità che possiamo raggiungere. Questa pagina spiega come, anno per anno, e si aggiorna a ogni nuova misura.

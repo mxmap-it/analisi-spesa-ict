@@ -245,3 +245,9 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 **Chi:** Fabio («fai pure una bella revisione di coerenza di tutto ciò che c'è pubblicato»). **Come (Claude):** tre revisioni per sezione (progetto, rendiconti, convenzioni) contro i fatti attuali e le decisioni in vigore; correzioni nei generatori per le pagine generate; `tools/verifiche/link_sito.py` (link e ancore interni: da 16 + 26 rotti a 0), obbligatorio dopo ogni build (AGENTS § 6); cruscotto ANAC ripubblicato ogni giorno (`tools/pubblica_cruscotto.sh` nel cron delle metriche).
 **Correzione grave:** la griglia delle convenzioni contava come «inviate» 115 istanze di accesso civico mai inviate (bozze ritirate e annullate): ora 31 bozze, 0 inviate.
 **Perché:** il sito è pubblico e deve dire lo stato vero; i numeri superati restano visibili ma marcati, con il rimando alla Mappa dell'imbuto.
+
+## 2026-11-19 — Soglia G3/G4 a 40.000 € (Fabio)
+**Chi:** Fabio («Va bene»). **Decisione:** 40.000 € è il confine fra incerti significativi (G3) e coda (G4) del residuo S6; la coda G4 si stima dal campione. Era già in uso in tutte le versioni dell'imbuto come proposta. 500 € resta la soglia di misura (2/11).
+
+## 2026-11-19 — Campioni a cieco annotati da Claude; contratti ricercabili e annotabili da una dashboard (Fabio, #40 #53 #78)
+**Chi:** Fabio: «Sì, annotati da Claude, e servirà comunque che tutti i contratti siano ricercabili ed annotandoli a supporto con una Dashboard assieme alla pubblicazione dei risultati». **Decisione:** il campione a cieco «annotato da persone» del metodo v3 è sostituito dai campioni a cieco annotati da Claude (ciechi 1-6, settimo prima del rendiconto finale). Con la pubblicazione dei risultati serve una dashboard in cui **tutti** i contratti sono ricercabili e annotabili (da persone, a supporto e controllo): entra nella checklist del rendiconto del risultato parziale (#78), ticket #53.

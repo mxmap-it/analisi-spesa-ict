@@ -2,7 +2,8 @@
 title: "Acquisizione dei documenti: modalità a complessità crescente"
 date: 2026-10-29
 description: "Come troviamo il documento che chiarisce che cosa compra un contratto pubblico: dai dati strutturati al crawling di Amministrazione trasparente fino all'accesso civico generalizzato, in ordine di costo e complessità."
-weight: 18
+weight: 40
+gruppo: documenti
 ---
 
 Spesso il testo di un contratto in BDNCP non basta a dire **quale prodotto** si compra e **sotto quale giurisdizione** (esempio: «adesione alla convenzione PSN, piano dei fabbisogni …»: il PSN vende servizi italiani ed extra-UE). Serve un documento: la determina, il contratto, il piano dei fabbisogni, la scheda del prodotto.

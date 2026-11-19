@@ -1,139 +1,82 @@
 ---
-title: "L'imbuto: stato e primi numeri (2024-2025)"
+title: "L'imbuto: come funziona e dove siamo"
 date: 2026-11-03
-description: "Come i contratti ANAC dal 2020 vengono esclusi, inclusi o lasciati incerti, strato per strato. Prima quota di sovranità sulla spesa cloud identificata con certezza, forbice sull'incerto, precisione misurata, criticità aperte e azioni proposte."
-weight: 18
+lastmod: 2026-11-19
+description: "Come i contratti pubblici ANAC vengono esclusi, inclusi o lasciati incerti, strato per strato, con i numeri aggiornati dagli esiti: spesa ICT, cloud certo e sua giurisdizione, residuo incerto, livelli di raffinamento."
+weight: 11
+gruppo: inizio
 ---
 
-<style>
-.imb-bar{display:flex;align-items:center;gap:.5rem;margin:.25rem 0;font-size:.9rem}
-.imb-bar .lab{flex:0 0 15rem;max-width:45%}
-.imb-bar .trk{flex:1;background:#e8ecef;border-radius:3px;height:1.1rem;overflow:hidden;white-space:nowrap}
-.imb-bar .fill{height:100%;display:inline-block}
-.imb-bar .val{flex:0 0 4.5rem;text-align:right;font-variant-numeric:tabular-nums}
-.c-ex{background:#b3261e}.c-ue{background:#1f5fa8}.c-it{background:#2e7d32}.c-inc{background:#9e9e9e}
-.imb-leg span{display:inline-block;margin-right:1rem;font-size:.85rem}.imb-leg i{display:inline-block;width:.8rem;height:.8rem;margin-right:.3rem;vertical-align:middle}
-@media (max-width:600px){.imb-bar .lab{flex-basis:8rem}}
-</style>
+<!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py dagli esiti più recenti e da config/mappa-imbuto.yaml: non modificarla a mano. -->
 
-> **Numeri della versione 0.3.1 (3/11/2026), superati.** I numeri attuali (imbuto 0.3.4 del 18/11/2026, dal 2024: cloud certo 4.556 CIG per 1,21 miliardi più 0,66 miliardi in-house; giurisdizione degli inclusi certi extra-UE 47 %, Italia 39 %, UE 14 %) sono nella [Mappa dell'imbuto](/progetto/mappa-imbuto/) e nel rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/). Questa pagina resta come descrizione degli strati e come fotografia del 3/11.
+**Numeri aggiornati automaticamente dagli esiti** (imbuto-0.3.4 (2026-11-09) PROVA-A; fonte `esiti/2026-11-18/imbuto/strati.json`). Gli importi sono **dichiarati**, cioè il valore dei contratti e non la spesa di un anno. La mappa dei dati, dei limiti e delle mancanze è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Il dettaglio di ogni passaggio è nel rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/).
 
-**Risultati provvisori (versione 0.3.1).** Cifre misurate da noi sui file ANAC archiviati (**V**) con [`tools/analisi/imbuto.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/imbuto.py) versione 0.3.1; esiti in [`esiti/2026-11-03/imbuto/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/esiti/2026-11-03/imbuto). Sono **importi dichiarati**, non spesa liquidata. Le qualificazioni seguono i [criteri di sovranità](/progetto/criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
+## Che cosa misuriamo
 
-Il quadro sempre aggiornato è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/).
+Quanto spende la PA italiana in **servizi cloud** e in **infrastrutture informatiche proprie**, divisa per **giurisdizione del prodotto**: Italia, UE, extra-UE. La giurisdizione si attribuisce al prodotto comprato, non al rivenditore che lo fattura. Il cloud di Microsoft, Google, Amazon e Oracle è extra-UE chiunque lo rivenda, PSN compreso ([criteri di sovranità](/progetto/criteri-sovranita/)).
 
-## 1. In breve
+L'unità di misura è il **contratto** (CIG ANAC). Per ogni contratto ci sono due domande:
+1. **è cloud?** (asse A);
+2. **di quale giurisdizione?** (asse B).
 
-- Sul **cloud identificato con certezza** (~594 M€ nel 2024-2025) la quota **extra-UE è il 78 %**.
-- Ma il cloud certo è piccolo: l'**incerto vale circa 5 volte tanto** (~2,95 miliardi), soprattutto **PSN** (1,9 miliardi), di cui non sappiamo quale servizio sia stato comprato.
-- Per questo la quota extra-UE sul cloud complessivo sta oggi in una **forbice 13-96 %**. Per stringerla servono documenti che nei dati ANAC non ci sono: progetti PSN, carrelli delle licenze Microsoft. Molti non sono pubblicati: servirà l'accesso civico.
+## Come funziona
 
-## 2. Gli strati
+Ogni contratto passa per gli strati in ordine, e ogni strato lavora su ciò che resta dal precedente. Il principio (Fabio, 29/10/2026) è:
+1. escludere ciò che è **certamente fuori**;
+2. includere ciò che è **certamente dentro**;
+3. concentrare lo sforzo costoso **solo sull'incerto**.
 
-Ogni contratto passa per gli strati in ordine; ogni strato lavora sul residuo del precedente.
+| strato | che cosa contiene | dal 2024: CIG | dal 2024: mld € dichiarati |
+|---|---|---:|---:|
+| S0 | accordi quadro e convenzioni «padre»: massimali, contati nei contratti attuativi | 88.792 | — |
+| S1 | **esclusi con certezza**: non ICT (CPV, testo e lotto lo escludono insieme) | 3.209.583 | 1.274,5 |
+| S2 | sotto 500 € | 147.273 | — |
+| S3 | **inclusi** da convenzione o lotto noto ([iniziative](/progetto/iniziative-consip-cloud/)) | 891 | 3,61 |
+| S4 | **inclusi** per marchio del prodotto nell'oggetto ([metodo](/progetto/metodo-cloud-provider/)) | 8.370 | 3,63 |
+| S5 | ICT non cloud: hardware, reti, servizi applicativi, consulenza | 220.525 | 90,76 |
+| S6 | **residuo incerto**: PSN con servizio non noto, cloud senza provider, oggetto ICT con CPV non ICT | 59.406 | 16,37 |
 
-| strato | cosa contiene | 2024-2025 |
-|---|---|---|
-| S0 | accordi quadro e convenzioni padre: massimali, contati a parte | — |
-| S1 | esclusi con certezza: non ICT | 2,3 milioni di contratti |
-| S2 | sotto 500 € | — |
-| S3 | inclusi con certezza da convenzione o lotto noto ([base di conoscenza](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/iniziative_ict.yaml), 31 iniziative con dossier) | 539 M€ |
-| S4 | inclusi con certezza: marchio del prodotto nell'oggetto | 1.870 M€ |
-| S5 | ICT non cloud: hardware, reti, servizi applicativi, consulenza | 21,0 miliardi |
-| S6 | residuo incerto: PSN, cloud senza provider, oggetto ICT con CPV non ICT | 6,4 miliardi |
+La **spesa ICT** è S3-S6: **289.192 CIG per 114,4 miliardi dichiarati**, che scendono a circa **56 miliardi** al netto dei massimali di accordo quadro copiati sugli attuativi ([rendiconto, § 2.7](/rendiconti/imbuto-dove-siamo/)).
 
-Gli importi da 50 M€ in su sono **esclusi** e marcati «da verificare»: spesso sono il massimale dell'accordo quadro copiato sul contratto attuativo (raccomandazione R22).
+![Il disegno dell'imbuto con i numeri dal 2024](/img/mappa-imbuto/imbuto.svg)
 
-## 3. Spesa ICT identificata con certezza (S3 + S4, M€)
+## Il cloud certo e la sua giurisdizione
 
-<div class="imb-leg"><span><i class="c-ex"></i>extra-UE</span><span><i class="c-ue"></i>UE</span><span><i class="c-it"></i>Italia</span></div>
-<div class="imb-bar"><span class="lab">cloud (prodotto nominato)</span><span class="trk"><span class="fill c-ex" style="width:41.1%"></span><span class="fill c-ue" style="width:7.7%"></span><span class="fill c-it" style="width:4.2%"></span></span><span class="val">594</span></div>
-<div class="imb-bar"><span class="lab">licenze</span><span class="trk"><span class="fill c-ex" style="width:91.8%"></span><span class="fill c-ue" style="width:8.2%"></span></span><span class="val">1.122</span></div>
-<div class="imb-bar"><span class="lab">software infrastrutturale</span><span class="trk"><span class="fill c-ex" style="width:27.3%"></span></span><span class="val">306</span></div>
-<div class="imb-bar"><span class="lab">società in house</span><span class="trk"><span class="fill c-it" style="width:27.5%"></span></span><span class="val">308</span></div>
-<div class="imb-bar"><span class="lab">servizi professionali sul prodotto</span><span class="trk"><span class="fill c-ex" style="width:5.3%"></span><span class="fill c-ue" style="width:1.7%"></span><span class="fill c-it" style="width:.7%"></span></span><span class="val">87</span></div>
+Dal 2024 sono certi:
+- **1,21 miliardi** di cloud (4.556 CIG);
+- **0,66 miliardi** di infrastruttura in-house (816 CIG).
 
-| voce | extra-UE | UE | Italia | totale |
-|---|---|---|---|---|
-| cloud (prodotto nominato) | 461 (**78 %**) | 86 | 47 | 594 |
-| licenze | 1.030 | 92 | — | 1.122 |
-| software infrastrutturale | 306 | — | — | 306 |
-| società in house | — | — | 308 | 308 |
-| servizi professionali sul prodotto | 60 | 19 | 8 | 87 |
+L'in-house va letto con cautela, per due motivi:
+- **0,36 miliardi** stanno in pochi contratti con importo da verificare. Sono grandi affidamenti come Cloud Toscana e un impianto energetico di CINECA, da rivedere uno per uno.
+- **Il livello B** ha controllato chi vince gli altri 298 M€: solo **78 M€** vanno a società pubbliche dell'Indice PA. Il resto va a privati e torna da attribuire ([rendiconto, § 2.9](/rendiconti/imbuto-dove-siamo/)).
 
-Una licenza installata nei server dell'ente **non è cloud** (R-S5). Fra le licenze, quelle **Microsoft** valgono 611 M€. Dall'oggetto risultano 88 M€ di abbonamenti cloud espliciti (Microsoft 365, Dynamics) e 18 M€ di prodotti installati; **504 M€ hanno un oggetto generico** («licenze Microsoft»). Vedi §5.
+![Giurisdizione degli inclusi certi](/img/mappa-imbuto/giurisdizione.svg)
 
-## 4. Il cloud incerto e la forbice
+La precisione di S3 e S4 è misurata su sei campioni a cieco annotati da Claude. Quella pesata in euro è circa il 99 % ([metodo](/progetto/metodo-cloud-provider/)). Il settimo campione si fa una sola volta, prima del rendiconto finale.
 
-<div class="imb-bar"><span class="lab">cloud certo</span><span class="trk"><span class="fill c-ex" style="width:15.6%"></span><span class="fill c-ue" style="width:2.9%"></span><span class="fill c-it" style="width:1.6%"></span></span><span class="val">594</span></div>
-<div class="imb-bar"><span class="lab">PSN, servizio non noto</span><span class="trk"><span class="fill c-inc" style="width:65%"></span></span><span class="val">1.918</span></div>
-<div class="imb-bar"><span class="lab">cloud senza provider</span><span class="trk"><span class="fill c-inc" style="width:34.9%"></span></span><span class="val">1.031</span></div>
-<div class="imb-leg"><span><i class="c-inc"></i>incerto</span></div>
+## Che cosa resta incerto
 
-**Forbice.** Sul cloud (certo 594 + incerto ~2.950 M€) la quota extra-UE va dal **13 %**, se l'incerto fosse tutto sovrano, al **96 %**, se fosse tutto extra-UE.
+- **Licenze e software con marchio noto** ma cloud da accertare (Microsoft, Oracle, VMware): **3.889 CIG, 5,37 mld**.
+- **Residuo S6:** **59.406 CIG, 16,37 mld**, in quattro gruppi:
 
-Con la regola proposta per le licenze Microsoft (§5) la forbice diventerebbe circa **20-97 %**. La regola conta come cloud certo extra-UE gli 88 M€ di abbonamenti espliciti e tratta il generico come forbice 44-100 %. È una proposta: l'imbuto non la applica ancora.
+| gruppo | che cosa | CIG | mld € |
+|---|---|---:|---:|
+| G1 | oltre 5 milioni: letti uno per uno (via 6) | 227 | 8,53 |
+| G2 | informazione mancante (soprattutto PSN, servizio non noto) | 867 | 4,03 |
+| G3 | incerti fra 40.000 € e 5 milioni | 13.437 | 3,16 |
+| G4 | coda sotto i 40.000 €, stimata dal campione | 44.875 | 0,65 |
 
-## 5. Le due incertezze più grandi
+Per la maggior parte del residuo **l'atto di gara che direbbe il prodotto non è raggiungibile da fonti aperte**. Si lavora a livelli, dal più economico al più costoso ([raffinamento](/progetto/raffinamento-imbuto/)). L'accesso civico si usa **solo alla fine**, dopo il rendiconto del risultato parziale ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).
 
-### PSN: 1,9 miliardi, servizio non noto
-- Nell'oggetto ANAC il servizio è scritto per **l'1 % del valore** (692 contratti): quasi sempre solo «adesione PSN» o «contratto di utenza» ([analisi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/approfondimento-psn-ea.md)).
-- Il documento che lo dice è il **Progetto del piano dei fabbisogni** firmato da PSN. Il suo capitolo «Configuratore» riporta il riepilogo prezzi per famiglia di servizio:
-  - Industry Standard (IT);
-  - Secure Public Cloud su Azure, Google o AWS, e PSN Managed su Oracle (extra-UE);
-  - Hybrid;
-  - migrazione e servizi professionali.
-- **Campione** di 22 contratti fra i primi 100: Progetto trovato per 2, un addendum per 1 ([dettaglio](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/psn-progetti-campione.md)).
-  - Lo pubblicano soprattutto aziende sanitarie e regioni; ministeri e in-house no.
-  - Più determine dichiarano l'allegato ma non lo pubblicano.
-  - Il riepilogo è un'**immagine** dentro il PDF: si legge solo con OCR.
-- Esempi letti (V):
-  - Difesa: Secure Public Cloud su **Azure**, 1,7 M€ di canone su 3 anni.
-  - ARES Sardegna (una scheda su circa 10): Industry Standard e PSN Managed con canoni piccoli; prevalgono i servizi professionali.
-  
-  Cinque progetti non bastano per generalizzare.
+## Perché manca ancora la quota di sovranità sul cloud complessivo
 
-### Licenze Microsoft: 504 M€ con oggetto generico
-- I pesi di gara Consip (44 % «Microsoft 365» in EA6) sono **solo un minimo**, non una stima ([elaborazione](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/ea-quota-cloud-elaborazione.md)).
-- I carrelli letti finora (5 enti) sono quasi tutti abbonamenti cloud (ARPA Piemonte 96 %): è un'indicazione, non una stima.
-- Il valore è concentrato: i **primi 50 contratti fanno il 77 %**. Leggerli uno per uno li porta a «certo».
-
-## 6. Quanto è precisa (V, campione di 611 contratti)
-
-| strato | contratti nel campione | giurisdizione corretta | è davvero cloud o software? |
-|---|---|---|---|
-| S4 marchio | 371 | **94 %** (92-96 %) | 78 % (74-82 %) |
-| S3 convenzione | 13 | 7 su 7 | 7 su 13 |
-| S5 ICT non cloud | 71 | — | non cloud nell'89 % (79-94 %) |
-| S6 residuo | 149 | — | 106 cloud secondo il riferimento, fra cui 63 PSN |
-
-Intervalli di Wilson al 95 %. Il campione è stratificato: la precisione vale per strato.
-
-## 7. Criticità aperte e azioni proposte
-
-| # | criticità | peso | azione proposta | stato |
-|---|---|---|---|---|
-| 1 | PSN: servizio comprato non noto | 1,9 miliardi | Progetti dei piani dei fabbisogni: ricerca sui siti degli enti (copertura bassa), poi **accesso civico a PSN S.p.A. e al DTD** per il riepilogo prezzi di ogni contratto; bilancio PSN 2026 come controllo aggregato | campione fatto; accesso civico massivo **solo alla fine**, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026, #78) |
-| 2 | Licenze Microsoft con oggetto generico | 504 M€ | lettura dei primi 50 contratti (77 % del valore) e campione del resto; transato per famiglia da Consip (R23) | disegno pronto |
-| 3 | Cloud senza provider nell'oggetto | 1,0 miliardi | atti dei contratti (acquisizione a livelli L1-L7) | da avviare |
-| 4 | Importi anomali ≥ 50 M€ (massimali copiati, errori ×1000) | esclusi dai totali | regola unica: confronto col massimale del padre, revisione manuale dei casi estremi, totali con e senza | proposta |
-| 5 | «ICT altro» in S5 | 12,8 miliardi | scomposizione per escludere con certezza ciò che non è cloud | da avviare |
-| 6 | Oggetto ICT con CPV non ICT | 3,5 miliardi | vaglio a campione | da avviare |
-| 7 | SmartCIG (indispensabile per il 2020-2023) | — | aggiunta all'imbuto | da avviare |
-| 8 | Affidamenti intragruppo (es. Trenitalia → FSTechnology) | caso per caso | sapere come eroga l'affidatario | incerto |
-| 9 | Stato centrale: pagato ICT sopra i CIG. Con l'abbinamento per **codice fiscale** (giro 0.2) resta solo il **MEF**: 2024, quota dei CIG attivi 97 M€ contro 388 pagati; la Giustizia (315 pagati) era un artefatto della regola sul nome, ora 0,96 | circa 0,3 miliardi l'anno (MEF) | **denominatore BDAP** per ministero ([pagina BDAP](/progetto/bdap/), `tools/verifiche/bdap_ict_stato.py`, `bdap_cig_ministeri_cf.py`): rapporto quota/pagato per ministero ogni anno; per il MEF corrispettivi Sogei per committente (R65, R71): i CIG in-house Sogei con SA del MEF spiegano circa 26 M€ l'anno [stima], gli acquisti di Sogei come SA (circa 0,7 miliardi di quota 2024) non si attribuiscono e vanno tenuti fuori per non contare due volte | in corso (#67) |
-
-Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [Raccomandazioni](/progetto/raccomandazioni/) (fonte: [`richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml)). Nessuna è stata inviata.
+Sugli inclusi certi la quota si misura. Sul cloud complessivo, no: l'incerto vale più del certo. Serve prima unire i livelli di raffinamento in una sola tabella per contratto, così che ogni contratto conti una volta, e misurare ciò che resta. Fino ad allora pubblichiamo la quota sui certi e le dimensioni dell'incerto, senza forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
 
 ## Registro delle revisioni
 
 | data | modifica |
 |---|---|
 | 2026-11-03 | prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione |
-| 2026-11-03 | licenze separate dal cloud (Fabio): una licenza on-premise non è cloud; forbice ricalcolata sul solo cloud |
-| 2026-11-03 | criteri di sovranità semplificati applicati alla base di conoscenza (sicurezza da remoto ID 2296 sovrana, SPC Cloud lotto 1 italiano) |
-| 2026-11-03 | imbuto 0.3.1: il PSN con servizio non noto è «incerto», non più «Italia»; licenze da convenzione 539 M€; sintesi con grafici, campione dei progetti PSN, elaborazione sulle licenze Microsoft, criticità e azioni |
-| 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (gestionali ICT 1,14 mld nel 2024, seconda via CE3 0,98 mld) e copertura CIG per ministero (#67) |
-| 2026-11-09 | criticità 9 aggiornata col giro 0.2 di BDAP: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua dei contratti, Sogei; peso ridotto a circa 0,3 miliardi (#67) |
-| 2026-11-19 | rimando alla pagina di metodo sul raffinamento a livelli (L1-L4 e livello B BDNCP, #71 #74) |
-| 2026-11-19 | revisione di coerenza: avviso in testa (numeri 0.3.1 superati, rimando a mappa e rendiconto), accesso civico solo alla fine (#78), link assoluti, rimando alla pagina delle raccomandazioni |
+| 2026-11-03 | licenze separate dal cloud; criteri di sovranità semplificati; imbuto 0.3.1 (PSN incerto) |
+| 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (#67) |
+| 2026-11-19 | riscritta e generata dagli esiti (decisione di Fabio): imbuto 0.3.4, giurisdizione degli inclusi certi, residuo per gruppo, raffinamento a livelli; la forbice 13-96 % della 0.3.1 non è più pubblicata finché i livelli non sono uniti; le criticità passano nella Mappa |

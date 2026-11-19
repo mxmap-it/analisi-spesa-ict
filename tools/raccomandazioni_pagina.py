@@ -119,6 +119,8 @@ def data(v: dict) -> str:
             trovate.append(f"{a}-{int(m):02d}-{int(g):02d}")
     for p in re.findall(r"esiti/(20\d\d-\d\d-\d\d)/", testo(v.get("prova")) + testo(v.get("evidenza"))):
         trovate.append(p)
+    import datetime  # 19/11/2026: le date future citate nel testo sono scadenze, non la data del dato
+    trovate = [t for t in trovate if t <= datetime.date.today().isoformat()]
     return max(trovate) if trovate else _DATE_GIT.get(str(v.get("id")), "")
 
 
@@ -243,6 +245,8 @@ def pagina(voci: list[dict], rr: list[dict], avvisi: list[str]) -> str:
         "---",
         'title: "Raccomandazioni"',
         "date: 2026-11-09",
+        "weight: 50",
+        "gruppo: autorita",
         f"datiAl: {oggi}" if oggi else "",
         "---",
         "",

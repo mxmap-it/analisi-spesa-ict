@@ -1,0 +1,20 @@
+<div class="col-lg-6 col-md-6">
+  <div class="card-wrapper">
+    <div class="card card-bg rounded shadow-sm border-bottom-card">
+      <div class="card-body">
+        <div class="category-top">
+          <span class="category">{{ .Section | humanize }}</span>
+          <span class="data">{{ partial "date-it.html" (.Lastmod | default .Date) }}</span>
+        </div>
+        <h2 class="card-title h5"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="card-text">{{ with .Description }}{{ . | truncate 220 }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}</p>
+        {{ with .Params.pdf }}
+        <a class="read-more" href="{{ . | relURL }}" download>
+          <span class="text">{{ i18n "downloadPdfShort" }}</span>
+          <svg class="icon"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-download"></use></svg>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

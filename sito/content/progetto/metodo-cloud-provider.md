@@ -2,7 +2,8 @@
 title: "Come si riconosce il cloud provider in un contratto"
 date: 2026-10-28
 description: "Il metodo con cui attribuiamo un contratto pubblico al cloud provider il cui prodotto viene comprato: difficoltà, vie di analisi, verifica umana a campione, errori misurati, raccomandazioni per semplificare il monitoraggio."
-weight: 15
+weight: 20
+gruppo: misura
 ---
 **Stato: in validazione, regole v4.5 del 9 novembre 2026** (prima versione: regole v3 del 28/10/2026,
 [#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). Le precisioni citate sono
@@ -103,7 +104,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 | Versione | Campione | Annotazione | Precisione provider | Provider e tipo | Cloud sfuggito |
 |---|---|---|---|---|---|
 | v2 (27/10) | misura, 437 righe | Claude, **non cieca** | 94,6% | 86,6% | 20 su 124 non attribuiti |
-| v3 (28/10) | nuovo campione | persone, alla cieca | da misurare | da misurare | da misurare |
+| v3 (28/10) | nuovo campione | persone, alla cieca | sostituita dai campioni a cieco annotati da Claude (ciechi 1-6, regole v4.x), decisione di Fabio del 19/11/2026 | — | — |
 | lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
 | regole v4.3 (9/11) | quinto campione a cieco, 238 CIG | Claude, alla cieca, un annotatore | big tech 86,2 % (Wilson 79,7-90,9), 80,8 % in euro; pesata 93,9 % | — | big tech: 0 mancati su 125 (R Wilson 97,0-100) |
 | regole v4.4 (9/11) | sesto campione a cieco, 250 CIG | Claude, alla cieca, un annotatore | big tech 80,7 % (Wilson 73,4-86,4), 98,1 % in euro; pesata 89,4 % (99,0 % in euro) | — | big tech: 3 mancati su 116 (R 97,4 %, Wilson 92,7-99,1); nello strato N 3 su 80 |
@@ -321,7 +322,7 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 
 ## Cosa resta aperto
 
-- Misura v3 su campione nuovo, annotato alla cieca da persone.
+- Settimo campione a cieco, annotato da Claude, una sola volta prima del rendiconto finale (i campioni annotati da persone sono sostituiti da quelli di Claude: decisione di Fabio del 19/11/2026). Le persone intervengono a supporto: con la pubblicazione dei risultati tutti i contratti saranno ricercabili e annotabili in una dashboard ([#53](https://github.com/mxmap-it/analisi-spesa-ict/issues/53)).
 - Via 4 (PSN voce per voce); misura della via 6 (modello linguistico), già in uso sul residuo.
 - Tabella completa dei lotti: altre iniziative Consip (licenze, SaaS, data center), SPC Cloud,
   convenzioni regionali.
@@ -345,3 +346,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Regole v4.5 dalle classi del cieco 6 (servizio davanti al marchio, supporto del produttore = prodotto per licenze e VMware, omonimie GCP/Next Cloud/AFI, mancati ServiceNow/SQLSRV/Google Suite, alias in-house nel confronto): cieco 6 big tech 110/20/6 → 113/4/3, in euro 98,3 → 99,8 % (ora di sviluppo); ciechi 1-5 e top-20 invariati; 162/162 casi; hosting dentro il servizio di un terzo lasciato come confine (#70). Conclusione: precisione in euro pesata ~99 % già con v4.4; il settimo cieco si fa una sola volta prima del rendiconto finale. Mappa rivenditori da rifare (v4.5) dopo la prova imbuto | #40, #72, `esiti/2026-11-09/regole-v4.5/` |
 | 19/11/2026 | Rimando al raffinamento a livelli dell'imbuto (L1-L4, livello B con i dataset BDNCP: quadro economico, in-house per codice fiscale, durate effettive, PNRR su tre vie) | #71, #74, [raffinamento-imbuto](/progetto/raffinamento-imbuto/) |
 | 19/11/2026 | Revisione di coerenza: stato in testa aggiornato alle regole v4.5, via 6 in uso (non più «da implementare») | — |
+| 19/11/2026 | Campioni a cieco annotati da Claude al posto di quelli «da persone» (decisione di Fabio); dashboard per ricercare e annotare tutti i contratti con la pubblicazione dei risultati | #40, #53, #78 |

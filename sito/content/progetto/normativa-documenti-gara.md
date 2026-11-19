@@ -2,7 +2,8 @@
 title: "Scheda normativa: accessibilità dei documenti di gara dal link PVL"
 date: 2026-11-04
 description: "Norme violate quando il link ai documenti di gara manca o non porta ai documenti, chi ne risponde, chi vigila, giurisprudenza e rimedi."
-weight: 20
+weight: 42
+gruppo: documenti
 ---
 
 <!-- Generata da tools/pagina_scheda_normativa.py: si modifica la sorgente, non questa pagina. -->

@@ -51,7 +51,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - **55.946 CIG per 12,5 miliardi** nel residuo S6;
   - **3.515 CIG per 6,5 miliardi** di licenze, software e PSN con marchio o lotto noti ma con il cloud ancora da accertare [V].
 - **Giurisdizione degli inclusi certi dal 2024:** extra-UE 0,87 miliardi (45 %), IT 0,80 (41 %), UE 0,26 (14 %) [V]. È provvisoria: la precisione di S3 e S4 è misurata solo sul campione stratificato (§ 4).
-- **Soglia:** 500 € toglie 147.715 CIG e una quota d'importo trascurabile. Alzarla a 5.000 € toglierebbe un altro 6 % dei CIG ICT per lo 0,04 % degli euro [V]. **Proposta:** tenere 500 € per la misura e usare 40.000 € solo per separare G3 da G4 (§ 3).
+- **Soglia:** 500 € toglie 147.715 CIG e una quota d'importo trascurabile. Alzarla a 5.000 € toglierebbe un altro 6 % dei CIG ICT per lo 0,04 % degli euro [V]. **Deciso:** 500 € per la misura e 40.000 € solo per separare G3 da G4 (decisione del 19/11, § 3).
 - **Tetti separati dalla spesa (nuovo in 0.2):** dei 2.130 CIG sopra 50 milioni, 781 sono tetti certi per 178 miliardi, 32 sono contratti aggiudicati e 1.317 restano incerti [V]. Negli strati ICT S3-S6 gli euro dal 2024 scendono da **113,3 a 76,5 miliardi**, di cui 33,6 ancora incerti (§ 2.2).
 - **Tetti, precisione e revisione (nuovo in 0.3):** su un campione stratificato giudicato sugli atti, T4 accordo quadro e T3 non tondo risultano precisi al 100 % (intervallo 80-100 %) e T4 concessione al 73 % (48-89 %). T3 con importo tondo si ferma al 53 % ed è ristretto [V]. Con le regole v2, i dati PVL e la revisione degli incerti ICT (10 errori d'importo per 14,1 mld), **S3-S6 dal 2024 scende a 58,2 miliardi**, di cui 14,4 ancora incerti in 80 CIG (§ 2.3).
 - **Concessioni, quadro economico, CUP (nuovo in 0.4):**
@@ -358,10 +358,10 @@ Lettura:
 - 167 CIG sopra i 50 milioni valgono il 64 % degli euro, e sono quasi tutti massimali;
 - la soglia di 500 € decisa il 2/11 è già quasi senza costo in euro.
 
-**Proposta, da decidere con Fabio:**
-- tenere 500 € come soglia di misura;
-- tenere 40.000 € come confine G3/G4: la coda G4 si stima dal campione invece di leggerla;
-- trattare a mano tutto ciò che supera i 5 milioni (G1).
+**Soglie decise:**
+- 500 € come soglia di misura (decisione del 2/11);
+- **40.000 € come confine G3/G4** (decisione di Fabio del 19/11/2026): la coda G4 si stima dal campione invece di leggerla;
+- oltre i 5 milioni (G1) si legge tutto, contratto per contratto (fatto con la via 6).
 
 ## 4. Il residuo per gruppo (dal 2024) e la precisione degli strati
 

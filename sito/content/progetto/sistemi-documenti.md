@@ -2,7 +2,8 @@
 title: "Dove sono i documenti di gara: il link per CIG e la mappa dei sistemi"
 date: 2026-11-04
 description: "Quota dei CIG 2024-2026 con il link ai documenti di gara pubblicato da ANAC (Pubblicità a valore legale), e mappa dei 36.888 domini e piattaforme a cui punta."
-weight: 19
+weight: 41
+gruppo: documenti
 ---
 
 Versione 1.0 del 4/11/2026 (#57). Metodo e ripetizione: [`report/metodo/acquisizione/dettaglio-cig.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/dettaglio-cig.md).

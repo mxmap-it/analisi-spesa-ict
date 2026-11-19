@@ -2,7 +2,8 @@
 title: "Mirror pubblico ANAC: progetto"
 date: 2026-11-06
 description: "Stato del mirror sul server, requisiti per renderlo usabile da terzi, opzioni di hosting con costi e limiti, scelta proposta. Decisione a Fabio."
-
+weight: 36
+gruppo: dati
 ---
 
 **Versione 0.1 del 6/11/2026 (#17), proposta per Fabio.** I file del mirror non sono ancora serviti in pubblico (sono

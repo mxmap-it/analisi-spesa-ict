@@ -2,6 +2,8 @@
 title: "BDAP, la Banca dati delle amministrazioni pubbliche"
 date: 2026-11-09
 description: "Che cosa c'è in BDAP (MEF-RGS), come si scarica, che difetti ha, e come entra nell'imbuto della spesa ICT come denominatore dello Stato centrale e della sanità."
+weight: 33
+gruppo: dati
 ---
 
 **Versione 0.4 del 10/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).

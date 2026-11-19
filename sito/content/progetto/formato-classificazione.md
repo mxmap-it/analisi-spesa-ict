@@ -2,7 +2,8 @@
 title: "Formato della classificazione e artefatti intermedi"
 date: 2026-10-29
 description: "Come documentiamo ogni classificazione di un CIG (esito, attendibilità, passaggi, fonti) e i collegamenti CIG → atti, in formati aperti riusabili da terzi."
-weight: 17
+weight: 24
+gruppo: misura
 ---
 
 Ogni numero che pubblichiamo deriva da una classificazione per contratto (CIG). Per renderla **verificabile, contestabile e riprendibile da terzi con altri software** pubblichiamo, oltre ai risultati, gli **artefatti intermedi** in formato strutturato (JSON Lines, una riga per record) con schema JSON.

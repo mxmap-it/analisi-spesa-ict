@@ -2,7 +2,8 @@
 title: "Criteri di sovranità: quando una spesa cloud è sovrana"
 date: 2026-11-03
 description: "Le regole con cui qualifichiamo come sovrana, europea o extra-UE una spesa cloud della PA: chi eroga il servizio, chi lo controlla, che ruolo ha. Eccezioni, casi particolari, incertezze. Documento aperto a critiche e proposte."
-weight: 16
+weight: 21
+gruppo: misura
 ---
 
 ## In sintesi

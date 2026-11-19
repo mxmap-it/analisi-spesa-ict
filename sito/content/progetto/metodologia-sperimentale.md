@@ -2,7 +2,8 @@
 title: "Metodologia sperimentale in corso"
 date: 2026-10-29
 description: "Stato del lavoro sperimentale sulla classificazione dei contratti cloud: regole, modelli linguistici con ricerca delle fonti, verifica della confidenza, base di conoscenza, analisi delle infrastrutture, modelli tabulari, tetto di computazione."
-weight: 15
+weight: 25
+gruppo: misura
 ---
 
 > **Stato al 2/11/2026.** Il lavoro è andato avanti: regole v4.5 e sei campioni a cieco ([metodo di attribuzione](/progetto/metodo-cloud-provider/)), via 6 in uso sul residuo, raffinamento a livelli ([Raffinamento dell'imbuto](/progetto/raffinamento-imbuto/)), quadro aggiornato nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Le sezioni 5 e 11 sono aggiornate al 19/11; il resto descrive il disegno di partenza.
@@ -154,7 +155,7 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 ## 11. Cosa resta da decidere
 
-- annotatori umani per la revisione alla cieca (la pagina pubblica per i volontari c'è: [annotazioni](/annotazioni/));
+- la revisione alla cieca la fa Claude (decisione di Fabio del 19/11/2026); le persone annotano a supporto, e con la pubblicazione dei risultati tutti i contratti saranno ricercabili e annotabili in una dashboard ([#53](https://github.com/mxmap-it/analisi-spesa-ict/issues/53); oggi la pagina [annotazioni](/annotazioni/) copre i campioni);
 - soglia di precisione per usare l'«alta» del modello nei numeri;
 - esito della sperimentazione TabICL;
 - per Cloud Toscana, se chiedere l'accesso agli atti all'offerta tecnica;

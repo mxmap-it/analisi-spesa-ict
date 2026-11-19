@@ -2,6 +2,8 @@
 title: "Perimetro ICT: lista bianca dei CPV"
 date: 2026-11-09
 description: "La lista bianca dei codici CPV che definisce il perimetro ICT, le esclusioni verificate, le decisioni prese e il loro effetto misurato."
+weight: 22
+gruppo: misura
 ---
 
 **Versione 0.3 del 2026-11-09** · configurazione [`config/perimetro_cpv.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/perimetro_cpv.yaml) · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44) · misure nel rendiconto [Perimetro ICT e attendibilità del CPV](/rendiconti/perimetro-cpv/) (bozza)

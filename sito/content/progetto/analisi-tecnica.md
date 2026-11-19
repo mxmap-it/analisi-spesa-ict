@@ -1,6 +1,8 @@
 ---
 title: "Analisi tecnica: fonti, accesso, strumenti"
 date: 2026-10-26
+weight: 32
+gruppo: dati
 ---
 
 L'analisi tecnica che sta alla base del progetto: quali dati esistono, come si ottengono, quali

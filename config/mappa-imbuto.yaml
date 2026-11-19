@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.3"
+versione: "0.4"
 aggiornato: 2026-11-19
 
 esiti:
@@ -298,7 +298,7 @@ mancanze:
     peso_mld: null
     gravita: media
     perche: "Se l'esclusione sbaglia anche lo 0,1 %, qualche migliaio di contratti ICT sparisce senza traccia."
-    come: "Campione casuale di circa 400 CIG di S1 annotato da volontari: con 0 errori il limite superiore è circa 1 %."
+    come: "Campione casuale di circa 400 CIG di S1 annotato da Claude a cieco (con verifica a campione da persone): con 0 errori il limite superiore è circa 1 %."
     ticket: ["#77", "#66"]
     stato: aperta
   - id: M6
@@ -364,8 +364,26 @@ mancanze:
     come: "Portare i tre ingressi nell'archivio con sha256 o in git; scrivere ict.csv ordinato per anno e CIG con sha256 canonico; arrotondare gli euro al centesimo; rifare il test (tools/verifiche/ripetibilita.sh) a ogni versione."
     ticket: ["#71", "#78"]
     stato: aperta
+  - id: M13
+    titolo: "Contratti non ricercabili né annotabili uno per uno dal pubblico"
+    peso: "oggi la pagina annotazioni copre solo i campioni; la tabella per CIG è nei file, non in una dashboard"
+    peso_mld: null
+    gravita: media
+    perche: "Chi legge i risultati deve poter cercare un contratto, vedere chi ha deciso cosa e segnalare un errore: è il controllo pubblico sul metodo."
+    come: "Dashboard con tutti i CIG dell'imbuto (ricerca, filtri per strato e livello, esito e via di ogni livello, link agli atti archiviati) e annotazione a supporto; esce con il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026)."
+    ticket: ["#53", "#78"]
+    stato: aperta
 
 registro:
+  - {data: 2026-11-19, versione: "0.4", modifica: "Mancanza M13 (dashboard per ricercare e annotare tutti i contratti, decisione di Fabio); M5 senza il rimando ai volontari."}
   - {data: 2026-11-19, versione: "0.3", modifica: "Esito del test di ripetibilità (tutti i numeri riprodotti) e mancanza M12; link alle schede dei problemi e alle raccomandazioni sul sito."}
   - {data: 2026-11-19, versione: "0.2", modifica: "Decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78); M1 e M2 aggiornate."}
   - {data: 2026-11-19, versione: "0.1", modifica: "Prima versione (punto nave chiesto da Fabio il 19/11): dataset e relazioni, disegno con L1-L4 e livello B, limiti, 11 mancanze con gravità e piano, ripetibilità."}
+
+# Registro della pagina «L'imbuto: come funziona e dove siamo» (sito/content/progetto/imbuto.md, generata dallo stesso script)
+pagina_imbuto:
+  registro:
+    - {data: 2026-11-03, modifica: "prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione"}
+    - {data: 2026-11-03, modifica: "licenze separate dal cloud; criteri di sovranità semplificati; imbuto 0.3.1 (PSN incerto)"}
+    - {data: 2026-11-09, modifica: "criticità 9: denominatore BDAP dello Stato centrale (#67)"}
+    - {data: 2026-11-19, modifica: "riscritta e generata dagli esiti (decisione di Fabio): imbuto 0.3.4, giurisdizione degli inclusi certi, residuo per gruppo, raffinamento a livelli; la forbice 13-96 % della 0.3.1 non è più pubblicata finché i livelli non sono uniti; le criticità passano nella Mappa"}

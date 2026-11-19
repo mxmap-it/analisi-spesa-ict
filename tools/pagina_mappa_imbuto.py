@@ -3,7 +3,7 @@
 
 Ingressi:  config/mappa-imbuto.yaml (dataset, relazioni, livelli, mancanze: la fonte unica, si aggiorna a mano)
            esiti più recenti dell'imbuto e dei livelli (percorsi nella sezione `esiti` del YAML)
-Uscite:    sito/content/progetto/mappa-imbuto.md
+Uscite:    sito/content/progetto/mappa-imbuto.md, sito/content/progetto/imbuto.md (pagina «L'imbuto», dal 19/11/2026)
            sito/static/img/mappa-imbuto/{imbuto,relazioni,mancanze}.svg
 Deterministico: stessi ingressi, stessi file. Solo libreria standard + PyYAML, nessun programma esterno.
 Uso:  python3 tools/pagina_mappa_imbuto.py   poi   hugo --source sito --minify --cleanDestinationDir
@@ -57,6 +57,13 @@ def numeri():
         return next(v for k, v in a.items() if k.startswith(prefisso))
     n["asse_a"] = {"cloud": trova("incluso certo (cloud)"), "inhouse": trova("incluso certo (infrastruttura"),
                    "marchio": trova("incerto (marchio"), "s5": trova("ICT non cloud"), "s6": trova("incerto (residuo")}
+    n["giurisdizione"] = {r["chiave"][1]: (r["cig"], r["euro"] / 1e9) for r in st["asse_b_inclusi_certi"] if r["chiave"][0] == "dal-2024"}
+    g = collections.defaultdict(lambda: [0, 0.0])
+    for r in st["gruppi_residuo"]:
+        if r["chiave"][0] == "dal-2024":
+            g[r["chiave"][1]][0] += r["cig"]; g[r["chiave"][1]][1] += r["euro"] / 1e9
+    n["gruppi"] = dict(g)
+    n["versione_imbuto"] = st.get("versione_imbuto", "")
     n["fonti"]["l2"] = leggi(CFG["esiti"]["raffinamento_l2"])[1]
     l3, p = leggi(CFG["esiti"]["raffinamento_l3"]); n["fonti"]["l3"] = p
     if l3:
@@ -299,7 +306,8 @@ title: "Mappa dell'imbuto: dati, relazioni, limiti e mancanze"
 date: 2026-11-19
 lastmod: {agg}
 description: "Il punto di riferimento sempre aggiornato: quali dataset usa l'imbuto e come si collegano, il disegno dei livelli con i numeri, i limiti di ogni fonte, le mancanze con gravità e piano per risolverle, cosa è ripetibile."
-weight: 17
+weight: 10
+gruppo: inizio
 ---
 
 <!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py da config/mappa-imbuto.yaml e dagli esiti: non modificarla a mano. -->
@@ -412,12 +420,122 @@ Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è 
     return "\n".join(L) + "\n"
 
 
+# ------------------------------------------------------------------ pagina «L'imbuto» (riscritta il 19/11/2026, decisione di Fabio)
+def svg_giurisdizione(n):
+    gj = n["giurisdizione"]; tot = sum(v for _, v in gj.values())
+    parti = [("extra-UE", gj.get("EXTRA-UE", (0, 0)), "#b3261e"), ("UE", gj.get("UE", (0, 0)), "#1f5fa8"), ("Italia", gj.get("IT", (0, 0)), "#2e7d32")]
+    W = 1000; o = [testo(20, 24, f"Giurisdizione del prodotto negli inclusi certi dal 2024: {it(tot, 2)} mld (cloud + infrastruttura in-house)", 14, "bold")]
+    x = 20
+    for nome, (c, v), col in parti:
+        w = 960 * v / tot
+        o.append(f'<rect x="{x:.1f}" y="40" width="{w:.1f}" height="40" fill="{col}"/>')
+        if w > 120:
+            o.append(testo(x + 10, 66, f"{nome} {it(100 * v / tot)} %", 15, "bold", "#ffffff"))
+        x += w
+    y = 110
+    for i, (nome, (c, v), col) in enumerate(parti):
+        cx = 20 + i * 320
+        o.append(f'<rect x="{cx}" y="{y - 12}" width="14" height="14" fill="{col}"/>')
+        o.append(testo(cx + 20, y, f"{nome}: {it(v, 2)} mld, {it(c)} CIG", 13))
+    return svg(W, y + 14, "".join(o), "Giurisdizione degli inclusi certi")
+
+
+def pagina_imbuto(n):
+    R_ = CFG.get("pagina_imbuto", {})
+    st = n["strati"]; aa = n["asse_a"]; gr = n["gruppi"]
+    ict_eu = sum(st[k][1] for k in ("S3", "S4", "S5", "S6"))
+    L = []; a = L.append
+    a(f'''---
+title: "L'imbuto: come funziona e dove siamo"
+date: 2026-11-03
+lastmod: {CFG["aggiornato"]}
+description: "Come i contratti pubblici ANAC vengono esclusi, inclusi o lasciati incerti, strato per strato, con i numeri aggiornati dagli esiti: spesa ICT, cloud certo e sua giurisdizione, residuo incerto, livelli di raffinamento."
+weight: 11
+gruppo: inizio
+---
+
+<!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py dagli esiti più recenti e da config/mappa-imbuto.yaml: non modificarla a mano. -->
+
+**Numeri aggiornati automaticamente dagli esiti** ({n["versione_imbuto"]}; fonte `{n["fonti"]["strati"]}`). Gli importi sono **dichiarati**, cioè il valore dei contratti e non la spesa di un anno. La mappa dei dati, dei limiti e delle mancanze è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Il dettaglio di ogni passaggio è nel rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/).
+
+## Che cosa misuriamo
+
+Quanto spende la PA italiana in **servizi cloud** e in **infrastrutture informatiche proprie**, divisa per **giurisdizione del prodotto**: Italia, UE, extra-UE. La giurisdizione si attribuisce al prodotto comprato, non al rivenditore che lo fattura. Il cloud di Microsoft, Google, Amazon e Oracle è extra-UE chiunque lo rivenda, PSN compreso ([criteri di sovranità](/progetto/criteri-sovranita/)).
+
+L'unità di misura è il **contratto** (CIG ANAC). Per ogni contratto ci sono due domande:
+1. **è cloud?** (asse A);
+2. **di quale giurisdizione?** (asse B).
+
+## Come funziona
+
+Ogni contratto passa per gli strati in ordine, e ogni strato lavora su ciò che resta dal precedente. Il principio (Fabio, 29/10/2026) è:
+1. escludere ciò che è **certamente fuori**;
+2. includere ciò che è **certamente dentro**;
+3. concentrare lo sforzo costoso **solo sull'incerto**.
+
+| strato | che cosa contiene | dal 2024: CIG | dal 2024: mld € dichiarati |
+|---|---|---:|---:|
+| S0 | accordi quadro e convenzioni «padre»: massimali, contati nei contratti attuativi | {it(st["S0"][0])} | — |
+| S1 | **esclusi con certezza**: non ICT (CPV, testo e lotto lo escludono insieme) | {it(st["S1"][0])} | {it(st["S1"][1], 1)} |
+| S2 | sotto 500 € | {it(st["S2"][0])} | — |
+| S3 | **inclusi** da convenzione o lotto noto ([iniziative](/progetto/iniziative-consip-cloud/)) | {it(st["S3"][0])} | {it(st["S3"][1], 2)} |
+| S4 | **inclusi** per marchio del prodotto nell'oggetto ([metodo](/progetto/metodo-cloud-provider/)) | {it(st["S4"][0])} | {it(st["S4"][1], 2)} |
+| S5 | ICT non cloud: hardware, reti, servizi applicativi, consulenza | {it(st["S5"][0])} | {it(st["S5"][1], 2)} |
+| S6 | **residuo incerto**: PSN con servizio non noto, cloud senza provider, oggetto ICT con CPV non ICT | {it(st["S6"][0])} | {it(st["S6"][1], 2)} |
+
+La **spesa ICT** è S3-S6: **{it(sum(st[k][0] for k in ("S3", "S4", "S5", "S6")))} CIG per {it(ict_eu, 1)} miliardi dichiarati**, che scendono a circa **56 miliardi** al netto dei massimali di accordo quadro copiati sugli attuativi ([rendiconto, § 2.7](/rendiconti/imbuto-dove-siamo/)).
+
+![Il disegno dell'imbuto con i numeri dal 2024](/img/mappa-imbuto/imbuto.svg)
+
+## Il cloud certo e la sua giurisdizione
+
+Dal 2024 sono certi:
+- **{it(aa["cloud"][1], 2)} miliardi** di cloud ({it(aa["cloud"][0])} CIG);
+- **{it(aa["inhouse"][1], 2)} miliardi** di infrastruttura in-house ({it(aa["inhouse"][0])} CIG).
+
+L'in-house va letto con cautela, per due motivi:
+- **{it(aa["inhouse"][1] - n["b2"]["importo"] / 1e3, 2)} miliardi** stanno in pochi contratti con importo da verificare. Sono grandi affidamenti come Cloud Toscana e un impianto energetico di CINECA, da rivedere uno per uno.
+- **Il livello B** ha controllato chi vince gli altri {it(n["b2"]["importo"])} M€: solo **{it(n["b2"]["classi"].get("ipa", dict()).get("importo", 0))} M€** vanno a società pubbliche dell'Indice PA. Il resto va a privati e torna da attribuire ([rendiconto, § 2.9](/rendiconti/imbuto-dove-siamo/)).
+
+![Giurisdizione degli inclusi certi](/img/mappa-imbuto/giurisdizione.svg)
+
+La precisione di S3 e S4 è misurata su sei campioni a cieco annotati da Claude. Quella pesata in euro è circa il 99 % ([metodo](/progetto/metodo-cloud-provider/)). Il settimo campione si fa una sola volta, prima del rendiconto finale.
+
+## Che cosa resta incerto
+
+- **Licenze e software con marchio noto** ma cloud da accertare (Microsoft, Oracle, VMware): **{it(aa["marchio"][0])} CIG, {it(aa["marchio"][1], 2)} mld**.
+- **Residuo S6:** **{it(aa["s6"][0])} CIG, {it(aa["s6"][1], 2)} mld**, in quattro gruppi:
+
+| gruppo | che cosa | CIG | mld € |
+|---|---|---:|---:|
+| G1 | oltre 5 milioni: letti uno per uno (via 6) | {it(gr.get("G1-mega", (0, 0))[0])} | {it(gr.get("G1-mega", (0, 0))[1], 2)} |
+| G2 | informazione mancante (soprattutto PSN, servizio non noto) | {it(gr.get("G2-informazione-mancante", (0, 0))[0])} | {it(gr.get("G2-informazione-mancante", (0, 0))[1], 2)} |
+| G3 | incerti fra 40.000 € e 5 milioni | {it(gr.get("G3-incerti-significativi", (0, 0))[0])} | {it(gr.get("G3-incerti-significativi", (0, 0))[1], 2)} |
+| G4 | coda sotto i 40.000 €, stimata dal campione | {it(gr.get("G4-coda", (0, 0))[0])} | {it(gr.get("G4-coda", (0, 0))[1], 2)} |
+
+Per la maggior parte del residuo **l'atto di gara che direbbe il prodotto non è raggiungibile da fonti aperte**. Si lavora a livelli, dal più economico al più costoso ([raffinamento](/progetto/raffinamento-imbuto/)). L'accesso civico si usa **solo alla fine**, dopo il rendiconto del risultato parziale ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).
+
+## Perché manca ancora la quota di sovranità sul cloud complessivo
+
+Sugli inclusi certi la quota si misura. Sul cloud complessivo, no: l'incerto vale più del certo. Serve prima unire i livelli di raffinamento in una sola tabella per contratto, così che ogni contratto conti una volta, e misurare ciò che resta. Fino ad allora pubblichiamo la quota sui certi e le dimensioni dell'incerto, senza forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
+
+## Registro delle revisioni
+
+| data | modifica |
+|---|---|''')
+    for r in R_.get("registro", []):
+        a(f"| {r['data']} | {r['modifica']} |")
+    return "\n".join(L) + "\n"
+
+
 def main():
     n = numeri()
     IMG.mkdir(parents=True, exist_ok=True)
     for nome, f in (("imbuto", lambda: svg_imbuto(n)), ("relazioni", svg_relazioni), ("mancanze", svg_mancanze)):
         (IMG / f"{nome}.svg").write_text(f(), encoding="utf-8")
     PAGINA.write_text(pagina(n), encoding="utf-8")
+    (IMG / "giurisdizione.svg").write_text(svg_giurisdizione(n), encoding="utf-8")
+    (R / "sito/content/progetto/imbuto.md").write_text(pagina_imbuto(n), encoding="utf-8")
     print("scritti", PAGINA.relative_to(R), "e", len(list(IMG.glob("*.svg"))), "grafici")
 
 

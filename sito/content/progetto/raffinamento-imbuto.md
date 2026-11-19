@@ -2,7 +2,8 @@
 title: "Raffinamento dell'imbuto a livelli"
 date: 2026-11-19
 description: "Come i contratti rimasti nell'imbuto vengono esclusi o confermati con passaggi sempre più costosi: regole, segnali della Banca dati nazionale dei contratti pubblici, lettura con un modello linguistico, ricerca degli atti. Ogni passaggio è registrato e si rifà ogni anno con gli stessi comandi."
-weight: 19
+weight: 12
+gruppo: inizio
 ---
 
 **Versione 0.1, 19/11/2026** ([#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)).

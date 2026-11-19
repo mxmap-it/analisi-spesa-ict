@@ -3,7 +3,8 @@ title: "Metodo: documenti pubblicati e mancanti delle convenzioni ICT"
 date: 2026-11-06
 lastmod: 2026-11-19
 description: "Come censiamo, file per file, i documenti pubblicati e mancanti delle convenzioni e degli accordi quadro ICT: fonti, tre metodi, criticità 1-3, livelli [V]/[R], ricontrollo dal vivo, blocchi, accesso civico."
-weight: 25
+weight: 44
+gruppo: documenti
 ---
 
 Versione 1.4 del 19/11/2026 (#62). Si applica alla [base dati delle convenzioni](/convenzioni/), al

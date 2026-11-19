@@ -2,7 +2,8 @@
 title: "Iniziative Consip e PSN: cosa significano negli oggetti dei contratti"
 date: 2026-10-29
 description: "Tavola di lettura delle iniziative di acquisto centralizzato ICT (SPC Cloud, AQ IaaS/PaaS, PSN, SaaS PRINCO, Microsoft EA, LAN 8, Centralini, telefonia): prodotto, provider, giurisdizione e fonti."
-weight: 16
+weight: 23
+gruppo: misura
 ---
 **Stato: versione del 29 ottobre 2026, in lavorazione.** La base di conoscenza aggiornata è nel file dati qui sotto e nella sezione [Convenzioni](/convenzioni/). Le voci marcate *controvalidata* hanno due fonti
 indipendenti concordi. Le altre sono **da verificare** e non vanno usate come fatto.

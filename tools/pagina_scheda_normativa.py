@@ -18,7 +18,7 @@ DESTINAZIONE.write_text(
     f'title: "{titolo}"\n'
     "date: 2026-11-04\n"
     'description: "Norme violate quando il link ai documenti di gara manca o non porta ai documenti, chi ne risponde, chi vigila, giurisprudenza e rimedi."\n'
-    "weight: 20\n"
+    "weight: 42\ngruppo: documenti\n"
     "---\n\n"
     "<!-- Generata da tools/pagina_scheda_normativa.py: si modifica la sorgente, non questa pagina. -->\n\n"
     + corpo,

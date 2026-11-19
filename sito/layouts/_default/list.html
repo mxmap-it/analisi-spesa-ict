@@ -6,32 +6,28 @@
       {{ with .Content }}<div class="lead mb-4">{{ . }}</div>{{ end }}
     </div>
   </div>
+  {{ if .Params.gruppi }}
+  {{/* Sezione con gruppi (front matter `gruppi` dell'_index e `gruppo` delle pagine): tutte le pagine, per gruppo e peso. */}}
+  {{ $pagine := .Pages.ByWeight }}
+  {{ range .Params.gruppi }}
+  {{ $g := .id }}
+  {{ $qui := where $pagine "Params.gruppo" $g }}
+  {{ if $qui }}
+  <h2 class="h3 mt-5" id="{{ $g }}">{{ .titolo }}</h2>
+  {{ with .descrizione }}<p class="mb-3">{{ . }}</p>{{ end }}
+  <div class="row g-4">{{ range $qui }}{{ partial "scheda-elenco.html" . }}{{ end }}</div>
+  {{ end }}
+  {{ end }}
+  {{ $altre := where $pagine "Params.gruppo" "eq" nil }}
+  {{ if $altre }}
+  <h2 class="h3 mt-5">Altre pagine</h2>
+  <div class="row g-4">{{ range $altre }}{{ partial "scheda-elenco.html" . }}{{ end }}</div>
+  {{ end }}
+  {{ else }}
   <div class="row g-4 mt-2">
-    {{ range .Pages }}
-    <div class="col-lg-6 col-md-6">
-      <div class="card-wrapper">
-        <div class="card card-bg rounded shadow-sm border-bottom-card">
-          <div class="card-body">
-            <div class="category-top">
-              <span class="category">{{ .Section | humanize }}</span>
-              <span class="data">{{ partial "date-it.html" .Date }}</span>
-            </div>
-            <h2 class="card-title h5">
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </h2>
-            <p class="card-text">{{ .Summary | truncate 200 }}</p>
-            {{ with .Params.pdf }}
-            <a class="read-more" href="{{ . | relURL }}" download>
-              <span class="text">{{ i18n "downloadPdfShort" }}</span>
-              <svg class="icon"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-download"></use></svg>
-            </a>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {{ end }}
+    {{ range .Pages }}{{ partial "scheda-elenco.html" . }}{{ end }}
   </div>
   {{ template "_internal/pagination.html" . }}
+  {{ end }}
 </div>
 {{ end }}

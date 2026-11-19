@@ -2,7 +2,8 @@
 title: "Usi dei dataset"
 date: 2026-11-06
 description: "A che cosa servono, con certezza e potenzialmente, i dataset del mirror per i progetti dell'Osservatorio Nazionale Sovranità Digitale."
-
+weight: 31
+gruppo: dati
 ---
 
 **Versione 0.1 del 6/11/2026 (#17, #9).** Tabella e schede sono generate da

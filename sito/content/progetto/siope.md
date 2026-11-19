@@ -2,6 +2,8 @@
 title: "SIOPE, la spesa ICT pagata per ente"
 date: 2026-11-09
 description: "Che cosa c'è in SIOPE, quali codici gestionali sono ICT, quanto pagano in ICT gli enti non statali 2022-2025 e quanto dei loro pagamenti vedono i CIG ICT dell'imbuto."
+weight: 34
+gruppo: dati
 ---
 
 **Versione 0.3 del 10/11/2026** ([#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).

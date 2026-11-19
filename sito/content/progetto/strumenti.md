@@ -1,6 +1,8 @@
 ---
 title: "Strumenti: quali usiamo, quali no"
 date: 2026-10-26
+weight: 37
+gruppo: dati
 ---
 **Principio di progetto: scrivere meno codice possibile.** Riusiamo tutto ciò che è libreria o servizio invocabile e scriviamo solo ciò che non esiste: il codice che non si scrive non va mantenuto.
 
