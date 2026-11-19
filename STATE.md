@@ -2,12 +2,21 @@
 
 Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
-**Ultimo aggiornamento:** 2026-11-18 (ripresa dopo la migrazione del server del 17/11)
+**Ultimo aggiornamento:** 2026-11-19 sera
 
 ## 19/11/2026 sera — #74 chiuso, M12 mitigata, #73 quasi finito (agente)
 - **#74 chiuso:** B1 0.2 (`imbuto_bdncp.py`, esiti `esiti/2026-11-19/imbuto/bdncp/v0.2/`): 1.274 CIG / 130,6 M€ esclusi; campione a cieco 34/40 (Wilson 71-93 %); regola 0.3 in #80. SAL misto (5,06-19,17 mld, stima 10,71 [S]) e quadro economico (35,4 vs 38,2 mld, 373 CIG impossibili): `bdncp_sal_qe.py`, R87, rendiconto bdncp 0.3.
 - **M12 mitigata** (mappa 0.7): ict.csv ordinato per CIG in `imbuto.py` (produzione non rigenerata), euro al centesimo in `imbuto_strati.py`, ingressi fuori dal mirror in `config/ingressi-lavoro.yaml` + `tools/ingressi_lavoro.py` (git `dati/ingressi/`, cig_link.csv come blob). Resta il test completo alla prossima versione.
 - **#73:** ripasso L4 e Difesa finiti (Difesa tutta in timeout); riepilogo ed elenco unico del 19/11 (28.900 voci, verifica ok). **Stasera 21:05** `lavoro/residuo-s6/notte-20261119.sh` fa L4-js sui 133 enti rinviati per robots.txt, poi riepilogo/elenco del 20/11 (`FINITO-notte-20261120.txt`): poi aggiornare `acquisizione-documenti.md`, committare `esiti/2026-11-20/` e chiudere #73.
+
+## PUNTO DI RIPRESA 19/11/2026 sera («completa tutti i ticket aperti», Fabio)
+
+Sei filoni in parallelo (sottoagenti), tutti finiti; tabella della board con le domande per Fabio in `lavoro/triage/BOARD.md` (29 ticket aperti).
+- **#71 tabella unica degli spostamenti** (`tools/verifiche/imbuto_spostamenti.py`, esiti `esiti/2026-11-19/imbuto/spostamenti/`): unisce L2, L3, L4, B1 (v0.2), B2, licenze, via 6 controvalidata e verifiche a mano (`esiti/*/imbuto/*/spostamenti-*.csv`). Dal 2024 netti massimali: cloud certo **1,29 mld** (5.035 CIG; extra-UE 74,8 %, UE 18,6 %, IT 6,4 %), in-house certo 0,08, marchio da attribuire 1,80, residuo S6 10,67. **Rieseguirla a ogni avanzamento di L4** (pochi secondi), poi aggiornare a mano le cifre del § 2.10 del rendiconto imbuto e rigenerare la mappa.
+- Chiusi oggi: #11 #12 #13 #27 #28 #29 (mirror), #40 #41 #43 #45 #72 (prodotto), #53 (cruscotto dei contratti su https://annotazioni.51-158-36-151.sslip.io/contratti, indice `tools/cruscotto/indice_contratti.py`, ricostruzione a mano ~70 s), #74 (B1 0.2), #76 (SmartCIG), #77 (precisione S1 98,7 %), #23 #48 #59 #60 #61 #63 #64 #66. Nuovi: #79 (diagnostica regole per CIG), #80 (B1 0.3: «stanza server», «canone siti»).
+- In corso da soli: L4 sotto tetto giornaliero (guardiano */30); coda BDAP PDF/XLS fino al 20/11 mattina (`lavoro/mirror-completamento/STATO.md`, poi rilanciare una volta e `tools/verifiche/mirror_fonti.py`); giro notturno #73 alle 21:05 (`lavoro/residuo-s6/notte-20261119.sh`, poi chiudere #73).
+- M12 mitigata: rifare `tools/verifiche/ripetibilita.sh` alla prossima versione dell'imbuto.
+- Decisioni per Fabio (nuove): BDAP CSV vietati dal robots.txt (#25); 51 acquisti delle in-house per i propri DC (50,5 M€) come in-house; P2 CPV 64221 e telefonia/centralini (#77); marchio «Nuvola»; cron notturno dell'indice, dominio stabile e oscuramento persone fisiche (#53); più quelle in BOARD.md (#17 #20 #44 #54 #55 #56 #62 e comunicazioni #19 #21 #34-#37 #49 #69).
 
 ## PUNTO DI RIPRESA 18/11/2026
 
