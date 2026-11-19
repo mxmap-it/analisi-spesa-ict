@@ -1,0 +1,46 @@
+# Verifica per CIG della classe «in-house» dell'imbuto (#52, #71). Letta da tools/verifiche/inhouse_verifica.py.
+# Ogni riga: decisione presa su fonte pubblica archiviata (sha256), con il motivo. Stati dell'asse A come in
+# tools/verifiche/imbuto_spostamenti.py (fuori-misura, escluso-non-ict, ict-non-cloud, cloud-certo, inhouse-certo,
+# incerto-marchio, incerto-s6). importo vuoto = resta l'importo dell'imbuto.
+versione: "0.1"
+aggiornato: 2026-11-19
+
+cig:
+  B33988ECF0:
+    a: fuori-misura
+    importo: 0
+    giurisdizione: ""
+    motivo: >-
+      Accordo quadro (ANAC modalità 17 «accordo quadro»; TED: framework senza riapertura del confronto) a procedura
+      aperta di Regione Toscana, soggetto aggregatore, per il nuovo Sistema Cloud Toscana: 242,4 M€ sono il massimale
+      (proroga fino a 30 M€ compresa nel bando), contato nei contratti attuativi. Non è un affidamento in-house: il
+      bando chiede RTI con servizi cloud analoghi per 40 M€ e ISO 27001/27017/27018. Aggiudicazione non pubblicata
+      né in ANAC né in TED al 19/11/2026.
+    fonti:
+      - {url: "https://ted.europa.eu/it/notice/590066-2024/xml", sha256: 3fec18ae67fe9ba1aaf4d0f637399f65a72a78c2b62ce224c32172665bf380d4, nota: "bando TED 590066-2024 (1/10/2024)"}
+      - {url: "https://dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260701-cig_csv.zip", sha256: 925d561d26a5af5ba1ed9563ee67725566890f3de13d1419b5c43da98808991d, nota: "riga CIG: modalità ACCORDO QUADRO, procedura aperta, gara START 040961/2024"}
+  BCA58C49BB:
+    a: ict-non-cloud
+    importo: ""
+    giurisdizione: ""
+    motivo: >-
+      CINECA è la stazione appaltante, non il fornitore in-house: appalto di forniture a procedura aperta (CPV 31122100
+      pile a combustibile) per un impianto di generazione elettrica e termica a celle a combustibile (SOFC) a servizio
+      del data center CINECA-INFN al Tecnopolo DAMA di Bologna, in noleggio operativo per 120 mesi con lavori e
+      conduzione. È infrastruttura di un datacenter proprio (impianto energetico), non cloud e non in-house. 117,25 M€ è
+      la base d'asta su 10 anni (bando 7/8/2026, offerte entro 13/10/2026, nessun aggiudicatario): resta nell'inquadramento
+      dei datacenter propri, fuori dalla misura cloud.
+    fonti:
+      - {url: "https://dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20261001-cig_csv.zip", sha256: 204f820f5222f6c975c45998b2bd8f69bec0ca90a4cbeea55e7a25ec09c0924a, nota: "riga CIG: FORNITURE, CONTRATTO D'APPALTO, CPV 31122100, durata 120 mesi, 117.254.184,23 €"}
+
+# Adesioni al Sistema Cloud Toscana (contratto quadro 7154112FF8, RTI TIM-ESI-Kyndryl-Lutech-Dedalus; e AQ front-end
+# 94252656BA, RTI TAI-Engineering-Net7-Elite) marcate «in-house» dal nome: SCT è cloud sovrano IT (decisione di Fabio
+# del 29/10/2026, DECISIONI.md), non in-house. Il contratto quadro ammette 40 M€ di adesioni in tutto (testo del
+# contratto, conoscenza-iniziative.yaml) e la modifica del 2025 porta il valore a 103,45 M€ (TED 524607-2025):
+# un'adesione singola da 1 M€ in su di un ente piccolo è quasi certamente il massimale copiato.
+sct:
+  regex: "CLOUD\\s+TOSCAN|\\bSCT\\b"
+  soglia_importo_da_verificare: 1000000   # tranne Regione Toscana, Comune di Firenze, ESTAR (quote plausibili)
+  fonti:
+    - {url: "https://ted.europa.eu/it/notice/524607-2025/xml", sha256: 2ce832a58e94b517455c7704d1af8bf4f6e49fb640818d0d5c8682bbc227e9dd, nota: "modifica del contratto quadro 7154112FF8, RTI TIM con ESI, Kyndryl, Lutech, Dedalus; valore 103.454.991 €"}
+    - {url: "https://ted.europa.eu/it/notice/304720-2025/xml", sha256: af8045d5e8b55f6d948ea5fac2b0264df6ab9d284249c0f219da01622fc4b30d, nota: "rettifica del bando del nuovo AQ"}
