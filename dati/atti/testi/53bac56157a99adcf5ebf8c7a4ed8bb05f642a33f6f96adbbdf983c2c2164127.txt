@@ -1,0 +1,2713 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ Scheda Altri Bandi | Acquisti in rete 
+ 
+ 
+ 
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Vai al menu
+ 
+ 
+ Contenuto principale
+ 
+ 
+ Vai al footer
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ente appartenenza 
+ 
+ 
+ 
+ 
+ 
+ Consip 
+ 
+ 
+ Ministero dell'Economia e delle Finanze
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ ITA 
+ 
+ 
+ 
+ 
+ ITALIANO 
+ 
+ 
+ ENGLISH 
+ 
+ 
+ 
+
+ 
+ 
+ ENG 
+ 
+ 
+ 
+ 
+ ITALIANO 
+ 
+ 
+ ENGLISH 
+ 
+ 
+ 
+ 
+
+ {{ language === 'en' ? 'Sign in' : 'Accedi' }} -->
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0}"
+ data-cg-busy="{promise:detailPromiseMessaggi,templateUrl:'/opencms/opencms/system/modules/my.template/resources/busyTemplate_small.html'}"
+ >
+ 
+ 
+ {{model.numMessaggi}} 
+ Messaggi 
+ 
+ 
+ 
+ 
+ 
+ {{ model.personalInfoSession.personalInfo.nome | limitTo : 1 }}{{ model.personalInfoSession.personalInfo.cognome | limitTo : 1 }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ model.personalInfoSession.personalInfo.nome | limitTo : 1 }}{{ model.personalInfoSession.personalInfo.cognome | limitTo : 1 }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ model.userInfoSession.utente.email }} 
+ 
+ 
+ 
+ Stai operando come: 
+ {{ model.personalInfoSession.loginInfoBean.denominazioneRuolo }} 
+ 
+ 
+ 
+ 1">
+ 
+ 
+ Cambia profilo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cruscotto 
+ 
+ 
+ 
+ 
+ 
+ Carrello 
+ 
+ 
+ 
+ 
+ 
+ Liste MePA 
+ 
+ 
+ 
+ 
+ 
+ 
+ Esci 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ SU 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Espandi barra di navigazione 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ APRI 
+ 
+ 
+ 
+ {{ model.user.personalInfo.nome | limitTo:1}}{{model.user.personalInfo.cognome | limitTo:1 }}
+ 
+ 
+
+ 
+
+
+ 
+
+
+
+
+ 
+ 
+ -->
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acquista 
+ 
+ 
+ 
+ Naviga per strumento
+ 
+ 
+ Consulta l'elenco delle iniziative e scopri se sono già
+ attive o se lo saranno a breve. Dalla scheda delle
+ iniziative puoi accedere al catalogo o avviare una
+ negoziazione.
+ 
+ 
+ 
+ Mercato elettronico 
+ 
+ 
+ MePALight 
+ 
+ 
+ Convenzioni 
+ 
+ 
+ Sistema dinamico 
+ 
+ 
+ Accordi quadro 
+ 
+ 
+ 
+ Tutte le iniziative d'acquisto 
+ 
+ 
+ 
+ Scopri come acquistare 
+ 
+
+ Come Acquistare -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Naviga per area merceologica
+ 
+ 
+ 
+ Consulta la nostra offerta per le diverse aree merceologiche.
+ 
+ 
+ Scopri 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acquisti in rete per te
+ 
+ 
+ 
+ 
+ Scopri le iniziative più adatte alla tua Amministrazione.
+ 
+ Scopri le iniziative 
+ 
+ 
+ 
+ 
+ 
+ 
+ Piano gare
+ 
+ 
+ 
+ 
+ Consulta il Piano gare per conoscere la pianificazione dell’anno.
+ 
+ Scopri tutte le gare pianificate 
+ 
+ 
+ 
+ 
+ 
+ 
+ Questionari
+ 
+ 
+ 
+ 
+ 
+ Partecipa alle indagini rivolte alle Pubbliche Amministrazioni.
+ 
+ 
+ Partecipa 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Vendi 
+ 
+ 
+ 
+ Naviga per strumento
+ 
+ 
+ Consulta l'elenco dei bandi. 
+ Dalle schede puoi avviare, a seconda dello strumento, la procedura di partecipazione alla gara o di abilitazione al bando. 
+ Puoi consultare anche le gare pubblicate da altre PA - Altri bandi - o le Richieste di offerta del MePA aperte a tutti gli operatori economici.
+ 
+ 
+ 
+ Abilitati al Mercato elettronico 
+ 
+ 
+ 
+ Abilitati al Sistema dinamico
+ 
+ 
+ 
+ Partecipa alle gare delle Convenzioni 
+ 
+ 
+ Partecipa alle gare degli Accordi quadro 
+ 
+ 
+ Partecipa agli Altri bandi 
+ 
+ 
+ Se sei abilitato al MePA, rispondi alle RDO APERTE 
+ 
+ 
+ Tutti i bandi
+ 
+ 
+ 
+ Scopri come vendere
+ 
+ 
+
+ Come Vendere -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Naviga per area merceologica
+ 
+ 
+ 
+ Consulta la nostra offerta per le diverse aree merceologiche.
+ 
+ 
+ Scopri 
+ 
+ 
+ 
+ 
+ 
+ 
+ Avvisi di preinformazione 
+ 
+ 
+ 
+ 
+ Consulta gli avvisi di preinformazione pubblicati.
+ 
+ Scopri tutte le preinformative 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Consultazioni del mercato
+ 
+ 
+ 
+ 
+ 
+ Scopri le consultazioni del mercato attive nel tuo settore.
+ 
+ Scopri le consultazioni 
+ 
+ 
+ 
+ 
+ 
+ 
+ Piano gare 
+ 
+ 
+ 
+ 
+ 
+ Consulta il Piano gare per conoscere la pianificazione delle gare in pubblicazione nell'anno.
+ 
+ Scopri tutte le gare pianificate 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Media 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Notizie
+ 
+ 
+ 
+ 
+ 
+ Rimani aggiornato sulle novità, i progetti e le opportunità del mondo di Acquisti in rete.
+ 
+ 
+ Vedi tutte le notizie 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Contenuti informativi
+ 
+ 
+ Uno spazio pensato per saperne di più: leggi gli approfondimenti, ascolta la voce degli utenti e consulta le newsletter per restare sempre aggiornato su novità e buone pratiche.
+ 
+ 
+
+ 
+ Approfondimenti 
+ 
+ 
+ Testimonianze 
+ 
+ 
+ Newsletter 
+ 
+ 
+ 
+ 
+ Chi siamo 
+ 
+ 
+ 
+ Acquisti in rete
+ 
+ 
+ Scopri i valori che ci guidano, gli strumenti che rendiamo disponibili e i numeri che raccontano la nostra storia.
+ 
+ 
+
+ 
+ 
+ Missione
+ 
+ 
+ 
+ 
+ Strumenti
+ 
+ 
+ 
+ 
+ I numeri
+ 
+ 
+
+ 
+ 
+ Progetti e servizi
+ 
+ 
+ Esplora i progetti e i servizi che accompagnano le attività di Acquisti in rete per un procurement più efficiente.
+ 
+ 
+ 
+ 
+ Iniziative per il PNRR
+ 
+ 
+ 
+ 
+ Risorse in Comune
+ 
+ 
+ 
+ 
+ Verifica inadempimenti
+ 
+ 
+ 
+ 
+ Scopri tutti i progetti
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Catalogo 
+ 
+ Tutte le aree merceologiche 
+ 
+ -->
+
+ 
+ Supporto 
+ 
+ 
+ 
+ Siamo qui per aiutarti
+ 
+ 
+ Scegli la modalità di supporto che preferisci
+ 
+ 
+ 
+ Wiki 
+ 
+ 
+ Modulistica
+ 
+ 
+ 
+ 
+ Sportelli in Rete
+ 
+ 
+ 
+ 
+ Domande frequenti
+ 
+ -->
+ 
+ Contatti 
+ 
+ 
+ 
+ Tutti gli strumenti di supporto
+ 
+ -->
+ 
+ 
+ Eventi e formazione
+ 
+ 
+ Scopri gli strumenti di formazione e gli eventi più adatti alle tue esigenze.
+ 
+ 
+ 
+ 
+ Eventi e webinar
+ 
+ 
+
+ 
+ Filmati 
+ 
+ 
+ Demo interattive
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Supporto e info per strumento
+ 
+ 
+ 
+ 
+ Scegli lo strumento di tuo interesse e consulta le informazioni e i materiali che lo riguardano.
+ 
+ Mercato elettronico 
+ MePALight Convenzioni 
+ Sistema dinamico 
+ Accordi quadro 
+ Gare in ASP 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cruscotto 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Gestione Profilo 
+ 
+ 
+ 
+
+ 1">
+ 
+ 
+ 
+ 
+ 
+ Cambia organizzazione 
+ 
+ 
+ 
+
+ 
+ 
+ Esci 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Ricerca: 
+
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Prodotti 
+ 
+
+ 
+ 
+ 
+ Codici Prodotto 
+ 
+
+ 
+ 
+ 
+ Informazioni 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Acquista
+ 
+ 
+ 
+ 
+ 
+ Vendi
+ 
+ 
+ 
+ 
+ 
+ Media
+ 
+ 
+ 
+ 
+ 
+ Chi siamo
+ 
+ 
+ 
+
+ 
+ Aree merceologiche 
+ -->
+
+ 
+ 
+ Supporto
+ 
+ 
+ 
+ 
+
+ 
+ Cerca 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Ricerca: 
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+ 
+ --#>
+ 
+
+ = 2 && showTypeahead">
+ 
+ dropdown-menu headerdropdown --#>
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in informazioni 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in prodotti 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}} 50">... in codici prodotto 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ricerca: 
+ 
+ 
+ 
+ Cerca nel portale 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = 2 && showTypeahead">
+ 
+ dropdown-menu headerdropdown -->
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in informazioni 
+ 
+ 
+ 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in prodotti 
+ 
+ 
+ 
+ 
+ 
+ {{model.inputheaderlg | limitTo: 50}}
+ 50">... 
+ in codici prodotto 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Prodotti Prodotti
+ Codici Prodotto Codici Prodotto 
+ Informazioni Informazioni
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Torna indietro 
+ 
+ 
+ 
+ 
+ Acquisti in Rete PA 
+ 
+ 
+ 
+ Strumento: -->
+ Tipologia: 
+ 
+ 
+ 
+ 
+ 
+ 1) "
+ data-ng-click="showModalAreeBando()"
+ >
+ 
+ {{model.bando.categoriaRDO.length}} Aree merceologiche
+ 
+ 
+ 
+
+ 
+ 
+ {{model.bando.categoriaRDO[0].descrizioneCategoriaIniziativa}} 
+ 
+ 
+ 
+ 
+ 
+ {{model.bando.titoloRDO}}
+ 
+ 130"
+ >
+ {{model.bando.titoloRDO}}
+ 
+ 
+ 
+ {{model.bando.titolo}}
+ 
+ 130"
+ >
+ {{model.bando.titolo}}
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ Lotti 
+ {{model.dettaglioLottiBando.length}} 
+ 
+ 
+ Lotto
+ 
+ Lotti 
+ {{model.dettaglioLottiBando.length}} 
+ 
+ 
+ Criterio aggiudicazione 
+ {{sigla}} 
+ 
+ 
+ Tipologia Contratto 
+ {{model.bando.tyTipologiaAppalto}} 
+ 
+ 
+ Numero RDO 
+ {{model.bando.numeroRdo}} 
+
+ Numero Avviso di indagine 
+ {{model.bando.numero}} 
+ 
+ 
+ Numero Gara 
+ {{model.bando.numeroRdo}} 
+ 
+ 
+ Codice Sigef 
+ {{model.bando.cdCodiceSigef}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Bando attivo
+ 
+ 
+
+ 
+ 
+ 
+ Bando sospeso
+ 
+ 
+
+ 
+ 
+ 
+ Bando revocato
+ 
+ 
+
+ 
+ 
+ 
+ Bando scaduto
+ 
+ 
+
+ 
+ 
+ 
+ {{ isAdi ? 'Avviso attivo' : 'RDO attiva' }}
+ 
+ 
+ 
+ 
+ 
+ Avviso sospeso
+ 
+ 
+
+ 
+ 
+ 
+ Avviso revocato
+ 
+ 
+
+ 
+ 
+ 
+ Avviso scaduto
+ 
+ 
+ 
+ 
+ 
+ Avviso deserto
+ 
+ 
+ 
+ 
+ 
+ Avviso in esame
+ 
+ 
+
+ 
+ 
+ 
+ Avviso esaminato
+ 
+ 
+
+ 
+ 
+ 
+ Pubblicato
+ 
+ 
+ 
+ 
+ 
+ 
+ Bando deserto
+ 
+ 
+
+ 
+ 
+ 
+ Bando nullo
+ 
+ 
+
+ 
+ 
+ 
+ Bando in esame
+ 
+ 
+
+ 
+ 
+ 
+ Bando aggiudicato
+ 
+ 
+
+ 
+ 
+ 
+ Attivo per acquisti successivi
+ 
+ 
+ 
+ fine stati non definiti-->
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Data inizio: 
+ {{capitalizeFirst(model.bando.labelDataInizio)}} 
+ Dal 
+ 
+ 
+ {{model.bando.dataPubblicazione | date:'dd/MM/yyyy'}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Data fine: 
+ {{capitalizeFirst(model.bando.labelDataFine)}} 
+ Al 
+ 
+ 
+ {{model.bando.dataScadenza | date:'dd/MM/yyyy'}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PARTECIPA
+ 
+ 
+ PARTECIPA
+ 
+ 
+
+ 
+ 
+ DETTAGLI
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ente committente: 
+ {{model.bando.enteCommittente}} 
+ 
+ 
+ Bandi/Categorie oggetto dell'RDO 
+ {{model.bando.oggettoRDO}} 
+ 
+ 
+ Stazione appaltante: 
+ {{model.bando.stazioneAppaltante}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{model.bando.titoloRDO}}
+ 
+ 130"
+ >
+ {{model.bando.titoloRDO}}
+ 
+
+ 
+ {{model.bando.oggettoRDO}}
+ 
+ 
+
+ 
+ 
+ INFO BANDO
+ 
+ 
+
+ 
+ 
+ CHIUDI
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ Cosa prevede il bando
+ 
+ 
+ -->
+ 
+ 0"
+ >
+ 
+ Notizie correlate
+ 
+ -->
+ 
+ 
+ Descrizione {{ isAdi ? 'Avviso' : 'RDO' }}
+ 
+ 
+
+ 0"
+ >
+ 
+ Dettaglio lotti
+ 
+ 
+ 0"
+ >
+ 
+ Richieste partecipanti
+ 
+ 
+ 
+ 
+ {{obj.categoriaInfo}}
+ 
+ 
+ 
+ 0 || model.documentiAltro.length > 0"
+ >
+ Documenti
+ 
+ 
+ 0"
+ >
+ 
+ Notizie correlate
+ 
+ 
+ 0"
+ >
+ 
+ Bandi simili
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Menu 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cosa prevede il bando
+ 
+ 
+ 
+ -->
+
+ 
+ 
+ Descrizione {{ isAdi ? 'Avviso' : 'RDO' }}
+ 
+ 
+ 
+ 
+ Dettaglio lotti
+ 
+ 
+ 0"
+ >
+ 
+ Richieste partecipanti
+ 
+ 
+
+ 
+ 
+ {{obj.categoriaInfo}}
+ 
+ 
+ 
+ 0 || model.documentiAltro.length > 0"
+ >
+ Documenti
+ 
+ 
+ 0"
+ >
+ 
+ News del bando
+ 
+ 
+ 0"
+ >
+ 
+ Bandi simili
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Cosa prevede il bando
+ -->
+
+ 
+ Descrizione {{ isAdi ? 'Avviso' : 'RDO' }}
+ 
+ {{model.bando.dsFornitura}} 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Descrizione RdO: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ente committente: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Bandi/Categorie oggetto {{ isAdi ? "dell'Avviso di indagine:" : "della RdO:" }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Stazione appaltante: 
+ 
+ 
+ 
+ -->
+ 
+
+ 0"
+ >
+ 
+ 
+ 
+ Notizie correlate 
+ 
+ Consulta le notizie pubblicate su questo specifico bando, per essere aggiornato su tutte le novità che lo riguardano 
+ 
+ Vedi tutte le notizie
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 0"
+ >
+ 
+ 
+ Dettaglio lotti 
+ 
+ 
+ 
+ 5"
+ >
+ 
+ Lotti
+ 
+ 
+ 
+ {{ getSelectedLottoText() }}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{ obj.titoloLotto }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ Seleziona tutti 
+ 
+ 
+ 
+ 
+ CONFERMA
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ Seleziona tutti 
+ 
+
+ 
+ CONFERMA
+ 
+ 
+ 
+ 
+ 
+ 5"
+ >
+ 5"
+ >
+ 
+ Cerca
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 5"
+ >
+ 
+ {{totalItemsLotti}}
+ 
+ risultati
+ 
+ 
+ risultato
+ 
+ 
+ 
+ 
+ 
+ Mostra risultati
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 40"
+ >
+ 
+ Lotto {{obj.idLotto}} - {{obj.titoloLotto | limitTo:50}} 40">... -->
+ Lotto {{obj.idLotto}} - {{obj.descrizione | limitTo:50}} 40">... 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+ -->
+ 
+ {{getStatoLotto(obj.stato.replace('_', ' '))}}
+ 
+ 
+ {{getStatoLotto(obj.statoLotto.replace('_', ' '))}}
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 60"
+ >
+ {{obj.descrizione | limitTo:60}} 60">... 
+ 
+ 
+ -->
+
+ 
+ 
+ 
+ 
+ 
+ CIG 
+ 
+ {{obj.cig}} 
+ - -->
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 0"
+ data-ng-click="showModalCUP(obj)"
+ >
+ CUP
+ 
+ 
+
+ 
+ 
+ 0"
+ data-ng-click="showModalFinanziamento(obj)"
+ >
+ Finanziamento
+ 
+ 
+
+ 
+ 
+ 
+ Valore Lotto 
+ 
+ {{obj.valore.replace(',','.') | currency:'':2 }}€
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Criterio di aggiudicazione 
+ 
+ {{labelCriterio[obj.criterioAggiudcazione]}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dal
+ {{obj.dataPubblicazione |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ Al
+ {{obj.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Attivo dal
+ {{obj.dataPubblicazione |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Sospeso il
+ {{obj.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Revocato il
+ {{obj.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Scaduto il
+ {{obj.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 40"
+ >
+ 
+ Lotto {{obj.idLotto}} - {{obj.titoloLotto | limitTo:50}} 40">... -->
+ Lotto {{obj.idLotto}} - {{obj.descrizione | limitTo:50}} 40">... 
+ 
+ 
+ 
+ 
+ 
+ {{obj.statoLotto}} 
+ 
+ -->
+ 
+
+ 
+ 
+ 
+ 
+ 60"
+ >
+ {{obj.descrizione | limitTo:60}} 60">... 
+ 
+ 
+ -->
+
+ 
+ 
+ {{model.bando.labelDataInizio}}
+ {{model.bando.dataPubblicazione |date:'dd/MM/yyyy'}} 
+ 
+ {{model.bando.labelDataFine}}
+ {{model.bando.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ -->
+ 
+ 
+ 
+ 
+ CIG 
+ 
+ {{obj.cig}} 
+ - -->
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 0"
+ data-ng-click="showModalCUP(obj)"
+ >
+ CUP
+ 
+ 
+
+ 
+ 
+ 0"
+ data-ng-click="showModalFinanziamento(obj)"
+ >
+ Finanziamento
+ 
+ 
+
+ 
+ 
+ 
+ Valore 
+ 
+ {{obj.valore | currency:'':2}}€
+ 
+ 6 && obj.valore.length 
+ {{obj.valore | currency:'':2}}€
+ 
+ 15"
+ title="{{obj.valore | currency}}"
+ >
+ {{obj.valore | currency:'' | limitTo:15}}...€
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Criterio di aggiudicazione 
+ 
+ {{obj.criterioAggiudcazione}}
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Termini di pagamento 
+ 
+ {{obj.terminiPagamento | limitTo:30}} 30">... 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Termini di pagamento 
+ {{obj.terminiPagamento}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0"
+ >
+ 
+ 
+ Richieste partecipanti 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 60"
+ >
+ {{obj.descrizione | limitTo:60}} 60">... 
+ -->
+ {{obj.descrizione | limitTo:60}} 60">... 
+ 
+ 
+
+ 
+ 40"
+ >
+ Lotto {{obj.idLotto}} - {{obj.titoloLotto | limitTo:50}} 40">... 
+ 
+ 
+ 
+ 
+ {{obj.statoLotto}} 
+ 
+ 
+ -->
+
+ 
+ 
+ {{model.bando.labelDataInizio}}
+ {{model.bando.dataPubblicazione |date:'dd/MM/yyyy'}} 
+ 
+ {{model.bando.labelDataFine}}
+ {{model.bando.dataScadenza |date:'dd/MM/yyyy'}} 
+ 
+ -->
+
+ 
+ 
+ 
+ 
+ Tipo richiesta 
+ 
+ {{obj.tipoRichiesta}} 
+ - 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Modalità di risposta 
+ {{obj.tipoRisposta}} 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Obbligo 
+ {{obj.obbligatorio}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = model.itemsPerPageLotti.value"
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1 && goToPageLotti(currentPageLotti - 1)"
+ aria-label="Previous"
+ >
+ 
+ 
+ 
+ 
+ 
+ {{page}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 0 && dataLoaded) || (isAdi && model.itemSlick.length>0)"
+ data-cg-busy="detailPromiseDettaglioInformazioniBando"
+ >
+ 
+ 
+ {{obj.categoriaInfo}} 
+ 
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 0 && obj.dateIniziativa.length 
+ 
+ 
+ 
+ 
+ = 992) ? '65%' :
+ (obj.dateIniziativa.length === 4 && windowWidth >= 992) ? '100%' : '100%',
+ 'position': 'relative'
+ }
+ "
+ > 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{item.data | date:'dd/MM/yyyy'}} 
+ {{item.data | date:'HH:mm' }}
+ 
+ 
+ 
+
+ 
+ {{item.titoloFase}}
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ {{item.data | date:'dd/MM/yyyy'}} 
+ 
+ 
+ {{item.titoloFase}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 5"
+ >
+ 
+ 
+ 
+ 
+ {{item.titoloFase}}
+ 
+ {{item.data | date: 'dd/MM/yyyy' }} - {{item.data | date:'HH:mm' }} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 0 || model.documentiAltro.length > 0"
+ id="sidenav-link--tender_documents"
+ >
+ 
+ Documenti
+ 
+
+ 
+ 
+ 
+ 
+ 0 && model.documentiAltro.length > 0) 
+ || (model.documentiGaraBando.length == 0 && model.documentiAltro.length > 0)" EPROC2-21413 -->
+ Documenti di gara 
+ 
+ 
+ Richieste partecipanti 
+ 
+ 
+ 
+ 0 && model.documentiAltro.length > 0) 
+ || (model.documentiGaraBando.length == 0 && model.documentiAltro.length > 0)" EPROC2-21413 -->
+ Documenti di gara 
+ 
+ 
+ 0 && model.documentiAltro.length > 0) 
+ || (model.documentiGaraBando.length == 0 && model.documentiAltro.length > 0)" EPROC2-21413 -->
+ Altra documentazione 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ {{obj.titolo}} 
+ 
+ {{obj.tsDataDocumento | date:'dd/MM/yyyy'}}
+ 
+ 
+ 
+ 
+ Categoria: 
+ Da reinviare 
+ Da produrre 
+ 
+ Modalità di invio: 
+ Telematico 
+ Non telematico 
+ 
+ Tipologia: 
+ Economica 
+ Tecnica 
+ Amministrativa 
+ 
+ Obbligatorietà: 
+ Facoltativo - più documenti ammessi 
+ Obbligatorio - più documenti
+ ammessi 
+ Obbligatorio - un solo
+ documento ammesso 
+ 
+ Invio congiunto: 
+ SI 
+ NO 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ Nessun documento presente 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.nmDocumento}}
+ 
+ 
+ {{obj.titolo}}
+ 
+ 
+ {{obj.tsDataDocumento | date:'dd/MM/yyyy'}}
+ 
+ {{obj.dsDocumento}} -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Nessun documento presente 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ {{obj.titolo}}
+ -->
+ {{obj.titolo}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Nessun documento presente 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ {{obj.dsDocumento}}
+ 
+ 
+ {{obj.descrizione}}
+ 
+ 
+ 
+ 
+ 
+ 
+ {{obj.nmDocumento}}
+ 
+ 
+ {{obj.titolo}}
+ 
+ 
+ {{obj.tsDataDocumento | date:'dd/MM/yyyy'}}
+ 
+ {{obj.dsDocumento}} -->
+ 
+ 
+ 
+ 
+ 
+ 
+ Nessun documento presente 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 0 && !isRDO"
+ >
+ 
+ 
+ 
+ Notizie correlate
+ 
+ 
+
+ 
+ 
+ Vedi tutte le notizie 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Tipologia: 
+ 
+ {{ s }}
+ 
+ 
+ {{obj.titolo}}
+ 
+ {{obj.dataRicezione | date:'d MMMM yyyy':'UTC'}} 
+ 
+ Vai alla notizia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Tipologia: 
+ 
+ {{ s }}
+ 
+ 
+ {{obj.titolo}}
+ 
+ {{obj.dataRicezione | date:'d MMMM yyyy':'UTC'}} 
+ 
+ Vai alla notizia 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 0"
+ tabindex="-1"
+ role="region"
+ aria-label="slide altre notizie "
+ >
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ = getTotalPages() - 1}"
+ tabindex="0"
+ role="button"
+ aria-label="successivo"
+ ng-keydown="$event.key === 'Enter' || $event.key === ' ' ? nextSlide() : null"
+ >
+ 
+ 
+ 
+ 
+ Slide attuale: {{currentPage + 1}} di {{getTotalPages()}}
+ 
+ 
+ 
+ 
+ 0"
+ >
+ 
+ 
+ Iniziative simili 
+ 
+ 
+ 
+ Vedi tutte le iniziative 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Tipologia: 
+ {{ abbreviazioneStrumento(obj.categoria) }} 
+ 
+ {{obj.titoloIniziativa}}
+ 
+ 110"
+ data-popover-placement="top"
+ data-popover-class="col-sm-12 text-center regular-14"
+ >
+ 
+ Categorie 
+ {{nome | limitTo:110}} 
+ 
+ 
+
+ 
+ 
+ 1">
+ 
+ {{obj.areaMerceologica.length}} Aree merceologiche
+ 
+ 
+ 
+ 
+ {{obj.sottotitoloBando}} 
+ {{obj.descrizione }} 
+ 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Bandi simili
+ 
+ 
+
+ 
+ 
+ Vedi tutti i bandi 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Tipologia: 
+ 
+ {{ abbreviazioneStrumento(obj.categoria) }}
+ 
+ {{obj.titoloBando}} 
+ 110"
+ data-popover-placement="top"
+ data-popover-class="col-sm-12 text-center regular-14"
+ >
+ 
+ Categorie 
+ {{nome | limitTo:110}} 
+ 
+ 
+
+ 1"
+ >
+ 
+ 
+ {{obj.areaMerceologica.length}} Aree merceologiche
+ 
+ 
+ 
+ 
+ {{obj.sottotitoloBando}} 
+ 
+ 
+ {{obj.dataPubblicazione | date:'dd/MM/yyyy'}} -->
+
+ 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Tipologia: 
+ 
+ {{obj.categoria}}
+ 
+ {{obj.titoloBando}} 
+ 110"
+ data-popover-placement="top"
+ data-popover-class="col-sm-12 text-center regular-14"
+ >
+ 
+ Categorie 
+ {{nome | limitTo:110}} 
+ 
+ 
+
+ 1"
+ >
+ 
+ 
+ {{obj.areaMerceologica.length}} Aree merceologiche
+ 
+ 
+ 
+ 
+ {{obj.sottotitoloBando}} 
+ 
+ 
+ {{obj.dataPubblicazione | date:'dd/MM/yyyy'}} -->
+
+ 
+ Scopri di più 
+ 
+ 
+ Scopri di più 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 0"
+ tabindex="-1"
+ role="region"
+ aria-label="slide altre notizie "
+ >
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ = getTotalPagesBandiSimili() - 1}"
+ tabindex="0"
+ role="button"
+ aria-label="successivo"
+ ng-keydown="$event.key === 'Enter' || $event.key === ' ' ? nextSlideBandiSimili() : null"
+ >
+ 
+ 
+ 
+ 
+ Slide attuale: {{currentPageBandiSimili + 1}} di {{getTotalPagesBandiSimili()}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
