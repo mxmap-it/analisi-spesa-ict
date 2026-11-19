@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cruscotto dei contratti</title>
+<meta name="description" content="Cerca ogni contratto ICT della PA dell'imbuto, vedi che cosa ha deciso ogni livello del metodo e segnala un errore.">
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--fg:#1d1d1b;--muted:#5f5f5a;--line:#dddcd6;--acc:#0b5cad;--acc-fg:#fff;--ok:#1e7a3c;--warn:#a15c00;--chip:#eef3fa}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1f1f1d;--fg:#ecebe6;--muted:#a9a8a1;--line:#34342f;--acc:#5aa2ef;--acc-fg:#0b1420;--ok:#5cc47e;--warn:#e0a24a;--chip:#1d2a3a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px}
+h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.15rem;margin:0 0 .5em}h3{font-size:1rem;margin:1em 0 .3em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.muted{color:var(--muted);font-size:.9rem}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:end}
+.campo{display:flex;flex-direction:column;gap:2px;min-width:120px;flex:1}.campo.largo{flex:3;min-width:220px}
+label{font-weight:600;font-size:.85rem}
+input,select,textarea{width:100%;padding:7px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
+button{background:var(--acc);color:var(--acc-fg);border:0;border-radius:6px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}
+button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+a{color:var(--acc)}.err{color:var(--warn)}.ok{color:var(--ok)}
+.tab{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}th{font-weight:600;color:var(--muted);white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.cl{cursor:pointer}tr.cl:hover td{background:var(--chip)}
+.cella{cursor:pointer;color:var(--acc)}.cella:hover{text-decoration:underline}
+.liv{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 7px;margin:1px;font-size:.78rem;background:var(--chip)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:3px 12px;margin:6px 0}dt{color:var(--muted)}dd{margin:0;word-break:break-word}
+.oggetto{white-space:pre-wrap;word-break:break-word;font-size:1rem}
+#scheda{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;justify-content:center;align-items:flex-start;overflow:auto;padding:16px;z-index:5}
+#scheda[hidden]{display:none}#sc td{overflow-wrap:anywhere}#sc td.dett{min-width:260px}#scheda .card{max-width:900px;width:100%;margin:0}
+.opz{display:flex;gap:6px;flex-wrap:wrap}.opz label{font-weight:400;border:1px solid var(--line);border-radius:999px;padding:3px 11px;cursor:pointer;background:var(--bg)}
+.opz input{position:absolute;opacity:0;width:auto}.opz label:has(input:checked){border-color:var(--acc);background:var(--chip);font-weight:700;color:var(--acc)}
+details summary{cursor:pointer;font-weight:600}
+@media (max-width:640px){.campo{min-width:45%}td.ogg{min-width:220px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Cruscotto dei contratti</h1>
+<p class="muted">Progetto <a href="https://analisi-spesa-ict.mxmap.it/progetto/cruscotto-contratti/">analisi della spesa ICT</a>. Ogni contratto (CIG) che l'<a href="https://analisi-spesa-ict.mxmap.it/progetto/imbuto/">imbuto</a> mette nel perimetro ICT, con lo strato assegnato e che cosa ha detto ogni <a href="https://analisi-spesa-ict.mxmap.it/progetto/raffinamento-imbuto/">livello di raffinamento</a>. Se trovi un errore, aprilo e annotalo: la tua annotazione serve a controllare il metodo. <span id="versione"></span></p>
+
+<div class="card">
+<h2>Totali e drilldown</h2>
+<div class="row">
+<div class="campo"><label for="t_da">Anno da</label><input id="t_da" type="number" min="2020" max="2026" value="2024"></div>
+<div class="campo"><label for="t_a">Anno a</label><input id="t_a" type="number" min="2020" max="2026" value="2026"></div>
+<div class="campo"><label for="t_dv">Importi anomali (≥ 50 M€)</label><select id="t_dv"><option value="">inclusi</option><option value="0" selected>esclusi</option><option value="1">solo questi</option></select></div>
+<div class="campo" style="flex:0"><button id="t_vai" type="button">Aggiorna</button></div>
+</div>
+<p class="muted">Clicca un numero per vedere l'elenco dei contratti che lo compongono. Euro: importo del lotto; i padri di accordo quadro (S0) contano 0 € perché sono massimali, non spesa.</p>
+<h3>Strato × giurisdizione (lente dell'imbuto)</h3><div class="tab" id="t_sg"></div>
+<h3>Strato × gruppo del residuo</h3><div class="tab" id="t_gr"></div>
+<details><summary>Livelli di raffinamento × esito</summary><div class="tab" id="t_le"></div></details>
+</div>
+
+<div class="card" id="ricerca">
+<h2>Cerca</h2>
+<form id="f" class="row">
+<div class="campo largo"><label for="q">Testo o CIG</label><input id="q" name="q" type="search" placeholder="es. microsoft 365, conservazione sostitutiva, B12345678A"></div>
+<div class="campo"><label for="strato">Strato</label><select id="strato" name="strato"><option value="">tutti</option><option value="S0">S0 padre di accordo quadro</option><option value="S2">S2 sotto soglia</option><option value="S3">S3 lotto di convenzione</option><option value="S4">S4 marchio</option><option value="S5">S5 ICT non cloud</option><option value="S6">S6 residuo</option></select></div>
+<div class="campo"><label for="giurisdizione">Giurisdizione</label><select id="giurisdizione" name="giurisdizione"><option value="">tutte</option><option value="IT">IT</option><option value="UE">UE</option><option value="EXTRA-UE">EXTRA-UE</option><option value="incerto-servizio-psn">PSN, da determinare</option><option value="-">non attribuita</option></select></div>
+<div class="campo"><label for="gruppo">Gruppo</label><select id="gruppo" name="gruppo"><option value="">tutti</option><option value="G1">G1 mega</option><option value="G2">G2</option><option value="G3">G3 incerti significativi</option><option value="G4">G4 coda</option></select></div>
+<div class="campo"><label for="livello">Livello</label><select id="livello" name="livello"><option value="">qualunque</option><option value="-">nessun livello</option></select></div>
+<div class="campo"><label for="esito">Esito del livello</label><select id="esito" name="esito"><option value="">qualunque</option></select></div>
+<div class="campo"><label for="anno_da">Anno da</label><input id="anno_da" name="anno_da" type="number" min="2020" max="2026"></div>
+<div class="campo"><label for="anno_a">Anno a</label><input id="anno_a" name="anno_a" type="number" min="2020" max="2026"></div>
+<div class="campo"><label for="importo_min">Importo minimo €</label><input id="importo_min" name="importo_min" type="number" min="0"></div>
+<div class="campo"><label for="provider">Provider</label><input id="provider" name="provider" type="text" placeholder="es. Microsoft"></div>
+<div class="campo"><label for="ordina">Ordina per</label><select id="ordina" name="ordina"><option value="importo">importo decrescente</option><option value="importo_asc">importo crescente</option><option value="anno">anno</option><option value="cig">CIG</option></select></div>
+<div class="campo"><label for="atti">Atti</label><select id="atti" name="atti"><option value="">tutti</option><option value="1">con atto archiviato</option></select></div>
+<input type="hidden" id="sottoclasse" name="sottoclasse"><input type="hidden" id="da_verificare" name="da_verificare">
+<div class="campo" style="flex:0"><button type="submit">Cerca</button></div>
+<div class="campo" style="flex:0"><button type="button" class="sec" id="azzera">Azzera</button></div>
+</form>
+<p id="riass" class="muted"></p>
+<div class="tab" id="risultati"></div>
+<div class="row" id="pagine" style="margin-top:8px"></div>
+</div>
+
+<div id="scheda" hidden><div class="card" id="sc"></div></div>
+<p class="muted">Dati: ANAC (Banca dati nazionale dei contratti pubblici), licenza CC BY 4.0, elaborati dal progetto. Gli aggiudicatari persone fisiche sono oscurati. Le annotazioni sono pubbliche senza il nome di chi annota.</p>
+</main>
+<script>
+const API = (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "" : "https://annotazioni.51-158-36-151.sslip.io";
+const $ = id => document.getElementById(id);
+const euro = v => v == null ? "" : Number(v).toLocaleString("it-IT", {style: "currency", currency: "EUR", maximumFractionDigits: 0});
+const num = v => Number(v).toLocaleString("it-IT");
+const el = (t, p = {}, ...f) => { const e = document.createElement(t); Object.assign(e, p); e.append(...f.filter(x => x != null)); return e; };
+async function api(p, opt) { const r = await fetch(API + p, opt); const j = await r.json(); if (!r.ok) throw new Error(j.errore || r.status); return j; }
+const CAMPI = ["q", "strato", "giurisdizione", "gruppo", "livello", "esito", "anno_da", "anno_a", "importo_min", "provider", "ordina", "atti", "sottoclasse", "da_verificare"];
+let esitiPerLivello = {}, pagina = 0;
+
+function parametri() { const p = new URLSearchParams(); for (const k of CAMPI) { const v = $(k).value.trim(); if (v) p.set(k, v); } return p; }
+function metti(k, v) {  // un valore che il menu non ha (es. «S4-marchio» dal drilldown) diventa un'opzione
+  const x = $(k); if (x.tagName === "SELECT" && v && ![...x.options].some(o => o.value === v)) x.append(el("option", {value: v, textContent: v === "-" ? "(vuoto)" : v}));
+  x.value = v;
+}
+function imposta(p) { for (const k of CAMPI) if (k !== "esito") metti(k, p.get(k) || (k === "ordina" ? "importo" : "")); riempiEsiti(); metti("esito", p.get("esito") || ""); }
+function riempiEsiti() {
+  const l = $("livello").value; $("esito").replaceChildren(el("option", {value: "", textContent: "qualunque"}));
+  for (const e of (esitiPerLivello[l] || [])) $("esito").append(el("option", {value: e, textContent: e}));
+}
+$("livello").onchange = riempiEsiti;
+
+async function totali() {
+  const p = new URLSearchParams({anno_da: $("t_da").value, anno_a: $("t_a").value}); if ($("t_dv").value) p.set("da_verificare", $("t_dv").value);
+  try {
+    const t = await api("/api/totali?" + p);
+    const i = t.indice; $("versione").textContent = `Indice del ${i.data}, ${i.imbuto}: ${num(i.cig)} CIG (${num(i.cig_s3_s6_dal_2024)} negli strati S3-S6 dal 2024).`;
+    const base = {anno_da: $("t_da").value, anno_a: $("t_a").value}; if ($("t_dv").value) base.da_verificare = $("t_dv").value;
+    $("t_sg").replaceChildren(incrocio(t.strato_giurisdizione, base, g => g || "non attribuita", (s, g) => ({...base, strato: s, giurisdizione: g || "-"})));
+    $("t_gr").replaceChildren(incrocio(t.strato_gruppo, base, g => g || "senza gruppo", (s, g) => ({...base, strato: s, gruppo: g || "-"})));
+    esitiPerLivello = {};
+    const tb = el("tbody");
+    for (const [l, e, n, eu] of t.livello_esito) {
+      (esitiPerLivello[l] = esitiPerLivello[l] || []).push(e);
+      const tr = el("tr", {}, el("td", {textContent: l}), el("td", {textContent: e}), el("td", {className: "n"}, link(num(n), {...base, livello: l, esito: e})), el("td", {className: "n", textContent: euro(eu)}));
+      tb.append(tr);
+    }
+    $("t_le").replaceChildren(el("table", {}, el("thead", {}, el("tr", {}, ...["livello", "esito", "CIG", "euro"].map(x => el("th", {textContent: x})))), tb));
+    const sel = $("livello").value; $("livello").replaceChildren(el("option", {value: "", textContent: "qualunque"}), el("option", {value: "-", textContent: "nessun livello"}));
+    for (const l of Object.keys(esitiPerLivello).sort()) $("livello").append(el("option", {value: l, textContent: l}));
+    $("livello").value = sel; riempiEsiti();
+  } catch (e) { $("t_sg").textContent = "Servizio non raggiungibile o indice non pronto: " + e.message; }
+}
+function link(testo, filtri) {
+  return el("span", {className: "cella", textContent: testo, onclick: () => { imposta(new URLSearchParams(filtri)); pagina = 0; cerca(); $("ricerca").scrollIntoView(); }});
+}
+function incrocio(righe, base, etich, filtri) {
+  const strati = [...new Set(righe.map(r => r[0]))], col = [...new Set(righe.map(r => r[1]))];
+  const m = {}; for (const [s, c, n, e] of righe) m[s + "|" + c] = [n, e];
+  const th = el("tr", {}, el("th", {textContent: "strato"}), ...col.map(c => el("th", {textContent: etich(c)})), el("th", {textContent: "totale"}));
+  const tb = el("tbody");
+  for (const s of strati) {
+    let tn = 0, te = 0;
+    const celle = col.map(c => { const v = m[s + "|" + c]; if (!v) return el("td"); tn += v[0]; te += v[1];
+      return el("td", {className: "n"}, link(num(v[0]), filtri(s, c)), el("br"), el("span", {className: "muted", textContent: euro(v[1])})); });
+    tb.append(el("tr", {}, el("td", {textContent: s}), ...celle, el("td", {className: "n"}, link(num(tn), {...base, strato: s}), el("br"), el("span", {className: "muted", textContent: euro(te)}))));
+  }
+  return el("table", {}, el("thead", {}, th), tb);
+}
+
+async function cerca() {
+  const p = parametri(); p.set("pagina", pagina);
+  history.replaceState(null, "", "#" + parametri());
+  $("riass").textContent = "Ricerca…";
+  try {
+    const j = await api("/api/cerca?" + p);
+    const csv = el("a", {href: API + "/api/cerca?" + parametri() + "&formato=csv", textContent: "scarica CSV (fino a 10.000 righe)"});
+    $("riass").replaceChildren(`${num(j.totale)} contratti, ${euro(j.euro)} (S0 a 0 €). `, csv);
+    const tb = el("tbody");
+    for (const r of j.righe) {
+      const tr = el("tr", {className: "cl", onclick: () => apri(r.cig)},
+        el("td", {textContent: r.cig}), el("td", {textContent: r.anno}), el("td", {textContent: r.strato + (r.gruppo ? " " + r.gruppo.slice(0, 2) : "")}),
+        el("td", {textContent: r.giurisdizione + (r.provider ? " · " + r.provider : "")}), el("td", {className: "n", textContent: euro(r.importo)}),
+        el("td", {textContent: r.ente}), el("td", {className: "ogg", textContent: r.testo.slice(0, 160)}),
+        el("td", {}, ...(r.livelli ? r.livelli.split(",").map(l => el("span", {className: "liv", textContent: l})) : []), r.n_atti ? el("span", {className: "liv", textContent: "atti " + r.n_atti}) : null));
+      tb.append(tr);
+    }
+    $("risultati").replaceChildren(el("table", {}, el("thead", {}, el("tr", {}, ...["CIG", "anno", "strato", "giurisdizione", "importo", "stazione appaltante", "oggetto", "livelli"].map(x => el("th", {textContent: x})))), tb));
+    const np = Math.ceil(j.totale / j.per_pagina);
+    $("pagine").replaceChildren(...(np > 1 ? [
+      el("button", {className: "sec", textContent: "‹ precedente", disabled: pagina === 0, onclick: () => { pagina--; cerca(); }}),
+      el("span", {className: "muted", textContent: ` pagina ${pagina + 1} di ${num(np)} `}),
+      el("button", {className: "sec", textContent: "successiva ›", disabled: pagina + 1 >= np, onclick: () => { pagina++; cerca(); }})] : []));
+  } catch (e) { $("riass").textContent = "Errore: " + e.message; $("riass").className = "err"; }
+}
+$("f").onsubmit = ev => { ev.preventDefault(); pagina = 0; cerca(); };
+$("azzera").onclick = () => { imposta(new URLSearchParams()); $("risultati").replaceChildren(); $("riass").textContent = ""; $("pagine").replaceChildren(); history.replaceState(null, "", "#"); };
+$("t_vai").onclick = totali;
+
+const OPZ = {
+  ict: [["s", "Sì"], ["n", "No"], ["non-so", "Non so"]],
+  e_cloud: [["s", "Sì"], ["n", "No"], ["non-so", "Non so"]],
+  servizio: [["cloud", "Cloud"], ["licenza", "Licenza"], ["servizi-professionali", "Servizi professionali"], ["psn", "PSN"], ["in-house", "In-house"], ["telefonia", "Telefonia"], ["connettivita", "Connettività"], ["hardware", "Hardware"], ["altro", "Altro"], ["non-so", "Non so"]],
+  giurisdizione: [["IT", "Italia"], ["UE", "UE"], ["EXTRA-UE", "Extra-UE"], ["non-determinabile", "Non determinabile dal testo"], ["ignota", "Non so"]],
+  documento: [["no", "Basta il testo"], ["determina", "Determina"], ["piano-fabbisogni-psn", "Piano dei fabbisogni PSN"], ["contratto-ordine", "Contratto o ordine"], ["convenzione", "Documenti della convenzione"], ["scheda-prodotto", "Scheda prodotto"], ["altro", "Altro"]],
+  confidenza: [["alta", "Alta"], ["media", "Media"], ["bassa", "Bassa"]]
+};
+const DOMANDE = [["ict", "È spesa ICT?"], ["e_cloud", "È un servizio cloud?"], ["servizio", "Tipo di servizio (facoltativo)"], ["giurisdizione", "Giurisdizione del provider del prodotto"], ["documento", "Serve un documento esterno? (facoltativo)"], ["confidenza", "Quanto sei sicuro?"]];
+function opz(n) { return el("div", {className: "opz"}, ...OPZ[n].map(([v, t]) => el("label", {}, el("input", {type: "radio", name: "a_" + n, value: v}), el("span", {textContent: t})))); }
+
+async function apri(cig) {
+  $("scheda").hidden = false; $("sc").replaceChildren(el("p", {textContent: "Caricamento…"}));
+  history.replaceState(null, "", "#cig=" + cig);
+  try {
+    const d = await api("/api/contratto?cig=" + encodeURIComponent(cig));
+    const chiudi = el("button", {className: "sec", textContent: "Chiudi", onclick: chiudiScheda, style: "float:right"});
+    const es = el("tbody");
+    for (const e of d.esiti) es.append(el("tr", {}, el("td", {textContent: e.livello}), el("td", {textContent: e.esito}), el("td", {textContent: e.certezza}),
+      el("td", {textContent: [e.giurisdizione, e.provider].filter(Boolean).join(" · ")}), el("td", {className: "dett"}, ...collega(e.dettaglio)), el("td", {className: "muted", textContent: e.fonte})));
+    const atti = d.atti.map(a => el("li", {}, el("a", {href: a.url, target: "_blank", rel: "noopener", textContent: a.url.slice(0, 90)}), ` ${a.tipo_atto || ""} · ${a.esito_recupero}` + (a.sha256 ? ` · sha256 ${a.sha256.slice(0, 12)}…` : "")));
+    const ann = d.annotazioni.map(a => el("li", {textContent: `${a.quando} (${a.modo}): ICT ${a.ict || "—"}, cloud ${a.e_cloud}, ${a.servizio}, ${a.giurisdizione}${a.provider ? " · " + a.provider : ""}, confidenza ${a.confidenza}${a.note ? " · " + a.note : ""}`}));
+    const b = d.bdncp;
+    const form = el("form", {id: "fa"});
+    for (const [n, t] of DOMANDE) form.append(el("label", {textContent: t, style: "display:block;margin:.6em 0 .2em"}), opz(n));
+    let nome = ""; try { nome = localStorage.getItem("annotatore") || ""; } catch (e) {}
+    const msg = el("span", {className: "muted"});
+    form.append(el("label", {textContent: "Provider del prodotto (facoltativo)", style: "display:block;margin:.6em 0 .2em"}), el("input", {id: "a_provider", maxLength: 120}),
+      el("label", {textContent: "Nota: che cosa è sbagliato, quale documento lo prova", style: "display:block;margin:.6em 0 .2em"}), el("textarea", {id: "a_note", rows: 2, maxLength: 1000}),
+      el("label", {textContent: "Il tuo nome o soprannome", style: "display:block;margin:.6em 0 .2em"}), el("input", {id: "a_nome", maxLength: 60, value: nome}),
+      el("div", {className: "row", style: "margin-top:10px"}, el("button", {type: "submit", textContent: "Salva l'annotazione"}), msg));
+    form.onsubmit = async ev => {
+      ev.preventDefault();
+      const v = n => (form.querySelector(`input[name=a_${n}]:checked`) || {}).value;
+      const nm = $("a_nome").value.trim();
+      const x = {modo: "cruscotto", cig: d.cig, nome: nm, ict: v("ict"), e_cloud: v("e_cloud"), servizio: v("servizio") || "", giurisdizione: v("giurisdizione"),
+                 documento: v("documento") || "", confidenza: v("confidenza"), provider: $("a_provider").value.trim(), note: $("a_note").value.trim()};
+      if (!nm || !x.ict || !x.e_cloud || !x.giurisdizione || !x.confidenza) { msg.textContent = "Servono nome, ICT, cloud, giurisdizione e confidenza."; msg.className = "err"; return; }
+      try { localStorage.setItem("annotatore", nm); } catch (e) {}
+      try { await api("/api/annota", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(x)}); msg.textContent = "Salvata, grazie."; msg.className = "ok"; }
+      catch (e) { msg.textContent = "Errore: " + e.message; msg.className = "err"; }
+    };
+    $("sc").replaceChildren(...[chiudi, el("h2", {textContent: "CIG " + d.cig}),
+      el("div", {className: "oggetto", textContent: d.testo}),
+      el("dl", {}, ...[["Anno", d.anno], ["Stazione appaltante", d.ente], ["Aggiudicatari", d.aggiudicatari || "—"], ["CPV", d.cpv + (d.cpv_ict ? " (ICT)" : "")],
+        ["Importo del lotto", euro(d.importo) + (d.importo_da_verificare ? " · anomalo, da verificare" : "")],
+        ["Strato dell'imbuto", [d.strato, d.sottoclasse, d.gruppo].filter(Boolean).join(" · ")], ["Via e provider", [d.via, d.provider, d.servizio].filter(Boolean).join(" · ") || "—"],
+        ["Giurisdizione (imbuto)", d.giurisdizione || "non attribuita"],
+        ["Quadro economico, durate, PNRR", b ? `quota lavori ${b.qe_quota_lavori ?? "—"} · pubblicato ${b.data_pub || "—"} · durata prevista ${b.durata_prevista ?? "—"} gg, effettiva ${b.durata_eff ?? "—"} gg · PNRR: flag ${b.flag_pnrr || "—"}, indicatori ${b.ind_pnrr || "—"}, CUP ${b.cup || "—"}${b.v3 ? ", misura " + b.v3 : ""}` : "—"],
+        ["Fonte", null]].flatMap(([k, v]) => k === "Fonte" ? [el("dt", {textContent: k}), el("dd", {}, el("a", {href: "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=" + encodeURIComponent(d.cig), target: "_blank", rel: "noopener", textContent: "scheda ANAC"}))] : [el("dt", {textContent: k}), el("dd", {textContent: v})])),
+      el("h3", {textContent: "Che cosa ha detto ogni livello"}),
+      d.esiti.length ? el("div", {className: "tab"}, el("table", {}, el("thead", {}, el("tr", {}, ...["livello", "esito", "certezza", "giurisdizione · provider", "dettaglio", "file"].map(x => el("th", {textContent: x})))), es))
+                     : el("p", {className: "muted", textContent: "Nessun livello di raffinamento ha ancora letto questo contratto: vale lo strato dell'imbuto."}),
+      el("h3", {textContent: "Atti archiviati"}), atti.length ? el("ul", {}, ...atti) : el("p", {className: "muted", textContent: "Nessuno."}),
+      el("h3", {textContent: "Annotazioni"}), ann.length ? el("ul", {}, ...ann) : el("p", {className: "muted", textContent: "Nessuna."}),
+      d.campione_cieco ? el("p", {className: "muted", textContent: "Questo contratto è anche nel campione a cieco: le annotazioni fatte qui sono separate dalle letture indipendenti."}) : null,
+      el("details", {open: true}, el("summary", {textContent: "Annota questo contratto"}), form)].filter(x => x != null));
+  } catch (e) { $("sc").replaceChildren(el("p", {className: "err", textContent: "Errore: " + e.message}), el("button", {className: "sec", textContent: "Chiudi", onclick: chiudiScheda})); }
+}
+function collega(t) {  // gli URL del dettaglio diventano link
+  return (t || "").split(/(https?:\/\/\S+)/).map((x, i) => i % 2 ? el("a", {href: x, target: "_blank", rel: "noopener", textContent: x.length > 70 ? x.slice(0, 70) + "…" : x}) : x);
+}
+function chiudiScheda() { $("scheda").hidden = true; history.replaceState(null, "", "#" + parametri()); }
+$("scheda").onclick = ev => { if (ev.target === $("scheda")) chiudiScheda(); };
+document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !$("scheda").hidden) chiudiScheda(); });
+
+(async () => {
+  await totali();
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (h.get("cig")) apri(h.get("cig"));
+  else if ([...h].length) { imposta(h); cerca(); }
+})();
+</script>
+</body>
+</html>

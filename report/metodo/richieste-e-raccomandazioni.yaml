@@ -918,3 +918,14 @@
   perche_serve: "Il quadro economico è l'unica fonte aperta che separa forniture, servizi e lavori per CIG e i SAL l'unica sulla spesa eseguita: con valori impossibili e un campo dal doppio significato non si possono sommare senza filtri e stime"
   metrica: "Numero di CIG con quadro economico oltre 10 volte l'importo del lotto; quota dei CIG con due o più SAL classificabili senza ambiguità (singolo o progressivo) dal dizionario dati"
   rif: ["#74", "#66", "R54", "R84"]
+- id: R88
+  destinatario: "ANAC (BDNCP, dataset aggiudicatari)"
+  tipo: dati personali
+  stato: "verificato il conteggio (19/11/2026); proposta, da verificare la base normativa, nessuna richiesta inviata"
+  titolo: "Il dataset aggiudicatari pubblica il codice fiscale delle persone fisiche (professionisti, imprenditori individuali) e nessun campo dice se l'aggiudicatario è una persona fisica"
+  evidenza: "Nei 667.303 CIG dell'imbuto 0.3.4 (S0, S2 ICT, S3-S6 dal 2020), 15.585 CIG hanno almeno un aggiudicatario con codice fiscale personale di 16 caratteri (9.062 negli strati S3-S6 dal 2024). Per pubblicare un cruscotto per CIG senza dati personali bisogna riconoscerli dal formato del codice fiscale e oscurare il nome, anche nell'oggetto; in un caso il codice fiscale personale sta nel campo denominazione (CIG B0DEE7DA67). Il tipo_soggetto «IMPRESA SINGOLA (IMPRENDITORI INDIVIDUALI, ANCHE ARTIGIANI, SOCIETA' COMMERCIALI, SOCIETA' COOPERATIVE)» mette insieme persone fisiche e società"
+  prova: "tools/cruscotto/indice_contratti.py (esiti/2026-11-19/cruscotto/indice.json, cig_con_persona_fisica_oscurata); tools/verifiche/cruscotto_riproduzione.py (esiti/2026-11-19/cruscotto/riproduzione.json)"
+  richiesta: "Aggiungere al dataset aggiudicatari un campo «persona fisica sì/no» e valutare se negli open data serva il codice fiscale delle persone fisiche o basti un identificativo pseudonimo stabile (minimizzazione, art. 5 GDPR); separare in tipo_soggetto le imprese individuali dalle società"
+  perche_serve: "Chi riusa i dati per CIG (cruscotti, analisi) deve oggi indovinare dal formato del codice fiscale quali righe sono dati personali"
+  metrica: "Presenza del campo persona fisica nel dizionario dati; numero di codici fiscali personali negli open data aggiudicatari"
+  rif: ["#53", "M13"]

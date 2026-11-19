@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.8"
+versione: "0.8.1"
 aggiornato: 2026-11-19
 
 esiti:
@@ -367,13 +367,13 @@ mancanze:
     stato: mitigata
   - id: M13
     titolo: "Contratti non ricercabili né annotabili uno per uno dal pubblico"
-    peso: "oggi la pagina annotazioni copre solo i campioni; la tabella per CIG è nei file, non in una dashboard"
+    peso: "risolta il 19/11/2026 con il cruscotto dei contratti: 667.303 CIG dell'imbuto (289.192 in S3-S6 dal 2024) ricercabili, con gli esiti di 12 livelli, gli atti archiviati e l'annotazione libera; i totali strato x giurisdizione riproducono l'imbuto riga per riga (341/341)"
     peso_mld: null
     gravita: media
     perche: "Chi legge i risultati deve poter cercare un contratto, vedere chi ha deciso cosa e segnalare un errore: è il controllo pubblico sul metodo."
-    come: "Dashboard con tutti i CIG dell'imbuto (ricerca, filtri per strato e livello, esito e via di ogni livello, link agli atti archiviati) e annotazione a supporto; esce con il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026)."
+    come: "Cruscotto /contratti/ (pagina statica sul sito, servizio delle annotazioni esteso in sola lettura su lavoro/cruscotto/contratti.sqlite, tools/cruscotto/indice_contratti.py, verifica tools/verifiche/cruscotto_riproduzione.py); persone fisiche aggiudicatarie oscurate. Restano: stato finale per CIG quando esiste la tabella unica degli spostamenti (#78), ricostruzione notturna e nome stabile del servizio (proposte per Fabio)."
     ticket: ["#53", "#78"]
-    stato: aperta
+    stato: risolta
   - id: M14
     titolo: "Nessuna controprova dichiarata dagli enti: il censimento del patrimonio ICT di AgID non è pubblicato"
     peso: "spesa ICT, cloud e data center dichiarati da ogni ente nel censimento 2026 (scadenze 10/11 e 1/12/2026): nessun dato aperto"
@@ -385,6 +385,7 @@ mancanze:
     stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-19, versione: "0.8.1", modifica: "M13 risolta: cruscotto dei contratti con ricerca, esiti dei livelli, atti, annotazione e drilldown dai totali (#53)."}
   - {data: 2026-11-19, versione: "0.8", modifica: "M9 misurata (#70): hosting dei SaaS della 1.2 provato per l'85,6 % dell'euro, extra-UE 6,5/30,8/62,0 %, SAP 213,6 M€ con hosting non noto; gravità da alta a media. M10 mitigata dal settimo campione a cieco (big tech 98,9 % in euro pesata). M2 aggiornata (#45 chiuso). In-house verificata per CIG: Cloud Toscana padre AQ, CINECA DC proprio (#52)."}
   - {data: 2026-11-19, versione: "0.7.1", modifica: "Limite nuovo su SIOPE e BDAP: mirror BDAP parziale, robots.txt che esclude i CSV (R85, #25)."}
   - {data: 2026-11-19, versione: "0.7", modifica: "M12 mitigata: ingressi fuori dal mirror nel registro config/ingressi-lavoro.yaml (git e archivio con sha256), ict.csv in ordine canonico, euro al centesimo; resta il test completo alla prossima versione."}
