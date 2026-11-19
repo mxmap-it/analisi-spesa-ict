@@ -104,7 +104,7 @@ Le modalità con cui cerchiamo i documenti che chiudono i casi dubbi, dai dati s
 | regole (vie 1-5, 7) | lotti di convenzione, marchi, fornitore = provider | in uso (v4.5 del 9/11/2026; v3.1 all'epoca dei giri 1-2) |
 | **via 6: modello linguistico + fonti** | un agente legge il contratto, cerca la determina dell'ente in Amministrazione trasparente, la scarica, la archivia (sha256), ne estrae il testo (anche OCR) e classifica | **in uso sul residuo** (giri G1 e G3; livello L4 del [raffinamento](/progetto/raffinamento-imbuto/)) |
 | revisione alla cieca | annotazione alla cieca di un campione | sei campioni a cieco annotati da Claude (un annotatore); pagina per i volontari: [annotazioni](/annotazioni/) |
-| modelli fondazionali tabulari (TabICL) | secondo classificatore senza token, addestrato sui casi etichettati | protocollo scritto ([#56](https://github.com/mxmap-it/analisi-spesa-ict/issues/56)) |
+| modelli fondazionali tabulari (TabICL) | secondo classificatore senza token, addestrato sui casi etichettati | prova leggera del 19/11/2026 ([#56](https://github.com/mxmap-it/analisi-spesa-ict/issues/56)): su cloud sì/no imita bene la via 6 (macro-F1 0,92; deciderebbe il 96% del residuo S6 con precisione 0,97, ma misurato su etichette della via 6 stessa); sulla giurisdizione è peggiore di regole e via 6. Proposta per Fabio: resta fuori come via che decide, prova prospettica come filtro di priorità. Dettagli nell'[esito della prova](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/sperimentazione-tfm.md) |
 
 ## 6. Cosa abbiamo misurato (campione di 611 contratti)
 
@@ -157,7 +157,7 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 - la revisione alla cieca la fa Claude (decisione di Fabio del 19/11/2026); le persone annotano a supporto, e con la pubblicazione dei risultati tutti i contratti saranno ricercabili e annotabili in una dashboard ([#53](https://github.com/mxmap-it/analisi-spesa-ict/issues/53); oggi la pagina [annotazioni](/annotazioni/) copre i campioni);
 - soglia di precisione per usare l'«alta» del modello nei numeri;
-- esito della sperimentazione TabICL;
+- TabICL: approvare o no la prova prospettica come filtro di priorità sulla coda della via 6 (prova leggera del 19/11/2026, [#56](https://github.com/mxmap-it/analisi-spesa-ict/issues/56));
 - per Cloud Toscana, se chiedere l'accesso agli atti all'offerta tecnica;
 - invio delle raccomandazioni (dopo approvazione di Fabio): elenco in [Raccomandazioni](/progetto/raccomandazioni/).
 
@@ -165,6 +165,7 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 | data | modifica |
 |---|---|
+| 2026-11-19 | esito della prova leggera dei modelli tabulari (TabICL) nella § 5 e nella § 11 (#56) |
 | 2026-11-19 | revisione di coerenza: avviso sullo stato al 2/11, stati delle vie (§ 5) e punti da decidere (§ 11) aggiornati, rimando alle raccomandazioni |
 | 2026-11-02 | disegno operativo dell'imbuto: universo dal 2020, strati S0-S6, soglia 500 €, consulenza IT in-house, forbice; giro 2 della via 6 chiuso (337 contratti, 27 con atto che cita il CIG) |
 | 2026-10-31 | imbuto a strati: soglia d'importo, gruppi da approfondire con il loro metodo, esito di policy |
