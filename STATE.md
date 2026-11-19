@@ -4,6 +4,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-18 (ripresa dopo la migrazione del server del 17/11)
 
+## 19/11/2026 sera — #74 chiuso, M12 mitigata, #73 quasi finito (agente)
+- **#74 chiuso:** B1 0.2 (`imbuto_bdncp.py`, esiti `esiti/2026-11-19/imbuto/bdncp/v0.2/`): 1.274 CIG / 130,6 M€ esclusi; campione a cieco 34/40 (Wilson 71-93 %); regola 0.3 in #80. SAL misto (5,06-19,17 mld, stima 10,71 [S]) e quadro economico (35,4 vs 38,2 mld, 373 CIG impossibili): `bdncp_sal_qe.py`, R87, rendiconto bdncp 0.3.
+- **M12 mitigata** (mappa 0.7): ict.csv ordinato per CIG in `imbuto.py` (produzione non rigenerata), euro al centesimo in `imbuto_strati.py`, ingressi fuori dal mirror in `config/ingressi-lavoro.yaml` + `tools/ingressi_lavoro.py` (git `dati/ingressi/`, cig_link.csv come blob). Resta il test completo alla prossima versione.
+- **#73:** ripasso L4 e Difesa finiti (Difesa tutta in timeout); riepilogo ed elenco unico del 19/11 (28.900 voci, verifica ok). **Stasera 21:05** `lavoro/residuo-s6/notte-20261119.sh` fa L4-js sui 133 enti rinviati per robots.txt, poi riepilogo/elenco del 20/11 (`FINITO-notte-20261120.txt`): poi aggiornare `acquisizione-documenti.md`, committare `esiti/2026-11-20/` e chiudere #73.
+
 ## PUNTO DI RIPRESA 18/11/2026
 
 **Server:** sd-172212 (migrazione del 17/11). Il progetto resta in `/home/mxmap.it/analisi-spesa-ict`, utente `mxmap.it`; Claude gira come `ubuntu` con ACL e fa git/processi lunghi con `sudo -u mxmap.it -H bash -lc '...'`. **Cron tutti sospesi** (`#MIGRAZIONE-SOSPESO#` in `crontab -u mxmap.it`): guardiano, sonda 06:10, metriche 06:40, `sync_server.sh`, guardiani via 6: si riattivano solo con l'ok di Fabio. Il `gh` di ubuntu ha lo scope `project` dal 18/11: `tools/stato_ticket.sh` funziona. 365 GB liberi, 24 GB RAM disponibili.
