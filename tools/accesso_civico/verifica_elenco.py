@@ -20,8 +20,11 @@ ing = [r for r in csv.DictReader(open(R / "lavoro/residuo-s6/ingresso.csv", enco
 cita = {r["cig"] for r in csv.DictReader(open(R / f"esiti/{d66}/imbuto/residuo-s6-per-66.csv", encoding="utf-8"))
         if r["materiale"] == "documento-cita-cig"}
 pc1 = R / f"esiti/{d66}/imbuto/c1-senza-atto.csv"
+if not pc1.exists():  # come elenco_mancanti.py: l'ultimo c1-senza-atto.csv con data <= d66 (#73)
+    cand = sorted(p for p in R.glob("esiti/*/imbuto/c1-senza-atto.csv") if p.parts[-3] <= d66)
+    if cand: pc1 = cand[-1]
 C1 = ({r["cig"] for r in csv.DictReader(open(pc1, encoding="utf-8"))} - {r["cig"] for r in ing}) if pc1.exists() else set()
-C = [r for r in el if r["fonte"].startswith("C")]
+C = [r for r in el if r["fonte"] == "C-via6-c1"]  # le voci manuali (config/accesso-civico/voci-manuali.csv) sono fonte C ma non c1 (#73)
 A = [r for r in el if r["fonte"].startswith("A")]; B = [r for r in el if r["fonte"].startswith("B")]
 esito = {
     "V1_voci_A": (len(A), len(conv), len(A) == len(conv)),

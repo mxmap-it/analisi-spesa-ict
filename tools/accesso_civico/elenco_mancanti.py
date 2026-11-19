@@ -19,6 +19,7 @@ dalla classe: P1 incerti ICT 3, P3 G2 informazione mancante 3, P2 G3 2, P4 nuovi
 -1 se c'è già una pagina con il CIG o un documento senza CIG (resta da chiedere, ma meno urgente).
 Uscite in esiti/<DATA>/accesso-civico/: elenco-mancanti.csv (~20 MB, NON versionato) e elenco-mancanti.csv.gz (versionato), enti.csv (accorpamento per ente), stima-ondate.json.
 Uso (server): nice .venv/bin/python tools/accesso_civico/elenco_mancanti.py [DATA] [--data-66 AAAA-MM-GG]
+(--data-66: data di residuo-s6-per-66.csv; c1-senza-atto.csv si prende dall'ultima data <= --data-66 che lo ha.)
 """
 import collections, csv, datetime, json, math, sys
 from pathlib import Path
@@ -119,7 +120,12 @@ def main():
     conv = list(csv.DictReader(open(R / "report/convenzioni/database/documenti-mancanti.csv", encoding="utf-8")))
     ini = {i["id"]: i for i in json.load(open(R / "report/convenzioni/database/iniziative.json", encoding="utf-8"))}
     c1 = {}
+    # c1-senza-atto.csv si produce solo con la ricerca mirata C1 (9/11): si prende l'ultimo esito con data <= d66 (#73)
     pc1 = R / f"esiti/{d66}/imbuto/c1-senza-atto.csv"
+    if not pc1.exists():
+        cand = sorted(p for p in R.glob("esiti/*/imbuto/c1-senza-atto.csv") if p.parts[-3] <= d66)
+        if cand: pc1 = cand[-1]
+    print("C1 da", pc1.relative_to(R) if pc1.exists() else "(nessuno)", file=sys.stderr)
     if pc1.exists():
         anni_c1 = {r["cig"]: r.get("anno", "") for r in csv.DictReader(open(R / "lavoro/c1-mirata/ingresso.csv", encoding="utf-8"))}
         c1 = {r["cig"]: dict(r, anno=anni_c1.get(r["cig"], "")) for r in csv.DictReader(open(pc1, encoding="utf-8")) if r["cig"] not in ing}
