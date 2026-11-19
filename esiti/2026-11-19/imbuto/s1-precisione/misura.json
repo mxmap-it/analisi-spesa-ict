@@ -1,0 +1,301 @@
+{
+ "popolazione": {
+  "cig_totale": 3209583,
+  "euro_totale": 1274462432046,
+  "N": [
+   325324,
+   1948159,
+   577777,
+   272209,
+   66189,
+   19925
+  ],
+  "euro": [
+   744966738,
+   31383154389,
+   46345239075,
+   101930461888,
+   139260238608,
+   954798371349
+  ],
+  "allocazione": [
+   20,
+   126,
+   43,
+   33,
+   26,
+   151
+  ],
+  "coerente": true,
+  "seme": "spesaict-s1-2026-11-19"
+ },
+ "annotazioni": "report/metodo/imbuto/s1-campione-misura.csv",
+ "annotatore": "Claude (a cieco, decisione di Fabio del 19/11/2026)",
+ "per_classe": [
+  {
+   "classe": [
+    500,
+    5000.0
+   ],
+   "n": 20.0,
+   "eur": 46052.07,
+   "non-ict": 20.0,
+   "eur_non-ict": 46052.07
+  },
+  {
+   "classe": [
+    5000.0,
+    40000.0
+   ],
+   "n": 126.0,
+   "eur": 2119907.8,
+   "non-ict": 123.0,
+   "eur_non-ict": 2093708.8,
+   "ict": 1.0,
+   "eur_ict": 8760.0,
+   "dubbio": 2.0,
+   "eur_dubbio": 17439.0
+  },
+  {
+   "classe": [
+    40000.0,
+    140000.0
+   ],
+   "n": 43.0,
+   "eur": 3250212.22,
+   "non-ict": 41.0,
+   "eur_non-ict": 3124053.72,
+   "ict": 2.0,
+   "eur_ict": 126158.5
+  },
+  {
+   "classe": [
+    140000.0,
+    1000000.0
+   ],
+   "n": 33.0,
+   "eur": 11859157.45,
+   "non-ict": 32.0,
+   "eur_non-ict": 11159157.45,
+   "dubbio": 1.0,
+   "eur_dubbio": 700000.0
+  },
+  {
+   "classe": [
+    1000000.0,
+    5000000.0
+   ],
+   "n": 26.0,
+   "eur": 44027673.21,
+   "non-ict": 26.0,
+   "eur_non-ict": 44027673.21
+  },
+  {
+   "classe": [
+    5000000.0,
+    null
+   ],
+   "n": 151.0,
+   "eur": 19330795077.42,
+   "non-ict": 148.0,
+   "eur_non-ict": 19285724367.03,
+   "dubbio": 2.0,
+   "eur_dubbio": 37429466.89,
+   "ict": 1.0,
+   "eur_ict": 7641243.5
+  }
+ ],
+ "ict": {
+  "quota_cig": 0.01323,
+  "wilson95_cig": [
+   0.0045,
+   0.03824
+  ],
+  "n_eff_cig": 225.9,
+  "cig_stimati": 42467,
+  "cig_intervallo": [
+   14449,
+   122723
+  ],
+  "quota_euro": 0.00181,
+  "wilson95_euro": [
+   0.00016,
+   0.02004
+  ],
+  "n_eff_euro": 227.0,
+  "euro_stimati": 2306016166,
+  "euro_intervallo": [
+   204733935,
+   25541479677
+  ],
+  "euro_espansione": 2838884037,
+  "euro_espansione_ic95": [
+   0,
+   5933762568
+  ]
+ },
+ "dubbio": {
+  "quota_cig": 0.01229,
+  "wilson95_cig": [
+   0.00403,
+   0.03685
+  ],
+  "n_eff_cig": 225.9,
+  "cig_stimati": 39436,
+  "cig_intervallo": [
+   12928,
+   118284
+  ],
+  "quota_euro": 0.00637,
+  "wilson95_euro": [
+   0.00144,
+   0.02774
+  ],
+  "n_eff_euro": 227.0,
+  "euro_stimati": 8123465481,
+  "euro_intervallo": [
+   1835615181,
+   35351856884
+  ]
+ },
+ "precisione_esclusione": {
+  "cig": 0.98677,
+  "cig_wilson95": [
+   0.96176,
+   0.9955
+  ],
+  "euro": 0.99819,
+  "euro_wilson95": [
+   0.97996,
+   0.99984
+  ],
+  "nota": "precisione = quota di CIG (o euro) di S1 che sono davvero non ICT; i «dubbio» contati come non ICT qui, a parte in ict_o_dubbio"
+ },
+ "classi_errore": [
+  {
+   "giudizio": "ict",
+   "classe": "hardware-device",
+   "n": 1,
+   "cig": [
+    "B705BC9203"
+   ]
+  },
+  {
+   "giudizio": "dubbio",
+   "classe": "telefonia-centralini",
+   "n": 1,
+   "cig": [
+    "B449818DDE"
+   ]
+  },
+  {
+   "giudizio": "ict",
+   "classe": "connettivita-cpv-64221",
+   "n": 1,
+   "cig": [
+    "B68AE5508C"
+   ]
+  },
+  {
+   "giudizio": "dubbio",
+   "classe": "alimentazione-ced",
+   "n": 1,
+   "cig": [
+    "B0978FA90E"
+   ]
+  },
+  {
+   "giudizio": "ict",
+   "classe": "hardware-pc-portatili",
+   "n": 1,
+   "cig": [
+    "BB25B9E3B8"
+   ]
+  },
+  {
+   "giudizio": "dubbio",
+   "classe": "ricerca-sw",
+   "n": 1,
+   "cig": [
+    "B1E2557E83"
+   ]
+  },
+  {
+   "giudizio": "dubbio",
+   "classe": "iot-ot",
+   "n": 1,
+   "cig": [
+    "B0E59F4933"
+   ]
+  },
+  {
+   "giudizio": "dubbio",
+   "classe": "ot-sistemi-controllo",
+   "n": 1,
+   "cig": [
+    "BB6FAFBE87"
+   ]
+  },
+  {
+   "giudizio": "ict",
+   "classe": "cpv-503-assistenza-pc",
+   "n": 1,
+   "cig": [
+    "BC0F974010"
+   ]
+  }
+ ],
+ "ict_o_dubbio": {
+  "quota_cig": 0.02552,
+  "wilson95_cig": [
+   0.01157,
+   0.05533
+  ],
+  "n_eff_cig": 225.9,
+  "cig_stimati": 81903,
+  "cig_intervallo": [
+   37143,
+   177583
+  ],
+  "quota_euro": 0.00818,
+  "wilson95_euro": [
+   0.00215,
+   0.03058
+  ],
+  "n_eff_euro": 227.0,
+  "euro_stimati": 10429481647,
+  "euro_intervallo": [
+   2744167677,
+   38978578444
+  ],
+  "euro_espansione": 13821603311,
+  "euro_espansione_ic95": [
+   0,
+   27982346112
+  ]
+ },
+ "cloud_potenziale": {
+  "quota_cig": 0.0,
+  "wilson95_cig": [
+   0.0,
+   0.01672
+  ],
+  "n_eff_cig": 225.9,
+  "cig_stimati": 0,
+  "cig_intervallo": [
+   0,
+   53659
+  ],
+  "quota_euro": 0.0,
+  "wilson95_euro": [
+   0.0,
+   0.01664
+  ],
+  "n_eff_euro": 227.0,
+  "euro_stimati": 0,
+  "euro_intervallo": [
+   0,
+   21210939556
+  ]
+ }
+}
