@@ -9,7 +9,7 @@ description: "Inventario dei 62 dataset BDNCP nel mirror ANAC (128,7 GB), copert
 
 Copia per il sito di `report/metodo/bdncp-e-l190-inventario.md` (si rigenera con `python3 tools/pagina_bdncp_l190.py`), ticket [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74).
 
-Versione 0.2, 18/11/2026 (#74), pubblicata il 18/11/2026. Scritta solo dagli esiti già versionati. I numeri «ICT» vengono dagli esiti del 18/11/2026 sull'imbuto 0.3.4, con il filtro corretto (strati S3-S6); gli altri numeri sono gli stessi del 10/11. Nessuno scaricamento.
+Versione 0.3, 19/11/2026 (#74), pubblicata il 18/11/2026; § 3.9 risolto il 19/11 con `tools/verifiche/bdncp_sal_qe.py`. Scritta solo dagli esiti già versionati. I numeri «ICT» vengono dagli esiti del 18/11/2026 sull'imbuto 0.3.4, con il filtro corretto (strati S3-S6); gli altri numeri sono gli stessi del 10/11. Nessuno scaricamento.
 
 Domanda di Fabio (10/11): «la banca dati contratti pubblici come dataset è clonata e l'abbiamo analizzata per trovarne utilità?»
 
@@ -30,6 +30,7 @@ Legenda: **[V]** verificato da noi, con il comando che rifà il numero; **[R]** 
 - **L. 190/2012:** il registro ANAC ha 27.045 enti distinti (2015-2023). Nel campione di 200 enti del registro 2023, 97 enti hanno un XML con lotti (48,5 %); ANAC dichiara «successo» per l'85,0 % degli URL del 2023 [V].
 - I 200 enti del campione pubblicano 34.592 lotti, 8,15 mld € aggiudicati e 0,94 mld € liquidati. Sui 198 CIG ICT: 103,4 M€ aggiudicati, 20,6 M€ liquidati [V]. Le **somme liquidate** sono l'unico dato di spesa effettiva per CIG che oggi l'imbuto non ha.
 - **Il mirror completo** di un anno di riferimento peserebbe circa 4 GB di XML [S] e richiederebbe circa 30 ore a 5 s fra le richieste [S]. I dati vanno ripuliti: 2.800 coppie con liquidato maggiore dell'aggiudicato (8,5 %) e anni di riferimento malformati.
+- **SAL e quadro economico (19/11, § 3.9):** `importo_sal` non ha un significato unico: per 2.696 CIG è l'importo del singolo SAL, per 1.210 il totale progressivo. La spesa SAL sui CIG ICT sta fra 5,06 mld € (massimo per CIG) e 19,17 mld € (somma delle righe); la stima per classe è 10,71 mld € [S]. Il quadro economico, tolti 373 CIG con valori impossibili (fino a 7.723 mld € su un lotto di 22.500 €), vale 35,4 mld € contro 38,2 mld € di importo dei lotti, di cui servizi 26,2 e forniture 8,2 [V]. Nuova raccomandazione R85.
 - **Correzione rispetto alla v0.1:** gli esiti del 10/11 contavano come ICT anche i padri di accordo quadro (S0). Il filtro è corretto dal 18/11 e i numeri ICT di questa versione vengono dagli esiti del 18/11 (§ 3, punto 1).
 
 ## Fonti e comandi
@@ -247,12 +248,28 @@ Spazio libero sul disco del server il 18/11/2026: 355 GB (`df -h /home`) [V]. Il
 
    Nessuna di queste somme è una misura della spesa ICT.
 
+   **Verificato il 19/11** con `tools/verifiche/bdncp_sal_qe.py` (esito `esiti/2026-11-19/bdncp/sal-qe.json`, stesso insieme ICT, sha256 `96049401…d5c`):
+
+   - **SAL: il campo è misto [V].** Su 26.372 righe ICT (9.807 CIG), 30 sono ripetute identiche. Dei 4.150 CIG con almeno due SAL, 2.632 hanno importi non decrescenti, mentre per puro caso se ne attenderebbero circa 856: una parte degli enti scrive il totale progressivo. Rispetto all'importo del lotto, la somma delle righe supera 1,2 volte il lotto in 1.434 CIG, il massimo solo in 43. Classi per CIG:
+
+     | classe | regola | CIG | spesa SAL stimata |
+     |---|---|---:|---:|
+     | singolo | somma entro 1,2 volte il lotto | 2.696 | 2,53 mld € (somma) |
+     | progressivo | non decrescente, somma oltre 1,2 volte il lotto, massimo entro | 1.210 | 1,82 mld € (massimo) |
+     | incerto | il resto | 224 | 2,41 mld € (somma) |
+     | un solo SAL | — | 5.657 | 1,08 mld € |
+     | senza importo del lotto (o da verificare) | — | 20 | 2,88 mld € (somma) |
+
+     La spesa SAL ICT sta quindi fra **5,06 mld €** (massimo per CIG, sottostima) e **19,17 mld €** (somma delle righe, sovrastima); la stima per classe è **10,71 mld € [S]**, e ne pesano 5,3 i CIG incerti o senza importo. Per usare i SAL si prende la stima per classe e i CIG incerti si guardano uno per uno.
+   - **Quadro economico: coerente, tolti i valori impossibili [V].** 242.374 CIG ICT hanno un quadro (ultimo evento: 224.495 base d'asta, 15.818 consuntivo, 2.061 variante). La somma grezza è 7.775 mld €, per colpa di 373 CIG con il quadro oltre 10 volte il lotto: B4877276D1 ha 7.723 mld € di servizi su un lotto di 22.500 €, B5E6BF66F1 2,27 milioni di mld € di somme a disposizione su 18.633 €, B533EFD3EB 202.520.262.027 € (sembrano anni scritti di seguito). Tolti questi e gli importi da verificare, il quadro vale **35,4 mld €** contro **38,2 mld €** di importo dei lotti sugli stessi CIG; la mediana del rapporto quadro/lotto è 1,0 (p10 0,93, p99 2,0). Composizione: servizi 26,2 mld €, forniture 8,2, lavori 0,69, progettazione 0,05, sicurezza 0,07, oneri 0,19; le somme a disposizione, senza i valori oltre 10 volte il lotto, sono 8,1 mld €.
+   - Da qui la raccomandazione **R85** ad ANAC (controlli all'inserimento e significato unico di `importo_sal`), in `report/metodo/richieste-e-raccomandazioni.yaml`.
+
 ## Cosa proponiamo (per Fabio: proposte, non decisioni)
 
 1. **Completare le due verifiche** (il filtro S3-S6 è fatto il 18/11):
    - scrivere versione e sha256 dell'imbuto nell'esito;
-   - aggiungere le somme del quadro economico e le distribuzioni (percentili) degli importi;
-   - per i SAL, prendere l'ultimo progressivo per CIG invece della somma delle righe, se risulta cumulativo;
+   - ~~aggiungere le somme del quadro economico e le distribuzioni (percentili) degli importi~~: fatto il 19/11 (`bdncp_sal_qe.py`, § 3.9);
+   - ~~per i SAL, prendere l'ultimo progressivo per CIG invece della somma delle righe, se risulta cumulativo~~: il campo è misto, si usa la stima per classe (§ 3.9);
    - per `cig` e `smartcig`, leggere gli annuali o dichiararne l'esclusione;
    - per L.190, deduplicare per CIG dentro l'ente, aggiungere le somme per ente e la tabella esito ANAC contro esito nostro.
 
@@ -278,4 +295,5 @@ Spazio libero sul disco del server il 18/11/2026: 355 GB (`df -h /home`) [V]. Il
 | versione | data | autore | modifiche |
 |---|---|---|---|
 | 0.1 | 18/11/2026 | Claude (agente), per Fabio Pietrosanti | prima stesura dagli esiti `esiti/2026-11-10/bdncp/` e `esiti/2026-11-10/l190/` (#74) |
+| 0.3 | 19/11/2026 | Claude (agente), per Fabio Pietrosanti | § 3.9 risolto con `tools/verifiche/bdncp_sal_qe.py`: `importo_sal` misto (singolo o progressivo), spesa SAL ICT 5,06-19,17 mld €, stima per classe 10,71 [S]; quadro economico coerente con i lotti tolti 373 CIG con valori impossibili (35,4 contro 38,2 mld €); R85; «In breve» e proposte aggiornati (#74) |
 | 0.2 | 18/11/2026 | Claude (agente), per Fabio Pietrosanti | numeri ICT dagli esiti `esiti/2026-11-18/` (filtro S3-S6, imbuto 0.3.4, `ict.csv` sha256 `96049401…d5c`); verificato che i numeri non ICT coincidono con il 10/11. § 3.1 risolto, § 3.2 riformulato, nuovo § 3.9 (somme ICT da controllare); aggiornati «In breve», fonti, § 1.2-1.3, § 2.2, § 2.4, proposte, limiti (#74) |

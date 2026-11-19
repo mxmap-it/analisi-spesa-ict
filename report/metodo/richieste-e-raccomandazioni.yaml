@@ -885,3 +885,36 @@
   perche_serve: "Gli affidamenti in-house ICT (società informatiche regionali e nazionali) sono la parte della spesa che resta su infrastruttura pubblica: senza il campo vanno riconosciuti a mano, e il dizionario per nome confonde committenti, omonimi e privati"
   metrica: "Quota di righe con flag_inHouse = true; quota dei CIG ICT con aggiudicatario in-house riconoscibile dal solo dataset ANAC"
   rif: ["#74", "#52", "R83"]
+- id: R85
+  destinatario: "MEF-RGS (BDAP open data)"
+  tipo: ostacolo
+  stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Il robots.txt di BDAP esclude l'API CKAN e tutti i CSV open data (/SpodCkanApi/*), e la vista OData alternativa risponde 500"
+  evidenza: "robots.txt di bdap-opendata.rgs.mef.gov.it (19/11/2026): «Disallow: /SpodCkanApi» e «Disallow: /SpodCkanApi/*», «Crawl-delay: 10». Sotto quel percorso stanno sia il catalogo (api/3/action/package_search) sia i 3.682 file dati (api/3/datastore/dump/<id>.csv, circa 58 GB dichiarati). La sola altra via ai dati, /ODataProxy/MdData('<id>@rgs')/DataRows (non esclusa), il 19/11/2026 risponde HTTP 500 con corpo vuoto. I PDF e gli XLS dei metadati (/sites/default/files/...) sono ammessi. Un catalogo open data in licenza CC-BY non è quindi specchiabile in modo automatico rispettando il robots.txt. I 82 CSV e le pagine di metadati già archiviati (26/10-10/11/2026) sono stati presi prima di questo controllo"
+  prova: "robots.txt archiviato, sha256 0fb0d0089f480167f49ebe36a2c8ebb0393b386c07e7904738de3388649bd9b4 (archivio/mirror/bdap-opendata.rgs.mef.gov.it/robots.txt); tools/acquisizione/bdap_lista.py; tools/verifiche/mirror_fonti.py (esiti/2026-11-19/mirror/stato-fonti.json)"
+  richiesta: "Togliere /SpodCkanApi/api/3/datastore/dump/ e /SpodCkanApi/api/3/action/ dal Disallow (o pubblicare un dump completo scaricabile, es. un archivio per famiglia, sotto un percorso ammesso); riparare la vista OData; pubblicare il catalogo anche in DCAT-AP_IT su dati.gov.it"
+  perche_serve: "BDAP è la sola fonte aperta della spesa ICT pagata dallo Stato centrale: senza mirror non si può rifare la misura ogni anno né provare che il dato non è cambiato"
+  metrica: "Percorsi dei dati open data ammessi dal robots.txt; quota delle risorse del catalogo scaricabili con HTTP 200 in un giro completo"
+  rif: ["#25", "#17", "R61", "R63"]
+- id: R86
+  destinatario: "Consip (dati.consip.it)"
+  tipo: ostacolo
+  stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Il robots.txt di dati.consip.it esclude l'API CKAN (/api/): il catalogo si legge solo dalle pagine HTML"
+  evidenza: "robots.txt di dati.consip.it (19/11/2026): «Disallow: /api/», «Crawl-Delay: 10». I file (/download/dataset/...) sono ammessi. Il catalogo è stato riletto dalle pagine /dataset e /dataset/<nome> (16 dataset, 150 risorse 2024-2026, tutte già con sha256 nel mirror). Il server interrompe i file sopra circa 350 MB (#11), che vanno scaricati con ripresa"
+  prova: "robots.txt archiviato (archivio/mirror/dati.consip.it/robots.txt); lavoro/mirror-completamento/consip_html.py; tools/verifiche/mirror_fonti.py"
+  richiesta: "Ammettere /api/3/action/ (package_list, package_show) nel robots.txt, che è il modo standard per sapere cosa c'è nel catalogo; servire i file grandi senza interruzioni o con sha256 dichiarato"
+  perche_serve: "Il controllo di completezza del mirror si fa confrontando il catalogo: leggerlo dall'HTML è fragile"
+  metrica: "/api/3/action/ ammesso dal robots.txt; zero interruzioni sui file > 350 MB in un giro completo"
+  rif: ["#11", "#17"]
+- id: R85
+  destinatario: "ANAC (BDNCP, quadro economico e stati di avanzamento)"
+  tipo: qualità del dato
+  stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Quadro economico e SAL senza controlli all'inserimento: importi impossibili e importo_sal a volte singolo, a volte progressivo"
+  evidenza: "Sui 443.331 CIG ICT S3-S6 dal 2020 dell'imbuto 0.3.4. Quadro economico (242.374 CIG): 373 CIG hanno un quadro oltre 10 volte l'importo del lotto, per 7.730 mld € in tutto; B4877276D1 ha 7.723 mld € di servizi a base d'asta su un lotto di 22.500 €, B5E6BF66F1 2,27 milioni di mld € di somme a disposizione su 18.633 €, B533EFD3EB 202.520.262.027 € (sembrano anni digitati di seguito, 2025-2026-2027) su 27.000 €. Tolti questi, il quadro (35,4 mld €) è coerente con l'importo dei lotti (38,2 mld €). SAL (9.807 CIG, 26.372 righe): il campo importo_sal non ha un significato unico; sui 4.150 CIG con almeno due SAL, 2.632 hanno importi non decrescenti (per caso se ne attendono circa 856) e in 1.210 la somma supera 1,2 volte il lotto mentre il massimo no (totale progressivo); in 2.696 la somma resta entro il lotto (importo del singolo SAL). La somma delle righe (19,17 mld €) e il massimo per CIG (5,06 mld €) differiscono di quasi quattro volte; 30 righe sono ripetute identiche"
+  prova: "tools/verifiche/bdncp_sal_qe.py (esiti/2026-11-19/bdncp/sal-qe.json); ingressi quadro-economico_csv.zip sha256 d03e99c93cdac8dd3bd6f437cbc4bcd68036317cb3bb6287f76ae4d874bdc5bc, stati-avanzamento_csv.zip sha256 5d57973cd645c65c88cfab55a0bcda6c97376b882da0d5721a4b4a6f614e2632, ict.csv sha256 9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c"
+  richiesta: "Controllare all'inserimento che il quadro economico sia coerente con l'importo del lotto (per esempio entro 10 volte, oltre serve una conferma esplicita); definire nel dizionario dati se importo_sal è l'importo del singolo SAL o il progressivo, aggiungere l'altro come campo distinto e rifiutare le righe ripetute"
+  perche_serve: "Il quadro economico è l'unica fonte aperta che separa forniture, servizi e lavori per CIG e i SAL l'unica sulla spesa eseguita: con valori impossibili e un campo dal doppio significato non si possono sommare senza filtri e stime"
+  metrica: "Numero di CIG con quadro economico oltre 10 volte l'importo del lotto; quota dei CIG con due o più SAL classificabili senza ambiguità (singolo o progressivo) dal dizionario dati"
+  rif: ["#74", "#66", "R54", "R84"]

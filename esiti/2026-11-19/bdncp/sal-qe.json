@@ -1,0 +1,257 @@
+{
+ "versione": "bdncp-sal-qe 0.1",
+ "data": "2026-11-19",
+ "cig_ict_s3s6_dal_2020": 443331,
+ "sal": {
+  "righe_ict": 26372,
+  "cig_ict": 9807,
+  "cig_con_almeno_2_sal": 4150,
+  "somma_righe_mld": 19.17,
+  "somma_senza_doppioni_mld": 19.169,
+  "somma_massimi_per_cig_mld": 5.058,
+  "righe_doppie_identiche": 30,
+  "certificati_pagamento_mld": 1.855,
+  "successioni_non_decrescenti": {
+   "cig": 2632,
+   "quota": 0.634,
+   "attese_per_caso_se_importi_singoli": 856.2
+  },
+  "somma_su_importo_lotto": {
+   "n": 4130,
+   "p10": 0.3,
+   "p25": 0.594,
+   "p50": 1.0,
+   "p75": 1.614,
+   "p90": 3.03,
+   "p99": 9.683,
+   "cig_oltre_1_2": 1434
+  },
+  "massimo_su_importo_lotto": {
+   "n": 4130,
+   "p10": 0.11,
+   "p25": 0.23,
+   "p50": 0.478,
+   "p75": 0.8,
+   "p90": 1.0,
+   "p99": 1.206,
+   "cig_oltre_1_2": 43
+  },
+  "sal_finale_su_somma_precedenti": {
+   "n": 245,
+   "p10": 0.02,
+   "p25": 0.131,
+   "p50": 0.5,
+   "p75": 1.0,
+   "p90": 2.0,
+   "p99": 4.995
+  },
+  "classi_cig": {
+   "incerto": {
+    "cig": 224,
+    "stima_mld": 2.406
+   },
+   "progressivo": {
+    "cig": 1210,
+    "stima_mld": 1.816
+   },
+   "senza-importo-lotto": {
+    "cig": 20,
+    "stima_mld": 2.877
+   },
+   "singolo": {
+    "cig": 2696,
+    "stima_mld": 2.53
+   },
+   "un-solo-sal": {
+    "cig": 5657,
+    "stima_mld": 1.077
+   }
+  },
+  "stima_spesa_sal_mld": 10.707,
+  "forbice_mld": {
+   "minimo_massimi_per_cig": 5.058,
+   "massimo_somma_righe": 19.169
+  },
+  "conclusione": "importo_sal è MISTO: per molti CIG è l'importo del singolo SAL, per una parte è il totale progressivo (successioni non decrescenti oltre l'atteso per caso, somma oltre 1,2 volte il lotto con il massimo entro): la somma delle righe sovrastima, il massimo per CIG sottostima; usare la stima per classe"
+ },
+ "quadro_economico": {
+  "per_evento_mld": {
+   "BASE_ASTA": {
+    "righe": 242226,
+    "importo_forniture": 9.537,
+    "importo_servizi": 7763.914,
+    "importo_lavori": 0.894,
+    "importo_progettazione": 0.058,
+    "importo_sicurezza": 0.109,
+    "ulteriori_oneri_non_soggetti_ribasso": 0.216,
+    "somme_a_disposizione": 2273513.889
+   },
+   "CONSUNTIVO": {
+    "righe": 15819,
+    "importo_forniture": 1.195,
+    "importo_servizi": 2.293,
+    "importo_lavori": 0.047,
+    "importo_progettazione": 0.001,
+    "importo_sicurezza": 0.003,
+    "ulteriori_oneri_non_soggetti_ribasso": 0.0,
+    "somme_a_disposizione": 0.283
+   },
+   "VARIANTE": {
+    "righe": 3884,
+    "importo_forniture": 1.422,
+    "importo_servizi": 4.806,
+    "importo_lavori": 0.305,
+    "importo_progettazione": 0.029,
+    "importo_sicurezza": 0.011,
+    "ulteriori_oneri_non_soggetti_ribasso": 0.064,
+    "somme_a_disposizione": 0.248
+   }
+  },
+  "cig_ict_con_quadro": 242374,
+  "ultimo_evento_per_cig": {
+   "BASE_ASTA": 224495,
+   "CONSUNTIVO": 15818,
+   "VARIANTE": 2061
+  },
+  "importo_ultimo_quadro_mld": 7774.991,
+  "importo_lotto_stessi_cig_mld": 38.237,
+  "importo_ultimo_quadro_stessi_cig_senza_da_verificare_mld": 7765.633,
+  "percentili_importo_quadro_euro": {
+   "p10": 5400.0,
+   "p25": 8020.0,
+   "p50": 18799.0,
+   "p75": 59500.0,
+   "p90": 139245.0,
+   "p99": 2518670.0
+  },
+  "rapporto_quadro_su_lotto": {
+   "p10": 0.932,
+   "p25": 1.0,
+   "p50": 1.0,
+   "p75": 1.0,
+   "p90": 1.0,
+   "p99": 2.0
+  },
+  "quadro_zero": 1570,
+  "anomali_oltre_10x_lotto": {
+   "cig": 373,
+   "importo_mld": 7730.218,
+   "primi": [
+    [
+     "B4877276D1",
+     "BASE_ASTA",
+     7723002190117,
+     22500
+    ],
+    [
+     "B2F15D0090",
+     "BASE_ASTA",
+     5712125664,
+     5712
+    ],
+    [
+     "8818357268",
+     "BASE_ASTA",
+     795200000,
+     795200000
+    ],
+    [
+     "871391347D",
+     "BASE_ASTA",
+     575000000,
+     575000000
+    ],
+    [
+     "8713984F11",
+     "BASE_ASTA",
+     527000000,
+     527000000
+    ],
+    [
+     "9761463618",
+     "BASE_ASTA",
+     505759000,
+     505759000
+    ],
+    [
+     "8713945EE2",
+     "BASE_ASTA",
+     478000000,
+     478000000
+    ],
+    [
+     "8714021D9A",
+     "BASE_ASTA",
+     387000000,
+     387000000
+    ]
+   ]
+  },
+  "somme_a_disposizione_prime": [
+   [
+    "B5E6BF66F1",
+    "BASE_ASTA",
+    2273302248420263,
+    18633
+   ],
+   [
+    "B533EFD3EB",
+    "BASE_ASTA",
+    202520262027,
+    27000
+   ],
+   [
+    "B270BB7B32",
+    "BASE_ASTA",
+    981100000,
+    981100000
+   ],
+   [
+    "B16C905102",
+    "BASE_ASTA",
+    260938788,
+    260938788
+   ],
+   [
+    "B24686E7E3",
+    "BASE_ASTA",
+    131942900,
+    131942900
+   ]
+  ],
+  "somme_a_disposizione_senza_oltre_10x_lotto_mld": 8.079,
+  "importo_ultimo_quadro_coerente_mld": 35.415,
+  "importo_lotto_coerente_mld": 38.215,
+  "composizione_ultimo_quadro_coerente_mld": {
+   "importo_forniture": 8.217,
+   "importo_servizi": 26.202,
+   "importo_lavori": 0.689,
+   "importo_progettazione": 0.051,
+   "importo_sicurezza": 0.067,
+   "ulteriori_oneri_non_soggetti_ribasso": 0.189,
+   "somme_a_disposizione": 2273511.519
+  },
+  "composizione_ultimo_quadro_mld": {
+   "importo_forniture": 9.709,
+   "importo_servizi": 7764.003,
+   "importo_lavori": 0.934,
+   "importo_progettazione": 0.059,
+   "importo_sicurezza": 0.076,
+   "ulteriori_oneri_non_soggetti_ribasso": 0.21,
+   "somme_a_disposizione": 2273513.803
+  }
+ },
+ "ingressi": {
+  "lavoro/imbuto/ict.csv": {
+   "sha256": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c"
+  },
+  "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/stati-avanzamento/filesystem/stati-avanzamento_csv.zip": {
+   "sha256": "5d57973cd645c65c88cfab55a0bcda6c97376b882da0d5721a4b4a6f614e2632",
+   "byte": 29677429
+  },
+  "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/quadro-economico/filesystem/quadro-economico_csv.zip": {
+   "sha256": "d03e99c93cdac8dd3bd6f437cbc4bcd68036317cb3bb6287f76ae4d874bdc5bc",
+   "byte": 141217813
+  }
+ }
+}
