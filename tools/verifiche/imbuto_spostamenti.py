@@ -31,7 +31,7 @@ import re
 import sys
 from datetime import date
 
-VERSIONE = "0.1"
+VERSIONE = "0.1.1"
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GIORNO = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
 ICT = os.environ.get("IMBUTO_ICT", os.path.join(R, "lavoro/imbuto/ict.csv"))
@@ -53,7 +53,8 @@ INGRESSI = {
     "tetti": ultimo("esiti/*/imbuto/tetti-cig-v2.csv"),
     "L2": ultimo("esiti/*/imbuto/raffinamento-l2.csv"),
     "L3": ultimo("esiti/*/imbuto/raffinamento-l3.csv"),
-    "B": ultimo("esiti/*/imbuto/bdncp/segnali.csv*"),
+    # B: l'ultima versione del livello B (le versioni nuove stanno in sottocartelle vX.Y, che si ordinano dopo).
+    "B": ultimo("esiti/*/imbuto/bdncp/v*/segnali.csv*") or ultimo("esiti/*/imbuto/bdncp/segnali.csv*"),
     "LIC": ultimo("esiti/*/imbuto/licenze-cig.csv"),
     "V6R": p("dati/classificazioni/imbuto-revisione.jsonl"),
     "L4": p("report/metodo/llm/raffinamento-l4/esiti"),

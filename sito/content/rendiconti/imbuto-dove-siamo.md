@@ -8,7 +8,7 @@ description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numer
 
 ---
 
-**Versione 0.20.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
+**Versione 0.20.2 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -361,9 +361,9 @@ Una quota cloud scritta negli atti (L4) si applica come frazione dell'importo.
 | incluso certo: cloud | 4.556 | 5.035 | 1,09 | **1,29** |
 | incluso certo: infrastruttura in-house | 816 | 438 | 0,42 | **0,08** |
 | incerto: marchio o lotto noto, da attribuire | 3.889 | 2.039 | 2,85 | 1,80 |
-| incerto: residuo S6 | 59.406 | 48.964 | 11,70 | **10,67** |
-| ICT non cloud | 220.525 | 231.137 | 40,01 | 41,90 |
-| tolto dall'ICT dai livelli (lavori, non ICT) | — | 1.578 | — | 0,19 |
+| incerto: residuo S6 | 59.406 | 48.960 | 11,70 | **10,67** |
+| ICT non cloud | 220.525 | 231.147 | 40,01 | 41,90 |
+| tolto dall'ICT dai livelli (lavori, non ICT) | — | 1.572 | — | 0,19 |
 
 Il totale S3-S6 resta 56,06 mld: i livelli spostano, non tolgono.
 
@@ -380,7 +380,7 @@ Il totale S3-S6 resta 56,06 mld: i livelli spostano, non tolgono.
   - via 6: 22 CIG, 152,5 M€;
   - licenze: 1.758 CIG, 968,0 M€.
 - **Fuori dall'ICT:**
-  - B1, lavori: 1.279 CIG, 131,3 M€;
+  - B1 versione 0.2, lavori: 1.272 CIG, 130,1 M€;
   - L3, non ICT: 297 CIG, 53,3 M€;
   - L4: 2 CIG, 7,3 M€.
 - **Dall'in-house certo:** B2 rimanda al da attribuire 212 CIG, 84,6 M€ (aggiudicatari privati o mancanti). La verifica a mano sugli atti (`esiti/2026-11-19/imbuto/inhouse-verifica/`, #52) ha risolto i due grandi affidamenti: **Cloud Toscana** (B33988ECF0, 242,4 M€) è l'accordo quadro aperto al mercato, cioè un massimale, e passa fra i padri di accordo quadro; l'impianto **CINECA** (BCA58C49BB, 117,3 M€) è una fornitura di celle a combustibile comprata da CINECA per il proprio data center, ICT non cloud (datacenter propri).
@@ -1052,3 +1052,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.19.1 | 2026-11-19 | revisione di coerenza: sintesi 0.1-0.8 e tabelle 0.3.1 (§ 3, § 4, § 8) marcate come superate; accesso civico «solo alla fine» (#78) al posto di «decisione di Fabio» (§ 1, § 4.3.3, § 4.11); P1 marcata decisa; 532 → 535 CIG in § 2; § 4.3 e rigenerazione 0.3.2 marcate concluse; limiti aggiornati (via 6 e L4 finiti, livelli non ancora uniti); registro in ordine |
 | 0.20 | 2026-11-19 | § 2.10 nuovo: tabella unica degli spostamenti per CIG fra tutti i livelli (#71), con priorità per forza della prova; dal 2024 netti massimali cloud certo 1,28 mld (era 1,09), in-house certo 0,08 (era 0,42), residuo S6 10,67 (era 11,70); 69 disaccordi, nessuno sul cloud; giurisdizione sul cloud certo extra-UE 75,6 %, UE 18,8 %, IT 5,5 % |
 | 0.20.1 | 2026-11-19 | § 2.10 ricalcolato con la verifica a mano dell'in-house (#52): Cloud Toscana è un accordo quadro aperto al mercato, CINECA un impianto per il proprio data center; 164 adesioni a Cloud Toscana nel cloud certo IT; cloud certo 1,29 mld netti, extra-UE 74,8 %, UE 18,6 %, IT 6,4 % |
+| 0.20.2 | 2026-11-19 | § 2.10 con B1 versione 0.2 (protegge locali informatici, locali tecnologici, area server; #74): residuo S6 48.960 CIG, B1 1.272 CIG / 130,1 M€; cloud certo invariato |

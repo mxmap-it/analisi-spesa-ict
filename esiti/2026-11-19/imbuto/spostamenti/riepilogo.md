@@ -1,6 +1,6 @@
 # Tabella unica degli spostamenti — 2026-11-19
 
-Strumento `tools/verifiche/imbuto_spostamenti.py` 0.1. Spostamenti proposti 14.291, CIG toccati 14.044 (fuori dall'imbuto: 0).
+Strumento `tools/verifiche/imbuto_spostamenti.py` 0.1.1. Spostamenti proposti 14.288, CIG toccati 14.041 (fuori dall'imbuto: 0).
 
 Lo strato S1 (non ICT per CPV e testo) non è in `ict.csv` e non è contato qui: «escluso certo, non ICT» conta solo i CIG che i livelli tolgono dall'ICT.
 
@@ -9,12 +9,12 @@ Lo strato S1 (non ICT per CPV e testo) non è in `ict.csv` e non è contato qui:
 | stato | CIG prima | CIG dopo | mld lordi prima | mld lordi dopo | mld netti tetti prima | mld netti tetti dopo |
 |---|---:|---:|---:|---:|---:|---:|
 | fuori misura (S0 padre AQ, S2 sotto soglia) | 94.061 | 94.062 | 391,70 | 391,70 | 391,70 | 391,70 |
-| escluso certo, non ICT | 0 | 1.578 | 0,00 | 0,19 | 0,00 | 0,19 |
-| ICT non cloud | 220.525 | 231.137 | 90,76 | 93,13 | 40,01 | 41,90 |
+| escluso certo, non ICT | 0 | 1.572 | 0,00 | 0,19 | 0,00 | 0,19 |
+| ICT non cloud | 220.525 | 231.147 | 90,76 | 93,14 | 40,01 | 41,90 |
 | incluso certo: cloud | 4.556 | 5.035 | 1,21 | 1,42 | 1,09 | 1,29 |
 | incluso certo: infrastruttura in-house | 816 | 438 | 0,66 | 0,08 | 0,42 | 0,08 |
 | incerto: marchio o lotto noto, da attribuire | 3.889 | 2.039 | 5,37 | 4,10 | 2,85 | 1,80 |
-| incerto: residuo S6 | 59.406 | 48.964 | 16,37 | 15,09 | 11,70 | 10,67 |
+| incerto: residuo S6 | 59.406 | 48.960 | 16,37 | 15,09 | 11,70 | 10,67 |
 
 ## Flussi netti dal 2024 (livello decisivo)
 
@@ -25,12 +25,12 @@ Lo strato S1 (non ICT per CPV e testo) non è in `ict.csv` e non è contato qui:
 | incerto-marchio | ict-non-cloud | LIC | 1758 | 968,0 |
 | incerto-s6 | cloud-certo | L4 | 2 | 1,6 |
 | incerto-s6 | cloud-certo | V6R | 9 | 27,2 |
-| incerto-s6 | escluso-non-ict | B1 | 862 | 111,3 |
+| incerto-s6 | escluso-non-ict | B1 | 855 | 110,1 |
 | incerto-s6 | escluso-non-ict | L3 | 297 | 53,3 |
-| incerto-s6 | escluso-non-ict | L4 | 2 | 7,3 |
+| incerto-s6 | escluso-non-ict | L4 | 3 | 7,4 |
 | incerto-s6 | ict-non-cloud | L2 | 6913 | 466,3 |
 | incerto-s6 | ict-non-cloud | L3 | 2259 | 112,4 |
-| incerto-s6 | ict-non-cloud | L4 | 76 | 93,6 |
+| incerto-s6 | ict-non-cloud | L4 | 86 | 95,0 |
 | incerto-s6 | ict-non-cloud | V6R | 22 | 152,5 |
 | inhouse-certo | cloud-certo | MAN | 164 | 13,3 |
 | inhouse-certo | fuori-misura | MAN | 1 | 0,0 |

@@ -1,5 +1,5 @@
 {
- "versione": "0.1",
+ "versione": "0.1.1",
  "data": "2026-11-19",
  "strumento": "tools/verifiche/imbuto_spostamenti.py",
  "ingressi": {
@@ -16,8 +16,8 @@
    "sha256": "d1d5d5657ccd752c7c2a83753cfeaf90872f3e7fd43b6d6aaf0128bd6f0f3bd8"
   },
   "B": {
-   "file": "esiti/2026-11-19/imbuto/bdncp/segnali.csv",
-   "sha256": "3f04d04cc3ddeb51c481492c3964a4fb9a39165295e82ebdb4bc6181b05d647d"
+   "file": "esiti/2026-11-19/imbuto/bdncp/v0.2/segnali.csv.gz",
+   "sha256": "4143155146ca0d39c9366a1a66ad0542e6a1179f6e70740110f73ef325f07659"
   },
   "LIC": {
    "file": "esiti/2026-11-18/imbuto/licenze-cig.csv",
@@ -29,7 +29,7 @@
   },
   "L4": {
    "cartella": "report/metodo/llm/raffinamento-l4/esiti",
-   "file": 54
+   "file": 64
   },
   "ict": {
    "file": "lavoro/imbuto/ict.csv"
@@ -81,8 +81,8 @@
   "incerto-marchio": "incerto: marchio o lotto noto, da attribuire",
   "incerto-s6": "incerto: residuo S6"
  },
- "spostamenti_proposti": 14291,
- "cig_toccati": 14044,
+ "spostamenti_proposti": 14288,
+ "cig_toccati": 14041,
  "cig_non_in_imbuto": 0,
  "cig_non_in_imbuto_esempi": [],
  "prima": [
@@ -210,9 +210,9 @@
     "2020-2023",
     "escluso-non-ict"
    ],
-   "cig": 614,
-   "euro_lordi": 555371674.66,
-   "euro_netti_tetti": 555371674.66
+   "cig": 607,
+   "euro_lordi": 554160074.66,
+   "euro_netti_tetti": 554160074.66
   },
   {
    "chiave": [
@@ -246,9 +246,9 @@
     "2020-2023",
     "incerto-s6"
    ],
-   "cig": 24870,
-   "euro_lordi": 8633787894.81,
-   "euro_netti_tetti": 8633787894.81
+   "cig": 24877,
+   "euro_lordi": 8634999494.81,
+   "euro_netti_tetti": 8634999494.81
   },
   {
    "chiave": [
@@ -273,9 +273,9 @@
     "dal-2024",
     "escluso-non-ict"
    ],
-   "cig": 1578,
-   "euro_lordi": 191870592.77,
-   "euro_netti_tetti": 191870592.77
+   "cig": 1572,
+   "euro_lordi": 190780425.57,
+   "euro_netti_tetti": 190780425.57
   },
   {
    "chiave": [
@@ -291,9 +291,9 @@
     "dal-2024",
     "ict-non-cloud"
    ],
-   "cig": 231137,
-   "euro_lordi": 93133819226.46,
-   "euro_netti_tetti": 41902021112.36
+   "cig": 231147,
+   "euro_lordi": 93135210418.21,
+   "euro_netti_tetti": 41903412304.11
   },
   {
    "chiave": [
@@ -309,9 +309,9 @@
     "dal-2024",
     "incerto-s6"
    ],
-   "cig": 48964,
-   "euro_lordi": 15086014985.39,
-   "euro_netti_tetti": 10666002905.72
+   "cig": 48960,
+   "euro_lordi": 15085713960.84,
+   "euro_netti_tetti": 10665701881.17
   },
   {
    "chiave": [
@@ -516,9 +516,9 @@
     "escluso-non-ict",
     "B1"
    ],
-   "cig": 375,
-   "euro_lordi": 283843472.21,
-   "euro_netti_tetti": 283843472.21
+   "cig": 368,
+   "euro_lordi": 282631872.21,
+   "euro_netti_tetti": 282631872.21
   },
   {
    "chiave": [
@@ -593,9 +593,9 @@
     "escluso-non-ict",
     "B1"
    ],
-   "cig": 862,
-   "euro_lordi": 111289318.7,
-   "euro_netti_tetti": 111289318.7
+   "cig": 855,
+   "euro_lordi": 110060651.5,
+   "euro_netti_tetti": 110060651.5
   },
   {
    "chiave": [
@@ -615,9 +615,9 @@
     "escluso-non-ict",
     "L4"
    ],
-   "cig": 2,
-   "euro_lordi": 7289634.0,
-   "euro_netti_tetti": 7289634.0
+   "cig": 3,
+   "euro_lordi": 7428134.0,
+   "euro_netti_tetti": 7428134.0
   },
   {
    "chiave": [
@@ -648,9 +648,9 @@
     "ict-non-cloud",
     "L4"
    ],
-   "cig": 76,
-   "euro_lordi": 93603993.98,
-   "euro_netti_tetti": 93603993.98
+   "cig": 86,
+   "euro_lordi": 94995185.73,
+   "euro_netti_tetti": 94995185.73
   },
   {
    "chiave": [
@@ -727,9 +727,9 @@
     "incerto-s6",
     "escluso-non-ict"
    ],
-   "cig": 375,
-   "euro_lordi": 283843472.21,
-   "euro_netti_tetti": 283843472.21
+   "cig": 368,
+   "euro_lordi": 282631872.21,
+   "euro_netti_tetti": 282631872.21
   },
   {
    "chiave": [
@@ -760,9 +760,9 @@
     "incerto-s6",
     "escluso-non-ict"
    ],
-   "cig": 864,
-   "euro_lordi": 111887309.8,
-   "euro_netti_tetti": 111887309.8
+   "cig": 857,
+   "euro_lordi": 110658642.6,
+   "euro_netti_tetti": 110658642.6
   },
   {
    "chiave": [
@@ -826,9 +826,9 @@
     "incerto-s6",
     "escluso-non-ict"
    ],
-   "cig": 2,
-   "euro_lordi": 7289634.0,
-   "euro_netti_tetti": 7289634.0
+   "cig": 3,
+   "euro_lordi": 7428134.0,
+   "euro_netti_tetti": 7428134.0
   },
   {
    "chiave": [
@@ -837,9 +837,9 @@
     "incerto-s6",
     "ict-non-cloud"
    ],
-   "cig": 76,
-   "euro_lordi": 93603993.98,
-   "euro_netti_tetti": 93603993.98
+   "cig": 86,
+   "euro_lordi": 94995185.73,
+   "euro_netti_tetti": 94995185.73
   },
   {
    "chiave": [
