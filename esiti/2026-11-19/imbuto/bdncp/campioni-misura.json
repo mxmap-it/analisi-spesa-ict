@@ -1,0 +1,72 @@
+{
+ "report/metodo/bdncp/b1-campione-misura.csv": {
+  "n": 40,
+  "giudizi": {
+   "errore": 1,
+   "giusto": 37,
+   "dubbio": 2
+  },
+  "precisione": 0.925,
+  "wilson95": [
+   0.801,
+   0.974
+  ],
+  "precisione_senza_dubbi": 0.974,
+  "wilson95_senza_dubbi": [
+   0.865,
+   0.995
+  ]
+ },
+ "report/metodo/bdncp/b1-campione-sviluppo.csv": {
+  "n": 40,
+  "giudizi": {
+   "giusto": 36,
+   "dubbio": 3,
+   "errore": 1
+  },
+  "precisione": 0.9,
+  "wilson95": [
+   0.769,
+   0.96
+  ],
+  "precisione_senza_dubbi": 0.973,
+  "wilson95_senza_dubbi": [
+   0.862,
+   0.995
+  ]
+ },
+ "report/metodo/bdncp/b1-v02-campione-misura.csv": {
+  "n": 40,
+  "giudizi": {
+   "giusto": 34,
+   "dubbio": 4,
+   "errore": 2
+  },
+  "precisione": 0.85,
+  "wilson95": [
+   0.709,
+   0.929
+  ],
+  "precisione_senza_dubbi": 0.944,
+  "wilson95_senza_dubbi": [
+   0.819,
+   0.985
+  ]
+ },
+ "report/metodo/bdncp/b2-campione-misura.csv": {
+  "n": 40,
+  "giudizi": {
+   "giusto": 40
+  },
+  "precisione": 1.0,
+  "wilson95": [
+   0.912,
+   1.0
+  ],
+  "precisione_senza_dubbi": 1.0,
+  "wilson95_senza_dubbi": [
+   0.912,
+   1.0
+  ]
+ }
+}

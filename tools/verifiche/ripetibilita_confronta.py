@@ -15,7 +15,8 @@ R = Path(__file__).resolve().parents[2]
 os.chdir(R)
 csv.field_size_limit(1 << 30)
 D, OUT = sys.argv[1].rstrip("/"), Path(sys.argv[2])
-P18, P19 = "esiti/2026-11-18/imbuto", "esiti/2026-11-19/imbuto/bdncp"
+P18 = "esiti/2026-11-18/imbuto"
+P19 = os.environ.get("RIP_BDNCP_PUBBLICATO", "esiti/2026-11-19/imbuto/bdncp/v0.2")  # imbuto_bdncp 0.2 (#74); 0.1 in esiti/2026-11-19/imbuto/bdncp/
 E = f"{D}/esiti"
 
 COPPIE = [  # passo, pubblicato, rifatto
@@ -25,7 +26,7 @@ COPPIE = [  # passo, pubblicato, rifatto
     "distribuzione.json", "strati.json", "tetti-cig.csv", "tetti-fonti.json", "tetti.json", "tetti-cig-v2.csv",
     "revisione.json", "licenze-cig.csv", "licenze.json", "cig-ripetuti.json", "cig-ripetuti.csv")
 ] + [("c", f"{P19}/{n}", f"{E}/bdncp/{n}") for n in ("riepilogo.json", "campione-b1-esce-lavori.csv", "campione-b2-non-sa.csv")
-] + [("c", f"{P19}/segnali.csv", f"{E}/bdncp/segnali.csv.gz")
+] + [("c", f"{P19}/segnali.csv.gz" if P19.endswith("v0.2") else f"{P19}/segnali.csv", f"{E}/bdncp/segnali.csv.gz")
 ] + [("d", f"{P18}/{n}", f"{E}/{n}") for n in (
     "raffinamento-l2.csv", "raffinamento-l2.json", "raffinamento-l2-campione.csv", "raffinamento-l3.csv", "raffinamento-l3.json")]
 

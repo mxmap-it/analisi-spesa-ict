@@ -21,7 +21,7 @@ B4 PNRR: tre vie indipendenti sullo stesso CIG: FLAG_PNRR_PNC del CIG, presenza 
    più la catena v3 (report/metodo/pnrr-contratti-v3.csv). Tabella incrociata su tutti i CIG ICT e sul cloud.
 
 Uso (SUL SERVER, come mxmap.it, nice, dopo free -g, un job pesante alla volta):
-  nice .venv/bin/python tools/verifiche/imbuto_bdncp.py   -> esiti/<oggi>/imbuto/bdncp/{segnali.csv.gz,riepilogo.json,campione-*.csv}
+  flock lavoro/pesante.lock nice .venv/bin/python tools/verifiche/imbuto_bdncp.py   -> esiti/<oggi>/imbuto/bdncp/v<VERSIONE>/{segnali.csv.gz,riepilogo.json,campione-*.csv}
 """
 import collections, csv, datetime, glob, gzip, hashlib, io, json, os, random, re, sys, zipfile
 from pathlib import Path
@@ -32,11 +32,17 @@ import bdap_cig_ministeri_cf as M  # noqa: E402  quote(): regola attuale della q
 
 D = R / "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset"
 ICT = R / os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv")  # IMBUTO_ICT / IMBUTO_ESITI_OUT: prova di ripetibilità
+VERSIONE = "0.2"  # 0.1 (19/11 notte): esiti in esiti/2026-11-19/imbuto/bdncp/; dalla 0.2 una sottocartella per versione
 OGGI = os.environ.get("ESITI_DATA", datetime.date.today().isoformat())
-OUT = R / (os.environ.get("IMBUTO_ESITI_OUT") or f"esiti/{OGGI}/imbuto/bdncp")
+OUT = R / (os.environ.get("IMBUTO_ESITI_OUT") or f"esiti/{OGGI}/imbuto/bdncp/v{VERSIONE}")
 RX_CLOUD_DC = re.compile(r"cloud|saas|iaas|paas|hosting|data\s*cent|datacent|\bced\b|sala\s+(?:server|macchine)|server\s+farm|"
                          r"(?:sala|locale|locali)\s+(?:server|macchine|ced)|piattaforma\s+(?:web|online)|in\s+remoto|\bpsn\b|"
-                         r"pago\s*pa|siti?\s+(?:web|internet|istituzional)|licenz", re.I)  # 19/11: dal campione di sviluppo B1
+                         r"pago\s*pa|siti?\s+(?:web|internet|istituzional)|licenz|"
+                         r"locali?\s+(?:informatic|tecnologic|tecnic[oi]\s+informatic)|\bare[ae]\s+server", re.I)
+# 0.1 (19/11): dal campione di sviluppo B1. 0.2 (19/11): + «locali informatici», «locali tecnologici», «area server»
+# (errori e dubbi del campione di misura 0.1, report/metodo/bdncp/b1-campione-misura.csv).
+# Campioni B1 già annotati: i CIG si escludono dal nuovo campione di misura (misura a cieco su casi mai visti).
+VISTI_B1 = ["report/metodo/bdncp/b1-campione-sviluppo.csv", "report/metodo/bdncp/b1-campione-misura.csv"]
 SOGLIA_LAVORI = 0.8
 ANNI_QUOTA = (2024, 2025)
 ORDINE = ["ipa", "sa-non-ipa", "non-sa"]
@@ -198,7 +204,7 @@ def cloud(x):
 def riepilogo(ict):
     dal24 = {c: x for c, x in ict.items() if x["anno"] >= 2024}
     E = lambda it: round(sum(x["importo"] for x in it if not x["da_verificare"]) / 1e6, 1)  # noqa: E731
-    out = {"versione": "imbuto-bdncp 0.1", "data": OGGI, "imbuto": os.environ.get("IMBUTO_VERSIONE", "0.3.4"),
+    out = {"versione": f"imbuto-bdncp {VERSIONE}", "data": OGGI, "imbuto": os.environ.get("IMBUTO_VERSIONE", "0.3.4"),
            "cig_ict_dal_2020": len(ict), "cig_ict_dal_2024": len(dal24), "soglia_lavori": SOGLIA_LAVORI,
            "rx_cloud_dc": RX_CLOUD_DC.pattern, "nota_importi": "M€, importo del lotto, senza importi da verificare"}
     # B1
@@ -282,10 +288,12 @@ def scrivi(ict, out):
             if not any(k in x for k in ("qe_quota_lavori", "b2", "durata_eff", "ind_pnrr", "cup", "v3")) and not flag_si(x.get("flag_pnrr")):
                 continue
             w.writerow([c] + [round(x[k], 3) if isinstance(x.get(k), float) else x.get(k, "") for k in campi[1:]])
-    rnd = random.Random(20261119)  # 19/11: seme nuovo dopo la correzione (il seme 7419 è il campione di sviluppo)
-    for nome, sel in (("campione-b1-esce-lavori", lambda x: x.get("b1") == "esce-lavori"),
-                      ("campione-b2-non-sa", lambda x: x.get("b2") == "non-sa")):
-        el = sorted(c for c, x in ict.items() if x["anno"] >= 2024 and sel(x))
+    # semi: 7419 campione di sviluppo B1, 20261119 campioni di misura 0.1, 202611192 campione di misura B1 0.2
+    visti = {r["cig"] for p in VISTI_B1 if (R / p).exists() for r in csv.DictReader(open(R / p, encoding="utf-8"))}
+    for nome, sel, seme in (("campione-b1-esce-lavori", lambda x: x.get("b1") == "esce-lavori", 202611192),
+                            ("campione-b2-non-sa", lambda x: x.get("b2") == "non-sa", 20261119)):
+        rnd = random.Random(seme)
+        el = sorted(c for c, x in ict.items() if x["anno"] >= 2024 and sel(x) and not (nome.startswith("campione-b1") and c in visti))
         with open(OUT / f"{nome}.csv", "w", newline="", encoding="utf-8") as fh:
             w = csv.writer(fh)
             w.writerow(["cig", "strato", "sottoclasse", "importo", "qe_quota_lavori", "b2_cf", "ente", "aggiudicatari", "testo", "giudizio"])

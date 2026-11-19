@@ -6,7 +6,7 @@ weight: 12
 gruppo: inizio
 ---
 
-**Versione 0.1, 19/11/2026** ([#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)).
+**Versione 0.2, 19/11/2026** ([#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)).
 Il quadro d'insieme (dataset, relazioni, mancanze) è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). I numeri di ogni livello stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) (§ 2.8 e § 2.9); questa pagina dice **come** si ottengono e come si rifanno.
 
 ## Il principio
@@ -45,12 +45,13 @@ La BDNCP è nel [mirror ANAC](/progetto/mirror-pubblico/): 62 dataset, 129 GB ([
 - **Dataset:** `quadro-economico`, importi per natura (forniture, servizi, lavori) e per evento (base d'asta, variante, consuntivo).
 - **Calcolo:** quota lavori = lavori / (forniture + servizi + lavori), sull'evento «base d'asta». Se manca, si usa il primo evento con importi.
 - **Regola:** un CIG degli strati S5 (ICT non cloud) o S6 (incerto) con quota lavori **≥ 0,8** esce dalla misura cloud. Resta ICT, come per L2. La regola non si applica in due casi:
-  - il testo parla di cloud, hosting, data center, CED, sala o locale server: costruire un data center è infrastruttura interna, che è nell'obiettivo;
+  - il testo parla di cloud, hosting, data center, CED, sala o locale server, locali informatici o tecnologici, area server: costruire o attrezzare un data center è infrastruttura interna, che è nell'obiettivo (le ultime tre voci dalla regola 0.2);
   - il testo nomina siti web, pagoPA o licenze: sono servizi con il quadro economico compilato male.
 - **Strati S3 e S4** (inclusi per convenzione o marchio): nessuna esclusione automatica. I casi con quota lavori alta si elencano come anomalie da rivedere.
 - **Misura:** due campioni di 40, con il giudizio in [`report/metodo/bdncp/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/report/metodo/bdncp):
   - un campione di sviluppo, da cui sono venute le protezioni;
-  - un campione di misura con seme nuovo, a regola ferma: 37 su 40.
+  - un campione di misura con seme nuovo, a regola ferma: 37 su 40 giusti, Wilson 80-97 % (regola 0.1);
+  - regola **0.2** (19/11): protezione estesa a «locali informatici», «locali tecnologici» e «area server», gli errori e i dubbi del campione di misura 0.1. Esclusi 1.274 CIG / 130,6 M€ dal 2024 (erano 1.281 / 131,9); restano nella misura 142 CIG / 34,2 M€ con lavori ma cloud o data center (erano 135 / 33,0). Nuovo campione di misura di 40 CIG mai visti (seme 202611192), annotato a cieco da Claude: **34 giusti, 2 errori, 4 dubbi**, Wilson 71-93 % (82-99 % senza i dubbi). I due errori sono una «stanza server» e il «canone dei siti comunali», non coperti dalla protezione: proposta per la regola 0.3, da misurare su un campione nuovo. Esiti in `esiti/2026-11-19/imbuto/bdncp/v0.2/`, misure dei campioni con `tools/verifiche/bdncp_campioni_misura.py`.
 
 ### B2. In-house: società pubbliche o privati?
 
@@ -104,4 +105,5 @@ nohup setsid tools/llm/raffinamento_catena.sh &                   # L3 (lettura)
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-19 | 0.2 | B1 regola 0.2 (locali informatici e tecnologici, area server) e nuovo campione di misura a cieco: 34/40, Wilson 71-93 % ([#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)) |
 | 2026-11-19 | 0.1 | prima versione: livelli L1-L4 (decisione di Fabio del 18/11) e livello B con i quattro segnali BDNCP (decisione di Fabio del 19/11) |
