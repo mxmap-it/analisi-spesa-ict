@@ -364,7 +364,8 @@ risorse:
     ict: true
     nota: >-
       ReGiS, ponte CUP-CIG ufficiale (v11, osservazione 13/06/2026). 403 Akamai
-      dal server il 6/11/2026 (R57); da riprovare.
+      dal server il 6/11/2026 e di nuovo il 19/11/2026 (anche robots.txt dà 403) (R57).
+      Non si aggira: in sua vece il ponte di openpnrr (openpolis/openpnrr-bulk).
 
   # ------------------------------------------------- mirror della roadmap (#25 #26 #28 #29), 6/11/2026
   - autorita: rgs
@@ -375,9 +376,13 @@ risorse:
     partizione: nessuna
     ict: true
     nota: >-
-      Catalogo CKAN di BDAP (non /api/3, che dà 404): si specchiano package_list
-      e package_search a pagine da 1000 (config/coda-mirror-2026-11.txt); i
-      dataset si scelgono dopo, solo quelli ICT.
+      Catalogo CKAN di BDAP (non /api/3, che dà 404). 19/11/2026: il robots.txt
+      esclude /SpodCkanApi/* (catalogo e CSV datastore/dump), Crawl-delay 10; la vista
+      OData risponde 500 (R85). Elenco delle risorse da tools/acquisizione/bdap_lista.py
+      sui metadati già archiviati: dentro il perimetro 2.754 CSV (30,7 GB), 2.675 PDF e
+      111 XLS di metadati; fuori entrate, disponibilità liquide, dipendenti pubblici,
+      mutui e prestiti, e le viste OData XML. PDF/XLS (ammessi) in corso con 10 s di
+      pausa; i CSV attendono la decisione di Fabio (#25). Stato: tools/verifiche/mirror_fonti.py.
 
   - autorita: opencoesione
     dataset: progetti-esteso
@@ -386,7 +391,27 @@ risorse:
     specchia: true
     partizione: nessuna
     ict: true
-    nota: Redirect al file datato (progetti_esteso_AAAAMMGG.zip, circa 270 MB il 31/08/2026). Ponte CUP per i fondi di coesione.
+    nota: >-
+      Redirect al file datato (progetti_esteso_AAAAMMGG.zip, circa 270 MB il 31/08/2026). Ponte CUP per i
+      fondi di coesione. Dal 19/11/2026 si specchiano anche le tabelle del database completo in CSV (zip) e
+      Parquet (progetti, soggetti, pagamenti, impegni, fasi, localizzazioni, indicatori), i metadati, l'elenco
+      degli affidamenti e il tema RETI_SERVIZI_DIGITALI (lavoro/mirror-completamento/altre-fonti.txt); i
+      sottoinsiemi per fondo, regione, tema e ambito sono estratti delle stesse tabelle e restano fuori.
+      robots.txt: Crawl-delay 5, /it/opendata/ ammesso.
+
+  - autorita: openpolis
+    dataset: openpnrr-bulk
+    url: https://openpnrr.s3.amazonaws.com/media/cig_gare-pnrr.csv
+    cadenza: mensile
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Ponte CUP-CIG di openpnrr (Last-Modified 4/9/2025) più progetti.csv, progetti_pagamenti.csv,
+      progetti_territori.csv (6/10/2026) sullo stesso bucket S3, e misure.csv, organizzazioni.csv da
+      openpnrr.it/csv/ (robots.txt: Crawl-delay 5). Le pagine di openpnrr.it sono dietro una verifica
+      anti-bot (Anubis) dal novembre 2026: non si aggira, si usano solo i file bulk. Fonte terza (Openpolis), non
+      ufficiale: controvalidare con ReGiS (R57) e FLAG_PNRR_PNC di ANAC.
 
   - autorita: opencup
     dataset: progetti

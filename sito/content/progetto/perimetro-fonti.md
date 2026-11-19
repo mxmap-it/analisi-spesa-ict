@@ -85,14 +85,16 @@ Le fonti nel nostro registry, con il livello di relazione con la spesa:
 | Fonte | Livello | Stato |
 |---|---|---|
 | ANAC | diretta | **archiviata**: 1.796 delle 1.800 risorse del catalogo, tutti i formati, OCDS compreso (le 4 mancanti sono 404 alla fonte) |
-| Consip | diretta | archiviata (2024-2026, CSV, JSON, XLSX) |
+| Consip | diretta | **archiviata**: 150 risorse 2024-2026 in tutti i formati (CSV, JSON, XLSX, TTL), 8,3 GB; catalogo riletto il 19/11/2026 |
 | SIOPE (RGS) | diretta | archiviata (uscite 2017-2026 e anagrafiche) |
-| BDAP (RGS) | diretta | archiviata in parte (vedi [BDAP](/progetto/bdap/)) |
+| BDAP (RGS) | diretta | archiviata in parte: i CSV usati nelle misure (82, 5,9 GB); PDF e XLS dei metadati in corso; gli altri CSV sono esclusi dal robots.txt della fonte, decisione di Fabio (#25, R85). Entrate, disponibilità liquide, dipendenti e mutui fuori perimetro (vedi [BDAP](/progetto/bdap/)) |
 | PA Digitale 2026 (DTD) | diretta, specifica ICT | archiviata |
 | IndicePA | indiretta | archiviata |
+| OpenCUP, OpenCoesione, openpnrr (finanziamenti) | indiretta, marca il PNRR e la coesione | archiviate (OpenCUP completo 3,4 GB; OpenCoesione database completo in CSV e Parquet; ponte CUP-CIG di openpnrr). Italia Domani/ReGiS: 403 alla fonte (R57) |
+| TED, FTS, GLEIF, CPT, Eurostat COFOG | indiretta o contesto | archiviate (#27 #28 #29) |
 | ACN, catalogo cloud qualificati | indiretta, serve alla giurisdizione | portale: 403 alle richieste non-browser; CSV delle schede qualificate archiviato |
 
-Stato e dimensioni misurati: [Mirror pubblico](/progetto/mirror-pubblico/). Ordine dei dataset ancora
+Stato al 19/11/2026 misurato da `tools/verifiche/mirror_fonti.py`. Stato e dimensioni: [Mirror pubblico](/progetto/mirror-pubblico/). Ordine dei dataset ancora
 da completare (finanziamenti, Europa, attribuzione, contesto): [roadmap § 8ter](/progetto/roadmap/).
 
 ## Casi limite già decisi

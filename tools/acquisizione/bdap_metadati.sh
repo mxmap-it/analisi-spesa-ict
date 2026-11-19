@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # BDAP (#25): metadati CKAN package_search a pagine da 250, con tentativi ripetuti (il backend va in timeout a caso,
 # verificato 7/11/2026 dal server e dal portatile: non è un blocco per IP). Ripartibile: salta le pagine già scaricate.
+# 19/11/2026: il robots.txt di BDAP esclude /SpodCkanApi/* (Crawl-delay 10), quindi anche queste pagine (R85, #25).
+# Non rilanciare senza la decisione di Fabio su #25.
 cd ~/analisi-spesa-ict
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36 analisi-spesa-ict (+https://github.com/mxmap-it/analisi-spesa-ict)"
 B="https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search?rows=250&start="

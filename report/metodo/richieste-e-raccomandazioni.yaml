@@ -902,7 +902,7 @@
   stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
   titolo: "Il robots.txt di dati.consip.it esclude l'API CKAN (/api/): il catalogo si legge solo dalle pagine HTML"
   evidenza: "robots.txt di dati.consip.it (19/11/2026): «Disallow: /api/», «Crawl-Delay: 10». I file (/download/dataset/...) sono ammessi. Il catalogo è stato riletto dalle pagine /dataset e /dataset/<nome> (16 dataset, 150 risorse 2024-2026, tutte già con sha256 nel mirror). Il server interrompe i file sopra circa 350 MB (#11), che vanno scaricati con ripresa"
-  prova: "robots.txt archiviato (archivio/mirror/dati.consip.it/robots.txt); lavoro/mirror-completamento/consip_html.py; tools/verifiche/mirror_fonti.py"
+  prova: "robots.txt archiviato (archivio/mirror/dati.consip.it/robots.txt); tools/acquisizione/consip_html.py; tools/verifiche/mirror_fonti.py"
   richiesta: "Ammettere /api/3/action/ (package_list, package_show) nel robots.txt, che è il modo standard per sapere cosa c'è nel catalogo; servire i file grandi senza interruzioni o con sha256 dichiarato"
   perche_serve: "Il controllo di completezza del mirror si fa confrontando il catalogo: leggerlo dall'HTML è fragile"
   metrica: "/api/3/action/ ammesso dal robots.txt; zero interruzioni sui file > 350 MB in un giro completo"

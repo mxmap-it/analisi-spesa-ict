@@ -6,7 +6,7 @@ weight: 33
 gruppo: dati
 ---
 
-**Versione 0.4 del 10/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
+**Versione 0.5 del 19/11/2026** ([#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30)).
 Legenda: **[V]** verificato da noi su file archiviati con sha256; **[R]** riferito da altri o dalla
 documentazione della fonte, non riprodotto.
 
@@ -324,6 +324,25 @@ alla fonte SIOPE diretta aggiunge l'anagrafica dell'ente, non nuovi importi [V s
 importi uguali dove il file è completo, § SIOPE via BDAP contro SIOPE diretto, #30]. Per l'imbuto non serve: la fonte diretta resta
 la via principale.
 
+## Mirror (giro 0.5, 19/11/2026)
+
+Stato misurato da `tools/verifiche/mirror_fonti.py` sul manifest (`esiti/2026-11-19/mirror/stato-fonti.json`) [V].
+
+- **Elenco delle risorse.** `tools/acquisizione/bdap_lista.py` lo ricava dai metadati CKAN già archiviati
+  (3.684 dataset, 11.025 risorse). Dentro il perimetro: **2.754 CSV (30,7 GB dichiarati), 2.675 PDF e 111 XLS
+  di metadati (1,6 GB)**. Fuori, con la regola sul titolo, perché non sono spesa
+  ([perimetro delle fonti](/progetto/perimetro-fonti/)): entrate (438 dataset, 15,0 GB), disponibilità liquide
+  di SIOPE (260, 11,3 GB), dipendenti pubblici (128, 1,5 GB), mutui e prestiti (102). Fuori anche le
+  3.682 viste OData XML: stessi dati del CSV.
+- **Il robots.txt esclude i dati** [V]. Dal 19/11/2026 controlliamo il robots.txt (archiviato, sha256
+  `0fb0d008…`): `Disallow: /SpodCkanApi/*` e `Crawl-delay: 10`. Sotto `/SpodCkanApi/` stanno sia il catalogo sia
+  **tutti i CSV** (`datastore/dump`). La vista OData, non esclusa, risponde HTTP 500. Restano ammessi i PDF e gli
+  XLS dei metadati (`/sites/default/files/`), che specchiamo con 10 secondi fra le richieste. I 82 CSV già
+  archiviati (5,9 GB, quelli usati nelle misure di questa pagina) e le pagine del catalogo sono stati presi fra
+  il 26/10 e il 10/11, prima di questo controllo. Raccomandazione **R85**.
+- **Decisione per Fabio** (#25): specchiare gli altri 2.672 CSV di spesa (circa 25 GB) nonostante il robots.txt,
+  chiedere a RGS un'autorizzazione o un dump, oppure fermarsi ai CSV che servono alle misure.
+
 ## Difetti noti
 
 - **R61** [V]: `result.count` di `package_search` vale la dimensione della pagina, non il totale;
@@ -359,6 +378,7 @@ la via principale.
 | SIOPE via BDAP | stessi importi della fonte diretta sull'ICT dove è completo, ma il 2025 è parziale (Lombardia, FVG, Trento: R75) e non ha codice ente |
 | Pagamenti mensili | il consuntivo li somma; i mensili servono solo a vedere la stagionalità |
 | Spesa regionalizzata, dipendenti, mutui | nessun dettaglio ICT, fuori perimetro |
+| Entrate, disponibilità liquide | non sono spesa: fuori dal mirror (0.5) |
 
 ## Registro delle revisioni
 
@@ -367,4 +387,5 @@ la via principale.
 | 2026-11-09 | prima versione: famiglie, campi, misure 2019-2025, copertura CIG per ministero, CE SSN, SIOPE via BDAP, R63-R65 |
 | 2026-11-09 | 0.2: seconda via per PG 2019-2024 (discontinuità 2023); abbinamento SA→ministero per codice fiscale IndicePA (`bdap_cig_ministeri_cf.py`): Giustizia 0,96, MEF 0,25 nel 2024; quota annua dei CIG pluriennali e limite della durata mancante dal 2024; Sogei aggiudicataria e stazione appaltante; SIOPE via BDAP contro diretto 2024-2025 su cinque regioni (`siope_bdap_vs_diretto.py`, #30); R69-R71 |
 | 2026-11-10 | 0.4: CE SSN 2022 e 2024 archiviati (BA1620 530/604/720 M€, righe 999); totale pagato Stato + SIOPE 2022-2025 (5,1 mld nel 2024) contro i CIG ICT; rimando alla pagina SIOPE (`siope_ict_enti.py`, #12); R83 |
+| 2026-11-19 | 0.5: sezione Mirror: elenco delle risorse dai metadati (`bdap_lista.py`), perimetro del mirror (fuori entrate, disponibilità liquide, dipendenti, mutui), robots.txt che esclude `/SpodCkanApi/*` e OData in errore (R85), PDF/XLS dei metadati in corso, CSV in attesa della decisione di Fabio (#25) |
 | 2026-11-09 | 0.3: #30 chiuso. SIOPE via BDAP contro diretto su tutte le 20 regioni, 2023-2025 (60 file archiviati, `siope_bdap_vs_diretto.py` 0.2 con abbinamento a tre livelli): il difetto riferito da AgID **si riproduce** [R → V] — 2025 di Lombardia e FVG fermo a marzo (1.717 comuni), 84 comuni di Trento assenti; 2023 e 2024 completi; R75 |
