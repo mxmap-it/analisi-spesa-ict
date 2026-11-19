@@ -7,18 +7,18 @@ weight: 18
 
 Spesso il testo di un contratto in BDNCP non basta a dire **quale prodotto** si compra e **sotto quale giurisdizione** (esempio: «adesione alla convenzione PSN, piano dei fabbisogni …»: il PSN vende servizi italiani ed extra-UE). Serve un documento: la determina, il contratto, il piano dei fabbisogni, la scheda del prodotto.
 
-Usiamo **più modalità di acquisizione**, in ordine di complessità e costo crescenti. Si passa alla modalità successiva solo per i contratti che quella precedente non ha chiuso. Ogni documento trovato è archiviato con il suo sha256, il testo estratto (anche con OCR) e la **modalità che lo ha trovato** (`trovato_con.livello` nel [dataset CIG → atti](../formato-classificazione/)). Così si misura, modalità per modalità, quanto copre e quanto costa.
+Usiamo **più modalità di acquisizione**, in ordine di complessità e costo crescenti. Si passa alla modalità successiva solo per i contratti che quella precedente non ha chiuso. Ogni documento trovato è archiviato con il suo sha256, il testo estratto (anche con OCR) e la **modalità che lo ha trovato** (`trovato_con.livello` nel [dataset CIG → atti](/progetto/formato-classificazione/)). Così si misura, modalità per modalità, quanto copre e quanto costa.
 
 | livello | modalità | cosa usa | costo | stato |
 |---|---|---|---|---|
 | **L0** | Testo del contratto | oggetto, CPV, aggiudicatari, importo in BDNCP/ANAC | nullo | in uso |
 | **L1** | Dati strutturati collegati | collegamento all'accordo quadro (`cig_accordo_quadro`), base di conoscenza delle iniziative (Consip, PSN, regionali), dati aperti PNRR (CUP), catalogo ACN | nullo, deterministico | in uso; dipende dalla qualità dei collegamenti ANAC (R01) |
-| **L2** | Avvisi europei (TED) | per le gare sopra soglia, gli avvisi eForms contengono l'indirizzo dei documenti di gara (BT-15) | basso, deterministico | da sperimentare |
-| **L3** | Piattaforme di e-procurement | dal 2024 ogni gara passa da una piattaforma certificata (MePA, Sintel, START, piattaforme commerciali) che pubblica la documentazione | basso-medio; il link per CIG viene dalla PVL (campo `documenti_di_gara_link`, dal 2024; vedi `report/metodo/acquisizione/dettaglio-cig.md`) | basso-medio | residuo S6 finito il 7/11 (#57, misure sotto) |
-| **L4** | Crawling mirato di Amministrazione trasparente | sito dell'ente da IndicePA → sezione «Bandi di gara e contratti» → riconoscimento del software di trasparenza (pochi fornitori coprono la maggior parte degli enti) → ricerca per CIG → scaricamento | medio, deterministico e ripetibile | da sviluppare |
-| **L5** | Ricerca assistita da modello linguistico | per i casi che L1-L4 non chiudono: l'agente cerca sul web e nei siti degli enti, scarica con lo strumento di archiviazione, legge il testo estratto | alto (token) | in sperimentazione (via 6, giro 2) |
-| **L6** | Segnalazione umana | gli annotatori indicano quale documento esterno servirebbe (determina, piano dei fabbisogni, contratto, convenzione, scheda prodotto); le richieste alimentano una coda (`dati/annotazioni/documenti-da-cercare.jsonl`) per L2-L5 | tempo dei volontari | in uso ([annotazioni](../../annotazioni/)) |
-| **L7** | Accesso civico generalizzato (FOIA) | richiesta formale all'ente per i documenti non pubblicati | molto alto: richiede un sistema dedicato per richieste massive, scadenze, solleciti e ricorsi; è un **progetto a parte** | ultima istanza, non avviato |
+| **L2** | Avvisi europei (TED) | per le gare sopra soglia, gli avvisi eForms contengono l'indirizzo dei documenti di gara (BT-15) | basso, deterministico | sperimentato (`tools/acquisizione/ted_l2.py`, #27) |
+| **L3** | Piattaforme di e-procurement | dal 2024 ogni gara passa da una piattaforma certificata (MePA, Sintel, START, piattaforme commerciali) che pubblica la documentazione | basso-medio; il link per CIG viene dalla PVL (campo `documenti_di_gara_link`, dal 2024; vedi `report/metodo/acquisizione/dettaglio-cig.md`) | residuo S6 finito il 7/11 (#57, misure sotto) |
+| **L4** | Crawling mirato di Amministrazione trasparente | sito dell'ente da IndicePA → sezione «Bandi di gara e contratti» → riconoscimento del software di trasparenza (pochi fornitori coprono la maggior parte degli enti) → ricerca per CIG → scaricamento | medio, deterministico e ripetibile | in uso: residuo S6 finito il 9/11 (#68), ripassi in #73 (misure sotto) |
+| **L5** | Ricerca assistita da modello linguistico | per i casi che L1-L4 non chiudono: l'agente cerca sul web e nei siti degli enti, scarica con lo strumento di archiviazione, legge il testo estratto | alto (token) | in uso sul residuo (via 6; livello L4 del [raffinamento](/progetto/raffinamento-imbuto/)) |
+| **L6** | Segnalazione umana | gli annotatori indicano quale documento esterno servirebbe (determina, piano dei fabbisogni, contratto, convenzione, scheda prodotto); le richieste alimentano una coda (`dati/annotazioni/documenti-da-cercare.jsonl`) per L2-L5 | tempo dei volontari | in uso ([annotazioni](/annotazioni/)) |
+| **L7** | Accesso civico generalizzato (FOIA) | richiesta formale all'ente per i documenti non pubblicati | molto alto: richiede un sistema dedicato per richieste massive, scadenze, solleciti e ricorsi; è un **progetto a parte** | ultima istanza: elenco preparato, nulla inviato; si fa **solo alla fine**, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026, #78) |
 
 ## Principi
 
@@ -80,13 +80,13 @@ Sul residuo S6 dell'imbuto che la via 6 non copre (28.583 CIG: 70 ICT con import
 
 Con il nuovo Codice dei contratti (d.lgs. 36/2023) dal 2024 ogni fase dell'acquisto passa da piattaforme certificate, che trasmettono le schede alla BDNCP. I documenti di gara dovrebbero essere raggiungibili da un puntatore nei dati. Prima, i documenti stavano solo sui siti degli enti, senza un collegamento leggibile da una macchina tra CIG e documento.
 
-Copertura misurata del link ai documenti per CIG e mappa delle piattaforme: [Dove sono i documenti di gara](../sistemi-documenti/) (65,1 % dei CIG 2024-2026).
+Copertura misurata del link ai documenti per CIG e mappa delle piattaforme: [Dove sono i documenti di gara](/progetto/sistemi-documenti/) (65,1 % dei CIG 2024-2026).
 
 Per il periodo dal 2024 contano quindi soprattutto i livelli L1-L3, che leggono il puntatore; per il periodo precedente servono scraping e accesso civico (L4-L7). In entrambi i casi non c'è un campo che dica quale prodotto si compra né sotto quale giurisdizione.
 
 Il quadro normativo è **riferito, da verificare** sulle delibere ANAC 261, 263 e 264/2023.
 
-**Misura in programma** (dalla settimana del 2 novembre 2026):
+**Misura avviata** nella settimana del 2 novembre 2026 (primi esiti nella pagina [Dove sono i documenti di gara](/progetto/sistemi-documenti/)):
 - quota di contratti con il puntatore ai documenti;
 - quota di puntatori funzionanti;
 - quota di documenti coerenti con il CIG e leggibili;
@@ -99,6 +99,7 @@ Dettaglio e percorso multi-livello in [prima-e-dopo-2024.md](https://github.com/
 
 | data | modifica |
 |---|---|
+| 2026-11-19 | revisione di coerenza: stati dei livelli L2, L4, L5, L7 aggiornati (L7 solo alla fine, #78), cella in più nella riga L3 |
 | 2026-11-09 | L4 finito (4.007 enti, residui in #73); misure finali L3, MePA e L4 sul residuo S6, input per l'imbuto (#57, #66) |
 | 2026-11-07 | misure L3 sul residuo S6 della via 6 (#57) |
 | 2026-10-31 | prima e dopo il 2024: puntatori ai documenti nella BDNCP, misura in programma, percorso multi-livello |

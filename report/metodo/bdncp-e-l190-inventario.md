@@ -10,7 +10,7 @@ Legenda: **[V]** verificato da noi, con il comando che rifà il numero; **[R]** 
 
 - **Sì, è clonata:** 62 cartelle di dataset BDNCP nel mirror ANAC, 1.796 file, 128,7 GB (OCDS 73,8 GB, SmartCIG annuali 38,7 GB, CIG annuali 8,6 GB, gli altri 7,6 GB) [V].
 - **Ne usiamo poco:** 14 dataset su 62 compaiono nel codice di `tools/` secondo il grep dell'inventario. Con le correzioni di § 3 (falsi positivi e negativi) l'imbuto si regge su CIG, SmartCIG, aggiudicatari, aggiudicazioni, CUP, pubblicazioni, stazioni appaltanti e OCDS [V].
-- **Potenziale non sfruttato** (quote sui 443.331 CIG ICT S3-S6 dell'imbuto 0.3.4):
+- **Potenziale non sfruttato** (quote sui 443.331 CIG ICT S3-S6 2020-2026 dell'imbuto 0.3.4; dal 2024 sono 289.192):
   - quadro economico 54,7 %;
   - indicatori PNRR/PNC 21,1 %;
   - avvio e fine contratto 17,5 % e 7,1 %;
@@ -33,7 +33,7 @@ Legenda: **[V]** verificato da noi, con il comando che rifà il numero; **[R]** 
 | `esiti/2026-11-18/l190/campione-file.csv` | `4d64f4f4…bf37` (identico al 10/11) | idem | — |
 | `esiti/2026-11-10/…` (stessi quattro file) | `4c3b6a05…807a`, `6969288a…f306`, `e213fb8b…54f5`, `4d64f4f4…bf37` | versioni precedenti | imbuto 0.3.1, tutto tranne S1-S2: filtro sbagliato, superato |
 
-Insieme ICT del 18/11: `lavoro/imbuto/ict.csv`, imbuto 0.3.4, sha256 `9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c`. Ha 443.331 CIG distinti negli strati S3-S6, lo stesso valore `ict_cig` dell'esito [V].
+Insieme ICT del 18/11: `lavoro/imbuto/ict.csv`, imbuto 0.3.4, sha256 `9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c`. Ha 443.331 CIG distinti negli strati S3-S6 dal 2020 al 2026 (289.192 dal 2024 più 154.139 del 2020-2023), lo stesso valore `ict_cig` dell'esito [V].
 
 Per rifare i numeri, sul server come `mxmap.it`, con `nice`, dopo `free -g` e un job pesante alla volta:
 

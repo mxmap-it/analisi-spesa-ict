@@ -45,14 +45,14 @@ Due fatti contano per noi:
 | aggiudicatario | sì | **no** | sì | **no** |
 | collegamento all'accordo quadro | sì, quando compilato | **no** | sì, quando compilato | **no** |
 | schede di esecuzione e conclusione | parziali | no | dovute (R), da misurare | no |
-| link ai documenti | quasi mai (da misurare) | no | atteso nei dati (R), da misurare | da misurare |
+| link ai documenti | quasi mai (da misurare) | no | nella PVL (non negli open data) per il 65,1 % dei CIG 2024-2026 (V, [dove sono i documenti](/progetto/sistemi-documenti/)) | da misurare |
 | prodotto, produttore, giurisdizione | **mai** | **mai** | **mai** | **mai** |
 
 ## 4. Come cambia l'attendibilità
 
-L'attendibilità di un contratto dipende da quanti **segnali indipendenti** abbiamo e da se possiamo arrivare a un **documento** che lo conferma ([definizione della confidenza](../formato-classificazione/)).
+L'attendibilità di un contratto dipende da quanti **segnali indipendenti** abbiamo e da se possiamo arrivare a un **documento** che lo conferma ([definizione della confidenza](/progetto/formato-classificazione/)).
 
-- **CIG dal 2024: attendibilità più alta.** Si possono usare CPV, testo, aggiudicatario, accordo quadro e, quando c'è, il link ai documenti. L'esclusione certa usa più segnali concordi, e l'inclusione si può confermare con l'atto. È il periodo della **prima statistica di sovranità** (11/11/2026).
+- **CIG dal 2024: attendibilità più alta.** Si possono usare CPV, testo, aggiudicatario, accordo quadro e, quando c'è, il link ai documenti. L'esclusione certa usa più segnali concordi, e l'inclusione si può confermare con l'atto. È il periodo della **prima statistica di sovranità** (rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/); quadro in [Mappa dell'imbuto](/progetto/mappa-imbuto/)).
 - **CIG 2020-2023: attendibilità media.** Ci sono gli stessi campi strutturati, ma i documenti si raggiungono solo con scraping dei siti degli enti o con l'accesso civico.
 - **SmartCIG 2020-2023: attendibilità bassa sul singolo contratto.** C'è solo il testo dell'oggetto. Si esclude con certezza solo ciò che il testo dice chiaramente (lavori, farmaci, servizi sociali). Per le cifre si usa una **stima statistica da campione**, con intervallo, e non la somma dei contratti classificati uno per uno. Fanno eccezione gli affidamenti **in house** e quelli con importo alto, che si trattano a parte.
 - **SmartCIG dal 2024:** importi piccolissimi (circa 5 mld/anno in tutto, ogni settore). Si contano e si stimano, senza approfondire.
@@ -67,7 +67,7 @@ L'attendibilità di un contratto dipende da quanti **segnali indipendenti** abbi
 
 ## 6. Cosa resta da misurare
 
-- La quota di CIG con link ai documenti e la quota di link funzionanti, per anno ([prima e dopo il 2024](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/prima-e-dopo-2024.md)).
+- La quota di link funzionanti, per anno (la quota di CIG 2024-2026 con il link è misurata: 65,1 %; [prima e dopo il 2024](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/acquisizione/prima-e-dopo-2024.md)).
 - La quota di spesa ICT in SmartCIG 2020-2023 (dal testo) e la sua stima da campione.
 - Il regime SmartCIG dal 2024, da verificare sulle delibere ANAC.
 
@@ -75,4 +75,5 @@ L'attendibilità di un contratto dipende da quanti **segnali indipendenti** abbi
 
 | data | modifica |
 |---|---|
+| 2026-11-19 | revisione di coerenza: link ai documenti dal 2024 misurato (65,1 %), rimando al rendiconto della prima statistica di sovranità |
 | 2026-11-03 | prima versione: SmartCIG per anno e per fattispecie (V), campi disponibili per periodo, attendibilità per periodo, effetti sull'imbuto |

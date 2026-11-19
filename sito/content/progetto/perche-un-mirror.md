@@ -1,12 +1,12 @@
 ---
-title: "Perché un mirror (bozza)"
+title: "Perché un mirror"
 date: 2026-11-06
 description: "Le ragioni, con evidenze datate, per cui teniamo e proponiamo di rendere pubblica una copia integrale e versionata dei dati aperti di ANAC, Consip e delle altre fonti."
 
 ---
 
-**Bozza 0.1 del 6/11/2026, non elencata (#17).** **[V]** = verificato da noi, con prova nel repository;
-**[R]** = riferito o dedotto, da verificare. Progetto tecnico: [Mirror pubblico](../mirror-pubblico/).
+**Versione 0.1 del 6/11/2026 (#17).** **[V]** = verificato da noi, con prova nel repository;
+**[R]** = riferito o dedotto, da verificare. Progetto tecnico: [Mirror pubblico](/progetto/mirror-pubblico/).
 
 ## In breve
 
@@ -26,7 +26,7 @@ Nessuna delle fonti dichiara una politica di conservazione.
 | SmartCIG: giugno e luglio 2026 mancanti, distribuzione JSON interrotta | 26/10/2026 | [V] | P09 |
 | Dimensioni dichiarate dal catalogo 4,1 volte quelle servite (524,78 GB contro 128,92 GB) | 26/10/2026 | [V] | P11 |
 | Nessun ETag; HEAD da programmi non-browser restituisce una pagina HTML invece dei metadati: chi aggiorna in automatico non sa se il file è cambiato | 26-27/10/2026 | [V] | P12, P13 |
-| Il WAF respinge IP cloud e user-agent non-browser: molti strumenti di terzi non possono scaricare | 26/10/2026 | [V] | nota d'accesso in `config/risorse.yaml` |
+| Il WAF respinge gli user-agent non-browser: molti strumenti di terzi non possono scaricare; il blocco degli IP cloud è riferito da DataCivicLab e Radar-Appalti | 26/10/2026 | [V] user-agent; [R] IP cloud | nota d'accesso in `config/risorse.yaml` |
 | Cruscotto giornaliero: **8 metriche su 9 violate** il 6/11/2026; 7 di esse violate in tutti i 12 giorni misurati | 26/10-6/11/2026 | [V] | [/enti/anac-cruscotto/](/enti/anac-cruscotto/) |
 | AgID ha rilevato a sua volta che «i 12 file OCDS usati erano 4 file distinti» | — | [R] AgID, Cruscotto Italia `etl/sources/anac.py` | P01, controvalidazione |
 

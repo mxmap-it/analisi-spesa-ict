@@ -109,7 +109,7 @@ intestazioni, firme riconosciute e link ai log grezzi.
 - Ultimo giro: [`enti.csv.gz`](/dati/trasparenza/ultimo/enti.csv.gz), [`enti.json.gz`](/dati/trasparenza/ultimo/enti.json.gz),
   [`tentativi.csv.gz`](/dati/trasparenza/ultimo/tentativi.csv.gz) (un tentativo per riga), `tentativi.jsonl.gz` (completo, con intestazioni),
   `caratteri.jsonl.gz` (due vie e ricerca), [`riepilogo.json`](/dati/trasparenza/ultimo/riepilogo.json),
-  [`cambiamenti.csv`](/dati/trasparenza/ultimo/cambiamenti.csv), tabelle `per-*.csv`, schede `giri/<giro>/schede/<cf>.json.gz`.
+  `cambiamenti.csv` (compare dal secondo giro, quando c'è un giro precedente con cui confrontare), tabelle `per-*.csv`, schede `giri/<giro>/schede/<cf>.json.gz`.
 - Ogni giro resta in `/dati/trasparenza/giri/AAAA-MM-GG/` e non si sovrascrive; elenco in [`indice.json`](/dati/trasparenza/indice.json);
   serie storica in [`storico.json`](/dati/trasparenza/storico.json); segnalazioni in [`invii.json`](/dati/trasparenza/invii.json).
 - Log grezzi dei tentativi falliti (dump HTTP o HAR del browser) in `/dati/trasparenza/prove/<sha256>.*.gz`: il nome è l'impronta del contenuto.

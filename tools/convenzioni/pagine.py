@@ -55,12 +55,12 @@ ISSUE = "https://github.com/mxmap-it/analisi-spesa-ict/issues/new"
 
 
 def stato_ac(iid):
-    """stato pubblico di un'istanza: le bozze non approvate compaiono solo come «in preparazione»."""
+    """stato pubblico di un'istanza: le bozze non inviate compaiono come «bozza, non inviata» (accesso civico solo alla fine, #78)."""
     r = REG.get(iid)
     if not r or r["stato"] == "ritirata":
         return "–"
-    if r["stato"] == "preparata":
-        return "in preparazione"
+    if r["stato"] == "preparata" and not r["inviata"]:
+        return "bozza, non inviata"
     t = f"inviata il {r['inviata']}" if r["inviata"] else r["stato"]
     if r["risposta"]:
         t += f"; risposta del {r['risposta']}"
@@ -79,7 +79,12 @@ def conta(v):
 
 def stati_ac(ac):
     c = _Counter(stato_ac(a) for a in ac)
-    return ", ".join(f"{n} {'istanza' if n == 1 else 'istanze'} {k}" for k, n in sorted(c.items()) if k != "–")
+
+    def voce(k, n):
+        if k == "bozza, non inviata":
+            return f"{n} {'bozza' if n == 1 else 'bozze'} di istanza, non {'inviata' if n == 1 else 'inviate'}"
+        return f"{n} {'istanza' if n == 1 else 'istanze'} {k}"
+    return ", ".join(voce(k, n) for k, n in sorted(c.items()) if k != "–")
 
 
 def data_controllo(v):
@@ -101,7 +106,8 @@ def blocco_carenze(v):
         c = CAR_ID[k["id"]]
         nota = f" ({esc(k['nota'])})" if k.get("nota") else ""
         r.append(f"| **{k['id']}** {c['titolo']} | {STATO_C[k['stato']]}{nota} | {esc(c['base'])} | {k['raccomandazione']} |")
-    r += ["", "Rimedio di breve periodo: [bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (non inviate).", ""]
+    r += ["", "Accesso civico: [bozze di istanza](/convenzioni/accesso-civico/), nessuna inviata. Le istanze si useranno solo alla fine, "
+          "dopo il rendiconto del risultato parziale, per ciò che resterà mancante (decisione del 19/11/2026, #78).", ""]
     return r
 
 
@@ -157,7 +163,7 @@ def blocco_sintesi(v, voci):
     r = [f"**In sintesi.** {pres} documenti pubblicati e archiviati; **{nm} mancanti**: {c.get('3', 0)} di criticità 3 (decisivi per giurisdizione del prodotto o controllo della spesa), "
          f"{c.get('2', 0)} di criticità 2, {c.get('1', 0)} di criticità 1. "
          + (f"Pagina ufficiale ricontrollata dal vivo il {dc}. " if dc else "Pagina ufficiale non individuata o non ricontrollata: i mancanti sono [R]. ")
-         + (f"Accesso civico: {stati_ac(ac)}." if ac else "Nessuna istanza di accesso civico."), "",
+         + (f"Accesso civico: {stati_ac(ac)}." if stati_ac(ac) else "Nessuna bozza di accesso civico in corso."), "",
          "Vedi anche: [tutte le convenzioni](/convenzioni/) · [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) · "
          "[metodo](/progetto/metodo-convenzioni-trasparenza/) · [registro dell'accesso civico](/convenzioni/accesso-civico/)", ""]
     cor = correlate(v, voci)
@@ -272,9 +278,20 @@ def pagina(v, voci=()):
     return "\n".join(righe)
 
 
+# istanze che non riguardano un'iniziativa del censimento: pagina del sito equivalente
+FUORI_CENSIMENTO = {"bdncp-incaricati": ("«Incaricati» BDNCP (R47)", "/progetto/raccomandazioni/#r47")}
+
+
 def lista_ini(campo, nomi):
     ii = campo.split(";")
-    t = ", ".join(f"[{esc(nomi.get(i, i))[:40]}](/convenzioni/{i.lower()}/)" for i in ii[:3])
+
+    def link(i):
+        if i in nomi:
+            return f"[{esc(nomi[i])[:40]}](/convenzioni/{i.lower()}/)"
+        if i in FUORI_CENSIMENTO:
+            return "[{}]({})".format(*FUORI_CENSIMENTO[i])
+        return esc(i)
+    t = ", ".join(link(i) for i in ii[:3])
     return t + (f" e altre {len(ii) - 3}" if len(ii) > 3 else "")
 
 
@@ -290,10 +307,13 @@ def pagina_registro(voci):
     st = Counter(r["stato"] for r in reg)
     t = ["---", 'title: "Accesso civico sulle convenzioni ICT"', "date: 2026-11-05",
          'description: "Registro delle istanze di accesso civico generalizzato preparate per le carenze di trasparenza: stato ed esito."', "---", "", AVVISO,
-         "L'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) è qui un **rimedio di breve periodo** per dati che le politiche di "
-         "pubblicazione non prevedono e che abbiamo cercato prima sulle pagine ufficiali. Il rimedio strutturale sono le proposte di policy "
-         "(R37-R42). **Nessuna istanza è inviata senza l'approvazione di Fabio Pietrosanti.**", "",
-         f"Stato: " + ", ".join(f"{k} {n}" for k, n in sorted(st.items())) + f" (totale {len(reg)}).", "",
+         "L'accesso civico generalizzato (art. 5 c. 2 d.lgs. 33/2013) serve per dati che le politiche di pubblicazione non prevedono "
+         "e che abbiamo cercato prima sulle pagine ufficiali. È l'**ultimo passo**: per decisione del 19/11/2026 (#78) le istanze si "
+         "inviano solo alla fine, dopo il rendiconto del risultato parziale e con il metodo pubblicato, e solo per ciò che resterà mancante. "
+         "Le righe qui sotto sono **bozze di lavoro**: nessuna è stata inviata. Il rimedio strutturale sono le "
+         "[proposte di policy](/progetto/raccomandazioni/) (R37-R42). Nessuna istanza si invia senza l'approvazione di Fabio Pietrosanti.", "",
+         f"Stato delle bozze: " + ", ".join(f"{k} {n}" for k, n in sorted(st.items())) + f" (totale {len(reg)}); "
+         f"inviate: {sum(1 for r in reg if r['inviata'])}.", "",
          f"Analisi dei possibili dinieghi e richieste minime: [analisi-dinieghi.md]({GH}report/convenzioni/accesso-civico/analisi-dinieghi.md). "
          f"Bozze riusabili (JSON `spesaict.istanza/1`) in [report/convenzioni/accesso-civico/bozze/]({GH.replace('/blob/', '/tree/')}report/convenzioni/accesso-civico/bozze).", "",
          "| Istanza | Iniziativa | Carenza | Destinatario | Stato | Inviata | Risposta | Esito | Note |", "|---|---|---|---|---|---|---|---|---|"]
@@ -314,7 +334,7 @@ def main():
     idx = ["---", 'title: "Convenzioni e accordi quadro ICT"', "date: 2026-11-05",
            'description: "Le principali iniziative ICT (Consip, PSN, soggetti aggregatori, consorzi): valore, documenti archiviati e mancanti."',
            "---", "", AVVISO,
-           "**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola. Rapporto: [Trasparenza delle convenzioni ICT](/rendiconti/convenzioni-trasparenza/) (bozza).", "",
+           "**[Apri la griglia di tutte le iniziative](/convenzioni/griglia/)**: documenti archiviati, reperiti altrove, mancanti e richiesti, in una vista sola. Rapporto: [Trasparenza delle convenzioni ICT](/rendiconti/convenzioni-trasparenza/) (in corso).", "",
            f"Censimento di **{len(voci)} iniziative** ({len(att)} attive, {len(st)} storiche) con i loro lotti, i documenti pubblici "
            f"archiviati e quelli che mancano. Copertura documentale media: **{pct(media)}** dei tipi di documento attesi.", "",
            "**Criterio.** Un'iniziativa è un ID Sigef Consip, o una gara (CIG padre) di un altro soggetto. È «attiva» se ha CIG derivati "
@@ -356,9 +376,9 @@ def main():
             cel.append(f"{sum(1 for v in vs if any(k['id'] == c['id'] for k in v['carenze']))}/{len(vs)}")
         idx.append(f"| {c['id']} {c['titolo']} | " + " | ".join(cel) + " |")
     idx += ["", f"Basi normative e ragioni: [carenze.yaml]({GH}report/convenzioni/database/carenze.yaml) e "
-            "[scheda normativa](/progetto/normativa-documenti-gara/). Rimedio di breve periodo: "
-            "[bozze di accesso civico generalizzato](/convenzioni/accesso-civico/) (preparate, non inviate). "
-            "Proposte di policy: R08, R37-R43 in richieste-e-raccomandazioni.yaml.", ""]
+            "[scheda normativa](/progetto/normativa-documenti-gara/). Accesso civico: "
+            "[bozze di accesso civico generalizzato](/convenzioni/accesso-civico/), nessuna inviata: si useranno solo alla fine, "
+            "per ciò che resterà mancante (#78). [Proposte di policy](/progetto/raccomandazioni/): R08, R37-R43.", ""]
     idx += ["## Iniziative attive", ""] + tabella(att) + ["", "## Iniziative storiche (ancora rilevanti)", ""] + tabella(st)
     idx += ["", "Fonte e ripetibilità: `tools/convenzioni/*.py`; numeri ricontrollati da `tools/verifiche/convenzioni_copertura.py`.", ""]
     (OUT / "_index.md").write_text("\n".join(idx), encoding="utf-8")

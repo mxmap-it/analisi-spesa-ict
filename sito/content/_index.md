@@ -33,9 +33,9 @@ carenze di trasparenza e accesso civico. [Indice](/convenzioni/) · [griglia di 
 | 1 | **Mirror** di tutti i dati di spesa pubblica, completo e aggiornato, usabile da chiunque | in corso |
 | 2 | **Disponibilità e integrità** dei dati: ci sono tutti? sono corretti? corrispondono a ciò che è dichiarato? | avviato |
 | 3 | **Stato per ente**: cosa va sistemato e se viene sistemato, misurato nel tempo | avviato |
-| 4 | **Rendiconti** con le prove, presentati alle autorità che producono i dati | avviato |
+| 4 | **Rendiconti** con le prove, da presentare alle autorità che producono i dati | avviato |
 | 5 | **Strumenti**: riusiamo quelli esistenti e scriviamo meno codice possibile | fatto |
 
-I risultati escono man mano: [rendiconti](rendiconti/), [stato per ente](enti/),
-[metodo](progetto/). Tutto è riproducibile dal
+I risultati escono man mano: [rendiconti](/rendiconti/), [stato per ente](/enti/),
+[metodo](/progetto/). Tutto è riproducibile dal
 [repository pubblico](https://github.com/mxmap-it/analisi-spesa-ict).

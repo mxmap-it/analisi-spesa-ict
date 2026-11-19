@@ -4,9 +4,9 @@ date: 2026-10-28
 description: "Il metodo con cui attribuiamo un contratto pubblico al cloud provider il cui prodotto viene comprato: difficoltà, vie di analisi, verifica umana a campione, errori misurati, raccomandazioni per semplificare il monitoraggio."
 weight: 15
 ---
-**Stato: bozza in validazione, regole v3 del 28 ottobre 2026**
-([#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). Le precisioni citate sono
-misure intermedie: quella definitiva si fa su un campione nuovo, annotato alla cieca da persone.
+**Stato: in validazione, regole v4.5 del 9 novembre 2026** (prima versione: regole v3 del 28/10/2026,
+[#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). Le precisioni citate sono
+misure intermedie: quella definitiva si fa con il settimo campione a cieco, una sola volta, prima del rendiconto finale (§ «Le misure finora»).
 
 ## Cosa misuriamo
 
@@ -65,10 +65,10 @@ così ogni numero pubblicato si può scomporre e ricontrollare riga per riga.
 | **3. Marchio nella descrizione** | `oggetto_lotto`, `oggetto_gara` | Dizionario di marchi, alias ed esclusioni ([`config/marchi_cloud.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/marchi_cloud.yaml)); vince il primo marchio, i prodotti prima degli in-house | provider 93,3%, provider e tipo 83,9% |
 | **4. PSN voce per voce** | Contratti PSN e piani dei fabbisogni | Attribuzione della singola voce di catalogo | da implementare: serve accesso ai documenti |
 | **5. Il fornitore è il provider** | Aggiudicatario | Aggiudicatario del gruppo del provider (Aruba, Seeweb, Oracle Italia, TIM, Fastweb…) e testo cloud | 29 su 29 |
-| **6. Modello linguistico** | Descrizione residua | Solo sul residuo; modello, prompt e risultati versionati | da implementare |
+| **6. Modello linguistico** | Descrizione residua e atti dell'ente | Solo sul residuo; modello, prompt e risultati versionati. In uso sul residuo (giri G1 e G3, livello L4 del [raffinamento](/progetto/raffinamento-imbuto/)) | da misurare |
 | **7. Indeterminato** | — | Si pubblica come quota **non attribuita**, mai redistribuita per stima | — |
 
-Prima delle vie, l'imbuto toglie ciò che non è cloud con livelli di raffinamento (regole, segnali della Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, atti): vedi [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/).
+Prima delle vie, l'imbuto toglie ciò che non è cloud con livelli di raffinamento (regole, segnali della Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, atti): vedi [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
 
 Dopo l'attribuzione, il **tipo di spesa** si decide con due regole: se il testo parla di
 sviluppo, manutenzione evolutiva, migrazione o consulenza è **servizi professionali**; ma se
@@ -322,7 +322,7 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 ## Cosa resta aperto
 
 - Misura v3 su campione nuovo, annotato alla cieca da persone.
-- Via 4 (PSN voce per voce) e via 6 (modello linguistico).
+- Via 4 (PSN voce per voce); misura della via 6 (modello linguistico), già in uso sul residuo.
 - Tabella completa dei lotti: altre iniziative Consip (licenze, SaaS, data center), SPC Cloud,
   convenzioni regionali.
 - SaaS di produttori italiani: **dove gira** (catalogo ACN, documentazione del fornitore).
@@ -331,7 +331,7 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 
 ## Cloud sovrano e dipendenze tecnologiche (29/10/2026)
 
-La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Data center in Italia + operatore italiano a controllo italiano non soggetto al CLOUD Act (immunità giuridica sul modello SecNumCloud 3.2) = **cloud sovrano (IT)**, anche con software extra-UE, che si registra come *dipendenza tecnologica* separata. Esempio: Sistema Cloud Toscana. Ogni classificazione è documentata nel [registro di classificazione](../formato-classificazione/).
+La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Data center in Italia + operatore italiano a controllo italiano non soggetto al CLOUD Act (immunità giuridica sul modello SecNumCloud 3.2) = **cloud sovrano (IT)**, anche con software extra-UE, che si registra come *dipendenza tecnologica* separata. Esempio: Sistema Cloud Toscana. Ogni classificazione è documentata nel [registro di classificazione](/progetto/formato-classificazione/). Regole semplificate il 3/11/2026 (extra-UE = servizi cloud di Microsoft, Google, Amazon, Oracle chiunque li rivenda): vedi i [criteri di sovranità](/progetto/criteri-sovranita/).
 
 ## Registro delle revisioni
 
@@ -343,4 +343,5 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Regole v4.4 dalle classi d'errore del cieco 5 (omonimie, servizi su piattaforma, formazione/POC/gara, connettività, nome canonico SPC Cloud): cieco 5 big tech 125/17/0 → 125/0/0 (ora di sviluppo), ciechi 2-3 invariati, 3 cambi di criterio (cieco 1, cieco 4, top-20); 129/129 casi; mappa rivenditori da rifare (v4.4) dopo la prova imbuto | #40, `esiti/2026-11-09/regole-v4.4/` |
 | 9/11/2026 | Sesto campione a cieco (250 CIG, seme 20261112, strato nuovo «servizi su piattaforma»): regole v4.4 big tech P 113/140 = 80,7 % (73,4-86,4), 98,1 % in euro, pesata 89,4 %; R 113/116 = 97,4 % (3 mancati nello strato N); 46 errori per classe, regole non corrette | #40, #72, `esiti/2026-11-09/lente-cieco-6/` |
 | 9/11/2026 | Regole v4.5 dalle classi del cieco 6 (servizio davanti al marchio, supporto del produttore = prodotto per licenze e VMware, omonimie GCP/Next Cloud/AFI, mancati ServiceNow/SQLSRV/Google Suite, alias in-house nel confronto): cieco 6 big tech 110/20/6 → 113/4/3, in euro 98,3 → 99,8 % (ora di sviluppo); ciechi 1-5 e top-20 invariati; 162/162 casi; hosting dentro il servizio di un terzo lasciato come confine (#70). Conclusione: precisione in euro pesata ~99 % già con v4.4; il settimo cieco si fa una sola volta prima del rendiconto finale. Mappa rivenditori da rifare (v4.5) dopo la prova imbuto | #40, #72, `esiti/2026-11-09/regole-v4.5/` |
-| 19/11/2026 | Rimando al raffinamento a livelli dell'imbuto (L1-L4, livello B con i dataset BDNCP: quadro economico, in-house per codice fiscale, durate effettive, PNRR su tre vie) | #71, #74, [raffinamento-imbuto](../raffinamento-imbuto/) |
+| 19/11/2026 | Rimando al raffinamento a livelli dell'imbuto (L1-L4, livello B con i dataset BDNCP: quadro economico, in-house per codice fiscale, durate effettive, PNRR su tre vie) | #71, #74, [raffinamento-imbuto](/progetto/raffinamento-imbuto/) |
+| 19/11/2026 | Revisione di coerenza: stato in testa aggiornato alle regole v4.5, via 6 in uso (non più «da implementare») | — |

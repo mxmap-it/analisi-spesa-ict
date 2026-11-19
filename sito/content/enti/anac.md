@@ -23,4 +23,4 @@ il 18-19 ottobre 2026 e per questo ha smesso di usare l'OCDS di ANAC.
 | `ND` al posto del CUP in 1.951.844 righe | aperto |
 | Metadati sbagliati (200 `text/html`) alle richieste `HEAD` dei programmi non-browser | aperto |
 
-La misura nel tempo parte con le sonde mensili: questa tabella mostrerà quando e se ciascun problema viene risolto.
+La misura nel tempo è nel [cruscotto](/enti/anac-cruscotto/) (sonda giornaliera, metriche I1-I9): mostra quando e se ciascun problema viene risolto. Schede complete dei problemi: [problemi e rimedi](/rendiconti/anac-2026-10-problemi/).

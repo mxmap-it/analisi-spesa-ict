@@ -2,13 +2,13 @@
 title: "Imbuto: dove siamo"
 subtitle: "Quanto dell'universo ANAC si esclude o si include con certezza, quanto resta incerto, e le cinque cose da fare per la completezza"
 date: 2026-11-06
-lastmod: 2026-11-19T02:00:00Z
+lastmod: 2026-11-19T12:00:00Z
 datiAl: 2026-11-03
 description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numero ed euro, per i due assi (è cloud? giurisdizione?), con soglia, residuo per gruppo, tetti di accordo quadro separati dalla spesa, PSN impegni contro bilanci, link ai documenti, test di Zenodo ed EuroTender, censimento ICT AgID e top-5."
 
 ---
 
-**Versione 0.19 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
+**Versione 0.19.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -24,7 +24,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
   - residuo incerto S6: 59.406 CIG per 16,37 mld dichiarati.
 - **Valore dei contratti, non spesa** [V, § 4.13]: l'imbuto misura il **valore dei contratti** (importo dei CIG), circa **3,5 volte il pagato annuo**. Accanto mettiamo il **pagato ICT: 5,1 mld nel 2024** (Stato da BDAP 1,14 + enti non statali da SIOPE 3,97, telefonia esclusa), contro 14,0 mld di CIG ICT pubblicati nell'anno. Per ogni ente abbinato per codice fiscale c'è un indicatore di copertura (quota annua dei CIG / pagato ICT) in uno **strato di riscontro R**, che non si somma alla spesa: solo lo 0,4 % del pagato è di enti senza alcun CIG ICT; i buchi veri sono le in-house senza CIG (Regione Lombardia → ARIA, Stato → Sogei).
 - **Cosa è stima, non misura.** I rapporti fra CIG e pagato BDAP per ministero (§ 4.10-4.12: buco MEF circa 0,3 mld l'anno); la forbice cloud degli EA Microsoft (0,55-0,81 mld, campione non casuale, § 4.6); le proposte della via 6 (lettura degli atti con modello linguistico) finché non superano la revisione C1-C4 (§ 4.3.2); la giurisdizione degli inclusi certi, perché la precisione di S3-S4 è misurata solo su campione.
-- **Cosa manca e perché.** Per gran parte del residuo **l'atto che dice il prodotto non è raggiungibile da fonti aperte**: dopo i livelli L3 (link PVL), MePA e L4 (sezioni «Bandi di gara e contratti» di 4.007 enti su 4.352) solo **535 CIG per 304,7 M€** hanno un documento che cita il CIG (§ 4.11). Il resto passa alla richiesta di **accesso civico** massiva ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)), non ancora inviata (decisione di Fabio). La via 6 è finita il 13/11 (G1 196 CIG, G3 999 su 1.000): delle 265 proposte di passaggio a «certo» ne entrano nei totali 31, perché per le altre manca l'atto che cita il CIG o la seconda lettura non conferma (§ 4.3.2).
+- **Cosa manca e perché.** Per gran parte del residuo **l'atto che dice il prodotto non è raggiungibile da fonti aperte**: dopo i livelli L3 (link PVL), MePA e L4 (sezioni «Bandi di gara e contratti» di 4.007 enti su 4.352) solo **535 CIG per 304,7 M€** hanno un documento che cita il CIG (§ 4.11). Per il resto servirà la richiesta di **accesso civico** massiva ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)), che si farà solo alla fine, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026, [#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)). Nel frattempo il residuo si restringe con i livelli di raffinamento (§ 2.8-2.9). La via 6 è finita il 13/11 (G1 196 CIG, G3 999 su 1.000): delle 273 proposte di passaggio a «certo» ne entrano nei totali 31, perché per le altre manca l'atto che cita il CIG o la seconda lettura non conferma (§ 4.3.2).
 - **Cloud e giurisdizione per prodotto e rivenditore:** lente prodotto, mappa dei rivenditori (v4.5: prodotti extra-UE 3,023 mld, rivenditori con CF italiano 61,2 %) e infrastruttura sono nel rendiconto [Obiettivo 6](/rendiconti/obiettivo-6/).
 
 **Nuovo in 0.18 (18/11/2026, sera):** decisione di Fabio: niente P1, imbuto largo con raffinamento a livelli (§ 2.8): L2 regole su stampanti, consumabili e cablaggio (6.980 CIG, 470 M€ fuori dalla misura cloud), L3 Opus sul testo, L4 Opus con atti; dei 57 disaccordi della revisione 52 sono non cloud per entrambe le letture, 5 all'arbitro.
@@ -33,7 +33,7 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 
 **Nuovo in 0.16 (10/11/2026):** § 4.13 riscontro con la spesa pagata (SIOPE + BDAP): 5,1 mld pagati nel 2024 contro 14,0 di CIG; indicatore di copertura per ente (strato R); verifica in-house dei 4 enti «molto pagato, pochi CIG».
 
-**Nuovo in 0.14 (9/11/2026):** § 2.7 anteprima della rigenerazione 0.3.4 (56,06 mld, effetto separato dei cambiamenti, 0 CIG ripetuti, 29 G1 nuovi e proposta P1 da decidere); § 4.11 L4 finito (#68 chiuso), ripasso #73 in corso; § 4.3.3 segnaposto per la ricerca mirata degli atti C1.
+**Nuovo in 0.14 (9/11/2026):** § 2.7 anteprima della rigenerazione 0.3.4 (56,06 mld, effetto separato dei cambiamenti, 0 CIG ripetuti, 29 G1 nuovi e proposta P1 da decidere, poi decisa il 18/11: niente P1, § 2.8); § 4.11 L4 finito (#68 chiuso), ripasso #73 in corso; § 4.3.3 segnaposto per la ricerca mirata degli atti C1.
 
 **Nuovo in 0.10-0.12 (9/11/2026):**
 - **CIG ripetuti, correzione del totale** (§ 2.6, R53, 0.12): il 55,3 mld di S3-S6 dal 2024 era sottostimato di circa 0,43 mld, quasi tutto S5. Con una riga per CIG il totale è **circa 55,7 mld**: è una **stima** fino alla rigenerazione con la regola imbuto 0.3.4 (`tools/verifiche/imbuto_cig_ripetuti.py`) [V sui conteggi].
@@ -41,6 +41,8 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 - **CIG derivati da accordo quadro non collegabili** (§ 4.9, #50): dei 55.114 CIG ICT discendenti da AQ o convenzione (89,2 mld), 1.666 non si collegano a un padre esistente, per **734 M€, lo 0,82 %**. Il prodotto ereditato dall'AQ manca quindi per una quota trascurabile [V].
 - **Denominatore BDAP dello Stato centrale** (§ 4.10, #67): pagato ICT 2024 **1.141 M€** sui codici gestionali ICT, **979 M€** per la seconda via (classificazione economica) [V]. I rapporti CIG/pagato per ministero sono una **stima** di dove l'imbuto è cieco, non una percentuale di copertura. Con l'abbinamento per codice fiscale (0.11, § 4.12) il buco della Giustizia si rivela un artefatto della regola sul nome (0,96 nel 2024); resta il **MEF** (0,25 nel 2024), circa **0,3 miliardi l'anno** [V sui conteggi, stima sull'interpretazione].
 - **Residuo S6, documenti** (§ 4.11, #57): 535 CIG per 304,7 M€ hanno un documento che cita il CIG e possono passare da incerto a leggibile; in S6/G3 sono il 2,1 % dei CIG. L4 finito il 9/11 (4.007 enti su 4.352; aggiornato in 0.14) [V].
+
+**Sintesi delle versioni 0.1-0.8 (6/11/2026, imbuto 0.3.1 del 3/11): numeri superati da quelli in testa e dal § 2.7, conservati per confronto.**
 
 - **Universo:** CIG ANAC pubblicati dal 2020 (file annuali 2020-2025 + aggiornamenti mensili), SmartCIG esclusi. Dal 2024: **3.745.883 CIG**; 2020-2023: **1.967.915 CIG** [V].
 - **Esclusione certa (non ICT):** dal 2024 **3.216.533 CIG (85,9 %)**. Il 2020-2023 dà l'**82,8 %** [V]. Per escludere servono tre segnali concordi: CPV non ICT, nessun termine ICT nell'oggetto, nessun lotto o convenzione ICT. La precisione di questo strato **non è ancora misurata** (punto 1 della top-5).
@@ -71,8 +73,6 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito d
 
 Gli euro sono l'importo dichiarato (aggiudicazione, altrimenti base d'asta) e **comprendono i massimali** («importo da verificare», § 2.1).
 
-| asse A | dal 2024: CIG | dal 2024: euro | 2020-2023: CIG | 2020-2023: euro |
-|---|---:|---:|---:|---:|
 Imbuto 0.3.4 (18/11/2026, § 2.7). Verifica: `IMBUTO_VERSIONE=0.3.4 python tools/verifiche/imbuto_strati.py`, esito `esiti/2026-11-18/imbuto/strati.json` [V]. Fra parentesi il valore dell'imbuto 0.3.1 del 3/11, che contava più volte i CIG ripetuti (§ 2.6).
 
 | asse A | dal 2024: CIG | dal 2024: euro | 2020-2023: CIG | 2020-2023: euro |
@@ -84,7 +84,7 @@ Imbuto 0.3.4 (18/11/2026, § 2.7). Verifica: `IMBUTO_VERSIONE=0.3.4 python tools
 | **incluso certo: cloud** (S3 + S4) | **4.556** (4.537) | **1,21 mld** (1,21) | 1.551 | 0,76 mld |
 | **incluso certo: infrastruttura in-house** (S4) | **816** (894) | **0,66 mld** (0,72) | 146 | 0,05 mld |
 | incerto: marchio o lotto noto, cloud da accertare (licenze, software, servizi, PSN) | 3.889 (3.515) | 5,37 mld (6,51) | 2.353 | 2,14 mld |
-| incerto: residuo S6 (di cui con documento che cita il CIG: 532 CIG, 304,5 M€, potenziale, § 4.11, misurato su 0.3.1) | 59.406 (55.946) | 16,37 mld (12,50) | 25.245 | 8,92 mld |
+| incerto: residuo S6 (di cui con documento che cita il CIG: 535 CIG, 304,7 M€, potenziale, § 4.11, misurato su 0.3.1) | 59.406 (55.946) | 16,37 mld (12,50) | 25.245 | 8,92 mld |
 | **totale** | **3.734.840** (3.745.883) | **1.388,8 mld** (1.399,7) | **1.967.915** | **966,6 mld** |
 
 ¹ Somma negativa (-1,8 milioni): ci sono importi negativi nella fonte, da segnalare con il problema degli importi.
@@ -300,7 +300,7 @@ I conteggi per gruppo differiscono da quelli della revisione della via 6 (13 in 
 - **Selezione via 6:** dei 1.196 CIG G1+G3, 5 (27 M€) passano da S6 a S5; nessuno esce dall'imbuto [V].
 - **29 G1 nuovi dal 2024 (3,82 mld dichiarati)** entrano col perimetro 0.3.3: 8 Consip SPC/connettività (i maggiori), 6 ASI «HW/SW» di missioni spaziali, 11 di multiutility, altri. Sul netto contano poco (+0,48 mld) perché i tetti SPC sono già classificati. Vanno in coda alla via 6 alla rigenerazione [V].
 - **Revisione a mano degli 11 multiutility** (`tools/verifiche/imbuto_g1_segnali_deboli.py`, `g1-revisione.json`): 7 ICT veri (E-Distribuzione 6, A2A Smart City 1), **4 falsi per 29,2 M€** (Padania Acque 2 contatori smart, Sorical 2 lavori su rete idrica e contatori) [V].
-- **Decisione aperta: proposta P1 (Fabio, #71).** Se il CIG entra solo per segnali deboli («connettività», «sw») e il CPV è 33, 38, 41-45 o 73, resta fuori. Sui 59 G1 nuovi dal 2020 escono 13 CIG / 0,467 mld (dal 2024 11 / 0,438 mld): i 4 falsi multiutility (0 ICT veri persi), 6 ASI, autoclavi ASST Bergamo Est, un lotto G.A.I.A. Misura su tutto S6 da fare alla rigenerazione (job pesante). **Non applicata.**
+- **Proposta P1 (#71; decisa il 18/11: non si applica, § 2.8).** Se il CIG entra solo per segnali deboli («connettività», «sw») e il CPV è 33, 38, 41-45 o 73, resta fuori. Sui 59 G1 nuovi dal 2020 escono 13 CIG / 0,467 mld (dal 2024 11 / 0,438 mld): i 4 falsi multiutility (0 ICT veri persi), 6 ASI, autoclavi ASST Bergamo Est, un lotto G.A.I.A. Misura su tutto S6 da fare alla rigenerazione (job pesante). **Non applicata.**
 - **Limite:** le varianti C e D ricostruiscono regole e lente del 3/11 sostituendo moduli; D non coincide con la base per la deduplica della 0.3.2.
 
 
@@ -340,7 +340,7 @@ I conteggi per gruppo differiscono da quelli della revisione della via 6 (13 in 
 
 ## 3. Distribuzione degli importi e soglia
 
-Il calcolo riguarda i CIG che restano dopo S1: strati S3-S6, dal 2024, in tutto 292.722 CIG [V].
+Il calcolo riguarda i CIG che restano dopo S1: strati S3-S6, dal 2024, in tutto 292.722 CIG [V; imbuto 0.3.1, con la 0.3.4 sono 289.192].
 
 | fino a | CIG nella classe | quota CIG cumulata | quota euro cumulata |
 |---|---:|---:|---:|
@@ -364,6 +364,8 @@ Lettura:
 - trattare a mano tutto ciò che supera i 5 milioni (G1).
 
 ## 4. Il residuo per gruppo (dal 2024) e la precisione degli strati
+
+Tabella dell'imbuto 0.3.1 (3/11). Con la 0.3.4 il residuo S6 dal 2024 è G1 227 CIG / 8,53 mld, G2 867 / 4,03, G3 13.437 / 3,16, G4 44.875 / 0,65 (§ 2.7).
 
 | gruppo | perché è incerto | CIG | euro | con link PVL ai documenti |
 |---|---|---:|---:|---:|
@@ -423,12 +425,12 @@ Tutti sono archiviati con sha256. `tools/verifiche/pnrr11_decreti.py` legge l'el
 - **Uso nell'imbuto:** il finanziamento PNRR è un tetto forfettario per la migrazione, versato a migrazione completata. È un **minimo** della spesa PSN dell'ente, non il suo contratto di utenza. Il collegamento CUP → CIG (dataset CUP ANAC) è il passo successivo.
 - Raccomandazione R50 (elenco aperto dei finanziamenti con CUP) confermata: oggi lo spoglio richiede quindici PDF con tre impaginazioni diverse.
 
-### 4.3 G1 e primi 1.000 G3 con la via 6 (top-5 punto 4, in corso, nuovo in 0.4)
+### 4.3 G1 e primi 1.000 G3 con la via 6 (top-5 punto 4, nuovo in 0.4; giro finito il 13/11, § 4.3.1)
 
 Decisione di Fabio del 7/11: solo i primi 1.000 CIG di G3 per importo (stima 360 USD-eq, fermarsi oltre +20 %) e tutti i G1, guardati uno per uno.
 
 - **Selezione** (`report/metodo/llm/imbuto-g1g3/selezione.json`): G1 **196 CIG unici** per 4,70 mld; G3 primi 1.000 per 1,55 mld (importo da 598 k€ in su). Il link PVL c'è per 112 G1 e 507 G3. Più 15 CIG del campione 611 che cadono in G1/G3 fuori selezione, classificati alla cieca come controllo.
-- **Doppioni in `ict.csv`:** lo stesso CIG compare in più anni. Sono 13 righe in G1 e 52 in G3, e i 4,88 mld di G1 del § 4 li contano due volte: al netto G1 vale 4,70 mld. Va corretto in imbuto.py (R53).
+- **Doppioni in `ict.csv`:** lo stesso CIG compare in più anni. Sono 13 righe in G1 e 52 in G3, e i 4,88 mld di G1 del § 4 li contano due volte: al netto G1 vale 4,70 mld. Va corretto in imbuto.py (R53); corretto con la 0.3.4 del 18/11 (§ 2.7).
 - **Metodo:** Claude Sonnet in abbonamento sul server, con le istruzioni p3 (due assi con stato). Il modello apre per primo il link PVL, poi cerca gli atti dell'ente; ogni documento è archiviato con sha256. Una verifica a regole (`tools/llm/verifica_imbuto.py`) riporta a «incerto» ogni stato certo senza prova. Tutto è **proposta da revisionare**; i numeri non entrano nei totali finché non sono rivisti.
 - **Numeri:** `esiti/imbuto-via6/via6-g1g3.json`, rigenerato ogni 30 minuti dal server (`tools/verifiche/imbuto_via6.py`). Contiene CIG ed euro per stato degli assi, gli euro che si spostano di strato (S1 non ICT, S5 ICT non cloud, incluso cloud per giurisdizione, resta S6), la precisione sul controllo e il consumo.
 - **Primo parziale (6/11, ore 13:30, [V]):** classificati 28 G1 su 196 (2,75 mld) e 10 G3 su 1.000. Sono proposte da revisionare:
@@ -557,7 +559,7 @@ Esito sui 7 CIG dei primi 50 EA e dei primi 20 Oracle che hanno un link PVL (`pi
 
 **0 atti su 5 contengono servizi cloud** (intervallo 0-43 %). La classificazione «on premises probabile» dei primi 20 Oracle (261 M€) è sostenuta da questi atti. Diventa **certa solo per CINECA** (14,4 M€).
 
-**Rigenerazione di imbuto 0.3.2:** non è stata fatta. La via 6 (`giro_imbuto.sh`) è ancora in corso e il suo guardiano la rilancia finché mancano esiti. L'esecuzione automatica a fine via 6 con una regola cron non è stata autorizzata: va lanciata a mano (`python tools/analisi/imbuto.py 2020` sul server) quando `giro_imbuto.sh` ha finito.
+**Rigenerazione di imbuto 0.3.2** (superato: l'imbuto è stato rigenerato come 0.3.4 il 18/11, § 2.7)**:** non è stata fatta. La via 6 (`giro_imbuto.sh`) è ancora in corso e il suo guardiano la rilancia finché mancano esiti. L'esecuzione automatica a fine via 6 con una regola cron non è stata autorizzata: va lanciata a mano (`python tools/analisi/imbuto.py 2020` sul server) quando `giro_imbuto.sh` ha finito.
 
 ### 4.8 TED come seconda fonte degli aggiudicatari (nuovo in 0.9)
 
@@ -654,7 +656,7 @@ Sui 99 casi letti con certezza da entrambe le parti l'accordo è 62 su 99.
 
 ### 4.3.3 Ricerca mirata degli atti per il criterio C1 (#66, nuovo in 0.15)
 
-**Esito: 100 CIG cercati, 1 atto trovato, 0 € in più nei totali; 99 CIG per 1.262,9 M€ vanno all’accesso civico con priorità alta** [V].
+**Esito: 100 CIG cercati, 1 atto trovato, 0 € in più nei totali; 99 CIG per 1.262,9 M€ vanno all’accesso civico con priorità alta** [V]. L'accesso civico massivo si farà solo alla fine, dopo il rendiconto del risultato parziale (decisione del 19/11, #78).
 
 - **Quali CIG.** Le proposte via 6 che falliscono solo C1 (nessun atto archiviato che citi il CIG): 41 con seconda lettura concorde e 59 «non confermate» da almeno 1 M€, in tutto 1.263 M€, quasi tutte G1/G3 verso S5. Ingresso `tools/acquisizione/c1_mirata_ingresso.py`, giro `tools/acquisizione/c1_mirata.sh` (riusa `piattaforme_cig.py` e `at_cig.py`), lavoro in `lavoro/c1-mirata/`.
 - **L3, link PVL:** solo 17 CIG su 100 ne hanno uno; documenti scaricati per 3, CIG non trovato 4, robots 3, blocchi 3.
@@ -696,7 +698,7 @@ Per il residuo S6 si cercano gli atti che dicono il prodotto, livello per livell
 - **Perché così poco:** in L3 3.292 link portano alla sola home della piattaforma (R66); 1.126 CIG su 381 host sono esclusi da robots.txt, 641 danno 403, 115 anti-bot, 115 login (R68); gli atti trovati spesso non riportano il CIG (L3: 453 su 1.076; L4: 79 su 871, R67). In L4, 261 enti hanno un blocco; degli enti elaborati 1.319 danno CIG trovati, 901 non hanno una sezione «Bandi» riconoscibile, 436 errore di rete, 394 sito ignoto, 176 pagina quasi vuota (resa da JavaScript).
 - **Costo:** L3 33.826 richieste, L4 21.885; nessun token.
 - **Ripasso in corso (#73):** i 436 enti in errore di rete e 345 rinviati per robots.txt (notte), e i 176 enti con pagina quasi vuota più 41 della Difesa con browser headless (L4-js). Parziale alle 20:12 del 9/11: 9 enti su 217, 34 CIG trovati, 0 documenti che citano il CIG. Le cifre si aggiornano a fine giro con la stessa verifica.
-- **Dopo L4, accesso civico (#58):** l'elenco unico rigenerato a L4 finito ha 28.804 voci (756 convenzioni + 28.048 CIG del residuo, esclusi i 535 sopra), 6.624 enti, 775 senza PEC [V, `tools/accesso_civico/elenco_mancanti.py`]. L'invio è una decisione di Fabio.
+- **Dopo L4, accesso civico (#58):** l'elenco unico rigenerato a L4 finito ha 28.804 voci (756 convenzioni + 28.048 CIG del residuo, esclusi i 535 sopra), 6.624 enti, 775 senza PEC [V, `tools/accesso_civico/elenco_mancanti.py`]. Invio: solo alla fine, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11, #78).
 
 **Aggiornamento 0.17: copertura sull'imbuto 0.3.4 [V, conteggio di `lavoro/imbuto/ict.csv` contro `lavoro/residuo-s6/ingresso.csv` e i lotti della via 6].** L'ingresso dell'acquisizione era già costruito con il perimetro 0.3.3 (priorità P4), quindi copre quasi tutto il residuo S6 dal 2024 della 0.3.4:
 
@@ -877,6 +879,8 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 
 ## 8. Top-5 per la completezza dei dati
 
+Tabella del 6/11 (versioni 0.2-0.6, imbuto 0.3.1), conservata come storia. Lo stato attuale delle mancanze, con gravità e piano, è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/); la via 6 del punto 4 è finita il 13/11 (§ 4.3.1); l'accesso civico si farà solo alla fine (#78).
+
 | # | cosa | metodo | costo stimato | chi deve agire |
 |---|---|---|---|---|
 | 1 | **Misurare la precisione di S1** (3,2 M CIG, 85,9 %), che oggi è un'ipotesi | campione casuale di ~400 CIG di S1 annotato (volontari + via 6 a regole); con 0 errori il limite superiore Wilson è ~1 % | ~400 annotazioni, qualche ora di volontari; token trascurabili | noi |
@@ -887,7 +891,7 @@ Prima del 2024 [V]: nessuna fonte aperta del link (R30). Il 2020-2023 resta senz
 
 ## 9. Rifare i numeri
 
-Da un clone pulito, senza dati grezzi (legge gli esiti versionati):
+Da un clone pulito, senza dati grezzi (legge gli esiti versionati). I comandi per l'imbuto 0.3.4 (`IMBUTO_VERSIONE=0.3.4`) sono nel § 2.7; la sequenza annuale completa, livelli compresi, è nella pagina [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
 
 ```
 python tools/verifiche/imbuto_strati.py        # strati, assi, soglia, gruppi, link PVL; controlla la coerenza
@@ -949,8 +953,9 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 - SmartCIG resta fuori.
 - Gli euro includono gli importi negativi della fonte.
 - L'asse B è riportato solo per gli inclusi certi.
-- La via 6 su G3 è parziale (§ 4.3.1) e i suoi esiti sono proposte non revisionate.
-- L4 del residuo S6 è parziale (§ 4.11).
+- La via 6 su G1 e G3 è finita (13/11, § 4.3.1); le sue proposte entrano nei totali solo dopo la revisione C1-C4 (§ 4.3.2) e non sono ancora applicate a `ict.csv`.
+- L4 del residuo S6 è finito il 9/11 (§ 4.11); il ripasso degli enti in errore (#73) va a parte.
+- I livelli di raffinamento (§ 2.8-2.9) sono tabelle separate per CIG, non ancora unite e deduplicate in una sola misura; L4 è in corso.
 - **CIG ripetuti (R53):** risolto con la rigenerazione 0.3.4 del 18/11 (0 CIG ripetuti, § 2.7).
 - SIOPE via BDAP è confrontato con la fonte diretta solo per 5 regioni su 20 (§ 4.12).
 
@@ -972,9 +977,10 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.12 | 2026-11-09 | § 2.6 e § 1: CIG ripetuti (R53, `imbuto_cig_ripetuti.py`): eccesso vero 2,565 mld invece di 2,99, S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4); criticità nei limiti |
 | 0.13 | 2026-11-09 | § 4.3.2: revisione delle proposte via 6 con i criteri C1-C4 (175 su 214 lette; 62 concordi, 76 non confermate, 37 discordi in coda per Fabio; entrano 15 CIG/397,4 M€ verso S5 e 6 CIG/24,6 M€ di cloud certo, 0 extra-UE); 38 proposte nuove del G3 in lettura; § 1-2 invariati |
 | 0.14 | 2026-11-09 | Per la consegna del 12/11. § 1: sintesi riscritta per un lettore esterno (cosa misuriamo, numeri verificati, stime, cosa manca e perché, rimando a Obiettivo 6). § 2.7: anteprima della rigenerazione 0.3.4 (prova a secco, #71): S3-S6 dal 2024 56,06 mld contro 55,70, effetti R53 +0,064, perimetro +0,479, lente +0,004; 0 CIG ripetuti; 29 G1 nuovi e proposta P1 (decisione aperta). § 4.11: L4 finito (#68), 535 CIG / 304,7 M€, ripasso #73 in corso. § 4.3.3 segnaposto C1 |
+| 0.15 | 2026-11-09 | § 4.3.3: esito della ricerca mirata degli atti C1 (L2 TED, L3 PVL, L4 AT): 100 CIG cercati, 1 atto, 0 € in più nei totali; 99 CIG / 1.262,9 M€ all’accesso civico con priorità alta (#58). |
 | 0.16 | 2026-11-10 | § 4.13 riscontro con la spesa pagata: SIOPE (enti non statali 3,97 mld nel 2024) + BDAP (Stato 1,14) = 5,1 mld contro 14,0 di CIG ICT; l'imbuto misura il valore dei contratti (~3,5× il pagato); indicatore di copertura per ente (strato di riscontro R, non sommato); verifica in-house dei 4 enti «molto pagato, pochi CIG» (Venezia, ARPAL, ARPEA: CIG in-house solo dal 2024-25; Lombardia: nessun CIG verso ARIA); sintesi aggiornata; R83 (#12, #67, #66). |
 | 0.16.1 | 2026-11-10 | § 4.13: Regione Lombardia: il pagato ICT del CF 80050050154 è la somma di GSA (164-257 M€) e della Regione ordinaria (99-138 M€); verso ARIA nessun CIG (in-house per incarichi, DGR XI/7409/2022), la spesa di mercato è nei CIG intestati ad ARIA (2,4 mld di ICT 2022-25) da collegare alla Regione con lo strato R senza sommare il pagato; `siope_lombardia_gsa.py`, `esiti/2026-11-10/siope/lombardia-gsa.*` (#12). |
+| 0.17 | 2026-11-18 | Imbuto 0.3.4 applicato (#71): `ict.csv` rigenerato (variante A della prova del 9/11, lente v4.5), 0 CIG ripetuti, 56,06 mld S3-S6 dal 2024 riprodotti con la catena ufficiale (`IMBUTO_VERSIONE=0.3.4`); § 1, § 2 e § 2.1 ricalcolati; § 2.7 da anteprima ad applicata; P1 non applicata. § 4.3.1 via 6 finita (G3 999/1.000). § 4.3.2 revisione su 265 proposte (264 lette): entrano 22 CIG / 403,6 M€ verso S5 e 9 CIG / 27,2 M€ cloud certo (extra-UE 2 CIG, 1,6 M€); coda per Fabio 50 casi. Tetti, licenze (cloud 159,9 M€) e copertura del residuo S6 sulla 0.3.4; P1 su tutto S6 (267 CIG / 0,494 mld, 8 ICT veri su 40 nel campione) e variante P1r proposta (189 / 0,474, 2 su 26); 32 G1 in coda alla via 6. Limiti aggiornati |
 | 0.18 | 2026-11-18 | § 2.8 raffinamento a livelli (decisione di Fabio: niente P1): L2 regole 6.980 CIG / 470 M€ fuori dalla misura cloud, campione 40/40; L3 Opus sul testo (843 CIG G3, in corso); L4 Opus con atti (5 disaccordi sul cloud); § 4.3.2 con 273 proposte e 57 discordi (52 non cloud per entrambe) |
 | 0.19 | 2026-11-19 | § 2.8 aggiornato: L3 finito (3.540 CIG: 2.260 ICT non cloud, 308 non ICT, 972 a L4), arbitro L4 sui 5 disaccordi cloud (3 non cloud, 2 con quota cloud), L4 in corso; § 2.9 nuovo, livello B BDNCP (decisione di Fabio 19/11): quadro economico 1.281 CIG / 131,9 M€ fuori dalla misura cloud (campione 37/40), in-house ristretta con l'Indice PA (438 / 77,6 M€; 137 / 150,4 M€ privati, campione 40/40), durate effettive (quota 2024 −30 % sugli stessi CIG), PNRR (indicatori = flag, una sola via); R84 |
-| 0.17 | 2026-11-18 | Imbuto 0.3.4 applicato (#71): `ict.csv` rigenerato (variante A della prova del 9/11, lente v4.5), 0 CIG ripetuti, 56,06 mld S3-S6 dal 2024 riprodotti con la catena ufficiale (`IMBUTO_VERSIONE=0.3.4`); § 1, § 2 e § 2.1 ricalcolati; § 2.7 da anteprima ad applicata; P1 non applicata. § 4.3.1 via 6 finita (G3 999/1.000). § 4.3.2 revisione su 265 proposte (264 lette): entrano 22 CIG / 403,6 M€ verso S5 e 9 CIG / 27,2 M€ cloud certo (extra-UE 2 CIG, 1,6 M€); coda per Fabio 50 casi. Tetti, licenze (cloud 159,9 M€) e copertura del residuo S6 sulla 0.3.4; P1 su tutto S6 (267 CIG / 0,494 mld, 8 ICT veri su 40 nel campione) e variante P1r proposta (189 / 0,474, 2 su 26); 32 G1 in coda alla via 6. Limiti aggiornati |
-| 0.15 | 2026-11-09 | § 4.3.3: esito della ricerca mirata degli atti C1 (L2 TED, L3 PVL, L4 AT): 100 CIG cercati, 1 atto, 0 € in più nei totali; 99 CIG / 1.262,9 M€ all’accesso civico con priorità alta (#58). |
+| 0.19.1 | 2026-11-19 | revisione di coerenza: sintesi 0.1-0.8 e tabelle 0.3.1 (§ 3, § 4, § 8) marcate come superate; accesso civico «solo alla fine» (#78) al posto di «decisione di Fabio» (§ 1, § 4.3.3, § 4.11); P1 marcata decisa; 532 → 535 CIG in § 2; § 4.3 e rigenerazione 0.3.2 marcate concluse; limiti aggiornati (via 6 e L4 finiti, livelli non ancora uniti); registro in ordine |

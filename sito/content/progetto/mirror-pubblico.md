@@ -1,13 +1,13 @@
 ---
-title: "Mirror pubblico ANAC: progetto (bozza)"
+title: "Mirror pubblico ANAC: progetto"
 date: 2026-11-06
 description: "Stato del mirror sul server, requisiti per renderlo usabile da terzi, opzioni di hosting con costi e limiti, scelta proposta. Decisione a Fabio."
 
 ---
 
-**Bozza 0.1 del 6/11/2026, non elencata (#17).** Nessun dato è stato caricato in pubblico: l'hosting lo
-decide Fabio. Perché serve un mirror: [Perché un mirror](../perche-un-mirror/). A che cosa servono i
-dataset: [Usi dei dataset](../usi-dei-dataset/).
+**Versione 0.1 del 6/11/2026 (#17), proposta per Fabio.** I file del mirror non sono ancora serviti in pubblico (sono
+pubblici solo l'indice e la sintesi, qui sotto): l'hosting lo decide Fabio. Perché serve un mirror: [Perché un mirror](/progetto/perche-un-mirror/). A che cosa servono i
+dataset: [Usi dei dataset](/progetto/usi-dei-dataset/).
 
 ## 1. Stato del mirror (misurato il 6/11/2026 dal manifest reale)
 
@@ -39,8 +39,8 @@ ANAC per dataset (GB): ocds 73,84; smartcig-annuale 38,65; cig-annuale 8,60; cig
   sha256** fra un'acquisizione e l'altra (0 su 2.033). La storicizzazione è pronta (ogni versione resta
   un blob), ma ancora non ha nulla da conservare: le sovrascritture che motivano il mirror sono quelle
   *già avvenute prima* (delta rimossi, file full fermi, mesi OCDS spariti), documentate nel
-  [Perché](../perche-un-mirror/).
-- **Spazio:** 136 GB di blob; sul server restano 51 GB liberi (soglia di guardia 40 GB). Raddoppiare
+  [Perché](/progetto/perche-un-mirror/).
+- **Spazio:** 136 GB di blob; sul server restano 349 GB liberi al 19/11/2026, dopo la migrazione del 17/11 (soglia di guardia 40 GB). Raddoppiare
   l'archivio sullo stesso disco non è possibile.
 
 ## 2. Requisiti (roadmap §1F)
@@ -74,7 +74,7 @@ Volume: ~129 GB oggi per ANAC (~135 GB con le altre fonti), +~10-15 GB l'anno di
 | Zenodo | gratis | 50 GB per record (estendibile su richiesta); caricamento lento | no | versioni con DOI | UE (CERN) |
 | Internet Archive | gratis | nessun limite rigido; lento; nessuna garanzia di servizio | no | sì, per item | USA |
 | Software Heritage | gratis | archivia codice (repository git), non dataset di 100 GB | no | sì | UE (Inria) |
-| Server mxmap.it | 0 € in più | 51 GB liberi, disco al 95 %; condiviso con la produzione di mxmap.it; banda condivisa | sì (nginx sull'archivio, hardlink: zero copie) | sì | UE (Scaleway, FR) |
+| Server mxmap.it | 0 € in più | 349 GB liberi, disco al 60 % (19/11/2026); condiviso con la produzione di mxmap.it; banda condivisa | sì (nginx sull'archivio, hardlink: zero copie) | sì | UE (Scaleway, FR) |
 | Hugging Face datasets | gratis (pubblico) | file grandi via Xet; politiche di spazio «best effort» | no (percorsi propri) | sì (commit git) | USA |
 | Object storage S3-compatibile UE (Hetzner, Scaleway, OVH) | ~5-10 €/mese per ~150 GB più traffico (Hetzner: quota base con 1 TB di spazio e 1 TB di traffico) [R] | serve un piccolo frontale per le query CKAN | sì (chiavi = percorsi originali) | sì (prefisso versioni) | UE |
 

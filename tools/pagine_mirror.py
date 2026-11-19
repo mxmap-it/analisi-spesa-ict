@@ -72,7 +72,7 @@ def tabella_usi() -> None:
     sostituisci(PAG / "usi-dei-dataset.md", "tabella", "\n".join(righe))
     sch = []
     for d in u["dataset"]:
-        sch.append(f"### {d['id']}\n")
+        sch.append(f"### {d['id']} {{#{d['id'].replace('/', '-')}}}\n")
         sch.append(f"{d['nome']}. Campi chiave: `{'`, `'.join(d['campi'])}`.\n")
         sch.append(f"- **Uso certo:** {d['certo']}")
         for p, t in (d.get("potenziale") or {}).items():

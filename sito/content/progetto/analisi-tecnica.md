@@ -24,7 +24,7 @@ con spazio libero controllato a ogni scarico), non su runner cloud e non sul por
   `cup` 83 MB, i mensili OCDS superano i 3 GB. L'elaborazione va fatta in streaming e su disco.
 - **I job sono lunghi e vanno ripresi**: il portatile si disconnette, il server no.
 
-Ogni job è idempotente e ripartibile, lo stato sta in [`STATE.md`](STATE.md).
+Ogni job è idempotente e ripartibile, lo stato sta in [`STATE.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/STATE.md).
 
 ## I dataset disponibili
 
@@ -101,12 +101,12 @@ verificati il 26 ottobre 2026:
 
 - **del 2026 c'è solo marzo**: gennaio, febbraio e da aprile in poi rispondono 404, mentre i
   dataset tabellari sono aggiornati al 5 ottobre;
-- **nel 2024-2025 mesi diversi servono lo stesso file**, con il solo campo `uri` riscritto: dei 23
-  mesi disponibili i contenuti distinti sono al massimo 11 (dettaglio nel
-  [rapporto ANAC](/rendiconti/anac-2026-10/));
+- **mesi diversi servono lo stesso file**, con il solo campo `uri` riscritto: sull'intera serie
+  2018-2026, dei 96 mesi che rispondono i contenuti distinti sono 80 (24 mesi in 8 gruppi; dettaglio nel
+  [rapporto ANAC](/rendiconti/anac-2026-10/), versione 1.4);
 - **la licenza è incongruente**: il catalogo dichiara CC BY 4.0, il file CC BY-SA 4.0.
 
-Non è un episodio isolato: AppaltIntel ha documentato pubblicamente che
+Non è un episodio isolato: **[R]** (riferito, fonte non ancora archiviata da noi) AppaltIntel ha documentato pubblicamente che
 **per trenta mesi fra il 2020 e il 2026 il canale OCDS non ha reso disponibile il file del mese** (affermazione loro, coerente con i mesi duplicati che abbiamo misurato), e
 ha dovuto ritirare pubblicamente un'analisi in cui aveva attribuito al mercato un calo del 2023
 che era invece un buco della fonte.
@@ -116,15 +116,15 @@ mercato oppure la fonte, e le due cose si distinguono solo guardando quali mesi 
 
 → **Usiamo i dataset tabellari.** L'OCDS resta utile per il confronto incrociato quando riparte.
 
-### L'API REST OCDS di ANAC — scartata, è morta
+### L'API REST OCDS di ANAC — scartata, non funziona (26/10/2026)
 
 Dichiarata sul portale, con Swagger UI raggiungibile. Ma tutti gli endpoint su
 `api.anticorruzione.it` rispondono **404** attraverso il gateway, e il file `swagger.json` **non è
 JSON valido**. → Usiamo l'**API CKAN**, che funziona e che sul portale ANAC non abbiamo trovato documentata.
 
-### SIOPE attraverso BDAP — da verificare, e specchiato comunque
+### SIOPE attraverso BDAP — difetto verificato, specchiato comunque
 
-**Quello che sappiamo è di seconda mano.** AgID, nel commento al proprio modulo `siope.py` di
+**Il punto di partenza era di seconda mano.** AgID, nel commento al proprio modulo `siope.py` di
 Cruscotto Italia, scrive di aver abbandonato BDAP perché **genera i dump a richiesta** con un tetto
 di 400 secondi lato server e 503 ricorrenti, i `resource_id` sono cablati per regione e anno, e
 **il 2025 era troncato a marzo per 1.717 comuni** fra Lombardia e Friuli e assente per 84 comuni di
@@ -152,13 +152,14 @@ diversi.
 → Integrarne ventitré costerebbe mesi di manutenzione di scraper per un guadagno che non cambia la
 risposta sulla sovranità. Restano fuori; i documenti di gara, che solo i portali hanno, si useranno a campione (sotto).
 
-### I documenti di gara in massa — impossibile, misurato
+### I documenti di gara in massa — fuori perimetro
 
 Per sapere *quale prodotto* è stato comprato servirebbero capitolato e disciplinare. Nei dati ANAC
 non ci sono: il file OCDS di marzo 2026, letto per intero, **non contiene alcun campo `documents`**,
 e i dataset tabellari non hanno un collegamento ai documenti di gara. I documenti stanno sulle
-piattaforme di e-procurement delle stazioni appaltanti, e quanto siano reperibili non l'abbiamo
-ancora misurato.
+piattaforme di e-procurement delle stazioni appaltanti; la copertura del link ai documenti per CIG è
+misurata in [Dove sono i documenti di gara](/progetto/sistemi-documenti/) e le modalità di ricerca in
+[Acquisizione dei documenti](/progetto/acquisizione-documenti/).
 
 → I documenti si useranno **solo come campione**, nella fase finale, per validare le altre misure.
 Non come statistica.
@@ -321,7 +322,7 @@ Quattro regole che valgono per ogni stadio:
   acquisizione, nuovo file, nuovo hash, nuova riga di manifest.
 - **Idempotenza.** Rilanciare un job non duplica e non rompe: ciò che è già acquisito si salta.
 - **Ripartibilità.** Ogni job scrive il proprio avanzamento su file e riprende da dove si era
-  interrotto; lo stato complessivo sta in [`STATE.md`](STATE.md).
+  interrotto; lo stato complessivo sta in [`STATE.md`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/STATE.md).
 - **Provenienza obbligatoria.** Ogni numero pubblicato risale alla risorsa, all'hash e alla data di
   acquisizione da cui viene.
 
@@ -368,8 +369,8 @@ La catena dei dati, verificata il 26 ottobre 2026:
 |---|---|---|
 | Progetti finanziati | PA Digitale 2026, Misura 1.2 "Abilitazione e facilitazione migrazione al cloud" | 22.162 candidature, **1,34 miliardi**: Comuni 996 milioni, ASL 196, altri enti 91, scuole 61 |
 | Dal progetto ai contratti | ANAC, dataset `cup`, solo CUP validi | **11.566 CUP su 22.162 (52,2%)** portano ad almeno un contratto, per 17.973 CIG |
-| Dai contratti al prodotto | Descrizione dell'oggetto, lente prodotto | da fare ([#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40)) |
-| Dai contratti al rivenditore | Dataset `aggiudicatari`, lente fornitore | da fare ([#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41)) |
+| Dai contratti al prodotto | Descrizione dell'oggetto, lente prodotto | fatto: 818,9 M€ contati, big tech USA 1,7 % ([obiettivo 6](/rendiconti/obiettivo-6/), [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40)) |
+| Dai contratti al rivenditore | Dataset `aggiudicatari`, lente fornitore | mappa dei rivenditori nel rendiconto [obiettivo 6](/rendiconti/obiettivo-6/) ([#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41)) |
 
 Il ticket è [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43). Controvalidazioni
 previste: il campo `FLAG_PNRR_PNC` dei contratti ANAC e il ponte CUP-CIG di openpnrr. Da capire:

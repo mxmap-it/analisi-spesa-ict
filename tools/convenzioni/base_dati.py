@@ -300,7 +300,8 @@ def scrivi_griglia(voci):
                 st = "ufficiale"
             elif i["reperiti_altrove"]:
                 st = "non-ufficiale"
-            elif istanza and istanza["stato"] != "preparata":
+            elif istanza and istanza["inviata"]:
+                # «richiesto» solo se l'istanza è stata davvero inviata (data nel registro): bozze ritirate o annullate non contano (#78)
                 st = "richiesto"
             elif i["stato"] == "pubblicato-non-archiviato":
                 st = "pubblicato"
@@ -316,7 +317,7 @@ def scrivi_griglia(voci):
                       "categoria": v["categoria"][0] if v["categoria"] else "non-classificata", "valore": v["valore_ict_2024_2025"] or 0,
                       "copertura": v["copertura"], "carenze": [k["id"] for k in v["carenze"]], "celle": celle})
     out = {"generato": "tools/convenzioni/base_dati.py", "tipi": [{"id": t, "descrizione": (ATTESI.get(t) or ATTESI_EXTRA[t])[0]} for t in tipi],
-           "istanze": {"preparate": sum(1 for r in reg.values() if r["stato"] == "preparata"), "inviate": sum(1 for r in reg.values() if r["stato"] != "preparata")},
+           "istanze": {"preparate": sum(1 for r in reg.values() if r["stato"] == "preparata"), "inviate": sum(1 for r in reg.values() if r["inviata"])},
            "righe": righe}
     dest = R / "sito/static/dati/convenzioni-griglia.json"
     dest.parent.mkdir(parents=True, exist_ok=True)

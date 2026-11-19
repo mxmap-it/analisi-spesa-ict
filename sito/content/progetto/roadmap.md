@@ -4,7 +4,7 @@ date: 2026-10-26
 ---
 
 
-**Stato:** proposta · **Ultimo aggiornamento:** 2026-11-09 · versione 1.1
+**Stato:** proposta · **Ultimo aggiornamento:** 2026-11-19 · versione 1.2
 
 Lo scopo del progetto è uno: misurare **verso quale giurisdizione va l'euro speso in digitale
 dalla PA italiana**. Tutto il resto è strumentale, e va tenuto strumentale.
@@ -32,7 +32,7 @@ problema.
 
 ## 1. Fase 0 — Cosa le autorità dovrebbero garantire
 
-**Esito:** `docs/ATTESE-AUTORITA.md`, scritto adesso e **mantenuto aggiornato**.
+**Esito:** la pagina [Cosa le autorità dovrebbero garantire](/progetto/attese-autorita/), **mantenuta aggiornata**.
 
 È il documento che dichiara, per ogni autorità e per ogni dataset, **cosa ci aspettiamo** in termini
 di disponibilità: cadenza di pubblicazione, profondità storica, conservazione delle versioni
@@ -94,9 +94,9 @@ non riscarica e registra solo che era identico. Nessuna sovrascrittura, mai.
 Budget di spazio misurato sul campo: **~3,2 GB** per le 111 risorse disponibili del registry, crescita
 di **~2 GB l'anno**. Sul VPS attuale ci sono 246 GB liberi.
 
-**Fuori dal mirror per ora:** l'OCDS bulk di ANAC, oltre 100 GB per lo storico, canale fermo da
-sette mesi e ridondante rispetto ai tabellari. Resta nel registry come *monitorato ma non
-specchiato*, e si riconsidera se riparte.
+**OCDS bulk di ANAC:** nella prima stesura restava fuori dal mirror (oltre 100 GB per lo storico,
+canale fermo e ridondante rispetto ai tabellari). Superato dalla decisione del 26/10/2026: ANAC si
+specchia per intero, **OCDS bulk compreso** (§ 8ter e § 8quater).
 
 ### 1D — Continuità e persistenza
 
@@ -203,7 +203,7 @@ pagina: dire *quanto* non si può sapere è parte della misura.
 
 ## 6. Il registro dei problemi
 
-`docs/REGISTRO-PROBLEMI.md`, append-only, una voce per problema:
+Il registro, append-only, ha una voce per problema. Per ANAC è pubblicato nelle [schede dei problemi](/rendiconti/anac-2026-10-problemi/) e nel [cruscotto](/enti/anac-cruscotto/); lo schema della voce è questo:
 
 ```
 ID            PROB-2026-0001
@@ -287,7 +287,7 @@ Ogni gruppo ha il suo ticket.
 | 1 | **Consip** | 16 dataset; `gare-asp` e `bandi-e-gare` con CIG; ordini MePA e convenzioni | **Cancella oltre i tre anni**: ogni mese perso è irrecuperabile. E il canale centralizzato è dove passa molta spesa ICT | [#11](https://github.com/mxmap-it/analisi-spesa-ict/issues/11) |
 | 2 | **SIOPE** | Bulk di `siope.it`, tutti gli anni; più la via BDAP, da confrontare | È l'unica misura di **cassa**, ente per ente | [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30) |
 | 3 | **ICT e anagrafi** | PA Digitale 2026, IndicePA, catalogo cloud ACN | Specifiche dell'ICT, e servono all'attribuzione | [#13](https://github.com/mxmap-it/analisi-spesa-ict/issues/13) |
-| 4 | **BDAP** | Bilancio dello Stato, gestione delle spese, bilanci degli enti | Spesa di cassa: denominatore ICT dello Stato centrale per ministero (gestionali ICT, CE3) e della sanità (CE SSN BA1620); [documentato](../bdap/) il 9/11/2026 | [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67) |
+| 4 | **BDAP** | Bilancio dello Stato, gestione delle spese, bilanci degli enti | Spesa di cassa: denominatore ICT dello Stato centrale per ministero (gestionali ICT, CE3) e della sanità (CE SSN BA1620); [documentato](/progetto/bdap/) il 9/11/2026 | [#25](https://github.com/mxmap-it/analisi-spesa-ict/issues/25), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67) |
 | 5 | **Finanziamenti** | OpenCUP, OpenCoesione, ItaliaDomani/ReGiS, ponte CUP-CIG di openpnrr | Marcano la fonte di finanziamento dei contratti, PNRR incluso | [#26](https://github.com/mxmap-it/analisi-spesa-ict/issues/26) |
 | — | ~~Altre fonti di spesa di DataCivicLab~~ | Tolte il 26/10/2026: aiuti di Stato, previdenza, farmaci, finanza locale, stipendi, fabbisogni standard non riguardano l'ICT | — | [#14](https://github.com/mxmap-it/analisi-spesa-ict/issues/14), chiuso |
 | 7 | **Europa** | TED, EU Financial Transparency System | Gare sopra soglia e fondi UE diretti | [#27](https://github.com/mxmap-it/analisi-spesa-ict/issues/27) |
@@ -302,7 +302,7 @@ l'obiettivo finale.
 
 Entrano **solo le fonti che riguardano, direttamente o indirettamente, la spesa pubblica**.
 Criterio, tre livelli di relazione e classificazione delle 36 fonti di DataCivicLab —
-ventidue delle quali restano fuori — in [PERIMETRO-FONTI.md](../perimetro-fonti/).
+ventidue delle quali restano fuori — in [Perimetro delle fonti](/progetto/perimetro-fonti/).
 
 Vale anche quando contribuiremo a monte: a `source-observatory` portiamo il livello per risorsa
 **sulle sole fonti di spesa**, lasciando a loro le altre.
@@ -317,11 +317,13 @@ opentender come fonte corrente.
 
 ## 10. Dove siamo al 9 novembre 2026 e prossime tappe
 
+> **Fotografia del 9/11/2026.** Lo stato aggiornato è nel [Punto nave del 19/11/2026](/rendiconti/punto-nave-2026-11-19/) e nella [Mappa dell'imbuto](/progetto/mappa-imbuto/); l'imbuto 0.3.4 è stato rigenerato il 18/11.
+
 Numeri verificati da noi [V] salvo dove indicato; ogni cifra ha la sua verifica in `tools/verifiche/` ed esito in `esiti/2026-11-09/`.
 
 | Tema | Risultato del 9/11 | Ticket |
 |---|---|---|
-| **BDAP nell'imbuto** | Pagina [BDAP](../bdap/) v0.2. Abbinamento stazioni appaltanti → ministero per codice fiscale: CIG ICT ministeriali 2020-26 da 10.758 a 23.644 (8,2 mld). Il «buco» della Giustizia era un artefatto del nome (quota CIG/pagato 2024: 0,96); resta il MEF (0,25, circa 0,3 mld/anno). Proposta: BDAP come denominatore, non come strato. R69-R71 | [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67) |
+| **BDAP nell'imbuto** | Pagina [BDAP](/progetto/bdap/) v0.2. Abbinamento stazioni appaltanti → ministero per codice fiscale: CIG ICT ministeriali 2020-26 da 10.758 a 23.644 (8,2 mld). Il «buco» della Giustizia era un artefatto del nome (quota CIG/pagato 2024: 0,96); resta il MEF (0,25, circa 0,3 mld/anno). Proposta: BDAP come denominatore, non come strato. R69-R71 | [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67) |
 | **SIOPE via BDAP** | Chiuso. 20 regioni, 2023-2025: BDAP uguale al diretto (ICT 100 % / 99,5 %); nel 2025 Lombardia e Friuli Venezia Giulia ferme a marzo (1.717 comuni) e 84 comuni di Trento assenti: il difetto riferito da AgID si riproduce. R75 | [#30](https://github.com/mxmap-it/analisi-spesa-ict/issues/30) |
 | **Residuo S6, documenti** | Chiuso. L3 (link PVL) 11.589 CIG provati, 453 con documento che cita il CIG (262 M€); MePA 0 pagine pubbliche; L4 «Amministrazione trasparente» parziale, ripreso il 9/11 | [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68) |
 | **Adesioni ad AQ e convenzioni (P15)** | Chiuso. Norma verificata (scheda PCP AD4, comunicato ANAC 5/6/2024, originali archiviati); padri «contratto d'appalto» spiegati; 0,82 % dei CIG ICT derivati non collegabili. P15 pronta: registro ANAC 18/18. R81 | [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50) |
@@ -331,16 +333,17 @@ Numeri verificati da noi [V] salvo dove indicato; ogni cifra ha la sua verifica 
 | **Rivenditori** | Mappa v4.3: dei prodotti cloud extra-UE (3,05 mld) il 61,2 % passa da rivenditori con codice fiscale italiano (79,1 % del canale noto): la lente fornitore li conterebbe come italiani | [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41) |
 | **Lente prodotto** | Quarto campione a cieco (150 CIG): big tech precisione 92,2 %, richiamo 98,9 %. Le regole v4.3 correggono i 5 tipi d'errore, quindi il quarto campione non è più indipendente: serve un quinto | [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72) |
 | **Accesso civico massivo (L7)** | Elenco unico di 28.807 voci (6.626 enti); 6 modelli, macchina a stati con scadenze (norme verificate su fonte primaria), adattatore PEC secco; ondata 0 di prova (30 enti, 501 voci) **non inviata**. Destinatario deciso: PEC istituzionale | [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#69](https://github.com/mxmap-it/analisi-spesa-ict/issues/69) |
-| **CIG ripetuti nell'imbuto (R53)** | Una riga per CPV nei file ANAC 2024-2025: S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima fino alla rigenerazione 0.3.4) | [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71) |
+| **CIG ripetuti nell'imbuto (R53)** | Una riga per CPV nei file ANAC 2024-2025: S3-S6 dal 2024 da 55,3 a circa 55,7 mld (stima del 9/11; con l'imbuto 0.3.4 del 18/11: 56,06 mld al netto dei massimali di accordo quadro) | [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71) |
 
 **Prossime tappe**
 
 - **12/11/2026:** rendiconto «Imbuto: dove siamo» con top-5 delle cose da fare per la completezza ([#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66)): chiusura L4, cifre finali della via 6 su G3, rigenerazione 0.3.4.
-- Poi: quinto campione a cieco ([#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72)), infrastruttura sottostante estesa ([#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70)), documento e presentazione per ANAC (v1.1 pronti, invio su decisione di Fabio: [#34](https://github.com/mxmap-it/analisi-spesa-ict/issues/34), [#35](https://github.com/mxmap-it/analisi-spesa-ict/issues/35)), accesso civico solo dopo le decisioni di Fabio su richiedente, casella PEC, tetto e cadenza ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)).
+- Poi: quinto campione a cieco ([#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72)), infrastruttura sottostante estesa ([#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70)), documento e presentazione per ANAC (v1.1 pronti, invio su decisione di Fabio: [#34](https://github.com/mxmap-it/analisi-spesa-ict/issues/34), [#35](https://github.com/mxmap-it/analisi-spesa-ict/issues/35)), accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026: [#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58) in attesa).
 
 ## Registro delle revisioni
 
 | Versione | Data | Cosa cambia |
 |---|---|---|
+| 1.2 | 2026-11-19 | Revisione di coerenza: avviso sul § 10 (fotografia del 9/11, rimando a punto nave e mappa), OCDS bulk nel mirror (§ 1C), accesso civico solo alla fine (#78), link alle pagine del sito invece dei file `docs/` |
 | 1.1 | 2026-11-09 | § 10: risultati del 9/11 (BDAP, SIOPE, residuo S6, P15, CPV, PNRR 1.2, infrastruttura sottostante, rivenditori v4.3, lente cieco 4/5, accesso civico, R53) e prossime tappe |
 | 1.0 | 2026-10-26 | Prima versione (ANAC fino in fondo, ordine dei dataset) |

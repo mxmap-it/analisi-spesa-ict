@@ -2,9 +2,12 @@
 title: "Spesa della PA in servizi cloud: metodo e risultati intermedi"
 subtitle: "Rendiconto per la revisione pubblica · regole v3 · contratti ANAC 2022-2026"
 date: 2026-10-28
+lastmod: 2026-11-19
 description: "Come attribuiamo ogni contratto pubblico al cloud provider del prodotto, con tutti i risultati intermedi, gli errori trovati, le misure di precisione, la mappa dei rivenditori, il collegamento ai fondi PNRR cloud e i comandi per rifare tutto da zero."
 ---
-**Versione 1.0 del 28 ottobre 2026** · regole v3 · [registro delle revisioni](#registro-delle-revisioni)
+> **Fotografia del 28/10/2026, superata.** Metodo e numeri sono quelli delle regole v3 sui contratti 2022-2026. Lo stato attuale della misura è nel rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/), nella [Mappa dell'imbuto](/progetto/mappa-imbuto/) e nel [Punto nave del 19/11/2026](/rendiconti/punto-nave-2026-11-19/); il metodo in [Metodo del cloud provider](/progetto/metodo-cloud-provider/) e [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
+
+**Versione 1.0.1 del 19 novembre 2026** (contenuto del 28 ottobre 2026) · regole v3 · [registro delle revisioni](/rendiconti/cloud-metodo-2026-10/#registro-delle-revisioni)
 
 Questo rendiconto è scritto **per essere rivisto e contestato**. Ogni numero ha il file da cui
 viene e il comando che lo rifà. Gli errori trovati lungo la strada restano scritti. Le
@@ -274,8 +277,8 @@ Milioni di euro, 2022-2026; "—" indica una voce sotto le prime 16 del file.
 
 ## 9. Richieste e raccomandazioni
 
-Il registro completo, aggiornato man mano, è in
-[`report/metodo/richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml).
+Il registro completo, aggiornato man mano, è nella pagina [Raccomandazioni](/progetto/raccomandazioni/) (sorgente
+[`report/metodo/richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml)).
 Nessuna è stata ancora inviata.
 
 | # | A chi | Cosa | Stato |
@@ -378,3 +381,4 @@ completo del portale ANAC si rifà con `tools/censisci_anac.py` e `tools/mirror_
 | Versione | Data | Modifica |
 |---|---|---|
 | 1.0 | 28/10/2026 | Prima pubblicazione: regole v3, contratti 2022-2026, rivenditori, PNRR, importi da verificare |
+| 1.0.1 | 19/11/2026 | revisione di coerenza: avviso in testa (fotografia superata, link alle pagine attuali); registro delle raccomandazioni linkato alla pagina del sito |

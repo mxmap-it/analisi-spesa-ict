@@ -1,12 +1,12 @@
 ---
 title: "Metodo: documenti pubblicati e mancanti delle convenzioni ICT"
 date: 2026-11-06
-lastmod: 2026-11-06
+lastmod: 2026-11-19
 description: "Come censiamo, file per file, i documenti pubblicati e mancanti delle convenzioni e degli accordi quadro ICT: fonti, tre metodi, criticità 1-3, livelli [V]/[R], ricontrollo dal vivo, blocchi, accesso civico."
 weight: 25
 ---
 
-Versione 1.1 del 6/11/2026 (#62). Si applica alla [base dati delle convenzioni](/convenzioni/), al
+Versione 1.4 del 19/11/2026 (#62). Si applica alla [base dati delle convenzioni](/convenzioni/), al
 [rapporto sulla trasparenza](/rendiconti/convenzioni-trasparenza/) e all'inventario
 [`documenti-mancanti.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv).
 
@@ -19,7 +19,7 @@ Versione 1.1 del 6/11/2026 (#62). Si applica alla [base dati delle convenzioni](
 - Ogni mancante ha una **criticità** da 1 a 3 (3 = decisivo per stabilire la giurisdizione del prodotto o per controllare la spesa)
   e un **livello**: [V] se abbiamo ricontrollato la pagina ufficiale dal vivo e il file non c'è, [R] se è dedotto o da verificare.
 - Non aggiriamo login, CAPTCHA o registrazioni: i blocchi si registrano e si provano a mano.
-- Per i mancanti di criticità 2 e 3 prepariamo **bozze di accesso civico** raggruppate per destinatario; nessuna parte senza l'approvazione di Fabio Pietrosanti.
+- Per i mancanti di criticità 2 e 3 prepariamo **bozze di accesso civico** raggruppate per destinatario; nessuna parte senza l'approvazione di Fabio Pietrosanti e, per sua decisione del 19/11/2026 (#78), l'invio massivo si fa solo alla fine, dopo il rendiconto del risultato parziale.
 
 ## Fonti e livelli di acquisizione
 
@@ -138,6 +138,7 @@ numerazione per seconda via.
 
 | Versione | Data | Cosa è cambiato |
 |---|---|---|
+| 1.4 | 19/11/2026 | revisione di coerenza: accesso civico solo alla fine (#78), numero di versione in testa allineato al registro |
 | 1.3 | 7/11/2026 | zip letti e ricerca fuori piattaforma nel generatore |
 | 1.2 | 6/11/2026 | revisione a mano delle righe rimando/numerazione, allegati dentro i contratti firmati, ricognizione aggregatori nel generatore |
 | 1.1 | 6/11/2026 | copie pubblicate come GitHub Release del repository mxmap-it/convenzioni-ict-documenti, link «copia» nelle pagine |

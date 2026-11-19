@@ -211,7 +211,8 @@ def sintesi(g, m):
          "non casuale] ([imbuto](/rendiconti/imbuto-dove-siamo/) § 4.5-4.6). Il valore BDNCP delle iniziative non «ben visibili» è "
          f"{meur(g['valore_non_ben_visibile'])} M€ [V sui conteggi, stima come spesa].", ""]
     if ac:
-        L += [f"**Accesso civico (proposta, [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)).** Per le convenzioni il destinatario è la "
+        L += [f"**Accesso civico (proposta, [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58); si farà solo alla fine, dopo il rendiconto del "
+              "risultato parziale, decisione di Fabio del 19/11/2026, [#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).** Per le convenzioni il destinatario è la "
               f"centrale, non i singoli enti: la parte A dell'elenco unico ha {ac['voci']} voci verso **{ac['enti']} enti** "
               f"({', '.join(f'{n} {v}' for n, v in ac['top'])}); con un tetto di {TETTO_VOCI} voci per richiesta sono **{ac['richieste']} richieste**, "
               f"di cui {ac['richieste_p']} per le {ac['voci_p']} voci prioritarie (criticità 3, {ac['enti_p']} enti). L'elenco complessivo, con i CIG del "
@@ -327,7 +328,7 @@ def sezione_mancanti(nomi):
           "| Iniziativa | Documento | Metodo | Livello | Contenuto presunto | Accesso civico |", "|---|---|---|---|---|---|"]
     for r in rr:
         if r["criticita"] == "3":
-            ac = "in preparazione" if r["bozza_accesso_civico"] else "–"
+            ac = "bozza, non inviata" if r["bozza_accesso_civico"] else "–"
             L.append(f"| [{nomi.get(r['iniziativa'], r['iniziativa'])[:50]}](/convenzioni/{r['iniziativa'].lower()}/) | {r['documento_atteso'][:110].replace('|', '/')} | "
                      f"{r['metodo']} | {r['livello']} | {r['contenuto_presunto'][:120].replace('|', '/')} | {ac} |")
     L += ["", "Le criticità si assegnano per regole sul titolo: classificazione automatica, da rivedere prima di ogni richiesta. "
@@ -361,7 +362,7 @@ def main(versione, data, nota):
          'description: "Stato della trasparenza delle principali convenzioni e accordi quadro ICT (Consip, PSN, soggetti aggregatori): documenti pubblici, dati assenti, valore non verificabile, rimedi."',
          "---", "",
          "<!-- Generato da tools/convenzioni/rapporto.py dalla base dati: non modificare a mano. -->", "",
-         f"**Versione {versione} del {data}** · [registro delle revisioni](#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **Bozza work in progress**", "",
+         f"**Versione {versione} del {data}** · [registro delle revisioni](/rendiconti/convenzioni-trasparenza/#registro-delle-revisioni) · [metodo](/progetto/metodo-convenzioni-trasparenza/) · **Rendiconto iterativo, aggiornato a ogni avanzamento**", "",
          "Ogni numero viene dalla base dati `report/convenzioni/database/` e si rifà con `python tools/verifiche/convenzioni_rapporto.py`.", "",
          ] + sintesi(g, m) + ["## 1. Sintesi", "",
          "*Cosa non diciamo:* che un dato non individuato sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la "
@@ -504,15 +505,16 @@ def main(versione, data, nota):
           "con l'elenco ANAC dei soggetti aggregatori.",
           "- **Cosa non diciamo.** Che un dato assente sia nascosto di proposito; che un dato reperito presso un ente valga per tutta la convenzione.", "",
           "## 8. Rimedi", "",
-          f"- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio di breve periodo e solo dopo le fonti del § 3: "
+          f"- **Accesso civico generalizzato** (art. 5 c. 2 d.lgs. 33/2013), come rimedio da usare solo alla fine, dopo le fonti del § 3 e il rendiconto del risultato parziale (#78): "
           f"{g['istanze_preparate']} bozze necessarie (carenza accertata e dato utile all'imbuto: prodotti e marchi delle iniziative cloud e multibrand, "
           f"ordinativi delle più grandi, region e data center, erosione), {g['istanze_ritirate']} ritirate, {g['istanze_inviate']} inviate. [Registro](/convenzioni/accesso-civico/) e "
           "[analisi dei dinieghi](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/accesso-civico/analisi-dinieghi.md).",
-          f"- **Accesso civico massivo** ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), in preparazione al {DATI_AL}): i "
+          f"- **Accesso civico massivo** ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), elenco pronto al {DATI_AL}): i "
           f"{m['mancanti'].get('righe', 0)} documenti mancanti di questo inventario sono la parte A dell'elenco unico delle richieste (con i CIG senza "
           "documento del residuo), con 6 modelli (istanza, sollecito, chiarimento, riesame, difensore civico), specifica di metodo e registro degli eventi; "
-          "deciso l'invio dalla PEC istituzionale del progetto. **Nessuna istanza inviata**: mancano le decisioni su richiedente, tetto e cadenza delle "
-          "ondate e l'approvazione della prima ondata.",
+          "deciso l'invio dalla PEC istituzionale del progetto. **Nessuna istanza inviata**: per decisione di Fabio del 19/11/2026 "
+          "([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)) le richieste si fanno solo alla fine, dopo il rendiconto del risultato "
+          "parziale; allora l'elenco si rigenera con i soli documenti che restano mancanti.",
           "- **Proposte di policy** (stato «proposta», nessuna inviata):"]
     for c in car:
         L.append(f"  - {c['id']} {c['titolo']} → {c['raccomandazione']}")

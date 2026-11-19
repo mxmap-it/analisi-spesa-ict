@@ -16,9 +16,11 @@ weight: 18
 @media (max-width:600px){.imb-bar .lab{flex-basis:8rem}}
 </style>
 
-**Risultati provvisori.** Cifre misurate da noi sui file ANAC archiviati (**V**) con [`tools/analisi/imbuto.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/imbuto.py) versione 0.3.1; esiti in [`esiti/2026-11-03/imbuto/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/esiti/2026-11-03/imbuto). Sono **importi dichiarati**, non spesa liquidata. Le qualificazioni seguono i [criteri di sovranità](../criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
+> **Numeri della versione 0.3.1 (3/11/2026), superati.** I numeri attuali (imbuto 0.3.4 del 18/11/2026, dal 2024: cloud certo 4.556 CIG per 1,21 miliardi più 0,66 miliardi in-house; giurisdizione degli inclusi certi extra-UE 47 %, Italia 39 %, UE 14 %) sono nella [Mappa dell'imbuto](/progetto/mappa-imbuto/) e nel rendiconto [Imbuto: dove siamo](/rendiconti/imbuto-dove-siamo/). Questa pagina resta come descrizione degli strati e come fotografia del 3/11.
 
-Il quadro sempre aggiornato è nella [Mappa dell'imbuto](../mappa-imbuto/). Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/).
+**Risultati provvisori (versione 0.3.1).** Cifre misurate da noi sui file ANAC archiviati (**V**) con [`tools/analisi/imbuto.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/imbuto.py) versione 0.3.1; esiti in [`esiti/2026-11-03/imbuto/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/esiti/2026-11-03/imbuto). Sono **importi dichiarati**, non spesa liquidata. Le qualificazioni seguono i [criteri di sovranità](/progetto/criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
+
+Il quadro sempre aggiornato è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/).
 
 ## 1. In breve
 
@@ -111,7 +113,7 @@ Intervalli di Wilson al 95 %. Il campione è stratificato: la precisione vale pe
 
 | # | criticità | peso | azione proposta | stato |
 |---|---|---|---|---|
-| 1 | PSN: servizio comprato non noto | 1,9 miliardi | Progetti dei piani dei fabbisogni: ricerca sui siti degli enti (copertura bassa), poi **accesso civico a PSN S.p.A. e al DTD** per il riepilogo prezzi di ogni contratto; bilancio PSN 2026 come controllo aggregato | campione fatto; accesso civico: **decisione di Fabio** |
+| 1 | PSN: servizio comprato non noto | 1,9 miliardi | Progetti dei piani dei fabbisogni: ricerca sui siti degli enti (copertura bassa), poi **accesso civico a PSN S.p.A. e al DTD** per il riepilogo prezzi di ogni contratto; bilancio PSN 2026 come controllo aggregato | campione fatto; accesso civico massivo **solo alla fine**, dopo il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026, #78) |
 | 2 | Licenze Microsoft con oggetto generico | 504 M€ | lettura dei primi 50 contratti (77 % del valore) e campione del resto; transato per famiglia da Consip (R23) | disegno pronto |
 | 3 | Cloud senza provider nell'oggetto | 1,0 miliardi | atti dei contratti (acquisizione a livelli L1-L7) | da avviare |
 | 4 | Importi anomali ≥ 50 M€ (massimali copiati, errori ×1000) | esclusi dai totali | regola unica: confronto col massimale del padre, revisione manuale dei casi estremi, totali con e senza | proposta |
@@ -119,9 +121,9 @@ Intervalli di Wilson al 95 %. Il campione è stratificato: la precisione vale pe
 | 6 | Oggetto ICT con CPV non ICT | 3,5 miliardi | vaglio a campione | da avviare |
 | 7 | SmartCIG (indispensabile per il 2020-2023) | — | aggiunta all'imbuto | da avviare |
 | 8 | Affidamenti intragruppo (es. Trenitalia → FSTechnology) | caso per caso | sapere come eroga l'affidatario | incerto |
-| 9 | Stato centrale: pagato ICT sopra i CIG. Con l'abbinamento per **codice fiscale** (giro 0.2) resta solo il **MEF**: 2024, quota dei CIG attivi 97 M€ contro 388 pagati; la Giustizia (315 pagati) era un artefatto della regola sul nome, ora 0,96 | circa 0,3 miliardi l'anno (MEF) | **denominatore BDAP** per ministero ([pagina BDAP](../bdap/), `tools/verifiche/bdap_ict_stato.py`, `bdap_cig_ministeri_cf.py`): rapporto quota/pagato per ministero ogni anno; per il MEF corrispettivi Sogei per committente (R65, R71): i CIG in-house Sogei con SA del MEF spiegano circa 26 M€ l'anno [stima], gli acquisti di Sogei come SA (circa 0,7 miliardi di quota 2024) non si attribuiscono e vanno tenuti fuori per non contare due volte | in corso (#67) |
+| 9 | Stato centrale: pagato ICT sopra i CIG. Con l'abbinamento per **codice fiscale** (giro 0.2) resta solo il **MEF**: 2024, quota dei CIG attivi 97 M€ contro 388 pagati; la Giustizia (315 pagati) era un artefatto della regola sul nome, ora 0,96 | circa 0,3 miliardi l'anno (MEF) | **denominatore BDAP** per ministero ([pagina BDAP](/progetto/bdap/), `tools/verifiche/bdap_ict_stato.py`, `bdap_cig_ministeri_cf.py`): rapporto quota/pagato per ministero ogni anno; per il MEF corrispettivi Sogei per committente (R65, R71): i CIG in-house Sogei con SA del MEF spiegano circa 26 M€ l'anno [stima], gli acquisti di Sogei come SA (circa 0,7 miliardi di quota 2024) non si attribuiscono e vanno tenuti fuori per non contare due volte | in corso (#67) |
 
-Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [`richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml). Nessuna è stata inviata.
+Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [Raccomandazioni](/progetto/raccomandazioni/) (fonte: [`richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml)). Nessuna è stata inviata.
 
 ## Registro delle revisioni
 
@@ -134,3 +136,4 @@ Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [`richieste-e-
 | 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (gestionali ICT 1,14 mld nel 2024, seconda via CE3 0,98 mld) e copertura CIG per ministero (#67) |
 | 2026-11-09 | criticità 9 aggiornata col giro 0.2 di BDAP: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua dei contratti, Sogei; peso ridotto a circa 0,3 miliardi (#67) |
 | 2026-11-19 | rimando alla pagina di metodo sul raffinamento a livelli (L1-L4 e livello B BDNCP, #71 #74) |
+| 2026-11-19 | revisione di coerenza: avviso in testa (numeri 0.3.1 superati, rimando a mappa e rendiconto), accesso civico solo alla fine (#78), link assoluti, rimando alla pagina delle raccomandazioni |

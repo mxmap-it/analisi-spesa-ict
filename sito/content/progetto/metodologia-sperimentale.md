@@ -5,7 +5,9 @@ description: "Stato del lavoro sperimentale sulla classificazione dei contratti 
 weight: 15
 ---
 
-Questa pagina descrive **il lavoro in corso**: metodi in sperimentazione, cosa abbiamo misurato finora e cosa resta da decidere. I numeri pubblicati nei rendiconti usano solo i metodi già consolidati ([metodo di attribuzione](../metodo-cloud-provider/)). Si aggiorna a ogni passo, con il registro delle revisioni in fondo.
+> **Stato al 2/11/2026.** Il lavoro è andato avanti: regole v4.5 e sei campioni a cieco ([metodo di attribuzione](/progetto/metodo-cloud-provider/)), via 6 in uso sul residuo, raffinamento a livelli ([Raffinamento dell'imbuto](/progetto/raffinamento-imbuto/)), quadro aggiornato nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). Le sezioni 5 e 11 sono aggiornate al 19/11; il resto descrive il disegno di partenza.
+
+Questa pagina descrive **il lavoro in corso**: metodi in sperimentazione, cosa abbiamo misurato finora e cosa resta da decidere. I numeri pubblicati nei rendiconti usano solo i metodi già consolidati ([metodo di attribuzione](/progetto/metodo-cloud-provider/)). Si aggiorna a ogni passo, con il registro delle revisioni in fondo.
 
 ## 1. Il problema
 
@@ -92,15 +94,15 @@ Nessuna via da sola dà una confidenza elevata. La otteniamo **incrociando vie i
 - **Ogni ostacolo diventa una richiesta di policy** (R01–R19) ad ANAC, Consip, AgID e agli enti, perché il dato nasca già strutturato. È la via più efficace per rendere la misura facile negli anni a venire.
 - **Tutto è aperto e versionato:** codice, istruzioni ai modelli, dataset intermedi, conversazioni. Chi viene dopo, noi compresi, riparte da dove siamo arrivati.
 
-Le modalità con cui cerchiamo i documenti che chiudono i casi dubbi, dai dati strutturati fino all'accesso civico, sono descritte in [acquisizione dei documenti](../acquisizione-documenti/).
+Le modalità con cui cerchiamo i documenti che chiudono i casi dubbi, dai dati strutturati fino all'accesso civico, sono descritte in [acquisizione dei documenti](/progetto/acquisizione-documenti/).
 
 ## 5. Le vie di classificazione
 
 | via | cosa fa | stato |
 |---|---|---|
-| regole (vie 1-5, 7) | lotti di convenzione, marchi, fornitore = provider | in uso (v3.1); v3.2 in preparazione con gli errori trovati dalla via 6 |
-| **via 6: modello linguistico + fonti** | un agente legge il contratto, cerca la determina dell'ente in Amministrazione trasparente, la scarica, la archivia (sha256), ne estrae il testo (anche OCR) e classifica | **in sperimentazione** |
-| revisione umana | annotazione alla cieca di un campione | in preparazione |
+| regole (vie 1-5, 7) | lotti di convenzione, marchi, fornitore = provider | in uso (v4.5 del 9/11/2026; v3.1 all'epoca dei giri 1-2) |
+| **via 6: modello linguistico + fonti** | un agente legge il contratto, cerca la determina dell'ente in Amministrazione trasparente, la scarica, la archivia (sha256), ne estrae il testo (anche OCR) e classifica | **in uso sul residuo** (giri G1 e G3; livello L4 del [raffinamento](/progetto/raffinamento-imbuto/)) |
+| revisione alla cieca | annotazione alla cieca di un campione | sei campioni a cieco annotati da Claude (un annotatore); pagina per i volontari: [annotazioni](/annotazioni/) |
 | modelli fondazionali tabulari (TabICL) | secondo classificatore senza token, addestrato sui casi etichettati | protocollo scritto ([#56](https://github.com/mxmap-it/analisi-spesa-ict/issues/56)) |
 
 ## 6. Cosa abbiamo misurato (campione di 611 contratti)
@@ -121,7 +123,7 @@ Le modalità con cui cerchiamo i documenti che chiudono i casi dubbi, dai dati s
 
 ## 7. La confidenza: definita, poi verificata dal codice, poi misurata
 
-La definizione operativa è nel [formato della classificazione](../formato-classificazione/). In breve:
+La definizione operativa è nel [formato della classificazione](/progetto/formato-classificazione/). In breve:
 
 - **alta, media, bassa** sono definite da condizioni ricontrollabili;
 - il codice (`verifica_esiti.py`) corregge la confidenza dichiarata dal modello quando manca la prova. Nel giro 2 ha corretto 16 esiti su 70 di Haiku e 4 su 10 di Sonnet;
@@ -129,8 +131,8 @@ La definizione operativa è nel [formato della classificazione](../formato-class
 
 ## 8. Base di conoscenza e analisi delle infrastrutture
 
-- **Iniziative** (Consip, PSN, regionali): lotti, aggiudicatari, prodotti, giurisdizione, con stato verificato, riferito o controvalidato (due fonti indipendenti). Vedi [iniziative Consip e PSN](../iniziative-consip-cloud/) (in bozza).
-- **Criterio di cloud sovrano** (deciso il 29/10/2026): data center in Italia/UE e operatore a controllo UE non soggetto a leggi extraterritoriali (modello SecNumCloud 3.2). Il software extra-UE si registra come dipendenza tecnologica.
+- **Iniziative** (Consip, PSN, regionali): lotti, aggiudicatari, prodotti, giurisdizione, con stato verificato, riferito o controvalidato (due fonti indipendenti). Vedi [iniziative Consip e PSN](/progetto/iniziative-consip-cloud/).
+- **Criterio di cloud sovrano** (deciso il 29/10/2026): data center in Italia/UE e operatore a controllo UE non soggetto a leggi extraterritoriali (modello SecNumCloud 3.2). Il software extra-UE si registra come dipendenza tecnologica. Semplificato il 3/11/2026: vedi i [criteri di sovranità](/progetto/criteri-sovranita/).
 - **Infrastrutture dubbie:** si analizzano con un modello in 8 domande: dati, operatore, catena di controllo, ruoli e accessi, CLOUD Act, dipendenze, qualifiche, esito. Primo caso svolto: Sistema Cloud Toscana, esito «sovrano IT condizionato», perché il ruolo dei partner USA non è pubblico.
 - **PSN:** allineato all'[analisi dell'Osservatorio](https://osservatorio.mxmap.it/psn/). I servizi nativi sono IT; Secure Public Cloud e PSN Managed sono su tecnologia extra-UE.
 
@@ -144,7 +146,7 @@ Pubblichiamo in formati aperti, con schema:
 - le istruzioni date ai modelli (versionate);
 - le conversazioni di lavoro con gli agenti.
 
-Vedi il [formato della classificazione](../formato-classificazione/).
+Vedi il [formato della classificazione](/progetto/formato-classificazione/).
 
 ## 10. Costo e tetto di computazione
 
@@ -152,16 +154,17 @@ I compiti automatici di Claude sul server passano da un tetto (`tools/llm/claude
 
 ## 11. Cosa resta da decidere
 
-- annotatori e campione per la revisione alla cieca; pagina pubblica per volontari;
+- annotatori umani per la revisione alla cieca (la pagina pubblica per i volontari c'è: [annotazioni](/annotazioni/));
 - soglia di precisione per usare l'«alta» del modello nei numeri;
 - esito della sperimentazione TabICL;
 - per Cloud Toscana, se chiedere l'accesso agli atti all'offerta tecnica;
-- invio delle raccomandazioni R16-R19 (dopo approvazione).
+- invio delle raccomandazioni (dopo approvazione di Fabio): elenco in [Raccomandazioni](/progetto/raccomandazioni/).
 
 ## Registro delle revisioni
 
 | data | modifica |
 |---|---|
+| 2026-11-19 | revisione di coerenza: avviso sullo stato al 2/11, stati delle vie (§ 5) e punti da decidere (§ 11) aggiornati, rimando alle raccomandazioni |
 | 2026-11-02 | disegno operativo dell'imbuto: universo dal 2020, strati S0-S6, soglia 500 €, consulenza IT in-house, forbice; giro 2 della via 6 chiuso (337 contratti, 27 con atto che cita il CIG) |
 | 2026-10-31 | imbuto a strati: soglia d'importo, gruppi da approfondire con il loro metodo, esito di policy |
 | 2026-10-30 | criticità del CPV: attendibilità non misurata da nessuno, lacune del vocabolario, misura e proposta (#59) |

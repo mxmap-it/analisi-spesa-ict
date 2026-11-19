@@ -6,11 +6,11 @@ weight: 19
 ---
 
 **Versione 0.1, 19/11/2026** ([#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)).
-Il quadro d'insieme (dataset, relazioni, mancanze) è nella [Mappa dell'imbuto](../mappa-imbuto/). I numeri di ogni livello stanno nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/) (§ 2.8 e § 2.9); questa pagina dice **come** si ottengono e come si rifanno.
+Il quadro d'insieme (dataset, relazioni, mancanze) è nella [Mappa dell'imbuto](/progetto/mappa-imbuto/). I numeri di ogni livello stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) (§ 2.8 e § 2.9); questa pagina dice **come** si ottengono e come si rifanno.
 
 ## Il principio
 
-L'[imbuto](../imbuto/) assegna ogni contratto (CIG) a uno strato con regole sul testo, sul codice CPV, sui lotti delle convenzioni e sui marchi. Per decisione di Fabio (18/11/2026) l'imbuto resta **largo**: un contratto che nomina «software» o «connettività» con un CPV non informatico entra nel perimetro ICT invece di essere escluso a regola.
+L'[imbuto](/progetto/imbuto/) assegna ogni contratto (CIG) a uno strato con regole sul testo, sul codice CPV, sui lotti delle convenzioni e sui marchi. Per decisione di Fabio (18/11/2026) l'imbuto resta **largo**: un contratto che nomina «software» o «connettività» con un CPV non informatico entra nel perimetro ICT invece di essere escluso a regola.
 
 Sopra l'imbuto si applicano **livelli di raffinamento**, dal più economico al più costoso. Valgono quattro regole:
 
@@ -20,7 +20,7 @@ Sopra l'imbuto si applicano **livelli di raffinamento**, dal più economico al p
 4. **Ogni regola nuova ha la sua misura.** È un campione a seme fisso giudicato a mano, pubblicato con il giudizio riga per riga.
 
 Due esiti vanno tenuti distinti:
-- **fuori dalla misura cloud:** il contratto resta spesa ICT ma non è un servizio cloud (asse A del [principio a imbuto](../imbuto/));
+- **fuori dalla misura cloud:** il contratto resta spesa ICT ma non è un servizio cloud (asse A del [principio a imbuto](/progetto/imbuto/));
 - **non ICT:** il contratto esce anche dalla spesa ICT.
 
 ## I livelli
@@ -31,13 +31,13 @@ Due esiti vanno tenuti distinti:
 | **B** | segnali della Banca dati nazionale dei contratti pubblici (BDNCP) | CIG ICT S3-S6 | vedi sotto: B1 esclude, B2 restringe l'in-house, B3 e B4 misurano | `tools/verifiche/imbuto_bdncp.py` |
 | **L2** | regola sul testo | residuo incerto (S6) dal 2024 | stampanti, multifunzione, toner e consumabili, cablaggio, **salvo** che il testo nomini un servizio cloud | `tools/llm/raffinamento.py l2` |
 | **L3** | Claude Opus, solo il testo ANAC, senza strumenti né web | CIG S6 entrati solo per «sw» o «connettività», non presi da L2 | categoria «non-ict» o «ict-non-cloud» con certezza **alta** ([istruzioni](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/llm/raffinamento/istruzioni-l3.md)) | `raffinamento.py prepara-l3 / leggi-l3 / esito` |
-| **L4** | Claude Opus con ricerca e archiviazione degli atti (via 6, [acquisizione a livelli](../acquisizione-documenti/)) | ciò che L3 lascia incerto; i disaccordi sull'asse cloud della revisione | l'atto dell'ente prova che cosa si compra | `raffinamento.py prepara-l4`, `tools/llm/giro_imbuto.sh` |
+| **L4** | Claude Opus con ricerca e archiviazione degli atti (via 6, [acquisizione a livelli](/progetto/acquisizione-documenti/)) | ciò che L3 lascia incerto; i disaccordi sull'asse cloud della revisione | l'atto dell'ente prova che cosa si compra | `raffinamento.py prepara-l4`, `tools/llm/giro_imbuto.sh` |
 
 Il livello B viene prima di L2 perché costa solo una lettura dei dati già archiviati e non legge testo.
 
 ## Livello B: i dataset BDNCP
 
-La BDNCP è nel [mirror ANAC](../mirror-pubblico/): 62 dataset, 129 GB ([inventario](../../rendiconti/bdncp-l190/)). L'imbuto ne usava già otto: CIG, SmartCIG, aggiudicatari, aggiudicazioni, CUP, pubblicazioni, stazioni appaltanti e OCDS. Il livello B ne aggiunge cinque. Si legge sempre l'ultimo zip completo di ciascun dataset (`<dataset>_csv.zip`), e il riepilogo registra lo sha256 di ogni file letto.
+La BDNCP è nel [mirror ANAC](/progetto/mirror-pubblico/): 62 dataset, 129 GB ([inventario](/rendiconti/bdncp-l190/)). L'imbuto ne usava già otto: CIG, SmartCIG, aggiudicatari, aggiudicazioni, CUP, pubblicazioni, stazioni appaltanti e OCDS. Il livello B ne aggiunge cinque. Si legge sempre l'ultimo zip completo di ciascun dataset (`<dataset>_csv.zip`), e il riepilogo registra lo sha256 di ogni file letto.
 
 ### B1. Quadro economico: lavori o informatica?
 

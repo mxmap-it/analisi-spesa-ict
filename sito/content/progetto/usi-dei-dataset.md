@@ -1,11 +1,11 @@
 ---
-title: "Usi dei dataset (bozza)"
+title: "Usi dei dataset"
 date: 2026-11-06
 description: "A che cosa servono, con certezza e potenzialmente, i dataset del mirror per i progetti dell'Osservatorio Nazionale Sovranità Digitale."
 
 ---
 
-**Bozza 0.1 del 6/11/2026, non elencata (#17, #9).** Tabella e schede sono generate da
+**Versione 0.1 del 6/11/2026 (#17, #9).** Tabella e schede sono generate da
 [`config/usi-dataset.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/usi-dataset.yaml)
 con `tools/pagine_mirror.py`: si aggiorna il file dati, non la pagina.
 
@@ -57,18 +57,18 @@ usato. Tutto ciò che ha conservazione **alta** è insieme usato e a rischio all
 ## Schede
 
 <!-- GEN:schede -->
-### anac/cig
+### anac/cig {#anac-cig}
 
 CIG (file annuali cig-AAAA e delta mensili). Campi chiave: `cig`, `cig_accordo_quadro`, `oggetto_gara`, `oggetto_lotto`, `cod_cpv`, `importo_lotto`, `cf_amministrazione_appaltante`, `denominazione_amministrazione_appaltante`, `data_pubblicazione`, `tipo_scelta_contraente`.
 
-- **Uso certo:** Universo dell'imbuto: tools/analisi/imbuto.py e attribuisci_provider.py leggono cig-AAAA e i delta; producono gli strati S1-S6 (cloud certo ~594 M€ 2024-2025, residuo incerto ~6,4 mld, /progetto/imbuto/). Verifiche: cig_accordo_quadro.py (P15), attuativi_s5.py, ted_cig.py; acquisizione/pvl_analisi.py misura il link PVL su 3.734.845 CIG 2024-2026 (P18).
+- **Uso certo:** Universo dell'imbuto: tools/analisi/imbuto.py e attribuisci_provider.py leggono cig-AAAA e i delta; producono gli strati S1-S6 (imbuto 0.3.4, dal 2024: cloud certo 1,21 mld + in-house 0,66 mld, residuo incerto S6 16,37 mld; /progetto/mappa-imbuto/). Verifiche: cig_accordo_quadro.py (P15), attuativi_s5.py, ted_cig.py; acquisizione/pvl_analisi.py misura il link PVL su 3.734.845 CIG 2024-2026 (P18).
 - **Potenziale, Monitoraggio PVL e Amministrazione trasparente:** universo dei CIG contro cui misurare il link PVL (oggi via file di lavoro di ASI): diventa uso diretto quando PVL legge il mirror
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** serie annuale della spesa ICT per giurisdizione, indicatore di testata
 - **Potenziale, mxmap.it:** contratti di posta/collaboration (M365, Google Workspace) per ente: seconda via, indipendente dai record MX, per il provider di posta
 - **Limiti noti:** P08 delta gennaio-marzo 2026 rimossi; P15 cig_accordo_quadro vuoto in parte degli attuativi; P16 righe CSV non conformi nei delta 2026; R22 importi pari al massimale dell'accordo quadro.
 - **Conservazione: alta.** I delta sono rimossi senza regola (P08): senza mirror lo stato 2026 non è ricostruibile.
 
-### anac/smartcig
+### anac/smartcig {#anac-smartcig}
 
 SmartCIG (affidamenti semplificati, annuali e delta). Campi chiave: `cig`, `oggetto`, `importo`, `cf_amministrazione_appaltante`, `tipo_fattispecie_contrattuale`, `tipo_scelta_contraente`, `data_pubblicazione`.
 
@@ -79,7 +79,7 @@ SmartCIG (affidamenti semplificati, annuali e delta). Campi chiave: `cig`, `ogge
 - **Limiti noti:** P09 giugno e luglio 2026 mancanti, JSON interrotto.
 - **Conservazione: alta.** Mesi già mancanti alla fonte; 38,7 GB, la parte più pesante dopo l'OCDS.
 
-### anac/aggiudicatari
+### anac/aggiudicatari {#anac-aggiudicatari}
 
 Aggiudicatari. Campi chiave: `cig`, `codice_fiscale`, `denominazione`, `ruolo`, `tipo_soggetto`.
 
@@ -89,7 +89,7 @@ Aggiudicatari. Campi chiave: `cig`, `codice_fiscale`, `denominazione`, `ruolo`, 
 - **Limiti noti:** file full fermo al 23/01/2026: lo stato corrente richiede i delta.
 - **Conservazione: alta.** Full non aggiornato e delta mensili soggetti alla stessa rimozione di P08.
 
-### anac/aggiudicazioni
+### anac/aggiudicazioni {#anac-aggiudicazioni}
 
 Aggiudicazioni. Campi chiave: `cig`, `data_aggiudicazione_definitiva`, `importo_aggiudicazione`, `ribasso`, `numero_offerte`.
 
@@ -99,7 +99,7 @@ Aggiudicazioni. Campi chiave: `cig`, `data_aggiudicazione_definitiva`, `importo_
 - **Limiti noti:** file full fermo al 15/01/2026.
 - **Conservazione: alta.** Come aggiudicatari: full fermo, stato corrente solo nei delta.
 
-### anac/cup
+### anac/cup {#anac-cup}
 
 CUP (ponte CIG-CUP). Campi chiave: `cig`, `cup`.
 
@@ -108,7 +108,7 @@ CUP (ponte CIG-CUP). Campi chiave: `cig`, `cup`.
 - **Limiti noti:** P14 'ND' al posto del CUP in 1.951.844 righe.
 - **Conservazione: media.** Usato, ma file unico rigenerato: conservarne le versioni misura i miglioramenti di P14.
 
-### anac/stazioni-appaltanti
+### anac/stazioni-appaltanti {#anac-stazioni-appaltanti}
 
 Stazioni appaltanti (anagrafe, AUSA). Campi chiave: `codice_fiscale`, `denominazione`, `codice_ausa`, `natura_giuridica`, `comune`, `provincia`.
 
@@ -119,7 +119,7 @@ Stazioni appaltanti (anagrafe, AUSA). Campi chiave: `codice_fiscale`, `denominaz
 - **Limiti noti:** P17 codici fiscali segnaposto (902 su 39.486).
 - **Conservazione: media.** Piccolo (10 MB) e chiave di join fra progetti: costa niente tenerne tutte le versioni.
 
-### anac/ocds
+### anac/ocds {#anac-ocds}
 
 OCDS bulk mensile 2018-2026. Campi chiave: `ocid`, `tender.id (CIG)`, `parties`, `awards.suppliers`, `release.date`, `value`.
 
@@ -129,7 +129,7 @@ OCDS bulk mensile 2018-2026. Campi chiave: `ocid`, `tender.id (CIG)`, `parties`,
 - **Limiti noti:** P01 mesi duplicati; P02 fermo a marzo 2026; P03 fornitore assente nell'80% degli award 2026; P04 date non conformi; P05 copertura parziale; P06 API REST non funzionante; P07 licenza incoerente.
 - **Conservazione: alta.** 74 GB; mesi già spariti (2025/12, 2026/01-02 in 404): è la prova di P01-P02 e l'unica copia di quei mesi in forma OCDS.
 
-### anac/quadro-economico
+### anac/quadro-economico {#anac-quadro-economico}
 
 Quadro economico. Campi chiave: `cig`, `tipo_evento`, `importo_base_asta`, `importo_consuntivo`.
 
@@ -138,7 +138,7 @@ Quadro economico. Campi chiave: `cig`, `tipo_evento`, `importo_base_asta`, `impo
 - **Limiti noti:** copertura parziale: riguarda soprattutto i lavori.
 - **Conservazione: media.** Unico proxy pubblico del liquidato insieme agli stati di avanzamento.
 
-### anac/stati-avanzamento
+### anac/stati-avanzamento {#anac-stati-avanzamento}
 
 Stati di avanzamento (SAL). Campi chiave: `cig`, `data`, `importo_sal`.
 
@@ -147,7 +147,7 @@ Stati di avanzamento (SAL). Campi chiave: `cig`, `data`, `importo_sal`.
 - **Limiti noti:** poco compilato per servizi e forniture.
 - **Conservazione: media.** Proxy del liquidato; full+delta come gli altri.
 
-### anac/pubblicazioni
+### anac/pubblicazioni {#anac-pubblicazioni}
 
 Pubblicazioni (avvisi e bandi). Campi chiave: `cig`, `data_pubblicazione`, `tipo_pubblicazione`.
 
@@ -155,7 +155,7 @@ Pubblicazioni (avvisi e bandi). Campi chiave: `cig`, `data_pubblicazione`, `tipo
 - **Potenziale, Monitoraggio PVL e Amministrazione trasparente:** data di pubblicazione attesa da confrontare con l'avviso PVL e con la sezione AT
 - **Conservazione: media.** Serve alla serie temporale della pubblicità legale.
 
-### anac/fonti-finanziamento
+### anac/fonti-finanziamento {#anac-fonti-finanziamento}
 
 Fonti di finanziamento. Campi chiave: `cig`, `fonte_finanziamento`, `importo`.
 
@@ -164,7 +164,7 @@ Fonti di finanziamento. Campi chiave: `cig`, `fonte_finanziamento`, `importo`.
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** spesa cloud finanziata con fondi UE
 - **Conservazione: media.** Seconda via al CUP, che ha il 27% di ND.
 
-### anac/subappalti
+### anac/subappalti {#anac-subappalti}
 
 Subappalti. Campi chiave: `cig`, `subappaltatore`, `importo`.
 
@@ -172,7 +172,7 @@ Subappalti. Campi chiave: `cig`, `subappaltatore`, `importo`.
 - **Potenziale, analisi-spesa-ict:** chi eroga davvero il servizio cloud quando l'aggiudicatario è un integratore (lente fornitore)
 - **Conservazione: media.** Potenziale alto per la lente fornitore, nessuna copia altrove.
 
-### anac/partecipanti
+### anac/partecipanti {#anac-partecipanti}
 
 Partecipanti. Campi chiave: `cig`, `codice_fiscale`, `denominazione`, `ruolo`.
 
@@ -180,7 +180,7 @@ Partecipanti. Campi chiave: `cig`, `codice_fiscale`, `denominazione`, `ruolo`.
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** concorrenza nelle gare ICT/cloud (numero di offerenti)
 - **Conservazione: bassa.** Contesto.
 
-### anac/avvio-contratto
+### anac/avvio-contratto {#anac-avvio-contratto}
 
 Avvio contratto. Campi chiave: `cig`, `data_stipula`, `data_esecutivita`.
 
@@ -188,7 +188,7 @@ Avvio contratto. Campi chiave: `cig`, `data_stipula`, `data_esecutivita`.
 - **Potenziale, analisi-spesa-ict:** data di stipula per attribuire la spesa all'anno giusto
 - **Conservazione: bassa.** Raffinamento temporale.
 
-### anac/fine-contratto
+### anac/fine-contratto {#anac-fine-contratto}
 
 Fine contratto. Campi chiave: `cig`, `data_fine`, `importo_finale`.
 
@@ -196,7 +196,7 @@ Fine contratto. Campi chiave: `cig`, `data_fine`, `importo_finale`.
 - **Potenziale, analisi-spesa-ict:** durata reale e importo finale dei contratti cloud pluriennali
 - **Conservazione: bassa.** Raffinamento.
 
-### anac/varianti
+### anac/varianti {#anac-varianti}
 
 Varianti. Campi chiave: `cig`, `motivo`, `importo`.
 
@@ -204,7 +204,7 @@ Varianti. Campi chiave: `cig`, `motivo`, `importo`.
 - **Potenziale, analisi-spesa-ict:** estensioni dei contratti cloud oltre l'importo iniziale
 - **Conservazione: bassa.** Contesto.
 
-### anac/minori
+### anac/minori {#anac-minori}
 
 Dataset minori: categorie-opera, lavorazioni, sospensioni, collaudo, centri-di-costo, categorie-dpcm-aggregazione, attestazioni-soa, indicatori-pnrrpnc, misurepremiali-pnrrpnc, bandi-cig-*, smartcig-tipo-fattispecie. Campi chiave: `cig`, `codici di classificazione`.
 
@@ -212,7 +212,7 @@ Dataset minori: categorie-opera, lavorazioni, sospensioni, collaudo, centri-di-c
 - **Potenziale, analisi-spesa-ict:** categorie-dpcm-aggregazione: obbligo di aggregazione per le categorie ICT; indicatori-pnrrpnc: marcatura PNRR
 - **Conservazione: bassa.** Piccoli; si conservano perché il mirror è completo per costruzione (#9).
 
-### consip/ordini
+### consip/ordini {#consip-ordini}
 
 Ordini MePA, convenzione, accordi quadro (ordini-mepa, ordini-convenzione, ordini-aq, consumi-in-convenzione). Campi chiave: `anno`, `iniziativa`, `lotto`, `tipologia_amministrazione`, `provincia`, `importo_ordinato`.
 
@@ -221,7 +221,7 @@ Ordini MePA, convenzione, accordi quadro (ordini-mepa, ordini-convenzione, ordin
 - **Limiti noti:** nessun CIG né ente: solo aggregati per anno e lotto; finestra mobile di tre anni (2022 e 2023 in 404).
 - **Conservazione: alta.** Consip cancella gli anni oltre la finestra: ogni anno non specchiato è perso.
 
-### consip/gare
+### consip/gare {#consip-gare}
 
 Gare e bandi (gareasp, bandiegare, bandi_gare_rdf, as-aq-banditi, as-sda-banditi). Campi chiave: `cig`, `oggetto`, `data`, `importo`, `strumento`.
 
@@ -231,7 +231,7 @@ Gare e bandi (gareasp, bandiegare, bandi_gare_rdf, as-aq-banditi, as-sda-banditi
 - **Limiti noti:** finestra mobile di tre anni.
 - **Conservazione: alta.** Stessa finestra mobile; hanno il CIG, quindi si legano a ANAC.
 
-### consip/mepa-rdo
+### consip/mepa-rdo {#consip-mepa-rdo}
 
 RdO e trattative dirette MePA (bandite e stipulate, beni-servizi). Campi chiave: `anno`, `categoria`, `importo`, `tipologia_amministrazione`.
 
@@ -240,7 +240,7 @@ RdO e trattative dirette MePA (bandite e stipulate, beni-servizi). Campi chiave:
 - **Limiti noti:** finestra mobile di tre anni.
 - **Conservazione: media.** Finestra mobile; uso solo potenziale.
 
-### consip/anagrafiche
+### consip/anagrafiche {#consip-anagrafiche}
 
 Amministrazioni, operatori economici, cataloghi, partecipazioni. Campi chiave: `codice_fiscale`, `denominazione`, `categoria`, `abilitazioni`.
 
@@ -250,7 +250,7 @@ Amministrazioni, operatori economici, cataloghi, partecipazioni. Campi chiave: `
 - **Limiti noti:** alcune distribuzioni JSON/TTL in errore alla fonte (cataloghi 2024, partecipazioni 2024-2026, operatori_economici_rdf).
 - **Conservazione: media.** Finestra mobile; cataloghi pesanti (~1 GB).
 
-### rgs/siope
+### rgs/siope {#rgs-siope}
 
 SIOPE uscite e anagrafiche. Campi chiave: `codice_ente`, `anno`, `mese`, `codice_gestionale`, `importo`.
 
@@ -260,7 +260,7 @@ SIOPE uscite e anagrafiche. Campi chiave: `codice_ente`, `anno`, `mese`, `codice
 - **Limiti noti:** cartella open/last: il file dell'anno corrente è sovrascritto a ogni aggiornamento.
 - **Conservazione: alta.** Percorso «last»: le versioni intermedie dell'anno in corso non restano alla fonte.
 
-### agid_dtd/padigitale2026
+### agid_dtd/padigitale2026 {#agid_dtd-padigitale2026}
 
 PA Digitale 2026 (candidature finanziate, avvisi). Campi chiave: `cup`, `codice_ipa`, `misura`, `importo_finanziamento`, `stato`.
 
@@ -269,7 +269,7 @@ PA Digitale 2026 (candidature finanziate, avvisi). Campi chiave: `cup`, `codice_
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** esito del PNRR cloud per ente
 - **Conservazione: media.** Repository git pubblico: la storia c'è alla fonte, ma il mirror ne fissa gli sha256 usati.
 
-### indicepa/enti
+### indicepa/enti {#indicepa-enti}
 
 IndicePA (enti, unità organizzative, domicili digitali, RTD). Campi chiave: `codice_ipa`, `codice_fiscale`, `denominazione`, `sito_istituzionale`, `categoria`, `pec`, `codice_comune_istat`.
 
@@ -278,7 +278,7 @@ IndicePA (enti, unità organizzative, domicili digitali, RTD). Campi chiave: `co
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** anagrafe comune di tutti i progetti
 - **Conservazione: alta.** Aggiornato ogni giorno sovrascrivendo: le versioni passate non restano alla fonte, ed è la base di join di tutti i progetti.
 
-### acn/catalogo-cloud
+### acn/catalogo-cloud {#acn-catalogo-cloud}
 
 Catalogo dei servizi cloud qualificati ACN. Campi chiave: `servizio`, `fornitore`, `livello`, `data_qualifica`.
 

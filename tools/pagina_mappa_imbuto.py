@@ -345,7 +345,7 @@ Come funziona:
     a('''
 ## 3. I limiti di ogni fonte
 
-Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è un codice (P, R) il problema è documentato con evidenza in [`richieste-e-raccomandazioni.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/richieste-e-raccomandazioni.yaml) o nelle [schede dei problemi](/problemi/).
+Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è un codice il problema è documentato con evidenza: **P** nelle [schede dei problemi dei dati ANAC](/rendiconti/anac-2026-10-problemi/), **R** nelle [raccomandazioni agli enti](/progetto/raccomandazioni/).
 ''')
     for d in CFG["dataset"]:
         if d["limiti"]:

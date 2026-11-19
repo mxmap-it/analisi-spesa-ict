@@ -64,7 +64,7 @@ function filtrate(){
 function riepilogo(rr){
   var tipi=D.tipi,h='<div class="g-kpi">';
   var val=0,cop=0,car=0;rr.forEach(function(r){val+=r.valore;cop+=r.valore*r.copertura;car+=r.carenze.length});
-  h+='<div><b>'+rr.length+'</b>iniziative</div><div><b>'+meur(val)+' M€</b>valore ICT 2024-25</div><div><b>'+meur(cop)+' M€</b>valore coperto (pesato)</div><div><b>'+meur(val-cop)+' M€</b>valore scoperto</div><div><b>'+car+'</b>carenze</div><div><b>'+D.istanze.preparate+' / '+D.istanze.inviate+'</b>istanze preparate / inviate</div></div>';
+  h+='<div><b>'+rr.length+'</b>iniziative</div><div><b>'+meur(val)+' M€</b>valore ICT 2024-25</div><div><b>'+meur(cop)+' M€</b>valore coperto (pesato)</div><div><b>'+meur(val-cop)+' M€</b>valore scoperto</div><div><b>'+car+'</b>carenze</div><div><b>'+D.istanze.preparate+' / '+D.istanze.inviate+'</b>bozze di istanza / inviate (accesso civico solo alla fine, #78)</div></div>';
   h+='<table class="g-riep"><caption>Copertura per tipo di documento (celle archiviate da fonte ufficiale)</caption><tr><th>Documento</th><th>Archiviati</th><th>Altrove</th><th>Carenza</th><th>%</th></tr>';
   tipi.forEach(function(t){var n=0,a=0,k=0,x=0;rr.forEach(function(r){var c=r.celle[t.id];if(!c)return;n++;if(c.s==="ufficiale")a++;if(c.s==="non-ufficiale")x++;if(c.s==="carenza")k++});
     if(n)h+='<tr><td>'+e(t.descrizione)+'</td><td>'+a+'</td><td>'+x+'</td><td>'+k+'</td><td>'+Math.round(100*a/n)+' %</td></tr>'});

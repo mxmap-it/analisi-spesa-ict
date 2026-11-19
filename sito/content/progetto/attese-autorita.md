@@ -4,15 +4,15 @@ date: 2026-10-26
 ---
 
 
-**Stato:** prima stesura · **Ultimo aggiornamento:** 2026-10-26
+**Stato:** prima stesura · **Ultimo aggiornamento:** 2026-11-19 (verifiche del 26/10/2026; righe BDAP aggiornate il 9/11; revisione di coerenza il 19/11)
 
 Questo documento dichiara, per ogni autorità, **cosa ci aspettiamo** in termini di disponibilità dei
 dati, **cosa abbiamo verificato**, e **cosa chiediamo**. È la fase 0 della
-[roadmap](../roadmap/): nasce come ipotesi e viene confermato o smentito dal mirror, non da
+[roadmap](/progetto/roadmap/): nasce come ipotesi e viene confermato o smentito dal mirror, non da
 un'opinione.
 
 Ogni attesa porta uno stato: `atteso` (non ancora misurato), `confermato`, `smentito` (e in questo
-caso genera una voce nel [registro dei problemi](../roadmap/#6-il-registro-dei-problemi)).
+caso genera una voce nel [registro dei problemi](/progetto/roadmap/#6-il-registro-dei-problemi)).
 
 ---
 
@@ -62,10 +62,10 @@ richieste diverse.
 | 2 | **Pubblicare la politica di conservazione** | Oggi nessuno la dichiara: si scopre andando in 404 |
 | 3 | **Pubblicare il file dell'anno in corso**, non solo i delta | Il 2026 di ANAC esiste solo nei delta, e `cig-2026` non c'è |
 | 4 | **Dichiarare la cadenza reale e segnalare le interruzioni** | L'OCDS è fermo da sette mesi senza un avviso |
-| 5 | **Documentare le API esistenti e dichiarare dismesse quelle morte** | L'API CKAN di ANAC funziona e non è documentata; quella REST OCDS è documentata e non funziona |
+| 5 | **Documentare le API esistenti e dichiarare dismesse quelle che non funzionano** | L'API CKAN di ANAC funziona e non è documentata; quella REST OCDS è documentata e non funziona |
 | 6 | **Pubblicare i checksum** di ogni risorsa | Senza, non si può verificare un download né dimostrare una modifica |
 | 7 | **Licenza leggibile da macchina** su ogni dataset | Requisito DCAT-AP_IT, spesso assente |
-| 8 | **Non ostacolare il riuso civico**: nessun filtro sugli IP, nessuna discriminazione sullo user-agent | Il WAF di ANAC blocca gli IP cloud e gli user-agent non-browser sui dati aperti |
+| 8 | **Non ostacolare il riuso civico**: nessun filtro sugli IP, nessuna discriminazione sullo user-agent | Il WAF di ANAC respinge gli user-agent non-browser sui dati aperti (verificato); il blocco degli IP cloud è riferito da terzi |
 
 ---
 
@@ -87,7 +87,7 @@ Pubblicità a Valore Legale.
 | Conservazione dei delta dichiarata | **`smentito`** — non documentata e non deducibile: sei delta a settembre, sette a ottobre, gennaio-marzo spariti |
 | API documentata | **`smentito`** — la CKAN funziona e non è documentata, la REST OCDS è documentata e risponde 404 con swagger non valido |
 | Accesso senza discriminazioni | **`smentito`** — respinge gli user-agent non-browser con una pagina HTML servita come 200 (verificato). Il blocco degli IP cloud è riferito da DataCivicLab e Radar-Appalti, non verificato da noi |
-| Licenza dichiarata | `confermato` — CC BY-SA 4.0, CC BY 4.0 sull'OCDS |
+| Licenza dichiarata | `confermato` sui tabellari (CC BY-SA 4.0); **`smentito`** sull'OCDS: CC BY 4.0 nel catalogo, CC BY-SA 4.0 nel file (P07) |
 
 **Contatti:** PEC `protocollo@pec.anticorruzione.it`; Contact Center 06 62289571 e
 `supportcenter.anticorruzione.it` (irraggiungibile alla verifica). Nessuna casella dedicata agli
@@ -199,7 +199,7 @@ contatti, nessun canale dedicato al catalogo cloud.
 |---|---|
 | Bulk completo, anche in Parquet | `confermato` |
 | Cadenza bimestrale dichiarata | `atteso` |
-| Canale per segnalare errori nei dati | `confermato` — **il migliore in assoluto**: form con motivo "segnalazione errore nei dati" |
+| Canale per segnalare errori nei dati | `confermato` — **il migliore fra quelli osservati**: form con motivo "segnalazione errore nei dati" |
 
 **Contatti:** `info@opencoesione.gov.it` più il form dedicato.
 

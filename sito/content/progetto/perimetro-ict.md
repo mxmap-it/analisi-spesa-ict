@@ -43,7 +43,7 @@ Base: `ict.csv` dal 2024. Gli importi sono quelli dichiarati, comprese le basi d
 | entrano: nuovo `RX_ICT` («sw», «connettività») | +3.593 | +4.100 |
 | **0.3.3 con R53** | **383.148** | **506.031** |
 
-Degli ingressi, 29 CIG valgono 3,8 mld (lotti SPC Connettività, missioni ASI): si rivedono a mano nel gruppo G1. `ict.csv` si rigenera con la 0.3.4 quando la via 6 sarà finita.
+Degli ingressi, 29 CIG valgono 3,8 mld (lotti SPC Connettività, missioni ASI): si rivedono a mano nel gruppo G1. `ict.csv` è stato rigenerato con la 0.3.4 il 18/11/2026: i numeri aggiornati dell'imbuto sono nella [Mappa dell'imbuto](/progetto/mappa-imbuto/).
 
 Comando: `python tools/verifiche/cpv_rapporto.py` → `esiti/2026-11-09/cpv/rapporto-cpv.json` (B_effetto_perimetro).
 
@@ -52,3 +52,4 @@ Comando: `python tools/verifiche/cpv_rapporto.py` → `esiti/2026-11-09/cpv/rapp
 - 0.1 (2026-11-06): lista di 13 prefissi misurata sui campioni (precisione 83 %, 93 % con i dubbi; falsi esclusi 1 %).
 - 0.2 (2026-11-07): 79342 fuori; `RX_ICT` con «sw» e «connettività» (decisione di Fabio); 3224 rinviato.
 - 0.3 (2026-11-09): effetto 0.3.3 contro 0.3.2 con R53; proposta di sottoclasse videosorveglianza per 3224 (in attesa di decisione); lacune del vocabolario e raccomandazioni nel yaml.
+- 0.3 (2026-11-19): revisione di coerenza: `ict.csv` rigenerato con la 0.3.4 il 18/11, rimando alla mappa dell'imbuto.

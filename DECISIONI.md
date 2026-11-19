@@ -240,3 +240,8 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 **Chi:** Fabio. **Decisione:** «Le richieste di accesso civico massivo le facciamo solo alla fine, dopo che abbiamo completato tutto quello che potevamo fare, avendo documentato estensivamente i risultati intermedi, con una metodologia dettagliatissima, ripetibile, riproducibile, con evidenziate tutte le mancanze, e quindi con un rendiconto che riterremo un risultato parziale con già grafici, pubblicazioni, integrazioni, open data definitivo, funnel di aggiornabilità.»
 **Come:** traguardo #78 (checklist); #58 resta aperto ma in attesa di #78; M1 e M2 della mappa aggiornate; punto nave 1.1. Nessuna richiesta agli enti fino ad allora.
 **Perché:** chiedere agli enti solo ciò che davvero manca, con un risultato pubblico e un metodo già verificabile alle spalle.
+
+## 2026-11-19 — Revisione di coerenza del sito e controllo dei link a ogni build (Fabio)
+**Chi:** Fabio («fai pure una bella revisione di coerenza di tutto ciò che c'è pubblicato»). **Come (Claude):** tre revisioni per sezione (progetto, rendiconti, convenzioni) contro i fatti attuali e le decisioni in vigore; correzioni nei generatori per le pagine generate; `tools/verifiche/link_sito.py` (link e ancore interni: da 16 + 26 rotti a 0), obbligatorio dopo ogni build (AGENTS § 6); cruscotto ANAC ripubblicato ogni giorno (`tools/pubblica_cruscotto.sh` nel cron delle metriche).
+**Correzione grave:** la griglia delle convenzioni contava come «inviate» 115 istanze di accesso civico mai inviate (bozze ritirate e annullate): ora 31 bozze, 0 inviate.
+**Perché:** il sito è pubblico e deve dire lo stato vero; i numeri superati restano visibili ma marcati, con il rimando alla Mappa dell'imbuto.

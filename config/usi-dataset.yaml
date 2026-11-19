@@ -29,7 +29,7 @@ dataset:
     autorita: anac
     nome: "CIG (file annuali cig-AAAA e delta mensili)"
     campi: [cig, cig_accordo_quadro, oggetto_gara, oggetto_lotto, cod_cpv, importo_lotto, cf_amministrazione_appaltante, denominazione_amministrazione_appaltante, data_pubblicazione, tipo_scelta_contraente]
-    certo: "Universo dell'imbuto: tools/analisi/imbuto.py e attribuisci_provider.py leggono cig-AAAA e i delta; producono gli strati S1-S6 (cloud certo ~594 M€ 2024-2025, residuo incerto ~6,4 mld, /progetto/imbuto/). Verifiche: cig_accordo_quadro.py (P15), attuativi_s5.py, ted_cig.py; acquisizione/pvl_analisi.py misura il link PVL su 3.734.845 CIG 2024-2026 (P18)."
+    certo: "Universo dell'imbuto: tools/analisi/imbuto.py e attribuisci_provider.py leggono cig-AAAA e i delta; producono gli strati S1-S6 (imbuto 0.3.4, dal 2024: cloud certo 1,21 mld + in-house 0,66 mld, residuo incerto S6 16,37 mld; /progetto/mappa-imbuto/). Verifiche: cig_accordo_quadro.py (P15), attuativi_s5.py, ted_cig.py; acquisizione/pvl_analisi.py misura il link PVL su 3.734.845 CIG 2024-2026 (P18)."
     potenziale:
       PVL: "universo dei CIG contro cui misurare il link PVL (oggi via file di lavoro di ASI): diventa uso diretto quando PVL legge il mirror"
       OSS: "serie annuale della spesa ICT per giurisdizione, indicatore di testata"

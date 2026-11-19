@@ -4,11 +4,11 @@ date: 2026-10-29
 description: "Tavola di lettura delle iniziative di acquisto centralizzato ICT (SPC Cloud, AQ IaaS/PaaS, PSN, SaaS PRINCO, Microsoft EA, LAN 8, Centralini, telefonia): prodotto, provider, giurisdizione e fonti."
 weight: 16
 ---
-**Stato: bozza del 29 ottobre 2026.** Le voci marcate *controvalidata* hanno due fonti
+**Stato: versione del 29 ottobre 2026, in lavorazione.** La base di conoscenza aggiornata è nel file dati qui sotto e nella sezione [Convenzioni](/convenzioni/). Le voci marcate *controvalidata* hanno due fonti
 indipendenti concordi. Le altre sono **da verificare** e non vanno usate come fatto.
 Base dati: `report/metodo/llm/conoscenza-iniziative.yaml`; tabella dei lotti usata dal
 codice: `config/lotti_cloud.yaml`. Metodo generale:
-[come si riconosce il cloud provider](../metodo-cloud-provider/).
+[come si riconosce il cloud provider](/progetto/metodo-cloud-provider/).
 
 Tutte le principali convenzioni e AQ ICT (Consip, PSN, soggetti aggregatori, consorzi), con i documenti archiviati e
 quelli mancanti, sono nella sezione [Convenzioni](/convenzioni/) (#62).

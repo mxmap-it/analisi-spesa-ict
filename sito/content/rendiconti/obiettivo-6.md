@@ -2,13 +2,13 @@
 title: "Obiettivo 6: prodotti, rivenditori, PNRR, PSN"
 subtitle: "Lente prodotto misurata sul campione, chi rivende i prodotti esteri, quota big tech nei contratti PNRR, catalogo ACN"
 date: 2026-11-06
-lastmod: 2026-11-09
+lastmod: 2026-11-19
 datiAl: 2026-10-28
 description: "Precisione e richiamo del dizionario dei marchi cloud sul campione di 611 CIG; quota della spesa in prodotti extra-UE intermediata da rivenditori; quota dei prodotti delle big tech USA nei contratti collegati alle Misure PNRR 1.1 e 1.2; stato del catalogo ACN dei servizi qualificati."
 
 ---
 
-**Versione 0.9 del 2026-11-09 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.11.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -469,15 +469,16 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 1. #40: la lente testuale è al suo limite (81-89 % di richiamo). Il resto passa da lotti e convenzioni (vie 1 e 2) e dagli atti.
 2. #41: atti pertinenti per i 60 CIG del campione top-20 (oggi 0); capogruppo di Eurolink e Arslogica e verifica delle 6 righe [R] da fonti gratuite; un campione a cieco nuovo per misurare le regole del § 2.3 fuori dal campione su cui sono state scritte.
-3. #43: residuo S6 solo con atti nuovi (via 6 sui CIG S6) o accesso civico; infrastruttura sotto i SaaS (§ 3.3): scelta dei Comuni Maggioli fra private e public cloud, piani dei fabbisogni PSN di altre regioni (Veneto, Lombardia, Puglia, Toscana); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
+3. #43: residuo S6 solo con atti nuovi (via 6 sui CIG S6) o accesso civico (solo alla fine, dopo il rendiconto del risultato parziale, decisione di Fabio del 19/11/2026, #78); infrastruttura sotto i SaaS (§ 3.3): scelta dei Comuni Maggioli fra private e public cloud, piani dei fabbisogni PSN di altre regioni (Veneto, Lombardia, Puglia, Toscana); i 1.064 CIG 1.2 senza flag; i 74 CUP 1.1 senza CIG; il file ReGiS quando sarà raggiungibile (R57).
 4. #27: integrare nell'imbuto i 88 vincitori TED dei CIG senza aggiudicatari ANAC.
 5. #26 e #29: URL di OpenCUP, CPT e ISTAT; nuovo tentativo sui 7 file Consip.
-4. #45: catalogo ACN a mano con Fabio (consultazione da browser, non automatica) o richiesta ad ACN (R55).
+6. #45: catalogo ACN a mano con Fabio (consultazione da browser, non automatica) o richiesta ad ACN (R55).
 
 ## Registro delle revisioni
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.11.1 | 2026-11-19 | revisione di coerenza: versione in testa allineata al registro (era 0.9); accesso civico solo alla fine (#78) nei prossimi passi; numerazione dei prossimi passi corretta |
 | 0.11 | 2026-11-09 | § 2.1 mappa rivenditori v4.5 (regole del cieco 6, #40/#72, #41): prodotti extra-UE 3,023 mld, CF italiano 61,2 % del totale (79,3 % del noto), 57,5 % col capogruppo; enti ricalcolati (2.205; erano 2.182 in v4.2) e classifica; confronto per marchio v4.3 → v4.5 (−227/+18 CIG, −22,1 M€); verifica `rivenditori_confronto.py` |
 | 0.10 | 2026-11-09 | § 2 allineato alle regole v4.3 (#40, #41): mappa v4.3, prodotti extra-UE 3,046 mld, rivenditori con CF italiano 61,2 % del totale (79,1 % del noto), 57,4 % col capogruppo; criterio «prodotto comprato» al posto di «prodotto nominato» (cieco 1 −2 corsi); quarto campione a cieco (P big tech 92,2 % sulle regole v4.2) diventato campione di sviluppo, misura indipendente rinviata al quinto |
 | 0.9 | 2026-11-09 | § 3.3 terzo asse «infrastruttura» (#43, #45): Libro PSN 2025 (hyperscaler 5,4 % dei ricavi), piani dei fabbisogni PSN di 9 enti sanitari in 6 regioni (23,3 % dei canoni per produttore/gestione, 7,4 % per localizzazione), SaaS con prove per 122,9 M€ (Datamanagement AWS, Deda Next Azure, Maggioli misto); Misura 1.2 su infrastruttura extra-UE 30,6 % (produttore/gestione) e 21,5 % (localizzazione), forbice 3,0-62,2 %; § 4 aggiornato; R78 |

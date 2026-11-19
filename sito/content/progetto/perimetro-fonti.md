@@ -4,7 +4,7 @@ date: 2026-10-26
 ---
 
 
-**Ultimo aggiornamento:** 2026-10-26
+**Ultimo aggiornamento:** 2026-11-19 (revisione di coerenza: stato delle fonti nel mirror)
 
 ## La regola
 
@@ -82,16 +82,16 @@ Le fonti nel nostro registry, con il livello di relazione con la spesa:
 
 | Fonte | Livello | Stato |
 |---|---|---|
-| ANAC | diretta | **in archiviazione**, 1.797 risorse, tutti i formati |
-| Consip | diretta | nel registry, da archiviare |
-| SIOPE (RGS) | diretta | nel registry, da archiviare |
-| PA Digitale 2026 (DTD) | diretta, specifica ICT | nel registry |
-| IndicePA | indiretta | nel registry |
-| ACN, catalogo cloud qualificati | indiretta, serve alla giurisdizione | sondata, risponde 403 |
+| ANAC | diretta | **archiviata**: 1.796 delle 1.800 risorse del catalogo, tutti i formati, OCDS compreso (le 4 mancanti sono 404 alla fonte) |
+| Consip | diretta | archiviata (2024-2026, CSV, JSON, XLSX) |
+| SIOPE (RGS) | diretta | archiviata (uscite 2017-2026 e anagrafiche) |
+| BDAP (RGS) | diretta | archiviata in parte (vedi [BDAP](/progetto/bdap/)) |
+| PA Digitale 2026 (DTD) | diretta, specifica ICT | archiviata |
+| IndicePA | indiretta | archiviata |
+| ACN, catalogo cloud qualificati | indiretta, serve alla giurisdizione | portale: 403 alle richieste non-browser; CSV delle schede qualificate archiviato |
 
-Da aggiungere, in ordine di utilità per l'obiettivo ICT: **BDAP** per la spesa di cassa e di
-bilancio, **OpenCUP** e **ItaliaDomani** per i finanziamenti, **GLEIF** e le anagrafiche d'impresa
-per l'attribuzione di giurisdizione, **CPT** e **ISTAT** come contesto.
+Stato e dimensioni misurati: [Mirror pubblico](/progetto/mirror-pubblico/). Ordine dei dataset ancora
+da completare (finanziamenti, Europa, attribuzione, contesto): [roadmap § 8ter](/progetto/roadmap/).
 
 ## Casi limite già decisi
 
