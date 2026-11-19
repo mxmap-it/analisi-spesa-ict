@@ -34,7 +34,9 @@
   "ict": {
    "file": "lavoro/imbuto/ict.csv"
   },
-  "manuali": []
+  "manuali": [
+   "esiti/2026-11-19/imbuto/inhouse-verifica/spostamenti-inhouse.csv"
+  ]
  },
  "priorita": [
   {
@@ -79,7 +81,7 @@
   "incerto-marchio": "incerto: marchio o lotto noto, da attribuire",
   "incerto-s6": "incerto: residuo S6"
  },
- "spostamenti_proposti": 14120,
+ "spostamenti_proposti": 14286,
  "cig_toccati": 14040,
  "cig_non_in_imbuto": 0,
  "cig_non_in_imbuto_esempi": [],
@@ -262,9 +264,9 @@
     "dal-2024",
     "cloud-certo"
    ],
-   "cig": 4871,
-   "euro_lordi": 1402318874.81,
-   "euro_netti_tetti": 1275118161.83
+   "cig": 5035,
+   "euro_lordi": 1415607741.03,
+   "euro_netti_tetti": 1288407028.05
   },
   {
    "chiave": [
@@ -280,7 +282,7 @@
     "dal-2024",
     "fuori-misura"
    ],
-   "cig": 94061,
+   "cig": 94062,
    "euro_lordi": 391696049480.58,
    "euro_netti_tetti": 391696049480.58
   },
@@ -289,18 +291,18 @@
     "dal-2024",
     "ict-non-cloud"
    ],
-   "cig": 231131,
-   "euro_lordi": 93015823003.71,
-   "euro_netti_tetti": 41784024889.61
+   "cig": 231132,
+   "euro_lordi": 93133077187.94,
+   "euro_netti_tetti": 41901279073.84
   },
   {
    "chiave": [
     "dal-2024",
     "incerto-marchio"
    ],
-   "cig": 2205,
-   "euro_lordi": 4594525668.59,
-   "euro_netti_tetti": 2056628120.59
+   "cig": 2039,
+   "euro_lordi": 4098559718.14,
+   "euro_netti_tetti": 1803062170.14
   },
   {
    "chiave": [
@@ -460,9 +462,9 @@
     "cloud-certo",
     "IT"
    ],
-   "cig": 536,
-   "euro_lordi": 69682971.37,
-   "euro_netti_tetti": 69682971.37
+   "cig": 700,
+   "euro_lordi": 82971837.59,
+   "euro_netti_tetti": 82971837.59
   },
   {
    "chiave": [
@@ -665,12 +667,45 @@
    "chiave": [
     "dal-2024",
     "inhouse-certo",
+    "cloud-certo",
+    "MAN"
+   ],
+   "cig": 164,
+   "euro_lordi": 13288866.22,
+   "euro_netti_tetti": 13288866.22
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "fuori-misura",
+    "MAN"
+   ],
+   "cig": 1,
+   "euro_lordi": 0.0,
+   "euro_netti_tetti": 0.0
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "ict-non-cloud",
+    "MAN"
+   ],
+   "cig": 1,
+   "euro_lordi": 117254184.23,
+   "euro_netti_tetti": 117254184.23
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
     "incerto-marchio",
     "B2"
    ],
-   "cig": 378,
-   "euro_lordi": 580612323.22,
-   "euro_netti_tetti": 338212323.22
+   "cig": 212,
+   "euro_lordi": 84646372.77,
+   "euro_netti_tetti": 84646372.77
   }
  ],
  "effetto_per_livello_lordo_doppioni": [
@@ -831,6 +866,39 @@
   {
    "chiave": [
     "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "cloud-certo"
+   ],
+   "cig": 164,
+   "euro_lordi": 136311766.22,
+   "euro_netti_tetti": 136311766.22
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "fuori-misura"
+   ],
+   "cig": 1,
+   "euro_lordi": 242400000.0,
+   "euro_netti_tetti": 0.0
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "ict-non-cloud"
+   ],
+   "cig": 1,
+   "euro_lordi": 117254184.23,
+   "euro_netti_tetti": 117254184.23
+  },
+  {
+   "chiave": [
+    "dal-2024",
     "V6R",
     "incerto-s6",
     "cloud-certo"
@@ -870,6 +938,27 @@
    "chiave": [
     "dal-2024",
     "B1:escluso-non-ict vs L4:ict-non-cloud"
+   ],
+   "cig": 1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:cloud-certo"
+   ],
+   "cig": 164
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:fuori-misura"
+   ],
+   "cig": 1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:ict-non-cloud"
    ],
    "cig": 1
   }
