@@ -1,0 +1,120 @@
+                                                                                            ENAV Group
+
+
+
+
+CRONOS
+Dynamic Data Management
+
+CRONOS is a modular, web‑based platform designed to manage dynamic aeronautical data across AIS and
+MET domains.
+
+Its flexible architecture supports both traditional messaging and modern SWIM‑enabled digital services,
+ensuring scalability and future readiness.
+
+
+Key highlights
+• Dynamic       Data Management: Web‑based
+  solution for managing aeronautical information in
+  AIS and MET environments
+• Comprehensive Modules: Supports digital
+  and traditional NOTAMs, Flight Plans (FPL),
+  ATS messages, OPMET data, and Pre‑Flight
+  Information Bulletins (PIB)
+• Dual‑Mode Operation: Exchanges traditional
+  messages via AMHS/AFTN and distributes digital
+  events through SWIM REST services and B2B
+  Gateway
+• Flexible and Extensible Architecture: Modular
+  design allows adaptation to current operational
+  needs and future expansions
+• High‑Performance          Dynamic        Database:
+  Centralized, high‑availability datastore supporting
+  all types of aeronautical dynamic information         Figure 1 CRONOS User interface
+
+
+
+
+CRONOS Users and Interface
+Users interact with the system using CRONOS web portal, that is automatically resizible to best fit on
+several devices (desktop, tablets). The 3D-Web-GIS environment enables collaborative decision making
+without compromising security, bringin uniformity to ground data networks.
+
+External Users:
+• Pilots
+• Flight Dispatchers
+• TAM Originators
+• Aerodrome Operators
+
+Internal users:
+• ARO Operators
+• NOF Operators
+• MET Operators
+                                                        Figure 2 Airspace ePIB output
+
+
+
+
+                                                                                         idsairnav.com
+CRONOS Dynamic Data Management
+
+
+
+
+Operational Modules
+
+FPL Module
+• Wizard-driven creation of Flight Plans and Repetitive Flight Plans.
+• Automatic routing validation, addressing calculation, and map based route construction.
+• Built in workflow for FPL proposals, approvals, and version tracking.
+
+NOTAM Module
+• Guided creation and validation of NOTAM messages, linked NOTAMR/C, and geometry creation.
+• Dedicated checklist management and complete proposal workflow for originators and operators.
+• Supports ICAO-compliant Digital NOTAM creation using EUROCONTROL event schemas.
+
+OPMET Module
+• Creation of OPMET messages and automated handling of MET bulletins.
+• Query tools for national and international weather data and chart retrieval.
+
+Briefing Module (PIB)
+• Creation of aerodrome, area, route and administrative PIB formats.
+• Automatic PDF scheduling and distribution via email or FTP.
+• ePIB visualization for enhanced pre flight situational awareness.
+
+
+Integration & Interoperability
+Standalone or with IDS AirNav Suite
+• Integration with Aeronautical Database (AIXM 5 compliant) ensures consistent, validated static AIS data.
+• Data Originator Portal enables submission of static data changes and NOTAM proposals through PLX
+  task management.
+• IAM (Identity Manager) integration for centralized user management.
+
+With AMHS Systems
+• Compatible with any market AMHS solution.
+• Seamless interaction with Ubimex that ensures smooth integration between legacy AFTN systems and
+  modern AMHS, providing full interoperability and bidirectional compatibility in compliance with ICAO
+  and Eurocontrol standards.
+
+
+SWIM-Ready Architecture
+Supports digital event distribution, B2B interfaces, and ICAO data models (IWXXM, FIXM, AIXM).
+• Operational Efficiency: streamlines workflows by encoding aeronautical data once at its source, reducing
+  redundancy and ensuring system‑wide data integrity
+• Enhanced information management: filtering and visualization tools minimize information overload and
+  support decision‑making.
+• Improved pre-flight briefing: Generates structured ePIBs, organized by feature or criticality, enriched
+  with charts and images to improve situational awareness.
+• SWIM‑Enabled Architecture: designed to allow integration with SWIM and B2B Network Manager
+  (Eurocontrol), allowing global interoperability.
+• High Flexibility & Standards Compliance: manage, support, exchange and translate the last models
+  into ICAO standard format for operator readability and usage (IWXXM, FIXM and AIXM).
+• Accessibility: web-based responsive solution enabling internal and external users to send and manage
+  data from every device.
+
+
+
+                                                                                              Rev. 2026.05
+
+sales@idsairnav.com
+
