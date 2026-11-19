@@ -500,13 +500,14 @@
 - id: R48
   destinatario: AgID (Area Infrastrutture), DTD
   tipo: dato-mancante
-  stato: "proposta; nessuna richiesta inviata (decisione di Fabio)"
+  stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata (decisione di Fabio; accesso civico solo dopo #78)"
   titolo: Pubblicare in open data, per ente e per anno, gli esiti del Censimento del patrimonio ICT della PA (spesa ICT, cloud, data center)
-  evidenza: "6/11/2026 [R]: la pagina padigitale2026.gov.it del censimento 2026 (scadenze 10/11 e 1/12/2026, obbligo art. 33-septies c. 1-ter d.l. 179/2012) indica solo la condivisione dei dati tra AgID, DTD e altri enti tramite accordi, senza pubblicazione; per l'edizione 2018-2020 AgID ha pubblicato solo una sintesi (1.252 data center, 27 gruppo A, 1.190 gruppo B), senza dataset per ente"
-  prova: sito/content/rendiconti/imbuto-dove-siamo.md#7
+  evidenza: "6/11/2026 [R]: la pagina padigitale2026.gov.it del censimento 2026 (scadenze 10/11 e 1/12/2026, obbligo art. 33-septies c. 1-ter d.l. 179/2012) indica solo la condivisione dei dati tra AgID, DTD e altri enti tramite accordi, senza pubblicazione; per l'edizione 2018-2020 AgID ha pubblicato solo una sintesi (1.252 data center, 27 gruppo A, 1.190 gruppo B), senza dataset per ente. 19/11/2026 [V]: pagina riletta e archiviata dopo la prima scadenza (sha256 b556930335de965855e4ffd5a0870b9e73627a34ba332abe9c9da93b93674102): stesso testo, «i dati verranno condivisi tra AgID, DTD e altri enti, in base ad appositi accordi», nessun dataset né sintesi 2026 annunciati"
+  prova: "sito/content/rendiconti/imbuto-dove-siamo.md#7; archivio/mirror/padigitale2026.gov.it/guide-e-risorse/censimento-del-patrimonio-ict-della-pubblica-amministrazione (sha256 b5569303…)"
   richiesta: "Dataset aperto per ente: spesa ICT (opex/capex, licenze, servizi cloud), data center di proprietà, livello di migrazione e fornitori cloud; con codice IPA per il collegamento ai CIG"
   perche_serve: "È l'unica controprova dichiarata dagli enti della spesa cloud misurata dagli appalti (obiettivo finale); senza, l'imbuto non ha un controllo indipendente sul totale"
-  rif: ["#60"]
+  metrica: "Dataset per ente pubblicato sì/no; quota degli enti con CIG ICT presenti nel dataset; scarto fra spesa cloud dichiarata e misurata dagli appalti, per ente e anno"
+  rif: ["#60", "#58", "M14"]
 - id: R49
   destinatario: Consip, ANAC
   tipo: dato-mancante
@@ -879,7 +880,7 @@
   stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
   titolo: "Campi flag_inHouse e flag_partecipata dell'anagrafica stazioni appaltanti non compilati: «false» per tutte le 48.040 righe"
   evidenza: "Nel dataset stazioni-appaltanti (ultimo zip completo del mirror) tutte le 48.040 righe hanno flag_inHouse = false e flag_partecipata = false, comprese società in-house come Lepida, CSI-Piemonte, Liguria Digitale, Trentino Digitale. Il campo quindi non distingue le società in-house: per riconoscerle si è dovuto usare l'Indice PA (codice fiscale dell'aggiudicatario). Sui 816 CIG ICT «in-house» dal 2024 dell'imbuto, gli aggiudicatari non registrati né in IPA né come stazione appaltante sono privati (Accenture, T.A.I., Lutech)"
-  prova: "tools/verifiche/imbuto_bdncp.py (riepilogo.json, ingressi.flag_stazioni_appaltanti; esiti/2026-11-19/imbuto/bdncp/)"
+  prova: "tools/verifiche/imbuto_bdncp.py (riepilogo.json, ingressi.flag_stazioni_appaltanti; esiti/2026-11-19/imbuto/bdncp/); ingresso stazioni-appaltanti_csv.zip del mirror ANAC, sha256 fa27841b2379bb07cd1dfcab334ea85e4bc92472571a93dca4db450efb8804f8 (3.131.101 byte)"
   richiesta: "Compilare flag_inHouse e flag_partecipata dall'elenco ANAC delle società in-house (art. 192 d.lgs. 50/2016, ora art. 7 d.lgs. 36/2023) e dal censimento MEF delle partecipazioni; documentare nel dizionario dati il significato e la fonte dei due campi"
   perche_serve: "Gli affidamenti in-house ICT (società informatiche regionali e nazionali) sono la parte della spesa che resta su infrastruttura pubblica: senza il campo vanno riconosciuti a mano, e il dizionario per nome confonde committenti, omonimi e privati"
   metrica: "Quota di righe con flag_inHouse = true; quota dei CIG ICT con aggiudicatario in-house riconoscibile dal solo dataset ANAC"

@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.4"
+versione: "0.5"
 aggiornato: 2026-11-19
 
 esiti:
@@ -20,6 +20,7 @@ esiti:
   raffinamento_l2: "esiti/*/imbuto/raffinamento-l2.json"
   raffinamento_l3: "esiti/*/imbuto/raffinamento-l3.json"
   bdncp: "esiti/*/imbuto/bdncp/riepilogo.json"
+  spostamenti: "esiti/*/imbuto/spostamenti/riepilogo.json"   # tabella unica dei livelli (#71)
   l4_esiti: "report/metodo/llm/raffinamento-l4/esiti/*.jsonl"
   l4_lotti: "report/metodo/llm/raffinamento-l4/lotti/*.jsonl"
 
@@ -373,8 +374,18 @@ mancanze:
     come: "Dashboard con tutti i CIG dell'imbuto (ricerca, filtri per strato e livello, esito e via di ogni livello, link agli atti archiviati) e annotazione a supporto; esce con il rendiconto del risultato parziale (decisione di Fabio del 19/11/2026)."
     ticket: ["#53", "#78"]
     stato: aperta
+  - id: M14
+    titolo: "Nessuna controprova dichiarata dagli enti: il censimento del patrimonio ICT di AgID non è pubblicato"
+    peso: "spesa ICT, cloud e data center dichiarati da ogni ente nel censimento 2026 (scadenze 10/11 e 1/12/2026): nessun dato aperto"
+    peso_mld: null
+    gravita: media
+    perche: "Il totale misurato dagli appalti non ha un controllo indipendente dichiarato dagli enti: oggi c'è solo il pagato SIOPE/BDAP, che non distingue il cloud. Non cambia i numeri, ne limita la verifica."
+    come: "Raccomandazione R48 (dataset per ente); se non pubblicato, accesso civico generalizzato ad AgID solo dopo il rendiconto del risultato parziale (#78), con l'ok di Fabio; Cruscotto Italia come seconda controprova a fine percorso (#39)."
+    ticket: ["#60", "#58", "#39"]
+    stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-19, versione: "0.5", modifica: "Mancanza M14: censimento del patrimonio ICT di AgID non pubblicato (pagina archiviata il 19/11, R48), controprova dichiarata dagli enti (#60)."}
   - {data: 2026-11-19, versione: "0.4", modifica: "Mancanza M13 (dashboard per ricercare e annotare tutti i contratti, decisione di Fabio); M5 senza il rimando ai volontari."}
   - {data: 2026-11-19, versione: "0.3", modifica: "Esito del test di ripetibilità (tutti i numeri riprodotti) e mancanza M12; link alle schede dei problemi e alle raccomandazioni sul sito."}
   - {data: 2026-11-19, versione: "0.2", modifica: "Decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78); M1 e M2 aggiornate."}
