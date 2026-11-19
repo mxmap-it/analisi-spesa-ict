@@ -89,6 +89,23 @@ l'accordo (kappa di Cohen).
 | [`tools/analisi/campione_riferimento.py`](tools/analisi/campione_riferimento.py) | Campione stratificato, seme fisso, esclude i contratti già visti |
 | [`tools/analisi/misura_campione.py`](tools/analisi/misura_campione.py) | Precisione, richiamo e kappa sulle annotazioni |
 
+## Imbuto e raffinamento a livelli
+
+Dopo la misura qui sopra, sul server come `mxmap.it` (un job pesante alla volta). Il metodo è nella pagina
+[Raffinamento dell'imbuto a livelli](https://analisi-spesa-ict.mxmap.it/progetto/raffinamento-imbuto/).
+
+```bash
+nice .venv/bin/python tools/verifiche/imbuto_strati.py            # L1: strati dell'imbuto (lavoro/imbuto/ict.csv)
+nice .venv/bin/python tools/verifiche/imbuto_bdncp.py             # B: quadro economico, in-house, durate, PNRR (BDNCP)
+nice .venv/bin/python tools/llm/raffinamento.py l2                # L2: stampanti, consumabili, cablaggio
+.venv/bin/python tools/llm/raffinamento.py prepara-l3 tutti       # L3: pacchetti ciechi per Claude Opus
+nohup setsid tools/llm/raffinamento_catena.sh &                   # L3 poi L4 (atti), ripartibile, sotto il tetto di spesa
+.venv/bin/python tools/llm/raffinamento.py esito                  # tabella L3 e riepilogo
+```
+
+B e L2 sono deterministici (stessi file per sha256, stesso risultato). L3 e L4 usano un modello linguistico: i loro
+esiti sono versionati in `report/metodo/llm/raffinamento*/esiti/` e si rileggono, non si rigenerano.
+
 ## Il mirror completo dei dati
 
 Le verifiche usano 349 file. Il **mirror completo** del portale ANAC (1.797 risorse, in tutti i

@@ -18,6 +18,8 @@ weight: 18
 
 **Risultati provvisori.** Cifre misurate da noi sui file ANAC archiviati (**V**) con [`tools/analisi/imbuto.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/imbuto.py) versione 0.3.1; esiti in [`esiti/2026-11-03/imbuto/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/esiti/2026-11-03/imbuto). Sono **importi dichiarati**, non spesa liquidata. Le qualificazioni seguono i [criteri di sovranità](../criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
 
+Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/).
+
 ## 1. In breve
 
 - Sul **cloud identificato con certezza** (~594 M€ nel 2024-2025) la quota **extra-UE è il 78 %**.
@@ -131,3 +133,4 @@ Le richieste ad ANAC, Consip, PSN e DTD emerse dal lavoro sono in [`richieste-e-
 | 2026-11-03 | imbuto 0.3.1: il PSN con servizio non noto è «incerto», non più «Italia»; licenze da convenzione 539 M€; sintesi con grafici, campione dei progetti PSN, elaborazione sulle licenze Microsoft, criticità e azioni |
 | 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (gestionali ICT 1,14 mld nel 2024, seconda via CE3 0,98 mld) e copertura CIG per ministero (#67) |
 | 2026-11-09 | criticità 9 aggiornata col giro 0.2 di BDAP: abbinamento per codice fiscale (Giustizia 0,96, MEF 0,25 nel 2024), quota annua dei contratti, Sogei; peso ridotto a circa 0,3 miliardi (#67) |
+| 2026-11-19 | rimando alla pagina di metodo sul raffinamento a livelli (L1-L4 e livello B BDNCP, #71 #74) |

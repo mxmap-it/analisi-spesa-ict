@@ -68,6 +68,8 @@ così ogni numero pubblicato si può scomporre e ricontrollare riga per riga.
 | **6. Modello linguistico** | Descrizione residua | Solo sul residuo; modello, prompt e risultati versionati | da implementare |
 | **7. Indeterminato** | — | Si pubblica come quota **non attribuita**, mai redistribuita per stima | — |
 
+Prima delle vie, l'imbuto toglie ciò che non è cloud con livelli di raffinamento (regole, segnali della Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, atti): vedi [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/).
+
 Dopo l'attribuzione, il **tipo di spesa** si decide con due regole: se il testo parla di
 sviluppo, manutenzione evolutiva, migrazione o consulenza è **servizi professionali**; ma se
 parla anche di licenze, crediti, sottoscrizioni o adesione al PSN resta **abbonamento**, perché
@@ -341,3 +343,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 9/11/2026 | Regole v4.4 dalle classi d'errore del cieco 5 (omonimie, servizi su piattaforma, formazione/POC/gara, connettività, nome canonico SPC Cloud): cieco 5 big tech 125/17/0 → 125/0/0 (ora di sviluppo), ciechi 2-3 invariati, 3 cambi di criterio (cieco 1, cieco 4, top-20); 129/129 casi; mappa rivenditori da rifare (v4.4) dopo la prova imbuto | #40, `esiti/2026-11-09/regole-v4.4/` |
 | 9/11/2026 | Sesto campione a cieco (250 CIG, seme 20261112, strato nuovo «servizi su piattaforma»): regole v4.4 big tech P 113/140 = 80,7 % (73,4-86,4), 98,1 % in euro, pesata 89,4 %; R 113/116 = 97,4 % (3 mancati nello strato N); 46 errori per classe, regole non corrette | #40, #72, `esiti/2026-11-09/lente-cieco-6/` |
 | 9/11/2026 | Regole v4.5 dalle classi del cieco 6 (servizio davanti al marchio, supporto del produttore = prodotto per licenze e VMware, omonimie GCP/Next Cloud/AFI, mancati ServiceNow/SQLSRV/Google Suite, alias in-house nel confronto): cieco 6 big tech 110/20/6 → 113/4/3, in euro 98,3 → 99,8 % (ora di sviluppo); ciechi 1-5 e top-20 invariati; 162/162 casi; hosting dentro il servizio di un terzo lasciato come confine (#70). Conclusione: precisione in euro pesata ~99 % già con v4.4; il settimo cieco si fa una sola volta prima del rendiconto finale. Mappa rivenditori da rifare (v4.5) dopo la prova imbuto | #40, #72, `esiti/2026-11-09/regole-v4.5/` |
+| 19/11/2026 | Rimando al raffinamento a livelli dell'imbuto (L1-L4, livello B con i dataset BDNCP: quadro economico, in-house per codice fiscale, durate effettive, PNRR su tre vie) | #71, #74, [raffinamento-imbuto](../raffinamento-imbuto/) |

@@ -675,3 +675,9 @@ Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e 
 
 - ~~**Board di progetto**~~ creata: https://github.com/orgs/mxmap-it/projects/1
 - **Tetto**: 20% del limite settimanale su 7 giorni, 2,86% al giorno (`config/budget.yaml`). Da tarare la conversione in token prima di avviare compiti automatici (#20).
+
+## Notte 19/11: livello B (BDNCP) nell'imbuto (#74 #71, decisione di Fabio 19/11)
+- `tools/verifiche/imbuto_bdncp.py` → `esiti/2026-11-19/imbuto/bdncp/` (4 min, deterministico). B1 quadro economico: 1.281 CIG / 131,9 M€ fuori dalla misura cloud (campione di misura 37/40, sviluppo in report/metodo/bdncp/). B2 in-house via Indice PA (flag ANAC tutti false → R84): 438 / 77,6 M€ pubblici, 137 / 150,4 M€ privati (40/40). B3 durate: copertura 13 %, quota 2024 5.841 → 4.067 M€ sugli stessi CIG. B4: indicatori PNRR = flag (non indipendenti); Misura 1.2 v3 68 % con flag.
+- Metodo: pagina nuova `sito/content/progetto/raffinamento-imbuto.md` (L1-L4 + B, sequenza annuale), RIPRODURRE.md, rendiconto imbuto 0.19 § 2.8-2.9.
+- L3 finito (3.540 CIG). L4: 977 CIG / 489 lotti, 95 letti; fermo sul tetto giornaliero (100 USD-eq/24h). Guardiano nuovo `tools/llm/raffinamento_guardiano.sh` (cron 30 min, flock lavoro/raffinamento/l4.lock).
+- **Da fare:** B1 v0.2 (locali informatici/tecnologici, area server) + campione nuovo; applicare B1/B2/L2/L3 come strato nel numero finale (tabella di spostamenti unica); finito L4 aggiornare § 2.8.
