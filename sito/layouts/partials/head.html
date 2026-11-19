@@ -129,3 +129,9 @@
 {{- with .Params.jsonld }}
 <script type="application/ld+json">{{ . | safeJS }}</script>
 {{- end }}
+{{- if hugo.IsProduction }}
+{{/* Statistiche web cookieless dell'Osservatorio (GoatCounter su stats.mxmap.it, server in UE):
+     niente cookie, nessun IP salvato, DNT/GPC rispettati. Percorso con l'host: un solo
+     contatore per mxmap.it, osservatorio e questo sito. https://osservatorio.mxmap.it/privacy/ */}}
+<script>(function(){if(navigator.doNotTrack==="1"||window.doNotTrack==="1"||navigator.globalPrivacyControl)return;window.goatcounter={path:function(){return location.host+location.pathname}};var s=document.createElement("script");s.async=true;s.src="https://stats.mxmap.it/count.js";s.setAttribute("data-goatcounter","https://stats.mxmap.it/count");document.head.appendChild(s)})();</script>
+{{- end }}
