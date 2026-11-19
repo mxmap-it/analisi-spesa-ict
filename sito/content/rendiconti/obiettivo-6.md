@@ -8,7 +8,7 @@ description: "Precisione e richiamo del dizionario dei marchi cloud sul campione
 
 ---
 
-**Versione 0.11.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
+**Versione 0.12 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#41](https://github.com/mxmap-it/analisi-spesa-ict/issues/41), [#43](https://github.com/mxmap-it/analisi-spesa-ict/issues/43), [#45](https://github.com/mxmap-it/analisi-spesa-ict/issues/45), parte di [#24](https://github.com/mxmap-it/analisi-spesa-ict/issues/24)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato. La giurisdizione è quella del **prodotto** ([metodo](/progetto/metodo-cloud-provider/)).
 
@@ -86,6 +86,14 @@ Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-2`.
 - Le regole per questi 8 non sono applicate: si misurerebbero solo su un quarto campione. (v0.10: il quarto campione è stato fatto e poi usato per le regole v4.3, § 2; la misura indipendente è rinviata al quinto.)
 
 Rifare: `python tools/verifiche/lente_cieco.py report/metodo/lente-cieco-3`.
+
+### 1.4 Settimo campione a cieco: misura di riferimento delle regole v4.5 (v0.12) [V]
+
+Fatto una sola volta, sulle regole congelate (#72, #78): 210 CIG nuovi del 2024-2026, seme 20261119, esclusi i 16.346 CIG di tutti i campioni precedenti; etichette «prodotto comprato» committate prima del confronto (0bbc693c). Verifica: `python tools/verifiche/lente_cieco7.py` → `esiti/2026-11-19/lente-cieco-7/`.
+
+- **Big tech:** precisione **98/110 = 89,1 %** (Wilson 81,9-93,6), 97,3 % in euro; **pesata sull'universo 94,4 %, 98,9 % in euro**. Richiamo 98/99 = 99,0 % (94,5-99,8); nessun contratto cloud sfuggito nello strato N (0 su 60).
+- Licenze e sottoscrizioni (strati R ed E): 95-97 %, 99,4-99,9 % in euro. Gli errori sono servizi di terzi su un marchio, hardware con Windows OEM e due prodotti di terzi su AWS e Aruba (il confine del § 3.3).
+- Le regole non sono state corrette: questa è la misura che il rendiconto finale cita. Dettaglio nella [pagina di metodo](/progetto/metodo-cloud-provider/).
 
 ## 2. Rivenditori dei prodotti esteri (#41)
 
@@ -337,9 +345,10 @@ Verifiche: `python tools/verifiche/pnrr12_ocds.py` (OCDS bulk ANAC → `lavoro/p
 
 **Verifiche** (senza LLM; la seconda interroga solo il DNS):
 - `nice .venv/bin/python tools/verifiche/infrastruttura_sottostante.py --data 2026-11-09` → `esiti/2026-11-09/infrastruttura-sottostante/infrastruttura.json`;
-- `tools/verifiche/saas_infra_fornitori.py`, che estende il pilota del § 3.2 ai domini dei servizi di 11 fornitori (`config/saas_host.yaml`).
+- `tools/verifiche/saas_infra_fornitori.py`, che estende il pilota del § 3.2 ai domini dei servizi di 11 fornitori (`config/saas_host.yaml`);
+- v0.12: `python3 tools/verifiche/saas_schede_acn.py --ingressi 2026-11-09 --data 2026-11-19` (schede ACN dei primi 45 fornitori, pagine archiviate) e `infrastruttura_sottostante.py --data 2026-11-19 --ingressi 2026-11-09` → `esiti/2026-11-19/infrastruttura-sottostante/`.
 
-**Tabelle:** `config/saas_infrastruttura.yaml` (21 fornitori, con fonte, sha256 e attendibilità per riga) e `psn-ppdf.csv`.
+**Tabelle:** `config/saas_infrastruttura.yaml` (29 fornitori dalla v0.12, con fonte, sha256 e attendibilità per riga) e `psn-ppdf.csv`.
 
 **Terzo asse:** la giurisdizione di chi gestisce l'infrastruttura, accanto a prodotto e fornitore. Teniamo **due letture distinte**:
 - **extra-UE per produttore o gestione**: conta anche Oracle Exadata Cloud@Customer nei DC PSN (hardware, software e aggiornamenti Oracle);
@@ -390,6 +399,12 @@ In entrambe le letture le region sono in Italia (Milano, Torino): «extra-UE» v
   - Halley (e svic, che la rivende), Siscom, ADS, Boxxapps, Kibernetes (Aruba), We-Com (Fastweb), TIM, Fastweb, IAA, Engineering D.HUB [B].
 - **Senza prove:** 27,3 M€ di S2 e 55,7 M€ di S3-S4. Prendono la quota media in euro dei fornitori con prove, **34,3 %**.
 
+**Aggiornamento v0.12 (19/11/2026), schede ACN dei fornitori dal 22° al 45° per euro** [V/B]. Archiviate 104 pagine di schede ACN (`tools/archivia.py`); il testo di ogni scheda SaaS è letto cercando l'infrastruttura dichiarata.
+- **Le schede tacciono quasi sempre:** delle 125 schede SaaS lette dei primi 45 fornitori, solo **21 (16,8 %) dicono dove gira il servizio**; 12 su hyperscaler (AWS, Azure, Google Cloud, Oracle Cloud), 9 su infrastruttura italiana (Lepida, Aruba, Engineering, IaaS qualificate). Rafforza R78.
+- **8 fornitori in più con prove** (5,7 M€): Publisys (URBE su AWS), GPI (POHEMA su AWS, JOBTIME su Oracle Cloud), Reply Public Sector (Google Cloud), Ambito e TeamSystem (misti, Azure e Lepida/Aruba), Net Service, Datagraph e Dedalus (Lepida, Aruba, Engineering).
+- **Copertura:** prove per **128,6 dei 150,2 M€ (85,6 %)**. Per classe di hosting dichiarato: hyperscaler 28,3 M€; misto 47,8 M€ (Maggioli 37,9 compreso); infrastruttura IT/UE 50,9 M€; ignoto 23,2 M€.
+- **Misura 1.2 con il terzo asse:** per produttore o gestione **6,5 / 30,8 / 62,0 %**; per localizzazione **3,2 / 21,7 / 50,8 %** (basso / centrale / alto). La quota media dei fornitori con prove passa da 34,3 a 34,9 %: le conclusioni della v0.9 non cambiano.
+
 **Misura 1.2 con il terzo asse** (818,9 M€; il PSN segue la destinazione della migrazione, R-S1):
 
 | Scenario | Big tech prodotto | PSN su hyperscaler | SaaS con prove | SaaS senza prove + S3-S4 | S5 | S6 | **Produttore/gestione** | **Localizzazione** |
@@ -414,6 +429,7 @@ In entrambe le letture le region sono in Italia (Milano, Torino): «extra-UE» v
 
 - **Catalogo ACN non specchiabile:** `catalogocloud.acn.gov.it/opendata` e `/robots.txt` rispondono **403** (Akamai) anche con User-Agent da browser e URL del progetto, dal server, il 6/11/2026 [V]. Non è una sezione di Amministrazione trasparente: vale la regola generale, non si aggira. Nuova **R55**: pubblicazione in open data scaricabile.
 - **PSN dai CIG** (già misurato, [imbuto 0.5](/rendiconti/imbuto-dove-siamo/)): impegni ANAC 4,38 mld al netto dei tetti certi, contro un portafoglio di 3,8 mld e ricavi 2023-25 di 0,79 mld [R, bilanci PSN]. Contratti PSN con un prodotto big tech nel testo: 12 per 9,2 M€ [V, mappa v3].
+- **PSN nell'imbuto 0.3.4** (v0.12) [V]: dal 2024 **847 CIG, 4,03 mld lordi, 3,30 mld al netto dei massimali**, tutti nel residuo «servizio PSN da determinare» (mancanza M2 della [mappa](/progetto/mappa-imbuto/)). Il servizio comprato (Industry Standard, Hybrid, Secure Public Cloud, PSN Managed) non è in ANAC né negli atti pubblicati; l'accesso civico a PSN e DTD si fa solo alla fine ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).
 - Quota del PSN su hyperscaler (v0.9, § 3.3): **5,4 % dei ricavi 2025 e 27,3 % dei ricavi infrastrutturali** [V, Libro PSN 2025]; nei piani dei fabbisogni di 9 enti sanitari 23,3 % dei canoni per produttore/gestione, 7,4 % per localizzazione [V]. Senza i Contratti di Utenza per ente (R50, R78) resta una stima su campione.
 
 ## 5. Mirror Consip (#11) e TED/FTS (#27)
@@ -478,6 +494,7 @@ Coda unica `config/coda-mirror-2026-11.txt` con `tools/acquisizione/coda_mirror.
 
 | Versione | Data | Modifica |
 |---|---|---|
+| 0.12 | 2026-11-19 | § 1.4 settimo campione a cieco (regole v4.5 congelate): big tech P 89,1 %, pesata 98,9 % in euro, R 99,0 %; § 3.3 schede ACN di 24 fornitori in più (21 schede su 125 dichiarano l'infrastruttura), copertura SaaS 85,6 %, 1.2 extra-UE 6,5/30,8/62,0 % (localizzazione 3,2/21,7/50,8 %); § 4 PSN nell'imbuto 0.3.4 (847 CIG, 4,03 mld, 3,30 netti) |
 | 0.11.1 | 2026-11-19 | revisione di coerenza: versione in testa allineata al registro (era 0.9); accesso civico solo alla fine (#78) nei prossimi passi; numerazione dei prossimi passi corretta |
 | 0.11 | 2026-11-09 | § 2.1 mappa rivenditori v4.5 (regole del cieco 6, #40/#72, #41): prodotti extra-UE 3,023 mld, CF italiano 61,2 % del totale (79,3 % del noto), 57,5 % col capogruppo; enti ricalcolati (2.205; erano 2.182 in v4.2) e classifica; confronto per marchio v4.3 → v4.5 (−227/+18 CIG, −22,1 M€); verifica `rivenditori_confronto.py` |
 | 0.10 | 2026-11-09 | § 2 allineato alle regole v4.3 (#40, #41): mappa v4.3, prodotti extra-UE 3,046 mld, rivenditori con CF italiano 61,2 % del totale (79,1 % del noto), 57,4 % col capogruppo; criterio «prodotto comprato» al posto di «prodotto nominato» (cieco 1 −2 corsi); quarto campione a cieco (P big tech 92,2 % sulle regole v4.2) diventato campione di sviluppo, misura indipendente rinviata al quinto |

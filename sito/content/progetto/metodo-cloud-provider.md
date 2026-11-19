@@ -5,9 +5,9 @@ description: "Il metodo con cui attribuiamo un contratto pubblico al cloud provi
 weight: 20
 gruppo: misura
 ---
-**Stato: in validazione, regole v4.5 del 9 novembre 2026** (prima versione: regole v3 del 28/10/2026,
-[#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). Le precisioni citate sono
-misure intermedie: quella definitiva si fa con il settimo campione a cieco, una sola volta, prima del rendiconto finale (§ «Le misure finora»).
+**Stato: regole v4.5 del 9 novembre 2026, congelate e misurate sul settimo campione a cieco (19/11/2026)** (prima versione: regole v3 del 28/10/2026,
+[#48](https://github.com/mxmap-it/analisi-spesa-ict/issues/48)). La misura di riferimento è quella del settimo cieco
+(§ «Le misure finora»): big tech precisione 89,1 % sul campione, **98,9 % in euro pesata sull'universo**, richiamo 99,0 %.
 
 ## Cosa misuriamo
 
@@ -108,7 +108,7 @@ Il classificatore sbaglia, e lo diciamo con numeri. Il protocollo:
 | lente prodotto dopo le regole del 9/11 (9/11) | quarto campione a cieco, 150 CIG | Claude, alla cieca, un annotatore | 92,2 % (Wilson 85,3-96,0), 99,0 % in euro | — | big tech: 1 mancato su 95 |
 | regole v4.3 (9/11) | quinto campione a cieco, 238 CIG | Claude, alla cieca, un annotatore | big tech 86,2 % (Wilson 79,7-90,9), 80,8 % in euro; pesata 93,9 % | — | big tech: 0 mancati su 125 (R Wilson 97,0-100) |
 | regole v4.4 (9/11) | sesto campione a cieco, 250 CIG | Claude, alla cieca, un annotatore | big tech 80,7 % (Wilson 73,4-86,4), 98,1 % in euro; pesata 89,4 % (99,0 % in euro) | — | big tech: 3 mancati su 116 (R 97,4 %, Wilson 92,7-99,1); nello strato N 3 su 80 |
-| regole v4.5 (9/11) | da misurare: settimo cieco una sola volta, prima del rendiconto finale | — | sul cieco 6 (ora di sviluppo) 113/4/3, 99,8 % in euro: non è una misura | — | — |
+| **regole v4.5 (19/11)** | **settimo campione a cieco, 210 CIG** (misura di riferimento) | Claude, alla cieca, un annotatore | **big tech 89,1 % (Wilson 81,9-93,6), 97,3 % in euro; pesata 94,4 % (98,9 % in euro)** | tutti i provider 88,0 % (81,1-92,6), pesata 99,2 % in euro | big tech: 1 mancato su 99 (R 99,0 %, Wilson 94,5-99,8); nello strato N 0 su 60 (Wilson 0-6,0 %) |
 
 La misura v2 è stata letta per scrivere la v3: quelle righe sono ora campione di sviluppo e non
 valgono più come misura.
@@ -254,6 +254,27 @@ Prima/dopo (`tools/verifiche/regole_v45_confronto.py`, che riusa `regole_v44_con
 
 **Il sesto campione è ora di sviluppo**: i numeri «dopo» non sono una misura. **Conclusione**: la precisione **in euro**, pesata sull'universo, era già ~99 % con le regole v4.4 (cieco 6: 99,0 %, 98,1 % nel campione); gli errori residui sono contratti piccoli di servizi e di confine, che pesano poco sulla spesa. Rincorrerli con nuove regole a ogni ritocco produce sovra-adattamento e consuma campioni. **Da qui in poi un nuovo campione a cieco (il settimo) si fa una sola volta, prima della pubblicazione del rendiconto finale**, sulle regole congelate a quel momento, e non dopo ogni ritocco. **La mappa dei rivenditori va rifatta con le regole v4.5** (`rivenditori_mappa.py`, job pesante) solo dopo la fine della prova imbuto (#71, AGENTS.md § 4): sostituisce la rigenerazione v4.4 rimasta in sospeso.
 
+**Settimo campione a cieco: misura di riferimento delle regole v4.5 (19/11/2026, #40, #72, #78).** Fatto una sola volta, come deciso dopo il cieco 6, sulle regole congelate (commit 02830f51). Verifiche: `tools/verifiche/lente_cieco7_campione.py` (seme 20261119, esclusi 16.346 CIG già usati in tutti i campioni precedenti, ciechi 1-6 compresi), etichette `tools/verifiche/lente_cieco7_etichette.py` committate prima del confronto (0bbc693c, sha256 21c1d630…), misura `tools/verifiche/lente_cieco7.py` → `esiti/2026-11-19/lente-cieco-7/` [V]. Criterio della lente come nei ciechi 4-6: conta il provider salvo «servizi-professionali»; le etichette col nome di una in-house valgono «In-house pubblico».
+
+| Strato (universo) | Big tech P | R | P in euro |
+|---|---|---|---|
+| R rivenditore (4.675) | 38/39 = 97,4 % (86,8-99,5) | 38/38 | 99,9 % |
+| E diretto (255) | 38/40 = 95,0 % (83,5-98,6) | 38/38 | 99,4 % |
+| P servizi su piattaforma (870) | 14/18 = 77,8 % (54,8-91,0) | 14/14 | 93,5 % |
+| F servizi accessori (533) | 8/13 = 61,5 % (35,5-82,3) | 8/9 | 55,7 % |
+| N ICT senza provider (236.906) | — | 0 mancati su 60 (Wilson 0-6,0 %) | — |
+| **Totale** | **98/110 = 89,1 % (81,9-93,6)** | **98/99 = 99,0 % (94,5-99,8)** | **97,3 %** (R 100 %) |
+
+Pesata sull'universo: **P 94,4 % in numero, 98,9 % in euro; R 99,7 %**. Tutti i provider del dizionario: 110/125 = 88,0 %, R 95,7 %; pesata 93,6 % (99,2 % in euro).
+
+Errori (20, **regole non corrette**: il settimo cieco resta indipendente):
+- **servizio di terzi su un marchio** (11, 0,5 M€): assistenza sistemistica SQL Server o Windows Server, formazione Power BI, assessment SQL Server, manutenzione evolutiva SAP S/4HANA (2), configurazione e supporto Salesforce (2), supporto di un partner sulle licenze Oracle, manutenzione di terzi su una libreria Oracle StorageTek;
+- **hardware con licenza Windows OEM** (2: notebook e workstation);
+- **prodotto di un terzo su un cloud del dizionario** (2: ReVA «powered» AWS, servizio JPSoft su Aruba): è il confine dell'infrastruttura sottostante ([#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70));
+- **mancati** (5): adesione di un'ASL alla convenzione PSN letta come servizio di migrazione (5,1 M€), migrazione e gestione su CSI Nivola, servizi Trentino Digitale con Google Workspace (2), Cisco Webex con supporto specialistico.
+
+Lettura: sui contratti di licenza e sottoscrizione (R, E) la lente tiene (P 95-97 %, 99,4-99,9 % in euro); gli errori sono contratti di servizio piccoli. Il dato in euro conferma il cieco 6 (~99 %). Limiti: un annotatore (Claude), niente kappa; strati P e F sovra-campionati di proposito; nessun atto per i 210 CIG (etichette dall'oggetto ANAC). Le classi d'errore restano elencate in `esiti/2026-11-19/lente-cieco-7/errori.csv` per chi rivede il metodo; correggerle ora renderebbe il campione di sviluppo.
+
 ## Test automatici
 
 Ogni errore trovato diventa un **caso di test**: un contratto reale con l'esito atteso
@@ -322,11 +343,11 @@ della spesa verso prodotti extra-UE passa da vincitori italiani o europei.
 
 ## Cosa resta aperto
 
-- Settimo campione a cieco, annotato da Claude, una sola volta prima del rendiconto finale (i campioni annotati da persone sono sostituiti da quelli di Claude: decisione di Fabio del 19/11/2026). Le persone intervengono a supporto: con la pubblicazione dei risultati tutti i contratti saranno ricercabili e annotabili in una dashboard ([#53](https://github.com/mxmap-it/analisi-spesa-ict/issues/53)).
+- Settimo campione a cieco: **fatto il 19/11/2026** (§ «Le misure finora»); i campioni annotati da persone sono sostituiti da quelli di Claude (decisione di Fabio del 19/11/2026). Le persone intervengono a supporto: con la pubblicazione dei risultati tutti i contratti saranno ricercabili e annotabili in una dashboard ([#53](https://github.com/mxmap-it/analisi-spesa-ict/issues/53)).
 - Via 4 (PSN voce per voce); misura della via 6 (modello linguistico), già in uso sul residuo.
 - Tabella completa dei lotti: altre iniziative Consip (licenze, SaaS, data center), SPC Cloud,
   convenzioni regionali.
-- SaaS di produttori italiani: **dove gira** (catalogo ACN, documentazione del fornitore).
+- SaaS di produttori italiani: **dove gira**. Schede ACN dei primi 45 fornitori SaaS della Misura 1.2: solo 21 delle 125 lette dichiarano l'infrastruttura ([rendiconto obiettivo 6, § 3.3](/rendiconti/obiettivo-6/), #70).
 - In-house e datacenter propri ([#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)),
   dopo la chiusura della misura cloud.
 
@@ -347,3 +368,4 @@ La giurisdizione è quella del controllo giuridico di chi eroga il servizio. Dat
 | 19/11/2026 | Rimando al raffinamento a livelli dell'imbuto (L1-L4, livello B con i dataset BDNCP: quadro economico, in-house per codice fiscale, durate effettive, PNRR su tre vie) | #71, #74, [raffinamento-imbuto](/progetto/raffinamento-imbuto/) |
 | 19/11/2026 | Revisione di coerenza: stato in testa aggiornato alle regole v4.5, via 6 in uso (non più «da implementare») | — |
 | 19/11/2026 | Campioni a cieco annotati da Claude al posto di quelli «da persone» (decisione di Fabio); dashboard per ricercare e annotare tutti i contratti con la pubblicazione dei risultati | #40, #53, #78 |
+| 19/11/2026 | Settimo campione a cieco, misura di riferimento delle regole v4.5 congelate (210 CIG, seme 20261119): big tech P 89,1 % (81,9-93,6), 97,3 % in euro, pesata 94,4 % (98,9 % in euro); R 99,0 % (94,5-99,8), 0 mancati su 60 nello strato N; 20 errori per classe, regole non corrette | #40, #72, #78, `esiti/2026-11-19/lente-cieco-7/` |

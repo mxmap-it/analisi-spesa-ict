@@ -1,0 +1,749 @@
+{
+ "disegno": {
+  "universo": "lavoro/attribuzione/2024-2026.csv, CIG distinti, regole v4.5 (02830f51)",
+  "seme": 20261119,
+  "quote": {
+   "M": "tutti",
+   "P": 40,
+   "F": 30,
+   "R": 40,
+   "E": 40,
+   "N": 60
+  },
+  "esclusi_gia_visti": 16346,
+  "dimensione_strati": {
+   "E": 255,
+   "F": 533,
+   "M": 0,
+   "N": 236906,
+   "P": 870,
+   "R": 4675
+  }
+ },
+ "etichette_sha256": "21c1d6303eb2db30639a7565cb147d112fbfe5adcf6a7ac16748fb1dca8b3333",
+ "n_per_strato": {
+  "N": 60,
+  "P": 40,
+  "R": 40,
+  "E": 40,
+  "F": 30
+ },
+ "bigtech_usa": {
+  "per_strato": {
+   "E": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 7689444,
+     "fp": 45443,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 8,
+    "fp": 5,
+    "fn": 1,
+    "precisione": 0.615,
+    "richiamo": 0.889,
+    "precisione_w95": [
+     0.355,
+     0.823
+    ],
+    "richiamo_w95": [
+     0.565,
+     0.98
+    ],
+    "euro": {
+     "tp": 285710,
+     "fp": 227348,
+     "fn": 7000,
+     "precisione": 0.557,
+     "richiamo": 0.976
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "P": {
+    "tp": 14,
+    "fp": 4,
+    "fn": 0,
+    "precisione": 0.778,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.548,
+     0.91
+    ],
+    "richiamo_w95": [
+     0.785,
+     1.0
+    ],
+    "euro": {
+     "tp": 2572238,
+     "fp": 180160,
+     "fn": 0,
+     "precisione": 0.935,
+     "richiamo": 1.0
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.974,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.868,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 6058082,
+     "fp": 5990,
+     "fn": 0,
+     "precisione": 0.999,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 98,
+   "fp": 12,
+   "fn": 1,
+   "precisione": 0.891,
+   "richiamo": 0.99,
+   "precisione_w95": [
+    0.819,
+    0.936
+   ],
+   "richiamo_w95": [
+    0.945,
+    0.998
+   ],
+   "euro": {
+    "tp": 16605474,
+    "fp": 458941,
+    "fn": 7000,
+    "precisione": 0.973,
+    "richiamo": 1.0
+   }
+  },
+  "pesato_universo": {
+   "tp": 5130,
+   "fp": 305,
+   "fn": 18,
+   "precisione": 0.944,
+   "richiamo": 0.997,
+   "euro": {
+    "tp": 818080838,
+    "fp": 8947476,
+    "fn": 124367,
+    "precisione": 0.989,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "extra_ue": {
+  "per_strato": {
+   "E": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 7689444,
+     "fp": 45443,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 8,
+    "fp": 5,
+    "fn": 1,
+    "precisione": 0.615,
+    "richiamo": 0.889,
+    "precisione_w95": [
+     0.355,
+     0.823
+    ],
+    "richiamo_w95": [
+     0.565,
+     0.98
+    ],
+    "euro": {
+     "tp": 285710,
+     "fp": 227348,
+     "fn": 7000,
+     "precisione": 0.557,
+     "richiamo": 0.976
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "P": {
+    "tp": 14,
+    "fp": 4,
+    "fn": 0,
+    "precisione": 0.778,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.548,
+     0.91
+    ],
+    "richiamo_w95": [
+     0.785,
+     1.0
+    ],
+    "euro": {
+     "tp": 2572238,
+     "fp": 180160,
+     "fn": 0,
+     "precisione": 0.935,
+     "richiamo": 1.0
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.974,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.868,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 6058082,
+     "fp": 5990,
+     "fn": 0,
+     "precisione": 0.999,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 98,
+   "fp": 12,
+   "fn": 1,
+   "precisione": 0.891,
+   "richiamo": 0.99,
+   "precisione_w95": [
+    0.819,
+    0.936
+   ],
+   "richiamo_w95": [
+    0.945,
+    0.998
+   ],
+   "euro": {
+    "tp": 16605474,
+    "fp": 458941,
+    "fn": 7000,
+    "precisione": 0.973,
+    "richiamo": 1.0
+   }
+  },
+  "pesato_universo": {
+   "tp": 5130,
+   "fp": 305,
+   "fn": 18,
+   "precisione": 0.944,
+   "richiamo": 0.997,
+   "euro": {
+    "tp": 818080838,
+    "fp": 8947476,
+    "fn": 124367,
+    "precisione": 0.989,
+    "richiamo": 1.0
+   }
+  }
+ },
+ "tutti_i_provider": {
+  "per_strato": {
+   "E": {
+    "tp": 38,
+    "fp": 2,
+    "fn": 0,
+    "precisione": 0.95,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.835,
+     0.986
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 7689444,
+     "fp": 45443,
+     "fn": 0,
+     "precisione": 0.994,
+     "richiamo": 1.0
+    }
+   },
+   "F": {
+    "tp": 13,
+    "fp": 6,
+    "fn": 3,
+    "precisione": 0.684,
+    "richiamo": 0.812,
+    "precisione_w95": [
+     0.46,
+     0.846
+    ],
+    "richiamo_w95": [
+     0.57,
+     0.934
+    ],
+    "euro": {
+     "tp": 28394295,
+     "fp": 235348,
+     "fn": 16817,
+     "precisione": 0.992,
+     "richiamo": 0.999
+    }
+   },
+   "N": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precisione": null,
+    "richiamo": null,
+    "precisione_w95": null,
+    "richiamo_w95": null,
+    "euro": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precisione": null,
+     "richiamo": null
+    }
+   },
+   "P": {
+    "tp": 21,
+    "fp": 6,
+    "fn": 2,
+    "precisione": 0.778,
+    "richiamo": 0.913,
+    "precisione_w95": [
+     0.592,
+     0.894
+    ],
+    "richiamo_w95": [
+     0.732,
+     0.976
+    ],
+    "euro": {
+     "tp": 10912224,
+     "fp": 305680,
+     "fn": 5634150,
+     "precisione": 0.973,
+     "richiamo": 0.659
+    }
+   },
+   "R": {
+    "tp": 38,
+    "fp": 1,
+    "fn": 0,
+    "precisione": 0.974,
+    "richiamo": 1.0,
+    "precisione_w95": [
+     0.868,
+     0.995
+    ],
+    "richiamo_w95": [
+     0.908,
+     1.0
+    ],
+    "euro": {
+     "tp": 6058082,
+     "fp": 5990,
+     "fn": 0,
+     "precisione": 0.999,
+     "richiamo": 1.0
+    }
+   }
+  },
+  "campione": {
+   "tp": 110,
+   "fp": 15,
+   "fn": 5,
+   "precisione": 0.88,
+   "richiamo": 0.957,
+   "precisione_w95": [
+    0.811,
+    0.926
+   ],
+   "richiamo_w95": [
+    0.902,
+    0.981
+   ],
+   "euro": {
+    "tp": 53054045,
+    "fp": 592461,
+    "fn": 5650968,
+    "precisione": 0.989,
+    "richiamo": 0.904
+   }
+  },
+  "pesato_universo": {
+   "tp": 5371,
+   "fp": 367,
+   "fn": 97,
+   "precisione": 0.936,
+   "richiamo": 0.982,
+   "euro": {
+    "tp": 1498871387,
+    "fp": 11819670,
+    "fn": 122841558,
+    "precisione": 0.992,
+    "richiamo": 0.924
+   }
+  }
+ },
+ "errori_per_classe": {
+  "marchio senza prodotto del dizionario": 15,
+  "mancato": 5
+ },
+ "errori": [
+  {
+   "cig": "B2AAB8C708",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SAP",
+   "via": "3-marchio",
+   "regola": "s/?4\\s*hana",
+   "etichetta": "",
+   "lente_grezza": "SAP",
+   "servizio": "licenza",
+   "nota_etichetta": "manutenzione applicativi SAP S/4HANA di terzi: servizio",
+   "importo": 96720.0,
+   "testo": "SERVIZI DI ASSISTENZA E MANUTENZIONE CORRETTIVA ED EVOLUTIVA DEGLI APPLICATIVI SAP | OFFERTA DI SERVIZI DI ASSISTENZA E MANUTENZIONE CORRETTIVA ED EVOLUTIVA DEGLI APPLICATIVI ERP SAP S/4HANA."
+  },
+  {
+   "cig": "B2E9C3AA90",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Amazon Web Services",
+   "via": "3-marchio",
+   "regola": "\\baws\\b",
+   "etichetta": "altro:recube",
+   "lente_grezza": "Amazon Web Services",
+   "servizio": "cloud",
+   "nota_etichetta": "licenze ReVA «powered» AWS: AWS dentro il prodotto di un terzo (confine #70)",
+   "importo": 40320.0,
+   "testo": "FORNITURA DI LICENZE REVA (RECUBE VIRTUAL ASSISTANT POWERED) AWS | 1982) ACQUISIZIONE DI LICENZE SOFTWARE PER LE ESIGENZE DELLO STATO MAGGIORE DELLA DIFESA E RELATIVE ARTICOLAZIONI"
+  },
+  {
+   "cig": "B05813AFDA",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "SAP",
+   "via": "3-marchio",
+   "regola": "s/?4\\s*hana",
+   "etichetta": "",
+   "lente_grezza": "SAP",
+   "servizio": "licenza",
+   "nota_etichetta": "manutenzione evolutiva S/4HANA di terzi: servizio",
+   "importo": 28800.0,
+   "testo": "#PLAFOND PER INTERVENTI DI MANUTENZIONE EVOLUTIVA SULLA PIATTAFORMA S4HANA - ANNO 2024 | #PLAFOND PER INTERVENTI DI MANUTENZIONE EVOLUTIVA SULLA PIATTAFORMA S4HANA - ANNO 2024"
+  },
+  {
+   "cig": "B1E8D54EDB",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "licenz\\w*\\s+(\\w+\\s+){0,2}oracle",
+   "etichetta": "",
+   "lente_grezza": "Oracle",
+   "servizio": "licenza",
+   "nota_etichetta": "assistenza e supporto tecnico sulle licenze Oracle da un partner (ambiguo): servizio",
+   "importo": 55000.0,
+   "testo": "SERVIZIO DI ASSISTENZA E DI SUPPORTO TECNICO SULLE LICENZE ORACLE IN DOTAZIONE AD AGENAS DELLA DURATA DI 12 MESI. | SERVIZIO DI ASSISTENZA E DI SUPPORTO TECNICO SULLE LICENZE ORACLE IN DOTAZIONE AD AGENAS DELLA DURATA DI 12 MESI."
+  },
+  {
+   "cig": "A04E3D7DD8",
+   "strato": "P",
+   "classe": "mancato",
+   "lente": "",
+   "via": "3-marchio",
+   "regola": "\\bpsn\\b",
+   "etichetta": "Polo Strategico Nazionale",
+   "lente_grezza": "Polo Strategico Nazionale",
+   "servizio": "servizi-professionali",
+   "nota_etichetta": "",
+   "importo": 5139734.72,
+   "testo": "ADESIONE ASL DI VITERBO ALLA CONVENZIONE SOTTOSCRITTA TRA PSN S.P.A. E DIPARTIMENTO PER LA TRASFORMAZIONE DIGITALE DELLA PCM PER LA MIGRAZIONE AL PSN  | ADESIONE ASL DI VITERBO ALLA CONVENZIONE SOTTOSCRITTA TRA PSN S.P.A. E DIPARTIMENTO PER LA TRASFORMAZIONE DIGITALE DELLA PCM PER LA MIGRAZIONE AL P"
+  },
+  {
+   "cig": "B5E65931B4",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "sql\\s+server",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "assistenza sistemistica SQL Server: servizio",
+   "importo": 93620.0,
+   "testo": "SERV ASS SISTEMISTICA PER TECNOLOGIA BLAZOR E DATABASE MS SQL SERVER SU SW ELIOS | FORNITURA DI UN SERVIZIO DI ASSISTENZA SISTEMISTICA PER TECNOLOGIA BLAZOR E DATABASE MS SQL SERVER SUL SW ELIOS"
+  },
+  {
+   "cig": "B4B874F203",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "\\bo365\\b",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "cloud",
+   "nota_etichetta": "formazione Power BI: servizio",
+   "importo": 5880.0,
+   "testo": "FORMAZIONE IN MODALITÀ TRAINING ON THE JOB | ACQUISIZIONE DI UN SERVIZIO DI TRAINING OF THE JOB PER LA SUITE MS POWER BI DISPONIBILE NELLE LICENZE DI O365 DEL TENANT IN DOTAZIONE AL CREA"
+  },
+  {
+   "cig": "B46039C96A",
+   "strato": "E",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "licenz\\w*\\s+(\\w+\\s+){0,2}win(dows)?\\s*1[01]\\b",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "notebook con Windows 11: hardware",
+   "importo": 5122.95,
+   "testo": "FORNITURA DI N.5 NOTEBOOK NUOVI E RELATIVE LICENZE WINDOWS 11 PROFESSIONAL | ACQUISTO DI N.5 NOTEBOOK E RELATIVE LICENZE WINDOWS 11 PROFESSIONAL"
+  },
+  {
+   "cig": "B95A1A0EE2",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Salesforce",
+   "via": "3-marchio",
+   "regola": "salesforce",
+   "etichetta": "",
+   "lente_grezza": "Salesforce",
+   "servizio": "cloud",
+   "nota_etichetta": "configurazione e manutenzione di licenze Salesforce: servizio",
+   "importo": 137950.0,
+   "testo": "AFFIDAMENTO DIRETTO EX ART. 50, CO. 1, LETT. B) DEL D. LGS. 36/2023 DEL SERVIZIO DI CONFIGURAZIONE, PERSONALIZZAZIONE E MANUTENZIONE DI LICENZE SALESFORCE. | AFFIDAMENTO DIRETTO EX ART. 50, CO. 1, LETT. B) DEL D. LGS. 36/2023 DEL SERVIZIO DI CONFIGURAZIONE, PERSONALIZZAZIONE E MANUTENZIONE DI LICENZ"
+  },
+  {
+   "cig": "B9A385A923",
+   "strato": "F",
+   "classe": "mancato",
+   "lente": "",
+   "via": "3-marchio",
+   "regola": "google\\s+workspace",
+   "etichetta": "In-house pubblico",
+   "lente_grezza": "Google",
+   "servizio": "servizi-professionali",
+   "nota_etichetta": "assistenza e gestione Google Workspace dell'in-house",
+   "importo": 1040.0,
+   "testo": "RINNOVO INCARICO PER L'EROGAZIONE DEL SERVIZIO DI ASSISTENZA E GESTIONE G-SUITE GOOGLE WORKSPACE E PAGOPA FASCIA C ALLA DITTA TRENTINO DIGITALE S.P.A. DI TRENTO - ANNO 2026. | RINNOVO INCARICO PER L'EROGAZIONE DEL SERVIZIO DI ASSISTENZA E GESTIONE G-SUITE GOOGLE WORKSPACE E PAGOPA FASCIA C ALLA DITT"
+  },
+  {
+   "cig": "BC2A352FD8",
+   "strato": "P",
+   "classe": "mancato",
+   "lente": "",
+   "via": "3-marchio",
+   "regola": "\\bnivola\\b",
+   "etichetta": "In-house pubblico",
+   "lente_grezza": "In-house pubblico",
+   "servizio": "servizi-professionali",
+   "nota_etichetta": "migrazione e gestione su CSI Nivola",
+   "importo": 494415.76,
+   "testo": "AFFIDAMENTO PER IL SERVIZIO DI MIGRAZIONE AL CLOUD NIVOLA, GESTIONE, MANUTENZIONE ED EVOLUZIONE DELLA PIATTAFORMA DI APPROVVIGIONAMENTO DIGITALE DEL COMUNE DI NAPOLI | AFFIDAMENTO PER IL SERVIZIO DI MIGRAZIONE AL CLOUD NIVOLA, GESTIONE, MANUTENZIONE ED EVOLUZIONE DELLA PIATTAFORMA DI APPROVVIGIONAME"
+  },
+  {
+   "cig": "B842B78B24",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "sql\\s+server",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "assessment SQL Server: servizio",
+   "importo": 15700.0,
+   "testo": "CONSULENZA ASSESMENT ISTANZE SQL SERVER | CONSULENZA PER ASSESMENT ISTANZE SQL SERVER"
+  },
+  {
+   "cig": "B1B58287D5",
+   "strato": "F",
+   "classe": "mancato",
+   "lente": "",
+   "via": "3-marchio",
+   "regola": "webex",
+   "etichetta": "Cisco Webex",
+   "lente_grezza": "Cisco Webex",
+   "servizio": "servizi-professionali",
+   "nota_etichetta": "",
+   "importo": 7000.0,
+   "testo": "FORNITURA CISCO WEBEX EVENTS E SUPPORTO SPECIALISTICO | FORNITURA CISCO WEBEX EVENTS E SUPPORTO SPECIALISTICO"
+  },
+  {
+   "cig": "B4CFADAD61",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "windows\\s+server",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "aggiornamento Windows Server di terzi: servizio",
+   "importo": 36848.0,
+   "testo": "FORNITURA DI SERVIZI DI ASSISTENZA TECNICA PER AGGIORNAMENTO DEI SISTEMI OPERATIVI WINDOWS SERVER DATACENTER ED ADEGUAMENTO PIATTAFORMA CONTROLLO ACCESSI INTERNI | FORNITURA DI SERVIZI DI ASSISTENZA TECNICA PER AGGIORNAMENTO DEI SISTEMI OPERATIVI WINDOWS SERVER DATACENTER ED ADEGUAMENTO PIATTAFORMA "
+  },
+  {
+   "cig": "B9EE9617A2",
+   "strato": "F",
+   "classe": "mancato",
+   "lente": "",
+   "via": "3-marchio",
+   "regola": "google\\s+workspace",
+   "etichetta": "In-house pubblico",
+   "lente_grezza": "Google",
+   "servizio": "servizi-professionali",
+   "nota_etichetta": "servizi e hosting virtuale dell'in-house Trentino Digitale",
+   "importo": 8777.19,
+   "testo": "AFFIDAMENTO DEI SERVIZI TECNOLOGICI A TRENTINO DIGITALE S.P.A. ANNO 2026 – PEC, SERVIZIO ASSISTENZA E GESTIONE CONTINUATIVA GOOGLE WORKSPACE, SERVIZI PER HOSTING VIRTUALE, BACKUP, CERTIFICATI SSL E DI PROTEZIONE, LOGGING E MONITORAGGIO INFRASTRUTTURALE DI SICUREZZA E GESTIONE. | AFFIDAMENTO DEI SERV"
+  },
+  {
+   "cig": "B9D67521B8",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Oracle",
+   "via": "3-marchio",
+   "regola": "manutenzione\\s+(\\w+\\s+){0,3}oracle",
+   "etichetta": "",
+   "lente_grezza": "Oracle",
+   "servizio": "licenza",
+   "nota_etichetta": "manutenzione di terzi su libreria Oracle StorageTek: hardware",
+   "importo": 17710.0,
+   "testo": "ID 7861 - MANUTENZIONE LIBRERIA ORACLE STORAGETEK SL3000 | ID 7861 - MANUTENZIONE LIBRERIA ORACLE STORAGETEK SL3000"
+  },
+  {
+   "cig": "BB6079FAF2",
+   "strato": "R",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "licenz\\w*\\s+(\\w+\\s+){0,2}win(dows)?\\s*1[01]\\b",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "workstation con Windows 11: hardware",
+   "importo": 5990.0,
+   "testo": "RDA 56-2026 - RICHIESTA PREVENTIVO PER LA FORNITURA DI N.7 WORKSTATION COMPRESO DI LICENZE WINDOWS 11 PRO ENGLISH E N.7 SCHERMI LCD 24  | RDA 56-2026 - RICHIESTA PREVENTIVO PER LA FORNITURA DI N.7 WORKSTATION COMPRESO DI LICENZE WINDOWS 11 PRO ENGLISH E N.7 SCHERMI LCD 24 "
+  },
+  {
+   "cig": "B43CAD283E",
+   "strato": "P",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Microsoft",
+   "via": "3-marchio",
+   "regola": "windows\\s+server",
+   "etichetta": "",
+   "lente_grezza": "Microsoft",
+   "servizio": "licenza",
+   "nota_etichetta": "VM con Windows Server e migrazione da un fornitore locale (ambiguo)",
+   "importo": 8800.0,
+   "testo": "FORNITURA VM-DC CON SISTEMA OPERATIVO WINDOWS SERVER E CONTESTUALE MIGRAZIONE DELL'ATTUALE DC, LICENZE D'USO DIVERSI SOFTWARE PER GLI UFFICI COMUNALI | FORNITURA VM-DC CON SISTEMA OPERATIVO WINDOWS SERVER E CONTESTUALE MIGRAZIONE DELL'ATTUALE DC, LICENZE D'USO DIVERSI SOFTWARE PER GLI UFFICI COMUNAL"
+  },
+  {
+   "cig": "B554344F90",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Aruba",
+   "via": "3-marchio",
+   "regola": "\\baruba\\b",
+   "etichetta": "altro:jpsoft",
+   "lente_grezza": "Aruba",
+   "servizio": "cloud",
+   "nota_etichetta": "private cloud su Aruba dentro il servizio",
+   "importo": 8000.0,
+   "testo": "ASSISTENZA ANNUALE DEL SERVIZIO SU PIATTAFORMA PRIVATE CLOUD DELLO SPORTELLO UNICO (S.U.E.), GESTIONE, CURA DEI DATI DI BACK OFFICE E VIRTUALIZZAZIONE DELLA PROCEDURA DI BACK OFFICE SU PIATTAFORMA ARUBA SPA - CANONE ANNUALE 2024 FINO A MARZO 2025 | ASSISTENZA ANNUALE DEL SERVIZIO SU PIATTAFORMA PRIV"
+  },
+  {
+   "cig": "B2A66CCB0C",
+   "strato": "F",
+   "classe": "marchio senza prodotto del dizionario",
+   "lente": "Salesforce",
+   "via": "3-marchio",
+   "regola": "salesforce",
+   "etichetta": "",
+   "lente_grezza": "Salesforce",
+   "servizio": "cloud",
+   "nota_etichetta": "evolutive CRM fatte da Salesforce: servizio",
+   "importo": 36000.0,
+   "testo": "SALESFORCE - SUPPORTO CRM PER EVOLUTIVE E OTTIMIZZAZIONE SISTEMA DI SSOCON LA PRESENTAZIONE DELL'OFFERTA SONO ACCETTATE LE CONDIZIONI INDICATE NELL'ALLEGATO CONDIZIONI GENERALI DI SERVIZIO | SALESFORCE - SUPPORTO CRM PER EVOLUTIVE E OTTIMIZZAZIONE SISTEMA DI SSOCON LA PRESENTAZIONE DELL'OFFERTA SONO"
+  }
+ ]
+}
