@@ -29,7 +29,7 @@ sys.path.insert(0, str(R / "tools"))
 INGRESSI = {
     "lavoro/pvl/cig_link.csv": ("archivio", "tools/verifiche/imbuto_strati.py --rigenera (link PVL per strato)",
                                 "tools/acquisizione/pvl_avvisi.py estrai > lavoro/pvl/link_cig.csv (dalle pagine API PVL archiviate, "
-                                "elenco con sha256 in dati/ingressi/lavoro/pvl/indice.jsonl.gz), poi tools/acquisizione/pvl_analisi.py "
+                                "elenco con sha256 in dati/ingressi/pvl/indice.jsonl.gz), poi tools/acquisizione/pvl_analisi.py "
                                 "(legge anche lavoro/cig_completo e l'anagrafica delle stazioni appaltanti): lo sha256 può cambiare se "
                                 "cambiano i dataset ANAC, quindi per riprodurre i numeri si ripristina il blob"),
     "lavoro/pvl/indice.jsonl": ("git", "tools/acquisizione/pvl_avvisi.py (indice delle pagine API PVL, una riga per pagina con sha256 del blob)",
@@ -87,14 +87,14 @@ def congela():
         e = {"percorso": perc, "via": via, "usato_da": usato, "rigenera": rigenera}
         if via == "git-tar":
             e["sha256_concatenati"], e["file"] = sha_cartella(src)
-            dst = GIT / (perc + ".tar.gz")
+            dst = GIT / (perc.removeprefix("lavoro/") + ".tar.gz")  # non «lavoro/»: .gitignore la esclude a ogni livello
             tar_deterministico(src, dst)
             e["copia"] = str(dst.relative_to(R)); e["sha256_copia"] = sha(dst)
         else:
             e["sha256"], e["byte"] = sha(src), src.stat().st_size
             e["data_file"] = datetime.fromtimestamp(src.stat().st_mtime, timezone.utc).date().isoformat()
             if via == "git":
-                dst = GIT / (perc + ".gz")
+                dst = GIT / (perc.removeprefix("lavoro/") + ".gz")
                 gz_deterministico(src, dst)
                 e["copia"] = str(dst.relative_to(R)); e["sha256_copia"] = sha(dst)
             else:  # archivio content-addressed, mai sovrascritto

@@ -114,9 +114,9 @@ Quattro ingressi dell'imbuto stanno in `lavoro/` e non vengono dal mirror ANAC. 
 | Ingresso | Usato da | Dove si conserva |
 |---|---|---|
 | `lavoro/pvl/cig_link.csv` (406 MB, link PVL per CIG) | `imbuto_strati.py --rigenera` | blob nell'archivio content-addressed (`archivio/blobs/sha256/0b/fd/…`, vista `archivio/mirror/_derivati/`); si rigenera con `pvl_avvisi.py estrai` + `pvl_analisi.py` dalle pagine API PVL archiviate |
-| `lavoro/pvl/indice.jsonl` (pagine API PVL con sha256) | `pvl_avvisi.py` | git, `dati/ingressi/lavoro/pvl/indice.jsonl.gz` |
-| `lavoro/convenzioni/attuativi.csv` | `imbuto_licenze.py` | git, `dati/ingressi/lavoro/convenzioni/attuativi.csv.gz` |
-| `lavoro/raffinamento/pacchetti/` (ingressi ciechi di L3) | `raffinamento.py esito` | git, `dati/ingressi/lavoro/raffinamento/pacchetti.tar.gz` |
+| `lavoro/pvl/indice.jsonl` (pagine API PVL con sha256) | `pvl_avvisi.py` | git, `dati/ingressi/pvl/indice.jsonl.gz` |
+| `lavoro/convenzioni/attuativi.csv` | `imbuto_licenze.py` | git, `dati/ingressi/convenzioni/attuativi.csv.gz` |
+| `lavoro/raffinamento/pacchetti/` (ingressi ciechi di L3) | `raffinamento.py esito` | git, `dati/ingressi/raffinamento/pacchetti.tar.gz` |
 
 ```bash
 python3 tools/ingressi_lavoro.py verifica     # ci sono tutti, con lo sha256 del registro?
