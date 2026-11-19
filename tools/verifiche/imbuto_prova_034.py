@@ -22,7 +22,7 @@ Uso (sul server, dalla radice): .venv/bin/python tools/verifiche/imbuto_prova_03
 import csv, glob, importlib.util, io, os, re, resource, signal, subprocess, sys, time, zipfile
 
 RADICE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
-PROVA = "lavoro/imbuto-prova-0.3.4"
+PROVA = os.environ.get("IMBUTO_PROVA_DIR", "lavoro/imbuto-prova-0.3.4")  # IMBUTO_PROVA_DIR: prova di ripetibilità da zero (19/11)
 BASE = os.path.join(PROVA, "base.duckdb")
 VECCHIO = os.path.join(PROVA, "vecchio")
 COMMIT_VECCHIO = "4820e09d"

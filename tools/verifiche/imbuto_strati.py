@@ -22,8 +22,10 @@ RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
 RIEP, DISTR = {"0.3.1": ("esiti/2026-11-03/imbuto/riepilogo-0.3.1.json", "esiti/2026-11-06/imbuto/distribuzione.json"),
                "0.3.4": ("esiti/2026-11-18/imbuto/riepilogo-0.3.4.json", "esiti/2026-11-18/imbuto/distribuzione.json")}[VERSIONE]
-RIEP, DISTR = os.path.join(RADICE, RIEP), os.path.join(RADICE, DISTR)
-ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
+RIEP, DISTR = os.path.join(RADICE, os.environ.get("IMBUTO_RIEP", RIEP)), os.path.join(RADICE, DISTR)
+# IMBUTO_ESITI_OUT (19/11, ripetibilità): cartella dove scrivere distribuzione.json invece di quella pubblicata
+if os.environ.get("IMBUTO_ESITI_OUT"): DISTR = os.path.join(RADICE, os.environ["IMBUTO_ESITI_OUT"], "distribuzione.json")
+ICT = os.path.join(RADICE, os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv"))  # IMBUTO_ICT: prova di ripetibilità (#71)
 CLASSI = [0, 500, 1000, 5000, 40000, 140000, 1e6, 5e6, 50e6, float("inf")]
 
 

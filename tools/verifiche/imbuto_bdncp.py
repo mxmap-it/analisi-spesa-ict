@@ -31,9 +31,9 @@ sys.path.insert(0, str(R / "tools/verifiche"))
 import bdap_cig_ministeri_cf as M  # noqa: E402  quote(): regola attuale della quota annua
 
 D = R / "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset"
-ICT = R / "lavoro/imbuto/ict.csv"
+ICT = R / os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv")  # IMBUTO_ICT / IMBUTO_ESITI_OUT: prova di ripetibilità
 OGGI = os.environ.get("ESITI_DATA", datetime.date.today().isoformat())
-OUT = R / f"esiti/{OGGI}/imbuto/bdncp"
+OUT = R / (os.environ.get("IMBUTO_ESITI_OUT") or f"esiti/{OGGI}/imbuto/bdncp")
 RX_CLOUD_DC = re.compile(r"cloud|saas|iaas|paas|hosting|data\s*cent|datacent|\bced\b|sala\s+(?:server|macchine)|server\s+farm|"
                          r"(?:sala|locale|locali)\s+(?:server|macchine|ced)|piattaforma\s+(?:web|online)|in\s+remoto|\bpsn\b|"
                          r"pago\s*pa|siti?\s+(?:web|internet|istituzional)|licenz", re.I)  # 19/11: dal campione di sviluppo B1

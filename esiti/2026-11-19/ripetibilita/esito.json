@@ -1,0 +1,922 @@
+{
+ "versione": "ripetibilita 0.1",
+ "cartella_prova": "lavoro/ripetibilita/2026-11-19",
+ "tempi": [
+  {
+   "passo": "a1-prepara",
+   "secondi": 381,
+   "codice": 1,
+   "comando": "bash -c ulimit -v 8388608; exec .venv/bin/python tools/verifiche/imbuto_prova_034.py prepara"
+  },
+  {
+   "passo": "a1-prepara",
+   "secondi": 363,
+   "codice": 0,
+   "comando": "bash -c ulimit -v 12582912; exec .venv/bin/python tools/verifiche/imbuto_prova_034.py prepara"
+  },
+  {
+   "passo": "a2-imbuto-A",
+   "secondi": 2982,
+   "codice": 0,
+   "comando": "bash -c ulimit -v 8388608; exec .venv/bin/python tools/verifiche/imbuto_prova_034.py A"
+  },
+  {
+   "passo": "b1-strati-rigenera",
+   "secondi": 3,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_strati.py --rigenera"
+  },
+  {
+   "passo": "b2-strati",
+   "secondi": 0,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_strati.py --json lavoro/ripetibilita/2026-11-19/esiti/strati.json"
+  },
+  {
+   "passo": "b3-tetti-rigenera",
+   "secondi": 187,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_tetti.py --rigenera"
+  },
+  {
+   "passo": "b4-tetti",
+   "secondi": 0,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_tetti.py --json lavoro/ripetibilita/2026-11-19/esiti/tetti.json"
+  },
+  {
+   "passo": "b5-revisione",
+   "secondi": 0,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_revisione.py --json lavoro/ripetibilita/2026-11-19/esiti/revisione.json"
+  },
+  {
+   "passo": "b6-licenze-rigenera",
+   "secondi": 3,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_licenze.py --rigenera"
+  },
+  {
+   "passo": "b7-licenze",
+   "secondi": 0,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/verifiche/imbuto_licenze.py --json lavoro/ripetibilita/2026-11-19/esiti/licenze.json"
+  },
+  {
+   "passo": "b8-cig-ripetuti",
+   "secondi": 3,
+   "codice": 0,
+   "comando": "env IMBUTO_ESITI=lavoro/ripetibilita/2026-11-19/esiti .venv/bin/python tools/verifiche/imbuto_cig_ripetuti.py"
+  },
+  {
+   "passo": "c1-bdncp",
+   "secondi": 213,
+   "codice": 0,
+   "comando": "env IMBUTO_ESITI_OUT=lavoro/ripetibilita/2026-11-19/esiti/bdncp ESITI_DATA=2026-11-19 .venv/bin/python tools/verifiche/imbuto_bdncp.py"
+  },
+  {
+   "passo": "d1-l2",
+   "secondi": 5,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/llm/raffinamento.py l2 2026-11-18"
+  },
+  {
+   "passo": "d2-esito-l3",
+   "secondi": 1,
+   "codice": 0,
+   "comando": ".venv/bin/python tools/llm/raffinamento.py esito 2026-11-18"
+  }
+ ],
+ "durata_totale_min": 69.0,
+ "confronti": [
+  {
+   "passo": "a",
+   "pubblicato": "lavoro/imbuto/ict.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/prova/A/ict.csv",
+   "sha256_pubblicato": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+   "sha256_rifatto": "756778042696c5f131977492bcd7089a8906d2b623dc10db8e42a302bd60f4ed",
+   "csv": {
+    "intestazione_uguale": true,
+    "righe_pubblicato": 667303,
+    "righe_rifatto": 667303,
+    "righe_solo_pubblicato": 0,
+    "righe_solo_rifatto": 0,
+    "esempi_solo_pubblicato": [],
+    "esempi_solo_rifatto": [],
+    "somme_diverse": {},
+    "ordine_diverso_stesso_contenuto": true,
+    "sha256_canonico_pubblicato": "d17b2a770d2cf74092df44b87c79584ebb84e12bffcd958a8a7cd1d1d4ecc9b7",
+    "sha256_canonico_rifatto": "d17b2a770d2cf74092df44b87c79584ebb84e12bffcd958a8a7cd1d1d4ecc9b7"
+   },
+   "esito": "uguale nel contenuto, ordine delle righe diverso (sha256 canonico uguale)"
+  },
+  {
+   "passo": "a",
+   "pubblicato": "esiti/2026-11-18/imbuto/riepilogo-0.3.4.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/prova/A/riepilogo.json",
+   "sha256_pubblicato": "546e5ce440bdbc0de335bf5efbe3a17bbeee296dc39ca743c48f9d93dc57b4bd",
+   "sha256_rifatto": "546e5ce440bdbc0de335bf5efbe3a17bbeee296dc39ca743c48f9d93dc57b4bd",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/distribuzione.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/distribuzione.json",
+   "sha256_pubblicato": "7fbb9a2d5cb51702e644c8a18cad20393fa348b154f5c89bba8f465786b790c8",
+   "sha256_rifatto": "e18099bef3053e440f1b9c7c3867a742ca4e3e361048444535be0d5ac3e9464b",
+   "differenze": 59,
+   "dettaglio": [
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[0].euro",
+     "pubblicato": 3613260230.0400004,
+     "rifatto": 3613260230.040001
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[1].euro",
+     "pubblicato": 3630154140.253002,
+     "rifatto": 3630154140.2530026
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[1].euro_link",
+     "pubblicato": 1510997441.061001,
+     "rifatto": 1510997441.0610023
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[2].euro",
+     "pubblicato": 90762889153.91435,
+     "rifatto": 90762889153.91441
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[2].euro_link",
+     "pubblicato": 26047523682.550507,
+     "rifatto": 26047523682.55055
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[3].euro",
+     "pubblicato": 8531304789.268,
+     "rifatto": 8531304789.268001
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[3].euro_link",
+     "pubblicato": 2145284053.7199998,
+     "rifatto": 2145284053.72
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[4].euro_link",
+     "pubblicato": 34404752.35000001,
+     "rifatto": 34404752.35
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[5].euro_link",
+     "pubblicato": 1849649540.6480906,
+     "rifatto": 1849649540.6480908
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[6].euro",
+     "pubblicato": 648617287.2786071,
+     "rifatto": 648617287.2786069
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[6].euro_link",
+     "pubblicato": 537518870.9904408,
+     "rifatto": 537518870.9904406
+    },
+    {
+     "campo": ".righe[0].euro",
+     "pubblicato": 177562.99,
+     "rifatto": 177562.9899999999
+    },
+    {
+     "campo": ".righe[1].euro",
+     "pubblicato": 550622.9000000001,
+     "rifatto": 550622.8999999999
+    },
+    {
+     "campo": ".righe[2].euro",
+     "pubblicato": 13143718.120000016,
+     "rifatto": 13143718.119999997
+    },
+    {
+     "campo": ".righe[3].euro",
+     "pubblicato": 339929672.53999966,
+     "rifatto": 339929672.53999996
+    },
+    {
+     "campo": ".righe[4].euro",
+     "pubblicato": 2132163625.5199952,
+     "rifatto": 2132163625.5199986
+    },
+    {
+     "campo": ".righe[5].euro",
+     "pubblicato": 18252481860.729958,
+     "rifatto": 18252481860.729946
+    },
+    {
+     "campo": ".righe[6].euro",
+     "pubblicato": 49361234185.11008,
+     "rifatto": 49361234185.11003
+    },
+    {
+     "campo": ".righe[7].euro",
+     "pubblicato": 167775948941.92023,
+     "rifatto": 167775948941.9201
+    },
+    {
+     "campo": ".righe[9].euro",
+     "pubblicato": 806672.1400000013,
+     "rifatto": 806672.1400000008
+    },
+    {
+     "campo": ".righe[16].euro",
+     "pubblicato": 347419.29,
+     "rifatto": 347419.29000000004
+    },
+    {
+     "campo": ".righe[17].euro",
+     "pubblicato": 9286733.670000002,
+     "rifatto": 9286733.669999998
+    },
+    {
+     "campo": ".righe[18].euro",
+     "pubblicato": 141602234.3300001,
+     "rifatto": 141602234.32999998
+    },
+    {
+     "campo": ".righe[19].euro",
+     "pubblicato": 433221383.4199999,
+     "rifatto": 433221383.41999996
+    },
+    {
+     "campo": ".righe[20].euro",
+     "pubblicato": 715490887.8100002,
+     "rifatto": 715490887.81
+    },
+    {
+     "campo": ".righe[23].euro",
+     "pubblicato": 1668090.1600000015,
+     "rifatto": 1668090.160000002
+    },
+    {
+     "campo": ".righe[25].euro",
+     "pubblicato": 640105869.6200062,
+     "rifatto": 640105869.6200058
+    },
+    {
+     "campo": ".righe[26].euro",
+     "pubblicato": 3719582599.8399825,
+     "rifatto": 3719582599.839987
+    },
+    {
+     "campo": ".righe[28].euro",
+     "pubblicato": 6807257180.49,
+     "rifatto": 6807257180.489997
+    },
+    {
+     "campo": ".righe[29].euro",
+     "pubblicato": 10333718635.439999,
+     "rifatto": 10333718635.440002
+    },
+    {
+     "campo": ".righe[30].euro",
+     "pubblicato": 7952245544.629999,
+     "rifatto": 7952245544.63
+    },
+    {
+     "campo": ".righe[32].euro",
+     "pubblicato": 12171638.370000003,
+     "rifatto": 12171638.370000001
+    },
+    {
+     "campo": ".righe[33].euro",
+     "pubblicato": 139016395.34000045,
+     "rifatto": 139016395.34000042
+    },
+    {
+     "campo": ".righe[34].euro",
+     "pubblicato": 623227454.8600001,
+     "rifatto": 623227454.86
+    },
+    {
+     "campo": ".righe[35].euro",
+     "pubblicato": 1184469930.21,
+     "rifatto": 1184469930.2100003
+    },
+    {
+     "campo": ".righe[38].euro",
+     "pubblicato": 2631226453.34,
+     "rifatto": 2631226453.3399997
+    },
+    {
+     "campo": ".righe[39].euro",
+     "pubblicato": 146341.72029799997,
+     "rifatto": 146341.72029799994
+    },
+    {
+     "campo": ".righe[40].euro",
+     "pubblicato": 426632.71601999993,
+     "rifatto": 426632.7160199998
+    },
+    {
+     "campo": ".righe[41].euro",
+     "pubblicato": 10304791.71166357,
+     "rifatto": 10304791.711663563
+    },
+    {
+     "campo": ".righe[42].euro",
+     "pubblicato": 346032511.5108902,
+     "rifatto": 346032511.5108906
+    }
+   ],
+   "tipi_differenze": {
+    "virgola-mobile": 58,
+    "sha256-ict-ordine-righe": 1
+   },
+   "max_delta_virgola_mobile": 0.0001220703125,
+   "esito": "uguale nei numeri: 59 campi diversi solo per virgola-mobile 58, sha256-ict-ordine-righe 1 (Δ massimo 1.2e-04 €)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/strati.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/strati.json",
+   "sha256_pubblicato": "93aeb2287bcba48d1a17abdb4cc4683f893b888c8e9aa539cf5de1211bcc7cf5",
+   "sha256_rifatto": "2344d6b93731db28f3900c2eb549328899709427994402f6d984902b2c115362",
+   "differenze": 11,
+   "dettaglio": [
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[0].euro",
+     "pubblicato": 3613260230.0400004,
+     "rifatto": 3613260230.040001
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[1].euro",
+     "pubblicato": 3630154140.253002,
+     "rifatto": 3630154140.2530026
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[1].euro_link",
+     "pubblicato": 1510997441.061001,
+     "rifatto": 1510997441.0610023
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[2].euro",
+     "pubblicato": 90762889153.91435,
+     "rifatto": 90762889153.91441
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[2].euro_link",
+     "pubblicato": 26047523682.550507,
+     "rifatto": 26047523682.55055
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[3].euro",
+     "pubblicato": 8531304789.268,
+     "rifatto": 8531304789.268001
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[3].euro_link",
+     "pubblicato": 2145284053.7199998,
+     "rifatto": 2145284053.72
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[4].euro_link",
+     "pubblicato": 34404752.35000001,
+     "rifatto": 34404752.35
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[5].euro_link",
+     "pubblicato": 1849649540.6480906,
+     "rifatto": 1849649540.6480908
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[6].euro",
+     "pubblicato": 648617287.2786071,
+     "rifatto": 648617287.2786069
+    },
+    {
+     "campo": ".link_pvl_per_strato_dal_2024[6].euro_link",
+     "pubblicato": 537518870.9904408,
+     "rifatto": 537518870.9904406
+    }
+   ],
+   "tipi_differenze": {
+    "virgola-mobile": 11
+   },
+   "max_delta_virgola_mobile": 6.103515625e-05,
+   "esito": "uguale nei numeri: 11 campi diversi solo per virgola-mobile 11 (Δ massimo 6.1e-05 €)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/tetti-cig.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/tetti-cig.csv",
+   "sha256_pubblicato": "2b8c3c4828d63abef197f461f655064adf19a3039ff22abeda5255e42410f269",
+   "sha256_rifatto": "2b8c3c4828d63abef197f461f655064adf19a3039ff22abeda5255e42410f269",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/tetti-fonti.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/tetti-fonti.json",
+   "sha256_pubblicato": "ec6f62d6af722cc6a27ec1440a46b7a68ffb418b55f2411dd8815d7bac6fa68e",
+   "sha256_rifatto": "f62360d7b214642081c9d3d55cebe39f8f1ecf7986724c2e28f8d081e8abf6d0",
+   "differenze": 1,
+   "dettaglio": [
+    {
+     "campo": ".sha256_ict",
+     "pubblicato": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+     "rifatto": "756778042696c5f131977492bcd7089a8906d2b623dc10db8e42a302bd60f4ed"
+    }
+   ],
+   "tipi_differenze": {
+    "sha256-ict-ordine-righe": 1
+   },
+   "max_delta_virgola_mobile": 0.0,
+   "esito": "uguale nei numeri: 1 campi diversi solo per sha256-ict-ordine-righe 1"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/tetti.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/tetti.json",
+   "sha256_pubblicato": "1518c7228bc487885219c02948ca79fc495a91bf9acbb1356bc851c9e76e5ef6",
+   "sha256_rifatto": "1518c7228bc487885219c02948ca79fc495a91bf9acbb1356bc851c9e76e5ef6",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/tetti-cig-v2.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/tetti-cig-v2.csv",
+   "sha256_pubblicato": "a8d0caeeb68f7a2d48a80ef3b159c5d450202ff1233a0ad1004dedb65c818395",
+   "sha256_rifatto": "a8d0caeeb68f7a2d48a80ef3b159c5d450202ff1233a0ad1004dedb65c818395",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/revisione.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/revisione.json",
+   "sha256_pubblicato": "003f4b5d6b2c6c2191b17ee7409268d6e721068827ea6b529cd3f939c01a7d79",
+   "sha256_rifatto": "003f4b5d6b2c6c2191b17ee7409268d6e721068827ea6b529cd3f939c01a7d79",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/licenze-cig.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/licenze-cig.csv",
+   "sha256_pubblicato": "1cc5cc5e569bc731b0a33a83ece5fcec9eb2016b82e4a72c4436e86447fae3a7",
+   "sha256_rifatto": "570a31ffb4c66e355843b621b02b3375e8fc3fa54a64fe07b4c12a2319bd39db",
+   "csv": {
+    "intestazione_uguale": true,
+    "righe_pubblicato": 3889,
+    "righe_rifatto": 3889,
+    "righe_solo_pubblicato": 0,
+    "righe_solo_rifatto": 0,
+    "esempi_solo_pubblicato": [],
+    "esempi_solo_rifatto": [],
+    "somme_diverse": {},
+    "ordine_diverso_stesso_contenuto": true,
+    "sha256_canonico_pubblicato": "6cce15aee776f58ad1d19c43bafacdec7770d1c374095dadaf92b11e1dfa7697",
+    "sha256_canonico_rifatto": "6cce15aee776f58ad1d19c43bafacdec7770d1c374095dadaf92b11e1dfa7697"
+   },
+   "esito": "uguale nel contenuto, ordine delle righe diverso (sha256 canonico uguale)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/licenze.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/licenze.json",
+   "sha256_pubblicato": "613d633a4c7806fab787df27f36e3c0b0bf2a29d8f1a895042fbc08916f253be",
+   "sha256_rifatto": "613d633a4c7806fab787df27f36e3c0b0bf2a29d8f1a895042fbc08916f253be",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/cig-ripetuti.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/cig-ripetuti.json",
+   "sha256_pubblicato": "b2ba7abedd181b3f558e082dc9a42eab77da70691a3e45a06dfa76a4fe15abf6",
+   "sha256_rifatto": "b2ba7abedd181b3f558e082dc9a42eab77da70691a3e45a06dfa76a4fe15abf6",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "b",
+   "pubblicato": "esiti/2026-11-18/imbuto/cig-ripetuti.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/cig-ripetuti.csv",
+   "sha256_pubblicato": "f49a6586db5901ed3ae4384d114c353dd66db4ed865fdf5f0d3a48761b19976a",
+   "sha256_rifatto": "f49a6586db5901ed3ae4384d114c353dd66db4ed865fdf5f0d3a48761b19976a",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "c",
+   "pubblicato": "esiti/2026-11-19/imbuto/bdncp/riepilogo.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/bdncp/riepilogo.json",
+   "sha256_pubblicato": "e997867f32b8145aa51857855e35be4452c1a17d96116a146796cdd1498fe187",
+   "sha256_rifatto": "aeb89f27044cc2a86875f4040e1264b887ccbb402d5001ea25feb8f8749142e5",
+   "differenze": 1,
+   "dettaglio": [
+    {
+     "campo": ".ingressi.lavoro/imbuto/ict.csv.sha256",
+     "pubblicato": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+     "rifatto": "756778042696c5f131977492bcd7089a8906d2b623dc10db8e42a302bd60f4ed"
+    }
+   ],
+   "tipi_differenze": {
+    "sha256-ict-ordine-righe": 1
+   },
+   "max_delta_virgola_mobile": 0.0,
+   "esito": "uguale nei numeri: 1 campi diversi solo per sha256-ict-ordine-righe 1"
+  },
+  {
+   "passo": "c",
+   "pubblicato": "esiti/2026-11-19/imbuto/bdncp/campione-b1-esce-lavori.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/bdncp/campione-b1-esce-lavori.csv",
+   "sha256_pubblicato": "0b4c2a38a1c20d02ec2a3662d17a2d2859cf8772a0f4a69dd93d55addc308488",
+   "sha256_rifatto": "0b4c2a38a1c20d02ec2a3662d17a2d2859cf8772a0f4a69dd93d55addc308488",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "c",
+   "pubblicato": "esiti/2026-11-19/imbuto/bdncp/campione-b2-non-sa.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/bdncp/campione-b2-non-sa.csv",
+   "sha256_pubblicato": "d2cb6d9ab43af0e04fc07125c67ae2e1119c91b7ef5d2c6bbcf1711b34f347de",
+   "sha256_rifatto": "d2cb6d9ab43af0e04fc07125c67ae2e1119c91b7ef5d2c6bbcf1711b34f347de",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "c",
+   "pubblicato": "esiti/2026-11-19/imbuto/bdncp/segnali.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/bdncp/segnali.csv.gz",
+   "sha256_pubblicato": "3f04d04cc3ddeb51c481492c3964a4fb9a39165295e82ebdb4bc6181b05d647d",
+   "sha256_rifatto": "3f04d04cc3ddeb51c481492c3964a4fb9a39165295e82ebdb4bc6181b05d647d",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "d",
+   "pubblicato": "esiti/2026-11-18/imbuto/raffinamento-l2.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/raffinamento-l2.csv",
+   "sha256_pubblicato": "536cef26752663e344a6c7e0ef9ca48fb0584dab15fada3c0af9b6af36e06018",
+   "sha256_rifatto": "f6d2b992982c6bd6fb9628b39b0148716e5ccaaee458a6dfba50ae8067d90c6e",
+   "csv": {
+    "intestazione_uguale": true,
+    "righe_pubblicato": 6980,
+    "righe_rifatto": 6980,
+    "righe_solo_pubblicato": 0,
+    "righe_solo_rifatto": 0,
+    "esempi_solo_pubblicato": [],
+    "esempi_solo_rifatto": [],
+    "somme_diverse": {},
+    "ordine_diverso_stesso_contenuto": true,
+    "sha256_canonico_pubblicato": "f1002a64ea9494b49ef763fc60c26834920327c8721070c1289bccfaa2ac6ea5",
+    "sha256_canonico_rifatto": "f1002a64ea9494b49ef763fc60c26834920327c8721070c1289bccfaa2ac6ea5"
+   },
+   "esito": "uguale nel contenuto, ordine delle righe diverso (sha256 canonico uguale)"
+  },
+  {
+   "passo": "d",
+   "pubblicato": "esiti/2026-11-18/imbuto/raffinamento-l2.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/raffinamento-l2.json",
+   "sha256_pubblicato": "9e012a4a49fa26127f8d92c6fc0a40c36efd0d240ffe4d007af48a1e23426be4",
+   "sha256_rifatto": "7b9bae1756b213f48dc61255db5f744443ffce818c497d9bda1c5f25d83b74f8",
+   "differenze": 1,
+   "dettaglio": [
+    {
+     "campo": ".ict_csv_sha256",
+     "pubblicato": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+     "rifatto": "756778042696c5f131977492bcd7089a8906d2b623dc10db8e42a302bd60f4ed"
+    }
+   ],
+   "tipi_differenze": {
+    "sha256-ict-ordine-righe": 1
+   },
+   "max_delta_virgola_mobile": 0.0,
+   "esito": "uguale nei numeri: 1 campi diversi solo per sha256-ict-ordine-righe 1"
+  },
+  {
+   "passo": "d",
+   "pubblicato": "esiti/2026-11-18/imbuto/raffinamento-l2-campione.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/raffinamento-l2-campione.csv",
+   "sha256_pubblicato": "0c1dcf7c330d2ca69bb15a5ffc9a6d5094744e531e8a05b006235edd9da88324",
+   "sha256_rifatto": "0c1dcf7c330d2ca69bb15a5ffc9a6d5094744e531e8a05b006235edd9da88324",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "d",
+   "pubblicato": "esiti/2026-11-18/imbuto/raffinamento-l3.csv",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/raffinamento-l3.csv",
+   "sha256_pubblicato": "d1d5d5657ccd752c7c2a83753cfeaf90872f3e7fd43b6d6aaf0128bd6f0f3bd8",
+   "sha256_rifatto": "d1d5d5657ccd752c7c2a83753cfeaf90872f3e7fd43b6d6aaf0128bd6f0f3bd8",
+   "esito": "uguale (sha256)"
+  },
+  {
+   "passo": "d",
+   "pubblicato": "esiti/2026-11-18/imbuto/raffinamento-l3.json",
+   "rifatto": "lavoro/ripetibilita/2026-11-19/esiti/raffinamento-l3.json",
+   "sha256_pubblicato": "6028fdb4d289a8ce54164b7ec0209c1ce3758bdf2d5a152dc993b80cf293cf8a",
+   "sha256_rifatto": "6028fdb4d289a8ce54164b7ec0209c1ce3758bdf2d5a152dc993b80cf293cf8a",
+   "esito": "uguale (sha256)"
+  }
+ ],
+ "ingressi": {
+  "commit": "07ec7dcda3a01ad424b1912e2e7e0b9ebdd099fa",
+  "mirror_anac_letti_dal_passo_a": {
+   "file": 243,
+   "byte": 2725503147,
+   "sha256": {
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260401-aggiudicatari_csv.zip": "ee807e1ba4d9199b255b394b567af7d2302a0c0b57577af24f044d23546d1d06",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260501-aggiudicatari_csv.zip": "5fd7882ba113389524d45ea7438d45d513c86a547bc24b668fd83adea1ae47a2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260601-aggiudicatari_csv.zip": "50cf0bbb96a2a529f15e4d34e4fc468f47ca0ce5c8196d61dc0444b846aab1e0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260701-aggiudicatari_csv.zip": "8512b7f134d5deac9d49e457c1020edeea4ee877846b5b852b6e366127eec08c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260801-aggiudicatari_csv.zip": "68d274b98d13e6a26c0076c0c3a0ff0a2b5a7bf0546c4e53c3f2070b2daa8178",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20260901-aggiudicatari_csv.zip": "707f31a389a20c77b8e8de070ecb9944f24c514277dacf37e1ed81f83161a19f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/20261001-aggiudicatari_csv.zip": "7af4a6b7cb83eeb735ebbaed185f4d4aac006328d90ed8cc2b014b098777bd9d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip": "6908a361f581824ce144414116301234fc113230230634b0942b988f9173d60f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_01.zip": "49c3848829c211a9ff5f109cda4c000750bb70b66dfe5ca5c41fbf799ab6abde",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_02.zip": "8584addf5169f43d0dc5b0221aff383e87ec98192ec567d982f30f927be6f31d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_03.zip": "2c098f29b2292c2be98cdbfed1d8fd98d76f5b8cd00229815c6dcf8a5a8b3389",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_04.zip": "b6b074be6cf30e17bedf00ca90ef589376e3c314aa3762375078b6268cdf6eea",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_05.zip": "551e4df6953fb9ff381d4a62d089329e3476c69449f6f1a3467cf82cca4e7ef0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_06.zip": "8a8375eb239409f937ac978b1cd101472f08ba41441324dd868b34c02b2804cd",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_07.zip": "9767b75bb6e5b4556766613c227fbd83bf00208be4ae8186093a0ae23124dbab",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_08.zip": "710ad6d27f80279400cc05ce354dfea106fe4719a12b5e4936cc214f140c5466",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_09.zip": "4ea398e8c5e6497384fd245de8c7079655a02709509572ef07f8e43bd723a3a0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_10.zip": "438b04af1ea59057967dc2610baf6ffab195e624f7827d61c12cf742cd756ca7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_11.zip": "77cb65b390b5b08a1a2745843a85ab7312e53fd5077230aa1bde5ef6841680ea",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2007/filesystem/cig_csv_2007_12.zip": "005b59a96fac142de0853baaf30d0dff9f6399c81b8b83ec4d11ad9cda42a2b6",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_01.zip": "3a9b312049e8408340e7c787ac83621f807997b8123235e365aa3eaa9262326a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_02.zip": "db008a687085636eaf014212fbc0f0269b082241277b19b41cdd7c51ef4b3934",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_03.zip": "8412547fb32a90f3cdbdbc5334e2d19fee88f36bf86d903697510645aee456dc",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_04.zip": "96e38154004500ddec9c3dbbc6bbbacae8554abeb4f62900db4586fbb060a314",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_05.zip": "410cc68b1da22c74aea5add8bba797093287cb301fdb8bbbf0669aca88cfdaea",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_06.zip": "488afbd907f8db3dd8842f080b1e4ba5469f5c4a5111ba235ea83b0b52a1a95a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_07.zip": "3b1a77eb992e5690c0e8cec5b536190b78a3e038c4f7b4c61ff8bd35dc91077c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_08.zip": "c4124e86e123b48fe83a86c243f38008ca4713d854a27172053a4e28979a0a22",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_09.zip": "9e19a88333d5b9363bfb882d94e39e820d06de20eca6b155cf11d0eb340490cb",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_10.zip": "3837d3bca95c17b09c212348edd288f8cb0841ad1b9665539a917fedcb8aab39",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_11.zip": "38dd75672f5290deddeb031a08db0276e7fc9cbe6c3e922ee140a5a482d98e2f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2008/filesystem/cig_csv_2008_12.zip": "627ba1bdc60c5f312cb1cfc407f41708d0d98e793324f64af1d8725cac213d6c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_01.zip": "59c97ed088a404b98bf61429144a682214bc2105bb3e5ed23da5d06c30458f66",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_02.zip": "d237a72b1f30ec3141177a564c31f619f803dcaf59d4dbfb694336be844c77e3",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_03.zip": "6af24f7bfeb594679bc44077d917f718c658a8e0273e360c4989b109f5a99e4c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_04.zip": "b46a88e583f95ed139489c9a1de13d444d27be0caeac1aada3779ab247ee6dc2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_05.zip": "9814dae55cd69150852e6f1003ae828cdf95f966c766a99557d9571f2e88499a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_06.zip": "5a83df05251933ef857d476ece3ae6e840303ddfdb1a8d09d0d019d85f585aa2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_07.zip": "2e2e65d03cea0a0e0e56764f217830abcc54fcd717271ec55de0fa2922f0c128",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_08.zip": "14f5d21630097dbedf954f1dd3746cd4128b08cdf0cf36354d8100a2e809fa30",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_09.zip": "8def5a22418e229958dacfe05d4c9bb322576eff3cb9bdff004126b43d7c3d4a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_10.zip": "1f58b155fcd8e123adb9766f4f33deec1797fdf6885003d6aacaf352e58734ec",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_11.zip": "21a3a6cea618db5da13d15c1775053f0aee7f86eec4753aafcc56822f6ee32fc",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2009/filesystem/cig_csv_2009_12.zip": "fcab897e8ce0749e6adc17bb98d69ad488038003746e5d1c954d211d24b2dd3c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_01.zip": "14ee3e7edead6ec98cfc960472012661970f8413a05ee8b78b346398b94bd542",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_02.zip": "9e93afd677d8c2300571bc002b181ae931e22ede49987ed750c8ba36265ba8f4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_03.zip": "fadf5f779f97c81772b439c54322fd2348ed5fa07d203718db527190029e871e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_04.zip": "ad1e261ed1b4026ad40b05872c6ade6c37a3268527f888ab3a874739b97b7760",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_05.zip": "720af3f23c709fae2081753f96d8b2d52a83d0456162f7dc9332091d20fff35d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_06.zip": "3bcda994df9e463822fd687703ef6b65ea70bb4a25114985b93c0c8432ec7a77",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_07.zip": "553deffa73487681ee9533c08267f4f0ea8ff976fa237c0ebcfec2bebbb4240b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_08.zip": "d9047f1aa011afe5f66f804c7616e58578cdb3c147e5024526438d0329a18d2a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_09.zip": "8c9f28d8ba3c1e20ed2d03771a9fc0bc2fec9fa0d813ada6048038cceef01842",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_10.zip": "83e5c5e5cad67ee8cad9997ca5fe3406a2f57106eb3c210acad968f36344b4bf",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_11.zip": "f28f4d0fa7a89217df1b4d24b03963c8421b92cebe3a11ff76436df9a4224418",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2010/filesystem/cig_csv_2010_12.zip": "176d99f33a79c0afb967b83a57e52d8f0f5c4058f7fbffb3dbbffd0e5735cf62",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_01.zip": "db92234e7a68a687abad7dca2b5bf10e47442e4b0e7ad740d37891c00155c38c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_02.zip": "fb27b987334e0702851ca10cca55f2821b1b0555d81f8b2ef2c0d9d3b7fdfe02",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_03.zip": "92813b49ea19fe5bfa97b45c21db5bab8cc844d37ba980b7d1c48d41f20a9f21",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_04.zip": "3279517cf6b6024d2bb8928c84ad7ac3d7c40dfd893faba7119f866f69029a14",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_05.zip": "6e38e34139603314a068aad33e3f50e0fc783a4bd4ed3d31c3d7f4a98063980f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_06.zip": "511852f83a5c3800063e7254f3dc5437652ea46a6146809602b501f12435110f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_07.zip": "b99f87818106671837295be9bdcb58f28b44c3bcf1eef10bf66d14b2be513610",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_08.zip": "96c478e65611d6d85761a00b8722c726809870af850dce345171f7771e80a8e7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_09.zip": "58eda59f85c392038a1d4ca57437008d4094782ea706701093d90dc0ea000e4f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_10.zip": "17a0f18a74f0fc0292d59c1a8d28f50f8d28026c7438f4a8ce9f077f026583a5",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_11.zip": "f50a1f42994952d31c4ccdb44647786903dbf90cb4ba283ff2815fd2b8eb3f26",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2011/filesystem/cig_csv_2011_12.zip": "85c87cc92306008cb3dc8e88e3fec5cb4b305ef2f7d220effa071fb788777e65",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_01.zip": "c5ba97613d9619501eaef23e4f9eb83eb0f6464680261e71634d719b83d8c316",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_02.zip": "88a924faf1bdccc3b27f99b70664352d742002d5e897b12a19c157e950473680",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_03.zip": "39cfd4978bf13af1a115b8e4de90dc3974fccbb122ca651407ba88ed0aefe2e0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_04.zip": "7b79d9d385c0f014cb053929c65557e16b64a9219f1086decf5654eb6fdaa33c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_05.zip": "e670c79c1043c9438a39c70cea3f8ceef1c88ae9149feaa8abad11c616395f31",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_06.zip": "aef0b85bf6318fa747d21167e17a9b09137c4cf138576fb5d785f8efd96c3ee6",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_07.zip": "5088d3f7973c2225bad9ca347ffb9e34dc2d95c0527d776f29a67b63197e7d7d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_08.zip": "2d4931cc708cb0b8bb377f5e87fdbcd8aba89cc228ecd0b220e150ba10500f94",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_09.zip": "18d89b2736fa8901cd00f705a1ccdd11779d2b23e93873deecbdd0dc6090a543",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_10.zip": "7a30f1a3c1e2cdab600461b06ad4656abfa340f9ca594dd68e87487b851d15d7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_11.zip": "86433e35721d61d42ddbf2c144faeac86ec6d270b3f98d3f9123fa0a5210aa55",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2012/filesystem/cig_csv_2012_12.zip": "a8b0ba2fc3c8e028fd36b46f679786d2988f20ec216f052c9ed6d49ecdcf0fe2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_01.zip": "82d19aa8c5ca3fd40784e38b4e18f234c84c2d14b8f32a4bde5f56c2d536df71",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_02.zip": "e98ca61cfdbc51ac3530d48c0a8518f0d60b1acc5f5ed972f35512f26a4c2109",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_03.zip": "d54630f005099536647cae214fe320d9389d100d701371b8ef3cabb4a889de52",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_04.zip": "312cb819c6174c3922e5047a05aba95721df8ad56ac1f1d884cb1b206a2ec128",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_05.zip": "9d08640482e5883779084fb455ae7744f2942c9a476f1dabf908a4046bfd7875",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_06.zip": "34326b4cc6534a72ea74a3a049dc2dde3273f6d03bb1cb0821c817978ba42fbf",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_07.zip": "83bb2f255bc97370b94279063840a81a3ddd75c79cff187a000c39db656a2528",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_08.zip": "424724f9ea9a5fa3879d23b745cf6beaf8a8ae9dcfb963ecbdf1110581a977c0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_09.zip": "cbcbb3278d7e70f6da6b31d2eeaae65863db34379d4461064bc80850f901a717",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_10.zip": "79de64b2a71872d93d8a66a2184d3465e8a4b9218fc08ed5f316cf0b93847ee7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_11.zip": "d8951ccb41ea7d0ff4e765099ea9ccdc5709b33b527db65b39ea9a912be75509",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2013/filesystem/cig_csv_2013_12.zip": "275847c32c9e698f14df9bdda6aa678ab3accdfd0f65218fc6aff952ca60f1c9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_01.zip": "fc8e05376a23f6bf55fcd1fff61bca0b3ceb98e8f3b88134abda5f7d6ed4a26f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_02.zip": "bc76d70af681c588129e0a9c1a3730aa50f93af710c5c198ec28a0dcf4cd64b5",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_03.zip": "120724c909da1f9c7df02ed03e68cf7f96e06433a7cc054a04378f105d7a2a8a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_04.zip": "ed94bade0e8f74a16b34a2e671313680bcf45ce66738f9599b574c2c366fcb01",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_05.zip": "b0a44f49fd88b911fd3e4e5ccf5b3fc1e45f07f3a136253202b35162aa2da667",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_06.zip": "e74cadbad621d4c8c54902e25faa2f1a6ea7931b2a4832a14ba79ecd46ae74f7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_07.zip": "5141d6869224c0d5d45dfc529e882a0fe6929f235c1519834e5c1efd712e6781",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_08.zip": "4d9b7ef8795e097d02e88653c4a59b4fd758e69361172e2ed609f5d38af3e761",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_09.zip": "f51151dab94222c545f9c1897b2542ebb26b94d30a28ed7fbc89bcb9c076e02d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_10.zip": "c2323d9a69759fc55ed73804bfa258978717706a80dd04c792a4077f5b8997d1",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_11.zip": "e6d8a503b50e26054be9e2a5ecd4bba333af4938a97b8aef18a2ba9e3ce49d24",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2014/filesystem/cig_csv_2014_12.zip": "b0396505f938e2fb906e0a15cb18ac02674cebcd162d66f7d0412014f140cd69",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_01.zip": "83564ced42f7dab05be19f39ad3080277d2274403fdd80f9e00002678d657d2f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_02.zip": "daa29823ce23ec8ecb3a88e8a9066df68ce3edfc683ee51cf2abc9379f0c8e14",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_03.zip": "980f774000159f0b9b7c9fd501476811490c8c6cbfcbb2512137e01fcf7999f9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_04.zip": "e3ef09507fdbf664074ba870f1050b778462f892fa81cc0b43ad34a6cd9ecbd1",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_05.zip": "2f3f8c6daf8929174b7da6bf3cee17ba10c90eb5d6a92824964dd9081f079a9b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_06.zip": "5fea435a68f92d61de0f26acbd84f7bf4d3fd8911b131dc12e5fac479af2fd33",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_07.zip": "68757d2251a107cfe050ea6bfab406a47ea0392a6b3bc646b0f8fc0a520ceb70",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_08.zip": "21e0d04dc0a53fb47002a30df5ca8d98e0e241546079800344932de526a9807b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_09.zip": "03b02b3f6740a6d172bba8d5bd13ed1ba3769323145af242e38d33f8c32f17b6",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_10.zip": "05a573a72a15d886afaaf34787b180d5aa85323ede2a012ca06f4fa9344bf72e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_11.zip": "25d9ab43b71cccc06254823e8063f0ad8c8e3154a02503be0ad5f64af59514ad",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2015/filesystem/cig_csv_2015_12.zip": "dd904dd390feaf2e11ef4a3bed8f369dc5eb80d9bb606687578ca104848554d3",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_01.zip": "8486356b6c3aafdb7346cfd2d56fe4f9064c581f4dc84af6bb83754eeaf336f9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_02.zip": "643e73c18a174a4140fdf31730a4446481e6d167ef99987a4e8bbdb121ac9b51",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_03.zip": "dd6e5bfd6f2b86aa5e23010a09798c8b60d4257615ca8b44289a7574b0513c20",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_04.zip": "0ee6b8f11c7456d5776488ba2047c3aded73d582df70805eccae21b0caf0c89a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_05.zip": "4bcbf8fce5e044aadb40dbac73f3c1214fc854cdbde868435e300f5c6b25260a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_06.zip": "621ff42382ad426b8b4e681aa7efc0e883882efc8358ed4747ee3c99ca0bb383",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_07.zip": "8a405357da7e37271fb2601e894a08c28db1ad891828cc0c79a54855837f2d9e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_08.zip": "e29c3ab8ed87e135491d93fd61f2dd0d391c5bbbaa58259938923c6509bab5db",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_09.zip": "eb7ee20b2d9d7b0061baacd41f29f43be29558555ede35d4d170ddb7c2e0c089",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_10.zip": "0cf3d1ce7a81f53584e7c12c8cc26ae542a1bea8a5cc5f04d5c381db823c2f80",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_11.zip": "b80a354c67a8160862c9d93570c68b4172509f07a8309429e45a89b953569fed",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2016/filesystem/cig_csv_2016_12.zip": "e7878a55174abf62bc27d24a07befe85be01acc413b77d9c4c7c3099897a4209",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_01.zip": "262d769a088e4a65f6b9ab25becf357d2b015b867267b7a03cbfd79f3d39c798",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_02.zip": "eb9ce7717682d978e47fe2217d2b9acb791890bc3327f450d12aee6ca7023167",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_03.zip": "9015dae13802c11779460e81b025d2b62841e9b6b379c05d493a69121a97ec13",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_04.zip": "e461e006de1d972676a307aa2d23ab320ef9ce94df2c6b253e90ca30c1a81a03",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_05.zip": "98f0319e6dd3b60135fa413b924586739904395d598183a46c06a54dbc73f46e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_06.zip": "2c6eb1356805a46834ff6573c2dff878f2a14a71836ff9e6d54c12e79f691704",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_07.zip": "0ae38961f349890491956cf216dcff7d831e19627899e1adea8cbf6816af575c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_08.zip": "bf0823480ca14874053cb14e8ba9c13ceb9ea33c3a821cf838fed7bf04d1d97a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_09.zip": "df81abf63376732486df3adef0a864a929721f41618f3368159b6fb63ce933d8",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_10.zip": "77dc1e28fe9e08c34da0afc66ba560c3a0dbcbea8c889d11a2a2fabab0b05762",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_11.zip": "9d46735f8448b22c120bdf21c6fd1e5620030674f4650f33ce1f29d68433e99f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2017/filesystem/cig_csv_2017_12.zip": "d495c7b57c5e0a979054b7cc52bf5fce1e8d9e293c15a2ddbb3c90040a967ae9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_01.zip": "622ec78d8eba4c91bae9cdbd9e401dbbe4cb00fade75a95570b44b68cb059615",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_02.zip": "3323ecd21d3ad5d248fc2a4ed1013a0e71d2806d2782727a0f645773fe887e24",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_03.zip": "d21f171cd37d8a50c68dd79bbd2366a62127b84f6abc04667a6dc17b5652ee30",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_04.zip": "8d6ccfa7aa37a544cb6bfc568b40a9774c76284c04421c08a2d7bb47cd597627",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_05.zip": "2827f0cfb0c2533d00c9acb1281d0a27dae449d8f99cd039972038bdee65a451",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_06.zip": "08e84c89c4821c815b72ad28b693c430b8e48e8f9424ac786461358a4575d684",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_07.zip": "3076bd3f33d8d2cb8391e55f537ad9decf1fa8999dd04cbc044b6ef79077cf13",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_08.zip": "b740c248bfef7150ad6cbbbf6c79bfaf6cc70056088e963576fe65bf97c3c055",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_09.zip": "995b855040e4e7f2188cb2f9db83924a2664205bf41856148e68462e1f4fb01d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_10.zip": "9d990700e373e8344da17582d9f79edfe1e2bdf82a0e9ed030fdb0a80b087644",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_11.zip": "85bc00d5d773be2ac3403aba3f4438c7869f40ed356302e4c08b14e8d39d5e89",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2018/filesystem/cig_csv_2018_12.zip": "cf9435a651be597db3c0b5e779c44a5ea63eeb156232b528cc8f238f269ad97b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_01.zip": "72de9d61b527107bf1f4117d8456bb0fb6aefa5064ae41772aa7922b982c0bec",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_02.zip": "1f2f140f81fc9e0a14639167b760304df97d5a4e2432546910620e8fe3343a6e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_03.zip": "9bfffe1294227b5510dbd316a2465c1926579cb378fec34e0467e8efca3e946a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_04.zip": "2eef941be35808d7397d20498db6e7f64a2a176937484abf380c9731b9b81589",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_05.zip": "0309075b1aa788042e63cdb422cf7942b04affa58e7735a2239e4a3edfb30da0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_06.zip": "b122e82bded1a1e65b38a0e3cc3e07267079b3320c0959f30bb6e02b1b4fceb2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_07.zip": "c5c9429ba19603265dea673eaf14d957069f144f81cbccb6a56ff6ef82653d88",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_08.zip": "8b033bb7a48b0e8d5fe3af53a230796d8b5efd1ec114a5327edda05cbb4839e1",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_09.zip": "6c205ea4ab3226bd91db1754ea34462975c9ab4b7841d7594640bf42f9c3c08d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_10.zip": "3f78c9f8099c6ae7480bb2b88d3744de8a0842901851d48d29256410daadcb5e",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_11.zip": "205951757a036b5db81ea7cac928b7191857ad09223e0cc1b35d130b3ad78e2f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2019/filesystem/cig_csv_2019_12.zip": "8033720640cb8510a93e8be1723f0cd56b1f8828c6077b433ef8aaa6ec5dea9f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_01.zip": "33f59347d4d63123a7198bec48d30596a71f81c030f4ca3327df32764c4761a7",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_02.zip": "c35ff0e49e9eb09cfbf315d6e1f692373108b763da247a7a20990950d1eacf15",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_03.zip": "3ea3cd19b0021e65d0b00299ccca58d7abcd9e22f3c8dd2acf7de77f6792299b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_04.zip": "7d09ab9a2ab55944cc593cc0c35c4903dc6c7e1afcc43ad30b4c6bae9050fbaa",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_05.zip": "a7184c5458bbf68fde5552904b6b50d8d4018ff3d246f2d48140fa0f0bad33ce",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_06.zip": "0f0714a37b7342d20c0441676fb12a4fcb13133b8121a8782ed876b052e45b8f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_07.zip": "64990ee7d3eec38578397ed5bcfa3080178349e1451ea1b994c15b3efd5811ac",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_08.zip": "0392362ab28c72a5ebc70f59b6f72f21d8e3d9b62ab459615986801fe005321f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_09.zip": "330de36675e791f47436ec5bae90cd93d75ac8c15aac7df599da6ab65d56a5c4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_10.zip": "aa7b58fc58a452343a39cd587d518cb9556fb94409cd749212142b97bf70bea4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_11.zip": "b41072a7ff1dbdd79d965a1d300fcae618060fedaac1b1d5ccb577fc002aa0b1",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2020/filesystem/cig_csv_2020_12.zip": "9587773750dfbd19c73bf9d7eb90e51551801e667c1befa26b3490328a769151",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_01.zip": "6895a0b8f4361674d68990f58422bf6155423292c5a9c53934f3a42354049b95",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_02.zip": "72cbef0fc6c55430a7594a6f4f80578b15f9c5210e153f8b207029bfc17a0618",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_03.zip": "da6567857e7d1fb861fdc2e2522fb94be1b0a7632dbb0ac32ff249147254cf44",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_04.zip": "cbe80adc41a6112f263a8fc9bd5a234695ca8c50f9cbdb3b080b62e265667a50",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_05.zip": "c87567ba9ba5b2be977e64a9cacb80d9765c85909030745815a47ee61a36dca0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_06.zip": "62f5271d2c490774da22bf869e0ce40ba1becaa55c6a013741eb7cbd25640de0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_07.zip": "3a8ff826f5ca14817fb77a5690d1f2e8bfb1d82f3a034500bb749809027d4497",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_08.zip": "bf43a1e4e0977bb995c722c7a39b9cd2a7e09aa52b26df448a60f610595c8434",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_09.zip": "1fd07d0f65a5f63eddc049b217c10b3f62ec61d7b0951610547f9d3631b145fd",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_10.zip": "dfc149ff5c32289c32ff1fd7c2f1c800565e0c523b5f9e3c893fd22105287eb3",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_11.zip": "4bf52a5e9cd2607d87ed01eda20d12fe7c6fbce8ed672dc6ede09425e9a3cc94",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2021/filesystem/cig_csv_2021_12.zip": "a9f05e85d1f6516357efe2d2029e8ab26aa68666338e05329b954ac8721f6019",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_01.zip": "629b45ddfeed214c72852d78b470a1a8f4c3ad836cabafd4d2209747318c6ff9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_02.zip": "614fe27ef3bc22759242606532fd31743f13defea14639c780071b1841a6b1d4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_03.zip": "ccb4adda672c75ff724468b16f303bac50ede72f7cc9e501737836967107a6b0",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_04.zip": "1ea9314d0e95a088f2d86b907c7671cf380f9ed3369c4df51a9440a33416586c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_05.zip": "fd444e00bbe0eef701dd76160e7c2803e425248a4aa591549ee37f2cafab43b2",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_06.zip": "720f0409f5cc2d02667a1eb2dc98a874bcd712686b71466bb8af2a7abbd47f89",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_07.zip": "9bb0aedb4855742286913e489b1c37a331984d5ce55f8d830ce97c19fc83979a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_08.zip": "60186d4797d803477fdaee13ed1c3523a717f57cc011566dda11ade9b2c9a040",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_09.zip": "141da7fb2e34ba680bc7ba62fb0ad5f6df76240ce7bd259aca59d3cbdcadca80",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_10.zip": "b0322181dad83da0c2f6c5d9f3e18c73d6656514c4f3cf3ce9fcc54c01d8412f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_11.zip": "fd7ac608d3b9fdc0da598f053605f86221da9f1b4b0283d53699a6174b2649a4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2022/filesystem/cig_csv_2022_12.zip": "5e93f9e59b670ec3b8499094ed97a0c368b8885a79b783caadb9c151a7eb0728",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_01.zip": "0cebb2b0c503f98361103328cac4fbcbd6d7e904988fded2b5fcbe92455dc537",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_02.zip": "3fef993470898f84a1b02cd3f8e35ab37d713335c654491b5f8ad9ecfb7ca270",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_03.zip": "97bd7531b5481bb3776f3c37c2dfecc63a309318854824a3d026be09e10b628b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_04.zip": "5670d98b9470b80591fcec55ee5dfa7b9da490d36e8ec98f0503810484ad4133",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_05.zip": "993633748bc95656af7517c4e63163ad2be8b444a50fcb137e1550198b2c29f9",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_06.zip": "56ec481441eb7376458089bad9fa49209aa20f00ef09ed603f05524b8800ac27",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_07.zip": "ee70954d7fde4113268895a416e0791855165746e09ef03d068cc2f6351b38ec",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_08.zip": "0a7a7b28c0d3a6ca4d2ce5854e862eb4139862efe7fa5839225193288aa88129",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_09.zip": "1ad5f6c6fc11ab21096316180e930d21475eba3fd72b6a730dc33ce3c8a00a7c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_10.zip": "4d52ebd6a508142c51ffbb7f846a185e3badbb644c00571512f8d1d685700e7c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_11.zip": "1acbed137d4d982b4b4db6dca61a30fc7823d3769eb42d32c5404e3907631280",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2023/filesystem/cig_csv_2023_12.zip": "47f3437e6bfae2bc8e11a92f3726434de6332404d99c44b86dba720134c2a095",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_01.zip": "efe81759821aa292c5f1476b103e6e4a3965b18de825d19277376bfdbefa4cee",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_02.zip": "498c6a358a882943ecd4a66f78a3b275714136370a03f521cc4837a626b491fe",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_03.zip": "a83be3c989c67d370e4890904700f68303749fbdd1b2835f0190ae5c4e1cf126",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_04.zip": "28d02a34ae63d8aeb8fb002297da886200d80f812a4b79bc40a3836fbc921e29",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_05.zip": "3aa17c7166bda16728e24cd4ad3ae6b093d9ffa417cb2f4396bfbe1f03d81e93",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_06.zip": "ca7954fd97ac300638ae6c8b9a646730e96cd81c7c2362608c04359a49870566",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_07.zip": "2fc3900190dbde984bbbcc20b1a06fcdb67501fae0f9c4dc28e4f4b986ccb0b6",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_08.zip": "1b538d4e4d698758fee5a58e9a0b45d5b5d1c512b513ce83c9820eb6ca05f898",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_09.zip": "a9c13999d805c92f8501e8fc928f9a0a9ab958dd42fb1864282dd0f17fb1495b",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_10.zip": "617825370125354056dcee2726b4c146e4ee27d33bd7a376e9e763a2089b009c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_11.zip": "f9ac3ebbb1de6d51d67bf4f1ffe4656661b0d65662e0485ae8860e2f9f1e5e73",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2024/filesystem/cig_csv_2024_12.zip": "eafee656b2941f15e75bff5c05d381282db9bedcc6727bfab3aff9d5473905d4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_01.zip": "8133cd5ea2b592b4e48afa1eb0ec2db1a831f00a254de077518f8263818a371c",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_02.zip": "ddeb33a5c46fd3f1c4f2988c73e28ca148628670848b8a2a86fd12bffd02045f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_03.zip": "231c2f7713af92c1aef4314a42ccafddb2914d5a6730d8159d13bd54590f3a1f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_04.zip": "2b8651f49312bca7e356a63b29dc47da5945dfbf7b78bed57ce9aaff54ba1055",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_05.zip": "8f4ef20c3d7a3bf43ff2181341b063e86abc10e0e09232cffd11d3e193aac7b4",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_06.zip": "9006c457b0604f7040a2826ba0294da55379f75cd2756dcf1ad93a90276ebf34",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_07.zip": "ad0c6265c81e78749d703e6a474e387e043ec69f2e5400264fcd4f91599315e8",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_08.zip": "c16e7aa06d6fb0e0880cf797e6d04fdedf37e076c2fd83563dc4f4973e6b539f",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_09.zip": "1b7d009a7120b92444f9ffc8d986a75bdd008cf86623721692e7f74bbf9ff154",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_10.zip": "6e7e467cbb008cc846ee096d3b8e1955fe338d3426a913f0750218bca52901d5",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_11.zip": "cb40213cb6b294650099bf6a6ccd656d9139c374796c903302d17359accc2e60",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-2025/filesystem/cig_csv_2025_12.zip": "6f696155e0b2ab4b2d608fe403e1bdc88a8a2c0d08812de325dd97ddedc6013a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260401-cig_csv.zip": "e28d7e1baf014cce351277e8556a4b3f3d0acaada65eef5c8544198e8f697ac1",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260501-cig_csv.zip": "8dc8134d225e7c5e3320b31290fa422a1fabb5a1e1668351d44a3662b06667bf",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260601-cig_csv.zip": "cc0fd616ff3b47d8737e7bbc5953e587749a063dc86b92a2e3974e3b1ce93483",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260701-cig_csv.zip": "925d561d26a5af5ba1ed9563ee67725566890f3de13d1419b5c43da98808991d",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260801-cig_csv.zip": "b0358e9338e44295ce5240cf629ef22d5a87870dca026c27a241e2d99345c5cb",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260901-cig_csv.zip": "ec7f96dbb6a5d21731fb1ab58fcbbd20616a2957363d2a05918adfbf3e8c435a",
+    "archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20261001-cig_csv.zip": "204f820f5222f6c975c45998b2bd8f69bec0ca90a4cbeea55e7a25ec09c0924a"
+   }
+  },
+  "codice_e_configurazione": {
+   "tools/analisi/imbuto.py": "b260e4f5817b1fcff5af13fc3c692bce57b80d6988784e9402f3c34c0580279b",
+   "tools/analisi/classifica.py": "73246da1a988a39e3bf88e550cfb181d0c7d3d72668f2c026fb1a94377e2741f",
+   "tools/analisi/attribuisci_provider.py": "160986180d051523d7f7c3401d06e11f16d28b77f479ab3bad7315fa046da7cf",
+   "tools/verifiche/imbuto_prova_034.py": "6351fa2dac3a0c3284edf2b73b420ab2ef8694ac143caff0ef6342ca83480c5c",
+   "tools/verifiche/imbuto_strati.py": "2678768c047d4fec0c65b368260d594954aeaac596b0eb567bb052358e1dfdce",
+   "tools/verifiche/imbuto_tetti.py": "3fe12e22935a7128c09f62c6c80d51c069545f292fa671192a558431eda1952b",
+   "tools/verifiche/imbuto_revisione.py": "4838a471dec1aac809dffaeb5f36cc45085e1a4b6cb670908f867adc0046269e",
+   "tools/verifiche/imbuto_licenze.py": "4b0e87986e115d0875c5523392a222271806ff428540e7c98dc9b2d0559e3964",
+   "tools/verifiche/imbuto_cig_ripetuti.py": "b7ca2c92f29d4be84b535ce902557bf78705e05efb94590927fb622c77968271",
+   "tools/verifiche/imbuto_bdncp.py": "93dc71a109e6ba19c34f10f4a4f058fdf4202ceb358971e1031d9c2cd686a4a8",
+   "tools/llm/raffinamento.py": "c83f1cbe23f5efb3214ad13d406ca4e223194ffa3e8d037486d5e7416aa4e85f",
+   "config/budget.yaml": "bbbea5a3d2d88020299939d95242eacf051d518256e849960b605216d86dc1af",
+   "config/iniziative_ict.yaml": "756ec84ee1d8d3c26c6a1796bf268c6cbf33da3932d289e6249c095d4215c24b",
+   "config/lotti_cloud.yaml": "522360dcecc4f37aea1026e897e6a1617f989f9e1df5d0f681574d31a8da292e",
+   "config/mappa-imbuto.yaml": "c535ce35af0533f2b301075064d0f94a2123332f98d785556642693b82a8fcc0",
+   "config/marchi_cloud.yaml": "7e62f8778b23a9d7ccaf6193d308fd4475da24d6964289058dc1b7616bd241c6",
+   "config/marchi_cloud_fonti.yaml": "f371263df8c829e47e1b33de9537e0007f2e77455bf71a3948c27d05a2c5f805",
+   "config/perimetro_cpv.yaml": "f52159ffba56842a78c354155a9023ea74dbfd4001307883505feac39932ccae",
+   "config/risorse.yaml": "af072a0466bdb01c186d75cfc614b2cc97e2ebdeb5ea08f8ea2c9099da044bb7",
+   "config/rivenditori_capogruppo.yaml": "befbf4a01f773152df2e42144f8b93ad44ce650486f56c4eb9ccce98d1b388c3",
+   "config/saas_host.yaml": "921066ed2fb8ae835af565f6bedf6f0e01494f7e37330041f962fe8623f6f30a",
+   "config/saas_infrastruttura.yaml": "e100b2e1c1c19c0e79cd4492605e57594c774f403f4f3739eaceb731959b6100",
+   "config/tipi_soggetto.yaml": "0a894318ba8e2d8831dcd1e2caebd511dd83fdfa15c9283069133968d57fe33d",
+   "config/usi-dataset.yaml": "31022ccdb60bc7e23f0a3c7ba324793e5f8da80ca7054b2cbe9ddfb9037b0089"
+  },
+  "fuori_archivio": {
+   "lavoro/pvl/cig_link.csv": {
+    "sha256": "0bfde73703099c9fbddf761bb52fa82f5ce8e1da1b881344b2cdf17d4405fd92",
+    "in_git": false,
+    "usato_da": "imbuto_strati (link PVL per strato)"
+   },
+   "lavoro/convenzioni/attuativi.csv": {
+    "sha256": "5d9bcf855e9c744fdef125d539a27bd51f909a88338c7aaf27657c1971349d2f",
+    "in_git": false,
+    "usato_da": "imbuto_licenze (attuativi delle convenzioni)"
+   },
+   "lavoro/raffinamento/pacchetti/d*.jsonl": {
+    "file": 355,
+    "sha256_concatenati": "6789a26f95c0f8e323e739278ccdfb90ffb4ae68c6b4a7416580c32db0c65969",
+    "in_git": false,
+    "usato_da": "raffinamento.py esito (ingresso di L3: importo e oggetto)"
+   }
+  }
+ },
+ "note": [
+  "**Ordine delle righe** (ict.csv, licenze-cig.csv, raffinamento-l2.csv): imbuto_prova_034.py legge il delta da duckdb con `preserve_insertion_order=false` e 2 thread, quindi l'ordine delle righe di ict.csv cambia da un'esecuzione all'altra; chi legge ict.csv in sequenza eredita l'ordine. Il contenuto è identico (sha256 canonico, righe ordinate, uguale). Per questo lo sha256 di ict.csv registrato da tetti-fonti.json, bdncp/riepilogo.json e raffinamento-l2.json è diverso. Correzione proposta: scrivere ict.csv ordinato per (anno, cig) e registrare lo sha256 canonico.",
+  "**Virgola mobile** (distribuzione.json, strati.json, solo i campi `euro` e `euro_link` non arrotondati del link PVL): somme parallele di duckdb in ordine diverso, differenza massima sotto 0,001 €. Correzione proposta: arrotondare al centesimo.",
+  "**Deviazione della prova**: «prepara» è andata in Out of Memory con 8 GB di memoria virtuale (ulimit -v) mentre il 9/11 era riuscita; rifatta con 12 GB (memory_limit di duckdb invariato a 4 GB). La variante A ha girato con 8 GB come l'originale.",
+  "**Ingressi fuori dall'archivio content-addressed e fuori da git**: lavoro/pvl/cig_link.csv (scaricamento API PVL del 4/11), lavoro/convenzioni/attuativi.csv, lavoro/raffinamento/pacchetti/ (ingressi di L3). Oggi sono sul server e la prova li ha riletti; da un clone pulito mancherebbero. Correzione proposta: versionarli o archiviarli con sha256.",
+  "**Esiti del modello linguistico**: L3, L4 e via 6 non si rigenerano: si rileggono gli esiti versionati in git."
+ ],
+ "non_ripetibili_per_natura": {
+  "L3": "Claude Opus legge il testo (report/metodo/llm/raffinamento/esiti/, versionati): si rilegge, non si rigenera",
+  "L4": "Claude Opus cerca e legge gli atti (report/metodo/llm/raffinamento-l4/esiti/, versionati; atti con sha256 in dati/atti/)",
+  "via6_revisione": "letture del modello (report/metodo/llm/imbuto-g1g3, imbuto-revisione): ingressi versionati di imbuto_revisione"
+ }
+}

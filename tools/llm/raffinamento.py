@@ -33,7 +33,7 @@ R = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(R / "tools" / "analisi"))
 from imbuto import RX_ICT  # noqa: E402
 
-ICT = R / "lavoro/imbuto/ict.csv"
+ICT = R / os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv")  # IMBUTO_ICT / IMBUTO_ESITI_OUT: prova di ripetibilità (19/11)
 LAV = R / "lavoro/raffinamento"
 RV = R / "report/metodo/llm/raffinamento"
 ISTR = RV / "istruzioni-l3.md"
@@ -118,7 +118,7 @@ GIUDIZI_L2 = {
 
 
 def l2(data):
-    out = R / f"esiti/{data}/imbuto"; out.mkdir(parents=True, exist_ok=True)
+    out = R / (os.environ.get("IMBUTO_ESITI_OUT") or f"esiti/{data}/imbuto"); out.mkdir(parents=True, exist_ok=True)
     righe, tot = [], collections.defaultdict(lambda: [0, 0.0])
     for r in s6_dal_2024():
         g = r["gruppo"][:2]; imp = float(r["importo"] or 0)
@@ -204,7 +204,7 @@ def leggi_l3(massimo=None):
 
 
 def esito(data):
-    out = R / f"esiti/{data}/imbuto"; out.mkdir(parents=True, exist_ok=True)
+    out = R / (os.environ.get("IMBUTO_ESITI_OUT") or f"esiti/{data}/imbuto"); out.mkdir(parents=True, exist_ok=True)
     ing = {}
     for p in sorted((LAV / "pacchetti").glob("d*.jsonl")):
         for e in jl(p): ing[e["cig"]] = e

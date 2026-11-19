@@ -31,9 +31,9 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 # IMBUTO_VERSIONE=0.3.4 (#71): legge e scrive in esiti/2026-11-18/imbuto/ (tetti-cig-v2.csv della 0.3.4); default 0.3.1
 VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
-E = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
+E = os.path.join(RADICE, os.environ.get("IMBUTO_ESITI_OUT") or {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])  # IMBUTO_ESITI_OUT: ripetibilità
 OUT = os.path.join(E, "licenze-cig.csv")
-ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
+ICT = os.path.join(RADICE, os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv"))  # IMBUTO_ICT: prova di ripetibilità (#71)
 GIUR = {"Microsoft": "extra-UE", "Oracle": "extra-UE", "VMware": "extra-UE", "Cloudera": "extra-UE", "Salesforce": "extra-UE",
         "Google": "extra-UE", "Amazon Web Services": "extra-UE", "ServiceNow": "extra-UE", "Cisco Webex": "extra-UE",
         "SAP": "UE", "TIM": "IT", "Fastweb": "IT", "Retelit": "IT", "Aruba": "IT", "WIIT": "IT", "Polo Strategico Nazi": "IT",

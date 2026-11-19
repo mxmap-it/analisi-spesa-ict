@@ -27,7 +27,7 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 OUT = os.path.join(RADICE, os.environ.get("IMBUTO_ESITI", "esiti/2026-11-09/imbuto"))  # IMBUTO_ESITI: cartella di uscita (dopo la rigenerazione)
 W = os.path.join(RADICE, "lavoro/imbuto/ripetuti")
-ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
+ICT = os.path.join(RADICE, os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv"))  # IMBUTO_ICT: prova di ripetibilità (#71)
 S36 = ("S3-convenzione-lotto", "S4-marchio", "S5-ict-non-cloud", "S6-residuo")
 REGOLE = (("tutte-le-righe-0.3.1", None), ("prima-riga-0.3.2", "prima"), ("ultima-riga-base-55.3", "ultima"),
           ("cpv-ict-0.3.4", "regola034"))

@@ -28,13 +28,14 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.normpath(os.path.join(QUI, "..", ".."))
 # IMBUTO_VERSIONE=0.3.4 (#71): imbuto rigenerato il 18/11/2026; default 0.3.1 (3/11)
 VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
-ESITI = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
+ESITI = os.path.join(RADICE, os.environ.get("IMBUTO_ESITI_OUT") or {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])  # IMBUTO_ESITI_OUT: ripetibilità
 OUT = os.path.join(ESITI, "tetti-cig.csv")
-ICT = os.path.join(RADICE, "lavoro/imbuto/ict.csv")
+ICT = os.path.join(RADICE, os.environ.get("IMBUTO_ICT", "lavoro/imbuto/ict.csv"))  # IMBUTO_ICT: prova di ripetibilità (#71)
 INIZ = os.path.join(RADICE, "report/convenzioni/database/iniziative.json")
 YAML_INIZ = os.path.join(RADICE, "config/iniziative_ict.yaml")
 RIEP = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json",
                              "0.3.4": "esiti/2026-11-18/imbuto/riepilogo-0.3.4.json"}[VERSIONE])
+RIEP = os.path.join(RADICE, os.environ["IMBUTO_RIEP"]) if os.environ.get("IMBUTO_RIEP") else RIEP
 SOGLIA = 50e6
 RX_TESTO = re.compile(r"accordo\s+quadro|convenzion|massimal|concession|\bpsn\b|polo\s+strategico", re.I)
 CAMPI = ["cig", "anno", "strato", "sottoclasse", "gruppo", "importo", "classe", "via", "euro_netti", "cig_accordo_quadro",

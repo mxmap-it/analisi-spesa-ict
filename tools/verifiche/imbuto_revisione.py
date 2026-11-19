@@ -30,9 +30,10 @@ E = os.path.join(RADICE, "esiti/2026-11-06/imbuto")
 # IMBUTO_VERSIONE=0.3.4 (#71): tetti-cig.csv e riepilogo dell'imbuto rigenerato il 18/11/2026 (esiti/2026-11-18/imbuto/),
 # dove si scrive anche tetti-cig-v2.csv; campione, giudizi, PVL, revisione e QE restano quelli del 6/11. Default 0.3.1.
 VERSIONE = os.environ.get("IMBUTO_VERSIONE", "0.3.1")
-E_OUT = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])
+E_OUT = os.path.join(RADICE, os.environ.get("IMBUTO_ESITI_OUT") or {"0.3.1": "esiti/2026-11-06/imbuto", "0.3.4": "esiti/2026-11-18/imbuto"}[VERSIONE])  # IMBUTO_ESITI_OUT: ripetibilità
 RIEP = os.path.join(RADICE, {"0.3.1": "esiti/2026-11-03/imbuto/riepilogo-0.3.1.json",
                              "0.3.4": "esiti/2026-11-18/imbuto/riepilogo-0.3.4.json"}[VERSIONE])
+RIEP = os.path.join(RADICE, os.environ["IMBUTO_RIEP"]) if os.environ.get("IMBUTO_RIEP") else RIEP
 RX_PA_PAGA = __import__("re").compile(r"energ|termic|efficient|trigenera|cogenera|calore|illuminazion|trasporto pubblico|\btpl\b|infrastruttura tecnologica|centro (unico )?di cottura", __import__("re").I)
 leggi = lambda n: list(csv.DictReader(open(os.path.join(E, n), encoding="utf-8")))
 
