@@ -1,0 +1,395 @@
+{
+ "versione": "0.1",
+ "ingressi": "2026-11-09",
+ "acn_csv_sha256": "8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96",
+ "sintesi": {
+  "schede_saas": 247,
+  "lette": 125,
+  "con_infrastruttura_dichiarata": 21,
+  "su_hyperscaler": 12,
+  "meur_fornitori_con_prova": 57.4
+ },
+ "per_fornitore": {
+  "Maggioli Spa": {
+   "meur_s2": 37.91,
+   "schede_saas": 45,
+   "non-archiviata": 40,
+   "ignoto": 4,
+   "hyperscaler": 1,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    0.022,
+    0.511,
+    1.0
+   ]
+  },
+  "Datamanagement Italia s.r.l.": {
+   "meur_s2": 15.11,
+   "schede_saas": 4,
+   "ignoto": 4,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "svic srl": {
+   "meur_s2": 8.63,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "APKAPPA SRL": {
+   "meur_s2": 7.06,
+   "schede_saas": 3,
+   "it-ue": 2,
+   "hyperscaler": 1,
+   "schede_con_infrastruttura": 3,
+   "quota_hyperscaler": [
+    0.333,
+    0.333,
+    0.333
+   ]
+  },
+  "Halley Informatica Srl": {
+   "meur_s2": 6.58,
+   "schede_saas": 2,
+   "ignoto": 1,
+   "non-archiviata": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Deda Next S.r.l.": {
+   "meur_s2": 4.73,
+   "schede_saas": 3,
+   "it-ue": 1,
+   "ignoto": 2,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    0.0,
+    0.333,
+    0.667
+   ]
+  },
+  "Fastweb S.p.A.": {
+   "meur_s2": 4.52,
+   "schede_saas": 12,
+   "non-archiviata": 12,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "TIM S.p.A.": {
+   "meur_s2": 4.44,
+   "schede_saas": 2,
+   "non-archiviata": 2,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Almaviva S.p.A.": {
+   "meur_s2": 4.12,
+   "schede_saas": 9,
+   "ignoto": 2,
+   "non-archiviata": 7,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "SISCOM SPA": {
+   "meur_s2": 4.11,
+   "schede_saas": 8,
+   "non-archiviata": 8,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "We-Com s.r.l.": {
+   "meur_s2": 3.79,
+   "schede_saas": 10,
+   "non-archiviata": 8,
+   "ignoto": 2,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "PA Digitale S.p.A.": {
+   "meur_s2": 3.45,
+   "schede_saas": 2,
+   "ignoto": 1,
+   "non-archiviata": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Kibernetes s.r.l.": {
+   "meur_s2": 3.11,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "ADS automated data systems S.p.A.": {
+   "meur_s2": 2.44,
+   "schede_saas": 5,
+   "non-archiviata": 5,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Boxxapps S.r.l.": {
+   "meur_s2": 2.42,
+   "schede_saas": 9,
+   "non-archiviata": 8,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Municipia SPA": {
+   "meur_s2": 1.98,
+   "schede_saas": 16,
+   "non-archiviata": 13,
+   "hyperscaler": 3,
+   "schede_con_infrastruttura": 3,
+   "quota_hyperscaler": [
+    0.188,
+    0.594,
+    1.0
+   ]
+  },
+  "Parsec 3.26 S.r.l.": {
+   "meur_s2": 1.97,
+   "schede_saas": 8,
+   "non-archiviata": 8,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Informatica Alto Adige Spa": {
+   "meur_s2": 1.73,
+   "schede_saas": 4,
+   "non-archiviata": 4,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "3PItalia SpA": {
+   "meur_s2": 1.61,
+   "schede_saas": 6,
+   "non-archiviata": 3,
+   "ignoto": 3,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "BUSINESS INTEGRATION PARTNERS S.P.A.": {
+   "meur_s2": 1.61,
+   "schede_saas": 1,
+   "non-archiviata": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Engineering D.HUB SPA": {
+   "meur_s2": 1.6,
+   "schede_saas": 1,
+   "non-archiviata": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "IMMEDIA S.P.A.": {
+   "meur_s2": 1.45,
+   "schede_saas": 2,
+   "ignoto": 2,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "C&C Sistemi srl": {
+   "meur_s2": 1.34,
+   "schede_saas": 2,
+   "ignoto": 2,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "PALITALSOFT SRL": {
+   "meur_s2": 1.29,
+   "schede_saas": 12,
+   "ignoto": 12,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Leonardo S.p.a.": {
+   "meur_s2": 1.19,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Net Service SpA": {
+   "meur_s2": 1.05,
+   "schede_saas": 3,
+   "it-ue": 2,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 2,
+   "quota_hyperscaler": [
+    0.0,
+    0.167,
+    0.333
+   ]
+  },
+  "PUBLISYS S.P.A.": {
+   "meur_s2": 1.01,
+   "schede_saas": 2,
+   "hyperscaler": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    0.5,
+    0.75,
+    1.0
+   ]
+  },
+  "EUSTEMA S.P.A.": {
+   "meur_s2": 0.94,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Datagraph S.r.l.": {
+   "meur_s2": 0.92,
+   "schede_saas": 2,
+   "it-ue": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    0.0,
+    0.25,
+    0.5
+   ]
+  },
+  "Prodigys Technology": {
+   "meur_s2": 0.92,
+   "schede_saas": 11,
+   "ignoto": 11,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Technical Design s.r.l.": {
+   "meur_s2": 0.92,
+   "schede_saas": 2,
+   "ignoto": 2,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "GPI SPA": {
+   "meur_s2": 0.88,
+   "schede_saas": 12,
+   "hyperscaler": 3,
+   "ignoto": 9,
+   "schede_con_infrastruttura": 3,
+   "quota_hyperscaler": [
+    0.25,
+    0.625,
+    1.0
+   ]
+  },
+  "Arionline srl": {
+   "meur_s2": 0.85,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "A Software Factory Srl": {
+   "meur_s2": 0.85,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "ACCATRE s.r.l.": {
+   "meur_s2": 0.76,
+   "schede_saas": 7,
+   "ignoto": 7,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Gruppo Spaggiari Parma S.p.A.": {
+   "meur_s2": 0.61,
+   "schede_saas": 6,
+   "ignoto": 6,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Dedalus Italia spa": {
+   "meur_s2": 0.57,
+   "schede_saas": 10,
+   "ignoto": 9,
+   "it-ue": 1,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    0.0,
+    0.45,
+    0.9
+   ]
+  },
+  "P.A. Advice SpA": {
+   "meur_s2": 0.54,
+   "schede_saas": 3,
+   "ignoto": 3,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Pasubio Tecnologia srl": {
+   "meur_s2": 0.53,
+   "schede_saas": 3,
+   "ignoto": 3,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Consiag Servizi Comuni srl": {
+   "meur_s2": 0.47,
+   "schede_saas": 0,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "Reply Public Sector": {
+   "meur_s2": 0.44,
+   "schede_saas": 1,
+   "hyperscaler": 1,
+   "schede_con_infrastruttura": 1,
+   "quota_hyperscaler": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "Ambito S.r.l.": {
+   "meur_s2": 0.43,
+   "schede_saas": 2,
+   "it-ue": 1,
+   "hyperscaler": 1,
+   "schede_con_infrastruttura": 2,
+   "quota_hyperscaler": [
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  "TeamSystem SpA": {
+   "meur_s2": 0.42,
+   "schede_saas": 5,
+   "ignoto": 3,
+   "it-ue": 1,
+   "hyperscaler": 1,
+   "schede_con_infrastruttura": 2,
+   "quota_hyperscaler": [
+    0.2,
+    0.5,
+    0.8
+   ]
+  },
+  "Gestione Servizi SpA": {
+   "meur_s2": 0.4,
+   "schede_saas": 5,
+   "ignoto": 5,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  },
+  "P.A. A.B.S. Srl - Partners Associates Advanced Business Solutions": {
+   "meur_s2": 0.37,
+   "schede_saas": 1,
+   "ignoto": 1,
+   "schede_con_infrastruttura": 0,
+   "quota_hyperscaler": null
+  }
+ }
+}

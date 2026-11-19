@@ -7,8 +7,11 @@
 #   prove A/B solo IT -> 0/0/0,25 (i dati potrebbero stare altrove); ignoto -> null (prende la quota media, pesata in euro, dei noti).
 # DNS/AS: tools/verifiche/saas_infra_fornitori.py (config/saas_host.yaml) -> esiti/2026-11-09/infrastruttura-sottostante/saas-infra-dns.json
 # ACN = CSV schede_qualificate_tipo_servizi_cloud_csv sha256 8559a074c7484f85608701adec0248841b99370d2fb2db0ab3ffdb5586127c96
-versione: 0.3
-data: 2026-11-09
+versione: 0.4
+data: 2026-11-19
+# v0.4 (19/11/2026, #70): 8 fornitori dal 22° al 45° per euro, dalle schede ACN archiviate (tools/verifiche/saas_schede_acn.py,
+#   esiti/2026-11-19/infrastruttura-sottostante/schede-acn.csv). Quota: basso = schede su hyperscaler / tutte le schede SaaS del
+#   fornitore; alto = (hyperscaler + schede che tacciono) / tutte; centrale = media. Attendibilità B (dichiarazione ad ACN).
 fornitori:
 - nome: "Maggioli Spa"
   importo_s2_meur: 37.91
@@ -106,6 +109,15 @@ fornitori:
 - {nome: "3PItalia SpA", importo_s2_meur: 1.61, classe: "provider-IT (solo sito aziendale, Server Plan)", quota_hyperscaler: [0, 0.1, 0.4], attendibilita: C, fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-3368", sha256: d4c0e0d936ef3a809261761d48f9d26d543730c0a239b1b073bafd180cfd36d0}]}
 - {nome: "BUSINESS INTEGRATION PARTNERS S.P.A.", importo_s2_meur: 1.61, classe: "ignoto (privacydive.com su Namecheap US: probabile solo sito)", quota_hyperscaler: [0, 0.3, 0.8], attendibilita: C, fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-2133", sha256: cb1ba0abc2069d9695c630b6a819e1cd6f379b3007c205b9be8371fa2695e6ba}]}
 - {nome: "Engineering D.HUB SPA", importo_s2_meur: 1.60, classe: proprio-IT, quota_hyperscaler: [0, 0, 0.25], attendibilita: B, fonti: [{url: ACN, scheda: IA-136}]}
+# --- v0.4: dalle schede ACN (B), fornitori 22-45 per euro con almeno una scheda che dichiara l'infrastruttura
+- {nome: "Net Service SpA", importo_s2_meur: 1.05, classe: "provider-IT: Community Cloud Lepida (SA-4435), Aruba (SA-3214)", quota_hyperscaler: [0, 0.167, 0.333], attendibilita: "B (schede ACN, 2 su 3 dichiarano)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-4435"}, {url: "https://www.acn.gov.it/portale/en/w/sa-3214"}]}
+- {nome: "PUBLISYS S.P.A.", importo_s2_meur: 1.01, classe: "hyperscaler:AWS (URBE AWS, SA-2435)", quota_hyperscaler: [0.5, 0.75, 1], attendibilita: "B (schede ACN, 1 su 2 dichiara)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-2435"}]}
+- {nome: "Datagraph S.r.l.", importo_s2_meur: 0.92, classe: "provider-IT: Lepida (SA-4434)", quota_hyperscaler: [0, 0.25, 0.5], attendibilita: "B (schede ACN, 1 su 2)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-4434"}]}
+- {nome: "GPI SPA", importo_s2_meur: 0.88, classe: "hyperscaler: AWS (POHEMA, SA-6065), Oracle Cloud (JOBTIME EVO, SA-607, SA-6067)", quota_hyperscaler: [0.25, 0.625, 1], attendibilita: "B (schede ACN, 3 su 12)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-6065"}, {url: "https://www.acn.gov.it/portale/en/w/sa-6067"}]}
+- {nome: "Dedalus Italia spa", importo_s2_meur: 0.57, classe: "provider-IT: Engineering (HIS Solution, SA-5409)", quota_hyperscaler: [0, 0.45, 0.9], attendibilita: "B (schede ACN, 1 su 10)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-5409"}]}
+- {nome: "Reply Public Sector", importo_s2_meur: 0.44, classe: "hyperscaler:Google Cloud (Ticuro Reply, SA-4937)", quota_hyperscaler: [1, 1, 1], attendibilita: "B (scheda ACN unica)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-4937"}]}
+- {nome: "Ambito S.r.l.", importo_s2_meur: 0.43, classe: "misto: Mosaico DigitAI su Lepida (SA-6400) e su Azure (SA-2626)", quota_hyperscaler: [0.5, 0.5, 0.5], attendibilita: "B (schede ACN, 2 su 2)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-6400"}, {url: "https://www.acn.gov.it/portale/en/w/sa-2626"}]}
+- {nome: "TeamSystem SpA", importo_s2_meur: 0.42, classe: "misto: Aruba (SA-6012), Azure (SA-773)", quota_hyperscaler: [0.2, 0.5, 0.8], attendibilita: "B (schede ACN, 2 su 5)", fonti: [{url: "https://www.acn.gov.it/portale/en/w/sa-6012"}, {url: "https://www.acn.gov.it/portale/en/w/sa-773"}]}
 psn_libro_2025: {url: "https://www.polostrategiconazionale.it/app/uploads/2026/07/Libro-PSN-2025.pdf", sha256: b8fe9ec1b4becdbf07cf837cac4f5ef26621bda85c7bfa1162773bf9a7ed64ed, attendibilita: "A (bilancio integrato del concessionario)", pagine: "p.71-72 mix canoni; p.106 ricavi per servizio"}
 # PPdF PSN letti per ente (Riepilogo prezzi del Configuratore, lettura visiva): ARES Sardegna 12 schede (PDF sha256
 # 524b568aebbf59b79d79faef32dcc02e6badfd868b54d2f155edfd66c9199231, p. 155-179), USR Lazio (fef2aea8...).

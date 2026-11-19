@@ -1,4 +1,7 @@
-"""Misura 1.2: giurisdizione dell infrastruttura come terzo asse (#43, #45). Versione 0.3.
+"""Misura 1.2: giurisdizione dell infrastruttura come terzo asse (#43, #45, #70). Versione 0.4.
+
+v0.4 (19/11/2026): --ingressi AAAA-MM-GG per leggere pnrr12 e psn-ppdf da un giorno precedente; 8 fornitori SaaS in piu
+(dal 22° al 45° per euro) dalle schede ACN (saas_schede_acn.py); copertura del terzo asse nell uscita.
 
 v0.3: piani dei fabbisogni PSN di 9 enti sanitari in 6 regioni (ARES contato come un ente, colonna conta=1);
 seconda lettura «localizzazione dei dati» (conta solo il Secure Public Cloud nelle region hyperscaler, non Oracle
@@ -42,7 +45,8 @@ def libro():
 
 
 def main():
-    a = argparse.ArgumentParser(); a.add_argument("--data", required=True); d = a.parse_args().data
+    a = argparse.ArgumentParser(); a.add_argument("--data", required=True); a.add_argument("--ingressi")
+    o_ = a.parse_args(); d = o_.data; di = o_.ingressi or d  # v0.4: ingressi (pnrr12, psn-ppdf) da un altro giorno
     ric, mix = libro()
     hs = [ric["Secure Public Cloud"][i] + ric["Public Cloud on PSN Managed"][i] for i in (0, 1)]
     infra = [ric["Totale"][i] - ric["Servizi migrazione"][i] - ric["Servizi di coordinamento progettuale"][i] for i in (0, 1)]
@@ -57,7 +61,7 @@ def main():
     # PSN, quota hyperscaler sui canoni per tipologia.
     # ASL/AO: centrale = misurata sui PPdF letti; basso = solo SPC ASL del Libro; alto = scheda PPdF piu alta.
     # Comuni e altri: Libro PAL (SPC; centrale + Managed = k x Oracle PSN; alto tutto Oracle + 5 di Hybrid).
-    pp = list(csv.DictReader(open(R / f"esiti/{d}/infrastruttura-sottostante/psn-ppdf.csv", encoding="utf-8"), delimiter=";"))
+    pp = list(csv.DictReader(open(R / f"esiti/{di}/infrastruttura-sottostante/psn-ppdf.csv", encoding="utf-8"), delimiter=";"))
     hs_pp = lambda r: float(r["spc"]) + float(r["managed_canone"]) + float(r["hybrid"])
     asl = [r for r in pp if r["conta"] == "1" and r["tipo"] != "altro"]  # un ente per riga (ARES = totale)
     can_asl = sum(float(r["tot_canone"]) for r in asl)
@@ -75,7 +79,7 @@ def main():
     yml = yaml.safe_load(open(R / "config/saas_infrastruttura.yaml", encoding="utf-8"))
     qf = {f["nome"]: f.get("quota_hyperscaler") for f in yml["fornitori"]}
     s = collections.Counter(); psn_t = collections.Counter(); s2f = collections.Counter()
-    for r in csv.DictReader(open(R / f"esiti/{d}/pnrr12/pnrr12-dettaglio.csv", encoding="utf-8")):
+    for r in csv.DictReader(open(R / f"esiti/{di}/pnrr12/pnrr12-dettaglio.csv", encoding="utf-8")):
         parts = r["strati"].split(" | "); w = float(r["importo_lotto"] or 0) / len(parts) / 1e6
         for p in parts:
             st, giu, forn = (p.split(":") + ["", ""])[:3]; st = st[:2]
@@ -108,7 +112,7 @@ def main():
                    "saas_con_prove_meur": round(saas_q[sc], 1), "saas_senza_prove_e_s3_s4_meur": round(ign * quota_ign[sc], 1),
                    "s5_meur": round(s5, 1), "s6_meur": round(s6, 1), "totale_extraue_infra_meur": round(base + s6, 1),
                    "quota_pct": round(100 * (base + s6) / tot, 1)}
-    res = {"data": d, "versione": "0.2", "psn_libro_2025": psn,
+    res = {"data": d, "ingressi": di, "versione": "0.4", "copertura_saas_pct": round(100 * nota_eur / s["S2"], 1), "psn_libro_2025": psn,
            "psn_ppdf": {"enti": len(asl), "regioni": sorted({r["regione"] for r in asl}), "asl_canone_hyperscaler_misurato_pct": round(asl_mis, 1),
                         "asl_canone_localizzazione_pct": round(asl_loc, 1), "asl_max_pct": round(asl_max, 1), "per_ente_pct": per_ente},
            "psn_12_per_tipologia_meur": {t: round(v, 1) for t, v in psn_t.items()},
