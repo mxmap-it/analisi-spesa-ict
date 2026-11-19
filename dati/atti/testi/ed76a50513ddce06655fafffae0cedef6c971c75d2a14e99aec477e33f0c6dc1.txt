@@ -1,0 +1,494 @@
+                                                     SCHEDA TECNICA
+
+
+ Invito per fornitura sistema gestione flotte (fleet management system) WEBFLEET
+                                    SOLUTIONS®
+
+
+
+
+Sommario
+
+
+1. Elementi del sistema di fleet management e servizio di geolocalizzazione........... 2
+  1.1.      Piattaforma web WEBFLEET SaaS e app WEBFLEET Mobile: ............................. 2
+  1.2.      Dispostivi di rilevamento dei veicoli: ....................................................................... 2
+  1.3.      Dispositivi driver terminal: ....................................................................................... 2
+  1.4.      Elenco automezzi per i quali si prevede l’installazione dei dispositivi: .................... 4
+2. Integrazione con soluzioni di terze parti ................................................................... 6
+3. Identificazione autisti ed eventuale blocco motore.................................................. 6
+4. Pianificazione, gestione e invio servizi ai mezzi: ..................................................... 7
+  4.1.      Percorsi a calendario: ............................................................................................. 7
+  4.2.      Percorsi dinamici: ................................................................................................... 7
+  4.3.      Interventi in emergenza: ......................................................................................... 8
+5. Telemetria e diagnostica mezzi per attività di manutenzione ................................. 8
+6. Integrazione gestione cronotachigrafi ...................................................................... 9
+7. Analisi e reportistica ................................................................................................... 9
+8. Protezione dei dati e gestione privacy ...................................................................... 9
+9. Tempi di consegna e sostituzione ........................................................................... 11
+10.      Installazione, formazione e assistenza tecnica ................................................... 11
+11.      Garanzia e copertura assicurativa ........................................................................ 12
+12.      Penali ...................................................................................................................... 12
+
+
+
+
+                                                                   1
+1. Elementi del sistema di fleet management e servizio di geolocalizzazione
+Al soggetto aggiudicatario è richiesta la fornitura del sistema di gestione della flotta
+aziendale (fleet management system) prodotto dalla Società WEBFLEET SOLUTIONS,
+costituito dai seguenti elementi:
+
+
+   1.1. Piattaforma web WEBFLEET SaaS e app WEBFLEET Mobile:
+      1.1.1. Si richiede l’attivazione tramite abbonamento completo di un account
+             aziendale per l’accesso alla piattaforma WEBFLEET Software as a Service
+             (Saas) e la possibilità, associata alla creazione dell’account, di effettuare
+             download illimitati della app per tablet e smartphone iPhone e Android
+             WEBFLEET Mobile.
+      1.1.2. Al momento dell’aggiudicazione, nei termini indicati nel paragrafo 9.1,
+             all’aggiudicatario è richiesto di fornire link e credenziali di accesso alla
+             piattaforma con la possibilità di realizzare un numero illimitato di utenti; per
+             ogni utente dovrà essere prevista la possibilità di limitare determinate aree e
+             funzionalità della piattaforma in funzione dell’autorizzazioni riconosciute a
+             visualizzare e/o apportare modifiche al sistema, fino alla possibilità di
+             realizzare profili utenti autorizzati alla sola visualizzazione di determinate
+             sezioni della piattaforma.
+      1.1.3. La cartografia utilizzata e visualizzabile nella piattaforma deve permettere di
+             escludere, qualora previsto dal dispositivo driver terminal, le strade non
+             percorribili dai mezzi pesanti.
+
+
+   1.2. Dispostivi di rilevamento dei veicoli:
+      1.2.1. Per ognuno dei mezzi indicati nel paragrafo 1.4 , colonne A, B, C, D, E deve
+             essere fornito un dispositivo LINK 710.
+      1.2.2. Ogni dispositivo deve essere fornito di cavi di alimentazione e collegamento
+             con la batteria dei veicolo, cavi per collegamento con CAN bus e
+             cronotachigrafo ed elementi di fissaggio, utili a che questo risulti inamovibile
+             se non da parte del personale tecnico autorizzato dell’officina.
+      1.2.3. Il canone di utilizzo della sim per il funzionamento del modulo GSM/GPRS
+             deve essere incluso nell’abbonamento.
+
+
+   1.3. Dispositivi driver terminal:
+      1.3.1. Dispositivi installati sui mezzi di cui al paragrafo 1.4, colonne A e B
+         1.3.1.1. Per ognuno dei mezzi indicati deve essere fornito un dispositivo PRO
+                   8375 TRUCK, utile all’esecuzione delle seguenti funzioni da parte
+                   dell’autista:
+                        Ricezione e accettazione del dettaglio delle richieste di
+                            intervento e degli ordini inviati dalla piattaforma.
+
+
+                                             2
+                     Navigazione con sistema di supporto vocale verso le
+                      destinazioni ed eventuale conferma della loro esecuzione.
+                   Ricezione e invio alla piattaforma di messaggi di testo.
+                   Possibilità di utilizzo esterno al veicolo per acquisizione di
+                      immagini e video, scansione di codici a barre, NFC e RFID
+                   Identificazione dell’autista, come descritto nel capitolo 3.
+                   Funzioni specifiche di Truck Navigation per l’esclusione, in caso
+                      di necessità, delle strade non adatte al traffico dei veicoli
+                      pesanti.
+   1.3.1.2.   Ogni dispositivo deve essere fornito di supporto per il fissaggio
+              (installazione fissa), cavi di alimentazione e collegamento. Le mappe
+              di navigazione devono essere precaricate e l’aggiornamento periodico
+              di queste deve essere gratuito ed incluso nella fornitura.
+   1.3.1.3.   Ogni dispositivo deve essere fornito privo di microSIM LTE 4G, il cui
+              acquisto e costo di abbonamento sarà eventualmente a carico della
+              stazione appaltante.
+   1.3.1.4.   Per i dispositivi in oggetto è richiesta la dotazione standard dei
+              seguenti elementi:
+                    Coperture di protezione anti caduta
+                    Cinturino di impugnatura per uso esterno
+
+1.3.2. Dispositivi installati sui mezzi di cui al paragrafo 1.4, colonna C
+   1.3.2.1. Per ognuno dei mezzi indicati deve essere fornito un dispositivo PRO
+             7350, utile all’esecuzione delle seguenti funzioni da parte dell’autista:
+                  Ricezione e accettazione del dettaglio delle richieste di
+                      intervento e degli ordini inviati dalla piattaforma.
+                  Navigazione con sistema di supporto vocale verso le
+                      destinazioni ed eventuale conferma della loro esecuzione.
+                  Ricezione e invio alla piattaforma di messaggi di testo
+                  Identificazione dell’autista, come descritto nel capitolo 3.
+   1.3.2.2. Ogni dispositivo deve essere fornito di supporto per il fissaggio
+             (installazione fissa), cavi di alimentazione e collegamento. Le mappe
+             di navigazione devono essere precaricate e l’aggiornamento periodico
+             di queste deve essere gratuito ed incluso nella fornitura.
+
+1.3.3. Dispositivi installati sui mezzi di cui al paragrafo 1.4, colonna D
+   1.3.3.1. Per ognuno dei mezzi indicati deve essere fornito un dispositivo PRO
+             8350, utile all’esecuzione delle seguenti funzioni da parte dell’autista:
+                  Navigazione con sistema di supporto vocale verso le
+                      destinazioni.
+                  Ricezione e invio alla piattaforma di messaggi di testo
+                  Possibilità di utilizzo esterno al veicolo per acquisizione di
+                      immagini e video, scansione di codici a barre, NFC e RFID
+                  Identificazione dell’autista, come descritto nel capitolo 3.
+                                      3
+       1.3.3.2.   Ogni dispositivo deve essere fornito di supporto per il fissaggio
+                  (installazione fissa), cavi di alimentazione e collegamento. Le mappe
+                  di navigazione devono essere precaricate e l’aggiornamento periodico
+                  di queste deve essere gratuito ed incluso nella fornitura.
+
+   1.3.4. Non è richiesta l’installazione di alcun dispositivo driver terminal sui mezzi
+          indicati nel paragrafo 1.4, colonna E
+
+1.4. Elenco automezzi per i quali si prevede l’installazione dei dispositivi:
+   Si riporta in tabella l’elenco dei mezzi componenti la flotta aziendale di ASCIT SpA,
+   suddivisi per tipologia di dispositivi dei quali si prevede la fornitura ed installazione.
+
+
+
+
+                                            4
+                               Colonna A                    Colonna B                         Colonna C             Colonna D                          Colonna E
+                        Automezzi per servizi          Automezzi per servizi
+                                                                                       Automezzi per servizi                                    Automezzi con solo
+                         commerciali privi di             commerciali con                                                Automobili
+                                                                                       PAP UD, spazzatrici e                                       dispositivo di
+                        cronotachigrafo in uso         cronotachigrafo in uso                                            verificatori
+                                                                                          auto aziendali                                            rilevamento
+                             (PAP UND)              (scarrabili, ragno e pianale)
+                     Modello                 n°   Modello                     n°    Modello               n°   Modello                  n°   Modello               n°
+
+                     ISUZU 75                8    Fiat Iveco 190e30           1     ISUZU 50              36   Fiat Panda               3    Land Rover 110        1
+                                                                                                                                             Piaggio Porter
+                     IVECO 150E28            1    Iveco 450S/E4               1     Piaggio Maxi Porter   20                                                       1
+                                                                                                                                             (pianale)
+                                                                                    JOHNSTON 500
+                     IVECO 65C/E4            1    DAF FAN CF 85               2                           2                                  Fiat Fiorino          1
+                                                                                    CX400
+                     IVECO 150e22            1    DAF FAN CF 410              2     JOHNSTON CX401        2                                  ISUZU 50 (esterni)    6
+                                                                                                                                             Piaggio Maxi Porter
+                     MERCEDES Econic         1    IVECO 260s40Y               1     FIAT Panda            5                                                        4
+                                                                                                                                             (esterni)
+                     IVECO 260s80            2    Iveco 50/E4                 1
+                     IVECO 310/E4            1    ISUZU 75 (pianale)          1
+                     IVECO 260s30            1    IVECO 100                   1
+                                                  IVECO 120EL2BA              1                                                                                         TOTALE
+Dispositivi di
+rilevamento dei                   16                              11                             65                           3                             13           108
+veicoli LINK 710
+
+Dispositivi driver
+terminal     Tom                                                                                 65                                                                       65
+Tom PRO 7350
+
+Dispositivi driver
+terminal Tom                                                                                                                  3                                           3
+Tom PRO 8375
+
+Dispositivi driver
+terminal PRO                      16                              11                                                                                                      27
+8375 TRUCK
+
+
+
+                                                                                        5
+2. Integrazione con soluzioni di terze parti
+   All’operatore economico aggiudicatario sarà richiesto di collaborare con le società
+   Computer Solutions SpA e Microtest Srl, già sviluppatrici di prodotti informatici per
+   ASCIT SpA, allo scopo di approfondire la possibilità di realizzare tramite API keys le
+   seguenti integrazioni con il fleet management system WEBFLEET SOLUTIONS:
+
+   2.1.   Integrazione con sistema gestionale EVO WinSmart, prodotto dall’azienda
+          Computer Solutions SpA e attualmente in uso da parte di ASCIT SpA. Tale
+          integrazione, , potrà prevedere l’esecuzione delle seguenti attività:
+       2.1.1. Importazione database per elenco indirizzi utenti e destinazioni
+       2.1.2. Importazione da giornaliera del dettaglio dei servizi (percorsi e sequenza
+              ordini da ottimizzare) in programma e invio automatico di questi al mezzo
+              individuato per la loro esecuzione; in caso di indisponibilità del mezzo o
+              dell’autista indicato in giornaliera all’inizio del turno, potrà essere possibile
+              procedere con la sostituzione immediata dal gestionale e/o direttamente
+              dalla piattaforma WEBFLEET.
+       2.1.3. Esportazione su gestionale della conferma dell’identificativo degli autisti alla
+              guida dei mezzi per consuntivazione della giornaliera dei servizi.
+       2.1.4. Esportazione su gestionale del dettaglio dei servizi effettuati, in particolare:
+                   Identificativo utente/cliente
+                   Ora inizio
+                   Ora fine
+                   Eventuale impianto di destinazione
+                   Eventuali messaggi di testo, foto, video o altri elementi associati al
+                     servizio
+                   Eventuali codici RFID derivanti dall’attività di consegna o ritiro di
+                     contenitori e sacchi dotati di tag/chip, come descritto nel paragrafo
+                     2.2.
+
+   2.2.   Integrazione con sistema di lettura codici RFID prodotto dall’azienda
+          Microtest Srl e attualmente in uso da parte di ASCIT SpA. Tale integrazione
+          potrà prevedere l’esecuzione delle seguenti attività:
+       2.2.1. Importazione tramite web services delle singole letture dei codici RFID ed
+              esportazione su gestionale EVO Winsmart.
+       2.2.2. Visualizzazione dell’elenco aggiornato dei codici RFID rilevati dal sistema di
+              lettura all’interno della piattaforma di fleet management, con associazione
+              del servizio/ordine in corso di esecuzione al momento dell’importazione e
+              possibilità di visualizzare direttamente in mappa, per mezzo di icone
+              geolocalizzate le singole letture importate.
+
+
+3. Identificazione autisti ed eventuale blocco motore
+   3.1. Al momento dell’accensione del mezzo da parte dell’autista, deve essere lui
+          richiesto di identificarsi tramite la digitazione sul dispositivo driver terminal di un
+                                               6
+          codice PIN univoco e personale; tali codici devono poter essere assegnati e
+          gestiti direttamente dalla piattaforma.
+   3.2.   Qualora ritenuto opportuno da parte di ASCIT SpA, deve essere possibile
+          impedire l’accensione del mezzo nel caso in cui l’identificativo dell’autista non
+          corrispondesse con la risorsa associata dal gestionale EVO Winsmart per
+          l’esecuzione del servizio inviato al mezzo. Alcuni soggetti autorizzati, come
+          quelli appartenenti al servizio officina, dovranno poter sbloccare ed accendere il
+          mezzo sempre, anche se nessun servizio è a loro associato.
+
+
+4. Pianificazione, gestione e invio servizi ai mezzi:
+   Fra i servizi erogati da ASCIT SpA è possibile classificare tre distinte tipologie, che si
+   intende gestire attraverso il fleet management system WEBFLEET SOLUTIONS come
+   descritto di seguito:
+
+   4.1. Percorsi a calendario:
+      4.1.1. Si tratta di servizi caratterizzati da un tracciato costante, costituito da una
+             sequenza di punti di interesse, che si realizzano con periodicità
+             calendarizzabile, quali giri di raccolta porta a porta rivolti alle utenze
+             domestiche e servizi di spazzamento.
+      4.1.2. I percorsi a calendario, gestibili tramite la funzione di WEBFLEET
+             SOLUTIONS “Route planner”, saranno inviati attraverso la piattaforma e
+             salvati direttamente sulla memoria dei dispositivi driver terminal installati sui
+             mezzi generalmente utilizzati per l’esecuzione dei giri corrispondenti.
+      4.1.3. La creazione dei percorsi potrà avvenire manualmente o in alternativa potrà
+             essere salvata utilizzando direttamente come base un viaggio già realizzato
+             e rilevato tramite il dispositivo di rilevamento WEBFLEET SOLUTIONS.
+             Una volta inviato un percorso a calendario al dispositivo driver terminal di un
+             mezzo, l’autista deve procedere con l’accettazione e l’esecuzione dello
+             stesso tramite il sistema di navigazione che lo guiderà lungo i punti
+             costituenti il tracciato, che potrà essere libero di ricalcolo automatico a
+             seguito di deviazioni dal percorso suggerito o in alternativa vincolato.
+      4.1.4. Nel corso dell’esecuzione di un percorso a calendario all’autista non deve
+             essere richiesta alcuna conferma di esecuzione in quanto le uniche
+             conferme utili ad avere riprova dell’effettiva esecuzione dei servizi sono la
+             rilevazione della posizione all’interno di un area di interesse o di un’area di
+             buffer (personalizzabile) dei POI o, a seguito dell’eventuale futura
+             integrazione con Microtest Srl, l’importazione delle letture dei tag/chip RFID
+             installati sui contenitori/sacchi ritirati.
+
+
+   4.2. Percorsi dinamici:
+      4.2.1. Si tratta di servizi che prevedono l’esecuzione di percorsi caratterizzati da un
+             tracciato di volta in volta variabile in funzione delle richieste di intervento
+
+                                              7
+             ricevute, che possono o meno realizzarsi con periodicità calendarizzabile,
+             quali servizi di raccolta porta a porta su prenotazione rivolti ad utenze non
+             domestiche, servizi di ritiro su prenotazione di rifiuti ingombranti e RAEE,
+             servizi commerciali di trasporto rifiuti speciali, servizi di movimentazione
+             contenitori.
+      4.2.2. I percorsi dinamici, gestibili tramite la sezione “Ordini” di WEBFLEET
+             SOLUTIONS, sono ottimizzati nella sequenza di destinazioni secondo la
+             logica degli orari di apertura (prima dei quali non arrivare) e/o della minima
+             distanza fra indirizzi, quindi inviati ai mezzi attraverso la piattaforma. Una
+             volta inviato un percorso dinamico al dispositivo driver terminal di un mezzo,
+             l’autista deve procedere con l’accettazione e l’esecuzione dello stesso
+             tramite il sistema di navigazione che lo guiderà lungo i punti ottimizzati che
+             costituiscono il tracciato
+             Nel corso dell’esecuzione di un percorso dinamico all’autista deve essere
+             richiesta conferma di esecuzione dei singoli interventi, digitando un numero
+             minimo di tasti predisposti sul dispositivo e riportando, qualora necessario,
+             un messaggio di testo associato all’intervento in oggetto, scelto fra un elenco
+             oppure libero. A riprova dell’esecuzione degli interventi vi è inoltre la
+             rilevazione della posizione, la rilevazione degli imput associati alle attività per
+             le quali si è realizzato il collegamento con dispositivo di rilevamento del
+             veicolo (ad es. inserimento PTO, attivazione spazzole spazzatrici, etc.) o, a
+             seguito di eventuale futura integrazione con Microtest Srl, l’importazione
+             delle letture dei tag/chip RFID installati sui contenitori/sacchi ritirati.
+
+   4.3. Interventi in emergenza:
+      4.3.1. Si tratta di singole richieste di intervento che generalmente vengono svolte
+             da un mezzo già presente sul territorio ed impegnato nell’esecuzione di
+             servizi diversi e compatibili con quello richiesto; tale compatibilità è
+             determinata dalla tipologia di mezzo richiesto, dal codice di rifiuto trasportato
+             e dalla formazione dell’autista alla guida del mezzo disponibile sul territorio.
+      4.3.2. Attraverso la piattaforma si intende individuare i mezzi disponibili più vicini al
+             punto in cui si richiede l’esecuzione degli interventi in emergenza.
+             Gli interventi in emergenza, gestibili tramite la funzione di WEBFLEET
+             SOLUTIONS “Route planner”, si inseriscono all’interno o in coda ad un altro
+             servizio in fase di esecuzione e non si sostituiscono ad esso, l’autista dovrà
+             pertanto accettare una richiesta di intervento in emergenza, sospendendo
+             eventualmente i servizi in corso per poi riprendere successivamente la loro
+             esecuzione da dove la si era interrotta.
+
+
+5. Telemetria e diagnostica mezzi per attività di manutenzione
+   5.1. Tramite il dispositivo di rilevamento dei veicoli si devono rilevare dati telemetrici
+        e diagnostici utili per avere indicatori dello stato di esecuzione dei servizi e per
+        realizzare la manutenzione preventiva e/o programmata della flotta. In
+
+                                              8
+           particolare attraverso il collegamento con il CAN-bus dei mezzi ed il
+           cronotachigrafo, qualora presente, deve essere possibile rilevare, registrare in
+           appositi report e visualizzare direttamente in mappa almeno i seguenti
+           dati/attività relativi ai singoli mezzi:
+               Ore utilizzo.
+               Km percorsi
+               Velocità media ed istantanea.
+               Accelerazioni, frenate e sterzate brusche.
+               Consumi medi ed istantanei.
+               Livello serbatoio carburante, anche tramite stima sulla base dei consumi
+                   e della capienza del serbatoio.
+               Attivazione/disattivazione presa di forza (PTO).
+               Inserimento/rilascio freno a mano.
+               Apertura/chiusura porta autista.
+               Attivazione/disattivazione spazzole spazzatrici.
+               Ribaltamento voltabidoni
+   5.2.    I dati di telemetria e le eventuali notifiche ad esse associate potranno essere
+           oggetti di eventuali future integrazioni con soluzioni di terze parti ed esportazioni
+           a gestionali esterni.
+
+
+6. Integrazione gestione cronotachigrafi
+   6.1. Per ognuno dei mezzi di cui al paragrafo 1.4, colonna B è richiesta l’attivazione
+         di WEBFLEET Tachograph Manager Plus per la gestione dello scarico e
+         archiviazione dei dati dei cronotachigrafi dell’azienda e degli autisti ai sensi della
+         normativa comunitaria di settore (Reg. CE 561/06, Reg CE 165/2014) e la
+         possibilità di gestione e visualizzazione diretta da piattaforma e dispositivi di
+         interfacciamento dei tempi di guida rimanenti per ogni autista associato che si
+         trovi alla guida di un mezzo e impiegato in un trasporto soggetti all’impiego del
+         cronotachigrafo.
+
+
+7. Analisi e reportistica
+   7.1. Attraverso la piattaforma si intende elaborare in forma automatica, sia con
+         periodicità impostabile che su richiesta, report, analisi statistiche e KPI
+         sull’utilizzo e la gestione della flotta elaborati sulla base dei dati rilevati tramite il
+         modulo telemetria e il sistema di identificazione degli autisti, utili ad un’attività di
+         benchmarking. I report, riportanti elementi tabellari e grafici descrittivi, devono
+         essere generati ed esportabili nei formati pdf, xls e csv.
+
+
+8. Protezione dei dati e gestione privacy
+   8.1. In riferimento alla protezione contro accessi illegali e non autorizzati dei dati
+         personali raccolti ed elaborati tramite il sistema di fleet management, per i quali
+                                                9
+       ASCIT SpA rappresenta il titolare (Controller), alla società WEBFLEET
+       SOLUTIONS è richiesto di svolgere il ruolo di responsabile esterno del
+       trattamento (Processor).
+8.2.     È fatto divieto di subappaltare a sub-processor il ruolo e gli obblighi connessi
+       alla funzione di Processor previa autorizzazione scritta da parte del Controller.
+8.3.   In concomitanza con l’aggiudicazione dell’appalto, a WEBFLEET SOLUTIONS,
+       nel rivestire il proprio ruolo di Processor, è richiesto di definire e redigere un
+       Accordo con il Controller per il trattamento e la protezione dei dati personali
+       raccolti ed elaborati nel corso di esecuzione del servizio di fleet management. Il
+       contenuto minimo di tale Accordo dovrà riportare la totalità degli elementi
+       elencati nella presente sezione della Scheda Tecnica e dovrà dettagliare tutte le
+       misure tecniche ed organizzative attuate dal Processor allo scopo di garantire il
+       suo rispetto.
+8.4.   I dati raccolti, elaborati, utilizzati e conservati dal Processor potranno essere
+       relativi alle seguenti categorie:
+            Nomi, cognomi e ragioni sociali
+            Date
+            Indirizzi civici e coordinate geografiche
+            Indirizzi IP
+            Targa dei veicoli
+            Dati di connessione e sulle telecomunicazioni
+            Pianificazione dei servizi e dei percorsi
+            Posizioni istantanee e storico dei percorsi realizzati dai veicoli
+            Dati telemetrici e diagnostici dei veicoli
+       I dati sopra elencati potranno essere inerenti le seguenti categorie di soggetti:
+            Dipendenti di ASCIT SpA
+            Dipendenti di fornitori di servizi per conto di ASCIT SpA
+            Veicoli in uso alla flotta della stazione appaltante
+            Veicoli in uso alla flotta di fornitori di servizi per la stazione appaltante
+            Clienti commerciali
+            Utenti
+            Impianti
+            Parti interessate (ad es. Pubbliche Amministrazioni dei territori comunali
+               serviti dalla stazione appaltante)
+8.5.   Ogni trasferimento e/o comunicazione dei dati personali o di elaborazioni di
+       questi a soggetti esterni non potrà essere realizzato senza l’approvazione in
+       forma scritta del Controller.
+8.6.   I dati raccolti ed elaborati dovranno essere conservati dal Processor sui server
+       da lui utilizzati per la durata minima di 3 mesi solari per il dettaglio dei tracciati e
+       2 anni solari per i dati tabellari relativi ai servizi effettuati e in qualsiasi momento
+       dovrà essere data la possibilità al Controller di realizzare la loro esportazione e
+       salvataggio sui propri server aziendali; tale esportazione dovrà poter avvenire
+       sia su richiesta puntuale del Controller che in modalità automatica.
+
+                                            10
+   8.7.   Al momento della risoluzione del Contratto, al Processor è fatto obbligo di
+          restituire al Controller la totalità dei dati personali e delle elaborazioni di questi,
+          inoltre, qualora richiesto, il Processor dovrà procedere con la loro completa
+          eliminazione, fornendo documentazione che certifichi tale atto.
+
+
+9. Tempi di consegna e sostituzione
+   9.1. L’aggiudicatario dovrà essere in grado di fornire i dispositivi, i link e le
+        credenziali di accesso al sistema entro 60 giorni naturali e consecutivi dall’invio
+        dell’ordine.
+   9.2. In caso di richiesta scritta di sostituzione di un dispositivo, questo deve essere
+        consegnato entro 10 giorni lavorativi e consecutivi dall’invio della richiesta.
+   9.3. I costi di spedizione dei dispositivi per l’intera durata del contratto sono da
+        intendersi a carico dell’aggiudicatario.
+
+
+10. Installazione, formazione, assistenza tecnica e manuali
+   10.1. L’installazione dei dispositivi a bordo mezzi dovrà poter essere realizzata
+           direttamente dal personale qualificato di ASCIT sulla base della formazione in
+           loco e dell’assistenza da remoto che dovranno essere compresi nel contratto. In
+           alternativa, qualora ASCIT SpA dovesse ritenerlo opportuno, può essere
+           richiesta l’installazione dei dispositivi da parte del personale incaricato
+           dall’aggiudicatario, previa presentazione ed accettazione di offerta riportanti i
+           costi orari per l’esecuzione di tale attività.
+   10.2. A seguito dell’installazione di un dispositivo, la sua configurazione da remoto
+           deve essere inclusa e deve poter essere realizzata in orario compatibile con
+           l’orario di apertura di ASCIT SpA (6:00 – 18:30) dal lunedì al venerdì, previa
+           comunicazione scritta effettuata con un anticipo di almeno 24 ore lavorative. Al
+           momento dell’aggiudicazione, all’aggiudicatario è richiesto di prevedere per il
+           personale tecnico di ASCIT una sessione di formazione base, eventualmente
+           tramite videoconferenza, di almeno 4 ore suddivisibili in moduli e senza limiti di
+           partecipanti, sul funzionamento e l’utilizzo degli elementi del sistema fleet
+           management WEBFLEET SOLUTIONS.
+   10.3. A partire dal momento dell’aggiudicazione del servizio fino al termine del
+           contratto, l’aggiudicatario deve organizzare un servizio di assistenza tecnica
+           illimitata da remoto, telefonica e via e-mail, disponibile dal lunedì al venerdì di
+           almeno 6 ore su 24 e comunque compatibile con gli orari di apertura di ASCIT
+           SpA.
+   10.4. Al momento dell’aggiudicazione devono essere forniti i manuali utenti, qualora
+           disponibili con maggior dettaglio rispetto alla documentazione disponibile nella
+           sezione dedicata del portale WEBFLEET, e gli schemi di installazione con
+           specifica delle attrezzature occorrenti per la corretta esecuzione; la descrizione
+           dovrà essere completa delle procedure indicative da seguirsi alla presenza
+           d’anomalie ed emergenze, nonché della valutazione dei rischi residui ascrivibili
+
+                                              11
+          all’utilizzo e all’installazione dei dispositivi in condizioni di lavoro standard. Tali
+          documenti devono essere forniti in formato digitale e senza limiti di diffusione al
+          personale tecnico di ASCIT SpA per l’intera durata del contratto.
+
+
+11. Garanzia e copertura assicurativa
+   11.1. Su tutti i dispositivi forniti deve essere prevista una garanzia estesa per l’intero
+         periodo del contratto che comporti la sostituzione senza alcun costo aggiuntivo
+         per ASCIT SpA degli elementi che risultino danneggiati, non funzionanti o che
+         comunque non rispettino le caratteristiche indicate nella presente Scheda
+         Tecnica, fatta eccezione per danneggiamenti e malfunzionamenti derivanti da
+         eventi dolosi e utilizzi impropri imputabili ad ASCIT SpA.
+   11.2. ASCIT SpA provvederà alla copertura RC sui dispositivi forniti in caso di danni.
+
+
+12. Penali
+   12.1. In caso di fornitura ritardata dei dispositivi, dei link e delle credenziali di accesso
+          alla piattaforma web, per ogni giorno solare e consecutivo di ritardo rispetto al
+          termine indicato nel paragrafo 9.1 verrà commissionata una penale pari al 1 per
+          mille dell’importo dell’appalto.
+   12.2. In caso di sostituzione di strumenti definitivamente danneggiati, a partire
+          dall’invio della richiesta scritta da parte di ASCIT SpA, per ogni giorno solare e
+          consecutivo successivo al termine indicato nel paragrafo 9.2 verrà
+          commissionata una penale pari all’1 per mille dell’importo dell’appalto.
+   12.3. In caso di sospensione del servizio di assistenza tecnica da remoto da parte
+          dell’aggiudicatario, a partire dall’invio della segnalazione scritta da parte di
+          ASCIT SpA, per ogni ora solare e consecutiva di sospensione del servizio verrà
+          commissionata una penale pari allo 0,01 per mille dell’importo dell’appalto.
+
+
+
+
+                                              12
+
