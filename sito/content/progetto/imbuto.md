@@ -68,9 +68,29 @@ La precisione di S3 e S4 è misurata su sei campioni a cieco annotati da Claude.
 
 Per la maggior parte del residuo **l'atto di gara che direbbe il prodotto non è raggiungibile da fonti aperte**. Si lavora a livelli, dal più economico al più costoso ([raffinamento](/progetto/raffinamento-imbuto/)). L'accesso civico si usa **solo alla fine**, dopo il rendiconto del risultato parziale ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).
 
-## Perché manca ancora la quota di sovranità sul cloud complessivo
+## Dopo i livelli di raffinamento: un contratto, un esito
 
-Sugli inclusi certi la quota si misura. Sul cloud complessivo, no: l'incerto vale più del certo. Serve prima unire i livelli di raffinamento in una sola tabella per contratto, così che ogni contratto conti una volta, e misurare ciò che resta. Fino ad allora pubblichiamo la quota sui certi e le dimensioni dell'incerto, senza forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
+I livelli di raffinamento ([pagina](/progetto/raffinamento-imbuto/)) sono uniti in **una sola tabella per contratto** (`tools/verifiche/imbuto_spostamenti.py`, esito `esiti/2026-11-19/imbuto/spostamenti/riepilogo.json`). Ogni contratto conta una volta. Se due livelli lo spostano in modo diverso vince quello con la prova più forte: verifica sugli atti a mano, poi Claude Opus con gli atti (L4), via 6 controvalidata, Indice PA (B2), quadro economico (B1), Opus sul testo (L3), regole delle licenze, regole sul testo (L2). I contratti toccati sono **14.040**; quelli su cui due livelli non concordano sono 69.
+
+Dal 2024, **al netto dei massimali** di accordo quadro:
+
+| stato | CIG prima | CIG dopo | mld € prima | mld € dopo |
+|---|---:|---:|---:|---:|
+| incluso certo: cloud | 4.556 | 4.871 | 1,09 | 1,28 |
+| incluso certo: infrastruttura in-house | 816 | 438 | 0,42 | 0,08 |
+| incerto: marchio o lotto noto, da attribuire | 3.889 | 2.205 | 2,85 | 2,06 |
+| incerto: residuo S6 | 59.406 | 48.968 | 11,70 | 10,67 |
+| ICT non cloud | 220.525 | 231.131 | 40,01 | 41,78 |
+| tolto dall'ICT dai livelli (lavori, non ICT) | 0 | 1.579 | 0,00 | 0,19 |
+
+Che cosa vuol dire, in breve:
+- il **cloud certo** sale a **1,28 miliardi**, soprattutto perché le regole delle licenze riconoscono come cloud abbonamenti come Microsoft 365, Azure od Oracle Cloud;
+- l'**infrastruttura in-house certa** scende a **0,08 miliardi**: il resto non è confermato dall'Indice PA (aggiudicatari privati o mancanti) e torna da attribuire;
+- il **residuo incerto** scende da 11,70 a **10,67 miliardi**.
+
+**Giurisdizione del prodotto sul cloud certo dopo i livelli** (al netto dei massimali): extra-UE **75,6 %**, UE **18,8 %**, Italia **5,5 %**. La quota italiana è bassa perché nel cloud certo pesano gli abbonamenti dei grandi produttori; l'infrastruttura in-house (0,08 mld, Italia) è contata a parte.
+
+Questa quota vale **sui certi**. Sul cloud complessivo non si misura ancora, perché l'incerto (12,7 mld) vale molto più del certo. Per questo non pubblichiamo forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
 
 ## Registro delle revisioni
 
@@ -79,4 +99,5 @@ Sugli inclusi certi la quota si misura. Sul cloud complessivo, no: l'incerto val
 | 2026-11-03 | prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione |
 | 2026-11-03 | licenze separate dal cloud; criteri di sovranità semplificati; imbuto 0.3.1 (PSN incerto) |
 | 2026-11-09 | criticità 9: denominatore BDAP dello Stato centrale (#67) |
+| 2026-11-19 | nuova sezione «Dopo i livelli di raffinamento»: tabella unica degli spostamenti per contratto (#71), cloud certo netto 1,28 mld, giurisdizione sul cloud certo |
 | 2026-11-19 | riscritta e generata dagli esiti (decisione di Fabio): imbuto 0.3.4, giurisdizione degli inclusi certi, residuo per gruppo, raffinamento a livelli; la forbice 13-96 % della 0.3.1 non è più pubblicata finché i livelli non sono uniti; le criticità passano nella Mappa |

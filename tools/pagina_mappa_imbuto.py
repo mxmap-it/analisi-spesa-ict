@@ -73,6 +73,13 @@ def numeri():
     n["b1"] = (b["b1_quadro_economico"]["esce_lavori"]["cig"], b["b1_quadro_economico"]["esce_lavori"]["importo"] / 1e3)
     n["b2"] = b["b2_inhouse"]
     n["ict_dal_2024"] = b["cig_ict_dal_2024"]
+    sp, p = leggi(CFG["esiti"]["spostamenti"]); n["fonti"]["spostamenti"] = p
+    if sp:
+        tab = lambda lst: {r["chiave"][1]: (r["cig"], r["euro_netti_tetti"] / 1e9) for r in lst if r["chiave"][0] == "dal-2024"}
+        gtab = lambda lst: {tuple(r["chiave"][1:]): r["euro_netti_tetti"] / 1e9 for r in lst if r["chiave"][0] == "dal-2024"}
+        n["sp"] = {"prima": tab(sp["prima"]), "dopo": tab(sp["dopo"]), "gprima": gtab(sp["giurisdizione_prima"]),
+                   "gdopo": gtab(sp["giurisdizione_dopo"]), "cig": sp["cig_toccati"], "dis": sum(d["cig"] for d in sp["disaccordi"] if d["chiave"][0] == "dal-2024"),
+                   "flussi": [r for r in sp["flussi_netti"] if r["chiave"][0] == "dal-2024"]}
     lotti = sum(1 for f in glob.glob(str(R / CFG["esiti"]["l4_lotti"])) for l in open(f, encoding="utf-8") if l.strip())
     letti = collections.Counter()
     for f in glob.glob(str(R / CFG["esiti"]["l4_esiti"])):
@@ -440,6 +447,43 @@ def svg_giurisdizione(n):
     return svg(W, y + 14, "".join(o), "Giurisdizione degli inclusi certi")
 
 
+def sezione_spostamenti(n):
+    """Sezione «Dopo i livelli di raffinamento» dalla tabella unica degli spostamenti (#71)."""
+    sp = n.get("sp")
+    if not sp:
+        return "## Dopo i livelli di raffinamento\n\nLa tabella unica dei livelli non è ancora stata calcolata.\n"
+    pr, do = sp["prima"], sp["dopo"]
+    v = lambda d, k: d.get(k, (0, 0.0))
+    righe = [("cloud-certo", "incluso certo: cloud"), ("inhouse-certo", "incluso certo: infrastruttura in-house"),
+             ("incerto-marchio", "incerto: marchio o lotto noto, da attribuire"), ("incerto-s6", "incerto: residuo S6"),
+             ("ict-non-cloud", "ICT non cloud"), ("escluso-non-ict", "tolto dall'ICT dai livelli (lavori, non ICT)")]
+    t = ["| stato | CIG prima | CIG dopo | mld € prima | mld € dopo |", "|---|---:|---:|---:|---:|"]
+    for k, nome in righe:
+        t.append(f"| {nome} | {it(v(pr, k)[0])} | {it(v(do, k)[0])} | {it(v(pr, k)[1], 2)} | {it(v(do, k)[1], 2)} |")
+    gd = sp["gdopo"]
+    cl = {g: x for (s_, g), x in gd.items() if s_ == "cloud-certo"}
+    tot = sum(cl.values()) or 1
+    q = lambda g: it(100 * cl.get(g, 0) / tot, 1)
+    inh = sum(x for (s_, g), x in gd.items() if s_ == "inhouse-certo")
+    return f"""## Dopo i livelli di raffinamento: un contratto, un esito
+
+I livelli di raffinamento ([pagina](/progetto/raffinamento-imbuto/)) sono uniti in **una sola tabella per contratto** (`tools/verifiche/imbuto_spostamenti.py`, esito `{n["fonti"]["spostamenti"]}`). Ogni contratto conta una volta. Se due livelli lo spostano in modo diverso vince quello con la prova più forte: verifica sugli atti a mano, poi Claude Opus con gli atti (L4), via 6 controvalidata, Indice PA (B2), quadro economico (B1), Opus sul testo (L3), regole delle licenze, regole sul testo (L2). I contratti toccati sono **{it(sp["cig"])}**; quelli su cui due livelli non concordano sono {it(sp["dis"])}.
+
+Dal 2024, **al netto dei massimali** di accordo quadro:
+
+{chr(10).join(t)}
+
+Che cosa vuol dire, in breve:
+- il **cloud certo** sale a **{it(v(do, "cloud-certo")[1], 2)} miliardi**, soprattutto perché le regole delle licenze riconoscono come cloud abbonamenti come Microsoft 365, Azure od Oracle Cloud;
+- l'**infrastruttura in-house certa** scende a **{it(inh, 2)} miliardi**: il resto non è confermato dall'Indice PA (aggiudicatari privati o mancanti) e torna da attribuire;
+- il **residuo incerto** scende da {it(v(pr, "incerto-s6")[1], 2)} a **{it(v(do, "incerto-s6")[1], 2)} miliardi**.
+
+**Giurisdizione del prodotto sul cloud certo dopo i livelli** (al netto dei massimali): extra-UE **{q("EXTRA-UE")} %**, UE **{q("UE")} %**, Italia **{q("IT")} %**. La quota italiana è bassa perché nel cloud certo pesano gli abbonamenti dei grandi produttori; l'infrastruttura in-house ({it(inh, 2)} mld, Italia) è contata a parte.
+
+Questa quota vale **sui certi**. Sul cloud complessivo non si misura ancora, perché l'incerto ({it(v(do, "incerto-marchio")[1] + v(do, "incerto-s6")[1], 1)} mld) vale molto più del certo. Per questo non pubblichiamo forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
+"""
+
+
 def pagina_imbuto(n):
     R_ = CFG.get("pagina_imbuto", {})
     st = n["strati"]; aa = n["asse_a"]; gr = n["gruppi"]
@@ -515,10 +559,7 @@ La precisione di S3 e S4 è misurata su sei campioni a cieco annotati da Claude.
 
 Per la maggior parte del residuo **l'atto di gara che direbbe il prodotto non è raggiungibile da fonti aperte**. Si lavora a livelli, dal più economico al più costoso ([raffinamento](/progetto/raffinamento-imbuto/)). L'accesso civico si usa **solo alla fine**, dopo il rendiconto del risultato parziale ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)).
 
-## Perché manca ancora la quota di sovranità sul cloud complessivo
-
-Sugli inclusi certi la quota si misura. Sul cloud complessivo, no: l'incerto vale più del certo. Serve prima unire i livelli di raffinamento in una sola tabella per contratto, così che ogni contratto conti una volta, e misurare ciò che resta. Fino ad allora pubblichiamo la quota sui certi e le dimensioni dell'incerto, senza forbici calcolate su ipotesi. Le mancanze, con peso e gravità, sono nella [Mappa](/progetto/mappa-imbuto/#4-che-cosa-manca-quanto-pesa-come-lo-risolviamo).
-
+{sezione_spostamenti(n)}
 ## Registro delle revisioni
 
 | data | modifica |

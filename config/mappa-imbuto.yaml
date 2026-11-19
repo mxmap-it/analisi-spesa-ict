@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.5"
+versione: "0.6"
 aggiornato: 2026-11-19
 
 esiti:
@@ -259,8 +259,8 @@ livelli:
 mancanze:
   - id: M1
     titolo: "Atti non raggiungibili per il residuo incerto"
-    peso: "S6 dal 2024: 59.406 CIG, 16,37 mld dichiarati; con un atto che cita il CIG solo 535 CIG / 304,7 M€"
-    peso_mld: 16.37
+    peso: "S6 dal 2024 dopo i livelli (tabella unica, 19/11): 48.968 CIG, 15,09 mld dichiarati (10,67 netti massimali); prima 59.406 CIG / 16,37 mld; con un atto che cita il CIG solo 535 CIG / 304,7 M€"
+    peso_mld: 15.09
     gravita: alta
     perche: "Senza l'atto non si sa quale prodotto si compra: il contratto resta incerto su entrambi gli assi."
     come: "Raffinamento a livelli (L2-L4) per togliere ciò che non è cloud; l'accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78), sulla lista degli atti che restano mancanti."
@@ -277,8 +277,8 @@ mancanze:
     stato: in-corso
   - id: M3
     titolo: "Licenze e software con marchio noto ma cloud da accertare (Microsoft EA, Oracle)"
-    peso: "3.889 CIG, 5,37 mld dal 2024"
-    peso_mld: 5.37
+    peso: "dal 2024 dopo i livelli (tabella unica, 19/11): 2.205 CIG, 4,59 mld dichiarati (2,06 netti massimali), compresi 378 CIG in-house non confermati dall'Indice PA; prima 3.889 CIG / 5,37 mld"
+    peso_mld: 4.59
     gravita: alta
     perche: "Lo stesso contratto Microsoft o Oracle può essere licenza on premises o abbonamento cloud."
     come: "Regole per prodotto (L1-L4 delle licenze), censimento dei prodotti negli EA, transato per famiglia da Consip (R23)."
@@ -385,6 +385,7 @@ mancanze:
     stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-19, versione: "0.6", modifica: "Tabella unica degli spostamenti dei livelli (#71): M1 e M3 pesate dopo i livelli; nuovo esito spostamenti."}
   - {data: 2026-11-19, versione: "0.5", modifica: "Mancanza M14: censimento del patrimonio ICT di AgID non pubblicato (pagina archiviata il 19/11, R48), controprova dichiarata dagli enti (#60)."}
   - {data: 2026-11-19, versione: "0.4", modifica: "Mancanza M13 (dashboard per ricercare e annotare tutti i contratti, decisione di Fabio); M5 senza il rimando ai volontari."}
   - {data: 2026-11-19, versione: "0.3", modifica: "Esito del test di ripetibilità (tutti i numeri riprodotti) e mancanza M12; link alle schede dei problemi e alle raccomandazioni sul sito."}
@@ -397,4 +398,5 @@ pagina_imbuto:
     - {data: 2026-11-03, modifica: "prima versione: imbuto 0.3, quota di sovranità 2024-2025 con forbice, precisione sul campione"}
     - {data: 2026-11-03, modifica: "licenze separate dal cloud; criteri di sovranità semplificati; imbuto 0.3.1 (PSN incerto)"}
     - {data: 2026-11-09, modifica: "criticità 9: denominatore BDAP dello Stato centrale (#67)"}
+    - {data: 2026-11-19, modifica: "nuova sezione «Dopo i livelli di raffinamento»: tabella unica degli spostamenti per contratto (#71), cloud certo netto 1,28 mld, giurisdizione sul cloud certo"}
     - {data: 2026-11-19, modifica: "riscritta e generata dagli esiti (decisione di Fabio): imbuto 0.3.4, giurisdizione degli inclusi certi, residuo per gruppo, raffinamento a livelli; la forbice 13-96 % della 0.3.1 non è più pubblicata finché i livelli non sono uniti; le criticità passano nella Mappa"}
