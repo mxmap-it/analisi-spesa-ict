@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.6"
+versione: "0.7"
 aggiornato: 2026-11-19
 
 esiti:
@@ -362,9 +362,9 @@ mancanze:
     peso_mld: null
     gravita: media
     perche: "Da un clone pulito mancherebbero tre ingressi (lavoro/pvl/cig_link.csv, lavoro/convenzioni/attuativi.csv, pacchetti L3); ict.csv cambia ordine delle righe a ogni esecuzione e alcune somme in euro differiscono sotto il millesimo."
-    come: "Portare i tre ingressi nell'archivio con sha256 o in git; scrivere ict.csv ordinato per anno e CIG con sha256 canonico; arrotondare gli euro al centesimo; rifare il test (tools/verifiche/ripetibilita.sh) a ogni versione."
+    come: "Fatto il 19/11: ingressi nel registro config/ingressi-lavoro.yaml (attuativi, indice PVL e pacchetti L3 compressi in git in dati/ingressi/; cig_link.csv come blob sha256 nell'archivio, con ricetta per rigenerarlo), tools/ingressi_lavoro.py verifica|ripristina chiamato da ripetibilita.sh; imbuto.py scrive ict.csv ordinato per CIG (prova: i due ict.csv con ordine diverso danno lo stesso sha256 dopo l'ordinamento, esiti/2026-11-19/ripetibilita/ordina-ict.json); somme in euro della distribuzione in centesimi interi. Resta: rifare il test completo alla prossima versione dell'imbuto (il file di produzione si ordina alla prossima rigenerazione)."
     ticket: ["#71", "#78"]
-    stato: aperta
+    stato: mitigata
   - id: M13
     titolo: "Contratti non ricercabili né annotabili uno per uno dal pubblico"
     peso: "oggi la pagina annotazioni copre solo i campioni; la tabella per CIG è nei file, non in una dashboard"
@@ -385,6 +385,7 @@ mancanze:
     stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-19, versione: "0.7", modifica: "M12 mitigata: ingressi fuori dal mirror nel registro config/ingressi-lavoro.yaml (git e archivio con sha256), ict.csv in ordine canonico, euro al centesimo; resta il test completo alla prossima versione."}
   - {data: 2026-11-19, versione: "0.6", modifica: "Tabella unica degli spostamenti dei livelli (#71): M1 e M3 pesate dopo i livelli; nuovo esito spostamenti."}
   - {data: 2026-11-19, versione: "0.5", modifica: "Mancanza M14: censimento del patrimonio ICT di AgID non pubblicato (pagina archiviata il 19/11, R48), controprova dichiarata dagli enti (#60)."}
   - {data: 2026-11-19, versione: "0.4", modifica: "Mancanza M13 (dashboard per ricercare e annotare tutti i contratti, decisione di Fabio); M5 senza il rimando ai volontari."}

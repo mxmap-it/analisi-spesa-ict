@@ -106,6 +106,34 @@ nohup setsid tools/llm/raffinamento_catena.sh &                   # L3 poi L4 (a
 B e L2 sono deterministici (stessi file per sha256, stesso risultato). L3 e L4 usano un modello linguistico: i loro
 esiti sono versionati in `report/metodo/llm/raffinamento*/esiti/` e si rileggono, non si rigenerano.
 
+### Ingressi fuori dal mirror ANAC (M12)
+
+Quattro ingressi dell'imbuto stanno in `lavoro/` e non vengono dal mirror ANAC. Il registro
+[`config/ingressi-lavoro.yaml`](config/ingressi-lavoro.yaml) ne dà sha256, chi li usa e come si rigenerano:
+
+| Ingresso | Usato da | Dove si conserva |
+|---|---|---|
+| `lavoro/pvl/cig_link.csv` (406 MB, link PVL per CIG) | `imbuto_strati.py --rigenera` | blob nell'archivio content-addressed (`archivio/blobs/sha256/0b/fd/…`, vista `archivio/mirror/_derivati/`); si rigenera con `pvl_avvisi.py estrai` + `pvl_analisi.py` dalle pagine API PVL archiviate |
+| `lavoro/pvl/indice.jsonl` (pagine API PVL con sha256) | `pvl_avvisi.py` | git, `dati/ingressi/lavoro/pvl/indice.jsonl.gz` |
+| `lavoro/convenzioni/attuativi.csv` | `imbuto_licenze.py` | git, `dati/ingressi/lavoro/convenzioni/attuativi.csv.gz` |
+| `lavoro/raffinamento/pacchetti/` (ingressi ciechi di L3) | `raffinamento.py esito` | git, `dati/ingressi/lavoro/raffinamento/pacchetti.tar.gz` |
+
+```bash
+python3 tools/ingressi_lavoro.py verifica     # ci sono tutti, con lo sha256 del registro?
+python3 tools/ingressi_lavoro.py ripristina   # rimette ciò che manca da git (e cig_link.csv dall'archivio)
+```
+
+Da un clone pulito senza l'archivio del server, `cig_link.csv` si rigenera con la ricetta del registro; se ANAC ha
+cambiato i dataset nel frattempo lo sha256 può differire e i numeri del link PVL per strato con lui (chi vuole la copia
+esatta può chiedercela: lo sha256 ne prova l'identità).
+
+### Prova di ripetibilità
+
+`tools/verifiche/ripetibilita.sh` rifà da zero in `lavoro/ripetibilita/<data>/` tutta la catena deterministica (circa
+70 minuti, un job pesante) e `tools/verifiche/ripetibilita_confronta.py` confronta ogni uscita con quella pubblicata
+(esito in `esiti/<data>/ripetibilita/`). Dal 19/11/2026 `ict.csv` esce in ordine canonico per CIG (stesso sha256 a ogni
+esecuzione: `tools/verifiche/ripetibilita_ordina_ict.py`) e le somme in euro della distribuzione sono al centesimo.
+
 ## Il mirror completo dei dati
 
 Le verifiche usano 349 file. Il **mirror completo** del portale ANAC (1.797 risorse, in tutti i

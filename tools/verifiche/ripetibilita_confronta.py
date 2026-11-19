@@ -169,6 +169,13 @@ def ingressi():
         h.update(open(p, "rb").read())
     fuori["lavoro/raffinamento/pacchetti/d*.jsonl"] = {"file": len(pac), "sha256_concatenati": h.hexdigest(), "in_git": False,
                                                        "usato_da": "raffinamento.py esito (ingresso di L3: importo e oggetto)"}
+    if os.path.exists("config/ingressi-lavoro.yaml"):  # M12: registro degli ingressi conservati in git o nell'archivio
+        import yaml
+        for e in yaml.safe_load(open("config/ingressi-lavoro.yaml", encoding="utf-8"))["ingressi"]:
+            k = e["percorso"] + ("/d*.jsonl" if e["via"] == "git-tar" else "")
+            if k in fuori:
+                fuori[k]["conservato"] = e["via"] + ": " + (e.get("copia") or e.get("blob") or "")
+                fuori[k]["sha256_registro"] = e.get("sha256") or e.get("sha256_concatenati")
     return {"commit": subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip(),
             "mirror_anac_letti_dal_passo_a": {"file": len(mir), "byte": sum(os.path.getsize(p) for p in mir), "sha256": mir},
             "codice_e_configurazione": {p: sha(p) for p in codice if os.path.exists(p)},
@@ -190,14 +197,18 @@ NOTE = [
     "`preserve_insertion_order=false` e 2 thread, quindi l'ordine delle righe di ict.csv cambia da un'esecuzione all'altra; "
     "chi legge ict.csv in sequenza eredita l'ordine. Il contenuto è identico (sha256 canonico, righe ordinate, uguale). "
     "Per questo lo sha256 di ict.csv registrato da tetti-fonti.json, bdncp/riepilogo.json e raffinamento-l2.json è diverso. "
-    "Correzione proposta: scrivere ict.csv ordinato per (anno, cig) e registrare lo sha256 canonico.",
+    "Correzione proposta: scrivere ict.csv ordinato per (anno, cig) e registrare lo sha256 canonico. "
+    "**Corretto il 19/11 (M12):** imbuto.py scrive ict.csv ordinato per CIG (ordina_ict; prova tools/verifiche/ripetibilita_ordina_ict.py).",
     "**Virgola mobile** (distribuzione.json, strati.json, solo i campi `euro` e `euro_link` non arrotondati del link PVL): "
-    "somme parallele di duckdb in ordine diverso, differenza massima sotto 0,001 €. Correzione proposta: arrotondare al centesimo.",
+    "somme parallele di duckdb in ordine diverso, differenza massima sotto 0,001 €. Correzione proposta: arrotondare al centesimo. "
+    "**Corretto il 19/11 (M12):** imbuto_strati.py somma in centesimi interi (CENT).",
     "**Deviazione della prova**: «prepara» è andata in Out of Memory con 8 GB di memoria virtuale (ulimit -v) mentre il 9/11 "
     "era riuscita; rifatta con 12 GB (memory_limit di duckdb invariato a 4 GB). La variante A ha girato con 8 GB come l'originale.",
     "**Ingressi fuori dall'archivio content-addressed e fuori da git**: lavoro/pvl/cig_link.csv (scaricamento API PVL del 4/11), "
     "lavoro/convenzioni/attuativi.csv, lavoro/raffinamento/pacchetti/ (ingressi di L3). Oggi sono sul server e la prova li ha "
-    "riletti; da un clone pulito mancherebbero. Correzione proposta: versionarli o archiviarli con sha256.",
+    "riletti; da un clone pulito mancherebbero. Correzione proposta: versionarli o archiviarli con sha256. "
+    "**Corretto il 19/11 (M12):** registro config/ingressi-lavoro.yaml, copie in dati/ingressi/ (git) e cig_link.csv come blob "
+    "nell'archivio; tools/ingressi_lavoro.py verifica | ripristina.",
     "**Esiti del modello linguistico**: L3, L4 e via 6 non si rigenerano: si rileggono gli esiti versionati in git.",
 ]
 

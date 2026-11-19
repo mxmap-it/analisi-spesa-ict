@@ -1,0 +1,38 @@
+descrizione: Ingressi di lavoro/ letti dall'imbuto e fuori dal mirror ANAC (M12). Generato da tools/ingressi_lavoro.py congela.
+ingressi:
+- percorso: lavoro/pvl/cig_link.csv
+  via: archivio
+  usato_da: tools/verifiche/imbuto_strati.py --rigenera (link PVL per strato)
+  rigenera: 'tools/acquisizione/pvl_avvisi.py estrai > lavoro/pvl/link_cig.csv (dalle pagine API PVL archiviate, elenco con sha256 in dati/ingressi/lavoro/pvl/indice.jsonl.gz), poi tools/acquisizione/pvl_analisi.py
+    (legge anche lavoro/cig_completo e l''anagrafica delle stazioni appaltanti): lo sha256 può cambiare se cambiano i dataset ANAC, quindi per riprodurre i numeri si ripristina il blob'
+  sha256: 0bfde73703099c9fbddf761bb52fa82f5ce8e1da1b881344b2cdf17d4405fd92
+  byte: 406474879
+  data_file: '2026-11-03'
+  blob: archivio/blobs/sha256/0b/fd/0bfde73703099c9fbddf761bb52fa82f5ce8e1da1b881344b2cdf17d4405fd92
+  vista: archivio/mirror/_derivati/lavoro/pvl/cig_link.csv
+- percorso: lavoro/pvl/indice.jsonl
+  via: git
+  usato_da: tools/acquisizione/pvl_avvisi.py (indice delle pagine API PVL, una riga per pagina con sha256 del blob)
+  rigenera: 'scaricamento del 3-4/11/2026 (pvl_avvisi.py scarica): non si rigenera, si conserva'
+  sha256: 4b696600549d62de51795b9aabebbe9fe222c8a217c577da72df1373b10d0eae
+  byte: 663384
+  data_file: '2026-11-03'
+  copia: dati/ingressi/lavoro/pvl/indice.jsonl.gz
+  sha256_copia: 9f63ff0c45c921f48508d027a4f5a770357ea41ea0a0568247c50d5bee5e6d18
+- percorso: lavoro/convenzioni/attuativi.csv
+  via: git
+  usato_da: tools/verifiche/imbuto_licenze.py (attuativi delle convenzioni)
+  rigenera: 'derivato del 3/11/2026 dai CIG ANAC con cig_accordo_quadro delle convenzioni ICT: si conserva'
+  sha256: 5d9bcf855e9c744fdef125d539a27bd51f909a88338c7aaf27657c1971349d2f
+  byte: 636284
+  data_file: '2026-11-03'
+  copia: dati/ingressi/lavoro/convenzioni/attuativi.csv.gz
+  sha256_copia: ef178acba79580f23123b5cb70e2c274013cdb025cf542c31233887081f7286a
+- percorso: lavoro/raffinamento/pacchetti
+  via: git-tar
+  usato_da: 'tools/llm/raffinamento.py esito (ingresso di L3: importo e oggetto)'
+  rigenera: 'raffinamento.py prepara-l3 (idempotente, aggiunge pacchetti): i pacchetti già letti dal modello non si rigenerano, si conservano'
+  sha256_concatenati: 6789a26f95c0f8e323e739278ccdfb90ffb4ae68c6b4a7416580c32db0c65969
+  file: 355
+  copia: dati/ingressi/lavoro/raffinamento/pacchetti.tar.gz
+  sha256_copia: 7da835197f3d052d1aa49ea1f75141a6580648fd19ee495735c8cc10014471b9

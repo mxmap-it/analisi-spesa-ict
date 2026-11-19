@@ -7,7 +7,9 @@ aggregano subito; i CIG presenti negli aggiornamenti mensili (delta) si saltano 
 volta sola, con l'ultima versione.
 
 Uso: python tools/analisi/imbuto.py [anno_iniziale]   (default 2020)
-  -> lavoro/imbuto/riepilogo.json, lavoro/imbuto/ict.csv (tutti i CIG non esclusi in S1/S2, per gli strati successivi)"""
+  -> lavoro/imbuto/riepilogo.json, lavoro/imbuto/ict.csv (tutti i CIG non esclusi in S1/S2, per gli strati successivi;
+     dal 19/11/2026 in ordine canonico per CIG, M12: ordina_ict; per riordinare un ict.csv esistente in una cartella
+     di prova: python tools/analisi/imbuto.py --ordina <file>)"""
 import csv, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 from classifica import Classificatore, CPV_ICT, VERSIONE  # noqa: E402
@@ -103,6 +105,27 @@ def basi():
     return agg, delta_cig, padri
 
 
+def ordina_ict(percorso):
+    """M12 (19/11/2026): ict.csv in ordine canonico, per CIG e poi per riga intera (un CIG ha una sola riga dalla 0.3.4,
+    quindi conta solo il CIG), così due esecuzioni sugli stessi dati danno lo stesso file byte per byte (stesso sha256)
+    qualunque sia l'ordine di lettura del delta (duckdb con preserve_insertion_order=false in imbuto_prova_034.py).
+    In memoria le righe restano come testo CSV già scritto (~0,5 GB per 230 MB di file); scrittura atomica."""
+    import io
+    with open(percorso, newline="", encoding="utf-8") as fh:
+        r = csv.reader(fh)
+        intest = next(r)
+        righe = []
+        for x in r:
+            b = io.StringIO(); csv.writer(b).writerow(x)
+            righe.append((x[1], b.getvalue()))
+    righe.sort()
+    tmp = percorso + ".ordina"
+    with open(tmp, "w", newline="", encoding="utf-8") as fh:
+        csv.writer(fh).writerow(intest)
+        fh.writelines(t for _, t in righe)
+    os.replace(tmp, percorso)
+
+
 def main(anno0=2020):
     os.makedirs(OUT, exist_ok=True)
     anni = {str(a) for a in range(anno0, 2027)}
@@ -148,6 +171,7 @@ def main(anno0=2020):
                 w.writerow([anno, r["cig"], s, sc, g, (e or {}).get("via", ""), (e or {}).get("provider", ""), giur, (e or {}).get("servizio", ""),
                             cpv, int(bool(CPV_ICT.match(cpv))), imp, dv, r["denominazione_amministrazione_appaltante"], " ; ".join(nomi), testo[:400]])
     out.close()
+    ordina_ict(os.path.join(OUT, "ict.csv"))
     righe = [{"anno": a, "strato": s, "sottoclasse": sc, "gruppo": g, "giurisdizione": gi, "importo_da_verificare": dv,
               "cig": n[k], "euro": round(eur[k])} for k in sorted(n) for (a, s, sc, g, gi, dv) in [k]]
     json.dump({"versione": VERSIONE_IMBUTO, "regole": VERSIONE, "soglie": {"min": SOGLIA_MIN, "mega": SOGLIA_MEGA, "g3": SOGLIA_G3,
@@ -157,4 +181,6 @@ def main(anno0=2020):
 
 
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["--ordina"]:
+        ordina_ict(sys.argv[2]); sys.exit()
     main(int(sys.argv[1]) if len(sys.argv) > 1 else 2020)

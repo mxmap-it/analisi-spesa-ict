@@ -1,0 +1,26 @@
+{
+ "data": "2026-11-19",
+ "cartella_prova": "lavoro/ripetibilita/ordina-2026-11-19",
+ "file": {
+  "A": {
+   "sorgente": "lavoro/imbuto/ict.csv",
+   "sha256_prima": "9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c",
+   "sha256_ordinato": "e7c3e2194c4198a487f0e1593ef8114a820271e03c1113ce36dc81063a53e282",
+   "righe": 667303,
+   "stesse_righe_dopo_ordinamento": true,
+   "cig_in_ordine": true
+  },
+  "B": {
+   "sorgente": "lavoro/ripetibilita/2026-11-19/prova/A/ict.csv",
+   "sha256_prima": "756778042696c5f131977492bcd7089a8906d2b623dc10db8e42a302bd60f4ed",
+   "sha256_ordinato": "e7c3e2194c4198a487f0e1593ef8114a820271e03c1113ce36dc81063a53e282",
+   "righe": 667303,
+   "stesse_righe_dopo_ordinamento": true,
+   "cig_in_ordine": true
+  }
+ },
+ "stesso_contenuto": true,
+ "ordine_diverso_prima": true,
+ "stesso_sha256_dopo": true,
+ "ok": true
+}

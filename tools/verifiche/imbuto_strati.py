@@ -45,6 +45,10 @@ def asse_a(strato, sotto):
     return "incerto (marchio/lotto noto, cloud da accertare: licenze, software, servizi, PSN)"
 
 
+# M12 (19/11): somme in centesimi interi, quindi al centesimo e indipendenti dall'ordine delle somme parallele di duckdb
+CENT = "round(CAST(sum(CAST(round(({}) * 100) AS BIGINT)) AS DOUBLE) / 100, 2)"
+
+
 def rigenera():
     import duckdb
     os.makedirs(os.path.join(RADICE, "lavoro/imbuto/duck"), exist_ok=True)
@@ -52,7 +56,7 @@ def rigenera():
     con.execute("SET memory_limit='6GB'; SET threads=2; SET temp_directory='%s'" % os.path.join(RADICE, "lavoro/imbuto/duck/tmp"))
     casi = " ".join(f"WHEN importo < {CLASSI[i+1]} THEN '{i:02d}'" for i in range(len(CLASSI) - 2)) + f" ELSE '{len(CLASSI)-2:02d}'"
     q = f"""SELECT CASE WHEN CAST(anno AS INT) <= 2023 THEN '2020-2023' ELSE 'dal-2024' END AS periodo, strato,
-        CASE {casi} END AS classe, count(*) n, sum(importo) euro, sum(importo_da_verificare) n_da_verificare
+        CASE {casi} END AS classe, count(*) n, {CENT.format("importo")} euro, sum(importo_da_verificare) n_da_verificare
         FROM read_csv('{ICT}', header=true, all_varchar=false, types={{'importo':'DOUBLE','cig':'VARCHAR'}})
         GROUP BY ALL ORDER BY ALL"""
     righe = [dict(zip(["periodo", "strato", "classe", "n", "euro", "n_da_verificare"], r)) for r in con.execute(q).fetchall()]
@@ -61,7 +65,7 @@ def rigenera():
     q2 = f"""WITH l AS (SELECT DISTINCT cig FROM read_csv('{link}', header=true, all_varchar=true) WHERE coalesce(link,'') <> ''),
         i AS (SELECT cig, strato, gruppo, importo FROM read_csv('{ICT}', header=true, types={{'importo':'DOUBLE','cig':'VARCHAR'}})
               WHERE CAST(anno AS INT) >= 2024 AND strato NOT IN ('S0-padre-aq','S2-sotto-soglia'))
-        SELECT strato, gruppo, count(*) n, count(l.cig) n_link, sum(importo) euro, sum(CASE WHEN l.cig IS NOT NULL THEN importo END) euro_link
+        SELECT strato, gruppo, count(*) n, count(l.cig) n_link, {CENT.format("importo")} euro, {CENT.format("CASE WHEN l.cig IS NOT NULL THEN importo END")} euro_link
         FROM i LEFT JOIN l USING (cig) GROUP BY ALL ORDER BY ALL"""
     link_strati = [dict(zip(["strato", "gruppo", "n", "n_link", "euro", "euro_link"], r)) for r in con.execute(q2).fetchall()]
     h = hashlib.sha256(open(ICT, "rb").read()).hexdigest()

@@ -36,6 +36,9 @@ memoria() {  # attende >= 12 GB disponibili (regola dell'incidente del 9/11)
     echo "$(date -Is) attesa memoria" >> "$D/log/catena.log"; sleep 120; done
 }
 
+# M12: gli ingressi di lavoro/ fuori dal mirror (registro config/ingressi-lavoro.yaml) devono esserci con lo sha256 del
+# registro; da un clone pulito si rimettono con «ripristina» (da git e, per cig_link.csv, dall'archivio content-addressed)
+$PY tools/ingressi_lavoro.py ripristina > "$D/log/ingressi.log" 2>&1 || { echo "ingressi di lavoro/ mancanti o diversi: $D/log/ingressi.log"; exit 1; }
 export IMBUTO_VERSIONE=0.3.4
 if [[ $PASSI == *a* ]]; then
   memoria
