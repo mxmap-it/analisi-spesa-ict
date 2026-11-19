@@ -8,7 +8,7 @@ description: "Precisione della lista bianca CPV (83 %, 93 % con i dubbi), falsi 
 
 ---
 
-**Versione 0.3.1 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
+**Versione 0.3.2 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · ticket [#44](https://github.com/mxmap-it/analisi-spesa-ict/issues/44), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59) · piano `report/cpv/PIANO.md`
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -157,3 +157,4 @@ Comando: `python tools/verifiche/perimetro_cpv_effetto.py` → `esiti/2026-11-06
 - 0.2 (2026-11-07): decisioni di Fabio su 79342, 3224 e RX_ICT, con review stratificata ed effetto misurato.
 - 0.3 (2026-11-09): attendibilità per anno e tipo di ente, lacune del vocabolario per il cloud, riclassificazione dei 611, R79 e R80, effetto 0.3.3 contro 0.3.2 con R53, scheda 3224 (`tools/verifiche/cpv_rapporto.py`).
 - 0.3.1 (2026-11-19): revisione di coerenza: nella sintesi le proposte su 79342 e RX_ICT marcate come decise e applicate; nota sulla via 6 finita e sull'imbuto 0.3.4.
+- 0.3.2 (2026-11-19): rapporto concluso (#59 chiuso): parti A-E del piano coperte; EuroTender fuori; verità di riferimento dai campioni a cieco annotati da Claude (decisione del 19/11). Resta la decisione sul 3224 (#44).

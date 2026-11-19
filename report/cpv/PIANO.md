@@ -1,6 +1,8 @@
 # Rapporto CPV: attendibilità, lacune del vocabolario, riclassificazione e proposta di policy
 
-Stato: piano (30/10/2026, richiesta di Fabio). Ticket: vedi STATE.md. Pubblicazione solo con approvazione di Fabio.
+Stato: **concluso il 19/11/2026** (#59). Le parti A-E sono nel rendiconto pubblicato [`/rendiconti/perimetro-cpv/`](https://analisi-spesa-ict.mxmap.it/rendiconti/perimetro-cpv/) 0.3.x (verifiche `tools/verifiche/perimetro_cpv.py`, `cpv_rapporto.py`, `zenodo_test.py`; riclassificazione `dati/classificazioni/cpv-riclassificazione.csv`; R21, R60, R79, R80). Scostamenti dal piano: EuroTender non provato (predice la divisione CPV, non cloud o giurisdizione); la verità di riferimento sono i campioni a cieco annotati da Claude (decisione di Fabio del 19/11/2026), non annotazioni umane. Resta aperta solo la decisione sul CPV 3224 (videosorveglianza), seguita in #44.
+
+Piano originale (30/10/2026, richiesta di Fabio):
 
 ## Obiettivo
 Un rapporto finale che, su tutto ciò che noi classifichiamo come **cloud e infrastrutture IT**:
