@@ -7,7 +7,7 @@ datiAl: 2026-11-19
 description: "Fotografia datata del progetto: obiettivo e disegno, numeri dell'imbuto dal 2024, livelli di raffinamento, dataset usati e loro limiti, mancanze con gravità, test di ripetibilità, prossimi passi e decisioni aperte."
 ---
 
-**Versione 1.0 del 19/11/2026.** Questa è una **fotografia datata**: non si aggiorna, se ne scrive una nuova al prossimo punto nave. La versione sempre aggiornata della stessa materia è la [Mappa dell'imbuto](/progetto/mappa-imbuto/), generata da [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml). Legenda: **[V]** verificato da noi con lo strumento indicato; **[R]** riferito da terzi; **[S]** stima.
+**Versione 1.1 del 19/11/2026.** Questa è una **fotografia datata**: non si aggiorna, se ne scrive una nuova al prossimo punto nave. La versione sempre aggiornata della stessa materia è la [Mappa dell'imbuto](/progetto/mappa-imbuto/), generata da [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml). Legenda: **[V]** verificato da noi con lo strumento indicato; **[R]** riferito da terzi; **[S]** stima.
 
 ## 1. In breve
 
@@ -73,7 +73,7 @@ Dataset, chiavi, coperture e limiti sono descritti uno per uno nella [Mappa](/pr
 ![Mancanze dell'imbuto per peso e gravità](/img/mappa-imbuto/mancanze.svg)
 
 Le mancanze sono 11, con un criterio di gravità fisso. Le quattro **alte** che pesano di più sono:
-- **M1, atti non raggiungibili** per il residuo incerto (16,37 mld): raffinamento a livelli, poi accesso civico;
+- **M1, atti non raggiungibili** per il residuo incerto (16,37 mld): raffinamento a livelli; l'accesso civico solo alla fine;
 - **M4, importi che sono massimali** (14,4 mld ancora incerti): regole dei tetti e revisione;
 - **M3, licenze con marchio noto** (5,37 mld): regole per prodotto e censimento degli EA;
 - **M2, PSN** (4,03 mld): servizio comprato non noto.
@@ -101,12 +101,22 @@ L'esito sarà riportato qui.
 4. **Misurare la precisione di S1** ([#77](https://github.com/mxmap-it/analisi-spesa-ict/issues/77)) e **portare SmartCIG nell'imbuto** ([#76](https://github.com/mxmap-it/analisi-spesa-ict/issues/76)).
 5. **Hosting dei SaaS italiani** su hyperscaler ([#70](https://github.com/mxmap-it/analisi-spesa-ict/issues/70)).
 
+**Traguardo prima dell'accesso civico** (decisione di Fabio, 19/11/2026): le richieste di accesso civico massivo ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)) si fanno **solo alla fine**. Prima si fa tutto ciò che è possibile con le fonti aperte, e se ne pubblica un **rendiconto del risultato parziale** ([#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78)) con:
+- risultati intermedi documentati estensivamente;
+- metodologia dettagliata, ripetibile e riproducibile;
+- tutte le mancanze evidenziate;
+- grafici, pubblicazioni e integrazioni;
+- open data definitivo;
+- il processo per aggiornarlo ogni anno.
+
+Solo allora gli atti che restano mancanti (M1, M2) diventano la lista delle richieste.
+
 **Decisioni che restano a Fabio:**
-- **Accesso civico massivo** ([#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58)): chiedere agli enti gli atti che non pubblicano. È l'unica via per gran parte di M1 e M2. Le richieste vanno a enti pubblici, quindi le autorizzi tu.
 - **Richieste ad ANAC** ([#54](https://github.com/mxmap-it/analisi-spesa-ict/issues/54), raccomandazioni R22, R84 e altre). Nessuna è stata inviata.
 
 ## Registro delle revisioni
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-19 | 1.1 | decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78) |
 | 2026-11-19 | 1.0 | prima fotografia: richiesta di Fabio del 19/11 («punto nave, documentiamo bene tutto, test di ripetibilità») |

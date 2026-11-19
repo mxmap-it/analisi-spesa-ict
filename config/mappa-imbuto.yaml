@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.1"
+versione: "0.2"
 aggiornato: 2026-11-19
 
 esiti:
@@ -262,8 +262,8 @@ mancanze:
     peso_mld: 16.37
     gravita: alta
     perche: "Senza l'atto non si sa quale prodotto si compra: il contratto resta incerto su entrambi gli assi."
-    come: "Raffinamento a livelli (L2-L4) per togliere ciò che non è cloud; per il resto accesso civico massivo."
-    ticket: ["#57", "#58", "#71"]
+    come: "Raffinamento a livelli (L2-L4) per togliere ciò che non è cloud; l'accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78), sulla lista degli atti che restano mancanti."
+    ticket: ["#57", "#71", "#78", "#58"]
     stato: in-corso
   - id: M2
     titolo: "PSN: servizio comprato non noto"
@@ -271,9 +271,9 @@ mancanze:
     peso_mld: 4.03
     gravita: alta
     perche: "Il PSN eroga sia cloud sovrano sia servizi su hyperscaler: senza il piano dei fabbisogni la giurisdizione non si attribuisce."
-    come: "Progetti dei piani dei fabbisogni sui siti degli enti; accesso civico a PSN S.p.A. e DTD; bilancio PSN come controllo aggregato."
-    ticket: ["#58", "#45"]
-    stato: decisione-fabio
+    come: "Progetti dei piani dei fabbisogni sui siti degli enti; bilancio PSN come controllo aggregato; accesso civico a PSN S.p.A. e DTD solo alla fine, dopo il rendiconto del risultato parziale (#78)."
+    ticket: ["#45", "#78", "#58"]
+    stato: in-corso
   - id: M3
     titolo: "Licenze e software con marchio noto ma cloud da accertare (Microsoft EA, Oracle)"
     peso: "3.889 CIG, 5,37 mld dal 2024"
@@ -357,4 +357,5 @@ mancanze:
     stato: mitigata
 
 registro:
+  - {data: 2026-11-19, versione: "0.2", modifica: "Decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78); M1 e M2 aggiornate."}
   - {data: 2026-11-19, versione: "0.1", modifica: "Prima versione (punto nave chiesto da Fabio il 19/11): dataset e relazioni, disegno con L1-L4 e livello B, limiti, 11 mancanze con gravità e piano, ripetibilità."}

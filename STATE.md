@@ -681,3 +681,8 @@ Esito atteso: **misura dell'attendibilità del CPV** sui contratti cloud e IT e 
 - Metodo: pagina nuova `sito/content/progetto/raffinamento-imbuto.md` (L1-L4 + B, sequenza annuale), RIPRODURRE.md, rendiconto imbuto 0.19 § 2.8-2.9.
 - L3 finito (3.540 CIG). L4: 977 CIG / 489 lotti, 95 letti; fermo sul tetto giornaliero (100 USD-eq/24h). Guardiano nuovo `tools/llm/raffinamento_guardiano.sh` (cron 30 min, flock lavoro/raffinamento/l4.lock).
 - **Da fare:** B1 v0.2 (locali informatici/tecnologici, area server) + campione nuovo; applicare B1/B2/L2/L3 come strato nel numero finale (tabella di spostamenti unica); finito L4 aggiornare § 2.8.
+
+## 19/11: punto nave e accesso civico alla fine
+- Mappa dell'imbuto (`config/mappa-imbuto.yaml` → `tools/pagina_mappa_imbuto.py` → `/progetto/mappa-imbuto/` + 3 SVG); punto nave datato `/rendiconti/punto-nave-2026-11-19/` (1.1). Ticket #76 SmartCIG, #77 precisione S1, #78 rendiconto del risultato parziale.
+- **Decisione di Fabio:** accesso civico massivo (#58) solo dopo #78 (checklist nel ticket: livelli completati e uniti, metodo ripetibile, mancanze, grafici, pubblicazioni, integrazioni, open data definitivo, processo annuale).
+- Test di ripetibilità in corso (`tools/verifiche/ripetibilita.sh`, esito in `esiti/2026-11-19/ripetibilita/`): da riportare nel punto nave § 5 e nella mappa § 5.
