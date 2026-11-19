@@ -1,0 +1,151 @@
+$(document).ready(function () {
+ $('#pluginAppObj_239_95_jtable').jtable({
+ title: 'Records',
+ paging: true,
+ pageSize: 20,
+ pageSizeChangeArea: false,
+ sorting: true,
+ actions: {
+ listAction: 'pluginAppObj/pluginAppObj_239_95/dbviewer.php?action=list',
+ 
+ },
+ fields: {
+ 'id': {
+ key: true,
+ create: true,
+ edit: false,
+ list: true,
+ title: 'id',
+ 
+ },
+ 'Numero': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Numero',
+ 
+ },
+ 'Tipo': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Tipo',
+ 
+ },
+ 'Data_pubblicazione': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Data_pubblicazione',
+ 
+ },
+ 'Oggetto____________________': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Oggetto____________________',
+ 
+ },
+ 'Periodo': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Periodo',
+ 
+ },
+ 'Download': {
+ key: false,
+ create: true,
+ edit: true,
+ list: true,
+ title: 'Download',
+ 
+ },
+ 'Documento_0': {
+ key: false,
+ create: false,
+ edit: false,
+ list: false,
+ title: 'Documento_0',
+ 
+ },
+ 'CIG': {
+ key: false,
+ create: false,
+ edit: false,
+ list: false,
+ title: 'CIG',
+ 
+ },
+ 'Link': {
+ key: false,
+ create: false,
+ edit: false,
+ list: false,
+ title: 'Link',
+ 
+ },
+ },
+ formCreated : function(event, data) {
+ if(data.formType == 'error')
+ return;
+ var div = data.form[0].parentElement;
+ if(data.formType != 'delete')
+ div = div.parentElement;
+ $(div).addClass('pluginAppObj_239_95_dialog');
+ },
+ messages: {
+ serverCommunicationError: 'Si è verificato un errore di comunicazione con il server.',
+ loadingMessage: 'Caricamento dei record...',
+ noDataAvailable: 'Non ci sono dati disponibili!',
+ addNewRecord: 'Crea un nuovo record',
+ editRecord: 'Modifica record',
+ areYouSure: 'Sei sicuro?',
+ deleteConfirmation: 'Il record verrà eliminato. Sei sicuro?',
+ save: 'Salva',
+ saving: 'Salvataggio',
+ cancel: 'Annulla',
+ deleteText: 'Elimina',
+ deleting: 'Eliminazione',
+ error: 'Errore',
+ close: 'Chiudi',
+ cannotLoadOptionsFor: 'Opzioni non disponibili per il campo {0}',
+ pagingInfo: 'Record {0}-{1} su {2}',
+ pageSizeChangeLabel: 'Righe per pagina',
+ gotoPageLabel: 'Vai alla pagina',
+ canNotDeletedRecords: 'Impossibile eliminare il record {0} di {1}!',
+ deleteProggress: 'Eliminazione di {0} di {1} record in corso...'
+ }
+ });
+
+ $('#pluginAppObj_239_95_filter_button').click(function (e) {
+ e.preventDefault();
+ var filter = $('#pluginAppObj_239_95_filter_field').val();
+ if(filter == undefined || filter == ""){
+ var params = {};
+ }
+ else{
+ var params = {filter : filter};
+ }
+ $('#pluginAppObj_239_95_jtable').jtable('load', params);
+ });
+
+ $('#pluginAppObj_239_95_csv_button').click(function (e) {
+ e.preventDefault();
+ var filter = $('#pluginAppObj_239_95_filter_field').val();
+ if(filter == undefined || filter == ""){
+ filter = '';
+ }
+ else{
+ filter = '&filter=' + filter;
+ }
+ location.href = 'pluginAppObj/pluginAppObj_239_95/dbviewer.php?action=export' + filter;
+ });
+
+ $('#pluginAppObj_239_95_jtable').jtable('load');
+});

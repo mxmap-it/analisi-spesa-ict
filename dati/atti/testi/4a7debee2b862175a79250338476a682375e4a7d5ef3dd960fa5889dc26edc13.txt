@@ -1,0 +1,467 @@
+                      TRUST PACKAGE
+                      PRIVACY, SECURITY AND COMPLIANCE
+
+
+
+
+blacklinesafety.com
+          TABLE OF CONTENTS
+
+          INTRODUCTION                                      3
+
+          ABOUT BLACKLINE SAFETY                            3
+
+          BACKGROUND                                        4
+
+          BLACKLINE SAFETY CLOUD                            4
+
+          BLACKLINE LIVE                                    4
+
+          BLACKLINE CLOUD ARCHITECTURE                      5
+
+          BUSINESS-CRITICAL SERVICE AVAILABILITY            6
+
+          PERSONAL INFORMATION                              6
+
+          LEGAL, REGULATORY, AND CONTRACTUAL REQUIREMENTS   6
+
+          TRUST PILLARS                                     7
+
+
+
+
+2 | Security, Privacy and Compliance
+
+
+                                                                2026-03-31_R3
+INTRODUCTION
+Blackline Safety (Blackline) is committed to upholding the highest standards of customer privacy and data security. We adhere to industry
+best practices to safeguard customer data, ensuring its utmost protection. In our continuous efforts to establish trust, we offer customers
+a comprehensive security documentation package that addresses frequently asked questions and concerns related to security. For any
+additional inquiries or information, please do not hesitate to reach out to us via phone or email. Your trust and data security are our top
+priorities.
+
+
+
+ABOUT BLACKLINE SAFETY
+Blackline is a technology leader driving innovation in the industrial workforce through safety IoT (Internet of Things) solutions. With
+connected safety devices and predictive analytics, Blackline helps companies drive towards zero safety incidents and improved operational
+performance. Blackline provides wearable devices, personal and area gas monitoring, cloud-connected software, and data analytics to meet
+demanding safety challenges and enhance overall productivity for organizations with coverage in more than 100 countries. Equipped with
+cellular and satellite connectivity, Blackline provides a lifeline to tens of thousands of people, having processed over 250 billion data points
+and initiated over eight million emergency alerts. Blackline offers an optional 24/7 live monitoring Safety Operations Center (SOC) to provide
+organizations with real-time coverage and peace of mind to keep workers safe around the clock. Our in-house SOC and global monitoring
+partners ensure professional and reliable safety monitoring and emergency response management.
+
+
+
+
+3 | Security, Privacy and Compliance
+
+
+                                                                                                                                                   2026-03-31_R3
+BACKGROUND
+This trust document explains Blackline’s commitment to security, privacy
+and compliance. It covers the purpose of Blackline’s products and
+services, the information we process or store for you, and the importance
+of our service availability to your business. Additionally, it considers the
+legal, regulatory, and contractual requirements for the information you
+share with Blackline.
+
+
+
+BLACKLINE SAFETY CLOUD
+Blackline develops IoT cloud software (Blackline Cloud) and services that
+monitor employee safety across various locations. The Blackline Cloud                        Blackline Live Map
+includes:
+
+ Software                              Blackline Live portal
+ Networking                            Device service subscription
+ Provisioning                           management
+
+ Data storage                          Reporting
+
+ Customer accounts with
+  access controls
+
+We use modern cloud-based infrastructure technologies to build,
+maintain and innovate new software features for our connected safety
+devices. The Blackline Cloud is a fully independent software platform                   Blackline Live Configurations
+that does not require data access to any external client data sources or
+services.
+
+The Blackline Cloud is hosted by Amazon Web Services (AWS), a leading
+cloud hosting service provider to global brands like 3M, BP, Adobe, Canon,
+GE, Alcatel Lucent, BMW, Hitachi, NASA and many others.
+
+
+
+BLACKLINE LIVE
+As part of the Blackline Cloud, Blackline Live is our web-based user portal
+that supports:
+                                                                                      Blackline Live Alert Management
+ IoT safety device assignment          Alert lifecycle management
+ Device configuration                  Data analytics
+  management
+ Alert configuration
+
+The portal also supports role-based access controls to ensure personnel
+only have access to approved information and device grouping capability
+with corresponding access controls, plus the ability to link together
+multiple Blackline Live organization-level accounts.
+
+
+
+
+                                                                               Blackline Analytics - Bump Tests and Calibration
+
+
+
+
+4 | Security, Privacy and Compliance
+
+
+                                                                                                                                  2026-03-31_R3
+BLACKLINE CLOUD ARCHITECTURE
+Blackline’s safety IoT devices communicate directly with the                                                      software APIs for real-time alert delivery and IoT safety device
+Blackline Cloud using cellular (2G, 3G, 4G, NB-IoT, and LTE-M) and                                                data and events.
+optional satellite connectivity. Our IoT devices do not require
+connection into traditional customer IT networks, such as Wi-Fi.
+                                                                                                                  The Blackline ecosystem is made up of connected safety devices,
+Cellular services are offered in most countries and territories
+                                                                                                                  communications networks, cloud-hosted infrastructure, and user
+globally, while satellite communications are limited to North
+                                                                                                                  interfaces. Blackline can optionally provide 24/7 live monitoring
+America, some Central and South American countries, Australia,
+                                                                                                                  services delivered by dedicated personnel.
+New Zealand, and South Africa.
+
+                                                                                                                  Within the Blackline Cloud, we have established separate virtual
+Our Blackline Live portal is the primary interface for safety
+                                                                                                                  networks to manage device traffic, communications networking,
+IoT device configuration, alert setup, emergency response
+                                                                                                                  internal network, core application, and data storage. Each of
+management and reporting, with domains hosted in North
+                                                                                                                  these layers is individually firewalled to ensure security and
+America, Europe, and the United Arab Emirates. We also provide
+                                                                                                                  control throughout the complete architecture.
+                                                                                                                                                                                                            VOIP TWO-WAY EMERGENC
+
+
+                                                                                                                                               3G/4G networks
+
+                                                                                                                                 Cellular
+                                                                                          VOIP TWO-WAY EMERGENCY VOICE CALLING
+
+
+                                                     3G/4G networks
+                                                                                                                                                        Google Maps
+                                         Cellular
+                                                                                           G7c or G7 EXO
+                                                                                             (Cellular)
+
+     G7c or G7 EXO                                                                                                                                                         APIs
+       (Cellular)                                                                                                   Internal virtual network
+                                                                                                                                      ular
+                                                                                                                                  Cell
+                                              ular
+                                          Cell
+
+
+
+
+                                                                                                                                                                                                     Comms virtual
+                                                                                    Comms virtual                      Tier 1, public web                                      Blackline Live               24/7
+                                                                                      network                                                                                   web portal             network
+                                                                                                                                                                                                       monitoring team
+
+
+
+
+                                                                          Assisted-GPS
+
+                                     Satellite                                                                                                                                             Assisted-GPS
+                                                     Iridium satellite
+     G7x or G7 EXO                                       network                                                               Satellite
+                                                                                                                         Tier 2, private                                          Portal Users
+   (Satellite + Cellular)                                                                                                 application          Iridium satellite
+                                                                                                                                                     Email         SMS
+                                                                                           G7x or G7 EXO                                           network
+                                                                                         (Satellite + Cellular)
+
+
+
+
+                                                                                                                                                                         Notification Recipients
+                                                                                                                        Tier 3, private
+                                                                                                                       database storage
+     LEGEND                 FIREWALLS:                  WEB SERVICES:    DATA FLOW:
+
+
+
+
+                                                                                            LEGEND                FIREWALLS:                      WEB SERVICES:                         DATA FLOW:
+
+
+
+
+5 | Security, Privacy and Compliance
+
+
+                                                                                                                                                                                                                         2026-03-31_R3
+BUSINESS-CRITICAL SERVICE                                              Emergency voice calls recorded through Blackline’s Twilio
+                                                                        service vendor (PII)
+AVAILABILITY
+                                                                       Safety Operations Center recorded voice calls from our global
+Each customer must assess the criticality of Blackline’s services       contact center partner and stored in Azure (PII)
+to its business. As a safety monitoring system, Blackline              Two-way messages between device users and the monitoring
+recommends a comprehensive internal review and assessment,              team (PII)
+including how to manage continuity of safety monitoring in the
+event that device communications or Blackline Cloud services
+                                                                      To provide customers with information and services,
+are temporarily unavailable. A client’s operations, legal, and
+                                                                      Blackline may use this information to:
+compliance teams are likely the best resources equipped to
+support this assessment.                                               Fulfill a contract with our customers, including verification of
+                                                                        employee identities as required to process payments, provide
+                                                                        implementation services and support users.
+PERSONAL INFORMATION                                                   Monitor how our wesbites and online services are used to help
+                                                                        us improve and protect our products, content, services. and
+Blackline safeguards client data with comprehensive policies and        websites.
+procedures designed to protect this information. Please refer to
+                                                                       Respond to any customer comments or complaints about our
+our Privacy Policy for more details.
+                                                                        website, products, or services.
+Our services include access to our Blackline Live portal, wireless     Provide our customers with information about new products,
+connectivity, cloud-based data storage, Blackline Analytics             product and service updates, newsletters, informative emails,
+reporting, email/text notifications, and options that include alert     and research on future product ideas or improvements, as well
+management, two-way emergency voice calling, push-to-talk,              as to personalize our communication to our customers.
+and software APIs. Some services require password-protected
+                                                                       Invite our customers to take part in market research or surveys.
+Blackline Live user account access.
+                                                                      Information collected through our marketing website,
+Under our services, we may collect, store, and process                www.blacklinesafety.com, and entered into Blackline Live is
+confidential information, including employee personally               collected and managed according to our Privacy Policy. All
+identifiable information (PII). To eliminate the sharing of PII       confidential information and PII provided by our clients is never
+with Blackline, customers can deploy Blackline IoT devices to         shared with third parties beyond our sub-processors that assist in
+their employees anonymously, and create user accounts using           delivering our services to clients.
+anonymized email addresses for Blackline Live access.
+
+In all circumstances, clients operate as data controllers while       For data retention and anonymization details following a
+Blackline acts as the processor. Overall customer information,        customer’s contracted service term, see Trust Pillars, section
+including PII, may include:                                           2. Privacy.
+
+ Organization name and address
+ Employee names, roles, employee IDs, phone numbers,
+                                                                      LEGAL, REGULATORY,
+  locations, addresses, and emails (PII)                              AND CONTRACTUAL
+ Employee personal contacts with names, phone numbers and
+  relationship types (PII)                                            REQUIREMENTS
+ Documented emergency response protocols
+                                                                      Determining the legal, regulatory, or contractual constraints
+ Location Beacon names, locations, and addresses                     for your PII and other information processed by the Blackline
+ Site and/or floor plan layers and zones/geofences                   Cloud is your responsibility in collaboration with your legal and
+                                                                      compliance teams. If you have users located in the European
+ Assignment of devices to employee contact cards stored              Economic Area (EEA) or the United Arab Emirates (UAE), the
+  within the address book (PII)                                       General Data Protection Regulation (GDPR) and Personal Data
+ Alert profiles that define alert logic based upon device            Protection Law (PDPL) privacy requirements may apply to PII
+  settings, plus notification subscribers from the employee           shared with Blackline.
+  address book (PII)
+                                                                      Do not use Blackline Live to store or process data such as
+ Alert management history with employee name, timestamps,            personal health information (PHI), payment or financial data. The
+  locations, notations (PII)                                          Blackline Cloud is not HIPAA or PCI-DSS compliant.
+
+
+6 | Security, Privacy and Compliance
+
+
+                                                                                                                                           2026-03-31_R3
+TRUST PILLARS
+                                                                       Change management procedures: To comply with SOC
+Securing trust with our customers is supported by four pillars:
+                                                                       2 requirements, Blackline has established formal change
+information security, compliance, privacy, and reliability.
+                                                                       management processes to control the design, development,
+                                                                       testing, and implementation of fixes and improvements to the
+1. Information security                                                Blackline Cloud, Blackline Live portal, and Blackline Analytics.
+                                                                       These processes mitigate the risk of unauthorized changes to
+                                                                       production systems and address the production infrastructure
+INFORMATION SECURITY MANAGEMENT                                        and software development lifecycle. They include change
+                                                                       requests, approvals, and standard change implementation
+Blackline has developed an Information Security Management             procedures for commonly applied changes.
+System (ISMS) to ensure a comprehensive commitment to
+information security. The ISMS framework includes controls             Blackline Safety employees: Employees must sign an
+                                                                       acknowledgment form confirming access to and review of
+aligned with the Trust Services Principles and Criteria for Security
+                                                                       the Employee Handbook, along with an understanding of the
+and Availability, essential for maintaining Blackline’s Service        responsibility to comply with its security policies. Additionally,
+Organization Controls (SOC 2) Type 2 audit report.                     employees are required to sign a confidentiality and non-
+                                                                       disclosure agreement (NDA) that prohibits the disclosure of
+                                                                       proprietary or confidential information, including customer
+CORPORATE AND OPERATIONAL SECURITY                                     information, to unauthorized parties. Background checks,
+                                                                       including criminal, education, and references are conducted as
+Production infrastructure access: Access to the production
+                                                                       part of the hiring process.
+infrastructure requires authentication through a cryptographic
+authentication key over an AWS Systems Manager Agent (SSM
+Agent). It also mandates that the authentication requests              PRODUCT SECURITY
+originate from a known set of IP addresses, and that all user
+accounts require a unique identifier.                                  Infrastructure: The Blackline Cloud is hosted and managed on
+                                                                       Amazon Web Services (AWS) across multiple availability zones to
+Production access control: Our Software and Data teams have            support fault tolerance, high availability, and disaster recovery. A
+role-based access to our production cloud systems and data. This       secondary hosting provider is used to store encrypted backups
+access is approved, controlled, and reviewed regularly to ensure       to mitigate the risk of a single infrastructure provider failure
+security and compliance.                                               that could result in customer data loss. Our Blackline Analytics
+                                                                       offering uses Microsoft Azure and Power BI for reporting and
+Access reviews: In addition to automated controls, periodic            data visualization.
+access reviews are conducted on in-scope systems to limit
+administrative access to production systems based on approved          Software development lifecycle: Before implementing
+roles and responsibilities.                                            changes in the production environment, Blackline software
+                                                                       developers perform source code reviews along with security,
+Training and awareness: All Blackline employees receive                functional, and performance testing for major application
+security and privacy awareness training during onboarding,             changes. Development and testing activities are conducted in
+as well as regular ongoing refreshers. Training covers topics          separate test environments to eliminate the risk of production
+including information security, phishing awareness and                 impact.
+prevention, password policy, security incident management,
+office physical security, confidentiality requirements and data        Encryption: To protect customers’ confidential data, Blackline
+privacy.                                                               encrypts data in the Blackline Cloud, which hosts our Blackline
+                                                                       Live portal and Blackline Analytics. Customer data is securely
+Corrective and preventive action: Blackline takes action               transferred to the Blackline Live portal using Transport Layer
+to control and correct nonconformities or suspected control            Security (TLS v1.2) and is encrypted at rest using a minimum of
+breakdowns through root cause investigations, implementing             AES256 encryption.
+preventative measures and assigning the necessary resources
+within the timelines as required.                                      Key management: Blackline uses AWS Key Management
+                                                                       Service (KMS) for encrypting our customer data. KMS is designed
+                                                                       to prevent unauthorized access to master keys, ensuring the
+                                                                       security of data stored within the Blackline Cloud.
+
+
+
+7 | Security, Privacy and Compliance
+
+
+                                                                                                                                              2026-03-31_R3
+Multi-tenancy: Blackline’s platform is designed to host multiple       purpose. Blackline collects PII in accordance with its Privacy
+customers, providing consistent access and standardized                Policy, obtaining explicit consent prior to collection to meet
+processes. Logistical separation of customer data is achieved          privacy objectives.
+through a Role Based Access Control (RBAC) system. Access to
+data is restricted based on customer identifiers, and each record
+in the Blackline Cloud includes a unique customer identifier. User     The use of personal information is limited to the purposes
+sessions are linked to customer identifiers, ensuring customer-        specified in the privacy objectives.
+specific data retrieval.
+                                                                       DATA RETENTION
+Admin-enabled access controls : The Blackline Cloud features
+a robust grouping structure in its permissions system. Customers       Following the completion of a service term, Blackline retains data
+can efficiently manage content access for specific users through       for the earlier of : 1) a customer’s request to delete their data, or
+Blackline Live groups. These groups function as containers,            2) a maximum of three years. Data deletion is managed through
+allowing customers to create a device grouping framework that          anonymization of all customer data. As described below, prior to
+aligns with their organization or site-based structure. Leveraging     anonymization of data, customers can request an export of their
+the RBAC system, customers have precise control over user              data in an accessible, non-proprietary format.
+access to designated groups, ensuring a tailored and secure
+content management experience.
+                                                                       The Blackline Live portal stores 200 days of data for customers.
+Authentication: Blackline supports single sign-on (SSO) via            Data flows from Blackline Live to Blackline Analytics in near
+SAML 2.0 compliant Identity Providers (IdPs), enabling integration     real-time, enabling customers to leverage advanced historical
+with any IdP that uses SAML. Additionally, Blackline supports          reporting and visualization. Customers can request a shorter
+form-based authentication SSO for Blackline Live delivers a            Blackline Live retention time if desired.
+confident and secure authentication system that leverages the
+customer’s multi-factor authentication (MFA) system.                   To support rigorous customer reporting requirements (including
+                                                                       compliance), Blackline Analytics stores all customer data until the
+Product security testing: For internal testing, Blackline              completion of the service term. Like Blackline Live, our Blackline
+performs Static Application Security Testing (SAST) and                Analytics service also supports the option for a shorter customer-
+Dynamic Application Security Testing (DAST) to detect security         requested data retention period.
+vulnerabilities, including all vulnerabilities outlined in the OWASP
+top-10. Additionally, specialized external third-party service
+                                                                       System-wide encrypted backups are maintained for a revolving
+firms are contracted for annual penetration tests to detect
+                                                                       30-day period in compliance with GDPR, with a maximum
+malicious code and other vulnerabilities. Results are reviewed by
+                                                                       retention of 60 days before deletion.
+engineering and security staff who develop remediation plans
+for identified vulnerabilities.
+                                                                       USA, EUROPE AND UAE DATA RESIDENCY
+2. Privacy                                                             Blackline offers three data residency options through three
+                                                                       separate Blackline Cloud domains, including in the USA, Europe,
+                                                                       and UAE. This provides customers with the option of selecting
+POLICY                                                                 their preferred domain for storage and processing of data,
+Blackline maintains and publishes its Privacy Policy online at         including their PII.
+www.blacklinesafety.com, informing clients about its privacy
+practices that support customer objectives. Any changes to             Blackline works with our customers to ensure that all data
+Blackline’s privacy practices, including changes in the use of PII,    resides in the appropriate region for their organization, including
+are included in the policy to align with client privacy objectives.    their operating entities may function across more than one
+                                                                       domain. Customers based in the United States and Canada are
+                                                                       provisioned in our US domain. Organizations based in Europe
+CONSENT, COLLECTION AND PROCESSING                                     and the United Kingdom are provisioned in our Europe domain.
+                                                                       Clients based in the UAE are provisioned in our UAE domain.
+Blackline communicates the choices available to customers
+                                                                       Clients located outside these regions may choose the region for
+regarding the collection, use, retention, disclosure, and disposal
+                                                                       their Blackline Cloud deployment.
+of their personal information. We obtain explicit consent from
+customers for these activities, ensuring alignment with their
+privacy objectives and using the information only for its intended
+
+
+
+8 | Security, Privacy and Compliance
+
+
+                                                                                                                                               2026-03-31_R3
+DATA PORTABILITY                                                      PRIVACY REGULATIONS
+At any time during the service term and prior to data                 To support our customers in Europe, the United Kingdom, and
+anonymization, customers can request an export of a portion           the United Arab Emirates in achieving their privacy compliance
+or all of their data. Customers should direct their data export       goals, Blackline established dedicated Blackline Cloud domains
+request to Blackline’s Technical Support team at support@             for Blackline Live and Blackline Analytics in the UK, EU, and UAE.
+blacklinesafety.com. Blackline will provide a quote for the
+encrypted export.
+                                                                      4. Reliability
+DATA BACKUPS
+                                                                      Blackline is committed to providing high quality, reliable service,
+Blackline uses a secondary hosting provider to store encrypted        having designed the Blackline Cloud to leverage multiple
+backups, mitigating the risk of a single infrastructure provider      datacenters and high availability.
+failure that could result in customer data loss.
+                                                                      MULTIPLE DATA CENTERS
+THIRD-PARTY VENDOR DATA ACCESS
+                                                                      Blackline’s North American infrastructure is hosted and managed
+Blackline only discloses client PII to contracted sub-processors      on AWS across multiple availability zones and regions for certain
+for the purpose of delivering services to our customers. A data-      functions. This structure supports fault tolerance, high availability,
+processing agreement is in place for such vendors. This includes      and disaster recovery. Our primary site is in northern Virginia, USA,
+the sending of SMS and email notifications and alerts that may        with a secondary site in Oregon, USA.
+include employee names, phone numbers, physical addresses
+and email addresses, geographic locations, and environmental
+data. This also includes the hosting of the Blackline Cloud           BUSINESS CONTINUITY AND DISASTER RECOVERY
+and associated information, including PII stored in AWS and           Blackline maintains Business Continuity and Disaster Recovery
+processed in Azure.                                                   plans to meet business and availability requirements. Blackline’s
+                                                                      Service Level Agreement (SLA) documents our availability
+UNAUTHORIZED PRIVACY DISCLOSURES                                      commitments and maintenance policy.
+
+Blackline creates and retains a complete, accurate, and timely
+record of detected or reported unauthorized disclosures
+(including breaches) of personal information to meet the
+customer’s objectives related to privacy.
+
+
+3. Compliance
+
+Blackline’s hosting providers, AWS and Microsoft Azure, undergo
+annual audits against widely recognized standards and
+frameworks such as SOC 1, SOC 2, and ISO 27001.
+
+While many software-as-a-service (SaaS) companies solely rely
+on their hosting providers’ security and compliance certifications,
+Blackline views information security as a shared responsibility.
+
+
+We hold ourselves to the highest industry standard for security
+assurance and undergo an annual SOC 2 Type 2 audit. This
+provides customers with an independent third-party assurance
+that our security controls are designed and operating effectively.
+
+
+
+
+9 | Security, Privacy and Compliance
+
+
+                                                                                                                                               2026-03-31_R3
+
