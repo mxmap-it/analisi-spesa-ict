@@ -21,9 +21,9 @@ B4 PNRR: tre vie indipendenti sullo stesso CIG: FLAG_PNRR_PNC del CIG, presenza 
    più la catena v3 (report/metodo/pnrr-contratti-v3.csv). Tabella incrociata su tutti i CIG ICT e sul cloud.
 
 Uso (SUL SERVER, come mxmap.it, nice, dopo free -g, un job pesante alla volta):
-  nice .venv/bin/python tools/verifiche/imbuto_bdncp.py   -> esiti/<oggi>/imbuto/bdncp/{segnali.csv,riepilogo.json,campione-*.csv}
+  nice .venv/bin/python tools/verifiche/imbuto_bdncp.py   -> esiti/<oggi>/imbuto/bdncp/{segnali.csv.gz,riepilogo.json,campione-*.csv}
 """
-import collections, csv, datetime, glob, hashlib, io, json, os, random, re, sys, zipfile
+import collections, csv, datetime, glob, gzip, hashlib, io, json, os, random, re, sys, zipfile
 from pathlib import Path
 
 R = Path(__file__).resolve().parents[2]
@@ -274,7 +274,7 @@ def scrivi(ict, out):
     os.makedirs(OUT, exist_ok=True)
     campi = ["cig", "anno", "strato", "sottoclasse", "importo", "da_verificare", "b1", "qe_evento", "qe_quota_lavori", "b2", "b2_cf", "b2_ipa",
              "data_pub", "durata_prevista", "d0", "d1", "durata_eff", "flag_pnrr", "ind_pnrr", "cup", "v3", "ente", "aggiudicatari"]
-    with open(OUT / "segnali.csv", "w", newline="", encoding="utf-8") as fh:
+    with gzip.open(OUT / "segnali.csv.gz", "wt", newline="", encoding="utf-8") as fh:  # 19/11: 51 MB non compresso, oltre il limite consigliato da GitHub
         w = csv.writer(fh)
         w.writerow(campi)
         for c in sorted(ict):
