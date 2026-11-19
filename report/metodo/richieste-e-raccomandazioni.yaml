@@ -929,3 +929,14 @@
   perche_serve: "Chi riusa i dati per CIG (cruscotti, analisi) deve oggi indovinare dal formato del codice fiscale quali righe sono dati personali"
   metrica: "Presenza del campo persona fisica nel dizionario dati; numero di codici fiscali personali negli open data aggiudicatari"
   rif: ["#53", "M13"]
+- id: R89
+  destinatario: "ANAC (BDNCP, dataset smartcig)"
+  tipo: dato-mancante
+  stato: "verificato (19/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "Gli open data SmartCIG non hanno CPV né aggiudicatario: la spesa sotto soglia si classifica solo dal testo e non si sa chi è stato pagato"
+  evidenza: "Le 26 colonne dei CSV smartcig (annuali smartcig-2020…2025 e aggiornamenti mensili smartcig/) non comprendono codice CPV né operatore economico; 0 dei 20.000 SmartCIG di marzo 2024 compaiono nel dataset aggiudicatari o nel dataset CIG. Dal 2024 gli SmartCIG sono 8,02 milioni per 11,95 mld (affidamenti diretti); l'imbuto sul solo testo trova 242.810 CIG ICT ≥ 500 € (0,50 mld) e 6.989 di cloud certo per marchio (13,6 M€), ma non può applicare la lente fornitore né riconoscere i rivenditori. Nel campione a cieco il testo basta per l'82,5 % dei casi (33/40); gli errori sono marchi ambigui («Nuvola», registro elettronico Madisoft, letto come cloud TIM) e oggetti incoerenti fra lotto e gara"
+  prova: "tools/verifiche/imbuto_smartcig.py (esiti/2026-11-19/imbuto/smartcig/: profilo.json con gli sha256 dei file letti, imbuto.json, riepilogo.json, misura-cieco.json); report/metodo/imbuto/smartcig-campione-cieco.csv"
+  richiesta: "Pubblicare per ogni SmartCIG il CPV prevalente e l'operatore economico affidatario (codice fiscale/partita IVA e denominazione), come già avviene per i CIG nel dataset aggiudicatari; documentare nel dizionario dati la regola di rilascio dello SmartCIG dal 2024"
+  perche_serve: "Canoni, abbonamenti e piccoli SaaS dei piccoli enti passano per SmartCIG: senza CPV e fornitore non si può misurare per chi lavorano né distinguere il produttore dal rivenditore"
+  metrica: "Quota di SmartCIG con CPV e con affidatario negli open data (oggi 0 %)"
+  rif: ["#76", "M6", "P09"]

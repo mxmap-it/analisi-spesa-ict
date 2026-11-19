@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.8.1"
+versione: "0.9"
 aggiornato: 2026-11-19
 
 esiti:
@@ -47,10 +47,12 @@ dataset:
     nome: "SmartCIG (affidamenti semplificati)"
     chiave: "CIG"
     campi: "oggetto, importo, CF della stazione appaltante, fattispecie"
-    ruolo: "Spesa sotto soglia (canoni, licenze, piccoli SaaS). Non ancora nell'imbuto."
-    stato: da-usare
+    ruolo: "Spesa sotto soglia (canoni, licenze, piccoli SaaS): imbuto sul solo testo dal 2024, strato a parte (§ 2.12 del rendiconto)."
+    stato: usato
     limiti:
       - "Mesi mancanti alla fonte (P09)."
+      - "Nessun CPV e nessun aggiudicatario negli open data (R89): niente lente fornitore."
+      - "Dal 2024 una sola fattispecie (affidamento diretto); fino al 2023 anche le esclusioni (servizi sociali, difesa, in-house)."
   - id: ocds
     gruppo: anac
     nome: "OCDS ANAC (73,8 GB)"
@@ -294,23 +296,23 @@ mancanze:
     ticket: ["#66"]
     stato: mitigata
   - id: M5
-    titolo: "Precisione dell'esclusione non ICT (S1) non misurata"
-    peso: "3,21 milioni di CIG, l'85,9 % dell'universo dal 2024"
-    peso_mld: null
+    titolo: "Precisione dell'esclusione non ICT (S1): misurata, 98,7 % dei CIG"
+    peso: "3,21 milioni di CIG dal 2024 (85,9 %); campione a cieco di 399: ICT persi 1,3 % dei CIG (Wilson 0,45-3,8 %, circa 42.000), 2,3-2,8 mld di valore dei CIG; 0 potenzialmente cloud (limite 1,7 %)"
+    peso_mld: 2.8
     gravita: media
-    perche: "Se l'esclusione sbaglia anche lo 0,1 %, qualche migliaio di contratti ICT sparisce senza traccia."
-    come: "Campione casuale di circa 400 CIG di S1 annotato da Claude a cieco (con verifica a campione da persone): con 0 errori il limite superiore è circa 1 %."
+    perche: "Gli errori sono ICT non cloud (PC, assistenza PC, connettività con CPV 642, centralini): spostano il totale ICT di qualche punto, non la quota cloud né la giurisdizione (0 cloud nel campione)."
+    come: "Fatto: tools/verifiche/imbuto_s1_precisione.py (estrai, misura, classi), esiti/2026-11-19/imbuto/s1-precisione/, annotazioni in report/metodo/imbuto/s1-campione-misura.csv, rendiconto § 2.11. Proposte P1-P5 pesate e non applicate (P2 CPV 64221 applicabile; P3 telefonia decisione di perimetro per Fabio); da rifare a ogni versione dell'imbuto."
     ticket: ["#77", "#66"]
-    stato: aperta
+    stato: mitigata
   - id: M6
-    titolo: "SmartCIG fuori dall'imbuto"
-    peso: "non misurato: affidamenti sotto soglia (canoni, licenze, piccoli SaaS)"
-    peso_mld: null
-    gravita: media
-    perche: "Molta spesa cloud corrente dei piccoli enti passa per affidamenti semplificati."
-    come: "Portare SmartCIG nell'imbuto con le stesse regole; prima un profilo per fattispecie."
+    titolo: "SmartCIG: misurati a parte, peso cloud sotto 0,06 mld dal 2024"
+    peso: "8,02 milioni di SmartCIG dal 2024 (11,95 mld); ICT ≥ 500 € 242.810 CIG / 0,50 mld; cloud certo 6.989 CIG / 13,6 M€ (extra-UE 88,9 %), residuo 22.432 / 45,1 M€ (cloud per circa l'80 % nel campione)"
+    peso_mld: 0.06
+    gravita: bassa
+    perche: "Dal 2024 lo SmartCIG resta solo per piccoli affidamenti diretti: molti contratti, poco valore. Senza CPV e aggiudicatari gli strati poggiano solo sul testo (R89)."
+    come: "Fatto: tools/verifiche/imbuto_smartcig.py (profilo, imbuto, riepilogo, misura), esiti/2026-11-19/imbuto/smartcig/, campione a cieco 33/40 (report/metodo/imbuto/smartcig-campione-cieco.csv), rendiconto § 2.12. Strato a parte, non sommato ai CIG. Resta: il 2020-2023 (28-48 mld l'anno con le esclusioni) se l'imbuto storico rientra nel perimetro; marchio «Nuvola» da correggere (Madisoft, non TIM)."
     ticket: ["#76"]
-    stato: aperta
+    stato: mitigata
   - id: M7
     titolo: "Spesa in-house senza CIG (Regione Lombardia → ARIA, MEF → Sogei)"
     peso: "ARIA circa 189 M€ l'anno [R]; MEF circa 0,3 mld l'anno [stima]"
@@ -385,6 +387,7 @@ mancanze:
     stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-19, versione: "0.9", modifica: "M5 misurata (#77): esclusione S1 precisa al 98,7 % dei CIG su 399 a cieco, 0 cloud, ICT persi 2,3-2,8 mld di valore, gravità media, mitigata. M6 misurata (#76): SmartCIG dal 2024 nell'imbuto sul solo testo, cloud certo 13,6 M€ + residuo 45,1 M€, gravità bassa, mitigata; dataset smartcig usato; R89."}
   - {data: 2026-11-19, versione: "0.8.1", modifica: "M13 risolta: cruscotto dei contratti con ricerca, esiti dei livelli, atti, annotazione e drilldown dai totali (#53)."}
   - {data: 2026-11-19, versione: "0.8", modifica: "M9 misurata (#70): hosting dei SaaS della 1.2 provato per l'85,6 % dell'euro, extra-UE 6,5/30,8/62,0 %, SAP 213,6 M€ con hosting non noto; gravità da alta a media. M10 mitigata dal settimo campione a cieco (big tech 98,9 % in euro pesata). M2 aggiornata (#45 chiuso). In-house verificata per CIG: Cloud Toscana padre AQ, CINECA DC proprio (#52)."}
   - {data: 2026-11-19, versione: "0.7.1", modifica: "Limite nuovo su SIOPE e BDAP: mirror BDAP parziale, robots.txt che esclude i CSV (R85, #25)."}

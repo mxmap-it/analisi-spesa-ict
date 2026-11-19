@@ -2,13 +2,13 @@
 title: "Imbuto: dove siamo"
 subtitle: "Quanto dell'universo ANAC si esclude o si include con certezza, quanto resta incerto, e le cinque cose da fare per la completezza"
 date: 2026-11-06
-lastmod: 2026-11-19T12:00:00Z
+lastmod: 2026-11-19T18:00:00Z
 datiAl: 2026-11-03
 description: "Dimensione di ogni strato dell'imbuto (CIG ANAC dal 2020) in numero ed euro, per i due assi (è cloud? giurisdizione?), con soglia, residuo per gruppo, tetti di accordo quadro separati dalla spesa, PSN impegni contro bilanci, link ai documenti, test di Zenodo ed EuroTender, censimento ICT AgID e top-5."
 
 ---
 
-**Versione 0.20.2 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12)
+**Versione 0.21 del 2026-11-19 · pubblicata il 18/11/2026, aggiornata a ogni avanzamento** · [registro delle revisioni](/rendiconti/imbuto-dove-siamo/#registro-delle-revisioni) · [disegno dell'imbuto](/progetto/imbuto/) · ticket [#55](https://github.com/mxmap-it/analisi-spesa-ict/issues/55), [#57](https://github.com/mxmap-it/analisi-spesa-ict/issues/57), [#59](https://github.com/mxmap-it/analisi-spesa-ict/issues/59), [#60](https://github.com/mxmap-it/analisi-spesa-ict/issues/60), [#50](https://github.com/mxmap-it/analisi-spesa-ict/issues/50), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66), [#67](https://github.com/mxmap-it/analisi-spesa-ict/issues/67), [#68](https://github.com/mxmap-it/analisi-spesa-ict/issues/68), [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#73](https://github.com/mxmap-it/analisi-spesa-ict/issues/73), [#58](https://github.com/mxmap-it/analisi-spesa-ict/issues/58), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12), [#77](https://github.com/mxmap-it/analisi-spesa-ict/issues/77), [#76](https://github.com/mxmap-it/analisi-spesa-ict/issues/76)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[R]** riferito da terzi, non verificato.
 
@@ -403,6 +403,89 @@ L'infrastruttura in-house certa (77,6 M€) è italiana ed è contata a parte. L
 - vale sui certi;
 - l'incerto (12,7 mld netti) vale ancora dieci volte il cloud certo;
 - L4 non ha finito di leggere i 972 CIG, e la tabella si ricalcola a ogni avanzamento.
+
+### 2.11 Quanto è precisa l'esclusione non ICT (S1)? (#77, mancanza M5, nuovo in 0.21)
+
+S1 è lo strato più grande: **3.209.583 CIG dal 2024** (85,9 % dell'universo), che l'imbuto esclude perché non hanno né un CPV informatico, né un marchio o un lotto noto, né una parola informatica nel testo. Finora la precisione di questa esclusione non era misurata.
+
+**Come [V].** `tools/verifiche/imbuto_s1_precisione.py estrai` ricostruisce S1 dalle stesse fonti dell'imbuto 0.3.4 (CIG dal 2024 con importo ≥ 500 € che non sono in `ict.csv`): il conteggio coincide con il riepilogo (3.209.583). Il campione ha **399 CIG**, con seme fisso `spesaict-s1-2026-11-19`, stratificato per sei classi d'importo. Metà del campione è ripartita in proporzione al numero di CIG e metà in proporzione agli euro: è un sovracampionamento voluto dei contratti grandi. Le classi hanno 20, 126, 43, 33, 26 e 151 casi (500 €-5 k, 5-40 k, 40-140 k, 140 k-1 M, 1-5 M, oltre 5 M). Ogni CIG è stato annotato **a cieco da Claude** (decisione di Fabio del 19/11), senza vedere la regola che l'aveva escluso. I giudizi sono tre: ICT, non ICT o dubbio. Per gli ICT si indica anche se il contratto è potenzialmente cloud. Le annotazioni, con il motivo riga per riga, sono in [`report/metodo/imbuto/s1-campione-misura.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/imbuto/s1-campione-misura.csv). Le stime pesano ogni classe per il suo numero di CIG (o di euro). L'intervallo è di Wilson al 95 %, calcolato con la dimensione efficace di Kish (circa 226 casi).
+
+**Esito [V]** (`imbuto_s1_precisione.py misura`, `esiti/2026-11-19/imbuto/s1-precisione/misura.json`):
+
+| giudizio | CIG nel campione | quota dei CIG di S1 (Wilson 95 %) | CIG stimati | quota degli euro di S1 |
+|---|---|---|---|---|
+| non ICT | 390 | 97,4 % | circa 3,13 milioni | 99,2 % |
+| ICT (errore) | 4 | 1,3 % (0,45-3,8 %) | circa 42.000 (14.000-123.000) | 0,18 % (0,02-2,0 %) |
+| dubbio | 5 | 1,2 % (0,40-3,7 %) | circa 39.000 | 0,64 % |
+| ICT potenzialmente cloud | 0 | 0 % (0-1,7 %) | 0 (al massimo circa 54.000) | 0 % (0-1,7 %) |
+
+- **Precisione dell'esclusione:** 98,7 % dei CIG (Wilson 96,2-99,6 %); 99,8 % degli euro (98,0-99,98 %). Se anche i dubbi fossero ICT, si scenderebbe a 97,4 % dei CIG.
+- **Euro ICT persi:** circa **2,3-2,8 miliardi** di valore dei CIG. La stima a rapporto per classe dà 2,31 miliardi; quella per espansione dà 2,84 miliardi, con un intervallo al 95 % da 0 a 5,9. Contando anche i dubbi si arriva a 10,4-13,8 miliardi. La forbice è larga perché nella classe sopra i 5 milioni pesa un solo CIG: l'adesione all'AQ ARIA_2024_401 lotto 3 «fleet management», 7,6 M€, che pesa per 132. Gli euro di S1 sono il **valore dei CIG**, non la spesa. Dal 2024 sono 1.274 miliardi, gonfiati da massimali e importi anomali: nel campione compaiono buoni pasto per 11,1 miliardi e una fornitura di energia per 3,3 miliardi.
+- **Nessun contratto potenzialmente cloud** nel campione. L'esclusione S1 non sottrae servizi cloud oltre l'1,7 % dei CIG (limite superiore). Per l'asse «è cloud?», quindi, S1 non sposta il risultato in modo misurabile.
+
+**Classi d'errore (4 ICT e 5 dubbi su 399).** Nessuna vale più di 2 casi:
+
+| classe | casi | esempio | proposta (non applicata) |
+|---|---|---|---|
+| CPV 503* (assistenza e riparazione di PC e attrezzature d'ufficio) fuori da CPV_ICT | 2 ICT | AQ ARIA «fleet management» (CPV 50324000); 13 PC portatili AMA (CPV 50300000) | P1: aggiungere 50300000, 50324000, 50310000, 50330000 a CPV_ICT |
+| parole «PC», «portatili», «postazioni di lavoro», «device», «tablet» assenti da RX_ICT | 2 ICT | PC portatili; device per le centrali operative territoriali (COT) del PNRR | P4: RX_ICT con `\bpc\b`, `portatil[ie]`, `postazioni di lavoro`, `tablet`, solo con CPV non sanitari |
+| CPV 64221 (interconnessione) | 1 ICT | rinnovo MIX (Milan Internet eXchange) di Terna | P2: 64221 come 64216/64222 |
+| telefonia (centralini, CPV 3255) | 1 dubbio | nuovo centralino di un'unione di comuni | P3: perimetro da decidere con Fabio (oggi la telefonia è fuori, salvo il centralino ospitato) |
+| OT/IoT e software di controllo (segnalamento ferroviario, IIoT delle linee elettriche), ricerca militare, UPS | 4 dubbi | sistemi IIoT Terna (7,5 M€), sistemi ACC/SCMT RFI (29,9 M€) | P5: nessuna regola; fuori dalla spesa ICT della PA salvo componente cloud dichiarata |
+
+Il peso delle proposte su tutto S1 si conta con `imbuto_s1_precisione.py classi` (`esiti/2026-11-19/imbuto/s1-precisione/proposte.json`). Per ogni proposta ci sono 20 esempi casuali:
+
+| proposta | CIG in S1 | valore dei CIG (M€) | ICT fra i 20 esempi casuali | giudizio |
+|---|---|---|---|---|
+| P1 CPV 503* | 6.103 | 962,0 | circa 9 (PC, apparati di rete, fibra spenta, stampanti e multifunzione, infrastruttura HPE) | troppo larga come regola di CPV: il resto è manutenzione di macchine non informatiche (selezionatrici di monete, validatrici, centrifughe, impianti). Hanno senso solo 50324 (assistenza PC) e 50332 (rete) |
+| P2 CPV 64221 | 94 | 6,0 | circa 15 (MPLS, fibra, internet exchange, dark fiber) | applicabile, con peso piccolo |
+| P3 CPV 3255 | 1.460 | 239,8 | 20 di telefonia (centralini, VoIP, DECT, cellulari) | decisione di perimetro per Fabio: oggi la telefonia è fuori |
+| P4 testo «pc», «portatili», «postazioni», «tablet» | 7.684 | 1.318,3 | 7 (acquisti di PC) | troppo larga: «(PC)» è la sigla di Piacenza e «portatile» indica strumenti e radio. Da limitare a «acquisto/fornitura/noleggio … pc» |
+| P5 OT/IoT, telecontrollo | 2.337 | 1.559,9 | 0 di spesa ICT della PA (contatori NB-IoT, telecontrollo di reti idriche e gas) | nessuna regola: resta fuori |
+| X CPV 642 telefonia (contiene P2) | 8.769 | 3.613,1 | telefonia fissa e mobile; qualche collegamento dati (SPC, MPLS, FTTC) | fuori per scelta. I collegamenti dati con CPV 642 generico si perdono se il testo non dice «connettività» |
+
+Le proposte **non cambiano l'imbuto**. Per decisione di Fabio del 18/11 l'imbuto resta largo e si corregge per livelli (§ 2.8). Se approvate, entrerebbero come regola di L1 nella prossima versione (0.3.5), ciascuna con un campione di misura. Anche il CPV segnaposto 99999999 compare in S1: 29 casi su 399 (7,3 %), già oggetto della raccomandazione sul CPV segnaposto 99999999 accettato al rilascio del CIG.
+
+### 2.12 SmartCIG nell'imbuto: la spesa sotto soglia (#76, mancanza M6, nuovo in 0.21)
+
+Gli SmartCIG sono un universo separato dai CIG: 0 dei 20.000 SmartCIG di marzo 2024 compaiono nel dataset CIG o in quello degli aggiudicatari. Finora l'imbuto non li leggeva.
+
+**Profilo per fattispecie e anno [V]** (`tools/verifiche/imbuto_smartcig.py`, `esiti/2026-11-19/imbuto/smartcig/profilo.json`; file annuali, CIG distinti per anno):
+
+| anno | SmartCIG | valore (mld €) | fattispecie |
+|---|---|---|---|
+| 2020 | 4.676.762 | 28,5 | contratti sotto i 40.000 €, più le esclusioni (servizi sociali, difesa, imprese collegate, in-house) |
+| 2021 | 4.659.305 | 29,3 | come sopra |
+| 2022 | 4.424.668 | 33,3 | come sopra |
+| 2023 | 4.707.712 | 48,4 | come sopra: sotto i 40.000 € 4,48 milioni di CIG e 19,6 mld; servizi sociali 12,7 mld; difesa 7,7 mld |
+| 2024 | 3.387.490 | 5,0 | **una sola fattispecie** («nessun tipo di esclusione»), affidamento diretto |
+| 2025 | 2.992.245 | 4,5 | come il 2024 |
+
+Dal 2024 lo SmartCIG resta solo per i piccoli affidamenti diretti. Su 354.417 SmartCIG ICT, 16 superano i 40.000 €. Le esclusioni e i contratti più grandi passano al CIG ordinario, già nell'imbuto.
+
+**Imbuto sugli SmartCIG dal 2024 [V]** (`imbuto.json`, `riepilogo.json`): sono 8.023.537 CIG per 11,95 miliardi. Si usa l'ultima versione di ogni CIG: gli aggiornamenti mensili prevalgono sui file annuali; il 2026 arriva fino a ottobre, con giugno e luglio mancanti alla fonte (P09). Gli SmartCIG **non hanno CPV né aggiudicatari** negli open data. Le regole dell'imbuto si applicano quindi solo al testo dell'oggetto, con le stesse funzioni di `imbuto.py` e `classifica.py`: marchio → S4, parola «cloud» o simili → S6, testo ICT → S5, nient'altro → S1.
+
+| strato | SmartCIG | M€ |
+|---|---|---|
+| S1 escluso non ICT | 5.071.292 | 10.812 |
+| S2 sotto i 500 € (ICT 111.607 CIG, 26,0 M€) | 2.709.435 | 640,6 |
+| S4 marchio, cloud certo (incluso l'in-house) | 6.989 | 13,6 |
+| S4 marchio, licenze, software e servizi | 3.026 | 6,5 |
+| S5 ICT non cloud | 210.363 | 435,7 |
+| S6 residuo (cloud da accertare; PSN 65 CIG) | 22.432 | 45,1 |
+
+- **Peso del cloud SmartCIG dal 2024:** 13,6 M€ certi più al massimo 45,1 M€ incerti, cioè **meno di 0,06 miliardi in quasi tre anni**. Per confronto, il cloud certo dei CIG ordinari è di 1,29 miliardi (§ 2.10). Il cloud certo vale circa 5 M€ l'anno sia nel 2024 sia nel 2025. Gli SmartCIG contano molto per numero e poco per valore.
+- **Giurisdizione del cloud certo (S4, ≥ 500 €):** extra-UE 12,10 M€ (88,9 %), IT 1,43 M€ (10,5 %), UE 0,09 M€ (0,7 %). La quota extra-UE è più alta di quella dei CIG ordinari (74,8 %, § 2.10): sotto soglia si comprano soprattutto abbonamenti a prodotti di massa.
+- **Marchi del cloud certo:** Microsoft 2.397 CIG e 5,09 M€; Adobe 2.535 e 4,72 M€; Google 654 e 1,31 M€; Aruba 753 e 1,17 M€; Webex 0,40 M€; Zoom 0,26 M€; AWS 0,24 M€; in-house pubblico 0,15 M€. Il PSN conta 52 CIG e 0,14 M€, con il servizio da determinare.
+- **Enti (S4+S6, ≥ 500 €):** CNR 98 CIG e 0,22 M€; Sapienza 104 e 0,17 M€; MAECI 103 e 0,13 M€; Università di Torino, Comune di Pioltello, Consiglio nazionale degli architetti, Autostrada del Brennero, Università di Bologna, Padova e Firenze (`riepilogo.json`).
+- **Fornitori:** non misurabili. Gli open data SmartCIG non riportano l'aggiudicatario, quindi la lente fornitore (via 5) non si applica e i rivenditori non si vedono. Il prodotto resta attribuibile dal testo. Nuova raccomandazione R89.
+
+**Campione a cieco [V]** (40 CIG con seme fisso: 25 S4 e 15 S6; annotati da Claude in [`report/metodo/imbuto/smartcig-campione-cieco.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/metodo/imbuto/smartcig-campione-cieco.csv); `misura-cieco.json`). Il giudizio concorda con lo strato in 33 casi su 40, cioè l'82,5 % (Wilson 68-91 %); senza i 5 dubbi, 94,3 % (81-98 %):
+- S4 cloud o in-house: 16 su 19 concordi, 3 dubbi (licenze Adobe senza prodotto, Acrobat, un oggetto del lotto incoerente con la gara). Il provider è corretto in 18 casi su 19. L'errore è «Nuvola»: è il registro elettronico SaaS di Madisoft, non il cloud TIM. È un servizio cloud, ma con provider e giurisdizione sbagliati, e va corretto in `config/marchi_cloud.yaml` (proposta).
+- S4 licenze e software: 5 su 6 concordi.
+- S6 residuo: 12 cloud su 15. Due casi non sono cloud: la formazione su un portale cloud e il materiale di consumo per data center. Un caso è dubbio: una migrazione senza ospitalità detta. Il residuo S6 SmartCIG è quindi cloud per circa l'80 %, quasi tutto SaaS verticale (anagrafe, presenze, orari, backup, hosting), con provider da determinare.
+
+**Esito per M6:** la mancanza passa a **mitigata, gravità bassa**: sotto 0,1 miliardi dal 2024. Gli SmartCIG non entrano nei totali dell'imbuto. Restano uno strato a parte, sommabile con la sua etichetta, perché i loro strati poggiano solo sul testo e non hanno la lente fornitore. Prima del 2024 il loro peso era maggiore (28-48 miliardi l'anno con le esclusioni): va misurato se e quando l'imbuto storico 2020-2023 tornerà nel perimetro.
 
 ## 3. Distribuzione degli importi e soglia
 
@@ -976,6 +1059,12 @@ nice .venv/bin/python tools/verifiche/bdap_cig_ministeri_cf.py
 nice .venv/bin/python tools/verifiche/siope_bdap_vs_diretto.py 2024
 nice .venv/bin/python tools/verifiche/siope_bdap_vs_diretto.py 2025
 # sul server: imbuto_qe_sal.py (quadro economico e SAL dal mirror) prima di imbuto_revisione.py
+python tools/verifiche/imbuto_s1_precisione.py misura   # precisione di S1 dal campione annotato (§ 2.11)
+python tools/verifiche/imbuto_smartcig.py misura        # precisione del campione SmartCIG (§ 2.12)
+# sul server, dal mirror (§ 2.11, § 2.12), dentro flock lavoro/pesante.lock:
+nice .venv/bin/python tools/verifiche/imbuto_s1_precisione.py estrai   # ricostruisce S1 e il campione
+nice .venv/bin/python tools/verifiche/imbuto_s1_precisione.py classi   # peso delle proposte P1-P5 in S1
+nice .venv/bin/python tools/verifiche/imbuto_smartcig.py && .venv/bin/python tools/verifiche/imbuto_smartcig.py riepilogo
 ```
 
 Sul server, `imbuto_tetti.py --rigenera` rilegge il mirror ANAC (righe ≥ 45 M€, aggiudicazioni) e riscrive `tetti-cig.csv`. `imbuto_psn.py --rigenera` ricontrolla gli sha256 dei bilanci PSN e cerca le cifre nel loro testo.
@@ -1053,3 +1142,4 @@ Le citazioni sono tutte letterali (10 su 10). Le uscite valide sono 7 su 12, per
 | 0.20 | 2026-11-19 | § 2.10 nuovo: tabella unica degli spostamenti per CIG fra tutti i livelli (#71), con priorità per forza della prova; dal 2024 netti massimali cloud certo 1,28 mld (era 1,09), in-house certo 0,08 (era 0,42), residuo S6 10,67 (era 11,70); 69 disaccordi, nessuno sul cloud; giurisdizione sul cloud certo extra-UE 75,6 %, UE 18,8 %, IT 5,5 % |
 | 0.20.1 | 2026-11-19 | § 2.10 ricalcolato con la verifica a mano dell'in-house (#52): Cloud Toscana è un accordo quadro aperto al mercato, CINECA un impianto per il proprio data center; 164 adesioni a Cloud Toscana nel cloud certo IT; cloud certo 1,29 mld netti, extra-UE 74,8 %, UE 18,6 %, IT 6,4 % |
 | 0.20.2 | 2026-11-19 | § 2.10 con B1 versione 0.2 (protegge locali informatici, locali tecnologici, area server; #74): residuo S6 48.960 CIG, B1 1.272 CIG / 130,1 M€; cloud certo invariato |
+| 0.21 | 2026-11-19 | § 2.11 nuovo: precisione dell'esclusione non ICT S1 su 399 CIG a cieco (#77, M5): 98,7 % dei CIG (Wilson 96,2-99,6 %), 99,8 % degli euro; ICT persi circa 42.000 CIG e 2,3-2,8 mld di valore; 0 potenzialmente cloud (limite 1,7 %); proposte P1-P5 pesate, non applicate. § 2.12 nuovo: SmartCIG nell'imbuto (#76, M6): profilo per fattispecie 2020-2025, dal 2024 8,02 milioni di SmartCIG e 11,95 mld; cloud certo 6.989 CIG / 13,6 M€ (extra-UE 88,9 %), residuo 22.432 / 45,1 M€; campione a cieco 33/40; R89 |

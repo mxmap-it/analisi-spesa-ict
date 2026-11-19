@@ -1,0 +1,413 @@
+{
+ "fonte": "lavoro/smartcig/ict.csv (imbuto_smartcig.py)",
+ "sha256": "cbf7be2b24eaf2f049613505b2ae9ca18cca119cb56fee4d4ed73e3da91459f3",
+ "cloud_per_giurisdizione": [
+  {
+   "chiave": [
+    "cloud incerto (S6)",
+    "da determinare"
+   ],
+   "cig": 22367,
+   "euro": 44932430
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "EXTRA-UE"
+   ],
+   "cig": 6077,
+   "euro": 12101267
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "IT"
+   ],
+   "cig": 870,
+   "euro": 1426411
+  },
+  {
+   "chiave": [
+    "cloud incerto (S6)",
+    "incerto-servizio-psn"
+   ],
+   "cig": 65,
+   "euro": 176134
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "UE"
+   ],
+   "cig": 42,
+   "euro": 91877
+  }
+ ],
+ "cloud_per_anno": [
+  {
+   "chiave": [
+    "cloud incerto (S6)",
+    "2024"
+   ],
+   "cig": 8810,
+   "euro": 18097660
+  },
+  {
+   "chiave": [
+    "cloud incerto (S6)",
+    "2025"
+   ],
+   "cig": 8902,
+   "euro": 17668025
+  },
+  {
+   "chiave": [
+    "cloud incerto (S6)",
+    "2026"
+   ],
+   "cig": 4720,
+   "euro": 9342879
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "2024"
+   ],
+   "cig": 2832,
+   "euro": 5555309
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "2025"
+   ],
+   "cig": 2665,
+   "euro": 5169600
+  },
+  {
+   "chiave": [
+    "cloud certo (S4)",
+    "2026"
+   ],
+   "cig": 1492,
+   "euro": 2894646
+  }
+ ],
+ "provider_cloud_certo": [
+  {
+   "chiave": [
+    "Microsoft",
+    "EXTRA-UE"
+   ],
+   "cig": 2397,
+   "euro": 5087946
+  },
+  {
+   "chiave": [
+    "Adobe",
+    "EXTRA-UE"
+   ],
+   "cig": 2535,
+   "euro": 4723758
+  },
+  {
+   "chiave": [
+    "Google",
+    "EXTRA-UE"
+   ],
+   "cig": 654,
+   "euro": 1310953
+  },
+  {
+   "chiave": [
+    "Aruba",
+    "IT"
+   ],
+   "cig": 753,
+   "euro": 1173727
+  },
+  {
+   "chiave": [
+    "Cisco Webex",
+    "EXTRA-UE"
+   ],
+   "cig": 231,
+   "euro": 396328
+  },
+  {
+   "chiave": [
+    "Zoom",
+    "EXTRA-UE"
+   ],
+   "cig": 155,
+   "euro": 255156
+  },
+  {
+   "chiave": [
+    "Amazon Web Services",
+    "EXTRA-UE"
+   ],
+   "cig": 72,
+   "euro": 235663
+  },
+  {
+   "chiave": [
+    "In-house pubblico",
+    "IT"
+   ],
+   "cig": 68,
+   "euro": 150356
+  },
+  {
+   "chiave": [
+    "Polo Strategico Nazionale",
+    "incerto-servizio-psn"
+   ],
+   "cig": 52,
+   "euro": 139729
+  },
+  {
+   "chiave": [
+    "Nextcloud",
+    "UE"
+   ],
+   "cig": 29,
+   "euro": 66747
+  },
+  {
+   "chiave": [
+    "Salesforce",
+    "EXTRA-UE"
+   ],
+   "cig": 18,
+   "euro": 55698
+  },
+  {
+   "chiave": [
+    "TIM",
+    "IT"
+   ],
+   "cig": 24,
+   "euro": 37436
+  },
+  {
+   "chiave": [
+    "Oracle",
+    "EXTRA-UE"
+   ],
+   "cig": 14,
+   "euro": 33545
+  },
+  {
+   "chiave": [
+    "Retelit",
+    "IT"
+   ],
+   "cig": 15,
+   "euro": 32102
+  },
+  {
+   "chiave": [
+    "OVHcloud",
+    "UE"
+   ],
+   "cig": 13,
+   "euro": 25130
+  },
+  {
+   "chiave": [
+    "SPC Cloud lotto 1",
+    "IT"
+   ],
+   "cig": 5,
+   "euro": 17894
+  },
+  {
+   "chiave": [
+    "Seeweb",
+    "IT"
+   ],
+   "cig": 5,
+   "euro": 14895
+  },
+  {
+   "chiave": [
+    "SPC Cloud lotto 1",
+    "incerto-servizio-psn"
+   ],
+   "cig": 3,
+   "euro": 9908
+  },
+  {
+   "chiave": [
+    "IBM",
+    "EXTRA-UE"
+   ],
+   "cig": 1,
+   "euro": 2218
+  }
+ ],
+ "enti_cloud_s4_s6": [
+  {
+   "chiave": [
+    "80054330586",
+    "CONSIGLIO NAZIONALE DELLE RICERCHE"
+   ],
+   "cig": 98,
+   "euro": 219186
+  },
+  {
+   "chiave": [
+    "80209930587",
+    "UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA"
+   ],
+   "cig": 104,
+   "euro": 173287
+  },
+  {
+   "chiave": [
+    "80213330584",
+    "MINISTERO DEGLI AFFARI ESTERI E COOPERAZIONE INTERNAZIONALE"
+   ],
+   "cig": 103,
+   "euro": 131543
+  },
+  {
+   "chiave": [
+    "80088230018",
+    "UNIVERSITA DEGLI STUDI DI TORINO"
+   ],
+   "cig": 47,
+   "euro": 97258
+  },
+  {
+   "chiave": [
+    "83501410159",
+    "COMUNE DI PIOLTELLO"
+   ],
+   "cig": 38,
+   "euro": 96586
+  },
+  {
+   "chiave": [
+    "80115850580",
+    "CONS. NAZ.LE DEGLI ARCHITETTI,PIANIFICATORI,PAESAGGISTI E CONSERVATORI"
+   ],
+   "cig": 30,
+   "euro": 94034
+  },
+  {
+   "chiave": [
+    "00210880225",
+    "SOCIETA PER AZIONI AUTOSTRADA DEL BRENNERO S.P.A.,SIGLA AUTOBRENNERO SPA O AUTOSTRADA DEL BRENNERO S.P.A.,DENOMINAZIONE TEDESCA BRENNERAUTOBAHN A.G."
+   ],
+   "cig": 21,
+   "euro": 89526
+  },
+  {
+   "chiave": [
+    "80007010376",
+    "ALMA MATER STUDIORUM UNIVERSITA DI BOLOGNA"
+   ],
+   "cig": 45,
+   "euro": 85526
+  },
+  {
+   "chiave": [
+    "80006480281",
+    "UNIVERSITA DEGLI STUDI DI PADOVA"
+   ],
+   "cig": 34,
+   "euro": 78198
+  },
+  {
+   "chiave": [
+    "01279680480",
+    "UNIVERSITA DEGLI STUDI DI FIRENZE"
+   ],
+   "cig": 42,
+   "euro": 76094
+  },
+  {
+   "chiave": [
+    "00250450160",
+    "COMUNE DI PONTE SAN PIETRO"
+   ],
+   "cig": 37,
+   "euro": 71834
+  },
+  {
+   "chiave": [
+    "97734430016",
+    "FONDAZIONE ISTITUTO TECNICO SUPERIORE PER LE TECNOLOGIE DELLA INFORMAZIONE E DELLA COMUNICAZIONE"
+   ],
+   "cig": 32,
+   "euro": 69360
+  },
+  {
+   "chiave": [
+    "00074320623",
+    "COMUNE DI SOLOPACA"
+   ],
+   "cig": 2,
+   "euro": 68715
+  },
+  {
+   "chiave": [
+    "80006030789",
+    "COMUNE DI SANTA CATERINA ALBANESE"
+   ],
+   "cig": 4,
+   "euro": 63480
+  },
+  {
+   "chiave": [
+    "00876220633",
+    "UNIVERSITA DEGLI STUDI DI NAPOLI FEDERICO II"
+   ],
+   "cig": 34,
+   "euro": 62960
+  },
+  {
+   "chiave": [
+    "02373540240",
+    "PASUBIO TECNOLOGIA S.R.L."
+   ],
+   "cig": 24,
+   "euro": 62584
+  },
+  {
+   "chiave": [
+    "00518460019",
+    "POLITECNICO DI TORINO"
+   ],
+   "cig": 26,
+   "euro": 62106
+  },
+  {
+   "chiave": [
+    "06926900587",
+    "CONSIGLIO NAZ.LE ORDINE DEI GIORNALISTI"
+   ],
+   "cig": 13,
+   "euro": 60190
+  },
+  {
+   "chiave": [
+    "02575140203",
+    "SOCIALIS - AZ. SPEC. CONS. SERVIZI ALLA PERSONA DEL TERRITORIO SUZZARESE"
+   ],
+   "cig": 24,
+   "euro": 59905
+  },
+  {
+   "chiave": [
+    "05160100011",
+    "IST.ZOOPROFILATTICO SP.DEL P.TE LIGURIA V.AOSTA"
+   ],
+   "cig": 24,
+   "euro": 59159
+  }
+ ],
+ "nota": "solo CIG >= 500 € (S2 escluso); fornitori non disponibili: gli open data SmartCIG non hanno aggiudicatari"
+}

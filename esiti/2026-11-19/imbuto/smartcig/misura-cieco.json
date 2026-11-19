@@ -1,0 +1,95 @@
+{
+ "S4 cloud/in-house": {
+  "n": 19,
+  "concordi": 16,
+  "dubbi": 3,
+  "precisione_wilson95": [
+   0.842,
+   0.624,
+   0.945
+  ],
+  "precisione_senza_dubbi_wilson95": [
+   1.0,
+   0.806,
+   1.0
+  ],
+  "giudizi": {
+   "cloud": 16,
+   "dubbio": 3
+  },
+  "prodotto": {
+   "si": 18,
+   "no": 1
+  }
+ },
+ "S4 licenza/software": {
+  "n": 6,
+  "concordi": 5,
+  "dubbi": 1,
+  "precisione_wilson95": [
+   0.833,
+   0.436,
+   0.97
+  ],
+  "precisione_senza_dubbi_wilson95": [
+   1.0,
+   0.566,
+   1.0
+  ],
+  "giudizi": {
+   "non-cloud": 5,
+   "dubbio": 1
+  },
+  "prodotto": {
+   "si": 6
+  }
+ },
+ "S6 residuo": {
+  "n": 15,
+  "concordi": 12,
+  "dubbi": 1,
+  "precisione_wilson95": [
+   0.8,
+   0.548,
+   0.93
+  ],
+  "precisione_senza_dubbi_wilson95": [
+   0.857,
+   0.601,
+   0.96
+  ],
+  "giudizi": {
+   "cloud": 12,
+   "non-cloud": 2,
+   "dubbio": 1
+  },
+  "prodotto": {
+   "n.a.": 15
+  }
+ },
+ "tutti": {
+  "n": 40,
+  "concordi": 33,
+  "dubbi": 5,
+  "precisione_wilson95": [
+   0.825,
+   0.68,
+   0.913
+  ],
+  "precisione_senza_dubbi_wilson95": [
+   0.943,
+   0.814,
+   0.984
+  ],
+  "giudizi": {
+   "cloud": 28,
+   "non-cloud": 7,
+   "dubbio": 5
+  },
+  "prodotto": {
+   "n.a.": 15,
+   "si": 24,
+   "no": 1
+  }
+ }
+}
