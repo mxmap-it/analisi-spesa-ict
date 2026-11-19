@@ -9,6 +9,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 2. Guarda la board: <https://github.com/orgs/mxmap-it/projects/1> e le issue aperte.
 3. **Prendi un ticket prima di lavorare**: assegnatelo e spostalo in *In Progress* (`tools/stato_ticket.sh <n> "In Progress"`). Se il lavoro non ha un ticket, crealo. Non lavorare su un ticket già *In Progress* di altri senza coordinarti nel ticket stesso.
 4. Non ri-derivare ciò che è già accertato in `STATE.md`, `DECISIONI.md` o nei rendiconti: richiamalo.
+5. Per il quadro d'insieme leggi la **Mappa dell'imbuto** (`sito/content/progetto/mappa-imbuto.md`): dataset e relazioni, livelli, limiti, mancanze con gravità.
 
 ## 2. Obiettivo e perimetro
 
@@ -62,6 +63,7 @@ Questo file vale per qualunque agente (Claude Code, Codex, Cursor, Copilot, Gemi
 - Hugo in `sito/`, build in `docs/` (GitHub Pages da `main`), dominio analisi-spesa-ict.mxmap.it. Stesso tema di osservatorio.mxmap.it (Bootstrap Italia, Titillium).
 - Comando di build: `hugo --source sito --minify --cleanDestinationDir`; committa insieme sorgente e `docs/`.
 - Stile: conciso, in italiano, home centrata sulla spesa ICT. I rendiconti hanno versione e registro delle revisioni.
+- **Mappa dell'imbuto sempre aggiornata** (Fabio, 19/11/2026): a ogni avanzamento si aggiorna `config/mappa-imbuto.yaml` (dataset nuovo, relazione, limite, livello, mancanza che cambia stato) e si rigenera con `python3 tools/pagina_mappa_imbuto.py`; a ogni traguardo si scrive un **punto nave** datato in `sito/content/rendiconti/punto-nave-AAAA-MM-GG.md`, che non si modifica dopo.
 - **Tutto pubblicato e sempre aggiornato** (Fabio, 18/11/2026): rendiconti e pagine di progetto sono pubblici e elencati, niente bozze nascoste (`build.list: never`, `sitemap.disable`). A ogni avanzamento si aggiornano pagina, versione e registro delle revisioni, si ricostruisce il sito e si pusha subito. Ciò che è stima o proposta resta marcato come tale nel testo ([S], «proposta per Fabio»). Restano fuori solo i materiali riservati del § 3 (Proteggimi, AppaltIntel) e i dati personali.
 
 ## 7. Coordinamento e budget

@@ -18,7 +18,7 @@ weight: 18
 
 **Risultati provvisori.** Cifre misurate da noi sui file ANAC archiviati (**V**) con [`tools/analisi/imbuto.py`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/tools/analisi/imbuto.py) versione 0.3.1; esiti in [`esiti/2026-11-03/imbuto/`](https://github.com/mxmap-it/analisi-spesa-ict/tree/main/esiti/2026-11-03/imbuto). Sono **importi dichiarati**, non spesa liquidata. Le qualificazioni seguono i [criteri di sovranità](../criteri-sovranita/): extra-UE è il cloud di Microsoft, Google, Amazon e Oracle chiunque lo rivenda (PSN compreso); il resto segue l'operatore che eroga in proprio.
 
-Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/).
+Il quadro sempre aggiornato è nella [Mappa dell'imbuto](../mappa-imbuto/). Sopra l'imbuto lavorano i **livelli di raffinamento** (regole, Banca dati nazionale dei contratti pubblici, lettura con Claude Opus, ricerca degli atti): metodo nella pagina [Raffinamento dell'imbuto a livelli](../raffinamento-imbuto/), numeri aggiornati nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/).
 
 ## 1. In breve
 

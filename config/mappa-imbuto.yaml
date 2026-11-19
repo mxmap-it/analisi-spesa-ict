@@ -1,0 +1,360 @@
+# Mappa dell'imbuto: dataset, relazioni, livelli, limiti, mancanze (#71 #74, richiesta di Fabio 19/11/2026).
+# FONTE UNICA della pagina sito/content/progetto/mappa-imbuto.md e dei grafici in sito/static/img/mappa-imbuto/,
+# rigenerati da:  python3 tools/pagina_mappa_imbuto.py   (legge anche gli esiti più recenti per i numeri).
+# Si aggiorna QUESTO file a ogni avanzamento (nuovo dataset, livello, mancanza risolta), poi si rigenera e si pubblica.
+# Regola sui numeri: qui solo numeri già pubblicati in un rendiconto con la sua fonte [V]; quelli dell'imbuto la pagina
+# li legge dagli esiti (sezione `esiti`), così non invecchiano.
+#
+# Gravità delle mancanze (criterio fisso, per confrontarle nel tempo):
+#   alta  = può spostare la quota cloud o la giurisdizione di oltre 1 miliardo, o riguarda oltre il 10 % della spesa ICT
+#           senza misura;
+#   media = fra 0,1 e 1 miliardo, oppure tocca un passo intermedio senza cambiare il risultato finale;
+#   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
+# Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
+
+versione: "0.1"
+aggiornato: 2026-11-19
+
+esiti:
+  strati: "esiti/*/imbuto/strati.json"            # imbuto L1 (ultimo per data)
+  raffinamento_l2: "esiti/*/imbuto/raffinamento-l2.json"
+  raffinamento_l3: "esiti/*/imbuto/raffinamento-l3.json"
+  bdncp: "esiti/*/imbuto/bdncp/riepilogo.json"
+  l4_esiti: "report/metodo/llm/raffinamento-l4/esiti/*.jsonl"
+  l4_lotti: "report/metodo/llm/raffinamento-l4/lotti/*.jsonl"
+
+gruppi:
+  anac: {nome: "ANAC: CIG e SmartCIG", colore: "#0b5394"}
+  bdncp: {nome: "ANAC: altri dataset BDNCP, collegati per CIG", colore: "#3d85c6"}
+  esterni: {nome: "Altre fonti pubbliche", colore: "#6aa84f"}
+  nostri: {nome: "Tabelle curate e prodotti del progetto", colore: "#e69138"}
+
+dataset:
+  - id: cig
+    gruppo: anac
+    nome: "CIG ANAC (annuali 2020-2025 e mensili)"
+    chiave: "CIG"
+    campi: "oggetto gara e lotto, CPV, importo del lotto, CF della stazione appaltante, CIG dell'accordo quadro, data, durata prevista, flag PNRR"
+    ruolo: "Universo dell'imbuto: ogni contratto dal 2020 entra da qui."
+    stato: usato
+    limiti:
+      - "L'importo del lotto è valore del contratto, non spesa; negli attuativi è spesso il massimale dell'accordo quadro copiato (R22)."
+      - "L'oggetto è testo libero breve: il prodotto comprato spesso non c'è."
+      - "Delta mensili rimossi e righe non conformi (P08, P16): li conserva il mirror."
+  - id: smartcig
+    gruppo: anac
+    nome: "SmartCIG (affidamenti semplificati)"
+    chiave: "CIG"
+    campi: "oggetto, importo, CF della stazione appaltante, fattispecie"
+    ruolo: "Spesa sotto soglia (canoni, licenze, piccoli SaaS). Non ancora nell'imbuto."
+    stato: da-usare
+    limiti:
+      - "Mesi mancanti alla fonte (P09)."
+  - id: ocds
+    gruppo: anac
+    nome: "OCDS ANAC (73,8 GB)"
+    chiave: "CIG (ocid)"
+    campi: "fasi della gara, periodi, parti"
+    ruolo: "Seconda via sul CIG; periodi e PNRR 1.2."
+    stato: usato
+    limiti: ["Pesante; usato solo a campione o per sottoinsiemi."]
+  - id: aggiudicatari
+    gruppo: bdncp
+    nome: "Aggiudicatari"
+    chiave: "CIG → codice fiscale"
+    campi: "CF, denominazione, ruolo nel raggruppamento"
+    ruolo: "Chi vince: lente fornitore, canale diretto/rivenditore, in-house (B2)."
+    stato: usato
+    limiti: ["Manca per una parte dei CIG (177 CIG in-house su 816 dal 2024)."]
+  - id: aggiudicazioni
+    gruppo: bdncp
+    nome: "Aggiudicazioni"
+    chiave: "CIG"
+    campi: "importo di aggiudicazione, data"
+    ruolo: "Seconda via sull'importo: tetti contro spesa."
+    stato: usato
+    limiti: []
+  - id: quadro-economico
+    gruppo: bdncp
+    nome: "Quadro economico"
+    chiave: "CIG"
+    campi: "importo per natura (forniture, servizi, lavori) e per evento"
+    ruolo: "B1: contratti che sono lavori; tetti sopra 50 M€."
+    stato: usato
+    limiti: ["Copre il 62,4 % dei CIG ICT dal 2024.", "A volte servizi compilati come lavori (siti web, pagoPA)."]
+  - id: avvio-fine
+    gruppo: bdncp
+    nome: "Avvio e fine contratto"
+    chiave: "CIG"
+    campi: "stipula, inizio effettivo, termine, ultimazione"
+    ruolo: "B3: durata effettiva, quota annua di spesa."
+    stato: usato
+    limiti: ["Copre il 13,4 % dei CIG ICT dal 2020: solo misura, non sostituisce la stima."]
+  - id: stati-avanzamento
+    gruppo: bdncp
+    nome: "Stati di avanzamento (SAL)"
+    chiave: "CIG"
+    campi: "importo SAL, certificati di pagamento"
+    ruolo: "Unica spesa eseguita in BDNCP: controvalidazione."
+    stato: usato-poco
+    limiti: ["Copre il 2,2 % dei CIG ICT; importi progressivi da non sommare due volte."]
+  - id: indicatori-pnrr
+    gruppo: bdncp
+    nome: "Indicatori PNRR/PNC"
+    chiave: "CIG"
+    campi: "quote di genere e giovani"
+    ruolo: "B4: candidata terza via PNRR."
+    stato: usato
+    limiti: ["Coincide con il flag del CIG: non è una via indipendente."]
+  - id: cup
+    gruppo: bdncp
+    nome: "CUP"
+    chiave: "CIG ↔ CUP"
+    campi: "codice unico di progetto"
+    ruolo: "Ponte verso i finanziamenti (PNRR) e le opere."
+    stato: usato
+    limiti: ["Il CUP c'è anche per investimenti non PNRR: da solo non dice PNRR."]
+  - id: pubblicazioni
+    gruppo: bdncp
+    nome: "Pubblicazioni"
+    chiave: "CIG"
+    campi: "date GURI e GUUE"
+    ruolo: "Aggancio a TED."
+    stato: usato
+    limiti: ["Manca per il 19 % dei CIG ICT."]
+  - id: stazioni-appaltanti
+    gruppo: bdncp
+    nome: "Stazioni appaltanti"
+    chiave: "codice fiscale"
+    campi: "denominazione, natura giuridica, flag in-house e partecipata"
+    ruolo: "Anagrafica dei committenti; B2."
+    stato: usato
+    limiti: ["flag_inHouse e flag_partecipata «false» su tutte le 48.040 righe (R84)."]
+  - id: indicepa
+    gruppo: esterni
+    nome: "Indice PA (AgID)"
+    chiave: "codice fiscale"
+    campi: "ente, tipologia, URL istituzionale e trasparenza"
+    ruolo: "Chi è pubblico (B2), abbinamento enti, URL delle sezioni Amministrazione trasparente."
+    stato: usato
+    limiti: ["URL della sezione trasparenza spesso errato (R82)."]
+  - id: pvl-at
+    gruppo: esterni
+    nome: "Atti di gara: link PVL, MePA, sezioni Amministrazione trasparente"
+    chiave: "CIG nel testo dell'atto"
+    campi: "determine, capitolati, contratti (archiviati con sha256)"
+    ruolo: "La prova del prodotto comprato: livelli L3-L4 dell'acquisizione e via 6."
+    stato: usato
+    limiti: ["Per il residuo S6 solo 535 CIG su 59.406 hanno un atto che cita il CIG."]
+  - id: ted
+    gruppo: esterni
+    nome: "TED (Gazzetta UE)"
+    chiave: "numero di avviso, CIG nel testo"
+    campi: "aggiudicatari, lotti"
+    ruolo: "Seconda fonte degli aggiudicatari sopra soglia UE."
+    stato: usato
+    limiti: ["Solo gare sopra soglia UE."]
+  - id: pnrr-padigitale
+    gruppo: esterni
+    nome: "PA Digitale 2026 (finanziamenti PNRR)"
+    chiave: "CUP"
+    campi: "misura, ente, importo finanziato"
+    ruolo: "Sottoinsieme prioritario: Misure 1.1 e 1.2 (catena v3 CUP → CIG)."
+    stato: usato
+    limiti: ["Il 32 % dei CIG della Misura 1.2 non ha il flag PNRR nel CIG."]
+  - id: siope-bdap
+    gruppo: esterni
+    nome: "SIOPE e BDAP (pagamenti)"
+    chiave: "codice fiscale dell'ente / ministero"
+    campi: "pagato per codice gestionale ICT"
+    ruolo: "Riscontro con la spesa pagata (strato R, non si somma)."
+    stato: usato
+    limiti: ["Nessun CIG nei dati aperti: abbinamento solo per ente e anno (R83)."]
+  - id: l190
+    gruppo: esterni
+    nome: "Dataset L. 190/2012 degli enti"
+    chiave: "CIG"
+    campi: "importo aggiudicato e liquidato per lotto"
+    ruolo: "Unica spesa effettiva per CIG: campione di 200 enti."
+    stato: campione
+    limiti: ["XML con lotti per il 48,5 % degli enti del campione; dati da ripulire."]
+  - id: tabelle-curate
+    gruppo: nostri
+    nome: "Tabelle curate (lotti, marchi, iniziative, perimetro CPV)"
+    chiave: "lotto di AQ, marchio, CPV"
+    campi: "provider, giurisdizione, fonte di ogni riga"
+    ruolo: "Regole dell'imbuto (S3, S4) e dei livelli."
+    stato: usato
+    limiti: ["Vanno mantenute a mano: ogni riga ha la fonte."]
+  - id: imbuto
+    gruppo: nostri
+    nome: "Imbuto (ict.csv) e tabelle dei livelli"
+    chiave: "CIG"
+    campi: "strato, sottoclasse, provider, giurisdizione, esito di ogni livello"
+    ruolo: "Risultato: una riga per CIG con chi ha deciso cosa."
+    stato: usato
+    limiti: []
+
+relazioni:
+  - {da: cig, a: smartcig, chiave: "stesso CIG", nota: "universi distinti"}
+  - {da: cig, a: ocds, chiave: "CIG"}
+  - {da: cig, a: aggiudicatari, chiave: "CIG"}
+  - {da: cig, a: aggiudicazioni, chiave: "CIG"}
+  - {da: cig, a: quadro-economico, chiave: "CIG", copertura: "62 %"}
+  - {da: cig, a: avvio-fine, chiave: "CIG", copertura: "13 %"}
+  - {da: cig, a: stati-avanzamento, chiave: "CIG", copertura: "2 %"}
+  - {da: cig, a: indicatori-pnrr, chiave: "CIG", copertura: "9 %"}
+  - {da: cig, a: cup, chiave: "CIG", copertura: "21 %"}
+  - {da: cig, a: pubblicazioni, chiave: "CIG", copertura: "81 %"}
+  - {da: cig, a: stazioni-appaltanti, chiave: "CF della SA"}
+  - {da: aggiudicatari, a: indicepa, chiave: "CF dell'aggiudicatario"}
+  - {da: stazioni-appaltanti, a: indicepa, chiave: "CF"}
+  - {da: cup, a: pnrr-padigitale, chiave: "CUP"}
+  - {da: stazioni-appaltanti, a: siope-bdap, chiave: "CF dell'ente"}
+  - {da: indicepa, a: pvl-at, chiave: "URL trasparenza"}
+  - {da: cig, a: pvl-at, chiave: "CIG nel testo"}
+  - {da: pubblicazioni, a: ted, chiave: "data e avviso"}
+  - {da: cig, a: l190, chiave: "CIG"}
+  - {da: tabelle-curate, a: imbuto, chiave: "regole"}
+  - {da: cig, a: imbuto, chiave: "CIG"}
+
+livelli:
+  - id: L1
+    nome: "Imbuto a regole"
+    mezzo: "testo, CPV, lotti di convenzione, marchi"
+    ingresso: "tutti i CIG ANAC dal 2020"
+    uscita: "strati S0-S6"
+    strumento: "tools/analisi/imbuto.py, tools/verifiche/imbuto_strati.py"
+    deterministico: true
+  - id: B
+    nome: "Segnali BDNCP"
+    mezzo: "quadro economico, aggiudicatari + Indice PA, avvio/fine, indicatori PNRR"
+    ingresso: "CIG ICT S3-S6"
+    uscita: "lavori fuori dalla misura cloud; in-house ristretta; durate; PNRR"
+    strumento: "tools/verifiche/imbuto_bdncp.py"
+    deterministico: true
+  - id: L2
+    nome: "Regole sul testo"
+    mezzo: "stampanti, consumabili, cablaggio, salvo testo cloud"
+    ingresso: "residuo S6 dal 2024"
+    uscita: "fuori dalla misura cloud"
+    strumento: "tools/llm/raffinamento.py l2"
+    deterministico: true
+  - id: L3
+    nome: "Lettura del testo con Claude Opus"
+    mezzo: "solo dati ANAC, senza web"
+    ingresso: "S6 entrato per «sw» o «connettività»"
+    uscita: "non ICT / ICT non cloud con certezza alta; il resto a L4"
+    strumento: "tools/llm/raffinamento.py prepara-l3, leggi-l3, esito"
+    deterministico: false
+  - id: L4
+    nome: "Atti di gara con Claude Opus"
+    mezzo: "ricerca e archiviazione degli atti (sha256)"
+    ingresso: "incerti di L3, disaccordi sull'asse cloud"
+    uscita: "cloud sì/no e prodotto, con fonte primaria"
+    strumento: "tools/llm/giro_imbuto.sh (GIRO_DIR raffinamento-l4)"
+    deterministico: false
+
+mancanze:
+  - id: M1
+    titolo: "Atti non raggiungibili per il residuo incerto"
+    peso: "S6 dal 2024: 59.406 CIG, 16,37 mld dichiarati; con un atto che cita il CIG solo 535 CIG / 304,7 M€"
+    peso_mld: 16.37
+    gravita: alta
+    perche: "Senza l'atto non si sa quale prodotto si compra: il contratto resta incerto su entrambi gli assi."
+    come: "Raffinamento a livelli (L2-L4) per togliere ciò che non è cloud; per il resto accesso civico massivo."
+    ticket: ["#57", "#58", "#71"]
+    stato: in-corso
+  - id: M2
+    titolo: "PSN: servizio comprato non noto"
+    peso: "847 CIG, 4,03 mld dal 2024"
+    peso_mld: 4.03
+    gravita: alta
+    perche: "Il PSN eroga sia cloud sovrano sia servizi su hyperscaler: senza il piano dei fabbisogni la giurisdizione non si attribuisce."
+    come: "Progetti dei piani dei fabbisogni sui siti degli enti; accesso civico a PSN S.p.A. e DTD; bilancio PSN come controllo aggregato."
+    ticket: ["#58", "#45"]
+    stato: decisione-fabio
+  - id: M3
+    titolo: "Licenze e software con marchio noto ma cloud da accertare (Microsoft EA, Oracle)"
+    peso: "3.889 CIG, 5,37 mld dal 2024"
+    peso_mld: 5.37
+    gravita: alta
+    perche: "Lo stesso contratto Microsoft o Oracle può essere licenza on premises o abbonamento cloud."
+    come: "Regole per prodotto (L1-L4 delle licenze), censimento dei prodotti negli EA, transato per famiglia da Consip (R23)."
+    ticket: ["#66", "#40"]
+    stato: in-corso
+  - id: M4
+    titolo: "Importi che sono massimali, non spesa"
+    peso: "S3-S6 dal 2024: 56,06 mld al netto dei tetti; ancora incerti 14,4 mld in 80 CIG (misura della 0.3.1)"
+    peso_mld: 14.4
+    gravita: alta
+    perche: "Gli attuativi riportano spesso il massimale dell'accordo quadro: contarli gonfia la spesa."
+    come: "Regole dei tetti v2 misurate su campione, quadro economico e aggiudicazioni come seconda via, revisione sugli atti; raccomandazione R22."
+    ticket: ["#66"]
+    stato: mitigata
+  - id: M5
+    titolo: "Precisione dell'esclusione non ICT (S1) non misurata"
+    peso: "3,21 milioni di CIG, l'85,9 % dell'universo dal 2024"
+    peso_mld: null
+    gravita: media
+    perche: "Se l'esclusione sbaglia anche lo 0,1 %, qualche migliaio di contratti ICT sparisce senza traccia."
+    come: "Campione casuale di circa 400 CIG di S1 annotato da volontari: con 0 errori il limite superiore è circa 1 %."
+    ticket: ["#77", "#66"]
+    stato: aperta
+  - id: M6
+    titolo: "SmartCIG fuori dall'imbuto"
+    peso: "non misurato: affidamenti sotto soglia (canoni, licenze, piccoli SaaS)"
+    peso_mld: null
+    gravita: media
+    perche: "Molta spesa cloud corrente dei piccoli enti passa per affidamenti semplificati."
+    come: "Portare SmartCIG nell'imbuto con le stesse regole; prima un profilo per fattispecie."
+    ticket: ["#76"]
+    stato: aperta
+  - id: M7
+    titolo: "Spesa in-house senza CIG (Regione Lombardia → ARIA, MEF → Sogei)"
+    peso: "ARIA circa 189 M€ l'anno [R]; MEF circa 0,3 mld l'anno [stima]"
+    peso_mld: 0.49
+    gravita: media
+    perche: "Gli affidamenti alle società in-house spesso non hanno CIG: la spesa c'è nei pagamenti ma non nei contratti."
+    come: "Strato di riscontro R con SIOPE e BDAP per ente; bilanci delle in-house; raccomandazione R83."
+    ticket: ["#67", "#52"]
+    stato: in-corso
+  - id: M8
+    titolo: "Valore dei contratti, non spesa annua"
+    peso: "il valore dei CIG è circa 3,5 volte il pagato; date effettive solo per il 13 % dei CIG"
+    peso_mld: null
+    gravita: media
+    perche: "La misura finale è la spesa per anno: va ripartita sulla durata e confrontata col pagato."
+    come: "Quota annua dalla durata (B3 dove c'è la data effettiva), SIOPE/BDAP per il pagato, liquidato L. 190 a campione."
+    ticket: ["#74", "#12"]
+    stato: in-corso
+  - id: M9
+    titolo: "Cloud di un hyperscaler dentro il servizio di un fornitore italiano"
+    peso: "non misurato"
+    peso_mld: null
+    gravita: alta
+    perche: "Un SaaS italiano che gira su AWS o Azure è giurisdizione extra-UE per l'infrastruttura, ma il contratto non lo dice."
+    come: "Tabella dei SaaS e del loro hosting (config/saas_host.yaml) da documentazione pubblica dei fornitori; via 6 sugli atti."
+    ticket: ["#70"]
+    stato: aperta
+  - id: M10
+    titolo: "Giurisdizione degli inclusi certi misurata solo a campione"
+    peso: "cloud certo 1,21 mld + in-house 0,66 mld dal 2024"
+    peso_mld: 1.87
+    gravita: bassa
+    perche: "La precisione in euro pesata è circa 99 % sui campioni a cieco, ma il campione definitivo non è ancora fatto."
+    come: "Settimo campione a cieco, una sola volta, prima del rendiconto finale."
+    ticket: ["#40", "#72"]
+    stato: aperta
+  - id: M11
+    titolo: "Qualità dei dati ANAC: campi vuoti o compilati male"
+    peso: "flag in-house vuoto su 48.040 righe; PNRR senza flag sul 32 % dei CIG 1.2; quadro economico a volte sbagliato"
+    peso_mld: null
+    gravita: bassa
+    perche: "Ogni campo vuoto obbliga a una via indiretta (Indice PA, catena CUP, lettura del testo)."
+    come: "Vie indirette documentate; raccomandazioni ad ANAC (R22, R84) con metrica, nessuna inviata senza Fabio."
+    ticket: ["#74", "#54"]
+    stato: mitigata
+
+registro:
+  - {data: 2026-11-19, versione: "0.1", modifica: "Prima versione (punto nave chiesto da Fabio il 19/11): dataset e relazioni, disegno con L1-L4 e livello B, limiti, 11 mancanze con gravità e piano, ripetibilità."}

@@ -6,7 +6,7 @@ weight: 19
 ---
 
 **Versione 0.1, 19/11/2026** ([#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74)).
-I numeri di ogni livello stanno nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/) (§ 2.8 e § 2.9); questa pagina dice **come** si ottengono e come si rifanno.
+Il quadro d'insieme (dataset, relazioni, mancanze) è nella [Mappa dell'imbuto](../mappa-imbuto/). I numeri di ogni livello stanno nel rendiconto [«Imbuto: dove siamo»](../../rendiconti/imbuto-dove-siamo/) (§ 2.8 e § 2.9); questa pagina dice **come** si ottengono e come si rifanno.
 
 ## Il principio
 
