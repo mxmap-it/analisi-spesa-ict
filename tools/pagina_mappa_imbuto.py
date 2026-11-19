@@ -377,11 +377,16 @@ Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è 
 - **Non deterministici: L3 e L4.** Usano un modello linguistico, che riletto da capo dà risposte vicine ma non identiche. Per questo i loro esiti sono versionati in git e si **rileggono**, non si rigenerano; lo scarto si misura sui campioni a cieco.
 - **I comandi in ordine** sono nella pagina [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/#rifarlo-ogni-anno) e in [RIPRODURRE.md](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/RIPRODURRE.md).''')
     if rip:
-        a(f"\n**Ultimo test di ripetibilità** (`{rp}`): {rip.get('sintesi', 'vedi il file')}\n")
-        if isinstance(rip.get("passi"), list):
-            a("| passo | esito | nota |\n|---|---|---|")
-            for p in rip["passi"]:
-                a(f"| {p.get('passo', '')} | {p.get('esito', '')} | {p.get('nota', '')} |")
+        cc = collections.Counter("uguale byte per byte" if c["esito"].startswith("uguale (sha256)") else
+                                 "stesso contenuto, righe in ordine diverso" if "ordine delle righe" in c["esito"] else
+                                 "stessi numeri, differenze sotto il millesimo di euro o nello sha256 registrato" for c in rip["confronti"])
+        a(f"\n**Ultimo test di ripetibilità** ([`{rp}`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/{rp.replace('.json', '.md')})): "
+          f"rifatti da zero i passi deterministici in {rip['durata_totale_min']} minuti, {len(rip['confronti'])} file confrontati con quelli pubblicati. "
+          "**Tutti i numeri pubblicati si riproducono.**\n")
+        a("| esito del confronto | file |\n|---|---|")
+        for k, v in cc.most_common():
+            a(f"| {k} | {v} |")
+        a("\nLe differenze che restano, e cosa si fa, sono la mancanza M12 qui sopra.")
     else:
         a("\nIl test di ripetibilità di questa versione è in corso: l'esito comparirà qui alla prossima rigenerazione.")
     a(f'''

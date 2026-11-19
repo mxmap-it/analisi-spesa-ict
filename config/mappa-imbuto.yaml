@@ -12,7 +12,7 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.2"
+versione: "0.3"
 aggiornato: 2026-11-19
 
 esiti:
@@ -355,7 +355,17 @@ mancanze:
     come: "Vie indirette documentate; raccomandazioni ad ANAC (R22, R84) con metrica, nessuna inviata senza Fabio."
     ticket: ["#74", "#54"]
     stato: mitigata
+  - id: M12
+    titolo: "Ripetibilità: ingressi solo sul server e file non canonici"
+    peso: "nessun numero cambia (test del 19/11: 22 file, tutti i numeri riprodotti)"
+    peso_mld: null
+    gravita: media
+    perche: "Da un clone pulito mancherebbero tre ingressi (lavoro/pvl/cig_link.csv, lavoro/convenzioni/attuativi.csv, pacchetti L3); ict.csv cambia ordine delle righe a ogni esecuzione e alcune somme in euro differiscono sotto il millesimo."
+    come: "Portare i tre ingressi nell'archivio con sha256 o in git; scrivere ict.csv ordinato per anno e CIG con sha256 canonico; arrotondare gli euro al centesimo; rifare il test (tools/verifiche/ripetibilita.sh) a ogni versione."
+    ticket: ["#71", "#78"]
+    stato: aperta
 
 registro:
+  - {data: 2026-11-19, versione: "0.3", modifica: "Esito del test di ripetibilità (tutti i numeri riprodotti) e mancanza M12; link alle schede dei problemi e alle raccomandazioni sul sito."}
   - {data: 2026-11-19, versione: "0.2", modifica: "Decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78); M1 e M2 aggiornate."}
   - {data: 2026-11-19, versione: "0.1", modifica: "Prima versione (punto nave chiesto da Fabio il 19/11): dataset e relazioni, disegno con L1-L4 e livello B, limiti, 11 mancanze con gravità e piano, ripetibilità."}

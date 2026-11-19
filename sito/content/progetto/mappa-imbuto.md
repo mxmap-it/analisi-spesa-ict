@@ -8,7 +8,7 @@ weight: 17
 
 <!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py da config/mappa-imbuto.yaml e dagli esiti: non modificarla a mano. -->
 
-**Versione 0.2, aggiornata il 2026-11-19.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
+**Versione 0.3, aggiornata il 2026-11-19.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
 
 **Obiettivo:** misurare quanto spende la PA italiana in servizi cloud e infrastrutture informatiche, per giurisdizione del prodotto (Italia, UE, extra-UE), con un processo che si rifà ogni anno. **Unità:** il contratto (CIG). **Due domande per ogni contratto:** è cloud? di quale giurisdizione?
 
@@ -133,6 +133,7 @@ Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è 
 | M5 | **Precisione dell'esclusione non ICT (S1) non misurata** | 3,21 milioni di CIG, l'85,9 % dell'universo dal 2024 | media | Se l'esclusione sbaglia anche lo 0,1 %, qualche migliaio di contratti ICT sparisce senza traccia. | Campione casuale di circa 400 CIG di S1 annotato da volontari: con 0 errori il limite superiore è circa 1 %. | [#77](https://github.com/mxmap-it/analisi-spesa-ict/issues/77), [#66](https://github.com/mxmap-it/analisi-spesa-ict/issues/66) | aperta |
 | M6 | **SmartCIG fuori dall'imbuto** | non misurato: affidamenti sotto soglia (canoni, licenze, piccoli SaaS) | media | Molta spesa cloud corrente dei piccoli enti passa per affidamenti semplificati. | Portare SmartCIG nell'imbuto con le stesse regole; prima un profilo per fattispecie. | [#76](https://github.com/mxmap-it/analisi-spesa-ict/issues/76) | aperta |
 | M8 | **Valore dei contratti, non spesa annua** | il valore dei CIG è circa 3,5 volte il pagato; date effettive solo per il 13 % dei CIG | media | La misura finale è la spesa per anno: va ripartita sulla durata e confrontata col pagato. | Quota annua dalla durata (B3 dove c'è la data effettiva), SIOPE/BDAP per il pagato, liquidato L. 190 a campione. | [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74), [#12](https://github.com/mxmap-it/analisi-spesa-ict/issues/12) | in corso |
+| M12 | **Ripetibilità: ingressi solo sul server e file non canonici** | nessun numero cambia (test del 19/11: 22 file, tutti i numeri riprodotti) | media | Da un clone pulito mancherebbero tre ingressi (lavoro/pvl/cig_link.csv, lavoro/convenzioni/attuativi.csv, pacchetti L3); ict.csv cambia ordine delle righe a ogni esecuzione e alcune somme in euro differiscono sotto il millesimo. | Portare i tre ingressi nell'archivio con sha256 o in git; scrivere ict.csv ordinato per anno e CIG con sha256 canonico; arrotondare gli euro al centesimo; rifare il test (tools/verifiche/ripetibilita.sh) a ogni versione. | [#71](https://github.com/mxmap-it/analisi-spesa-ict/issues/71), [#78](https://github.com/mxmap-it/analisi-spesa-ict/issues/78) | aperta |
 | M10 | **Giurisdizione degli inclusi certi misurata solo a campione** | cloud certo 1,21 mld + in-house 0,66 mld dal 2024 | bassa | La precisione in euro pesata è circa 99 % sui campioni a cieco, ma il campione definitivo non è ancora fatto. | Settimo campione a cieco, una sola volta, prima del rendiconto finale. | [#40](https://github.com/mxmap-it/analisi-spesa-ict/issues/40), [#72](https://github.com/mxmap-it/analisi-spesa-ict/issues/72) | aperta |
 | M11 | **Qualità dei dati ANAC: campi vuoti o compilati male** | flag in-house vuoto su 48.040 righe; PNRR senza flag sul 32 % dei CIG 1.2; quadro economico a volte sbagliato | bassa | Ogni campo vuoto obbliga a una via indiretta (Indice PA, catena CUP, lettura del testo). | Vie indirette documentate; raccomandazioni ad ANAC (R22, R84) con metrica, nessuna inviata senza Fabio. | [#74](https://github.com/mxmap-it/analisi-spesa-ict/issues/74), [#54](https://github.com/mxmap-it/analisi-spesa-ict/issues/54) | mitigata |
 
@@ -142,7 +143,15 @@ Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è 
 - **Non deterministici: L3 e L4.** Usano un modello linguistico, che riletto da capo dà risposte vicine ma non identiche. Per questo i loro esiti sono versionati in git e si **rileggono**, non si rigenerano; lo scarto si misura sui campioni a cieco.
 - **I comandi in ordine** sono nella pagina [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/#rifarlo-ogni-anno) e in [RIPRODURRE.md](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/RIPRODURRE.md).
 
-Il test di ripetibilità di questa versione è in corso: l'esito comparirà qui alla prossima rigenerazione.
+**Ultimo test di ripetibilità** ([`esiti/2026-11-19/ripetibilita/esito.json`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/esiti/2026-11-19/ripetibilita/esito.md)): rifatti da zero i passi deterministici in 69.0 minuti, 22 file confrontati con quelli pubblicati. **Tutti i numeri pubblicati si riproducono.**
+
+| esito del confronto | file |
+|---|---|
+| uguale byte per byte | 14 |
+| stessi numeri, differenze sotto il millesimo di euro o nello sha256 registrato | 5 |
+| stesso contenuto, righe in ordine diverso | 3 |
+
+Le differenze che restano, e cosa si fa, sono la mancanza M12 qui sopra.
 
 ## 6. Come si aggiorna questa pagina
 
@@ -161,5 +170,6 @@ Il test di ripetibilità di questa versione è in corso: l'esito comparirà qui 
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-19 | 0.3 | Esito del test di ripetibilità (tutti i numeri riprodotti) e mancanza M12; link alle schede dei problemi e alle raccomandazioni sul sito. |
 | 2026-11-19 | 0.2 | Decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78); M1 e M2 aggiornate. |
 | 2026-11-19 | 0.1 | Prima versione (punto nave chiesto da Fabio il 19/11): dataset e relazioni, disegno con L1-L4 e livello B, limiti, 11 mancanze con gravità e piano, ripetibilità. |

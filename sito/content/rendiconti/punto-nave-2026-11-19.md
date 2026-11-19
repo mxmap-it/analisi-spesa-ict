@@ -7,7 +7,7 @@ datiAl: 2026-11-19
 description: "Fotografia datata del progetto: obiettivo e disegno, numeri dell'imbuto dal 2024, livelli di raffinamento, dataset usati e loro limiti, mancanze con gravità, test di ripetibilità, prossimi passi e decisioni aperte."
 ---
 
-**Versione 1.1 del 19/11/2026.** Questa è una **fotografia datata**: non si aggiorna, se ne scrive una nuova al prossimo punto nave. La versione sempre aggiornata della stessa materia è la [Mappa dell'imbuto](/progetto/mappa-imbuto/), generata da [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml). Legenda: **[V]** verificato da noi con lo strumento indicato; **[R]** riferito da terzi; **[S]** stima.
+**Versione 1.2 del 19/11/2026.** Questa è una **fotografia datata**: non si aggiorna, se ne scrive una nuova al prossimo punto nave. La versione sempre aggiornata della stessa materia è la [Mappa dell'imbuto](/progetto/mappa-imbuto/), generata da [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml). Legenda: **[V]** verificato da noi con lo strumento indicato; **[R]** riferito da terzi; **[S]** stima.
 
 ## 1. In breve
 
@@ -85,13 +85,22 @@ Tabella completa, con il perché, il come e il ticket: [Mappa, § 4](/progetto/m
 ## 5. Test di ripetibilità
 
 <!-- RIPETIBILITA -->
-Il test è in corso: rifà da zero, in una cartella separata, i passi deterministici e confronta ogni uscita con quella pubblicata. I passi sono:
-- l'imbuto (`ict.csv`);
-- strati, tetti, revisione e CIG ripetuti;
-- il livello B;
-- il livello L2.
+Il 19/11 si sono rifatti **da zero**, in una cartella separata, tutti i passi deterministici: l'imbuto dall'archivio ANAC (`ict.csv`), strati, tetti, revisione, licenze, CIG ripetuti, livello B e livello L2. Ogni uscita è stata confrontata con quella pubblicata (`tools/verifiche/ripetibilita.sh`, esito in [`esiti/2026-11-19/ripetibilita/`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/esiti/2026-11-19/ripetibilita/esito.md)). Il giro dura 69 minuti.
 
-L'esito sarà riportato qui.
+**Risultato: tutti i numeri pubblicati si riproducono** [V]. Dei 22 file confrontati:
+- **14 sono identici byte per byte.**
+- **3 hanno lo stesso contenuto con le righe in ordine diverso.** Lo sha256 calcolato sulle righe ordinate è uguale. La causa è che duckdb legge in parallelo e non garantisce l'ordine.
+- **5 hanno gli stessi numeri.** Differiscono solo nello sha256 di `ict.csv` che registrano (per l'ordine delle righe) o in somme in euro non arrotondate, con scarto massimo di 0,00012 €.
+
+**Che cosa resta da sistemare** (mancanza M12 della [Mappa](/progetto/mappa-imbuto/)):
+- tre ingressi esistono solo sul server, quindi da un clone pulito mancherebbero:
+  - i link PVL per CIG;
+  - gli attuativi delle convenzioni;
+  - i pacchetti di L3;
+- `ict.csv` va scritto ordinato;
+- gli euro vanno arrotondati al centesimo.
+
+Non sono ripetibili per natura L3, L4 e la via 6, che sono letture del modello linguistico: si rileggono dagli esiti versionati.
 
 ## 6. Prossimi passi, in ordine
 
@@ -118,5 +127,6 @@ Solo allora gli atti che restano mancanti (M1, M2) diventano la lista delle rich
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-19 | 1.2 | § 5: esito del test di ripetibilità (tutti i numeri riprodotti; differenze di ordine e virgola mobile; tre ingressi solo sul server) |
 | 2026-11-19 | 1.1 | decisione di Fabio: accesso civico massivo solo alla fine, dopo il rendiconto del risultato parziale (#78) |
 | 2026-11-19 | 1.0 | prima fotografia: richiesta di Fabio del 19/11 («punto nave, documentiamo bene tutto, test di ripetibilità») |
