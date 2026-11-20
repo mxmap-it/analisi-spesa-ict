@@ -1,5 +1,5 @@
 {
- "versione": "0.3",
+ "versione": "0.4",
  "strumento": "tools/verifiche/inhouse_censimento.py",
  "fonte": {
   "url": "https://www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv",
@@ -13,12 +13,13 @@
  "per_classe": {
   "controllata (non attiva)": 6,
   "controllata": 15,
+  "controllata-sostanzialmente": 1,
   "controllo-pubblico-congiunto (non attiva)": 4,
   "controllo-pubblico-congiunto": 5,
   "in-house (non attiva)": 5,
   "in-house": 64,
   "partecipata (non attiva)": 24,
-  "partecipata": 95
+  "partecipata": 94
  },
  "con_sito": 57,
  "da_verificare": 10,

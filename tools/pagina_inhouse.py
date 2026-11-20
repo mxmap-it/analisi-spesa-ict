@@ -53,7 +53,7 @@ def main():
             ("opensource-riepilogo.json", "conteggi dell'analisi open source e sha256 delle copie del catalogo"))])
     pc = rp["per_classe"]
     G["conteggi"] = "\n".join(["| classe | attive | non attive |", "|---|---:|---:|"] + [
-        f"| {c} | {pc.get(c, 0)} | {pc.get(c + ' (non attiva)', 0)} |" for c in ("in-house", "controllata", "controllo-pubblico-congiunto", "partecipata")])
+        f"| {c} | {pc.get(c, 0)} | {pc.get(c + ' (non attiva)', 0)} |" for c in ("in-house", "controllata", "controllo-pubblico-congiunto", "controllata-sostanzialmente", "partecipata")])
     righe = ["| società | classe | regione | enti | fatturato 2023 (M€) | addetti | sito | riuso (catalogo) | open source in home | riuso in home |",
              "|---|---|---|---:|---:|---:|---|---:|---|---|"]
     for s in soc:

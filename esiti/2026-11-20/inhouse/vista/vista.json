@@ -6059,6 +6059,77 @@
     "enti_che_affidano": 0
    },
    "denominazioni_trovate": []
+  },
+  "16825251008": {
+   "cf": "16825251008",
+   "nome": "POLO STRATEGICO NAZIONALE S.P.A.",
+   "classe": "controllata-sostanzialmente",
+   "regione": "LAZIO",
+   "fonte": "censimento MEF 2023",
+   "2020-2023": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 1,
+      "meur": 1.35
+     },
+     "incerto": {
+      "cig": 5,
+      "meur": 16.01
+     }
+    },
+    "enti_che_affidano": 6
+   },
+   "dal-2024": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 0.43
+     },
+     "ict-non-cloud": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "incerto": {
+      "cig": 421,
+      "meur": 1922.76
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 326
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: POLO STRATEGICO NAZIONALE S.P.A.",
+     421
+    ],
+    [
+     "AGG: POLO STRATEGICO NAZIONALE S.P.A",
+     3
+    ],
+    [
+     "AGG: POLO STRATEGICO NAZIONALE SPA",
+     2
+    ],
+    [
+     "AGG: POLO STRATEGICO NAZIONALE",
+     2
+    ],
+    [
+     "AGG: ; POLO STRATEGICO NAZIONALE S.P.A.",
+     2
+    ],
+    [
+     "AGG: LEONARDO VELIVOLI SPA ; POLO STRATEGICO NAZIONALE S.P.A. ; SOGEI U2013 SOCIETÀ G",
+     1
+    ]
+   ]
   }
  }
 }

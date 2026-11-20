@@ -9,6 +9,7 @@ Strumento `tools/verifiche/inhouse_vista.py` 0.2. Dal 2024, M€ al netto dei ma
 | SOGEI - SOCIETA' GENERALE D'INFORMATICA - S.P.A.   (controllata) | 64,0 | 0,0 | 0,0 | 77,4 | 2.721,9 | 102,1 | 2.379,9 | 49 |
 | PUNTOZERO S.C.A R.L. (in-house) | 7,0 | 0,0 | 2,5 | 1,3 | 40,7 | 9,1 | 57,1 | 55 |
 | SOCIETA' REGIONALE PER LA SANITA' S.P.A.' IN BREVE (in-house) | 6,0 | 0,0 | 0,0 | 0,0 | 771,6 | 25,3 | 0,1 | 1 |
+| POLO STRATEGICO NAZIONALE S.P.A. (controllata-sostanzialmente) | 0,0 | 0,0 | 0,0 | 0,0 | 0,0 | 0,0 | 1.923,2 | 326 |
 | PAGOPA S.P.A. (controllata) | 16,7 | 3,8 | 1,5 | 0,0 | 108,3 | 16,1 | 0,4 | 8 |
 | CONSORZIO PER IL SISTEMA INFORMATIVO*(CSI PIEMONTE (in-house) | 0,5 | 0,1 | 0,1 | 38,2 | 152,3 | 55,2 | 423,0 | 118 |
 | INFOCAMERE - SOCIETA' CONSORTILE DI INFORMATICA DE (in-house) | 0,6 | 0,0 | 0,3 | 8,8 | 564,1 | 9,9 | 123,7 | 272 |

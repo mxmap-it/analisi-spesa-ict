@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Elenco delle società ICT in-house e controllate dalla PA, dal censimento MEF delle partecipazioni (#52). Versione 0.3 (20/11/2026).
+"""Elenco delle società ICT in-house e controllate dalla PA, dal censimento MEF delle partecipazioni (#52). Versione 0.4 (20/11/2026).
 
 Richiesta di Fabio del 20/11/2026: l'elenco delle in-house ICT deve venire dal censimento ufficiale delle partecipazioni
 pubbliche (MEF, Dipartimento dell'Economia, dati al 31/12/2023, CC BY 4.0), per codice fiscale, non dai soci Assinter.
@@ -14,6 +14,9 @@ Criteri (una riga per società partecipata, chiave: codice fiscale):
                controllo-pubblico-congiunto (0.3, decisione di Fabio del 20/11/2026) nessun controllo dichiarato, ma
                            quota pubblica >= 50 %: presunzione relativa di controllo pubblico (art. 2 c. 1 lett. b e m
                            d.lgs. 175/2016; ANAC delibere 1134/2017 e 859/2019). Conta come le controllate;
+               controllata-sostanzialmente (0.4, decisione di Fabio del 20/11/2026) quota pubblica di diritto < 50 %, ma
+                           >= 50 % contando i soci quotati controllati dallo Stato (config/inhouse_soci.yaml,
+                           quota_pubblica_sostanziale): controllata nei fatti, non ancora di diritto (es. PSN);
                partecipata nessun controllo dichiarato e quota pubblica < 50 %: resta nel dataset, fuori dalla vista.
   Quota pubblica (0.3): somma delle quote dirette dichiarate da enti S13 e da società a loro volta pubbliche (in-house,
   controllate o con quota pubblica >= 50 %, calcolata per tutte le società del censimento, a catena, fino a punto
@@ -42,7 +45,7 @@ import zipfile
 
 import yaml
 
-VERSIONE = "0.3"
+VERSIONE = "0.4"
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MEF_URL = "https://www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv"
 MEF = os.path.join(R, "archivio/mirror/www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv")
@@ -146,12 +149,16 @@ def main():
     for cf, s in soc.items():
         qp = pubblica.get(cf, 0.0)
         fonte_q = "censimento MEF (dirette, a catena)"
+        qs, qs_dal = None, ""
         if str(cf) in manuali or cf in manuali:
             m = manuali.get(cf) or manuali.get(str(cf))
             qp, fonte_q = float(m["quota_pubblica"]), m["fonte"]
+            if m.get("quota_pubblica_sostanziale") is not None:
+                qs, qs_dal = float(m["quota_pubblica_sostanziale"]), str(m.get("sostanziale_dal", ""))
         classe = ("in-house" if s["analogo"] or s["diretto"] else
                   "controllata" if s["controllo"] else
-                  "controllo-pubblico-congiunto" if qp >= 50 else "partecipata")
+                  "controllo-pubblico-congiunto" if qp >= 50 else
+                  "controllata-sostanzialmente" if qs is not None and qs >= 50 else "partecipata")
         verificare = (classe == "partecipata" and fonte_q.startswith("censimento") and s["stato"] == "Attiva"
                       and (qp >= 30 or (indir.get(cf) and (s["fatturato_2023"] or 0) >= 1e6)))
         sito, fonte_sito = "", ""
@@ -166,13 +173,14 @@ def main():
                     "stato": s["stato"], "forma": s["forma"], "regione": s["regione"], "comune": s["comune"],
                     "enti_dichiaranti": len(s["enti"]), "enti_controllo_analogo": len(s["analogo"]),
                     "enti_affidamento_diretto": len(s["diretto"]), "quota_pubblica_dichiarata": round(min(s["quota"], 100), 2),
-                    "quota_pubblica_calcolata": round(qp, 2), "fonte_quota": fonte_q, "enti_indiretta": len(indir.get(cf, ())),
+                    "quota_pubblica_calcolata": round(qp, 2),
+                    "quota_pubblica_sostanziale": "" if qs is None else round(qs, 2), "sostanziale_dal": qs_dal, "fonte_quota": fonte_q, "enti_indiretta": len(indir.get(cf, ())),
                     "da_verificare": "sì" if verificare else "",
                     "addetti": s["addetti"] or "", "fatturato_2023": s["fatturato_2023"] or "",
                     "valore_produzione": s["valore_produzione"] or "", "importo_servizi_affidati": round(s["importo_servizi"], 2),
                     "servizio_principale": s["servizi"].most_common(1)[0][0] if s["servizi"] else "",
                     "sito": sito, "fonte_sito": fonte_sito, "assinter": "|".join(ass)})
-    ordine = {"in-house": 0, "controllata": 1, "controllo-pubblico-congiunto": 2, "partecipata": 3}
+    ordine = {"in-house": 0, "controllata": 1, "controllo-pubblico-congiunto": 2, "controllata-sostanzialmente": 3, "partecipata": 4}
     out.sort(key=lambda r: (ordine[r["classe"]], r["stato"] != "Attiva", -(r["fatturato_2023"] or 0)))
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "societa-ict-pa.csv"), "w", encoding="utf-8", newline="") as f:

@@ -1,6 +1,12 @@
 # Quote pubbliche verificate a mano per le società ICT «da verificare» (letto da tools/verifiche/inhouse_censimento.py 0.3).
-# quota_pubblica: somma delle quote di PA e società controllate da PA. Ogni riga ha fonte (URL) e data di verifica.
-versione: "0.1"
+# quota_pubblica: somma delle quote di PA e società controllate di diritto da PA (non tramite società quotate).
+# 0.2 (decisione di Fabio del 20/11/2026): quota_pubblica_sostanziale = quota pubblica contando anche i soci quotati
+# controllati dallo Stato (di diritto o di fatto, art. 2359 c.c.), con le date da cui vale. Se quota_pubblica < 50 %
+# e quota_pubblica_sostanziale >= 50 %, la società è «controllata-sostanzialmente»: controllata nei fatti, non ancora
+# di diritto (le norme escludono le quote che passano per quotate: art. 1 c. 5 d.lgs. 175/2016, art. 2-bis c. 2 lett. b
+# d.lgs. 33/2013). Argomenti in sito/content/rendiconti/societa-ict-pubbliche.md e nel parere di lavoro/inhouse/.
+# Ogni riga ha fonte (URL) e data di verifica.
+versione: "0.2"
 aggiornato: 2026-11-20
 soci:
   "16825251008":
@@ -9,6 +15,10 @@ soci:
     soci: "TIM 45 %, Leonardo 25 %, CDP Equity 20 %, Sogei 10 %"
     controllo_di_fatto: "Leonardo 25 %: controllo di fatto del MEF (circa 30 % del capitale), non contato nella quota_pubblica; TIM: privata, nessun controllo pubblico"
     nota: "Pubblica = CDP Equity 20 % (gruppo CDP, controllata dal MEF) + Sogei 10 % (100 % MEF). Con Leonardo la quota sale a 55 %, ma solo per controllo di fatto."
+    quota_pubblica_sostanziale: 100.0
+    sostanziale_dal: "2026-09"
+    sostanziale_storia: "55 % dal 2022 (con Leonardo, controllo di fatto del MEF con circa il 30 %); circa 100 % da settembre 2026 (TIM a maggioranza Poste Italiane, circa 85,8 %, dopo l'OPAS; Poste controllata da MEF e CDP)"
+    fonte_sostanziale: "parere interno lavoro/inhouse/parere-psn.md (20/11/2026): quote di Leonardo, Poste e TIM da fonti secondarie, da riconfermare su fonte primaria (Consob)"
   "05985191005":
     quota_pubblica: 100.0
     fonte: "https://www.geoweb.it/geowebhtml/SocietaTrasparente/media2020/GEOWEB_Report_RiskAssessment.pdf (Società trasparente di Geoweb, report risk assessment 2020; pag. sulla compagine societaria), verificata il 20/11/2026"

@@ -6,7 +6,7 @@ lastmod: 2026-11-20T20:00:00Z
 description: "Elenco per codice fiscale delle società ICT partecipate dalla PA, dal censimento MEF delle partecipazioni (dati al 31/12/2023), con classe in-house / controllata / partecipata, sito web e un'analisi minima di software libero e riuso. Scaricabile."
 ---
 
-**Versione 0.2 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.3 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima.
 
@@ -42,6 +42,9 @@ sono soci Assinter e prima ci sfuggivano; nel censimento sono in-house ICT dichi
     insieme, e ANAC (delibere 1134/2017 e 859/2019, *riferite* da commenti pubblicati, testo ufficiale da archiviare)
     considera la partecipazione pubblica maggioritaria un indice presuntivo del controllo pubblico ai fini della
     trasparenza e dell'anticorruzione, salvo prova contraria della società. Conta come le controllate;
+  - **controllata sostanzialmente** (dalla versione 0.3, decisione di Fabio del 20/11/2026): la quota pubblica «di
+    diritto» è sotto il 50 %, ma supera il 50 % se si contano i soci **quotati** controllati dallo Stato. È controllata
+    nei fatti, non ancora giuridicamente. Oggi un solo caso, il Polo Strategico Nazionale (vedi sotto, § 2bis);
   - **partecipata**: quota pubblica sotto il 50 % e nessun controllo dichiarato. Resta nel file, fuori dalla tabella.
 - **Quota pubblica**, come si calcola:
   - somma delle quote **dirette** dichiarate al censimento da amministrazioni pubbliche e da società a loro volta
@@ -61,6 +64,36 @@ sono soci Assinter e prima ci sfuggivano; nel censimento sono in-house ICT dichi
 - **Controprova con Assinter** [V]: 22 dei 24 nomi del vecchio elenco si ritrovano nel censimento per codice fiscale;
   mancano Consorzio.IT (cremasco), Arsenàl.IT si ritrova con un'altra grafia.
 
+### 2bis. Il Polo Strategico Nazionale: controllato sostanzialmente, non ancora di diritto
+
+**Soci** (sezione «Società trasparente» di PSN, 20/11/2026): TIM 45 %, Leonardo 25 %, CDP Equity 20 %, Sogei 10 %.
+
+**Perché è controllato nei fatti.** Tutte e quattro le catene risalgono al Ministero dell'economia: Sogei (100 % MEF),
+CDP Equity (gruppo CDP, controllato dal MEF), Leonardo (circa 30 % del MEF, controllo di fatto) e, da settembre 2026,
+TIM (circa 85,8 % a Poste Italiane dopo l'offerta pubblica di acquisto e scambio; Poste è controllata da MEF e CDP).
+Quota pubblica di voto: 30 % senza quotate, 55 % con Leonardo (dal 2022), circa 100 % con TIM (da settembre 2026) [S:
+quote di Leonardo, Poste e TIM da fonti secondarie, da riconfermare su fonte primaria Consob].
+
+**Perché non lo è ancora giuridicamente** (proposta di lettura, da verificare sui testi integrali delle sentenze):
+1. *le quotate non contano.* Il testo unico sulle società partecipate si applica alle quotate solo se lo dice
+   espressamente (art. 1 c. 5 d.lgs. 175/2016) e la trasparenza «piena» esclude le società quotate e le loro
+   partecipate (art. 2-bis c. 2 lett. b d.lgs. 33/2013). La maggioranza pubblica di PSN passa per Leonardo, TIM e Poste,
+   tutte quotate; senza di loro restano il 30 % di CDP Equity e Sogei;
+2. *il controllo va provato in concreto.* La giurisprudenza amministrativa più recente chiede l'esercizio effettivo
+   dell'influenza dominante (patti, statuto, comportamenti), non la sola somma delle quote; per PSN non risultano patti
+   parasociali fra i soci pubblici né atti di indirizzo comuni [riferito da commenti: approfondimento sul controllo
+   «in concreto» in corso];
+3. *PSN stessa si qualifica così*: nel modello organizzativo del 26/7/2023 si dichiara «società a partecipazione
+   pubblica non di controllo»;
+4. *altri perimetri*: non è nell'elenco ISTAT delle amministrazioni pubbliche (2025 e 2026, verificato sui PDF; Sogei sì)
+   e, come concessionario a rischio d'impresa, non è amministrazione aggiudicatrice né organismo di diritto pubblico.
+
+**Effetto sulla misura.** Nessuno sulla giurisdizione: i servizi PSN sono già cloud **IT**. Nella vista per società PSN
+compare fra le società pubbliche; non entra fra i «servizi alle società ICT pubbliche» del cloud in proprio, perché i
+suoi contratti sono già contati come cloud esterno sovrano. La regola vale per ogni società i cui soci siano verificati
+a mano (`config/inhouse_soci.yaml`, campi `quota_pubblica_sostanziale` e `sostanziale_dal`): nel censimento MEF non ci
+sono altri casi (le società controllate solo da quotate, come quelle dei gruppi TIM o Leonardo, non vi compaiono).
+
 Comandi: `python3 tools/verifiche/inhouse_censimento.py`, `nice python3 tools/verifiche/inhouse_cf.py`, `python3 tools/verifiche/inhouse_vista.py`, `python3 tools/verifiche/inhouse_opensource.py`, `python3 tools/pagina_inhouse.py`.
 
 ## 3. Quante sono
@@ -71,7 +104,8 @@ Comandi: `python3 tools/verifiche/inhouse_censimento.py`, `nice python3 tools/ve
 | in-house | 64 | 5 |
 | controllata | 15 | 6 |
 | controllo-pubblico-congiunto | 5 | 4 |
-| partecipata | 95 | 24 |
+| controllata-sostanzialmente | 1 | 0 |
+| partecipata | 94 | 24 |
 <!-- /GEN:conteggi -->
 
 Le in-house attive fatturano in tutto circa 2,8 miliardi (2023), quasi tutto nelle 20 socie Assinter; le altre 44
@@ -96,7 +130,7 @@ Due vie indipendenti, entrambe ripetibili:
 - Home page lette: **44**; con le parole «open source» o «software libero»: **6**; con «riuso»: **0**; con un collegamento a GitHub o GitLab: **0** [V, indizio da leggere a mano].
 <!-- /GEN:opensource -->
 
-## 5. La tabella (in-house, controllate e a controllo pubblico congiunto attive, più i soci Assinter)
+## 5. La tabella (in-house, controllate, a controllo pubblico congiunto o sostanziale, attive, più i soci Assinter)
 
 Ordine: in-house, poi controllate, per fatturato 2023. «Enti» = enti che dichiarano una partecipazione.
 «Riuso (catalogo)» = software nel catalogo Developers Italia (ed. = editrice, man. = manutentrice).
@@ -188,6 +222,7 @@ Ordine: in-house, poi controllate, per fatturato 2023. «Enti» = enti che dichi
 | CONSORZIO T3 LAB | controllo-pubblico-congiunto | Emilia Romagna | 1 |  | 9 |  | 0 |  |  |
 | LABORATORIO DI MONITORAGGIO E MODELLISTICA AMBIENTALE PER LO… | controllo-pubblico-congiunto | Toscana | 2 |  | 27 | [www.lamma.toscana.it](https://www.lamma.toscana.it) | 0 | no | no |
 | CONSORZIO PER LE TECNOLOGIE DELL'INFORMAZIONE E COMUNICAZION… | controllo-pubblico-congiunto | Toscana | 1 |  |  |  | 0 |  |  |
+| POLO STRATEGICO NAZIONALE S.P.A. | controllata-sostanzialmente | Lazio | 2 | 78,3 | 24 |  |  |  |  |
 <!-- /GEN:tabella -->
 
 ## 5bis. Che cosa comprano e che cosa ricevono
@@ -206,11 +241,11 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 <!-- GEN:file -->
 | file | contenuto | sha256 |
 |---|---|---|
-| [societa-ict-pa.csv](/dati/inhouse/societa-ict-pa.csv) | una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito | `76ce38dbb93bb15d…` |
+| [societa-ict-pa.csv](/dati/inhouse/societa-ict-pa.csv) | una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito | `b7b6417f88207b65…` |
 | [opensource.csv](/dati/inhouse/opensource.csv) | per in-house e controllate: catalogo del riuso (editore, manutentore) e indizi dalla home page | `3db4383e3d58d76d…` |
 | [catalogo-riuso.csv](/dati/inhouse/catalogo-riuso.csv) | i software del catalogo Developers Italia legati a ciascuna società | `413d153cb0522ac9…` |
-| [vista.md](/dati/inhouse/vista.md) | che cosa comprano e che cosa ricevono dagli enti, per società (CIG ANAC dal 2024, per codice fiscale) | `bb31cdc53dfae569…` |
-| [riepilogo.json](/dati/inhouse/riepilogo.json) | conteggi, fonte con sha256, controprova con l'elenco Assinter | `111db66436b39ff3…` |
+| [vista.md](/dati/inhouse/vista.md) | che cosa comprano e che cosa ricevono dagli enti, per società (CIG ANAC dal 2024, per codice fiscale) | `f0e908fff8f584bb…` |
+| [riepilogo.json](/dati/inhouse/riepilogo.json) | conteggi, fonte con sha256, controprova con l'elenco Assinter | `b1f4d2219026ca11…` |
 | [opensource-riepilogo.json](/dati/inhouse/opensource-riepilogo.json) | conteggi dell'analisi open source e sha256 delle copie del catalogo | `b4914727234cce92…` |
 <!-- /GEN:file -->
 
@@ -221,11 +256,12 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 - **Tipo di controllo spesso vuoto** per i consorzi (CSI Piemonte, CINECA): li riconosciamo dall'affidamento diretto.
 - **Home page:** un solo sguardo, senza seguire i collegamenti.
 - **Quote pubbliche indirette:** il censimento non le quantifica; 10 società restano da verificare a mano.
-- **Leonardo e le società quotate controllate di fatto** non sono contate come socio pubblico (decisione aperta).
+- **Soci quotati controllati dallo Stato:** contano solo per la classe «controllata sostanzialmente»; le quote di Leonardo, Poste e TIM sono da riconfermare su fonte primaria.
 
 ## Registro delle revisioni
 
 | versione | data | modifica |
 |---|---|---|
+| 0.3 | 2026-11-20 | classe «controllata sostanzialmente» (soci quotati controllati dallo Stato); PSN: argomenti di fatto e di diritto (§ 2bis) |
 | 0.2 | 2026-11-20 | classe «controllo pubblico congiunto» (quota pubblica ≥ 50 %, calcolata a catena, verifiche a mano dei soci); partita IVA dall'anagrafica ANAC; vista per società per codice fiscale (#82) |
 | 0.1 | 2026-11-20 | prima versione: censimento MEF 2023, siti, catalogo del riuso, home page (#82) |

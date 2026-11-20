@@ -38,7 +38,7 @@ R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GIORNO = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
 OUT = os.path.join(R, "esiti", GIORNO, "inhouse", "vista")
 csv.field_size_limit(10**9)
-PUBBLICHE = ("in-house", "controllata", "controllo-pubblico-congiunto")
+PUBBLICHE = ("in-house", "controllata", "controllo-pubblico-congiunto", "controllata-sostanzialmente")
 SOC = {r["cf"]: {"nome": r["denominazione"].strip("' "), "fonte": "censimento MEF 2023", "classe": r["classe"],
                  "regione": r["regione"], "stato": r["stato"]}
        for r in csv.DictReader(open(os.path.join(R, "dati/inhouse/societa-ict-pa.csv"), encoding="utf-8")) if r["classe"] in PUBBLICHE}
