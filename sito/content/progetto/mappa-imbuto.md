@@ -1,7 +1,7 @@
 ---
 title: "Mappa dell'imbuto: dati, relazioni, limiti e mancanze"
 date: 2026-11-19
-lastmod: 2026-11-19
+lastmod: 2026-11-20
 description: "Il punto di riferimento sempre aggiornato: quali dataset usa l'imbuto e come si collegano, il disegno dei livelli con i numeri, i limiti di ogni fonte, le mancanze con gravità e piano per risolverle, cosa è ripetibile."
 weight: 10
 gruppo: inizio
@@ -9,7 +9,7 @@ gruppo: inizio
 
 <!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py da config/mappa-imbuto.yaml e dagli esiti: non modificarla a mano. -->
 
-**Versione 0.9, aggiornata il 2026-11-19.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
+**Versione 0.10, aggiornata il 2026-11-20.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
 
 **Obiettivo:** misurare quanto spende la PA italiana in servizi cloud e infrastrutture informatiche, per giurisdizione del prodotto (Italia, UE, extra-UE), con un processo che si rifà ogni anno. **Unità:** il contratto (CIG). **Due domande per ogni contratto:** è cloud? di quale giurisdizione?
 
@@ -38,6 +38,7 @@ Come funziona:
 | **L2** Regole sul testo | stampanti, consumabili, cablaggio, salvo testo cloud | residuo S6 dal 2024 | fuori dalla misura cloud | `tools/llm/raffinamento.py l2` | sì, identico |
 | **L3** Lettura del testo con Claude Opus | solo dati ANAC, senza web | S6 entrato per «sw» o «connettività» | non ICT / ICT non cloud con certezza alta; il resto a L4 | `tools/llm/raffinamento.py prepara-l3, leggi-l3, esito` | esiti versionati (modello linguistico) |
 | **L4** Atti di gara con Claude Opus | ricerca e archiviazione degli atti (sha256) | incerti di L3, disaccordi sull'asse cloud | cloud sì/no e prodotto, con fonte primaria | `tools/llm/giro_imbuto.sh (GIRO_DIR raffinamento-l4)` | esiti versionati (modello linguistico) |
+| **DC** Cloud in proprio: datacenter dell'ente e servizi delle in-house | regole su testo e CPV con prevalenza (config/datacenter_proprio.yaml), elenco delle in-house ICT (config/societa_inhouse_ict.yaml) | ICT non cloud e incerti dopo gli altri livelli (mai sopra una verifica manuale) | datacenter proprio (sovrano IT) per famiglia; servizi di datacenter e cloud affidati alle in-house | `tools/verifiche/datacenter_proprio.py, tools/verifiche/imbuto_spostamenti.py, tools/verifiche/inhouse_vista.py` | sì, identico |
 
 ## 2. I dati e come si collegano
 
@@ -176,6 +177,7 @@ Le differenze che restano, e cosa si fa, sono la mancanza M12 qui sopra.
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-20 | 0.10 | Livello DC: cloud in proprio (datacenter dell'ente, sovrano IT, decisione di Fabio 20/11) e servizi delle in-house ICT; 1,94 mld dal 2024, precisione in euro 85,7 % a cieco (#52). |
 | 2026-11-19 | 0.9 | M5 misurata (#77): esclusione S1 precisa al 98,7 % dei CIG su 399 a cieco, 0 cloud, ICT persi 2,3-2,8 mld di valore, gravità media, mitigata. M6 misurata (#76): SmartCIG dal 2024 nell'imbuto sul solo testo, cloud certo 13,6 M€ + residuo 45,1 M€, gravità bassa, mitigata; dataset smartcig usato; R89. |
 | 2026-11-19 | 0.8.1 | M13 risolta: cruscotto dei contratti con ricerca, esiti dei livelli, atti, annotazione e drilldown dai totali (#53). |
 | 2026-11-19 | 0.8 | M9 misurata (#70): hosting dei SaaS della 1.2 provato per l'85,6 % dell'euro, extra-UE 6,5/30,8/62,0 %, SAP 213,6 M€ con hosting non noto; gravità da alta a media. M10 mitigata dal settimo campione a cieco (big tech 98,9 % in euro pesata). M2 aggiornata (#45 chiuso). In-house verificata per CIG: Cloud Toscana padre AQ, CINECA DC proprio (#52). |

@@ -1,0 +1,94 @@
+# Regole per riconoscere la spesa per datacenter propri («cloud in proprio», #52).
+# Letta da tools/verifiche/datacenter_proprio.py. Decisioni di Fabio del 20/11/2026 (DECISIONI.md):
+#  - un datacenter di proprietà dell'ente e gestito da lui è sovrano (IT) anche con tecnologia extra-UE (VMware…);
+#  - il calcolo scientifico entra come voce separata;
+#  - i contratti misti (server e PC insieme) contano solo se prevale la parte da datacenter;
+#  - rete e gestione dei sistemi contano solo se la gara nomina il datacenter.
+# Ogni famiglia ha la sua espressione regolare (sul testo in minuscolo: oggetto gara + oggetto lotto + CPV) e i CPV
+# (prefissi, Regolamento CE 213/2008). Il peso conta nella prevalenza: punteggio datacenter > punteggio postazioni.
+versione: "0.4"
+aggiornato: 2026-11-20
+
+famiglie:
+  sito:
+    nome: "il datacenter come luogo (CED, sala server, impianti)"
+    regex: "data\\s*-?\\s*cent(er|re)|\\bced\\b|centro\\s+(di\\s+)?elaborazion[ei]\\s+(dei\\s+)?dati|sala\\s+(server|macchine|ced|dati)|server\\s*farm|\\brack\\b|armadi\\s+rack|\\bpue\\b"
+    cpv: []
+    peso: 2
+    nucleo: true
+  server-storage:
+    nome: "server e storage (apparati fisici)"
+    # 0.3: «server» da solo non basta (application server, licenze database, scansioni): serve un contesto da hardware.
+    regex: "(fornitur[ae]|acquist[oi]|noleggio|sostituzion[ei]|potenziament[oi]|rinnovo|upgrade|nuov[oi]|manutenzione|assistenza\\s+hardware)\\s+(\\w+\\s+){0,3}(di\\s+|dei\\s+|del\\s+|degli\\s+)?(server|storage|apparati\\s+server|sistemi\\s+server)\\b|server\\s+(rack|blade|fisic|x86|hpe|dell|lenovo|fujitsu|ibm|power|di\\s+calcolo|di\\s+virtualizzazione|ced)|(server|apparati)\\s+e\\s+storage|storage\\s+e\\s+server|\\bstorage\\b|storage\\s+area\\s+network|\\bsan\\s+(fc|fibre|switch|storage)|sistem[ai]\\s+san\\b|\\bnas\\b|blade|mainframe|librer(ia|ie)\\s+a\\s+nastr|tape\\s+librar|array\\s+di\\s+dischi|sottosistem[ai]\\s+(a\\s+)?disc|poweredge|proliant|thinksystem|primergy|netapp|pure\\s*storage|powerstore|powerscale|3par|nimble|teradata|exadata"
+    cpv: ["48820", "302111", "302112", "302331"]
+    peso: 1
+    nucleo: true
+  virtualizzazione:
+    nome: "software per il cloud in casa (virtualizzazione e cloud privato su infrastruttura propria)"
+    regex: "vmware|vsphere|vcenter|vsan\\b|nutanix|openshift|openstack|proxmox|hyper-v|citrix\\s+hypervisor|virtualizzazion|iperconvergen"
+    cpv: []
+    peso: 2
+    nucleo: true
+  backup:
+    nome: "backup e continuità operativa su infrastruttura propria"
+    regex: "veeam|commvault|data\\s+domain|cohesity|rubrik|\\bbackup\\b|back-up|disaster\\s+recovery|business\\s+continuity"
+    cpv: []
+    peso: 1
+    nucleo: true
+  calcolo-scientifico:
+    nome: "calcolo scientifico (supercalcolo, HPC, datacenter di ricerca)"
+    regex: "supercalcol|supercomput|\\bhpc\\b|high\\s+performance\\s+comput|calcolo\\s+(ad\\s+)?alte\\s+prestazioni|calcolo\\s+scientific|cluster\\s+di\\s+calcolo|\\bgpu\\b|tecnopolo|\\bexascale|quantum\\s+comput|calcolo\\s+quantistic|quantistic"
+    cpv: []
+    peso: 2
+    nucleo: true
+  rete:
+    nome: "rete del datacenter (switch, router, firewall), solo se la gara nomina il datacenter"
+    regex: "\\bswitch\\b|\\brouter\\b|firewall|load\\s+balanc|bilanciator|fibre?\\s+channel"
+    cpv: ["3242"]
+    peso: 1
+    solo_con: sito
+  gestione:
+    nome: "gestione e conduzione dei sistemi, solo se la gara nomina il datacenter"
+    regex: "conduzione|gestione\\s+(dei\\s+|del\\s+)?(sistemi|sistemistic|infrastruttur)|system\\s+management|sistemistic|presidio|facility\\s+management|manutenzione\\s+(dei\\s+|degli\\s+)?(impianti|apparati)"
+    cpv: ["72510", "72514", "72540", "50312"]
+    peso: 1
+    solo_con: sito
+
+# Postazioni di lavoro e telefonia: pesano contro (prevalenza).
+postazioni:
+  regex: "\\bpc\\b|workstation|assistenza\\s+(it|informatica|tecnica)|amministratore\\s+di\\s+sistema|smart\\s*card|personal\\s+computer|\\bnotebook|portatil|\\bdesktop\\b|all\\s*-?\\s*in\\s*-?\\s*one|stampant|multifunzion|fotocopiat|\\bmonitor\\b|\\btablet|postazion[ei]\\s+(di\\s+lavoro|informatic)|smartphone|telefon|\\blim\\b|lavagne?\\s+(interattiv|multimedial)|videoproiett|totem|chromebook|mouse|tastier|toner|cartucc|didattic|aule?\\b|laboratori[o]?\\s+(informatic|scolast)"
+  cpv: ["30213", "30214", "30231", "30232", "30121", "30125", "30192", "32250", "32552", "38652", "48000000"]
+  peso: 1
+# Server o apparati al servizio di altro (videosorveglianza, presenze, impianti): non sono datacenter (decisione P2 del 19/11: la
+# videosorveglianza resta ICT non cloud). Peso 2 ciascuno contro il datacenter.
+altro_scopo:
+  regex: "video\\s*-?\\s*sorveglianz|\\btvcc\\b|telecamer|\\bvms\\b|lettura\\s+targhe|rilevazione\\s+(delle\\s+)?presenze|controllo\\s+accessi|badge|centralin|\\bvoip\\b|parcometr|semafor|rifiuti|veicol|diagnostic|ecograf|radiolog|\\bpacs\\b|laborator(io|i)\\s+(di\\s+)?(analisi|chimic|biolog)"
+  peso: 2
+
+# Segni di servizio esterno: il contratto non è un datacenter proprio (resta dov'è).
+esterno:
+  regex: "\\bcloud\\b|office\\s*365|microsoft\\s*365|\\bo365\\b|\\bm365\\b|\\bsaas\\b|\\biaas\\b|\\bpaas\\b|as\\s+a\\s+service|hosting|\\bhousing\\b|colocation|co-location|polo\\s+strategico|\\bpsn\\b|in\\s+outsourcing|virtual\\s+server|server\\s+virtual|off-?site|a\\s+consumo|ore\\s+di\\s+calcolo|full(y)?\\s+manage|wasabi|noleggio\\s+(operativo\\s+)?(di\\s+)?server|noleggio\\s+(di\\s+)?(pc|postazion)|canone\\s+di\\s+servizio"
+  # eccezioni: nomi di prodotti on-premise che contengono «cloud» (si tolgono dal testo prima di cercare i segni esterni).
+  eccezioni: "nutanix\\s+cloud\\s+(platform|infrastructure)|hybrid\\s+cloud|cloud\\s+ibrid|vmware\\s+cloud\\s+foundation|cloud\\s+foundation"
+  # le società in-house ICT costruiscono il proprio cloud: per loro «cloud» non è segno di servizio esterno (vedi config/societa_inhouse_ict.yaml)
+# Frasi tolte dal testo prima di tutto: nomi di software che contengono «server» ma non sono infrastruttura.
+togli: "(jira|confluence|bitbucket|atlassian)\\s+(software\\s+)?data\\s*center|sql\\s+server|exchange\\s+server|sharepoint\\s+server|\\bsan\\s+[a-z]+o\\b"
+
+# Contratto madre di convenzione o accordo quadro (massimale): la spesa si conta nelle adesioni, non qui.
+padre:
+  regex: "art\\.?\\s*26\\s+(della\\s+)?(l\\.|legge)\\s*(n\\.?\\s*)?488|stipula\\s+di\\s+(una\\s+)?convenzion|per\\s+le\\s+pubbliche\\s+amministrazioni|conclusione\\s+di\\s+(un\\s+)?accordo\\s+quadro|sistema\\s+dinamico\\s+di\\s+acquisizione"
+  salvo: "adesion|ordinativ|appalto\\s+specifico|contratto\\s+(attuativo|esecutivo|applicativo)|\\bodf\\b|ordine\\s+diretto"
+
+# Da quali posizioni dell'imbuto si può arrivare a dc-proprio (stato dopo i livelli, strato/sottoclasse di partenza).
+origini:
+  stati: ["ict-non-cloud", "incerto-s6", "incerto-marchio"]
+  # sottoclassi escluse: servizi esterni o non infrastruttura
+  sottoclassi_escluse: ["cloud", "psn", "psn-servizio-da-determinare", "cloud-provider-indeterminato", "cloud-multi-provider-iniziativa",
+                        "iniziativa-da-decifrare", "telefonia", "telefonia-connettivita", "consulenza-migrazione-cloud",
+                        "consulenza-it-applicativa", "servizi-professionali"]
+
+# Il contratto è dc-proprio se: almeno una famiglia «nucleo» (o rete/gestione con il sito), nessun segno esterno,
+# punteggio datacenter > punteggio postazioni, e (se la sottoclasse è «ict-altro» o «cpv-non-ict-testo-ict»)
+# punteggio datacenter >= soglia_generico.
+soglia_generico: 2
+bonus_cpv: 2

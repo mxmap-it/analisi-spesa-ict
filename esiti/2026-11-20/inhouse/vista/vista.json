@@ -1,0 +1,2741 @@
+{
+ "versione": "0.1",
+ "data": "2026-11-20",
+ "strumento": "tools/verifiche/inhouse_vista.py",
+ "nota": "M€ al netto dei massimali (tetti v2); stato dopo i livelli della tabella unica; riconoscimento sul nome",
+ "societa": {
+  "ARIA": {
+   "nome": "ARIA S.p.A. (Lombardia)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 13,
+      "meur": 4.84
+     },
+     "cloud-esterno-IT": {
+      "cig": 7,
+      "meur": 3.47
+     },
+     "dc-proprio": {
+      "cig": 7,
+      "meur": 2.63
+     },
+     "ict-non-cloud": {
+      "cig": 560,
+      "meur": 687.43
+     },
+     "incerto": {
+      "cig": 44,
+      "meur": 188.51
+     },
+     "fuori-misura": {
+      "cig": 6551,
+      "meur": 48971.76
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.13
+     },
+     "sito": {
+      "cig": 1,
+      "meur": 0.38
+     },
+     "virtualizzazione": {
+      "cig": 5,
+      "meur": 2.12
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 4,
+      "meur": 0.57
+     },
+     "incerto": {
+      "cig": 3,
+      "meur": 3.09
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 1.9
+     }
+    },
+    "enti_che_affidano": 7
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 8,
+      "meur": 37.21
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 16.93
+     },
+     "cloud-esterno-IT": {
+      "cig": 1,
+      "meur": 0.06
+     },
+     "dc-proprio": {
+      "cig": 8,
+      "meur": 13.6
+     },
+     "ict-non-cloud": {
+      "cig": 249,
+      "meur": 1043.3
+     },
+     "incerto": {
+      "cig": 39,
+      "meur": 684.38
+     },
+     "fuori-misura": {
+      "cig": 4613,
+      "meur": 56735.8
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "sito": {
+      "cig": 6,
+      "meur": 9.55
+     },
+     "virtualizzazione": {
+      "cig": 2,
+      "meur": 4.05
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 7,
+      "meur": 0.39
+     },
+     "incerto": {
+      "cig": 8,
+      "meur": 0.66
+     }
+    },
+    "enti_che_affidano": 8
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: AZIENDA REGIONALE PER L INNOVAZIONE E GLI ACQUISTI S.P.A.",
+     11505
+    ],
+    [
+     "SA: AZIENDA REGIONALE PER L'INNOVAZIONE E GLI ACQUISTI S.P.A.",
+     595
+    ],
+    [
+     "AGG: ARIA SPA",
+     20
+    ],
+    [
+     "AGG: AZIENDA REGIONALE PER L'INNOVAZIONE E GLI ACQUISTI S.P.A., IN BREVE 'ARIA S.P.A.'",
+     3
+    ],
+    [
+     "SA: ARIA SPA",
+     1
+    ]
+   ]
+  },
+  "ACI-INFORMATICA": {
+   "nome": "ACI Informatica",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 10,
+      "meur": 3.25
+     },
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 0.65
+     },
+     "dc-proprio": {
+      "cig": 38,
+      "meur": 13.81
+     },
+     "ict-non-cloud": {
+      "cig": 261,
+      "meur": 172.5
+     },
+     "incerto": {
+      "cig": 120,
+      "meur": 32.04
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.13
+     },
+     "fuori-misura": {
+      "cig": 11,
+      "meur": 77.19
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 18,
+      "meur": 10.51
+     },
+     "sito": {
+      "cig": 8,
+      "meur": 0.82
+     },
+     "virtualizzazione": {
+      "cig": 12,
+      "meur": 2.47
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 7,
+      "meur": 5.22
+     },
+     "dc-proprio": {
+      "cig": 22,
+      "meur": 11.53
+     },
+     "ict-non-cloud": {
+      "cig": 164,
+      "meur": 96.82
+     },
+     "incerto": {
+      "cig": 96,
+      "meur": 74.72
+     },
+     "fuori-misura": {
+      "cig": 24,
+      "meur": 19.41
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 7,
+      "meur": 7.67
+     },
+     "sito": {
+      "cig": 7,
+      "meur": 1.6
+     },
+     "virtualizzazione": {
+      "cig": 8,
+      "meur": 2.26
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 11,
+      "meur": 15.43
+     },
+     "incerto": {
+      "cig": 3,
+      "meur": 0.44
+     }
+    },
+    "enti_che_affidano": 8
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: ACI INFORMATICA SOCIETA PER AZIONI IN BREVE ACI INFORMATICA S.P.A.",
+     404
+    ],
+    [
+     "SA: ACI INFORMATICA SOCIETA' PER AZIONI IN BREVE ACI INFORMATICA S.P.A.",
+     234
+    ],
+    [
+     "SA: ACI INFORMATICA S.P.A. A SOCIO UNICO",
+     62
+    ],
+    [
+     "SA: ACI INFORMATICA SPA",
+     57
+    ],
+    [
+     "AGG: ACI INFORMATICA S.P.A. A SOCIO UNICO",
+     12
+    ],
+    [
+     "AGG: ACI INFORMATICA SPA",
+     5
+    ],
+    [
+     "AGG: ACI INFORMATICA",
+     1
+    ]
+   ]
+  },
+  "INVA": {
+   "nome": "INVA (Valle d'Aosta)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.12
+     },
+     "dc-proprio": {
+      "cig": 11,
+      "meur": 2.47
+     },
+     "ict-non-cloud": {
+      "cig": 95,
+      "meur": 12.46
+     },
+     "incerto": {
+      "cig": 23,
+      "meur": 6.48
+     },
+     "fuori-misura": {
+      "cig": 86,
+      "meur": 228.58
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 6,
+      "meur": 0.63
+     },
+     "sito": {
+      "cig": 3,
+      "meur": 1.7
+     },
+     "virtualizzazione": {
+      "cig": 2,
+      "meur": 0.15
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.11
+     },
+     "ict-non-cloud": {
+      "cig": 4,
+      "meur": 0.56
+     }
+    },
+    "enti_che_affidano": 4
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 7,
+      "meur": 1.26
+     },
+     "dc-proprio": {
+      "cig": 8,
+      "meur": 0.56
+     },
+     "inhouse-certo": {
+      "cig": 2,
+      "meur": 0.12
+     },
+     "ict-non-cloud": {
+      "cig": 130,
+      "meur": 21.18
+     },
+     "incerto": {
+      "cig": 32,
+      "meur": 11.48
+     },
+     "fuori-misura": {
+      "cig": 76,
+      "meur": 242.93
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 3,
+      "meur": 0.24
+     },
+     "sito": {
+      "cig": 4,
+      "meur": 0.3
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.02
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 5,
+      "meur": 0.15
+     },
+     "inhouse-certo": {
+      "cig": 56,
+      "meur": 3.06
+     },
+     "ict-non-cloud": {
+      "cig": 222,
+      "meur": 46.25
+     },
+     "incerto": {
+      "cig": 20,
+      "meur": 4.81
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.02
+     },
+     "fuori-misura": {
+      "cig": 4,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 63
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: INVA SPA",
+     471
+    ],
+    [
+     "AGG: INVA SPA",
+     319
+    ],
+    [
+     "AGG: IN.VA SPA",
+     1
+    ]
+   ]
+  },
+  "CSI-PIEMONTE": {
+   "nome": "CSI Piemonte",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.06
+     },
+     "dc-proprio": {
+      "cig": 48,
+      "meur": 34.6
+     },
+     "ict-non-cloud": {
+      "cig": 178,
+      "meur": 215.7
+     },
+     "incerto": {
+      "cig": 42,
+      "meur": 28.43
+     },
+     "fuori-misura": {
+      "cig": 44,
+      "meur": 153.62
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 2,
+      "meur": 0.65
+     },
+     "server-storage": {
+      "cig": 17,
+      "meur": 14.07
+     },
+     "sito": {
+      "cig": 23,
+      "meur": 19.21
+     },
+     "virtualizzazione": {
+      "cig": 6,
+      "meur": 0.68
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 22,
+      "meur": 2.11
+     }
+    },
+    "enti_che_affidano": 15
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 5,
+      "meur": 0.46
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 0.05
+     },
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 0.1
+     },
+     "dc-proprio": {
+      "cig": 19,
+      "meur": 38.16
+     },
+     "ict-non-cloud": {
+      "cig": 177,
+      "meur": 152.29
+     },
+     "incerto": {
+      "cig": 29,
+      "meur": 55.2
+     },
+     "fuori-misura": {
+      "cig": 30,
+      "meur": 166.52
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 5,
+      "meur": 14.36
+     },
+     "sito": {
+      "cig": 11,
+      "meur": 20.02
+     },
+     "virtualizzazione": {
+      "cig": 3,
+      "meur": 3.78
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 2,
+      "meur": 0.01
+     },
+     "inhouse-certo": {
+      "cig": 69,
+      "meur": 10.65
+     },
+     "ict-non-cloud": {
+      "cig": 618,
+      "meur": 386.02
+     },
+     "incerto": {
+      "cig": 83,
+      "meur": 25.97
+     },
+     "escluso-non-ict": {
+      "cig": 2,
+      "meur": 0.24
+     },
+     "fuori-misura": {
+      "cig": 7,
+      "meur": 0.35
+     }
+    },
+    "enti_che_affidano": 118
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: CONSORZIO PER IL SISTEMA INFORMATIVO*(CSI PIEMONTE)",
+     797
+    ],
+    [
+     "SA: CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
+     577
+    ],
+    [
+     "AGG: CSI PIEMONTE",
+     3
+    ],
+    [
+     "AGG: CONSORZIO PER IL SISTEMA INFORMATIVO (CSI PIEMONTE)",
+     2
+    ],
+    [
+     "AGG: CONSORZIO PER IL SISTEMA INFORMATIVO – CSI PIEMONTE",
+     2
+    ],
+    [
+     "AGG: CSI PIEMONTE CONSORZIO PER IL SISTEMA INFORMATIVO",
+     1
+    ]
+   ]
+  },
+  "ARSENAL-IT": {
+   "nome": "Consorzio Arsenàl.IT (Veneto)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "denominazioni_trovate": []
+  },
+  "CONSORZIO-IT": {
+   "nome": "Consorzio.IT (comuni cremaschi)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {},
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 2,
+      "meur": 0.02
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 3
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: CONSORZIO.IT SPA",
+     1
+    ],
+    [
+     "AGG: CONSORZIO INFORMATICA E TERRITORIO S.P.A.",
+     1
+    ],
+    [
+     "AGG: CONSORZIO.IT",
+     1
+    ]
+   ]
+  },
+  "ECOCERVED": {
+   "nome": "Ecocerved",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 3,
+      "meur": 0.32
+     },
+     "ict-non-cloud": {
+      "cig": 17,
+      "meur": 1.2
+     },
+     "incerto": {
+      "cig": 8,
+      "meur": 0.83
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 5,
+      "meur": 0.91
+     },
+     "ict-non-cloud": {
+      "cig": 62,
+      "meur": 7.52
+     },
+     "incerto": {
+      "cig": 12,
+      "meur": 1.7
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 95,
+      "meur": 18.31
+     },
+     "incerto": {
+      "cig": 5,
+      "meur": 1.38
+     },
+     "fuori-misura": {
+      "cig": 5,
+      "meur": 0.05
+     }
+    },
+    "enti_che_affidano": 33
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: ECOCERVED SCARL",
+     107
+    ],
+    [
+     "AGG: ECOCERVED SCARL",
+     104
+    ],
+    [
+     "AGG: ECOCERVED S.C.R.L.",
+     1
+    ]
+   ]
+  },
+  "INFOCAMERE": {
+   "nome": "InfoCamere",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 4,
+      "meur": 1.23
+     },
+     "dc-proprio": {
+      "cig": 33,
+      "meur": 20.51
+     },
+     "ict-non-cloud": {
+      "cig": 201,
+      "meur": 106.23
+     },
+     "incerto": {
+      "cig": 29,
+      "meur": 24.1
+     },
+     "escluso-non-ict": {
+      "cig": 2,
+      "meur": 0.54
+     },
+     "fuori-misura": {
+      "cig": 8,
+      "meur": 5.88
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 19,
+      "meur": 11.22
+     },
+     "sito": {
+      "cig": 6,
+      "meur": 2.82
+     },
+     "virtualizzazione": {
+      "cig": 8,
+      "meur": 6.48
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 150,
+      "meur": 10.01
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.04
+     }
+    },
+    "enti_che_affidano": 119
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 8,
+      "meur": 0.61
+     },
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 0.32
+     },
+     "dc-proprio": {
+      "cig": 45,
+      "meur": 8.81
+     },
+     "ict-non-cloud": {
+      "cig": 409,
+      "meur": 564.15
+     },
+     "incerto": {
+      "cig": 40,
+      "meur": 9.87
+     },
+     "fuori-misura": {
+      "cig": 2,
+      "meur": 0.99
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 6,
+      "meur": 2.14
+     },
+     "sito": {
+      "cig": 34,
+      "meur": 6.57
+     },
+     "virtualizzazione": {
+      "cig": 5,
+      "meur": 0.1
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 10,
+      "meur": 0.3
+     },
+     "inhouse-certo": {
+      "cig": 14,
+      "meur": 3.94
+     },
+     "ict-non-cloud": {
+      "cig": 1272,
+      "meur": 114.57
+     },
+     "incerto": {
+      "cig": 72,
+      "meur": 4.74
+     },
+     "escluso-non-ict": {
+      "cig": 3,
+      "meur": 0.17
+     },
+     "fuori-misura": {
+      "cig": 59,
+      "meur": 0.05
+     }
+    },
+    "enti_che_affidano": 272
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: INFOCAMERE SCPA",
+     1571
+    ],
+    [
+     "SA: INFOCAMERE SCPA",
+     783
+    ],
+    [
+     "AGG: INFOCAMERE S.C.P.A.",
+     9
+    ],
+    [
+     "AGG: INFOCAMERE SCARL",
+     1
+    ],
+    [
+     "AGG: INFOCAMERE",
+     1
+    ]
+   ]
+  },
+  "INFORMATICA-AA": {
+   "nome": "Informatica Alto Adige / SIAG",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 10,
+      "meur": 1.94
+     },
+     "cloud-esterno-UE": {
+      "cig": 6,
+      "meur": 0.77
+     },
+     "cloud-esterno-IT": {
+      "cig": 1,
+      "meur": 0.21
+     },
+     "dc-proprio": {
+      "cig": 24,
+      "meur": 12.17
+     },
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.04
+     },
+     "ict-non-cloud": {
+      "cig": 357,
+      "meur": 97.44
+     },
+     "incerto": {
+      "cig": 60,
+      "meur": 56.31
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 16,
+      "meur": 9.13
+     },
+     "sito": {
+      "cig": 7,
+      "meur": 1.97
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 1.08
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 18,
+      "meur": 28.04
+     },
+     "cloud-esterno-UE": {
+      "cig": 6,
+      "meur": 0.54
+     },
+     "cloud-esterno-IT": {
+      "cig": 1,
+      "meur": 0.89
+     },
+     "dc-proprio": {
+      "cig": 38,
+      "meur": 15.97
+     },
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.13
+     },
+     "ict-non-cloud": {
+      "cig": 367,
+      "meur": 128.89
+     },
+     "incerto": {
+      "cig": 47,
+      "meur": 15.41
+     },
+     "fuori-misura": {
+      "cig": 2,
+      "meur": 0.0
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "calcolo-scientifico": {
+      "cig": 3,
+      "meur": 3.56
+     },
+     "server-storage": {
+      "cig": 14,
+      "meur": 7.26
+     },
+     "sito": {
+      "cig": 20,
+      "meur": 2.98
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 2.18
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 7,
+      "meur": 0.52
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 21.19
+     },
+     "inhouse-certo": {
+      "cig": 2,
+      "meur": 0.15
+     },
+     "ict-non-cloud": {
+      "cig": 106,
+      "meur": 197.34
+     },
+     "incerto": {
+      "cig": 22,
+      "meur": 24.83
+     },
+     "fuori-misura": {
+      "cig": 3,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 13
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: INFORMATICA ALTO ADIGE SPA",
+     939
+    ],
+    [
+     "AGG: INFORMATICA ALTO ADIGE SPA",
+     141
+    ]
+   ]
+  },
+  "INNOVAPUGLIA": {
+   "nome": "InnovaPuglia",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.74
+     },
+     "dc-proprio": {
+      "cig": 9,
+      "meur": 3.96
+     },
+     "ict-non-cloud": {
+      "cig": 60,
+      "meur": 87.82
+     },
+     "incerto": {
+      "cig": 40,
+      "meur": 21.45
+     },
+     "fuori-misura": {
+      "cig": 2674,
+      "meur": 13247.8
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.17
+     },
+     "sito": {
+      "cig": 5,
+      "meur": 3.25
+     },
+     "virtualizzazione": {
+      "cig": 3,
+      "meur": 0.54
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 0.03
+     },
+     "dc-proprio": {
+      "cig": 19,
+      "meur": 11.06
+     },
+     "ict-non-cloud": {
+      "cig": 71,
+      "meur": 47.55
+     },
+     "incerto": {
+      "cig": 14,
+      "meur": 1.94
+     },
+     "fuori-misura": {
+      "cig": 1716,
+      "meur": 6404.03
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "calcolo-scientifico": {
+      "cig": 1,
+      "meur": 0.1
+     },
+     "server-storage": {
+      "cig": 7,
+      "meur": 3.41
+     },
+     "sito": {
+      "cig": 10,
+      "meur": 6.87
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.69
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 15,
+      "meur": 31.99
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.65
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: INNOVAPUGLIA S.P.A.",
+     4606
+    ],
+    [
+     "AGG: INNOVAPUGLIA S.P.A.",
+     16
+    ]
+   ]
+  },
+  "INSIEL": {
+   "nome": "Insiel (Friuli Venezia Giulia)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 11,
+      "meur": 2.02
+     },
+     "dc-proprio": {
+      "cig": 40,
+      "meur": 16.24
+     },
+     "ict-non-cloud": {
+      "cig": 421,
+      "meur": 141.24
+     },
+     "incerto": {
+      "cig": 52,
+      "meur": 28.66
+     },
+     "fuori-misura": {
+      "cig": 19,
+      "meur": 34.66
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 19,
+      "meur": 7.99
+     },
+     "sito": {
+      "cig": 17,
+      "meur": 6.21
+     },
+     "virtualizzazione": {
+      "cig": 4,
+      "meur": 2.04
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "ict-non-cloud": {
+      "cig": 64,
+      "meur": 2.85
+     },
+     "incerto": {
+      "cig": 3,
+      "meur": 0.09
+     }
+    },
+    "enti_che_affidano": 49
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 16,
+      "meur": 2.81
+     },
+     "cloud-esterno-IT": {
+      "cig": 4,
+      "meur": 0.43
+     },
+     "dc-proprio": {
+      "cig": 53,
+      "meur": 33.44
+     },
+     "ict-non-cloud": {
+      "cig": 618,
+      "meur": 127.69
+     },
+     "incerto": {
+      "cig": 56,
+      "meur": 30.65
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.03
+     },
+     "fuori-misura": {
+      "cig": 15,
+      "meur": 20.82
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 25,
+      "meur": 6.77
+     },
+     "sito": {
+      "cig": 21,
+      "meur": 25.53
+     },
+     "virtualizzazione": {
+      "cig": 7,
+      "meur": 1.14
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 6,
+      "meur": 0.21
+     },
+     "ict-non-cloud": {
+      "cig": 49,
+      "meur": 163.6
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.8
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 4.1
+     }
+    },
+    "enti_che_affidano": 17
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: INSIEL SPA",
+     1306
+    ],
+    [
+     "AGG: INSIEL INFORMATICA PER IL SISTEMA DEGLI ENTI LOCALI SPA",
+     125
+    ]
+   ]
+  },
+  "LAZIOCREA": {
+   "nome": "LAZIOcrea",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 9,
+      "meur": 5.12
+     },
+     "dc-proprio": {
+      "cig": 13,
+      "meur": 10.76
+     },
+     "ict-non-cloud": {
+      "cig": 302,
+      "meur": 149.8
+     },
+     "incerto": {
+      "cig": 45,
+      "meur": 48.45
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 2,
+      "meur": 0.83
+     },
+     "sito": {
+      "cig": 10,
+      "meur": 9.46
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.47
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 7,
+      "meur": 7.26
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 4.1
+     },
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 3.78
+     },
+     "dc-proprio": {
+      "cig": 11,
+      "meur": 12.58
+     },
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.04
+     },
+     "ict-non-cloud": {
+      "cig": 188,
+      "meur": 233.06
+     },
+     "incerto": {
+      "cig": 32,
+      "meur": 72.38
+     },
+     "fuori-misura": {
+      "cig": 3,
+      "meur": 4.16
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 4,
+      "meur": 0.44
+     },
+     "sito": {
+      "cig": 7,
+      "meur": 12.13
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 42,
+      "meur": 100.57
+     },
+     "incerto": {
+      "cig": 13,
+      "meur": 35.05
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: LAZIOCREA S.P.A.",
+     614
+    ],
+    [
+     "AGG: LAZIOCREA SPA",
+     55
+    ]
+   ]
+  },
+  "LIGURIA-DIGITALE": {
+   "nome": "Liguria Digitale",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 2,
+      "meur": 0.16
+     },
+     "dc-proprio": {
+      "cig": 47,
+      "meur": 9.51
+     },
+     "ict-non-cloud": {
+      "cig": 454,
+      "meur": 157.63
+     },
+     "incerto": {
+      "cig": 35,
+      "meur": 15.71
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.04
+     },
+     "fuori-misura": {
+      "cig": 63,
+      "meur": 125.01
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 2,
+      "meur": 0.12
+     },
+     "calcolo-scientifico": {
+      "cig": 1,
+      "meur": 0.03
+     },
+     "server-storage": {
+      "cig": 26,
+      "meur": 3.22
+     },
+     "sito": {
+      "cig": 3,
+      "meur": 2.29
+     },
+     "virtualizzazione": {
+      "cig": 15,
+      "meur": 3.84
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.74
+     },
+     "inhouse-certo": {
+      "cig": 5,
+      "meur": 2.4
+     },
+     "ict-non-cloud": {
+      "cig": 22,
+      "meur": 1.62
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.07
+     },
+     "fuori-misura": {
+      "cig": 5,
+      "meur": 10.24
+     }
+    },
+    "enti_che_affidano": 26
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 38,
+      "meur": 0.52
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "dc-proprio": {
+      "cig": 41,
+      "meur": 23.15
+     },
+     "ict-non-cloud": {
+      "cig": 752,
+      "meur": 138.78
+     },
+     "incerto": {
+      "cig": 111,
+      "meur": 9.7
+     },
+     "fuori-misura": {
+      "cig": 56,
+      "meur": 113.88
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 3,
+      "meur": 2.37
+     },
+     "calcolo-scientifico": {
+      "cig": 4,
+      "meur": 1.0
+     },
+     "server-storage": {
+      "cig": 21,
+      "meur": 16.54
+     },
+     "sito": {
+      "cig": 2,
+      "meur": 0.02
+     },
+     "virtualizzazione": {
+      "cig": 11,
+      "meur": 3.23
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 5,
+      "meur": 1.14
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 0.0
+     },
+     "inhouse-certo": {
+      "cig": 38,
+      "meur": 10.32
+     },
+     "ict-non-cloud": {
+      "cig": 336,
+      "meur": 236.98
+     },
+     "incerto": {
+      "cig": 23,
+      "meur": 4.07
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 1.5
+     },
+     "fuori-misura": {
+      "cig": 5,
+      "meur": 4.16
+     }
+    },
+    "enti_che_affidano": 65
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: LIGURIA DIGITALE S.P.A.",
+     1601
+    ],
+    [
+     "AGG: LIGURIA DIGITALE",
+     436
+    ],
+    [
+     "AGG: LIGURIA DIGITALE SPA",
+     6
+    ],
+    [
+     "AGG: LIGURIA DIGITALE S.P.A.",
+     2
+    ]
+   ]
+  },
+  "MOLISE-DATI": {
+   "nome": "Molise Dati",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "ict-non-cloud": {
+      "cig": 27,
+      "meur": 8.22
+     },
+     "incerto": {
+      "cig": 9,
+      "meur": 2.71
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 2.4
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 4.0
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "dc-proprio": {
+      "cig": 3,
+      "meur": 0.07
+     },
+     "ict-non-cloud": {
+      "cig": 47,
+      "meur": 18.41
+     },
+     "incerto": {
+      "cig": 30,
+      "meur": 25.93
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.38
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.02
+     },
+     "sito": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.04
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: MOLISE DATI - SOCIETA' INFORMATICA MOLISANA S.P.A.",
+     119
+    ]
+   ]
+  },
+  "PUNTOZERO": {
+   "nome": "PuntoZero (Umbria, ex Umbria Digitale)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.07
+     },
+     "dc-proprio": {
+      "cig": 6,
+      "meur": 0.82
+     },
+     "ict-non-cloud": {
+      "cig": 65,
+      "meur": 8.6
+     },
+     "incerto": {
+      "cig": 2,
+      "meur": 0.26
+     },
+     "fuori-misura": {
+      "cig": 2,
+      "meur": 13.67
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 2,
+      "meur": 0.22
+     },
+     "sito": {
+      "cig": 3,
+      "meur": 0.19
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.41
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 8,
+      "meur": 0.47
+     },
+     "fuori-misura": {
+      "cig": 2,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 8
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "fuori-misura": {
+      "cig": 12,
+      "meur": 22.96
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.04
+     },
+     "inhouse-certo": {
+      "cig": 4,
+      "meur": 0.07
+     },
+     "ict-non-cloud": {
+      "cig": 261,
+      "meur": 51.35
+     },
+     "incerto": {
+      "cig": 59,
+      "meur": 5.68
+     },
+     "fuori-misura": {
+      "cig": 11,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 55
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: PUNTOZERO S.C.A R.L.",
+     344
+    ],
+    [
+     "SA: UMBRIA DIGITALE S.C. A R.L.",
+     74
+    ],
+    [
+     "SA: PUNTOZERO S.C.A R.L.",
+     14
+    ],
+    [
+     "AGG: UMBRIA DIGITALE S.C. A R.L.",
+     2
+    ]
+   ]
+  },
+  "SARDEGNA-IT": {
+   "nome": "Sardegna IT",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 7,
+      "meur": 1.4
+     },
+     "dc-proprio": {
+      "cig": 6,
+      "meur": 0.88
+     },
+     "ict-non-cloud": {
+      "cig": 72,
+      "meur": 10.54
+     },
+     "incerto": {
+      "cig": 27,
+      "meur": 4.23
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.2
+     },
+     "virtualizzazione": {
+      "cig": 5,
+      "meur": 0.68
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 2,
+      "meur": 1.87
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 19,
+      "meur": 3.67
+     },
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 0.03
+     },
+     "dc-proprio": {
+      "cig": 1,
+      "meur": 0.07
+     },
+     "ict-non-cloud": {
+      "cig": 161,
+      "meur": 17.6
+     },
+     "incerto": {
+      "cig": 42,
+      "meur": 3.79
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.06
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.07
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.13
+     },
+     "ict-non-cloud": {
+      "cig": 25,
+      "meur": 38.53
+     },
+     "incerto": {
+      "cig": 3,
+      "meur": 2.74
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 5
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: SARDEGNA IT S.R.L.",
+     339
+    ],
+    [
+     "AGG: SARDEGNA IT S.R.L.",
+     33
+    ]
+   ]
+  },
+  "SICILIA-DIGITALE": {
+   "nome": "Sicilia Digitale",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "dc-proprio": {
+      "cig": 2,
+      "meur": 0.46
+     },
+     "ict-non-cloud": {
+      "cig": 9,
+      "meur": 7.42
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.39
+     },
+     "sito": {
+      "cig": 1,
+      "meur": 0.07
+     }
+    },
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 1.06
+     },
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 1.31
+     },
+     "dc-proprio": {
+      "cig": 8,
+      "meur": 3.19
+     },
+     "ict-non-cloud": {
+      "cig": 47,
+      "meur": 24.19
+     },
+     "incerto": {
+      "cig": 5,
+      "meur": 2.39
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.05
+     },
+     "sito": {
+      "cig": 3,
+      "meur": 0.22
+     },
+     "virtualizzazione": {
+      "cig": 4,
+      "meur": 2.92
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 27,
+      "meur": 46.51
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.05
+     }
+    },
+    "enti_che_affidano": 4
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: SICILIA DIGITALE S.P.A.",
+     76
+    ],
+    [
+     "AGG: SICILIA DIGITALE S.P.A.",
+     20
+    ],
+    [
+     "AGG: SICILIA DIGITALE SPA",
+     15
+    ]
+   ]
+  },
+  "SORESA": {
+   "nome": "So.Re.Sa. (Campania)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 3.0
+     },
+     "cloud-esterno-UE": {
+      "cig": 2,
+      "meur": 11.22
+     },
+     "ict-non-cloud": {
+      "cig": 52,
+      "meur": 115.49
+     },
+     "incerto": {
+      "cig": 14,
+      "meur": 43.08
+     },
+     "fuori-misura": {
+      "cig": 1050,
+      "meur": 3608.29
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {
+     "fuori-misura": {
+      "cig": 5,
+      "meur": 4.2
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 4,
+      "meur": 6.05
+     },
+     "dc-proprio": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "ict-non-cloud": {
+      "cig": 59,
+      "meur": 771.64
+     },
+     "incerto": {
+      "cig": 9,
+      "meur": 25.29
+     },
+     "fuori-misura": {
+      "cig": 177,
+      "meur": 1626.36
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "sito": {
+      "cig": 1,
+      "meur": 0.01
+     }
+    },
+    "come_fornitrice": {
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.1
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: SOCIETA REGIONALE PER LA SANITA SO.RE.SA. S.P.A.",
+     1261
+    ],
+    [
+     "SA: SOCIETA' REGIONALE PER LA SANITA' SO.RE.SA. S.P.A.",
+     58
+    ],
+    [
+     "SA: SOCIETA' REGIONALE PER LA SANITA' S.P.A. IN BREVE SO.RE.SA. S.P .A.",
+     50
+    ],
+    [
+     "AGG: SOCIETA' REGIONALE PER LA SANITA' S.P.A. IN BREVE SO.RE.SA. S.P .A.",
+     6
+    ]
+   ]
+  },
+  "TRENTINO-DIGITALE": {
+   "nome": "Trentino Digitale",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 3,
+      "meur": 4.26
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 0.07
+     },
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 1.39
+     },
+     "dc-proprio": {
+      "cig": 30,
+      "meur": 8.55
+     },
+     "ict-non-cloud": {
+      "cig": 160,
+      "meur": 113.17
+     },
+     "incerto": {
+      "cig": 57,
+      "meur": 25.7
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.35
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.1
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 1,
+      "meur": 0.06
+     },
+     "calcolo-scientifico": {
+      "cig": 1,
+      "meur": 0.2
+     },
+     "server-storage": {
+      "cig": 12,
+      "meur": 2.85
+     },
+     "sito": {
+      "cig": 11,
+      "meur": 3.47
+     },
+     "virtualizzazione": {
+      "cig": 5,
+      "meur": 1.96
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.0
+     },
+     "ict-non-cloud": {
+      "cig": 3,
+      "meur": 0.11
+     }
+    },
+    "enti_che_affidano": 4
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 4,
+      "meur": 0.23
+     },
+     "dc-proprio": {
+      "cig": 24,
+      "meur": 8.09
+     },
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "ict-non-cloud": {
+      "cig": 198,
+      "meur": 70.35
+     },
+     "incerto": {
+      "cig": 42,
+      "meur": 13.39
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.04
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.34
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "server-storage": {
+      "cig": 7,
+      "meur": 1.1
+     },
+     "sito": {
+      "cig": 13,
+      "meur": 5.41
+     },
+     "virtualizzazione": {
+      "cig": 3,
+      "meur": 1.58
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 9,
+      "meur": 0.01
+     },
+     "cloud-esterno-UE": {
+      "cig": 1,
+      "meur": 0.1
+     },
+     "inhouse-certo": {
+      "cig": 108,
+      "meur": 12.71
+     },
+     "ict-non-cloud": {
+      "cig": 913,
+      "meur": 97.94
+     },
+     "incerto": {
+      "cig": 26,
+      "meur": 2.5
+     },
+     "fuori-misura": {
+      "cig": 129,
+      "meur": 0.04
+     }
+    },
+    "enti_che_affidano": 208
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: TRENTINO DIGITALE S.P.A.",
+     1203
+    ],
+    [
+     "SA: TRENTINO DIGITALE S.P.A.",
+     527
+    ],
+    [
+     "AGG: TRENTINO DIGITALE SPA",
+     1
+    ]
+   ]
+  },
+  "METIS-TOSCANA": {
+   "nome": "Metis Toscana (consorzio in house della Regione Toscana e delle aziende sanitarie)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "ict-non-cloud": {
+      "cig": 2,
+      "meur": 0.14
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {},
+    "come_fornitrice": {},
+    "enti_che_affidano": 0
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 0.25
+     },
+     "dc-proprio": {
+      "cig": 6,
+      "meur": 0.38
+     },
+     "ict-non-cloud": {
+      "cig": 13,
+      "meur": 0.34
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 6,
+      "meur": 0.38
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 40,
+      "meur": 14.02
+     },
+     "incerto": {
+      "cig": 2,
+      "meur": 0.02
+     },
+     "fuori-misura": {
+      "cig": 7,
+      "meur": 11.53
+     }
+    },
+    "enti_che_affidano": 12
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: CONSORZIO METIS",
+     49
+    ],
+    [
+     "SA: CONSORZIO METIS",
+     24
+    ]
+   ]
+  },
+  "LEPIDA": {
+   "nome": "Lepida (Emilia-Romagna)",
+   "fonte": "assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 8,
+      "meur": 4.66
+     },
+     "dc-proprio": {
+      "cig": 25,
+      "meur": 18.96
+     },
+     "ict-non-cloud": {
+      "cig": 93,
+      "meur": 36.4
+     },
+     "incerto": {
+      "cig": 39,
+      "meur": 6.26
+     },
+     "fuori-misura": {
+      "cig": 24,
+      "meur": 108.26
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 7,
+      "meur": 12.73
+     },
+     "sito": {
+      "cig": 17,
+      "meur": 3.24
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 3.0
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 6,
+      "meur": 1.72
+     },
+     "ict-non-cloud": {
+      "cig": 8,
+      "meur": 0.88
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.1
+     }
+    },
+    "enti_che_affidano": 5
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 19,
+      "meur": 17.29
+     },
+     "cloud-esterno-IT": {
+      "cig": 3,
+      "meur": 0.56
+     },
+     "dc-proprio": {
+      "cig": 40,
+      "meur": 28.65
+     },
+     "inhouse-certo": {
+      "cig": 1,
+      "meur": 0.12
+     },
+     "ict-non-cloud": {
+      "cig": 207,
+      "meur": 38.41
+     },
+     "incerto": {
+      "cig": 181,
+      "meur": 9.15
+     },
+     "escluso-non-ict": {
+      "cig": 1,
+      "meur": 0.0
+     },
+     "fuori-misura": {
+      "cig": 25,
+      "meur": 68.04
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "calcolo-scientifico": {
+      "cig": 3,
+      "meur": 0.34
+     },
+     "server-storage": {
+      "cig": 8,
+      "meur": 11.34
+     },
+     "sito": {
+      "cig": 28,
+      "meur": 7.65
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 9.32
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 39,
+      "meur": 14.17
+     },
+     "cloud-esterno-IT": {
+      "cig": 2,
+      "meur": 0.0
+     },
+     "inhouse-certo": {
+      "cig": 336,
+      "meur": 73.71
+     },
+     "ict-non-cloud": {
+      "cig": 459,
+      "meur": 154.28
+     },
+     "incerto": {
+      "cig": 28,
+      "meur": 2.38
+     },
+     "escluso-non-ict": {
+      "cig": 3,
+      "meur": 0.03
+     },
+     "fuori-misura": {
+      "cig": 54,
+      "meur": 36.01
+     }
+    },
+    "enti_che_affidano": 181
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: LEPIDA S.C.P.A.",
+     937
+    ],
+    [
+     "SA: LEPIDA S.C.P.A.",
+     666
+    ],
+    [
+     "AGG: LEPIDA SCPA",
+     1
+    ]
+   ]
+  },
+  "SOGEI": {
+   "nome": "Sogei (MEF)",
+   "fonte": "in-house ICT nazionale (MEF), non socia Assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 10,
+      "meur": 73.73
+     },
+     "dc-proprio": {
+      "cig": 53,
+      "meur": 163.42
+     },
+     "ict-non-cloud": {
+      "cig": 470,
+      "meur": 2287.43
+     },
+     "incerto": {
+      "cig": 65,
+      "meur": 254.2
+     },
+     "fuori-misura": {
+      "cig": 3,
+      "meur": 13.71
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 39,
+      "meur": 90.22
+     },
+     "sito": {
+      "cig": 10,
+      "meur": 11.9
+     },
+     "virtualizzazione": {
+      "cig": 4,
+      "meur": 61.3
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 2,
+      "meur": 18.88
+     },
+     "incerto": {
+      "cig": 48,
+      "meur": 382.18
+     },
+     "fuori-misura": {
+      "cig": 2,
+      "meur": 727.3
+     }
+    },
+    "enti_che_affidano": 45
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 2,
+      "meur": 63.99
+     },
+     "dc-proprio": {
+      "cig": 15,
+      "meur": 77.41
+     },
+     "ict-non-cloud": {
+      "cig": 267,
+      "meur": 2722.36
+     },
+     "incerto": {
+      "cig": 22,
+      "meur": 102.09
+     },
+     "fuori-misura": {
+      "cig": 5,
+      "meur": 300.25
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 11,
+      "meur": 69.31
+     },
+     "sito": {
+      "cig": 3,
+      "meur": 6.62
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 1.48
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 18,
+      "meur": 1885.84
+     },
+     "incerto": {
+      "cig": 49,
+      "meur": 497.3
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 50
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: SOGEI SPA",
+     912
+    ],
+    [
+     "AGG: SOGEI S.P.A.",
+     91
+    ],
+    [
+     "AGG: SOGEI SPA",
+     23
+    ],
+    [
+     "AGG: SOGEI U2013 SOCIETÀ GENERALE DI INFORMATICA U2013 S.P.A.",
+     5
+    ],
+    [
+     "AGG: SOGEI SOCIETÀ GENERALE D'INFORMATICA S.P.A.",
+     1
+    ],
+    [
+     "AGG: SOGEI",
+     1
+    ]
+   ]
+  },
+  "CINECA": {
+   "nome": "CINECA (consorzio interuniversitario)",
+   "fonte": "in-house ICT di università ed enti di ricerca (MUR), non socia Assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 2,
+      "meur": 0.04
+     },
+     "dc-proprio": {
+      "cig": 51,
+      "meur": 78.75
+     },
+     "ict-non-cloud": {
+      "cig": 260,
+      "meur": 39.23
+     },
+     "incerto": {
+      "cig": 37,
+      "meur": 14.38
+     },
+     "fuori-misura": {
+      "cig": 3,
+      "meur": 1.28
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "backup": {
+      "cig": 1,
+      "meur": 0.13
+     },
+     "calcolo-scientifico": {
+      "cig": 14,
+      "meur": 68.9
+     },
+     "server-storage": {
+      "cig": 22,
+      "meur": 6.52
+     },
+     "sito": {
+      "cig": 9,
+      "meur": 0.55
+     },
+     "virtualizzazione": {
+      "cig": 5,
+      "meur": 2.64
+     }
+    },
+    "come_fornitrice": {
+     "inhouse-certo": {
+      "cig": 12,
+      "meur": 8.21
+     },
+     "ict-non-cloud": {
+      "cig": 30,
+      "meur": 15.91
+     },
+     "incerto": {
+      "cig": 1,
+      "meur": 0.03
+     }
+    },
+    "enti_che_affidano": 19
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 5,
+      "meur": 3.09
+     },
+     "cloud-esterno-IT": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "dc-proprio": {
+      "cig": 28,
+      "meur": 229.77
+     },
+     "ict-non-cloud": {
+      "cig": 126,
+      "meur": 70.1
+     },
+     "incerto": {
+      "cig": 27,
+      "meur": 50.09
+     },
+     "fuori-misura": {
+      "cig": 8,
+      "meur": 12.4
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "calcolo-scientifico": {
+      "cig": 9,
+      "meur": 141.5
+     },
+     "server-storage": {
+      "cig": 3,
+      "meur": 4.73
+     },
+     "sito": {
+      "cig": 15,
+      "meur": 83.4
+     },
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.14
+     }
+    },
+    "come_fornitrice": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "inhouse-certo": {
+      "cig": 72,
+      "meur": 22.0
+     },
+     "ict-non-cloud": {
+      "cig": 665,
+      "meur": 137.84
+     },
+     "incerto": {
+      "cig": 6,
+      "meur": 0.25
+     },
+     "fuori-misura": {
+      "cig": 4,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 144
+   },
+   "denominazioni_trovate": [
+    [
+     "AGG: CINECA CONSORZIO INTERUNIVERSITARIO",
+     707
+    ],
+    [
+     "SA: CINECA CONSORZIO INTERUNIVERSITARIO",
+     548
+    ],
+    [
+     "AGG: CINECA - CONSORZIO INTERUNIVERSITARIO",
+     83
+    ],
+    [
+     "AGG: CINECA",
+     1
+    ]
+   ]
+  },
+  "PAGOPA": {
+   "nome": "PagoPA S.p.A.",
+   "fonte": "in-house ICT nazionale (Presidenza del Consiglio), non socia Assinter",
+   "2020-2023": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 11,
+      "meur": 9.31
+     },
+     "dc-proprio": {
+      "cig": 3,
+      "meur": 0.07
+     },
+     "ict-non-cloud": {
+      "cig": 172,
+      "meur": 75.25
+     },
+     "incerto": {
+      "cig": 19,
+      "meur": 2.26
+     },
+     "fuori-misura": {
+      "cig": 50,
+      "meur": 830.14
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "server-storage": {
+      "cig": 1,
+      "meur": 0.01
+     },
+     "virtualizzazione": {
+      "cig": 2,
+      "meur": 0.06
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 1,
+      "meur": 0.33
+     }
+    },
+    "enti_che_affidano": 1
+   },
+   "dal-2024": {
+    "come_acquirente": {
+     "cloud-esterno-EXTRA-UE": {
+      "cig": 17,
+      "meur": 16.71
+     },
+     "cloud-esterno-UE": {
+      "cig": 2,
+      "meur": 3.83
+     },
+     "cloud-esterno-IT": {
+      "cig": 1,
+      "meur": 1.5
+     },
+     "dc-proprio": {
+      "cig": 1,
+      "meur": 0.02
+     },
+     "ict-non-cloud": {
+      "cig": 190,
+      "meur": 108.33
+     },
+     "incerto": {
+      "cig": 16,
+      "meur": 16.14
+     },
+     "fuori-misura": {
+      "cig": 35,
+      "meur": 1707.31
+     }
+    },
+    "cloud_in_proprio_per_famiglia": {
+     "virtualizzazione": {
+      "cig": 1,
+      "meur": 0.02
+     }
+    },
+    "come_fornitrice": {
+     "ict-non-cloud": {
+      "cig": 4,
+      "meur": 0.31
+     },
+     "fuori-misura": {
+      "cig": 1,
+      "meur": 0.0
+     }
+    },
+    "enti_che_affidano": 4
+   },
+   "denominazioni_trovate": [
+    [
+     "SA: PAGOPA S.P.A.",
+     517
+    ],
+    [
+     "AGG: PAGOPA S.P.A.",
+     6
+    ]
+   ]
+  }
+ }
+}

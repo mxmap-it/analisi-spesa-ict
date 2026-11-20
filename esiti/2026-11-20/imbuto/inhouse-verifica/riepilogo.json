@@ -1,0 +1,64 @@
+{
+ "versione": "0.1",
+ "data": "2026-11-20",
+ "nota": "M€; lordo = importo del lotto; corretto = importo dopo la verifica (netto dei tetti v2 per le classi non toccate)",
+ "ingressi": {
+  "ict": "lavoro/imbuto/ict.csv",
+  "segnali": "esiti/2026-11-19/imbuto/bdncp/segnali.csv",
+  "tetti": "esiti/2026-11-18/imbuto/tetti-cig-v2.csv",
+  "config": "config/inhouse_verifica.yaml"
+ },
+ "classe_inhouse_dal_2024": {
+  "cig": 816,
+  "lordo": 658.2,
+  "netto_tetti": 415.8
+ },
+ "classi": {
+  "verificato-fuori-misura": {
+   "cig": 1,
+   "lordo": 242.4,
+   "corretto": 0.0
+  },
+  "sct-importo-da-verificare": {
+   "cig": 9,
+   "lordo": 123.0,
+   "corretto": 0.0
+  },
+  "verificato-dc-proprio": {
+   "cig": 1,
+   "lordo": 117.3,
+   "corretto": 117.3
+  },
+  "affidamento-a-inhouse-ipa": {
+   "cig": 438,
+   "lordo": 77.6,
+   "corretto": 77.6
+  },
+  "acquisto-della-inhouse-infrastruttura-propria": {
+   "cig": 51,
+   "lordo": 50.5,
+   "corretto": 50.5
+  },
+  "altro-senza-aggiudicatario": {
+   "cig": 140,
+   "lordo": 32.4,
+   "corretto": 32.4
+  },
+  "sct-cloud-it": {
+   "cig": 155,
+   "lordo": 13.3,
+   "corretto": 13.3
+  },
+  "altro-sa-non-ipa": {
+   "cig": 2,
+   "lordo": 1.1,
+   "corretto": 1.1
+  },
+  "altro-non-sa": {
+   "cig": 19,
+   "lordo": 0.6,
+   "corretto": 0.6
+  }
+ },
+ "spostamenti": 166
+}

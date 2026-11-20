@@ -2,8 +2,8 @@
 # Ogni riga: decisione presa su fonte pubblica archiviata (sha256), con il motivo. Stati dell'asse A come in
 # tools/verifiche/imbuto_spostamenti.py (fuori-misura, escluso-non-ict, ict-non-cloud, cloud-certo, inhouse-certo,
 # incerto-marchio, incerto-s6). importo vuoto = resta l'importo dell'imbuto.
-versione: "0.1"
-aggiornato: 2026-11-19
+versione: "0.2"
+aggiornato: 2026-11-20
 
 cig:
   B33988ECF0:
@@ -20,7 +20,7 @@ cig:
       - {url: "https://ted.europa.eu/it/notice/590066-2024/xml", sha256: 3fec18ae67fe9ba1aaf4d0f637399f65a72a78c2b62ce224c32172665bf380d4, nota: "bando TED 590066-2024 (1/10/2024)"}
       - {url: "https://dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/20260701-cig_csv.zip", sha256: 925d561d26a5af5ba1ed9563ee67725566890f3de13d1419b5c43da98808991d, nota: "riga CIG: modalità ACCORDO QUADRO, procedura aperta, gara START 040961/2024"}
   BCA58C49BB:
-    a: ict-non-cloud
+    a: dc-proprio   # 20/11/2026: cloud in proprio, voce «calcolo scientifico» (decisione di Fabio, #52); prima ict-non-cloud
     importo: ""
     giurisdizione: ""
     motivo: >-

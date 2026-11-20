@@ -12,8 +12,8 @@
 #   bassa = sotto 0,1 miliardo, oppure qualità del dato già aggirata.
 # Stato: aperta | in-corso | mitigata | risolta | decisione-fabio
 
-versione: "0.9"
-aggiornato: 2026-11-19
+versione: "0.10"
+aggiornato: 2026-11-20
 
 esiti:
   strati: "esiti/*/imbuto/strati.json"            # imbuto L1 (ultimo per data)
@@ -257,6 +257,13 @@ livelli:
     uscita: "cloud sì/no e prodotto, con fonte primaria"
     strumento: "tools/llm/giro_imbuto.sh (GIRO_DIR raffinamento-l4)"
     deterministico: false
+  - id: DC
+    nome: "Cloud in proprio: datacenter dell'ente e servizi delle in-house"
+    mezzo: "regole su testo e CPV con prevalenza (config/datacenter_proprio.yaml), elenco delle in-house ICT (config/societa_inhouse_ict.yaml)"
+    ingresso: "ICT non cloud e incerti dopo gli altri livelli (mai sopra una verifica manuale)"
+    uscita: "datacenter proprio (sovrano IT) per famiglia; servizi di datacenter e cloud affidati alle in-house"
+    strumento: "tools/verifiche/datacenter_proprio.py, tools/verifiche/imbuto_spostamenti.py, tools/verifiche/inhouse_vista.py"
+    deterministico: true
 
 mancanze:
   - id: M1
@@ -387,6 +394,7 @@ mancanze:
     stato: decisione-fabio
 
 registro:
+  - {data: 2026-11-20, versione: "0.10", modifica: "Livello DC: cloud in proprio (datacenter dell'ente, sovrano IT, decisione di Fabio 20/11) e servizi delle in-house ICT; 1,94 mld dal 2024, precisione in euro 85,7 % a cieco (#52)."}
   - {data: 2026-11-19, versione: "0.9", modifica: "M5 misurata (#77): esclusione S1 precisa al 98,7 % dei CIG su 399 a cieco, 0 cloud, ICT persi 2,3-2,8 mld di valore, gravità media, mitigata. M6 misurata (#76): SmartCIG dal 2024 nell'imbuto sul solo testo, cloud certo 13,6 M€ + residuo 45,1 M€, gravità bassa, mitigata; dataset smartcig usato; R89."}
   - {data: 2026-11-19, versione: "0.8.1", modifica: "M13 risolta: cruscotto dei contratti con ricerca, esiti dei livelli, atti, annotazione e drilldown dai totali (#53)."}
   - {data: 2026-11-19, versione: "0.8", modifica: "M9 misurata (#70): hosting dei SaaS della 1.2 provato per l'85,6 % dell'euro, extra-UE 6,5/30,8/62,0 %, SAP 213,6 M€ con hosting non noto; gravità da alta a media. M10 mitigata dal settimo campione a cieco (big tech 98,9 % in euro pesata). M2 aggiornata (#45 chiuso). In-house verificata per CIG: Cloud Toscana padre AQ, CINECA DC proprio (#52)."}

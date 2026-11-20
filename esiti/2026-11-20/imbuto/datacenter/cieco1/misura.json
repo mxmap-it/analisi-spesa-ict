@@ -1,0 +1,108 @@
+[
+ {
+  "campione": "esiti/2026-11-20/imbuto/datacenter/cieco1",
+  "gruppi": {
+   "dc-casuale": {
+    "etichette": {
+     "DC": 39,
+     "ALTRO-ICT": 11,
+     "ESTERNO": 1,
+     "INDETERMINATO": 5,
+     "MISTO": 3,
+     "NON-ICT": 1
+    },
+    "giuste": 39,
+    "determinati": 55,
+    "quota_pct": 70.9,
+    "wilson95": [
+     57.9,
+     81.2
+    ]
+   },
+   "misto-non-contato": {
+    "etichette": {
+     "INDETERMINATO": 3,
+     "DC": 18,
+     "ALTRO-ICT": 4,
+     "ESTERNO": 1,
+     "NON-ICT": 4
+    },
+    "giuste": 18,
+    "determinati": 27,
+    "quota_pct": 66.7,
+    "wilson95": [
+     47.8,
+     81.4
+    ]
+   },
+   "dc-pesato-euro": {
+    "etichette": {
+     "DC": 31,
+     "MISTO": 1,
+     "ALTRO-ICT": 6,
+     "NON-ICT": 1,
+     "ESTERNO": 1
+    },
+    "giuste": 31,
+    "determinati": 40,
+    "quota_pct": 77.5,
+    "wilson95": [
+     62.5,
+     87.7
+    ]
+   }
+  },
+  "errori_per_famiglia": [
+   [
+    "server-storage",
+    "ALTRO-ICT",
+    15
+   ],
+   [
+    "server-storage",
+    "MISTO",
+    2
+   ],
+   [
+    "sito",
+    "MISTO",
+    1
+   ],
+   [
+    "sito",
+    "ESTERNO",
+    1
+   ],
+   [
+    "backup",
+    "ALTRO-ICT",
+    1
+   ],
+   [
+    "sito",
+    "ALTRO-ICT",
+    1
+   ],
+   [
+    "server-storage",
+    "NON-ICT",
+    1
+   ],
+   [
+    "sito",
+    "NON-ICT",
+    1
+   ],
+   [
+    "virtualizzazione",
+    "ESTERNO",
+    1
+   ],
+   [
+    "calcolo-scientifico",
+    "MISTO",
+    1
+   ]
+  ]
+ }
+]

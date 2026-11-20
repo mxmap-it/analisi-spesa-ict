@@ -251,3 +251,13 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 
 ## 2026-11-19 — Campioni a cieco annotati da Claude; contratti ricercabili e annotabili da una dashboard (Fabio, #40 #53 #78)
 **Chi:** Fabio: «Sì, annotati da Claude, e servirà comunque che tutti i contratti siano ricercabili ed annotandoli a supporto con una Dashboard assieme alla pubblicazione dei risultati». **Decisione:** il campione a cieco «annotato da persone» del metodo v3 è sostituito dai campioni a cieco annotati da Claude (ciechi 1-6, settimo prima del rendiconto finale). Con la pubblicazione dei risultati serve una dashboard in cui **tutti** i contratti sono ricercabili e annotabili (da persone, a supporto e controllo): entra nella checklist del rendiconto del risultato parziale (#78), ticket #53.
+
+## 2026-11-20 — Cloud in proprio: datacenter propri nella misura (Fabio, #52)
+
+- **Si apre il capitolo «cloud in proprio»:** la spesa per i datacenter propri della PA entra nella misura accanto ai servizi cloud esterni (stato `dc-proprio` nella tabella unica degli spostamenti).
+- **Giurisdizione:** un datacenter di proprietà dell'ente e gestito da lui è **sovrano (IT)** anche se usa tecnologia extra-UE (es. VMware): il produttore non può accedere giuridicamente ai dati né ai sistemi. Niente seconda lente «tecnologia» per la giurisdizione.
+- **Calcolo scientifico** (supercalcolo, impianti dei datacenter di ricerca come CINECA-INFN): entra, come voce separata.
+- **Contratti misti** (server e PC insieme): contano come datacenter solo se **prevale** la parte da datacenter; altrimenti restano incerti.
+- **Acquisti delle società in-house per i propri datacenter:** entrano quelli sicuri.
+- **Vista per società in-house:** si misura espressamente cosa comprano le società in-house (cloud esterno e infrastruttura), per capire cosa fanno.
+- Definizione proposta e non contestata: entrano luogo del datacenter, server e storage, software di virtualizzazione; rete e gestione dei sistemi solo se la gara nomina il datacenter.

@@ -1,0 +1,34 @@
+# Società ICT in-house della PA (#52, vista «cosa fanno le in-house»). Letta da tools/verifiche/inhouse_vista.py e
+# tools/verifiche/datacenter_proprio.py (per loro «cloud» nel testo non è segno di servizio esterno: costruiscono il proprio).
+# Fonte dell'elenco: soci di Assinter Italia, pagina «Network» archiviata il 20/11/2026
+# (https://www.assinteritalia.it/it/page/network, report/metodo/prove-datacenter/assinter-network-2026-11-20.html,
+# sha256 63beb73b939ef6e83c583dece8fce1b27227fbe4d4f48f6a1200c503f1af49fd), più le in-house ICT nazionali.
+# regex: sulla denominazione ANAC (maiuscolo) della stazione appaltante o dell'aggiudicatario.
+# cf: codici fiscali trovati nei dati ANAC per quella denominazione (tools/verifiche/inhouse_vista.py --scopri), verificati a mano.
+versione: "0.1"
+aggiornato: 2026-11-20
+societa:
+  ARIA:              {nome: "ARIA S.p.A. (Lombardia)", regex: "AZIENDA REGIONALE PER L.?INNOVAZIONE E (GLI )?ACQUISTI|^ARIA S\\.?P\\.?A", fonte: assinter}
+  ACI-INFORMATICA:   {nome: "ACI Informatica", regex: "ACI INFORMATICA", fonte: assinter}
+  INVA:              {nome: "INVA (Valle d'Aosta)", regex: "^IN\\.?VA\\b|INVA S\\.?P\\.?A", fonte: assinter}
+  CSI-PIEMONTE:      {nome: "CSI Piemonte", regex: "CSI[\\s-]+PIEMONTE|CONSORZIO PER IL SISTEMA INFORMATIVO", fonte: assinter}
+  ARSENAL-IT:        {nome: "Consorzio Arsenàl.IT (Veneto)", regex: "CONSORZIO ARSEN|ARSENAL\\.?\\s?IT\\b", fonte: assinter}
+  CONSORZIO-IT:      {nome: "Consorzio.IT (comuni cremaschi)", regex: "^CONSORZIO\\.?\\s?IT\\b|CONSORZIO INFORMATICA E TERRITORIO", fonte: assinter}
+  ECOCERVED:         {nome: "Ecocerved", regex: "ECOCERVED", fonte: assinter}
+  INFOCAMERE:        {nome: "InfoCamere", regex: "INFOCAMERE", fonte: assinter}
+  INFORMATICA-AA:    {nome: "Informatica Alto Adige / SIAG", regex: "INFORMATICA ALTO ADIGE|SUDTIROLER INFORMATIK|SÜDTIROLER INFORMATIK", fonte: assinter}
+  INNOVAPUGLIA:      {nome: "InnovaPuglia", regex: "INNOVAPUGLIA", fonte: assinter}
+  INSIEL:            {nome: "Insiel (Friuli Venezia Giulia)", regex: "^INSIEL", fonte: assinter}
+  LAZIOCREA:         {nome: "LAZIOcrea", regex: "LAZIO\\s?CREA", fonte: assinter}
+  LIGURIA-DIGITALE:  {nome: "Liguria Digitale", regex: "LIGURIA DIGITALE", fonte: assinter}
+  MOLISE-DATI:       {nome: "Molise Dati", regex: "MOLISE DATI", fonte: assinter}
+  PUNTOZERO:         {nome: "PuntoZero (Umbria, ex Umbria Digitale)", regex: "^PUNTO\\s?ZERO S|UMBRIA DIGITALE", fonte: assinter}
+  SARDEGNA-IT:       {nome: "Sardegna IT", regex: "SARDEGNA I\\.?T\\b", fonte: assinter}
+  SICILIA-DIGITALE:  {nome: "Sicilia Digitale", regex: "SICILIA DIGITALE|SICILIA E-SERVIZI", fonte: assinter}
+  SORESA:            {nome: "So.Re.Sa. (Campania)", regex: "SO\\.?\\s?RE\\.?\\s?SA", fonte: assinter}
+  TRENTINO-DIGITALE: {nome: "Trentino Digitale", regex: "TRENTINO DIGITALE|INFORMATICA TRENTINA", fonte: assinter}
+  METIS-TOSCANA:     {nome: "Metis Toscana (consorzio in house della Regione Toscana e delle aziende sanitarie)", regex: "CONSORZIO METIS", fonte: assinter}
+  LEPIDA:            {nome: "Lepida (Emilia-Romagna)", regex: "^LEPIDA", fonte: assinter}
+  SOGEI:             {nome: "Sogei (MEF)", regex: "^SOGEI", fonte: "in-house ICT nazionale (MEF), non socia Assinter"}
+  CINECA:            {nome: "CINECA (consorzio interuniversitario)", regex: "^CINECA", fonte: "in-house ICT di università ed enti di ricerca (MUR), non socia Assinter"}
+  PAGOPA:            {nome: "PagoPA S.p.A.", regex: "^PAGOPA", fonte: "in-house ICT nazionale (Presidenza del Consiglio), non socia Assinter"}

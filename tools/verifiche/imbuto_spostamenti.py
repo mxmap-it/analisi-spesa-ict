@@ -31,7 +31,9 @@ import re
 import sys
 from datetime import date
 
-VERSIONE = "0.1.1"
+import yaml
+
+VERSIONE = "0.2.0"
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GIORNO = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
 ICT = os.environ.get("IMBUTO_ICT", os.path.join(R, "lavoro/imbuto/ict.csv"))
@@ -58,21 +60,30 @@ INGRESSI = {
     "LIC": ultimo("esiti/*/imbuto/licenze-cig.csv"),
     "V6R": p("dati/classificazioni/imbuto-revisione.jsonl"),
     "L4": p("report/metodo/llm/raffinamento-l4/esiti"),
+    # DC: datacenter propri («cloud in proprio», #52), regole di tools/verifiche/datacenter_proprio.py.
+    "DC": ultimo("esiti/*/imbuto/datacenter/datacenter-cig.csv.gz"),
 }
+# Stato per CIG dopo i livelli, per le viste a valle (società in-house): dato di lavoro, non in git.
+STATI_FINALI = os.environ.get("IMBUTO_STATI_FINALI", os.path.join(R, "lavoro/imbuto/stati-finali.csv.gz"))
+DC_CFG = yaml.safe_load(open(p("config/datacenter_proprio.yaml"), encoding="utf-8"))
 # Verifiche manuali o di altri filoni: qualunque esiti/*/imbuto/*/spostamenti-*.csv con colonne
 # cig, a (stato finale), motivo, fonte; facoltative giurisdizione, importo (importo corretto).
 # In L4 la «nota_quota» («X EUR su Y EUR») diventa una frazione dell'importo (codificata negativa).
-MANUALI = sorted(glob.glob(p("esiti/*/imbuto/*/spostamenti-*.csv")))
+# Di ogni file (sottocartella + nome) vale solo l'esito più recente: una verifica rieseguita sostituisce la precedente.
+MANUALI = sorted({os.path.relpath(f, p("esiti")).split(os.sep, 1)[1]: f
+                  for f in sorted(glob.glob(p("esiti/*/imbuto/*/spostamenti-*.csv")))}.values())
 
 # Stati dell'asse A (nomi brevi).
-STATI = ["fuori-misura", "escluso-non-ict", "ict-non-cloud", "cloud-certo", "inhouse-certo",
+STATI = ["fuori-misura", "escluso-non-ict", "ict-non-cloud", "cloud-certo", "inhouse-certo", "dc-proprio",
          "incerto-marchio", "incerto-s6"]
+CERTI = ("cloud-certo", "inhouse-certo", "dc-proprio")
 NOMI = {
     "fuori-misura": "fuori misura (S0 padre AQ, S2 sotto soglia)",
     "escluso-non-ict": "escluso certo, non ICT",
     "ict-non-cloud": "ICT non cloud",
     "cloud-certo": "incluso certo: cloud",
     "inhouse-certo": "incluso certo: infrastruttura in-house",
+    "dc-proprio": "incluso certo: cloud in proprio (datacenter dell'ente)",
     "incerto-marchio": "incerto: marchio o lotto noto, da attribuire",
     "incerto-s6": "incerto: residuo S6",
 }
@@ -87,6 +98,7 @@ DESCR = {
     "L3": "Claude Opus sul testo, solo certezza alta",
     "LIC": "regole delle licenze (rendiconto imbuto § 4.5)",
     "L2": "regole sul testo (stampanti, consumabili, cablaggio)",
+    "DC": "regole del datacenter proprio con prevalenza e dei servizi delle in-house ICT (si applicano dopo gli altri livelli, mai sopra una verifica manuale)",
 }
 
 
@@ -204,6 +216,19 @@ def main():
         except ValueError:
             pass
 
+    dc = {}
+    if INGRESSI["DC"]:
+        for r in csv.DictReader(apri(INGRESSI["DC"])):
+            if r["esito"] == "dc-proprio":
+                dc[r["cig"]] = r["famiglia"]
+            elif r["esito"] == "servizio-inhouse":
+                dc[r["cig"]] = "servizio-inhouse"
+    dc_stati, dc_escluse = set(DC_CFG["origini"]["stati"]), set(DC_CFG["origini"]["sottoclassi_escluse"])
+    dc_fam = collections.defaultdict(lambda: [0, 0.0, 0.0])   # (periodo, famiglia)
+    fs = gzip.open(STATI_FINALI, "wt", encoding="utf-8", newline="")
+    ws = csv.writer(fs)
+    ws.writerow(["cig", "anno", "stato", "livello", "giurisdizione", "euro_lordi", "euro_netti", "famiglia_dc"])
+
     agg = lambda: collections.defaultdict(lambda: [0, 0.0, 0.0])
     prima, dopo, giur_prima, giur_dopo = agg(), agg(), agg(), agg()
     flussi = agg()               # (periodo, da, a, livello decisivo)
@@ -250,10 +275,30 @@ def main():
                 finale.append([cig, r["anno"], r["strato"], r["sottoclasse"], st0, st1, liv,
                                "|".join(sorted({m["livello"] for m in mv})), int(len(arrivi) > 1),
                                round(float(r["importo"] or 0), 2), round(netto, 2), g0, g1, d["motivo"]])
+            fam = (dc.get(cig) or "verifica-manuale") if st1 == "dc-proprio" else ""
+            if st1 == "dc-proprio":
+                somma(dc_fam, (per, fam), lordo, netto)
+            elif cig in dc and st1 in dc_stati and r["sottoclasse"] not in dc_escluse and liv != "MAN":
+                # cloud in proprio: datacenter dell'ente, sovrano IT (decisione di Fabio 20/11/2026)
+                fam = dc[cig]
+                if not mv:
+                    finale.append([cig, r["anno"], r["strato"], r["sottoclasse"], st0, "inhouse-certo" if fam == "servizio-inhouse" else "dc-proprio", "DC", "DC", 0,
+                                   round(float(r["importo"] or 0), 2), round(netto, 2), g0, "IT", f"datacenter proprio: {fam}"])
+                else:
+                    finale[-1][5], finale[-1][6], finale[-1][12] = ("inhouse-certo" if fam == "servizio-inhouse" else "dc-proprio"), "DC", "IT"
+                    finale[-1][13] = f"datacenter proprio: {fam} (dopo {liv or 'nessun livello'}: {st1})"
+                if st1 != st0:   # il flusso già contato dal livello precedente si sposta su DC
+                    flussi[(per, st0, st1, liv)][0] -= 1; flussi[(per, st0, st1, liv)][1] -= lordo; flussi[(per, st0, st1, liv)][2] -= netto
+                st1, liv, g1 = ("inhouse-certo" if fam == "servizio-inhouse" else "dc-proprio"), "DC", "IT"
+                if st1 != st0:
+                    somma(flussi, (per, st0, st1, liv), lordo, netto)
+                somma(dc_fam, (per, fam), lordo, netto)
+            ws.writerow([cig, r["anno"], st1, liv, g1 if st1 in CERTI else "", round(lordo, 2), round(netto, 2), fam])
             somma(dopo, (per, st1), lordo, netto)
-            if st1 in ("cloud-certo", "inhouse-certo"):
-                somma(giur_dopo, (per, st1, g1 or ("IT" if st1 == "inhouse-certo" else "non determinata")), lordo, netto)
+            if st1 in CERTI:
+                somma(giur_dopo, (per, st1, g1 or ("IT" if st1 in ("inhouse-certo", "dc-proprio") else "non determinata")), lordo, netto)
 
+    fs.close()
     fuori = sorted(set(per_cig) - visti)
     with gzip.open(os.path.join(OUT, "spostamenti.csv.gz"), "wt", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
@@ -279,7 +324,7 @@ def main():
         "cig_non_in_imbuto_esempi": fuori[:20],
         "prima": conv(prima), "dopo": conv(dopo),
         "giurisdizione_prima": conv(giur_prima), "giurisdizione_dopo": conv(giur_dopo),
-        "flussi_netti": conv(flussi), "effetto_per_livello_lordo_doppioni": conv(marg),
+        "flussi_netti": conv({k: v for k, v in flussi.items() if v[0]}), "datacenter_per_famiglia": conv(dc_fam), "effetto_per_livello_lordo_doppioni": conv(marg),
         "disaccordi": [{"chiave": list(k), "cig": v} for k, v in sorted(conflitti.items())],
     }
     json.dump(T, open(os.path.join(OUT, "riepilogo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -309,6 +354,10 @@ def scrivi_md(T):
     gp, gd = pick(T["giurisdizione_prima"], "dal-2024"), pick(T["giurisdizione_dopo"], "dal-2024")
     for k in sorted(set(gp) | set(gd)):
         L.append(f"| {k[0]} | {k[1]} | {it(gp.get(k, {}).get('euro_netti_tetti', 0)/1e6, 1)} | {it(gd.get(k, {}).get('euro_netti_tetti', 0)/1e6, 1)} |")
+    L += ["", "## Cloud in proprio dal 2024: datacenter dell'ente per famiglia (netti tetti)", "", "| famiglia | CIG | M€ lordi | M€ netti tetti |", "|---|---:|---:|---:|"]
+    for r in T["datacenter_per_famiglia"]:
+        if r["chiave"][0] == "dal-2024":
+            L.append(f"| {r['chiave'][1]} | {n_(r['cig'])} | {it(r['euro_lordi']/1e6, 1)} | {it(r['euro_netti_tetti']/1e6, 1)} |")
     L += ["", "## Disaccordi fra livelli", ""] + [f"- {r['chiave'][0]}: {r['chiave'][1]} — {r['cig']} CIG" for r in T["disaccordi"]]
     open(os.path.join(OUT, "riepilogo.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
