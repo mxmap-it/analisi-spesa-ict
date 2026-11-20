@@ -1,0 +1,199 @@
+{
+ "data": "2026-11-20",
+ "strumento": "tools/fonti.py verifica",
+ "strumenti_esaminati": 92,
+ "ingressi_per_tipo": {
+  "lavoro": 84,
+  "mirror": 54,
+  "git": 135,
+  "modello": 5,
+  "rete": 6
+ },
+ "host_del_mirror": {
+  "assets.innovazione.gov.it": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 3
+  },
+  "bdap-opendata.rgs.mef.gov.it": {
+   "strumenti": 4,
+   "acquisizioni_nel_manifest": 2627
+  },
+  "dati.anticorruzione.it": {
+   "strumenti": 24,
+   "acquisizioni_nel_manifest": 2142
+  },
+  "ec.europa.eu": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 23
+  },
+  "goldencopy.gleif.org": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 8
+  },
+  "indicepa.gov.it": {
+   "strumenti": 5,
+   "acquisizioni_nel_manifest": 107
+  },
+  "presidenza.governo.it": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 379
+  },
+  "raw.githubusercontent.com": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 15
+  },
+  "vari (41 host di enti, dagli URL in documenti-psn.csv)": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 0
+  },
+  "vari (blob Libro PSN 2025)": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 0
+  },
+  "vari (blob delle pagine AT)": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 0
+  },
+  "vari (elenco host)": {
+   "strumenti": 2,
+   "acquisizioni_nel_manifest": 0
+  },
+  "vari (tutti)": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 0
+  },
+  "www.acn.gov.it": {
+   "strumenti": 2,
+   "acquisizioni_nel_manifest": 265
+  },
+  "www.de.mef.gov.it": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 74
+  },
+  "www.iss.it": {
+   "strumenti": 1,
+   "acquisizioni_nel_manifest": 58
+  },
+  "www.siope.it": {
+   "strumenti": 3,
+   "acquisizioni_nel_manifest": 33
+  }
+ },
+ "ingressi_di_lavoro": {
+  "lavoro/attribuzione/<anno>.csv": {
+   "strumenti": 10,
+   "stato": "intermedio: registro: lavoro/attribuzione (archivio-tar)"
+  },
+  "lavoro/bdap-pagine/start-*.json": {
+   "strumenti": 1,
+   "stato": "intermedio: registro: lavoro/bdap-pagine (archivio-tar)"
+  },
+  "lavoro/cig_completo/*.csv": {
+   "strumenti": 10,
+   "stato": "intermedio: registro: impronta di lavoro/cig_completo"
+  },
+  "lavoro/cig_delta/*.csv": {
+   "strumenti": 2,
+   "stato": "intermedio: registro: lavoro/cig_delta (archivio-tar)"
+  },
+  "lavoro/convenzioni/attuativi.csv": {
+   "strumenti": 1,
+   "stato": "congelato (git)"
+  },
+  "lavoro/cruscotto/contratti.sqlite": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/cruscotto/ (dagli esiti versionati e da lavoro/imbuto/ict.csv)"
+  },
+  "lavoro/imbuto-prova-0.3.4/<V>/ict.csv": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/verifiche/imbuto_prova_034.py <V>"
+  },
+  "lavoro/imbuto-prova-0.3.4/base.duckdb": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/verifiche/imbuto_prova_034.py prepara (dal mirror ANAC)"
+  },
+  "lavoro/imbuto-revisione/": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/verifiche/imbuto_revisione.py (lotti e log; la lettura del modello è negli esiti versionati)"
+  },
+  "lavoro/imbuto/ict.csv": {
+   "strumenti": 34,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/imbuto/stati-finali.csv.gz": {
+   "strumenti": 2,
+   "stato": "congelato (git)"
+  },
+  "lavoro/inhouse/": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/verifiche/inhouse_opensource.py (risposte archiviate con sha256 nel riepilogo)"
+  },
+  "lavoro/inhouse/cig-cf.csv.gz": {
+   "strumenti": 2,
+   "stato": "congelato (git)"
+  },
+  "lavoro/l190-campione/stato.jsonl": {
+   "strumenti": 1,
+   "stato": "congelato (git)"
+  },
+  "lavoro/mirror-completamento/": {
+   "strumenti": 1,
+   "stato": "intermedio: registro: lavoro/mirror-completamento (archivio-tar)"
+  },
+  "lavoro/pnrr12/ocds-1.2.jsonl": {
+   "strumenti": 1,
+   "stato": "congelato (git)"
+  },
+  "lavoro/pvl/cig_link.csv": {
+   "strumenti": 1,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/residuo-s6/": {
+   "strumenti": 1,
+   "stato": "intermedio: registro: out/esiti.jsonl e l4-js/enti.jsonl congelati; ingresso.csv è intermedio (residuo_s6_ingresso.py)"
+  },
+  "lavoro/residuo-s6/ingresso.csv": {
+   "strumenti": 1,
+   "stato": "intermedio: tools/acquisizione/residuo_s6_ingresso.py (da ict.csv e pvl/link_cig.csv)"
+  },
+  "lavoro/residuo-s6/l4-js/enti.jsonl": {
+   "strumenti": 1,
+   "stato": "congelato (git)"
+  },
+  "lavoro/residuo-s6/out/esiti.jsonl": {
+   "strumenti": 2,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/ripetibilita/<data>/": {
+   "strumenti": 1,
+   "stato": "intermedio: uscita della prova di ripetibilità, non un ingresso"
+  },
+  "lavoro/rivenditori/gleif-it.json": {
+   "strumenti": 1,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/smartcig/ict.csv": {
+   "strumenti": 1,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/ted-v2/pagine/*.json": {
+   "strumenti": 2,
+   "stato": "intermedio: registro: lavoro/ted-v2/pagine (archivio-tar)"
+  },
+  "lavoro/trasparenza/stato.sqlite": {
+   "strumenti": 2,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/zenodo-10007545/cpv_5M.csv.gz": {
+   "strumenti": 1,
+   "stato": "congelato (archivio)"
+  },
+  "lavoro/raffinamento/pacchetti": {
+   "strumenti": 0,
+   "stato": "congelato (git-tar)"
+  }
+ },
+ "lavoro_non_registrati": [],
+ "host_senza_acquisizioni": [],
+ "esito": "ok"
+}

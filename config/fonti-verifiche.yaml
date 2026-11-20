@@ -1,0 +1,912 @@
+# Inventario STATICO delle fonti delle verifiche pubblicate (#81), 20/11/2026.
+# Ricavato leggendo il codice (costanti di percorso, argomenti, glob, read_csv, variabili d'ambiente con default),
+# senza eseguire gli strumenti. Copre i tools/verifiche/*.py|sh citati in sito/content e i file di lavoro/ che leggono.
+#
+# Schema:
+#   strumenti.<percorso>.ingressi: elenco di {tipo, ...}
+#     tipo: mirror  -> archivio/mirror/<host>/... (o blob archivio/blobs/sha256), ripristinabile da archivio/manifest.jsonl
+#           lavoro  -> file in lavoro/ (non versionato): origine nella sezione «lavoro»
+#           git     -> config/, dati/, esiti/, report/ (versionati)
+#           rete    -> letto dal vivo (url)
+#           modello -> esiti di un modello linguistico già versionati
+#   lavoro.<percorso>: prodotto_da (strumento e comando, oppure «origine sconosciuta»), da (ingressi),
+#     nel_registro_ingressi (presente in config/ingressi-lavoro.yaml), nota.
+# I percorsi con <...> o * sono segnaposto/glob. Inventario da verificare con l'esecuzione (#81).
+versione: '0.1'
+aggiornato: '2026-11-20'
+strumenti:
+  tools/verifiche/bdap_cig_ministeri_cf.py:
+    ingressi:
+    - &id001
+      tipo: lavoro
+      percorso: lavoro/imbuto/ict.csv
+    - &id005
+      tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    - &id004
+      tipo: mirror
+      host: indicepa.gov.it
+      percorso: archivio/mirror/indicepa.gov.it/ipa-dati/dataset/*/resource/*/download/amministrazioni.txt
+    - &id002
+      tipo: mirror
+      host: bdap-opendata.rgs.mef.gov.it
+      percorso: archivio/mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/*.csv
+  tools/verifiche/bdap_ict_stato.py:
+    ingressi:
+    - *id001
+    - *id002
+    - tipo: lavoro
+      percorso: lavoro/bdap-pagine/start-*.json
+  tools/verifiche/bdncp_campioni_misura.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/bdncp/*.csv
+    - tipo: git
+      percorso: esiti/<data>/imbuto/bdncp/
+  tools/verifiche/bdncp_inventario.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/...
+    - *id001
+  tools/verifiche/bdncp_sal_qe.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/...
+    - *id001
+    - tipo: git
+      percorso: report/metodo/bdncp-e-l190-inventario.md
+  tools/verifiche/blocchi_vpa_confronto.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/residuo-s6/out/esiti.jsonl
+    - tipo: mirror
+      host: (blob delle pagine AT)
+      percorso: archivio/blobs/sha256/<sha> citati in esiti.jsonl
+    - tipo: git
+      percorso: libreria visibilita_pa (VISIBILITA_PA, fuori dal repo)
+  tools/verifiche/cig_accordo_quadro.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/...
+  tools/verifiche/cig_aq_modalita.py:
+    ingressi:
+    - &id003
+      tipo: lavoro
+      percorso: lavoro/cig_completo/*.csv
+    - tipo: git
+      percorso: report/anac/cig-aq/campione-2025.csv
+    - tipo: git
+      percorso: report/anac/cig-aq/etichette-2025.csv
+  tools/verifiche/cig_aq_padre_appalto.py:
+    ingressi:
+    - *id003
+  tools/verifiche/cig_aq_tipo.py:
+    ingressi:
+    - *id003
+    - *id001
+    - tipo: git
+      percorso: config/tipi_soggetto.yaml
+  tools/verifiche/cig_aq_vuoti_campione.py:
+    ingressi:
+    - *id003
+  tools/verifiche/concordanza_llm.py:
+    ingressi:
+    - tipo: modello
+      percorso: report/metodo/llm/riproduzione/v1/
+  tools/verifiche/convenzioni_copertura.py:
+    ingressi:
+    - tipo: git
+      percorso: report/convenzioni/database/ (censimento.csv, consip/*.json, archiviati.jsonl, curate.yaml); rilancia tools/convenzioni/censimento.py
+        e base_dati.py
+  tools/verifiche/convenzioni_mancanti.py:
+    ingressi:
+    - tipo: git
+      percorso: report/convenzioni/database/
+    - tipo: git
+      percorso: report/convenzioni/accesso-civico/registro.csv
+    - tipo: git
+      percorso: report/convenzioni/rapporto/metriche-ultime.json
+  tools/verifiche/convenzioni_rapporto.py:
+    ingressi:
+    - tipo: git
+      percorso: report/convenzioni/database/consip-ordinato.csv
+    - tipo: git
+      percorso: report/convenzioni/database/iniziative.json
+    - tipo: git
+      percorso: report/convenzioni/accesso-civico/registro.csv
+  tools/verifiche/convenzioni_release.py:
+    ingressi:
+    - tipo: git
+      percorso: report/convenzioni/database/
+    - tipo: rete
+      url: https://api.github.com/repos/... (release, GH_TOKEN facoltativo)
+  tools/verifiche/cpv_rapporto.py:
+    ingressi:
+    - *id003
+    - *id001
+    - tipo: git
+      percorso: config/perimetro_cpv.yaml
+    - tipo: git
+      percorso: dati/classificazioni/campione-v3.jsonl
+    - tipo: git
+      percorso: dati/classificazioni/cpv-riclassificazione.csv
+    - tipo: git
+      percorso: report/cpv/ (campione-s1, campione-lista-bianca, review-79342-3224)
+  tools/verifiche/cruscotto_riproduzione.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/cruscotto/contratti.sqlite
+    - tipo: git
+      percorso: esiti/2026-11-18/imbuto/riepilogo-0.3.4.json
+  tools/verifiche/datacenter_cieco.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/<data>/imbuto/datacenter/cieco<N>/ (campione, chiave.csv, etichette.csv)
+  tools/verifiche/datacenter_proprio.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/inhouse/cig-cf.csv.gz
+    - tipo: git
+      percorso: config/datacenter_proprio.yaml
+    - tipo: git
+      percorso: config/societa_inhouse_ict.yaml
+    - tipo: git
+      percorso: dati/inhouse/societa-ict-pa.csv
+  tools/verifiche/ea_censimento.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/ (licenze-cig.csv, ea-campione.csv, oracle-campione.csv)
+    - tipo: git
+      percorso: report/convenzioni/ea-quota-cloud-elaborazione.md
+  tools/verifiche/fts_piva.py:
+    ingressi:
+    - tipo: mirror
+      host: ec.europa.eu
+      percorso: archivio/mirror/ec.europa.eu/budget/financial-transparency-system/download/*_FTS_dataset_en.xlsx
+    - tipo: git
+      percorso: esiti/*/rivenditori/rivenditori-cf.csv
+  tools/verifiche/imbuto_bdncp.py:
+    ingressi:
+    - *id001
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/<ds>/filesystem/<ds>_csv.zip
+    - *id004
+    - tipo: git
+      percorso: report/metodo/bdncp/b1-campione-*.csv
+    - tipo: git
+      percorso: report/metodo/pnrr-contratti-v3.csv
+  tools/verifiche/imbuto_cig_ripetuti.py:
+    ingressi:
+    - *id001
+    - *id005
+    - &id006
+      tipo: git
+      percorso: tools/analisi/imbuto.py + classifica.py (regole) + config/iniziative_ict.yaml
+  tools/verifiche/imbuto_doppioni.py:
+    ingressi:
+    - *id001
+    - *id005
+    - tipo: git
+      percorso: esiti/2026-11-03/imbuto/riepilogo-0.3.1.json
+  tools/verifiche/imbuto_g1_segnali_deboli.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-09/imbuto-prova/
+    - tipo: git
+      percorso: tools/analisi/imbuto.py (regole)
+  tools/verifiche/imbuto_licenze.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/convenzioni/attuativi.csv
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/licenze-cig.csv
+    - tipo: git
+      percorso: report/convenzioni/9660108D4B-multibrand6-oracle.md
+  tools/verifiche/imbuto_p1_misura.py:
+    ingressi:
+    - *id001
+    - tipo: git
+      percorso: esiti/<data>/imbuto/p1-campione.csv
+  tools/verifiche/imbuto_prova_034.py:
+    ingressi:
+    - *id005
+    - &id011
+      tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip
+    - *id006
+    - tipo: git
+      percorso: git show <commit>:tools/analisi/imbuto.py (versione precedente)
+    - tipo: lavoro
+      percorso: lavoro/imbuto/ict.csv (confronto)
+  tools/verifiche/imbuto_prova_034_confronto.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/imbuto-prova-0.3.4/<V>/ict.csv
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/tetti-cig-v2.csv
+    - tipo: modello
+      percorso: report/metodo/llm/imbuto-g1g3/lotti/*.jsonl
+  tools/verifiche/imbuto_psn.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-03/imbuto/riepilogo-0.3.1.json
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/tetti-cig.csv
+    - tipo: git
+      percorso: esiti/2026-11-06/psn/bilanci-psn.json
+    - tipo: git
+      percorso: report/convenzioni/psn-database/documenti-psn.csv
+    - tipo: mirror
+      host: (41 host di enti, dagli URL in documenti-psn.csv)
+      percorso: archivio/mirror/<host>/<path> (PDF, solo con --rigenera, pdftotext)
+  tools/verifiche/imbuto_qe_sal.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/quadro-economico, stati-avanzamento (zip)
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/tetti-cig.csv
+  tools/verifiche/imbuto_revisione.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/ (anac-qe-sal.csv, campione-*-giudizi.csv, pvl-percig.csv, revisione-incerti-ict.csv, tetti-cig*.csv)
+    - tipo: git
+      percorso: esiti/2026-11-03|2026-11-18/imbuto/riepilogo-*.json
+  tools/verifiche/imbuto_s1_precisione.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/imbuto-prova-0.3.4/base.duckdb
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/...
+    - tipo: git
+      percorso: esiti/2026-11-18/imbuto/riepilogo-0.3.4.json
+    - tipo: git
+      percorso: report/metodo/imbuto/s1-campione-misura.csv
+  tools/verifiche/imbuto_smartcig.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/smartcig-AAAA/ + smartcig/ (zip CSV)
+    - tipo: lavoro
+      percorso: lavoro/smartcig/ict.csv (scritto dallo stesso strumento, passo main)
+    - tipo: git
+      percorso: report/metodo/imbuto/smartcig-campione-cieco.csv
+  tools/verifiche/imbuto_spostamenti.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/imbuto/stati-finali.csv.gz (anche uscita)
+    - tipo: git
+      percorso: config/datacenter_proprio.yaml
+    - tipo: git
+      percorso: dati/classificazioni/imbuto-revisione.jsonl
+    - tipo: git
+      percorso: esiti/*/imbuto/ (bdncp/segnali, datacenter-cig, licenze-cig, raffinamento-l2/l3, tetti-cig-v2, spostamenti-*)
+    - tipo: modello
+      percorso: report/metodo/llm/raffinamento-l4/esiti
+  tools/verifiche/imbuto_strati.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/pvl/cig_link.csv
+    - tipo: git
+      percorso: esiti/2026-11-03|2026-11-18/imbuto/riepilogo-*.json
+  tools/verifiche/imbuto_tetti.py:
+    ingressi:
+    - *id001
+    - tipo: git
+      percorso: config/iniziative_ict.yaml
+    - tipo: git
+      percorso: report/convenzioni/database/iniziative.json
+    - tipo: git
+      percorso: esiti/2026-11-*/imbuto/riepilogo-*.json
+  tools/verifiche/imbuto_via6.py:
+    ingressi:
+    - tipo: modello
+      percorso: report/metodo/llm/imbuto-g1g3/ (selezione.json, verificati.jsonl)
+    - tipo: git
+      percorso: dati/classificazioni/campione-v3.jsonl
+  tools/verifiche/imbuto_via6_revisione.py:
+    ingressi:
+    - *id001
+    - &id007
+      tipo: git
+      percorso: dati/atti/atti-server.jsonl + dati/atti/testi/
+    - tipo: git
+      percorso: config/marchi_cloud.yaml
+    - tipo: modello
+      percorso: dati/classificazioni/imbuto-g1g3.jsonl, imbuto-revisione.jsonl, report/metodo/llm/imbuto-revisione/
+    - tipo: lavoro
+      percorso: lavoro/imbuto-revisione/ (lotti e log, passo leggi chiama tools/llm/claude_tetto.py)
+  tools/verifiche/infrastruttura_sottostante.py:
+    ingressi:
+    - tipo: git
+      percorso: config/saas_infrastruttura.yaml
+    - tipo: git
+      percorso: esiti/<data>/infrastruttura-sottostante/psn-ppdf.csv
+    - tipo: git
+      percorso: esiti/<data>/pnrr12/pnrr12-dettaglio.csv
+    - tipo: mirror
+      host: (blob Libro PSN 2025)
+      percorso: archivio/blobs/sha256/b8/fe/b8fe9ec1... (pdftotext)
+  tools/verifiche/inhouse_censimento.py:
+    ingressi:
+    - *id004
+    - tipo: mirror
+      host: www.de.mef.gov.it
+      percorso: archivio/mirror/www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv
+    - tipo: git
+      percorso: config/inhouse_siti.yaml
+    - tipo: git
+      percorso: config/inhouse_soci.yaml
+    - tipo: git
+      percorso: config/societa_inhouse_ict.yaml
+  tools/verifiche/inhouse_opensource.py:
+    ingressi:
+    - *id004
+    - tipo: git
+      percorso: dati/inhouse/societa-ict-pa.csv
+    - tipo: rete
+      url: https://api.developers.italia.it/v1 (risposte archiviate con tools/archivia.py --da-file)
+    - tipo: lavoro
+      percorso: lavoro/inhouse/ (risposte scaricate, poi archiviate)
+  tools/verifiche/inhouse_verifica.py:
+    ingressi:
+    - *id001
+    - tipo: git
+      percorso: config/inhouse_verifica.yaml
+    - tipo: git
+      percorso: esiti/*/imbuto/bdncp/segnali.csv
+    - tipo: git
+      percorso: esiti/*/imbuto/tetti-cig-v2.csv
+  tools/verifiche/inhouse_vista.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/imbuto/stati-finali.csv.gz
+    - tipo: lavoro
+      percorso: lavoro/inhouse/cig-cf.csv.gz
+    - tipo: git
+      percorso: config/societa_inhouse_ict.yaml
+    - tipo: git
+      percorso: dati/inhouse/societa-ict-pa.csv
+  tools/verifiche/l190_campione.py:
+    ingressi:
+    - *id001
+    - tipo: lavoro
+      percorso: lavoro/trasparenza/stato.sqlite
+    - tipo: lavoro
+      percorso: lavoro/l190-campione/stato.jsonl (stato di ripresa, scritto dallo stesso strumento)
+    - tipo: rete
+      url: siti degli enti (indici L.190 e dataset linkati, archiviati con tools/archivia.py)
+  tools/verifiche/l4js_url_at.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/residuo-s6/l4-js/enti.jsonl
+    - tipo: lavoro
+      percorso: lavoro/trasparenza/stato.sqlite
+    - tipo: rete
+      url: URL AT degli enti (requests.get, verifica di raggiungibilità)
+  tools/verifiche/lente_cieco.py:
+    ingressi:
+    - *id001
+    - tipo: git
+      percorso: report/metodo/lente-cieco/ (disegno.json, etichette.csv, campione-cieco.csv)
+    - tipo: git
+      percorso: tools/analisi/classifica.py (regole)
+  tools/verifiche/lente_cieco4.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/lente-cieco-4/
+    - tipo: git
+      percorso: tools/analisi/classifica.py
+  tools/verifiche/lente_cieco5.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/lente-cieco-5/
+    - tipo: git
+      percorso: tools/analisi/classifica.py
+  tools/verifiche/lente_cieco5_campione.py:
+    ingressi:
+    - &id008
+      tipo: lavoro
+      percorso: lavoro/attribuzione/<anno>.csv (2024-2026)
+    - *id007
+    - tipo: git
+      percorso: esiti/*/lente-cieco-*/*.csv, esiti/*/regole-v4.3/*.csv, esiti/*/rivenditori/campione-*.csv
+    - tipo: git
+      percorso: report/metodo/**/*.csv (esclusione dei CIG già usati)
+  tools/verifiche/lente_cieco6.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/lente-cieco-6/
+    - tipo: git
+      percorso: tools/analisi/classifica.py
+  tools/verifiche/lente_cieco6_campione.py:
+    ingressi:
+    - *id008
+    - *id007
+    - tipo: git
+      percorso: esiti/*/regole-v4.3|v4.4/*.csv, esiti/*/rivenditori/campione-*.csv
+    - tipo: git
+      percorso: report/metodo/**/*.csv
+  tools/verifiche/lente_cieco7.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/lente-cieco-7/
+    - tipo: git
+      percorso: tools/analisi/classifica.py
+  tools/verifiche/lente_cieco7_campione.py:
+    ingressi:
+    - *id008
+    - *id007
+    - tipo: git
+      percorso: esiti/*/regole-v4.3|v4.4|v4.5/*.csv, esiti/*/rivenditori/campione-*.csv
+    - tipo: git
+      percorso: report/metodo/**/*.csv
+  tools/verifiche/lente_cieco7_etichette.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/lente-cieco-7/campione-cieco.csv
+    - tipo: git
+      percorso: report/metodo/lente-cieco-7/etichette.csv
+  tools/verifiche/lente_prodotto.py:
+    ingressi:
+    - tipo: git
+      percorso: config/marchi_cloud.yaml
+    - tipo: git
+      percorso: dati/classificazioni/campione-v3.jsonl
+    - tipo: git
+      percorso: report/metodo/campione-misura-v3-cieco.csv
+  tools/verifiche/lente_top20.py:
+    ingressi:
+    - *id008
+    - tipo: git
+      percorso: esiti/2026-11-09/rivenditori/campione-top20-v4.1.csv
+    - tipo: git
+      percorso: report/metodo/rivenditori-v4/etichette-top20.csv
+  tools/verifiche/mirror_fonti.py:
+    ingressi:
+    - tipo: mirror
+      host: (tutti)
+      percorso: archivio/manifest.jsonl
+    - tipo: lavoro
+      percorso: 'lavoro/mirror-completamento/ (elenchi attesi: bdap-risorse.csv, consip/html-elenco.tsv, ...)'
+  tools/verifiche/ocds_mesi_duplicati.py:
+    ingressi:
+    - &id009
+      tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/ocds/filesystem/bulk/
+  tools/verifiche/perimetro_cpv.py:
+    ingressi:
+    - *id003
+    - *id001
+    - tipo: git
+      percorso: config/perimetro_cpv.yaml
+    - tipo: git
+      percorso: dati/classificazioni/campione-v3.jsonl
+    - tipo: git
+      percorso: report/cpv/*/etichette.csv, report/metodo/lente-cieco*/etichette.csv
+  tools/verifiche/perimetro_cpv_campiona.py:
+    ingressi:
+    - *id003
+    - *id001
+  tools/verifiche/perimetro_cpv_effetto.py:
+    ingressi:
+    - *id003
+    - *id001
+    - tipo: git
+      percorso: report/cpv/review-79342-3224/ (campione, etichette, nuovo-rx-esempi)
+  tools/verifiche/pnrr11_cup_cig.py:
+    ingressi:
+    - &id010
+      tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cup/filesystem/cup_csv.zip
+    - *id001
+    - tipo: git
+      percorso: esiti/2026-11-06/pnrr11/finanziati.csv
+  tools/verifiche/pnrr11_decreti.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-06/pnrr11/decreti-urls.txt
+    - tipo: mirror
+      host: presidenza.governo.it, assets.innovazione.gov.it, www.iss.it
+      percorso: archivio/mirror/<host>/<path>.pdf (solo --rigenera, pdftotext)
+  tools/verifiche/pnrr11_prodotto.py:
+    ingressi:
+    - *id008
+    - *id001
+    - tipo: git
+      percorso: esiti/2026-11-06/pnrr11/cup-cig.csv
+  tools/verifiche/pnrr12_ocds.py:
+    ingressi:
+    - *id009
+    - tipo: git
+      percorso: report/metodo/pnrr-contratti-v3.csv
+  tools/verifiche/pnrr12_prodotto.py:
+    ingressi:
+    - *id010
+    - tipo: mirror
+      host: raw.githubusercontent.com
+      percorso: archivio/mirror/raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/ (avvisi, candidature_finanziate_12.csv)
+    - tipo: mirror
+      host: www.acn.gov.it
+      percorso: archivio/mirror/www.acn.gov.it/portale/documents/d/guest/schede_qualificate_tipo_servizi_cloud_csv
+    - tipo: lavoro
+      percorso: lavoro/pnrr12/ocds-1.2.jsonl
+    - tipo: git
+      percorso: report/metodo/pnrr-contratti-v3.csv
+    - tipo: git
+      percorso: config/marchi_cloud.yaml
+    - tipo: git
+      percorso: dati/atti/atti.jsonl + atti-server.jsonl + testi/
+  tools/verifiche/pnrr_bigtech.py:
+    ingressi:
+    - tipo: git
+      percorso: report/metodo/pnrr-contratti-v3.csv
+  tools/verifiche/pnrr_flag.py:
+    ingressi:
+    - *id003
+    - tipo: lavoro
+      percorso: lavoro/cig_delta/*.csv
+    - tipo: git
+      percorso: esiti/2026-11-06/pnrr11/pnrr11-prodotto.csv
+    - tipo: git
+      percorso: report/metodo/pnrr-contratti-v3.csv
+  tools/verifiche/regole_v43_confronto.py:
+    ingressi:
+    - *id008
+    - tipo: git
+      percorso: esiti/2026-11-09/rivenditori/campione-top20-v4.1.csv
+    - tipo: git
+      percorso: report/metodo/ (etichette)
+  tools/verifiche/regole_v44_confronto.py:
+    ingressi:
+    - *id008
+    - tipo: git
+      percorso: esiti/2026-11-09/rivenditori/campione-top20-v4.1.csv
+    - tipo: git
+      percorso: report/metodo/ (etichette)
+  tools/verifiche/regole_v45_confronto.py:
+    ingressi:
+    - *id008
+    - tipo: git
+      percorso: esiti/2026-11-09/regole-v4.5/
+    - tipo: git
+      percorso: report/metodo/ (etichette)
+  tools/verifiche/residuo_s6_copertura.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/residuo-s6/ingresso.csv
+    - tipo: lavoro
+      percorso: lavoro/residuo-s6/out/esiti.jsonl
+  tools/verifiche/residuo_s6_riepilogo.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/residuo-s6/ (ingresso.csv, l4/enti.jsonl, l4/esiti.jsonl)
+    - *id007
+    - tipo: git
+      percorso: esiti/<data>/acquisizione/l4js-url-at.json
+  tools/verifiche/ripetibilita.sh:
+    ingressi:
+    - tipo: git
+      percorso: config/ingressi-lavoro.yaml
+    - *id001
+    - *id005
+    - tipo: lavoro
+      percorso: lavoro/ripetibilita/<data>/ (uscita; rifà i passi a-d e confronta con esiti/)
+  tools/verifiche/rivenditori_cf.py:
+    ingressi:
+    - *id011
+    - *id008
+    - tipo: git
+      percorso: config/marchi_cloud.yaml
+  tools/verifiche/rivenditori_confronto.py:
+    ingressi:
+    - tipo: git
+      percorso: esiti/2026-11-09/rivenditori/
+  tools/verifiche/rivenditori_esteri.py:
+    ingressi:
+    - tipo: git
+      percorso: config/marchi_cloud.yaml
+    - tipo: git
+      percorso: report/metodo/rivenditori-<VER>.csv|json
+  tools/verifiche/rivenditori_mappa.py:
+    ingressi:
+    - *id011
+    - tipo: mirror
+      host: goldencopy.gleif.org
+      percorso: archivio/mirror/goldencopy.gleif.org/storage/golden-copy-files/2026/11/06/
+    - *id008
+    - tipo: lavoro
+      percorso: lavoro/rivenditori/gleif-it.json (cache scritta dallo stesso strumento dal mirror GLEIF)
+    - tipo: git
+      percorso: config/lotti_cloud.yaml, marchi_cloud.yaml, rivenditori_capogruppo.yaml
+    - *id007
+    - tipo: git
+      percorso: esiti/2026-11-06/imbuto/ted-vincitori.csv, esiti/2026-11-06/mirror/ted-esiti.csv
+    - tipo: git
+      percorso: report/metodo/rivenditori-v4/etichette-*.csv
+  tools/verifiche/saas_infra_fornitori.py:
+    ingressi:
+    - tipo: git
+      percorso: config/saas_host.yaml
+    - tipo: mirror
+      host: (elenco host)
+      percorso: os.listdir(archivio/mirror) (solo i nomi delle cartelle)
+    - tipo: rete
+      url: DNS (dig CNAME/A), ASN delle IP, whois.nic.it:43
+  tools/verifiche/saas_infra_pilota.py:
+    ingressi:
+    - tipo: mirror
+      host: (elenco host)
+      percorso: os.listdir(archivio/mirror)
+    - tipo: rete
+      url: DNS (dig), ASN, whois.nic.it:43
+  tools/verifiche/saas_schede_acn.py:
+    ingressi:
+    - tipo: mirror
+      host: www.acn.gov.it
+      percorso: archivio/blobs/sha256/85/59/8559a074... (CSV schede) + archivio/mirror/www.acn.gov.it/portale/en/w/
+    - tipo: git
+      percorso: config/saas_infrastruttura.yaml
+    - tipo: git
+      percorso: esiti/<ingressi>/pnrr12/pnrr12-dettaglio.csv
+  tools/verifiche/siope_bdap_vs_diretto.py:
+    ingressi:
+    - tipo: mirror
+      host: bdap-opendata.rgs.mef.gov.it
+      percorso: archivio/mirror/bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/action/package_search__allegati/*/_
+    - *id002
+    - &id012
+      tipo: mirror
+      host: www.siope.it
+      percorso: archivio/mirror/www.siope.it/documenti/siope2/open/last/ (SIOPE_ANAGRAFICHE.zip, SIOPE_USCITE.<anno>.zip)
+  tools/verifiche/siope_ict_enti.py:
+    ingressi:
+    - *id001
+    - *id012
+    - *id002
+    - *id005
+    - *id011
+    - *id004
+  tools/verifiche/siope_inhouse_4enti.py:
+    ingressi:
+    - *id001
+    - *id005
+    - *id011
+  tools/verifiche/siope_lombardia_gsa.py:
+    ingressi:
+    - *id001
+    - *id012
+    - *id005
+    - *id011
+  tools/verifiche/ted_cig.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/ted-v2/pagine/*.json
+    - *id003
+    - tipo: lavoro
+      percorso: lavoro/cig_delta/*.csv
+    - *id011
+  tools/verifiche/ted_esiti.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/ted-v2/pagine/*.json
+    - *id011
+    - tipo: git
+      percorso: esiti/*/mirror/ted-cig.csv
+  tools/verifiche/ted_imbuto.py:
+    ingressi:
+    - *id001
+    - tipo: git
+      percorso: esiti/*/mirror/ted-esiti.csv
+  tools/verifiche/verifica_38_42.py:
+    ingressi:
+    - tipo: mirror
+      host: dati.anticorruzione.it
+      percorso: archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/...
+  tools/verifiche/zenodo_test.py:
+    ingressi:
+    - tipo: lavoro
+      percorso: lavoro/zenodo-10007545/cpv_5M.csv.gz
+    - *id001
+    - tipo: git
+      percorso: dati/classificazioni/campione-v3.jsonl
+    - tipo: git
+      percorso: esiti/2026-11-06/zenodo/esito.json
+lavoro:
+  lavoro/imbuto/ict.csv:
+    prodotto_da: python tools/analisi/imbuto.py [2020] (IMBUTO_OUT=lavoro/imbuto)
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip
+    - config/iniziative_ict.yaml
+    - tools/analisi/classifica.py + attribuisci_provider.py (regole)
+    nel_registro_ingressi: false
+    nota: 'ingresso di ~45 strumenti; rigenerabile dal mirror ANAC (ordine canonico per CIG dal 19/11, M12); lo sha256 dipende dalla versione
+      dei dataset ANAC: va congelato come blob.'
+  lavoro/cig_completo/*.csv:
+    prodotto_da: tools/anac_integrita.py (estrai_tutti(CIG_COMPLETO, 'cig_completo'))
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    nel_registro_ingressi: false
+    nota: 'estrazione dei zip ANAC: rigenerabile dal mirror; i file 2026*-cig_csv.csv sono i delta mensili.'
+  lavoro/cig_delta/*.csv:
+    prodotto_da: origine sconosciuta
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig/filesystem/*-cig_csv.zip (presumibile)
+    nel_registro_ingressi: false
+    nota: nessuno strumento trovato che scriva lavoro/cig_delta; letto da ted_cig.py e pnrr_flag.py. Probabile estrazione a mano dei delta.
+  lavoro/attribuzione/<anno>.csv:
+    prodotto_da: python tools/analisi/attribuisci_provider.py 2024 2025 2026
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip
+    - tools/analisi/classifica.py (regole, versione corrente)
+    nel_registro_ingressi: false
+    nota: 'rigenerabile, ma con le regole correnti: i confronti regole_v4x e i campioni lente_cieco5-7 dipendono dalla versione delle regole al
+      momento del campionamento.'
+  lavoro/pvl/cig_link.csv:
+    prodotto_da: tools/acquisizione/pvl_avvisi.py estrai + tools/acquisizione/pvl_analisi.py
+    da:
+    - pagine API PVL archiviate (dati/ingressi/pvl/indice.jsonl.gz)
+    - lavoro/cig_completo
+    - anagrafica stazioni appaltanti
+    nel_registro_ingressi: true
+    nota: congelato come blob in archivio/blobs (registro).
+  lavoro/convenzioni/attuativi.csv:
+    prodotto_da: tools/analisi/attuativi_convenzioni.py (derivato del 3/11/2026)
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    nel_registro_ingressi: true
+    nota: copia in dati/ingressi/convenzioni/attuativi.csv.gz.
+  lavoro/inhouse/cig-cf.csv.gz:
+    prodotto_da: nice python3 tools/verifiche/inhouse_cf.py (non ancora in git, file non tracciato)
+    da:
+    - lavoro/cig_completo/*.csv
+    nel_registro_ingressi: false
+    nota: rigenerabile da cig_completo con duckdb (job pesante).
+  lavoro/imbuto/stati-finali.csv.gz:
+    prodotto_da: tools/verifiche/imbuto_spostamenti.py
+    da:
+    - lavoro/imbuto/ict.csv
+    - esiti/*/imbuto/* (livelli)
+    - dati/classificazioni/imbuto-revisione.jsonl
+    - report/metodo/llm/raffinamento-l4/esiti
+    nel_registro_ingressi: false
+    nota: rigenerabile dagli esiti versionati (dipende dal modello solo tramite esiti già in git).
+  lavoro/imbuto-prova-0.3.4/base.duckdb:
+    prodotto_da: tools/verifiche/imbuto_prova_034.py prepara
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/cig-20*/filesystem/cig_csv_*.zip + cig/filesystem/*-cig_csv.zip
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/aggiudicatari/filesystem/aggiudicatari_csv.zip
+    nel_registro_ingressi: false
+    nota: rigenerabile (job pesante); letto anche da imbuto_s1_precisione.py.
+  lavoro/imbuto-prova-0.3.4/<V>/ict.csv:
+    prodotto_da: tools/verifiche/imbuto_prova_034.py <V>
+    da:
+    - lavoro/imbuto-prova-0.3.4/base.duckdb
+    nel_registro_ingressi: false
+    nota: ''
+  lavoro/cruscotto/contratti.sqlite:
+    prodotto_da: tools/cruscotto/indice_contratti.py
+    da:
+    - lavoro/imbuto/ict.csv
+    - esiti/ (livelli L2..L4, licenze, tetti, revisione)
+    - dati/
+    nel_registro_ingressi: false
+    nota: derivato, si rifà da zero con quel comando (docstring).
+  lavoro/residuo-s6/ingresso.csv:
+    prodotto_da: tools/acquisizione/residuo_s6_ingresso.py lavoro/residuo-s6/ingresso.csv
+    da:
+    - lavoro/imbuto/ict.csv
+    - esiti/2026-11-06/imbuto/tetti-cig-v2.csv
+    - lavoro/pvl/link_cig.csv
+    - lavoro/cig_completo
+    nel_registro_ingressi: false
+    nota: 'legge lavoro/pvl/link_cig.csv, nome diverso da lavoro/pvl/cig_link.csv del registro: da chiarire.'
+  lavoro/residuo-s6/out/esiti.jsonl:
+    prodotto_da: tools/acquisizione/residuo_s6.sh -> tools/acquisizione/at_cig.py (L4, raccolta dal vivo sui siti AT)
+    da:
+    - lavoro/residuo-s6/ingresso.csv
+    - 'rete: siti Amministrazione trasparente'
+    nel_registro_ingressi: false
+    nota: 'NON rigenerabile identico: dipende dalla rete al momento della raccolta (le pagine sono archiviate in blob, ma l''elenco esiti va congelato).'
+  lavoro/residuo-s6/l4-js/enti.jsonl:
+    prodotto_da: tools/acquisizione/at_cig_js.py
+    da:
+    - lavoro/residuo-s6/l4/enti.jsonl
+    - 'rete: browser headless'
+    nel_registro_ingressi: false
+    nota: 'NON rigenerabile: raccolta dal vivo.'
+  lavoro/trasparenza/stato.sqlite:
+    prodotto_da: tools/trasparenza/censimento.py
+    da:
+    - IndicePA
+    - 'rete: siti degli enti (3/11/2026)'
+    nel_registro_ingressi: false
+    nota: 'NON rigenerabile identico: censimento dal vivo; le pagine sono in blob, lo stato no.'
+  lavoro/l190-campione/stato.jsonl:
+    prodotto_da: tools/verifiche/l190_campione.py (stesso strumento, stato di ripresa)
+    da:
+    - lavoro/trasparenza/stato.sqlite
+    - rete
+    nel_registro_ingressi: false
+    nota: dipende dalla rete.
+  lavoro/smartcig/ict.csv:
+    prodotto_da: tools/verifiche/imbuto_smartcig.py (passo main)
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/smartcig...
+    nel_registro_ingressi: false
+    nota: rigenerabile dal mirror.
+  lavoro/pnrr12/ocds-1.2.jsonl:
+    prodotto_da: nice python tools/verifiche/pnrr12_ocds.py
+    da:
+    - archivio/mirror/dati.anticorruzione.it/opendata/download/dataset/ocds/filesystem/bulk/
+    - report/metodo/pnrr-contratti-v3.csv
+    nel_registro_ingressi: false
+    nota: rigenerabile dal mirror.
+  lavoro/ted-v2/pagine/*.json:
+    prodotto_da: tools/acquisizione/ted_mirror.py --dir lavoro/ted-v2 (API https://api.ted.europa.eu/v3/notices/search)
+    da:
+    - 'rete: API TED'
+    nel_registro_ingressi: false
+    nota: 'le risposte sono archiviate con tools/archivia.py --da-file (URL convenzionale con la query): ripristinabili dal manifest, ma la cartella
+      lavoro/ non è ricostruita da alcuno strumento.'
+  lavoro/rivenditori/gleif-it.json:
+    prodotto_da: tools/verifiche/rivenditori_mappa.py (cache idempotente)
+    da:
+    - archivio/mirror/goldencopy.gleif.org/storage/golden-copy-files/2026/11/06
+    nel_registro_ingressi: false
+    nota: rigenerabile dal mirror.
+  lavoro/zenodo-10007545/cpv_5M.csv.gz:
+    prodotto_da: scaricato a mano da https://zenodo.org/records/10007545 (md5 dd68c3480819ff3065bb8dc49b053905)
+    da:
+    - 'rete: Zenodo'
+    nel_registro_ingressi: false
+    nota: 'fuori dall''archivio content-addressed: da archiviare con tools/archivia.py.'
+  lavoro/bdap-pagine/start-*.json:
+    prodotto_da: tools/acquisizione/bdap_metadati.sh (curl CKAN BDAP)
+    da:
+    - 'rete: bdap-opendata.rgs.mef.gov.it package_search'
+    nel_registro_ingressi: false
+    nota: 'scaricato con curl in lavoro/, non nell''archivio: NON rigenerabile identico.'
+  lavoro/mirror-completamento/:
+    prodotto_da: tools/acquisizione/bdap_lista.py (da lavoro/bdap-pagine) e tools/acquisizione/consip_html.py > .../consip/html-elenco.tsv
+    da:
+    - lavoro/bdap-pagine
+    - rete (consip_html)
+    nel_registro_ingressi: false
+    nota: elenchi attesi del mirror; dipendono da metadati scaricati fuori archivio.
+  lavoro/inhouse/:
+    prodotto_da: tools/verifiche/inhouse_opensource.py (risposte API Developers Italia)
+    da:
+    - 'rete: api.developers.italia.it'
+    nel_registro_ingressi: false
+    nota: 'le risposte sono archiviate (archivia.py --da-file): ripristinabili.'
+  lavoro/imbuto-revisione/:
+    prodotto_da: tools/verifiche/imbuto_via6_revisione.py (prepara/leggi via tools/llm/giro_revisione_guardiano.sh)
+    da:
+    - 'modello: tools/llm/claude_tetto.py'
+    nel_registro_ingressi: false
+    nota: lavorazione del modello; gli esiti stanno in dati/classificazioni/imbuto-revisione.jsonl (git).
+  lavoro/raffinamento/pacchetti:
+    prodotto_da: tools/llm/raffinamento.py prepara-l3
+    da:
+    - lavoro/imbuto/ict.csv
+    nel_registro_ingressi: true
+    nota: copia in dati/ingressi/raffinamento/pacchetti.tar.gz.

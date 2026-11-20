@@ -1,0 +1,23 @@
+# Quote pubbliche verificate a mano per le società ICT «da verificare» (letto da tools/verifiche/inhouse_censimento.py 0.3).
+# quota_pubblica: somma delle quote di PA e società controllate da PA. Ogni riga ha fonte (URL) e data di verifica.
+versione: "0.1"
+aggiornato: 2026-11-20
+soci:
+  "16825251008":
+    quota_pubblica: 30.0
+    fonte: "https://polostrategiconazionale.it/en/about-us/governance/transparent-company (sezione «Società trasparente» di PSN), verificata il 20/11/2026"
+    soci: "TIM 45 %, Leonardo 25 %, CDP Equity 20 %, Sogei 10 %"
+    controllo_di_fatto: "Leonardo 25 %: controllo di fatto del MEF (circa 30 % del capitale), non contato nella quota_pubblica; TIM: privata, nessun controllo pubblico"
+    nota: "Pubblica = CDP Equity 20 % (gruppo CDP, controllata dal MEF) + Sogei 10 % (100 % MEF). Con Leonardo la quota sale a 55 %, ma solo per controllo di fatto."
+  "05985191005":
+    quota_pubblica: 100.0
+    fonte: "https://www.geoweb.it/geowebhtml/SocietaTrasparente/media2020/GEOWEB_Report_RiskAssessment.pdf (Società trasparente di Geoweb, report risk assessment 2020; pag. sulla compagine societaria), verificata il 20/11/2026"
+    soci: "Consiglio Nazionale dei Geometri e Geometri Laureati (CNGeGL) e SO.GE.I. S.p.A. (Sogei, controllata integralmente dal MEF); percentuali non pubblicate nei documenti consultati"
+    controllo_di_fatto: ""
+    nota: "Entrambi i soci sono pubblici (CNGeGL: ente pubblico non economico; Sogei: 100 % MEF), quindi quota pubblica complessiva 100 % senza bisogno di conoscere la ripartizione. La società si dichiara in controllo pubblico (L. 190/2012, D.Lgs. 33/2013). Fonte del 2020: compagine da riconfermare con il bilancio piu recente; il censimento MEF 2023 attribuisce 40 % in via diretta."
+  "02725650226":
+    quota_pubblica: 49.0
+    fonte: "https://www.ufficiostampa.provincia.tn.it/Comunicati/Intacture-The-Natural-Home-of-Data-il-primo-data-center-in-Europa-in-una-miniera-attiva-nel-cuore-della-montagna-del-Trentino (comunicato Provincia autonoma di Trento, 1/10/2024), verificata il 20/11/2026"
+    soci: "Università degli Studi di Trento 49 %, TDC S.r.l. 51 % (costituita da Covi Costruzioni, Dedagroup, GPI e ISA, soci privati scelti con gara)"
+    controllo_di_fatto: ""
+    nota: "PPP istituzionalizzato. Il 51 % di TDC e dei suoi soci non e contato come pubblico; ISA (Istituto Atesino di Sviluppo) non e stata verificata come controllata da PA."

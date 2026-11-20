@@ -9,6 +9,13 @@ Due vie di conservazione, scelte per dimensione:
             riga nel manifest, vista in archivio/mirror/_derivati/<percorso>), più la ricetta per rigenerarlo dalle
             pagine dell'API PVL già archiviate (indice delle pagine con sha256 versionato in dati/ingressi/).
 
+Estensione del 20/11/2026 (#81, riproducibilità di TUTTE le fonti, inventario statico in config/fonti-verifiche.yaml):
+  archivio-tar  cartelle (attribuzioni, delta ANAC estratti, pagine BDAP e TED, completamento mirror): tar deterministico
+                di tutti i file in ordine di percorso, conservato come blob content-addressed; si ripristina estraendo;
+  impronta      file o cartelle troppo grandi da duplicare e rigenerabili dal mirror con una ricetta (cig_completo,
+                11 GB, da tools/anac_integrita.py): si registra lo sha256 di ogni file in dati/ingressi/<percorso>.sha256,
+                così la verifica dice se il file rigenerato è identico.
+
 Uso:
   python3 tools/ingressi_lavoro.py verifica     # ogni ingresso c'è e ha lo sha256 del registro (esce con 1 se no)
   python3 tools/ingressi_lavoro.py ripristina   # rimette in lavoro/ ciò che manca (da git o dall'archivio), poi verifica
@@ -39,6 +46,36 @@ INGRESSI = {
     "lavoro/raffinamento/pacchetti": ("git-tar", "tools/llm/raffinamento.py esito (ingresso di L3: importo e oggetto)",
                                       "raffinamento.py prepara-l3 (idempotente, aggiunge pacchetti): i pacchetti già letti dal modello "
                                       "non si rigenerano, si conservano"),
+    # ---- #81 (20/11/2026): ingressi critici dall'inventario config/fonti-verifiche.yaml
+    "lavoro/imbuto/ict.csv": ("archivio", "circa 45 strumenti di tools/verifiche/ (imbuto 0.3.4, una riga per CIG ICT)",
+                              "tools/analisi/imbuto.py (IMBUTO_OUT=lavoro/imbuto) dal mirror ANAC; la prova 0.3.4 lo rifà in tools/verifiche/ripetibilita.sh, passo a"),
+    "lavoro/imbuto/stati-finali.csv.gz": ("git", "tools/verifiche/inhouse_vista.py e pagine del cloud in proprio",
+                                          "tools/verifiche/imbuto_spostamenti.py AAAA-MM-GG"),
+    "lavoro/inhouse/cig-cf.csv.gz": ("git", "tools/verifiche/datacenter_proprio.py, inhouse_vista.py (#82)",
+                                     "tools/verifiche/inhouse_cf.py (da ict.csv, cig_completo e aggiudicatari del mirror)"),
+    "lavoro/smartcig/ict.csv": ("archivio", "tools/verifiche/imbuto_smartcig.py (M6)", "tools/verifiche/imbuto_smartcig.py --rigenera dal mirror SmartCIG"),
+    "lavoro/zenodo-10007545/cpv_5M.csv.gz": ("archivio", "tools/verifiche/zenodo_test.py",
+                                             "scaricato a mano da Zenodo (record 10007545): non si rigenera, si conserva"),
+    "lavoro/rivenditori/gleif-it.json": ("archivio", "tools/verifiche/rivenditori_*.py", "estratto dalla golden copy GLEIF del mirror (goldencopy.gleif.org)"),
+    "lavoro/trasparenza/stato.sqlite": ("archivio", "pagine sulla trasparenza (censimento delle sezioni AT)",
+                                        "tools/trasparenza/censimento.py (raccolta dal vivo: non identica se rifatta, si conserva)"),
+    "lavoro/residuo-s6/out/esiti.jsonl": ("archivio", "tools/verifiche/residuo_s6_*.py (livello L4)",
+                                          "tools/acquisizione/residuo_s6.sh -> at_cig.py (raccolta dal vivo, pagine in archivio): si conserva"),
+    "lavoro/residuo-s6/l4-js/enti.jsonl": ("git", "tools/verifiche/l4js_url_at.py", "tools/acquisizione/at_cig_js.py (raccolta dal vivo): si conserva"),
+    "lavoro/l190-campione/stato.jsonl": ("git", "tools/verifiche/l190_campione.py", "raccolta dal vivo dei dataset L. 190 (pagine in archivio): si conserva"),
+    "lavoro/pnrr12/ocds-1.2.jsonl": ("git", "tools/verifiche/pnrr12_prodotto.py", "tools/verifiche/pnrr12_ocds.py dal mirror OCDS"),
+    "lavoro/pvl/link_cig.csv": ("archivio", "tools/acquisizione/residuo_s6_ingresso.py, pvl_analisi.py",
+                                "tools/acquisizione/pvl_avvisi.py estrai (dalle pagine API PVL archiviate)"),
+    "lavoro/attribuzione": ("archivio-tar", "lente_cieco5-7, regole_v4x_confronto (attribuzioni per anno)",
+                            "tools/analisi/attribuisci_provider.py <anni> (dipende dalla versione delle regole)"),
+    "lavoro/cig_delta": ("archivio-tar", "tools/verifiche/ted_cig.py, pnrr_flag.py",
+                         "estrazione dei delta mensili ANAC dal mirror (strumento non ritrovato: origine da documentare)"),
+    "lavoro/bdap-pagine": ("archivio-tar", "tools/verifiche/mirror_fonti.py (via lavoro/mirror-completamento)",
+                           "tools/acquisizione/bdap_metadati.sh (curl dal vivo, non archiviato: si conserva)"),
+    "lavoro/ted-v2/pagine": ("archivio-tar", "tools/verifiche/ted_*.py", "tools/acquisizione/ted_l2.py (risposte API TED, anche in archivio)"),
+    "lavoro/mirror-completamento": ("archivio-tar", "tools/verifiche/mirror_fonti.py", "da lavoro/bdap-pagine e dal manifest"),
+    "lavoro/cig_completo": ("impronta", "imbuto 0.3.4 (prepara), inhouse_cf.py, attuativi",
+                            "tools/anac_integrita.py (estrae i CSV dagli zip del mirror ANAC): 11 GB, si rigenera e si confronta con le impronte"),
 }
 
 
@@ -48,6 +85,45 @@ def sha(p):
         for b in iter(lambda: fh.read(1 << 20), b""):
             h.update(b)
     return h.hexdigest()
+
+
+def tutti(d):
+    return sorted(p for p in Path(d).rglob("*") if p.is_file() and p.suffix != ".log")  # i log non sono ingressi
+
+
+def tar_tutti(cartella, dst):
+    """tar deterministico di tutti i file della cartella (percorsi relativi, ordine di nome, metadati fissi), gzip senza data."""
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    with open(dst, "wb") as fo, gzip.GzipFile(filename="", mode="wb", fileobj=fo, mtime=0, compresslevel=6) as g, \
+            tarfile.open(fileobj=g, mode="w|", format=tarfile.PAX_FORMAT) as t:
+        for p in tutti(cartella):
+            ti = tarfile.TarInfo(str(p.relative_to(cartella)))
+            ti.size, ti.mtime, ti.mode, ti.uid, ti.gid, ti.uname, ti.gname = p.stat().st_size, 0, 0o644, 0, 0, "", ""
+            with open(p, "rb") as f:
+                t.addfile(ti, f)
+
+
+def impronte(d):
+    return {str(p.relative_to(d)): sha(p) for p in tutti(d)}
+
+
+def archivia_blob(src, perc, data, usato, A):
+    s256 = sha(src)
+    blob = A.percorso_blob(s256)
+    if not blob.exists():
+        part = A.ROOT / "tmp" / (s256 + ".part")
+        part.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, part)
+        blob.parent.mkdir(parents=True, exist_ok=True)
+        os.replace(part, blob)
+        esito = "nuovo"
+    else:
+        esito = "invariato"
+    vista = A.collega_vista(blob, A.ROOT / "mirror/_derivati" / perc)
+    A.scrivi_manifest({"acquisito": data, "archiviato": A.adesso(), "url": "derivato:" + perc, "via": "derivato-locale",
+                       "nota": "ingresso fuori dal mirror (M12, #81): " + usato, "esito": esito, "sha256": s256,
+                       "dimensione": src.stat().st_size, "verifica": "hash", "mirror": str(vista.relative_to(A.ROOT))})
+    return s256, blob, vista
 
 
 def sha_cartella(d):
@@ -85,7 +161,24 @@ def congela():
     for perc, (via, usato, rigenera) in INGRESSI.items():
         src = R / perc
         e = {"percorso": perc, "via": via, "usato_da": usato, "rigenera": rigenera}
-        if via == "git-tar":
+        if via == "archivio-tar":
+            e["impronte"] = str((GIT / (perc.removeprefix("lavoro/") + ".sha256")).relative_to(R))
+            imp = impronte(src)
+            (R / e["impronte"]).parent.mkdir(parents=True, exist_ok=True)
+            (R / e["impronte"]).write_text("".join(f"{v}  {k}\n" for k, v in imp.items()), encoding="utf-8")
+            e["file"] = len(imp)
+            tmp = R / "lavoro/ingressi-tar" / (perc.removeprefix("lavoro/").replace("/", "_") + ".tar.gz")
+            tar_tutti(src, tmp)
+            e["sha256_tar"], blob, vista = archivia_blob(tmp, perc + ".tar.gz", datetime.now(timezone.utc).date().isoformat(), usato, A)
+            e["blob"] = str(blob.relative_to(R)); e["vista"] = str(vista.relative_to(R))
+            tmp.unlink()
+        elif via == "impronta":
+            e["impronte"] = str((GIT / (perc.removeprefix("lavoro/") + ".sha256")).relative_to(R))
+            imp = impronte(src)
+            (R / e["impronte"]).parent.mkdir(parents=True, exist_ok=True)
+            (R / e["impronte"]).write_text("".join(f"{v}  {k}\n" for k, v in imp.items()), encoding="utf-8")
+            e["file"], e["byte"] = len(imp), sum(p.stat().st_size for p in tutti(src))
+        elif via == "git-tar":
             e["sha256_concatenati"], e["file"] = sha_cartella(src)
             dst = GIT / (perc.removeprefix("lavoro/") + ".tar.gz")  # non «lavoro/»: .gitignore la esclude a ogni livello
             tar_deterministico(src, dst)
@@ -98,29 +191,19 @@ def congela():
                 gz_deterministico(src, dst)
                 e["copia"] = str(dst.relative_to(R)); e["sha256_copia"] = sha(dst)
             else:  # archivio content-addressed, mai sovrascritto
-                blob = A.percorso_blob(e["sha256"])
-                if not blob.exists():
-                    part = A.ROOT / "tmp" / (e["sha256"] + ".part")
-                    part.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copyfile(src, part)
-                    blob.parent.mkdir(parents=True, exist_ok=True)
-                    os.replace(part, blob)
-                    esito = "nuovo"
-                else:
-                    esito = "invariato"
-                vista = A.collega_vista(blob, A.ROOT / "mirror/_derivati" / perc)
-                A.scrivi_manifest({"acquisito": e["data_file"], "archiviato": A.adesso(), "url": "derivato:" + perc,
-                                   "via": "derivato-locale", "nota": "ingresso dell'imbuto fuori dal mirror (M12): " + usato,
-                                   "esito": esito, "sha256": e["sha256"], "dimensione": e["byte"], "verifica": "hash",
-                                   "mirror": str(vista.relative_to(A.ROOT))})
+                _, blob, vista = archivia_blob(src, perc, e["data_file"], usato, A)
                 e["blob"] = str(blob.relative_to(R)); e["vista"] = str(vista.relative_to(R))
         reg["ingressi"].append(e)
-        print(via, perc, e.get("sha256") or e.get("sha256_concatenati"))
+        print(via, perc, e.get("sha256") or e.get("sha256_concatenati") or e.get("sha256_tar") or e.get("file"), flush=True)
     REG.write_text(yaml.safe_dump(reg, allow_unicode=True, sort_keys=False, width=200), encoding="utf-8")
 
 
 def stato(e):
     p = R / e["percorso"]
+    if e["via"] in ("archivio-tar", "impronta"):
+        if not p.is_dir(): return "manca"
+        att = {l.split("  ", 1)[1].rstrip("\n"): l.split("  ", 1)[0] for l in (R / e["impronte"]).read_text(encoding="utf-8").splitlines(True)}
+        return "ok" if impronte(p) == att else "diverso"
     if e["via"] == "git-tar":
         if not p.is_dir(): return "manca"
         s, n = sha_cartella(p)
@@ -144,7 +227,16 @@ def ripristina():
         p = R / e["percorso"]
         if s == "diverso":  # mai sovrascrivere un file di lavoro diverso: si segnala
             print("DIVERSO, non tocco:", e["percorso"]); continue
-        if e["via"] == "git-tar":
+        if e["via"] == "impronta":
+            print("MANCA", e["percorso"], "-> rigenerare:", e["rigenera"]); continue
+        if e["via"] == "archivio-tar":
+            blob = R / e["blob"]
+            if not blob.exists():
+                print("MANCA il blob", e["blob"]); continue
+            p.mkdir(parents=True, exist_ok=True)
+            with tarfile.open(blob, mode="r:gz") as t:
+                t.extractall(p, filter="data")
+        elif e["via"] == "git-tar":
             p.mkdir(parents=True, exist_ok=True)
             with gzip.open(R / e["copia"]) as g, tarfile.open(fileobj=g, mode="r|") as t:
                 t.extractall(p, filter="data")

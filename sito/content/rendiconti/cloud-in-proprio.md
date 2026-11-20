@@ -2,11 +2,11 @@
 title: "Cloud in proprio: datacenter della PA e società in-house"
 subtitle: "Quanto spende la PA per i propri datacenter e che cosa comprano le società ICT in-house"
 date: 2026-11-20
-lastmod: 2026-11-20T12:00:00Z
+lastmod: 2026-11-20T20:00:00Z
 description: "Spesa per datacenter propri (server, storage, virtualizzazione, impianti, calcolo scientifico) e servizi affidati alle in-house ICT, dai CIG ANAC, con precisione misurata su tre campioni a cieco."
 ---
 
-**Versione 0.1 del 2026-11-20** · ticket [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.2 del 2026-11-20** · ticket [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima.
 
@@ -14,18 +14,18 @@ Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima.
 
 - **Cosa è.** Il «cloud in proprio» è la spesa della PA per far girare in casa i propri sistemi: datacenter come luogo e impianti, server e storage, software di virtualizzazione, backup, calcolo scientifico; più i servizi di datacenter e cloud affidati alle società ICT in-house pubbliche. Si affianca al cloud esterno.
 - **Giurisdizione (decisione di Fabio, 20/11/2026).** Un datacenter di proprietà dell'ente e gestito da lui è **sovrano (IT)** anche se usa tecnologia extra-UE come VMware: il produttore non può accedere giuridicamente ai dati né ai sistemi.
-- **Numeri dal 2024, al netto dei massimali** [V, regole 0.4]:
+- **Numeri dal 2024, al netto dei massimali** [V, regole 0.4, strumento 0.5]:
 
 | voce | CIG | M€ |
 |---|---:|---:|
 | cloud esterno certo (per confronto) | 5.036 | 1.288 |
-| **datacenter dell'ente** | 7.851 | 1.938 |
-| — server e storage | 4.133 | 643 |
-| — il datacenter come luogo e i suoi impianti | 1.950 | 499 |
+| **datacenter dell'ente** | 7.850 | 1.939 |
+| — server e storage | 4.130 | 643 |
+| — il datacenter come luogo e i suoi impianti | 1.952 | 500 |
 | — virtualizzazione | 965 | 464 |
 | — calcolo scientifico (voce separata) | 638 | 316 |
 | — backup | 165 | 16 |
-| **servizi affidati alle in-house** (infrastruttura in-house certa) | 711 | 138 |
+| **servizi affidati alle società ICT pubbliche** (in-house, controllate e a controllo pubblico congiunto) | 731 | 144 |
 
 - **Precisione** [V, terzo campione a cieco]: 74,7 % dei contratti (Wilson 63,8-83,1 %), **85,7 % degli euro** (73,3-92,9 %). Stima corretta del datacenter proprio dal 2024 **[S]: circa 1,66 mld (1,42-1,80)**. Dal 2020 al 2023 le regole danno 1,64 mld.
 - **Cosa sfugge.** Dei contratti lasciati incerti perché misti, il 44 % è da datacenter (26,7-62,9 %): il numero è prudente da quel lato.
@@ -38,7 +38,7 @@ Regole su testo e CPV in `config/datacenter_proprio.yaml`, applicate da `tools/v
 - **prevalenza** (decisione di Fabio): il contratto conta solo se il punteggio da datacenter supera quello di postazioni, stampanti, telefonia, videosorveglianza, assistenza generica;
 - esclusi i segni di servizio esterno (cloud, hosting, housing, PSN, server a noleggio o virtuali, servizi a consumo) e i contratti madre di convenzioni e accordi quadro (massimali);
 - si applica solo a contratti oggi ICT non cloud o incerti, mai sopra il cloud certo né sopra una verifica manuale;
-- servizi a in-house: aggiudicatario nell'elenco `config/societa_inhouse_ict.yaml` (22 soci di Assinter Italia, pagina archiviata con sha256, più Sogei, CINECA, PagoPA) e testo da datacenter o cloud. Dal 20/11/2026 l'elenco ufficiale per codice fiscale viene dal censimento MEF delle partecipazioni: [Società ICT pubbliche e in-house](/rendiconti/societa-ict-pubbliche/) (64 in-house ICT attive, 44 non socie Assinter); il passaggio dei CIG dal nome al codice fiscale è in [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82).
+- servizi alle società ICT pubbliche: aggiudicatario fra le società ICT **in-house, controllate o a controllo pubblico congiunto** del [dataset dal censimento MEF](/rendiconti/societa-ict-pubbliche/), riconosciuto per **codice fiscale o partita IVA** (dai dati ANAC di CIG, aggiudicatari e stazioni appaltanti; strumento 0.5, [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82)), e testo da datacenter o cloud. Prima (0.4) il riconoscimento era sul nome, con un elenco di 25 società (soci Assinter più Sogei, CINECA, PagoPA). Confronto delle due vie sui CIG con famiglie da datacenter [V]: aggiudicataria riconosciuta da entrambe in 7.098 CIG, solo dal codice fiscale in 1.273 (società che il nome non copriva), solo dal nome in 53 (da controllare).
 
 ## 3. Precisione: tre campioni a cieco
 
@@ -56,13 +56,13 @@ Gli errori residui sono soprattutto contratti misti (luogo del datacenter con la
 
 `tools/verifiche/inhouse_vista.py`, dal 2024, M€ netti. Tabella completa in `esiti/2026-11-20/inhouse/vista/vista.md`. Esempi:
 
-- **CINECA:** 230 M€ di cloud in proprio (calcolo scientifico e impianti del datacenter del Tecnopolo di Bologna); riceve 160 M€ da 144 enti.
+- **CINECA:** 230 M€ di cloud in proprio (calcolo scientifico e impianti del datacenter del Tecnopolo di Bologna); riceve 160 M€ da 143 enti.
 - **Lepida:** 29 M€ di cloud in proprio, 17 M€ di cloud esterno extra-UE; riceve 281 M€ da 181 enti.
 - **CSI Piemonte:** 38 M€ di cloud in proprio; riceve 423 M€ da 118 enti.
-- **Sogei:** 77 M€ di cloud in proprio; riceve 2,38 mld da 50 enti, ma i testi quasi mai dicono «datacenter»: restano ICT non cloud.
+- **Sogei** (controllata dal MEF, non in-house nel censimento): 77 M€ di cloud in proprio; riceve 2,38 mld da 49 enti, ma i testi quasi mai dicono «datacenter»: restano ICT non cloud.
 - **ARIA e So.Re.Sa.** sono anche centrali d'acquisto: i loro acquisti includono quelli per la sanità regionale.
 
-Il riconoscimento è sul nome (0.1); il passaggio al codice fiscale è il prossimo passo.
+Dalla versione 0.2 della vista le società sono le 99 ICT pubbliche del censimento MEF (64 in-house attive e 5 non attive, controllate, a controllo pubblico congiunto), riconosciute per codice fiscale o partita IVA; ne compaiono nei CIG 61.
 
 ## Limiti
 
@@ -74,6 +74,8 @@ Il riconoscimento è sul nome (0.1); il passaggio al codice fiscale è il prossi
 ## Rifare i numeri
 
 ```
+python3 tools/verifiche/inhouse_censimento.py
+nice python3 tools/verifiche/inhouse_cf.py
 python3 tools/verifiche/datacenter_proprio.py 2026-11-20
 python3 tools/verifiche/inhouse_verifica.py 2026-11-20
 python3 tools/verifiche/imbuto_spostamenti.py 2026-11-20
@@ -85,4 +87,5 @@ python3 tools/verifiche/datacenter_cieco.py esiti/2026-11-20/imbuto/datacenter/c
 
 | versione | data | modifica |
 |---|---|---|
+| 0.2 | 2026-11-20 | Società ICT pubbliche per codice fiscale o partita IVA dal censimento MEF (#82), con la classe «controllo pubblico congiunto»: servizi alle società pubbliche 731 CIG, 144 M€ (prima 711, 138). |
 | 0.1 | 2026-11-20 | Prima versione: capitolo aperto su richiesta di Fabio; decisioni del 20/11; regole 0.4; tre campioni a cieco; vista sulle in-house. |

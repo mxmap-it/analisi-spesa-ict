@@ -89,7 +89,7 @@ def home(url):
 def main():
     os.makedirs(LAV, exist_ok=True)
     soc = [r for r in csv.DictReader(open(os.path.join(D, "societa-ict-pa.csv"), encoding="utf-8"))
-           if r["classe"] in ("in-house", "controllata") or r["assinter"]]
+           if r["classe"] in ("in-house", "controllata", "controllo-pubblico-congiunto") or r["assinter"]]
     ipa = {}
     for p in glob.glob(os.path.join(R, "archivio/mirror/indicepa.gov.it/ipa-dati/dataset/*/resource/*/download/amministrazioni.txt"))[:1]:
         for a in csv.DictReader(open(p, encoding="utf-8-sig", newline=""), delimiter="\t"):

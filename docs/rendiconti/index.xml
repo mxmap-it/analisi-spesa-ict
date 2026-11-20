@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rendiconti on Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/</link><description>Recent content in Rendiconti on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Fri, 20 Nov 2026 18:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/rendiconti/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloud in proprio: datacenter della PA e società in-house</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/cloud-in-proprio/</link><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/cloud-in-proprio/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.1 del 2026-11-20&lt;/strong&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/52"&gt;#52&lt;/a&gt; · &lt;a href="#registro-delle-revisioni"&gt;registro delle revisioni&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rendiconti on Analisi della spesa ICT della PA</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/</link><description>Recent content in Rendiconti on Analisi della spesa ICT della PA</description><generator>Hugo</generator><language>it</language><lastBuildDate>Fri, 20 Nov 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://analisi-spesa-ict.mxmap.it/rendiconti/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloud in proprio: datacenter della PA e società in-house</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/cloud-in-proprio/</link><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/cloud-in-proprio/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.2 del 2026-11-20&lt;/strong&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/52"&gt;#52&lt;/a&gt; · &lt;a href="#registro-delle-revisioni"&gt;registro delle revisioni&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Legenda: &lt;strong&gt;[V]&lt;/strong&gt; misurato da noi, con il comando per rifarlo; &lt;strong&gt;[S]&lt;/strong&gt; stima.&lt;/p&gt;
 &lt;h2 id="1-sintesi"&gt;1. Sintesi&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Cosa è.&lt;/strong&gt; Il «cloud in proprio» è la spesa della PA per far girare in casa i propri sistemi: datacenter come luogo e impianti, server e storage, software di virtualizzazione, backup, calcolo scientifico; più i servizi di datacenter e cloud affidati alle società ICT in-house pubbliche. Si affianca al cloud esterno.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Giurisdizione (decisione di Fabio, 20/11/2026).&lt;/strong&gt; Un datacenter di proprietà dell&amp;rsquo;ente e gestito da lui è &lt;strong&gt;sovrano (IT)&lt;/strong&gt; anche se usa tecnologia extra-UE come VMware: il produttore non può accedere giuridicamente ai dati né ai sistemi.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Numeri dal 2024, al netto dei massimali&lt;/strong&gt; [V, regole 0.4]:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Numeri dal 2024, al netto dei massimali&lt;/strong&gt; [V, regole 0.4, strumento 0.5]:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
 	&lt;thead&gt;
@@ -22,18 +22,18 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;strong&gt;datacenter dell&amp;rsquo;ente&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;7.851&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;1.938&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;7.850&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;1.939&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;— server e storage&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;4.133&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;4.130&lt;/td&gt;
 					&lt;td style="text-align: right"&gt;643&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;— il datacenter come luogo e i suoi impianti&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;1.950&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;499&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;1.952&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;500&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;— virtualizzazione&lt;/td&gt;
@@ -51,9 +51,9 @@
 					&lt;td style="text-align: right"&gt;16&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;strong&gt;servizi affidati alle in-house&lt;/strong&gt; (infrastruttura in-house certa)&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;711&lt;/td&gt;
-					&lt;td style="text-align: right"&gt;138&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;servizi affidati alle società ICT pubbliche&lt;/strong&gt; (in-house, controllate e a controllo pubblico congiunto)&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;731&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;144&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -62,7 +62,7 @@
 &lt;li&gt;&lt;strong&gt;Cosa sfugge.&lt;/strong&gt; Dei contratti lasciati incerti perché misti, il 44 % è da datacenter (26,7-62,9 %): il numero è prudente da quel lato.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="2-come-si-riconosce"&gt;2. Come si riconosce&lt;/h2&gt;
-&lt;p&gt;Regole su testo e CPV in &lt;code&gt;config/datacenter_proprio.yaml&lt;/code&gt;, applicate da &lt;code&gt;tools/verifiche/datacenter_proprio.py&lt;/code&gt; e unite alla &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/imbuto-dove-siamo/"&gt;tabella unica degli spostamenti&lt;/a&gt; come livello &lt;strong&gt;DC&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>Società ICT pubbliche e in-house: il dataset</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/societa-ict-pubbliche/</link><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/societa-ict-pubbliche/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.1 del 2026-11-20&lt;/strong&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/82"&gt;#82&lt;/a&gt; (legato a &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/52"&gt;#52&lt;/a&gt;) · &lt;a href="#registro-delle-revisioni"&gt;registro delle revisioni&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Regole su testo e CPV in &lt;code&gt;config/datacenter_proprio.yaml&lt;/code&gt;, applicate da &lt;code&gt;tools/verifiche/datacenter_proprio.py&lt;/code&gt; e unite alla &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/imbuto-dove-siamo/"&gt;tabella unica degli spostamenti&lt;/a&gt; come livello &lt;strong&gt;DC&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>Società ICT pubbliche e in-house: il dataset</title><link>https://analisi-spesa-ict.mxmap.it/rendiconti/societa-ict-pubbliche/</link><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/rendiconti/societa-ict-pubbliche/</guid><description>&lt;p&gt;&lt;strong&gt;Versione 0.2 del 2026-11-20&lt;/strong&gt; · ticket &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/82"&gt;#82&lt;/a&gt; (legato a &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/52"&gt;#52&lt;/a&gt;) · &lt;a href="#registro-delle-revisioni"&gt;registro delle revisioni&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Legenda: &lt;strong&gt;[V]&lt;/strong&gt; misurato da noi, con il comando per rifarlo; &lt;strong&gt;[S]&lt;/strong&gt; stima.&lt;/p&gt;
 &lt;h2 id="1-perché-questo-dataset"&gt;1. Perché questo dataset&lt;/h2&gt;
 &lt;p&gt;Per misurare il &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/cloud-in-proprio/"&gt;cloud in proprio&lt;/a&gt; serve sapere quali sono le società ICT pubbliche:

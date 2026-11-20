@@ -9,7 +9,7 @@
 # Variabili d'ambiente usate (tutte opzionali negli script, default = comportamento pubblicato):
 #   IMBUTO_PROVA_DIR, IMBUTO_ICT, IMBUTO_RIEP, IMBUTO_ESITI_OUT, IMBUTO_ESITI, IMBUTO_VERSIONE, ESITI_DATA.
 # Uso (SUL SERVER, come mxmap.it, un job pesante alla volta; ~1,5 h):
-#   tools/verifiche/ripetibilita.sh [passi]      # passi: abcd (default) — i passi già fatti si saltano (file .fatto)
+#   tools/verifiche/ripetibilita.sh [passi]      # passi: abcde (e: società ICT pubbliche, #82); default abcd — i passi già fatti si saltano (file .fatto)
 #   poi: .venv/bin/python tools/verifiche/ripetibilita_confronta.py lavoro/ripetibilita/<data> esiti/<data>/ripetibilita
 set -u
 cd "$(dirname "$0")/../.."
@@ -39,6 +39,8 @@ memoria() {  # attende >= 12 GB disponibili (regola dell'incidente del 9/11)
 # M12: gli ingressi di lavoro/ fuori dal mirror (registro config/ingressi-lavoro.yaml) devono esserci con lo sha256 del
 # registro; da un clone pulito si rimettono con «ripristina» (da git e, per cig_link.csv, dall'archivio content-addressed)
 $PY tools/ingressi_lavoro.py ripristina > "$D/log/ingressi.log" 2>&1 || { echo "ingressi di lavoro/ mancanti o diversi: $D/log/ingressi.log"; exit 1; }
+# #81: registro unico di tutte le fonti (inventario statico + ingressi congelati + manifest del mirror)
+$PY tools/fonti.py verifica > "$D/log/fonti.log" 2>&1 || { echo "fonti non tutte registrate: $D/log/fonti.log"; exit 1; }
 export IMBUTO_VERSIONE=0.3.4
 if [[ $PASSI == *a* ]]; then
   memoria
@@ -68,6 +70,12 @@ fi
 if [[ $PASSI == *d* ]]; then
   passo d1-l2 $PY tools/llm/raffinamento.py l2 2026-11-18
   passo d2-esito-l3 $PY tools/llm/raffinamento.py esito 2026-11-18
+fi
+if [[ $PASSI == *e* ]]; then
+  # #82: società ICT pubbliche (censimento MEF dal mirror) e vista per codice fiscale
+  mkdir -p "$D/inhouse"
+  passo e1-censimento $PY tools/verifiche/inhouse_censimento.py
+  passo e2-vista $PY tools/verifiche/inhouse_vista.py $(date +%F)
 fi
 echo "$(date -Is) catena finita" | tee -a "$D/log/catena.log"
 touch "$D/FINITO"

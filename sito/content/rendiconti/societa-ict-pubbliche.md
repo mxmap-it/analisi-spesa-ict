@@ -2,11 +2,11 @@
 title: "Società ICT pubbliche e in-house: il dataset"
 subtitle: "Chi sono, chi le controlla, che sito hanno, se pubblicano software libero o in riuso"
 date: 2026-11-20
-lastmod: 2026-11-20T18:00:00Z
+lastmod: 2026-11-20T20:00:00Z
 description: "Elenco per codice fiscale delle società ICT partecipate dalla PA, dal censimento MEF delle partecipazioni (dati al 31/12/2023), con classe in-house / controllata / partecipata, sito web e un'analisi minima di software libero e riuso. Scaricabile."
 ---
 
-**Versione 0.1 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.2 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima.
 
@@ -36,14 +36,32 @@ sono soci Assinter e prima ci sfuggivano; nel censimento sono in-house ICT dichi
     società pubblica è possibile solo in-house);
   - **controllata**: almeno un ente dichiara un controllo, senza i segni dell'in-house. Qui finiscono Sogei e PagoPA:
     il MEF, unico socio, dichiara «controllo solitario» e non l'affidamento diretto;
-  - **partecipata**: nessun controllo dichiarato (quote di minoranza). Resta nel file, fuori dalla tabella qui sotto.
+  - **controllo pubblico congiunto** (dalla versione 0.2, decisione di Fabio del 20/11/2026): nessun ente dichiara il
+    controllo, ma la **quota pubblica è almeno del 50 %**. È la presunzione relativa di controllo pubblico: il testo
+    unico sulle società partecipate (art. 2, d.lgs. 175/2016) comprende il controllo esercitato da più amministrazioni
+    insieme, e ANAC (delibere 1134/2017 e 859/2019, *riferite* da commenti pubblicati, testo ufficiale da archiviare)
+    considera la partecipazione pubblica maggioritaria un indice presuntivo del controllo pubblico ai fini della
+    trasparenza e dell'anticorruzione, salvo prova contraria della società. Conta come le controllate;
+  - **partecipata**: quota pubblica sotto il 50 % e nessun controllo dichiarato. Resta nel file, fuori dalla tabella.
+- **Quota pubblica**, come si calcola:
+  - somma delle quote **dirette** dichiarate al censimento da amministrazioni pubbliche e da società a loro volta
+    pubbliche (in-house, controllate o con quota pubblica almeno del 50 %), calcolata **a catena** su tutte le
+    53.656 righe del censimento: così conta, per esempio, la quota di Sogei in una società partecipata da Sogei;
+  - le partecipazioni dichiarate solo come «indirette» non hanno una quota nel censimento: sono contate a parte;
+  - **verifica a mano** dei soci, sul sito della società (Società trasparente), nei bilanci o in atti pubblici, per le
+    società attive con quota pubblica fra 30 e 50 % o con partecipazione indiretta e fatturato da 1 M€: 13 casi,
+    risolti 3 (`config/inhouse_soci.yaml`, con fonte e data). Esempi: Geoweb (Consiglio nazionale dei geometri e
+    Sogei) risulta tutta pubblica e passa a controllo pubblico congiunto; il **Polo Strategico Nazionale** ha il 30 %
+    pubblico certo (CDP Equity 20 %, Sogei 10 %) più Leonardo 25 %, su cui il MEF ha un controllo di fatto: con la
+    regola attuale resta partecipata; se si contasse Leonardo arriverebbe al 55 % (**decisione per Fabio**). Le 10
+    società non risolte restano «da verificare» nel file.
 - **Sito web:** dall'[Indice PA](https://indicepa.gov.it/ipa-dati) per codice fiscale, quando la società vi è iscritta;
   gli altri cercati a mano e confermati sulla pagina stessa (denominazione o partita IVA), con la data, in
   `config/inhouse_siti.yaml`.
 - **Controprova con Assinter** [V]: 22 dei 24 nomi del vecchio elenco si ritrovano nel censimento per codice fiscale;
   mancano Consorzio.IT (cremasco), Arsenàl.IT si ritrova con un'altra grafia.
 
-Comando: `python3 tools/verifiche/inhouse_censimento.py` (poi `inhouse_opensource.py` e `tools/pagina_inhouse.py`).
+Comandi: `python3 tools/verifiche/inhouse_censimento.py`, `nice python3 tools/verifiche/inhouse_cf.py`, `python3 tools/verifiche/inhouse_vista.py`, `python3 tools/verifiche/inhouse_opensource.py`, `python3 tools/pagina_inhouse.py`.
 
 ## 3. Quante sono
 
@@ -52,7 +70,8 @@ Comando: `python3 tools/verifiche/inhouse_censimento.py` (poi `inhouse_opensourc
 |---|---:|---:|
 | in-house | 64 | 5 |
 | controllata | 15 | 6 |
-| partecipata | 100 | 28 |
+| controllo-pubblico-congiunto | 5 | 4 |
+| partecipata | 95 | 24 |
 <!-- /GEN:conteggi -->
 
 Le in-house attive fatturano in tutto circa 2,8 miliardi (2023), quasi tutto nelle 20 socie Assinter; le altre 44
@@ -77,7 +96,7 @@ Due vie indipendenti, entrambe ripetibili:
 - Home page lette: **43**; con le parole «open source» o «software libero»: **6**; con «riuso»: **0**; con un collegamento a GitHub o GitLab: **0** [V, indizio da leggere a mano].
 <!-- /GEN:opensource -->
 
-## 5. La tabella (in-house e controllate attive, più i soci Assinter)
+## 5. La tabella (in-house, controllate e a controllo pubblico congiunto attive, più i soci Assinter)
 
 Ordine: in-house, poi controllate, per fatturato 2023. «Enti» = enti che dichiarano una partecipazione.
 «Riuso (catalogo)» = software nel catalogo Developers Italia (ed. = editrice, man. = manutentrice).
@@ -164,7 +183,21 @@ Ordine: in-house, poi controllate, per fatturato 2023. «Enti» = enti che dichi
 | LUTECH DIGITAL AIRPORT S.R.L. | controllata | Lombardia | 1 |  | 40 |  | 0 |  |  |
 | FONDAZIONE 'SISTEMA TOSCANA | controllata | Toscana | 1 |  | 78 | [www.fondazionesistematoscana.it](https://www.fondazionesistematoscana.it) | 0 | no | no |
 | SARA SERVICES S.R.L. | controllata | Lazio | 1 |  |  |  | 0 |  |  |
+| GEOWEB S.P.A IN FORMA ABBREVIATA GEOWEB | controllo-pubblico-congiunto | Lazio | 2 | 6,9 | 27 |  |  |  |  |
+| CONSORTIUM GARR (GESTIONE AMPLIAMENTO RETE RICERCA) | controllo-pubblico-congiunto | Lazio | 6 |  | 80 |  |  |  |  |
+| CONSORZIO T3 LAB | controllo-pubblico-congiunto | Emilia Romagna | 1 |  | 9 |  |  |  |  |
+| LABORATORIO DI MONITORAGGIO E MODELLISTICA AMBIENTALE PER LO… | controllo-pubblico-congiunto | Toscana | 2 |  | 27 | [www.lamma.toscana.it](https://www.lamma.toscana.it) |  |  |  |
+| CONSORZIO PER LE TECNOLOGIE DELL'INFORMAZIONE E COMUNICAZION… | controllo-pubblico-congiunto | Toscana | 1 |  |  |  |  |  |  |
 <!-- /GEN:tabella -->
+
+## 5bis. Che cosa comprano e che cosa ricevono
+
+La [vista per società](/dati/inhouse/vista.md) incrocia il dataset con i CIG ANAC per **codice fiscale o partita IVA**
+(la partita IVA viene dall'anagrafica ANAC delle stazioni appaltanti: i consorzi come CINECA ne hanno una diversa dal
+codice fiscale): per ogni società, gli acquisti per stato dell'imbuto (cloud esterno per giurisdizione, cloud in
+proprio, ICT non cloud, incerto) e gli affidamenti ricevuti dagli enti, dal 2024. Compaiono nei CIG 61 delle 99
+società ICT pubbliche. Il riconoscimento per codice fiscale trova 1.273 CIG da datacenter che il vecchio elenco per
+nome non vedeva, e ne perde 53 (da controllare) [V].
 
 ## 6. File scaricabili
 
@@ -173,10 +206,11 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 <!-- GEN:file -->
 | file | contenuto | sha256 |
 |---|---|---|
-| [societa-ict-pa.csv](/dati/inhouse/societa-ict-pa.csv) | una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito | `5ddc5efd676b06d4…` |
+| [societa-ict-pa.csv](/dati/inhouse/societa-ict-pa.csv) | una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito | `76ce38dbb93bb15d…` |
 | [opensource.csv](/dati/inhouse/opensource.csv) | per in-house e controllate: catalogo del riuso (editore, manutentore) e indizi dalla home page | `7405bc47164ded8a…` |
 | [catalogo-riuso.csv](/dati/inhouse/catalogo-riuso.csv) | i software del catalogo Developers Italia legati a ciascuna società | `413d153cb0522ac9…` |
-| [riepilogo.json](/dati/inhouse/riepilogo.json) | conteggi, fonte con sha256, controprova con l'elenco Assinter | `f2ad5b508a3534b3…` |
+| [vista.md](/dati/inhouse/vista.md) | che cosa comprano e che cosa ricevono dagli enti, per società (CIG ANAC dal 2024, per codice fiscale) | `bb31cdc53dfae569…` |
+| [riepilogo.json](/dati/inhouse/riepilogo.json) | conteggi, fonte con sha256, controprova con l'elenco Assinter | `111db66436b39ff3…` |
 | [opensource-riepilogo.json](/dati/inhouse/opensource-riepilogo.json) | conteggi dell'analisi open source e sha256 delle copie del catalogo | `fe79342111d49e4b…` |
 <!-- /GEN:file -->
 
@@ -186,11 +220,12 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 - **ATECO dichiarato dagli enti:** una società ICT dichiarata con un'altra attività sfugge, se non è socia Assinter.
 - **Tipo di controllo spesso vuoto** per i consorzi (CSI Piemonte, CINECA): li riconosciamo dall'affidamento diretto.
 - **Home page:** un solo sguardo, senza seguire i collegamenti.
-- **Prossimo passo** (#82): riconoscere le in-house nei CIG ANAC per codice fiscale e non più per nome, e rifare la
-  vista per società e il livello «datacenter» della tabella unica.
+- **Quote pubbliche indirette:** il censimento non le quantifica; 10 società restano da verificare a mano.
+- **Leonardo e le società quotate controllate di fatto** non sono contate come socio pubblico (decisione aperta).
 
 ## Registro delle revisioni
 
 | versione | data | modifica |
 |---|---|---|
+| 0.2 | 2026-11-20 | classe «controllo pubblico congiunto» (quota pubblica ≥ 50 %, calcolata a catena, verifiche a mano dei soci); partita IVA dall'anagrafica ANAC; vista per società per codice fiscale (#82) |
 | 0.1 | 2026-11-20 | prima versione: censimento MEF 2023, siti, catalogo del riuso, home page (#82) |

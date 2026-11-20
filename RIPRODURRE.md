@@ -127,6 +127,24 @@ Da un clone pulito senza l'archivio del server, `cig_link.csv` si rigenera con l
 cambiato i dataset nel frattempo lo sha256 può differire e i numeri del link PVL per strato con lui (chi vuole la copia
 esatta può chiedercela: lo sha256 ne prova l'identità).
 
+### Tutte le fonti, non solo ANAC (#81, 20/11/2026)
+
+Dal 20/11/2026 il registro copre **tutti** gli ingressi di `lavoro/` letti dalle verifiche pubblicate (22 voci: imbuto,
+codici fiscali per CIG, SmartCIG, attribuzioni, delta ANAC, pagine BDAP e TED, raccolte dal vivo di Amministrazione
+trasparente, L4 e L. 190, CPV di Zenodo, GLEIF…), con quattro modi di conservazione: `git`, `archivio` (blob con
+sha256), `archivio-tar` (cartella in tar deterministico, più gli sha256 dei file in `dati/ingressi/*.sha256`) e
+`impronta` (solo sha256 dei file, per `lavoro/cig_completo` da 11 GB che si rifà dal mirror con `tools/anac_integrita.py`).
+L'inventario di chi legge cosa è in [`config/fonti-verifiche.yaml`](config/fonti-verifiche.yaml) (statico, 92 strumenti);
+la verifica e la pagina pubblica [Fonti e dataset](https://analisi-spesa-ict.mxmap.it/progetto/fonti-e-dataset/):
+
+```bash
+python3 tools/fonti.py verifica   # ogni host del mirror usato ha acquisizioni; ogni file di lavoro/ letto è congelato o intermedio
+python3 tools/fonti.py pagina     # rigenera la pagina, con i dataset nostri (tabelle curate e derivati) e i loro sha256
+```
+
+Fuori da ANAC il mirror conserva, fra gli altri: BDAP e SIOPE (RGS), Indice PA, censimento MEF delle partecipazioni
+2012-2023, TED, GLEIF, PA Digitale 2026, ACN, Developers Italia (elenco completo nella pagina).
+
 ### Prova di ripetibilità
 
 `tools/verifiche/ripetibilita.sh` rifà da zero in `lavoro/ripetibilita/<data>/` tutta la catena deterministica (circa

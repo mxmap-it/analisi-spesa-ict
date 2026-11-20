@@ -17,7 +17,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(R, "dati/inhouse")
 ST = os.path.join(R, "sito/static/dati/inhouse")
 PAG = os.path.join(R, "sito/content/rendiconti/societa-ict-pubbliche.md")
-FILE = ["societa-ict-pa.csv", "opensource.csv", "catalogo-riuso.csv", "riepilogo.json", "opensource-riepilogo.json"]
+FILE = ["vista.md", "societa-ict-pa.csv", "opensource.csv", "catalogo-riuso.csv", "riepilogo.json", "opensource-riepilogo.json"]
 
 
 def it(x, dec=1):
@@ -33,9 +33,11 @@ def nome(s):
 def main():
     os.makedirs(ST, exist_ok=True)
     sha = {}
+    vista = sorted(__import__("glob").glob(os.path.join(R, "esiti/*/inhouse/vista/vista.md")))[-1]
     for f in FILE:
-        shutil.copyfile(os.path.join(D, f), os.path.join(ST, f))
-        sha[f] = hashlib.sha256(open(os.path.join(D, f), "rb").read()).hexdigest()
+        src = vista if f == "vista.md" else os.path.join(D, f)
+        shutil.copyfile(src, os.path.join(ST, f))
+        sha[f] = hashlib.sha256(open(src, "rb").read()).hexdigest()
     soc = list(csv.DictReader(open(os.path.join(D, "societa-ict-pa.csv"), encoding="utf-8")))
     os_ = {r["cf"]: r for r in csv.DictReader(open(os.path.join(D, "opensource.csv"), encoding="utf-8"))}
     rp = json.load(open(os.path.join(D, "riepilogo.json"), encoding="utf-8"))
@@ -46,11 +48,12 @@ def main():
             ("societa-ict-pa.csv", "una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito"),
             ("opensource.csv", "per in-house e controllate: catalogo del riuso (editore, manutentore) e indizi dalla home page"),
             ("catalogo-riuso.csv", "i software del catalogo Developers Italia legati a ciascuna società"),
+            ("vista.md", "che cosa comprano e che cosa ricevono dagli enti, per società (CIG ANAC dal 2024, per codice fiscale)"),
             ("riepilogo.json", "conteggi, fonte con sha256, controprova con l'elenco Assinter"),
             ("opensource-riepilogo.json", "conteggi dell'analisi open source e sha256 delle copie del catalogo"))])
     pc = rp["per_classe"]
     G["conteggi"] = "\n".join(["| classe | attive | non attive |", "|---|---:|---:|"] + [
-        f"| {c} | {pc.get(c, 0)} | {pc.get(c + ' (non attiva)', 0)} |" for c in ("in-house", "controllata", "partecipata")])
+        f"| {c} | {pc.get(c, 0)} | {pc.get(c + ' (non attiva)', 0)} |" for c in ("in-house", "controllata", "controllo-pubblico-congiunto", "partecipata")])
     righe = ["| società | classe | regione | enti | fatturato 2023 (M€) | addetti | sito | riuso (catalogo) | open source in home | riuso in home |",
              "|---|---|---|---:|---:|---:|---|---:|---|---|"]
     for s in soc:

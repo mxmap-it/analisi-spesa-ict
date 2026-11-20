@@ -1,5 +1,5 @@
 {
- "versione": "0.4",
+ "versione": "0.5",
  "data": "2026-11-20",
  "strumento": "tools/verifiche/datacenter_proprio.py",
  "config": {
@@ -7,56 +7,69 @@
   "versione": "0.4"
  },
  "nota": "esiti per CIG sul solo testo e CPV, prima di guardare lo stato dell'imbuto; importi lordi (importo del lotto)",
- "cig_con_famiglie": 20870,
+ "riconoscimento_societa_pubbliche": {
+  "via": "codice fiscale",
+  "societa_pubbliche_ict": 99,
+  "cig_senza_cf": 0,
+  "confronto_nome_cf": {
+   "agg nome=no cf=sì": 1273,
+   "agg nome=sì cf=no": 53,
+   "agg nome=sì cf=sì": 7098,
+   "sa nome=no cf=sì": 8733,
+   "sa nome=sì cf=no": 79,
+   "sa nome=sì cf=sì": 28968
+  }
+ },
+ "cig_con_famiglie": 20933,
  "per_esito": [
   {
    "periodo": "2020-2023",
    "esito": "dc-proprio",
    "famiglia": "backup",
-   "cig": 95,
-   "meur_lordi": 15.9
+   "cig": 102,
+   "meur_lordi": 16.4
   },
   {
    "periodo": "2020-2023",
    "esito": "dc-proprio",
    "famiglia": "calcolo-scientifico",
-   "cig": 354,
-   "meur_lordi": 192.0
+   "cig": 356,
+   "meur_lordi": 190.7
   },
   {
    "periodo": "2020-2023",
    "esito": "dc-proprio",
    "famiglia": "server-storage",
-   "cig": 2401,
-   "meur_lordi": 757.7
+   "cig": 2409,
+   "meur_lordi": 762.7
   },
   {
    "periodo": "2020-2023",
    "esito": "dc-proprio",
    "famiglia": "sito",
-   "cig": 1519,
-   "meur_lordi": 786.6
+   "cig": 1524,
+   "meur_lordi": 787.0
   },
   {
    "periodo": "2020-2023",
    "esito": "dc-proprio",
    "famiglia": "virtualizzazione",
-   "cig": 707,
-   "meur_lordi": 575.4
+   "cig": 709,
+   "meur_lordi": 575.6
   },
   {
    "periodo": "2020-2023",
    "esito": "esterno",
    "famiglia": "",
-   "cig": 431,
-   "meur_lordi": 899.1
+   "cig": 402,
+   "meur_lordi": 892.1
   },
   {
    "periodo": "2020-2023",
    "esito": "misto-incerto",
    "famiglia": "",
-   "cig": 872,
-   "meur_lordi": 551.8
+   "cig": 874,
+   "meur_lordi": 552.3
   },
   {
    "periodo": "2020-2023",
@@ -76,57 +89,57 @@
    "periodo": "2020-2023",
    "esito": "servizio-inhouse",
    "famiglia": "",
-   "cig": 82,
-   "meur_lordi": 1146.6
+   "cig": 91,
+   "meur_lordi": 1148.5
   },
   {
    "periodo": "dal-2024",
    "esito": "dc-proprio",
    "famiglia": "backup",
-   "cig": 261,
-   "meur_lordi": 20.2
+   "cig": 269,
+   "meur_lordi": 20.7
   },
   {
    "periodo": "dal-2024",
    "esito": "dc-proprio",
    "famiglia": "calcolo-scientifico",
-   "cig": 668,
+   "cig": 669,
    "meur_lordi": 339.3
   },
   {
    "periodo": "dal-2024",
    "esito": "dc-proprio",
    "famiglia": "server-storage",
-   "cig": 4263,
+   "cig": 4261,
    "meur_lordi": 731.6
   },
   {
    "periodo": "dal-2024",
    "esito": "dc-proprio",
    "famiglia": "sito",
-   "cig": 2647,
-   "meur_lordi": 898.2
+   "cig": 2652,
+   "meur_lordi": 899.2
   },
   {
    "periodo": "dal-2024",
    "esito": "dc-proprio",
    "famiglia": "virtualizzazione",
-   "cig": 1009,
+   "cig": 1011,
    "meur_lordi": 604.8
   },
   {
    "periodo": "dal-2024",
    "esito": "esterno",
    "famiglia": "",
-   "cig": 1223,
-   "meur_lordi": 365.1
+   "cig": 1187,
+   "meur_lordi": 357.1
   },
   {
    "periodo": "dal-2024",
    "esito": "misto-incerto",
    "famiglia": "",
-   "cig": 2585,
-   "meur_lordi": 910.8
+   "cig": 2580,
+   "meur_lordi": 910.7
   },
   {
    "periodo": "dal-2024",
@@ -146,8 +159,8 @@
    "periodo": "dal-2024",
    "esito": "servizio-inhouse",
    "famiglia": "",
-   "cig": 1007,
-   "meur_lordi": 667.7
+   "cig": 1091,
+   "meur_lordi": 680.4
   }
  ]
 }

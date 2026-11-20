@@ -77,10 +77,10 @@ Dal 2024, **al netto dei massimali** di accordo quadro:
 | stato | CIG prima | CIG dopo | mld € prima | mld € dopo |
 |---|---:|---:|---:|---:|
 | incluso certo: cloud | 4.556 | 5.036 | 1,09 | 1,29 |
-| incluso certo: infrastruttura in-house | 816 | 711 | 0,42 | 0,14 |
+| incluso certo: infrastruttura in-house | 816 | 731 | 0,42 | 0,14 |
 | incerto: marchio o lotto noto, da attribuire | 3.889 | 1.765 | 2,85 | 1,66 |
-| incerto: residuo S6 | 59.406 | 47.711 | 11,70 | 10,29 |
-| ICT non cloud | 220.525 | 224.526 | 40,01 | 40,42 |
+| incerto: residuo S6 | 59.406 | 47.702 | 11,70 | 10,29 |
+| ICT non cloud | 220.525 | 224.516 | 40,01 | 40,42 |
 | tolto dall'ICT dai livelli (lavori, non ICT) | 0 | 1.591 | 0,00 | 0,19 |
 
 Che cosa vuol dire, in breve:

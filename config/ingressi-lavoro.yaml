@@ -36,3 +36,163 @@ ingressi:
   file: 355
   copia: dati/ingressi/raffinamento/pacchetti.tar.gz
   sha256_copia: 7da835197f3d052d1aa49ea1f75141a6580648fd19ee495735c8cc10014471b9
+- percorso: lavoro/imbuto/ict.csv
+  via: archivio
+  usato_da: circa 45 strumenti di tools/verifiche/ (imbuto 0.3.4, una riga per CIG ICT)
+  rigenera: tools/analisi/imbuto.py (IMBUTO_OUT=lavoro/imbuto) dal mirror ANAC; la prova 0.3.4 lo rifà in tools/verifiche/ripetibilita.sh, passo a
+  sha256: 9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c
+  byte: 229616749
+  data_file: '2026-11-09'
+  blob: archivio/blobs/sha256/96/04/9604940172cd6f80b52617cf302fcaa7c7002fd06a1162ea93c782c9f8a2fd5c
+  vista: archivio/mirror/_derivati/lavoro/imbuto/ict.csv
+- percorso: lavoro/imbuto/stati-finali.csv.gz
+  via: git
+  usato_da: tools/verifiche/inhouse_vista.py e pagine del cloud in proprio
+  rigenera: tools/verifiche/imbuto_spostamenti.py AAAA-MM-GG
+  sha256: 7aaa37e931a21f1846e7f41277ffad4d348543206665cb10a2408414016f7828
+  byte: 8591278
+  data_file: '2026-11-20'
+  copia: dati/ingressi/imbuto/stati-finali.csv.gz.gz
+  sha256_copia: a1282543e453e7c2b98037fa070f52973611bd667c1aab3e5cb4624c31157d8a
+- percorso: lavoro/inhouse/cig-cf.csv.gz
+  via: git
+  usato_da: tools/verifiche/datacenter_proprio.py, inhouse_vista.py (#82)
+  rigenera: tools/verifiche/inhouse_cf.py (da ict.csv, cig_completo e aggiudicatari del mirror)
+  sha256: 1056ed9b76fac44cb5bc6ba6806257d22657a6761030cb98cb68e634579bc6a0
+  byte: 8449716
+  data_file: '2026-11-20'
+  copia: dati/ingressi/inhouse/cig-cf.csv.gz.gz
+  sha256_copia: 1fca9d17e23b3f2667e931809e2eaeacc833f72e355ccaab7132255d936fea11
+- percorso: lavoro/smartcig/ict.csv
+  via: archivio
+  usato_da: tools/verifiche/imbuto_smartcig.py (M6)
+  rigenera: tools/verifiche/imbuto_smartcig.py --rigenera dal mirror SmartCIG
+  sha256: cbf7be2b24eaf2f049613505b2ae9ca18cca119cb56fee4d4ed73e3da91459f3
+  byte: 88087169
+  data_file: '2026-11-19'
+  blob: archivio/blobs/sha256/cb/f7/cbf7be2b24eaf2f049613505b2ae9ca18cca119cb56fee4d4ed73e3da91459f3
+  vista: archivio/mirror/_derivati/lavoro/smartcig/ict.csv
+- percorso: lavoro/zenodo-10007545/cpv_5M.csv.gz
+  via: archivio
+  usato_da: tools/verifiche/zenodo_test.py
+  rigenera: 'scaricato a mano da Zenodo (record 10007545): non si rigenera, si conserva'
+  sha256: 8fa6b264f002a41e68fa2c5a122f5096ed10f4135e07eba58847e4aa04e8c0fd
+  byte: 306566254
+  data_file: '2026-11-06'
+  blob: archivio/blobs/sha256/8f/a6/8fa6b264f002a41e68fa2c5a122f5096ed10f4135e07eba58847e4aa04e8c0fd
+  vista: archivio/mirror/_derivati/lavoro/zenodo-10007545/cpv_5M.csv.gz
+- percorso: lavoro/rivenditori/gleif-it.json
+  via: archivio
+  usato_da: tools/verifiche/rivenditori_*.py
+  rigenera: estratto dalla golden copy GLEIF del mirror (goldencopy.gleif.org)
+  sha256: e4df22c8ffb45d5326c804966496dec359485129c89705bfbd297c1b1e7d1bb5
+  byte: 31774058
+  data_file: '2026-11-09'
+  blob: archivio/blobs/sha256/e4/df/e4df22c8ffb45d5326c804966496dec359485129c89705bfbd297c1b1e7d1bb5
+  vista: archivio/mirror/_derivati/lavoro/rivenditori/gleif-it.json
+- percorso: lavoro/trasparenza/stato.sqlite
+  via: archivio
+  usato_da: pagine sulla trasparenza (censimento delle sezioni AT)
+  rigenera: 'tools/trasparenza/censimento.py (raccolta dal vivo: non identica se rifatta, si conserva)'
+  sha256: c04f90388794e37b2ea1fedf7198b2c10724f63e0100b51864c5afb7dbb93b22
+  byte: 230207488
+  data_file: '2026-11-04'
+  blob: archivio/blobs/sha256/c0/4f/c04f90388794e37b2ea1fedf7198b2c10724f63e0100b51864c5afb7dbb93b22
+  vista: archivio/mirror/_derivati/lavoro/trasparenza/stato.sqlite
+- percorso: lavoro/residuo-s6/out/esiti.jsonl
+  via: archivio
+  usato_da: tools/verifiche/residuo_s6_*.py (livello L4)
+  rigenera: 'tools/acquisizione/residuo_s6.sh -> at_cig.py (raccolta dal vivo, pagine in archivio): si conserva'
+  sha256: 7f039007291f3afb9758790cbf47dfd508f278eb356c568a3965cd74df40d8cd
+  byte: 26093587
+  data_file: '2026-11-07'
+  blob: archivio/blobs/sha256/7f/03/7f039007291f3afb9758790cbf47dfd508f278eb356c568a3965cd74df40d8cd
+  vista: archivio/mirror/_derivati/lavoro/residuo-s6/out/esiti.jsonl
+- percorso: lavoro/residuo-s6/l4-js/enti.jsonl
+  via: git
+  usato_da: tools/verifiche/l4js_url_at.py
+  rigenera: 'tools/acquisizione/at_cig_js.py (raccolta dal vivo): si conserva'
+  sha256: 60dc9bc89fe7d028325f0ad7eed5162a2e6f6d89f8baa7ac0fc84253fc623980
+  byte: 489271
+  data_file: '2026-11-19'
+  copia: dati/ingressi/residuo-s6/l4-js/enti.jsonl.gz
+  sha256_copia: ece6f594c42ff70621c0a90c56ed3dc8d339229c15c22a79b2166e38cc740a59
+- percorso: lavoro/l190-campione/stato.jsonl
+  via: git
+  usato_da: tools/verifiche/l190_campione.py
+  rigenera: 'raccolta dal vivo dei dataset L. 190 (pagine in archivio): si conserva'
+  sha256: dccf61816bdabd44a5fd79c5e50f0c8c863e5852b9c58b63edbbe229aa86d362
+  byte: 108680
+  data_file: '2026-11-10'
+  copia: dati/ingressi/l190-campione/stato.jsonl.gz
+  sha256_copia: 33c427b760c9adf74c9fbeb4394fe5d8c2d60c71b841b9becabc3bb7d2ba2cf3
+- percorso: lavoro/pnrr12/ocds-1.2.jsonl
+  via: git
+  usato_da: tools/verifiche/pnrr12_prodotto.py
+  rigenera: tools/verifiche/pnrr12_ocds.py dal mirror OCDS
+  sha256: e1a6d0e7ea8944d63029c493c0f1deaf406440ae16c2b35abb63693096cca31b
+  byte: 2888715
+  data_file: '2026-11-09'
+  copia: dati/ingressi/pnrr12/ocds-1.2.jsonl.gz
+  sha256_copia: 9056c49510b7a824840c69d97cfb1f16f543cb799de0ceaeab04f07c7d16a055
+- percorso: lavoro/pvl/link_cig.csv
+  via: archivio
+  usato_da: tools/acquisizione/residuo_s6_ingresso.py, pvl_analisi.py
+  rigenera: tools/acquisizione/pvl_avvisi.py estrai (dalle pagine API PVL archiviate)
+  sha256: fa5b5f1f138b3c0b4548019056fb58e6fd6cc7a85c2fd12a909cc178e393cc48
+  byte: 1174644447
+  data_file: '2026-11-03'
+  blob: archivio/blobs/sha256/fa/5b/fa5b5f1f138b3c0b4548019056fb58e6fd6cc7a85c2fd12a909cc178e393cc48
+  vista: archivio/mirror/_derivati/lavoro/pvl/link_cig.csv
+- percorso: lavoro/attribuzione
+  via: archivio-tar
+  usato_da: lente_cieco5-7, regole_v4x_confronto (attribuzioni per anno)
+  rigenera: tools/analisi/attribuisci_provider.py <anni> (dipende dalla versione delle regole)
+  impronte: dati/ingressi/attribuzione.sha256
+  file: 16
+  sha256_tar: 7ef07c9c277f6c5bd72dba9e71fa779bf530fb439ac814b5f68d482533a8c672
+  blob: archivio/blobs/sha256/7e/f0/7ef07c9c277f6c5bd72dba9e71fa779bf530fb439ac814b5f68d482533a8c672
+  vista: archivio/mirror/_derivati/lavoro/attribuzione.tar.gz
+- percorso: lavoro/cig_delta
+  via: archivio-tar
+  usato_da: tools/verifiche/ted_cig.py, pnrr_flag.py
+  rigenera: 'estrazione dei delta mensili ANAC dal mirror (strumento non ritrovato: origine da documentare)'
+  impronte: dati/ingressi/cig_delta.sha256
+  file: 1
+  sha256_tar: 5fd65d66eb3faa3f58ad125abaa37be4656dcf9c41e1ce297f6cb7ce89754b15
+  blob: archivio/blobs/sha256/5f/d6/5fd65d66eb3faa3f58ad125abaa37be4656dcf9c41e1ce297f6cb7ce89754b15
+  vista: archivio/mirror/_derivati/lavoro/cig_delta.tar.gz
+- percorso: lavoro/bdap-pagine
+  via: archivio-tar
+  usato_da: tools/verifiche/mirror_fonti.py (via lavoro/mirror-completamento)
+  rigenera: 'tools/acquisizione/bdap_metadati.sh (curl dal vivo, non archiviato: si conserva)'
+  impronte: dati/ingressi/bdap-pagine.sha256
+  file: 16
+  sha256_tar: 5bb9f1dd46ae51b9a62c6915abafa5edfc178e4c8f3d6e7dc43db0d14ef741f5
+  blob: archivio/blobs/sha256/5b/b9/5bb9f1dd46ae51b9a62c6915abafa5edfc178e4c8f3d6e7dc43db0d14ef741f5
+  vista: archivio/mirror/_derivati/lavoro/bdap-pagine.tar.gz
+- percorso: lavoro/ted-v2/pagine
+  via: archivio-tar
+  usato_da: tools/verifiche/ted_*.py
+  rigenera: tools/acquisizione/ted_l2.py (risposte API TED, anche in archivio)
+  impronte: dati/ingressi/ted-v2/pagine.sha256
+  file: 34
+  sha256_tar: b75b10231c681861f852f50a8328655d508c00de22ef9ca8a71cbc1ddff9cefa
+  blob: archivio/blobs/sha256/b7/5b/b75b10231c681861f852f50a8328655d508c00de22ef9ca8a71cbc1ddff9cefa
+  vista: archivio/mirror/_derivati/lavoro/ted-v2/pagine.tar.gz
+- percorso: lavoro/mirror-completamento
+  via: archivio-tar
+  usato_da: tools/verifiche/mirror_fonti.py
+  rigenera: da lavoro/bdap-pagine e dal manifest
+  impronte: dati/ingressi/mirror-completamento.sha256
+  file: 15
+  sha256_tar: 560ece5c76bc6a4b6b90dcc67c208bcd83bff39be1fa4c613cb8d10bf4d53c4f
+  blob: archivio/blobs/sha256/56/0e/560ece5c76bc6a4b6b90dcc67c208bcd83bff39be1fa4c613cb8d10bf4d53c4f
+  vista: archivio/mirror/_derivati/lavoro/mirror-completamento.tar.gz
+- percorso: lavoro/cig_completo
+  via: impronta
+  usato_da: imbuto 0.3.4 (prepara), inhouse_cf.py, attuativi
+  rigenera: 'tools/anac_integrita.py (estrae i CSV dagli zip del mirror ANAC): 11 GB, si rigenera e si confronta con le impronte'
+  impronte: dati/ingressi/cig_completo.sha256
+  file: 235
+  byte: 11176074597
