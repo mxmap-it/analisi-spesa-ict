@@ -46,6 +46,16 @@ autorita:
     nome: AgID — Indice della Pubblica Amministrazione
     portale: https://indicepa.gov.it/ipa-dati
     licenza: CC BY 4.0
+  mef_de:
+    nome: MEF — Dipartimento dell'Economia (censimento delle partecipazioni pubbliche)
+    portale: https://www.de.mef.gov.it/it/attivita_istituzionali/partecipazioni_pubbliche/open_data_partecipazioni/
+    licenza: CC BY 4.0
+    nota_accesso: >-
+      robots.txt risponde 403 (Akamai) anche da browser; le pagine e i CSV rispondono 200. Aggiunto il 20/11/2026 (#52).
+  developers_italia:
+    nome: Developers Italia — catalogo del software in riuso (art. 69 CAD)
+    portale: https://api.developers.italia.it/v1
+    licenza: dati del catalogo pubblici (publiccode.yml)
   acn:
     nome: Agenzia per la Cybersicurezza Nazionale
     portale: https://catalogocloud.acn.gov.it/opendata
@@ -317,6 +327,30 @@ risorse:
     partizione: nessuna
     ict: true
     nota: 28 dataset, fra cui i responsabili della transizione al digitale.
+
+  - autorita: mef_de
+    dataset: partecipazioni
+    url: https://www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv
+    cadenza: annuale
+    specchia: true
+    partizione: anno
+    ict: true
+    nota: >-
+      Censimento delle partecipazioni delle amministrazioni (dati al 31/12/2023, pubblicato il 10/3/2026; 53.656 righe):
+      società partecipate per codice fiscale, ATECO, tipo di controllo, servizi affidati e modalità. Fonte dell'elenco
+      delle in-house ICT (tools/verifiche/inhouse_censimento.py). Dizionario: Dizionario_Partecipazioni-dati-2023.pdf.
+      Gli anni precedenti stanno su pagine gemelle (dati_partecipazioni_AAAA.html): da specchiare.
+
+  - autorita: developers_italia
+    dataset: catalogo-riuso
+    url: https://api.developers.italia.it/v1/software
+    cadenza: continua
+    specchia: true
+    partizione: nessuna
+    ict: true
+    nota: >-
+      Editori e software con publiccode.yml (tools/verifiche/inhouse_opensource.py scarica tutte le pagine e le
+      archivia con sha256). Serve a sapere quali in-house pubblicano o mantengono software in riuso.
 
   - autorita: acn
     dataset: catalogo-cloud

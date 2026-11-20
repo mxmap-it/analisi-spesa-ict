@@ -1,0 +1,53 @@
+{
+ "versione": "0.2",
+ "strumento": "tools/verifiche/inhouse_censimento.py",
+ "fonte": {
+  "url": "https://www.de.mef.gov.it/modules/documenti_it/attivo_patrimonio/partecipazioni_2023/dati_partecipazioni_anno_2023.csv",
+  "sha256": "c3c29c9d982879248e5f8dfa49b5cf6b63f6703e8839245ed017afe2dd278d2b",
+  "licenza": "CC BY 4.0",
+  "dati_al": "2023-12-31",
+  "editore": "MEF, Dipartimento dell'Economia, censimento delle partecipazioni pubbliche"
+ },
+ "righe_censimento": 53656,
+ "societa_ict": 218,
+ "per_classe": {
+  "controllata (non attiva)": 6,
+  "controllata": 15,
+  "in-house (non attiva)": 5,
+  "in-house": 64,
+  "partecipata (non attiva)": 28,
+  "partecipata": 100
+ },
+ "con_sito": 57,
+ "controprova_assinter": {
+  "elenco": 24,
+  "trovate_nel_censimento_ict": [
+   "ACI-INFORMATICA",
+   "ARIA",
+   "CINECA",
+   "CSI-PIEMONTE",
+   "ECOCERVED",
+   "INFOCAMERE",
+   "INFORMATICA-AA",
+   "INNOVAPUGLIA",
+   "INSIEL",
+   "INVA",
+   "LAZIOCREA",
+   "LEPIDA",
+   "LIGURIA-DIGITALE",
+   "METIS-TOSCANA",
+   "MOLISE-DATI",
+   "PAGOPA",
+   "PUNTOZERO",
+   "SARDEGNA-IT",
+   "SICILIA-DIGITALE",
+   "SOGEI",
+   "SORESA",
+   "TRENTINO-DIGITALE"
+  ],
+  "non_trovate": [
+   "ARSENAL-IT",
+   "CONSORZIO-IT"
+  ]
+ }
+}

@@ -261,3 +261,10 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 - **Acquisti delle società in-house per i propri datacenter:** entrano quelli sicuri.
 - **Vista per società in-house:** si misura espressamente cosa comprano le società in-house (cloud esterno e infrastruttura), per capire cosa fanno.
 - Definizione proposta e non contestata: entrano luogo del datacenter, server e storage, software di virtualizzazione; rete e gestione dei sistemi solo se la gara nomina il datacenter.
+
+## 2026-11-20 — Elenco delle in-house dal censimento MEF; riproducibilità di tutte le fonti (Fabio, #81 #82)
+
+- **Elenco delle società ICT in-house:** viene dal censimento ufficiale delle partecipazioni pubbliche (MEF, Dipartimento dell'Economia, CC BY 4.0), per codice fiscale; l'elenco Assinter resta come controprova. Pubblicato come dataset, con i siti web e un'analisi minima di software libero e riuso (catalogo Developers Italia e home page).
+- **Riproducibilità:** riguarda tutte le fonti usate e i dataset derivati nostri, non solo il mirror ANAC (#81).
+- **Accesso al MEF:** i 404 erano indirizzi vecchi (dt.mef.gov.it, pagine spostate su de.mef.gov.it); nessun blocco, nessun bisogno di altri IP. Restano valide le regole di AGENTS.md § 3 (niente rotazione di IP o proxy).
+- **Non specchiato:** il file dei rappresentanti negli organi delle società (nomi di persone).

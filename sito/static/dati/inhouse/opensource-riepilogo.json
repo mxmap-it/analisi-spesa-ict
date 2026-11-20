@@ -1,0 +1,25 @@
+{
+ "versione": "0.1",
+ "strumento": "tools/verifiche/inhouse_opensource.py",
+ "data": "2026-11-20",
+ "fonti": {
+  "developers_italia_publishers": {
+   "url": "https://api.developers.italia.it/v1/publishers",
+   "n": 153,
+   "sha256": "fff14cc820d7f10ccb1b810fc74f7888ce94d837761aa8b09bda7d03f0a4a8d1"
+  },
+  "developers_italia_software": {
+   "url": "https://api.developers.italia.it/v1/software",
+   "n": 577,
+   "sha256": "7db646184800739ec2af2d59ead9f70666702de12c773014acddf5831df6d775"
+  }
+ },
+ "societa_esaminate": 90,
+ "editori_nel_catalogo": 5,
+ "con_software_nel_catalogo": 7,
+ "software_totali": 35,
+ "home_lette": 43,
+ "home_con_open_source": 6,
+ "home_con_riuso": 0,
+ "home_con_github_o_gitlab": 0
+}

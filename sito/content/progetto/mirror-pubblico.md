@@ -21,12 +21,14 @@ risorsa: URL originale, sha256, byte, Last-Modified, prima e ultima acquisizione
 <!-- GEN:mirror -->
 | Autorità | Gruppi | Risorse viste | Conservate (sha256) | GB (ultima versione) | Formati |
 |---|---:|---:|---:|---:|---|
-| anac | 32 | 1807 | 1805 | 128,72 | CSV, JSON, TTL |
-| consip | 18 | 150 | 143 | 4,45 | CSV, JSON, TTL, XLSX |
-| rgs | 2 | 11 | 11 | 0,74 | ZIP |
+| anac | 37 | 1878 | 1870 | 128,72 | CSV, JSON, TTL, XSD |
+| consip | 19 | 151 | 151 | 8,32 | CSV, JSON, TTL, TXT, XLSX |
+| rgs | 3 | 12 | 11 | 0,74 | TXT, ZIP |
+| mef_de | 3 | 71 | 71 | 0,32 | CSV, HTML, PDF, XLSX, ZIP |
 | indicepa | 27 | 54 | 54 | 0,15 | JSON, TXT, XLSX |
-| agid_dtd | 11 | 11 | 11 | 0,05 | CSV |
-| **totale** | | **2033** | **2024** | **134,11** | |
+| agid_dtd | 14 | 15 | 15 | 0,05 | CSV, DMN, PY, YAML |
+| developers_italia | 2 | 2 | 2 | 0,00 |  |
+| **totale** | | **2183** | **2174** | **138,30** | |
 
 ANAC per dataset (GB): ocds 73,84; smartcig-annuale 38,65; cig-annuale 8,60; cig 1,54; aggiudicazioni 0,98; quadro-economico 0,82; partecipanti 0,75; smartcig 0,74; pubblicazioni 0,47; aggiudicatari 0,41; categorie-opera 0,38; cup 0,24; stati-avanzamento 0,23; avvio-contratto 0,23; fonti-finanziamento 0,18; attestazioni-soa-v2 0,16; subappalti 0,12.
 <!-- /GEN:mirror -->

@@ -1,12 +1,24 @@
 {
  "totale": {
-  "risorse": 2033,
-  "conservate": 2024,
-  "byte_ultime": 134107734561,
-  "byte_storico": 134107734561,
-  "risorse_con_piu_versioni": 0
+  "risorse": 2183,
+  "conservate": 2174,
+  "byte_ultime": 138304396519,
+  "byte_storico": 139198853366,
+  "risorse_con_piu_versioni": 43
  },
  "per_dataset": [
+  {
+   "autorita": "agid_dtd",
+   "dataset": "AD4.dmn",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 15307,
+   "byte_storico": 15307,
+   "piu_versioni": 0,
+   "formati": [
+    "DMN"
+   ]
+  },
   {
    "autorita": "agid_dtd",
    "dataset": "avvisi",
@@ -137,6 +149,42 @@
    "piu_versioni": 0,
    "formati": [
     "CSV"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "modello-dati-schede-AD4.yaml",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 8230,
+   "byte_storico": 8230,
+   "piu_versioni": 0,
+   "formati": [
+    "YAML"
+   ]
+  },
+  {
+   "autorita": "agid_dtd",
+   "dataset": "siope.py",
+   "risorse": 2,
+   "conservate": 2,
+   "byte": 62007,
+   "byte_storico": 62007,
+   "piu_versioni": 0,
+   "formati": [
+    "PY"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "TypesL190.xsd",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 25219,
+   "byte_storico": 29512,
+   "piu_versioni": 1,
+   "formati": [
+    "XSD"
    ]
   },
   {
@@ -307,7 +355,19 @@
   {
    "autorita": "anac",
    "dataset": "contratti",
-   "risorse": 1,
+   "risorse": 2,
+   "conservate": 0,
+   "byte": 0,
+   "byte_storico": 0,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/OP"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "contratti-pubblici",
+   "risorse": 3,
    "conservate": 0,
    "byte": 0,
    "byte_storico": 0,
@@ -328,6 +388,18 @@
     "CSV",
     "JSON",
     "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "datasetIndiceAppaltiL190.xsd",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 1746,
+   "byte_storico": 1746,
+   "piu_versioni": 0,
+   "formati": [
+    "XSD"
    ]
   },
   {
@@ -374,6 +446,18 @@
   },
   {
    "autorita": "anac",
+   "dataset": "indice",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 1138,
+   "byte_storico": 1138,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/DA"
+   ]
+  },
+  {
+   "autorita": "anac",
    "dataset": "lavorazioni",
    "risorse": 25,
    "conservate": 25,
@@ -384,6 +468,18 @@
     "CSV",
     "JSON",
     "TTL"
+   ]
+  },
+  {
+   "autorita": "anac",
+   "dataset": "list",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 1120,
+   "byte_storico": 1120,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/DA"
    ]
   },
   {
@@ -415,11 +511,11 @@
   {
    "autorita": "anac",
    "dataset": "pagine-cig",
-   "risorse": 10,
-   "conservate": 9,
-   "byte": 52137,
-   "byte_storico": 52137,
-   "piu_versioni": 0,
+   "risorse": 73,
+   "conservate": 70,
+   "byte": 1772619,
+   "byte_storico": 6953042,
+   "piu_versioni": 7,
    "formati": [
     "IT/OP",
     "IT/SU"
@@ -678,9 +774,9 @@
    "autorita": "consip",
    "dataset": "cataloghi",
    "risorse": 9,
-   "conservate": 8,
-   "byte": 954816842,
-   "byte_storico": 954816842,
+   "conservate": 9,
+   "byte": 1420661127,
+   "byte_storico": 1420661127,
    "piu_versioni": 0,
    "formati": [
     "CSV",
@@ -734,9 +830,9 @@
    "autorita": "consip",
    "dataset": "operatori_economici_rdf",
    "risorse": 3,
-   "conservate": 0,
-   "byte": 0,
-   "byte_storico": 0,
+   "conservate": 3,
+   "byte": 1816493013,
+   "byte_storico": 1816493013,
    "piu_versioni": 0,
    "formati": [
     "TTL"
@@ -788,9 +884,9 @@
    "autorita": "consip",
    "dataset": "partecipazioni",
    "risorse": 9,
-   "conservate": 6,
-   "byte": 776702633,
-   "byte_storico": 776702633,
+   "conservate": 9,
+   "byte": 2362947529,
+   "byte_storico": 2362947529,
    "piu_versioni": 0,
    "formati": [
     "CSV",
@@ -827,13 +923,49 @@
    ]
   },
   {
+   "autorita": "consip",
+   "dataset": "robots",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 228,
+   "byte_storico": 228,
+   "piu_versioni": 0,
+   "formati": [
+    "TXT"
+   ]
+  },
+  {
+   "autorita": "developers_italia",
+   "dataset": "publishers#tutte-le-pagine",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 71314,
+   "byte_storico": 71314,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/V1"
+   ]
+  },
+  {
+   "autorita": "developers_italia",
+   "dataset": "software#tutte-le-pagine",
+   "risorse": 1,
+   "conservate": 1,
+   "byte": 2341549,
+   "byte_storico": 2341549,
+   "piu_versioni": 0,
+   "formati": [
+    "IT/V1"
+   ]
+  },
+  {
    "autorita": "indicepa",
    "dataset": "023f26ad-c7a5-4c0d-8539-7210317f1577",
    "risorse": 2,
    "conservate": 2,
-   "byte": 1639649,
-   "byte_storico": 1639649,
-   "piu_versioni": 0,
+   "byte": 1643710,
+   "byte_storico": 3278301,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -844,9 +976,9 @@
    "dataset": "04f1f1ce-2277-454a-9252-a69d7e0ad199",
    "risorse": 2,
    "conservate": 2,
-   "byte": 446750,
-   "byte_storico": 446750,
-   "piu_versioni": 0,
+   "byte": 449778,
+   "byte_storico": 894948,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -857,9 +989,9 @@
    "dataset": "057fd0d7-8ba3-485a-8581-52c8237b8d2c",
    "risorse": 2,
    "conservate": 2,
-   "byte": 5233058,
-   "byte_storico": 5233058,
-   "piu_versioni": 0,
+   "byte": 5232876,
+   "byte_storico": 10464563,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -870,9 +1002,9 @@
    "dataset": "0a7670ac-919f-4590-bf28-7cdee278ca1f",
    "risorse": 2,
    "conservate": 2,
-   "byte": 492308,
-   "byte_storico": 492308,
-   "piu_versioni": 0,
+   "byte": 492312,
+   "byte_storico": 982842,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -883,9 +1015,9 @@
    "dataset": "159bfeb4-f47d-4fe1-9cd7-47385e9f3976",
    "risorse": 2,
    "conservate": 2,
-   "byte": 18770270,
-   "byte_storico": 18770270,
-   "piu_versioni": 0,
+   "byte": 18796811,
+   "byte_storico": 37565574,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -896,9 +1028,9 @@
    "dataset": "15c8cc52-749a-4f64-9bd1-9c3bb4f6f3df",
    "risorse": 2,
    "conservate": 2,
-   "byte": 6238935,
-   "byte_storico": 6238935,
-   "piu_versioni": 0,
+   "byte": 6239311,
+   "byte_storico": 12473060,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -910,8 +1042,8 @@
    "risorse": 2,
    "conservate": 2,
    "byte": 10065,
-   "byte_storico": 10065,
-   "piu_versioni": 0,
+   "byte_storico": 18284,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -922,9 +1054,9 @@
    "dataset": "2cd86ebc-3b55-462f-9aff-2215a65b1664",
    "risorse": 2,
    "conservate": 2,
-   "byte": 3077699,
-   "byte_storico": 3077699,
-   "piu_versioni": 0,
+   "byte": 3081677,
+   "byte_storico": 6156974,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -935,9 +1067,9 @@
    "dataset": "502ff370-1b2c-4310-94c7-f39ceb7500e3",
    "risorse": 2,
    "conservate": 2,
-   "byte": 8604100,
-   "byte_storico": 8604100,
-   "piu_versioni": 0,
+   "byte": 8605846,
+   "byte_storico": 17203732,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -948,9 +1080,9 @@
    "dataset": "5baa3eb8-266e-455a-8de8-b1f434c279b2",
    "risorse": 2,
    "conservate": 2,
-   "byte": 4192399,
-   "byte_storico": 4192399,
-   "piu_versioni": 0,
+   "byte": 4196280,
+   "byte_storico": 8382187,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -961,9 +1093,9 @@
    "dataset": "62189de8-9e52-487b-a053-ec06207bfbde",
    "risorse": 2,
    "conservate": 2,
-   "byte": 3031786,
-   "byte_storico": 3031786,
-   "piu_versioni": 0,
+   "byte": 3023535,
+   "byte_storico": 6053694,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -974,9 +1106,9 @@
    "dataset": "6d82313c-bcdc-4eb3-ba63-7bc6de644726",
    "risorse": 2,
    "conservate": 2,
-   "byte": 6416065,
-   "byte_storico": 6416065,
-   "piu_versioni": 0,
+   "byte": 6413161,
+   "byte_storico": 12824770,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -987,9 +1119,9 @@
    "dataset": "7a2db7d8-4123-41b4-a1d6-d7b712a193f1",
    "risorse": 2,
    "conservate": 2,
-   "byte": 29343689,
-   "byte_storico": 29343689,
-   "piu_versioni": 0,
+   "byte": 29383977,
+   "byte_storico": 58723013,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -1013,9 +1145,9 @@
    "dataset": "8afa9350-34da-4b29-8647-01abcfe9c29c",
    "risorse": 2,
    "conservate": 2,
-   "byte": 986247,
-   "byte_storico": 986247,
-   "piu_versioni": 0,
+   "byte": 988363,
+   "byte_storico": 1972834,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1026,9 +1158,9 @@
    "dataset": "8f3742ef-6138-4a28-bd87-5712318f2b06",
    "risorse": 2,
    "conservate": 2,
-   "byte": 798686,
-   "byte_storico": 798686,
-   "piu_versioni": 0,
+   "byte": 800463,
+   "byte_storico": 1596993,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1052,9 +1184,9 @@
    "dataset": "ad45db51-fea4-4454-af80-5914e574e7b5",
    "risorse": 2,
    "conservate": 2,
-   "byte": 22026832,
-   "byte_storico": 22026832,
-   "piu_versioni": 0,
+   "byte": 22051547,
+   "byte_storico": 44076559,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -1065,9 +1197,9 @@
    "dataset": "afef4784-1e7f-4eaa-8f9f-ad6a0f34689b",
    "risorse": 2,
    "conservate": 2,
-   "byte": 6155805,
-   "byte_storico": 6155805,
-   "piu_versioni": 0,
+   "byte": 6167252,
+   "byte_storico": 12320971,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1091,9 +1223,9 @@
    "dataset": "c8d2e2b3-a9f1-4123-bc8b-26315ed20fce",
    "risorse": 2,
    "conservate": 2,
-   "byte": 15302405,
-   "byte_storico": 15302405,
-   "piu_versioni": 0,
+   "byte": 15321623,
+   "byte_storico": 30619155,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1104,9 +1236,9 @@
    "dataset": "d64c149e-a60e-4a10-b9cf-7230b0db8437",
    "risorse": 2,
    "conservate": 2,
-   "byte": 436053,
-   "byte_storico": 436053,
-   "piu_versioni": 0,
+   "byte": 436488,
+   "byte_storico": 870580,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1117,9 +1249,9 @@
    "dataset": "d813fced-2e40-43d2-bb51-b393ccb0c714",
    "risorse": 2,
    "conservate": 2,
-   "byte": 8742623,
-   "byte_storico": 8742623,
-   "piu_versioni": 0,
+   "byte": 8743454,
+   "byte_storico": 17481832,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
@@ -1130,9 +1262,9 @@
    "dataset": "da24b931-6190-46b4-bb49-d9cd38056fc1",
    "risorse": 2,
    "conservate": 2,
-   "byte": 363820,
-   "byte_storico": 363820,
-   "piu_versioni": 0,
+   "byte": 363559,
+   "byte_storico": 723123,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1156,9 +1288,9 @@
    "dataset": "f4f505b7-a86e-44dc-8215-fba0e0c4aac9",
    "risorse": 2,
    "conservate": 2,
-   "byte": 3146554,
-   "byte_storico": 3146554,
-   "piu_versioni": 0,
+   "byte": 3149570,
+   "byte_storico": 6291125,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "XLSX"
@@ -1169,12 +1301,56 @@
    "dataset": "f8a0b6e0-a7a6-4475-8d9c-5ff49cc4dce2",
    "risorse": 2,
    "conservate": 2,
-   "byte": 7893360,
-   "byte_storico": 7893360,
-   "piu_versioni": 0,
+   "byte": 7889776,
+   "byte_storico": 15781355,
+   "piu_versioni": 1,
    "formati": [
     "JSON",
     "TXT"
+   ]
+  },
+  {
+   "autorita": "mef_de",
+   "dataset": "adempimento",
+   "risorse": 31,
+   "conservate": 31,
+   "byte": 21168972,
+   "byte_storico": 21168972,
+   "piu_versioni": 0,
+   "formati": [
+    "CSV",
+    "HTML",
+    "PDF",
+    "XLSX",
+    "ZIP"
+   ]
+  },
+  {
+   "autorita": "mef_de",
+   "dataset": "dizionari",
+   "risorse": 12,
+   "conservate": 12,
+   "byte": 3953798,
+   "byte_storico": 3953798,
+   "piu_versioni": 0,
+   "formati": [
+    "PDF"
+   ]
+  },
+  {
+   "autorita": "mef_de",
+   "dataset": "partecipazioni",
+   "risorse": 28,
+   "conservate": 28,
+   "byte": 294928511,
+   "byte_storico": 295006961,
+   "piu_versioni": 1,
+   "formati": [
+    "CSV",
+    "HTML",
+    "IT/IT",
+    "XLSX",
+    "ZIP"
    ]
   },
   {
@@ -1182,9 +1358,9 @@
    "dataset": "SIOPE_ANAGRAFICHE",
    "risorse": 1,
    "conservate": 1,
-   "byte": 860813,
-   "byte_storico": 860813,
-   "piu_versioni": 0,
+   "byte": 859314,
+   "byte_storico": 1720127,
+   "piu_versioni": 1,
    "formati": [
     "ZIP"
    ]
@@ -1194,11 +1370,23 @@
    "dataset": "SIOPE_USCITE",
    "risorse": 10,
    "conservate": 10,
-   "byte": 735057833,
-   "byte_storico": 735057833,
-   "piu_versioni": 0,
+   "byte": 738707199,
+   "byte_storico": 1473765032,
+   "piu_versioni": 10,
    "formati": [
     "ZIP"
+   ]
+  },
+  {
+   "autorita": "rgs",
+   "dataset": "robots",
+   "risorse": 1,
+   "conservate": 0,
+   "byte": 0,
+   "byte_storico": 0,
+   "piu_versioni": 0,
+   "formati": [
+    "TXT"
    ]
   }
  ]

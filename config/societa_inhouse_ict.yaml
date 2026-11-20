@@ -29,6 +29,6 @@ societa:
   TRENTINO-DIGITALE: {nome: "Trentino Digitale", regex: "TRENTINO DIGITALE|INFORMATICA TRENTINA", fonte: assinter}
   METIS-TOSCANA:     {nome: "Metis Toscana (consorzio in house della Regione Toscana e delle aziende sanitarie)", regex: "CONSORZIO METIS", fonte: assinter}
   LEPIDA:            {nome: "Lepida (Emilia-Romagna)", regex: "^LEPIDA", fonte: assinter}
-  SOGEI:             {nome: "Sogei (MEF)", regex: "^SOGEI", fonte: "in-house ICT nazionale (MEF), non socia Assinter"}
+  SOGEI:             {nome: "Sogei (MEF)", regex: "^SOGEI\\b", fonte: "in-house ICT nazionale (MEF), non socia Assinter"}
   CINECA:            {nome: "CINECA (consorzio interuniversitario)", regex: "^CINECA", fonte: "in-house ICT di università ed enti di ricerca (MUR), non socia Assinter"}
   PAGOPA:            {nome: "PagoPA S.p.A.", regex: "^PAGOPA", fonte: "in-house ICT nazionale (Presidenza del Consiglio), non socia Assinter"}

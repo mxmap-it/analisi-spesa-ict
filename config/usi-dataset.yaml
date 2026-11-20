@@ -304,6 +304,32 @@ dataset:
     priorita_conservazione: alta
     perche_priorita: "Percorso «last»: le versioni intermedie dell'anno in corso non restano alla fonte."
 
+  - id: mef_de/partecipazioni
+    autorita: mef_de
+    nome: "Censimento delle partecipazioni pubbliche (MEF, dati al 31/12/2023)"
+    campi: [amministrazione_codice_fiscale, partecipata_codice_fiscale, partecipata_divisione_ateco, tipo_controllo, servizio_affidato, modalita_affidamento, quota_partecipazione, fatturato]
+    certo: "tools/verifiche/inhouse_censimento.py: elenco delle società ICT pubbliche (ATECO 62/63 e soci Assinter) con classe in-house / controllata / partecipata → dati/inhouse/societa-ict-pa.csv (20/11/2026, #52)."
+    potenziale:
+      ASI: "riconoscere per codice fiscale le in-house come stazioni appaltanti e come aggiudicatarie nei CIG (oggi per nome)"
+      OSS: "quanto della spesa ICT pubblica passa per società pubbliche"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: Pi}
+    limiti: ["ATECO dichiarato dagli enti, a volte non ICT per società ICT (InnovaPuglia: consulenza gestionale)", "tipo di controllo vuoto per molti consorzi (CSI Piemonte, CINECA)", "un anno di ritardo: ultimi dati al 31/12/2023"]
+    priorita_conservazione: media
+    perche_priorita: "Annuale e stabile; gli anni passati restano pubblicati."
+
+  - id: developers_italia/catalogo-riuso
+    autorita: developers_italia
+    nome: "Catalogo del software in riuso (Developers Italia, publiccode.yml)"
+    campi: [url, publiccodeYml, organisation_uri, maintenance_contractors, usedBy]
+    certo: "tools/verifiche/inhouse_opensource.py: software di cui le in-house sono editrici o manutentrici → dati/inhouse/catalogo-riuso.csv (20/11/2026, #52)."
+    potenziale:
+      ASI: "software libero in riuso come alternativa misurabile alle licenze extra-UE"
+      OSS: "indicatore di riuso per ente"
+    usi: {ASI: C, MXM: "-", PVL: "-", ROB: "-", OSS: P}
+    limiti: ["il catalogo cambia di continuo: vale lo stato del giorno archiviato (sha256)"]
+    priorita_conservazione: bassa
+    perche_priorita: "Rigenerabile; si archivia la copia usata."
+
   - id: agid_dtd/padigitale2026
     autorita: agid_dtd
     nome: "PA Digitale 2026 (candidature finanziate, avvisi)"

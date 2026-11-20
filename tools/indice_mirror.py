@@ -27,11 +27,15 @@ HOST = {
     "indicepa.gov.it": "indicepa",
     "raw.githubusercontent.com": "agid_dtd",
     "api.github.com": "agid_dtd",
+    "www.de.mef.gov.it": "mef_de",                 # censimento delle partecipazioni (#82)
+    "api.developers.italia.it": "developers_italia",  # catalogo del riuso (#82)
 }
 OK = ("nuovo", "invariato")
 
 
 def dataset_di(url: str) -> str:
+    if "de.mef.gov.it" in url:
+        return "adempimento" if "adempi" in url.lower() else ("dizionari" if url.lower().endswith(".pdf") else "partecipazioni")
     m = re.search(r"/dataset/([^/]+)/", url)
     if m:
         d = m.group(1)

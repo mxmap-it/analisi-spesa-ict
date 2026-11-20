@@ -38,7 +38,7 @@ Regole su testo e CPV in `config/datacenter_proprio.yaml`, applicate da `tools/v
 - **prevalenza** (decisione di Fabio): il contratto conta solo se il punteggio da datacenter supera quello di postazioni, stampanti, telefonia, videosorveglianza, assistenza generica;
 - esclusi i segni di servizio esterno (cloud, hosting, housing, PSN, server a noleggio o virtuali, servizi a consumo) e i contratti madre di convenzioni e accordi quadro (massimali);
 - si applica solo a contratti oggi ICT non cloud o incerti, mai sopra il cloud certo né sopra una verifica manuale;
-- servizi a in-house: aggiudicatario nell'elenco `config/societa_inhouse_ict.yaml` (22 soci di Assinter Italia, pagina archiviata con sha256, più Sogei, CINECA, PagoPA) e testo da datacenter o cloud.
+- servizi a in-house: aggiudicatario nell'elenco `config/societa_inhouse_ict.yaml` (22 soci di Assinter Italia, pagina archiviata con sha256, più Sogei, CINECA, PagoPA) e testo da datacenter o cloud. Dal 20/11/2026 l'elenco ufficiale per codice fiscale viene dal censimento MEF delle partecipazioni: [Società ICT pubbliche e in-house](/rendiconti/societa-ict-pubbliche/) (64 in-house ICT attive, 44 non socie Assinter); il passaggio dei CIG dal nome al codice fiscale è in [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82).
 
 ## 3. Precisione: tre campioni a cieco
 

@@ -45,6 +45,8 @@ P·i potenziale indiretto (ipotesi motivate nelle schede); – nessuno.
 | [consip/mepa-rdo](#consip-mepa-rdo) | P | – | – | – | P·i | media |
 | [consip/anagrafiche](#consip-anagrafiche) | P | P·i | – | – | – | media |
 | [rgs/siope](#rgs-siope) | P | P·i | – | – | P | alta |
+| [mef_de/partecipazioni](#mef_de-partecipazioni) | **C** | – | – | – | P·i | media |
+| [developers_italia/catalogo-riuso](#developers_italia-catalogo-riuso) | **C** | – | – | – | P | bassa |
 | [agid_dtd/padigitale2026](#agid_dtd-padigitale2026) | **C** | P | C·i | – | C·i | media |
 | [indicepa/enti](#indicepa-enti) | **C** | **C** | **C** | P | C·i | alta |
 | [acn/catalogo-cloud](#acn-catalogo-cloud) | P | P·i | – | – | P | media |
@@ -260,6 +262,26 @@ SIOPE uscite e anagrafiche. Campi chiave: `codice_ente`, `anno`, `mese`, `codice
 - **Potenziale, Osservatorio Nazionale Sovranità Digitale:** spesa ICT pagata per ente e territorio
 - **Limiti noti:** cartella open/last: il file dell'anno corrente è sovrascritto a ogni aggiornamento.
 - **Conservazione: alta.** Percorso «last»: le versioni intermedie dell'anno in corso non restano alla fonte.
+
+### mef_de/partecipazioni {#mef_de-partecipazioni}
+
+Censimento delle partecipazioni pubbliche (MEF, dati al 31/12/2023). Campi chiave: `amministrazione_codice_fiscale`, `partecipata_codice_fiscale`, `partecipata_divisione_ateco`, `tipo_controllo`, `servizio_affidato`, `modalita_affidamento`, `quota_partecipazione`, `fatturato`.
+
+- **Uso certo:** tools/verifiche/inhouse_censimento.py: elenco delle società ICT pubbliche (ATECO 62/63 e soci Assinter) con classe in-house / controllata / partecipata → dati/inhouse/societa-ict-pa.csv (20/11/2026, #52).
+- **Potenziale, analisi-spesa-ict:** riconoscere per codice fiscale le in-house come stazioni appaltanti e come aggiudicatarie nei CIG (oggi per nome)
+- **Potenziale, Osservatorio Nazionale Sovranità Digitale:** quanto della spesa ICT pubblica passa per società pubbliche
+- **Limiti noti:** ATECO dichiarato dagli enti, a volte non ICT per società ICT (InnovaPuglia: consulenza gestionale); tipo di controllo vuoto per molti consorzi (CSI Piemonte, CINECA); un anno di ritardo: ultimi dati al 31/12/2023.
+- **Conservazione: media.** Annuale e stabile; gli anni passati restano pubblicati.
+
+### developers_italia/catalogo-riuso {#developers_italia-catalogo-riuso}
+
+Catalogo del software in riuso (Developers Italia, publiccode.yml). Campi chiave: `url`, `publiccodeYml`, `organisation_uri`, `maintenance_contractors`, `usedBy`.
+
+- **Uso certo:** tools/verifiche/inhouse_opensource.py: software di cui le in-house sono editrici o manutentrici → dati/inhouse/catalogo-riuso.csv (20/11/2026, #52).
+- **Potenziale, analisi-spesa-ict:** software libero in riuso come alternativa misurabile alle licenze extra-UE
+- **Potenziale, Osservatorio Nazionale Sovranità Digitale:** indicatore di riuso per ente
+- **Limiti noti:** il catalogo cambia di continuo: vale lo stato del giorno archiviato (sha256).
+- **Conservazione: bassa.** Rigenerabile; si archivia la copia usata.
 
 ### agid_dtd/padigitale2026 {#agid_dtd-padigitale2026}
 

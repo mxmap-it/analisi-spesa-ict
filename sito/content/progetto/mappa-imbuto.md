@@ -9,7 +9,7 @@ gruppo: inizio
 
 <!-- PAGINA GENERATA da tools/pagina_mappa_imbuto.py da config/mappa-imbuto.yaml e dagli esiti: non modificarla a mano. -->
 
-**Versione 0.10, aggiornata il 2026-11-20.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
+**Versione 0.11, aggiornata il 2026-11-20.** Questa pagina è il **punto di riferimento** del progetto: si rigenera a ogni avanzamento. Testi, dataset, relazioni e mancanze stanno in [`config/mappa-imbuto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/mappa-imbuto.yaml); i numeri si leggono dagli esiti più recenti, con il file indicato sotto ogni figura. I dettagli stanno nel rendiconto [«Imbuto: dove siamo»](/rendiconti/imbuto-dove-siamo/) e nella pagina di metodo [Raffinamento dell'imbuto a livelli](/progetto/raffinamento-imbuto/).
 
 **Obiettivo:** misurare quanto spende la PA italiana in servizi cloud e infrastrutture informatiche, per giurisdizione del prodotto (Italia, UE, extra-UE), con un processo che si rifà ogni anno. **Unità:** il contratto (CIG). **Due domande per ogni contratto:** è cloud? di quale giurisdizione?
 
@@ -66,6 +66,7 @@ Come funziona:
 | **PA Digitale 2026 (finanziamenti PNRR)** | CUP | misura, ente, importo finanziato | Sottoinsieme prioritario: Misure 1.1 e 1.2 (catena v3 CUP → CIG). | usato |
 | **SIOPE e BDAP (pagamenti)** | codice fiscale dell'ente / ministero | pagato per codice gestionale ICT | Riscontro con la spesa pagata (strato R, non si somma). | usato |
 | **Dataset L. 190/2012 degli enti** | CIG | importo aggiudicato e liquidato per lotto | Unica spesa effettiva per CIG: campione di 200 enti. | a campione |
+| **Censimento MEF delle partecipazioni pubbliche** | codice fiscale della società e dell'ente | ATECO, tipo di controllo, servizi affidati e modalità, quote, fatturato | Elenco delle società ICT in-house e controllate per codice fiscale (dataset /rendiconti/societa-ict-pubbliche/). | usato |
 | **Tabelle curate (lotti, marchi, iniziative, perimetro CPV)** | lotto di AQ, marchio, CPV | provider, giurisdizione, fonte di ogni riga | Regole dell'imbuto (S3, S4) e dei livelli. | usato |
 | **Imbuto (ict.csv) e tabelle dei livelli** | CIG | strato, sottoclasse, provider, giurisdizione, esito di ogni livello | Risultato: una riga per CIG con chi ha deciso cosa. | usato |
 
@@ -113,6 +114,10 @@ Ogni limite è un motivo per cui un numero potrebbe essere sbagliato. Dove c'è 
   - Mirror BDAP parziale: il robots.txt della fonte esclude catalogo e CSV (/SpodCkanApi/*); archiviati i 82 CSV usati nelle misure, gli altri attendono la decisione di Fabio (R85, #25).
 - **Dataset L. 190/2012 degli enti**
   - XML con lotti per il 48,5 % degli enti del campione; dati da ripulire.
+- **Censimento MEF delle partecipazioni pubbliche**
+  - Dati al 31/12/2023, pubblicati il 10/3/2026.
+  - ATECO e tipo di controllo dichiarati dagli enti, a volte incoerenti.
+  - Nei CIG le in-house si riconoscono ancora per nome: passaggio al codice fiscale in #82.
 - **Tabelle curate (lotti, marchi, iniziative, perimetro CPV)**
   - Vanno mantenute a mano: ogni riga ha la fonte.
 
@@ -177,6 +182,7 @@ Le differenze che restano, e cosa si fa, sono la mancanza M12 qui sopra.
 
 | data | versione | modifica |
 |---|---|---|
+| 2026-11-20 | 0.11 | Dataset nuovo: censimento MEF delle partecipazioni (2012-2023 nel mirror); elenco delle società ICT pubbliche per codice fiscale con siti e analisi open source/riuso (#82). Riproducibilità estesa a tutte le fonti: #81. |
 | 2026-11-20 | 0.10 | Livello DC: cloud in proprio (datacenter dell'ente, sovrano IT, decisione di Fabio 20/11) e servizi delle in-house ICT; 1,94 mld dal 2024, precisione in euro 85,7 % a cieco (#52). |
 | 2026-11-19 | 0.9 | M5 misurata (#77): esclusione S1 precisa al 98,7 % dei CIG su 399 a cieco, 0 cloud, ICT persi 2,3-2,8 mld di valore, gravità media, mitigata. M6 misurata (#76): SmartCIG dal 2024 nell'imbuto sul solo testo, cloud certo 13,6 M€ + residuo 45,1 M€, gravità bassa, mitigata; dataset smartcig usato; R89. |
 | 2026-11-19 | 0.8.1 | M13 risolta: cruscotto dei contratti con ricerca, esiti dei livelli, atti, annotazione e drilldown dai totali (#53). |
