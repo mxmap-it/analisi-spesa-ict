@@ -1,0 +1,410 @@
+                                                                  BREEZESUITE™ 8.6 REV D
+                                                                                             Release &
+                                                                                    Installation Notice
+   BreezeSuite version 8.6 Rev D is the latest version of software available for the Medical Graphics’
+        Platinum Elite™ Series, Elite™ Series, Ultima™ Series, and CPFS/D™USB systems.
+
+                                          CAUTIONS & WARNINGS
+WARNING:          After the installation of BreezeSuite 8.6 Rev D, Service Pack 6 or higher for BreezeSuite 8.6 must be
+                  installed on Windows 11 operating systems. Failure to install this Service Pack may result in the software
+                  not functioning correctly.
+
+
+► IMPORTANT SYSTEM INSTALLATION NOTE: Medical Graphics USB Device must be powered on and the USB
+Device driver must be installed prior to configuring BreezeSuite for first time use. Failure to follow these directions may
+result in BreezeSuite configuration and diagnostic testing failure.
+
+► NOTE: New Installation of BreezeSuite 8.6 Rev D or upgrade from BreezeSuite 7.2 SP7 requires an access code (CD Key) that
+must be obtained from Customer Service during the software installation. Customer Service is available Monday – Friday 7a.m. to
+6p.m. (Central Time) by calling (1-800-333-4137). International customers should contact their local MGC Diagnostics Business
+Partner. (see upgrade note below)
+
+► Installing BreezeSuite 8.6 Rev D on a computer with Windows 7, 8/8.1,10 or 11 operating system that is controlling a Platinum
+Elite with a part number that ends with -001 requires a hardware upgrade to the Platinum Elite. Without the hardware upgrade, the
+Platinum Elite will not function properly. Contact your local sales representative or Technical Support for information on
+upgrading the Platinum Elite.
+
+►BreezeSuite 8.6 Rev D does not support:
+                ●Elite Series Plethysmographs with model numbers ending in -001 thru -005
+                ●Ultima Series with model numbers ending in -001 thru -005 unless noted with a label indicating system           has
+                been upgraded to -006 compatibility
+                ●BreezeLink HL7 (Link Medical interface)
+                ●CPFS/D spirometer with model numbers ending in -001 & -002.
+
+► Upgrading to BreezeSuite 8.6 Rev D is only supported from the following BreezeSuite versions: BreezeSuite 7.2 SP7 and
+BreezeSuite 8.0 or higher.
+
+
+WARNINGS:         BreezeSuite 8.6 Rev D will not install on a Windows XP computer.
+                  BreezeSuite WebReview is no longer supported in BreezeSuite 8.6.
+                  At the time of this release, Windows 11 Operating System is not supported for an Ultima CardiO2 (CPET
+                  & ECG) system. Check with Technical Support for any updates.
+
+►BreezeSuite 8.x added a higher level of security to help customers comply with HIPAA/HITech security requirements. If
+upgrading from BreezeSuite v7.2 Sp2, all previously entered passwords will be reset and require the configuration of a new
+temporary password by your designated security administrator prior to users accessing BreezeSuite 8.6. See the Security
+Administrators Guide located with the installation instructions on the BreezeSuite 8.6 Flash Drive for additional information.
+
+►GLI 2012 and GLI 2017 are the default predicted authors for spirometry and DLco on all new software installations. Installing
+BreezeSuite on top of an existing installation will not change the previously selected predicted authors.
+
+►MGC Diagnostics does not have a “back-door” to the BreezeSuite application security feature. If you create a password
+and the password is forgotten or lost, access to your patient data will be denied.
+
+
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                        Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+                                    CAUTIONS & WARNINGS continued
+
+► When installing or upgrading to BreezeSuite 8.6 Rev D the folders listed below (and all subfolders) will be moved
+from ‘Program Files’ to ‘ProgramData’. Further information on this important change, and the permissions/ rights
+needed for each folder, is available in the BreezeSuite software installation instructions:
+-C:\Program Files (x86)\MedGraphics\Breeze to C:\ProgramData\MedGraphics\Breeze
+
+►When installing or upgrading an Ultima™ CardiO2 ® gas exchange analysis system to BreezeSuite 8.6 Rev D, the
+folders listed below (and all subfolders) will be moved from ‘Program Files’ to ‘ProgramData’. Further information on
+this important change, and the permissions/ rights needed for each folder, is available in the BreezeSuite software
+installation instructions:
+-C:\Mortara Instrument Inc\XScribeII\COMMAND to C:\ProgramData\MedGraphics\XScribe\COMMAND
+-C:\Mortara Instrument Inc\XScribeII\CURRENT to C:\ProgramData\MedGraphics\XScribe\CURRENT
+
+►With the 2017 guidelines on methacholine challenge testing, the ERS has determined that best practice is to look at the PD20
+value for interpretation rather than the PC20 value. PD20 is the provocative dose that causes a 20% decrease in FEV1. PC20 is
+the provocative concentration that causes a 20% decrease in FEV1. To this end it is necessary for the user to understand the
+specifications of the nebulizer used for delivery of the methacholine. The dose at each stage is a combination of nebulizer and
+protocol used.
+From the ERS guidelines, the nebulizer output in mg/min, the % of droplets less than 5 microns, and nebulizer delivery time
+must be known. From this information the dose at each stage can be calculated. At the time of this publication, only the
+specifications for the AeroEclipse BAN II nebulizer were known.
+In BreezeSuite 8.5 and prior versions, the protocol editor allowed you to enter the concentration and the number of breaths for
+each stage. In BreezeSuite 8.6 the protocol editor was changed. The column for Breaths was removed and replaced with Dose.
+(see examples below) When upgrading from BreezeSuite 8.5 or earlier, the previous protocols were automatically converted to
+the new format. If you continue using PC20, then no other changes should be necessary; however, these protocols should be
+verified before patient testing. If using or changing to the PD20 for testing, you will need to create new protocols and
+enter the appropriate dose at each stage. The calculation of each dose and examples of this are outlined in Appendix D & E
+of the ERS guidelines. Below is an example for BreezeSuite 8.6 Rev C, of a Methacholine protocol using the AeroEclipse BAN
+II nebulizer for 1 minute at each stage and the quadrupling protocol outlined in the ERS guidelines.
+                          BreezeSuite 8.5                                                  BreezeSuite 8.6
+
+
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                      Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+System Specifications and Prerequisites: For complete listing, see Installation Instructions available on
+BreezeSuite 8.6 Rev C installation USB Drive.
+
+
+SYSTEM SPECIFICATIONS FOR WORKSTATION COMPUTER
+
+Operating System                            Windows 7 (Pro, Ultimate or Enterprise) Service Pack 1
+                                            Windows 8.1 (Pro or Enterprise)
+                                            Windows 10 (Pro, Enterprise or Enterprise LTSB)
+                                            Windows 11 (Pro, Enterprise or Enterprise LTSB)
+                                            Note: The Ultima CardiO2 (CPET & ECG) does not support
+                                            Windows 11
+
+Supported SQL Versions                      SQL Server 2012 (Standard, Enterprise)
+                                             ► Not supported by Windows 11
+                                            SQL Server 2014 (Standard, Enterprise)
+                                             ► Not supported by Windows 11
+                                            SQL Server 2016 (Standard, Enterprise)
+                                             ► Not supported by Windows 11
+                                            SQL Server 2017 (Standard, Enterprise)
+                                            SQL Server 2019 (Standard, Enterprise)
+
+Processor                                   Intel Core Duo or Greater Recommended
+
+Hard Disk                                   80+ GB Recommended
+
+Memory                                      8+ GB Recommended
+
+Windows Display Properties                  1024 x 768 Minimum Resolution
+
+Other Hardware                              3+ USB-A Ports if client connecting to diagnostic device
+                                            8+ USB-A Ports for Ultima Series Gx Systems
+
+System Type                                 x86 (32-Bit) and x64 (64-Bit) PC hardware and
+                                            operating systems are supported.
+
+NOTE: Ultima™ CardiO2 X-Scribe 3.x gas exchange analysis systems DO NOT support x 64 (64-bit) operating
+systems.
+
+Installation Instructions:
+Place the USB Drive into the computer. Using Windows Explorer, browse to the USB Drive and run
+(double click on) the “Launch.exe” file. Select Install Software, then Installation Instructions. The
+Installation Instructions can be printed from the USB Drive. NOTE: The installation instructions are in
+PDF format. If Adobe Reader is not installed on the computer, select Install Software, then Adobe Reader
+to install Adobe.
+
+After the software has been installed, follow the Computer Configuration Instructions: Run the
+“Launch.exe” file, select Install Software, then Computer Configuration .
+
+
+NOTE: After the installation of BreezeSuite 8.6 Rev C, Service Pack 6 for BreezeSuite 8.6 must be
+installed on Windows 11 operating systems. Failure to install this Service Pack may result in the
+software not functioning correctly. Service Pack 6 also has the translation files for 8.6 Rev C.
+
+
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                       Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+                      Highlighted Changes from BreezeSuite 8.0 to BreezeSuite 8.4
+        To review all of the changes between BreezeSuite 8.0 and 8.4, please see BreezeSuite Release Notice Part
+        Number 147941-004.
+                      Highlighted Changes from BreezeSuite 8.4 to BreezeSuite 8.5
+    ➢   Added the Lung Volume bar graph to Physician Review
+    ➢   Changed the Acceptability and Repeatability criteria for DLco testing to match the ATS/ERS 2017
+        Guidelines.
+    ➢   Added the 2017 ATS/ERS DLco Guidelines Test Quality Grading available in the DLco Test Screen &
+        Final Report.
+    ➢   Added new controls in the F5 Options dialog (General Tab) to change font size for the data tables in the
+        test screens and Breeze Review, as well as the font size for the printed report.
+    ➢   Added the ability to reselect Race entry when you open a patient visit, rather than having to go to Edit.
+    ➢   To improve database performance, changed BreezeSuite multi-user to only copy modified resources and
+        patients to the local database when logging in or out of BreezeSuite or switching to local mode.
+    ➢   Allow the user to remove or cancel multiple orders at one time.
+    ➢   Added a Z-Score graph to the Final Report and Breeze Review.
+    ➢   In the Final Report, added the ability to shade every other line to make the rows easier to read. This option
+        is turned on in F5 Options – PF Pages Tab.
+    ➢   Added the ability to have ratios such as FEV1/FVC as either a decimal fraction or a whole number. This
+        option is configured in the F5 Options Units Tab.
+    ➢   Added a column for Volume Change from Pre-Bronchodilator to either Challenge or Post-Bronchodilator
+        stages. This option is available in the report column headers of PF Pages Tab.
+    ➢   Added Spirometry Test Quality Grading according to NLHEP and Spirxpert – user selectable in the F5
+        Options Menu – FVC Tab.
+    ➢   Added the ability to lock and unlock roles in Security.
+    ➢   Added the ability to Export/Import PF and Gx Predicted Sets in DBTools.
+    ➢   Created an Order Status Display filter for Open Patient list. This allows BreezeConnect users to restrict the
+        patient list to those patients that have orders with a specified status.
+    ➢   Added a “Technician Select Reports” role in Security Roles. This role determines if the user has the ability
+        to select a specific report for export in the Post test Comments dialog.
+    ➢   Corrected an intermittent issue where the ECG Only flag was getting set incorrectly on Gx tests.
+    ➢   Allow the user to expand the Post Test Comment dialog box.
+    ➢   Added the ability to view Billing Modifiers, Hospital Charge Code (CDM Code), Procedure Codes
+        (Professional CPT Code) and Diagnosis Codes (ICD-10 Codes) in Breeze Review.
+    ➢   The exported data file (SUM file) has been updated to include the above.
+    ➢   Corrected an issue with the legacy Ultima to allow face tent testing with the legacy fan assembly.
+    ➢   Corrected an issue with a blank page being inserted into the ExFVL report when only the graphs were
+        selected to be printed.
+    ➢   Added support for the Tab 004 CPFS/D spirometer.
+    ➢   Added an additional 80 Aux Data fields, which brings the total Aux Data fields to 100. Only the first 20
+        Aux Data Fields are checked to display by default. Additional fields can be activated in F5 Options - Visit
+        Tab.
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                       Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+    ➢   Modified the calculations for % Change and % Predicted Change to be the same in terms of rounding to the
+        next number.
+    ➢   Resized the FOT graphs so that the dta table and graphs are on one page.
+    ➢   Added the Gutierrez 2004 predicted author for TGV. Previously it was on FRC(N2 Washout) only.
+    ➢   Changed the “Sensitivity” label on the bottom of the BRP Trend graphs to PD20.
+    ➢   Added a PD column to the BRP Trend Tab in the data table. This can also be printed in the Final Report.
+        The PC20 and PD20 are separate options in the F5 Options dialog of BRP Trend Tab.
+    ➢   Added CO Index (Direct Fick) variable.
+    ➢   Added CO (Direct Fick) VO2 Mean variable called: “CO DF VO2 Mean”.
+    ➢   BreezeSuite now displays a message recommending to perform a gas calibration immediately prior to
+        starting a gas exchange test. The message will appear if it has been over 5 minutes since the last gas
+        calibration.
+    ➢   Updated the derived Treadmill Watts equations.
+    ➢   Added the ability to have User Defined/Selected predicteds for HR Max. This is configured in the Selected
+        Author Tab of the GX Predicted Set.
+    ➢   Changed the method of determining Exercise Oscillatory Ventilation (EOV). BreezeSuite now uses the
+        average resting VE instead of resting VE amplitude.
+    ➢   Added the ability to interface with the Zephyr Heart Rate Monitor.
+    ➢   Added the variable VCO2/Flow
+    ➢   Added variable and tab for Chronotropic Index.
+    ➢   When reopening an existing visit and going into a test tab, BreezeSuite will automatically display the
+        graphs of all selected efforts.
+    ➢   User authentication has been updated to allow for integration with Active Directory in both an automatic
+        and manual method. Users can be authenticated and logged into the BreezeSuite application automatically
+        based upon the Windows credentials of the hosting computer. The BreezeSuite application can also be
+        configured to ask the user for their Windows credentials which are then authenticated via Active Directory.
+        This update allows for all application user accounts to be managed at the domain level.
+    ➢   Disabled the File/Exit menu button when a patient visit is open in Breeze Review.
+    ➢   Corrected an issue where communication would drop out (watts & RPM) between the Ergoline ergometer
+        and the Ultima when a blood pressure measurement is taken.
+    ➢   Corrected an issue where Diagnosis entries could not be deleted.
+    ➢   Added an option to determine if the patient list should be refreshed every time the patient list is displayed.
+        This option is configured in F5 Options – Patient Tab.
+    ➢   Enhanced the search option when searching for a physician, technician or site name in the filter drop-down
+        box. Previously only able to type in the first letter. Enhanced to be able to type in multiple letters.
+    ➢   Updated the installation to install Microsoft SQL Server 2014 Express instead of SQL Server 2008.
+    ➢   Corrected an issue where audit changes to staff were not being tracked.
+    ➢   On systems entering new visits via “Orders” only, added the ability to manually enter a new visit for a
+        Syringe Study or Biologic QC Subject by unchecking “Add Visits via Orders Only” checkbox in F5
+        Options – Orders Tab.
+    ➢   Added a “Biologic QC Subject” checkbox on the patient dialog screen to designate this subject as a
+        Biological QC test.
+    ➢   Corrected issue of duplicate Staff entries when merging from Local to Shared database.
+    ➢   Added Order ID and Order Description to text report headers.
+    ➢   Added new text report, “Complete Report w/Post Pred”, that includes Post % Predicted.
+    ➢   Added the ability to make the Physician drop down entries a required field. This is set in F5 Options>Visit
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                        Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+        Tab.
+    ➢   Corrected issue of graph settings when a second page was added to a report with the graphs on the side.
+    ➢   Added Exercise Consult to the report header options.
+    ➢   Corrected an issue where Order IDs were not getting deleted and are visible in the Patient Visit Tab.
+    ➢   Corrected an issue where the calibration factors for TcpCO2, Sweat and Body Temperature were not being
+        saved.
+    ➢   Increased the Order ID character length to 30 characters.
+    ➢   Corrected an issue where Orders were not staying assigned to patients with prior visits when navigating
+        between the previous visits prior to saving the changes.
+    ➢   Corrected an issue where the physicians name was duplicated on the PF and GX consults.
+    ➢   Created a “GX Other” Tab in Breeze Review for displaying OUES Slope, VE/VCO2 Slope, VO2 Work
+        Slope and Chronotropic Index.
+                                          Changes for BreezeSuite 8.5 Rev C
+    ➢                 Added Digital Signature to installation files.
+                                          Changes for BreezeSuite 8.5 Rev D
+    ➢   Added Digital Signature to all all .EXE, .OCX and .DLL files.
+
+                                          Changes for BreezeSuite 8.5 Rev E
+    ➢   Removed Digital Signatures on USB driver installation executables to correct installation issue on Windows
+    10 operating systems.
+
+                      Highlighted Changes from BreezeSuite 8.5 to BreezeSuite 8.6
+    ➢   Added the software option for the 6 Minute Walk Test (6MWT). This test is a software option and is
+        activated via a CD Key. When activated, a new test tab is displayed on the bottom of the BreezeSuite
+        screen. A 6MWT Tab was also added to Breeze Physician Review. This test supports the Nonin 3150
+        WristOx Oximeter. Note: BreezeSuite does not support the Nonin 3150 BLE WristOx.
+    ➢   Two new reports for the 6MWT.
+    ➢   Changed the label for “Unspecified” race selection to “Other” to conform to the Global Lung Initiative
+        standards.
+    ➢   Improved the functionality of the Protocol Editor to more easily accommodate the ERS Methacholine
+        guidelines. The Protocol Editor was changed to remove the column for Breaths and replaced it with Dose.
+        The user must enter the “delivered dose” for each stage, rather than multiplying the concentration by the
+        number of breaths. The value for PD20 is calculated on the delivered dose for each stage. Mannitol PD15 is
+        calculated on Cummulative Dose Units. The user must indicate if they want PCx or PDx on the report.
+        NOTE: Previous Methacholine Protocols were converted automatically. Per above, the Breaths column
+        was replaced by a Dose column. The dose was populated based on the concentration for that stage
+        multiplied by the number of breaths.
+    ➢   For both Methacholine and Mannitol testing, added a message that warns when the patient has had a
+        decrease in their FEV1 based upon the PD value set in the protocol. Also added a message when the FEV1
+        decreases by 10% from the previous dose.
+    ➢   Added a test summary application (TestSum) to the Start Menu which allows the user to calculate how
+        many PF tests and the type of test that were performed.
+    ➢   For new installation as well as upgrade from previous versions of BreezeSuite, the software installs or
+        updates to SQL 2014 Express.
+    ➢   Added the ability to modify Pre and Post Test Comments in the Physician Review Mode.
+    ➢   Increased the character length for statements in the Statement Dictionary to 1000 characters.Added the
+        ability to label and report ExFVL efforts by stage.
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                      Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+    ➢   Added the following variables to Custom Consult and Patient Query: VO2/Work Slope, OUES, VE/VCO2
+        Slope, EOV (0 or 1 value) and Chronotropic Index.
+    ➢   Added the ATS grades for FEV1 and FVC to Custom Consult and Patient Query.
+    ➢   Added the ability to convert SentrySuite pulmonary data in DBTools.
+    ➢   Added the ability to make the Reviewing Physician entry required in Breeze Review. Also added the option
+        to have the Reviewing Physician autopopulate in Breeze Review. Both of these are controlled in the F5
+        Options screen – Review Tab.
+    ➢   Added the Post Test Comments on “Reason Exercise Stopped” and “Exercise ECG Interpretations” into the
+        Interpretation Section of Exercise Consult.
+    ➢   Added two new FOT reports: “FOT 5 Hz w/Spiro/SVC/Interp” and “FOT 5-1-19 w/Spiro/SVC/Interp”.
+    ➢   Increased the max volume limit on the Flow/Volume graph from 10 liters to 20 liters.
+    ➢   Corrected issue where the Lower Limit of Normal was slightly different for FVC and SVC, even though
+        the predicted values were the same.
+    ➢   Added a new option in Security>Breeze Review Section, that prevents the user from making changes to the
+        Export Settings in Breeze Review.
+    ➢   Improved the communication with the Zephyr Heart Rate monitor
+    ➢   Improved the functionality of the Lung Volume Bar Graph
+    ➢   Changed BreezeSuite login so that the user’s Password cannot be the same as the user’s Login Name.
+    ➢   Added the intergration of BioHarness 1-lead ECG.
+    ➢   Added additional checking for conflicts when importing patients that may have the same ID.
+    ➢   Corrected an issue where a variable that was using a Fix Predicted Value was not displaying the correct
+        value.
+    ➢   Added the ability to change the names of the databases during installation.
+    ➢   Added the ability to report three VE/VCO2 Slope values including from start of exercise to AT, RC, and
+        the entire exercise window by default. The ability to have a user-defined VE/VCO2 slope still exists.
+    ➢   Added the Woodway treadmill protocol.
+    ➢   Added the Test Grade for DLco efforts to Patient Query as well as Sum, Audit, Text and PDF reports.
+    ➢   Corrected an issue of the DLco predicted values not calculating when converting SensorMedics patient
+        files. Also corrected issue of corrected Dlco for hemoglobin when hemoglobin is entered as a blood gas
+        variable.
+    ➢   In Custom Consult, added visit qualifiers for demographic information (Current Visit, First Visit, etc).
+    ➢   Corrected MFC Application Error when the OUES and EOV tabs are displayed.
+    ➢   Corrected issue of Aux Data Fields appearing in red.
+    ➢   For new networked installations, added the “No Local” database check box. If a No Local installation
+        already exists, it is autiomatically detected.
+    ➢   Added the ability for the user to limit the number of patients or visits displayed in the Open Patient or Open
+        Visit screen. The default is On and set to 500.
+    ➢   Expanded the Aux Data Field window in a report.
+    ➢   Created a new Ideal Body Weight predicted author: “Peterson, Thomas, Blackburn, Heym”.
+    ➢   Added new VO2 variable relative to Ideal Body Weight: VO2 (mL/kgIBW/min).
+    ➢   Added Ideal Body Weight to patient demographics.
+    ➢   Added a new column for “Max Value Exercise” in the CPET Summary Report.
+    ➢   Corrected issue of the SVC predicted value not being displayed in the test screen.
+    ➢   Improved the grading of DLco efforts after an effort has been performed and that effort has a larger IVC,
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                       Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+        thus creating a new target for IVC. The software only takes the largest selected VC for the target, not a
+        non-selected VC.
+    ➢   Improved the anchoring of tidal breaths with the IC measurments for ExFVL testing.
+    ➢   Corrected MFC Application Error when DOB is entered as Today’s date.
+    ➢   Improved the reporting of Z-Scores for variables that are ratios, such as FEV1/FVC.
+    ➢   Corrected issue when combining patients was not updating the patient’s date of birth.
+    ➢   Corrected issue of the FEV1/SVC not being calculated when converting SensorMedics data.
+    ➢   Improved the functionality of the Override button when using the Customed ECG.
+    ➢   Removed the comma between state and zip code in PDF and Text reports.
+    ➢   Verified that PETO2, PETCO2 and Speed are displayed the same in Text and PDF reports.
+    ➢   Corrected issue of not being able to adjust race when creating a new visit from an Order.
+    ➢   Added a new variable to calculate Cardiac Index (CI) by using the calculated CO-Direct Fick variable (CO
+        DF-VO2 Mean value).
+    ➢   Corrected issue of disabling Predicted Sets.
+    ➢   Changed the frequency at which GX test data is auto-saved during a test from 50 seconds to every 15
+        seconds.
+    ➢   On a new install, changed the location of the Mortara XScribe files to: C:\Mortara Instrument
+        Inc\XScribeII\COMMAND and C:\Mortara Instrument Inc\XScribeII\CURRENT. Details are available in
+        the CAUTIONS & WARNINGS section of this document.
+    ➢   Corrected issue of Breeze closing on its own when an error message “Mortara is not responding” and an
+        MFC Application Error is displayed when saving Mortara files.
+    ➢   Improved the functionality of Auto Logout in Physician Review.
+    ➢   Improved the graph properties when “All Selected” is chosen.
+    ➢   The version of SQL installed is now SQL 2014 Express SP3.
+    ➢   Improved the Flow Calibration graph in calibration when performing a slow stroke that extends beyond 15
+        seconds.
+    ➢   Corrected an issue where the Aux Data Field variables were not being included in Delay Export.
+    ➢   Added a “Config Patient Options” option in User Roles to verify if a user can modify patient options such
+        as Visit List Limit.
+    ➢   Added the ability to modify, upload and save ECG PDF Summary reports to the BreezeSuite database
+        where the ECG PDF Summary reports are currently stored.
+    ➢   Added Test Description for Orders to the Header on PDF reports.
+    ➢   Corrected the calculation of VO2 based on the GX Predicted author “Blackie”.
+                      Highlighted Changes from BreezeSuite 8.6 to BreezeSuite 8.6 Rev B
+    ➢   Corrected an error message that would display during installation
+    ➢   Added support for items in BreezeSuite 8.6 Service Pack 6
+    ➢   Changed the installation to install MSOLEDBSQL instead of SQLOLEDB or SLQNCLi11
+    ➢   “MGCConnect.exe” was viewed as a cyberthreat by some antivirus software. This file was removed and
+        its’ functionality placed in a DLL already in use
+                  Highlighted Changes from BreezeSuite 8.6 Rev B to BreezeSuite 8.6 Rev C
+    ➢   Updated the version of SQL for local installations to support Windows 11
+    ➢   Updated the default version of Adobe Reader
+                  Highlighted Changes from BreezeSuite 8.6 Rev C to BreezeSuite 8.6 Rev D
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                      Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+    ➢   Updated the digital signature with a more current encryption method (SHA2). No code changes.
+
+
+
+
+Part# 147998-XXX Rev B
+MGC DIAGNOSTICS CORPORATION, through its subsidiary Medical Graphics Corporation                 Form 441 Rev E
+BreezeSuite is a trademark of Medical Graphics Corporation.
+
