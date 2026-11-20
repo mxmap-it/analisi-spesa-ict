@@ -1,0 +1,1278 @@
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Accedi | Password dimenticata? | Nuovo utente? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ About OneTrust Hosting Options, Locations, and Backup Formato stampa 
+ «  Torna indietro 
+ 
+ 
+ 
+ Informazioni 
+ Article Content 
+ Article Visibility 
+ Translation 
+ 
+ 
+ 
+ 
+ Informazioni
+ 
+ 
+ 
+ 
+ 
+ 
+Titolo 
+ 
+ About OneTrust Hosting Options, Locations, and Backup 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Nome URL 
+ 
+ UUID-21f6bff2-1b12-8c67-e8b0-d852e36f37af 
+ 
+ 
+ 
+ 
+ 
+ 
+ Article Content
+ 
+ 
+ 
+ 
+ 
+ 
+Content 
+ 
+ 
+ Your OneTrust account can be hosted in one of two ways: 1) with cloud hosting provided by OneTrust or 2) in a dedicated cloud environment managed by OneTrust. There are some differences and requirements of which you should be aware when you select a hosting option. 
+ OneTrust cloud hosting is provided by Microsoft Azure with localities in the United States, Canada, Brazil, United Kingdom, Europe, Australia, and Asia. Microsoft's cloud infrastructure has the following certifications and attestations: ISO/IEC 27001:2013, ISO 27017/27018, SSAE 16/ISAE 3402 SOC 1 Type 1 and Type 2, AT Section 101 SOC 2 and 3 Type 1 and Type 2, and FedRAMP certification and accreditation. 
+ OneTrust LLC’s Information Security Management System (ISMS) is ISO/IEC 27001:2013 certified as reflected in the certificate found here . 
+ OneTrust LLC’s Privacy Information Management System (PIMS) is the first in the world to become ISO/IEC 27701:2019 certified as reflected in the certificate found here . The PIMS is comprised of components, network devices, and software that are operated by OneTrust employees within its defined system physically operating within the Microsoft Azure production accounts used to make OneTrust Privacy, Security, and Third-Party Risk software available to customers. 
+ OneTrust has completed a Type 2 SOC for Service Organizations (SOC 2 Type 2) examination as of February 27, 2020. 
+ 
+ 
+ OneTrust Hosting Options 
+ 
+ 
+ 
+ Hosting Option 
+ 
+ Cloud 
+ 
+ Dedicated Cloud 
+ 
+ Tenancy 
+ 
+ Multi-tenant cloud environment with dedicated tenant databases. 
+ 
+ Single-tenant cloud environment. 
+ 
+ Geolocation 
+ 
+ Select hosting locality in the United States, United Kingdom, Germany, France, Switzerland, Australia, Singapore, Canada, Brazil, Japan, India, and United Arab Emirates. 
+ 
+ Select hosting locality in the United States, United Kingdom, Germany, France, Switzerland, Australia, Singapore, Canada, Brazil, Japan, India, and United Arab Emirates. 
+ 
+ Update Schedule 
+ 
+ Upgrades approximately every 3-5 weeks. 
+ 
+ Upgraded on a configurable schedule. 
+ 
+ Additional Options 
+ 
+ Ability to lock down Admin Portal access to customer-specified IP ranges only on the internet. 
+ Ability to set up site-to-site VPN for egress-traffic only to integrate with customer applications that are available only behind their VPN. 
+ 
+ License 
+ 
+ Included with all license types. 
+ 
+ Enterprise license required. 
+ 
+ Support 
+ 
+ No support plan required. 
+ 
+ Enterprise support required. 
+ 
+ Hosting Costs 
+ 
+ Hosting included in license. 
+ 
+ Dedicated cloud hosting carries an annual fee. Contact OneTrust Support or your account executive for more information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ OneTrust Hosting Locations & IP addresses 
+ 
+ OneTrust cloud hosting is provided through Microsoft Azure in the following data center locations: 
+ 
+ The following table details the data center hosting locations and Admin Portal IP addresses for each OneTrust application environment. These IP addresses can be used to safelist communication from OneTrust in your network. 
+ The table includes IP addresses that use Classless Inter-Domain Routing (CIDR) notation, such as 20.54.106.120/29. In CIDR notation, IP addresses are written as a prefix (20.54.106.120), followed by a suffix that indicates how many bits are in the entire address (29). 
+ For example, when 20.54.106.120/29 is mentioned, the IP addresses 20.54.106.120, 20.54.106.121, 20.54.106.122, 20.54.106.123, 20.54.106.124, 20.54.106.125, 20.54.106.126, and 20.54.106.127 should be safelisted. In another example, when 13.86.126.174/32 is mentioned, only the IP address 13.86.126.174 should be safelisted as 32 refers to a single IP address. You can use this subnet calculator to enter the CIDR IP address for additional details on the IP range. 
+ 
+ Note 
+ The OneTrust application provides multiple options to deliver email notifications, as detailed here . Based on your selected email server configuration, email notifications will be delivered in one of the following ways: 
+ 
+ 
+ For Custom SMTP Relay or Microsoft Exchange Online: Emails are sent from the OneTrust application to the customer's SMTP server or Microsoft Exchange server from the IPs listed in the table below. The customer's SMTP server or Microsoft Exchange server then delivers the email to the recipient (e.g. data subject, vendor, etc.). 
+ 
+ For Default Configuration or Send on Behalf of my Domain: Emails are delivered directly to the email recipient (e.g. data subject, vendor, etc.) via the OneTrust cloud email platform. 
+ The automated security of the OneTrust cloud email platform ensures that customers do not manage the DomainKeys Identified Mail (DKIM) and Sender Policy Framework (SPF). The IP addresses used for email delivery are not published for this purpose, which therefore eliminates the need to rotate DKIM keys or update SPF for IP changes. If you require IP safelisting for email delivery within your internal teams, OneTrust recommends using the Custom SMTP Relay or Microsoft Exchange Online configuration. 
+ 
+ 
+ 
+ 
+ Note 
+ Traffic originating from OneTrust to the customer network, such as for an integration endpoint (if applicable), SMTP server endpoint (if applicable), etc., will use the following OneTrust egress IPs. If your network team safelists OneTrust egress IPs, you are encouraged to review and update your firewall. 
+ 
+ 
+ 
+ OneTrust Application Environment 
+ 
+ Data Center Hosting Location 
+ 
+ Primary Hosting Location 
+ 
+ Disaster Recovery Hosting Location 
+ 
+ Admin Portal IP Addresses 
+ 
+ app.onetrust.com 
+ 
+ United States 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 13.89.141.254/31 
+ 
+ 52.247.38.92/31 
+ 
+ 
+ 
+ uat-de.onetrust.com 
+ 
+ Germany 
+ 
+ Frankfurt 
+ 
+ Berlin 
+ 
+ 
+ 
+ 20.52.206.176/30 
+ 
+ 51.116.81.232/30 
+ 
+ 
+ 
+ app-de.onetrust.com 
+ 
+ Germany 
+ 
+ Frankfurt 
+ 
+ Berlin 
+ 
+ 
+ 
+ 20.52.206.176/30 
+ 
+ 51.116.81.232/30 
+ 
+ 
+ 
+ app-eu.onetrust.com 
+ 
+ Germany 
+ 
+ Frankfurt 
+ 
+ Berlin 
+ 
+ 
+ 
+ 20.52.206.176/30 
+ 
+ 51.116.81.232/30 
+ 
+ 
+ 
+ app-uk.onetrust.com 
+ 
+ United Kingdom 
+ 
+ Cardiff 
+ 
+ London 
+ 
+ 
+ 
+ 52.142.171.106/31 
+ 
+ 51.132.211.38/31 
+ 
+ 
+ 
+ app-au.onetrust.com 
+ 
+ Australia 
+ 
+ New South Wales 
+ 
+ Canberra 
+ 
+ 
+ 
+ 20.53.123.22/31 
+ 
+ 52.243.100.136/31 
+ 
+ 
+ 
+ app-apac.onetrust.com 
+ 
+ Asia Pacific 
+ 
+ Singapore 
+ 
+ Hong Kong 
+ 
+ 
+ 
+ 20.44.239.164/31 
+ 
+ 20.205.106.182/31 
+ 
+ 
+ 
+ uat.onetrust.com 
+ 
+ United States 
+ 
+ Virginia 
+ 
+ California 
+ 
+ 
+ 
+ 52.186.164.58/31 
+ 
+ 13.86.194.210/31 
+ 
+ 
+ 
+ app-br.onetrust.com 
+ 
+ Brazil 
+ 
+ Sao Paulo State 
+ 
+ Texas 
+ 
+ 
+ 
+ 191.234.223.248/30 
+ 
+ 52.153.222.80/31 
+ 
+ 
+ 
+ app-ca.onetrust.com 
+ 
+ Canada 
+ 
+ Toronto 
+ 
+ Quebec City 
+ 
+ 
+ 
+ 20.63.19.228/31 
+ 
+ 40.86.253.54/31 
+ 
+ 
+ 
+ app-ch.onetrust.com 
+ 
+ Switzerland 
+ 
+ Zurich 
+ 
+ Geneva 
+ 
+ 
+ 
+ 51.107.8.8/31 
+ 
+ 51.107.230.4/31 
+ 
+ 
+ 
+ app-in.onetrust.com 
+ 
+ India 
+ 
+ Pune 
+ 
+ Chennai 
+ 
+ 
+ 
+ 40.80.95.190/31 
+ 
+ 52.172.14.4/31 
+ 
+ 
+ 
+ APP-HC 
+ na01.onetrust.com 
+ 
+ United States 
+ 
+ Washington 
+ 
+ Wyoming 
+ 
+ 
+ 
+ 52.156.89.50/31 
+ 
+ 13.78.198.216/31 
+ 
+ 
+ 
+ UAT-HC 
+ uat-na01.onetrust.com 
+ 
+ United States 
+ 
+ Washington 
+ 
+ Wyoming 
+ 
+ 
+ 
+ 52.156.89.50/31 
+ 
+ 13.78.198.216/31 
+ 
+ 
+ 
+ trial.onetrust.com 
+ 
+ United States 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 13.89.141.254/31 
+ 
+ 52.247.38.92/31 
+ 
+ 20.98.191.196/31 
+ 
+ 
+ 
+ app-fr.onetrust.com 
+ 
+ France 
+ 
+ Paris 
+ 
+ Marseille 
+ 
+ 
+ 
+ 20.40.143.100/31 
+ 
+ 52.136.142.56/31 
+ 
+ 
+ 
+ app-jp.onetrust.com 
+ 
+ Japan 
+ 
+ Tokyo, Saitama 
+ 
+ Osaka 
+ 
+ 
+ 
+ 20.46.191.216/31 
+ 
+ 52.175.157.144/31 
+ 
+ 
+ 
+ app-ae.onetrust.com 
+ 
+ United Arab Emirates 
+ 
+ Dubai 
+ 
+ Abu Dhabi 
+ 
+ 
+ 
+ 20.74.250.16/31 
+ 
+ 
+ 
+ app.cookiepro.com 
+ 
+ Germany 
+ 
+ Frankfurt 
+ 
+ Berlin 
+ 
+ 
+ 
+ 20.52.210.192/31 
+ 
+ 51.116.81.200/31 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ OneTrust Web Scanner Locations & IP Addresses 
+ 
+ The following table details the Web Scanner Locations and IP addresses for each OneTrust application environment. These IP addresses can be used to safelist communication from OneTrust in your network. The Web Scanner IP addresses for all OneTrust environments are also available as an IP text list here . 
+ The table includes IP addresses that use CIDR notation, such as 20.54.106.120/29. You can use this subnet calculator to enter the CIDR IP address for additional details on the IP range. 
+ 
+ Note 
+ Traffic originating from OneTrust to the customer website when a cookie scan is initiated will use the following OneTrust egress IPs. If your network team safelists OneTrust egress IPs, you are encouraged to review and update your firewall. 
+ 
+ 
+ 
+ OneTrust Application Environment 
+ 
+ Data Center Hosting Location 
+ 
+ Primary Hosting Location 
+ 
+ Disaster Recovery Hosting Location 
+ 
+ Web Scanner IP Address 
+ 
+ app.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ uat-de.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-de.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-eu.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-uk.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-au.onetrust.com 
+ 
+ Australia 
+ 
+ New South Wales 
+ 
+ Canberra 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.227.60.176/29 
+ 
+ 40.127.70.24/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-apac.onetrust.com 
+ 
+ Asia Pacific 
+ 
+ Singapore 
+ 
+ Hong Kong 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.24.124.120/29 
+ 
+ 20.212.124.24/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ uat.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-br.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-ca.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-ch.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-in.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ APP-HC 
+ na01.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ UAT-HC 
+ uat-na01.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ trial.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-fr.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-jp.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app-ae.onetrust.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ app.cookiepro.com 
+ 
+ North Europe 
+ 
+ Ireland 
+ 
+ Netherlands 
+ 
+ 
+ 
+ 20.54.106.120/29 
+ 
+ 20.103.218.56/29 
+ 
+ 
+ 
+ Central US 
+ 
+ Iowa 
+ 
+ Virginia 
+ 
+ 
+ 
+ 20.106.15.128/29 
+ 
+ 20.1.221.192/29 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ OneTrust Backups of Hosted Accounts 
+ 
+ Backups for cloud-hosted implementations are managed, performed, and tested by Microsoft Azure. Azure provides a 14-day backup to prevent against accidental data deletion and uses transactional log backup for Azure SQL, as detailed in Microsoft's Automated backups in Azure SQL Database article . The entire database is backed up, with the ability to create a database from backup at any point in time with up-to-the-second level of granularity within the last 14 days. For details on the frequency of backup, see Azure SQL Database Backup Frequency . Backups are stored encrypted with Azure Transparent Data Encryption AES-256. For Disaster Recovery requirements, all backups are replicated by Azure from the Primary Hosting Location to the respective paired Disaster Recovery Hosting Location. 
+ 
+ 
+ 
+ 
+ OneTrust Supported TLS Protocols 
+ 
+ The following table outlines the supported Transport Layer Security (TLS) protocols with applicable ciphers for OneTrust's cloud environments as of June 6, 2023 : 
+ 
+ 
+ Protocol 
+ 
+ Applicable Ciphers 
+ 
+ TLS 1.2 
+ 
+ 
+ 
+ TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 
+ 
+ TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 
+ 
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+ 
+ TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 
+ 
+ 
+ 
+ TLS 1.3 
+ 
+ 
+ 
+ AEAD-AES128-GCM-SHA256 
+ 
+ AEAD-AES256-GCM-SHA384 
+ 
+ AEAD-CHACHA20-POLY1305-SHA256 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Convercent Hosting Options, Locations, & Backups 
+ 
+ Convercent, a OneTrust Affiliate, uses the following hosting options, locations, and backups. For more information on OneTrust Affiliates, see List of Subprocessors . 
+ Convercent Hosting Options 
+ Your Convercent account can be hosted in one of two ways: 1) with cloud hosting provided by Convercent 2) in a dedicated cloud environment managed by Convercent. 
+ Convercent cloud hosting is provided by Microsoft Azure with localities in the European Union (Dublin, Ireland, or Amsterdam) or in the US (Seattle or Cheyenne). 
+ Convercent Hosting Locations and IP Addresses 
+ Convercent cloud hosting is provided through Microsoft Azure. Customers have a choice of choosing to store data in the following data center locations: in our EU hosted environment (Dublin, Ireland is primary, and Amsterdam is Disaster Recovery (DR) site) or our US hosted environment (Seattle is primary and Cheyenne is DR site). 
+ Convercent Backups of Hosted Accounts 
+ Backups for cloud-hosted implementations are managed, performed, and tested by Microsoft Azure. Private Convercent customer data is stored at the Microsoft-hosted data center facilities. Backup and retrieval of company data is important for our customers and therefore real-time data replication, daily backups, weekly backups, monthly backups and offsite storage are all part of the Convercent backup policy. All data is permanently purged from the backup servers after 365 days. 
+ 
+ 
+ 
+ 
+ Tugboat Logic Hosting Options, Locations, & Backups 
+ 
+ Tugboat Logic, a OneTrust Affiliate, uses the following hosting options, locations, and backups. For more information on OneTrust Affiliates, see List of Subprocessors . 
+ Tugboat Hosting Options 
+ Your Tugboat Logic account can be hosted in one of two ways: 1) with cloud hosting provided by Tugboat Logic 2) in a dedicated cloud environment managed by Tugboat Logic. 
+ Tugboat Logic cloud hosting is provided by Amazon Web Services (AWS) with localities in the United States (us-east-1 with backup in us-west-2), Europe (eu-central-1 with backup in eu-west-1), and Canada (ca-central-1). 
+ Tugboat Logic Information Security Management System (ISMS) is ISO/IEC 27001:2013 certified as reflected in the certificate found here: https://resources.tugboatlogic.com/rs/471-GKD-174/images/Signed_FINAL_ISMS_Certificate_Tugboat.pdf 
+ Tugboat Hosting Locations and IP Addresses 
+ Tugboat Logic cloud hosting is provided through AWS in the following data center locations: 
+ 
+ 
+ Data Center 
+ 
+ Data Center Hosting Location 
+ 
+ us-east-1 
+ 
+ Northern Virginia 
+ 
+ us-west-2 
+ 
+ Oregon 
+ 
+ eu-central-1 
+ 
+ Frankfurt 
+ 
+ eu-west-1 
+ 
+ Ireland 
+ 
+ ca-central-1 
+ 
+ Montreal 
+ 
+ 
+ Tugboat Backups of Hosted Accounts 
+ Backups for cloud-hosted implementations are managed and performed by AWS. Backups are tested by Tugboat Logic on a periodic basis. Backups are stored encrypted with AES-256. 
+ 
+ 
+ 
+ 
+ Hosting FAQ 
+ 
+ The following responses are supported solutions to frequently asked questions (FAQ) about the OneTrust application. The OneTrust team continuously monitors these inquiries and will make additional FAQ available as they are identified. 
+ 
+ 
+ 1. 
+ 
+ I performed a trace and see an IP address that looks like it is from a different location. Is this a performance issue? 
+ 
+ Our cloud hosting utilizes Cloudflare for performance and security. Cloudflare utilizes the Anycast routing method, which allows multiple machines to share the same IP address. Though it may look like the IP address is from a location other than the data center outlined, in reality, the requests you make will be directed to the machine in the data center closest to where you made the request. This allows requests to be routed using a faster and more reliable network path. 
+ 
+ 2. 
+ 
+ What are the hosting options, locations, and backups for OneTrust Affiliates? 
+ 
+ OneTrust Affiliates such as Convercent and Tugboat Logic implement the following hosting options, locations, and backups. For more information on OneTrust Affiliates, see List of Subprocessors . 
+ 
+ 
+ Convercent Hosting Options, Locations, & Backups 
+ 
+ Tugboat Logic Hosting Options, Locations, & Backups 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Attachment 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ Article Visibility
+ 
+ 
+ 
+ 
+ 
+ 
+Conteggio visualizzazioni totali articolo 
+ 
+ 159.866 
+ 
+ 
+ 
+ 
+ 
+ 
+ Translation
+ 
+ 
+ 
+ 
+ 
+ 
+Lingua 
+ 
+ Inglese 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+È lingua principale 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Generato da 
+ 
+ 
+ 
+ 
