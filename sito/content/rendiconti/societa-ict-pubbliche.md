@@ -6,7 +6,7 @@ lastmod: 2026-11-20T20:00:00Z
 description: "Elenco per codice fiscale delle società ICT partecipate dalla PA, dal censimento MEF delle partecipazioni (dati al 31/12/2023), con classe in-house / controllata / partecipata, sito web e un'analisi minima di software libero e riuso. Scaricabile."
 ---
 
-**Versione 0.3 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.4 del 2026-11-20** · ticket [#82](https://github.com/mxmap-it/analisi-spesa-ict/issues/82) (legato a [#52](https://github.com/mxmap-it/analisi-spesa-ict/issues/52)) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima.
 
@@ -74,19 +74,30 @@ TIM (circa 85,8 % a Poste Italiane dopo l'offerta pubblica di acquisto e scambio
 Quota pubblica di voto: 30 % senza quotate, 55 % con Leonardo (dal 2022), circa 100 % con TIM (da settembre 2026) [S:
 quote di Leonardo, Poste e TIM da fonti secondarie, da riconfermare su fonte primaria Consob].
 
-**Perché non lo è ancora giuridicamente** (proposta di lettura, da verificare sui testi integrali delle sentenze):
-1. *le quotate non contano.* Il testo unico sulle società partecipate si applica alle quotate solo se lo dice
-   espressamente (art. 1 c. 5 d.lgs. 175/2016) e la trasparenza «piena» esclude le società quotate e le loro
-   partecipate (art. 2-bis c. 2 lett. b d.lgs. 33/2013). La maggioranza pubblica di PSN passa per Leonardo, TIM e Poste,
-   tutte quotate; senza di loro restano il 30 % di CDP Equity e Sogei;
-2. *il controllo va provato in concreto.* La giurisprudenza amministrativa più recente chiede l'esercizio effettivo
-   dell'influenza dominante (patti, statuto, comportamenti), non la sola somma delle quote; per PSN non risultano patti
-   parasociali fra i soci pubblici né atti di indirizzo comuni [riferito da commenti: approfondimento sul controllo
-   «in concreto» in corso];
-3. *PSN stessa si qualifica così*: nel modello organizzativo del 26/7/2023 si dichiara «società a partecipazione
-   pubblica non di controllo»;
-4. *altri perimetri*: non è nell'elenco ISTAT delle amministrazioni pubbliche (2025 e 2026, verificato sui PDF; Sogei sì)
-   e, come concessionario a rischio d'impresa, non è amministrazione aggiudicatrice né organismo di diritto pubblico.
+**Perché non lo è ancora giuridicamente** (ricerca sulla giurisprudenza: [Controllo pubblico delle società](/rendiconti/controllo-pubblico-giurisprudenza/), bozza tecnica):
+1. *trasparenza e anticorruzione: le quote che passano per quotate non contano.* L'art. 2-bis c. 2 lett. b del d.lgs.
+   33/2013 esclude le società partecipate da quotate, salvo che siano controllate o partecipate da amministrazioni
+   «non per il tramite di società quotate». Per questa via resta solo Sogei (10 %); anche CDP Equity può cadere, perché
+   ANAC (atto di segnalazione 3/2020) considera CDP «quotata» per le sue obbligazioni. PSN si colloca quindi fra le
+   società a partecipazione pubblica (comma 3), come dichiara di sé nel modello organizzativo del 26/7/2023;
+2. *testo unico sulle partecipate: la questione è aperta.* Dal 2019 l'art. 1 c. 5 del d.lgs. 175/2016 esclude solo le
+   quotate e le società **da esse controllate**, e PSN non è controllata da nessuna singola quotata; il computo del
+   controllo indiretto (art. 2359 c. 2 c.c.) non ha un filtro per le quotate. **Nessuna sentenza** decide se i voti che
+   passano per una quotata contino; atti e pareri divergono (MEF 2018 sì; parere del Consiglio di Stato 968/2016 e
+   relazione illustrativa del testo unico no);
+3. *il controllo «in concreto».* Per il controllo **congiunto** di più enti il Consiglio di Stato più recente (VI,
+   436/2026) chiede la prova di una concertazione effettiva, mentre la IV sezione (5289/2025) considera la maggioranza
+   «necessaria e sufficiente»: contrasto non risolto, senza rimessione all'Adunanza plenaria. Per PSN però tutte le
+   catene risalgono al **solo** MEF: è un controllo solitario indiretto, dove il dato numerico basta anche per la 436/2026;
+4. *altri perimetri*: non è nell'elenco ISTAT delle amministrazioni pubbliche (2025 e 2026; Sogei sì) e, come
+   concessionario a rischio d'impresa, non è amministrazione aggiudicatrice né organismo di diritto pubblico.
+
+**Quote con i diversi metodi** [S per le quote di Leonardo, Poste e TIM, da riconfermare su fonte Consob]: computo
+pieno lungo le catene 55 % fino ad agosto 2026 (solo con il controllo di fatto su Leonardo), da settembre 2026 75 %
+senza Leonardo (maggioranza di diritto) e 100 % con Leonardo; con il filtro delle quotate 30 % (o 10 % se CDP conta come
+quotata). Conclusione: per la trasparenza PSN resta **partecipata** (certezza media); per il testo unico, da settembre
+2026, gli argomenti per il controllo pubblico sono più forti ma non decisi (certezza bassa-media). Da qui la classe
+**controllata sostanzialmente**.
 
 **Effetto sulla misura.** Nessuno sulla giurisdizione: i servizi PSN sono già cloud **IT**. Nella vista per società PSN
 compare fra le società pubbliche; non entra fra i «servizi alle società ICT pubbliche» del cloud in proprio, perché i
@@ -262,6 +273,7 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 
 | versione | data | modifica |
 |---|---|---|
+| 0.4 | 2026-11-20 | § 2bis corretto con la ricerca sulla giurisprudenza: l'esclusione «per il tramite di quotate» è nel d.lgs. 33/2013, non più nel testo unico; contrasto sul controllo in concreto; 75 % senza Leonardo da settembre 2026 |
 | 0.3 | 2026-11-20 | classe «controllata sostanzialmente» (soci quotati controllati dallo Stato); PSN: argomenti di fatto e di diritto (§ 2bis) |
 | 0.2 | 2026-11-20 | classe «controllo pubblico congiunto» (quota pubblica ≥ 50 %, calcolata a catena, verifiche a mano dei soci); partita IVA dall'anagrafica ANAC; vista per società per codice fiscale (#82) |
 | 0.1 | 2026-11-20 | prima versione: censimento MEF 2023, siti, catalogo del riuso, home page (#82) |
