@@ -27,6 +27,7 @@ Uscite: esiti/<data>/imbuto/datacenter/{datacenter-cig.csv.gz, riepilogo.json}
 import collections
 import csv
 import gzip
+import io
 import json
 import os
 import re
@@ -123,7 +124,10 @@ def main():
     tot = collections.defaultdict(lambda: [0, 0.0])
     visti = set()
     n = 0
-    with gzip.open(os.path.join(OUT, "datacenter-cig.csv.gz"), "wt", encoding="utf-8", newline="") as fo:
+    # gzip senza data (mtime=0): stessi byte a ogni esecuzione, così lo sha256 citato dalla tabella unica è
+    # ripetibile (prova da clone pulito del 20/11/2026, #81)
+    with gzip.GzipFile(os.path.join(OUT, "datacenter-cig.csv.gz"), mode="wb", mtime=0) as gz, \
+            io.TextIOWrapper(gz, encoding="utf-8", newline="") as fo:
         w = csv.writer(fo)
         w.writerow(["cig", "anno", "strato", "sottoclasse", "esito", "famiglia", "famiglie", "punti_datacenter", "punti_postazioni", "importo"])
         for r in csv.DictReader(open(ICT, encoding="utf-8", newline="")):

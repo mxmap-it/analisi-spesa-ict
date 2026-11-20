@@ -24,6 +24,7 @@ import collections
 import csv
 import glob
 import gzip
+import io
 import hashlib
 import json
 import os
@@ -40,6 +41,11 @@ ICT = os.environ.get("IMBUTO_ICT", os.path.join(R, "lavoro/imbuto/ict.csv"))
 OUT = os.environ.get("IMBUTO_ESITI_OUT", os.path.join(R, "esiti", GIORNO, "imbuto", "spostamenti"))
 csv.field_size_limit(10**9)
 
+
+
+def gz_scrivi(path):
+    """gzip di testo senza data (mtime=0; nell'intestazione solo il nome del file, costante): stessi byte a ogni esecuzione (#81, prova da clone pulito)."""
+    return io.TextIOWrapper(gzip.GzipFile(path, mode="wb", mtime=0), encoding="utf-8", newline="")
 
 def p(*a):
     return os.path.join(R, *a)
@@ -225,7 +231,7 @@ def main():
                 dc[r["cig"]] = "servizio-inhouse"
     dc_stati, dc_escluse = set(DC_CFG["origini"]["stati"]), set(DC_CFG["origini"]["sottoclassi_escluse"])
     dc_fam = collections.defaultdict(lambda: [0, 0.0, 0.0])   # (periodo, famiglia)
-    fs = gzip.open(STATI_FINALI, "wt", encoding="utf-8", newline="")
+    fs = gz_scrivi(STATI_FINALI)
     ws = csv.writer(fs)
     ws.writerow(["cig", "anno", "stato", "livello", "giurisdizione", "euro_lordi", "euro_netti", "famiglia_dc"])
 
@@ -300,12 +306,12 @@ def main():
 
     fs.close()
     fuori = sorted(set(per_cig) - visti)
-    with gzip.open(os.path.join(OUT, "spostamenti.csv.gz"), "wt", encoding="utf-8", newline="") as f:
+    with gz_scrivi(os.path.join(OUT, "spostamenti.csv.gz")) as f:
         w = csv.writer(f)
         w.writerow(["cig", "livello", "a", "giurisdizione", "importo_corretto", "motivo", "fonte"])
         for s in sorted(S, key=lambda s: (s["cig"], PRIORITA.index(s["livello"]))):
             w.writerow([s["cig"], s["livello"], s["a"], s["giurisdizione"], s["importo_corretto"] if s["importo_corretto"] is not None else "", s["motivo"], s["fonte"]])
-    with gzip.open(os.path.join(OUT, "finale.csv.gz"), "wt", encoding="utf-8", newline="") as f:
+    with gz_scrivi(os.path.join(OUT, "finale.csv.gz")) as f:
         w = csv.writer(f)
         w.writerow(["cig", "anno", "strato", "sottoclasse", "stato_prima", "stato_dopo", "livello_decisivo", "livelli",
                     "disaccordo", "importo", "euro_netti", "giurisdizione_prima", "giurisdizione_dopo", "motivo"])

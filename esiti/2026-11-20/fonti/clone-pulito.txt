@@ -1,0 +1,40 @@
+prova da clone pulito delle fonti, 2026-11-20T12:44:48+01:00, commit 753d4158
+== 2. ingressi di lavoro/
+ripristinato lavoro/pvl/cig_link.csv
+ripristinato lavoro/pvl/indice.jsonl
+ripristinato lavoro/convenzioni/attuativi.csv
+ripristinato lavoro/raffinamento/pacchetti
+ripristinato lavoro/imbuto/ict.csv
+ripristinato lavoro/imbuto/stati-finali.csv.gz
+ripristinato lavoro/inhouse/cig-cf.csv.gz
+ripristinato lavoro/smartcig/ict.csv
+ripristinato lavoro/zenodo-10007545/cpv_5M.csv.gz
+ripristinato lavoro/rivenditori/gleif-it.json
+ripristinato lavoro/trasparenza/stato.sqlite
+ripristinato lavoro/residuo-s6/out/esiti.jsonl
+ripristinato lavoro/residuo-s6/l4-js/enti.jsonl
+ripristinato lavoro/l190-campione/stato.jsonl
+ripristinato lavoro/pnrr12/ocds-1.2.jsonl
+ripristinato lavoro/pvl/link_cig.csv
+ripristinato lavoro/attribuzione
+ripristinato lavoro/cig_delta
+ripristinato lavoro/bdap-pagine
+ripristinato lavoro/ted-v2/pagine
+ripristinato lavoro/mirror-completamento
+MANCA lavoro/cig_completo -> rigenerare: tools/anac_integrita.py (estrae i CSV dagli zip del mirror ANAC): 11 GB, si rigenera e si confronta con le impronte
+rigenero lavoro/cig_completo dal mirror ANAC (tools/anac_integrita.py, estrazione degli zip)
+ingressi: tutti identici al registro (sha256)
+== 3. registro unico delle fonti
+ "lavoro_non_registrati": [],
+ "host_senza_acquisizioni": [],
+ "esito": "ok"
+== 4. catena delle società ICT pubbliche e del cloud in proprio
+identico  dati/inhouse/societa-ict-pa.csv
+identico  lavoro/inhouse/cig-cf.csv.gz (rigenerato dal mirror = congelato)
+identico  esiti/2026-11-20/imbuto/datacenter/datacenter-cig.csv.gz
+identico  esiti/2026-11-20/imbuto/datacenter/riepilogo.json
+DIVERSO   esiti/2026-11-20/imbuto/spostamenti/riepilogo.json
+identico  esiti/2026-11-20/imbuto/spostamenti/finale.csv.gz
+identico  lavoro/imbuto/stati-finali.csv.gz
+identico  esiti/2026-11-20/inhouse/vista/vista.json
+fine 2026-11-20T12:51:27+01:00

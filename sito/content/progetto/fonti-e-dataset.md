@@ -7,7 +7,7 @@ weight: 37
 gruppo: dati
 ---
 
-**Versione 0.1 del 2026-11-20** · ticket [#81](https://github.com/mxmap-it/analisi-spesa-ict/issues/81) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.2 del 2026-11-20** · ticket [#81](https://github.com/mxmap-it/analisi-spesa-ict/issues/81) · [registro delle revisioni](#registro-delle-revisioni)
 
 ## 1. Perché
 
@@ -42,13 +42,27 @@ Modi di congelare un file di lavoro: **git** (copia compressa in `dati/ingressi/
 Verifica del 2026-11-20: 92 strumenti esaminati, ingressi per tipo git 135, lavoro 84, mirror 54, modello 5, rete 6; 17 host del mirror; 22 ingressi di lavoro/ congelati; non registrati: 0; host senza acquisizioni: 0. Esito: **ok**.
 <!-- /GEN:sintesi -->
 
+### Prova da clone pulito del 20/11/2026 [V]
+
+`tools/verifiche/clone_pulito_fonti.sh` (esito in `esiti/2026-11-20/fonti/clone-pulito.txt`): clone del repository al
+commit 753d4158 con l'archivio del server in sola lettura; **ripristinati tutti i 21 ingressi** congelati; `lavoro/cig_completo`
+(235 file, 11 GB) **rigenerato dal mirror ANAC in 7 minuti e identico**, file per file, alle impronte; registro delle
+fonti «ok»; catena delle società ICT pubbliche e del cloud in proprio rifatta: censimento, codici fiscali per CIG
+(rigenerati dal mirror e identici a quelli congelati), livello DC, tabella unica, stati finali e vista **identici** a
+quelli pubblicati. Unica differenza trovata: lo sha256 del file compresso del livello DC, perché gzip vi scriveva l'ora;
+corretto (compressione senza data in `datacenter_proprio.py` e `imbuto_spostamenti.py`).
+
+Attenzione: il raffinamento L4 è ancora in corso e aggiunge esiti, quindi la tabella unica rifatta dopo un nuovo esito L4
+può cambiare. Ogni pubblicazione cita gli sha256 degli ingressi (`riepilogo.json` della tabella unica) e
+`tools/ingressi_lavoro.py congela lavoro/imbuto/stati-finali.csv.gz` riallinea il registro.
+
 ## 4. Fonti esterne nel mirror
 
 <!-- GEN:host -->
 | host | strumenti che lo leggono | acquisizioni nel mirror |
 |---|---:|---:|
 | assets.innovazione.gov.it | 1 | 3 |
-| bdap-opendata.rgs.mef.gov.it | 4 | 2.627 |
+| bdap-opendata.rgs.mef.gov.it | 4 | 2.676 |
 | dati.anticorruzione.it | 24 | 2.142 |
 | ec.europa.eu | 1 | 23 |
 | goldencopy.gleif.org | 1 | 8 |
@@ -114,7 +128,7 @@ Verifica del 2026-11-20: 92 strumenti esaminati, ingressi per tipo git 135, lavo
 | `lavoro/convenzioni/attuativi.csv` | git | `5d9bcf855e9c744f…` |  636284 |
 | `lavoro/raffinamento/pacchetti` | git-tar | `6789a26f95c0f8e3…` | 355  |
 | `lavoro/imbuto/ict.csv` | archivio | `9604940172cd6f80…` |  229616749 |
-| `lavoro/imbuto/stati-finali.csv.gz` | git | `7aaa37e931a21f18…` |  8591278 |
+| `lavoro/imbuto/stati-finali.csv.gz` | git | `7f3bc94f7f20265d…` |  8591279 |
 | `lavoro/inhouse/cig-cf.csv.gz` | git | `1056ed9b76fac44c…` |  8449716 |
 | `lavoro/smartcig/ict.csv` | archivio | `cbf7be2b24eaf2f0…` |  88087169 |
 | `lavoro/zenodo-10007545/cpv_5M.csv.gz` | archivio | `8fa6b264f002a41e…` |  306566254 |
@@ -144,7 +158,7 @@ libera. Sono dataset a pieno titolo, non configurazione: la colonna sha256 perme
 | tabella curata | [`config/budget.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/budget.yaml) |  | Tetto di sforzo del progetto, deciso da Fabio il 2026-10-26: | `bbbea5a3d2d8…` |
 | tabella curata | [`config/datacenter_proprio.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/datacenter_proprio.yaml) | 0.4 | Regole per riconoscere la spesa per datacenter propri («cloud in proprio», #52). | `d8c3622a1d7c…` |
 | tabella curata | [`config/fonti-verifiche.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/fonti-verifiche.yaml) | 0.1 | Inventario STATICO delle fonti delle verifiche pubblicate (#81), 20/11/2026. | `e343604a19ae…` |
-| tabella curata | [`config/ingressi-lavoro.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/ingressi-lavoro.yaml) |  | descrizione: Ingressi di lavoro/ letti dall'imbuto e fuori dal mirror ANAC (M12). Generato da tools/ingressi_lavoro.py congela. | `ab2629e11a92…` |
+| tabella curata | [`config/ingressi-lavoro.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/ingressi-lavoro.yaml) |  | descrizione: Ingressi di lavoro/ letti dall'imbuto e fuori dal mirror ANAC (M12). Generato da tools/ingressi_lavoro.py congela. | `c24b2df58a2c…` |
 | tabella curata | [`config/inhouse_siti.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/inhouse_siti.yaml) | 0.1 | Siti web delle società ICT pubbliche non trovati nell'Indice PA (letto da tools/verifiche/inhouse_censimento.py). | `b0b8b93da2eb…` |
 | tabella curata | [`config/inhouse_soci.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/inhouse_soci.yaml) | 0.1 | Quote pubbliche verificate a mano per le società ICT «da verificare» (letto da tools/verifiche/inhouse_censimento.py 0.3). | `489e2e5714fd…` |
 | tabella curata | [`config/inhouse_verifica.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/inhouse_verifica.yaml) | 0.2 | Verifica per CIG della classe «in-house» dell'imbuto (#52, #71). Letta da tools/verifiche/inhouse_verifica.py. | `7a6ba61e04e0…` |
@@ -162,8 +176,8 @@ libera. Sono dataset a pieno titolo, non configurazione: la colonna sha256 perme
 | tabella curata | [`config/tipi_soggetto.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/tipi_soggetto.yaml) |  | 62: tipo di soggetto della stazione appaltante del CIG padre, per il filtro della sezione /convenzioni/. | `0a894318ba8e…` |
 | tabella curata | [`config/usi-dataset.yaml`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/config/usi-dataset.yaml) | 1 | Usi dei dataset del mirror rispetto ai progetti dell'osservatorio (#17, #9). | `4e25a10ead8a…` |
 | dataset derivato | [`dati/inhouse/catalogo-riuso.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/catalogo-riuso.csv) |  | società ICT pubbliche (#82) | `413d153cb052…` |
-| dataset derivato | [`dati/inhouse/opensource-riepilogo.json`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/opensource-riepilogo.json) |  | società ICT pubbliche (#82) | `fe79342111d4…` |
-| dataset derivato | [`dati/inhouse/opensource.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/opensource.csv) |  | società ICT pubbliche (#82) | `7405bc47164d…` |
+| dataset derivato | [`dati/inhouse/opensource-riepilogo.json`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/opensource-riepilogo.json) |  | società ICT pubbliche (#82) | `b4914727234c…` |
+| dataset derivato | [`dati/inhouse/opensource.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/opensource.csv) |  | società ICT pubbliche (#82) | `3db4383e3d58…` |
 | dataset derivato | [`dati/inhouse/riepilogo.json`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/riepilogo.json) |  | società ICT pubbliche (#82) | `111db66436b3…` |
 | dataset derivato | [`dati/inhouse/societa-ict-pa.csv`](https://github.com/mxmap-it/analisi-spesa-ict/blob/main/dati/inhouse/societa-ict-pa.csv) |  | società ICT pubbliche (#82) | `76ce38dbb93b…` |
 <!-- /GEN:nostri -->
@@ -180,4 +194,5 @@ libera. Sono dataset a pieno titolo, non configurazione: la colonna sha256 perme
 
 | versione | data | modifica |
 |---|---|---|
+| 0.2 | 2026-11-20 | esito della prova da clone pulito di tutte le fonti (#81) |
 | 0.1 | 2026-11-20 | prima versione: inventario di 92 strumenti, registro degli ingressi esteso a cartelle e impronte (#81) |

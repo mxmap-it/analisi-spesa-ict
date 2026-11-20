@@ -19,7 +19,7 @@ Estensione del 20/11/2026 (#81, riproducibilità di TUTTE le fonti, inventario s
 Uso:
   python3 tools/ingressi_lavoro.py verifica     # ogni ingresso c'è e ha lo sha256 del registro (esce con 1 se no)
   python3 tools/ingressi_lavoro.py ripristina   # rimette in lavoro/ ciò che manca (da git o dall'archivio), poi verifica
-  python3 tools/ingressi_lavoro.py congela      # (server) copia gli ingressi attuali in git/archivio e riscrive il registro
+  python3 tools/ingressi_lavoro.py congela [percorsi]  # (server) copia gli ingressi attuali (o solo quelli indicati) e riscrive il registro
 """
 import gzip, hashlib, io, json, os, shutil, sys, tarfile
 from datetime import datetime, timezone
@@ -154,11 +154,17 @@ def tar_deterministico(cartella, dst):
         g.write(buf.getvalue())
 
 
-def congela():
+def congela(solo=()):
+    """solo: percorsi da ricongelare (gli altri restano come nel registro): per gli ingressi che cambiano spesso,
+    come lavoro/imbuto/stati-finali.csv.gz mentre il raffinamento L4 aggiunge esiti."""
     import archivia as A
+    vecchi = {e["percorso"]: e for e in yaml.safe_load(REG.read_text(encoding="utf-8"))["ingressi"]} if solo and REG.exists() else {}
     reg = {"descrizione": "Ingressi di lavoro/ letti dall'imbuto e fuori dal mirror ANAC (M12). Generato da tools/ingressi_lavoro.py congela.",
            "ingressi": []}
     for perc, (via, usato, rigenera) in INGRESSI.items():
+        if solo and perc not in solo and perc in vecchi:
+            reg["ingressi"].append(vecchi[perc])
+            continue
         src = R / perc
         e = {"percorso": perc, "via": via, "usato_da": usato, "rigenera": rigenera}
         if via == "archivio-tar":
@@ -257,5 +263,5 @@ def ripristina():
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "verifica"
     if cmd == "congela":
-        congela(); sys.exit(0 if verifica() else 1)
+        congela(tuple(sys.argv[2:])); sys.exit(0 if verifica() else 1)
     sys.exit(0 if {"verifica": verifica, "ripristina": ripristina}[cmd]() else 1)

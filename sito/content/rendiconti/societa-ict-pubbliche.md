@@ -91,9 +91,9 @@ Due vie indipendenti, entrambe ripetibili:
    un sito può citare l'open source senza pubblicare nulla, e una società può pubblicare codice senza dirlo in home.
 
 <!-- GEN:opensource -->
-- Società esaminate (in-house, controllate e soci Assinter attivi o no): **90**.
+- Società esaminate (in-house, controllate e soci Assinter attivi o no): **99**.
 - Nel catalogo del riuso di Developers Italia (577 software, 153 editori, copia del 2026-11-20 con sha256 `7db646184800739e…`): **7** società hanno almeno un software, **35** software in tutto (come editrici o come manutentrici di software pubblicato da un ente) [V].
-- Home page lette: **43**; con le parole «open source» o «software libero»: **6**; con «riuso»: **0**; con un collegamento a GitHub o GitLab: **0** [V, indizio da leggere a mano].
+- Home page lette: **44**; con le parole «open source» o «software libero»: **6**; con «riuso»: **0**; con un collegamento a GitHub o GitLab: **0** [V, indizio da leggere a mano].
 <!-- /GEN:opensource -->
 
 ## 5. La tabella (in-house, controllate e a controllo pubblico congiunto attive, più i soci Assinter)
@@ -183,11 +183,11 @@ Ordine: in-house, poi controllate, per fatturato 2023. «Enti» = enti che dichi
 | LUTECH DIGITAL AIRPORT S.R.L. | controllata | Lombardia | 1 |  | 40 |  | 0 |  |  |
 | FONDAZIONE 'SISTEMA TOSCANA | controllata | Toscana | 1 |  | 78 | [www.fondazionesistematoscana.it](https://www.fondazionesistematoscana.it) | 0 | no | no |
 | SARA SERVICES S.R.L. | controllata | Lazio | 1 |  |  |  | 0 |  |  |
-| GEOWEB S.P.A IN FORMA ABBREVIATA GEOWEB | controllo-pubblico-congiunto | Lazio | 2 | 6,9 | 27 |  |  |  |  |
-| CONSORTIUM GARR (GESTIONE AMPLIAMENTO RETE RICERCA) | controllo-pubblico-congiunto | Lazio | 6 |  | 80 |  |  |  |  |
-| CONSORZIO T3 LAB | controllo-pubblico-congiunto | Emilia Romagna | 1 |  | 9 |  |  |  |  |
-| LABORATORIO DI MONITORAGGIO E MODELLISTICA AMBIENTALE PER LO… | controllo-pubblico-congiunto | Toscana | 2 |  | 27 | [www.lamma.toscana.it](https://www.lamma.toscana.it) |  |  |  |
-| CONSORZIO PER LE TECNOLOGIE DELL'INFORMAZIONE E COMUNICAZION… | controllo-pubblico-congiunto | Toscana | 1 |  |  |  |  |  |  |
+| GEOWEB S.P.A IN FORMA ABBREVIATA GEOWEB | controllo-pubblico-congiunto | Lazio | 2 | 6,9 | 27 |  | 0 |  |  |
+| CONSORTIUM GARR (GESTIONE AMPLIAMENTO RETE RICERCA) | controllo-pubblico-congiunto | Lazio | 6 |  | 80 |  | 0 |  |  |
+| CONSORZIO T3 LAB | controllo-pubblico-congiunto | Emilia Romagna | 1 |  | 9 |  | 0 |  |  |
+| LABORATORIO DI MONITORAGGIO E MODELLISTICA AMBIENTALE PER LO… | controllo-pubblico-congiunto | Toscana | 2 |  | 27 | [www.lamma.toscana.it](https://www.lamma.toscana.it) | 0 | no | no |
+| CONSORZIO PER LE TECNOLOGIE DELL'INFORMAZIONE E COMUNICAZION… | controllo-pubblico-congiunto | Toscana | 1 |  |  |  | 0 |  |  |
 <!-- /GEN:tabella -->
 
 ## 5bis. Che cosa comprano e che cosa ricevono
@@ -207,11 +207,11 @@ Licenza CC BY 4.0 (citare il MEF per il censimento e questo progetto per le colo
 | file | contenuto | sha256 |
 |---|---|---|
 | [societa-ict-pa.csv](/dati/inhouse/societa-ict-pa.csv) | una riga per società ICT nel censimento MEF: classe, ATECO, enti, quote, fatturato, addetti, sito | `76ce38dbb93bb15d…` |
-| [opensource.csv](/dati/inhouse/opensource.csv) | per in-house e controllate: catalogo del riuso (editore, manutentore) e indizi dalla home page | `7405bc47164ded8a…` |
+| [opensource.csv](/dati/inhouse/opensource.csv) | per in-house e controllate: catalogo del riuso (editore, manutentore) e indizi dalla home page | `3db4383e3d58d76d…` |
 | [catalogo-riuso.csv](/dati/inhouse/catalogo-riuso.csv) | i software del catalogo Developers Italia legati a ciascuna società | `413d153cb0522ac9…` |
 | [vista.md](/dati/inhouse/vista.md) | che cosa comprano e che cosa ricevono dagli enti, per società (CIG ANAC dal 2024, per codice fiscale) | `bb31cdc53dfae569…` |
 | [riepilogo.json](/dati/inhouse/riepilogo.json) | conteggi, fonte con sha256, controprova con l'elenco Assinter | `111db66436b39ff3…` |
-| [opensource-riepilogo.json](/dati/inhouse/opensource-riepilogo.json) | conteggi dell'analisi open source e sha256 delle copie del catalogo | `fe79342111d49e4b…` |
+| [opensource-riepilogo.json](/dati/inhouse/opensource-riepilogo.json) | conteggi dell'analisi open source e sha256 delle copie del catalogo | `b4914727234cce92…` |
 <!-- /GEN:file -->
 
 ## 7. Limiti

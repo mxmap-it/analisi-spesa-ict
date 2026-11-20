@@ -4,6 +4,11 @@ Per chiunque riprenda il lavoro, umano o Claude. Si aggiorna a ogni avanzamento.
 
 **Ultimo aggiornamento:** 2026-11-19 sera
 
+## 20/11/2026 — #52 cloud in proprio, #82 società ICT pubbliche, #81 riproducibilità di tutte le fonti (agente)
+- **#82:** dataset `dati/inhouse/societa-ict-pa.csv` dal censimento MEF 2023 (mirror 2012-2023, `tools/acquisizione/mef_partecipazioni.sh`): 214 società ICT, classi in-house / controllata / controllo-pubblico-congiunto (quota pubblica ≥ 50 % a catena, decisione di Fabio) / partecipata; soci verificati a mano in `config/inhouse_soci.yaml`, siti in `config/inhouse_siti.yaml`; open source e riuso (Developers Italia + home page). Nei CIG si riconoscono per codice fiscale o partita IVA (`tools/verifiche/inhouse_cf.py` → `lavoro/inhouse/cig-cf.csv.gz`); `datacenter_proprio.py` 0.5 e `inhouse_vista.py` 0.2. Pagina `/rendiconti/societa-ict-pubbliche/`.
+- **Aperto per Fabio:** PSN (30 % pubblico certo, 55 % con Leonardo): parere giuridico in corso (`lavoro/inhouse/parere-psn.md`).
+- **#81:** inventario `config/fonti-verifiche.yaml` (92 strumenti), registro degli ingressi a 22 voci (git, archivio, archivio-tar, impronta), `tools/fonti.py verifica|pagina` (pagina `/progetto/fonti-e-dataset/`), prova `tools/verifiche/clone_pulito_fonti.sh` superata. Dopo nuovi esiti L4: `tools/ingressi_lavoro.py congela lavoro/imbuto/stati-finali.csv.gz`.
+
 ## 19/11/2026 sera — #74 chiuso, M12 mitigata, #73 quasi finito (agente)
 - **#74 chiuso:** B1 0.2 (`imbuto_bdncp.py`, esiti `esiti/2026-11-19/imbuto/bdncp/v0.2/`): 1.274 CIG / 130,6 M€ esclusi; campione a cieco 34/40 (Wilson 71-93 %); regola 0.3 in #80. SAL misto (5,06-19,17 mld, stima 10,71 [S]) e quadro economico (35,4 vs 38,2 mld, 373 CIG impossibili): `bdncp_sal_qe.py`, R87, rendiconto bdncp 0.3.
 - **M12 mitigata** (mappa 0.7): ict.csv ordinato per CIG in `imbuto.py` (produzione non rigenerata), euro al centesimo in `imbuto_strati.py`, ingressi fuori dal mirror in `config/ingressi-lavoro.yaml` + `tools/ingressi_lavoro.py` (git `dati/ingressi/`, cig_link.csv come blob). Resta il test completo alla prossima versione.

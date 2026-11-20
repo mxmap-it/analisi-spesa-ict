@@ -268,3 +268,10 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 - **Riproducibilità:** riguarda tutte le fonti usate e i dataset derivati nostri, non solo il mirror ANAC (#81).
 - **Accesso al MEF:** i 404 erano indirizzi vecchi (dt.mef.gov.it, pagine spostate su de.mef.gov.it); nessun blocco, nessun bisogno di altri IP. Restano valide le regole di AGENTS.md § 3 (niente rotazione di IP o proxy).
 - **Non specchiato:** il file dei rappresentanti negli organi delle società (nomi di persone).
+
+## 2026-11-20 — Società a controllo pubblico congiunto (Fabio, #82)
+
+**Chi:** Fabio («Sì, scrivi il metodo di valutazione così come proposto»). **Decisione:** nel dataset delle società ICT pubbliche una società senza controllo dichiarato ma con **quota pubblica ≥ 50 %** è «a controllo pubblico congiunto» (presunzione relativa: art. 2 d.lgs. 175/2016; ANAC delibere 1134/2017 e 859/2019, riferite da commenti, testo ufficiale da archiviare) e **conta come le controllate** nel cloud in proprio; le in-house restano solo quelle con controllo analogo o affidamento diretto.
+**Come (Claude):** quota pubblica = somma delle quote dirette dichiarate al censimento MEF da amministrazioni S13 e da società a loro volta pubbliche, calcolata a catena su tutto il censimento; verifica a mano dei soci (Società trasparente, bilanci, atti) per le attive con quota 30-50 % o con partecipazione indiretta e fatturato da 1 M€ (`config/inhouse_soci.yaml`, 3 risolte su 13). Società riconosciute nei CIG per codice fiscale o partita IVA (anagrafica ANAC delle stazioni appaltanti), non più per nome.
+**Aperto (decisione per Fabio):** i soci quotati controllati di fatto dallo Stato (Leonardo nel Polo Strategico Nazionale: 30 % pubblico certo, 55 % con Leonardo) non sono contati come pubblici.
+**Perché:** le società interamente pubbliche senza controllo dichiarato erano classificate come semplici partecipate; la norma e ANAC le trattano come a controllo pubblico.
