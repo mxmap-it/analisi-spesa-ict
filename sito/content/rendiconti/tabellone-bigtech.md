@@ -6,7 +6,7 @@ lastmod: 2026-11-21T12:00:00Z
 description: "Prima versione del tabellone per marchio del prodotto, dai CIG ANAC 2020-2026 classificati dall'imbuto: cloud, licenze e software installato, incerto."
 ---
 
-**Versione 0.3 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.4 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima o risultato parziale.
 
@@ -82,7 +82,18 @@ Controprova con la [dashboard dei contratti ICT](https://www.sovranita-digitale.
 
 **Perché differiscono.** (1) L'OCDS contiene circa un quinto degli affidamenti ([#38](https://github.com/mxmap-it/analisi-spesa-ict/issues/38)): noi troviamo 3-5 volte più CIG; (2) loro contano importi lordi, inclusi i massimali degli accordi quadro che noi togliamo, e per questo Microsoft risulta più alto da loro pur con meno contratti; (3) il filtro per CPV 48/72 perde gli acquisti classificati con CPV non ICT ([rapporto CPV](/rendiconti/perimetro-cpv/)). Lo stesso errore d'importo di Lunamatrona compare nelle loro anomalie (ANOM-020); quello di Roseto degli Abruzzi pesa invece ancora nel loro totale dei fornitori. Curiosità che spiega l'errore: i 384.350.435 € dichiarati sono la partita IVA del fornitore (Halley Informatica, 00384350435) scritta nel campo importo.
 
-## 7. Rifare il calcolo
+## 7. Università statali e AWS: un'ipotesi alla prova dei CIG [V]
+
+Ipotesi **riferita, non verificata** ([#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) voce D): le università starebbero spostando le infrastrutture su AWS con i fondi PNRR. Con i CIG delle 71 università statali (IndicePA categoria L17, 35.880 CIG 2020-2026):
+
+- **cloud certo**: 15,6 M€ in sette anni; **AWS diretto: 0,47 M€** (2021: 0,26; 2023: 0,03; 2025: 0,11; 2026: 0,07). Google 2,15 M€, Microsoft 1,06 M€, Oracle 0,75 M€, altri marchi 11,1 M€;
+- ancora **incerti** 320 M€ (strato S6), più 226 M€ di datacenter propri e 25,9 M€ affidati a in-house.
+
+**Conclusione [S].** Nei CIG diretti delle università la migrazione su AWS **non si vede**. Non si può però escludere: passerebbe da rivenditori o convenzioni con oggetti senza marchio, dai 320 M€ ancora incerti, o dai servizi del consorzio CINECA. Per chiuderla servono gli atti (accesso civico) o i dati dei progetti PNRR delle università.
+
+Comando: `python tools/verifiche/universita_cloud.py 2026-11-21` → `esiti/2026-11-21/statistiche/universita-cloud.{csv,json}`.
+
+## 8. Rifare il calcolo
 
 ```
 python tools/verifiche/tabellone_bigtech.py 2026-11-21
@@ -96,3 +107,4 @@ Ingressi: `lavoro/imbuto/stati-finali.csv.gz` e `lavoro/imbuto/ict.csv` (riprist
 | 0.1 | 2026-11-21 | Prima versione: tabellone per marchio e anno, tre colonne (#83 voce A). |
 | 0.2 | 2026-11-21 | Controprova con la posta degli enti da mxmap.it (#83 voce B). |
 | 0.3 | 2026-11-21 | Confronto con sovranita-digitale.it (#83 voce C). |
+| 0.4 | 2026-11-21 | Università statali e AWS (#83 voce D). |
