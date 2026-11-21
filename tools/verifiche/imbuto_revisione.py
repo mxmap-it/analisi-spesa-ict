@@ -98,7 +98,7 @@ def main():
         q = QE.get(r["cig"])
         if q:
             qv = float(q["qe_ultimo_importo"] or 0); r["sal_cumulato"] = q["sal_cumulato"]
-            if r["classe"] in ("incerto", "errore-importo") and 0 < qv < imp * 0.5:
+            if r["classe"] in ("incerto", "errore-importo") and 100 <= qv < imp * 0.5:  # QE < 100 €: implausibile, resta com'è (#83, R90)
                 r["classe"], r["via"], r["euro_netti"] = "spesa-effettiva", ("E4-qe-corregge-errore" if r["classe"] == "errore-importo" else "E4-qe"), qv
         out.append(r)
     agg = lambda f: sorted(((k, v) for k, v in _agg(out, f).items()), key=lambda x: str(x[0]))
