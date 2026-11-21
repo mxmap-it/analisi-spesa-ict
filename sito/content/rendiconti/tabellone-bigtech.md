@@ -6,7 +6,7 @@ lastmod: 2026-11-21T12:00:00Z
 description: "Prima versione del tabellone per marchio del prodotto, dai CIG ANAC 2020-2026 classificati dall'imbuto: cloud, licenze e software installato, incerto."
 ---
 
-**Versione 0.5 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.6 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima o risultato parziale.
 
@@ -48,9 +48,21 @@ Per ogni CIG che l'imbuto ha attribuito a un **marchio di prodotto** (lente prod
 
 «–» = non misurato in quell'anno (la verifica delle licenze copre in modo sistematico solo dal 2024; i valori 2021-2023 di «altri» vengono da altre vie dell'imbuto). Il 2026 è parziale: il mirror ANAC arriva al delta CIG del 1/10/2026.
 
-## 4. Copertura dei dati
+## 4. Copertura dei dati per trimestre [V]
 
-I CIG ANAC sono nel mirror fino al delta del 1/10/2026; i dati OCDS si fermano a marzo 2026 ([rapporto ANAC](/rendiconti/anac-2026-10-problemi/)). Il grafico per trimestre della copertura è previsto nella prossima versione.
+CIG pubblicati per trimestre nel mirror ANAC (tra parentesi quelli che l'imbuto tiene come ICT). Il mirror arriva al delta CIG del 1/10/2026: **il trimestre corrente (T4 2026) è di fatto assente** e il T3 2026 può ancora crescere con i delta successivi. I dati OCDS si fermano a marzo 2026 ([rapporto ANAC](/rendiconti/anac-2026-10-problemi/)).
+
+| anno | T1 | T2 | T3 | T4 |
+|---|---:|---:|---:|---:|
+| 2020 | 86.303 (3.801 ICT) | 88.481 (3.792 ICT) | 95.384 (3.722 ICT) | 118.446 (6.575 ICT) |
+| 2021 | 99.513 (4.383 ICT) | 112.695 (4.571 ICT) | 103.392 (4.181 ICT) | 115.861 (6.451 ICT) |
+| 2022 | 104.481 (7.376 ICT) | 122.510 (5.800 ICT) | 123.227 (4.844 ICT) | 141.080 (12.288 ICT) |
+| 2023 | 150.407 (16.487 ICT) | 174.964 (23.945 ICT) | 136.859 (23.071 ICT) | 194.393 (22.245 ICT) |
+| 2024 | 223.805 (12.705 ICT) | 319.094 (17.632 ICT) | 282.790 (19.367 ICT) | 399.414 (34.643 ICT) |
+| 2025 | 348.231 (29.387 ICT) | 369.306 (28.314 ICT) | 328.541 (22.955 ICT) | 418.328 (37.695 ICT) |
+| 2026 | 366.220 (32.837 ICT) | 360.857 (27.173 ICT) | 319.799 (24.715 ICT) | 2.183 (237 ICT) |
+
+Comando: `python tools/verifiche/copertura_trimestri.py 2026-11-21` → `esiti/2026-11-21/statistiche/copertura-trimestri.{csv,json}`.
 
 ## 5. Controprova con la posta degli enti (mxmap.it) [V]
 
@@ -81,6 +93,8 @@ Controprova con la [dashboard dei contratti ICT](https://www.sovranita-digitale.
 | Amazon | 16,1 M€ (49) | 82,2 M€ (253) |
 
 **Perché differiscono.** (1) L'OCDS contiene circa un quinto degli affidamenti ([#38](https://github.com/mxmap-it/analisi-spesa-ict/issues/38)): noi troviamo 3-5 volte più CIG; (2) loro contano importi lordi, inclusi i massimali degli accordi quadro che noi togliamo, e per questo Microsoft risulta più alto da loro pur con meno contratti; (3) il filtro per CPV 48/72 perde gli acquisti classificati con CPV non ICT ([rapporto CPV](/rendiconti/perimetro-cpv/)). Lo stesso errore d'importo di Lunamatrona compare nelle loro anomalie (ANOM-020); quello di Roseto degli Abruzzi pesa invece ancora nel loro totale dei fornitori. Curiosità che spiega l'errore: i 384.350.435 € dichiarati sono la partita IVA del fornitore (Halley Informatica, 00384350435) scritta nel campo importo.
+
+Non è stato possibile un confronto analogo con [dovevannoinostrisoldi.com](https://www.dovevannoinostrisoldi.com/): la piattaforma copre la spesa pubblica in generale, non pubblica una ripartizione per marchio ICT e i suoi dati passano da `/api/`, escluso dal robots.txt.
 
 ## 7. Università statali e AWS: un'ipotesi alla prova dei CIG [V]
 
@@ -118,3 +132,4 @@ Ingressi: `lavoro/imbuto/stati-finali.csv.gz` e `lavoro/imbuto/ict.csv` (riprist
 | 0.3 | 2026-11-21 | Confronto con sovranita-digitale.it (#83 voce C). |
 | 0.4 | 2026-11-21 | Università statali e AWS (#83 voce D). |
 | 0.5 | 2026-11-21 | Contesto: Strategia Cloud Italia 2027-2029 (#83 voce F). |
+| 0.6 | 2026-11-21 | Copertura dei dati per trimestre; nota su dovevannoinostrisoldi.com (#83 voci A e C). |
