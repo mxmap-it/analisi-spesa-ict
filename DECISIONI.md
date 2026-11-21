@@ -280,3 +280,6 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 
 **Chi:** Fabio («Sì, ma va indicata una classificazione differente come "controllata sostanzialmente" argomentando … sul fatto che non lo sia ancora giuridicamente»). **Decisione:** una società con quota pubblica di diritto sotto il 50 %, ma oltre il 50 % contando i soci quotati controllati dallo Stato, è «controllata sostanzialmente». Il PSN è il solo caso (30 % senza quotate, 55 % con Leonardo dal 2022, circa 100 % con TIM da settembre 2026). Argomenti di diritto contrari (quotate escluse da TUSP e trasparenza piena, controllo da provare in concreto, autoqualificazione di PSN, fuori da S13) nella pagina del dataset, § 2bis. Nessun effetto sulla giurisdizione (PSN è già cloud IT); il PSN non entra fra i servizi alle società pubbliche del cloud in proprio per non contarlo due volte.
 **Dopo:** approfondimento sulla giurisprudenza del Consiglio di Stato sul controllo «in concreto» e sul controllo indiretto tramite quotate (richiesto da Fabio, in corso).
+
+## 2026-11-21 — Niente colonna «livello di sovranità» (Fabio, #83 G)
+Proposta respinta: la qualifica di sovranità sarebbe una definizione nostra, non ufficiale. Si resta alle quattro giurisdizioni di mxmap.it (IT / UE / extra-UE / sconosciuta).
