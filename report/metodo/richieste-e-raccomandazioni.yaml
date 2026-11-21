@@ -940,3 +940,14 @@
   perche_serve: "Canoni, abbonamenti e piccoli SaaS dei piccoli enti passano per SmartCIG: senza CPV e fornitore non si può misurare per chi lavorano né distinguere il produttore dal rivenditore"
   metrica: "Quota di SmartCIG con CPV e con affidatario negli open data (oggi 0 %)"
   rif: ["#76", "M6", "P09"]
+- id: R90
+  destinatario: "ANAC (BDNCP, dataset CIG)"
+  tipo: qualità-del-dato
+  stato: "verificato (21/11/2026); proposta, nessuna richiesta inviata"
+  titolo: "In alcuni CIG il campo importo contiene la partita IVA del fornitore o un altro codice fiscale"
+  evidenza: "Nei 667.303 CIG dell'imbuto 0.3.4, 5 CIG ICT oltre 1 M€ hanno un importo uguale, cifra per cifra, al codice fiscale/partita IVA dell'aggiudicatario: 9,30 mld dichiarati in tutto. Esempio: B28410BF32 (Comune di Roseto degli Abruzzi, canone Halley 2024) dichiara 384.350.435 €, che è la partita IVA di Halley Informatica (00384350435); l'atto riporta circa 40.000 €. Gli altri: B139F77033, B36194DF99, B41E3CAF0B, B59FE95BB5. Il quadro economico ANAC dello stesso CIG di Roseto vale 41,98 €, anch'esso errato"
+  prova: "lavoro/imbuto/stati-finali.csv.gz × lavoro/inhouse/cig-cf.csv.gz (controllo importo = CF/P.IVA, #83); esiti/2026-11-06/imbuto/anac-qe-sal.csv"
+  richiesta: "In fase di inserimento rifiutare o segnalare gli importi uguali al codice fiscale/partita IVA dell'operatore economico o della stazione appaltante, e quelli oltre una soglia rispetto alla procedura (es. affidamento diretto oltre 140.000 €)"
+  perche_serve: "Un solo errore di questo tipo vale quanto la spesa ICT di un anno di migliaia di comuni e falsa ogni classifica di fornitori e committenti (anche in progetti civici terzi che riusano gli open data)"
+  metrica: "Numero di CIG con importo uguale a un codice fiscale presente nel CIG (oggi 5 sopra 1 M€ nel perimetro ICT)"
+  rif: ["#83", "R87"]

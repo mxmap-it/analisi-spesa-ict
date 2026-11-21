@@ -80,7 +80,7 @@ Controprova con la [dashboard dei contratti ICT](https://www.sovranita-digitale.
 | Google | 30,0 M€ (166) | 58,7 M€ (564) |
 | Amazon | 16,1 M€ (49) | 82,2 M€ (253) |
 
-**Perché differiscono.** (1) L'OCDS contiene circa un quinto degli affidamenti ([#38](https://github.com/mxmap-it/analisi-spesa-ict/issues/38)): noi troviamo 3-5 volte più CIG; (2) loro contano importi lordi, inclusi i massimali degli accordi quadro che noi togliamo, e per questo Microsoft risulta più alto da loro pur con meno contratti; (3) il filtro per CPV 48/72 perde gli acquisti classificati con CPV non ICT ([rapporto CPV](/rendiconti/perimetro-cpv/)). Lo stesso errore d'importo di Lunamatrona compare nelle loro anomalie (ANOM-020); quello di Roseto degli Abruzzi (384 M€ dichiarati per un canone Halley) pesa invece ancora nel loro totale dei fornitori.
+**Perché differiscono.** (1) L'OCDS contiene circa un quinto degli affidamenti ([#38](https://github.com/mxmap-it/analisi-spesa-ict/issues/38)): noi troviamo 3-5 volte più CIG; (2) loro contano importi lordi, inclusi i massimali degli accordi quadro che noi togliamo, e per questo Microsoft risulta più alto da loro pur con meno contratti; (3) il filtro per CPV 48/72 perde gli acquisti classificati con CPV non ICT ([rapporto CPV](/rendiconti/perimetro-cpv/)). Lo stesso errore d'importo di Lunamatrona compare nelle loro anomalie (ANOM-020); quello di Roseto degli Abruzzi pesa invece ancora nel loro totale dei fornitori. Curiosità che spiega l'errore: i 384.350.435 € dichiarati sono la partita IVA del fornitore (Halley Informatica, 00384350435) scritta nel campo importo.
 
 ## 7. Rifare il calcolo
 
