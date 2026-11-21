@@ -1,0 +1,1273 @@
+{
+ "versione": "0.2.0",
+ "data": "2026-11-21",
+ "strumento": "tools/verifiche/imbuto_spostamenti.py",
+ "ingressi": {
+  "tetti": {
+   "file": "esiti/2026-11-18/imbuto/tetti-cig-v2.csv",
+   "sha256": "9c90ebbcf32248f01be7d1474a4494e63f981444091787bac57f1f6a02239987"
+  },
+  "L2": {
+   "file": "esiti/2026-11-18/imbuto/raffinamento-l2.csv",
+   "sha256": "536cef26752663e344a6c7e0ef9ca48fb0584dab15fada3c0af9b6af36e06018"
+  },
+  "L3": {
+   "file": "esiti/2026-11-18/imbuto/raffinamento-l3.csv",
+   "sha256": "d1d5d5657ccd752c7c2a83753cfeaf90872f3e7fd43b6d6aaf0128bd6f0f3bd8"
+  },
+  "B": {
+   "file": "esiti/2026-11-19/imbuto/bdncp/v0.2/segnali.csv.gz",
+   "sha256": "4143155146ca0d39c9366a1a66ad0542e6a1179f6e70740110f73ef325f07659"
+  },
+  "LIC": {
+   "file": "esiti/2026-11-18/imbuto/licenze-cig.csv",
+   "sha256": "1cc5cc5e569bc731b0a33a83ece5fcec9eb2016b82e4a72c4436e86447fae3a7"
+  },
+  "V6R": {
+   "file": "dati/classificazioni/imbuto-revisione.jsonl",
+   "sha256": "e930514fccd8e11e737115eb9febfe6bd4cb8dca1bc0e224222429c973b7f7c4"
+  },
+  "DC": {
+   "file": "esiti/2026-11-20/imbuto/datacenter/datacenter-cig.csv.gz",
+   "sha256": "6773f03cd5bb20a2b907ea3f0f818a30199993d178e4fb3cec96b95013e09cc3"
+  },
+  "L4": {
+   "cartella": "report/metodo/llm/raffinamento-l4/esiti",
+   "file": 412
+  },
+  "ict": {
+   "file": "lavoro/imbuto/ict.csv"
+  },
+  "manuali": [
+   "esiti/2026-11-20/imbuto/inhouse-verifica/spostamenti-inhouse.csv"
+  ]
+ },
+ "priorita": [
+  {
+   "livello": "MAN",
+   "descrizione": "verifica manuale sugli atti (un contratto alla volta)"
+  },
+  {
+   "livello": "L4",
+   "descrizione": "Claude Opus con gli atti di gara (fonte primaria)"
+  },
+  {
+   "livello": "V6R",
+   "descrizione": "via 6 con revisione C1-C4 controvalidata"
+  },
+  {
+   "livello": "B2",
+   "descrizione": "in-house: aggiudicatario confrontato con l'Indice PA (BDNCP)"
+  },
+  {
+   "livello": "B1",
+   "descrizione": "quadro economico BDNCP: lavori >= 80 %"
+  },
+  {
+   "livello": "L3",
+   "descrizione": "Claude Opus sul testo, solo certezza alta"
+  },
+  {
+   "livello": "LIC",
+   "descrizione": "regole delle licenze (rendiconto imbuto § 4.5)"
+  },
+  {
+   "livello": "L2",
+   "descrizione": "regole sul testo (stampanti, consumabili, cablaggio)"
+  }
+ ],
+ "stati": {
+  "fuori-misura": "fuori misura (S0 padre AQ, S2 sotto soglia)",
+  "escluso-non-ict": "escluso certo, non ICT",
+  "ict-non-cloud": "ICT non cloud",
+  "cloud-certo": "incluso certo: cloud",
+  "inhouse-certo": "incluso certo: infrastruttura in-house",
+  "dc-proprio": "incluso certo: cloud in proprio (datacenter dell'ente)",
+  "incerto-marchio": "incerto: marchio o lotto noto, da attribuire",
+  "incerto-s6": "incerto: residuo S6"
+ },
+ "spostamenti_proposti": 14696,
+ "cig_toccati": 14436,
+ "cig_non_in_imbuto": 0,
+ "cig_non_in_imbuto_esempi": [],
+ "prima": [
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo"
+   ],
+   "cig": 1551,
+   "euro_lordi": 758629106.83,
+   "euro_netti_tetti": 758629106.83
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "fuori-misura"
+   ],
+   "cig": 129911,
+   "euro_lordi": 415351300346.46,
+   "euro_netti_tetti": 415351300346.46
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "ict-non-cloud"
+   ],
+   "cig": 124844,
+   "euro_lordi": 34166228368.38,
+   "euro_netti_tetti": 34166228368.38
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-marchio"
+   ],
+   "cig": 2353,
+   "euro_lordi": 2139452327.31,
+   "euro_netti_tetti": 2139452327.31
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-s6"
+   ],
+   "cig": 25245,
+   "euro_lordi": 8917631367.02,
+   "euro_netti_tetti": 8917631367.02
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo"
+   ],
+   "cig": 146,
+   "euro_lordi": 52904349.1,
+   "euro_netti_tetti": 52904349.1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo"
+   ],
+   "cig": 4556,
+   "euro_lordi": 1213641376.74,
+   "euro_netti_tetti": 1086440663.76
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "fuori-misura"
+   ],
+   "cig": 94061,
+   "euro_lordi": 391696049480.58,
+   "euro_netti_tetti": 391696049480.58
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "ict-non-cloud"
+   ],
+   "cig": 220525,
+   "euro_lordi": 90762889153.91,
+   "euro_netti_tetti": 40011982595.09
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio"
+   ],
+   "cig": 3889,
+   "euro_lordi": 5371595264.7,
+   "euro_netti_tetti": 2846266770.88
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6"
+   ],
+   "cig": 59406,
+   "euro_lordi": 16369710500.51,
+   "euro_netti_tetti": 11698637769.41
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo"
+   ],
+   "cig": 816,
+   "euro_lordi": 658177728.85,
+   "euro_netti_tetti": 415777728.85
+  }
+ ],
+ "dopo": [
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo"
+   ],
+   "cig": 1551,
+   "euro_lordi": 758629106.83,
+   "euro_netti_tetti": 758629106.83
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "dc-proprio"
+   ],
+   "cig": 4287,
+   "euro_lordi": 1634071451.89,
+   "euro_netti_tetti": 1634071451.89
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "escluso-non-ict"
+   ],
+   "cig": 607,
+   "euro_lordi": 554160074.66,
+   "euro_netti_tetti": 554160074.66
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "fuori-misura"
+   ],
+   "cig": 129911,
+   "euro_lordi": 415351300346.46,
+   "euro_netti_tetti": 415351300346.46
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "ict-non-cloud"
+   ],
+   "cig": 121265,
+   "euro_lordi": 32802951404.15,
+   "euro_netti_tetti": 32802951404.15
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-marchio"
+   ],
+   "cig": 1924,
+   "euro_lordi": 1776825322.99,
+   "euro_netti_tetti": 1776825322.99
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-s6"
+   ],
+   "cig": 24478,
+   "euro_lordi": 8494310285.37,
+   "euro_netti_tetti": 8494310285.37
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo"
+   ],
+   "cig": 27,
+   "euro_lordi": 13897872.75,
+   "euro_netti_tetti": 13897872.75
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo"
+   ],
+   "cig": 5060,
+   "euro_lordi": 1416019916.41,
+   "euro_netti_tetti": 1288819203.43
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "dc-proprio"
+   ],
+   "cig": 7849,
+   "euro_lordi": 2087529112.02,
+   "euro_netti_tetti": 1938879512.02
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "escluso-non-ict"
+   ],
+   "cig": 1618,
+   "euro_lordi": 192611965.35,
+   "euro_netti_tetti": 192611965.35
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "fuori-misura"
+   ],
+   "cig": 94062,
+   "euro_lordi": 391696049480.58,
+   "euro_netti_tetti": 391696049480.58
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "ict-non-cloud"
+   ],
+   "cig": 224728,
+   "euro_lordi": 91505032510.87,
+   "euro_netti_tetti": 40421883954.79
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio"
+   ],
+   "cig": 1765,
+   "euro_lordi": 3950767440.76,
+   "euro_netti_tetti": 1655269892.76
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6"
+   ],
+   "cig": 47440,
+   "euro_lordi": 14707860097.34,
+   "euro_netti_tetti": 10287848017.67
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo"
+   ],
+   "cig": 731,
+   "euro_lordi": 143616626.66,
+   "euro_netti_tetti": 143616626.66
+  }
+ ],
+ "giurisdizione_prima": [
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "EXTRA-UE"
+   ],
+   "cig": 1253,
+   "euro_lordi": 659147128.49,
+   "euro_netti_tetti": 659147128.49
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "IT"
+   ],
+   "cig": 258,
+   "euro_lordi": 70507145.43,
+   "euro_netti_tetti": 70507145.43
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "UE"
+   ],
+   "cig": 40,
+   "euro_lordi": 28974832.91,
+   "euro_netti_tetti": 28974832.91
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo",
+    "IT"
+   ],
+   "cig": 146,
+   "euro_lordi": 52904349.1,
+   "euro_netti_tetti": 52904349.1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "EXTRA-UE"
+   ],
+   "cig": 3939,
+   "euro_lordi": 886648341.05,
+   "euro_netti_tetti": 828403806.03
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "IT"
+   ],
+   "cig": 529,
+   "euro_lordi": 67174722.94,
+   "euro_netti_tetti": 67174722.94
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "UE"
+   ],
+   "cig": 88,
+   "euro_lordi": 259818312.75,
+   "euro_netti_tetti": 190862134.79
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "IT"
+   ],
+   "cig": 816,
+   "euro_lordi": 658177728.85,
+   "euro_netti_tetti": 415777728.85
+  }
+ ],
+ "giurisdizione_dopo": [
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "EXTRA-UE"
+   ],
+   "cig": 1253,
+   "euro_lordi": 659147128.49,
+   "euro_netti_tetti": 659147128.49
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "IT"
+   ],
+   "cig": 258,
+   "euro_lordi": 70507145.43,
+   "euro_netti_tetti": 70507145.43
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "cloud-certo",
+    "UE"
+   ],
+   "cig": 40,
+   "euro_lordi": 28974832.91,
+   "euro_netti_tetti": 28974832.91
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "dc-proprio",
+    "IT"
+   ],
+   "cig": 4287,
+   "euro_lordi": 1634071451.89,
+   "euro_netti_tetti": 1634071451.89
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo",
+    "IT"
+   ],
+   "cig": 27,
+   "euro_lordi": 13897872.75,
+   "euro_netti_tetti": 13897872.75
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "EXTRA-UE"
+   ],
+   "cig": 4223,
+   "euro_lordi": 1022842605.17,
+   "euro_netti_tetti": 964598070.15
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "IT"
+   ],
+   "cig": 711,
+   "euro_lordi": 83111789.27,
+   "euro_netti_tetti": 83111789.27
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "UE"
+   ],
+   "cig": 121,
+   "euro_lordi": 308454542.27,
+   "euro_netti_tetti": 239498364.31
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "cloud-certo",
+    "non determinata"
+   ],
+   "cig": 5,
+   "euro_lordi": 1610979.69,
+   "euro_netti_tetti": 1610979.69
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "dc-proprio",
+    "IT"
+   ],
+   "cig": 7849,
+   "euro_lordi": 2087529112.02,
+   "euro_netti_tetti": 1938879512.02
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "IT"
+   ],
+   "cig": 731,
+   "euro_lordi": 143616626.66,
+   "euro_netti_tetti": 143616626.66
+  }
+ ],
+ "flussi_netti": [
+  {
+   "chiave": [
+    "2020-2023",
+    "ict-non-cloud",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 3331,
+   "euro_lordi": 1084758716.23,
+   "euro_netti_tetti": 1084758716.23
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "ict-non-cloud",
+    "escluso-non-ict",
+    "B1"
+   ],
+   "cig": 239,
+   "euro_lordi": 271528202.45,
+   "euro_netti_tetti": 271528202.45
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "ict-non-cloud",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 9,
+   "euro_lordi": 6990045.55,
+   "euro_netti_tetti": 6990045.55
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-marchio",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 507,
+   "euro_lordi": 388301202.71,
+   "euro_netti_tetti": 388301202.71
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-marchio",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 1,
+   "euro_lordi": 162300.0,
+   "euro_netti_tetti": 162300.0
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-s6",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 398,
+   "euro_lordi": 139239209.44,
+   "euro_netti_tetti": 139239209.44
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-s6",
+    "escluso-non-ict",
+    "B1"
+   ],
+   "cig": 368,
+   "euro_lordi": 282631872.21,
+   "euro_netti_tetti": 282631872.21
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "incerto-s6",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 1,
+   "euro_lordi": 1450000.0,
+   "euro_netti_tetti": 1450000.0
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 51,
+   "euro_lordi": 21772323.51,
+   "euro_netti_tetti": 21772323.51
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "inhouse-certo",
+    "incerto-marchio",
+    "B2"
+   ],
+   "cig": 79,
+   "euro_lordi": 25836498.39,
+   "euro_netti_tetti": 25836498.39
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "ict-non-cloud",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 5938,
+   "euro_lordi": 1005980669.41,
+   "euro_netti_tetti": 1005980669.41
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "ict-non-cloud",
+    "escluso-non-ict",
+    "B1"
+   ],
+   "cig": 417,
+   "euro_lordi": 19963609.76,
+   "euro_netti_tetti": 19963609.76
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "ict-non-cloud",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 104,
+   "euro_lordi": 18087561.73,
+   "euro_netti_tetti": 18087561.73
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio",
+    "cloud-certo",
+    "LIC"
+   ],
+   "cig": 304,
+   "euro_lordi": 159875088.48,
+   "euro_netti_tetti": 159875088.48
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 740,
+   "euro_lordi": 559160006.72,
+   "euro_netti_tetti": 410510406.72
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio",
+    "ict-non-cloud",
+    "LIC"
+   ],
+   "cig": 1083,
+   "euro_lordi": 698776259.89,
+   "euro_netti_tetti": 617594914.07
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-marchio",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 33,
+   "euro_lordi": 13167259.78,
+   "euro_netti_tetti": 13167259.78
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "cloud-certo",
+    "L4"
+   ],
+   "cig": 27,
+   "euro_lordi": 1965375.07,
+   "euro_netti_tetti": 1965375.07
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "cloud-certo",
+    "V6R"
+   ],
+   "cig": 9,
+   "euro_lordi": 27249209.89,
+   "euro_netti_tetti": 27249209.89
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 1118,
+   "euro_lordi": 362508252.66,
+   "euro_netti_tetti": 362508252.66
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "escluso-non-ict",
+    "B1"
+   ],
+   "cig": 842,
+   "euro_lordi": 109777194.85,
+   "euro_netti_tetti": 109777194.85
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "escluso-non-ict",
+    "L3"
+   ],
+   "cig": 297,
+   "euro_lordi": 53328030.3,
+   "euro_netti_tetti": 53328030.3
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "escluso-non-ict",
+    "L4"
+   ],
+   "cig": 62,
+   "euro_lordi": 9543130.44,
+   "euro_netti_tetti": 9543130.44
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "ict-non-cloud",
+    "L2"
+   ],
+   "cig": 6895,
+   "euro_lordi": 465983869.94,
+   "euro_netti_tetti": 465983869.94
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "ict-non-cloud",
+    "L3"
+   ],
+   "cig": 2255,
+   "euro_lordi": 112224279.82,
+   "euro_netti_tetti": 112224279.82
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "ict-non-cloud",
+    "L4"
+   ],
+   "cig": 407,
+   "euro_lordi": 105604235.87,
+   "euro_netti_tetti": 105604235.87
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "ict-non-cloud",
+    "V6R"
+   ],
+   "cig": 22,
+   "euro_lordi": 403586552.34,
+   "euro_netti_tetti": 152525900.91
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "incerto-s6",
+    "inhouse-certo",
+    "DC"
+   ],
+   "cig": 32,
+   "euro_lordi": 2926816.68,
+   "euro_netti_tetti": 2926816.68
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "cloud-certo",
+    "MAN"
+   ],
+   "cig": 164,
+   "euro_lordi": 13288866.22,
+   "euro_netti_tetti": 13288866.22
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "dc-proprio",
+    "DC"
+   ],
+   "cig": 52,
+   "euro_lordi": 42625999.0,
+   "euro_netti_tetti": 42625999.0
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "dc-proprio",
+    "MAN"
+   ],
+   "cig": 1,
+   "euro_lordi": 117254184.23,
+   "euro_netti_tetti": 117254184.23
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "fuori-misura",
+    "MAN"
+   ],
+   "cig": 1,
+   "euro_lordi": 0.0,
+   "euro_netti_tetti": 0.0
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "inhouse-certo",
+    "incerto-marchio",
+    "B2"
+   ],
+   "cig": 36,
+   "euro_lordi": 10150790.93,
+   "euro_netti_tetti": 10150790.93
+  }
+ ],
+ "datacenter_per_famiglia": [
+  {
+   "chiave": [
+    "2020-2023",
+    "backup"
+   ],
+   "cig": 68,
+   "euro_lordi": 11833975.14,
+   "euro_netti_tetti": 11833975.14
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "calcolo-scientifico"
+   ],
+   "cig": 324,
+   "euro_lordi": 154011172.55,
+   "euro_netti_tetti": 154011172.55
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "server-storage"
+   ],
+   "cig": 2326,
+   "euro_lordi": 701620466.46,
+   "euro_netti_tetti": 701620466.46
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "servizio-inhouse"
+   ],
+   "cig": 12,
+   "euro_lordi": 8645920.55,
+   "euro_netti_tetti": 8645920.55
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "sito"
+   ],
+   "cig": 888,
+   "euro_lordi": 348617423.78,
+   "euro_netti_tetti": 348617423.78
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "virtualizzazione"
+   ],
+   "cig": 681,
+   "euro_lordi": 417988413.96,
+   "euro_netti_tetti": 417988413.96
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "backup"
+   ],
+   "cig": 165,
+   "euro_lordi": 16359848.66,
+   "euro_netti_tetti": 16359848.66
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "calcolo-scientifico"
+   ],
+   "cig": 638,
+   "euro_lordi": 315933062.84,
+   "euro_netti_tetti": 315933062.84
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "server-storage"
+   ],
+   "cig": 4130,
+   "euro_lordi": 643259210.59,
+   "euro_netti_tetti": 643259210.59
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "servizio-inhouse"
+   ],
+   "cig": 293,
+   "euro_lordi": 66051221.03,
+   "euro_netti_tetti": 66051221.03
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "sito"
+   ],
+   "cig": 1951,
+   "euro_lordi": 569875163.81,
+   "euro_netti_tetti": 499875163.81
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "virtualizzazione"
+   ],
+   "cig": 965,
+   "euro_lordi": 542101826.12,
+   "euro_netti_tetti": 463452226.12
+  }
+ ],
+ "effetto_per_livello_lordo_doppioni": [
+  {
+   "chiave": [
+    "2020-2023",
+    "B1",
+    "ict-non-cloud",
+    "escluso-non-ict"
+   ],
+   "cig": 239,
+   "euro_lordi": 271528202.45,
+   "euro_netti_tetti": 271528202.45
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "B1",
+    "incerto-s6",
+    "escluso-non-ict"
+   ],
+   "cig": 368,
+   "euro_lordi": 282631872.21,
+   "euro_netti_tetti": 282631872.21
+  },
+  {
+   "chiave": [
+    "2020-2023",
+    "B2",
+    "inhouse-certo",
+    "incerto-marchio"
+   ],
+   "cig": 131,
+   "euro_lordi": 47652396.9,
+   "euro_netti_tetti": 47652396.9
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B1",
+    "ict-non-cloud",
+    "escluso-non-ict"
+   ],
+   "cig": 417,
+   "euro_lordi": 19963609.76,
+   "euro_netti_tetti": 19963609.76
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B1",
+    "incerto-s6",
+    "escluso-non-ict"
+   ],
+   "cig": 857,
+   "euro_lordi": 110658642.6,
+   "euro_netti_tetti": 110658642.6
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2",
+    "inhouse-certo",
+    "incerto-marchio"
+   ],
+   "cig": 378,
+   "euro_lordi": 580612323.22,
+   "euro_netti_tetti": 338212323.22
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L2",
+    "incerto-s6",
+    "ict-non-cloud"
+   ],
+   "cig": 6980,
+   "euro_lordi": 470171846.41,
+   "euro_netti_tetti": 470171846.41
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L3",
+    "incerto-s6",
+    "escluso-non-ict"
+   ],
+   "cig": 308,
+   "euro_lordi": 55004068.92,
+   "euro_netti_tetti": 55004068.92
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L3",
+    "incerto-s6",
+    "ict-non-cloud"
+   ],
+   "cig": 2260,
+   "euro_lordi": 112377728.6,
+   "euro_netti_tetti": 112377728.6
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L4",
+    "incerto-s6",
+    "cloud-certo"
+   ],
+   "cig": 27,
+   "euro_lordi": 9118830.38,
+   "euro_netti_tetti": 9118830.38
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L4",
+    "incerto-s6",
+    "escluso-non-ict"
+   ],
+   "cig": 62,
+   "euro_lordi": 9543130.44,
+   "euro_netti_tetti": 9543130.44
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "L4",
+    "incerto-s6",
+    "ict-non-cloud"
+   ],
+   "cig": 410,
+   "euro_lordi": 105781566.31,
+   "euro_netti_tetti": 105781566.31
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "LIC",
+    "incerto-marchio",
+    "cloud-certo"
+   ],
+   "cig": 304,
+   "euro_lordi": 159875088.48,
+   "euro_netti_tetti": 159875088.48
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "LIC",
+    "incerto-marchio",
+    "ict-non-cloud"
+   ],
+   "cig": 1758,
+   "euro_lordi": 1197806830.85,
+   "euro_netti_tetti": 967975885.03
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "cloud-certo"
+   ],
+   "cig": 164,
+   "euro_lordi": 136311766.22,
+   "euro_netti_tetti": 136311766.22
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "dc-proprio"
+   ],
+   "cig": 1,
+   "euro_lordi": 117254184.23,
+   "euro_netti_tetti": 117254184.23
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "MAN",
+    "inhouse-certo",
+    "fuori-misura"
+   ],
+   "cig": 1,
+   "euro_lordi": 242400000.0,
+   "euro_netti_tetti": 0.0
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "V6R",
+    "incerto-s6",
+    "cloud-certo"
+   ],
+   "cig": 9,
+   "euro_lordi": 27249209.89,
+   "euro_netti_tetti": 27249209.89
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "V6R",
+    "incerto-s6",
+    "ict-non-cloud"
+   ],
+   "cig": 22,
+   "euro_lordi": 403586552.34,
+   "euro_netti_tetti": 152525900.91
+  }
+ ],
+ "disaccordi": [
+  {
+   "chiave": [
+    "dal-2024",
+    "B1:escluso-non-ict vs L2:ict-non-cloud"
+   ],
+   "cig": 67
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B1:escluso-non-ict vs L3:ict-non-cloud"
+   ],
+   "cig": 1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B1:escluso-non-ict vs L4:ict-non-cloud"
+   ],
+   "cig": 12
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:cloud-certo"
+   ],
+   "cig": 164
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:dc-proprio"
+   ],
+   "cig": 1
+  },
+  {
+   "chiave": [
+    "dal-2024",
+    "B2:incerto-marchio vs MAN:fuori-misura"
+   ],
+   "cig": 1
+  }
+ ]
+}

@@ -49,11 +49,11 @@ ingressi:
   via: git
   usato_da: tools/verifiche/inhouse_vista.py e pagine del cloud in proprio
   rigenera: tools/verifiche/imbuto_spostamenti.py AAAA-MM-GG
-  sha256: 7f3bc94f7f20265d4abe0919b8731fe564de35cec9436697ae0291dc0d3c7ab7
-  byte: 8591279
-  data_file: '2026-11-20'
+  sha256: 5014261ba76861118dbbc7a70506685ec728bc62c4e7d10c9478f28631e0494d
+  byte: 8591923
+  data_file: '2026-11-21'
   copia: dati/ingressi/imbuto/stati-finali.csv.gz.gz
-  sha256_copia: 3691c24fa6e2341e8d0ab2c46ee2d9a402ff05ad947a10b252f85cbe0cd8e6f9
+  sha256_copia: 4adc202378c9ff601ceef97c3a11bfc977a2bb28dca4803192fa2e5dfd6a6d8c
 - percorso: lavoro/inhouse/cig-cf.csv.gz
   via: git
   usato_da: tools/verifiche/datacenter_proprio.py, inhouse_vista.py (#82)
