@@ -6,7 +6,7 @@ lastmod: 2026-11-21T12:00:00Z
 description: "Prima versione del tabellone per marchio del prodotto, dai CIG ANAC 2020-2026 classificati dall'imbuto: cloud, licenze e software installato, incerto."
 ---
 
-**Versione 0.4 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.5 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima o risultato parziale.
 
@@ -93,7 +93,16 @@ Ipotesi **riferita, non verificata** ([#83](https://github.com/mxmap-it/analisi-
 
 Comando: `python tools/verifiche/universita_cloud.py 2026-11-21` → `esiti/2026-11-21/statistiche/universita-cloud.{csv,json}`.
 
-## 8. Rifare il calcolo
+## 8. Contesto: la Strategia Cloud Italia 2027-2029
+
+Il 16/11/2026 il Comitato interministeriale per la transizione digitale ha approvato la nuova Strategia Cloud Italia 2027-2029 ([annuncio del Dipartimento](https://innovazione.gov.it/notizie/articoli/strategia-cloud-italia-2027-2029-levoluzione-delle-infrastrutture-digitali-del-nostro-paese/), archiviato, sha256 `517de8b9…`). Entra in vigore nel 2027 dopo la Conferenza unificata; **il testo integrale non è ancora pubblicato** ([#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) voce F). Dall'annuncio, due obiettivi toccano direttamente questa misura:
+
+- «promuovere soluzioni tecnologiche europee e open-source, **mappando e riducendo le dipendenze da fornitori extra-UE**»: è esattamente ciò che il tabellone prova a misurare, e la Strategia non dice ancora con quale base dati;
+- un «ecosistema nazionale federato» del PSN con le **infrastrutture territoriali adeguate**: rientra nella misura del [cloud in proprio](/rendiconti/cloud-in-proprio/) e delle [società ICT pubbliche](/rendiconti/societa-ict-pubbliche/).
+
+Raccomandazione annotata (R91): pubblicare il testo e la **base di partenza** della mappatura delle dipendenze extra-UE, con il metodo, perché sia ripetibile da chiunque.
+
+## 9. Rifare il calcolo
 
 ```
 python tools/verifiche/tabellone_bigtech.py 2026-11-21
@@ -108,3 +117,4 @@ Ingressi: `lavoro/imbuto/stati-finali.csv.gz` e `lavoro/imbuto/ict.csv` (riprist
 | 0.2 | 2026-11-21 | Controprova con la posta degli enti da mxmap.it (#83 voce B). |
 | 0.3 | 2026-11-21 | Confronto con sovranita-digitale.it (#83 voce C). |
 | 0.4 | 2026-11-21 | Università statali e AWS (#83 voce D). |
+| 0.5 | 2026-11-21 | Contesto: Strategia Cloud Italia 2027-2029 (#83 voce F). |
