@@ -1,0 +1,37 @@
+{
+ "versione": "0.1",
+ "strumento": "tools/verifiche/posta_acquisti.py",
+ "giorno": "2026-11-21",
+ "mxmap_generato": "2026-11-21T12:24:49Z",
+ "enti_mxmap": 22912,
+ "enti_con_cf": 14915,
+ "finestra_anni": [
+  "2023",
+  "2024",
+  "2025",
+  "2026"
+ ],
+ "per_provider_di_posta": {
+  "microsoft": {
+   "enti": 1854,
+   "con_acquisti_Microsoft": 557,
+   "con_acquisti_Google": 29,
+   "quota_Microsoft": 30.0,
+   "quota_Google": 1.6
+  },
+  "google": {
+   "enti": 5750,
+   "con_acquisti_Microsoft": 155,
+   "con_acquisti_Google": 169,
+   "quota_Microsoft": 2.7,
+   "quota_Google": 2.9
+  },
+  "altro": {
+   "enti": 7311,
+   "con_acquisti_Microsoft": 341,
+   "con_acquisti_Google": 79,
+   "quota_Microsoft": 4.7,
+   "quota_Google": 1.1
+  }
+ }
+}

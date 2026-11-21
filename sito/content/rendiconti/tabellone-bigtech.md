@@ -6,7 +6,7 @@ lastmod: 2026-11-21T12:00:00Z
 description: "Prima versione del tabellone per marchio del prodotto, dai CIG ANAC 2020-2026 classificati dall'imbuto: cloud, licenze e software installato, incerto."
 ---
 
-**Versione 0.1 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.2 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima o risultato parziale.
 
@@ -46,13 +46,30 @@ Per ogni CIG che l'imbuto ha attribuito a un **marchio di prodotto** (lente prod
 | altri | 20/–/64 | 72/45/63 | 79/33/80 | 165/1/101 | 212/82/39 | 261/203/32 | 177/209/20 |
 <!-- /GEN:anni -->
 
-«–» = non misurato in quell'anno. Il 2026 è parziale: il mirror ANAC arriva al delta CIG del 1/10/2026.
+«–» = non misurato in quell'anno (la verifica delle licenze copre in modo sistematico solo dal 2024; i valori 2021-2023 di «altri» vengono da altre vie dell'imbuto). Il 2026 è parziale: il mirror ANAC arriva al delta CIG del 1/10/2026.
 
 ## 4. Copertura dei dati
 
 I CIG ANAC sono nel mirror fino al delta del 1/10/2026; i dati OCDS si fermano a marzo 2026 ([rapporto ANAC](/rendiconti/anac-2026-10-problemi/)). Il grafico per trimestre della copertura è previsto nella prossima versione.
 
-## 5. Rifare il calcolo
+## 5. Controprova con la posta degli enti (mxmap.it) [V]
+
+Seconda via indipendente ([#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) voce B): la scansione di [mxmap.it](https://mxmap.it/) dice su quale piattaforma ogni ente ha la posta; i CIG 2023-2026 dicono se l'ente ha acquisti con quel marchio riconosciuti dalla lente prodotto. Abbinati tramite IndicePA (codice IPA → codice fiscale) 14.915 enti su 22.912.
+
+| posta dell'ente | enti | con acquisti Microsoft | con acquisti Google |
+|---|---:|---:|---:|
+| Microsoft | 1.854 | 557 (30,0 %) | 29 (1,6 %) |
+| Google | 5.750 | 155 (2,7 %) | 169 (2,9 %) |
+| altri provider | 7.311 | 341 (4,7 %) | 79 (1,1 %) |
+
+**Cosa ci dice.**
+- La lente prodotto riconosce Microsoft dove Microsoft c'è davvero: gli enti con posta Microsoft hanno acquisti Microsoft **6 volte** più spesso degli altri.
+- Ma **il 70 % degli enti con posta Microsoft non ha nessun CIG Microsoft riconosciuto**: la spesa passa da convenzioni, rivenditori o oggetti senza marchio. È la misura del punto cieco della lente, e il motivo per cui il tabellone è un minimo, non un totale [S].
+- Per Google lo scarto è piccolo (2,9 % contro 1,1 %): molti enti con posta Google sono scuole, che usano Google Workspace for Education senza un contratto a pagamento.
+
+Comando: `python tools/verifiche/posta_acquisti.py 2026-11-21` → `esiti/2026-11-21/statistiche/posta-acquisti.json`.
+
+## 6. Rifare il calcolo
 
 ```
 python tools/verifiche/tabellone_bigtech.py 2026-11-21
@@ -64,3 +81,4 @@ Ingressi: `lavoro/imbuto/stati-finali.csv.gz` e `lavoro/imbuto/ict.csv` (riprist
 | versione | data | cosa cambia |
 |---|---|---|
 | 0.1 | 2026-11-21 | Prima versione: tabellone per marchio e anno, tre colonne (#83 voce A). |
+| 0.2 | 2026-11-21 | Controprova con la posta degli enti da mxmap.it (#83 voce B). |
