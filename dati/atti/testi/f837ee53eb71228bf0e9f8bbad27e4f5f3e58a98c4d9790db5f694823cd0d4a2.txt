@@ -1,0 +1,1493 @@
+                                                                         Indice
+Che cos’è Traffic Scanner ........................................................................................................... 3
+Come funziona Traffic Scanner ................................................................................................... 3
+Il varco.................................................................................................................................... 3
+Elementi costitutivi del varco ...................................................................................................... 4
+Procedura di lettura delle targhe ................................................................................................. 5
+Elementi costitutivi del sistema centrale di elaborazione dati .......................................................... 6
+Funzionalità di Traffic Scanner .................................................................................................... 7
+Cartografia
+      •     Mappa......................................................................................................................... 10
+      •     Visualizzazione in tempo reale ....................................................................................... 11
+Targhe veicoli
+      •     Ricerca targhe ............................................................................................................. 12
+      •     Gestione liste di segnalazione ........................................................................................ 14
+      •     Esportazione transiti ..................................................................................................... 17
+      •     Ricerca targhe ricorrenti ................................................................................................ 18
+      •     Visura targhe Motorizzazione ......................................................................................... 19
+      •     Elenco visure positive ................................................................................................... 20
+      •     Credenziali accesso VPN ................................................................................................ 21
+Merci pericolose
+      •     Pericolosità delle merci.................................................................................................. 22
+      •     Analisi del rischio ......................................................................................................... 23
+      •     Notifica transiti ADR ..................................................................................................... 24
+Statistiche Transiti
+      •     Conteggio veicoli .......................................................................................................... 25
+      •     Nazionalità veicoli......................................................................................................... 26
+      •     Classificazione veicoli .................................................................................................... 27
+      •     Anno di immatricolazione veicoli ..................................................................................... 28
+      •     Classi Euro .................................................................................................................. 29
+      •     Provincia di immatricolazione ......................................................................................... 30
+Analisi Flussi
+      •     Velocità media ............................................................................................................. 31
+      •     Tempo di percorrenza ................................................................................................... 32
+      •     Distribuzione del traffico ingresso/uscita ......................................................................... 33
+Pannello di Controllo
+      •     Stato del sistema ......................................................................................................... 34
+Utenti e sicurezza
+    •    Utenti ......................................................................................................................... 36
+      •     Log di sistema ............................................................................................................. 37
+Moduli aggiuntivi
+      •      Ricerca targhe correlate ............................................................................................... 42
+      •      Gestione eventi del sistema .......................................................................................... 43
+      •      Active directory ........................................................................................................... 44
+      •     Integrazione con VMS Milestone ..................................................................................... 46
+      •     Integrazione con VMS Genetec – Arteco – Hanwha – Mirasys – Hikvision............................. 50
+      •     Plugin partizionamento server ........................................................................................ 50
+      •     Plugin multiserver ........................................................................................................ 50
+Storicizzazione dei transiti ......................................................................................................... 51
+Accesso a database esterni ........................................................................................................ 51
+Conclusioni .............................................................................................................................. 51
+
+
+
+
+                                                                                                                                                 2
+                              Che cos’è Traffic Scanner
+
+
+Traffic Scanner è un sistema di lettura e riconoscimento delle targhe automobilistiche di tutti i
+paesi europei, avente come finalità la segnalazione automatica dei veicoli ricercati e l’analisi dei
+flussi di traffico sul territorio urbano.
+
+
+                          Come funziona Traffic Scanner
+
+
+La filosofia che sta alla base di Traffic Scanner è quella di creare una cintura di sicurezza che
+circondi il perimetro del territorio sottoposto a monitoraggio; una sorta di cinta muraria dotata
+di aperture predeterminate (i varchi) attraverso le quali il traffico in entrata ed in uscita debba
+obbligatoriamente transitare.
+
+
+Traffic Scanner è un sistema che non è stato progettato per regolamentare gli accessi ad una
+determinata area come controllo di Zone a Traffico Limitato (ZTL), ma svolge una duplice azione
+di mero controllo del territorio mediante la lettura di tutte le targhe in transito e la verifica in
+tempo reale con il database delle targhe ricercate di cui è dotato.
+
+
+Questo database può essere sincronizzato con database esterni in modo da rilevare veicoli con
+copertura assicurativa RC o revisione del mezzo scaduta.
+
+
+Traffic Scanner è uno sistema misto hardware e software: la componente hardware è costituita
+dal cosiddetto “varco”, ovvero tutta la tecnologia presente presso il punto di rilevazione remoto,
+dal server di elaborazione sito presso la centrale operativa e dagli strumenti di trasmissione
+digitale dei dati di rilevazione tra il varco e il server di registrazione; la componente software è
+rappresentata dall’applicazione di registrazione e analisi dei dati installata sul server centrale.
+
+
+                                            Il varco
+
+
+Un varco rappresenta una “porta di accesso” al territorio sottoposto a monitoraggio.
+
+
+Consiste generalmente in un punto stradale che viene ritenuto strategico per il controllo dei flussi
+e attraverso il quale si debba obbligatoriamente transitare per accedere od uscire dal centro
+abitato.
+E’ importante che questa località non possa essere evitata attraverso una viabilità parallela, cosa
+che potrebbe vanificare seriamente l’efficacia del sistema stesso.
+
+
+
+
+                                                                                                      3
+                          Elementi costitutivi del varco
+
+
+Ogni varco è costituito dai seguenti elementi:
+
+
+   -   un palo di sostegno per l’infrastruttura, meglio se con sbraccio orizzontale sulle due
+       carreggiate
+
+
+   -   due telecamere Megapixel, una per senso di marcia, in B/N e specificatamente progettate
+       per la ripresa e il riconoscimento delle targhe veicolari. Queste telecamere integrano:
+
+
+          o     un illuminatore infrarosso di tipo adattivo, essenziale per regolare l’esatta quantità
+                di luce necessaria ad una corretta illuminazione della targa in qualsiasi condizione
+                di illuminazione esterna
+
+          o     Un   processore        sovra   potenziato    rispetto   alle   comuni    telecamere    di
+                videosorveglianza, per effettuare il riconoscimento dei numeri di targa in tempo
+                reale con una frequenza di almeno 25 immagini per secondo
+
+          o     Un   algoritmo    di     OCR   (Optical     Character   Recognition)    per   estrapolare
+                dall’immagine ripresa il numero della targa in formato testuale
+
+          o     Un algoritmo di classificazione per assegnare, partendo dal numero di targa
+                riconosciuto, il paese di appartenenza e la tipologia del mezzo
+
+
+
+   -   due telecamere Megapixel, una per senso di marcia, a colori, per produrre una immagine
+       di contesto per ogni veicolo transitato, in modo da fornire elementi aggiuntivi di
+       identificazione, quali le caratteristiche cromatiche del veicolo transitato e una migliore
+       identificazione della marca/modello del mezzo. Queste telecamere debbono possedere
+       una elevata sensibilità notturna per evitare che le immagini dei veicoli in transito risultino
+       “strisciate” e poco leggibili.
+   -   Una sistema di trasmissione wireless delle immagini per collegare il varco periferico la
+       centro stella di rete ove è posizionato il server di registrazione ed elaborazione delle
+       targhe
+
+
+   -   Un quadro elettrico da esterno a tenuta stagna contenente tutti i trasformatori di
+       tensione, il sezionatore di linea e i sistemi di protezione elettrica.
+
+
+
+
+                                                                                                        4
+                       Procedura di lettura delle targhe
+
+
+Vediamo ora quali sono le operazioni che Traffic Scanner esegue al transito di un veicolo:
+
+
+   -   la telecamera di riconoscimento targhe, che monitora costantemente la carreggiata,
+       rileva il transito di un veicolo.
+
+
+   -   Identifica all’interno dell’immagine il box targa e su questo esegue un test di regolazione
+       del faro infrarosso per ottenere la migliore illuminazione possibile
+
+
+   -   Vengono identificati i fotogrammi in cui i caratteri della targa risultano meglio leggibili e
+       sul migliore viene eseguito l’algoritmo di riconoscimento dei caratteri
+
+
+   -   Non appena i caratteri della targa sono stati riconosciuti viene inviato alla telecamera di
+       contesto il comando per scattare la fotografia a colori da associare alla fotografia della
+       targa
+
+
+   -   Viene generato un file contenente le informazioni di transito (numero targa, nome varco,
+       tipologia del veicolo, direzione, data, ora, paese di appartenenza)
+
+
+   -   Vengono inviate al server centrale le seguenti informazioni:
+          o il file contenente l’immagine della targa riconosciuta
+           o il file contenente l’immagine a colori di contesto o il
+           file contenente le informazioni di transito
+
+
+
+Il varco di Traffic Scanner non richiede l’uso di spire induttive affogate nel manto stradale,
+consentendo un notevole risparmio in termini di costi realizzativi ed impatto architettonico.
+
+
+Le telecamere utilizzate per effettuare il riconoscimento delle targhe sono di due tipologie: il
+modello base è certificato per ottenere una efficacia di riconoscimento del 99% delle letture con
+velocità del veicolo sino a 140 Km/h, mentre il modello avanzato garantisce il medesimo risultato
+fino ai 250 Km/h.
+
+
+
+
+                                                                                                  5
+Elementi costitutivi del sistema centrale di elaborazione dati
+
+
+Al centro dell’architettura di Traffic Scanner sono previsti uno o più server per la registrazione
+dei transiti ed elaborazione dei dati statistici.
+
+
+A questo server afferiscono due tipologie di dati: i dati telemetrici relativi al transito e le immagini
+riprese dalle telecamere.
+
+
+Ogni qualvolta un veicolo transita attraverso il varco, sui servers vengono eseguiti i seguenti
+processi:
+
+
+Processi lato server centrale
+
+    -   Il server centrale, mediante servizio ftp, è costantemente pronto alla ricezione dei dati di
+        transito da tutte le telecamere di riconoscimento targhe presenti sui varchi.
+
+
+    -   Non appena una telecamera invia i dati di transito, il server elabora i dati di lettura
+        inserendoli nel database e creando i puntamenti ai due file fotografici correlati ai dati di
+        transito.
+
+
+    -   Traffic Scanner verifica quindi se la targa riconosciuta coincide con le targhe che sono
+        state inserite nelle black list di segnalazione. Se una targa coincide, il server invia una
+        segnalazione contenente tutti i dati di transito con messaggio SMS a uno o più numeri
+        cellulari.
+
+
+    -   Non appena i dati di transito sono stati inseriti nel database e i puntamenti sono stati
+        creati, la targa e le immagini saranno visualizzate in tutti i reports statistici che Traffic
+        Scanner integra.
+
+
+Grazie alla modalità multiutente il sistema può essere fruito contemporaneamente da Uffici
+differenti (Polizia Locale, Carabinieri, Questura) senza che un Ufficio possa accedere ai dati
+inseriti da un altro Ente.
+
+
+
+
+                                                                                                      6
+                         Funzionalità di Traffic Scanner
+
+
+Rispetto ai prodotti della concorrenza, che si limitano al riconoscimento delle targhe e alla loro
+memorizzazione all’interno di un database, Traffic Scanner offre un motore aggiuntivo di
+elaborazione statistica dei dati in grado di fornire una serie di informazioni molto utili per
+effettuare analisi storiche approfondite, inerenti alla tipologia del traffico circolante e per valutare
+come l’andamento del traffico cambi nel corso del tempo.
+
+
+Effettuato l’accesso al sistema mediante l’inserimento delle credenziali di autenticazione, si
+accede alla schermata principale contenente le seguenti sezioni:
+
+
+   -   Cartografia
+
+           o Mappa: rappresentazione cartografica della dislocazione dei varchi sul territorio.
+               Possibilità di accedere alle immagini delle telecamere di contesto in tempo reale
+               cliccando sugli indicatori di località del varco.
+           o   Visualizzazione in tempo reale: rappresentazione in modalità video wall delle
+               immagini riprese dalle telecamere di lettura delle targhe
+
+
+   -   Targhe veicoli
+
+           o   Ricerca targhe: Applicando dei filtri, sia sulla data che sull’ora, sia su parte della
+               targa che sul varco, consente l’individuazione dei passaggi di una o più targhe a
+               seconda del filtro che applichiamo.
+
+           o   Notifica transiti veicoli: gestione delle black list e dei numeri cellulari/email per la
+               segnalazione automatica al transito di una targa ricercata
+
+           o   Esportazione transiti: interfaccia per l’esportazione dei dati di transito mediante
+               comodi preset temporali
+
+           o   Ricerca targhe ricorrenti: analisi per filtrare i numeri di targa che sono transitati
+               in due o più giorni, anche non contigui tra loro.
+
+
+
+   -
+
+
+
+
+                                                                                                      7
+Visure targhe
+
+         o   Motorizzazione: Console per la notifica dei veicoli che sono risultati positivi per
+             quanto riguarda la verifica della validità della copertura assicurativa e dello stato
+             della revisione
+
+         o   Elenco Visure positive: elenco dei transiti che hanno manifestato positività circa i
+             controlli effettuati alla Motorizzazione
+
+         o   Configurazione VPN: menu per la configurazione delle credenziali d’accesso al
+             servizio di verifica della Motorizzazione
+
+
+
+  -   Merci pericolose
+
+         o   Pericolosità   delle   merci:    rappresentazione       grafica   delle   merci   pericolose
+             classificate per codice Kemler, ovvero per tipologia di merce e per rischio
+             intrinseco correlato
+
+         o   Analisi del rischio:analisi degli intervalli di medio periodo per mostrare, per ogni
+             giornata, mediante una colorazione dal verde al rosso e a secondo del numero di
+             transiti verificati, il livello di rischio raggiunto.
+
+         o   Notifica transiti ADR: funzione per programmare l’invio di un SMS al passaggio di
+             un mezzo che trasporta una determinata merce pericolosa.
+
+
+
+  -   Statistiche transiti
+
+         o   Conteggio veicoli: analisi in modalità sia grafica che numerica dei transiti effettuati
+             in un arco temporale e attraverso uno o più varchi.
+
+         o   Nazionalità veicoli: analisi in modalità grafica relativa alla nazionalità delle auto
+             che transitano sul territorio.
+
+         o   Classificazione veicoli: analisi in modalità grafica relativa alla percentuale della
+             divisione tra auto, motocicli, ciclomotori, camion e camion con rimorchio.
+
+         o   Anno immatricolazione veicoli: analisi sia in formato grafico che numerico relativa
+             all’anno in cui sono stati immatricolati i mezzi che transitano attraverso i varchi.
+
+         o   Classe Euro: analisi sia in formato grafico che numerico relativa alla classificazione
+             EURO di immatricolazione dei mezzi che attraversano i varchi.
+
+
+
+
+                                                                                                        8
+       o   Provincia di immatricolazione: analisi sia in formato grafico che numerico relativa
+           alla classificazione per provincia di immatricolazione.
+
+-   Analisi flussi
+
+       o   Velocità media di transito: rappresentazione grafica della velocità media di
+           transito dei veicoli attraverso un varco.
+
+       o   Distribuzione traffico ingresso/uscita al territorio: rappresentazione grafica e
+           statistica dei veicoli che accedono attraverso i varchi.
+
+       o   Tempo percorrenza: rappresentazione grafica del tempo di percorrenza dei veicoli
+           attraverso il territorio.
+
+-   Utente connesso
+
+       o Esci da Traffic Scanner: disconnessione dell’utente dal sistema.
+
+
+
+-   Moduli aggiuntivi
+
+       o   Ricerca targhe correlate: analisi per determinare le targhe dei veicoli che
+           transitano in concomitanza ad un veicolo attenzionato
+
+       o   Gestione eventi: Funzione per la creazione automatica di uno o più eventi generati
+           dal transito di veicoli in blacklist. Quando un veicolo in blacklist viene intercettato
+           si crea automaticamente un evento che può essere preso in carico, gestito e chiuso
+           da utenze abilitate
+
+       o   Integrazione Active Directory: gestione delle credenziali d’accesso e della
+           profilazione dell’utente mediante integrazione con Microsoft Active Directory
+
+       o   Integrazione con VMS: modulo per correlare i dati di transito rilevati da Traffic
+           Scanner con VMS esterni
+
+       o   Partizionamento server: modulo per consentire il partizionamento dei varchi
+           definiti su un server
+
+       o   Modulo multiserver: permette di aggregare su un singolo server centrale i dati
+           rilevati da server periferici
+
+
+
+
+                                                                                                9
+Cartografia
+
+Mappa
+
+
+Nel menu Mappa viene visualizzato l’impianto con la dislocazione dei varchi sul territorio
+monitorato.
+
+Cliccando sul varco vengono visualizzate le fotografie, complete del numero di targa, relative ai
+veicoli che transitano in tempo reale sotto il varco
+
+Sulla parte superiore dello schermo vengono rappresentate alcune informazioni statistiche
+relative ai transiti che sono stati registrati per ogni singolo varco nella giornata corrente e viene
+fatta una comparazione con i dati acquisiti il giorno precedente, indicando lo scostamento
+percentuale ottenuto.
+
+
+
+
+                                                                                                  10
+Visualizzazione in tempo reale
+
+Questa voce permette la visualizzazione delle immagini relative ai veicoli in transito, aggiornata
+in tempo reale. Si tratta di una funzione per video wall tipica da centrale operativa, da cui
+l’operatore può vedere sia le immagini dei veicoli che eventuali segnalazioni d’allarme causate
+dal transito di veicoli in black list.
+
+
+
+
+                                                                                                11
+Targhe veicoli
+
+Ricerca targhe
+
+Il report Ricerca Targhe è quello più importante ed è stato sviluppato per primo.
+Viene utilizzato per richiamare le targhe memorizzate nel database di Traffic Scanner per ordine
+cronologico di rilevazione e per effettuare la ricerca di un determinato numero di targa, o parte
+di esso, mediante filtri di selezione avanzati
+
+
+Di seguito vediamo l’interfaccia di generazione del report che si presenta all’utente
+
+
+
+
+La prima impostazione da fornire al sistema è l’intervallo temporale all’interno del quale eseguire
+la ricerca. Dato l’elevato numero di veicoli che possono transitare durante la giornata è bene
+mantenere la finestra temporale la più stretta possibile, anche per ridurre i tempi di generazione
+e consultazione del report.
+
+
+E’ possibile selezionare quali varchi includere nella ricerca e persino quale direzione di marcia
+considerare. Inoltre, nel caso in cui sia noto solo parte del numero di targa, è possibile scriverlo
+nell’apposito campo “targa” e il sistema visualizzerà unicamente le targhe che contengono i
+caratteri inseriti.
+
+
+Una volta lanciato il report Traffic Scanner visualizzerà immediatamente tutti i numeri di targa
+che soddisfano i criteri che avremo impostato.
+
+
+
+                                                                                                 12
+I dati in formato tabellare che vengono visualizzati da Traffic Scanner presentano le seguenti
+informazioni:
+
+
+- numero della targa riconosciuta dal sistema
+- immagine della targa scattata dalla telecamera in B/N
+- data e ora del transito
+- nome del varco e direzione di spostamento del veicolo (ingresso/uscita) - link a una sotto-
+ pagina di dettaglio in cui il sistema visualizza:
+
+
+           1.   tutti i dati relativi al transito (numero targa, nome varco, direzione, data e ora)
+           2.   il fotogramma in B/N della telecamera di riconoscimento targhe
+           3.   il fotogramma a colori della telecamera di contesto
+           4.   il dettaglio della targa
+
+
+
+
+                                                                                                      13
+Gestione liste di segnalazione
+
+In questo menu abbiamo la possibilità di creare le liste di segnalazione per l’invio automatico di
+messaggi SMS e email.
+
+Le liste di segnalazione sono di due tipi: Blacklist e Whitelist
+
+Le blacklist servono per allertare l’operatore al transito di una targa inserita mentre le whitelist
+a non includere nel database un numero di targa transitato per ragioni di opportunità o privacy
+
+
+Con pochi click possiamo fare in modo che il sistema invii un messaggio SMS/email nel momento
+in cui una targa inserita nelle liste di segnalazione attraverserà uno dei varchi.
+
+
+Le liste di segnalazione possono essere di due tipologie:
+
+     -    Privata : viene visualizzata e gestita unicamente dall’utente che la crea
+     -    Condivisa : l’utente che crea la lista di segnalazione può scegliere a quali utenti
+          concedere la visualizzazione e/o la modifica della stessa.
+
+
+
+
+I campi da inserire in fase di creazione della lista sono:
+ -       nome: definisce il nome con cui la lista di segnalazione verrà visualizzata - Tipo: definisce
+         se la lista di segnalazione sarà di tipo privata o condivisa
+ -       Stato: definisce lo stato della lista di segnalazione, ovvero se vogliamo che la lista sia attiva
+         oppure disattiva.
+ -       Apertura/chiusura varco: abilita l’apertura di un cancello alle targhe inserite nella lista
+
+
+Una volta impostati i parametri selezionando il tasto Crea memorizziamo la lista di segnalazione
+ed essa comparirà nell’elenco delle liste definite.
+
+
+
+
+                                                                                                       14
+Perché la lista di segnalazione sia operativa è necessario:
+
+
+  1. inserire una o più targhe e confermare tramite il tasto “Aggiungi”. Dopo la conferma
+     vedremo l’elenco delle targhe inserite nella lista di segnalazione.
+
+
+
+
+  2. inserire uno o più numeri di telefono che riceveranno il messaggio sms nel momento in
+     cui il veicolo/i che abbiamo inserito nella lista di segnalazione attraverserà uno dei varchi
+     controllati
+
+
+
+
+Il sistema Traffic Scanner consente di modificare in qualsiasi momento le liste di segnalazione.
+
+
+
+                                                                                                 15
+Passando da una lista privata a una condivisa possiamo inserire gli utenti che avranno il
+controllo completo o solo la possibilità di visualizzare i parametri della lista di segnalazione
+senza poter apporre nessuna modifica.
+
+
+
+
+Ci viene fornita anche la possibilità di importare, dopo aver creato la lista di segnalazione, sia le
+targhe sottoposte a controllo sia i numeri di telefono che riceveranno i messaggi.
+
+
+
+
+Tramite il tasto Sfoglia andremo a selezionare il file .csv e utilizzando il tasto Upload eseguiremo
+il caricamento dei dati.
+Nel file .csv che utilizzeremo dobbiamo inserire i campi:
+
+
+ -   BlackListID: è il numero che in automatico viene assegnato dal sistema alla lista di
+     segnalazione
+ -   Targhe: è l’elenco di targhe che dobbiamo sotto porre a controllo
+ -   Numeri: è l’elenco dei numeri di telefono che riceveranno l’avviso del passaggio
+
+
+Di seguito un corretto esempio di corretta formattazione del file.
+
+
+
+
+                                                                                                   16
+Esportazione transiti
+
+
+Dall’interfaccia di esportazione transiti è possibile esportare in parte o del tutto i dati di
+rilevazione dei transiti.
+
+
+I dati di rilevazione sono costituiti da:
+
+
+   1. numero della targa letta
+   2. varco di transito
+   3. data e ora del transito
+   4. fotografia
+
+
+dall’interfaccia possono essere facilmente richiamati dei preset temporali che, con un
+singolo click selezionano automaticamente un dato intervallo di tempo.
+
+
+I preset partono dagli ultimi 10 minuti di rilevazione fino all’intero contenuto del database.
+
+
+
+
+                                                                                                 17
+Ricerca targhe ricorrenti
+
+
+La funzione di ricerca targhe ricorrenti visualizza le targhe che sono transitate solo in alcune
+date selezionabili a piacimento dall’operatore.
+
+
+In una prima colonna di sinistra sono visualizzate le date con transiti disponibili nel database e,
+selezionando una data per volta, si spostano le date scelte in nella colonna centrale di
+selezione.
+
+
+Nella terza colonna di destra vengono visualizzate le targhe che hanno generato transiti in tutte
+le date selezionate.
+
+
+Cliccando sul numero di targa si accede alla pagina di dettaglio contenente tutte le
+informazioni del transito.
+
+
+
+
+                                                                                                   18
+Visura targhe Motorizzazione
+
+
+Traffic Scanner consente, mediante l’apposito modulo di visura delle targhe alla Motorizzazione
+Civile, la segnalazione di eventuali positività riscontrate nei confronti dei veicoli in transito.
+
+
+La prima operazione da svolgere è la selezione di uno o più varchi dall’elenco varchi di
+destra.
+Poi si può avviare il processo di visura che prevede, in modo del tutto automatico,
+l’apertura di un canale VPN dedicato verso il datacenter della MTC e l’invio delle targhe
+che di volta in volta vengono rilevate dal sistema.
+
+
+
+
+Dopo qualche secondo Traffic Scanner riceve eventuali positività riscontrate e visualizza
+la fotografia del mezzo, il numero di targa e la positività riscontrata.
+
+
+Il sistema è dotato di memoria cache intelligente in modo tale che una volta che un veicolo
+è stato visurato la prima volta non verrà ri-visurato fino a quando non scadrà la copertura
+assicurativa o la revisione.
+
+
+
+
+                                                                                                19
+Elenco visure positive
+
+
+Nella voce di menu “Elenco visure positive” vengono elencati i transiti che presentano una
+positività per quanto riguarda la scadenza della copertura assicurativa e dello stato della
+revisione.
+
+
+Mediante selettore possono venire visualizzate unicamente le positività riguardanti
+l’assicurazione, la revisione o entrambe.
+
+
+L’esportazione del report può avvenire in due modalità:
+     - mediante file .csv
+     - mediante file .zip comprensivo di fotografie
+
+
+
+
+                                                                                              20
+Credenziali di accesso VPN
+
+
+In questa sezione vengono inserire le credenziali di accesso per l’instaurazione della VPN con la
+Motorizzazione Civile e le credenziali di accesso del portale dell’Automobilista
+
+
+
+
+                                                                                               21
+Merci Pericolose
+Pericolosità delle merci
+
+
+In questo report viene visualizzato il dettaglio dei transiti giornalieri attraverso i varchi di tutti i
+mezzi che espongono un cartello riferito al trasporto di una merce pericolosa.
+
+
+L’analisi viene effettuata prendendo in esame il numero Kemler (il numero alto nel cartello
+relativo al codice ADR) con cui viene classificata la tipologia della merce trasportata (gassosa,
+liquida, solida, ecc..) e il rischio correlato (infiammabile, tossica, corrosiva, ecc.)
+
+
+
+
+Il grafico rappresenta i transiti verificatisi per ogni particolare classe ed è suddiviso mediante
+colorazione differente per singolo varco.
+
+
+Vi è la possibilità di rappresentare il dato aggregato per singola classe Kemler (codice di rischio
+principale) oppure di esploderlo per sottocodice (codice di rischio secondario)
+
+
+
+
+                                                                                                     22
+Analisi del rischio
+
+In questo report Traffic Scanner fornisce un indicatore che assume valore da 1 a 5. Il
+valore 1 rappresenta una situazione di minima criticità mentre il valore 5 rappresenta una
+situazione di massima criticità.
+
+
+La criticità è assegnata in base al numero dei transiti di merci pericolose che quel determinato
+giorno si sono verificati. Mediante questo report diventa molto semplice analizzare intervalli di
+tempo di medio periodo e visualizzare con colorazioni progressive dal verde al rosso i giorni in
+cui si verificano le situazioni di maggior pericolo dovuto al transito di queste merci
+
+
+
+
+                                                                                                23
+Notifica transiti ADR
+
+Traffic Scanner permette la creazione di liste di segnalazione ADR, in modo da inviare un
+messaggio SMS ad uno o più numeri cellulari al transito di una o più sostanze pericolose
+selezionabili dalla lista di merci gestite dal sistema.
+
+
+
+
+In questo modo si ottiene una segnalazione non al transito di un determinato numero di targa
+ma al transito di un determinato codice merce.
+
+
+
+
+                                                                                            24
+Statistiche transiti
+
+Conteggio dei veicoli
+
+
+Il report Conteggio Transiti presenta un grafico a istogrammi/curve indicante il numero dei veicoli
+transitati in un dato intervallo di tempo.
+
+
+Dopo aver definito l’intervallo temporale e su quali varchi e in quali direzioni effettuare la ricerca,
+il sistema ci presenta i dati in formato grafico e numerico suddivisi per varco.
+
+
+Nella parte inferiore del report sono visibili i dati in formato tabellare con la rappresentazione dei
+valori numerici rappresentati dai grafici.
+
+
+
+
+                                                                                                    25
+Nazionalità veicoli
+
+
+Il report nazionalità dei veicoli presenta due grafici ad anello indicanti, il primo, la percentuale
+dei veicoli italiani transitati rispetto agli stranieri, mentre nel secondo viene proposta solo la
+parte relativa ai veicoli stranieri, con l’indicazione dei singoli paesi di appartenenza.
+
+
+
+
+Nella parte sottostante dello schermo vengono indicati i valori numerici suddivisi per paese di
+appartenenza.
+
+
+
+
+                                                                                                     26
+Classificazione dei veicoli
+
+
+Il report classificazione dei veicoli presenta due grafici ad anello indicanti, il primo, la
+percentuale dei veicoli classificati come autovetture rispetto a quelli classificati come “altre
+tipologie di veicoli”, mentre nel secondo viene esplosa la parte “altre tipologie di veicoli”
+indicando quattro sottocategorie: ciclomotori, motociclette e camion con e senza rimorchio.
+
+
+
+
+                                                                                                   27
+Anno immatricolazione veicoli
+
+
+Il report anno immatricolazione veicoli presenta in un grafico ad anello la percentuale dei veicoli
+immatricolati nel corso degli anni compresi tra il 1994 e l’anno attuale.
+
+
+Viene indicato sia il numero dei veicoli per anno che la percentuale relativa sul totale.
+
+
+
+
+                                                                                                28
+Classe Euro
+
+
+Il report “Classe Euro” presenta un grafico anello indicante il totale dei veicoli transitati suddiviso
+per la classe Euro inquinante di riferimento.
+
+
+Viene indicato sia il numero dei veicoli che la percentuale relativa sul totale.
+
+
+Questo report costituisce un ottimo strumento per valutare l’anzianità del parco veicoli circolante.
+
+
+
+
+                                                                                                    29
+Provincia di immatricolazione
+
+Il report “provincia di immatricolazione” fornisce una stima della provincia di immatricolazione
+delle targhe lette dal sistema.
+
+
+Il report è suddiviso in due parti: la prima rappresenta la provincia principale, ovvero quella di
+cui fa parte il Comune presso il quale l’impianto è installato, rispetto alle province secondarie.
+
+
+La seconda parte esplode le province secondarie mostrando i valori di dettaglio di ogni provincia
+riscontrata.
+
+
+Viene indicato sia il numero dei veicoli che la percentuale relativa sul totale.
+
+
+
+
+                                                                                                     30
+Analisi flussi
+
+Velocità media di transito
+
+Il report “velocità media” descrive, per singolo varco, la velocità media di transito calcolata
+sull’intervallo temporale preso in esame e rappresentata sulle 24 ore.
+
+
+Mediante questo report è possibile tracciare una curva rappresentante la velocità di transito
+mediata sulle 24 ore.
+
+
+Grazie al grafico generato diventa estremamente semplice identificare le fasce orarie in cui si
+verificano rallentamenti dovuti a eccessivo traffico, quantificandone la durata nel tempo e la
+gravità per quanto riguarda la velocità di scorrimento.
+
+
+
+
+                                                                                                  31
+Tempo di percorrenza
+
+
+Il report tempo di percorrenza mostra quanto tempo impiegano i veicoli ad attraversare il centro
+abitato.
+
+
+Questo report è estremamente utile per rappresentare quanta parte del traffico è costituita da
+pendolari che attraversano il centro abitato senza fermarsi.
+
+
+Viene indicato sia il numero dei veicoli che la percentuale relativa sul totale.
+
+
+
+
+                                                                                             32
+Distribuzione traffico in ingresso/uscita
+
+
+Il report “distribuzione traffico in ingresso/uscita” presenta una matrice a correlazione nella
+quale vengono rappresentati i conteggi relativi ai veicoli entrati ed usciti da una determinata
+coppia di varchi.
+
+
+Nel caso in cui i varchi siano costituiti da due telecamere, una per leggere i veicoli in ingresso e
+una per quelli in uscita, è possibile suddividere il numero dei veicoli entrati da un determinato
+varco per tutti quelli di uscita.
+
+
+Grazie a questo report diventa molto più semplice effettuare la pianificazione del traffico in
+quanto si hanno a disposizione i valori reali rappresentanti la modalità di distribuzione del
+traffico sul territorio.
+
+
+
+
+                                                                                                  33
+Pannello di Controllo
+
+Stato del sistema
+
+
+All’interno del menu “Stato del sistema” troviamo diversi strumenti di monitoraggio che
+permettono di tenere sotto controllo in maniera molto semplice ed efficace i seguenti oggetti:
+
+
+le telecamere di lettura targhe
+
+
+
+
+Anche in presenza di impianti complessi costituiti da decine di telecamere, in pochi secondi ci si
+rende conto se vi sia un’anomalia nel funzionamento o se una telecamera non sia raggiungibile
+dal server.
+
+I valori che vengono rappresentati sono:
+
+
+   -   Data e ora impostata
+   -   Indirizzo di rete assegnato alla telecamera
+   -   Indirizzo fisico (Mac) della telecamera
+   -   Stato di funzionamento
+   -   Tempo di attività dall’ultimo riavvio della telecamera
+   -   Temperatura interna
+   -   Dimensione della scheda di memoria della telecamera
+   -   Versione del firmware
+   -   Eventi presenti sulla scheda di memoria della telecamera
+
+
+
+
+                                                                                                 34
+lo stato di occupazione del database
+
+
+
+
+le dimensioni delle tabelle interne
+
+
+
+
+lo stato di funzionamento dei servizi applicativi
+
+
+
+
+Nella sezione di gestione dei servizi applicativi è possibile avviare/arrestare i servizi direttamente
+da pagina web ed eventualmente fare il reset di un servizio che non dovesse rispondere ai
+comandi.
+
+                                                                                                   35
+Utenti e sicurezza
+Utenti
+
+Questa voce di menu permette la creazione, la modifica e l’eliminazione degli utenti che accedono
+al sistema.
+
+
+Nella parte superiore della pagina abbiamo l’anagrafica dell’utente, quindi Nome-Cognome-
+EMail -Cellulare; è fondamentale inserire un check nel box Abilitato per rendere l’utente attivo.
+Di seguito si definisce lo Username che viene assegnato all’utente e la Password.
+
+
+In fase di creazione dell’utente è possibile anche associare il device attraverso cui verranno
+instradati gli sms generati dalle regole di allarme definite da quell’utente.
+
+
+Quindi si sceglie a quale ruolo assegnare l’utente, la lingua che l’interfaccia deve presentare e
+infine si conferma la creazione.
+
+
+
+
+Nella parte inferiore della pagina troveremo l’elenco degli utenti creati sul sistema.
+
+
+Tramite la selezione sul tasto modifica possiamo variare tutti i parametri relativi all’utenza.
+
+
+Il tasto “Elimina” ci permette di eliminare l’Utente. L’indicatore di stato verde indica che l’utente
+è attivo, mentre quando è rosso indica che l’Utente è disabilitato e non può avere accesso al
+sistema.
+                                                                                                  36
+Al primo accesso di un qualsiasi utente viene richiesto il cambio password in automatico dal
+sistema.
+
+
+
+Log di sistema
+
+Tramite questo report è possibile visualizzare l’elenco delle operazioni eseguite, per ogni singolo
+utente e in un dato periodo, sul sistema Traffic Scanner.
+
+
+
+
+Questo consente di tenere traccia di tutte le operazioni eseguite dai vari utenti.
+
+
+
+
+                                                                                                37
+Traffic Scanner Log Events
+
+
+Qui di seguito sono elencati tutti i tipi di evento loggati da Traffic Scanner e relative
+proprietà/dettagli:
+
+
+   -   INSERT USER (Creazione utente)
+          o Name (Nome utente)
+          o Surname (Cognome utente)
+          o E-Mail (E-Mail utente)
+          o Status (Stato account “True” attivo o “False” non attivo)
+          o Role (Ruolo)
+          o Username (Codice utente)
+          o Password Length (lunghezza password, non visualizzata per questioni di privacy)
+
+
+   -   DELETE USER (Eliminazione utente)
+         o Username (Codice utente)
+         o Id (Id utente)
+         o Name (Nome utente)
+         o Surname (Cognome utente)
+         o E-Mail (E-Mail utente)
+         o Status (Stato account attivo / non attivo)
+         o Role (Ruolo)
+
+
+   -   UPDATE USER (Aggiornamento utente)
+         o Username (Codice utente)
+         o Id (Id utente)
+         o Name (Nome utente)
+         o Surname (Cognome utente)
+         o E-Mail (E-Mail utente)
+         o Status (Stato account attivo / non attivo)
+         o Role (Ruolo)
+         o Password Length (0 se non viene cambiata la password, maggiore di 0 se viene
+            cambiata, non visualizzata per questioni di privacy)
+
+
+   -   SEARCH PLATE (Ricerca targhe)
+          o Query (targa ricercata o pattern)
+          o From (Data di inizio intervallo)
+          o To (Data di fine intervallo)
+          o Gates (Varchi, “All” se tutti i varchi)
+          o Sort (Ordinamento ricerca, “Ascending” o “Descending”)
+          o Types (Tipologia veicolo, “All” se tutte le tipologie)
+          o Count (Numero di record restituiti dalla ricerca
+
+
+
+
+                                                                                            38
+PASSWORD CHANGE (Aggiornamento password al primo login)
+         o   Id (Id utente)
+         o   Name (Nome utente)
+         o   Surname (Cognome utente)
+         o   Username (Codice utente)
+
+
+  -   LOGIN (Accesso a Traffic Scanner)
+        o Username (Codice utente)
+
+
+  -   LOGOUT (Uscita da Traffic Scanner)
+        o Username (Codice utente)
+
+
+  -   INSERT BLACKLIST (Creazione lista di segnalazione)
+         o Name (Nome lista di segnalazione)
+         o Type (Tipologia “Private” privata o “Shared” condivisa)
+
+
+  -   DELETE BLACKLIST (Eliminazione lista di segnalazione)
+        o Name (Nome lista di segnalazione)
+        o Id (Id lista di segnalazione)
+
+
+  -   UPDATE BLACKLIST (Aggiornamento lista di segnalazione)
+        o Name (Nome lista di segnalazione)
+        o Id (Id lista di segnalazione)
+        o Status (Status lista di segnelazione, “True” attiva o “False” non attiva)
+        o Type (Tipologia “Private” privata o “Shared” condivisa
+
+
+  -   INSERT PLATE (Inserimento targa in lista di segnalazione)
+         o Name (Nome lista di segnalazione)
+         o Id (Id lista di segnalazione)
+         o Plate (Targa inserita)
+
+
+  -   DELETE PLATE (Eliminazione targa da lista di segnalazione)
+        o Plate (Targa eliminata)
+        o Name (Nome lista di segnalazione)
+        o Id (Id lista di segnalazione)
+
+
+  -   INSERT E-MAIL (Inserimento indirizzo e-mail in lista di segnalazione)
+         o Name (Nome lista di segnalazione)
+         o Id (Id lista di segnalazione)
+         o E-Mail (Indirizzo e-mail inserito)
+
+
+  -   DELETE E-MAIL (Eliminazione indirizzo e-mail da lista di segnalazione)
+        o E-Mail (Indirizzo e-mail inserito)
+        o Id (Id lista di segnalazione)
+        o Name (Nome lista di segnalazione)
+
+
+
+
+                                                                                      39
+-   INSERT PHONE NUMBER (Inserimento            numero   di   telefono   in   lista   di
+    segnalazione)
+       o Name (Nome lista di segnalazione)
+       o Id (Id lista di segnalazione)
+       o Phone (Numero di telefono inserito)
+
+
+-   DELETE PHONE NUMBER (Eliminazione          numero    di   telefono   da   lista   di
+    segnalazione)
+       o Phone (Numero di telefono inserito)
+       o Id (Id lista di segnalazione)
+       o Name (Nome lista di segnalazione)
+
+
+-   INSERT ACL (Inserimento controllo di accesso utente a lista di segnalazione)
+       o Name (Nome lista di segnalazione)
+       o AllowRead (Accesso in lettura “True” attivo, “False” non attivo)
+       o AllowRite (Accesso in lettura “True” attivo, “False” non attivo)
+       o Id (Id utente)
+       o Name (Nome utente)
+       o Surname (Cognome utente)
+       o Username (Codice utente)
+
+
+-   DELETE ACL (Eliminazione controllo di accesso utente a lista di segnalazione)
+      o Name (Nome lista di segnalazione)
+      o Id (Id utente)
+      o Name (Nome utente)
+      o Surname (Cognome utente)
+      o Username (Codice utente)
+
+
+-   INSERT MAPPAGEROLE (Inserimento associazione pagina a ruolo)
+       o Page (Nome area/pagina)
+       o Role (Ruolo a cui assegnare l’accesso)
+
+
+-   DELETE MAPPAGEROLE (Eliminazione associazione pagina a ruolo)
+      o Page (Nome area/pagina)
+      o Role (Ruolo a cui assegnare l’accesso)
+
+
+-   INSERT MAPGATE (Inserimento associazione varco a utente)
+       o Gate (Nome varco)
+       o Id (Id utente)
+       o Name (Nome utente)
+       o Surname (Cognome utente)
+       o Username (Codice utente)
+
+
+-   DELETE MAPGATE (Eliminazione associazione varco a utente)
+      o Gate (Nome varco)
+      o Id (Id utente)
+      o Name (Nome utente)
+      o Surname (Cognome utente)
+
+                                                                                      40
+       o   Username (Codice utente)
+
+
+-   INSERT GATE (Inserimento varco)
+       o Name (Nome del varco)
+       o Id (Id del varco)
+       o ParkId (Id varco)
+       o Direction (IN o OUT)
+       o IP (Indirizzo IP)
+
+
+-   DELETE GATE (Inserimento varco)
+      o Name (Nome del varco)
+      o Id (Id del varco)
+      o ParkId (Id varco)
+      o Direction (IN o OUT)
+      o IP (Indirizzo IP)
+
+
+-   UPDATE GATE (Inserimento varco)
+      o Name (Nome del varco)
+      o Id (Id del varco)
+      o ParkId (Id varco)
+      o Direction (IN o OUT)
+      o IP (Indirizzo IP)
+
+
+-   EXPORT CSV (Esportazione CSV ricerca targhe)
+      o Rows (Numero righe esportate)
+
+
+-   EXPORT CSV LINKED (Esportazione CSV targhe correlate)
+      o Rows (Numero righe esportate)
+
+
+-   IMPORT BLACKLIST (Importazione blacklist da file)
+      o Result (Esito importazione)
+
+
+-   VIEW PASSAGE (Visualizzazione dettaglio transito)
+       o Id (Id transito)
+       o Plate (Targa)
+       o DateTime (Data e ora di transito)
+       o Gate Id (Id varco)
+       o Name (Nome varco)
+
+
+
+
+                                                            41
+Moduli aggiuntivi
+
+Ricerca targhe correlate
+
+
+
+Il modulo Ricerca targhe correlate serve a identificare quali siano i veicoli che transitano in
+concomitanza a un veicolo attenzionato di cui sia noto il numero di targa.
+
+
+In questo modo le Forze dell’Ordine possono focalizzare lo sforzo investigativo su un numero
+limitato di targhe che hanno alte probabilità di essere i complici del veicolo sottoposto a
+monitoraggio.
+
+
+Di seguito i parametri da impostare:
+
+
+                            data: impostare il range temporale all’interno del quale effettuare la
+                            ricerca (max 7gg)
+
+
+                            Targa: inserire il numero della targa nota di cui si intendono rilevare
+                            i complici
+
+
+                            Soglia minima: l’analisi includerà solo le targhe che hanno generato
+                            un numero di “concomitanze” uguale o superiore al valore inserito
+
+
+                            Tempo prima/dopo: quanto tempo pre e post transito della targa
+                            nota l’analisi prenderà in considerazione
+                            Varchi: selezionare i varchi da includere nell’analisi
+
+
+                            Targhe escluse: una volta ottenuto l’elenco delle risultanze è
+                            possibile escludere i falsi positivi relativi a numeri di targa che si è
+                            verificato non avere nulla a che vedere con il sospettato (es. bus,
+                            taxi, ecc)
+
+
+
+
+                                                                                                 42
+Gestione eventi
+
+Il modulo Gestione Eventi serve a tenere traccia degli eventi generati al seguito di transiti relativi
+a veicoli inseriti in blacklist.
+
+
+Una volta attivato il modulo, al transito di un veicolo inserito in una black list accesibile
+dall’utente, verrà generato un evento che l’utente potrà prendere in carico.
+
+
+La presa in carico dell’evento permette di inserire un commento associato all’evento di transito
+e di salvarlo. E’ poi possibile inserire nuovi commenti in momenti seguenti sino a quando non si
+decidere di chiudere l’evento.
+
+
+Di seguito i parametri da impostare per lo strumento di ricerca:
+
+
+                                   data: impostare il range temporale all’interno del quale effettuare
+                                   la ricerca
+
+
+                                   Targa: inserire il numero della targa da ricercate o parte di essa
+
+
+                                   Stato: ricercare solo eventi ancora aperti, chiusi o tutti
+
+
+                                   Esportazione: esporta tutti gli eventi o solo quelli visibili
+
+
+
+
+Mediante la Gestione Eventi viene tenuta traccia di quale operatore abbia preso in carico l’evento,
+lo abbia modificato e lo abbia chiuso, in modo tale da documentare come sta stato gestita una
+particolare indagine.
+
+
+
+
+                                                                                                    43
+Active Directory
+
+Traffic Scanner consente l’integrazione con Microsoft Active Directory per delegare al sistema
+operativo di Microsoft il processo di autenticazione e profilazione dell’utente.
+
+
+In realtà di tipo Enterprise questa funzione si rivela particolarmente utile in quanto si
+centralizza in un'unica directory il processo di gestione e profilazione delle utenze senza
+che il system administrator debba avere accesso all’applicazione Traffic Scanner e
+conoscerne le funzionalità interne.
+
+
+
+
+La configurazione dell’Active Directory plugin funziona nel seguente modo:
+
+
+il primo step consiste nella creazione in Active Directory di un Service Account che abbia
+diritti di lettura sull’alberatura Active Directory.
+Una volta creato questo utente definire le seguenti voci all’interno del menu di
+configurazione:
+   -   Nome del dominio
+   -   Nome dell’host DC
+   -   Nome dell’utente creato
+   -   Password dell’utente creato
+   -   Numero della porta AD
+   -   Tipo di dominio
+
+
+Il secondo step consiste nella creazione di uno o più gruppi AD a cui verranno associati i
+ruoli di profilazione utente interni di Traffic Scanner (5)
+
+
+
+
+                                                                                                 44
+Il primo selettore permette di scegliere a quale ruolo di Traffic Scanner creare
+l’associazione
+Il secondo determina il dominio AD verso cui puntare
+Il terzo il gruppo AD da associare
+
+
+Terminata la configurazione sarà sufficiente inserire un utente AD nel gruppo creato e
+l’utente accederà a Traffic Scanner con la profilazione prevista dal ruolo che è stato
+associato al gruppo.
+
+
+
+
+                                                                                         45
+Integrazione con VMS Milestone
+
+
+Traffic Scanner si integra nativamente con tutta la linea di VMS Milestone mediante
+apposito plugin di integrazione.
+
+
+
+
+Mediante il plugin Traffic Scanner per VMS Milestone è possibile gestire le principali
+funzionalità applicative direttamente da interfaccia nativa dello Smartclient di Milestone.
+In particolare:
+
+
+Ricerca delle targhe con i principali criteri di selezione
+Visualizzazione della sequenza filmata del veicolo in transito
+
+
+
+
+                                                                                              46
+Accesso ai seguenti report:
+
+
+Conteggio transiti
+
+
+
+
+Nazionalità targhe
+
+
+
+
+                              47
+Classificazione
+
+
+
+
+Classe EURO e anno immatricolazione
+
+
+
+
+                                      48
+Trasporto delle merci Pericolose
+
+
+
+
+                                   49
+Integrazione con VMS Genetec – Arteco – Hanwha – Mirasys - Hikvision
+
+
+Traffic Scanner si integra anche con altri VMS mediante protocolli proprietari.
+
+
+In questo caso all’interno del VMS non è stata replicata l’interfaccia di interrogazione
+sviluppata per Milestone ma sono in ogni caso visibili da interfaccia nativa i tag e gli eventi
+generati da Traffic Scanner a seguito di transiti di veicoli contenuti in black list o veicoli
+aventi assicurazione e revisione scaduta.
+
+
+Mediante questo approccio risulta molto agevole la ricerca di spezzoni di video contenenti
+i transiti relativi a veicoli che hanno generato eventi.
+
+
+
+Plugin partizionamento server
+
+
+Mediante il plugin partizionamento server è possibile utilizzare un unico server Traffic
+Scanner per Enti differenti.
+
+
+Invece che avere diversi Enti ognuno con un proprio server, è possibile partizionare una
+istanza Traffic Scanner in modo tale che un Ente possa vedere/gestire i dati di rilevazione
+provenienti dai propri varchi ma non possa accedere ai dati generati da varchi di altri Enti.
+
+
+In questo modo si possono contenere i costi relativi all’acquisto di più server (per es. negli
+impianti intercomunali) o erogare il servizio in modalità cloud, centralizzando la gestione
+del server e ottimizzandone i costi di gestione (un server da gestire invece che n).
+
+
+
+Plugin multiserver
+
+
+Mediante il plugin Multiserver centralizzare/consolidare i dati acquisiti da n server
+periferici su un server centrale.
+
+
+Questo approccio architetturale è molto utile nel caso in cui si vogliano differenziare i
+profili privacy per quanto attiene al mantenimento dei dati di lettura sottoposti a
+normativa privacy (numeri di targa – fotografie). Agli Enti della pubblica amministrazione
+è infatti consentita l’archiviazione dei dati personali fino ad un massimo di 7gg, mentre
+altre Forze dell’Ordine (Carabinieri – Polizia - Gdf) possono oltrepassare tale vincolo in
+quanto molto spesso autorizzati dalle Procure ad operare in qualità di Polizia Giudiziaria.
+Grazie al plugin multiserver potranno essere differenziate efficacemente le politiche di
+archiviazione dei dati.
+
+
+
+
+                                                                                                  50
+Storicizzazione dei transiti
+In ottemperanza al trattamento dei dati di registrazione previsto dal Garante sulla Privacy,
+Traffic Scanner prevede che quando il tempo massimo di registrazione viene superato i numeri
+di targa e le fotografie vengano cancellate in modo tale che risulti impossibile risalire
+all’intestatario del veicolo.
+
+
+Questa funzionalità permette in ogni caso di mantenere, in modalità
+totalmente anonima, i dati di transito anche per molti anni in modo
+da poter effettuare analisi storiche su periodi molto estesi e fornire
+i trend di variazione dell’intensità del traffico di lungo periodo.
+
+
+Più la base dati si arricchisce, maggiori saranno le informazioni che
+si potranno analizzare e l’attendibilità delle stime statistiche che si
+otterranno.
+
+
+
+Accesso a database esterni
+Traffic Scanner consente l’interrogazione a database esterni quali il servizio offerto dalla
+Motorizzazione Civile per la verifica della copertura assicurativa e dello stato della revisione
+oppure la verifica se i veicoli risultano avere una denuncia di furto pendente.
+
+
+
+Conclusioni
+Traffic Scanner fornisce una modalità innovativa di approccio all’analisi del traffico urbano, non
+limitandosi alla semplice funzione di riconoscimento delle targhe automobilistiche, ma partendo
+da essa per elaborare analisi dettagliate relative alla tipologia e alla modalità di spostamento del
+traffico sul territorio.
+
+
+Il sistema è multiserver e multiutente e può essere condiviso tra Enti differenti senza creare
+sovrapposizione di competenze e senza necessitare di personalizzazioni specifiche.
+
+
+Traffic Scanner è un prodotto interamente progettato e realizzato dalla Infoproget srl, azienda
+leader nelle soluzioni di monitoring e analisi dei flussi di traffico.
+
+
+
+
+                                                                                                 51
+

@@ -1,0 +1,784 @@
+COMMITTENTE:
+
+
+
+
+PROGETTAZIONE:
+
+
+
+
+U.O. TECNOLOGIE CENTRO
+
+PROGETTO DI FATTIBILITA’ TECNICO - ECONOMICA
+QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO 2^
+FASE LATO ROMA
+
+
+PP/ACC DI BIVIO CAPANNELLE
+
+RELAZIONE TECNICA IMPIANTI SEGNALAMENTO
+
+
+                                                                                                           SCALA:
+
+
+                                                                                                                   -
+
+COMMESSA      LOTTO FASE           ENTE       TIPO DOC.    OPERA/DISCIPLINA           PROGR.        REV.
+
+NR4 5          3 0           R     1 8         RO           A S 0 0 0 0               0 0 1            A
+
+Rev.       Descrizione            Redatto       Data      Verificato    Data     Approvato      Data       Autorizzato Data
+
+ A     Emissione Esecutiva       P.Aggravio    Feb. 21    A.Croce      Feb. 21   T. Paoletti   Feb. 21     G. Guidi Buffarini
+                                                                                     QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                                                     2^ FASE LATO ROMA
+                                                                                     PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                                                      COMMESSA           LOTTO          CODIFICA             DOCUMENTO              REV.            FOGLIO
+Relazione tecnica impianti IS
+                                                                                          NR45              30           R 18 RO              AS 00 00 001            A              2 di 20
+
+
+
+
+INDICE
+
+1     OGGETTO ............................................................................................................................................................................ 3
+
+2     SCOPO .................................................................................................................................................................................. 3
+
+3     NORMATIVA DI RIFERIMENTO ...................................................................................................................................... 3
+
+4     ACRONIMI ........................................................................................................................................................................... 3
+
+5     DESCRIZIONE DELLE ATTIVITA’ .................................................................................................................................. 6
+
+    5.1       STATO ATTUALE ............................................................................................................................................................ 6
+
+    5.2       STATO INERZIALE .......................................................................................................................................................... 6
+
+    5.3       STATO DI PROGETTO ...................................................................................................................................................... 7
+
+6     PP/ACC DI BIVIO CAPANNELLE ................................................................................................................................... 14
+
+    6.1       GENERALITÀ ............................................................................................................................................................... 14
+
+    6.2       FABBRICATO TECNOLOGICO ........................................................................................................................................ 14
+
+    6.3       POSTO PERIFERICO ACC .............................................................................................................................................. 15
+
+      6.3.1       Cabina .................................................................................................................................................................... 15
+
+      6.3.2       Sistema di alimentazione ........................................................................................................................................ 16
+
+      6.3.3       Interventi di Piazzale .............................................................................................................................................. 17
+
+7     MATERIALI ....................................................................................................................................................................... 20
+                                                  QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                  2^ FASE LATO ROMA
+                                                  PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                   COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                     NR45      30     R 18 RO    AS 00 00 001    A     3 di 20
+
+
+
+
+1   OGGETTO
+     La presente relazione tecnica ha per oggetto la descrizione degli impianti e delle opere necessarie
+alla fornitura e posa in opera dei sistemi tecnologici IS del Posto di Servizio di Bivio Capannelle, sulla
+linea Roma - Ciampino.
+2   SCOPO
+    Lo scopo della presente relazione è quello di definire le modalità di esecuzione delle opere, e le
+caratteristiche tecniche dei materiali e delle apparecchiature previste per la realizzazione degli impianti.
+3   NORMATIVA DI RIFERIMENTO
+     Gli impianti dovranno essere realizzati nel rispetto delle leggi, norme e regolamenti RFI vigenti, ed in
+particolare:
+     RS - Regolamento sui segnali;
+     RCT- Regolamento per la circolazione dei treni;
+     NUAS - Norme per l’Ubicazione e l’Aspetto dei Segnali;
+     IEPL - Istruzione per l’esercizio dei passaggi a livello;
+     capitolato tecnico IS.01 per l’esecuzione degli impianti di segnalamento, apparati centrali e
+        blocco;
+     sistema di Rilevamento Temperatura Boccole e Rilevamento Temperatura Freni RTB/RTF;
+     Schema di principio degli interventi dell’allarma RTB sui segnali di stazione V388b;
+     disposizioni per l’esercizio in telecomando;
+     norme per il servizio dei deviatori
+     Gruppo di specifiche #3 del Regolamento UE 2016/919 (Baseline 3 di ETCS)
+     Specifica di fornitura e posa Segnaletica ERTMS su linee in sovrapposizione
+     Specifica Postazione Operatore SDT
+     Specifica Generale SDT Livello 2
+     Specifica Interfaccia SDT-SSR
+     Specifica Transizioni di livello
+     Schema V 424a rev.E - relaz. ACCM-L2 sovrapposto
+     Volume 1 SRF HD ERTMS rev. B
+     Volume 1 SRS ETCS L2
+     Istruzioni per l’esercizio degli apparati centrali – Linee attrezzate con ERTMS/ETCS L2 a doppio
+        e a semplice binario
+     capitolati, istruzioni, norme, prescrizioni, istruzioni tecniche e disegni FS per gli impianti di
+        Sicurezza e Segnalamento nella loro edizione più recente.
+4   ACRONIMI
+
+           SIGLA                                          DESCRIZIONE
+
+            ACC        Apparato Centrale Computerizzato
+                                                       QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                       2^ FASE LATO ROMA
+                                                       PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                        COMMESSA    LOTTO    CODIFICA     DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                          NR45       30      R 18 RO      AS 00 00 001    A     4 di 20
+
+
+
+
+           ACCM        Apparato Centrale Computerizzato Multistazione. Sistema costituito da un posto
+                       centrale multistazione (PCM) e più Posti Periferici Multistazione (PPM) in grado di
+                       comandare/controllare un’area comprendente Posti di Servizio (PdS) e tratti di linea
+
+            ACE        Apparato Centrale Elettrico
+
+            ACEI       Apparato Centrale Elettrico ad Itinerari
+
+            BAB        Blocco Automatico Banalizzato
+
+             Bca       Blocco Conta Assi
+
+             BL3       Baseline 3
+
+             BM        Banco di Manovra
+
+            BTS        Base Transceiver Station
+
+            CCL        Controllo Circolazione Linee
+
+            CdB        Circuito di Binario
+
+             CPI       Componente Periferico di Interfaccia
+
+            CTC        Controllo Centralizzato del Traffico
+
+            DCO        Dirigente Centrale Operativo
+
+            DVC        Dispositivo Vitale di Conferma
+
+          ERTMS        European Rail Traffic Management System
+
+           ES/DM       Esclusione ente da DM
+
+            ES/IS      Esclusione ente stabilizzata
+
+           ETCS        European Train Control System
+
+           GSM-R       Global System for Mobile communications – Railways
+
+           INFILL      Codice al binario utilizzato per anticipare l’aspetto a via libera del segnale a valle
+
+             MA        Movement Authority
+
+             PB        Posto di Blocco
+
+            PCM        Posto Centrale Multistazione
+
+            PC         Posto Centrale ERTMS
+          ERTMS
+                                                       QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                       2^ FASE LATO ROMA
+                                                       PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                       COMMESSA    LOTTO     CODIFICA     DOCUMENTO         REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                          NR45       30      R 18 RO      AS 00 00 001       A     5 di 20
+
+
+
+
+            PdS        Posto di Servizio
+
+             PL        Passaggio a Livello
+
+            POM        Postazione Operatore Movimento
+
+          POMAN        Postazione Operatore Manutenzione
+
+          PP/ACC       Posto Periferico ACC. Posto di servizio con logica locale ed interfacciati col Posto
+                       Centrale. Possono essere soggetti ai seguenti stati operativi: PaD (Presenziato a
+                       distanza dall’operatore del Posto Centrale); PsP (Presenziato sul Posto dall’operatore
+                       tramite la postazione locale) PsPdg (Presenziato sul posto dall’operatore tramite la
+                       postazione locale nel caso in cui il Posto Centrale ACCM è disconnesso))
+
+           PP/SP       Posto Periferico Stazione Porta Permanente
+
+            PPM        Posto Periferico Multistazione. Posto di Servizio con logica allocata al Posto Centrale
+                       gestito nello lo stato Operativo PaD (Presenziato a Distanza)
+
+            PPT        Posto Periferico Tecnologico – Shelter o garitta destinata a contenere le
+                       apparecchiature d’interfacciamento con gli enti di linea;
+
+            PVS        Protocollo Vitale Standard
+
+             QL        Quadro Luminoso
+
+          QLv/TO       Quadro Luminoso vitale/Terminale operatore
+
+             QS        Quadro Sinottico: Visualizzazione dell’intera area controllata e tratte limitrofe.
+
+            RBC        Radio Block Centre
+
+            RSC        Ripetizione Segnali in Cabina
+
+            RTB        Rilevamento Temperatura Boccole dei Rotabili
+
+           SCMT        Sistema Controllo Marcia Treni
+
+           SCCM        Sistema di Comando e Controllo in presenza di ACCM
+
+            SDT        Sottosistema Distanziamento Treni
+
+            SIAP       Sistema di Alimentazione e Protezione
+
+             SIL       Safety Integrity Level
+
+            SMR        Signal Manager RIU
+
+            SSB        Sotto Sistema di Bordo
+
+            SST        Sotto Sistema di Terra
+                                                         QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                         2^ FASE LATO ROMA
+                                                         PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                          COMMESSA     LOTTO    CODIFICA      DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                             NR45       30       R 18 RO      AS 00 00 001    A     6 di 20
+
+
+
+
+             TD          Train Describer della località in giurisdizione e delle tratte limitrofe
+
+             TG          Train Graph
+
+             TF          Tastiera Funzionale
+
+             TO          Terminale Operatore
+
+
+
+5     DESCRIZIONE DELLE ATTIVITA’
+
+5.1    Stato attuale
+    Attualmente il Posto di Servizio di Capannelle è una fermata.
+    La linea da Roma Casilina a Ciampino è a doppio binario con distanziamento realizzato con il BAB
+RSC a 3 aspetti sul binario di sinistra e 3 aspetti sul binario di destra con seziuoni corte (Gx).
+    Le apparecchiature per la gestione del distanziamento sono concentrate nelle stazioni di Roma
+Casilina, Fermata Capannelle e Stazione di Ciampino in locali dedicati.
+    Recentemente è stato attivato all’esercizio il nuovo PP/ACC di Ciampino ed inserito nel ACCM
+/SCCM modulo “B” del nodo di Roma come sotto rappresentato
+
+
+
+                                              SCC-M
+
+
+
+
+5.2    Stato inerziale
+     Sono in corso i lavori per la modifica del distanziamento tra Roma Termini e Ciampino con
+passaggio dal sistema elettromeccanico al sistema statico per la realizzazione del sistema BAB EmRSC.
+In questo ambito l’attuale ACC di Roma Casilina diventerà un PP/ACC.
+     La situazione sotto riportata rappresenta lo stato inerziale dei lavori oggetto della presente
+relazione.
+                                                 QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                 2^ FASE LATO ROMA
+                                                 PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                 COMMESSA   LOTTO   CODIFICA    DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                    NR45      30     R 18 RO    AS 00 00 001    A      7 di 20
+
+
+
+
+         Inoltre, la stazione di Ciampino sarà, con interventi separati, oggetto di adeguamento al piano del
+ferro, e conseguentemente agli impianti di segnalamento, per la modifica alla radice “Castelli” che
+rappresenta la 1^ fase del PRG.
+     Sullo scenario tecnologico sopraddetto sarà implementato il nuovo sistema di distanziamento HD-
+ERTMS, finalizzato all’aumento di capacità di traffico del nodo metropolitano.
+     Il sistema si sovrapporrà agli impianti di segnalamento tradizionale e ne integrerà la funzionalità di
+distanziamento, tramite l’individuazione di punti di itinerario ERTMS, evidenziati a terra tramite tabelle
+che divideranno le sezioni di BAB-Emulazione RSC in modo virtuale.
+     La marcia dei treni attrezzati con bordo ERTMS sarà regolata da un RBC installato nel Posto
+Centrale di Roma T.ni, che riceverà le informazioni sulla posizione dei treni tramite collegamento radio e
+ne gestirà le singole MA sulla base di scambio di dati con gli apparati SCC-M/ACC-M di governo della
+tratta e delle stazioni.
+     Nell’ambito di tale contesto, più treni attrezzati possono quindi essere inseriti in una sezione di BA
+tradizionale o in una porzione di stazione, realizzando l’addensamento di traffico e garantendone al
+contempo la sicurezza di distanziamento.
+     Il sistema sarà integrato con il SCMT esistente, in modo da consentire la marcia anche ai treni non
+attrezzati con bordo HD-ERTMS.
+5.3   Stato di progetto
+   Nell’ambito del potenziamento tecnologico del nodo di Roma è previsto, tra l’altro il
+quadruplicamento della linea tra la stazione di Ciampino e la fermata di Capannelle.
+   L’intero intervento sarà realizzato mediante interventi distinti e precisamente:
+   - Lotto 10: Modifiche Piazzale Ciampino;
+   - Lotto 20: Modifiche Cabina Ciampino e Posto Centrale ACCM di Roma Termini (Modulo B);
+   - Lotto 30: Nuovo PP/ACC di Bivio Capannelle;
+   - Lotto 40: Modifiche di Cabina linea attuale e nuova cabina linea quadruplicata;
+   - Lotto 50: Modifiche di Piazzale linea attuale e nuovo piazzale linea quadruplicata;
+
+    La presente relazione tecnica ha per oggetto le attività del lotto 30, anche se per completezza
+saranno descritte brevemente le attività degli altri lotti in quanto tra loro interconnesse.
+        Nella successiva fase progettuale è prevista la produzione di piani schematici e profili di linea nei
+quali sarà indicato nel dettaglio la consistenza dei lavori e delle modifiche agli impianti.
+                                              QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                              2^ FASE LATO ROMA
+                                              PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                               COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                 NR45      30     R 18 RO    AS 00 00 001    A     8 di 20
+
+
+
+    La stazione di Ciampino e la linea lato Roma saranno oggetto di lavorazioni per fasi per portare gli
+impianti dallo stato inerziale allo stato di progetto (2^ fase di PRG), come di seguito rappresentato:
+    Si precisa che per ogni riconfigurazione del PP/ACC di Ciampino deve essere riconfigurato anche il
+Posto Centrale ACC-M Modulo B di Roma Termini, il sistema HD-ERTMS e il Posto Centrale SCC-M
+(quest’ultimo escluso dal presente intervento).
+
+    a) Stato inerziale:
+                                                QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                2^ FASE LATO ROMA
+                                                PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                 COMMESSA   LOTTO   CODIFICA    DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                   NR45      30      R 18 RO    AS 00 00 001    A      9 di 20
+
+
+
+    b) Fase 1, che prevede le seguenti lavorazioni:
+         •   Realizzazione di parte del quadruplicamento e modifica della radice di Ciampino lato
+             Roma;
+         •   Modifiche di cabina e piazzale di linea (flessi provvisori) e spostamento della circolazione
+             dagli attuali binari pari e dispari ai nuovi binari della linea quadruplicata (futura linea Roma
+             – Cassino);
+         •   I^ riconfigurazione PP/ACC di Ciampino e Posto Centrale ACC-M;
+         •   I^ riconfigurazione ERTMS-HD
+
+
+
+
+    c) Fase 2, che prevede le seguenti lavorazioni:
+         •    Interventi sul binario da/per Velletri
+         •    Installazione deviatoi per future comunicazioni bloccati con dispositivo di cui all`articolo 8
+              ISD
+                                             QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                             2^ FASE LATO ROMA
+                                             PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                              COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                NR45      30     R 18 RO    AS 00 00 001    A     10 di 20
+
+
+
+    d) Fase 3, che prevede le seguenti lavorazioni:
+         •    Interventi sul binario II da/per Albano;
+         •    II^ Riconfigurazione PP/ACC di Ciampino e Posto Centrale ACC-M per riattivazione I e II
+              binario;
+         •    II^ riconfigurazione ERTMS-HD
+
+
+
+
+    e) Fase 4, che prevede le seguenti lavorazioni di stazione e di linea:
+         •    Inibizioni sul III binario da/per linee dei castelli;
+         •    III^ Riconfigurazione PP/ACC di Ciampino e Posto Centrale ACC-M;
+                                          QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                          2^ FASE LATO ROMA
+                                          PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                          COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                            NR45      30     R 18 RO    AS 00 00 001    A     11 di 20
+
+
+
+    f) Fase 5.1, che prevede le seguenti lavorazioni di stazione e di linea:
+         •    Inibizione degli itinerari da/per Frascati sul IV binario;
+         •    Attivazione in configurazione provvisoria del PP/ACC di Bivio Capannelle per
+              consentire l’accesso al cantiere lato Roma;
+         •    Attivazione nuova comunicazione provvisoria gestita dal PP/ACC di Ciampino per
+              consenire l’accesso al cantiere lato Ciampino;
+         •    IV^ riconfigurazione PP/ACC di Ciampino e Posto Centrale ACC-M che contempla le
+              modifiche anche per le fase 5.2;
+         •    III^ riconfigurazione ERTMS-HD;
+                                              QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                              2^ FASE LATO ROMA
+                                              PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                               COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                 NR45      30     R 18 RO    AS 00 00 001    A     12 di 20
+
+
+
+
+    g) Fase 5.2, che prevede la predisposizione della radice lato Roma per il quadruplicamento:
+
+
+
+
+    h) Fase 6 che prevede le seguenti lavorazioni:
+         •    Spostamento della circolazione sulla futura linea Cassino con riconfigurazione del
+              PP/ACC di Bivio Capannelle e del PP/ACC di Ciampino;
+         •    IV^ riconfigurazione ERTMS-HD
+                                         QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                         2^ FASE LATO ROMA
+                                         PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                         COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                           NR45      30     R 18 RO    AS 00 00 001    A     13 di 20
+
+
+
+
+Fase 7 che prevede le seguenti lavorazioni:
+         •    Completamento del Bivio con la costruzione dei deviatoi e comunicazione in
+              configurazione finale con relativo segnalamento;
+         •    Collegamento della linea sul GRA;
+         •    Riconfigurazione del PP/ACC di Bivio Capannelle;
+         •    V^ Riconfigurazione finale del PP/ACC di Ciampino e del Posto Centrale ACC-M;
+         •    V^ riconfigurazione ERTMS-HD
+                                                  QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                  2^ FASE LATO ROMA
+                                                  PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                   COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                     NR45      30     R 18 RO    AS 00 00 001    A     14 di 20
+
+
+
+6     PP/ACC DI BIVIO CAPANNELLE
+
+6.1    Generalità
+         Come sopra accennato, per la realizzazione del quadruplicamento da Ciampino a Capannelle è
+necessario attivare per fasi un nuovo apparato computerizzato (PP/ACC) che sarà, contestualmente e
+con altro appalto, inserito nel ACCM del Modulo B del Nodo di Roma (Roma Termini – Colleferro).
+         Tale apparato sarà installato entro un nuovo fabbricato tecnologico che sarà costruito, nell’ambito
+di altro appalto, nei pressi della fermata Capannelle, come sotto rappresentato:
+
+
+
+
+6.2    Fabbricato tecnologico
+                 Il nuovo fabbricato tecnologico delle dimensioni in piantra di 10x19 m è costituito da due
+        piani.
+                Al piano terra è previsto:
+      - Il sistema di alimentazione (UPS, Quadri elettrici, batterie e Gruppo Elettrogeno),
+      - Le apparecchiature TLC;
+      - Le apparecchiature LFM (Cabina MT/bt, locale quadri)
+                                                  QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                  2^ FASE LATO ROMA
+                                                  PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                  COMMESSA   LOTTO   CODIFICA   DOCUMENTO       REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                    NR45      30     R 18 RO     AS 00 00 001    A     15 di 20
+
+
+
+
+             Al primo piano è previsto:
+      - L’apparato di sicurezza (Posto Periferico ACC);
+      - La postazione operatore Movimento e Manutenzione
+
+
+
+
+             Layout Primo Piano                                      Layout Piano Terra
+
+
+6.3     Posto periferico ACC
+               L`attrezzaggio tecnologico del bivio avverrà per fasi in funzione delle modifiche al piano del
+         ferro sopra descritte.
+
+6.3.1    Cabina
+              Il Bivio Capannelle sarà gestito da Apparato di sicurezza tipo PP/ACC il quale riceve i
+         comandi impartiti dal Posto Centrale di Roma Termini ed invia le informazioni ed i controlli.
+              Presenta la caratteristica di avere la logica di sicurezza sul posto e quindi può funzionare
+         anche in assenza del collegamento col Posto Centrale gestito in tal caso da un operatore che
+         agisce su apposita MMI.
+              A differenza degli impianti telecomandati con i Regimi di Esercizio, il PP/ACC presenta i
+         seguenti Stati Operativi:
+                  Presenziato a distanza (PaD): il PP viene esercitato attraverso la postazione
+                     operatore del Posto Centrale;
+                  Presenziato sul Posto (PsP): viene esercitato attraverso la Postazione Operatore
+                     locale;
+                  Presenziato sul Posto in degrado (PsPdg) viene esercitato attraverso la Postazione
+                     Operatore locale nel caso di disconnessione dal Posto Centrale;
+
+          Il PP/ACC è costituito da:
+              un complesso di elaborazione ed acquisizione per la gestione della logica in sicurezza e
+                delle funzioni tipiche dell’Apparato Centrale;
+              un complesso costituito da apparati per la diagnostica del sistema;
+              rete di trasmissione dati da/a Posto Centrale ACC-M;
+              interlocking centrale;
+              hardware centrale dedicato alla funzione diagnostica;
+              hardware centrale dedicato alle funzioni di supporto con relative memorie di massa;
+                                               QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                               2^ FASE LATO ROMA
+                                               PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                COMMESSA   LOTTO   CODIFICA   DOCUMENTO      REV.   FOGLIO
+Relazione tecnica impianti IS
+                                                  NR45      30     R 18 RO    AS 00 00 001    A     16 di 20
+
+
+
+             software di base, applicativo e di comunicazioni da/a Posto Centrale e le Postazioni
+              Operatore;
+           software di gestione del registratore cronologico di eventi, della documentazione
+              informatizzata, ecc..
+           software di gestione delle comunicazioni con i sistemi interfacciati;
+           n. 1 stampante
+           lettori di badge;
+           rete bus/locale;
+           memoria di massa, archivio documentazione;
+           software di base;
+           gli alimentatori e i dispositivi di trasformazione, conversione, sezionamento e distribuzione
+              delle alimentazioni necessarie alle apparecchiature del Sistema;
+           cassetti di contenimento schede;
+           armadi ed elementi meccanici di interconnessione tra gli armadi;
+           cablaggi interni e verso le alimentazioni esterne;
+           pannelli di tamponamento e protezione connettori;
+           armadi di arrivo cavi;
+           carpenteria;
+           passerelle e canalizzazioni per cavi per il collegamento con gli altri apparati costituenti
+              l’impianto e verso le direttrici di comunicazione;
+           documentazione;
+             e tutto quanto occorre a rendere gli apparati perfettamente funzionanti, diagnosticabili e
+        mantenibili secondo quanto indicato nel Capitolato Tecnico ACC allegato al Contratto.
+
+6.3.2   Sistema di alimentazione
+              L’alimentazione elettrica dell’apparato sarà assicurata da un Sistema Integrato di
+        Alimentazione e Protezione (SIAP) costituiti da:
+                una sezione di emergenza (GE) composta da:
+                   N. 1 gruppo elettrogeno in versione da esterno di potenza 75 kVA;
+                   N. 1 quadro di commutazione rete/G.E.;
+                una sezione di continuità composta da:
+                   N. 1 quadro gestore;
+                   N. 2 centraline di continuità (UPS) di potenza 30 kVA;
+                   N. 1 stabilizzatore di tensione (sezione c.a.) di potenza 30 kVA;
+                   N. 1 batteria di accumulatori al piombo della capacità idonea ad assicurare una
+                      autonomia di 30 minuti a piano carico;
+                   N. 1 quadro di rifasamento automatico;
+              Di seguito si riporta lo schema elettrico tipologico del sistema previsto.
+                                                     QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                     2^ FASE LATO ROMA
+                                                     PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                      COMMESSA    LOTTO    CODIFICA     DOCUMENTO       REV.    FOGLIO
+Relazione tecnica impianti IS
+                                                         NR45       30      R 18 RO      AS 00 00 001    A       17 di 20
+
+
+
+
+6.3.3   Interventi di Piazzale
+
+6.3.3.1 CANALIZZAZIONI
+                Le attività sopra elencate comprendono la fornitura e posa in opera delle nuove canalizzazioni di
+        linea, in ingresso al fabbricato occorrenti al contenimento dei cavi di alimentazione e controllo degli enti.
+                In generale le canalizzazioni sono saranno dimensionate per il contenimento dei cavi:
+           - IS;
+           - SCMT/ERTMS;
+           - TLC;
+
+6.3.3.2 CAVI
+               Saranno previsti cavi elettrici rispondenti alle seguenti norme:
+            N.T. ES 409 Edizione in vigore: “Cavi elettrici con e senza armatura per circuiti esterni degli impianti di
+             segnalamento e sicurezza”, Tensione d’esercizio: Uo/U=450/750V con classificazione al fuoco ai
+             sensi del regolamento UE 30/2011. Nel caso specifico i cavi devono essere armati e devono avere
+             una classe di reazione al fuoco tipo Cca-s1b,d1,a1 per i tratti all’aperto e all’interno dei locali
+             tecnologici.
+            NT IS 412 edizione in vigore: “Cavi elettrici per posa fissa nei circuiti interni degli impianti di
+             segnalamento e sicurezza a tecnologia modulare non propaganti l’incendio e a ridotta emissione di
+             fumi, gas tossici e corrosivi” rispondenti al Regolamento Prodotti da Costruzione (CPR), classe di
+             reazione al fuoco Cca-s1b,d1,a1. Tale cavo dovrà essere utilizzato per il collegamento interno tra telai
+             ed armadi e per cablaggi con connettori.
+              Il tipo di cavo e la sezione da impiegare in rapporto alle distanze fra gli enti e i relativi controllori
+        saranno determinati nella successiva fase progettuale in base a quanto riportato nella nota RFI-DTC-
+        DIT\A0011\P\2013\0000399 del 18/2/2013 “nuovi requisiti interfacciamento cabina-piazzale ACC/ACCM”.
+                                                      QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                      2^ FASE LATO ROMA
+                                                      PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                       COMMESSA    LOTTO    CODIFICA     DOCUMENTO      REV.     FOGLIO
+Relazione tecnica impianti IS
+                                                         NR45       30      R 18 RO      AS 00 00 001    A        18 di 20
+
+
+
+6.3.3.3 BONIFICA ORDIGNI ESPLOSIVI (BOE)
+              Le zone interessate da scavi per canalizzazioni, attraversamenti, pozzetti, basamenti e blocchi di
+        fondazione in genere (sbalzi, paline ecc.) saranno oggetto di ricerca, localizzazione e scoprimento di
+        ordigni esplosivi.
+              Tale attività, curata da impresa abilitata BCM, comprende una bonifica superficiale ed una bonifica di
+        profondità.
+              La BONIFICA SUPERFICIALE è costituita da:
+                - Esplorazione mediante impiego di apposito apparato di ricerca della superficie individuata con
+                    passaggio della testina di rilevazione ad una altezza di circa 5 cm;
+                - Localizzazione degli eventuali ordigni o corpi metallici;
+                - Scavo e scoprimento degli stessi sino a 1 metro di profondità;
+                - Esplorazione del fondo dello scavo con l’apparato di ricerca;
+                - Riempimento sommario dello scavo;
+                - Smaltimento dei materiali metallici rinvenuti;
+
+               La BONIFICA DI PROFONDITA’, preceduta sempre dalla bonifica superficiale è costituita da:
+                - Suddivisione dell’area in quadrati da 3x3 m circa di lato;
+                - Perforazione al centro di ciascun quadrato con trivella non a percussione di un foro con
+                    diametro maggiore rispetto a quello della sonda dell’apparato rilevatore. Detta perforazione sarà
+                    eseguita inizialmente fino ad una profondità di 1 metro corrispondente alla quota garantita dalla
+                    bonifica di superficie;
+                - Inserimento della sonda nel foro fino a raggiungere il fondo del foro. L’apparato di rilevazione
+                    dovrà essere capace di garantire la rilevazione di masse ferrose entro un raggio di 2 metri;
+                - Effettuazione di una seconda perforazione di ulteriori 100 cm e verifica con la sonda. Nel caso
+                    di terreni inconsistenti i fori dovranno essere incamiciati con tubi in PVC.
+               L’eventuale ritrovamento di masse metalliche note o non riconosciute con certezza deve essere
+        comunicato formalmente all’amministrazione Militare ed ai Carabinieri. L’area interessata deve essere
+        protetta da apposita segnaletica e protezione fino all’intervento dei tecnici dell’Amministrazione Militare.
+
+
+6.3.3.4 GESTIONE MATERIALE DI RISULTA
+               Al fine di definire le corrette modalità di gestione dei materiali di risulta che verranno movimentati per
+        la realizzazione delle opere in progetto e che si prevede di non riutilizzare nell’ambito delle lavorazioni, nel
+        corso dell’elaborazione del Progetto Definitivo saranno realizzate indagini ambientali finalizzate alla
+        caratterizzazione analitica del terreni/materiali di risulta da scavo che saranno movimentati in corso
+        d’opera.
+
+6.3.3.5 IMPIANTI DI TERRA
+                Per la esecuzione degli impianti di messa a terra e più in generale per la protezione contro i contatti
+        diretti ed indiretti, dovranno essere applicate le disposizioni di RFI con particolare riferimento alla NT ES
+        728.
+
+6.3.3.6 SEGNALI
+               I nuovi segnali dovranno essere ubicati immediatamente a valle (senso marcia treno) dei segnali
+        esistenti nel rispetto delle norme in vigore, mantenendo per quanto possibile i giunti incollati nella posizione
+        attuale.
+               Durante i lavori i nuovi segnali saranno ruotati e mascherati; I vecchi segnali dovranno essere
+        rimossi dopo l’attivazione, compresa la demolizione del blocco per la parte a vista.
+
+             Le attrezzature per il sostegno dei segnali nonché i particolari costruttivi dovranno corrispondere
+        secondo quanto descritto nella “Notizia tecnica IS A0080 Ed. 1989 “Attrezzatura di sostegno dei segnali
+        permanentemente luminosi”. Le paline dei segnali dovranno essere in vetroresina con le caratteristiche di
+                                                        QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                        2^ FASE LATO ROMA
+                                                        PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                        COMMESSA    LOTTO     CODIFICA     DOCUMENTO       REV.      FOGLIO
+Relazione tecnica impianti IS
+                                                           NR45       30       R 18 RO      AS 00 00 001    A        19 di 20
+
+
+
+        cui alla N.T. I.S. 212 del 25/03/99 “S.T. FORNITURA PER PALINE DI SOSTEGNO SEGNALI FISSI
+        LUMINOSI IN MATERIALE P.R.F.V”.
+
+              I blocchi di fondazione per il sostegno dei segnali devono avere forma parallelepipeda, e
+        dimensionamento secondo i dettami specificati nel MANUALE DI PROGETTAZIONE DELLE OPERE
+        CIVILI – PARTE II – SEZIONE 3 – CORPO STRADALE ALL.F del 20/12/2019 – ALLEGATO F1:
+        Fondazione per paline di segnalamento ferroviario ecc.;
+
+6.3.3.7 CASSE DI MANOVRA
+
+              Nell`ambito di altro intervento e` prevista l`installazione di deviatoi con tangente 0,040 a cuore fisso
+        percorribili a 100km/h sul percorso deviato, comandati da sistemi oleodinamici tipo S01.
+
+              La fornitura dei sistemi oleodinemici e` a carico di RFI. Nel presente intervento e` prevista la sola
+        posa in opera.
+
+6.3.3.8 CONNESSIONI INDUTTIVE
+              I circuiti di binario codificati saranno attrezzati con connessioni induttive da 800 A in linea e in
+        stazione e da 1.000 A in corrispondenza delle SSE rispondenti alle STF IS 415 del 28/7/2015:
+        “Connessioni induttive con due fughe di rotaie isolate”.
+              I restanti cdb di tipo tradizionale saranno attrezzati con trasformatore di alimentazione e ricezione da
+        100 VA e dispositivo a ponte.
+              Per i collegamenti delle connessioni induttive alle rotaie saranno utilizzate corde bimetalliche in
+        alluminio-acciaio.
+
+
+6.3.3.9 UNITA’ BLOCCABILI
+              L’appalto comprende la fornitura e posa in opera delle UB e relativi accessori, compreso il blocco di
+        fondazione.
+
+6.3.3.10 CIRCUITI DI BINARIO
+               I circuiti di binario di stazione e di linea sono sia ad una fuga di rotaia isolata che ad entrambe le
+        fughe di rotaie isolate.
+               Questi ultimi sono attrezzati mediante casse induttive.
+               Le cassette contenenti trasformatori e le casse induttive dovranno essere posate su idonei
+        basamenti in calcestruzzo.
+               Dovranno essere previsti appositi picchetti R/G da installare in corrispondenza dei giunti isolati come
+        previsto dalle Prescrizioni tecniche. Per i circuiti di binario di immobilizzazione dei deviatoi telecomandati
+        deve essere installato il picchetto limite speciale secondo le modalità previste nel disegno V 233.
+               Per la connessione alla rotaia delle trecce di rame afferenti ai cassettini terminali dei C.d.B. e alle
+        pipette, si dovranno utilizzare attacchi di tipo omologato da FS.
+               Dovranno essere previsti, come d’uso, allacciamenti e tarature con relativo montaggio e smontaggio
+        di trecce quante volte occorra per le verifiche di piazzale e per le verifiche della funzionalità, anche in
+        relazione alle esigenze di prove e tarature dell’ACC-M, provvedendo a quanto necessario per assicurare
+        nel frattempo la continuità dell’Esercizio del piazzale.
+
+6.3.3.11 GIUNTI ISOLANTI
+               I giunti di rotaia per la separazione di circuiti di binario contigui dovranno essere del tipo “incollato”.
+               La fornitura dei giunti e` a carico di RFI; la posa in opera e` a carico di altri intervento.
+
+6.3.3.12 TABELLE E TAVOLE
+               Dovranno essere fornite ed installate:
+                                                      QUADRUPLICAMENTO CIAMPINO-CAPANNELLE E PRG CIAMPINO
+                                                      2^ FASE LATO ROMA
+                                                      PFTE PP/ACC DI BIVIO CAPANNELLE
+
+                                                       COMMESSA    LOTTO    CODIFICA     DOCUMENTO      REV.     FOGLIO
+Relazione tecnica impianti IS
+                                                         NR45       30      R 18 RO      AS 00 00 001    A        20 di 20
+
+
+
+              -   tavole di orientamento di tipo distanziometrico opportunamente fissate sui sostegni T.E., (Art. 65
+                  RS);
+              -   segnali accessori e segnaletica complementare per impianti e linee in telecomando
+                  (Regolamento Segnali).
+
+6.3.3.13 ILLUMINAZIONE DEVIATOI
+              Dovrà essere prevista l'illuminazione dei deviatoi per i quali è prevista la manovra a mano da parte
+        del personale del treno.
+              Questo impianto è descritto in altro ambito progettuale.
+
+6.3.3.14 RETE IN FIBRA OTTICA
+                Nel presente progetto è prevista la fornitura e posa in opera dei cavi in F.O. Normale, Riserva ed
+        intertratta, come rappresentato sullo schema di architettura.
+                Per maggiori dettagli vedi il progetto “Impianti di Telecomunicazioni”.
+
+
+7   MATERIALI
+               La fornitura e posa in opera di tutti i materiali occorrenti alla realizzazione dell’intervento è a carico
+        dell’Appaltatore ad eccezione:
+               - Casse di manovra e relativi accessori;
+               - Sistemi oleodinamici compresi i kit per l’attrezzaggio;
+               - Giunti isolanti incollati;
+               - Connessioni induttive;
+               - Segnali a LED;
+               - Gruppo Ottico;
+               - Gruppo di alimentazione;
+               - dispersore
+               - vele;
+               Per i materiali sopra elencati è prevista la sola posa in opera.
+

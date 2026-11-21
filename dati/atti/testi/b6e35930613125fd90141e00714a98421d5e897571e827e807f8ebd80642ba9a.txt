@@ -1,0 +1,160 @@
+OGGETTO: Sviluppo e messa in produzione dell'implementazione della componente di autenticazione a due
+fattori (2FA) per l’accesso ai servizi della ricetta dematerializzata su cartella clinica per la Nefrologia Medware.
+Affidamento diretto ai sensi dell’art. 50 c. 1 l. b) del D. Lgs. 36/2023. CIG BBBDEDB301
+
+
+                                                 DOCUMENTO ISTRUTTORIO
+
+
+Premesso che:
+    ●​   PuntoZero S.c. a r.l., società in house providing della Regione Umbria e delle Aziende Sanitarie regionali, opera
+         ai sensi dell’art. 4 della L. R. Umbria del 2 agosto 2021 n. 13 quale Centrale Regionale di Acquisto e quale
+         soggetto aggregatore unico regionale, ai sensi dell’articolo 9, commi 1 e 5 del decreto legge 24 aprile 2014, n.
+         66;
+    ●​   PuntoZero S.c. a r.l., nel rispetto della normativa sugli appalti pubblici, effettua affidamenti di beni e servizi a
+         terzi, necessari a soddisfare sia la gestione dei servizi affidati dagli Enti Soci, sia i propri fabbisogni interni;
+Visto in particolare il comma 3 dell’art. 2 della L.R. n. 13/2021 secondo cui PuntoZero eroga, tra l’altro, i seguenti servizi
+di interesse generale:
+    ●​   sviluppo dell'innovazione tecnologica e gestione della transizione al digitale del sistema pubblico regionale e dei
+         relativi flussi informativi, anche mediante la digitalizzazione del Sistema informativo sanitario regionale di cui
+         all'articolo 94 della legge regionale 9 aprile 2015, n. 11 (Testo unico in materia di Sanità e Servizi sociali) e del
+         Sistema informativo regionale di cui all'articolo 5 della l.r. 9/2014;
+    ●​   cura delle attività per l'erogazione dei servizi preordinati alla tutela della salute, opera per la produzione di beni
+         e la fornitura di servizi rivolti all'utenza, compresa l'attività di front-office di servizi al cittadino, e cura la gestione
+         dei flussi informativi del sistema sanitario regionale;
+    ●​   progettazione, direzione, integrazione e conduzione di sistemi e flussi informativi a valenza regionale e
+         nazionale;
+Vista la DGR n. 1412 del 28/12/2023 recante “Definizione dei fabbisogni informatici della Regione Umbria, per la
+formazione, approvazione e gestione del Piano Digitale Regionale Triennale (PDRT) e per la semplificazione del
+percorso per gli affidamenti di forniture e servizi alla Società in House providing PUNTOZERO SC.AR.L. Determinazioni”;
+Vista la DGR n. 125 del 14/02/2024 recante “Aggiornamento del Piano Digitale Regionale Triennale 2024 (PDRT)”;
+Viste la DGR n. 268 del 27/03/2024, la DGR n. 395 del 24/04/2024 e DGR n. 454 del 17/05/2024 recanti
+“Aggiornamento del Piano Digitale Regionale Triennale 2024 (PDRT)”;
+Vista la DGR n. 509 del 29/05/2024 recante “DGR n. 1412/2023 - fase di prima applicazione - monitoraggio e indirizzi”;
+Vista la nota prot. reg. n. 0269672 del 23/11/2023 “Invio business case e richiesta tecnico economica”, con la quale è
+stata richiesta a Puntozero Scarl la proposta tecnico economica del progetto “Nomenclatore nuovi LEA”;
+Vista la proposta tecnico-economica relativa al progetto “Nomenclatore nuovi LEA”, trasmessa da PuntoZero Scarl e
+acquisita al prot. reg. n. 0271848 del 28/11/2023;
+Vista la nota prot. reg. n. 271712 del 27/11/2023, con la quale il Servizio “Sistemi informativi sanitari, sanità digitale e
+innovazione” ha chiesto al Servizio regionale “Sistema informativo regionale, infrastrutture digitali e cybersecurity” di
+inserire nel PDRT (Piano Digitale Regionale Triennale) il progetto “Nomenclatore nuovi LEA”;
+Considerato che il progetto risulta inserito nel PDRT con codice PRJ-1673 ed è identificato con il Codice Unico di
+Progetto (CUP) I67H23001640002;
+Vista la Determinazione Dirigenziale n. 13000 del 05/12/2023 del Servizio Sistemi informativi sanitari, sanità digitale e
+innovazione con la quale è stata accettata la predetta offerta tecnico-economica ed è stata affidata a PuntoZero la
+realizzazione del progetto per un importo massimo complessivo di € 193.614,00, per l’aggiornamento del nomenclatore
+regionale utilizzato dalla piattaforme SAR (prescrizione dematerializzata) e CUP (prenotazione delle prestazioni);
+Considerato che da parte dell’Area aziendale ICT Servizi e Progetti ambito Socio-Sanitario è pervenuta richiesta di
+acquisto nella quale si rappresenta che:
+    ●​   per la realizzazione delle attività previste nel Progetto PRJ-1673, è necessaria l’acquisizione di servizi
+         professionali per l’implementazione della componente di autenticazione a due fattori (2FA) per l’accesso ai
+         servizi della ricetta dematerializzata su cartella clinica per la Nefrologia Medware, in ottemperanza a quanto
+         stabilito dal Decreto MEF 27 febbraio 2025 – “Modifiche al decreto 2 novembre 2011, inerente all’estensione
+         dell’autenticazione a due o più fattori alle funzionalità della ricetta dematerializzata a carico del SSN;
+    ●​   in particolare, si richiedono le attività di analisi, progettazione, sviluppo, test, formazione e messa in produzione
+         dell’adeguamento 2MFA Prescrizione / Erogazione ricette Dematerializzate per le 4 Aziende Ospedaliere e
+         Sanitarie regionali, da concludersi secondo le scadenze definite da SOGEI, entro il 30/09/2026, per l’importo
+         complessivo di € 20.000,00 oltre IVA (€ 5.000,00 OLTRE IVA ad Azienda);
+    ●​   i servizi in parola non risultano disponibili in iniziative Consip attualmente attive;
+    ●​   l’applicativo MedWare è stato sviluppato dalla Società SINED srl, la quale risulta l’unica detentrice del codice
+         sorgente dell’applicativo MedWare e la sola legittimata e in grado di effettuare su di esso attività di
+         personalizzazione, adattamento, aggiornamento, implementazione, consulenza e manutenzione;
+    ●​   la copertura economica è garantita dal progetto PRJ-1673 Nomenclatore nuovi LEA;
+Considerato che per esigenze organizzative interne di PuntoZero S.c.a r.l si rende necessario nominare Responsabile
+del procedimento per la fase di affidamento della procedura in oggetto la Dott.ssa Arianna Matarazzo, dipendente di
+PuntoZero. Tale nomina sarà confermata con la determina di affidamento relativa al presente atto; la                  stessa ha
+sottoscritto la dichiarazione di assenza di cause di incompatibilità;
+Tenuto conto di tutto quanto rappresentato nella Richiesta di acquisto succitata;
+Riscontrato che dalla ricerca effettuata sul catalogo MePA, è emerso che non sono disponibili prodotti/servizi relativi
+all’applicativo MedWare;
+Ritenuto opportuno procedere altresì a una verifica formale della situazione di mercato, mediante analisi desk su
+iniziative analoghe relative all’applicativo MedWare svolte da parte di altre stazioni appaltanti, tra cui:
+    ●​   “SERVIZIO DI MANUTENZIONE ED ASSISTENZA DEL SOFTWARE MEDWARE PER LA GESTIONE DELLA
+         CARTELLA CLINICA IN USO PRESSO LA STRUTTURA COMPLESSA DI NEFROLOGIA DELL'ASST DI
+         MANTOVA, PER LA DURATA DI 48 MESI - AFFIDAMENTO DIRETTO” CIG: BB1D84B471 a favore
+         dell’Operatore economico Sined S.r.l.;
+    ●​   “Affidamento alla ditta Sined Srl, ai sensi dell’art. 76 comma 2 lettera b del D.lgs. n 36/2023 e ss.mm.ii.
+         dell’assistenza e manutenzione del sistema SINED MEDWARE, per 24 mesi dal 01/01/2024 al 31/12/2025 al
+         costo di € 46.164,00 (Iva Esclusa) CIG: B114772955” - ASL ROMA 3;
+    ●​   “AFFIDAMENTO DIRETTO, TRAMITE PIATTAFORMA MEPA, ALLA DITTA SINED S.R.L. DEI SERVIZI DI
+         ASSISTENZA E MANUTENZIONE, HARDWARE E SOFTWARE, DEL SISTEMA INFORMATICO "MEDWARE"
+         IN USO PRESSO LE UNITA' OPERATIVE DI NEFROLOGIA E DIALISI DELL'AULSS N. 9 SCALIGERA PER
+         L’ANNO 2025 - DELIBERAZIONE DEL DIRETTORE GENERALE N. 676 DEL 30/05/2025);
+Ritenuto opportuno, stante l’importo stimato, procedere pertanto mediante affidamento diretto ai sensi dell’art. 50 c. 1 l.
+b) del D. Lgs. 36/2023, previa richiesta di offerta tramite invio della Trattativa Diretta MePA n. 6325580 alla Società
+SINED SRL - con sede in Bologna (BO) Via Ferrarese, 219/7 - Codice fiscale 04226120378 - per lo sviluppo e la messa
+in produzione dell'implementazione della componente di autenticazione a due fattori (2FA) per l’accesso ai servizi della
+ricetta dematerializzata su cartella clinica per la Nefrologia Medware, per le 4 Aziende Ospedaliere e Sanitarie regionali,
+da concludersi secondo le scadenze definite da SOGEI, entro il 30/09/2026, per l’importo complessivo di € 20.000,00
+oltre IVA;
+Riscontrato che entro il termine di scadenza della Trattativa, è pervenuta l’offerta della Società SINED SRL, che ha
+confermato l’importo di € 20.000,00 oltre IVA;
+Valutata la congruità tecnico-economica dell’offerta;
+Dato atto che:
+    ●​    è stato acquisito il CIG BBBDEDB301 mediante piattaforma acquistinretepa.it ;
+    ●​    sono state effettuate le previste verifiche di legge;
+    ●​    con riferimento a quanto disposto dall’art. 53, comma 4, del d.lgs. 36/2023, si ritiene di non richiedere la
+          garanzia definitiva per l’esecuzione delle prestazioni in parola, in considerazione del ridotto valore economico
+          delle stesse e della remota possibilità che un inadempimento verificatosi in sede di esecuzione contrattuale
+          possa arrecare significative ripercussioni alla stazione appaltante;​     ​       ​
+Considerato che è pervenuta da parte dall’Area richiedente indicazione del Responsabile competente per la fase di
+esecuzione nella persona del Dott. Francesco Solinas - Responsabile Area Servizi e Progetti ambito Socio-Sanitario;
+Visti:
+     ●​      il D. Lgs. 36/2023 e s.m.i.;
+     ●​      il Regolamento Acquisti approvato con Determinazione del 08/05/2025;
+
+
+Per tutto quanto sopra riportato
+SI PROPONE ALL’AMMINISTRATORE UNICO DI PUNTOZERO S.C. A R.L. DI ADOTTARE ATTO CON IL QUALE
+                                                            DECIDE
+
+
+    1)​ DI CONFERMARE la nomina della Responsabile del procedimento per la fase di affidamento per la procedura
+          in oggetto, Dott.ssa Arianna Matarazzo, dipendente di PuntoZero;
+    2)​ DI APPROVARE il presente documento istruttorio, cui sono allegati per costituirne parte integrante e
+          sostanziale, i seguenti documenti:
+                 ○​   Riepilogo_NG6325580;
+                 ○​   Documenti di offerta del fornitore;
+          Tale documento istruttorio con i suddetti allegati resterà conservato agli atti di PuntoZero S.c.ar.l. in formato
+          digitale (Protocollo aziendale).
+    3)​ DI DARE ATTO che la presente procedura è espletata tramite affidamento diretto ai sensi dell’art. 50 c. 1 l. b)
+          del D. Lgs. 36/2023;
+    4)​ DI DARE ATTO che il presente provvedimento ottempera alle richieste e sostituisce l’atto di cui all’articolo 112
+          del d.lgs. 36/2023;
+    5)​ DI AFFIDARE alla Società SINED SRL - con sede in Bologna (BO) Via Ferrarese, 219/7 - Codice fiscale
+          04226120378 - lo sviluppo e la messa in produzione dell'implementazione della componente di autenticazione a
+         due fattori (2FA) per l’accesso ai servizi della ricetta dematerializzata su cartella clinica per la Nefrologia
+         Medware, da concludersi secondo le scadenze definite da SOGEI, entro il 30/09/2026, per l’importo di €
+         20.000,00 oltre IVA;
+    6)​ DI NOMINARE, su indicazione dell’Area richiedente, quale Responsabile del procedimento per la fase di
+         esecuzione il Dott. Francesco Solinas, dipendente di PuntoZero;
+    7)​ DI DISPORRE la pubblicazione del presente atto secondo normativa vigente.
+
+
+
+                                                            ARIANNA
+LA RESPONSABILE DEL PROCEDIMENTO                            MATARAZZO
+                                                            27.05.2026
+                                                            16:07:22
+PER LA FASE DI AFFIDAMENTO                                  GMT+02:00
+
+
+Dott.ssa Arianna Matarazzo
+                                                               GIORGIO
+                                                               MAGLIO
+                                                               28.05.2026
+                                                               10:37:25
+                                                               GMT+02:00
+IL RESPONSABILE ACQUISTI INTERNI
+Dott. Giorgio Maglio
+                                                                                 DI BELLO
+                                                                                 ALESSANDRO
+                                                                                 28.05.2026
+                                                                                 11:25:33
+IL DIRETTORE DELLA CENTRALE REGIONALE ACQUISTI                                   GMT+02:00
+
+Ing. Alessandro Di Bello
+
+
+                Documento elettronico sottoscritto mediante firma digitale ai sensi D.Lgs. 7 marzo 2005 n. 82
+
