@@ -6,7 +6,7 @@ lastmod: 2026-11-21T12:00:00Z
 description: "Prima versione del tabellone per marchio del prodotto, dai CIG ANAC 2020-2026 classificati dall'imbuto: cloud, licenze e software installato, incerto."
 ---
 
-**Versione 0.2 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
+**Versione 0.3 del 2026-11-21** · ticket [#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) (voce A) · [registro delle revisioni](#registro-delle-revisioni)
 
 Legenda: **[V]** misurato da noi, con il comando per rifarlo; **[S]** stima o risultato parziale.
 
@@ -65,11 +65,24 @@ Seconda via indipendente ([#83](https://github.com/mxmap-it/analisi-spesa-ict/is
 **Cosa ci dice.**
 - La lente prodotto riconosce Microsoft dove Microsoft c'è davvero: gli enti con posta Microsoft hanno acquisti Microsoft **6 volte** più spesso degli altri.
 - Ma **il 70 % degli enti con posta Microsoft non ha nessun CIG Microsoft riconosciuto**: la spesa passa da convenzioni, rivenditori o oggetti senza marchio. È la misura del punto cieco della lente, e il motivo per cui il tabellone è un minimo, non un totale [S].
-- Per Google lo scarto è piccolo (2,9 % contro 1,1 %): molti enti con posta Google sono scuole, che usano Google Workspace for Education senza un contratto a pagamento.
+- Per Google lo scarto è piccolo (2,9 % contro 1,1 %): l'87 % degli enti con posta Google sono scuole (categoria IPA L33: 4.986 su 5.750), che usano di norma Google Workspace for Education senza un contratto a pagamento.
 
 Comando: `python tools/verifiche/posta_acquisti.py 2026-11-21` → `esiti/2026-11-21/statistiche/posta-acquisti.json`.
 
-## 6. Rifare il calcolo
+## 6. Confronto con un altro progetto civico (sovranita-digitale.it) [V]
+
+Controprova con la [dashboard dei contratti ICT](https://www.sovranita-digitale.it/contratti-ict/) di sovranita-digitale.it ([#83](https://github.com/mxmap-it/analisi-spesa-ict/issues/83) voce C). I loro dati (`kpi_report.json` del 19/9/2026, archiviato con sha256 nel nostro mirror) sono **riferiti da loro**, non riprodotti: li usiamo solo per vedere se gli ordini di grandezza tornano.
+
+| marchio | loro: OCDS gen 2024-mar 2026, CPV 48/72, importi lordi | noi: tutti i CIG 2024-set 2026, importi netti (cloud+licenze+incerto) |
+|---|---:|---:|
+| Microsoft | 1.857,0 M€ (765 contratti) | 1.324,5 M€ (3.759 CIG) |
+| Oracle | 173,5 M€ (231) | 538,9 M€ (543) |
+| Google | 30,0 M€ (166) | 58,7 M€ (564) |
+| Amazon | 16,1 M€ (49) | 82,2 M€ (253) |
+
+**Perché differiscono.** (1) L'OCDS contiene circa un quinto degli affidamenti ([#38](https://github.com/mxmap-it/analisi-spesa-ict/issues/38)): noi troviamo 3-5 volte più CIG; (2) loro contano importi lordi, inclusi i massimali degli accordi quadro che noi togliamo, e per questo Microsoft risulta più alto da loro pur con meno contratti; (3) il filtro per CPV 48/72 perde gli acquisti classificati con CPV non ICT ([rapporto CPV](/rendiconti/perimetro-cpv/)). Lo stesso errore d'importo di Lunamatrona compare nelle loro anomalie (ANOM-020); quello di Roseto degli Abruzzi (384 M€ dichiarati per un canone Halley) pesa invece ancora nel loro totale dei fornitori.
+
+## 7. Rifare il calcolo
 
 ```
 python tools/verifiche/tabellone_bigtech.py 2026-11-21
@@ -82,3 +95,4 @@ Ingressi: `lavoro/imbuto/stati-finali.csv.gz` e `lavoro/imbuto/ict.csv` (riprist
 |---|---|---|
 | 0.1 | 2026-11-21 | Prima versione: tabellone per marchio e anno, tre colonne (#83 voce A). |
 | 0.2 | 2026-11-21 | Controprova con la posta degli enti da mxmap.it (#83 voce B). |
+| 0.3 | 2026-11-21 | Confronto con sovranita-digitale.it (#83 voce C). |
