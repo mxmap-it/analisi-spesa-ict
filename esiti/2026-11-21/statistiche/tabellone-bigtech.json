@@ -1,0 +1,81 @@
+{
+ "versione": "0.1",
+ "strumento": "tools/verifiche/tabellone_bigtech.py",
+ "giorno": "2026-11-21",
+ "ingressi": {
+  "stati_finali": "lavoro/imbuto/stati-finali.csv.gz",
+  "ict": "lavoro/imbuto/ict.csv"
+ },
+ "tutti_gli_anni": {
+  "Google": {
+   "cloud": {
+    "cig": 677,
+    "milioni": 134.5
+   },
+   "licenze": {
+    "cig": 43,
+    "milioni": 1.9
+   },
+   "incerto": {
+    "cig": 17,
+    "milioni": 9.4
+   }
+  },
+  "Microsoft": {
+   "cloud": {
+    "cig": 2668,
+    "milioni": 639.7
+   },
+   "licenze": {
+    "cig": 460,
+    "milioni": 50.5
+   },
+   "incerto": {
+    "cig": 2063,
+    "milioni": 1852.1
+   }
+  },
+  "Amazon": {
+   "cloud": {
+    "cig": 276,
+    "milioni": 145.0
+   },
+   "licenze": {
+    "cig": 51,
+    "milioni": 1.6
+   },
+   "incerto": {
+    "cig": 21,
+    "milioni": 2.5
+   }
+  },
+  "Oracle": {
+   "cloud": {
+    "cig": 239,
+    "milioni": 112.8
+   },
+   "licenze": {
+    "cig": 98,
+    "milioni": 131.6
+   },
+   "incerto": {
+    "cig": 753,
+    "milioni": 813.2
+   }
+  },
+  "altri": {
+   "cloud": {
+    "cig": 2709,
+    "milioni": 986.3
+   },
+   "licenze": {
+    "cig": 470,
+    "milioni": 572.4
+   },
+   "incerto": {
+    "cig": 724,
+    "milioni": 400.6
+   }
+  }
+ }
+}
