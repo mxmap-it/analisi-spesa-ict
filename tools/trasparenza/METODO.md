@@ -52,7 +52,9 @@ Gli indizi (es. percorso `/L190/`, tema Bootstrap Italia) stanno in `indizi` e n
 - **Identità oneste** nelle richieste reali: bot del progetto, python-requests e curl con UA di default, UA da browser
   con l'URL del progetto, browser reale (Chromium di Playwright, UA standard, nessun plugin di occultamento).
   Googlebot, Bingbot e crawler AI (GPTBot, ClaudeBot, CCBot, Google-Extended, PerplexityBot) **solo** nelle regole di robots.txt.
-- **Origini:** server (datacenter, IP e ASN registrati) e desktop (IP residenziale), stesso codice.
+- **Origini:** server (datacenter, IP e ASN registrati) e desktop (IP residenziale), stesso codice. Dal 22/11/2026 l'origine desktop
+  può girare sul server con `TRASPARENZA_PROXY=socks5h://127.0.0.1:1080` (tunnel ssh verso un solo IP residenziale fisso):
+  requests, curl, TLS e browser escono da quell'indirizzo; IP e ASN si registrano come sempre. Nessuna rotazione.
 - **Resilienza:** errori transitori (timeout, connessione chiusa, 502/503/504 senza firma) ripetuti con backoff 10 s e 30 s.
   **Conferma:** un blocco è «confermato» se si ripete in due giri a distanza ≥ 60 minuti; se all'ultimo giro non si
   ripete è «non riprodotto» e l'esito diventa «accessibile» (l'esito della prima prova resta in `esito_sonda`).

@@ -283,3 +283,6 @@ Il numero «434 enti senza PEC in IndicePA» citato sopra non si riproduce: sul 
 
 ## 2026-11-21 — Niente colonna «livello di sovranità» (Fabio, #83 G)
 Proposta respinta: la qualifica di sovranità sarebbe una definizione nostra, non ufficiale. Si resta alle quattro giurisdizioni di mxmap.it (IT / UE / extra-UE / sconosciuta).
+
+## 2026-11-22 — Origine residenziale via tunnel (Fabio)
+Fabio ha messo a disposizione un tunnel ssh verso la connessione residenziale (porta SOCKS 127.0.0.1:1080, un solo IP fisso), già usato da EU-China. La diagnosi «desktop» del censimento art. 9 può girare dal server attraverso il tunnel (`TRASPARENZA_PROXY`). Non è rotazione né proxy commerciale: un solo indirizzo, lo stesso del portatile; ogni tentativo registra IP e ASN.

@@ -46,7 +46,7 @@ impedire ai motori di ricerca web di indicizzare» la sezione «Amministrazione 
 - **piattaforma** del portale, solo se dichiarata o certa;
 - su un campione, **ricercabilità**: cerchiamo nella sezione un CIG reale 2024-2025 dell'ente, e confrontiamo l'URL comunicato ad ANAC con il percorso dalla home.
 
-Non risolviamo CAPTCHA, non ruotiamo IP né usiamo proxy, non falsifichiamo l'impronta del browser e **non impersoniamo mai Google, Bing o i crawler AI**: le loro regole si leggono solo nel robots.txt.
+Non risolviamo CAPTCHA, non ruotiamo IP né usiamo proxy commerciali o anonimizzatori (l'origine residenziale passa da un tunnel verso **un solo indirizzo fisso**, sempre lo stesso: è la stessa connessione di casa usata dal portatile, registrata in ogni tentativo), non falsifichiamo l'impronta del browser e **non impersoniamo mai Google, Bing o i crawler AI**: le loro regole si leggono solo nel robots.txt.
 
 ## 2. Il giro più recente
 
@@ -143,6 +143,7 @@ disponibile 2023), IndicePA e il link nella home. Metodo completo:
 | versione | data | cambiamento |
 |---|---|---|
 | 1.0 | 2026-11-03 | prima stesura: metodo 1.0.0, pilota |
+| 1.2 beta | 2026-11-22 | origine residenziale anche dal server, via tunnel SOCKS verso un IP residenziale fisso: giro sui 5.392 dubbi senza prova residenziale |
 | 1.1 beta | 2026-11-04 | metodo 1.1.0-beta: tassonomia per identità, due origini, conferma in due giri, log grezzi, ricercabilità, schede, cambiamenti |
 
 <script>

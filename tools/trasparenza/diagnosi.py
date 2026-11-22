@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import platform
 import re
 import socket
@@ -47,6 +48,28 @@ CDN = [
 
 _ORIGINE: dict = {}
 
+# Origine residenziale via tunnel (22/11/2026): TRASPARENZA_PROXY=socks5h://127.0.0.1:1080 fa uscire requests, curl, TLS e
+# browser da un solo IP fisso residenziale (tunnel ssh verso la connessione di casa). Non è rotazione: un indirizzo, sempre lo stesso.
+PROXY = os.environ.get("TRASPARENZA_PROXY", "")
+if PROXY:
+    os.environ["ALL_PROXY"] = os.environ["all_proxy"] = os.environ["HTTPS_PROXY"] = os.environ["HTTP_PROXY"] = PROXY
+
+
+def _connetti(host: str, porta: int, timeout: float):
+    if not PROXY:
+        return socket.create_connection((host, porta), timeout=timeout)
+    import socks
+    u = urlsplit(PROXY)
+    return socks.create_connection((host, porta), timeout=timeout, proxy_type=socks.SOCKS5, proxy_addr=u.hostname,
+                                   proxy_port=u.port, proxy_rdns=True)
+
+
+def _proxy_browser() -> dict:
+    if not PROXY:
+        return {}
+    u = urlsplit(PROXY)
+    return {"proxy": {"server": f"socks5://{u.hostname}:{u.port}"}}
+
 
 def origine(nome: str) -> dict:
     """IP pubblico e ASN dell'osservatore (una volta per processo)."""
@@ -54,7 +77,7 @@ def origine(nome: str) -> dict:
         return _ORIGINE
     o = {"origine": nome, "ip": "", "asn": "", "asn_nome": "", "host": platform.node(),
          "sistema": f"{platform.system()} {platform.release()}", "python": platform.python_version(),
-         "requests": requests.__version__}
+         "requests": requests.__version__, "via": "tunnel SOCKS verso IP residenziale fisso" if PROXY else "diretta"}
     try:
         o["ip"] = requests.get("https://api.ipify.org?format=json", timeout=20).json()["ip"]
         ni = requests.get(f"https://stat.ripe.net/data/network-info/data.json?resource={o['ip']}", timeout=30).json()
@@ -90,7 +113,7 @@ def tls(host: str, porta: int = 443) -> dict:
     t0 = time.monotonic()
     try:
         ctx = ssl.create_default_context()
-        with socket.create_connection((host, porta), timeout=10) as s, ctx.wrap_socket(s, server_hostname=host) as ss:
+        with _connetti(host, porta, 10) as s, ctx.wrap_socket(s, server_hostname=host) as ss:
             c = ss.getpeercert()
             der = ss.getpeercert(binary_form=True)
             out |= {"valido": True, "versione": ss.version(), "cifrario": ss.cipher()[0],
@@ -103,7 +126,7 @@ def tls(host: str, porta: int = 443) -> dict:
         try:  # si legge comunque il certificato presentato, senza fidarsene
             ctx = ssl.create_default_context()
             ctx.check_hostname, ctx.verify_mode = False, ssl.CERT_NONE
-            with socket.create_connection((host, porta), timeout=10) as s, ctx.wrap_socket(s, server_hostname=host) as ss:
+            with _connetti(host, porta, 10) as s, ctx.wrap_socket(s, server_hostname=host) as ss:
                 out |= {"versione": ss.version(), "sha256_cert": hashlib.sha256(ss.getpeercert(binary_form=True)).hexdigest()}
         except Exception:  # noqa: BLE001
             pass
@@ -250,7 +273,7 @@ def tentativo_browser(pw, url: str, headed: bool, canale: str | None = None) -> 
     har = LAVORO / "har" / f"{hashlib.sha1((url + adesso()).encode()).hexdigest()}.har"
     har.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
-    br = pw.chromium.launch(headless=not headed, channel=canale) if canale else pw.chromium.launch(headless=not headed)
+    br = pw.chromium.launch(headless=not headed, channel=canale, **_proxy_browser()) if canale else pw.chromium.launch(headless=not headed, **_proxy_browser())
     ctx = br.new_context(user_agent=None, locale="it-IT", record_har_path=str(har), record_har_content="embed")
     ctx.set_default_timeout(45000)
     ua_reale = ""
@@ -370,7 +393,7 @@ def classifica_ricerca(r_cig: dict, r_banale: dict) -> str:
 def caratterizza(pw, ente: dict, cig: str, headed=False) -> dict:
     out = {"cf": ente["cf"], "ts": adesso(), "via_anac": ente.get("at_url_anac") or "", "via_home": "", "percorso_home": [],
            "cig_test": cig}
-    br = pw.chromium.launch(headless=not headed)
+    br = pw.chromium.launch(headless=not headed, **_proxy_browser())
     ctx = br.new_context(locale="it-IT")
     pg = ctx.new_page()
     try:
