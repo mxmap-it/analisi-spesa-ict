@@ -3,7 +3,7 @@
  "run": "2026-11",
  "giro": "2026-11-03",
  "metodo": "1.1.0-beta",
- "generato": "2026-11-04T14:39:13Z",
+ "generato": "2026-11-25T16:00:53Z",
  "enti": 30701,
  "esiti": {
   "accessibile": 14327,
@@ -11,9 +11,9 @@
   "irraggiungibile": 4461,
   "sezione non individuata": 3034,
   "url non valido": 2233,
-  "bloccato da WAF/anti-bot": 759,
+  "bloccato da WAF/anti-bot": 760,
   "tls invalido": 661,
-  "accesso negato a tutti i client": 439,
+  "accesso negato a tutti i client": 438,
   "noindex": 195
  },
  "segnali": {
@@ -22,7 +22,7 @@
   "waf": 421,
   "noindex": 211
  },
- "violazioni_art9": 5546,
+ "violazioni_art9": 5547,
  "piattaforme": {
   "ignota": 11676,
   "(non provata)": 7943,
@@ -83,8 +83,8 @@
    "accessibile": 5090,
    "tls invalido": 107,
    "sezione non individuata": 894,
-   "accesso negato a tutti i client": 143,
-   "bloccato da WAF/anti-bot": 180,
+   "accesso negato a tutti i client": 142,
+   "bloccato da WAF/anti-bot": 181,
    "noindex": 41
   },
   "Automobile Club Federati ACI": {
@@ -935,12 +935,12 @@
   },
   "Lazio": {
    "bloccato da robots.txt": 198,
-   "accesso negato a tutti i client": 36,
+   "accesso negato a tutti i client": 35,
    "accessibile": 1215,
    "irraggiungibile": 316,
    "sezione non individuata": 253,
    "url non valido": 255,
-   "bloccato da WAF/anti-bot": 78,
+   "bloccato da WAF/anti-bot": 79,
    "tls invalido": 73,
    "noindex": 25
   },
@@ -1082,10 +1082,10 @@
    "irraggiungibile": 1103,
    "bloccato da robots.txt": 835,
    "url non valido": 285,
-   "accesso negato a tutti i client": 418,
+   "accesso negato a tutti i client": 417,
    "tls invalido": 582,
    "accessibile": 7717,
-   "bloccato da WAF/anti-bot": 641,
+   "bloccato da WAF/anti-bot": 642,
    "noindex": 95
   },
   "trasparenza-valutazione-merito.it": {
@@ -1222,13 +1222,13 @@
  "meccanismi_blocco": {
   "robots.txt (motori di ricerca)": 4584,
   "robots.txt (solo crawler AI o altri client)": 2977,
-  "nessun client accettato (blocco totale o sito guasto)": 2000,
-  "nessuna risposta (DNS, connessione o TLS)": 1390,
-  "WAF per IP/ASN (datacenter)": 249,
+  "WAF per IP/ASN (datacenter)": 1476,
+  "nessun client accettato (blocco totale o sito guasto)": 1372,
+  "nessuna risposta (DNS, connessione o TLS)": 885,
   "WAF per User-Agent/identità": 143,
-  "CAPTCHA": 87,
-  "challenge JS": 66,
-  "errore transitorio": 26
+  "CAPTCHA": 95,
+  "challenge JS": 69,
+  "errore transitorio": 5
  },
  "conferma_blocco": {
   "non riprodotto": 2231,
@@ -1251,16 +1251,16 @@
   "Googlebot": 582
  },
  "vendor_blocco": {
-  "Akamai": 299,
-  "CAPTCHA": 87,
-  "Cloudflare challenge": 66,
+  "Akamai": 367,
+  "CAPTCHA": 95,
+  "Cloudflare challenge": 69,
   "Radware/ShieldSquare": 11,
   "Azure Application Gateway/Front Door": 6
  },
  "lettura_origini": {
-  "stesso esito da datacenter e da IP residenziale": 878,
-  "blocco legato all'IP o al datacenter": 210,
-  "accessibile dal datacenter, non da IP residenziale": 8
+  "stesso esito da datacenter e da IP residenziale": 3423,
+  "blocco legato all'IP o al datacenter": 986,
+  "accessibile dal datacenter, non da IP residenziale": 39
  },
  "ricercabilita": {
   "ricerca assente": 158,

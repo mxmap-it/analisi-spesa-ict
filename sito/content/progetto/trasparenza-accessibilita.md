@@ -143,6 +143,7 @@ disponibile 2023), IndicePA e il link nella home. Metodo completo:
 | versione | data | cambiamento |
 |---|---|---|
 | 1.0 | 2026-11-03 | prima stesura: metodo 1.0.0, pilota |
+| 1.3 beta | 2026-11-25 | giro residenziale finito e importato (#84): 3.615 enti in più provati da IP residenziale, 2.682 riverificati al giro di conferma. Blocco legato all'IP o al datacenter: da 210 a 986 enti; meccanismo «WAF per IP/ASN» da 249 a 1.476. Gli esiti per ente restano quasi invariati (WAF 759 → 760): come contare il blocco del solo datacenter è da decidere |
 | 1.2 beta | 2026-11-22 | origine residenziale anche dal server, via tunnel SOCKS verso un IP residenziale fisso: giro sui 5.392 dubbi senza prova residenziale |
 | 1.1 beta | 2026-11-04 | metodo 1.1.0-beta: tassonomia per identità, due origini, conferma in due giri, log grezzi, ricercabilità, schede, cambiamenti |
 
