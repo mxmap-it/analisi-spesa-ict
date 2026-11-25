@@ -1,0 +1,2738 @@
+   PROCEDURA APERTA PER L’ACQUISIZIONE DI UN SISTEMA SOFTWARE,
+  DELL’IMPIANTO TECNOLOGICO E DI SERVIZI CORRELATI PER LA GESTIONE
+INFORMATIZZATA UNITARIA DELLE RISORSE UMANE DELLE AZIENDE SANITARIE
+
+
+
+
+                            ALLEGATO 4
+
+                        CAPITOLATO TECNICO
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+                                                                         INDICE
+
+
+
+  1.     PREMESSA ......................................................................................................................................... 4
+  2.     CONTESTO ATTUALE DI RIFERIMENTO .................................................................................... 4
+  3.     OGGETTO DELL'APPALTO ............................................................................................................. 6
+  4.     CARATTERISTICHE DELLA FORNITURA.................................................................................... 7
+  4.1 Requisiti della piattaforma applicativa software e dell’impianto tecnologico............................... 7
+  4.2       Requisiti di competenza professionale per l’erogazione dei servizi........................................ 7
+  5.     MODALITÁ DI ESECUZIONE DELLA FORNITURA..................................................................... 8
+  5.1       Configurazione e Installazione del sistema GRU....................................................................... 9
+  5.2       Deployment e Attivazione del sistema GRU............................................................................. 11
+  5.3       Gestione del sistema GRU .......................................................................................................... 12
+  5.4       Implementazione evolutiva del sistema GRU........................................................................... 15
+  5.5       Modalità di rendicontazione e remunerazione della fornitura ................................................ 17
+  5.6       Orario di lavoro.............................................................................................................................. 17
+  5.7       Avvicendamento contrattuale...................................................................................................... 17
+  6.     PROPRIETÀ DEL CODICE SVILUPPATO NELLA FORNITURA ............................................ 17
+  7.     OSSERVANZA DI NORME, LEGGI E REGOLAMENTI............................................................. 18
+  8.     QUALITA’ E LIVELLI DEI SERVIZI................................................................................................ 18
+  9.     PENALI ............................................................................................................................................... 22
+  ALLEGATO A ............................................................................................................................................ 23
+  1.     Requisiti Funzionali........................................................................................................................... 23
+  2.     Infrastruttura Applicativa – Funzionalità di base .......................................................................... 26
+  2.1.      Gestione anagrafica ..................................................................................................................... 28
+  2.2.      Gestione Concorsi ........................................................................................................................ 28
+  2.3.      Gestione Giuridica ........................................................................................................................ 29
+  2.4.      Gestione Rilevazione Presenze.................................................................................................. 30
+  2.5.      Gestione Rilevazione Assenze ................................................................................................... 32
+  2.6.      Report presenze/assenze............................................................................................................ 33
+  2.7.      Gestione Economica .................................................................................................................... 34
+  2.8.      Gestione della formazione........................................................................................................... 38
+  2.9.      Valutazione e sviluppo organizzativo......................................................................................... 39
+
+
+Allegato 4 - Capitolato tecnico                                                                                                             Pagina 2 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+  2.10.         Organigramma........................................................................................................................... 40
+  2.11.         Gestione Pensioni e Previdenza ............................................................................................ 40
+  2.12.         Gestione Specialisti Ambulatoriali, Medici di Continuità Assistenziale............................. 41
+  2.13.         Gestione del Personale Non Dipendente.............................................................................. 42
+  2.14.         Servizi on Line al Personale (Portale del dipendente) ........................................................ 44
+  2.15.         Sistema di supporto alle decisioni regionali e aziendali...................................................... 45
+  2.16.         Integrazioni................................................................................................................................. 46
+  2.17.         Pubblicazione dati siti internet aziendali................................................................................ 47
+  ALLEGATO B ............................................................................................................................................ 48
+  1.     Hardware necessario al funzionamento dell’applicazione.......................................................... 48
+  2.     Distribuzione hardware .................................................................................................................... 48
+  3.     Gradualità della fornitura hardware................................................................................................ 49
+  4.     Business Continuity, Sistema di Backup e Disaster recovery ................................................... 49
+  5.     Sistema per la gestione di basi di dati ........................................................................................... 50
+  6.     Livelli prestazionali............................................................................................................................ 50
+  7.     Monitoraggio ...................................................................................................................................... 50
+  ALLEGATO C........................................................................................................................................... 51
+  ALLEGATO D........................................................................................................................................... 55
+  ALLEGATO E ........................................................................................................................................... 56
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                                                           Pagina 3 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+
+
+1.   PREMESSA
+
+La Regione per finalità di programmazione e controllo e le Aziende Sanitarie per finalità gestionali
+operative,    hanno evidenziato la necessità di poter disporre di un sistema informatizzato di
+gestione delle risorse umane sempre più efficiente ed omogeneo a livello regionale, in linea con
+l’aggiornamento normativo e gli standard che le nuove tecnologie raccomandano; il sistema dovrà
+garantire le necessarie autonomie aziendali e, al tempo stesso, consentire la realizzazione di
+sinergie gestionali, a livello sovra aziendale, assicurando inoltre, a livello regionale, i necessari
+strumenti di controllo e programmazione.
+
+
+
+2.   CONTESTO ATTUALE DI RIFERIMENTO
+
+Presso le 14 Aziende sanitarie della Regione Emilia-Romagna attualmente sono in uso circa sedici
+applicativi, afferenti a circa dodici fornitori, per la gestione delle Risorse Umane.
+
+I prodotti presentano una copertura diversificata in merito ai vari ambiti funzionali                    (parte
+economica, giuridica, concorsi, mensa, presenze/assenze, turni, fascicolo dipendente, portale
+dipendente, formazione, ecc.).
+
+L’interazione dei sistemi di gestione delle Risorse Umane con altri sistemi aziendali, nel loro
+complesso, avviene mediante l’utilizzo di moduli di integrazione e/o di cooperazione applicativa.
+
+L’eterogeneità e il livello di personalizzazione degli attuali sistemi rende difficoltoso
+l’implementazione di regole operative omogenee ed il conseguente governo degli stessi.
+
+Il numero di operatori che utilizzano il sistema informatizzato per la gestione delle risorse umane, a
+livello regionale, è pari a circa 1.000 unità di cui circa 200 dedicate alla gestione del personale
+“atipico”. Tale numero configura l’utenza complessiva del sistema GRU in tutti gli ambiti gestionali.
+
+Le aziende sanitarie destinatarie della fornitura presentano le seguenti consistenze di personale:
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 4 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Tabella 1
+
+                                                                             Consistenza personale dipendenti, universitari e atipici . Anno 2013
+                                                         10         20           30             40        50         60         70          80         90           100         110       120         130        140       160
+                                                                                                                                                                                                                         Qualif.        170         190
+                                                                                                                 Personale Personale                                Op.                                                               Qualif.
+                                                      Dirigenti  Dirigenti                  Personale Personale                                                                          Ausiliari   Ruolo    Personale atipiche
+                                                                              Dirigenti                             della      della     Assistente Personale    Tecnico-    Op. Socio-                                              atipiche    Assistenti
+                                                      Medici e   Sanitari                  Infermieris tecnico                                                                          Specializz Profession Amministr   ruolo                                Totale:
+                                                                                PTA                              prevenzion riabilitazio  sociale    Tecnico      Assist.    San. (OSS)                                               ruolo       Religiosi
+                                                     Veterinari non medici                     tico    sanitario                                                                           ati         ale      ativo   Amministr
+Codice                  Descrizione                                                                                   e         ne                                 (OTA)                                                             Tecnico
+                                                                                                                                                                                                                          ativo
+ 101       Azienda USL di Piacenza                      690         97           41           1.550       182         57        197         27         319          12          303        5                     330                                               3.810
+
+ 102       Azienda USL di Parma                         518         75           34           1.022       84          79        166         28         184             6        191           8                 346                                                2.741
+
+ 103       Azienda USL di Reggio Emilia                 638        107           43           1.558       105         87        285         49         265          20          315           7                 540                     13                         4.032
+
+ 104       Azienda USL di Modena                       1.124       165           62           2.803       294        115        319         25         402          11          454                             564                                                6.338
+
+ 105       Azienda USL di Bologna                      1.434       273           84           3.397       436        154        385         90         523          39          780        11                   885                                                8.491
+
+ 106       Azienda USL di Imola                         283         39           23           757         75          17         59            5       149             3        185        29                   196                                                1.820
+
+ 109       Azienda USL di Ferrara                       486         59           33           1.170       104         65        155         32         265             8        280           1                 250                                                2.908
+
+ 110       Azienda USL di Ravenna                       838        115           26           2.254       217         64        226         25         312             1        432           0                 477                        7                       4.994
+
+ 111       Azienda USL di Forlì                         421         64           29           1.103       101         28         99         25         242             6        217        11                   241                                                2.587
+
+ 112       Azienda USL di Cesena                        502        109           32           1.170       270         38         93         23         247             3        185        49                   286                                                3.007
+
+ 113       Azienda USL di Rimini                        691        108           30           1.934       194         70        133         58         279             4        447        11                   442                                                4.401
+
+ 902       Azienda Ospedaliera di Parma                 701        110           23           1.720       308                    71            4       335             6        544        48         71        199                        1                       4.141
+
+ 903       Azienda Ospedaliera di Reggio Emilia         601        102           23           1.171       242            7       67            1       195          35          380        12                   231                                                3.067
+
+ 904       Azienda Ospedaliera di Modena                531        100           24           1.161       211            2       24                    161             3        201           9                 238                                                2.665
+
+ 908       Azienda Ospedaliera di Bologna              1.061       184           52           2.150       383         18         88            8       588                      520           8                 405                     55                         5.520
+
+ 909       Azienda Ospedaliera di Ferrara               507         65           22           1.177       180         11         72                    176             4        263           1                 178                                                2.656
+
+ 960       Istituti Ortopedici Rizzoli di Bologna       252        109           71           477         103            1       51            3       138             1         89        40                   229                                                1.564
+
+ Totale:                                              11.278      1.881          652         26.574      3.489       813       2.490       403        4.780        162         5.786       250        71       6.037          0         76              0      64.742
+
+
+
+
+Tabella 2
+
+                                                                                               Consistenza personale ATIPICO. Anno 2013
+
+
+                                                         10         20           30             40        50         60         70          80         90           100         110       120         130        140       160
+                                                                                                                                                                                                                         Qualif.        170         190
+                                                                                                                 Personale Personale                                Op.                                                               Qualif.
+                                                      Dirigenti  Dirigenti                  Personale Personale                                                                          Ausiliari   Ruolo    Personale atipiche
+                                                                              Dirigenti                             della      della     Assistente Personale    Tecnico-    Op. Socio-                                              atipiche    Assistenti
+                                                      Medici e   Sanitari                  Infermieris tecnico                                                                          Specializz Profession Amministr   ruolo                                Totale:
+                                                                                PTA                              prevenzion riabilitazio  sociale    Tecnico      Assist.    San. (OSS)                                               ruolo       Religiosi
+                                                     Veterinari non medici                     tico    sanitario                                                                           ati         ale      ativo   Amministr
+Codice                  Descrizione                                                                                   e         ne                                 (OTA)                                                             Tecnico
+                                                                                                                                                                                                                          ativo
+ 101       Azienda USL di Piacenza                       78         34              4          11            4                   22            4          1                                                       3                                                     161
+
+ 102       Azienda USL di Parma                          81            4                          5                                 9                                                                                                                                   99
+
+ 103       Azienda USL di Reggio Emilia                  26         10              2             1                                                                                                                 2                                                   41
+
+ 104       Azienda USL di Modena                         54         19              1          42            3                   19            5       13                        12                                 4                                                   172
+
+ 105       Azienda USL di Bologna                        72         71              5          38            3           2          4          2                       1         30                              24                                                     252
+
+ 106       Azienda USL di Imola                          13            7            2             1          1                      5                     2                                                                                                             31
+
+ 109       Azienda USL di Ferrara                        26            2            1             0                                 1                     0                                                         1                                                   31
+
+ 110       Azienda USL di Ravenna                        49         28              3                                    2          7          2          2                                                      10                                                     103
+
+ 111       Azienda USL di Forlì                          12         16              3             2          1                      1          1          0                         4                               4                                                   44
+
+ 112       Azienda USL di Cesena                         20         17                                       1                                            2                                                         3                                                   43
+
+ 113       Azienda USL di Rimini                         34         20              1             1          2           1                                1                                                         5                                                   65
+
+ 902       Azienda Ospedaliera di Parma                  85         28              2          17            2                      1                     4                                                      11                                                     150
+
+ 903       Azienda Ospedaliera di Reggio Emilia         110         41              1             5                                 4                                                                               6                                                   167
+
+ 904       Azienda Ospedaliera di Modena                 97         30              1             1          2                      5                                                                               1                                                   137
+
+ 908       Azienda Ospedaliera di Bologna               206         79           10            25         18                        3                     9                      11                              10                                                     371
+
+ 909       Azienda Ospedaliera di Ferrara                34            3            0                                               1                                                                                                                                   38
+
+ 960       Istituti Ortopedici Rizzoli di Bologna        70         62           44            16         33                     12            1          4                                                      54                                                     296
+
+ Totale:                                               1.067       471           80           165         70             5       94         15         38              1         57                             138                                                2.201
+
+
+
+
+Tabella 3
+
+                                                                                         Consistenza personale UNIVERSITARIO. Anno 2013
+                                                        10         20           30             40        50         60         70          80         90           100         110       120         130        140       160
+                                                                                                                                                                                                                        Qualif.        170         190
+                                                                                                                Personale Personale                                Op.                                                               Qualif.
+                                                     Dirigenti  Dirigenti                  Personale Personale                                                                          Ausiliari   Ruolo    Personale atipiche
+                                                                             Dirigenti                             della      della     Assistente Personale    Tecnico-    Op. Socio-                                              atipiche    Assistenti
+                                                     Medici e   Sanitari                  Infermieris tecnico                                                                          Specializz Profession Amministr   ruolo                                Totale:
+                                                                               PTA                              prevenzion riabilitazio  sociale    Tecnico      Assist.    San. (OSS)                                               ruolo       Religiosi
+                                                    Veterinari non medici                     tico    sanitario                                                                           ati         ale      ativo   Amministr
+Codice                 Descrizione                                                                                   e         ne                                 (OTA)                                                             Tecnico
+                                                                                                                                                                                                                         ativo
+ 102       Azienda USL di Parma                         4                                                                                                                                                                                                               4
+
+ 104       Azienda USL di Modena                       15                                                3                                                                                                                                                           18
+
+ 105       Azienda USL di Bologna                      30          3                          21         18                                           5                                                         7                                                    84
+
+ 106       Azienda USL di Imola                         0                                                                                                                                                                                                               0
+
+ 902       Azienda Ospedaliera di Parma               133         21                          10         20                     7                     6                                                        23                                                    220
+
+ 904       Azienda Ospedaliera di Modena               89         25                          10         17                     1                     1                                                         1                                                    144
+
+ 908       Azienda Ospedaliera di Bologna             220         16            2             12         22                     2                     11                                                       58                                                    343
+
+ 909       Azienda Ospedaliera di Ferrara              85         14                          3          16                     6                     3                                                        12                                                    139
+
+ 960       Istituti Ortopedici Rizzoli di Bologna      17          1                                                                                  1                                                         3                                                    22
+
+ Totale:                                              593         80            2             56         96          0         16          0          27           0            0         0          0         104        0            0            0          974
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                                                                                                                                                      Pagina 5 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+3.   OGGETTO DELL'APPALTO
+
+La presente procedura di gara ha per finalità l’acquisizione di prodotti software e servizi correlati
+per la realizzazione di un sistema unitario per la Gestione informatizzata delle Risorse Umane (in
+seguito anche solo GRU) impiegate dalle Aziende Sanitarie della Regione Emilia Romagna ad
+eccezione dei Medici di Medicina Generale e Pediatri di Libera Scelta.
+
+Il sistema GRU dovrà comprendere in modo esaustivo le componenti infrastrutturali della
+piattaforma applicativa, l’infrastruttura tecnologica Hardware e Software di base/ambiente
+necessaria per il suo funzionamento nonché i servizi di assistenza e supporto correlati.
+
+La piattaforma applicativa dovrà consentire la gestione di tutti gli istituti contrattuali in essere o in
+divenire e dovrà comprendere le necessarie evoluzioni per l’adempimento alle linee di indirizzo
+nazionali e alle disposizioni regionali in materia, nonché della contrattazione integrativa delle
+Aziende USL, degli IRCCS, delle aziende Ospedaliere Universitarie e delle Aziende sanitarie a
+partecipazione pubblica.
+
+L’oggetto della gara riguarda:
+
+     •   acquisizione in licenza d’uso di una piattaforma applicativa software
+
+     •   acquisizione di un impianto informatico Hardware e della licenza d’uso del relativo Software
+         di base e di ambiente
+
+     •   acquisizione di servizi di assistenza e consulenza informatica con requisiti di specifica
+         competenza ed esperienza professionale maturata nell’ambito “gestione risorse umane” dei
+         sistemi informativi delle aziende sanitarie pubbliche.
+
+I servizi di assistenza e consulenza informatica dovranno garantire le competenze e le risorse
+professionali per lo svolgimento delle seguenti attività:
+
+Ø Configurazione del modello funzionale del sistema GRU e della relativa banca dati a livello
+     aziendale/sovraziendale/regionale
+
+Ø Configurazione del modello tecnologico e architetturale dell’impianto informatico Hardware e
+     software di base/ambiente
+
+Ø Installazione e parametrizzazione del sistema
+
+Ø Attivazione e Deployment
+
+Ø Formazione e avviamento
+
+Ø Assistenza e manutenzione
+
+Ø Implementazione evolutiva
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 6 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+L’articolazione e la modulazione dei servizi che il fornitore configurerà nella proposta tecnica ed
+economica dovranno garantire i termini di seguito riportati:
+
+
+
+Entro il 31 gennaio 2016: configurazione dell’architettura tecnologica/applicativa/banca dati del
+sistema “Gestione informatizzata delle Risorse Umane”, installazione, sperimentazione e pre-
+collaudo del sistema su un ambiente di simulazione.
+
+Entro il 31 dicembre 2016: configurazione del sistema, collaudi e attivazione del 1° gruppo
+di Aziende che dovranno entrare in esercizio il 1/1/2017 (vedi dettaglio aziende nel capitolo 5)
+
+Entro il 31 dicembre 2017: configurazione del sistema, collaudi e attivazione del 2° gruppo
+di Aziende che dovranno entrare in esercizio il 1/1/2018 (vedi dettaglio aziende nel capitolo 5)
+
+Dal 1 gennaio 2017: erogazione dei servizi di gestione del sistema per il 1° gruppo
+
+Dal 1 gennaio 2018: erogazione dei servizi di gestione del sistema per il 1° e il 2° gruppo
+
+Dal 1 gennaio 2017: erogazione dei servizi di implementazione evolutiva (tecnologica,
+strutturale e funzionale).
+
+
+
+4.   CARATTERISTICHE DELLA FORNITURA
+
+La fornitura oggetto della procedura di gara dovrà garantire i seguenti requisiti minimi:
+
+        4.1 Requisiti della piattaforma applicativa software e dell’impianto tecnologico
+
+L’infrastruttura applicativa e tecnologica del sistema GRU dovrà essere realizzata in coerenza con
+i requisiti riportati nei documenti di seguito elencati:
+
+     - “Requisiti funzionali della piattaforma applicativa software GRU per la gestione
+     informatizzata delle risorse umane delle aziende sanitarie della Regione Emilia-Romagna”
+     (Allegato A del presente Capitolato Tecnico)
+
+     - “Requisiti tecnologici dell’impianto HW/SW di base e di ambiente necessario per il corretto
+     funzionamento del sistema GRU a livello Regionale” (Allegato B del presente Capitolato
+     Tecnico)
+
+        4.2 Requisiti di competenza professionale per l’erogazione dei servizi
+
+I servizi di assistenza e consulenza informatica necessari all’implementazione e alla gestione del
+sistema GRU, dovranno rispondere a requisiti di specifica competenza ed esperienza
+professionale maturata nell’ambito “gestione risorse umane” dei sistemi informativi delle aziende
+
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 7 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+sanitarie pubbliche, secondo un’articolazione di figure professionali così come definite nel
+documento “Competenze e Figure professionali per l’erogazione dei servizi necessari
+all’implementazione e alla gestione del sistema GRU ” (Allegato C del presente Capitolato
+Tecnico).
+
+I servizi dovranno essere erogati coerentemente alle fasi attuative e gestionali del sistema GRU
+caratterizzate da un’ampia articolazione di attività afferenti alla configurazione del modello
+funzionale/dati, alla parametrizzazione del sistema, all’avviamento, alla formazione, alla
+manutenzione, all’assistenza agli utenti.
+
+
+
+5.   MODALITÁ DI ESECUZIONE DELLA FORNITURA
+
+Il fornitore dovrà definire una Proposta di Piano Esecutivo (di seguito anche solo “P.E.”)
+articolato secondo le seguenti fasi di implementazione:
+
+     •   Configurazione e Installazione del modello funzionale/dati e dell’impianto tecnologico del
+         sistema GRU
+
+     •   Deployment e Attivazione delle aziende secondo il seguente ordine:
+
+         Collaudo e Messa in esercizio al 1° Gennaio 2017 del 1° Gruppo: AUSL della Romagna;
+         AUSL di Bologna, AOSP di Bologna, IOR, AUSL di Ferrara, AOSP di Ferrara e AUSL
+         Imola.
+
+         Collaudo e Messa in esercizio al 1° Gennaio 2018 del 2° Gruppo: AUSL Piacenza, AUSL
+         Parma, AOSP Parma, AUSL Reggio Emilia, AOSP Reggio Emilia, AUSL Modena, AOSP
+         Modena.
+
+     •   Gestione
+
+     •   Implementazione evolutiva
+
+Il P.E. dovrà comprendere la pianificazione e la dimensione di effort e le tempistiche delle macro
+attività riferite alle varie fasi di implementazione del sistema nonché la composizione del gruppo di
+lavoro    impegnato     nella     singola   fase.   Il   P.E.   dovrà   essere    riportato   nella   proposta
+tecnico/economica che il Fornitore presenterà in risposta al presente capitolato e lo stesso
+costituirà riferimento per il Piano Esecutivo Validato che verrà definito congiuntamente con la
+Committenza sulla base degli impegni temporali e dimensionali riportati nel P.E.. Si precisa che la
+definizione del Piano Esecutivo Validato, in esito a valutazioni di carattere tecnico ed
+organizzativo mirate al perfezionamento del processo di deployment, potrà subire variazioni
+rispetto all’ordine di attivazione delle aziende sopra riportato.
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 8 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+L’attuazione del Piano Esecutivo Validato avrà inizio in esito alla approvazione del Project
+Manager, nominato dalla Committenza.
+
+Le risorse che verranno impiegate nelle attività devono avere i requisiti di professionalità richiesti
+dalla Committenza che si riserva la facoltà di ricusare detto personale per giustificati motivi e di
+verificare in via preventiva le competenze tecnico-professionali del personale specialistico
+proposto.
+
+La Committenza istituirà un Tavolo di Coordinamento e Governo GRU (di seguito anche solo
+“Tavolo GRU”) che avrà in carico il coordinamento e il governo dei lavori di implementazione e
+gestione del sistema, con particolare riferimento a quanto indicato nei punti 5.1, 5.2, 5.3, 5.4 del
+presente Capitolato tecnico.
+
+Il Tavolo GRU sarà composto da:
+
+-   Project Manager, che avrà, in particolare, il compito di supervisionare quanto progressivamente
+    prodotto dal fornitore, verificandone la coerenza con i requisiti e le specifiche stabilite;
+
+-   referenti regionali (RER);
+
+-   referenti aziendali amministrativi;
+
+-   referenti aziendali ICT.
+
+Il Tavolo GRU potrà convocare il fornitore in supporto all’espletamento delle attività di propria
+competenza, con particolare riferimento a:
+
+-   il capo progetto
+
+-   il referente per la consulenza sui processi amministrativi
+
+-   il referente per la consulenza ICT
+
+-   le figure professionali competenti in funzione delle tematiche da approfondire
+
+La partecipazione del fornitore agli incontri del Tavolo GRU dovrà essere, comunque, garantita ad
+ogni evenienza di emanazioni di nuove normative nazionali, regionali o a seguito di contrattazioni
+integrative aziendali.
+
+Di seguito si riporta l’articolazione delle fasi del P.E. con i relativi servizi richiesti.
+
+        5.1 Configurazione e Installazione del sistema GRU
+
+Il Fornitore dovrà garantire i servizi di:
+
+    •   Project management
+
+    •   Analisi del contesto e dei bisogni relativamente alle singole aziende e alla regione
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 9 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    •   Configurazione del modello architetturale del sistema applicativo fornito in licenza d’uso e
+        della relativa struttura di banca dati a livello aziendale/sovraziendale/regionale (nel rispetto
+        dei requisiti indicati nell’ Allegato A del presente Capitolato Tecnico)
+
+    •   Configurazione del modello tecnologico e architetturale dell’impianto informatico HW/SW
+        di base a livello aziendale/regionale (nel rispetto dei requisiti indicati nell’ Allegato B del
+        presente Capitolato Tecnico)
+
+    •   Definizione degli strumenti e delle modalità di migrazione dai sistemi attuali verso il nuovo
+        sistema
+
+    •   Installazione dell’impianto tecnologico HW/SW di base e di ambiente
+
+    •   Installazione e Parametrizzazione della piattaforma applicativa software GRU fornita in
+        licenza d’uso
+
+    •   Test funzionale e prestazionale del sistema GRU su un ambiente di simulazione
+        aziendale e sovraziendale
+
+La fase di configurazione e installazione, di cui sopra, sarà effettuata con la supervisione del
+Tavolo GRU e del Project Manager; la validazione del positivo completamento di tale fase sarà in
+esito al test funzionale e prestazionale del sistema in ambiente di simulazione e costituirà il
+Precollaudo del sistema GRU. L’esito favorevole del precollaudo costituirà altresì prerequisito
+fondamentale per il rilascio del sistema in produzione ovvero per il collaudo del sistema in
+esercizio presso le singole aziende, come previsto nella fase “Deployment e Attivazione del
+sistema GRU”. Con il precollaudo sarà verificata la conformità tecnica, funzionale e prestazionale
+dell’impianto hardware, software di base/ambiente e applicativo del sistema GRU nonché delle
+integrazioni previste verso altri sistemi. Il processo di precollaudo dovrà riscontrare piena
+rispondenza alle specifiche previste nel presente capitolato nonché nella proposta del fornitore
+aggiudicatario.
+
+
+
+I servizi di gestione afferente all’impianto HW/SW, comprensivi di manutenzione, assistenza e
+supporto dovranno essere forniti a totale cura e spese del fornitore per tutto il periodo di garanzia
+che decorre dal precollaudo sino al 31/12/2016.
+
+Con l’installazione del sistema dovrà essere rilasciata la documentazione tecnica di realizzazione,
+di installazione/parametrizzazione e della manualistica per l’utilizzo del sistema e per
+l’amministrazione dello stesso.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 10 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+        5.2 Deployment e Attivazione del sistema GRU
+
+Il Fornitore dovrà garantire i servizi di:
+
+    - Project management
+
+    - Formazione all’utenza delle singole aziende
+
+    - Attivazione dell’impianto tecnologico HW/SW di base/ambiente afferente alle singole
+        aziende
+
+    - Parametrizzazione e Attivazione del software applicativo GRU afferente alle singole
+        aziende
+
+    - Migrazione archivi pregressi
+
+    - Attivazione del sistema in contesto di produzione sulle singole aziende
+
+    - Assistenza e supporto
+
+necessari a mettere in produzione il sistema GRU e permetterne l’utilizzo da parte di tutte le
+Aziende a livello regionale garantendo le tempistiche di installazione e attivazione che verranno
+definite nel Piano Esecutivo Validato.
+
+Per ogni attivazione e messa in esercizio del sistema nelle singole Aziende, sarà eseguito il
+relativo collaudo per verificarne il completo e il buon funzionamento attraverso il pieno utilizzo da
+parte dell’utenza per un periodo di osservazione comprendente la fase di formazione e
+avviamento.
+
+I servizi di gestione, comprensivi di manutenzione piattaforma applicativa, assistenza, supporto e
+ripresa formativa dovranno essere forniti a totale cura e spese del fornitore per tutto il periodo di
+garanzia che decorre dal 1/1/2017 (entrata in produzione del 1° gruppo) sino al 31/12/2018 (pari a
+12 mesi dall’entrata in produzione del 2° gruppo).
+
+Si precisa che già dal 1° Gennaio 2014 è stata istituita l’Azienda USL della Romagna, pertanto la
+relativa attivazione deve prevedere la migrazione delle ex quattro aziende verso un unico soggetto
+giuridico.
+
+Il Fornitore dovrà garantire i servizi di formazione e assistenza all’avviamento all’utenza del
+sistema GRU, sia a livello Aziendale che Regionale, e al personale tecnico/informatico delle
+Aziende. Dovrà essere predisposto un piano di formazione continuativo che permetta a tutto il
+personale coinvolto la completa conoscenza delle funzionalità offerte dal software e delle
+evoluzioni che lo stesso potrà subire.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 11 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Inoltre dovrà essere fornito il manuale operativo del sistema, continuamente aggiornato con tutte le
+evoluzioni, fruibile on line con la sequenza delle operazioni per i più importanti casi d’uso,
+comprensivo della guida interattiva e che permetta all’operatore di poter formulare e condividere le
+domande più frequenti.
+
+In particolare il fornitore dovrà garantire l’attuazione di piani che permettano il rispetto delle
+tempistiche indicate al capitolo 3, definendo per ogni Azienda un calendario delle attività e delle
+relative figure professionali assegnate tenendo conto dell’articolazione e della dimensione
+dell'organizzazione, nonché della minimizzazione di eventuali disservizi nelle singole Aziende.
+
+Il Fornitore potrà avviare le fasi di formazione ed avviamento anche in corso d’anno,
+specificando le attività e gli strumenti che saranno predisposti, in tali casi, per garantire le
+necessarie quadrature delle denunce mensili, trimestrali ed annuali.
+
+In questa fase il fornitore dovrà garantire servizi per la migrazione, verso il nuovo sistema GRU,
+degli archivi attualmente in uso da parte dei sistemi in esercizio presso le Aziende ed adeguate
+modalità di recupero dati.
+
+I rapporti tecnico/economici, finalizzati alla migrazione del sistema, con gli attuali fornitori
+saranno in carico alla Committenza.
+
+Al termine del contratto , la ditta fornitrice dovrà farsi carico di eseguire le operazioni atte a
+recuperare e rendere disponibili, tutti i dati e i documenti/immagini presenti negli archivi del
+sistema realizzato.
+
+A tale proposito, a completamento della fase di deployment e attivazione del sistema GRU,
+l’aggiudicatario della gara dovrà fornire un documento in cui siano esplicitate le operazioni
+necessarie a consentire l’importazione dei dati in un diverso sistema, ed una stima del tempo
+necessario ad eseguire tali operazioni allo scadere del contratto.
+
+Si precisa che l’onere relativo a tale attività è incluso nei costi della fornitura e nessun altro
+costo od onere potrà essere richiesto o imputato alle Azienda e alla Regione, tale impegno
+dovrà essere esplicitato chiaramente nell’offerta.
+
+La fase di deployment e attivazione sarà effettuata con la supervisione del Tavolo GRU e del
+Project Manager.
+
+        5.3 Gestione del sistema GRU
+
+Il Fornitore dovrà garantire i servizi di:
+
+    - Formazione e ripresa formativa all’utenza del sistema GRU e al personale tecnico
+        informatico delle aziende
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 12 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    - Manutenzione infrastruttura applicativa del sistema GRU
+
+    - Manutenzione infrastruttura tecnologica del sistema GRU
+
+    - Assistenza e supporto all’utenza del sistema GRU e al personale tecnico informatico delle
+        aziende
+
+Il Fornitore dovrà garantire i servizi di formazione e ripresa formativa verso l’utenza del sistema
+GRU e del personale tecnico/informatico sia a livello regionale che aziendale, a tal fine dovrà
+essere predisposto un piano di formazione che permetta a tutto il personale coinvolto il
+mantenimento di un’adeguata e completa conoscenza delle funzionalità offerte dal sistema e delle
+evoluzioni che lo stesso potrà subire.
+
+Il Fornitore dovrà assicurare, dalla data di precollaudo che attesta il positivo completamento della
+fase di “configurazione e installazione del sistema GRU” , i servizi di gestione relativi all’impianto
+HW/SW, in particolare dovrà garantire la manutenzione correttiva e perfettiva dell’infrastruttura
+tecnologica costituita da:
+
+            o Hardware (tutte le componenti oggetto di fornitura)
+
+            o Software di base
+
+            o Software di ambiente
+
+
+
+Il Fornitore dovrà assicurare, dalla data di collaudo che attesta il positivo completamento della
+attivazione del sistema GRU presso le singole aziende, i servizi di gestione relativi all’infrastruttura
+applicativa, in particolare dovrà garantire la manutenzione correttiva e perfettiva della piattaforma
+applicativa costituita da:
+
+            o Moduli applicativi
+
+            o Moduli di integrazione e di cooperazione applicativa
+
+Per manutenzione correttiva si intende la diagnosi e la rimozione delle cause e degli effetti, sia
+sulle interfacce utente che sulle basi dati, dei malfunzionamenti delle procedure e dei programmi in
+esercizio, nonché di tutte le componenti hardware facenti parte del sistema oggetto di
+acquisizione.
+
+La manutenzione correttiva è normalmente innescata da una segnalazione di impedimento
+all’esecuzione dell’applicazione/funzione o dal riscontro di differenze fra l’effettivo funzionamento -
+del software applicativo e quello atteso, come previsto dalla relativa documentazione di
+configurazione e attivazione del sistema o comunque determinato dai controlli che vengono svolti
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 13 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+durante l’attività dell’utente. La manutenzione correttiva è innescata altresì da segnalazioni di
+malfunzionamento relative al sistema hardware e al sistema software di base e di ambiente.
+
+Sono parte del servizio le seguenti attività:
+
+    •   la presa in carico delle segnalazioni ricevute da sistemi di rilevazione automatica e/o dal
+        servizio Help Desk di I livello in capo all’Azienda;
+
+    •   l’individuazione della componente in errore;
+
+    •   l’attuazione di interventi di work around atti a minimizzare l’interruzione del servizio;
+
+    •   lo sviluppo, la verifica e il rilascio della fix risolutiva, quest’ultimo nell’ambiente di esercizio;
+
+    •   la predisposizione della documentazione necessaria per l’installazione;
+
+    •   ripristino basi dati difettate dall’errore;
+
+    •   modifica della documentazione di progetto qualora venisse riscontrata un’incoerenza con il
+        software applicativo rilasciato
+
+    •   ecc.
+
+Per manutenzione perfettiva si intende il perfezionamento del sistema rivolto a garantire le
+performance e la manutenibilità del sistema.
+
+Il servizio dovrà comprendere inoltre la manutenzione adeguativa che dovrà garantire tutte le
+attività di adeguamento dell’infrastruttura applicativa ai cambiamenti normativi di livello ministeriale,
+regionale e di contrattazione integrativa aziendale nel rispetto dei termini previsti negli stessi. La
+manutenzione adeguativa non varia la consistenza del parco applicativo del prodotto iniziale.
+Eventuali interventi di manutenzione adeguativa che dovessero richiedere variazioni strutturali
+significative della banca dati potranno essere valutati come manutenzione evolutiva.
+
+Il Fornitore dovrà garantire Assistenza e supporto all’utenza mediante un servizio di Help Desk
+di secondo livello.
+
+Tale servizio viene attivato:
+
+        -   dal Servizio di Help Desk di primo livello dell’Azienda sanitaria, a fronte di richieste e
+            segnalazioni di guasto, da parte degli utenti, che non possono essere risolte dallo
+            stesso
+
+        -   da richieste del personale tecnico informatico delle aziende per problematiche afferenti
+            al sistema GRU
+
+        -   da richieste del personale aziendale referente del sistema GRU
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 14 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Il servizio di Help Desk di secondo livello deve garantire la presa in carico delle chiamate di propria
+competenza, la loro gestione e risoluzione entro gli SLA (Service level agreement) previsti, sia che
+si tratti di interventi di manutenzione del software, sia che si tratti di interventi di supporto.
+
+Gli operatori assegnati al Servizio devono gestire le chiamate e le relative problematiche
+intervenendo via remota sulle postazioni del chiamante con strumenti di tele-assistenza.
+
+Il Servizio dovrà garantire una puntuale registrazione delle chiamate di assistenza per una
+tracciatura delle stesse e per una consuntivazione dell'attività svolta nonché la rilevazione dei livelli
+di servizio al fine del controllo degli SLA contrattualizzati, delle eventuali inadempienze e             della
+relativa applicazione delle penali.
+
+Al fine della valutazione dei livelli di servizio il fornitore deve presentare, su base mensile, una
+reportistica, con allegata una relazione sintetica sulle criticità riscontrate e sulle proposte di
+recupero delle stesse. Inoltre, il fornitore dovrà garantire una reportistica più dettagliata a supporto
+dell'analisi delle criticità o dell'attività.
+
+Il servizio dovrà essere garantito tutti i giorni feriali nelle seguenti fasce orarie:
+
+Lun-Ven 8,30 - 13,30 e 14,30-17,30 e dovrà garantire canali di accesso telefonico, posta
+elettronica, portale per la gestione del ticketing.
+
+La Gestione del Sistema e il relativo monitoraggio dei livelli di servizio sarà effettuata con la
+supervisione del Tavolo GRU e del Project Manager.
+
+         5.4 Implementazione evolutiva del sistema GRU
+
+Il Fornitore dovrà garantire i servizi di:
+
+    - Project management
+
+    - Analisi
+
+    - Progettazione
+
+    - Implementazione software
+
+    - Deployment
+
+    - Formazione all’utenza e al personale tecnico informatico
+
+    - Assistenza e Manutenzione
+
+per la realizzazione e l’attivazione di implementazioni evolutive del sistema GRU.
+
+Il fornitore dovrà fornire i servizi garantendo adeguate tempistiche per la produzione dell’analisi e
+dell’offerta economica in relazione alle singole richieste.
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 15 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Rientrano in tale servizio gli interventi volti ad arricchire il prodotto (di nuove funzionalità o di altre
+caratteristiche non funzionali, quali l’usabilità, livello prestazionale, ecc.) o comunque a modificare
+o integrare le funzionalità del prodotto. Tale manutenzione implica la scrittura di funzioni aggiuntive
+d’integrazione a sistemi informativi o applicazioni esistenti o parti di funzioni (anche in sostituzione
+di altre già esistenti) di dimensione significativa e di cui è possibile preventivamente definire i
+requisiti o quantomeno identificare le esigenze.
+
+In pratica si tratta di implementazioni che modificano la consistenza del parco applicativo del
+prodotto iniziale.
+
+I prodotti sviluppati dovranno essere manutenuti per l’intera durata del contratto e pertanto l’onere
+economico relativo alla manutenzione correttiva sarà compreso nei costi relativi all’intervento di
+implementazione evolutiva.
+
+Le richieste di implementazione evolutiva, che possono essere valutate e definite solo dal Tavolo
+GRU, a seguito dell’approvazione del Project Manager, saranno attivate secondo il seguente
+schema generale:
+
+-   richiesta di implementazione evolutiva da parte della Committenza;
+
+-   presentazione dell’offerta da parte del Fornitore contenente la precisazione della tempistica, la
+    data di consegna concordata, le figure professionali e le modalità di impiego e la dimensione
+    del lavoro necessario;
+
+-   accettazione dell’offerta da parte della Committenza;
+
+-   realizzazione dell’implementazione;
+
+-   collaudo;
+
+-   validazione collaudo.
+
+Il fornitore    dovrà garantire, entro 3 giorni lavorativi, la presa in carico della richiesta di
+implementazione evolutiva e far pervenire per iscritto, entro 10 giorni lavorativi dall’avvenuta
+richiesta, previo eventuale incontro tecnico di approfondimento ed analisi, la proposta tecnica e la
+relativa valutazione in giornate lavoro e/o esprimendo un valore forfettario per la realizzazione
+dell’implementazione richiesta.
+
+Nella proposta tecnico/economica, il fornitore dovrà esplicitare la tempistica e la modalità di
+realizzazione degli interventi evolutivi e la relativa messa in esercizio.
+
+Inoltre, il fornitore dovrà garantire un ambiente di test accessibile agli utenti, allo scopo di
+collaudare tutti i nuovi rilasci.
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 16 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+        5.5 Modalità di rendicontazione e remunerazione della fornitura
+
+Il Fornitore dovrà presentare con periodicità mensile lo Stato di Avanzamento Lavori in rapporto al
+Piano Esecutivo Validato definito con la Committenza.
+
+La rendicontazione economica delle fasi di attuazione del Piano Esecutivo Validato del sistema
+GRU dovrà essere presentata in esito all’attestazione di positivo completamento delle stesse,
+secondo quanto indicato nello Schema di Convenzione.
+
+La rendicontazione economica afferente alla Gestione della piattaforma applicativa del sistema
+GRU avverrà, trascorso il periodo di garanzia, secondo quanto indicato nello Schema di
+Convenzione.
+
+La rendicontazione economica afferente alla Gestione dell’impianto HW/SW del sistema GRU
+avverrà, trascorso il periodo di garanzia, secondo quanto indicato nello Schema di Convenzione.
+
+La rendicontazione economica afferente alla Implementazione Evolutiva del sistema GRU avverrà
+in esito al collaudo dei singoli interventi e secondo quanto indicato nello Schema di Convenzione.
+
+La validazione della rendicontazione e la relativa fatturazione avverrà in esito alla approvazione del
+Project Manager.
+
+        5.6 Orario di lavoro
+
+I servizi oggetto del Capitolato dovranno essere erogati nel rispetto della durata della giornata
+lavorativa (Lun- Ven 8,30 – 13,30 e 14,30 – 17,30)
+
+        5.7 Avvicendamento contrattuale
+
+Al fine di rendere il più efficace possibile l’avvicendamento contrattuale, entro il termine della
+fornitura, il Fornitore dovrà garantire la reversibilità completa dei dati e la loro trasferibilità al
+periodo successivo di fornitura entro due mesi dall’aggiudicazione ad altro fornitore. In ogni caso i
+dati relativi al sistema R.U. nel suo complesso sono di esclusiva proprietà delle Aziende Sanitarie e
+della RER.
+
+
+
+6.   PROPRIETÀ DEL CODICE SVILUPPATO NELLA FORNITURA
+
+Il software sviluppato nell’ambito della presente fornitura, relativamente a componenti esterne e
+autonome dalla piattaforma applicativa oggetto di licenza d’uso, sarà di proprietà della RER che si
+riserva di avvalersene secondo quanto previsto dalla normativa relativa al “riuso di programmi
+informatici” del Codice sull’Amministrazione Digitale (CAD art. 68).
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 17 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Qualora lo sviluppo in oggetto preveda componenti software disponibili in modalità open source, il
+fornitore dovrà attestare l’applicabilità della licenza open nell’ambito del sistema oggetto di
+realizzazione.
+
+
+
+7.   OSSERVANZA DI NORME, LEGGI E REGOLAMENTI
+
+Il Fornitore è tenuto all’osservanza delle norme di legge e di regolamento adottate dalle Autorità
+competenti in materia di contratti di lavoro e sicurezza e di quant’altro possa comunque interessare
+la presente procedura.
+
+
+
+8.   QUALITA’ E LIVELLI DEI SERVIZI
+
+Il Fornitore dovrà presentare un Piano di Qualità con cui intende assicurare la qualità della
+fornitura.
+
+Il Piano dovrà essere corredato da una proposta metodologica nella quale sia evidenziato
+l’approccio che si intende utilizzare per la fornitura, i servizi di avviamento e di manutenzione,
+integrazione, conversione dei dati e messa in esercizio.
+
+Il Fornitore dovrà impegnarsi ad erogare i servizi nel rispetto degli indicatori sotto elencati,
+finalizzati a garantire la qualità di caratteristiche critiche della fornitura.
+
+Il Fornitore si impegna a fornire alla Committenza, con la periodicità prevista dai diversi indicatori,
+opportuna reportistica atta ad individuare il rispetto degli SLA.
+
+Affidabilità della esecuzione della fornitura – rispetto del Piano Esecutivo
+
+In riferimento al Piano Esecutivo che il Fornitore presenterà nella proposta tecnica verrà misurato il
+ritardo di attuazione relativo alle fasi di Configurazione e Deployment.
+
+Il valore dell’indicatore di tempo di ritardo della fase (TRF), sarà calcolato sulla base delle
+settimane di ritardo delle tempistiche effettive di completamento rispetto a quelle previste nel Piano
+Esecutivo Validato. Quest’ultimo sarà congiuntamente definito con la Committenza in coerenza
+con il Piano Esecutivo Proposto sulla base dei termini presentati in offerta dal Fornitore.
+
+TRFc = N. settimane ritardo fase “Configurazione”
+
+TRFd = N. settimane ritardo fase “Deployment”
+
+Efficienza del servizio di help desk di secondo livello - presa in carico della richiesta di assistenza
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 18 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Verrà misurato il tempo che intercorre tra l’assegnazione della richiesta da parte dell’help desk di
+primo livello delle Aziende e la presa in carico da parte dell’help desk di secondo livello del
+Fornitore. Il valore soglia dell’indicatore di tempo di presa in carico della richiesta (TCR), nell’arco
+di un trimestre non dovrà essere inferiore ai valori riportati nella seguente tabella
+
+Gravità       Tipologia Errore                                        Tempo max di             Valore
+dell’Error                                                            presa in carico          soglia di
+e                                                                                              TCR
+
+     1        L’intero sistema è indisponibile agli utenti            30 minuti lavorativi     99%
+              (anche di una singola azienda)
+                                                                      60 minuti lavorativi     100%
+
+     2        Almeno una delle funzionalità critiche del              1 ora lavorativa         95%
+              sistema sono indisponibili agli utenti (anche di
+              una sola azienda)
+
+     3        Le funzionalità non critiche del sistema sono           6 ore lavorative         95%
+              indisponibili agli utenti (anche di una sola
+              azienda)
+
+     4        Le funzionalità non critiche del sistema sono           8 ore lavorative         95%
+              indisponibili, senza impatto sulla operatività
+              degli utenti
+
+
+
+Il valore dell’indicatore TCR è calcolato secondo la formula seguente:
+
+         TCR = RC/RRT*100
+
+dove: RC = numero richieste prese in carico entro il tempo max nel periodo di osservazione
+
+      RRT = numero richieste ricevute nel periodo di osservazione.
+
+Efficienza del sevizio di manutenzione – rimozione degli errori/malfunzionamenti
+
+Il sistema GRU in esercizio verrà sottoposto al monitoraggio degli errori segnalati al fine di rilevare
+l’efficienza del Fornitore nella rimozione degli errori presi in carico.
+
+Verrà misurato il tempo che intercorre tra la presa in carico del problema da parte del servizio di
+manutenzione e la risoluzione dello stesso. Il valore soglia dell’indicatore di tempo di risoluzione
+dell’errore (TRE) nell’arco di un trimestre non dovrà essere inferiore ai valori riportati nella
+seguente tabella.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 19 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Gravità          Tipologia Errore                                 Tempo max di              Valore
+dell’ Errore                                                      risoluzione               soglia di
+                                                                                            TRE
+
+      1          L’intero sistema è indisponibile agli utenti     - 6h lavorative           95%
+                 (anche di una singola azienda)
+                                                                  -16h lavorative           100%
+
+      2          Almeno una delle funzionalità critiche del       8h lavorative             95%
+                 sistema sono indisponibili agli utenti
+                 (anche di una singola azienda)
+
+      3          Le funzionalità non critiche del sistema         2 giorni lavorativi       95%
+                 sono indisponibili agli utenti (anche di
+                 una singola azienda)
+
+      4          Le funzionalità non critiche del sistema         5 giorni lavorativi       95%
+                 sono indisponibili, senza impatto sulla
+                 operatività degli utenti
+
+Il valore dell’indicatore TRE è calcolato secondo la formula seguente:
+
+          TRE = RR/RSC*100
+
+          dove: RR = numero di richieste risolte entro il tempo max di risoluzione nel periodo di
+          osservazione
+
+                RSC = numero delle richieste prese in carico nel periodo di osservazione.
+
+Nel caso la risoluzione dell’ errore preveda necessariamente il coinvolgimento di terze parti, il
+tempo di risoluzione si ferma dal momento dell’apertura del ticket nei confronti di queste e riprende
+dal momento in cui il problema viene da esse risolto. Resta compito del Fornitore effettuare gli
+opportuni solleciti nei confronti della terza parte, e mantenere aggiornate le informazioni relative
+sul sistema di ticketing.
+
+Livelli prestazionali-Elaborazioni cedolini
+
+Il sistema software GRU in esercizio verrà sottoposto al monitoraggio dei livelli prestazionali al fine
+di rilevare l’efficienza del Sistema in merito all’elaborazione dei cedolini. L’elaborazione dei cedolini
+potrà avere valenza aziendale o sovraziendale, considerando che si potranno verificare situazioni
+di contemporaneità delle stesse con una numerosità che potrà superare le 65.000 unità.
+
+Verrà misurato il tempo di elaborazione dei cedolini in rapporto alle soglie di produzione stabilite. Il
+valore soglia dell’indicatore Tempo elaborazione cedolini (TEC) nell’arco di un trimestre non dovrà
+essere superiore ai valori riportati nella seguente tabella.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 20 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+                Soglie di produzione      Tempo max di                Valore soglia di
+                cedolini (n)              elaborazione                TEC
+
+                        2.000             30 minuti                   95%
+
+                        8.000             90 minuti                   95%
+
+                       15.000             120 minuti                  95%
+
+
+
+Il valore dell’indicatore TEC è calcolato secondo la formula seguente:
+
+        TECn = ECn/ECTn*100
+
+        dove: ECn = numero di Elaborazioni Cedolini effettuate entro il tempo max di elaborazione
+        nel periodo di osservazione nella Soglia di produzione cedolini n (2000, 8000, 15000)
+
+                ECTn = numero delle Elaborazioni Cedolini totali effettuate nel periodo di
+        osservazione nella Soglia di produzione cedolini n (2000, 8000, 15000).
+
+
+
+Verrà misurato il tempo di elaborazione dei cartellini in rapporto alle soglie di produzione stabilite. Il
+valore soglia dell’indicatore Tempo elaborazione cartellini (TECA) nell’arco di un trimestre non
+dovrà essere superiore ai valori riportati nella seguente tabella.
+
+                Soglie di produzione      Tempo max di                Valore soglia di
+                cartellini (n)            elaborazione                TECA
+
+                        2.000             45 minuti                   95%
+
+                        8.000             135 minuti                  95%
+
+                       15.000             180 minuti                  95%
+
+
+
+Il valore dell’indicatore TECA è calcolato secondo la formula seguente:
+
+        TECAn = ECAn/ECATn*100
+
+        dove:     ECAn = numero di Elaborazioni Cartellini effettuate entro il tempo max di
+        elaborazione nel periodo di osservazione nella Soglia di produzione cartellini n (2000,
+        8000, 15000)
+
+                ECATn = numero delle Elaborazioni Cartellini totali effettuate nel periodo di
+        osservazione nella Soglia di produzione cedolini n (2000, 8000, 15000).
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 21 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+9.   PENALI
+
+La Committenza effettuerà verifiche finalizzate a monitorare/controllare gli SLA previsti al capitolo
+precedente ed in generale le modalità di fornitura dei servizi. Qualora venissero riscontrate
+inadempienze rispetto al valore degli indicatori e dei livelli di servizio richiesto, la Committenza, nel
+rispetto delle norme vigenti e secondo le condizioni, le modalità, i termini e le prescrizioni
+contenute nel presente capitolato, potrà richiedere l’applicazione delle penali nelle modalità
+indicate nello Schema di Convenzione.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 22 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+ALLEGATO A
+
+Requisiti    funzionali    della    piattaforma     applicativa     software     GRU      per   la   gestione
+informatizzata delle risorse umane delle aziende sanitarie della Regione Emilia-Romagna
+
+
+
+    1. Requisiti Funzionali
+
+La fornitura deve prevedere la realizzazione di un sistema unitario per la gestione informatizzata
+delle Risorse Umane a qualsiasi titolo impiegate dalle Aziende Sanitarie della Regione Emilia
+Romagna. Il sistema proposto deve comprendere in modo esaustivo le componenti infrastrutturali
+della piattaforma applicativa, l’infrastruttura tecnologica Hardware/Software necessaria per il suo
+funzionamento nonché i servizi di assistenza e supporto correlati.
+
+La piattaforma software applicativa deve prevedere soluzioni tali da garantire tutti gli aspetti
+funzionali caratteristici delle diverse tipologie contrattuali per il personale in rapporto di servizio a
+qualsiasi titolo impiegato presso le Aziende Sanitarie. La gestione deve interessare tutti gli istituti
+contrattuali in essere o in divenire e deve comprendere le necessarie evoluzioni per l’adempimento
+alle linee di indirizzo nazionali e alle disposizioni regionali in materia, nonché della contrattazione
+integrativa delle Aziende USL, degli IRCCS, delle aziende Ospedaliere Universitarie e delle
+strutture sanitarie a partecipazione pubblica; di seguito gli enti destinatari della fornitura saranno
+denominati aziende sanitarie.
+
+Devono essere considerati, inoltre, come parte integrante della fornitura:
+
+    •   l’integrazione con le procedure aziendali di interesse al fine della corretta gestione del
+        completo patrimonio informativo del personale;
+
+    •   l’interoperabilità con gli enti esterni coinvolti;
+
+    •   il piano di formazione continua del personale per l’utilizzo dell’applicativo;
+
+    •   il servizio di assistenza all’esercizio del sistema;
+
+    •   l’avviamento comprensivo della migrazione completa dello storico per il recupero del
+        patrimonio informativo già consolidato;
+
+    •   il sistema di reporting generalizzato e di export dei dati.
+
+Il sistema software proposto oltre a gestire il personale dal punto di vista operativo (assunzioni,
+contratti, rilevazione presenze, ferie, ecc.) deve garantire i dati analitici e di sintesi per una efficace
+programmazione e controllo delle risorse umane a livello regionale, sovra aziendale e aziendale.
+
+
+
+Allegato 4 - Capitolato tecnico                                                                 Pagina 23 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+In particolare, la soluzione software deve garantire, nel rispetto della normativa vigente, delle
+disposizioni contrattuali e delle linee di indirizzo della Regione Emilia Romagna:
+
+    •   la gestione delle diverse informazioni relative al trattamento economico, allo status
+        giuridico, alla carriera, all’organizzazione e gestione dell’organico ed alla rilevazione delle
+        presenze/assenze del personale;
+
+    •   l’analisi, il controllo e la programmazione dei costi del personale nonché l’allocazione dello
+        stesso nelle singole unità organizzative per una completa gestione delle risorse umane;
+
+    •   la gestione di processi autorizzativi secondo le modalità ritenute necessarie dalla singola
+        organizzazione;
+
+    •   la gestione dell’autenticazione forte e della firma digitale nei casi ritenuti necessari dalla
+        normativa vigente (a titolo di esempio iter di variazione anagrafica residenza direttamente
+        gestita dal dipendente, detrazioni fiscali, ecc.).
+
+Il sistema deve rendere disponibili le informazioni gestite al fine di assicurare la loro integrazione
+con gli applicativi software di pertinenza di dominio regionale e di dominio aziendale.
+
+E’ fondamentale che gli utenti di tale sistema possano operare in modo efficiente anche nell’ipotesi
+di aggregazione di aziende. La fornitura deve inoltre comprendere una costante attività di supporto
+alla Regione ed ai Servizi Gestione Risorse Umane delle Aziende Sanitarie per l’aggiornamento
+giuridico-normativo e contrattuale delle procedure automatizzate di Gestione del Personale.
+
+Il sistema deve infine rendere disponibile alla Regione Emilia-Romagna tutti i dati registrati dalle
+singole Aziende sanitarie, con ampia possibilità di effettuare elaborazioni e analisi propedeutiche
+ad azioni programmatorie e strategiche (monitoraggio cessazioni/assunzioni/rilevazione presenze,
+andamento costi del personale, andamento dei diversi istituti contrattuali, autorizzazioni
+all’acquisizione di personale, ecc.).
+
+Il sistema proposto deve rispondere ai seguenti requisiti:
+
+   1) Multi istanza di applicazione che operi in un unico impianto anagrafico in cui siano
+        uniformate tutte le informazioni giuridiche, economiche, previdenziali e quelle relative alle
+        presenze/assenze, consentendo così di attingere al fascicolo personale completo sia
+        all’interno dell’azienda sia in caso di mobilità del personale tra i diversi enti, nel completo
+        rispetto della normativa sulla privacy. Pertanto deve essere prevista la centralizzazione dei
+        dizionari per garantirne l’omogeneità e l’uniformità a livello regionale e il carattere multi
+        aziendale dell’applicativo relativamente ai dati. Inoltre         per quanto attiene ai dati deve
+        essere possibile configurare alcuni di essi a livello centralizzato (es. dati anagrafici afferenti
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 24 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+       alla persona) mantenendo la struttura multi aziendale per i restanti ( es. dati afferenti al
+       dipendente ed allo specifico rapporto di lavoro).
+
+   2) Standardizzazione a livello regionale delle informazioni raccolte e omogeneizzazione
+       dell’analisi e della valutazione dei dati, tramite l’adozione di un set di codifiche uniche per
+       tutte le aziende sanitarie, su tutte le aree, con possibilità di esplosione in maggior dettaglio
+       nella singola azienda sanitaria ma con obbligo di riferire al set di codifiche di cui sopra.
+
+       In sostanza: le tabelle di configurazione del sistema sono centralizzate e con gestione
+       centralizzata; a livello aziendale deve essere consentito di inserire ulteriori elementi di
+       maggior dettaglio, secondo modalità applicative e parametri specifici.
+
+   3) Tutti i diversi moduli gestionali devono prevedere possibilmente in modo nativo la reciproca
+       integrazione, al fine di escludere inutili ridondanze o duplicazioni e ridurre i margini di errori;
+       deve essere assicurata l’assoluta integrazione dei dati finalizzata all’immissione dei
+       medesimi in un’unica fase del processo di gestione delle informazioni, senza prevedere in
+       nessun caso un doppio inserimento del medesimo dato.
+
+   4) Storicizzazione: le informazioni presenti nei dizionari del sistema devono essere storicizzate
+       per ciascuna registrazione con opportune date di validità; deve essere garantito il
+       mantenimento in linea di tutti i dati storici relativi a tutte le aree previste e la loro fruibilità;
+
+   5) Impostazione web-based per il portale dipendente e preferibilmente web-based per gli altri
+       moduli applicativi della piattaforma informatizzata GRU; in tale impostazione deve essere
+       garantita la compatibilità ed il corretto funzionamento dell’applicazione con i più diffusi
+       browser (e loro successive versioni); nel caso di piattaforma non web-based, il sistema deve
+       essere supportato e installato in ambiente terminal server a carico del fornitore, comprese le
+       licenze di connessione client (CAL) eventualmente necessarie. Saranno valutate
+       positivamente soluzione che prevedano anche l’utilizzo di soluzioni mobile per questo tipo di
+       funzionalità;
+
+   6) Il fornitore dovrà farsi carico dell’infrastruttura di dominio, active directory, ldap o altro con
+       relazioni di trust che consentano l’interoperabilità coi domini delle singole aziende;
+
+   7) Multi sessione di lavoro disponibile per singolo accesso, operando eventualmente su
+       aziende differenti con le necessarie abilitazioni;
+
+   8) Automatismi di sistema tali da guidare l’operatore nel corretto/completo inserimento dei dati.
+       Il sistema dovrà, inoltre, prevedere blocchi logici e controlli automatici atti ad impedire
+       l’inserimento di informazioni errate, non congruenti o non consistenti;
+
+
+
+Allegato 4 - Capitolato tecnico                                                                 Pagina 25 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+   9) Garanzia, in fase di avviamento, della migrazione dei dati dai sistemi attuali verso il nuovo
+       sistema;
+
+   10) Il sistema deve poter attingere alle informazioni relative ai vari rapporti di lavoro o di
+       collaborazione con le diverse aziende, garantendo così una visione unitaria della “storia” del
+       dipendente, con l’esclusione di eventuali informazioni riservate;
+
+   11) Ricalcolo permanente: sia per quanto riguarda gli eventi della gestione assenze/presenze
+       sia per quanto riguarda quelli della gestione economico/giuridica; l’applicativo deve essere
+       in grado di eseguire automaticamente il ricalcolo delle competenze e delle trattenute ad ogni
+       elaborazione mensile. Il ricalcolo, sia aziendale che per singolo dipendente, deve essere
+       garantito in ogni momento e deve essere visibile sul portale del dipendente;
+
+   12) Audit/log: l’applicativo deve essere altamente configurabile cioè deve poter mettere sotto log
+       (chi ha fatto, che cosa e quando) in qualsiasi momento ogni dato gestito dal software e deve
+       essere in grado di produrre warning specifici (al minimo con le seguenti modalità: con
+       messaggistica interna all’applicativo, con report e via email) su operazioni ritenute critiche;
+
+   13) il sistema deve essere dotato di uno strumento di reportistica standardizzata e dinamica in
+       base al quale sia possibile interrogare la banca dati ai vari livelli (aziendale, sovraziendale e
+       regionale), mediante criteri di selezione multipla e scelta delle variabili da riprodurre sul
+       report con possibilità di export su foglio di calcolo, su formati aperti (ods, cvs, ecc.) e pdf;
+
+   14) Il software applicativo deve prevedere adeguati sistemi di controllo quali ad esempio quelli
+       di seguito elencati:
+
+           a. implementazione          di      avanzati   sistemi    di     profilatura   degli    utenti,    con
+               autorizzazione/abilitazione sulle funzionalità e sui dati da gestire
+
+           b. monitoraggio degli iter e delle pratiche del personale attraverso un sistema di
+               workflow, prevedendo le necessarie autorizzazioni;
+
+
+
+    2. Infrastruttura Applicativa – Funzionalità di base
+
+Il sistema dovrà adottare moderne tecniche di elaborazione dati secondo i requisiti sopra riportati
+per la gestione del personale a qualsiasi titolo impiegato.
+
+La gestione integrata del personale che comprende tra gli altri universitari, specialisti
+convenzionati,     personale      religioso,    medici    specializzandi,    collaboratori   coordinati,     liberi
+professionisti, componenti commissioni, oltre ad assicurare la migrazione completa delle banche
+dati storiche contenenti i dati giuridico/retributivi/fiscali dei dipendenti di ciascuna azienda sanitaria,
+
+Allegato 4 - Capitolato tecnico                                                                   Pagina 26 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+deve garantire un facile accesso ai dati per qualsiasi elaborazione che si renda necessaria alle
+aziende sanitarie o alla Regione.
+
+Il sistema deve prevedere l’accessibilità in modalità integrata delle seguenti aree:
+
+    •   Gestione anagrafica
+
+    •   Gestione Concorsi
+
+    •   Gestione Giuridica
+
+    •   Gestione Rilevazione Presenze
+
+    •   Gestione Rilevazione Assenze
+
+    •   Report presenze/assenze
+
+    •   Gestione Economica
+
+    •   Gestione della Formazione
+
+    •   Valutazione e sviluppo organizzativo
+
+    •   Organigramma
+
+    •   Gestione Pensioni e Previdenza
+
+    •   Gestione Specialisti Ambulatoriali, Medici di Continuità Assistenziale
+
+    •   Gestione del Personale Non Dipendente
+
+    •   Servizi on Line al Personale (Self Service)
+
+    •   Reporting e supporto alle Decisioni (BI)
+
+    •   Integrazioni
+
+Come precedentemente ricordato, il sistema deve prevedere l’integrazione tra tutti i moduli indicati
+(Giuridico, Economico, Fiscale, Previdenziale, Assenze/Presenze e altri). Pertanto l’inserimento e
+la modifica di un dato deve avvenire una sola volta nel “modulo” di pertinenza e valere anche per
+gli altri, assicurando unicità e correttezza, garantendo inoltre all’operatore adeguatamente
+autorizzato alla gestione/visualizzazione delle informazioni afferenti al fascicolo del personale
+mediante unico accesso secondo le credenziali e attingendo a tutte le informazioni storiche,
+superando così anche l’eventuale mobilità o trasferimento tra le aziende all’interno degli enti
+partecipanti.
+
+Si riportano di seguito i contenuti informativi minimi che le diverse aree funzionali debbono
+assicurare.
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 27 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+Tutte le informazioni che contribuiscono a definire il profilo del dipendente dalle anagrafiche alle
+variabili che concorrono a produrre l’intera documentazione ai fini della gestione (es. cartellini,
+stato di servizio, cedolini, ecc.), devono prevedere una profondità storica, in altre parole deve
+essere possibile per ogni attributo ricostruire il periodo di validità del valore assunto.
+
+Si precisa che tutti i documenti prodotti o gestiti, anche se non indicato specificatamente, dovranno
+essere trattati anche con sistemi Open Source nei formati (doc, xls, csv e pdf), nel caso di
+necessità di conservazione sostitutiva si dovrà prevedere l'integrazione con il sistema regionale
+PARER; Il formato deve essere compatibile con la normativa vigente all'atto dell'installazione e
+adeguato per tutta la durata del contratto in caso di variazioni delle condizioni al contorno
+(specifiche PARER ecc.)
+
+Si fa notare infine che, i requisiti funzionali esposti nel presente documento, pur riferendosi
+principalmente alle figure di personale dipendente dell’Azienda, devono ritenersi estesi a tutti gli
+altri rapporti di lavoro, coerentemente con quanto previsto dalle specifiche tipologie di contratto.
+
+        2.1.    Gestione anagrafica
+
+L’anagrafica è al centro del sistema e le sue informazioni devono essere inserite una sola volta e
+devono essere disponibili a tutti i moduli funzionali. Il software non dovrà consentire alcuna
+duplicazione delle posizioni anagrafiche, consentendo un’unica vista per la realizzazione del
+fascicolo personale. Inoltre dovrà prevedere la corretta gestione delle omonimie.
+
+Per informazioni anagrafiche si intendono quelle afferenti alla persona da configurare a livello
+centralizzato (cognome e nome, sesso e stato civile, luogo e data di nascita, codice fiscale, titolo di
+studio, titolo professionale e disciplina, ente di provenienza in caso di mobilità, eventuale invalidità,
+residenza e domicilio, recapito telefonico, fax, e-mail, modalità di pagamento comprensive di
+eventuali coordinate bancarie, posizione Inail-Inps-Inadel-Inpdap, appartenenza sindacale, ecc.) e
+quelle afferenti al dipendente ed allo specifico rapporto di lavoro da configurare secondo una
+struttura multi aziendale (matricola o più matricole per rapporti diversi nella stessa azienda o più
+aziende).
+
+        2.2.    Gestione Concorsi
+
+Bando, anagrafica concorrenti, elenco partecipanti, graduatorie finali.
+
+     - Portali per bando di concorso (caricamento domande on-line).
+
+     - Registrazione partecipanti, calcolo dei punteggi relativi ai titoli. Passaggio dei dati di
+         registrazione direttamente dalla/alla protocollazione.
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 28 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+     - Produzione verbali commissione (insediamento commissione, prove scritte e orali, stesura
+         graduatoria parziale e finale).
+
+     - Strumenti di office automation e mailing, anche in ambiente Open Source, per la produzione
+         di lettere, convocazione candidati e commissioni, verbali e comunicazioni richieste dalla
+         normativa vigente.
+
+     - Integrazione con moduli gestione economica, giuridica e formazione.
+
+        2.3.    Gestione Giuridica
+
+          •    Gestione Carriere: rilevazione/gestione di variazioni contrattuali e passaggi interni del
+               personale, aggiornato, dinamico e condiviso tra area giuridica, area economica e area
+               presenze-assenze; notifica automatica degli eventi agli attori interessati. Gestione
+               delle fasce all'interno della Qualifica. Verifica degli incarichi: scadenziario degli
+               incarichi a tempo determinato, degli incarichi dirigenziali, delle conferme in ruolo.
+
+          •    Gestione assunzioni centralizzata e/o decentrata.
+
+               La funzione deve permettere di visionare in tempo reale le informazioni anagrafiche e
+               contrattuali della risorsa, di verificare lo stato di avanzamento economico e giuridico,
+               di allegare all’anagrafica del dipendente file (word, excel, pdf, ods, odt) o immagini
+               scannerizzate; notifica automatica dell’evento assunzione agli attori interessati, con la
+               possibilità di utilizzo del sistema di protocollo aziendale.
+
+          •    Diversi livelli di codifica per la determinazione della qualifica, onde consentire agli
+               strumenti di reportistica di selezionare il personale non solo in base alla qualifica
+               estesa ma anche per categorie più ampie. Esempio: (personale di ruolo sanitario non
+               medico con qualifica di Coll.Prof.San.Esp.Tec.San.Lab.Biom.Ds2               oppure personale
+               di ruolo sanitario non medico con qualifica di tecnico).
+
+          •    Pianta organica personale dipendente per fabbisogno e dislocazione – la dislocazione
+               deve essere esplosa in più tipologie e livelli di aggregazioni (LEA oppure il sistema di
+               contabilità analitica su CDC /CDR oppure la dislocazione fisica per il SARE –> il tutto
+               in relazione all’organigramma aziendale per livelli di aggregazione di quest’ultimo).
+
+          •    Gestione monitoraggio del turn over.
+
+          •    Produzione stato di servizio in formato Word, Pdf e altri formati liberi (certificato di
+               servizio con aggiunta dati economici con anche le assenze degli ultimi tre anni, gli
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 29 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+               otto anni per i congedi parentali ed altri congedi, in generale decreto legislativo
+               151/2001).
+
+          •    Gestione assegnazione e variazione Centri di Costo, possibilità di attribuzione di
+               informazioni più dettagliate o diverse dal cdc (es. U.O., stabile, reparto,..) e loro
+               estrapolazione.
+
+          •    Conto annuale, monitoraggio trimestrale, rilevazione unica regionale e denuncia
+               disabili, SARE e anagrafe prestazioni.
+
+        2.4.     Gestione Rilevazione Presenze
+
+          •    Acquisizione e scarico negli archivi individuali degli orari di ingresso e uscita dal
+               servizio e le sedi di timbratura e identificativo d'orologio, devono essere possibili più
+               tracciati, compresi i flussi di accesso alle mense interne e convenzionate nonché ogni
+               tipo di marcatura causalizzata . Deve essere possibile ribaltare sull’applicativo le
+               timbrature acquisite su altro sistema (anche tramite file di excel).
+
+          •    Visualizzazione rilevazioni in tempo reale.
+
+          •    Elaborazione giornaliera rilevazione delle presenze.
+
+          •    Configurazione orari di servizio diversi nelle caratteristiche fondamentali (flessibilità,
+               pausa pranzo, tolleranze, ecc.).
+
+          •    Configurazione turni di servizio.
+
+          •    Ricerca automatica dell’orario di servizio per il personale con turni non fissi.
+
+          •    Gestione turni ed orari di servizio.
+
+          •    Confronto tra rilevazioni ed orari assegnati e conteggio automatico dell’attività di
+               servizio.
+
+          •    Gestione rilevazioni “causalizzate” per il controllo di attività extra servizio quali ad
+               esempio la libera professione.
+
+          •    Monetizzazione automatica di tutte le indennità legate alla presenza in servizio.
+               (Possibilità di attivare l’opzione in maniera graduale).
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 30 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+          •   Attribuzione di prestazioni straordinarie e rilevazione eccedenze orarie.
+
+          •   Trasferimento in busta paga di tutte le competenze accessorie e gestione delle
+              relative situazioni particolari (conguagli).
+
+          •   Gestione turni di guardia e pronta disponibilità con relativa generazione straordinario e
+              collegamento con il modulo economico.
+
+          •   Gestione automatica degli addebiti di mensa.
+
+          •   Interscambio dati con fornitore mense convenzionate (con gestione e controllo fatture
+              emesse).
+
+          •   Gestione decentralizzata turnistica del personale medico e assistenziale.
+
+          •   Predisposizione all’utilizzo della “carta operatore nazionale” in luogo del badge
+              utilizzato attualmente.
+
+          •   Gestione delle timbrature e delle presenze anche di soggetti per i quali non verrà
+              erogato trattamento economico.
+
+          •   In fase di inserimento dello straordinario deve essere automatico il controllo con
+              eventuali budget previsti a livello di dipendente, unità operativa, dipartimento.
+
+          •   Gestione decentrata del controllo orario (da parte del responsabile o suo delegato)
+
+          •   La modifica delle informazioni nel modulo presenze/assenze, se implica un conguaglio
+              economico a seguito di emolumenti già liquidati, deve essere consentita in modo
+              automatico (cioè non deve richiedere alcun intervento dell’operatore). Ciò deve valere
+              per ogni voce variabile determinata dal cartellino presenze (indennità di pronta
+              disponibilità, festive, notturne, infermieristiche, di sert, di assistenza domiciliare,
+              straordinario, straordinario in pronta disponibilità ecc.). Deve essere comunque
+              possibile attivare un automatismo previa segnalazione di un alert.
+
+          •   Possibilità da parte dell'operatore di intervenire sull'orario giornaliero (orario forzato).
+
+          •   Possibilità di verificare lo sforamento dello straordinario dei limiti previsti dai CCNL.
+
+          •   Conto annuale e monitoraggio assenze "Brunetta".
+
+          •   Produzione      cartellini    identificativi   e    badge      con    opportune       profilature;
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 31 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+               controllo/registrazione accessi (parcheggi, mensa, uffici, reparti, ecc.), funzione
+               controllo white/black list, funzioni disattivazione badge (es. per smarrimento).
+
+        2.5.    Gestione Rilevazione Assenze
+
+          •    Rilevazione giornaliera delle assenze e relativa elaborazione.
+
+          •    Gestione automatica delle ferie maturate in base alla tipologia di rapporto di lavoro
+               (tempo pieno, part-time orizzontale/verticale, anzianità di servizio). Il conteggio deve
+               avvenire senza intervento o conteggio manuale da parte dell’operatore. La riduzione
+               delle ferie maturate nel caso di assenze particolari, quali ad esempio le aspettative
+               non retribuite, deve essere automatica.
+
+          •    Gestione completa dei periodi di maternità/paternità: data presunta parto, astensione
+               anticipata, gravidanza a rischio, periodo di astensione obbligatoria, congedi parentali.
+
+          •    Gestione delle assenze per congedi parentali nei primi otto anni di vita del bambino.
+
+          •    Gestione adozione ed affidamento (nazionale ed internazionale).
+
+          •    Gestione permessi sindacali e generazione tracciato per caricamento dati ministeriali
+               (su portale GEPAS).
+
+          •    Gestione monte ore per Organizzazione Sindacale e con integrazione al portale
+               GEPAS.
+
+          •    Gestione dati per attività mensili e permessi ex legge 104/92 e s.m.i..
+
+          •    Gestione completa della malattia con calcolo automatico del “periodo di comporto” e
+               memorizzazione delle assenze intervenute nei tre anni precedenti l’insorgenza
+               dell’evento morboso.
+
+          •    Gestione certificazione telematica malattia: acquisizione dei certificati inviati dall'INPS
+               (file.xml da PEC) con segnalazione di eventuali incongruenze/anomalie riscontrate e
+               contestuale invio automatico mail ai diversi Referenti (più indirizzi).
+
+          •    Gestione aspettative e congedi a vario titolo.
+
+          •    Gestione automatica delle assenze a vario titolo; gestione dello sciopero con
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 32 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+               tracciatura delle comunicazioni inviate e ricevute e con integrazione con il portale
+               GEPAS.
+
+          •    Rilevazione notti (lavori usuranti e produzione tracciati per caricamento dati a livello
+               ministeriale)
+
+          •    Gestione massimale di assenza.
+
+        2.6.     Report presenze/assenze
+
+          •    Stampa cartellino di presenza con evidenziati i conteggi mensili, i riporti del mese
+               precedente, le indennità spettanti ed i residui ferie e segnalazioni di anomalie di
+               timbrature;      produzione cartellino in formato PDF per l'archiviazione sostitutiva e
+               integrazione al sistema regionale PARER.
+
+          •    Report relativi ad anomalie (rilevazioni errate, sovrapposizione di giustificativi a
+               rilevazioni, rilevazioni effettuate da terminali non autorizzati ecc.).
+
+          •    Report di riepiloghi mensili (situazione liquidato, ore accantonate normali ed in pronta
+               disponibilità, ferie godute, ferie residue, ecc.). I report riepilogativi devono essere
+               possibili per tutte le voci presenti a cartellino e impostabili anche per periodi diversi
+               dal mese.
+
+          •    Generazione report mensili (o con diversa periodicità e con parametri stabiliti
+               dall'utente) per caricamento su siti ministeriali di dati relativi a malattia (legge 104), ad
+               assenze per altri motivi, ferie, etc. e per monitoraggio delle assenze, delle lunghe
+               assenze, delle ferie, dello straordinario.
+
+          •    I report sopradescritti dovranno necessariamente essere esportabili nei formati più
+               comuni (xls, csv, pdf, ecc).
+
+          •    Gestione delle rilevazioni effettuate dal personale di vigilanza, personale appartenente
+               a ditte esterne, specializzandi, ecc.
+
+          •    Raccolta rilevazioni del personale universitario secondo le convenzioni in essere con
+               le Università.
+
+          •    Elaborazione presenze-assenze secondo la modalità uomo/anno.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 33 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+        2.7.     Gestione Economica
+
+          •    Gestione "multiaziendale" e "multicontrattuale" dei trattamenti economici: personale
+               dipendente e contratti diversi dal SSN quali: borsisti, collaboratori occasionali,
+               contrattisti, collaboratori a progetto, componenti degli organi istituzionali, Medicina
+               Convenzionata; in linea generale tutti i trattamenti economici erogati dalle aziende a
+               percipienti e definiti da un punto di vista fiscale come redditi di lavoro dipendente,
+               redditi assimilati al lavoro dipendente, redditi di lavoro autonomo e redditi diversi.
+
+          •    Gestione dei trattamenti economici del personale universitario convenzionato secondo
+               i protocolli attuativi vigenti e invio del flusso dei dati secondo i tracciati definiti per
+               l’Università
+
+          •    Gestione anagrafica voci retributive e di trattenuta.
+
+          •    Gestione delle voci retributive legate all'inquadramento e delle voci personali con
+               profondità storica.
+
+          •    Possibilità di gestire il personale distinto per tipologia e su ambienti diversi (per
+               necessità organizzative interne dell’ente) anche con unico impianto tabellare (relativo
+               a ruoli, funzioni, voci stipendiali, riferimenti ecc.) con possibilità di considerare i
+               progressivi di ambiente distinto per conguagli contributivi e fiscali.
+
+          •    Gestione economica degli incarichi con aggancio alle voci stipendiali, ai fondi di
+               finanziamento e iter di verifica.
+
+          •    Gestione fondi e monitoraggio budget di spesa con ipotesi di assunzione e cessazione
+               e integrazione con giuridico per aspettative e lunghe assenze.
+
+          •    Gestione analitica dei fondi con possibilità di estrazioni per cassa e competenza e per
+               ogni elemento di interesse. Al momento della struttura del fondo dovrà essere
+               possibile gestire oltre alle voci anche alcuni elementi di esclusione o inclusione
+               (contratto, ruolo, mansione, inquadramento economico, status giuridico, rapporto di
+               lavoro, funzione e dislocazioni). Tutti questi elementi sono un filtro per la
+               configurazione del fondo ma anche uno strumento di parcellizzazione del fondo
+               stesso.
+
+          •    Gestione       incentivazioni e risultati (produttività collettiva e salario di risultato), sia
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 34 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+              dipendenti che universitari, secondi i criteri previsti dai contratti integrativi aziendali.
+
+          •   Gestione     economica        delle   diverse    tipologie    di   assenze      in    riferimento
+              all’assoggettamento contributivo (distinto carico dipendente e carico datore di lavoro)
+              e alla denuncia DMA con possibilità di analitica definizione delle voci retributive che
+              costituiscono l’imponibile.
+
+          •   Conguagli con profondità storica per variazioni di inquadramento relativamente a tutte
+              le voci retributive e di trattenuta ( voci personale, ANF, voci previdenziali, sindacati),
+              per variazione % rapporto di lavoro, variazione di giustificativi di assenza con
+              conguaglio di eventuali contributi figurativi e/o virtuali e per applicazioni contrattuali.
+
+          •   Conguagli fiscali e previdenziali, in particolare per le addizionali all’irpef anno corrente
+              e anno precedente l’elaborazione di report di controllo mensile circa la situazione
+              fiscale residuale e la possibilità di elaborazione automatica, entro i termini previsti
+              dalla normativa per la comunicazione al percipiente.
+
+          •   Acquisizione e passaggio a paghe di tutte le voci variabili stipendiali, comprese quelle
+              dalla rilevazione presenze o da file esterno.
+
+          •   Acquisizione dalle altre aree del personale di tutte le informazioni a valenza
+              economica.
+
+          •   Gestione ANF, pignoramenti, delegazioni, cessione del quinto dello stipendio,
+              detrazioni fiscali, trattamento economico di trasferta e tutte le altre tipologie di
+              trattenute conto terzi che le aziende devono gestire.
+
+          •   Calcolo interessi e rivalutazione monetaria.
+
+          •   Generazione e gestione della tredicesima.
+
+          •   Acquisizione di modelli 730-4 base, integrativi e rettificativi da file (lasciando
+              comunque la possibilità di caricamento manuale per la gestione di singoli casi
+              particolari); gestione negli stipendi di         trattenute, rimborsi rateizzazioni, calcolo
+              interessi per rateizzazione e per           in capienza, gestione dei casi particolari di
+              incapienza con possibilità di rinvio automatico rate e calcolo interessi fino all’ultimo
+              mese utile previsto dalla normativa vigente. Deve essere prevista in caso di
+              incapienza la produzione di report di controllo mensile circa la situazione fiscale
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 35 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+              residuale e la possibilità di elaborazione automatica, entro i termini di legge, di una
+              comunicazione al dipendente.
+
+          •   Elaborazione stampe di controllo pre-post calcolo, report controlli Equitalia e
+              eventuale file per controllo semiautomatico. Controllo mensile anomalie negli
+              inserimenti IBAN una volta elaborati gli stipendi. Produzione stampe mensili
+              riassuntive delle voci elaborate suddivise fra competenze e trattenute. Per le ritenute
+              fiscali e previdenziali produzione stampe di dettaglio mensile comprendenti imponibili,
+              ritenute c/ente e c/dipendente con profondità storica.
+
+          •   Calcolo dello stipendio.
+
+          •   Calcolo dello stipendio con possibilità di definire una data puntuale di riferimento per
+              l'elaborazione dei cedolini permettendo inserimenti/variazioni di informazioni giuridiche
+              ed economiche senza effetti sul calcolo dei cedolini per elaborazioni successive
+              riferite alla stessa data.
+
+          •   Gestione automatica dei cedolini negativi.
+
+          •   Gestione delle trattenute previdenziali fiscali mensili e relativa stampa dei ruoli.
+
+          •   Generazione e stampa modello F24 e F24EP.
+
+          •   Produzione file per Tesoreria.
+
+          •   Generazione dei file ENPAM e della previdenza complementare.
+
+          •   Interfaccia con il Servizio Gestione Risorse Economico Finanziarie: deve essere
+              possibile associare le voci stipendiali per competenza ad una struttura gerarchica
+              composta da conti di bilancio, Siope, codice fornitore per contabilità generale e fattore
+              produttivo e centri di costo per contabilità analitica. Un'apposita elaborazione deve
+              predisporre il file di interfaccia.
+
+          •   Gestione de-cuius: ripartizione automatica delle competenze agli eredi con calcolo
+              della parte contributiva sul de-cuius a parte fiscale calcolata sull'erede al momento
+              dell'effettivo pagamento.
+
+          •   Denunce infortunio INAIL.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 36 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+          •   Gestione denuncia DMA 2, denuncia INPS UNIEMENS con recupero automatico dei
+              dati dalla rilevazione presenze, denuncia IRPEF MOD. 770, sia semplificato che
+              ordinario, denuncia IRAP, denuncia INAIL, denuncia ONAOSI, denuncia ENPAM
+              dipendenti, gestione INPGI dipendenti, modello CUD e conguaglio precedenti datori di
+              lavoro, conto annuale, monitoraggio trimestrale, rilevazione unica regionale e
+              statistiche diverse, rilevazione annuale per cassa degli stipendi erogati suddivisi per
+              ruoli, tipologia di competenze, con specifica mensile per procedere con le analisi che
+              vengono richieste ed utilizzate nelle procedure di controllo del bilancio da parte del
+              collegio sindacale.
+
+          •   Conguaglio fiscale di fine anno unico per dipendenti pagati su più aziende, conguaglio
+              fiscale tardivo entro febbraio e gestione eccezioni fiscali (es. per richiesta maggior
+              aliquota).
+
+          •   Gestione delle trasferte/missioni sotto il profilo giuridico/economico.
+
+          •   Gestione del budget economico di spesa e monitoraggio voci fisse e accessorie per
+              competenza: 1) l’elaborazione periodica (almeno mensile con aggiornamento al
+              cedolino di riferimento) ai fini contabili e di contabilità; 2) la stima dei costi al 31
+              dicembre sulla base dell’elaborazione precedente, comprensiva del costo degli
+              assunti e del risparmio dei cessati riferiti al periodo intercorso tra il 31 dicembre
+              dell’anno precedente e la fine del mese di elaborazione, con possibilità di calcolo dei
+              costi e risparmi non ancora intervenuti (cessati/assunti); 3) la gestione fondi
+              contrattuali (con evidenza del liquidato, delle voci retributive finanziate dai fondi e
+              proiezione a chiudere, con calcolo e aggiornamento dei residui) con possibilità di alert
+              in caso di superamento del limite del fondo prima della chiusura del mese di
+              riferimento; 4) simulazione uscite pensionistiche dei dipendenti e simulazione
+              dell’ammontare della trattamento pensionistico al netto delle ritenute fiscali ad una
+              data impostata dall’operatore; 5) simulazioni finalizzate alla predisposizione dei piani
+              assunzioni e/o a supporto delle decisioni strategiche aziendali; 6) monitoraggio del
+              costo del personale, diviso tra TI e TD e proiezione della spesa su base annua.
+
+          •   Elaborazione tabelle per compilazione Nota Integrativa al Bilancio d’esercizio.
+
+          •   Importazione cedolini medici di base e pediatri di libera scelta per passaggio in
+              contabilità generale, analitica e certificazione dei redditi.
+
+          •   Deve essere prevista la possibilità di lanciare l’elaborazione degli stipendi più volte nel
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 37 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+              mese, anche per singoli cedolini.
+
+                2.8.     Gestione della formazione
+
+          •   Rilevazione del fabbisogno interno di formazione.
+
+          •   Gestione dell’offerta formativa, sia erogata internamente, che da altri soggetti esterni,
+              con possibilità di dettagliare ed aggiornare i dettagli dei corsi disponibili, o proposti da
+              docenti interni, incluso la creazione di una nuova edizione di un corso precedente.
+
+          •   Costituzione del piano formazione, e creazione del budget per l’anno in corso, con
+              possibilità di simulazione.
+
+          •   Approvazione delle edizioni dei corsi erogati internamente da parte dell’Ufficio
+              Formazione.
+
+          •   Gestione delle iscrizioni, accreditamento ECM, stampa degli attestati (con possibilità
+              di invio automatico), relativamente ai corsi erogati.
+
+          •   Gestione e verifica delle presenze al corso; per i corsisti e docenti interni verifica delle
+              presenze al corso con i dati del marcatempo tramite l'utilizzo di strumenti automatici.
+
+          •   Valutazione del corso.
+
+          •   Gestione spese e rimborsi in flusso stipendi del corsista/docente. Deve essere
+              generato anche il flusso per far stampare nel cedolino il totale crediti accumulati.
+
+          •   Gestione spese e rimborsi su comandi personale dipendente assegnato alla ricerca e
+              passaggio dati alla procedura ordini per lo scarico dei progetti e alla gestione
+              economica per l’accredito stipendiale.
+
+          •   Possibilità di monitoraggio, attraverso un cruscotto di interrogazione del sistema,
+              dell’andamento del piano formativo rispetto ai principali parametri amministrativi,
+              economici, giuridici e formativi, in base a vari criteri di aggregazione del dato (es.
+              centro di costo, conto economico, dipendente, UO, Area tematica, Progetto obiettivo,
+              docente, tipologia formazione, parola chiave, ecc. ).
+
+          •   Gestione delle schede individuali dei dipendenti (Dossier) con percorsi formativi e
+              gestione crediti ECM. Produzione attestati e possibilità di esportazione flussi verso
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 38 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+               Albi Professionali secondo specifiche ministeriali.
+
+          •    Reportistica.
+
+          •    Possibilità di ricerca, estrazione, esportazione informazioni dal DB contenente la
+               storicizzazione, per dipendente, della formazione.
+
+          •    Gestione formazione del personale non dipendente (corsi a esterni).
+
+          •    Produzione flussi informativi vari previsti dalla normativa vigente.
+
+          •    Gestione entrate/uscite corsi, convalida, normalizzazione e trasferimento causalizzato
+               a rilevazione presenze e relativi controlli.
+
+          •    Caratterizzazione specifica per rilevazione Corsi per la Sicurezza e abilitazioni
+               conseguenti.
+
+          •    Gestione dei docenti esterni con relative lettere di incarico.
+
+          •    Gestione delle esenzioni (es. gravidanza).
+
+          •    Controllo della situazione crediti triennale.
+
+          •    Report specifici su corsi BLS.
+
+        2.9.     Valutazione e sviluppo organizzativo
+
+          •    Gestione degli incarichi
+
+          •    Funzionalità relativa alla gestione degli incarichi: registrazione degli eventi relativi
+               all'attribuzione conferma e cessazione degli incarichi per il personale della Dirigenza
+               (quindi   gestionali   e    professionali),     personale    del   comparto      (posizione    e
+               coordinamenti).
+
+          •    Collegamento con l'organigramma e lo stato di servizio e modulo economico.
+
+          •    Verifica periodica degli incarichi.
+
+          •    Equiparazione.
+
+          •    Valutazione 5/15 anni per l'attribuzione dell'indennità di esclusività.
+
+          •    Valutazione obiettivi di budget.
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 39 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+          •   Valutazione al termine del periodo di prova.
+
+          •   Valutazione del personale collettiva, di équipe e individuale secondo gli impianti in
+              essere in ciascuna azienda.
+
+          •   Gestione degli scadenziari (compreso quelli dei periodi di prova per tutti i profili).
+
+        2.10. Organigramma
+
+          •   Collegamento tra l'incarico e la struttura organizzativa dell'Azienda.
+
+          •   Rappresentazione dell'atto aziendale - Struttura ad albero dell'organizzazione della
+              azienda ed i relativi nodi dell'azienda (Direzione Generale, Responsabili di Macro
+              Struttura   (Ospedale,      Territorio,   Prevenzione),     Responsabili      di   Dipartimento,
+              Responsabili di Struttura Complessa, Responsabili di Struttura Semplice e/o a valenza
+              dipartimentale, Posizioni Organizzative (comparto), Indennità di Coordinamento
+              (comparto).
+
+          •   Assegnazione tra nodo e dipendente storicizzata.
+
+          •   Assegnazione al nodo di più di un responsabile collegato tramite parametrizzazione.
+
+        2.11. Gestione Pensioni e Previdenza
+
+          •   Integrazione con modulo gestione economica.
+
+          •   Liquidazione/Riliquidazione T.F.S. (con determinazione dell’indennità netta) e relative
+              pratiche di riscatto.
+
+          •   Liquidazione/Riliquidazione T.F.R. (con determinazione dell’indennità netta) e relative
+              pratiche di riscatto.
+
+          •   Integrazione, secondo la modalità prevista, o trasferimento dati tra applicativo
+              software gestione risorse umane e applicativo pensionistico INPS e sue evoluzioni, al
+              fine di elaborare i Modd. PA/04 o equivalenti per le pratiche di riscatti e ricongiunzioni
+              e per le pratiche di pensione con generazione lettere di accompagnamento.
+
+          •   Elaborazione dinamica ( aggiornamento in tempo reale) e stampa inquadramenti del
+              personale: inquadramento giuridico ed economico, con possibilità di selezionare dati
+
+
+Allegato 4 - Capitolato tecnico                                                                  Pagina 40 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+              annui o mensili, con imponibile assoggettabile alla Cassa Pensioni e con imponibile
+              assoggettabile all’INADEL (TFS o TFR o optanti), con evidenza o meno della
+              tredicesima mensilità, con possibilità o meno di rapportare i dati al part-time
+
+          •   Determinazione e calcolo periodi da ricongiungere sulla base della normativa vigente
+              con possibilità di inserimento dati ricavabili dalle banche dati INPS.
+
+          •   Gestione previdenza complementare e integrazione modulo gestione economica per
+              flussi mensili.
+
+          •   Trasferimento dati giuridici ad applicativo Pensioni S7 per la trasmissione del modello
+              PA04 on-line all'Inps gestione ex INPDAP.
+
+          •   Calcolo diritto a pensione.
+
+          •   Gestione Note di debito per benefici contrattuali su pensioni.
+
+
+
+
+        2.12. Gestione Specialisti Ambulatoriali, Medici di Continuità Assistenziale
+
+Le prestazioni di base richieste alla procedura per queste categorie di soggetti, che operano nelle
+Aziende Unità Sanitarie Locali, devono essere complete e assimilabili alle corrispondenti
+funzionalità relative al personale dipendente tenendo conto della peculiarità contrattuale. Si
+elencano a titolo meramente esemplificativo le principali funzioni:
+
+    1) gestione assenze/presenze per tutto il personale per cui è possibile tale gestione;
+
+    2) elaborazione cedolini (ivi compresi quelli agli specialisti con contratto a tempo determinato
+        e con incarico di supplenza);
+
+    3) gestione in linea degli archivi dei dati anagrafici, giuridici ed economici completi e
+        storicizzati;
+
+    4) possibilità di recapito di cedolini e cartellini presenza al domicilio del dipendente o tramite
+        consultazione online;
+
+    5) gestione delle variazioni fiscali, previdenziali e contrattuali;
+
+    6) gestione denunce fiscali;
+
+    7) modello CUD e certificazioni redditi da lavoro autonomo;
+
+    8) gestione ENPAM;
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 41 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    9) gestione IRAP;
+
+    10) computo delle assenze a vario titolo (congedo ordinario, permessi non retribuiti, malattia,
+        aggiornamento, ecc.);
+
+    11) calcolo premio di operosità di fine rapporto per gli specialisti ambulatoriali titolari;
+
+    12) archiviazione degli orari di servizio settimanali e delle sedi di servizio di ciascun specialista;
+
+    13) Il sistema di “Supporto alle decisioni (BI)” deve comprendere tutte le informazioni gestite da
+        questa procedura.
+
+    14) Interfaccia con il Servizio Gestione Risorse Economico Finanziarie: deve essere previsto
+        quanto indicato per gestione economica personale dipendente.
+
+        2.13. Gestione del Personale Non Dipendente
+
+Il sistema deve prevedere la gestione separata dei compensi di lavoro autonomo (abituale e
+occasionale) e dei redditi assimilati a lavoro dipendente (collaborazioni coordinate e continuative,
+collaborazioni a progetto, borse di studio, commissioni varie ecc.) e di qualsiasi altro tipo di
+compenso rilevante ai fini fiscali a favore di soggetti non dipendenti.
+
+Così come per il personale dipendente, deve essere garantita l’integrazione fra le varie gestioni
+(anagrafica, giuridica, economica e presenze/assenze) escludendo qualsiasi duplicazione delle
+attività di inserimento dati, compresi gli eventuali passaggi da una tipologia di contratto all’altra (es.
+da Co.Co.Co a dipendente) e considerando l’anagrafica del dipendente unica nell’ottica del
+fascicolo personale.
+
+La procedura deve garantire l’accesso al personale autorizzato e la trasposizione di qualsiasi dato
+su file per qualsiasi esigenza aziendale ed in particolare nei formati previsti dalla normativa in
+vigore per l’invio telematico delle dichiarazioni obbligatorie (modello 770, denuncia EMENS, ecc.).
+
+Deve essere assicurata la possibilità di trasferire dati nel sistema di contabilità aziendale e la
+gestione dei dati in ambiente di produttività individuale.
+
+Le informazioni anagrafiche sono le stesse previste per il personale dipendente mentre la gestione
+dello stato giuridico deve prevedere l’archiviazione delle seguenti informazioni:
+
+    1) data inizio e fine rapporto;
+
+    2) profilo professionale (lavoro autonomo, borsista, commissioni varie, co.co.co. ecc.);
+
+    3) posizione funzionale (lavoro autonomo abituale, lavoro autonomo occasionale, co.co.co.
+        amministrativo ecc.);
+
+    4) qualifica, disciplina (allergologia, anatomia, cardiologia, ecc.);
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 42 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    5) sede di lavoro (stabilimento e reparto).
+
+Per quanto riguarda gli aspetti fiscali, contributivi, previdenziali ed assicurativi devono essere
+garantite:
+
+    1) gestione maggiori aliquote; gestione aliquote marginali e assoggettamenti tassazione
+        separata.
+
+    2) gestione non residenti: gestione fiscale e previdenziale percipienti non residenti
+        collaboratori     coordinati     e    continuativi     e     percipienti    non     residenti     liberi
+        professionisti/occasionali (che tenga conto delle convezioni fra stati);
+
+    3) gestione applicazione detrazioni/deduzioni per progressività del reddito e carichi di famiglia;
+
+    4) gestione per redditi lavoro autonomo e occasionale di ritenute acconto irpef e dei regimi
+        fiscali particolari previsti dalla normativa vigente (quali ad esempio regime agevolato L
+        388/2000 art 13 e regime contribuenti minimi l 98/2011 art 27);
+
+    5) gestione varie tipologie INPS;
+
+    6) gestione progressivi lavoro autonomo occasionale per verifica raggiungimento fascia di
+        esenzione contributiva;
+
+    7) gestione tipo rapporto e codice attività per flusso/integrazione INPS (applicativo
+        UNIEMENS);
+
+    8) gestione dei massimali INPS;
+
+    9) gestione delle tipologie di incarichi e dei minimali e massimali INAIL;
+
+    10) gestione Conto annuale;
+
+    11) gestione Anagrafe delle Prestazioni;
+
+    12) denuncia INPS UNIEMENS;
+
+    13) denuncia IRPEF;
+
+    14) gestione INPGI collaboratori;
+
+    15) denuncia IRAP;
+
+    16) mod. CUD e certificazioni lavoro autonomo;
+
+    17) gestione e consultazione archivio Mod.730;
+
+    18) stampa e visualizzazione voci compenso con relativo assoggettamento e imputazione di
+        bilancio;
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 43 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    19) lista di cassa per il Tesoriere (file netti per Tesoreria e produzione di report di controllo con
+        possibilità di personalizzazione per le singole aziende a seconda di quanto richiesto dai
+        singoli tesorieri);
+
+    20) trasferimento dati nel sistema di contabilità aziendale (per Interfaccia con il Servizio
+        Gestione Risorse Economico Finanziarie deve essere previsto quanto indicato per gestione
+        economica personale dipendente)
+
+    21) elaborati e stampe personalizzate: report controlli Equitalia, controllo mensile anomalie
+        negli inserimenti iban una volta elaborati stipendi, produzione stampe mensili riassuntive
+        delle voci elaborate suddivise fra competenze e trattenute, per le ritenute fiscali e
+        previdenziali stampe di dettaglio mensile comprendenti imponibili, ritenute c/ente e
+        c/dipendente con profondità storica;
+
+    22) elaborazione del Mod.770 per l’intera Azienda con la preventiva verifica all’interno delle
+        diverse Aree;
+
+    23) consultazioni e stampe individuali della situazione dei singoli prestatori sia per l’anno fiscale
+        in corso sia per i dati storici, consultazioni e stampe delle voci elaborate per cassa e
+        competenza sia per singoli prestatori sia per diversi raggruppamenti (es collaborazioni
+        sanitarie, non sanitarie…) sia per l’anno fiscale in corso sia per i dati storici;
+
+    24) conguagli tra redditi da lavoro dipendente e redditi assimilati (per conguagli fiscali e
+        previdenziali, in particolare, deve essere prevista la possibilità di operare conguagli tra
+        redditi da lavoro dipendente e redditi assimilati con possibilità di scelta dell’ambiente in cui
+        andare a operare il conguaglio);
+
+    25) adempimenti di legge sia Nazionali che Regionali non esplicitati nei punti precedenti
+        compreso le varie Denunce agli enti Previdenziali.
+
+        2.14. Servizi on Line al Personale (Portale del dipendente)
+
+Il servizio deve prevedere le seguenti funzionalità di gestione on line via browser, con possibilità di
+accesso via Internet con protocollo cifrato, per tutto il personale a qualsiasi titolo impiegato:
+
+    1) visualizzazione del cedolino, del CUD e della certificazione sostituto d’imposta per libero
+        professionisti (es. SAI N.T., CA N.T.) comprensiva della consultazione dello storico e della
+        possibilità di export e stampa;
+
+    2) visualizzazione timbrature, pubblicazione cedolino e consultazione rilevazioni (timbrature,
+        turni di guardia, pronta disponibilità, ecc..);
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 44 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+    3) consultazione specifiche dei medici convenzionati (quote e quote arretrate, prestazioni di
+        particolare impegno, bilanci di salute ecc..);
+
+    4) gestioni delle richieste personale/ autorizzazione responsabile ai fini di permessi, ferie,
+        missioni, corsi di aggiornamento, ecc.;
+
+    5) variazioni anagrafiche, richieste di detrazioni fiscali, assegno nucleo familiare, ed altre
+        richieste relative a dati soggetti ad autocertificazione (il tutto tramite autenticazione a norma
+        di legge);
+
+    6) servizi via Internet al personale (il personale deve aver la possibilità di visionare, via
+        browser, dati personali quali rilevazioni, turni di guardia e pronta disponibilità, assenze,
+        cedolino);
+
+    7) recepire timbrature da parte del dipendente, successivamente autorizzate tramite il
+        medesimo servizio dal responsabile autorizzato; gestione dei giustificativi per assenze e
+        richieste di ferie;
+
+    8) gestione delle autorizzazioni secondo le gerarchie aziendali per i giustificativi e per la
+        visualizzazione del cartellino.
+
+        2.15. Sistema di supporto alle decisioni regionali e aziendali
+
+Il sistema software proposto deve garantire i dati analitici e di sintesi per una efficace
+programmazione e controllo delle risorse umane a livello regionale, sovra aziendale e aziendale.
+
+Tale strumento il cui utilizzo è rivolto ai livelli decisionali, dovrà consentire, senza supporto da parte
+di specialisti e con il minimo impatto sulla gestione giornaliera, di:
+
+    1) definire analisi/scenari, privati o comuni a tutti gli utilizzatori;
+
+    2) selezionare e aggregare liberamente le informazioni;
+
+    3) produrre consuntivi in forma di report esportabili nei più comuni formati di elaborazione;
+
+    4) accedere al dettaglio sotteso.
+
+Inoltre il sistema deve fornire adeguati e predefiniti report, analisi e statistiche a supporto della
+gestione ordinaria delle funzionalità da espletare specifiche per ogni area e ambito operativo e per
+tutte le tipologie di contratto. Deve fornire anche la possibilità di riparametrizzare i report proposti
+nonché di crearne di nuovi scelti ad uopo tramite la scelta di adeguati filtri e la scelta delle
+informazioni di dettaglio per confezionare report il più esaustivi e flessibili possibili.
+
+Considerato che si rende necessaria ai fini strategici/decisionali sia a livello aziendale che
+regionale l’analisi integrata con le informazioni provenienti dalle varie fonti, è necessario che siano
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 45 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+definite delle modalità di integrazione con il sistema di data ware-house aziendale e regionale,
+tramite meccanismi di web service automatizzati, viste per RDBMS o puntualmente tramite
+funzioni di export su tutti gli archivi dell’applicativo.
+
+Qualsiasi forma di elaborazione deve essere corredata da adeguata documentazione per il corretto
+utilizzo del dato.
+
+Quanto descritto deve essere reso disponibile tramite il portale d’accesso in un’area specifica.
+
+(La proposta del fornitore dovrà riportare la progettazione di un cruscotto per l’analisi, la
+programmazione ed il controllo di cui sopra).
+
+        2.16. Integrazioni
+
+Il sistema deve potersi integrare attraverso i più comuni protocolli e metodologie riconosciute
+standard di mercato. E’ richiesta al sistema la capacità di integrazione tramite l’adozione di formati
+XML e dei protocolli di scambio da esso derivati (Web Services) per consentire il completo
+automatismo e impedire l’ accesso diretto al dato, nonché garantire il massimo livello di sicurezza.
+Nel caso di integrazioni che prevedono accessi di sola lettura possono essere utilizzate anche
+delle viste di database con le opportune regole per garantirne la sicurezza. Il sistema deve
+consentire a seconda della tipologia di integrazione la definizione di tempi e modi del processo di
+integrazione: asincrono con cadenza prefissata e configurabile, sincrono (real-time) a fronte della
+variazione del dato.
+
+Laddove non sia possibile garantire un’integrazione standard per le integrazioni in essere o per
+problematiche relative all’applicativo aziendale coinvolto, deve essere possibile allestire comunque
+tramite apposita interfaccia uno strumento per lo scambio delle informazioni e la loro automazione
+e tempificazione.
+
+Per praticità descrittiva segue l’elenco delle principali integrazioni:
+
+        1) Area ricerca per gestione borsisti , collaboratori, comandi personale dipendente
+
+        2) Controllo di Gestione monitoraggio costi personale dipendente e borsisti, contrattisti,
+            co.co.co. della ricerca e assistenza
+
+        3) Identity management
+
+        4) Protocollo
+
+        5) Contabilità generale ed analitica
+
+        6) Tesoreria
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 46 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+        7) Fascicolo elettronico del dipendente. Il fornitore dovrà presentare una proposta
+            opzionale per un sistema di gestione del fascicolo del dipendente che abbia interazioni
+            con il Protocollo che consenta l’archiviazione di documenti acquisiti tramite scansioni
+            digitali e validi ai fini della conservazione. Tale fascicolo dovrà essere trasmesso e
+            aggiornato al sistema di archiviazione regionale PARER secondo le specifiche emanate
+            e successive integrazioni.
+
+        8) Modulo regionale pagamento MMG/PLS
+
+        9) Enti previdenziali, agenzia entrate, INPDAP
+
+        10) Sistema di autenticazione e SW di distribuzione smart card
+
+        11) Gestione della medicina del lavoro in relazione agli aspetti di sorveglianza sanitaria,
+            valutati nell’intero processo a partire dall’assunzione del dipendente
+
+        12) Gestione ALP e simil-ALP e consulenze integrato con Gestione Economica ed
+            eventualmente con gestione cassa
+
+        13) Ministero della pubblica amministrazione e dell’innovazione ed altri enti pubblici
+
+        14) Anagrafe regionale
+
+        15) Gestione turni
+
+        16) Sistema infrastrutturale regionale SOLE, tramite l’interfacciamento con il BackBone
+            SOLE (bb), per lo scambio della messaggistica necessaria alla trasmissione delle
+            informazioni verso il modulo funzionale del Portale SOLE “Anagrafe Operatore” che
+            censisce e profila gli utenti che accedono ai servizi SOLE/FSE. L’interfacciamento deve
+            gestire lo scambio delle informazioni in rapporto all’inserimento di una nuova posizione
+            e alla cancellazione/modifica di una posizione esistente.
+
+
+
+        2.17. Pubblicazione dati siti internet aziendali
+
+Il fornitore predispone pagine web integrate alle sezioni specifiche dei siti aziendali per gli
+adempimenti previsti dal D.Lgs. 33/2013 “Amministrazione Trasparente”.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 47 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+ALLEGATO B
+
+Requisiti tecnologici dell’impianto HW/SW di base e di ambiente necessario per il corretto
+funzionamento del sistema GRU a livello Regionale
+
+    1. Hardware necessario al funzionamento dell’applicazione
+
+L’infrastruttura Hardware, oggetto di acquisizione, riguarderà le componenti hardware e software di
+base necessarie all’utilizzo del sistema GRU relativamente a tutte le aree funzionali e a tutte le
+aziende sanitarie, secondo le tempistiche espresse nel piano di implementazione, strutturato per
+fasi, riportato nel capitolato.
+
+L’infrastruttura hardware dovrà rispettare i seguenti requisiti:
+
+    •   Caratteristiche tecniche e prestazionali utili per la gestione di circa 65.000 dipendenti
+        effettivi (circa 90.000 dipendenti, considerando la storicizzazione a 10 anni dei contratti
+        terminati e un incremento annuale relativo alle nuove dimissioni/pensionamenti) a livello
+        regionale e secondo la distribuzione a livello aziendale come riportata nel capitolo
+        “Contesto attuale di riferimento” del Capitolato;
+
+    •   Scalabilità in termini prestazionali e capacità di Mass Storage utili a garantire le fasi
+        attuative del piano di implementazione e a garantire i livelli prestazionali e di capacità di
+        Mass Storage per tutta la durata contrattuale della fornitura oggetto del Capitolato;
+
+    •   Centralizzazione del sistema adibito alla gestione delle Banche Dati;
+
+    •   Centralizzazione e/o distribuzione dell’Application Server secondo l’architettura finalizzata
+        all’ottimizzazione prestazionale individuata dal fornitore.
+
+La proposta tecnica del fornitore dovrà riportare l’architettura del sistema e le caratteristiche delle
+sue componenti.
+
+    2. Distribuzione hardware
+
+L’Amministrazione mette a disposizione le strutture di Data Center, sia a livello Aziendale che di
+Area Vasta e Regionale, nonché le strutture di Data center regionali “in house”, per ospitare
+l’infrastruttura del sistema secondo l’architettura proposta dal fornitore. L’Amministrazione mette
+anche a disposizione la connettività tra i siti che è garantita dalla rete regionale Lepida (fibre
+ottiche) con banda da 100 Mbits/s a 1                 Gbits/s. Oltre alla connettività, sono a carico
+dell’Amministrazione i costi di housing ( gestione base, sicurezza, armadi rack, consumi energetici,
+condizionamento, ecc).
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 48 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+La proposta tecnica del fornitore dovrà descrivere l’architettura e le relative funzionalità
+dell’impianto in rapporto alla dislocazione logistica, e riportare per sito           l'occupazione fisica, i
+consumi elettrici e i requisiti di connettività.
+
+    3. Gradualità della fornitura hardware
+
+La gradualità della fornitura dell’infrastruttura hardware e software di base è a discrezione del
+fornitore che, nel rispetto dei livelli prestazionali da garantire, potrà modulare la gradualità
+coerentemente con le caratteristiche di scalabilità del sistema e con il piano di implementazione.
+
+La proposta tecnica del fornitore dovrà riportare la modularità della configurazione infrastrutturale
+prevista per l’attuazione del piano di implementazione a livello regionale.
+
+    4. Business Continuity, Sistema di Backup e Disaster recovery
+
+La soluzione proposta per l’impianto HW/SW di base e di ambiente dovrà essere caratterizzata da
+un’architettura che garantisca la continuità operativa (business continuity) in caso di
+malfunzionamento o interruzione del funzionamento di una parte qualsiasi del sistema.
+
+Il livello di servizio richiesto al fornitore (service level agreements) deve garantire quanto espresso
+nel capitolo 8 in merito a “Qualità e i livelli dei servizi”.
+
+Il sistema di backup fornito dovrà consentire la pianificazione del salvataggio giornaliero e
+periodico dei dati/sistemi ed il recupero guidato delle informazioni salvate.
+
+Le procedure di salvataggio dovranno consentire, per ogni funzionalità fornita, il ripristino delle
+informazioni fino all'ultimo “Commit” eseguito. La gestione del salvataggio è in carico al Fornitore
+ad esclusione delle operazioni manuali che rimangono in carico alla gestione base effettuata dal
+Datacenter.
+
+Dovranno essere trasmesse al personale tecnico informatico delle aziende le informazioni
+dettagliate relative alle procedure di back-up e del relativo ripristino.
+
+La gestione del back-up deve consentire una puntuale trasmissione degli esiti delle operazioni di
+salvataggio verso i referenti e/o sistemi di monitoraggio a livello aziendale/area vasta/regionale
+
+Il fornitore dovrà proporre una soluzione per la gestione del Disaster Recovery (di seguito DR) il
+cui dimensionamento e architettura dovranno garantire adeguati livelli di servizio SLA in merito alle
+tempistiche e alle modalità di ripristino. L’Amministrazione attribuirà specifica valutazione alle
+soluzioni che configurano per l’impianto DR funzionalità di servizio in load sharing del sistema
+gestionale. L’Amministrazione mette a disposizione i siti e la relativa connettività per la
+realizzazione del DR. Pertanto saranno in carico all’Amministrazione i costi di housing e di
+connettività nonché della ridondanza di connettività.
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 49 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+La proposta tecnica del fornitore dovrà riportare l’architettura del sistema DR e le caratteristiche
+delle componenti.
+
+    5. Sistema per la gestione di basi di dati
+
+Il sistema per la gestione di basi di dati relazionali (RDBMS) che sarà riportato nella proposta
+tecnica del fornitore, dovrà rispettare i seguenti requisiti:
+
+    •   Garantire la piena compatibilità con la piattaforma tecnologica RDBMS della Oracle;
+
+    •   garantire i livelli prestazionali, di seguito indicati, richiesti per il sistema GRU;
+
+    •   consentire l'integrazione con i sistemi aziendali con viste per gli RDBMS Oracle e Sql
+        Server in ambienti Unix e Microsoft;
+
+    •   prevedere licenze per l’accesso diretto al RDBMS, a scopi statistici, amministrativi e di
+        monitoraggio, aggiuntive a quelle previste per l’operatività dell’infrastruttura applicativa.
+
+La proposta tecnica del fornitore dovrà riportare la tipologia delle licenze d’uso del RDBMS e le
+metriche in rapporto alla gradualità implementativa del sistema GRU.
+
+Si precisa che l’acquisizione del software per la gestione delle banche dati “RDBMS” è in
+carico alla Committenza.
+
+    6. Livelli prestazionali
+
+        Il sistema GRU dovrà garantire i livelli prestazionali precisati nel capitolo “qualità e livelli dei
+        Servizi” del Capitolato Tecnico.
+
+    7. Monitoraggio
+
+        Il sistema dovrà essere dotato degli strumenti utili alla rilevazione del funzionamento delle
+        varie componenti e della continuità operativa delle stesse finalizzate ad un completo
+        monitoraggio del sistema nel suo complesso e della continuità operativa dei processi
+        portanti sia in relazione alla infrastruttura tecnologica sia in relazione alla piattaforma
+        applicativa.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                 Pagina 50 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+ALLEGATO C
+
+Competenze          e   Figure     professionali       per    l’erogazione       dei    servizi     necessari
+all’implementazione e alla gestione del sistema GRU
+
+Il fornitore dovrà specificare le figure professionali previste per l’erogazione dei servizi e fornire i
+relativi curricula delle risorse che saranno assegnate. Il numero di figure professionali dovrà essere
+adeguato per garantire il parallelismo delle attività necessarie per l’attivazione di più aziende
+contemporaneamente nel rispetto del piano di implementazione del sistema a livello regionale.
+
+Dovrà essere garantito il passaggio di consegne, senza oneri per il committente, nel caso di
+sostituzione di figure professionali nel corso della validità del contratto. La verifica delle
+competenze e delle capacità dei nuovi tecnici andrà svolta preventivamente, con trasmissione dei
+curricula dei nuovi professionisti ai referenti aziendali/regionali, e sul campo durante l’attività di
+affiancamento, al termine della quale i nuovi professionisti dovranno essere in grado di lavorare in
+assoluta autonomia. La presa in carico di tale know-how dovrà avvenire a titolo non oneroso per il
+committente.
+
+Le figure professionali necessarie all’erogazione dei servizi sono:
+
+    Capo Progetto
+
+Ha il compito di organizzare le risorse umane e tecniche per il raggiungimento degli obiettivi
+sostanziali del progetto, nel rispetto dei vincoli di qualità, tempi e costi. E' richiesta una particolare
+competenza delle tecniche di gestione dei progetti, oltre ad una vasta conoscenza dell'ICT e in
+particolare del contesto applicativo dei sistemi di GRU.
+
+Seniority richiesta: 5 anni
+
+
+
+Le attività tipiche di questa figura professionale sono:
+
+-    Permettere ai componenti del gruppo di progetto di lavorare in modo efficace sui corretti
+     argomenti e nell’influenzare positivamente tutte le parti interessate, assicurando il rispetto dei
+     vincoli di qualità, tempo e costi preventivati.
+
+-    Assumere la responsabilità del progetto con tutte le parti interessate: la struttura committente,
+     l’organizzazione di progetto (gruppo di progetto, utenti chiave, ecc.), gli utenti finali.
+
+-    Sviluppare in modo iterativo i piani di lavoro delle diverse fasi di implementazione del sistema
+     GRU.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 51 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+-     Identificare, mitigare e gestire i rischi di progetto per evitare che tali rischi si trasformino in
+      problemi di progetto.
+
+-     Risolvere, se necessario, eventuali problemi di comunicazione tra gruppi di membri del team e
+      altre parti interessate al progetto.
+
+-     Gestire le richieste di implementazione evolutiva e relativi piani di attuazione.
+
+
+
+    Consulente Gestione risorse umane
+
+E’ una figura professionale, con specifica esperienza sui processi di GRU e delle aziende sanitarie
+pubbliche, e competenza nell’organizzazione dei sistemi gestionali alle esigenze del committente.
+
+Si occupa di identificare i requisiti e di definire modelli di flussi informativi e di oggetti da gestire per
+processi complessi.
+
+Le attività tipiche di questa figura professionale sono:
+
+      - Confronta i processi in essere delle aziende per la definizione di un modello unico da
+          implementare a livello regionale.
+
+Seniority richiesta: 5 anni
+
+
+
+    Esperto in analisi
+
+E’ una figura professionale, con specifica esperienza sui sistemi di GRU e sistemi informativi
+amministrativi delle aziende sanitarie pubbliche, competente nell’organizzazione dei sistemi e nelle
+tecniche di definizione di diagrammi di flusso.
+
+      - Definisce le metodologie che il gruppo di progetto segue;
+
+      - Analizza i processi di business e configura le caratteristiche dei moduli della piattaforma
+          applicativa GRU alle esigenze del committente.
+
+      - Fornisce supporto e consulenza ai gruppi di progetto;
+
+      - Analizza le modalità con le quali vengono erogati i servizi;
+
+      - Descrive i servizi oggetto di analisi in maniera naturale e strutturata;
+
+      - Evidenzia interventi organizzativi e attuativi, funzionali alla implementazione del sistema;
+
+Seniority richiesta: 5 anni
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 52 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+ Progettista/Specialista piattaforme applicative GRU
+
+E’ una risorsa, con specifica esperienza sulle piattaforme applicative di GRU, con conoscenze
+tecniche e capacità progettuali approfondite su funzionalità, flussi operativi e struttura dei dati.
+
+    - Analizza i requisiti di progetto;
+
+    - Configura e parametrizza le caratteristiche funzionali e la struttura dei dati della piattaforma
+        applicativa GRU;
+
+    - Descrive le soluzioni individuate in maniera naturale e strutturata;
+
+    - Evidenzia interventi organizzativi e attuativi, funzionali alla implementazione del sistema;
+
+    - Segue le metodologie individuate per il gruppo di progetto;
+
+Seniority richiesta: 5 anni
+
+ Programmatore
+
+E’ una risorsa, con specifiche conoscenze tecniche dei metodi e degli strumenti di sviluppo
+funzionali alla implementazione della piattaforma applicativa GRU, che crea soluzioni per la
+realizzazione di componenti software e relative evoluzioni.
+
+Svolge l’attività di progettazione e sviluppo del software :
+
+    - Analizza le specifiche di dettaglio;
+
+    - Sviluppa componenti software assicurandone il corretto funzionamento;
+
+    - Verifica qualitativamente il codice secondo un piano di test definito;
+
+Seniority richiesta: 3 anni
+
+ Formatore
+
+E’ una risorsa con competenze nella conduzione di moduli formativi.
+
+    - Supporta il gruppo di progetto nella configurazione e pianificazione dell’attività formativa;
+
+    - Eroga la formazione;
+
+    - Svolge attività di affiancamento;
+
+    - Svolge attività di ripresa formativa.
+
+Seniority richiesta: 3 anni
+
+ Responsabile della fornitura
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 53 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+La Committenza richiede la messa a disposizione da parte del Fornitore di una figura
+professionale, esperto nel project management, nella composizione di gruppi di lavoro adeguati
+alle esigenze dei progetti, con elevate capacità organizzative, tecniche, di relazione con i clienti,
+destinato a svolgere compiti di supervisore e coordinatore delle attività e delle risorse dei gruppi di
+lavoro e di interfaccia unica con la Committenza per la gestione della fornitura.
+
+E’ valutata positivamente la certificazione PMP o certificazioni equivalenti nell’ambito del Project
+Management.
+
+Nel caso in cui l’Amministrazione, a suo insindacabile giudizio, non lo ritenesse idoneo a svolgere i
+compiti citati, il responsabile della fornitura deve essere sostituito.
+
+Tale figura professionale è messa a disposizione senza nessun onere per l’Amministrazione
+regionale.
+
+Seniority richiesta: 5 anni.
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 54 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+ALLEGATO D
+
+Applicativi per la Gestione delle Risorse Umane attualmente in uso presso le Aziende
+Sanitarie della Regione Emilia Romagna.
+
+
+
+                  Giuridico          Concorsi                Gestione                 Gestione                Pensioni e                Presenze e                  Altri Moduli
+                                                            Economica                Formazione               Previdenza                Turnistica
+    Ausl                                                •Portale Web Operatori                            •Pensioni S7/Indap
+                                                        Personale/usl BO (per                             •Sinfo-Gestione
+   Bologna       •Aliseo/Windex •Aliseo/Windex          specialisti convenzionati) •Aliseo/Windex         previdenziale/Info Line    •Job Time Plus/Info Line
+    Aosp                                                •ALP2000/Delta
+                                                        Informatica
+   Bologna                                              •Consulenze/Delta
+                                                        Informatica                                                                  •Check&In Controllo       •Infortuni/Workgroup
+                                                        •WHR/Dedalus (cedolino,                           •Pensioni S7/Indap         Accessi/ Solari Udine spa (infortuni)
+                 •WHR/Dedalus      •Aosp BO             CUD )                      •Geco/Data Proccessing •WHR/Dedalus               •WHR/Dedalus              •SARE/RER
+     IOR         •WHR/Dedalus      •WHR/Dedalus         •WHR/Dedalus              •WHR/Dedalus            •WHR/Dedalus               •WHR/Dedalus
+     Ausl                                                                                                                                                     •Lifedoc/Emmeglobal
+                                                                                                                                                              (fascicolo)
+    Imola        •Job Time /Info   •Job Time Plus/Info                            •Job Time Plus/Info                                                         •Uomo/Log80 (medicina
+                 Line              Line                •IHR/IASI                  Line                    •Pensioni S7/Indap         •Job Time Plus/Info Line preventiva)
+    Ausl                                                                                                                                                      •ALP2000/Delta
+                                                                                                                                                              Informatica(libero
+   Ferrara                                              •Gestione 770/Data                                                                                    professionista)
+                                                        Proccessing                                                                                           •Aliseo/Windex (guardia
+                 •Aliseo/Windex Non informatizzato      •Aliseo/Windex            •Task/Terrextra         •Aliseo/Windex             •Aliseo/Windex srl       medica)
+     Aosp        Non
+    Ferrara      informatizzato    •Aliseo/Windex srl •NFS/Dedalus                •Aliseo/Windex srl      •NFS/Dedalus               •Aliseo/Windex srl
+    ex Ausl      •PersWeb/Engin •PersWeb/Engineeri
+   Ravenna       eering         ng                 •PersWeb/Engineering                                   •Pensioni/S.Info srl       •Job Time /Info Line
+    ex Ausl                                                                                               •Aliseo/Windex             •Job Time Plus/Info Line
+      Forlì      •NHR/Windex       Non informatizzato   •Aliseo/Windex            •ex ausl FO             •WHR/Dedalus               •SI2/Sago Medica srl
+    ex Ausl
+   Cesena        •WHR/Dedalus      •WHR/Dedalus         •WHR/Dedalus              •WHR/Dedalus            •WHR/Dedalus               •Job Time Plus/Info Line
+    ex Ausl                                                                                                                                                     •Valutazione del
+                                                                                                                                                                personale/Info Line
+     Rimini      •Job Time /Info                                                                          •Pensioni S7/Indap                                    •Portale Dipendente/ex
+                 Line              •Job Time /Info Line •WHR/Dedalus              •Job Time /Info Line    •WHR/Dedalus               •Job Time /Info Line       ausl RN
+     Ausl        •Overture /Info                                                                          •Gestione Pensioni/S.Info                             •Incentivi/Info Line
+   Piacenza      Line            •Job Time /Info Line •Overture /Info Line        •Egeo /New Team         •Pensioni S7/Indap        •Job Time /Info Line        (incentivi)
+     Ausl                                                                                                                                                       •Incentivi/Info Line
+                                                                                                                                                                (incentivi)
+    Parma        •Job Time /Info                                                                          •Pensioni S7/Indap         •Job Time /Info Line       •StatoSer/GPI spa
+                 Line              •Ausl PR             •Overture /Info Line      •Overture /Info Line    •Job Time Plus/Info Line   •Overture /Info Line       (carriera)
+   Aosp       •Job Time            •Job Time Plus/Info                            •Job Time Plus/Info                                •Antigua/Zucchetti       •Job Time Plus/Info Line
+   Parma      Plus/Info Line       Line                •Job Time Plus/Info Line   Line                    •Previdenza/S.Info srl     •Job Time Plus/Info Line (portale dipendente)
+    Ausl                           •Gestione Concorsi •Gestione Personale/Data                                                                                  •Medico
+Reggio Emilia                      /S.Info srl        Proccessing              •Cicerone /Progel          •Previdenza/S.Info srl     •Job Time /Info Line       Competente/Log80
+   Aosp                                                                        •Gestione
+                                   •Gestione Concorsi                          Personale/Data             •Gestione Pensioni/S.Info
+Reggio Emilia                      /S.Info srl                                 Proccessing                •Pensioni S7/Indap        •Job Time /Info Line
+    Ausl                                                                          •Checkup/Microlog srl
+   Modena        •SARE/RER                              •WHR/Dedalus              •TOM/Nouvelle srl                                  •WHR/Dedalus
+    Aosp
+   Modena        •WHR/Dedalus      •Aosp MO             •WHR/Dedalus              •Job Time /Info Line    •WHR/Dedalus               •Job Time /Info Line
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                                                                                 Pagina 55 di 56
+Procedura aperta per l’acquisizione di un sistema software, dell’impianto tecnologico e di servizi correlati per
+la gestione informatizzata unitaria delle risorse umane delle Aziende sanitarie
+
+
+ALLEGATO E
+
+Ulteriori applicativi amministrativi attualmente in uso presso le Aziende Sanitarie della
+Regione Emilia Romagna di interesse per la parte riguardante le integrazioni.
+
+
+                                              Contabilità
+                             ( bilancio, analitica, gestione magazzino )
+    Ausl
+   Bologna          •Eusis Contab-Eusis Magazzino-Eusis Status/GPI
+    Aosp            •Smart*Financial /Data Processing
+   Bologna          •Smart*Logistic /Data Processing
+                    •CE4/ADS
+      IOR
+                    •Datawarehose-BI /Oslo
+     Ausl
+    Imola     •Oliamm/Engineering
+     Ausl
+   Ferrara    •Eusis Contab-Eusis Magazzino-Eusis Status/GPI
+    Aosp
+   Ferrara    •SAP/Milleri
+   ex Ausl    •Oliamm/Engineering
+  Ravenna     •Documenti di Incasso e Polizze Assicurative/Dr. G. Parmeggiani
+   ex Ausl
+     Forlì    •Areas/Engineering
+   ex Ausl    •Diapason/Gruppo Formula ( in dismissione )
+   Cesena     •NFS (Novius Financial Suite)/Dedalus
+   ex Ausl    •Diapason/Gruppo Formula
+   Rimini     •Cezanne/Gruppo Formula
+     Ausl
+  Piacenza    •Suite Enco Pro
+     Ausl
+   Parma      •Eusis Contab-Eusis Magazzino-Eusis Status/GPI
+    Aosp
+   Parma      •Diapason/Gruppo Formula
+     Ausl     •Contabilità Economica e Analitica/Data Processing
+Reggio Emilia •Ordini e Magazzini/Data Processing
+    Aosp      •Contabilità Economica e Analitica/Data Processing
+Reggio Emilia •Ordini e Magazzini/Data Processing
+     Ausl
+  Modena      •Diapason/Gruppo Formula
+    Aosp
+  Modena      •NFS (Novius Financial Suite)/Dedalus
+
+
+
+
+Allegato 4 - Capitolato tecnico                                                                Pagina 56 di 56
+
