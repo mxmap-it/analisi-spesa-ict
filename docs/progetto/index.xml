@@ -329,9 +329,46 @@ URL e ora in &lt;code&gt;manifest-anac.jsonl&lt;/code&gt;). &lt;strong&gt;[R]&lt
 &lt;/style&gt;
 &lt;p class="tr-beta"&gt;&lt;strong&gt;Beta.&lt;/strong&gt; Metodo &lt;span id="tr-ver"&gt;1.1.0-beta&lt;/span&gt;. Gli esiti sono misure automatiche ripetibili;
 i blocchi diventano «confermati» solo dopo due verifiche distanti almeno un'ora. Limiti noti nel §6. Segnalazioni di errori:
-&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/61"&gt;#61&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Indisponibilità persistente del sito: analisi giuridica, metodo e diagnosi (proposta)</title><link>https://analisi-spesa-ict.mxmap.it/progetto/indisponibilita-persistente/</link><pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/indisponibilita-persistente/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: proposta per Fabio (versione 0.1, #85).&lt;/strong&gt; È la nostra interpretazione, non giurisprudenza consolidata. Nessun ente è stato contattato su questa base.&lt;/p&gt;
-&lt;h2 id="1-il-problema-in-breve"&gt;1. Il problema in breve&lt;/h2&gt;
-&lt;p&gt;Nel censimento dell&amp;rsquo;art. 9 (&lt;a href="../trasparenza-accessibilita/"&gt;pagina&lt;/a&gt;) circa 4.600 enti risultano «irraggiungibili» e circa 1.400 «nessun client accettato». Dopo il giro da IP residenziale (#84) sappiamo che 986 enti bloccano solo i datacenter; il resto non risponde &lt;strong&gt;a nessuno&lt;/strong&gt;, né dal server né da una linea di casa.&lt;/p&gt;</description></item><item><title>Metodo: documenti pubblicati e mancanti delle convenzioni ICT</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-convenzioni-trasparenza/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-convenzioni-trasparenza/</guid><description>&lt;p&gt;Versione 1.4 del 19/11/2026 (#62). Si applica alla &lt;a href="https://analisi-spesa-ict.mxmap.it/convenzioni/"&gt;base dati delle convenzioni&lt;/a&gt;, al
+&lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/issues/61"&gt;#61&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Indisponibilità persistente del sito: analisi giuridica, metodo e diagnosi (proposta)</title><link>https://analisi-spesa-ict.mxmap.it/progetto/indisponibilita-persistente/</link><pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/indisponibilita-persistente/</guid><description>&lt;p&gt;&lt;strong&gt;Stato: proposta per Fabio (versione 0.3, #85).&lt;/strong&gt; È la nostra interpretazione, non giurisprudenza consolidata. Nessun ente è stato contattato su questa base.&lt;/p&gt;
+&lt;h2 id="0-due-misure-distinte-at-e-pvl"&gt;0. Due misure distinte: AT e PVL&lt;/h2&gt;
+&lt;p&gt;Si misurano due cose diverse, con rendiconti separati e questo metodo comune:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;AT: sezione «Amministrazione trasparente»&lt;/th&gt;
+					&lt;th&gt;PVL: link ai documenti di gara nella scheda ANAC del CIG&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;unità&lt;/td&gt;
+					&lt;td&gt;l&amp;rsquo;ente (un sito)&lt;/td&gt;
+					&lt;td&gt;il CIG (un link per procedura)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;obbligo&lt;/td&gt;
+					&lt;td&gt;d.lgs. 33/2013 artt. 8-9, CAD&lt;/td&gt;
+					&lt;td&gt;d.lgs. 36/2023 art. 28, delibera ANAC 264/2023&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;diagnosi tipiche&lt;/td&gt;
+					&lt;td&gt;D1-D5, D7&lt;/td&gt;
+					&lt;td&gt;D6, link mancante&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;correzione&lt;/td&gt;
+					&lt;td&gt;sito, IndicePA, URL comunicato&lt;/td&gt;
+					&lt;td&gt;link dei CIG, redirect dalla piattaforma dismessa&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;rendiconto&lt;/td&gt;
+					&lt;td&gt;«AT: indisponibilità persistente» (da scrivere)&lt;/td&gt;
+					&lt;td&gt;«PVL: link ai documenti non raggiungibili» (prosegue &lt;a href="../sistemi-documenti/"&gt;&lt;code&gt;pvl-link-cig&lt;/code&gt;&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In comune: il motore delle prove, la soglia di persistenza (§ 3), l&amp;rsquo;analisi giuridica (§ 2) e &lt;strong&gt;una sola PEC per ente&lt;/strong&gt;, con una parte AT e una parte PVL.&lt;/p&gt;</description></item><item><title>Metodo: documenti pubblicati e mancanti delle convenzioni ICT</title><link>https://analisi-spesa-ict.mxmap.it/progetto/metodo-convenzioni-trasparenza/</link><pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate><guid>https://analisi-spesa-ict.mxmap.it/progetto/metodo-convenzioni-trasparenza/</guid><description>&lt;p&gt;Versione 1.4 del 19/11/2026 (#62). Si applica alla &lt;a href="https://analisi-spesa-ict.mxmap.it/convenzioni/"&gt;base dati delle convenzioni&lt;/a&gt;, al
 &lt;a href="https://analisi-spesa-ict.mxmap.it/rendiconti/convenzioni-trasparenza/"&gt;rapporto sulla trasparenza&lt;/a&gt; e all&amp;rsquo;inventario
 &lt;a href="https://github.com/mxmap-it/analisi-spesa-ict/blob/main/report/convenzioni/database/documenti-mancanti.csv"&gt;&lt;code&gt;documenti-mancanti.csv&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="in-sintesi"&gt;In sintesi&lt;/h2&gt;

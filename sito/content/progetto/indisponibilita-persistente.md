@@ -6,7 +6,21 @@ weight: 44
 gruppo: documenti
 ---
 
-**Stato: proposta per Fabio (versione 0.1, #85).** È la nostra interpretazione, non giurisprudenza consolidata. Nessun ente è stato contattato su questa base.
+**Stato: proposta per Fabio (versione 0.3, #85).** È la nostra interpretazione, non giurisprudenza consolidata. Nessun ente è stato contattato su questa base.
+
+## 0. Due misure distinte: AT e PVL
+
+Si misurano due cose diverse, con rendiconti separati e questo metodo comune:
+
+| | AT: sezione «Amministrazione trasparente» | PVL: link ai documenti di gara nella scheda ANAC del CIG |
+|---|---|---|
+| unità | l'ente (un sito) | il CIG (un link per procedura) |
+| obbligo | d.lgs. 33/2013 artt. 8-9, CAD | d.lgs. 36/2023 art. 28, delibera ANAC 264/2023 |
+| diagnosi tipiche | D1-D5, D7 | D6, link mancante |
+| correzione | sito, IndicePA, URL comunicato | link dei CIG, redirect dalla piattaforma dismessa |
+| rendiconto | «AT: indisponibilità persistente» (da scrivere) | «PVL: link ai documenti non raggiungibili» (prosegue [`pvl-link-cig`](../sistemi-documenti/)) |
+
+In comune: il motore delle prove, la soglia di persistenza (§ 3), l'analisi giuridica (§ 2) e **una sola PEC per ente**, con una parte AT e una parte PVL.
 
 ## 1. Il problema in breve
 
@@ -105,7 +119,23 @@ Fra i 4.601 enti con esito «irraggiungibile» nel database del giro:
 | URL della sezione su un host diverso da IndicePA, e il dominio IndicePA funziona per altri enti | 380 |
 | URL della sezione su un host diverso, nessun segnale sul dominio IndicePA | 325 |
 
+**Persistenza con le prove già raccolte** (server 3-4/11, IP residenziale 22-25/11): degli irraggiungibili con prove, **1.073 enti** soddisfano tutte le condizioni del § 3 (due origini, ≥ 3 prove, ≥ 7 giorni, orario d'ufficio); 75 tutte tranne l'orario d'ufficio; 1.632 hanno avuto almeno una risposta utile (intermittenti o solo datacenter, da riclassificare).
+
 Sui 954 con URL, il primo errore è: timeout 428, DNS inesistente 289, altro 237. **Sono misure di un solo giro: nessuna è ancora «persistente».** I gruppi «host diverso» sono i candidati a D4-D5.
+
+### 5.1 Prima diagnosi AT dei 1.073 persistenti (26/11, un GET dal server alla home IndicePA)
+
+| candidato | enti | esempio (URL AT noto → home IndicePA) |
+|---|---:|---|
+| **D5** URL della sezione non aggiornato: la home IndicePA risponde, su un altro host | 196 | `www.autoritadistrettoac.it` → `www.aubac.it` |
+| **D5** percorso della sezione non valido: la home IndicePA risponde sullo stesso host | 134 | da controllare a mano (http/https, percorso) |
+| **D1** dominio inesistente anche in IndicePA | 317 | sito nuovo da cercare (→ D4 se trovato) |
+| **D2** home IndicePA non risponde (timeout, connessione rifiutata) | 64 | |
+| **D3** home IndicePA guasta (5xx, TLS, connessione interrotta) | 82 | |
+| nessun sito in IndicePA | 275 | già un rilievo IndicePA a sé |
+| altro | 5 | |
+
+Sono **candidati**: la home è stata provata una sola volta e da una sola origine. Prima di usarli nel cruscotto o in una PEC servono la riprova (§ 3) e, per D5, la conferma che la sezione esiste sul sito attuale. Strumento: `tools/verifiche/indisponibilita_home.py`; esiti in `esiti/2026-11-26/indisponibilita/`.
 
 ## 6. Uso nella comunicazione agli enti (PEC)
 
@@ -131,4 +161,6 @@ La PEC all'RPCT conterrà: le prove (date, origini, sha256), la diagnosi D0-D6 c
 
 | versione | data | cambiamento |
 |---|---|---|
+| 0.3 | 2026-11-26 | prima diagnosi AT dei 1.073 persistenti: D5 330, D1 317, D2 64, D3 82, senza sito IndicePA 275 |
+| 0.2 | 2026-11-26 | AT e PVL trattate come misure distinte con metodo comune; persistenza calcolata sulle prove esistenti: 1.073 enti |
 | 0.1 | 2026-11-26 | prima stesura: analisi giuridica, metodo della persistenza, diagnosi D0-D7, prime misure del giro 2026-11 |
