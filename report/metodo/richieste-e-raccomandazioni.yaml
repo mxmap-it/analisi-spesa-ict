@@ -962,3 +962,12 @@
   perche_serve: "Senza una base pubblica non si può verificare se le dipendenze si riducono; i dati di spesa ANAC oggi permettono solo un minimo (tabellone big tech, punto cieco misurato del 70 % per Microsoft)"
   metrica: "Pubblicazione del testo e di un indicatore di dipendenza extra-UE con serie storica"
   rif: ["#83"]
+
+- id: R92
+  data: 2026-11-26
+  destinatari: [ANAC, AgID]
+  titolo: Verifica periodica automatica degli indirizzi comunicati (sezione «Amministrazione trasparente», sito IndicePA, link agli atti dei CIG)
+  evidenza: "Censimento art. 9, giro 2026-11 (#84, #85): fra 4.601 enti irraggiungibili, 705 hanno l'URL della sezione su un host diverso dal sito IndicePA, 289 errori DNS (dominio inesistente). Pagina sito/content/progetto/indisponibilita-persistente.md"
+  richiesta: "Controllo automatico mensile della raggiungibilità degli indirizzi comunicati, avviso all'RPCT e all'ente responsabile di IndicePA quando un indirizzo non risponde per più di 7 giorni; obbligo di redirect dai vecchi indirizzi dopo una migrazione."
+  stato: proposta
+  riferimenti: ["#85", "#84", "#61"]
